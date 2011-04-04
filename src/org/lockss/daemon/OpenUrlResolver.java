@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.6 2011-04-04 05:41:47 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.7 2011-04-04 21:22:03 pgust Exp $
  */
 
 /*
@@ -608,23 +608,23 @@ public class OpenUrlResolver {
         daemon.getProxyManager().getQuickConnectionPool();
 
       try {
-          for (int i = 0; i < MAX_REDIRECTS; i++) {
-            // test case: 10.1063/1.3285176
-            // Question: do we need to check for and resolve more levels of 
-            //  redirect? In the the test case, there is a second one
-            LockssUrlConnection conn = 
-              UrlUtil.openConnection(url, connectionPool);
-            conn.setFollowRedirects(false);
-            conn.execute();
-            String url2 = conn.getResponseHeaderValue("Location");
-            if (url2 == null) {
-              break;
-            }
-            url = UrlUtil.resolveUri(url, url2);
-            log.debug3(i + " resolved to: " + url);
-            if (pluginMgr.findCachedUrl(url) != null) {
-              break;
-            }
+        for (int i = 0; i < MAX_REDIRECTS; i++) {
+          // test case: 10.1063/1.3285176
+          // Question: do we need to check for and resolve more levels of 
+          //  redirect? In the the test case, there is a second one
+          LockssUrlConnection conn = 
+            UrlUtil.openConnection(url, connectionPool);
+          conn.setFollowRedirects(false);
+          conn.execute();
+          String url2 = conn.getResponseHeaderValue("Location");
+          if (url2 == null) {
+            break;
+          }
+          url = UrlUtil.resolveUri(url, url2);
+          log.debug3(i + " resolved to: " + url);
+          if (pluginMgr.findCachedUrl(url) != null) {
+            break;
+          }
         }
       } catch (Exception ex) {
         log.error("Getting DOI:" + doi, ex);
@@ -688,15 +688,16 @@ public class OpenUrlResolver {
     TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIssn(issn);
     
     // only go to metadata manager if requesting individual article
-        try {
-          // resolve article from metadata manager
-          String[] issns = (title == null) ? 
-            new String[] { issn } : title.getIssns();
-          MetadataManager metadataMgr = daemon.getMetadataManager();
-          url = resolveFromIssn(metadataMgr, issns, date, 
-                                volume, issue, spage, author, atitle);
-        } catch (IllegalArgumentException ex) {
-        }
+    try {
+      // resolve article from metadata manager
+      String[] issns = (title == null) ? 
+        new String[] { issn } : title.getIssns();
+      MetadataManager metadataMgr = daemon.getMetadataManager();
+      url = resolveFromIssn(metadataMgr, issns, date, 
+                            volume, issue, spage, author, atitle);
+    } catch (IllegalArgumentException ex) {
+      // intentionally ignore input error
+    }
 
     if (url == null) {
       // resolve title, volume, AU, or issue TOC from TDB
@@ -774,9 +775,9 @@ public class OpenUrlResolver {
       String[] issns, String date, String volume, String issue, 
       String spage, String author, String atitle) 
       throws SQLException {
-    
-        boolean useTitleTOC = false;
-        boolean useAuTOC = false;
+
+    boolean useTitleTOC = false;
+    boolean useAuTOC = false;
 
     StringBuilder query = new StringBuilder();
     ArrayList<String> args = new ArrayList<String>();
@@ -791,76 +792,76 @@ public class OpenUrlResolver {
     // true if properties specified a journal item
     boolean hasJournalSpec =
         (date != null) || (volume != null) || (issue != null);
-    
-        if (hasJournalSpec) {
-          // can specify an issue by a combination of date, volume and issue;
-          // how these combine varies, so do the most liberal match possible
-          // and filter based on multiple results
-          query.append(" and ");
-          if (date != null) {
-            // enables query "2009" to match "2009-05-10" in database
-            query.append(MetadataManager.DATE_FIELD);
-            query.append(" like ? escape '\\'");
-            args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
-          }
-          
-          if ((volume != null) || (issue != null)) {
-            if (date != null) {
-                query.append(" and ");
-            }
-            query.append("( ");
 
-            if (volume != null) {
-              query.append(MetadataManager.VOLUME_FIELD);
-                  query.append(" = ?");
-                  args.add(volume);
-            }
-                if (issue != null) {
-                  if (volume != null) {
-                        query.append(" and ");
-                  }
-                  query.append(MetadataManager.ISSUE_FIELD);
-                  query.append(" = ?");
-                  args.add(issue);
-                }
-            
-                query.append(" )");
-          }
-          
-        } else {
-          useTitleTOC = !hasArticleSpec;
+    if (hasJournalSpec) {
+      // can specify an issue by a combination of date, volume and issue;
+      // how these combine varies, so do the most liberal match possible
+      // and filter based on multiple results
+      query.append(" and ");
+      if (date != null) {
+        // enables query "2009" to match "2009-05-10" in database
+        query.append(MetadataManager.DATE_FIELD);
+        query.append(" like ? escape '\\'");
+        args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
+      }
+      
+      if ((volume != null) || (issue != null)) {
+        if (date != null) {
+            query.append(" and ");
         }
-                    
+        query.append("( ");
+
+        if (volume != null) {
+          query.append(MetadataManager.VOLUME_FIELD);
+          query.append(" = ?");
+          args.add(volume);
+        }
+        if (issue != null) {
+          if (volume != null) {
+                query.append(" and ");
+          }
+          query.append(MetadataManager.ISSUE_FIELD);
+          query.append(" = ?");
+          args.add(issue);
+        }
+    
+        query.append(" )");
+      }
+      
+    } else {
+      useTitleTOC = !hasArticleSpec;
+    }
+                
     // handle start page, author, and article title as
     // equivalent ways to specify an article within an issue
     if (hasArticleSpec) {
-          // accept any of the three
-          query.append(" and ( ");
-        
-          if (spage != null) {
-            query.append(MetadataManager.START_PAGE_FIELD);
-            query.append(" = ?");
-            args.add(spage);
-          }
-          if (atitle != null) {
-            if (spage != null) {
-              query.append(" or ");
-            }
+      // accept any of the three
+      query.append(" and ( ");
+    
+      if (spage != null) {
+        query.append(MetadataManager.START_PAGE_FIELD);
+        query.append(" = ?");
+        args.add(spage);
+      }
+      if (atitle != null) {
+        if (spage != null) {
+          query.append(" or ");
+        }
         query.append(MetadataManager.ARTICLE_TITLE_FIELD);
         query.append(" like ? escape '\\'");
-            args.add(atitle.replace("%","\\%") + "%");
-          }
-          if ( author != null) {
-            if ((spage != null) || (atitle != null)) {
-                  query.append(" or ");
-            }
+        args.add(atitle.replace("%","\\%") + "%");
+      }
+      if ( author != null) {
+        if ((spage != null) || (atitle != null)) {
+          query.append(" or ");
+        }
 
-            // add the author query to the query
-            addAuthorQuery(author, query, args);
-          }
+        // add the author query to the query
+        addAuthorQuery(author, query, args);
+      }
       query.append(" )");
     } else {
-          useAuTOC = true;
+      useAuTOC = true;
     }
     String url = resolveFromQuery(
                        conn, query.toString(), args, useAuTOC, useTitleTOC);
@@ -886,13 +887,13 @@ public class OpenUrlResolver {
   private String resolveFromQuery(
                   Connection conn, String query, List<String>args, 
                   boolean useAuTOC, boolean useTitleTOC) throws SQLException {
-        log.debug3("query: " + query);
-    PreparedStatement stmt = conn.prepareStatement(query.toString());
+    PreparedStatement stmt = conn.prepareStatement(query);
+    log.debug3("query: " + query);
     for (int i = 0; i < args.size(); i++) {
       stmt.setString(i+1, args.get(i));
-      log.debug3("query arg:  " + args.get(i));      
+      log.debug3("  query arg:  " + args.get(i));      
     }
-    stmt.setMaxRows(2);  // only need to to determine if unique
+    stmt.setMaxRows(2);  // only need 2 to to determine if unique
     log.debug3("useAuTOC: " + useAuTOC + " useTitleTOC: " + useTitleTOC);
     ResultSet resultSet = stmt.executeQuery();
     String url = null;
@@ -907,18 +908,18 @@ public class OpenUrlResolver {
           String auId = PluginManager.generateAuId(pluginId, auKey);
           ArchivalUnit au = pluginMgr.getAuFromId(auId);
           if (au != null) {
-                if (!useTitleTOC) {
-                  url = getStartUrl(au);
-                }
-                if (url == null) {
-                  url = au.getConfiguration().get("base_url");
-                }
+            if (!useTitleTOC) {
+              url = getStartUrl(au);
+            }
+            if (url == null) {
+              url = au.getConfiguration().get("base_url");
+            }
           }
         }
       } else {
         url = resultSet.getString(1);
         if (resultSet.next()) {
-                log.debug3("entry not unique: " + url + " " + resultSet.getString(1));
+          log.debug3("entry not unique: " + url + " " + resultSet.getString(1));
           url = null;
         }
       }
@@ -1089,20 +1090,20 @@ public class OpenUrlResolver {
    */
   private static String 
     getStartUrl(Plugin plugin, TypedEntryMap paramMap) {
-        ExternalizableMap map;
+    ExternalizableMap map;
 
-         // get printf pattern for "au_start_url" property
-        try {
-                Method method = plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
-                Object obj = method.invoke(plugin);
-                if (!(obj instanceof ExternalizableMap)) {
-                        return null;
-                }
-                map = (ExternalizableMap)obj;
-        } catch (Exception ex) {
-                log.error("getDefinitionMap", ex);
-                return null;
-        }
+    // get printf pattern for "au_start_url" property
+    try {
+      Method method = plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
+      Object obj = method.invoke(plugin);
+      if (!(obj instanceof ExternalizableMap)) {
+       return null;
+      }
+      map = (ExternalizableMap)obj;
+    } catch (Exception ex) {
+      log.error("getDefinitionMap", ex);
+      return null;
+    }
         
     Object obj = map.getMapElement("au_start_url");
     String printfString = null;
@@ -1239,17 +1240,17 @@ public class OpenUrlResolver {
         String edition, String spage, String author, String atitle) {
         String url = null;
     Connection conn = null;
-        try {
+    try {
       conn = metadataMgr.newConnection();
-          url = resolveFromIsbn(conn, isbn, edition, spage, author, atitle);
-          if (url == null) {
-                url = resolveFromIsbn(conn, isbn, edition, null, null, null);
-                if ((url == null) && (edition != null)) {
-                  url = resolveFromIsbn(conn, isbn, null, null, null, null);
-                }
-          }
+      url = resolveFromIsbn(conn, isbn, edition, spage, author, atitle);
+      if (url == null) {
+        url = resolveFromIsbn(conn, isbn, edition, null, null, null);
+        if ((url == null) && (edition != null)) {
+          url = resolveFromIsbn(conn, isbn, null, null, null, null);
+        }
+      }
     } catch (SQLException ex) {
-        log.error("Getting ISBN:" + isbn, ex);
+      log.error("Getting ISBN:" + isbn, ex);
         
     } finally {
       MetadataManager.safeClose(conn);
@@ -1303,34 +1304,34 @@ public class OpenUrlResolver {
     // handle start page, author, and article title as
     // equivalent ways to specify an article within an issue
     if ((spage != null) || (author != null) || (atitle != null)) {
-          // accept any of the three
-          query.append(" and ( ");
+      // accept any of the three
+      query.append(" and ( ");
         
-          if (spage != null) {
-            query.append(MetadataManager.START_PAGE_FIELD);
-            query.append(" = ?");
-            args.add(spage);
-          }
-          if (atitle != null) {
-            if (spage != null) {
-              query.append(" or ");
-            }
+      if (spage != null) {
+        query.append(MetadataManager.START_PAGE_FIELD);
+        query.append(" = ?");
+        args.add(spage);
+      }
+      if (atitle != null) {
+        if (spage != null) {
+          query.append(" or ");
+        }
         query.append(MetadataManager.ARTICLE_TITLE_FIELD);
         query.append(" like ? escape '\\'");
-            args.add(atitle.replace("%","\\%") + "%");
-          }
-          if ( author != null) {
-            if ((spage != null) || (atitle != null)) {
-                  query.append(" or ");
-            }
-            // add the author query to the query
-            addAuthorQuery(author, query, args);
-          }
+        args.add(atitle.replace("%","\\%") + "%");
+      }
+      if ( author != null) {
+        if ((spage != null) || (atitle != null)) {
+          query.append(" or ");
+        }
+        // add the author query to the query
+        addAuthorQuery(author, query, args);
+      }
   
       query.append(" )");
 
     } else {
-          useAuTOC = true;
+      useAuTOC = true;
     }
     
     String url = resolveFromQuery(
@@ -1353,34 +1354,34 @@ public class OpenUrlResolver {
                   String tableId, String fieldId, String[] fieldValues, 
                   StringBuilder query, List<String>args) {
     String MTN = MetadataManager.METADATA_TABLE;
-        query.append("select distinct ");
-        query.append(MetadataManager.ACCESS_URL_FIELD);
-        query.append(",");
-        query.append(MetadataManager.PLUGIN_ID_FIELD);
-        query.append(",");
-        query.append(MetadataManager.AU_KEY_FIELD);
-        query.append(" from ");
-        query.append(MTN);
-        query.append(",");
-        query.append(tableId);
-        query.append(" where ");
-        query.append(tableId);
-        query.append(".");
-        query.append(MetadataManager.MD_ID_FIELD);
-        query.append(" = ");
-        query.append(MTN);
-        query.append(".");
-        query.append(MetadataManager.MD_ID_FIELD);
-        query.append(" and ");
-        query.append(fieldId);
-        query.append(" in (");
-        String querystr = "?";
-        for (String issn : fieldValues) {
-          query.append(querystr);
-          args.add(issn.replaceAll("-", "")); // strip punctuation
-          querystr = ",?";
-        }
-        query.append(")");
+    query.append("select distinct ");
+    query.append(MetadataManager.ACCESS_URL_FIELD);
+    query.append(",");
+    query.append(MetadataManager.PLUGIN_ID_FIELD);
+    query.append(",");
+    query.append(MetadataManager.AU_KEY_FIELD);
+    query.append(" from ");
+    query.append(MTN);
+    query.append(",");
+    query.append(tableId);
+    query.append(" where ");
+    query.append(tableId);
+    query.append(".");
+    query.append(MetadataManager.MD_ID_FIELD);
+    query.append(" = ");
+    query.append(MTN);
+    query.append(".");
+    query.append(MetadataManager.MD_ID_FIELD);
+    query.append(" and ");
+    query.append(fieldId);
+    query.append(" in (");
+    String querystr = "?";
+    for (String issn : fieldValues) {
+      query.append(querystr);
+      args.add(issn.replaceAll("-", "")); // strip punctuation
+      querystr = ",?";
+    }
+    query.append(")");
   }
   
   /**
@@ -1390,39 +1391,39 @@ public class OpenUrlResolver {
    * @param args the argument list
    */
   private void addAuthorQuery(
-        String author, StringBuilder query, List<String>args) {
-        // match single author
-        // (last, first name separated by ',')
-        query.append(MetadataManager.AUTHOR_FIELD);
-        query.append(" = ?");
-        args.add(author);
+    String author, StringBuilder query, List<String>args) {
+    // match single author
+    // (last, first name separated by ',')
+    query.append(MetadataManager.AUTHOR_FIELD);
+    query.append(" = ?");
+    args.add(author);
 
-        // escape escape character and then wildcard characters
-        String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
-                
-        for (int i = 0; i < 5; i++) {
-          query.append(" or ");
-          query.append(MetadataManager.AUTHOR_FIELD);
-          query.append(" like ? escape '\\'");
-        }
-        // match last name of first author 
-        // (last, first name separated by ',')
-        args.add(authorEsc+",%");
-                
-        // match entire first author 
-        // (authors separated by ';', last, first name separated by ',')
-        args.add(authorEsc+";%");
-                
-        // match last name of middle or last author 
-        // (authors separated by ';', last, first name separated by ',')
-        args.add("%;" + authorEsc + ",%");
-                
-        // match entire middle author 
-        // (authors separated by ';')
-        args.add("%;" + authorEsc + ";%");
-                
-        // match entire last author 
-        // (authors separated by ';')
-        args.add("%;" + authorEsc);
+    // escape escape character and then wildcard characters
+    String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
+            
+    for (int i = 0; i < 5; i++) {
+      query.append(" or ");
+      query.append(MetadataManager.AUTHOR_FIELD);
+      query.append(" like ? escape '\\'");
+    }
+    // match last name of first author 
+    // (last, first name separated by ',')
+    args.add(authorEsc+",%");
+            
+    // match entire first author 
+    // (authors separated by ';', last, first name separated by ',')
+    args.add(authorEsc+";%");
+            
+    // match last name of middle or last author 
+    // (authors separated by ';', last, first name separated by ',')
+    args.add("%;" + authorEsc + ",%");
+            
+    // match entire middle author 
+    // (authors separated by ';')
+    args.add("%;" + authorEsc + ";%");
+            
+    // match entire last author 
+    // (authors separated by ';')
+    args.add("%;" + authorEsc);
   }
 }

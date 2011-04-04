@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.4 2011-04-04 05:38:46 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.5 2011-04-04 21:22:04 pgust Exp $
  */
 
 /*
@@ -349,9 +349,8 @@ public class TestMetadataManager extends LockssTestCase {
      * @return the ArticleIterator
      */
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
-                                                                                                        MetadataTarget target)
-        throws PluginException {
+    public Iterator<ArticleFiles> createArticleIterator(
+        ArchivalUnit au, MetadataTarget target) throws PluginException {
       Iterator<ArticleFiles> ret;
       SubTreeArticleIterator.Spec spec = 
         new SubTreeArticleIterator.Spec().setTarget(target);

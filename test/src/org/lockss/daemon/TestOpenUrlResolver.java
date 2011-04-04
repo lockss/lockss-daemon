@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.8 2011-04-04 05:45:24 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.9 2011-04-04 21:22:04 pgust Exp $
  */
 
 /*
@@ -293,58 +293,58 @@ public class TestOpenUrlResolver extends LockssTestCase {
   }
 
   public static class MySubTreeArticleIteratorFactory
-  	implements ArticleIteratorFactory {
-	String pat;
-	public MySubTreeArticleIteratorFactory(String pat) {
-	  this.pat = pat;
-	}
+    implements ArticleIteratorFactory {
+    String pat;
+    public MySubTreeArticleIteratorFactory(String pat) {
+      this.pat = pat;
+    }
 
-	/**
-	 * Create an Iterator that iterates through the AU's articles, pointing
-	 * to the appropriate CachedUrl of type mimeType for each, or to the
-	 * plugin's choice of CachedUrl if mimeType is null
-	 * @param au the ArchivalUnit to iterate through
-	 * @return the ArticleIterator
-	 */
-	@Override
-	public Iterator<ArticleFiles> 
-	  createArticleIterator(ArchivalUnit au, MetadataTarget target) 
-	  throws PluginException {
-	  
-	  Iterator<ArticleFiles> ret;
-	  SubTreeArticleIterator.Spec spec = 
-	    new SubTreeArticleIterator.Spec().setTarget(target);
-	  
-	  if (pat != null) {
-	   spec.setPattern(pat);
-	  }
-	  
-	  ret = new SubTreeArticleIterator(au, spec);
-	  log.debug(  "creating article iterator for au " + au.getName() 
-			    + " hasNext: " + ret.hasNext());
-	  return ret;
-	}
+    /**
+     * Create an Iterator that iterates through the AU's articles, pointing
+     * to the appropriate CachedUrl of type mimeType for each, or to the
+     * plugin's choice of CachedUrl if mimeType is null
+     * @param au the ArchivalUnit to iterate through
+     * @return the ArticleIterator
+     */
+    @Override
+    public Iterator<ArticleFiles> 
+      createArticleIterator(ArchivalUnit au, MetadataTarget target) 
+      throws PluginException {
+    	  
+      Iterator<ArticleFiles> ret;
+      SubTreeArticleIterator.Spec spec = 
+        new SubTreeArticleIterator.Spec().setTarget(target);
+    	  
+      if (pat != null) {
+       spec.setPattern(pat);
+      }
+    	  
+      ret = new SubTreeArticleIterator(au, spec);
+      log.debug(  "creating article iterator for au " + au.getName() 
+    	    + " hasNext: " + ret.hasNext());
+      return ret;
+    }
   }
 	
   public static class MySimulatedPlugin extends SimulatedPlugin {
-	ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
+    ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
 	
-	/**
-	 * Returns the article iterator factory for the mime type, if any
-	 * @param contentType the content type
-	 * @return the ArticleIteratorFactory
-	 */
-	@Override
-	public ArticleIteratorFactory getArticleIteratorFactory() {
-	  MySubTreeArticleIteratorFactory ret =
-	      new MySubTreeArticleIteratorFactory(null); //"branch1/branch1");
-	  return ret;
-	}
-	@Override
-	public ArticleMetadataExtractor 
-	  getArticleMetadataExtractor(MetadataTarget target, ArchivalUnit au) {
-	  return simulatedArticleMetadataExtractor;
-	}
+    /**
+     * Returns the article iterator factory for the mime type, if any
+     * @param contentType the content type
+     * @return the ArticleIteratorFactory
+     */
+    @Override
+    public ArticleIteratorFactory getArticleIteratorFactory() {
+      MySubTreeArticleIteratorFactory ret =
+          new MySubTreeArticleIteratorFactory(null); //"branch1/branch1");
+      return ret;
+    }
+    @Override
+    public ArticleMetadataExtractor 
+      getArticleMetadataExtractor(MetadataTarget target, ArchivalUnit au) {
+      return simulatedArticleMetadataExtractor;
+    }
   }
 
 
@@ -499,7 +499,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
    */
   public void testResolveFromRftIdDoi() {
     // from SimulatedPlugin0
-	// expect url for article with specified DOI
+    // expect url for article with specified DOI
     Map<String,String> params = new HashMap<String,String>();
     params.put("rft_id", "info:doi/" + "10.1234/12345678.2010-Q1.1"); 
     String url = openUrlResolver.resolveOpenUrl(params);
@@ -570,17 +570,17 @@ public class TestOpenUrlResolver extends LockssTestCase {
    * Test resolving a book chapter using the publisher and book title.
    */
   public void testResolveFromBookTitle() {
-	// these tests require a TDB
-	if (ConfigManager.getCurrentConfig().getTdb() == null) {
-    	return;
+    // these tests require a TDB
+    if (ConfigManager.getCurrentConfig().getTdb() == null) {
+       return;
     }
 
-	Map<String,String> params;
-	String url;
+    Map<String,String> params;
+    String url;
 	
     // from SimulatedPlugin2 with book publisher, title with start page
-	// expect url for chapter on specified page
-	params = new HashMap<String,String>();
+    // expect url for chapter on specified page
+    params = new HashMap<String,String>();
     params.put("rft.pub", "Publisher[Manual of Clinical Psychopharmacology]");
     params.put("rft.btitle", "Manual of Clinical Psychopharmacology");
     params.put("rft.spage", "1");
@@ -692,16 +692,16 @@ public class TestOpenUrlResolver extends LockssTestCase {
    * Test resolving a book chapter using the publisher and book title.
    */
   public void testResolveFromJournalTitle() {
-	// these tests require a TDB
-	if (ConfigManager.getCurrentConfig().getTdb() == null) {
-	  return;
-	}
-
-	String url;
+    // these tests require a TDB
+    if (ConfigManager.getCurrentConfig().getTdb() == null) {
+      return;
+    }
+    
+    String url;
     
     // from SimulatedPlugin1
     // journal title with publisher and page
-	// expect base_url because start page not unique across issues
+    // expect base_url because start page not unique across issues
     Map<String,String> params = new HashMap<String,String>();
     params.put("rft.pub", "Publisher[10.2468/24681357]");
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
@@ -711,7 +711,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     
     // from SimulatedPlugin1
     // journal title and page only, without publisher
-	// expect base_url because start page not unique across issues
+    // expect base_url because start page not unique across issues
     params.clear();
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.spage", "1");
@@ -720,7 +720,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     // from SimulatedPlugin1
     // journal title and invalid page only, without publisher
-	// expect base_url because start page not unique across issue
+    // expect base_url because start page not unique across issue
     params.clear();
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.spage", "1");
@@ -729,7 +729,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     // from SimulatedPlugin1
     // journal title and invalid page only, without publisher
-	// expect volume url 
+    // expect volume url 
     params.clear();
     params.put("rft.jtitle", "Journal[10.2468/24681357]");
     params.put("rft.volume", "42");
@@ -738,7 +738,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     // from SimulatedPlugin3
     // book title and page only, without publisher
-	// expect article url because start page is unique within the book
+    // expect article url because start page is unique within the book
     params.clear();
     params.put("rft.btitle", "Journal[10.0135/12345678]");
     params.put("rft.spage", "1");

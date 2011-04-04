@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.14 2011-04-04 05:37:29 pgust Exp $
+ * $Id: MetadataManager.java,v 1.15 2011-04-04 21:22:03 pgust Exp $
  */
 
 /*
@@ -717,48 +717,48 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * SQL statements that create the database schema
    */
   private static final String createSchema[] = {
-      "create table " + PENDINGAUS_TABLE + " ("
-          + PLUGIN_ID_FIELD + " VARCHAR(64) NOT NULL," 
-          + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
-      "create table " + METADATA_TABLE + " ("
-          + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
-          + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
-          + VOLUME_FIELD + " VARCHAR(" + MAX_VOLUME_FIELD + ")," 
-          + ISSUE_FIELD + " VARCHAR(" + MAX_ISSUE_FIELD + "),"
-          + START_PAGE_FIELD + " VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
-          + ARTICLE_TITLE_FIELD + " VARCHAR(" + MAX_ATITLE_FIELD + ")," 
-          // author field is a semicolon-separated list
-          + AUTHOR_FIELD + " VARCHAR(" + MAX_AUTHOR_FIELD + "),"
-          + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
-          // partition by
-          + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
-          + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
-          + ")",
+    "create table " + PENDINGAUS_TABLE + " ("
+        + PLUGIN_ID_FIELD + " VARCHAR(64) NOT NULL," 
+        + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
+    "create table " + METADATA_TABLE + " ("
+        + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
+        + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
+        + VOLUME_FIELD + " VARCHAR(" + MAX_VOLUME_FIELD + ")," 
+        + ISSUE_FIELD + " VARCHAR(" + MAX_ISSUE_FIELD + "),"
+        + START_PAGE_FIELD + " VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
+        + ARTICLE_TITLE_FIELD + " VARCHAR(" + MAX_ATITLE_FIELD + ")," 
+        // author field is a semicolon-separated list
+        + AUTHOR_FIELD + " VARCHAR(" + MAX_AUTHOR_FIELD + "),"
+        + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
+        // partition by
+        + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
+        + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
+        + ")",
 
-      "create table " + DOI_TABLE + " (" 
-          + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
-          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-          + "(md_id) on delete cascade" + ")",
+    "create table " + DOI_TABLE + " (" 
+        + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
+        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+        + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISBN_TABLE + " (" 
-          + ISBN_FIELD + " VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
-          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-          + "(md_id) on delete cascade" + ")",
+    "create table " + ISBN_TABLE + " (" 
+        + ISBN_FIELD + " VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
+        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+        + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISSN_TABLE + " (" 
-          + ISSN_FIELD + " VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
-          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
-          + "(md_id) on delete cascade" + ")", };
+    "create table " + ISSN_TABLE + " (" 
+        + ISSN_FIELD + " VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
+        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+        + "(md_id) on delete cascade" + ")", };
 
   /**
    * SQL statements that drop the database schema
    */
   private static final String[] dropSchema = new String[] {
-      "drop table " + PENDINGAUS_TABLE, 
-      "drop table " + DOI_TABLE,
-      "drop table " + ISSN_TABLE, 
-      "drop table " + ISBN_TABLE,
-      "drop table " + METADATA_TABLE, };
+    "drop table " + PENDINGAUS_TABLE, 
+    "drop table " + DOI_TABLE,
+    "drop table " + ISSN_TABLE, 
+    "drop table " + ISBN_TABLE,
+    "drop table " + METADATA_TABLE, };
 
   /**
    * Execute a batch of statements.
