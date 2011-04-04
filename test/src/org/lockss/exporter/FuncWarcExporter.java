@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExporter.java,v 1.3 2010-02-22 08:07:46 tlipkis Exp $
+ * $Id: FuncWarcExporter.java,v 1.3.12.1 2011-04-04 06:31:47 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class FuncWarcExporter extends BaseFuncExporter {
       }
 
     }
-    assertEquals(numAuFiles, numWarcRecords);
+    assertEquals(auUrls.size(), numWarcRecords);
     if (maxSize <= 0) {
       assertEquals(1, exportFiles.length);
     } else {

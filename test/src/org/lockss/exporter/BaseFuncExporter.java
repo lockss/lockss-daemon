@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.3 2010-02-22 08:07:46 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.3.12.1 2011-04-04 06:31:47 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.exporter;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 import org.archive.io.*;
 import org.archive.io.arc.*;
@@ -52,7 +53,8 @@ public abstract class BaseFuncExporter extends LockssTestCase {
 
   protected MockLockssDaemon daemon;
   protected SimulatedArchivalUnit sau;
-  protected int numAuFiles = 0;
+  protected List<String> auUrls;
+  protected List<String> auDirs;
 
   protected File exportDir;
   protected File[] exportFiles = null;
@@ -79,6 +81,9 @@ public abstract class BaseFuncExporter extends LockssTestCase {
     props.setProperty(pref + SimulatedPlugin.AU_PARAM_NUM_FILES, "3");
     props.setProperty(pref + SimulatedPlugin.AU_PARAM_FILE_TYPES,
                       ""+SimulatedContentGenerator.FILE_TYPE_BIN);
+    props.setProperty(pref + SimulatedPlugin.AU_PARAM_ODD_BRANCH_CONTENT,
+		      "true");
+
 //     props.setProperty(pref + SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE,
 // 		      ""+fileSize);
     ConfigurationUtil.setCurrentConfigFromProps(props);
@@ -103,16 +108,25 @@ public abstract class BaseFuncExporter extends LockssTestCase {
     super.tearDown();
   }
 
+  Pattern dirpat = Pattern.compile(".*branch[0-9]+/?$");
+
   protected void crawlContent() {
     CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
     Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
-    numAuFiles = 0;
+    auUrls = new ArrayList<String>();
+    auDirs = new ArrayList<String>();
+
     Iterator iter = sau.getAuCachedUrlSet().contentHashIterator();
     while (iter.hasNext()) {
       CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
       if (node.hasContent()) {
-	numAuFiles++;
+	String url = AuUtil.getCu(node).getUrl();
+	auUrls.add(url);
+	log.info("xxxx: " + url);
+	if (dirpat.matcher(url).matches()) {
+	  auDirs.add(url);
+	}
       }
     }      
   }

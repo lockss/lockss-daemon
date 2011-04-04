@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.4.12.2 2011-03-03 18:47:14 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.4.12.3 2011-04-04 06:31:47 tlipkis Exp $
  */
 
 /*
@@ -87,11 +87,17 @@ public class ExportContent extends LockssServlet {
   static final String PARAM_COMPRESS = PREFIX + "defaultCompress";
   static final boolean DEFAULT_COMPRESS = true;
 
+  /** Default excludeDirNodes. */
+  static final String PARAM_EXCLUDE_DIR_NODES =
+    PREFIX + "defaultExcludeDirNodes";
+  static final boolean DEFAULT_EXCLUDE_DIR_NODES = false;
+
 
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
   static final String KEY_COMPRESS = "compress";
+  static final String KEY_EXCLUDE_DIR_NODES = "excludeDirNodes";
   static final String KEY_XLATE = "xlate";
   static final String KEY_FILE_TYPE = "filetype";
   static final String KEY_FILE_PREFIX = "filePrefix";
@@ -106,13 +112,16 @@ public class ExportContent extends LockssServlet {
 
 
   private static final String FILE_TYPE_FOOT =
-    "Each record in an ARC or WARC file may contain either a content file, or a complete HTTP response: headers and content.  For WARC, these are written into <i>resource</i> or <i>response</i> records, respectively.  ZIP records contain content only; the HTTP headers are stored as the comment in each record.";
+    "Select the type of archive file(s) to create.  Each record in an ARC or WARC file may contain either a content file, or a complete HTTP response: headers and content.  For WARC, these are written into <i>resource</i> or <i>response</i> records, respectively.  ZIP records contain content only; the HTTP headers are stored as the comment in each record.";
+
+  private static final String EXCLUDE_DIR_FOOT =
+    "If checked, files that have the same name as a directory will not be included in the archive file(s).  Useful for AUs that were collected from a directory hierarchy, where the added directory indices would cause conflicts when unpacking the archive.";
 
   private static final String FILE_PREFIX_FOOT =
     "One or more files will be written, with generated names using this string as a prefix.";
 
   private static final String MAX_SIZE_FOOT =
-    "The approximate maximum size for each ARC/WARC/ZIP file.  If the total output is larger, multiple files will be written.";
+    "The approximate maximum size for each ARC/WARC/ZIP archive file.  If the total output is larger, multiple files will be written.";
 
   private static final String MAX_VER_FOOT =
     "The maximum number of versions included, for content files that have older versions.  (ARC and WARC only).";
@@ -129,6 +138,7 @@ public class ExportContent extends LockssServlet {
   String auid;
   Type eType;
   boolean isCompress;
+  boolean isExcludeDirNodes;
   FilenameTranslation xlateFilenames;
   String filePrefix;
   String maxSize;
@@ -165,6 +175,8 @@ public class ExportContent extends LockssServlet {
     eType = (Type)config.getEnum(Type.class,
 				 PARAM_EXPORT_TYPE, DEFAULT_EXPORT_TYPE);
     isCompress = config.getBoolean(PARAM_COMPRESS, DEFAULT_COMPRESS);
+    isExcludeDirNodes = config.getBoolean(PARAM_EXCLUDE_DIR_NODES,
+					  DEFAULT_EXCLUDE_DIR_NODES);
     xlateFilenames = FilenameTranslation.XLATE_NONE;
     maxSize = config.get(PARAM_MAX_SIZE, DEFAULT_MAX_SIZE);
     maxVersions = config.get(PARAM_MAX_VERSIONS, DEFAULT_MAX_VERSIONS);
@@ -196,6 +208,7 @@ public class ExportContent extends LockssServlet {
 	  return;
 	}	
 	isCompress = (getParameter(KEY_COMPRESS) != null);
+	isExcludeDirNodes = (getParameter(KEY_EXCLUDE_DIR_NODES) != null);
 	String xlate = getParameter(KEY_XLATE);
 	try {
 	  xlateFilenames = FilenameTranslation.valueOf(xlate);
@@ -256,6 +269,7 @@ public class ExportContent extends LockssServlet {
     try {
       Exporter exp = eType.makeExporter(daemon, au);
       exp.setCompress(isCompress);
+      exp.setExcludeDirNodes(isExcludeDirNodes);
       exp.setFilenameTranslation(xlateFilenames);
       exp.setDir(exportDir);
       exp.setPrefix(filePrefix);
@@ -331,6 +345,11 @@ public class ExportContent extends LockssServlet {
 
     addElementToTable(tbl, "Compress", checkBox(null, "true", KEY_COMPRESS,
 						isCompress));
+
+    addElementToTable(tbl,
+		      "Exclude Directories" + addFootnote(EXCLUDE_DIR_FOOT),
+		      checkBox(null, "true", KEY_EXCLUDE_DIR_NODES,
+			       isExcludeDirNodes));
 
     Composite xlate = new Composite();
     for (FilenameTranslation fx : FilenameTranslation.values()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExporter.java,v 1.3 2010-02-22 08:07:46 tlipkis Exp $
+ * $Id: FuncArcExporter.java,v 1.3.12.1 2011-04-04 06:31:47 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class FuncArcExporter extends BaseFuncExporter {
       }
 
     }
-    assertEquals(numAuFiles, numArcRecords);
+    assertEquals(auUrls.size(), numArcRecords);
     if (maxSize <= 0) {
       assertEquals(1, exportFiles.length);
     } else {
