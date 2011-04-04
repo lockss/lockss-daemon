@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsUrlNormalizer.java,v 1.1 2011-03-28 23:19:23 thib_gc Exp $
+ * $Id: GPOFDSysSitemapsUrlNormalizer.java,v 1.2 2011-04-04 18:48:33 thib_gc Exp $
  */
 
 /*
@@ -45,13 +45,18 @@ public class GPOFDSysSitemapsUrlNormalizer implements UrlNormalizer {
     final String destination2 = "/content-detail.html";
 
     String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    String prefix = baseUrl + prefixPath;
-
-    if (!url.startsWith(prefix)) {
+    String shortBaseUrl = baseUrl.substring(0, baseUrl.length() - 1);
+    if (!url.startsWith(shortBaseUrl)) {
+      return url; // No transformation
+    }
+    
+    String prefix1 = baseUrl + prefixPath;
+    String prefix2 = shortBaseUrl + ":80/" + prefixPath;  
+    if (!(url.startsWith(prefix1) || url.startsWith(prefix2))) {
       return url; // No transformation
     }
 
-    int ix = url.indexOf(packageIdVar, prefix.length());
+    int ix = url.indexOf(packageIdVar, shortBaseUrl.length());
     if (ix < 0) {
       return url; // No transformation
     }

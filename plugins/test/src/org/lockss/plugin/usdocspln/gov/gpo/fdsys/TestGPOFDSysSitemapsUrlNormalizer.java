@@ -1,5 +1,5 @@
 /*
- * $Id: TestGPOFDSysSitemapsUrlNormalizer.java,v 1.1 2011-03-28 23:19:40 thib_gc Exp $
+ * $Id: TestGPOFDSysSitemapsUrlNormalizer.java,v 1.2 2011-04-04 18:48:33 thib_gc Exp $
  */
 
 /*
@@ -60,6 +60,15 @@ public class TestGPOFDSysSitemapsUrlNormalizer extends LockssTestCase {
     unchanged("http://www.example.gov/fdsys/granule/XYZ-2011-04-21/foo.xml");
     unchanged("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/foo/XYZ-2011-04-21.foo");
     unchanged("http://www.example.gov/fdsys/search/getfrtoc.action?selectedDate=2011-04-21");
+    unchanged("http://www.example.com:80/some/other/site.html");
+    unchanged("http://www.example.gov:80/images/foo.gif");
+    unchanged("http://www.example.gov:80/smap/fdsys/sitemap_2011/2011_XYZ_sitemap.xml");
+    unchanged("http://www.example.gov:80/fdsys/pkg/XYZ-2011-04-21/content-detail.html");
+    unchanged("http://www.example.gov:80/fdsys/granule/XYZ-2011-04-21/foo.xml");
+    unchanged("http://www.example.gov:80/fdsys/pkg/XYZ-2011-04-21/foo.xml");
+    unchanged("http://www.example.gov:80/fdsys/granule/XYZ-2011-04-21/foo.xml");
+    unchanged("http://www.example.gov:80/fdsys/pkg/XYZ-2011-04-21/foo/XYZ-2011-04-21.foo");
+    unchanged("http://www.example.gov:80/fdsys/search/getfrtoc.action?selectedDate=2011-04-21");
   }
   
   protected void unchanged(String url) throws Exception {
@@ -75,6 +84,14 @@ public class TestGPOFDSysSitemapsUrlNormalizer extends LockssTestCase {
             "http://www.example.gov/fdsys/search/pagedetails.action?packageId=XYZ-2011-04-21&collapse=true&fromBrowse=true");
     changed("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/content-detail.html",
             "http://www.example.gov/fdsys/search/pagedetails.action?packageId=XYZ-2011-04-21");
+    changed("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/content-detail.html",
+            "http://www.example.gov:80/fdsys/search/pagedetails.action?browsePath=Sample+Document&granuleId=XYZ-2011-04-21&packageId=XYZ-2011-04-21&collapse=true&fromBrowse=true");
+    changed("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/content-detail.html",
+            "http://www.example.gov:80/fdsys/search/pagedetails.action?browsePath=Sample+Document&packageId=XYZ-2011-04-21");
+    changed("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/content-detail.html",
+            "http://www.example.gov:80/fdsys/search/pagedetails.action?packageId=XYZ-2011-04-21&collapse=true&fromBrowse=true");
+    changed("http://www.example.gov/fdsys/pkg/XYZ-2011-04-21/content-detail.html",
+            "http://www.example.gov:80/fdsys/search/pagedetails.action?packageId=XYZ-2011-04-21");
   }
   
   protected void changed(String expected, String actual) throws Exception {
