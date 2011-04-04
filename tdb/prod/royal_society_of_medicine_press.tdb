@@ -1,18 +1,42 @@
 {
+
   publisher <
-    name = Royal Society of Medicine
+    name = Royal Society of Medicine Press
   >
 
   {
+  
     title <
       name = Acta Radiologica ;
       issn = 0284-1851 ;
       eissn = 1600-0455 ;
       issnl = 0284-1851
     >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://ar.rsmjournals.com/
+    implicit < status ; name ; param[volume_name] >
+
+    au < wanted ; Acta Radiologica Volume 38 ; 38 >
+    au < wanted ; Acta Radiologica Volume 39 ; 39 >
+    au < wanted ; Acta Radiologica Volume 40 ; 40 >
+    au < wanted ; Acta Radiologica Volume 41 ; 41 >
+    au < wanted ; Acta Radiologica Volume 42 ; 42 >
+    au < wanted ; Acta Radiologica Volume 43 ; 43 >
+    au < wanted ; Acta Radiologica Volume 44 ; 44 >
+    au < wanted ; Acta Radiologica Volume 45 ; 45 >
+    au < wanted ; Acta Radiologica Volume 46 ; 46 >
+    au < wanted ; Acta Radiologica Volume 47 ; 47 >
+    au < wanted ; Acta Radiologica Volume 48 ; 48 >
+    au < wanted ; Acta Radiologica Volume 49 ; 49 >
+    au < wanted ; Acta Radiologica Volume 50 ; 50 >
+    au < wanted ; Acta Radiologica Volume 51 ; 51 >
+    au < wanted ; Acta Radiologica Volume 52 ; 52 >
+
   }    
         
   {
+
     title <
       name = Annals of Clinical Biochemistry ;
       issn = 0004-5632 ;
@@ -44,6 +68,7 @@
   }
 
   {
+  
     title <
       name = Clinical Ethics ;
       issn = 1477-7509 ;
@@ -68,6 +93,7 @@
   }
 
   {
+  
     title <
       name = Clinical Risk ;
       issn = 1356-2622 ;
@@ -98,6 +124,41 @@
   }
 
   {
+  
+    title <
+      name = Experimental Biology and Medicine ;
+      issn = 1535-3702 ;
+      eissn = 1535-3699
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://ebm.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Experimental Biology and Medicine Volume 222 ; 222 >
+      au < exists ; Experimental Biology and Medicine Volume 223 ; 223 >
+      au < exists ; Experimental Biology and Medicine Volume 224 ; 224 >
+      au < exists ; Experimental Biology and Medicine Volume 225 ; 225 >
+      au < exists ; Experimental Biology and Medicine Volume 226 ; 226 >
+      au < exists ; Experimental Biology and Medicine Volume 227 ; 227 >
+      au < exists ; Experimental Biology and Medicine Volume 228 ; 228 >
+      au < exists ; Experimental Biology and Medicine Volume 229 ; 229 >
+      au < exists ; Experimental Biology and Medicine Volume 230 ; 230 >
+      au < exists ; Experimental Biology and Medicine Volume 231 ; 231 >
+      au < exists ; Experimental Biology and Medicine Volume 232 ; 232 >
+      au < exists ; Experimental Biology and Medicine Volume 233 ; 233 >
+      au < exists ; Experimental Biology and Medicine Volume 234 ; 234 >
+      au < exists ; Experimental Biology and Medicine Volume 235 ; 235 >
+      au < exists ; Experimental Biology and Medicine Volume 236 ; 236 >
+
+    }
+
+  }
+
+  {
+  
     title <
       name = Hand Therapy ;
       issn = 1758-9983 ;
@@ -128,25 +189,82 @@
   }
 
   {
+  
     title <
       name = Handbook of Practice Management ;
       type = book ;
       isbn = 0-443-04576-3
     >
 
+  }
+
+  {
+  
+    title <
+      name = He@lth Information on the Internet ;
+      issn = 1460-4140 ;
+      eissn = 1758-1036
+    >
+
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://hpm.rsmjournals.com/
+      param[base_url] = http://hii.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; Handbook of Practice Management Volume 71 ; 71 >
+      au < exists ; He@lth Information on the Internet Volume 21 ; 21 >
+      au < exists ; He@lth Information on the Internet Volume 22 ; 22 >
+      au < exists ; He@lth Information on the Internet Volume 23 ; 23 >
+      au < exists ; He@lth Information on the Internet Volume 24 ; 24 >
+      au < exists ; He@lth Information on the Internet Volume 25 ; 25 >
+      au < exists ; He@lth Information on the Internet Volume 26 ; 26 >
+      au < exists ; He@lth Information on the Internet Volume 27 ; 27 >
+      au < exists ; He@lth Information on the Internet Volume 28 ; 28 >
+      au < exists ; He@lth Information on the Internet Volume 29 ; 29 >
+      au < exists ; He@lth Information on the Internet Volume 30 ; 30 >
+      au < exists ; He@lth Information on the Internet Volume 31 ; 31 >
+      au < exists ; He@lth Information on the Internet Volume 32 ; 32 >
+      au < exists ; He@lth Information on the Internet Volume 33 ; 33 >
+      au < exists ; He@lth Information on the Internet Volume 34 ; 34 >
+      au < exists ; He@lth Information on the Internet Volume 35 ; 35 >
+      au < exists ; He@lth Information on the Internet Volume 36 ; 36 >
+      au < exists ; He@lth Information on the Internet Volume 37 ; 37 >
+      au < exists ; He@lth Information on the Internet Volume 38 ; 38 >
+      au < exists ; He@lth Information on the Internet Volume 39 ; 39 >
+      au < exists ; He@lth Information on the Internet Volume 40 ; 40 >
+      au < exists ; He@lth Information on the Internet Volume 41 ; 41 >
+      au < exists ; He@lth Information on the Internet Volume 42 ; 42 >
+      au < exists ; He@lth Information on the Internet Volume 43 ; 43 >
+      au < exists ; He@lth Information on the Internet Volume 44 ; 44 >
+      au < exists ; He@lth Information on the Internet Volume 45 ; 45 >
+      au < exists ; He@lth Information on the Internet Volume 46 ; 46 >
+      au < exists ; He@lth Information on the Internet Volume 47 ; 47 >
+      au < exists ; He@lth Information on the Internet Volume 48 ; 48 >
+      au < exists ; He@lth Information on the Internet Volume 49 ; 49 >
+      au < exists ; He@lth Information on the Internet Volume 50 ; 50 >
+      au < exists ; He@lth Information on the Internet Volume 51 ; 51 >
+      au < exists ; He@lth Information on the Internet Volume 52 ; 52 >
+      au < exists ; He@lth Information on the Internet Volume 53 ; 53 >
+      au < exists ; He@lth Information on the Internet Volume 54 ; 54 >
+      au < exists ; He@lth Information on the Internet Volume 55 ; 55 >
+      au < exists ; He@lth Information on the Internet Volume 56 ; 56 >
+      au < exists ; He@lth Information on the Internet Volume 57 ; 57 >
+      au < exists ; He@lth Information on the Internet Volume 58 ; 58 >
+      au < exists ; He@lth Information on the Internet Volume 59 ; 59 >
+      au < exists ; He@lth Information on the Internet Volume 60 ; 60 >
+      au < exists ; He@lth Information on the Internet Volume 61 ; 61 >
+      au < exists ; He@lth Information on the Internet Volume 62 ; 62 >
+      au < exists ; He@lth Information on the Internet Volume 63 ; 63 >
+      au < exists ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < wanted ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < wanted ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
   }
 
   {
+  
     title <
       name = Health Services Management Research ;
       issn = 0951-4848 ;
@@ -177,6 +295,7 @@
   }
 
   {
+  
     title <
       name = International Journal of Care Pathways ;
       issn = 2040-4026 ;
@@ -203,6 +322,7 @@
   }
 
   {
+  
     title <
       name = International Journal of STD & AIDS ;
       issn = 0956-4624 ;
@@ -238,6 +358,7 @@
   }
 
   {
+  
     title <
       name = Journal of Health Services Research & Policy ;
       issn = 1355-8196 ;
@@ -268,6 +389,7 @@
   }
 
   {
+  
     title <
       name = Journal of Medical Biography ;
       issn = 0967-7720 ;
@@ -294,6 +416,7 @@
   }
 
   {
+  
     title <
       name = Journal of Medical Screening ;
       issn = 0969-1413 ;
@@ -327,6 +450,7 @@
   }
 
   {
+  
     title <
       name = Journal of Telemedicine and Telecare ;
       issn = 1357-633X ;
@@ -362,6 +486,7 @@
   }
 
   {
+  
     title <
       name = JRSM ;
       issn = 0141-0768 ;
@@ -428,6 +553,23 @@
   }
 
   {
+  
+    title <
+      name = JRSM Short Reports ;
+      eissn = 2042-5333
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://shortreports.rsmjournals.com/
+    implicit < status ; name ; param[volume_name] >
+
+    au < wanted ; JRSM Short Reports Volume 1 ; 1 >
+    au < wanted ; JRSM Short Reports Volume 2 ; 2 >
+
+  }
+
+  {
+  
     title <
       name = Laboratory Animals ;
       issn = 0023-6772 ;
@@ -492,6 +634,66 @@
   }
 
   {
+  
+    title <
+      name = Medicine, Science and the Law ;
+      issn = 0025-8024 ;
+      eissn = 2042-1818
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://msl.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Medicine, Science and the Law Volume 43 ; 43 >
+      au < exists ; Medicine, Science and the Law Volume 44 ; 44 >
+      au < exists ; Medicine, Science and the Law Volume 45 ; 45 >
+      au < exists ; Medicine, Science and the Law Volume 46 ; 46 >
+      au < exists ; Medicine, Science and the Law Volume 47 ; 47 >
+      au < exists ; Medicine, Science and the Law Volume 48 ; 48 >
+      au < exists ; Medicine, Science and the Law Volume 49 ; 49 >
+      au < exists ; Medicine, Science and the Law Volume 50 ; 50 >
+      au < exists ; Medicine, Science and the Law Volume 51 ; 51 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Medico-Legal Journal ;
+      issn = 0025-8172 ;
+      eissn = 2042-1834
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://mlj.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Medico-Legal Journal Volume 67 ; 67 >
+      au < exists ; Medico-Legal Journal Volume 68 ; 68 >
+      au < exists ; Medico-Legal Journal Volume 69 ; 69 >
+      au < exists ; Medico-Legal Journal Volume 70 ; 70 >
+      au < exists ; Medico-Legal Journal Volume 71 ; 71 >
+      au < exists ; Medico-Legal Journal Volume 72 ; 72 >
+      au < exists ; Medico-Legal Journal Volume 73 ; 73 >
+      au < exists ; Medico-Legal Journal Volume 74 ; 74 >
+      au < exists ; Medico-Legal Journal Volume 75 ; 75 >
+      au < exists ; Medico-Legal Journal Volume 76 ; 76 >
+      au < exists ; Medico-Legal Journal Volume 77 ; 77 >
+      au < exists ; Medico-Legal Journal Volume 78 ; 78 >
+
+    }
+
+  }
+
+  {
+  
     title <
       name = Menopause International ;
       issn = 1754-0453 ;
@@ -523,6 +725,7 @@
   }
 
   {
+  
     title <
       name = Obstetric Medicine ;
       issn = 1753-495X ;
@@ -546,6 +749,7 @@
   }
 
   {
+  
     title <
       name = Phlebology ;
       issn = 0268-3555 ;
@@ -574,6 +778,28 @@
   }
 
   {
+  
+    title <
+      name = Scottish Medical Journal ;
+      issn = 0036-9330 ;
+      eissn = 2045-6441
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://smj.rsmjournals.com/
+    implicit < status ; name ; param[volume_name] >
+
+    au < wanted ; Scottish Medical Journal Volume 51 ; 51 >
+    au < wanted ; Scottish Medical Journal Volume 52 ; 52 >
+    au < wanted ; Scottish Medical Journal Volume 53 ; 53 >
+    au < wanted ; Scottish Medical Journal Volume 54 ; 54 >
+    au < wanted ; Scottish Medical Journal Volume 55 ; 55 >
+    au < wanted ; Scottish Medical Journal Volume 56 ; 56 >
+
+  }
+
+  {
+  
     title <
       name = Tropical Doctor ;
       issn = 0049-4755 ;
@@ -599,5 +825,53 @@
 
   }
 
-}
+  {
+  
+    title <
+      name = Ultrasound ;
+      issn = 1742-271X ;
+      eissn = 1743-1344
+    >
 
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://ult.rsmjournals.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Ultrasound Volume 12 ; 12 >
+      au < exists ; Ultrasound Volume 13 ; 13 >
+      au < exists ; Ultrasound Volume 14 ; 14 >
+      au < exists ; Ultrasound Volume 15 ; 15 >
+      au < exists ; Ultrasound Volume 16 ; 16 >
+      au < exists ; Ultrasound Volume 17 ; 17 >
+      au < exists ; Ultrasound Volume 18 ; 18 >
+      au < exists ; Ultrasound Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Vascular ;
+      issn = 1708-5381 ;
+      eissn = 1708-539X
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://vascular.rsmjournals.com/
+    implicit < status ; name ; param[volume_name] >
+
+    au < wamted ; Vascular Volume 13 ; 13 >
+    au < wamted ; Vascular Volume 14 ; 14 >
+    au < wamted ; Vascular Volume 15 ; 15 >
+    au < wamted ; Vascular Volume 16 ; 16 >
+    au < wamted ; Vascular Volume 17 ; 17 >
+    au < wamted ; Vascular Volume 18 ; 18 >
+    au < wamted ; Vascular Volume 19 ; 19 >
+
+  }
+
+}
