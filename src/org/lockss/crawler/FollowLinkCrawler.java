@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.82 2011-01-10 09:19:58 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.83 2011-04-04 07:14:38 tlipkis Exp $
  */
 
 /*
@@ -389,7 +389,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     for (String url : getUrlsToFollow()) {
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);
-      logger.info("setStartUrl(" + curl + ")");
+      logger.debug2("setStartUrl(" + curl + ")");
       addToQueue(curl, fetchQueue, crawlStatus);
     }
   }
