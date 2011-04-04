@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.2.2.2 2011-03-30 23:16:59 tlipkis Exp $
+ * $Id: TestMetadataManager.java,v 1.2.2.3 2011-04-04 05:38:43 pgust Exp $
  */
 
 /*
@@ -27,7 +27,6 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
-
 */
 
 package org.lockss.daemon;
@@ -41,7 +40,6 @@ import java.util.*;
 import javax.sql.DataSource;
 
 import org.lockss.config.*;
-import org.lockss.crawler.NewContentCrawler;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -61,33 +59,54 @@ import org.lockss.test.*;
 public class TestMetadataManager extends LockssTestCase {
   static Logger log = Logger.getLogger("TestMetadataManager");
 
-  private SimulatedArchivalUnit sau0, sau1, sau2;
+  private SimulatedArchivalUnit sau0, sau1, sau2, sau3;
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
-  String tempDirPath;
+  private PluginManager pluginManager;
+  private String tempDirPath;
 
   /** set of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
   
   public void setUp() throws Exception {
     super.setUp();
+
     tempDirPath = getTempDir().getAbsolutePath();
-
-    Properties props = new Properties();
-    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getAlertManager();
-    theDaemon.getPluginManager().setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    theDaemon.getPluginManager().startService();
-    theDaemon.getCrawlManager();
 
     // set derby database log 
     System.setProperty("derby.stream.error.file",
 		       new File(tempDirPath,"derby.log").getAbsolutePath());
+
+    theDaemon = getMockLockssDaemon();
+    theDaemon.getAlertManager();
+    pluginManager = theDaemon.getPluginManager();
+    pluginManager.setLoadablePluginsReady(true);
+    theDaemon.setDaemonInited(true);
+    pluginManager.startService();
+    theDaemon.getCrawlManager();
+
+    Properties props = new Properties();
+    props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    Configuration config = ConfigurationUtil.fromProps(props);
+    ConfigurationUtil.installConfig(config);
+
+    sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
+					      simAuConfig(tempDirPath + "/0"));
+    sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
+					      simAuConfig(tempDirPath + "/1"));
+    sau2 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin2.class,
+					      simAuConfig(tempDirPath + "/2"));
+    sau3 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin3.class,
+		      			  simAuConfig(tempDirPath + "/3"));
+    PluginTestUtil.crawlSimAu(sau0);
+    PluginTestUtil.crawlSimAu(sau1);
+    PluginTestUtil.crawlSimAu(sau2);
+    PluginTestUtil.crawlSimAu(sau3);
     
+    // reset set of reindexed aus
+    ausReindexed.clear();
+
     metadataManager = new MetadataManager() {
       /**
        * Get the db root directory for testing.
@@ -121,28 +140,16 @@ public class TestMetadataManager extends LockssTestCase {
     };
     theDaemon.setMetadataManager(metadataManager);
     metadataManager.initService(theDaemon);
+    metadataManager.startService();
+
+    theDaemon.setAusStarted(true);
     
-    theDaemon.getCrawlManager();
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
-					      simAuConfig(tempDirPath + "/0"));
-    sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
-					      simAuConfig(tempDirPath + "/1"));
-    sau2 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin2.class,
-					      simAuConfig(tempDirPath + "/2"));
-    PluginTestUtil.crawlSimAu(sau0);
-    PluginTestUtil.crawlSimAu(sau1);
-    PluginTestUtil.crawlSimAu(sau2);
-
-  }
-
-  public void tearDown() throws Exception {
-    sau0.deleteContentTree();
-    sau1.deleteContentTree();
-    sau2.deleteContentTree();
-    theDaemon.stopDaemon();
-    super.tearDown();
+    int expectedAuCount = 4;
+    assertEquals(expectedAuCount, pluginManager.getAllAus().size());
+    
+    long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
+    int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
+    assertEquals(expectedAuCount, ausCount);
   }
 
   Configuration simAuConfig(String rootPath) {
@@ -155,6 +162,15 @@ public class TestMetadataManager extends LockssTestCase {
 				SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "7");
     return conf;
+  }
+
+
+  public void tearDown() throws Exception {
+    sau0.deleteContentTree();
+    sau1.deleteContentTree();
+    sau2.deleteContentTree();
+    theDaemon.stopDaemon();
+    super.tearDown();
   }
 
   /**
@@ -178,76 +194,118 @@ public class TestMetadataManager extends LockssTestCase {
     }
     return ausReindexed.size();
   }
-  
-  public void testCreateMetadata() throws Exception {
-    // reset set of reindexed aus
-    ausReindexed.clear();
 
-    metadataManager.restartService();
-    theDaemon.setAusStarted(true);
-    
+  public void testCreateMetadata() throws Exception {
     DataSource ds = metadataManager.getDataSource();
     assertNotNull(ds);
     
-    int expectedAuCount = 3;
-    assertEquals(expectedAuCount, theDaemon.getPluginManager().getAllAus().size());
-    
     Connection con = ds.getConnection();
-    
-    long maxWaitTime = expectedAuCount * 20000; // 20 sec. per au
-    int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
-    assertEquals(expectedAuCount, ausCount);
     
     assertEquals(0, metadataManager.reindexingTasks.size());
     assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
 
+    // check distinct access URLs
     String query =           
-      "select access_url from " + MetadataManager.METADATA_TABLE_NAME; 
+      "select distinct " + MetadataManager.ACCESS_URL_FIELD 
+      + " from " + MetadataManager.METADATA_TABLE; 
     Statement stmt = con.createStatement();
     ResultSet resultSet = stmt.executeQuery(query);
-    if (!resultSet.next()) {
-      fail("No entries in metadata table");
+    int count = 0;
+    while (resultSet.next()) {
+    	count++;
     }
-    String url = resultSet.getString(1);
-    log.debug("url from metadata table: " + url);
+    final int metadataRowCount = 84;
+    assertEquals(metadataRowCount, count);
 
+    // check unique plugin IDs
+    query =           
+        "select distinct " + MetadataManager.PLUGIN_ID_FIELD 
+        + " from " + MetadataManager.METADATA_TABLE; 
+    stmt = con.createStatement();
+    resultSet = stmt.executeQuery(query);
+    Set<String> results = new HashSet<String>();
+    while (resultSet.next()) {
+      results.add(resultSet.getString(1));
+    }
+    assertEquals(4, results.size());
+    results.remove("org|lockss|daemon|TestMetadataManager$MySimulatedPlugin0");
+    results.remove("org|lockss|daemon|TestMetadataManager$MySimulatedPlugin1");
+    results.remove("org|lockss|daemon|TestMetadataManager$MySimulatedPlugin2");
+    results.remove("org|lockss|daemon|TestMetadataManager$MySimulatedPlugin3");
+    assertEquals(0, results.size());
+    
+    // check DOIs
+    query =           
+        "select distinct " + MetadataManager.DOI_FIELD 
+        + " from " + MetadataManager.DOI_TABLE; 
+    stmt = con.createStatement();
+    resultSet = stmt.executeQuery(query);
+    results = new HashSet<String>();
+    while (resultSet.next()) {
+    	results.add(resultSet.getString(1));
+    }
+    assertEquals(metadataRowCount, results.size());
+
+    // check ISSNs
+    query =           
+        "select distinct " + MetadataManager.ISSN_FIELD 
+        + " from " + MetadataManager.ISSN_TABLE; 
+    stmt = con.createStatement();
+    resultSet = stmt.executeQuery(query);
+    results = new HashSet<String>();
+    while (resultSet.next()) {
+    	results.add(resultSet.getString(1));
+    }
+    assertEquals(3, results.size());
+    results.remove("77446521");
+    results.remove("1144875X");
+    results.remove("07402783");
+    assertEquals(0, results.size());
+    
+    // check ISBNs
+    query =           
+        "select distinct " + MetadataManager.ISBN_FIELD 
+        + " from " + MetadataManager.ISBN_TABLE; 
+    stmt = con.createStatement();
+    resultSet = stmt.executeQuery(query);
+    results = new HashSet<String>();
+    while (resultSet.next()) {
+    	results.add(resultSet.getString(1));
+      log.critical(resultSet.getString(1));
+    }
+    assertEquals(2, results.size());
+    results.remove("9781585623174");
+    results.remove("9761585623177");
+    assertEquals(0, results.size());
+    
+    assertEquals(0, metadataManager.reindexingTasks.size());
+    assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
+
+    con.rollback();
     con.commit();
-    con.close();
   }
   
   public void testModifyMetadata() throws Exception {
-    // reset set of reindexed aus
-    ausReindexed.clear();
-
-    metadataManager.restartService();
-    theDaemon.setAusStarted(true);
-    
     DataSource ds = metadataManager.getDataSource();
     assertNotNull(ds);
-    
-    int expectedAuCount = 3;
-    assertEquals(expectedAuCount, theDaemon.getPluginManager().getAllAus().size());
-    
     Connection con = ds.getConnection();
     
-    long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
-    int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
-    assertEquals(expectedAuCount, ausCount);
-    
-    assertEquals(0, metadataManager.reindexingTasks.size());
-    assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
-
+    // check unique plugin IDs
     String query =           
-      "select access_url from " + MetadataManager.METADATA_TABLE_NAME; 
+        "select distinct " + MetadataManager.ACCESS_URL_FIELD 
+        + " from " + MetadataManager.METADATA_TABLE
+        + " where " + MetadataManager.PLUGIN_ID_FIELD 
+        + " =  'org|lockss|daemon|TestMetadataManager$MySimulatedPlugin0'"; 
     Statement stmt = con.createStatement();
     ResultSet resultSet = stmt.executeQuery(query);
-    if (!resultSet.next()) {
-      fail("No entries in metadata table");
+    Set<String> results = new HashSet<String>();
+    while (resultSet.next()) {
+      results.add(resultSet.getString(1));
     }
-    String url = resultSet.getString(1);
-    log.debug("url from metadata table: " + url);
+    final int count = results.size();
+    assertEquals(21, count);
 
-    // reset set of reindexed aus
+	// reset set of reindexed aus
     ausReindexed.clear();
 
     // simulate an au change
@@ -260,18 +318,55 @@ public class TestMetadataManager extends LockssTestCase {
       }
     });
     
-    expectedAuCount = 1;
-    maxWaitTime = 10000; // 10 sec. per au
-    ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
+    // ensure only expected number of AUs were reindexed
+    final int expectedAuCount = 1;
+    int maxWaitTime = 10000; // 10 sec. per au
+    int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(ausCount, expectedAuCount);
 
-    assertEquals(0, metadataManager.reindexingTasks.size());
-    assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
-
-    con.commit();
-    con.close();
+    // ensure AU contains as many metadata table entries as before
+    resultSet = stmt.executeQuery(query);
+    results = new HashSet<String>();
+    while (resultSet.next()) {
+      results.add(resultSet.getString(1));
+    }
+    assertEquals(count, results.size());
   }
   
+  
+  public static class MySubTreeArticleIteratorFactory
+      implements ArticleIteratorFactory {
+    String pat;
+    public MySubTreeArticleIteratorFactory(String pat) {
+      this.pat = pat;
+    }
+    
+    /**
+     * Create an Iterator that iterates through the AU's articles, pointing
+     * to the appropriate CachedUrl of type mimeType for each, or to the
+     * plugin's choice of CachedUrl if mimeType is null
+     * @param au the ArchivalUnit to iterate through
+     * @return the ArticleIterator
+     */
+    @Override
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
+    													MetadataTarget target)
+        throws PluginException {
+      Iterator<ArticleFiles> ret;
+      SubTreeArticleIterator.Spec spec = 
+        new SubTreeArticleIterator.Spec().setTarget(target);
+      
+      if (pat != null) {
+       spec.setPattern(pat);
+      }
+      
+      ret = new SubTreeArticleIterator(au, spec);
+      log.debug(  "creating article iterator for au " + au.getName() 
+    		    + " hasNext: " + ret.hasNext());
+      return ret;
+    }
+  }
+
   public static class MySimulatedPlugin extends SimulatedPlugin {
     ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
     
@@ -283,12 +378,12 @@ public class TestMetadataManager extends LockssTestCase {
     @Override
     public ArticleIteratorFactory getArticleIteratorFactory() {
       MySubTreeArticleIteratorFactory ret =
-          new MySubTreeArticleIteratorFactory("branch1/branch1");
+          new MySubTreeArticleIteratorFactory(null); //"branch1/branch1");
       return ret;
     }
     @Override
-    public ArticleMetadataExtractor getArticleMetadataExtractor(
-                                        MetadataTarget target,  ArchivalUnit au) {
+    public ArticleMetadataExtractor 
+      getArticleMetadataExtractor(MetadataTarget target, ArchivalUnit au) {
       return simulatedArticleMetadataExtractor;
     }
   }
@@ -301,23 +396,40 @@ public class TestMetadataManager extends LockssTestCase {
           throws IOException, PluginException {
           ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
-          String doi = "10.1234/12345678.2010-01." +  articleNumber;
-          md.put(MetadataField.FIELD_DOI,doi);
-          md.put(MetadataField.FIELD_ISSN,"1234-5678");
-          md.put(MetadataField.FIELD_ISSN,"XI");
-          md.put(MetadataField.FIELD_ISSUE,"1st Quarter");
-          md.put(MetadataField.FIELD_DATE,"2010-01");
-          md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doi + "]");
+          md.put(MetadataField.FIELD_ISSN,"0740-2783");
+          md.put(MetadataField.FIELD_VOLUME,"XI");
+          if (articleNumber < 10) {
+            md.put(MetadataField.FIELD_ISSUE,"1st Quarter");
+            md.put(MetadataField.FIELD_DATE,"2010-Q1");
+            md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
+          } else {
+	            md.put(MetadataField.FIELD_ISSUE,"2nd Quarter");
+            md.put(MetadataField.FIELD_DATE,"2010-Q2");
+            md.put(MetadataField.FIELD_START_PAGE,"" + (articleNumber-9));
+          }
+          String doiPrefix = "10.1234/12345678";
+          String doi = doiPrefix + "."
+			+ md.get(MetadataField.FIELD_DATE) + "."
+			+ md.get(MetadataField.FIELD_START_PAGE); 
+          md.put(MetadataField.FIELD_DOI, doi);
+          md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author2[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author[" + doi + "]");
+          md.put(MetadataField.FIELD_ACCESS_URL, 
+        	 "http://www.title0.org/plugin0/XI/"
+             +  md.get(MetadataField.FIELD_DATE) 
+             +"/p" + md.get(MetadataField.FIELD_START_PAGE));
           emitter.emitMetadata(af, md);
         }
       };
     }
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("au_start_url", "\"%splugin0/%s\", base_url, volume");
+      return map;
+    }
   }
-  
+	  
   public static class MySimulatedPlugin1 extends MySimulatedPlugin {
     public MySimulatedPlugin1() {
       simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
@@ -326,21 +438,38 @@ public class TestMetadataManager extends LockssTestCase {
           throws IOException, PluginException {
           articleNumber++;
           ArticleMetadata md = new ArticleMetadata();
-          String doi = "10.2468/28681357.2010-06."+ articleNumber;
-          md.put(MetadataField.FIELD_DOI,doi);
-          md.put(MetadataField.FIELD_ISSN,"2468-1357");
+          md.put(MetadataField.FIELD_ISSN,"1144-875X");
+          md.put(MetadataField.FIELD_EISSN, "7744-6521");
           md.put(MetadataField.FIELD_VOLUME,"42");
-          md.put(MetadataField.FIELD_ISSUE,"Summer 2010");
-          md.put(MetadataField.FIELD_DATE,"2010-06");
-          md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
-          md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doi + "]");
-          md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
-//PJG: need to test multiple authors!
-          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author2[" + doi + "]");
+          if (articleNumber < 10) {
+            md.put(MetadataField.FIELD_ISSUE,"Summer");
+            md.put(MetadataField.FIELD_DATE,"2010-S2");
+            md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
+          } else {
+            md.put(MetadataField.FIELD_ISSUE,"Fall");
+            md.put(MetadataField.FIELD_DATE,"2010-S3");
+            md.put(MetadataField.FIELD_START_PAGE, "" + (articleNumber-9));
+          }
+          String doiPrefix = "10.2468/28681357";
+          String doi = doiPrefix + "."
+      			+ md.get(MetadataField.FIELD_DATE) + "."
+      			+ md.get(MetadataField.FIELD_START_PAGE); 
+          md.put(MetadataField.FIELD_DOI, doi);
+          md.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal[" + doiPrefix + "]");
+          md.put(MetadataField.FIELD_ARTICLE_TITLE, "Title[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR, "Author1[" + doi + "]");
+          md.put(MetadataField.FIELD_ACCESS_URL, 
+              "http://www.title1.org/plugin1/v_42/"
+         	+  md.get(MetadataField.FIELD_DATE) 
+          	+"/p" + md.get(MetadataField.FIELD_START_PAGE));
           emitter.emitMetadata(af, md);
         }
       };
+    }
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("au_start_url", "\"%splugin1/v_42\", base_url");
+      return map;
     }
   }
   
@@ -350,7 +479,7 @@ public class TestMetadataManager extends LockssTestCase {
         int articleNumber = 0;
         public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
           throws IOException, PluginException {
-          ArticleMetadata md = new ArticleMetadata();
+          org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
           String doi = "10.1357/9781585623174." + articleNumber; 
           md.put(MetadataField.FIELD_DOI,doi);
@@ -361,41 +490,48 @@ public class TestMetadataManager extends LockssTestCase {
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author2[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author3[" + doi + "]");
+          md.put(MetadataField.FIELD_ACCESS_URL, 
+             "http://www.title2.org/plugin2/1993/p"+articleNumber);
           emitter.emitMetadata(af, md);
         }
       };
     }
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("au_start_url", "\"%splugin2/1993\", base_url");
+      return map;
+    }
   }
   
-  public static class MySubTreeArticleIteratorFactory
-      implements ArticleIteratorFactory {
-    String pat;
-    MySubTreeArticleIteratorFactory(String pat) {
-      this.pat = pat;
+  public static class MySimulatedPlugin3 extends MySimulatedPlugin {
+    public MySimulatedPlugin3() {
+      simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
+        int articleNumber = 0;
+        public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+          throws IOException, PluginException {
+          ArticleMetadata md = new ArticleMetadata();
+          articleNumber++;
+          String doiPrefix = "10.0135/12345678.1999-11.12";
+          String doi = doiPrefix + "." + articleNumber; 
+          md.put(MetadataField.FIELD_DOI,doi);
+          md.put(MetadataField.FIELD_ISBN,"976-1-58562-317-7");
+          md.put(MetadataField.FIELD_DATE,"1999");
+          md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
+          md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doiPrefix + "]");
+          md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
+          md.put(MetadataField.FIELD_ACCESS_URL, 
+                  "http://www.title3.org/plugin3/1999/p"+articleNumber);
+          emitter.emitMetadata(af, md);
+        }
+      };
     }
-    
-    /**
-     * Create an Iterator that iterates through the AU's articles, pointing
-     * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-     * choice of CachedUrl if mimeType is null
-     * @param au the ArchivalUnit to iterate through
-     * @return the ArticleIterator
-     */
-    @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
-        throws PluginException {
-      Iterator<ArticleFiles> ret;
-      SubTreeArticleIterator.Spec spec = 
-        new SubTreeArticleIterator.Spec().setTarget(target);
-      
-      if (pat != null) {
-       spec.setPattern(pat);
-      }
-      
-      ret = new SubTreeArticleIterator(au, spec);
-      log.debug("***creating article iterator for au " + au.getName() + " hasNext: " + ret.hasNext());
-      return ret;
+    public ExternalizableMap getDefinitionMap() {
+      ExternalizableMap map = new ExternalizableMap();
+      map.putString("au_start_url", "\"%splugin3/1999\", base_url");
+      return map;
     }
   }
-
+	  
 }
