@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.3.2.10 2011-03-28 22:29:42 pgust Exp $
+ * $Id: MetadataManager.java,v 1.3.2.11 2011-04-04 05:37:25 pgust Exp $
  */
 
 /*
@@ -166,90 +166,112 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   boolean useMetadataExtractor = DEFAULT_USE_METADATA_EXTRACTOR;
 
-  /**
-   * Determines whether new database was created
-   */
+  /** Determines whether new database was created */
   boolean dbIsNew = false;
 
-  /**
-   * Maximum number of reindexing tasks
-   */
+  /** Maximum number of reindexing tasks */
   int maxReindexingTasks = DEFAULT_MAX_REINDEXING_TASKS;
 
-  /**
-   * The database data source
-   */
+  /** The database data source */
   private DataSource dataSource = null;
 
-  /**
-   * The plugin manager
-   */
+  /** The plugin manager */
   private PluginManager pluginMgr = null;
 
-  /**
-   * Name of DOI table
-   */
-  static final String DOI_TABLE_NAME = "DOI";
+  /** Name of DOI table */
+  static final String DOI_TABLE = "DOI";
 
-  /**
-   * Name of ISSN table
-   */
-  static final String ISSN_TABLE_NAME = "ISSN";
+  /** Name of ISSN table */
+  static final String ISSN_TABLE = "ISSN";
 
-  /**
-   * Name of ISBN table
-   */
-  static final String ISBN_TABLE_NAME = "ISBN";
+  /** Name of ISBN table */
+  static final String ISBN_TABLE = "ISBN";
 
-  /**
-   * Name of Metadata table
-   */
-  static final String METADATA_TABLE_NAME = "Metadata";
+  /** Name of Metadata table */
+  static final String METADATA_TABLE = "Metadata";
 
-  /**
-   * Name of Pending AUs table
-   */
-  static final String PENDINGAUS_TABLE_NAME = "PendingAus";
+  /** Name of Pending AUs table */
+  static final String PENDINGAUS_TABLE = "PendingAus";
 
-  /** Length of database author field -- enough for maybe first three authors */
-  static private final int MAX_AUTHOR_FIELD = 512;
+  /** Name of access_url field */
+  static public final String ACCESS_URL_FIELD = "access_url";
+  
+  /** Name of article_title field */
+  static public final String ARTICLE_TITLE_FIELD = "article_title";
+  
+  /** Name of au_key field */
+  static public final String AU_KEY_FIELD = "au_key";
+  
+  /** Name of author field */
+  static public final String AUTHOR_FIELD = "author";
+  
+  /** Name of date field */
+  static public final String DATE_FIELD = "date";
+  
+  /** Name of doi field */
+  static public final String DOI_FIELD = "doi";
+  
+  /** Name of isbn field */
+  static public final String ISBN_FIELD = "isbn";
+  
+  /** Name of issn field */
+  static public final String ISSN_FIELD = "issn";
+  
+  /** Name of issue field */
+  static public final String ISSUE_FIELD = "issue";
+  
+  /** Name of md_id foreign key field */
+  static public final String MD_ID_FIELD = "md_id";
+  
+  /** Name of plugin_id field */
+  static public final String PLUGIN_ID_FIELD = "plugin_id";
+  
+  /** Name of start_page field */
+  static public final String START_PAGE_FIELD = "start_page";
+  
+  /** Name of volume field */
+  static public final String VOLUME_FIELD = "volume";
+  
+  
+  /** Length of access URL field */
+  static public final int MAX_ACCESS_URL_FIELD = 4096;
 
   /** Length of database article title field */
-  static private final int MAX_ATITLE_FIELD = 512;
+  static public final int MAX_ATITLE_FIELD = 512;
 
-  /** Length of access URL field */
-  static private final int MAX_ACCESS_URL_FIELD = 4096;
-
-  /** Length of au key field */
+  /** public of au key field */
   static private final int MAX_AU_KEY_FIELD = 512;
 
+  /** Length of database author field -- enough for maybe first three authors */
+  static public final int MAX_AUTHOR_FIELD = 512;
+
+  /** Length of date field */
+  static public final int MAX_DATE_FIELD = 16;
+  
+  /** Length of doi field */
+  static public final int MAX_DOI_FIELD = 256;
+  
+  /** Length of isbn field */
+  static public final int MAX_ISBN_FIELD = 13;
+  
+  /** Length of issn field */
+  static public final int MAX_ISSN_FIELD = 8;
+  
+  /** Length of issue field */
+  static public final int MAX_ISSUE_FIELD = 16;
+  
   /** 
    * Length of plugin ID field. This field will be used as horizontal
    * partitioning field in the future, so it's length must be compatible
    * for that purpose for the database product used.
    */
-  static private final int MAX_PLUGIN_ID_FIELD = 128;
+  static public final int MAX_PLUGIN_ID_FIELD = 128;
   
-  /** length of start page field */
-  static final int MAX_STARTPAGE_FIELD = 16;
+  /** Length of start_page field */
+  static public final int MAX_STARTPAGE_FIELD = 16;
   
-  /** length of date field */
-  static public final int MAX_DATE_FIELD = 16;
-  
-  /** length of volume field */
+  /** Length of volume field */
   static public final int MAX_VOLUME_FIELD = 16;
-  
-  /** length of issue field */
-  static public final int MAX_ISSUE_FIELD = 16;
-  
-  /** length of ISSN field */
-  static public final int MAX_ISSN_FIELD = 8;
-  
-  /** length of ISBN field */
-  static public final int MAX_ISBN_FIELD = 13;
-  
-  /** length of DOI field */
-  static public final int MAX_DOI_FIELD = 256;
   
   private long totalCpuTime = 0;
   private long totalUserTime = 0;
@@ -264,7 +286,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
   }
 
- 
 
   /**
    * Start MetadataManager service
@@ -287,7 +308,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     // create schema and initialize tables if schema does not exist
-    dbIsNew = !tableExists(conn, PENDINGAUS_TABLE_NAME);
+    dbIsNew = !tableExists(conn, PENDINGAUS_TABLE);
     if (dbIsNew) {
       try {
         executeBatch(conn, createSchema);
@@ -408,7 +429,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // reset database tables
     try {
       // drop schema tables already exist
-      if (tableExists(conn, PENDINGAUS_TABLE_NAME)) {
+      if (tableExists(conn, PENDINGAUS_TABLE)) {
         executeBatch(conn, dropSchema);
       }
       conn.commit();
@@ -696,46 +717,48 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * SQL statements that create the database schema
    */
   private static final String createSchema[] = {
-      "create table " + PENDINGAUS_TABLE_NAME + " ("
-          + "plugin_id VARCHAR(64) NOT NULL," + "au_key VARCHAR("
-          + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
-      "create table " + METADATA_TABLE_NAME + " ("
-          + "md_id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
-          + "date VARCHAR(" + MAX_DATE_FIELD + "),"
-          + "volume VARCHAR(" + MAX_VOLUME_FIELD + ")," 
-          + "issue VARCHAR(" + MAX_ISSUE_FIELD + "),"
-          + "start_page VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
-          + "article_title VARCHAR(" + MAX_ATITLE_FIELD + ")," 
-          + "author VARCHAR(" + MAX_AUTHOR_FIELD + ")," // semicolon sep. list
-          + "plugin_id VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
-          + // partition by
-          "au_key VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
-          + "access_url VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" + ")",
+      "create table " + PENDINGAUS_TABLE + " ("
+          + PLUGIN_ID_FIELD + " VARCHAR(64) NOT NULL," 
+          + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
+      "create table " + METADATA_TABLE + " ("
+          + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
+          + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
+          + VOLUME_FIELD + " VARCHAR(" + MAX_VOLUME_FIELD + ")," 
+          + ISSUE_FIELD + " VARCHAR(" + MAX_ISSUE_FIELD + "),"
+          + START_PAGE_FIELD + " VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
+          + ARTICLE_TITLE_FIELD + " VARCHAR(" + MAX_ATITLE_FIELD + ")," 
+          // author field is a semicolon-separated list
+          + AUTHOR_FIELD + " VARCHAR(" + MAX_AUTHOR_FIELD + "),"
+          + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
+          // partition by
+          + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
+          + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
+          + ")",
 
-      "create table " + DOI_TABLE_NAME + " (" 
-          + "doi VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
-          + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
+      "create table " + DOI_TABLE + " (" 
+          + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
           + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISBN_TABLE_NAME + " (" 
-          + "isbn VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
-          + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
+      "create table " + ISBN_TABLE + " (" 
+          + ISBN_FIELD + " VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
           + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISSN_TABLE_NAME + " (" 
-          + "issn VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
-          + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
+      "create table " + ISSN_TABLE + " (" 
+          + ISSN_FIELD + " VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
+          + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
           + "(md_id) on delete cascade" + ")", };
 
   /**
    * SQL statements that drop the database schema
    */
   private static final String[] dropSchema = new String[] {
-      "drop table " + PENDINGAUS_TABLE_NAME, 
-      "drop table " + DOI_TABLE_NAME,
-      "drop table " + ISSN_TABLE_NAME, 
-      "drop table " + ISBN_TABLE_NAME,
-      "drop table " + METADATA_TABLE_NAME, };
+      "drop table " + PENDINGAUS_TABLE, 
+      "drop table " + DOI_TABLE,
+      "drop table " + ISSN_TABLE, 
+      "drop table " + ISBN_TABLE,
+      "drop table " + METADATA_TABLE, };
 
   /**
    * Execute a batch of statements.
@@ -805,6 +828,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         // get list of pending aus to reindex
         List<ArchivalUnit> aus =
       	  getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
+        if (aus.isEmpty()) {
+        	break;
+        }
   
         // schedule pending aus
         for (ArchivalUnit au : aus) {
@@ -872,11 +898,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Gets indexing enabled state of this manager.
+   * @return the indexing enabled state of this manager
+   */
+  public boolean isIndexingEnabled() {
+    return reindexingEnabled;
+  }
+
+  /**
    * Set indexing enabled state of this manager.
    * 
    * @param enable new enabled state of manager
    */
-  private void setIndexingEnabled(boolean enable) {
+  public void setIndexingEnabled(boolean enable) {
     boolean wasEnabled = reindexingEnabled;
     reindexingEnabled = enable;
     log.debug("enabled: " + reindexingEnabled);
@@ -934,7 +968,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           safeCommit(conn);
           dbIsNew = false;
         } catch (SQLException ex) {
-          log.error(  "Cannot add pending AUs table \"" + PENDINGAUS_TABLE_NAME
+          log.error(  "Cannot add pending AUs table \"" + PENDINGAUS_TABLE
                     + "\"", ex);
           safeClose(conn);
           return;
@@ -1407,7 +1441,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // insert common data into metadata table
       PreparedStatement insertMetadata = 
-        conn.prepareStatement("insert into " + METADATA_TABLE_NAME + " "
+        conn.prepareStatement("insert into " + METADATA_TABLE + " "
                               + "values (default,?,?,?,?,?,?,?,?,?)",
                               Statement.RETURN_GENERATED_KEYS);
       // TODO PJG: Keywords???
@@ -1429,7 +1463,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
       int mdid = resultSet.getInt(1);
       if (log.isDebug3()) {
-        log.debug("added [accessURL:" + accessUrl + ", md_id: " + mdid
+        log.debug3("added [accessURL:" + accessUrl + ", md_id: " + mdid
             + ", date: " + pubDate + ", vol: " + volume + ", issue: " + issue
             + ", page: " + startPage + ", pluginId:" + pluginId + "]");
       }
@@ -1446,7 +1480,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
          * + "plugin_id VARCHAR(MAX_PLUGIN_ID_FIELD) NOT NULL" + // partition by
          */
         PreparedStatement insertDOI = conn.prepareStatement(
-          "insert into " + DOI_TABLE_NAME + " " + "values (?,?)");
+          "insert into " + DOI_TABLE + " " + "values (?,?)");
         insertDOI.setString(1, doi);
         insertDOI.setInt(2, mdid);
         insertDOI.execute();
@@ -1457,7 +1491,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // insert row for ISBN
       if (!isbns.isEmpty()) {
         PreparedStatement insertISBN = conn.prepareStatement(
-          "insert into " + ISBN_TABLE_NAME + " " + "values (?,?)");
+          "insert into " + ISBN_TABLE + " " + "values (?,?)");
         insertISBN.setInt(2, mdid);
         for (String anIsbn : isbns) {
           anIsbn = anIsbn.replaceAll("-", "");
@@ -1471,7 +1505,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // insert rows for ISSN
       if (!issns.isEmpty()) {
         PreparedStatement insertISSN = conn.prepareStatement(  
-          "insert into " + ISSN_TABLE_NAME + " " + "values (?,?)");
+          "insert into " + ISSN_TABLE + " " + "values (?,?)");
         insertISSN.setInt(2, mdid);
         for (String anIssn : issns) {
           anIssn = anIssn.replaceAll("-", "");
@@ -1594,6 +1628,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           }
           sb.append(';');
         }
+    	sb.append(a);
       }
     }
     return (sb.length() == 0) ? null : sb.toString();
@@ -1692,9 +1727,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // prepare statement for inserting multiple AUs
     // (should this be saved forever?)
     PreparedStatement insertPendingAu = conn.prepareStatement(
-      "insert into " + PENDINGAUS_TABLE_NAME + " values (?,?)");
+      "insert into " + PENDINGAUS_TABLE + " values (?,?)");
     PreparedStatement selectPendingAu = conn.prepareStatement(
-      "select * from PendingAus where plugin_id=? and au_key=?");
+        "select * from " + PENDINGAUS_TABLE + " where " 
+      + PLUGIN_ID_FIELD + " = ? and " + AU_KEY_FIELD + " = ?");
 
     log.debug2("number of pending aus to add: " + aus.size());
 
@@ -1735,8 +1771,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void removeFromPendingAus(Connection conn, ArchivalUnit au)
       throws SQLException {
-    PreparedStatement deletePendingAu = conn.prepareStatement("delete from "
-        + PENDINGAUS_TABLE_NAME + " where plugin_id=? and au_key=?");
+    PreparedStatement deletePendingAu = conn.prepareStatement(
+    	  "delete from "
+        + PENDINGAUS_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
+        + AU_KEY_FIELD + " = ?");
     String auid = au.getAuId();
     String pluginId = PluginManager.pluginIdFromAuId(auid);
     String auKey = PluginManager.auKeyFromAuId(auid);
@@ -1755,8 +1793,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void removeMetadataForAu(Connection conn, ArchivalUnit au)
       throws SQLException {
-    PreparedStatement deletePendingAu = conn.prepareStatement("delete from "
-        + METADATA_TABLE_NAME + " where plugin_id=? and au_key=?");
+    PreparedStatement deletePendingAu = conn.prepareStatement(
+    	"delete from "
+        + METADATA_TABLE + " where " + PLUGIN_ID_FIELD +  " = ? and "
+        + AU_KEY_FIELD + " = ?");
     String auid = au.getAuId();
     String pluginId = PluginManager.pluginIdFromAuId(auid);
     String auKey = PluginManager.auKeyFromAuId(auid);
