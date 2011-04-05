@@ -82,11 +82,11 @@
       param[base_url] = http://ce.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Clinical Ethics Volume 1 ; 1 >
-      au < wanted ; Clinical Ethics Volume 2 ; 2 >
-      au < wanted ; Clinical Ethics Volume 3 ; 3 >
-      au < wanted ; Clinical Ethics Volume 4 ; 4 >
-      au < wanted ; Clinical Ethics Volume 5 ; 5 >
+      au < ready ; Clinical Ethics Volume 1 ; 1 >
+      au < ready ; Clinical Ethics Volume 2 ; 2 >
+      au < ready ; Clinical Ethics Volume 3 ; 3 >
+      au < ready ; Clinical Ethics Volume 4 ; 4 >
+      au < ready ; Clinical Ethics Volume 5 ; 5 >
 
     }
 
@@ -107,14 +107,14 @@
       param[base_url] = http://cr.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Clinical Risk Volume 7 ; 7 >
-      au < wanted ; Clinical Risk Volume 8 ; 8 >
-      au < wanted ; Clinical Risk Volume 9 ; 9 >
-      au < wanted ; Clinical Risk Volume 10 ; 10 >
-      au < wanted ; Clinical Risk Volume 11 ; 11 >
-      au < wanted ; Clinical Risk Volume 12 ; 12 >
-      au < wanted ; Clinical Risk Volume 13 ; 13 >
-      au < wanted ; Clinical Risk Volume 14 ; 14 >
+      au < ready ; Clinical Risk Volume 7 ; 7 >
+      au < ready ; Clinical Risk Volume 8 ; 8 >
+      au < ready ; Clinical Risk Volume 9 ; 9 >
+      au < ready ; Clinical Risk Volume 10 ; 10 >
+      au < ready ; Clinical Risk Volume 11 ; 11 >
+      au < ready ; Clinical Risk Volume 12 ; 12 >
+      au < ready ; Clinical Risk Volume 13 ; 13 >
+      au < ready ; Clinical Risk Volume 14 ; 14 >
       au < wanted ; Clinical Risk Volume 15 ; 15 >
       au < wanted ; Clinical Risk Volume 16 ; 16 >
       au < wanted ; Clinical Risk Volume 17 ; 17 >
@@ -707,18 +707,18 @@
       param[base_url] = http://mi.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Menopause International Volume 6 ; 6 >
-      au < wanted ; Menopause International Volume 7 ; 7 >
-      au < wanted ; Menopause International Volume 8 ; 8 >
-      au < wanted ; Menopause International Volume 9 ; 9 >
-      au < wanted ; Menopause International Volume 10 ; 10 >
-      au < wanted ; Menopause International Volume 11 ; 11 >
-      au < wanted ; Menopause International Volume 12 ; 12 >
-      au < wanted ; Menopause International Volume 13 ; 13 >
-      au < wanted ; Menopause International Volume 14 ; 14 >
-      au < wanted ; Menopause International Volume 15 ; 15 >
-      au < wanted ; Menopause International Volume 16 ; 16 >
-      au < wanted ; Menopause International Volume 17 ; 17 >
+      au < ready ; Menopause International Volume 6 ; 6 >
+      au < ready ; Menopause International Volume 7 ; 7 >
+      au < ready ; Menopause International Volume 8 ; 8 >
+      au < ready ; Menopause International Volume 9 ; 9 >
+      au < ready ; Menopause International Volume 10 ; 10 >
+      au < ready ; Menopause International Volume 11 ; 11 >
+      au < ready ; Menopause International Volume 12 ; 12 >
+      au < ready ; Menopause International Volume 13 ; 13 >
+      au < ready ; Menopause International Volume 14 ; 14 >
+      au < ready ; Menopause International Volume 15 ; 15 >
+      au < ready ; Menopause International Volume 16 ; 16 >
+      au < ready ; Menopause International Volume 17 ; 17 >
 
     }
 
@@ -739,10 +739,10 @@
       param[base_url] = http://obmed.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Obstetric Medicine Volume 1 ; 1 >
-      au < wanted ; Obstetric Medicine Volume 2 ; 2 >
-      au < wanted ; Obstetric Medicine Volume 3 ; 3 >
-      au < wanted ; Obstetric Medicine Volume 4 ; 4 >
+      au < ready ; Obstetric Medicine Volume 1 ; 1 >
+      au < ready ; Obstetric Medicine Volume 2 ; 2 >
+      au < ready ; Obstetric Medicine Volume 3 ; 3 >
+      au < ready ; Obstetric Medicine Volume 4 ; 4 >
 
     }
 
@@ -763,15 +763,15 @@
       param[base_url] = http://phleb.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Phlebology Volume 18 ; 18 >
-      au < wanted ; Phlebology Volume 19 ; 19 >
-      au < wanted ; Phlebology Volume 20 ; 20 >
-      au < wanted ; Phlebology Volume 21 ; 21 >
-      au < wanted ; Phlebology Volume 22 ; 22 >
-      au < wanted ; Phlebology Volume 23 ; 23 >
-      au < wanted ; Phlebology Volume 24 ; 24 >
-      au < wanted ; Phlebology Volume 25 ; 25 >
-      au < wanted ; Phlebology Volume 26 ; 26 >
+      au < ready ; Phlebology Volume 18 ; 18 >
+      au < ready ; Phlebology Volume 19 ; 19 >
+      au < ready ; Phlebology Volume 20 ; 20 >
+      au < ready ; Phlebology Volume 21 ; 21 >
+      au < ready ; Phlebology Volume 22 ; 22 >
+      au < ready ; Phlebology Volume 23 ; 23 >
+      au < ready ; Phlebology Volume 24 ; 24 >
+      au < ready ; Phlebology Volume 25 ; 25 >
+      au < ready ; Phlebology Volume 26 ; 26 >
 
     }
 
@@ -864,13 +864,13 @@
     param[base_url] = http://vascular.rsmjournals.com/
     implicit < status ; name ; param[volume_name] >
 
-    au < wamted ; Vascular Volume 13 ; 13 >
-    au < wamted ; Vascular Volume 14 ; 14 >
-    au < wamted ; Vascular Volume 15 ; 15 >
-    au < wamted ; Vascular Volume 16 ; 16 >
-    au < wamted ; Vascular Volume 17 ; 17 >
-    au < wamted ; Vascular Volume 18 ; 18 >
-    au < wamted ; Vascular Volume 19 ; 19 >
+    au < wanted ; Vascular Volume 13 ; 13 >
+    au < wanted ; Vascular Volume 14 ; 14 >
+    au < wanted ; Vascular Volume 15 ; 15 >
+    au < wanted ; Vascular Volume 16 ; 16 >
+    au < wanted ; Vascular Volume 17 ; 17 >
+    au < wanted ; Vascular Volume 18 ; 18 >
+    au < wanted ; Vascular Volume 19 ; 19 >
 
   }
 
