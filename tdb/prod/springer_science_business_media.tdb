@@ -1864,7 +1864,6 @@
     >
 
     param[journal_issn] = 0883-6612
-    attr[where] = sul-lockss30b
 
     au < ready ; 1995 ; Annals of Behavioral Medicine Volume 17 ; 17 >
     au < ready ; 1996 ; Annals of Behavioral Medicine Volume 18 ; 18 >
@@ -17353,14 +17352,13 @@
     >
 
     param[journal_issn] = 1556-1607
-    attr[where] = sul-lockss30b
 
-    au < testing ; 2006 ; International Journal of Computer-Supported Collaborative Learning Volume 1 ; 1 >
-    au < testing ; 2007 ; International Journal of Computer-Supported Collaborative Learning Volume 2 ; 2 >
-    au < testing ; 2008 ; International Journal of Computer-Supported Collaborative Learning Volume 3 ; 3 >
-    au < testing ; 2009 ; International Journal of Computer-Supported Collaborative Learning Volume 4 ; 4 >
-    au < testing ; 2010 ; International Journal of Computer-Supported Collaborative Learning Volume 5 ; 5 >
-    au < testing ; 2011 ; International Journal of Computer-Supported Collaborative Learning Volume 6 ; 6 >
+    au < ready ; 2006 ; International Journal of Computer-Supported Collaborative Learning Volume 1 ; 1 >
+    au < ready ; 2007 ; International Journal of Computer-Supported Collaborative Learning Volume 2 ; 2 >
+    au < ready ; 2008 ; International Journal of Computer-Supported Collaborative Learning Volume 3 ; 3 >
+    au < ready ; 2009 ; International Journal of Computer-Supported Collaborative Learning Volume 4 ; 4 >
+    au < ready ; 2010 ; International Journal of Computer-Supported Collaborative Learning Volume 5 ; 5 >
+    au < ready ; 2011 ; International Journal of Computer-Supported Collaborative Learning Volume 6 ; 6 >
 
   }
 
@@ -18781,36 +18779,36 @@
     param[journal_issn] = 0091-0627
     attr[where] = sul-lockss30a
 
-    au < testing ; 1973 ; Journal of Abnormal Child Psychology Volume 1 ; 1 >
+    au < ready ; 1973 ; Journal of Abnormal Child Psychology Volume 1 ; 1 >
     au < testing ; 1974 ; Journal of Abnormal Child Psychology Volume 2 ; 2 >
     au < testing ; 1975 ; Journal of Abnormal Child Psychology Volume 3 ; 3 >
-    au < testing ; 1976 ; Journal of Abnormal Child Psychology Volume 4 ; 4 >
-    au < testing ; 1977 ; Journal of Abnormal Child Psychology Volume 5 ; 5 >
-    au < testing ; 1978 ; Journal of Abnormal Child Psychology Volume 6 ; 6 >
-    au < testing ; 1979 ; Journal of Abnormal Child Psychology Volume 7 ; 7 >
-    au < testing ; 1980 ; Journal of Abnormal Child Psychology Volume 8 ; 8 >
+    au < ready ; 1976 ; Journal of Abnormal Child Psychology Volume 4 ; 4 >
+    au < ready ; 1977 ; Journal of Abnormal Child Psychology Volume 5 ; 5 >
+    au < ready ; 1978 ; Journal of Abnormal Child Psychology Volume 6 ; 6 >
+    au < ready ; 1979 ; Journal of Abnormal Child Psychology Volume 7 ; 7 >
+    au < ready ; 1980 ; Journal of Abnormal Child Psychology Volume 8 ; 8 >
     au < testing ; 1981 ; Journal of Abnormal Child Psychology Volume 9 ; 9 >
-    au < testing ; 1982 ; Journal of Abnormal Child Psychology Volume 10 ; 10 >
-    au < testing ; 1983 ; Journal of Abnormal Child Psychology Volume 11 ; 11 >
-    au < testing ; 1984 ; Journal of Abnormal Child Psychology Volume 12 ; 12 >
+    au < ready ; 1982 ; Journal of Abnormal Child Psychology Volume 10 ; 10 >
+    au < ready ; 1983 ; Journal of Abnormal Child Psychology Volume 11 ; 11 >
+    au < ready ; 1984 ; Journal of Abnormal Child Psychology Volume 12 ; 12 >
     au < testing ; 1985 ; Journal of Abnormal Child Psychology Volume 13 ; 13 >
-    au < testing ; 1986 ; Journal of Abnormal Child Psychology Volume 14 ; 14 >
-    au < testing ; 1987 ; Journal of Abnormal Child Psychology Volume 15 ; 15 >
+    au < ready ; 1986 ; Journal of Abnormal Child Psychology Volume 14 ; 14 >
+    au < ready ; 1987 ; Journal of Abnormal Child Psychology Volume 15 ; 15 >
     au < testing ; 1988 ; Journal of Abnormal Child Psychology Volume 16 ; 16 >
     au < testing ; 1989 ; Journal of Abnormal Child Psychology Volume 17 ; 17 >
     au < testing ; 1990 ; Journal of Abnormal Child Psychology Volume 18 ; 18 >
     au < testing ; 1991 ; Journal of Abnormal Child Psychology Volume 19 ; 19 >
     au < testing ; 1992 ; Journal of Abnormal Child Psychology Volume 20 ; 20 >
-    au < testing ; 1993 ; Journal of Abnormal Child Psychology Volume 21 ; 21 >
+    au < ready ; 1993 ; Journal of Abnormal Child Psychology Volume 21 ; 21 >
     au < testing ; 1994 ; Journal of Abnormal Child Psychology Volume 22 ; 22 >
-    au < testing ; 1995 ; Journal of Abnormal Child Psychology Volume 23 ; 23 >
+    au < ready ; 1995 ; Journal of Abnormal Child Psychology Volume 23 ; 23 >
     au < testing ; 1996 ; Journal of Abnormal Child Psychology Volume 24 ; 24 >
     au < testing ; 1997 ; Journal of Abnormal Child Psychology Volume 25 ; 25 >
-    au < testing ; 1998 ; Journal of Abnormal Child Psychology Volume 26 ; 26 >
-    au < testing ; 1999 ; Journal of Abnormal Child Psychology Volume 27 ; 27 >
-    au < testing ; 2000 ; Journal of Abnormal Child Psychology Volume 28 ; 28 >
+    au < ready ; 1998 ; Journal of Abnormal Child Psychology Volume 26 ; 26 >
+    au < ready ; 1999 ; Journal of Abnormal Child Psychology Volume 27 ; 27 >
+    au < ready ; 2000 ; Journal of Abnormal Child Psychology Volume 28 ; 28 >
     au < testing ; 2001 ; Journal of Abnormal Child Psychology Volume 29 ; 29 >
-    au < testing ; 2002 ; Journal of Abnormal Child Psychology Volume 30 ; 30 >
+    au < ready ; 2002 ; Journal of Abnormal Child Psychology Volume 30 ; 30 >
     au < testing ; 2003 ; Journal of Abnormal Child Psychology Volume 31 ; 31 >
     au < testing ; 2004 ; Journal of Abnormal Child Psychology Volume 32 ; 32 >
     au < testing ; 2005 ; Journal of Abnormal Child Psychology Volume 33 ; 33 >
@@ -22880,10 +22878,10 @@
 
     au < testing ; 2006 ; Journal of Neuroimmune Pharmacology Volume 1 ; 1 >
     au < testing ; 2007 ; Journal of Neuroimmune Pharmacology Volume 2 ; 2 >
-    au < testing ; 2008 ; Journal of Neuroimmune Pharmacology Volume 3 ; 3 >
-    au < testing ; 2009 ; Journal of Neuroimmune Pharmacology Volume 4 ; 4 >
-    au < testing ; 2010 ; Journal of Neuroimmune Pharmacology Volume 5 ; 5 >
-    au < testing ; 2011 ; Journal of Neuroimmune Pharmacology Volume 6 ; 6 >
+    au < ready ; 2008 ; Journal of Neuroimmune Pharmacology Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Neuroimmune Pharmacology Volume 4 ; 4 >
+    au < ready ; 2010 ; Journal of Neuroimmune Pharmacology Volume 5 ; 5 >
+    au < ready ; 2011 ; Journal of Neuroimmune Pharmacology Volume 6 ; 6 >
 
   }
 
