@@ -50,18 +50,18 @@
       param[base_url] = http://acb.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Annals of Clinical Biochemistry Volume 37 ; 37 >
-      au < ready ; Annals of Clinical Biochemistry Volume 38 ; 38 >
-      au < ready ; Annals of Clinical Biochemistry Volume 39 ; 39 >
-      au < ready ; Annals of Clinical Biochemistry Volume 40 ; 40 >
-      au < ready ; Annals of Clinical Biochemistry Volume 41 ; 41 >
-      au < ready ; Annals of Clinical Biochemistry Volume 42 ; 42 >
-      au < ready ; Annals of Clinical Biochemistry Volume 43 ; 43 >
-      au < ready ; Annals of Clinical Biochemistry Volume 44 ; 44 >
-      au < ready ; Annals of Clinical Biochemistry Volume 45 ; 45 >
-      au < ready ; Annals of Clinical Biochemistry Volume 46 ; 46 >
-      au < ready ; Annals of Clinical Biochemistry Volume 47 ; 47 >
-      au < ready ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      au < released ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < released ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < released ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < released ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < released ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < released ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < released ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < released ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < released ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < released ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < released ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < released ; Annals of Clinical Biochemistry Volume 48 ; 48 >
 
     }
 
@@ -82,11 +82,11 @@
       param[base_url] = http://ce.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Clinical Ethics Volume 1 ; 1 >
-      au < ready ; Clinical Ethics Volume 2 ; 2 >
-      au < ready ; Clinical Ethics Volume 3 ; 3 >
-      au < ready ; Clinical Ethics Volume 4 ; 4 >
-      au < ready ; Clinical Ethics Volume 5 ; 5 >
+      au < released ; Clinical Ethics Volume 1 ; 1 >
+      au < released ; Clinical Ethics Volume 2 ; 2 >
+      au < released ; Clinical Ethics Volume 3 ; 3 >
+      au < released ; Clinical Ethics Volume 4 ; 4 >
+      au < released ; Clinical Ethics Volume 5 ; 5 >
 
     }
 
@@ -336,22 +336,22 @@
       param[base_url] = http://ijsa.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; International Journal of STD & AIDS Volume 7 ; 7 >
-      au < ready ; International Journal of STD & AIDS Volume 8 ; 8 >
-      au < ready ; International Journal of STD & AIDS Volume 9 ; 9 >
-      au < ready ; International Journal of STD & AIDS Volume 10 ; 10 >
-      au < ready ; International Journal of STD & AIDS Volume 11 ; 11 >
-      au < ready ; International Journal of STD & AIDS Volume 12 ; 12 >
-      au < ready ; International Journal of STD & AIDS Volume 13 ; 13 >
-      au < ready ; International Journal of STD & AIDS Volume 14 ; 14 >
-      au < ready ; International Journal of STD & AIDS Volume 15 ; 15 >
-      au < ready ; International Journal of STD & AIDS Volume 16 ; 16 >
-      au < ready ; International Journal of STD & AIDS Volume 17 ; 17 >
-      au < ready ; International Journal of STD & AIDS Volume 18 ; 18 >
-      au < ready ; International Journal of STD & AIDS Volume 19 ; 19 >
-      au < ready ; International Journal of STD & AIDS Volume 20 ; 20 >
-      au < ready ; International Journal of STD & AIDS Volume 21 ; 21 >
-      au < ready ; International Journal of STD & AIDS Volume 22 ; 22 >
+      au < released ; International Journal of STD & AIDS Volume 7 ; 7 >
+      au < released ; International Journal of STD & AIDS Volume 8 ; 8 >
+      au < released ; International Journal of STD & AIDS Volume 9 ; 9 >
+      au < released ; International Journal of STD & AIDS Volume 10 ; 10 >
+      au < released ; International Journal of STD & AIDS Volume 11 ; 11 >
+      au < released ; International Journal of STD & AIDS Volume 12 ; 12 >
+      au < released ; International Journal of STD & AIDS Volume 13 ; 13 >
+      au < released ; International Journal of STD & AIDS Volume 14 ; 14 >
+      au < released ; International Journal of STD & AIDS Volume 15 ; 15 >
+      au < released ; International Journal of STD & AIDS Volume 16 ; 16 >
+      au < released ; International Journal of STD & AIDS Volume 17 ; 17 >
+      au < released ; International Journal of STD & AIDS Volume 18 ; 18 >
+      au < released ; International Journal of STD & AIDS Volume 19 ; 19 >
+      au < released ; International Journal of STD & AIDS Volume 20 ; 20 >
+      au < released ; International Journal of STD & AIDS Volume 21 ; 21 >
+      au < released ; International Journal of STD & AIDS Volume 22 ; 22 >
 
     }
 
@@ -583,51 +583,51 @@
       param[base_url] = http://la.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Laboratory Animals Volume 1 ; 1 >
-      au < ready ; Laboratory Animals Volume 2 ; 2 >
-      au < ready ; Laboratory Animals Volume 3 ; 3 >
-      au < ready ; Laboratory Animals Volume 4 ; 4 >
-      au < ready ; Laboratory Animals Volume 5 ; 5 >
-      au < ready ; Laboratory Animals Volume 6 ; 6 >
-      au < ready ; Laboratory Animals Volume 7 ; 7 >
-      au < ready ; Laboratory Animals Volume 8 ; 8 >
-      au < ready ; Laboratory Animals Volume 9 ; 9 >
-      au < ready ; Laboratory Animals Volume 10 ; 10 >
-      au < ready ; Laboratory Animals Volume 11 ; 11 >
-      au < ready ; Laboratory Animals Volume 12 ; 12 >
-      au < ready ; Laboratory Animals Volume 13 ; 13 >
-      au < ready ; Laboratory Animals Volume 14 ; 14 >
-      au < ready ; Laboratory Animals Volume 15 ; 15 >
-      au < ready ; Laboratory Animals Volume 16 ; 16 >
-      au < ready ; Laboratory Animals Volume 17 ; 17 >
-      au < ready ; Laboratory Animals Volume 18 ; 18 >
-      au < ready ; Laboratory Animals Volume 19 ; 19 >
-      au < ready ; Laboratory Animals Volume 20 ; 20 >
-      au < ready ; Laboratory Animals Volume 21 ; 21 >
-      au < ready ; Laboratory Animals Volume 22 ; 22 >
-      au < ready ; Laboratory Animals Volume 23 ; 23 >
-      au < ready ; Laboratory Animals Volume 24 ; 24 >
-      au < ready ; Laboratory Animals Volume 25 ; 25 >
-      au < ready ; Laboratory Animals Volume 26 ; 26 >
-      au < ready ; Laboratory Animals Volume 27 ; 27 >
-      au < ready ; Laboratory Animals Volume 28 ; 28 >
-      au < ready ; Laboratory Animals Volume 29 ; 29 >
-      au < ready ; Laboratory Animals Volume 30 ; 30 >
-      au < ready ; Laboratory Animals Volume 31 ; 31 >
-      au < ready ; Laboratory Animals Volume 32 ; 32 >
-      au < ready ; Laboratory Animals Volume 33 ; 33 >
-      au < ready ; Laboratory Animals Volume 34 ; 34 >
-      au < ready ; Laboratory Animals Volume 35 ; 35 >
-      au < ready ; Laboratory Animals Volume 36 ; 36 >
-      au < ready ; Laboratory Animals Volume 37 ; 37 >
-      au < ready ; Laboratory Animals Volume 38 ; 38 >
-      au < ready ; Laboratory Animals Volume 39 ; 39 >
-      au < ready ; Laboratory Animals Volume 40 ; 40 >
-      au < ready ; Laboratory Animals Volume 41 ; 41 >
-      au < ready ; Laboratory Animals Volume 42 ; 42 >
-      au < ready ; Laboratory Animals Volume 43 ; 43 >
-      au < ready ; Laboratory Animals Volume 44 ; 44 >
-      au < ready ; Laboratory Animals Volume 45 ; 45 >
+      au < released ; Laboratory Animals Volume 1 ; 1 >
+      au < released ; Laboratory Animals Volume 2 ; 2 >
+      au < released ; Laboratory Animals Volume 3 ; 3 >
+      au < released ; Laboratory Animals Volume 4 ; 4 >
+      au < released ; Laboratory Animals Volume 5 ; 5 >
+      au < released ; Laboratory Animals Volume 6 ; 6 >
+      au < released ; Laboratory Animals Volume 7 ; 7 >
+      au < released ; Laboratory Animals Volume 8 ; 8 >
+      au < released ; Laboratory Animals Volume 9 ; 9 >
+      au < released ; Laboratory Animals Volume 10 ; 10 >
+      au < released ; Laboratory Animals Volume 11 ; 11 >
+      au < released ; Laboratory Animals Volume 12 ; 12 >
+      au < released ; Laboratory Animals Volume 13 ; 13 >
+      au < released ; Laboratory Animals Volume 14 ; 14 >
+      au < released ; Laboratory Animals Volume 15 ; 15 >
+      au < released ; Laboratory Animals Volume 16 ; 16 >
+      au < released ; Laboratory Animals Volume 17 ; 17 >
+      au < released ; Laboratory Animals Volume 18 ; 18 >
+      au < released ; Laboratory Animals Volume 19 ; 19 >
+      au < released ; Laboratory Animals Volume 20 ; 20 >
+      au < released ; Laboratory Animals Volume 21 ; 21 >
+      au < released ; Laboratory Animals Volume 22 ; 22 >
+      au < released ; Laboratory Animals Volume 23 ; 23 >
+      au < released ; Laboratory Animals Volume 24 ; 24 >
+      au < released ; Laboratory Animals Volume 25 ; 25 >
+      au < released ; Laboratory Animals Volume 26 ; 26 >
+      au < released ; Laboratory Animals Volume 27 ; 27 >
+      au < released ; Laboratory Animals Volume 28 ; 28 >
+      au < released ; Laboratory Animals Volume 29 ; 29 >
+      au < released ; Laboratory Animals Volume 30 ; 30 >
+      au < released ; Laboratory Animals Volume 31 ; 31 >
+      au < released ; Laboratory Animals Volume 32 ; 32 >
+      au < released ; Laboratory Animals Volume 33 ; 33 >
+      au < released ; Laboratory Animals Volume 34 ; 34 >
+      au < released ; Laboratory Animals Volume 35 ; 35 >
+      au < released ; Laboratory Animals Volume 36 ; 36 >
+      au < released ; Laboratory Animals Volume 37 ; 37 >
+      au < released ; Laboratory Animals Volume 38 ; 38 >
+      au < released ; Laboratory Animals Volume 39 ; 39 >
+      au < released ; Laboratory Animals Volume 40 ; 40 >
+      au < released ; Laboratory Animals Volume 41 ; 41 >
+      au < released ; Laboratory Animals Volume 42 ; 42 >
+      au < released ; Laboratory Animals Volume 43 ; 43 >
+      au < released ; Laboratory Animals Volume 44 ; 44 >
+      au < released ; Laboratory Animals Volume 45 ; 45 >
 
     }
 
@@ -707,18 +707,18 @@
       param[base_url] = http://mi.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Menopause International Volume 6 ; 6 >
-      au < ready ; Menopause International Volume 7 ; 7 >
-      au < ready ; Menopause International Volume 8 ; 8 >
-      au < ready ; Menopause International Volume 9 ; 9 >
-      au < ready ; Menopause International Volume 10 ; 10 >
-      au < ready ; Menopause International Volume 11 ; 11 >
-      au < ready ; Menopause International Volume 12 ; 12 >
-      au < ready ; Menopause International Volume 13 ; 13 >
-      au < ready ; Menopause International Volume 14 ; 14 >
-      au < ready ; Menopause International Volume 15 ; 15 >
-      au < ready ; Menopause International Volume 16 ; 16 >
-      au < ready ; Menopause International Volume 17 ; 17 >
+      au < released ; Menopause International Volume 6 ; 6 >
+      au < released ; Menopause International Volume 7 ; 7 >
+      au < released ; Menopause International Volume 8 ; 8 >
+      au < released ; Menopause International Volume 9 ; 9 >
+      au < released ; Menopause International Volume 10 ; 10 >
+      au < released ; Menopause International Volume 11 ; 11 >
+      au < released ; Menopause International Volume 12 ; 12 >
+      au < released ; Menopause International Volume 13 ; 13 >
+      au < released ; Menopause International Volume 14 ; 14 >
+      au < released ; Menopause International Volume 15 ; 15 >
+      au < released ; Menopause International Volume 16 ; 16 >
+      au < released ; Menopause International Volume 17 ; 17 >
 
     }
 
@@ -739,10 +739,10 @@
       param[base_url] = http://obmed.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Obstetric Medicine Volume 1 ; 1 >
-      au < ready ; Obstetric Medicine Volume 2 ; 2 >
-      au < ready ; Obstetric Medicine Volume 3 ; 3 >
-      au < ready ; Obstetric Medicine Volume 4 ; 4 >
+      au < released ; Obstetric Medicine Volume 1 ; 1 >
+      au < released ; Obstetric Medicine Volume 2 ; 2 >
+      au < released ; Obstetric Medicine Volume 3 ; 3 >
+      au < released ; Obstetric Medicine Volume 4 ; 4 >
 
     }
 
@@ -763,15 +763,15 @@
       param[base_url] = http://phleb.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Phlebology Volume 18 ; 18 >
-      au < ready ; Phlebology Volume 19 ; 19 >
-      au < ready ; Phlebology Volume 20 ; 20 >
-      au < ready ; Phlebology Volume 21 ; 21 >
-      au < ready ; Phlebology Volume 22 ; 22 >
-      au < ready ; Phlebology Volume 23 ; 23 >
-      au < ready ; Phlebology Volume 24 ; 24 >
-      au < ready ; Phlebology Volume 25 ; 25 >
-      au < ready ; Phlebology Volume 26 ; 26 >
+      au < released ; Phlebology Volume 18 ; 18 >
+      au < released ; Phlebology Volume 19 ; 19 >
+      au < released ; Phlebology Volume 20 ; 20 >
+      au < released ; Phlebology Volume 21 ; 21 >
+      au < released ; Phlebology Volume 22 ; 22 >
+      au < released ; Phlebology Volume 23 ; 23 >
+      au < released ; Phlebology Volume 24 ; 24 >
+      au < released ; Phlebology Volume 25 ; 25 >
+      au < released ; Phlebology Volume 26 ; 26 >
 
     }
 
@@ -813,13 +813,13 @@
       param[base_url] = http://td.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Tropical Doctor Volume 35 ; 35 >
-      au < ready ; Tropical Doctor Volume 36 ; 36 >
-      au < ready ; Tropical Doctor Volume 37 ; 37 >
-      au < ready ; Tropical Doctor Volume 38 ; 38 >
-      au < ready ; Tropical Doctor Volume 39 ; 39 >
-      au < ready ; Tropical Doctor Volume 40 ; 40 >
-      au < ready ; Tropical Doctor Volume 41 ; 41 >
+      au < released ; Tropical Doctor Volume 35 ; 35 >
+      au < released ; Tropical Doctor Volume 36 ; 36 >
+      au < released ; Tropical Doctor Volume 37 ; 37 >
+      au < released ; Tropical Doctor Volume 38 ; 38 >
+      au < released ; Tropical Doctor Volume 39 ; 39 >
+      au < released ; Tropical Doctor Volume 40 ; 40 >
+      au < released ; Tropical Doctor Volume 41 ; 41 >
 
     }
 

@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = Royal College of Psychiatrists
   >
 
   {
+  
     title <
       name = Advances in Psychiatric Treatment ;
       issn = 1355-5146 ;
@@ -27,19 +29,20 @@
       au < exists ; Advances in Psychiatric Treatment Volume 8 ; 8 >
       au < exists ; Advances in Psychiatric Treatment Volume 9 ; 9 >
       au < exists ; Advances in Psychiatric Treatment Volume 10 ; 10 >
-      au < ready ; Advances in Psychiatric Treatment Volume 11 ; 11 >
-      au < ready ; Advances in Psychiatric Treatment Volume 12 ; 12 >
-      au < ready ; Advances in Psychiatric Treatment Volume 13 ; 13 >
-      au < ready ; Advances in Psychiatric Treatment Volume 14 ; 14 >
-      au < ready ; Advances in Psychiatric Treatment Volume 15 ; 15 >
-      au < ready ; Advances in Psychiatric Treatment Volume 16 ; 16 >
-      au < ready ; Advances in Psychiatric Treatment Volume 17 ; 17 >
+      au < released ; Advances in Psychiatric Treatment Volume 11 ; 11 >
+      au < released ; Advances in Psychiatric Treatment Volume 12 ; 12 >
+      au < released ; Advances in Psychiatric Treatment Volume 13 ; 13 >
+      au < released ; Advances in Psychiatric Treatment Volume 14 ; 14 >
+      au < released ; Advances in Psychiatric Treatment Volume 15 ; 15 >
+      au < released ; Advances in Psychiatric Treatment Volume 16 ; 16 >
+      au < released ; Advances in Psychiatric Treatment Volume 17 ; 17 >
 
     }
 
   }
 
   {
+  
     title <
       name = The British Journal of Psychiatry ;
       issn = 0007-1250 ;
@@ -127,27 +130,35 @@
       au < exists ; The British Journal of Psychiatry Volume 183 ; 183 >
       au < exists ; The British Journal of Psychiatry Volume 184 ; 184 >
       au < exists ; The British Journal of Psychiatry Volume 185 ; 185 >
-      au < ready ; The British Journal of Psychiatry Volume 191 ; 191 >
-      au < ready ; The British Journal of Psychiatry Volume 192 ; 192 >
-      au < ready ; The British Journal of Psychiatry Volume 193 ; 193 >
-      au < ready ; The British Journal of Psychiatry Volume 194 ; 194 >
-      au < ready ; The British Journal of Psychiatry Volume 195 ; 195 >
-      au < ready ; The British Journal of Psychiatry Volume 196 ; 196 >
-      au < ready ; The British Journal of Psychiatry Volume 197 ; 197 >
-      au < ready ; The British Journal of Psychiatry Volume 198 ; 198 >
+      au < doNotProcess ; The British Journal of Psychiatry Volume 186 ; 186 >
+      au < doNotProcess ; The British Journal of Psychiatry Volume 187 ; 187 >
+      au < doNotProcess ; The British Journal of Psychiatry Volume 188 ; 188 >
+      au < doNotProcess ; The British Journal of Psychiatry Volume 189 ; 189 >
+      au < doNotProcess ; The British Journal of Psychiatry Volume 190 ; 190 >     
+      au < released ; The British Journal of Psychiatry Volume 191 ; 191 >
+      au < released ; The British Journal of Psychiatry Volume 192 ; 192 >
+      au < released ; The British Journal of Psychiatry Volume 193 ; 193 >
+      au < released ; The British Journal of Psychiatry Volume 194 ; 194 >
+      au < released ; The British Journal of Psychiatry Volume 195 ; 195 >
+      au < released ; The British Journal of Psychiatry Volume 196 ; 196 >
+      au < released ; The British Journal of Psychiatry Volume 197 ; 197 >
+      au < released ; The British Journal of Psychiatry Volume 198 ; 198 >
 
     }
 
   }
 
   {
+  
     title <
-      name = The Psychiatrist ;
+      name = Psychiatric Bulletin ;
       issn = 0955-6036 ;
       eissn = 1472-1473 ;
       issnl = 0955-6036
     >
 
+    comment[continued_by] = 1758-3217
+    
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
@@ -191,15 +202,33 @@
       au < exists ; Psychiatric Bulletin Volume 26 ; 26 >
       au < exists ; Psychiatric Bulletin Volume 27 ; 27 >
       au < exists ; Psychiatric Bulletin Volume 28 ; 28 >
-      au < ready ; Psychiatric Bulletin Volume 30 ; 30 >
-      au < ready ; Psychiatric Bulletin Volume 31 ; 31 >
-      au < ready ; Psychiatric Bulletin Volume 32 ; 32 >
-      au < ready ; Psychiatric Bulletin Volume 33 ; 33 >
-      au < ready ; The Psychiatrist Volume 34 ; 34 >
-      au < ready ; The Psychiatrist Volume 35 ; 35 >
+      au < doNotProcess ; Psychiatric Bulletin Volume 29 ; 29 >      
+      au < released ; Psychiatric Bulletin Volume 30 ; 30 >
+      au < released ; Psychiatric Bulletin Volume 31 ; 31 >
+      au < released ; Psychiatric Bulletin Volume 32 ; 32 >
+      au < released ; Psychiatric Bulletin Volume 33 ; 33 >
 
     }
 
+  }
+  
+  {
+
+    title <
+      name = The Psychiatrist ;
+      issn = 1758-3217 ;
+      eissn = 1758-3209
+    >
+
+    comment[continued_from] = 0955-6036
+
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://pb.rcpsych.org/
+    implicit < status ; name ; param[volume_name] >
+
+    au < released ; The Psychiatrist Volume 34 ; 34 >
+    au < released ; The Psychiatrist Volume 35 ; 35 >
+  
   }
 
 }
