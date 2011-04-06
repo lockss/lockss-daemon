@@ -421,16 +421,16 @@
 
     param[base_url] = http://molinterv.aspetjournals.org/
 
-    au < manifest ; exists ; 2001 ; Molecular Interventions Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Molecular Interventions Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Molecular Interventions Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Molecular Interventions Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Molecular Interventions Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Molecular Interventions Volume 6 ; 6 >
-    au < manifest ; exists ; 2007 ; Molecular Interventions Volume 7 ; 7 >
-    au < manifest ; exists ; 2008 ; Molecular Interventions Volume 8 ; 8 >
-    au < manifest ; exists ; 2009 ; Molecular Interventions Volume 9 ; 9 >
-    au < manifest ; exists ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < crawling ; exists ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < crawling ; exists ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < crawling ; exists ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < crawling ; exists ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < crawling ; exists ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < crawling ; exists ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < crawling ; exists ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < crawling ; exists ; 2010 ; Molecular Interventions Volume 10 ; 10 >
     au < crawling ; exists ; 2011 ; Molecular Interventions Volume 11 ; 11 >
 
   }
