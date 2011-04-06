@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.7 2011-04-04 21:22:03 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.8 2011-04-06 06:14:21 pgust Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
 import org.lockss.util.ExternalizableMap;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.TypedEntryMap;
@@ -615,15 +616,19 @@ public class OpenUrlResolver {
           LockssUrlConnection conn = 
             UrlUtil.openConnection(url, connectionPool);
           conn.setFollowRedirects(false);
-          conn.execute();
-          String url2 = conn.getResponseHeaderValue("Location");
-          if (url2 == null) {
-            break;
-          }
-          url = UrlUtil.resolveUri(url, url2);
-          log.debug3(i + " resolved to: " + url);
-          if (pluginMgr.findCachedUrl(url) != null) {
-            break;
+          try {
+        	conn.execute();
+        	String url2 = conn.getResponseHeaderValue("Location");
+        	if (url2 == null) {
+        	  break;
+        	}
+        	url = UrlUtil.resolveUri(url, url2);
+        	log.debug3(i + " resolved to: " + url);
+        	if (pluginMgr.findCachedUrl(url) != null) {
+        	  break;
+        	}
+          } finally {
+        	IOUtil.safeRelease(conn);
           }
         }
       } catch (Exception ex) {
@@ -805,27 +810,28 @@ public class OpenUrlResolver {
         args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
       }
       
-      if ((volume != null) || (issue != null)) {
+      if (volume != null) {
         if (date != null) {
-            query.append(" and ");
+          query.append(" and ");
         }
-        query.append("( ");
+        query.append(MetadataManager.VOLUME_FIELD);
+        query.append(" = ?");
+        args.add(volume);
+      }
 
-        if (volume != null) {
-          query.append(MetadataManager.VOLUME_FIELD);
-          query.append(" = ?");
-          args.add(volume);
-        }
-        if (issue != null) {
-          if (volume != null) {
-                query.append(" and ");
+      if (issue != null) {
+        // PJG: following test is temporary until plugins support issue TOCs:
+        // ignore issue if not looking for an article and either a volume or
+        // a date (implying a volume) is given
+        if (   hasArticleSpec 
+      	    || ((date == null) && (volume == null))) {  
+          if ((date != null) || (volume != null)) {
+        	query.append(" and ");
           }
           query.append(MetadataManager.ISSUE_FIELD);
           query.append(" = ?");
           args.add(issue);
         }
-    
-        query.append(" )");
       }
       
     } else {
@@ -887,11 +893,11 @@ public class OpenUrlResolver {
   private String resolveFromQuery(
                   Connection conn, String query, List<String>args, 
                   boolean useAuTOC, boolean useTitleTOC) throws SQLException {
-    PreparedStatement stmt = conn.prepareStatement(query);
     log.debug3("query: " + query);
+    PreparedStatement stmt = conn.prepareStatement(query);
     for (int i = 0; i < args.size(); i++) {
-      stmt.setString(i+1, args.get(i));
       log.debug3("  query arg:  " + args.get(i));      
+      stmt.setString(i+1, args.get(i));
     }
     stmt.setMaxRows(2);  // only need 2 to to determine if unique
     log.debug3("useAuTOC: " + useAuTOC + " useTitleTOC: " + useTitleTOC);
