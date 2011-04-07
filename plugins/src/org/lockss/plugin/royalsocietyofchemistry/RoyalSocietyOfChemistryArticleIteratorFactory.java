@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.6 2011-04-07 00:08:49 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
 
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new RoyalSocietyOfChemistryArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(null);
   }
   
   protected static class RoyalSocietyOfChemistryArticleIterator extends SubTreeArticleIterator {
@@ -170,17 +170,4 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
 
   }
   
-  public static class RoyalSocietyOfChemistryArticleMetadataExtractor extends SingleArticleMetadataExtractor {
-
-    @Override
-    public ArticleMetadata extract(MetadataTarget target, ArticleFiles af)
-	throws IOException, PluginException {
-      String url = af.getFullTextUrl();
-      ArticleMetadata am = new ArticleMetadata();
-      am.put(MetadataField.FIELD_ACCESS_URL, url);
-      return am;
-    }
-
-  }
-
 }
