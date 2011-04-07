@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.17 2011-03-24 21:52:06 dshr Exp $
+ * $Id: Exploder.java,v 1.18 2011-04-07 00:08:27 tlipkis Exp $
  */
 
 /*
@@ -222,8 +222,10 @@ public abstract class Exploder {
 
     String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,
 					       DEFAULT_EXPLODED_PLUGIN_NAME);
+    logger.debug2("Creating AU: " + pluginName + " " + props);
     String key = PluginManager.pluginKeyFromName(pluginName);
     logger.debug3(pluginName + " has key: " + key);
+    pluginMgr.ensurePluginLoaded(key);
     Plugin plugin = pluginMgr.getPlugin(key);
     if (plugin == null) {
       logger.error(pluginName + " key " + key + " not found");
