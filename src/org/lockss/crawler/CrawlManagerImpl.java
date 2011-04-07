@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.134 2011-02-14 00:10:45 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.135 2011-04-07 00:09:14 tlipkis Exp $
  */
 
 /*
@@ -448,7 +448,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       paramStartCrawlsInitialDelay =
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
-      if (config.containsKey(PARAM_CRAWL_PRIORITY_AUID_MAP)) {
+      if (changedKeys.contains(PARAM_CRAWL_PRIORITY_AUID_MAP)) {
 	crawlPriorityAuidMap =
 	  makeCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
 						  DEFAULT_CRAWL_PRIORITY_AUID_MAP));
@@ -1440,6 +1440,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       String auid = req.getAu().getAuId();
       for (Map.Entry<Pattern,Integer> ent : crawlPriorityAuidMap.entrySet()) {
 	if (matcher.contains(auid, ent.getKey())) {
+	  if (logger.isDebug3()) {
+	    logger.debug3("Crawl priority " + ent.getValue() +
+			  ": " + req.getAu().getName());
+	  }
 	  req.setPriority(ent.getValue());
 	  return;
 	}
