@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.83 2011-04-04 07:14:38 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.84 2011-04-07 00:09:26 tlipkis Exp $
  */
 
 /*
@@ -133,8 +133,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected BitSet fetchFlags = new BitSet();
   protected String exploderPattern = null;
   protected CrawlSpec crawlSpec = null;
-  protected boolean explodeFiles = true;
-  protected boolean storeArchive = false;  // XXX need to keep stub archive
+  protected boolean explodeFiles = DEFAULT_EXPLODE_ARCHIVES;
+  protected boolean storeArchive = DEFAULT_STORE_ARCHIVES;  // XXX need to keep stub archive
   protected String crawlEndReportEmail = DEFAULT_CRAWL_END_REPORT_EMAIL;
   protected String crawlEndReportHashAlg = DEFAULT_CRAWL_END_REPORT_HASH_ALG;
   protected SubstanceChecker subChecker;
