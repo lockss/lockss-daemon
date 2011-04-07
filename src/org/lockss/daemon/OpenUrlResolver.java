@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.1.2.7 2011-04-06 06:13:56 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.1.2.8 2011-04-07 12:38:02 pgust Exp $
  */
 
 /*
@@ -948,45 +948,30 @@ public class OpenUrlResolver {
     TdbTitle title, String date, String volume, String issue) {
     TdbAu tdbau = null;
     boolean found = false;
+    String year = null;
+    if (date != null) {
+      int y = new PublicationDate(date).getYear();
+      year = (y == 0) ? null : Integer.toString(y);
+    }
+
     for (Iterator<TdbAu> itr = title.getTdbAus().iterator(); 
          !found && itr.hasNext(); ) {
       tdbau = itr.next();
+
+      if ((volume == null) && (year == null)) {
+    	break;
+      }
       
       if (volume != null) {
-        String auVolume = tdbau.getVolume();
-        if ((auVolume != null) && !volume.equals(auVolume)) {
+        found = tdbau.includesVolume(volume);
+        if (!found) {
           continue;
         }
       }
 
-      if (date != null) {
-        String auYear = tdbau.getYear();
-        if (auYear != null) {
-          // tdb date may be a year
-          int i = auYear.indexOf('-');
-          String startYear = (i > 0) ? auYear.substring(0,i) : auYear;
-          String endYear = (i > 0) ? auYear.substring(i+1) : auYear;
-          try {
-            // see if date is within year range
-            int syear = Integer.parseInt(startYear);
-            int eyear = Integer.parseInt(endYear);
-            boolean inrange = false;
-            for (int y = syear; !found && (y <= eyear); y++) {
-              inrange = date.startsWith(Integer.toString(y));
-            }
-            if (!inrange) {
-              continue;
-            }
-          } catch (NumberFormatException ex) {
-            // can't compare numerically, so compare range ends only
-            if (!date.startsWith(startYear) && !date.startsWith(endYear)) {
-              continue;
-            }
-          }
-        }
+      if (year != null) {
+        found = tdbau.includesYear(year);
       }
-
-      found = true;
     }
 
     if (log.isDebug3()) { 
@@ -996,7 +981,7 @@ public class OpenUrlResolver {
     String url = null;  // should be the title URL
     if (tdbau != null) {
       if (found) {
-        url = getStartUrl(tdbau);
+    	url = getStartUrl(tdbau);
       }
       if (url == null) {
         url = tdbau.getParam("base_url");  // baseURL isn't always a real URL
