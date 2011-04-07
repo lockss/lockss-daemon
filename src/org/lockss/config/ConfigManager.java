@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.83 2011-03-13 21:51:47 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.84 2011-04-07 00:08:59 tlipkis Exp $
  */
 
 /*
@@ -1446,7 +1446,10 @@ public class ConfigManager implements LockssManager {
 				     DEFAULT_MAX_LOG_VAL_LEN);
     Set<String> diffSet = diffs.getDifferenceSet();
     SortedSet<String> keys = new TreeSet<String>(diffSet);
+    int elided = 0;
     int numDiffs = keys.size();
+    // keys includes param name prefixes that aren't actual params, so
+    // numDiffs is inflated by several.
     for (String key : keys) {
       if (numDiffs <= 40 || log.isDebug3() || shouldParamBeLogged(key)) {
 	if (config.containsKey(key)) {
@@ -1455,9 +1458,11 @@ public class ConfigManager implements LockssManager {
 	} else if (oldConfig.containsKey(key)) {
 	  log.debug("  " + key + " (removed)");
 	}
+      } else {
+	elided++;
       }
     }
-    log.debug("New Configuration keys: " + numDiffs);
+    if (elided > 0) log.debug(elided + " keys elided");
     log.debug("New TdbAus: " + diffs.getTdbAuDifferenceCount());
   }
 
