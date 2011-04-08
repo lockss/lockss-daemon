@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.7 2010-11-11 10:06:07 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.8 2011-04-08 23:40:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,10 +54,10 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "class", "advertisement"),
+        // Contains a lot of variable elements; institution name, gensyms for tag IDs or names, etc.
+        HtmlNodeFilters.tagWithAttribute("div", "id", "Header"),
         // Contains account and user agent information
         HtmlNodeFilters.tagWithAttribute("ul", "id", "Footer"),
-        // Contains institution name or account name
-        HtmlNodeFilters.tagWithAttribute("div", "id", "MasterHeaderRecognition"),
         // Contains SFX links
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
         // Has a session cookie
@@ -76,10 +76,25 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "Modes"),
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
+        // Static, but was added after thousands of AUs had crawled already
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  }
+  
+  public static void main(String[] args) throws Exception {
+    if (args.length == 0) {
+      args = new String[] {
+          "/tmp/HashCUS1", "/tmp/HashCUS2"
+      };
+    }
+    FilterFactory filt = new SpringerLinkHtmlHashFilterFactory();
+    for (String str : args) {
+      InputStream in = filt.createFilteredInputStream(null, new java.io.FileInputStream(str), "UTF-8");
+      org.apache.commons.io.IOUtils.copy(in, new java.io.FileOutputStream(str + ".out"));
+    }
   }
 
 }
