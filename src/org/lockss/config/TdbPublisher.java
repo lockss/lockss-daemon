@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.9.2.1 2011-03-22 12:58:56 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.9.2.2 2011-04-11 22:58:22 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.9.2.1 2011-03-22 12:58:56 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.9.2.2 2011-04-11 22:58:22 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -129,7 +129,7 @@ public class TdbPublisher {
 
     ArrayList<TdbTitle> matchTitles = new ArrayList<TdbTitle>();
     for (TdbTitle title : titlesById.values()) {
-      if (title.getName().equals(titleName)) {
+      if (title.getName().equalsIgnoreCase(titleName)) {
         matchTitles.add(title);
       }
     }
