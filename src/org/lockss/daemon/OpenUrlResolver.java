@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.1.2.8 2011-04-07 12:38:02 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.1.2.9 2011-04-11 22:56:52 pgust Exp $
  */
 
 /*
@@ -652,12 +652,14 @@ public class OpenUrlResolver {
 
       String MTN = MetadataManager.METADATA_TABLE;
       String DTN = MetadataManager.DOI_TABLE;
+      String MDID = MetadataManager.MD_ID_FIELD;
       String query =           
-        "select access_url from " + MTN + "," + DTN 
-      + " where " + DTN + ".md_id = " + MTN + ".md_id"
-      + " and doi = ?";
+        "select " + MetadataManager.ACCESS_URL_FIELD 
+      + " from " + MTN + "," + DTN 
+      + " where " + DTN + "." + MDID + " = " + MTN + "." + MDID
+      + " and upper(" + MetadataManager.DOI_FIELD + ") = ?";
       PreparedStatement stmt = conn.prepareStatement(query);
-      stmt.setString(1, doi);
+      stmt.setString(1, doi.toUpperCase());
       ResultSet resultSet = stmt.executeQuery();
       if (resultSet.next()) {
         url = resultSet.getString(1);
@@ -853,9 +855,10 @@ public class OpenUrlResolver {
         if (spage != null) {
           query.append(" or ");
         }
+        query.append("upper(");
         query.append(MetadataManager.ARTICLE_TITLE_FIELD);
-        query.append(" like ? escape '\\'");
-        args.add(atitle.replace("%","\\%") + "%");
+        query.append(") like ? escape '\\'");
+        args.add(atitle.toUpperCase().replace("%","\\%") + "%");
       }
       if ( author != null) {
         if ((spage != null) || (atitle != null)) {
@@ -1383,19 +1386,21 @@ public class OpenUrlResolver {
    */
   private void addAuthorQuery(
     String author, StringBuilder query, List<String>args) {
-    // match single author
+	String authorUC = author.toUpperCase();
+	// match single author
     // (last, first name separated by ',')
-    query.append(MetadataManager.AUTHOR_FIELD);
-    query.append(" = ?");
-    args.add(author);
+    query.append("upper(");
+	query.append(MetadataManager.AUTHOR_FIELD);
+    query.append(") = ?");
+    args.add(authorUC);
 
     // escape escape character and then wildcard characters
-    String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
+    String authorEsc = authorUC.replace("\\", "\\\\").replace("%","\\%");
             
     for (int i = 0; i < 5; i++) {
-      query.append(" or ");
+      query.append(" or upper(");
       query.append(MetadataManager.AUTHOR_FIELD);
-      query.append(" like ? escape '\\'");
+      query.append(") like ? escape '\\'");
     }
     // match last name of first author 
     // (last, first name separated by ',')
