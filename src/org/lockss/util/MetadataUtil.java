@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.10 2011-03-29 22:17:27 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.11 2011-04-11 22:55:18 pgust Exp $
  */
 
 /*
@@ -225,15 +225,6 @@ public class MetadataUtil {
 
     if(!m.matches()){
       log.debug("DOI is not valid: "+doi);
-      return false;
-    }
-
-    int firstIndexOfSlash = doi.indexOf("/");
-    String doiSuffix = doi.substring(firstIndexOfSlash+1);
-
-    // there should NOT be a '/' character in the suffix
-    if (doiSuffix.indexOf("/") >= 0) {
-      log.debug("Suffix should not include '/' characters: "+doi);
       return false;
     }
     return true;
