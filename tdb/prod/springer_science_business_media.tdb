@@ -1423,7 +1423,7 @@
 
     comment[continued_from] = 0937-0633
     param[journal_issn] = 1618-2642
-    attr[where] = content4a
+    attr[where] = content6a
 
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 372 ; 372 >
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 373 ; 373 >
@@ -1732,7 +1732,6 @@
     >
 
     param[journal_issn] = 1435-9448
-    attr[where] = content1a
 
     au < ready ; 1998 ; Animal Cognition Volume 1 ; 1 >
     au < ready ; 1999 ; Animal Cognition Volume 2 ; 2 >
@@ -1740,13 +1739,13 @@
     au < ready ; 2001 ; Animal Cognition Volume 4 ; 4 >
     au < ready ; 2002 ; Animal Cognition Volume 5 ; 5 >
     au < ready ; 2003 ; Animal Cognition Volume 6 ; 6 >
-    au < testing ; 2004 ; Animal Cognition Volume 7 ; 7 >
+    au < ready ; 2004 ; Animal Cognition Volume 7 ; 7 >
     au < ready ; 2005 ; Animal Cognition Volume 8 ; 8 >
-    au < testing ; 2006 ; Animal Cognition Volume 9 ; 9 >
+    au < ready ; 2006 ; Animal Cognition Volume 9 ; 9 >
     au < ready ; 2007 ; Animal Cognition Volume 10 ; 10 >
-    au < testing ; 2008 ; Animal Cognition Volume 11 ; 11 >
-    au < testing ; 2009 ; Animal Cognition Volume 12 ; 12 >
-    au < testing ; 2010 ; Animal Cognition Volume 13 ; 13 >
+    au < ready ; 2008 ; Animal Cognition Volume 11 ; 11 >
+    au < ready ; 2009 ; Animal Cognition Volume 12 ; 12 >
+    au < ready ; 2010 ; Animal Cognition Volume 13 ; 13 >
     au < ready ; 2011 ; Animal Cognition Volume 14 ; 14 >
 
   }
@@ -3060,8 +3059,7 @@
       name = Archives of Toxicology ;
       issn = 0340-5761 ;
       eissn = 1432-0738 ;
-      issnl = 0340-5761 ;
-      placeholder = True
+      issnl = 0340-5761
     >
 
     param[journal_issn] = 0340-5761
@@ -3072,17 +3070,17 @@
     au < ready ; 1932 ; Archives of Toxicology Volume 3 ; 3 >
     au < ready ; 1933 ; Archives of Toxicology Volume 4 ; 4 >
     au < ready ; 1934 ; Archives of Toxicology Volume 5 ; 5 >
-    au < testing ; 1935 ; Archives of Toxicology Volume 6 ; 6 >
-    au < testing ; 1936 ; Archives of Toxicology Volume 7 ; 7 >
+    au < ready ; 1935 ; Archives of Toxicology Volume 6 ; 6 >
+    au < ready ; 1936 ; Archives of Toxicology Volume 7 ; 7 >
     au < ready ; 1937 ; Archives of Toxicology Volume 8 ; 8 >
     au < ready ; 1938 ; Archives of Toxicology Volume 9 ; 9 >
     au < ready ; 1939 ; Archives of Toxicology Volume 10 ; 10 >
-    au < testing ; 1940 ; Archives of Toxicology Volume 11 ; 11 >
+    au < ready ; 1940 ; Archives of Toxicology Volume 11 ; 11 >
     au < ready ; 1943 ; Archives of Toxicology Volume 12 ; 12 >
     au < ready ; 1944 ; Archives of Toxicology Volume 13 ; 13 >
-    au < testing ; 1952-1954 ; Archives of Toxicology Volume 14 ; 14 >
+    au < ready ; 1952-1954 ; Archives of Toxicology Volume 14 ; 14 >
     au < ready ; 1954-1955 ; Archives of Toxicology Volume 15 ; 15 >
-    au < testing ; 1956-1957 ; Archives of Toxicology Volume 16 ; 16 >
+    au < ready ; 1956-1957 ; Archives of Toxicology Volume 16 ; 16 >
     au < ready ; 1958-1959 ; Archives of Toxicology Volume 17 ; 17 >
     au < ready ; 1959-1960 ; Archives of Toxicology Volume 18 ; 18 >
     au < ready ; 1961-1962 ; Archives of Toxicology Volume 19 ; 19 >
@@ -3090,7 +3088,7 @@
     au < ready ; 1965-1966 ; Archives of Toxicology Volume 21 ; 21 >
     au < ready ; 1966-1967 ; Archives of Toxicology Volume 22 ; 22 >
     au < ready ; 1967-1968 ; Archives of Toxicology Volume 23 ; 23 >
-    au < testing ; 1968-1969 ; Archives of Toxicology Volume 24 ; 24 >
+    au < ready ; 1968-1969 ; Archives of Toxicology Volume 24 ; 24 >
     au < ready ; 1969 ; Archives of Toxicology Volume 25 ; 25 >
     au < ready ; 1970 ; Archives of Toxicology Volume 26 ; 26 >
     au < ready ; 1970-1971 ; Archives of Toxicology Volume 27 ; 27 >
@@ -3100,20 +3098,20 @@
     au < ready ; 1973-1974 ; Archives of Toxicology Volume 31 ; 31 >
     au < ready ; 1974 ; Archives of Toxicology Volume 32 ; 32 >
     au < ready ; 1974-1975 ; Archives of Toxicology Volume 33 ; 33 >
-    au < testing ; 1975 ; Archives of Toxicology Volume 34 ; 34 >
-    au < testing ; 1976 ; Archives of Toxicology Volume 35 ; 35 >
+    au < ready ; 1975 ; Archives of Toxicology Volume 34 ; 34 >
+    au < ready ; 1976 ; Archives of Toxicology Volume 35 ; 35 >
     au < ready ; 1976 ; Archives of Toxicology Volume 36 ; 36 >
     au < ready ; 1976-1977 ; Archives of Toxicology Volume 37 ; 37 >
     au < ready ; 1977 ; Archives of Toxicology Volume 38 ; 38 >
     au < ready ; 1977-1978 ; Archives of Toxicology Volume 39 ; 39 >
-    au < testing ; 1978 ; Archives of Toxicology Volume 40 ; 40 >
+    au < ready ; 1978 ; Archives of Toxicology Volume 40 ; 40 >
     au < ready ; 1978-1979 ; Archives of Toxicology Volume 41 ; 41 >
     au < ready ; 1978-1979 ; Archives of Toxicology Volume 42 ; 42 >
     au < ready ; 1979-1980 ; Archives of Toxicology Volume 43 ; 43 >
-    au < testing ; 1980 ; Archives of Toxicology Volume 44 ; 44 >
+    au < ready ; 1980 ; Archives of Toxicology Volume 44 ; 44 >
     au < ready ; 1980 ; Archives of Toxicology Volume 45 ; 45 >
     au < ready ; 1980 ; Archives of Toxicology Volume 46 ; 46 >
-    au < testing ; 1981 ; Archives of Toxicology Volume 47 ; 47 >
+    au < ready ; 1981 ; Archives of Toxicology Volume 47 ; 47 >
     au < ready ; 1981 ; Archives of Toxicology Volume 48 ; 48 >
     au < ready ; 1981-1982 ; Archives of Toxicology Volume 49 ; 49 >
     au < ready ; 1982 ; Archives of Toxicology Volume 50 ; 50 >
@@ -3122,18 +3120,18 @@
     au < ready ; 1983 ; Archives of Toxicology Volume 53 ; 53 >
     au < ready ; 1983 ; Archives of Toxicology Volume 54 ; 54 >
     au < ready ; 1984 ; Archives of Toxicology Volume 55 ; 55 >
-    au < testing ; 1984-1985 ; Archives of Toxicology Volume 56 ; 56 >
+    au < ready ; 1984-1985 ; Archives of Toxicology Volume 56 ; 56 >
     au < ready ; 1985 ; Archives of Toxicology Volume 57 ; 57 >
     au < ready ; 1985-1986 ; Archives of Toxicology Volume 58 ; 58 >
     au < ready ; 1986-1987 ; Archives of Toxicology Volume 59 ; 59 >
     au < ready ; 1987 ; Archives of Toxicology Volume 60 ; 60 >
     au < ready ; 1987-1988 ; Archives of Toxicology Volume 61 ; 61 >
-    au < testing ; 1988 ; Archives of Toxicology Volume 62 ; 62 >
-    au < testing ; 1989 ; Archives of Toxicology Volume 63 ; 63 >
+    au < ready ; 1988 ; Archives of Toxicology Volume 62 ; 62 >
+    au < ready ; 1989 ; Archives of Toxicology Volume 63 ; 63 >
     au < testing ; 1990 ; Archives of Toxicology Volume 64 ; 64 >
     au < ready ; 1991 ; Archives of Toxicology Volume 65 ; 65 >
     au < ready ; 1992 ; Archives of Toxicology Volume 66 ; 66 >
-    au < testing ; 1993 ; Archives of Toxicology Volume 67 ; 67 >
+    au < ready ; 1993 ; Archives of Toxicology Volume 67 ; 67 >
     au < testing ; 1994 ; Archives of Toxicology Volume 68 ; 68 >
     au < testing ; 1994-1995 ; Archives of Toxicology Volume 69 ; 69 >
     au < testing ; 1995-1996 ; Archives of Toxicology Volume 70 ; 70 >
@@ -3142,15 +3140,15 @@
     au < ready ; 1999 ; Archives of Toxicology Volume 73 ; 73 >
     au < ready ; 2000 ; Archives of Toxicology Volume 74 ; 74 >
     au < ready ; 2001 ; Archives of Toxicology Volume 75 ; 75 >
-    au < testing ; 2002 ; Archives of Toxicology Volume 76 ; 76 >
-    au < testing ; 2003 ; Archives of Toxicology Volume 77 ; 77 >
-    au < testing ; 2004 ; Archives of Toxicology Volume 78 ; 78 >
+    au < ready ; 2002 ; Archives of Toxicology Volume 76 ; 76 >
+    au < ready ; 2003 ; Archives of Toxicology Volume 77 ; 77 >
+    au < ready ; 2004 ; Archives of Toxicology Volume 78 ; 78 >
     au < testing ; 2005 ; Archives of Toxicology Volume 79 ; 79 >
-    au < testing ; 2006 ; Archives of Toxicology Volume 80 ; 80 >
+    au < ready ; 2006 ; Archives of Toxicology Volume 80 ; 80 >
     au < ready ; 2007 ; Archives of Toxicology Volume 81 ; 81 >
-    au < testing ; 2008 ; Archives of Toxicology Volume 82 ; 82 >
-    au < testing ; 2009 ; Archives of Toxicology Volume 83 ; 83 >
-    au < testing ; 2010 ; Archives of Toxicology Volume 84 ; 84 >
+    au < ready ; 2008 ; Archives of Toxicology Volume 82 ; 82 >
+    au < ready ; 2009 ; Archives of Toxicology Volume 83 ; 83 >
+    au < ready ; 2010 ; Archives of Toxicology Volume 84 ; 84 >
     au < ready ; 2011 ; Archives of Toxicology Volume 85 ; 85 >
 
   }
@@ -5386,10 +5384,15 @@
     title <
       name = Brain Cell Biology ;
       issn = 1559-7105 ;
-      placeholder = True
+      eissn = 1559-7113
     >
 
+    comment[continued_from] = 0300-4864
     param[journal_issn] = 1559-7105
+    attr[where] = content4a
+
+    au < testing ; 2006 ; Brain Cell Biology Volume 35 ; 35 >
+    au < testing ; 2008 ; Brain Cell Biology Volume 36 ; 36 >
 
   }
 
@@ -6751,9 +6754,9 @@
 
     au < testing ; 2002 ; The Cerebellum Volume 1 ; 1 >
     au < testing ; 2003 ; The Cerebellum Volume 2 ; 2 >
-    au < testing ; 2004 ; The Cerebellum Volume 3 ; 3 >
+    au < ready ; 2004 ; The Cerebellum Volume 3 ; 3 >
     au < testing ; 2005 ; The Cerebellum Volume 4 ; 4 >
-    au < testing ; 2006 ; The Cerebellum Volume 5 ; 5 >
+    au < ready ; 2006 ; The Cerebellum Volume 5 ; 5 >
     au < testing ; 2007 ; The Cerebellum Volume 6 ; 6 >
     au < testing ; 2008 ; The Cerebellum Volume 7 ; 7 >
     au < testing ; 2009 ; The Cerebellum Volume 8 ; 8 >
@@ -7362,11 +7365,31 @@
       name = Chromosome Research ;
       issn = 0967-3849 ;
       eissn = 1573-6849 ;
-      issnl = 0967-3849 ;
-      placeholder = True
+      issnl = 0967-3849
     >
 
     param[journal_issn] = 0967-3849
+    attr[where] = content6b
+
+    au < testing ; 1993 ; Chromosome Research Volume 1 ; 1 >
+    au < testing ; 1994 ; Chromosome Research Volume 2 ; 2 >
+    au < testing ; 1995 ; Chromosome Research Volume 3 ; 3 >
+    au < testing ; 1996 ; Chromosome Research Volume 4 ; 4 >
+    au < testing ; 1997 ; Chromosome Research Volume 5 ; 5 >
+    au < testing ; 1998 ; Chromosome Research Volume 6 ; 6 >
+    au < testing ; 1999 ; Chromosome Research Volume 7 ; 7 >
+    au < testing ; 2000 ; Chromosome Research Volume 8 ; 8 >
+    au < testing ; 2001 ; Chromosome Research Volume 9 ; 9 >
+    au < testing ; 2002 ; Chromosome Research Volume 10 ; 10 >
+    au < testing ; 2003 ; Chromosome Research Volume 11 ; 11 >
+    au < testing ; 2004 ; Chromosome Research Volume 12 ; 12 >
+    au < testing ; 2005 ; Chromosome Research Volume 13 ; 13 >
+    au < testing ; 2006 ; Chromosome Research Volume 14 ; 14 >
+    au < testing ; 2007 ; Chromosome Research Volume 15 ; 15 >
+    au < testing ; 2008 ; Chromosome Research Volume 16 ; 16 >
+    au < testing ; 2009 ; Chromosome Research Volume 17 ; 17 >
+    au < testing ; 2010 ; Chromosome Research Volume 18 ; 18 >
+    au < testing ; 2011 ; Chromosome Research Volume 19 ; 19 >
 
   }
 
@@ -8637,10 +8660,10 @@
     >
 
     param[journal_issn] = 0010-7999
-    attr[where] = content4a
+    attr[where] = content1a
 
     au < ready ; 1947-1949 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 1 ; 1 >
-    au < testing ; 1949-1951 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 2 ; 2 >
+    au < ready ; 1949-1951 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 2 ; 2 >
     au < testing ; 1952-1953 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 3 ; 3 >
     au < ready ; 1954 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 4 ; 4 >
     au < ready ; 1956 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 5 ; 5 >
@@ -8662,20 +8685,20 @@
     au < ready ; 1969 ; Contributions to Mineralogy and Petrology Volume 21 ; 21 >
     au < ready ; 1969 ; Contributions to Mineralogy and Petrology Volume 22 ; 22 >
     au < ready ; 1969 ; Contributions to Mineralogy and Petrology Volume 23 ; 23 >
-    au < testing ; 1969 ; Contributions to Mineralogy and Petrology Volume 24 ; 24 >
+    au < ready ; 1969 ; Contributions to Mineralogy and Petrology Volume 24 ; 24 >
     au < ready ; 1970 ; Contributions to Mineralogy and Petrology Volume 25 ; 25 >
     au < ready ; 1970 ; Contributions to Mineralogy and Petrology Volume 26 ; 26 >
     au < ready ; 1970 ; Contributions to Mineralogy and Petrology Volume 27 ; 27 >
-    au < testing ; 1970 ; Contributions to Mineralogy and Petrology Volume 28 ; 28 >
+    au < ready ; 1970 ; Contributions to Mineralogy and Petrology Volume 28 ; 28 >
     au < ready ; 1970 ; Contributions to Mineralogy and Petrology Volume 29 ; 29 >
-    au < testing ; 1971 ; Contributions to Mineralogy and Petrology Volume 30 ; 30 >
+    au < ready ; 1971 ; Contributions to Mineralogy and Petrology Volume 30 ; 30 >
     au < ready ; 1971 ; Contributions to Mineralogy and Petrology Volume 31 ; 31 >
     au < ready ; 1971 ; Contributions to Mineralogy and Petrology Volume 32 ; 32 >
     au < ready ; 1971 ; Contributions to Mineralogy and Petrology Volume 33 ; 33 >
     au < ready ; 1971-1972 ; Contributions to Mineralogy and Petrology Volume 34 ; 34 >
     au < ready ; 1972 ; Contributions to Mineralogy and Petrology Volume 35 ; 35 >
     au < ready ; 1972 ; Contributions to Mineralogy and Petrology Volume 36 ; 36 >
-    au < testing ; 1972 ; Contributions to Mineralogy and Petrology Volume 37 ; 37 >
+    au < ready ; 1972 ; Contributions to Mineralogy and Petrology Volume 37 ; 37 >
     au < ready ; 1973 ; Contributions to Mineralogy and Petrology Volume 38 ; 38 >
     au < ready ; 1973 ; Contributions to Mineralogy and Petrology Volume 39 ; 39 >
     au < ready ; 1973 ; Contributions to Mineralogy and Petrology Volume 40 ; 40 >
@@ -8691,7 +8714,7 @@
     au < ready ; 1975 ; Contributions to Mineralogy and Petrology Volume 50 ; 50 >
     au < ready ; 1975 ; Contributions to Mineralogy and Petrology Volume 51 ; 51 >
     au < ready ; 1975 ; Contributions to Mineralogy and Petrology Volume 52 ; 52 >
-    au < testing ; 1975 ; Contributions to Mineralogy and Petrology Volume 53 ; 53 >
+    au < ready ; 1975 ; Contributions to Mineralogy and Petrology Volume 53 ; 53 >
     au < ready ; 1976 ; Contributions to Mineralogy and Petrology Volume 54 ; 54 >
     au < ready ; 1976 ; Contributions to Mineralogy and Petrology Volume 55 ; 55 >
     au < ready ; 1976 ; Contributions to Mineralogy and Petrology Volume 56 ; 56 >
@@ -8709,7 +8732,7 @@
     au < ready ; 1978-1979 ; Contributions to Mineralogy and Petrology Volume 68 ; 68 >
     au < ready ; 1979 ; Contributions to Mineralogy and Petrology Volume 69 ; 69 >
     au < ready ; 1979 ; Contributions to Mineralogy and Petrology Volume 70 ; 70 >
-    au < testing ; 1979-1980 ; Contributions to Mineralogy and Petrology Volume 71 ; 71 >
+    au < ready ; 1979-1980 ; Contributions to Mineralogy and Petrology Volume 71 ; 71 >
     au < ready ; 1980 ; Contributions to Mineralogy and Petrology Volume 72 ; 72 >
     au < ready ; 1980 ; Contributions to Mineralogy and Petrology Volume 73 ; 73 >
     au < ready ; 1980 ; Contributions to Mineralogy and Petrology Volume 74 ; 74 >
@@ -22851,11 +22874,46 @@
       name = Journal of Neurocytology ;
       issn = 0300-4864 ;
       eissn = 1573-7381 ;
-      issnl = 0300-4864 ;
-      placeholder = True
+      issnl = 0300-4864
     >
 
+    comment[continued_by] = 1559-7105
     param[journal_issn] = 0300-4864
+
+    au < testing ; 1972 ; Journal of Neurocytology Volume 1 ; 1 >
+    au < testing ; 1973 ; Journal of Neurocytology Volume 2 ; 2 >
+    au < testing ; 1974 ; Journal of Neurocytology Volume 3 ; 3 >
+    au < testing ; 1975 ; Journal of Neurocytology Volume 4 ; 4 >
+    au < testing ; 1976 ; Journal of Neurocytology Volume 5 ; 5 >
+    au < testing ; 1977 ; Journal of Neurocytology Volume 6 ; 6 >
+    au < testing ; 1978 ; Journal of Neurocytology Volume 7 ; 7 >
+    au < testing ; 1979 ; Journal of Neurocytology Volume 8 ; 8 >
+    au < testing ; 1980 ; Journal of Neurocytology Volume 9 ; 9 >
+    au < testing ; 1981 ; Journal of Neurocytology Volume 10 ; 10 >
+    au < testing ; 1982 ; Journal of Neurocytology Volume 11 ; 11 >
+    au < testing ; 1983 ; Journal of Neurocytology Volume 12 ; 12 >
+    au < testing ; 1984 ; Journal of Neurocytology Volume 13 ; 13 >
+    au < testing ; 1985 ; Journal of Neurocytology Volume 14 ; 14 >
+    au < testing ; 1986 ; Journal of Neurocytology Volume 15 ; 15 >
+    au < testing ; 1987 ; Journal of Neurocytology Volume 16 ; 16 >
+    au < testing ; 1988 ; Journal of Neurocytology Volume 17 ; 17 >
+    au < testing ; 1989 ; Journal of Neurocytology Volume 18 ; 18 >
+    au < testing ; 1990 ; Journal of Neurocytology Volume 19 ; 19 >
+    au < testing ; 1991 ; Journal of Neurocytology Volume 20 ; 20 >
+    au < testing ; 1992 ; Journal of Neurocytology Volume 21 ; 21 >
+    au < testing ; 1993 ; Journal of Neurocytology Volume 22 ; 22 >
+    au < testing ; 1994 ; Journal of Neurocytology Volume 23 ; 23 >
+    au < testing ; 1995 ; Journal of Neurocytology Volume 24 ; 24 >
+    au < testing ; 1996 ; Journal of Neurocytology Volume 25 ; 25 >
+    au < testing ; 1997 ; Journal of Neurocytology Volume 26 ; 26 >
+    au < testing ; 1998 ; Journal of Neurocytology Volume 27 ; 27 >
+    au < testing ; 1999 ; Journal of Neurocytology Volume 28 ; 28 >
+    au < testing ; 2000 ; Journal of Neurocytology Volume 29 ; 29 >
+    au < testing ; 2001 ; Journal of Neurocytology Volume 30 ; 30 >
+    au < testing ; 2002 ; Journal of Neurocytology Volume 31 ; 31 >
+    au < testing ; 2003 ; Journal of Neurocytology Volume 32 ; 32 >
+    au < testing ; 2004 ; Journal of Neurocytology Volume 33 ; 33 >
+    au < testing ; 2005 ; Journal of Neurocytology Volume 34 ; 34 >
 
   }
 
@@ -25074,34 +25132,33 @@
     >
 
     param[journal_issn] = 0921-2973
-    attr[where] = content6b
 
     au < ready ; 1987-1988 ; Landscape Ecology Volume 1 ; 1 >
     au < ready ; 1988-1989 ; Landscape Ecology Volume 2 ; 2 >
     au < ready ; 1989 ; Landscape Ecology Volume 3 ; 3 >
     au < ready ; 1990 ; Landscape Ecology Volume 4 ; 4 >
-    au < testing ; 1990-1991 ; Landscape Ecology Volume 5 ; 5 >
-    au < testing ; 1991-1992 ; Landscape Ecology Volume 6 ; 6 >
-    au < testing ; 1992 ; Landscape Ecology Volume 7 ; 7 >
+    au < ready ; 1990-1991 ; Landscape Ecology Volume 5 ; 5 >
+    au < ready ; 1991-1992 ; Landscape Ecology Volume 6 ; 6 >
+    au < ready ; 1992 ; Landscape Ecology Volume 7 ; 7 >
     au < ready ; 1993 ; Landscape Ecology Volume 8 ; 8 >
-    au < testing ; 1994 ; Landscape Ecology Volume 9 ; 9 >
+    au < ready ; 1994 ; Landscape Ecology Volume 9 ; 9 >
     au < ready ; 1995 ; Landscape Ecology Volume 10 ; 10 >
     au < ready ; 1996 ; Landscape Ecology Volume 11 ; 11 >
     au < ready ; 1997 ; Landscape Ecology Volume 12 ; 12 >
     au < ready ; 1998 ; Landscape Ecology Volume 13 ; 13 >
     au < ready ; 1999 ; Landscape Ecology Volume 14 ; 14 >
-    au < testing ; 2000 ; Landscape Ecology Volume 15 ; 15 >
+    au < ready ; 2000 ; Landscape Ecology Volume 15 ; 15 >
     au < ready ; 2001 ; Landscape Ecology Volume 16 ; 16 >
     au < ready ; 2002 ; Landscape Ecology Volume 17 ; 17 >
-    au < testing ; 2003 ; Landscape Ecology Volume 18 ; 18 >
-    au < testing ; 2004 ; Landscape Ecology Volume 19 ; 19 >
-    au < testing ; 2005 ; Landscape Ecology Volume 20 ; 20 >
-    au < testing ; 2006 ; Landscape Ecology Volume 21 ; 21 >
-    au < testing ; 2007 ; Landscape Ecology Volume 22 ; 22 >
-    au < testing ; 2008 ; Landscape Ecology Volume 23 ; 23 >
-    au < testing ; 2009 ; Landscape Ecology Volume 24 ; 24 >
-    au < testing ; 2010 ; Landscape Ecology Volume 25 ; 25 >
-    au < testing ; 2011 ; Landscape Ecology Volume 26 ; 26 >
+    au < ready ; 2003 ; Landscape Ecology Volume 18 ; 18 >
+    au < ready ; 2004 ; Landscape Ecology Volume 19 ; 19 >
+    au < ready ; 2005 ; Landscape Ecology Volume 20 ; 20 >
+    au < ready ; 2006 ; Landscape Ecology Volume 21 ; 21 >
+    au < ready ; 2007 ; Landscape Ecology Volume 22 ; 22 >
+    au < ready ; 2008 ; Landscape Ecology Volume 23 ; 23 >
+    au < ready ; 2009 ; Landscape Ecology Volume 24 ; 24 >
+    au < ready ; 2010 ; Landscape Ecology Volume 25 ; 25 >
+    au < ready ; 2011 ; Landscape Ecology Volume 26 ; 26 >
 
   }
   
@@ -26317,106 +26374,106 @@
     param[journal_issn] = 0300-8584
     attr[where] = content5a
 
-    au < manifest ; 1886 ; Medical Microbiology and Immunology Volume 1 ; 1 >
-    au < manifest ; 1887 ; Medical Microbiology and Immunology Volume 2 ; 2 >
-    au < manifest ; 1888 ; Medical Microbiology and Immunology Volume 3 ; 3 >
-    au < manifest ; 1888 ; Medical Microbiology and Immunology Volume 4 ; 4 >
-    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 5 ; 5 >
-    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 6 ; 6 >
-    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 7 ; 7 >
-    au < manifest ; 1890 ; Medical Microbiology and Immunology Volume 8 ; 8 >
-    au < manifest ; 1890 ; Medical Microbiology and Immunology Volume 9 ; 9 >
-    au < manifest ; 1891 ; Medical Microbiology and Immunology Volume 10 ; 10 >
-    au < manifest ; 1892 ; Medical Microbiology and Immunology Volume 11 ; 11 >
-    au < manifest ; 1892 ; Medical Microbiology and Immunology Volume 12 ; 12 >
-    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 13 ; 13 >
-    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 14 ; 14 >
-    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 15 ; 15 >
-    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 16 ; 16 >
-    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 17 ; 17 >
-    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 18 ; 18 >
-    au < manifest ; 1895 ; Medical Microbiology and Immunology Volume 19 ; 19 >
-    au < manifest ; 1895 ; Medical Microbiology and Immunology Volume 20 ; 20 >
-    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 21 ; 21 >
-    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 22 ; 22 >
-    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 23 ; 23 >
-    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 24 ; 24 >
-    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 25 ; 25 >
-    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 26 ; 26 >
-    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 27 ; 27 >
-    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 28 ; 28 >
-    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 29 ; 29 >
-    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 30 ; 30 >
-    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 31 ; 31 >
-    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 32 ; 32 >
-    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 33 ; 33 >
-    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 34 ; 34 >
-    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 35 ; 35 >
-    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 36 ; 36 >
-    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 37 ; 37 >
-    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 38 ; 38 >
-    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 39 ; 39 >
-    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 40 ; 40 >
-    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 41 ; 41 >
-    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 42 ; 42 >
-    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 43 ; 43 >
-    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 44 ; 44 >
-    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 45 ; 45 >
-    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 46 ; 46 >
-    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 47 ; 47 >
-    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 48 ; 48 >
-    au < manifest ; 1905 ; Medical Microbiology and Immunology Volume 49 ; 49 >
-    au < manifest ; 1905 ; Medical Microbiology and Immunology Volume 50 ; 50 >
-    au < testing ; 1905 ; Medical Microbiology and Immunology Volume 51 ; 51 >
+    au < testing ; 1886 ; Medical Microbiology and Immunology Volume 1 ; 1 >
+    au < testing ; 1887 ; Medical Microbiology and Immunology Volume 2 ; 2 >
+    au < testing ; 1888 ; Medical Microbiology and Immunology Volume 3 ; 3 >
+    au < testing ; 1888 ; Medical Microbiology and Immunology Volume 4 ; 4 >
+    au < testing ; 1889 ; Medical Microbiology and Immunology Volume 5 ; 5 >
+    au < testing ; 1889 ; Medical Microbiology and Immunology Volume 6 ; 6 >
+    au < testing ; 1889 ; Medical Microbiology and Immunology Volume 7 ; 7 >
+    au < testing ; 1890 ; Medical Microbiology and Immunology Volume 8 ; 8 >
+    au < testing ; 1890 ; Medical Microbiology and Immunology Volume 9 ; 9 >
+    au < testing ; 1891 ; Medical Microbiology and Immunology Volume 10 ; 10 >
+    au < testing ; 1892 ; Medical Microbiology and Immunology Volume 11 ; 11 >
+    au < testing ; 1892 ; Medical Microbiology and Immunology Volume 12 ; 12 >
+    au < testing ; 1893 ; Medical Microbiology and Immunology Volume 13 ; 13 >
+    au < testing ; 1893 ; Medical Microbiology and Immunology Volume 14 ; 14 >
+    au < testing ; 1893 ; Medical Microbiology and Immunology Volume 15 ; 15 >
+    au < testing ; 1894 ; Medical Microbiology and Immunology Volume 16 ; 16 >
+    au < testing ; 1894 ; Medical Microbiology and Immunology Volume 17 ; 17 >
+    au < testing ; 1894 ; Medical Microbiology and Immunology Volume 18 ; 18 >
+    au < testing ; 1895 ; Medical Microbiology and Immunology Volume 19 ; 19 >
+    au < testing ; 1895 ; Medical Microbiology and Immunology Volume 20 ; 20 >
+    au < testing ; 1896 ; Medical Microbiology and Immunology Volume 21 ; 21 >
+    au < testing ; 1896 ; Medical Microbiology and Immunology Volume 22 ; 22 >
+    au < testing ; 1896 ; Medical Microbiology and Immunology Volume 23 ; 23 >
+    au < testing ; 1897 ; Medical Microbiology and Immunology Volume 24 ; 24 >
+    au < testing ; 1897 ; Medical Microbiology and Immunology Volume 25 ; 25 >
+    au < testing ; 1897 ; Medical Microbiology and Immunology Volume 26 ; 26 >
+    au < testing ; 1898 ; Medical Microbiology and Immunology Volume 27 ; 27 >
+    au < testing ; 1898 ; Medical Microbiology and Immunology Volume 28 ; 28 >
+    au < testing ; 1898 ; Medical Microbiology and Immunology Volume 29 ; 29 >
+    au < testing ; 1899 ; Medical Microbiology and Immunology Volume 30 ; 30 >
+    au < testing ; 1899 ; Medical Microbiology and Immunology Volume 31 ; 31 >
+    au < testing ; 1899 ; Medical Microbiology and Immunology Volume 32 ; 32 >
+    au < testing ; 1900 ; Medical Microbiology and Immunology Volume 33 ; 33 >
+    au < testing ; 1900 ; Medical Microbiology and Immunology Volume 34 ; 34 >
+    au < testing ; 1900 ; Medical Microbiology and Immunology Volume 35 ; 35 >
+    au < testing ; 1901 ; Medical Microbiology and Immunology Volume 36 ; 36 >
+    au < testing ; 1901 ; Medical Microbiology and Immunology Volume 37 ; 37 >
+    au < testing ; 1901 ; Medical Microbiology and Immunology Volume 38 ; 38 >
+    au < testing ; 1902 ; Medical Microbiology and Immunology Volume 39 ; 39 >
+    au < testing ; 1902 ; Medical Microbiology and Immunology Volume 40 ; 40 >
+    au < testing ; 1902 ; Medical Microbiology and Immunology Volume 41 ; 41 >
+    au < testing ; 1903 ; Medical Microbiology and Immunology Volume 42 ; 42 >
+    au < testing ; 1903 ; Medical Microbiology and Immunology Volume 43 ; 43 >
+    au < testing ; 1903 ; Medical Microbiology and Immunology Volume 44 ; 44 >
+    au < testing ; 1903 ; Medical Microbiology and Immunology Volume 45 ; 45 >
+    au < testing ; 1904 ; Medical Microbiology and Immunology Volume 46 ; 46 >
+    au < testing ; 1904 ; Medical Microbiology and Immunology Volume 47 ; 47 >
+    au < testing ; 1904 ; Medical Microbiology and Immunology Volume 48 ; 48 >
+    au < testing ; 1905 ; Medical Microbiology and Immunology Volume 49 ; 49 >
+    au < testing ; 1905 ; Medical Microbiology and Immunology Volume 50 ; 50 >
+    au < ready ; 1905 ; Medical Microbiology and Immunology Volume 51 ; 51 >
     au < ready ; 1906 ; Medical Microbiology and Immunology Volume 52 ; 52 >
     au < ready ; 1906 ; Medical Microbiology and Immunology Volume 53 ; 53 >
-    au < testing ; 1906 ; Medical Microbiology and Immunology Volume 54 ; 54 >
-    au < testing ; 1906 ; Medical Microbiology and Immunology Volume 55 ; 55 >
+    au < ready ; 1906 ; Medical Microbiology and Immunology Volume 54 ; 54 >
+    au < ready ; 1906 ; Medical Microbiology and Immunology Volume 55 ; 55 >
     au < ready ; 1907 ; Medical Microbiology and Immunology Volume 56 ; 56 >
     au < ready ; 1907 ; Medical Microbiology and Immunology Volume 57 ; 57 >
     au < ready ; 1908 ; Medical Microbiology and Immunology Volume 58 ; 58 >
-    au < testing ; 1908 ; Medical Microbiology and Immunology Volume 59 ; 59 >
+    au < ready ; 1908 ; Medical Microbiology and Immunology Volume 59 ; 59 >
     au < ready ; 1908 ; Medical Microbiology and Immunology Volume 60 ; 60 >
     au < ready ; 1908 ; Medical Microbiology and Immunology Volume 61 ; 61 >
-    au < testing ; 1909 ; Medical Microbiology and Immunology Volume 62 ; 62 >
-    au < testing ; 1909 ; Medical Microbiology and Immunology Volume 63 ; 63 >
-    au < testing ; 1909 ; Medical Microbiology and Immunology Volume 64 ; 64 >
+    au < ready ; 1909 ; Medical Microbiology and Immunology Volume 62 ; 62 >
+    au < ready ; 1909 ; Medical Microbiology and Immunology Volume 63 ; 63 >
+    au < ready ; 1909 ; Medical Microbiology and Immunology Volume 64 ; 64 >
     au < ready ; 1910 ; Medical Microbiology and Immunology Volume 65 ; 65 >
-    au < testing ; 1910 ; Medical Microbiology and Immunology Volume 66 ; 66 >
-    au < testing ; 1910 ; Medical Microbiology and Immunology Volume 67 ; 67 >
-    au < testing ; 1911 ; Medical Microbiology and Immunology Volume 68 ; 68 >
-    au < testing ; 1911 ; Medical Microbiology and Immunology Volume 69 ; 69 >
-    au < testing ; 1912 ; Medical Microbiology and Immunology Volume 70 ; 70 >
-    au < testing ; 1912 ; Medical Microbiology and Immunology Volume 71 ; 71 >
-    au < testing ; 1912 ; Medical Microbiology and Immunology Volume 72 ; 72 >
-    au < testing ; 1912 ; Medical Microbiology and Immunology Volume 73 ; 73 >
-    au < testing ; 1913 ; Medical Microbiology and Immunology Volume 74 ; 74 >
-    au < testing ; 1913 ; Medical Microbiology and Immunology Volume 75 ; 75 >
+    au < ready ; 1910 ; Medical Microbiology and Immunology Volume 66 ; 66 >
+    au < ready ; 1910 ; Medical Microbiology and Immunology Volume 67 ; 67 >
+    au < ready ; 1911 ; Medical Microbiology and Immunology Volume 68 ; 68 >
+    au < ready ; 1911 ; Medical Microbiology and Immunology Volume 69 ; 69 >
+    au < ready ; 1912 ; Medical Microbiology and Immunology Volume 70 ; 70 >
+    au < ready ; 1912 ; Medical Microbiology and Immunology Volume 71 ; 71 >
+    au < ready ; 1912 ; Medical Microbiology and Immunology Volume 72 ; 72 >
+    au < ready ; 1912 ; Medical Microbiology and Immunology Volume 73 ; 73 >
+    au < ready ; 1913 ; Medical Microbiology and Immunology Volume 74 ; 74 >
+    au < ready ; 1913 ; Medical Microbiology and Immunology Volume 75 ; 75 >
     au < ready ; 1914 ; Medical Microbiology and Immunology Volume 76 ; 76 >
     au < ready ; 1914 ; Medical Microbiology and Immunology Volume 77 ; 77 >
     au < ready ; 1914 ; Medical Microbiology and Immunology Volume 78 ; 78 >
-    au < testing ; 1914-1915 ; Medical Microbiology and Immunology Volume 79 ; 79 >
+    au < ready ; 1914-1915 ; Medical Microbiology and Immunology Volume 79 ; 79 >
     au < ready ; 1915 ; Medical Microbiology and Immunology Volume 80 ; 80 >
-    au < testing ; 1916 ; Medical Microbiology and Immunology Volume 81 ; 81 >
-    au < testing ; 1916 ; Medical Microbiology and Immunology Volume 82 ; 82 >
+    au < ready ; 1916 ; Medical Microbiology and Immunology Volume 81 ; 81 >
+    au < ready ; 1916 ; Medical Microbiology and Immunology Volume 82 ; 82 >
     au < ready ; 1917 ; Medical Microbiology and Immunology Volume 83 ; 83 >
-    au < testing ; 1917 ; Medical Microbiology and Immunology Volume 84 ; 84 >
-    au < testing ; 1918 ; Medical Microbiology and Immunology Volume 85 ; 85 >
-    au < testing ; 1918 ; Medical Microbiology and Immunology Volume 86 ; 86 >
-    au < testing ; 1918 ; Medical Microbiology and Immunology Volume 87 ; 87 >
+    au < ready ; 1917 ; Medical Microbiology and Immunology Volume 84 ; 84 >
+    au < ready ; 1918 ; Medical Microbiology and Immunology Volume 85 ; 85 >
+    au < ready ; 1918 ; Medical Microbiology and Immunology Volume 86 ; 86 >
+    au < ready ; 1918 ; Medical Microbiology and Immunology Volume 87 ; 87 >
     au < ready ; 1919 ; Medical Microbiology and Immunology Volume 88 ; 88 >
-    au < testing ; 1919 ; Medical Microbiology and Immunology Volume 89 ; 89 >
+    au < ready ; 1919 ; Medical Microbiology and Immunology Volume 89 ; 89 >
     au < ready ; 1920 ; Medical Microbiology and Immunology Volume 90 ; 90 >
-    au < testing ; 1920-1921 ; Medical Microbiology and Immunology Volume 91 ; 91 >
+    au < ready ; 1920-1921 ; Medical Microbiology and Immunology Volume 91 ; 91 >
     au < ready ; 1921 ; Medical Microbiology and Immunology Volume 92 ; 92 >
     au < ready ; 1921 ; Medical Microbiology and Immunology Volume 93 ; 93 >
     au < ready ; 1921 ; Medical Microbiology and Immunology Volume 94 ; 94 >
     au < ready ; 1922 ; Medical Microbiology and Immunology Volume 95 ; 95 >
-    au < testing ; 1922 ; Medical Microbiology and Immunology Volume 96 ; 96 >
-    au < testing ; 1922-1923 ; Medical Microbiology and Immunology Volume 97 ; 97 >
+    au < ready ; 1922 ; Medical Microbiology and Immunology Volume 96 ; 96 >
+    au < ready ; 1922-1923 ; Medical Microbiology and Immunology Volume 97 ; 97 >
     au < ready ; 1922 ; Medical Microbiology and Immunology Volume 98 ; 98 >
     au < ready ; 1923 ; Medical Microbiology and Immunology Volume 99 ; 99 >
-    au < testing ; 1923 ; Medical Microbiology and Immunology Volume 100 ; 100 >
+    au < ready ; 1923 ; Medical Microbiology and Immunology Volume 100 ; 100 >
     au < ready ; 1923-1924 ; Medical Microbiology and Immunology Volume 101 ; 101 >
     au < ready ; 1924 ; Medical Microbiology and Immunology Volume 102 ; 102 >
     au < ready ; 1924 ; Medical Microbiology and Immunology Volume 103 ; 103 >
@@ -26947,6 +27004,69 @@
     >
 
     param[journal_issn] = 0095-3628
+    comment[notReady] = no permission
+
+    au < notReady ; 1974 ; Microbial Ecology Volume 1 ; 1 >
+    au < notReady ; 1975 ; Microbial Ecology Volume 2 ; 2 >
+    au < notReady ; 1976-1977 ; Microbial Ecology Volume 3 ; 3 >
+    au < notReady ; 1977 ; Microbial Ecology Volume 4 ; 4 >
+    au < notReady ; 1979-1980 ; Microbial Ecology Volume 5 ; 5 >
+    au < notReady ; 1980 ; Microbial Ecology Volume 6 ; 6 >
+    au < notReady ; 1981 ; Microbial Ecology Volume 7 ; 7 >
+    au < notReady ; 1982 ; Microbial Ecology Volume 8 ; 8 >
+    au < notReady ; 1983 ; Microbial Ecology Volume 9 ; 9 >
+    au < notReady ; 1984 ; Microbial Ecology Volume 10 ; 10 >
+    au < notReady ; 1985 ; Microbial Ecology Volume 11 ; 11 >
+    au < notReady ; 1986 ; Microbial Ecology Volume 12 ; 12 >
+    au < notReady ; 1987 ; Microbial Ecology Volume 13 ; 13 >
+    au < notReady ; 1987 ; Microbial Ecology Volume 14 ; 14 >
+    au < notReady ; 1988 ; Microbial Ecology Volume 15 ; 15 >
+    au < notReady ; 1988 ; Microbial Ecology Volume 16 ; 16 >
+    au < notReady ; 1989 ; Microbial Ecology Volume 17 ; 17 >
+    au < notReady ; 1989 ; Microbial Ecology Volume 18 ; 18 >
+    au < notReady ; 1990 ; Microbial Ecology Volume 19 ; 19 >
+    au < notReady ; 1990 ; Microbial Ecology Volume 20 ; 20 >
+    au < notReady ; 1991 ; Microbial Ecology Volume 21 ; 21 >
+    au < notReady ; 1991 ; Microbial Ecology Volume 22 ; 22 >
+    au < notReady ; 1992 ; Microbial Ecology Volume 23 ; 23 >
+    au < notReady ; 1992 ; Microbial Ecology Volume 24 ; 24 >
+    au < notReady ; 1993 ; Microbial Ecology Volume 25 ; 25 >
+    au < notReady ; 1993 ; Microbial Ecology Volume 26 ; 26 >
+    au < notReady ; 1994 ; Microbial Ecology Volume 27 ; 27 >
+    au < notReady ; 1994 ; Microbial Ecology Volume 28 ; 28 >
+    au < notReady ; 1995 ; Microbial Ecology Volume 29 ; 29 >
+    au < notReady ; 1995 ; Microbial Ecology Volume 30 ; 30 >
+    au < notReady ; 1996 ; Microbial Ecology Volume 31 ; 31 >
+    au < notReady ; 1996 ; Microbial Ecology Volume 32 ; 32 >
+    au < notReady ; 1997 ; Microbial Ecology Volume 33 ; 33 >
+    au < notReady ; 1997 ; Microbial Ecology Volume 34 ; 34 >
+    au < notReady ; 1998 ; Microbial Ecology Volume 35 ; 35 >
+    au < notReady ; 1998 ; Microbial Ecology Volume 36 ; 36 >
+    au < notReady ; 1999 ; Microbial Ecology Volume 37 ; 37 >
+    au < notReady ; 1999 ; Microbial Ecology Volume 38 ; 38 >
+    au < notReady ; 2000 ; Microbial Ecology Volume 39 ; 39 >
+    au < notReady ; 2000 ; Microbial Ecology Volume 40 ; 40 >
+    au < notReady ; 2001 ; Microbial Ecology Volume 41 ; 41 >
+    au < notReady ; 2001 ; Microbial Ecology Volume 42 ; 42 >
+    au < notReady ; 2002 ; Microbial Ecology Volume 43 ; 43 >
+    au < notReady ; 2002 ; Microbial Ecology Volume 44 ; 44 >
+    au < notReady ; 2003 ; Microbial Ecology Volume 45 ; 45 >
+    au < notReady ; 2003 ; Microbial Ecology Volume 46 ; 46 >
+    au < notReady ; 2004 ; Microbial Ecology Volume 47 ; 47 >
+    au < notReady ; 2004 ; Microbial Ecology Volume 48 ; 48 >
+    au < notReady ; 2005 ; Microbial Ecology Volume 49 ; 49 >
+    au < notReady ; 2005 ; Microbial Ecology Volume 50 ; 50 >
+    au < notReady ; 2006 ; Microbial Ecology Volume 51 ; 51 >
+    au < notReady ; 2006 ; Microbial Ecology Volume 52 ; 52 >
+    au < notReady ; 2007 ; Microbial Ecology Volume 53 ; 53 >
+    au < notReady ; 2007 ; Microbial Ecology Volume 54 ; 54 >
+    au < notReady ; 2008 ; Microbial Ecology Volume 55 ; 55 >
+    au < notReady ; 2008 ; Microbial Ecology Volume 56 ; 56 >
+    au < notReady ; 2009 ; Microbial Ecology Volume 57 ; 57 >
+    au < notReady ; 2009 ; Microbial Ecology Volume 58 ; 58 >
+    au < notReady ; 2010 ; Microbial Ecology Volume 59 ; 59 >
+    au < notReady ; 2010 ; Microbial Ecology Volume 60 ; 60 >
+    au < notReady ; 2011 ; Microbial Ecology Volume 61 ; 61 >
 
   }
 
@@ -26956,73 +27076,11 @@
       name = Microbiology ;
       issn = 0026-2617 ;
       eissn = 1608-3237 ;
-      issnl = 0026-2617
+      issnl = 0026-2617 ;
+      placeholder = True
     >
 
     param[journal_issn] = 0026-2617
-    attr[where] = content6a
-
-    au < testing ; 1974 ; Microbial Ecology Volume 1 ; 1 >
-    au < testing ; 1975 ; Microbial Ecology Volume 2 ; 2 >
-    au < testing ; 1976-1977 ; Microbial Ecology Volume 3 ; 3 >
-    au < testing ; 1977 ; Microbial Ecology Volume 4 ; 4 >
-    au < testing ; 1979-1980 ; Microbial Ecology Volume 5 ; 5 >
-    au < testing ; 1980 ; Microbial Ecology Volume 6 ; 6 >
-    au < testing ; 1981 ; Microbial Ecology Volume 7 ; 7 >
-    au < testing ; 1982 ; Microbial Ecology Volume 8 ; 8 >
-    au < testing ; 1983 ; Microbial Ecology Volume 9 ; 9 >
-    au < testing ; 1984 ; Microbial Ecology Volume 10 ; 10 >
-    au < testing ; 1985 ; Microbial Ecology Volume 11 ; 11 >
-    au < testing ; 1986 ; Microbial Ecology Volume 12 ; 12 >
-    au < testing ; 1987 ; Microbial Ecology Volume 13 ; 13 >
-    au < testing ; 1987 ; Microbial Ecology Volume 14 ; 14 >
-    au < testing ; 1988 ; Microbial Ecology Volume 15 ; 15 >
-    au < testing ; 1988 ; Microbial Ecology Volume 16 ; 16 >
-    au < testing ; 1989 ; Microbial Ecology Volume 17 ; 17 >
-    au < testing ; 1989 ; Microbial Ecology Volume 18 ; 18 >
-    au < testing ; 1990 ; Microbial Ecology Volume 19 ; 19 >
-    au < testing ; 1990 ; Microbial Ecology Volume 20 ; 20 >
-    au < testing ; 1991 ; Microbial Ecology Volume 21 ; 21 >
-    au < testing ; 1991 ; Microbial Ecology Volume 22 ; 22 >
-    au < testing ; 1992 ; Microbial Ecology Volume 23 ; 23 >
-    au < testing ; 1992 ; Microbial Ecology Volume 24 ; 24 >
-    au < testing ; 1993 ; Microbial Ecology Volume 25 ; 25 >
-    au < testing ; 1993 ; Microbial Ecology Volume 26 ; 26 >
-    au < testing ; 1994 ; Microbial Ecology Volume 27 ; 27 >
-    au < testing ; 1994 ; Microbial Ecology Volume 28 ; 28 >
-    au < testing ; 1995 ; Microbial Ecology Volume 29 ; 29 >
-    au < testing ; 1995 ; Microbial Ecology Volume 30 ; 30 >
-    au < testing ; 1996 ; Microbial Ecology Volume 31 ; 31 >
-    au < testing ; 1996 ; Microbial Ecology Volume 32 ; 32 >
-    au < testing ; 1997 ; Microbial Ecology Volume 33 ; 33 >
-    au < testing ; 1997 ; Microbial Ecology Volume 34 ; 34 >
-    au < testing ; 1998 ; Microbial Ecology Volume 35 ; 35 >
-    au < testing ; 1998 ; Microbial Ecology Volume 36 ; 36 >
-    au < testing ; 1999 ; Microbial Ecology Volume 37 ; 37 >
-    au < testing ; 1999 ; Microbial Ecology Volume 38 ; 38 >
-    au < testing ; 2000 ; Microbial Ecology Volume 39 ; 39 >
-    au < testing ; 2000 ; Microbial Ecology Volume 40 ; 40 >
-    au < testing ; 2001 ; Microbial Ecology Volume 41 ; 41 >
-    au < testing ; 2001 ; Microbial Ecology Volume 42 ; 42 >
-    au < testing ; 2002 ; Microbial Ecology Volume 43 ; 43 >
-    au < testing ; 2002 ; Microbial Ecology Volume 44 ; 44 >
-    au < testing ; 2003 ; Microbial Ecology Volume 45 ; 45 >
-    au < testing ; 2003 ; Microbial Ecology Volume 46 ; 46 >
-    au < testing ; 2004 ; Microbial Ecology Volume 47 ; 47 >
-    au < testing ; 2004 ; Microbial Ecology Volume 48 ; 48 >
-    au < testing ; 2005 ; Microbial Ecology Volume 49 ; 49 >
-    au < testing ; 2005 ; Microbial Ecology Volume 50 ; 50 >
-    au < testing ; 2006 ; Microbial Ecology Volume 51 ; 51 >
-    au < testing ; 2006 ; Microbial Ecology Volume 52 ; 52 >
-    au < testing ; 2007 ; Microbial Ecology Volume 53 ; 53 >
-    au < testing ; 2007 ; Microbial Ecology Volume 54 ; 54 >
-    au < testing ; 2008 ; Microbial Ecology Volume 55 ; 55 >
-    au < testing ; 2008 ; Microbial Ecology Volume 56 ; 56 >
-    au < testing ; 2009 ; Microbial Ecology Volume 57 ; 57 >
-    au < testing ; 2009 ; Microbial Ecology Volume 58 ; 58 >
-    au < testing ; 2010 ; Microbial Ecology Volume 59 ; 59 >
-    au < testing ; 2010 ; Microbial Ecology Volume 60 ; 60 >
-    au < testing ; 2011 ; Microbial Ecology Volume 61 ; 61 >
 
   }
 
@@ -27057,7 +27115,7 @@
     au < testing ; 2007 ; Microfluidics and Nanofluidics Volume 3 ; 3 >
     au < testing ; 2008 ; Microfluidics and Nanofluidics Volume 4 ; 4 >
     au < testing ; 2008 ; Microfluidics and Nanofluidics Volume 5 ; 5 >
-    au < testing ; 2009 ; Microfluidics and Nanofluidics Volume 6 ; 6 >
+    au < ready ; 2009 ; Microfluidics and Nanofluidics Volume 6 ; 6 >
     au < testing ; 2009 ; Microfluidics and Nanofluidics Volume 7 ; 7 >
     au < testing ; 2010 ; Microfluidics and Nanofluidics Volume 8 ; 8 >
     au < testing ; 2010 ; Microfluidics and Nanofluidics Volume 9 ; 9 >
@@ -31200,106 +31258,106 @@
     au < manifest ; 1971 ; Planta Volume 98 ; 98 >
     au < manifest ; 1971 ; Planta Volume 99 ; 99 >
     au < manifest ; 1971 ; Planta Volume 100 ; 100 >
-    au < manifest ; 1971 ; Planta Volume 101 ; 101 >
-    au < manifest ; 1971-1972 ; Planta Volume 102 ; 102 >
-    au < manifest ; 1972 ; Planta Volume 103 ; 103 >
-    au < manifest ; 1972 ; Planta Volume 104 ; 104 >
-    au < manifest ; 1972 ; Planta Volume 105 ; 105 >
-    au < manifest ; 1972 ; Planta Volume 106 ; 106 >
-    au < manifest ; 1972 ; Planta Volume 107 ; 107 >
-    au < manifest ; 1972 ; Planta Volume 108 ; 108 >
-    au < manifest ; 1973 ; Planta Volume 109 ; 109 >
-    au < manifest ; 1973 ; Planta Volume 110 ; 110 >
-    au < manifest ; 1973 ; Planta Volume 111 ; 111 >
-    au < manifest ; 1973 ; Planta Volume 112 ; 112 >
-    au < manifest ; 1973 ; Planta Volume 113 ; 113 >
-    au < manifest ; 1973 ; Planta Volume 114 ; 114 >
-    au < manifest ; 1973-1974 ; Planta Volume 115 ; 115 >
-    au < manifest ; 1974 ; Planta Volume 116 ; 116 >
-    au < manifest ; 1974 ; Planta Volume 117 ; 117 >
-    au < manifest ; 1974 ; Planta Volume 118 ; 118 >
-    au < manifest ; 1974 ; Planta Volume 119 ; 119 >
-    au < manifest ; 1974 ; Planta Volume 120 ; 120 >
-    au < manifest ; 1974 ; Planta Volume 121 ; 121 >
-    au < manifest ; 1975 ; Planta Volume 122 ; 122 >
-    au < manifest ; 1975 ; Planta Volume 123 ; 123 >
-    au < manifest ; 1975 ; Planta Volume 124 ; 124 >
-    au < manifest ; 1975 ; Planta Volume 125 ; 125 >
-    au < manifest ; 1975 ; Planta Volume 126 ; 126 >
-    au < manifest ; 1975 ; Planta Volume 127 ; 127 >
-    au < manifest ; 1976 ; Planta Volume 128 ; 128 >
-    au < manifest ; 1976 ; Planta Volume 129 ; 129 >
-    au < manifest ; 1976 ; Planta Volume 130 ; 130 >
-    au < manifest ; 1976 ; Planta Volume 131 ; 131 >
-    au < manifest ; 1976 ; Planta Volume 132 ; 132 >
-    au < manifest ; 1976-1977 ; Planta Volume 133 ; 133 >
-    au < manifest ; 1977 ; Planta Volume 134 ; 134 >
-    au < manifest ; 1977 ; Planta Volume 135 ; 135 >
-    au < manifest ; 1977 ; Planta Volume 136 ; 136 >
-    au < manifest ; 1977 ; Planta Volume 137 ; 137 >
-    au < manifest ; 1978 ; Planta Volume 138 ; 138 >
-    au < manifest ; 1978 ; Planta Volume 139 ; 139 >
-    au < manifest ; 1978 ; Planta Volume 140 ; 140 >
-    au < manifest ; 1978 ; Planta Volume 141 ; 141 >
-    au < manifest ; 1978 ; Planta Volume 142 ; 142 >
-    au < manifest ; 1978 ; Planta Volume 143 ; 143 >
-    au < manifest ; 1978-1979 ; Planta Volume 144 ; 144 >
-    au < manifest ; 1979 ; Planta Volume 145 ; 145 >
-    au < manifest ; 1979 ; Planta Volume 146 ; 146 >
-    au < manifest ; 1979-1980 ; Planta Volume 147 ; 147 >
-    au < manifest ; 1980 ; Planta Volume 148 ; 148 >
-    au < manifest ; 1980 ; Planta Volume 149 ; 149 >
-    au < manifest ; 1980 ; Planta Volume 150 ; 150 >
-    au < testing ; 1981 ; Planta Volume 151 ; 151 >
+    au < testing ; 1971 ; Planta Volume 101 ; 101 >
+    au < testing ; 1971-1972 ; Planta Volume 102 ; 102 >
+    au < testing ; 1972 ; Planta Volume 103 ; 103 >
+    au < testing ; 1972 ; Planta Volume 104 ; 104 >
+    au < testing ; 1972 ; Planta Volume 105 ; 105 >
+    au < testing ; 1972 ; Planta Volume 106 ; 106 >
+    au < testing ; 1972 ; Planta Volume 107 ; 107 >
+    au < testing ; 1972 ; Planta Volume 108 ; 108 >
+    au < testing ; 1973 ; Planta Volume 109 ; 109 >
+    au < testing ; 1973 ; Planta Volume 110 ; 110 >
+    au < testing ; 1973 ; Planta Volume 111 ; 111 >
+    au < testing ; 1973 ; Planta Volume 112 ; 112 >
+    au < testing ; 1973 ; Planta Volume 113 ; 113 >
+    au < testing ; 1973 ; Planta Volume 114 ; 114 >
+    au < testing ; 1973-1974 ; Planta Volume 115 ; 115 >
+    au < testing ; 1974 ; Planta Volume 116 ; 116 >
+    au < testing ; 1974 ; Planta Volume 117 ; 117 >
+    au < testing ; 1974 ; Planta Volume 118 ; 118 >
+    au < testing ; 1974 ; Planta Volume 119 ; 119 >
+    au < testing ; 1974 ; Planta Volume 120 ; 120 >
+    au < testing ; 1974 ; Planta Volume 121 ; 121 >
+    au < testing ; 1975 ; Planta Volume 122 ; 122 >
+    au < testing ; 1975 ; Planta Volume 123 ; 123 >
+    au < testing ; 1975 ; Planta Volume 124 ; 124 >
+    au < testing ; 1975 ; Planta Volume 125 ; 125 >
+    au < testing ; 1975 ; Planta Volume 126 ; 126 >
+    au < testing ; 1975 ; Planta Volume 127 ; 127 >
+    au < testing ; 1976 ; Planta Volume 128 ; 128 >
+    au < testing ; 1976 ; Planta Volume 129 ; 129 >
+    au < testing ; 1976 ; Planta Volume 130 ; 130 >
+    au < testing ; 1976 ; Planta Volume 131 ; 131 >
+    au < testing ; 1976 ; Planta Volume 132 ; 132 >
+    au < testing ; 1976-1977 ; Planta Volume 133 ; 133 >
+    au < testing ; 1977 ; Planta Volume 134 ; 134 >
+    au < testing ; 1977 ; Planta Volume 135 ; 135 >
+    au < testing ; 1977 ; Planta Volume 136 ; 136 >
+    au < testing ; 1977 ; Planta Volume 137 ; 137 >
+    au < testing ; 1978 ; Planta Volume 138 ; 138 >
+    au < testing ; 1978 ; Planta Volume 139 ; 139 >
+    au < testing ; 1978 ; Planta Volume 140 ; 140 >
+    au < testing ; 1978 ; Planta Volume 141 ; 141 >
+    au < testing ; 1978 ; Planta Volume 142 ; 142 >
+    au < testing ; 1978 ; Planta Volume 143 ; 143 >
+    au < testing ; 1978-1979 ; Planta Volume 144 ; 144 >
+    au < testing ; 1979 ; Planta Volume 145 ; 145 >
+    au < testing ; 1979 ; Planta Volume 146 ; 146 >
+    au < testing ; 1979-1980 ; Planta Volume 147 ; 147 >
+    au < testing ; 1980 ; Planta Volume 148 ; 148 >
+    au < testing ; 1980 ; Planta Volume 149 ; 149 >
+    au < testing ; 1980 ; Planta Volume 150 ; 150 >
+    au < ready ; 1981 ; Planta Volume 151 ; 151 >
     au < testing ; 1981 ; Planta Volume 152 ; 152 >
-    au < testing ; 1981 ; Planta Volume 153 ; 153 >
+    au < ready ; 1981 ; Planta Volume 153 ; 153 >
     au < testing ; 1982 ; Planta Volume 154 ; 154 >
-    au < testing ; 1982 ; Planta Volume 155 ; 155 >
-    au < testing ; 1982 ; Planta Volume 156 ; 156 >
-    au < testing ; 1983 ; Planta Volume 157 ; 157 >
-    au < testing ; 1983 ; Planta Volume 158 ; 158 >
-    au < testing ; 1983 ; Planta Volume 159 ; 159 >
+    au < ready ; 1982 ; Planta Volume 155 ; 155 >
+    au < ready ; 1982 ; Planta Volume 156 ; 156 >
+    au < ready ; 1983 ; Planta Volume 157 ; 157 >
+    au < ready ; 1983 ; Planta Volume 158 ; 158 >
+    au < ready ; 1983 ; Planta Volume 159 ; 159 >
     au < testing ; 1984 ; Planta Volume 160 ; 160 >
-    au < testing ; 1984 ; Planta Volume 161 ; 161 >
-    au < testing ; 1984 ; Planta Volume 162 ; 162 >
-    au < testing ; 1985 ; Planta Volume 163 ; 163 >
-    au < testing ; 1985 ; Planta Volume 164 ; 164 >
-    au < testing ; 1985 ; Planta Volume 165 ; 165 >
-    au < testing ; 1985 ; Planta Volume 166 ; 166 >
-    au < testing ; 1986 ; Planta Volume 167 ; 167 >
-    au < testing ; 1986 ; Planta Volume 168 ; 168 >
-    au < testing ; 1986 ; Planta Volume 169 ; 169 >
+    au < ready ; 1984 ; Planta Volume 161 ; 161 >
+    au < ready ; 1984 ; Planta Volume 162 ; 162 >
+    au < ready ; 1985 ; Planta Volume 163 ; 163 >
+    au < ready ; 1985 ; Planta Volume 164 ; 164 >
+    au < ready ; 1985 ; Planta Volume 165 ; 165 >
+    au < ready ; 1985 ; Planta Volume 166 ; 166 >
+    au < ready ; 1986 ; Planta Volume 167 ; 167 >
+    au < ready ; 1986 ; Planta Volume 168 ; 168 >
+    au < ready ; 1986 ; Planta Volume 169 ; 169 >
     au < testing ; 1987 ; Planta Volume 170 ; 170 >
-    au < testing ; 1987 ; Planta Volume 171 ; 171 >
-    au < testing ; 1987 ; Planta Volume 172 ; 172 >
-    au < testing ; 1988 ; Planta Volume 173 ; 173 >
-    au < testing ; 1988 ; Planta Volume 174 ; 174 >
-    au < testing ; 1988 ; Planta Volume 175 ; 175 >
-    au < testing ; 1988 ; Planta Volume 176 ; 176 >
-    au < testing ; 1989 ; Planta Volume 177 ; 177 >
-    au < testing ; 1989 ; Planta Volume 178 ; 178 >
-    au < testing ; 1989 ; Planta Volume 179 ; 179 >
-    au < testing ; 1989-1990 ; Planta Volume 180 ; 180 >
-    au < testing ; 1990 ; Planta Volume 181 ; 181 >
-    au < testing ; 1990 ; Planta Volume 182 ; 182 >
-    au < testing ; 1991 ; Planta Volume 183 ; 183 >
-    au < testing ; 1991 ; Planta Volume 184 ; 184 >
-    au < testing ; 1991 ; Planta Volume 185 ; 185 >
-    au < testing ; 1991-1992 ; Planta Volume 186 ; 186 >
-    au < testing ; 1992 ; Planta Volume 187 ; 187 >
+    au < ready ; 1987 ; Planta Volume 171 ; 171 >
+    au < ready ; 1987 ; Planta Volume 172 ; 172 >
+    au < ready ; 1988 ; Planta Volume 173 ; 173 >
+    au < ready ; 1988 ; Planta Volume 174 ; 174 >
+    au < ready ; 1988 ; Planta Volume 175 ; 175 >
+    au < ready ; 1988 ; Planta Volume 176 ; 176 >
+    au < ready ; 1989 ; Planta Volume 177 ; 177 >
+    au < ready ; 1989 ; Planta Volume 178 ; 178 >
+    au < ready ; 1989 ; Planta Volume 179 ; 179 >
+    au < ready ; 1989-1990 ; Planta Volume 180 ; 180 >
+    au < ready ; 1990 ; Planta Volume 181 ; 181 >
+    au < ready ; 1990 ; Planta Volume 182 ; 182 >
+    au < ready ; 1991 ; Planta Volume 183 ; 183 >
+    au < ready ; 1991 ; Planta Volume 184 ; 184 >
+    au < ready ; 1991 ; Planta Volume 185 ; 185 >
+    au < ready ; 1991-1992 ; Planta Volume 186 ; 186 >
+    au < ready ; 1992 ; Planta Volume 187 ; 187 >
     au < testing ; 1992 ; Planta Volume 188 ; 188 >
-    au < testing ; 1993 ; Planta Volume 189 ; 189 >
+    au < ready ; 1993 ; Planta Volume 189 ; 189 >
     au < testing ; 1993 ; Planta Volume 190 ; 190 >
-    au < testing ; 1993 ; Planta Volume 191 ; 191 >
+    au < ready ; 1993 ; Planta Volume 191 ; 191 >
     au < testing ; 1993-1994 ; Planta Volume 192 ; 192 >
-    au < testing ; 1994 ; Planta Volume 193 ; 193 >
-    au < testing ; 1994 ; Planta Volume 194 ; 194 >
-    au < testing ; 1994-1995 ; Planta Volume 195 ; 195 >
+    au < ready ; 1994 ; Planta Volume 193 ; 193 >
+    au < ready ; 1994 ; Planta Volume 194 ; 194 >
+    au < ready ; 1994-1995 ; Planta Volume 195 ; 195 >
     au < testing ; 1995 ; Planta Volume 196 ; 196 >
-    au < testing ; 1995 ; Planta Volume 197 ; 197 >
-    au < testing ; 1996 ; Planta Volume 198 ; 198 >
-    au < testing ; 1996 ; Planta Volume 199 ; 199 >
-    au < testing ; 1996 ; Planta Volume 200 ; 200 >
+    au < ready ; 1995 ; Planta Volume 197 ; 197 >
+    au < ready ; 1996 ; Planta Volume 198 ; 198 >
+    au < ready ; 1996 ; Planta Volume 199 ; 199 >
+    au < ready ; 1996 ; Planta Volume 200 ; 200 >
     au < ready ; 1997 ; Planta Volume 201 ; 201 >
     au < ready ; 1997 ; Planta Volume 202 ; 202 >
     au < ready ; 1997 ; Planta Volume 203 ; 203 >
