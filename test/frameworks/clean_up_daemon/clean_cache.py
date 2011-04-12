@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.3 2011-04-12 17:33:26 barry409 Exp $
+# $Id: clean_cache.py,v 1.4 2011-04-12 18:55:53 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -128,8 +128,14 @@ def main():
     client = lockss_daemon.Client('127.0.0.1', port,
                                   options.user, options.password)
     repos = client._getStatusTable( 'RepositoryTable' )[ 1 ]
-    deleted = [r for r in repos if r['status'] == 'Deleted']
 
+    no_auid = [r for r in repos if r['status'] == 'No AUID']
+    if no_auid:
+        print 'Warning: These cache directories has no AUID:'
+        for r in no_auid:
+            print r['dir']
+
+    deleted = [r for r in repos if r['status'] == 'Deleted']
     for r in deleted:
         r['auid'] = _auid(os.path.join(src, r['dir']))
     deleted.sort(key=lambda r: r['auid'])
