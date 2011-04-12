@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.6 2011-04-12 19:02:09 barry409 Exp $
+# $Id: clean_cache.py,v 1.7 2011-04-12 19:03:50 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -125,8 +125,11 @@ def main():
 
     config = ConfigParser.ConfigParser()
     local_config = open(local_txt)
-    config.readfp(_SectionAdder('foo', local_config))
-    port = config.get('foo', 'org.lockss.ui.port')
+    try:
+        config.readfp(_SectionAdder('foo', local_config))
+        port = config.get('foo', 'org.lockss.ui.port')
+    finally:
+        local_config.close()
 
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client('127.0.0.1', port,
