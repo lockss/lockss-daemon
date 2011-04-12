@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.4 2011-04-12 18:55:53 barry409 Exp $
+# $Id: clean_cache.py,v 1.5 2011-04-12 19:01:19 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -97,16 +97,20 @@ def _auid(cache_dir):
     # directory in the table, so no need to check if the file exists.
     path = os.path.join(cache_dir, '#au_id_file')
     f = open(os.path.join(path))
-    auid = None
-    for line in f.readlines():
-        line = line.strip()
-        if line and line[0] != '#':
-            if auid is None:
-                auid = line
-            else:
-                raise IdFileException('%s contains more than one line.' % path)
-    if auid is None:
-        raise IdFileException('%s contains no AUID.' % path)
+    try:
+        auid = None
+        for line in f.readlines():
+            line = line.strip()
+            if line and line[0] != '#':
+                if auid is None:
+                    auid = line
+                else:
+                    raise IdFileException('%s contains more than one line.'
+                                          % path)
+        if auid is None:
+            raise IdFileException('%s contains no AUID.' % path)
+    finally:
+        f.close()
     return auid
 
 
