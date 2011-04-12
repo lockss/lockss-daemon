@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.7 2011-04-12 19:03:50 barry409 Exp $
+# $Id: clean_cache.py,v 1.8 2011-04-12 19:16:36 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -55,10 +55,6 @@ class _SectionAdder(object):
             return self.fp.readline()
 
 
-class IdFileException(Exception):
-    pass
-
-
 def _parser():
     """Make a parser for the arguments."""
     parser = optparse.OptionParser(
@@ -93,22 +89,18 @@ def _process_args():
 
 def _auid(cache_dir):
     """Return the AUID for the given cache dir."""
-    # If the #au_id_file isn't present, the daemon doesn't list the
-    # directory in the table, so no need to check if the file exists.
+    # If the #au_id_file isn't present, or doesn't contain an au.id
+    # entry, the daemon doesn't list the directory in the table, so no
+    # need to check either condition. 
     path = os.path.join(cache_dir, '#au_id_file')
+    config = ConfigParser.ConfigParser()
     f = open(os.path.join(path))
     try:
-        auid = None
-        for line in f.readlines():
-            line = line.strip()
-            if line and line[0] != '#':
-                if auid is None:
-                    auid = line
-                else:
-                    raise IdFileException('%s contains more than one line.'
-                                          % path)
-        if auid is None:
-            raise IdFileException('%s contains no AUID.' % path)
+        config.readfp(_SectionAdder('foo', f))
+        auid = config.get('foo', 'au.id')
+        # If this fails, something very odd is going on, and a human
+        # should check.
+        assert auid
     finally:
         f.close()
     return auid
