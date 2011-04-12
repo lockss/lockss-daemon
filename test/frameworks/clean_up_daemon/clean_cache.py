@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.5 2011-04-12 19:01:19 barry409 Exp $
+# $Id: clean_cache.py,v 1.6 2011-04-12 19:02:09 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -135,9 +135,10 @@ def main():
 
     no_auid = [r for r in repos if r['status'] == 'No AUID']
     if no_auid:
-        print 'Warning: These cache directories has no AUID:'
+        print 'Warning: These cache directories have no AUID:'
         for r in no_auid:
             print r['dir']
+        print
 
     deleted = [r for r in repos if r['status'] == 'Deleted']
     for r in deleted:
