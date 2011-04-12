@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.7 2011-03-29 22:17:27 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.8 2011-04-12 12:42:15 pgust Exp $
  */
 
 /*
@@ -244,7 +244,6 @@ public class TestMetadataUtil extends LockssTestCase {
           "10.1206",
           "/0002-8444-99.2.61",
           "-0002-8444-99.2.61",
-          "10.1640/0002-8444/99.2.61",
 	  null
   };
 
