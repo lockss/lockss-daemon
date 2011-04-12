@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.2 2011-02-22 21:24:36 barry409 Exp $
+# $Id: clean_cache.py,v 1.3 2011-04-12 17:33:26 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -55,6 +55,10 @@ class _SectionAdder(object):
             return self.fp.readline()
 
 
+class IdFileException(Exception):
+    pass
+
+
 def _parser():
     """Make a parser for the arguments."""
     parser = optparse.OptionParser(
@@ -87,6 +91,24 @@ def _process_args():
         parser.error('There should be no arguments. Try --help')
     return options
 
+def _auid(cache_dir):
+    """Return the AUID for the given cache dir."""
+    # If the #au_id_file isn't present, the daemon doesn't list the
+    # directory in the table, so no need to check if the file exists.
+    path = os.path.join(cache_dir, '#au_id_file')
+    f = open(os.path.join(path))
+    auid = None
+    for line in f.readlines():
+        line = line.strip()
+        if line and line[0] != '#':
+            if auid is None:
+                auid = line
+            else:
+                raise IdFileException('%s contains more than one line.' % path)
+    if auid is None:
+        raise IdFileException('%s contains no AUID.' % path)
+    return auid
+
 
 def main():
     options = _process_args()
@@ -108,24 +130,32 @@ def main():
     repos = client._getStatusTable( 'RepositoryTable' )[ 1 ]
     deleted = [r for r in repos if r['status'] == 'Deleted']
 
+    for r in deleted:
+        r['auid'] = _auid(os.path.join(src, r['dir']))
+    deleted.sort(key=lambda r: r['auid'])
+
+    move_all = False
     if options.verbose:
         if deleted:
             print 'These AUs have been deleted on the daemon:'
             for r in deleted:
-                print r['plugin'], r['params']
+                print r['auid']
+            if options.verify:
+                move_all = raw_input('move all [y]? ').startswith('y')
         else:
             print 'No deleted AUs.'
 
+    verify_each = options.verify and not move_all
     dst = os.path.join(options.directory, options.dest)
     for r in deleted:
-        r = r['dir']
-        if not options.verify or \
-                options.verify and \
-                raw_input('move %s [n]? ' % r).startswith('y'):
-            src_r = os.path.join(src, r)
-            dst_r = os.path.join(dst, r)
+        dir = r['dir']
+        if not verify_each or \
+                verify_each and \
+                raw_input('move %s [n]? ' % r['auid']).startswith('y'):
+            src_r = os.path.join(src, dir)
+            dst_r = os.path.join(dst, dir)
             if options.commands:
-                print "mv %s %s" % (src_r, dst_r)
+                print "mv %s %s # %s" % (src_r, dst_r, r['auid'])
             else:
                 os.renames(src_r, dst_r)
 
