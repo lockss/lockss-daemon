@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.8 2011-04-12 12:42:15 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.9 2011-04-13 21:38:29 pgust Exp $
  */
 
 /*
@@ -235,7 +235,8 @@ public class TestMetadataUtil extends LockssTestCase {
           "10.1206/606.1",
           "10.1640/0002-8444-99.2.61",
           "10.1663/0006-8101(2007)73[267:TPOSRI]2.0.CO;2",
-          "10.1663/0006-8101(2007)73[267%3ATPOSRI]2.0.CO%3B2"
+          "10.1663/0006-8101(2007)73[267%3ATPOSRI]2.0.CO%3B2",
+          "10.1640/0002-8444/99.2.61"
   };
 
   private String invalidDOIS [] = {
