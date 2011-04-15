@@ -2689,7 +2689,7 @@
   {
   
     title <
-      name = Cultural Studies <=> Critical Methodologies ;
+      name = "Cultural Studies <=> Critical Methodologies" ;
       issn = 1532-7086 ;
       eissn = 1552-356X
     >
@@ -2701,8 +2701,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Cultural Studies <=> Critical Methodologies Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Cultural Studies <=> Critical Methodologies Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 ;  >
+      au < down ; crawling ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 ;  >
 
     }
 
@@ -2710,7 +2710,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Cultural Studies <=> Critical Methodologies Volume 10 ; 10 ;  >
+      au < testing ; exists ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 ;  >
 
     }
 
