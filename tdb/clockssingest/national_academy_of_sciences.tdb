@@ -16,7 +16,7 @@
     param[base_url] = http://www.pnas.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < testing ; exists ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 >
+    au < crawling ; exists ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 >
 
   }
 
