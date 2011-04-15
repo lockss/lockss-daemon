@@ -17,8 +17,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] =  asjcl
 
-    au < manifest ; exists ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 >
@@ -36,13 +36,13 @@
     param[journal_abbr] = bejeap
     comment[years] = There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004.
 
-    au < manifest ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
-    au < manifest ; exists ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
+    au < crawling ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
+    au < crawling ; exists ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
+    au < crawling ; exists ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
@@ -60,13 +60,13 @@
     param[journal_abbr] = bejm
     comment[years] = There are no typos below, either.  Volume 1 and 2 were published after volume 3.
 
-    au < manifest ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 3 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 4 >
-    au < manifest ; exists ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 3 >    
+    au < crawling ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
+    au < crawling ; exists ; 2003 ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
+    au < crawling ; exists ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 3 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 4 >
+    au < crawling ; exists ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 3 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 >    
@@ -83,13 +83,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejte
 
-    au < manifest ; exists ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
-    au < manifest ; exists ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
+    au < crawling ; exists ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
+    au < crawling ; exists ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
+    au < crawling ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
+    au < crawling ; exists ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 >
@@ -106,8 +106,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bis
 
-    au < manifest ; exists ; 2006 ; Basic Income Studies Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Basic Income Studies Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Basic Income Studies Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Basic Income Studies Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Basic Income Studies Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Basic Income Studies Volume 4 ; 4 >
 
@@ -123,15 +123,15 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bap
 
-    au < manifest ; exists ; 1999 ; Business and Politics Volume 1 ; 1 >
-    au < manifest ; exists ; 2000 ; Business and Politics Volume 2 ; 2 >
-    au < manifest ; exists ; 2001 ; Business and Politics Volume 3 ; 3 >
-    au < manifest ; exists ; 2002 ; Business and Politics Volume 4 ; 4 >
-    au < manifest ; exists ; 2003 ; Business and Politics Volume 5 ; 5 >
-    au < manifest ; exists ; 2004 ; Business and Politics Volume 6 ; 6 >
-    au < manifest ; exists ; 2005 ; Business and Politics Volume 7 ; 7 >
-    au < manifest ; exists ; 2006 ; Business and Politics Volume 8 ; 8 >
-    au < manifest ; exists ; 2007 ; Business and Politics Volume 9 ; 9 >
+    au < crawling ; exists ; 1999 ; Business and Politics Volume 1 ; 1 >
+    au < crawling ; exists ; 2000 ; Business and Politics Volume 2 ; 2 >
+    au < crawling ; exists ; 2001 ; Business and Politics Volume 3 ; 3 >
+    au < crawling ; exists ; 2002 ; Business and Politics Volume 4 ; 4 >
+    au < crawling ; exists ; 2003 ; Business and Politics Volume 5 ; 5 >
+    au < crawling ; exists ; 2004 ; Business and Politics Volume 6 ; 6 >
+    au < crawling ; exists ; 2005 ; Business and Politics Volume 7 ; 7 >
+    au < crawling ; exists ; 2006 ; Business and Politics Volume 8 ; 8 >
+    au < crawling ; exists ; 2007 ; Business and Politics Volume 9 ; 9 >
     au < released ; crawling ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < released ; crawling ; 2009 ; Business and Politics Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Business and Politics Volume 12 ; 12 >
@@ -162,8 +162,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cas
 
-    au < manifest ; exists ; 2006 ; Capitalism and Society Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Capitalism and Society Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Capitalism and Society Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Capitalism and Society Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Capitalism and Society Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Capitalism and Society Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Capitalism and Society Volume 5 ; 5 >
@@ -180,8 +180,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cppm
 
-    au < manifest ; exists ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
@@ -198,10 +198,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ev
 
-    au < manifest ; exists ; 2004 ; The Economists' Voice Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; The Economists' Voice Volume 2 ; 2 >
-    au < manifest ; exists ; 2006 ; The Economists' Voice Volume 3 ; 3 >
-    au < manifest ; exists ; 2007 ; The Economists' Voice Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; The Economists' Voice Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; The Economists' Voice Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; The Economists' Voice Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; The Economists' Voice Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; The Economists' Voice Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; The Economists' Voice Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; The Economists' Voice Volume 7 ; 7 >
@@ -232,11 +232,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = forum
 
-    au < manifest ; exists ; 2002 ; The Forum Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; The Forum Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; The Forum Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; The Forum Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; The Forum Volume 5 ; 5 >
+    au < crawling ; exists ; 2002 ; The Forum Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; The Forum Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; The Forum Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; The Forum Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; The Forum Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; The Forum Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; The Forum Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; The Forum Volume 8 ; 8 >
@@ -253,16 +253,16 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = fhep
 
-    au < manifest ; exists ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 >
-    au < manifest ; exists ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 >
-    au < manifest ; exists ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 >
-    au < manifest ; exists ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 >
-    au < manifest ; exists ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 >
+    au < crawling ; exists ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
+    au < crawling ; exists ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
+    au < crawling ; exists ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 >
+    au < crawling ; exists ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 >
+    au < crawling ; exists ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 >
+    au < crawling ; exists ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 >
+    au < crawling ; exists ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 >
+    au < crawling ; exists ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 >
+    au < crawling ; exists ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 >
     au < released ; crawling ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
     au < released ; crawling ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
     au < released ; crawling ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
@@ -279,13 +279,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
-    au < manifest ; exists ; 2000 ; Global Economy Journal Volume 1 ; 1 >
-    au < manifest ; exists ; 2001 ; Global Economy Journal Volume 2 ; 2 >
-    au < manifest ; exists ; 2002 ; Global Economy Journal Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Global Economy Journal Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Global Economy Journal Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Global Economy Journal Volume 6 ; 6 >
-    au < manifest ; exists ; 2007 ; Global Economy Journal Volume 7 ; 7 >
+    au < crawling ; exists ; 2000 ; Global Economy Journal Volume 1 ; 1 >
+    au < crawling ; exists ; 2001 ; Global Economy Journal Volume 2 ; 2 >
+    au < crawling ; exists ; 2002 ; Global Economy Journal Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; Global Economy Journal Volume 4 ; 4 >
+    au < crawling ; exists ; 2005 ; Global Economy Journal Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; Global Economy Journal Volume 6 ; 6 >
+    au < crawling ; exists ; 2007 ; Global Economy Journal Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Economy Journal Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Economy Journal Volume 10 ; 10 >
@@ -302,13 +302,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gj
 
-    au < manifest ; exists ; 2001 ; Global Jurist Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Global Jurist Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Global Jurist Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Global Jurist Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Global Jurist Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Global Jurist Volume 6 ; 6 >
-    au < manifest ; exists ; 2007 ; Global Jurist Volume 7 ; 7 >
+    au < crawling ; exists ; 2001 ; Global Jurist Volume 1 ; 1 >
+    au < crawling ; exists ; 2002 ; Global Jurist Volume 2 ; 2 >
+    au < crawling ; exists ; 2003 ; Global Jurist Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; Global Jurist Volume 4 ; 4 >
+    au < crawling ; exists ; 2005 ; Global Jurist Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; Global Jurist Volume 6 ; 6 >
+    au < crawling ; exists ; 2007 ; Global Jurist Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Jurist Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Jurist Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Jurist Volume 10 ; 10 >
@@ -325,11 +325,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
-    au < manifest ; exists ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
 
@@ -345,9 +345,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijb
 
-    au < manifest ; exists ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 >
-    au < manifest ; exists ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 >
+    au < crawling ; exists ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 >
@@ -364,11 +364,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijcre
 
-    au < manifest ; exists ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
@@ -385,14 +385,14 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijeeps
 
-    au < manifest ; exists ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
-    au < manifest ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
-    au < manifest ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
-    au < manifest ; exists ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
+    au < crawling ; exists ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
+    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
+    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
+    au < crawling ; exists ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
     au < released ; crawling ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
     au < released ; crawling ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 >
@@ -409,9 +409,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijfe
 
-    au < manifest ; exists ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
-    au < manifest ; exists ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
+    au < crawling ; exists ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
@@ -428,10 +428,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijnes
 
-    au < manifest ; exists ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
-    au < manifest ; exists ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
-    au < manifest ; exists ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 >
@@ -448,11 +448,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jafio
 
-    au < manifest ; exists ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 >
@@ -469,8 +469,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbvela
 
-    au < manifest ; exists ; 2006 ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Journal of Business Valuation and Economic Loss Analysis Volume 5 ; 5 >
@@ -487,16 +487,16 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
 
-    au < manifest ; exists ; 2000 ; Journal of College and Character Volume 1 ; 1 >
-    au < manifest ; exists ; 2001 ; Journal of College and Character Volume 2 ; 2 >
-    au < manifest ; exists ; 2002 ; Journal of College and Character Volume 3 ; 3 >
-    au < manifest ; exists ; 2003 ; Journal of College and Character Volume 4 ; 4 >
-    au < manifest ; exists ; 2004 ; Journal of College and Character Volume 5 ; 5 >
-    au < manifest ; exists ; 2005 ; Journal of College and Character Volume 6 ; 6 >
-    au < manifest ; exists ; 2006 ; Journal of College and Character Volume 7 ; 7 >
-    au < manifest ; exists ; 2007 ; Journal of College and Character Volume 8 ; 8 >
-    au < manifest ; exists ; 2008 ; Journal of College and Character Volume 9 ; 9 >
-    au < manifest ; exists ; 2009 ; Journal of College and Character Volume 10 ; 10 >
+    au < crawling ; exists ; 2000 ; Journal of College and Character Volume 1 ; 1 >
+    au < crawling ; exists ; 2001 ; Journal of College and Character Volume 2 ; 2 >
+    au < crawling ; exists ; 2002 ; Journal of College and Character Volume 3 ; 3 >
+    au < crawling ; exists ; 2003 ; Journal of College and Character Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; Journal of College and Character Volume 5 ; 5 >
+    au < crawling ; exists ; 2005 ; Journal of College and Character Volume 6 ; 6 >
+    au < crawling ; exists ; 2006 ; Journal of College and Character Volume 7 ; 7 >
+    au < crawling ; exists ; 2007 ; Journal of College and Character Volume 8 ; 8 >
+    au < crawling ; exists ; 2008 ; Journal of College and Character Volume 9 ; 9 >
+    au < crawling ; exists ; 2009 ; Journal of College and Character Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Journal of College and Character Volume 11 ; 11 >
 
   }
@@ -511,10 +511,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jcim
 
-    au < manifest ; exists ; 2004 ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
-    au < manifest ; exists ; 2006 ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
-    au < manifest ; exists ; 2007 ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of Complementary and Integrative Medicine Volume 7 ; 7 >
@@ -546,10 +546,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jhsem
 
-    au < manifest ; exists ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
-    au < manifest ; exists ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
-    au < manifest ; exists ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
+    au < crawling ; exists ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of Homeland Security and Emergency Management Volume 7 ; 7 >
@@ -566,8 +566,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jirspa
 
-    au < manifest ; exists ; 2006 ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Journal of Imagery Research in Sport and Physical Activity Volume 5 ; 5 >
@@ -584,8 +584,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jioe
 
-    au < manifest ; exists ; 2006 ; Journal of Industrial Organization Education Volume 1 ; 1 >
-    au < manifest ; exists ; 2007 ; Journal of Industrial Organization Education Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Journal of Industrial Organization Education Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Journal of Industrial Organization Education Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
 
@@ -601,9 +601,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jqas
 
-    au < manifest ; exists ; 2005 ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
-    au < manifest ; exists ; 2007 ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
+    au < crawling ; exists ; 2007 ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Journal of Quantitative Analysis in Sports Volume 6 ; 6 >
@@ -620,19 +620,19 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jsarp
 
-    au < manifest ; exists ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 >
-    au < manifest ; exists ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 >
-    au < manifest ; exists ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
-    au < manifest ; exists ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
-    au < manifest ; exists ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
-    au < manifest ; exists ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
-    au < manifest ; exists ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
-    au < manifest ; exists ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
-    au < manifest ; exists ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
-    au < manifest ; exists ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
-    au < manifest ; exists ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
-    au < manifest ; exists ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
-    au < manifest ; exists ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
+    au < crawling ; exists ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 >
+    au < crawling ; exists ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 >
+    au < crawling ; exists ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
+    au < crawling ; exists ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
+    au < crawling ; exists ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
+    au < crawling ; exists ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
+    au < crawling ; exists ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
+    au < crawling ; exists ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
+    au < crawling ; exists ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
+    au < crawling ; exists ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
+    au < crawling ; exists ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
+    au < crawling ; exists ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
+    au < crawling ; exists ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
     au < released ; crawling ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 >
 
   }
@@ -661,9 +661,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtl
 
-    au < manifest ; exists ; 2006 ; Journal of Tort Law Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; Journal of Tort Law Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
-    au < manifest ; exists ; 2009 ; Journal of Tort Law Volume 3 ; 3 >
+    au < crawling ; exists ; 2009 ; Journal of Tort Law Volume 3 ; 3 >
 
   }
 
@@ -676,7 +676,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
-    au < manifest ; exists ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 >
@@ -708,12 +708,12 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mwjhr
 
-    au < manifest ; exists ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 >
-    au < manifest ; exists ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 >
-    au < manifest ; exists ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 >
+    au < crawling ; exists ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 >
+    au < crawling ; exists ; 2005 ; Muslim World Journal of Human Rights Volume 2 ; 2 >
+    au < crawling ; exists ; 2006 ; Muslim World Journal of Human Rights Volume 3 ; 3 >
     au < released ; crawling ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 >
-    au < manifest ; exists ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 >
+    au < crawling ; exists ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 >
 
   }
   
@@ -727,8 +727,8 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
-    au < manifest ; exists ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
-    au < manifest ; exists ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
+    au < crawling ; exists ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
 
   }
@@ -742,7 +742,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ngs
 
-    au < manifest ; exists ; 2007 ; New Global Studies Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; New Global Studies Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; New Global Studies Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; New Global Studies Volume 3 ; 3 >
 
@@ -758,19 +758,19 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = peps
 
-    au < manifest ; exists ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 1994 ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 1996 ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2000 ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
-    au < manifest ; exists ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
-    au < manifest ; exists ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
-    au < manifest ; exists ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
-    au < manifest ; exists ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
-    au < manifest ; exists ; 2005 ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
-    au < manifest ; exists ; 2006 ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
-    au < manifest ; exists ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
+    au < crawling ; exists ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
+    au < crawling ; exists ; 1994 ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
+    au < crawling ; exists ; 1995 ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
+    au < crawling ; exists ; 1996 ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
+    au < crawling ; exists ; 1999 ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
+    au < crawling ; exists ; 2000 ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
+    au < crawling ; exists ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
+    au < crawling ; exists ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
+    au < crawling ; exists ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
+    au < crawling ; exists ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
+    au < crawling ; exists ; 2005 ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
+    au < crawling ; exists ; 2006 ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
+    au < crawling ; exists ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
     au < released ; crawling ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
     au < released ; crawling ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
@@ -787,7 +787,7 @@
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = policyandinternet
 
-    au < manifest ; exists ; 2009 ; Review of Law & Economics Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; Review of Law & Economics Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Review of Law & Economics Volume 2 ; 2 >
 
   }
@@ -812,7 +812,7 @@
       param[base_url] = http://www.psocommons.org/
       param[journal_abbr] = ppp
 
-      au < manifest ; exists ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >    
+      au < crawling ; exists ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >    
       au < released ; crawling ; 2010 ; Poverty & Public Policy Volume 2 ; 2 >    
     
     }
@@ -829,9 +829,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rle
 
-    au < manifest ; exists ; 2005 ; Review of Law & Economics Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; Review of Law & Economics Volume 2 ; 2 >
-    au < manifest ; exists ; 2007 ; Review of Law & Economics Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; Review of Law & Economics Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; Review of Law & Economics Volume 2 ; 2 >
+    au < crawling ; exists ; 2007 ; Review of Law & Economics Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Review of Law & Economics Volume 6 ; 6 >
@@ -848,11 +848,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = romsjournal
 
-    au < manifest ; exists ; 2003 ; Review of Marketing Science Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; Review of Marketing Science Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; Review of Marketing Science Volume 3 ; 3 >
-    au < manifest ; exists ; 2006 ; Review of Marketing Science Volume 4 ; 4 >
-    au < manifest ; exists ; 2007 ; Review of Marketing Science Volume 5 ; 5 >
+    au < crawling ; exists ; 2003 ; Review of Marketing Science Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; Review of Marketing Science Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; Review of Marketing Science Volume 3 ; 3 >
+    au < crawling ; exists ; 2006 ; Review of Marketing Science Volume 4 ; 4 >
+    au < crawling ; exists ; 2007 ; Review of Marketing Science Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Review of Marketing Science Volume 8 ; 8 >
@@ -868,9 +868,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rmeef
 
-    au < manifest ; exists ; 2003 ; Review of Middle East Economics and Finance Volume 1 ; 1 >
-    au < manifest ; exists ; 2004 ; Review of Middle East Economics and Finance Volume 2 ; 2 >
-    au < manifest ; exists ; 2005 ; Review of Middle East Economics and Finance Volume 3 ; 3 >
+    au < crawling ; exists ; 2003 ; Review of Middle East Economics and Finance Volume 1 ; 1 >
+    au < crawling ; exists ; 2004 ; Review of Middle East Economics and Finance Volume 2 ; 2 >
+    au < crawling ; exists ; 2005 ; Review of Middle East Economics and Finance Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
 
@@ -900,12 +900,12 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = sagmb
 
-    au < manifest ; exists ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
-    au < manifest ; exists ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
-    au < manifest ; exists ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
-    au < manifest ; exists ; 2007 ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
+    au < crawling ; exists ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
+    au < crawling ; exists ; 2003 ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
+    au < crawling ; exists ; 2004 ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
+    au < crawling ; exists ; 2006 ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
+    au < crawling ; exists ; 2007 ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
     au < released ; crawling ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
     au < released ; crawling ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
     au < released ; crawling ; 2010 ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 >
@@ -935,7 +935,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
-    au < manifest ; exists ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
+    au < crawling ; exists ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
 
@@ -951,17 +951,17 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = snde
 
-    au < manifest ; exists ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
-    au < manifest ; exists ; 1997 ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 >
-    au < manifest ; exists ; 1998 ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 >
-    au < manifest ; exists ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
-    au < manifest ; exists ; 2001 ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 >
-    au < manifest ; exists ; 2002 ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 >
-    au < manifest ; exists ; 2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 >
-    au < manifest ; exists ; 2004 ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
-    au < manifest ; exists ; 2005 ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
-    au < manifest ; exists ; 2006 ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
-    au < manifest ; exists ; 2007 ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
+    au < crawling ; exists ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
+    au < crawling ; exists ; 1997 ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 >
+    au < crawling ; exists ; 1998 ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 >
+    au < crawling ; exists ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
+    au < crawling ; exists ; 2001 ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 >
+    au < crawling ; exists ; 2002 ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 >
+    au < crawling ; exists ; 2003 ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 >
+    au < crawling ; exists ; 2004 ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
+    au < crawling ; exists ; 2005 ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
+    au < crawling ; exists ; 2006 ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
+    au < crawling ; exists ; 2007 ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
     au < released ; crawling ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
     au < released ; crawling ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
     au < released ; crawling ; 2010 ; Studies in Nonlinear Dynamics & Econometrics Volume 14 ; 14 >
@@ -978,14 +978,14 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = til
 
-    au < manifest ; exists ; 2000 ; Theoretical Inquiries in Law Volume 1 ; 1 >
-    au < manifest ; exists ; 2001 ; Theoretical Inquiries in Law Volume 2 ; 2 >
-    au < manifest ; exists ; 2002 ; Theoretical Inquiries in Law Volume 3 ; 3 >
-    au < manifest ; exists ; 2003 ; Theoretical Inquiries in Law Volume 4 ; 4 >
-    au < manifest ; exists ; 2004 ; Theoretical Inquiries in Law Volume 5 ; 5 >
-    au < manifest ; exists ; 2005 ; Theoretical Inquiries in Law Volume 6 ; 6 >
-    au < manifest ; exists ; 2006 ; Theoretical Inquiries in Law Volume 7 ; 7 >
-    au < manifest ; exists ; 2007 ; Theoretical Inquiries in Law Volume 8 ; 8 >
+    au < crawling ; exists ; 2000 ; Theoretical Inquiries in Law Volume 1 ; 1 >
+    au < crawling ; exists ; 2001 ; Theoretical Inquiries in Law Volume 2 ; 2 >
+    au < crawling ; exists ; 2002 ; Theoretical Inquiries in Law Volume 3 ; 3 >
+    au < crawling ; exists ; 2003 ; Theoretical Inquiries in Law Volume 4 ; 4 >
+    au < crawling ; exists ; 2004 ; Theoretical Inquiries in Law Volume 5 ; 5 >
+    au < crawling ; exists ; 2005 ; Theoretical Inquiries in Law Volume 6 ; 6 >
+    au < crawling ; exists ; 2006 ; Theoretical Inquiries in Law Volume 7 ; 7 >
+    au < crawling ; exists ; 2007 ; Theoretical Inquiries in Law Volume 8 ; 8 >
     au < released ; crawling ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
     au < released ; crawling ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Theoretical Inquiries in Law Volume 11 ; 11 >
@@ -1002,7 +1002,7 @@
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = wmhp
 
-    au < manifest ; exists ; 2009 ; World Medical & Health Policy Volume 1 ; 1 >
+    au < crawling ; exists ; 2009 ; World Medical & Health Policy Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; World Medical & Health Policy Volume 2 ; 2 >
 
   }
@@ -1020,9 +1020,9 @@
     comment[4] = malformed manifest page, ticket #1352
     comment[2008] = Manifest page's lockss-probe links to an article behind a login page. 
 
-    au < manifest ; exists ; 2005 ; World Political Science Review Volume 1 ; 1 >
-    au < manifest ; exists ; 2006 ; World Political Science Review Volume 2 ; 2 >
-    au < manifest ; exists ; 2007 ; World Political Science Review Volume 3 ; 3 >
+    au < crawling ; exists ; 2005 ; World Political Science Review Volume 1 ; 1 >
+    au < crawling ; exists ; 2006 ; World Political Science Review Volume 2 ; 2 >
+    au < crawling ; exists ; 2007 ; World Political Science Review Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; World Political Science Review Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; World Political Science Review Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; World Political Science Review Volume 6 ; 6 >

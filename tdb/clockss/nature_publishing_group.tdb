@@ -228,7 +228,7 @@
 
     au < released ; crawling ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; crawling ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
-    au < testing ; exists ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
+    au < released ; manifest ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
 
   }
 
@@ -284,7 +284,7 @@
     param[journal_id] = embor
 
     au < released ; crawling ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
-    au < testing ; exists ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
+    au < released ; manifest ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -311,7 +311,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Clinical Nutrition Volume 61 ; 2007 ; 61 >
     au < released ; crawling ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
     au < released ; crawling ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
-    au < testing ; exists ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
+    au < released ; manifest ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
 
   }
 
@@ -357,7 +357,7 @@
     au < manifest ; exists ; 2007 ; Eye Volume 21 ; 2007 ; 21 >
     au < released ; crawling ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
     au < released ; crawling ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
-    au < testing ; exists ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
+    au < released ; manifest ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
 
   }
 
@@ -406,9 +406,9 @@
     au < manifest ; exists ; 2005 ; Genes and Immunity Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; Genes and Immunity Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; Genes and Immunity Volume 8 ; 2007 ; 8 >
-    au < testing ; exists ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
+    au < released ; manifest ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
-    au < testing ; exists ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
+    au < released ; manifest ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
 
   }
 
