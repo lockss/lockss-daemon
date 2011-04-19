@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.9 2011-04-19 19:59:13 pgust Exp $
+ * $Id: KbartConverter.java,v 1.10 2011-04-19 20:36:22 pgust Exp $
  */
 
 /*
@@ -325,7 +325,7 @@ public class KbartConverter {
   
   /**
    * Update the KbartTitle with new values for the title fields if the TdbAu has
-   * different values. Fields checked are title name, issn and eissn.
+   * different values. Fields checked are title name, issn, eissn, and issnl.
    *  
    * @param au a TdbAu with potentially new field values 
    * @param kbt a KbartTitle whose properties to update
@@ -333,6 +333,7 @@ public class KbartConverter {
   private static void updateTitleProperties(TdbAu au, KbartTitle kbt) {
     String issnCheck = findIssn(au);
     String eissnCheck = findEissn(au);
+    String issnlCheck = findIssnL(au);
     String titleCheck = au.getTdbTitle().getName();
     if (!titleCheck.equals(kbt.getField(PUBLICATION_TITLE))) {
       log.info("Name change within title "+kbt.getField(PUBLICATION_TITLE)+" => "+titleCheck);
@@ -345,6 +346,10 @@ public class KbartConverter {
     if (!eissnCheck.equals(kbt.getField(ONLINE_IDENTIFIER))) {
       log.info("EISSN change within title "+kbt.getField(ONLINE_IDENTIFIER)+" => "+eissnCheck);
       kbt.setField(ONLINE_IDENTIFIER, eissnCheck);
+    }
+    if (!issnlCheck.equals(kbt.getField(TITLE_ID))) {
+      log.info("ISSN-L change within title "+kbt.getField(TITLE_ID)+" => "+issnlCheck);
+      kbt.setField(TITLE_ID, issnlCheck);
     }
   }
   
