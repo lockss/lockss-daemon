@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
+    <string>required_daemon_version</string>
+    <string>1.48.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>

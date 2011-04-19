@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.6 2011-04-07 00:08:49 tlipkis Exp $
+ * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.7 2011-04-19 20:34:24 thib_gc Exp $
  */
 
 /*
@@ -100,14 +100,14 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
     protected ArticleFiles processUrl(CachedUrl xlinkCu, Matcher xlinkMat) {
       ArticleFiles af = new ArticleFiles();
       af.setRoleString(ROLE_ARTICLE_CODE, xlinkMat.group(1));
-//      guessAbstract(af, xlinkMat);
+      guessAbstract(af, xlinkMat);
 //      guessFullTextPdf(af, xlinkMat);
 //      guessOtherParts(af, xlinkMat);
-      chooseFullTextCu(af);
+      chooseFullTextCu(af, xlinkCu);
       return af;
     }
     
-    protected void chooseFullTextCu(ArticleFiles af) {
+    protected void chooseFullTextCu(ArticleFiles af, CachedUrl defaultCu) {
       String[] candidates = new String[] {
           ArticleFiles.ROLE_FULL_TEXT_PDF,
           ArticleFiles.ROLE_ABSTRACT,
@@ -119,20 +119,20 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
           return;
         }
       }
-      log.warning("No full text CU for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+      af.setFullTextCu(defaultCu);
     }    
     
-//    protected void guessAbstract(ArticleFiles af, Matcher xlinkMat) {
-//      CachedUrl absCu = au.makeCachedUrl(String.format("%spublishing/journals/%s/article.asp?doi=%s", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1)));
-//      // If more than one variant, add nested if's here; see guessFullTextPdf()
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//      }
-//      else {
-//        log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
-//      }
-//    }
-//
+    protected void guessAbstract(ArticleFiles af, Matcher xlinkMat) {
+      CachedUrl absCu = au.makeCachedUrl(String.format("%spublishing/journals/%s/article.asp?doi=%s", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1)));
+      // If more than one variant, add nested if's here; see guessFullTextPdf()
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      }
+      else {
+        log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+      }
+    }
+
 //    protected void guessFullTextPdf(ArticleFiles af, Matcher xlinkMat) {
 //      CachedUrl pdfCu = au.makeCachedUrl(String.format("%sej/%s/%s/%s.pdf", baseUrl, journalCode.toUpperCase(), year, xlinkMat.group(1)));
 //      if (pdfCu == null || !pdfCu.hasContent()) {
