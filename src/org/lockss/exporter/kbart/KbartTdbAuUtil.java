@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.6 2011-03-22 18:58:31 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.7 2011-04-19 20:00:02 pgust Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class KbartTdbAuUtil {
   // Default property keys
   static final String DEFAULT_ISSN_PROP = "issn";
   static final String DEFAULT_EISSN_PROP = "eissn";
+  static final String DEFAULT_ISSNL_PROP = "issnl";
 
   
   /**
@@ -175,6 +176,30 @@ public class KbartTdbAuUtil {
    */
   static String findEissn(TdbAu au) {
     String s = findAuInfo(au, DEFAULT_EISSN_PROP, AuInfoType.PROP);
+    //AuInfoType type = findAuInfoType(au, DEFAULT_EISSN_PROP);
+    //String s = findAuInfo(au, DEFAULT_EISSN_PROP, type);
+    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
+    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
+      return s;
+    } else {
+      log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));      
+      return "";
+    }
+  }
+  
+
+  /**
+   * Attempts to find the ISSN-L for an AU. Looks in the AU's properties, and if nothing is 
+   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
+   * <p> 
+   * This method now only returns values from the AU's properties and does not substitute 
+   * the result of getId(). It also validates the purported ISSN.
+   * 
+   * @param au the TdbAu whose properties to search for an attribute
+   * @return a valid ISSN from the value of an existing key, or the empty String
+   */
+  static String findIssnL(TdbAu au) {
+    String s = findAuInfo(au, DEFAULT_ISSNL_PROP, AuInfoType.PROP);
     //AuInfoType type = findAuInfoType(au, DEFAULT_EISSN_PROP);
     //String s = findAuInfo(au, DEFAULT_EISSN_PROP, type);
     //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
