@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.8 2011-04-18 17:15:01 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.9 2011-04-19 19:59:13 pgust Exp $
  */
 
 /*
@@ -243,9 +243,7 @@ public class KbartConverter {
     // Add publisher and title and title identifier
     baseKbt.setField(PUBLISHER_NAME, tdbt.getTdbPublisher().getName());
     baseKbt.setField(PUBLICATION_TITLE, tdbt.getName());
-    // title_id set to ISSN-L
-    baseKbt.setField(TITLE_ID, tdbt.getIssnL());
-    
+
     // If there are no aus, we have nothing more to add
     if (aus.size()==0) {
       kbtList.add(baseKbt);
@@ -270,6 +268,8 @@ public class KbartConverter {
     // According to TdbTitle, "The ID is guaranteed to be globally unique".
     baseKbt.setField(PRINT_IDENTIFIER, findIssn(firstAu)); 
     baseKbt.setField(ONLINE_IDENTIFIER, findEissn(firstAu)); 
+    baseKbt.setField(TITLE_ID, findIssnL(firstAu));
+
 
     // Title URL
     // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
