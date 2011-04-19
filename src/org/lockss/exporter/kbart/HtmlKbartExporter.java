@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.8 2011-03-18 16:34:10 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.9 2011-04-19 20:06:36 pgust Exp $
  */
 
 /*
@@ -68,6 +68,8 @@ public class HtmlKbartExporter extends KbartExporter {
   private int issnFieldIndex;
   /** The index of the eissn field. Will have the td.issn style applied to its table cells to stop it wrapping. */
   private int eissnFieldIndex;
+  /** The index of the issnl field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  private int issnlFieldIndex;
   
   
   /**
@@ -127,7 +129,7 @@ public class HtmlKbartExporter extends KbartExporter {
       if (StringUtil.isNullString(val)) val = "&nbsp;";
       // Add appropriate style to issn fields
       String cssClassParam = "";
-      if (i==issnFieldIndex || i==eissnFieldIndex) {
+      if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
 	 cssClassParam = " class=\"issn\"";
       }
       printWriter.printf("<td%s>%s</td>", cssClassParam, val);
@@ -144,6 +146,7 @@ public class HtmlKbartExporter extends KbartExporter {
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
+    this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
