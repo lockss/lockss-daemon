@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.13 2011-02-22 06:40:31 thib_gc Exp $
+# $Id: tdbxml.py,v 1.14 2011-04-19 18:20:50 pgust Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -159,6 +159,9 @@ def __process_au(au, options):
     if au.title().eissn() is not None:
         print '''\
    <property name="eissn" value="%s" />''' % ( au.title().eissn(), )
+    if au.title().issnl() is not None:
+        print '''\
+   <property name="issnl" value="%s" />''' % ( au.title().issnl(), )
     print '''\
    <property name="title" value="%s" />
    <property name="plugin" value="%s" />''' % (

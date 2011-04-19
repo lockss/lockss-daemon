@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.7 2011-02-17 23:14:25 barry409 Exp $
+# $Id: tdb.py,v 1.8 2011-04-19 18:20:50 pgust Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -161,6 +161,7 @@ class Title(_Map):
     EISSN = 'eissn'
     ISBN = 'isbn'
     ISSN = 'issn'
+    ISSNL = 'issnl'
     PUBLISHER = 'publisher'
     TYPE = 'type'
     class Type:
@@ -179,6 +180,7 @@ class Title(_Map):
     def eissn(self): return self.get(Title.EISSN)
     def isbn(self): return self.get(Title.ISBN)
     def issn(self): return self.get(Title.ISSN)
+    def issnl(self): return self.get(Title.ISSNL)
     def publisher(self): return self.get(Title.PUBLISHER)
     def type(self): return self.get(Title.TYPE) or Title.Type.DEFAULT
 
