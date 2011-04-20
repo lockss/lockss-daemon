@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.8 2011-04-12 19:16:36 barry409 Exp $
+# $Id: clean_cache.py,v 1.9 2011-04-20 05:03:59 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -36,7 +36,7 @@ import lockss_daemon
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 
 
 class _SectionAdder(object):
@@ -69,14 +69,16 @@ def _parser():
                         'never prompt')
     parser.add_option('-i', '--verify', dest='verify', action='store_true',
                         default=False, help='prompt before each move')
-    parser.add_option('--commands', action='store_true', default=False,
+    parser.add_option('-c', '--commands', action='store_true', default=False,
                         help='print mv commands, but do not move files')
     parser.add_option('-d', '--directory', default='.',
                         help='the daemon directory where ./cache is '
-                        '(default: \'.\')')
+                        '(default: \'%default\')')
+    parser.add_option('-n', '--names', action='store_true', default=False,
+                        help='print directory names, but do not move them')
     parser.add_option('--dest', default='deleted',
                         help='where under the daemon directory the cache '
-                        'entries are moved to (default: \'deleted\')')
+                        'entries are moved to (default: \'%default\')')
     return parser
 
 
@@ -115,13 +117,18 @@ def main():
         raise Exception('%s doesn\'t look like a daemon directory. '
                         'Try --directory.' % src)
 
-    config = ConfigParser.ConfigParser()
-    local_config = open(local_txt)
-    try:
-        config.readfp(_SectionAdder('foo', local_config))
-        port = config.get('foo', 'org.lockss.ui.port')
-    finally:
-        local_config.close()
+    if options.names:
+        if 'LOCKSS_UI_PORT' not in os.environ:
+            raise Exception, 'LOCKSS_UI_PORT must be set'
+        port = os.environ['LOCKSS_UI_PORT']
+    else:
+        config = ConfigParser.ConfigParser()
+        local_config = open(local_txt)
+        try:
+            config.readfp(_SectionAdder('foo', local_config))
+            port = config.get('foo', 'org.lockss.ui.port')
+        finally:
+            local_config.close()
 
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client('127.0.0.1', port,
@@ -160,7 +167,9 @@ def main():
                 raw_input('move %s [n]? ' % r['auid']).startswith('y'):
             src_r = os.path.join(src, dir)
             dst_r = os.path.join(dst, dir)
-            if options.commands:
+            if options.names:
+                print src_r
+            elif options.commands:
                 print "mv %s %s # %s" % (src_r, dst_r, r['auid'])
             else:
                 os.renames(src_r, dst_r)
