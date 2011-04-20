@@ -166,7 +166,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
-      au < released ; manifest ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -194,7 +194,7 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -220,8 +220,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; Analysis Volume 68 ; 68 ; >
-      au < released ; manifest ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2008 ; Analysis Volume 68 ; 68 ; >
+      au < down ; manifest ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -249,8 +249,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-      au < released ; manifest ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
+      au < down ; manifest ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
+      au < down ; manifest ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
       au < notReady ; exists ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
       au < notReady ; exists ; 2009 ; Annals of Botany Volume 104 ; 104 ; reingest3.clockss.org:8083 >
 
@@ -281,8 +281,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
-      au < released ; manifest ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
+      au < down ; manifest ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -310,8 +310,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
-      au < released ; manifest ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
+      au < down ; manifest ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -339,8 +339,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
-      au < released ; manifest ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
+      au < down ; manifest ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -366,8 +366,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < released ; manifest ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
-      au < released ; manifest ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+      au < down ; manifest ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -396,7 +396,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
-      au < released ; manifest ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -425,7 +425,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
-      au < released ; manifest ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < down ; manifest ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
 
     }
 

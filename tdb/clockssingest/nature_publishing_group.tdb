@@ -159,7 +159,7 @@
     au < released ; crawling ; 2008 ; British Journal of Cancer Volume 99 ; 2008 ; 99 >
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 100 ; 2009 ; 100 >
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
-    au < testing ; exists ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
+    au < released ; manifest ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
 
   }
@@ -269,7 +269,7 @@
     au < released ; crawling ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
     au < released ; crawling ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
-    au < testing ; exists ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
+    au < crawling ; exists ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
 
   }
 
@@ -382,9 +382,9 @@
     au < manifest ; exists ; 2005 ; Gene Therapy Volume 12 ; 2005 ; 12 >
     au < manifest ; exists ; 2006 ; Gene Therapy Volume 13 ; 2006 ; 13 >
     au < manifest ; exists ; 2007 ; Gene Therapy Volume 14 ; 2007 ; 14 >
-    au < testing ; exists ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < released ; manifest ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
-    au < testing ; exists ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
+    au < released ; manifest ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -448,7 +448,7 @@
     au < released ; crawling ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
     au < released ; crawling ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < released ; crawling ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
-    au < testing ; exists ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
+    au < released ; manifest ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
     au < released ; crawling ; 2010 ; Heredity Volume 105 ; 2010 ; 105 >
 
   }
@@ -977,7 +977,8 @@
     au < released ; crawling ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
     au < released ; crawling ; 2010 ; Nature Volume 467 ; 2010 ; 467 >
     au < released ; crawling ; 2010 ; Nature Volume 468 ; 2010 ; 468 >
-    au < testing ; exists ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
+    au < crawling ; exists ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
+    au < wanted ; exists ; 2011 ; Nature Volume 470 ; 2011 ; 470 >
 
   }
 
@@ -1152,7 +1153,7 @@
     au < released ; crawling ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < testing ; exists ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
-    au < testing ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
+    au < crawling ; exists ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
 
   }
 
@@ -1544,7 +1545,7 @@ comment[nprot4] = poll mismatch
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
-    au < testing ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < crawling ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
 
   }
 
