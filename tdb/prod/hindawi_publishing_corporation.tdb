@@ -68,7 +68,7 @@
     au < released ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
     au < released ; Advances in Artificial Intelligence Volume 2009 ; 2009 >
     au < ready ; Advances in Artificial Intelligence Volume 2010 ; 2010 >
-    au < manifest ; Advances in Artificial Intelligence Volume 2011 ; 2011 >
+    au < exists ; Advances in Artificial Intelligence Volume 2011 ; 2011 >
 
   }
 
@@ -83,8 +83,8 @@
     param[journal_id] = aans
 
     au < released ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
-    au < testing ; Advances in Artificial Neural Systems Volume 2010 ; 2010 >
-    au < manifest ; Advances in Artificial Neural Systems Volume 2011 ; 2011 >
+    au < ready ; Advances in Artificial Neural Systems Volume 2010 ; 2010 >
+    au < exists ; Advances in Artificial Neural Systems Volume 2011 ; 2011 >
 
   }
 
@@ -135,7 +135,7 @@
     au < released ; Advances in Civil Engineering Volume 2008 ; 2008 >
     au < released ; Advances in Civil Engineering Volume 2009 ; 2009 >
     au < ready ; Advances in Civil Engineering Volume 2010 ; 2010 >
-    au < manifest ; Advances in Civil Engineering Volume 2011 ; 2011 >
+    au < exists ; Advances in Civil Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -151,7 +151,7 @@
 
     au < released ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
     au < released ; Advances in Condensed Matter Physics Volume 2009 ; 2009 >
-    au < testing ; Advances in Condensed Matter Physics Volume 2010 ; 2010 >
+    au < ready ; Advances in Condensed Matter Physics Volume 2010 ; 2010 >
     au < ready ; Advances in Condensed Matter Physics Volume 2011 ; 2011 >
 
   }
@@ -188,7 +188,7 @@
 
     au < released ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
     au < released ; Advances in Fuzzy Systems Volume 2009 ; 2009 >
-    au < testing ; Advances in Fuzzy Systems Volume 2010 ; 2010 >
+    au < ready ; Advances in Fuzzy Systems Volume 2010 ; 2010 >
     au < ready ; Advances in Fuzzy Systems Volume 2011 ; 2011 >
 
   }
@@ -220,7 +220,7 @@
     au < released ; Advances in High Energy Physics Volume 2008 ; 2008 >
     au < released ; Advances in High Energy Physics Volume 2009 ; 2009 >
     au < ready ; Advances in High Energy Physics Volume 2010 ; 2010 >
-    au < manifest ; Advances in High Energy Physics Volume 2011 ; 2011 >
+    au < exists ; Advances in High Energy Physics Volume 2011 ; 2011 >
 
   }
 
@@ -270,7 +270,7 @@
 
     au < released ; Advances in Mathematical Physics Volume 2009 ; 2009 >
     au < ready ; Advances in Mathematical Physics Volume 2010 ; 2010 >
-    au < testing ; Advances in Mathematical Physics Volume 2011 ; 2011 >
+    au < ready ; Advances in Mathematical Physics Volume 2011 ; 2011 >
 
   }
 
@@ -285,8 +285,8 @@
     param[journal_id] = ame
 
     au < released ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
-    au < testing ; Advances in Mechanical Engineering Volume 2010 ; 2010 >
-    au < manifest ; Advances in Mechanical Engineering Volume 2011 ; 2011 >
+    au < ready ; Advances in Mechanical Engineering Volume 2010 ; 2010 >
+    au < exists ; Advances in Mechanical Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -317,7 +317,7 @@
     au < released ; Advances in Multimedia Volume 2008 ; 2008 >
     au < released ; Advances in Multimedia Volume 2009 ; 2009 >
     au < ready ; Advances in Multimedia Volume 2010 ; 2010 >
-    au < testing ; Advances in Multimedia Volume 2011 ; 2011 >
+    au < ready ; Advances in Multimedia Volume 2011 ; 2011 >
 
   }
 
@@ -375,8 +375,8 @@
     param[journal_id] = aot
 
     au < released ; Advances in Optical Technologies Volume 2008 ; 2008 >
-    au < down ; Advances in Optical Technologies Volume 2009 ; 2009 >
-    au < testing ; Advances in Optical Technologies Volume 2010 ; 2010 >
+    au < doesNotExist ; Advances in Optical Technologies Volume 2009 ; 2009 >
+    au < ready ; Advances in Optical Technologies Volume 2010 ; 2010 >
     au < ready ; Advances in Optical Technologies Volume 2011 ; 2011 >
 
   }
@@ -473,7 +473,7 @@
 
     au < released ; Advances in Physical Chemistry Volume 2009 ; 2009 >
     au < ready ; Advances in Physical Chemistry Volume 2010 ; 2010 >
-    au < testing ; Advances in Physical Chemistry Volume 2011 ; 2011 >
+    au < ready ; Advances in Physical Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -503,7 +503,7 @@
     au < released ; Advances in Tribology Volume 2008 ; 2008 >
     au < released ; Advances in Tribology Volume 2009 ; 2009 >
     au < ready ; Advances in Tribology Volume 2010 ; 2010 >
-    au < testing ; Advances in Tribology Volume 2011 ; 2011 >
+    au < ready ; Advances in Tribology Volume 2011 ; 2011 >
 
   }
 
@@ -534,7 +534,7 @@
     param[journal_id] = av
 
     au < released ; Advances in Virology Volume 2009 ; 2009 >
-    au < testing ; Advances in Virology Volume 2010 ; 2010 >
+    au < ready ; Advances in Virology Volume 2010 ; 2010 >
     au < ready ; Advances in Virology Volume 2011 ; 2011 >
 
   }
@@ -601,7 +601,7 @@
     au < released ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 >
     au < ready ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 >
     au < ready ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 >
 
@@ -621,7 +621,7 @@
     au < released ; Boundary Value Problems Volume 2007 ; 2007 >
     au < released ; Boundary Value Problems Volume 2008 ; 2008 >
     au < ready ; Boundary Value Problems Volume 2009 ; 2009 >
-    au < testing ; Boundary Value Problems Volume 2010 ; 2010 >
+    au < ready ; Boundary Value Problems Volume 2010 ; 2010 >
     au < ready ; Boundary Value Problems Volume 2011 ; 2011 >
 
   }
@@ -708,7 +708,7 @@
     au < released ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 >
     au < ready ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 >
     au < ready ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 >
-    au < testing ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 >
+    au < ready ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 >
 
   }
 
@@ -723,8 +723,8 @@
     param[journal_id] = cggr
 
     au < released ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 >
-    au < testing ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 >
-    au < testing ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 >
+    au < ready ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 >
+    au < ready ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 >
     au < testing ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 >
 
   }
@@ -748,7 +748,7 @@
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 7 (2007) ; 2007 >
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 >
     au < testing ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 >
-    au < testing ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 >
     au < testing ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 >
 
   }
@@ -794,7 +794,7 @@
     au < released ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 >
     au < testing ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 >
     au < testing ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 >
 
@@ -836,8 +836,8 @@
 
     au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
     au < released ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
-    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 >
-    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 >
+    au < ready ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 >
+    au < ready ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 >
     au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 >
 
   }
@@ -1021,7 +1021,7 @@
     au < released ; HPB Surgery Volume 11 (2007) ; 2007 >
     au < released ; HPB Surgery Volume 2008 ; 2008 >
     au < testing ; HPB Surgery Volume 2009 ; 2009 >
-    au < testing ; HPB Surgery Volume 2010 ; 2010 >
+    au < ready ; HPB Surgery Volume 2010 ; 2010 >
     au < ready ; HPB Surgery Volume 2011 ; 2011 >
 
   }
@@ -1087,7 +1087,7 @@
 
     au < released ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
     au < testing ; International Journal of Aerospace Engineering Volume 2009 ; 2009 >
-    au < testing ; International Journal of Aerospace Engineering Volume 2010 ; 2010 >
+    au < ready ; International Journal of Aerospace Engineering Volume 2010 ; 2010 >
     au < ready ; International Journal of Aerospace Engineering Volume 2011 ; 2011 >
 
   }
