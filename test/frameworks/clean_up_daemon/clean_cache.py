@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.9 2011-04-20 05:03:59 thib_gc Exp $
+# $Id: clean_cache.py,v 1.10 2011-04-22 02:07:59 thib_gc Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -36,7 +36,7 @@ import lockss_daemon
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.1.0"
+__version__ = "1.0.2"
 
 
 class _SectionAdder(object):
@@ -74,8 +74,6 @@ def _parser():
     parser.add_option('-d', '--directory', default='.',
                         help='the daemon directory where ./cache is '
                         '(default: \'%default\')')
-    parser.add_option('-n', '--names', action='store_true', default=False,
-                        help='print directory names, but do not move them')
     parser.add_option('--dest', default='deleted',
                         help='where under the daemon directory the cache '
                         'entries are moved to (default: \'%default\')')
@@ -117,9 +115,7 @@ def main():
         raise Exception('%s doesn\'t look like a daemon directory. '
                         'Try --directory.' % src)
 
-    if options.names:
-        if 'LOCKSS_UI_PORT' not in os.environ:
-            raise Exception, 'LOCKSS_UI_PORT must be set'
+    if 'LOCKSS_UI_PORT' in os.environ:
         port = os.environ['LOCKSS_UI_PORT']
     else:
         config = ConfigParser.ConfigParser()
@@ -167,9 +163,7 @@ def main():
                 raw_input('move %s [n]? ' % r['auid']).startswith('y'):
             src_r = os.path.join(src, dir)
             dst_r = os.path.join(dst, dir)
-            if options.names:
-                print src_r
-            elif options.commands:
+            if options.commands:
                 print "mv %s %s # %s" % (src_r, dst_r, r['auid'])
             else:
                 os.renames(src_r, dst_r)
