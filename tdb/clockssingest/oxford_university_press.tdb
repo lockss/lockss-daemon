@@ -2036,7 +2036,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Health Education Research Volume 25 ; 25 ; >
+      au < released ; manifest ; 2010 ; Health Education Research Volume 25 ; 25 ; >
 
     }
 
@@ -2094,7 +2094,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
+      au < released ; manifest ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
 
     }
 
@@ -2124,9 +2124,10 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[xyz] = uh oh there is clearly an enumeration problem here
 
-      au < testing ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
-      au < testing ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+      au < notReady ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
+      au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
 
     }
 
@@ -2155,7 +2156,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
+      au < released ; manifest ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
 
     }
 

@@ -538,7 +538,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Obesity Volume 31 ; 2007 ; 31 >
     au < released ; crawling ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
     au < released ; crawling ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
-    au < testing ; exists ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
+    au < released ; manifest ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
 
   }
 
@@ -581,7 +581,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Antibiotics Volume 60 ; 2007 ; 60 >
     au < released ; crawling ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; crawling ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
-    au < testing ; exists ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
+    au < released ; manifest ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
 
   }
 
@@ -795,7 +795,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 >    
     au < released ; crawling ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
     au < released ; crawling ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
-    au < testing ; exists ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
+    au < released ; manifest ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
 
   }
 
@@ -971,7 +971,7 @@
     au < released ; crawling ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
     au < released ; crawling ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < released ; crawling ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
-    au < testing ; exists ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
+    au < released ; manifest ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
     au < released ; crawling ; 2010 ; Nature Volume 464 ; 2010 ; 464 >
     au < released ; crawling ; 2010 ; Nature Volume 465 ; 2010 ; 465 >
     au < released ; crawling ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
@@ -1056,7 +1056,7 @@
 
     au < released ; crawling ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
+    au < released ; manifest ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1070,7 +1070,7 @@
 
     param[journal_id] = ng
 
-    au < testing ; exists ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
+    au < released ; manifest ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < released ; crawling ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
     au < testing ; exists ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
 
