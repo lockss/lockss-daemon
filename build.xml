@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.275 2011-04-13 16:41:34 tlipkis Exp $
+ $Id: build.xml,v 1.276 2011-04-23 07:37:32 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -38,7 +38,6 @@ in this Software without prior written authorization from Stanford University.
 <description>
 Args:
   -Dargs="args ..."        Supply cmd line args to run-class
-  -Dbuild.compiler=jikes   Use jikes to compile.
   -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
   -Dcvstag=tag             Cvs tag to checkout for post-commit-test
   -Dexclude=path           Exclude matching tests.
@@ -112,9 +111,6 @@ Args:
   <property name="noqualifier" value="java.*" />
 <!--   <property name="noqualifier" -->
 <!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
-
-  <!--  Options for jikes, have no effect otherwise -->
-  <property name="build.compiler.emacs" value="true" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -295,15 +291,6 @@ Args:
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
   <property name="javac.deprecation"       value="false" />
-
-  <!-- jikes is too strict if deprecations and warnings are turned on -->
-  <condition property="nowarn"  value="true">
-   <equals arg1="${build.compiler}" arg2="jikes" />
-  </condition>
-  <condition property="javac.deprecation"  value="false">
-   <equals arg1="${build.compiler}" arg2="jikes" />
-  </condition>
-
 
   <!--  Classpaths -->
   <path id="compile.classpath">
@@ -1784,12 +1771,14 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   <target name="test-unit"
    depends="prepare.run.test,jar-tests"
    description="Run all unit tests (test/src/**/Test*.class)" >
-    <property name="include" value="**/Test*.java" />
+    <condition property="unit.include" value="${include}" else="**/Test*.java">
+      <isset property="include" />
+    </condition>
     <dojunit cpid="test.run.classpath">
      <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
-          <include name="${include}" />
+          <include name="${unit.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
           <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
@@ -1804,12 +1793,14 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   <target name="test-func"
    depends="prepare.run.test,jar-tests"
    description="Run all functional tests (test/src/**/Func*.class)" >
-    <property name="include" value="**/Func*.java" />
+    <condition property="func.include" value="${include}" else="**/Func*.java">
+      <isset property="include" />
+    </condition>
     <dojunit cpid="test.run.classpath">
      <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
-          <include name="${include}" />
+          <include name="${func.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
           <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
@@ -1824,12 +1815,14 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   <target name="test-plugins"
    depends="prepare.run.test,jar-plugins-tests,load-plugins"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
-    <property name="include" value="**/Test*.java" />
+    <condition property="plug.include" value="${include}" else="**/Test*.java">
+      <isset property="include" />
+    </condition>
     <dojunit cpid="plugins.test.run.classpath">
      <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${plugins.test.src}">
-          <include name="${include}" />
+          <include name="${plug.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
           <excludesfile name="${requires-1.7}" unless="is-java-1.7" />
