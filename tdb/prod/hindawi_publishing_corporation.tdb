@@ -876,7 +876,7 @@
     au < released ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
     au < testing ; EURASIP Journal on Embedded Systems Volume 2009 ; 2009 >
     au < testing ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 >
-    au < testing ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
+    au < ready ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
 
   }
 
@@ -893,7 +893,7 @@
     au < released ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
     au < released ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
     au < testing ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 >
-    au < testing ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 >
+    au < ready ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 >
     au < testing ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
 
   }
@@ -910,7 +910,7 @@
 
     au < released ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
     au < released ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
-    au < testing ; EURASIP Journal on Information Security Volume 2009 ; 2009 >
+    au < ready ; EURASIP Journal on Information Security Volume 2009 ; 2009 >
     au < testing ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
     au < testing ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
 
@@ -933,7 +933,7 @@
     au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
     au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2009 ; 2009 >
     au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
 
   }
 
@@ -955,8 +955,8 @@
     au < released ; Experimental Diabetes Research Volume 2007 ; 2007 >
     au < released ; Experimental Diabetes Research Volume 2008 ; 2008 >
     au < testing ; Experimental Diabetes Research Volume 2009 ; 2009 >
-    au < testing ; Experimental Diabetes Research Volume 2010 ; 2010 >
-    au < testing ; Experimental Diabetes Research Volume 2011 ; 2011 >
+    au < ready ; Experimental Diabetes Research Volume 2010 ; 2010 >
+    au < ready ; Experimental Diabetes Research Volume 2011 ; 2011 >
 
   }
 
@@ -976,8 +976,8 @@
     au < released ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
     au < released ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
     au < testing ; Fixed Point Theory and Applications Volume 2009 ; 2009 >
-    au < testing ; Fixed Point Theory and Applications Volume 2010 ; 2010 >
-    au < testing ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
+    au < ready ; Fixed Point Theory and Applications Volume 2010 ; 2010 >
+    au < ready ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
 
   }
 
@@ -992,9 +992,9 @@
     param[journal_id] = grp
 
     au < released ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
-    au < testing ; Gastroenterology Research and Practice Volume 2009 ; 2009 >
-    au < testing ; Gastroenterology Research and Practice Volume 2010 ; 2010 >
-    au < testing ; Gastroenterology Research and Practice Volume 2011 ; 2011 >
+    au < ready ; Gastroenterology Research and Practice Volume 2009 ; 2009 >
+    au < ready ; Gastroenterology Research and Practice Volume 2010 ; 2010 >
+    au < ready ; Gastroenterology Research and Practice Volume 2011 ; 2011 >
 
   }
 
@@ -1210,7 +1210,7 @@
     au < released ; International Journal of Chemical Engineering Volume 2008 ; 2008 >
     au < ready ; International Journal of Chemical Engineering Volume 2009 ; 2009 >
     au < ready ; International Journal of Chemical Engineering Volume 2010 ; 2010 >
-    au < testing ; International Journal of Chemical Engineering Volume 2011 ; 2011 >
+    au < ready ; International Journal of Chemical Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -1420,7 +1420,7 @@
     param[journal_id] = ijmb
 
     au < released ; International Journal of Microbiology Volume 2009 ; 2009 >
-    au < testing ; International Journal of Microbiology Volume 2010 ; 2010 >
+    au < ready ; International Journal of Microbiology Volume 2010 ; 2010 >
     au < ready ; International Journal of Microbiology Volume 2011 ; 2011 >
 
   }
@@ -1439,7 +1439,7 @@
     au < released ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 >
     au < released ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 >
     au < ready ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 >
 
   }
 
@@ -1455,7 +1455,7 @@
 
     au < released ; International Journal of Navigation and Observation Volume 2008 ; 2008 >
     au < released ; International Journal of Navigation and Observation Volume 2009 ; 2009 >
-    au < testing ; International Journal of Navigation and Observation Volume 2010 ; 2010 >
+    au < ready ; International Journal of Navigation and Observation Volume 2010 ; 2010 >
     au < ready ; International Journal of Navigation and Observation Volume 2011 ; 2011 >
 
   }
@@ -1471,9 +1471,9 @@
     param[journal_id] = ijog
 
     au < doesNotExist ; International Journal of Oceanography Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Oceanography Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Oceanography Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Oceanography Volume 2011 ; 2011 >
+    au < testing ; International Journal of Oceanography Volume 2009 ; 2009 >
+    au < testing ; International Journal of Oceanography Volume 2010 ; 2010 >
+    au < testing ; International Journal of Oceanography Volume 2011 ; 2011 >
 
   }
 
@@ -1487,9 +1487,9 @@
 
     param[journal_id] = ijo
 
-    au < manifest ; International Journal of Optics Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Optics Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Optics Volume 2010 ; 2010 >
+    au < testing ; International Journal of Optics Volume 2008 ; 2008 >
+    au < testing ; International Journal of Optics Volume 2009 ; 2009 >
+    au < testing ; International Journal of Optics Volume 2010 ; 2010 >
 
   }
 
@@ -1504,9 +1504,9 @@
     param[journal_id] = ijol
    
     au < doesNotExist ; International Journal of Otolaryngology Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Otolaryngology Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Otolaryngology Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Otolaryngology Volume 2011 ; 2011 >
+    au < testing ; International Journal of Otolaryngology Volume 2009 ; 2009 >
+    au < testing ; International Journal of Otolaryngology Volume 2010 ; 2010 >
+    au < testing ; International Journal of Otolaryngology Volume 2011 ; 2011 >
 
   }
 
@@ -1521,9 +1521,9 @@
     param[journal_id] = ijpe
 
     au < doesNotExist ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
+    au < testing ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
+    au < testing ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
+    au < testing ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
 
   }
 
@@ -1539,9 +1539,9 @@
     param[journal_id] = ijped
 
     au < doesNotExist ; International Journal of Pediatrics Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Pediatrics Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Pediatrics Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Pediatrics Volume 2011 ; 2011 >
+    au < testing ; International Journal of Pediatrics Volume 2009 ; 2009 >
+    au < testing ; International Journal of Pediatrics Volume 2010 ; 2010 >
+    au < testing ;  International Journal of Pediatrics Volume 2011 ; 2011 >
 
   }
 
@@ -1556,9 +1556,9 @@
     param[journal_id] = ijpep
 
     au < doesNotExist ; International Journal of Peptides Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Peptides Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Peptides Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Peptides Volume 2011 ; 2011>
+    au < testing ;  International Journal of Peptides Volume 2009 ; 2009 >
+    au < testing ;  International Journal of Peptides Volume 2010 ; 2010 >
+    au < testing ;  International Journal of Peptides Volume 2011 ; 2011>
 
   }
 
@@ -1601,7 +1601,7 @@
     au < released ; International Journal of Plant Genomics Volume 2007 ; 2007 >
     au < released ; International Journal of Plant Genomics Volume 2008 ; 2008 >
     au < released ; International Journal of Plant Genomics Volume 2009 ; 2009 >
-    au < testing ; International Journal of Plant Genomics Volume 2010 ; 2010 >
+    au < ready ; International Journal of Plant Genomics Volume 2010 ; 2010 >
     au < ready ; International Journal of Plant Genomics Volume 2011 ; 2011 >
 
   }
@@ -1635,7 +1635,7 @@
 
     au < doesNotExist ; nternational Journal of Polymer Science Volume 2008 ; 2008 >
     au < mainfest ; nternational Journal of Polymer Science Volume 2009 ; 2009 >
-    au < manifest ; nternational Journal of Polymer Science Volume 2010; 2010 >
+    au < testing ;  nternational Journal of Polymer Science Volume 2010; 2010 >
     au < exists ; nternational Journal of Polymer Science Volume 2011 ; 2011 >
 
   }
@@ -1719,9 +1719,9 @@
     param[journal_id] = ijr
 
     au < doesNotExist ; International Journal of Rheumatology Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Rheumatology Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Rheumatology Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Rheumatology Volume 2011 ; 2011 >
+    au < testing ;  International Journal of Rheumatology Volume 2009 ; 2009 >
+    au < testing ;  International Journal of Rheumatology Volume 2010 ; 2010 >
+    au < testing ;  International Journal of Rheumatology Volume 2011 ; 2011 >
 
   }
 
@@ -1766,9 +1766,9 @@
     param[journal_id] = ijs
 
     au < doesNotExist ; International Journal of Spectroscopy Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Spectroscopy Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Spectroscopy Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Spectroscopy Volume 2011 ; 2011 >
+    au < testing ;  International Journal of Spectroscopy Volume 2009 ; 2009 >
+    au < testing ;  International Journal of Spectroscopy Volume 2010 ; 2010 >
+    au < testing ;  International Journal of Spectroscopy Volume 2011 ; 2011 >
 
   }
 
@@ -1833,9 +1833,9 @@
     param[journal_id] = ja
 
     au < doesNotExist ; International Journal of Spectroscopy Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Spectroscopy Volume 2009 ; 2009 >
-    au < manifest ; International Journal of Spectroscopy Volume 2010 ; 2010 >
-    au < manifest ; International Journal of Spectroscopy Volume 2011 ; 2011 >
+    au < testing ;  International Journal of Spectroscopy Volume 2009 ; 2009 >
+    au < testing ;  International Journal of Spectroscopy Volume 2010 ; 2010 >
+    au < testing ;  International Journal of Spectroscopy Volume 2011 ; 2011 >
 
   }
 
@@ -2219,7 +2219,7 @@
     au < released ; Journal of Nanomaterials Volume 2008 ; 2008 >
     au < released ; Journal of Nanomaterials Volume 2009 ; 2009 >
     au < released ; Journal of Nanomaterials Volume 2010 ; 2010 >
-    au < testing ; Journal of Nanomaterials Volume 2011 ; 2011 >
+    au < ready ; Journal of Nanomaterials Volume 2011 ; 2011 >
 
   }
 
@@ -2577,7 +2577,7 @@
 
     au < released ; Obstetrics and Gynecology International Volume 2009 ; 2009 >
     au < released ; Obstetrics and Gynecology International Volume 2010 ; 2010 >
-    au < testing ; Obstetrics and Gynecology International Volume 2011 ; 2011 >
+    au < ready ; Obstetrics and Gynecology International Volume 2011 ; 2011 >
 
   }
 
