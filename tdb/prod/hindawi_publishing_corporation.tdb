@@ -1470,6 +1470,10 @@
 
     param[journal_id] = ijog
 
+    au < doesNotExist ; International Journal of Oceanography Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Oceanography Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Oceanography Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Oceanography Volume 2011 ; 2011 >
 
   }
 
@@ -1498,7 +1502,11 @@
     >
 
     param[journal_id] = ijol
-
+   
+    au < doesNotExist ; International Journal of Otolaryngology Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Otolaryngology Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Otolaryngology Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Otolaryngology Volume 2011 ; 2011 >
 
   }
 
@@ -1512,6 +1520,10 @@
 
     param[journal_id] = ijpe
 
+    au < doesNotExist ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
 
   }
 
@@ -1526,6 +1538,10 @@
 
     param[journal_id] = ijped
 
+    au < doesNotExist ; International Journal of Pediatrics Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Pediatrics Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Pediatrics Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Pediatrics Volume 2011 ; 2011 >
 
   }
 
@@ -1539,6 +1555,10 @@
 
     param[journal_id] = ijpep
 
+    au < doesNotExist ; International Journal of Peptides Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Peptides Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Peptides Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Peptides Volume 2011 ; 2011>
 
   }
 
@@ -1613,6 +1633,10 @@
 
     param[journal_id] = ijps
 
+    au < doesNotExist ; nternational Journal of Polymer Science Volume 2008 ; 2008 >
+    au < mainfest ; nternational Journal of Polymer Science Volume 2009 ; 2009 >
+    au < manifest ; nternational Journal of Polymer Science Volume 2010; 2010 >
+    au < exists ; nternational Journal of Polymer Science Volume 2011 ; 2011 >
 
   }
 
@@ -1694,6 +1718,10 @@
 
     param[journal_id] = ijr
 
+    au < doesNotExist ; International Journal of Rheumatology Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Rheumatology Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Rheumatology Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Rheumatology Volume 2011 ; 2011 >
 
   }
 
@@ -1737,6 +1765,10 @@
 
     param[journal_id] = ijs
 
+    au < doesNotExist ; International Journal of Spectroscopy Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Spectroscopy Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Spectroscopy Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Spectroscopy Volume 2011 ; 2011 >
 
   }
 
@@ -1800,6 +1832,10 @@
 
     param[journal_id] = ja
 
+    au < doesNotExist ; International Journal of Spectroscopy Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Spectroscopy Volume 2009 ; 2009 >
+    au < manifest ; International Journal of Spectroscopy Volume 2010 ; 2010 >
+    au < manifest ; International Journal of Spectroscopy Volume 2011 ; 2011 >
 
   }
 
@@ -2129,6 +2165,10 @@
 
     param[journal_id] = jmag
 
+    au < doesNotExist ; Journal of Magnetism Volume 2008 ; 2008 >
+    au < doesNotExist ; Journal of Magnetism Volume 2009 ; 2009 >
+    au < doesNotExist ; Journal of Magnetism Volume 2010 ; 2010 >
+    au < exists ; Journal of Magnetism Volume 2011 ; 2011 >
 
   }
 
