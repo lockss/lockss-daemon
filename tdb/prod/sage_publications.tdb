@@ -233,7 +233,15 @@
 
       }
 
-  }
+    }
+
+    {
+      title <
+        name = Therapeutic Advances in Psychopharmacology ;
+        issn = 2045-1253 ;
+        eissn = 2045-1261
+      >
+    }
 
     {
 
@@ -334,6 +342,16 @@
         au < HighWirePressPlugin ; down ; Affilia Volume 24 ; 24 >
 
       }
+
+    }
+
+    {
+      title <
+        name = Alternatives: Global, Local, Political ;
+        issn = 0304-3754
+      >
+
+      comment[platform] = HighWire
 
     }
 
@@ -2684,6 +2702,14 @@ comment[csp7] = manifest page is malformed
     }
 
     {
+      title <
+        name = Dialogues in Human Geography ;
+        issn = 2043-8206 ;
+        eissn = 2043-8214
+      >
+    }
+
+    {
 
       title <
         name = Diogenes ;
@@ -3083,7 +3109,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         param[base_url] = http://edr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-comment[edr01] = pdf filter problems
+        comment[edr01] = pdf filter problems
 
         au < HighWireStrVolPlugin ; down ; Educational Researcher Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; notReady ; Educational Researcher Volume 37 ; 37 >
@@ -3102,7 +3128,7 @@ comment[edr01] = pdf filter problems
 
       {
 
-comment[ebd] = now published by Taylor & Francis
+        comment[ebd] = now published by Taylor & Francis
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ebd.sagepub.com/
@@ -3180,6 +3206,16 @@ comment[ebd] = now published by Taylor & Francis
         au < HighWireStrVolPlugin ; down ; Environment and Urbanization Volume 21 ; 21 >
 
       }
+
+    }
+
+    {
+      title <
+        name = Ergonomics in Design: The Quarterly of Human Factors Applications ;
+        issn = 1064-8046
+      >
+
+      comment[platform] = HighWire
 
     }
 
@@ -3310,15 +3346,16 @@ comment[ebd] = now published by Taylor & Francis
     }
     
     {
-
       title <
         name = European Journal of Cardiovascular Prevention & Rehabilitation ;
         issn = 1741-8267 ;
         eissn = 1741-8275
       >
 
+      comment[platform] = HighWire
+
     }
-    
+
     {
 
       title <
@@ -5133,6 +5170,17 @@ comment[exm] = now published by Springer
     }
 
     {
+      title <
+        name = Information Visualization ;
+        issn = 1473-8716 ;
+        eissn = 1473-8724
+      >
+
+      comment[platform] = HighWire
+
+    }
+
+    {
 
       title <
         name = Integrative Cancer Therapies ;
@@ -5404,6 +5452,17 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Damage Mechanics Volume 18 ; 18 >
 
       }
+
+    }
+
+    {
+      title <
+        name = International Journal of Engine Research ;
+        issn = 1468-0874 ;
+        eissn = 2041-3149
+      >
+
+      comment[platform] = HighWire
 
     }
 
@@ -6778,7 +6837,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       {
 
-comment[jcp] = some sort of custom layout
+        comment[jcp] = some sort of custom layout
 
         param[base_url] = http://jcp.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -6790,6 +6849,16 @@ comment[jcp] = some sort of custom layout
         au < HighWireStrVolPlugin ; down ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
 
       }
+
+    }
+
+    {
+      title <
+        name = Journal of Cognitive Engineering and Decision Making ;
+        issn = 1555-3434
+      >
+
+      comment[platform] = HighWire
 
     }
 
@@ -7759,6 +7828,17 @@ comment[jcp] = some sort of custom layout
     }
 
     {
+      title <
+        name = Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector ;
+        issn = 1741-1343 ;
+        eissn = 1741-7090
+      >
+
+      comment[platform] = HighWire
+
+    }
+
+    {
 
       title <
         name = Journal of Geriatric Psychiatry and Neurology ;
@@ -8456,6 +8536,17 @@ comment[jcp] = some sort of custom layout
         au < HighWirePressPlugin ; down ; Journal of Material Culture Volume 14 ; 14 >
 
       }
+
+    }
+
+    {
+      title <
+        name = Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing ;
+        issn = 1745-7904 ;
+        eissn = 1745-7912
+      >
+
+      comment[platform] = HighWire
 
     }
 
@@ -9671,6 +9762,14 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+        name = Local Economy: The Journal of the Local Economy Policy Unit ;
+        issn = 0269-0942 ;
+        eissn = 1470-9325
+      >
+    }
+
+    {
 
       title <
         name = Lupus ;
@@ -10309,6 +10408,14 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+        name = Organizational Psychology Review ;
+        issn = 2041-3866 ;
+        eissn = 2041-3874
+      >
+    }
+
+    {
 
       title <
         name = Organizational Research Methods ;
@@ -10806,16 +10913,17 @@ comment[mpj] = now published by Brill
     }
 
     {
-
       title <
-        name = Prosthetics and Orthotics ;
+        name = Prosthetics and Orthotics International ;
         issn = 0309-3646 ;
         eissn = 1746-1553 ;
         issnl = 0309-3646
       >
 
+      comment[platform] = HighWire
+
     }
-    
+
     {
 
       title <
@@ -12124,6 +12232,14 @@ comment[mpj] = now published by Brill
       }
 
     }
+    
+    {
+      title <
+        name = Theology Today ;
+        issn = 0040-5736 ;
+        eissn = 2044-2556
+      >
+    }    
 
     {
 
@@ -12323,6 +12439,17 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; manifest ; Time & Society Volume 18 ; 18 >
 
       }
+
+    }
+
+    {
+      title <
+        name = Tourism and Hospitality Research ;
+        issn = 1467-3584 ;
+        eissn = 1742-9692
+      >
+
+      comment[platform] = HighWire
 
     }
 
