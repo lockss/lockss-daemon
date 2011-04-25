@@ -1209,7 +1209,7 @@
 
     au < released ; International Journal of Chemical Engineering Volume 2008 ; 2008 >
     au < ready ; International Journal of Chemical Engineering Volume 2009 ; 2009 >
-    au < testing ; International Journal of Chemical Engineering Volume 2010 ; 2010 >
+    au < ready ; International Journal of Chemical Engineering Volume 2010 ; 2010 >
     au < testing ; International Journal of Chemical Engineering Volume 2011 ; 2011 >
 
   }
@@ -1239,7 +1239,7 @@
 
     au < released ; International Journal of Computer Games Technology Volume 2008 ; 2008 >
     au < released ; International Journal of Computer Games Technology Volume 2009 ; 2009 >
-    au < testing ; International Journal of Computer Games Technology Volume 2010 ; 2010 >
+    au < ready ; International Journal of Computer Games Technology Volume 2010 ; 2010 >
     au < testing ; International Journal of Computer Games Technology Volume 2011 ; 2011 >
 
   }
@@ -1294,9 +1294,9 @@
     param[journal_id] = ijdmb
 
     au < released ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 >
-    au < testing ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 >
-    au < testing ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 >
-    au < testing ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 >
+    au < ready ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 >
+    au < ready ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 >
+    au < ready ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 >
 
   }
 
@@ -1324,8 +1324,8 @@
     param[journal_id] = ije
 
     au < released ; International Journal of Endocrinology Volume 2009 ; 2009 >
-    au < testing ; International Journal of Endocrinology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Endocrinology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Endocrinology Volume 2010 ; 2010 >
+    au < ready ; International Journal of Endocrinology Volume 2011 ; 2011 >
 
   }
 
@@ -1404,8 +1404,8 @@
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2007 ; 2007 >
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2008 ; 2008 >
     au < released ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 >
-    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 >
-    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 >
+    au < ready ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 >
+    au < ready ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 >
 
   }
 
@@ -1421,7 +1421,7 @@
 
     au < released ; International Journal of Microbiology Volume 2009 ; 2009 >
     au < testing ; International Journal of Microbiology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Microbiology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Microbiology Volume 2011 ; 2011 >
 
   }
 
@@ -1438,7 +1438,7 @@
     au < released ; International Journal of Microwave Science and Technology Volume 2007 ; 2007 >
     au < released ; International Journal of Microwave Science and Technology Volume 2008 ; 2008 >
     au < released ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 >
-    au < testing ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 >
+    au < ready ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 >
     au < testing ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 >
 
   }
@@ -1456,7 +1456,7 @@
     au < released ; International Journal of Navigation and Observation Volume 2008 ; 2008 >
     au < released ; International Journal of Navigation and Observation Volume 2009 ; 2009 >
     au < testing ; International Journal of Navigation and Observation Volume 2010 ; 2010 >
-    au < testing ; International Journal of Navigation and Observation Volume 2011 ; 2011 >
+    au < ready ; International Journal of Navigation and Observation Volume 2011 ; 2011 >
 
   }
 
@@ -1564,7 +1564,7 @@
     au < released ; International Journal of Photoenergy Volume 2008 ; 2008 >
     au < released ; International Journal of Photoenergy Volume 2009 ; 2009 >
     au < released ; International Journal of Photoenergy Volume 2010 ; 2010 >
-    au < testing ; International Journal of Photoenergy Volume 2011 ; 2011 >
+    au < ready ; International Journal of Photoenergy Volume 2011 ; 2011 >
 
   }
 
@@ -1582,7 +1582,7 @@
     au < released ; International Journal of Plant Genomics Volume 2008 ; 2008 >
     au < released ; International Journal of Plant Genomics Volume 2009 ; 2009 >
     au < testing ; International Journal of Plant Genomics Volume 2010 ; 2010 >
-    au < testing ; International Journal of Plant Genomics Volume 2011 ; 2011 >
+    au < ready ; International Journal of Plant Genomics Volume 2011 ; 2011 >
 
   }
 
@@ -1598,8 +1598,8 @@
 
     au < released ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 >
     au < released ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 >
-    au < testing ; International Journal of Plasma Science and Engineering Volume 2010 ; 2010 >
-    au < testing ; International Journal of Plasma Science and Engineering Volume 2011 ; 2011 >
+    au < doesNotExist ; International Journal of Plasma Science and Engineering Volume 2010 ; 2010 >
+    au < exists ; International Journal of Plasma Science and Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -1627,9 +1627,9 @@
     param[journal_id] = ijpme
 
     au < released ; International Journal of Power Management Electronics Volume 2008 ; 2008 >
-    au < testing ; International Journal of Power Management Electronics Volume 2009 ; 2009 >
-    au < testing ; International Journal of Power Management Electronics Volume 2010 ; 2010 >
-    au < testing ; International Journal of Power Management Electronics Volume 2011 ; 2011 >
+    au < ready ; International Journal of Power Management Electronics Volume 2009 ; 2009 >
+    au < ready ; International Journal of Power Management Electronics Volume 2010 ; 2010 >
+    au < ready ; International Journal of Power Management Electronics Volume 2011 ; 2011 >
 
   }
 
@@ -1644,9 +1644,9 @@
     param[journal_id] = ijqsr
 
     au < released ; International Journal of Quality, Statistics, and Reliability Volume 2008 ; 2008 >
-    au < testing ; International Journal of Quality, Statistics, and Reliability Volume 2009 ; 2009 >
-    au < testing ; International Journal of Quality, Statistics, and Reliability Volume 2010 ; 2010 >
-    au < testing ; International Journal of Quality, Statistics, and Reliability Volume 2011 ; 2011 >
+    au < ready ; International Journal of Quality, Statistics, and Reliability Volume 2009 ; 2009 >
+    au < ready ; International Journal of Quality, Statistics, and Reliability Volume 2010 ; 2010 >
+    au < ready ; International Journal of Quality, Statistics, and Reliability Volume 2011 ; 2011 >
 
   }
 
@@ -1661,9 +1661,9 @@
     param[journal_id] = ijrs
 
     au < released ; International Journal of Reacting Systems Volume 2008 ; 2008 >
-    au < testing ; International Journal of Reacting Systems Volume 2009 ; 2009 >
-    au < testing ; International Journal of Reacting Systems Volume 2010 ; 2010 >
-    au < testing ; International Journal of Reacting Systems Volume 2011 ; 2011 >
+    au < ready ; International Journal of Reacting Systems Volume 2009 ; 2009 >
+    au < ready ; International Journal of Reacting Systems Volume 2010 ; 2010 >
+    au < ready ; International Journal of Reacting Systems Volume 2011 ; 2011 >
 
   }
 
@@ -1679,8 +1679,8 @@
 
     au < released ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 >
     au < released ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 >
-    au < testing ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 >
-    au < testing ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 >
+    au < ready ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 >
+    au < ready ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 >
 
   }
 
@@ -1722,8 +1722,8 @@
     au < released ; International Journal of Rotating Machinery Volume 2007 ; 2007 >
     au < released ; International Journal of Rotating Machinery Volume 2008 ; 2008 >
     au < released ; International Journal of Rotating Machinery Volume 2009 ; 2009 >
-    au < testing ; International Journal of Rotating Machinery Volume 2010 ; 2010 >
-    au < testing ; International Journal of Rotating Machinery Volume 2011 ; 2011 >
+    au < ready ; International Journal of Rotating Machinery Volume 2010 ; 2010 >
+    au < ready ; International Journal of Rotating Machinery Volume 2011 ; 2011 >
 
   }
 
@@ -1753,7 +1753,7 @@
     au < released ; International Journal of Telemedicine and Applications Volume 2008 ; 2008 >
     au < released ; International Journal of Telemedicine and Applications Volume 2009 ; 2009 >
     au < released ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 >
-    au < testing ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 >
+    au < ready ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 >
 
   }
 
@@ -1770,7 +1770,7 @@
     au < released ; International Journal of Vehicular Technology Volume 2008 ; 2008 >
     au < released ; International Journal of Vehicular Technology Volume 2009 ; 2009 >
     au < released ; International Journal of Vehicular Technology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Vehicular Technology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Vehicular Technology Volume 2011 ; 2011 >
 
   }
 
@@ -1785,8 +1785,8 @@
     param[journal_id] = ijz
 
     au < released ; International Journal of Zoology Volume 2009 ; 2009 >
-    au < testing ; International Journal of Zoology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Zoology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Zoology Volume 2010 ; 2010 >
+    au < exists ; International Journal of Zoology Volume 2011 ; 2011 >
 
   }
 
@@ -1822,8 +1822,8 @@
     au < released ; Journal of Applied Mathematics Volume 2007 ; 2007 >
     au < released ; Journal of Applied Mathematics Volume 2008 ; 2008 >
     au < released ; Journal of Applied Mathematics Volume 2009 ; 2009 >
-    au < testing ; Journal of Applied Mathematics Volume 2010 ; 2010 >
-    au < testing ; Journal of Applied Mathematics Volume 2011 ; 2011 >
+    au < ready ; Journal of Applied Mathematics Volume 2010 ; 2010 >
+    au < ready ; Journal of Applied Mathematics Volume 2011 ; 2011 >
 
   }
 
@@ -1849,9 +1849,9 @@
     au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 >
     au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 >
     au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 >
-    au < testing ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 >
-    au < testing ; Journal of Applied Mathematics and Decision Sciences Volume 2010 ; 2010 >
-    au < testing ; Journal of Applied Mathematics and Decision Sciences Volume 2011 ; 2011 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2010 ; 2010 >
+    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2011 ; 2011 >
 
   }
 
@@ -1888,7 +1888,7 @@
     au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 ; 2008 >
     au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2009 ; 2009 >
     au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2010 ; 2010 >
-    au < testing ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 >
+    au < ready ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 >
 
   }
 
@@ -1905,7 +1905,7 @@
     au < released ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2009 ; 2009 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2010 ; 2010 >
-    au < testing ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 >
+    au < exists ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 >
 
   }
 
@@ -1921,7 +1921,7 @@
 
     au < released ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 >
     au < released ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 >
-    au < testing ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 >
+    au < ready ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 >
 
   }
 
@@ -1966,7 +1966,7 @@
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2008 ; 2008 >
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2009 ; 2009 >
     au < released ; Journal of Automated Methods and Management in Chemistry Volume 2010 ; 2010 >
-    au < testing ; Journal of Automated Methods and Management in Chemistry Volume 2011 ; 2011 >
+    au < ready ; Journal of Automated Methods and Management in Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -1989,7 +1989,7 @@
     au < released ; Journal of Biomedicine and Biotechnology Volume 2008 ; 2008 >
     au < released ; Journal of Biomedicine and Biotechnology Volume 2009 ; 2009 >
     au < released ; Journal of Biomedicine and Biotechnology Volume 2010 ; 2010 >
-    au < testing ; Journal of Biomedicine and Biotechnology Volume 2011 ; 2011 >
+    au < ready ; Journal of Biomedicine and Biotechnology Volume 2011 ; 2011 >
 
   }
 
@@ -2006,7 +2006,7 @@
     au < released ; Journal of Biophysics Volume 2008 ; 2008 >
     au < released ; Journal of Biophysics Volume 2009 ; 2009 >
     au < released ; Journal of Biophysics Volume 2010 ; 2010 >
-    au < testing ; Journal of Biophysics Volume 2011 ; 2011 >
+    au < ready ; Journal of Biophysics Volume 2011 ; 2011 >
 
   }
 
@@ -2023,7 +2023,7 @@
     au < released ; Journal of Cancer Epidemiology Volume 2008 ; 2008 >
     au < released ; Journal of Cancer Epidemiology Volume 2009 ; 2009 >
     au < released ; Journal of Cancer Epidemiology Volume 2010 ; 2010 >
-    au < testing ; Journal of Cancer Epidemiology Volume 2011 ; 2011 >
+    au < ready ; Journal of Cancer Epidemiology Volume 2011 ; 2011 >
 
   }
 
@@ -2040,7 +2040,7 @@
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 >
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 >
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 >
-    au < testing ; Journal of Computer Systems, Networks, and Communications Volume 2011 ; 2011 >
+    au < exists ; Journal of Computer Systems, Networks, and Communications Volume 2011 ; 2011 >
 
   }
 
@@ -2058,7 +2058,7 @@
     au < released ; Journal of Control Science and Engineering Volume 2008 ; 2008 >
     au < released ; Journal of Control Science and Engineering Volume 2009 ; 2009 >
     au < released ; Journal of Control Science and Engineering Volume 2010 ; 2010 >
-    au < testing ; Journal of Control Science and Engineering Volume 2011 ; 2011 >
+    au < ready ; Journal of Control Science and Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -2088,8 +2088,8 @@
     param[journal_id] = jgr
 
     au < released ; Journal of Geological Research Volume 2009 ; 2009 >
-    au < testing ; Journal of Geological Research Volume 2010 ; 2010 >
-    au < testing ; Journal of Geological Research Volume 2011 ; 2011 >
+    au < ready ; Journal of Geological Research Volume 2010 ; 2010 >
+    au < ready ; Journal of Geological Research Volume 2011 ; 2011 >
 
   }
 
@@ -2116,7 +2116,7 @@
     au < released ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
     au < released ; Journal of Inequalities and Applications Volume 2009 ; 2009 >
     au < released ; Journal of Inequalities and Applications Volume 2010 ; 2010 >
-    au < testing ; Journal of Inequalities and Applications Volume 2011 ; 2011 >
+    au < ready ; Journal of Inequalities and Applications Volume 2011 ; 2011 >
 
   }
 
@@ -2143,8 +2143,8 @@
     param[journal_id] = jmb
 
     au < released ; Journal of Marine Biology Volume 2009 ; 2009 >
-    au < testing ; Journal of Marine Biology Volume 2010 ; 2010 >
-    au < testing ; Journal of Marine Biology Volume 2011 ; 2011 >
+    au < ready ; Journal of Marine Biology Volume 2010 ; 2010 >
+    au < ready ; Journal of Marine Biology Volume 2011 ; 2011 >
 
   }
 
@@ -2160,7 +2160,7 @@
 
     au < released ; Journal of Metallurgy Volume 2009 ; 2009 >
     au < released ; Journal of Metallurgy Volume 2010 ; 2010 >
-    au < testing ; Journal of Metallurgy Volume 2011 ; 2011 >
+    au < ready ; Journal of Metallurgy Volume 2011 ; 2011 >
 
   }
 
@@ -2308,7 +2308,7 @@
 
     au < released ; Journal of Toxicology Volume 2009 ; 2009 >
     au < released ; Journal of Toxicology Volume 2010 ; 2010 >
-    au < testing ; Journal of Toxicology Volume 2011 ; 2011 >
+    au < ready ; Journal of Toxicology Volume 2011 ; 2011 >
 
   }
 
@@ -2383,7 +2383,7 @@
     au < released ; Laser Chemistry Volume 2008 ; 2008 >
     au < released ; Laser Chemistry Volume 2009 ; 2009 >
     au < ready ; Laser Chemistry Volume 2010 ; 2010 >
-    au < testing ; Laser Chemistry Volume 2011 ; 2011 >
+    au < exists ; Laser Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -2521,7 +2521,7 @@
     au < released ; Neural Plasticity Volume 2008 ; 2008 >
     au < released ; Neural Plasticity Volume 2009 ; 2009 >
     au < released ; Neural Plasticity Volume 2010 ; 2010 >
-    au < testing ; Neural Plasticity Volume 2011 ; 2011 >
+    au < exists ; Neural Plasticity Volume 2011 ; 2011 >
 
   }
 
@@ -2568,7 +2568,7 @@
     au < released ; Physical Separation in Science and Engineering Volume 2008 ; 2008 >
     au < released ; Physical Separation in Science and Engineering Volume 2009 ; 2009 >
     au < released ; Physical Separation in Science and Engineering Volume 2010 ; 2010 >
-    au < testing ; Physical Separation in Science and Engineering Volume 2011 ; 2011 >
+    au < exists ; Physical Separation in Science and Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -2768,7 +2768,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Communications Volume 2008 ; 2008 >
     au < released ; Research Letters in Communications Volume 2009 ; 2009 >
     au < released ; Research Letters in Communications Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Communications Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Communications Volume 2011 ; 2011 >
 
   }
 
@@ -2786,7 +2786,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Ecology Volume 2008 ; 2008 >
     au < released ; Research Letters in Ecology Volume 2009 ; 2009 >
     au < released ; Research Letters in Ecology Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Ecology Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Ecology Volume 2011 ; 2011 >
 
   }
 
@@ -2802,7 +2802,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
     au < released ; Research Letters in Electronics Volume 2009 ; 2009 >
     au < released ; Research Letters in Electronics Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Electronics Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Electronics Volume 2011 ; 2011 >
 
   }
 
@@ -2819,7 +2819,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 >
     au < released ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 >
     au < released ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Inorganic Chemistry Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Inorganic Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -2837,7 +2837,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Materials Science Volume 2008 ; 2008 >
     au < released ; Research Letters in Materials Science Volume 2009 ; 2009 >
     au < released ; Research Letters in Materials Science Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Materials Science Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Materials Science Volume 2011 ; 2011 >
 
   }
 
@@ -2854,7 +2854,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Nanotechnology Volume 2008 ; 2008 >
     au < released ; Research Letters in Nanotechnology Volume 2009 ; 2009 >
     au < released ; Research Letters in Nanotechnology Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Nanotechnology Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Nanotechnology Volume 2011 ; 2011 >
 
   }
 
@@ -2887,7 +2887,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Organic Chemistry Volume 2008 ; 2008 >
     au < released ; Research Letters in Organic Chemistry Volume 2009 ; 2009 >
     au < released ; Research Letters in Organic Chemistry Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Organic Chemistry Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Organic Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -2905,7 +2905,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Physical Chemistry Volume 2008 ; 2008 >
     au < released ; Research Letters in Physical Chemistry Volume 2009 ; 2009 >
     au < released ; Research Letters in Physical Chemistry Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Physical Chemistry Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Physical Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -2922,7 +2922,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Physics Volume 2008 ; 2008 >
     au < released ; Research Letters in Physics Volume 2009 ; 2009 >
     au < released ; Research Letters in Physics Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Physics Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Physics Volume 2011 ; 2011 >
 
   }
 
@@ -2940,7 +2940,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Research Letters in Signal Processing Volume 2008 ; 2008 >
     au < released ; Research Letters in Signal Processing Volume 2009 ; 2009 >
     au < released ; Research Letters in Signal Processing Volume 2010 ; 2010 >
-    au < testing ; Research Letters in Signal Processing Volume 2011 ; 2011 >
+    au < ready ; Research Letters in Signal Processing Volume 2011 ; 2011 >
 
   }
 
@@ -2968,7 +2968,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Sarcoma Volume 2008 ; 2008 >
     au < released ; Sarcoma Volume 2009 ; 2009 >
     au < released ; Sarcoma Volume 2010 ; 2010 >
-    au < testing ; Sarcoma Volume 2011 ; 2011 >
+    au < ready ; Sarcoma Volume 2011 ; 2011 >
 
   }
 
@@ -2986,7 +2986,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Science and Technology of Nuclear Installations Volume 2008 ; 2008 >
     au < released ; Science and Technology of Nuclear Installations Volume 2009 ; 2009 >
     au < released ; Science and Technology of Nuclear Installations Volume 2010 ; 2010 >
-    au < testing ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 >
+    au < ready ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 >
 
   }
 
@@ -3033,7 +3033,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < released ; Texture, Stress, and Microstructure Volume 2008 ; 2008 >
     au < released ; Texture, Stress, and Microstructure Volume 2009 ; 2009 >
     au < released ; Texture, Stress, and Microstructure Volume 2010 ; 2010 >
-    au < testing ; Texture, Stress, and Microstructure Volume 2011 ; 2011 >
+    au < exists ; Texture, Stress, and Microstructure Volume 2011 ; 2011 >
 
   }
 
@@ -3068,7 +3068,7 @@ comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998
     au < released ; VLSI Design Volume 2008 ; 2008 >
     au < released ; VLSI Design Volume 2009 ; 2009 >
     au < released ; VLSI Design Volume 2010 ; 2010 >
-    au < testing ; VLSI Design Volume 2011 ; 2011 >
+    au < ready ; VLSI Design Volume 2011 ; 2011 >
 
   }
 
@@ -3085,7 +3085,7 @@ comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998
     au < released ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 >
     au < released ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 >
     au < released ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 >
-    au < testing ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 >
+    au < exists ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 >
 
   }
 
