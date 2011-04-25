@@ -350,8 +350,21 @@
         name = Alternatives: Global, Local, Political ;
         issn = 0304-3754
       >
+	  
+      {
 
-      comment[platform] = HighWire
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://alt.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Alternatives: Global, Local, Political Volume 30 ; 30 >
+        au < exists ; Alternatives: Global, Local, Political Volume 31 ; 31 >
+        au < exists ; Alternatives: Global, Local, Political Volume 32 ; 32 >
+        au < exists ; Alternatives: Global, Local, Political Volume 33 ; 33 >
+        au < exists ; Alternatives: Global, Local, Political Volume 34 ; 34 >
+        au < exists ; Alternatives: Global, Local, Political Volume 35 ; 35 >
+
+      }
 
     }
 
@@ -3215,7 +3228,33 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         issn = 1064-8046
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://erg.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
+        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 >
+
+      }
 
     }
 
@@ -3352,7 +3391,32 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         eissn = 1741-8275
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cpr.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 2 ; 2 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 3 ; 3 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 4 ; 4 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 5 ; 5 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 6 ; 6 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 7 ; 7 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 8 ; 8 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 9 ; 9 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 10 ; 10 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 11 ; 11 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 12 ; 12 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 13 ; 13 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 14 ; 14 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 15 ; 15 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
+        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
+
+      }
 
     }
 
@@ -5175,8 +5239,24 @@ comment[exm] = now published by Springer
         issn = 1473-8716 ;
         eissn = 1473-8724
       >
+S
+      {
 
-      comment[platform] = HighWire
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ivi.sagepub.com//
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Information Visualization Volume 1 ; 1 >
+        au < exists ; Information Visualization Volume 2 ; 2 >
+        au < exists ; Information Visualization Volume 3 ; 3 >
+        au < exists ; Information Visualization Volume 4 ; 4 >
+        au < exists ; Information Visualization Volume 5 ; 5 >
+        au < exists ; Information Visualization Volume 6 ; 6 >
+        au < exists ; Information Visualization Volume 7 ; 7 >
+        au < exists ; Information Visualization Volume 8 ; 8 >
+        au < exists ; Information Visualization Volume 9 ; 9 >
+
+      }
 
     }
 
@@ -5462,7 +5542,25 @@ comment[exm] = now published by Springer
         eissn = 2041-3149
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jer.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; International Journal of Engine Research 1 ; 1 >
+        au < exists ; International Journal of Engine Research 2 ; 2 >
+        au < exists ; International Journal of Engine Research 3 ; 3 >
+        au < exists ; International Journal of Engine Research 4 ; 4 >
+        au < exists ; International Journal of Engine Research 5 ; 5 >
+        au < exists ; International Journal of Engine Research 6 ; 6 >
+        au < exists ; International Journal of Engine Research 7 ; 7 >
+        au < exists ; International Journal of Engine Research 8 ; 8 >
+        au < exists ; International Journal of Engine Research 9 ; 9 >
+        au < exists ; International Journal of Engine Research 10 ; 10 >
+        au < exists ; International Journal of Engine Research 11 ; 11 >
+
+      }
 
     }
 
@@ -6858,7 +6956,19 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         issn = 1555-3434
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://edm.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 >
+        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 >
+        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
+        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
+        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 >
+
+      }
 
     }
 
@@ -7834,7 +7944,22 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         eissn = 1741-7090
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jgm.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 1 ; 1 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 >
+        au < exists ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 >
+
+      }
 
     }
 
@@ -8546,7 +8671,25 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         eissn = 1745-7912
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mmj.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 1 ; 1 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 2 ; 2 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 3 ; 3 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 4 ; 4 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 5 ; 5 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 6 ; 6 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 7 ; 7 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 8 ; 8 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 9 ; 9 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 10 ; 10 >
+        au < exists ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 11 ; 11 >
+
+      }
 
     }
 
@@ -10920,7 +11063,49 @@ comment[mpj] = now published by Brill
         issnl = 0309-3646
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://poi.sagepub.com/
+        implicit < status ; name ; param[volume_name] >
+
+        au < exists ; Prosthetics and Orthotics International Volume 1 ; 1 >
+        au < exists ; Prosthetics and Orthotics International Volume 2 ; 2 >
+        au < exists ; Prosthetics and Orthotics International Volume 3 ; 3 >
+        au < exists ; Prosthetics and Orthotics International Volume 4 ; 4 >
+        au < exists ; Prosthetics and Orthotics International Volume 5 ; 5 >
+        au < exists ; Prosthetics and Orthotics International Volume 6 ; 6 >
+        au < exists ; Prosthetics and Orthotics International Volume 7 ; 7 >
+        au < exists ; Prosthetics and Orthotics International Volume 8 ; 8 >
+        au < exists ; Prosthetics and Orthotics International Volume 9 ; 9 >
+        au < exists ; Prosthetics and Orthotics International Volume 10 ; 10 >
+        au < exists ; Prosthetics and Orthotics International Volume 11 ; 11 >
+        au < exists ; Prosthetics and Orthotics International Volume 12 ; 12 >
+        au < exists ; Prosthetics and Orthotics International Volume 13 ; 13 >
+        au < exists ; Prosthetics and Orthotics International Volume 14 ; 14 >
+        au < exists ; Prosthetics and Orthotics International Volume 15 ; 15 >
+        au < exists ; Prosthetics and Orthotics International Volume 16 ; 16 >
+        au < exists ; Prosthetics and Orthotics International Volume 17 ; 17 >
+        au < exists ; Prosthetics and Orthotics International Volume 18 ; 18 >
+        au < exists ; Prosthetics and Orthotics International Volume 19 ; 19 >
+        au < exists ; Prosthetics and Orthotics International Volume 20 ; 20 >
+        au < exists ; Prosthetics and Orthotics International Volume 21 ; 21 >
+        au < exists ; Prosthetics and Orthotics International Volume 22 ; 22 >
+        au < exists ; Prosthetics and Orthotics International Volume 23 ; 23 >
+        au < exists ; Prosthetics and Orthotics International Volume 24 ; 24 >
+        au < exists ; Prosthetics and Orthotics International Volume 25 ; 25 >
+        au < exists ; Prosthetics and Orthotics International Volume 26 ; 26 >
+        au < exists ; Prosthetics and Orthotics International Volume 27 ; 27 >
+        au < exists ; Prosthetics and Orthotics International Volume 28 ; 28 >
+        au < exists ; Prosthetics and Orthotics International Volume 29 ; 29 >
+        au < exists ; Prosthetics and Orthotics International Volume 30 ; 30 >
+        au < exists ; Prosthetics and Orthotics International Volume 31 ; 31 >
+        au < exists ; Prosthetics and Orthotics International Volume 32 ; 32 >
+        au < exists ; Prosthetics and Orthotics International Volume 33 ; 33 >
+        au < exists ; Prosthetics and Orthotics International Volume 34 ; 34 >
+        au < exists ; Prosthetics and Orthotics International Volume 35 ; 35 >
+
+      }
 
     }
 
