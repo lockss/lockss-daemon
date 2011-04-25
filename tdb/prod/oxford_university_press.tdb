@@ -331,11 +331,9 @@
         au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Annals of Oncology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Oncology Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; Annals of Oncology Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Annals of Oncology Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; testing; Annals of Oncology Volume 20 ; 20 >
 
-     }
+      }
 
     }
 
@@ -365,11 +363,13 @@
 
         au < HighWireStrVolPlugin ; down ; Applied Linguistics Volume 26 ; 26 >
         au < HighWirePressPlugin ; doNotProcess ; Applied Linguistics Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; Applied Linguistics Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Applied Linguistics Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; manifest ; Applied Linguistics Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; Applied Linguistics Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Applied Linguistics Volume 32 ; 32 >
 
-      }
+     }
 
     }
 
@@ -401,9 +401,11 @@
         au < HighWirePressPlugin ; doNotProcess ; Behavioral Ecology Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; Behavioral Ecology Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Behavioral Ecology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; manifest ; Behavioral Ecology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; Behavioral Ecology Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Behavioral Ecology Volume 22 ; 22 >
 
-      }
+     }
 
     }
 
@@ -434,9 +436,11 @@
         au < HighWireStrVolPlugin ; down ; Bioinformatics Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Bioinformatics Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Bioinformatics Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Bioinformatics Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; testing ; Bioinformatics Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Bioinformatics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; Bioinformatics Volume 27 ; 27 >
 
-      }
+     }
 
     }
 
@@ -466,11 +470,13 @@
 
         au < HighWireStrVolPlugin ; down ; Biometrika Volume 92 ; 92 >
         au < HighWirePressPlugin ; doNotProcess ; Biometrika Volume 93 ; 93 >
-        au < HighWirePressH20Plugin ; manifest ; Biometrika Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 94 ; 94 >
         au < HighWirePressPlugin ; down ; Biometrika Volume 95 ; 95 >
-        au < HighWirePressH20Plugin ; manifest ; Biometrika Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; manifest ; Biometrika Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; manifest ; Biometrika Volume 98 ; 98 >
 
-      }
+     }
 
     }
 
@@ -502,9 +508,11 @@
         au < HighWireStrVolPlugin ; down ; Biostatistics Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Biostatistics Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Biostatistics Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Biostatistics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; testing ; Biostatistics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Biostatistics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Biostatistics Volume 12 ; 12 >
 
-      }
+     }
 
     }
 
@@ -536,9 +544,11 @@
         au < HighWirePressPlugin ; doNotProcess ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; testing ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
 
-      }
+     }
 
     }
 
@@ -570,9 +580,11 @@
         au < HighWireStrVolPlugin ; down ; Brain Volume 129 ; 129 >
         au < HighWireStrVolPlugin ; down ; Brain Volume 130 ; 130 >
         au < HighWirePressPlugin ; down ; Brain Volume 131 ; 131 >
-        au < HighWirePressH20Plugin ; manifest ; Brain Volume 132 ; 132 >
+        au < HighWirePressH20Plugin ; testing ; Brain Volume 132 ; 132 >
+        au < HighWirePressH20Plugin ; manifest ; Brain Volume 133 ; 133 >
+        au < HighWirePressH20Plugin ; manifest ; Brain Volume 134 ; 134 >
 
-      }
+     }
 
     }
 
@@ -640,9 +652,11 @@
         au < HighWirePressPlugin ; doNotProcess ; Briefings in Bioinformatics Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Briefings in Bioinformatics Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Briefings in Bioinformatics Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Briefings in Bioinformatics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; testing ; Briefings in Bioinformatics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Briefings in Bioinformatics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Briefings in Bioinformatics Volume 12 ; 12 >
 
-      }
+     }
 
     }
 
@@ -671,9 +685,9 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; manifest ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
       }
 
     }
@@ -704,9 +718,9 @@
 
         au < HighWireStrVolPlugin ; down ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
         au < HighWirePressPlugin ; doNotProcess ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
-        au < HighWirePressH20Plugin ; manifest ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; The British Journal for the Philosophy of Science Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; manifest ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
       }
 
     }
@@ -739,9 +753,11 @@
         au < HighWirePressPlugin ; doNotProcess ; The British Journal of Aesthetics Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; down ; The British Journal of Aesthetics Volume 47 ; 47 >
         au < HighWirePressPlugin ; down ; The British Journal of Aesthetics Volume 48 ; 48 >
-        au < HighWirePressH20Plugin ; manifest ; The British Journal of Aesthetics Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; testing ; The British Journal of Aesthetics Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; manifest ; The British Journal of Aesthetics Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; manifest ; The British Journal of Aesthetics Volume 51 ; 51 >
 
-      }
+     }
 
     }
     
@@ -774,13 +790,15 @@
         au < HighWirePressPlugin ; doNotProcess ; British Journal of Anaesthesia Volume 96 ; 96 >
         au < HighWireStrVolPlugin ; down ; British Journal of Anaesthesia Volume 97 ; 97 >
         au < HighWireStrVolPlugin ; down ; British Journal of Anaesthesia Volume 98 ; 98 >
-        au < HighWirePressH20Plugin ; manifest ; British Journal of Anaesthesia Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 99 ; 99 >
         au < HighWirePressPlugin ; down ; British Journal of Anaesthesia Volume 100 ; 100 >
         au < HighWirePressPlugin ; down ; British Journal of Anaesthesia Volume 101 ; 101 >
-        au < HighWirePressH20Plugin ; manifest ; British Journal of Anaesthesia Volume 102 ; 102 >
-        au < HighWirePressH20Plugin ; manifest ; British Journal of Anaesthesia Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; manifest ; British Journal of Anaesthesia Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; manifest ; British Journal of Anaesthesia Volume 105 ; 105 >
 
-      }
+     }
 
     }
 
@@ -810,9 +828,11 @@
         au < HighWirePressPlugin ; doNotProcess ; The British Journal of Criminology: An International Review of Crime and Society Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; down ; The British Journal of Criminology: An International Review of Crime and Society Volume 47 ; 47 >
         au < HighWirePressPlugin ; down ; The British Journal of Criminology: An International Review of Crime and Society Volume 48 ; 48 >
-        au < HighWirePressH20Plugin ; manifest ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; testing ; The British Journal of Criminology: An International Review of Crime and Society Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; manifest ; The British Journal of Criminology: An International Review of Crime and Society Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; manifest ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 >
 
-      }
+     }
 
     }
     
@@ -844,9 +864,11 @@
         au < HighWirePressPlugin ; doNotProcess ; British Journal of Social Work Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; down ; British Journal of Social Work Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; British Journal of Social Work Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; manifest ; British Journal of Social Work Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; testing ; British Journal of Social Work Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; British Journal of Social Work Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; British Journal of Social Work Volume 41 ; 41 >
 
-      }
+     }
 
     }
 
@@ -864,17 +886,17 @@
         param[base_url] = http://bmb.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; British Medical Bulletin Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; testing ; British Medical Bulletin Volume 72 ; 72 >
         au < HighWireStrVolPlugin ; down ; British Medical Bulletin Volume 73-74 ; 73-74 >
         au < HighWireStrVolPlugin ; down ; British Medical Bulletin Volume 75-76 ; 75-76 >
         au < HighWireStrVolPlugin ; down ; British Medical Bulletin Volume 77-78 ; 77-78 >
-        au < HighWirePressH20Plugin ; manifest ; British Medical Bulletin Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; testing ; British Medical Bulletin Volume 84 ; 84 >
         au < HighWirePressPlugin ; down ; British Medical Bulletin Volume 85 ; 85 >
         au < HighWirePressPlugin ; down ; British Medical Bulletin Volume 86 ; 86 >
         au < HighWirePressPlugin ; down ; British Medical Bulletin Volume 87 ; 87 >
         au < HighWirePressPlugin ; down ; British Medical Bulletin Volume 88 ; 88 >
-        au < HighWirePressH20Plugin ; manifest ; British Medical Bulletin Volume 89 ; 89 >
-        au < HighWirePressH20Plugin ; manifest ; British Medical Bulletin Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; testing ; British Medical Bulletin Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; testing ; British Medical Bulletin Volume 90 ; 90 >
 
 
       }
@@ -897,9 +919,11 @@
 
         au < HighWireStrVolPlugin ; down ; Bulletin of the London Mathematical Society Volume 39 ; 39 >
         au < HighWirePressPlugin ; down ; Bulletin of the London Mathematical Society Volume 40 ; 40 >
-        au < HighWirePressH20Plugin ; manifest ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; testing ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; manifest ; Bulletin of the London Mathematical Society Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; manifest ; Bulletin of the London Mathematical Society Volume 43 ; 43 >
 
-      }
+     }
 
     }
 
@@ -931,9 +955,11 @@
         au < HighWirePressPlugin ; doNotProcess ; Cambridge Journal of Economics Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Cambridge Journal of Economics Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Cambridge Journal of Economics Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; Cambridge Journal of Economics Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; testing ; Cambridge Journal of Economics Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; Cambridge Journal of Economics Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; manifest ; Cambridge Journal of Economics Volume 35 ; 35 >
 
-      }
+     }
 
     }
 
@@ -963,11 +989,13 @@
 
         au < HighWirePressPlugin ; exists ; The Cambridge Quarterly Volume 34 ; 34 >
         au < HighWirePressPlugin ; doNotProcess ; The Cambridge Quarterly Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; The Cambridge Quarterly Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; testing ; The Cambridge Quarterly Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; The Cambridge Quarterly Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; manifest ; The Cambridge Quarterly Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; testing ; The Cambridge Quarterly Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; manifest ; The Cambridge Quarterly Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; The Cambridge Quarterly Volume 40 ; 40 >
 
-      }
+     }
 
     }
 
@@ -985,12 +1013,14 @@
         param[base_url] = http://cmlj.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; Capital Markets Law Journal Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; manifest ; Capital Markets Law Journal Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; testing ; Capital Markets Law Journal Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; testing ; Capital Markets Law Journal Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Capital Markets Law Journal Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; Capital Markets Law Journal Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; testing ; Capital Markets Law Journal Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Capital Markets Law Journal Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; Capital Markets Law Journal Volume 6 ; 6 >
 
-      }
+     }
 
     }
 
@@ -1022,9 +1052,11 @@
         au < HighWireStrVolPlugin ; down ; Carcinogenesis Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; Carcinogenesis Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Carcinogenesis Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; manifest ; Carcinogenesis Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; testing ; Carcinogenesis Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; Carcinogenesis Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Carcinogenesis Volume 32 ; 32 >
 
-      }
+     }
 
     }
 
@@ -1056,9 +1088,11 @@
         au < HighWireStrVolPlugin ; down ; Cerebral Cortex Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Cerebral Cortex Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Cerebral Cortex Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; manifest ; Cerebral Cortex Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; testing ; Cerebral Cortex Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; Cerebral Cortex Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; Cerebral Cortex Volume 21 ; 21 >
 
-      }
+     }
 
     }
 
@@ -1088,11 +1122,13 @@
 
         au < HighWireStrVolPlugin ; down ; CESifo Economic Studies Volume 51 ; 51 >
         au < HighWirePressPlugin ; doNotProcess ; CESifo Economic Studies Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; manifest ; CESifo Economic Studies Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; testing ; CESifo Economic Studies Volume 53 ; 53 >
         au < HighWirePressPlugin ; down ; CESifo Economic Studies Volume 54 ; 54 >
-        au < HighWirePressH20Plugin ; manifest ; CESifo Economic Studies Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; testing ; CESifo Economic Studies Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; manifest ; CESifo Economic Studies Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; CESifo Economic Studies Volume 57 ; 57 >
 
-      }
+     }
 
     }
 
@@ -1123,10 +1159,12 @@
         au < HighWireStrVolPlugin ; down ; Chemical Senses Volume 30 ; 30 >
         au < HighWirePressPlugin ; doNotProcess ; Chemical Senses Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Chemical Senses Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; Chemical Senses Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; Chemical Senses Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; testing ; Chemical Senses Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; testing ; Chemical Senses Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; manifest ; Chemical Senses Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; Chemical Senses Volume 36 ; 36 >
 
-      }
+     }
 
     }
 
@@ -1156,7 +1194,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Chinese Journal of International Law Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; Chinese Journal of International Law Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; Chinese Journal of International Law Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; testing ; Chinese Journal of International Law Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Chinese Journal of International Law Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; testing ; Chinese Journal of International Law Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; Chinese Journal of International Law Volume 9 ; 9 >
