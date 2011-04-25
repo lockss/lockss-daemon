@@ -195,6 +195,7 @@
         au < HighWirePressPlugin ; doNotProcess ; American Law and Economics Review Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; testing ; American Law and Economics Review Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; American Law and Economics Review Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; American Law and Economics Review Volume 11 ; 11 >
 
       }
 
@@ -332,6 +333,7 @@
         au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Annals of Oncology Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; testing; Annals of Oncology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; 20 >
 
       }
 
@@ -620,6 +622,7 @@
         au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Brief Treatment and Crisis Intervention Volume 9 ; 9 >
 
       }
 
@@ -688,6 +691,8 @@
         au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
+
       }
 
     }
@@ -721,6 +726,8 @@
         au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; The British Journal for the Philosophy of Science Volume 59 ; 59 >
         au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; The British Journal for the Philosophy of Science Volume 61 ; 61 >
+
       }
 
     }
@@ -1220,6 +1227,8 @@
 
         au < HighWireStrVolPlugin ; down ; Chinese Journal of International Politics Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; testing ; Chinese Journal of International Politics Volume 2 ; 2 >
+        au < HighWirePressH30Plugin ; manifest ; Chinese Journal of International Politics Volume 3 ; 3 >
+
       }
 
     }
@@ -1250,6 +1259,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Communication Theory Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Communication Theory Volume 16 ; 16 >
 
       }
 
@@ -1352,6 +1362,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Contemporary Economic Policy Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; Contemporary Economic Policy Volume 25 ; 25 >
 
       }
 
@@ -1419,6 +1430,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; DNA Research Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; DNA Research Volume 14 ; 14 >
 
       }
 
@@ -1453,6 +1465,7 @@
         au < HighWirePressPlugin ; down ; Early Music Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Early Music Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Early Music Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; manifest ; Early Music Volume 38 ; 38 >
 
       }
 
@@ -1484,6 +1497,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Economic Inquiry Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; Economic Inquiry Volume 45 ; 45 >
 
       }
 
@@ -1518,6 +1532,8 @@
         au < HighWireStrVolPlugin ; down ; ELT Journal Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; ELT Journal Volume 62 ; 62 >
         au < HighWirePressPlugin ; down ; ELT Journal Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; manifest ; ELT Journal Volume 64 ; 64 >
+
       }
 
     }
@@ -1539,6 +1555,7 @@
         au < HighWireStrVolPlugin ; down ; English Historical Review Volume 120 ; 120 >
         au < HighWireStrVolPlugin ; down ; English Historical Review Volume CXXI ; CXXI >
         au < HighWireStrVolPlugin ; down ; English Historical Review Volume CXXII ; CXXII >
+        au < HighWirePressH20Plugin ; manifest ; English Historical Review Volume CXXII ; CXXII >
 
       }
 
@@ -1573,6 +1590,8 @@
         au < HighWirePressPlugin ; down ; Enterprise & Society Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Enterprise & Society Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Enterprise & Society Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Enterprise & Society Volume 11 ; 11 >
+
       }
 
     }
@@ -1603,6 +1622,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Epidemiologic Reviews Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; Epidemiologic Reviews Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Epidemiologic Reviews Volume 29 ; 29 >
 
       }
 
@@ -1635,6 +1655,7 @@
         au < HighWirePressPlugin ; doNotProcess ; ESHRE Monographs 2005 ; 2005 >
         au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2006 ; 2006 >
         au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2007 ; 2007 >
+        au < HighWirePressH20Plugin ; manifest ; ESHRE Monographs 2008 ; 2008 >
 
       }
 
@@ -1667,6 +1688,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Essays in Criticism Volume 55 ; 55 >
         au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 56 ; 56 >
         au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; manifest ; Essays in Criticism Volume 58 ; 58 >
 
       }
 
@@ -1698,6 +1720,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Europace Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; Europace Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; Europace Volume 10 ; 10 >
 
       }
 
@@ -1722,6 +1745,7 @@
         au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; European Heart Journal Volume 29 ; 29 >
 
       }
 
@@ -1758,6 +1782,7 @@
         au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 7 ; 7 >
         au < HighWirePressPlugin ; doNotProcess ; European Heart Journal Supplements Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; European Heart Journal Supplements Volume 10 ; 10 >
 
       }
 
@@ -1789,6 +1814,7 @@
 
         au < HighWireStrVolPlugin ; down ; European Journal of International Law Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; European Journal of International Law Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; European Journal of International Law Volume 18 ; 18 >
 
       }
 
@@ -1820,6 +1846,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; European Journal of Orthodontics Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; down ; European Journal of Orthodontics Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; European Journal of Orthodontics Volume 30 ; 30 >
 
       }
 
@@ -1852,6 +1879,7 @@
         au < HighWireStrVolPlugin ; down ; European Journal of Public Health Volume 15 ; 15 >
         au < HighWirePressPlugin ; doNotProcess ; European Journal of Public Health Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; European Journal of Public Health Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; European Journal of Public Health Volume 18 ; 18 >
 
       }
 
@@ -1907,6 +1935,7 @@
         au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 21 ; 21 >
         au < HighWirePressPlugin ; doNotProcess ; European Sociological Review Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; European Sociological Review Volume 24 ; 24 >
 
       }
 
@@ -1938,6 +1967,7 @@
 
         au < HighWireStrVolPlugin ; down ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
         au < HighWirePressPlugin ; doNotProcess ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
 
       }
 
@@ -1969,6 +1999,7 @@
 
         au < HighWireStrVolPlugin ; down ; Family Practice Volume 22 ; 22 >
         au < HighWirePressPlugin ; doNotProcess ; Family Practice Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Family Practice Volume 24 ; 24 >
 
       }
 
@@ -2001,6 +2032,7 @@
         au < HighWireStrVolPlugin ; down ; Forestry Volume 78 ; 78 >
         au < HighWirePressPlugin ; doNotProcess ; Forestry Volume 79 ; 79 >
         au < HighWireStrVolPlugin ; down ; Forestry Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; manifest ; Forestry Volume 81 ; 81 >
 
       }
 
@@ -2032,6 +2064,7 @@
 
         au < HighWireStrVolPlugin ; down ; Forum for Modern Language Studies Volume 41 ; 41 >
         au < HighWirePressPlugin ; doNotProcess ; Forum for Modern Language Studies Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; manifest ; Forum for Modern Language Studies Volume 43 ; 43 >
 
       }
 
@@ -2063,6 +2096,7 @@
 
         au < HighWireStrVolPlugin ; down ; French History Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; French History Volume 20 ; 20 >
+        au < HighWirePressH21Plugin ; manifest ; French History Volume 21 ; 21 >
 
       }
 
@@ -2095,6 +2129,7 @@
         au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 59 ; 59 >
         au < HighWirePressPlugin ; doNotProcess ; French Studies: A Quarterly Review Volume 60 ; 60 >
         au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; manifest ; French Studies: A Quarterly Review Volume 62 ; 62 >
 
       }
 
@@ -2117,6 +2152,7 @@
         comment = there is no such volume, this was probably an error
 
         au < HighWireStrVolPlugin ; down ; French Studies Bulletin Volume LX ; LX >
+        au < HighWirePressH20Plugin ; manifest ; French Studies Bulletin Volume LX ; LX >
 
       }
 
@@ -2149,6 +2185,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Glycobiology Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Glycobiology Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Glycobiology Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; Glycobiology Volume 18 ; 18 >
 
       }
 
@@ -2181,6 +2218,7 @@
         au < HighWireStrVolPlugin ; down ; Health Education Research Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Health Education Research Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; Health Education Research Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Health Education Research Volume 23 ; 23 >
 
       }
 
@@ -2213,6 +2251,7 @@
         au < HighWireStrVolPlugin ; down ; Health Policy and Planning Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Health Policy and Planning Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; Health Policy and Planning Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Health Policy and Planning Volume 23 ; 23 >
 
       }
 
@@ -2244,6 +2283,7 @@
 
         au < HighWireStrVolPlugin ; down ; Health Promotion International Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Health Promotion International Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Health Promotion International Volume 22 ; 22 >
 
       }
 
@@ -2277,6 +2317,7 @@
         au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 60 ; 60 >
         au < HighWirePressPlugin ; doNotProcess ; History Workshop Journal Volume 61 ; 61 >
         au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; manifest ; History Workshop Journal Volume 63 ; 63 >
 
       }
 
@@ -2298,6 +2339,7 @@
 
         au < HighWireStrVolPlugin ; down ; Holocaust and Genocide Studies Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Holocaust and Genocide Studies Volume 20 ; 20 >
+        au < HighWirePressH21Plugin ; manifest ; Holocaust and Genocide Studies Volume 21 ; 21 >
 
       }
 
@@ -2329,6 +2371,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Human Communication Research Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Human Communication Research Volume 32 ; 32 >
 
       }
 
@@ -2362,6 +2405,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; Human Molecular Genetics Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Human Molecular Genetics Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; Human Molecular Genetics Volume 17 ; 17 >
 
       }
 
@@ -2394,6 +2438,7 @@
         au < HighWireStrVolPlugin ; down ; Human Reproduction Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; Human Reproduction Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; Human Reproduction Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Human Reproduction Volume 23 ; 23 >
 
       }
 
@@ -2426,6 +2471,7 @@
         au < HighWireStrVolPlugin ; down ; Human Reproduction Update Volume 11 ; 11 >
         au < HighWirePressPlugin ; doNotProcess ; Human Reproduction Update Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Human Reproduction Update Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Human Reproduction Update Volume 14 ; 14 >
 
       }
 
@@ -2457,6 +2503,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Human Rights Law Review Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Human Rights Law Review Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; Human Rights Law Review Volume 7 ; 7 >
 
       }
 
@@ -2477,6 +2524,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; ICES Journal of Marine Science Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; manifest ; ICES Journal of Marine Science Volume 65 ; 65 >
 
       }
 
@@ -2499,6 +2547,7 @@
 
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Communications Volume E89-B ; E89-B >
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Communications Volume E90-B ; E90-B >
+        au < HighWirePressH20Plugin ; manifest ; IEICE-Transactions on Communications Volume E90-B ; E90-B >
 
       }
 
@@ -2521,6 +2570,7 @@
 
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Electronics Volume E89-C ; E89-C >
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Electronics Volume E90-C ; E90-C >
+        au < HighWirePressH20Plugin ; manifest ; IEICE-Transactions on Electronics Volume E90-C ; E90-C >
 
       }
 
@@ -2543,6 +2593,7 @@
 
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A ; E89-A >
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
+        au < HighWirePressH20Plugin ; manifest ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
 
       }
 
@@ -2565,6 +2616,7 @@
 
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Information and Systems Volume E89-D ; E89-D >
         au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Information and Systems Volume E90-D ; E90-D >
+        au < HighWirePressH20Plugin ; manifest ; IEICE-Transactions on Information and Systems Volume E90-D ; E90-D >
 
       }
 
@@ -2597,6 +2649,7 @@
         au < HighWireStrVolPlugin ; down ; IMA Journal of Applied Mathematics Volume 70 ; 70 >
         au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
         au < HighWireStrVolPlugin ; down ; IMA Journal of Applied Mathematics Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; manifest ; IMA Journal of Applied Mathematics Volume 73 ; 73 >
 
       }
 
@@ -2629,6 +2682,7 @@
         au < HighWireStrVolPlugin ; down ; IMA Journal of Management Mathematics Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Management Mathematics Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; IMA Journal of Management Mathematics Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; IMA Journal of Management Mathematics Volume 19 ; 19 >
 
       }
 
@@ -2660,6 +2714,7 @@
 
         au < HighWireStrVolPlugin ; down ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 >
         au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 >
 
       }
 
@@ -2695,6 +2750,7 @@
         au < HighWireStrVolPlugin ; down ; IMA Journal of Numerical Analysis Volume 25 ; 25 >
         au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; IMA Journal of Numerical Analysis Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; manifest ; IMA Journal of Numerical Analysis Volume 28 ; 28 >
 
       }
 
@@ -2726,6 +2782,7 @@
 
         au < HighWireStrVolPlugin ; down ; Industrial and Corporate Change Volume 14 ; 14 >
         au < HighWirePressPlugin ; doNotProcess ; Industrial and Corporate Change Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Industrial and Corporate Change Volume 16 ; 16 >
 
       }
 
@@ -2757,6 +2814,7 @@
 
         au < HighWireStrVolPlugin ; down ; Industrial Law Journal Volume 34 ; 34 >
         au < HighWirePressPlugin ; doNotProcess ; Industrial Law Journal Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; Industrial Law Journal Volume 36 ; 36 >
 
       }
 
@@ -2790,6 +2848,7 @@
 
         au < HighWireStrVolPlugin ; down ; Integrative and Comparative Biology Volume 45 ; 45 >
         au < HighWirePressPlugin ; doNotProcess ; Integrative and Comparative Biology Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; manifest ; Integrative and Comparative Biology Volume 47 ; 47 >
 
       }
 
@@ -2823,6 +2882,7 @@
         au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 54 ; 54 >
         au < HighWirePressPlugin ; doNotProcess ; International and Comparative Law Quarterly Volume 55 ; 55 >
         au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; International and Comparative Law Quarterly Volume 57 ; 57 >
 
       }
 
@@ -2854,6 +2914,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; International Immunology Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; International Immunology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; International Immunology Volume 20 ; 20 >
 
       }
 
@@ -2886,6 +2947,7 @@
         au < HighWireStrVolPlugin ; down ; International Journal for Quality in Health Care Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal for Quality in Health Care Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; International Journal for Quality in Health Care Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal for Quality in Health Care Volume 20 ; 20 >
 
       }
 
@@ -2918,6 +2980,7 @@
         au < HighWireStrVolPlugin ; down ; International Journal of Constitutional Law Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Constitutional Law Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; International Journal of Constitutional Law Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Constitutional Law Volume 6 ; 6 >
 
       }
 
@@ -2949,6 +3012,7 @@
 
         au < HighWireStrVolPlugin ; down ; International Journal of Epidemiology Volume 34 ; 34 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Epidemiology Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Epidemiology Volume 36 ; 36 >
 
       }
 
@@ -2982,6 +3046,7 @@
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Law and Information Technology Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; down ; International Journal of Law and Information Technology Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; International Journal of Law and Information Technology Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Law and Information Technology Volume 16 ; 16 >
 
       }
 
@@ -3013,6 +3078,7 @@
 
         au < HighWireStrVolPlugin ; down ; International Journal of Law, Policy and the Family Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
+        au < HighWirePressH21Plugin ; manifest ; International Journal of Law, Policy and the Family Volume 21 ; 21 >
 
       }
 
@@ -3044,6 +3110,7 @@
 
         au < HighWireStrVolPlugin ; down ; International Journal of Lexicography Volume 18 ; 18 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Lexicography Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Lexicography Volume 20 ; 20 >
 
       }
 
@@ -3075,6 +3142,7 @@
 
         au < HighWireStrVolPlugin ; down ; International Journal of Public Opinion Research Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Public Opinion Research Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Public Opinion Research Volume 19 ; 19 >
 
       }
 
@@ -3106,6 +3174,7 @@
 
         au < HighWireStrVolPlugin ; down ; International Journal of Refugee Law Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Refugee Law Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Refugee Law Volume 19 ; 19 >
 
       }
 
@@ -3126,6 +3195,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; International Journal of Transitional Justice Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; International Journal of Transitional Justice Volume 2 ; 2 >
 
       }
 
@@ -3158,6 +3228,7 @@
         au < HighWireStrVolPlugin ; down ; International Relations of the Asia-Pacific Volume 5 ; 5 >
         au < HighWirePressPlugin ; doNotProcess ; International Relations of the Asia-Pacific Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; International Relations of the Asia-Pacific Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; International Relations of the Asia-Pacific Volume 8 ; 8 >
 
       }
 
@@ -3190,6 +3261,7 @@
         au < HighWireStrVolPlugin ; down ; ITNOW Volume 47 ; 47 >
         au < HighWirePressPlugin ; doNotProcess ; ITNOW Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; down ; ITNOW Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; manifest ; ITNOW Volume 50 ; 50 >
 
       }
 
@@ -3224,6 +3296,7 @@
         au < HighWireStrVolPlugin ; down ; Japanese Journal of Clinical Oncology Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; Japanese Journal of Clinical Oncology Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Japanese Journal of Clinical Oncology Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; Japanese Journal of Clinical Oncology Volume 40 ; 40 >
 
       }
 
@@ -3246,6 +3319,7 @@
         au < HighWireStrVolPlugin ; down ; JNCI Journal of the National Cancer Institute Volume 99 ; 99 >
         au < HighWirePressH20Plugin ; testing ; JNCI Journal of the National Cancer Institute Volume 100 ; 100 >
         au < HighWirePressPlugin ; down ; JNCI Journal of the National Cancer Institute Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; manifest ; JNCI Journal of the National Cancer Institute Volume 102 ; 102 >
 
       }
 
@@ -3280,6 +3354,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of African Economies Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; testing ; Journal of African Economies Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Journal of African Economies Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of African Economies Volume 19 ; 19 >
 
       }
 
@@ -3327,6 +3402,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 >
         au < HighWirePressPlugin ; down ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 >
         au < HighWirePressPlugin ; down ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 >
 
       }
 
@@ -3364,6 +3440,7 @@
         au < HighWirePressPlugin ; down ; The Journal of Biochemistry Volume 144 ; 144 >
         au < HighWirePressPlugin ; down ; The Journal of Biochemistry Volume 145 ; 145 >
         au < HighWirePressPlugin ; down ; The Journal of Biochemistry Volume 146 ; 146 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Biochemistry Volume 147 ; 147 >
 
       }
 
@@ -3395,6 +3472,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Journal of Communication Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Communication Volume 56 ; 56 >
 
       }
 
@@ -3429,6 +3507,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Competition Law and Economics Volume 3 ; 3 >
         au < HighWirePressPlugin ; down ; Journal of Competition Law and Economics Volume 4 ; 4 >
         au < HighWirePressPlugin ; down ; Journal of Competition Law and Economics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Competition Law and Economics Volume 6 ; 6 >
 
       }
 
@@ -3463,6 +3542,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Conflict and Security Law Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Journal of Conflict and Security Law Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Conflict and Security Law Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Conflict and Security Law Volume 15 ; 15 >
 
       }
 
@@ -3497,6 +3577,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 >
 
       }
 
@@ -3531,6 +3612,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Design History Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Journal of Design History Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Journal of Design History Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Design History Volume 23 ; 23 >
 
       }
 
@@ -3565,6 +3647,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Economic Geography Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Journal of Economic Geography Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of Economic Geography Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Economic Geography Volume 10 ; 10 >
 
       }
 
@@ -3599,6 +3682,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Electron Microscopy Volume 56 ; 56 >
         au < HighWirePressPlugin ; down ; Journal of Electron Microscopy Volume 57 ; 57 >
         au < HighWirePressPlugin ; down ; Journal of Electron Microscopy Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Electron Microscopy Volume 59 ; 59 >
 
       }
 
@@ -3630,6 +3714,7 @@
 
         au < HighWireStrVolPlugin ; down ; Journal of Environmental Law Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Environmental Law Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Environmental Law Volume 19 ; 19 >
 
       }
 
@@ -3662,6 +3747,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Experimental Botany Volume 56 ; 56 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Experimental Botany Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; down ; Journal of Experimental Botany Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Experimental Botany Volume 59 ; 59 >
 
       }
 
@@ -3694,6 +3780,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Financial Econometrics Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Financial Econometrics Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; Journal of Financial Econometrics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Financial Econometrics Volume 6 ; 6 >
 
       }
 
@@ -3726,6 +3813,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Heredity Volume 96 ; 96 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Heredity Volume 97 ; 97 >
         au < HighWireStrVolPlugin ; down ; Journal of Heredity Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Heredity Volume 99 ; 99 >
 
       }
 
@@ -3749,6 +3837,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Intellectual Property Law & Practice Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 >
         au < HighWirePressPlugin ; down ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 >
 
       }
 
@@ -3783,6 +3872,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of International Criminal Justice Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; Journal of International Criminal Justice Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Journal of International Criminal Justice Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of International Criminal Justice Volume 8 ; 8 >
 
       }
 
@@ -3817,6 +3907,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of International Economic Law Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Journal of International Economic Law Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Journal of International Economic Law Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of International Economic Law Volume 13 ; 13 >
 
       }
 
@@ -3851,6 +3942,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Islamic Studies Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Journal of Islamic Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Islamic Studies Volume 20 ; 20 >
+        au < HighWirePressH21Plugin ; manifest ; Journal of Islamic Studies Volume 21 ; 21 >
 
       }
 
@@ -3885,6 +3977,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Journal of Law, Economics, and Organization Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Journal of Law, Economics, and Organization Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Law, Economics, and Organization Volume 26 ; 26 >
 
       }
 
@@ -3919,6 +4012,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Logic and Computation Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Journal of Logic and Computation Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Journal of Logic and Computation Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Logic and Computation Volume 20 ; 20 >
 
       }
 
@@ -3953,6 +4047,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Molluscan Studies Volume 73 ; 73 >
         au < HighWirePressH20Plugin ; testing ; Journal of Molluscan Studies Volume 74 ; 74 >
         au < HighWirePressPlugin ; down ; Journal of Molluscan Studies Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Molluscan Studies Volume 76 ; 76 >
 
       }
 
@@ -3987,6 +4082,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Pediatric Psychology Volume 32 ; 32 >
         au < HighWirePressH20Plugin ; testing ; Journal of Pediatric Psychology Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Journal of Pediatric Psychology Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Pediatric Psychology Volume 35 ; 35 >
 
       }
 
@@ -4021,6 +4117,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Petrology Volume 48 ; 48 >
         au < HighWirePressH20Plugin ; testing ; Journal of Petrology Volume 49 ; 49 >
         au < HighWirePressPlugin ; down ; Journal of Petrology Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Petrology Volume 51 ; 51 >
 
       }
 
@@ -4055,6 +4152,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Plankton Research Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; testing ; Journal of Plankton Research Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Journal of Plankton Research Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Plankton Research Volume 32 ; 32 >
 
       }
 
@@ -4089,6 +4187,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Public Administration Research and Theory Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; testing ; Journal of Public Administration Research and Theory Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Public Administration Research and Theory Volume 20 ; 20 >
 
       }
 
@@ -4123,6 +4222,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Public Health Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; testing ; Journal of Public Health Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Journal of Public Health Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Public Health Volume 32 ; 32 >
 
       }
 
@@ -4157,6 +4257,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Refugee Studies Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; testing ; Journal of Refugee Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Journal of Refugee Studies Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Refugee Studies Volume 23 ; 23 >
 
       }
 
@@ -4191,6 +4292,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of Semantics Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; testing ; Journal of Semantics Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; Journal of Semantics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Semantics Volume 27 ; 27 >
 
       }
 
@@ -4225,6 +4327,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 52 ; 52 >
         au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 53 ; 53 >
         au < HighWirePressPlugin ; down ; Journal of Semitic Studies Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Semitic Studies Volume 55 ; 55 >
 
       }
 
@@ -4249,6 +4352,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of the American Academy of Religion Volume 75 ; 75 >
         au < HighWirePressPlugin ; down ; Journal of the American Academy of Religion Volume 76 ; 76 >
         au < HighWirePressPlugin ; down ; Journal of the American Academy of Religion Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the American Academy of Religion Volume 78 ; 78 >
 
       }
 
@@ -4283,6 +4387,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of the History of Collections Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of the History of Collections Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Journal of the History of Collections Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the History of Collections Volume 22 ; 22 >
 
       }
 
@@ -4317,6 +4422,7 @@
         au < HighWireStrVolPlugin ; down ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 >
         au < HighWirePressPlugin ; down ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 >
         au < HighWirePressPlugin ; down ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 >
 
       }
 
@@ -4337,6 +4443,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; down ; Journal of Human Rights Practice Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Human Rights Practice Volume 2 ; 2 >
 
       }
   
@@ -4371,6 +4478,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of the ICRU Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; testing ; Journal of the ICRU Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of the ICRU Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the ICRU Volume 10 ; 10 >
 
       }
 
@@ -4396,6 +4504,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of the London Mathematical Society Volume 78 ; 78 >
         au < HighWirePressPlugin ; down ; Journal of the London Mathematical Society Volume 79 ; 79 >
         au < HighWirePressPlugin ; down ; Journal of the London Mathematical Society Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the London Mathematical Society Volume 81 ; 81 >
 
       }
 
@@ -4418,6 +4527,7 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Medicine and Philosophy Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Journal of Medicine and Philosophy Volume 34 ; 34 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Medicine and Philosophy Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Medicine and Philosophy Volume 36 ; 36 >
 
       }
 
@@ -4439,6 +4549,7 @@
 
         au < HighWirePressPlugin ; down ; Journal of Molecular Cell Biology Volume 1 ; 1 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Molecular Cell Biology Volume 2 ; 2 >
+        au < HighWirePressH30Plugin ; manifest ; Journal of Molecular Cell Biology Volume 3 ; 3 >
 
       }
 
@@ -4472,6 +4583,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Journal of the Royal Musical Association Volume 130 ; 130 >
         au < HighWireStrVolPlugin ; down ; Journal of the Royal Musical Association Volume 131 ; 131 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of the Royal Musical Association Volume 132 ; 132 >
 
       }
 
@@ -4506,6 +4618,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; The Journal of Theological Studies Volume 58 ; 58 >
         au < HighWirePressH20Plugin ; testing ; The Journal of Theological Studies Volume 59 ; 59 >
         au < HighWirePressPlugin ; down ; The Journal of Theological Studies Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Theological Studies Volume 61 ; 61 >
 
       }
 
@@ -4527,6 +4640,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressH20Plugin ; testing ; Journal of Topology Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Journal of Topology Volume 2 ; 2 >
+        au < HighWirePressH30Plugin ; manifest ; Journal of Topology Volume 3 ; 3 >
 
       }
 
@@ -4562,6 +4676,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Journal of Tropical Pediatrics Volume 54 ; 54 >
         au < HighWirePressPlugin ; down ; Journal of Tropical Pediatrics Volume 55 ; 55 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Tropical Pediatrics Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Tropical Pediatrics Volume 57 ; 57 >
 
       }
 
@@ -4596,6 +4711,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Law, Probability and Risk Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Law, Probability and Risk Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Law, Probability and Risk Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Law, Probability and Risk Volume 9 ; 9 >
 
       }
 
@@ -4630,6 +4746,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; The Library Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; The Library Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; The Library Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; The Library Volume 11 ; 11 >
 
       }
 
@@ -4664,6 +4781,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Literary and Linguistic Computing Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Literary and Linguistic Computing Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Literary and Linguistic Computing Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; Literary and Linguistic Computing Volume 25 ; 25 >
 
       }
 
@@ -4687,6 +4805,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Literary Imagination Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Literary Imagination Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Literary Imagination Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Literary Imagination Volume 12 ; 12 >
 
       }
 
@@ -4721,6 +4840,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Literature and Theology Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Literature and Theology Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Literature and Theology Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Literature and Theology Volume 24 ; 24 >
 
       }
 
@@ -4755,6 +4875,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Logic Journal of the IGPL Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Logic Journal of the IGPL Volume 16 ; 16 >
         au < HighWirePressPlugin ; notReady ; Logic Journal of the IGPL Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; Logic Journal of the IGPL Volume 18 ; 18 >
 
       }
 
@@ -4789,6 +4910,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Mathematical Medicine and Biology Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Mathematical Medicine and Biology Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; Mathematical Medicine and Biology Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; Mathematical Medicine and Biology Volume 27 ; 27 >
 
       }
 
@@ -4823,6 +4945,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Medical Law Review Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Medical Law Review Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Medical Law Review Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; Medical Law Review Volume 18 ; 18 >
 
       }
 
@@ -4857,6 +4980,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Mind Volume 116 ; 116 >
         au < HighWirePressPlugin ; down ; Mind Volume 117 ; 117 >
         au < HighWirePressH20Plugin ; testing ; Mind Volume 118 ; 118 >
+        au < HighWirePressH20Plugin ; manifest ; Mind Volume 119 ; 119 >
+
       }
 
     }
@@ -4890,6 +5015,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Modern Judaism Volume 27 ; 27 >
         au < HighWirePressPlugin ; down ; Modern Judaism Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Modern Judaism Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; Modern Judaism Volume 30 ; 30 >
 
       }
 
@@ -4925,6 +5051,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Molecular Biology and Evolution Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; Molecular Biology and Evolution Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; testing ; Molecular Biology and Evolution Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; manifest ; Molecular Biology and Evolution Volume 28 ; 28 >
 
       }
 
@@ -4950,6 +5077,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Molecular Human Reproduction Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Molecular Human Reproduction Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; testing ; Molecular Human Reproduction Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; Molecular Human Reproduction Volume 17 ; 17 >
 
       }
 
@@ -4972,6 +5100,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Molecular Plant Volume 1 ; 1 >
         au < HighWirePressPlugin ; exists ; Molecular Plant Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; testing ; Molecular Plant Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; Molecular Plant Volume 4 ; 4 >
 
       }
 
@@ -5007,6 +5136,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Music and Letters Volume 89 ; 89 >
         au < HighWirePressPlugin ; down ; Music and Letters Volume 90 ; 90 >
         au < HighWirePressPlugin ; doNotProcess ; Music and Letters Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; manifest ; Music and Letters Volume 92 ; 92 >
 
       }
 
@@ -5041,7 +5171,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; testing ; The Musical Quarterly Volume 89 ; 89 >
         au < HighWireStrVolPlugin ; testing ; The Musical Quarterly Volume 90 ; 90 >        
         au < HighWirePressPlugin ; down ; The Musical Quarterly Volume 91 ; 91 >
-        au < HighWireStrVolPlugin ; testing ; The Musical Quarterly Volume 92 ; 92 >        
+        au < HighWireStrVolPlugin ; testing ; The Musical Quarterly Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; manifest ; The Musical Quarterly Volume 93 ; 93 >
 
       }
 
@@ -5077,6 +5208,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Mutagenesis Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Mutagenesis Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; testing ; Mutagenesis Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Mutagenesis Volume 26 ; 26 >
+
       }
 
     }
@@ -5098,6 +5231,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; NDT Plus Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; NDT Plus Volume 2 ; 2 >
         au < HighWirePressPlugin ; doNotProcess ; NDT Plus Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; NDT Plus Volume 4 ; 4 >
 
       }
 
@@ -5133,6 +5267,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; testing ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Nephrology Dialysis Transplantation Volume 26 ; 26 >
 
       }
 
@@ -5167,6 +5302,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Notes and Queries Volume 54 ; 54 >
         au < HighWirePressPlugin ; down ; Notes and Queries Volume 55 ; 55 >
         au < HighWirePressPlugin ; down ; Notes and Queries Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; Notes and Queries Volume 57 ; 57 >
 
       }
 
@@ -5201,7 +5337,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Nucleic Acids Research Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Nucleic Acids Research Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; testing ; Nucleic Acids Research Volume 38 ; 38 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Nucleic Acids Research Volume 39 ; 39 >
+
       }
 
     }
@@ -5236,6 +5373,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Nucleic Acids Symposium Series Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; Nucleic Acids Symposium Series Volume 52 ; 52 >
         au < HighWirePressPlugin ; down ; Nucleic Acids Symposium Series Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; manifest ; Nucleic Acids Symposium Series Volume 54 ; 54 >
 
       }
 
@@ -5258,6 +5396,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Nicotine and Tobacco Research Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; testing ; Nicotine and Tobacco Research Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; testing ; Nicotine and Tobacco Research Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Nicotine and Tobacco Research Volume 13 ; 13 >
+
       }
 
     }
@@ -5300,6 +5440,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Occupational Medicine Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; Occupational Medicine Volume 59 ; 59 >
         au < HighWirePressH20Plugin ; testing ; Occupational Medicine Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; Occupational Medicine Volume 61 ; 61 >
+
       }
 
     }
@@ -5333,6 +5475,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; The Opera Quarterly Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; The Opera Quarterly Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; The Opera Quarterly Volume 26 ; 26 >
 
       }
 
@@ -5355,6 +5498,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; The Oral History Review Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; The Oral History Review Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; The Oral History Review Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; manifest ; The Oral History Review Volume 37 ; 37 >
 
       }
       
@@ -5390,7 +5534,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Oxford Art Journal Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Oxford Art Journal Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Oxford Art Journal Volume 32 ; 32 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Oxford Art Journal Volume 33 ; 33 >
+
       }
 
     }
@@ -5425,6 +5570,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Oxford Economic Papers Volume 60 ; 60 >
         au < HighWirePressPlugin ; down ; Oxford Economic Papers Volume 61 ; 61 >
         au < HighWirePressH20Plugin ; testing ; Oxford Economic Papers Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; manifest ; Oxford Economic Papers Volume 63 ; 63 >
+
       }
 
     }
@@ -5458,6 +5605,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Oxford Journal of Legal Studies Volume 27 ; 27 >
         au < HighWirePressPlugin ; down ; Oxford Journal of Legal Studies Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Oxford Journal of Legal Studies Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; Oxford Journal of Legal Studies Volume 30 ; 30 >
 
       }
 
@@ -5492,6 +5640,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Oxford Review of Economic Policy Volume 26 ; 26 >
 
       }
 
@@ -5527,6 +5676,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Parliamentary Affairs Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; Parliamentary Affairs Volume 62 ; 62 >
         au < HighWirePressH20Plugin ; testing ; Parliamentary Affairs Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; manifest ; Parliamentary Affairs Volume 64 ; 64 >
 
       }
 
@@ -5576,6 +5726,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Past & Present Volume 203 ; 203 >
         au < HighWirePressH20Plugin ; testing ; Past & Present Volume 204 ; 204 >
         au < HighWirePressH20Plugin ; testing ; Past & Present Volume 205 ; 205 >
+        au < HighWirePressH20Plugin ; manifest ; Past & Present Volume 206 ; 206 >
+
       }
 
     }
@@ -5610,7 +5762,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; Philosophia Mathematica Volume 18 ; 18 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Philosophia Mathematica Volume 19 ; 19 >
+
       }
 
     }
@@ -5644,6 +5797,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; down ; Plant and Cell Physiology Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; testing ; Plant and Cell Physiology Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; manifest ; Plant and Cell Physiology Volume 52 ; 52 >
 
       }
 
@@ -5666,6 +5820,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Policing: A Journal of Policy and Practice Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Policing: A Journal of Policy and Practice Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Policing: A Journal of Policy and Practice Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; Policing: A Journal of Policy and Practice Volume 4 ; 4 >
 
       }
 
@@ -5701,7 +5856,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Political Analysis Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Political Analysis Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 18 ; 18 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Political Analysis Volume 19 ; 19 >
+
       }
 
     }
@@ -5727,6 +5883,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
         au < HighWirePressPlugin ; down ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
         au < HighWirePressH20Plugin ; testing ; Proceedings of the London Mathematical Society Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; manifest ; Proceedings of the London Mathematical Society Volume 101 ; 101 >
 
       }
 
@@ -5762,6 +5919,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Protein Engineering Design and Selection Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Protein Engineering Design and Selection Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; testing ; Protein Engineering Design and Selection Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Protein Engineering Design and Selection Volume 24 ; 24 >
 
       }
 
@@ -5782,7 +5940,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
   
         au < HighWirePressPlugin ; down ; Public Health Ethics Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Public Health Ethics Volume 2 ; 2 >
- 
+        au < HighWirePressH30Plugin ; manifest ; Public Health Ethics Volume 3 ; 3 >
+
       }
  
   }
@@ -5817,6 +5976,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Public Opinion Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; down ; Public Opinion Quarterly Volume 73 ; 73 >
         au < HighWirePressH20Plugin ; testing ; Public Opinion Quarterly Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; manifest ; Public Opinion Quarterly Volume 75 ; 75 >
 
       }
 
@@ -5851,6 +6011,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Publius: The Journal of Federalism Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Publius: The Journal of Federalism Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; testing ; Publius: The Journal of Federalism Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; Publius: The Journal of Federalism Volume 41 ; 41 >
 
       }
 
@@ -5886,6 +6047,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; QJM: An International Journal of Medicine Volume 101 ; 101 >
         au < HighWirePressPlugin ; down ; QJM: An International Journal of Medicine Volume 102 ; 102 >
         au < HighWirePressH20Plugin ; testing ; QJM: An International Journal of Medicine Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; manifest ; QJM: An International Journal of Medicine Volume 104 ; 104 >
 
       }
 
@@ -5946,6 +6108,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
         au < HighWirePressPlugin ; doNotProcess ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; manifest ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 >
 
       }
 
@@ -6001,6 +6164,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 136 ; 136 >
         au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 137 ; 137 >
         au < HighWirePressPlugin ; doNotProcess ; Radiation Protection Dosimetry Volume 138 ; 138 >
+        au < HighWirePressH20Plugin ; manifest ; Radiation Protection Dosimetry Volume 139 ; 139 >
+
       }
 
     }
@@ -6034,6 +6199,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; Refugee Survey Quarterly Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Refugee Survey Quarterly Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; testing ; Refugee Survey Quarterly Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Refugee Survey Quarterly Volume 29 ; 29 >
 
       }
 
@@ -6076,6 +6242,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressH20Plugin ; testing ; The Review of English Studies Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; The Review of English Studies Volume 59 ; 59 >
         au < HighWirePressH20Plugin ; testing ; The Review of English Studies Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; The Review of English Studies Volume 61 ; 61 >
 
       }
 
@@ -6099,6 +6266,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Review of Environmental Economics and Policy Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; testing ; Review of Environmental Economics and Policy Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Environmental Economics and Policy Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Review of Environmental Economics and Policy Volume 5 ; 5 >
 
       }
 
@@ -6122,6 +6290,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Review of Finance Volume 12 ; 12 >
         au < HighWirePressPlugin ; testing ; Review of Finance Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Review of Finance Volume 15 ; 15 >
 
       }
 
@@ -6157,7 +6326,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Review of Financial Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 22 ; 22 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 23 ; 23 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Review of Financial Studies Volume 24 ; 24 >
+
       }
 
     }
@@ -6181,6 +6351,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Rheumatology Volume 47 ; 47 >
         au < HighWirePressPlugin ; doNotProcess ; Rheumatology Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Rheumatology Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; manifest ; Rheumatology Volume 50 ; 50 >
 
       }
 
@@ -6216,6 +6387,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; testing ; Schizophrenia Bulletin Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; manifest ; Schizophrenia Bulletin Volume 37 ; 37 >
 
       }
 
@@ -6250,6 +6422,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Screen Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Screen Volume 49 ; 49 >
         au < HighWirePressH20Plugin ; testing ; Screen Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; manifest ; Screen Volume 51 ; 51 >
 
       }
 
@@ -6273,6 +6446,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; testing ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 >
 
       }
 
@@ -6307,6 +6481,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Social History of Medicine Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; testing ; Social History of Medicine Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Social History of Medicine Volume 23 ; 23 >
 
       }
 
@@ -6341,6 +6516,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Social Politics: International Studies in Gender, State and Society Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; testing ; Social Politics: International Studies in Gender, State and Society Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; Social Politics: International Studies in Gender, State and Society Volume 17 ; 17 >
 
       }
 
@@ -6375,6 +6551,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Social Science Japan Journal Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; testing ; Social Science Japan Journal Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Social Science Japan Journal Volume 13 ; 13 >
 
       }
 
@@ -6410,6 +6587,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Socio-Economic Review Volume 6 ; 6 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 7 ; 7 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Socio-Economic Review Volume 9 ; 9 >
 
       }
 
@@ -6444,6 +6622,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Statute Law Review Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Statute Law Review Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; testing ; Statute Law Review Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; Statute Law Review Volume 31 ; 31 >
 
       }
 
@@ -6478,6 +6657,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Teaching Mathematics and its Applications Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; testing ; Teaching Mathematics and its Applications Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Teaching Mathematics and its Applications Volume 29 ; 29 >
 
       }
 
@@ -6538,7 +6718,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 111 ; 111 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 112 ; 112 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 113 ; 113 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Toxicological Sciences Volume 114 ; 114 >
+
       }
 
     }
@@ -6559,7 +6740,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Tree Physiology Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Tree Physiology Volume 30 ; 30 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Tree Physiology Volume 31 ; 31 >
+
       }
 
     }
@@ -6583,7 +6765,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; testing ; Trusts & Trustees Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Trusts & Trustees Volume 16 ; 16 >
-        
+        au < HighWirePressH20Plugin ; manifest ; Trusts & Trustees Volume 17 ; 17 >
+
       }
 
     }
@@ -6617,6 +6800,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; Twentieth Century British History Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Twentieth Century British History Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; testing ; Twentieth Century British History Volume 20 ; 20 >
+        au < HighWirePressH21Plugin ; manifest ; Twentieth Century British History Volume 21 ; 21 >
 
       }
 
@@ -6652,6 +6836,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The World Bank Economic Review Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; The World Bank Economic Review Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; testing ; The World Bank Economic Review Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; The World Bank Economic Review Volume 24 ; 24 >
 
       }
 
@@ -6686,6 +6871,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The World Bank Research Observer Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; The World Bank Research Observer Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; testing ; The World Bank Research Observer Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; The World Bank Research Observer Volume 25 ; 25 >
 
       }
 
@@ -6720,6 +6906,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 >
 
       }
 
@@ -6754,7 +6941,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The Year's Work in English Studies Volume 86 ; 86 >
         au < HighWirePressPlugin ; down ; The Year's Work in English Studies Volume 87 ; 87 >
         au < HighWirePressPlugin ; down ; The Year's Work in English Studies Volume 88 ; 88 >
-        
+        au < HighWirePressH20Plugin ; manifest ; The Year's Work in English Studies Volume 89 ; 89 >
+
       }
 
     }
