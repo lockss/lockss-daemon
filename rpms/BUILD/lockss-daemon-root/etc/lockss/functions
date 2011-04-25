@@ -45,6 +45,10 @@ set_lockss_user () {
 }
 
 set_variables () {
+    if [ "X${1}" = X -o "X${1}" = Xroot ] ; then
+       echo "set_variables needs a non-root argument"
+       exit 1
+    fi
     OS_TYPE=`uname -s`
     case ${OS_TYPE} in
     SunOS)
@@ -135,5 +139,49 @@ unset_variables () {
     CONFIG_SCRIPT=
     LOCKSS_SSL_CONFIG=
     RUN_DIR=
+}
+
+set_java_heap () {
+    case `uname -s` in
+    Linux)
+        # Use 2/3 of physical memory for all daemons combined
+        # look in /proc/meminfo for "MemTotal:      1002108 kB"
+        if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ] ; then
+            MEM_IN_KB=`sed -n -e 's/MemTotal:[     ]*\([0-9]*\) kB/\1/p' </proc/meminfo`
+            MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' 2 \) / \( 3 '*' ${DAEMON_COUNT} \)`
+            MEM_IN_MB=`expr ${MEM_IN_KB} '/' 1024`
+            if [ ${MEM_IN_MB} -lt ${MIN_JAVA_HEAP_IN_MB} ]; then
+                MEM_IN_MB=${MIN_JAVA_HEAP_IN_MB}
+            fi
+            if [ ${MEM_IN_MB} -gt ${MAX_JAVA_HEAP_IN_MB} ]; then
+                MEM_IN_MB=${MAX_JAVA_HEAP_IN_MB}
+            fi
+            LOCKSS_JAVA_HEAP=${MEM_IN_MB}m
+        elif [ "X${DEFAULT_JAVA_HEAP_IN_MB}" != X ] ; then
+            LOCKSS_JAVA_HEAP=${DEFAULT_JAVA_HEAP_IN_MB}m
+	else
+	    LOCKSS_JAVA_HEAP=500m
+        fi
+        ;;
+    SunOS)
+        # XXX figure out how to size physmem on Solaris
+        if [ "X${DEFAULT_JAVA_HEAP_IN_MB}" != X ] ; then
+            LOCKSS_JAVA_HEAP=${DEFAULT_JAVA_HEAP_IN_MB}m
+	else
+	    LOCKSS_JAVA_HEAP=500m
+        fi
+	;;
+    esac
+}
+
+# True if argument is accessible only by root
+is_root_only() {
+    RET=1
+    RES=`find ${1} -user root -a ! -perm /077`
+    if [ "X${RES}" = "X${1}" ]
+    then
+	RET=0
+    fi
+    return ${RET}
 }
 

@@ -4,7 +4,7 @@
 # tested on both Linux and Solaris.
 if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
 then
-    . ${LOCKSS_HOME}/etc/lockss/functions
+    . ${LOCKSS_HOME}/etc/lockss/functions # XXX eliminate LOCKSS_HOME
 elif [ -f /etc/lockss/functions ]
 then
     . /etc/lockss/functions
@@ -16,11 +16,17 @@ else
     exit 1
 fi
 
-if [ "X$1" = Xwait ]; then
+MIN_JAVA_HEAP_IN_MB=200
+MAX_JAVA_HEAP_IN_MB=1536
+DEFAULT_JAVA_HEAP_IN_MB=500
+DEFAULT_TEST_GROUP=prod
+
+if [ "X${1}" = Xwait ]; then
     WAIT=Y
+    shift
 fi
-if [ "X${2}" != X ]; then
-    FLAG_FILE=${2}
+if [ "X${1}" != X ]; then
+    FLAG_FILE=${1}
 else
     echo "FLAG_FILE not set"
     exit 1
@@ -31,15 +37,14 @@ if [ "X${USER}" = X ]; then
 fi
 set_lockss_user ${USER}
 set_variables ${USER}
-# XXX watchdog monitoring disabled for 1.48
-#if [ "${WATCHDOG}X" = X ]
-#then
-#    WATCHDOG=/tmp/lockss.${USER}.watchdog
-#fi
-#if [ "${WATCHDOG_SECS}X" = X ]
-#then
-#    WATCHDOG_SECS=60
-#fi
+if [ "${WATCHDOG}X" = X ]
+then
+    WATCHDOG=/tmp/lockss.${USER}.watchdog
+fi
+if [ "${WATCHDOG_SECS}X" = X ]
+then
+    WATCHDOG_SECS=60
+fi
 # Is a daemon running as ${USER}?
 if [ "${WATCHDOG}X" != X -a -f "${WATCHDOG}" ]
 then
@@ -130,39 +135,21 @@ for A in ${LOCKSS_USER}
 do
     DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
 done
-NUMERATOR=2
-if [ "${DAEMON_COUNT}X" = 2X ]
-then
-    NUMERATOR=1
-fi
 # Default is to use  2/3 of physical memory for all daemons combined.
 # Set LOCKSS_JAVA_HEAP to override.
-#LOCKSS_JAVA_HEAP=500m
-MIN_JAVA_HEAP_IN_MB=200
-MAX_JAVA_HEAP_IN_MB=1536
-OS_TYPE=`uname -s`
-case ${OS_TYPE} in
-Linux)          
-    # look in /proc/meminfo for "MemTotal:      1002108 kB"
-    if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ] ; then
-        MEM_IN_KB=`sed -n -e 's/MemTotal:[     ]*\([0-9]*\) kB/\1/p' </proc/meminfo`
-        MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
-        MEM_IN_MB=`expr ${MEM_IN_KB} '/' 1024`
-        if [ ${MEM_IN_MB} -lt ${MIN_JAVA_HEAP_IN_MB} ]; then
-            MEM_IN_MB=${MIN_JAVA_HEAP_IN_MB}
-        fi
-        if [ ${MEM_IN_MB} -gt ${MAX_JAVA_HEAP_IN_MB} ]; then
-            MEM_IN_MB=${MAX_JAVA_HEAP_IN_MB}
-        fi
-        LOCKSS_JAVA_HEAP=${MEM_IN_MB}m
-    fi
-    ;;
-esac
+set_java_heap
 if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]; then
     CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
 fi
 if [ -f ${CFG_FILE} ]; then
-    . ${CFG_FILE}
+    # CFG_FILE should only set environment variables - avoid executing it
+    TMP_CFG_FILE=`mktemp /tmp/CFG_FILE_XXXXXX`
+    for KEY in `sed -n 's/^\([A-Z0-9_]*\)=.*$/\1/p' <${CFG_FILE}` ; do
+        VALUE=`sed -n -e '/\`/d' -e /${KEY}=/s///p <${CFG_FILE}`
+        echo ${KEY}=${VALUE}
+    done >${TMP_CFG_FILE}
+    . ${TMP_CFG_FILE}
+    rm -f ${TMP_CFG_FILE}
 else
     echo "${CFG_FILE} missing; run ${CFG_SCRIPT}" >>${LOG_FILE}
     exit 1
@@ -183,18 +170,18 @@ if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
 fi
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
 #    -p <url1> [-p <url2> ...]
-if [ "X${LOCKSS_PROPS_URL}" = "X-*" ]; then
+case "X${LOCKSS_PROPS_URL}" in
+X-p*)
     DAEMON_ARGS="${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
-else
+    ;;
+*)
     DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
-fi
-if [ "X${LOCKSS_SSL_CONFIG}" != "X" -a -s ${LOCKSS_SSL_CONFIG} ]; then
-    DAEMON_ARGS="${DAEMON_ARGS} -p ${LOCKSS_SSL_CONFIG}"
-fi
+    ;;
+esac
 if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
     DAEMON_ARGS="-g ${LOCKSS_TEST_GROUP} ${DAEMON_ARGS}"
 else
-    DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
+    DAEMON_ARGS="-g ${DEFAULT_TEST_GROUP} ${DAEMON_ARGS}"
 fi
 if [ "X${LOCKSS_EXTERNAL_IPADDR}" != X ]; then
     LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_EXTERNAL_IPADDR}]:${LOCKSS_V3_PORT}"
@@ -202,17 +189,19 @@ else
     LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
 fi
 #LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
-if [ "X$LOCKSS_CLEAR_TMPDIR" = Xyes ]; then
+case ${LOCKSS_CLEAR_TMPDIR} in
+yes | Yes | YES )
     case "X${LOCKSS_TMPDIR}" in
     X | X/tmp | X/var/tmp )
         # don't clear if unset, or /tmp or /var/tmp
         ;;
     * )
         echo "Clearing ${LOCKSS_TMPDIR}" >> ${LOG_FILE}
-        (cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE}
+        (cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE} # XXX delete tree from unzip
         ;;
     esac
-fi
+    ;;
+esac
 cat >${LOCAL_TXT} <<EOF
 org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
 org.lockss.platform.v3.identity=${LOCKSS_V3_IDENTITY}
@@ -236,7 +225,7 @@ org.lockss.platform.watchdog.interval=${WATCHDOG_SECS}s
 org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 org.lockss.config.serverAuthKeystore=${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}
 EOF
-cd ${LOCKSS_HOME}/
+cd ${LOCKSS_HOME}
 echo "Starting daemon at `date`" >> ${LOG_FILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
 echo $! >${PID_FILE}

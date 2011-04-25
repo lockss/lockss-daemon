@@ -6,19 +6,21 @@
 # and Solaris.
 
 is_secure() {
-    IS_SECURE_TMPFILE=`mktemp /tmp/runssl.XXXXX`
-    IS_SECURE_RET=0
-    ls -l ${1} >${IS_SECURE_TMPFILE}
-    read A B C D E <${IS_SECURE_TMPFILE}
-    if [ "X${A}" != "X-rwxr-xr-x" -o "X${C}" != "Xroot" ]; then
-        IS_SECURE_RET=1
+    RET=1
+    RES=`find ${1} -user root -a ! -perm /022`
+    if [ "X${RES}" = "X${1}" ]
+    then
+	RET=0
     fi
-    rm -f ${IS_SECURE_TMPFILE}
-    return ${IS_SECURE_RET}
+    return ${RET}
 }
 
-PATH=/usr/xpg4/bin:$PATH
-if [ -x ${LOCKSS_HOME}/etc/lockss/functions ] ; then
+case `uname -s` in
+SunOS)
+    PATH=/usr/xpg4/bin:$PATH
+    ;;
+esac
+if [ -f ${LOCKSS_HOME}/etc/lockss/functions ] ; then
     if is_secure ${LOCKSS_HOME}/etc/lockss/functions ; then
         . ${LOCKSS_HOME}/etc/lockss/functions
     else
@@ -37,7 +39,7 @@ set_variables $1
 if [ -f ${CFG_FILE} ]; then
     # CFG_FILE should only set environment variables - avoid executing it
     for KEY in `sed -n 's/^\([A-Z0-9_]*\)=.*$/\1/p' <${CFG_FILE}` ; do
-        VALUE=`sed -n /${KEY}=/s///p <${CFG_FILE}`
+        VALUE=`sed -n -e '/\`/d' -e /${KEY}=/s///p <${CFG_FILE}`
         VALUE2=`echo ${VALUE} | sed -n '/^"\(.*\)"$/s//\1/p'`
         if [ "X${VALUE2}" = X ]; then
             # Not quoted
@@ -47,6 +49,7 @@ if [ -f ${CFG_FILE} ]; then
             export ${KEY}="\"${VALUE2}\""
         fi
     done
+#    set_variables_from ${CFG_FILE}
 else
     echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
     exit 1

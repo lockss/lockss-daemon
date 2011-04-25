@@ -16,45 +16,57 @@ then
 fi
 case "$1" in
     start)
-        if [ ! -r ${CFG_FILE} ]; then
-            echo "Can't start ${2}: ${CFG_FILE} missing or not readable"
-            exit 1
-        fi
-        if [ ! -d ${LOG_DIR} ]; then
-            mkdir -p ${LOG_DIR}
-            chown $2 ${LOG_DIR}
-            chmod 755 ${LOG_DIR}
-        fi
-        if [ ! -f ${PID_FILE} ]; then
-            touch ${PID_FILE}
-        fi
-        chown $2 ${PID_FILE}
-        chmod 644 ${PID_FILE}
-        echo -n "Starting ${2}: "
-        echo "Starting LOCKSS for user $2 at `date`" >> ${LOG_FILE}
-        chown $2 ${LOG_FILE}
-        daemon /etc/lockss/startdaemon $2
-        echo
+	start_lockss ${2}
         ;;
     stop)
-        echo -n "Stopping ${2}: "
-        rm -f "${KEEP_GOING}"
-        killproc $2
-        rm -f ${PID_FILE} ${RUN_DIR}/${2}-ssl.pid
-        echo
+        stop_lockss ${2}
         ;;
+    restart)
+	stop_lockss ${2}
+	start_lockss ${2}
+	;;
     *)
-        echo "Usage: $0 {start|stop}"
+        echo "Usage: $0 {start|stop|restart}"
         exit 1
         ;;
 esac
+}
+
+stop_lockss () {
+    echo -n "Stopping ${1}: "
+    rm -f "${KEEP_GOING}"
+    killproc ${1}
+    rm -f ${PID_FILE} ${RUN_DIR}/${1}-ssl.pid
+    echo
+}
+
+start_lockss () {
+    if [ ! -r ${CFG_FILE} ]; then
+        echo "Can't start ${1}: ${CFG_FILE} missing or not readable"
+        exit 1
+    fi
+    if [ ! -d ${LOG_DIR} ]; then
+        mkdir -p ${LOG_DIR}
+        chown ${1} ${LOG_DIR}
+        chmod 755 ${LOG_DIR}
+    fi
+    if [ ! -f ${PID_FILE} ]; then
+        touch ${PID_FILE}
+    fi
+    chown ${1} ${PID_FILE}
+    chmod 644 ${PID_FILE}
+    echo -n "Starting ${1}: "
+    echo "Starting LOCKSS for user ${1} at `date`" >> ${LOG_FILE}
+    chown ${1} ${LOG_FILE}
+    daemon /etc/lockss/startdaemon ${1}
+    echo
 }
 
 set_lockss_user
 for A in ${LOCKSS_USER}
 do
         set_variables ${A}
-        do_command $1 $A
+        do_command ${1} $A
         unset_variables
 done
 
