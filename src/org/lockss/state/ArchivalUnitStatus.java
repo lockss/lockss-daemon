@@ -1,9 +1,9 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.97 2011-03-18 09:56:27 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.98 2011-04-26 23:53:07 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -232,6 +232,14 @@ public class ArchivalUnitStatus
     private List getRows(StatusTable table, Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
+      String key = table.getKey();
+      String plugidfilt = null;
+      if (key != null && key.startsWith("plugin:")) {
+	String[] foo = org.apache.commons.lang.StringUtils.split(key, ":", 2);
+	plugidfilt = foo[1];
+	table.setTitle(TABLE_TITLE + " for plugin " +
+		       StringUtil.shortName(plugidfilt));
+      }	
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       List rowL = new ArrayList();
@@ -239,6 +247,10 @@ public class ArchivalUnitStatus
 	   iter.hasNext(); ) {
         ArchivalUnit au = (ArchivalUnit)iter.next();
 	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
+	  continue;
+	}
+	if (plugidfilt != null &&
+	    !au.getPlugin().getPluginId().equals(plugidfilt)) {
 	  continue;
 	}
 	try {
@@ -944,38 +956,47 @@ public class ArchivalUnitStatus
 
 
       StatusTable.SrvLink urlListLink =
-	new StatusTable.SrvLink("URL list",
+	new StatusTable.SrvLink("URLs",
 				AdminServletManager.SERVLET_LIST_OBJECTS,
 				PropUtil.fromArgs("type", "urls",
 						  "auid", au.getAuId()));
 
       StatusTable.SrvLink fileListLink =
-	new StatusTable.SrvLink("File list",
+	new StatusTable.SrvLink("Files",
 				AdminServletManager.SERVLET_LIST_OBJECTS,
 				PropUtil.fromArgs("type", "files",
 						  "auid", au.getAuId()));
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  ListUtil.list(urlListLink,
+					  ListUtil.list("List: ",
+							urlListLink,
 							", ",
 							fileListLink)));
 
       if (ListObjects.hasArticleList(au)) {
 	StatusTable.SrvLink doiListLink =
-	  new StatusTable.SrvLink("DOI list",
+	  new StatusTable.SrvLink("DOIs",
 				  AdminServletManager.SERVLET_LIST_OBJECTS,
 				  PropUtil.fromArgs("type", "dois",
 						    "auid", au.getAuId()));
 	StatusTable.SrvLink articleListLink =
-	  new StatusTable.SrvLink("Article list",
+	  new StatusTable.SrvLink("Articles",
 				  AdminServletManager.SERVLET_LIST_OBJECTS,
 				  PropUtil.fromArgs("type", "articles",
 						    "auid", au.getAuId()));
+	StatusTable.SrvLink metadataListLink =
+	  new StatusTable.SrvLink("Metadata",
+				  AdminServletManager.SERVLET_LIST_OBJECTS,
+				  PropUtil.fromArgs("type", "metadata",
+						    "auid", au.getAuId()));
         res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
-					    ListUtil.list(articleListLink,
+					    ListUtil.list("List: ",
+							  articleListLink,
 							  ", ",
-							  doiListLink)));
+							  doiListLink,
+							  ", ",
+							  metadataListLink)));
       }
       return res;
     }

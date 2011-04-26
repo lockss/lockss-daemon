@@ -1,10 +1,10 @@
 /*
- * $Id: PluginStatus.java,v 1.15 2011-02-14 00:11:37 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.16 2011-04-26 23:53:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.state.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 /** Base class for plugin status accessors, and static register/unregister
@@ -268,9 +269,13 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     res.add(new StatusTable.SummaryInfo("Type",
 					ColumnDescriptor.TYPE_STRING,
 					mgr.getPluginType(plug)));
+    StatusTable.Reference auslink = 
+      new StatusTable.Reference(plug.getAllAus().size(),
+				ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
+				"plugin:" + plug.getPluginId());
     res.add(new StatusTable.SummaryInfo("# AUs",
 					ColumnDescriptor.TYPE_STRING,
-					plug.getAllAus().size()));
+					auslink));
     if (mgr.isLoadablePlugin(plug)) {
       PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plug);
       if (info != null) {
@@ -290,11 +295,11 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
       }
     }
     if (showDefLink && plugDef != null) {
-      StatusTable.Reference link = makePlugRef("Definition", plug);
-      link.setProperty("showdef", "1");
+      StatusTable.Reference deflink = makePlugRef("Definition", plug);
+      deflink.setProperty("showdef", "1");
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  link));
+					  deflink));
     }
     return res;
   }
