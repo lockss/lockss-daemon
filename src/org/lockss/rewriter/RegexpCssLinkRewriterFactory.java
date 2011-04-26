@@ -1,10 +1,10 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.1 2011-02-14 00:07:06 tlipkis Exp $
+ * $Id: RegexpCssLinkRewriterFactory.java,v 1.2 2011-04-26 23:54:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,14 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   // Amount at end of buffer to rescan at beginning of next bufferfull
   private static final int DEFAULT_OVERLAP = 2 * 1024;
 
-  // Adapted from Heritrix's ExtractorCSS
+  // This regexp is too permissive.  Using dot to match the URL chars in G2
+  // allows illegal chars and mismatched quotes.  (The reluctant match
+  // ensures it doesn't span multiple url() constructs.)  It's believed
+  // this properly matches all non-pathological legal constructs and
+  // matching some illegal constructs isn't a problem.  (Firefox 3.6
+  // follows the spec and stops processing the css at the first illegal
+  // syntax.)
+
   private static final String CSS_URI_EXTRACTOR =    
     "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
     "(.{0," + MAX_URL_LENGTH + "}?)" + //G2
@@ -76,7 +83,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   private static final int GURL = 2;
   private static final int GQUOTE2 = 3;
 
-  private static Pattern CSS_URL_PAT = Pattern.compile(CSS_URI_EXTRACTOR);
+  static Pattern CSS_URL_PAT = Pattern.compile(CSS_URI_EXTRACTOR);
 
 
   // Chars that need escaping in URLs in CSS
@@ -96,8 +103,8 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   }
 
   /** For testing buffer shifting */
-  RegexpCssLinkRewriterFactory(int bufsize, int overlap) {
-    this.maxBuf = bufsize;
+  RegexpCssLinkRewriterFactory(int maxBuf, int overlap) {
+    this.maxBuf = maxBuf;
     this.overlap = overlap;
   }
 
@@ -111,9 +118,6 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
       throws PluginException, IOException {
     if (in == null) {
       throw new IllegalArgumentException("Called with null InputStream");
-    }
-    if (!"text/css".equalsIgnoreCase(mimeType)) {
-      throw new PluginException("RegexpCssLinkRewriterFactory vs. " + mimeType);
     }
     // Cause error now if illegal base url
     try {
@@ -155,6 +159,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 	}
 	int sblen = sb.length();
 	if (sblen < maxBuf) {
+	  // less then full buffer means last buffer
 	  out.append(sb.subSequence(lastAppendPosition, sblen));
 	  break;
 	}
@@ -163,13 +168,11 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 	if (lastAppendPosition == 0) {
 	  // no matches, shift all but overlap
 	  keep = Math.min(overlap, maxBuf / 2);
-	  out.append(sb.subSequence(lastAppendPosition, sblen - keep));
 	} else {
 	  // keep chars after last match, or max overlap
 	  keep = Math.min(overlap, sblen - lastAppendPosition);
-	  out.append(sb.subSequence(lastAppendPosition, sblen - keep));
 	}
-
+	out.append(sb.subSequence(lastAppendPosition, sblen - keep));
 	StringUtil.copyChars(sb, sblen - keep, 0, keep);
 	sb.setLength(keep);
       }

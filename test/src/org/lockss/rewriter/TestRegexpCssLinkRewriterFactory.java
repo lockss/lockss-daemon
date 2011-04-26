@@ -1,10 +1,10 @@
 /*
- * $Id: TestRegexpCssLinkRewriterFactory.java,v 1.1 2011-02-14 00:07:06 tlipkis Exp $
+ * $Id: TestRegexpCssLinkRewriterFactory.java,v 1.2 2011-04-26 23:54:13 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.rewriter;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -64,11 +65,10 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
       "padding: 2px;\n" +
       "background-color:#ffffff;\n" +
     "}\n" +
-      /* "Some random crap\n" + */
-      /* "Much more random crap then the earlier tests used" + */
+    "/* Enough random chars to push what follows over a buffer boundary in tests */\n" +
     "@import url(http://www.example.com/file1.css) /* abs link to rewrite */\n" +
-    "@import url(http://auhost.com/ddd/phylum.css) /* 2nd host abs link to rewrite */\n" +
-    "@import url(http://www.content.org/file2.css) /* abs link no rewrite */\n" +
+    "@import url( http://auhost.com/ddd/phylum.css) /* 2nd host abs link to rewrite */\n" +
+    "@import url(http://www.content.org/file2.css  ) /* abs link no rewrite */\n" +
     "@import url('http://www.content.org/file2.css') /* abs link no rewrite */\n" +
     "@import url(\"http://www.content.org/fi\\(le\\)2.css\") /* abs link no rewrite */\n" +
     "@import url(file3.css) /* rel link to rewrite */\n" +
@@ -78,11 +78,19 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     "@import url(/style/file5.css) /* site rel link to rewrite */\n" +
     "@import url('rel\\(dir\\)/f\\'il\\'e5.c ss') /* rel with quoting */\n" +
     "@import url()\n" +
+    "@import file3.css; /* rel link to rewrite */\n" +
+    "@import 'bar/quote.css'; /* rel link to rewrite */\n" +
+    "@import \"bar/dquote.css\"; /* rel link to rewrite */\n" +
+    "@import ../style/file4.css; /* rel link to rewrite */\n" +
+    "@import /style/file5.css  ; /* site rel link to rewrite */\n" +
+    "@import 'rel\\(dir\\)/f\\'il\\'e5.c ss'; /* rel with quoting */\n" +
+    "@import ;\n" +
     "#banner, #top-banner {" +
     " padding: 0;\n" +
     " height: 120px;\n" +
     " background-image: url('../images/top_banner.gif');\n" +
-    " background-fog: url('to/images/fog_banner.gif');\n" +
+    " background-fog: url(\"to/images/fog_banner.gif\");\n" +
+    " background-fog: url(so/images/fog_banner.gif);\n" +
     " background-image: url('http://www.example.com/images/banner.gif');\n" +
     "}\n";
 
@@ -93,9 +101,10 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     "padding: 2px;\n" +
     "background-color:#ffffff;\n" +
     "}\n" +
+    "/* Enough random chars to push what follows over a buffer boundary in tests */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/file1.css') /* abs link to rewrite */\n" +
-    "@import url('http://serve.host:1234/ServeContent?url=http://auhost.com/ddd/phylum.css') /* 2nd host abs link to rewrite */\n" +
-    "@import url(http://www.content.org/file2.css) /* abs link no rewrite */\n" +
+    "@import url( 'http://serve.host:1234/ServeContent?url=http://auhost.com/ddd/phylum.css') /* 2nd host abs link to rewrite */\n" +
+    "@import url(http://www.content.org/file2.css  ) /* abs link no rewrite */\n" +
     "@import url('http://www.content.org/file2.css') /* abs link no rewrite */\n" +
     "@import url(\"http://www.content.org/fi\\(le\\)2.css\") /* abs link no rewrite */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file3.css') /* rel link to rewrite */\n" +
@@ -105,10 +114,18 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/style/file5.css') /* site rel link to rewrite */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/rel\\(dir\\)/f\\'il\\'e5.c%20ss') /* rel with quoting */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file.css')\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file3.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/bar/quote.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/bar/dquote.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/style/file4.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/style/file5.css'  ; /* site rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/rel\\(dir\\)/f\\'il\\'e5.c%20ss'; /* rel with quoting */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file.css';\n" +
     "#banner, #top-banner { padding: 0;\n" +
     " height: 120px;\n" +
     " background-image: url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/images/top_banner.gif');\n" +
     " background-fog: url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/to/images/fog_banner.gif');\n" +
+    " background-fog: url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/so/images/fog_banner.gif');\n" +
     " background-image: url('http://serve.host:1234/ServeContent?url=http://www.example.com/images/banner.gif');\n" +
     "}\n";
 
@@ -121,26 +138,8 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
 	  return "http://serve.host:1234" + "/ServeContent?url=" + url;
 	}
       };
-//     List l = new ArrayList();
-//     l.add(urlStem);
-//     au.setUrlStems(l);
     au.setUrlStems(stems);
     rclrf = new RegexpCssLinkRewriterFactory();
-  }
-
-  public void testThrowsIfNotCss() {
-    in = new StringInputStream("foo");
-    try {
-      rclrf.createLinkRewriter("text/html", au, in,
-				encoding, srcUrl, xform);
-      fail("createLinkRewriter should have thrown on non-css mime type");
-    } catch (Exception ex) {
-      if (ex instanceof PluginException) {
-	return;
-      }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
-	   ex.toString());
-    }
   }
 
   public void testMalformedUrl() throws Exception {
@@ -153,7 +152,33 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  private static final String CSS_ESCAPE_CHARS = "\\() '\"";
+  void assertMatch(String exp, String str, int group) {
+    Matcher m1 = RegexpCssLinkRewriterFactory.CSS_URL_PAT.matcher(str);
+    assertTrue(m1.find());
+    assertEquals(exp, m1.group(group));
+  }
+
+  public void testPat() throws Exception {
+    assertMatch("http://foo/bar", "@import http://foo/bar;", 2);
+    assertMatch("http://foo/bar", "@import   'http://foo/bar';", 2);
+    assertMatch("http://foo/bar", "@import \"http://foo/bar\"  ;", 2);
+    assertMatch("http://fo'o/bar", "@import \"http://fo'o/bar\";", 2);
+
+    assertMatch("http://foo/bar", "@import url( http://foo/bar );", 2);
+    assertMatch("http://foo/bar", "@import url('http://foo/bar');", 2);
+    assertMatch("http://foo/bar", "@import url(\"http://foo/bar\");", 2);
+    assertMatch("http://fo'o/bar", "@import url( \"http://fo'o/bar\" );", 2);
+
+    assertMatch("http://foo/bar", "url(  http://foo/bar )", 2);
+    assertMatch("http://foo/bar", "url('http://foo/bar')", 2);
+    assertMatch("http://f o)o/bar", "url(\"http://f o)o/bar\")", 2);
+    assertMatch("http://foo/b\"ar", "url('http://foo/b\"ar')", 2);
+    assertMatch("http://foo/b'ar", "url(\"http://foo/b'ar\")", 2);
+
+    // ensure match isn't greedy
+    assertMatch("http://foo/bar",
+		"a:url('http://foo/bar'); b:url('http://bar/foo')", 2);
+  }
 
   public void testUrlEscape() {
     assertEquals("foo", rclrf.urlEscape("foo"));
