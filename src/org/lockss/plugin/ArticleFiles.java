@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleFiles.java,v 1.5 2011-03-13 21:52:33 tlipkis Exp $
+ * $Id: ArticleFiles.java,v 1.6 2011-04-26 23:52:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+import org.apache.commons.collections.map.UnmodifiableMap;
+import org.lockss.util.*;
 
 
 /**
@@ -179,6 +181,11 @@ public class ArticleFiles {
     return fullTextCu == null && roles.isEmpty();
   }
 
+  /** Return an unmodifiable view of the role map */
+  public Map<String,String> getRoleMap() {
+    return (Map<String,String>)UnmodifiableMap.decorate(roles);
+  }
+
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[af: ft=");
@@ -188,4 +195,19 @@ public class ArticleFiles {
     sb.append("]");
     return sb.toString();
   }
+
+  /** Return a pretty printed String */
+  public String ppString(int indent) {
+    StringBuilder sb = new StringBuilder();
+    String tab = StringUtil.tab(indent);
+    for (String role : roles.keySet()) {
+      sb.append(tab);
+      sb.append(role);
+      sb.append(":  ");
+      sb.append(getRoleUrl(role));
+      sb.append("\n");
+    }
+    return sb.toString();
+  }
+
 }

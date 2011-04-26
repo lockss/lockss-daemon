@@ -1,10 +1,10 @@
 /*
- * $Id: TestArticleFiles.java,v 1.4 2011-03-13 21:52:33 tlipkis Exp $
+ * $Id: TestArticleFiles.java,v 1.5 2011-04-26 23:52:40 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.test.*;
 
 public class TestArticleFiles extends LockssTestCase {
@@ -41,10 +42,17 @@ public class TestArticleFiles extends LockssTestCase {
     ArticleFiles af1 = new ArticleFiles();
     assertNull(af1.getFullTextCu());
     assertNull(af1.getRoleCu("xml"));
+    assertEmpty(af1.getRoleMap());
     CachedUrl cu1 = new MockCachedUrl("full");
     af1.setFullTextCu(cu1);
     assertSame(cu1, af1.getFullTextCu());
     assertNull(af1.getRoleCu("xml"));
+    assertEmpty(af1.getRoleMap());
+    try {
+      af1.getRoleMap().put("foo", "bar");
+      fail("Role map should be unmodifiable");
+    } catch (UnsupportedOperationException e) {
+    }
 
     CachedUrl cu2 = new MockCachedUrl("xml");
     af1.setRoleCu("xml", cu2);
@@ -53,12 +61,21 @@ public class TestArticleFiles extends LockssTestCase {
     assertEquals("full", af1.getFullTextUrl());
     assertEquals("xml", af1.getRoleUrl("xml"));
     assertEquals(null, af1.getRoleUrl("html"));
+    assertEquals(MapUtil.map("xml", cu2), af1.getRoleMap());
+    try {
+      af1.getRoleMap().put("foo", "bar");
+      fail("Role map should be unmodifiable");
+    } catch (UnsupportedOperationException e) {
+    }
 
     af1.setRoleString("handle", "shovel");
     Map map = new HashMap();
     af1.setRole("map", map);
     assertEquals("shovel", af1.getRoleString("handle"));
     assertSame(map, af1.getRole("map"));
+    assertEquals(MapUtil.map("xml", cu2,
+			     "handle", "shovel",
+			     "map", map), af1.getRoleMap());
   }
 
   public void testIsEmpty() {
