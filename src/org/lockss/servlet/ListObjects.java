@@ -1,10 +1,10 @@
 /*
- * $Id: ListObjects.java,v 1.17 2011-02-23 08:41:47 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.18 2011-04-26 23:55:06 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,14 +37,16 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.lang.mutable.*;
-import org.mortbay.html.*;
+import org.mortbay.html.Page;
+import org.mortbay.html.Composite;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
-/** Output a plain list of the URLs in an AU
- */
+/** Plain output of various lists - AUs, URLs, metadata, etc.  Mostly for
+ * debugging/testing; also able to handle unlimited length lists. */
 public class ListObjects extends LockssServlet {
   static final Logger log = Logger.getLogger("ListObjects");
 
@@ -79,303 +81,55 @@ public class ListObjects extends LockssServlet {
       displayError("\"type\" arg must be specified");
       return;
     }
-    if (type.equalsIgnoreCase("urls")) {
-      auid = getParameter("auid");
-      au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
-	displayError("No such AU: " + auid);
-	return;
-      }
-      listUrls();
-    } else if (type.equalsIgnoreCase("dois")) {
-      auid = getParameter("auid");
-      au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
-	displayError("No such AU: " + auid);
-	return;
-      }
-      listDOIs();
-    } else if (type.equalsIgnoreCase("files")) {
-      auid = getParameter("auid");
-      au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
-	displayError("No such AU: " + auid);
-	return;
-      }
-      listFiles();
-    } else if (type.equalsIgnoreCase("articles")) {
-      auid = getParameter("auid");
-      au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
-	displayError("No such AU: " + auid);
-	return;
-      }
-      listArticles();
-    } else if (type.equalsIgnoreCase("aus")) {
-      listAUs();
+    if (type.equalsIgnoreCase("aus")) {
+      new AuNameList().execute();
     } else if (type.equalsIgnoreCase("auids")) {
-      listAuIds();
+      new AuidList().execute();
     } else {
-      displayError("Unknown object type: " + type);
-      return;
-    }
-  }
-
-  void listUrls() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# URLs in " + au.getName());
-    wrtr.println();
-    for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
-	 iter.hasNext(); ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.hasContent()) {
-	wrtr.println(cusn.getUrl());
+      // all others need au
+      auid = getParameter("auid");
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+	displayError("No such AU: " + auid);
+	return;
+      }
+      if (type.equalsIgnoreCase("urls")) {
+	new UrlList(au).execute();
+      } else if (type.equalsIgnoreCase("files")) {
+	new FileList(au).execute();
+      } else if (type.equalsIgnoreCase("articles")) {
+	boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
+	if (isDoi) {
+	  // XXX Backwards compatible - still needed?
+	  new DoiList(au, MetadataTarget.DOI).setIncludeUrl(true).execute();
+	} else {
+	  new ArticleUrlList(au).execute();
+	}
+      } else if (type.equalsIgnoreCase("dois")) {
+	new DoiList(au, MetadataTarget.DOI).execute();
+      } else if (type.equalsIgnoreCase("metadata")) {
+	new MetadataList(au, MetadataTarget.Any).execute();
+      } else {
+	displayError("Unknown list type: " + type);
+	return;
       }
     }
-    wrtr.println("# end");
   }
 
-  void listDOIs() throws IOException {
-    final PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# DOIs in " + au.getName());
-    wrtr.println();
-    try {
-      ArticleMetadataExtractor.Emitter emitter =
-	new ArticleMetadataExtractor.Emitter() {
-	  public void emitMetadata(ArticleFiles af,
-				   ArticleMetadata md) {
-	    if (md != null) {
-	      String doi = md.get(MetadataField.FIELD_DOI);
-	      if (doi != null) {
-		wrtr.println(doi);
-	      }
-	    }          
-	  }
-	};
-      ArticleMetadataExtractor mdExtractor =
-	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
-      int logMissing = 3;
-      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	   iter.hasNext(); ) {
-	ArticleFiles af = iter.next();
-	CachedUrl cu = af.getFullTextCu();
-	if (cu == null) {
-	  // shouldn't happen, but if it does it likely will many times.
-	  if (logMissing-- > 0) {
-	    log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
-	  }
-	  continue;
-	}
-	try {
-	  if (cu.hasContent()) {
-	    mdExtractor.extract(MetadataTarget.DOI, af, emitter);
-	  }
-	} catch (IOException e) {
-	  log.warning("listDOIs() threw " + e);
-	} catch (PluginException.LinkageError e) {
-	  throw e;
-	} catch (PluginException e) {
-	  log.warning("listDOIs() threw " + e);
-	} finally {
-	  AuUtil.safeRelease(cu);
-	}
-      }
-      wrtr.println("# end");
-    } catch (PluginException.LinkageError e) {
-      wrtr.println("Incompatible plugin metadata extractor: " + e.getMessage());
-    }
-  }
-
-  void listFiles() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# Files in " + au.getName());
-    wrtr.println("# URL\tContentType\tsize");
-    wrtr.println();
-    for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
-	 iter.hasNext(); ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      CachedUrl cu = AuUtil.getCu(cusn);
-      if (cu != null && cu.hasContent()) {
-	String url = cu.getUrl();
-	String contentType = cu.getContentType();
-	long bytes = cu.getContentSize();
-	if (contentType == null) {
-	  contentType = "unknown";
-	}
-	wrtr.println(url + "\t" + contentType + "\t" + bytes);
-      }
-      AuUtil.safeRelease(cu);
-    }
-    wrtr.println("# end");
-  }
-
+  // Used by status table(s) to determine whether to display link to DOIs
   public static boolean hasDoiList(ArchivalUnit au) {
     return null !=
       au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
 
-      // No need to invoke factory, but this method isn't in interface
+      // Shouldn't invoke factory, but this method isn't in interface
 //     return null !=
 //       au.getPlugin().getArticleMetadataExtractorFactory(MetadataTarget.Article);
   }
 
+  // Used by status table(s) to determine whether to display link to articles
   public static boolean hasArticleList(ArchivalUnit au) {
     return hasDoiList(au);
   }
-
-  void listArticles() throws IOException {
-    boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
-
-    final PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# Articles in " + au.getName());
-    wrtr.println();
-
-    try {
-      ArticleMetadataExtractor mdExtractor =
-	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
-      ArticleMetadataExtractor.Emitter emitter = null;
-      final MutableObject lastEmittedAf = new MutableObject();
-      if (mdExtractor != null) {
-	emitter =
-	  new ArticleMetadataExtractor.Emitter() {
-	    public void emitMetadata(ArticleFiles af,
-				     ArticleMetadata md) {
-	      String url = md.get(MetadataField.FIELD_ACCESS_URL);
-	      String doi = null;
-	      if (md != null) {
-		doi = md.get(MetadataField.FIELD_DOI);
-	      }
-	      if (doi != null) {
-		wrtr.println(url + "\t" + doi);
-	      } else {
-		wrtr.println(url);
-	      }
-	      lastEmittedAf.setValue(af);
-	    }
-	  };
-      }
-
-      int logMissing = 3;
-      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	   iter.hasNext(); ) {
-	ArticleFiles af = iter.next();
-	CachedUrl cu = af.getFullTextCu();
-	if (cu == null) {
-	  // shouldn't happen, but if it does it likely will many times.
-	  if (logMissing-- > 0) {
-	    log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
-	  }
-	  continue;
-	}
-	String doi = null;
-	try {
-	  if (cu.hasContent()) {
-	    String url = cu.getUrl();
-	    if (isDoi && mdExtractor != null) {
-	      // extract metadata iff DOIs were requested
-	      mdExtractor.extract(MetadataTarget.Article, af, emitter);
-	    }
-	    if (mdExtractor == null || af != lastEmittedAf.getValue()) {
-	      // if we didn't extract metadata, or the metadata extractor
-	      // didn't emit any metadata records, print the article URL here
-	      wrtr.println(url);
-	    }
-	  }
-	} catch (IOException e) {
-	  log.warning("listArticles() threw " + e);
-	} catch (PluginException.LinkageError e) {
-	  throw e;
-	} catch (PluginException e) {
-	  log.warning("listArticles() threw " + e);
-	} finally {
-	  AuUtil.safeRelease(cu);       
-	}
-      }
-      wrtr.println("# end");
-    } catch (PluginException.LinkageError e) {
-      wrtr.println("Incompatible plugin metadata extractor: " + e.getMessage());
-    }
-  }
-
-  void listAUs() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# AUs on " + getMachineName());
-    wrtr.println();
-    boolean includeInternalAus = isDebugUser();
-    for (ArchivalUnit au : pluginMgr.getAllAus()) {
-      if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	continue;
-      }
-      wrtr.println(au.getName());
-    }
-    wrtr.println("# end");
-  }
-
-  void listAuIds() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("text/plain");
-    wrtr.println("# AUIDs on " + getMachineName());
-    wrtr.println();
-    boolean includeInternalAus = isDebugUser();
-    for (ArchivalUnit au : pluginMgr.getAllAus()) {
-      if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
-	continue;
-      }
-      wrtr.println(au.getAuId());
-    }
-    wrtr.println("# end");
-  }
-
-  // unfinished form to select object list
-
-//   private void displayPage() throws IOException {
-//     Page page = newPage();
-//     layoutErrorBlock(page);
-//     ServletUtil.layoutExplanationBlock(page, "Object Lists");
-//     page.add(makeForm());
-//     page.add("<br>");
-//     layoutFooter(page);
-//     ServletUtil.writePage(resp, page);
-//   }
-
-//   private Element makeForm() {
-//     Composite comp = new Composite();
-//     Form frm = new Form(srvURL(myServletDescr()));
-//     frm.method("POST");
-
-//     Input reload = new Input(Input.Submit, KEY_ACTION, ACTION_RELOAD_CONFIG);
-//     setTabOrder(reload);
-//     frm.add("<br><center>"+reload+"</center>");
-//     Input backup = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
-//     setTabOrder(backup);
-//     frm.add("<br><center>"+backup+"</center>");
-//     Input thrw = new Input(Input.Submit, KEY_ACTION, ACTION_THROW_IOEXCEPTION);
-//     Input thmsg = new Input(Input.Text, KEY_MSG);
-//     setTabOrder(thrw);
-//     setTabOrder(thmsg);
-//     frm.add("<br><center>"+thrw+" " + thmsg + "</center>");
-//     frm.add("<br><center>AU Actions: select AU</center>");
-//     Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, auid);
-//     frm.add("<br><center>"+ausel+"</center>");
-//     setTabOrder(ausel);
-
-//     Input v3Poll = new Input(Input.Submit, KEY_ACTION,
-// 			     ( showForcePoll
-// 			       ? ACTION_FORCE_START_V3_POLL
-// 			       : ACTION_START_V3_POLL));
-//     Input crawl = new Input(Input.Submit, KEY_ACTION,
-// 			    ( showForceCrawl
-// 			      ? ACTION_FORCE_START_CRAWL
-// 			      : ACTION_START_CRAWL));
-//     frm.add("<br><center>" + v3Poll + "</center>");
-//     frm.add("<br><center>" + crawl + "</center>");
-//     comp.add(frm);
-//     return comp;
-//   }
 
   void displayError(String error) throws IOException {
     Page page = newPage();
@@ -386,5 +140,345 @@ public class ListObjects extends LockssServlet {
     page.add(comp);
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
+  }
+
+  /** Base for classes that print lists of objexts */
+  abstract class BaseList {
+    PrintWriter wrtr;
+    boolean isError = false;
+
+    /** Subs must print a header */
+    abstract void printHeader();
+
+    /** Subs must execute a body between begin() and end() */
+    abstract void doBody() throws IOException;
+
+    void begin() throws IOException {
+      wrtr = resp.getWriter();
+      resp.setContentType("text/plain");
+      printHeader();
+      wrtr.println();
+    }
+
+    void finish() {;
+      wrtr.println(isError ? "# end (errors)" : "# end");
+    }
+
+    final void execute() throws IOException {
+      begin();
+      doBody();
+      finish();
+    }
+  }
+
+  /** Lists of objects (URLs, files, etc.) which are based on AU's
+   * repository nodes */
+  abstract class BaseNodeList extends BaseList {
+    ArchivalUnit au;
+
+    BaseNodeList(ArchivalUnit au) {
+      super();
+      this.au = au;
+    }
+
+    /** Subs must process content CUs */
+    abstract void processContentCu(CachedUrl cu);
+
+    void doBody() {
+      for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+	   iter.hasNext(); ) {
+	CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
+	CachedUrl cu = AuUtil.getCu(cusn);
+	try {
+	  if (cu != null) {
+	    processCu(cu);
+	  }	  
+	} finally {
+	  AuUtil.safeRelease(cu);
+	}
+      }
+    }
+
+    void processCu(CachedUrl cu) {
+      if (cu.hasContent()) {
+	processContentCu(cu);
+      }
+    }
+  }
+
+  /** List URLs in AU */
+  class UrlList extends BaseNodeList {
+    UrlList(ArchivalUnit au) {
+      super(au);
+    }
+
+    void printHeader() {
+      wrtr.println("# URLs in " + au.getName());
+      wrtr.println();
+    }
+
+    void processContentCu(CachedUrl cu) {
+      wrtr.println(cu.getUrl());
+    }
+  }
+
+  /** List URLs, content type and length. */
+  // MetaArchive experiment 2010ish.  Still in use?
+  class FileList extends BaseNodeList {
+    FileList(ArchivalUnit au) {
+      super(au);
+    }
+
+    void printHeader() {
+      wrtr.println("# Files in " + au.getName());
+      wrtr.println("# URL\tContentType\tsize");
+      wrtr.println();
+    }
+
+    void processContentCu(CachedUrl cu) {
+      String url = cu.getUrl();
+      String contentType = cu.getContentType();
+      long bytes = cu.getContentSize();
+      if (contentType == null) {
+	contentType = "unknown";
+      }
+      wrtr.println(url + "\t" + contentType + "\t" + bytes);
+    }
+  }
+
+  /** Base for lists based on ArticleIterator */
+  abstract class BaseArticleList extends BaseList {
+    ArchivalUnit au;
+    int errCnt = 0;
+    int maxErrs = 3;
+
+    BaseArticleList(ArchivalUnit au) {
+      super();
+      this.au = au;
+    }
+
+    /** Subs must process each article */
+    abstract void processArticle(ArticleFiles af)
+	throws IOException, PluginException;
+
+    boolean isLogError() {
+      isError = true;
+      return errCnt++ <= maxErrs;
+    }
+
+    void doBody() throws IOException {
+      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	   iter.hasNext(); ) {
+	ArticleFiles af = iter.next();
+	if (af.isEmpty()) {
+	  // Probable plugin error.  Shouldn't happen, but if it does it
+	  // likely will many times.
+	  if (isLogError()) {
+	    log.error("ArticleIterator generated empty ArticleFiles");
+	  }
+	  continue;
+	}
+	try {
+	  processArticle(af);
+	} catch (Exception e) {
+	  if (isLogError()) {
+	    log.warning("listDOIs() threw", e);
+	  }
+	}
+      }
+    }
+  }
+
+  /** Base for lists requiring metadata extraction */
+  abstract class BaseMetadataList extends BaseArticleList {
+    MetadataTarget target;
+    ArticleMetadataExtractor mdExtractor;
+    ArticleMetadataExtractor.Emitter emitter;
+
+    BaseMetadataList(ArchivalUnit au, MetadataTarget target) {
+      super(au);
+      this.target = target;
+    }
+
+    void begin() throws IOException {
+      super.begin();
+      mdExtractor = au.getPlugin().getArticleMetadataExtractor(target, au);
+    }
+
+    /** Subs must process each article and list of metadata */
+    abstract void processArticle(ArticleFiles af, List<ArticleMetadata> amlst);
+
+    void doBody() throws IOException {
+      if (mdExtractor == null) {
+	// XXX error format
+	wrtr.println("# Plugin " + au.getPlugin().getPluginName() +
+		     " does not supply a metadata extractor.");
+	isError = true;
+	return;
+      }
+      super.doBody();
+    }
+
+    void processArticle(ArticleFiles af) throws IOException, PluginException {
+      // Create a ListEmitter per article
+      ListEmitter emitter = new ListEmitter();
+      mdExtractor.extract(target, af, emitter);
+      processArticle(af, emitter.getAmList());
+      // If we finish one normally, start logging errors again.
+      errCnt = 0;
+    }
+  }
+
+  /** Metadata emitter that collects ArticleMetadata into a list. */
+  static class ListEmitter implements ArticleMetadataExtractor.Emitter {
+    List<ArticleMetadata> amlst = new ArrayList<ArticleMetadata>();
+
+    public void emitMetadata(ArticleFiles af, ArticleMetadata md) {
+      if (log.isDebug3()) log.debug3("emit("+af+", "+md+")");
+      if (md != null) {
+	amlst.add(md);
+      };
+    }
+
+    public List<ArticleMetadata> getAmList() {
+      return amlst;
+    }
+  }
+
+  /** List DOIs of articles in AU */
+  class DoiList extends BaseMetadataList {
+    protected boolean isIncludeUrl = false;
+    int logMissing = 3;
+
+    DoiList(ArchivalUnit au, MetadataTarget target) {
+      super(au, target);
+    }
+
+    void printHeader() {
+      wrtr.println("# DOIs in " + au.getName());
+    }
+
+    void processArticle(ArticleFiles af, List<ArticleMetadata> amlst) {
+      if (amlst == null || amlst.isEmpty()) {
+	if (isIncludeUrl) {
+	  CachedUrl cu = af.getFullTextCu();
+	  if (cu != null) {
+	    wrtr.println(cu.getUrl());
+	  } else {
+	    // shouldn't happen, but if it does it likely will many times.
+	    if (logMissing-- > 0) {
+	      log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	    }
+	  }
+	}
+      } else {
+	for (ArticleMetadata md : amlst) {
+	  if (md != null) {
+	    String doi = md.get(MetadataField.FIELD_DOI);
+	    if (doi != null) {
+	      if (isIncludeUrl) {
+		String url = md.get(MetadataField.FIELD_ACCESS_URL);
+		wrtr.println(url + "\t" + doi);
+	      } else {
+		wrtr.println(doi);
+	      }
+	    }
+	  }
+	}
+      }
+    }
+
+    DoiList setIncludeUrl(boolean val) {
+      isIncludeUrl = val;
+      return this;
+    }
+  }
+
+  /** List URL of articles in AU */
+  class ArticleUrlList extends BaseArticleList {
+    int logMissing = 3;
+
+    ArticleUrlList(ArchivalUnit au) {
+      super(au);
+    }
+
+    void printHeader() {
+      wrtr.println("# Articles in " + au.getName());
+    }
+
+    void processArticle(ArticleFiles af) {
+      CachedUrl cu = af.getFullTextCu();
+      if (cu != null) {
+	wrtr.println(cu.getUrl());
+      } else {
+	// shouldn't happen, but if it does it likely will many times.
+	if (logMissing-- > 0) {
+	  log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	}
+      }
+    }
+  }
+
+  /** Dump all ArticleFiles and metadata of articles in AU */
+  class MetadataList extends BaseMetadataList {
+    MetadataList(ArchivalUnit au, MetadataTarget target) {
+      super(au, target);
+    }
+    void printHeader() {
+      wrtr.println("# All metadata in " + au.getName());
+    }
+
+    void processArticle(ArticleFiles af, List<ArticleMetadata> amlst) {
+// 	  wrtr.println(af);
+      wrtr.println("ArticleFiles");
+      wrtr.print(af.ppString(2));
+      
+      for (ArticleMetadata md : amlst) {
+	if (md != null) {
+	  wrtr.println("Metadata");
+	  wrtr.print(md.ppString(2));
+// 	  wrtr.println(md);
+	}
+      }      
+      wrtr.println();
+    }
+  }
+
+  /** Base for lists of AUs */
+  abstract class AuList extends BaseList {
+
+    void doBody() throws IOException {
+      boolean includeInternalAus = isDebugUser();
+      for (ArchivalUnit au : pluginMgr.getAllAus()) {
+	if (includeInternalAus || !pluginMgr.isInternalAu(au)) {
+	  processAu(au);
+	}
+      }
+    }
+
+    /** Subs must process each AU */
+    abstract void processAu(ArchivalUnit au);
+  }
+
+  /** List AU names */
+  class AuNameList extends AuList {
+    void printHeader() {
+      wrtr.println("# AUs on " + getMachineName());
+    }
+
+    void processAu(ArchivalUnit au) {
+      wrtr.println(au.getName());
+    }
+  }
+
+  /** List AUIDs */
+  class AuidList extends AuList {
+    void printHeader() {
+      wrtr.println("# AUIDs on " + getMachineName());
+    }
+
+    void processAu(ArchivalUnit au) {
+      wrtr.println(au.getAuId());
+    }
   }
 }
