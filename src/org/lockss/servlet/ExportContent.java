@@ -1,10 +1,10 @@
 /*
- * $Id: ExportContent.java,v 1.7 2011-04-04 07:15:03 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.8 2011-04-26 23:54:46 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -408,7 +408,7 @@ public class ExportContent extends LockssServlet {
 
 	  ServletDescr descr = AdminServletManager.LINK_EXPORTS;
 	  String base = srvURL(descr);
-	  DateFormat df = new SimpleDateFormat("EEE dd, yy HH:mm:ss Z");
+	  DateFormat df = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss");
 
 	  for (File file : files) {
 	    String fname = file.getName();
