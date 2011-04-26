@@ -1,10 +1,10 @@
 /*
- * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:16 tlipkis Exp $
+ * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.6 2011-04-26 23:53:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,20 +66,15 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
 					String url,
 					ServletUtil.LinkTransform xform)
       throws PluginException {
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      logger.debug("Rewriting " + url + " in AU " + au);
-      // HTML gets default URL rewriting
-      StringBuffer jsInit = initializeJs(au, url, xform);
-      StringBuffer jsText = getJs();
-      String replace = jsInit.toString() + jsText + "\n" + jsTag;
-      StringFilter sf = new StringFilter(FilterUtil.getReader(in, encoding),
-					 jsTag, replace);
-      sf.setIgnoreCase(true);
-      return new ReaderInputStream(sf, encoding);
-    } else {
-      throw new PluginException("JavascriptHtmlLinkRewriterFactory vs. " +
-				mimeType);
-    }
+    logger.debug2("Rewriting " + url + " in AU " + au);
+    // HTML gets default URL rewriting
+    StringBuffer jsInit = initializeJs(au, url, xform);
+    StringBuffer jsText = getJs();
+    String replace = jsInit.toString() + jsText + "\n" + jsTag;
+    StringFilter sf = new StringFilter(FilterUtil.getReader(in, encoding),
+				       jsTag, replace);
+    sf.setIgnoreCase(true);
+    return new ReaderInputStream(sf, encoding);
   }
 
   private StringBuffer getJs() throws PluginException {

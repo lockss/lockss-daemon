@@ -1,10 +1,10 @@
 /*
- * $Id: StringFilterCssLinkRewriterFactory.java,v 1.5 2011-02-14 00:07:31 tlipkis Exp $
+ * $Id: StringFilterCssLinkRewriterFactory.java,v 1.6 2011-04-26 23:53:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,46 +61,41 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
 					String url,
 					ServletUtil.LinkTransform xform)
       throws PluginException {
-    if ("text/css".equalsIgnoreCase(mimeType)) {
-      logger.debug("Rewriting " + url + " in AU " + au);
-      // urlPrefix is http://host:port/ServeContent?url=
-      String urlPrefix = xform.rewrite("");
-      // urlBase is url made absolute up to but excluding the last /
-      String urlBase = makeBase(au, url);
-      // urlHost is urlBase with enough ../ to get back to site root.
-      String urlHost = makeHost(au, url);
-      Collection urlStems = au.getUrlStems();
-      int nUrlStem = urlStems.size();
-      String[][] replace1 = {
-	// Rewrite absolute CSS links out of the way
-	{"@import url(", "^http://", "@@@http://"},
-	// Rewrite relative to absolute (prefix added later)
-	{"@import url(", "^([a-z])", urlBase + "/$1"},
-	// Rewrite relative to absolute (prefix added later)
-	{"@import url(", "^(\\.\\./)", urlBase + "/$1"},
-	// Rewrite relative to absolute with prefix
-	{"@import url(", "^/", urlHost + "/"},
-	// Rewrite absolute CSS links back in to the way
-	{"@import url(", "^@@@http://", "http://"},
-      };
-      String[][] replace = new String[replace1.length + nUrlStem][3];
-      int i = 0;
-      for ( ; i < replace1.length; i++) {
-	replace[i] = replace1[i];
-      }
-      for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-	String urlStem = (String)it.next();
-	String[] line = {"@import url(", "^" + urlStem, urlPrefix + urlStem};
-	replace[i++] = line;
-      }
-      CssLinkFilter sf =
-	CssLinkFilter.makeNestedFilter(FilterUtil.getReader(in, encoding),
-				       replace, true);
-      return new ReaderInputStream(sf, encoding);
-    } else {
-      throw new PluginException("StringFilterCssLinkRewriterFactory vs. " +
-				mimeType);
+    logger.debug2("Rewriting " + url + " in AU " + au);
+    // urlPrefix is http://host:port/ServeContent?url=
+    String urlPrefix = xform.rewrite("");
+    // urlBase is url made absolute up to but excluding the last /
+    String urlBase = makeBase(au, url);
+    // urlHost is urlBase with enough ../ to get back to site root.
+    String urlHost = makeHost(au, url);
+    Collection urlStems = au.getUrlStems();
+    int nUrlStem = urlStems.size();
+    String[][] replace1 = {
+      // Rewrite absolute CSS links out of the way
+      {"@import url(", "^http://", "@@@http://"},
+      // Rewrite relative to absolute (prefix added later)
+      {"@import url(", "^([a-z])", urlBase + "/$1"},
+      // Rewrite relative to absolute (prefix added later)
+      {"@import url(", "^(\\.\\./)", urlBase + "/$1"},
+      // Rewrite relative to absolute with prefix
+      {"@import url(", "^/", urlHost + "/"},
+      // Rewrite absolute CSS links back in to the way
+      {"@import url(", "^@@@http://", "http://"},
+    };
+    String[][] replace = new String[replace1.length + nUrlStem][3];
+    int i = 0;
+    for ( ; i < replace1.length; i++) {
+      replace[i] = replace1[i];
     }
+    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
+      String urlStem = (String)it.next();
+      String[] line = {"@import url(", "^" + urlStem, urlPrefix + urlStem};
+      replace[i++] = line;
+    }
+    CssLinkFilter sf =
+      CssLinkFilter.makeNestedFilter(FilterUtil.getReader(in, encoding),
+				     replace, true);
+    return new ReaderInputStream(sf, encoding);
   }
 
   private String makeBase(ArchivalUnit au, String url) 

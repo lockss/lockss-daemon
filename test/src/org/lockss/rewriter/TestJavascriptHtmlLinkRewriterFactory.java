@@ -1,10 +1,10 @@
 /*
- * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:15 tlipkis Exp $
+ * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.6 2011-04-26 23:53:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -95,23 +95,6 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     l.add(urlStem);
     au.setUrlStems(l);
     jhlrf = new JavascriptHtmlLinkRewriterFactory();
-  }
-
-  public void testThrowsIfNotHtml() {
-    in = new StringInputStream(withHtmlTag);
-    setupConfig(true);
-    try {
-      InputStream ret =
-	jhlrf.createLinkRewriter("application/pdf", au, in, encoding,
-				 url, xform);
-      fail("createLinkRewriter should have thrown on non-html mime type");
-    } catch (Exception ex) {
-      if (ex instanceof PluginException) {
-	return;
-      }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
-	   ex.toString());
-    }
   }
 
   public void testThrowsIfNoPort() {

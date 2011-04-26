@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.5 2011-02-14 00:07:31 tlipkis Exp $
+ * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.6 2011-04-26 23:53:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,21 +100,6 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
     l.add(urlStem);
     au.setUrlStems(l);
     sfclrf = new StringFilterCssLinkRewriterFactory();
-  }
-
-  public void testThrowsIfNotCss() {
-    in = new StringInputStream(page);
-    try {
-      sfclrf.createLinkRewriter("text/html", au, in,
-				encoding, url, xform);
-      fail("createLinkRewriter should have thrown on non-css mime type");
-    } catch (Exception ex) {
-      if (ex instanceof PluginException) {
-	return;
-      }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
-	   ex.toString());
-    }
   }
 
    public void testAbsRewriting() throws Exception {
