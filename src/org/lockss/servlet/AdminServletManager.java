@@ -1,10 +1,10 @@
 /*
- * $Id: AdminServletManager.java,v 1.19 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.20 2011-04-26 23:54:33 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -333,8 +333,6 @@ public class AdminServletManager extends BaseServletManager {
                      "Hash CUS",
                      ServletDescr.NEED_ROLE_DEBUG);
   
-  // Conditional on PARAM_UI_SHOW_HOLDINGS_SERVLET
-  // class; otherwise the servlet is created and shown in the menu. 
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
     new ServletDescr("ListHoldings",
                      ListHoldings.class,

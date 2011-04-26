@@ -1,10 +1,10 @@
 /*
- * $Id: ContentServletManager.java,v 1.5 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.6 2011-04-26 23:54:33 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,8 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
+import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
@@ -137,6 +139,18 @@ public class ContentServletManager
                      ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
 
+  protected static final ServletDescr SERVLET_LIST_HOLDINGS =
+    new ServletDescr("ListHoldings",
+                     ListHoldings.class,
+                     "Holdings List",
+                     "Holdings",
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+                     "List holdings metadata") {
+      public boolean isEnabled(LockssDaemon daemon) {
+	return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
+					     ListHoldings.DEFAULT_ENABLE_HOLDINGS);
+      }};
+  
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -149,6 +163,7 @@ public class ContentServletManager
   // Order of descrs determines order in nav table.
   static final ServletDescr servletDescrs[] = {
      SERVLET_SERVE_CONTENT,
+     SERVLET_LIST_HOLDINGS,
      SERVLET_LIST_OBJECTS,
      LINK_HELP,
   };
