@@ -234,7 +234,7 @@
         param[base_url] = http://adr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Advances in Dental Research Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; Advances in Dental Research Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Advances in Dental Research Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Advances in Dental Research Volume 22 ; 22 >
 
@@ -560,8 +560,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; manifest ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; manifest ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 25 ; 25 >
@@ -1299,7 +1299,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; down ; British Journalism Review Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; British Journalism Review Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; British Journalism Review Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; British Journalism Review Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; British Journalism Review Volume 21 ; 21 >
 
       }
 
@@ -1489,7 +1489,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://cde.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Career Development for Exceptional Individuals Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Career Development for Exceptional Individuals Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Career Development for Exceptional Individuals Volume 32 ; 32 >
         au < HighWirePressH20Plugin ; manifest ; Career Development for Exceptional Individuals Volume 33 ; 33 >
 
@@ -1671,7 +1671,7 @@ comment[ajs] = this journal has been moved to H20 platform
 
         au < HighWireStrVolPlugin ; down ; Chronic Illness Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; Chronic Illness Volume 3 ; 3 >
-        au < HighWirePressPlugin ; manifest ; Chronic Illness Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Chronic Illness Volume 4 ; 4 >
         au < HighWirePressPlugin ; down ; Chronic Illness Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; manifest ; Chronic Illness Volume 6 ; 6 >
 
@@ -2429,7 +2429,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; down ; Criminal Justice Policy Review Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Criminal Justice Policy Review Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Criminal Justice Policy Review Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Criminal Justice Policy Review Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Criminal Justice Policy Review Volume 21 ; 21 >
 
       }
 
@@ -2885,7 +2885,7 @@ comment[csp7] = manifest page is malformed
         au < HighWireStrVolPlugin ; down ; Discourse & Society Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Discourse & Society Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Discourse & Society Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Discourse & Society Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Discourse & Society Volume 21 ; 21 >
 
       }
 
@@ -3795,7 +3795,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; manifest ; European Physical Education Review Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; European Physical Education Review Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; European Physical Education Review Volume 15 ; 15 >
 
       }
@@ -4257,7 +4257,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://foa.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 25 ; 25 >
 
@@ -4304,7 +4304,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://fas.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Foot & Ankle Specialist Volume 2 ; 2 >
         au < HighWirePressH30Plugin ; manifest ; Foot & Ankle Specialist Volume 3 ; 3 >
 
@@ -4341,7 +4341,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; French Cultural Studies Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; French Cultural Studies Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; French Cultural Studies Volume 21 ; 21 >
 
       }
 
@@ -4520,7 +4520,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://ped.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Global Health Promotion Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Global Health Promotion Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Global Health Promotion Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; Global Health Promotion Volume 17 ; 17 >
 
@@ -4982,7 +4982,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; History of Psychiatry Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; History of Psychiatry Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; History of Psychiatry Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; History of Psychiatry Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; History of Psychiatry Volume 21 ; 21 >
 
       }
 
@@ -6324,7 +6324,7 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the New Testament Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the New Testament Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the New Testament Volume 30 ; 30 >
-        au < HighWireStrVolPlugin ; manifest ; Journal for the Study of the New Testament Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the New Testament Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the New Testament Volume 32 ; 32 >
 
       }
@@ -6384,7 +6384,7 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; manifest ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 >
 
       }
@@ -6454,7 +6454,7 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Aging and Health Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; Journal of Aging and Health Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Aging and Health Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Aging and Health Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 22 ; 22 >
 
       }
@@ -6521,8 +6521,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; The Journal of Applied Behavioral Science Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
         au < HighWireStrVolPlugin ; down ; The Journal of Applied Behavioral Science Volume 43 ; 43 >
-        au < HighWireStrVolPlugin ; manifest ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; manifest ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 46 ; 46 >
 
       }
@@ -6556,8 +6556,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Applied Gerontology Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Applied Gerontology Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; down ; Journal of Applied Gerontology Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 29 ; 29 >
 
       }
@@ -6591,8 +6591,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Asian and African Studies Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Asian and African Studies Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; Journal of Asian and African Studies Volume 42 ; 42 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Asian and African Studies Volume 43 ; 43 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Asian and African Studies Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 45 ; 45 >
 
       }
@@ -6617,8 +6617,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Attention Disorders Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Attention Disorders Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 14 ; 14 >
 
       }
@@ -6642,8 +6642,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 >
 
       }
@@ -6834,7 +6834,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 31 ; 31 >
-        au < HighWirePressPlugin ; manifest ; Journal of Building Physics Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Building Physics Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Journal of Building Physics Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Building Physics Volume 34 ; 34 >
 
@@ -7237,8 +7237,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; The Journal of Commonwealth Literature Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Commonwealth Literature Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; The Journal of Commonwealth Literature Volume 42 ; 42 >
-        au < HighWirePressPlugin ; manifest ; The Journal of Commonwealth Literature Volume 43 ; 43 >
-        au < HighWirePressPlugin ; manifest ; The Journal of Commonwealth Literature Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 45 ; 45 >
 
       }
@@ -7273,7 +7273,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Communication Inquiry Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Journal of Communication Inquiry Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Journal of Communication Inquiry Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Journal of Communication Inquiry Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Communication Inquiry Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Communication Inquiry Volume 34 ; 34 >
 
       }
@@ -7509,7 +7509,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Journal of Creative Communications Volume 1 ; 1 >
-        au < HighWirePressPlugin ; manifest ; Journal of Creative Communications Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Creative Communications Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Journal of Creative Communications Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Creative Communications Volume 4 ; 4 >
 
@@ -7531,7 +7531,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://dms.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; manifest ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 >
 
       }
@@ -7638,7 +7638,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < HighWirePressPlugin ; down ; Journal of Disability Policy Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Disability Policy Studies Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Journal of Disability Policy Studies Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Disability Policy Studies Volume 21 ; 21 >
 
       } 
       
@@ -7861,7 +7861,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < HighWireStrVolPlugin ; down ; Journal of Endotoxin Research Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Endotoxin Research Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Journal of Endotoxin Research Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Endotoxin Research Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Endotoxin Research Volume 16 ; 16 >
 
       }
@@ -8682,7 +8682,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Intelligent Material Systems and Structures Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Journal of Intelligent Material Systems and Structures Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Intelligent Material Systems and Structures Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Journal of Intelligent Material Systems and Structures Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Intelligent Material Systems and Structures Volume 21 ; 21 >
 
       }
 
@@ -9534,7 +9534,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jsa.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Journal of Social Archaeology Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Social Archaeology Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; Journal of Social Archaeology Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Journal of Social Archaeology Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Journal of Social Archaeology Volume 7 ; 7 >
@@ -9858,7 +9858,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Journal of Transcultural Nursing Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Journal of Transcultural Nursing Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Transcultural Nursing Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Journal of Transcultural Nursing Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Transcultural Nursing Volume 21 ; 21 >
 
       }
 
@@ -11172,7 +11172,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Planning Theory Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Planning Theory Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Planning Theory Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Planning Theory Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Planning Theory Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; Planning Theory Volume 9 ; 9 >
 
       }
@@ -11219,7 +11219,7 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
@@ -11318,7 +11318,7 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Politics, Philosophy & Economics Volume 4 ; 4 >
-        au < HighWirePressPlugin ; manifest ; Politics, Philosophy & Economics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; Politics, Philosophy & Economics Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Politics, Philosophy & Economics Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Politics, Philosophy & Economics Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Politics, Philosophy & Economics Volume 8 ; 8 >
@@ -11343,7 +11343,7 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; The Prison Journal Volume 85 ; 85 >
-        au < HighWirePressPlugin ; manifest ; The Prison Journal Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; manifest ; The Prison Journal Volume 86 ; 86 >
         au < HighWireStrVolPlugin ; down ; The Prison Journal Volume 87 ; 87 >
         au < HighWirePressPlugin ; down ; The Prison Journal Volume 88 ; 88 >
         au < HighWirePressPlugin ; down ; The Prison Journal Volume 89 ; 89 >
@@ -11371,7 +11371,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Probation Journal Volume 53 ; 53 >
         au < HighWireStrVolPlugin ; down ; Probation Journal Volume 54 ; 54 >
         au < HighWirePressPlugin ; down ; Probation Journal Volume 55 ; 55 >
-        au < HighWirePressPlugin ; manifest ; Probation Journal Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; Probation Journal Volume 56 ; 56 >
         au < HighWirePressH20Plugin ; manifest ; Probation Journal Volume 57 ; 57 >
 
       }
@@ -11395,7 +11395,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Progress in Development Studies Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Progress in Development Studies Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Progress in Development Studies Volume 8 ; 8 >
-        au < HighWirePressPlugin ; manifest ; Progress in Development Studies Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; Progress in Development Studies Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; Progress in Development Studies Volume 10 ; 10 >
 
       }
@@ -11420,7 +11420,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Progress in Human Geography Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Progress in Human Geography Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Progress in Human Geography Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Progress in Human Geography Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; Progress in Human Geography Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Progress in Human Geography Volume 34 ; 34 >
 
       }
@@ -11444,7 +11444,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Progress in Physical Geography Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Progress in Physical Geography Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Progress in Physical Geography Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Progress in Physical Geography Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; Progress in Physical Geography Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Progress in Physical Geography Volume 34 ; 34 >
 
       }
@@ -11523,7 +11523,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Psychology & Developing Societies Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; Psychology & Developing Societies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Psychology & Developing Societies Volume 20 ; 20 >
-        au < HighWirePressH21Plugin ; manifest ; Psychology & Developing Societies Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Psychology & Developing Societies Volume 21 ; 21 >
 
       }
 
@@ -11547,7 +11547,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Psychology of Music Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; Psychology of Music Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Psychology of Music Volume 36 ; 36 >
-        au < HighWirePressPlugin ; manifest ; Psychology of Music Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; manifest ; Psychology of Music Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; Psychology of Music Volume 38 ; 38 >
 
       }
@@ -11568,11 +11568,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pfr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Public Finance Review Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; manifest ; Public Finance Review Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; down ; Public Finance Review Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; Public Finance Review Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Public Finance Review Volume 36 ; 36 >
-        au < HighWirePressPlugin ; manifest ; Public Finance Review Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; manifest ; Public Finance Review Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; Public Finance Review Volume 38 ; 38 >
 
       }
@@ -11744,10 +11744,10 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Qualitative Research Volume 5 ; 5 >
-        au < HighWirePressPlugin ; manifest ; Qualitative Research Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; Qualitative Research Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Qualitative Research Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Qualitative Research Volume 8 ; 8 >
-        au < HighWirePressPlugin ; manifest ; Qualitative Research Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; Qualitative Research Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; Qualitative Research Volume 10 ; 10 >
 
       }
@@ -11772,7 +11772,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Qualitative Social Work Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Qualitative Social Work Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Qualitative Social Work Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Qualitative Social Work Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Qualitative Social Work Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; Qualitative Social Work Volume 9 ; 9 >
 
       }
@@ -11822,7 +11822,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Rationality and Society Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; Rationality and Society Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Rationality and Society Volume 20 ; 20 >
-        au < HighWirePressPlugin ; manifest ; Rationality and Society Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; Rationality and Society Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Rationality and Society Volume 22 ; 22 >
 
       }
@@ -11847,7 +11847,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; RELC Journal Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; down ; RELC Journal Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; RELC Journal Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; RELC Journal Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; RELC Journal Volume 40 ; 40 >
         au < HighWirePressH20Plugin ; manifest ; RELC Journal Volume 41 ; 41 >
 
       }
@@ -11869,9 +11869,9 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Reproductive Sciences Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Reproductive Sciences Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Reproductive Sciences Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Reproductive Sciences Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; Reproductive Sciences Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; Reproductive Sciences Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; Reproductive Sciences Volume 17 ; 17 >
 
       }
@@ -11896,7 +11896,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Research on Aging Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; down ; Research on Aging Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Research on Aging Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Research on Aging Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Research on Aging Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Research on Aging Volume 32 ; 32 >
 
       }
@@ -11921,7 +11921,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Research on Social Work Practice Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Research on Social Work Practice Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Research on Social Work Practice Volume 18 ; 18 >
-        au < HighWirePressPlugin ; manifest ; Research on Social Work Practice Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; Research on Social Work Practice Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; Research on Social Work Practice Volume 20 ; 20 >
 
       }
@@ -11943,9 +11943,9 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Research Studies in Music Education Volume 28 ; 28 >
-        au < HighWirePressPlugin ; manifest ; Research Studies in Music Education Volume 29 ; 29 >
-        au < HighWirePressPlugin ; manifest ; Research Studies in Music Education Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Research Studies in Music Education Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Research Studies in Music Education Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; Research Studies in Music Education Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; Research Studies in Music Education Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Research Studies in Music Education Volume 32 ; 32 >
 
       }
@@ -11989,7 +11989,7 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Review of Educational Research Volume 77 ; 77 >
         au < HighWirePressPlugin ; down ; Review of Educational Research Volume 78 ; 78 >
-        au < HighWirePressPlugin ; manifest ; Review of Educational Research Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; manifest ; Review of Educational Research Volume 79 ; 79 >
         au < HighWirePressH20Plugin ; manifest ; Review of Educational Research Volume 80 ; 80 >
 
       }
@@ -12133,7 +12133,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sts.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Science Technology & Society Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Science Technology & Society Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Science Technology & Society Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; Science Technology & Society Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Science Technology & Society Volume 13 ; 13 >
@@ -12159,8 +12159,8 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Science, Technology & Human Values Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Science, Technology & Human Values Volume 31 ; 31 >
-        au < HighWirePressPlugin ; manifest ; Science, Technology & Human Values Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; manifest ; Science, Technology & Human Values Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Science, Technology & Human Values Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Science, Technology & Human Values Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Science, Technology & Human Values Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; manifest ; Science, Technology & Human Values Volume 35 ; 35 >
@@ -12183,10 +12183,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://slr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Second Language Research Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Second Language Research Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Second Language Research Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Second Language Research Volume 24 ; 24 >
-        au < HighWirePressPlugin ; manifest ; Second Language Research Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Second Language Research Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; Second Language Research Volume 26 ; 26 >
 
       }
@@ -12211,7 +12211,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Security Dialogue Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; down ; Security Dialogue Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Security Dialogue Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; Security Dialogue Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; Security Dialogue Volume 40 ; 40 >
         au < HighWirePressH20Plugin ; manifest ; Security Dialogue Volume 41 ; 41 >
 
       }
@@ -12235,8 +12235,8 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 11 ; 11 >
-        au < HighWirePressPlugin ; manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 >
 
       }
@@ -12257,11 +12257,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sexualities.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Sexualities Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Sexualities Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; Sexualities Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Sexualities Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Sexualities Volume 11 ; 11 >
-        au < HighWirePressPlugin ; manifest ; Sexualities Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Sexualities Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; Sexualities Volume 13 ; 13 >
 
       }
@@ -12286,7 +12286,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; SIMULATION Volume 82 ; 82 >
         au < HighWireStrVolPlugin ; down ; SIMULATION Volume 83 ; 83 >
         au < HighWirePressPlugin ; down ; SIMULATION Volume 84 ; 84 >
-        au < HighWirePressPlugin ; manifest ; SIMULATION Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; manifest ; SIMULATION Volume 85 ; 85 >
         au < HighWirePressH20Plugin ; manifest ; SIMULATION Volume 86 ; 86 >
 
       }
@@ -12311,7 +12311,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Simulation & Gaming Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; down ; Simulation & Gaming Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Simulation & Gaming Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; Simulation & Gaming Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; Simulation & Gaming Volume 40 ; 40 >
         au < HighWirePressH20Plugin ; manifest ; Simulation & Gaming Volume 41 ; 41 >
 
       }
@@ -12332,11 +12332,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sgr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Small Group Research Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; manifest ; Small Group Research Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; down ; Small Group Research Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; down ; Small Group Research Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Small Group Research Volume 39 ; 39 >
-        au < HighWirePressPlugin ; manifest ; Small Group Research Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; manifest ; Small Group Research Volume 40 ; 40 >
         au < HighWirePressH20Plugin ; manifest ; Small Group Research Volume 41 ; 41 >
 
       }
@@ -12358,10 +12358,10 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Social & Legal Studies Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Social & Legal Studies Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Social & Legal Studies Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Social & Legal Studies Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Social & Legal Studies Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Social & Legal Studies Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Social & Legal Studies Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; Social & Legal Studies Volume 19 ; 19 >
 
       }
@@ -12386,7 +12386,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Social Compass Volume 53 ; 53 >
         au < HighWireStrVolPlugin ; down ; Social Compass Volume 54 ; 54 >
         au < HighWirePressPlugin ; down ; Social Compass Volume 55 ; 55 >
-        au < HighWirePressPlugin ; manifest ; Social Compass Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; Social Compass Volume 56 ; 56 >
         au < HighWirePressH20Plugin ; manifest ; Social Compass Volume 57 ; 57 >
 
       }
@@ -12407,11 +12407,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ssc.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Social Science Computer Review Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Social Science Computer Review Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; Social Science Computer Review Volume 24 ; 24 >
-        au < HighWirePressPlugin ; manifest ; Social Science Computer Review Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Social Science Computer Review Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; Social Science Computer Review Volume 26 ; 26 >
-        au < HighWirePressPlugin ; manifest ; Social Science Computer Review Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; manifest ; Social Science Computer Review Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; Social Science Computer Review Volume 28 ; 28 >
 
       }
@@ -12436,7 +12436,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Social Science Information Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; down ; Social Science Information Volume 46 ; 46 >
         au < HighWirePressPlugin ; down ; Social Science Information Volume 47 ; 47 >
-        au < HighWirePressPlugin ; manifest ; Social Science Information Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; manifest ; Social Science Information Volume 48 ; 48 >
         au < HighWirePressH20Plugin ; manifest ; Social Science Information Volume 49 ; 49 >
 
       }
@@ -12461,7 +12461,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Social Studies of Science Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; down ; Social Studies of Science Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; Social Studies of Science Volume 38 ; 38 >
-        au < HighWirePressPlugin ; manifest ; Social Studies of Science Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; Social Studies of Science Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; manifest ; Social Studies of Science Volume 40 ; 40 >
 
       }
@@ -12483,8 +12483,8 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Sociological Methods & Research Volume 33 ; 33 >
-        au < HighWirePressPlugin ; manifest ; Sociological Methods & Research Volume 34 ; 34 >
-        au < HighWirePressPlugin ; manifest ; Sociological Methods & Research Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; manifest ; Sociological Methods & Research Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; manifest ; Sociological Methods & Research Volume 35 ; 35 >
         au < HighWireStrVolPlugin ; down ; Sociological Methods & Research Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Sociological Methods & Research Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; Sociological Methods & Research Volume 38 ; 38 >
@@ -12507,11 +12507,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://soc.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Sociology Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; manifest ; Sociology Volume 39 ; 39 >
         au < HighWireStrVolPlugin ; down ; Sociology Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; down ; Sociology Volume 41 ; 41 >
         au < HighWirePressPlugin ; down ; Sociology Volume 42 ; 42 >
-        au < HighWirePressPlugin ; manifest ; Sociology Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; manifest ; Sociology Volume 43 ; 43 >
         au < HighWirePressH20Plugin ; manifest ; Sociology Volume 44 ; 44 >
 
       }
@@ -12531,9 +12531,9 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sae.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; South Asia Economic Journal Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; South Asia Economic Journal Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; South Asia Economic Journal Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; South Asia Economic Journal Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; South Asia Economic Journal Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; South Asia Economic Journal Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; South Asia Economic Journal Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; South Asia Economic Journal Volume 10 ; 10 >
 
@@ -12559,7 +12559,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; South Asia Research Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; South Asia Research Volume 27 ; 27 >
         au < HighWirePressPlugin ; down ; South Asia Research Volume 28 ; 28 >
-        au < HighWirePressPlugin ; manifest ; South Asia Research Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; South Asia Research Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; manifest ; South Asia Research Volume 30 ; 30 >
 
       }
@@ -12581,9 +12581,9 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; South Asian Survey Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; South Asian Survey Volume 13 ; 13 >
-        au < HighWirePressPlugin ; manifest ; South Asian Survey Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; South Asian Survey Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; South Asian Survey Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; South Asian Survey Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; South Asian Survey Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; South Asian Survey Volume 17 ; 17 >
 
       }
@@ -12608,7 +12608,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Space and Culture Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Space and Culture Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Space and Culture Volume 11 ; 11 >
-        au < HighWirePressPlugin ; manifest ; Space and Culture Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Space and Culture Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; Space and Culture Volume 13 ; 13 >
 
       }
@@ -12642,7 +12642,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Statistical Methods in Medical Research Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Statistical Methods in Medical Research Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Statistical Methods in Medical Research Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Statistical Methods in Medical Research Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Statistical Methods in Medical Research Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; Statistical Methods in Medical Research Volume 19 ; 19 >
 
       }
@@ -12667,7 +12667,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Strategic Organization Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; Strategic Organization Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; Strategic Organization Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; Strategic Organization Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; Strategic Organization Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; Strategic Organization Volume 8 ; 8 >
 
       }
@@ -12692,7 +12692,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Structural Health Monitoring Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Structural Health Monitoring Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Structural Health Monitoring Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Structural Health Monitoring Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Structural Health Monitoring Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; Structural Health Monitoring Volume 9 ; 9 >
 
       }
@@ -12717,7 +12717,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Studies in Christian Ethics Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Studies in Christian Ethics Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Studies in Christian Ethics Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; Studies in Christian Ethics Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; Studies in Christian Ethics Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; manifest ; Studies in Christian Ethics Volume 23 ; 23 >
 
       }
@@ -12766,7 +12766,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Surgical Innovation Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; down ; Surgical Innovation Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Surgical Innovation Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; Surgical Innovation Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; Surgical Innovation Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; Surgical Innovation Volume 17 ; 17 >
 
       }
@@ -12802,7 +12802,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Television & New Media Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Television & New Media Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Television & New Media Volume 9 ; 9 >
-        au < HighWirePressPlugin ; manifest ; Television & New Media Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Television & New Media Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; Television & New Media Volume 11 ; 11 >
 
       }
@@ -12827,7 +12827,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Textile Research Journal Volume 76 ; 76 >
         au < HighWireStrVolPlugin ; down ; Textile Research Journal Volume 77 ; 77 >
         au < HighWirePressPlugin ; down ; Textile Research Journal Volume 78 ; 78 >
-        au < HighWirePressPlugin ; manifest ; Textile Research Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; manifest ; Textile Research Journal Volume 79 ; 79 >
         au < HighWirePressH20Plugin ; manifest ; Textile Research Journal Volume 80 ; 80 >
 
       }
@@ -12860,7 +12860,7 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Theology and Sexuality Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; Theology and Sexuality Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Theology and Sexuality Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Theology and Sexuality Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; down ; Theology and Sexuality Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; Theology and Sexuality Volume 15 ; 15 >
 
@@ -12891,10 +12891,10 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Theoretical Criminology Volume 9 ; 9 >
-        au < HighWirePressPlugin ; manifest ; Theoretical Criminology Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Theoretical Criminology Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Theoretical Criminology Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Theoretical Criminology Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Theoretical Criminology Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Theoretical Criminology Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; Theoretical Criminology Volume 14 ; 14 >
 
       }
@@ -12919,7 +12919,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Theory & Psychology Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Theory & Psychology Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Theory & Psychology Volume 18 ; 18 >
-        au < HighWirePressPlugin ; manifest ; Theory & Psychology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; Theory & Psychology Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; Theory & Psychology Volume 20 ; 20 >
 
       }
@@ -12944,7 +12944,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Theory and Research in Education Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; Theory and Research in Education Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; Theory and Research in Education Volume 6 ; 6 >
-        au < HighWirePressPlugin ; manifest ; Theory and Research in Education Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; Theory and Research in Education Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; Theory and Research in Education Volume 8 ; 8 >
 
       }
@@ -12966,10 +12966,10 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Theory, Culture & Society Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; Theory, Culture & Society Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; manifest ; Theory, Culture & Society Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; Theory, Culture & Society Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Theory, Culture & Society Volume 25 ; 25 >
-        au < HighWirePressPlugin ; manifest ; Theory, Culture & Society Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; Theory, Culture & Society Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; Theory, Culture & Society Volume 27 ; 27 >
 
       }
@@ -12992,7 +12992,7 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
-        au < HighWirePressPlugin ; manifest ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; manifest ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
 
       }
@@ -13015,7 +13015,7 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 >
-        au < HighWirePressPlugin ; manifest ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; manifest ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 >
 
       }
@@ -13052,8 +13052,8 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; Thesis Eleven Volume 93 ; 93 >
         au < HighWirePressPlugin ; down ; Thesis Eleven Volume 94 ; 94 >
         au < HighWirePressPlugin ; down ; Thesis Eleven Volume 95 ; 95 >
-        au < HighWirePressPlugin ; manifest ; Thesis Eleven Volume 96 ; 96 >
-        au < HighWirePressPlugin ; manifest ; Thesis Eleven Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; manifest ; Thesis Eleven Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; manifest ; Thesis Eleven Volume 97 ; 97 >
         au < HighWirePressH20Plugin ; manifest ; Thesis Eleven Volume 98 ; 98 >
 
       }
@@ -13078,7 +13078,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Time & Society Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Time & Society Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Time & Society Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Time & Society Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; Time & Society Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; Time & Society Volume 19 ; 19 >
 
       }
@@ -13138,7 +13138,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Toxicology and Industrial Health Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Toxicology and Industrial Health Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Toxicology and Industrial Health Volume 24 ; 24 >
-        au < HighWirePressPlugin ; manifest ; Toxicology and Industrial Health Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; manifest ; Toxicology and Industrial Health Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; Toxicology and Industrial Health Volume 26 ; 26 >
 
       }
@@ -13159,10 +13159,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tim.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Transactions of the Institute of Measurement and Control Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Transactions of the Institute of Measurement and Control Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; down ; Transactions of the Institute of Measurement and Control Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 >
-        au < HighWirePressPlugin ; manifest ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 >
 
       }
@@ -13187,7 +13187,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Transcultural Psychiatry Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; down ; Transcultural Psychiatry Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; Transcultural Psychiatry Volume 45 ; 45 >
-        au < HighWirePressPlugin ; manifest ; Transcultural Psychiatry Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; manifest ; Transcultural Psychiatry Volume 46 ; 46 >
         au < HighWirePressH20Plugin ; manifest ; Transcultural Psychiatry Volume 47 ; 47 >
 
       }
@@ -13212,7 +13212,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Trauma Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; Trauma Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Trauma Volume 10 ; 10 >
-        au < HighWirePressPlugin ; manifest ; Trauma Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Trauma Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; Trauma Volume 12 ; 12 >
 
       }
@@ -13235,9 +13235,9 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Trauma, Violence, & Abuse Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Trauma, Violence, & Abuse Volume 7 ; 7 >
-        au < HighWirePressPlugin ; manifest ; Trauma, Violence, & Abuse Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; Trauma, Violence, & Abuse Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Trauma, Violence, & Abuse Volume 9 ; 9 >
-        au < HighWirePressPlugin ; manifest ; Trauma, Violence, & Abuse Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; Trauma, Violence, & Abuse Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; Trauma, Violence, & Abuse Volume 11 ; 11 >
 
       }
@@ -13258,10 +13258,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tmt.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Traumatology Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; Traumatology Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Traumatology Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Traumatology Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Traumatology Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Traumatology Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Traumatology Volume 16 ; 16 >
 
       }
@@ -13284,9 +13284,9 @@ comment[mpj] = now published by Brill
 
         au < HighWireStrVolPlugin ; down ; Trends in Amplification Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Trends in Amplification Volume 10 ; 10 >
-        au < HighWirePressPlugin ; manifest ; Trends in Amplification Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Trends in Amplification Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Trends in Amplification Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Trends in Amplification Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; Trends in Amplification Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; Trends in Amplification Volume 14 ; 14 >
 
       }
@@ -13381,10 +13381,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://vmj.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Vascular Medicine Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; Vascular Medicine Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; Vascular Medicine Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Vascular Medicine Volume 13 ; 13 >
-        au < HighWirePressPlugin ; manifest ; Vascular Medicine Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Vascular Medicine Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; Vascular Medicine Volume 15 ; 15 >
 
       }
@@ -13409,7 +13409,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Violence Against Women Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Violence Against Women Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Violence Against Women Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; Violence Against Women Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Violence Against Women Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Violence Against Women Volume 16 ; 16 >
 
       }
@@ -13506,8 +13506,8 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Western Journal of Nursing Research Volume 27 ; 27 >
-        au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 28 ; 28 >
-        au < HighWirePressPlugin ; manifest ; Western Journal of Nursing Research Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; Western Journal of Nursing Research Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; Western Journal of Nursing Research Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Western Journal of Nursing Research Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Western Journal of Nursing Research Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Western Journal of Nursing Research Volume 32 ; 32 >
@@ -13530,7 +13530,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://wom.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Word of Mouth Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; Word of Mouth Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Word of Mouth Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Word of Mouth Volume 22 ; 22 >
 
@@ -13578,7 +13578,7 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Work, Employment & Society Volume 19 ; 19 >
-        au < HighWirePressPlugin ; manifest ; Work, Employment & Society Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; Work, Employment & Society Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Work, Employment & Society Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Work, Employment & Society Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Work, Employment & Society Volume 23 ; 23 >
@@ -13601,7 +13601,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pch.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; World Journal for Pediatric and Congenital Heart Surgery Volume 2 ; 2 >
 
       }
