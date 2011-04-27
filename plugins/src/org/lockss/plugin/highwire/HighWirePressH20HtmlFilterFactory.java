@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.28 2011-03-16 17:57:25 barry409 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.29 2011-04-27 02:09:50 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +57,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
+        // May contain institution-specific data e.g. OUP
+        HtmlNodeFilters.tagWithAttribute("div", "id", "secondary_footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
         // e.g. PNAS
         HtmlNodeFilters.tagWithAttribute("div", "class", "science-jobs"),
