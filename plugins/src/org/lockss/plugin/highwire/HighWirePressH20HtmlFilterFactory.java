@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.29 2011-04-27 02:09:50 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.30 2011-04-27 21:41:50 mellen22 Exp $
  */
 
 /*
@@ -115,6 +115,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "\\.(abstract|short)(\\?|$)"),   
         // Ahead-of-print markers eventually disappear (e.g. JBC)
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "ahead-of-print"),
+        // Sage Filter for session ids in meta tags
+        HtmlNodeFilters.tagWithAttributeRegex("meta", "id", "^session-"),
         
     };
     
