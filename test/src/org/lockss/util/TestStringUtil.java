@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.82 2011-01-25 18:37:30 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.83 2011-04-28 02:23:58 tlipkis Exp $
  */
 
 /*
@@ -508,6 +508,13 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue(StringUtil.equalStringsIgnoreCase("foo", "foo"));
     assertTrue(StringUtil.equalStringsIgnoreCase("foo", "Foo"));
     assertFalse(StringUtil.equalStringsIgnoreCase("foo", "bar"));
+  }
+
+  public void testCaseIndependentComparator() {
+    assertIsomorphic(ListUtil.list("Aardvark", "frog", "Goblin",
+				   "homeopath", "homeoPathIc"),
+		     StringUtil.caseIndependentSortedSet(ListUtil.list("homeoPathIc", "frog", "homeopath",
+								       "Goblin", "Aardvark")));
   }
 
   public void testIsNullString() {

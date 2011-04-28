@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.100 2011-03-17 14:28:56 easyonthemayo Exp $
+ * $Id: StringUtil.java,v 1.101 2011-04-28 02:23:58 tlipkis Exp $
  */
 
 /*
@@ -1033,6 +1033,26 @@ public class StringUtil {
       return s1.equalsIgnoreCase(s2);
     }
   }
+
+  /** Sort a set of strings case-independently  */
+   public static Set<String> caseIndependentSortedSet(Collection<String> coll) {
+     Set<String> res = new TreeSet(new CaseIndependentComparator());
+     res.addAll(coll);
+     return res;
+   }
+
+  public static class CaseIndependentComparator implements Comparator<String> {
+    public int compare(String s1, String s2) {
+      // Don't allow null to cause NPE
+      if (s1 == null) {
+	return (s2 == null ? 0 : -1);
+      } else if (s2 == null) {
+	return 1;
+      }
+      return s1.compareToIgnoreCase(s2);
+    }
+  }
+
 
   /** Like System.arrayCopy, for characters within one StringBuilder.
    * @param sb the buffer
