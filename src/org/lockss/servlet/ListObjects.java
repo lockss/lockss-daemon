@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.18 2011-04-26 23:55:06 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.19 2011-04-28 02:23:39 tlipkis Exp $
  */
 
 /*
@@ -430,14 +430,12 @@ public class ListObjects extends LockssServlet {
 
     void processArticle(ArticleFiles af, List<ArticleMetadata> amlst) {
 // 	  wrtr.println(af);
-      wrtr.println("ArticleFiles");
-      wrtr.print(af.ppString(2));
+      wrtr.print(af.ppString(0));
       
       for (ArticleMetadata md : amlst) {
 	if (md != null) {
-	  wrtr.println("Metadata");
-	  wrtr.print(md.ppString(2));
 // 	  wrtr.println(md);
+	  wrtr.print(md.ppString(0));
 	}
       }      
       wrtr.println();

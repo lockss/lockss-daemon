@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.6 2011-04-26 23:52:41 tlipkis Exp $
+ * $Id: ArticleFiles.java,v 1.7 2011-04-28 02:23:40 tlipkis Exp $
  */
 
 /*
@@ -199,8 +199,10 @@ public class ArticleFiles {
   /** Return a pretty printed String */
   public String ppString(int indent) {
     StringBuilder sb = new StringBuilder();
-    String tab = StringUtil.tab(indent);
-    for (String role : roles.keySet()) {
+    sb.append(StringUtil.tab(indent));
+    sb.append("ArticleFiles\n");
+    String tab = StringUtil.tab(indent + 2);
+    for (String role : StringUtil.caseIndependentSortedSet(roles.keySet())) {
       sb.append(tab);
       sb.append(role);
       sb.append(":  ");

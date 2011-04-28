@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.4 2011-04-26 23:52:41 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.5 2011-04-28 02:23:40 tlipkis Exp $
  */
 
 /*
@@ -138,11 +138,15 @@ public class ArticleMetadata {
   }
 
   private List<String> getRawCollection(String key) {
-    List<String> res = (List)rawMap.getCollection(key.toLowerCase());
+    List<String> res = getMapCollection(rawMap, key);
     if (res == null || res.isEmpty()) {
       return Collections.<String>emptyList();
     }
     return res;
+  }
+
+  private List<String> getMapCollection(MultiValueMap map, String key) {
+    return (List<String>)map.getCollection(key.toLowerCase());
   }
 
   // Cooked map
@@ -430,7 +434,7 @@ public class ArticleMetadata {
   }
 
   private List getCollection(String key) {
-    List res = (List)cookedmap.getCollection(key.toLowerCase());
+    List<String> res = getMapCollection(cookedmap, key);
     if (res == null || res.isEmpty()) {
       return Collections.EMPTY_LIST;
     }
@@ -461,21 +465,41 @@ public class ArticleMetadata {
   public String ppString(int indent) {
     StringBuilder sb = new StringBuilder();
     String tab = StringUtil.tab(indent);
-    for (String key : keySet()) {
+    sb.append(tab);
+    if (cookedmap.isEmpty()) {
+      sb.append("Metadata (empty)\n");
+    } else {
+      sb.append("Metadata\n");
+      dumpMap(sb, cookedmap, indent + 2);
+    }
+    sb.append(tab);
+    if (rawMap.isEmpty()) {
+      sb.append("Raw Metadata (empty)\n");
+    } else {
+      sb.append("Raw Metadata\n");
+      dumpMap(sb, rawMap, indent + 2);
+    }
+    return sb.toString();
+  }
+
+  private void dumpMap(StringBuilder sb, MultiValueMap map, int indent) {
+    String tab = StringUtil.tab(indent);
+    for (String key : StringUtil.caseIndependentSortedSet(map.keySet())) {
       sb.append(tab);
       sb.append(key);
       sb.append(": ");
-      List lst = getCollection(key);
+      List lst = getMapCollection(map, key);
       if (lst.isEmpty()) {
 	sb.append("(null)");
       } else if (lst.size() == 1 || lst.get(0) instanceof InvalidValue) {
 	sb.append(lst.get(0));
       } else {
-	sb.append(lst);
+	sb.append("[");
+	sb.append(StringUtil.separatedString(lst, "; "));
+	sb.append("]");
       }
       sb.append("\n");
     }
-    return sb.toString();
   }
 
   /** Record of a failed attempt to store a value in the cooked map, either
