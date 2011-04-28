@@ -282,6 +282,31 @@
 
   {
     title <
+      name = BMJ Supportive & Palliative Care ;
+      issn = 2045-435X ;
+      eissn = 2045-4368
+    >
+
+    param[base_url] = http://spcare.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = BMJ Open ;
+      issn = 2044-6055
+    >
+
+    param[base_url] = http://bmjopen.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = British Journal of Ophthalmology ;
       issn = 0007-1161 ;
       eissn = 1468-2079 ;
