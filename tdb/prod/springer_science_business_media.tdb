@@ -1427,18 +1427,18 @@
 
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 372 ; 372 >
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 373 ; 373 >
-    au < testing ; 2002 ; Analytical and Bioanalytical Chemistry Volume 374 ; 374 >
-    au < testing ; 2003 ; Analytical and Bioanalytical Chemistry Volume 375 ; 375 >
+    au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 374 ; 374 >
+    au < ready ; 2003 ; Analytical and Bioanalytical Chemistry Volume 375 ; 375 >
     au < ready ; 2003 ; Analytical and Bioanalytical Chemistry Volume 376 ; 376 >
     au < testing ; 2003 ; Analytical and Bioanalytical Chemistry Volume 377 ; 377 >
-    au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 378 ; 378 >
-    au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 379 ; 379 >
+    au < ready ; 2004 ; Analytical and Bioanalytical Chemistry Volume 378 ; 378 >
+    au < ready ; 2004 ; Analytical and Bioanalytical Chemistry Volume 379 ; 379 >
     au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 380 ; 380 >
     au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 381 ; 381 >
     au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 382 ; 382 >
     au < testing ; 2005 ; Analytical and Bioanalytical Chemistry Volume 383 ; 383 >
     au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 384 ; 384 >
-    au < testing ; 2006 ; Analytical and Bioanalytical Chemistry Volume 385 ; 385 >
+    au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 385 ; 385 >
     au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 386 ; 386 >
     au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 387 ; 387 >
     au < ready ; 2007 ; Analytical and Bioanalytical Chemistry Volume 388 ; 388 >
@@ -1446,7 +1446,7 @@
     au < testing ; 2008 ; Analytical and Bioanalytical Chemistry Volume 390 ; 390 >
     au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 391 ; 391 >
     au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 392 ; 392 >
-    au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 393 ; 393 >
+    au < ready ; 2009 ; Analytical and Bioanalytical Chemistry Volume 393 ; 393 >
     au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 394 ; 394 >
     au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 395 ; 395 >
     au < testing ; 2010 ; Analytical and Bioanalytical Chemistry Volume 396 ; 396 >
@@ -3063,7 +3063,6 @@
     >
 
     param[journal_issn] = 0340-5761
-    attr[where] = content4b
 
     au < ready ; 1930 ; Archives of Toxicology Volume 1 ; 1 >
     au < ready ; 1931 ; Archives of Toxicology Volume 2 ; 2 >
@@ -3135,7 +3134,7 @@
     au < ready ; 1994 ; Archives of Toxicology Volume 68 ; 68 >
     au < ready ; 1994-1995 ; Archives of Toxicology Volume 69 ; 69 >
     au < ready ; 1995-1996 ; Archives of Toxicology Volume 70 ; 70 >
-    au < testing ; 1996-1997 ; Archives of Toxicology Volume 71 ; 71 >
+    au < notReady ; 1996-1997 ; Archives of Toxicology Volume 71 ; 71 >
     au < ready ; 1997 ; Archives of Toxicology Volume 72 ; 72 >
     au < ready ; 1999 ; Archives of Toxicology Volume 73 ; 73 >
     au < ready ; 2000 ; Archives of Toxicology Volume 74 ; 74 >
@@ -4303,11 +4302,22 @@
       name = Biomechanics and Modeling in Mechanobiology ;
       issn = 1617-7959 ;
       eissn = 1617-7940 ;
-      issnl = 1617-7940 ;
-      placeholder = True
+      issnl = 1617-7940
     >
 
     param[journal_issn] = 1617-7959
+    attr[where] = content6a
+
+    au < testing ; 2002 ; Biomechanics and Modeling in Mechanobiology Volume 1 ; 1 >
+    au < testing ; 2003 ; Biomechanics and Modeling in Mechanobiology Volume 2 ; 2 >
+    au < testing ; 2004 ; Biomechanics and Modeling in Mechanobiology Volume 3 ; 3 >
+    au < testing ; 2005 ; Biomechanics and Modeling in Mechanobiology Volume 4 ; 4 >
+    au < testing ; 2006 ; Biomechanics and Modeling in Mechanobiology Volume 5 ; 5 >
+    au < testing ; 2007 ; Biomechanics and Modeling in Mechanobiology Volume 6 ; 6 >
+    au < testing ; 2008 ; Biomechanics and Modeling in Mechanobiology Volume 7 ; 7 >
+    au < testing ; 2009 ; Biomechanics and Modeling in Mechanobiology Volume 8 ; 8 >
+    au < testing ; 2010 ; Biomechanics and Modeling in Mechanobiology Volume 9 ; 9 >
+    au < testing ; 2011 ; Biomechanics and Modeling in Mechanobiology Volume 10 ; 10 >
 
   }
 
@@ -4377,30 +4387,30 @@
     param[journal_issn] = 0966-0844
     attr[where] = sul-lockss30a
 
-    au < testing ; 1988 ; BioMetals Volume 1 ; 1 >
-    au < testing ; 1989-1990 ; BioMetals Volume 2 ; 2 >
-    au < testing ; 1990 ; BioMetals Volume 3 ; 3 >
-    au < testing ; 1991 ; BioMetals Volume 4 ; 4 >
-    au < testing ; 1992 ; BioMetals Volume 5 ; 5 >
-    au < testing ; 1993 ; BioMetals Volume 6 ; 6 >
-    au < testing ; 1994 ; BioMetals Volume 7 ; 7 >
-    au < testing ; 1995 ; BioMetals Volume 8 ; 8 >
-    au < testing ; 1996 ; BioMetals Volume 9 ; 9 >
-    au < testing ; 1997 ; BioMetals Volume 10 ; 10 >
-    au < testing ; 1998 ; BioMetals Volume 11 ; 11 >
-    au < testing ; 1999 ; BioMetals Volume 12 ; 12 >
-    au < testing ; 2000 ; BioMetals Volume 13 ; 13 >
-    au < testing ; 2001 ; BioMetals Volume 14 ; 14 >
-    au < testing ; 2002 ; BioMetals Volume 15 ; 15 >
-    au < testing ; 2003 ; BioMetals Volume 16 ; 16 >
-    au < testing ; 2004 ; BioMetals Volume 17 ; 17 >
-    au < testing ; 2005 ; BioMetals Volume 18 ; 18 >
-    au < testing ; 2006 ; BioMetals Volume 19 ; 19 >
-    au < testing ; 2007 ; BioMetals Volume 20 ; 20 >
+    au < ready ; 1988 ; BioMetals Volume 1 ; 1 >
+    au < ready ; 1989-1990 ; BioMetals Volume 2 ; 2 >
+    au < ready ; 1990 ; BioMetals Volume 3 ; 3 >
+    au < ready ; 1991 ; BioMetals Volume 4 ; 4 >
+    au < ready ; 1992 ; BioMetals Volume 5 ; 5 >
+    au < ready ; 1993 ; BioMetals Volume 6 ; 6 >
+    au < ready ; 1994 ; BioMetals Volume 7 ; 7 >
+    au < ready ; 1995 ; BioMetals Volume 8 ; 8 >
+    au < ready ; 1996 ; BioMetals Volume 9 ; 9 >
+    au < ready ; 1997 ; BioMetals Volume 10 ; 10 >
+    au < ready ; 1998 ; BioMetals Volume 11 ; 11 >
+    au < ready ; 1999 ; BioMetals Volume 12 ; 12 >
+    au < ready ; 2000 ; BioMetals Volume 13 ; 13 >
+    au < ready ; 2001 ; BioMetals Volume 14 ; 14 >
+    au < ready ; 2002 ; BioMetals Volume 15 ; 15 >
+    au < ready ; 2003 ; BioMetals Volume 16 ; 16 >
+    au < ready ; 2004 ; BioMetals Volume 17 ; 17 >
+    au < ready ; 2005 ; BioMetals Volume 18 ; 18 >
+    au < ready ; 2006 ; BioMetals Volume 19 ; 19 >
+    au < ready ; 2007 ; BioMetals Volume 20 ; 20 >
     au < testing ; 2008 ; BioMetals Volume 21 ; 21 >
     au < testing ; 2009 ; BioMetals Volume 22 ; 22 >
     au < testing ; 2010 ; BioMetals Volume 23 ; 23 >
-    au < testing ; 2011 ; BioMetals Volume 24 ; 24 >
+    au < ready ; 2011 ; BioMetals Volume 24 ; 24 >
 
   }
 
@@ -5414,10 +5424,9 @@
 
     comment[continued_from] = 0300-4864
     param[journal_issn] = 1559-7105
-    attr[where] = content4a
 
-    au < testing ; 2006 ; Brain Cell Biology Volume 35 ; 35 >
-    au < testing ; 2008 ; Brain Cell Biology Volume 36 ; 36 >
+    au < ready ; 2006 ; Brain Cell Biology Volume 35 ; 35 >
+    au < ready ; 2008 ; Brain Cell Biology Volume 36 ; 36 >
 
   }
 
@@ -6087,24 +6096,24 @@
     param[journal_issn] = 0957-5243
     attr[where] = content2b
 
-    au < testing ; 1990 ; Cancer Causes and Control Volume 1 ; 1 >
-    au < testing ; 1991 ; Cancer Causes and Control Volume 2 ; 2 >
+    au < ready ; 1990 ; Cancer Causes and Control Volume 1 ; 1 >
+    au < ready ; 1991 ; Cancer Causes and Control Volume 2 ; 2 >
     au < testing ; 1992 ; Cancer Causes and Control Volume 3 ; 3 >
     au < testing ; 1993 ; Cancer Causes and Control Volume 4 ; 4 >
-    au < testing ; 1994 ; Cancer Causes and Control Volume 5 ; 5 >
-    au < testing ; 1995 ; Cancer Causes and Control Volume 6 ; 6 >
-    au < testing ; 1996 ; Cancer Causes and Control Volume 7 ; 7 >
-    au < testing ; 1997 ; Cancer Causes and Control Volume 8 ; 8 >
-    au < testing ; 1998 ; Cancer Causes and Control Volume 9 ; 9 >
-    au < testing ; 1999 ; Cancer Causes and Control Volume 10 ; 10 >
-    au < testing ; 2000 ; Cancer Causes and Control Volume 11 ; 11 >
-    au < testing ; 2001 ; Cancer Causes and Control Volume 12 ; 12 >
-    au < testing ; 2002 ; Cancer Causes and Control Volume 13 ; 13 >
-    au < testing ; 2003 ; Cancer Causes and Control Volume 14 ; 14 >
+    au < ready ; 1994 ; Cancer Causes and Control Volume 5 ; 5 >
+    au < ready ; 1995 ; Cancer Causes and Control Volume 6 ; 6 >
+    au < ready ; 1996 ; Cancer Causes and Control Volume 7 ; 7 >
+    au < ready ; 1997 ; Cancer Causes and Control Volume 8 ; 8 >
+    au < ready ; 1998 ; Cancer Causes and Control Volume 9 ; 9 >
+    au < ready ; 1999 ; Cancer Causes and Control Volume 10 ; 10 >
+    au < ready ; 2000 ; Cancer Causes and Control Volume 11 ; 11 >
+    au < ready ; 2001 ; Cancer Causes and Control Volume 12 ; 12 >
+    au < ready ; 2002 ; Cancer Causes and Control Volume 13 ; 13 >
+    au < ready ; 2003 ; Cancer Causes and Control Volume 14 ; 14 >
     au < testing ; 2004 ; Cancer Causes and Control Volume 15 ; 15 >
     au < testing ; 2005 ; Cancer Causes and Control Volume 16 ; 16 >
     au < testing ; 2006 ; Cancer Causes and Control Volume 17 ; 17 >
-    au < testing ; 2007 ; Cancer Causes and Control Volume 18 ; 18 >
+    au < ready ; 2007 ; Cancer Causes and Control Volume 18 ; 18 >
     au < testing ; 2008 ; Cancer Causes and Control Volume 19 ; 19 >
     au < testing ; 2009 ; Cancer Causes and Control Volume 20 ; 20 >
     au < testing ; 2010 ; Cancer Causes and Control Volume 21 ; 21 >
@@ -7416,7 +7425,6 @@
     >
 
     param[journal_issn] = 0967-3849
-    attr[where] = content6b
 
     au < ready ; 1993 ; Chromosome Research Volume 1 ; 1 >
     au < ready ; 1994 ; Chromosome Research Volume 2 ; 2 >
@@ -7425,17 +7433,17 @@
     au < ready ; 1997 ; Chromosome Research Volume 5 ; 5 >
     au < ready ; 1998 ; Chromosome Research Volume 6 ; 6 >
     au < ready ; 1999 ; Chromosome Research Volume 7 ; 7 >
-    au < testing ; 2000 ; Chromosome Research Volume 8 ; 8 >
-    au < testing ; 2001 ; Chromosome Research Volume 9 ; 9 >
+    au < ready ; 2000 ; Chromosome Research Volume 8 ; 8 >
+    au < ready ; 2001 ; Chromosome Research Volume 9 ; 9 >
     au < ready ; 2002 ; Chromosome Research Volume 10 ; 10 >
-    au < testing ; 2003 ; Chromosome Research Volume 11 ; 11 >
-    au < testing ; 2004 ; Chromosome Research Volume 12 ; 12 >
-    au < testing ; 2005 ; Chromosome Research Volume 13 ; 13 >
+    au < ready ; 2003 ; Chromosome Research Volume 11 ; 11 >
+    au < ready ; 2004 ; Chromosome Research Volume 12 ; 12 >
+    au < ready ; 2005 ; Chromosome Research Volume 13 ; 13 >
     au < ready ; 2006 ; Chromosome Research Volume 14 ; 14 >
-    au < testing ; 2007 ; Chromosome Research Volume 15 ; 15 >
-    au < testing ; 2008 ; Chromosome Research Volume 16 ; 16 >
-    au < testing ; 2009 ; Chromosome Research Volume 17 ; 17 >
-    au < testing ; 2010 ; Chromosome Research Volume 18 ; 18 >
+    au < ready ; 2007 ; Chromosome Research Volume 15 ; 15 >
+    au < ready ; 2008 ; Chromosome Research Volume 16 ; 16 >
+    au < ready ; 2009 ; Chromosome Research Volume 17 ; 17 >
+    au < ready ; 2010 ; Chromosome Research Volume 18 ; 18 >
     au < ready ; 2011 ; Chromosome Research Volume 19 ; 19 >
 
   }
@@ -7768,20 +7776,19 @@
     >
 
     param[journal_issn] = 1096-4037
-    attr[where] = sul-lockss30b
 
     au < ready ; 1998 ; Clinical Child and Family Psychology Review Volume 1 ; 1 >
     au < ready ; 1999 ; Clinical Child and Family Psychology Review Volume 2 ; 2 >
     au < ready ; 2000 ; Clinical Child and Family Psychology Review Volume 3 ; 3 >
     au < ready ; 2001 ; Clinical Child and Family Psychology Review Volume 4 ; 4 >
     au < ready ; 2002 ; Clinical Child and Family Psychology Review Volume 5 ; 5 >
-    au < testing ; 2003 ; Clinical Child and Family Psychology Review Volume 6 ; 6 >
+    au < ready ; 2003 ; Clinical Child and Family Psychology Review Volume 6 ; 6 >
     au < ready ; 2004 ; Clinical Child and Family Psychology Review Volume 7 ; 7 >
     au < ready ; 2005 ; Clinical Child and Family Psychology Review Volume 8 ; 8 >
-    au < testing ; 2006 ; Clinical Child and Family Psychology Review Volume 9 ; 9 >
+    au < ready ; 2006 ; Clinical Child and Family Psychology Review Volume 9 ; 9 >
     au < ready ; 2007 ; Clinical Child and Family Psychology Review Volume 10 ; 10 >
     au < ready ; 2008 ; Clinical Child and Family Psychology Review Volume 11 ; 11 >
-    au < testing ; 2009 ; Clinical Child and Family Psychology Review Volume 12 ; 12 >
+    au < ready ; 2009 ; Clinical Child and Family Psychology Review Volume 12 ; 12 >
     au < ready ; 2010 ; Clinical Child and Family Psychology Review Volume 13 ; 13 >
     au < ready ; 2011 ; Clinical Child and Family Psychology Review Volume 14 ; 14 >
 
@@ -12435,11 +12442,17 @@
       name = Evolutionary Biology ;
       issn = 0071-3260 ;
       eissn = 1934-2845 ;
-      issnl = 0071-3260 ;
-      placeholder = True
+      issnl = 0071-3260
     >
 
     param[journal_issn] = 0071-3260
+    attr[where] = sul-lockss30b
+
+    au < testing ; 2007 ; Evolutionary Biology Volume 34 ; 34 >
+    au < testing ; 2008 ; Evolutionary Biology Volume 35 ; 35 >
+    au < testing ; 2009 ; Evolutionary Biology Volume 36 ; 36 >
+    au < testing ; 2010 ; Evolutionary Biology Volume 37 ; 37 >
+    au < testing ; 2011 ; Evolutionary Biology Volume 38 ; 38 >
 
   }
 
@@ -13642,67 +13655,67 @@
     au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 308 ; 308 >
     au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 309 ; 309 >
     au < ready ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 310 ; 310 >
-    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 311 ; 311 >
-    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 312 ; 312 >
-    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 313 ; 313 >
-    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 314 ; 314 >
-    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 315 ; 315 >
-    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 316 ; 316 >
-    au < testing ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 317 ; 317 >
+    au < ready ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 311 ; 311 >
+    au < ready ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 312 ; 312 >
+    au < ready ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 313 ; 313 >
+    au < ready ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 314 ; 314 >
+    au < ready ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 315 ; 315 >
+    au < ready ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 316 ; 316 >
+    au < ready ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 317 ; 317 >
     au < ready ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 318 ; 318 >
-    au < testing ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 319 ; 319 >
-    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 320 ; 320 >
-    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 321 ; 321 >
-    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 322 ; 322 >
-    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 323 ; 323 >
-    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 324 ; 324 >
-    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 325 ; 325 >
-    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 326 ; 326 >
-    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 327 ; 327 >
-    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 328 ; 328 >
-    au < testing ; 1987-1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 329 ; 329 >
-    au < testing ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 330 ; 330 >
-    au < testing ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 331 ; 331 >
-    au < testing ; 1988-1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 332 ; 332 >
-    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 333 ; 333 >
-    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 334 ; 334 >
-    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 335 ; 335 >
-    au < testing ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 336 ; 336 >
+    au < ready ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 319 ; 319 >
+    au < ready ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 320 ; 320 >
+    au < ready ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 321 ; 321 >
+    au < ready ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 322 ; 322 >
+    au < ready ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 323 ; 323 >
+    au < ready ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 324 ; 324 >
+    au < ready ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 325 ; 325 >
+    au < ready ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 326 ; 326 >
+    au < ready ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 327 ; 327 >
+    au < ready ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 328 ; 328 >
+    au < ready ; 1987-1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 329 ; 329 >
+    au < ready ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 330 ; 330 >
+    au < ready ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 331 ; 331 >
+    au < ready ; 1988-1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 332 ; 332 >
+    au < ready ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 333 ; 333 >
+    au < ready ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 334 ; 334 >
+    au < ready ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 335 ; 335 >
+    au < ready ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 336 ; 336 >
     au < ready ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 337 ; 337 >
-    au < testing ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 338 ; 338 >
-    au < testing ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 339 ; 339 >
+    au < ready ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 338 ; 338 >
+    au < ready ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 339 ; 339 >
     au < ready ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 340 ; 340 >
-    au < testing ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 341 ; 341 >
-    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 342 ; 342 >
-    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 343 ; 343 >
-    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 344 ; 344 >
-    au < testing ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 345 ; 345 >
+    au < ready ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 341 ; 341 >
+    au < ready ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 342 ; 342 >
+    au < ready ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 343 ; 343 >
+    au < ready ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 344 ; 344 >
+    au < ready ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 345 ; 345 >
     au < ready ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 346 ; 346 >
-    au < testing ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 347 ; 347 >
-    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 348 ; 348 >
-    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 349 ; 349 >
-    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 350 ; 350 >
-    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 351 ; 351 >
-    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 352 ; 352 >
-    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 353 ; 353 >
-    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 354 ; 354 >
-    au < ready ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 355 ; 355 >
-    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 356 ; 356 >
+    au < ready ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 347 ; 347 >
+    au < ready ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 348 ; 348 >
+    au < ready ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 349 ; 349 >
+    au < ready ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 350 ; 350 >
+    au < ready ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 351 ; 351 >
+    au < ready ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 352 ; 352 >
+    au < ready ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 353 ; 353 >
+    au < ready ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 354 ; 354 >
+    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 355 ; 355 >
+    au < ready ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 356 ; 356 >
     au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 357 ; 357 >
-    au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 358 ; 358 >
-    au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 359 ; 359 >
+    au < ready ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 358 ; 358 >
+    au < ready ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 359 ; 359 >
     au < ready ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 360 ; 360 >
-    au < testing ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 361 ; 361 >
-    au < testing ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 362 ; 362 >
-    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 363 ; 363 >
-    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 364 ; 364 >
-    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 365 ; 365 >
-    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 366 ; 366 >
-    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 367 ; 367 >
-    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 368 ; 368 >
-    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 369 ; 369 >
-    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 370 ; 370 >
-    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 371 ; 371 >
+    au < ready ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 361 ; 361 >
+    au < ready ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 362 ; 362 >
+    au < ready ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 363 ; 363 >
+    au < ready ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 364 ; 364 >
+    au < ready ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 365 ; 365 >
+    au < ready ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 366 ; 366 >
+    au < ready ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 367 ; 367 >
+    au < ready ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 368 ; 368 >
+    au < ready ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 369 ; 369 >
+    au < ready ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 370 ; 370 >
+    au < ready ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 371 ; 371 >
 
   }
 
@@ -22647,9 +22660,9 @@
     attr[where] = content2a
     
     au < ready ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
-    au < testing ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
-    au < testing ; 1924 ; Klinische Wochenschrift Volume 3 ; 3 >
-    au < testing ; 1925 ; Klinische Wochenschrift Volume 4 ; 4 >
+    au < ready ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
+    au < ready ; 1924 ; Klinische Wochenschrift Volume 3 ; 3 >
+    au < ready ; 1925 ; Klinische Wochenschrift Volume 4 ; 4 >
     au < ready ; 1926 ; Klinische Wochenschrift Volume 5 ; 5 >
     au < ready ; 1927 ; Klinische Wochenschrift Volume 6 ; 6 >
     au < ready ; 1928 ; Klinische Wochenschrift Volume 7 ; 7 >
@@ -22667,7 +22680,7 @@
     au < ready ; 1940 ; Klinische Wochenschrift Volume 19 ; 19 >
     au < ready ; 1941 ; Klinische Wochenschrift Volume 20 ; 20 >
     au < ready ; 1942 ; Klinische Wochenschrift Volume 21 ; 21 >
-    au < testing ; 1943 ; Klinische Wochenschrift Volume 22 ; 22 >
+    au < ready ; 1943 ; Klinische Wochenschrift Volume 22 ; 22 >
     au < ready ; 1944 ; Klinische Wochenschrift Volume 23 ; 23 >
     au < ready ; 1946 ; Klinische Wochenschrift Volume 24 ; 24 >
     au < ready ; 1946-1947 ; Klinische Wochenschrift Volume 24-25 ; 24-25 >
@@ -22677,13 +22690,13 @@
     au < ready ; 1951 ; Klinische Wochenschrift Volume 29 ; 29 >
     au < ready ; 1952 ; Klinische Wochenschrift Volume 30 ; 30 >
     au < testing ; 1953 ; Klinische Wochenschrift Volume 31 ; 31 >
-    au < testing ; 1954 ; Klinische Wochenschrift Volume 32 ; 32 >
+    au < ready ; 1954 ; Klinische Wochenschrift Volume 32 ; 32 >
     au < ready ; 1955 ; Klinische Wochenschrift Volume 33 ; 33 >
-    au < testing ; 1956 ; Klinische Wochenschrift Volume 34 ; 34 >
+    au < ready ; 1956 ; Klinische Wochenschrift Volume 34 ; 34 >
     au < ready ; 1957 ; Klinische Wochenschrift Volume 35 ; 35 >
     au < ready ; 1958 ; Klinische Wochenschrift Volume 36 ; 36 >
     au < ready ; 1959 ; Klinische Wochenschrift Volume 37 ; 37 >
-    au < testing ; 1960 ; Klinische Wochenschrift Volume 38 ; 38 >
+    au < ready ; 1960 ; Klinische Wochenschrift Volume 38 ; 38 >
     au < ready ; 1961 ; Klinische Wochenschrift Volume 39 ; 39 >
     au < ready ; 1962 ; Klinische Wochenschrift Volume 40 ; 40 >
     au < ready ; 1963 ; Klinische Wochenschrift Volume 41 ; 41 >
@@ -22691,9 +22704,9 @@
     au < ready ; 1965 ; Klinische Wochenschrift Volume 43 ; 43 >
     au < ready ; 1966 ; Klinische Wochenschrift Volume 44 ; 44 >
     au < testing ; 1967 ; Klinische Wochenschrift Volume 45 ; 45 >
-    au < testing ; 1968 ; Klinische Wochenschrift Volume 46 ; 46 >
+    au < ready ; 1968 ; Klinische Wochenschrift Volume 46 ; 46 >
     au < testing ; 1969 ; Klinische Wochenschrift Volume 47 ; 47 >
-    au < testing ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
+    au < ready ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
     au < testing ; 1971 ; Klinische Wochenschrift Volume 49 ; 49 >
     au < testing ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
     au < ready ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
@@ -22722,7 +22735,7 @@
     au < ready ; 1996 ; Journal of Molecular Medicine Volume 74 ; 74 >
     au < ready ; 1997 ; Journal of Molecular Medicine Volume 75 ; 75 >
     au < ready ; 1998 ; Journal of Molecular Medicine Volume 76 ; 76 >
-    au < testing ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
+    au < ready ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
     au < ready ; 2000 ; Journal of Molecular Medicine Volume 78 ; 78 >
     au < ready ; 2001 ; Journal of Molecular Medicine Volume 79 ; 79 >
     au < ready ; 2002 ; Journal of Molecular Medicine Volume 80 ; 80 >
@@ -22953,19 +22966,19 @@
     param[journal_issn] = 0300-4864
     attr[where] = content4a
 
-    au < testing ; 1972 ; Journal of Neurocytology Volume 1 ; 1 >
-    au < testing ; 1973 ; Journal of Neurocytology Volume 2 ; 2 >
-    au < testing ; 1974 ; Journal of Neurocytology Volume 3 ; 3 >
+    au < ready ; 1972 ; Journal of Neurocytology Volume 1 ; 1 >
+    au < ready ; 1973 ; Journal of Neurocytology Volume 2 ; 2 >
+    au < ready ; 1974 ; Journal of Neurocytology Volume 3 ; 3 >
     au < testing ; 1975 ; Journal of Neurocytology Volume 4 ; 4 >
-    au < testing ; 1976 ; Journal of Neurocytology Volume 5 ; 5 >
-    au < testing ; 1977 ; Journal of Neurocytology Volume 6 ; 6 >
-    au < testing ; 1978 ; Journal of Neurocytology Volume 7 ; 7 >
-    au < testing ; 1979 ; Journal of Neurocytology Volume 8 ; 8 >
-    au < testing ; 1980 ; Journal of Neurocytology Volume 9 ; 9 >
-    au < testing ; 1981 ; Journal of Neurocytology Volume 10 ; 10 >
-    au < testing ; 1982 ; Journal of Neurocytology Volume 11 ; 11 >
-    au < testing ; 1983 ; Journal of Neurocytology Volume 12 ; 12 >
-    au < testing ; 1984 ; Journal of Neurocytology Volume 13 ; 13 >
+    au < ready ; 1976 ; Journal of Neurocytology Volume 5 ; 5 >
+    au < ready ; 1977 ; Journal of Neurocytology Volume 6 ; 6 >
+    au < ready ; 1978 ; Journal of Neurocytology Volume 7 ; 7 >
+    au < ready ; 1979 ; Journal of Neurocytology Volume 8 ; 8 >
+    au < ready ; 1980 ; Journal of Neurocytology Volume 9 ; 9 >
+    au < ready ; 1981 ; Journal of Neurocytology Volume 10 ; 10 >
+    au < ready ; 1982 ; Journal of Neurocytology Volume 11 ; 11 >
+    au < ready ; 1983 ; Journal of Neurocytology Volume 12 ; 12 >
+    au < ready ; 1984 ; Journal of Neurocytology Volume 13 ; 13 >
     au < testing ; 1985 ; Journal of Neurocytology Volume 14 ; 14 >
     au < testing ; 1986 ; Journal of Neurocytology Volume 15 ; 15 >
     au < testing ; 1987 ; Journal of Neurocytology Volume 16 ; 16 >
@@ -22973,20 +22986,20 @@
     au < testing ; 1989 ; Journal of Neurocytology Volume 18 ; 18 >
     au < testing ; 1990 ; Journal of Neurocytology Volume 19 ; 19 >
     au < testing ; 1991 ; Journal of Neurocytology Volume 20 ; 20 >
-    au < testing ; 1992 ; Journal of Neurocytology Volume 21 ; 21 >
+    au < ready ; 1992 ; Journal of Neurocytology Volume 21 ; 21 >
     au < testing ; 1993 ; Journal of Neurocytology Volume 22 ; 22 >
     au < testing ; 1994 ; Journal of Neurocytology Volume 23 ; 23 >
     au < testing ; 1995 ; Journal of Neurocytology Volume 24 ; 24 >
     au < testing ; 1996 ; Journal of Neurocytology Volume 25 ; 25 >
-    au < testing ; 1997 ; Journal of Neurocytology Volume 26 ; 26 >
-    au < testing ; 1998 ; Journal of Neurocytology Volume 27 ; 27 >
+    au < ready ; 1997 ; Journal of Neurocytology Volume 26 ; 26 >
+    au < ready ; 1998 ; Journal of Neurocytology Volume 27 ; 27 >
     au < testing ; 1999 ; Journal of Neurocytology Volume 28 ; 28 >
     au < testing ; 2000 ; Journal of Neurocytology Volume 29 ; 29 >
     au < testing ; 2001 ; Journal of Neurocytology Volume 30 ; 30 >
-    au < testing ; 2002 ; Journal of Neurocytology Volume 31 ; 31 >
-    au < testing ; 2003 ; Journal of Neurocytology Volume 32 ; 32 >
-    au < testing ; 2004 ; Journal of Neurocytology Volume 33 ; 33 >
-    au < testing ; 2005 ; Journal of Neurocytology Volume 34 ; 34 >
+    au < ready ; 2002 ; Journal of Neurocytology Volume 31 ; 31 >
+    au < ready ; 2003 ; Journal of Neurocytology Volume 32 ; 32 >
+    au < ready ; 2004 ; Journal of Neurocytology Volume 33 ; 33 >
+    au < ready ; 2005 ; Journal of Neurocytology Volume 34 ; 34 >
 
   }
 
@@ -25345,38 +25358,38 @@
     param[journal_issn] = 0147-7307
     attr[where] = content1b
 
-    au < testing ; 1977 ; Law and Human Behavior Volume 1 ; 1 >
+    au < ready ; 1977 ; Law and Human Behavior Volume 1 ; 1 >
     au < ready ; 1978 ; Law and Human Behavior Volume 2 ; 2 >
-    au < testing ; 1979 ; Law and Human Behavior Volume 3 ; 3 >
+    au < ready ; 1979 ; Law and Human Behavior Volume 3 ; 3 >
     au < ready ; 1980 ; Law and Human Behavior Volume 4 ; 4 >
     au < testing ; 1981 ; Law and Human Behavior Volume 5 ; 5 >
     au < testing ; 1982 ; Law and Human Behavior Volume 6 ; 6 >
-    au < testing ; 1983 ; Law and Human Behavior Volume 7 ; 7 >
+    au < ready ; 1983 ; Law and Human Behavior Volume 7 ; 7 >
     au < ready ; 1984 ; Law and Human Behavior Volume 8 ; 8 >
     au < ready ; 1985 ; Law and Human Behavior Volume 9 ; 9 >
-    au < testing ; 1986 ; Law and Human Behavior Volume 10 ; 10 >
+    au < ready ; 1986 ; Law and Human Behavior Volume 10 ; 10 >
     au < testing ; 1987 ; Law and Human Behavior Volume 11 ; 11 >
     au < ready ; 1988 ; Law and Human Behavior Volume 12 ; 12 >
     au < testing ; 1989 ; Law and Human Behavior Volume 13 ; 13 >
-    au < testing ; 1990 ; Law and Human Behavior Volume 14 ; 14 >
-    au < testing ; 1991 ; Law and Human Behavior Volume 15 ; 15 >
-    au < testing ; 1992 ; Law and Human Behavior Volume 16 ; 16 >
-    au < testing ; 1993 ; Law and Human Behavior Volume 17 ; 17 >
+    au < ready ; 1990 ; Law and Human Behavior Volume 14 ; 14 >
+    au < ready ; 1991 ; Law and Human Behavior Volume 15 ; 15 >
+    au < ready ; 1992 ; Law and Human Behavior Volume 16 ; 16 >
+    au < ready ; 1993 ; Law and Human Behavior Volume 17 ; 17 >
     au < testing ; 1994 ; Law and Human Behavior Volume 18 ; 18 >
-    au < testing ; 1995 ; Law and Human Behavior Volume 19 ; 19 >
-    au < testing ; 1996 ; Law and Human Behavior Volume 20 ; 20 >
-    au < testing ; 1997 ; Law and Human Behavior Volume 21 ; 21 >
+    au < ready ; 1995 ; Law and Human Behavior Volume 19 ; 19 >
+    au < ready ; 1996 ; Law and Human Behavior Volume 20 ; 20 >
+    au < ready ; 1997 ; Law and Human Behavior Volume 21 ; 21 >
     au < ready ; 1998 ; Law and Human Behavior Volume 22 ; 22 >
     au < ready ; 1999 ; Law and Human Behavior Volume 23 ; 23 >
-    au < testing ; 2000 ; Law and Human Behavior Volume 24 ; 24 >
-    au < testing ; 2001 ; Law and Human Behavior Volume 25 ; 25 >
+    au < ready ; 2000 ; Law and Human Behavior Volume 24 ; 24 >
+    au < ready ; 2001 ; Law and Human Behavior Volume 25 ; 25 >
     au < ready ; 2002 ; Law and Human Behavior Volume 26 ; 26 >
     au < ready ; 2003 ; Law and Human Behavior Volume 27 ; 27 >
-    au < testing ; 2004 ; Law and Human Behavior Volume 28 ; 28 >
-    au < testing ; 2005 ; Law and Human Behavior Volume 29 ; 29 >
+    au < ready ; 2004 ; Law and Human Behavior Volume 28 ; 28 >
+    au < ready ; 2005 ; Law and Human Behavior Volume 29 ; 29 >
     au < testing ; 2006 ; Law and Human Behavior Volume 30 ; 30 >
     au < testing ; 2007 ; Law and Human Behavior Volume 31 ; 31 >
-    au < testing ; 2008 ; Law and Human Behavior Volume 32 ; 32 >
+    au < ready ; 2008 ; Law and Human Behavior Volume 32 ; 32 >
     au < testing ; 2009 ; Law and Human Behavior Volume 33 ; 33 >
     au < testing ; 2010 ; Law and Human Behavior Volume 34 ; 34 >
     au < ready ; 2011 ; Law and Human Behavior Volume 35 ; 35 >
@@ -29090,11 +29103,178 @@
       name = Oecologia ;
       issn = 0029-8549 ;
       eissn = 1432-1939 ;
-      issnl = 0029-8549 ;
-      placeholder = True
+      issnl = 0029-8549
     >
 
     param[journal_issn] = 0029-8549
+    attr[where] = content4a
+
+    au < manifest ; 1968 ; Oecologia Volume 1 ; 1 >
+    au < manifest ; 1968-1969 ; Oecologia Volume 2 ; 2 >
+    au < manifest ; 1969 ; Oecologia Volume 3 ; 3 >
+    au < manifest ; 1970 ; Oecologia Volume 4 ; 4 >
+    au < manifest ; 1970 ; Oecologia Volume 5 ; 5 >
+    au < manifest ; 1970-1971 ; Oecologia Volume 6 ; 6 >
+    au < manifest ; 1971 ; Oecologia Volume 7 ; 7 >
+    au < manifest ; 1971-1972 ; Oecologia Volume 8 ; 8 >
+    au < manifest ; 1972 ; Oecologia Volume 9 ; 9 >
+    au < manifest ; 1972 ; Oecologia Volume 10 ; 10 >
+    au < manifest ; 1972-1973 ; Oecologia Volume 11 ; 11 >
+    au < manifest ; 1973 ; Oecologia Volume 12 ; 12 >
+    au < manifest ; 1973 ; Oecologia Volume 13 ; 13 >
+    au < manifest ; 1974 ; Oecologia Volume 14 ; 14 >
+    au < manifest ; 1974 ; Oecologia Volume 15 ; 15 >
+    au < manifest ; 1974 ; Oecologia Volume 16 ; 16 >
+    au < manifest ; 1974 ; Oecologia Volume 17 ; 17 >
+    au < manifest ; 1975 ; Oecologia Volume 18 ; 18 >
+    au < manifest ; 1975 ; Oecologia Volume 19 ; 19 >
+    au < manifest ; 1975 ; Oecologia Volume 20 ; 20 >
+    au < manifest ; 1975 ; Oecologia Volume 21 ; 21 >
+    au < manifest ; 1975-1976 ; Oecologia Volume 22 ; 22 >
+    au < manifest ; 1976 ; Oecologia Volume 23 ; 23 >
+    au < manifest ; 1976 ; Oecologia Volume 24 ; 24 >
+    au < manifest ; 1976 ; Oecologia Volume 25 ; 25 >
+    au < manifest ; 1976-1977 ; Oecologia Volume 26 ; 26 >
+    au < manifest ; 1977 ; Oecologia Volume 27 ; 27 >
+    au < manifest ; 1977 ; Oecologia Volume 28 ; 28 >
+    au < manifest ; 1977 ; Oecologia Volume 29 ; 29 >
+    au < manifest ; 1977 ; Oecologia Volume 30 ; 30 >
+    au < manifest ; 1977-1978 ; Oecologia Volume 31 ; 31 >
+    au < manifest ; 1978 ; Oecologia Volume 32 ; 32 >
+    au < manifest ; 1978 ; Oecologia Volume 33 ; 33 >
+    au < manifest ; 1978 ; Oecologia Volume 34 ; 34 >
+    au < manifest ; 1978 ; Oecologia Volume 35 ; 35 >
+    au < manifest ; 1978 ; Oecologia Volume 36 ; 36 >
+    au < manifest ; 1978-1979 ; Oecologia Volume 37 ; 37 >
+    au < manifest ; 1979 ; Oecologia Volume 38 ; 38 >
+    au < manifest ; 1979 ; Oecologia Volume 39 ; 39 >
+    au < manifest ; 1979 ; Oecologia Volume 40 ; 40 >
+    au < manifest ; 1979 ; Oecologia Volume 41 ; 41 >
+    au < manifest ; 1979 ; Oecologia Volume 42 ; 42 >
+    au < manifest ; 1979 ; Oecologia Volume 43 ; 43 >
+    au < manifest ; 1979 ; Oecologia Volume 44 ; 44 >
+    au < manifest ; 1980 ; Oecologia Volume 45 ; 45 >
+    au < manifest ; 1980 ; Oecologia Volume 46 ; 46 >
+    au < manifest ; 1980 ; Oecologia Volume 47 ; 47 >
+    au < manifest ; 1981 ; Oecologia Volume 48 ; 48 >
+    au < manifest ; 1981 ; Oecologia Volume 49 ; 49 >
+    au < manifest ; 1981 ; Oecologia Volume 50 ; 50 >
+    au < manifest ; 1981 ; Oecologia Volume 51 ; 51 >
+    au < manifest ; 1982 ; Oecologia Volume 52 ; 52 >
+    au < manifest ; 1982 ; Oecologia Volume 53 ; 53 >
+    au < manifest ; 1982 ; Oecologia Volume 54 ; 54 >
+    au < manifest ; 1982 ; Oecologia Volume 55 ; 55 >
+    au < manifest ; 1983 ; Oecologia Volume 56 ; 56 >
+    au < manifest ; 1983 ; Oecologia Volume 57 ; 57 >
+    au < manifest ; 1983 ; Oecologia Volume 58 ; 58 >
+    au < manifest ; 1983 ; Oecologia Volume 59 ; 59 >
+    au < manifest ; 1983 ; Oecologia Volume 60 ; 60 >
+    au < manifest ; 1984 ; Oecologia Volume 61 ; 61 >
+    au < manifest ; 1984 ; Oecologia Volume 62 ; 62 >
+    au < manifest ; 1984 ; Oecologia Volume 63 ; 63 >
+    au < manifest ; 1984 ; Oecologia Volume 64 ; 64 >
+    au < manifest ; 1984-1985 ; Oecologia Volume 65 ; 65 >
+    au < manifest ; 1985 ; Oecologia Volume 66 ; 66 >
+    au < manifest ; 1985 ; Oecologia Volume 67 ; 67 >
+    au < manifest ; 1985-1986 ; Oecologia Volume 68 ; 68 >
+    au < manifest ; 1986 ; Oecologia Volume 69 ; 69 >
+    au < manifest ; 1986 ; Oecologia Volume 70 ; 70 >
+    au < manifest ; 1986-1987 ; Oecologia Volume 71 ; 71 >
+    au < manifest ; 1987 ; Oecologia Volume 72 ; 72 >
+    au < manifest ; 1987 ; Oecologia Volume 73 ; 73 >
+    au < manifest ; 1987-1988 ; Oecologia Volume 74 ; 74 >
+    au < manifest ; 1988 ; Oecologia Volume 75 ; 75 >
+    au < manifest ; 1988 ; Oecologia Volume 76 ; 76 >
+    au < manifest ; 1988 ; Oecologia Volume 77 ; 77 >
+    au < manifest ; 1989 ; Oecologia Volume 78 ; 78 >
+    au < manifest ; 1989 ; Oecologia Volume 79 ; 79 >
+    au < manifest ; 1989 ; Oecologia Volume 80 ; 80 >
+    au < manifest ; 1989 ; Oecologia Volume 81 ; 81 >
+    au < manifest ; 1990 ; Oecologia Volume 82 ; 82 >
+    au < manifest ; 1990 ; Oecologia Volume 83 ; 83 >
+    au < manifest ; 1990 ; Oecologia Volume 84 ; 84 >
+    au < manifest ; 1990-1991 ; Oecologia Volume 85 ; 85 >
+    au < manifest ; 1991 ; Oecologia Volume 86 ; 86 >
+    au < manifest ; 1991 ; Oecologia Volume 87 ; 87 >
+    au < manifest ; 1991 ; Oecologia Volume 88 ; 88 >
+    au < manifest ; 1992 ; Oecologia Volume 89 ; 89 >
+    au < manifest ; 1992 ; Oecologia Volume 90 ; 90 >
+    au < manifest ; 1992 ; Oecologia Volume 91 ; 91 >
+    au < manifest ; 1992 ; Oecologia Volume 92 ; 92 >
+    au < manifest ; 1993 ; Oecologia Volume 93 ; 93 >
+    au < manifest ; 1993 ; Oecologia Volume 94 ; 94 >
+    au < manifest ; 1993 ; Oecologia Volume 95 ; 95 >
+    au < manifest ; 1993 ; Oecologia Volume 96 ; 96 >
+    au < manifest ; 1994 ; Oecologia Volume 97 ; 97 >
+    au < manifest ; 1994 ; Oecologia Volume 98 ; 98 >
+    au < manifest ; 1994 ; Oecologia Volume 99 ; 99 >
+    au < manifest ; 1994 ; Oecologia Volume 100 ; 100 >
+    au < manifest ; 1995 ; Oecologia Volume 101 ; 101 >
+    au < manifest ; 1995 ; Oecologia Volume 102 ; 102 >
+    au < manifest ; 1995 ; Oecologia Volume 103 ; 103 >
+    au < manifest ; 1995 ; Oecologia Volume 104 ; 104 >
+    au < manifest ; 1996 ; Oecologia Volume 105 ; 105 >
+    au < manifest ; 1996 ; Oecologia Volume 106 ; 106 >
+    au < manifest ; 1996 ; Oecologia Volume 107 ; 107 >
+    au < manifest ; 1996 ; Oecologia Volume 108 ; 108 >
+    au < manifest ; 1996-1997 ; Oecologia Volume 109 ; 109 >
+    au < manifest ; 1997 ; Oecologia Volume 110 ; 110 >
+    au < manifest ; 1997 ; Oecologia Volume 111 ; 111 >
+    au < manifest ; 1997 ; Oecologia Volume 112 ; 112 >
+    au < manifest ; 1997 ; Oecologia Volume 113 ; 113 >
+    au < manifest ; 1998 ; Oecologia Volume 114 ; 114 >
+    au < manifest ; 1998 ; Oecologia Volume 115 ; 115 >
+    au < manifest ; 1998 ; Oecologia Volume 116 ; 116 >
+    au < manifest ; 1998 ; Oecologia Volume 117 ; 117 >
+    au < manifest ; 1999 ; Oecologia Volume 118 ; 118 >
+    au < manifest ; 1999 ; Oecologia Volume 119 ; 119 >
+    au < manifest ; 1999 ; Oecologia Volume 120 ; 120 >
+    au < testing ; 1999 ; Oecologia Volume 121 ; 121 >
+    au < testing ; 2000 ; Oecologia Volume 122 ; 122 >
+    au < testing ; 2000 ; Oecologia Volume 123 ; 123 >
+    au < testing ; 2000 ; Oecologia Volume 124 ; 124 >
+    au < testing ; 2000 ; Oecologia Volume 125 ; 125 >
+    au < testing ; 2001 ; Oecologia Volume 126 ; 126 >
+    au < testing ; 2001 ; Oecologia Volume 127 ; 127 >
+    au < testing ; 2001 ; Oecologia Volume 128 ; 128 >
+    au < testing ; 2001 ; Oecologia Volume 129 ; 129 >
+    au < testing ; 2002 ; Oecologia Volume 130 ; 130 >
+    au < testing ; 2002 ; Oecologia Volume 131 ; 131 >
+    au < testing ; 2002 ; Oecologia Volume 132 ; 132 >
+    au < testing ; 2002 ; Oecologia Volume 133 ; 133 >
+    au < testing ; 2003 ; Oecologia Volume 134 ; 134 >
+    au < testing ; 2003 ; Oecologia Volume 135 ; 135 >
+    au < testing ; 2003 ; Oecologia Volume 136 ; 136 >
+    au < testing ; 2003 ; Oecologia Volume 137 ; 137 >
+    au < testing ; 2004 ; Oecologia Volume 138 ; 138 >
+    au < testing ; 2004 ; Oecologia Volume 139 ; 139 >
+    au < testing ; 2004 ; Oecologia Volume 140 ; 140 >
+    au < testing ; 2004 ; Oecologia Volume 141 ; 141 >
+    au < testing ; 2005 ; Oecologia Volume 142 ; 142 >
+    au < testing ; 2005 ; Oecologia Volume 143 ; 143 >
+    au < testing ; 2005 ; Oecologia Volume 144 ; 144 >
+    au < testing ; 2005 ; Oecologia Volume 145 ; 145 >
+    au < testing ; 2005 ; Oecologia Volume 146 ; 146 >
+    au < testing ; 2006 ; Oecologia Volume 147 ; 147 >
+    au < testing ; 2006 ; Oecologia Volume 148 ; 148 >
+    au < testing ; 2006 ; Oecologia Volume 149 ; 149 >
+    au < testing ; 2006 ; Oecologia Volume 150 ; 150 >
+    au < testing ; 2007 ; Oecologia Volume 151 ; 151 >
+    au < testing ; 2007 ; Oecologia Volume 152 ; 152 >
+    au < testing ; 2007 ; Oecologia Volume 153 ; 153 >
+    au < testing ; 2007 ; Oecologia Volume 154 ; 154 >
+    au < testing ; 2008 ; Oecologia Volume 155 ; 155 >
+    au < testing ; 2008 ; Oecologia Volume 156 ; 156 >
+    au < testing ; 2008 ; Oecologia Volume 157 ; 157 >
+    au < testing ; 2008 ; Oecologia Volume 158 ; 158 >
+    au < testing ; 2009 ; Oecologia Volume 159 ; 159 >
+    au < testing ; 2009 ; Oecologia Volume 160 ; 160 >
+    au < testing ; 2009 ; Oecologia Volume 161 ; 161 >
+    au < testing ; 2010 ; Oecologia Volume 162 ; 162 >
+    au < testing ; 2010 ; Oecologia Volume 163 ; 163 >
+    au < testing ; 2010 ; Oecologia Volume 164 ; 164 >
+    au < testing ; 2011 ; Oecologia Volume 165 ; 165 >
+    au < testing ; 2011 ; Oecologia Volume 166 ; 166 >
 
   }
 
@@ -31279,56 +31459,56 @@
     au < manifest ; 1956-1957 ; Planta Volume 48 ; 48 >
     au < manifest ; 1957 ; Planta Volume 49 ; 49 >
     au < manifest ; 1957-1958 ; Planta Volume 50 ; 50 >
-    au < manifest ; 1958 ; Planta Volume 51 ; 51 >
-    au < manifest ; 1958-1959 ; Planta Volume 52 ; 52 >
-    au < manifest ; 1959 ; Planta Volume 53 ; 53 >
-    au < manifest ; 1959-1960 ; Planta Volume 54 ; 54 >
-    au < manifest ; 1960 ; Planta Volume 55 ; 55 >
-    au < manifest ; 1960-1961 ; Planta Volume 56 ; 56 >
-    au < manifest ; 1961-1962 ; Planta Volume 57 ; 57 >
-    au < manifest ; 1962 ; Planta Volume 58 ; 58 >
-    au < manifest ; 1962-1963 ; Planta Volume 59 ; 59 >
-    au < manifest ; 1963-1964 ; Planta Volume 60 ; 60 >
-    au < manifest ; 1964 ; Planta Volume 61 ; 61 >
-    au < manifest ; 1964 ; Planta Volume 62 ; 62 >
-    au < manifest ; 1964 ; Planta Volume 63 ; 63 >
-    au < manifest ; 1965 ; Planta Volume 64 ; 64 >
-    au < manifest ; 1965 ; Planta Volume 65 ; 65 >
-    au < manifest ; 1965 ; Planta Volume 66 ; 66 >
-    au < manifest ; 1965 ; Planta Volume 67 ; 67 >
-    au < manifest ; 1966 ; Planta Volume 68 ; 68 >
-    au < manifest ; 1966 ; Planta Volume 69 ; 69 >
-    au < manifest ; 1966 ; Planta Volume 70 ; 70 >
-    au < manifest ; 1966 ; Planta Volume 71 ; 71 >
-    au < manifest ; 1966-1967 ; Planta Volume 72 ; 72 >
-    au < manifest ; 1967 ; Planta Volume 73 ; 73 >
-    au < manifest ; 1967 ; Planta Volume 74 ; 74 >
-    au < manifest ; 1967 ; Planta Volume 75 ; 75 >
-    au < manifest ; 1967 ; Planta Volume 76 ; 76 >
-    au < manifest ; 1967 ; Planta Volume 77 ; 77 >
-    au < manifest ; 1967-1968 ; Planta Volume 78 ; 78 >
-    au < manifest ; 1968 ; Planta Volume 79 ; 79 >
-    au < manifest ; 1968 ; Planta Volume 80 ; 80 >
-    au < manifest ; 1968 ; Planta Volume 81 ; 81 >
-    au < manifest ; 1968 ; Planta Volume 82 ; 82 >
-    au < manifest ; 1968 ; Planta Volume 83 ; 83 >
-    au < manifest ; 1968-1969 ; Planta Volume 84 ; 84 >
-    au < manifest ; 1969 ; Planta Volume 85 ; 85 >
-    au < manifest ; 1969 ; Planta Volume 86 ; 86 >
-    au < manifest ; 1969 ; Planta Volume 87 ; 87 >
-    au < manifest ; 1969 ; Planta Volume 88 ; 88 >
-    au < manifest ; 1969 ; Planta Volume 89 ; 89 >
-    au < manifest ; 1969-1970 ; Planta Volume 90 ; 90 >
-    au < manifest ; 1970 ; Planta Volume 91 ; 91 >
-    au < manifest ; 1970 ; Planta Volume 92 ; 92 >
-    au < manifest ; 1970 ; Planta Volume 93 ; 93 >
-    au < manifest ; 1970 ; Planta Volume 94 ; 94 >
-    au < manifest ; 1970 ; Planta Volume 95 ; 95 >
-    au < manifest ; 1971 ; Planta Volume 96 ; 96 >
-    au < manifest ; 1971 ; Planta Volume 97 ; 97 >
-    au < manifest ; 1971 ; Planta Volume 98 ; 98 >
-    au < manifest ; 1971 ; Planta Volume 99 ; 99 >
-    au < manifest ; 1971 ; Planta Volume 100 ; 100 >
+    au < testing ; 1958 ; Planta Volume 51 ; 51 >
+    au < testing ; 1958-1959 ; Planta Volume 52 ; 52 >
+    au < testing ; 1959 ; Planta Volume 53 ; 53 >
+    au < testing ; 1959-1960 ; Planta Volume 54 ; 54 >
+    au < testing ; 1960 ; Planta Volume 55 ; 55 >
+    au < testing ; 1960-1961 ; Planta Volume 56 ; 56 >
+    au < testing ; 1961-1962 ; Planta Volume 57 ; 57 >
+    au < testing ; 1962 ; Planta Volume 58 ; 58 >
+    au < testing ; 1962-1963 ; Planta Volume 59 ; 59 >
+    au < testing ; 1963-1964 ; Planta Volume 60 ; 60 >
+    au < testing ; 1964 ; Planta Volume 61 ; 61 >
+    au < testing ; 1964 ; Planta Volume 62 ; 62 >
+    au < testing ; 1964 ; Planta Volume 63 ; 63 >
+    au < testing ; 1965 ; Planta Volume 64 ; 64 >
+    au < testing ; 1965 ; Planta Volume 65 ; 65 >
+    au < testing ; 1965 ; Planta Volume 66 ; 66 >
+    au < testing ; 1965 ; Planta Volume 67 ; 67 >
+    au < testing ; 1966 ; Planta Volume 68 ; 68 >
+    au < testing ; 1966 ; Planta Volume 69 ; 69 >
+    au < testing ; 1966 ; Planta Volume 70 ; 70 >
+    au < testing ; 1966 ; Planta Volume 71 ; 71 >
+    au < testing ; 1966-1967 ; Planta Volume 72 ; 72 >
+    au < testing ; 1967 ; Planta Volume 73 ; 73 >
+    au < testing ; 1967 ; Planta Volume 74 ; 74 >
+    au < testing ; 1967 ; Planta Volume 75 ; 75 >
+    au < testing ; 1967 ; Planta Volume 76 ; 76 >
+    au < testing ; 1967 ; Planta Volume 77 ; 77 >
+    au < testing ; 1967-1968 ; Planta Volume 78 ; 78 >
+    au < testing ; 1968 ; Planta Volume 79 ; 79 >
+    au < testing ; 1968 ; Planta Volume 80 ; 80 >
+    au < testing ; 1968 ; Planta Volume 81 ; 81 >
+    au < testing ; 1968 ; Planta Volume 82 ; 82 >
+    au < testing ; 1968 ; Planta Volume 83 ; 83 >
+    au < testing ; 1968-1969 ; Planta Volume 84 ; 84 >
+    au < testing ; 1969 ; Planta Volume 85 ; 85 >
+    au < testing ; 1969 ; Planta Volume 86 ; 86 >
+    au < testing ; 1969 ; Planta Volume 87 ; 87 >
+    au < testing ; 1969 ; Planta Volume 88 ; 88 >
+    au < testing ; 1969 ; Planta Volume 89 ; 89 >
+    au < testing ; 1969-1970 ; Planta Volume 90 ; 90 >
+    au < testing ; 1970 ; Planta Volume 91 ; 91 >
+    au < testing ; 1970 ; Planta Volume 92 ; 92 >
+    au < testing ; 1970 ; Planta Volume 93 ; 93 >
+    au < testing ; 1970 ; Planta Volume 94 ; 94 >
+    au < testing ; 1970 ; Planta Volume 95 ; 95 >
+    au < testing ; 1971 ; Planta Volume 96 ; 96 >
+    au < testing ; 1971 ; Planta Volume 97 ; 97 >
+    au < testing ; 1971 ; Planta Volume 98 ; 98 >
+    au < testing ; 1971 ; Planta Volume 99 ; 99 >
+    au < testing ; 1971 ; Planta Volume 100 ; 100 >
     au < ready ; 1971 ; Planta Volume 101 ; 101 >
     au < ready ; 1971-1972 ; Planta Volume 102 ; 102 >
     au < ready ; 1972 ; Planta Volume 103 ; 103 >
@@ -31388,7 +31568,7 @@
     au < ready ; 1983 ; Planta Volume 157 ; 157 >
     au < ready ; 1983 ; Planta Volume 158 ; 158 >
     au < ready ; 1983 ; Planta Volume 159 ; 159 >
-    au < testing ; 1984 ; Planta Volume 160 ; 160 >
+    au < ready ; 1984 ; Planta Volume 160 ; 160 >
     au < ready ; 1984 ; Planta Volume 161 ; 161 >
     au < ready ; 1984 ; Planta Volume 162 ; 162 >
     au < ready ; 1985 ; Planta Volume 163 ; 163 >
@@ -31420,11 +31600,11 @@
     au < ready ; 1993 ; Planta Volume 189 ; 189 >
     au < ready ; 1993 ; Planta Volume 190 ; 190 >
     au < ready ; 1993 ; Planta Volume 191 ; 191 >
-    au < testing ; 1993-1994 ; Planta Volume 192 ; 192 >
+    au < ready ; 1993-1994 ; Planta Volume 192 ; 192 >
     au < ready ; 1994 ; Planta Volume 193 ; 193 >
     au < ready ; 1994 ; Planta Volume 194 ; 194 >
     au < ready ; 1994-1995 ; Planta Volume 195 ; 195 >
-    au < testing ; 1995 ; Planta Volume 196 ; 196 >
+    au < ready ; 1995 ; Planta Volume 196 ; 196 >
     au < ready ; 1995 ; Planta Volume 197 ; 197 >
     au < ready ; 1996 ; Planta Volume 198 ; 198 >
     au < ready ; 1996 ; Planta Volume 199 ; 199 >
@@ -36655,31 +36835,38 @@ Commet [pv] = now offline
     param[journal_issn] = 0169-3298
     attr[where] = content5b
 
-    au < testing ; 1987 ; Evolutionary Ecology Volume 1 ; 1 >
-    au < testing ; 1988 ; Evolutionary Ecology Volume 2 ; 2 >
-    au < testing ; 1989 ; Evolutionary Ecology Volume 3 ; 3 >
-    au < testing ; 1990 ; Evolutionary Ecology Volume 4 ; 4 >
-    au < testing ; 1991 ; Evolutionary Ecology Volume 5 ; 5 >
-    au < testing ; 1992 ; Evolutionary Ecology Volume 6 ; 6 >
-    au < testing ; 1993 ; Evolutionary Ecology Volume 7 ; 7 >
-    au < testing ; 1994 ; Evolutionary Ecology Volume 8 ; 8 >
-    au < testing ; 1995 ; Evolutionary Ecology Volume 9 ; 9 >
-    au < testing ; 1996 ; Evolutionary Ecology Volume 10 ; 10 >
-    au < testing ; 1997 ; Evolutionary Ecology Volume 11 ; 11 >
-    au < testing ; 1997 ; Evolutionary Ecology Volume 12 ; 12 >
-    au < testing ; 1999 ; Evolutionary Ecology Volume 13 ; 13 >
-    au < testing ; 2000 ; Evolutionary Ecology Volume 14 ; 14 >
-    au < testing ; 2001 ; Evolutionary Ecology Volume 15 ; 15 >
-    au < testing ; 2002 ; Evolutionary Ecology Volume 16 ; 16 >
-    au < testing ; 2003 ; Evolutionary Ecology Volume 17 ; 17 >
-    au < testing ; 2004 ; Evolutionary Ecology Volume 18 ; 18 >
-    au < testing ; 2005 ; Evolutionary Ecology Volume 19 ; 19 >
-    au < testing ; 2006 ; Evolutionary Ecology Volume 20 ; 20 >
-    au < testing ; 2007 ; Evolutionary Ecology Volume 21 ; 21 >
-    au < testing ; 2008 ; Evolutionary Ecology Volume 22 ; 22 >
-    au < testing ; 2009 ; Evolutionary Ecology Volume 23 ; 23 >
-    au < testing ; 2010 ; Evolutionary Ecology Volume 24 ; 24 >
-    au < testing ; 2011 ; Evolutionary Ecology Volume 25 ; 25 >
+    au < ready ; 1972-1974 ; Surveys in Geophysics Volume 1 ; 1 >
+    au < ready ; 1975-1976 ; Surveys in Geophysics Volume 2 ; 2 >
+    au < ready ; 1977-1979 ; Surveys in Geophysics Volume 3 ; 3 >
+    au < ready ; 1980-1982 ; Surveys in Geophysics Volume 4 ; 4 >
+    au < ready ; 1982-1983 ; Surveys in Geophysics Volume 5 ; 5 >
+    au < ready ; 1983-1984 ; Surveys in Geophysics Volume 6 ; 6 >
+    au < ready ; 1984-1985 ; Surveys in Geophysics Volume 7 ; 7 >
+    au < ready ; 1986 ; Surveys in Geophysics Volume 8 ; 8 >
+    au < ready ; 1987 ; Surveys in Geophysics Volume 9 ; 9 >
+    au < ready ; 1989 ; Surveys in Geophysics Volume 10 ; 10 >
+    au < ready ; 1990 ; Surveys in Geophysics Volume 11 ; 11 >
+    au < ready ; 1991 ; Surveys in Geophysics Volume 12 ; 12 >
+    au < ready ; 1992 ; Surveys in Geophysics Volume 13 ; 13 >
+    au < ready ; 1993 ; Surveys in Geophysics Volume 14 ; 14 >
+    au < ready ; 1994 ; Surveys in Geophysics Volume 15 ; 15 >
+    au < ready ; 1995 ; Surveys in Geophysics Volume 16 ; 16 >
+    au < ready ; 1996 ; Surveys in Geophysics Volume 17 ; 17 >
+    au < ready ; 1997 ; Surveys in Geophysics Volume 18 ; 18 >
+    au < ready ; 1998 ; Surveys in Geophysics Volume 19 ; 19 >
+    au < ready ; 1999 ; Surveys in Geophysics Volume 20 ; 20 >
+    au < ready ; 2000 ; Surveys in Geophysics Volume 21 ; 21 >
+    au < testing ; 2001 ; Surveys in Geophysics Volume 22 ; 22 >
+    au < ready ; 2002 ; Surveys in Geophysics Volume 23 ; 23 >
+    au < ready ; 2003 ; Surveys in Geophysics Volume 24 ; 24 >
+    au < ready ; 2004 ; Surveys in Geophysics Volume 25 ; 25 >
+    au < testing ; 2005 ; Surveys in Geophysics Volume 26 ; 26 >
+    au < testing ; 2006 ; Surveys in Geophysics Volume 27 ; 27 >
+    au < testing ; 2007 ; Surveys in Geophysics Volume 28 ; 28 >
+    au < testing ; 2008 ; Surveys in Geophysics Volume 29 ; 29 >
+    au < testing ; 2009 ; Surveys in Geophysics Volume 30 ; 30 >
+    au < testing ; 2010 ; Surveys in Geophysics Volume 31 ; 31 >
+    au < testing ; 2011 ; Surveys in Geophysics Volume 32 ; 32 >
 
   }
 
@@ -37057,56 +37244,56 @@ Commet [pv] = now offline
     param[journal_issn] = 0040-5752
     attr[where] = content3b
 
-    au < manifest ; 1929 ; TAG Theoretical and Applied Genetics Volume 1 ; 1 >
-    au < manifest ; 1930 ; TAG Theoretical and Applied Genetics Volume 2 ; 2 >
-    au < manifest ; 1931 ; TAG Theoretical and Applied Genetics Volume 3 ; 3 >
-    au < manifest ; 1932 ; TAG Theoretical and Applied Genetics Volume 4 ; 4 >
-    au < manifest ; 1933 ; TAG Theoretical and Applied Genetics Volume 5 ; 5 >
-    au < manifest ; 1934 ; TAG Theoretical and Applied Genetics Volume 6 ; 6 >
-    au < manifest ; 1935 ; TAG Theoretical and Applied Genetics Volume 7 ; 7 >
-    au < manifest ; 1936 ; TAG Theoretical and Applied Genetics Volume 8 ; 8 >
-    au < manifest ; 1937 ; TAG Theoretical and Applied Genetics Volume 9 ; 9 >
-    au < manifest ; 1938 ; TAG Theoretical and Applied Genetics Volume 10 ; 10 >
-    au < manifest ; 1939 ; TAG Theoretical and Applied Genetics Volume 11 ; 11 >
-    au < manifest ; 1940 ; TAG Theoretical and Applied Genetics Volume 12 ; 12 >
-    au < manifest ; 1941 ; TAG Theoretical and Applied Genetics Volume 13 ; 13 >
-    au < manifest ; 1942 ; TAG Theoretical and Applied Genetics Volume 14 ; 14 >
-    au < manifest ; 1943 ; TAG Theoretical and Applied Genetics Volume 15 ; 15 >
-    au < manifest ; 1944 ; TAG Theoretical and Applied Genetics Volume 16 ; 16 >
-    au < manifest ; 1946-1947 ; TAG Theoretical and Applied Genetics Volume 17 ; 17 >
+    au < testing ; 1929 ; TAG Theoretical and Applied Genetics Volume 1 ; 1 >
+    au < testing ; 1930 ; TAG Theoretical and Applied Genetics Volume 2 ; 2 >
+    au < testing ; 1931 ; TAG Theoretical and Applied Genetics Volume 3 ; 3 >
+    au < testing ; 1932 ; TAG Theoretical and Applied Genetics Volume 4 ; 4 >
+    au < testing ; 1933 ; TAG Theoretical and Applied Genetics Volume 5 ; 5 >
+    au < testing ; 1934 ; TAG Theoretical and Applied Genetics Volume 6 ; 6 >
+    au < testing ; 1935 ; TAG Theoretical and Applied Genetics Volume 7 ; 7 >
+    au < testing ; 1936 ; TAG Theoretical and Applied Genetics Volume 8 ; 8 >
+    au < testing ; 1937 ; TAG Theoretical and Applied Genetics Volume 9 ; 9 >
+    au < testing ; 1938 ; TAG Theoretical and Applied Genetics Volume 10 ; 10 >
+    au < testing ; 1939 ; TAG Theoretical and Applied Genetics Volume 11 ; 11 >
+    au < testing ; 1940 ; TAG Theoretical and Applied Genetics Volume 12 ; 12 >
+    au < testing ; 1941 ; TAG Theoretical and Applied Genetics Volume 13 ; 13 >
+    au < testing ; 1942 ; TAG Theoretical and Applied Genetics Volume 14 ; 14 >
+    au < testing ; 1943 ; TAG Theoretical and Applied Genetics Volume 15 ; 15 >
+    au < testing ; 1944 ; TAG Theoretical and Applied Genetics Volume 16 ; 16 >
+    au < testing ; 1946-1947 ; TAG Theoretical and Applied Genetics Volume 17 ; 17 >
     au < doesNotExist ; 1947-1948 ; TAG Theoretical and Applied Genetics Volume 18 ; 18 >
-    au < manifest ; 1948-1949 ; TAG Theoretical and Applied Genetics Volume 19 ; 19 >
-    au < manifest ; 1950 ; TAG Theoretical and Applied Genetics Volume 20 ; 20 >
-    au < manifest ; 1951 ; TAG Theoretical and Applied Genetics Volume 21 ; 21 >
-    au < manifest ; 1952 ; TAG Theoretical and Applied Genetics Volume 22 ; 22 >
-    au < manifest ; 1953 ; TAG Theoretical and Applied Genetics Volume 23 ; 23 >
-    au < manifest ; 1954 ; TAG Theoretical and Applied Genetics Volume 24 ; 24 >
-    au < manifest ; 1955 ; TAG Theoretical and Applied Genetics Volume 25 ; 25 >
-    au < manifest ; 1956 ; TAG Theoretical and Applied Genetics Volume 26 ; 26 >
-    au < manifest ; 1957 ; TAG Theoretical and Applied Genetics Volume 27 ; 27 >
-    au < manifest ; 1958 ; TAG Theoretical and Applied Genetics Volume 28 ; 28 >
-    au < manifest ; 1959 ; TAG Theoretical and Applied Genetics Volume 29 ; 29 >
-    au < manifest ; 1960 ; TAG Theoretical and Applied Genetics Volume 30 ; 30 >
-    au < manifest ; 1961 ; TAG Theoretical and Applied Genetics Volume 31 ; 31 >
-    au < manifest ; 1962 ; TAG Theoretical and Applied Genetics Volume 32 ; 32 >
-    au < manifest ; 1963 ; TAG Theoretical and Applied Genetics Volume 33 ; 33 >
-    au < manifest ; 1964-1965 ; TAG Theoretical and Applied Genetics Volume 34 ; 34 >
-    au < manifest ; 1965 ; TAG Theoretical and Applied Genetics Volume 35 ; 35 >
-    au < manifest ; 1966 ; TAG Theoretical and Applied Genetics Volume 36 ; 36 >
-    au < manifest ; 1967 ; TAG Theoretical and Applied Genetics Volume 37 ; 37 >
-    au < manifest ; 1968 ; TAG Theoretical and Applied Genetics Volume 38 ; 38 >
-    au < manifest ; 1969 ; TAG Theoretical and Applied Genetics Volume 39 ; 39 >
-    au < manifest ; 1970 ; TAG Theoretical and Applied Genetics Volume 40 ; 40 >
-    au < manifest ; 1971 ; TAG Theoretical and Applied Genetics Volume 41 ; 41 >
-    au < manifest ; 1972 ; TAG Theoretical and Applied Genetics Volume 42 ; 42 >
-    au < manifest ; 1973 ; TAG Theoretical and Applied Genetics Volume 43 ; 43 >
-    au < manifest ; 1974 ; TAG Theoretical and Applied Genetics Volume 44 ; 44 >
-    au < manifest ; 1974 ; TAG Theoretical and Applied Genetics Volume 45 ; 45 >
-    au < manifest ; 1975 ; TAG Theoretical and Applied Genetics Volume 46 ; 46 >
-    au < manifest ; 1976 ; TAG Theoretical and Applied Genetics Volume 47 ; 47 >
-    au < manifest ; 1976 ; TAG Theoretical and Applied Genetics Volume 48 ; 48 >
-    au < manifest ; 1977 ; TAG Theoretical and Applied Genetics Volume 49 ; 49 >
-    au < manifest ; 1977 ; TAG Theoretical and Applied Genetics Volume 50 ; 50 >
+    au < testing ; 1948-1949 ; TAG Theoretical and Applied Genetics Volume 19 ; 19 >
+    au < testing ; 1950 ; TAG Theoretical and Applied Genetics Volume 20 ; 20 >
+    au < testing ; 1951 ; TAG Theoretical and Applied Genetics Volume 21 ; 21 >
+    au < testing ; 1952 ; TAG Theoretical and Applied Genetics Volume 22 ; 22 >
+    au < testing ; 1953 ; TAG Theoretical and Applied Genetics Volume 23 ; 23 >
+    au < testing ; 1954 ; TAG Theoretical and Applied Genetics Volume 24 ; 24 >
+    au < testing ; 1955 ; TAG Theoretical and Applied Genetics Volume 25 ; 25 >
+    au < testing ; 1956 ; TAG Theoretical and Applied Genetics Volume 26 ; 26 >
+    au < testing ; 1957 ; TAG Theoretical and Applied Genetics Volume 27 ; 27 >
+    au < testing ; 1958 ; TAG Theoretical and Applied Genetics Volume 28 ; 28 >
+    au < testing ; 1959 ; TAG Theoretical and Applied Genetics Volume 29 ; 29 >
+    au < testing ; 1960 ; TAG Theoretical and Applied Genetics Volume 30 ; 30 >
+    au < testing ; 1961 ; TAG Theoretical and Applied Genetics Volume 31 ; 31 >
+    au < testing ; 1962 ; TAG Theoretical and Applied Genetics Volume 32 ; 32 >
+    au < testing ; 1963 ; TAG Theoretical and Applied Genetics Volume 33 ; 33 >
+    au < testing ; 1964-1965 ; TAG Theoretical and Applied Genetics Volume 34 ; 34 >
+    au < testing ; 1965 ; TAG Theoretical and Applied Genetics Volume 35 ; 35 >
+    au < testing ; 1966 ; TAG Theoretical and Applied Genetics Volume 36 ; 36 >
+    au < testing ; 1967 ; TAG Theoretical and Applied Genetics Volume 37 ; 37 >
+    au < testing ; 1968 ; TAG Theoretical and Applied Genetics Volume 38 ; 38 >
+    au < testing ; 1969 ; TAG Theoretical and Applied Genetics Volume 39 ; 39 >
+    au < testing ; 1970 ; TAG Theoretical and Applied Genetics Volume 40 ; 40 >
+    au < testing ; 1971 ; TAG Theoretical and Applied Genetics Volume 41 ; 41 >
+    au < testing ; 1972 ; TAG Theoretical and Applied Genetics Volume 42 ; 42 >
+    au < testing ; 1973 ; TAG Theoretical and Applied Genetics Volume 43 ; 43 >
+    au < testing ; 1974 ; TAG Theoretical and Applied Genetics Volume 44 ; 44 >
+    au < testing ; 1974 ; TAG Theoretical and Applied Genetics Volume 45 ; 45 >
+    au < testing ; 1975 ; TAG Theoretical and Applied Genetics Volume 46 ; 46 >
+    au < testing ; 1976 ; TAG Theoretical and Applied Genetics Volume 47 ; 47 >
+    au < testing ; 1976 ; TAG Theoretical and Applied Genetics Volume 48 ; 48 >
+    au < testing ; 1977 ; TAG Theoretical and Applied Genetics Volume 49 ; 49 >
+    au < testing ; 1977 ; TAG Theoretical and Applied Genetics Volume 50 ; 50 >
     au < ready ; 1977-1978 ; TAG Theoretical and Applied Genetics Volume 51 ; 51 >
     au < ready ; 1978 ; TAG Theoretical and Applied Genetics Volume 52 ; 52 >
     au < ready ; 1978 ; TAG Theoretical and Applied Genetics Volume 53 ; 53 >
@@ -37124,15 +37311,15 @@ Commet [pv] = now offline
     au < ready ; 1983 ; TAG Theoretical and Applied Genetics Volume 65 ; 65 >
     au < ready ; 1983 ; TAG Theoretical and Applied Genetics Volume 66 ; 66 >
     au < ready ; 1983-1984 ; TAG Theoretical and Applied Genetics Volume 67 ; 67 >
-    au < testing ; 1984 ; TAG Theoretical and Applied Genetics Volume 68 ; 68 >
+    au < ready ; 1984 ; TAG Theoretical and Applied Genetics Volume 68 ; 68 >
     au < ready ; 1984-1985 ; TAG Theoretical and Applied Genetics Volume 69 ; 69 >
     au < ready ; 1985 ; TAG Theoretical and Applied Genetics Volume 70 ; 70 >
     au < ready ; 1985-1986 ; TAG Theoretical and Applied Genetics Volume 71 ; 71 >
     au < ready ; 1986 ; TAG Theoretical and Applied Genetics Volume 72 ; 72 >
-    au < testing ; 1986-1987 ; TAG Theoretical and Applied Genetics Volume 73 ; 73 >
-    au < testing ; 1987 ; TAG Theoretical and Applied Genetics Volume 74 ; 74 >
+    au < ready ; 1986-1987 ; TAG Theoretical and Applied Genetics Volume 73 ; 73 >
+    au < ready ; 1987 ; TAG Theoretical and Applied Genetics Volume 74 ; 74 >
     au < ready ; 1987-1988 ; TAG Theoretical and Applied Genetics Volume 75 ; 75 >
-    au < testing ; 1988 ; TAG Theoretical and Applied Genetics Volume 76 ; 76 >
+    au < ready ; 1988 ; TAG Theoretical and Applied Genetics Volume 76 ; 76 >
     au < ready ; 1989 ; TAG Theoretical and Applied Genetics Volume 77 ; 77 >
     au < ready ; 1989 ; TAG Theoretical and Applied Genetics Volume 78 ; 78 >
     au < ready ; 1990 ; TAG Theoretical and Applied Genetics Volume 79 ; 79 >
@@ -37142,16 +37329,16 @@ Commet [pv] = now offline
     au < testing ; 1991-1992 ; TAG Theoretical and Applied Genetics Volume 83 ; 83 >
     au < ready ; 1992 ; TAG Theoretical and Applied Genetics Volume 84 ; 84 >
     au < ready ; 1992-1993 ; TAG Theoretical and Applied Genetics Volume 85 ; 85 >
-    au < testing ; 1993 ; TAG Theoretical and Applied Genetics Volume 86 ; 86 >
-    au < testing ; 1993-1994 ; TAG Theoretical and Applied Genetics Volume 87 ; 87 >
+    au < ready ; 1993 ; TAG Theoretical and Applied Genetics Volume 86 ; 86 >
+    au < ready ; 1993-1994 ; TAG Theoretical and Applied Genetics Volume 87 ; 87 >
     au < ready ; 1994 ; TAG Theoretical and Applied Genetics Volume 88 ; 88 >
-    au < testing ; 1994 ; TAG Theoretical and Applied Genetics Volume 89 ; 89 >
+    au < ready ; 1994 ; TAG Theoretical and Applied Genetics Volume 89 ; 89 >
     au < ready ; 1995 ; TAG Theoretical and Applied Genetics Volume 90 ; 90 >
     au < ready ; 1995 ; TAG Theoretical and Applied Genetics Volume 91 ; 91 >
     au < testing ; 1996 ; TAG Theoretical and Applied Genetics Volume 92 ; 92 >
-    au < testing ; 1996 ; TAG Theoretical and Applied Genetics Volume 93 ; 93 >
+    au < ready ; 1996 ; TAG Theoretical and Applied Genetics Volume 93 ; 93 >
     au < ready ; 1997 ; TAG Theoretical and Applied Genetics Volume 94 ; 94 >
-    au < testing ; 1997 ; TAG Theoretical and Applied Genetics Volume 95 ; 95 >
+    au < ready ; 1997 ; TAG Theoretical and Applied Genetics Volume 95 ; 95 >
     au < ready ; 1998 ; TAG Theoretical and Applied Genetics Volume 96 ; 96 >
     au < ready ; 1998 ; TAG Theoretical and Applied Genetics Volume 97 ; 97 >
     au < ready ; 1999 ; TAG Theoretical and Applied Genetics Volume 98 ; 98 >
