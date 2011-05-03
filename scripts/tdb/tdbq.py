@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.11 2011-02-10 23:24:12 thib_gc Exp $
+# $Id: tdbq.py,v 1.12 2011-05-03 04:38:08 pgust Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -629,6 +629,7 @@ def str_to_lambda_au(str):
                    ('status1', lambda au: au.get('status1')),
                    ('status2', lambda au: au.get('status2')),
                    ('year', lambda au: au.year()),
+                   ('volume_name', lambda au: au.volumeName()),
                    ('name', lambda au: au.name()),
                    ('plugin', lambda au: au.plugin()),
                    ('pluginPrefix', lambda au: au.get(AU.PLUGIN_PREFIX)),
@@ -639,6 +640,7 @@ def str_to_lambda_au(str):
                    ('title', lambda au: au.title().name()),
                    ('issn', lambda au: au.title().issn()),
                    ('eissn', lambda au: au.title().eissn()),
+                   ('issnl', lambda au: au.title().issnl()),
                    ('publisher', lambda au: au.title().publisher().name())]:
         if id == str: return fn
     if str.endswith(']'):

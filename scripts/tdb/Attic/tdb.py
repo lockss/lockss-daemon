@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.8 2011-04-19 18:20:50 pgust Exp $
+# $Id: tdb.py,v 1.9 2011-05-03 04:38:08 pgust Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -216,6 +216,7 @@ class AU(_ChainedMap):
     STATUS = 'status'
     TITLE = 'title'
     YEAR = 'year'
+    VOLUME_NAME = 'volume_name'
     
     def __init__(self, next=None):
         '''Constructor.'''
@@ -243,6 +244,7 @@ class AU(_ChainedMap):
     def status(self): return self.get(AU.STATUS)
     def title(self): return self.get(AU.TITLE)
     def year(self): return self.get(AU.YEAR)
+    def volumeName(self): return self.get(AU.VOLUME_NAME)
 
     @staticmethod
     def __auidencode(c):
