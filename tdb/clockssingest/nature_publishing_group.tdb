@@ -1103,7 +1103,7 @@
     param[journal_id] = ni
 
     au < testing ; exists ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
-    au < testing ; exists ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
+    au < released ; manifest ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
     au < released ; manifest ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
 
   }
@@ -1185,7 +1185,7 @@
 
     au < released ; crawling ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
-    au < testing ; exists ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
+    au < released ; manifest ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1231,9 +1231,7 @@
 
     param[journal_id] = nprot
 
-comment[nprot4] = poll mismatch
-
-    au < testing ; exists ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
+    au < released ; manifest ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
     au < testing ; exists ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
 
@@ -1251,7 +1249,7 @@ comment[nprot4] = poll mismatch
 
     au < released ; crawling ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
-    au < testing ; exists ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
+    au < released ; manifest ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
 
   }
 

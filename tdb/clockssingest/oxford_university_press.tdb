@@ -2299,7 +2299,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
+      au < released ; manifest ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
 
     }
 
@@ -2572,7 +2572,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; InnovAiT Volume 3 ; 3 ; >
+      au < released ; manifest ; 2010 ; InnovAiT Volume 3 ; 3 ; >
 
     }
 
@@ -2601,7 +2601,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
+      au < released ; manifest ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
 
     }
 
@@ -2628,7 +2628,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
+      au < released ; manifest ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
 
     }
 
@@ -5488,7 +5488,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
-      au < testing ; exists ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
+      au < down ; manifest ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
     }
 
@@ -5517,7 +5517,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
-      au < testing ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
+      au < down ; manifest ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
 
     }
 
