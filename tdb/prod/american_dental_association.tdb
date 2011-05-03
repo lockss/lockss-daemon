@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = American Dental Association
   >
 
   {
+
     title <
       name = The Journal of the American Dental Association ;
       issn = 0002-8177 ;
@@ -11,85 +13,82 @@
       issnl = 0002-8177
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://jada.ada.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://jada.ada.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; The Journal of the American Dental Association Volume 72 ; 72 >
-      au < exists ; The Journal of the American Dental Association Volume 73 ; 73 >
-      au < exists ; The Journal of the American Dental Association Volume 74 ; 74 >
-      au < exists ; The Journal of the American Dental Association Volume 75 ; 75 >
-      au < exists ; The Journal of the American Dental Association Volume 76 ; 76 >
-      au < exists ; The Journal of the American Dental Association Volume 77 ; 77 >
-      au < exists ; The Journal of the American Dental Association Volume 78 ; 78 >
-      au < exists ; The Journal of the American Dental Association Volume 79 ; 79 >
-      au < exists ; The Journal of the American Dental Association Volume 80 ; 80 >
-      au < exists ; The Journal of the American Dental Association Volume 81 ; 81 >
-      au < exists ; The Journal of the American Dental Association Volume 82 ; 82 >
-      au < exists ; The Journal of the American Dental Association Volume 83 ; 83 >
-      au < exists ; The Journal of the American Dental Association Volume 84 ; 84 >
-      au < exists ; The Journal of the American Dental Association Volume 85 ; 85 >
-      au < exists ; The Journal of the American Dental Association Volume 86 ; 86 >
-      au < exists ; The Journal of the American Dental Association Volume 87 ; 87 >
-      au < exists ; The Journal of the American Dental Association Volume 88 ; 88 >
-      au < exists ; The Journal of the American Dental Association Volume 89 ; 89 >
-      au < exists ; The Journal of the American Dental Association Volume 90 ; 90 >
-      au < exists ; The Journal of the American Dental Association Volume 91 ; 91 >
-      au < exists ; The Journal of the American Dental Association Volume 92 ; 92 >
-      au < exists ; The Journal of the American Dental Association Volume 93 ; 93 >
-      au < exists ; The Journal of the American Dental Association Volume 94 ; 94 >
-      au < exists ; The Journal of the American Dental Association Volume 95 ; 95 >
-      au < exists ; The Journal of the American Dental Association Volume 96 ; 96 >
-      au < exists ; The Journal of the American Dental Association Volume 97 ; 97 >
-      au < exists ; The Journal of the American Dental Association Volume 98 ; 98 >
-      au < exists ; The Journal of the American Dental Association Volume 99 ; 99 >
-      au < exists ; The Journal of the American Dental Association Volume 100 ; 100 >
-      au < exists ; The Journal of the American Dental Association Volume 101 ; 101 >
-      au < exists ; The Journal of the American Dental Association Volume 102 ; 102 >
-      au < exists ; The Journal of the American Dental Association Volume 103 ; 103 >
-      au < exists ; The Journal of the American Dental Association Volume 104 ; 104 >
-      au < exists ; The Journal of the American Dental Association Volume 105 ; 105 >
-      au < exists ; The Journal of the American Dental Association Volume 106 ; 106 >
-      au < exists ; The Journal of the American Dental Association Volume 107 ; 107 >
-      au < exists ; The Journal of the American Dental Association Volume 108 ; 108 >
-      au < exists ; The Journal of the American Dental Association Volume 109 ; 109 >
-      au < exists ; The Journal of the American Dental Association Volume 110 ; 110 >
-      au < exists ; The Journal of the American Dental Association Volume 111 ; 111 >
-      au < exists ; The Journal of the American Dental Association Volume 112 ; 112 >
-      au < exists ; The Journal of the American Dental Association Volume 113 ; 113 >
-      au < exists ; The Journal of the American Dental Association Volume 114 ; 114 >
-      au < exists ; The Journal of the American Dental Association Volume 115 ; 115 >
-      au < exists ; The Journal of the American Dental Association Volume 116 ; 116 >
-      au < exists ; The Journal of the American Dental Association Volume 117 ; 117 >
-      au < exists ; The Journal of the American Dental Association Volume 118 ; 118 >
-      au < exists ; The Journal of the American Dental Association Volume 119 ; 119 >
-      au < exists ; The Journal of the American Dental Association Volume 120 ; 120 >
-      au < exists ; The Journal of the American Dental Association Volume 121 ; 121 >
-      au < exists ; The Journal of the American Dental Association Volume 122 ; 122 >
-      au < exists ; The Journal of the American Dental Association Volume 123 ; 123 >
-      au < exists ; The Journal of the American Dental Association Volume 124 ; 124 >
-      au < exists ; The Journal of the American Dental Association Volume 125 ; 125 >
-      au < exists ; The Journal of the American Dental Association Volume 126 ; 126 >
-      au < exists ; The Journal of the American Dental Association Volume 127 ; 127 >
-      au < exists ; The Journal of the American Dental Association Volume 128 ; 128 >
-      au < exists ; The Journal of the American Dental Association Volume 129 ; 129 >
-      au < exists ; The Journal of the American Dental Association Volume 130 ; 130 >
-      au < exists ; The Journal of the American Dental Association Volume 131 ; 131 >
-      au < exists ; The Journal of the American Dental Association Volume 132 ; 132 >
-      au < exists ; The Journal of the American Dental Association Volume 133 ; 133 >
-      au < exists ; The Journal of the American Dental Association Volume 134 ; 134 >
-      au < exists ; The Journal of the American Dental Association Volume 135 ; 135 >
-      au < manifest ; The Journal of the American Dental Association Volume 136 ; 136 >
-      au < manifest ; The Journal of the American Dental Association Volume 137 ; 137 >
-      au < manifest ; The Journal of the American Dental Association Volume 138 ; 138 >
-      au < manifest ; The Journal of the American Dental Association Volume 139 ; 139 >
-      au < manifest ; The Journal of the American Dental Association Volume 140 ; 140 >
-
-    }
+    au < exists ; The Journal of the American Dental Association Volume 72 [tables of contents only] ; 72 >
+    au < exists ; The Journal of the American Dental Association Volume 73 [tables of contents only] ; 73 >
+    au < exists ; The Journal of the American Dental Association Volume 74 [tables of contents only] ; 74 >
+    au < exists ; The Journal of the American Dental Association Volume 75 [tables of contents only] ; 75 >
+    au < exists ; The Journal of the American Dental Association Volume 76 [tables of contents only] ; 76 >
+    au < exists ; The Journal of the American Dental Association Volume 77 [tables of contents only] ; 77 >
+    au < exists ; The Journal of the American Dental Association Volume 78 [tables of contents only] ; 78 >
+    au < exists ; The Journal of the American Dental Association Volume 79 [tables of contents only] ; 79 >
+    au < exists ; The Journal of the American Dental Association Volume 80 [tables of contents only] ; 80 >
+    au < exists ; The Journal of the American Dental Association Volume 81 [tables of contents only] ; 81 >
+    au < exists ; The Journal of the American Dental Association Volume 82 [tables of contents only] ; 82 >
+    au < exists ; The Journal of the American Dental Association Volume 83 [tables of contents only] ; 83 >
+    au < exists ; The Journal of the American Dental Association Volume 84 [tables of contents only] ; 84 >
+    au < exists ; The Journal of the American Dental Association Volume 85 [tables of contents only] ; 85 >
+    au < exists ; The Journal of the American Dental Association Volume 86 [tables of contents only] ; 86 >
+    au < exists ; The Journal of the American Dental Association Volume 87 [tables of contents only] ; 87 >
+    au < exists ; The Journal of the American Dental Association Volume 88 [tables of contents only] ; 88 >
+    au < exists ; The Journal of the American Dental Association Volume 89 [tables of contents only] ; 89 >
+    au < exists ; The Journal of the American Dental Association Volume 90 [abstracts only] ; 90 >
+    au < exists ; The Journal of the American Dental Association Volume 91 [abstracts only] ; 91 >
+    au < exists ; The Journal of the American Dental Association Volume 92 [abstracts only] ; 92 >
+    au < exists ; The Journal of the American Dental Association Volume 93 [abstracts only] ; 93 >
+    au < exists ; The Journal of the American Dental Association Volume 94 [abstracts only] ; 94 >
+    au < exists ; The Journal of the American Dental Association Volume 95 [abstracts only] ; 95 >
+    au < exists ; The Journal of the American Dental Association Volume 96 [abstracts only] ; 96 >
+    au < exists ; The Journal of the American Dental Association Volume 97 [abstracts only] ; 97 >
+    au < exists ; The Journal of the American Dental Association Volume 98 [abstracts only] ; 98 >
+    au < exists ; The Journal of the American Dental Association Volume 99 [abstracts only] ; 99 >
+    au < exists ; The Journal of the American Dental Association Volume 100 [abstracts only] ; 100 >
+    au < exists ; The Journal of the American Dental Association Volume 101 [abstracts only] ; 101 >
+    au < exists ; The Journal of the American Dental Association Volume 102 [abstracts only] ; 102 >
+    au < exists ; The Journal of the American Dental Association Volume 103 [abstracts only] ; 103 >
+    au < exists ; The Journal of the American Dental Association Volume 104 [abstracts only] ; 104 >
+    au < exists ; The Journal of the American Dental Association Volume 105 [abstracts only] ; 105 >
+    au < exists ; The Journal of the American Dental Association Volume 106 [abstracts only] ; 106 >
+    au < exists ; The Journal of the American Dental Association Volume 107 [abstracts only] ; 107 >
+    au < exists ; The Journal of the American Dental Association Volume 108 [abstracts only] ; 108 >
+    au < exists ; The Journal of the American Dental Association Volume 109 [abstracts only] ; 109 >
+    au < exists ; The Journal of the American Dental Association Volume 110 [abstracts only] ; 110 >
+    au < exists ; The Journal of the American Dental Association Volume 111 [abstracts only] ; 111 >
+    au < exists ; The Journal of the American Dental Association Volume 112 [abstracts only] ; 112 >
+    au < exists ; The Journal of the American Dental Association Volume 113 [abstracts only] ; 113 >
+    au < exists ; The Journal of the American Dental Association Volume 114 [abstracts only] ; 114 >
+    au < exists ; The Journal of the American Dental Association Volume 115 [abstracts only] ; 115 >
+    au < exists ; The Journal of the American Dental Association Volume 116 [abstracts only] ; 116 >
+    au < exists ; The Journal of the American Dental Association Volume 117 [abstracts only] ; 117 >
+    au < exists ; The Journal of the American Dental Association Volume 118 [abstracts only] ; 118 >
+    au < exists ; The Journal of the American Dental Association Volume 119 [abstracts only] ; 119 >
+    au < exists ; The Journal of the American Dental Association Volume 120 [abstracts only] ; 120 >
+    au < exists ; The Journal of the American Dental Association Volume 121 [abstracts only] ; 121 >
+    au < exists ; The Journal of the American Dental Association Volume 122 [abstracts only] ; 122 >
+    au < exists ; The Journal of the American Dental Association Volume 123 [abstracts only] ; 123 >
+    au < exists ; The Journal of the American Dental Association Volume 124 [abstracts only] ; 124 >
+    au < exists ; The Journal of the American Dental Association Volume 125 [abstracts only] ; 125 >
+    au < exists ; The Journal of the American Dental Association Volume 126 ; 126 >
+    au < exists ; The Journal of the American Dental Association Volume 127 ; 127 >
+    au < exists ; The Journal of the American Dental Association Volume 128 ; 128 >
+    au < exists ; The Journal of the American Dental Association Volume 129 ; 129 >
+    au < exists ; The Journal of the American Dental Association Volume 130 ; 130 >
+    au < exists ; The Journal of the American Dental Association Volume 131 ; 131 >
+    au < exists ; The Journal of the American Dental Association Volume 132 ; 132 >
+    au < exists ; The Journal of the American Dental Association Volume 133 ; 133 >
+    au < exists ; The Journal of the American Dental Association Volume 134 ; 134 >
+    au < exists ; The Journal of the American Dental Association Volume 135 ; 135 >
+    au < manifest ; The Journal of the American Dental Association Volume 136 ; 136 >
+    au < manifest ; The Journal of the American Dental Association Volume 137 ; 137 >
+    au < manifest ; The Journal of the American Dental Association Volume 138 ; 138 >
+    au < manifest ; The Journal of the American Dental Association Volume 139 ; 139 >
+    au < manifest ; The Journal of the American Dental Association Volume 140 ; 140 >
+    au < manifest ; The Journal of the American Dental Association Volume 141 ; 141 >
+    au < manifest ; The Journal of the American Dental Association Volume 142 ; 142 >
 
   }
 
 }
-
