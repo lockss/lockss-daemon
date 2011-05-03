@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = American College of Nutrition
   >
 
   {
+
     title <
       name = Journal of the American College of Nutrition ;
       issn = 0731-5724 ;
@@ -11,44 +13,39 @@
       issnl = 0731-5724
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.jacn.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://www.jacn.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < manifest ; Journal of the American College of Nutrition Volume 1 ; 1 >
-      au < manifest ; Journal of the American College of Nutrition Volume 2 ; 2 >
-      au < manifest ; Journal of the American College of Nutrition Volume 3 ; 3 >
-      au < manifest ; Journal of the American College of Nutrition Volume 4 ; 4 >
-      au < manifest ; Journal of the American College of Nutrition Volume 5 ; 5 >
-      au < manifest ; Journal of the American College of Nutrition Volume 6 ; 6 >
-      au < manifest ; Journal of the American College of Nutrition Volume 7 ; 7 >
-      au < manifest ; Journal of the American College of Nutrition Volume 8 ; 8 >
-      au < manifest ; Journal of the American College of Nutrition Volume 9 ; 9 >
-      au < manifest ; Journal of the American College of Nutrition Volume 10 ; 10 >
-      au < manifest ; Journal of the American College of Nutrition Volume 11 ; 11 >
-      au < manifest ; Journal of the American College of Nutrition Volume 12 ; 12 >
-      au < manifest ; Journal of the American College of Nutrition Volume 13 ; 13 >
-      au < manifest ; Journal of the American College of Nutrition Volume 14 ; 14 >
-      au < manifest ; Journal of the American College of Nutrition Volume 15 ; 15 >
-      au < manifest ; Journal of the American College of Nutrition Volume 16 ; 16 >
-      au < manifest ; Journal of the American College of Nutrition Volume 17 ; 17 >
-      au < manifest ; Journal of the American College of Nutrition Volume 18 ; 18 >
-      au < manifest ; Journal of the American College of Nutrition Volume 19 ; 19 >
-      au < manifest ; Journal of the American College of Nutrition Volume 20 ; 20 >
-      au < manifest ; Journal of the American College of Nutrition Volume 21 ; 21 >
-      au < manifest ; Journal of the American College of Nutrition Volume 22 ; 22 >
-      au < manifest ; Journal of the American College of Nutrition Volume 23 ; 23 >
-      au < manifest ; Journal of the American College of Nutrition Volume 24 ; 24 >
-      au < manifest ; Journal of the American College of Nutrition Volume 25 ; 25 >
-      au < manifest ; Journal of the American College of Nutrition Volume 26 ; 26 >
-      au < manifest ; Journal of the American College of Nutrition Volume 27 ; 27 >
-      au < manifest ; Journal of the American College of Nutrition Volume 28 ; 28 >
-
-    }
+    au < manifest ; Journal of the American College of Nutrition Volume 1 ; 1 >
+    au < manifest ; Journal of the American College of Nutrition Volume 2 ; 2 >
+    au < manifest ; Journal of the American College of Nutrition Volume 3 ; 3 >
+    au < manifest ; Journal of the American College of Nutrition Volume 4 ; 4 >
+    au < manifest ; Journal of the American College of Nutrition Volume 5 ; 5 >
+    au < manifest ; Journal of the American College of Nutrition Volume 6 ; 6 >
+    au < manifest ; Journal of the American College of Nutrition Volume 7 ; 7 >
+    au < manifest ; Journal of the American College of Nutrition Volume 8 ; 8 >
+    au < manifest ; Journal of the American College of Nutrition Volume 9 ; 9 >
+    au < manifest ; Journal of the American College of Nutrition Volume 10 ; 10 >
+    au < manifest ; Journal of the American College of Nutrition Volume 11 ; 11 >
+    au < manifest ; Journal of the American College of Nutrition Volume 12 ; 12 >
+    au < manifest ; Journal of the American College of Nutrition Volume 13 ; 13 >
+    au < manifest ; Journal of the American College of Nutrition Volume 14 ; 14 >
+    au < manifest ; Journal of the American College of Nutrition Volume 15 ; 15 >
+    au < manifest ; Journal of the American College of Nutrition Volume 16 ; 16 >
+    au < manifest ; Journal of the American College of Nutrition Volume 17 ; 17 >
+    au < manifest ; Journal of the American College of Nutrition Volume 18 ; 18 >
+    au < manifest ; Journal of the American College of Nutrition Volume 19 ; 19 >
+    au < manifest ; Journal of the American College of Nutrition Volume 20 ; 20 >
+    au < manifest ; Journal of the American College of Nutrition Volume 21 ; 21 >
+    au < manifest ; Journal of the American College of Nutrition Volume 22 ; 22 >
+    au < manifest ; Journal of the American College of Nutrition Volume 23 ; 23 >
+    au < manifest ; Journal of the American College of Nutrition Volume 24 ; 24 >
+    au < manifest ; Journal of the American College of Nutrition Volume 25 ; 25 >
+    au < manifest ; Journal of the American College of Nutrition Volume 26 ; 26 >
+    au < manifest ; Journal of the American College of Nutrition Volume 27 ; 27 >
+    au < manifest ; Journal of the American College of Nutrition Volume 28 ; 28 >
 
   }
 
 }
-
