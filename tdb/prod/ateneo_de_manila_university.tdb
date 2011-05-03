@@ -1,0 +1,80 @@
+{
+  publisher <
+    name = Ateneo de Manila University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = Philippine Studies ;
+      issn = 0031-7837 ;
+      eissn = 2012-2489 
+    >
+
+    param[base_url] = http://muse.jhu.edu/
+    param[journal_dir] = philippine_studies
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1953 ; Philippine Studies Volume 1 ; 1 >
+    au < exists ; 1954 ; Philippine Studies Volume 2 ; 2 >
+    au < exists ; 1955 ; Philippine Studies Volume 3 ; 3 >
+    au < exists ; 1956 ; Philippine Studies Volume 4 ; 4 >
+    au < exists ; 1957 ; Philippine Studies Volume 5 ; 5 >
+    au < exists ; 1958 ; Philippine Studies Volume 6 ; 6 >
+    au < exists ; 1959 ; Philippine Studies Volume 7 ; 7 >
+    au < exists ; 1960 ; Philippine Studies Volume 8 ; 8 >
+    au < exists ; 1961 ; Philippine Studies Volume 9 ; 9 >
+    au < exists ; 1962 ; Philippine Studies Volume 10 ; 10 >
+    au < exists ; 1963 ; Philippine Studies Volume 11 ; 11 >
+    au < exists ; 1964 ; Philippine Studies Volume 12 ; 12 >
+    au < exists ; 1965 ; Philippine Studies Volume 13 ; 13 >
+    au < exists ; 1966 ; Philippine Studies Volume 14 ; 14 >
+    au < exists ; 1967 ; Philippine Studies Volume 15 ; 15 >
+    au < exists ; 1968 ; Philippine Studies Volume 16 ; 16 >
+    au < exists ; 1969 ; Philippine Studies Volume 17 ; 17 >
+    au < exists ; 1970 ; Philippine Studies Volume 18 ; 18 >
+    au < exists ; 1971 ; Philippine Studies Volume 19 ; 19 >
+    au < exists ; 1972 ; Philippine Studies Volume 20 ; 20 >
+    au < exists ; 1973 ; Philippine Studies Volume 21 ; 21 >
+    au < exists ; 1974 ; Philippine Studies Volume 22 ; 22 >
+    au < exists ; 1975 ; Philippine Studies Volume 23 ; 23 >
+    au < exists ; 1976 ; Philippine Studies Volume 24 ; 24 >
+    au < exists ; 1977 ; Philippine Studies Volume 25 ; 25 >
+    au < exists ; 1978 ; Philippine Studies Volume 26 ; 26 >
+    au < exists ; 1979 ; Philippine Studies Volume 27 ; 27 >
+    au < exists ; 1980 ; Philippine Studies Volume 28 ; 28 >
+    au < exists ; 1981 ; Philippine Studies Volume 29 ; 29 >
+    au < exists ; 1982 ; Philippine Studies Volume 30 ; 30 >
+    au < exists ; 1983 ; Philippine Studies Volume 31 ; 31 >
+    au < exists ; 1984 ; Philippine Studies Volume 32 ; 32 >
+    au < exists ; 1985 ; Philippine Studies Volume 33 ; 33 >
+    au < exists ; 1986 ; Philippine Studies Volume 34 ; 34 >
+    au < exists ; 1987 ; Philippine Studies Volume 35 ; 35 >
+    au < exists ; 1988 ; Philippine Studies Volume 36 ; 36 >
+    au < exists ; 1989 ; Philippine Studies Volume 37 ; 37 >
+    au < exists ; 1990 ; Philippine Studies Volume 38 ; 38 >
+    au < exists ; 1991 ; Philippine Studies Volume 39 ; 39 >
+    au < exists ; 1992 ; Philippine Studies Volume 40 ; 40 >
+    au < exists ; 1993 ; Philippine Studies Volume 41 ; 41 >
+    au < exists ; 1994 ; Philippine Studies Volume 42 ; 42 >
+    au < exists ; 1995 ; Philippine Studies Volume 43 ; 43 >
+    au < exists ; 1996 ; Philippine Studies Volume 44 ; 44 >
+    au < exists ; 1997 ; Philippine Studies Volume 45 ; 45 >
+    au < exists ; 1998 ; Philippine Studies Volume 46 ; 46 >
+    au < exists ; 1999 ; Philippine Studies Volume 47 ; 47 >
+    au < exists ; 2000 ; Philippine Studies Volume 48 ; 48 >
+    au < exists ; 2001 ; Philippine Studies Volume 49 ; 49 >
+    au < exists ; 2002 ; Philippine Studies Volume 50 ; 50 >
+    au < exists ; 2003 ; Philippine Studies Volume 51 ; 51 >
+    au < exists ; 2004 ; Philippine Studies Volume 52 ; 52 >
+    au < exists ; 2005 ; Philippine Studies Volume 53 ; 53 >
+    au < exists ; 2006 ; Philippine Studies Volume 54 ; 54 >
+    au < exists ; 2007 ; Philippine Studies Volume 55 ; 55 >
+    au < exists ; 2008 ; Philippine Studies Volume 56 ; 56 >
+    au < exists ; 2009 ; Philippine Studies Volume 57 ; 57 >
+    au < exists ; 2010 ; Philippine Studies Volume 58 ; 58 >
+    au < exists ; 2011 ; Philippine Studies Volume 59 ; 59 >
+  }
+  
+}

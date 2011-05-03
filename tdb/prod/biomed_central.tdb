@@ -2599,6 +2599,16 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
+        name = Journal of Clinical Bioinformatics ;
+        eissn = 2043-91131
+      >
+
+      param[base_url] = http://www.jclinbioinformatics.com/
+
+    }
+
+    {
+      title <
         name = Journal of Ethnobiology and Ethnomedicine ;
         eissn = 1746-4269
       >

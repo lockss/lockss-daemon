@@ -262,6 +262,8 @@
       eissn = 1468-5833 ;
       issnl = 0959-535X
     >
+    
+    comment[urgent] = possibly leaving highwire
 
     param[base_url] = http://www.bmj.com/
 
@@ -282,6 +284,18 @@
 
   {
     title <
+      name = BMJ Open ;
+      issn = 2044-6055
+    >
+
+    param[base_url] = http://bmjopen.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = BMJ Supportive & Palliative Care ;
       issn = 2045-435X ;
       eissn = 2045-4368
@@ -290,18 +304,6 @@
     param[base_url] = http://spcare.bmj.com/
 
     au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
-
-  }
-
-  {
-    title <
-      name = BMJ Open ;
-      issn = 2044-6055
-    >
-
-    param[base_url] = http://bmjopen.bmj.com/
-
-    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
 
   }
 
@@ -796,6 +798,19 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
   {
     title <
+      name = In Practice ;
+      eissn = 2042-7689 
+    >
+
+    {
+
+      param[base_url] = http://inpractice.bmj.com/
+
+    }
+  }
+
+  {
+    title <
       name = Injury Prevention ;
       issn = 1353-8047 ;
       eissn = 1475-5785 ;
@@ -984,6 +999,20 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
 
+  }
+
+  {
+    title <
+      name = Journal of Family Planning and Reproductive Health Care ;
+      issn = 1471-1893 ;
+      eissn = 2045-2098 
+    >
+
+    {
+
+      param[base_url] = http://jfprhc.bmj.com/
+
+    }
   }
 
   {
@@ -1601,6 +1630,20 @@ comment[tc15] = recursive URL structure
 
     }
 
+  }
+
+  {
+    title <
+      name = Veterinary Record ;
+      eissn = 2042-7670 
+    >
+
+    {
+
+      param[base_url] = http://veterinaryrecord.bmj.com
+
+    }
+    
   }
 
 }

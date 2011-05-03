@@ -1,0 +1,352 @@
+{
+
+  publisher <
+    name = Canadian Center of Science and Education
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; param[volume] >
+  
+  {
+  
+    title <
+      name = Applied Physics Research ;
+      issn = 1916-9639 ;
+      eissn = 1916-9647
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = apr
+
+  }
+
+  {
+  
+    title <
+      name = Asian Culture and History ;
+      issn = 1916-9655 ;
+      eissn = 1916-9663
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ach
+
+  }
+
+  {
+  
+    title <
+      name = Asian Social Science ;
+      issn = 1911-2017 ;
+      eissn = 1911-2025
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ass
+
+  }
+
+  {
+  
+    title <
+      name = Computer and Information Science ;
+      issn = 1913-8989 ;
+      eissn = 1913-8997
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = cis
+
+  }
+
+  {
+  
+    title <
+      name = English Language and Literature Studies ;
+      issn = 1925-4768 ;
+      eissn = 1925-4776
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ells
+
+  }
+
+  {
+  
+    title <
+      name = English Language Teaching ;
+      issn = 1916-4742 ;
+      eissn = 1916-4750
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = elt
+
+  }
+
+  {
+  
+    title <
+      name = Global Journal of Health Science ;
+      issn = 1916-9736 ;
+      eissn = 1916-9744
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = gjhs
+
+    au < released ; 2009 ; Global Journal of Health Science Volume 1 ; 1 >
+    au < released ; 2010 ; Global Journal of Health Science Volume 2 ; 2 >
+    au < released ; 2011 ; Global Journal of Health Science Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Higher Education Studies ;
+      issn = 1925-4741 ;
+      eissn = 1925-475X
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = hes
+
+  }
+
+  {
+  
+    title <
+      name = International Business Research ;
+      issn = 1913-9004 ;
+      eissn = 1913-9012
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ibr
+
+  }
+
+  {
+  
+    title <
+      name = International Education Studies ;
+      issn = 1913-9020 ;
+      eissn = 1913-9039
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ies
+
+  }
+
+  {
+  
+    title <
+      name = International Journal of Biology ;
+      issn = 1916-9671 ;
+      eissn = 1916-968X
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijb
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Business and Management ;
+      issn = 1833-3850 ;
+      eissn = 1833-8119
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijbm
+
+  }
+
+  {
+  
+    title <
+      name = International Journal of Chemistry ;
+      issn = 1916-9698 ;
+      eissn = 1916-9701
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijc
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Economics and Finance ;
+      issn = 1916-971X ;
+      eissn = 1916-9728
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijef
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of English Linguistics ;
+      issn = 1923-869X ;
+      eissn = 1923-8703
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijel
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Marketing Studies ;
+      issn = 1918-719X ;
+      eissn = 1918-7203
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijms
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Psychological Studies ;
+      issn = 1918-7211 ;
+      eissn = 1918-722X
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = ijps
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Agricultural Science ;
+      issn = 1916-9752 ;
+      eissn = 1916-9760
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jas
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Geography and Geology ;
+      issn = 1916-9779 ;
+      eissn = 1916-9787
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jgg
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Management and Sustainability ;
+      issn = 1925-4725 ;
+      eissn = 1925-4733
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jms
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Mathematics Research ;
+      issn = 1916-9795 ;
+      eissn = 1916-9809
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jmr
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Molecular Biology Researchy ;
+      issn = 1925-430X ;
+      eissn = 1925-4318
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jmbr
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Politics and Law ;
+      issn = 1913-9047 ;
+      eissn = 1913-9055
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jpl
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Sustainable Development ;
+      issn = 1913-9063 ;
+      eissn = 1913-9071
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = jsd
+
+  }
+  
+  {
+  
+    title <
+      name = Modern Applied Science ;
+      issn = 1913-1844 ;
+      eissn = 1913-1852
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = mas
+
+  }
+  
+  {
+  
+    title <
+      name = Review of European Studies ;
+      issn = 1918-7173 ;
+      eissn = 1918-7181
+    >
+    
+    param[base_url] = http://www.ccsenet.org/
+    param[journal_id] = res
+
+  }
+  
+}

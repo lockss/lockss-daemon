@@ -3,6 +3,80 @@
   publisher <
     name = Bloomsbury Qatar Foundation Journals
   >
+  
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  param[base_url] = http://www.qscience.com/
+  
+  {
+    title <
+      name = Aswan Heart Centre: Science and Practice Series ;
+      eissn = 2220-2730
+    >
+    
+    param[journal_dir] = ahcsps
+  
+  }
+
+  {
+    title <
+      name = Avicenna ;
+      eissn = 2220-2749
+    >
+    
+    param[journal_dir] = avi
+    
+  }
+
+  {
+    title <
+      name = Perspectives in International Librarianship ;
+      eissn = 2219-8962
+    >
+    
+    param[journal_dir] = pil
+    
+  }
+
+  {
+    title <
+      name = Near and Middle Eastern Journal of Research in Education ;
+      eissn = 1703-1958
+    >
+    
+    param[journal_dir] = nmejre
+    
+  }
+
+  {
+    title <
+      name = Contemporary Islamic Studies ;
+      eissn = 2220-2757
+    >
+    
+    param[journal_dir] = cis
+    
+  }
+
+  {
+    title <
+      name = Sustainable Technologies, Systems and Policies ;
+      eissn = 2220-2765
+    >
+    
+    param[journal_dir] = stsp
+    
+  }
+
+  {
+    title <
+      name = Qatar Foundation Annual Research Forum Proceedings ;
+      eissn = 2220-251X
+    >
+    
+    param[journal_dir] = qfarf
+    
+  }
 
 }
 
