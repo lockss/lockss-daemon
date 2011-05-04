@@ -1,15 +1,15 @@
 <map>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.48.0</string>
-  </entry>
-  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.48.0</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

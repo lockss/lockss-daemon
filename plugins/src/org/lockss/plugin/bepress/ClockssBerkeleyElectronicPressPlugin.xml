@@ -1,11 +1,15 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin</string>
+  </entry>
+  <entry>
     <string>required_daemon_version</string>
     <string>1.48.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -33,10 +37,6 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
