@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = University of Nebraska Press
   >
@@ -8,280 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
-    title <
-      name = An Sionnach: A Journal of Literature, Culture, and the Arts ;
-      issn = 1554-8953 ;
-      eissn = 1944-6535 ;
-      issnl = 1554-8953
-    >
-
-    param[journal_dir] = an_sionnach
-
-    au < ready ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
-
-  }
-
-  {
-    title <
-      name = Anthropological Linguistics ;
-      issn = 1944-6527 ;
-      eissn = 0003-5483 ;
-      issnl = 0003-5483
-    >
-
-    param[journal_dir] = anthropological_linguistics
-
-    au < ready ; Anthropological Linguistics Volume 51 ; 51 >
-
-  }
-
-  {
-    title <
-      name = Collaborative Anthropologies ;
-      issn = 2152-4009 ;
-      eissn = 1943-2550 ;
-      issnl = 1943-2550
-    >
-
-    param[journal_dir] = collaborative_anthropologies
-
-    au < ready ; Collaborative Anthropologies Volume 1 ; 1 >
-    au < ready ; Collaborative Anthropologies Volume 2 ; 2 >
-
-  }
-
-  {
-    title <
-      name = French Forum ;
-      issn = 0098-9355 ;
-      eissn = 1534-1836 ;
-      issnl = 0098-9355
-    >
-
-    param[journal_dir] = french_forum
-
-    au < released ; French Forum Volume 26 ; 26 >
-    au < released ; French Forum Volume 27 ; 27 >
-    au < released ; French Forum Volume 28 ; 28 >
-    au < released ; French Forum Volume 29 ; 29 >
-    au < released ; French Forum Volume 30 ; 30 >
-    au < released ; French Forum Volume 31 ; 31 >
-    au < ready ; French Forum Volume 32 ; 32 >
-    au < ready ; French Forum Volume 33 ; 33 >
-    au < ready ; French Forum Volume 34 ; 34 >
-
-  }
-
-  {
-    title <
-      name = Frontiers: A Journal of Women Studies ;
-      issn = 0160-9009 ;
-      eissn = 1536-0334 ;
-      issnl = 0160-9009
-    >
-
-    param[journal_dir] = frontiers
-
-    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
-    au < ready ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
-    au < ready ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
-    au < ready ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
-
-  }
-
-  {
-    title <
-      name = Histories of Anthropology Annual ;
-      issn = 1940-5138 ;
-      eissn = 1557-637X ;
-      issnl = 1557-637X
-    >
-
-    param[journal_dir] = histories_of_anthropology_annual
-
-    au < ready ; Histories of Anthropology Annual Volume 1 ; 1 >
-    au < ready ; Histories of Anthropology Annual Volume 2 ; 2 >
-    au < ready ; Histories of Anthropology Annual Volume 3 ; 3 >
-    au < ready ; Histories of Anthropology Annual Volume 4 ; 4 >
-    au < ready ; Histories of Anthropology Annual Volume 5 ; 5 >
-
-  }
-
-  {
-    title <
-      name = Journal of Sports Media ;
-      issn = 1558-4313 ;
-      eissn = 1940-5073 ;
-      issnl = 1558-4313
-    >
-
-    param[journal_dir] = journal_of_sports_media
-
-    au < ready ; Journal of Sports Media Volume 1 ; 1 >
-    au < ready ; Journal of Sports Media Volume 2 ; 2 >
-    au < ready ; Journal of Sports Media Volume 3 ; 3 >
-    au < ready ; Journal of Sports Media Volume 4 ; 4 >
-    au < ready ; Journal of Sports Media Volume 5 ; 5 >
-
-  }
-
-  {
-    title <
-      name = Legacy: A Journal of American Women Writers ;
-      issn = 1534-0643 ;
-      eissn = 0748-4321 ;
-      issnl = 0748-4321
-    >
-
-    param[journal_dir] = legacy
-
-    au < ready ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
-    au < ready ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
-
-  }
-
-  {
-    title <
-      name = NINE: A Journal of Baseball History and Culture ;
-      issn = 1188-9330 ;
-      eissn = 1534-1844 ;
-      issnl = 1188-9330
-    >
-
-    param[journal_dir] = nine
-
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
-    au < ready ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
-
-  }
-
-  {
-    title <
-      name = Native South ;
-      issn = 2152-4025 ;
-      eissn = 1943-2569 ;
-      issnl = 1943-2569
-    >
-
-    param[journal_dir] = native_south
-
-    au < ready ; Native South Volume 1 ; 1 >
-    au < ready ; Native South Volume 2 ; 2 >
-
-  }
-
-  {
-    title <
-      name = Nineteenth-Century French Studies ;
-      issn = 0146-7891 ;
-      eissn = 1536-0172 ;
-      issnl = 0146-7891
-    >
-
-    param[journal_dir] = nineteenth_century_french_studies
-
-    au < ready ; Nineteenth-Century French Studies Volume 29 ; 29 >
-    au < notReady ; Nineteenth-Century French Studies Volume 30 ; 30 >
-    au < ready ; Nineteenth-Century French Studies Volume 31 ; 31 >
-    au < ready ; Nineteenth-Century French Studies Volume 32 ; 32 >
-    au < ready ; Nineteenth-Century French Studies Volume 33 ; 33 >
-    au < ready ; Nineteenth-Century French Studies Volume 34 ; 34 >
-    au < ready ; Nineteenth-Century French Studies Volume 35 ; 35 >
-    au < ready ; Nineteenth-Century French Studies Volume 36 ; 36 >
-    au < ready ; Nineteenth-Century French Studies Volume 37 ; 37 >
-    au < ready ; Nineteenth-Century French Studies Volume 38 ; 38 >
-
-  }
-
-  {
-    title <
-      name = Prairie Schooner ;
-      issn = 0032-6682 ;
-      eissn = 1542-426X ;
-      issnl = 0032-6682
-    >
-
-    param[journal_dir] = prairie_schooner
-
-    au < ready ; Prairie Schooner Volume 77 ; 77 >
-    au < ready ; Prairie Schooner Volume 78 ; 78 >
-    au < ready ; Prairie Schooner Volume 79 ; 79 >
-    au < ready ; Prairie Schooner Volume 80 ; 80 >
-    au < ready ; Prairie Schooner Volume 81 ; 81 >
-    au < ready ; Prairie Schooner Volume 82 ; 82 >
-    au < ready ; Prairie Schooner Volume 83 ; 83 >
-
-  }
-
-  {
-    title <
-      name = Qui Parle: Critical Humanities and Social Sciences ;
-      issn = 1938-8020 ;
-      eissn = 1041-8385 ;
-      issnl = 1041-8385
-    >
-
-    param[journal_dir] = qui_parle
-
-    au < ready ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
-
-  }
-
-  {
-    title <
-      name = Studies in American Indian Literatures ;
-      issn = 0730-3238 ;
-      eissn = 1548-9590 ;
-      issnl = 0730-3238
-    >
-
-    param[journal_dir] = studies_in_american_indian_literatures
-
-    au < ready ; Studies in American Indian Literatures Volume 16 ; 16 >
-    au < ready ; Studies in American Indian Literatures Volume 17 ; 17 >
-    au < ready ; Studies in American Indian Literatures Volume 18 ; 18 >
-    au < ready ; Studies in American Indian Literatures Volume 19 ; 19 >
-    au < ready ; Studies in American Indian Literatures Volume 20 ; 20 >
-    au < ready ; Studies in American Indian Literatures Volume 21 ; 21 >
-
-  }
-
-  {
-    title <
-      name = Studies in American Naturalism ;
-      issn = 1944-6519 ;
-      eissn = 1931-2555 ;
-      issnl = 1931-2555
-    >
-
-    param[journal_dir] = studies_in_american_naturalism
-
-    au < ready ; Studies in American Naturalism Volume 4 ; 4 >
-
-  }
-
-  {
+  
     title <
       name = The American Indian Quarterly ;
       issn = 0095-182X ;
@@ -306,41 +34,296 @@
   }
 
   {
+  
     title <
-      name = Women and Music: A Journal of Gender and Culture ;
-      issn = 1553-0612 ;
-      eissn = 1090-7505 ;
-      issnl = 1090-7505
+      name = An Sionnach: A Journal of Literature, Culture, and the Arts ;
+      issn = 1554-8953 ;
+      eissn = 1944-6535 ;
+      issnl = 1554-8953
     >
 
-    param[journal_dir] = women_and_music
+    param[journal_dir] = an_sionnach
 
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
-    au < ready ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
+    au < released ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
 
   }
 
   {
+  
     title <
-      name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
-      issn = 1058-7446 ;
-      eissn = 1940-512X ;
-      issnl = 1058-7446
+      name = Anthropological Linguistics ;
+      issn = 1944-6527 ;
+      eissn = 0003-5483 ;
+      issnl = 0003-5483
     >
 
-    param[journal_dir] = women_in_german_yearbook
+    param[journal_dir] = anthropological_linguistics
 
-    au < ready ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
-    au < ready ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
-    au < ready ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
+    au < released ; Anthropological Linguistics Volume 51 ; 51 >
 
   }
 
   {
+  
+    title <
+      name = Collaborative Anthropologies ;
+      issn = 2152-4009 ;
+      eissn = 1943-2550 ;
+      issnl = 1943-2550
+    >
+
+    param[journal_dir] = collaborative_anthropologies
+
+    au < released ; Collaborative Anthropologies Volume 1 ; 1 >
+    au < released ; Collaborative Anthropologies Volume 2 ; 2 >
+
+  }
+
+  {
+  
+    title <
+      name = French Forum ;
+      issn = 0098-9355 ;
+      eissn = 1534-1836 ;
+      issnl = 0098-9355
+    >
+
+    param[journal_dir] = french_forum
+
+    au < released ; French Forum Volume 26 ; 26 >
+    au < released ; French Forum Volume 27 ; 27 >
+    au < released ; French Forum Volume 28 ; 28 >
+    au < released ; French Forum Volume 29 ; 29 >
+    au < released ; French Forum Volume 30 ; 30 >
+    au < released ; French Forum Volume 31 ; 31 >
+    au < released ; French Forum Volume 32 ; 32 >
+    au < released ; French Forum Volume 33 ; 33 >
+    au < released ; French Forum Volume 34 ; 34 >
+
+  }
+
+  {
+  
+    title <
+      name = Frontiers: A Journal of Women Studies ;
+      issn = 0160-9009 ;
+      eissn = 1536-0334 ;
+      issnl = 0160-9009
+    >
+
+    param[journal_dir] = frontiers
+
+    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
+
+  }
+
+  {
+  
+    title <
+      name = Histories of Anthropology Annual ;
+      issn = 1940-5138 ;
+      eissn = 1557-637X ;
+      issnl = 1557-637X
+    >
+
+    param[journal_dir] = histories_of_anthropology_annual
+
+    au < released ; Histories of Anthropology Annual Volume 1 ; 1 >
+    au < released ; Histories of Anthropology Annual Volume 2 ; 2 >
+    au < released ; Histories of Anthropology Annual Volume 3 ; 3 >
+    au < released ; Histories of Anthropology Annual Volume 4 ; 4 >
+    au < released ; Histories of Anthropology Annual Volume 5 ; 5 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Sports Media ;
+      issn = 1558-4313 ;
+      eissn = 1940-5073 ;
+      issnl = 1558-4313
+    >
+
+    param[journal_dir] = journal_of_sports_media
+
+    au < released ; Journal of Sports Media Volume 1 ; 1 >
+    au < released ; Journal of Sports Media Volume 2 ; 2 >
+    au < released ; Journal of Sports Media Volume 3 ; 3 >
+    au < released ; Journal of Sports Media Volume 4 ; 4 >
+    au < released ; Journal of Sports Media Volume 5 ; 5 >
+
+  }
+
+  {
+  
+    title <
+      name = Legacy: A Journal of American Women Writers ;
+      issn = 1534-0643 ;
+      eissn = 0748-4321 ;
+      issnl = 0748-4321
+    >
+
+    param[journal_dir] = legacy
+
+    au < released ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
+    au < released ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
+
+  }
+
+  {
+  
+    title <
+      name = Native South ;
+      issn = 2152-4025 ;
+      eissn = 1943-2569 ;
+      issnl = 1943-2569
+    >
+
+    param[journal_dir] = native_south
+
+    au < released ; Native South Volume 1 ; 1 >
+    au < released ; Native South Volume 2 ; 2 >
+
+  }
+
+  {
+  
+    title <
+      name = NINE: A Journal of Baseball History and Culture ;
+      issn = 1188-9330 ;
+      eissn = 1534-1844 ;
+      issnl = 1188-9330
+    >
+
+    param[journal_dir] = nine
+
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
+    au < released ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
+      name = Nineteenth-Century French Studies ;
+      issn = 0146-7891 ;
+      eissn = 1536-0172 ;
+      issnl = 0146-7891
+    >
+
+    param[journal_dir] = nineteenth_century_french_studies
+
+    au < ready ; Nineteenth-Century French Studies Volume 29 ; 29 >
+    au < notReady ; Nineteenth-Century French Studies Volume 30 ; 30 >
+    au < ready ; Nineteenth-Century French Studies Volume 31 ; 31 >
+    au < ready ; Nineteenth-Century French Studies Volume 32 ; 32 >
+    au < ready ; Nineteenth-Century French Studies Volume 33 ; 33 >
+    au < ready ; Nineteenth-Century French Studies Volume 34 ; 34 >
+    au < ready ; Nineteenth-Century French Studies Volume 35 ; 35 >
+    au < ready ; Nineteenth-Century French Studies Volume 36 ; 36 >
+    au < ready ; Nineteenth-Century French Studies Volume 37 ; 37 >
+    au < ready ; Nineteenth-Century French Studies Volume 38 ; 38 >
+
+  }
+
+  {
+  
+    title <
+      name = Prairie Schooner ;
+      issn = 0032-6682 ;
+      eissn = 1542-426X ;
+      issnl = 0032-6682
+    >
+
+    param[journal_dir] = prairie_schooner
+
+    au < released ; Prairie Schooner Volume 77 ; 77 >
+    au < released ; Prairie Schooner Volume 78 ; 78 >
+    au < released ; Prairie Schooner Volume 79 ; 79 >
+    au < released ; Prairie Schooner Volume 80 ; 80 >
+    au < released ; Prairie Schooner Volume 81 ; 81 >
+    au < released ; Prairie Schooner Volume 82 ; 82 >
+    au < released ; Prairie Schooner Volume 83 ; 83 >
+
+  }
+
+  {
+  
+    title <
+      name = Qui Parle: Critical Humanities and Social Sciences ;
+      issn = 1938-8020 ;
+      eissn = 1041-8385 ;
+      issnl = 1041-8385
+    >
+
+    param[journal_dir] = qui_parle
+
+    au < released ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
+      name = Studies in American Indian Literatures ;
+      issn = 0730-3238 ;
+      eissn = 1548-9590 ;
+      issnl = 0730-3238
+    >
+
+    param[journal_dir] = studies_in_american_indian_literatures
+
+    au < released ; Studies in American Indian Literatures Volume 16 ; 16 >
+    au < released ; Studies in American Indian Literatures Volume 17 ; 17 >
+    au < released ; Studies in American Indian Literatures Volume 18 ; 18 >
+    au < released ; Studies in American Indian Literatures Volume 19 ; 19 >
+    au < released ; Studies in American Indian Literatures Volume 20 ; 20 >
+    au < released ; Studies in American Indian Literatures Volume 21 ; 21 >
+
+  }
+
+  {
+  
+    title <
+      name = Studies in American Naturalism ;
+      issn = 1944-6519 ;
+      eissn = 1931-2555 ;
+      issnl = 1931-2555
+    >
+
+    param[journal_dir] = studies_in_american_naturalism
+
+    au < released ; Studies in American Naturalism Volume 4 ; 4 >
+
+  }
+
+  {
+  
     title <
       name = symploke ;
       issn = 1069-0697 ;
@@ -362,6 +345,43 @@
     au < manifest ; symploke Volume 14 ; 14 >
     au < manifest ; symploke Volume 15 ; 15 >
     au < manifest ; symploke Volume 16 ; 16 >
+
+  }
+
+  {
+  
+    title <
+      name = Women and Music: A Journal of Gender and Culture ;
+      issn = 1553-0612 ;
+      eissn = 1090-7505 ;
+      issnl = 1090-7505
+    >
+
+    param[journal_dir] = women_and_music
+
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
+    au < released ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
+
+  }
+
+  {
+  
+    title <
+      name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
+      issn = 1058-7446 ;
+      eissn = 1940-512X ;
+      issnl = 1058-7446
+    >
+
+    param[journal_dir] = women_in_german_yearbook
+
+    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
+    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
+    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
 
   }
 

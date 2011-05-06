@@ -18,8 +18,8 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = archives_of_asian_art
 
-      au < ready ; Archives of Asian Art Volume 58 ; 58 >
-      au < ready ; Archives of Asian Art Volume 59 ; 59 >
+      au < released ; Archives of Asian Art Volume 58 ; 58 >
+      au < released ; Archives of Asian Art Volume 59 ; 59 >
 
     }
 
@@ -47,8 +47,8 @@
       au < released ; Asian Perspectives Volume 44 ; 44 >
       au < released ; Asian Perspectives Volume 45 ; 45 >
       au < released ; Asian Perspectives Volume 46 ; 46 >
-      au < ready ; Asian Perspectives Volume 47 ; 47 >
-      au < ready ; Asian Perspectives Volume 48 ; 48 >
+      au < released ; Asian Perspectives Volume 47 ; 47 >
+      au < released ; Asian Perspectives Volume 48 ; 48 >
 
     }
 
@@ -77,8 +77,8 @@
       au < released ; Asian Theatre Journal Volume 22 ; 22 >
       au < released ; Asian Theatre Journal Volume 23 ; 23 >
       au < released ; Asian Theatre Journal Volume 24 ; 24 >
-      au < ready ; Asian Theatre Journal Volume 25 ; 25 >
-      au < ready ; Asian Theatre Journal Volume 26 ; 26 >
+      au < released ; Asian Theatre Journal Volume 25 ; 25 >
+      au < released ; Asian Theatre Journal Volume 26 ; 26 >
 
     }
 
@@ -98,8 +98,8 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = azalea
 
-      au < ready ; Azalea: Journal of Korean Literature & Culture Volume 1 ; 1 >
-      au < ready ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
+      au < released ; Azalea: Journal of Korean Literature & Culture Volume 1 ; 1 >
+      au < released ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
 
     }
 
@@ -127,8 +127,8 @@
       au < released ; Biography Volume 28 ; 28 >
       au < released ; Biography Volume 29 ; 29 >
       au < released ; Biography Volume 30 ; 30 >
-      au < ready ; Biography Volume 31 ; 31 >
-      au < ready ; Biography Volume 32 ; 32 >
+      au < released ; Biography Volume 31 ; 31 >
+      au < released ; Biography Volume 32 ; 32 >
 
     }
   }
@@ -155,9 +155,9 @@
       au < released ; Buddhist-Christian Studies Volume 24 ; 24 >
       au < released ; Buddhist-Christian Studies Volume 25 ; 25 >
       au < released ; Buddhist-Christian Studies Volume 26 ; 26 >
-      au < ready ; Buddhist-Christian Studies Volume 27 ; 27 >
-      au < ready ; Buddhist-Christian Studies Volume 28 ; 28 >
-      au < ready ; Buddhist-Christian Studies Volume 29 ; 29 >
+      au < released ; Buddhist-Christian Studies Volume 27 ; 27 >
+      au < released ; Buddhist-Christian Studies Volume 28 ; 28 >
+      au < released ; Buddhist-Christian Studies Volume 29 ; 29 >
 
     }      
   }
@@ -184,9 +184,38 @@
       au < released ; China Review International Volume 11 ; 11 >
       au < released ; China Review International Volume 12 ; 12 >
       au < released ; China Review International Volume 13 ; 13 >
-      au < ready ; China Review International Volume 14 ; 14 >
-      au < ready ; China Review International Volume 15 ; 15 >
+      au < released ; China Review International Volume 14 ; 14 >
+      au < released ; China Review International Volume 15 ; 15 >
       
+    }
+  }
+  
+  {
+    title <
+      name = The Contemporary Pacific ;
+      issn = 1043-898X ;
+      eissn = 1527-9464 ;
+      issnl = 1043-898X
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = contemporary_pacific
+
+      au < released ; The Contemporary Pacific Volume 12 ; 12 >
+      au < released ; The Contemporary Pacific Volume 13 ; 13 >
+      au < released ; The Contemporary Pacific Volume 14 ; 14 >
+      au < released ; The Contemporary Pacific Volume 15 ; 15 >
+      au < released ; The Contemporary Pacific Volume 16 ; 16 >
+      au < released ; The Contemporary Pacific Volume 17 ; 17 >
+      au < released ; The Contemporary Pacific Volume 18 ; 18 >
+      au < released ; The Contemporary Pacific Volume 19 ; 19 >
+      au < released ; The Contemporary Pacific Volume 20 ; 20 >
+      au < released ; The Contemporary Pacific Volume 21 ; 21 >
+      au < released ; The Contemporary Pacific Volume 22 ; 22 >
+    
     }
   }
   
@@ -216,8 +245,8 @@
       au < released ; Journal of World History Volume 16 ; 16 >
       au < released ; Journal of World History Volume 17 ; 17 >
       au < released ; Journal of World History Volume 18 ; 18 >
-      au < ready ; Journal of World History Volume 19 ; 19 >
-      au < ready ; Journal of World History Volume 20 ; 20 >
+      au < released ; Journal of World History Volume 19 ; 19 >
+      au < released ; Journal of World History Volume 20 ; 20 >
     
     }
   }
@@ -266,9 +295,9 @@
       au < released ; Korean Studies Volume 28 ; 28 >
       au < released ; Korean Studies Volume 29 ; 29 >
       au < released ; Korean Studies Volume 30 ; 30 >
-      au < ready ; Korean Studies Volume 31 ; 31 >
-      au < ready ; Korean Studies Volume 32 ; 32 >
-      au < ready ; Korean Studies Volume 33 ; 33 >
+      au < released ; Korean Studies Volume 31 ; 31 >
+      au < released ; Korean Studies Volume 32 ; 32 >
+      au < released ; Korean Studies Volume 33 ; 33 >
     
     }
   }
@@ -326,9 +355,9 @@ comment[mn20] = URL with 403 Forbidden error
       au < released ; Oceanic Linguistics Volume 43 ; 43 >
       au < released ; Oceanic Linguistics Volume 44 ; 44 >
       au < released ; Oceanic Linguistics Volume 45 ; 45 >
-      au < ready ; Oceanic Linguistics Volume 46 ; 46 >
-      au < ready ; Oceanic Linguistics Volume 47 ; 47 >
-      au < ready ; Oceanic Linguistics Volume 48 ; 48 >
+      au < released ; Oceanic Linguistics Volume 46 ; 46 >
+      au < released ; Oceanic Linguistics Volume 47 ; 47 >
+      au < released ; Oceanic Linguistics Volume 48 ; 48 >
     
     }
   }
@@ -399,38 +428,9 @@ comment[0] = Atypon AUs
       au < released ; Philosophy East and West Volume 55 ; 55 >
       au < released ; Philosophy East and West Volume 56 ; 56 >
       au < released ; Philosophy East and West Volume 57 ; 57 >
-      au < ready ; Philosophy East and West Volume 58 ; 58 >
-      au < ready ; Philosophy East and West Volume 59 ; 59 >
-      au < ready ; Philosophy East and West Volume 60 ; 60 >
-    
-    }
-  }
-  
-  {
-    title <
-      name = The Contemporary Pacific ;
-      issn = 1043-898X ;
-      eissn = 1527-9464 ;
-      issnl = 1043-898X
-    >
-
-    {
-      implicit < status ; name ; param[volume] >
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = contemporary_pacific
-
-      au < released ; The Contemporary Pacific Volume 12 ; 12 >
-      au < released ; The Contemporary Pacific Volume 13 ; 13 >
-      au < released ; The Contemporary Pacific Volume 14 ; 14 >
-      au < released ; The Contemporary Pacific Volume 15 ; 15 >
-      au < released ; The Contemporary Pacific Volume 16 ; 16 >
-      au < released ; The Contemporary Pacific Volume 17 ; 17 >
-      au < released ; The Contemporary Pacific Volume 18 ; 18 >
-      au < released ; The Contemporary Pacific Volume 19 ; 19 >
-      au < ready ; The Contemporary Pacific Volume 20 ; 20 >
-      au < ready ; The Contemporary Pacific Volume 21 ; 21 >
-      au < ready ; The Contemporary Pacific Volume 22 ; 22 >
+      au < released ; Philosophy East and West Volume 58 ; 58 >
+      au < released ; Philosophy East and West Volume 59 ; 59 >
+      au < released ; Philosophy East and West Volume 60 ; 60 >
     
     }
   }
@@ -452,9 +452,9 @@ comment[0] = Atypon AUs
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 66 ; 66 >
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 67 ; 67 >
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 68 ; 68 >
-      au < ready ; Yearbook of the Association of Pacific Coast Geographers Volume 69 ; 69 >
-      au < ready ; Yearbook of the Association of Pacific Coast Geographers Volume 70 ; 70 >
-      au < ready ; Yearbook of the Association of Pacific Coast Geographers Volume 71 ; 71 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 69 ; 69 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 70 ; 70 >
+      au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 71 ; 71 >
     
     }
 
