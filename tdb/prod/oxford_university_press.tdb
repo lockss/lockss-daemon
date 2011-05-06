@@ -57,8 +57,8 @@
         au < HighWireStrVolPlugin ; down ; African Affairs Volume 106 ; 106 >
         au < HighWirePressH20Plugin ; ready ; African Affairs Volume 107 ; 107 >
         au < HighWirePressH20Plugin ; ready ; African Affairs Volume 108 ; 108 >
-        au < HighWirePressH20Plugin ; testing ; African Affairs Volume 109 ; 109 >
-        au < HighWirePressH20Plugin ; testing ; African Affairs Volume 110 ; 110 >
+        au < HighWirePressH20Plugin ; ready ; African Affairs Volume 109 ; 109 >
+        au < HighWirePressH20Plugin ; ready ; African Affairs Volume 110 ; 110 >
 
      }
 
@@ -93,8 +93,8 @@
         au < HighWireStrVolPlugin ; down ; Age and Ageing Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Age and Ageing Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; ready ; Age and Ageing Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; testing ; Age and Ageing Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; testing ; Age and Ageing Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; ready ; Age and Ageing Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; ready ; Age and Ageing Volume 40 ; 40 >
 
      }
 
@@ -119,8 +119,8 @@
         au < HighWireStrVolPlugin ; down ; Alcohol and Alcoholism Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; Alcohol and Alcoholism Volume 43 ; 43 >
         au < HighWirePressH20Plugin ; ready ; Alcohol and Alcoholism Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; testing ; Alcohol and Alcoholism Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; testing ; Alcohol and Alcoholism Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; ready ; Alcohol and Alcoholism Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; ready ; Alcohol and Alcoholism Volume 46 ; 46 >
 
      }
 
@@ -160,8 +160,8 @@
         au < HighWirePressPlugin ; down ; American Journal of Epidemiology Volume 168 ; 168 >
         au < HighWirePressH20Plugin ; testing ; American Journal of Epidemiology Volume 169 ; 169 >
         au < HighWirePressH20Plugin ; testing ; American Journal of Epidemiology Volume 170 ; 170 >
-        au < HighWirePressH20Plugin ; testing ; American Journal of Epidemiology Volume 171 ; 171 >
-        au < HighWirePressH20Plugin ; testing ; American Journal of Epidemiology Volume 172 ; 172 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Epidemiology Volume 171 ; 171 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Epidemiology Volume 172 ; 172 >
 
      }
 
@@ -195,7 +195,7 @@
         au < HighWirePressPlugin ; doNotProcess ; American Law and Economics Review Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; ready ; American Law and Economics Review Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; American Law and Economics Review Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; testing ; American Law and Economics Review Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; American Law and Economics Review Volume 11 ; 11 >
 
       }
 
@@ -230,8 +230,8 @@
         au < HighWireStrVolPlugin ; down ; American Literary History Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; ready ; American Literary History Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; ready ; American Literary History Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; testing ; American Literary History Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; testing ; American Literary History Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; ready ; American Literary History Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; ready ; American Literary History Volume 23 ; 23 >
 
      }
 
@@ -271,8 +271,8 @@
         au < HighWirePressH20Plugin ; ready ; Annals of Botany Volume 102 ; 102 >
         au < HighWirePressH20Plugin ; ready ; Annals of Botany Volume 103 ; 103 >
         au < HighWirePressH20Plugin ; ready ; Annals of Botany Volume 104 ; 104 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Botany Volume 105 ; 105 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Botany Volume 106 ; 106 >
+        au < HighWirePressH20Plugin ; ready ; Annals of Botany Volume 105 ; 105 >
+        au < HighWirePressH20Plugin ; ready ; Annals of Botany Volume 106 ; 106 >
 
      }
 
@@ -307,8 +307,8 @@
         au < HighWireStrVolPlugin ; down ; Annals of Occupational Hygiene Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; Annals of Occupational Hygiene Volume 52 ; 52 >
         au < HighWirePressH20Plugin ; testing ; Annals of Occupational Hygiene Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Occupational Hygiene Volume 54 ; 54 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Occupational Hygiene Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; ready ; Annals of Occupational Hygiene Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; ready ; Annals of Occupational Hygiene Volume 55 ; 55 >
 
      }
 
@@ -332,8 +332,7 @@
         au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Annals of Oncology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; testing; Annals of Oncology Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Oncology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; ready ; Annals of Oncology Volume 20 ; 20 >
 
       }
 
@@ -368,8 +367,8 @@
         au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Applied Linguistics Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; ready ; Applied Linguistics Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; ready ; Applied Linguistics Volume 32 ; 32 >
 
      }
 
@@ -405,7 +404,7 @@
         au < HighWirePressPlugin ; down ; Behavioral Ecology Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; ready ; Behavioral Ecology Volume 22 ; 22 >
 
      }
 
@@ -439,8 +438,8 @@
         au < HighWireStrVolPlugin ; down ; Bioinformatics Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Bioinformatics Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; testing ; Bioinformatics Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; testing ; Bioinformatics Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; testing ; Bioinformatics Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; ready ; Bioinformatics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; ready ; Bioinformatics Volume 27 ; 27 >
 
      }
 
@@ -475,8 +474,8 @@
         au < HighWirePressH20Plugin ; testing ; Biometrika Volume 94 ; 94 >
         au < HighWirePressPlugin ; down ; Biometrika Volume 95 ; 95 >
         au < HighWirePressH20Plugin ; testing ; Biometrika Volume 96 ; 96 >
-        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 97 ; 97 >
-        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; ready ; Biometrika Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; ready ; Biometrika Volume 98 ; 98 >
 
      }
 
@@ -511,7 +510,7 @@
         au < HighWireStrVolPlugin ; down ; Biostatistics Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Biostatistics Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; testing ; Biostatistics Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; testing ; Biostatistics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; Biostatistics Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; ready ; Biostatistics Volume 12 ; 12 >
 
      }
