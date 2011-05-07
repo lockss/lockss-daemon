@@ -39,7 +39,7 @@
         au < HighWireStrVolPlugin ; down ; Accounting History Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Accounting History Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Accounting History Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Accounting History Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; ready ; Accounting History Volume 15 ; 15 >
 
       }
 
@@ -74,7 +74,7 @@
         au < HighWireStrVolPlugin ; down ; Acta Sociologica Volume 50 ; 50 >
         au < HighWirePressPlugin ; down ; Acta Sociologica Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; Acta Sociologica Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; manifest ; Acta Sociologica Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; ready ; Acta Sociologica Volume 53 ; 53 >
 
       }
 
@@ -109,7 +109,7 @@
         au < HighWireStrVolPlugin ; down ; Action Research Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; Action Research Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Action Research Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; manifest ; Action Research Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; ready ; Action Research Volume 8 ; 8 >
 
       }
 
@@ -144,7 +144,7 @@
         au < HighWireStrVolPlugin ; down ; Active Learning in Higher Education Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; Active Learning in Higher Education Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; Active Learning in Higher Education Volume 11 ; 11 >
 
       }
 
@@ -179,7 +179,7 @@
         au < HighWireStrVolPlugin ; down ; Adaptive Behavior Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Adaptive Behavior Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Adaptive Behavior Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; Adaptive Behavior Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; ready ; Adaptive Behavior Volume 18 ; 18 >
 
       }
 
@@ -214,7 +214,7 @@
         au < HighWireStrVolPlugin ; down ; Administration & Society Volume 39 ; 39 >
         au < HighWirePressPlugin ; down ; Administration & Society Volume 40 ; 40 >
         au < HighWirePressPlugin ; down ; Administration & Society Volume 41 ; 41 >
-        au < HighWirePressH20Plugin ; manifest ; Administration & Society Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; ready ; Administration & Society Volume 42 ; 42 >
 
       }
 
@@ -234,9 +234,9 @@
         param[base_url] = http://adr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; Advances in Dental Research Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; ready ; Advances in Dental Research Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Advances in Dental Research Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Advances in Dental Research Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; ready ; Advances in Dental Research Volume 22 ; 22 >
 
       }
 
@@ -271,7 +271,7 @@
         au < HighWireStrVolPlugin ; down ; Adult Education Quarterly Volume 57 ; 57 >
         au < HighWireStrVolPlugin ; down ; Adult Education Quarterly Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; Adult Education Quarterly Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; manifest ; Adult Education Quarterly Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; ready ; Adult Education Quarterly Volume 60 ; 60 >
 
       }
 
@@ -306,7 +306,7 @@
         au < HighWireStrVolPlugin ; down ; Advances in Developing Human Resources Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Advances in Developing Human Resources Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Advances in Developing Human Resources Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; manifest ; Advances in Developing Human Resources Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; ready ; Advances in Developing Human Resources Volume 12 ; 12 >
 
       }
 
@@ -341,7 +341,7 @@
         au < HighWireStrVolPlugin ; down ; Affilia Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Affilia Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Affilia Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Affilia Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; ready ; Affilia Volume 25 ; 25 >
 
       }
 
@@ -390,7 +390,7 @@
         au < HighWireStrVolPlugin ; down ; American Behavioral Scientist Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; American Behavioral Scientist Volume 52 ; 52 >
         au < HighWirePressPlugin ; down ; American Behavioral Scientist Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; manifest ; American Behavioral Scientist Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; ready ; American Behavioral Scientist Volume 54 ; 54 >
 
       }
 
@@ -413,7 +413,7 @@
         au < HighWireStrVolPlugin ; down ; American Educational Research Journal Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; American Educational Research Journal Volume 45 ; 45 >
         au < HighWirePressPlugin ; down ; American Educational Research Journal Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; manifest ; American Educational Research Journal Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; ready ; American Educational Research Journal Volume 47 ; 47 >
 
       }
 
@@ -438,7 +438,7 @@
         au < HighWireStrVolPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 >
 
       }
 
@@ -473,7 +473,7 @@
         au < HighWireStrVolPlugin ; down ; American Journal of Evaluation Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Evaluation Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; testing ; American Journal of Evaluation Volume 31 ; 31 >
 
       }
 
@@ -498,7 +498,7 @@
         au < HighWireStrVolPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 >
 
       }
 
@@ -521,7 +521,7 @@
         au < HighWireStrVolPlugin ; down ; American Journal of Lifestyle Medicine Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; American Journal of Lifestyle Medicine Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Lifestyle Medicine Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Lifestyle Medicine Volume 4 ; 4 >
 
       }
 
@@ -552,11 +552,11 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; testing ; American Journal of Medical Quality Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; American Journal of Medical Quality Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 25 ; 25 >
 
       }
 
