@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDsysHtmlFilterFactory.java,v 1.1 2011-04-01 23:33:24 thib_gc Exp $
+ * $Id: GPOFDsysHtmlFilterFactory.java,v 1.2 2011-05-08 06:37:49 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
-import java.io.InputStream;
+import java.io.*;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class GPOFDsysHtmlFilterFactory implements FilterFactory {
 
@@ -51,9 +54,20 @@ public class GPOFDsysHtmlFilterFactory implements FilterFactory {
         // May contain a session token
         HtmlNodeFilters.tagWithAttribute("input", "name", "struts.token"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream parsed =  new HtmlFilterInputStream(in,
+                                                    encoding,
+                                                    HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    try {
+      return new ReaderInputStream(new HtmlTagFilter(new InputStreamReader(parsed,
+                                                                           encoding),
+                                                     // May contain a session token in a comment
+                                                     new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\"",
+                                                                 "-->")));
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new PluginException(uee);
+    }
   }
-
-}
+  
+}    
+   
