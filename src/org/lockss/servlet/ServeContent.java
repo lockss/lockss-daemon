@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.28 2011-03-06 00:11:54 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.29 2011-05-09 00:40:57 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,10 @@ package org.lockss.servlet;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.util.List;
+import java.util.regex.*;
 
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.collections.*;
@@ -340,12 +342,17 @@ public class ServeContent extends LockssServlet {
    */
   private LockssUrlConnectionPool normConnPool = null;
 
+  // Patterm to extract url query arg from Referer string
+  String URL_ARG_REGEXP = "url=([^&]*)";
+  Pattern URL_ARG_PAT = Pattern.compile(URL_ARG_REGEXP);
+
 
   protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool pool)
     throws IOException {
 
     boolean isInCache = isInCache();
     String ifModified = null;
+    String referer = null;
     
     LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
 
@@ -368,6 +375,11 @@ public class ServeContent extends LockssServlet {
           ifModified = req.getHeader(hdr);
           continue;
         }
+      }
+
+      if (HttpFields.__Referer.equalsIgnoreCase(hdr)) {
+	referer = req.getHeader(hdr);
+	continue;
       }
 
       // XXX Conceivably should suppress Accept-Encoding: header if it
@@ -404,6 +416,26 @@ public class ServeContent extends LockssServlet {
       conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
     }
 
+    // If the Referer: is a ServeContent URL then the real referring page
+    // is in the url query arg.
+    if (referer != null) {
+      try {
+	URI refUri = new URI(referer);
+	if (refUri.getPath().endsWith(myServletDescr().getPath())) {
+	  String rawquery = refUri.getRawQuery();
+	  if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
+	  Matcher m1 = URL_ARG_PAT.matcher(rawquery);
+	  if (m1.find()) {
+	    referer = UrlUtil.decodeUrl(m1.group(1));
+	  }
+	}
+      } catch (URISyntaxException e) {
+	log.siteWarning("Can't perse Referer:, ignoring: " + referer);
+      }
+
+      log.debug2("Sending referer: " + referer);
+      conn.setRequestProperty(HttpFields.__Referer, referer);
+    }
     // send address of original requester
     conn.addRequestProperty(HttpFields.__XForwardedFor,
                             req.getRemoteAddr());
