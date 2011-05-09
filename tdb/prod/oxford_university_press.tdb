@@ -127,6 +127,23 @@
     }
 
     {
+      title <
+        name = American Journal of Agricultural Economics ;
+        issn = 0002-9092 ;
+        eissn = 1467-8276
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ajae.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = American Journal of Epidemiology ;
@@ -339,6 +356,23 @@
     }
 
     {
+      title <
+        name = Applied Economic Perspectives and Policy ;
+        issn = 2040-5790 ;
+        eissn = 2040-5804
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://aepp.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Applied Linguistics ;
@@ -371,6 +405,23 @@
         au < HighWirePressH20Plugin ; ready ; Applied Linguistics Volume 32 ; 32 >
 
      }
+
+    }
+
+    {
+      title <
+        name = Arbitration Law Reports and Review ;
+        issn = 2044-8651 ;
+        eissn = 2044-9887
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://alrr.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
 
     }
 
@@ -1228,6 +1279,23 @@
         au < HighWireStrVolPlugin ; down ; Chinese Journal of International Politics Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; testing ; Chinese Journal of International Politics Volume 2 ; 2 >
         au < HighWirePressH30Plugin ; testing ; Chinese Journal of International Politics Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Clinical Infectious Diseases ;
+        issn = 1058-4838 ;
+        eissn = 1537-6591
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cid.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -3824,6 +3892,23 @@
     }
 
     {
+      title <
+        name = Journal of Infectious Diseases ;
+        issn = 1537-6613 ;
+        eissn = 0022-1899
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jid.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Journal of Intellectual Property Law & Practice ;
@@ -4334,6 +4419,21 @@
         au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 53 ; 53 >
         au < HighWirePressPlugin ; down ; Journal of Semitic Studies Volume 54 ; 54 >
         au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 55 ; 55 >
+
+      }
+
+    }
+
+    {
+      title <
+        name = Journal of Social History: Societies & Cultures ;
+        issn = 0022-4529
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
