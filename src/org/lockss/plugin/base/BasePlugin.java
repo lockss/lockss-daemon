@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.74 2011-02-23 08:42:12 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.75 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,10 @@ public abstract class BasePlugin
    */
   public String getRequiredDaemonVersion() {
     return "0.0.0";
+  }
+
+  public String getFeatureVersion(Plugin.Feature feat) {
+    return null;
   }
 
   /** Subclasses should override this if they want to supply a publishing

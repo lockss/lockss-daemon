@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.30 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.31 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private int stopCtr = 0;
   private Configuration auConfig;
   private String pluginVer = "MockVersion";
+  private Map<Plugin.Feature,String> featureVersion;
   private String pubPlatform = null;
   private String requiredDaemonVersion = "0.0.0";
   private List auConfigDescrs = ListUtil.list(ConfigParamDescr.BASE_URL,
@@ -109,12 +110,23 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return requiredDaemonVersion;
   }
 
+  public String getFeatureVersion(Plugin.Feature feat) {
+    if (featureVersion == null) {
+      return null;
+    }
+    return featureVersion.get(feat);
+  }
+
   public void setVersion(String ver) {
     pluginVer = ver;
   }
 
   public void setRequiredDaemonVersion(String ver) {
     requiredDaemonVersion = ver;
+  }
+
+  public void setFeatureVersionMap(Map<Plugin.Feature,String> featureVersion) {
+    this.featureVersion = featureVersion;
   }
 
   public String getPluginName() {

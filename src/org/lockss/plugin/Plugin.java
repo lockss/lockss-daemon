@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.33 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: Plugin.java,v 1.34 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,16 @@ public interface Plugin {
    * @return a String representing the current version
    */
   public String getVersion();
+
+  /**
+   * Return a string that represents the current version of this plugin's
+   * implementation of the designated feature.  Determines polling
+   * compatibility between plugins, when metadata must be recalculated,
+   * etc.
+   * @return a String representing the feature version, or null if the
+   * plugin doesn't implement the feature or doesn't declare a version.
+   */
+  public String getFeatureVersion(Feature feat);
 
   /**
    * Return the minimum daemon version required by this plugin
@@ -200,4 +210,28 @@ public interface Plugin {
    * @return the default MimeType
    */
   public String getDefaultArticleMimeType();
+
+
+  /**
+   * Names of daemon features whose operation is influenced by plugins.
+   * Used by plugins to associate version strings with their
+   * implementation/support for that feature.  (Could be used for other
+   * things.)
+   */
+  public enum Feature {
+    /**
+     * Plugin data that affects polling, such as hash filters, crawl rules
+     * (usually), etc.  Version should be changed whenver the plugin's
+     * polling behavior changes in a way that makes it unable to correctly
+     * participate in a poll with a peer running a different version.
+     */
+    Poll,
+      /**
+       * Article iterators, metadata extractors and factories, etc.
+       * Version should be changed whenever this code changes in a way that
+       * requires re-extraction of metadata.
+       */
+      Metadata,
+      };
+
 }

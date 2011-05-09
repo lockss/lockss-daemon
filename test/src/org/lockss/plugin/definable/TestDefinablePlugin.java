@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.38 2011-02-14 00:07:54 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.39 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -233,6 +233,18 @@ public class TestDefinablePlugin extends LockssTestCase {
     actualReturn = definablePlugin.getVersion();
     assertEquals("return value", expectedReturn, actualReturn);
 
+  }
+
+  public void testGetFeatureVersion() throws Exception {
+    // no versions set
+    assertEquals(null, definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
+
+    String extMapName = "org.lockss.plugin.definable.GoodPlugin";
+    LockssDaemon daemon = getMockLockssDaemon();
+    definablePlugin.initPlugin(daemon, extMapName);
+
+    assertEquals("2", definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
+    assertEquals("7", definablePlugin.getFeatureVersion(Plugin.Feature.Metadata));
   }
 
   public void testGetPluginId() throws Exception {
@@ -568,6 +580,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     "BadPluginIllArg4",
     "BadPluginIllArg5",
     "BadPluginIllArg6",
+    "BadPluginIllArg7",
   };
 
   public void testLoadBadPlugin() throws Exception {

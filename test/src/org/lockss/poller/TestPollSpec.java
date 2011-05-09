@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.21 2008-06-03 22:30:17 tlipkis Exp $
+ * $Id: TestPollSpec.java,v 1.22 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class TestPollSpec extends LockssTestCase {
     String lower = "abc";
     String upper = "xyz";
     String plugVer = "ver42";
+    String pollVer = "p24";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
     MockPlugin mp = new MockPlugin();
@@ -90,6 +91,15 @@ public class TestPollSpec extends LockssTestCase {
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
     assertEquals(plugVer, ps.getPluginVersion());
+
+    mp.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Poll, pollVer));
+
+    ps = new PollSpec(cus, Poll.V1_CONTENT_POLL);
+    assertEquals(auid, ps.getAuId());
+    assertEquals(url, ps.getUrl());
+    assertEquals(lower, ps.getLwrBound());
+    assertEquals(upper, ps.getUprBound());
+    assertEquals(pollVer, ps.getPluginVersion());
   }
 
   public void testFromV1LcapMessage() throws Exception {

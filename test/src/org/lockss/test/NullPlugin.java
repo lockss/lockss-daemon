@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.105 2011-03-18 09:56:05 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.106 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,10 @@ public class NullPlugin {
 
     public String getRequiredDaemonVersion() {
       return "0.0.0";
+    }
+
+    public String getFeatureVersion(Plugin.Feature feat) {
+      return null;
     }
 
     public String getPluginName() {

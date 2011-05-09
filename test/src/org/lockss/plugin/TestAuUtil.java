@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.13 2011-01-08 15:42:39 pgust Exp $
+ * $Id: TestAuUtil.java,v 1.14 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,15 @@ public class TestAuUtil extends LockssTestCase {
   public void testGetDaemon()  {
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
     assertSame(getMockLockssDaemon(), AuUtil.getDaemon(mau));
+  }
+
+  public void testGetPollVersion() throws IOException {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    assertEquals(null, AuUtil.getPollVersion(mau));
+    mbp.setVersion("12");
+    assertEquals("12", AuUtil.getPollVersion(mau));
+    mbp.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Poll, "3"));
+    assertEquals("3", AuUtil.getPollVersion(mau));
   }
 
   public void testGetAuState() throws IOException {
@@ -329,6 +338,7 @@ public class TestAuUtil extends LockssTestCase {
     String name;
     String version;
     List<ConfigParamDescr> configDescrs;
+    Map<Plugin.Feature,String> featureVersion;
 
     public LocalMockPlugin() {
       super();
@@ -340,6 +350,10 @@ public class TestAuUtil extends LockssTestCase {
 
     public void setVersion(String version) {
       this.version = version;
+    }
+
+    public void setFeatureVersionMap(Map<Plugin.Feature,String> featureVersion) {
+      this.featureVersion = featureVersion;
     }
 
     public void setConfigDescrs(List<ConfigParamDescr> configDescrs) {
@@ -355,6 +369,13 @@ public class TestAuUtil extends LockssTestCase {
 
     public String getVersion() {
       return version;
+    }
+
+    public String getFeatureVersion(Plugin.Feature feat) {
+      if (featureVersion == null) {
+	return null;
+      }
+      return featureVersion.get(feat);
     }
 
     public String getPluginName() {

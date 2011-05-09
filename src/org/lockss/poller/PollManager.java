@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.211 2010-10-02 22:26:32 tlipkis Exp $
+ * $Id: PollManager.java,v 1.212 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -828,11 +828,11 @@ public class PollManager
 	return null;
       }
       ArchivalUnit au = cus.getArchivalUnit();
-      if (!spec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+      if (!spec.getPluginVersion().equals(AuUtil.getPollVersion(au))) {
 	theLog.debug("Ignoring poll request for " + au.getName() +
 		     " from peer " + orig +
 		     ". plugin version mismatch; have: " +
-		     au.getPlugin().getVersion() +
+		     AuUtil.getPollVersion(au) +
 		     ", need: " + spec.getPluginVersion());
 	return null;
       }

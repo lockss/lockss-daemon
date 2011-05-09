@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.definable.GoodPlugin</string>
+    <string>org.lockss.plugin.definable.BadPluginIllArg1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Good Plugin</string>
+    <string>GoodPlugin</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -15,7 +15,6 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sissue-%s&quot;, base_url, num_issue_range</string>
     </list>
   </entry>
   <entry>
@@ -46,33 +45,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>num_issue_range</key>
-        <displayName>Numeric Issue Range</displayName>
-        <description>A Range of issues in the form: min-max</description>
-        <type>8</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>content-testing_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-	<long>3000</long>
-      </entry>
-      <entry>
-        <string>parent_only</string>
-	<string>pval</string>
-      </entry>
-    </map>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -81,7 +54,7 @@
         <string>Poll</string> <string>2</string>
       </entry>
       <entry>
-        <string>Metadata</string> <string>7</string>
+        <string>BogusFeature</string> <string>7</string>
       </entry>
     </map>
   </entry>

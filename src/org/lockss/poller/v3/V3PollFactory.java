@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.31 2011-01-10 09:14:15 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.32 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -178,14 +178,15 @@ public class V3PollFactory extends BasePollFactory {
 	return null;
       }
       ArchivalUnit au = cus.getArchivalUnit();
-      if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+      String auPollVer = AuUtil.getPollVersion(au);
+      if (!pollspec.getPluginVersion().equals(auPollVer)) {
 	log.debug("Ignoring poll request from " + orig + " for " + au.getName()
 		  + ", plugin version mismatch; have: " +
-		  au.getPlugin().getVersion() +
+		  auPollVer +
 		  ", need: " + pollspec.getPluginVersion());
 	sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
 		pollspec.getAuId(), (V3LcapMessage)msg,
-		au.getPlugin().getVersion());
+		auPollVer);
 	return null;
       }
       if (duration <= 0) {
@@ -309,11 +310,13 @@ public class V3PollFactory extends BasePollFactory {
     }
 
     // and that plugin version agrees
-    if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+    // XXX Checked in createPoll() so can't happen here?
+    String auPollVer = AuUtil.getPollVersion(au);
+    if (!pollspec.getPluginVersion().equals(auPollVer)) {
       log.debug("Ignoring poll request for " + au.getName() +
-                   ", plugin version mismatch; have: " +
-                   au.getPlugin().getVersion() +
-                   ", need: " + pollspec.getPluginVersion());
+		", plugin version mismatch; have: " +
+		auPollVer +
+		", need: " + pollspec.getPluginVersion());
       sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
 	      pollspec.getAuId(), m);
       return null;

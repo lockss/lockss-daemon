@@ -182,6 +182,16 @@ public class TestV3PollFactory extends LockssTestCase {
     assertEquals(ListUtil.list(ListUtil.list(PollNak.NAK_PLUGIN_VERSION_MISMATCH,
 					     testAu.getAuId())),
 		 thePollFactory.naks);
+
+    // Ensure checks plugin poll version
+    MockPlugin plug = (MockPlugin)testAu.getPlugin();
+    plug.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Poll, "3"));
+    Poll p2 = thePollFactory.createPoll(pspec, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNotNull(p2);
+    assertTrue(p2 instanceof V3Voter);
+
+
   }
    
   // Same mismatch as above, but in a Nak message.  Ensure that receiving a

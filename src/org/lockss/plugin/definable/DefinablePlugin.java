@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.54 2011-01-10 09:13:56 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.55 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
   public static final String KEY_PLUGIN_NAME = "plugin_name";
   public static final String KEY_PLUGIN_VERSION = "plugin_version";
+  public static final String KEY_PLUGIN_FEATURE_VERSION_MAP =
+    "plugin_feature_version_map";
   public static final String KEY_REQUIRED_DAEMON_VERSION =
     "required_daemon_version";
   public static final String KEY_PUBLISHING_PLATFORM =
@@ -122,6 +124,7 @@ public class DefinablePlugin extends BasePlugin {
   protected CacheResultHandler resultHandler = null;
   protected List<String> loadedFromUrls;
   protected CrawlWindow crawlWindow;
+  protected Map<Plugin.Feature,String> featureVersion;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
@@ -145,6 +148,7 @@ public class DefinablePlugin extends BasePlugin {
     this.definitionMap = defMap;
     super.initPlugin(daemon);
     initMimeMap();
+    initFeatureVersions();
     checkParamAgreement();
   }
 
@@ -311,6 +315,13 @@ public class DefinablePlugin extends BasePlugin {
   
   public String getVersion() {
     return definitionMap.getString(KEY_PLUGIN_VERSION, DEFAULT_PLUGIN_VERSION);
+  }
+
+  public String getFeatureVersion(Plugin.Feature feat) {
+    if (featureVersion == null) {
+      return null;
+    }
+    return featureVersion.get(feat);
   }
 
   public String getRequiredDaemonVersion() {
@@ -574,6 +585,33 @@ public class DefinablePlugin extends BasePlugin {
     }
     resultMap = hResultMap;
   }
+
+  protected void initFeatureVersions()
+      throws PluginException.InvalidDefinition {
+    if (definitionMap.containsKey(KEY_PLUGIN_FEATURE_VERSION_MAP)) {
+      Map<Plugin.Feature,String> map = new HashMap<Plugin.Feature,String>();
+      Map<String,String> spec =
+	definitionMap.getMap(KEY_PLUGIN_FEATURE_VERSION_MAP);
+      log.debug2("features: " + spec);
+      for (Map.Entry<String,String> ent : spec.entrySet()) {
+	try {
+	  map.put(Plugin.Feature.valueOf(ent.getKey()), ent.getValue());
+	} catch (RuntimeException e) {
+	  log.warning(getPluginName() + " set unknown feature: "
+		      + ent.getKey() + " to version " + ent.getValue(), e);
+	  if (true) {
+	    throw new PluginException.InvalidDefinition("Unknown feature: " +
+							ent.getKey(),
+							e);
+	  }
+	}
+      }
+      featureVersion = map;
+    } else {
+      featureVersion = null;
+    }
+  }
+
 
   /** Create a CrawlWindow if necessary and return it.  The CrawlWindow
    * must be thread-safe. */

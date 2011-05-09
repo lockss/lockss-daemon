@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.25 2010-08-11 02:58:58 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.26 2011-05-09 00:40:23 tlipkis Exp $
  */
 
 /*
@@ -217,6 +217,15 @@ public class AuUtil {
   public static boolean isPubNever(TitleConfig tc) {
     return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_NEVER),
 			false);
+  }
+
+  public static String getPollVersion(ArchivalUnit au) {
+    Plugin plugin = au.getPlugin();
+    String res = plugin.getFeatureVersion(Plugin.Feature.Poll);
+    if (res == null) {
+      res = plugin.getVersion();
+    }
+    return res;
   }
 
   public static int getProtocolVersion(ArchivalUnit au) {
