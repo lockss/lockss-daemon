@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.17 2011-04-26 23:53:47 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.18 2011-05-09 00:37:38 tlipkis Exp $
  */
 
 /*
@@ -281,6 +281,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Create a transform to apply them
     HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
     InputStream result = new HtmlFilterInputStream(in,
+						   encoding,
 						   encoding,
 						   htmlXform);
     return result;
