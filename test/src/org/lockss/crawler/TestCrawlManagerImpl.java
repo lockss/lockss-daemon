@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.84 2011-02-14 00:10:45 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.85 2011-05-09 00:41:39 tlipkis Exp $
  */
 
 /*
@@ -1289,6 +1289,14 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       mau1.setAuId("bazab");
       crawlManager.setReqPriority(req);
       assertEquals(-1, req.getPriority());
+
+      // Remove param, ensure priority map gets removed
+      ConfigurationUtil.setFromArgs("foo", "bar");
+      mau1.setAuId("foo4");
+      req.setPriority(-3);
+      crawlManager.setReqPriority(req);
+      assertEquals(-3, req.getPriority());
+
     }
 
     public void testOdcCrawlStarter() {
