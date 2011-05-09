@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.32 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.33 2011-05-09 00:40:41 tlipkis Exp $
  */
 
 /*
@@ -183,6 +183,11 @@ public abstract class BaseServletManager
 
   private static String textMimes[] = {
     "out", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+  };
+
+  private static String[][] mimeMap = {
+    {"warc", "application/warc"},
+    {"arc", "application/arc"},
   };
 
   ManagerInfo mi;
@@ -624,8 +629,9 @@ public abstract class BaseServletManager
     for (int ix = 0; ix < textMimes.length; ix++) {
       context.setMimeMapping(textMimes[ix], "text/plain");
     }
-    //	context.setMimeMapping("gz", "text/gzip");
-    //	context.setTypeEncoding("text/gzip", "x-gzip");
+    for (int ix = 0; ix < mimeMap.length; ix++) {
+      context.setMimeMapping(mimeMap[ix][0], mimeMap[ix][1]);
+    }
 
     // NotFoundHandler
     context.addHandler(new NotFoundHandler());
