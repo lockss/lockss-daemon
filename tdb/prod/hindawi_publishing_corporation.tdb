@@ -894,7 +894,7 @@
     au < released ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
     au < ready ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 >
     au < ready ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 >
-    au < testing ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
+    au < ready ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
 
   }
 
@@ -911,8 +911,8 @@
     au < released ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
     au < released ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
     au < ready ; EURASIP Journal on Information Security Volume 2009 ; 2009 >
-    au < testing ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
-    au < testing ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
+    au < ready ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
+    au < ready ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
 
   }
 
@@ -931,8 +931,8 @@
     au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
     au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
     au < released ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2009 ; 2009 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2009 ; 2009 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 >
     au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
 
   }
@@ -954,7 +954,7 @@
     au < released ; Experimental Diabetes Research Volume 5 (2006) ; 2006 >
     au < released ; Experimental Diabetes Research Volume 2007 ; 2007 >
     au < released ; Experimental Diabetes Research Volume 2008 ; 2008 >
-    au < testing ; Experimental Diabetes Research Volume 2009 ; 2009 >
+    au < ready ; Experimental Diabetes Research Volume 2009 ; 2009 >
     au < ready ; Experimental Diabetes Research Volume 2010 ; 2010 >
     au < ready ; Experimental Diabetes Research Volume 2011 ; 2011 >
 
@@ -975,7 +975,7 @@
     au < released ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
     au < released ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
     au < released ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
-    au < testing ; Fixed Point Theory and Applications Volume 2009 ; 2009 >
+    au < ready ; Fixed Point Theory and Applications Volume 2009 ; 2009 >
     au < ready ; Fixed Point Theory and Applications Volume 2010 ; 2010 >
     au < ready ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
 
@@ -1020,7 +1020,7 @@
     au < released ; HPB Surgery Volume 10 (2006) ; 2006 >
     au < released ; HPB Surgery Volume 11 (2007) ; 2007 >
     au < released ; HPB Surgery Volume 2008 ; 2008 >
-    au < testing ; HPB Surgery Volume 2009 ; 2009 >
+    au < ready ; HPB Surgery Volume 2009 ; 2009 >
     au < ready ; HPB Surgery Volume 2010 ; 2010 >
     au < ready ; HPB Surgery Volume 2011 ; 2011 >
 
@@ -1082,11 +1082,12 @@
       eissn = 1687-5974 ;
       issnl = 1687-5966
     >
-
+    
+    comment[2009] = 403 error http://downloads.hindawi.com/journals/ijae/2009/735680.pdf
     param[journal_id] = ijae
 
     au < released ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
-    au < testing ; International Journal of Aerospace Engineering Volume 2009 ; 2009 >
+    au < notReady ; International Journal of Aerospace Engineering Volume 2009 ; 2009 >
     au < ready ; International Journal of Aerospace Engineering Volume 2010 ; 2010 >
     au < ready ; International Journal of Aerospace Engineering Volume 2011 ; 2011 >
 
@@ -1134,8 +1135,8 @@
     au < released ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
     au < released ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
     au < ready ; International Journal of Antennas and Propagation Volume 2009 ; 2009 >
-    au < testing ; International Journal of Antennas and Propagation Volume 2010 ; 2010 >
-    au < testing ; International Journal of Antennas and Propagation Volume 2011 ; 2011 >
+    au < ready ; International Journal of Antennas and Propagation Volume 2010 ; 2010 >
+    au < ready ; International Journal of Antennas and Propagation Volume 2011 ; 2011 >
 
   }
 
@@ -1165,7 +1166,7 @@
     au < released ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
     au < released ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
     au < released ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
-    au < testing ; International Journal of Biomedical Imaging Volume 2009 ; 2009 >
+    au < ready ; International Journal of Biomedical Imaging Volume 2009 ; 2009 >
     au < ready ; International Journal of Biomedical Imaging Volume 2010 ; 2010 >
     au < ready ; International Journal of Biomedical Imaging Volume 2011 ; 2011 >
 
@@ -1240,7 +1241,7 @@
     au < released ; International Journal of Computer Games Technology Volume 2008 ; 2008 >
     au < released ; International Journal of Computer Games Technology Volume 2009 ; 2009 >
     au < ready ; International Journal of Computer Games Technology Volume 2010 ; 2010 >
-    au < testing ; International Journal of Computer Games Technology Volume 2011 ; 2011 >
+    au < ready ; International Journal of Computer Games Technology Volume 2011 ; 2011 >
 
   }
 
@@ -1490,7 +1491,7 @@
     au < ready ; International Journal of Optics Volume 2008 ; 2008 >
     au < ready ; International Journal of Optics Volume 2009 ; 2009 >
     au < ready ; International Journal of Optics Volume 2010 ; 2010 >
-    au < testing ; International Journal of Optics Volume 2011 ; 2011 >
+    au < ready ; International Journal of Optics Volume 2011 ; 2011 >
 
   }
 
@@ -1542,7 +1543,7 @@
     au < doesNotExist ; International Journal of Pediatrics Volume 2008 ; 2008 >
     au < ready ; International Journal of Pediatrics Volume 2009 ; 2009 >
     au < ready ; International Journal of Pediatrics Volume 2010 ; 2010 >
-    au < testing ;  International Journal of Pediatrics Volume 2011 ; 2011 >
+    au < ready ;  International Journal of Pediatrics Volume 2011 ; 2011 >
 
   }
 
