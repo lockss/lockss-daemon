@@ -445,6 +445,24 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
   {
 
     title <
+      name = Genre: Forms of Discourse and Culture ;
+      issn = 0016-6928 ;
+      eissn = 2160-0228 ;
+    >
+
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://genre.dukejournals.org/
+
+      au < exists ; Genre: Forms of Discourse and Culture Volume 1 ; 1 >
+      
+    }
+
+  {
+
+    title <
       name = GLQ: A Journal of Lesbian and Gay Studies ;
       issn = 1064-2684 ;
       eissn = 1527-9375 ;
