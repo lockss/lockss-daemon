@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.55 2011-01-10 09:15:28 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.56 2011-05-09 00:41:16 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -282,7 +282,8 @@ public class UrlUtil {
 	  URL siteUrl = new URL(site);
 	  if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
 		 origUrl.getHost().equals(siteUrl.getHost()) &&
-		 origUrl.getPort() == siteUrl.getPort())) {
+		 isEquivalentPort(origUrl.getProtocol(),
+				  origUrl.getPort(), siteUrl.getPort()))) {
 	    throw new PluginBehaviorException("siteNormalizeUrl(" + url +
 					      ") altered non-alterable component: " +
 					      site);
@@ -291,6 +292,14 @@ public class UrlUtil {
       }
     }
     return normalizeUrl(site);
+  }
+
+  static boolean isEquivalentPort(String proto, int port1, int port2) {
+    if (port1 == port2) {
+      return true;
+    }
+    int def = getDefaultPort(proto);
+    return (port1 == def && port2 == -1) || (port2 == def && port1 == -1);
   }
 
   /** Return the default port for the (already lowercase) protocol */

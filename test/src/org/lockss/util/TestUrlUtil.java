@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.38 2011-01-10 09:15:28 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.39 2011-05-09 00:41:16 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.net.*;
+import java.util.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -373,13 +374,46 @@ public class TestUrlUtil extends LockssTestCase {
   public void testNormalizeSite()
       throws MalformedURLException, PluginBehaviorException {
     MockArchivalUnit mau = new MockArchivalUnit();
-    mau.setUrlNormalizeString("remove");
+
+    Map normMap = org.apache.commons.lang.ArrayUtils.toMap(new String[][] {
+	{"http://a.com/spurious/file", "http://a.com/file"},
+	{"http://a.com:80/path/file", "http://a.com/path/file"},
+	{"http://a.com/path/file", "http://a.com:80/path/file"},
+	{"http://a.com:8080/path/file", "http://a.com/path/file"},
+	{"http://a.com/path2/file", "http://a.com:8080/path2/file"},
+	{"https://a.com:443/path/file", "https://a.com/path/file"},
+	{"https://a.com/path3/file", "https://a.com:443/path/file"},
+      });
+
+    mau.setUrlNormalizeMap(normMap);
+
     String s = "http://a.com/b";
     assertSame(s, UrlUtil.normalizeUrl(s, mau));
-    assertEquals("http://a.com/b",
-		 UrlUtil.normalizeUrl("http://a.com/removeb", mau));
-    assertEquals("http://a.com/REMOVEB",
-		 UrlUtil.normalizeUrl("HTTP://A.COM/REMOVEB", mau));
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+    assertEquals("http://a.com/spUrious/file",
+		 UrlUtil.normalizeUrl("http://a.com/spUrious/file", mau));
+    assertEquals("http://a.com/path/file",
+		 UrlUtil.normalizeUrl("http://a.com:80/path/file", mau));
+    assertEquals("http://a.com/path/file",
+		 UrlUtil.normalizeUrl("http://a.com/path/file", mau));
+    assertEquals("https://a.com/path/file",
+		 UrlUtil.normalizeUrl("https://a.com:443/path/file", mau));
+    assertEquals("https://a.com/path/file",
+		 UrlUtil.normalizeUrl("https://a.com/path3/file", mau));
+    assertEquals("http://a.com/file",
+		 UrlUtil.normalizeUrl("http://a.com/spurious/file", mau));
+
+    try {
+      UrlUtil.normalizeUrl("http://a.com/path2/file", mau);
+      fail("siteNormalizeUrl() shouldn't allow adding a non-default port");
+    } catch (PluginBehaviorException e) {
+    }
+    try {
+      UrlUtil.normalizeUrl("http://a.com:8080/path/file", mau);
+      fail("siteNormalizeUrl() shouldn't allow removing a non-default port");
+    } catch (PluginBehaviorException e) {
+    }
   }
 
   public void testNormalizeAkamai() throws MalformedURLException {

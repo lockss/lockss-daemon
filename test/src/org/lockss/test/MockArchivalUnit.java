@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.92 2011-03-18 09:56:05 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.93 2011-05-09 00:41:16 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
   private List permissionPages;
-  private String urlNormalizeString = null;
+  private Map<String,String> urlNormalizeMap;
 
   private HashSet urlsToCache = new HashSet();
 
@@ -376,19 +376,21 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public String siteNormalizeUrl(String url) {
-    log.debug("siteNormalizeUrl(), urlNormalizeString = " + urlNormalizeString);
-    if (urlNormalizeString == null) {
-      return url;
-    } else {
-      String res = StringUtil.replaceString(url, urlNormalizeString, "");
-      log.debug("siteNormalizeUrl(" + url + ") = " + res);
-      return res;
+    if (urlNormalizeMap != null) {
+      String res = urlNormalizeMap.get(url);
+      if (res == null) {
+	log.debug("siteNormalizeUrl(" + url + ") unchanged");
+	return url;
+      } else {
+	log.debug("siteNormalizeUrl(" + url + ") = " + res);
+	return res;
+      }
     }
+    return url;
   }
 
-  public void setUrlNormalizeString(String removeString) {
-    log.debug("setUrlNormalizeString(" + removeString + ")");
-    urlNormalizeString = removeString;
+  public void setUrlNormalizeMap(Map map) {
+    urlNormalizeMap = map;
   }
 
   public Plugin getPlugin() {
