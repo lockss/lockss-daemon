@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.15 2010-11-18 07:15:07 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.16 2011-05-09 03:38:17 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,10 @@ import org.xml.sax.SAXException;
  *    with resumptionToken in OAI request
  *
  */
+
+// XXX Plugins can now specify a custom OaiHandler.  This should become an
+// interface.
+
 public class OaiHandler {
 
   protected static Logger logger = Logger.getLogger("OaiHandler");

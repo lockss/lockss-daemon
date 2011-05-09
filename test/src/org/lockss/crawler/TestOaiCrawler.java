@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.19 2010-11-18 07:15:07 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.20 2011-05-09 03:38:17 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestOaiCrawler extends LockssTestCase {
 
   private MockArchivalUnit mau = null;
 //private MockCachedUrlSet mcus = null;
-  private CrawlSpec spec = null;
+  private OaiCrawlSpec spec = null;
   private MockAuState aus = new MockAuState();
   private MockCrawlRule crawlRule = null;
   private String handlerUrl = "http://www.example.com/handler.html";
@@ -255,6 +255,37 @@ public class TestOaiCrawler extends LockssTestCase {
 //    Set expected = SetUtil.set(url1, permissionUrl);
 //    assertEquals(expected, cus.getCachedUrls());
 //    assertEquals(SetUtil.set(), cus.getForceCachedUrls());
+  }
+
+  /**
+   * Verify that we can set the OaiHandler via the OaiCrawlSpec
+   */
+  public void testCustomOaiHandler() {
+    //set the urls to be crawl
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1 = "http://www.example.com/blah.html";
+    mau.addUrl(url1, true, true); //exists, and should be cached
+    crawlRule.addUrlToCrawl(url1);
+
+    MockOaiHandler oaiHandler = new MockOaiHandler();
+    oaiHandler.setUpdatedUrls(SetUtil.set(url1));
+    spec.setOaiHandler(oaiHandler);
+
+    //set the crawler
+    OaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+
+    crawler.daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
+
+    MockLinkExtractor extractor = new MockLinkExtractor();
+    mau.setLinkExtractor("text/html", extractor);
+    extractor.addUrlsToReturn(permissionUrl, ListUtil.list(url1));   
+
+    //do the crawl
+    assertTrue(crawler.doCrawl());
+    //verify we don't recollect url1
+    assertEquals(SetUtil.set(permissionUrl), cus.getCachedUrls());
+    assertEquals(SetUtil.set(), cus.getForceCachedUrls());
   }
 
   

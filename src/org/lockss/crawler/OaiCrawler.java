@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.21 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.22 2011-05-09 03:38:17 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,15 @@ public class OaiCrawler extends FollowLinkCrawler {
   protected Set getUrlsToFollow() {
     OaiRequestData oaiRequestData = spec.getOaiRequestData();
 
-    OaiHandler oaiHandler = getOaiHandler();
+    OaiHandler oaiHandler = spec.getOaiHandler(); 
+
+    if (oaiHandler == null) {
+	// The spec does not provide its own OaiHandler;
+	// We'll use the default, daemon-supplied hanlder:
+
+	oaiHandler= getOaiHandler();
+    }
+
     try {
       oaiHandler.issueRequest(oaiRequestData, getFromTime(), getUntilTime());
       oaiHandler.processResponse(maxOaiRetries);

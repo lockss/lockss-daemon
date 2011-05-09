@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawlSpec.java,v 1.4 2005-10-20 16:43:32 troberts Exp $
+ * $Id: TestOaiCrawlSpec.java,v 1.5 2011-05-09 03:38:17 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,11 @@ public class TestOaiCrawlSpec extends LockssTestCase {
     assertEquals("setSpec", myOaiData.getAuSetSpec());
     assertEquals("prefix", myOaiData.getMetadataPrefix());
     assertTrue(cs2.getFollowLinkFlag());
+
+    assertNull(cs2.getOaiHandler());
+    OaiHandler oh = new OaiHandler();
+    cs2.setOaiHandler(oh);
+    assertSame(oh, cs2.getOaiHandler());
   }
 
 }

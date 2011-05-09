@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.11 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: OaiCrawlSpec.java,v 1.12 2011-05-09 03:38:17 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
   private boolean followLink;
   private boolean failOnStartUrlError = true;
   private OaiRequestData oaiRequestData;
+  private OaiHandler oaiHandler = null; 
 
 //   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
 //     this(new OaiRequestData(oaiRequestHandlerUrl,
@@ -106,6 +107,21 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
    */
   public OaiRequestData getOaiRequestData(){
     return oaiRequestData;
+  }
+
+  /**
+   * Getter for the (optional) custom OaiHandler
+   * @return the OaiHandler
+   */
+  public OaiHandler getOaiHandler(){
+    return oaiHandler;
+  }
+
+  /**
+   * Setter for the (optional) custom OaiHandler
+   */
+  public void setOaiHandler(OaiHandler oaiHandler){
+    this.oaiHandler = oaiHandler;
   }
 
   /**
