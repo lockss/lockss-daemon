@@ -8,6 +8,16 @@
   implicit < status ; year ; name ; param[volume_name] >
 
   {
+    title <
+      name = Environmental and Engineering Geoscience ;
+      issn = 1078-7275
+    >
+
+      param[base_url] = http://eeg.geoscienceworld.org/
+
+  }
+
+  {
   
     comment[1] = Field Guides
     comment[2] = not in usual HighWire shape
@@ -74,10 +84,20 @@
 
     param[base_url] = http://geosphere.gsapubs.org/
 
-    au < wanted ; 2008 ; Geosphere Volume 4 ; 4 >
-    au < wanted ; 2009 ; Geosphere Volume 5 ; 5 >
-    au < wanted ; 2010 ; Geosphere Volume 6 ; 6 >
-    au < wanted ; 2011 ; Geosphere Volume 7 ; 7 >
+    au < manifest ; 2008 ; Geosphere Volume 4 ; 4 >
+    au < manifest ; 2009 ; Geosphere Volume 5 ; 5 >
+    au < manifest ; 2010 ; Geosphere Volume 6 ; 6 >
+    au < manifest ; 2011 ; Geosphere Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = GSA Today ;
+      issn = 1052-5173
+    >
+
+      param[base_url] = http://www.geosociety.org/gsatoday/
 
   }
 
