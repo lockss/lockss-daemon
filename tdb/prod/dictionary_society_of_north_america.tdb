@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Dictionary Society of North America
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Dictionaries: Journal of the Dictionary Society of North America ;
+      issn = 0197-6745 ;
+      eissn = 2160-5076 ;
+    >
+
+    param[journal_dir] = dictionaries
+
+    au < exists ; 2011 ; Dictionaries: Journal of the Dictionary Society of North America Volume 31 ; 31 >
+
+  }
+
+}
