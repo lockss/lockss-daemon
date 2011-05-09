@@ -10,6 +10,28 @@
   implicit < status ; year ; name ; param[year] >
 
   {
+    title <
+      name = Annals of Innovation & Entrepreneurship ;
+      eissn = 2000-7396
+    >
+
+      param[base_url] = http://www.innovationandentrepreneurship.net/
+      param[journal_id] = aie
+
+  }
+
+  {
+    title <
+      name = Diabetic Foot & Ankle ;
+      eissn = 2000-625X
+    >
+
+      param[base_url] = http://www.diabeticfootandankle.net/
+      param[journal_id] = dfa/
+
+  }
+
+  {
 
     title <
       name = Ethics & Global Politics ;
@@ -33,6 +55,18 @@
       name = European Journal of Psychotraumatology (EJPT) ;
       eissn = 2000-8066
     >
+
+  }
+
+  {
+    title <
+      name = European Journal of Psychotraumatology Supplement ;
+      issn = 2000-8198 ;
+      eissn = 2000-818X
+    >
+
+      param[base_url] = http://www.polarresearch.net/
+      param[journal_id] = ejpt
 
   }
 
@@ -77,6 +111,17 @@ comment[fnr2008] = 502 Proxy Error
     au < ready ; 2008 ; Global Health Action Volume 1 ; 2008 >
     au < ready ; 2009 ; Global Health Action Volume 2 ; 2009 >
     au < manifest ; 2010 ; Global Health Action Volume 3 ; 2010 >
+
+  }
+
+  {
+    title <
+      name = Infection Ecology & Epidemiology ;
+      eissn = 2000-8686
+    >
+
+      param[base_url] = http://www.infectionecologyandepidemiology.net/
+      param[journal_id] = iee
 
   }
 
@@ -196,12 +241,45 @@ comment[fnr2008] = 502 Proxy Error
   }
 
   {
+    title <
+      name = Nordic Journal of ChildLit Aesthetics ;
+      eissn = 2000-7493
+    >
+
+      param[base_url] = http://www.childlitaesthetics.net/
+      param[journal_id] = blft
+
+  }
+
+  {
 
     title <
       name = Polar Research ;
       issn = 0800-0395 ;
       eissn = 1751-8369
     >
+
+  }
+
+  {
+    title <
+      name = Socioaffective Neuroscience & Psychology ;
+      eissn = 2000-9011
+    >
+
+      param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
+      param[journal_id] = snp
+
+  }
+
+  {
+    title <
+      name = Vulnerable Groups & Inclusion ;
+      eissn = 2000-8023
+    >
+
+      param[base_url] = http://www.vulnerablegroupsandinclusion.net/
+      param[journal_id] = vgi
 
   }
 
