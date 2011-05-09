@@ -195,6 +195,16 @@
 
   {
     title <
+      name = American Journal of Business ;
+      issn = 1935-5181
+    >
+
+    param[journal_issn] = 1935-5181
+
+  }
+
+  {
+    title <
       name = American Journal of Police ;
       issn = 0735-8547 ;
       issnl = 0735-8547
@@ -1985,11 +1995,12 @@
 
   {
     title <
-      name = History of Education Review ;
-      issn = 0819-8691
+    name = History of Education Review ;
+    issn = 0819-8691
     >
 
     comment[platform] = online in June 2011
+    param[journal_issn] = 0819-8691
 
   }
 
@@ -6442,6 +6453,16 @@
     param[journal_issn] = 1573-6105
     
     au < released ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+    name = The Multinational Business Review ;
+    issn = 1525-383X
+    >
+
+    param[journal_issn] = 1525-383X
 
   }
 
