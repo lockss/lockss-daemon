@@ -46,6 +46,8 @@
       param[base_url] = http://jhc.sagepub.com/
       implicit < status ; name ; param[volume_name] >
 
+      comment[uh] = This is probably wrong, the publisher should now be SAGE
+
       au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
       au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
       au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
