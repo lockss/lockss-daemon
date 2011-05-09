@@ -357,14 +357,15 @@
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://alt.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; Alternatives: Global, Local, Political Volume 30 ; 30 >
-        au < exists ; Alternatives: Global, Local, Political Volume 31 ; 31 >
-        au < exists ; Alternatives: Global, Local, Political Volume 32 ; 32 >
-        au < exists ; Alternatives: Global, Local, Political Volume 33 ; 33 >
-        au < exists ; Alternatives: Global, Local, Political Volume 34 ; 34 >
-        au < exists ; Alternatives: Global, Local, Political Volume 35 ; 35 >
+        au < exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
+        au < exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
+        au < exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
+        au < exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
+        au < exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
+        au < exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 >
+        au < exists ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 >
 
       }
 
@@ -1048,7 +1049,8 @@ comment[ajs] = this journal has been moved to H20 platform
 
       title <
         name = Australian & New Zealand Journal of Criminology ;
-        issn = 0004-8658
+        issn = 0004-8658 ;
+        eissn = 1837-9273
       >
     }
 
@@ -1357,6 +1359,23 @@ comment[ajs] = this journal has been moved to H20 platform
     }
 
     {
+      title <
+          name = Bulletin of the Atomic Scientists ;
+          issn = 0096-3402 ;
+          eissn = 1938-3282
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bos.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Business & Society ;
@@ -1462,6 +1481,23 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWirePressPlugin ; down ; Canadian Journal of School Psychology Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Canadian Journal of School Psychology Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Canadian Journal of School Psychology Volume 25 ; 25 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Cardiac Cath Lab Director ;
+          issn = 2150-1335 ;
+          eissn = 2150-0134
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ccl.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -2050,40 +2086,6 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
-        name = Complementary Health Practice Review ;
-        issn = 1533-2101 ;
-        eissn = 1552-3845
-      >
-
-      {
-
-        pluginSuffix = HighWirePlugin
-        param[base_url] = http://chp.sagepub.com/
-        implicit < status ; name ; param[volume] >
-
-        au < down ; Complementary Health Practice Review Volume 10 ; 10 >
-
-      }
-
-      {
-
-        param[base_url] = http://chp.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < HighWireStrVolPlugin ; doNotProcess ; Complementary Health Practice Review Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; Complementary Health Practice Review Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Complementary Health Practice Review Volume 15 ; 15 >
-
-      }
-
-    }
-
-    {
-
-      title <
         name = Concurrent Engineering ;
         issn = 1063-293X ;
         eissn = 1531-2003 ;
@@ -2111,6 +2113,22 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWirePressPlugin ; down ; Concurrent Engineering Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Concurrent Engineering Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; Concurrent Engineering Volume 18 ; 18 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Contemporary Education Dialogue ;
+          issn = 0973-1849
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ced.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -2804,11 +2822,22 @@ comment[csp7] = manifest page is malformed
 
     {
       title <
-        name = Dialogues in Human Geography ;
-        issn = 2043-8206 ;
-        eissn = 2043-8214
+          name = Dialogues in Human Geography ;
+          issn = 2043-8206 ;
+          eissn = 2043-8214
       >
-    }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dhg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Dialogues in Human Geography Volume 1 ; 1 >
+
+      }
+
+    } 
 
     {
 
@@ -3236,14 +3265,12 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
     }
 
-    {
-
-      title <
-        name = Emotional & Behavioural Difficulties
-
-      >
-
-      {
+  {
+    title <
+      name = Emotional & Behavioural Difficulties ;
+      issn = 1363-2752 ;
+      eissn = 1741-2692
+    >
 
         comment[ebd] = now published by Taylor & Francis
 
@@ -3522,9 +3549,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 13 ; 13 >
         au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 14 ; 14 >
         au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 15 ; 15 >
-        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
-        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
-        au < exists ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
+        au < manifest ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
+        au < manifest ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
+        au < manifest ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
 
       }
 
@@ -4035,7 +4062,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Family and Consumer Sciences Research Journal Volume 35 ; 35 >
         au < HighWireStrVolPlugin ; down ; Family and Consumer Sciences Research Journal Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; down ; Family and Consumer Sciences Research Journal Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; manifest ; Family and Consumer Sciences Research Journal Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; down ; Family and Consumer Sciences Research Journal Volume 38 ; 38 >
 
       }
 
@@ -8060,6 +8087,40 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
     {
 
       title <
+        name = Journal of Evidence-Based Complementary & Alternative Medicine ;
+        issn = 1533-2101 ;
+        eissn = 1552-3845
+      >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://chp.sagepub.com/
+        implicit < status ; name ; param[volume] >
+
+        au < down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 10 ; 10 >
+
+      }
+
+      {
+
+        param[base_url] = http://chp.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWireStrVolPlugin ; doNotProcess ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Journal of Family History ;
         issn = 0363-1990 ;
         eissn = 1552-5473 ;
@@ -10602,7 +10663,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Multiple Sclerosis ;
+        name = Multiple Sclerosis Journal ;
         issn = 1352-4585 ;
         eissn = 1477-0970 ;
         issnl = 1352-4585
@@ -10613,11 +10674,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://msj.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; Multiple Sclerosis Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Multiple Sclerosis Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; Multiple Sclerosis Journal Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Multiple Sclerosis Journal Volume 16 ; 16 >
 
       }
 
