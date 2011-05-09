@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.3 2011-05-09 00:31:56 tlipkis Exp $
  */
 
 /*
@@ -104,12 +104,25 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
 	"<meta name=\"FourthName\" content=\"FourthContent\">\n" +
 	"<meta name=\"FifthName\" content=\"FifthContent\">\n";
 
-
     assertMdEquals(ListUtil.list("firstname", "FirstContent",
 				 "secondname", "SecondContent",
 				 "thirdname", "ThirdContent",
 				 "fourthname", "FourthContent",
 				 "fifthname", "FifthContent"),
+		   text);
+  }
+
+  public void testHtmlDecoding() throws Exception {
+    String text =
+      "<meta name=\"title\" content=\"&#34;Quoted&#34; Title\">\n" +
+      "<meta name=\"hex\" content=\"foo&#x22;bar&#x22; \">\n" +
+      "<meta name=\"conjunct\" content=\"one&amp;two\">\n" +
+      "<meta name=\"others\" content=\"l&lt;g&gt;a&amp;z\">\n";
+
+    assertMdEquals(ListUtil.list("title", "\"Quoted\" Title",
+				 "hex", "foo\"bar\" ",
+				 "conjunct", "one&two",
+				 "others", "l<g>a&z"),
 		   text);
   }
 

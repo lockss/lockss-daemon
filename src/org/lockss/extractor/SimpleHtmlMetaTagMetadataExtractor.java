@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.3 2011-05-09 00:31:56 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
+import org.apache.commons.lang.StringEscapeUtils;
+
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -105,6 +107,8 @@ public class SimpleHtmlMetaTagMetadataExtractor
     }
       
     String content = line.substring(contentBegin, contentEnd);
+    content = StringEscapeUtils.unescapeHtml(content);
+
     if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
     ret.putRaw(name, content);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleXmlMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestSimpleXmlMetadataExtractor.java,v 1.5 2011-05-09 00:31:56 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,19 @@ public class TestSimpleXmlMetadataExtractor
 				 "fifthtag", "FifthValue"),
 		   text);
   }
+
+  public void testHtmlDecoding() throws Exception {
+    String text =
+      "<FirstTag>&#34;Quoted&#34; Title</FirstTag>" +
+      "<SecondTag>foo&#x22;bar&#x22; </SecondTag>" +
+      "<ThirdTag>l&lt;g&gt;a&amp;q&quot;a&apos;z</ThirdTag>";
+
+    assertMdEquals(ListUtil.list("FirstTag", "\"Quoted\" Title",
+				 "SecondTag", "foo\"bar\" ",
+				 "ThirdTag", "l<g>a&q\"a'z"),
+		   text);
+  }
+
 
   static final String[] TEST_TAGS = {
     "FirstTag",

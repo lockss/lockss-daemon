@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.6 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.7 2011-05-09 00:31:56 tlipkis Exp $
  */
 
 /*
@@ -31,8 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.extractor;
+
 import java.io.*;
 import java.util.*;
+import org.apache.commons.lang.StringEscapeUtils;
+
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -98,6 +101,7 @@ public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
       int j = StringUtil.indexOfIgnoreCase(line, end, i);
       if (j > i) {
 	String value = line.substring(i, j);
+	value = StringEscapeUtils.unescapeXml(value);
 	log.debug2(tag + " = " + value);
 	ret.putRaw(tag, value);
       }
