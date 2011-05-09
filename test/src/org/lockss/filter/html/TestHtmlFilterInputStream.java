@@ -48,13 +48,28 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   private void assertFilterString(String expected, String input,
 				  HtmlTransform xform)
       throws IOException {
-    InputStream in =
-      new HtmlFilterInputStream(new StringInputStream(input), xform);
-    assertInputStreamMatchesString(expected, in);
-    assertEquals(-1, in.read());
-    in.close();
+    assertFilterString(expected, input, null, null, null, xform);
+  }
+
+  private void assertFilterString(String expected, String input,
+				  String strCharset, String inCharset,
+				  String outCharset, HtmlTransform xform)
+      throws IOException {
+
+    InputStream in = (strCharset == null)
+      ? new StringInputStream(input)
+      : new ReaderInputStream(new StringReader(input), strCharset);
+    InputStream filt =
+      new HtmlFilterInputStream(in, inCharset, outCharset, xform);
+    if (strCharset != null) {
+      assertInputStreamMatchesString(expected, filt, strCharset);
+    } else {
+      assertInputStreamMatchesString(expected, filt);
+    }
+    assertEquals(-1, filt.read());
+    filt.close();
     try {
-      in.read();
+      filt.read();
       fail("closed InputStream should throw");
     } catch (IOException e) {}
   }
@@ -62,6 +77,14 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   private void assertIdentityXform(String expected, String input)
       throws IOException {
     assertFilterString(expected, input, new IdentityXform());
+  }
+
+  private void assertIdentityXform(String expected,
+				   String input, String strCharset,
+				   String inCharset, String outCharset)
+      throws IOException {
+    assertFilterString(expected, input, strCharset, inCharset, outCharset,
+		       new IdentityXform());
   }
 
   public void testIll() {
@@ -139,7 +162,36 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertIdentityXform(exp, in);
   }
 
-  public void testCharsetFailsIfNoMark() throws Exception {
+  public void testCharset() throws Exception {
+    String in1 = "<html><body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+    String exp1 = "<html><body>" +
+      "abc\u00e91234" +
+      "</body></html>";
+    String exp1U = "<html><body>" +
+      "abc\u00fd1234" +
+      "</body></html>";
+    String in2 = "<html><body>" +
+      "abc\u2260" +
+      "</body></html>";
+    String exp2 = "<html><body>" +
+      "abc\u2260" +
+      "</body></html>";
+    String exp28 = "<html><body>" +
+      "abc\u0060" +
+      "</body></html>";
+    assertIdentityXform(exp1, in1);
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", "ISO-8859-1");
+    assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", null);
+    assertIdentityXform(exp1U, in1, "ISO-8859-1", "UTF-8", null);
+    assertIdentityXform(exp2, in2, "UTF-8", "UTF-8", "UTF-8");
+    assertIdentityXform(exp28, in2);
+    assertIdentityXform(exp28, in2, "UTF-8", null, null);
+    assertIdentityXform(exp28, in2, "UTF-8", "UTF-8", null);
+  }
+
+  public void testChangeCharsetFailsIfNoMark() throws Exception {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE, "0");
     log.info("read(): exception following is expected");
     try {
@@ -150,7 +202,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   }
 
   // Test default mark size
-  public void testCharset() throws Exception {
+  public void testChangeCharset() throws Exception {
     doParseCharset();
   }
 

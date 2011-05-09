@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.10 2010-07-21 06:09:48 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.11 2011-05-09 00:37:08 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,7 @@ public class HtmlFilterInputStream extends InputStream {
 
   private InputStream in;
   private String charset;
+  private String outCharset;
   private InputStream out = null;
   private HtmlTransform xform;
 
@@ -119,6 +120,12 @@ public class HtmlFilterInputStream extends InputStream {
     this(in, null, xform);
   }
 
+  /**
+   * Create an HtmlFilterInputStream that applies the given transform
+   * @param in InputStream to filter from
+   * @param xform HtmlTransform to apply to parsed NodeList
+   * @param charset the charset with which <code>in</code> is encoded
+   */
   public HtmlFilterInputStream(InputStream in, String charset,
 			       HtmlTransform xform) {
     if (in == null || xform == null) {
@@ -127,6 +134,21 @@ public class HtmlFilterInputStream extends InputStream {
     this.in = in;
     this.charset = charset;
     this.xform = xform;
+  }
+
+  /**
+   * Create an HtmlFilterInputStream that applies the given transform
+   * @param in InputStream to filter from
+   * @param xform HtmlTransform to apply to parsed NodeList
+   * @param inCharset the charset in which <code>in</code> is encoded
+   * @param outCharset the charset in which the resulting InputStream
+   * should be encoded
+   */
+  public HtmlFilterInputStream(InputStream in,
+			       String inCharset, String outCharset,
+			       HtmlTransform xform) {
+    this(in, inCharset, xform);
+    this.outCharset = outCharset;
   }
 
   /** Parse the input, apply the transform, generate output string and
@@ -150,7 +172,12 @@ public class HtmlFilterInputStream extends InputStream {
       if (log.isDebug3()) log.debug3("xformed (" + nl.size() + "):\n" +
 				     nodeString(nl));
       String h = nl.toHtml(verbatim);
-      out = new ReaderInputStream(new StringReader(h));
+      // 
+      if (outCharset != null) {
+	out = new ReaderInputStream(new StringReader(h), outCharset);
+      } else {
+	out = new ReaderInputStream(new StringReader(h));
+      }
     } catch (ParserException e) {
       IOException ioe = new IOException();
       ioe.initCause(e);
