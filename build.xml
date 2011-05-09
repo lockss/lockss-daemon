@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.276 2011-04-23 07:37:32 tlipkis Exp $
+ $Id: build.xml,v 1.277 2011-05-09 00:31:11 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -952,7 +952,6 @@ Must specify pln with -Dplnname=name
 	   dest="${outdir}"
            failonerror="true"
            failifexecutionfails="true"
-           resultproperty="tdb.result"
            relative="false"
            parallel="false">
 
