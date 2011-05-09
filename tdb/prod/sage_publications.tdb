@@ -365,7 +365,7 @@
         au < exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
         au < exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
         au < exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 >
-        au < exists ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 >
+        au < manifest ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 >
 
       }
 
@@ -4450,6 +4450,23 @@ comment[exm] = now published by Springer
     }
 
     {
+      title <
+          name = Geriatric Orthopaedic Surgery & Rehabilitation ;
+          issn = 2151-4585 ;
+          eissn = 2151-4593
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gos.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = German History ;
@@ -4967,6 +4984,22 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Hispanic Journal of Behavioral Sciences Volume 32 ; 32 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = History and Sociology of South Asia ;
+          issn = 2230-8075
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hsa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -6411,6 +6444,22 @@ comment[jhj] = now published by Brill
     }
 
     {
+      title <
+          name = Journal of Accounting, Auditing &  Finance ;
+          issn = 0148-558X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jaf.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Journal of Adolescent Research ;
@@ -7217,13 +7266,13 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://edm.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 >
-        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 >
-        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
-        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
-        au < exists ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 >
+        au < exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 >
+        au < exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 >
+        au < exists ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
+        au < exists ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
+        au < manifest ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 >
 
       }
 
@@ -8866,6 +8915,23 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
     }
 
     {
+      title <
+          name = Journal of Literacy Research ;
+          issn = 1086-296X ;
+          eissn = 1554-8430
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jlr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Journal of Macromarketing ;
@@ -9724,6 +9790,23 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+          name = Journal of Strain Analysis for Engineering Design ;
+          issn = 0309-3247 ;
+          eissn = 2041-3130
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sdj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Journal of Studies in International Education ;
@@ -10310,10 +10393,45 @@ comment[mpj] = now published by Brill
 
     {
       title <
-        name = Local Economy: The Journal of the Local Economy Policy Unit ;
-        issn = 0269-0942 ;
-        eissn = 1470-9325
+          name = Local Economy: The Journal of the Local Economy Policy Unit ;
+          issn = 0269-0942 ;
+          eissn = 1470-9325
       >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://lec.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 1 ; 1 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 2 ; 2 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 3 ; 3 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 4 ; 4 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 5 ; 5 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 6 ; 6 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 7 ; 7 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 8 ; 8 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 9 ; 9 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 10 ; 10 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 11 ; 11 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 12 ; 12 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 13 ; 13 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 14 ; 14 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 15 ; 15 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 16 ; 16 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 17 ; 17 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 18 ; 18 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 19 ; 19 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 20 ; 20 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 21 ; 21 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 >
+        au < exits ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
+        au < manifest ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 >
+        au < manifest ; 1986 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 >
+      }
+
     }
 
     {
@@ -10685,6 +10803,22 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+          name = Musicae Scientiae ;
+          issn = 1029-8649
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://msx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = NASSP Bulletin ;
@@ -10982,10 +11116,20 @@ comment[mpj] = now published by Brill
 
     {
       title <
-        name = Organizational Psychology Review ;
-        issn = 2041-3866 ;
-        eissn = 2041-3874
+          name = Organizational Psychology Review ;
+          issn = 2041-3866 ;
+          eissn = 2041-3874
       >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://opr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Organizational Psychology Review Volume 1 ; 1 >
+      }
+
     }
 
     {
@@ -11009,6 +11153,23 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; Organizational Research Methods Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; Organizational Research Methods Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; Organizational Research Methods Volume 13 ; 13 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Otolaryngology-Head and Neck Surgery ;
+          issn = 0194-5998 ;
+          eissn = 1097-6817
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://oto.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -11434,6 +11595,293 @@ comment[mpj] = now published by Brill
     }
 
     {
+      title <
+          name = Proceedings of the Human Factors and Ergonomics Society Annual Meeting ;
+          issn = 1541-9312
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy ;
+          issn = 0957-6509 ;
+          eissn = 2041-2967
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pia.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture ;
+          issn = 0954-4054 ;
+          eissn = 2041-2975
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pib.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science ;
+          issn = 0954-4062 ;
+          eissn = 2041-2983
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pic.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering ;
+          issn = 0954-4070 ;
+          eissn = 2041-2991
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pid.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering ;
+          issn = 0954-4089 ;
+          eissn = 2041-3009
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pie.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit ;
+          issn = 0954-4097 ;
+          eissn = 2041-3017
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pif.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering ;
+          issn = 0954-4100 ;
+          eissn = 2041-3025
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pig.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine ;
+          issn = 0954-4119 ;
+          eissn = 2041-3033
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pih.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering ;
+          issn = 0959-6518 ;
+          eissn = 2041-3041
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pii.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology ;
+          issn = 1350-6501 ;
+          eissn = 2041-305X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pij.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics ;
+          issn = 1464-4193 ;
+          eissn = 2041-3068
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pik.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications ;
+          issn = 1464-4207 ;
+          eissn = 2041-3076
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pil.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment ;
+          issn = 1475-0902 ;
+          eissn = 2041-3084
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pim.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems ;
+          issn = 1740-3499 ;
+          eissn = 2041-3092
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pin.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability ;
+          issn = 1748-006X ;
+          eissn = 1748-0078
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pio.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology ;
+          issn = 1754-3371 ;
+          eissn = 1754-338X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pip.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
 
       title <
         name = Progress in Development Studies ;
@@ -11604,6 +12052,22 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; Psychology of Music Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; manifest ; Psychology of Music Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; Psychology of Music Volume 38 ; 38 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Psychology of Women Quarterly ;
+          issn = 0361-6843
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pwq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -11854,6 +12318,22 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Race & Class Volume 49 ; 49 >
         au < HighWirePressPlugin ; down ; Race & Class Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; manifest ; Race & Class Volume 51 ; 51 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Race and Justice ;
+          issn = 2153-3687
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://raj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -12119,6 +12599,21 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; Review of Research in Education Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Review of Research in Education Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Review of Research in Education Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Reviews of Human Factors and Ergonomics ;
+          issn = 1557-234X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -12518,6 +13013,22 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; Social Studies of Science Volume 38 ; 38 >
         au < HighWirePressH20Plugin ; manifest ; Social Studies of Science Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; manifest ; Social Studies of Science Volume 40 ; 40 >
+
+      }
+
+    }
+
+    {
+      title <
+          name = Society and Mental Health ;
+          issn = 2156-8693 ;
+          eissn = 2156-8731
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
 
       }
 
@@ -12925,11 +13436,39 @@ comment[mpj] = now published by Brill
     
     {
       title <
-        name = Theology Today ;
-        issn = 0040-5736 ;
-        eissn = 2044-2556
+          name = Theology Today ;
+          issn = 0040-5736 ;
+          eissn = 2044-2556
       >
-    }    
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ttj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2011 ; Theology Today Volume 50 ; 50 >
+        au < exists ; 2011 ; Theology Today Volume 51 ; 51 >
+        au < exists ; 2011 ; Theology Today Volume 52 ; 52 >
+        au < exists ; 2011 ; Theology Today Volume 53 ; 53 >
+        au < exists ; 2011 ; Theology Today Volume 54 ; 54 >
+        au < exists ; 2011 ; Theology Today Volume 55 ; 55 >
+        au < exists ; 2011 ; Theology Today Volume 56 ; 56 >
+        au < exists ; 2011 ; Theology Today Volume 57 ; 57 >
+        au < exists ; 2011 ; Theology Today Volume 58 ; 58 >
+        au < exists ; 2011 ; Theology Today Volume 59 ; 59 >
+        au < exists ; 2011 ; Theology Today Volume 60 ; 60 >
+        au < exists ; 2011 ; Theology Today Volume 61 ; 61 >
+        au < exists ; 2011 ; Theology Today Volume 62 ; 62 >
+        au < exists ; 2011 ; Theology Today Volume 63 ; 63 >
+        au < exists ; 2011 ; Theology Today Volume 64 ; 64 >
+        au < exists ; 2011 ; Theology Today Volume 65 ; 65 >
+        au < exists ; 2011 ; Theology Today Volume 66 ; 66 >
+        au < manifest ; 2011 ; Theology Today Volume 67 ; 67 >
+
+      }
+
+    }
 
     {
 
@@ -13056,10 +13595,36 @@ comment[mpj] = now published by Brill
 
     {
       title <
-        name = Therapeutic Advances in Psychopharmacology ;
-        issn = 2045-1253 ;
-        eissn = 2045-1261
+          name = Therapeutic Advances in Drug Safety ;
+          issn = 2042-0986 ;
+          eissn = 2042-0994
       >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://taw.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    {
+      title <
+          name = Therapeutic Advances in Psychopharmacology ;
+          issn = 2045-1253 ;
+          eissn = 2045-1261
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tpp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 >
+        
+      }
+
     }
 
     {
@@ -13671,6 +14236,23 @@ comment[mpj] = now published by Brill
 
     }
     
+    {
+      title <
+          name = World Policy Journal ;
+          issn = 0740-2775 ;
+          eissn = 1936-0924
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://wpj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
     {
 
       title <
