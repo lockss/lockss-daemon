@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.72 2010-06-22 09:01:43 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.73 2011-05-09 02:34:01 tlipkis Exp $
  */
 
 /*
@@ -239,6 +239,13 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       scgen = getContentGenerator();
     }
     scgen.deleteContentTree();
+  }
+
+  public void moveToContentTree(File source) {
+    File target = new File(simRoot);
+    log.debug("Moving " + source.getAbsolutePath() + " to " +
+            target.getAbsolutePath());
+    source.renameTo(target);
   }
 
   public void pauseBeforeFetch(String previousContentType) {

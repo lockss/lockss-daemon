@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.18 2010-11-03 06:08:59 tlipkis Exp $
+ * $Id: CacheException.java,v 1.19 2011-05-09 02:34:01 tlipkis Exp $
  */
 
 /*
@@ -628,9 +628,13 @@ public class CacheException
       suppressStackTrace = false;
     }
 
-    /** Create this if details of causal exception are more relevant. */
     public ExploderException(Exception e) {
       super(e.toString());
+      initCause(e);
+    }
+
+    public ExploderException(String message, Exception e) {
+      super(message);
       initCause(e);
     }
   }

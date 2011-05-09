@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.84 2011-04-07 00:09:26 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.85 2011-05-09 02:34:02 tlipkis Exp $
  */
 
 /*
@@ -732,6 +732,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     String url = uc.getUrl();
     if (url.endsWith(".arc.gz")) {
       ret = new ArcExploder(uc, exploderRetries, crawlSpec, this,
+			    explodeFiles, storeArchive);
+    } else if (url.endsWith(".warc.gz")) {
+      ret = new WarcExploder(uc, exploderRetries, crawlSpec, this,
 			    explodeFiles, storeArchive);
     } else if (url.endsWith(".zip")) {
       ret = new ZipExploder(uc, exploderRetries, crawlSpec, this,

@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.9 2011-03-24 21:52:06 dshr Exp $
+ * $Id: ArcExploder.java,v 1.10 2011-05-09 02:34:02 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.plugin.exploded.*;
 import org.lockss.state.*;
 
 /**
- * An Exploder that ingest Internet Archive ARC files,  and behaves
+ * An Exploder that ingests Internet Archive ARC files,  and behaves
  * as if it had ingested each file in the ARC file directly from its
  * original source.
  *
@@ -94,7 +94,7 @@ public class ArcExploder extends Exploder {
     int entriesBetweenSleep = 0;
     ArchiveReader arcReader = null;
 
-    logger.info((storeArchive ? "Storing" : "Fetching") + " an ARC file: " +
+    logger.info((storeArchive ? "Storing" : "Fetching") + " ARC file: " +
 		arcUrl + (explodeFiles ? " will" : " won't") + " explode");
     while (++reTry < maxRetries) try {
       cachedUrl = urlCacher.getCachedUrl();
@@ -166,8 +166,8 @@ public class ArcExploder extends Exploder {
           try {
 	    helper.process(ae);
           } catch (PluginException ex) {
-	    throw new CacheException.ExploderException("helper.process() threw " +
-						   ex);
+	    throw new CacheException.ExploderException("helper.process() threw",
+						       ex);
           }
 	  if (ae.getBaseUrl() != null) {
 	    if (ae.getRestOfUrl() != null &&
