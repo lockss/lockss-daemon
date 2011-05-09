@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.30 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.31 2011-05-09 00:47:11 tlipkis Exp $
  */
 
 /*
@@ -181,9 +181,22 @@ public class CrawlRuleTester extends Thread {
     proxyHost = config.get(PARAM_PROXY_HOST);
     proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
     if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
+      String http_proxy = System.getenv("http_proxy");
+      if (!StringUtil.isNullString(http_proxy)) {
+	try {
+	  HostPortParser hpp = new HostPortParser(http_proxy);
+	  proxyHost = hpp.getHost();
+	  proxyPort = hpp.getPort();
+	} catch (HostPortParser.InvalidSpec e) {
+	  log.warning("Can't parse http_proxy environment var, ignoring: " +
+		      http_proxy + ": " + e);
+	}
+      }
+    }
+    if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
       proxyHost = null;
     } else {
-      log.debug("Proxying through " + proxyHost + ":" + proxyPort);
+      log.info("Proxying through " + proxyHost + ":" + proxyPort);
     }
     userAgent = config.get(PARAM_USER_AGENT);
     if (StringUtil.isNullString(userAgent)) {
