@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -14,6 +14,8 @@
       eissn = 0022-4529 ;
       issnl = 0022-4529
     >
+    
+    comment[jsh] = moving to Oxford U Press in Sept 2011
 
     param[journal_dir] = journal_of_social_history
 
@@ -28,6 +30,7 @@
     au < released ; Journal of Social History Volume 41 ; 41 >
     au < released ; Journal of Social History Volume 42 ; 42 >
     au < released ; Journal of Social History Volume 43 ; 43 >
+    au < exists ; Journal of Social History Volume 44 ; 44 >
 
   }
 
