@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.6 2011-01-14 19:23:16 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.7 2011-05-10 20:20:12 dshr Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class LockssRepositoryImpl
   /**
    * Name of top directory in which the urls are cached.
    */
-  public static final String CACHE_ROOT_NAME = "cache";
+  public static final String CACHE_ROOT_NAME = "VFS";
 
   // XXX This is a remnant from the single-disk days, and should go away.
   // It is used only by unit tests, which want it set to the (last)
@@ -776,7 +776,7 @@ public class LockssRepositoryImpl
       this.repoPath = repoPath;
       try {
 	repoCacheFile =
-	  VFS.getManager().resolveFile(repoPath + CACHE_ROOT_NAME);
+	  VFS.getManager().resolveFile(extendCacheLocation(repoPath));
       } catch (FileSystemException e) {
 	logger.error("Can't get root for repo: " + e);
 	repoCacheFile = null;
