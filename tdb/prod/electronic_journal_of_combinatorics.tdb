@@ -8,8 +8,7 @@
       name = The Electronic Journal of Combinatorics ;
       issn = 1077-8926
     >
-      plugin = org.lockss.plugin.ejc.ElectronicJournalOfCombinatorics
-      comment[ejc] = plugin does not exist yet 2011-05-10
+      plugin = needs.plugin
       
       param[base_url] = http://www.combinatorics.org/
       implicit < status ; year ; name ; param[volume_name] >
