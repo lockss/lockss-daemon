@@ -1,0 +1,79 @@
+{
+  publisher <
+    name = University Library System of the University of Pittsburgh
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; param[volume] >
+
+    {
+      title <
+        name = Revista Iberoamericana ;
+        issn = 0034-9631 ;
+        eissn = 2154-4794
+      >
+
+      param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
+      param[journal_id] = Iberoamericana
+
+    }
+
+    {
+      title <
+        name = International Journal of Telerehabilitation ;
+        eissn = 1945-2020
+      >
+
+      param[base_url] = http://telerehab.pitt.edu/ojs/
+      param[journal_id] = telerehab
+
+    }
+
+    {
+      title <
+        name = Bolivian Studies Journal ;
+        issn = 1074-2247 ;
+        eissn = 2156-5163
+      >
+
+      param[base_url] = http://bsj.pitt.edu/ojs/
+      param[journal_id] = bsj
+
+    }
+
+    {
+      title <
+        name = Ricoeur Studies ;
+        eissn = 2156-7808
+      >
+
+      param[base_url] = http://ricoeur.pitt.edu/ojs/
+      param[journal_id] = ricoeur
+
+    }
+
+    {
+      title <
+        name = Journal of French and Francophone Philosophy ;
+        issn = 1936-6280 ;
+        eissn = 2155-1162
+      >
+
+      param[base_url] = http://jffp.pitt.edu/ojs/
+      param[journal_id] = jffp
+
+    }
+
+    {
+      title <
+        name = Excellence in Higher Education ;
+        issn = 2153-9669 ;
+        eissn = 2153-9677
+      >
+
+      param[base_url] = http://ehe.pitt.edu/ojs/
+      param[journal_id] = ehe
+
+    }
+
+}
