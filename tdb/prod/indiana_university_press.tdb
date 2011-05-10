@@ -60,6 +60,29 @@
   {
 
     title <
+      name = African Conflict & Peacebuilding Review ;
+      issn = 2156-695X ;
+      eissn = 2156-7263
+    >
+
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = african_conflict_and_peacebuilding_review
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
+
+    }
+    
+  }
+  
+
+
+  {
+
+    title <
       name = Aleph: Historical Studies in Science and Judaism ;
       issn = 1565-1525 ;
       eissn = 1565-5423 ;
