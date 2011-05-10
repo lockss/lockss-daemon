@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = INFORMS Applied Probability Society
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Stochastic Systems ;
+      issn = 1946-5238 ;
+    >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.i-journals.org/
+    param[journal_id] = ssy
+
+    au < exists ; 2011 ; Stochastic Systems Volume 1 ; 1 >
+
+  }
+
+}
