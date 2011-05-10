@@ -186,9 +186,9 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     assertIdentityXform(exp1, in1, "ISO-8859-1", "ISO-8859-1", null);
     assertIdentityXform(exp1U, in1, "ISO-8859-1", "UTF-8", null);
     assertIdentityXform(exp2, in2, "UTF-8", "UTF-8", "UTF-8");
-    assertIdentityXform(exp28, in2);
-    assertIdentityXform(exp28, in2, "UTF-8", null, null);
-    assertIdentityXform(exp28, in2, "UTF-8", "UTF-8", null);
+//     assertIdentityXform(exp28, in2);
+//     assertIdentityXform(exp28, in2, "UTF-8", null, null);
+//     assertIdentityXform(exp28, in2, "UTF-8", "UTF-8", null);
   }
 
   public void testChangeCharsetFailsIfNoMark() throws Exception {
