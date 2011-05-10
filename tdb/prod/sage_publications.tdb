@@ -2086,6 +2086,42 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
+        name = Complementary Health Practice Review ;
+        issn = 1533-2101 ;
+        eissn = 1552-3845
+      >
+        comment[continued_by] = 1533-210
+        comment[chp] = 2011-01-01 name changed to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://chp.sagepub.com/
+        implicit < status ; name ; param[volume] >
+
+        au < down ; Complementary Health Practice Review Volume 10 ; 10 >
+
+      }
+
+      {
+
+        param[base_url] = http://chp.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWireStrVolPlugin ; doNotProcess ; Complementary Health Practice Review Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; Complementary Health Practice Review Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; Complementary Health Practice Review Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; Complementary Health Practice Review Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Concurrent Engineering ;
         issn = 1063-293X ;
         eissn = 1531-2003 ;
@@ -8140,28 +8176,15 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         issn = 1533-2101 ;
         eissn = 1552-3845
       >
-
-      {
-
-        pluginSuffix = HighWirePlugin
-        param[base_url] = http://chp.sagepub.com/
-        implicit < status ; name ; param[volume] >
-
-        au < down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 10 ; 10 >
-
-      }
+        comment[continued_from] = 1533-2101
+        comment[jebcam] = 2011-01-01 name changed from Complementary Health Practice, but ISSN did not.
 
       {
 
         param[base_url] = http://chp.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 >
 
       }
 
@@ -10781,22 +10804,46 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Multiple Sclerosis Journal ;
+        name = Multiple Sclerosis ;
         issn = 1352-4585 ;
         eissn = 1477-0970 ;
         issnl = 1352-4585
       >
+        comment[continued_by] = 1352-4585
+        comment[ms] = 2011-01-01 name changed to Multiple Sclerosis Journal, but ISSN did not.
 
       {
 
         param[base_url] = http://msj.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; Multiple Sclerosis Journal Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Journal Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Multiple Sclerosis Journal Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; Multiple Sclerosis Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; Multiple Sclerosis Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; Multiple Sclerosis Volume 16 ; 16 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Multiple Sclerosis Journal ;
+        issn = 1352-4585 ;
+        eissn = 1477-0970 ;
+        issnl = 1352-4585
+      >
+        comment[continued_from] = 1352-4585
+        comment[msj] = 2011-01-01 name changed from Multiple Sclerosis, but ISSN did not.
+
+      {
+
+        param[base_url] = http://msj.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressH20Plugin ; manifest ; Multiple Sclerosis Journal Volume 17 ; 17 >
 
       }
 
