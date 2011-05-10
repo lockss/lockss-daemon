@@ -473,6 +473,19 @@
   }
   
   {
+    title <
+      name = Journal of Histotechnology ;
+      issn = 0147-8885 ;
+      eissn = 2046-0236
+    >
+
+	comment[jht1] = http://www.maney.co.uk/index.php/journals/his/
+	comment[jht2] = highwire press plugin?
+    implicit < status ; year ; name ; param[volume_name] >
+
+  }
+
+  {
 
     title <
       name = Transactions of the Newcomen Society ;
