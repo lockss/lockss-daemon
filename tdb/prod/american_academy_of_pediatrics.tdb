@@ -140,7 +140,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://pediatrics.aappublications.org/
       implicit < status ; name ; param[volume_name] >
 
