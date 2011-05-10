@@ -142,27 +142,6 @@
   {
  
     title <
-      name = Ecquid Novi: African Journalism Studies ;
-      issn = 0256-0054 ;
-      eissn = 1942-0773 ;
-      issnl = 0256-0054
-    >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://ajs.uwpress.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; Ecquid Novi: African Journalism Studies Volume 29 ; 29 >
-
-    }
-
-  }
-
-  {
- 
-    title <
       name = Journal of Human Resources ;
       issn = 0022-166X ;
       eissn = 1548-8004 ;
@@ -311,6 +290,34 @@
       au < released ; Monatshefte Volume 100 ; 100 >
       au < released ; Monatshefte Volume 101 ; 101 >
       au < released ; Monatshefte Volume 102 ; 102 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Native Plants Journal ;
+      issn = 1522-8339 ;
+      eissn = 1548-4785 ;
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = npj
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < exists ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < exists ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < exists ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < exists ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < exists ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < exists ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < exists ; 2011 ; Native Plants Journal Volume 12 ; 12 >
 
     }
 
