@@ -1687,7 +1687,7 @@
     au < released ; 2009 ; Equal Opportunities International Volume 28 ; 28 >
 
   }
-
+The Electronic Journal of Combinatorics
   {
   
     title <
@@ -1719,7 +1719,7 @@
     au < released ; 2008 ; EuroMed Journal of Business Volume 3 ; 3 >
     au < released ; 2009 ; EuroMed Journal of Business Volume 4 ; 4 >
     au < released ; 2010 ; EuroMed Journal of Business Volume 5 ; 5 >
-    au < testing ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 >
+    au < ready ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 >
 
   }
 
@@ -1924,10 +1924,11 @@
     param[journal_issn] = 1754-2413
 
     
-    au < manifest ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
-    au < manifest ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
-    au < manifest ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
-
+    au < testing ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
+    au < testing ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
+    au < testing ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
+    au < testing ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 >
+    
   }
 
   {
