@@ -48,6 +48,19 @@
 
   {
     title <
+      name = Journal of the Civil War Era ;
+      issn = 2154-4727 ;
+      eissn = 2159-9807 ;
+    >
+
+    param[journal_dir] = journal_of_the_civil_war_era
+
+    au < exists ; Journal of the Civil War Era Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Social Forces ;
       issn = 1534-7605 ;
       eissn = 0037-7732 ;
