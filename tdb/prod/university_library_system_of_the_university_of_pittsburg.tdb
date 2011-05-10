@@ -8,29 +8,6 @@
 
     {
       title <
-        name = Revista Iberoamericana ;
-        issn = 0034-9631 ;
-        eissn = 2154-4794
-      >
-
-      param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
-      param[journal_id] = Iberoamericana
-
-    }
-
-    {
-      title <
-        name = International Journal of Telerehabilitation ;
-        eissn = 1945-2020
-      >
-
-      param[base_url] = http://telerehab.pitt.edu/ojs/
-      param[journal_id] = telerehab
-
-    }
-
-    {
-      title <
         name = Bolivian Studies Journal ;
         issn = 1074-2247 ;
         eissn = 2156-5163
@@ -43,12 +20,24 @@
 
     {
       title <
-        name = Ricoeur Studies ;
-        eissn = 2156-7808
+        name = Excellence in Higher Education ;
+        issn = 2153-9669 ;
+        eissn = 2153-9677
       >
 
-      param[base_url] = http://ricoeur.pitt.edu/ojs/
-      param[journal_id] = ricoeur
+      param[base_url] = http://ehe.pitt.edu/ojs/
+      param[journal_id] = ehe
+
+    }
+
+    {
+      title <
+        name = International Journal of Telerehabilitation ;
+        eissn = 1945-2020
+      >
+
+      param[base_url] = http://telerehab.pitt.edu/ojs/
+      param[journal_id] = telerehab
 
     }
 
@@ -66,13 +55,24 @@
 
     {
       title <
-        name = Excellence in Higher Education ;
-        issn = 2153-9669 ;
-        eissn = 2153-9677
+        name = Revista Iberoamericana ;
+        issn = 0034-9631 ;
+        eissn = 2154-4794
       >
 
-      param[base_url] = http://ehe.pitt.edu/ojs/
-      param[journal_id] = ehe
+      param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
+      param[journal_id] = Iberoamericana
+
+    }
+
+    {
+      title <
+        name = Ricoeur Studies ;
+        eissn = 2156-7808
+      >
+
+      param[base_url] = http://ricoeur.pitt.edu/ojs/
+      param[journal_id] = ricoeur
 
     }
 
