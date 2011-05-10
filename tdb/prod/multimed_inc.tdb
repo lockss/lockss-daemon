@@ -5,6 +5,31 @@
 
   {
     title <
+      name = Current Oncology ;
+      issn = 1198-0052 ;
+      eissn = 1718-7729
+    >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.current-oncology.com/
+    param[journal_id] = oncology
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Clinical Medical Physics ;
+      issn = 1526-9914
+    >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.jacmp.org/
+    param[journal_id] = jacmp
+
+  }
+
+  {
+    title <
       name = Peritoneal Dialysis International ;
       issn = 0896-8608 ;
       eissn = 1718-4304 ;
