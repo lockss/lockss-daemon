@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDsysHtmlFilterFactory.java,v 1.2 2011-05-08 06:37:49 thib_gc Exp $
+ * $Id: GPOFDsysHtmlFilterFactory.java,v 1.3 2011-05-10 05:46:21 thib_gc Exp $
  */
 
 /*
@@ -34,14 +34,11 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.*;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
-import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 public class GPOFDsysHtmlFilterFactory implements FilterFactory {
 
@@ -50,19 +47,14 @@ public class GPOFDsysHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // May contain a session token
-        HtmlNodeFilters.tagWithAttribute("input", "name", "struts.token"),
-    };
-    InputStream parsed =  new HtmlFilterInputStream(in,
-                                                    encoding,
-                                                    HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     try {
-      return new ReaderInputStream(new HtmlTagFilter(new InputStreamReader(parsed,
-                                                                           encoding),
-                                                     // May contain a session token in a comment
-                                                     new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\"",
-                                                                 "-->")));
+      return new ReaderInputStream(HtmlTagFilter.makeNestedFilter(new InputStreamReader(in, encoding),
+                                                                  ListUtil.list(// May contain a session token in a comment
+                                                                                new TagPair("<!--<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+                                                                                            "\" />-->"),
+                                                                                // ...Or not in a comment, just two <input> tags in a row
+                                                                                new TagPair("<input type=\"hidden\" name=\"struts.token.name\" value=\"struts.token\" />",
+                                                                                            "\" />"))));
     }
     catch (UnsupportedEncodingException uee) {
       throw new PluginException(uee);
