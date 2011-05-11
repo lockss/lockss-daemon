@@ -9,6 +9,29 @@
 
   {
     title <
+      name = PLoS Biology ;
+      issn = 1544-9173 ;
+      eissn = 1545-7885 ;
+      issnl = 1544-9173
+    >
+    
+    param[base_url] = http://www.plosbiology.org/    
+    param[journal_id] = pbio
+
+    au < exists ; 2003 ; PLoS Biology Volume 1 ; 2003 >
+    au < exists ; 2004 ; PLoS Biology Volume 2 ; 2004 >
+    au < exists ; 2005 ; PLoS Biology Volume 3 ; 2005 >
+    au < exists ; 2006 ; PLoS Biology Volume 4 ; 2006 >
+    au < exists ; 2007 ; PLoS Biology Volume 5 ; 2007 >
+    au < exists ; 2008 ; PLoS Biology Volume 6 ; 2008 >
+    au < exists ; 2009 ; PLoS Biology Volume 7 ; 2009 >
+    au < exists ; 2010 ; PLoS Biology Volume 8 ; 2010 >
+    au < exists ; 2011 ; PLoS Biology Volume 9 ; 2011 >
+
+  }
+
+  {
+    title <
       name = PLoS Genetics ;
       issn = 1553-7390 ;
       eissn = 1553-7404 ;
