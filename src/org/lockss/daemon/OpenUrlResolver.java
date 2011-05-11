@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.10 2011-04-11 22:56:55 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.11 2011-05-11 21:34:12 pgust Exp $
  */
 
 /*
@@ -47,13 +47,11 @@ import java.util.Map;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
@@ -242,10 +240,12 @@ public class OpenUrlResolver {
     String isbn = getRftParam(params, "isbn");
     String edition = getRftParam(params, "edition");
     String date = getRftDate(params);
+    String volume = getRftParam(params, "volume");
 
     if (isbn != null) {
       // process a book or monographic series based on ISBN
-      String url = resolveFromIsbn(isbn, edition, spage, author, atitle);
+      String url = resolveFromIsbn(
+    	  isbn, date, volume, edition, spage, author, atitle);
       if (url == null) {
         log.debug3("Failed to resolve from ISBN: " + isbn);
       } else {
@@ -256,12 +256,12 @@ public class OpenUrlResolver {
     
     String eissn = getRftParam(params, "eissn");
     String issn = getRftParam(params, "issn");
-    String volume = getRftParam(params, "volume");
     String issue = getRftParam(params, "issue");
     
     // process a journal based on EISSN or ISSN
     String anyIssn = (eissn != null) ? eissn : issn;
     if (anyIssn != null) {
+
       // resolve from its eISSN
       String url = 
         resolveFromIssn(anyIssn, date, volume, issue, spage, author, atitle);
@@ -320,7 +320,8 @@ public class OpenUrlResolver {
           String id = (!isjournal) ? tdbTitle.getIsbn() : null;
           if (id != null) {
             // try resolving from ISBN
-            String url = resolveFromIsbn(id, edition, spage, author, atitle);
+            String url = resolveFromIsbn(
+            	id, date, volume, edition, spage, author, atitle);
             if (url != null) {
               log.debug3("Located url " + url + " for book ISBN " + id); 
             }
@@ -467,7 +468,7 @@ public class OpenUrlResolver {
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       String jTitle = null;
       if (tdb != null) {
-        TdbTitle title = tdb.getTdbTitleById(issn);
+        TdbTitle title = tdb.getTdbTitleByIsbn(issn);
         if (title != null) {
           jTitle = title.getName();
         }
@@ -513,11 +514,12 @@ public class OpenUrlResolver {
     }
 
     // skip over date section (1993)
-    int j = bici.indexOf(')',i+5);
+    int j = bici.indexOf(')',i+1);
     if (j < 0) {
       // did not find end of date section
       throw new ParseException("Missing end of date section", i+5);
     }
+    String date = bici.substring(i+1, j);
 
     // get volume and issue between end of
     // date section and start of article section
@@ -556,12 +558,13 @@ public class OpenUrlResolver {
     }
     
     // PJG: what about chapter number?
-    String url = resolveFromIsbn(isbn, null, spage, null, null);
+    // (isbn, date, volume, edition, spage, author, title) 
+    String url = resolveFromIsbn(isbn, date, null, null, spage, null, null);
     if ((url != null) && log.isDebug()) {
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
       String bTitle = null;
       if (tdb != null) {
-        TdbTitle title = tdb.getTdbTitleById(isbn);
+        TdbTitle title = tdb.getTdbTitleByIsbn(isbn);
         if (title != null) {
           bTitle = title.getName();
         }
@@ -569,6 +572,7 @@ public class OpenUrlResolver {
       if (log.isDebug3())  {
         String s = "Located cachedURL " + url +
         " for ISBN " + isbn +
+        ", year: " + date + 
         ", chapter: " + chapter +
         ", start page: " + spage;
         if (bTitle != null) {
@@ -705,13 +709,12 @@ public class OpenUrlResolver {
     } catch (IllegalArgumentException ex) {
       // intentionally ignore input error
     }
-
     if (url == null) {
       // resolve title, volume, AU, or issue TOC from TDB
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
       } else {
-        url = resolveJournalFromTdbTitle(title, date, volume, issue);
+    	url = resolveJournalFromTdbTitle(title, date, volume, issue);
       }
     }
     return url;
@@ -740,20 +743,84 @@ public class OpenUrlResolver {
     String url = null;
     try {
       conn = metadataMgr.newConnection();
-      url = resolveFromIssn(
-                      conn, issns, date, volume, issue, spage, author, atitle);
-      if (url == null) {
-        if ((spage != null) || (author != null) || (atitle != null)) {
-          url = resolveFromIssn(
-                          conn, issns, date, volume, issue, null, null, null);
+      StringBuilder query = new StringBuilder();
+      ArrayList<String> args = new ArrayList<String>();
+      buildAuxiliaryTableQuery(
+        MetadataManager.ISSN_TABLE, MetadataManager.ISSN_FIELD, 
+        issns, query, args);
+      
+      // true if properties specify an article
+      boolean hasArticleSpec = 
+          (spage != null) || (author != null) || (atitle != null);
+
+      // true if properties specified a journal item
+      boolean hasJournalSpec =
+          (date != null) || (volume != null) || (issue != null);
+
+      if (hasJournalSpec) {
+        // can specify an issue by a combination of date, volume and issue;
+        // how these combine varies, so do the most liberal match possible
+        // and filter based on multiple results
+        query.append(" and ");
+        if (date != null) {
+          // enables query "2009" to match "2009-05-10" in database
+          query.append(MetadataManager.DATE_FIELD);
+          query.append(" like ? escape '\\'");
+          args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
+        }
+        
+        if (volume != null) {
+          if (date != null) {
+            query.append(" and ");
+          }
+          query.append(MetadataManager.VOLUME_FIELD);
+          query.append(" = ?");
+          args.add(volume);
+        }
+
+        if (issue != null) {
+          if ((date != null) || (volume != null)) {
+        		query.append(" and ");
+          }
+          query.append(MetadataManager.ISSUE_FIELD);
+          query.append(" = ?");
+          args.add(issue);
         }
       }
-      if (url == null) { 
-        if ((date != null) || (volume != null) || (issue != null)) {
-          url = resolveFromIssn(
-                          conn, issns, null, null, null, null, null, null);
+                  
+      // handle start page, author, and article title as
+      // equivalent ways to specify an article within an issue
+      if (hasArticleSpec) {
+        // accept any of the three
+        query.append(" and ( ");
+      
+        if (spage != null) {
+          query.append(MetadataManager.START_PAGE_FIELD);
+          query.append(" = ?");
+          args.add(spage);
         }
+        if (atitle != null) {
+          if (spage != null) {
+            query.append(" or ");
+          }
+          query.append("upper(");
+          query.append(MetadataManager.ARTICLE_TITLE_FIELD);
+          query.append(") like ? escape '\\'");
+          args.add(atitle.toUpperCase().replace("%","\\%") + "%");
+        }
+        if ( author != null) {
+          if ((spage != null) || (atitle != null)) {
+            query.append(" or ");
+          }
+
+          // add the author query to the query
+          addAuthorQuery(author, query, args);
+        }
+        query.append(" )");
       }
+      
+      url = resolveFromQuery(conn, query.toString(), args);
+
     } catch (SQLException ex) {
       log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
         
@@ -763,178 +830,34 @@ public class OpenUrlResolver {
     return url;
   }
 
-  /**
-   * Return article URL from an ISSN, date, volume, issue, spage, and author. 
-   * The first author will only be used when the starting page is not given.
+  /** 
+   * Resolve query if a single URL matches.
    * 
-   * @param conn the database connection
-   * @param issns a list of alternate ISSNs for the title
-   * @param date the publication date
-   * @param volume the volume
-   * @param issue the issue
-   * @param spage the starting page
-   * @param author the first author's full name
-   * @param atitle the article title 
-   * @return the article URL
-   */
-  private String resolveFromIssn(
-      Connection conn,
-      String[] issns, String date, String volume, String issue, 
-      String spage, String author, String atitle) 
-      throws SQLException {
-
-    boolean useTitleTOC = false;
-    boolean useAuTOC = false;
-
-    StringBuilder query = new StringBuilder();
-    ArrayList<String> args = new ArrayList<String>();
-    buildAuxiliaryTableQuery(
-      MetadataManager.ISSN_TABLE, MetadataManager.ISSN_FIELD, 
-      issns, query, args);
-    
-    // true if properties specify an article
-    boolean hasArticleSpec = 
-        (spage != null) || (author != null) || (atitle != null);
-
-    // true if properties specified a journal item
-    boolean hasJournalSpec =
-        (date != null) || (volume != null) || (issue != null);
-
-    if (hasJournalSpec) {
-      // can specify an issue by a combination of date, volume and issue;
-      // how these combine varies, so do the most liberal match possible
-      // and filter based on multiple results
-      query.append(" and ");
-      if (date != null) {
-        // enables query "2009" to match "2009-05-10" in database
-        query.append(MetadataManager.DATE_FIELD);
-        query.append(" like ? escape '\\'");
-        args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
-      }
-      
-      if (volume != null) {
-        if (date != null) {
-          query.append(" and ");
-        }
-        query.append(MetadataManager.VOLUME_FIELD);
-        query.append(" = ?");
-        args.add(volume);
-      }
-
-      if (issue != null) {
-        // PJG: following test is temporary until plugins support issue TOCs:
-        // ignore issue if not looking for an article and either a volume or
-        // a date (implying a volume) is given
-        if (   hasArticleSpec 
-      	    || ((date == null) && (volume == null))) {  
-          if ((date != null) || (volume != null)) {
-        	query.append(" and ");
-          }
-          query.append(MetadataManager.ISSUE_FIELD);
-          query.append(" = ?");
-          args.add(issue);
-        }
-      }
-      
-    } else {
-      useTitleTOC = !hasArticleSpec;
-    }
-                
-    // handle start page, author, and article title as
-    // equivalent ways to specify an article within an issue
-    if (hasArticleSpec) {
-      // accept any of the three
-      query.append(" and ( ");
-    
-      if (spage != null) {
-        query.append(MetadataManager.START_PAGE_FIELD);
-        query.append(" = ?");
-        args.add(spage);
-      }
-      if (atitle != null) {
-        if (spage != null) {
-          query.append(" or ");
-        }
-        query.append("upper(");
-        query.append(MetadataManager.ARTICLE_TITLE_FIELD);
-        query.append(") like ? escape '\\'");
-        args.add(atitle.toUpperCase().replace("%","\\%") + "%");
-      }
-      if ( author != null) {
-        if ((spage != null) || (atitle != null)) {
-          query.append(" or ");
-        }
-
-        // add the author query to the query
-        addAuthorQuery(author, query, args);
-      }
-      query.append(" )");
-    } else {
-      useAuTOC = true;
-    }
-    String url = resolveFromQuery(
-                       conn, query.toString(), args, useAuTOC, useTitleTOC);
-    return url;
-  }
-  
-  /**
-   * Return the article URL by executing the query with the arguments.
-   * If useTitleTOC is true, returns the TOC for the title. Otherwise, 
-   * if useAuTOC is true, returns the URL of the AU TOC.
-   * <p>
-   * Note: will need to be revised if we ever have distinct volume and
-   * issue TOCs.
-   * 
-   * @param conn the database connection
+   * @param conn the connection
    * @param query the query
-   * @param args
-   * @param useAuTOC
-   * @param useTitleTOC
-   * @return
+   * @param args the args
+   * @return a single URL
    * @throws SQLException
    */
   private String resolveFromQuery(
-                  Connection conn, String query, List<String>args, 
-                  boolean useAuTOC, boolean useTitleTOC) throws SQLException {
+	  Connection conn, String query, List<String> args) throws SQLException {
+	
     log.debug3("query: " + query);
-    PreparedStatement stmt = conn.prepareStatement(query);
+    PreparedStatement stmt = conn.prepareStatement(query.toString());
     for (int i = 0; i < args.size(); i++) {
       log.debug3("  query arg:  " + args.get(i));      
       stmt.setString(i+1, args.get(i));
     }
     stmt.setMaxRows(2);  // only need 2 to to determine if unique
-    log.debug3("useAuTOC: " + useAuTOC + " useTitleTOC: " + useTitleTOC);
     ResultSet resultSet = stmt.executeQuery();
     String url = null;
     if (resultSet.next()) {
-      if (useAuTOC || useTitleTOC) {
-        // return the start URL for the AU as a TOC
-        // if a specific article is not specified.
-        String pluginId = resultSet.getString(2);
-        String auKey = resultSet.getString(3);
-        if ((pluginId != null) && (auKey != null)) {
-          PluginManager pluginMgr = daemon.getPluginManager();
-          String auId = PluginManager.generateAuId(pluginId, auKey);
-          ArchivalUnit au = pluginMgr.getAuFromId(auId);
-          if (au != null) {
-            if (!useTitleTOC) {
-              url = getStartUrl(au);
-            }
-            if (url == null) {
-              url = au.getConfiguration().get("base_url");
-            }
-          }
-        }
-      } else {
-        url = resultSet.getString(1);
-        if (resultSet.next()) {
-          log.debug3("entry not unique: " + url + " " + resultSet.getString(1));
-          url = null;
-        }
+      url = resultSet.getString(1);
+      if (resultSet.next()) {
+        log.debug3("entry not unique: " + url + " " + resultSet.getString(1));
+        url = null;
       }
     }
-    stmt.close();
-    log.debug3("url " + url);
     return url;
   }
 
@@ -948,23 +871,28 @@ public class OpenUrlResolver {
    * @return the article URL
    */
   private String resolveJournalFromTdbTitle(
-    TdbTitle title, String date, String volume, String issue) {
+    TdbTitle tdbTitle, String date, String volume, String issue) {
     TdbAu tdbau = null;
     boolean found = false;
+    
+    // get the year from the date
     String year = null;
     if (date != null) {
       int y = new PublicationDate(date).getYear();
       year = (y == 0) ? null : Integer.toString(y);
     }
 
-    for (Iterator<TdbAu> itr = title.getTdbAus().iterator(); 
+    // find a TdbAu that matches the date, and volume
+    for (Iterator<TdbAu> itr = tdbTitle.getTdbAus().iterator(); 
          !found && itr.hasNext(); ) {
       tdbau = itr.next();
 
+      // if neither year or volume specified, pick any TdbAu
       if ((volume == null) && (year == null)) {
     	break;
       }
       
+      // if volume specified, see if this TdbAu matches
       if (volume != null) {
         found = tdbau.includesVolume(volume);
         if (!found) {
@@ -972,6 +900,7 @@ public class OpenUrlResolver {
         }
       }
 
+      // if year specified, see if this TdbAu matches
       if (year != null) {
         found = tdbau.includesYear(year);
       }
@@ -984,48 +913,29 @@ public class OpenUrlResolver {
     String url = null;  // should be the title URL
     if (tdbau != null) {
       if (found) {
-    	url = getStartUrl(tdbau);
+    	if (year == null) {
+    	  year = tdbau.getYear();
+    	}
+    	if (volume == null) {
+    	  volume = tdbau.getVolume();
+    	}
+    	if (issue == null) {
+    	  issue  = tdbau.getIssue();
+    	}
       }
-      if (url == null) {
-        url = tdbau.getParam("base_url");  // baseURL isn't always a real URL
-      }
+  	  url = getJournalUrl(tdbau, year, volume, issue);
     }
     return url;
   }
   
   /**
-   * Get starting url from TdbAu.
-   * @param tdbau the TdbAu
-   * @return the starting URL
+   * Return the type entry parameter map for the specified Plugin and TdbAu.
+   * @param plugin the plugin
+   * @param tdbau the AU
+   * @return the parameter map
    */
-  private String getStartUrl(TdbAu tdbau) {
-    PluginManager pluginMgr = daemon.getPluginManager();
-    String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
-    Plugin plugin = pluginMgr.getPlugin(pluginKey);
-
-    String url = null;
-    if (plugin != null) {
-      log.debug3(  "geting starting url for plugin: " 
-                 + plugin.getClass().getName());
-      // get starting URL from a DefinablePlugin
-      url = getStartUrl(plugin, tdbau);
-      log.debug3("Found starting url from definable plugin: " + url);
-    } else {
-      log.debug3("No plugin found for key: " + pluginKey); 
-    }
-    return url;
-  }
-    
-  /**
-   * Gets the starting URL for an AU indicated by the DefinablePlugin 
-   * and parameter definitions specified by the TdbAu.
-   * 
-   * @param plugin the DefinablePlugin
-   * @param tdbau the TdbAu
-   * @return the starting URL
-   */
-  private static String getStartUrl(Plugin plugin, TdbAu tdbau) {
-    TypedEntryMap paramMap = new TypedEntryMap();
+  private static TypedEntryMap getParamMap(Plugin plugin, TdbAu tdbau) {
+	TypedEntryMap paramMap = new TypedEntryMap();
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       String sval = tdbau.getParam(key);
@@ -1044,19 +954,16 @@ public class OpenUrlResolver {
         }
       }
     }
-    String url = getStartUrl(plugin, paramMap);
-    return url;
+	return paramMap;
   }
   
   /**
-   * Gets the starting URL for an AU indicated by the DefinablePlugin 
-   * and parameter definitions specified by the TdbAu.
-   * 
-   * @param plugin the DefinablePlugin
-   * @param tdbau the TdbAu
-   * @return the starting URL
+   * Return the type entry parameter map for the specified AU.
+   * @param au the AU
+   * @return the parameter map
    */
-  private static String getStartUrl(ArchivalUnit au) {
+ /* for later use (pjg)
+  private static TypedEntryMap getParamMap(ArchivalUnit au) {
     TypedEntryMap paramMap = new TypedEntryMap();
 
     Configuration config = au.getConfiguration();
@@ -1072,21 +979,183 @@ public class OpenUrlResolver {
         }
       }
     }
-    String url = getStartUrl(plugin, paramMap);
+    return paramMap;
+  }
+*/
+  
+  /**
+   * Gets the book URL for an AU indicated by the DefinablePlugin 
+   * and parameter definitions specified by the TdbAu.
+   * 
+   * @param plugin the DefinablePlugin
+   * @param tdbau the TdbAu
+   * @param year the year
+   * @param volumeName the volume name
+   * @param issue the issue
+   * @return the issue URL
+   */
+/* for later use (pjg)  
+  private static String getBooklUrl(
+	  ArchivalUnit au, String volumeName, String year, String edition) {
+	TypedEntryMap paramMap = getParamMap(au);
+	Plugin plugin = au.getPlugin();
+	String url = getBookUrl(plugin, paramMap, volumeName, year, edition);
     return url;
+  }
+*/
+
+  /**
+   * Gets the book URL for a TdbAU indicated by the DefinablePlugin 
+   * and parameter definitions specified by the TdbAu.
+   * @param tdbau the TdbAu
+   * @param year the year
+   * @param volumeName the volume name
+   * @param edition the edition
+   * @return the starting URL
+   */
+  private String getBookUrl(
+	  TdbAu tdbau, String year, String volumeName, String edition) {
+    PluginManager pluginMgr = daemon.getPluginManager();
+    String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
+    Plugin plugin = pluginMgr.getPlugin(pluginKey);
+
+    String url = null;
+    if (plugin != null) {
+      log.debug3(  "geting issue url for plugin: " 
+                 + plugin.getClass().getName());
+      // get starting URL from a DefinablePlugin
+  	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
+      
+  	  // add volume with type and spelling of existing element
+  	  paramMap.setMapElement("volume", volumeName);
+  	  paramMap.setMapElement("volume_str",volumeName);
+  	  paramMap.setMapElement("volume_name", volumeName);
+  	  paramMap.setMapElement("year", year);
+  	  paramMap.setMapElement("edition", edition);
+
+      url = getBookUrl(plugin, paramMap);
+      log.debug3("Found starting url from definable plugin: " + url);
+    } else {
+      log.debug3("No plugin found for key: " + pluginKey); 
+    }
+    return url;
+  }
+    
+
+  /**
+   * Gets the book URL for a DefinablePlugin and parameter definitions.
+   * @param plugin the plugin
+   * @param paramMap the param map
+   * @return the issue URL
+   */
+  private static String getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
+	String startUrl = getPluginUrl(plugin, "au_edition_url", paramMap);
+	if (startUrl == null) {
+	  startUrl = getPluginUrl(plugin, "au_volume_url", paramMap);
+	  if (startUrl == null) {
+		startUrl = getPluginUrl(plugin, "au_start_url", paramMap);
+		if (startUrl == null) {
+		  startUrl = getPluginUrl(plugin, "au_title_url", paramMap);
+		  if (startUrl == null) {
+			startUrl = paramMap.getString("base_url");
+		  }
+		}
+	  }
+	}
+	return startUrl;
   }
 
   /**
-   * Get Evaluate
-   * @param plugin
-   * @param paramMap
-   * @return
+   * Gets the issue URL for an AU indicated by the DefinablePlugin 
+   * and parameter definitions specified by the TdbAu.
+   * 
+   * @param plugin the DefinablePlugin
+   * @param tdbau the TdbAu
+   * @param year the year
+   * @param volumeName the volume name
+   * @param issue the issue
+   * @return the issue URL
    */
-  private static String 
-    getStartUrl(Plugin plugin, TypedEntryMap paramMap) {
+/*  for later use (pjg)
+  private static String getJournalUrl(
+	  ArchivalUnit au, String year, String volumeName, String issue) {
+	TypedEntryMap paramMap = getParamMap(au);
+	Plugin plugin = au.getPlugin();
+	String url = getJournalUrl(plugin, paramMap, year, volumeName, issue);
+    return url;
+  }
+*/
+  /**
+   * Get starting url from TdbAu.
+   * @param tdbau the TdbAu
+   * @param year the year
+   * @param volumeName the volume name
+   * @param issue the issue
+   * @return the starting URL
+   */
+  private String getJournalUrl(
+	  TdbAu tdbau, String year, String volumeName, String issue) {
+    PluginManager pluginMgr = daemon.getPluginManager();
+    String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
+    Plugin plugin = pluginMgr.getPlugin(pluginKey);
+
+    String url = null;
+    if (plugin != null) {
+      log.debug3(  "geting issue url for plugin: " 
+                 + plugin.getClass().getName());
+      // get starting URL from a DefinablePlugin
+      // add volume with type and spelling of existing element
+  	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
+  	  paramMap.setMapElement("volume", volumeName);
+      paramMap.setMapElement("volume_str", volumeName);
+      paramMap.setMapElement("volume_name", volumeName);
+      paramMap.setMapElement("year", year);
+      paramMap.setMapElement("issue", issue);
+log.critical(">>>volumeName: " + volumeName + " year: " + year + " issue: " + issue);
+      url = getJournalUrl(plugin, paramMap);
+      log.debug3("Found starting url from definable plugin: " + url);
+    } else {
+      log.debug3("No plugin found for key: " + pluginKey); 
+    }
+    return url;
+  }
+    
+
+  /**
+   * Get the issueURL for the plugin.
+   * @param plugin the plugin
+   * @param paramMap the param map
+   * @return the issue URL
+   */
+  private static String getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
+	String startUrl = getPluginUrl(plugin, "au_issue_url", paramMap);
+	if (startUrl == null) {
+	  startUrl = getPluginUrl(plugin, "au_volume_url", paramMap);
+	  if (startUrl == null) {
+		startUrl = getPluginUrl(plugin, "au_start_url", paramMap);
+		if (startUrl == null) {
+		  startUrl = getPluginUrl(plugin, "au_title_url", paramMap);
+		  if (startUrl == null) {
+			startUrl = paramMap.getString("base_url");
+		  }
+		}
+	  }
+	}
+	return startUrl;
+  }
+  
+  /**
+   * Get the URL for the specified key from the plugin.
+   * @param plugin the plugin
+   * @param pluginKey the plugin key
+   * @param paramMap the param map
+   * @return the URL for the specified key
+   */
+  private static String
+  	getPluginUrl(Plugin plugin, String pluginKey, TypedEntryMap paramMap) {
     ExternalizableMap map;
 
-    // get printf pattern for "au_start_url" property
+    // get printf pattern for pluginKey property
     try {
       Method method = plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
       Object obj = method.invoke(plugin);
@@ -1099,7 +1168,7 @@ public class OpenUrlResolver {
       return null;
     }
         
-    Object obj = map.getMapElement("au_start_url");
+    Object obj = map.getMapElement(pluginKey);
     String printfString = null;
     if (obj instanceof String) {
       // get single pattern for start url
@@ -1116,6 +1185,11 @@ public class OpenUrlResolver {
       }
     }
 
+    if (printfString == null) {
+      log.debug("unknown plugin key: " + pluginKey);
+      return null;
+    }
+    
     String url = null;
     try {
       UrlListConverter converter = 
@@ -1126,7 +1200,7 @@ public class OpenUrlResolver {
         log.debug3("evaluated: " + printfString + " to url: " + url);
       }
     } catch (Throwable ex) {
-      log.warning("invalid  conversion", ex);
+      log.debug("invalid  conversion: " + ex.getMessage());
     }
       
     return url;
@@ -1137,15 +1211,46 @@ public class OpenUrlResolver {
    * Return the book URL from TdbTitle and edition.
    * 
    * @param title the TdbTitle
+   * @param date the publication date
+   * @param volume the volume
    * @param edition the edition
    * @return the book URL
    */
-  private String resolveBookFromTdbTitle(TdbTitle title, String edition) {
+  private String resolveBookFromTdbTitle(
+	  TdbTitle title, String date, String volume, String edition) {
     TdbAu tdbau = null;
     boolean found = false;
+
+    // get the year from the date
+    String year = null;
+    if (date != null) {
+      int y = new PublicationDate(date).getYear();
+      year = (y == 0) ? null : Integer.toString(y);
+    }
+
     for (Iterator<TdbAu> itr = title.getTdbAus().iterator(); 
          !found && itr.hasNext(); ) {
       tdbau = itr.next();
+      
+      // if neither year, volume, or edition specified, pick any TdbAu
+      if ((volume == null) && (year == null) && (edition == null)) {
+    	break;
+      }
+      
+      // if volume specified, see if this TdbAu matches
+      if (volume != null) {
+        found = tdbau.includesVolume(volume);
+        if (!found) {
+          continue;
+        }
+      }
+      // if year specified, see if this TdbAu matches
+      if (year != null) {
+        found = tdbau.includesYear(year);
+        if (!found) {
+          continue;
+        }
+      }
       
       // get the plugin id for the TdbAu that matches the specified edition
       if (edition != null) {
@@ -1156,18 +1261,14 @@ public class OpenUrlResolver {
       }
       found = true;
     }
+    
     if (log.isDebug3()) { 
       log.debug3(  "tdbau = " + ((tdbau == null) ? null : tdbau.getId()) 
                 + " found = " + found);
     }
     String url = null;  // should be the title URL
     if (tdbau != null) {
-      if (found) {
-        url = getStartUrl(tdbau);
-      }
-      if (url == null) {
-        url = tdbau.getParam("base_url");  // baseURL isn't always a real URL
-      }
+  	  url = getBookUrl(tdbau, year, volume, edition);
     }
     return url;
   }
@@ -1179,6 +1280,8 @@ public class OpenUrlResolver {
    * schema for books.  First author can be used in place of start page.
    * 
    * @param isbn the isbn
+   * @param date the date
+   * @param volume the volume
    * @param edition the edition
    * @param spage the start page
    * @param author the first author
@@ -1186,25 +1289,26 @@ public class OpenUrlResolver {
    * @return the article URL
    */
   public String resolveFromIsbn(
-    String isbn, String edition, String spage, String author, String atitle) {
+    String isbn, String date, String volume, String edition, 
+    String spage, String author, String atitle) {
     String url = null;
     // only go to metadata manager if requesting individual article/chapter
     try {
       // resolve from metadata manager
       MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromIsbn(metadataMgr, isbn, edition, spage, author, atitle);
+      url = resolveFromIsbn(metadataMgr, isbn, date, volume, edition, spage, author, atitle);
     } catch (IllegalArgumentException ex) {
     }
 
     if (url == null) {
       // resolve from TDB
       Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-      TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleById(isbn);
+      TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIsbn(isbn);
       if (title == null) {
         log.debug3("No TdbTitle for isbn " + isbn);
         return null;
       }
-      return resolveBookFromTdbTitle(title, edition);
+      return resolveBookFromTdbTitle(title, date, volume, edition);
     }
     return url;
   }
@@ -1223,6 +1327,8 @@ public class OpenUrlResolver {
    * 
    * @param metadataMgr the metadata manager
    * @param isbn the isbn
+   * @param String date the date
+   * @param String volumeName the volumeName
    * @param edition the edition
    * @param spage the start page
    * @param author the first author
@@ -1231,18 +1337,91 @@ public class OpenUrlResolver {
    */
   private String resolveFromIsbn(
         MetadataManager metadataMgr, String isbn, 
-        String edition, String spage, String author, String atitle) {
+        String date, String volume, String edition, 
+        String spage, String author, String atitle) {
         String url = null;
     Connection conn = null;
     try {
       conn = metadataMgr.newConnection();
-      url = resolveFromIsbn(conn, isbn, edition, spage, author, atitle);
-      if (url == null) {
-        url = resolveFromIsbn(conn, isbn, edition, null, null, null);
-        if ((url == null) && (edition != null)) {
-          url = resolveFromIsbn(conn, isbn, null, null, null, null);
+      // strip punctuation
+      isbn = isbn.replaceAll("[- ]", "");
+      
+      StringBuilder query = new StringBuilder();
+      ArrayList<String> args = new ArrayList<String>();
+      buildAuxiliaryTableQuery(
+        MetadataManager.ISBN_TABLE, MetadataManager.ISBN_FIELD,
+        new String[] {isbn}, query, args);
+
+      boolean hasBookSpec = 
+    	(date != null) || (volume != null) || (edition != null); 
+      
+      boolean hasArticleSpec = 
+    	(spage != null) || (author != null) || (atitle != null);
+      
+      if (hasBookSpec) {
+        // can specify an issue by a combination of date, volume and issue;
+        // how these combine varies, so do the most liberal match possible
+        // and filter based on multiple results
+        query.append(" and ");
+        if (date != null) {
+          // enables query "2009" to match "2009-05-10" in database
+          query.append(MetadataManager.DATE_FIELD);
+          query.append(" like ? escape '\\'");
+          args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
+        }
+        
+        if (volume != null) {
+          if (date != null) {
+            query.append(" and ");
+          }
+          query.append(MetadataManager.VOLUME_FIELD);
+          query.append(" = ?");
+          args.add(volume);
+        }
+
+        if (edition != null) {
+          if ((date != null) || (volume != null)) {
+        	query.append(" and ");
+          }
+          query.append(MetadataManager.EDITION_FIELD);
+          query.append(" = ?");
+          args.add(edition);
         }
       }
+
+      // handle start page, author, and article title as
+      // equivalent ways to specify an article within an issue
+      if (hasArticleSpec) {
+        // accept any of the three
+        query.append(" and ( ");
+          
+        if (spage != null) {
+          query.append(MetadataManager.START_PAGE_FIELD);
+          query.append(" = ?");
+          args.add(spage);
+        }
+        if (atitle != null) {
+          if (spage != null) {
+            query.append(" or ");
+          }
+          query.append(MetadataManager.ARTICLE_TITLE_FIELD);
+          query.append(" like ? escape '\\'");
+          args.add(atitle.replace("%","\\%") + "%");
+        }
+        if ( author != null) {
+          if ((spage != null) || (atitle != null)) {
+            query.append(" or ");
+          }
+          // add the author query to the query
+          addAuthorQuery(author, query, args);
+        }
+    
+        query.append(" )");
+
+      }
+      
+      url = resolveFromQuery(conn, query.toString(), args);
+      
     } catch (SQLException ex) {
       log.error("Getting ISBN:" + isbn, ex);
         
@@ -1252,87 +1431,6 @@ public class OpenUrlResolver {
     return url;
   }
   
-  /**
-   * Return the article URL from an ISBN, edition, start page, author, and
-   * article title using the metadata database.
-   * <p>
-   * The algorithm matches the ISBN and optionally the edition, and either 
-   * the start page, author, or article title. The reason for matching on any
-   * of the three is that typos in author and article title are always 
-   * possible so we want to be more forgiving in matching an article.
-   * <p>
-   * If none of the three are specified, the URL for the book table of contents 
-   * is returned.
-   * 
-   * @param metadataMgr the metadata manager
-   * @param isbn the isbn
-   * @param edition the edition
-   * @param spage the start page
-   * @param author the first author
-   * @param atitle the chapter title
-   * @return the url
-   * @throws SQLException if an error occurred querying database
-   */
-  private String resolveFromIsbn(
-        Connection conn, String isbn, 
-        String edition, String spage, String author, String atitle) 
-        throws SQLException {
-    // strip punctuation
-    isbn = isbn.replaceAll("[- ]", "");
-    
-    boolean useAuTOC = false;
-
-    StringBuilder query = new StringBuilder();
-    ArrayList<String> args = new ArrayList<String>();
-    buildAuxiliaryTableQuery(
-      MetadataManager.ISBN_TABLE, MetadataManager.ISBN_FIELD,
-      new String[] {isbn}, query, args);
-  
-    if (edition != null) {
-      query.append(" and ");
-      query.append(MetadataManager.VOLUME_FIELD);
-      query.append(" = ?");  // volume stores edition for books
-      args.add(edition);
-    }
-
-    // handle start page, author, and article title as
-    // equivalent ways to specify an article within an issue
-    if ((spage != null) || (author != null) || (atitle != null)) {
-      // accept any of the three
-      query.append(" and ( ");
-        
-      if (spage != null) {
-        query.append(MetadataManager.START_PAGE_FIELD);
-        query.append(" = ?");
-        args.add(spage);
-      }
-      if (atitle != null) {
-        if (spage != null) {
-          query.append(" or ");
-        }
-        query.append(MetadataManager.ARTICLE_TITLE_FIELD);
-        query.append(" like ? escape '\\'");
-        args.add(atitle.replace("%","\\%") + "%");
-      }
-      if ( author != null) {
-        if ((spage != null) || (atitle != null)) {
-          query.append(" or ");
-        }
-        // add the author query to the query
-        addAuthorQuery(author, query, args);
-      }
-  
-      query.append(" )");
-
-    } else {
-      useAuTOC = true;
-    }
-    
-    String url = resolveFromQuery(
-                       conn, query.toString(), args, useAuTOC, false);
-    return url;
-  }
-
   /**
    * Build a query for the field in the specified auxiliary table 
    * (e.g. MetadataManager.ISSN_TABLE, MetadataManager.ISBN_TABLE
