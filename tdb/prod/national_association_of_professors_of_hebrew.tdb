@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = National Association of Professors of Hebrew
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Hebrew Studies ;
+      issn = 0146-4094 ;
+      eissn = 2158-1681 ;
+    >
+
+    param[journal_dir] = hebrew_studies
+
+    au < exists ; 2010 ; Hebrew Studies Volume 51 ; 51 >
+
+  }
+
+}
