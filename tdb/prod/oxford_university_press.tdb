@@ -359,7 +359,8 @@
       title <
         name = Applied Economic Perspectives and Policy ;
         issn = 2040-5790 ;
-        eissn = 2040-5804
+        eissn = 2040-5804 ;
+        issnl = 2040-5790 
       >
 
       {
@@ -367,6 +368,31 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://aepp.oxfordjournals.org/
         implicit < status ; year ; name ; param[volume_name] >
+		
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 23 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 33 ; 33 >
 
       }
 
@@ -412,7 +438,8 @@
       title <
         name = Arbitration Law Reports and Review ;
         issn = 2044-8651 ;
-        eissn = 2044-9887
+        eissn = 2044-9887 ;
+        issnl = 2044-8651
       >
 
       {
@@ -420,6 +447,13 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://alrr.oxfordjournals.org/
         implicit < status ; year ; name ; param[volume_name] >
+
+        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2001 ; 2001 >
+        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2002 ; 2002 >
+        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2003 ; 2003 >
+        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2004 ; 2004 >
+        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2005 ; 2005 >
+        au < HighWirePressH20Plugin ; manifest ; Arbitration Law Reports and Review 2006 ; 2006 >
 
       }
 
@@ -3436,8 +3470,117 @@
 
       title <
         name = Journal of American History ;
-        eissn = 0021-8723
+        issn = 0021-8723 ;
+        eissn = 1945-2314 ;
+        issnl = 1945-2314
       >
+      
+      {
+        
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jah.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume] >
+      
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of American History Volume 97 ; 97 >
+      
+      }
+      
     }
 
     {
@@ -3904,6 +4047,210 @@
         param[base_url] = http://jid.oxfordjournals.org/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 105 ; 105 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 106 ; 106 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 107 ; 107 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 108 ; 108 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 109 ; 109 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 110 ; 110 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 111 ; 111 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 112 ; 112 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 113 ; 113 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 114 ; 114 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 115 ; 115 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 116 ; 116 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 117 ; 117 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 118 ; 118 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 119 ; 119 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 120 ; 120 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 121 ; 121 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 122 ; 122 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 123 ; 123 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 124 ; 124 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 125 ; 125 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 126 ; 126 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 127 ; 127 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 128 ; 128 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 129 ; 129 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 130 ; 130 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 131 ; 131 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 132 ; 132 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 133 ; 133 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 134 ; 134 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 135 ; 135 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 136 ; 136 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 137 ; 137 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 138 ; 138 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 139 ; 139 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 140 ; 140 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 141 ; 141 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 142 ; 142 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 143 ; 143 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 144 ; 144 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 145 ; 145 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 146 ; 146 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 147 ; 147 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 148 ; 148 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 149 ; 149 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 150 ; 150 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 151 ; 151 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 152 ; 152 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 153 ; 153 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 154 ; 154 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 155 ; 155 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 156 ; 156 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 157 ; 157 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 158 ; 158 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 159 ; 159 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 160 ; 160 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 161 ; 161 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 162 ; 162 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 163 ; 163 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 164 ; 164 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 165 ; 165 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 166 ; 166 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 167 ; 167 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 168 ; 168 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 169 ; 169 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 170 ; 170 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 171 ; 171 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 172 ; 172 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 173 ; 173 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 174 ; 174 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 175 ; 175 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 176 ; 176 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 177 ; 177 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 178 ; 178 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 179 ; 179 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 180 ; 180 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 181 ; 181 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 182 ; 182 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 183 ; 183 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 184 ; 184 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 185 ; 185 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 186 ; 186 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 187 ; 187 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 188 ; 188 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 189 ; 189 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 190 ; 190 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 191 ; 191 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 192 ; 192 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 193 ; 193 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 194 ; 194 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 195 ; 195 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 196 ; 196 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 197 ; 197 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 198 ; 198 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 199 ; 199 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 200 ; 200 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 201 ; 201 >
+        au < HighWirePressH20Plugin ; exists ; Journal of Infectious Diseases Volume 202 ; 202 >
+        au < HighWirePressH20Plugin ; manifest ; Journal of Infectious Diseases Volume 203 ; 203 >
+        
       }
 
     }
@@ -5524,8 +5871,45 @@
 
       title <
         name = OAH Magazine of History ;
-        eissn = 0882-228X
+        issn = 0882-228X ;
+        eissn = 1938-2340;
+        issnl = 0882-228X        
       >
+      
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://maghis.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; manifest ; OAH Magazine of History Volume 25 ; 25 >
+              
+      }
+      
     }
   
     {
@@ -5589,8 +5973,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; testing ; The Opera Quarterly Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; testing ; The Opera Quarterly Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; ready ; The Opera Quarterly Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; ready ; The Opera Quarterly Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; The Opera Quarterly Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; ready ; The Opera Quarterly Volume 26 ; 26 >
@@ -5613,10 +5997,10 @@
         param[base_url] = http://ohr.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; testing ; The Oral History Review Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; ready ; The Oral History Review Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; The Oral History Review Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; The Oral History Review Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; testing ; The Oral History Review Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; ready ; The Oral History Review Volume 37 ; 37 >
 
       }
       
@@ -5649,10 +6033,10 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Oxford Art Journal Volume 28 ; 28 >
         au < HighWirePressPlugin ; doNotProcess ; Oxford Art Journal Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; testing ; Oxford Art Journal Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; ready ; Oxford Art Journal Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Oxford Art Journal Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; Oxford Art Journal Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; testing ; Oxford Art Journal Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; ready ; Oxford Art Journal Volume 33 ; 33 >
 
       }
 
@@ -5687,8 +6071,8 @@
         au < HighWireStrVolPlugin ; down ; Oxford Economic Papers Volume 59 ; 59 >
         au < HighWirePressPlugin ; down ; Oxford Economic Papers Volume 60 ; 60 >
         au < HighWirePressPlugin ; down ; Oxford Economic Papers Volume 61 ; 61 >
-        au < HighWirePressH20Plugin ; testing ; Oxford Economic Papers Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; testing ; Oxford Economic Papers Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; ready ; Oxford Economic Papers Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; ready ; Oxford Economic Papers Volume 63 ; 63 >
 
       }
 
@@ -5758,7 +6142,7 @@
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Oxford Review of Economic Policy Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; testing ; Oxford Review of Economic Policy Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; ready ; Oxford Review of Economic Policy Volume 26 ; 26 >
 
       }
 
@@ -5794,7 +6178,7 @@
         au < HighWirePressPlugin ; down ; Parliamentary Affairs Volume 61 ; 61 >
         au < HighWirePressPlugin ; ready ; Parliamentary Affairs Volume 62 ; 62 >
         au < HighWirePressH20Plugin ; ready ; Parliamentary Affairs Volume 63 ; 63 >
-        au < HighWirePressH20Plugin ; testing ; Parliamentary Affairs Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; ready ; Parliamentary Affairs Volume 64 ; 64 >
 
       }
 
@@ -5842,13 +6226,13 @@
         au < HighWirePressPlugin ; down ; Past & Present Volume 201 ; 201 >
         au < HighWirePressPlugin ; down ; Past & Present Volume 202 ; 202 >
         au < HighWirePressPlugin ; down ; Past & Present Volume 203 ; 203 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 204 ; 204 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 204 ; 204 >
         au < HighWirePressH20Plugin ; ready ; Past & Present Volume 205 ; 205 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 206 ; 206 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 207 ; 207 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 208 ; 208 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 209 ; 209 >
-        au < HighWirePressH20Plugin ; testing ; Past & Present Volume 210 ; 210 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 206 ; 206 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 207 ; 207 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 208 ; 208 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 209 ; 209 >
+        au < HighWirePressH20Plugin ; ready ; Past & Present Volume 210 ; 210 >
 
       }
 
@@ -5884,7 +6268,7 @@
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 17 ; 17 >
         au < HighWirePressPlugin ; doNotProcess ; Philosophia Mathematica Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; testing ; Philosophia Mathematica Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; ready ; Philosophia Mathematica Volume 19 ; 19 >
 
       }
 
@@ -5919,7 +6303,7 @@
         au < HighWirePressPlugin ; down ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; down ; Plant and Cell Physiology Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; ready ; Plant and Cell Physiology Volume 51 ; 51 >
-        au < HighWirePressH20Plugin ; testing ; Plant and Cell Physiology Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; ready ; Plant and Cell Physiology Volume 52 ; 52 >
 
       }
 
@@ -5942,7 +6326,7 @@
         au < HighWirePressH20Plugin ; ready ; Policing: A Journal of Policy and Practice Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Policing: A Journal of Policy and Practice Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Policing: A Journal of Policy and Practice Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; testing ; Policing: A Journal of Policy and Practice Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; ready ; Policing: A Journal of Policy and Practice Volume 4 ; 4 >
 
       }
 
