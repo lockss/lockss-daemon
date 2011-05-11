@@ -1544,7 +1544,7 @@ comment[ajs] = this journal has been moved to H20 platform
 
       }
 
-  }
+    }
 
     {
 
@@ -3301,13 +3301,13 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
     }
 
-  {
-    title <
-      name = Emotional & Behavioural Difficulties ;
-      issn = 1363-2752 ;
-      eissn = 1741-2692
-    >
-
+    {
+      title <
+        name = Emotional & Behavioural Difficulties ;
+        issn = 1363-2752 ;
+        eissn = 1741-2692
+      >
+		{
         comment[ebd] = now published by Taylor & Francis
 
         pluginSuffix = HighWirePlugin
@@ -13655,6 +13655,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
       }
+    }
 
     {
       title <
