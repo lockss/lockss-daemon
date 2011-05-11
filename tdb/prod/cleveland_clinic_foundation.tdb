@@ -6,6 +6,7 @@
 
   implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://www.ccjm.org/
+  plugin = no.plugin
 
   {
 
