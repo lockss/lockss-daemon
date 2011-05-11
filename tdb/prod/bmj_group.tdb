@@ -798,19 +798,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
   {
     title <
-      name = In Practice ;
-      eissn = 2042-7689 
-    >
-
-    {
-
-      param[base_url] = http://inpractice.bmj.com/
-
-    }
-  }
-
-  {
-    title <
       name = Injury Prevention ;
       issn = 1353-8047 ;
       eissn = 1475-5785 ;
@@ -1630,20 +1617,6 @@ comment[tc15] = recursive URL structure
 
     }
 
-  }
-
-  {
-    title <
-      name = Veterinary Record ;
-      eissn = 2042-7670 
-    >
-
-    {
-
-      param[base_url] = http://veterinaryrecord.bmj.com
-
-    }
-    
   }
 
 }
