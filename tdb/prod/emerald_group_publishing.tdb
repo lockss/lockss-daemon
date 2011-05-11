@@ -16,6 +16,7 @@
     >
 
     param[journal_issn] = 1030-9616
+    comment[platform] = online from 2005
 
     au < released ; 2005 ; Accounting Research Journal Volume 18 ; 18 >
     au < released ; 2006 ; Accounting Research Journal Volume 19 ; 19 >
@@ -58,6 +59,7 @@
     au < released ; 2008 ; Accounting, Auditing & Accountability Journal Volume 21 ; 21 >
     au < released ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
     au < manifest ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
+    au < exists ; 2011 ; Accounting, Auditing & Accountability Journal Volume 24 ; 24 >
 
   }
 
@@ -72,6 +74,7 @@
     param[journal_issn] = 2040-0705
 
     au < manifest ; 2010 ; African Journal of Economic and Management Studies Volume 1 ; 1 >
+    au < exists ; 2011 ; African Journal of Economic and Management Studies Volume 2 ; 2 >
 
   }
 
@@ -84,6 +87,7 @@
     >
 
     param[journal_issn] = 0002-1466
+    comment[platform] = online from 2000
 
     au < released ; 2000 ; Agricultural Finance Review Volume 60 ; 60 >
     au < released ; 2001 ; Agricultural Finance Review Volume 61 ; 61 >
@@ -190,6 +194,7 @@
     au < released ; 2008 ; Aircraft Engineering and Aerospace Technology Volume 80 ; 80 >
     au < released ; 2009 ; Aircraft Engineering and Aerospace Technology Volume 81 ; 81 >
     au < manifest ; 2010 ; Aircraft Engineering and Aerospace Technology Volume 82 ; 82 >
+    au < exists ; 2011 ; Aircraft Engineering and Aerospace Technology Volume 83 ; 83 >
 
   }
 
@@ -211,6 +216,8 @@
     >
 
     param[journal_issn] = 0735-8547
+    comment[platform] = online from 1995
+    comment[merged] = into Policing
     
     au < released ; 1995 ; American Journal of Police Volume 14 ; 14 >
     au < released ; 1996 ; American Journal of Police Volume 15 ; 15 >
@@ -297,6 +304,7 @@
     >
 
     param[journal_issn] = 1363-8483
+    comment[merged] = into Strategy & Leadership
     
     au < released ; 1996 ; The Antidote Volume 1 ; 1 >
     au < released ; 1997 ; The Antidote Volume 2 ; 2 >
@@ -338,6 +346,7 @@
     au < released ; 2008 ; Asia Pacific Journal of Marketing and Logistics Volume 20 ; 20 >
     au < released ; 2009 ; Asia Pacific Journal of Marketing and Logistics Volume 21 ; 21 >
     au < manifest ; 2010 ; Asia Pacific Journal of Marketing and Logistics Volume 22 ; 22 >
+    au < exists ; 2011 ; Asia Pacific Journal of Marketing and Logistics Volume 23 ; 23 >
 
   }
 
@@ -363,6 +372,7 @@
     >
 
     param[journal_issn] = 1017-6748
+    comment[merged] = into New Library World
     
     au < released ; 1997 ; Asian Libraries Volume 6 ; 6 >
     au < released ; 1998 ; Asian Libraries Volume 7 ; 7 >
@@ -413,6 +423,7 @@
     
     au < released ; 2009 ; Asia-Pacific Journal of Business Administration Volume 1 ; 1 >
     au < manifest ; 2010 ; Asia-Pacific Journal of Business Administration Volume 2 ; 2 >
+    au < exists ; 2011 ; Asia-Pacific Journal of Business Administration Volume 3 ; 3 >
 
   }
 
@@ -488,6 +499,7 @@
     au < released ; 2008 ; Aslib Proceedings: New Information Perspectives Volume 60 ; 60 >
     au < released ; 2009 ; Aslib Proceedings: New Information Perspectives Volume 61 ; 61 >
     au < manifest ; 2010 ; Aslib Proceedings: New Information Perspectives Volume 62 ; 62 >
+    au < exists ; 2011 ; Aslib Proceedings: New Information Perspectives Volume 63 ; 63 >
 
   }
 
@@ -531,6 +543,7 @@
     au < released ; 2008 ; Assembly Automation Volume 28 ; 28 >
     au < released ; 2009 ; Assembly Automation Volume 29 ; 29 >
     au < manifest ; 2010 ; Assembly Automation Volume 30 ; 30 >
+    au < exists ; 2011 ; Assembly Automation Volume 31 ; 31 >
 
   }
 
@@ -543,6 +556,7 @@
     >
 
     param[journal_issn] = 0965-7967
+    comment[merged] = into The Journal of Risk Finance
 
     au < released ; 2000 ; Balance Sheet Volume 8 ; 8 >
     au < released ; 2001 ; Balance Sheet Volume 9 ; 9 >
@@ -597,7 +611,7 @@
     au < released ; 2008 ; Benchmarking: An International Journal Volume 15 ; 15 >
     au < released ; 2009 ; Benchmarking: An International Journal Volume 16 ; 16 >
     au < manifest ; 2010 ; Benchmarking: An International Journal Volume 17 ; 17 >
-
+    au < exists ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
   }
 
   {
@@ -1840,8 +1854,8 @@
     param[journal_issn] = 0953-3230
 
     
-    au < manifest ; 1994 ; Executive Development Volume 7 ; 7 >
-    au < manifest ; 1995 ; Executive Development Volume 8 ; 8 >
+    au < testing ; 1994 ; Executive Development Volume 7 ; 7 >
+    au < testing ; 1995 ; Executive Development Volume 8 ; 8 >
 
   }
 
@@ -1924,10 +1938,10 @@
     param[journal_issn] = 1754-2413
 
     
-    au < testing ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
-    au < testing ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
-    au < testing ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
-    au < testing ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 >
+    au < ready ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
+    au < ready ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
+    au < ready ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
+    au < ready ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 >
     
   }
 
@@ -6944,6 +6958,7 @@
     au < released ; 2008 ; Policing: An International Journal of Police Strategies & Management Volume 31 ; 31 >
     au < released ; 2009 ; Policing: An International Journal of Police Strategies & Management Volume 32 ; 32 >
     au < released ; 2010 ; Policing: An International Journal of Police Strategies & Management Volume 33 ; 33 >
+    au < exists ; 2011 ; Policing: An International Journal of Police Strategies & Management Volume 34 ; 34 >
 
   }
 
@@ -7560,6 +7575,7 @@
     au < released ; 2008 ; Strategy & Leadership Volume 36 ; 36 >
     au < released ; 2009 ; Strategy & Leadership Volume 37 ; 37 >
     au < released ; 2010 ; Strategy & Leadership Volume 38 ; 38 >
+    au < exists ; 2011 ; Strategy & Leadership Volume 39 ; 39 >
 
   }
 
