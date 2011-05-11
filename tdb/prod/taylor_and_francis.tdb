@@ -9,6 +9,17 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+
+    title < 
+      name = 21st Century Society: Journal of the Academy of Social Sciences ;
+      issn = 1745-0144 ;
+      eissn = 1745-0152 ;
+      issnl = 1745-0144
+    >
+
+  }
+
+  {
     title <
       name = The American Journal of Bioethics ;
       issn = 1526-5161 ;
@@ -22,17 +33,6 @@
     au < manifest ; The American Journal of Bioethics Volume 2 ; 2 >
     au < manifest ; The American Journal of Bioethics Volume 3 ; 3 >
     au < released ; The American Journal of Bioethics Volume 4 ; 4 >
-
-  }
-
-  {
-
-    title < 
-      name = 21st Century Society: Journal of the Academy of Social Sciences ;
-      issn = 1745-0144 ;
-      eissn = 1745-0152 ;
-      issnl = 1745-0144
-    >
 
   }
 
@@ -3854,6 +3854,17 @@
       issn = 0308-5147 ;
       eissn = 1469-5766 ;
       issnl = 0308-5147
+    >
+
+  }
+
+  {
+
+    title < 
+      name = Ecquid Novi: African Journalism Studies ;
+      issn = 0256-0054 ;
+      eissn = 1942-0773 ;
+      issnl = 0256-0054
     >
 
   }
