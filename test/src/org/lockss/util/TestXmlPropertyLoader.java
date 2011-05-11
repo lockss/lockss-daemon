@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.28 2010-04-05 17:55:34 pgust Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.29 2011-05-11 06:35:26 pgust Exp $
  */
 
 /*
@@ -37,11 +37,9 @@ import java.io.*;
 import java.net.URL;
 import javax.xml.parsers.*;
 
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
-import org.lockss.util.*;
 
 /**
  * Test class for <code>org.lockss.util.XmlPropertyLoader</code> and
@@ -1311,6 +1309,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     sb.append("        <property name=\"attributes.publisher\" value=\"University of Notre Dame\" />\n");
     sb.append("        <property name=\"issn\" value=\"0003-0031\" />\n");
     sb.append("        <property name=\"journalTitle\" value=\"The American Midland Naturalist\" />\n");
+    sb.append("        <property name=\"journalId\" value=\"0003-0031\" />\n");
     sb.append("        <property name=\"title\" value=\"The American Midland Naturalist Volume 139\" />\n");
     sb.append("        <property name=\"plugin\" value=\"org.lockss.plugin.bioone.BioOnePlugin\" />\n");
     sb.append("        <property name=\"param.1\">\n");
