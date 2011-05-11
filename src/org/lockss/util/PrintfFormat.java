@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.6 2011-05-11 22:12:08 pgust Exp $
+ * $Id: PrintfFormat.java,v 1.7 2011-05-11 22:16:42 pgust Exp $
  */
 
 //
@@ -1159,7 +1159,7 @@ public class PrintfFormat {
             break;
     	
       	  }
-    	} catch (Throwable ex) {
+    	} catch (NumberFormatException ex) {
     	}
     	if (s2 == null) {
     	  throw new IllegalArgumentException("Cannot "+
