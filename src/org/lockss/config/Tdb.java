@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
+ * $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
+ * @version $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
+   * @version $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -775,28 +775,7 @@ public class Tdb {
    */
   private String getTdbTitleId(Properties props, TdbAu au) {
     // get the title ID from one of several props
-    String titleId = null;
-
-    // use isbn property as title id if not already set
-    if (titleId == null) {
-      titleId = props.getProperty("isbn");
-    }
-
-    // use eissn property as title id if not already set
-    if (titleId == null) {
-      titleId = props.getProperty("issnl");
-    }
-
-    // use eissn property as title id if not already set
-    if (titleId == null) {
-      titleId = props.getProperty("eissn");
-    }
-
-    // use issn property as title id if not already set
-    if (titleId == null) {
-      titleId = props.getProperty("issn");
-    }
-    
+    String titleId = props.getProperty("journalId");
     return titleId;
   }
   
@@ -1001,7 +980,7 @@ public class Tdb {
   }
   
   /**
-   * Get the title for the specified issn.
+   * Get a title for the specified issn.
    *  
    * @param issn the issn
    * @return the title for the titleId or <code>null</code. if not found
@@ -1022,7 +1001,7 @@ public class Tdb {
   }
   
   /**
-   * Get the title for the specified isbn.
+   * Get a title for the specified isbn.
    *  
    * @param isbn the isbn
    * @return the title for the isbn or <code>null</code. if not found
