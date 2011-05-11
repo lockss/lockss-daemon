@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.18 2010-09-01 07:50:37 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.19 2011-05-11 03:31:56 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_FORCE_START_V3_POLL = "Force V3 Poll";
   static final String ACTION_START_CRAWL = "Start Crawl";
   static final String ACTION_FORCE_START_CRAWL = "Force Start Crawl";
+  static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
 
   static final String COL2 = "colspan=2";
@@ -156,6 +157,9 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_FORCE_START_CRAWL.equals(action)) {
       forceCrawl();
     }
+    if (ACTION_CRAWL_PLUGINS.equals(action)) {
+      crawlPluginRegistries();
+    }
     displayPage();
   }
 
@@ -180,11 +184,7 @@ public class DebugPanel extends LockssServlet {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      if (((CrawlManagerImpl)crawlMgr).isEligibleForNewContentCrawl(au)) {
-	Configuration config = cfgMgr.getCurrentConfig();
-	int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
-	crawlMgr.startNewContentCrawl(au, pri, null, null, null);
-	statusMsg = "Crawl requested for " + au.getName();
+      if (startCrawl(au, false)) {
       } else {
  	errMsg = "Not eligible for crawl.  Click again to override rate limiter.";
  	showForceCrawl = true;
@@ -200,22 +200,55 @@ public class DebugPanel extends LockssServlet {
     ArchivalUnit au = getAu();
     if (au == null) return;
     try {
-      CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
-      RateLimiter limit = cmi.getNewContentRateLimiter(au);
-      if (!limit.isEventOk()) {
-	limit.unevent();
-      }
-      if (cmi.isEligibleForNewContentCrawl(au)) {
-	doCrawl();
-      } else {
+      if (!startCrawl(au, true)) {
  	errMsg = "Sorry, crawl still won't start, see log.";
- 	return;
       }
-    } catch (Exception e) {
+    } catch (RuntimeException e) {
       log.error("Can't start crawl", e);
       errMsg = "Error: " + e.toString();
     }
   }
+
+  private void crawlPluginRegistries() {
+    StringBuilder sb = new StringBuilder();
+    for (ArchivalUnit au : pluginMgr.getAllRegistryAus()) {
+      try {
+	sb.append(au.getName());
+	sb.append(": ");
+	if (startCrawl(au, true)) {
+	  sb.append("Queued.");
+	} else {
+	  sb.append("Failed, see log.");
+	}
+      } catch (RuntimeException e) {
+	log.error("Can't start crawl", e);
+	sb.append("Error: ");
+	sb.append(e.toString());
+      }
+      sb.append("\n");
+    }
+    statusMsg = sb.toString();
+  }
+
+  private boolean startCrawl(ArchivalUnit au, boolean force) {
+    CrawlManagerImpl cmi = (CrawlManagerImpl)crawlMgr;
+    if (force) {
+      RateLimiter limit = cmi.getNewContentRateLimiter(au);
+      if (!limit.isEventOk()) {
+	limit.unevent();
+      }
+    }
+    if (cmi.isEligibleForNewContentCrawl(au)) {
+      Configuration config = cfgMgr.getCurrentConfig();
+      int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
+      crawlMgr.startNewContentCrawl(au, pri, null, null, null);
+      statusMsg = "Crawl requested for " + au.getName();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   private void doV3Poll() {
     ArchivalUnit au = getAu();
@@ -298,6 +331,9 @@ public class DebugPanel extends LockssServlet {
     Input backup = new Input(Input.Submit, KEY_ACTION, ACTION_MAIL_BACKUP);
     setTabOrder(backup);
     frm.add("<br><center>"+backup+"</center>");
+    Input crawlplug = new Input(Input.Submit, KEY_ACTION, ACTION_CRAWL_PLUGINS);
+    setTabOrder(crawlplug);
+    frm.add("<br><center>"+crawlplug+"</center>");
     ServletDescr d1 = AdminServletManager.SERVLET_HASH_CUS;
     frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
     Input thrw = new Input(Input.Submit, KEY_ACTION, ACTION_THROW_IOEXCEPTION);
