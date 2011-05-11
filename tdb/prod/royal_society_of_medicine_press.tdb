@@ -15,23 +15,23 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://ar.rsmjournals.com/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < wanted ; Acta Radiologica Volume 38 ; 38 >
-    au < wanted ; Acta Radiologica Volume 39 ; 39 >
-    au < wanted ; Acta Radiologica Volume 40 ; 40 >
-    au < wanted ; Acta Radiologica Volume 41 ; 41 >
-    au < wanted ; Acta Radiologica Volume 42 ; 42 >
-    au < wanted ; Acta Radiologica Volume 43 ; 43 >
-    au < wanted ; Acta Radiologica Volume 44 ; 44 >
-    au < wanted ; Acta Radiologica Volume 45 ; 45 >
-    au < wanted ; Acta Radiologica Volume 46 ; 46 >
-    au < wanted ; Acta Radiologica Volume 47 ; 47 >
-    au < wanted ; Acta Radiologica Volume 48 ; 48 >
-    au < wanted ; Acta Radiologica Volume 49 ; 49 >
-    au < wanted ; Acta Radiologica Volume 50 ; 50 >
-    au < wanted ; Acta Radiologica Volume 51 ; 51 >
-    au < wanted ; Acta Radiologica Volume 52 ; 52 >
+    au < manifest ; 1997 ; Acta Radiologica Volume 38 ; 38 >
+    au < manifest ; 1998 ; Acta Radiologica Volume 39 ; 39 >
+    au < manifest ; 1999 ; Acta Radiologica Volume 40 ; 40 >
+    au < manifest ; 2000 ; Acta Radiologica Volume 41 ; 41 >
+    au < manifest ; 2001 ; Acta Radiologica Volume 42 ; 42 >
+    au < manifest ; 2002 ; Acta Radiologica Volume 43 ; 43 >
+    au < manifest ; 2003 ; Acta Radiologica Volume 44 ; 44 >
+    au < manifest ; 2004 ; Acta Radiologica Volume 45 ; 45 >
+    au < manifest ; 2005 ; Acta Radiologica Volume 46 ; 46 >
+    au < manifest ; 2006 ; Acta Radiologica Volume 47 ; 47 >
+    au < manifest ; 2007 ; Acta Radiologica Volume 48 ; 48 >
+    au < manifest ; 2008 ; Acta Radiologica Volume 49 ; 49 >
+    au < manifest ; 2009 ; Acta Radiologica Volume 50 ; 50 >
+    au < manifest ; 2010 ; Acta Radiologica Volume 51 ; 51 >
+    au < manifest ; 2011 ; Acta Radiologica Volume 52 ; 52 >
 
   }    
         
@@ -48,20 +48,20 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://acb.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Annals of Clinical Biochemistry Volume 37 ; 37 >
-      au < released ; Annals of Clinical Biochemistry Volume 38 ; 38 >
-      au < released ; Annals of Clinical Biochemistry Volume 39 ; 39 >
-      au < released ; Annals of Clinical Biochemistry Volume 40 ; 40 >
-      au < released ; Annals of Clinical Biochemistry Volume 41 ; 41 >
-      au < released ; Annals of Clinical Biochemistry Volume 42 ; 42 >
-      au < released ; Annals of Clinical Biochemistry Volume 43 ; 43 >
-      au < released ; Annals of Clinical Biochemistry Volume 44 ; 44 >
-      au < released ; Annals of Clinical Biochemistry Volume 45 ; 45 >
-      au < released ; Annals of Clinical Biochemistry Volume 46 ; 46 >
-      au < released ; Annals of Clinical Biochemistry Volume 47 ; 47 >
-      au < released ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      au < released ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < released ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < released ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < released ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < released ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < released ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < released ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < released ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < released ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < released ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < released ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < released ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
 
     }
 
@@ -80,13 +80,14 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ce.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Clinical Ethics Volume 1 ; 1 >
-      au < released ; Clinical Ethics Volume 2 ; 2 >
-      au < released ; Clinical Ethics Volume 3 ; 3 >
-      au < released ; Clinical Ethics Volume 4 ; 4 >
-      au < released ; Clinical Ethics Volume 5 ; 5 >
+      au < released ; 2006 ; Clinical Ethics Volume 1 ; 1 >
+      au < released ; 2007 ; Clinical Ethics Volume 2 ; 2 >
+      au < released ; 2008 ; Clinical Ethics Volume 3 ; 3 >
+      au < released ; 2009 ; Clinical Ethics Volume 4 ; 4 >
+      au < released ; 2010 ; Clinical Ethics Volume 5 ; 5 >
+      au < manifest ; 2011 ; Clinical Ethics Volume 6 ; 6 >
 
     }
 
@@ -115,9 +116,9 @@
       au < ready ; Clinical Risk Volume 12 ; 12 >
       au < ready ; Clinical Risk Volume 13 ; 13 >
       au < ready ; Clinical Risk Volume 14 ; 14 >
-      au < wanted ; Clinical Risk Volume 15 ; 15 >
-      au < wanted ; Clinical Risk Volume 16 ; 16 >
-      au < wanted ; Clinical Risk Volume 17 ; 17 >
+      au < manifest ; Clinical Risk Volume 15 ; 15 >
+      au < manifest ; Clinical Risk Volume 16 ; 16 >
+      au < manifest ; Clinical Risk Volume 17 ; 17 >
 
     }
 
@@ -170,19 +171,19 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ht.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Hand Therapy Volume 6 ; 6 >
-      au < exists ; Hand Therapy Volume 7 ; 7 >
-      au < exists ; Hand Therapy Volume 8 ; 8 >
-      au < exists ; Hand Therapy Volume 9 ; 9 >
-      au < exists ; Hand Therapy Volume 10 ; 10 >
-      au < exists ; Hand Therapy Volume 11 ; 11 >
-      au < exists ; Hand Therapy Volume 12 ; 12 >
-      au < exists ; Hand Therapy Volume 13 ; 13 >
-      au < wanted ; Hand Therapy Volume 14 ; 14 >
-      au < wanted ; Hand Therapy Volume 15 ; 15 >
-      au < wanted ; Hand Therapy Volume 16 ; 16 >
+      au < exists ; 2001 ; Hand Therapy Volume 6 ; 6 >
+      au < exists ; 2002 ; Hand Therapy Volume 7 ; 7 >
+      au < exists ; 2003 ; Hand Therapy Volume 8 ; 8 >
+      au < exists ; 2004 ; Hand Therapy Volume 9 ; 9 >
+      au < exists ; 2005 ; Hand Therapy Volume 10 ; 10 >
+      au < exists ; 2006 ; Hand Therapy Volume 11 ; 11 >
+      au < exists ; 2007 ; Hand Therapy Volume 12 ; 12 >
+      au < exists ; 2008 ; Hand Therapy Volume 13 ; 13 >
+      au < manifest ; 2009 ; Hand Therapy Volume 14 ; 14 >
+      au < manifest ; 2010 ; Hand Therapy Volume 15 ; 15 >
+      au < manifest ; 2011 ; Hand Therapy Volume 16 ; 16 >
 
     }
 
@@ -256,8 +257,8 @@
       au < exists ; He@lth Information on the Internet Volume 62 ; 62 >
       au < exists ; He@lth Information on the Internet Volume 63 ; 63 >
       au < exists ; He@lth Information on the Internet Volume 64 ; 64 >
-      au < wanted ; He@lth Information on the Internet Volume 65 ; 65 >
-      au < wanted ; He@lth Information on the Internet Volume 66 ; 66 >
+      au < manifest ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < manifest ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
@@ -276,19 +277,19 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://hsmr.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; Health Services Management Research Volume 14 ; 14 >
-      au < wanted ; Health Services Management Research Volume 15 ; 15 >
-      au < wanted ; Health Services Management Research Volume 16 ; 16 >
-      au < wanted ; Health Services Management Research Volume 17 ; 17 >
-      au < wanted ; Health Services Management Research Volume 18 ; 18 >
-      au < wanted ; Health Services Management Research Volume 19 ; 19 >
-      au < wanted ; Health Services Management Research Volume 20 ; 20 >
-      au < wanted ; Health Services Management Research Volume 21 ; 21 >
-      au < wanted ; Health Services Management Research Volume 22 ; 22 >
-      au < wanted ; Health Services Management Research Volume 23 ; 23 >
-      au < wanted ; Health Services Management Research Volume 24 ; 24 >
+      au < manifest ; 2001 ; Health Services Management Research Volume 14 ; 14 >
+      au < manifest ; 2002 ; Health Services Management Research Volume 15 ; 15 >
+      au < manifest ; 2003 ; Health Services Management Research Volume 16 ; 16 >
+      au < manifest ; 2004 ; Health Services Management Research Volume 17 ; 17 >
+      au < manifest ; 2005 ; Health Services Management Research Volume 18 ; 18 >
+      au < manifest ; 2006 ; Health Services Management Research Volume 19 ; 19 >
+      au < manifest ; 2007 ; Health Services Management Research Volume 20 ; 20 >
+      au < manifest ; 2008 ; Health Services Management Research Volume 21 ; 21 >
+      au < manifest ; 2009 ; Health Services Management Research Volume 22 ; 22 >
+      au < manifest ; 2010 ; Health Services Management Research Volume 23 ; 23 >
+      au < manifest ; 2011 ; Health Services Management Research Volume 24 ; 24 >
 
     }
 
@@ -307,15 +308,15 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ijcp.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; International Journal of Care Pathways Volume 9 ; 9 >
-      au < wanted ; International Journal of Care Pathways Volume 10 ; 10 >
-      au < wanted ; International Journal of Care Pathways Volume 11 ; 11 >
-      au < wanted ; International Journal of Care Pathways Volume 12 ; 12 >
-      au < wanted ; International Journal of Care Pathways Volume 13 ; 13 >
-      au < wanted ; International Journal of Care Pathways Volume 14 ; 14 >
-      au < wanted ; International Journal of Care Pathways Volume 15 ; 15 >
+      au < wanted ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+      au < manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+      au < manifest ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+      au < manifest ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+      au < manifest ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+      au < manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+      au < manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
 
     }
 
@@ -370,19 +371,19 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jhsrp.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-      au < wanted ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+      au < manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+      au < manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+      au < manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+      au < manifest ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+      au < manifest ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+      au < manifest ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+      au < manifest ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+      au < manifest ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+      au < manifest ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+      au < manifest ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+      au < manifest ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
 
     }
 
@@ -401,15 +402,15 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jmb.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; Journal of Medical Biography Volume 13 ; 13 >
-      au < wanted ; Journal of Medical Biography Volume 14 ; 14 >
-      au < wanted ; Journal of Medical Biography Volume 15 ; 15 >
-      au < wanted ; Journal of Medical Biography Volume 16 ; 16 >
-      au < wanted ; Journal of Medical Biography Volume 17 ; 17 >
-      au < wanted ; Journal of Medical Biography Volume 18 ; 18 >
-      au < wanted ; Journal of Medical Biography Volume 19 ; 19 >
+      au < manifest ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+      au < manifest ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+      au < manifest ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+      au < manifest ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+      au < manifest ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+      au < manifest ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+      au < manifest ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
 
     }
 
@@ -428,22 +429,22 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jms.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; Journal of Medical Screening Volume 5 ; 5 >
-      au < ready ; Journal of Medical Screening Volume 6 ; 6 >
-      au < ready ; Journal of Medical Screening Volume 7 ; 7 >
-      au < ready ; Journal of Medical Screening Volume 8 ; 8 >
-      au < ready ; Journal of Medical Screening Volume 9 ; 9 >
-      au < ready ; Journal of Medical Screening Volume 10 ; 10 >
-      au < ready ; Journal of Medical Screening Volume 11 ; 11 >
-      au < ready ; Journal of Medical Screening Volume 12 ; 12 >
-      au < ready ; Journal of Medical Screening Volume 13 ; 13 >
-      au < ready ; Journal of Medical Screening Volume 14 ; 14 >
-      au < ready ; Journal of Medical Screening Volume 15 ; 15 >
-      au < wanted ; Journal of Medical Screening Volume 16 ; 16 >
-      au < wanted ; Journal of Medical Screening Volume 17 ; 17 >
-      au < wanted ; Journal of Medical Screening Volume 18 ; 18 >
+      au < manifest ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+      au < manifest ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+      au < manifest ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+      au < manifest ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+      au < manifest ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+      au < manifest ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+      au < manifest ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+      au < manifest ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+      au < manifest ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+      au < manifest ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+      au < manifest ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+      au < manifest ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+      au < manifest ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+      au < manifest ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
 
     }
 
@@ -462,24 +463,24 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jtt.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-      au < wanted ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+      au < manifest ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+      au < manifest ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+      au < manifest ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+      au < manifest ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+      au < manifest ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+      au < manifest ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+      au < manifest ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+      au < manifest ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+      au < manifest ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+      au < manifest ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+      au < manifest ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+      au < manifest ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+      au < manifest ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+      au < manifest ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+      au < manifest ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+      au < manifest ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
 
     }
 
@@ -561,10 +562,10 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://shortreports.rsmjournals.com/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < wanted ; JRSM Short Reports Volume 1 ; 1 >
-    au < wanted ; JRSM Short Reports Volume 2 ; 2 >
+    au < manifest ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+    au < manifest ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
 
   }
 
@@ -673,20 +674,21 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://mlj.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Medico-Legal Journal Volume 67 ; 67 >
-      au < exists ; Medico-Legal Journal Volume 68 ; 68 >
-      au < exists ; Medico-Legal Journal Volume 69 ; 69 >
-      au < exists ; Medico-Legal Journal Volume 70 ; 70 >
-      au < exists ; Medico-Legal Journal Volume 71 ; 71 >
-      au < exists ; Medico-Legal Journal Volume 72 ; 72 >
-      au < exists ; Medico-Legal Journal Volume 73 ; 73 >
-      au < exists ; Medico-Legal Journal Volume 74 ; 74 >
-      au < exists ; Medico-Legal Journal Volume 75 ; 75 >
-      au < exists ; Medico-Legal Journal Volume 76 ; 76 >
-      au < exists ; Medico-Legal Journal Volume 77 ; 77 >
-      au < exists ; Medico-Legal Journal Volume 78 ; 78 >
+      au < manifest ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+      au < manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+      au < manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+      au < manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+      au < manifest ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+      au < manifest ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+      au < manifest ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+      au < manifest ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+      au < manifest ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+      au < manifest ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+      au < manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+      au < exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+      au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
 
@@ -705,20 +707,20 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://mi.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Menopause International Volume 6 ; 6 >
-      au < released ; Menopause International Volume 7 ; 7 >
-      au < released ; Menopause International Volume 8 ; 8 >
-      au < released ; Menopause International Volume 9 ; 9 >
-      au < released ; Menopause International Volume 10 ; 10 >
-      au < released ; Menopause International Volume 11 ; 11 >
-      au < released ; Menopause International Volume 12 ; 12 >
-      au < released ; Menopause International Volume 13 ; 13 >
-      au < released ; Menopause International Volume 14 ; 14 >
-      au < released ; Menopause International Volume 15 ; 15 >
-      au < released ; Menopause International Volume 16 ; 16 >
-      au < released ; Menopause International Volume 17 ; 17 >
+      au < released ; 2000 ; Menopause International Volume 6 ; 6 >
+      au < released ; 2001 ; Menopause International Volume 7 ; 7 >
+      au < released ; 2002 ; Menopause International Volume 8 ; 8 >
+      au < released ; 2003 ; Menopause International Volume 9 ; 9 >
+      au < released ; 2004 ; Menopause International Volume 10 ; 10 >
+      au < released ; 2005 ; Menopause International Volume 11 ; 11 >
+      au < released ; 2006 ; Menopause International Volume 12 ; 12 >
+      au < released ; 2007 ; Menopause International Volume 13 ; 13 >
+      au < released ; 2008 ; Menopause International Volume 14 ; 14 >
+      au < released ; 2009 ; Menopause International Volume 15 ; 15 >
+      au < released ; 2010 ; Menopause International Volume 16 ; 16 >
+      au < released ; 2011 ; Menopause International Volume 17 ; 17 >
 
     }
 
@@ -737,12 +739,12 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://obmed.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Obstetric Medicine Volume 1 ; 1 >
-      au < released ; Obstetric Medicine Volume 2 ; 2 >
-      au < released ; Obstetric Medicine Volume 3 ; 3 >
-      au < released ; Obstetric Medicine Volume 4 ; 4 >
+      au < released ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
+      au < released ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
+      au < released ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
+      au < released ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
 
     }
 
@@ -761,17 +763,17 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://phleb.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Phlebology Volume 18 ; 18 >
-      au < released ; Phlebology Volume 19 ; 19 >
-      au < released ; Phlebology Volume 20 ; 20 >
-      au < released ; Phlebology Volume 21 ; 21 >
-      au < released ; Phlebology Volume 22 ; 22 >
-      au < released ; Phlebology Volume 23 ; 23 >
-      au < released ; Phlebology Volume 24 ; 24 >
-      au < released ; Phlebology Volume 25 ; 25 >
-      au < released ; Phlebology Volume 26 ; 26 >
+      au < released ; 2003 ; Phlebology Volume 18 ; 18 >
+      au < released ; 2004 ; Phlebology Volume 19 ; 19 >
+      au < released ; 2005 ; Phlebology Volume 20 ; 20 >
+      au < released ; 2006 ; Phlebology Volume 21 ; 21 >
+      au < released ; 2007 ; Phlebology Volume 22 ; 22 >
+      au < released ; 2008 ; Phlebology Volume 23 ; 23 >
+      au < released ; 2009 ; Phlebology Volume 24 ; 24 >
+      au < released ; 2010 ; Phlebology Volume 25 ; 25 >
+      au < released ; 2011 ; Phlebology Volume 26 ; 26 >
 
     }
 
@@ -787,14 +789,14 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://smj.rsmjournals.com/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < wanted ; Scottish Medical Journal Volume 51 ; 51 >
-    au < wanted ; Scottish Medical Journal Volume 52 ; 52 >
-    au < wanted ; Scottish Medical Journal Volume 53 ; 53 >
-    au < wanted ; Scottish Medical Journal Volume 54 ; 54 >
-    au < wanted ; Scottish Medical Journal Volume 55 ; 55 >
-    au < wanted ; Scottish Medical Journal Volume 56 ; 56 >
+    au < manifest ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+    au < manifest ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+    au < manifest ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+    au < manifest ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+    au < manifest ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+    au < manifest ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
 
   }
 
@@ -811,15 +813,15 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://td.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Tropical Doctor Volume 35 ; 35 >
-      au < released ; Tropical Doctor Volume 36 ; 36 >
-      au < released ; Tropical Doctor Volume 37 ; 37 >
-      au < released ; Tropical Doctor Volume 38 ; 38 >
-      au < released ; Tropical Doctor Volume 39 ; 39 >
-      au < released ; Tropical Doctor Volume 40 ; 40 >
-      au < released ; Tropical Doctor Volume 41 ; 41 >
+      au < released ; 2005 ; Tropical Doctor Volume 35 ; 35 >
+      au < released ; 2006 ; Tropical Doctor Volume 36 ; 36 >
+      au < released ; 2007 ; Tropical Doctor Volume 37 ; 37 >
+      au < released ; 2008 ; Tropical Doctor Volume 38 ; 38 >
+      au < released ; 2009 ; Tropical Doctor Volume 39 ; 39 >
+      au < released ; 2010 ; Tropical Doctor Volume 40 ; 40 >
+      au < released ; 2011 ; Tropical Doctor Volume 41 ; 41 >
 
     }
 
@@ -837,16 +839,16 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ult.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Ultrasound Volume 12 ; 12 >
-      au < exists ; Ultrasound Volume 13 ; 13 >
-      au < exists ; Ultrasound Volume 14 ; 14 >
-      au < exists ; Ultrasound Volume 15 ; 15 >
-      au < exists ; Ultrasound Volume 16 ; 16 >
-      au < exists ; Ultrasound Volume 17 ; 17 >
-      au < exists ; Ultrasound Volume 18 ; 18 >
-      au < exists ; Ultrasound Volume 19 ; 19 >
+      au < exists ; 2004 ; Ultrasound Volume 12 ; 12 >
+      au < exists ; 2005 ; Ultrasound Volume 13 ; 13 >
+      au < exists ; 2006 ; Ultrasound Volume 14 ; 14 >
+      au < exists ; 2007 ; Ultrasound Volume 15 ; 15 >
+      au < exists ; 2008 ; Ultrasound Volume 16 ; 16 >
+      au < exists ; 2009 ; Ultrasound Volume 17 ; 17 >
+      au < exists ; 2010 ; Ultrasound Volume 18 ; 18 >
+      au < exists ; 2011 ; Ultrasound Volume 19 ; 19 >
 
     }
 
@@ -862,15 +864,15 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://vascular.rsmjournals.com/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < wanted ; Vascular Volume 13 ; 13 >
-    au < wanted ; Vascular Volume 14 ; 14 >
-    au < wanted ; Vascular Volume 15 ; 15 >
-    au < wanted ; Vascular Volume 16 ; 16 >
-    au < wanted ; Vascular Volume 17 ; 17 >
-    au < wanted ; Vascular Volume 18 ; 18 >
-    au < wanted ; Vascular Volume 19 ; 19 >
+    au < manifest ; 2005 ; Vascular Volume 13 ; 13 >
+    au < manifest ; 2006 ; Vascular Volume 14 ; 14 >
+    au < manifest ; 2007 ; Vascular Volume 15 ; 15 >
+    au < manifest ; 2008 ; Vascular Volume 16 ; 16 >
+    au < manifest ; 2009 ; Vascular Volume 17 ; 17 >
+    au < manifest ; 2010 ; Vascular Volume 18 ; 18 >
+    au < manifest ; 2011 ; Vascular Volume 19 ; 19 >
 
   }
 
