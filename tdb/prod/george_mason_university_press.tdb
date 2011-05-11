@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = George Mason University Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; year ; name ; param[volume] >
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
+
     title <
       name = Journal of Social History ;
       issn = 1527-1897 ;

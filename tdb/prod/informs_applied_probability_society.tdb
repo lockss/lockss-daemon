@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = INFORMS Applied Probability Society
   >
@@ -6,6 +7,7 @@
   implicit < status ; year ; name ; param[volume] >
 
   {
+
     title <
       name = Stochastic Systems ;
       issn = 1946-5238

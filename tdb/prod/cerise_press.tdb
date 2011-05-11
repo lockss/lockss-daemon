@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Cerise Press
   >
@@ -7,9 +8,10 @@
   param[base_url] = http://www.cerisepress.com/
 
   {
+
     title <
       name = Cerise Press: A Journal of Literature, Arts and Culture ;
-      issn = 1946-5262 ;
+      issn = 1946-5262
     >
 
     au < exists ; 2010 ; Cerise Press: A Journal of Literature, Arts and Culture Volume 1 ; 1 >
