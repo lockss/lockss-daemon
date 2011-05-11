@@ -453,7 +453,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://genre.dukejournals.org/
 
       au < exists ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
