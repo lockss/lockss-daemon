@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.4 2005-10-20 22:57:48 troberts Exp $
+ * $Id: PrintfFormat.java,v 1.5 2011-05-11 21:30:26 pgust Exp $
  */
 
 //
@@ -1133,6 +1133,51 @@ public class PrintfFormat {
      *   conversion character is neither s nor S.
      */
     String internalsprintf(String s)
+        throws IllegalArgumentException {
+      String s2 = "";
+      if(conversionCharacter=='s'
+      || conversionCharacter=='S') {
+        s2 = printSFormat(s);
+      } else {
+    	try {
+      	  switch (conversionCharacter) {
+          case 'f':
+          case 'E':
+          case 'e':
+          case 'G':
+          case 'g':
+      	  	s2 = internalsprintf(Double.parseDouble(s));
+            break;
+          case 'd':
+          case 'i':
+          case 'x':
+          case 'X':
+          case 'o':
+          case 'c':
+          case 'C':
+            s2 = internalsprintf(Long.parseLong(s));
+            break;
+    	
+      	  }
+    	} catch (Exception ex) {
+    	}
+    	if (s2 == null) {
+    	  throw new IllegalArgumentException("Cannot "+
+            "format a String with a format using a "+
+            conversionCharacter+" conversion character.");
+    	}
+      }
+      return s2;
+    }
+    /**
+     * Format a String argument using this conversion
+     * specification.
+     * @param s the String to format.
+     * @return the formatted String.
+     * @exception IllegalArgumentException if the
+     *   conversion character is neither s nor S.
+     */
+    String _internalsprintf(String s)
         throws IllegalArgumentException {
       String s2 = "";
       if(conversionCharacter=='s'
