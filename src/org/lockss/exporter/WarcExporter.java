@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.5 2011-03-15 20:07:33 tlipkis Exp $
+ * $Id: WarcExporter.java,v 1.6 2011-05-11 03:31:30 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.regex.*;
 
 import org.archive.io.*;
 import org.archive.io.warc.*;
@@ -56,7 +57,6 @@ public class WarcExporter extends Exporter {
   private static Logger log = Logger.getLogger("WarcExporter");
 
   protected CIProperties arcProps = null;
-  String arcFilePrefix = "SimulatedCrawl";
   AtomicInteger serialNo = new AtomicInteger(0);
   WARCWriter ww;
   boolean isResponse;
@@ -109,6 +109,19 @@ public class WarcExporter extends Exporter {
     CIProperties props = cu.getProperties();
     ANVLRecord headers = new ANVLRecord(5);
     headers.addLabelValue(HEADER_KEY_IP, getHostIp());
+
+    // XXX Temporary for LuKII; replace with ExporterHelper
+    TypedEntryMap auProps = au.getProperties();
+    if (auProps.containsKey("article_base")) {
+      // Add field to WARC header
+      String pattern = auProps.getString("article_base");
+      Pattern p = Pattern.compile(pattern);
+      Matcher m = p.matcher(url);
+      if (m.find()) {
+	headers.addLabelValue("LOCKSS-Article-Base", m.group(1));
+      }
+    }
+
     long fetchTime =
       Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
     String timestamp = ArchiveUtils.getLog14Date(fetchTime);
