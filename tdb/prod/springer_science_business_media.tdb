@@ -11286,20 +11286,6 @@
   {
 
     title <
-      name = Entomologia Experimentalis et Applicata ;
-      issn = 0013-8703 ;
-      eissn = 1570-7458 ;
-      issnl = 0013-8703 ;
-      placeholder = True
-    >
-
-    param[journal_issn] = 0013-8703
-
-  }
-
-  {
-
-    title <
       name = Entomological Review ;
       issn = 0013-8738 ;
       eissn = 1555-6689 ;
@@ -17667,7 +17653,10 @@
     title <
       name = International Journal of Diabetes in Developing Countries ;
       issn = 0973-3930
+      eissn = 1998-3832
     >
+    
+    param[journal_issn] = 0973-3930
     
   }
 
