@@ -456,10 +456,20 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       implicit < status ; name ; param[volume] >
       param[base_url] = http://genre.dukejournals.org/
 
-      au < exists ; Genre: Forms of Discourse and Culture Volume 1 ; 1 >
+      au < exists ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
+      au < exists ; 2001 ; Genre: Forms of Discourse and Culture Volume 34 ; 34 >
+      au < exists ; 2002 ; Genre: Forms of Discourse and Culture Volume 35 ; 35 >
+      au < exists ; 2003 ; Genre: Forms of Discourse and Culture Volume 36 ; 36 >
+      au < exists ; 2004 ; Genre: Forms of Discourse and Culture Volume 37 ; 37 >
+      au < exists ; 2005 ; Genre: Forms of Discourse and Culture Volume 38 ; 38 >
+      au < exists ; 2006 ; Genre: Forms of Discourse and Culture Volume 39 ; 39 >
+      au < exists ; 2007 ; Genre: Forms of Discourse and Culture Volume 40 ; 40 >
+      au < exists ; 2008 ; Genre: Forms of Discourse and Culture Volume 41 ; 41 >
+      au < exists ; 2009 ; Genre: Forms of Discourse and Culture Volume 42 ; 42 >
+      au < exists ; 2010 ; Genre: Forms of Discourse and Culture Volume 43 ; 43 >
+      au < exists ; 2011 ; Genre: Forms of Discourse and Culture Volume 44 ; 44 >
       
     }
-    
   }
 
   {
