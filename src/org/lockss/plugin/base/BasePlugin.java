@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.75 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.76 2011-05-11 03:31:43 tlipkis Exp $
  */
 
 /*
@@ -382,7 +382,15 @@ public abstract class BasePlugin
     LinkExtractorFactory fact = mti.getLinkExtractorFactory();
     if (fact != null) {
       try {
-	return fact.createLinkExtractor(contentType);
+	LinkExtractor extractor = fact.createLinkExtractor(contentType);
+	// Wrap the result iff it came from a different Classloader,
+	// indicating it's part of a loadable plugin.
+	if (extractor.getClass().getClassLoader() !=
+	    this.getClass().getClassLoader()) {
+	  extractor =
+	    (LinkExtractor) WrapperUtil.wrap(extractor, LinkExtractor.class);
+	}
+	return extractor;
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
