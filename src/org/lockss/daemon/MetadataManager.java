@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.16 2011-04-11 23:21:48 pgust Exp $
+ * $Id: MetadataManager.java,v 1.17 2011-05-11 21:32:30 pgust Exp $
  */
 
 /*
@@ -217,8 +217,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Name of issn field */
   static public final String ISSN_FIELD = "issn";
   
-  /** Name of issue field */
+  /** Name of journal issue field */
   static public final String ISSUE_FIELD = "issue";
+  
+  /** Name of book edition field (same as journal EDITION_FILED */
+  static public final String EDITION_FIELD = ISSUE_FIELD;
   
   /** Name of md_id foreign key field */
   static public final String MD_ID_FIELD = "md_id";
@@ -257,9 +260,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Length of issn field */
   static public final int MAX_ISSN_FIELD = 8;
   
-  /** Length of issue field */
+  /** Length of journal issue field */
   static public final int MAX_ISSUE_FIELD = 16;
   
+  /** Length of book edition field (same as MAX_EDITION_FIELD) */
+  static public final int MAX_EDITION_FIELD = 16;
+
   /** 
    * Length of plugin ID field. This field will be used as horizontal
    * partitioning field in the future, so it's length must be compatible
