@@ -3,7 +3,7 @@
     name = Berkeley Electronic Press
   >
   
-  implicit < status ; name ; param[volume] >
+  implicit < status ; name ; param[volume] ; year >
   plugin = org.lockss.plugin.bepress.BePressPlugin
   param[base_url] = http://www.bepress.com/    
   
@@ -15,10 +15,12 @@
 
     param[journal_abbr] = asjcl
 
-    au < released ; Asian Journal of Comparative Law Volume 1 ; 1 >
-    au < released ; Asian Journal of Comparative Law Volume 2 ; 2 >
-    au < released ; Asian Journal of Comparative Law Volume 3 ; 3 >
-    au < released ; Asian Journal of Comparative Law Volume 4 ; 4 >
+    au < released ; Asian Journal of Comparative Law Volume 1 ; 1 ; 2006 >
+    au < released ; Asian Journal of Comparative Law Volume 2 ; 2 ; 2007 >
+    au < released ; Asian Journal of Comparative Law Volume 3 ; 3 ; 2008 >
+    au < released ; Asian Journal of Comparative Law Volume 4 ; 4 ; 2009 >
+    au < manifest ; Asian Journal of Comparative Law Volume 5 ; 5 ; 2010 >
+    au < manifest ; Asian Journal of Comparative Law Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -31,9 +33,12 @@
 
     param[journal_abbr] = bis
 
-    au < released ; Basic Income Studies Volume 1 ; 1 >
-    au < released ; Basic Income Studies Volume 2 ; 2 >
-    au < released ; Basic Income Studies Volume 3 ; 3 >
+    au < released ; Basic Income Studies Volume 1 ; 1 ; 2006 >
+    au < released ; Basic Income Studies Volume 2 ; 2 ; 2007 >
+    au < released ; Basic Income Studies Volume 3 ; 3 ; 2008 >
+    au < manifest ; Basic Income Studies Volume 4 ; 4 ; 2009 >
+    au < manifest ; Basic Income Studies Volume 5 ; 5 ; 2010 >
+    au < manifest ; Basic Income Studies Volume 6 ; 6 ; 2011 >
   }
 
 
@@ -45,15 +50,17 @@
 
     param[journal_abbr] = bejeap
 
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 ; 2001>
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 ; 2002 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 ; 2006 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 ; 2007 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 ; 2008 >
+    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 ; 2009 >
+    au < manifest ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 ; 2010 >
+    au < manifest ; The B.E. Journal of Economic Analysis & Policy Volume 11 ; 11 ; 2011 >
   }
 
 
@@ -65,15 +72,17 @@
 
     param[journal_abbr] = bejm
 
-    au < released ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 5 ; 5 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 6 ; 6 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 7 ; 7 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 1 ; 1 ; 2001 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 2 ; 2 ; 2002 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 3 ; 3 ; 2003 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 4 ; 4 ; 2004 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 5 ; 5 ; 2005 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 6 ; 6 ; 2006 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 7 ; 7 ; 2007 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 8 ; 8 ; 2008 >
+    au < released ; The B.E. Journal of Macroeconomics Volume 9 ; 9 ; 2009 >
+    au < manifest ; The B.E. Journal of Macroeconomics Volume 10 ; 10 ; 2010 >
+    au < manifest ; The B.E. Journal of Macroeconomics Volume 11 ; 11 ; 2011 >
   }
 
 
@@ -85,15 +94,17 @@
 
     param[journal_abbr] = bejte
 
-    au < released ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 ; 2001 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 ; 2002 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 ; 2003 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 ; 2004 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 ; 2005 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 ; 2006 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 ; 2007 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 ; 2008 >
+    au < released ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 ; 2009 >
+    au < manifest ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 ; 2010 >
+    au < manifest ; The B.E. Journal of Theoretical Economics Volume 11 ; 11 ; 2011 >
   }
 
 
@@ -105,16 +116,18 @@
 
     param[journal_abbr] = bap
 
-    au < released ; Business and Politics Volume 2 ; 2 >
-    au < released ; Business and Politics Volume 3 ; 3 >
-    au < released ; Business and Politics Volume 4 ; 4 >
-    au < released ; Business and Politics Volume 5 ; 5 >
-    au < released ; Business and Politics Volume 6 ; 6 >
-    au < released ; Business and Politics Volume 7 ; 7 >
-    au < released ; Business and Politics Volume 8 ; 8 >
-    au < released ; Business and Politics Volume 9 ; 9 >
-    au < released ; Business and Politics Volume 10 ; 10 >
-    au < released ; Business and Politics Volume 11 ; 11 >
+    au < released ; Business and Politics Volume 2 ; 2 ; 2000 >
+    au < released ; Business and Politics Volume 3 ; 3 ; 2001 >
+    au < released ; Business and Politics Volume 4 ; 4 ; 2002 >
+    au < released ; Business and Politics Volume 5 ; 5 ; 2003 >
+    au < released ; Business and Politics Volume 6 ; 6 ; 2004 >
+    au < released ; Business and Politics Volume 7 ; 7 ; 2005 >
+    au < released ; Business and Politics Volume 8 ; 8 ; 2006 >
+    au < released ; Business and Politics Volume 9 ; 9 ; 2007 >
+    au < released ; Business and Politics Volume 10 ; 10 ; 2008 >
+    au < released ; Business and Politics Volume 11 ; 11 ; 2009 >
+    au < manifest ; Business and Politics Volume 12 ; 12 ; 2010 >
+    au < manifest ; Business and Politics Volume 13 ; 13 ; 2011 >
   }
 
 
@@ -126,9 +139,11 @@
 
     param[journal_abbr] = cas
 
-    au < released ; Capitalism and Society Volume 1 ; 1 >
-    au < released ; Capitalism and Society Volume 2 ; 2 >
-    au < released ; Capitalism and Society Volume 3 ; 3 >
+    au < released ; Capitalism and Society Volume 1 ; 1 ; 2006 >
+    au < released ; Capitalism and Society Volume 2 ; 2 ; 2007 >
+    au < released ; Capitalism and Society Volume 3 ; 3 ; 2008 >
+    au < manifest ; Capitalism and Society Volume 4 ; 4 ; 2009 >
+    au < manifest ; Capitalism and Society Volume 5 ; 5 ; 2010 >
   }
 
 
@@ -140,10 +155,12 @@
 
     param[journal_abbr] = cppm
 
-    au < released ; Chemical Product and Process Modeling Volume 1 ; 1 >
-    au < released ; Chemical Product and Process Modeling Volume 2 ; 2 >
-    au < released ; Chemical Product and Process Modeling Volume 3 ; 3 >
-    au < released ; Chemical Product and Process Modeling Volume 4 ; 4 >
+    au < released ; Chemical Product and Process Modeling Volume 1 ; 1 ; 2006>
+    au < released ; Chemical Product and Process Modeling Volume 2 ; 2 ; 2007 >
+    au < released ; Chemical Product and Process Modeling Volume 3 ; 3 ; 2008 >
+    au < released ; Chemical Product and Process Modeling Volume 4 ; 4 ; 2009 >
+    au < manifest ; Chemical Product and Process Modeling Volume 5 ; 5 ; 2010 >
+    au < manifest ; Chemical Product and Process Modeling Volume 6 ; 6 ; 2011 > 
   }
 
 
@@ -155,12 +172,14 @@
 
     param[journal_abbr] = ev
 
-    au < released ; The Economists' Voice Volume 1 ; 1 >
-    au < released ; The Economists' Voice Volume 2 ; 2 >
-    au < released ; The Economists' Voice Volume 3 ; 3 >
-    au < released ; The Economists' Voice Volume 4 ; 4 >
-    au < released ; The Economists' Voice Volume 5 ; 5 >
-    au < released ; The Economists' Voice Volume 6 ; 6 >
+    au < released ; The Economists' Voice Volume 1 ; 1 ; 2004 >
+    au < released ; The Economists' Voice Volume 2 ; 2 ; 2005 >
+    au < released ; The Economists' Voice Volume 3 ; 3 ; 2006 >
+    au < released ; The Economists' Voice Volume 4 ; 4 ; 2007 >
+    au < released ; The Economists' Voice Volume 5 ; 5 ; 2008 >
+    au < released ; The Economists' Voice Volume 6 ; 6 ; 2009 >
+    au < manifest ; The Economists' Voice Volume 7 ; 7 ; 2010 >
+    au < manifest ; The Economists' Voice Volume 8 ; 8 ; 2011 >
   }
 
 
@@ -172,12 +191,15 @@
 
     param[journal_abbr] = forum
 
-    au < released ; The Forum Volume 1 ; 1 >
-    au < released ; The Forum Volume 2 ; 2 >
-    au < released ; The Forum Volume 3 ; 3 >
-    au < released ; The Forum Volume 4 ; 4 >
-    au < released ; The Forum Volume 5 ; 5 >
-    au < released ; The Forum Volume 6 ; 6 >
+    au < released ; The Forum Volume 1 ; 1 ; 2003 >
+    au < released ; The Forum Volume 2 ; 2 ; 2004 >
+    au < released ; The Forum Volume 3 ; 3 ; 2005 >
+    au < released ; The Forum Volume 4 ; 4 ; 2006 >
+    au < released ; The Forum Volume 5 ; 5 ; 2007 >
+    au < released ; The Forum Volume 6 ; 6 ; 2008 >
+    au < released ; The Forum Volume 7 ; 7 ; 2009 >
+    au < manifest ; The Forum Volume 8 ; 8 ; 2010 >
+    au < manifest ; The Forum Volume 9 ; 9 ; 2011 >
   }
 
 
@@ -188,19 +210,24 @@
     >
 
     param[journal_abbr] = fhep
+    comment[issue] = issue toc is at /fhep/14/2
+    comment[volume] = volume toc is at /fhep/14
+    comment[title] = title toc is at /fhep/all_isshes.html
 
-    au < released ; Forum for Health Economics & Policy Volume 1 ; 1 >
-    au < released ; Forum for Health Economics & Policy Volume 2 ; 2 >
-    au < released ; Forum for Health Economics & Policy Volume 3 ; 3 >
-    au < released ; Forum for Health Economics & Policy Volume 4 ; 4 >
-    au < released ; Forum for Health Economics & Policy Volume 5 ; 5 >
-    au < released ; Forum for Health Economics & Policy Volume 6 ; 6 >
-    au < released ; Forum for Health Economics & Policy Volume 7 ; 7 >
-    au < released ; Forum for Health Economics & Policy Volume 8 ; 8 >
-    au < released ; Forum for Health Economics & Policy Volume 9 ; 9 >
-    au < released ; Forum for Health Economics & Policy Volume 10 ; 10 >
-    au < released ; Forum for Health Economics & Policy Volume 11 ; 11 >
-    au < released ; Forum for Health Economics & Policy Volume 12 ; 12 >
+    au < released ; Forum for Health Economics & Policy Volume 1 ; 1 ; 1998 >
+    au < released ; Forum for Health Economics & Policy Volume 2 ; 2 ; 1999 >
+    au < released ; Forum for Health Economics & Policy Volume 3 ; 3 ; 2000 >
+    au < released ; Forum for Health Economics & Policy Volume 4 ; 4 ; 2001 >
+    au < released ; Forum for Health Economics & Policy Volume 5 ; 5 ; 2002 >
+    au < released ; Forum for Health Economics & Policy Volume 6 ; 6 ; 2003 >
+    au < released ; Forum for Health Economics & Policy Volume 7 ; 7 ; 2004 >
+    au < released ; Forum for Health Economics & Policy Volume 8 ; 8 ; 2005 >
+    au < released ; Forum for Health Economics & Policy Volume 9 ; 9 ; 2006 >
+    au < released ; Forum for Health Economics & Policy Volume 10 ; 10 ; 2007 >
+    au < released ; Forum for Health Economics & Policy Volume 11 ; 11 ; 2008 >
+    au < released ; Forum for Health Economics & Policy Volume 12 ; 12 ; 2009 >
+    au < manifest ; Forum for Health Economics & Policy Volume 13 ; 13 ; 2010 >
+    au < manifest ; Forum for Health Economics & Policy Volume 14 ; 14 ; 2011 >
   }
 
 
@@ -212,15 +239,17 @@
 
     param[journal_abbr] = gej
 
-    au < released ; Global Economy Journal Volume 1 ; 1 >
-    au < released ; Global Economy Journal Volume 2 ; 2 >
-    au < released ; Global Economy Journal Volume 3 ; 3 >
-    au < released ; Global Economy Journal Volume 4 ; 4 >
-    au < released ; Global Economy Journal Volume 5 ; 5 >
-    au < released ; Global Economy Journal Volume 6 ; 6 >
-    au < released ; Global Economy Journal Volume 7 ; 7 >
-    au < released ; Global Economy Journal Volume 8 ; 8 >
-    au < released ; Global Economy Journal Volume 9 ; 9 >
+    au < released ; Global Economy Journal Volume 1 ; 1 ; 2001 >
+    au < released ; Global Economy Journal Volume 2 ; 2 ; 2002 >
+    au < released ; Global Economy Journal Volume 3 ; 3 ; 2003 >
+    au < released ; Global Economy Journal Volume 4 ; 4 ; 2004 >
+    au < released ; Global Economy Journal Volume 5 ; 5 ; 2005 >
+    au < released ; Global Economy Journal Volume 6 ; 6 ; 2006 >
+    au < released ; Global Economy Journal Volume 7 ; 7 ; 2007 >
+    au < released ; Global Economy Journal Volume 8 ; 8 ; 2008 >
+    au < released ; Global Economy Journal Volume 9 ; 9 ; 2009 >
+    au < manifest ; Global Economy Journal Volume 10 ; 10 ; 2010 >
+    au < manifest ; Global Economy Journal Volume 11 ; 11 ; 2011 >
   }
 
 
@@ -232,15 +261,17 @@
 
     param[journal_abbr] = gj
 
-    au < released ; Global Jurist Volume 1 ; 1 >
-    au < released ; Global Jurist Volume 2 ; 2 >
-    au < released ; Global Jurist Volume 3 ; 3 >
-    au < released ; Global Jurist Volume 4 ; 4 >
-    au < released ; Global Jurist Volume 5 ; 5 >
-    au < released ; Global Jurist Volume 6 ; 6 >
-    au < released ; Global Jurist Volume 7 ; 7 >
-    au < released ; Global Jurist Volume 8 ; 8 >
-    au < released ; Global Jurist Volume 9 ; 9 >
+    au < released ; Global Jurist Volume 1 ; 1 ; 2001 >
+    au < released ; Global Jurist Volume 2 ; 2 ; 2002 >
+    au < released ; Global Jurist Volume 3 ; 3 ; 2003 >
+    au < released ; Global Jurist Volume 4 ; 4 ; 2004 >
+    au < released ; Global Jurist Volume 5 ; 5 ; 2005 >
+    au < released ; Global Jurist Volume 6 ; 6 ; 2006 >
+    au < released ; Global Jurist Volume 7 ; 7 ; 2007 >
+    au < released ; Global Jurist Volume 8 ; 8 ; 2008 >
+    au < released ; Global Jurist Volume 9 ; 9 ; 2009 >
+    au < manifest ; Global Jurist Volume 10 ; 10 ; 2010 >
+    au < manifest ; global Jurist Volume 11 ; 11 ; 2011 >
   }
 
 
@@ -252,12 +283,14 @@
 
     param[journal_abbr] = ice
 
-    au < released ; International Commentary on Evidence Volume 1 ; 1 >
-    au < released ; International Commentary on Evidence Volume 2 ; 2 >
-    au < released ; International Commentary on Evidence Volume 3 ; 3 >
-    au < released ; International Commentary on Evidence Volume 4 ; 4 >
-    au < released ; International Commentary on Evidence Volume 5 ; 5 >
-    au < released ; International Commentary on Evidence Volume 6 ; 6 >
+    au < released ; International Commentary on Evidence Volume 1 ; 1 ; 2003 >
+    au < released ; International Commentary on Evidence Volume 2 ; 2 ; 2004 >
+    au < released ; International Commentary on Evidence Volume 3 ; 3 ; 2005 >
+    au < released ; International Commentary on Evidence Volume 4 ; 4 ; 2006 >
+    au < released ; International Commentary on Evidence Volume 5 ; 5 ; 2007 >
+    au < released ; International Commentary on Evidence Volume 6 ; 6 ; 2008 >
+    au < manifest ; International Commentary on Evidence Volume 7 ; 7 ; 2009 >
+    au < manifest ; International Commentary on Evidence Volume 8 ; 8 ; 2010 >
   }
 
 
@@ -269,11 +302,13 @@
 
     param[journal_abbr] = ijb
 
-    au < released ; The International Journal of Biostatistics Volume 1 ; 1 >
-    au < released ; The International Journal of Biostatistics Volume 2 ; 2 >
-    au < released ; The International Journal of Biostatistics Volume 3 ; 3 >
-    au < released ; The International Journal of Biostatistics Volume 4 ; 4 >
-    au < released ; The International Journal of Biostatistics Volume 5 ; 5 >
+    au < released ; The International Journal of Biostatistics Volume 1 ; 1 ; 2005 >
+    au < released ; The International Journal of Biostatistics Volume 2 ; 2 ; 2006 >
+    au < released ; The International Journal of Biostatistics Volume 3 ; 3 ; 2007 >
+    au < released ; The International Journal of Biostatistics Volume 4 ; 4 ; 2008 >
+    au < released ; The International Journal of Biostatistics Volume 5 ; 5 ; 2009 >
+    au < manifest ; The International Journal of Biostatistics Volume 6 ; 6 ; 2010 >
+    au < manifest ; The International Journal of Biostatistics Volume 7 ; 7 ; 2011 >
   }
 
 
@@ -285,13 +320,15 @@
 
     param[journal_abbr] = ijcre
 
-    au < released ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
-    au < released ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 ; 2003 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 ; 2004 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 ; 2005 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 ; 2006 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 ; 2007 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 ; 2008 >
+    au < released ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 ; 2009 >
+    au < manifest ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 ; 2010 >
+    au < manifest ; International Journal of Chemical Reactor Engineering Volume 9 ; 9 ; 2011 >
   }
 
 
@@ -303,16 +340,17 @@
 
     param[journal_abbr] = ijeeps
 
-    au < released ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
-    au < released ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 ; 2000 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 ; 2001 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 ; 2002 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 ; 2003 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 ; 2004 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 ; 2005 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 ; 2006 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 ; 2007 >
+    au < released ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 ; 2008 >
+    au < manifest ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 ; 2009 >
+    au < manifest ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 ; 2010 >
   }
 
 
@@ -324,11 +362,13 @@
 
     param[journal_abbr] = ijfe
 
-    au < released ; International Journal of Food Engineering Volume 1 ; 1 >
-    au < released ; International Journal of Food Engineering Volume 2 ; 2 >
-    au < released ; International Journal of Food Engineering Volume 3 ; 3 >
-    au < released ; International Journal of Food Engineering Volume 4 ; 4 >
-    au < released ; International Journal of Food Engineering Volume 5 ; 5 >
+    au < released ; International Journal of Food Engineering Volume 1 ; 1 ; 2005 >
+    au < released ; International Journal of Food Engineering Volume 2 ; 2 ; 2006 >
+    au < released ; International Journal of Food Engineering Volume 3 ; 3 ; 2007 >
+    au < released ; International Journal of Food Engineering Volume 4 ; 4 ; 2008 >
+    au < released ; International Journal of Food Engineering Volume 5 ; 5 ; 2009 >
+    au < manifest ; International Journal of Food Engineering Volume 6 ; 6 ; 2010 >
+    au < manifest ; International Journal of Food Engineering Volume 7 ; 7 ; 2011 >
   }
 
 
@@ -340,12 +380,14 @@
 
     param[journal_abbr] = ijnes
 
-    au < released ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
-    au < released ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
-    au < released ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
-    au < released ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
-    au < released ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
-    au < released ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 1 ; 1 ; 2004 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 2 ; 2 ; 2005 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 3 ; 3 ; 2006 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 4 ; 4 ; 2007 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 5 ; 5 ; 2008 >
+    au < released ; International Journal of Nursing Education Scholarship Volume 6 ; 6 ; 2009 >
+    au < manifest ; International Journal of Nursing Education Scholarship Volume 7 ; 7 ; 2010 >
+    au < manifest ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; 2011 >
   }
 
 
@@ -357,13 +399,15 @@
 
     param[journal_abbr] = jafio
 
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
-    au < released ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 ; 2003 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 ; 2004 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 ; 2005 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 ; 2006 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 ; 2007 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 ; 2008 >
+    au < released ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 ; 2009 >
+    au < manifest ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 ; 2010 >
+    au < manifest ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 ; 2011 >
   }
 
 
@@ -375,10 +419,12 @@
 
     param[journal_abbr] = jbvela
 
-    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
-    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 >
-    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
-    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 ; 2006 >
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 2 ; 2 ; 2007 >
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 ; 2008 >
+    au < released ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 ; 2009 >
+    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 5 ; 5 ; 2010 >
+    au < manifest ; Journal of Business Valuation and Economic Loss Analysis Volume 6 ; 6 ; 2011 >
   }
 
 
@@ -390,12 +436,14 @@
 
     param[journal_abbr] = jcim
 
-    au < released ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
-    au < released ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 >
-    au < released ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 >
-    au < released ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 >
-    au < released ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
-    au < released ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 ; 2004 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 2 ; 2 ; 2005 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 3 ; 3 ; 2006 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 4 ; 4 ; 2007 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 ; 2008 >
+    au < released ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 ; 2009 >
+    au < manifest ; Journal of Complementary and Integrative Medicine Volume 7 ; 7 ; 2010 >
+    au < manifest ; Journal of Complementary and Integrative Medicine Volume 8 ; 8 ; 2011 >
   }
 
 
@@ -407,12 +455,14 @@
 
     param[journal_abbr] = jhsem
 
-    au < released ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
-    au < released ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 >
-    au < released ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 >
-    au < released ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 >
-    au < released ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
-    au < released ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 ; 2004>
+    au < released ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 ; 2005 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 ; 2006 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 ; 2007 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 ; 2008 >
+    au < released ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 ; 2009 >
+    au < manifest ; Journal of Homeland Security and Emergency Management Volume 7 ; 7 ; 2010 >
+    au < manifest ; Journal of Homeland Security and Emergency Management Volume 8 ; 8 ; 2011 >
   }
 
 
@@ -424,10 +474,11 @@
 
     param[journal_abbr] = jirspa
 
-    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
-    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 >
-    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
-    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 ; 2006 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 2 ; 2 ; 2007 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 ; 2008 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 ; 2009 >
+    au < released ; Journal of Imagery Research in Sport and Physical Activity Volume 5 ; 5 ; 2010 >
   }
 
 
@@ -439,7 +490,11 @@
 
     param[journal_abbr] = jioe
 
-    au < released ; Journal of Industrial Organization Education Volume 1 ; 1 >
+    au < released ; Journal of Industrial Organization Education Volume 1 ; 1 ; 2006 >
+    au < manifest ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
+    au < manifest ; Journal of Industrial Organization Education Volume 3 ; 3 ; 2008 >
+    au < manifest ; Journal of Industrial Organization Education Volume 4 ; 4 ; 2009 >
+    au < manifest ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
   }
 
 
@@ -451,11 +506,13 @@
 
     param[journal_abbr] = jqas
 
-    au < released ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
-    au < released ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 >
-    au < released ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 >
-    au < ready ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
-    au < ready ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+    au < released ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 ; 2005 >
+    au < released ; Journal of Quantitative Analysis in Sports Volume 2 ; 2 ; 2006 >
+    au < released ; Journal of Quantitative Analysis in Sports Volume 3 ; 3 ; 2007 >
+    au < ready ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 ; 2008 >
+    au < ready ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 ; 2009 >
+    au < manifest ; Journal of Quantitative Analysis in Sports Volume 6 ; 6 ; 2010 >
+    au < manifest ; Journal of Quantitative Analysis in Sports Volume 7 ; 7 ; 2011 >
   }
 
 
@@ -467,8 +524,10 @@
 
     param[journal_abbr] = jtl
 
-    au < released ; Journal of Tort Law Volume 1 ; 1 >
-    au < ready ; Journal of Tort Law Volume 2 ; 2 >
+    au < released ; Journal of Tort Law Volume 1 ; 1 ; 2008 >
+    au < ready ; Journal of Tort Law Volume 2 ; 2 ; 2009 >
+    au < manifest ; Journal of Tort Law Volume 3 ; 3 ; 2010 >
+    au < manifest ; Journal of Tort Law Volume 4 ; 4 ; 2011 >
   }
 
 
@@ -480,10 +539,13 @@
 
     param[journal_abbr] = mwjhr
 
-    au < released ; Muslim World Journal of Human Rights Volume 1 ; 1 >
-    au < released ; Muslim World Journal of Human Rights Volume 2 ; 2 >
-    au < released ; Muslim World Journal of Human Rights Volume 3 ; 3 >
-    au < ready ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+    au < released ; Muslim World Journal of Human Rights Volume 1 ; 1 ; 2004 >
+    au < released ; Muslim World Journal of Human Rights Volume 2 ; 2 ; 2005 >
+    au < released ; Muslim World Journal of Human Rights Volume 3 ; 3 ; 2006 >
+    au < ready ; Muslim World Journal of Human Rights Volume 4 ; 4 ; 2007 >
+    au < manifest ; Muslim World Journal of Human Rights Volume 5 ; 5 ; 2008 >
+    au < manifest ; Muslim World Journal of Human Rights Volume 6 ; 6 ; 2009 >
+    au < manifest ; Muslim World Journal of Human Rights Volume 7 ; 7 ; 2010 >
   }
 
 
@@ -495,20 +557,23 @@
 
     param[journal_abbr] = peps
 
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 >
-    au < released ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 >
-    au < ready ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
-    au < ready ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 ; 1995 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 2 ; 2 ; 1996 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 3 ; 3 ; 1997 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 4 ; 4 ; 1998 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 5 ; 5 ; 1999 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 6 ; 6 ; 2000 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 ; 2001 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 ; 2002 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 ; 2003 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 ; 2004 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 ; 2005 >
+    au < released ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 ; 2006 >
+    au < ready ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 ; 2007 >
+    au < ready ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 ; 2008 >
+    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 ; 2009 >
+    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 ; 2010 >
+    au < manifest ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 ; 2011 >
   }
 
 
@@ -520,10 +585,13 @@
 
     param[journal_abbr] = rle
 
-    au < released ; Review of Law & Economics Volume 1 ; 1 >
-    au < released ; Review of Law & Economics Volume 2 ; 2 >
-    au < released ; Review of Law & Economics Volume 3 ; 3 >
-    au < ready ; Review of Law & Economics Volume 4 ; 4 >
+    au < released ; Review of Law & Economics Volume 1 ; 1 ; 2005 >
+    au < released ; Review of Law & Economics Volume 2 ; 2 ; 2006 >
+    au < released ; Review of Law & Economics Volume 3 ; 3 ; 2007 >
+    au < ready ; Review of Law & Economics Volume 4 ; 4 ; 2008 >
+    au < manifest ; Review of Law & Economics Volume 5 ; 5 ; 2009 >
+    au < manifest ; Review of Law & Economics Volume 6 ; 6 ; 2010 >
+    au < manifest ; Review of Law & Economics Volume 7 ; 7 ; 2011 >
 
   }
 
@@ -536,13 +604,15 @@
 
     param[journal_abbr] = romsjournal
 
-    au < released ; Review of Marketing Science Volume 1 ; 1 >
-    au < released ; Review of Marketing Science Volume 2 ; 2 >
-    au < released ; Review of Marketing Science Volume 3 ; 3 >
-    au < released ; Review of Marketing Science Volume 4 ; 4 >
-    au < released ; Review of Marketing Science Volume 5 ; 5 >
-    au < ready ; Review of Marketing Science Volume 6 ; 6 >
-    au < ready ; Review of Marketing Science Volume 7 ; 7 >
+    au < released ; Review of Marketing Science Volume 1 ; 1 ; 2003 >
+    au < released ; Review of Marketing Science Volume 2 ; 2 ; 2004 >
+    au < released ; Review of Marketing Science Volume 3 ; 3 ; 2005 >
+    au < released ; Review of Marketing Science Volume 4 ; 4 ; 2006 >
+    au < released ; Review of Marketing Science Volume 5 ; 5 ; 2007 >
+    au < ready ; Review of Marketing Science Volume 6 ; 6 ; 2008 >
+    au < ready ; Review of Marketing Science Volume 7 ; 7 ; 2009 >
+    au < manifest ; Review of Marketing Science Volume 8 ; 8 ; 2010 >
+    au < manifest ; Review of Marketing Science Volume 9 ; 9 ; 2011 >
   }
 
 
@@ -556,10 +626,12 @@
 
     param[journal_abbr] = rmeef
 
-    au < released ; Review of Middle East Finance Volume 1 ; 1 >
-    au < released ; Review of Middle East Finance Volume 2 ; 2 >
-    au < released ; Review of Middle East Finance Volume 3 ; 3 >
-    au < ready ; Review of Middle East Finance Volume 4 ; 4 >
+    au < released ; Review of Middle East Finance Volume 1 ; 1 ; 2005 >
+    au < released ; Review of Middle East Finance Volume 2 ; 2 ; 2006 >
+    au < released ; Review of Middle East Finance Volume 3 ; 3 ; 2007 >
+    au < ready ; Review of Middle East Finance Volume 4 ; 4 ; 2008  >
+    au < manifest ; Review of Middle East Finance Volume 5 ; 5 ; 2009  >
+    au < manifest ; Review of Middle East Finance Volume 6 ; 6 ; 2009  >
   }
 
 
@@ -571,14 +643,16 @@
 
     param[journal_abbr] = sagmb
 
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 >
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 >
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 >
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 >
-    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 >
-    au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
-    au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 ; 2002 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 2 ; 2 ; 2003 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 3 ; 3 ; 2004 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 4 ; 4 ; 2005 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 5 ; 5 ; 2006 >
+    au < released ; Statistical Applications in Genetics and Molecular Biology Volume 6 ; 6 ; 2007 >
+    au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 ; 2008 >
+    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 ; 2009 >
+    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 ; 2010 >
+    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; 2011 >
   }
 
 
@@ -590,19 +664,21 @@
 
     param[journal_abbr] = snde
 
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 >
-    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 >
-    au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
-    au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 ; 1996-1997 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 ; 1997-1998 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 ; 1998-1999 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 ; 2000-2001 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 5 ; 5 ; 2001-2002 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 6 ; 6 ; 2002-2003>
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 7 ; 7 ; 2003-2004 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 8 ; 8 ; 2004 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 9 ; 9 ; 2005 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 10 ; 10 ; 2006 >
+    au < released ; Studies in Nonlinear Dynamics & Econometrics Volume 11 ; 11 ; 2007 >
+    au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 ; 2008 >
+    au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 ; 2009 >
+    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 14 ; 14 ; 2010 >
+    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 ; 2011 >
   }
 
 
@@ -613,17 +689,22 @@
     >
 
     param[journal_abbr] = til
+    comment[issue] = issue TOC is at /til/default/vol12/iss1
+    comment[volume] = volume TOC is at /til/default/vol12
+    comment[title] = title TOC is at /til
 
-    au < released ; Theoretical Inquiries in Law Volume 1 ; 1 >
-    au < released ; Theoretical Inquiries in Law Volume 2 ; 2 >
-    au < released ; Theoretical Inquiries in Law Volume 3 ; 3 >
-    au < released ; Theoretical Inquiries in Law Volume 4 ; 4 >
-    au < released ; Theoretical Inquiries in Law Volume 5 ; 5 >
-    au < released ; Theoretical Inquiries in Law Volume 6 ; 6 >
-    au < released ; Theoretical Inquiries in Law Volume 7 ; 7 >
-    au < released ; Theoretical Inquiries in Law Volume 8 ; 8 >
-    au < ready ; Theoretical Inquiries in Law Volume 9 ; 9 >
-    au < ready ; Theoretical Inquiries in Law Volume 10 ; 10 >
+    au < released ; Theoretical Inquiries in Law Volume 1 ; 1 ; 2000 >
+    au < released ; Theoretical Inquiries in Law Volume 2 ; 2 ; 2001 >
+    au < released ; Theoretical Inquiries in Law Volume 3 ; 3 ; 2002 >
+    au < released ; Theoretical Inquiries in Law Volume 4 ; 4 ; 2003 >
+    au < released ; Theoretical Inquiries in Law Volume 5 ; 5 ; 2004 >
+    au < released ; Theoretical Inquiries in Law Volume 6 ; 6 ; 2005>
+    au < released ; Theoretical Inquiries in Law Volume 7 ; 7 ; 2006 >
+    au < released ; Theoretical Inquiries in Law Volume 8 ; 8 ; 2007 >
+    au < ready ; Theoretical Inquiries in Law Volume 9 ; 9 ; 2008 >
+    au < ready ; Theoretical Inquiries in Law Volume 10 ; 10 ; 2009 >
+    au < manifest ; Theoretical Inquiries in Law Volume 11 ; 11 ; 2010 >
+    au < manifest ; Theoretical Inquiries in Law Volume 12 ; 12 ; 2011 >
   }
 
 
@@ -637,11 +718,13 @@ comment[wspr4] = daemon thinks there is no permission statement and fails the cr
 
     param[journal_abbr] = wpsr
 
-    au < released ; World Political Science Review Volume 1 ; 1 >
-    au < released ; World Political Science Review Volume 2 ; 2 >
-    au < released ; World Political Science Review Volume 3 ; 3 >
-    au < notReady ; World Political Science Review Volume 4 ; 4 >
-    au < ready ; World Political Science Review Volume 5 ; 5 >
+    au < released ; World Political Science Review Volume 1 ; 1 ; 2005 >
+    au < released ; World Political Science Review Volume 2 ; 2 ; 2006 >
+    au < released ; World Political Science Review Volume 3 ; 3 ; 2007 >
+    au < notReady ; World Political Science Review Volume 4 ; 4 ; 2008 >
+    au < ready ; World Political Science Review Volume 5 ; 5 ; 2009>
+    au < manifest ; World Political Science Review Volume 6 ; 6 ; 2010>
+    au < manifest ; World Political Science Review Volume 7 ; 7 ; 2011>
   }
 
 }
