@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.6 2011-03-22 12:58:51 pgust Exp $
+ * $Id: TestTdb.java,v 1.7 2011-05-11 06:39:14 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.6 2011-03-22 12:58:51 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.7 2011-05-11 06:39:14 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -263,6 +263,7 @@ public class TestTdb extends LockssTestCase {
     p1.put("issn", "0003-0031");
     p1.put("eissn", "0033-0331");
     p1.put("issnl", "0333-3331");
+    p1.put("journalId", "0333-3331");  // use issnl as journal title
    
     p1.put("journal.link.1.type", TdbTitle.LinkType.continuedBy.toString());
     p1.put("journal.link.1.journalId", "0333-3331");  // link to self
@@ -285,7 +286,7 @@ public class TestTdb extends LockssTestCase {
     TdbTitle title1 = titles1.iterator().next();
     assertEquals("Air & Space", title1.getName());
 
-    // title ID is issnl
+    // find title by ID
     assertEquals(title1, tdb.getTdbTitleById("0333-3331"));
 
     // validate linked titles 
