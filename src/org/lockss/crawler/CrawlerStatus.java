@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.9 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.10 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
@@ -567,8 +568,87 @@ public class CrawlerStatus {
     
   // Errors
 
-  public synchronized void signalErrorForUrl(String url, String error) {
-    errors.addToMap(url, error);
+  public enum Severity {Warning, Error, Fatal};
+
+  public static class UrlErrorInfo {
+    private String message;
+    private Severity sev;
+
+    public UrlErrorInfo(String message, Severity sev) {
+      this.message = message;
+      this.sev = sev;
+    }
+    public String getMessage() {
+      return message;
+    }
+
+    public Severity getSeverity() {
+      return sev;
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof UrlErrorInfo) {
+	UrlErrorInfo other = (UrlErrorInfo)o;
+	return StringUtil.equalStrings(getMessage(), other.getMessage())
+	  && getSeverity() == other.getSeverity();
+      }
+      return false;
+    }
+
+    public String toString() {
+      return "[UE: " + sev + ": " + message + "]";
+    }
+  }
+
+  private UrlErrorInfo errInfo(String urlMsg) {
+    return new UrlErrorInfo(urlMsg, Severity.Warning);
+  }
+
+  private UrlErrorInfo errInfo(String urlMsg, int status) {
+    Severity sev;
+    if (isCrawlError()) {
+      sev = Severity.Error;
+    } else {
+      sev = Severity.Error;
+    }
+    return new UrlErrorInfo(urlMsg, sev);
+  }
+
+  private UrlErrorInfo errInfo(CacheException ex) {
+    return new UrlErrorInfo(ex.getMessage(), severityOf(ex));
+  }
+
+  Severity severityOf(CacheException ex) {
+    if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+      return Severity.Fatal;
+    } else if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+      return Severity.Error;
+    } else {
+      return Severity.Warning;
+    }
+  }
+
+  public synchronized void signalErrorForUrl(String url, UrlErrorInfo ei) {
+    errors.addToMap(url, ei);
+  }
+
+  public synchronized void signalErrorForUrl(String url, CacheException ex) {
+    errors.addToMap(url, errInfo(ex));
+  }
+
+  public synchronized void signalErrorForUrl(String url, String urlMsg) {
+    signalErrorForUrl(url, errInfo(urlMsg));
+  }
+
+  public synchronized void signalErrorForUrl(String url, String urlMsg,
+					     int status) {
+    signalErrorForUrl(url, urlMsg, status, null);
+  }
+
+  public synchronized void signalErrorForUrl(String url, String urlMsg,
+					     int status, String message) {
+    setCrawlStatus(status, message);
+    signalErrorForUrl(url, errInfo(urlMsg, status));
   }
 
   public UrlCount getErrorCtr() {
@@ -579,15 +659,35 @@ public class CrawlerStatus {
     return errors.getCount();
   }
 
-  public synchronized String getErrorForUrl(String url) {
-    return (String)(errors.getMap().get(url));
+  public String getErrorForUrl(String url) {
+    UrlErrorInfo ui = getErrorInfoForUrl(url);
+    if (ui != null) {
+      return ui.getMessage();
+    }
+    return null;
+  }
+
+  public synchronized UrlErrorInfo getErrorInfoForUrl(String url) {
+    return getUrlsErrorMap().get(url);
   }
 
   /**
    * @return map of the urls that couldn't be fetched due to errors and the
    * error they got
    */
-  public synchronized Map getUrlsWithErrors() {
+  public synchronized Map<String,String> getUrlsWithErrors() {
+    Map<String,String> res = new HashMap<String,String>();
+    for (Map.Entry<String,UrlErrorInfo> ent : getUrlsErrorMap().entrySet()) {
+      res.put(ent.getKey(), ent.getValue().getMessage());
+    }
+    return res;
+  }
+
+  /**
+   * @return map of the urls that couldn't be fetched due to errors and the
+   * error they got
+   */
+  public synchronized Map<String,UrlErrorInfo> getUrlsErrorMap() {
     return errors.getMap();
   }
 
@@ -681,7 +781,7 @@ public class CrawlerStatus {
       if (cnt > 0) cnt--;
     }
 
-    void addToMap(String key, String val) {
+    void addToMap(String key, Object val) {
       chkUpdate();
       cnt++;
     }
@@ -855,7 +955,7 @@ public class CrawlerStatus {
   public static class UrlCountWithMap extends UrlCount {
     LinkedMap map;
 
-    void addToMap(String key, String val) {
+    void addToMap(String key, Object val) {
       super.addToMap(key, val);
       if (map == null) {
 	map = new LinkedMap();

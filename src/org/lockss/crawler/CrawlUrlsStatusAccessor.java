@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.8 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.9 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -38,12 +38,14 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 // import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import static org.lockss.crawler.CrawlerStatus.UrlErrorInfo;
 
 public class CrawlUrlsStatusAccessor implements StatusAccessor {
 
   private static final String URL = "url";
   private static final String IX = "ix";
   private static final String CRAWL_ERROR = "crawl_error";
+  private static final String CRAWL_SEVERITY = "crawl_severity";
 
   private static final String FETCHED_TABLE_NAME = "fetched";
   private static final String ERROR_TABLE_NAME = "error";
@@ -70,7 +72,10 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
                                        ColumnDescriptor.TYPE_STRING));
 
   private static List colDescsError =
-    ListUtil.list(new ColumnDescriptor(URL, "URL",
+    ListUtil.list(new ColumnDescriptor(CRAWL_SEVERITY, "Severity",
+				       ColumnDescriptor.TYPE_STRING,
+				       "Errors and Fatal errors cause the crawl to fail, Warnings do not."),
+		  new ColumnDescriptor(URL, "URL",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(CRAWL_ERROR, "Error",
 				       ColumnDescriptor.TYPE_STRING));
@@ -185,13 +190,12 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
       rows = urlSetToRows(status.getUrlsExcluded());
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
-      Map errorMap = status.getUrlsWithErrors();
+      Map<String,UrlErrorInfo> errorMap = status.getUrlsErrorMap();
       Set errorUrls = errorMap.keySet();
       rows = new ArrayList(errorUrls.size());
       int ix = 1;
-      for (Iterator it = errorUrls.iterator(); it.hasNext();) {
-	String url = (String)it.next();
- 	rows.add(makeRow(url, ix++, (String)errorMap.get(url)));
+      for (Map.Entry<String,UrlErrorInfo> ent : errorMap.entrySet()) {
+ 	rows.add(makeRow(ent.getKey(), ix++, ent.getValue()));
       }
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
       rows = urlSetToRows( status.getUrlsOfMimeType(getMimeTypeStr(tableStr)) );
@@ -226,9 +230,10 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
     return row;
   }
 
-  private Map makeRow(String url, int ix, String error) {
+  private Map makeRow(String url, int ix, CrawlerStatus.UrlErrorInfo ui) {
     Map row = makeRow(url, ix);
-    row.put(CRAWL_ERROR, error);
+    row.put(CRAWL_ERROR, ui.getMessage());
+    row.put(CRAWL_SEVERITY, ui.getSeverity().toString());
     return row;
   }
 

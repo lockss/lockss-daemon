@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.6 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.7 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -36,13 +36,11 @@ import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.CrawlerStatus.UrlCount;
-import org.lockss.crawler.CrawlerStatus.UrlCountWithList;
-import org.lockss.crawler.CrawlerStatus.UrlCountWithSet;
-import org.lockss.crawler.CrawlerStatus.UrlCountWithMap;
+import org.lockss.crawler.CrawlerStatus.*;
 
 /**
  * Test class for CrawlerStatus.
@@ -550,6 +548,15 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertEquals(0, uc.getCount());
   }
 
+  CrawlerStatus.UrlErrorInfo uei(String msg) {
+    return uei(msg, CrawlerStatus.Severity.Warning);
+  }
+
+  CrawlerStatus.UrlErrorInfo uei(String msg, CrawlerStatus.Severity sev) {
+    return new CrawlerStatus.UrlErrorInfo(msg, sev);
+  }
+
+
   public void testErrors() {
     assertEmpty(cs.getUrlsWithErrors());
     assertEquals(0, cs.getNumUrlsWithErrors());
@@ -559,20 +566,23 @@ public class TestCrawlerStatus extends LockssTestCase {
     
     cs.signalErrorForUrl(url1, "err 1");
 
-    assertEquals(MapUtil.map(url1, "err 1"), cs.getUrlsWithErrors());
+    assertEquals(MapUtil.map(url1, uei("err 1", Severity.Warning)),
+		 cs.getUrlsErrorMap());
     assertEquals(1, cs.getNumUrlsWithErrors());
     uc = cs.getErrorCtr();
-    assertEquals(cs.getUrlsWithErrors(), uc.getMap());
+    assertEquals(cs.getUrlsErrorMap(), uc.getMap());
     assertEquals(1, uc.getCount());
 
-    cs.signalErrorForUrl(url2, "err 2");
-    cs.signalErrorForUrl(url1, "err 3");
+    cs.signalErrorForUrl(url2, "err 2", Crawler.STATUS_FETCH_ERROR);
+    assertEquals(Crawler.STATUS_FETCH_ERROR, cs.getCrawlStatus());
+    cs.signalErrorForUrl(url1, new CacheException.PermissionException("err 3"));
 
-    assertEquals(MapUtil.map(url1, "err 3", url2, "err 2"),
-		 cs.getUrlsWithErrors());
+    assertEquals(MapUtil.map(url1, uei("err 3", Severity.Fatal),
+			     url2, uei("err 2", Severity.Error)),
+		 cs.getUrlsErrorMap());
     assertEquals(2, cs.getNumUrlsWithErrors());
     uc = cs.getErrorCtr();
-    assertEquals(cs.getUrlsWithErrors(), uc.getMap());
+    assertEquals(cs.getUrlsErrorMap(), uc.getMap());
     assertEquals(2, uc.getCount());
   }
 

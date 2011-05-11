@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.13 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.14 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.crawler.CrawlerStatus.*;
 
 public class TestSingleCrawlStatus extends LockssTestCase {
   MockCrawlManagerStatusSource statusSource;
@@ -45,6 +46,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   private static final String URL = "url";
   private static final String CRAWL_ERROR = "crawl_error";
+  private static final String CRAWL_SEVERITY = "crawl_severity";
 
   private static List expectedColDescsFetched =
     ListUtil.list(new ColumnDescriptor(URL, "URL Fetched",
@@ -59,7 +61,9 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_STRING));
 
   private static List expectedColDescsError =
-    ListUtil.list(new ColumnDescriptor(URL, "URL",
+    ListUtil.list(new ColumnDescriptor(CRAWL_SEVERITY, "Severity",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(URL, "URL",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(CRAWL_ERROR, "Error",
 				       ColumnDescriptor.TYPE_STRING));
@@ -317,8 +321,10 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     MockArchivalUnit au = new MockArchivalUnit();
 
     Map errors = new LinkedMap();
-    errors.put("http://www.example.com", "Generic error");
-    errors.put("http://www.example.com/blah.html", "Generic error2");
+    errors.put("http://www.example.com",
+	       new UrlErrorInfo("Generic error", Severity.Warning));
+    errors.put("http://www.example.com/blah.html",
+	       new UrlErrorInfo("Generic error2", Severity.Warning));
 
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);

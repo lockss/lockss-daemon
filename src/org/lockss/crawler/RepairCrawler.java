@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.69 2007-10-04 04:06:17 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.70 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -235,9 +235,10 @@ public class RepairCrawler extends BaseCrawler {
 	  doCrawlLoop(url);
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
-	  crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, "Unexpected error");
 	  crawlStatus.signalErrorForUrl(url,
-					"Unexpected error: " + e.getMessage());
+					"Unexpected error: " + e.getMessage(),
+					Crawler.STATUS_ERROR,
+					"Unexpected error");
 	}
       } else {
 	logger.warning("Called with a starting url we aren't suppose to "+
@@ -272,9 +273,9 @@ public class RepairCrawler extends BaseCrawler {
       if (fetchCache && fetchPublisher) {
 	logger.error("Contradicting parameters! both PARAM_FETCH_FROM_OTHER_CACHE_ONLY " +
 		     "and PARAM_FETCH_FROM_PUBLISHER_ONLY flag is true.");
-	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
-				   "Internal error repair1");
-	crawlStatus.signalErrorForUrl(url, "Internal error repair1");
+	crawlStatus.signalErrorForUrl(url, "Internal error repair1",
+				      Crawler.STATUS_ERROR,
+				      "Internal error repair1");
       } else if (fetchCache) { //(1) other caches only
 	try {
 	  logger.debug3("Trying to fetch from caches only");
@@ -287,9 +288,9 @@ public class RepairCrawler extends BaseCrawler {
 	  }
 	} catch (LockssUrlConnection.CantProxyException e){
 	  logger.error("LockssUrlConnection can't proxy", e);
-	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
-				     e.getMessage());
-	  crawlStatus.signalErrorForUrl(url, e.getMessage());
+	  crawlStatus.signalErrorForUrl(url, e.getMessage(),
+					Crawler.STATUS_FETCH_ERROR,
+					e.getMessage());
 	}
       } else if (fetchPublisher){ //(2) publisher only
 	try {
@@ -297,9 +298,9 @@ public class RepairCrawler extends BaseCrawler {
 	  fetchFromPublisher(url);
 	} catch (CacheException e) {
 	  logger.warning(url+" not found on publisher's site: " + e);
-	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
-				     e.getMessage());
-	  crawlStatus.signalErrorForUrl(url, e.getMessage());
+	  crawlStatus.signalErrorForUrl(url, e.getMessage(),
+					Crawler.STATUS_FETCH_ERROR,
+					e.getMessage());
 	}
       } else if (shouldFetchFromCache()) { //(3) caches then publisher
 	try {
@@ -314,9 +315,9 @@ public class RepairCrawler extends BaseCrawler {
 	    fetchFromPublisher(url);
 	  } catch (CacheException ex) {
 	    logger.warning(url+" not found on publisher's site2: " + e);
-	    crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
-				       e.getMessage());
-	    crawlStatus.signalErrorForUrl(url, e.getMessage());
+	    crawlStatus.signalErrorForUrl(url, e.getMessage(),
+					  Crawler.STATUS_FETCH_ERROR,
+					  e.getMessage());
 	  }
 	}
       } else { //(4) publisher then caches
@@ -330,9 +331,9 @@ public class RepairCrawler extends BaseCrawler {
 	    fetchFromSomeCache(url, numCacheRetries);
 	  } catch (LockssUrlConnection.CantProxyException ex){
 	    logger.warning("Failed to fetch from caches", e);
-	    crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
-				       e.getMessage());
-	    crawlStatus.signalErrorForUrl(url, e.getMessage());
+	    crawlStatus.signalErrorForUrl(url, e.getMessage(),
+					  Crawler.STATUS_FETCH_ERROR,
+					  e.getMessage());
 	  }
 	}
       }

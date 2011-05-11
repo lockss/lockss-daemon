@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.85 2011-05-09 02:34:02 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.86 2011-05-11 08:41:10 tlipkis Exp $
  */
 
 /*
@@ -229,7 +229,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     logger.info("Beginning depth " + maxDepth + " crawl " +
 		(shouldFollowLink() ? "" : "(no follow) ") +
 		"of " + au);
-    crawlStatus.signalCrawlStarted();
     crawlStatus.addSource("Publisher");
     cus = au.getAuCachedUrlSet();
     processedUrls = new HashMap<String,CrawlUrlData>();
@@ -325,8 +324,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  return aborted();
 	}
 	logger.warning("Unexpected exception processing: " + url, e);
-	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
-	crawlStatus.signalErrorForUrl(url, e.toString());
+	crawlStatus.signalErrorForUrl(url, e.toString(), Crawler.STATUS_ERROR);
       }
       if (usePersistantList) {
 	// PERSIST save state here
@@ -409,8 +407,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       logger.error("URL comparator error", e);
       cstat.signalErrorForUrl(curl.getUrl(),
 			      "URL comparator error, can't add to queue: "
-			      + curl.getUrl() + ": " + e.getMessage());
-      cstat.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR);
+			      + curl.getUrl() + ": " + e.getMessage(),
+			      Crawler.STATUS_PLUGIN_ERROR);
       // PriorityBuffer can't recover from comparator error, so this must
       // abort.
       abortCrawl();
@@ -507,8 +505,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	curl.setFailedFetch(true);
 	logger.error("Repository error with "+uc, ex);
 	crawlStatus.signalErrorForUrl(uc.getUrl(),
-				      "Can't store page: " + ex.getMessage());
- 	crawlStatus.setCrawlStatus(Crawler.STATUS_REPO_ERR);
+				      "Can't store page: " + ex.getMessage(),
+				      Crawler.STATUS_REPO_ERR);
       } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
 	// Count this as an excluded URL
 	crawlStatus.signalUrlExcluded(uc.getUrl());
@@ -518,10 +516,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	// Failed.  Don't try this one again during this crawl.
 	failedUrls.add(uc.getUrl());
 	curl.setFailedFetch(true);
-	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
 	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	  logger.siteError("Problem caching "+uc+". Continuing", ex);
-	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+	  crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage(),
+					Crawler.STATUS_FETCH_ERROR);
 	} else {
 	  logger.warning(uc+" not found on publisher's site", ex);
 
@@ -529,7 +527,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	    // fail if cannot fetch a StartUrl
 	    String msg = "Failed to cache start url: "+ uc.getUrl();
 	    logger.error(msg);
-	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, msg);
+	    crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage(),
+					  Crawler.STATUS_ERROR, msg);
+	  } else {
+	    crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
 	  }
 
 	}
@@ -544,10 +545,10 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	} else {
 	  failedUrls.add(uc.getUrl());
 	  curl.setFailedFetch(true);
-	  crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString());
+	  crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString(),
+					Crawler.STATUS_FETCH_ERROR);
 	  //XXX not expected
 	  logger.error("Unexpected Exception during crawl, continuing", ex);
-	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
 	}
       }
     } else {
@@ -602,8 +603,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		logger.error("Plugin LinkExtractor error", e);
 		crawlStatus.signalErrorForUrl(uc.getUrl(),
 					      "Plugin LinkExtractor error: " +
-					      e.getMessage());
-		crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR);
+					      e.getMessage(),
+					      Crawler.STATUS_PLUGIN_ERROR);
 	      } finally {
 		IOUtil.safeClose(in);
 	      }
@@ -615,7 +616,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	}
       }
     } catch (CacheException ex) {
-      crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
+      crawlStatus.signalErrorForUrl(uc.getUrl(), ex);
       if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
 	logger.error("Fatal error parsing "+uc, ex);
 	crawlAborted = true;
@@ -629,9 +630,9 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       curl.setFailedParse(true);
       processedUrls.put(uc.getUrl(), curl);
     } catch (IOException ioe) {
-      crawlStatus.signalErrorForUrl(uc.getUrl(), ioe.getMessage());
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+      crawlStatus.signalErrorForUrl(uc.getUrl(), ioe.getMessage(),
+				    Crawler.STATUS_FETCH_ERROR);
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (!crawlStatus.isCrawlError());
