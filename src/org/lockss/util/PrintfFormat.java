@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.5 2011-05-11 21:30:26 pgust Exp $
+ * $Id: PrintfFormat.java,v 1.6 2011-05-11 22:12:08 pgust Exp $
  */
 
 //
@@ -1134,7 +1134,7 @@ public class PrintfFormat {
      */
     String internalsprintf(String s)
         throws IllegalArgumentException {
-      String s2 = "";
+      String s2 = null;
       if(conversionCharacter=='s'
       || conversionCharacter=='S') {
         s2 = printSFormat(s);
@@ -1159,7 +1159,7 @@ public class PrintfFormat {
             break;
     	
       	  }
-    	} catch (Exception ex) {
+    	} catch (Throwable ex) {
     	}
     	if (s2 == null) {
     	  throw new IllegalArgumentException("Cannot "+
