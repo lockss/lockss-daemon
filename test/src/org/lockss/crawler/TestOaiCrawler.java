@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.20 2011-05-09 03:38:17 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.21 2011-05-11 03:31:16 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestOaiCrawler extends LockssTestCase {
   private String handlerUrl = "http://www.example.com/handler.html";
   private String permissionUrl = "http://www.example.com/permission.html";
   private List permissionList = ListUtil.list(permissionUrl);
-  private BaseCrawler crawler = null;
+  private OaiCrawler crawler = null;
 
   SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
 
@@ -78,7 +78,7 @@ public class TestOaiCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
 
     crawler = new OaiCrawler(mau, spec, aus);
-    ((BaseCrawler)crawler).daemonPermissionCheckers =
+    crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
   }
 
@@ -123,6 +123,14 @@ public class TestOaiCrawler extends LockssTestCase {
 
   public void testIsWholeAU() {
     assertTrue(crawler.isWholeAU());
+  }
+
+  public void testIsFailOnStartUrlError() {
+    assertTrue(crawler.isFailOnStartUrlError());
+    spec.setFailOnStartUrlError(false);
+    assertFalse(crawler.isFailOnStartUrlError());
+    spec.setFailOnStartUrlError(true);
+    assertTrue(crawler.isFailOnStartUrlError());
   }
 
   public void testGetFromTime() {
