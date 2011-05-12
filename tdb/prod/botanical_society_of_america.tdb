@@ -17,11 +17,11 @@
     param[base_url] = http://www.amjbot.org/
     implicit < status ; name ; param[volume_name] >
 
-    au < released ; American Journal of Botany Volume 92 ; 92 >
-    au < released ; American Journal of Botany Volume 93 ; 93 >
-    au < released ; American Journal of Botany Volume 94 ; 94 >
-    au < released ; American Journal of Botany Volume 95 ; 95 >
-    au < released ; American Journal of Botany Volume 96 ; 96 >
+    au < down ; American Journal of Botany Volume 92 ; 92 >
+    au < down ; American Journal of Botany Volume 93 ; 93 >
+    au < down ; American Journal of Botany Volume 94 ; 94 >
+    au < down ; American Journal of Botany Volume 95 ; 95 >
+    au < down ; American Journal of Botany Volume 96 ; 96 >
 
   }
 
