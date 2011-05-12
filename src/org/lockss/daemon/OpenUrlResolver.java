@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.11 2011-05-11 21:34:12 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.12 2011-05-12 13:38:55 pgust Exp $
  */
 
 /*
@@ -1111,7 +1111,6 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
       paramMap.setMapElement("issue", issue);
-log.critical(">>>volumeName: " + volumeName + " year: " + year + " issue: " + issue);
       url = getJournalUrl(plugin, paramMap);
       log.debug3("Found starting url from definable plugin: " + url);
     } else {
