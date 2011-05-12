@@ -581,6 +581,7 @@
     au < released ; 2008 ; Baltic Journal of Management Volume 3 ; 3 >
     au < released ; 2009 ; Baltic Journal of Management Volume 4 ; 4 >
     au < manifest ; 2010 ; Baltic Journal of Management Volume 5 ; 5 >
+    au < exists ; 2011 ; Baltic Journal of Management Volume 6 ; 6 >
 
   }
 
@@ -647,6 +648,7 @@
     au < released ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 >
     au < released ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 >
     au < released ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 >
+    au < exists ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 >
 
   }
 
@@ -773,6 +775,7 @@
     au < ready ; 2008 ; British Food Journal Volume 110 ; 110 >
     au < ready ; 2009 ; British Food Journal Volume 111 ; 111 >
     au < manifest ; 2010 ; British Food Journal Volume 112 ; 112 >
+    au < manifest ; 2011 ; British Food Journal Volume 113 ; 113 >
 
   }
 
@@ -786,6 +789,7 @@
     >
 
     param[journal_issn] = 1466-4100
+    comment[platform] = Published as Clinical Governance from 2003
     
     au < released ; 1996 ; British Journal of Clinical Governance Volume 1 ; 1 >
     au < released ; 1997 ; British Journal of Clinical Governance Volume 2 ; 2 >
@@ -824,7 +828,7 @@
     au < released ; 2008 ; Business Process Management Journal Volume 14 ; 14 >
     au < released ; 2009 ; Business Process Management Journal Volume 15 ; 15 >
     au < released ; 2010 ; Business Process Management Journal Volume 16 ; 16 >
-
+    au < exists ; 2011 ; Business Process Management Journal Volume 17 ; 17 >
   }
 
   {
@@ -842,6 +846,7 @@
     au < released ; 2008 ; Business Strategy Series Volume 9 ; 9 >
     au < released ; 2009 ; Business Strategy Series Volume 10 ; 10 >
     au < released ; 2010 ; Business Strategy Series Volume 11 ; 11 >
+    au < exists ; 2011 ; Business Strategy Series Volume 12 ; 12 >
 
   }
 
@@ -912,6 +917,7 @@
     au < released ; 2008 ; Career Development International Volume 13 ; 13 >
     au < released ; 2009 ; Career Development International Volume 14 ; 14 >
     au < released ; 2010 ; Career Development International Volume 15 ; 15 >
+    au < exists ; 2011 ; Career Development International Volume 16 ; 16 >
 
   }
 
@@ -928,6 +934,7 @@
     
     au < released ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 >
     au < released ; 2010 ; China Agricultural Economic Review Volume 2 ; 2 >
+    au < exists ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 >
 
   }
 
@@ -946,6 +953,7 @@
     au < released ; 2008 ; Chinese Management Studies Volume 2 ; 2 >
     au < released ; 2009 ; Chinese Management Studies Volume 3 ; 3 >
     au < released ; 2010 ; Chinese Management Studies Volume 4 ; 4 >
+    au < exists ; 2011 ; Chinese Management Studies Volume 5 ; 5 >
 
   }
 
@@ -996,6 +1004,7 @@
     au < released ; 2008 ; Circuit World Volume 34 ; 34 >
     au < released ; 2009 ; Circuit World Volume 35 ; 35 >
     au < released ; 2010 ; Circuit World Volume 36 ; 36 >
+    au < exists ; 2011 ; Circuit World Volume 37 ; 37 >
 
   }
 
@@ -1018,6 +1027,7 @@
     au < released ; 2008 ; Clinical Governance: An International Journal Volume 13 ; 13 >
     au < released ; 2009 ; Clinical Governance: An International Journal Volume 14 ; 14 >
     au < released ; 2010 ; Clinical Governance: An International Journal Volume 15 ; 15 >
+    au < exists ; 2011 ; Clinical Governance: An International Journal Volume 16 ; 16 >
 
   }
 
@@ -1030,6 +1040,7 @@
     >
 
     param[journal_issn] = 1063-0279
+    comment[merged] = into British Journal of Clinical Governance
     
     au < released ; 1999 ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
     au < released ; 2000 ; Clinical Performance and Quality Healthcare Volume 8 ; 8 >
@@ -1075,6 +1086,7 @@
     au < released ; 2008 ; Collection Building Volume 27 ; 27 >
     au < released ; 2009 ; Collection Building Volume 28 ; 28 >
     au < released ; 2010 ; Collection Building Volume 29 ; 29 >
+    au < exists ; 2011 ; Collection Building Volume 30 ; 30 >
 
   }
 
@@ -1117,6 +1129,7 @@
     au < released ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 >
     au < released ; 2009 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 28 ; 28 >
     au < released ; 2010 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 29 ; 29 >
+    au < exists ; 2011 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 30 ; 30 >
 
   }
 
@@ -1150,6 +1163,7 @@
     au < released ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 >
     au < released ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 >
     au < released ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 >
+    au < exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 >
 
   }
 
@@ -1174,6 +1188,7 @@
     au < released ; 2008 ; Construction Innovation: Information, Process, Management Volume 8 ; 8 >
     au < released ; 2009 ; Construction Innovation: Information, Process, Management Volume 9 ; 9 >
     au < released ; 2010 ; Construction Innovation: Information, Process, Management Volume 10 ; 10 >
+    au < exists ; 2011 ; Construction Innovation: Information, Process, Management Volume 11 ; 11 >
 
   }
 
@@ -1203,6 +1218,7 @@
     au < released ; 2008 ; Corporate Communications: An International Journal Volume 13 ; 13 >
     au < released ; 2009 ; Corporate Communications: An International Journal Volume 14 ; 14 >
     au < released ; 2010 ; Corporate Communications: An International Journal Volume 15 ; 15 >
+    au < released ; 2011 ; Corporate Communications: An International Journal Volume 16 ; 16 >
 
   }
 
@@ -1227,6 +1243,7 @@
     au < released ; 2008 ; Corporate Governance Volume 8 ; 8 >
     au < released ; 2009 ; Corporate Governance Volume 9 ; 9 >
     au < released ; 2010 ; Corporate Governance Volume 10 ; 10 >
+    au < exists ; 2011 ; Corporate Governance Volume 11 ; 11 >
 
   }
 
@@ -1247,7 +1264,7 @@
     au < released ; 2008 ; Critical Perspectives on International Business Volume 4 ; 4 >
     au < released ; 2009 ; Critical Perspectives on International Business Volume 5 ; 5 >
     au < released ; 2010 ; Critical Perspectives on International Business Volume 6 ; 6 >
-
+    au < exists ; 2011 ; Critical Perspectives on International Business Volume 7 ; 7 >
   }
 
   {
@@ -1278,6 +1295,7 @@
     au < released ; 2008 ; Cross Cultural Management: An International Journal Volume 15 ; 15 >
     au < released ; 2009 ; Cross Cultural Management: An International Journal Volume 16 ; 16 >
     au < released ; 2010 ; Cross Cultural Management: An International Journal Volume 17 ; 17 >
+    au < exists ; 2011 ; Cross Cultural Management: An International Journal Volume 18 ; 18 >
 
   }
 
@@ -1853,9 +1871,13 @@
 
     param[journal_issn] = 0953-3230
 
-    
-    au < testing ; 1994 ; Executive Development Volume 7 ; 7 >
-    au < testing ; 1995 ; Executive Development Volume 8 ; 8 >
+    au < testing ; 1989 ; Executive Development Volume 2 ; 2 >
+    au < testing ; 1990 ; Executive Development Volume 3 ; 3 >
+    au < testing ; 1991 ; Executive Development Volume 4 ; 4 >
+    au < testing ; 1992 ; Executive Development Volume 5 ; 5 >
+    au < testing ; 1993 ; Executive Development Volume 6 ; 6 >    
+    au < ready ; 1994 ; Executive Development Volume 7 ; 7 >
+    au < ready ; 1995 ; Executive Development Volume 8 ; 8 >
 
   }
 
