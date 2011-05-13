@@ -19,13 +19,130 @@
     param[base_url] = http://www.ejbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < released ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
+    au < released ; 1889 ; Journal of Orthopaedic Surgery Volume s1-2 (1889) ; s1-2 >
+    au < released ; 1890 ; Journal of Orthopaedic Surgery Volume s1-3 (1890) ; s1-3 >
+    au < released ; 1891 ; Journal of Orthopaedic Surgery Volume s1-4 (1891) ; s1-4 >
+    au < released ; 1893 ; Journal of Orthopaedic Surgery Volume s1-5 (1893) ; s1-5 >
+    au < released ; 1894 ; Journal of Orthopaedic Surgery Volume s1-6 (1894) ; s1-6 >
+    au < released ; 1895 ; Journal of Orthopaedic Surgery Volume s1-7 (1895) ; s1-7 >
+    au < released ; 1896 ; Journal of Orthopaedic Surgery Volume s1-8 (1896) ; s1-8 >
+    au < released ; 1896 ; Journal of Orthopaedic Surgery Volume s1-9 (1896) ; s1-9 >
+    au < released ; 1897 ; Journal of Orthopaedic Surgery Volume s1-10 (1897) ; s1-10 >
+    au < released ; 1898 ; Journal of Orthopaedic Surgery Volume s1-11 (1898) ; s1-11 >
+    au < released ; 1899 ; Journal of Orthopaedic Surgery Volume s1-12 (1899) ; s1-12 >
+    au < released ; 1900 ; Journal of Orthopaedic Surgery Volume s1-13 (1900) ; s1-13 >
+    au < released ; 1901 ; Journal of Orthopaedic Surgery Volume s1-14 (1901) ; s1-14 >
+    au < released ; 1902 ; Journal of Orthopaedic Surgery Volume s1-15 (1902) ; s1-15 >
+    au < released ; 1903-1904 ; Journal of Orthopaedic Surgery Volume s2-1 (1903-1904) ; s2-1 >
+    au < released ; 1904-1905 ; Journal of Orthopaedic Surgery Volume s2-2 (1904-1905) ; s2-2 >
+    au < released ; 1905-1906 ; Journal of Orthopaedic Surgery Volume s2-3 (1905-1906) ; s2-3 >
+    au < released ; 1906-1907 ; Journal of Orthopaedic Surgery Volume s2-4 (1906-1907) ; s2-4 >
+    au < released ; 1907-1908 ; Journal of Orthopaedic Surgery Volume s2-5 (1907-1908) ; s2-5 >
+    au < released ; 1908-1909 ; Journal of Orthopaedic Surgery Volume s2-6 (1908-1909) ; s2-6 >
+    au < released ; 1909-1910 ; Journal of Orthopaedic Surgery Volume s2-7 (1909-1910) ; s2-7 >
+    au < released ; 1910-1911 ; Journal of Orthopaedic Surgery Volume s2-8 (1910-1911) ; s2-8 >
+    au < released ; 1911-1912 ; Journal of Orthopaedic Surgery Volume s2-9 (1911-1912) ; s2-9 >
+    au < released ; 1912-1913 ; Journal of Orthopaedic Surgery Volume s2-10 (1912-1913) ; s2-10 >
+    au < released ; 1913-1914 ; Journal of Orthopaedic Surgery Volume s2-11 (1913-1914) ; s2-11 >
+    au < released ; 1914-1915 ; Journal of Orthopaedic Surgery Volume s2-12 (1914-1915) ; s2-12 >
+    au < released ; 1915 ; Journal of Orthopaedic Surgery Volume s2-13 (1915) ; s2-13 >
+    au < released ; 1916 ; Journal of Orthopaedic Surgery Volume s2-14 (1916) ; s2-14 >
+    au < released ; 1917 ; Journal of Orthopaedic Surgery Volume s2-15 (1917) ; s2-15 >
+    au < released ; 1918 ; Journal of Orthopaedic Surgery Volume s2-16 (1918) ; s2-16 >
+    au < released ; 1919 ; Journal of Orthopaedic Surgery Volume 1 ; 1 >
+    au < released ; 1920 ; Journal of Orthopaedic Surgery Volume 2 ; 2 >
+    au < released ; 1921 ; Journal of Orthopaedic Surgery Volume 3 ; 3 >
+    au < released ; 1922 ; The Journal of Bone and Joint Surgery Volume 4 ; 4 >
+    au < released ; 1923 ; The Journal of Bone and Joint Surgery Volume 5 ; 5 >
+    au < released ; 1924 ; The Journal of Bone and Joint Surgery Volume 6 ; 6 >
+    au < released ; 1925 ; The Journal of Bone and Joint Surgery Volume 7 ; 7 >
+    au < released ; 1926 ; The Journal of Bone and Joint Surgery Volume 8 ; 8 >
+    au < released ; 1927 ; The Journal of Bone and Joint Surgery Volume 9 ; 9 >
+    au < released ; 1928 ; The Journal of Bone and Joint Surgery Volume 10 ; 10 >
+    au < released ; 1929 ; The Journal of Bone and Joint Surgery Volume 11 ; 11 >
+    au < released ; 1930 ; The Journal of Bone and Joint Surgery Volume 12 ; 12 >
+    au < released ; 1931 ; The Journal of Bone and Joint Surgery Volume 13 ; 13 >
+    au < released ; 1932 ; The Journal of Bone and Joint Surgery Volume 14 ; 14 >
+    au < released ; 1933 ; The Journal of Bone and Joint Surgery Volume 15 ; 15 >
+    au < released ; 1934 ; The Journal of Bone and Joint Surgery Volume 16 ; 16 >
+    au < released ; 1935 ; The Journal of Bone and Joint Surgery Volume 17 ; 17 >
+    au < released ; 1936 ; The Journal of Bone and Joint Surgery Volume 18 ; 18 >
+    au < released ; 1937 ; The Journal of Bone and Joint Surgery Volume 19 ; 19 >
+    au < released ; 1938 ; The Journal of Bone and Joint Surgery Volume 20 ; 20 >
+    au < released ; 1939 ; The Journal of Bone and Joint Surgery Volume 21 ; 21 >
+    au < released ; 1940 ; The Journal of Bone and Joint Surgery Volume 22 ; 22 >
+    au < released ; 1941 ; The Journal of Bone and Joint Surgery Volume 23 ; 23 >
+    au < released ; 1942 ; The Journal of Bone and Joint Surgery Volume 24 ; 24 >
+    au < released ; 1943 ; The Journal of Bone and Joint Surgery Volume 25 ; 25 >
+    au < released ; 1944 ; The Journal of Bone and Joint Surgery Volume 26 ; 26 >
+    au < released ; 1945 ; The Journal of Bone and Joint Surgery Volume 27 ; 27 >
+    au < released ; 1946 ; The Journal of Bone and Joint Surgery Volume 28 ; 28 >
+    au < released ; 1947 ; The Journal of Bone and Joint Surgery Volume 29 ; 29 >
+    au < released ; 1948 ; The Journal of Bone and Joint Surgery Volume 30 ; 30 >
+    au < released ; 1949 ; The Journal of Bone and Joint Surgery Volume 31 ; 31 >
+    au < released ; 1950 ; The Journal of Bone and Joint Surgery Volume 32 ; 32 >
+    au < released ; 1951 ; The Journal of Bone and Joint Surgery Volume 33 ; 33 >
+    au < released ; 1952 ; The Journal of Bone and Joint Surgery Volume 34 ; 34 >
+    au < released ; 1953 ; The Journal of Bone and Joint Surgery Volume 35 ; 35 >
+    au < released ; 1954 ; The Journal of Bone and Joint Surgery Volume 36 ; 36 >
+    au < released ; 1955 ; The Journal of Bone and Joint Surgery Volume 37 ; 37 >
+    au < released ; 1956 ; The Journal of Bone and Joint Surgery Volume 38 ; 38 >
+    au < released ; 1957 ; The Journal of Bone and Joint Surgery Volume 39 ; 39 >
+    au < released ; 1958 ; The Journal of Bone and Joint Surgery Volume 40 ; 40 >
+    au < released ; 1959 ; The Journal of Bone and Joint Surgery Volume 41 ; 41 >
+    au < released ; 1960 ; The Journal of Bone and Joint Surgery Volume 42 ; 42 >
+    au < released ; 1961 ; The Journal of Bone and Joint Surgery Volume 43 ; 43 >
+    au < released ; 1962 ; The Journal of Bone and Joint Surgery Volume 44 ; 44 >
+    au < released ; 1963 ; The Journal of Bone and Joint Surgery Volume 45 ; 45 >
+    au < released ; 1964 ; The Journal of Bone and Joint Surgery Volume 46 ; 46 >
+    au < released ; 1965 ; The Journal of Bone and Joint Surgery Volume 47 ; 47 >
+    au < released ; 1966 ; The Journal of Bone and Joint Surgery Volume 48 ; 48 >
+    au < released ; 1967 ; The Journal of Bone and Joint Surgery Volume 49 ; 49 >
+    au < released ; 1968 ; The Journal of Bone and Joint Surgery Volume 50 ; 50 >
+    au < released ; 1969 ; The Journal of Bone and Joint Surgery Volume 51 ; 51 >
+    au < released ; 1970 ; The Journal of Bone and Joint Surgery Volume 52 ; 52 >
+    au < released ; 1971 ; The Journal of Bone and Joint Surgery Volume 53 ; 53 >
+    au < released ; 1972 ; The Journal of Bone and Joint Surgery Volume 54 ; 54 >
+    au < released ; 1973 ; The Journal of Bone and Joint Surgery Volume 55 ; 55 >
+    au < released ; 1974 ; The Journal of Bone and Joint Surgery Volume 56 ; 56 >
+    au < released ; 1975 ; The Journal of Bone and Joint Surgery Volume 57 ; 57 >
+    au < released ; 1976 ; The Journal of Bone and Joint Surgery Volume 58 ; 58 >
+    au < released ; 1977 ; The Journal of Bone and Joint Surgery Volume 59 ; 59 >
+    au < released ; 1978 ; The Journal of Bone and Joint Surgery Volume 60 ; 60 >
+    au < released ; 1979 ; The Journal of Bone and Joint Surgery Volume 61 ; 61 >
+    au < released ; 1980 ; The Journal of Bone and Joint Surgery Volume 62 ; 62 >
+    au < released ; 1981 ; The Journal of Bone and Joint Surgery Volume 63 ; 63 >
+    au < released ; 1982 ; The Journal of Bone and Joint Surgery Volume 64 ; 64 >
+    au < released ; 1983 ; The Journal of Bone and Joint Surgery Volume 65 ; 65 >
+    au < released ; 1984 ; The Journal of Bone and Joint Surgery Volume 66 ; 66 >
+    au < released ; 1985 ; The Journal of Bone and Joint Surgery Volume 67 ; 67 >
+    au < released ; 1986 ; The Journal of Bone and Joint Surgery Volume 68 ; 68 >
+    au < released ; 1987 ; The Journal of Bone and Joint Surgery Volume 69 ; 69 >
+    au < released ; 1988 ; The Journal of Bone and Joint Surgery Volume 70 ; 70 >
+    au < released ; 1989 ; The Journal of Bone and Joint Surgery Volume 71 ; 71 >
+    au < released ; 1990 ; The Journal of Bone and Joint Surgery Volume 72 ; 72 >
+    au < released ; 1991 ; The Journal of Bone and Joint Surgery Volume 73 ; 73 >
+    au < released ; 1992 ; The Journal of Bone and Joint Surgery Volume 74 ; 74 >
+    au < released ; 1993 ; The Journal of Bone and Joint Surgery Volume 75 ; 75 >
+    au < released ; 1994 ; The Journal of Bone and Joint Surgery Volume 76 ; 76 >
+    au < released ; 1995 ; The Journal of Bone and Joint Surgery Volume 77 ; 77 >
+    au < released ; 1996 ; The Journal of Bone and Joint Surgery Volume 78 ; 78 >
+    au < released ; 1997 ; The Journal of Bone and Joint Surgery Volume 79 ; 79 >
+    au < released ; 1998 ; The Journal of Bone and Joint Surgery Volume 80 ; 80 >
+    au < released ; 1999 ; The Journal of Bone and Joint Surgery Volume 81 ; 81 >
+    au < released ; 2000 ; The Journal of Bone and Joint Surgery Volume 82 ; 82 >
+    au < released ; 2001 ; The Journal of Bone and Joint Surgery Volume 83 ; 83 >
+    au < released ; 2002 ; The Journal of Bone and Joint Surgery Volume 84 ; 84 >
+    au < released ; 2003 ; The Journal of Bone and Joint Surgery Volume 85 ; 85 >
+    au < released ; 2004 ; The Journal of Bone and Joint Surgery Volume 86 ; 86 >
     au < released ; 2005 ; The Journal of Bone and Joint Surgery Volume 87 ; 87 >
     au < released ; 2006 ; The Journal of Bone and Joint Surgery Volume 88 ; 88 >
     au < released ; 2007 ; The Journal of Bone and Joint Surgery Volume 89 ; 89 >
     au < released ; 2008 ; The Journal of Bone and Joint Surgery Volume 90 ; 90 >
     au < released ; 2009 ; The Journal of Bone and Joint Surgery Volume 91 ; 91 >
     au < released ; 2010 ; The Journal of Bone and Joint Surgery Volume 92 ; 92 >
-    au < exists ; 2011 ; The Journal of Bone and Joint Surgery Volume 93 ; 93 >
+    au < released ; 2011 ; The Journal of Bone and Joint Surgery Volume 93 ; 93 >
 
   }
 
