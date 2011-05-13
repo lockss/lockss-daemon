@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.4 2010-08-18 00:30:50 thib_gc Exp $
+# $Id: tdbparse.py,v 1.5 2011-05-13 23:06:38 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -738,6 +738,10 @@ import unittest
 ###
 
 class TestTdbScanner(unittest.TestCase):
+    def options(self):
+        parser = __option_parser__()
+        (options, args) = parser.parse_args(values=parser.get_default_values())
+        return options
 
     def testBasic(self):
         scanner = TdbScanner(StringIO('''\
@@ -749,7 +753,7 @@ class TestTdbScanner(unittest.TestCase):
             {
             }
             [
-            ]'''))
+            ]'''), self.options())
         for typ in [TdbparseToken.PUBLISHER,
                     TdbparseToken.TITLE,
                     TdbparseToken.AU,
@@ -768,7 +772,7 @@ class TestTdbScanner(unittest.TestCase):
                     '       ',
                     '\n\n\n',
                     '  \n  \n  \n  ']:
-            scanner = TdbScanner(StringIO(str))
+            scanner = TdbScanner(StringIO(str), self.options())
             self.assertEquals(TdbparseToken.END_OF_FILE, scanner.next().type())
             self.assertRaises(RuntimeError, scanner.next)
     
@@ -779,7 +783,7 @@ class TestTdbScanner(unittest.TestCase):
                          ('"foo\\x"', 0),
                          ('foo = bar\\', 2),
                          ('foo = bar\\x', 2)]:
-            scanner = TdbScanner(StringIO(st))
+            scanner = TdbScanner(StringIO(st), self.options())
             for i in range(skip): scanner.next()
             self.assertRaises(RuntimeError, scanner.next)
             
@@ -796,7 +800,7 @@ h =    \\    one leading space side effect
 i =    one trailing space\\    
 j = embedded\\ space
 k = embedded\\;semicolon
-l = embedded\\>angle'''))
+l = embedded\\>angle'''), self.options())
         tok = scanner.next()
         for val in ['nothing special',
                     'embedded"quote',
@@ -819,7 +823,11 @@ l = embedded\\>angle'''))
 ###
 
 class TestTdbParser(unittest.TestCase):
-    
+    def options(self):
+        parser = __option_parser__()
+        (options, args) = parser.parse_args(values=parser.get_default_values())
+        return options
+
     def testBasic(self):
         parser = TdbParser(TdbScanner(StringIO('''\
 {
@@ -840,7 +848,7 @@ class TestTdbParser(unittest.TestCase):
   }
 
 }
-''')))
+'''), self.options()), self.options())
         tdb = parser.parse()
         self.assertEquals(1, len(tdb.aus()))
         au0 = tdb.aus()[0]
@@ -920,8 +928,8 @@ class TestTdbParser(unittest.TestCase):
   }
 }
 ''', 'mismatch line 10 column 5: expected 3 implicit assignments but got 4')]:
-            parser = TdbParser(TdbScanner(StringIO(src)))
+            parser = TdbParser(TdbScanner(StringIO(src), self.options()), self.options())
             try: parser.parse()
-            except RuntimeError, exc: self.assertEquals(mes, exc)
+            except RuntimeError, exc: self.assertEquals(mes, str(exc))
 
 if __name__ == '__main__': unittest.main()
