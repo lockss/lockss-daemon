@@ -58,6 +58,10 @@ public class AnnualReviewsV2HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
                                                                               "href",
                                                                               "/action/showCitFormats")),
+        // Filter out <a href="...">...</a> where the href value matches a regular exception
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
+                                                                              "href",
+                                                                              "/action/showFeed\\?(.*&)?mi=")),
         // Clean up?  Filter out <link type="application/rss+xml">...</link>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("link",
                                                                          "type",
