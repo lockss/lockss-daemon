@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.15 2011-05-03 04:38:08 pgust Exp $
+# $Id: tdbxml.py,v 1.16 2011-05-13 16:57:48 barry409 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -44,6 +44,10 @@ class TdbxmlConstants:
     OPTION_OUTPUT_FILE = 'output'
     OPTION_OUTPUT_FILE_SHORT = 'o'
     OPTION_OUTPUT_FILE_HELP = 'write output to a file'
+
+    OPTION_INPUT_FILE = 'input'
+    OPTION_INPUT_FILE_SHORT = 'i'
+    OPTION_INPUT_FILE_HELP = 'read input from a file'
 
     OPTION_STYLE = 'style'
     OPTION_STYLE_SHORT = 's'
@@ -261,6 +265,11 @@ def __option_parser__(parser=None):
                             '--' + TdbxmlConstants.OPTION_NO_PUB_DOWN,
                             action='store_true',
                             help=TdbxmlConstants.OPTION_NO_PUB_DOWN_HELP)
+    tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_INPUT_FILE_SHORT,
+                            '--' + TdbxmlConstants.OPTION_INPUT_FILE,
+                            action='store',
+                            dest='input_file'
+                            )
     tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_OUTPUT_FILE_SHORT,
                             '--' + TdbxmlConstants.OPTION_OUTPUT_FILE,
                             action='store',
@@ -283,7 +292,11 @@ if __name__ == '__main__':
     parser = __option_parser__()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     __reprocess_options__(parser, options)
-    tdb = tdbparse.tdbparse(sys.stdin, options)
+    if options.input_file:
+        infile = open(options.input_file, 'r')
+    else:
+        infile = sys.stdin
+    tdb = tdbparse.tdbparse(infile, options)
     saveout = sys.stdout
     try:
         if options.output_file:
