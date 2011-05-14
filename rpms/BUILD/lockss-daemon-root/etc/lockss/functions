@@ -177,10 +177,16 @@ set_java_heap () {
 # True if argument is accessible only by root
 is_root_only() {
     RET=1
-    RES=`find ${1} -user root -a ! -perm /077`
+    RES=`find ${1} -user root`
     if [ "X${RES}" = "X${1}" ]
     then
-	RET=0
+        # Owned by root
+        RES=`find ${1} -perm -040 -o -perm -020 -o -perm -010 -o -perm -04 -o -perm -02 -o -perm -01`
+        if [ "X${RES}" = X ]
+        then
+            # None of the permission bits 077 are set
+	    RET=0
+        fi
     fi
     return ${RET}
 }

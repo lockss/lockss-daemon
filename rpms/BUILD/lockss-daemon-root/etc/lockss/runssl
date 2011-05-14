@@ -32,9 +32,21 @@ PERM_DIR=${LOCKSS_HOME}/etc/lockss/keys
 if [ "X${RUN_DIR}" = X ]; then
     RUN_DIR=/var/run/lockss
 fi
-if [ ! -d ${RUN_DIR} -o X`find ${RUN_DIR} -user root -a ! -perm /022` != X${RUN_DIR} ]
+if [ ! -d ${RUN_DIR} ]
+then
+    echo ${RUN_DIR} missing
+    exit 1
+fi
+RES=`find ${RUN_DIR} -user root`
+if [ "X${RES}" != "X${RUN_DIR}" ]
 then
     echo ${RUN_DIR} bad
+    exit 1
+fi
+RES=`find ${RUN_DIR} -perm -020 -o -perm -02`
+if [ "X${RES}" != X ]
+then
+    echo "${RUN_DIR} insecure."
     exit 1
 fi
 TEMP_DIR=${RUN_DIR}

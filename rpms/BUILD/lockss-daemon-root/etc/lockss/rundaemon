@@ -46,7 +46,9 @@ then
     WATCHDOG_SECS=60
 fi
 # Is a daemon running as ${USER}?
-if [ "${WATCHDOG}X" != X -a -f "${WATCHDOG}" ]
+# XXX temporarily disabled for Solaris because -ot not available
+RES=`uname -s`
+if [ "X${RES}" = "XLinux" -a "${WATCHDOG}X" != X -a -f "${WATCHDOG}" ]
 then
     # A watchdog file exists - is it being updated?
     WATCHTIMER=`mktemp /tmp/watchtimer.${USER}.XXXXXX`

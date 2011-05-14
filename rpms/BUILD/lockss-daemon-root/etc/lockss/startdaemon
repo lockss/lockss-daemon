@@ -7,10 +7,17 @@
 
 is_secure() {
     RET=1
-    RES=`find ${1} -user root -a ! -perm /022`
+    RES=`find ${1} -user root -a ! -perm -022`
+    RES=`find ${1} -user root`
     if [ "X${RES}" = "X${1}" ]
     then
-	RET=0
+        # Owned by root
+        RES=`find ${1} -perm -020 -o -perm -02`
+        if [ "X${RES}" = X ]
+        then
+            # Neither of permission bits 022 is set
+	    RET=0
+        fi
     fi
     return ${RET}
 }
