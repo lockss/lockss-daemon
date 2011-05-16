@@ -2048,11 +2048,11 @@
     param[journal_issn] = 0955-2065
 
     
-    au < testing ; 1994 ; Health Manpower Management Volume 20 ; 20 >
-    au < testing ; 1995 ; Health Manpower Management Volume 21 ; 21 >
-    au < testing ; 1996 ; Health Manpower Management Volume 22 ; 22 >
-    au < testing ; 1997 ; Health Manpower Management Volume 23 ; 23 >
-    au < testing ; 1998 ; Health Manpower Management Volume 24 ; 24 >
+    au < ready ; 1994 ; Health Manpower Management Volume 20 ; 20 >
+    au < ready ; 1995 ; Health Manpower Management Volume 21 ; 21 >
+    au < ready ; 1996 ; Health Manpower Management Volume 22 ; 22 >
+    au < ready ; 1997 ; Health Manpower Management Volume 23 ; 23 >
+    au < ready ; 1998 ; Health Manpower Management Volume 24 ; 24 >
 
   }
 
@@ -2120,9 +2120,10 @@
     param[journal_issn] = 1753-8254
 
     
-    au < manifest ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 >
-    au < manifest ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 >
-    au < manifest ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 >
+    au < testing ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 >
+    au < testing ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 >
+    au < testing ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 >
+    au < testing ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 >
 
   }
 
@@ -3384,6 +3385,7 @@
     >
 
     param[journal_issn] = 1741-0401
+    comment[platform] = online from 2004
     
     au < released ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
     au < released ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
@@ -3392,6 +3394,7 @@
     au < released ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 >
     au < released ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
     au < released ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
+    au < exists ; 2011 ; International Journal of Productivity and Performance Management Volume 60 ; 60 >
 
   }
 
@@ -7550,6 +7553,7 @@
     >
 
     param[journal_issn] = 0258-0543
+    comment[platform] = online from 2002
     
     au < released ; 2002 ; Strategic Direction Volume 18 ; 18 >
     au < released ; 2003 ; Strategic Direction Volume 19 ; 19 >
@@ -7560,6 +7564,7 @@
     au < released ; 2008 ; Strategic Direction Volume 24 ; 24 >
     au < released ; 2009 ; Strategic Direction Volume 25 ; 25 >
     au < released ; 2010 ; Strategic Direction Volume 26 ; 26 >
+    au < exists ; 2011 ; Strategic Direction Volume 27 ; 27 >
 
   }
 
@@ -7573,6 +7578,7 @@
     >
 
     param[journal_issn] = 1475-4398
+    comment[platform] = online from 2005
     
     au < released ; 2005 ; Strategic HR Review Volume 4 ; 4 >
     au < released ; 2006 ; Strategic HR Review Volume 5 ; 5 >
@@ -7580,6 +7586,7 @@
     au < released ; 2008 ; Strategic HR Review Volume 7 ; 7 >
     au < released ; 2009 ; Strategic HR Review Volume 8 ; 8 >
     au < released ; 2010 ; Strategic HR Review Volume 9 ; 9 >
+    au < exists ; 2011 ; Strategic HR Review Volume 10 ; 10 >
 
   }
 
@@ -7597,6 +7604,7 @@
     au < released ; 2008 ; Strategic Outsourcing: An international Journal Volume 1 ; 1 >
     au < released ; 2009 ; Strategic Outsourcing: An international Journal Volume 2 ; 2 >
     au < released ; 2010 ; Strategic Outsourcing: An international Journal Volume 3 ; 3 >
+    au < exists ; 2011 ; Strategic Outsourcing: An international Journal Volume 4 ; 4 >
 
   }
 
@@ -7610,6 +7618,7 @@
     >
 
     param[journal_issn] = 1087-8572
+    comment[platform] = backfiles from 1975 Volume 3 to 1999 
     
     au < released ; 2000 ; Strategy & Leadership Volume 28 ; 28 >
     au < released ; 2001 ; Strategy & Leadership Volume 29 ; 29 >
@@ -7665,6 +7674,7 @@
     au < released ; 2008 ; Structural Survey Volume 26 ; 26 >
     au < released ; 2009 ; Structural Survey Volume 27 ; 27 >
     au < released ; 2010 ; Structural Survey Volume 28 ; 28 >
+    au < exists ; 2011 ; Structural Survey Volume 29 ; 29 >
 
   }
 
@@ -7706,6 +7716,7 @@
     au < released ; 2008 ; Studies in Economics and Finance Volume 25 ; 25 >
     au < released ; 2009 ; Studies in Economics and Finance Volume 26 ; 26 >
     au < released ; 2010 ; Studies in Economics and Finance Volume 27 ; 27 >
+    au < exists ; 2011 ; Studies in Economics and Finance Volume 28 ; 28 >
 
   }
 
@@ -7735,6 +7746,7 @@
     au < released ; 2008 ; Supply Chain Management: An International Journal Volume 13 ; 13 >
     au < released ; 2009 ; Supply Chain Management: An International Journal Volume 14 ; 14 >
     au < released ; 2010 ; Supply Chain Management: An International Journal Volume 15 ; 15 >
+    au < exists ; 2011 ; Supply Chain Management: An International Journal Volume 16 ; 16 >
 
   }
 
@@ -7780,6 +7792,7 @@
     au < released ; 2008 ; Team Performance Management Volume 14 ; 14 >
     au < released ; 2009 ; Team Performance Management Volume 15 ; 15 >
     au < released ; 2010 ; Team Performance Management Volume 16 ; 16 >
+    au < exists ; 2011 ; Team Performance Management Volume 17 ; 17 >
 
   }
 
@@ -7876,6 +7889,7 @@
     au < released ; 2008 ; The TQM Journal Volume 20 ; 20 >
     au < released ; 2009 ; The TQM Journal Volume 21 ; 21 >
     au < released ; 2010 ; The TQM Journal Volume 22 ; 22 >
+    au < exists ; 2011 ; The TQM Journal Volume 23 ; 23 >
 
   }
 
@@ -7889,6 +7903,7 @@
     >
 
     param[journal_issn] = 0954-478X
+    comment[platform] = Currently published as The TQM Journal
     
     au < released ; 1989 ; The TQM Magazine Volume 1 ; 1 >
     au < released ; 1990 ; The TQM Magazine Volume 2 ; 2 >
@@ -7922,6 +7937,7 @@
     >
 
     param[journal_issn] = 0968-4875
+    comment[merged] = into The TQM Magazine
     
     au < released ; 1993 ; Training for Quality Volume 1 ; 1 >
     au < released ; 1994 ; Training for Quality Volume 2 ; 2 >
@@ -7941,6 +7957,7 @@
     >
 
     param[journal_issn] = 1369-7234
+    comment[platform] = Currently published as Development and Learning in Organizations
     
     au < released ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
 
@@ -7961,6 +7978,7 @@
     au < released ; 2008 ; Transforming Government: People, Process and Policy Volume 2 ; 2 >
     au < released ; 2009 ; Transforming Government: People, Process and Policy Volume 3 ; 3 >
     au < released ; 2010 ; Transforming Government: People, Process and Policy Volume 4 ; 4 >
+    au < exists ; 2011 ; Transforming Government: People, Process and Policy Volume 5 ; 5 >
 
   }
 
@@ -8015,6 +8033,7 @@
     au < released ; 2008 ; VINE Volume 38 ; 38 >
     au < released ; 2009 ; VINE Volume 39 ; 39 >
     au < released ; 2010 ; VINE Volume 40 ; 40 >
+    au < exists ; 2011 ; VINE Volume 41 ; 41 >
 
   }
 
@@ -8028,6 +8047,7 @@
     >
 
     param[journal_issn] = 0964-9425
+    comment[platform] = Currently published as Gender in Management
     
     au < released ; 1986 ; Women in Management Review Volume 1 ; 1 >
     au < released ; 1987 ; Women in Management Review Volume 2 ; 2 >
@@ -8064,6 +8084,7 @@
     >
 
     param[journal_issn] = 0043-8022
+    comment[platform] = Currently published as International J of Productivity
     
     au < released ; 1952 ; Work Study Volume 1 ; 1 >
     au < released ; 1953 ; Work Study Volume 2 ; 2 >
@@ -8149,6 +8170,7 @@
     
     au < released ; 2009 ; Worldwide Hospitality and Tourism Themes Volume 1 ; 1 >
     au < released ; 2010 ; Worldwide Hospitality and Tourism Themes Volume 2 ; 2 >
+    au < exists ; 2011 ; Worldwide Hospitality and Tourism Themes Volume 3 ; 3 >
 
   }
 
@@ -8174,6 +8196,7 @@
     au < released ; 2008 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 9 ; 9 >
     au < released ; 2009 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 10 ; 10 >
     au < released ; 2010 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 11 ; 11 >
+    au < exists ; 2011 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 12 ; 12 >
 
   }
   
