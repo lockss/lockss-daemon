@@ -20,11 +20,11 @@
       param[base_url] = http://alrr.oxfordjournals.org/
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2001 ; Arbitration Law Reports and Review Volume 2001 ; 2001 >       
-      au < testing ; 2002 ; Arbitration Law Reports and Review Volume 2002 ; 2002 >       
-      au < testing ; 2003 ; Arbitration Law Reports and Review Volume 2003 ; 2003 >       
-      au < testing ; 2004 ; Arbitration Law Reports and Review Volume 2004 ; 2004 >       
-      au < testing ; 2005 ; Arbitration Law Reports and Review Volume 2005 ; 2005 >       
+      au < exists ; 2001 ; Arbitration Law Reports and Review Volume 2001 ; 2001 >       
+      au < exists ; 2002 ; Arbitration Law Reports and Review Volume 2002 ; 2002 >       
+      au < exists ; 2003 ; Arbitration Law Reports and Review Volume 2003 ; 2003 >       
+      au < exists ; 2004 ; Arbitration Law Reports and Review Volume 2004 ; 2004 >       
+      au < exists ; 2005 ; Arbitration Law Reports and Review Volume 2005 ; 2005 >       
       au < testing ; 2006 ; Arbitration Law Reports and Review Volume 2006 ; 2006 >       
       
     }
@@ -406,24 +406,24 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://annhyg.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Annals of Occupational Hygiene Volume 50 ; 50 >
+        au < down ; 2006 ; Annals of Occupational Hygiene Volume 50 ; 50 >
 
       }
 
       {
 
         param[base_url] = http://annhyg.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Annals of Occupational Hygiene Volume 49 ; 49 >
-        au < HighWirePressPlugin ; doNotProcess ; Annals of Occupational Hygiene Volume 50 ; 50 >
-        au < HighWireStrVolPlugin ; down ; Annals of Occupational Hygiene Volume 51 ; 51 >
-        au < HighWirePressPlugin ; down ; Annals of Occupational Hygiene Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; testing ; Annals of Occupational Hygiene Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; ready ; Annals of Occupational Hygiene Volume 54 ; 54 >
-        au < HighWirePressH20Plugin ; ready ; Annals of Occupational Hygiene Volume 55 ; 55 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Annals of Occupational Hygiene Volume 49 ; 49 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; Annals of Occupational Hygiene Volume 50 ; 50 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Annals of Occupational Hygiene Volume 51 ; 51 >
+        au < HighWirePressPlugin ; down ; 2008 ; Annals of Occupational Hygiene Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; Annals of Occupational Hygiene Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Annals of Occupational Hygiene Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Annals of Occupational Hygiene Volume 55 ; 55 >
 
      }
 
@@ -441,13 +441,15 @@
       {
 
         param[base_url] = http://annonc.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; down ; Annals of Oncology Volume 18 ; 18 >
-        au < HighWirePressPlugin ; down ; Annals of Oncology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; ready ; Annals of Oncology Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Annals of Oncology Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Annals of Oncology Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Annals of Oncology Volume 18 ; 18 >
+        au < HighWirePressPlugin ; down ; 2008 ; Annals of Oncology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; Annals of Oncology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Annals of Oncology Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Annals of Oncology Volume 22 ; 22 >
 
       }
 
@@ -465,32 +467,33 @@
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://aepp.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 		
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 23 ; 22 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; exists ; Applied Economic Perspectives and Policy Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; Applied Economic Perspectives and Policy Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; Applied Economic Perspectives and Policy Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; Applied Economic Perspectives and Policy Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; Applied Economic Perspectives and Policy Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; Applied Economic Perspectives and Policy Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; Applied Economic Perspectives and Policy Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; Applied Economic Perspectives and Policy Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Applied Economic Perspectives and Policy Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Applied Economic Perspectives and Policy Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Applied Economic Perspectives and Policy Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Applied Economic Perspectives and Policy Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Applied Economic Perspectives and Policy Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Applied Economic Perspectives and Policy Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Applied Economic Perspectives and Policy Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Applied Economic Perspectives and Policy Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Applied Economic Perspectives and Policy Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Applied Economic Perspectives and Policy Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Applied Economic Perspectives and Policy Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Applied Economic Perspectives and Policy Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Applied Economic Perspectives and Policy Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 >
+
 
       }
 
@@ -509,24 +512,24 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://applij.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Applied Linguistics Volume 27 ; 27 >
+        au < down ; 2006 ; Applied Linguistics Volume 27 ; 27 >
 
       }
 
       {
 
         param[base_url] = http://applij.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Applied Linguistics Volume 26 ; 26 >
-        au < HighWirePressPlugin ; doNotProcess ; Applied Linguistics Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; Applied Linguistics Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; testing ; Applied Linguistics Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; ready ; Applied Linguistics Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; ready ; Applied Linguistics Volume 32 ; 32 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Applied Linguistics Volume 26 ; 26 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; Applied Linguistics Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; testing ; 2007 ; Applied Linguistics Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; 2008 ; Applied Linguistics Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; testing ; 2009 ; Applied Linguistics Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Applied Linguistics Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Applied Linguistics Volume 32 ; 32 >
 
      }
 
@@ -544,14 +547,14 @@
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://alrr.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2001 ; 2001 >
-        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2002 ; 2002 >
-        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2003 ; 2003 >
-        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2004 ; 2004 >
-        au < HighWirePressH20Plugin ; exists ; Arbitration Law Reports and Review 2005 ; 2005 >
-        au < HighWirePressH20Plugin ; manifest ; Arbitration Law Reports and Review 2006 ; 2006 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Arbitration Law Reports and Review 2003 ; 2003 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Arbitration Law Reports and Review 2004 ; 2004 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Arbitration Law Reports and Review 2005 ; 2005 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Arbitration Law Reports and Review 2006 ; 2006 >
 
       }
 
@@ -570,24 +573,24 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://beheco.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Behavioral Ecology Volume 17 ; 17 >
+        au < down ; 2006 ; Behavioral Ecology Volume 17 ; 17 >
 
       }
 
       {
 
         param[base_url] = http://beheco.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Behavioral Ecology Volume 16 ; 16 >
-        au < HighWirePressPlugin ; doNotProcess ; Behavioral Ecology Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; down ; Behavioral Ecology Volume 18 ; 18 >
-        au < HighWirePressPlugin ; down ; Behavioral Ecology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; testing ; Behavioral Ecology Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; ready ; Behavioral Ecology Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Behavioral Ecology Volume 16 ; 16 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; Behavioral Ecology Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Behavioral Ecology Volume 18 ; 18 >
+        au < HighWirePressPlugin ; down ; 2008 ; Behavioral Ecology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; testing ; 2009 ; Behavioral Ecology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Behavioral Ecology Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Behavioral Ecology Volume 22 ; 22 >
 
      }
 
@@ -598,31 +601,32 @@
       title <
         name = Bioinformatics ;
         issn = 1367-4803 ;
-        eissn = 1460-2059
+        eissn = 1460-2059 ;
+        issnl = 1367-4803
       >
 
       {
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://bioinformatics.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Bioinformatics Volume 21 ; 21 >
+        au < down ; 2005 ; Bioinformatics Volume 21 ; 21 >
 
       }
 
       {
 
         param[base_url] = http://bioinformatics.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Bioinformatics Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; Bioinformatics Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; down ; Bioinformatics Volume 23 ; 23 >
-        au < HighWirePressPlugin ; down ; Bioinformatics Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; testing ; Bioinformatics Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; ready ; Bioinformatics Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; ready ; Bioinformatics Volume 27 ; 27 >
+        au < HighWirePressPlugin ; doNotProcess ; 2005 ; Bioinformatics Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Bioinformatics Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Bioinformatics Volume 23 ; 23 >
+        au < HighWirePressPlugin ; down ; 2008 ; Bioinformatics Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; Bioinformatics Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Bioinformatics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Bioinformatics Volume 27 ; 27 >
 
      }
 
@@ -641,24 +645,24 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://biomet.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Biometrika Volume 93 ; 93 >
+        au < down ; 2006 ; Biometrika Volume 93 ; 93 >
 
       }
 
       {
 
         param[base_url] = http://biomet.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Biometrika Volume 92 ; 92 >
-        au < HighWirePressPlugin ; doNotProcess ; Biometrika Volume 93 ; 93 >
-        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 94 ; 94 >
-        au < HighWirePressPlugin ; down ; Biometrika Volume 95 ; 95 >
-        au < HighWirePressH20Plugin ; testing ; Biometrika Volume 96 ; 96 >
-        au < HighWirePressH20Plugin ; ready ; Biometrika Volume 97 ; 97 >
-        au < HighWirePressH20Plugin ; ready ; Biometrika Volume 98 ; 98 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Biometrika Volume 92 ; 92 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; Biometrika Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; testing ; 2007 ; Biometrika Volume 94 ; 94 >
+        au < HighWirePressPlugin ; down ; 2008 ; Biometrika Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; testing ; 2009 ; Biometrika Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Biometrika Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Biometrika Volume 98 ; 98 >
 
      }
 
@@ -677,24 +681,116 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://biostatistics.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Biostatistics Volume 6 ; 6 >
+        au < down ; 1908-1909 ; Biostatistics Volume 6 ; 6 >
 
       }
 
       {
 
         param[base_url] = http://biostatistics.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Biostatistics Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; Biostatistics Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; Biostatistics Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; Biostatistics Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; testing ; Biostatistics Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; ready ; Biostatistics Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; ready ; Biostatistics Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1901-1902 ; Biostatistics Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1902-1903 ; Biostatistics Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1904 ; Biostatistics Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1905-1906 ; Biostatistics Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1906-1907 ; Biostatistics Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doNotProcess ; 1908-1909 ; Biostatistics Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 1909-1910 ; Biostatistics Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 1911-1912 ; Biostatistics Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 1913 ; Biostatistics Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; ready ; 1914-1915 ; Biostatistics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; ready ; 1915-1917 ; Biostatistics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; 1918-1919 ; Biostatistics Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1920-1921 ; Biostatistics Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1922-1923 ; Biostatistics Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1923 ; Biostatistics Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1924 ; Biostatistics Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1925 ; Biostatistics Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 19246 ; Biostatistics Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1927 ; Biostatistics Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1928 ; Biostatistics Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1929 ; Biostatistics Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1930-1931 ; Biostatistics Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1931 ; Biostatistics Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1932 ; Biostatistics Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1933 ; Biostatistics Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1934 ; Biostatistics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1935 ; Biostatistics Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1936 ; Biostatistics Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1937-1938 ; Biostatistics Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1938-1939 ; Biostatistics Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1939-1940 ; Biostatistics Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1941-1942 ; Biostatistics Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1943-1946 ; Biostatistics Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1947 ; Biostatistics Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1948 ; Biostatistics Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1949 ; Biostatistics Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1950 ; Biostatistics Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1951 ; Biostatistics Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 1952 ; Biostatistics Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 1953 ; Biostatistics Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 1954 ; Biostatistics Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 1955 ; Biostatistics Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 1956 ; Biostatistics Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; 1957 ; Biostatistics Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; 1958 ; Biostatistics Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; 1959 ; Biostatistics Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; 1960 ; Biostatistics Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; 1961 ; Biostatistics Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; 1962 ; Biostatistics Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; 1963 ; Biostatistics Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; 1964 ; Biostatistics Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; 1965 ; Biostatistics Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; 1966 ; Biostatistics Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; 1967 ; Biostatistics Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; 1968 ; Biostatistics Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; Biostatistics Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; Biostatistics Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; Biostatistics Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; Biostatistics Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; Biostatistics Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; Biostatistics Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; Biostatistics Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; Biostatistics Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; Biostatistics Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; Biostatistics Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; Biostatistics Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; Biostatistics Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; Biostatistics Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; Biostatistics Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; Biostatistics Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; Biostatistics Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; Biostatistics Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; Biostatistics Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; Biostatistics Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; Biostatistics Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; Biostatistics Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; Biostatistics Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; Biostatistics Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; Biostatistics Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; Biostatistics Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Biostatistics Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Biostatistics Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Biostatistics Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Biostatistics Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Biostatistics Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Biostatistics Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Biostatistics Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Biostatistics Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Biostatistics Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Biostatistics Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Biostatistics Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Biostatistics Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Biostatistics Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Biostatistics Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Biostatistics Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Biostatistics Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Biostatistics Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Biostatistics Volume 98 ; 98 >
+
 
      }
 
@@ -730,7 +826,7 @@
         au < HighWirePressPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; testing ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
 
      }
 
@@ -4879,7 +4975,7 @@
 
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
-
+        comment = cannot find the journal's home page
       }
 
     }
@@ -6820,9 +6916,19 @@
     {
 
       title <
-        name = Review of Asset Pricing Studies ;
-        issn = 2044-8651
+        name = The Review of Asset Pricing Studies ;
+        issnl = 2045-9920 ;
+        eissn = 2045-9939 ;
+        issn = 2045-9920
       >
+      
+      {
+   
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://raps.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume] >   
+          
+      }
     }
 
     {
