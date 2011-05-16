@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.6 2011-05-16 00:29:33 barry409 Exp $
+# $Id: tdbparse.py,v 1.7 2011-05-16 22:01:52 tlipkis Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -40,15 +40,15 @@ import tdbq
 ###
 
 class TdbparseSyntaxError(Exception):
-    def __init__(self, message, filename, lineno, offset):
+    def __init__(self, msg, filename, lineno, offset):
         super(Exception, self).__init__()
-        self.message = message
+        self.msg = msg
         self.filename = filename
         self.lineno = lineno
         self.offset = offset
 
     def __str__(self):
-        return "\"%s\", line %d.%d: %s" % (self.filename, self.lineno, self.offset, self.message)
+        return "\"%s\", line %d.%d: %s" % (self.filename, self.lineno, self.offset, self.msg)
 
 
 ###
