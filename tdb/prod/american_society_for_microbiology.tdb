@@ -7,7 +7,7 @@
   {
 
     pluginPrefix = org.lockss.plugin.highwire.
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
     {
       title <
@@ -19,13 +19,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://aac.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
-      au < HighWireStrVolPlugin ; down ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; manifest ; Antimicrobial Agents and Chemotherapy Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; manifest ; Antimicrobial Agents and Chemotherapy Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Antimicrobial Agents and Chemotherapy Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Antimicrobial Agents and Chemotherapy Volume 55 ; 55 >
   
     }
   
@@ -39,13 +39,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://aem.asm.org/
   
-      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 71 ; 71 >
-      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 72 ; 72 >
-      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; manifest ; Applied and Environmental Microbiology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; manifest ; Applied and Environmental Microbiology Volume 77 ; 77 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Applied and Environmental Microbiology Volume 71 ; 71 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Applied and Environmental Microbiology Volume 72 ; 72 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Applied and Environmental Microbiology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Applied and Environmental Microbiology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Applied and Environmental Microbiology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Applied and Environmental Microbiology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Applied and Environmental Microbiology Volume 77 ; 77 >
   
     }
   
@@ -59,13 +59,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://cvi.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 12 ; 12 >
-      au < HighWireStrVolPlugin ; down ; Clinical and Vaccine Immunology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; Clinical and Vaccine Immunology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; Clinical and Vaccine Immunology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Clinical and Vaccine Immunology Volume 12 ; 12 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Clinical and Vaccine Immunology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Clinical and Vaccine Immunology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Clinical and Vaccine Immunology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Clinical and Vaccine Immunology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical and Vaccine Immunology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Clinical and Vaccine Immunology Volume 18 ; 18 >
   
     }
   
@@ -79,13 +79,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://cmr.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 18 ; 18 >
-      au < HighWireStrVolPlugin ; down ; Clinical Microbiology Reviews Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; manifest ; Clinical Microbiology Reviews Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; Clinical Microbiology Reviews Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Clinical Microbiology Reviews Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Microbiology Reviews Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Clinical Microbiology Reviews Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Clinical Microbiology Reviews Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Microbiology Reviews Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Clinical Microbiology Reviews Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Clinical Microbiology Reviews Volume 24 ; 24 >
   
     }
   
@@ -99,13 +99,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://ec.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 4 ; 4 >
-      au < HighWireStrVolPlugin ; down ; Eukaryotic Cell Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Eukaryotic Cell Volume 4 ; 4 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Eukaryotic Cell Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Eukaryotic Cell Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Eukaryotic Cell Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Eukaryotic Cell Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Eukaryotic Cell Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Eukaryotic Cell Volume 9 ; 9 >
       
   
     }
@@ -120,13 +120,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://iai.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 73 ; 73 >
-      au < HighWireStrVolPlugin ; down ; Infection and Immunity Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; manifest ; Infection and Immunity Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Infection and Immunity Volume 73 ; 73 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Infection and Immunity Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Infection and Immunity Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Infection and Immunity Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Infection and Immunity Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Infection and Immunity Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Infection and Immunity Volume 79 ; 79 >
   
     }
   
@@ -140,13 +140,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://jb.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Journal of Bacteriology Volume 187 ; 187 >
-      au < HighWireStrVolPlugin ; down ; Journal of Bacteriology Volume 188 ; 188 >
-      au < HighWirePressH20Plugin ; released ; Journal of Bacteriology Volume 189 ; 189 >
-      au < HighWirePressH20Plugin ; released ; Journal of Bacteriology Volume 190 ; 190 >
-      au < HighWirePressH20Plugin ; released ; Journal of Bacteriology Volume 191 ; 191 >
-      au < HighWirePressH20Plugin ; released ; Journal of Bacteriology Volume 192 ; 192 >
-      au < HighWirePressH20Plugin ; manifest ; Journal of Bacteriology Volume 193 ; 193 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Bacteriology Volume 187 ; 187 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Bacteriology Volume 188 ; 188 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Bacteriology Volume 189 ; 189 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Bacteriology Volume 190 ; 190 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Bacteriology Volume 191 ; 191 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Bacteriology Volume 192 ; 192 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Bacteriology Volume 193 ; 193 >
   
     }
   
@@ -160,13 +160,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://jcm.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Journal of Clinical Microbiology Volume 43 ; 43 >
-      au < HighWireStrVolPlugin ; down ; Journal of Clinical Microbiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; released ; Journal of Clinical Microbiology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; released ; Journal of Clinical Microbiology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; released ; Journal of Clinical Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; manifest ; Journal of Clinical Microbiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; manifest ; Journal of Clinical Microbiology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Clinical Microbiology Volume 43 ; 43 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Clinical Microbiology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Clinical Microbiology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Clinical Microbiology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Clinical Microbiology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Clinical Microbiology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Clinical Microbiology Volume 49 ; 49 >
   
     }
   
@@ -180,13 +180,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://jvi.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Journal of Virology Volume 79 ; 79 >
-      au < HighWireStrVolPlugin ; down ; Journal of Virology Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; released ; Journal of Virology Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; released ; Journal of Virology Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; released ; Journal of Virology Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; manifest ; Journal of Virology Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; manifest ; Journal of Virology Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Virology Volume 79 ; 79 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Virology Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Virology Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Virology Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Virology Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Virology Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Virology Volume 85 ; 85 >
   
     }
   
@@ -200,13 +200,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://mmbr.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
-      au < HighWireStrVolPlugin ; down ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; released ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; released ; Microbiology and Molecular Biology Reviews Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; released ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; released ; Microbiology and Molecular Biology Reviews Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; manifest ; Microbiology and Molecular Biology Reviews Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Microbiology and Molecular Biology Reviews Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Microbiology and Molecular Biology Reviews Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Microbiology and Molecular Biology Reviews Volume 75 ; 75 >
   
     }
   
@@ -220,13 +220,13 @@
       comment[urgent] = possibly leaving highwire
       param[base_url] = http://mcb.asm.org/
   
-      au < HighWirePressH20Plugin ; released ; Molecular and Cellular Biology Volume 25 ; 25 >
-      au < HighWireStrVolPlugin ; down ; Molecular and Cellular Biology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; released ; Molecular and Cellular Biology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; released ; Molecular and Cellular Biology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; released ; Molecular and Cellular Biology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; released ; Molecular and Cellular Biology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; manifest ; Molecular and Cellular Biology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Molecular and Cellular Biology Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Molecular and Cellular Biology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Molecular and Cellular Biology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Molecular and Cellular Biology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Molecular and Cellular Biology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Molecular and Cellular Biology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Molecular and Cellular Biology Volume 31 ; 31 >
   
     }
   
