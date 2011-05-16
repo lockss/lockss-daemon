@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.278 2011-05-09 02:34:02 tlipkis Exp $
+ $Id: build.xml,v 1.279 2011-05-16 22:06:57 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -949,7 +949,7 @@ Must specify pln with -Dplnname=name
     <mkdir dir="${outdir}" />
 
     <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
-	   addsourcefile="false"
+	   addsourcefile="true"
 	   dest="${outdir}"
            failonerror="true"
            failifexecutionfails="true"
@@ -957,15 +957,12 @@ Must specify pln with -Dplnname=name
            parallel="false">
 
       <fileset dir="${indir}" includes="**/*.tdb"/>
+      <mapper type="glob" from="*.tdb" to="*.xml"/>
       <arg value="-A"/>
+      <arg value="-i"/>
+      <srcfile/>
       <arg value="-o"/>
       <targetfile/>
-      <mapper type="glob" from="*.tdb" to="*.xml"/>
-      <redirector>
-        <!-- redirect STDIN; fileset collects relative to its dir, but we
-             need relative to basedir -->
-        <inputmapper type="glob" from="*" to="${indir}/*"/>
-      </redirector>
     </apply>
 
     <!-- Copy any .xml files (e.g., titleset definitions) -->
