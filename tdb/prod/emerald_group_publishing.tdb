@@ -201,11 +201,38 @@
   {
     title <
       name = American Journal of Business ;
-      issn = 1935-5181
+      issn = 1935-5181 ;
+      issnl = 1935-5181
     >
 
     param[journal_issn] = 1935-5181
-    comment[platform] = online from 1986
+
+    au < exists; 1986 ; American Journal of Business Volume 1 ; 1 >
+    au < exists; 1987 ; American Journal of Business Volume 2 ; 2 >
+    au < exists; 1988 ; American Journal of Business Volume 3 ; 3 >
+    au < exists; 1989 ; American Journal of Business Volume 4 ; 4 >
+    au < exists; 1990 ; American Journal of Business Volume 5 ; 5 >
+    au < exists; 1991 ; American Journal of Business Volume 6 ; 6 >
+    au < exists; 1992 ; American Journal of Business Volume 7 ; 7 >
+    au < exists; 1993 ; American Journal of Business Volume 8 ; 8 >
+    au < exists; 1994 ; American Journal of Business Volume 9 ; 1 >
+    au < exists; 1995 ; American Journal of Business Volume 10 ; 10 >
+    au < exists; 1996 ; American Journal of Business Volume 11 ; 11 >
+    au < exists; 1997 ; American Journal of Business Volume 12 ; 12 >
+    au < exists; 1998 ; American Journal of Business Volume 13 ; 13 >
+    au < exists; 1999 ; American Journal of Business Volume 14 ; 14 >
+    au < exists; 2000 ; American Journal of Business Volume 15 ; 15 >
+    au < exists; 2001 ; American Journal of Business Volume 16 ; 16 >
+    au < exists; 2002 ; American Journal of Business Volume 17 ; 17 >
+    au < exists; 2003 ; American Journal of Business Volume 18 ; 18 >
+    au < exists; 2004 ; American Journal of Business Volume 19 ; 19 >
+    au < exists; 2005 ; American Journal of Business Volume 20 ; 20 >
+    au < exists; 2006 ; American Journal of Business Volume 21 ; 21 >
+    au < exists; 2007 ; American Journal of Business Volume 22 ; 22 >
+    au < exists; 2008 ; American Journal of Business Volume 23 ; 23 >
+    au < exists; 2009 ; American Journal of Business Volume 24 ; 24 >
+    au < exists; 2010 ; American Journal of Business Volume 25 ; 25 >
+    au < exists; 2011 ; American Journal of Business Volume 26 ; 26 >
 
   }
 
@@ -292,11 +319,11 @@
     au < released ; 2008 ; Anti-Corrosion Methods and Materials Volume 55 ; 55 >
     au < released ; 2009 ; Anti-Corrosion Methods and Materials Volume 56 ; 56 >
     au < manifest ; 2010 ; Anti-Corrosion Methods and Materials Volume 57 ; 57 >
+    au < exists ; 2011 ; Anti-Corrosion Methods and Materials Volume 58 ; 58 >
 
   }
 
   {
-  
     title <
       name = The Antidote ;
       issn = 1363-8483 ;
@@ -316,6 +343,20 @@
   }
 
   {
+    title <
+      name = Arts Marketing: An International Journal ;
+      issn = 2044-2084 ;
+      issnl = 2044-2084
+    >
+
+    param[journal_issn] = 2044-2084
+    
+    au < exists ; 2011 ; Arts Marketing: An International Journal Volume 1 ; 1 >
+    
+  }
+
+  {
+
     title <
       name = Asia Pacific Journal of Marketing and Logistics ;
       issn = 1355-5855 ;
@@ -359,8 +400,16 @@
     >
 
     param[journal_issn] = 1598-2688
-    comment[platform] = online from 2000
-    
+
+    au < exists ; 2000 ; Asian Journal on Quality Volume 1 ; 1 >
+    au < exists ; 2001 ; Asian Journal on Quality Volume 2 ; 2 >
+    au < exists ; 2002 ; Asian Journal on Quality Volume 3 ; 3 >
+    au < exists ; 2003 ; Asian Journal on Quality Volume 4 ; 4 >
+    au < exists ; 2004 ; Asian Journal on Quality Volume 5 ; 5 >
+    au < exists ; 2005 ; Asian Journal on Quality Volume 6 ; 6 >
+    au < exists ; 2006 ; Asian Journal on Quality Volume 7 ; 7 >    
+    au < exists ; 2007 ; Asian Journal on Quality Volume 8 ; 8 >
+    au < exists ; 2008 ; Asian Journal on Quality Volume 9 ; 9 >
     au < released ; 2009 ; Asian Journal on Quality Volume 10 ; 10 >
     au < manifest ; 2010 ; Asian Journal on Quality Volume 11 ; 11 >
 
@@ -619,8 +668,7 @@
     au < manifest ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
   }
 
-  {
-  
+  { 
     title <
       name = The Bottom Line: Managing Library Finances ;
       issn = 0888-045X ;
@@ -665,7 +713,6 @@
     >
 
     param[journal_issn] = 0007-070X
-
     
     au < ready ; 1899 ; British Food Journal Volume 1 ; 1 >
     au < ready ; 1900 ; British Food Journal Volume 2 ; 2 >
@@ -783,8 +830,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = British Journal of Clinical Governance ;
       issn = 1466-4100 ;
@@ -806,7 +852,20 @@
   }
 
   {
-  
+
+    title <
+      name = Built Environment Project and Asset Management ;
+      issn = 2044-124X ;
+      issnl = 2044-124X
+    >
+
+    param[journal_issn] = 2044-124X
+
+    au < exists ; 2011 ; Built Environment Project and Asset Management Volume 1 ; 1 >
+
+  }
+
+  {
     title <
       name = Business Process Management Journal ;
       issn = 1463-7154 ;
@@ -856,7 +915,6 @@
   }
 
   {
-  
     title <
       name = Campus-Wide Information Systems ;
       issn = 1065-0741 ;
@@ -897,7 +955,6 @@
   }
 
   {
-
     title <
       name = Career Development International ;
       issn = 1362-0436 ;
@@ -926,8 +983,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = China Agricultural Economic Review ;
       issn = 1756-137X ;
@@ -943,8 +999,20 @@
 
   }
 
-  {
+  {  
+    title <
+      name = China Finance Review International ;
+      issn = 2044-1398 ;
+      issnl = 2044-1398
+    >
+
+    param[journal_issn] = 2044-1398
+    
+    au < exists ; 2011 ; China Finance Review International Volume 1 ; 1 >
+
+  }
   
+  {
     title <
       name = Chinese Management Studies ;
       issn = 1750-614X ;
@@ -962,8 +1030,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Circuit World ;
       issn = 0305-6120 ;
@@ -1013,8 +1080,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Clinical Governance: An International Journal ;
       issn = 1477-7274 ;
@@ -1037,8 +1103,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Clinical Performance and Quality Healthcare ;
       issn = 1063-0279 ;
@@ -1054,8 +1119,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Collection Building ;
       issn = 0160-4953 ;
@@ -1097,8 +1161,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering ;
       issn = 0332-1649 ;
@@ -1141,7 +1204,6 @@
   }
 
   {
-  
     title <
       name = Competitiveness Review: An International Business Journal ;
       issn = 1059-5422 ;
@@ -1175,7 +1237,6 @@
   }
 
   {
-
     title <
       name = Construction Innovation: Information, Process, Management ;
       issn = 1471-4175 ;
@@ -1199,8 +1260,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Corporate Communications: An International Journal ;
       issn = 1356-3289 ;
@@ -1229,8 +1289,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Corporate Governance ;
       issn = 1472-0701 ;
@@ -1254,8 +1313,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Critical Perspectives on International Business ;
       issn = 1742-2043 ;
@@ -1275,7 +1333,6 @@
   }
 
   {
-  
     title <
       name = Cross Cultural Management: An International Journal ;
       issn = 1352-7606 ;
@@ -1329,8 +1386,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Direct Marketing: An International Journal ;
       issn = 1750-5933 ;
@@ -1347,8 +1403,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Disaster Prevention and Management ;
       issn = 0965-3562 ;
@@ -1381,8 +1436,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Education + Training ;
       issn = 0040-0912 ;
@@ -1448,8 +1502,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Education, Business and Society: Contemporary Middle Eastern Issues ;
       issn = 1753-7983 ;
@@ -1466,8 +1519,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = The Electronic Library ;
       issn = 0264-0473 ;
@@ -1509,8 +1561,7 @@
     
   }
 
-  {
-  
+  {  
     title <
       name = Electronic Resources Review ;
       issn = 1364-5137 ;
@@ -1527,8 +1578,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Employee Relations: An International Journal ;
       issn = 0142-5455 ;
@@ -1574,8 +1624,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Empowerment in Organizations ;
       issn = 0968-4891 ;
@@ -1596,7 +1645,6 @@
   }
 
   {
-  
     title <
       name = Engineering Computations ;
       issn = 0264-4401 ;
@@ -1637,8 +1685,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Engineering, Construction and Architectural Management ;
       issn = 0969-9988 ;
@@ -1669,8 +1716,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Environmental Management and Health ;
       issn = 0956-6163 ;
@@ -1697,8 +1743,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = Equal Opportunities International ;
       issn = 0261-0159 ;
@@ -1740,8 +1785,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = Equality, Diversity and Inclusion: An International Journal ;
       issn = 2040-7149 ;
@@ -1757,8 +1801,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = EuroMed Journal of Business ;
       issn = 1450-2194 ;
@@ -1777,8 +1820,7 @@
 
   }
 
-  {
-  
+  {  
     title <
       name = European Business Review ;
       issn = 0955-534X ;
@@ -1787,7 +1829,13 @@
     >
 
     param[journal_issn] = 0955-534X
+    comment[platform] = online from 1989
     
+    au < exists ; 1989 ; European Business Review Volume 89 ; 89 >
+    au < exists ; 1990 ; European Business Review Volume 90 ; 90 >
+    au < exists ; 1991 ; European Business Review Volume 91 ; 91 >
+    au < exists ; 1992 ; European Business Review Volume 92 ; 92 >
+    au < exists ; 1993 ; European Business Review Volume 93 ; 93 >
     au < released ; 1994 ; European Business Review Volume 94 ; 94 >
     au < released ; 1995 ; European Business Review Volume 95 ; 95 >
     au < released ; 1996 ; European Business Review Volume 96 ; 96 >
@@ -1798,7 +1846,6 @@
   }
 
   {
-
     title <
       name = European Journal of Innovation Management ;
       issn = 1460-1060 ;
@@ -1834,8 +1881,7 @@
     >
 
     param[journal_issn] = 0309-0566
-
-    
+  
     au < manifest ; 1967 ; European Journal of Marketing Volume 1 ; 1 >
     au < manifest ; 1968 ; European Journal of Marketing Volume 2 ; 2 >
     au < manifest ; 1969 ; European Journal of Marketing Volume 3 ; 3 >
@@ -1945,6 +1991,7 @@
     au < manifest ; 2008 ; Facilities Volume 26 ; 26 >
     au < manifest ; 2009 ; Facilities Volume 27 ; 27 >
     au < manifest ; 2010 ; Facilities Volume 28 ; 28 >
+    au < exists ; 2011 ; Facilities Volume 29 ; 29 >
 
   }
 
@@ -1957,20 +2004,20 @@
     >
 
     param[journal_issn] = 1463-6689
-
     
-    au < manifest ; 1999 ; foresight Volume 1 ; 1 >
-    au < manifest ; 2000 ; foresight Volume 2 ; 2 >
-    au < manifest ; 2001 ; foresight Volume 3 ; 3 >
-    au < manifest ; 2002 ; foresight Volume 4 ; 4 >
-    au < manifest ; 2003 ; foresight Volume 5 ; 5 >
-    au < manifest ; 2004 ; foresight Volume 6 ; 6 >
-    au < manifest ; 2005 ; foresight Volume 7 ; 7 >
-    au < manifest ; 2006 ; foresight Volume 8 ; 8 >
-    au < manifest ; 2007 ; foresight Volume 9 ; 9 >
-    au < manifest ; 2008 ; foresight Volume 10 ; 10 >
-    au < manifest ; 2009 ; foresight Volume 11 ; 11 >
-    au < manifest ; 2010 ; foresight Volume 12 ; 12 >
+    au < testing ; 1999 ; foresight Volume 1 ; 1 >
+    au < testing ; 2000 ; foresight Volume 2 ; 2 >
+    au < testing ; 2001 ; foresight Volume 3 ; 3 >
+    au < testing ; 2002 ; foresight Volume 4 ; 4 >
+    au < testing ; 2003 ; foresight Volume 5 ; 5 >
+    au < testing ; 2004 ; foresight Volume 6 ; 6 >
+    au < testing ; 2005 ; foresight Volume 7 ; 7 >
+    au < testing ; 2006 ; foresight Volume 8 ; 8 >
+    au < testing ; 2007 ; foresight Volume 9 ; 9 >
+    au < testing ; 2008 ; foresight Volume 10 ; 10 >
+    au < testing ; 2009 ; foresight Volume 11 ; 11 >
+    au < testing ; 2010 ; foresight Volume 12 ; 12 >
+    au < testing ; 2011 ; foresight Volume 13 ; 13 >
 
   }
 
@@ -1983,12 +2030,25 @@
     >
 
     param[journal_issn] = 1754-2413
-
+    comment[platform] = online from 2008
     
     au < ready ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
     au < ready ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
     au < ready ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
     au < ready ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 >
+    
+  }
+
+  {
+    title <
+      name = Grey Systems: Theory and Application ;
+      issn = 2043-9377 ;
+      issnl = 2043-9377
+    >
+
+    param[journal_issn] = 2043-9377
+    
+    au < exists ; 2011 ; Grey Systems: Theory and Application Volume 1 ; 1 >
     
   }
 
@@ -2000,10 +2060,14 @@
     >
 
     param[journal_issn] = 1077-5730
-
+    comment[platform] = 2001-2002 not online Published as Business Strategy Series from 2007 
     
     au < manifest ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
-
+    au < exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 >
+    au < exists ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 >
+    au < exists ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
+    au < exists ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 >
+    
   }
 
   {
@@ -2015,8 +2079,10 @@
     >
 
     param[journal_issn] = 0965-4283
-
+    comment[platform] = online from 1992
     
+    au < exists ; 1992 ; Health Education Volume 92 ; 92 >
+    au < exists ; 1993 ; Health Education Volume 93 ; 93 >
     au < manifest ; 1994 ; Health Education Volume 94 ; 94 >
     au < manifest ; 1995 ; Health Education Volume 95 ; 95 >
     au < manifest ; 1996 ; Health Education Volume 96 ; 96 >
@@ -2034,6 +2100,7 @@
     au < manifest ; 2008 ; Health Education Volume 108 ; 108 >
     au < manifest ; 2009 ; Health Education Volume 109 ; 109 >
     au < manifest ; 2010 ; Health Education Volume 110 ; 110 >
+    au < exists ; 2011 ; Health Education Volume 111 ; 111 >
 
   }
 
@@ -2046,7 +2113,8 @@
     >
 
     param[journal_issn] = 0955-2065
-
+    comment[platform] = online from 1992
+    comment[merged] = into Journal of Management in Medicine
     
     au < ready ; 1994 ; Health Manpower Management Volume 20 ; 20 >
     au < ready ; 1995 ; Health Manpower Management Volume 21 ; 21 >
@@ -2076,7 +2144,7 @@
     >
 
     param[journal_issn] = 0967-0734
-
+    comment[platform] = online from 2002
     
     au < manifest ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
     au < manifest ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
@@ -2099,13 +2167,31 @@
     >
 
     param[journal_issn] = 0828-8666
-
+    comment[platform] = online from 1989
     
+    au < exists ; 1989 ; Humanomics Volume 5 ; 5 >
+    au < exists ; 1990 ; Humanomics Volume 6 ; 6 >
+    au < exists ; 1991 ; Humanomics Volume 7 ; 7 >
+    au < exists ; 1992 ; Humanomics Volume 8 ; 8 >
+    au < exists ; 1993 ; Humanomics Volume 9 ; 9 >
+    au < exists ; 1994 ; Humanomics Volume 10 ; 10 >
+    au < exists ; 1995 ; Humanomics Volume 11 ; 11 >
+    au < exists ; 1996 ; Humanomics Volume 12 ; 12>
+    au < exists ; 1997 ; Humanomics Volume 13 ; 13 >
+    au < exists ; 1998 ; Humanomics Volume 14 ; 14 >
+    au < exists ; 1999 ; Humanomics Volume 15 ; 15 >
+    au < exists ; 2000 ; Humanomics Volume 16 ; 16 >
+    au < exists ; 2001 ; Humanomics Volume 17 ; 17 >
+    au < exists ; 2002 ; Humanomics Volume 18 ; 18 >
+    au < exists ; 2003 ; Humanomics Volume 19 ; 19 >
+    au < exists ; 2004 ; Humanomics Volume 20 ; 20 >
+    au < exists ; 2005 ; Humanomics Volume 21 ; 21 >
     au < manifest ; 2006 ; Humanomics Volume 22 ; 22 >
     au < manifest ; 2007 ; Humanomics Volume 23 ; 23 >
     au < manifest ; 2008 ; Humanomics Volume 24 ; 24 >
     au < manifest ; 2009 ; Humanomics Volume 25 ; 25 >
     au < manifest ; 2010 ; Humanomics Volume 26 ; 26 >
+    au < exists ; 2011 ; Humanomics Volume 27 ; 27 >
 
   }
 
@@ -2113,17 +2199,15 @@
     title <
       name = Indian Growth and Development Review ;
       issn = 1753-8254 ;
-      eissn = 1753-8262 ;
       issnl = 1753-8254
     >
 
     param[journal_issn] = 1753-8254
-
     
-    au < testing ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 >
-    au < testing ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 >
-    au < testing ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 >
-    au < testing ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 >
+    au < ready ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 >
+    au < ready ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 >
+    au < ready ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 >
+    au < ready ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 >
 
   }
 
@@ -2180,6 +2264,7 @@
     au < manifest ; 2008 ; Industrial and Commercial Training Volume 40 ; 40 >
     au < manifest ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 >
     au < manifest ; 2010 ; Industrial and Commercial Training Volume 42 ; 42 >
+    au < exists ; 2011 ; Industrial and Commercial Training Volume 43 ; 43 >
 
   }
 
@@ -2256,6 +2341,7 @@
     au < manifest ; 2008 ; Industrial Lubrication and Tribology Volume 60 ; 60 >
     au < manifest ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 >
     au < manifest ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 >
+    au < exists ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 >
 
   }
 
@@ -2268,8 +2354,32 @@
     >
 
     param[journal_issn] = 0263-5577
+    comment[platform] = online from 1970
 
-    
+    au < exists ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
+    au < exists ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 >    
+    au < exists ; 1972 ; Industrial Management & Data Systems Volume 72 ; 72 >
+    au < exists ; 1973 ; Industrial Management & Data Systems Volume 73 ; 73 >
+    au < exists ; 1974 ; Industrial Management & Data Systems Volume 74 ; 74 >
+    au < exists ; 1975 ; Industrial Management & Data Systems Volume 75 ; 75 >
+    au < exists ; 1976 ; Industrial Management & Data Systems Volume 76 ; 76 >
+    au < exists ; 1977 ; Industrial Management & Data Systems Volume 77 ; 77 >
+    au < exists ; 1978 ; Industrial Management & Data Systems Volume 78 ; 78 >
+    au < exists ; 1979 ; Industrial Management & Data Systems Volume 79 ; 79 >
+    au < exists ; 1980 ; Industrial Management & Data Systems Volume 80 ; 80 >
+    au < exists ; 1981 ; Industrial Management & Data Systems Volume 81 ; 81 >    
+    au < exists ; 1982 ; Industrial Management & Data Systems Volume 82 ; 82 >
+    au < exists ; 1983 ; Industrial Management & Data Systems Volume 83 ; 83 >
+    au < exists ; 1984 ; Industrial Management & Data Systems Volume 84 ; 84 >
+    au < exists ; 1985 ; Industrial Management & Data Systems Volume 85 ; 85 >
+    au < exists ; 1986 ; Industrial Management & Data Systems Volume 86 ; 86 >
+    au < exists ; 1987 ; Industrial Management & Data Systems Volume 87 ; 87 >
+    au < exists ; 1988 ; Industrial Management & Data Systems Volume 88 ; 88 >
+    au < exists ; 1989 ; Industrial Management & Data Systems Volume 89 ; 89 >
+    au < exists ; 1990 ; Industrial Management & Data Systems Volume 90 ; 90 >
+    au < exists ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 >
+    au < exists ; 1992 ; Industrial Management & Data Systems Volume 92 ; 92 >
+    au < exists ; 1993 ; Industrial Management & Data Systems Volume 93 ; 93 >
     au < manifest ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 >
     au < manifest ; 1995 ; Industrial Management & Data Systems Volume 95 ; 95 >
     au < manifest ; 1996 ; Industrial Management & Data Systems Volume 96 ; 96 >
@@ -2287,6 +2397,7 @@
     au < manifest ; 2008 ; Industrial Management & Data Systems Volume 108 ; 108 >
     au < manifest ; 2009 ; Industrial Management & Data Systems Volume 109 ; 109 >
     au < manifest ; 2010 ; Industrial Management & Data Systems Volume 110 ; 110 >
+    au < exists ; 2011 ; Industrial Management & Data Systems Volume 111 ; 111 >
 
   }
 
@@ -2300,7 +2411,6 @@
 
     param[journal_issn] = 0143-991X
 
-    
     au < manifest ; 1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
     au < manifest ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
     au < manifest ; 1976 ; Industrial Robot: The international journal of industrial and service robotics Volume 3 ; 3 >
@@ -2319,8 +2429,29 @@
     au < manifest ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 >
     au < manifest ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 >
     au < manifest ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 >
-
+    au < exists ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 >
+    au < exists ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 >
+    au < exists ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 >
+    au < exists ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 >
+    au < exists ; 1996 ; Industrial Robot: The international journal of industrial and service robotics Volume 23 ; 23 >
+    au < exists ; 1997 ; Industrial Robot: The international journal of industrial and service robotics Volume 24 ; 24 >
+    au < exists ; 1998 ; Industrial Robot: The international journal of industrial and service robotics Volume 25 ; 25 >
+    au < exists ; 1999 ; Industrial Robot: The international journal of industrial and service robotics Volume 26 ; 26 >
+    au < exists ; 2000 ; Industrial Robot: The international journal of industrial and service robotics Volume 27 ; 27 >
+    au < exists ; 2001 ; Industrial Robot: The international journal of industrial and service robotics Volume 28 ; 28 >
+    au < exists ; 2002 ; Industrial Robot: The international journal of industrial and service robotics Volume 29 ; 29 >
+    au < exists ; 2003 ; Industrial Robot: The international journal of industrial and service robotics Volume 30 ; 30 >
+    au < exists ; 2004 ; Industrial Robot: The international journal of industrial and service robotics Volume 31 ; 31 >
+    au < exists ; 2005 ; Industrial Robot: The international journal of industrial and service robotics Volume 32 ; 32 >
+    au < exists ; 2006 ; Industrial Robot: The international journal of industrial and service robotics Volume 33 ; 33 >
+    au < exists ; 2007 ; Industrial Robot: The international journal of industrial and service robotics Volume 34 ; 34 >
+    au < exists ; 2008 ; Industrial Robot: The international journal of industrial and service robotics Volume 35 ; 35 >
+    au < exists ; 2009 ; Industrial Robot: The international journal of industrial and service robotics Volume 36 ; 36 >
+    au < exists ; 2010 ; Industrial Robot: The international journal of industrial and service robotics Volume 37 ; 37 >
+    au < exists ; 2011 ; Industrial Robot: The international journal of industrial and service robotics Volume 38 ; 38 >
+    
   }
+
 
   {
     title <
@@ -2345,6 +2476,7 @@
     au < manifest ; 2008 ; info Volume 10 ; 10 >
     au < manifest ; 2009 ; info Volume 11 ; 11 >
     au < manifest ; 2010 ; info Volume 12 ; 12 >
+    au < exists ; 2011 ; info Volume 13 ; 13 >
 
   }
 
@@ -2377,6 +2509,7 @@
     au < manifest ; 2008 ; Information Management & Computer Security Volume 16 ; 16 >
     au < manifest ; 2009 ; Information Management & Computer Security Volume 17 ; 17 >
     au < manifest ; 2010 ; Information Management & Computer Security Volume 18 ; 18 >
+    au < exists; 2011 ; Information Management & Computer Security Volume 19 ; 19 >
 
   }
 
@@ -2389,7 +2522,6 @@
     >
 
     param[journal_issn] = 0959-3845
-
     
     au < manifest ; 1983 ; Information Technology & People Volume 1 ; 1 >
     au < manifest ; 1985 ; Information Technology & People Volume 2 ; 2 >
@@ -2414,6 +2546,7 @@
     au < manifest ; 2008 ; Information Technology & People Volume 21 ; 21 >
     au < manifest ; 2009 ; Information Technology & People Volume 22 ; 22 >
     au < manifest ; 2010 ; Information Technology & People Volume 23 ; 23 >
+    au < exists ; 2011 ; Information Technology & People Volume 24 ; 24 >
 
   }
 
@@ -2426,7 +2559,7 @@
     >
 
     param[journal_issn] = 0957-6061
-
+    comment[platform] = published as Journal of Manufacturing Technology Management from 2004
     
     au < manifest ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 >
     au < manifest ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 >
@@ -2463,6 +2596,7 @@
     au < manifest ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 >
     au < manifest ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 >
     au < manifest ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 >
+    au < exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 >
 
   }
 
@@ -2515,11 +2649,25 @@
     au < manifest ; 2008 ; Interlending & Document Supply Volume 36 ; 36 >
     au < manifest ; 2009 ; Interlending & Document Supply Volume 37 ; 37 >
     au < manifest ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
+    au < exists ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
 
   }
 
-  {
-  
+  {  
+    title <
+      name = International Journal for Researcher Development ;
+      issn = 1759-751X ;
+      issnl = 1759-751X
+    >
+
+    param[journal_issn] = 1759-751X
+    
+    au < exists ; 2010 ; International Journal for Researcher Development Volume 1 ; 1 >
+    au < exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 >
+    
+  }
+
+  {  
     title <
       name = International Journal of Accounting and Information Management ;
       issn = 1834-7649 ;
@@ -2528,16 +2676,17 @@
     >
 
     param[journal_issn] = 1834-7649
+    comment[platform] =  online from 2007
     
     au < released ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
     au < released ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
     au < released ; 2009 ; International Journal of Accounting and Information Management Volume 17 ; 17 >
     au < released ; 2010 ; International Journal of Accounting and Information Management Volume 18 ; 18 >
+    au < exists ; 2011 ; International Journal of Accounting and Information Management Volume 19 ; 19 >
 
   }
 
   {
-
     title <
       name = International Journal of Agile Management Systems ;
       issn = 1465-4652 ;
@@ -2546,6 +2695,7 @@
     >
 
     param[journal_issn] = 1465-4652
+    comment[merged] = into Integrated Manufacturing 
 
     au < released ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
     au < released ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
@@ -2553,7 +2703,6 @@
   }
 
   {
-
     title <
       name = International Journal of Bank Marketing ;
       issn = 0265-2323 ;
@@ -2595,7 +2744,6 @@
   }
 
   {
-
     title <
       name = International Journal of Career Management ;
       issn = 0955-6214 ;
@@ -2604,7 +2752,12 @@
     >
 
     param[journal_issn] = 0955-6214
-    
+    comment[platform] =  online from 1990 and published as Career Development from 1996
+
+    au < exists ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
+    au < exists ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
+    au < exists ; 1992 ; International Journal of Career Management Volume 4 ; 4 >
+    au < exists ; 1993 ; International Journal of Career Management Volume 5 ; 5 >    
     au < released ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
     au < released ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
 
@@ -2620,7 +2773,9 @@
 
     param[journal_issn] = 1756-8692 
 
-    au < released ; 2010 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
+    au < released ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
+    au < exists ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
+    au < exists ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 >    
 
   }
 
@@ -2656,11 +2811,11 @@
     au < released ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
     au < released ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
+    au < exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 >
 
   }
 
   {
-
     title <
       name = International Journal of Commerce and Management ;
       issn = 1056-9219 ;
@@ -2690,11 +2845,11 @@
     au < released ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
     au < released ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
+    au < exists ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 >
 
   }
 
   {
-
     title <
       name = International Journal of Conflict Management ;
       issn = 1044-4068 ;
@@ -2725,11 +2880,11 @@
     au < released ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
     au < released ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
     au < released ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
+    au < exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 >
 
   }
 
   {
-
     title <
       name = International Journal of Contemporary Hospitality Management ;
       issn = 0959-6119 ;
@@ -2761,11 +2916,11 @@
     au < released ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
     au < released ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
+    au < exists ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 >
 
   }
 
-  {
-  
+  {  
     title <
       name = International Journal of Culture, Tourism and Hospitality Research ;
       issn = 1750-6182 ;
@@ -2779,11 +2934,11 @@
     au < released ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
+    au < exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 >
 
   }
 
   {
-  
     title <
       name = International Journal of Development Issues ;
       issn = 1446-8956 ;
@@ -2792,11 +2947,17 @@
     >
 
     param[journal_issn] = 1446-8956
+    comment[platform] = online from 2003
     
+    au < exists ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
+    au < exists ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
+    au < exists ; 2005 ; International Journal of Development Issues Volume 4 ; 4 > 
+    au < exists ; 2006 ; International Journal of Development Issues Volume 5 ; 5 > 
     au < released ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
     au < released ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
     au < released ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
     au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
+    au < exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
 
   }
 
@@ -2812,11 +2973,11 @@
     param[journal_issn] = 1759-5908
     
     au < released ; 2010 ; International Journal of Disaster Resilience in the Built Environment  Volume 1 ; 1 >
+    au < exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment  Volume 2 ; 2 >
 
   }
 
   {
-  
     title <
       name = International Journal of Educational Management ;
       issn = 0951-354X ;
@@ -2850,11 +3011,11 @@
     au < released ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
     au < released ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
     au < released ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
+    au < exists ; 2011 ; International Journal of Educational Management Volume 25 ; 25 >
 
   }
 
   {
-
     title <
       name = International Journal of Emerging Markets ;
       issn = 1746-8809 ;
@@ -2869,11 +3030,11 @@
     au < released ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
     au < released ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
     au < released ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
+    au < exists ; 2011 ; International Journal of Emerging Markets Volume 6 ; 6 >
 
   }
 
   {
-
     title <
       name = International Journal of Energy Sector Management ;
       issn = 1750-6220 ;
@@ -2887,6 +3048,7 @@
     au < released ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
+    au < exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 >
 
   }
 
@@ -2911,11 +3073,17 @@
     au < released ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
     au < released ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
     au < released ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
+    au < exists ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
+    au < exists ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
+    au < exists ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
+    au < exists ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
+    au < exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
+    au < exists ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
+    au < exists ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 >
 
   }
 
-  {
-  
+  {  
     title <
       name = International Journal of Event and Festival Management ;
       issn = 1785-2954
@@ -2923,10 +3091,12 @@
 
     param[journal_issn] = 1785-2954
 
+    au < exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 >
+    au < exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 >
+
   }
 
   {
-
     title <
       name = International Journal of Gender and Entrepreneurship ;
       issn = 1756-6266 ;
@@ -2938,11 +3108,11 @@
     
     au < released ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
+    au < exists ; 2011 ; International Journal of Gender and Entrepreneurship Volume 3 ; 3 >
 
   }
 
   {
-
     title <
       name = International Journal of Health Care Quality Assurance ;
       issn = 0952-6862 ;
@@ -2975,11 +3145,11 @@
     au < released ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
     au < released ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
     au < released ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
+    au < exists ; 2011 ; International Journal of Health Care Quality Assurance Volume 24 ; 24 >
 
   }
 
   {
-
     title <
       name = International Journal of Housing Markets and Analysis ;
       issn = 1753-8270 ;
@@ -2992,11 +3162,27 @@
     au < released ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
+    au < exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 >
 
   }
 
   {
+    title <
+      name = International Journal of Intelligent Computing and Cybernetics ;
+      issn = 1756-378X ;
+      issnl = 1756-378X
+    >
 
+    param[journal_issn] = 1756-378X
+    
+    au < exists ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 >
+    au < exists ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 >
+    au < exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 >
+    au < exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 >
+    
+  }
+    
+  {
     title <
       name = International Journal of Islamic and Middle Eastern Finance and Management ;
       issn = 1753-8394 ;
@@ -3009,11 +3195,11 @@
     au < released ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
+    au < exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 >
 
   }
 
   {
-  
     title <
       name = International Journal of Law and Management ;
       issn = 1754-243X ;
@@ -3022,15 +3208,16 @@
     >
 
     param[journal_issn] = 1754-243X
+    comment[platform] = online from 2008
     
     au < released ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
     au < released ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
     au < released ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
+    au < exists ; 2011 ; International Journal of Law and Management Volume 53 ; 53 >
 
   }
 
-  {
-  
+  { 
     title <
       name = International Journal of Law in the Built Environment ;
       issn = 1756-1450 ;
@@ -3042,11 +3229,11 @@
     
     au < released ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
+    au < exists ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 >
 
   }
 
-  {
-  
+  { 
     title <
       name = International Journal of Lean Six Sigma ;
       issn = 2040-1466
@@ -3056,8 +3243,7 @@
 
   }
 
-  {
-  
+  { 
     title <
       name = The International Journal of Logistics Management ;
       issn = 0957-4093 ;
@@ -3088,11 +3274,11 @@
     au < released ; 2008 ; The International Journal of Logistics Management Volume 19 ; 19 >
     au < released ; 2009 ; The International Journal of Logistics Management Volume 20 ; 20 >
     au < released ; 2010 ; The International Journal of Logistics Management Volume 21 ; 21 >
+    au < exists; 2011 ; The International Journal of Logistics Management Volume 22 ; 22 >
 
   }
 
   {
-
     title <
       name = International Journal of Managerial Finance ;
       issn = 1743-9132 ;
@@ -3108,11 +3294,11 @@
     au < released ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 >
+    au < exists ; 2011 ; International Journal of Managerial Finance Volume 7 ; 7 >
 
   }
 
   {
-
     title <
       name = International Journal of Managing Projects in Business ;
       issn = 1753-8378 ;
@@ -3125,11 +3311,11 @@
     au < released ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
+    au < exists ; 2011 ; International Journal of Managing Projects in Business Volume 4 ; 4 >
 
   }
 
   {
-
     title <
       name = International Journal of Manpower ;
       issn = 0143-7720 ;
@@ -3170,6 +3356,7 @@
     au < released ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
     au < released ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
     au < released ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
+    au < rexists ; 2011 ; International Journal of Manpower Volume 32 ; 32 >
 
   }
 
@@ -3249,11 +3436,11 @@
     au < released ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 >
     au < released ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
     au < released ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
+    au < exists ; 2011 ; International Journal of Operations & Production Management Volume 31 ; 31 >
 
   }
 
-  {
-  
+  {  
     title <
       name = International Journal of Organizational Analysis ;
       issn = 1934-8835 ;
@@ -3285,7 +3472,6 @@
   }
 
   {
-
     title <
       name = International Journal of Pervasive Computing and Communications ;
       issn = 1742-7371 ;
@@ -3301,11 +3487,11 @@
     au < released ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 >
+    au < exists ; 2011 ; International Journal of Pervasive Computing and Communications Volume 7 ; 7 >
 
   }
 
   {
-
     title <
       name = International Journal of Pharmaceutical and Healthcare Marketing ;
       issn = 1750-6123 ;
@@ -3319,11 +3505,11 @@
     au < released ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 >
+    au < exists ; 2011 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 5 ; 5 >
 
   }
 
-  {
-  
+  {  
     title <
       name = International Journal of Physical Distribution & Logistics Management ;
       issn = 0960-0035 ;
@@ -3372,11 +3558,11 @@
     au < released ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 >
     au < released ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
     au < released ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 >
+    au < exists ; 2011 ; International Journal of Physical Distribution & Logistics Management Volume 41 ; 41 >
 
   }
 
   {
-
     title <
       name = International Journal of Productivity and Performance Management ;
       issn = 1741-0401 ;
@@ -3399,7 +3585,6 @@
   }
 
   {
-
     title <
       name = International Journal of Public Sector Management ;
       issn = 0951-3558 ;
@@ -3432,11 +3617,11 @@
     au < released ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 >
     au < released ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 >
     au < released ; 2010 ; International Journal of Public Sector Management Volume 23 ; 23 >
+    au < exists ; 2011 ; International Journal of Public Sector Management Volume 24 ; 24 >
 
   }
 
   {
-
     title <
       name = International Journal of Quality & Reliability Management ;
       issn = 0265-671X ;
@@ -3473,11 +3658,27 @@
     au < released ; 2008 ; International Journal of Quality & Reliability Management Volume 25 ; 25 >
     au < released ; 2009 ; International Journal of Quality & Reliability Management Volume 26 ; 26 >
     au < released ; 2010 ; International Journal of Quality & Reliability Management Volume 27 ; 27 >
+    au < exists ; 2011 ; International Journal of Quality & Reliability Management Volume 28 ; 28 >
 
   }
 
   {
+    title <
+      name = International Journal of Quality and Service Sciences ;
+      issn = 1756-669X ;
+      eissn = 1756-6703 ;
+      issnl = 1756-669X
+    >
 
+    param[journal_issn] = 1756-669X
+    
+    au < released ; 2009 ; International Journal of Quality and Service Sciences Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Quality and Service Sciences Volume 2 ; 2 >
+    au < exists ; 2011 ; International Journal of Quality and Service Sciences Volume 3 ; 3 >
+
+  }
+
+  {
     title <
       name = International Journal of Quality Science ;
       issn = 1359-8538 ;
@@ -3486,6 +3687,7 @@
     >
 
     param[journal_issn] = 1359-8538
+    comment[merged] = into Internationl Journal of Quality & Relibability
     
     au < released ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
     au < released ; 1997 ; International Journal of Quality Science Volume 2 ; 2 >
@@ -3494,23 +3696,6 @@
   }
 
   {
-
-    title <
-      name = International Journal of Quality Service Sciences ;
-      issn = 1756-669X ;
-      eissn = 1756-6703 ;
-      issnl = 1756-669X
-    >
-
-    param[journal_issn] = 1756-669X
-    
-    au < released ; 2009 ; International Journal of Quality Service Sciences Volume 1 ; 1 >
-    au < released ; 2010 ; International Journal of Quality Service Sciences Volume 2 ; 2 >
-
-  }
-
-  {
-
     title <
       name = International Journal of Retail & Distribution Management ;
       issn = 0959-0552 ;
@@ -3558,11 +3743,11 @@
     au < released ; 2008 ; International Journal of Retail & Distribution Management Volume 36 ; 36 >
     au < released ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
     au < released ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
-
+    au < exists ; 2011 ; International Journal of Retail & Distribution Management Volume 39 ; 39 >
+    
   }
 
   {
-
     title <
       name = International Journal of Service Industry Management ;
       issn = 0956-4233 ;
@@ -3595,7 +3780,6 @@
   }
 
   {
-
     title <
       name = International Journal of Social Economics ;
       issn = 0306-8293 ;
@@ -3642,11 +3826,11 @@
     au < released ; 2008 ; International Journal of Social Economics Volume 35 ; 35 >
     au < released ; 2009 ; International Journal of Social Economics Volume 36 ; 36 >
     au < released ; 2010 ; International Journal of Social Economics Volume 37 ; 37 >
+    au < exists ; 2011 ; International Journal of Social Economics Volume 38 ; 38 >
 
   }
 
   {
-
     title <
       name = International Journal of Sociology and Social Policy ;
       issn = 0144-333X ;
@@ -3686,11 +3870,11 @@
     au < released ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 >
     au < released ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 >
     au < released ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 >
+    au < exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 >
 
   }
 
   {
-
     title <
       name = International Journal of Structural Integrity ;
       issn = 1757-9864 ;
@@ -3701,11 +3885,11 @@
     param[journal_issn] = 1757-9864
    
     au < released ; 2010 ; International Journal of Structural Integrity  Volume 1 ; 1 >
+    au < exists ; 2011 ; International Journal of Structural Integrity  Volume 2 ; 2 >
 
   }
 
   {
-
     title <
       name = International Journal of Sustainability in Higher Education ;
       issn = 1467-6370 ;
@@ -3726,20 +3910,11 @@
     au < released ; 2008 ; International Journal of Sustainability in Higher Education Volume 9 ; 9 >
     au < released ; 2009 ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
     au < released ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
+    au < exists; 2011 ; International Journal of Sustainability in Higher Education Volume 12 ; 12 >
 
-  }
-
-  {
-
-    title <
-      name = Journal of International Education in Business ;
-      issn = 1836-3261
-    >
-    
   }
     
   {
-
     title <
       name = International Journal of Web Information Systems ;
       issn = 1744-0084 ;
@@ -3755,11 +3930,11 @@
     au < released ; 2008 ; International Journal of Web Information Systems Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Web Information Systems Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 >
+    au < exists ; 2011 ; International Journal of Web Information Systems Volume 7 ; 7 >
 
   }
 
   {
-
     title <
       name = International Journal of Wine Business Research ;
       issn = 1751-1062 ;
@@ -3768,15 +3943,17 @@
     >
 
     param[journal_issn] = 1751-1062
+    comment[platform] =  online from 2007
     
     au < released ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
     au < released ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
     au < released ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 >
+    au < exists ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 >
+    au < exists ; 2011 ; International Journal of Wine Business Research Volume 23 ; 23 >
 
   }
 
   {
-
     title <
       name = International Journal of Wine Marketing ;
       issn = 0954-7541 ;
@@ -3785,6 +3962,7 @@
     >
 
     param[journal_issn] = 0954-7541
+    comment[platform] = published as International Journal of Wine Business from 2007
     
     au < released ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 >
     au < released ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 >
@@ -3808,7 +3986,6 @@
   }
 
   {
-
     title <
       name = International Journal of Workplace Health Management ;
       issn = 1753-8351 ;
@@ -3821,11 +3998,11 @@
     au < released ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
+    au < exists ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 >
 
   }
 
   {
-
     title <
       name = International Journal on Grey Literature ;
       issn = 1466-6189 ;
@@ -3840,7 +4017,6 @@
   }
 
   {
-
     title <
       name = International Marketing Review ;
       issn = 0265-1335 ;
@@ -3877,11 +4053,11 @@
     au < released ; 2008 ; International Marketing Review Volume 25 ; 25 >
     au < released ; 2009 ; International Marketing Review Volume 26 ; 26 >
     au < released ; 2010 ; International Marketing Review Volume 27 ; 27 >
+    au < exists ; 2011 ; International Marketing Review Volume 28 ; 28 >
 
   }
 
   {
-
     title <
       name = Internet Research ;
       issn = 1066-2243 ;
@@ -3910,11 +4086,11 @@
     au < released ; 2008 ; Internet Research Volume 18 ; 18 >
     au < released ; 2009 ; Internet Research Volume 19 ; 19 >
     au < released ; 2010 ; Internet Research Volume 20 ; 20 >
+    au < exists ; 2011 ; Internet Research Volume 21 ; 21 >
 
   }
 
   {
-
     title <
       name = Journal of Accounting & Organizational Change ;
       issn = 1832-5912 ;
@@ -3929,11 +4105,23 @@
     au < released ; 2008 ; Journal of Accounting & Organizational Change Volume 4 ; 4 >
     au < released ; 2009 ; Journal of Accounting & Organizational Change Volume 5 ; 5 >
     au < released ; 2010 ; Journal of Accounting & Organizational Change Volume 6 ; 6 >
+    au < exists ; 2011 ; Journal of Accounting & Organizational Change Volume 7 ; 7 >
+  }
+
+  {
+    title <
+      name = Journal of Accounting in Emerging Economies ;
+      issn = 2042-1168 ;
+      issnl = 2042-1168
+    >
+
+    param[journal_issn] = 2042-1168
+    
+    au < exists ; 2011 ; Journal of Accounting in Emerging Economies Volume 1 ; 1 >
 
   }
 
   {
-
     title <
       name = Journal of Advances in Management Research ;
       issn = 0972-7981 ;
@@ -3962,6 +4150,7 @@
     >
 
     param[journal_issn] = 0967-5426
+    comment[platform] = online from 2000
     
     au < released ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 >
     au < released ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 >
@@ -3974,11 +4163,16 @@
   }
 
   {
-
     title <
       name = Journal of Applied Research in Higher Education ;
-      issn = 1758-1184
+      issn = 1758-1184 ;
+      issnl = 1758-1184
     >
+
+    param[journal_issn] = 1758-1184
+    
+    au < exists ; 2009 ; Journal of Applied Accounting Research Volume 1 ; 1 >
+    au < exists ; 2010 ; Journal of Applied Accounting Research Volume 2 ; 2 >
     
   }
     
@@ -3997,6 +4191,7 @@
     au < released ; 2008 ; Journal of Asia Business Studies Volume 2 ; 2 >
     au < released ; 2009 ; Journal of Asia Business Studies Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 >
+    au < exists ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 >
 
   }
 
@@ -4863,6 +5058,22 @@
     au < released ; 2009 ; Journal of Intellectual Capital Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 >
 
+  }
+
+  {
+
+    title <
+      name = Journal of International Education in Business ;
+      issn = 2046-469X;
+      issnl = 2046-469X
+    >
+ 
+    param[journal_issn] = 2046-469X
+    
+    au < exists ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
+    au < exists ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
+    au < exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
+    
   }
 
   {
@@ -7620,6 +7831,31 @@
     param[journal_issn] = 1087-8572
     comment[platform] = backfiles from 1975 Volume 3 to 1999 
     
+    au < exists ; 1975 ; Strategy & Leadership Volume 3 ; 3 >
+    au < exists ; 1976 ; Strategy & Leadership Volume 4 ; 4 >
+    au < exists ; 1977 ; Strategy & Leadership Volume 5 ; 5 >
+    au < exists ; 1978 ; Strategy & Leadership Volume 6 ; 6 >
+    au < exists ; 1979 ; Strategy & Leadership Volume 7 ; 7 >
+    au < exists ; 1980 ; Strategy & Leadership Volume 8 ; 8 >
+    au < exists ; 1981 ; Strategy & Leadership Volume 9 ; 9 >
+    au < exists ; 1982 ; Strategy & Leadership Volume 10 ; 10 >
+    au < exists ; 1983 ; Strategy & Leadership Volume 11 ; 11 >
+    au < exists ; 1984 ; Strategy & Leadership Volume 12 ; 12 >
+    au < exists ; 1985 ; Strategy & Leadership Volume 13 ; 13 >
+    au < exists ; 1986 ; Strategy & Leadership Volume 14 ; 14 >
+    au < exists ; 1987 ; Strategy & Leadership Volume 15 ; 15 >
+    au < exists ; 1988 ; Strategy & Leadership Volume 16 ; 16 >
+    au < exists ; 1989 ; Strategy & Leadership Volume 17 ; 17 >
+    au < exists ; 1990 ; Strategy & Leadership Volume 18 ; 18 >
+    au < exists ; 1991 ; Strategy & Leadership Volume 19 ; 19 >
+    au < exists ; 1992 ; Strategy & Leadership Volume 20 ; 20 >
+    au < exists ; 1993 ; Strategy & Leadership Volume 21 ; 21 >
+    au < exists ; 1994 ; Strategy & Leadership Volume 22 ; 22 >
+    au < exists ; 1995 ; Strategy & Leadership Volume 23 ; 23 >
+    au < exists ; 1996 ; Strategy & Leadership Volume 24 ; 24 >
+    au < exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 >
+    au < exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 >
+    au < exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 >
     au < released ; 2000 ; Strategy & Leadership Volume 28 ; 28 >
     au < released ; 2001 ; Strategy & Leadership Volume 29 ; 29 >
     au < released ; 2002 ; Strategy & Leadership Volume 30 ; 30 >
@@ -7957,7 +8193,7 @@
     >
 
     param[journal_issn] = 1369-7234
-    comment[platform] = Currently published as Development and Learning in Organizations
+    comment[platform] = Online from 2002 Currently published as Development and Learning in Organizations
     
     au < released ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
 
