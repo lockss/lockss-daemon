@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.16 2011-05-13 16:57:48 barry409 Exp $
+# $Id: tdbxml.py,v 1.17 2011-05-16 01:01:51 barry409 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.4'
+__version__ = '0.3.5'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -296,11 +296,16 @@ if __name__ == '__main__':
         infile = open(options.input_file, 'r')
     else:
         infile = sys.stdin
-    tdb = tdbparse.tdbparse(infile, options)
-    saveout = sys.stdout
     try:
-        if options.output_file:
-            sys.stdout = open(options.output_file, 'w')
-        tdb_to_xml(tdb, options)
-    finally:
-        sys.stdout = saveout
+        tdb = tdbparse.tdbparse(infile, options)
+    except tdbparse.TdbparseSyntaxError, e:
+        print e
+        exit(1)
+    else:
+        saveout = sys.stdout
+        try:
+            if options.output_file:
+                sys.stdout = open(options.output_file, 'w')
+            tdb_to_xml(tdb, options)
+        finally:
+            sys.stdout = saveout
