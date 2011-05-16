@@ -57,6 +57,10 @@
     au < released ; 2005 ; BC Studies: The British Columbian Quarterly 2005 ; 2005 >
     au < released ; 2006 ; BC Studies: The British Columbian Quarterly 2006 ; 2006 >
     au < released ; 2007 ; BC Studies: The British Columbian Quarterly 2007 ; 2007 >
+    au < ready ; 2008 ; BC Studies: The British Columbian Quarterly 2008 ; 2008 >
+    au < ready ; 2009 ; BC Studies: The British Columbian Quarterly 2009 ; 2009 >
+    au < ready ; 2010 ; BC Studies: The British Columbian Quarterly 2010 ; 2010 >
+    au < ready ; 2011 ; BC Studies: The British Columbian Quarterly 2011 ; 2011 >
 
   }
 
@@ -74,6 +78,7 @@
     au < released ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 38 ; 2008 >
     au < released ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 39 ; 2009 >
     au < released ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 40 ; 2010 >
+    au < ready ; 2011 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 41 ; 2011 >
 
   }
 
@@ -95,6 +100,7 @@
     au < released ; 2007 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 6-7 (2007) ; 2007 >
     au < released ; 2008 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 7 (2008) ; 2008 >
     au < released ; 2009 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 8 ; 2009 >
+    au < ready ; 2010 ; Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme Volume 9 ; 2010 >
 
   }
 
@@ -109,6 +115,7 @@
     param[journal_id] = criticaled
 
     au < released ; 2010 ; Critical Education Volume 1 ; 2010 >
+    au < ready ; 2011 ; Critical Education Volume 2 ; 2011 >
 
   }
 
@@ -125,7 +132,8 @@
     au < released ; 2007 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1 (2007) ; 2007 >
     au < released ; 2008 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 1-2 (2008) ; 2008 >
     au < released ; 2009 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 2-3 (2009) ; 2009 >
-    au < released ; 2010 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 3 (2010) ; 2010 >
+    au < released ; 2010 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 3-4 (2010) ; 2010 >
+    au < ready ; 2011 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 4 (2011) ; 2011 >
 
   }
 
@@ -145,6 +153,7 @@
     au < released ; 2007 ; Transnational Curriculum Inquiry Volume 4 ; 2007 >
     au < released ; 2008 ; Transnational Curriculum Inquiry Volume 5 ; 2008 >
     au < released ; 2009 ; Transnational Curriculum Inquiry Volume 6 ; 2009 >
+    au < ready ; 2010 ; Transnational Curriculum Inquiry Volume 7 ; 2010 >
 
   }
 
@@ -157,13 +166,14 @@
     
     param[base_url] = http://m1.cust.educ.ubc.ca/journal/
     param[journal_id] = workplace
+    comment[0] = the 2006 AU seems empty
 
-    au < released ; 2005 ; Workplace: A Journal for Academic Labor Volume 13 ; 2005 >
-    au < released ; 2006 ; Workplace: A Journal for Academic Labor Volume 14 ; 2006 >
-    au < released ; 2007 ; Workplace: A Journal for Academic Labor Volume 15 ; 2007 >
-    au < released ; 2008 ; Workplace: A Journal for Academic Labor Volume 16 ; 2008 >
-    au < released ; 2009 ; Workplace: A Journal for Academic Labor Volume 17 ; 2009 >
-    au < released ; 2010 ; Workplace: A Journal for Academic Labor Volume 18 ; 2010 >
+    au < released ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 2005 >
+    au < released ; 2006 ; Workplace: A Journal for Academic Labor 2006 ; 2006 >
+    au < released ; 2007 ; Workplace: A Journal for Academic Labor 2007 ; 2007 >
+    au < released ; 2008 ; Workplace: A Journal for Academic Labor 2008 ; 2008 >
+    au < released ; 2009 ; Workplace: A Journal for Academic Labor 2009 ; 2009 >
+    au < released ; 2010 ; Workplace: A Journal for Academic Labor 2010 ; 2010 >
 
   }
 

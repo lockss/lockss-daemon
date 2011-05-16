@@ -11,12 +11,62 @@
   {
   
     title <
+      name = The Albatross
+    >
+    
+    param[journal_id] = albatross
+
+    au < ready ; 2011 ; The Albatross Volume 1 ; 2011 >
+
+  }
+  
+  {
+  
+    title <
+      name = Appeal: Review of Current Law and Law Reform
+    >
+    
+    param[journal_id] = appeal
+
+    au < ready ; 1995 ; Appeal: Review of Current Law and Law Reform Volume 1 ; 1995 >
+    au < ready ; 1996 ; Appeal: Review of Current Law and Law Reform Volume 2 ; 1996 >
+    au < ready ; 1997 ; Appeal: Review of Current Law and Law Reform Volume 3 ; 1997 >
+    au < ready ; 1998 ; Appeal: Review of Current Law and Law Reform Volume 4 ; 1998 >
+    au < ready ; 1999 ; Appeal: Review of Current Law and Law Reform Volume 5 ; 1999 >
+    au < ready ; 2000 ; Appeal: Review of Current Law and Law Reform Volume 6 ; 2000 >
+    au < ready ; 2001 ; Appeal: Review of Current Law and Law Reform Volume 7 ; 2001 >
+    au < ready ; 2002 ; Appeal: Review of Current Law and Law Reform Volume 8 ; 2002 >
+    au < ready ; 2003 ; Appeal: Review of Current Law and Law Reform Volume 9 ; 2003 >
+    au < ready ; 2005 ; Appeal: Review of Current Law and Law Reform Volume 10 ; 2005 >
+    au < ready ; 2006 ; Appeal: Review of Current Law and Law Reform Volume 11 ; 2006 >
+    au < ready ; 2007 ; Appeal: Review of Current Law and Law Reform Volume 12 ; 2007 >
+    au < ready ; 2008 ; Appeal: Review of Current Law and Law Reform Volume 13 ; 2008 >
+    au < ready ; 2009 ; Appeal: Review of Current Law and Law Reform Volume 14 ; 2009 >
+    au < ready ; 2010 ; Appeal: Review of Current Law and Law Reform Volume 15 ; 2010 >
+    au < ready ; 2011 ; Appeal: Review of Current Law and Law Reform Volume 16 ; 2011 >
+
+  }
+  
+  {
+  
+    title <
+      name = The Arbutus
+    >
+    
+    param[journal_id] = arbutus
+
+    au < ready ; 2010 ; The Arbutus 2011 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
       name = Cultural Reflections ;
       issn = 1492-4293
     >
     
-    comment[continued_by] = PlatForum
-    comment[x_continued_by] = (hence the journal_id)
+    comment[continued_by] = 1922-7043
     
     param[journal_id] = platforum
 
@@ -24,6 +74,44 @@
     au < released ; 2003 ; Cultural Reflections Volume 5 ; 2003 >
     au < doesNotExist ; 2004 ; Cultural Reflections 2004 ; 2004 >
     au < released ; 2005 ; Cultural Reflections Volume 6 ; 2005 >
+
+  }
+  
+  {
+  
+    title <
+      name = The Graduate History Review ;
+      eissn = 1925-2455
+    >
+    
+    comment[continues] = Cultural Reflections
+    
+    param[journal_id] = ghr
+
+    au < exists ; 0 ; The Graduate History Review: Previous Conference Programs ; 0 >
+    au < ready ; 2009 ; Preteritus: A Graduate History Journal Volume 1 ; 2009 >
+    au < ready ; 2010 ; Preteritus: A Graduate History Journal Volume 2 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association ;
+      issn = 1705-2947 ;
+      eissn = 1712-5634
+    >
+    
+    param[journal_id] = illumine
+
+    au < ready ; 2002 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 1 ; 2002 >
+    au < ready ; 2003 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 2 ; 2003 >
+    au < ready ; 2004 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 3 ; 2004 >
+    au < ready ; 2005 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 4 ; 2005 >
+    au < ready ; 2006 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 5 ; 2006 >
+    au < ready ; 2007 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 6 ; 2007 >
+    au < ready ; 2008 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 7 ; 2008 >
+    au < ready ; 2009 ; Illumine: Journal of the Centre for Studies in Religion and Society Graduate Students Association Volume 8 ; 2009 >
 
   }
   
@@ -38,6 +126,7 @@
 
     au < released ; 2009 ; International Journal of Child, Youth and Family Studies Volume 1 (2009) ; 2009 >
     au < released ; 2010 ; International Journal of Child, Youth and Family Studies Volume 1 (2010) ; 2010 >
+    au < ready ; 2011 ; International Journal of Child, Youth and Family Studies Volume 2 ; 2011 >
 
   }
   
@@ -66,6 +155,7 @@
     >
     
     param[journal_id] = inke
+    comment[inquiry] = the 2010 AU seems to have disappeared
 
     au < released ; 2009 ; New Knowledge Environments Volume 1 (2009) ; 2009 >
     au < released ; 2010 ; New Knowledge Environments Volume 1 (2010) ; 2010 >
@@ -83,6 +173,22 @@
     au < released ; 2005 ; On Politics 2005 ; 2005 >
     au < released ; 2006 ; On Politics 2006 ; 2006 >
     au < released ; 2007 ; On Politics 2007 ; 2007 >
+    au < doesNotExist ; 2008 ; On Politics 2008 ; 2008 >
+    au < ready ; 2009 ; On Politics 2009 ; 2009 >
+    au < ready ; 2010 ; On Politics 2010 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = Peninsula: A Journal of Relational Politics ;
+      eissn = 1925-525X
+    >
+    
+    param[journal_id] = peninsula
+
+    au < ready ; 2011 ; Peninsula: A Journal of Relational Politics Volume 1 ; 2011 >
 
   }
   
@@ -99,6 +205,7 @@
     au < released ; 2008 ; Philosophy in Review Volume 28 ; 2008 >
     au < released ; 2009 ; Philosophy in Review Volume 29 ; 2009 >
     au < released ; 2010 ; Philosophy in Review Volume 30 ; 2010 >
+    au < ready ; 2011 ; Philosophy in Review Volume 31 ; 2011 >
 
   }
   
@@ -110,12 +217,13 @@
       eissn = 1923-6549
     >
     
-    comment[continues] = Cultural Reflections
+    comment[continued_from] = 1492-4293
     
     param[journal_id] = platforum
 
     au < released ; 2008 ; PlatForum Volume 9 ; 2008 >
     au < released ; 2009 ; PlatForum Volume 10 ; 2009 >
+    au < ready ; 2010 ; PlatForum Volume 11 ; 2010 >
 
   }
   
@@ -125,11 +233,40 @@
       name = Preteritus
     >
     
-    comment[continues] = Cultural Reflections
-    
     param[journal_id] = preteritus
+    comment[renamed] = Graduate History Journal
 
-    au < released ; 2010 ; Preteritus Volume 1 ; 2010 >
+    au < down ; 2010 ; Preteritus Volume 1 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = Working Papers of the Linguistics Circle of the University of Victoria
+    >
+    
+    param[journal_id] = wplc
+
+    au < ready ; 1981 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 1 ; 1981 >
+    au < ready ; 1982 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 2 ; 1982 >
+    au < ready ; 1983 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 3 ; 1983 >
+    au < ready ; 1984 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 4 ; 1984 >
+    au < ready ; 1986 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 5 ; 1986 >
+    au < ready ; 1987 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 6 ; 1987 >
+    au < ready ; 1988 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 7 ; 1988 >
+    au < ready ; 1989 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 8 ; 1989 >
+    au < ready ; 1990 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 9 ; 1990 >
+    au < ready ; 1991 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 10 ; 1991 >
+    au < ready ; 1992 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 11 ; 1992 >
+    au < ready ; 1994 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 12 ; 1994 >
+    au < ready ; 1996 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 13 ; 1996 >
+    au < ready ; 1997 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 14 ; 1997 >
+    au < ready ; 2002 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 15-16 ; 2002 >
+    au < ready ; 2003 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 17 ; 2003 >
+    au < ready ; 2004 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 18 ; 2004 >
+    au < ready ; 2009 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 19 ; 2009 >
+    au < ready ; 2010 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 20 ; 2010 >
 
   }
   

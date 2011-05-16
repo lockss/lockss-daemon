@@ -13,6 +13,18 @@
     {
     
       title <
+        name = aboriginal policy studies
+      >
+
+      param[journal_id] = aps
+
+      au < testing ; 2011 ; aboriginal policy studies Volume 1 ; 2011 >
+
+    }
+
+    {
+    
+      title <
         name = Alternative Francophone
       >
 
@@ -20,6 +32,20 @@
 
       au < released ; 2008 ; Alternative Francophone Volume 1 (2008) ; 2008 >
       au < released ; 2009 ; Alternative Francophone Volume 1 (2009) ; 2009 >
+      au < testing ; 2010 ; Alternative Francophone Volume 1 (2010) ; 2010 >
+
+    }
+
+    {
+    
+      title <
+        name = Canadian Journal of African Studies
+      >
+
+      param[journal_id] = cjas-rcea
+
+      au < ready ; 2009 ; Canadian Journal of African Studies Volume 43 ; 2009 >
+      au < ready ; 2010 ; Canadian Journal of African Studies Volume 44 ; 2010 >
 
     }
 
@@ -30,6 +56,7 @@
       >
 
       param[journal_id] = cjai
+      comment[0] = seems to have gone away
 
       au < released ; 2006 ; Canadian Journal of Arthropod Identification 2006 ; 2006 >
       au < released ; 2007 ; Canadian Journal of Arthropod Identification 2007 ; 2007 >
@@ -62,26 +89,7 @@
       au < released ; 2008 ; Canadian Journal of Sociology Volume 33 ; 2008 >
       au < released ; 2009 ; Canadian Journal of Sociology Volume 34 ; 2009 >
       au < released ; 2010 ; Canadian Journal of Sociology Volume 35 ; 2010 >
-
-    }
-
-    {
-    
-      title <
-        name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée
-      >
-
-      param[journal_id] = crcl
-
-      au < exists ; 1992 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 >
-      au < exists ; 1993 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 >
-      au < exists ; 1994 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 >
-      au < exists ; 1995 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 >
-      au < exists ; 1996 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 >
-      au < exists ; 1997 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 >
-      au < exists ; 1998 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 >
-      au < exists ; 1999 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 >
-      au < exists ; 2000 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 >
+      au < ready ; 2011 ; Canadian Journal of Sociology Volume 36 ; 2011 >
 
     }
 
@@ -100,6 +108,7 @@
       au < released ; 2008 ; Complicity: An International Journal of Complexity and Education Volume 5 ; 2008 >
       au < released ; 2009 ; Complicity: An International Journal of Complexity and Education Volume 6 ; 2009 >
       au < released ; 2010 ; Complicity: An International Journal of Complexity and Education Volume 7 ; 2010 >
+      au < ready ; 2011 ; Complicity: An International Journal of Complexity and Education Volume 8 ; 2011 >
 
     }
 
@@ -128,6 +137,24 @@
       param[journal_id] = eureka
 
       au < released ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 >
+      au < ready ; 2011 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 2 ; 2011 >
+
+    }
+
+    {
+    
+      title <
+        name = Evidence Based Library and Information Practice
+      >
+
+      param[journal_id] = eblip
+
+      au < released ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
+      au < released ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
+      au < released ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
+      au < released ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 >
+      au < released ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 >
+      au < ready ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 >
 
     }
 
@@ -148,16 +175,12 @@
     {
     
       title <
-        name = Evidence Based Library and Information Practice
+        name = Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image
       >
 
-      param[journal_id] = eblip
+      param[journal_id] = imaginations
 
-      au < released ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 >
-      au < released ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
-      au < released ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
-      au < released ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 >
-      au < released ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 >
+      au < ready ; 2010 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 1 ; 2010 >
 
     }
 
@@ -176,6 +199,7 @@
       au < released ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 2008 >
       au < released ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 2009 >
       au < released ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 2010 >
+      au < ready ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 2011 >
 
     }
 
@@ -191,16 +215,7 @@
       au < released ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 >
       au < released ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 >
       au < released ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 >
-
-    }
-
-    {
-    
-      title <
-        name = Journal of Curriculum and Pedagogy
-      >
-
-      param[journal_id] = jcp
+      au < ready ; 2010 ; Journal of Contemporary Issues in Education Volume 5 ; 2010 >
 
     }
 
@@ -221,20 +236,7 @@
       au < released ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 >
       au < released ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 >
       au < released ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 >
-
-    }
-
-    {
-    
-      title <
-        name = Journal of Pharmacy & Pharmaceutical Sciences
-      >
-
-      param[journal_id] = jpps
-
-      au < exists ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 >
-      au < exists ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 >
-      au < exists ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 >
+      au < ready ; 2010 ; Journal of Hebrew Scriptures Volume 10 ; 2010 >
 
     }
 
@@ -261,16 +263,7 @@
       au < released ; 2007 ; Past Imperfect Volume 13 ; 2007 >
       au < released ; 2008 ; Past Imperfect Volume 14 ; 2008 >
       au < released ; 2009 ; Past Imperfect Volume 15 ; 2009 >
-
-    }
-
-    {
-    
-      title <
-        name = Philosophical Explanations
-      >
-
-      param[journal_id] = pe
+      au < ready ; 2010 ; Past Imperfect Volume 16 ; 2010 >
 
     }
 
@@ -284,6 +277,8 @@
 
       au < released ; 2008 ; TranscUlturAl Volume 1 (2008) ; 2008 >
       au < released ; 2009 ; TranscUlturAl Volume 1 (2009) ; 2009 >
+      au < ready ; 2010 ; TranscUlturAl Volume 1 (2010) ; 2010 >
+      au < ready ; 2011 ; TranscUlturAl Volume 1 (2011) ; 2011 >
 
     }
 
