@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.5 2011-05-13 23:06:38 barry409 Exp $
+# $Id: tdbparse.py,v 1.6 2011-05-16 00:29:33 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,13 +26,30 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.2'''
+__version__ = '''0.3.3'''
 
 from optparse import OptionGroup, OptionParser
 import re
 import sys
 from tdb import *
 import tdbq
+
+
+###
+### TdbparseSyntaxError
+###
+
+class TdbparseSyntaxError(Exception):
+    def __init__(self, message, filename, lineno, offset):
+        super(Exception, self).__init__()
+        self.message = message
+        self.filename = filename
+        self.lineno = lineno
+        self.offset = offset
+
+    def __str__(self):
+        return "\"%s\", line %d.%d: %s" % (self.filename, self.lineno, self.offset, self.message)
+
 
 ###
 ### TdbparseConstants
@@ -254,7 +271,8 @@ class TdbScanner(object):
             return self.__tok
         # Syntax error
         self.__token(TdbparseToken.NONE)
-        raise RuntimeError, 'unexpected syntax at line %d column %d: %s' % (self.__tok.line(), self.__tok.col(), self.__cur.rstrip())
+        raise TdbparseSyntaxError("Unexpected syntax",
+            self.file_name(), self.__tok.line(), self.__tok.col())
 
     def __move(self, n):
         '''Consumes n characters from the current line.'''
@@ -273,7 +291,8 @@ class TdbScanner(object):
             self.__token(TdbparseToken.AU)
             self.__stringFlag = TdbparseToken.AU
         elif keyword == 'implicit': self.__token(TdbparseToken.IMPLICIT)
-        else: raise RuntimeError, 'internal error at line %d column %d: expected %s, %s, %s or %s but got %s' % (self.__tok.line(), self.__tok.col(), TdbparseLiteral.PUBLISHER, TdbparseLiteral.TITLE, TdbparseLiteral.AU, TdbparseLiteral.IMPLICIT, keyword)
+        else:
+            raise RuntimeError, 'internal error at line %d column %d: expected %s, %s, %s or %s but got %s' % (self.__tok.line(), self.__tok.col(), TdbparseLiteral.PUBLISHER, TdbparseLiteral.TITLE, TdbparseLiteral.AU, TdbparseLiteral.IMPLICIT, keyword)
         self.__move(len(keyword))
         return self.__tok
 
@@ -295,17 +314,21 @@ class TdbScanner(object):
         self.__token(TdbparseToken.STRING)
         val = []
         self.__move(1) # Consume the opening quote
-        if self.__cur == '': raise RuntimeError, 'run-on quoted string line %d column %d' % (self.__tok.line(), self.__tok.col())
+        if self.__cur == '':
+            raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
         ch = self.__cur[0]
         while ch != TdbparseLiteral.QUOTE_DOUBLE:
             if ch == '\\':
                 self.__move(1) # Consume the backslash
-                if self.__cur == '': raise RuntimeError, 'run-on quoted string line %d column %d' % (self.__tok.line(), self.__tok.col())
+                if self.__cur == '':
+                    raise TdbparseSyntaxError('end-of-line after backslash', self.file_name(), self.__tok.line(), self.__tok.col())
                 ch = self.__cur[0]
-                if ch not in '"\\': raise RuntimeError, 'invalid quoted string escape line %d column %d: %s' % (self.__line, self.__col-1, ch)
+                if ch not in '"\\':
+                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1)
             val.append(ch)
             self.__move(1) # Consume the character
-            if self.__cur == '': raise RuntimeError, 'run-on quoted string line %d column %d' % (self.__tok.line(), self.__tok.col())
+            if self.__cur == '':
+                raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
             ch = self.__cur[0]
         self.__move(1) # Consume the closing quote
         self.__tok.set_value(''.join(val))
@@ -331,9 +354,11 @@ class TdbScanner(object):
             if ch in [TdbparseLiteral.SEMICOLON, TdbparseLiteral.ANGLE_CLOSE]: break
             if ch == '\\':
                 self.__move(1) # Consume the backslash
-                if self.__cur == '': raise RuntimeError, 'run-on quoted string line %d column %d' % (self.__tok.line(), self.__tok.col())
+                if self.__cur == '':
+                    raise TdbparseSyntaxError('run-on quoted string', self.file_name(), self.__tok.line(), self.__tok.col())
                 ch = self.__cur[0]
-                if ch not in ';> \\': raise RuntimeError, 'invalid quoted string escape line %d column %d: %s' % (self.__line, self.__col-1, ch)
+                if ch not in ';> \\':
+                    raise TdbparseSyntaxError('invalid quoted string escape: %s' % ch, self.file_name(), self.__line, self.__col-1)
                 if ch == ' ': trailingSpace = True
             val.append(ch)
             if trailingSpace:
@@ -354,6 +379,12 @@ class TdbScanner(object):
         
         typ: A token type. See TdbparseToken.'''
         self.__tok = TdbparseToken(typ, self.__line, self.__col)
+        
+    def file_name(self):
+        if str(self.__file.__class__) == "StringIO.StringIO":
+            return "<string>"
+        return self.__file.name
+
 
 ###
 ### TdbParser
@@ -371,6 +402,7 @@ class TdbParser(object):
 
     def __init__(self, scanner, options):
         self.__scanner = scanner
+        self.__file_name = scanner.file_name()
         self.__options = options
         self.__initialize_data()
         self.__initialize_parser()
@@ -484,12 +516,11 @@ class TdbParser(object):
         |
             au
         ;'''
+        assert self.__token[0].type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]
         if self.__token[0].type() == TdbparseToken.AU:
             self.__au()
-        elif self.__token[0].type() == TdbparseToken.CURLY_OPEN:
+        else: # self.__token[0].type() == TdbparseToken.CURLY_OPEN
             self.__au_container()
-        else:
-            raise RuntimeError, 'syntax error line %d column %d: expected %s or %s but got %s' % (self.__token[0].line(), self.__token[0].col(), TdbparseLiteral.AU, TdbparseLiteral.CURLY_OPEN, self.__token[0].translate())
 
     def __au_container(self):
         '''au_container :
@@ -513,14 +544,13 @@ class TdbParser(object):
         |
             implicit
         ;'''
+        assert self.__token[0].type() in [TdbparseToken.IDENTIFIER, TdbparseToken.IMPLICIT]
         if self.__token[0].type() == TdbparseToken.IDENTIFIER:
             self.__simple_assignment()
             key, val = self.__stack.pop()
             self.__current_au[-1].set(key, val)
-        elif self.__token[0].type() == TdbparseToken.IMPLICIT:
+        else: # self.__token[0].type() == TdbparseToken.IMPLICIT
             self.__implicit()
-        else:
-            raise RuntimeError, 'syntax error line %d column %d: expected %s or %s but got %s' % (self.__token[0].line(), self.__token[0].col(), TdbparseLiteral.IDENTIFIER, TdbparseLiteral.IMPLICIT, self.__token[0].translate())
 
     def __identifier(self):
         '''identifier :
@@ -621,7 +651,7 @@ class TdbParser(object):
         impl = self.__current_au[-1].get('$implicit')
         vals = self.__stack.pop()
         if len(impl) != len(vals):
-            raise RuntimeError, 'mismatch line %d column %d: expected %d implicit assignments but got %d' % (tok.line(), tok.col(), len(impl), len(vals))
+            raise TdbparseSyntaxError('expected %d implicit assignments but got %d' % (len(impl), len(vals)), self.__file_name, tok.line(), tok.col())
         for key, val in zip(impl, vals):
             au.set(key, val)
         self.__tdb.add_au(au)
@@ -695,9 +725,12 @@ class TdbParser(object):
 
     def __expect(self, toktyp):
         '''If the given token is next, consumes it, otherwise raises
-        a runtime error.'''
+        TdbparseSyntaxError.'''
         if not self.__accept(toktyp):
-            raise RuntimeError, 'syntax error line %d column %d: expected %s but got %s' % (self.__token[0].line(), self.__token[0].col(), TdbparseToken(toktyp, 0, 0).translate(), self.__token[0].translate())
+            raise TdbparseSyntaxError(
+                'expected %s but got %s' % (TdbparseToken(toktyp, 0, 0).translate(), self.__token[0].translate()), 
+                self.__file_name, self.__token[0].line(),
+                self.__token[0].col())
 
     def __initialize_data(self):
         self.__tdb = Tdb()
@@ -775,18 +808,23 @@ class TestTdbScanner(unittest.TestCase):
             scanner = TdbScanner(StringIO(str), self.options())
             self.assertEquals(TdbparseToken.END_OF_FILE, scanner.next().type())
             self.assertRaises(RuntimeError, scanner.next)
-    
+
     def testBadStrings(self):
         for st, skip in [('"', 0),
                          ('"foo', 0),
                          ('"foo\\', 0),
                          ('"foo\\x"', 0),
                          ('foo = bar\\', 2),
-                         ('foo = bar\\x', 2)]:
+                         ('foo = bar\\x', 2),
+                         ('foo = "', 2),
+                         ('foo = "\\', 2),
+                         ('foo = "\\k', 2),
+                         ('foo = "\\"', 2),
+                         ]:
             scanner = TdbScanner(StringIO(st), self.options())
             for i in range(skip): scanner.next()
-            self.assertRaises(RuntimeError, scanner.next)
-            
+            self.assertRaises(TdbparseSyntaxError, scanner.next)
+
     def testStrings(self):
         scanner = TdbScanner(StringIO('''\
 a = "nothing special"
@@ -864,27 +902,27 @@ class TestTdbParser(unittest.TestCase):
     def testSyntaxErrors(self):
         for src, mes in [('''\
 <
-''', 'syntax error line 1 column 1: expected end of file but got <'),
+''', TdbparseSyntaxError('expected end of file but got <', '<string>', 1, 1)),
                          ('''\
 {
   "foo" "and" "so" "forth"
-''', 'unexpected syntax at line 2 column 3: "foo" "and" "so" "forth"'),
+''', TdbparseSyntaxError('Unexpected syntax', '<string>', 2, 3)),
                          ('''\
 {
   publisher [
-''', 'syntax error line 2 column 13: expected < but got ['),
+''', TdbparseSyntaxError('expected < but got [', '<string>', 2, 13)),
                          ('''\
 {
   {
 }
-''', 'syntax error line 4 column 1: expected } but got end of file'),
+''', TdbparseSyntaxError('expected } but got end of file', '<string>', 4, 1)),
                          ('''\
 {
   title <
     name = The Title
   >
 }
-''', 'syntax error line 2 column 3: expected } but got title'),
+''', TdbparseSyntaxError('expected } but got title', '<string>', 2, 3)),
                          ('''\
 {
   foo = "bar"
@@ -892,14 +930,14 @@ class TestTdbParser(unittest.TestCase):
     name = The Publisher
   >
 }
-''', 'syntax error line 3 column 3: expected } but got publisher'),
+''', TdbparseSyntaxError('expected } but got publisher', '<string>', 3, 3)),
                          ('''\
 {
   publisher <
     name = The Publisher
   >
   au < foo ; bar ; baz >
-}''', 'syntax error line 5 column 3: expected } but got au'),
+}''', TdbparseSyntaxError('expected } but got au', '<string>', 5, 3)),
                          ('''\
 {
   publisher <
@@ -913,7 +951,7 @@ class TestTdbParser(unittest.TestCase):
     au < vala ; valb >
   }
 }
-''', 'mismatch line 10 column 5: expected 3 implicit assignments but got 2'),
+''', TdbparseSyntaxError('expected 3 implicit assignments but got 2', '<string>', 10, 5)),
                          ('''\
 {
   publisher <
@@ -927,9 +965,11 @@ class TestTdbParser(unittest.TestCase):
     au < vala ; valb ; valc ; vald >
   }
 }
-''', 'mismatch line 10 column 5: expected 3 implicit assignments but got 4')]:
+''', TdbparseSyntaxError('expected 3 implicit assignments but got 4', '<string>', 10, 5))]:
             parser = TdbParser(TdbScanner(StringIO(src), self.options()), self.options())
-            try: parser.parse()
-            except RuntimeError, exc: self.assertEquals(mes, str(exc))
+            try:
+                parser.parse()
+            except TdbparseSyntaxError, exc:
+                self.assertEquals(str(mes), str(exc))
 
 if __name__ == '__main__': unittest.main()
