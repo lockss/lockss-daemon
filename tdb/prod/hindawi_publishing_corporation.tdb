@@ -330,8 +330,9 @@
     >
 
     param[journal_id] = ano
+    comment = the url "http://www.hindawi.com/journals/ano/" redirects to "http://www.hindawi.com/journals/ijo/"
 
-    au < released ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
+    au < testing ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
     au < released ; Advances in Nonlinear Optics Volume 2009 ; 2009 >
     au < ready ; Advances in Nonlinear Optics Volume 2010 ; 2010 >
     au < ready ; Advances in Nonlinear Optics Volume 2011 ; 2011 >
@@ -348,6 +349,9 @@
 
     param[journal_id] = ana
 
+    au < exists ; Advances in Numerical Analysis Volume 2009 ; 2009 >
+    au < exists ; Advances in Numerical Analysis Volume 2010 ; 2010 >
+    au < exists ; Advances in Numerical Analysis Volume 2011 ; 2011 >
 
   }
 
@@ -361,6 +365,9 @@
 
     param[journal_id] = aor
 
+    au < exists ; Advances in Operations Research Volume 2009 ; 2009 >
+    au < exists ; Advances in Operations Research Volume 2010 ; 2010 >
+    au < exists ; Advances in Operations Research Volume 2011 ; 2011 >
 
   }
 
@@ -487,6 +494,9 @@
 
     param[journal_id] = ase
 
+    au < exists ; Advances in Software Engineering Volume 2009 ; 2009 >
+    au < exists ; Advances in Software Engineering Volume 2010 ; 2010 >
+    au < exists ; Advances in Software Engineering Volume 2011 ; 2011 >
 
   }
 
@@ -582,6 +592,9 @@
 
     param[journal_id] = acisc
 
+    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 >
+    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 >
+    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 >
 
   }
 
@@ -636,6 +649,9 @@
 
     param[journal_id] = crm
 
+    au < exists ; Case Reports in Medicine Volume 2009 ; 2009 >
+    au < exists ; Case Reports in Medicine Volume 2010 ; 2010 >
+    au < exists ; Case Reports in Medicine Volume 2011 ; 2011 >
 
   }
 
@@ -1119,6 +1135,9 @@
 
     param[journal_id] = ijac
 
+    au < exists ; International Journal of Analytical Chemistry Volume 2009 ; 2009 >
+    au < exists ; International Journal of Analytical Chemistry Volume 2010 ; 2010 >
+    au < exists ; International Journal of Analytical Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -1150,6 +1169,9 @@
 
     param[journal_id] = ijbm
 
+    au < exists ; International Journal of Biomaterials Volume 2009 ; 2009 >
+    au < exists ; International Journal of Biomaterials Volume 2010 ; 2010 >
+    au < exists ; International Journal of Biomaterials Volume 2011 ; 2011 >
 
   }
 
@@ -1182,6 +1204,9 @@
 
     param[journal_id] = ijcc
 
+    au < exists ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 >
+    au < exists ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 >
+    au < exists ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 >
 
   }
 
@@ -1195,6 +1220,9 @@
 
     param[journal_id] = ijcb
 
+    au < exists ; International Journal of Cell Biology Volume 2009 ; 2009 >
+    au < exists ; International Journal of Cell Biology Volume 2010 ; 2010 >
+    au < exists ; International Journal of Cell Biology Volume 2011 ; 2011 >
 
   }
 
@@ -1225,6 +1253,9 @@
 
     param[journal_id] = ijct
 
+    au < exists ; International Journal of Combinatorics Volume 2009 ; 2009 >
+    au < exists ; International Journal of Combinatorics Volume 2010 ; 2010 >
+    au < exists ; International Journal of Combinatorics Volume 2011 ; 2011 >
 
   }
 
@@ -1255,6 +1286,9 @@
 
     param[journal_id] = ijc
 
+    au < exists ; International Journal of Corrosion Volume 2009 ; 2009 >
+    au < exists ; International Journal of Corrosion Volume 2010 ; 2010 >
+    au < exists ; International Journal of Corrosion Volume 2011 ; 2011 >
 
   }
 
@@ -1268,6 +1302,9 @@
 
     param[journal_id] = ijd
 
+    au < exists ; International Journal of Dentistry Volume 2009 ; 2009 >
+    au < exists ; International Journal of Dentistry Volume 2010 ; 2010 >
+    au < exists ; International Journal of Dentistry Volume 2011 ; 2011 >
 
   }
 
@@ -1281,6 +1318,9 @@
 
     param[journal_id] = ijde
 
+    au < exists ; International Journal of Differential Equations Volume 2009 ; 2009 >
+    au < exists ; International Journal of Differential Equations Volume 2010 ; 2010 >
+    au < exists ; International Journal of Differential Equations Volume 2011 ; 2011 >
 
   }
 
@@ -1353,6 +1393,9 @@
 
     param[journal_id] = ijgp
 
+    au < exists ; International Journal of Geophysics Volume 2009 ; 2009 >
+    au < exists ; International Journal of Geophysics Volume 2010 ; 2010 >
+    au < exists ; International Journal of Geophysics Volume 2011 ; 2011 >
 
   }
 
