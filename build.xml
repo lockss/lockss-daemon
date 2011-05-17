@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.263.2.1 2010-12-06 22:06:40 dshr Exp $
+ $Id: build.xml,v 1.263.2.2 2011-05-17 21:49:24 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -250,6 +250,8 @@ Args:
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
   <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
+  <!-- Needed by VFS-S3: -->
+  <property name="jets3t.jar" value="${lib}/jets3t-0.8.1.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -340,6 +342,8 @@ Args:
     <!-- jars needed by the ArcCrawler -->
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
+    <!-- jars needed for VFS-S3 -->
+    <pathelement path="${jets3t.jar}" />
   </path>
 
   <path id="run.classpath">
