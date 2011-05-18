@@ -4225,11 +4225,11 @@
     param[journal_issn] = 1387-3547
     attr[where] = content1b
 
-    au < testing ; 1999 ; Biological Invasions Volume 1 ; 1 >
+    au < ready ; 1999 ; Biological Invasions Volume 1 ; 1 >
     au < ready ; 2000 ; Biological Invasions Volume 2 ; 2 >
     au < ready ; 2001 ; Biological Invasions Volume 3 ; 3 >
     au < ready ; 2002 ; Biological Invasions Volume 4 ; 4 >
-    au < testing ; 2003 ; Biological Invasions Volume 5 ; 5 >
+    au < ready ; 2003 ; Biological Invasions Volume 5 ; 5 >
     au < testing ; 2004 ; Biological Invasions Volume 6 ; 6 >
     au < testing ; 2005 ; Biological Invasions Volume 7 ; 7 >
     au < testing ; 2006 ; Biological Invasions Volume 8 ; 8 >
@@ -5929,7 +5929,7 @@
 
     comment[continued_from] = 0366-483X
     param[journal_issn] = 0258-8900
-    attr[where] = content5a
+    comment[suspended] = content3b
 
     au < manifest ; 1937 ; Bulletin Volcanologique Volume 1 (1937) ; 1 >
     au < manifest ; 1937 ; Bulletin Volcanologique Volume 2 (1937) ; 2 >
@@ -8998,7 +8998,6 @@
     >
 
     param[journal_issn] = 0722-4028
-    attr[where] = sul-lockss30a
 
     au < ready ; 1982-1983 ; Coral Reefs Volume 1 ; 1 >
     au < ready ; 1983-1984 ; Coral Reefs Volume 2 ; 2 >
@@ -9009,13 +9008,13 @@
     au < ready ; 1988-1989 ; Coral Reefs Volume 7 ; 7 >
     au < ready ; 1989-1990 ; Coral Reefs Volume 8 ; 8 >
     au < ready ; 1990-1991 ; Coral Reefs Volume 9 ; 9 >
-    au < testing ; 1991 ; Coral Reefs Volume 10 ; 10 >
+    au < ready ; 1991 ; Coral Reefs Volume 10 ; 10 >
     au < ready ; 1992 ; Coral Reefs Volume 11 ; 11 >
     au < ready ; 1993 ; Coral Reefs Volume 12 ; 12 >
     au < ready ; 1994 ; Coral Reefs Volume 13 ; 13 >
     au < ready ; 1995 ; Coral Reefs Volume 14 ; 14 >
     au < ready ; 1996 ; Coral Reefs Volume 15 ; 15 >
-    au < testing ; 1997 ; Coral Reefs Volume 16 ; 16 >
+    au < ready ; 1997 ; Coral Reefs Volume 16 ; 16 >
     au < ready ; 1998 ; Coral Reefs Volume 17 ; 17 >
     au < ready ; 1999 ; Coral Reefs Volume 18 ; 18 >
     au < ready ; 2000 ; Coral Reefs Volume 19 ; 19 >
@@ -9026,10 +9025,10 @@
     au < ready ; 2005 ; Coral Reefs Volume 24 ; 24 >
     au < ready ; 2006 ; Coral Reefs Volume 25 ; 25 >
     au < ready ; 2007 ; Coral Reefs Volume 26 ; 26 >
-    au < testing ; 2008 ; Coral Reefs Volume 27 ; 27 >
+    au < ready ; 2008 ; Coral Reefs Volume 27 ; 27 >
     au < ready ; 2009 ; Coral Reefs Volume 28 ; 28 >
     au < ready ; 2010 ; Coral Reefs Volume 29 ; 29 >
-    au < testing ; 2011 ; Coral Reefs Volume 30 ; 30 >
+    au < ready ; 2011 ; Coral Reefs Volume 30 ; 30 >
 
   }
 
@@ -9880,11 +9879,35 @@
       name = Data Mining and Knowledge Discovery ;
       issn = 1384-5810 ;
       eissn = 1573-756X ;
-      issnl = 1384-5810 ;
-      placeholder = True
+      issnl = 1384-5810
     >
 
     param[journal_issn] = 1384-5810
+    attr[where] = content1a
+
+    au < testing ; 1997 ; Data Mining and Knowledge Discovery Volume 1 ; 1 >
+    au < testing ; 1998 ; Data Mining and Knowledge Discovery Volume 2 ; 2 >
+    au < testing ; 1999 ; Data Mining and Knowledge Discovery Volume 3 ; 3 >
+    au < testing ; 2000 ; Data Mining and Knowledge Discovery Volume 4 ; 4 >
+    au < testing ; 2001 ; Data Mining and Knowledge Discovery Volume 5 ; 5 >
+    au < testing ; 2002 ; Data Mining and Knowledge Discovery Volume 6 ; 6 >
+    au < testing ; 2003 ; Data Mining and Knowledge Discovery Volume 7 ; 7 >
+    au < testing ; 2004 ; Data Mining and Knowledge Discovery Volume 8 ; 8 >
+    au < testing ; 2004 ; Data Mining and Knowledge Discovery Volume 9 ; 9 >
+    au < testing ; 2005 ; Data Mining and Knowledge Discovery Volume 10 ; 10 >
+    au < testing ; 2005 ; Data Mining and Knowledge Discovery Volume 11 ; 11 >
+    au < testing ; 2006 ; Data Mining and Knowledge Discovery Volume 12 ; 12 >
+    au < testing ; 2006 ; Data Mining and Knowledge Discovery Volume 13 ; 13 >
+    au < testing ; 2007 ; Data Mining and Knowledge Discovery Volume 14 ; 14 >
+    au < testing ; 2007 ; Data Mining and Knowledge Discovery Volume 15 ; 15 >
+    au < testing ; 2008 ; Data Mining and Knowledge Discovery Volume 16 ; 16 >
+    au < testing ; 2008 ; Data Mining and Knowledge Discovery Volume 17 ; 17 >
+    au < testing ; 2009 ; Data Mining and Knowledge Discovery Volume 18 ; 18 >
+    au < testing ; 2009 ; Data Mining and Knowledge Discovery Volume 19 ; 19 >
+    au < testing ; 2010 ; Data Mining and Knowledge Discovery Volume 20 ; 20 >
+    au < testing ; 2010 ; Data Mining and Knowledge Discovery Volume 21 ; 21 >
+    au < testing ; 2011 ; Data Mining and Knowledge Discovery Volume 22 ; 22 >
+    au < testing ; 2011 ; Data Mining and Knowledge Discovery Volume 23 ; 23 >
 
   }
 
@@ -18769,10 +18792,10 @@
     au < ready ; 2001 ; Investigational New Drugs Volume 19 ; 19 >
     au < ready ; 2002 ; Investigational New Drugs Volume 20 ; 20 >
     au < ready ; 2003 ; Investigational New Drugs Volume 21 ; 21 >
-    au < testing ; 2004 ; Investigational New Drugs Volume 22 ; 22 >
+    au < ready ; 2004 ; Investigational New Drugs Volume 22 ; 22 >
     au < ready ; 2005 ; Investigational New Drugs Volume 23 ; 23 >
     au < testing ; 2006 ; Investigational New Drugs Volume 24 ; 24 >
-    au < testing ; 2007 ; Investigational New Drugs Volume 25 ; 25 >
+    au < ready ; 2007 ; Investigational New Drugs Volume 25 ; 25 >
     au < ready ; 2008 ; Investigational New Drugs Volume 26 ; 26 >
     au < ready ; 2009 ; Investigational New Drugs Volume 27 ; 27 >
     au < ready ; 2010 ; Investigational New Drugs Volume 28 ; 28 >
@@ -23323,20 +23346,20 @@
     au < testing ; 1985 ; Journal of Neurocytology Volume 14 ; 14 >
     au < ready ; 1986 ; Journal of Neurocytology Volume 15 ; 15 >
     au < ready ; 1987 ; Journal of Neurocytology Volume 16 ; 16 >
-    au < testing ; 1988 ; Journal of Neurocytology Volume 17 ; 17 >
+    au < ready ; 1988 ; Journal of Neurocytology Volume 17 ; 17 >
     au < ready ; 1989 ; Journal of Neurocytology Volume 18 ; 18 >
     au < ready ; 1990 ; Journal of Neurocytology Volume 19 ; 19 >
-    au < testing ; 1991 ; Journal of Neurocytology Volume 20 ; 20 >
+    au < ready ; 1991 ; Journal of Neurocytology Volume 20 ; 20 >
     au < ready ; 1992 ; Journal of Neurocytology Volume 21 ; 21 >
     au < testing ; 1993 ; Journal of Neurocytology Volume 22 ; 22 >
-    au < testing ; 1994 ; Journal of Neurocytology Volume 23 ; 23 >
-    au < testing ; 1995 ; Journal of Neurocytology Volume 24 ; 24 >
-    au < testing ; 1996 ; Journal of Neurocytology Volume 25 ; 25 >
+    au < ready ; 1994 ; Journal of Neurocytology Volume 23 ; 23 >
+    au < ready ; 1995 ; Journal of Neurocytology Volume 24 ; 24 >
+    au < ready ; 1996 ; Journal of Neurocytology Volume 25 ; 25 >
     au < ready ; 1997 ; Journal of Neurocytology Volume 26 ; 26 >
     au < ready ; 1998 ; Journal of Neurocytology Volume 27 ; 27 >
-    au < testing ; 1999 ; Journal of Neurocytology Volume 28 ; 28 >
+    au < ready ; 1999 ; Journal of Neurocytology Volume 28 ; 28 >
     au < ready ; 2000 ; Journal of Neurocytology Volume 29 ; 29 >
-    au < testing ; 2001 ; Journal of Neurocytology Volume 30 ; 30 >
+    au < ready ; 2001 ; Journal of Neurocytology Volume 30 ; 30 >
     au < ready ; 2002 ; Journal of Neurocytology Volume 31 ; 31 >
     au < ready ; 2003 ; Journal of Neurocytology Volume 32 ; 32 >
     au < ready ; 2004 ; Journal of Neurocytology Volume 33 ; 33 >
@@ -26193,11 +26216,33 @@
       name = Mammalian Genome ;
       issn = 0938-8990 ;
       eissn = 1432-1777 ;
-      issnl = 0938-8990 ;
-      placeholder = True
+      issnl = 0938-8990
     >
 
     param[journal_issn] = 0938-8990
+    attr[where] = content3a
+
+    au < testing ; 1991 ; Mammalian Genome Volume 1 ; 1 >
+    au < testing ; 1991-1992 ; Mammalian Genome Volume 2 ; 2 >
+    au < testing ; 1992 ; Mammalian Genome Volume 3 ; 3 >
+    au < testing ; 1993 ; Mammalian Genome Volume 4 ; 4 >
+    au < testing ; 1994 ; Mammalian Genome Volume 5 ; 5 >
+    au < testing ; 1995 ; Mammalian Genome Volume 6 ; 6 >
+    au < testing ; 1998 ; Mammalian Genome Volume 8 ; 8 >
+    au < testing ; 1998 ; Mammalian Genome Volume 9 ; 9 >
+    au < testing ; 1999 ; Mammalian Genome Volume 10 ; 10 >
+    au < testing ; 2000 ; Mammalian Genome Volume 11 ; 11 >
+    au < testing ; 2001 ; Mammalian Genome Volume 12 ; 12 >
+    au < testing ; 2002 ; Mammalian Genome Volume 13 ; 13 >
+    au < testing ; 2003 ; Mammalian Genome Volume 14 ; 14 >
+    au < testing ; 2004 ; Mammalian Genome Volume 15 ; 15 >
+    au < testing ; 2005 ; Mammalian Genome Volume 16 ; 16 >
+    au < testing ; 2006 ; Mammalian Genome Volume 17 ; 17 >
+    au < testing ; 2007 ; Mammalian Genome Volume 18 ; 18 >
+    au < testing ; 2008 ; Mammalian Genome Volume 19 ; 19 >
+    au < testing ; 2009 ; Mammalian Genome Volume 20 ; 20 >
+    au < testing ; 2010 ; Mammalian Genome Volume 21 ; 21 >
+    au < testing ; 2011 ; Mammalian Genome Volume 22 ; 22 >
 
   }
 
@@ -29352,11 +29397,33 @@
     title <
       name = Obesity Surgery ;
       issn = 0960-8923 ;
-      issnl = 0960-8923 ;
-      placeholder = True
+      issnl = 0960-8923
     >
 
     param[journal_issn] = 0960-8923
+    attr[where] = sul-lockss30a
+
+    au < testing ; 1991 ; Obesity Surgery Volume 1 ; 1 >
+    au < testing ; 1992 ; Obesity Surgery Volume 2 ; 2 >
+    au < testing ; 1993 ; Obesity Surgery Volume 3 ; 3 >
+    au < testing ; 1994 ; Obesity Surgery Volume 4 ; 4 >
+    au < testing ; 1995 ; Obesity Surgery Volume 5 ; 5 >
+    au < testing ; 1996 ; Obesity Surgery Volume 6 ; 6 >
+    au < testing ; 1997 ; Obesity Surgery Volume 7 ; 7 >
+    au < testing ; 1998 ; Obesity Surgery Volume 8 ; 8 >
+    au < testing ; 1999 ; Obesity Surgery Volume 9 ; 9 >
+    au < testing ; 2000 ; Obesity Surgery Volume 10 ; 10 >
+    au < testing ; 2001 ; Obesity Surgery Volume 11 ; 11 >
+    au < testing ; 2002 ; Obesity Surgery Volume 12 ; 12 >
+    au < testing ; 2003 ; Obesity Surgery Volume 13 ; 13 >
+    au < testing ; 2004 ; Obesity Surgery Volume 14 ; 14 >
+    au < testing ; 2005 ; Obesity Surgery Volume 15 ; 15 >
+    au < testing ; 2006 ; Obesity Surgery Volume 16 ; 16 >
+    au < testing ; 2007 ; Obesity Surgery Volume 17 ; 17 >
+    au < testing ; 2008 ; Obesity Surgery Volume 18 ; 18 >
+    au < testing ; 2009 ; Obesity Surgery Volume 19 ; 19 >
+    au < testing ; 2010 ; Obesity Surgery Volume 20 ; 20 >
+    au < testing ; 2011 ; Obesity Surgery Volume 21 ; 21 >
 
   }
 
@@ -29569,52 +29636,52 @@
     au < manifest ; 1999 ; Oecologia Volume 118 ; 118 >
     au < manifest ; 1999 ; Oecologia Volume 119 ; 119 >
     au < manifest ; 1999 ; Oecologia Volume 120 ; 120 >
-    au < testing ; 1999 ; Oecologia Volume 121 ; 121 >
+    au < ready ; 1999 ; Oecologia Volume 121 ; 121 >
     au < ready ; 2000 ; Oecologia Volume 122 ; 122 >
     au < ready ; 2000 ; Oecologia Volume 123 ; 123 >
     au < ready ; 2000 ; Oecologia Volume 124 ; 124 >
-    au < testing ; 2000 ; Oecologia Volume 125 ; 125 >
+    au < ready ; 2000 ; Oecologia Volume 125 ; 125 >
     au < testing ; 2001 ; Oecologia Volume 126 ; 126 >
     au < ready ; 2001 ; Oecologia Volume 127 ; 127 >
     au < ready ; 2001 ; Oecologia Volume 128 ; 128 >
     au < ready ; 2001 ; Oecologia Volume 129 ; 129 >
     au < ready ; 2002 ; Oecologia Volume 130 ; 130 >
     au < ready ; 2002 ; Oecologia Volume 131 ; 131 >
-    au < testing ; 2002 ; Oecologia Volume 132 ; 132 >
+    au < ready ; 2002 ; Oecologia Volume 132 ; 132 >
     au < ready ; 2002 ; Oecologia Volume 133 ; 133 >
     au < ready ; 2003 ; Oecologia Volume 134 ; 134 >
     au < ready ; 2003 ; Oecologia Volume 135 ; 135 >
-    au < testing ; 2003 ; Oecologia Volume 136 ; 136 >
+    au < ready ; 2003 ; Oecologia Volume 136 ; 136 >
     au < testing ; 2003 ; Oecologia Volume 137 ; 137 >
     au < testing ; 2004 ; Oecologia Volume 138 ; 138 >
-    au < testing ; 2004 ; Oecologia Volume 139 ; 139 >
-    au < testing ; 2004 ; Oecologia Volume 140 ; 140 >
+    au < ready ; 2004 ; Oecologia Volume 139 ; 139 >
+    au < ready ; 2004 ; Oecologia Volume 140 ; 140 >
     au < testing ; 2004 ; Oecologia Volume 141 ; 141 >
     au < testing ; 2005 ; Oecologia Volume 142 ; 142 >
     au < testing ; 2005 ; Oecologia Volume 143 ; 143 >
     au < testing ; 2005 ; Oecologia Volume 144 ; 144 >
     au < testing ; 2005 ; Oecologia Volume 145 ; 145 >
     au < testing ; 2005 ; Oecologia Volume 146 ; 146 >
-    au < testing ; 2006 ; Oecologia Volume 147 ; 147 >
+    au < ready ; 2006 ; Oecologia Volume 147 ; 147 >
     au < testing ; 2006 ; Oecologia Volume 148 ; 148 >
     au < testing ; 2006 ; Oecologia Volume 149 ; 149 >
     au < ready ; 2006 ; Oecologia Volume 150 ; 150 >
     au < testing ; 2007 ; Oecologia Volume 151 ; 151 >
     au < testing ; 2007 ; Oecologia Volume 152 ; 152 >
-    au < testing ; 2007 ; Oecologia Volume 153 ; 153 >
+    au < ready ; 2007 ; Oecologia Volume 153 ; 153 >
     au < testing ; 2007 ; Oecologia Volume 154 ; 154 >
-    au < testing ; 2008 ; Oecologia Volume 155 ; 155 >
-    au < testing ; 2008 ; Oecologia Volume 156 ; 156 >
-    au < testing ; 2008 ; Oecologia Volume 157 ; 157 >
-    au < testing ; 2008 ; Oecologia Volume 158 ; 158 >
+    au < ready ; 2008 ; Oecologia Volume 155 ; 155 >
+    au < ready ; 2008 ; Oecologia Volume 156 ; 156 >
+    au < ready ; 2008 ; Oecologia Volume 157 ; 157 >
+    au < ready ; 2008 ; Oecologia Volume 158 ; 158 >
     au < testing ; 2009 ; Oecologia Volume 159 ; 159 >
     au < testing ; 2009 ; Oecologia Volume 160 ; 160 >
     au < testing ; 2009 ; Oecologia Volume 161 ; 161 >
-    au < testing ; 2010 ; Oecologia Volume 162 ; 162 >
+    au < ready ; 2010 ; Oecologia Volume 162 ; 162 >
     au < testing ; 2010 ; Oecologia Volume 163 ; 163 >
-    au < testing ; 2010 ; Oecologia Volume 164 ; 164 >
-    au < testing ; 2011 ; Oecologia Volume 165 ; 165 >
-    au < testing ; 2011 ; Oecologia Volume 166 ; 166 >
+    au < ready ; 2010 ; Oecologia Volume 164 ; 164 >
+    au < ready ; 2011 ; Oecologia Volume 165 ; 165 >
+    au < ready ; 2011 ; Oecologia Volume 166 ; 166 >
 
   }
 
@@ -31747,9 +31814,8 @@
     >
 
     param[journal_issn] = 0032-0935
-    attr[where] = content3a
 
-    au < testing ; 1925-1926 ; Planta Volume 1 ; 1 >
+    au < ready ; 1925-1926 ; Planta Volume 1 ; 1 >
     au < ready ; 1926 ; Planta Volume 2 ; 2 >
     au < ready ; 1927 ; Planta Volume 3 ; 3 >
     au < ready ; 1927 ; Planta Volume 4 ; 4 >
@@ -31768,7 +31834,7 @@
     au < ready ; 1932 ; Planta Volume 17 ; 17 >
     au < ready ; 1932-1933 ; Planta Volume 18 ; 18 >
     au < ready ; 1933 ; Planta Volume 19 ; 19 >
-    au < testing ; 1933 ; Planta Volume 20 ; 20 >
+    au < ready ; 1933 ; Planta Volume 20 ; 20 >
     au < ready ; 1933-1934 ; Planta Volume 21 ; 21 >
     au < ready ; 1934 ; Planta Volume 22 ; 22 >
     au < ready ; 1934-1935 ; Planta Volume 23 ; 23 >
@@ -31786,10 +31852,10 @@
     au < ready ; 1947-1948 ; Planta Volume 35 ; 35 >
     au < ready ; 1948-1949 ; Planta Volume 36 ; 36 >
     au < ready ; 1949-1950 ; Planta Volume 37 ; 37 >
-    au < testing ; 1950-1951 ; Planta Volume 38 ; 38 >
+    au < ready ; 1950-1951 ; Planta Volume 38 ; 38 >
     au < ready ; 1951 ; Planta Volume 39 ; 39 >
-    au < testing ; 1951-1952 ; Planta Volume 40 ; 40 >
-    au < testing ; 1952-1953 ; Planta Volume 41 ; 41 >
+    au < ready ; 1951-1952 ; Planta Volume 40 ; 40 >
+    au < ready ; 1952-1953 ; Planta Volume 41 ; 41 >
     au < ready ; 1953 ; Planta Volume 42 ; 42 >
     au < ready ; 1953-1954 ; Planta Volume 43 ; 43 >
     au < ready ; 1954 ; Planta Volume 44 ; 44 >
@@ -31801,7 +31867,7 @@
     au < ready ; 1957-1958 ; Planta Volume 50 ; 50 >
     au < ready ; 1958 ; Planta Volume 51 ; 51 >
     au < ready ; 1958-1959 ; Planta Volume 52 ; 52 >
-    au < testing ; 1959 ; Planta Volume 53 ; 53 >
+    au < ready ; 1959 ; Planta Volume 53 ; 53 >
     au < ready ; 1959-1960 ; Planta Volume 54 ; 54 >
     au < ready ; 1960 ; Planta Volume 55 ; 55 >
     au < ready ; 1960-1961 ; Planta Volume 56 ; 56 >
@@ -31822,7 +31888,7 @@
     au < ready ; 1966 ; Planta Volume 71 ; 71 >
     au < ready ; 1966-1967 ; Planta Volume 72 ; 72 >
     au < ready ; 1967 ; Planta Volume 73 ; 73 >
-    au < testing ; 1967 ; Planta Volume 74 ; 74 >
+    au < ready ; 1967 ; Planta Volume 74 ; 74 >
     au < ready ; 1967 ; Planta Volume 75 ; 75 >
     au < ready ; 1967 ; Planta Volume 76 ; 76 >
     au < ready ; 1967 ; Planta Volume 77 ; 77 >
@@ -37133,7 +37199,6 @@ Commet [pv] = now offline
     >
 
     param[journal_issn] = 0930-2794
-    attr[where] = content1a
 
     au < ready ; 1986-1987 ; Surgical Endoscopy Volume 1 ; 1 >
     au < ready ; 1988 ; Surgical Endoscopy Volume 2 ; 2 >
@@ -37149,17 +37214,17 @@ Commet [pv] = now offline
     au < ready ; 1998 ; Surgical Endoscopy Volume 12 ; 12 >
     au < ready ; 1999 ; Surgical Endoscopy Volume 13 ; 13 >
     au < ready ; 2000 ; Surgical Endoscopy Volume 14 ; 14 >
-    au < testing ; 2001 ; Surgical Endoscopy Volume 15 ; 15 >
+    au < ready ; 2001 ; Surgical Endoscopy Volume 15 ; 15 >
     au < ready ; 2002 ; Surgical Endoscopy Volume 16 ; 16 >
     au < ready ; 2003 ; Surgical Endoscopy Volume 17 ; 17 >
-    au < testing ; 2004 ; Surgical Endoscopy Volume 18 ; 18 >
+    au < ready ; 2004 ; Surgical Endoscopy Volume 18 ; 18 >
     au < ready ; 2005 ; Surgical Endoscopy Volume 19 ; 19 >
-    au < testing ; 2006 ; Surgical Endoscopy Volume 20 ; 20 >
+    au < ready ; 2006 ; Surgical Endoscopy Volume 20 ; 20 >
     au < ready ; 2007 ; Surgical Endoscopy Volume 21 ; 21 >
-    au < testing ; 2008 ; Surgical Endoscopy Volume 22 ; 22 >
-    au < testing ; 2009 ; Surgical Endoscopy Volume 23 ; 23 >
-    au < testing ; 2010 ; Surgical Endoscopy Volume 24 ; 24 >
-    au < testing ; 2011 ; Surgical Endoscopy Volume 25 ; 25 >
+    au < ready ; 2008 ; Surgical Endoscopy Volume 22 ; 22 >
+    au < ready ; 2009 ; Surgical Endoscopy Volume 23 ; 23 >
+    au < ready ; 2010 ; Surgical Endoscopy Volume 24 ; 24 >
+    au < ready ; 2011 ; Surgical Endoscopy Volume 25 ; 25 >
 
   }
 
@@ -37581,14 +37646,14 @@ Commet [pv] = now offline
     >
 
     param[journal_issn] = 0040-5752
-    attr[where] = content3b
+    attr[where] = content5a
 
     au < ready ; 1929 ; TAG Theoretical and Applied Genetics Volume 1 ; 1 >
     au < ready ; 1930 ; TAG Theoretical and Applied Genetics Volume 2 ; 2 >
-    au < testing ; 1931 ; TAG Theoretical and Applied Genetics Volume 3 ; 3 >
+    au < ready ; 1931 ; TAG Theoretical and Applied Genetics Volume 3 ; 3 >
     au < ready ; 1932 ; TAG Theoretical and Applied Genetics Volume 4 ; 4 >
     au < ready ; 1933 ; TAG Theoretical and Applied Genetics Volume 5 ; 5 >
-    au < testing ; 1934 ; TAG Theoretical and Applied Genetics Volume 6 ; 6 >
+    au < ready ; 1934 ; TAG Theoretical and Applied Genetics Volume 6 ; 6 >
     au < ready ; 1935 ; TAG Theoretical and Applied Genetics Volume 7 ; 7 >
     au < ready ; 1936 ; TAG Theoretical and Applied Genetics Volume 8 ; 8 >
     au < ready ; 1937 ; TAG Theoretical and Applied Genetics Volume 9 ; 9 >
@@ -37596,18 +37661,18 @@ Commet [pv] = now offline
     au < ready ; 1939 ; TAG Theoretical and Applied Genetics Volume 11 ; 11 >
     au < testing ; 1940 ; TAG Theoretical and Applied Genetics Volume 12 ; 12 >
     au < ready ; 1941 ; TAG Theoretical and Applied Genetics Volume 13 ; 13 >
-    au < testing ; 1942 ; TAG Theoretical and Applied Genetics Volume 14 ; 14 >
+    au < ready ; 1942 ; TAG Theoretical and Applied Genetics Volume 14 ; 14 >
     au < ready ; 1943 ; TAG Theoretical and Applied Genetics Volume 15 ; 15 >
     au < ready ; 1944 ; TAG Theoretical and Applied Genetics Volume 16 ; 16 >
     au < ready ; 1946-1947 ; TAG Theoretical and Applied Genetics Volume 17 ; 17 >
     au < doesNotExist ; 1947-1948 ; TAG Theoretical and Applied Genetics Volume 18 ; 18 >
-    au < testing ; 1948-1949 ; TAG Theoretical and Applied Genetics Volume 19 ; 19 >
+    au < ready ; 1948-1949 ; TAG Theoretical and Applied Genetics Volume 19 ; 19 >
     au < ready ; 1950 ; TAG Theoretical and Applied Genetics Volume 20 ; 20 >
     au < ready ; 1951 ; TAG Theoretical and Applied Genetics Volume 21 ; 21 >
     au < testing ; 1952 ; TAG Theoretical and Applied Genetics Volume 22 ; 22 >
     au < ready ; 1953 ; TAG Theoretical and Applied Genetics Volume 23 ; 23 >
     au < testing ; 1954 ; TAG Theoretical and Applied Genetics Volume 24 ; 24 >
-    au < testing ; 1955 ; TAG Theoretical and Applied Genetics Volume 25 ; 25 >
+    au < ready ; 1955 ; TAG Theoretical and Applied Genetics Volume 25 ; 25 >
     au < ready ; 1956 ; TAG Theoretical and Applied Genetics Volume 26 ; 26 >
     au < testing ; 1957 ; TAG Theoretical and Applied Genetics Volume 27 ; 27 >
     au < ready ; 1958 ; TAG Theoretical and Applied Genetics Volume 28 ; 28 >
@@ -37623,7 +37688,7 @@ Commet [pv] = now offline
     au < ready ; 1968 ; TAG Theoretical and Applied Genetics Volume 38 ; 38 >
     au < ready ; 1969 ; TAG Theoretical and Applied Genetics Volume 39 ; 39 >
     au < ready ; 1970 ; TAG Theoretical and Applied Genetics Volume 40 ; 40 >
-    au < testing ; 1971 ; TAG Theoretical and Applied Genetics Volume 41 ; 41 >
+    au < ready ; 1971 ; TAG Theoretical and Applied Genetics Volume 41 ; 41 >
     au < ready ; 1972 ; TAG Theoretical and Applied Genetics Volume 42 ; 42 >
     au < ready ; 1973 ; TAG Theoretical and Applied Genetics Volume 43 ; 43 >
     au < ready ; 1974 ; TAG Theoretical and Applied Genetics Volume 44 ; 44 >
@@ -37631,7 +37696,7 @@ Commet [pv] = now offline
     au < ready ; 1975 ; TAG Theoretical and Applied Genetics Volume 46 ; 46 >
     au < ready ; 1976 ; TAG Theoretical and Applied Genetics Volume 47 ; 47 >
     au < ready ; 1976 ; TAG Theoretical and Applied Genetics Volume 48 ; 48 >
-    au < testing ; 1977 ; TAG Theoretical and Applied Genetics Volume 49 ; 49 >
+    au < ready ; 1977 ; TAG Theoretical and Applied Genetics Volume 49 ; 49 >
     au < ready ; 1977 ; TAG Theoretical and Applied Genetics Volume 50 ; 50 >
     au < ready ; 1977-1978 ; TAG Theoretical and Applied Genetics Volume 51 ; 51 >
     au < ready ; 1978 ; TAG Theoretical and Applied Genetics Volume 52 ; 52 >
