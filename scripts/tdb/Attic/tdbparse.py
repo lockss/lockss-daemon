@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbparse.py,v 1.7 2011-05-16 22:01:52 tlipkis Exp $
+# $Id: tdbparse.py,v 1.8 2011-05-18 16:34:55 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -516,11 +516,18 @@ class TdbParser(object):
         |
             au
         ;'''
-        assert self.__token[0].type() in [TdbparseToken.AU, TdbparseToken.CURLY_OPEN]
         if self.__token[0].type() == TdbparseToken.AU:
             self.__au()
-        else: # self.__token[0].type() == TdbparseToken.CURLY_OPEN
+        elif self.__token[0].type() == TdbparseToken.CURLY_OPEN:
             self.__au_container()
+        else:
+            assert False # This code is unreachable in the current grammar.
+            raise TdbparseSyntaxError(
+                'expected %s or %s but got %s' % 
+                (TdbparseLiteral.AU, TdbparseLiteral.CURLY_OPEN,
+                 self.__token[0].translate()), 
+                self.__file_name, self.__token[0].line(),
+                self.__token[0].col())
 
     def __au_container(self):
         '''au_container :
@@ -549,8 +556,16 @@ class TdbParser(object):
             self.__simple_assignment()
             key, val = self.__stack.pop()
             self.__current_au[-1].set(key, val)
-        else: # self.__token[0].type() == TdbparseToken.IMPLICIT
+        elif self.__token[0].type() == TdbparseToken.IMPLICIT:
             self.__implicit()
+        else:
+            assert False # This code is unreachable in the current grammar.
+            raise TdbparseSyntaxError(
+                'expected %s or %s but got %s' % 
+                (TdbparseLiteral.IDENTIFIER, TdbparseLiteral.IMPLICIT,
+                 self.__token[0].translate()), 
+                self.__file_name, self.__token[0].line(),
+                self.__token[0].col())
 
     def __identifier(self):
         '''identifier :
