@@ -1,10 +1,10 @@
 /*
- * $Id: TestSimpleXmlMetadataExtractor.java,v 1.5 2011-05-09 00:31:56 tlipkis Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.1 2011-05-18 04:04:22 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,19 +35,42 @@ package org.lockss.extractor;
 import java.io.*;
 import java.util.*;
 import junit.framework.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 
-public class TestSimpleXmlMetadataExtractor
-    extends FileMetadataExtractorTestCase {
+public abstract class TestXmlMetadataExtractor
+  extends FileMetadataExtractorTestCase {
+  static Logger log = Logger.getLogger("TestXmlMetadataExtractor");
 
-  public TestSimpleXmlMetadataExtractor() {
+  public static class TestSax extends TestXmlMetadataExtractor {
+    public FileMetadataExtractorFactory getFactory() {
+      return new FileMetadataExtractorFactory() {
+	public FileMetadataExtractor
+	  createFileMetadataExtractor(MetadataTarget target, String mimeType)
+	    throws PluginException {
+          return new SaxMetadataExtractor(Arrays.asList(TEST_TAGS));
+        }};
+    }
   }
 
-  public FileMetadataExtractorFactory getFactory() {
-    return new MyFileMetadataExtractorFactory();
+  public static class TestSimple extends TestXmlMetadataExtractor {
+    public FileMetadataExtractorFactory getFactory() {
+      return new FileMetadataExtractorFactory() {
+	public FileMetadataExtractor
+	  createFileMetadataExtractor(MetadataTarget target, String mimeType)
+	    throws PluginException {
+          return new SimpleXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
+        }};
+    }
+  }
+
+  public static Test suite() {
+    return variantSuites(new Class[] {
+	TestSax.class,
+	TestSimple.class
+      });
   }
 
   public String getMimeType() {
@@ -57,8 +80,8 @@ public class TestSimpleXmlMetadataExtractor
   public void testSingleTag() throws Exception {
     assertMdEquals("FirstTag", "FirstValue",
 		   "<FirstTag>FirstValue</FirstTag>");
-    assertMdEquals("firsttag", "FirstValue",
-		   "<FirstTag>FirstValue</FirstTag>");
+    assertMdEquals("SecondTag", "SecondValue",
+		   "<SecondTag>SecondValue</SecondTag>");
   }
 
   public void testSingleTagNoContent() throws Exception {
@@ -73,23 +96,29 @@ public class TestSimpleXmlMetadataExtractor
   public void testSingleTagMalformed() throws Exception {
     assertMdEmpty("<FirstTag>FirstValue");
     assertMdEmpty("<FirstTag FirstValue</FirstTag>");
-    assertMdEmpty("<FirstTag >FirstValue</FirstTag>");
+    // SAX parses this although there is the trailing space
+    // in the opening tag:
+    // assertMdEmpty("<FirstTag >FirstValue</FirstTag>");
     assertMdEmpty("<FirstTag>FirstValue</FirstTag");
-    assertMdEmpty("<FirstTag>FirstValue</FirstTag >");
+    // SAX parses this although there is the trailing space
+    // in the closing tag:
+    // assertMdEmpty("<FirstTag>FirstValue</FirstTag >");
   }
 
   public void testSingleTagIgnoreCase() throws Exception {
-    assertMdEquals("firsttag", "FirstValue",
+    assertMdEquals("fIRSTtAG", "FirstValue",
 		   "<fIRSTtAG>FirstValue</fIRSTtAG>");
   }
 
   public void testMultipleTag() throws Exception {
     String text =
-	"<FirstTag>FirstValue</FirstTag>" +
-	"<SecondTag>SecondValue</SecondTag>" +
-	"<ThirdTag>ThirdValue</ThirdTag>" +
-	"<FourthTag>FourthValue</FourthTag>" +
-      "<FifthTag>FifthValue</FifthTag>";
+      "<root>" +
+      "<FirstTag>FirstValue</FirstTag>" +
+      "<SecondTag>SecondValue</SecondTag>" +
+      "<ThirdTag>ThirdValue</ThirdTag>" +
+      "<FourthTag>FourthValue</FourthTag>" +
+      "<FifthTag>FifthValue</FifthTag>" +
+      "</root>";
     assertMdEquals(ListUtil.list("firsttag", "FirstValue",
 				 "secondtag", "SecondValue",
 				 "thirdtag", "ThirdValue",
@@ -100,6 +129,7 @@ public class TestSimpleXmlMetadataExtractor
 
   public void testMultipleTagWithNoise() throws Exception {
     String text =
+      "<root>" +
       "<OtherTag>OtherValue</OtherTag>" +
       "<SecondTag>SecondValue</SecondTag>" +
       "<OtherTag>OtherValue</OtherTag>" +
@@ -112,8 +142,9 @@ public class TestSimpleXmlMetadataExtractor
       "<OtherTag>OtherValue</OtherTag>" +
       "<FifthTag>FifthValue</FifthTag>" +
       "<OtherTag>OtherValue</OtherTag>" +
-      "<ThirdTag>ThirdValue</ThirdTag>";
-      
+      "<ThirdTag>ThirdValue</ThirdTag>" +
+      "</root>";
+
     assertMdEquals(ListUtil.list("firsttag", "FirstValue",
 				 "secondtag", "SecondValue",
 				 "thirdtag", "ThirdValue",
@@ -122,11 +153,13 @@ public class TestSimpleXmlMetadataExtractor
 		   text);
   }
 
-  public void testHtmlDecoding() throws Exception {
+  public void testXmlDecoding() throws Exception {
     String text =
+      "<root>" +
       "<FirstTag>&#34;Quoted&#34; Title</FirstTag>" +
       "<SecondTag>foo&#x22;bar&#x22; </SecondTag>" +
-      "<ThirdTag>l&lt;g&gt;a&amp;q&quot;a&apos;z</ThirdTag>";
+      "<ThirdTag>l&lt;g&gt;a&amp;q&quot;a&apos;z</ThirdTag>" +
+      "</root>";
 
     assertMdEquals(ListUtil.list("FirstTag", "\"Quoted\" Title",
 				 "SecondTag", "foo\"bar\" ",
@@ -137,6 +170,7 @@ public class TestSimpleXmlMetadataExtractor
 
   static final String[] TEST_TAGS = {
     "FirstTag",
+    "FirstTag",
     "SecondTag",
     "ThirdTag",
     "FourthTag",
@@ -144,13 +178,13 @@ public class TestSimpleXmlMetadataExtractor
   };
 
   private class MyFileMetadataExtractorFactory
-      implements FileMetadataExtractorFactory {
+    implements FileMetadataExtractorFactory {
     MyFileMetadataExtractorFactory() {
     }
-    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							     String mimeType)
+    public FileMetadataExtractor
+      createFileMetadataExtractor(MetadataTarget target, String mimeType)
         throws PluginException {
-      return new SimpleXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
+      return new SaxMetadataExtractor(Arrays.asList(TEST_TAGS));
     }
   }
 }
