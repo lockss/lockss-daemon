@@ -17,21 +17,21 @@
     param[base_url] = http://ar.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1997 ; Acta Radiologica Volume 38 ; 38 >
-    au < manifest ; 1998 ; Acta Radiologica Volume 39 ; 39 >
-    au < manifest ; 1999 ; Acta Radiologica Volume 40 ; 40 >
-    au < manifest ; 2000 ; Acta Radiologica Volume 41 ; 41 >
-    au < manifest ; 2001 ; Acta Radiologica Volume 42 ; 42 >
-    au < manifest ; 2002 ; Acta Radiologica Volume 43 ; 43 >
-    au < manifest ; 2003 ; Acta Radiologica Volume 44 ; 44 >
-    au < manifest ; 2004 ; Acta Radiologica Volume 45 ; 45 >
-    au < manifest ; 2005 ; Acta Radiologica Volume 46 ; 46 >
-    au < manifest ; 2006 ; Acta Radiologica Volume 47 ; 47 >
-    au < manifest ; 2007 ; Acta Radiologica Volume 48 ; 48 >
-    au < manifest ; 2008 ; Acta Radiologica Volume 49 ; 49 >
-    au < manifest ; 2009 ; Acta Radiologica Volume 50 ; 50 >
-    au < manifest ; 2010 ; Acta Radiologica Volume 51 ; 51 >
-    au < manifest ; 2011 ; Acta Radiologica Volume 52 ; 52 >
+    au < wanted ; 1997 ; Acta Radiologica Volume 38 ; 38 >
+    au < wanted ; 1998 ; Acta Radiologica Volume 39 ; 39 >
+    au < wanted ; 1999 ; Acta Radiologica Volume 40 ; 40 >
+    au < wanted ; 2000 ; Acta Radiologica Volume 41 ; 41 >
+    au < wanted ; 2001 ; Acta Radiologica Volume 42 ; 42 >
+    au < wanted ; 2002 ; Acta Radiologica Volume 43 ; 43 >
+    au < wanted ; 2003 ; Acta Radiologica Volume 44 ; 44 >
+    au < wanted ; 2004 ; Acta Radiologica Volume 45 ; 45 >
+    au < wanted ; 2005 ; Acta Radiologica Volume 46 ; 46 >
+    au < wanted ; 2006 ; Acta Radiologica Volume 47 ; 47 >
+    au < wanted ; 2007 ; Acta Radiologica Volume 48 ; 48 >
+    au < wanted ; 2008 ; Acta Radiologica Volume 49 ; 49 >
+    au < wanted ; 2009 ; Acta Radiologica Volume 50 ; 50 >
+    au < wanted ; 2010 ; Acta Radiologica Volume 51 ; 51 >
+    au < wanted ; 2011 ; Acta Radiologica Volume 52 ; 52 >
 
   }    
         
@@ -87,7 +87,7 @@
       au < released ; 2008 ; Clinical Ethics Volume 3 ; 3 >
       au < released ; 2009 ; Clinical Ethics Volume 4 ; 4 >
       au < released ; 2010 ; Clinical Ethics Volume 5 ; 5 >
-      au < manifest ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+      au < wanted ; 2011 ; Clinical Ethics Volume 6 ; 6 >
 
     }
 
@@ -116,9 +116,9 @@
       au < ready ; Clinical Risk Volume 12 ; 12 >
       au < ready ; Clinical Risk Volume 13 ; 13 >
       au < ready ; Clinical Risk Volume 14 ; 14 >
-      au < manifest ; Clinical Risk Volume 15 ; 15 >
-      au < manifest ; Clinical Risk Volume 16 ; 16 >
-      au < manifest ; Clinical Risk Volume 17 ; 17 >
+      au < wanted ; Clinical Risk Volume 15 ; 15 >
+      au < wanted ; Clinical Risk Volume 16 ; 16 >
+      au < wanted ; Clinical Risk Volume 17 ; 17 >
 
     }
 
@@ -181,9 +181,9 @@
       au < exists ; 2006 ; Hand Therapy Volume 11 ; 11 >
       au < exists ; 2007 ; Hand Therapy Volume 12 ; 12 >
       au < exists ; 2008 ; Hand Therapy Volume 13 ; 13 >
-      au < manifest ; 2009 ; Hand Therapy Volume 14 ; 14 >
-      au < manifest ; 2010 ; Hand Therapy Volume 15 ; 15 >
-      au < manifest ; 2011 ; Hand Therapy Volume 16 ; 16 >
+      au < wanted ; 2009 ; Hand Therapy Volume 14 ; 14 >
+      au < wanted ; 2010 ; Hand Therapy Volume 15 ; 15 >
+      au < wanted ; 2011 ; Hand Therapy Volume 16 ; 16 >
 
     }
 
@@ -257,8 +257,8 @@
       au < exists ; He@lth Information on the Internet Volume 62 ; 62 >
       au < exists ; He@lth Information on the Internet Volume 63 ; 63 >
       au < exists ; He@lth Information on the Internet Volume 64 ; 64 >
-      au < manifest ; He@lth Information on the Internet Volume 65 ; 65 >
-      au < manifest ; He@lth Information on the Internet Volume 66 ; 66 >
+      au < wanted ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < wanted ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
@@ -279,17 +279,17 @@
       param[base_url] = http://hsmr.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001 ; Health Services Management Research Volume 14 ; 14 >
-      au < manifest ; 2002 ; Health Services Management Research Volume 15 ; 15 >
-      au < manifest ; 2003 ; Health Services Management Research Volume 16 ; 16 >
-      au < manifest ; 2004 ; Health Services Management Research Volume 17 ; 17 >
-      au < manifest ; 2005 ; Health Services Management Research Volume 18 ; 18 >
-      au < manifest ; 2006 ; Health Services Management Research Volume 19 ; 19 >
-      au < manifest ; 2007 ; Health Services Management Research Volume 20 ; 20 >
-      au < manifest ; 2008 ; Health Services Management Research Volume 21 ; 21 >
-      au < manifest ; 2009 ; Health Services Management Research Volume 22 ; 22 >
-      au < manifest ; 2010 ; Health Services Management Research Volume 23 ; 23 >
-      au < manifest ; 2011 ; Health Services Management Research Volume 24 ; 24 >
+      au < wanted ; 2001 ; Health Services Management Research Volume 14 ; 14 >
+      au < wanted ; 2002 ; Health Services Management Research Volume 15 ; 15 >
+      au < wanted ; 2003 ; Health Services Management Research Volume 16 ; 16 >
+      au < wanted ; 2004 ; Health Services Management Research Volume 17 ; 17 >
+      au < wanted ; 2005 ; Health Services Management Research Volume 18 ; 18 >
+      au < wanted ; 2006 ; Health Services Management Research Volume 19 ; 19 >
+      au < wanted ; 2007 ; Health Services Management Research Volume 20 ; 20 >
+      au < wanted ; 2008 ; Health Services Management Research Volume 21 ; 21 >
+      au < wanted ; 2009 ; Health Services Management Research Volume 22 ; 22 >
+      au < wanted ; 2010 ; Health Services Management Research Volume 23 ; 23 >
+      au < wanted ; 2011 ; Health Services Management Research Volume 24 ; 24 >
 
     }
 
@@ -311,12 +311,12 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < wanted ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
-      au < manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
-      au < manifest ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
-      au < manifest ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
-      au < manifest ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
-      au < manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
-      au < manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+      au < wanted ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+      au < wanted ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+      au < wanted ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+      au < wanted ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+      au < wanted ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+      au < wanted ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
 
     }
 
@@ -373,17 +373,17 @@
       param[base_url] = http://jhsrp.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-      au < manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-      au < manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-      au < manifest ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-      au < manifest ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-      au < manifest ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-      au < manifest ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-      au < manifest ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-      au < manifest ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-      au < manifest ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-      au < manifest ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+      au < wanted ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+      au < wanted ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+      au < wanted ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+      au < wanted ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+      au < wanted ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+      au < wanted ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+      au < wanted ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+      au < wanted ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+      au < wanted ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+      au < wanted ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+      au < wanted ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
 
     }
 
@@ -404,13 +404,13 @@
       param[base_url] = http://jmb.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
-      au < manifest ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
-      au < manifest ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
-      au < manifest ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
-      au < manifest ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
-      au < manifest ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
-      au < manifest ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+      au < wanted ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+      au < wanted ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+      au < wanted ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+      au < wanted ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+      au < wanted ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+      au < wanted ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+      au < wanted ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
 
     }
 
@@ -431,20 +431,20 @@
       param[base_url] = http://jms.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
-      au < manifest ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
-      au < manifest ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
-      au < manifest ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
-      au < manifest ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
-      au < manifest ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
-      au < manifest ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
-      au < manifest ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
-      au < manifest ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
-      au < manifest ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
-      au < manifest ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
-      au < manifest ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
-      au < manifest ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
-      au < manifest ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+      au < wanted ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+      au < wanted ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+      au < wanted ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+      au < wanted ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+      au < wanted ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+      au < wanted ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+      au < wanted ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+      au < wanted ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+      au < wanted ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+      au < wanted ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+      au < wanted ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+      au < wanted ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+      au < wanted ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+      au < wanted ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
 
     }
 
@@ -465,22 +465,22 @@
       param[base_url] = http://jtt.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-      au < manifest ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-      au < manifest ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-      au < manifest ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-      au < manifest ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-      au < manifest ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-      au < manifest ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-      au < manifest ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-      au < manifest ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-      au < manifest ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-      au < manifest ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-      au < manifest ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-      au < manifest ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-      au < manifest ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-      au < manifest ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-      au < manifest ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+      au < wanted ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+      au < wanted ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+      au < wanted ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+      au < wanted ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+      au < wanted ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+      au < wanted ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+      au < wanted ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+      au < wanted ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+      au < wanted ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+      au < wanted ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+      au < wanted ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+      au < wanted ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+      au < wanted ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+      au < wanted ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+      au < wanted ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+      au < wanted ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
 
     }
 
@@ -564,8 +564,8 @@
     param[base_url] = http://shortreports.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
-    au < manifest ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+    au < wanted ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+    au < wanted ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
 
   }
 
@@ -676,18 +676,18 @@
       param[base_url] = http://mlj.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-      au < manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-      au < manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-      au < manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-      au < manifest ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-      au < manifest ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-      au < manifest ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-      au < manifest ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-      au < manifest ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-      au < manifest ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-      au < manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-      au < exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+      au < wanted ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+      au < wanted ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+      au < wanted ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+      au < wanted ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+      au < wanted ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+      au < wanted ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+      au < wanted ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+      au < wanted ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+      au < wanted ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+      au < wanted ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+      au < wanted ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+      au < wanted ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
       au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
@@ -791,12 +791,12 @@
     param[base_url] = http://smj.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
-    au < manifest ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
-    au < manifest ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
-    au < manifest ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
-    au < manifest ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
-    au < manifest ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
+    au < wanted ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+    au < wanted ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+    au < wanted ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+    au < wanted ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+    au < wanted ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+    au < wanted ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
 
   }
 
@@ -866,13 +866,13 @@
     param[base_url] = http://vascular.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2005 ; Vascular Volume 13 ; 13 >
-    au < manifest ; 2006 ; Vascular Volume 14 ; 14 >
-    au < manifest ; 2007 ; Vascular Volume 15 ; 15 >
-    au < manifest ; 2008 ; Vascular Volume 16 ; 16 >
-    au < manifest ; 2009 ; Vascular Volume 17 ; 17 >
-    au < manifest ; 2010 ; Vascular Volume 18 ; 18 >
-    au < manifest ; 2011 ; Vascular Volume 19 ; 19 >
+    au < wanted ; 2005 ; Vascular Volume 13 ; 13 >
+    au < wanted ; 2006 ; Vascular Volume 14 ; 14 >
+    au < wanted ; 2007 ; Vascular Volume 15 ; 15 >
+    au < wanted ; 2008 ; Vascular Volume 16 ; 16 >
+    au < wanted ; 2009 ; Vascular Volume 17 ; 17 >
+    au < wanted ; 2010 ; Vascular Volume 18 ; 18 >
+    au < wanted ; 2011 ; Vascular Volume 19 ; 19 >
 
   }
 
