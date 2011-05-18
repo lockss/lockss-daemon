@@ -1,10 +1,10 @@
 /*
- * $Id: TestPrintfConverter.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestPrintfConverter.java,v 1.2 2011-05-18 04:11:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import org.lockss.config.Configuration;
 import static org.lockss.daemon.ConfigParamDescr.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
 public class TestPrintfConverter extends LockssTestCase {
@@ -77,15 +78,20 @@ public class TestPrintfConverter extends LockssTestCase {
 
   PrintfConverter.MatchPattern
     convertVariableRegexpString(String printfString) {
-    return new PrintfConverter.RegexpConverter(mau).getMatchPattern(printfString);
+    return PrintfConverter.newRegexpConverter(mau, RegexpContext.String).getMatchPattern(printfString);
+  }
+
+  PrintfConverter.MatchPattern
+    convertVariableUrlRegexpString(String printfString) {
+    return PrintfConverter.newRegexpConverter(mau, RegexpContext.Url).getMatchPattern(printfString);
   }
 
   List<String> convertUrlList(String printfString) {
-    return new PrintfConverter.UrlListConverter(mau).getUrlList(printfString);
+    return PrintfConverter.newUrlListConverter(mau).getUrlList(printfString);
   }
 
   String convertNameString(String printfString) {
-    return new PrintfConverter.NameConverter(mau).getName(printfString);
+    return PrintfConverter.newNameConverter(mau).getName(printfString);
   }
 
   // copied from BasePlugin.  printf processing retrieves param values from
@@ -241,4 +247,50 @@ public class TestPrintfConverter extends LockssTestCase {
     assertEmpty(mp.getMatchArgs());
     assertEmpty(mp.getMatchArgDescrs());
   }
+
+  public void testConvertRegexpWithBlanks() throws Exception {
+    Configuration c = conf1();
+    String base = BASE + "embedded space";
+    c.put("base_url", base);
+    setupAu(c);
+    Configuration conf =
+      ConfigurationUtil.fromArgs("base_url", base,
+				 "volume", "123"); // 
+
+    String s1 = "http\\:\\/\\/foo\\.bar\\:8080\\/embedded\\ space";
+    PrintfConverter.MatchPattern mp;
+
+    mp = convertVariableRegexpString("\"%s/blah\", base_url");
+    assertEquals(s1+"/blah", mp.getRegexp());
+    assertMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded space/blah/A");
+    assertNotMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded+space/blah/B");
+    assertNotMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded%20space/blah/C");
+  }
+
+  public void testConvertUrlRegexpWithBlanks() throws Exception {
+    Configuration c = conf1();
+    String base = BASE + "embedded space";
+    c.put("base_url", base);
+    setupAu(c);
+    Configuration conf =
+      ConfigurationUtil.fromArgs("base_url", base,
+				 "volume", "123"); // 
+
+    String s1 = "http\\:\\/\\/foo\\.bar\\:8080\\/embedded( |\\+|%20)space";
+    PrintfConverter.MatchPattern mp;
+
+    mp = convertVariableUrlRegexpString("\"%s/blah\", base_url");
+    assertEquals(s1+"/blah", mp.getRegexp());
+    assertMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded space/blah/A");
+    assertMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded+space/blah/B");
+    assertMatchesRE(mp.getRegexp(),
+		    "http://foo.bar:8080/embedded%20space/blah/C");
+  }
+
+
 }

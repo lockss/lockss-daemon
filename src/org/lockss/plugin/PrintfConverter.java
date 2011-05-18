@@ -1,9 +1,9 @@
 /*
- * $Id: PrintfConverter.java,v 1.2 2011-01-13 19:52:46 pgust Exp $
+ * $Id: PrintfConverter.java,v 1.3 2011-05-18 04:11:26 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.util.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.Constants.RegexpContext;
 
 public abstract class PrintfConverter {
   static Logger log = Logger.getLogger("PrintfConverter");
@@ -55,11 +56,11 @@ public abstract class PrintfConverter {
   ArrayList substitute_args;
   boolean missingArgs = false;
 
-  public PrintfConverter(ArchivalUnit au) {
+  private PrintfConverter(ArchivalUnit au) {
     this(au.getPlugin(), au.getProperties());
   }
 
-  public PrintfConverter(Plugin plugin, TypedEntryMap paramMap) {
+  private PrintfConverter(Plugin plugin, TypedEntryMap paramMap) {
     this.plugin = plugin;
     this.paramMap = paramMap;
   }
@@ -113,16 +114,39 @@ public abstract class PrintfConverter {
   void interpNullArg(String key, Object val, ConfigParamDescr descr) {
   }
 
+  public static RegexpConverter newRegexpConverter(ArchivalUnit au,
+						   RegexpContext context) {
+    return newRegexpConverter(au.getPlugin(), au.getProperties(), context);
+  }
+
+  public static RegexpConverter newRegexpConverter(Plugin plugin,
+						   TypedEntryMap paramMap,
+						   RegexpContext context) {
+    switch (context) {
+    case Url:
+      return new UrlRegexpConverter(plugin, paramMap);
+    case String:
+    default:
+      return new RegexpConverter(plugin, paramMap);
+    }
+  }
+
   public static class RegexpConverter extends PrintfConverter {
     ArrayList matchArgs = new ArrayList();
     ArrayList matchArgDescrs = new ArrayList();
 
-    public RegexpConverter(ArchivalUnit au) {
+    private RegexpConverter(ArchivalUnit au) {
       super(au);
     }
 
-    public RegexpConverter(Plugin plugin, TypedEntryMap paramMap) {
+    private RegexpConverter(Plugin plugin, TypedEntryMap paramMap) {
       super(plugin, paramMap);
+    }
+
+    // Apply regexp quoting (escape meta chars), then 
+
+    String quoteRegexpArg(String val) {
+      return Perl5Compiler.quotemeta(val);
     }
 
     void interpSetArg(String key, Object val, ConfigParamDescr descr) {
@@ -130,7 +154,7 @@ public abstract class PrintfConverter {
       List<String> vec = (List<String>)val;
       List tmplst = new ArrayList(vec.size());
       for (String ele : vec) {
-	tmplst.add(Perl5Compiler.quotemeta(ele));
+	tmplst.add(quoteRegexpArg(ele));
       }
       substitute_args.add(StringUtil.separatedString(tmplst, "(?:", "|", ")"));
     }
@@ -149,7 +173,7 @@ public abstract class PrintfConverter {
 
     void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
       if (val instanceof String) {
-	val = Perl5Compiler.quotemeta((String)val);
+	val = quoteRegexpArg((String)val);
       }
       substitute_args.add(val);
     }
@@ -173,14 +197,57 @@ public abstract class PrintfConverter {
 
   }
 
-  public static class UrlListConverter extends PrintfConverter {
-    boolean haveSets = false;
+  public static class UrlRegexpConverter extends RegexpConverter {
 
-    public UrlListConverter(ArchivalUnit au) {
+    private UrlRegexpConverter(ArchivalUnit au) {
       super(au);
     }
 
-    public UrlListConverter(Plugin plugin, TypedEntryMap paramMap) {
+    private UrlRegexpConverter(Plugin plugin, TypedEntryMap paramMap) {
+      super(plugin, paramMap);
+    }
+
+    // Param values substituted into regexps used to match URLs may
+    // contain chars that should match various possible URL-encodings.
+    // E.g., <space> may be represented in URLs as <space>, "+" (not
+    // strictly legal but widespread) or "%20", so we should match any of
+    // those.  Other cases are ambiguous (e.g, if there's a % in the URL)
+    // so for now we just handle <space>.
+
+    static final String URL_ESCAPED_SPACE_REGEX = "( |\\+|%20)";
+
+    String quoteRegexpArg(String val) {
+      val = super.quoteRegexpArg(val);
+      // quotemeta (unnecessarily) replaces <space> with
+      // <backslash><space>, but don't rely on that.
+      if (val.indexOf("\\ ") >= 0) {
+	val = StringUtil.replaceString(val, "\\ ", URL_ESCAPED_SPACE_REGEX);
+      } else {
+	// if no "\ ", either quotemeta didn't escape <space> or there
+	// are none
+	val = StringUtil.replaceString(val, " ", URL_ESCAPED_SPACE_REGEX);
+      }
+      return val;
+    }
+  }
+
+  public static UrlListConverter newUrlListConverter(ArchivalUnit au) {
+    return new UrlListConverter(au);
+  }
+
+  public static UrlListConverter newUrlListConverter(Plugin plugin,
+						     TypedEntryMap paramMap) {
+    return new UrlListConverter(plugin, paramMap);
+  }
+
+  public static class UrlListConverter extends PrintfConverter {
+    boolean haveSets = false;
+
+    private UrlListConverter(ArchivalUnit au) {
+      super(au);
+    }
+
+    private UrlListConverter(Plugin plugin, TypedEntryMap paramMap) {
       super(plugin, paramMap);
     }
 
@@ -272,13 +339,22 @@ public abstract class PrintfConverter {
     }
   }
 
+  public static NameConverter newNameConverter(ArchivalUnit au) {
+    return new NameConverter(au);
+  }
+
+  public static NameConverter newNameConverter(Plugin plugin,
+					       TypedEntryMap paramMap) {
+    return new NameConverter(plugin, paramMap);
+  }
+
   public static class NameConverter extends PrintfConverter {
 
-    public NameConverter(ArchivalUnit au) {
+    private NameConverter(ArchivalUnit au) {
       super(au);
     }
 
-    public NameConverter(Plugin plugin, TypedEntryMap paramMap) {
+    private NameConverter(Plugin plugin, TypedEntryMap paramMap) {
       super(plugin, paramMap);
     }
 

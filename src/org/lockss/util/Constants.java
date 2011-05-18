@@ -1,10 +1,10 @@
 /*
- * $Id: Constants.java,v 1.21 2010-07-21 06:13:37 tlipkis Exp $
+ * $Id: Constants.java,v 1.22 2011-05-18 04:11:26 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -145,5 +145,17 @@ public interface Constants {
   /** Exit code - critical keystore missing or not loadable (wrong
    * password, missing password file) */
   public static int EXIT_CODE_KEYSTORE_MISSING = 106;
+
+  /** Regexp contexts.  Depending on the type of string a regexp will be
+   * used to match against, printf arguments substituted into a pattern
+   * template may need custom escaping.
+   * @see org.lockss.plugin.PrintfConverter
+   */
+  enum RegexpContext {
+    /** Regexp wil be used to match against unencoded strings */
+    String,
+      /** Regexp will be used to match against URL-encoded URLs */
+      Url,
+      };
 
 }
