@@ -19,9 +19,9 @@
 
       param[journal_dir] = american_literary_realism
 
-      au < ready ; American Literary Realism Volume 40 ; 40 >
-      au < ready ; American Literary Realism Volume 41 ; 41 >
-      au < ready ; American Literary Realism Volume 42 ; 42 >
+      au < released ; American Literary Realism Volume 40 ; 40 >
+      au < released ; American Literary Realism Volume 41 ; 41 >
+      au < released ; American Literary Realism Volume 42 ; 42 >
 
     }
 
@@ -49,7 +49,7 @@
 
       param[journal_dir] = black_women_gender_and_families
 
-      au < ready ; Black Women, Gender & Families Volume 3 ; 3 >
+      au < released ; Black Women, Gender & Families Volume 3 ; 3 >
 
     }
 
@@ -63,8 +63,8 @@
 
       param[journal_dir] = dance_research_journal
 
-      au < ready ; Dance Research Journal Volume 40 ; 40 >
-      au < ready ; Dance Research Journal Volume 41 ; 41 >
+      au < released ; Dance Research Journal Volume 40 ; 40 >
+      au < released ; Dance Research Journal Volume 41 ; 41 >
 
     }
 
@@ -78,8 +78,8 @@
 
       param[journal_dir] = feminist_teacher
 
-      au < ready ; Feminist Teacher Volume 18 ; 18 >
-      au < ready ; Feminist Teacher Volume 19 ; 19 >
+      au < released ; Feminist Teacher Volume 18 ; 18 >
+      au < released ; Feminist Teacher Volume 19 ; 19 >
 
     }
 
@@ -93,57 +93,8 @@
 
       param[journal_dir] = journal_of_english_and_germanic_philology
 
-      au < ready ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
-      au < ready ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
-
-    }
-
-    {
-      title <
-        name = Journal of Education Finance ;
-        issn = 0098-9495 ;
-        eissn = 1944-6470 ;
-        issnl = 0098-9495
-      >
-
-      param[journal_dir] = journal_of_education_finance
-
-      au < ready ; Journal of Education Finance Volume 35 ; 35 >
-
-    }
-
-    {
-      title <
-        name = Journal of Film and Video ;
-        issn = 0742-4671 ;
-        eissn = 1934-6018 ;
-        issnl = 0742-4671
-      >
-
-      param[journal_dir] = journal_of_film_and_video
-
-      au < ready ; Journal of Film and Video Volume 60 ; 60 >
-      au < ready ; Journal of Film and Video Volume 61 ; 61 >
-      au < ready ; Journal of Film and Video Volume 62 ; 62 >
-
-    }
-
-    {
-      title <
-        name = Radical Teacher ;
-        issn = 0191-4847 ;
-        eissn = 1941-0832 ;
-        issnl = 0191-4847
-      >
-
-      param[journal_dir] = radical_teacher
-
-      au < ready ; Radical Teacher Number 81 ; 81 >
-      au < ready ; Radical Teacher Number 82 ; 82 >
-      au < ready ; Radical Teacher Number 83 ; 83 >
-      au < ready ; Radical Teacher Number 84 ; 84 >
-      au < ready ; Radical Teacher Number 85 ; 85 >
-      au < ready ; Radical Teacher Number 86 ; 86 >
+      au < released ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
+      au < released ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
 
     }
 
@@ -162,9 +113,39 @@
       au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
       au < released ; The Journal of Aesthetic Education Volume 40 ; 40 >
       au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
-      au < ready ; The Journal of Aesthetic Education Volume 42 ; 42 >
-      au < ready ; The Journal of Aesthetic Education Volume 43 ; 43 >
-      au < ready ; The Journal of Aesthetic Education Volume 44 ; 44 >
+      au < released ; The Journal of Aesthetic Education Volume 42 ; 42 >
+      au < released ; The Journal of Aesthetic Education Volume 43 ; 43 >
+      au < released ; The Journal of Aesthetic Education Volume 44 ; 44 >
+
+    }
+
+    {
+      title <
+        name = Journal of Education Finance ;
+        issn = 0098-9495 ;
+        eissn = 1944-6470 ;
+        issnl = 0098-9495
+      >
+
+      param[journal_dir] = journal_of_education_finance
+
+      au < released ; Journal of Education Finance Volume 35 ; 35 >
+
+    }
+
+    {
+      title <
+        name = Journal of Film and Video ;
+        issn = 0742-4671 ;
+        eissn = 1934-6018 ;
+        issnl = 0742-4671
+      >
+
+      param[journal_dir] = journal_of_film_and_video
+
+      au < released ; Journal of Film and Video Volume 60 ; 60 >
+      au < released ; Journal of Film and Video Volume 61 ; 61 >
+      au < released ; Journal of Film and Video Volume 62 ; 62 >
 
     }
 
@@ -178,10 +159,29 @@
 
       param[journal_dir] = the_pluralist
 
-      au < ready ; The Pluralist Volume 4 ; 4 >
+      au < released ; The Pluralist Volume 4 ; 4 >
 
     }
     
+    {
+      title <
+        name = Radical Teacher ;
+        issn = 0191-4847 ;
+        eissn = 1941-0832 ;
+        issnl = 0191-4847
+      >
+
+      param[journal_dir] = radical_teacher
+
+      au < released ; Radical Teacher Number 81 ; 81 >
+      au < released ; Radical Teacher Number 82 ; 82 >
+      au < released ; Radical Teacher Number 83 ; 83 >
+      au < released ; Radical Teacher Number 84 ; 84 >
+      au < released ; Radical Teacher Number 85 ; 85 >
+      au < released ; Radical Teacher Number 86 ; 86 >
+
+    }
+
   }
   
 }
