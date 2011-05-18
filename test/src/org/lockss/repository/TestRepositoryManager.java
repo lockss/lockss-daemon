@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.8 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.8.46.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -108,25 +108,32 @@ public class TestRepositoryManager extends LockssTestCase {
     assertEmpty(mgr.getRepositoryList());
     ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
 				  "/foo/bar");
-    assertEquals(ListUtil.list("local:/foo/bar"), mgr.getRepositoryList());
+    assertEquals(ListUtil.list(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar"),
+                 mgr.getRepositoryList());
     ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
 				  "/foo/bar;/cache2");
-    assertEquals(ListUtil.list("local:/foo/bar", "local:/cache2"),
+    assertEquals(ListUtil.list(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar",
+                 RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache2"),
 		 mgr.getRepositoryList());
   }
 
   public void testGetRepositoryDF () throws Exception {
-    PlatformUtil.DF df = mgr.getRepositoryDF("local:.");
+    PlatformUtil.DF df = mgr.getRepositoryDF(RepositoryManager.LOCAL_REPO_PROTOCOL +
+                                             ".");
     assertNotNull(df);
   }
 
   public void testFindLeastFullRepository () throws Exception {
-    Map repoMap = MapUtil.map("local:one", new MyDF("/one", 1000),
-			      "local:two",  new MyDF("/two", 3000),
-			      "local:three",  new MyDF("/three", 2000));
+    Map repoMap = MapUtil.map(RepositoryManager.LOCAL_REPO_PROTOCOL + "one",
+                              new MyDF("/one", 1000),
+			      RepositoryManager.LOCAL_REPO_PROTOCOL + "two",
+                              new MyDF("/two", 3000),
+			      RepositoryManager.LOCAL_REPO_PROTOCOL + "three",
+                              new MyDF("/three", 2000));
     mgr.setRepoMap(repoMap);
 
-    assertEquals("local:two", mgr.findLeastFullRepository());
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "two",
+                 mgr.findLeastFullRepository());
   }
 
   public void testSizeCalc () throws Exception {

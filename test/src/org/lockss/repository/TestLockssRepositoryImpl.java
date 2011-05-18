@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.64.2.1 2011-01-14 19:23:16 dshr Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.64.2.2 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -99,14 +99,14 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   String repoSpec(String path) {
-    return "local:" + path;
+    return RepositoryManager.LOCAL_REPO_PROTOCOL + path;
   }
 
   public void testGetLocalRepositoryPath() throws Exception {
     assertEquals("foo",
-		 LockssRepositoryImpl.getLocalRepositoryPath("local:foo"));
+		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "foo"));
     assertEquals("/cache/foo",
-		 LockssRepositoryImpl.getLocalRepositoryPath("local:/cache/foo"));
+		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache/foo"));
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("other:foo"));
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
   }
@@ -134,7 +134,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     Configuration auconf =
       ConfigurationUtil.fromArgs(PluginManager.AU_PARAM_REPOSITORY,
-				 "local:/foo/bar");
+				 RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar");
     mau.setConfiguration(auconf);
     assertEquals("/foo/bar", LockssRepositoryImpl.getRepositoryRoot(mau));
   }

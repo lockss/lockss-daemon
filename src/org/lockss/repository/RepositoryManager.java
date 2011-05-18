@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.13 2010-10-07 01:37:25 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.13.2.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -102,6 +102,9 @@ public class RepositoryManager
     DISK_PREFIX + "full.freePercent";
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
+  public static final String LOCAL_REPO_PROTOCOL = "local:";
+  public static final int LOCAL_REPO_PROTOCOL_LENGTH = 6;
+
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
   int paramNodeCacheSize = DEFAULT_MAX_PER_AU_CACHE_SIZE;
@@ -139,7 +142,7 @@ public class RepositoryManager
       List paths = StringUtil.breakAt(dspace, ';');
       if (paths != null) {
 	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	  lst.add("local:" + (String)iter.next());
+	  lst.add(LOCAL_REPO_PROTOCOL + (String)iter.next());
 	}
       }
       repoList = lst;

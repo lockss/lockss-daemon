@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.23 2008-08-20 05:50:49 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.23.32.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.protocol.MockIdentityManager;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.repository.RepositoryManager;
 
 /**
  * Test class for org.lockss.remote.RemoteApi
@@ -219,7 +220,8 @@ public class TestRemoteApi extends LockssTestCase {
   }
 
   public void testGetRepositoryDF () throws Exception {
-    PlatformUtil.DF df = rapi.getRepositoryDF("local:.");
+    PlatformUtil.DF df =
+      rapi.getRepositoryDF(RepositoryManager.LOCAL_REPO_PROTOCOL + ".");
     assertNotNull(df);
   }
 

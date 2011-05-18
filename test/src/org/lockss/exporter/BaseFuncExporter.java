@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.3 2010-02-22 08:07:46 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.3.10.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -113,6 +113,8 @@ public abstract class BaseFuncExporter extends LockssTestCase {
       CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
       if (node.hasContent()) {
 	numAuFiles++;
+      } else {
+        log.debug("No content: " + node.toString());
       }
     }      
   }

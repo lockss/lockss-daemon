@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: ZipExporter.java,v 1.4.10.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -86,13 +86,15 @@ public class ZipExporter extends Exporter {
     ensureOpenZip();
     InputStream ins = cu.getUnfilteredInputStream();
     CIProperties props = cu.getProperties();
+    log.debug("ZipExporter.writeCu(" + cu.getUrl() + ")");
     ZipEntry ent = new ZipEntry(xlateFilename(cu.getUrl()));
     // Store HTTP response headers into entry comment
     ent.setComment(getHttpResponseString(cu));
     try {
-      long cuLastModified =
-	dateAsLong(props.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED));
-      ent.setTime(cuLastModified);
+      String lastModDate = props.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+      if (lastModDate != null && !lastModDate.equals("0")) {
+        ent.setTime(dateAsLong(lastModDate));
+      }
     } catch (RuntimeException e) {
     }
     zip.putNextEntry(ent);

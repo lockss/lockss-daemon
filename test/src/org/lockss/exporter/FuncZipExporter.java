@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: FuncZipExporter.java,v 1.4.10.1 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class FuncZipExporter extends BaseFuncExporter {
   public void testExport(boolean isCompress, long maxSize,
 			 FilenameTranslation xlate)
       throws Exception {
+    log.debug("Compress: " + isCompress + " maxSize " + maxSize + " xlate " + xlate);
     exportDir = getTempDir();
     exportFiles = null;
     ZipExporter exp = new ZipExporter(daemon, sau);
@@ -108,6 +109,7 @@ public class FuncZipExporter extends BaseFuncExporter {
 
 	  }
 	  String comment = rec.getComment();
+          log.debug("Zip url: " + url + " comment " + comment);
 	  cu = sau.makeCachedUrl(url);
 // 	  log.debug("Comp " + hdr.getMimetype() + ": " + url);
 	  assertTrue("No content in AU: " + url, cu.hasContent());
@@ -123,6 +125,7 @@ public class FuncZipExporter extends BaseFuncExporter {
       }
 
     }
+    log.debug("numAuFiles " + numAuFiles + " numZipRecords " + numZipRecords);
     assertEquals(numAuFiles, numZipRecords);
     if (maxSize <= 0) {
       assertEquals(1, exportFiles.length);

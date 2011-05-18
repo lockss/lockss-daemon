@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.4 2011-01-16 00:23:26 dshr Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.5 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -402,7 +402,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 //     }
 
     DataOutputStream dos = null;
-    OutputStream os = os = m_node.getPeerIdOutputStream(m_fileName + TEMP_EXTENSION);
+    OutputStream os = m_node.getPeerIdOutputStream(m_fileName + TEMP_EXTENSION);
     // XXX this is totally bogus
     if (os != null) try {
 	

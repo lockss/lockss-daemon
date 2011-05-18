@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.7 2011-01-14 19:23:16 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.8 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -649,7 +649,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public synchronized void makeNewVersion() {
     logger.debug3("makeNewVersion: " + nodeLocation + " ver " + currentVersion);
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
       logger.debug3("nodeRootFile: 1 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -667,7 +667,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     ensureCurrentInfoLoaded();
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
       logger.debug3("nodeRootFile: 2 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -683,7 +683,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 							  ") failed.");
     }
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
       logger.debug3("nodeRootFile: 3 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -1700,7 +1700,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   boolean ensureDirExists(FileObject dirFile) {
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
       logger.debug3("ensureDirExists: 1 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -1708,7 +1708,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     try {
       logger.debug3("ensureDirExists " + dirFile.getName().getPath());
-      {
+      if (false) {
 	(new Throwable()).printStackTrace();
       }
       // --rename if a file at that position

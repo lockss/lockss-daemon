@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.7 2011-05-10 20:20:12 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.8 2011-05-18 17:05:21 dshr Exp $
  */
 
 /*
@@ -58,11 +58,13 @@ public class LockssRepositoryImpl
 
   /**
    * Configuration parameter name for Lockss cache location.
+   * XXX - path or url?
    */
   public static final String PARAM_CACHE_LOCATION =
     Configuration.PREFIX + "cache.location";
   /**
    * Name of top directory in which the urls are cached.
+   * XXX - path or url?
    */
   public static final String CACHE_ROOT_NAME = "VFS";
 
@@ -91,7 +93,7 @@ public class LockssRepositoryImpl
   private static final String TEST_PREFIX = "/#tmp";
 
   private RepositoryManager repoMgr;
-  private String rootLocation;
+  private String rootLocation; // XXX path or url?
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
@@ -125,7 +127,8 @@ public class LockssRepositoryImpl
       setNodeCacheSize(repoMgr.paramNodeCacheSize);
     }
     try {
-      fileSystemManager = VFS.getManager(); // XXX
+      // Get the default file system manager - should be OK.
+      fileSystemManager = VFS.getManager();
     } catch (FileSystemException e) {
       logger.error("VFS.getManager() threw: " + e);
     }
@@ -221,7 +224,8 @@ public class LockssRepositoryImpl
       // Happens in test because startService() not called
       logger.warning("fileSystemManager null, startService?");
       try {
-	fileSystemManager = VFS.getManager(); // XXX
+        // Get the default file system manager - should be OK.
+	fileSystemManager = VFS.getManager();
       } catch (FileSystemException e) {
 	logger.error("VFS.getManager() threw: " + e);
       }
@@ -337,11 +341,12 @@ public class LockssRepositoryImpl
     FileSystem ret = null;
     try {
       if (fileSystemManager == null) {
+        // Get the default file system manager - should be OK.
 	fileSystemManager = VFS.getManager();
       }
-      ret = fileSystemManager.resolveFile("/").getFileSystem(); // XXX
+      ret = fileSystemManager.resolveFile(rootLocation).getFileSystem();
     } catch (FileSystemException e) {
-      logger.error("resolveFile(\"/\").getFileSystem() threw: " + e);
+      logger.error("resolveFile(" + rootLocation + ").getFileSystem() threw: " + e);
     }
     return ret;
   }
@@ -382,11 +387,11 @@ public class LockssRepositoryImpl
     Configuration auConfig = au.getConfiguration();
     if (auConfig != null) {		// can be null in unit tests
       String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
-      if (repoSpec != null && repoSpec.startsWith("local:")) {
+      if (repoSpec != null && repoSpec.startsWith(RepositoryManager.LOCAL_REPO_PROTOCOL)) {
 	return repoSpec;
       }
     }
-    return "local:" + CurrentConfig.getParam(PARAM_CACHE_LOCATION);
+    return RepositoryManager.LOCAL_REPO_PROTOCOL + CurrentConfig.getParam(PARAM_CACHE_LOCATION);
   }
 
   public static String getRepositoryRoot(ArchivalUnit au) {
@@ -395,8 +400,8 @@ public class LockssRepositoryImpl
 
   public static String getLocalRepositoryPath(String repoSpec) {
     if (repoSpec != null) {
-      if (repoSpec.startsWith("local:")) {
-	return repoSpec.substring(6);
+      if (repoSpec.startsWith(RepositoryManager.LOCAL_REPO_PROTOCOL)) {
+	return repoSpec.substring(RepositoryManager.LOCAL_REPO_PROTOCOL_LENGTH);
       }
     }
     return null;
@@ -442,6 +447,7 @@ public class LockssRepositoryImpl
 
   /**
    * Adds the 'cache' directory to the HD location.
+   * XXX - path or URL?
    * @param cacheDir the root location.
    * @return String the extended location
    */
@@ -556,6 +562,7 @@ public class LockssRepositoryImpl
 	// loop through looking for an available dir
 	auDir = getNextDirName(auDir);
 	try {
+          // Get the default file system manager - should be OK.
 	  FileObject testDir = VFS.getManager().resolveFile(repoCachePath +
 							    auDir);
 	  if (logger.isDebug3()) logger.debug3("Probe for unused: " + testDir);
@@ -627,7 +634,8 @@ public class LockssRepositoryImpl
   static Properties getAuIdProperties(String location) {
     Properties ret = null;
     try {
-      FileObject propDir = VFS.getManager().resolveFile(location);
+      // Get the default file system manager - should be OK.
+      FileObject propDir = VFS.getManager().resolveFile(location); // XXX path or url?
 
       ret = getAuIdProperties(propDir);
     } catch (FileSystemException e) {
@@ -658,7 +666,8 @@ public class LockssRepositoryImpl
     FileObject propFile = null;
     FileObject propDir = null;
     try {
-      propDir = VFS.getManager().resolveFile(location);
+      // Get the default file system manager - should be OK.
+      propDir = VFS.getManager().resolveFile(location); // XXX path or url?
       if (!propDir.exists()) {
 	logger.debug("Creating directory '"+location+"'");
 	propDir.createFolder();
@@ -775,6 +784,7 @@ public class LockssRepositoryImpl
     LocalRepository(String repoPath) {
       this.repoPath = repoPath;
       try {
+        // Get the default file system manager - should be OK.
 	repoCacheFile =
 	  VFS.getManager().resolveFile(extendCacheLocation(repoPath));
       } catch (FileSystemException e) {
