@@ -1,10 +1,10 @@
 /*
- * $Id: ArcExploder.java,v 1.10 2011-05-09 02:34:02 tlipkis Exp $
+ * $Id: ArcExploder.java,v 1.11 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.state.*;

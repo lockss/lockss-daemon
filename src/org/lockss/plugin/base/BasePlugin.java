@@ -1,9 +1,9 @@
 /*
- * $Id: BasePlugin.java,v 1.76 2011-05-11 03:31:43 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.77 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -35,6 +35,7 @@ import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.rewriter.*;
 import org.lockss.plugin.wrapper.*;
 import org.lockss.crawler.*;

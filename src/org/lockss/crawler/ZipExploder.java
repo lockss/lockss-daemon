@@ -1,10 +1,10 @@
 /*
- * $Id: ZipExploder.java,v 1.12 2011-03-24 21:52:06 dshr Exp $
+ * $Id: ZipExploder.java,v 1.13 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.crawler.BaseCrawler;

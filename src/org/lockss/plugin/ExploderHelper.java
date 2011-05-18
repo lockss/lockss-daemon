@@ -1,10 +1,10 @@
 /*
- * $Id: ExploderHelperWrapper.java,v 1.5 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ExploderHelper.java,v 1.1 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,41 +30,28 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.wrapper;
-import java.io.*;
+package org.lockss.plugin;
+
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.ExploderHelper;
 
-/** Error catching wrapper for ExploderHelper */
-public class ExploderHelperWrapper
-  implements ExploderHelper, PluginCodeWrapper {
+/**
+ * The interface to publisher-specific ExploderHelper classes.
+ * They encapsulate knowledge about what to do with individual
+ * entries in an archive that's being exploded.
+ *
+ * @author  David S. H. Rosenthal
+ * @version 0.0
+ */
 
-  ExploderHelper inst;
+public interface ExploderHelper {
 
-  public ExploderHelperWrapper(ExploderHelper inst) {
-    this.inst = inst;
-  }
+  /**
+   * Do what needs to be done to this ArchiveEntry, which is a
+   * generic data structure describing the entry. This method
+   * typically sets fields descbing the AU the entry is to end
+   * up in, the URL it is to be assigned, and the header fields.
+   * @param ae the entry to be processed
+   */
+  public void process(ArchiveEntry ae) throws PluginException;
 
-  public Object getWrappedObj() {
-    return inst;
-  }
-
-  public void process(ArchiveEntry ae) throws PluginException {
-    try {
-      inst.process(ae);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
-    }
-  }
-
-  public String toString() {
-    return "[W: " + inst.toString() + "]";
-  }
-
-  static class Factory implements WrapperFactory {
-    public Object wrap(Object obj) {
-      return new ExploderHelperWrapper((ExploderHelper)obj);
-    }
-  }
 }

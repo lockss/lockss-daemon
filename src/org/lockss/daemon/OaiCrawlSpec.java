@@ -1,10 +1,10 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.12 2011-05-09 03:38:17 tlipkis Exp $
+ * $Id: OaiCrawlSpec.java,v 1.13 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.oai.*;
+import org.lockss.plugin.ExploderHelper;
 
 /**
  * Specification for a crawl: a Oai request handler Url  and a rule

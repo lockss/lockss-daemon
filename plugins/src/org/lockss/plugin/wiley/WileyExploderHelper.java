@@ -1,10 +1,10 @@
 /*
- * $Id: WileyExploderHelper.java,v 1.5 2009-09-05 18:03:27 dshr Exp $
+ * $Id: WileyExploderHelper.java,v 1.6 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,7 @@ package org.lockss.plugin.wiley;
 
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.ExploderHelper;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.crawler.Exploder;

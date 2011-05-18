@@ -1,10 +1,10 @@
 /*
- * $Id: FuncArcExploder.java,v 1.8 2011-03-13 21:54:26 tlipkis Exp $
+ * $Id: FuncArcExploder.java,v 1.9 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;
 import org.lockss.repository.*;

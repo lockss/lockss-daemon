@@ -1,10 +1,10 @@
 /*
- * $Id: WrapperUtil.java,v 1.10 2010-07-21 06:12:02 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.11 2011-05-18 04:09:55 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.definable.*;
 
 /** Utilities to wrap plugin classes in error-catching proxy classes */
