@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.30 2011-05-18 04:12:59 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.31 2011-05-18 05:54:52 tlipkis Exp $
  */
 
 /*
@@ -75,11 +75,13 @@ public class ServeContent extends LockssServlet {
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
     MissingFileAction.HostAuIndex;;
 
-  public enum MissingFileAction {
+  public static enum MissingFileAction {
     Error_404,
       HostAuIndex,
       AuIndex,
-      Redirect}
+      Redirect,
+      AlwaysRedirect,
+      }
   
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
@@ -208,7 +210,7 @@ public class ServeContent extends LockssServlet {
     return true;
   }
 
-  private boolean isNeverProxy() {
+  protected boolean isNeverProxy() {
     return neverProxy ||
       !StringUtil.isNullString(getParameter("noproxy"));
   }
@@ -321,7 +323,7 @@ public class ServeContent extends LockssServlet {
         log.debug2("Content not cached: redirecting to " + url);
         resp.sendRedirect(url);
       } else {
-	handleMissingUrlRequest(url);
+	handleMissingUrlRequest(url, PubState.Unknown);
       }
     } catch (IOException e) {
       log.warning("Handling " + url + " throws ", e);
@@ -467,7 +469,7 @@ public class ServeContent extends LockssServlet {
       if (isInCache) {
 	serveFromCache();
       } else {
-	handleMissingUrlRequest(url);
+	handleMissingUrlRequest(url, PubState.KnownDown);
       }
       return;
     }
@@ -477,7 +479,7 @@ public class ServeContent extends LockssServlet {
     if (!isInCache && isHostDown) {
       switch (proxyMgr.getHostDownAction()) {
       case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504:
-	handleMissingUrlRequest(url);
+	handleMissingUrlRequest(url, PubState.RecentlyDown);
 	return;
       case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK:
 	connPool = proxyMgr.getQuickConnectionPool();
@@ -490,6 +492,7 @@ public class ServeContent extends LockssServlet {
     }
     // Send request to publisher
     LockssUrlConnection conn = null;
+    PubState pstate = PubState.Unknown;
     try {
       conn = openLockssUrlConnection(connPool);
       conn.execute();
@@ -500,7 +503,8 @@ public class ServeContent extends LockssServlet {
       if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
         proxyMgr.setHostDown(host, isInCache);
       }
-      
+      pstate = PubState.KnownDown;
+
       // tear down connection
       safeClose(conn);
       conn = null;
@@ -511,12 +515,14 @@ public class ServeContent extends LockssServlet {
         int response = conn.getResponseCode();
         if (log.isDebug2())
 	  log.debug2("response: " + response + " " + conn.getResponseMessage());
-        if (response == HttpResponse.__200_OK) {  
+        if (response == HttpResponse.__200_OK) {
           // If publisher responds with content, serve it to user
 	  // XXX Possibly should check for a login page here
           serveFromPublisher(conn);
           return;
-        }
+        } else {
+	  pstate = PubState.NoContent;
+	}
       }
     } finally {
       // ensure connection is closed
@@ -529,7 +535,7 @@ public class ServeContent extends LockssServlet {
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
-      handleMissingUrlRequest(url);
+      handleMissingUrlRequest(url, pstate);
     }
   }
   
@@ -749,28 +755,36 @@ public class ServeContent extends LockssServlet {
   }
 
   // Ensure we don't redirect if neverProxy is true
-  MissingFileAction getMissingFileAction() {
-    if (isNeverProxy()) {
-      switch (missingFileAction) {
-      case Redirect:
+  MissingFileAction getMissingFileAction(PubState pstate) {
+    switch (missingFileAction) {
+    case Redirect:
+      if (isNeverProxy() || !pstate.mightHaveContent()) {
 	return DEFAULT_MISSING_FILE_ACTION;
-      default:
+      } else {
 	return missingFileAction;
       }
+    case AlwaysRedirect:
+      if (isNeverProxy()) {
+	return DEFAULT_MISSING_FILE_ACTION;
+      } else {
+	return missingFileAction;
+      }
+    default:
+      return missingFileAction;
     }
-    return missingFileAction;
   }
 
-  protected void handleMissingUrlRequest(String missingUrl)
+  protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
       throws IOException {
     String missing =
       missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
-    switch (getMissingFileAction()) {
+    switch (getMissingFileAction(pstate)) {
     case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
 		     missing + " is not preserved on this LOCKSS box");
       break;
     case Redirect:
+    case AlwaysRedirect:
       resp.sendRedirect(url);
       break;
     case HostAuIndex:
@@ -899,4 +913,18 @@ public class ServeContent extends LockssServlet {
       public boolean evaluate(Object obj) {
 	return isIncludedAu((ArchivalUnit)obj);
       }};
+
+  static enum PubState {
+    KnownDown,
+      RecentlyDown,
+      NoContent,
+      Unknown() {
+      public boolean mightHaveContent() {
+	return true;
+      }
+    };
+    public boolean mightHaveContent() {
+      return false;
+    }
+}
 }
