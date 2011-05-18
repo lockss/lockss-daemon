@@ -1,10 +1,10 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.12 2011-05-12 13:38:55 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.13 2011-05-18 04:12:38 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1192,7 +1192,7 @@ public class OpenUrlResolver {
     String url = null;
     try {
       UrlListConverter converter = 
-          new  PrintfConverter.UrlListConverter(plugin, paramMap); 
+	PrintfConverter.newUrlListConverter(plugin, paramMap); 
       List<String> urls = converter.getUrlList(printfString);
       if (urls.size() > 0) {
         url = urls.get(0);

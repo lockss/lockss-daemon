@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.49 2011-02-23 08:42:11 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.50 2011-05-18 04:12:37 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +42,7 @@ import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.Constants.RegexpContext;
 import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
 import org.lockss.oai.*;
@@ -117,48 +118,60 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.putInt("volume", 10);
     additionalAuConfig.putBoolean("boole", true);
     //  ensure dot in substitution string doesn't get regexp quoted
-    additionalAuConfig.putString("base_url", "Yo.Mama!");
+    additionalAuConfig.putString("base_url", "Yo.Ma ma!");
     additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
     additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
     setupAu(additionalAuConfig);
 
-    String substr = "\"My Test Integer = %d\", volume";
-    String expectedReturn = "My Test Integer = 10";
-    assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertUrlList(substr));
+    assertEquals(ListUtil.list("Test Integer = 10"),
+		 cau.convertUrlList("\"Test Integer = %d\", volume"));
 
-    substr = "\"My Test Boolean = %s\", boole";
-    expectedReturn = "My Test Boolean = true";
-    assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertUrlList(substr));
+    assertEquals(ListUtil.list("Test Boolean = true"),
+		 cau.convertUrlList("\"Test Boolean = %s\", boole"));
 
-    substr = "\"My Test String = %s\", base_url";
-    expectedReturn = "My Test String = Yo.Mama!";
-    assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertUrlList(substr));
+    assertEquals(ListUtil.list("Test String = Yo.Ma ma!"),
+		 cau.convertUrlList("\"Test String = %s\", base_url"));
 
-    substr = "\"My Test Short Year = %02d\", au_short_year";
-    expectedReturn = "My Test Short Year = 03";
-    assertEquals(ListUtil.list(expectedReturn),
-		 cau.convertUrlList(substr));
+    assertEquals(ListUtil.list("Test Short Year = 03"),
+		 cau.convertUrlList("\"Test Short Year = %02d\", au_short_year"));
 
-    substr = "\"My Test no param = %s\", no_param";
-    assertNull(cau.convertUrlList(substr));
+    assertNull(cau.convertUrlList("\"Test no param = %s\", no_param"));
   }
 
   public void testConvertVariableRegexStringWithNumRange() {
     Vector vec = new Vector(2);
-    String key = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    String rkey = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    String vkey = ConfigParamDescr.VOLUME_NAME.getKey();
     vec.add(0, new Long(10));
     vec.add(1, new Long(20));
-    additionalAuConfig.setMapElement(key, vec);
+    additionalAuConfig.setMapElement(rkey, vec);
+    additionalAuConfig.setMapElement(vkey, "a volume");
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
     setupAu(additionalAuConfig);
-    String substr = "\"My Test Range = %s\", " + key;
     PrintfConverter.MatchPattern mp =
-      cau.convertVariableRegexpString(substr);
-    assertEquals("My Test Range = (\\d+)", mp.getRegexp());
+      cau.convertVariableRegexpString("\"not a URL: iss:%s, vol:%s\", "
+				      + rkey + ", " + vkey,
+				      RegexpContext.String);
+    assertEquals("not a URL: iss:(\\d+), vol:a\\ volume", mp.getRegexp());
+  }
+
+  public void testConvertVariableUrlRegexStringWithNumRange() {
+    Vector vec = new Vector(2);
+    String rkey = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    String vkey = ConfigParamDescr.VOLUME_NAME.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    additionalAuConfig.setMapElement(rkey, vec);
+    additionalAuConfig.setMapElement(vkey, "a volume");
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    setupAu(additionalAuConfig);
+    PrintfConverter.MatchPattern mp =
+      cau.convertVariableRegexpString("\"http://host.foo/%s/iss/%s\", "
+				      + rkey + ", " + vkey,
+				      RegexpContext.Url);
+    assertEquals("http://host.foo/(\\d+)/iss/a( |\\+|%20)volume",
+		 mp.getRegexp());
   }
 
   public void testConvertUrlListWithNumRange() {
@@ -194,7 +207,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     vec.add(1, "zzz");
     additionalAuConfig.setMapElement(key, vec);
     setupAu(additionalAuConfig);
-    String expectedReturn = "My Test Range = (.*)";
     try {
       cau.convertUrlList("\"My Test Range = %s\", " + key);
       fail("Range param in URL template should throw");
@@ -221,39 +233,68 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     additionalAuConfig.putInt("INTEGER", 10);
     additionalAuConfig.putBoolean("BOOLEAN", true);
     //  ensure meta chars in substitution string't get regexp quoted
-    additionalAuConfig.putString("STRING", "Yo.M[am]a?foo=bar!");
+    additionalAuConfig.putString("STRING", "Yo.M[a m]a?foo=bar!");
     additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
     additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
                ConfigParamDescr.YEAR.getKey(),3);
 
     setupAu(additionalAuConfig);
-    String substr = "\"My Test Integer = %d\", INTEGER";
-    String expectedReturn = "My Test Integer = 10";
     PrintfConverter.MatchPattern mp =
-      cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.getRegexp());
+      cau.convertVariableRegexpString("\"Test Integer = %d\", INTEGER",
+				      RegexpContext.String);
+    assertEquals("Test Integer = 10", mp.getRegexp());
 
-    substr = "\"My Test Boolean = %s\", BOOLEAN";
-    expectedReturn = "My Test Boolean = true";
-    mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.getRegexp());
+    mp = cau.convertVariableRegexpString("\"Test Boolean = %s\", BOOLEAN",
+					 RegexpContext.String);
+    assertEquals("Test Boolean = true", mp.getRegexp());
 
-    substr = "\"My Test String = %s\", STRING";
-    expectedReturn = "My Test String = Yo\\.M\\[am\\]a\\?foo\\=bar\\!";
-    mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.getRegexp());
+    mp = cau.convertVariableRegexpString("\"Test String = %s\", STRING",
+					 RegexpContext.String);
+    assertEquals("Test String = Yo\\.M\\[a\\ m\\]a\\?foo\\=bar\\!",
+		 mp.getRegexp());
 
-    substr = "\"My Test Short Year = %02d\", au_short_year";
-    expectedReturn = "My Test Short Year = 03";
-    mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.getRegexp());
+    mp = cau.convertVariableRegexpString("\"Test Short Year = %02d\", au_short_year",
+					 RegexpContext.String);
+    assertEquals("Test Short Year = 03", mp.getRegexp());
+  }
+
+  public void testConvertUrlRegexpString() {
+    additionalAuConfig.putInt("INTEGER", 10);
+    additionalAuConfig.putBoolean("BOOLEAN", true);
+    //  ensure meta chars in substitution string't get regexp quoted, and
+    //  blanks get turned into pattern to match URL-encoded blanks
+    additionalAuConfig.putString("STRING", "Yo.M[am]a?foo = bar!");
+    additionalAuConfig.putInt(ConfigParamDescr.YEAR.getKey(), 2003);
+    additionalAuConfig.putInt(DefinableArchivalUnit.PREFIX_AU_SHORT_YEAR +
+               ConfigParamDescr.YEAR.getKey(),3);
+
+    setupAu(additionalAuConfig);
+    PrintfConverter.MatchPattern mp =
+      cau.convertVariableRegexpString("\"Test Integer = %d\", INTEGER",
+					 RegexpContext.Url);
+    assertEquals("Test Integer = 10", mp.getRegexp());
+
+    mp = cau.convertVariableRegexpString("\"Test Boolean = %s\", BOOLEAN",
+					    RegexpContext.Url);
+    assertEquals("Test Boolean = true", mp.getRegexp());
+
+    mp = cau.convertVariableRegexpString("\"Test String = %s\", STRING",
+					    RegexpContext.Url);
+    assertEquals("Test String = Yo\\.M\\[am\\]a\\?foo( |\\+|%20)\\=( |\\+|%20)bar\\!",
+		 mp.getRegexp());
+
+    mp = cau.convertVariableRegexpString("\"Test Short Year = %02d\", au_short_year",
+					    RegexpContext.Url);
+    assertEquals("Test Short Year = 03", mp.getRegexp());
   }
 
   public void testConvertRule() throws LockssRegexpException {
     additionalAuConfig.putString("URL", "http://www.example.com/");
+    additionalAuConfig.putString("VOL", "vol ume");
     setupAu(additionalAuConfig);
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
+    String rule3 = "1,\"%s%s\",URL,VOL";
 
     CrawlRule rule = cau.convertRule(rule1, false);
     assertEquals(CrawlRule.INCLUDE,
@@ -270,6 +311,18 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     rule = cau.convertRule(rule2, false);
     assertEquals(CrawlRule.INCLUDE,
                  rule.match("http://www.example.com/"));
+
+    // shouldn't match if dot properly quoted
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www1example.com/"));
+
+    rule = cau.convertRule(rule3, false);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol ume"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol+ume"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol%20ume"));
 
     // shouldn't match if dot properly quoted
     assertEquals(CrawlRule.IGNORE,
@@ -407,9 +460,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                   "\"%s Vol: %d Range: %s NumRange: %s Set: %s\"," +
 		     "journal_id,volume,issue_range,num_issue_range,issue_set");
     setupAu(additionalAuConfig);
-    String expectedReturn =
-      "MyJournal Vol: 43 Range: a-d NumRange: 12-17 Set: red, green, blue";
-    assertEquals("return value", expectedReturn, cau.makeName());
+    assertEquals("MyJournal Vol: 43 Range: a-d NumRange: 12-17 Set: red, green, blue",
+		 cau.makeName());
   }
 
   public void testMakeRules(boolean includeStart) throws Exception {
@@ -739,6 +791,31 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(cau.isLoginPageUrl("http://example.com/baz?login=yes&b=a"));
     assertFalse(cau.isLoginPageUrl("http://example.com/baz?xlogin=yes&b=a"));
     assertFalse(cau.isLoginPageUrl("http://example.com/baz?login=yesy&b=a"));
+  }
+
+  public void testIsLoginPageUrlWithBlank()
+      throws ArchivalUnit.ConfigurationException {
+    setupAu();
+    String pat = "\"%s.*\\?.*\\blogin=yes\\b.*\", base_url";
+    defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+                  "\"%slockss-volume/%d.html\", base_url, volume");
+    Configuration config =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				 "http://example.com/dir name",
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				 "42");
+    cau.setConfiguration(config);
+
+    assertFalse(cau.isLoginPageUrl("http://example.com/dir name/baz/"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir name/baz?login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir+name/baz?login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir%20name/baz?login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir name/baz?a=b&login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir+name/baz?a=b&login=yes"));
+    assertTrue(cau.isLoginPageUrl("http://example.com/dir%20name/baz?login=yes&b=a"));
+    assertFalse(cau.isLoginPageUrl("http://example.com/dir name/baz?xlogin=yes&b=a"));
+    assertFalse(cau.isLoginPageUrl("http://example.com/dir name/baz?login=yesy&b=a"));
   }
 
   public void testIsLoginPageUrlBadPat()

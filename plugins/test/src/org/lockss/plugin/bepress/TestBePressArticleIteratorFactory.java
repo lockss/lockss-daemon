@@ -1,10 +1,10 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.4 2010-07-06 23:03:21 thib_gc Exp $
+ * $Id: TestBePressArticleIteratorFactory.java,v 1.5 2011-05-18 04:12:38 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.util.regex.Pattern;
 import org.lockss.plugin.*;
 import org.lockss.plugin.bepress.BePressArticleIteratorFactory.BePressArticleIterator;
 import org.lockss.test.*;
+import org.lockss.util.Constants.RegexpContext;
 
 public class TestBePressArticleIteratorFactory extends LockssTestCase {
 
@@ -62,7 +63,7 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
     String pat = BePressArticleIteratorFactory.PATTERN_TEMPLATE;
 
     PrintfConverter.MatchPattern mp =
-      new PrintfConverter.RegexpConverter(au).getMatchPattern(pat);
+      PrintfConverter.newRegexpConverter(au, RegexpContext.Url).getMatchPattern(pat);
     return Pattern.compile(mp.getRegexp(), Pattern.CASE_INSENSITIVE);
   }
 

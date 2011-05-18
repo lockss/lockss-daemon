@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.11 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.12 2011-05-18 04:12:38 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +36,7 @@ import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.util.*;
+import org.lockss.util.Constants.RegexpContext;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
@@ -273,7 +274,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     }
     if (spec.getPatternTemplate() != null) {
       String re =
-	convertVariableRegexpString(spec.getPatternTemplate()).getRegexp();
+	convertVariableUrlRegexpString(spec.getPatternTemplate()).getRegexp();
       return Pattern.compile(re, spec.getPatternFlags());
     }
     return null;
@@ -312,12 +313,12 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
   protected List<String> convertUrlList(String printfString) {
-    return new PrintfConverter.UrlListConverter(au).getUrlList(printfString);
+    return PrintfConverter.newUrlListConverter(au).getUrlList(printfString);
   }
 
   protected PrintfConverter.MatchPattern
-    convertVariableRegexpString(String printfString) {
-    return new PrintfConverter.RegexpConverter(au).getMatchPattern(printfString);
+    convertVariableUrlRegexpString(String printfString) {
+    return PrintfConverter.newRegexpConverter(au, RegexpContext.Url).getMatchPattern(printfString);
   }
 
   private ArticleFiles findNextElement() {

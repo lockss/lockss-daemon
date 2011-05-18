@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.85 2011-01-13 19:57:17 pgust Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.86 2011-05-18 04:12:38 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,8 +40,10 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ExploderHelper;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
+import org.lockss.util.Constants.RegexpContext;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.oai.*;
 import org.lockss.state.AuState;
@@ -250,7 +252,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected Pattern makeLoginUrlPattern(String val)
       throws ArchivalUnit.ConfigurationException {
 
-    String patStr = convertVariableRegexpString(val).getRegexp();
+    String patStr =
+      convertVariableRegexpString(val, RegexpContext.Url).getRegexp();
     if (patStr == null) {
       String msg = "Missing regexp args: " + val;
       log.error(msg);
@@ -268,17 +271,19 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   public List<Pattern> makeNonSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {
-    return compileRegexpList(KEY_AU_NON_SUBSTANCE_URL_PATTERN);
+    return compileRegexpList(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+			     RegexpContext.Url);
   }
 
   public List<Pattern> makeSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {
-    return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN);
+    return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN,
+			     RegexpContext.Url);
   }
 
-  List<Pattern> compileRegexpList(String key)
+  List<Pattern> compileRegexpList(String key, RegexpContext context)
       throws ArchivalUnit.ConfigurationException {
-    List<String> lst = convertRegexpList(key);
+    List<String> lst = convertRegexpList(key, context);
     if (lst == null) {
       return null;
     }
@@ -496,8 +501,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return convertUrlList(getElementList(key), key);
   }
 
-  protected List<String> convertRegexpList(String key) {
-    return convertRegexpList(getElementList(key), key);
+  protected List<String> convertRegexpList(String key, RegexpContext context) {
+    return convertRegexpList(getElementList(key), key, context);
   }
 
 // ---------------------------------------------------------------------
@@ -513,16 +518,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 
   PrintfConverter.MatchPattern
-    convertVariableRegexpString(String printfString) {
-    return new PrintfConverter.RegexpConverter(plugin, paramMap).getMatchPattern(printfString);
+    convertVariableRegexpString(String printfString, RegexpContext context) {
+    return PrintfConverter.newRegexpConverter(plugin, paramMap, context).getMatchPattern(printfString);
   }
 
   List<String> convertUrlList(String printfString) {
-    return new PrintfConverter.UrlListConverter(plugin, paramMap).getUrlList(printfString);
+    return PrintfConverter.newUrlListConverter(plugin, paramMap).getUrlList(printfString);
   }
 
   String convertNameString(String printfString) {
-    return new PrintfConverter.NameConverter(plugin, paramMap).getName(printfString);
+    return PrintfConverter.newNameConverter(plugin, paramMap).getName(printfString);
   }
 
   protected List<String> convertUrlList(List<String> printfStrings, String key) {
@@ -548,7 +553,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected List<String> convertRegexpList(List<String> printfStrings,
-					    String key) {
+					   String key,
+					   RegexpContext context) {
     if (printfStrings == null) {
       return null;
     }
@@ -558,7 +564,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 	log.warning("Null pattern string in " + key);
 	continue;
       }
-      String pat = convertVariableRegexpString(pattern).getRegexp();
+      String pat =
+	convertVariableRegexpString(pattern, context).getRegexp();
       if (pat == null) {
 	log.warning("Null converted regexp in " + key + ", from " + pattern);
 	continue;
@@ -579,7 +586,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     int action = Integer.parseInt(ruleString.substring(0, pos));
     String printfString = ruleString.substring(pos + 1);
 
-    PrintfConverter.MatchPattern mp = convertVariableRegexpString(printfString);
+    PrintfConverter.MatchPattern mp =
+      convertVariableRegexpString(printfString, RegexpContext.Url);
     if (mp.getRegexp() == null) {
       return null;
     }
