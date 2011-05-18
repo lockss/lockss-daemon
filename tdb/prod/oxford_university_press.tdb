@@ -18,7 +18,7 @@
     
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://alrr.oxfordjournals.org/
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2001 ; Arbitration Law Reports and Review Volume 2001 ; 2001 >       
       au < exists ; 2002 ; Arbitration Law Reports and Review Volume 2002 ; 2002 >       
@@ -683,7 +683,7 @@
         param[base_url] = http://biostatistics.oxfordjournals.org/
         implicit < status ; year ; name ; param[volume] >
 
-        au < down ; 1908-1909 ; Biostatistics Volume 6 ; 6 >
+        au < down ; 2005 ; Biostatistics Volume 6 ; 6 >
 
       }
 
@@ -692,104 +692,19 @@
         param[base_url] = http://biostatistics.oxfordjournals.org/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; exists ; 1901-1902 ; Biostatistics Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; exists ; 1902-1903 ; Biostatistics Volume 2 ; 2 >
-        au < HighWirePressH20Plugin ; exists ; 1904 ; Biostatistics Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; exists ; 1905-1906 ; Biostatistics Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; exists ; 1906-1907 ; Biostatistics Volume 5 ; 5 >
-        au < HighWirePressPlugin ; doNotProcess ; 1908-1909 ; Biostatistics Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 1909-1910 ; Biostatistics Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; 1911-1912 ; Biostatistics Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 1913 ; Biostatistics Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; ready ; 1914-1915 ; Biostatistics Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; ready ; 1915-1917 ; Biostatistics Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; ready ; 1918-1919 ; Biostatistics Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 1920-1921 ; Biostatistics Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 1922-1923 ; Biostatistics Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 1923 ; Biostatistics Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 1924 ; Biostatistics Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; 1925 ; Biostatistics Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 19246 ; Biostatistics Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; exists ; 1927 ; Biostatistics Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; exists ; 1928 ; Biostatistics Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; exists ; 1929 ; Biostatistics Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; exists ; 1930-1931 ; Biostatistics Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; exists ; 1931 ; Biostatistics Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; exists ; 1932 ; Biostatistics Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; exists ; 1933 ; Biostatistics Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; exists ; 1934 ; Biostatistics Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; exists ; 1935 ; Biostatistics Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; exists ; 1936 ; Biostatistics Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; exists ; 1937-1938 ; Biostatistics Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; exists ; 1938-1939 ; Biostatistics Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; exists ; 1939-1940 ; Biostatistics Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; exists ; 1941-1942 ; Biostatistics Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; exists ; 1943-1946 ; Biostatistics Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; exists ; 1947 ; Biostatistics Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; exists ; 1948 ; Biostatistics Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; exists ; 1949 ; Biostatistics Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; exists ; 1950 ; Biostatistics Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; exists ; 1951 ; Biostatistics Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; exists ; 1952 ; Biostatistics Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; exists ; 1953 ; Biostatistics Volume 40 ; 40 >
-        au < HighWirePressH20Plugin ; exists ; 1954 ; Biostatistics Volume 41 ; 41 >
-        au < HighWirePressH20Plugin ; exists ; 1955 ; Biostatistics Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; exists ; 1956 ; Biostatistics Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; exists ; 1957 ; Biostatistics Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; exists ; 1958 ; Biostatistics Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; exists ; 1959 ; Biostatistics Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; exists ; 1960 ; Biostatistics Volume 47 ; 47 >
-        au < HighWirePressH20Plugin ; exists ; 1961 ; Biostatistics Volume 48 ; 48 >
-        au < HighWirePressH20Plugin ; exists ; 1962 ; Biostatistics Volume 49 ; 49 >
-        au < HighWirePressH20Plugin ; exists ; 1963 ; Biostatistics Volume 50 ; 50 >
-        au < HighWirePressH20Plugin ; exists ; 1964 ; Biostatistics Volume 51 ; 51 >
-        au < HighWirePressH20Plugin ; exists ; 1965 ; Biostatistics Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; exists ; 1966 ; Biostatistics Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; exists ; 1967 ; Biostatistics Volume 54 ; 54 >
-        au < HighWirePressH20Plugin ; exists ; 1968 ; Biostatistics Volume 55 ; 55 >
-        au < HighWirePressH20Plugin ; exists ; 1969 ; Biostatistics Volume 56 ; 56 >
-        au < HighWirePressH20Plugin ; exists ; 1970 ; Biostatistics Volume 57 ; 57 >
-        au < HighWirePressH20Plugin ; exists ; 1971 ; Biostatistics Volume 58 ; 58 >
-        au < HighWirePressH20Plugin ; exists ; 1972 ; Biostatistics Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; exists ; 1973 ; Biostatistics Volume 60 ; 60 >
-        au < HighWirePressH20Plugin ; exists ; 1974 ; Biostatistics Volume 61 ; 61 >
-        au < HighWirePressH20Plugin ; exists ; 1975 ; Biostatistics Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; exists ; 1976 ; Biostatistics Volume 63 ; 63 >
-        au < HighWirePressH20Plugin ; exists ; 1977 ; Biostatistics Volume 64 ; 64 >
-        au < HighWirePressH20Plugin ; exists ; 1978 ; Biostatistics Volume 65 ; 65 >
-        au < HighWirePressH20Plugin ; exists ; 1979 ; Biostatistics Volume 66 ; 66 >
-        au < HighWirePressH20Plugin ; exists ; 1980 ; Biostatistics Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; exists ; 1981 ; Biostatistics Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; exists ; 1982 ; Biostatistics Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; exists ; 1983 ; Biostatistics Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; exists ; 1984 ; Biostatistics Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; exists ; 1985 ; Biostatistics Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; exists ; 1986 ; Biostatistics Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; exists ; 1987 ; Biostatistics Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; exists ; 1988 ; Biostatistics Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; exists ; 1989 ; Biostatistics Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; exists ; 1990 ; Biostatistics Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; exists ; 1991 ; Biostatistics Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; exists ; 1992 ; Biostatistics Volume 79 ; 79 >
-        au < HighWirePressH20Plugin ; exists ; 1993 ; Biostatistics Volume 80 ; 80 >
-        au < HighWirePressH20Plugin ; exists ; 1994 ; Biostatistics Volume 81 ; 81 >
-        au < HighWirePressH20Plugin ; exists ; 1995 ; Biostatistics Volume 82 ; 82 >
-        au < HighWirePressH20Plugin ; exists ; 1996 ; Biostatistics Volume 83 ; 83 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; Biostatistics Volume 84 ; 84 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; Biostatistics Volume 85 ; 85 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Biostatistics Volume 86 ; 86 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; Biostatistics Volume 87 ; 87 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Biostatistics Volume 88 ; 88 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Biostatistics Volume 89 ; 89 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Biostatistics Volume 90 ; 90 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Biostatistics Volume 91 ; 91 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Biostatistics Volume 92 ; 92 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Biostatistics Volume 93 ; 93 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Biostatistics Volume 94 ; 94 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Biostatistics Volume 95 ; 95 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Biostatistics Volume 96 ; 96 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Biostatistics Volume 97 ; 97 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Biostatistics Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Biostatistics Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Biostatistics Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Biostatistics Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Biostatistics Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Biostatistics Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doNotProcess ; 2005 ; Biostatistics Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Biostatistics Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Biostatistics Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Biostatistics Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; Biostatistics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Biostatistics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Biostatistics Volume 12 ; 12 >
+
 
 
      }
@@ -809,24 +724,32 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ceaccp.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+        au < down ; 2006 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
 
       }
 
       {
 
         param[base_url] = http://ceaccp.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
-        au < HighWirePressPlugin ; doNotProcess ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; ready ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2008 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; BJA: Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
 
      }
 
@@ -845,24 +768,155 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://brain.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Brain Volume 128 ; 128 >
+        au < down ; 2005 ; Brain Volume 128 ; 128 >
 
       }
 
       {
 
         param[base_url] = http://brain.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Brain Volume 128 ; 128 >
-        au < HighWireStrVolPlugin ; down ; Brain Volume 129 ; 129 >
-        au < HighWireStrVolPlugin ; down ; Brain Volume 130 ; 130 >
-        au < HighWirePressPlugin ; down ; Brain Volume 131 ; 131 >
-        au < HighWirePressH20Plugin ; testing ; Brain Volume 132 ; 132 >
-        au < HighWirePressH20Plugin ; ready ; Brain Volume 133 ; 133 >
-        au < HighWirePressH20Plugin ; ready ; Brain Volume 134 ; 134 >
+        au < HighWirePressH20Plugin ; exists ; 1878 ; Brain Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1879-1880 ; Brain Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1880-1881 ; Brain Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1881-1882 ; Brain Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1882-1883 ; Brain Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1883-1884 ; Brain Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 1884-1885 ; Brain Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 1885-1886 ; Brain Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 1886-1887 ; Brain Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 1887-1888 ; Brain Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 1888-1889 ; Brain Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 1889-1890 ; Brain Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1890 ; Brain Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1891 ; Brain Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1892 ; Brain Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1893 ; Brain Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1894 ; Brain Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1895 ; Brain Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1896 ; Brain Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1897 ; Brain Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1898 ; Brain Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1899 ; Brain Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1900 ; Brain Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1901 ; Brain Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1902 ; Brain Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1903 ; Brain Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1904 ; Brain Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1905 ; Brain Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1906 ; Brain Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1907 ; Brain Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1908 ; Brain Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1909 ; Brain Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1910 ; Brain Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1911 ; Brain Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1912 ; Brain Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1913 ; Brain Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1914 ; Brain Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1915 ; Brain Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 1916 ; Brain Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 1917 ; Brain Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 1918 ; Brain Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 1919 ; Brain Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 1920 ; Brain Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; 1921 ; Brain Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; 1922 ; Brain Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; 1923 ; Brain Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; 1924 ; Brain Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; 1925 ; Brain Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; 1926 ; Brain Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; 1927 ; Brain Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; 1928 ; Brain Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; 1929 ; Brain Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; 1930 ; Brain Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; 1931 ; Brain Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; 1932 ; Brain Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; exists ; 1933 ; Brain Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; exists ; 1934 ; Brain Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; exists ; 1935 ; Brain Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; exists ; 1936 ; Brain Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; exists ; 1937 ; Brain Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; exists ; 1938 ; Brain Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; 1939 ; Brain Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; exists ; 1940 ; Brain Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; exists ; 1941 ; Brain Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; exists ; 1942 ; Brain Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; exists ; 1943 ; Brain Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; exists ; 1944 ; Brain Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; 1945 ; Brain Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; 1946 ; Brain Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; 1947 ; Brain Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; 1948 ; Brain Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; 1949 ; Brain Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; 1950 ; Brain Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; 1951 ; Brain Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; 1952 ; Brain Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; 1953 ; Brain Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; 1954 ; Brain Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; 1955 ; Brain Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; 1956 ; Brain Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; 1957 ; Brain Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; 1958 ; Brain Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; exists ; 1959 ; Brain Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; exists ; 1960 ; Brain Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; exists ; 1961 ; Brain Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; exists ; 1962 ; Brain Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; exists ; 1963 ; Brain Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; exists ; 1964 ; Brain Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; exists ; 1965 ; Brain Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; exists ; 1966 ; Brain Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; exists ; 1967 ; Brain Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; exists ; 1968 ; Brain Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; Brain Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; Brain Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; Brain Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; Brain Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; Brain Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; Brain Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; Brain Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; Brain Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; Brain Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; Brain Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; Brain Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; Brain Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; Brain Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; Brain Volume 105 ; 105 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; Brain Volume 106 ; 106 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; Brain Volume 107 ; 107 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; Brain Volume 108 ; 108 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; Brain Volume 109 ; 109 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; Brain Volume 110 ; 110 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; Brain Volume 111 ; 111 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; Brain Volume 112 ; 112 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; Brain Volume 113 ; 113 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; Brain Volume 114 ; 114 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; Brain Volume 115 ; 115 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; Brain Volume 116 ; 116 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Brain Volume 117 ; 117 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Brain Volume 118 ; 118 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Brain Volume 119 ; 119 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Brain Volume 120 ; 120 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Brain Volume 121 ; 121 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Brain Volume 122 ; 122 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Brain Volume 123 ; 123 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Brain Volume 124 ; 124 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Brain Volume 125 ; 125 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Brain Volume 126 ; 126 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Brain Volume 127 ; 127 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Brain Volume 128 ; 128 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Brain Volume 129 ; 129 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Brain Volume 130 ; 130 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Brain Volume 131 ; 131 >
+        au < HighWirePressPlugin ; doNotProcess ; 2005 ; Brain Volume 128 ; 128 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Brain Volume 129 ; 129 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Brain Volume 130 ; 130 >
+        au < HighWirePressPlugin ; down ; 2008 ; Brain Volume 131 ; 131 >
+        au < HighWirePressH20Plugin ; testing ; 2009 ; Brain Volume 132 ; 132 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Brain Volume 133 ; 133 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Brain Volume 134 ; 134 >
 
      }
 
@@ -920,23 +974,32 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://bib.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Briefings in Bioinformatics Volume 7 ; 7 >
+        au < down ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 >
 
       }
 
       {
 
         param[base_url] = http://bib.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < HighWirePressPlugin ; doNotProcess ; Briefings in Bioinformatics Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; Briefings in Bioinformatics Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; Briefings in Bioinformatics Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; testing ; Briefings in Bioinformatics Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; ready ; Briefings in Bioinformatics Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; ready ; Briefings in Bioinformatics Volume 12 ; 12 >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Briefings in Bioinformatics Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Briefings in Bioinformatics Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Briefings in Bioinformatics Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Briefings in Bioinformatics Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Briefings in Bioinformatics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Briefings in Bioinformatics Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 >
 
      }
 
@@ -956,7 +1019,8 @@
         pluginSuffix = HighWirePlugin
         param[base_url] = http://bfgp.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
-
+        comment[bfgp] = The url redirects to "http://bfg.oxfordjournals.org/", marked down
+        
         au < down ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
 
       }
@@ -967,11 +1031,39 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; down ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; testing ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
+  
+      }
 
+    }
+    
+    {
+
+      title <
+        name = Briefings in Functional Genomics ;
+        issn = 2041-2649 ;
+        eissn = 2041-2647 ;
+        issnl = 2041-2647
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bfg.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        au < exists ; 2002 ; Briefings in Functional Genomics Volume 1 ; 1 >
+        au < exists ; 2003 ; Briefings in Functional Genomics Volume 2 ; 2 >
+        au < exists ; 2004 ; Briefings in Functional Genomics Volume 3 ; 3 >
+        au < exists ; 2005 ; Briefings in Functional Genomics Volume 4 ; 4 >
+        au < manfiest ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 >
+        au < manfiest ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 >
+        au < manfiest ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 >
+        au < manfiest ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 >
+        au < manfiest ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 >
+        au < manfiest ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 >
+  
       }
 
     }
@@ -989,23 +1081,82 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://bjps.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+        au < down ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
 
       }
 
       {
 
         param[base_url] = http://bjps.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name_name] >
 
-        au < HighWireStrVolPlugin ; down ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
-        au < HighWirePressPlugin ; doNotProcess ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
-        au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
-        au < HighWirePressPlugin ; down ; The British Journal for the Philosophy of Science Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
-        au < HighWirePressH20Plugin ; testing ; The British Journal for the Philosophy of Science Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; 1950-1951 ; The British Journal for the Philosophy of Science Volume I ; I >
+        au < HighWirePressH20Plugin ; exists ; 1951-1952 ; The British Journal for the Philosophy of Science Volume II ; II >
+        au < HighWirePressH20Plugin ; exists ; 1952-1953 ; The British Journal for the Philosophy of Science Volume III ; III >
+        au < HighWirePressH20Plugin ; exists ; 1953 ; The British Journal for the Philosophy of Science Volume IV ; IV >
+        au < HighWirePressH20Plugin ; exists ; 1954-1955 ; The British Journal for the Philosophy of Science Volume V ; V >
+        au < HighWirePressH20Plugin ; exists ; 1955-1956 ; The British Journal for the Philosophy of Science Volume VI ; VI >
+        au < HighWirePressH20Plugin ; exists ; 1956-1957 ; The British Journal for the Philosophy of Science Volume VII ; VII >
+        au < HighWirePressH20Plugin ; exists ; 1957-1958 ; The British Journal for the Philosophy of Science Volume VIII ; VIII >
+        au < HighWirePressH20Plugin ; exists ; 1958-1959 ; The British Journal for the Philosophy of Science Volume IX ; IX >
+        au < HighWirePressH20Plugin ; exists ; 1959-1960 ; The British Journal for the Philosophy of Science Volume X ; X >
+        au < HighWirePressH20Plugin ; exists ; 1960-1961 ; The British Journal for the Philosophy of Science Volume XI ; XI >
+        au < HighWirePressH20Plugin ; exists ; 1961-1962 ; The British Journal for the Philosophy of Science Volume XII ; XII >
+        au < HighWirePressH20Plugin ; exists ; 1962-1963 ; The British Journal for the Philosophy of Science Volume XIII ; XIII >
+        au < HighWirePressH20Plugin ; exists ; 1963-1964 ; The British Journal for the Philosophy of Science Volume XIV ; XIV >
+        au < HighWirePressH20Plugin ; exists ; 1964-1965 ; The British Journal for the Philosophy of Science Volume XV ; XV >
+        au < HighWirePressH20Plugin ; exists ; 1965-1966 ; The British Journal for the Philosophy of Science Volume XVI ; XVI >
+        au < HighWirePressH20Plugin ; exists ; 1966-1967 ; The British Journal for the Philosophy of Science Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1967-1968 ; The British Journal for the Philosophy of Science Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1968-1969 ; The British Journal for the Philosophy of Science Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; The British Journal for the Philosophy of Science Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; The British Journal for the Philosophy of Science Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; The British Journal for the Philosophy of Science Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; The British Journal for the Philosophy of Science Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; The British Journal for the Philosophy of Science Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; The British Journal for the Philosophy of Science Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; The British Journal for the Philosophy of Science Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; The British Journal for the Philosophy of Science Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; The British Journal for the Philosophy of Science Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; The British Journal for the Philosophy of Science Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; The British Journal for the Philosophy of Science Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; The British Journal for the Philosophy of Science Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; The British Journal for the Philosophy of Science Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; The British Journal for the Philosophy of Science Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; The British Journal for the Philosophy of Science Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; The British Journal for the Philosophy of Science Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; The British Journal for the Philosophy of Science Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; The British Journal for the Philosophy of Science Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; The British Journal for the Philosophy of Science Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; The British Journal for the Philosophy of Science Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; The British Journal for the Philosophy of Science Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; The British Journal for the Philosophy of Science Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; The British Journal for the Philosophy of Science Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; The British Journal for the Philosophy of Science Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; The British Journal for the Philosophy of Science Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; The British Journal for the Philosophy of Science Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; The British Journal for the Philosophy of Science Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; The British Journal for the Philosophy of Science Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; The British Journal for the Philosophy of Science Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; The British Journal for the Philosophy of Science Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; The British Journal for the Philosophy of Science Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; The British Journal for the Philosophy of Science Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; The British Journal for the Philosophy of Science Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; The British Journal for the Philosophy of Science Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; The British Journal for the Philosophy of Science Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; The British Journal for the Philosophy of Science Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; ready ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 >
+        au < HighWirePressPlugin ; down ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 >
 
       }
 
@@ -1024,24 +1175,72 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://bjaesthetics.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; The British Journal of Aesthetics Volume 46 ; 46 >
+        au < down ; 2006 ; The British Journal of Aesthetics Volume 46 ; 46 >
 
       }
 
       {
 
         param[base_url] = http://bjaesthetics.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; The British Journal of Aesthetics Volume 45 ; 45 >
-        au < HighWirePressPlugin ; doNotProcess ; The British Journal of Aesthetics Volume 46 ; 46 >
-        au < HighWireStrVolPlugin ; down ; The British Journal of Aesthetics Volume 47 ; 47 >
-        au < HighWirePressPlugin ; down ; The British Journal of Aesthetics Volume 48 ; 48 >
-        au < HighWirePressH20Plugin ; testing ; The British Journal of Aesthetics Volume 49 ; 49 >
-        au < HighWirePressH20Plugin ; ready ; The British Journal of Aesthetics Volume 50 ; 50 >
-        au < HighWirePressH20Plugin ; ready ; The British Journal of Aesthetics Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; 1960-1961 ; The British Journal of Aesthetics Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1962 ; The British Journal of Aesthetics Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1963 ; The British Journal of Aesthetics Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1964 ; The British Journal of Aesthetics Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1965 ; The British Journal of Aesthetics Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1966 ; The British Journal of Aesthetics Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 1967 ; The British Journal of Aesthetics Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 1968 ; The British Journal of Aesthetics Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; The British Journal of Aesthetics Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; The British Journal of Aesthetics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; The British Journal of Aesthetics Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; The British Journal of Aesthetics Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; The British Journal of Aesthetics Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; The British Journal of Aesthetics Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; The British Journal of Aesthetics Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; The British Journal of Aesthetics Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; The British Journal of Aesthetics Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; The British Journal of Aesthetics Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; The British Journal of Aesthetics Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; The British Journal of Aesthetics Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; The British Journal of Aesthetics Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; The British Journal of Aesthetics Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; The British Journal of Aesthetics Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; The British Journal of Aesthetics Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; The British Journal of Aesthetics Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; The British Journal of Aesthetics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; The British Journal of Aesthetics Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; The British Journal of Aesthetics Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; The British Journal of Aesthetics Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; The British Journal of Aesthetics Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; The British Journal of Aesthetics Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; The British Journal of Aesthetics Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; The British Journal of Aesthetics Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; The British Journal of Aesthetics Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; The British Journal of Aesthetics Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; The British Journal of Aesthetics Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; The British Journal of Aesthetics Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; The British Journal of Aesthetics Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; The British Journal of Aesthetics Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; The British Journal of Aesthetics Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; The British Journal of Aesthetics Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; The British Journal of Aesthetics Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; The British Journal of Aesthetics Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; The British Journal of Aesthetics Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; The British Journal of Aesthetics Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; The British Journal of Aesthetics Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; The British Journal of Aesthetics Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal of Aesthetics Volume 45 ; 45 >
+        au < HighWirePressPlugin ; doNotProcess ; 2006 ; The British Journal of Aesthetics Volume 46 ; 46 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The British Journal of Aesthetics Volume 47 ; 47 >
+        au < HighWirePressPlugin ; down ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; ready ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; ready ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; ready ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 >
 
      }
 
@@ -1076,11 +1275,11 @@
         au < HighWirePressPlugin ; doNotProcess ; British Journal of Anaesthesia Volume 96 ; 96 >
         au < HighWireStrVolPlugin ; down ; British Journal of Anaesthesia Volume 97 ; 97 >
         au < HighWireStrVolPlugin ; down ; British Journal of Anaesthesia Volume 98 ; 98 >
-        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; ready ; British Journal of Anaesthesia Volume 99 ; 99 >
         au < HighWirePressPlugin ; down ; British Journal of Anaesthesia Volume 100 ; 100 >
         au < HighWirePressPlugin ; down ; British Journal of Anaesthesia Volume 101 ; 101 >
-        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 102 ; 102 >
-        au < HighWirePressH20Plugin ; testing ; British Journal of Anaesthesia Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; ready ; British Journal of Anaesthesia Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; ready ; British Journal of Anaesthesia Volume 103 ; 103 >
         au < HighWirePressH20Plugin ; ready ; British Journal of Anaesthesia Volume 104 ; 104 >
         au < HighWirePressH20Plugin ; ready ; British Journal of Anaesthesia Volume 105 ; 105 >
 
@@ -1589,7 +1788,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Community Development Journal Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; Community Development Journal Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; Community Development Journal Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; testing ; Community Development Journal Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; ready ; Community Development Journal Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; ready ; Community Development Journal Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; ready ; Community Development Journal Volume 46 ; 46 >
 
@@ -1951,7 +2150,7 @@
         au < HighWirePressPlugin ; doNotProcess ; ESHRE Monographs 2005 ; 2005 >
         au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2006 ; 2006 >
         au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2007 ; 2007 >
-        au < HighWirePressH20Plugin ; testing ; ESHRE Monographs 2008 ; 2008 >
+        au < HighWirePressH20Plugin ; ready ; ESHRE Monographs 2008 ; 2008 >
 
       }
 
@@ -1984,7 +2183,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Essays in Criticism Volume 55 ; 55 >
         au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 56 ; 56 >
         au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 57 ; 57 >
-        au < HighWirePressH20Plugin ; testing ; Essays in Criticism Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; ready ; Essays in Criticism Volume 58 ; 58 >
 
       }
 
@@ -2078,7 +2277,7 @@
         au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 7 ; 7 >
         au < HighWirePressPlugin ; doNotProcess ; European Heart Journal Supplements Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; testing ; European Heart Journal Supplements Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; ready ; European Heart Journal Supplements Volume 10 ; 10 >
 
       }
 
@@ -2110,7 +2309,7 @@
 
         au < HighWireStrVolPlugin ; down ; European Journal of International Law Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; European Journal of International Law Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; testing ; European Journal of International Law Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; ready ; European Journal of International Law Volume 18 ; 18 >
 
       }
 
@@ -3673,7 +3872,7 @@
         
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jah.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume] >
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
       
         au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 2 ; 2 >
@@ -6582,8 +6781,8 @@
         au < HighWirePressPlugin ; down ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
         au < HighWirePressPlugin ; down ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
         au < HighWirePressPlugin ; down ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
-        au < HighWirePressH20Plugin ; testing ; Proceedings of the London Mathematical Society Volume 100 ; 100 >
-        au < HighWirePressH20Plugin ; testing ; Proceedings of the London Mathematical Society Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; ready ; Proceedings of the London Mathematical Society Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; ready ; Proceedings of the London Mathematical Society Volume 101 ; 101 >
 
       }
 
@@ -6619,7 +6818,7 @@
         au < HighWirePressPlugin ; down ; Protein Engineering Design and Selection Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Protein Engineering Design and Selection Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; ready ; Protein Engineering Design and Selection Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; testing ; Protein Engineering Design and Selection Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; ready ; Protein Engineering Design and Selection Volume 24 ; 24 >
 
       }
 
@@ -6676,7 +6875,7 @@
         au < HighWirePressPlugin ; down ; Public Opinion Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; down ; Public Opinion Quarterly Volume 73 ; 73 >
         au < HighWirePressH20Plugin ; ready ; Public Opinion Quarterly Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; testing ; Public Opinion Quarterly Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; ready ; Public Opinion Quarterly Volume 75 ; 75 >
 
       }
 
@@ -6711,7 +6910,7 @@
         au < HighWirePressPlugin ; down ; Publius: The Journal of Federalism Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Publius: The Journal of Federalism Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; ready ; Publius: The Journal of Federalism Volume 40 ; 40 >
-        au < HighWirePressH20Plugin ; testing ; Publius: The Journal of Federalism Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; ready ; Publius: The Journal of Federalism Volume 41 ; 41 >
 
       }
 
@@ -6747,7 +6946,7 @@
         au < HighWirePressPlugin ; down ; QJM: An International Journal of Medicine Volume 101 ; 101 >
         au < HighWirePressPlugin ; down ; QJM: An International Journal of Medicine Volume 102 ; 102 >
         au < HighWirePressH20Plugin ; ready ; QJM: An International Journal of Medicine Volume 103 ; 103 >
-        au < HighWirePressH20Plugin ; testing ; QJM: An International Journal of Medicine Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; ready ; QJM: An International Journal of Medicine Volume 104 ; 104 >
 
       }
 
@@ -6783,7 +6982,7 @@
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
 		au < HighWirePressPlugin ; doNotProcess ; The Quarterly Journal of Mathematics Volume 61 ; 61 >
-		au < HighWirePressH20Plugin ; testing ; The Quarterly Journal of Mathematics Volume 62 ; 62 >
+		au < HighWirePressH20Plugin ; ready ; The Quarterly Journal of Mathematics Volume 62 ; 62 >
 		
       }
 
@@ -6809,7 +7008,7 @@
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
         au < HighWirePressPlugin ; doNotProcess ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
-        au < HighWirePressH20Plugin ; testing ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 >
 
       }
 
@@ -6862,16 +7061,16 @@
         au < HighWirePressPlugin ; down ; Radiation Protection Dosimetry Volume 133 ; 133 >
         au < HighWirePressPlugin ; down ; Radiation Protection Dosimetry Volume 134 ; 134 >
         au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 135 ; 135 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 136 ; 136 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 136 ; 136 >
         au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 137 ; 137 >
         au < HighWirePressPlugin ; doNotProcess ; Radiation Protection Dosimetry Volume 138 ; 138 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 139 ; 139 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 140 ; 140 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 141 ; 141 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 142 ; 142 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 143 ; 143 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 144 ; 144 >
-        au < HighWirePressH20Plugin ; testing ; Radiation Protection Dosimetry Volume 145 ; 145 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 139 ; 139 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 140 ; 140 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 141 ; 141 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 142 ; 142 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 143 ; 143 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 144 ; 144 >
+        au < HighWirePressH20Plugin ; ready ; Radiation Protection Dosimetry Volume 145 ; 145 >
 
       }
 
@@ -6906,8 +7105,8 @@
         au < HighWirePressH20Plugin ; ready ; Refugee Survey Quarterly Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Refugee Survey Quarterly Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; ready ; Refugee Survey Quarterly Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; testing ; Refugee Survey Quarterly Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; testing ; Refugee Survey Quarterly Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; ready ; Refugee Survey Quarterly Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; ready ; Refugee Survey Quarterly Volume 30 ; 30 >
 
       }
 
@@ -6961,7 +7160,7 @@
         au < HighWirePressPlugin ; down ; The Review of English Studies Volume 59 ; 59 >
         au < HighWirePressH20Plugin ; ready ; The Review of English Studies Volume 60 ; 60 >
         au < HighWirePressH20Plugin ; testing ; The Review of English Studies Volume 61 ; 61 >
-        au < HighWirePressH20Plugin ; testing ; The Review of English Studies Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; ready ; The Review of English Studies Volume 62 ; 62 >
 
       }
 
@@ -7007,9 +7206,9 @@
         au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 10 ; 10 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Review of Finance Volume 12 ; 12 >
-        au < HighWirePressPlugin ; testing ; Review of Finance Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Review of Finance Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; testing ; Review of Finance Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; ready ; Review of Finance Volume 15 ; 15 >
 
       }
 
@@ -7045,7 +7244,7 @@
         au < HighWirePressPlugin ; down ; Review of Financial Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 22 ; 22 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; testing ; Review of Financial Studies Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; ready ; Review of Financial Studies Volume 24 ; 24 >
 
       }
 
@@ -7070,7 +7269,7 @@
         au < HighWirePressPlugin ; down ; Rheumatology Volume 47 ; 47 >
         au < HighWirePressPlugin ; doNotProcess ; Rheumatology Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Rheumatology Volume 49 ; 49 >
-        au < HighWirePressH20Plugin ; testing ; Rheumatology Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; ready ; Rheumatology Volume 50 ; 50 >
 
       }
 
@@ -7106,7 +7305,7 @@
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; ready ; Schizophrenia Bulletin Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; testing ; Schizophrenia Bulletin Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; ready ; Schizophrenia Bulletin Volume 37 ; 37 >
 
       }
 
@@ -7141,7 +7340,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Screen Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Screen Volume 49 ; 49 >
         au < HighWirePressH20Plugin ; ready ; Screen Volume 50 ; 50 >
-        au < HighWirePressH20Plugin ; testing ; Screen Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; ready ; Screen Volume 51 ; 51 >
 
       }
 
@@ -7165,7 +7364,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; ready ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; testing ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; ready ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 >
 
       }
 
@@ -7200,8 +7399,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Social History of Medicine Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; ready ; Social History of Medicine Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; testing ; Social History of Medicine Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; testing ; Social History of Medicine Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; ready ; Social History of Medicine Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; ready ; Social History of Medicine Volume 24 ; 24 >
 
       }
 
@@ -7236,7 +7435,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Social Politics: International Studies in Gender, State and Society Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; ready ; Social Politics: International Studies in Gender, State and Society Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; testing ; Social Politics: International Studies in Gender, State and Society Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; ready ; Social Politics: International Studies in Gender, State and Society Volume 17 ; 17 >
 
       }
 
@@ -7271,7 +7470,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Social Science Japan Journal Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; ready ; Social Science Japan Journal Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; testing ; Social Science Japan Journal Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; ready ; Social Science Japan Journal Volume 13 ; 13 >
 
       }
 
@@ -7307,7 +7506,7 @@
         au < HighWirePressPlugin ; down ; Socio-Economic Review Volume 6 ; 6 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 7 ; 7 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; testing ; Socio-Economic Review Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; ready ; Socio-Economic Review Volume 9 ; 9 >
 
       }
 
@@ -7342,7 +7541,7 @@
         au < HighWireStrVolPlugin ; down ; Statute Law Review Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Statute Law Review Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; ready ; Statute Law Review Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; testing ; Statute Law Review Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; ready ; Statute Law Review Volume 31 ; 31 >
 
       }
 
@@ -7377,7 +7576,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Teaching Mathematics and its Applications Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; ready ; Teaching Mathematics and its Applications Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; testing ; Teaching Mathematics and its Applications Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; ready ; Teaching Mathematics and its Applications Volume 29 ; 29 >
 
       }
 
@@ -7438,7 +7637,7 @@
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 111 ; 111 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 112 ; 112 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 113 ; 113 >
-        au < HighWirePressH20Plugin ; testing ; Toxicological Sciences Volume 114 ; 114 >
+        au < HighWirePressH20Plugin ; ready ; Toxicological Sciences Volume 114 ; 114 >
 
       }
 
@@ -7460,7 +7659,7 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Tree Physiology Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Tree Physiology Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; testing ; Tree Physiology Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; ready ; Tree Physiology Volume 31 ; 31 >
 
       }
 
@@ -7485,7 +7684,7 @@
         au < HighWirePressPlugin ; down ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; ready ; Trusts & Trustees Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Trusts & Trustees Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; testing ; Trusts & Trustees Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; ready ; Trusts & Trustees Volume 17 ; 17 >
 
       }
 
@@ -7556,7 +7755,7 @@
         au < HighWirePressPlugin ; down ; The World Bank Economic Review Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; The World Bank Economic Review Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; ready ; The World Bank Economic Review Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; testing ; The World Bank Economic Review Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; ready ; The World Bank Economic Review Volume 24 ; 24 >
 
       }
 
@@ -7591,7 +7790,7 @@
         au < HighWirePressPlugin ; down ; The World Bank Research Observer Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; The World Bank Research Observer Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; ready ; The World Bank Research Observer Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; testing ; The World Bank Research Observer Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; ready ; The World Bank Research Observer Volume 25 ; 25 >
 
       }
 
@@ -7626,7 +7825,7 @@
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; testing ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 >
 
       }
 
