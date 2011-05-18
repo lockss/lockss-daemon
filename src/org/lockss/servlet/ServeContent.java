@@ -1,10 +1,10 @@
 /*
- * $Id: ServeContent.java,v 1.29 2011-05-09 00:40:57 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.30 2011-05-18 04:12:59 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -69,7 +69,7 @@ public class ServeContent extends LockssServlet {
 
   /** Determines actions when a URL is requested that is not in the cache.
    * One of <code>Error_404</code>, <code>HostAuIndex</code>,
-   * <code>AuIndex</code>. */
+   * <code>AuIndex</code>, <code>Redirect</code>. */
   public static final String PARAM_MISSING_FILE_ACTION =
     PREFIX + "missingFileAction";
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
@@ -78,7 +78,8 @@ public class ServeContent extends LockssServlet {
   public enum MissingFileAction {
     Error_404,
       HostAuIndex,
-      AuIndex}
+      AuIndex,
+      Redirect}
   
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
@@ -747,14 +748,30 @@ public class ServeContent extends LockssServlet {
     }
   }
 
+  // Ensure we don't redirect if neverProxy is true
+  MissingFileAction getMissingFileAction() {
+    if (isNeverProxy()) {
+      switch (missingFileAction) {
+      case Redirect:
+	return DEFAULT_MISSING_FILE_ACTION;
+      default:
+	return missingFileAction;
+      }
+    }
+    return missingFileAction;
+  }
+
   protected void handleMissingUrlRequest(String missingUrl)
       throws IOException {
     String missing =
       missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
-    switch (missingFileAction) {
+    switch (getMissingFileAction()) {
     case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
 		     missing + " is not preserved on this LOCKSS box");
+      break;
+    case Redirect:
+      resp.sendRedirect(url);
       break;
     case HostAuIndex:
       Collection candidateAus = pluginMgr.getCandidateAus(missingUrl);
