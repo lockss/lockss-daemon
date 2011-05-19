@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -15,12 +15,14 @@
       issnl = 1562-7020
     >
     
-    param[journal_code] = afzo
+    param[journal_id] = afzo
   
-    au < exists ; African Zoology Volume 41 ; 41 >
-    au < exists ; African Zoology Volume 42 ; 42 >
-    au < exists ; African Zoology Volume 43 ; 43 >
-    au < exists ; African Zoology Volume 44 ; 44 >
+    au < exists ; 2006 ; African Zoology Volume 41 ; 41 >
+    au < exists ; 2007 ; African Zoology Volume 42 ; 42 >
+    au < exists ; 2008 ; African Zoology Volume 43 ; 43 >
+    au < exists ; 2009 ; African Zoology Volume 44 ; 44 >
+    au < exists ; 2010 ; African Zoology Volume 45 ; 45 >
+    au < exists ; 2011 ; African Zoology Volume 46 ; 46 >
 
   }
   
