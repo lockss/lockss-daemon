@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.10 2011-05-20 20:16:15 barry409 Exp $
+# $Id: tdbout.py,v 1.11 2011-05-20 20:17:23 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -79,6 +79,10 @@ class TdboutConstants:
     OPTION_INPUT_FILE_SHORT = 'i'
     OPTION_INPUT_FILE_HELP = 'read input from a file'
 
+    OPTION_OUTPUT_FILE = 'output'
+    OPTION_OUTPUT_FILE_SHORT = 'o'
+    OPTION_OUTPUT_FILE_HELP = 'write output to a file'
+
 def process_tdbout(tdb, options):
     fields = options.fields.split(',')
     result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
@@ -111,6 +115,12 @@ def __option_parser__(parser=None):
                             action='store',
                             dest='input_file',
                             help=TdboutConstants.OPTION_INPUT_FILE_HELP
+                            )
+    tdbout_group.add_option('-' + TdboutConstants.OPTION_OUTPUT_FILE_SHORT,
+                            '--' + TdboutConstants.OPTION_OUTPUT_FILE,
+                            action='store',
+                            dest='output_file',
+                            help=TdboutConstants.OPTION_OUTPUT_FILE_HELP
                             )
     def __synonym_auid(opt, str, val, par):
         if getattr(par.values, TdboutConstants.OPTION_STYLE, None): par.error('cannot specify -%s and -%s together' % (TdboutConstants.OPTION_AUID_SHORT, TdboutConstants.OPTION_STYLE_SHORT))
@@ -186,4 +196,11 @@ if __name__ == '__main__':
     except tdbparse.TdbparseSyntaxError, e:
         print >>sys.stderr, e
         exit(1)
-    process_tdbout(tdb, options)
+    else:
+        saveout = sys.stdout
+        try:
+            if options.output_file:
+                sys.stdout = open(options.output_file, 'w')
+            process_tdbout(tdb, options)
+        finally:
+            sys.stdout = saveout
