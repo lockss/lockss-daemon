@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.9 2011-05-20 20:07:04 barry409 Exp $
+# $Id: tdbout.py,v 1.10 2011-05-20 20:16:15 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -182,7 +182,7 @@ if __name__ == '__main__':
     else:
         infile = sys.stdin
     try:
-        tdb = tdbparse.tdbparse(sys.stdin, options) 
+        tdb = tdbparse.tdbparse(infile, options) 
     except tdbparse.TdbparseSyntaxError, e:
         print >>sys.stderr, e
         exit(1)
