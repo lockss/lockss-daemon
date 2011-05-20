@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.17 2011-05-16 01:01:51 barry409 Exp $
+# $Id: tdbxml.py,v 1.18 2011-05-20 19:52:25 barry409 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -299,7 +299,7 @@ if __name__ == '__main__':
     try:
         tdb = tdbparse.tdbparse(infile, options)
     except tdbparse.TdbparseSyntaxError, e:
-        print e
+        print >>sys.stderr, e
         exit(1)
     else:
         saveout = sys.stdout

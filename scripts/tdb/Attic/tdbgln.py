@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbgln.py,v 1.3 2011-02-10 23:24:12 thib_gc Exp $
+# $Id: tdbgln.py,v 1.4 2011-05-20 19:52:25 barry409 Exp $
 
 # Copyright (c) 2000-2011 Bsoard of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -177,5 +177,9 @@ if __name__ == '__main__':
     parser = __option_parser__(None, options)
     (options, args) = parser.parse_args(args=sys.argv[1:], values=parser.get_default_values())
     __reprocess_options__(parser, options)
-    tdb = tdbparse.tdbparse(sys.stdin, options)
+    try:
+        tdb = tdbparse.tdbparse(sys.stdin, options)
+    except tdbparse.TdbparseSyntaxError, e:
+        print >>sys.stderr, e
+        exit(1)
     process_tdb(tdb, options)

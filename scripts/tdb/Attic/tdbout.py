@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.7 2010-10-06 22:51:29 thib_gc Exp $
+# $Id: tdbout.py,v 1.8 2011-05-20 19:52:25 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -167,5 +167,9 @@ if __name__ == '__main__':
     parser = __option_parser__()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     __reprocess_options__(parser, options)
-    tdb = tdbparse.tdbparse(sys.stdin, options) 
+    try:
+        tdb = tdbparse.tdbparse(sys.stdin, options) 
+    except tdbparse.TdbparseSyntaxError, e:
+        print >>sys.stderr, e
+        exit(1)
     process_tdbout(tdb, options)
