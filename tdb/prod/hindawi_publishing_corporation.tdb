@@ -7,7 +7,7 @@
   plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
   param[base_url] = http://www.hindawi.com/
   param[download_url] = http://downloads.hindawi.com/
-  implicit < status ; name ; param[volume_name] ; attr[volume] ; year >
+  implicit < status ; name ; param[volume_name] ; volume ; year >
 
   {
     title <
