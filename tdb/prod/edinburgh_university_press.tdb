@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
 
@@ -18,12 +18,14 @@
     >
 
     param[journal_dir] = africa_the_journal_of_the_international_african_institute
+    attr[journal_abbr] = afr
 
-    au < released ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
-    au < released ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
-    au < released ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
-    au < released ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
-    au < released ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+    au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+    au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+    au < released ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
+    au < released ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+    au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+    au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
 
   }
 
@@ -37,10 +39,11 @@
     >
 
     param[journal_dir] = comparative_critical_studies
+    attr[journal_abbr] = ccs
 
-    au < released ; Comparative Critical Studies Volume 3 ; 3 >
-    au < released ; Comparative Critical Studies Volume 4 ; 4 >
-    au < released ; Comparative Critical Studies Volume 5 ; 5 >
+    au < released ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+    au < released ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+    au < released ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
 
   }
 
@@ -49,14 +52,16 @@
     title <
       name = Dance Research ;
       issn = 0264-2875 ;
-      eissn = 1755-1676
+      eissn = 1755-1676 ;
+      issnl = 2064-2875
     >
 
     param[journal_dir] = dance_research
+    attr[journal_abbr] = dar
 
-    au < released ; Dance Research Volume 24 ; 24 >
-    au < released ; Dance Research Volume 25 ; 25 >
-    au < released ; Dance Research Volume 26 ; 26 >
+    au < released ; 2006 ; Dance Research Volume 24 ; 24 >
+    au < released ; 2007 ; Dance Research Volume 25 ; 25 >
+    au < released ; 2008 ; Dance Research Volume 26 ; 26 >
 
   }
 
@@ -70,10 +75,11 @@
     >
 
     param[journal_dir] = episteme
+    attr[journal_abbr] = epi
 
-    au < released ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
-    au < released ; Episteme: A Journal of Social Epistemology Volume 4 ; 4 >
-    au < released ; Episteme: A Journal of Social Epistemology Volume 5 ; 5 >
+    au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
+    au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 ; 4 >
+    au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 ; 5 >
 
   }
 
@@ -87,10 +93,11 @@
     >
 
     param[journal_dir] = holy_land_studies
+    attr[journal_abbr] = hls
 
-    au < released ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
-    au < released ; Holy Land Studies: A Multidisciplinary Journal Volume 6 ; 6 >
-    au < released ; Holy Land Studies: A Multidisciplinary Journal Volume 7 ; 7 >
+    au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
+    au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 ; 6 >
+    au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 ; 7 >
 
   }
 
@@ -104,9 +111,10 @@
     >
 
     param[journal_dir] = the_innes_review
+    attr[journal_abbr] = inn
 
-    au < released ; The Innes Review Volume 58 ; 58 >
-    au < released ; The Innes Review Volume 59 ; 59 >
+    au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
+    au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
 
   }
   
@@ -120,10 +128,11 @@
     >
 
     param[journal_dir] = journal_of_victorian_culture
+    attr[journal_abbr] = jvc
 
-    au < released ; Journal of Victorian Culture Volume 11 ; 11 >
-    au < released ; Journal of Victorian Culture Volume 12 ; 12 >
-    au < released ; Journal of Victorian Culture Volume 13 ; 13 >
+    au < released ; 2006 ; Journal of Victorian Culture Volume 11 ; 11 >
+    au < released ; 2007 ; Journal of Victorian Culture Volume 12 ; 12 >
+    au < released ; 2008 ; Journal of Victorian Culture Volume 13 ; 13 >
 
   }
 
@@ -137,10 +146,11 @@
     >
 
     param[journal_dir] = paragraph
+    attr[journal_abbr] = prg
 
-    au < released ; Paragraph Volume 29 ; 29 >
-    au < released ; Paragraph Volume 30 ; 30 >
-    au < released ; Paragraph Volume 31 ; 31 >
+    au < released ; 2006 ; Paragraph Volume 29 ; 29 >
+    au < released ; 2007 ; Paragraph Volume 30 ; 30 >
+    au < released ; 2008 ; Paragraph Volume 31 ; 31 >
 
   }
 
@@ -154,9 +164,10 @@
     >
 
     param[journal_dir] = parliamentary_history
+    attr[journal_abbr] = pah
 
-    au < released ; Parliamentary History Volume 25 ; 25 >
-    au < released ; Parliamentary History Volume 26 ; 26 >
+    au < released ; 2006 ; Parliamentary History Volume 25 ; 25 >
+    au < released ; 2007 ; Parliamentary History Volume 26 ; 26 >
 
   }
 
@@ -170,10 +181,11 @@
     >
 
     param[journal_dir] = romanticism
+    attr[journal_abbr] = rom
 
-    au < released ; Romanticism Volume 12 ; 12 >
-    au < released ; Romanticism Volume 13 ; 13 >
-    au < released ; Romanticism Volume 14 ; 14 >
+    au < released ; 2006 ; Romanticism Volume 12 ; 12 >
+    au < released ; 2007 ; Romanticism Volume 13 ; 13 >
+    au < released ; 2008 ; Romanticism Volume 14 ; 14 >
 
   }
 
@@ -187,10 +199,11 @@
     >
 
     param[journal_dir] = studies_in_world_christianity
+    attr[journal_abbr] = swc
 
-    au < released ; Studies in World Christianity Volume 12 ; 12 >
-    au < released ; Studies in World Christianity Volume 13 ; 13 >
-    au < released ; Studies in World Christianity Volume 14 ; 14 >
+    au < released ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+    au < released ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+    au < released ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
 
   }
 
@@ -204,10 +217,11 @@
     >
 
     param[journal_dir] = scottish_historical_review
+    attr[journal_abbr] = shr
 
-    au < released ; The Scottish Historical Review Volume 85 ; 85 >
-    au < released ; The Scottish Historical Review Volume 86 ; 86 >
-    au < released ; The Scottish Historical Review Volume 87 ; 87 >
+    au < released ; 2006 ; The Scottish Historical Review Volume 85 ; 85 >
+    au < released ; 2007 ; The Scottish Historical Review Volume 86 ; 86 >
+    au < released ; 2008 ; The Scottish Historical Review Volume 87 ; 87 >
 
   }
 
@@ -221,10 +235,11 @@
     >
 
     param[journal_dir] = translation_and_literature
+    attr[journal_abbr] = tal
 
-    au < released ; Translation and Literature Volume 15 ; 15 >
-    au < released ; Translation and Literature Volume 16 ; 16 >
-    au < released ; Translation and Literature Volume 17 ; 17 >
+    au < released ; 2006 ; Translation and Literature Volume 15 ; 15 >
+    au < released ; 2007 ; Translation and Literature Volume 16 ; 16 >
+    au < released ; 2008 ; Translation and Literature Volume 17 ; 17 >
 
   }
 
