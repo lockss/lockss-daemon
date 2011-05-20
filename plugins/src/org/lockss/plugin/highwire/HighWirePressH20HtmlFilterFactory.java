@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.31 2011-05-20 20:07:00 mellen22 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.32 2011-05-20 21:57:44 mellen22 Exp $
  */
 
 /*
@@ -119,6 +119,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("meta", "id", "^session-"),
         // For BMJ related links div 
         HtmlNodeFilters.tagWithAttribute("div", "id", "related-external-links"), 
+        // For BMJ related articles div 
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rel-relevant-article"), 
         
     };
     
