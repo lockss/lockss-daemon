@@ -100,6 +100,7 @@
     au < released ; 2008 ; Agricultural Finance Review Volume 68 ; 68 >
     au < released ; 2009 ; Agricultural Finance Review Volume 69 ; 69 >
     au < manifest ; 2010 ; Agricultural Finance Review Volume 70 ; 70 >
+    au < exists ; 2011 ; Agricultural Finance Review Volume 71 ; 71 >
 
   }
 
@@ -2135,7 +2136,7 @@
 
     param[journal_issn] = 2042-3896
 
-    au < exists ; 2011; Higher Education, Skills and Work-based Learning Volume 1 ; 1 >
+    au < manifest ; 2011; Higher Education, Skills and Work-based Learning Volume 1 ; 1 >
 
   }
 
@@ -2149,13 +2150,13 @@
     comment[platform] = online from 2004
     param[journal_issn] = 0819-8691
 
-    au < testing ; 2004 ; History of Education Review Volume 33 ; 33 >
-    au < testing ; 2005 ; History of Education Review Volume 34 ; 34 >
-    au < testing ; 2006 ; History of Education Review Volume 35 ; 35 >
-    au < testing ; 2007 ; History of Education Review Volume 36 ; 36 >
-    au < testing ; 2008 ; History of Education Review Volume 37 ; 37 >
-    au < testing ; 2009 ; History of Education Review Volume 38 ; 38 >        
-    au < testing ; 2010 ; History of Education Review Volume 39 ; 39 >
+    au < ready ; 2004 ; History of Education Review Volume 33 ; 33 >
+    au < ready ; 2005 ; History of Education Review Volume 34 ; 34 >
+    au < ready ; 2006 ; History of Education Review Volume 35 ; 35 >
+    au < ready ; 2007 ; History of Education Review Volume 36 ; 36 >
+    au < ready ; 2008 ; History of Education Review Volume 37 ; 37 >
+    au < ready ; 2009 ; History of Education Review Volume 38 ; 38 >        
+    au < ready ; 2010 ; History of Education Review Volume 39 ; 39 >
         
   }
 
@@ -2170,15 +2171,15 @@
     param[journal_issn] = 0967-0734
     comment[platform] = online from 2002
     
-    au < testing ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
-    au < testing ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
-    au < testing ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 >
+    au < ready ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
+    au < ready ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
+    au < ready ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 >
     au < testing ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 >
-    au < testing ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 >
-    au < testing ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 >
-    au < testing ; 2008 ; Human Resource Management International Digest Volume 16 ; 16 >
-    au < testing ; 2009 ; Human Resource Management International Digest Volume 17 ; 17 >
-    au < testing ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 >
+    au < ready ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 >
+    au < ready ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 >
+    au < ready ; 2008 ; Human Resource Management International Digest Volume 16 ; 16 >
+    au < ready ; 2009 ; Human Resource Management International Digest Volume 17 ; 17 >
+    au < ready ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 >
 
   }
 
@@ -2191,13 +2192,12 @@
     >
 
     param[journal_issn] = 0828-8666
-    comment[platform] = online from 1989
+    comment[platform] = online from 1989 missing v9
     
     au < ready ; 1989 ; Humanomics Volume 5 ; 5 >
     au < ready ; 1990 ; Humanomics Volume 6 ; 6 >
     au < ready ; 1991 ; Humanomics Volume 7 ; 7 >
     au < ready ; 1992 ; Humanomics Volume 8 ; 8 >
-    au < ready ; 1993 ; Humanomics Volume 9 ; 9 >
     au < ready ; 1994 ; Humanomics Volume 10 ; 10 >
     au < ready ; 1995 ; Humanomics Volume 11 ; 11 >
     au < ready ; 1996 ; Humanomics Volume 12 ; 12>
@@ -2434,6 +2434,7 @@
     >
 
     param[journal_issn] = 0143-991X
+    comment[platform] = missing v19 1992
 
     au < manifest ; 1973-1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
     au < manifest ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
@@ -2453,7 +2454,6 @@
     au < manifest ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 >
     au < manifest ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 >
     au < manifest ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 >
-    au < manifest ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 >
     au < manifest ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 >
     au < manifest ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 >
     au < manifest ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 >
@@ -2763,6 +2763,7 @@
     au < released ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
     au < released ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
     au < released ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
+    au < exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 >
 
   }
 
@@ -3096,12 +3097,12 @@
     au < manifest ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
     au < manifest ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
     au < manifest ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
-    au < exists ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
-    au < exists ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
-    au < exists ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
-    au < exists ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
-    au < exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
-    au < exists ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
+    au < manifest ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
+    au < manifest ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
+    au < manifest ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
+    au < manifest ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
+    au < manifest ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
+    au < manifest ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
     au < manifest ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 >
 
   }
@@ -3264,8 +3265,8 @@
 
     param[journal_issn] = 2040-4166
 
-    au < exists ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 >
-    au < exists ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 >
+    au < manifest ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 >
+    au < manifest ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 >
 
   }
 
@@ -3494,6 +3495,7 @@
     au < released ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 >
     au < released ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 >
     au < released ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
+    au < manifest ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 >
 
   }
 
@@ -3974,7 +3976,7 @@
     au < released ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
     au < released ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
     au < released ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 >
-    au < exists ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 >
+    au < manifest ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 >
     au < manifest ; 2011 ; International Journal of Wine Business Research Volume 23 ; 23 >
 
   }
@@ -4143,7 +4145,7 @@
 
     param[journal_issn] = 2042-1168
     
-    au < exists ; 2011 ; Journal of Accounting in Emerging Economies Volume 1 ; 1 >
+    au < manifest ; 2011 ; Journal of Accounting in Emerging Economies Volume 1 ; 1 >
 
   }
 
@@ -4661,13 +4663,13 @@
     comment[platform] = 2002 not online
     
     au < released ; 2003 ; Journal of Engineering, Design and Technology Volume 1 ; 1 >
-    au < manifest ; 2005 ; Journal of Engineering, Design and Technology Volume 3 ; 3 >
-    au < manifest ; 2006 ; Journal of Engineering, Design and Technology Volume 4 ; 4 >
-    au < manifest ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 >
-    au < manifest ; 2008 ; Journal of Engineering, Design and Technology Volume 6 ; 6 >
-    au < manifest ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 >
-    au < manifest ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 >
-    au < manifest ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 >
+    au < testing ; 2005 ; Journal of Engineering, Design and Technology Volume 3 ; 3 >
+    au < testing ; 2006 ; Journal of Engineering, Design and Technology Volume 4 ; 4 >
+    au < testing ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 >
+    au < testing ; 2008 ; Journal of Engineering, Design and Technology Volume 6 ; 6 >
+    au < testing ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 >
+    au < testing ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 >
+    au < testing ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 >
 
   }
 
@@ -4971,6 +4973,7 @@
     param[journal_issn] = 2041-2568
     
     au < released ; 2010 ; Journal of Global Responsibility  Volume 1 ; 1 >
+    au < exists ; 2011 ; Journal of Global Responsibility  Volume 2 ; 2 >
 
   }
 
@@ -6395,7 +6398,7 @@
     >
 
     param[journal_issn] = 0025-1747
-    
+        
     au < released ; 1967 ; Management Decision Volume 1 ; 1 >
     au < released ; 1968 ; Management Decision Volume 2 ; 2 >
     au < released ; 1969 ; Management Decision Volume 3 ; 3 >
@@ -6455,8 +6458,8 @@
     comment[platform] = online from 1992
     comment[merged] = into Human Resource Management International Digest
 
-    au < exists ; 1992 ; Management Development Review Volume 5 ; 5 >
-    au < exists ; 1993 ; Management Development Review Volume 6 ; 6 >    
+    au < manifest ; 1992 ; Management Development Review Volume 5 ; 5 >
+    au < manifest ; 1993 ; Management Development Review Volume 6 ; 6 >    
     au < released ; 1994 ; Management Development Review Volume 7 ; 7 >
     au < released ; 1995 ; Management Development Review Volume 8 ; 8 >
     au < released ; 1996 ; Management Development Review Volume 9 ; 9 >
@@ -6670,44 +6673,44 @@
     comment[platform] = Currently published as International Journal of Law and Management
     
     au < exists ; 1966-1967 ; Managerial Law Volume 1 ; 1 >
-    au < exists ; 1967 ; Managerial Law Volume 2 ; 2 >
-    au < exists ; 1967-1968 ; Managerial Law Volume 3 ; 3 >
-    au < exists ; 1968 ; Managerial Law Volume 4 ; 4 >
-    au < exists ; 1968-1969 ; Managerial Law Volume 5 ; 5 >
-    au < exists ; 1969 ; Managerial Law Volume 6 ; 6 >
-    au < exists ; 1969-1970 ; Managerial Law Volume 7 ; 7 >
-    au < exists ; 1970 ; Managerial Law Volume 8 ; 8 >
-    au < exists ; 1970-1971 ; Managerial Law Volume 9 ; 9 >
-    au < exists ; 1971 ; Managerial Law Volume 10 ; 10 >
-    au < exists ; 1971-1972 ; Managerial Law Volume 11 ; 11 >
-    au < exists ; 1972 ; Managerial Law Volume 12 ; 12 >
-    au < exists ; 1972-1973 ; Managerial Law Volume 13 ; 13 >
-    au < exists ; 1973 ; Managerial Law Volume 14 ; 14 >
-    au < exists ; 1973-1974 ; Managerial Law Volume 15 ; 15 >
-    au < exists ; 1974 ; Managerial Law Volume 16 ; 16 >
-    au < exists ; 1974 ; Managerial Law Volume 17 ; 17 >
-    au < exists ; 1975 ; Managerial Law Volume 18 ; 18 >
-    au < exists ; 1976 ; Managerial Law Volume 19 ; 19 >
-    au < exists ; 1977 ; Managerial Law Volume 20 ; 20 >
-    au < exists ; 1978 ; Managerial Law Volume 21 ; 21 >
-    au < exists ; 1979 ; Managerial Law Volume 22 ; 22 >
-    au < exists ; 1981 ; Managerial Law Volume 23 ; 23 >
-    au < exists ; 1982 ; Managerial Law Volume 24 ; 24 >
-    au < exists ; 1983 ; Managerial Law Volume 25 ; 25 >
-    au < exists ; 1984 ; Managerial Law Volume 26 ; 26 >
-    au < exists ; 1985 ; Managerial Law Volume 27 ; 27 >
-    au < exists ; 1986 ; Managerial Law Volume 28 ; 28 >
-    au < exists ; 1987 ; Managerial Law Volume 29 ; 29 >
-    au < exists ; 1988 ; Managerial Law Volume 30 ; 30 >
-    au < exists ; 1989 ; Managerial Law Volume 31 ; 31 >
-    au < exists ; 1990 ; Managerial Law Volume 32 ; 32 >
-    au < exists ; 1991 ; Managerial Law Volume 33 ; 33 >
-    au < exists ; 1992 ; Managerial Law Volume 34 ; 34 >
-    au < exists ; 1993 ; Managerial Law Volume 35 ; 35 >
-    au < exists ; 1994 ; Managerial Law Volume 36 ; 36 >
-    au < exists ; 1995 ; Managerial Law Volume 37 ; 37 >
-    au < exists ; 1996 ; Managerial Law Volume 38 ; 38 >
-    au < exists ; 1997 ; Managerial Law Volume 39 ; 39 >
+    au < manifest ; 1967 ; Managerial Law Volume 2 ; 2 >
+    au < manifest ; 1967-1968 ; Managerial Law Volume 3 ; 3 >
+    au < manifest ; 1968 ; Managerial Law Volume 4 ; 4 >
+    au < manifest ; 1968-1969 ; Managerial Law Volume 5 ; 5 >
+    au < manifest ; 1969 ; Managerial Law Volume 6 ; 6 >
+    au < manifest ; 1969-1970 ; Managerial Law Volume 7 ; 7 >
+    au < manifest ; 1970 ; Managerial Law Volume 8 ; 8 >
+    au < manifest ; 1970-1971 ; Managerial Law Volume 9 ; 9 >
+    au < manifest ; 1971 ; Managerial Law Volume 10 ; 10 >
+    au < manifest ; 1971-1972 ; Managerial Law Volume 11 ; 11 >
+    au < manifest ; 1972 ; Managerial Law Volume 12 ; 12 >
+    au < manifest ; 1972-1973 ; Managerial Law Volume 13 ; 13 >
+    au < manifest ; 1973 ; Managerial Law Volume 14 ; 14 >
+    au < manifest ; 1973-1974 ; Managerial Law Volume 15 ; 15 >
+    au < manifest ; 1974 ; Managerial Law Volume 16 ; 16 >
+    au < manifest ; 1974 ; Managerial Law Volume 17 ; 17 >
+    au < manifest ; 1975 ; Managerial Law Volume 18 ; 18 >
+    au < manifest ; 1976 ; Managerial Law Volume 19 ; 19 >
+    au < manifest ; 1977 ; Managerial Law Volume 20 ; 20 >
+    au < manifest ; 1978 ; Managerial Law Volume 21 ; 21 >
+    au < manifest ; 1979 ; Managerial Law Volume 22 ; 22 >
+    au < manifest ; 1981 ; Managerial Law Volume 23 ; 23 >
+    au < manifest ; 1982 ; Managerial Law Volume 24 ; 24 >
+    au < manifest ; 1983 ; Managerial Law Volume 25 ; 25 >
+    au < manifest ; 1984 ; Managerial Law Volume 26 ; 26 >
+    au < manifest ; 1985 ; Managerial Law Volume 27 ; 27 >
+    au < manifest ; 1986 ; Managerial Law Volume 28 ; 28 >
+    au < manifest ; 1987 ; Managerial Law Volume 29 ; 29 >
+    au < manifest ; 1988 ; Managerial Law Volume 30 ; 30 >
+    au < manifest ; 1989 ; Managerial Law Volume 31 ; 31 >
+    au < manifest ; 1990 ; Managerial Law Volume 32 ; 32 >
+    au < manifest ; 1991 ; Managerial Law Volume 33 ; 33 >
+    au < manifest ; 1992 ; Managerial Law Volume 34 ; 34 >
+    au < manifest ; 1993 ; Managerial Law Volume 35 ; 35 >
+    au < manifest ; 1994 ; Managerial Law Volume 36 ; 36 >
+    au < manifest ; 1995 ; Managerial Law Volume 37 ; 37 >
+    au < manifest ; 1996 ; Managerial Law Volume 38 ; 38 >
+    au < manifest ; 1997 ; Managerial Law Volume 39 ; 39 >
     au < released ; 1998 ; Managerial Law Volume 40 ; 40 >
     au < released ; 1999 ; Managerial Law Volume 41 ; 41 >
     au < released ; 2000 ; Managerial Law Volume 42 ; 42 >
@@ -7234,15 +7237,14 @@
     >
 
     param[journal_issn] = 0114-0582
-    comment[platform] = online from 1997
+    comment[platform] = online from 1997 missing v10
     
-    au < exists ; 1997 ; Pacific Accounting Review Volume 9 ; 9 >
-    au < exists ; 1998 ; Pacific Accounting Review Volume 10 ; 10 >
-    au < exists ; 1999 ; Pacific Accounting Review Volume 11 ; 11 >
-    au < exists ; 2000 ; Pacific Accounting Review Volume 12 ; 12 >
-    au < exists ; 2001 ; Pacific Accounting Review Volume 13 ; 13 >
-    au < exists ; 2002 ; Pacific Accounting Review Volume 14 ; 14 >
-    au < exists ; 2003 ; Pacific Accounting Review Volume 15 ; 15 >
+    au < testing ; 1997 ; Pacific Accounting Review Volume 9 ; 9 >
+    au < testing ; 1999 ; Pacific Accounting Review Volume 11 ; 11 >
+    au < testing ; 2000 ; Pacific Accounting Review Volume 12 ; 12 >
+    au < testing ; 2001 ; Pacific Accounting Review Volume 13 ; 13 >
+    au < testing ; 2002 ; Pacific Accounting Review Volume 14 ; 14 >
+    au < testing ; 2003 ; Pacific Accounting Review Volume 15 ; 15 >
     au < released ; 2004 ; Pacific Accounting Review Volume 16 ; 16 >
     au < released ; 2005 ; Pacific Accounting Review Volume 17 ; 17 >
     au < released ; 2006 ; Pacific Accounting Review Volume 18 ; 18 >
@@ -7341,7 +7343,7 @@
     au < released ; 2008 ; Personnel Review Volume 37 ; 37 >
     au < released ; 2009 ; Personnel Review Volume 38 ; 38 >
     au < released ; 2010 ; Personnel Review Volume 39 ; 39 >
-    au < exists ; 2011 ; Personnel Review Volume 40 ; 40 >
+    au < manifest ; 2011 ; Personnel Review Volume 40 ; 40 >
 
   }
 
@@ -7512,7 +7514,7 @@
     au <  released ; 2008 ; Program: Electronic Library and Information Systems Volume 42 ; 42 >
     au <  released ; 2009 ; Program: Electronic Library and Information Systems Volume 43 ; 43 >
     au <  released ; 2010 ; Program: Electronic Library and Information Systems Volume 44 ; 44 >
-    au <  exists ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 >
+    au <  manifest ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 >
 
   }
 
@@ -7554,7 +7556,7 @@
     au < released ; 2008 ; Property Management Volume 26 ; 26 >
     au < released ; 2009 ; Property Management Volume 27 ; 27 >
     au < released ; 2010 ; Property Management Volume 28 ; 28 >
-    au < exists ; 2011 ; Property Management Volume 29 ; 29 >
+    au < manifest ; 2011 ; Property Management Volume 29 ; 29 >
 
   }
 
@@ -7581,7 +7583,7 @@
     au < released ; 2008 ; Qualitative Market Research: An International Journal Volume 11 ; 11 >
     au < released ; 2009 ; Qualitative Market Research: An International Journal Volume 12 ; 12 >
     au < released ; 2010 ; Qualitative Market Research: An International Journal Volume 13 ; 13 >
-    au < exists ; 2011 ; Qualitative Market Research: An International Journal Volume 14 ; 14 >
+    au < manifest ; 2011 ; Qualitative Market Research: An International Journal Volume 14 ; 14 >
 
   }
 
@@ -7602,21 +7604,21 @@
     au < released ; 2008 ; Qualitative Research in Accounting & Management Volume 5 ; 5 >
     au < released ; 2009 ; Qualitative Research in Accounting & Management Volume 6 ; 6 >
     au < released ; 2010 ; Qualitative Research in Accounting & Management Volume 7 ; 7 >
-    au < exists ; 2011 ; Qualitative Research in Accounting & Management Volume 8 ; 8 >
+    au < manifest ; 2011 ; Qualitative Research in Accounting & Management Volume 8 ; 8 >
 
   }
 
   { 
     title <
-      name = Qualitative Research in Financial Marketing ;
+      name = Qualitative Research in Financial Markets ;
       issn = 1775-4179
     >
 
     param[journal_issn] = 1775-4179
 
-    au < exists ; 2009 ; Qualitative Research in Financial Marketing Volume 1 ; 1 >
-    au < exists ; 2010 ; Qualitative Research in Financial Marketing Volume 2 ; 2 >
-    au < exists ; 2011 ; Qualitative Research in Financial Marketing Volume 3 ; 3 >
+    au < exists ; 2009 ; Qualitative Research in Financial Markets Volume 1 ; 1 >
+    au < exists ; 2010 ; Qualitative Research in Financial Markets Volume 2 ; 2 >
+    au < exists ; 2011 ; Qualitative Research in Financial Markets Volume 3 ; 3 >
 
   }
 
@@ -7635,6 +7637,7 @@
     au < released ; 2008 ; Qualitative Research in Organizations and Management: An International Journal Volume 3 ; 3 >
     au < released ; 2009 ; Qualitative Research in Organizations and Management: An International Journal Volume 4 ; 4 >
     au < released ; 2010 ; Qualitative Research in Organizations and Management: An International Journal Volume 5 ; 5 >
+    au < exists ; 2011 ; Qualitative Research in Organizations and Management: An International Journal Volume 6 ; 6 >
 
   }
 
@@ -7666,7 +7669,7 @@
     au < released ; 2008 ; Quality Assurance in Education Volume 16 ; 16 >
     au < released ; 2009 ; Quality Assurance in Education Volume 17 ; 17 >
     au < released ; 2010 ; Quality Assurance in Education Volume 18 ; 18 >
-    au < exists ; 2011 ; Quality Assurance in Education Volume 19 ; 19 >
+    au < manifest ; 2011 ; Quality Assurance in Education Volume 19 ; 19 >
 
   }
 
@@ -7696,7 +7699,7 @@
     au < released ; 2008 ; Rapid Prototyping Journal Volume 14 ; 14 >
     au < released ; 2009 ; Rapid Prototyping Journal Volume 15 ; 15 >
     au < released ; 2010 ; Rapid Prototyping Journal Volume 16 ; 16 >
-    au < exists ; 2011 ; Rapid Prototyping Journal Volume 17 ; 17 >
+    au < manifest ; 2011 ; Rapid Prototyping Journal Volume 17 ; 17 >
 
   }
 
@@ -7730,7 +7733,7 @@
     au < released ; 2008 ; Records Management Journal Volume 18 ; 18 >
     au < released ; 2009 ; Records Management Journal Volume 19 ; 19 >
     au < released ; 2010 ; Records Management Journal Volume 20 ; 20 >
-    au < exists ; 2011 ; Records Management Journal Volume 21 ; 21 >
+    au < manifest ; 2011 ; Records Management Journal Volume 21 ; 21 >
 
   }
 
@@ -7759,7 +7762,7 @@
     au < released ; 2008 ; Reference Reviews  Volume 22 ; 22 >
     au < released ; 2009 ; Reference Reviews  Volume 23 ; 23 >
     au < released ; 2010 ; Reference Reviews  Volume 24 ; 24 >
-    au < exists ; 2011 ; Reference Reviews  Volume 25 ; 25 >
+    au < manifest ; 2011 ; Reference Reviews  Volume 25 ; 25 >
 
   }
 
@@ -7810,7 +7813,7 @@
     au < released ; 2008 ; Reference Services Review Volume 36 ; 36 >
     au < released ; 2009 ; Reference Services Review Volume 37 ; 37 >
     au < released ; 2010 ; Reference Services Review Volume 38 ; 38 >
-    au < exists ; 2011 ; Reference Services Review Volume 39 ; 39 >
+    au < manifest ; 2011 ; Reference Services Review Volume 39 ; 39 >
 
   }
 
@@ -7833,7 +7836,7 @@
     au < released ; 2008 ; Review of Accounting and Finance Volume 7 ; 7 >
     au < released ; 2009 ; Review of Accounting and Finance Volume 8 ; 8 >
     au < released ; 2010 ; Review of Accounting and Finance Volume 9 ; 9 >
-    au < exists ; 2011 ; Review of Accounting and Finance Volume 10 ; 10 >
+    au < manifest ; 2011 ; Review of Accounting and Finance Volume 10 ; 10 >
 
   }
 
@@ -7878,7 +7881,7 @@
     au < released ; 2008 ; Sensor Review Volume 28 ; 28 >
     au < released ; 2009 ; Sensor Review Volume 29 ; 29 >
     au < released ; 2010 ; Sensor Review Volume 30 ; 30 >
-    au < exists ; 2011 ; Sensor Review Volume 31 ; 31 >
+    au < manifest ; 2011 ; Sensor Review Volume 31 ; 31 >
 
   }
 
@@ -7917,7 +7920,7 @@
     au < released ; 2008 ; Social Responsibility Journal Volume 4 ; 4 >
     au < released ; 2009 ; Social Responsibility Journal Volume 5 ; 5 >
     au < released ; 2010 ; Social Responsibility Journal Volume 6 ; 6 >
-    au < exists ; 2011 ; Social Responsibility Journal Volume 7 ; 7 >
+    au < manifest ; 2011 ; Social Responsibility Journal Volume 7 ; 7 >
 
   }
 
@@ -7936,7 +7939,7 @@
     au < released ; 2008 ; Society and Business Review Volume 3 ; 3 >
     au < released ; 2009 ; Society and Business Review Volume 4 ; 4 >
     au < released ; 2010 ; Society and Business Review Volume 5 ; 5 >
-    au < exists ; 2011 ; Society and Business Review Volume 6 ; 6 >
+    au < manifest ; 2011 ; Society and Business Review Volume 6 ; 6 >
 
   }
 
@@ -7972,7 +7975,7 @@
     au < released ; 2008 ; Soldering & Surface Mount Technology Volume 20 ; 20 >
     au < released ; 2009 ; Soldering & Surface Mount Technology Volume 21 ; 21 >
     au < released ; 2010 ; Soldering & Surface Mount Technology Volume 22 ; 22 >
-    au < exists ; 2011 ; Soldering & Surface Mount Technology Volume 23 ; 23 >
+    au < manifest ; 2011 ; Soldering & Surface Mount Technology Volume 23 ; 23 >
 
   }
   
@@ -7985,7 +7988,7 @@
 
     param[journal_issn] = 2042-678X
     
-    au < exists ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 >
+    au < manifest ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 >
  
   }
   
