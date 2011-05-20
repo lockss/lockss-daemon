@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.30 2011-04-27 21:41:50 mellen22 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.31 2011-05-20 20:07:00 mellen22 Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "ahead-of-print"),
         // Sage Filter for session ids in meta tags
         HtmlNodeFilters.tagWithAttributeRegex("meta", "id", "^session-"),
+        // For BMJ related links div 
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-external-links"), 
         
     };
     
