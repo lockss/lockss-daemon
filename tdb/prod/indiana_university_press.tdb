@@ -39,19 +39,20 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_today
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year; name ; param[volume] >
 
-      au < released ; Africa Today Volume 46 ; 46 >
-      au < released ; Africa Today Volume 47 ; 47 >
-      au < released ; Africa Today Volume 48 ; 48 >
-      au < released ; Africa Today Volume 49 ; 49 >
-      au < released ; Africa Today Volume 50 ; 50 >
-      au < released ; Africa Today Volume 51 ; 51 >
-      au < released ; Africa Today Volume 52 ; 52 >
-      au < released ; Africa Today Volume 53 ; 53 >
-      au < released ; Africa Today Volume 54 ; 54 >
-      au < released ; Africa Today Volume 55 ; 55 >
-      au < released ; Africa Today Volume 56 ; 56 >
+      au < released ; 1999 ; Africa Today Volume 46 ; 46 >
+      au < released ; 2000 ; Africa Today Volume 47 ; 47 >
+      au < released ; 2001 ; Africa Today Volume 48 ; 48 >
+      au < released ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+      au < released ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+      au < released ; 2004-2005 ; Africa Today Volume 51 ; 51 >
+      au < released ; 2005-2006 ; Africa Today Volume 52 ; 52 >
+      au < released ; 2006-2007 ; Africa Today Volume 53 ; 53 >
+      au < released ; 2007-2008 ; Africa Today Volume 54 ; 54 >
+      au < released ; 2008-2009 ; Africa Today Volume 55 ; 55 >
+      au < released ; 2009-2010 ; Africa Today Volume 56 ; 56 >
+      au < testing ; 2010-2011 ; Africa Today Volume 57 ; 57 >
 
     }
 
@@ -72,7 +73,7 @@
       param[journal_dir] = african_conflict_and_peacebuilding_review
       implicit < status ; year ; name ; param[volume] >
 
-      au < exists ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
+      au < testing ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
 
     }
     
@@ -107,14 +108,18 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = aleph_historical_studies_in_science_and_judaism
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 7 ; 7 >
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
-      au < released ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+      au < testing ; 2001 ; Aleph: Historical Studies in Science and Judaism Volume 1 ; 1 >
+      au < testing ; 2002 ; Aleph: Historical Studies in Science and Judaism Volume 2 ; 2 >
+      au < testing ; 2003 ; Aleph: Historical Studies in Science and Judaism Volume 3 ; 3 >
+      au < released ; 2004 ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
+      au < released ; 2005 ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
+      au < released ; 2006 ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
+      au < released ; 2007 ; Aleph: Historical Studies in Science and Judaism Volume 7 ; 7 >
+      au < released ; 2008 ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
+      au < released ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+      au < testing ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
 
     }
 
@@ -145,9 +150,10 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = black_camera
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; Black Camera Volume 1 ; 1 >
+      au < testing ; 2009-2010 ; Black Camera Volume 1 ; 1 >
+      au < testing ; 2010-2011 ; Black Camera Volume 2 ; 2 >
 
     }
 
@@ -183,12 +189,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = bridges_a_jewish_feminists_journal
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
-      au < released ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
-      au < released ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
-      au < released ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+      au < exists ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
+      au < released ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
+      au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
+      au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
+      au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+      au < testing ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
+      au < exists ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 ; 16 >
 
     }
 
@@ -225,14 +234,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eservice_journal
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; e-Service Journal Volume 1 ; 1 >
-      au < released ; e-Service Journal Volume 2 ; 2 >
-      au < released ; e-Service Journal Volume 3 ; 3 >
-      au < released ; e-Service Journal Volume 4 ; 4 >
-      au < released ; e-Service Journal Volume 5 ; 5 >
-      au < released ; e-Service Journal Volume 6 ; 6 >
+      au < released ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
+      au < released ; 2002-2003 ; e-Service Journal Volume 2 ; 2 >
+      au < released ; 2003-2005 ; e-Service Journal Volume 3 ; 3 >
+      au < released ; 2005-2006 ; e-Service Journal Volume 4 ; 4 >
+      au < released ; 2006-2007 ; e-Service Journal Volume 5 ; 5 >
+      au < released ; 2007-2009 ; e-Service Journal Volume 6 ; 6 >
+      au < released ; 2010 ; e-Service Journal Volume 7 ; 7 >
 
     }
 
@@ -272,17 +282,19 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ethics_and_the_environment
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Ethics & the Environment Volume 6 ; 6 >
-      au < released ; Ethics & the Environment Volume 7 ; 7 >
-      au < released ; Ethics & the Environment Volume 8 ; 8 >
-      au < released ; Ethics & the Environment Volume 9 ; 9 >
-      au < released ; Ethics & the Environment Volume 10 ; 10 >
-      au < released ; Ethics & the Environment Volume 11 ; 11 >
-      au < released ; Ethics & the Environment Volume 12 ; 12 >
-      au < released ; Ethics & the Environment Volume 13 ; 13 >
-      au < released ; Ethics & the Environment Volume 14 ; 14 >
+      au < released ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
+      au < released ; 2002 ; Ethics & the Environment Volume 7 ; 7 >
+      au < released ; 2003 ; Ethics & the Environment Volume 8 ; 8 >
+      au < released ; 2004 ; Ethics & the Environment Volume 9 ; 9 >
+      au < released ; 2005 ; Ethics & the Environment Volume 10 ; 10 >
+      au < released ; 2006 ; Ethics & the Environment Volume 11 ; 11 >
+      au < released ; 2007 ; Ethics & the Environment Volume 12 ; 12 >
+      au < released ; 2008 ; Ethics & the Environment Volume 13 ; 13 >
+      au < released ; 2009 ; Ethics & the Environment Volume 14 ; 14 >
+      au < released ; 2010 ; Ethics & the Environment Volume 15 ; 15 >
+      au < testing ; 2011 ; Ethics & the Environment Volume 16 ; 16 >
 
     }
 
@@ -323,13 +335,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = film_history
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Film History: An International Journal Volume 17 ; 17 >
-      au < released ; Film History: An International Journal Volume 18 ; 18 >
-      au < released ; Film History: An International Journal Volume 19 ; 19 >
-      au < released ; Film History: An International Journal Volume 20 ; 20 >
-      au < released ; Film History: An International Journal Volume 21 ; 21 >
+      au < released ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
+      au < released ; 2006 ; Film History: An International Journal Volume 18 ; 18 >
+      au < released ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
+      au < released ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
+      au < released ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
+      au < testing ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
+      au < testing ; 2011 ; Film History: An International Journal Volume 23 ; 23 >
 
     }
 
@@ -363,10 +377,12 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = the_global_south
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; The Global South Volume 2 ; 2 >
-      au < released ; The Global South Volume 3 ; 3 >
+      au < testing ; 2007 ; The Global South Volume 1 ; 1 >
+      au < testing ; 2008 ; The Global South Volume 2 ; 2 >
+      au < released ; 2009 ; The Global South Volume 3 ; 3 >
+      au < testing ; 2010 ; The Global South Volume 4 ; 4 >
 
     }
 
@@ -410,19 +426,21 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = history_and_memory
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; History & Memory Volume 11 ; 11 >
-      au < released ; History & Memory Volume 12 ; 12 >
-      au < released ; History & Memory Volume 13 ; 13 >
-      au < released ; History & Memory Volume 14 ; 14 >
-      au < released ; History & Memory Volume 15 ; 15 >
-      au < released ; History & Memory Volume 16 ; 16 >
-      au < released ; History & Memory Volume 17 ; 17 >
-      au < released ; History & Memory Volume 18 ; 18 >
-      au < released ; History & Memory Volume 19 ; 19 >
-      au < released ; History & Memory Volume 20 ; 20 >
-      au < released ; History & Memory Volume 21 ; 21 >
+      au < released ; 1999 ; History & Memory Volume 11 ; 11 >
+      au < released ; 2000 ; History & Memory Volume 12 ; 12 >
+      au < released ; 2001 ; History & Memory Volume 13 ; 13 >
+      au < released ; 2002 ; History & Memory Volume 14 ; 14 >
+      au < released ; 2003 ; History & Memory Volume 15 ; 15 >
+      au < released ; 2004 ; History & Memory Volume 16 ; 16 >
+      au < released ; 2005 ; History & Memory Volume 17 ; 17 >
+      au < released ; 2006 ; History & Memory Volume 18 ; 18 >
+      au < released ; 2007 ; History & Memory Volume 19 ; 19 >
+      au < released ; 2008 ; History & Memory Volume 20 ; 20 >
+      au < released ; 2009 ; History & Memory Volume 21 ; 21 >
+      au < released ; 2010 ; History & Memory Volume 22 ; 22 >
+      au < testing ; 2011 ; History & Memory Volume 23 ; 23 >
 
     }
 
@@ -442,18 +460,18 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hypatia
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Hypatia Volume 14 ; 14 >
-      au < released ; Hypatia Volume 15 ; 15 >
-      au < released ; Hypatia Volume 16 ; 16 >
-      au < released ; Hypatia Volume 17 ; 17 >
-      au < released ; Hypatia Volume 18 ; 18 >
-      au < released ; Hypatia Volume 19 ; 19 >
-      au < released ; Hypatia Volume 20 ; 20 >
-      au < released ; Hypatia Volume 21 ; 21 >
-      au < released ; Hypatia Volume 22 ; 22 >
-      au < released ; Hypatia Volume 23 ; 23 >
+      au < released ; 1999 ; Hypatia Volume 14 ; 14 >
+      au < released ; 2000 ; Hypatia Volume 15 ; 15 >
+      au < released ; 2001 ; Hypatia Volume 16 ; 16 >
+      au < released ; 2002 ; Hypatia Volume 17 ; 17 >
+      au < released ; 2003 ; Hypatia Volume 18 ; 18 >
+      au < released ; 2004 ; Hypatia Volume 19 ; 19 >
+      au < released ; 2005 ; Hypatia Volume 20 ; 20 >
+      au < released ; 2006 ; Hypatia Volume 21 ; 21 >
+      au < released ; 2007 ; Hypatia Volume 22 ; 22 >
+      au < released ; 2008 ; Hypatia Volume 23 ; 23 >
 
     }
 
@@ -491,15 +509,16 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = indiana_journal_of_global_legal_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-      au < released ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+      au < released ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
+      au < released ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
+      au < released ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
+      au < released ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
+      au < released ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+      au < released ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+      au < released ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+      au < released ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
 
     }
 
@@ -531,10 +550,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
-      au < released ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+      au < released ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+      au < released ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+      au < released ; 2010 ; International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
 
     }
 
@@ -579,23 +599,24 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = israel_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Israel Studies Volume 1 ; 1 >
-      au < released ; Israel Studies Volume 2 ; 2 >
-      au < released ; Israel Studies Volume 3 ; 3 >
-      au < released ; Israel Studies Volume 4 ; 4 >
-      au < released ; Israel Studies Volume 5 ; 5 >
-      au < released ; Israel Studies Volume 6 ; 6 >
-      au < released ; Israel Studies Volume 7 ; 7 >
-      au < released ; Israel Studies Volume 8 ; 8 >
-      au < released ; Israel Studies Volume 9 ; 9 >
-      au < released ; Israel Studies Volume 10 ; 10 >
-      au < released ; Israel Studies Volume 11 ; 11 >
-      au < released ; Israel Studies Volume 12 ; 12 >
-      au < released ; Israel Studies Volume 13 ; 13 >
-      au < released ; Israel Studies Volume 14 ; 14 >
-      au < released ; Israel Studies Volume 15 ; 15 >
+      au < released ; 1996 ; Israel Studies Volume 1 ; 1 >
+      au < released ; 1997 ; Israel Studies Volume 2 ; 2 >
+      au < released ; 1998 ; Israel Studies Volume 3 ; 3 >
+      au < released ; 1999 ; Israel Studies Volume 4 ; 4 >
+      au < released ; 2000 ; Israel Studies Volume 5 ; 5 >
+      au < released ; 2001 ; Israel Studies Volume 6 ; 6 >
+      au < released ; 2002 ; Israel Studies Volume 7 ; 7 >
+      au < released ; 2003 ; Israel Studies Volume 8 ; 8 >
+      au < released ; 2004 ; Israel Studies Volume 9 ; 9 >
+      au < released ; 2005 ; Israel Studies Volume 10 ; 10 >
+      au < released ; 2006 ; Israel Studies Volume 11 ; 11 >
+      au < released ; 2007 ; Israel Studies Volume 12 ; 12 >
+      au < released ; 2008 ; Israel Studies Volume 13 ; 13 >
+      au < released ; 2009 ; Israel Studies Volume 14 ; 14 >
+      au < released ; 2010 ; Israel Studies Volume 15 ; 15 >
+      au < released ; 2011 ; Israel Studies Volume 16 ; 16 >
 
     }
 
@@ -638,19 +659,21 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = jewish_social_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Jewish Social Studies Volume 5 ; 5 >
-      au < released ; Jewish Social Studies Volume 6 ; 6 >
-      au < released ; Jewish Social Studies Volume 7 ; 7 >
-      au < released ; Jewish Social Studies Volume 8 ; 8 >
-      au < released ; Jewish Social Studies Volume 9 ; 9 >
-      au < released ; Jewish Social Studies Volume 10 ; 10 >
-      au < released ; Jewish Social Studies Volume 11 ; 11 >
-      au < released ; Jewish Social Studies Volume 12 ; 12 >
-      au < released ; Jewish Social Studies Volume 13 ; 13 >
-      au < released ; Jewish Social Studies Volume 14 ; 14 >
-      au < released ; Jewish Social Studies Volume 15 ; 15 >
+      au < released ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
+      au < released ; 1998-1999 ; Jewish Social Studies Volume 5 ; 5 >
+      au < released ; 1999-2000 ; Jewish Social Studies Volume 6 ; 6 >
+      au < released ; 2000-2001 ; Jewish Social Studies Volume 7 ; 7 >
+      au < released ; 2001-2002 ; Jewish Social Studies Volume 8 ; 8 >
+      au < released ; 2002-2003 ; Jewish Social Studies Volume 9 ; 9 >
+      au < released ; 2003-2004 ; Jewish Social Studies Volume 10 ; 10 >
+      au < released ; 2004-2005 ; Jewish Social Studies Volume 11 ; 11 >
+      au < released ; 2005-2006 ; Jewish Social Studies Volume 12 ; 12 >
+      au < released ; 2006-2007 ; Jewish Social Studies Volume 13 ; 13 >
+      au < released ; 2007-2008 ; Jewish Social Studies Volume 14 ; 14 >
+      au < released ; 2008-2009 ; Jewish Social Studies Volume 15 ; 15 >
+      au < released ; 2009-2010 ; Jewish Social Studies Volume 16 ; 16 >
 
     }
 
@@ -687,13 +710,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_for_early_modern_cultural_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
-      au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
-      au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-      au < released ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-      au < released ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+      au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
+      au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+      au < released ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+      au < released ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+      au < released ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+      au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+      au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
 
     }
 
@@ -730,13 +755,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_feminist_studies_in_religion
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
-      au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
-      au < released ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
-      au < released ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-      au < released ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+      au < released ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
+      au < released ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+      au < released ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+      au < released ; 2007 ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+      au < released ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+      au < released ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+      au < released ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
 
     }
 
@@ -775,15 +802,18 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_folklore_research
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Journal of Folklore Research Volume 40 ; 40 >
-      au < released ; Journal of Folklore Research Volume 41 ; 41 >
-      au < released ; Journal of Folklore Research Volume 42 ; 42 >
-      au < released ; Journal of Folklore Research Volume 43 ; 43 >
-      au < released ; Journal of Folklore Research Volume 44 ; 44 >
-      au < released ; Journal of Folklore Research Volume 45 ; 45 >
-      au < released ; Journal of Folklore Research Volume 46 ; 46 >
+      au < released ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
+      au < released ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
+      au < released ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
+      au < released ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
+      au < released ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
+      au < released ; 2007 ; Journal of Folklore Research Volume 44 ; 44 >
+      au < released ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
+      au < released ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
+      au < released ; 2010 ; Journal of Folklore Research Volume 47 ; 47 >
+      au < testing ; 2011 ; Journal of Folklore Research Volume 48 ; 48 >
 
     }
 
@@ -819,13 +849,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_middle_east_womens_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Journal of Middle East Women's Studies Volume 2 ; 2 >
-      au < released ; Journal of Middle East Women's Studies Volume 3 ; 3 >
-      au < released ; Journal of Middle East Women's Studies Volume 4 ; 4 >
-      au < released ; Journal of Middle East Women's Studies Volume 5 ; 5 >
-      au < released ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+      au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
+      au < released ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+      au < released ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+      au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
+      au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
+      au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+      au < testing ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 >
 
     }
 
@@ -863,22 +895,23 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_modern_literature
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
       comment[jml31_32] = 500 errors
 
-      au < released ; Journal of Modern Literature Volume 22 ; 22 >
-      au < released ; Journal of Modern Literature Volume 23 ; 23 >
-      au < released ; Journal of Modern Literature Volume 24 ; 24 >
-      au < released ; Journal of Modern Literature Volume 25 ; 25 >
-      au < released ; Journal of Modern Literature Volume 26 ; 26 >
-      au < released ; Journal of Modern Literature Volume 27 ; 27 >
-      au < released ; Journal of Modern Literature Volume 28 ; 28 >
-      au < released ; Journal of Modern Literature Volume 29 ; 29 >
-      au < released ; Journal of Modern Literature Volume 30 ; 30 >
-      au < notReady ; Journal of Modern Literature Volume 31 ; 31 >
-      au < notReady ; Journal of Modern Literature Volume 32 ; 32 >
-      au < released ; Journal of Modern Literature Volume 33 ; 33 >
+      au < released ; 1998-1999 ; Journal of Modern Literature Volume 22 ; 22 >
+      au < released ; 1999-2000 ; Journal of Modern Literature Volume 23 ; 23 >
+      au < released ; 2000-2001 ; Journal of Modern Literature Volume 24 ; 24 >
+      au < released ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
+      au < released ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
+      au < released ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
+      au < released ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
+      au < released ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
+      au < released ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
+      au < testing ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
+      au < testing ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
+      au < released ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
+      au < testing ; 2010-2011 ; Journal of Modern Literature Volume 34 ; 34 >
 
     }
 
@@ -906,7 +939,7 @@
       au < down ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
       au < down ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
       au < down ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
-      au < down ; 2009 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
+      au < down ; 2009-2010 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
 
     }
 
@@ -915,16 +948,17 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = meridians
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
       comment[m8] = 500 errors
 
-      au < released ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
-      au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
-      au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
-      au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
-      au < notReady ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
-      au < released ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+      au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+      au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+      au < released ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+      au < released ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+      au < notReady ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+      au < released ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+      au < released ; 2009-2010 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
 
     }
 
@@ -955,23 +989,25 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = nashim
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
       comment[nm15_16] = 500 errors
 
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 ; 9 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
-      au < notReady ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
-      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
+      au < released ; 2003 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
+      au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
+      au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
+      au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 ; 9 >
+      au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
+      au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
+      au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
+      au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
+      au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
+      au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
+      au < notReady ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
+      au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
+      au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
+      au < testing ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 19 ; 19 >
+      au < testing ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 20 ; 20 >
 
     }
 
@@ -1010,14 +1046,15 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = native_plants_journal
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Native Plants Journal Volume 5 ; 5 >
-      au < released ; Native Plants Journal Volume 6 ; 6 >
-      au < released ; Native Plants Journal Volume 7 ; 7 >
-      au < released ; Native Plants Journal Volume 8 ; 8 >
-      au < released ; Native Plants Journal Volume 9 ; 9 >
-      au < released ; Native Plants Journal Volume 10 ; 10 >
+      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < released ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < released ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < released ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
 
     }
 
@@ -1056,15 +1093,17 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = philosophy_of_music_education_review
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Philosophy of Music Education Review Volume 11 ; 11 >
-      au < released ; Philosophy of Music Education Review Volume 12 ; 12 >
-      au < released ; Philosophy of Music Education Review Volume 13 ; 13 >
-      au < released ; Philosophy of Music Education Review Volume 14 ; 14 >
-      au < released ; Philosophy of Music Education Review Volume 15 ; 15 >
-      au < released ; Philosophy of Music Education Review Volume 16 ; 16 >
-      au < released ; Philosophy of Music Education Review Volume 17 ; 17 >
+      au < released ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
+      au < released ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
+      au < released ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
+      au < released ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
+      au < released ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
+      au < released ; 2007 ; Philosophy of Music Education Review Volume 15 ; 15 >
+      au < released ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
+      au < released ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
+      au < released ; 2010 ; Philosophy of Music Education Review Volume 18 ; 18 >
 
     }
 
@@ -1103,20 +1142,20 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = prooftexts
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
     
       comment[pt28] = 500 errors
 
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
-      au < notReady ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
-      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
+      au < released ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
+      au < released ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
+      au < released ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
+      au < released ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
+      au < released ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
+      au < released ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
+      au < released ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
+      au < released ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
+      au < released ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
+      au < released ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
 
     }
 
@@ -1148,10 +1187,11 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = race_ethnicity
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
-      au < released ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+      au < released ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
+      au < released ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
+      au < released ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
 
     }
 
@@ -1192,22 +1232,22 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = research_in_african_literatures
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
       comment[ral39_40] = 500 errors
 
-      au < released ; Research in African Literatures Volume 30 ; 30 >
-      au < released ; Research in African Literatures Volume 31 ; 31 >
-      au < released ; Research in African Literatures Volume 32 ; 32 >
-      au < released ; Research in African Literatures Volume 33 ; 33 >
-      au < released ; Research in African Literatures Volume 34 ; 34 >
-      au < released ; Research in African Literatures Volume 35 ; 35 >
-      au < released ; Research in African Literatures Volume 36 ; 36 >
-      au < released ; Research in African Literatures Volume 37 ; 37 >
-      au < released ; Research in African Literatures Volume 38 ; 38 >
-      au < notReady ; Research in African Literatures Volume 39 ; 39 >
-      au < notReady ; Research in African Literatures Volume 40 ; 40 >
-      au < released ; Research in African Literatures Volume 41 ; 41 >
+      au < released ; 1999 ; Research in African Literatures Volume 30 ; 30 >
+      au < released ; 2000 ; Research in African Literatures Volume 31 ; 31 >
+      au < released ; 2001 ; Research in African Literatures Volume 32 ; 32 >
+      au < released ; 2002 ; Research in African Literatures Volume 33 ; 33 >
+      au < released ; 2003 ; Research in African Literatures Volume 34 ; 34 >
+      au < released ; 2004 ; Research in African Literatures Volume 35 ; 35 >
+      au < released ; 2005 ; Research in African Literatures Volume 36 ; 36 >
+      au < released ; 2006 ; Research in African Literatures Volume 37 ; 37 >
+      au < released ; 2007 ; Research in African Literatures Volume 38 ; 38 >
+      au < released ; 2008 ; Research in African Literatures Volume 39 ; 39 >
+      au < released ; 2009 ; Research in African Literatures Volume 40 ; 40 >
+      au < released ; 2010 ; Research in African Literatures Volume 41 ; 41 >
 
     }
 
@@ -1242,12 +1282,13 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = textual_cultures
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
-      au < released ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
-      au < released ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
-      au < released ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
+      au < released ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
+      au < released ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
+      au < released ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
+      au < released ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
+      au < released ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 ; 5 >
 
     }
 
@@ -1283,12 +1324,14 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = transactions_of_the_charles_s_peirce_society
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-      au < released ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
-      au < released ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
-      au < released ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+      au < released ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
+      au < released ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+      au < released ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+      au < released ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+      au < released ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+      au < released ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
 
     }
 
@@ -1319,18 +1362,20 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = transition
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Transition: An International Review Volume 9 ; 9 >
-      au < released ; Transition: An International Review Volume 10 ; 10 >
-      au < manifest ; Transition: An International Review Volume 11 ; 11 >
-      au < manifest ; Transition: An International Review Volume 12 ; 12 >
-      au < manifest ; Transition: An International Review Volume 13 ; 13 >
-      au < released ; Transition: An International Review Issue 98 ; 98 >
-      au < released ; Transition: An International Review Issue 99 ; 99 >
-      au < released ; Transition: An International Review Issue 100 ; 100 >
-      au < released ; Transition: An International Review Issue 101 ; 101 >
-      au < released ; Transition: An International Review Issue 102 ; 102 >
+      au < released ; 2000 ; Transition: An International Review Volume 9 ; 9 >
+      au < released ; 2000-2001 ; Transition: An International Review Volume 10 ; 10 >
+      au < doNotProcess ; 2001-2002 ; Transition: An International Review Volume 11 ; 11 >
+      au < testing ; 2002-2003 ; Transition: An International Review Volume 12 ; 12 >
+      au < testing ; 2004-2007 ; Transition: An International Review Volume 13 ; 13 >
+      au < released ; 2008 ; Transition: An International Review Issue 98 ; 98 >
+      au < released ; 2008 ; Transition: An International Review Issue 99 ; 99 >
+      au < released ; 2009 ; Transition: An International Review Issue 100 ; 100 >
+      au < released ; 2009 ; Transition: An International Review Issue 101 ; 101 >
+      au < released ; 2010 ; Transition: An International Review Issue 102 ; 102 >
+      au < testing ; 2010 ; Transition: An International Review Issue 103 ; 103 >
+      au < testing ; 2011 ; Transition: An International Review Issue 104 ; 104 >
 
     }
 
@@ -1370,19 +1415,19 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = victorian_studies
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Victorian Studies Volume 42 ; 42 >
-      au < released ; Victorian Studies Volume 43 ; 43 >
-      au < released ; Victorian Studies Volume 44 ; 44 >
-      au < released ; Victorian Studies Volume 45 ; 45 >
-      au < released ; Victorian Studies Volume 46 ; 46 >
-      au < released ; Victorian Studies Volume 47 ; 47 >
-      au < released ; Victorian Studies Volume 48 ; 48 >
-      au < released ; Victorian Studies Volume 49 ; 49 >
-      au < released ; Victorian Studies Volume 50 ; 50 >
-      au < released ; Victorian Studies Volume 51 ; 51 >
-      au < released ; Victorian Studies Volume 52 ; 52 >
+      au < released ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
+      au < released ; 2000-2001 ; Victorian Studies Volume 43 ; 43 >
+      au < released ; 2001-2002 ; Victorian Studies Volume 44 ; 44 >
+      au < released ; 2002-2003 ; Victorian Studies Volume 45 ; 45 >
+      au < released ; 2003-2004 ; Victorian Studies Volume 46 ; 46 >
+      au < released ; 2004-2005 ; Victorian Studies Volume 47 ; 47 >
+      au < released ; 2005-2006 ; Victorian Studies Volume 48 ; 48 >
+      au < released ; 2006-2007 ; Victorian Studies Volume 49 ; 49 >
+      au < released ; 2007-2008 ; Victorian Studies Volume 50 ; 50 >
+      au < released ; 2008-2009 ; Victorian Studies Volume 51 ; 51 >
+      au < released ; 2009-2010 ; Victorian Studies Volume 52 ; 52 >
 
     }
 
