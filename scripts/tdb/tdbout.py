@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.8 2011-05-20 19:52:25 barry409 Exp $
+# $Id: tdbout.py,v 1.9 2011-05-20 20:07:04 barry409 Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -75,6 +75,10 @@ class TdboutConstants:
     OPTION_WARNINGS_SHORT = 'w'
     OPTION_WARNINGS_HELP = 'include warnings with the CSV or TSV output'
 
+    OPTION_INPUT_FILE = 'input'
+    OPTION_INPUT_FILE_SHORT = 'i'
+    OPTION_INPUT_FILE_HELP = 'read input from a file'
+
 def process_tdbout(tdb, options):
     fields = options.fields.split(',')
     result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
@@ -102,6 +106,12 @@ def __option_parser__(parser=None):
     tdbout_group.add_option('-' + TdboutConstants.OPTION_FIELDS_SHORT,
                             '--' + TdboutConstants.OPTION_FIELDS,
                             help=TdboutConstants.OPTION_FIELDS_HELP)
+    tdbout_group.add_option('-' + TdboutConstants.OPTION_INPUT_FILE_SHORT,
+                            '--' + TdboutConstants.OPTION_INPUT_FILE,
+                            action='store',
+                            dest='input_file',
+                            help=TdboutConstants.OPTION_INPUT_FILE_HELP
+                            )
     def __synonym_auid(opt, str, val, par):
         if getattr(par.values, TdboutConstants.OPTION_STYLE, None): par.error('cannot specify -%s and -%s together' % (TdboutConstants.OPTION_AUID_SHORT, TdboutConstants.OPTION_STYLE_SHORT))
         setattr(par.values, TdboutConstants.OPTION_STYLE, TdboutConstants.OPTION_STYLE_LIST)
@@ -167,6 +177,10 @@ if __name__ == '__main__':
     parser = __option_parser__()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     __reprocess_options__(parser, options)
+    if options.input_file:
+        infile = open(options.input_file, 'r')
+    else:
+        infile = sys.stdin
     try:
         tdb = tdbparse.tdbparse(sys.stdin, options) 
     except tdbparse.TdbparseSyntaxError, e:
