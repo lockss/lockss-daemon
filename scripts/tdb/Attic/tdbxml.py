@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.18 2011-05-20 19:52:25 barry409 Exp $
+# $Id: tdbxml.py,v 1.19 2011-05-20 20:04:11 barry409 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -268,12 +268,14 @@ def __option_parser__(parser=None):
     tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_INPUT_FILE_SHORT,
                             '--' + TdbxmlConstants.OPTION_INPUT_FILE,
                             action='store',
-                            dest='input_file'
+                            dest='input_file',
+                            help=TdbxmlConstants.OPTION_INPUT_FILE_HELP
                             )
     tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_OUTPUT_FILE_SHORT,
                             '--' + TdbxmlConstants.OPTION_OUTPUT_FILE,
                             action='store',
-                            dest='output_file'
+                            dest='output_file',
+                            help=TdbxmlConstants.OPTION_OUTPUT_FILE_HELP
                             )
     parser.add_option_group(tdbxml_group)
     return parser
