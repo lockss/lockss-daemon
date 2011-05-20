@@ -117,7 +117,7 @@
       au < released ; BMC Biotechnology Volume 8 ; 8 >
       au < released ; BMC Biotechnology Volume 9 ; 9 >
       au < released ; BMC Biotechnology Volume 10 ; 10 >
-      au < testing ; BMC Biotechnology Volume 11 ; 11 >
+      au < ready ; BMC Biotechnology Volume 11 ; 11 >
 
     }
 
@@ -161,7 +161,7 @@
       au < released ; BMC Cancer Volume 8 ; 8 >
       au < released ; BMC Cancer Volume 9 ; 9 >
       au < released ; BMC Cancer Volume 10 ; 10 >
-      au < testing ; BMC Cancer Volume 11 ; 11 >
+      au < ready ; BMC Cancer Volume 11 ; 11 >
 
     }
 
@@ -183,7 +183,7 @@
       au < released ; BMC Cardiovascular Disorders Volume 8 ; 8 >
       au < released ; BMC Cardiovascular Disorders Volume 9 ; 9 >
       au < released ; BMC Cardiovascular Disorders Volume 10 ; 10 >
-      au < testing ; BMC Cardiovascular Disorders Volume 11 ; 11 >
+      au < ready ; BMC Cardiovascular Disorders Volume 11 ; 11 >
 
     }
 
@@ -448,7 +448,7 @@
       au < released ; BMC Evolutionary Biology Volume 8 ; 8 >
       au < released ; BMC Evolutionary Biology Volume 9 ; 9 >
       au < released ; BMC Evolutionary Biology Volume 10 ; 10 >
-      au < testing ; BMC Evolutionary Biology Volume 11 ; 11 >
+      au < ready ; BMC Evolutionary Biology Volume 11 ; 11 >
 
     }
 
@@ -516,7 +516,7 @@
       au < released ; BMC Genetics Volume 9 ; 9 >
       au < released ; BMC Genetics Volume 10 ; 10 >
       au < released ; BMC Genetics Volume 11 ; 11 >
-      au < testing ; BMC Genetics Volume 12 ; 12 >
+      au < ready ; BMC Genetics Volume 12 ; 12 >
 
     }
 
@@ -539,7 +539,7 @@
       au < released ; BMC Genomics Volume 9 ; 9 >
       au < released ; BMC Genomics Volume 10 ; 10 >
       au < released ; BMC Genomics Volume 11 ; 11 >
-      au < testing ; BMC Genomics Volume 12 ; 12 >
+      au < ready ; BMC Genomics Volume 12 ; 12 >
 
     }
 
@@ -561,7 +561,7 @@
       au < released ; BMC Geriatrics Volume 8 ; 8 >
       au < released ; BMC Geriatrics Volume 9 ; 9 >
       au < released ; BMC Geriatrics Volume 10 ; 10 >
-      au < testing ; BMC Geriatrics Volume 11 ; 11 >
+      au < ready ; BMC Geriatrics Volume 11 ; 11 >
 
     }
 
@@ -583,7 +583,7 @@
       au < released ; BMC Health Services Research Volume 8 ; 8 >
       au < released ; BMC Health Services Research Volume 9 ; 9 >
       au < released ; BMC Health Services Research Volume 10 ; 10 >
-      au < testing ; BMC Health Services Research Volume 11 ; 11 >
+      au < ready ; BMC Health Services Research Volume 11 ; 11 >
 
     }
 
@@ -1395,7 +1395,7 @@
         eissn = 1742-6405
       >
 
-	  comment[ARTV8] = Journal manifest missing on April 21, 2011
+	  comment[ARTV8] = Journal manifest missing 2011-04-21
 
       param[base_url] = http://www.aidsrestherapy.com/
       param[journal_issn] = 1742-6405
@@ -1407,7 +1407,7 @@
       au < released ; AIDS Research and Therapy Volume 5 ; 5 >
       au < released ; AIDS Research and Therapy Volume 6 ; 6 >
       au < released ; AIDS Research and Therapy Volume 7 ; 7 >
-      au < manifest ; AIDS Research and Therapy Volume 8 ; 8 >
+      au < exists ; AIDS Research and Therapy Volume 8 ; 8 >
 
     }
 
@@ -1435,7 +1435,7 @@
         eissn = 1476-0711
       >
 
-	  comment[ACMA11] = Journal manifest missing on April 21, 2011
+	  comment[ACMA11] = Journal manifest missing on 2011-04-21
 	  
       param[base_url] = http://www.ann-clinmicrob.com/
       param[journal_issn] = 1476-0711
@@ -1450,7 +1450,7 @@
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
-      au < manifest ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
+      au < exists ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
 
     }
 
@@ -1500,6 +1500,8 @@
         eissn = 1478-6362 ;
         issnl = 1478-6354
       >
+      
+      comment[ArResThe] = website restructured 2011-05
 
       param[base_url] = http://arthritis-research.com/
       param[journal_issn] = 1478-6354
@@ -1516,7 +1518,7 @@
       au < released ; Arthritis Research & Therapy Volume 10 ; 10 >
       au < released ; Arthritis Research & Therapy Volume 11 ; 11 >
       au < released ; Arthritis Research & Therapy Volume 12 ; 12 >
-      au < testing ; Arthritis Research & Therapy Volume 13 ; 13 >
+      au < notReady ; Arthritis Research & Therapy Volume 13 ; 13 >
 
     }
 
@@ -1536,7 +1538,7 @@
       au < released ; Australia and New Zealand Health Policy Volume 5 ; 5 >
       au < released ; Australia and New Zealand Health Policy Volume 6 ; 6 >
       au < released ; Australia and New Zealand Health Policy Volume 7 ; 7 >
-      au < testing ; Australia and New Zealand Health Policy Volume 8 ; 8 >
+      au < ready ; Australia and New Zealand Health Policy Volume 8 ; 8 >
 
     }
 
@@ -1555,7 +1557,7 @@
       au < released ; Behavioral and Brain Functions Volume 4 ; 4 >
       au < released ; Behavioral and Brain Functions Volume 5 ; 5 >
       au < released ; Behavioral and Brain Functions Volume 6 ; 6 >
-      au < testing ; Behavioral and Brain Functions Volume 7 ; 7 >
+      au < ready ; Behavioral and Brain Functions Volume 7 ; 7 >
 
     }
 
@@ -1584,7 +1586,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < released ; Biology Direct Volume 3 ; 3 >
       au < released ; Biology Direct Volume 4 ; 4 >
       au < notReady ; Biology Direct Volume 5 ; 5 >
-      au < testing ; Biology Direct Volume 6 ; 6 >
+      au < ready ; Biology Direct Volume 6 ; 6 >
 
     }
 
@@ -1605,7 +1607,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; BioMagnetic Research and Technology Volume 4 ; 4 >
       au < released ; BioMagnetic Research and Technology Volume 5 ; 5 >
       au < released ; BioMagnetic Research and Technology Volume 6 ; 6 >
-      au < testing ; BioMagnetic Research and Technology Volume 7 ; 7 >
+      au < ready ; BioMagnetic Research and Technology Volume 7 ; 7 >
 
     }
 
@@ -1627,7 +1629,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; BioMedical Engineering OnLine Volume 7 ; 7 >
       au < released ; BioMedical Engineering OnLine Volume 8 ; 8 >
       au < released ; BioMedical Engineering OnLine Volume 9 ; 9 >
-      au < testing ; BioMedical Engineering OnLine Volume 10 ; 10 >
+      au < ready ; BioMedical Engineering OnLine Volume 10 ; 10 >
 
     }
 
@@ -1636,6 +1638,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = BioPsychoSocial Medicine ;
         eissn = 1751-0759
       >
+      
+      comment[BioPsySoc] = website being restructured? 2011-05
 
       param[base_url] = http://www.bpsmedicine.com/
       param[journal_issn] = 1751-0759
@@ -1644,7 +1648,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; BioPsychoSocial Medicine Volume 2 ; 2 >
       au < released ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < released ; BioPsychoSocial Medicine Volume 4 ; 4 >
-      au < testing ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < notReady ; BioPsychoSocial Medicine Volume 5 ; 5 >
 
       
     }
@@ -1654,6 +1658,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Biotechnology for Biofuels ;
         eissn = 1754-6834
       >
+      
+      comment[Biofuels] = website being restructured? 2011-05
 
       param[base_url] = http://www.biotechnologyforbiofuels.com/
       param[journal_issn] = 1754-6834
@@ -1661,7 +1667,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Biotechnology for Biofuels Volume 1 ; 1 >
       au < released ; Biotechnology for Biofuels Volume 2 ; 2 >
       au < released ; Biotechnology for Biofuels Volume 3 ; 3 >
-      au < testing ; Biotechnology for Biofuels Volume 4 ; 4 >
+      au < notReady ; Biotechnology for Biofuels Volume 4 ; 4 >
 
       
     }
@@ -1687,7 +1693,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Breast Cancer Research Volume 10 ; 10 >
       au < released ; Breast Cancer Research Volume 11 ; 11 >
       au < released ; Breast Cancer Research Volume 12 ; 12 >
-      au < testing ; Breast Cancer Research Volume 13 ; 13 >
+      au < ready ; Breast Cancer Research Volume 13 ; 13 >
 
     }
 
@@ -1710,7 +1716,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cancer Cell International Volume 8 ; 8 >
       au < released ; Cancer Cell International Volume 9 ; 9 >
       au < released ; Cancer Cell International Volume 10 ; 10 >
-      au < testing ; Cancer Cell International Volume 11 ; 11 >
+      au < ready ; Cancer Cell International Volume 11 ; 11 >
 
 
     }
@@ -1720,6 +1726,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Carbon Balance and Management ;
         eissn = 1750-0680
       >
+      
+      comment[CBAM] = website being restructured? 2011-05
 
       param[base_url] = http://www.cbmjournal.com/
       param[journal_issn] = 1750-0680
@@ -1729,7 +1737,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Carbon Balance and Management Volume 3 ; 3 >
       au < released ; Carbon Balance and Management Volume 4 ; 4 >
       au < released ; Carbon Balance and Management Volume 5 ; 5 >
-      au < testing ; Carbon Balance and Management Volume 6 ; 6 >
+      au < notReady ; Carbon Balance and Management Volume 6 ; 6 >
 
 
     }
@@ -1739,6 +1747,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Cardiovascular Diabetology ;
         eissn = 1475-2840
       >
+      
+      comment[CardDia] = website being restructured? 2011-05
 
       param[base_url] = http://www.cardiab.com/
       param[journal_issn] = 1475-2840
@@ -1752,7 +1762,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cardiovascular Diabetology Volume 7 ; 7 >
       au < released ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; Cardiovascular Diabetology Volume 9 ; 9 >
-      au < testing ; Cardiovascular Diabetology Volume 10 ; 10 >
+      au < notReady ; Cardiovascular Diabetology Volume 10 ; 10 >
 
     }
 
@@ -1761,6 +1771,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Cardiovascular Ultrasound ;
         eissn = 1476-7120
       >
+      
+      comment[CardUltra] = website being restructured? 2011-05
 
       param[base_url] = http://www.cardiovascularultrasound.com/
       param[journal_issn] = 1476-7120
@@ -1773,7 +1785,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cardiovascular Ultrasound Volume 6 ; 6 >
       au < released ; Cardiovascular Ultrasound Volume 7 ; 7 >
       au < released ; Cardiovascular Ultrasound Volume 8 ; 8 >
-      au < testing ; Cardiovascular Ultrasound Volume 9 ; 9 >
+      au < notReady ; Cardiovascular Ultrasound Volume 9 ; 9 >
       
     }
 
@@ -1789,7 +1801,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cases Journal Volume 1 ; 1 >
       au < released ; Cases Journal Volume 2 ; 2 >
       au < released ; Cases Journal Volume 3 ; 3 >
-      au < testing ; Cases Journal Volume 4 ; 4 >
+      au < ready ; Cases Journal Volume 4 ; 4 >
 
     }
 
@@ -1798,6 +1810,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Cell Communication and Signaling ;
         eissn = 1478-811X
       >
+      
+      comment[CellComm] = website being restructured? 2011-05
 
       param[base_url] = http://www.biosignaling.com/
       param[journal_issn] = 1478-811X
@@ -1810,7 +1824,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cell Communication and Signaling Volume 6 ; 6 >
       au < released ; Cell Communication and Signaling Volume 7 ; 7 >
       au < released ; Cell Communication and Signaling Volume 8 ; 8 >
-      au < testing ; Cell Communication and Signaling Volume 9 ; 9 >
+      au < notReady ; Cell Communication and Signaling Volume 9 ; 9 >
 
     }
 
@@ -1828,7 +1842,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cell Division Volume 3 ; 3 >
       au < released ; Cell Division Volume 4 ; 4 >
       au < released ; Cell Division Volume 5 ; 5 >
-      au < testing ; Cell Division Volume 6 ; 6 >
+      au < ready ; Cell Division Volume 6 ; 6 >
 
     }
 
@@ -1837,6 +1851,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Cerebrospinal Fluid Research ;
         eissn = 1743-8454
       >
+      
+      comment[CereFluid] = website restructured? 2011-05
 
       param[base_url] = http://www.cerebrospinalfluidresearch.com/
       param[journal_issn] = 1743-8454
@@ -1848,7 +1864,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cerebrospinal Fluid Research Volume 5 ; 5 >
       au < released ; Cerebrospinal Fluid Research Volume 6 ; 6 >
       au < released ; Cerebrospinal Fluid Research Volume 7 ; 7 >
-      au < testing ; Cerebrospinal Fluid Research Volume 8 ; 8 >
+      au < notReady ; Cerebrospinal Fluid Research Volume 8 ; 8 >
 
     }
 
@@ -1857,6 +1873,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Child and Adolescent Psychiatry and Mental Health ;
         eissn = 1753-2000
       >
+      
+      comment[ChAdPsy] = website being restructured? 2011-05
 
       param[base_url] = http://www.capmh.com/
       param[journal_issn] = 1753-2000
@@ -1865,7 +1883,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
-      au < testing ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
+      au < notReady ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
 
     }
 
@@ -1883,7 +1901,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chinese Medicine Volume 3 ; 3 >
       au < released ; Chinese Medicine Volume 4 ; 4 >
       au < released ; Chinese Medicine Volume 5 ; 5 >
-      au < testing ; Chinese Medicine Volume 6 ; 6 >
+      au < ready ; Chinese Medicine Volume 6 ; 6 >
 
     }
 
@@ -1892,6 +1910,8 @@ comment[bmr] = journal archive available, but no new volumes
         name = Chiropractic & Osteopathy ;
         eissn = 1746-1340
       >
+      
+      comment[ChiOst] = Website being restructured? 
 
       param[base_url] = http://www.chiroandosteo.com/
       param[journal_issn] = 1746-1340
@@ -1902,7 +1922,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chiropractic & Osteopathy Volume 16 ; 16 >
       au < released ; Chiropractic & Osteopathy Volume 17 ; 17 >
       au < released ; Chiropractic & Osteopathy Volume 18 ; 18 >
-      au < testing ; Chiropractic & Osteopathy Volume 19 ; 19 >
+      au < notReady ; Chiropractic & Osteopathy Volume 19 ; 19 >
 
       
     }
@@ -1924,7 +1944,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Clinical and Molecular Allergy Volume 6 ; 6 >
       au < released ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < released ; Clinical and Molecular Allergy Volume 8 ; 8 >
-      au < testing ; Clinical and Molecular Allergy Volume 9 ; 9 >
+      au < manifest ; Clinical and Molecular Allergy Volume 9 ; 9 >
 
     }
 
@@ -1943,7 +1963,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cough Volume 4 ; 4 >
       au < released ; Cough Volume 5 ; 5 >
       au < released ; Cough Volume 6 ; 6 >
-      au < testing ; Cough Volume 7 ; 7 >
+      au < manifest ; Cough Volume 7 ; 7 >
 
     }
 
@@ -1970,7 +1990,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Critical Care Volume 12 ; 12 >
       au < released ; Critical Care Volume 13 ; 13 >
       au < released ; Critical Care Volume 14 ; 14 >
-      au < testing ; Critical Care Volume 15 ; 15 >
+      au < manifest ; Critical Care Volume 15 ; 15 >
 
     }
 
@@ -1988,7 +2008,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Diagnostic Pathology Volume 3 ; 3 >
       au < released ; Diagnostic Pathology Volume 4 ; 4 >
       au < released ; Diagnostic Pathology Volume 5 ; 5 >
-      au < testing ; Diagnostic Pathology Volume 6 ; 6 >
+      au < manifest ; Diagnostic Pathology Volume 6 ; 6 >
 
     }
 
@@ -2010,7 +2030,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Dynamic Medicine Volume 7 ; 7 >
       au < released ; Dynamic Medicine Volume 8 ; 8 >
       au < released ; Dynamic Medicine Volume 9 ; 9 >
-      au < testing ; Dynamic Medicine Volume 10 ; 10 >
+      au < manifest ; Dynamic Medicine Volume 10 ; 10 >
 
     }
 
@@ -2030,7 +2050,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Emerging Themes in Epidemiology Volume 5 ; 5 >
       au < released ; Emerging Themes in Epidemiology Volume 6 ; 6 >
       au < released ; Emerging Themes in Epidemiology Volume 7 ; 7 >
-      au < testing ; Emerging Themes in Epidemiology Volume 8 ; 8 >
+      au < manifest ; Emerging Themes in Epidemiology Volume 8 ; 8 >
 
     }
 
@@ -2052,7 +2072,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Environmental Health Volume 7 ; 7 >
       au < released ; Environmental Health Volume 8 ; 8 >
       au < released ; Environmental Health Volume 9 ; 9 >
-      au < testing ; Environmental Health Volume 10 ; 10 >
+      au < manifest ; Environmental Health Volume 10 ; 10 >
 
     }
 
@@ -2070,7 +2090,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
       au < released ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
       au < released ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-      au < testing ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
+      au < manifest ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
 
     }
 
@@ -2088,7 +2108,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Frontiers in Zoology Volume 3 ; 3 >
       au < released ; Frontiers in Zoology Volume 4 ; 4 >
       au < released ; Frontiers in Zoology Volume 5 ; 5 >
-      au < testing ; Frontiers in Zoology Volume 6 ; 6 >
+      au < manifest ; Frontiers in Zoology Volume 6 ; 6 >
 
     }
 
@@ -2107,7 +2127,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Genetic Vaccines and Therapy Volume 4 ; 4 >
       au < released ; Genetic Vaccines and Therapy Volume 5 ; 5 >
       au < released ; Genetic Vaccines and Therapy Volume 6 ; 6 >
-      au < testing ; Genetic Vaccines and Therapy Volume 7 ; 7 >
+      au < manifest ; Genetic Vaccines and Therapy Volume 7 ; 7 >
 
     }
 
@@ -2129,7 +2149,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Genome Biology Volume 7 ; 7 >
       au < released ; Genome Biology Volume 8 ; 8 >
       au < released ; Genome Biology Volume 9 ; 9 >
-      au < testing ; Genome Biology Volume 10 ; 10 >
+      au < manifest ; Genome Biology Volume 10 ; 10 >
 
     }
 
@@ -2143,7 +2163,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2041-9414
 
       au < released ; Genome Integrity Volume 1 ; 1 >
-      au < testing ; Genome Integrity Volume 2 ; 2 >
+      au < manifest ; Genome Integrity Volume 2 ; 2 >
 
       
     }
@@ -2166,7 +2186,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Geochemical Transactions Volume 7 ; 7 >
       au < released ; Geochemical Transactions Volume 8 ; 8 >
       au < released ; Geochemical Transactions Volume 9 ; 9 >
-      au < testing ; Geochemical Transactions Volume 10 ; 10 >
+      au < manifest ; Geochemical Transactions Volume 10 ; 10 >
 
     }
 
@@ -2183,7 +2203,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Globalization and Health Volume 2 ; 2 >
       au < released ; Globalization and Health Volume 3 ; 3 >
       au < released ; Globalization and Health Volume 4 ; 4 >
-      au < testing ; Globalization and Health Volume 5 ; 5 >
+      au < manifest ; Globalization and Health Volume 5 ; 5 >
 
     }
 
@@ -2201,7 +2221,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Harm Reduction Journal Volume 3 ; 3 >
       au < released ; Harm Reduction Journal Volume 4 ; 4 >
       au < released ; Harm Reduction Journal Volume 5 ; 5 >
-      au < testing ; Harm Reduction Journal Volume 6 ; 6 >
+      au < manifest ; Harm Reduction Journal Volume 6 ; 6 >
 
     }
 
@@ -2218,7 +2238,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Head & Face Medicine Volume 2 ; 2 >
       au < released ; Head & Face Medicine Volume 3 ; 3 >
       au < released ; Head & Face Medicine Volume 4 ; 4 >
-      au < testing ; Head & Face Medicine Volume 5 ; 5 >
+      au < manifest ; Head & Face Medicine Volume 5 ; 5 >
 
     }
 
@@ -2237,7 +2257,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Health and Quality of Life Outcomes Volume 4 ; 4 >
       au < released ; Health and Quality of Life Outcomes Volume 5 ; 5 >
       au < released ; Health and Quality of Life Outcomes Volume 6 ; 6 >
-      au < testing ; Health and Quality of Life Outcomes Volume 7 ; 7 >
+      au < manifest ; Health and Quality of Life Outcomes Volume 7 ; 7 >
 
     }
 
@@ -2251,7 +2271,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1478-4505
 
       au < released ; Health Research Policy and Systems Volume 1 ; 1 >
-      au < testing ; Health Research Policy and Systems Volume 2 ; 2 >
+      au < manifest ; Health Research Policy and Systems Volume 2 ; 2 >
 
     }
 
@@ -2270,7 +2290,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Human Resources for Health Volume 4 ; 4 >
       au < released ; Human Resources for Health Volume 5 ; 5 >
       au < released ; Human Resources for Health Volume 6 ; 6 >
-      au < testing ; Human Resources for Health Volume 7 ; 7 >
+      au < manifest ; Human Resources for Health Volume 7 ; 7 >
 
     }
 
@@ -2288,7 +2308,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Immunity & Ageing Volume 3 ; 3 >
       au < released ; Immunity & Ageing Volume 4 ; 4 >
       au < released ; Immunity & Ageing Volume 5 ; 5 >
-      au < testing ; Immunity & Ageing Volume 6 ; 6 >
+      au < manifest ; Immunity & Ageing Volume 6 ; 6 >
 
     }
 
@@ -2304,7 +2324,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Implementation Science Volume 1 ; 1 >
       au < released ; Implementation Science Volume 2 ; 2 >
       au < released ; Implementation Science Volume 3 ; 3 >
-      au < testing ; Implementation Science Volume 4 ; 4 >
+      au < manifest ; Implementation Science Volume 4 ; 4 >
 
     }
 
@@ -2320,7 +2340,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Infectious Agents and Cancer Volume 1 ; 1 >
       au < released ; Infectious Agents and Cancer Volume 2 ; 2 >
       au < released ; Infectious Agents and Cancer Volume 3 ; 3 >
-      au < testing ; Infectious Agents and Cancer Volume 4 ; 4 >
+      au < manifest ; Infectious Agents and Cancer Volume 4 ; 4 >
 
     }
 
@@ -2334,7 +2354,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1755-7682
 
       au < released ; International Archives of Medicine Volume 1 ; 1 >
-      au < testing ; International Archives of Medicine Volume 2 ; 2 >
+      au < manifest ; International Archives of Medicine Volume 2 ; 2 >
 
     }
 
@@ -2350,7 +2370,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Breastfeeding Journal Volume 1 ; 1 >
       au < released ; International Breastfeeding Journal Volume 2 ; 2 >
       au < released ; International Breastfeeding Journal Volume 3 ; 3 >
-      au < testing ; International Breastfeeding Journal Volume 4 ; 4 >
+      au < manifest ; International Breastfeeding Journal Volume 4 ; 4 >
 
     }
 
@@ -2370,7 +2390,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Journal for Equity in Health Volume 5 ; 5 >
       au < released ; International Journal for Equity in Health Volume 6 ; 6 >
       au < released ; International Journal for Equity in Health Volume 7 ; 7 >
-      au < testing ; International Journal for Equity in Health Volume 8 ; 8 >
+      au < manifest ; International Journal for Equity in Health Volume 8 ; 8 >
 
     }
 
@@ -2388,7 +2408,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
       au < released ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
       au < released ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
-      au < testing ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
+      au < manifest ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
 
     }
 
@@ -2408,7 +2428,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Journal of Health Geographics Volume 5 ; 5 >
       au < released ; International Journal of Health Geographics Volume 6 ; 6 >
       au < released ; International Journal of Health Geographics Volume 7 ; 7 >
-      au < testing ; International Journal of Health Geographics Volume 8 ; 8 >
+      au < manifest ; International Journal of Health Geographics Volume 8 ; 8 >
 
     }
 
@@ -2423,7 +2443,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; International Journal of Mental Health Systems Volume 1 ; 1 >
       au < released ; International Journal of Mental Health Systems Volume 2 ; 2 >
-      au < testing ; International Journal of Mental Health Systems Volume 3 ; 3 >
+      au < manifest ; International Journal of Mental Health Systems Volume 3 ; 3 >
 
     }
 
@@ -2441,7 +2461,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Seminars in Surgical Oncology Volume 3 ; 3 >
       au < released ; International Seminars in Surgical Oncology Volume 4 ; 4 >
       au < released ; International Seminars in Surgical Oncology Volume 5 ; 5 >
-      au < testing ; International Seminars in Surgical Oncology Volume 6 ; 6 >
+      au < manifest ; International Seminars in Surgical Oncology Volume 6 ; 6 >
 
     }
 
@@ -2467,7 +2487,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Autoimmune Diseases Volume 3 ; 3 >
       au < released ; Journal of Autoimmune Diseases Volume 4 ; 4 >
       au < released ; Journal of Autoimmune Diseases Volume 5 ; 5 >
-      au < testing ; Journal of Autoimmune Diseases Volume 6 ; 6 >
+      au < manifest ; Journal of Autoimmune Diseases Volume 6 ; 6 >
 
     }
 
@@ -2482,7 +2502,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; Journal of Biological Engineering Volume 1 ; 1 >
       au < released ; Journal of Biological Engineering Volume 2 ; 2 >
-      au < testing ; Journal of Biological Engineering Volume 3 ; 3 >
+      au < manifest ; Journal of Biological Engineering Volume 3 ; 3 >
 
     }
 
@@ -2502,7 +2522,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Biology Volume 5 ; 5 >
       au < released ; Journal of Biology Volume 6 ; 6 >
       au < released ; Journal of Biology Volume 7 ; 7 >
-      au < testing ; Journal of Biology Volume 8 ; 8 >
+      au < manifest ; Journal of Biology Volume 8 ; 8 >
 
     }
 
@@ -2518,7 +2538,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
       au < released ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
       au < released ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
-      au < testing ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
+      au < manifest ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
 
     }
 
@@ -2534,7 +2554,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
       au < released ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
       au < released ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
-      au < testing ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
+      au < manifest ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
 
     }
 
@@ -2551,7 +2571,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
       au < released ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
       au < released ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
-      au < testing ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
+      au < manifest ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
 
     }
 
@@ -2574,7 +2594,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
       au < released ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
       au < released ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
-      au < testing ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
+      au < manifest ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
 
     }
 
@@ -2593,7 +2613,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Circadian Rhythms Volume 4 ; 4 >
       au < released ; Journal of Circadian Rhythms Volume 5 ; 5 >
       au < released ; Journal of Circadian Rhythms Volume 6 ; 6 >
-      au < testing ; Journal of Circadian Rhythms Volume 7 ; 7 >
+      au < manifest ; Journal of Circadian Rhythms Volume 7 ; 7 >
 
     }
 
@@ -2620,7 +2640,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
       au < released ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
       au < released ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
-      au < testing ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
+      au < manifest ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
 
     }
 
@@ -2634,7 +2654,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1756-9966
 
       au < released ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
-      au < testing ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
+      au < manifest ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
 
     }
 
@@ -2666,7 +2686,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
       au < released ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
       au < released ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
-      au < testing ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
+      au < manifest ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
 
     }
 
@@ -2684,7 +2704,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Inflammation Volume 3 ; 3 >
       au < released ; Journal of Inflammation Volume 4 ; 4 >
       au < released ; Journal of Inflammation Volume 5 ; 5 >
-      au < testing ; Journal of Inflammation Volume 6 ; 6 >
+      au < manifest ; Journal of Inflammation Volume 6 ; 6 >
 
     }
 
@@ -2701,7 +2721,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Molecular Signaling Volume 1 ; 1 >
       au < released ; Journal of Molecular Signaling Volume 2 ; 2 >
       au < released ; Journal of Molecular Signaling Volume 3 ; 3 >
-      au < testing ; Journal of Molecular Signaling Volume 4 ; 4 >
+      au < manifest ; Journal of Molecular Signaling Volume 4 ; 4 >
 
     }
 
@@ -2720,7 +2740,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Nanobiotechnology Volume 4 ; 4 >
       au < released ; Journal of Nanobiotechnology Volume 5 ; 5 >
       au < released ; Journal of Nanobiotechnology Volume 6 ; 6 >
-      au < testing ; Journal of Nanobiotechnology Volume 7 ; 7 >
+      au < manifest ; Journal of Nanobiotechnology Volume 7 ; 7 >
 
     }
 
@@ -2742,7 +2762,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
       au < released ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
       au < released ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
+      au < manifest ; Journal of Negative Results in Biomedicine Volume 10 ; 10 >
 
     }
 
@@ -2762,7 +2782,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
       au < released ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
       au < released ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
+      au < manifest ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
 
     }
 
@@ -2782,7 +2802,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Neuroinflammation Volume 5 ; 5 >
       au < released ; Journal of Neuroinflammation Volume 6 ; 6 >
       au < released ; Journal of Neuroinflammation Volume 7 ; 7 >
-      au < testing ; Journal of Neuroinflammation Volume 8 ; 8 >
+      au < manifest ; Journal of Neuroinflammation Volume 8 ; 8 >
 
     }
 
@@ -2800,7 +2820,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
       au < released ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
       au < released ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
+      au < manifest ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
 
     }
 
@@ -2818,7 +2838,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
       au < released ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
       au < released ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
+      au < manifest ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
 
     }
 
@@ -2838,7 +2858,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
       au < released ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
       au < released ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
+      au < manifest ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
 
     }
 
@@ -2859,7 +2879,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Translational Medicine Volume 6 ; 6 >
       au < released ; Journal of Translational Medicine Volume 7 ; 7 >
       au < released ; Journal of Translational Medicine Volume 8 ; 8 >
-      au < testing ; Journal of Translational Medicine Volume 9 ; 9 >
+      au < manifest ; Journal of Translational Medicine Volume 9 ; 9 >
 
     }
 
@@ -2876,7 +2896,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
       au < released ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
       au < released ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
-      au < testing ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
+      au < manifest ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
 
     }
 
@@ -2898,7 +2918,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Lipids in Health and Disease Volume 7 ; 7 >
       au < released ; Lipids in Health and Disease Volume 8 ; 8 >
       au < released ; Lipids in Health and Disease Volume 9 ; 9 >
-      au < testing ; Lipids in Health and Disease Volume 10 ; 10 >
+      au < manifest ; Lipids in Health and Disease Volume 10 ; 10 >
 
     }
 
@@ -2920,7 +2940,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Malaria Journal Volume 7 ; 7 >
       au < released ; Malaria Journal Volume 8 ; 8 >
       au < released ; Malaria Journal Volume 9 ; 9 >
-      au < testing ; Malaria Journal Volume 10 ; 10 >
+      au < manifest ; Malaria Journal Volume 10 ; 10 >
 
     }
 
@@ -2942,7 +2962,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Microbial Cell Factories Volume 7 ; 7 >
       au < released ; Microbial Cell Factories Volume 8 ; 8 >
       au < released ; Microbial Cell Factories Volume 9 ; 9 >
-      au < testing ; Microbial Cell Factories Volume 10 ; 10 >
+      au < manifest ; Microbial Cell Factories Volume 10 ; 10 >
 
     }
 
@@ -2958,7 +2978,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Molecular Brain Volume 1 ; 1 >
       au < released ; Molecular Brain Volume 2 ; 2 >
       au < released ; Molecular Brain Volume 3 ; 3 >
-      au < testing ; Molecular Brain Volume 4 ; 4 >
+      au < manifest ; Molecular Brain Volume 4 ; 4 >
 
     }
 
@@ -2980,7 +3000,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Molecular Cancer Volume 7 ; 7 >
       au < released ; Molecular Cancer Volume 8 ; 8 >
       au < released ; Molecular Cancer Volume 9 ; 9 >
-      au < testing ; Molecular Cancer Volume 10 ; 10 >
+      au < manifest ; Molecular Cancer Volume 10 ; 10 >
 
     }
 
@@ -2996,7 +3016,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Molecular Cytogenetics Volume 1 ; 1 >
       au < released ; Molecular Cytogenetics Volume 2 ; 2 >
       au < released ; Molecular Cytogenetics Volume 3 ; 3 >
-      au < testing ; Molecular Cytogenetics Volume 4 ; 4 >
+      au < manifest ; Molecular Cytogenetics Volume 4 ; 4 >
 
     }
 
@@ -3014,7 +3034,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Molecular Neurodegeneration Volume 3 ; 3 >
       au < released ; Molecular Neurodegeneration Volume 4 ; 4 >
       au < released ; Molecular Neurodegeneration Volume 5 ; 5 >
-      au < testing ; Molecular Neurodegeneration Volume 6 ; 6 >
+      au < manifest ; Molecular Neurodegeneration Volume 6 ; 6 >
 
     }
 
@@ -3033,7 +3053,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Molecular Pain Volume 4 ; 4 >
       au < released ; Molecular Pain Volume 5 ; 5 >
       au < released ; Molecular Pain Volume 6 ; 6 >
-      au < testing ; Molecular Pain Volume 7 ; 7 >
+      au < manifest ; Molecular Pain Volume 7 ; 7 >
 
     }
 
@@ -3051,7 +3071,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Neural Development Volume 3 ; 3 >
       au < released ; Neural Development Volume 4 ; 4 >
       au < released ; Neural Development Volume 5 ; 5 >
-      au < testing ; Neural Development Volume 6 ; 6 >
+      au < manifest ; Neural Development Volume 6 ; 6 >
 
     }
 
@@ -3068,7 +3088,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Nonlinear Biomedical Physics Volume 2 ; 2 >
       au < released ; Nonlinear Biomedical Physics Volume 3 ; 3 >
       au < released ; Nonlinear Biomedical Physics Volume 4 ; 4 >
-      au < testing ; Nonlinear Biomedical Physics Volume 5 ; 5 >
+      au < manifest ; Nonlinear Biomedical Physics Volume 5 ; 5 >
       
     }
 
@@ -3088,7 +3108,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Nutrition & Metabolism Volume 5 ; 5 >
       au < released ; Nutrition & Metabolism Volume 6 ; 6 >
       au < released ; Nutrition & Metabolism Volume 7 ; 7 >      
-      au < testing ; Nutrition & Metabolism Volume 8 ; 8 >      
+      au < manifest ; Nutrition & Metabolism Volume 8 ; 8 >      
 
     }
 
@@ -3110,7 +3130,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Nutrition Journal Volume 7 ; 7 >
       au < released ; Nutrition Journal Volume 8 ; 8 >
       au < released ; Nutrition Journal Volume 9 ; 9 >      
-      au < testing ; Nutrition Journal Volume 10 ; 10 >      
+      au < manifest ; Nutrition Journal Volume 10 ; 10 >      
 
     }
 
@@ -3126,7 +3146,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Orphanet Journal of Rare Diseases Volume 1 ; 1 >
       au < released ; Orphanet Journal of Rare Diseases Volume 2 ; 2 >
       au < released ; Orphanet Journal of Rare Diseases Volume 3 ; 3 >
-      au < testing ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
+      au < manifest ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
 
     }
 
@@ -3141,7 +3161,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; Osteopathic Medicine and Primary Care Volume 1 ; 1 >
       au < released ; Osteopathic Medicine and Primary Care Volume 2 ; 2 >
-      au < testing ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
+      au < manifest ; Osteopathic Medicine and Primary Care Volume 3 ; 3 >
 
     }
 
@@ -3159,7 +3179,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Parasites & Vectors Volume 3 ; 3 >
       au < released ; Parasites & Vectors Volume 4 ; 4 >
       au < released ; Parasites & Vectors Volume 5 ; 5 >
-      au < testing ; Parasites & Vectors Volume 6 ; 6 >
+      au < manifest ; Parasites & Vectors Volume 6 ; 6 >
 
     }
 
@@ -3179,7 +3199,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Particle and Fibre Toxicology Volume 5 ; 5 >
       au < released ; Particle and Fibre Toxicology Volume 6 ; 6 >
       au < released ; Particle and Fibre Toxicology Volume 7 ; 7 >
-      au < testing ; Particle and Fibre Toxicology Volume 8 ; 8 >
+      au < manifest ; Particle and Fibre Toxicology Volume 8 ; 8 >
 
     }
 
@@ -3194,7 +3214,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; Patient Safety in Surgery Volume 1 ; 1 >
       au < released ; Patient Safety in Surgery Volume 2 ; 2 >
-      au < testing ; Patient Safety in Surgery Volume 3 ; 3 >
+      au < manifest ; Patient Safety in Surgery Volume 3 ; 3 >
 
     }
 
@@ -3213,7 +3233,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Pediatric Rheumatology Volume 4 ; 4 >
       au < released ; Pediatric Rheumatology Volume 5 ; 5 >
       au < released ; Pediatric Rheumatology Volume 6 ; 6 >
-      au < testing ; Pediatric Rheumatology Volume 7 ; 7 >
+      au < manifest ; Pediatric Rheumatology Volume 7 ; 7 >
 
     }
 
@@ -3229,7 +3249,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Philosophy, Ethics, and Humanities in Medicine Volume 1 ; 1 >
       au < released ; Philosophy, Ethics, and Humanities in Medicine Volume 2 ; 2 >
       au < released ; Philosophy, Ethics, and Humanities in Medicine Volume 3 ; 3 >
-      au < testing ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
+      au < manifest ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
 
     }
 
@@ -3246,7 +3266,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Plant Methods Volume 2 ; 2 >
       au < released ; Plant Methods Volume 3 ; 3 >
       au < released ; Plant Methods Volume 4 ; 4 >
-      au < testing ; Plant Methods Volume 5 ; 5 >
+      au < manifest ; Plant Methods Volume 5 ; 5 >
 
     }
 
@@ -3265,7 +3285,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Population Health Metrics Volume 4 ; 4 >
       au < released ; Population Health Metrics Volume 5 ; 5 >
       au < released ; Population Health Metrics Volume 6 ; 6 >
-      au < testing ; Population Health Metrics Volume 7 ; 7 >
+      au < manifest ; Population Health Metrics Volume 7 ; 7 >
 
     }
 
@@ -3284,7 +3304,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Proteome Science Volume 4 ; 4 >
       au < released ; Proteome Science Volume 5 ; 5 >
       au < released ; Proteome Science Volume 6 ; 6 >
-      au < testing ; Proteome Science Volume 7 ; 7 >
+      au < manifest ; Proteome Science Volume 7 ; 7 >
 
     }
 
@@ -3300,7 +3320,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Radiation Oncology Volume 1 ; 1 >
       au < released ; Radiation Oncology Volume 2 ; 2 >
       au < released ; Radiation Oncology Volume 3 ; 3 >
-      au < testing ; Radiation Oncology Volume 4 ; 4 >
+      au < manifest ; Radiation Oncology Volume 4 ; 4 >
 
     }
 
@@ -3319,7 +3339,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Reproductive Biology and Endocrinology Volume 4 ; 4 >
       au < released ; Reproductive Biology and Endocrinology Volume 5 ; 5 >
       au < released ; Reproductive Biology and Endocrinology Volume 6 ; 6 >
-      au < testing ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
+      au < manifest ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
 
     }
 
@@ -3337,7 +3357,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Reproductive Health Volume 3 ; 3 >
       au < released ; Reproductive Health Volume 4 ; 4 >
       au < released ; Reproductive Health Volume 5 ; 5 >
-      au < testing ; Reproductive Health Volume 6 ; 6 >
+      au < manifest ; Reproductive Health Volume 6 ; 6 >
 
     }
 
@@ -3355,7 +3375,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Retrovirology Volume 3 ; 3 >
       au < released ; Retrovirology Volume 4 ; 4 >
       au < released ; Retrovirology Volume 5 ; 5 >
-      au < testing ; Retrovirology Volume 6 ; 6 >
+      au < manifest ; Retrovirology Volume 6 ; 6 >
 
     }
 
@@ -3372,7 +3392,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Saline Systems Volume 2 ; 2 >
       au < released ; Saline Systems Volume 3 ; 3 >
       au < released ; Saline Systems Volume 4 ; 4 >
-      au < testing ; Saline Systems Volume 5 ; 5 >
+      au < manifest ; Saline Systems Volume 5 ; 5 >
 
     }
 
@@ -3388,7 +3408,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Scoliosis Volume 1 ; 1 >
       au < released ; Scoliosis Volume 2 ; 2 >
       au < released ; Scoliosis Volume 3 ; 3 >
-      au < testing ; Scoliosis Volume 4 ; 4 >
+      au < manifest ; Scoliosis Volume 4 ; 4 >
 
     }
 
@@ -3404,7 +3424,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Source Code for Biology and Medicine Volume 1 ; 1 >
       au < released ; Source Code for Biology and Medicine Volume 2 ; 2 >
       au < released ; Source Code for Biology and Medicine Volume 3 ; 3 >
-      au < testing ; Source Code for Biology and Medicine Volume 4 ; 4 >
+      au < manifest ; Source Code for Biology and Medicine Volume 4 ; 4 >
 
     }
 
@@ -3420,7 +3440,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
       au < released ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
       au < released ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
-      au < testing ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
+      au < manifest ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
 
     }
 
@@ -3438,7 +3458,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Theoretical Biology and Medical Modelling Volume 3 ; 3 >
       au < released ; Theoretical Biology and Medical Modelling Volume 4 ; 4 >
       au < released ; Theoretical Biology and Medical Modelling Volume 5 ; 5 >
-      au < testing ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
+      au < manifest ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
 
     }
 
@@ -3459,7 +3479,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Thrombosis Journal Volume 6 ; 6 >
       au < released ; Thrombosis Journal Volume 7 ; 7 >
       au < released ; Thrombosis Journal Volume 8 ; 8 >
-      au < testing ; Thrombosis Journal Volume 9 ; 9 >
+      au < manifest ; Thrombosis Journal Volume 9 ; 9 >
 
     }
 
@@ -3483,7 +3503,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Trials Volume 9 ; 9 >
       au < released ; Trials Volume 10 ; 10 >
       au < released ; Trials Volume 11 ; 11 >
-      au < testing ; Trials Volume 12 ; 12 >
+      au < manifest ; Trials Volume 12 ; 12 >
 
     }
 
@@ -3511,7 +3531,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Virology Journal Volume 5 ; 5 >
       au < released ; Virology Journal Volume 6 ; 6 >
       au < released ; Virology Journal Volume 7 ; 7 >      
-      au < testing ; Virology Journal Volume 8 ; 8 >      
+      au < manifest ; Virology Journal Volume 8 ; 8 >      
 
     }
 
@@ -3529,7 +3549,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; World Journal of Emergency Surgery Volume 3 ; 3 >
       au < released ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < released ; World Journal of Emergency Surgery Volume 5 ; 5 >
-      au < testing ; World Journal of Emergency Surgery Volume 6 ; 6 >
+      au < manifest ; World Journal of Emergency Surgery Volume 6 ; 6 >
 
     }
 
@@ -3550,7 +3570,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; World Journal of Surgical Oncology Volume 6 ; 6 >
       au < released ; World Journal of Surgical Oncology Volume 7 ; 7 >
       au < released ; World Journal of Surgical Oncology Volume 8 ; 8 >
-      au < testing ; World Journal of Surgical Oncology Volume 9 ; 9 >
+      au < manifest ; World Journal of Surgical Oncology Volume 9 ; 9 >
 
     }
         
