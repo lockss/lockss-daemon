@@ -52,7 +52,7 @@
       au < released ; 2007-2008 ; Africa Today Volume 54 ; 54 >
       au < released ; 2008-2009 ; Africa Today Volume 55 ; 55 >
       au < released ; 2009-2010 ; Africa Today Volume 56 ; 56 >
-      au < testing ; 2010-2011 ; Africa Today Volume 57 ; 57 >
+      au < ready ; 2010-2011 ; Africa Today Volume 57 ; 57 >
 
     }
 
@@ -73,7 +73,7 @@
       param[journal_dir] = african_conflict_and_peacebuilding_review
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
+      au < ready ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
 
     }
     
@@ -110,16 +110,16 @@
       param[journal_dir] = aleph_historical_studies_in_science_and_judaism
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2001 ; Aleph: Historical Studies in Science and Judaism Volume 1 ; 1 >
-      au < testing ; 2002 ; Aleph: Historical Studies in Science and Judaism Volume 2 ; 2 >
-      au < testing ; 2003 ; Aleph: Historical Studies in Science and Judaism Volume 3 ; 3 >
+      au < ready ; 2001 ; Aleph: Historical Studies in Science and Judaism Volume 1 ; 1 >
+      au < ready ; 2002 ; Aleph: Historical Studies in Science and Judaism Volume 2 ; 2 >
+      au < ready ; 2003 ; Aleph: Historical Studies in Science and Judaism Volume 3 ; 3 >
       au < released ; 2004 ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
       au < released ; 2005 ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
       au < released ; 2006 ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
       au < released ; 2007 ; Aleph: Historical Studies in Science and Judaism Volume 7 ; 7 >
       au < released ; 2008 ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
       au < released ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
-      au < testing ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
+      au < ready ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
 
     }
 
@@ -152,8 +152,8 @@
       param[journal_dir] = black_camera
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2009-2010 ; Black Camera Volume 1 ; 1 >
-      au < testing ; 2010-2011 ; Black Camera Volume 2 ; 2 >
+      au < ready ; 2009-2010 ; Black Camera Volume 1 ; 1 >
+      au < ready ; 2010-2011 ; Black Camera Volume 2 ; 2 >
 
     }
 
@@ -196,7 +196,7 @@
       au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
       au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
       au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
-      au < testing ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
+      au < ready ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
       au < exists ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 ; 16 >
 
     }
@@ -294,7 +294,7 @@
       au < released ; 2008 ; Ethics & the Environment Volume 13 ; 13 >
       au < released ; 2009 ; Ethics & the Environment Volume 14 ; 14 >
       au < released ; 2010 ; Ethics & the Environment Volume 15 ; 15 >
-      au < testing ; 2011 ; Ethics & the Environment Volume 16 ; 16 >
+      au < ready ; 2011 ; Ethics & the Environment Volume 16 ; 16 >
 
     }
 
@@ -342,8 +342,8 @@
       au < released ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
       au < released ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
       au < released ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
-      au < testing ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
-      au < testing ; 2011 ; Film History: An International Journal Volume 23 ; 23 >
+      au < ready ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
+      au < ready ; 2011 ; Film History: An International Journal Volume 23 ; 23 >
 
     }
 
@@ -379,10 +379,10 @@
       param[journal_dir] = the_global_south
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2007 ; The Global South Volume 1 ; 1 >
-      au < testing ; 2008 ; The Global South Volume 2 ; 2 >
+      au < ready ; 2007 ; The Global South Volume 1 ; 1 >
+      au < ready ; 2008 ; The Global South Volume 2 ; 2 >
       au < released ; 2009 ; The Global South Volume 3 ; 3 >
-      au < testing ; 2010 ; The Global South Volume 4 ; 4 >
+      au < ready ; 2010 ; The Global South Volume 4 ; 4 >
 
     }
 
@@ -440,7 +440,7 @@
       au < released ; 2008 ; History & Memory Volume 20 ; 20 >
       au < released ; 2009 ; History & Memory Volume 21 ; 21 >
       au < released ; 2010 ; History & Memory Volume 22 ; 22 >
-      au < testing ; 2011 ; History & Memory Volume 23 ; 23 >
+      au < ready ; 2011 ; History & Memory Volume 23 ; 23 >
 
     }
 
@@ -813,7 +813,7 @@
       au < released ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
       au < released ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
       au < released ; 2010 ; Journal of Folklore Research Volume 47 ; 47 >
-      au < testing ; 2011 ; Journal of Folklore Research Volume 48 ; 48 >
+      au < ready ; 2011 ; Journal of Folklore Research Volume 48 ; 48 >
 
     }
 
@@ -857,7 +857,7 @@
       au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
       au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
       au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
-      au < testing ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 >
+      au < ready ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 >
 
     }
 
@@ -908,10 +908,10 @@
       au < released ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
       au < released ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
       au < released ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
-      au < testing ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
-      au < testing ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
+      au < ready ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
+      au < ready ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
       au < released ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
-      au < testing ; 2010-2011 ; Journal of Modern Literature Volume 34 ; 34 >
+      au < ready ; 2010-2011 ; Journal of Modern Literature Volume 34 ; 34 >
 
     }
 
@@ -1006,8 +1006,8 @@
       au < notReady ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
       au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
       au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
-      au < testing ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 19 ; 19 >
-      au < testing ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 20 ; 20 >
+      au < ready ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 19 ; 19 >
+      au < ready ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 20 ; 20 >
 
     }
 
@@ -1367,15 +1367,15 @@
       au < released ; 2000 ; Transition: An International Review Volume 9 ; 9 >
       au < released ; 2000-2001 ; Transition: An International Review Volume 10 ; 10 >
       au < doNotProcess ; 2001-2002 ; Transition: An International Review Volume 11 ; 11 >
-      au < testing ; 2002-2003 ; Transition: An International Review Volume 12 ; 12 >
-      au < testing ; 2004-2007 ; Transition: An International Review Volume 13 ; 13 >
+      au < ready ; 2002-2003 ; Transition: An International Review Volume 12 ; 12 >
+      au < ready ; 2004-2007 ; Transition: An International Review Volume 13 ; 13 >
       au < released ; 2008 ; Transition: An International Review Issue 98 ; 98 >
       au < released ; 2008 ; Transition: An International Review Issue 99 ; 99 >
       au < released ; 2009 ; Transition: An International Review Issue 100 ; 100 >
       au < released ; 2009 ; Transition: An International Review Issue 101 ; 101 >
       au < released ; 2010 ; Transition: An International Review Issue 102 ; 102 >
-      au < testing ; 2010 ; Transition: An International Review Issue 103 ; 103 >
-      au < testing ; 2011 ; Transition: An International Review Issue 104 ; 104 >
+      au < ready ; 2010 ; Transition: An International Review Issue 103 ; 103 >
+      au < ready ; 2011 ; Transition: An International Review Issue 104 ; 104 >
 
     }
 
