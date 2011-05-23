@@ -3,7 +3,7 @@
     name = Wiley-Blackwell
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -17,8 +17,8 @@
 
     param[journal_dir] = philosophy_and_public_affairs
 
-    au < released ; Philosophy & Public Affairs Volume 30 ; 30 >
-    au < released ; Philosophy & Public Affairs Volume 31 ; 31 >
+    au < released ; 2001 ; Philosophy & Public Affairs Volume 30 ; 30 >
+    au < released ; 2003 ; Philosophy & Public Affairs Volume 31 ; 31 >
 
   }
 

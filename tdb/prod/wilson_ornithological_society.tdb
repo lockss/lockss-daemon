@@ -12,17 +12,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0043-5643
   
-      au < superseded ; The Wilson Bulletin Volume 112 ; 112 >
-      au < superseded ; The Wilson Bulletin Volume 113 ; 113 >
-      au < superseded ; The Wilson Bulletin Volume 114 ; 114 >
-      au < superseded ; The Wilson Bulletin Volume 115 ; 115 >
-      au < superseded ; The Wilson Bulletin Volume 116 ; 116 >
-      au < superseded ; The Wilson Bulletin Volume 117 ; 117 >
+      au < superseded ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
+      au < superseded ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
+      au < superseded ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
+      au < superseded ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
+      au < superseded ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
+      au < superseded ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
     }
 
   }

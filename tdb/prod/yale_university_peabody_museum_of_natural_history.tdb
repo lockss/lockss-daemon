@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,10 +17,12 @@
     
     param[journal_code] = pbmb
   
-    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 47 ; 47 >
-    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 48 ; 48 >
-    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 49 ; 49 >
-    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 50 ; 50 >
+    au < exists ; 2006 ; Bulletin of the Peabody Museum of Natural History Volume 47 ; 47 >
+    au < exists ; 2007 ; Bulletin of the Peabody Museum of Natural History Volume 48 ; 48 >
+    au < exists ; 2008 ; Bulletin of the Peabody Museum of Natural History Volume 49 ; 49 >
+    au < exists ; 2009 ; Bulletin of the Peabody Museum of Natural History Volume 50 ; 50 >
+    au < exists ; 2010 ; Bulletin of the Peabody Museum of Natural History Volume 51 ; 51 >
+    au < exists ; 2011 ; Bulletin of the Peabody Museum of Natural History Volume 52 ; 52 >
 
   }
   
