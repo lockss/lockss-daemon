@@ -13,15 +13,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-541X
   
-      au < doNotProcess ; Journal of Wildlife Management Volume 68 ; 68 >
-      au < doNotProcess ; Journal of Wildlife Management Volume 69 ; 69 >
-      au < doNotProcess ; Journal of Wildlife Management Volume 70 ; 70 >
-      au < doNotProcess ; Journal of Wildlife Management Volume 71 ; 71 >
+      au < doNotProcess ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
+      au < doNotProcess ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
+      au < doNotProcess ; 2006 ; Journal of Wildlife Management Volume 70 ; 70 >
+      au < doNotProcess ; 2007 ; Journal of Wildlife Management Volume 71 ; 71 >
     }
 
   }
@@ -36,19 +36,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0084-0173
   
-      au < superseded ; Wildlife Monographs Volume 161 ; 161 >
-      au < superseded ; Wildlife Monographs Volume 162 ; 162 >
-      au < superseded ; Wildlife Monographs Volume 163 ; 163 >
-      au < superseded ; Wildlife Monographs Volume 164 ; 164 >
-      au < superseded ; Wildlife Monographs Volume 165 ; 165 >
-      au < superseded ; Wildlife Monographs Volume 166 ; 166 >
-      au < superseded ; Wildlife Monographs Volume 167 ; 167 >
-      au < superseded ; Wildlife Monographs Volume 168 ; 168 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 161 ; 161 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 162 ; 162 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 163 ; 163 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 164 ; 164 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 165 ; 165 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 166 ; 166 >
+      au < superseded ; 2006 ; Wildlife Monographs Volume 167 ; 167 >
+      au < superseded ; 2007 ; Wildlife Monographs Volume 168 ; 168 >
     }
 
   }
@@ -63,14 +63,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0091-7648
   
-      au < superseded ; Wildlife Society Bulletin Volume 32 ; 32 >
-      au < superseded ; Wildlife Society Bulletin Volume 33 ; 33 >
-      au < superseded ; Wildlife Society Bulletin Volume 34 ; 34 >
+      au < superseded ; 2004 ; Wildlife Society Bulletin Volume 32 ; 32 >
+      au < superseded ; 2005 ; Wildlife Society Bulletin Volume 33 ; 33 >
+      au < superseded ; 2006 ; Wildlife Society Bulletin Volume 34 ; 34 >
     }
 
     {
