@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.99 2007-08-14 03:10:26 smorabito Exp $
+ * $Id: TestPoll.java,v 1.99.50.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends LockssTestCase {
@@ -473,7 +474,8 @@ public class TestPoll extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");

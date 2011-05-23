@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.23.32.1 2011-05-18 17:05:21 dshr Exp $
+ * $Id: TestRemoteApi.java,v 1.23.32.2 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -220,8 +220,10 @@ public class TestRemoteApi extends LockssTestCase {
   }
 
   public void testGetRepositoryDF () throws Exception {
+    // XXX file:///. ?
     PlatformUtil.DF df =
-      rapi.getRepositoryDF(RepositoryManager.LOCAL_REPO_PROTOCOL + ".");
+      rapi.getRepositoryDF(RepositoryManager.LOCAL_REPO_PROTOCOL +
+                           File.separator + ".");
     assertNotNull(df);
   }
 

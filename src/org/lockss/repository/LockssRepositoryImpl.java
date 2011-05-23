@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.8 2011-05-18 17:05:21 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.9 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class LockssRepositoryImpl
   private static final String TEST_PREFIX = "/#tmp";
 
   private RepositoryManager repoMgr;
-  private String rootLocation; // XXX path or url?
+  private String rootLocation; // URL
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
@@ -233,6 +233,7 @@ public class LockssRepositoryImpl
     if (!create) {
       // if not creating, check for existence
       try {
+        // nodeLocation is a URL
 	FileObject nodeDir = fileSystemManager.resolveFile(nodeLocation);
 	if (!nodeDir.exists()) {
 	  // return null if the node doesn't exist and shouldn't be created
@@ -344,6 +345,7 @@ public class LockssRepositoryImpl
         // Get the default file system manager - should be OK.
 	fileSystemManager = VFS.getManager();
       }
+      // rootLocation is a URL
       ret = fileSystemManager.resolveFile(rootLocation).getFileSystem();
     } catch (FileSystemException e) {
       logger.error("resolveFile(" + rootLocation + ").getFileSystem() threw: " + e);
@@ -369,6 +371,7 @@ public class LockssRepositoryImpl
     String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
     logger.debug("repo: " + auDir + ", au: " + au.getName());
     staticCacheLocation = extendCacheLocation(root);
+    logger.debug3("staticCacheLocation: " + staticCacheLocation + " root: " + root);
     LockssRepositoryImpl repo = new LockssRepositoryImpl(auDir);
     Plugin plugin = au.getPlugin();
     if (plugin != null) {
@@ -387,11 +390,28 @@ public class LockssRepositoryImpl
     Configuration auConfig = au.getConfiguration();
     if (auConfig != null) {		// can be null in unit tests
       String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
-      if (repoSpec != null && repoSpec.startsWith(RepositoryManager.LOCAL_REPO_PROTOCOL)) {
-	return repoSpec;
+      logger.debug("repoSpec: " + repoSpec);
+      if (repoSpec != null) {
+        for (int i = 0; i < RepositoryManager.REPO_PROTOCOLS.length; i++) {
+          if (repoSpec.startsWith(RepositoryManager.REPO_PROTOCOLS[i])) {
+            return repoSpec;
+          }
+        }
+        if (repoSpec.startsWith("local:")) {
+          /* Backwards compatibility with stored AU configs */
+          String repoPath = repoSpec.substring(6);
+          if (!repoPath.startsWith(File.separator)) {
+            throw new UnsupportedOperationException(repoPath);
+          }
+	  return RepositoryManager.LOCAL_REPO_PROTOCOL + repoSpec.substring(6);
+        }
       }
     }
-    return RepositoryManager.LOCAL_REPO_PROTOCOL + CurrentConfig.getParam(PARAM_CACHE_LOCATION);
+    String ret = CurrentConfig.getParam(PARAM_CACHE_LOCATION);
+    if (ret != null) {
+      return CurrentConfig.getParam(PARAM_CACHE_LOCATION);
+    }
+    throw new UnsupportedOperationException(au.toString());
   }
 
   public static String getRepositoryRoot(ArchivalUnit au) {
@@ -400,8 +420,13 @@ public class LockssRepositoryImpl
 
   public static String getLocalRepositoryPath(String repoSpec) {
     if (repoSpec != null) {
-      if (repoSpec.startsWith(RepositoryManager.LOCAL_REPO_PROTOCOL)) {
-	return repoSpec.substring(RepositoryManager.LOCAL_REPO_PROTOCOL_LENGTH);
+      for (int i = 0; i < RepositoryManager.REPO_PROTOCOLS.length; i++) {
+        if (repoSpec.startsWith(RepositoryManager.REPO_PROTOCOLS[i])) {
+          return repoSpec;
+        }
+      }
+      if (repoSpec.startsWith(File.separator)) {
+	return RepositoryManager.LOCAL_REPO_PROTOCOL + repoSpec;
       }
     }
     return null;
@@ -466,11 +491,17 @@ public class LockssRepositoryImpl
    * into directory names. This maps a given au to directories, using the
    * cache root as the base.  Given an au with PluginId of 'plugin' and AuId
    * of 'au', it would return the string '<rootLocation>/plugin/au/'.
-   * @param repoRoot the root of a LOCKSS repository
+   * @param repoRoot the URI of the root of a LOCKSS repository
    * @param au the ArchivalUnit to resolve
-   * @return the directory location
+   * @return the URI of the directory location
    */
   public static String mapAuToFileLocation(String repoRoot, ArchivalUnit au) {
+    if (repoRoot == null) {
+      throw new UnsupportedOperationException("repoRoot: null");
+    }
+    if (au == null) {
+      throw new UnsupportedOperationException("au: null");
+    }
     return getAuDir(au, repoRoot, true);
   }
 
@@ -480,9 +511,9 @@ public class LockssRepositoryImpl
    * the base.  It creates directories which mirror the html string, so
    * 'http://www.journal.org/issue1/index.html' would be cached in the file:
    * <rootLocation>/www.journal.org/http/issue1/index.html
-   * @param rootLocation the top directory for ArchivalUnit this URL is in
+   * @param rootLocation the URI of the top directory for ArchivalUnit this URL is in
    * @param urlStr the url to translate
-   * @return the url file location
+   * @return the URI of the url file location
    * @throws java.net.MalformedURLException
    */
   public static String mapUrlToFileLocation(String rootLocation, String urlStr)
@@ -517,7 +548,7 @@ public class LockssRepositoryImpl
   /**
    * Return true iff a repository for the auid exists under the root
    * @param auid
-   * @param repoRoot the repository root
+   * @param repoRoot the URI of the repository root
    * @return true iff a repository for the auid exists
    */
   static boolean doesAuDirExist(String auid, String repoRoot) {
@@ -528,8 +559,8 @@ public class LockssRepositoryImpl
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
    * @param au the AU
-   * @param repoRoot root of the repository
-   * @return the dir {@link String}
+   * @param repoRoot the URI of the root of the repository
+   * @return the URI of the dir {@link String}
    */
   static String getAuDir(ArchivalUnit au, String repoRoot, boolean create) {
     return getAuDir(au.getAuId(), repoRoot, create);
@@ -544,7 +575,7 @@ public class LockssRepositoryImpl
    */
   static String getAuDir(String auid, String repoRoot, boolean create) {
     String repoCachePath = extendCacheLocation(repoRoot);
-    logger.debug3("getAuDir(" + auid + ", " + repoCachePath + ", " + create);
+    logger.debug3("getAuDir(" + auid + ", " + repoCachePath + ", " + create + " repoRoot " + repoRoot);
     LocalRepository localRepo = getLocalRepository(repoRoot);
     synchronized (localRepo) {
       Map aumap = localRepo.getAuMap();
@@ -563,6 +594,7 @@ public class LockssRepositoryImpl
 	auDir = getNextDirName(auDir);
 	try {
           // Get the default file system manager - should be OK.
+          // XXX is repoRoot a URL?
 	  FileObject testDir = VFS.getManager().resolveFile(repoCachePath +
 							    auDir);
 	  if (logger.isDebug3()) logger.debug3("Probe for unused: " + testDir);
@@ -669,7 +701,7 @@ public class LockssRepositoryImpl
       // Get the default file system manager - should be OK.
       propDir = VFS.getManager().resolveFile(location); // XXX path or url?
       if (!propDir.exists()) {
-	logger.debug("Creating directory '"+location+"'");
+	logger.debug("Creating directory '"+location+"': " + propDir.getName().getURI());
 	propDir.createFolder();
       }
       propFile = propDir.resolveFile(AU_ID_FILE);
@@ -785,6 +817,7 @@ public class LockssRepositoryImpl
       this.repoPath = repoPath;
       try {
         // Get the default file system manager - should be OK.
+        // XXX is repoPath a URL?
 	repoCacheFile =
 	  VFS.getManager().resolveFile(extendCacheLocation(repoPath));
       } catch (FileSystemException e) {
@@ -827,7 +860,7 @@ public class LockssRepositoryImpl
 	      //         // adjust the 'lastPluginDir' upwards if necessary
 	      //         lastPluginDir = dirName;
 	      //       }
-	      String path = auDirs[ii].getName().getPath();
+	      String path = auDirs[ii].getName().getURI();
 	      logger.debug3("Index: " + ii + " path " + path);
 	      Properties idProps = getAuIdProperties(auDirs[ii]);
 	      if (idProps != null) {

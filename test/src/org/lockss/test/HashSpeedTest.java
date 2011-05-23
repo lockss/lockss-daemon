@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.33 2010-02-04 06:53:56 tlipkis Exp $
+ * $Id: HashSpeedTest.java,v 1.33.12.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.poller.PollManager;
 import org.lockss.crawler.NewContentCrawler;
 import org.lockss.protocol.*;
@@ -85,7 +86,8 @@ public class HashSpeedTest extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, ""+duration);
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, ""+byteStep);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
     props.setProperty("org.lockss.au." + auId + "." +

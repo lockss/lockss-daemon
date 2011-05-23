@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.22 2008-11-10 07:11:53 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.22.30.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -125,7 +125,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
   Properties commonConfig() {
     Properties p = new Properties();
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath);

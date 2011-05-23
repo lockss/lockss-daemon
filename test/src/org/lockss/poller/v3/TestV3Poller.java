@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.33.6.1 2011-01-16 00:23:26 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.33.6.2 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.mortbay.util.B64Code;
 
 import static org.lockss.util.Constants.*;
@@ -938,6 +939,7 @@ public class TestV3Poller extends LockssTestCase {
 
     tempDir = getTempDir();
     tempDirPath = tempDir.getAbsolutePath();
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     System.setProperty("java.io.tmpdir", tempDirPath);
 
     Properties p = new Properties();
@@ -945,7 +947,7 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
 
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, localPeerKey);
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");

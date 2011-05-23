@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.23 2010-06-22 09:01:03 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.23.6.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -82,7 +82,8 @@ public class FuncNewContentCrawler extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
 
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);

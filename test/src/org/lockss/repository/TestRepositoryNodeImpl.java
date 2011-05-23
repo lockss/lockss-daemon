@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.61.10.4 2011-01-14 19:23:16 dshr Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.61.10.5 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -74,7 +74,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
@@ -127,23 +128,25 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
                    "test stream", null);
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
-        "http://www.example.com/testDir/branch1/leaf1");
+    logger.debug3("tempDirPath: " + tempDirPath);
+    tempDirPath =
+      LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+						"http://www.example.com/testDir/branch1/leaf1").substring("file://".length());
     File testFile = new File(tempDirPath);
     logger.debug3("FileLocation: " + tempDirPath);
-    assertTrue(testFile.exists());
+    assertTrue(tempDirPath, testFile.exists());
     testFile = new File(tempDirPath + "/#content/current");
     logger.debug3("FileLocation: " + tempDirPath + "/#content/current");
-    assertTrue(testFile.exists());
+    assertTrue(tempDirPath + "/#content/current", testFile.exists());
     testFile = new File(tempDirPath + "/#content/current.props");
     logger.debug3("FileLocation: " + tempDirPath + "/#content/current.props");
-    assertTrue(testFile.exists());
+    assertTrue(tempDirPath + "/#content/current.props", testFile.exists());
     testFile = new File(tempDirPath + "/#node_props");
     logger.debug3("FileLocation: " + tempDirPath + "/#node_props");
-    assertFalse(testFile.exists());
+    assertFalse(tempDirPath  + "/#node_props", testFile.exists());
     testFile = new File(tempDirPath + "/#agreement");
     logger.debug3("FileLocation: " + tempDirPath + "/#agreement");
-    assertFalse(testFile.exists());
+    assertFalse(tempDirPath + "/#agreement", testFile.exists());
   }
   
   public void dontTestUpdateAgreementCreatesFile() throws Exception {
@@ -163,7 +166,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     
     leaf.signalAgreement(ListUtil.fromArray(agreeingPeers));
-    assertTrue(testFile.exists());
+    assertTrue(tempDirPath +  "#agreement", testFile.exists());
   }
 
   public void dontTestUpdateAndLoadAgreement() throws Exception {

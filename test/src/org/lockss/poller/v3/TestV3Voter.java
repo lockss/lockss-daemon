@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.16 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.16.2.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -67,10 +67,11 @@ public class TestV3Voter extends LockssTestCase {
     
     File tempDir = getTempDir();
     String tempDirPath = tempDir.getAbsolutePath();
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "TCP:[127.0.0.1]:9729");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");

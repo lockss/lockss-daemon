@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder.java,v 1.9 2009-09-05 18:03:28 dshr Exp $
+ * $Id: FuncZipExploder.java,v 1.9.18.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class FuncZipExploder extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
 
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
@@ -146,7 +146,7 @@ public class FuncZipExploder extends LockssTestCase {
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     String explodedPluginName =
       "org.lockss.crawler.FuncZipExploderMockExplodedPlugin";

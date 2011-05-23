@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.19 2006-09-14 01:43:54 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.19.64.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.*;
 import org.lockss.util.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.app.LockssDaemon;
 
 /**
@@ -94,16 +95,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
     MockLockssDaemon theDaemon = getMockLockssDaemon();
-    String tempDirPath = null;
-    try {
-      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    }
-    catch (IOException ex) {
-      fail("unable to create a temporary directory");
-    }
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     Properties p = new Properties();
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
+
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     theDaemon.setIdentityManager(new MockIdentityManager());

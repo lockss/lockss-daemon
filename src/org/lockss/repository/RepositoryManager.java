@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.13.2.1 2011-05-18 17:05:21 dshr Exp $
+ * $Id: RepositoryManager.java,v 1.13.2.2 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -102,8 +102,8 @@ public class RepositoryManager
     DISK_PREFIX + "full.freePercent";
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
-  public static final String LOCAL_REPO_PROTOCOL = "local:";
-  public static final int LOCAL_REPO_PROTOCOL_LENGTH = 6;
+  public static final String LOCAL_REPO_PROTOCOL = "file://";
+  public static final String REPO_PROTOCOLS[] = { LOCAL_REPO_PROTOCOL, };
 
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
@@ -142,7 +142,7 @@ public class RepositoryManager
       List paths = StringUtil.breakAt(dspace, ';');
       if (paths != null) {
 	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	  lst.add(LOCAL_REPO_PROTOCOL + (String)iter.next());
+	  lst.add(LOCAL_REPO_PROTOCOL + (String)iter.next()); // Abs path
 	}
       }
       repoList = lst;
@@ -266,13 +266,13 @@ public class RepositoryManager
   }
 
   // hack only local
-  public synchronized LockssRepositoryImpl getRepositoryFromPath(String path) {
-    LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(path);
+  public synchronized LockssRepositoryImpl getRepositoryFromPath(String url) {
+    LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(url);
     if (repo == null) {
-      repo =  new LockssRepositoryImpl(path);
+      repo =  new LockssRepositoryImpl(url);
       repo.initService(getDaemon());
       repo.startService();
-      localRepos.put(path, repo);
+      localRepos.put(url, repo);
     }
     return repo;
   }

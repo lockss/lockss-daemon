@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.27 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestActivityRegulator.java,v 1.27.88.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 
 public class TestActivityRegulator extends LockssTestCase {
   private ActivityRegulator regulator;
@@ -49,8 +50,9 @@ public class TestActivityRegulator extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();

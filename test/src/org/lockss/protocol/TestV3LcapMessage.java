@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.27 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.27.2.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.app.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Events;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 import org.mortbay.util.B64Code;
@@ -80,7 +81,8 @@ public class TestV3LcapMessage extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(V3LcapMessage.PARAM_REPAIR_DATA_THRESHOLD, "4096");
     ConfigurationUtil.setCurrentConfigFromProps(p);

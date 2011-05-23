@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.13 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.13.22.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -65,8 +65,9 @@ public class TestAuConfig extends LockssServletTestCase {
     pluginMgr.startService();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
     props.setProperty(AdminServletManager.PARAM_START, "false");

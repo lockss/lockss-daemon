@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedArcContent.java,v 1.5 2008-05-09 19:08:11 dshr Exp $
+ * $Id: FuncSimulatedArcContent.java,v 1.5.40.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -67,16 +67,19 @@ public class FuncSimulatedArcContent extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     String tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI2 = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath2;
     String auIdStr = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
+      PropKeyEncoder.encode(tempDirURI);
     String auId2Str = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath2);
+      PropKeyEncoder.encode(tempDirURI2);
+
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
-    props.setProperty("org.lockss.au." + auIdStr + ".root", tempDirPath);
+    props.setProperty("org.lockss.au." + auIdStr + ".root", tempDirURI);
     props.setProperty("org.lockss.au." + auIdStr + ".depth", "2");
     props.setProperty("org.lockss.au." + auIdStr + ".branch", "2");
     props.setProperty("org.lockss.au." + auIdStr + ".numFiles", "2");
@@ -86,7 +89,7 @@ public class FuncSimulatedArcContent extends LockssTestCase {
     props.setProperty("org.lockss.au." + auId2Str + ".badCachedFileLoc", "2,2");
     props.setProperty("org.lockss.au." + auId2Str + ".badCachedFileNum", "2");
 
-    props.setProperty("org.lockss.au." + auId2Str + ".root", tempDirPath2);
+    props.setProperty("org.lockss.au." + auId2Str + ".root", tempDirURI2);
     props.setProperty("org.lockss.au." + auId2Str + ".depth", "2");
     props.setProperty("org.lockss.au." + auId2Str + ".branch", "2");
     props.setProperty("org.lockss.au." + auId2Str + ".numFiles", "2");

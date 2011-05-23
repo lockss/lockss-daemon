@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.14 2008-05-19 07:42:11 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.14.38.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -63,8 +63,10 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
+
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
 		      Integer.toString(HASH_SPEED));

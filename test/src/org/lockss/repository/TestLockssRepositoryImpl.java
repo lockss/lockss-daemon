@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.64.2.2 2011-05-18 17:05:21 dshr Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.64.2.3 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -40,6 +40,9 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.apache.commons.vfs.VFS;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileSystemException;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -52,14 +55,16 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   private LockssRepositoryImpl repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
+  private String tempDirURI;
 
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     repoMgr = daemon.getRepositoryManager();
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
@@ -83,7 +88,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
-    assertEquals(tempDirPath, localRepo.getRepositoryPath());
+    logger.debug3("tempDirURI: " + tempDirURI + " localRepo: " + localRepo.getRepositoryPath());
+    assertEquals(tempDirURI, localRepo.getRepositoryPath());
 
     String tempDir2 = getTempDir().getAbsolutePath() + File.separator;
     MockArchivalUnit mau2 = new MockArchivalUnit();
@@ -94,7 +100,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       LockssRepositoryImpl.getLocalRepository(mau2);
     assertNotNull("Failed to create LocalRepository for: " + mau2, localRepo2);
     assertNotSame(localRepo2, localRepo);
-    assertEquals(tempDir2, localRepo2.getRepositoryPath());
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + tempDir2, localRepo2.getRepositoryPath());
 
   }
 
@@ -103,9 +109,9 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetLocalRepositoryPath() throws Exception {
-    assertEquals("foo",
-		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "foo"));
-    assertEquals("/cache/foo",
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo",
+		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo"));
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache/foo",
 		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache/foo"));
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("other:foo"));
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
@@ -122,6 +128,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       LockssRepositoryImpl.getLocalRepository(mau);
     localRepo.auMap = null;
     Map aumap = localRepo.getAuMap();
+    logger.debug3("location: " + location + " addSlash " + addSlash(location) + " auId: " + aumap.get(mau.getAuId()));
     assertEquals(addSlash(location), aumap.get(mau.getAuId()));
   }
 
@@ -130,13 +137,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetRepositoryRoot() throws Exception {
-    assertEquals(tempDirPath, LockssRepositoryImpl.getRepositoryRoot(mau));
+    assertEquals(tempDirURI, LockssRepositoryImpl.getRepositoryRoot(mau));
 
     Configuration auconf =
       ConfigurationUtil.fromArgs(PluginManager.AU_PARAM_REPOSITORY,
 				 RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar");
     mau.setConfiguration(auconf);
-    assertEquals("/foo/bar", LockssRepositoryImpl.getRepositoryRoot(mau));
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar", LockssRepositoryImpl.getRepositoryRoot(mau));
   }
 
   // The whole point of isDirInRepository() is to resolve symbolic links,
@@ -152,19 +159,19 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
-    String cachePath =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
-    File testFile = new File(cachePath);
+    String cacheURI =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirURI, mau);
+    FileObject testFileObject = VFS.getManager().resolveFile(cacheURI);
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
-    assertTrue(testFile.exists());
-    cachePath += "www.example.com/http/";
-    testFile = new File(cachePath);
-    assertTrue(testFile.exists());
-    cachePath += "testDir/branch1/leaf1/";
-    testFile = new File(cachePath);
-    assertTrue(testFile.exists());
+    assertTrue(testFileObject.exists());
+    cacheURI += "www.example.com/http/";
+    testFileObject = VFS.getManager().resolveFile(cacheURI);
+    assertTrue(testFileObject.exists());
+    cacheURI += "testDir/branch1/leaf1/";
+    testFileObject = VFS.getManager().resolveFile(cacheURI);
+    assertTrue(testFileObject.exists());
   }
 
   public void testGetRepositoryNode() throws Exception {
@@ -431,11 +438,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getAuDir(mau, "/tmp", false));
   }
 
-  public void testSaveAndLoadNames() {
+  public void testSaveAndLoadNames() throws Exception {
     String location =
-      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirURI, mau);
 
-    File idFile = new File(location + LockssRepositoryImpl.AU_ID_FILE);
+    FileObject idFile = VFS.getManager().resolveFile(location + LockssRepositoryImpl.AU_ID_FILE);
     assertTrue(idFile.exists());
 
     Properties props = LockssRepositoryImpl.getAuIdProperties(location);
@@ -448,8 +455,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     LockssRepositoryImpl.localRepositories.clear();
     LockssRepositoryImpl.lastPluginDir = "ba";
     String expectedStr = getCacheLocation() + "bb/";
+    logger.debug3("Expected: " + expectedStr + " munged " +
+                  FileUtil.sysDepPath(expectedStr));
     assertEquals(FileUtil.sysDepPath(expectedStr),
-		 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+		 LockssRepositoryImpl.mapAuToFileLocation(tempDirURI,
 							  new MockArchivalUnit()));
   }
 
@@ -458,38 +467,39 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit();
     String auid = "sdflkjsd";
     mau.setAuId(auid);
-    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirURI));
     // ensure asking doesn't create it
-    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+    assertFalse(LockssRepositoryImpl.doesAuDirExist(auid, tempDirURI));
     LockssRepositoryImpl.lastPluginDir = "ga";
     String expectedStr = getCacheLocation() + "gb/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-		 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau));
-    assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
+		 LockssRepositoryImpl.mapAuToFileLocation(tempDirURI, mau));
+    assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirURI));
   }
 
   public void testGetAuDirInitWithOne() {
     LockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     assertEquals(FileUtil.sysDepPath(root + "b/"),
-                 LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+                 LockssRepositoryImpl.mapAuToFileLocation(tempDirURI,
 							  new MockArchivalUnit()));
   }
 
-  public void testGetAuDirSkipping() {
+  public void testGetAuDirSkipping() throws Exception {
     LockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     // a already made by setup
-    assertTrue(new File(root + "a").exists());
-    new File(root + "b").mkdirs();
-    new File(root + "c").mkdirs();
-    new File(root + "e").mkdirs();
+    FileObject testFileObject = VFS.getManager().resolveFile(root + "a");
+    assertTrue(testFileObject.exists());
+    VFS.getManager().resolveFile(root + "b").createFolder();
+    VFS.getManager().resolveFile(root + "c").createFolder();
+    VFS.getManager().resolveFile(root + "e").createFolder();
 
     assertEquals(expDir("d"), probe());
     assertEquals(expDir("f"), probe());
-    new File(root + "g").mkdirs();
-    new File(root + "h").mkdirs();
-    new File(root + "i").mkdirs();
+    VFS.getManager().resolveFile(root + "g").createFolder();
+    VFS.getManager().resolveFile(root + "h").createFolder();
+    VFS.getManager().resolveFile(root + "i").createFolder();
     ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MAX_UNUSED_DIR_SEARCH,
 				 "2");
     try {
@@ -507,7 +517,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   String probe() {
-    return LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+    return LockssRepositoryImpl.mapAuToFileLocation(tempDirURI,
 						    new MockArchivalUnit());
   }
 

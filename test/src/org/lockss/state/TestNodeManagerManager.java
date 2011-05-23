@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerManager.java,v 1.2 2004-10-18 03:40:31 tlipkis Exp $
+ * $Id: TestNodeManagerManager.java,v 1.2.104.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -70,7 +70,8 @@ public class TestNodeManagerManager extends LockssTestCase {
       throws Exception {
     Properties p = new Properties();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    p.put(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.put(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     if (param1 != null) {
       p.put(param1, val1);
     }

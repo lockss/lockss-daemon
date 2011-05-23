@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.88 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.88.2.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class TestPluginManager extends LockssTestCase {
   private String pubKeystore = "org/lockss/test/public.keystore";
   private String password = "f00bar";
 
+  private String tempDirURI;
   private String tempDirPath;
 
   MyPluginManager mgr;
@@ -101,6 +102,9 @@ public class TestPluginManager extends LockssTestCase {
     super.setUp();
 
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+
+    tempDirURI = getTempDir().getAbsolutePath() + File.separator;
     theDaemon = new MyMockLockssDaemon();
     mgr = new MyPluginManager();
     theDaemon.setPluginManager(mgr);
@@ -109,7 +113,7 @@ public class TestPluginManager extends LockssTestCase {
     // Prepare the loadable plugin directory property, which is
     // created by mgr.startService()
     Properties p = new Properties();
-    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirURI);
     p.setProperty(PluginManager.PARAM_PLUGIN_LOCATION, "plugins");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
@@ -128,22 +132,22 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void doConfig(Properties p) throws Exception {
-    // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    // String tempDirURI = getTempDir().getAbsolutePath() + File.separator;
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_1, "val1");
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_2, "val2");
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_1, "val1");
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_2, "va.l3");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   private void minimalConfig() throws Exception {
-    // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    // String tempDirURI = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath,
+				  tempDirURI,
 				  HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-				  tempDirPath);
+				  tempDirURI);
   }
 
   public void testDefaultDisableURLConnCache() throws IOException {

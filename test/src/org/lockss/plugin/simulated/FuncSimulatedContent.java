@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.79 2010-06-17 18:49:23 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.79.6.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -84,7 +85,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);

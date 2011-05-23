@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.101.2.2 2011-01-16 00:23:26 dshr Exp $
+ * $Id: TestPollManager.java,v 1.101.2.3 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -783,7 +783,8 @@ public class TestPollManager extends LockssTestCase {
       fail("unable to create a temporary directory");
     }
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");

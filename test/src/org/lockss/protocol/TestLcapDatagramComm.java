@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.8 2005-12-03 17:25:19 troberts Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.8.86.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.Queue;
@@ -107,7 +108,8 @@ public class TestLcapDatagramComm extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = daemon.getIdentityManager();

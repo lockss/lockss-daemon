@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15.56.3 2011-01-10 05:29:10 dshr Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.56.4 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -70,6 +70,7 @@ public class MockRepositoryNode implements RepositoryNode {
     this.url = url;
     this.nodeLocation = nodeLocation;
     try {
+      // nodeLocation is a URL
       nodeDir = VFS.getManager().resolveFile(nodeLocation);
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException(nodeLocation + " bad");

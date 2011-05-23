@@ -7,6 +7,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
@@ -50,10 +51,11 @@ public class TestV3PollFactory extends LockssTestCase {
     theDaemon.getPluginManager();
     tempDir = getTempDir();
     tempDirPath = tempDir.getAbsolutePath();
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_QUORUM, "3");

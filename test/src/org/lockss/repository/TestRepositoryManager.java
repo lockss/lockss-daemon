@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.8.46.1 2011-05-18 17:05:21 dshr Exp $
+ * $Id: TestRepositoryManager.java,v 1.8.46.2 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -27,6 +27,7 @@
 package org.lockss.repository;
 
 import java.util.*;
+import java.io.*;
 import org.lockss.app.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -119,20 +120,20 @@ public class TestRepositoryManager extends LockssTestCase {
 
   public void testGetRepositoryDF () throws Exception {
     PlatformUtil.DF df = mgr.getRepositoryDF(RepositoryManager.LOCAL_REPO_PROTOCOL +
-                                             ".");
+                                             File.separator + ".");
     assertNotNull(df);
   }
 
   public void testFindLeastFullRepository () throws Exception {
-    Map repoMap = MapUtil.map(RepositoryManager.LOCAL_REPO_PROTOCOL + "one",
+    Map repoMap = MapUtil.map(RepositoryManager.LOCAL_REPO_PROTOCOL + "/one",
                               new MyDF("/one", 1000),
-			      RepositoryManager.LOCAL_REPO_PROTOCOL + "two",
+			      RepositoryManager.LOCAL_REPO_PROTOCOL + "/two",
                               new MyDF("/two", 3000),
-			      RepositoryManager.LOCAL_REPO_PROTOCOL + "three",
+			      RepositoryManager.LOCAL_REPO_PROTOCOL + "/three",
                               new MyDF("/three", 2000));
     mgr.setRepoMap(repoMap);
 
-    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "two",
+    assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/two",
                  mgr.findLeastFullRepository());
   }
 

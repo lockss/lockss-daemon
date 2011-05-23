@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1LcapMessage.java,v 1.5 2005-11-16 07:44:08 smorabito Exp $
+ * $Id: TestV1LcapMessage.java,v 1.5.88.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.poller.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 
@@ -73,7 +74,8 @@ public class TestV1LcapMessage extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idmgr = theDaemon.getIdentityManager();

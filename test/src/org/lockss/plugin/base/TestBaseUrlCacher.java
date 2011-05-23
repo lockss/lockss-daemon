@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.63 2010-11-03 06:08:12 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.63.2.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -80,8 +80,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     CIProperties props = new CIProperties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();

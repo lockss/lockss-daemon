@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.3 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncArcExploder2.java,v 1.3.18.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -117,7 +117,8 @@ public class FuncArcExploder2 extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
     maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
 
     props.setProperty("org.lockss.au." + auId + "." +
                       SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
@@ -139,7 +140,6 @@ public class FuncArcExploder2 extends LockssTestCase {
     props.setProperty(FollowLinkCrawler.PARAM_EXPLODE_ARCHIVES, "true");
     props.setProperty(FollowLinkCrawler.PARAM_STORE_ARCHIVES, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     String explodedPluginName =
       "org.lockss.plugin.archiveit.ArchiveItExplodedPlugin";

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.3.10.1 2011-05-18 17:05:21 dshr Exp $
+ * $Id: BaseFuncExporter.java,v 1.3.10.2 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.plugin.simulated.*;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.crawler.NewContentCrawler;
 import org.lockss.protocol.*;
+import org.lockss.repository.*;
 
 public abstract class BaseFuncExporter extends LockssTestCase {
   protected static final int DEFAULT_FILESIZE = 3000;
@@ -70,9 +71,11 @@ public abstract class BaseFuncExporter extends LockssTestCase {
       PropKeyEncoder.encode(tempDirPath);
     String pref = "org.lockss.au." + auId + ".";
 
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+
     Properties props = new Properties();
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     props.setProperty(pref + SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
     props.setProperty(pref + SimulatedPlugin.AU_PARAM_DEPTH, "2");
     props.setProperty(pref + SimulatedPlugin.AU_PARAM_BRANCH, "2");

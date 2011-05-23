@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.10 2005-05-12 00:26:25 troberts Exp $
+ * $Id: TestCuUrl.java,v 1.10.94.1 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 
 /**
  * Test class for org.lockss.daemon.CuUrl
@@ -53,8 +54,9 @@ public class TestCuUrl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();

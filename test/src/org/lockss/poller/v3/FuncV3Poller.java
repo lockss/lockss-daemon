@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.19 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: FuncV3Poller.java,v 1.19.30.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -121,7 +121,8 @@ public class FuncV3Poller extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MAX_POLL_DURATION, "6m");

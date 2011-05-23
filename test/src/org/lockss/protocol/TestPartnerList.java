@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.17 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestPartnerList.java,v 1.17.8.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryManager;
 
 /**
  * Test class for org.lockss.protocol.PartnerList
@@ -89,7 +90,8 @@ public class TestPartnerList extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     if (idmgr == null) {

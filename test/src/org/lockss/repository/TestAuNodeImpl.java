@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.12 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestAuNodeImpl.java,v 1.12.104.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ public class TestAuNodeImpl extends LockssTestCase {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     MockArchivalUnit mau = new MockArchivalUnit();

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.8 2011-05-18 17:05:21 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.9 2011-05-23 22:34:23 dshr Exp $
  */
 
 /*
@@ -446,20 +446,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	  if (norm.exists()) {
 	    if (file.delete()) {
 	      logger.debug("Deleted redundant unnormalized: " +
-			   file.getName().getPath());
+			   file.getName().getURI());
 	    } else {
-	      logger.error("Couldn't delete unnormalized: " + file.getName().getPath());
+	      logger.error("Couldn't delete unnormalized: " + file.getName().getURI());
 	    }
 	    all[ix] = null;
 	  } else {
 	    if (file.canRenameTo(norm)) {
 	      file.moveTo(norm);
-	      logger.debug("Renamed unnormalized: " + file.getName().getPath() + " to " +
-			   norm.getName().getPath());
+	      logger.debug("Renamed unnormalized: " + file.getName().getURI() + " to " +
+			   norm.getName().getURI());
 	      all[ix] = norm;
 	    } else {
-	      logger.error("Couldn't rename unnormalized: " + file.getName().getPath() +
-			   " to " + norm.getName().getPath());
+	      logger.error("Couldn't rename unnormalized: " + file.getName().getURI() +
+			   " to " + norm.getName().getURI());
 	      all[ix] = null;
 	    }
 	  }
@@ -629,7 +629,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ensureCurrentInfoLoaded();
     String nodeUrl = "BAD url";
     try {
-      nodeUrl =  nodeRootFile.getName().getPath();
+      nodeUrl =  nodeRootFile.getName().getURI();
       if (!nodeRootFile.exists()) {
 	logger.debug3("Creating root directory for CUS '"+url+"'");
 	nodeRootFile.createFolder();
@@ -649,7 +649,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public synchronized void makeNewVersion() {
     logger.debug3("makeNewVersion: " + nodeLocation + " ver " + currentVersion);
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
+      // nodeLocation is a URL
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
       logger.debug3("nodeRootFile: 1 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -667,7 +668,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     ensureCurrentInfoLoaded();
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
+      // nodeLocation is a URL
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
       logger.debug3("nodeRootFile: 2 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -683,7 +685,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 							  ") failed.");
     }
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
+      // nodeLocation is a URL
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
       logger.debug3("nodeRootFile: 3 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
@@ -905,9 +908,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public synchronized void abandonNewVersion() {
     logger.debug3("abandonNewVersion: " + nodeLocation);
-    if (logger.isDebug3()) {
-      (new Throwable()).printStackTrace();
-    }
     try {
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
@@ -1083,10 +1083,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public OutputStream getNewOutputStream() {
-    logger.debug3("getNewOutputStream: " + tempCacheFile.getName().getPath());
-    if (logger.isDebug3()) {
-      (new Throwable()).printStackTrace();
-    }
+    logger.debug3("getNewOutputStream: " + tempCacheFile.getName().getURI());
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
@@ -1122,8 +1119,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (!propsFile.exists()) {
       logger.debug3(nodeLocation + ": props file not exist");
       FileNotFoundException ex =
-	new FileNotFoundException(nodeLocation + ": props file");
-      if (logger.isDebug3()) {
+	new FileNotFoundException(propsFile.getName().getURI() + ": props file");
+      if (false /* logger.isDebug3() */) {
 	ex.printStackTrace();
       }
       throw ex;
@@ -1199,7 +1196,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       } catch (IOException ioe) {
 	try {
 	  logger.error("Couldn't write properties for " +
-		       tempPropsFile.getName().getPath() + ".");
+		       tempPropsFile.getName().getURI() + ".");
 	  throw new LockssRepository.RepositoryStateException("Couldn't write properties file.");
 	} finally {
 	  abandonNewVersion();
@@ -1230,7 +1227,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	} catch (LockssRepositoryImpl.RepositoryStateException rse) {
 	  currentVersion = DELETED_VERSION;
 	  logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
-	  String errFilePath = nodePropsFile.getName().getPath() + "." +
+	  String errFilePath = nodePropsFile.getName().getURI() + "." +
 	    FAULTY_FILE_EXTENSION;
 	  try {
 	  FileObject errFile =
@@ -1294,7 +1291,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Load the node properties.
    */
   void loadNodeProps(boolean okIfNotThere) {
-    String nodeUrl = nodePropsFile.getName().getPath();
+    String nodeUrl = nodePropsFile.getName().getURI();
     try {
       // check properties to see if deleted
       loadPropsInto(nodePropsFile, nodeProps);
@@ -1363,7 +1360,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /* Rename a potentially corrupt agreement history file */
   void backupAgreementHistoryFile() {
     try {
-      String oldPath = agreementFile.getName().getPath() + ".old";
+      String oldPath = agreementFile.getName().getURI() + ".old";
       FileObject oldFile = repository.getFileSystem().resolveFile(oldPath);
       updateAtomically(agreementFile, oldFile);
     } catch (IOException ex) {
@@ -1540,7 +1537,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	}
       }
     } catch (Exception e) {
-      String inactiveUrl = inactivePropFile.getName().getPath();
+      String inactiveUrl = inactivePropFile.getName().getURI();
       logger.error("Error loading last active version from "+inactiveUrl+".");
       throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
     }
@@ -1622,7 +1619,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     } catch (LockssRepositoryImpl.RepositoryStateException rse) {
       logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
       // as long as the rename goes correctly, we can proceed
-      String errFilePath = nodePropsFile.getName().getPath() +
+      String errFilePath = nodePropsFile.getName().getURI() +
 	FAULTY_FILE_EXTENSION;
       FileObject errFile = null;
       try {
@@ -1700,22 +1697,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   boolean ensureDirExists(FileObject dirFile) {
     try {
-      FileObject nr = VFS.getManager().resolveFile(nodeLocation); // XXX path or url?
+      // nodeLocation is a URL
+      FileObject nr = VFS.getManager().resolveFile(nodeLocation);
       logger.debug3("ensureDirExists: 1 " + nr.exists());
     } catch (FileSystemException e) {
       throw new UnsupportedOperationException("nodeRootFile.exists() threw " +
 					      e);
     }
     try {
-      logger.debug3("ensureDirExists " + dirFile.getName().getPath());
-      if (false) {
-	(new Throwable()).printStackTrace();
-      }
+      logger.debug3("ensureDirExists " + dirFile.getName().getURI());
       // --rename if a file at that position
       if (isFile(dirFile)) {
-	logger.error("Exists but as a file: " + dirFile.getName().getPath());
+	logger.error("Exists but as a file: " + dirFile.getName().getURI());
 	logger.error("Renaming file to 'xxx.ERROR'...");
-	String errFilePath = dirFile.getName().getPath() + FAULTY_FILE_EXTENSION;
+	String errFilePath = dirFile.getName().getURI() + FAULTY_FILE_EXTENSION;
 	FileObject errFile = dirFile.getFileSystem().resolveFile(errFilePath);
 	if (!updateAtomically(dirFile, errFile)) {
 	  logger.error("Error renaming file:" + errFilePath);
@@ -1725,14 +1720,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       // create the dir if absent
       if (!dirFile.exists()) {
-	logger.warning("Directory missing: " + dirFile.getName().getPath());
+	logger.warning("Directory missing: " + dirFile.getName().getURI());
 	logger.warning("Creating directory...");
 	dirFile.createFolder();
 	if (!dirFile.exists()) {
-	  logger.error("Create of " + dirFile.getName().getPath());
+	  logger.error("Create of " + dirFile.getName().getURI());
 	}
       } else {
-	logger.debug3(dirFile.getName().getPath() + " existed");
+	logger.debug3(dirFile.getName().getURI() + " existed");
       }
       // make sure no problems
       return (dirFile.exists() && isFolder(dirFile));
@@ -1755,13 +1750,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (!testFile.exists()) {
 	logger.warning(desc+" not found.");
 	if (logger.isDebug3()) {
-	  logger.debug3("checkFileExists " + desc + " " + testFile.getName().getPath());
-	  (new Throwable()).printStackTrace();
+	  logger.debug3("checkFileExists " + desc + " " + testFile.getName().getURI());
 	}
 	return false;
       } else if (isFolder(testFile)) {
 	logger.error(desc+" a directory.");
-	String errFilePath = testFile.getName().getPath() +
+	String errFilePath = testFile.getName().getURI() +
 	  FAULTY_FILE_EXTENSION;
 	FileObject errFile =
 	  repository.getFileSystem().resolveFile(errFilePath);
@@ -1820,12 +1814,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected void writeNodeProperties() {
     try {
-      logger.debug3("Writing node properties: " + nodePropsFile.getName().getPath());
+      logger.debug3("Writing node properties: " + nodePropsFile.getName().getURI());
       OutputStream os = new BufferedOutputStream(nodePropsFile.getContent().getOutputStream());
       nodeProps.store(os, "Node properties");
       os.close();
     } catch (IOException ioe) {
-      String nodeUrl = nodePropsFile.getName().getPath();
+      String nodeUrl = nodePropsFile.getName().getURI();
       logger.error("Couldn't write node properties for " + nodeUrl+".");
       throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
     }
@@ -1835,7 +1829,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initCurrentCacheFile() {
     logger.debug3("initCurrentCacheFile: " +
-		  getContentDir().getName().getPath() +
+		  getContentDir().getName().getURI() +
 						     File.separator +
 						     CURRENT_FILENAME);
     try {
@@ -1854,7 +1848,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initCurrentPropsFile() {
     logger.debug3("initCurrentPropsFile: " +
-		  getContentDir().getName().getPath() +
+		  getContentDir().getName().getURI() +
 						     File.separator +
 						     CURRENT_PROPS_FILENAME);
     try {
@@ -1915,7 +1909,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected void initNodeRoot() {
     logger.debug3(nodeLocation + " node root location");
     try {
-      nodeRootFile = repository.getFileSystem().resolveFile(nodeLocation);
+      // nodeLocation is a URL
+      nodeRootFile = VFS.getManager().resolveFile(nodeLocation);
     } catch (FileSystemException e) {
       logger.error(nodeLocation + " threw: " + e);
       nodeRootFile = null;
@@ -1925,7 +1920,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected FileObject getInactiveCacheFile() { // Used TestRepositoryNodeImpl
     try {
       FileObject ret = getContentDir().resolveFile(INACTIVE_FILENAME);
-      logger.debug3("getInactiveCacheFile: " + ret.getName().getPath());
+      logger.debug3("getInactiveCacheFile: " + ret.getName().getURI());
       return ret;
     } catch (FileSystemException e) {
       logger.error(nodeLocation + INACTIVE_FILENAME + " threw: " + e);
@@ -1945,11 +1940,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected FileObject getContentDir() { // Used TestRepositoryNodeImpl
     String contentDirName = nodeLocation + File.separator + CONTENT_DIR;
+    logger.debug3("nodeLocation: " + nodeLocation);
     if (contentDir == null) {
       try {
-	contentDir = repository.getFileSystem().resolveFile(contentDirName);
+        // nodeLocation is a URL
+        FileObject nodeDir = VFS.getManager().resolveFile(nodeLocation);
+        logger.debug3("nodeDir: " + nodeDir.getName().getURI());
+	contentDir = nodeDir.resolveFile(CONTENT_DIR);
 	logger.debug3("getContentDir - resolves to " +
-		      contentDir.getName().getPath() + " vs " + contentDirName + " vs " +
+		      contentDir.getName().getURI() + " vs " + contentDirName + " vs " +
 		      contentDir.getName().getPath());
 	if (logger.isDebug3()) {
 	  String name = contentDir.getName().getBaseName();
@@ -1969,7 +1968,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected FileObject getFileObject(String name) { // Used TestRepositoryNodeImpl
     try {
       if (nodeRootFile == null) {
-	nodeRootFile = repository.getFileSystem().resolveFile(nodeLocation);
+        // nodeLocation is a URL
+	nodeRootFile = VFS.getManager().resolveFile(nodeLocation);
       }
       return nodeRootFile.resolveFile(name);
     } catch (FileSystemException e) {
@@ -1994,7 +1994,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     for (int ix = 0; ix < files.length; ix++) {
       try {
 	FileName fn = files[ix].getName();
-	logger.debug3("Index: " + ix + " = " + fn.getPath() + " " + fn.getBaseName());
+	logger.debug3("Index: " + ix + " = " + fn.getURI() + " " + fn.getBaseName());
 	temp[count] = Integer.parseInt(fn.getBaseName());
       } catch (NumberFormatException e) {
 	continue;
@@ -2076,7 +2076,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected static boolean updateAtomically(FileObject f1, FileObject f2) {
     boolean res = false;
     if (f1.canRenameTo(f2)) {
-      String f1Name = f1.getName().getPath();
+      String f1Name = f1.getName().getURI();
       try {
 	f1.moveTo(f2);
 	res = true;
@@ -2084,8 +2084,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	logger.error(f1Name + " moveTo threw: " + ex);
       }
     } else {
-      String n1 = f1.getName().getPath();
-      String n2 = f2.getName().getPath();
+      String n1 = f1.getName().getURI();
+      String n2 = f2.getName().getURI();
       logger.debug3("Can't rename " + n1 + " to " + n2);
     }
     return res;
@@ -2304,7 +2304,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	assertContent();
 	FileObject f = getContentFile();
 	String url = "Bad URL";
-	url = f.getName().getPath();
+	url = f.getName().getURI();
 	try {
 	  if (!f.exists()) {
 	    throw new FileNotFoundException(url);

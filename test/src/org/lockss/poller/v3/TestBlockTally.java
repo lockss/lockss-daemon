@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.5 2006-12-06 21:20:54 smorabito Exp $
+ * $Id: TestBlockTally.java,v 1.5.60.1 2011-05-23 22:34:24 dshr Exp $
  */
 
 /*
@@ -50,10 +50,11 @@ public class TestBlockTally extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirURI = RepositoryManager.LOCAL_REPO_PROTOCOL + tempDirPath;
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(V3Poller.PARAM_V3_VOTE_MARGIN, "73");
     p.setProperty(V3Poller.PARAM_V3_TRUSTED_WEIGHT, "300");
