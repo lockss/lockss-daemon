@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1080-6032
   
-      au < superseded ; Wilderness and Environmental Medicine Volume 16 ; 16 >
-      au < superseded ; Wilderness and Environmental Medicine Volume 17 ; 17 >
-      au < superseded ; Wilderness and Environmental Medicine Volume 18 ; 18 >
+      au < superseded ; 2005 ; Wilderness and Environmental Medicine Volume 16 ; 16 >
+      au < superseded ; 2006 ; Wilderness and Environmental Medicine Volume 17 ; 17 >
+      au < superseded ; 2007 ; Wilderness and Environmental Medicine Volume 18 ; 18 >
     }
 
     {
