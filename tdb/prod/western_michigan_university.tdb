@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,9 +17,10 @@
 
     param[journal_dir] = comparative_drama
 
-    au < released ; Comparative Drama Volume 41 ; 41 >
-    au < ready ; Comparative Drama Volume 42 ; 42 >
-    au < ready ; Comparative Drama Volume 43 ; 43 >
+    au < released ; 2007 ; Comparative Drama Volume 41 ; 41 >
+    au < ready ; 2008 ; Comparative Drama Volume 42 ; 42 >
+    au < ready ; 2009 ; Comparative Drama Volume 43 ; 43 >
+    au < exists ; 2010 ; Comparative Drama Volume 44 ; 44 >
 
   }
 
