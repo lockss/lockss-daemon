@@ -15,109 +15,109 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://ajph.aphapublications.org/
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; volume ; name ; param[volume_name] >
 
-    au < manifest ; 1911 ; American Journal of Public Health Volume 1 ; 1 >
-    au < manifest ; 1912 ; American Journal of Public Health Volume 2 ; 2 >
-    au < manifest ; 1913 ; American Journal of Public Health Volume 3 ; 3 >
-    au < manifest ; 1914 ; American Journal of Public Health Volume 4 ; 4 >
-    au < manifest ; 1915 ; American Journal of Public Health Volume 5 ; 5 >
-    au < manifest ; 1916 ; American Journal of Public Health Volume 6 ; 6 >
-    au < manifest ; 1917 ; American Journal of Public Health Volume 7 ; 7 >
-    au < manifest ; 1918 ; American Journal of Public Health Volume 8 ; 8 >
-    au < manifest ; 1919 ; American Journal of Public Health Volume 9 ; 9 >
-    au < manifest ; 1920 ; American Journal of Public Health Volume 10 ; 10 >
-    au < manifest ; 1921 ; American Journal of Public Health Volume 11 ; 11 >
-    au < manifest ; 1922 ; American Journal of Public Health Volume 12 ; 12 >
-    au < manifest ; 1923 ; American Journal of Public Health Volume 13 ; 13 >
-    au < manifest ; 1924 ; American Journal of Public Health Volume 14 ; 14 >
-    au < manifest ; 1925 ; American Journal of Public Health Volume 15 ; 15 >
-    au < manifest ; 1926 ; American Journal of Public Health Volume 16 ; 16 >
-    au < manifest ; 1927 ; American Journal of Public Health Volume 17 ; 17 >
-    au < manifest ; 1928 ; American Journal of Public Health Volume 18 ; 18 >
-    au < manifest ; 1929 ; American Journal of Public Health Volume 19 ; 19 >
-    au < manifest ; 1930 ; American Journal of Public Health Volume 20 ; 20 >
-    au < manifest ; 1931 ; American Journal of Public Health Volume 21 ; 21 >
-    au < manifest ; 1932 ; American Journal of Public Health Volume 22 ; 22 >
-    au < manifest ; 1933 ; American Journal of Public Health Volume 23 ; 23 >
-    au < manifest ; 1934 ; American Journal of Public Health Volume 24 ; 24 >
-    au < manifest ; 1935 ; American Journal of Public Health Volume 25 ; 25 >
-    au < manifest ; 1936 ; American Journal of Public Health Volume 26 ; 26 >
-    au < manifest ; 1937 ; American Journal of Public Health Volume 27 ; 27 >
-    au < manifest ; 1938 ; American Journal of Public Health Volume 28 ; 28 >
-    au < manifest ; 1939 ; American Journal of Public Health Volume 29 ; 29 >
-    au < manifest ; 1940 ; American Journal of Public Health Volume 30 ; 30 >
-    au < manifest ; 1941 ; American Journal of Public Health Volume 31 ; 31 >
-    au < manifest ; 1942 ; American Journal of Public Health Volume 32 ; 32 >
-    au < manifest ; 1943 ; American Journal of Public Health Volume 33 ; 33 >
-    au < manifest ; 1944 ; American Journal of Public Health Volume 34 ; 34 >
-    au < manifest ; 1945 ; American Journal of Public Health Volume 35 ; 35 >
-    au < manifest ; 1946 ; American Journal of Public Health Volume 36 ; 36 >
-    au < manifest ; 1947 ; American Journal of Public Health Volume 37 ; 37 >
-    au < manifest ; 1948 ; American Journal of Public Health Volume 38 ; 38 >
-    au < manifest ; 1949 ; American Journal of Public Health Volume 39 ; 39 >
-    au < manifest ; 1950 ; American Journal of Public Health Volume 40 ; 40 >
-    au < manifest ; 1951 ; American Journal of Public Health Volume 41 ; 41 >
-    au < manifest ; 1952 ; American Journal of Public Health Volume 42 ; 42 >
-    au < manifest ; 1953 ; American Journal of Public Health Volume 43 ; 43 >
-    au < manifest ; 1954 ; American Journal of Public Health Volume 44 ; 44 >
-    au < manifest ; 1955 ; American Journal of Public Health Volume 45 ; 45 >
-    au < manifest ; 1956 ; American Journal of Public Health Volume 46 ; 46 >
-    au < manifest ; 1957 ; American Journal of Public Health Volume 47 ; 47 >
-    au < manifest ; 1958 ; American Journal of Public Health Volume 48 ; 48 >
-    au < manifest ; 1959 ; American Journal of Public Health Volume 49 ; 49 >
-    au < manifest ; 1960 ; American Journal of Public Health Volume 50 ; 50 >
-    au < manifest ; 1961 ; American Journal of Public Health Volume 51 ; 51 >
-    au < manifest ; 1962 ; American Journal of Public Health Volume 52 ; 52 >
-    au < manifest ; 1963 ; American Journal of Public Health Volume 53 ; 53 >
-    au < manifest ; 1964 ; American Journal of Public Health Volume 54 ; 54 >
-    au < manifest ; 1965 ; American Journal of Public Health Volume 55 ; 55 >
-    au < manifest ; 1966 ; American Journal of Public Health Volume 56 ; 56 >
-    au < manifest ; 1967 ; American Journal of Public Health Volume 57 ; 57 >
-    au < manifest ; 1968 ; American Journal of Public Health Volume 58 ; 58 >
-    au < manifest ; 1969 ; American Journal of Public Health Volume 59 ; 59 >
-    au < manifest ; 1970 ; American Journal of Public Health Volume 60 ; 60 >
-    au < manifest ; 1971 ; American Journal of Public Health Volume 61 ; 61 >
-    au < manifest ; 1972 ; American Journal of Public Health Volume 62 ; 62 >
-    au < manifest ; 1973 ; American Journal of Public Health Volume 63 ; 63 >
-    au < manifest ; 1974 ; American Journal of Public Health Volume 64 ; 64 >
-    au < manifest ; 1975 ; American Journal of Public Health Volume 65 ; 65 >
-    au < manifest ; 1976 ; American Journal of Public Health Volume 66 ; 66 >
-    au < manifest ; 1977 ; American Journal of Public Health Volume 67 ; 67 >
-    au < manifest ; 1978 ; American Journal of Public Health Volume 68 ; 68 >
-    au < manifest ; 1979 ; American Journal of Public Health Volume 69 ; 69 >
-    au < manifest ; 1980 ; American Journal of Public Health Volume 70 ; 70 >
-    au < manifest ; 1981 ; American Journal of Public Health Volume 71 ; 71 >
-    au < manifest ; 1982 ; American Journal of Public Health Volume 72 ; 72 >
-    au < manifest ; 1983 ; American Journal of Public Health Volume 73 ; 73 >
-    au < manifest ; 1984 ; American Journal of Public Health Volume 74 ; 74 >
-    au < manifest ; 1985 ; American Journal of Public Health Volume 75 ; 75 >
-    au < manifest ; 1986 ; American Journal of Public Health Volume 76 ; 76 >
-    au < manifest ; 1987 ; American Journal of Public Health Volume 77 ; 77 >
-    au < manifest ; 1988 ; American Journal of Public Health Volume 78 ; 78 >
-    au < manifest ; 1989 ; American Journal of Public Health Volume 79 ; 79 >
-    au < manifest ; 1990 ; American Journal of Public Health Volume 80 ; 80 >
-    au < manifest ; 1991 ; American Journal of Public Health Volume 81 ; 81 >
-    au < manifest ; 1992 ; American Journal of Public Health Volume 82 ; 82 >
-    au < manifest ; 1993 ; American Journal of Public Health Volume 83 ; 83 >
-    au < manifest ; 1994 ; American Journal of Public Health Volume 84 ; 84 >
-    au < manifest ; 1995 ; American Journal of Public Health Volume 85 ; 85 >
-    au < manifest ; 1996 ; American Journal of Public Health Volume 86 ; 86 >
-    au < manifest ; 1997 ; American Journal of Public Health Volume 87 ; 87 >
-    au < manifest ; 1998 ; American Journal of Public Health Volume 88 ; 88 >
-    au < manifest ; 1999 ; American Journal of Public Health Volume 89 ; 89 >
-    au < manifest ; 2000 ; American Journal of Public Health Volume 90 ; 90 >
-    au < manifest ; 2001 ; American Journal of Public Health Volume 91 ; 91 >
-    au < manifest ; 2002 ; American Journal of Public Health Volume 92 ; 92 >
-    au < manifest ; 2003 ; American Journal of Public Health Volume 93 ; 93 >
-    au < manifest ; 2004 ; American Journal of Public Health Volume 94 ; 94 >
-    au < manifest ; 2005 ; American Journal of Public Health Volume 95 ; 95 >
-    au < manifest ; 2006 ; American Journal of Public Health Volume 96 ; 96 >
-    au < manifest ; 2007 ; American Journal of Public Health Volume 97 ; 97 >
-    au < manifest ; 2008 ; American Journal of Public Health Volume 98 ; 98 >
-    au < manifest ; 2009 ; American Journal of Public Health Volume 99 ; 99 >
-    au < manifest ; 2010 ; American Journal of Public Health Volume 100 ; 100 >
-    au < manifest ; 2011 ; American Journal of Public Health Volume 101 ; 101 >
+    au < released ; 1911 ; 1 ; American Journal of Public Health Volume 1 ; 1 >
+    au < released ; 1912 ; 2 ; American Journal of Public Health Volume 2 ; 2 >
+    au < released ; 1913 ; 3 ; American Journal of Public Health Volume 3 ; 3 >
+    au < released ; 1914 ; 4 ; American Journal of Public Health Volume 4 ; 4 >
+    au < released ; 1915 ; 5 ; American Journal of Public Health Volume 5 ; 5 >
+    au < released ; 1916 ; 6 ; American Journal of Public Health Volume 6 ; 6 >
+    au < released ; 1917 ; 7 ; American Journal of Public Health Volume 7 ; 7 >
+    au < released ; 1918 ; 8 ; American Journal of Public Health Volume 8 ; 8 >
+    au < released ; 1919 ; 9 ; American Journal of Public Health Volume 9 ; 9 >
+    au < released ; 1920 ; 10 ; American Journal of Public Health Volume 10 ; 10 >
+    au < released ; 1921 ; 11 ; American Journal of Public Health Volume 11 ; 11 >
+    au < released ; 1922 ; 12 ; American Journal of Public Health Volume 12 ; 12 >
+    au < released ; 1923 ; 13 ; American Journal of Public Health Volume 13 ; 13 >
+    au < released ; 1924 ; 14 ; American Journal of Public Health Volume 14 ; 14 >
+    au < released ; 1925 ; 15 ; American Journal of Public Health Volume 15 ; 15 >
+    au < released ; 1926 ; 16 ; American Journal of Public Health Volume 16 ; 16 >
+    au < released ; 1927 ; 17 ; American Journal of Public Health Volume 17 ; 17 >
+    au < released ; 1928 ; 18 ; American Journal of Public Health Volume 18 ; 18 >
+    au < released ; 1929 ; 19 ; American Journal of Public Health Volume 19 ; 19 >
+    au < released ; 1930 ; 20 ; American Journal of Public Health Volume 20 ; 20 >
+    au < released ; 1931 ; 21 ; American Journal of Public Health Volume 21 ; 21 >
+    au < released ; 1932 ; 22 ; American Journal of Public Health Volume 22 ; 22 >
+    au < released ; 1933 ; 23 ; American Journal of Public Health Volume 23 ; 23 >
+    au < released ; 1934 ; 24 ; American Journal of Public Health Volume 24 ; 24 >
+    au < released ; 1935 ; 25 ; American Journal of Public Health Volume 25 ; 25 >
+    au < released ; 1936 ; 26 ; American Journal of Public Health Volume 26 ; 26 >
+    au < released ; 1937 ; 27 ; American Journal of Public Health Volume 27 ; 27 >
+    au < released ; 1938 ; 28 ; American Journal of Public Health Volume 28 ; 28 >
+    au < released ; 1939 ; 29 ; American Journal of Public Health Volume 29 ; 29 >
+    au < released ; 1940 ; 30 ; American Journal of Public Health Volume 30 ; 30 >
+    au < released ; 1941 ; 31 ; American Journal of Public Health Volume 31 ; 31 >
+    au < released ; 1942 ; 32 ; American Journal of Public Health Volume 32 ; 32 >
+    au < released ; 1943 ; 33 ; American Journal of Public Health Volume 33 ; 33 >
+    au < released ; 1944 ; 34 ; American Journal of Public Health Volume 34 ; 34 >
+    au < released ; 1945 ; 35 ; American Journal of Public Health Volume 35 ; 35 >
+    au < released ; 1946 ; 36 ; American Journal of Public Health Volume 36 ; 36 >
+    au < released ; 1947 ; 37 ; American Journal of Public Health Volume 37 ; 37 >
+    au < released ; 1948 ; 38 ; American Journal of Public Health Volume 38 ; 38 >
+    au < released ; 1949 ; 39 ; American Journal of Public Health Volume 39 ; 39 >
+    au < released ; 1950 ; 40 ; American Journal of Public Health Volume 40 ; 40 >
+    au < released ; 1951 ; 41 ; American Journal of Public Health Volume 41 ; 41 >
+    au < released ; 1952 ; 42 ; American Journal of Public Health Volume 42 ; 42 >
+    au < released ; 1953 ; 43 ; American Journal of Public Health Volume 43 ; 43 >
+    au < released ; 1954 ; 44 ; American Journal of Public Health Volume 44 ; 44 >
+    au < released ; 1955 ; 45 ; American Journal of Public Health Volume 45 ; 45 >
+    au < released ; 1956 ; 46 ; American Journal of Public Health Volume 46 ; 46 >
+    au < released ; 1957 ; 47 ; American Journal of Public Health Volume 47 ; 47 >
+    au < released ; 1958 ; 48 ; American Journal of Public Health Volume 48 ; 48 >
+    au < released ; 1959 ; 49 ; American Journal of Public Health Volume 49 ; 49 >
+    au < released ; 1960 ; 50 ; American Journal of Public Health Volume 50 ; 50 >
+    au < released ; 1961 ; 51 ; American Journal of Public Health Volume 51 ; 51 >
+    au < released ; 1962 ; 52 ; American Journal of Public Health Volume 52 ; 52 >
+    au < released ; 1963 ; 53 ; American Journal of Public Health Volume 53 ; 53 >
+    au < released ; 1964 ; 54 ; American Journal of Public Health Volume 54 ; 54 >
+    au < released ; 1965 ; 55 ; American Journal of Public Health Volume 55 ; 55 >
+    au < released ; 1966 ; 56 ; American Journal of Public Health Volume 56 ; 56 >
+    au < released ; 1967 ; 57 ; American Journal of Public Health Volume 57 ; 57 >
+    au < released ; 1968 ; 58 ; American Journal of Public Health Volume 58 ; 58 >
+    au < released ; 1969 ; 59 ; American Journal of Public Health Volume 59 ; 59 >
+    au < released ; 1970 ; 60 ; American Journal of Public Health Volume 60 ; 60 >
+    au < released ; 1971 ; 61 ; American Journal of Public Health Volume 61 ; 61 >
+    au < released ; 1972 ; 62 ; American Journal of Public Health Volume 62 ; 62 >
+    au < released ; 1973 ; 63 ; American Journal of Public Health Volume 63 ; 63 >
+    au < released ; 1974 ; 64 ; American Journal of Public Health Volume 64 ; 64 >
+    au < released ; 1975 ; 65 ; American Journal of Public Health Volume 65 ; 65 >
+    au < released ; 1976 ; 66 ; American Journal of Public Health Volume 66 ; 66 >
+    au < released ; 1977 ; 67 ; American Journal of Public Health Volume 67 ; 67 >
+    au < released ; 1978 ; 68 ; American Journal of Public Health Volume 68 ; 68 >
+    au < released ; 1979 ; 69 ; American Journal of Public Health Volume 69 ; 69 >
+    au < released ; 1980 ; 70 ; American Journal of Public Health Volume 70 ; 70 >
+    au < released ; 1981 ; 71 ; American Journal of Public Health Volume 71 ; 71 >
+    au < released ; 1982 ; 72 ; American Journal of Public Health Volume 72 ; 72 >
+    au < released ; 1983 ; 73 ; American Journal of Public Health Volume 73 ; 73 >
+    au < released ; 1984 ; 74 ; American Journal of Public Health Volume 74 ; 74 >
+    au < released ; 1985 ; 75 ; American Journal of Public Health Volume 75 ; 75 >
+    au < released ; 1986 ; 76 ; American Journal of Public Health Volume 76 ; 76 >
+    au < released ; 1987 ; 77 ; American Journal of Public Health Volume 77 ; 77 >
+    au < released ; 1988 ; 78 ; American Journal of Public Health Volume 78 ; 78 >
+    au < released ; 1989 ; 79 ; American Journal of Public Health Volume 79 ; 79 >
+    au < released ; 1990 ; 80 ; American Journal of Public Health Volume 80 ; 80 >
+    au < released ; 1991 ; 81 ; American Journal of Public Health Volume 81 ; 81 >
+    au < released ; 1992 ; 82 ; American Journal of Public Health Volume 82 ; 82 >
+    au < released ; 1993 ; 83 ; American Journal of Public Health Volume 83 ; 83 >
+    au < released ; 1994 ; 84 ; American Journal of Public Health Volume 84 ; 84 >
+    au < released ; 1995 ; 85 ; American Journal of Public Health Volume 85 ; 85 >
+    au < released ; 1996 ; 86 ; American Journal of Public Health Volume 86 ; 86 >
+    au < released ; 1997 ; 87 ; American Journal of Public Health Volume 87 ; 87 >
+    au < released ; 1998 ; 88 ; American Journal of Public Health Volume 88 ; 88 >
+    au < released ; 1999 ; 89 ; American Journal of Public Health Volume 89 ; 89 >
+    au < released ; 2000 ; 90 ; American Journal of Public Health Volume 90 ; 90 >
+    au < released ; 2001 ; 91 ; American Journal of Public Health Volume 91 ; 91 >
+    au < released ; 2002 ; 92 ; American Journal of Public Health Volume 92 ; 92 >
+    au < released ; 2003 ; 93 ; American Journal of Public Health Volume 93 ; 93 >
+    au < released ; 2004 ; 94 ; American Journal of Public Health Volume 94 ; 94 >
+    au < released ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 >
+    au < released ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 >
+    au < released ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 >
+    au < released ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 >
+    au < released ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 >
+    au < released ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 >
+    au < released ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
 
   }
 
