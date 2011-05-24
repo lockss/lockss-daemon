@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.5 2011-04-04 21:22:04 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.6 2011-05-24 16:44:53 pgust Exp $
  */
 
 /*
@@ -130,11 +130,13 @@ public class TestMetadataManager extends LockssTestCase {
        * 
        * @param au
        */
-      protected void notifyFinishReindexingAu(ArchivalUnit au, boolean success) {
-        log.debug("Finished reindexing au (" + success + ") " + au);
-        synchronized (ausReindexed) {
-          ausReindexed.add(au.getAuId());
-          ausReindexed.notifyAll();
+      protected void notifyFinishReindexingAu(ArchivalUnit au, ReindexingStatus status) {
+        log.debug("Finished reindexing au (" + status + ") " + au);
+        if (status != ReindexingStatus.rescheduled) {
+          synchronized (ausReindexed) {
+            ausReindexed.add(au.getAuId());
+            ausReindexed.notifyAll();
+          }
         }
       }
     };
@@ -305,7 +307,7 @@ public class TestMetadataManager extends LockssTestCase {
     final int count = results.size();
     assertEquals(21, count);
 
-        // reset set of reindexed aus
+    // reset set of reindexed aus
     ausReindexed.clear();
 
     // simulate an au change
@@ -331,6 +333,46 @@ public class TestMetadataManager extends LockssTestCase {
       results.add(resultSet.getString(1));
     }
     assertEquals(count, results.size());
+  }
+  
+  
+  public void testDeleteMetadata() throws Exception {
+    DataSource ds = metadataManager.getDataSource();
+    assertNotNull(ds);
+    Connection con = ds.getConnection();
+    
+    // check unique plugin IDs
+    String query =           
+        "select distinct " + MetadataManager.ACCESS_URL_FIELD 
+        + " from " + MetadataManager.METADATA_TABLE
+        + " where " + MetadataManager.PLUGIN_ID_FIELD 
+        + " =  'org|lockss|daemon|TestMetadataManager$MySimulatedPlugin0'"; 
+    Statement stmt = con.createStatement();
+    ResultSet resultSet = stmt.executeQuery(query);
+    Set<String> results = new HashSet<String>();
+    while (resultSet.next()) {
+      results.add(resultSet.getString(1));
+    }
+    final int count = results.size();
+    assertEquals(21, count);
+
+    // reset set of reindexed aus
+    ausReindexed.clear();
+
+    // simulate an au deletion
+    theDaemon.getPluginManager().applyAuEvent(new PluginManager.AuEventClosure() {
+      public void execute(AuEventHandler hand) {
+        hand.auDeleted(sau0);
+      }
+    });
+    
+    // ensure metadata table entries for the AU are deleted
+    resultSet = stmt.executeQuery(query);
+    results = new HashSet<String>();
+    while (resultSet.next()) {
+      results.add(resultSet.getString(1));
+    }
+    assertEquals(0, results.size());
   }
   
   

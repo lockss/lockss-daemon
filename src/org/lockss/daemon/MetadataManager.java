@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.17 2011-05-11 21:32:30 pgust Exp $
+ * $Id: MetadataManager.java,v 1.18 2011-05-24 16:44:53 pgust Exp $
  */
 
 /*
@@ -344,40 +344,71 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     pluginMgr = getDaemon().getPluginManager();
     pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
 
-      public void auContentChanged(ArchivalUnit au, ChangeInfo info) {
-        if (info.isComplete()) {
+      /** Called before the AU is deleted */
+      public void auDeleted(ArchivalUnit au) {
+        synchronized (reindexingTasks) {
+          ReindexingTask task = reindexingTasks.get(au);
+          if (task != null) {
+            // task cancellation will remove task and schedule next one
+            log.debug2(  "Canceling pending reindexing task for deleted au "
+                       + au.getName());
+            // cancel running task because au is being deleted 
+            task.cancel();
+          }
+
           Connection conn = null;
           try {
-            log.debug2("Adding changed au to reindex: " + au.getName());
-            // add pending AU
             conn = newConnection();
             if (conn == null) {
               log.error(  "Cannot connect to database"
-                        + " -- cannot add changed aus to pending aus");
+                        + " -- cannot remove metadata for changed AU: "
+                        + au.getName());
               return;
             }
+        	removeMetadataForAu(conn, au);
+        	conn.commit();
+          } catch (SQLException ex) {
+        	log.error(  "Cannot remove metadata for deleted AU: " 
+        			  + au.getName(), ex);
+          } finally {
+        	safeCommit(conn);
+          }
+        }
+      }
+      /** Called after a change to the AU's content */
+      public void auContentChanged(ArchivalUnit au, ChangeInfo info) {
+        if (info.isComplete()) {
+          synchronized (reindexingTasks) {
+            ReindexingTask task = reindexingTasks.get(au);
+            if (task != null) {
+              log.debug2(  "Rescheduling pending reindexing task for au "
+                         + au.getName());
+              // reschedule running task because 
+              // previous work may be out of date
+              task.reschedule();
+            } else {
+              log.debug2("Scheduling reindexing tasks");
+              Connection conn = null;
+              try {
+                log.debug2("Adding changed au to reindex: " + au.getName());
+                // add pending AU
+                conn = newConnection();
+                if (conn == null) {
+                  log.error(  "Cannot connect to database"
+                            + " -- cannot add changed aus to pending aus");
+                  return;
+                }
 
-            addToPendingAus(conn, Collections.singleton(au));
-            conn.commit();
+                addToPendingAus(conn, Collections.singleton(au));
+                conn.commit();
 
-            synchronized (reindexingTasks) {
-              ReindexingTask task = reindexingTasks.get(au);
-              if (task != null) {
-                // task cancellation will remove task and schedule next one
-                log.debug2(  "Canceling pending reindexing task for au "
-                           + au.getName());
-                // cancel running task because previous work may be out of
-                // date; canceled task is  automatically rescheduled later
-                task.cancel();
-              } else {
-                log.debug2("Scheduling reindexing tasks");
                 startReindexing(conn);
+              } catch (SQLException ex) {
+                log.error("Cannot add changed au to pending AUs: " + au.getName(), ex);
+              } finally {
+                safeClose(conn);
               }
             }
-          } catch (SQLException ex) {
-            log.error("Cannot add au to pending AUs: " + au.getName(), ex);
-          } finally {
-            safeClose(conn);
           }
         }
       }
@@ -1064,6 +1095,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     return ae;
   }
 
+  /** enumeration status for reindexing tasks */
+  enum ReindexingStatus { 
+	success, 	// if the reindexing task was successful
+	failed, 	// if the reindexing task failed
+	rescheduled // if the reindexing task was rescheduled 
+  };
+  
   /**
    * This class implements a reindexing task that extracts metadata from 
    * all the articles in the specified AU.
@@ -1087,9 +1125,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     /** The default number of steps for this task */
     private static final int default_steps = 10;
-
+    
     /** The status of the task: successful if true */
-    private boolean statusOk = true;
+    private ReindexingStatus status = ReindexingStatus.success;
     
     // properties of AU and the TdbAu for this task
     private final String auid;
@@ -1118,10 +1156,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
              0, /* long estimatedDuration */
              null, /* TaskCallback */
              null); /* Object cookie */
-
       this.au = theAu;
       this.ae = theAe;
-
+      
       // initialize values used for processing every article in the AU
       auid = au.getAuId();
       pluginId = PluginManager.pluginIdFromAuId(auid);
@@ -1166,13 +1203,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               conn = newConnection();
 
               // remove old metadata before adding new for AU
-              removeMetadataForAu(au);
+              removeMetadataForAu(conn, au);
               notifyStartReindexingAu(au);
             } catch (SQLException ex) {
               log.error("Failed to set up to reindex pending au: "
                             + au.getName(), ex);
               setFinished();
-              statusOk = false;
+              if (status == ReindexingStatus.success) {
+                status = ReindexingStatus.rescheduled;
+              }
             }
           }
           else if (type == Schedule.EventType.FINISH) {
@@ -1180,7 +1219,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               try {
                 // if reindexing not complete at this point,
                 // roll back current transaction, and try later
-                if (statusOk) {
+            	switch (status) {
+            	case success: 
                   // remove the AU just reindexed from the pending list
                   removeFromPendingAus(conn, au);
                   
@@ -1198,25 +1238,32 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                         / 1.0e9 + ") Clock time: " + elapsedClockTime / 1.0e3
                         + " (" + totalClockTime / 1.0e3 + ")");
                   }
-                } else {
+                  break;
+            	case failed: 
+            	case rescheduled:
                   log.debug2("Reindexing task did not finished for au "
                       + au.getName());
                   conn.rollback();
                   
                   // attempt to move failed AU to end of pending list
                   removeFromPendingAus(conn, au);
-                  addToPendingAus(conn, Collections.singleton(au));
+                  if (status == ReindexingStatus.rescheduled) {
+                	addToPendingAus(conn, Collections.singleton(au));
+                  }
+                  break;
                 }
                 conn.commit();
               } catch (SQLException ex) {
                 log.error(  "error finishing processing of pending au: " 
                           + au.getName(), ex);
-                statusOk = false;
+                if (status == ReindexingStatus.success) {
+                  status = ReindexingStatus.rescheduled;
+                }
               }
 
               synchronized (reindexingTasks) {
                 reindexingTasks.remove(au);
-                notifyFinishReindexingAu(au, statusOk);
+                notifyFinishReindexingAu(au, status);
 
                 // schedule another task if available
                 startReindexing(conn);
@@ -1228,7 +1275,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             articleIterator = null;
           }
         }
+        
       };
+    }
+    
+    /** Cancel current task without rescheduling */
+    public void cancel() {
+      if (!isFinished() && (status == ReindexingStatus.success)) {
+    	status = ReindexingStatus.failed;
+    	super.cancel();
+      }
+    }
+    /** Cancel and reschedule current task */
+    public void reschedule() {
+      if (!isFinished() && (status == ReindexingStatus.success)) {
+        status = ReindexingStatus.rescheduled;
+        super.cancel();
+      }
     }
 
     /**
@@ -1262,7 +1325,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             log.error(  "Failed to index metadata for article URL: "
                       + af.getFullTextUrl(), ex);
             setFinished();
-            statusOk = false;
+            if (status == ReindexingStatus.success) {
+              status = ReindexingStatus.failed;
+            }
           }
         }
       };
@@ -1276,12 +1341,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           log.error(  "Failed to index metadata for full text URL: "
                     + af.getFullTextUrl(), ex);
           setFinished();
-          statusOk = false;
+          if (status == ReindexingStatus.success) {
+            status = ReindexingStatus.rescheduled;
+          }
         } catch (PluginException ex) {
           log.error(  "Failed to index metadata for full text URL: "
                     + af.getFullTextUrl(), ex);
           setFinished();
-          statusOk = false;
+          if (status == ReindexingStatus.success) {
+            status = ReindexingStatus.rescheduled;
+          }
         }
       }
 
@@ -1536,27 +1605,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     /**
-     * Remove an AU from the pending Aus table.
-     * 
-     * @param au the pending AU
-     * @throws SQLException if unable to delete pending AU
-     */
-    private void removeMetadataForAu(ArchivalUnit au)
-        throws SQLException {
-      PreparedStatement deletePendingAu = conn.prepareStatement(
-      	"delete from "
-          + METADATA_TABLE + " where " + PLUGIN_ID_FIELD +  " = ? and "
-          + AU_KEY_FIELD + " = ?");
-      String auid = au.getAuId();
-      String pluginId = PluginManager.pluginIdFromAuId(auid);
-      String auKey = PluginManager.auKeyFromAuId(auid);
-
-      deletePendingAu.setString(1, pluginId);
-      deletePendingAu.setString(2, auKey);
-      deletePendingAu.execute();
-    }
-
-    /**
      * Temporary
      * 
      * @param evt
@@ -1564,6 +1612,27 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     protected void callCallback(Schedule.EventType evt) {
       callback.taskEvent(this, evt);
     }
+  }
+
+  /**
+   * Remove an AU from the pending Aus table.
+   * 
+   * @param au the pending AU
+   * @throws SQLException if unable to delete pending AU
+   */
+  private void removeMetadataForAu(Connection conn, ArchivalUnit au)
+      throws SQLException {
+    PreparedStatement deletePendingAu = conn.prepareStatement(
+    	"delete from "
+        + METADATA_TABLE + " where " + PLUGIN_ID_FIELD +  " = ? and "
+        + AU_KEY_FIELD + " = ?");
+    String auid = au.getAuId();
+    String pluginId = PluginManager.pluginIdFromAuId(auid);
+    String auKey = PluginManager.auKeyFromAuId(auid);
+
+    deletePendingAu.setString(1, pluginId);
+    deletePendingAu.setString(2, auKey);
+    deletePendingAu.execute();
   }
 
   /**
@@ -1580,7 +1649,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @param au
    */
-  protected void notifyFinishReindexingAu(ArchivalUnit au, boolean success) {
+  protected void notifyFinishReindexingAu(ArchivalUnit au, ReindexingStatus status) {
   }
 
   /**
