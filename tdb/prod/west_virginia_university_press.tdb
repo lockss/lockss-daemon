@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,10 +17,11 @@
 
     param[journal_dir] = education_and_treatment_of_children
 
-    au < released ; Education and Treatment of Children Volume 30 ; 30 >
-    au < ready ; Education and Treatment of Children Volume 31 ; 31 >
-    au < ready ; Education and Treatment of Children Volume 32 ; 32 >
-    au < ready ; Education and Treatment of Children Volume 33 ; 33 >
+    au < released ; 2007 ; Education and Treatment of Children Volume 30 ; 30 >
+    au < ready ; 2008 ; Education and Treatment of Children Volume 31 ; 31 >
+    au < ready ; 2009 ; Education and Treatment of Children Volume 32 ; 32 >
+    au < ready ; 2010 ; Education and Treatment of Children Volume 33 ; 33 >
+    au < exists ; 2011 ; Education and Treatment of Children Volume 34 ; 34 >
 
   }
 
@@ -34,14 +35,15 @@
 
     param[journal_dir] = essays_in_medieval_studies
 
-    au < released ; Essays in Medieval Studies Volume 18 ; 18 >
-    au < released ; Essays in Medieval Studies Volume 19 ; 19 >
-    au < released ; Essays in Medieval Studies Volume 20 ; 20 >
-    au < released ; Essays in Medieval Studies Volume 21 ; 21 >
-    au < released ; Essays in Medieval Studies Volume 22 ; 22 >
-    au < released ; Essays in Medieval Studies Volume 23 ; 23 >
-    au < ready ; Essays in Medieval Studies Volume 24 ; 24 >
-    au < ready ; Essays in Medieval Studies Volume 25 ; 25 >
+    au < released ; 2001 ; Essays in Medieval Studies Volume 18 ; 18 >
+    au < released ; 2002 ; Essays in Medieval Studies Volume 19 ; 19 >
+    au < released ; 2003 ; Essays in Medieval Studies Volume 20 ; 20 >
+    au < released ; 2004 ; Essays in Medieval Studies Volume 21 ; 21 >
+    au < released ; 2005 ; Essays in Medieval Studies Volume 22 ; 22 >
+    au < released ; 2006 ; Essays in Medieval Studies Volume 23 ; 23 >
+    au < ready ; 2007 ; Essays in Medieval Studies Volume 24 ; 24 >
+    au < ready ; 2008 ; Essays in Medieval Studies Volume 25 ; 25 >
+    au < exists ; 2010 ; Essays in Medieval Studies Volume 26 ; 26 >
 
   }
 
@@ -55,11 +57,11 @@
 
     param[journal_dir] = labor_studies_journal
 
-    au < released ; Labor Studies Journal Volume 27 ; 27 >
-    au < released ; Labor Studies Journal Volume 28 ; 28 >
-    au < released ; Labor Studies Journal Volume 29 ; 29 >
-    au < released ; Labor Studies Journal Volume 30 ; 30 >
-    au < released ; Labor Studies Journal Volume 31 ; 31 >
+    au < released ; 2002-2003 ; Labor Studies Journal Volume 27 ; 27 >
+    au < released ; 2003-2004 ; Labor Studies Journal Volume 28 ; 28 >
+    au < released ; 2004-2005 ; Labor Studies Journal Volume 29 ; 29 >
+    au < released ; 2005-2006 ; Labor Studies Journal Volume 30 ; 30 >
+    au < released ; 2006-2007 ; Labor Studies Journal Volume 31 ; 31 >
 
   }
 
@@ -73,12 +75,13 @@
 
     param[journal_dir] = tolkien_studies
 
-    au < released ; Tolkien Studies Volume 1 ; 1 >
-    au < released ; Tolkien Studies Volume 2 ; 2 >
-    au < released ; Tolkien Studies Volume 3 ; 3 >
-    au < released ; Tolkien Studies Volume 4 ; 4 >
-    au < ready ; Tolkien Studies Volume 5 ; 5 >
-    au < ready ; Tolkien Studies Volume 6 ; 6 >
+    au < released ; 2004 ; Tolkien Studies Volume 1 ; 1 >
+    au < released ; 2005 ; Tolkien Studies Volume 2 ; 2 >
+    au < released ; 2006 ; Tolkien Studies Volume 3 ; 3 >
+    au < released ; 2007 ; Tolkien Studies Volume 4 ; 4 >
+    au < ready ; 2008 ; Tolkien Studies Volume 5 ; 5 >
+    au < ready ; 2009 ; Tolkien Studies Volume 6 ; 6 >
+    au < exists ; 2010 ; Tolkien Studies Volume 7 ; 7 >
 
   }
 
@@ -92,16 +95,18 @@
 
     param[journal_dir] = victorian_poetry
 
-    au < released ; Victorian Poetry Volume 38 ; 38 >
-    au < released ; Victorian Poetry Volume 39 ; 39 >
-    au < released ; Victorian Poetry Volume 40 ; 40 >
-    au < released ; Victorian Poetry Volume 41 ; 41 >
-    au < released ; Victorian Poetry Volume 42 ; 42 >
-    au < released ; Victorian Poetry Volume 43 ; 43 >
-    au < released ; Victorian Poetry Volume 44 ; 44 >
-    au < released ; Victorian Poetry Volume 45 ; 45 >
-    au < ready ; Victorian Poetry Volume 46 ; 46 >
-    au < ready ; Victorian Poetry Volume 47 ; 47 >
+    au < released ; 2000 ; Victorian Poetry Volume 38 ; 38 >
+    au < released ; 2001 ; Victorian Poetry Volume 39 ; 39 >
+    au < released ; 2002 ;  Victorian Poetry Volume 40 ; 40 >
+    au < released ; 2003 ; Victorian Poetry Volume 41 ; 41 >
+    au < released ; 2004 ; Victorian Poetry Volume 42 ; 42 >
+    au < released ; 2005 ; Victorian Poetry Volume 43 ; 43 >
+    au < released ; 2006 ; Victorian Poetry Volume 44 ; 44 >
+    au < released ; 2007 ; Victorian Poetry Volume 45 ; 45 >
+    au < ready ; 2008 ; Victorian Poetry Volume 46 ; 46 >
+    au < ready ; 2009 ; Victorian Poetry Volume 47 ; 47 >
+    au < exists ; 2010 ; Victorian Poetry Volume 48 ; 48 >
+    au < exists ; 2011 ; Victorian Poetry Volume 49 ; 49 >
 
   }
 
@@ -115,9 +120,11 @@
 
     param[journal_dir] = west_virginia_history
 
-    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1 ; 1 >
-    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2 ; 2 >
-    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3 ; 3 >
+    au < ready ; 2007 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1 ; 1 >
+    au < ready ; 2008 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2 ; 2 >
+    au < ready ; 2009 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3 ; 3 >
+    au < exists ; 2010 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 4 ; 4 >
+    au < exists ; 2011 ; West Virginia History:  A Journal of Regional Studies New Series, Volume 5 ; 5 >
 
   }
 
