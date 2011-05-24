@@ -1,4 +1,4 @@
 #!/bin/bash
 
 DIRECTORY=$(cd `dirname $0` && pwd)
-python $DIRECTORY/tdbout.py $@
+python $DIRECTORY/tdbout.py "$@"
