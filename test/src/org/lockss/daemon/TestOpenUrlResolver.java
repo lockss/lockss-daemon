@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.10 2011-05-11 21:35:27 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.11 2011-05-24 16:58:41 pgust Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.util.*;
 import javax.sql.DataSource;
 
 import org.lockss.config.*;
+import org.lockss.daemon.MetadataManager.ReindexingStatus;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -202,11 +203,13 @@ public class TestOpenUrlResolver extends LockssTestCase {
        * 
        * @param au
        */
-      protected void notifyFinishReindexingAu(ArchivalUnit au, boolean success) {
-        log.debug("Finished reindexing au (" + success + ") " + au);
-        synchronized (ausReindexed) {
-          ausReindexed.add(au.getAuId());
-          ausReindexed.notifyAll();
+      protected void notifyFinishReindexingAu(ArchivalUnit au, ReindexingStatus status) {
+        log.debug("Finished reindexing au (" + status + ") " + au);
+        if (status != ReindexingStatus.rescheduled) {
+          synchronized (ausReindexed) {
+            ausReindexed.add(au.getAuId());
+            ausReindexed.notifyAll();
+          }
         }
       }
     };
