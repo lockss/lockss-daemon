@@ -2790,10 +2790,10 @@
     param[journal_issn] = 0955-6214
     comment[platform] =  online from 1990 and published as Career Development from 1996
 
-    au < manifest ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
-    au < manifest ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
-    au < manifest ; 1992 ; International Journal of Career Management Volume 4 ; 4 >
-    au < manifest ; 1993 ; International Journal of Career Management Volume 5 ; 5 >    
+    au < testing ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
+    au < testing ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
+    au < testing ; 1992 ; International Journal of Career Management Volume 4 ; 4 >
+    au < testing ; 1993 ; International Journal of Career Management Volume 5 ; 5 >    
     au < released ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
     au < released ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
 
@@ -2985,15 +2985,15 @@
     param[journal_issn] = 1446-8956
     comment[platform] = online from 2003
     
-    au < manifest ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
-    au < manifest ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
-    au < manifest ; 2005 ; International Journal of Development Issues Volume 4 ; 4 > 
-    au < manifest ; 2006 ; International Journal of Development Issues Volume 5 ; 5 > 
+    au < testing ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
+    au < testing ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
+    au < testing ; 2005 ; International Journal of Development Issues Volume 4 ; 4 > 
+    au < testing ; 2006 ; International Journal of Development Issues Volume 5 ; 5 > 
     au < released ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
     au < released ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
     au < released ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
     au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
-    au < manifest ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
+    au < testing ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
 
   }
 
@@ -3211,10 +3211,10 @@
 
     param[journal_issn] = 1756-378X
     
-    au < manifest ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 >
-    au < manifest ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 >
-    au < manifest ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 >
-    au < manifest ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 >
+    au < testing ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 >
+    au < testing ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 >
+    au < testing ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 >
+    au < testing ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 >
     
   }
     
@@ -5143,9 +5143,9 @@
  
     param[journal_issn] = 2046-469X
     
-    au < manifest ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
-    au < manifest ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
-    au < manifest ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
+    au < testing ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
+    au < testing ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
+    au < testing ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
     
   }
 
@@ -5325,12 +5325,12 @@
     param[journal_issn] = 1751-1348
     comment[platform] = online from 2006
 
-    au < manifest ; 2006 ; Journal of Management History Volume 12 ; 12 >
-    au < manifest ; 2007 ; Journal of Management History Volume 13 ; 13 >
-    au < manifest ; 2008 ; Journal of Management History Volume 14 ; 14 >
-    au < manifest ; 2009 ; Journal of Management History Volume 15 ; 15 >
-    au < manifest ; 2010 ; Journal of Management History Volume 16 ; 16 >
-    au < manifest ; 2011 ; Journal of Management History Volume 17 ; 17 >
+    au < testing ; 2006 ; Journal of Management History Volume 12 ; 12 >
+    au < testing ; 2007 ; Journal of Management History Volume 13 ; 13 >
+    au < testing ; 2008 ; Journal of Management History Volume 14 ; 14 >
+    au < testing ; 2009 ; Journal of Management History Volume 15 ; 15 >
+    au < testing ; 2010 ; Journal of Management History Volume 16 ; 16 >
+    au < testing ; 2011 ; Journal of Management History Volume 17 ; 17 >
     
   }
 
@@ -6470,8 +6470,8 @@
     comment[platform] = online from 1992
     comment[merged] = into Human Resource Management International Digest
 
-    au < testing ; 1992 ; Management Development Review Volume 5 ; 5 >
-    au < testing ; 1993 ; Management Development Review Volume 6 ; 6 >    
+    au < ready ; 1992 ; Management Development Review Volume 5 ; 5 >
+    au < ready ; 1993 ; Management Development Review Volume 6 ; 6 >    
     au < released ; 1994 ; Management Development Review Volume 7 ; 7 >
     au < released ; 1995 ; Management Development Review Volume 8 ; 8 >
     au < released ; 1996 ; Management Development Review Volume 9 ; 9 >
@@ -6498,7 +6498,7 @@
     au < released ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 >
     au < released ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 >
     au < released ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
-    au < testing ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 >
+    au < ready ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 >
 
   }
 
@@ -6559,7 +6559,7 @@
     comment[platform] = online from 2010 
     
     au < released ; 2010 ; Management Research Review Volume 33 ; 33 >
-    au < testing ; 2011 ; Management Research Review Volume 34 ; 34 >
+    au < ready ; 2011 ; Management Research Review Volume 34 ; 34 >
 
   }
 
@@ -6619,7 +6619,7 @@
     au < released ; 2008 ; Managerial Auditing Journal Volume 23 ; 23 >
     au < released ; 2009 ; Managerial Auditing Journal Volume 24 ; 24 >
     au < released ; 2010 ; Managerial Auditing Journal Volume 25 ; 25 >
-    au < testing ; 2011 ; Managerial Auditing Journal Volume 26 ; 26 >
+    au < ready ; 2011 ; Managerial Auditing Journal Volume 26 ; 26 >
 
   }
 
@@ -6669,7 +6669,7 @@
     au < released ; 2008 ; Managerial Finance Volume 34 ; 34 >
     au < released ; 2010 ; Managerial Finance Volume 35 ; 35 >
     au < released ; 2010 ; Managerial Finance Volume 36 ; 36 >
-    au < testing ; 2011 ; Managerial Finance Volume 37 ; 37 >
+    au < ready ; 2011 ; Managerial Finance Volume 37 ; 37 >
 
   }
 
@@ -6766,7 +6766,7 @@
     au < released ; 2008 ; Managing Service Quality Volume 18 ; 18 >
     au < released ; 2009 ; Managing Service Quality Volume 19 ; 19 >
     au < released ; 2010 ; Managing Service Quality Volume 20 ; 20 >
-    au < testing ; 2011 ; Managing Service Quality Volume 21 ; 21 >
+    au < ready ; 2011 ; Managing Service Quality Volume 21 ; 21 >
 
   }
 
@@ -6808,7 +6808,7 @@
     au < released ; 2008 ; Marketing Intelligence & Planning Volume 26 ; 26 >
     au < released ; 2009 ; Marketing Intelligence & Planning Volume 27 ; 27 >
     au < released ; 2010 ; Marketing Intelligence & Planning Volume 28 ; 28 >
-    au < testing ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 >
+    au < ready ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 >
 
   }
 
@@ -6836,7 +6836,7 @@
     au < released ; 2008 ; Measuring Business Excellence Volume 12 ; 12 >
     au < released ; 2009 ; Measuring Business Excellence Volume 13 ; 13 >
     au < released ; 2010 ; Measuring Business Excellence Volume 14 ; 14 >
-    au < testing ; 2011 ; Measuring Business Excellence Volume 15 ; 15 >
+    au < ready ; 2011 ; Measuring Business Excellence Volume 15 ; 15 >
 
   }
 
@@ -6877,7 +6877,7 @@
     au < released ; 2008 ; Microelectronics International Volume 25 ; 25 >
     au < released ; 2009 ; Microelectronics International Volume 26 ; 26 >
     au < released ; 2010 ; Microelectronics International Volume 27 ; 27 >
-    au < testing ; 2011 ; Microelectronics International Volume 28 ; 28 >
+    au < ready ; 2011 ; Microelectronics International Volume 28 ; 28 >
 
   }
 
@@ -7084,28 +7084,28 @@
     param[journal_issn] = 0034-6659
     comment[platform] = online from 1971
 
-    au < testing; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
-    au < testing; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
-    au < testing; 1973 ; Nutrition & Food Science Volume 73 ; 73 >
-    au < testing; 1974 ; Nutrition & Food Science Volume 74 ; 74 >
-    au < testing; 1975 ; Nutrition & Food Science Volume 75 ; 75 >    
-    au < testing; 1976 ; Nutrition & Food Science Volume 76 ; 76 >
-    au < testing; 1977 ; Nutrition & Food Science Volume 77 ; 77 >
-    au < testing; 1978 ; Nutrition & Food Science Volume 78 ; 78 >
-    au < testing; 1979 ; Nutrition & Food Science Volume 79 ; 79 >
-    au < testing; 1980 ; Nutrition & Food Science Volume 80 ; 80 >
-    au < testing; 1981 ; Nutrition & Food Science Volume 81 ; 81 >
-    au < testing; 1982 ; Nutrition & Food Science Volume 82 ; 82 >
-    au < testing; 1983 ; Nutrition & Food Science Volume 83 ; 83 >
-    au < testing; 1984 ; Nutrition & Food Science Volume 84 ; 84 >
-    au < testing; 1985 ; Nutrition & Food Science Volume 85 ; 85 >
-    au < testing; 1986 ; Nutrition & Food Science Volume 86 ; 86 >
-    au < testing; 1987 ; Nutrition & Food Science Volume 87 ; 87 >
-    au < testing; 1988 ; Nutrition & Food Science Volume 88 ; 88 >
-    au < testing; 1989 ; Nutrition & Food Science Volume 89 ; 89 >
-    au < testing; 1990 ; Nutrition & Food Science Volume 90 ; 90 >
-    au < testing; 1991 ; Nutrition & Food Science Volume 91 ; 91 >
-    au < testing; 1992 ; Nutrition & Food Science Volume 92 ; 92 >
+    au < ready; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
+    au < ready; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
+    au < ready; 1973 ; Nutrition & Food Science Volume 73 ; 73 >
+    au < ready; 1974 ; Nutrition & Food Science Volume 74 ; 74 >
+    au < ready; 1975 ; Nutrition & Food Science Volume 75 ; 75 >    
+    au < ready; 1976 ; Nutrition & Food Science Volume 76 ; 76 >
+    au < ready; 1977 ; Nutrition & Food Science Volume 77 ; 77 >
+    au < ready; 1978 ; Nutrition & Food Science Volume 78 ; 78 >
+    au < ready; 1979 ; Nutrition & Food Science Volume 79 ; 79 >
+    au < ready; 1980 ; Nutrition & Food Science Volume 80 ; 80 >
+    au < ready; 1981 ; Nutrition & Food Science Volume 81 ; 81 >
+    au < ready; 1982 ; Nutrition & Food Science Volume 82 ; 82 >
+    au < ready; 1983 ; Nutrition & Food Science Volume 83 ; 83 >
+    au < ready; 1984 ; Nutrition & Food Science Volume 84 ; 84 >
+    au < ready; 1985 ; Nutrition & Food Science Volume 85 ; 85 >
+    au < ready; 1986 ; Nutrition & Food Science Volume 86 ; 86 >
+    au < ready; 1987 ; Nutrition & Food Science Volume 87 ; 87 >
+    au < ready; 1988 ; Nutrition & Food Science Volume 88 ; 88 >
+    au < ready; 1989 ; Nutrition & Food Science Volume 89 ; 89 >
+    au < ready; 1990 ; Nutrition & Food Science Volume 90 ; 90 >
+    au < ready; 1991 ; Nutrition & Food Science Volume 91 ; 91 >
+    au < ready; 1992 ; Nutrition & Food Science Volume 92 ; 92 >
     au < exists; 1993 ; Nutrition & Food Science Volume 93 ; 93 >
     au < released ; 1994 ; Nutrition & Food Science Volume 94 ; 94 >
     au < released ; 1995 ; Nutrition & Food Science Volume 95 ; 95 >
@@ -7113,18 +7113,18 @@
     au < released ; 1997 ; Nutrition & Food Science Volume 97 ; 97 >
     au < released ; 1998 ; Nutrition & Food Science Volume 98 ; 98 >
     au < released ; 1999 ; Nutrition & Food Science Volume 99 ; 99 >
-    au < manifest ; 2000 ; Nutrition & Food Science Volume 30 ; 30 >
-    au < manifest ; 2001 ; Nutrition & Food Science Volume 31 ; 31 >
-    au < manifest ; 2002 ; Nutrition & Food Science Volume 32 ; 32 >
-    au < manifest ; 2003 ; Nutrition & Food Science Volume 33 ; 33 >
-    au < manifest ; 2004 ; Nutrition & Food Science Volume 34 ; 34 >
-    au < manifest ; 2005 ; Nutrition & Food Science Volume 35 ; 35 >
-    au < manifest ; 2006 ; Nutrition & Food Science Volume 36 ; 36 >
-    au < manifest ; 2007 ; Nutrition & Food Science Volume 37 ; 37 >
-    au < manifest ; 2008 ; Nutrition & Food Science Volume 38 ; 38 >
-    au < manifest ; 2009 ; Nutrition & Food Science Volume 39 ; 39 >
-    au < manifest ; 2010 ; Nutrition & Food Science Volume 40 ; 40 >
-    au < manifest ; 2011 ; Nutrition & Food Science Volume 41 ; 41 >
+    au < testing ; 2000 ; Nutrition & Food Science Volume 30 ; 30 >
+    au < testing ; 2001 ; Nutrition & Food Science Volume 31 ; 31 >
+    au < testing ; 2002 ; Nutrition & Food Science Volume 32 ; 32 >
+    au < testing ; 2003 ; Nutrition & Food Science Volume 33 ; 33 >
+    au < testing ; 2004 ; Nutrition & Food Science Volume 34 ; 34 >
+    au < testing ; 2005 ; Nutrition & Food Science Volume 35 ; 35 >
+    au < testing ; 2006 ; Nutrition & Food Science Volume 36 ; 36 >
+    au < testing ; 2007 ; Nutrition & Food Science Volume 37 ; 37 >
+    au < testing ; 2008 ; Nutrition & Food Science Volume 38 ; 38 >
+    au < testing ; 2009 ; Nutrition & Food Science Volume 39 ; 39 >
+    au < testing ; 2010 ; Nutrition & Food Science Volume 40 ; 40 >
+    au < testing ; 2011 ; Nutrition & Food Science Volume 41 ; 41 >
 
   }
 
@@ -8078,31 +8078,31 @@
     param[journal_issn] = 1087-8572
     comment[platform] = online from 1975  
     
-    au < testing ; 1975 ; Strategy & Leadership Volume 3 ; 3 >
-    au < testing ; 1976 ; Strategy & Leadership Volume 4 ; 4 >
-    au < testing ; 1977 ; Strategy & Leadership Volume 5 ; 5 >
-    au < testing ; 1978 ; Strategy & Leadership Volume 6 ; 6 >
-    au < testing ; 1979 ; Strategy & Leadership Volume 7 ; 7 >
-    au < testing ; 1980 ; Strategy & Leadership Volume 8 ; 8 >
-    au < testing ; 1981 ; Strategy & Leadership Volume 9 ; 9 >
-    au < testing ; 1982 ; Strategy & Leadership Volume 10 ; 10 >
-    au < testing ; 1983 ; Strategy & Leadership Volume 11 ; 11 >
-    au < testing ; 1984 ; Strategy & Leadership Volume 12 ; 12 >
-    au < testing ; 1985 ; Strategy & Leadership Volume 13 ; 13 >
-    au < testing ; 1986 ; Strategy & Leadership Volume 14 ; 14 >
-    au < testing ; 1987 ; Strategy & Leadership Volume 15 ; 15 >
-    au < testing ; 1988 ; Strategy & Leadership Volume 16 ; 16 >
-    au < testing ; 1989 ; Strategy & Leadership Volume 17 ; 17 >
-    au < testing ; 1990 ; Strategy & Leadership Volume 18 ; 18 >
-    au < testing ; 1991 ; Strategy & Leadership Volume 19 ; 19 >
-    au < testing ; 1992 ; Strategy & Leadership Volume 20 ; 20 >
-    au < testing ; 1993 ; Strategy & Leadership Volume 21 ; 21 >
-    au < testing ; 1994 ; Strategy & Leadership Volume 22 ; 22 >
-    au < testing ; 1995 ; Strategy & Leadership Volume 23 ; 23 >
-    au < testing ; 1996 ; Strategy & Leadership Volume 24 ; 24 >
-    au < testing ; 1997 ; Strategy & Leadership Volume 25 ; 25 >
-    au < testing ; 1998 ; Strategy & Leadership Volume 26 ; 26 >
-    au < testing ; 1999 ; Strategy & Leadership Volume 27 ; 27 >
+    au < ready ; 1975 ; Strategy & Leadership Volume 3 ; 3 >
+    au < ready ; 1976 ; Strategy & Leadership Volume 4 ; 4 >
+    au < ready ; 1977 ; Strategy & Leadership Volume 5 ; 5 >
+    au < ready ; 1978 ; Strategy & Leadership Volume 6 ; 6 >
+    au < ready ; 1979 ; Strategy & Leadership Volume 7 ; 7 >
+    au < ready ; 1980 ; Strategy & Leadership Volume 8 ; 8 >
+    au < ready ; 1981 ; Strategy & Leadership Volume 9 ; 9 >
+    au < ready ; 1982 ; Strategy & Leadership Volume 10 ; 10 >
+    au < ready ; 1983 ; Strategy & Leadership Volume 11 ; 11 >
+    au < ready ; 1984 ; Strategy & Leadership Volume 12 ; 12 >
+    au < ready ; 1985 ; Strategy & Leadership Volume 13 ; 13 >
+    au < ready ; 1986 ; Strategy & Leadership Volume 14 ; 14 >
+    au < ready ; 1987 ; Strategy & Leadership Volume 15 ; 15 >
+    au < ready ; 1988 ; Strategy & Leadership Volume 16 ; 16 >
+    au < ready ; 1989 ; Strategy & Leadership Volume 17 ; 17 >
+    au < ready ; 1990 ; Strategy & Leadership Volume 18 ; 18 >
+    au < ready ; 1991 ; Strategy & Leadership Volume 19 ; 19 >
+    au < ready ; 1992 ; Strategy & Leadership Volume 20 ; 20 >
+    au < ready ; 1993 ; Strategy & Leadership Volume 21 ; 21 >
+    au < ready ; 1994 ; Strategy & Leadership Volume 22 ; 22 >
+    au < ready ; 1995 ; Strategy & Leadership Volume 23 ; 23 >
+    au < ready ; 1996 ; Strategy & Leadership Volume 24 ; 24 >
+    au < ready ; 1997 ; Strategy & Leadership Volume 25 ; 25 >
+    au < ready ; 1998 ; Strategy & Leadership Volume 26 ; 26 >
+    au < ready ; 1999 ; Strategy & Leadership Volume 27 ; 27 >
     au < released ; 2000 ; Strategy & Leadership Volume 28 ; 28 >
     au < released ; 2001 ; Strategy & Leadership Volume 29 ; 29 >
     au < released ; 2002 ; Strategy & Leadership Volume 30 ; 30 >
@@ -8114,7 +8114,7 @@
     au < released ; 2008 ; Strategy & Leadership Volume 36 ; 36 >
     au < released ; 2009 ; Strategy & Leadership Volume 37 ; 37 >
     au < released ; 2010 ; Strategy & Leadership Volume 38 ; 38 >
-    au < testing ; 2011 ; Strategy & Leadership Volume 39 ; 39 >
+    au < ready ; 2011 ; Strategy & Leadership Volume 39 ; 39 >
 
   }
 
