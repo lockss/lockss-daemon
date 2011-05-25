@@ -1,5 +1,5 @@
 /*
- * $Id: CompositeComparator.java,v 1.1 2011-02-26 21:40:30 easyonthemayo Exp $
+ * $Id: CompositeComparator.java,v 1.2 2011-05-25 13:31:12 easyonthemayo Exp $
  */
 
 /*
@@ -53,10 +53,11 @@ import java.util.Comparator;
  * @author Neil Mayo
  */
 public class CompositeComparator<T> implements Comparator<T> {
+  
   /** The primary comparator. */
-  private Comparator<T> major;
+  protected Comparator<T> major;
   /** The secondary comparator. */
-  private Comparator<T> minor;
+  protected Comparator<T> minor;
   
   /**
    * Create a composite comparator from the supplied comparators.

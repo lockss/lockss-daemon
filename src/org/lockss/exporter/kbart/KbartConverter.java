@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.10 2011-04-19 20:36:22 pgust Exp $
+ * $Id: KbartConverter.java,v 1.11 2011-05-25 13:31:12 easyonthemayo Exp $
  */
 
 /*
@@ -33,16 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.kbart;
 
 import java.util.Calendar;
-import java.util.Comparator;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Vector;
 import java.util.ArrayList;
 
-import org.lockss.config.Tdb;
-import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbUtil;
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 
 import static org.lockss.exporter.kbart.KbartTdbAuUtil.*;
@@ -97,10 +98,10 @@ public class KbartConverter {
   public static final String LABEL_PARAM_LOCKSS_RESOLVER = "LOCKSS_RESOLVER";
   
   /** The Tdb data structure from which KBART information will be selectively extracted. */
-  private final Tdb tdb;
+  //private final Tdb tdb;
 
   /** An instance variable used to record the current year. */
-  private final int thisYear; 
+  //private final int thisYear; 
 
   /** The minimum number that will be considered a date of publication. */
   public static final int MIN_PUB_DATE = 1600;
@@ -112,10 +113,10 @@ public class KbartConverter {
    * 
    * @param tdb the Tdb structure from which the metadata will be extracted 
    */
-  public KbartConverter(Tdb tdb) {
+  /*public KbartConverter(Tdb tdb) {
     this.tdb = tdb;
     this.thisYear = Calendar.getInstance().get(Calendar.YEAR);
-  }
+  }*/
  
   /**
    * Extract all the TdbTitles from the Tdb object, convert them into 
@@ -123,24 +124,38 @@ public class KbartConverter {
    * 
    * @return a List of KbartTitle objects representing all the TDB titles
    */
-  public List<KbartTitle> extractAllTitles() {
-    List<KbartTitle> list = new Vector<KbartTitle>();
-    for (TdbPublisher p : tdb.getAllTdbPublishers().values()) {
-      for (TdbTitle t : p.getTdbTitles()) {
-	list.addAll( createKbartTitles(t) );
-      }
-    }
-    return list;
+  public static List<KbartTitle> extractAllTitles() {
+    return convertTitles(TdbUtil.getAllTdbTitles());
   }
 
   /**
-   * Sort a set of <code>TdbAu</code> objects for a title into ascending alphabetic name order.
-   * By convention of TDB AU naming, this should also be chronological order.
+   * Extract all the TdbTitles from the Tdb object, convert them into 
+   * KbartTitle objects and add them to a list. 
+   * 
+   * @return a List of KbartTitle objects representing all the TDB titles
+   */
+  public static List<KbartTitle> extractTitles(TdbUtil.ContentScope scope) {
+    return convertTitles(TdbUtil.getTdbTitles(scope));
+  }
+  
+  /**
+   * Convert the given collection of TdbTitles into KbartTitles.
+   * @param titles a collection of TdbTitles
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertTitles(Collection<TdbTitle> titles) {
+    if (titles==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (TdbTitle t : titles) {
+      list.addAll( createKbartTitles(t) );
+    }
+    return list;
+  }
+  
+  /**
+   * Sort a set of <code>TdbAu</code> objects for a title by volume, dates and finally name.
    * There is no guaranteed way to order chronologically due to the dearth of date 
-   * metadata included in AUs at the time of writing; however the naming convention
-   * appears to be universally observed.
-   * <p>
-   * Note that the AU names ought to be identical to the name plus a volume identifier.
+   * metadata included in AUs at the time of writing.
    * <p>
    * Perhaps this comparator should throw an exception if the conventions appear to be 
    * contravened, rather than trying to order with arbitrary names. 
@@ -148,7 +163,13 @@ public class KbartConverter {
    * @param aus a list of TdbAu objects
    */
   private static void sortAus(List<TdbAu> aus) {
-    Collections.sort(aus, new TdbAuVolumeDateAlphanumericComparator());
+    CompositeComparator<TdbAu> cc = 
+      new CompositeComparator<TdbAu>(TdbAuAlphanumericComparatorFactory.getVolumeComparator())
+      .compose(TdbAuAlphanumericComparatorFactory.getLastDateComparator())
+      .compose(TdbAuAlphanumericComparatorFactory.getFirstDateComparator())
+      .compose(TdbAuAlphanumericComparatorFactory.getNameComparator())
+      ;
+    Collections.sort(aus, cc);
   }
 
   /**
@@ -226,12 +247,13 @@ public class KbartConverter {
   * @param tdbt a TdbTitle from which to create the KbartTitle
   * @return a list of KbartTitle objects
   */
-  public List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
+  public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
 
     List<KbartTitle> kbtList = new Vector<KbartTitle>();
     // Create a list of AUs from the collection returned by the TdbTitle getter,
     // so we can sort it.
     List<TdbAu> aus = new ArrayList<TdbAu>(tdbt.getTdbAus());
+    // TODO: Remove any 'down' AUs from the list
     // Chronologically sort the AUs from the collection
     sortAus(aus);
  
@@ -270,7 +292,6 @@ public class KbartConverter {
     baseKbt.setField(ONLINE_IDENTIFIER, findEissn(firstAu)); 
     baseKbt.setField(TITLE_ID, findIssnL(firstAu));
 
-
     // Title URL
     // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
     //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
@@ -281,8 +302,9 @@ public class KbartConverter {
     // Depends on the availability of years in AUs.
     
     // Get a list of year ranges for the AUs, and figure out where the titles need to be split into ranges    
-    List<TitleRange> ranges = getAuCoverageRanges(aus);
-
+    TitleRangeInfo tri = getAuCoverageRanges(aus);
+    List<TitleRange> ranges = tri.ranges;
+        
     // Iterate through the year ranges creating a title for each range with a gap 
     // longer than a year (KBART 5.3.1.9)
     // We should also create a new title if the AU name changes somewhere down the list
@@ -294,9 +316,12 @@ public class KbartConverter {
 	updateTitleProperties(range.first, baseKbt);  
       }
 	
-      // Volume numbers
-      kbt.setField(NUM_FIRST_VOL_ONLINE, findVolume(range.first));
-      kbt.setField(NUM_LAST_VOL_ONLINE, findVolume(range.last));
+      // Volume numbers (we omit volumes if the title did not yield a full and consistent set)
+      // Note that this omits uncertain volume data on close to 400 titles 
+      if (tri.hasVols) {
+	kbt.setField(NUM_FIRST_VOL_ONLINE, findVolume(range.first));
+	kbt.setField(NUM_LAST_VOL_ONLINE, findVolume(range.last));
+      }
       
       // Issue numbers
       if (issueFormat != null) {
@@ -306,10 +331,11 @@ public class KbartConverter {
 
       // Issue years (will be zero if years could not be found)
       if (isPublicationDate(range.getFirstYear()) && isPublicationDate(range.getLastYear())) {
+      //if (tri.hasYears) {
 	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.getFirstYear()));
 	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.getLastYear()));
 	// If the final year in the range is this year or later, leave empty the last issue/volume/date fields 
-	if (range.getLastYear() >= thisYear) {
+	if (range.getLastYear() >= getThisYear()) {
 	  kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
 	  kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
 	  kbt.setField(NUM_LAST_VOL_ONLINE, "");
@@ -321,7 +347,14 @@ public class KbartConverter {
     }
     return kbtList;
   }
-
+  
+  /**
+   * Get the current year from a calendar.
+   * @return an integer representing the current year
+   */
+  private static int getThisYear() { 
+    return Calendar.getInstance().get(Calendar.YEAR);
+  }
   
   /**
    * Update the KbartTitle with new values for the title fields if the TdbAu has
@@ -389,7 +422,6 @@ public class KbartConverter {
     // Find the year attribute if it exists
     TdbAu first = aus.get(0);
     AuInfoType type = findAuInfoType(first, yearKey);
-
     // If no type found for year, see if the volume field appears to contain a year 
     if (type==null) {
       String[] possKeys = {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
@@ -408,7 +440,11 @@ public class KbartConverter {
     try {
       for (TdbAu au : aus) {
 	//years.add(new Integer( type.findAuInfo(au, yearKey) ));
-	years.add(new YearRange( type.findAuInfo(au, yearKey) ));
+	//YearRange yrRng = new YearRange( type.findAuInfo(au, yearKey) );
+	YearRange yrRng = new YearRange( au.getYear() );
+	// If the range is not valid, give up producing years
+	if (!yrRng.isValid()) return null;
+	years.add(yrRng);
       }
     } catch (NumberFormatException e) {
       return null;
@@ -431,9 +467,8 @@ public class KbartConverter {
    * is returned of the same size and order of the AU list. Otherwise (the values are 
    * non-numerical, empty, all the same, or are not available for all the AUs) a null is returned.
    * <p>
-   * An assumption made here is that a TDB record will tend to have either
-   * a full set of well-formed volume fields, or a full-set of ill-formed 
-   * or empty volume fields. If a volume cannot be parsed for one of the 
+   * If a TDB record does not have a full set of well-formed volume fields, we give up
+   * trying to establish volumes. If a volume cannot be parsed for one of the 
    * AUs, none are returned. This means that we get one range; the alternative 
    * is to produce a number of ranges which might include false positives. 
    * That is, a gap would be produced either side of an AU with no volume.
@@ -462,7 +497,8 @@ public class KbartConverter {
     try {
      Integer lastVol = null;
       for (TdbAu au : aus) {
-	Integer vol = new Integer( type.findAuInfo(au, volKey) );
+	Integer vol = new Integer(au.getVolume());
+	//Integer vol = new Integer( type.findAuInfo(au, volKey) );
 	vols.add(vol);
 	// If there are multiple AUs, the last vol is non-null, and it and the current vol differ,
 	// consider that we've got a variety of values
@@ -472,6 +508,7 @@ public class KbartConverter {
 	lastVol = vol;
       }
     } catch (NumberFormatException e) {
+      log.debug("Could not parse volumes for "+first.getTdbTitle().getName());
       return null;  
     }
     
@@ -556,6 +593,14 @@ public class KbartConverter {
       this.firstYear = KbartTdbAuUtil.getFirstYearAsInt(KbartTdbAuUtil.findYear(first));
       this.lastYear = KbartTdbAuUtil.getLastYearAsInt(KbartTdbAuUtil.findYear(last));
     }
+    
+    public boolean isValid() {
+      return firstYear!=0 && lastYear!=0;
+    }
+    
+    public String toString() {
+      return String.format("(%d-%d)", firstYear, lastYear); 
+    }
   }
 
   /**
@@ -575,12 +620,12 @@ public class KbartConverter {
    * and issue fields empty as suggested by KBART 5.3.2.8 - 5.3.2.10.
    * 
    * @param aus ordered list of AUs
-   * @return a similarly-ordered list of TitleRange objects 
+   * @return a TitleRangeInfo containing a similarly-ordered list of TitleRange objects 
    */
-  private static List<TitleRange> getAuCoverageRanges(final List<TdbAu> aus) {
+  private static TitleRangeInfo getAuCoverageRanges(final List<TdbAu> aus) {
     // Return immediately if there are no AUs
     final int n = aus.size();
-    if (n == 0) return Collections.emptyList();
+    if (n == 0) return new TitleRangeInfo();
 
     List<Integer> vols = getAuVols(aus);
     List<YearRange> years = getAuYears(aus);
@@ -592,10 +637,12 @@ public class KbartConverter {
       List<TitleRange> ranges = new ArrayList<TitleRange>() {{
 	add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
       }};
-      return ranges;
+      log.warning(aus.get(0).getTdbTitle().getName()+" lacks a complete and consistent set of vols or years; returning single range.");
+      return new TitleRangeInfo(ranges);
     }
 
-    return hasVols ? getAuCoverageRangesImpl(aus, vols, years) : getAuCoverageRangesImpl(aus, years, years);
+    List<TitleRange> ranges = hasVols ? getAuCoverageRangesImpl(aus, vols, years) : getAuCoverageRangesImpl(aus, years, years);
+    return new TitleRangeInfo(ranges, hasVols, hasYears);
   }
   
   /**
@@ -628,7 +675,7 @@ public class KbartConverter {
     // Set current au and coverage value
     currentCoverageVal = firstCoverageVal;
     currentAu = firstAu;
-    
+        
     // Iterate through the values, starting a new title record if there
     // is a coverage gap, defined as non-consecutive numerical volumes,
     // or a gap between years which is greater than 1 
@@ -639,9 +686,11 @@ public class KbartConverter {
       prevCoverageVal = currentCoverageVal;
       currentCoverageVal = coverageValues.get(i);
       currentAu = aus.get(i);
+      //String status = currentAu.getPropertyByName("status"); // doesn't work
 	
       // There is a gap: this is not the first AU, and there is either a volume or year gap 
       if (i>0 && isCoverageGap(prevCoverageVal, currentCoverageVal)) {
+		
 	// Finish the old title and start a new title
 	int firstYear = hasYears ? years.get(firstAuIndex).firstYear : 0;
 	int prevYear = hasYears ? years.get(i-1).lastYear : 0;
@@ -697,5 +746,35 @@ public class KbartConverter {
     return currentVol - prevVol > 1;
   }
 
+  /**
+   * An object to encapsulate the results of coverage gap processing, that is the 
+   * TitleRange objects produced for a TdbTitle, and flags indicating whether 
+   * the volume and year metadata is considered complete enough to make use of
+   * in calculating ranges and correct enough to show in the output.
+   */
+  private static class TitleRangeInfo { 
+    /** The full list of TitleRanges calculated for the title. */
+    public final List<TitleRange> ranges;
+    /** Whether the title is considered to have valid volumes. */
+    public final boolean hasVols;
+    /** Whether the title is considered to have valid years. */
+    public final boolean hasYears;
+    /** Create a TitleRangeInfo with final fields. */
+    TitleRangeInfo(final List<TitleRange> ranges, final boolean hasVols, final boolean hasYears) {
+      this.ranges = ranges; 
+      this.hasVols = hasVols; 
+      this.hasYears = hasYears; 
+    }
+    /** Create a TitleRangeInfo with flags set to false. */
+    TitleRangeInfo(final List<TitleRange> ranges) {
+      this(ranges, false, false); 
+    }
+    /** Create a TitleRangeInfo with an empty list of ranges. */
+    TitleRangeInfo() {
+      this.ranges = Collections.emptyList(); 
+      this.hasVols = false; 
+      this.hasYears = false; 
+    }
+  }
   
 }

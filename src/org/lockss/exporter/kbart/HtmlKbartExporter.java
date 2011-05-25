@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.9 2011-04-19 20:06:36 pgust Exp $
+ * $Id: HtmlKbartExporter.java,v 1.10 2011-05-25 13:31:12 easyonthemayo Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.text.DateFormat;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -141,8 +142,10 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
     // Construct a title and summary
-    this.exportSummary = String.format(this.outputFormat+" Export created on %s by %s | Exported %d KBART titles from %d TDB titles.",
-	new Date(), getHostName(), titles.size(), tdbTitleTotal);
+    /*this.exportSummary = String.format(this.outputFormat+" Export created on %s by %s | Exported %d KBART titles from %d TDB titles.",
+	new Date(), getHostName(), titles.size(), tdbTitleTotal);*/
+    this.exportSummary = String.format("Export of %s titles created on %s by %s | Exported %d KBART titles from %d TDB titles.",
+	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);

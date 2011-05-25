@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.7 2011-03-28 19:41:56 pgust Exp $
+ * $Id: KbartExporter.java,v 1.8 2011-05-25 13:31:12 easyonthemayo Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.lockss.config.ConfigManager;
+import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 
 import org.lockss.util.Logger;
@@ -77,7 +78,7 @@ public abstract class KbartExporter {
 
   private static Logger log = Logger.getLogger("KbartExporter");
 
-  // Footnotes for the interface options
+   // Footnotes for the interface options
   private static final String CSV_NOTE = "The CSV format adheres to the KBART recommendations "+
   "for use in updating knowledge bases. Values are quoted where necessary, and quotes within "+
   "values are escaped.";
@@ -95,6 +96,8 @@ public abstract class KbartExporter {
   /** The total number of TdbTitle objects used as input to the export process. Only included as
    * a courtesy for use in output display. */
   protected int tdbTitleTotal;
+  /** The scope of the export. */
+  protected ContentScope scope;
   
   /** The list of KBART format titles to export. */
   protected final List<KbartTitle> titles;
@@ -130,7 +133,7 @@ public abstract class KbartExporter {
   
   /** By default, we don't want to exclude empty fields as it will contravene KBART. */
   public static final boolean omitEmptyFieldsByDefault = false;
-
+  
   /** Default encoding for output. */
   public static final String DEFAULT_ENCODING = "UTF-8";
   /** Default encoding for output. */
@@ -355,6 +358,10 @@ public abstract class KbartExporter {
     }
     return res;
   }
+  
+  protected String getDate() {
+    return DateFormat.getDateInstance(DateFormat.LONG).format(new Date()); 
+  }
 
   /**
    * Set the total number of Tdb titles informing this export.
@@ -365,6 +372,9 @@ public abstract class KbartExporter {
     this.tdbTitleTotal = n; 
   }
   
+  public void setContentScope(ContentScope scope) {
+    this.scope = scope;
+  }
  
   /**
    * Return the name of the collection; this is probably only useful if we 

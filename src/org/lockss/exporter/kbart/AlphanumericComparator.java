@@ -1,5 +1,5 @@
 /*
- * $Id: AlphanumericComparator.java,v 1.3 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: AlphanumericComparator.java,v 1.4 2011-05-25 13:31:11 easyonthemayo Exp $
  */
 
 /*
@@ -59,6 +59,9 @@ import org.lockss.util.StringUtil;
  * The class can be extended, specifying a type for the parameter T, and that type will be compared 
  * based on its string value. If a different string should be used in comparison, this can be specified
  * by overriding the <code>getComparisonString()</code> method.
+ * <p>
+ * It is also recommended to override the <code>alternativeCompareStrings</code> method to specify 
+ * the fallback comparison method.
  *	
  * @author neil
  * @param <T>
@@ -66,6 +69,7 @@ import org.lockss.util.StringUtil;
 public class AlphanumericComparator<T> implements Comparator<T>  {
 
   private static Logger log = Logger.getLogger("AlphanumericComparator");
+  
   private static final String numberRegex = "\\d+";
   private static final String nonNumberRegex = "[^\\d]+";
   //private static final Pattern number = RegexpUtil.uncheckedCompile(numberRegex);
@@ -77,14 +81,42 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
   
   private static final Perl5Matcher matcher = RegexpUtil.getMatcher();
 
-  /** Default case-sensitivity for instances of this comparator. May be overridden in the constructor. */
+  /** 
+   * Default case-sensitivity for instances of this comparator. May be overridden 
+   * in the constructor or set after construction. 
+   */
   private static final boolean CASE_SENSITIVE_DEFAULT = true;
-  /** Whether string comparison ignores accents by default. */
+  /** 
+   * Default delegation policy for this comparator when comparison strings are empty. 
+   * May be overridden in the constructor or set after construction. 
+   */
+  private static final boolean CAN_DELEGATE_DEFAULT = false;
+  /** 
+   * Whether string comparison ignores accents by default. 
+   */
   private static final boolean UNACCENTED_COMPARISON_DEFAULT = true;
 
   /** Whether this comparator compares case-sensitively. */
   private boolean caseSensitive;
-
+  public void setCaseSensitive(boolean on) { this.caseSensitive = on; }
+  public boolean isCaseSensitive() { return caseSensitive; }
+  
+  /** 
+   * A flag indicating whether the comparator can delegate to another comparator in the 
+   * case that one or more of the comparison strings are empty. A common example is if 
+   * this comparator is the major of a CompositeComparator. If the flag is set to  
+   * true, the comparator will return zero from <code>alternativeCompareStrings()</code>
+   * so that a secondary comparator can be invoked as an alternative to forcing a 
+   * meaningless string comparison.
+   * <p> 
+   * Note that not all comparisons including an empty string are meaningless. 
+   * If this flag is false, any empty comparison strings will still get compared using 
+   * the default natural string ordering, in which empty strings will be ordered first.
+   */
+  private boolean canDelegate = false;
+  public void setCanDelegate(boolean on) { this.canDelegate = on; }
+  public boolean canDelegate() { return canDelegate; }
+  
   // Tokenisation of string 1
   private AlphanumericTokenisation strTok1;
   // Tokenisation of string 2
@@ -103,13 +135,21 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
    * @param caseSensitive
    */
   public AlphanumericComparator(boolean caseSensitive) {
-    this.caseSensitive = caseSensitive;
+    this(caseSensitive, CAN_DELEGATE_DEFAULT);
   }
+
+  
+  public AlphanumericComparator(boolean caseSensitive, boolean delegate) {
+    this.caseSensitive = caseSensitive;
+    this.canDelegate = delegate;
+  }
+  
 
   /**
    * Get the string value of a parameterized object. This method can be overridden by subclasses 
    * to order objects by comparison of particular properties. The default is to return the result 
-   * of the <code>toString()</code> method for comparison.
+   * of the <code>toString()</code> method for comparison. This method should not return a null 
+   * string, but instead should return the empty string.
    * 
    * @param obj object whose string value to get 
    * @return the comparable string value of this object
@@ -139,17 +179,40 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
   }
     
   /**
-   * Compare using natural string ordering. This method encapsulates the case-sensitivity aspect of the comparison.
+   * This method is called if either of the comparison strings is empty, and a 
+   * result is decided by the <code>canDelegate</code> parameter. The default 
+   * response is to normalise the strings, acknowledging the case-sensitivity setting,
+   * and delegate to the natural string ordering algorithm, where an empty string 
+   * should come before a non-empty one.
+   * <p>
+   * If <code>canDelegate</code> is true, we assume that the objects are not 
+   * comparable on the given property, and return zero so that a secondary
+   * comparator may be invoked.
+   * <p>
+   * Subclasses can override the fallback behaviour of this method, for example 
+   * to delegate directly to another comparator.  
    * 
    * @param str1
    * @param str2
    * @return
    */
-  private int compareStrings(String str1, String str2) {
-    int res = normalise(str1).compareTo(normalise(str2)); 
+  protected int alternativeCompareStrings(String str1, String str2) {
+    // Delegate to natural string ordering algorithm
+    //int res = normalise(str1).compareTo(normalise(str2)); 
     //log.debug(String.format("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2));
     //return res > 0 ? 1 : res < 0 ? -1 : 0; 
-    return res;
+    //return res;
+    return canDelegate ? 0 : compareStrings(str1, str2);
+  }
+  
+  /**
+   * Normalise the strings and compare them using natural ordering.
+   * @param str1
+   * @param str2
+   * @return
+   */
+  private int compareStrings(String str1, String str2) {
+    return normalise(str1).compareTo(normalise(str2)); 
   }
   
   @Override
@@ -157,10 +220,11 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
     String str1 = getComparisonString(obj1);
     String str2 = getComparisonString(obj2);
     
-    // If there is an empty string, just use natural ordering (empty should come first)
+    // If there is an empty string, 
     if (StringUtil.isNullString(str1) || StringUtil.isNullString(str2)) {
-      // Use natural ordering      
-      return compareStrings(str1, str2);
+      //System.out.format("Null string comparing %s and %s with compareStrings %s and %s\n", obj1, obj2, str1, str2);
+      // Use alternative ordering
+      return alternativeCompareStrings(str1, str2);
     }
 
     // If only one of the strings starts with a number, that string should come first; no tokenisation required. 
