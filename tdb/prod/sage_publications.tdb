@@ -22,24 +22,47 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ach.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Accounting History Volume 5 ; 5 >
+        au < down ; 2000 ; Accounting History Volume 5 ; 5 >
 
       }
 
       {
 
         param[base_url] = http://ach.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Accounting History Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; Accounting History Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; Accounting History Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; Accounting History Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; Accounting History Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; Accounting History Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; ready ; Accounting History Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2000 ; Accounting History Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Accounting History Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Accounting History Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Accounting History Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2008 ; Accounting History Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2009 ; Accounting History Volume 14 ; 14 >
+      }
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ach.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < testing ; 1996 ; Accounting History Volume 1 ; 1 >
+        au < testing ; 1997 ; Accounting History Volume 2 ; 2 >
+        au < testing ; 1998 ; Accounting History Volume 3 ; 3 >
+        au < testing ; 1999 ; Accounting History Volume 4 ; 4 >
+        au < testing ; 2000 ; Accounting History Volume 5 ; 5 >
+        au < testing ; 2001 ; Accounting History Volume 6 ; 6 >
+        au < testing ; 2002 ; Accounting History Volume 7 ; 7 >
+        au < testing ; 2003 ; Accounting History Volume 8 ; 8 >
+        au < testing ; 2004 ; Accounting History Volume 9 ; 9 >
+        au < testing ; 2005 ; Accounting History Volume 10 ; 10 >
+        au < testing ; 2006 ; Accounting History Volume 11 ; 11 >
+        au < testing ; 2007 ; Accounting History Volume 12 ; 12 >
+        au < testing ; 2008 ; Accounting History Volume 13 ; 13 >
+        au < testing ; 2009 ; Accounting History Volume 14 ; 14 >
+        au < ready ; 2010 ; Accounting History Volume 15 ; 15 >
+        au < testing ; 2011 ; Accounting History Volume 16 ; 16 >
 
       }
 
@@ -58,23 +81,86 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://asj.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Acta Sociologica Volume 48 ; 48 >
+        au < down ; 2005 ; Acta Sociologica Volume 48 ; 48 >
 
       }
 
       {
 
         param[base_url] = http://asj.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Acta Sociologica Volume 48 ; 48 >
-        au < HighWireStrVolPlugin ; down ; Acta Sociologica Volume 49 ; 49 >
-        au < HighWireStrVolPlugin ; down ; Acta Sociologica Volume 50 ; 50 >
-        au < HighWirePressPlugin ; down ; Acta Sociologica Volume 51 ; 51 >
-        au < HighWirePressPlugin ; down ; Acta Sociologica Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; ready ; Acta Sociologica Volume 53 ; 53 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Acta Sociologica Volume 48 ; 48 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Acta Sociologica Volume 49 ; 49 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Acta Sociologica Volume 50 ; 50 >
+        au < HighWirePressPlugin ; down ; 2008 ; Acta Sociologica Volume 51 ; 51 >
+        au < HighWirePressPlugin ; down ; 2009 ; Acta Sociologica Volume 52 ; 52 >
+        
+      }
+      
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://asj.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+        comment[asj1960] = journal apparently suspended 1960-1961
+
+        au < manifest ; 1956; Acta Sociologica Volume 1 ; 1 >
+        au < manifest ; 1957 ; Acta Sociologica Volume 2 ; 2 >
+        au < manifest ; 1958 ; Acta Sociologica Volume 3 ; 3 >
+        au < manifest ; 1959 ; Acta Sociologica Volume 4 ; 4 >
+        au < manifest ; 1962 ; Acta Sociologica Volume 5 ; 5 >
+        au < manifest ; 1963 ; Acta Sociologica Volume 6 ; 6 >
+        au < manifest ; 1964 ; Acta Sociologica Volume 7 ; 7 >
+        au < manifest ; 1965 ; Acta Sociologica Volume 8 ; 8 >
+        au < manifest ; 1966 ; Acta Sociologica Volume 9 ; 9 >
+        au < manifest ; 1967 ; Acta Sociologica Volume 10 ; 10 >
+        au < manifest ; 1968 ; Acta Sociologica Volume 11 ; 11 >
+        au < manifest ; 1969 ; Acta Sociologica Volume 12 ; 12 >
+        au < manifest ; 1970 ; Acta Sociologica Volume 13 ; 13 >
+        au < manifest ; 1971 ; Acta Sociologica Volume 14 ; 14 >
+        au < manifest ; 1972 ; Acta Sociologica Volume 15 ; 15 >
+        au < manifest ; 1973 ; Acta Sociologica Volume 16 ; 16 >
+        au < manifest ; 1974 ; Acta Sociologica Volume 17 ; 17 >
+        au < manifest ; 1975 ; Acta Sociologica Volume 18 ; 18 >
+        au < manifest ; 1976 ; Acta Sociologica Volume 19 ; 19 >
+        au < manifest ; 1977 ; Acta Sociologica Volume 20 ; 20 >
+        au < manifest ; 1978 ; Acta Sociologica Volume 21 ; 21 >
+        au < manifest ; 1979 ; Acta Sociologica Volume 22 ; 22 >
+        au < manifest ; 1980 ; Acta Sociologica Volume 23 ; 23 >
+        au < manifest ; 1981 ; Acta Sociologica Volume 24 ; 24 >
+        au < manifest ; 1982 ; Acta Sociologica Volume 25 ; 25 >
+        au < manifest ; 1983 ; Acta Sociologica Volume 26 ; 26 >
+        au < manifest ; 1984 ; Acta Sociologica Volume 27 ; 27 >
+        au < manifest ; 1985 ; Acta Sociologica Volume 28 ; 28 >
+        au < manifest ; 1986 ; Acta Sociologica Volume 29 ; 29 >
+        au < manifest ; 1987 ; Acta Sociologica Volume 30 ; 30 >
+        au < manifest ; 1988 ; Acta Sociologica Volume 31 ; 31 >
+        au < manifest ; 1989 ; Acta Sociologica Volume 32 ; 32 >
+        au < manifest ; 1990 ; Acta Sociologica Volume 33 ; 33 >
+        au < manifest ; 1991 ; Acta Sociologica Volume 34 ; 34 >
+        au < manifest ; 1992 ; Acta Sociologica Volume 35 ; 35 >
+        au < manifest ; 1993 ; Acta Sociologica Volume 36 ; 36 >
+        au < manifest ; 1994 ; Acta Sociologica Volume 37 ; 37 >
+        au < manifest ; 1995 ; Acta Sociologica Volume 38 ; 38 >
+        au < manifest ; 1996 ; Acta Sociologica Volume 39 ; 39 >
+        au < manifest ; 1997 ; Acta Sociologica Volume 40 ; 40 >
+        au < manifest ; 1998 ; Acta Sociologica Volume 41 ; 41 >
+        au < manifest ; 1999 ; Acta Sociologica Volume 42 ; 42 >
+        au < manifest ; 2000 ; Acta Sociologica Volume 43 ; 43 >
+        au < manifest ; 2001 ; Acta Sociologica Volume 44 ; 44 >
+        au < manifest ; 2002 ; Acta Sociologica Volume 45 ; 45 >
+        au < manifest ; 2003 ; Acta Sociologica Volume 46 ; 46 >
+        au < manifest ; 2004 ; Acta Sociologica Volume 47 ; 47 >
+        au < manifest ; 2005 ; Acta Sociologica Volume 48 ; 48 >
+        au < manifest ; 2006 ; Acta Sociologica Volume 49 ; 49 >
+        au < manifest ; 2007 ; Acta Sociologica Volume 50 ; 50 >
+        au < manifest ; 2008 ; Acta Sociologica Volume 51 ; 51 >
+        au < manifest ; 2009 ; Acta Sociologica Volume 52 ; 52 >
+        au < ready ; 2010 ; Acta Sociologica Volume 53 ; 53 >
+        au < manifest ; 2011 ; Acta Sociologica Volume 54 ; 54 >
 
       }
 
@@ -93,23 +179,40 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://arj.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Action Research Volume 3 ; 3 >
+        au < down ; 2005 ; Action Research Volume 3 ; 3 >
 
       }
 
       {
 
         param[base_url] = http://arj.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Action Research Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; Action Research Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; Action Research Volume 5 ; 5 >
-        au < HighWirePressPlugin ; down ; Action Research Volume 6 ; 6 >
-        au < HighWirePressPlugin ; down ; Action Research Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; ready ; Action Research Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Action Research Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Action Research Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2003 ; Action Research Volume 5 ; 5 >
+        au < HighWirePressPlugin ; down ; 2002 ; Action Research Volume 6 ; 6 >
+        au < HighWirePressPlugin ; down ; 2001 ; Action Research Volume 7 ; 7 >
+        
+      }
+      
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://arj.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < manifest ; 2003 ; Action Research Volume 1 ; 1 >
+        au < manifest ; 2004 ; Action Research Volume 2 ; 2 >
+        au < manifest ; 2005 ; Action Research Volume 3 ; 3 >
+        au < manifest ; 2006 ; Action Research Volume 4 ; 4 >
+        au < manifest ; 2007 ; Action Research Volume 5 ; 5 >
+        au < manifest ; 2008 ; Action Research Volume 6 ; 6 >
+        au < manifest ; 2009 ; Action Research Volume 7 ; 7 >
+        au < ready ; 2010 ; Action Research Volume 8 ; 8 >
+        au < manifest ; 2011 ; Action Research Volume 9 ; 9 >
 
       }
 
@@ -474,7 +577,7 @@
         au < HighWireStrVolPlugin ; down ; American Journal of Evaluation Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; testing ; American Journal of Evaluation Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Evaluation Volume 31 ; 31 >
 
       }
 
@@ -553,7 +656,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; testing ; American Journal of Medical Quality Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 24 ; 24 >
