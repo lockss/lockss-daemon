@@ -246,7 +246,7 @@
 
     param[journal_issn] = 0735-8547
     comment[platform] = online from 1995
-    comment[merged] = into Policing
+    comment[merged_into] = Policing
     
     au < released ; 1995 ; American Journal of Police Volume 14 ; 14 >
     au < released ; 1996 ; American Journal of Police Volume 15 ; 15 >
@@ -333,7 +333,7 @@
     >
 
     param[journal_issn] = 1363-8483
-    comment[merged] = into Strategy & Leadership
+    comment[merged_into] = Strategy & Leadership
     
     au < released ; 1996 ; The Antidote Volume 1 ; 1 >
     au < released ; 1997 ; The Antidote Volume 2 ; 2 >
@@ -425,7 +425,7 @@
 
     param[journal_issn] = 1017-6748
     comment[platform] = online from 1997
-    comment[merged] = into New Library World
+    comment[merged_into] = New Library World
     
     au < released ; 1997 ; Asian Libraries Volume 6 ; 6 >
     au < released ; 1998 ; Asian Libraries Volume 7 ; 7 >
@@ -610,7 +610,7 @@
 
     param[journal_issn] = 0965-7967
     comment[platform] = online from 2000
-    comment[merged] = into The Journal of Risk Finance
+    comment[merged_into] = The Journal of Risk Finance
 
     au < released ; 2000 ; Balance Sheet Volume 8 ; 8 >
     au < released ; 2001 ; Balance Sheet Volume 9 ; 9 >
@@ -1113,7 +1113,7 @@
 
     param[journal_issn] = 1063-0279
     comment[platform] = online from 1999
-    comment[merged] = into British Journal of Clinical Governance
+    comment[merged_into] = British Journal of Clinical Governance
     
     au < released ; 1999 ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
     au < released ; 2000 ; Clinical Performance and Quality Healthcare Volume 8 ; 8 >
@@ -1570,7 +1570,7 @@
     >
 
     param[journal_issn] = 1364-5137
-    comment[merged] = into Reference Reviews
+    comment[merged_into] = Reference Reviews
     
     au < released ; 1997 ; Electronic Resources Review Volume 1 ; 1 >
     au < released ; 1998 ; Electronic Resources Review Volume 2 ; 2 >
@@ -1953,7 +1953,7 @@
 
     param[journal_issn] = 0953-3230
     comment[platform] = online from 1989
-    comment[merged] = into Career Development International
+    comment[merged_into] = Career Development International
 
     au < ready ; 1989 ; Executive Development Volume 2 ; 2 >
     au < ready ; 1990 ; Executive Development Volume 3 ; 3 >
@@ -2073,9 +2073,11 @@
     >
 
     param[journal_issn] = 1077-5730
-    comment[platform] = 2001-2002 not online Published as Business Strategy Series from 2007 
+    comment[platform] = Published as Business Strategy Series from 2007 
     
     au < manifest ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
+    au < doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 >
+    au < doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 >    
     au < manifest ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 >
     au < manifest ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 >
     au < manifest ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
@@ -2127,7 +2129,7 @@
 
     param[journal_issn] = 0955-2065
     comment[platform] = online from 1992
-    comment[merged] = into Journal of Management in Medicine
+    comment[merged_into] = Journal of Management in Medicine
 
     au < manifest ; 1992 ; Health Manpower Management Volume 18 ; 18 >    
     au < manifest ; 1993 ; Health Manpower Management Volume 19 ; 19 >
@@ -2204,12 +2206,13 @@
     >
 
     param[journal_issn] = 0828-8666
-    comment[platform] = online from 1989 missing v9
+    comment[platform] = online from 1989 
     
     au < ready ; 1989 ; Humanomics Volume 5 ; 5 >
     au < ready ; 1990 ; Humanomics Volume 6 ; 6 >
     au < ready ; 1991 ; Humanomics Volume 7 ; 7 >
     au < ready ; 1992 ; Humanomics Volume 8 ; 8 >
+    au < doesNotExist ; 1993 ; Humanomics Volume 9 ; 9 >    
     au < ready ; 1994 ; Humanomics Volume 10 ; 10 >
     au < ready ; 1995 ; Humanomics Volume 11 ; 11 >
     au < ready ; 1996 ; Humanomics Volume 12 ; 12>
@@ -2446,7 +2449,6 @@
     >
 
     param[journal_issn] = 0143-991X
-    comment[platform] = missing v19 1992
 
     au < manifest ; 1973-1974 ; Industrial Robot: The international journal of industrial and service robotics Volume 1 ; 1 >
     au < manifest ; 1975 ; Industrial Robot: The international journal of industrial and service robotics Volume 2 ; 2 >
@@ -2466,6 +2468,7 @@
     au < manifest ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 >
     au < manifest ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 >
     au < manifest ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 >
+    au < doesNotExist ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 >
     au < manifest ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 >
     au < manifest ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 >
     au < manifest ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 >
@@ -2730,7 +2733,7 @@
     >
 
     param[journal_issn] = 1465-4652
-    comment[merged] = into Integrated Manufacturing 
+    comment[merged_into] = Integrated Manufacturing 
 
     au < released ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
     au < released ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
@@ -2790,10 +2793,10 @@
     param[journal_issn] = 0955-6214
     comment[platform] =  online from 1990 and published as Career Development from 1996
 
-    au < testing ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
-    au < testing ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
-    au < testing ; 1992 ; International Journal of Career Management Volume 4 ; 4 >
-    au < testing ; 1993 ; International Journal of Career Management Volume 5 ; 5 >    
+    au < ready ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
+    au < ready ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
+    au < ready ; 1992 ; International Journal of Career Management Volume 4 ; 4 >
+    au < ready ; 1993 ; International Journal of Career Management Volume 5 ; 5 >    
     au < released ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
     au < released ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
 
@@ -2985,15 +2988,15 @@
     param[journal_issn] = 1446-8956
     comment[platform] = online from 2003
     
-    au < testing ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
-    au < testing ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
-    au < testing ; 2005 ; International Journal of Development Issues Volume 4 ; 4 > 
-    au < testing ; 2006 ; International Journal of Development Issues Volume 5 ; 5 > 
+    au < ready ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
+    au < ready ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
+    au < ready ; 2005 ; International Journal of Development Issues Volume 4 ; 4 > 
+    au < ready ; 2006 ; International Journal of Development Issues Volume 5 ; 5 > 
     au < released ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
     au < released ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
     au < released ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
     au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
-    au < testing ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
+    au < ready ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
 
   }
 
@@ -3727,7 +3730,7 @@
     >
 
     param[journal_issn] = 1359-8538
-    comment[merged] = into Internationl Journal of Quality & Relibability
+    comment[merged_into] = Internationl Journal of Quality & Relibability
     
     au < released ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
     au < released ; 1997 ; International Journal of Quality Science Volume 2 ; 2 >
@@ -5143,9 +5146,9 @@
  
     param[journal_issn] = 2046-469X
     
-    au < testing ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
-    au < testing ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
-    au < testing ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
+    au < ready ; 2008 ; Journal of International Education in Business Volume 1 ; 1 >
+    au < ready ; 2009 ; Journal of International Education in Business Volume 2 ; 2 >
+    au < ready ; 2010 ; Journal of International Education in Business Volume 3 ; 3 >
     
   }
 
@@ -5343,7 +5346,7 @@
     >
 
     param[journal_issn] = 1355-252X
-    comment[merged] = into Management Decision
+    comment[merged_into] = Management Decision
     
     au < released ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 >
     au < released ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 >
@@ -5454,7 +5457,7 @@
     >
 
     param[journal_issn] = 1355-2538
-    comment[merged] = into Marketing Intelligence & Planning
+    comment[merged_into] = Marketing Intelligence & Planning
     
     au < released ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
     au < released ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
@@ -5607,7 +5610,7 @@
     >
 
     param[journal_issn] = 0958-868X
-    comment[merged] = into Journal of Property Valuation
+    comment[merged_into] = Journal of Property Valuation
     
     au < released ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
     au < released ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
@@ -6160,7 +6163,7 @@
     >
 
     param[journal_issn] = 0968-0810
-    comment[merged] = into Library Management
+    comment[merged_into] = Library Management
     
     au < released ; 1993 ; Librarian Career Development Volume 1 ; 1 >
     au < released ; 1994 ; Librarian Career Development Volume 2 ; 2 >
@@ -6415,47 +6418,47 @@
     au < released ; 1968 ; Management Decision Volume 2 ; 2 >
     au < released ; 1969 ; Management Decision Volume 3 ; 3 >
     au < released ; 1970 ; Management Decision Volume 4 ; 4 >
-    au < manifest ; 1971 ; Management Decision Volume 9 ; 9 >
-    au < manifest ; 1972 ; Management Decision Volume 10 ; 10 >
-    au < manifest ; 1973 ; Management Decision Volume 11 ; 11 >
-    au < manifest ; 1974 ; Management Decision Volume 12 ; 12 >
-    au < manifest ; 1975 ; Management Decision Volume 13 ; 13 >
-    au < manifest ; 1976 ; Management Decision Volume 14 ; 14 >
-    au < manifest ; 1977 ; Management Decision Volume 15 ; 15 >
-    au < manifest ; 1978 ; Management Decision Volume 16 ; 16 >
-    au < manifest ; 1979 ; Management Decision Volume 17 ; 17 >
-    au < manifest ; 1980 ; Management Decision Volume 18 ; 18 >
-    au < manifest ; 1981 ; Management Decision Volume 19 ; 19 >
-    au < manifest ; 1982 ; Management Decision Volume 20 ; 20 >
-    au < manifest ; 1983 ; Management Decision Volume 21 ; 21 >
-    au < manifest ; 1984 ; Management Decision Volume 22 ; 22 >
-    au < manifest ; 1985 ; Management Decision Volume 23 ; 23 >
-    au < manifest ; 1986 ; Management Decision Volume 24 ; 24 >
-    au < manifest ; 1987 ; Management Decision Volume 25 ; 25 >
-    au < manifest ; 1988 ; Management Decision Volume 26 ; 26 >
-    au < manifest ; 1989 ; Management Decision Volume 27 ; 27 >
-    au < manifest ; 1990 ; Management Decision Volume 28 ; 28 >
-    au < manifest ; 1991 ; Management Decision Volume 29 ; 29 >    
-    au < manifest ; 1992 ; Management Decision Volume 30 ; 30 >    
-    au < manifest ; 1993 ; Management Decision Volume 31 ; 31 > 
-    au < manifest ; 1994 ; Management Decision Volume 32 ; 32 >     
-    au < manifest ; 1995 ; Management Decision Volume 33 ; 33 > 
-    au < manifest ; 1996 ; Management Decision Volume 34 ; 34 >
-    au < manifest ; 1997 ; Management Decision Volume 35 ; 35 > 
-    au < manifest ; 1998 ; Management Decision Volume 36 ; 36 >    
-    au < manifest ; 1999 ; Management Decision Volume 37 ; 37 > 
-    au < manifest ; 2000 ; Management Decision Volume 38 ; 38 >
-    au < manifest ; 2001 ; Management Decision Volume 39 ; 39 > 
-    au < manifest ; 2002 ; Management Decision Volume 40 ; 40 >
-    au < manifest ; 2003 ; Management Decision Volume 41 ; 41 >
-    au < manifest ; 2004 ; Management Decision Volume 42 ; 42 >
-    au < manifest ; 2005 ; Management Decision Volume 43 ; 43 >
-    au < manifest ; 2006 ; Management Decision Volume 44 ; 44 >
-    au < manifest ; 2007 ; Management Decision Volume 45 ; 45 >
-    au < manifest ; 2008 ; Management Decision Volume 46 ; 46 >
-    au < manifest ; 2009 ; Management Decision Volume 47 ; 47 >
-    au < manifest ; 2010 ; Management Decision Volume 48 ; 48 >
-    au < manifest ; 2011 ; Management Decision Volume 49 ; 49 >
+    au < testing ; 1971 ; Management Decision Volume 9 ; 9 >
+    au < testing ; 1972 ; Management Decision Volume 10 ; 10 >
+    au < testing ; 1973 ; Management Decision Volume 11 ; 11 >
+    au < testing ; 1974 ; Management Decision Volume 12 ; 12 >
+    au < testing ; 1975 ; Management Decision Volume 13 ; 13 >
+    au < testing ; 1976 ; Management Decision Volume 14 ; 14 >
+    au < testing ; 1977 ; Management Decision Volume 15 ; 15 >
+    au < testing ; 1978 ; Management Decision Volume 16 ; 16 >
+    au < testing ; 1979 ; Management Decision Volume 17 ; 17 >
+    au < testing ; 1980 ; Management Decision Volume 18 ; 18 >
+    au < testing ; 1981 ; Management Decision Volume 19 ; 19 >
+    au < testing ; 1982 ; Management Decision Volume 20 ; 20 >
+    au < testing ; 1983 ; Management Decision Volume 21 ; 21 >
+    au < testing ; 1984 ; Management Decision Volume 22 ; 22 >
+    au < testing ; 1985 ; Management Decision Volume 23 ; 23 >
+    au < testing ; 1986 ; Management Decision Volume 24 ; 24 >
+    au < testing ; 1987 ; Management Decision Volume 25 ; 25 >
+    au < testing ; 1988 ; Management Decision Volume 26 ; 26 >
+    au < testing ; 1989 ; Management Decision Volume 27 ; 27 >
+    au < testing ; 1990 ; Management Decision Volume 28 ; 28 >
+    au < testing ; 1991 ; Management Decision Volume 29 ; 29 >    
+    au < testing ; 1992 ; Management Decision Volume 30 ; 30 >    
+    au < testing ; 1993 ; Management Decision Volume 31 ; 31 > 
+    au < testing ; 1994 ; Management Decision Volume 32 ; 32 >     
+    au < testing ; 1995 ; Management Decision Volume 33 ; 33 > 
+    au < testing ; 1996 ; Management Decision Volume 34 ; 34 >
+    au < testing ; 1997 ; Management Decision Volume 35 ; 35 > 
+    au < testing ; 1998 ; Management Decision Volume 36 ; 36 >    
+    au < testing ; 1999 ; Management Decision Volume 37 ; 37 > 
+    au < testing ; 2000 ; Management Decision Volume 38 ; 38 >
+    au < testing ; 2001 ; Management Decision Volume 39 ; 39 > 
+    au < testing ; 2002 ; Management Decision Volume 40 ; 40 >
+    au < testing ; 2003 ; Management Decision Volume 41 ; 41 >
+    au < testing ; 2004 ; Management Decision Volume 42 ; 42 >
+    au < testing ; 2005 ; Management Decision Volume 43 ; 43 >
+    au < testing ; 2006 ; Management Decision Volume 44 ; 44 >
+    au < testing ; 2007 ; Management Decision Volume 45 ; 45 >
+    au < testing ; 2008 ; Management Decision Volume 46 ; 46 >
+    au < testing ; 2009 ; Management Decision Volume 47 ; 47 >
+    au < testing ; 2010 ; Management Decision Volume 48 ; 48 >
+    au < testing ; 2011 ; Management Decision Volume 49 ; 49 >
  
   }
 
@@ -6468,7 +6471,7 @@
 
     param[journal_issn] = 0962-2519
     comment[platform] = online from 1992
-    comment[merged] = into Human Resource Management International Digest
+    comment[merged_into] = Human Resource Management International Digest
 
     au < ready ; 1992 ; Management Development Review Volume 5 ; 5 >
     au < ready ; 1993 ; Management Development Review Volume 6 ; 6 >    
@@ -7249,9 +7252,10 @@
     >
 
     param[journal_issn] = 0114-0582
-    comment[platform] = online from 1997 missing v10
+    comment[platform] = online from 1997 
     
     au < ready ; 1997 ; Pacific Accounting Review Volume 9 ; 9 >
+    au < doesNotExist ; 1998 ; Pacific Accounting Review Volume 10 ; 10 >
     au < ready ; 1999 ; Pacific Accounting Review Volume 11 ; 11 >
     au < ready ; 2000 ; Pacific Accounting Review Volume 12 ; 12 >
     au < ready ; 2001 ; Pacific Accounting Review Volume 13 ; 13 >
@@ -7466,7 +7470,7 @@
 
     param[journal_issn] = 0968-4905
     comment[platform] = online from 1997
-    comment[merged] = into Journal of Product & Brand Management
+    comment[merged_into] = Journal of Product & Brand Management
     
     au < released ; 1997 ; Pricing Strategy and Practice Volume 5 ; 5 >
 
@@ -8197,7 +8201,7 @@
     au < released ; 2008 ; Studies in Economics and Finance Volume 25 ; 25 >
     au < released ; 2009 ; Studies in Economics and Finance Volume 26 ; 26 >
     au < released ; 2010 ; Studies in Economics and Finance Volume 27 ; 27 >
-    au < testing ; 2011 ; Studies in Economics and Finance Volume 28 ; 28 >
+    au < ready ; 2011 ; Studies in Economics and Finance Volume 28 ; 28 >
 
   }
 
@@ -8414,7 +8418,7 @@
     >
 
     param[journal_issn] = 0968-4875
-    comment[merged] = into The TQM Magazine
+    comment[merged_into] = The TQM Magazine
     
     au < released ; 1993 ; Training for Quality Volume 1 ; 1 >
     au < released ; 1994 ; Training for Quality Volume 2 ; 2 >
