@@ -1423,7 +1423,6 @@
 
     comment[continued_from] = 0937-0633
     param[journal_issn] = 1618-2642
-    attr[where] = content6a
 
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 372 ; 372 >
     au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 373 ; 373 >
@@ -1436,23 +1435,23 @@
     au < ready ; 2004 ; Analytical and Bioanalytical Chemistry Volume 380 ; 380 >
     au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 381 ; 381 >
     au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 382 ; 382 >
-    au < testing ; 2005 ; Analytical and Bioanalytical Chemistry Volume 383 ; 383 >
+    au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 383 ; 383 >
     au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 384 ; 384 >
     au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 385 ; 385 >
     au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 386 ; 386 >
-    au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 387 ; 387 >
+    au < ready ; 2007 ; Analytical and Bioanalytical Chemistry Volume 387 ; 387 >
     au < ready ; 2007 ; Analytical and Bioanalytical Chemistry Volume 388 ; 388 >
-    au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 389 ; 389 >
-    au < testing ; 2008 ; Analytical and Bioanalytical Chemistry Volume 390 ; 390 >
+    au < ready ; 2007 ; Analytical and Bioanalytical Chemistry Volume 389 ; 389 >
+    au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 390 ; 390 >
     au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 391 ; 391 >
     au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 392 ; 392 >
     au < ready ; 2009 ; Analytical and Bioanalytical Chemistry Volume 393 ; 393 >
     au < ready ; 2009 ; Analytical and Bioanalytical Chemistry Volume 394 ; 394 >
     au < ready ; 2009 ; Analytical and Bioanalytical Chemistry Volume 395 ; 395 >
-    au < testing ; 2010 ; Analytical and Bioanalytical Chemistry Volume 396 ; 396 >
-    au < testing ; 2010 ; Analytical and Bioanalytical Chemistry Volume 397 ; 397 >
-    au < testing ; 2010 ; Analytical and Bioanalytical Chemistry Volume 398 ; 398 >
-    au < testing ; 2011 ; Analytical and Bioanalytical Chemistry Volume 399 ; 399 >
+    au < ready ; 2010 ; Analytical and Bioanalytical Chemistry Volume 396 ; 396 >
+    au < ready ; 2010 ; Analytical and Bioanalytical Chemistry Volume 397 ; 397 >
+    au < ready ; 2010 ; Analytical and Bioanalytical Chemistry Volume 398 ; 398 >
+    au < ready ; 2011 ; Analytical and Bioanalytical Chemistry Volume 399 ; 399 >
 
   }
 
@@ -2030,11 +2029,103 @@
       name = Annals of Hematology ;
       issn = 0939-5555 ;
       eissn = 1432-0584 ;
-      issnl = 0939-5555 ;
-      placeholder = True
+      issnl = 0939-5555
     >
 
+    comment[merged_from] = 1269-3286
     param[journal_issn] = 0939-5555
+    attr[where] = content2b
+
+    au < manifest ; 1955 ; Annals of Hematology Volume 1 ; 1 >
+    au < manifest ; 1956 ; Annals of Hematology Volume 2 ; 2 >
+    au < manifest ; 1957 ; Annals of Hematology Volume 3 ; 3 >
+    au < manifest ; 1958 ; Annals of Hematology Volume 4 ; 4 >
+    au < manifest ; 1959 ; Annals of Hematology Volume 5 ; 5 >
+    au < manifest ; 1960 ; Annals of Hematology Volume 6 ; 6 >
+    au < manifest ; 1961 ; Annals of Hematology Volume 7 ; 7 >
+    au < manifest ; 1962 ; Annals of Hematology Volume 8 ; 8 >
+    au < manifest ; 1963 ; Annals of Hematology Volume 9 ; 9 >
+    au < manifest ; 1964 ; Annals of Hematology Volume 10 ; 10 >
+    au < manifest ; 1965 ; Annals of Hematology Volume 11 ; 11 >
+    au < manifest ; 1965-1966 ; Annals of Hematology Volume 12 ; 12 >
+    au < manifest ; 1966 ; Annals of Hematology Volume 13 ; 13 >
+    au < manifest ; 1966-1967 ; Annals of Hematology Volume 14 ; 14 >
+    au < manifest ; 1967 ; Annals of Hematology Volume 15 ; 15 >
+    au < manifest ; 1967-1968 ; Annals of Hematology Volume 16 ; 16 >
+    au < manifest ; 1968 ; Annals of Hematology Volume 17 ; 17 >
+    au < manifest ; 1968-1969 ; Annals of Hematology Volume 18 ; 18 >
+    au < manifest ; 1969 ; Annals of Hematology Volume 19 ; 19 >
+    au < manifest ; 1970 ; Annals of Hematology Volume 20 ; 20 >
+    au < manifest ; 1970 ; Annals of Hematology Volume 21 ; 21 >
+    au < manifest ; 1971 ; Annals of Hematology Volume 22 ; 22 >
+    au < manifest ; 1971 ; Annals of Hematology Volume 23 ; 23 >
+    au < manifest ; 1972 ; Annals of Hematology Volume 24 ; 24 >
+    au < manifest ; 1972 ; Annals of Hematology Volume 25 ; 25 >
+    au < manifest ; 1973 ; Annals of Hematology Volume 26 ; 26 >
+    au < manifest ; 1973 ; Annals of Hematology Volume 27 ; 27 >
+    au < manifest ; 1974 ; Annals of Hematology Volume 28 ; 28 >
+    au < manifest ; 1974 ; Annals of Hematology Volume 29 ; 29 >
+    au < manifest ; 1975 ; Annals of Hematology Volume 30 ; 30 >
+    au < manifest ; 1975 ; Annals of Hematology Volume 31 ; 31 >
+    au < manifest ; 1976 ; Annals of Hematology Volume 32 ; 32 >
+    au < manifest ; 1976 ; Annals of Hematology Volume 33 ; 33 >
+    au < manifest ; 1977 ; Annals of Hematology Volume 34 ; 34 >
+    au < manifest ; 1977 ; Annals of Hematology Volume 35 ; 35 >
+    au < manifest ; 1978 ; Annals of Hematology Volume 36 ; 36 >
+    au < manifest ; 1978 ; Annals of Hematology Volume 37 ; 37 >
+    au < manifest ; 1979 ; Annals of Hematology Volume 38 ; 38 >
+    au < manifest ; 1979 ; Annals of Hematology Volume 39 ; 39 >
+    au < manifest ; 1980 ; Annals of Hematology Volume 40 ; 40 >
+    au < manifest ; 1980 ; Annals of Hematology Volume 41 ; 41 >
+    au < manifest ; 1981 ; Annals of Hematology Volume 42 ; 42 >
+    au < manifest ; 1981 ; Annals of Hematology Volume 43 ; 43 >
+    au < manifest ; 1982 ; Annals of Hematology Volume 44 ; 44 >
+    au < manifest ; 1982 ; Annals of Hematology Volume 45 ; 45 >
+    au < manifest ; 1983 ; Annals of Hematology Volume 46 ; 46 >
+    au < manifest ; 1983 ; Annals of Hematology Volume 47 ; 47 >
+    au < manifest ; 1984 ; Annals of Hematology Volume 48 ; 48 >
+    au < manifest ; 1984 ; Annals of Hematology Volume 49 ; 49 >
+    au < manifest ; 1985 ; Annals of Hematology Volume 50 ; 50 >
+    au < manifest ; 1985 ; Annals of Hematology Volume 51 ; 51 >
+    au < manifest ; 1986 ; Annals of Hematology Volume 52 ; 52 >
+    au < manifest ; 1986 ; Annals of Hematology Volume 53 ; 53 >
+    au < manifest ; 1987 ; Annals of Hematology Volume 54 ; 54 >
+    au < manifest ; 1987 ; Annals of Hematology Volume 55 ; 55 >
+    au < manifest ; 1988 ; Annals of Hematology Volume 56 ; 56 >
+    au < manifest ; 1988 ; Annals of Hematology Volume 57 ; 57 >
+    au < manifest ; 1989 ; Annals of Hematology Volume 58 ; 58 >
+    au < manifest ; 1989 ; Annals of Hematology Volume 59 ; 59 >
+    au < manifest ; 1990 ; Annals of Hematology Volume 60 ; 60 >
+    au < manifest ; 1990 ; Annals of Hematology Volume 61 ; 61 >
+    au < manifest ; 1991 ; Annals of Hematology Volume 62 ; 62 >
+    au < manifest ; 1991 ; Annals of Hematology Volume 63 ; 63 >
+    au < manifest ; 1992 ; Annals of Hematology Volume 64 ; 64 >
+    au < manifest ; 1992 ; Annals of Hematology Volume 65 ; 65 >
+    au < manifest ; 1993 ; Annals of Hematology Volume 66 ; 66 >
+    au < manifest ; 1993 ; Annals of Hematology Volume 67 ; 67 >
+    au < manifest ; 1994 ; Annals of Hematology Volume 68 ; 68 >
+    au < manifest ; 1994 ; Annals of Hematology Volume 69 ; 69 >
+    au < manifest ; 1995 ; Annals of Hematology Volume 70 ; 70 >
+    au < manifest ; 1995 ; Annals of Hematology Volume 71 ; 71 >
+    au < manifest ; 1996 ; Annals of Hematology Volume 72 ; 72 >
+    au < manifest ; 1996 ; Annals of Hematology Volume 73 ; 73 >
+    au < manifest ; 1997 ; Annals of Hematology Volume 74 ; 74 >
+    au < manifest ; 1997 ; Annals of Hematology Volume 75 ; 75 >
+    au < manifest ; 1998 ; Annals of Hematology Volume 76 ; 76 >
+    au < manifest ; 1998 ; Annals of Hematology Volume 77 ; 77 >
+    au < manifest ; 1999 ; Annals of Hematology Volume 78 ; 78 >
+    au < manifest ; 2000 ; Annals of Hematology Volume 79 ; 79 >
+    au < manifest ; 2001 ; Annals of Hematology Volume 80 ; 80 >
+    au < testing ; 2002 ; Annals of Hematology Volume 81 ; 81 >
+    au < testing ; 2003 ; Annals of Hematology Volume 82 ; 82 >
+    au < testing ; 2004 ; Annals of Hematology Volume 83 ; 83 >
+    au < testing ; 2005 ; Annals of Hematology Volume 84 ; 84 >
+    au < testing ; 2006 ; Annals of Hematology Volume 85 ; 85 >
+    au < testing ; 2007 ; Annals of Hematology Volume 86 ; 86 >
+    au < testing ; 2008 ; Annals of Hematology Volume 87 ; 87 >
+    au < testing ; 2009 ; Annals of Hematology Volume 88 ; 88 >
+    au < testing ; 2010 ; Annals of Hematology Volume 89 ; 89 >
+    au < testing ; 2011 ; Annals of Hematology Volume 90 ; 90 >
 
   }
 
@@ -2498,11 +2589,101 @@
       name = Applied Microbiology and Biotechnology ;
       issn = 0175-7598 ;
       eissn = 1432-0614 ;
-      issnl = 0175-7598 ;
-      placeholder = True
+      issnl = 0175-7598
     >
 
     param[journal_issn] = 0175-7598
+
+    au < manifest ; 1975 ; Applied Microbiology and Biotechnology Volume 1 ; 1 >
+    au < manifest ; 1975-1976 ; Applied Microbiology and Biotechnology Volume 2 ; 2 >
+    au < manifest ; 1976-1977 ; Applied Microbiology and Biotechnology Volume 3 ; 3 >
+    au < manifest ; 1977 ; Applied Microbiology and Biotechnology Volume 4 ; 4 >
+    au < manifest ; 1978 ; Applied Microbiology and Biotechnology Volume 5 ; 5 >
+    au < manifest ; 1978-1979 ; Applied Microbiology and Biotechnology Volume 6 ; 6 >
+    au < manifest ; 1979 ; Applied Microbiology and Biotechnology Volume 7 ; 7 >
+    au < manifest ; 1979 ; Applied Microbiology and Biotechnology Volume 8 ; 8 >
+    au < manifest ; 1980 ; Applied Microbiology and Biotechnology Volume 9 ; 9 >
+    au < manifest ; 1980 ; Applied Microbiology and Biotechnology Volume 10 ; 10 >
+    au < manifest ; 1980-1981 ; Applied Microbiology and Biotechnology Volume 11 ; 11 >
+    au < manifest ; 1981 ; Applied Microbiology and Biotechnology Volume 12 ; 12 >
+    au < manifest ; 1981 ; Applied Microbiology and Biotechnology Volume 13 ; 13 >
+    au < manifest ; 1982 ; Applied Microbiology and Biotechnology Volume 14 ; 14 >
+    au < manifest ; 1982 ; Applied Microbiology and Biotechnology Volume 15 ; 15 >
+    au < manifest ; 1982 ; Applied Microbiology and Biotechnology Volume 16 ; 16 >
+    au < manifest ; 1983 ; Applied Microbiology and Biotechnology Volume 17 ; 17 >
+    au < manifest ; 1983 ; Applied Microbiology and Biotechnology Volume 18 ; 18 >
+    au < manifest ; 1984 ; Applied Microbiology and Biotechnology Volume 19 ; 19 >
+    au < manifest ; 1984 ; Applied Microbiology and Biotechnology Volume 20 ; 20 >
+    au < manifest ; 1985 ; Applied Microbiology and Biotechnology Volume 21 ; 21 >
+    au < manifest ; 1985 ; Applied Microbiology and Biotechnology Volume 22 ; 22 >
+    au < manifest ; 1985-1986 ; Applied Microbiology and Biotechnology Volume 23 ; 23 >
+    au < manifest ; 1986 ; Applied Microbiology and Biotechnology Volume 24 ; 24 >
+    au < manifest ; 1986-1987 ; Applied Microbiology and Biotechnology Volume 25 ; 25 >
+    au < manifest ; 1987 ; Applied Microbiology and Biotechnology Volume 26 ; 26 >
+    au < manifest ; 1987-1988 ; Applied Microbiology and Biotechnology Volume 27 ; 27 >
+    au < manifest ; 1988 ; Applied Microbiology and Biotechnology Volume 28 ; 28 >
+    au < manifest ; 1988 ; Applied Microbiology and Biotechnology Volume 29 ; 29 >
+    au < manifest ; 1989 ; Applied Microbiology and Biotechnology Volume 30 ; 30 >
+    au < manifest ; 1989 ; Applied Microbiology and Biotechnology Volume 31 ; 31 >
+    au < manifest ; 1989-1990 ; Applied Microbiology and Biotechnology Volume 32 ; 32 >
+    au < manifest ; 1990 ; Applied Microbiology and Biotechnology Volume 33 ; 33 >
+    au < manifest ; 1990-1991 ; Applied Microbiology and Biotechnology Volume 34 ; 34 >
+    au < manifest ; 1991 ; Applied Microbiology and Biotechnology Volume 35 ; 35 >
+    au < manifest ; 1991-1992 ; Applied Microbiology and Biotechnology Volume 36 ; 36 >
+    au < manifest ; 1992 ; Applied Microbiology and Biotechnology Volume 37 ; 37 >
+    au < manifest ; 1992-1993 ; Applied Microbiology and Biotechnology Volume 38 ; 38 >
+    au < manifest ; 1993 ; Applied Microbiology and Biotechnology Volume 39 ; 39 >
+    au < manifest ; 1993-1994 ; Applied Microbiology and Biotechnology Volume 40 ; 40 >
+    au < manifest ; 1994 ; Applied Microbiology and Biotechnology Volume 41 ; 41 >
+    au < manifest ; 1994-1995 ; Applied Microbiology and Biotechnology Volume 42 ; 42 >
+    au < manifest ; 1995 ; Applied Microbiology and Biotechnology Volume 43 ; 43 >
+    au < manifest ; 1995-1996 ; Applied Microbiology and Biotechnology Volume 44 ; 44 >
+    au < manifest ; 1996 ; Applied Microbiology and Biotechnology Volume 45 ; 45 >
+    au < manifest ; 1996 ; Applied Microbiology and Biotechnology Volume 46 ; 46 >
+    au < manifest ; 1997 ; Applied Microbiology and Biotechnology Volume 47 ; 47 >
+    au < manifest ; 1997 ; Applied Microbiology and Biotechnology Volume 48 ; 48 >
+    au < manifest ; 1998 ; Applied Microbiology and Biotechnology Volume 49 ; 49 >
+    au < manifest ; 1998 ; Applied Microbiology and Biotechnology Volume 50 ; 50 >
+    au < manifest ; 1999 ; Applied Microbiology and Biotechnology Volume 51 ; 51 >
+    au < manifest ; 1999 ; Applied Microbiology and Biotechnology Volume 52 ; 52 >
+    au < manifest ; 1999 ; Applied Microbiology and Biotechnology Volume 53 ; 53 >
+    au < manifest ; 2000 ; Applied Microbiology and Biotechnology Volume 54 ; 54 >
+    au < manifest ; 2001 ; Applied Microbiology and Biotechnology Volume 55 ; 55 >
+    au < manifest ; 2001 ; Applied Microbiology and Biotechnology Volume 56 ; 56 >
+    au < manifest ; 2001 ; Applied Microbiology and Biotechnology Volume 57 ; 57 >
+    au < manifest ; 2002 ; Applied Microbiology and Biotechnology Volume 58 ; 58 >
+    au < manifest ; 2002 ; Applied Microbiology and Biotechnology Volume 59 ; 59 >
+    au < manifest ; 2002 ; Applied Microbiology and Biotechnology Volume 60 ; 60 >
+    au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 61 ; 61 >
+    au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 62 ; 62 >
+    au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 63 ; 63 >
+    au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 64 ; 64 >
+    au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 65 ; 65 >
+    au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 66 ; 66 >
+    au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 67 ; 67 >
+    au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 68 ; 68 >
+    au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 69 ; 69 >
+    au < testing ; 2006 ; Applied Microbiology and Biotechnology Volume 70 ; 70 >
+    au < testing ; 2006 ; Applied Microbiology and Biotechnology Volume 71 ; 71 >
+    au < testing ; 2006 ; Applied Microbiology and Biotechnology Volume 72 ; 72 >
+    au < testing ; 2006 ; Applied Microbiology and Biotechnology Volume 73 ; 73 >
+    au < testing ; 2007 ; Applied Microbiology and Biotechnology Volume 74 ; 74 >
+    au < testing ; 2007 ; Applied Microbiology and Biotechnology Volume 75 ; 75 >
+    au < testing ; 2007 ; Applied Microbiology and Biotechnology Volume 76 ; 76 >
+    au < testing ; 2007 ; Applied Microbiology and Biotechnology Volume 77 ; 77 >
+    au < testing ; 2008 ; Applied Microbiology and Biotechnology Volume 78 ; 78 >
+    au < testing ; 2008 ; Applied Microbiology and Biotechnology Volume 79 ; 79 >
+    au < testing ; 2008 ; Applied Microbiology and Biotechnology Volume 80 ; 80 >
+    au < testing ; 2008 ; Applied Microbiology and Biotechnology Volume 81 ; 81 >
+    au < testing ; 2009 ; Applied Microbiology and Biotechnology Volume 82 ; 82 >
+    au < testing ; 2009 ; Applied Microbiology and Biotechnology Volume 83 ; 83 >
+    au < testing ; 2009 ; Applied Microbiology and Biotechnology Volume 84 ; 84 >
+    au < testing ; 2009 ; Applied Microbiology and Biotechnology Volume 85 ; 85 >
+    au < testing ; 2010 ; Applied Microbiology and Biotechnology Volume 86 ; 86 >
+    au < testing ; 2010 ; Applied Microbiology and Biotechnology Volume 87 ; 87 >
+    au < testing ; 2010 ; Applied Microbiology and Biotechnology Volume 88 ; 88 >
+    au < testing ; 2011 ; Applied Microbiology and Biotechnology Volume 89 ; 89 >
+    au < testing ; 2011 ; Applied Microbiology and Biotechnology Volume 90 ; 90 >
 
   }
 
@@ -4223,21 +4404,20 @@
     >
 
     param[journal_issn] = 1387-3547
-    attr[where] = content1b
 
     au < ready ; 1999 ; Biological Invasions Volume 1 ; 1 >
     au < ready ; 2000 ; Biological Invasions Volume 2 ; 2 >
     au < ready ; 2001 ; Biological Invasions Volume 3 ; 3 >
     au < ready ; 2002 ; Biological Invasions Volume 4 ; 4 >
     au < ready ; 2003 ; Biological Invasions Volume 5 ; 5 >
-    au < testing ; 2004 ; Biological Invasions Volume 6 ; 6 >
-    au < testing ; 2005 ; Biological Invasions Volume 7 ; 7 >
-    au < testing ; 2006 ; Biological Invasions Volume 8 ; 8 >
-    au < testing ; 2007 ; Biological Invasions Volume 9 ; 9 >
-    au < testing ; 2008 ; Biological Invasions Volume 10 ; 10 >
-    au < testing ; 2009 ; Biological Invasions Volume 11 ; 11 >
-    au < testing ; 2010 ; Biological Invasions Volume 12 ; 12 >
-    au < testing ; 2011 ; Biological Invasions Volume 13 ; 13 >
+    au < ready ; 2004 ; Biological Invasions Volume 6 ; 6 >
+    au < ready ; 2005 ; Biological Invasions Volume 7 ; 7 >
+    au < ready ; 2006 ; Biological Invasions Volume 8 ; 8 >
+    au < ready ; 2007 ; Biological Invasions Volume 9 ; 9 >
+    au < ready ; 2008 ; Biological Invasions Volume 10 ; 10 >
+    au < ready ; 2009 ; Biological Invasions Volume 11 ; 11 >
+    au < ready ; 2010 ; Biological Invasions Volume 12 ; 12 >
+    au < ready ; 2011 ; Biological Invasions Volume 13 ; 13 >
 
   }
 
@@ -5932,30 +6112,30 @@
     attr[where] = content3b
 
     au < testing ; 1937 ; Bulletin Volcanologique Volume 1 (1937) ; 1 >
-    au < testing ; 1937 ; Bulletin Volcanologique Volume 2 (1937) ; 2 >
+    au < ready ; 1937 ; Bulletin Volcanologique Volume 2 (1937) ; 2 >
     au < testing ; 1938 ; Bulletin Volcanologique Volume 3 (1938) ; 3 >
     au < testing ; 1938 ; Bulletin Volcanologique Volume 4 (1938) ; 4 >
-    au < testing ; 1939 ; Bulletin Volcanologique Volume 5 (1939) ; 5 >
-    au < testing ; 1940 ; Bulletin Volcanologique Volume 6 (1940) ; 6 >
-    au < testing ; 1940 ; Bulletin Volcanologique Volume 7 (1940) ; 7 >
-    au < testing ; 1949 ; Bulletin Volcanologique Volume 8 (1949) ; 8 >
-    au < testing ; 1949 ; Bulletin Volcanologique Volume 9 ; 9 >
+    au < ready ; 1939 ; Bulletin Volcanologique Volume 5 (1939) ; 5 >
+    au < ready ; 1940 ; Bulletin Volcanologique Volume 6 (1940) ; 6 >
+    au < ready ; 1940 ; Bulletin Volcanologique Volume 7 (1940) ; 7 >
+    au < ready ; 1949 ; Bulletin Volcanologique Volume 8 (1949) ; 8 >
+    au < ready ; 1949 ; Bulletin Volcanologique Volume 9 ; 9 >
     au < testing ; 1950 ; Bulletin Volcanologique Volume 10 ; 10 >
     au < testing ; 1951 ; Bulletin Volcanologique Volume 11 ; 11 >
     au < testing ; 1952 ; Bulletin Volcanologique Volume 12 ; 12 >
-    au < testing ; 1953 ; Bulletin Volcanologique Volume 13 ; 13 >
-    au < testing ; 1953 ; Bulletin Volcanologique Volume 14 ; 14 >
-    au < testing ; 1954 ; Bulletin Volcanologique Volume 15 ; 15 >
-    au < testing ; 1955 ; Bulletin Volcanologique Volume 16 ; 16 >
-    au < testing ; 1955 ; Bulletin Volcanologique Volume 17 ; 17 >
-    au < testing ; 1956 ; Bulletin Volcanologique Volume 18 ; 18 >
-    au < testing ; 1958 ; Bulletin Volcanologique Volume 19 ; 19 >
+    au < ready ; 1953 ; Bulletin Volcanologique Volume 13 ; 13 >
+    au < ready ; 1953 ; Bulletin Volcanologique Volume 14 ; 14 >
+    au < ready ; 1954 ; Bulletin Volcanologique Volume 15 ; 15 >
+    au < ready ; 1955 ; Bulletin Volcanologique Volume 16 ; 16 >
+    au < ready ; 1955 ; Bulletin Volcanologique Volume 17 ; 17 >
+    au < ready ; 1956 ; Bulletin Volcanologique Volume 18 ; 18 >
+    au < ready ; 1958 ; Bulletin Volcanologique Volume 19 ; 19 >
     au < testing ; 1959 ; Bulletin Volcanologique Volume 20 ; 20 >
-    au < testing ; 1959 ; Bulletin Volcanologique Volume 21 ; 21 >
-    au < testing ; 1959 ; Bulletin Volcanologique Volume 22 ; 22 >
-    au < testing ; 1960 ; Bulletin Volcanologique Volume 23 ; 23 >
+    au < ready ; 1959 ; Bulletin Volcanologique Volume 21 ; 21 >
+    au < ready ; 1959 ; Bulletin Volcanologique Volume 22 ; 22 >
+    au < ready ; 1960 ; Bulletin Volcanologique Volume 23 ; 23 >
     au < testing ; 1962 ; Bulletin Volcanologique Volume 24 ; 24 >
-    au < testing ; 1963 ; Bulletin Volcanologique Volume 25 ; 25 >
+    au < ready ; 1963 ; Bulletin Volcanologique Volume 25 ; 25 >
     au < ready ; 1963 ; Bulletin Volcanologique Volume 26 ; 26 >
     au < ready ; 1964 ; Bulletin Volcanologique Volume 27 ; 27 >
     au < ready ; 1965 ; Bulletin Volcanologique Volume 28 ; 28 >
@@ -5967,14 +6147,14 @@
     au < ready ; 1970 ; Bulletin Volcanologique Volume 34 ; 34 >
     au < ready ; 1971 ; Bulletin Volcanologique Volume 35 ; 35 >
     au < ready ; 1972 ; Bulletin Volcanologique Volume 36 ; 36 >
-    au < testing ; 1973 ; Bulletin Volcanologique Volume 37 ; 37 >
+    au < ready ; 1973 ; Bulletin Volcanologique Volume 37 ; 37 >
     au < ready ; 1974 ; Bulletin Volcanologique Volume 38 ; 38 >
     au < ready ; 1975 ; Bulletin Volcanologique Volume 39 ; 39 >
     au < ready ; 1976-1977 ; Bulletin Volcanologique Volume 40 ; 40 >
-    au < testing ; 1978 ; Bulletin Volcanologique Volume 41 ; 41 >
+    au < ready ; 1978 ; Bulletin Volcanologique Volume 41 ; 41 >
     au < ready ; 1979 ; Bulletin Volcanologique Volume 42 ; 42 >
     au < ready ; 1980 ; Bulletin Volcanologique Volume 43 ; 43 >
-    au < testing ; 1981 ; Bulletin Volcanologique Volume 44 ; 44 >
+    au < ready ; 1981 ; Bulletin Volcanologique Volume 44 ; 44 >
     au < ready ; 1982 ; Bulletin Volcanologique Volume 45 ; 45 >
     au < ready ; 1983 ; Bulletin Volcanologique Volume 46 ; 46 >
     au < ready ; 1984 ; Bulletin Volcanologique Volume 47 ; 47 >
@@ -5985,7 +6165,7 @@
     au < ready ; 1990 ; Bulletin of Volcanology Volume 52 ; 52 >
     au < ready ; 1991 ; Bulletin of Volcanology Volume 53 ; 53 >
     au < ready ; 1992 ; Bulletin of Volcanology Volume 54 ; 54 >
-    au < testing ; 1993 ; Bulletin of Volcanology Volume 55 ; 55 >
+    au < ready ; 1993 ; Bulletin of Volcanology Volume 55 ; 55 >
     au < ready ; 1994-1995 ; Bulletin of Volcanology Volume 56 ; 56 >
     au < ready ; 1995-1996 ; Bulletin of Volcanology Volume 57 ; 57 >
     au < testing ; 1996-1997 ; Bulletin of Volcanology Volume 58 ; 58 >
@@ -9883,31 +10063,30 @@
     >
 
     param[journal_issn] = 1384-5810
-    attr[where] = content1a
 
-    au < testing ; 1997 ; Data Mining and Knowledge Discovery Volume 1 ; 1 >
-    au < testing ; 1998 ; Data Mining and Knowledge Discovery Volume 2 ; 2 >
-    au < testing ; 1999 ; Data Mining and Knowledge Discovery Volume 3 ; 3 >
-    au < testing ; 2000 ; Data Mining and Knowledge Discovery Volume 4 ; 4 >
-    au < testing ; 2001 ; Data Mining and Knowledge Discovery Volume 5 ; 5 >
-    au < testing ; 2002 ; Data Mining and Knowledge Discovery Volume 6 ; 6 >
-    au < testing ; 2003 ; Data Mining and Knowledge Discovery Volume 7 ; 7 >
-    au < testing ; 2004 ; Data Mining and Knowledge Discovery Volume 8 ; 8 >
-    au < testing ; 2004 ; Data Mining and Knowledge Discovery Volume 9 ; 9 >
-    au < testing ; 2005 ; Data Mining and Knowledge Discovery Volume 10 ; 10 >
-    au < testing ; 2005 ; Data Mining and Knowledge Discovery Volume 11 ; 11 >
-    au < testing ; 2006 ; Data Mining and Knowledge Discovery Volume 12 ; 12 >
-    au < testing ; 2006 ; Data Mining and Knowledge Discovery Volume 13 ; 13 >
-    au < testing ; 2007 ; Data Mining and Knowledge Discovery Volume 14 ; 14 >
-    au < testing ; 2007 ; Data Mining and Knowledge Discovery Volume 15 ; 15 >
-    au < testing ; 2008 ; Data Mining and Knowledge Discovery Volume 16 ; 16 >
-    au < testing ; 2008 ; Data Mining and Knowledge Discovery Volume 17 ; 17 >
-    au < testing ; 2009 ; Data Mining and Knowledge Discovery Volume 18 ; 18 >
-    au < testing ; 2009 ; Data Mining and Knowledge Discovery Volume 19 ; 19 >
-    au < testing ; 2010 ; Data Mining and Knowledge Discovery Volume 20 ; 20 >
-    au < testing ; 2010 ; Data Mining and Knowledge Discovery Volume 21 ; 21 >
-    au < testing ; 2011 ; Data Mining and Knowledge Discovery Volume 22 ; 22 >
-    au < testing ; 2011 ; Data Mining and Knowledge Discovery Volume 23 ; 23 >
+    au < ready ; 1997 ; Data Mining and Knowledge Discovery Volume 1 ; 1 >
+    au < ready ; 1998 ; Data Mining and Knowledge Discovery Volume 2 ; 2 >
+    au < ready ; 1999 ; Data Mining and Knowledge Discovery Volume 3 ; 3 >
+    au < ready ; 2000 ; Data Mining and Knowledge Discovery Volume 4 ; 4 >
+    au < ready ; 2001 ; Data Mining and Knowledge Discovery Volume 5 ; 5 >
+    au < ready ; 2002 ; Data Mining and Knowledge Discovery Volume 6 ; 6 >
+    au < ready ; 2003 ; Data Mining and Knowledge Discovery Volume 7 ; 7 >
+    au < ready ; 2004 ; Data Mining and Knowledge Discovery Volume 8 ; 8 >
+    au < ready ; 2004 ; Data Mining and Knowledge Discovery Volume 9 ; 9 >
+    au < ready ; 2005 ; Data Mining and Knowledge Discovery Volume 10 ; 10 >
+    au < ready ; 2005 ; Data Mining and Knowledge Discovery Volume 11 ; 11 >
+    au < ready ; 2006 ; Data Mining and Knowledge Discovery Volume 12 ; 12 >
+    au < ready ; 2006 ; Data Mining and Knowledge Discovery Volume 13 ; 13 >
+    au < ready ; 2007 ; Data Mining and Knowledge Discovery Volume 14 ; 14 >
+    au < ready ; 2007 ; Data Mining and Knowledge Discovery Volume 15 ; 15 >
+    au < ready ; 2008 ; Data Mining and Knowledge Discovery Volume 16 ; 16 >
+    au < ready ; 2008 ; Data Mining and Knowledge Discovery Volume 17 ; 17 >
+    au < ready ; 2009 ; Data Mining and Knowledge Discovery Volume 18 ; 18 >
+    au < ready ; 2009 ; Data Mining and Knowledge Discovery Volume 19 ; 19 >
+    au < ready ; 2010 ; Data Mining and Knowledge Discovery Volume 20 ; 20 >
+    au < ready ; 2010 ; Data Mining and Knowledge Discovery Volume 21 ; 21 >
+    au < ready ; 2011 ; Data Mining and Knowledge Discovery Volume 22 ; 22 >
+    au < ready ; 2011 ; Data Mining and Knowledge Discovery Volume 23 ; 23 >
 
   }
 
@@ -15439,11 +15618,17 @@
       name = Hematology and Cell Therapy ;
       issn = 1269-3286 ;
       eissn = 1279-8509 ;
-      issnl = 1269-3286 ;
-      placeholder = True
+      issnl = 1269-3286
     >
 
+    comment[merged_into] = 0939-5555
     param[journal_issn] = 1269-3286
+    attr[where] = content2b
+
+    au < testing ; 1997 ; Hematology and Cell Therapy Volume 38 ; 38 >
+    au < testing ; 1997 ; Hematology and Cell Therapy Volume 39 ; 39 >
+    au < testing ; 1999 ; Hematology and Cell Therapy Volume 41 ; 41 >
+    au < testing ; 2000 ; Hematology and Cell Therapy Volume 42 ; 42 >
 
   }
 
@@ -18769,7 +18954,6 @@
     >
 
     param[journal_issn] = 0167-6997
-    attr[where] = content2b
 
     au < ready ; 1983 ; Investigational New Drugs Volume 1 ; 1 >
     au < ready ; 1984 ; Investigational New Drugs Volume 2 ; 2 >
@@ -18794,12 +18978,12 @@
     au < ready ; 2003 ; Investigational New Drugs Volume 21 ; 21 >
     au < ready ; 2004 ; Investigational New Drugs Volume 22 ; 22 >
     au < ready ; 2005 ; Investigational New Drugs Volume 23 ; 23 >
-    au < testing ; 2006 ; Investigational New Drugs Volume 24 ; 24 >
+    au < ready ; 2006 ; Investigational New Drugs Volume 24 ; 24 >
     au < ready ; 2007 ; Investigational New Drugs Volume 25 ; 25 >
     au < ready ; 2008 ; Investigational New Drugs Volume 26 ; 26 >
     au < ready ; 2009 ; Investigational New Drugs Volume 27 ; 27 >
     au < ready ; 2010 ; Investigational New Drugs Volume 28 ; 28 >
-    au < testing ; 2011 ; Investigational New Drugs Volume 29 ; 29 >
+    au < ready ; 2011 ; Investigational New Drugs Volume 29 ; 29 >
 
   }
 
@@ -21662,11 +21846,57 @@
       name = Journal of Gastroenterology ;
       issn = 0944-1174 ;
       eissn = 1435-5922 ;
-      issnl = 0944-1174 ;
-      placeholder = True
+      issnl = 0944-1174
     >
 
     param[journal_issn] = 0944-1174
+    
+    au < manifest ; 1966 ; Journal of Gastroenterology Volume 1 ; 1 >
+    au < manifest ; 1967 ; Journal of Gastroenterology Volume 2 ; 2 >
+    au < manifest ; 1968 ; Journal of Gastroenterology Volume 3 ; 3 >
+    au < manifest ; 1969 ; Journal of Gastroenterology Volume 4 ; 4 >
+    au < manifest ; 1970 ; Journal of Gastroenterology Volume 5 ; 5 >
+    au < manifest ; 1971 ; Journal of Gastroenterology Volume 6 ; 6 >
+    au < manifest ; 1972 ; Journal of Gastroenterology Volume 7 ; 7 >
+    au < manifest ; 1973 ; Journal of Gastroenterology Volume 8 ; 8 >
+    au < manifest ; 1974 ; Journal of Gastroenterology Volume 9 ; 9 >
+    au < manifest ; 1975 ; Journal of Gastroenterology Volume 10 ; 10 >
+    au < manifest ; 1976 ; Journal of Gastroenterology Volume 11 ; 11 >
+    au < manifest ; 1977 ; Journal of Gastroenterology Volume 12 ; 12 >
+    au < manifest ; 1978 ; Journal of Gastroenterology Volume 13 ; 13 >
+    au < manifest ; 1979 ; Journal of Gastroenterology Volume 14 ; 14 >
+    au < manifest ; 1980 ; Journal of Gastroenterology Volume 15 ; 15 >
+    au < manifest ; 1981 ; Journal of Gastroenterology Volume 16 ; 16 >
+    au < manifest ; 1982 ; Journal of Gastroenterology Volume 17 ; 17 >
+    au < manifest ; 1983 ; Journal of Gastroenterology Volume 18 ; 18 >
+    au < manifest ; 1984 ; Journal of Gastroenterology Volume 19 ; 19 >
+    au < manifest ; 1985 ; Journal of Gastroenterology Volume 20 ; 20 >
+    au < manifest ; 1986 ; Journal of Gastroenterology Volume 21 ; 21 >
+    au < manifest ; 1987 ; Journal of Gastroenterology Volume 22 ; 22 >
+    au < manifest ; 1988 ; Journal of Gastroenterology Volume 23 ; 23 >
+    au < manifest ; 1989 ; Journal of Gastroenterology Volume 24 ; 24 >
+    au < manifest ; 1990 ; Journal of Gastroenterology Volume 25 ; 25 >
+    au < manifest ; 1991 ; Journal of Gastroenterology Volume 26 ; 26 >
+    au < testing ; 1992 ; Journal of Gastroenterology Volume 27 ; 27 >
+    au < testing ; 1993 ; Journal of Gastroenterology Volume 28 ; 28 >
+    au < testing ; 1994 ; Journal of Gastroenterology Volume 29 ; 29 >
+    au < testing ; 1995 ; Journal of Gastroenterology Volume 30 ; 30 >
+    au < testing ; 1996 ; Journal of Gastroenterology Volume 31 ; 31 >
+    au < testing ; 1997 ; Journal of Gastroenterology Volume 32 ; 32 >
+    au < testing ; 1998 ; Journal of Gastroenterology Volume 33 ; 33 >
+    au < testing ; 1999 ; Journal of Gastroenterology Volume 34 ; 34 >
+    au < testing ; 2000 ; Journal of Gastroenterology Volume 35 ; 35 >
+    au < testing ; 2001 ; Journal of Gastroenterology Volume 36 ; 36 >
+    au < testing ; 2002 ; Journal of Gastroenterology Volume 37 ; 37 >
+    au < testing ; 2003 ; Journal of Gastroenterology Volume 38 ; 38 >
+    au < testing ; 2004 ; Journal of Gastroenterology Volume 39 ; 39 >
+    au < testing ; 2005 ; Journal of Gastroenterology Volume 40 ; 40 >
+    au < testing ; 2006 ; Journal of Gastroenterology Volume 41 ; 41 >
+    au < testing ; 2007 ; Journal of Gastroenterology Volume 42 ; 42 >
+    au < testing ; 2008 ; Journal of Gastroenterology Volume 43 ; 43 >
+    au < testing ; 2009 ; Journal of Gastroenterology Volume 44 ; 44 >
+    au < testing ; 2010 ; Journal of Gastroenterology Volume 45 ; 45 >
+    au < testing ; 2011 ; Journal of Gastroenterology Volume 46 ; 46 >
 
   }
 
@@ -23328,7 +23558,7 @@
 
     comment[continued_by] = 1559-7105
     param[journal_issn] = 0300-4864
-    attr[where] = content4a
+    attr[where] = content1a
 
     au < ready ; 1972 ; Journal of Neurocytology Volume 1 ; 1 >
     au < ready ; 1973 ; Journal of Neurocytology Volume 2 ; 2 >
@@ -29514,7 +29744,7 @@
     >
 
     param[journal_issn] = 0029-8549
-    attr[where] = content4b
+    attr[where] = content1b
 
     au < manifest ; 1968 ; Oecologia Volume 1 ; 1 >
     au < manifest ; 1968-1969 ; Oecologia Volume 2 ; 2 >
@@ -37669,9 +37899,9 @@ Commet [pv] = now offline
     au < ready ; 1948-1949 ; TAG Theoretical and Applied Genetics Volume 19 ; 19 >
     au < ready ; 1950 ; TAG Theoretical and Applied Genetics Volume 20 ; 20 >
     au < ready ; 1951 ; TAG Theoretical and Applied Genetics Volume 21 ; 21 >
-    au < testing ; 1952 ; TAG Theoretical and Applied Genetics Volume 22 ; 22 >
+    au < ready ; 1952 ; TAG Theoretical and Applied Genetics Volume 22 ; 22 >
     au < ready ; 1953 ; TAG Theoretical and Applied Genetics Volume 23 ; 23 >
-    au < testing ; 1954 ; TAG Theoretical and Applied Genetics Volume 24 ; 24 >
+    au < ready ; 1954 ; TAG Theoretical and Applied Genetics Volume 24 ; 24 >
     au < ready ; 1955 ; TAG Theoretical and Applied Genetics Volume 25 ; 25 >
     au < ready ; 1956 ; TAG Theoretical and Applied Genetics Volume 26 ; 26 >
     au < ready ; 1957 ; TAG Theoretical and Applied Genetics Volume 27 ; 27 >
