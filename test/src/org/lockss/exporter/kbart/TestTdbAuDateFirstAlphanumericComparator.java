@@ -80,10 +80,17 @@ public class TestTdbAuDateFirstAlphanumericComparator extends LockssTestCase {
   }
 
   /**
-   * Order the list using a date first alphanumeric comparator.
+   * Order the list using a last date, first date, name alphanumeric comparator.
    */
   public final void testCompare() {
-    TdbAuAlphanumericComparator comp = new TdbAuDateFirstAlphanumericComparator();
+    //TdbAuAlphanumericComparator comp = new TdbAuDateFirstAlphanumericComparator();
+    //TdbAuAlphanumericComparator comp = TdbAuAlphanumericComparatorFactory.getFirstDateComparator();
+    CompositeComparator<TdbAu> comp = 
+      new CompositeComparator<TdbAu>(TdbAuAlphanumericComparatorFactory.getLastDateComparator())
+      .compose(TdbAuAlphanumericComparatorFactory.getFirstDateComparator())
+      .compose(TdbAuAlphanumericComparatorFactory.getNameComparator())
+      ;
+
     // Sort the two arrays, which should sort on year if available, or name
     // The result should be the same
     Collections.sort(ausWithYears, comp);

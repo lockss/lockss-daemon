@@ -11,6 +11,7 @@ import org.lockss.config.Tdb.TdbException;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.test.LockssTestCase;
 
+
 /**
  * Try some conversions from TdbTitles to KbartTitles. This is done using a single
  * TdbTitle via <code>TdbTestUtil.makeRangeTestTitle()</code>. The <code>extractAllTitles()</code> 
@@ -21,18 +22,18 @@ import org.lockss.test.LockssTestCase;
  */
 public class TestKbartConverter extends LockssTestCase {
 
-  private KbartConverter conv;
-  private Tdb tdb;
+  //private KbartConverter conv;
+  //private Tdb tdb;
   
   protected void setUp() throws Exception {
     super.setUp();
     //this.tdb = TdbTestUtil.makeTestTdb();
-    this.conv = new KbartConverter(tdb);
+    //this.conv = new KbartConverter(tdb);
   }
 
   protected void tearDown() throws Exception {
     super.tearDown();
-    this.conv = null;
+    //this.conv = null;
   }
 
   // TODO Unwritten test
@@ -57,7 +58,7 @@ public class TestKbartConverter extends LockssTestCase {
     try {
       // Title without volume info; just year ranges leading to a coverage gap
       TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
-      List<KbartTitle> titles = conv.createKbartTitles(title);
+      List<KbartTitle> titles = KbartConverter.createKbartTitles(title);
       assertEquals(2, titles.size());
       // Check the dates and vols have been correctly transferred in each title
       KbartTitle t = titles.get(0);
@@ -78,7 +79,7 @@ public class TestKbartConverter extends LockssTestCase {
       
       // Test the method again with a range which goes to the present - end values should be empty
       title = TdbTestUtil.makeRangeToNowTestTitle();
-      titles = conv.createKbartTitles(title);
+      titles = KbartConverter.createKbartTitles(title);
       assertEquals("Range to now yields too many KBART titles", 1, titles.size());
       // Title with a range to now
       t = titles.get(0);
@@ -91,7 +92,7 @@ public class TestKbartConverter extends LockssTestCase {
       
       // Test with a title which has volume info as well as year ranges; no coverage gap by volume
       title = TdbTestUtil.makeRangeTestTitle(true);
-      titles = conv.createKbartTitles(title);
+      titles = KbartConverter.createKbartTitles(title);
       assertEquals("Coverage gap found when none exists in volume field; only years.", 1, titles.size());
       t = titles.get(0);
       assertEquals(t.getField(Field.DATE_FIRST_ISSUE_ONLINE), TdbTestUtil.RANGE_1_START);

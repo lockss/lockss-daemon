@@ -30,19 +30,19 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
 import org.lockss.config.Tdb;
+import org.lockss.config.TdbUtil;
+import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartConverter;
 import org.lockss.exporter.kbart.KbartExportFilter;
 import org.lockss.exporter.kbart.KbartExporter;
@@ -50,7 +50,6 @@ import org.lockss.exporter.kbart.KbartTitle;
 import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
 import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
 import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
 import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFieldOrderingException;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.Logger;
@@ -115,6 +114,7 @@ public class ListHoldings extends LockssServlet {
   public static final String KEY_FORMAT = "format";
   public static final String KEY_COMPRESS = "compress";
   public static final String KEY_OMIT_EMPTY_COLS = "omitEmptyCols";
+  public static final String KEY_TITLE_SCOPE = "contentScope";
   public static final String KEY_CUSTOM_ORDERING = "ordering";
   public static final String KEY_CUSTOM_ORDERING_LIST = "ordering_list";
   public static final String KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL = "ordering_list_previous_manual";
@@ -123,62 +123,35 @@ public class ListHoldings extends LockssServlet {
   static final String SESSION_KEY_OUTPUT_FORMAT = "org.lockss.servlet.ListHoldings.outputFormat";
 
   // Bits of state that must be reset in resetLocals()
-  /** A reference to the latest system configuration; maintained while the servlet is handling a request. */
-  private Configuration sysConfig;
   /** A record of the last manual ordering which was applied to an export; maintained while the servlet is handling a request. */
   private String lastManualOrdering;
   /** Manually specified custom field list. */
   private FieldOrdering customFieldOrdering;
   /** Whether to do an export - set based on the submitted parameters. */
-  private boolean doExport = false; 
-  
-  // A load of removed state:
-  /** Whether to omit empty field columns in this instance. */
-  //private boolean omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
-  /** Selected custom field list. */
-  //PredefinedFieldOrdering predefinedFieldOrdering = FIELD_ORDERING_DEFAULT;
+  private boolean doExport = false;
+  /** Holdings scope option. */
+  private ContentScope selectedScope = ContentScope.DEFAULT_SCOPE;
+  private OutputFormat outputFormat = OUTPUT_DEFAULT;
   
   /**
    * Get the current configuration and the TDB record.
    */
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    sysConfig = CurrentConfig.getCurrentConfig();
   }
 
+  @Override
   protected void resetLocals() {
     errMsg = null;
     statusMsg = null;
-    sysConfig = null;
     lastManualOrdering = null;
     customFieldOrdering = null;
     doExport = false;
+    selectedScope = ContentScope.DEFAULT_SCOPE;
+    outputFormat = OUTPUT_DEFAULT;
     super.resetLocals();
   }
   
-  
-  /**
-   * Get the Tdb record from the current configuration.
-   * @return the current Tdb object
-   */
-  private Tdb getTdb() {
-    if (sysConfig == null) {
-      sysConfig = CurrentConfig.getCurrentConfig();
-    }
-    return sysConfig.getTdb();
-  }
-  
-  /**
-   * Get the field ordering which is to be used for this export - either
-   * a predefined ordering or a custom ordering depending on the form options. 
-   */
-  /*private FieldOrdering getSelectedOrdering() {
-    switch (exportType) {
-    case PREDEFINED: return predefinedFieldOrdering;
-    case CUSTOM: return customFieldOrdering; 
-    default: return FIELD_ORDERING_DEFAULT;
-    }
-  }*/
 
   /** 
    * Handle a request - if there is a format URL param, show the appropriate default format; 
@@ -197,7 +170,7 @@ public class ListHoldings extends LockssServlet {
     // ---------- Get parameters ----------
     Properties params = getParamsAsProps();
     // Output format parameters (from URL)
-    OutputFormat outputFormat = OutputFormat.byName(params.getProperty(KEY_FORMAT));
+    outputFormat = OutputFormat.byName(params.getProperty(KEY_FORMAT));
 
     // Set compression from the output format
     //if (outputFormat!=null) this.isCompress = outputFormat.isCompressible();
@@ -206,7 +179,8 @@ public class ListHoldings extends LockssServlet {
     boolean omitEmptyColumns = Boolean.valueOf( 
 	params.getProperty(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString()) 
     );
-    //this.omitEmptyColumns = this.sysConfig.getBooleanParam(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT);
+    // Show appropriate scope of content
+    selectedScope = ContentScope.byName(params.getProperty(KEY_TITLE_SCOPE));
     
     // Custom HTML parameters (from custom form)
     String customAction = params.getProperty(ACTION_TAG, "");
@@ -218,8 +192,8 @@ public class ListHoldings extends LockssServlet {
     this.customFieldOrdering = FIELD_ORDERING_DEFAULT;
 
     // ---------- Interpret parameters ----------
-    // Is this a custom output? The custom action is not null.
-    boolean isCustom = !StringUtil.isNullString(customAction);
+    // Is this a custom output? The custom action is not null and is not a plain export.
+    boolean isCustom = !StringUtil.isNullString(customAction) && !customAction.equals(ACTION_EXPORT);
     // Are we exporting? OutputFormat specified, and custom ok/cancel if specified
     this.doExport = outputFormat!=null && (!isCustom || (customAction.equals(ACTION_CUSTOM_OK) || customAction.equals(ACTION_CUSTOM_CANCEL)));
 
@@ -265,7 +239,7 @@ public class ListHoldings extends LockssServlet {
     }
 
     // Now we are doing an export - create the exporter
-    KbartExporter kexp = createExporter(getTdb(), outputFormat);
+    KbartExporter kexp = createExporter(outputFormat, selectedScope);
     // Make sure the exporter was properly instantiated
     if (kexp==null) {
       log.debug("No exporter; showing main options");
@@ -302,10 +276,16 @@ public class ListHoldings extends LockssServlet {
    * The exporter is configured with the basic settings; further configuration 
    * may be necessary for custom exports.
    * 
+   * @param outputFormat the output format for the exporter
+   * @param scope the scope of titles to export
    * @return a usable exporter, or null if one could not be created
    */
-  private KbartExporter createExporter(Tdb tdb, OutputFormat outputFormat) {
-    List<KbartTitle> titles = extractKbartTitlesFromTdb();
+  private KbartExporter createExporter(OutputFormat outputFormat, ContentScope scope) {
+    // Thie following is an expensive operation! Caching may be required.
+    List<KbartTitle> titles = KbartConverter.extractTitles(scope);
+    
+    log.info(String.format("Creating exporter for %d titles in scope %s\n", titles.size(), scope));
+    
     // Return if there are no titles
     if (titles.isEmpty()) {
       errMsg = "No KBART titles extracted from TDB.";
@@ -323,7 +303,8 @@ public class ListHoldings extends LockssServlet {
     
     // Create and configure an exporter
     KbartExporter kexp = outputFormat.makeExporter(titles, filter);
-    kexp.setTdbTitleTotal(tdb.getTdbTitleCount());
+    kexp.setTdbTitleTotal(TdbUtil.getTdbTitles(scope).size());
+    kexp.setContentScope(scope);
     
     // Set an HTML form for the HTML output
     assignHtmlCustomForm(kexp);
@@ -339,26 +320,7 @@ public class ListHoldings extends LockssServlet {
       kexp.setHtmlCustomForm(makeHtmlCustomForm());
     }
   }
-  
-  // TODO move extraction to KbartExporter?
-  /**
-   * Get the titles out of the tdb and convert them to KbartTitles. This uses the KbartConverter
-   * and is an expensive operation.
-   * 
-   * @return a list of converted titles from the tdb
-   */
-  private List<KbartTitle> extractKbartTitlesFromTdb() {
-    // Update the tdb
-    Tdb tdb = getTdb();
-    if (tdb==null || tdb.isEmpty()) {
-      return Collections.emptyList();
-    }
-    // Create TDB/KB extractor/translator
-    KbartConverter kbconv = new KbartConverter(tdb);
-    List<KbartTitle> titles = kbconv.extractAllTitles();
-    return titles;
-  }
-  
+
   /**
    * Perform an export of the data to the selected output stream. This 
    * involves getting a TDB record from the system config, converting 
@@ -423,49 +385,68 @@ public class ListHoldings extends LockssServlet {
 
     tab.newRow();
     tab.newCell("align=\"center\"");
-    Tdb tdb = getTdb();
+    Tdb tdb = TdbUtil.getTdb();
     if (tdb==null || tdb.isEmpty()) {
       tab.add("No titlesets are defined.");
       addBlankRow(tab);
       return tab;
     }
-    tab.add("There are "+tdb.getTdbTitleCount()+" titles available for preservation, from "+tdb.getTdbPublisherCount()+" publishers.");
-       
+   
+    // Create a form for whatever options we are showing
+    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
+    form.add(new Input(Input.Hidden, "isForm", "true"));
+    form.add("There are "+tdb.getTdbTitleCount()+" titles available for preservation, from "+tdb.getTdbPublisherCount()+" publishers.");
+    // Add an option to select the scope of exported holdings
+    form.add(layoutScopeOptions());
+        
     // Add compress option (disabled as the CSV output is not very large)
     //tab.newRow();
     //tab.newCell("align=\"center\"");
     //tab.add(ServletUtil.checkbox(this, KEY_COMPRESS, KEY_COMPRESS, "Compress the output", false));
     
+    // Create a sub table within the form
+    Table subTab = new Table(0, "align=\"center\" width=\"80%\"");
+    subTab.newRow();
+    subTab.newCell("align=\"center\"");
+
+    // Add the appropriate options to the sub table in the form
     if (custom) {
       // Add HTML customisation options
-      addBlankRow(tab);
-      tab.newRow();
-      tab.newCell("align=\"center\"");
-      tab.add(new Heading(3, "Customise HTML output"));
-      tab.add(new Link(srvURL(myServletDescr()), "Return to main export page"));
-      tab.add(layoutFormCustomHtmlOpts());
-      addBlankRow(tab);
+      subTab.add(new Heading(3, "Customise HTML output"));
+      subTab.add(new Link(srvURL(myServletDescr()), "Return to main export page"));
+      layoutFormCustomHtmlOpts(subTab);
     } else {
       // Add default output formats
-      tab.newRow();
-      tab.newCell("align=\"center\"");
-      tab.add("Please choose from an export format below.");
-      addBlankRow(tab);
-      // Add format links
+      subTab.add("Please choose from an export format below.<br/>");
+      // Add format links as buttons
       for (OutputFormat fmt : OutputFormat.values()) {
-	tab.newRow();
-	tab.newCell("align=\"center\"");
-	tab.add( new Link(String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
-	tab.add(addFootnote(fmt.getFootnote()));
+	subTab.newRow();
+	subTab.newCell("align=\"center\"");
+	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
+	//String label = "Export as "+fmt.getLabel();
+	//subTab.add( new Link(link, label) );
+	boolean selected = outputFormat!=null ? fmt==outputFormat : fmt==OUTPUT_DEFAULT;
+	subTab.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
+	subTab.add(addFootnote(fmt.getFootnote()));
       }
-      addBlankRow(tab);
+      addBlankRow(subTab);
+      subTab.newRow();
+      subTab.newCell("align=\"center\"");
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
     }
     
     // Add some space
     addBlankRow(tab);
-    
+    addBlankRow(tab);
+    // Add the sub table to the form, and the form to the main table
+    form.add(subTab);
+
+    tab.newRow();
+    tab.newCell("align=\"center\"");
+    tab.add(form);
     return tab;
   }
+ 
   
   /**
    * Create a table listing KBART field labels and descriptions.
@@ -482,6 +463,26 @@ public class ListHoldings extends LockssServlet {
       tab.addCell(smallFont(lab));
       tab.addCell(smallFont(f.getDescription()));
     }
+    return tab;
+  }
+  
+  /**
+   * Layout content scope options in the given table.
+   * @param tab
+   */
+  private Table layoutScopeOptions() {
+    Table tab = new Table();
+    tab.newRow();
+    tab.newCell("align=\"center\" valign=\"middle\"");
+    tab.add("Show: ");
+    for (ContentScope scope : ContentScope.values()) {
+      // XXX Don't offer the PRESERVED option for the moment:
+      if (scope == ContentScope.PRESERVED) continue;
+      int total = TdbUtil.getTdbTitles(scope).size();
+      String label = String.format("%s (%d) &nbsp; ", scope.label, total);
+      tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), label, scope==selectedScope));
+    }
+    addBlankRow(tab);
     return tab;
   }
   
@@ -513,17 +514,15 @@ public class ListHoldings extends LockssServlet {
    * 
    * @return an HTML form 
    */
-  private Form layoutFormCustomHtmlOpts() {
+  private void layoutFormCustomHtmlOpts(Composite comp) {
     
     // Get the opts from the session
     CustomHtmlOptions opts = getSessionCustomHtmlOpts();
     
-    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
-    form.add(new Input(Input.Hidden, "isForm", "true"));
     // Add a format parameter
-    form.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.KBART_HTML.name()));
+    comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.KBART_HTML.name()));
     // Add a hidden field listing the last manual ordering
-    form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, lastManualOrdering));
+    comp.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, lastManualOrdering));
     
     /*
     form.add("<br/>Choose a field set:<br/>");
@@ -536,7 +535,7 @@ public class ListHoldings extends LockssServlet {
     }
      */
     
-    form.add(
+    comp.add(
 	"<br/>Use the box below to provide a custom ordering for the fields - one field per line."+
 	"<br/>Omit any fields you don't want, but include an identifying field for sensible results."+
 	//"<br/>(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")"+
@@ -567,9 +566,9 @@ public class ListHoldings extends LockssServlet {
     tab.newCell("align=\"left\" padding=\"10\" valign=\"middle\"");
     tab.add("<br/>"+getKbartFieldLegend());
     
-    form.add(tab);
+    comp.add(tab);
 
-    return form;
+    //return form;
   }
 
   /**
@@ -592,6 +591,7 @@ public class ListHoldings extends LockssServlet {
     CustomHtmlOptions opts = getSessionCustomHtmlOpts();
     String servletUrl = srvURL(myServletDescr());
     Form form = ServletUtil.newForm(servletUrl);
+    form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
     form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(opts.fieldOrdering)));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(opts.omitEmptyColumns)));
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
@@ -630,11 +630,15 @@ public class ListHoldings extends LockssServlet {
     return b ? "true" : "false"; 
   }
 
-  /** Add a blank row to a table. */
-  private static void addBlankRow(Table tab) {
-    tab.newRow();
-    tab.newCell();
-    tab.add("&nbsp;");
+  /** Add a blank row to a table or a line break to any other composite element. */
+  private static void addBlankRow(Composite comp) {
+    if (comp instanceof Table) {
+      Table tab = (Table)comp;
+      tab.newRow();
+      tab.newCell();
+      tab.add("&nbsp;");
+    }
+    else comp.add("<br/>");
   }
 
   /**

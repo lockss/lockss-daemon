@@ -63,7 +63,7 @@ public class TestTdbAuAlphanumericComparator extends LockssTestCase {
    * The alphanumeric comparator orders purely on names.
    */
   public final void testCompare() {
-    TdbAuAlphanumericComparator comp = new TdbAuAlphanumericComparator();
+    TdbAuAlphanumericComparator comp = TdbAuAlphanumericComparatorFactory.getNameComparator();
 
     // Shuffle and sort names
     Collections.shuffle(ausWithNames);

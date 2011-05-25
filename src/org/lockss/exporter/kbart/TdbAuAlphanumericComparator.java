@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuAlphanumericComparator.java,v 1.3 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: TdbAuAlphanumericComparator.java,v 1.3.2.1 2011-05-25 13:50:33 easyonthemayo Exp $
  */
 
 /*
@@ -35,26 +35,44 @@ package org.lockss.exporter.kbart;
 import org.lockss.config.TdbAu;
 
 /**
- * Sort a set of AUs alphanumerically, based on their names. String comparison is performed case-insensitively.  
- * <p>
- * Where multiple title names appear within a single journal title, they should end up appropriately 
- * grouped so they can be split into different title ranges.
+ * A comparator for sorting <code>TdbAu</code>s alphanumerically, based on the specified comparison string. 
+ * The class is abstract so instances must each explicitly implement the method to provide their comparison string. 
  *	
  * @author neil
  */
-public class TdbAuAlphanumericComparator extends AlphanumericComparator<TdbAu> {
+public abstract class TdbAuAlphanumericComparator extends AlphanumericComparator<TdbAu> {
 
   /**
    * Create a comparator with the default case-sensitivity of KbartTitle fields.
    */
   public TdbAuAlphanumericComparator() {
-    super(KbartTitle.Field.CASE_SENSITIVITY_DEFAULT);
+    this(KbartTitle.Field.CASE_SENSITIVITY_DEFAULT);
+  }
+
+  /**
+   * Create a comparator with the specified case-sensitivity of KbartTitle fields.
+   * 
+   * @param caseSensitive whether alphanumeric comparison should be case sensitive 
+   */
+  public TdbAuAlphanumericComparator(boolean caseSensitive) {
+    super(caseSensitive);
   }
   
   @Override
   protected String getComparisonString(TdbAu tdbAu) {
-    return tdbAu.getName();
+    String s = getTdbAuComparisonString(tdbAu);
+    return s==null ? "" : s;
   }
+
+  /**
+   * The <code>getComparisonString()</code> method delegates to this one
+   * so that we can make it abstract, forcing subclasses to override it 
+   * and explicitly specify their comparison string as an alternative to 
+   * the default. 
+   * 
+   * @return the string which is subjected to alphanumeric comparison
+   */
+  protected abstract String getTdbAuComparisonString(TdbAu tdbAu);
   
 }
 
