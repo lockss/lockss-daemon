@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.39 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.39.2.1 2011-05-26 02:59:58 tlipkis Exp $
  */
 
 /*
@@ -243,8 +243,10 @@ public class TestDefinablePlugin extends LockssTestCase {
     LockssDaemon daemon = getMockLockssDaemon();
     definablePlugin.initPlugin(daemon, extMapName);
 
-    assertEquals("2", definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
-    assertEquals("7", definablePlugin.getFeatureVersion(Plugin.Feature.Metadata));
+    assertEquals("Poll_2",
+		 definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
+    assertEquals("Metadata_7",
+		 definablePlugin.getFeatureVersion(Plugin.Feature.Metadata));
   }
 
   public void testGetPluginId() throws Exception {
