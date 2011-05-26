@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.31 2011-05-18 05:54:52 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.32 2011-05-26 07:55:00 tlipkis Exp $
  */
 
 /*
@@ -333,18 +333,6 @@ public class ServeContent extends LockssServlet {
     }
   }
 
-  /** 
-   * Connection pool used by {@link #handleAuRequest()} for
-   *  quick connection to publisher content.
-   */
-  private LockssUrlConnectionPool quickConnPool = null;
-  
-  /** 
-   * Connection pool used by {@link #handleAuRequest()} for
-   *  normal connection to publisher content.
-   */
-  private LockssUrlConnectionPool normConnPool = null;
-
   // Patterm to extract url query arg from Referer string
   String URL_ARG_REGEXP = "url=([^&]*)";
   Pattern URL_ARG_PAT = Pattern.compile(URL_ARG_REGEXP);
@@ -427,9 +415,11 @@ public class ServeContent extends LockssServlet {
 	if (refUri.getPath().endsWith(myServletDescr().getPath())) {
 	  String rawquery = refUri.getRawQuery();
 	  if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
-	  Matcher m1 = URL_ARG_PAT.matcher(rawquery);
-	  if (m1.find()) {
-	    referer = UrlUtil.decodeUrl(m1.group(1));
+	  if (!StringUtil.isNullString(rawquery))  {
+	    Matcher m1 = URL_ARG_PAT.matcher(rawquery);
+	    if (m1.find()) {
+	      referer = UrlUtil.decodeUrl(m1.group(1));
+	    }
 	  }
 	}
       } catch (URISyntaxException e) {
@@ -474,7 +464,7 @@ public class ServeContent extends LockssServlet {
       return;
     }
 
-    LockssUrlConnectionPool connPool = null;
+    LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
 
     if (!isInCache && isHostDown) {
       switch (proxyMgr.getHostDownAction()) {
