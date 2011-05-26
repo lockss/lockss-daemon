@@ -105,9 +105,12 @@ if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
 elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
     RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
 fi
-START_FLAG=`mktemp /tmp/lockss.start.XXXXX`
-START_COUNT=1
 while [ -f ${KEEP_GOING} ]; do
+    if [ "X${START_FLAG}" = X ]; then
+        START_FLAG=`mktemp /tmp/lockss.start.XXXXXX`
+        date >${START_FLAG}
+        START_COUNT=1
+    fi
     # If optional SSL setup script exists and is executable, run it.
     # It will have the environment variables set by set_variables()
     # in ${LOCKSS_HOME}/etc/lockss/functions and by ${CFG_FILE}
@@ -149,13 +152,20 @@ while [ -f ${KEEP_GOING} ]; do
     fi
     START_COUNT=`expr ${START_COUNT} + 1`
     if [ ${START_COUNT} -gt ${MAX_STARTS} ]; then
-        if [ X`find ${START_FLAG} -mmin ${MAX_STARTS}` = X ]; then
-            # Daemon has been exiting once per minute - give up
-            echo "Daemon exiting rapidly" >>${LOG_FILE}
-            break
-        fi
-        START_COUNT=1
-        touch ${START_FLAG}
+        case `uname -s` in
+        Linux)
+            if [ X`find ${START_FLAG} -mmin +${MAX_STARTS}` = X ]; then
+                # Daemon has been exiting once per minute - give up
+                echo "Daemon exiting rapidly" >>${LOG_FILE}
+                rm -f ${KEEP_GOING}
+            fi
+            ;;
+        SunOS)
+            # XXX -mmin unavailable on Solaris
+            ;;
+        esac
+        rm -f ${START_FLAG}
+        START_FLAG=""
     fi
     if [ -f ${KEEP_GOING} ]; then
         sleep 30

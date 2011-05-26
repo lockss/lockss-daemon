@@ -240,7 +240,4 @@ echo $! >${PID_FILE}
 if [ X${WAIT} != X ]; then
     wait `cat ${PID_FILE}`
 fi
-if [ "${WATCHDOG}X" != X ]
-then
-    rm -f ${WATCHDOG}
-fi
+# NB - no commands below here
