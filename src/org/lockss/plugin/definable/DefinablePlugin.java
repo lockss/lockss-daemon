@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.56 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.57 2011-05-26 03:00:09 tlipkis Exp $
  */
 
 /*
@@ -596,15 +596,16 @@ public class DefinablePlugin extends BasePlugin {
       log.debug2("features: " + spec);
       for (Map.Entry<String,String> ent : spec.entrySet()) {
 	try {
-	  map.put(Plugin.Feature.valueOf(ent.getKey()), ent.getValue());
+	  // Prefix version string with feature name to create separate
+	  // namespace for each feature
+	  String key = ent.getKey();
+	  map.put(Plugin.Feature.valueOf(key), key + "_" + ent.getValue());
 	} catch (RuntimeException e) {
 	  log.warning(getPluginName() + " set unknown feature: "
 		      + ent.getKey() + " to version " + ent.getValue(), e);
-	  if (true) {
-	    throw new PluginException.InvalidDefinition("Unknown feature: " +
-							ent.getKey(),
-							e);
-	  }
+	  throw new PluginException.InvalidDefinition("Unknown feature: " +
+						      ent.getKey(),
+						      e);
 	}
       }
       featureVersion = map;
