@@ -4345,11 +4345,24 @@
       name = Biogerontology ;
       issn = 1389-5729 ;
       eissn = 1573-6768 ;
-      issnl = 1389-5729 ;
-      placeholder = True
+      issnl = 1389-5729
     >
 
     param[journal_issn] = 1389-5729
+    attr[where] = content3b
+
+    au < testing ; 2000 ; Biogerontology Volume 1 ; 1 >
+    au < testing ; 2001 ; Biogerontology Volume 2 ; 2 >
+    au < testing ; 2002 ; Biogerontology Volume 3 ; 3 >
+    au < testing ; 2003 ; Biogerontology Volume 4 ; 4 >
+    au < testing ; 2004 ; Biogerontology Volume 5 ; 5 >
+    au < testing ; 2005 ; Biogerontology Volume 6 ; 6 >
+    au < testing ; 2006 ; Biogerontology Volume 7 ; 7 >
+    au < testing ; 2007 ; Biogerontology Volume 8 ; 8 >
+    au < testing ; 2008 ; Biogerontology Volume 9 ; 9 >
+    au < testing ; 2009 ; Biogerontology Volume 10 ; 10 >
+    au < testing ; 2010 ; Biogerontology Volume 11 ; 11 >
+    au < testing ; 2011 ; Biogerontology Volume 12 ; 12 >
 
   }
 
@@ -6110,12 +6123,11 @@
 
     comment[continued_from] = 0366-483X
     param[journal_issn] = 0258-8900
-    attr[where] = content3b
 
     au < ready ; 1937 ; Bulletin Volcanologique Volume 1 (1937) ; 1 >
     au < ready ; 1937 ; Bulletin Volcanologique Volume 2 (1937) ; 2 >
     au < ready ; 1938 ; Bulletin Volcanologique Volume 3 (1938) ; 3 >
-    au < testing ; 1938 ; Bulletin Volcanologique Volume 4 (1938) ; 4 >
+    au < ready ; 1938 ; Bulletin Volcanologique Volume 4 (1938) ; 4 >
     au < ready ; 1939 ; Bulletin Volcanologique Volume 5 (1939) ; 5 >
     au < ready ; 1940 ; Bulletin Volcanologique Volume 6 (1940) ; 6 >
     au < ready ; 1940 ; Bulletin Volcanologique Volume 7 (1940) ; 7 >
@@ -6169,7 +6181,7 @@
     au < ready ; 1993 ; Bulletin of Volcanology Volume 55 ; 55 >
     au < ready ; 1994-1995 ; Bulletin of Volcanology Volume 56 ; 56 >
     au < ready ; 1995-1996 ; Bulletin of Volcanology Volume 57 ; 57 >
-    au < testing ; 1996-1997 ; Bulletin of Volcanology Volume 58 ; 58 >
+    au < notReady ; 1996-1997 ; Bulletin of Volcanology Volume 58 ; 58 >
     au < ready ; 1997 ; Bulletin of Volcanology Volume 59 ; 59 >
     au < ready ; 1998 ; Bulletin of Volcanology Volume 60 ; 60 >
     au < ready ; 1999 ; Bulletin of Volcanology Volume 61 ; 61 >
@@ -15807,7 +15819,7 @@
     >
 
     param[journal_issn] = 0948-6143
-    attr[where] = 
+    attr[where] = content6b
  
 
     au < manifest ; 1958-1959 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section Histochemie Volume 1 ; 1 >
@@ -18924,11 +18936,196 @@
       name = Inventiones Mathematicae ;
       issn = 0020-9910 ;
       eissn = 1432-1297 ;
-      issnl = 0020-9910 ;
-      placeholder = True
+      issnl = 0020-9910
     >
 
     param[journal_issn] = 0020-9910
+    attr[where] = sul-lockss30a
+
+    au < manifest ; 1966 ; Inventiones Mathematicae Volume 1 ; 1 >
+    au < manifest ; 1966-1967 ; Inventiones Mathematicae Volume 2 ; 2 >
+    au < manifest ; 1967 ; Inventiones Mathematicae Volume 3 ; 3 >
+    au < manifest ; 1967-1968 ; Inventiones Mathematicae Volume 4 ; 4 >
+    au < manifest ; 1968 ; Inventiones Mathematicae Volume 5 ; 5 >
+    au < manifest ; 1968-1969 ; Inventiones Mathematicae Volume 6 ; 6 >
+    au < manifest ; 1969 ; Inventiones Mathematicae Volume 7 ; 7 >
+    au < manifest ; 1969 ; Inventiones Mathematicae Volume 8 ; 8 >
+    au < manifest ; 1969-1970 ; Inventiones Mathematicae Volume 9 ; 9 >
+    au < manifest ; 1970 ; Inventiones Mathematicae Volume 10 ; 10 >
+    au < manifest ; 1970 ; Inventiones Mathematicae Volume 11 ; 11 >
+    au < manifest ; 1971 ; Inventiones Mathematicae Volume 12 ; 12 >
+    au < manifest ; 1971 ; Inventiones Mathematicae Volume 13 ; 13 >
+    au < manifest ; 1971 ; Inventiones Mathematicae Volume 14 ; 14 >
+    au < manifest ; 1972 ; Inventiones Mathematicae Volume 15 ; 15 >
+    au < manifest ; 1972 ; Inventiones Mathematicae Volume 16 ; 16 >
+    au < manifest ; 1972 ; Inventiones Mathematicae Volume 17 ; 17 >
+    au < manifest ; 1972 ; Inventiones Mathematicae Volume 18 ; 18 >
+    au < manifest ; 1973 ; Inventiones Mathematicae Volume 19 ; 19 >
+    au < manifest ; 1973 ; Inventiones Mathematicae Volume 20 ; 20 >
+    au < manifest ; 1973 ; Inventiones Mathematicae Volume 21 ; 21 >
+    au < manifest ; 1973 ; Inventiones Mathematicae Volume 22 ; 22 >
+    au < manifest ; 1974 ; Inventiones Mathematicae Volume 23 ; 23 >
+    au < manifest ; 1974 ; Inventiones Mathematicae Volume 24 ; 24 >
+    au < manifest ; 1974 ; Inventiones Mathematicae Volume 25 ; 25 >
+    au < manifest ; 1974 ; Inventiones Mathematicae Volume 26 ; 26 >
+    au < manifest ; 1974 ; Inventiones Mathematicae Volume 27 ; 27 >
+    au < manifest ; 1975 ; Inventiones Mathematicae Volume 28 ; 28 >
+    au < manifest ; 1975 ; Inventiones Mathematicae Volume 29 ; 29 >
+    au < manifest ; 1975 ; Inventiones Mathematicae Volume 30 ; 30 >
+    au < manifest ; 1975-1976 ; Inventiones Mathematicae Volume 31 ; 31 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 32 ; 32 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 33 ; 33 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 34 ; 34 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 35 ; 35 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 36 ; 36 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 37 ; 37 >
+    au < manifest ; 1976 ; Inventiones Mathematicae Volume 38 ; 38 >
+    au < manifest ; 1977 ; Inventiones Mathematicae Volume 39 ; 39 >
+    au < manifest ; 1977 ; Inventiones Mathematicae Volume 40 ; 40 >
+    au < manifest ; 1977 ; Inventiones Mathematicae Volume 41 ; 41 >
+    au < manifest ; 1977 ; Inventiones Mathematicae Volume 42 ; 42 >
+    au < manifest ; 1977 ; Inventiones Mathematicae Volume 43 ; 43 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 44 ; 44 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 45 ; 45 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 46 ; 46 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 47 ; 47 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 48 ; 48 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 49 ; 49 >
+    au < manifest ; 1978 ; Inventiones Mathematicae Volume 50 ; 50 >
+    au < manifest ; 1979 ; Inventiones Mathematicae Volume 51 ; 51 >
+    au < manifest ; 1979 ; Inventiones Mathematicae Volume 52 ; 52 >
+    au < manifest ; 1979 ; Inventiones Mathematicae Volume 53 ; 53 >
+    au < manifest ; 1979 ; Inventiones Mathematicae Volume 54 ; 54 >
+    au < manifest ; 1979 ; Inventiones Mathematicae Volume 55 ; 55 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 56 ; 56 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 57 ; 57 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 58 ; 58 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 59 ; 59 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 60 ; 60 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 61 ; 61 >
+    au < manifest ; 1980 ; Inventiones Mathematicae Volume 62 ; 62 >
+    au < manifest ; 1981 ; Inventiones Mathematicae Volume 63 ; 63 >
+    au < manifest ; 1981 ; Inventiones Mathematicae Volume 64 ; 64 >
+    au < manifest ; 1981-1982 ; Inventiones Mathematicae Volume 65 ; 65 >
+    au < manifest ; 1982 ; Inventiones Mathematicae Volume 66 ; 66 >
+    au < manifest ; 1982 ; Inventiones Mathematicae Volume 67 ; 67 >
+    au < manifest ; 1982 ; Inventiones Mathematicae Volume 68 ; 68 >
+    au < manifest ; 1982 ; Inventiones Mathematicae Volume 69 ; 69 >
+    au < manifest ; 1982 ; Inventiones Mathematicae Volume 70 ; 70 >
+    au < manifest ; 1983 ; Inventiones Mathematicae Volume 71 ; 71 >
+    au < manifest ; 1983 ; Inventiones Mathematicae Volume 72 ; 72 >
+    au < manifest ; 1983 ; Inventiones Mathematicae Volume 73 ; 73 >
+    au < manifest ; 1983 ; Inventiones Mathematicae Volume 74 ; 74 >
+    au < manifest ; 1984 ; Inventiones Mathematicae Volume 75 ; 75 >
+    au < manifest ; 1984 ; Inventiones Mathematicae Volume 76 ; 76 >
+    au < manifest ; 1984 ; Inventiones Mathematicae Volume 77 ; 77 >
+    au < manifest ; 1984 ; Inventiones Mathematicae Volume 78 ; 78 >
+    au < manifest ; 1985 ; Inventiones Mathematicae Volume 79 ; 79 >
+    au < manifest ; 1985 ; Inventiones Mathematicae Volume 80 ; 80 >
+    au < manifest ; 1985 ; Inventiones Mathematicae Volume 81 ; 81 >
+    au < manifest ; 1985 ; Inventiones Mathematicae Volume 82 ; 82 >
+    au < manifest ; 1986 ; Inventiones Mathematicae Volume 83 ; 83 >
+    au < manifest ; 1986 ; Inventiones Mathematicae Volume 84 ; 84 >
+    au < manifest ; 1986 ; Inventiones Mathematicae Volume 85 ; 85 >
+    au < manifest ; 1986 ; Inventiones Mathematicae Volume 86 ; 86 >
+    au < manifest ; 1987 ; Inventiones Mathematicae Volume 87 ; 87 >
+    au < manifest ; 1987 ; Inventiones Mathematicae Volume 88 ; 88 >
+    au < manifest ; 1987 ; Inventiones Mathematicae Volume 89 ; 89 >
+    au < manifest ; 1987 ; Inventiones Mathematicae Volume 90 ; 90 >
+    au < manifest ; 1988 ; Inventiones Mathematicae Volume 91 ; 91 >
+    au < manifest ; 1988 ; Inventiones Mathematicae Volume 92 ; 92 >
+    au < manifest ; 1988 ; Inventiones Mathematicae Volume 93 ; 93 >
+    au < manifest ; 1988 ; Inventiones Mathematicae Volume 94 ; 94 >
+    au < manifest ; 1989 ; Inventiones Mathematicae Volume 95 ; 95 >
+    au < manifest ; 1989 ; Inventiones Mathematicae Volume 96 ; 96 >
+    au < manifest ; 1989 ; Inventiones Mathematicae Volume 97 ; 97 >
+    au < manifest ; 1989 ; Inventiones Mathematicae Volume 98 ; 98 >
+    au < manifest ; 1990 ; Inventiones Mathematicae Volume 99 ; 99 >
+    au < manifest ; 1990 ; Inventiones Mathematicae Volume 100 ; 100 >
+    au < manifest ; 1990 ; Inventiones Mathematicae Volume 101 ; 101 >
+    au < manifest ; 1990 ; Inventiones Mathematicae Volume 102 ; 102 >
+    au < manifest ; 1991 ; Inventiones Mathematicae Volume 103 ; 103 >
+    au < manifest ; 1991 ; Inventiones Mathematicae Volume 104 ; 104 >
+    au < manifest ; 1991 ; Inventiones Mathematicae Volume 105 ; 105 >
+    au < manifest ; 1991 ; Inventiones Mathematicae Volume 106 ; 106 >
+    au < manifest ; 1992 ; Inventiones Mathematicae Volume 107 ; 107 >
+    au < manifest ; 1992 ; Inventiones Mathematicae Volume 108 ; 108 >
+    au < manifest ; 1992 ; Inventiones Mathematicae Volume 109 ; 109 >
+    au < manifest ; 1992 ; Inventiones Mathematicae Volume 110 ; 110 >
+    au < manifest ; 1993 ; Inventiones Mathematicae Volume 111 ; 111 >
+    au < manifest ; 1993 ; Inventiones Mathematicae Volume 112 ; 112 >
+    au < manifest ; 1993 ; Inventiones Mathematicae Volume 113 ; 113 >
+    au < manifest ; 1993 ; Inventiones Mathematicae Volume 114 ; 114 >
+    au < manifest ; 1994 ; Inventiones Mathematicae Volume 115 ; 115 >
+    au < manifest ; 1994 ; Inventiones Mathematicae Volume 116 ; 116 >
+    au < manifest ; 1994 ; Inventiones Mathematicae Volume 117 ; 117 >
+    au < manifest ; 1994 ; Inventiones Mathematicae Volume 118 ; 118 >
+    au < manifest ; 1995 ; Inventiones Mathematicae Volume 119 ; 119 >
+    au < manifest ; 1995 ; Inventiones Mathematicae Volume 120 ; 120 >
+    au < manifest ; 1995 ; Inventiones Mathematicae Volume 121 ; 121 >
+    au < manifest ; 1995 ; Inventiones Mathematicae Volume 122 ; 122 >
+    au < manifest ; 1996 ; Inventiones Mathematicae Volume 123 ; 123 >
+    au < manifest ; 1996 ; Inventiones Mathematicae Volume 124 ; 124 >
+    au < manifest ; 1996 ; Inventiones Mathematicae Volume 125 ; 125 >
+    au < manifest ; 1996 ; Inventiones Mathematicae Volume 126 ; 126 >
+    au < manifest ; 1996-1997 ; Inventiones Mathematicae Volume 127 ; 127 >
+    au < manifest ; 1997 ; Inventiones Mathematicae Volume 128 ; 128 >
+    au < manifest ; 1997 ; Inventiones Mathematicae Volume 129 ; 129 >
+    au < manifest ; 1997 ; Inventiones Mathematicae Volume 130 ; 130 >
+    au < manifest ; 1997 ; Inventiones Mathematicae Volume 131 ; 131 >
+    au < manifest ; 1998 ; Inventiones Mathematicae Volume 132 ; 132 >
+    au < manifest ; 1998 ; Inventiones Mathematicae Volume 133 ; 133 >
+    au < manifest ; 1998 ; Inventiones Mathematicae Volume 134 ; 134 >
+    au < manifest ; 1999 ; Inventiones Mathematicae Volume 135 ; 135 >
+    au < manifest ; 1999 ; Inventiones Mathematicae Volume 136 ; 136 >
+    au < manifest ; 1999 ; Inventiones Mathematicae Volume 137 ; 137 >
+    au < manifest ; 1999 ; Inventiones Mathematicae Volume 138 ; 138 >
+    au < manifest ; 2000 ; Inventiones Mathematicae Volume 139 ; 139 >
+    au < manifest ; 2000 ; Inventiones Mathematicae Volume 140 ; 140 >
+    au < manifest ; 2000 ; Inventiones Mathematicae Volume 141 ; 141 >
+    au < manifest ; 2000 ; Inventiones Mathematicae Volume 142 ; 142 >
+    au < manifest ; 2001 ; Inventiones Mathematicae Volume 143 ; 143 >
+    au < manifest ; 2001 ; Inventiones Mathematicae Volume 144 ; 144 >
+    au < manifest ; 2001 ; Inventiones Mathematicae Volume 145 ; 145 >
+    au < manifest ; 2001 ; Inventiones Mathematicae Volume 146 ; 146 >
+    au < manifest ; 2002 ; Inventiones Mathematicae Volume 147 ; 147 >
+    au < manifest ; 2002 ; Inventiones Mathematicae Volume 148 ; 148 >
+    au < manifest ; 2002 ; Inventiones Mathematicae Volume 149 ; 149 >
+    au < manifest ; 2002 ; Inventiones Mathematicae Volume 150 ; 150 >
+    au < manifest ; 2003 ; Inventiones Mathematicae Volume 151 ; 151 >
+    au < manifest ; 2003 ; Inventiones Mathematicae Volume 152 ; 152 >
+    au < manifest ; 2003 ; Inventiones Mathematicae Volume 153 ; 153 >
+    au < manifest ; 2003 ; Inventiones Mathematicae Volume 154 ; 154 >
+    au < manifest ; 2004 ; Inventiones Mathematicae Volume 155 ; 155 >
+    au < manifest ; 2004 ; Inventiones Mathematicae Volume 156 ; 156 >
+    au < manifest ; 2004 ; Inventiones Mathematicae Volume 157 ; 157 >
+    au < manifest ; 2004 ; Inventiones Mathematicae Volume 158 ; 158 >
+    au < manifest ; 2005 ; Inventiones Mathematicae Volume 159 ; 159 >
+    au < manifest ; 2005 ; Inventiones Mathematicae Volume 160 ; 160 >
+    au < manifest ; 2005 ; Inventiones Mathematicae Volume 161 ; 161 >
+    au < manifest ; 2005 ; Inventiones Mathematicae Volume 162 ; 162 >
+    au < manifest ; 2006 ; Inventiones Mathematicae Volume 163 ; 163 >
+    au < manifest ; 2006 ; Inventiones Mathematicae Volume 164 ; 164 >
+    au < testing ; 2006 ; Inventiones Mathematicae Volume 165 ; 165 >
+    au < testing ; 2006 ; Inventiones Mathematicae Volume 166 ; 166 >
+    au < testing ; 2007 ; Inventiones Mathematicae Volume 167 ; 167 >
+    au < testing ; 2007 ; Inventiones Mathematicae Volume 168 ; 168 >
+    au < testing ; 2007 ; Inventiones Mathematicae Volume 169 ; 169 >
+    au < testing ; 2007 ; Inventiones Mathematicae Volume 170 ; 170 >
+    au < testing ; 2008 ; Inventiones Mathematicae Volume 171 ; 171 >
+    au < testing ; 2008 ; Inventiones Mathematicae Volume 172 ; 172 >
+    au < testing ; 2008 ; Inventiones Mathematicae Volume 173 ; 173 >
+    au < testing ; 2008 ; Inventiones Mathematicae Volume 174 ; 174 >
+    au < testing ; 2009 ; Inventiones Mathematicae Volume 175 ; 175 >
+    au < testing ; 2009 ; Inventiones Mathematicae Volume 176 ; 176 >
+    au < testing ; 2009 ; Inventiones Mathematicae Volume 177 ; 177 >
+    au < testing ; 2009 ; Inventiones Mathematicae Volume 178 ; 178 >
+    au < testing ; 2010 ; Inventiones Mathematicae Volume 179 ; 179 >
+    au < testing ; 2010 ; Inventiones Mathematicae Volume 180 ; 180 >
+    au < testing ; 2010 ; Inventiones Mathematicae Volume 181 ; 181 >
+    au < testing ; 2010 ; Inventiones Mathematicae Volume 182 ; 182 >
+    au < testing ; 2011 ; Inventiones Mathematicae Volume 183 ; 183 >
+    au < testing ; 2011 ; Inventiones Mathematicae Volume 184 ; 184 >
 
   }
 
@@ -23561,7 +23758,6 @@
 
     comment[continued_by] = 1559-7105
     param[journal_issn] = 0300-4864
-    attr[where] = content1a
 
     au < ready ; 1972 ; Journal of Neurocytology Volume 1 ; 1 >
     au < ready ; 1973 ; Journal of Neurocytology Volume 2 ; 2 >
@@ -23584,7 +23780,7 @@
     au < ready ; 1990 ; Journal of Neurocytology Volume 19 ; 19 >
     au < ready ; 1991 ; Journal of Neurocytology Volume 20 ; 20 >
     au < ready ; 1992 ; Journal of Neurocytology Volume 21 ; 21 >
-    au < testing ; 1993 ; Journal of Neurocytology Volume 22 ; 22 >
+    au < ready ; 1993 ; Journal of Neurocytology Volume 22 ; 22 >
     au < ready ; 1994 ; Journal of Neurocytology Volume 23 ; 23 >
     au < ready ; 1995 ; Journal of Neurocytology Volume 24 ; 24 >
     au < ready ; 1996 ; Journal of Neurocytology Volume 25 ; 25 >
@@ -28789,11 +28985,18 @@
       name = Nanoscale Research Letters ;
       issn = 1931-7573 ;
       eissn = 1556-276X ;
-      issnl = 1556-276X ;
-      placeholder = True
+      issnl = 1556-276X
     >
 
     param[journal_issn] = 1931-7573
+    attr[where] = content1a
+
+    au < testing ; 2006 ; Nanoscale Research Letters Volume 1 ; 1 >
+    au < testing ; 2007 ; Nanoscale Research Letters Volume 2 ; 2 >
+    au < testing ; 2008 ; Nanoscale Research Letters Volume 3 ; 3 >
+    au < testing ; 2009 ; Nanoscale Research Letters Volume 4 ; 4 >
+    au < testing ; 2010 ; Nanoscale Research Letters Volume 5 ; 5 >
+    au < testing ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 >
 
   }
 
@@ -29634,7 +29837,6 @@
     >
 
     param[journal_issn] = 0960-8923
-    attr[where] = sul-lockss30a
 
     au < ready ; 1991 ; Obesity Surgery Volume 1 ; 1 >
     au < ready ; 1992 ; Obesity Surgery Volume 2 ; 2 >
@@ -29652,9 +29854,9 @@
     au < ready ; 2004 ; Obesity Surgery Volume 14 ; 14 >
     au < ready ; 2005 ; Obesity Surgery Volume 15 ; 15 >
     au < ready ; 2006 ; Obesity Surgery Volume 16 ; 16 >
-    au < testing ; 2007 ; Obesity Surgery Volume 17 ; 17 >
-    au < testing ; 2008 ; Obesity Surgery Volume 18 ; 18 >
-    au < testing ; 2009 ; Obesity Surgery Volume 19 ; 19 >
+    au < ready ; 2007 ; Obesity Surgery Volume 17 ; 17 >
+    au < ready ; 2008 ; Obesity Surgery Volume 18 ; 18 >
+    au < ready ; 2009 ; Obesity Surgery Volume 19 ; 19 >
     au < ready ; 2010 ; Obesity Surgery Volume 20 ; 20 >
     au < ready ; 2011 ; Obesity Surgery Volume 21 ; 21 >
 
@@ -33583,11 +33785,19 @@ Commet [pv] = now offline
       name = Purinergic Signalling ;
       issn = 1573-9538 ;
       eissn = 1573-9546 ;
-      issnl = 1573-9538 ;
-      placeholder = True
+      issnl = 1573-9538
     >
 
     param[journal_issn] = 1573-9538
+    attr[where] = content5a
+
+    au < testing ; 2004 ; Purinergic Signalling Volume 1 ; 1 >
+    au < testing ; 2006 ; Purinergic Signalling Volume 2 ; 2 >
+    au < testing ; 2007 ; Purinergic Signalling Volume 3 ; 3 >
+    au < testing ; 2008 ; Purinergic Signalling Volume 4 ; 4 >
+    au < testing ; 2009 ; Purinergic Signalling Volume 5 ; 5 >
+    au < testing ; 2010 ; Purinergic Signalling Volume 6 ; 6 >
+    au < testing ; 2011 ; Purinergic Signalling Volume 7 ; 7 >
 
   }
 
