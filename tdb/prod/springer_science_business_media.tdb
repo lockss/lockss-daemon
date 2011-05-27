@@ -2593,6 +2593,7 @@
     >
 
     param[journal_issn] = 0175-7598
+    attr[where] = content6a
 
     au < manifest ; 1975 ; Applied Microbiology and Biotechnology Volume 1 ; 1 >
     au < manifest ; 1975-1976 ; Applied Microbiology and Biotechnology Volume 2 ; 2 >
@@ -6111,18 +6112,18 @@
     param[journal_issn] = 0258-8900
     attr[where] = content3b
 
-    au < testing ; 1937 ; Bulletin Volcanologique Volume 1 (1937) ; 1 >
+    au < ready ; 1937 ; Bulletin Volcanologique Volume 1 (1937) ; 1 >
     au < ready ; 1937 ; Bulletin Volcanologique Volume 2 (1937) ; 2 >
-    au < testing ; 1938 ; Bulletin Volcanologique Volume 3 (1938) ; 3 >
+    au < ready ; 1938 ; Bulletin Volcanologique Volume 3 (1938) ; 3 >
     au < testing ; 1938 ; Bulletin Volcanologique Volume 4 (1938) ; 4 >
     au < ready ; 1939 ; Bulletin Volcanologique Volume 5 (1939) ; 5 >
     au < ready ; 1940 ; Bulletin Volcanologique Volume 6 (1940) ; 6 >
     au < ready ; 1940 ; Bulletin Volcanologique Volume 7 (1940) ; 7 >
     au < ready ; 1949 ; Bulletin Volcanologique Volume 8 (1949) ; 8 >
     au < ready ; 1949 ; Bulletin Volcanologique Volume 9 ; 9 >
-    au < testing ; 1950 ; Bulletin Volcanologique Volume 10 ; 10 >
-    au < testing ; 1951 ; Bulletin Volcanologique Volume 11 ; 11 >
-    au < testing ; 1952 ; Bulletin Volcanologique Volume 12 ; 12 >
+    au < ready ; 1950 ; Bulletin Volcanologique Volume 10 ; 10 >
+    au < ready ; 1951 ; Bulletin Volcanologique Volume 11 ; 11 >
+    au < ready ; 1952 ; Bulletin Volcanologique Volume 12 ; 12 >
     au < ready ; 1953 ; Bulletin Volcanologique Volume 13 ; 13 >
     au < ready ; 1953 ; Bulletin Volcanologique Volume 14 ; 14 >
     au < ready ; 1954 ; Bulletin Volcanologique Volume 15 ; 15 >
@@ -6130,11 +6131,11 @@
     au < ready ; 1955 ; Bulletin Volcanologique Volume 17 ; 17 >
     au < ready ; 1956 ; Bulletin Volcanologique Volume 18 ; 18 >
     au < ready ; 1958 ; Bulletin Volcanologique Volume 19 ; 19 >
-    au < testing ; 1959 ; Bulletin Volcanologique Volume 20 ; 20 >
+    au < ready ; 1959 ; Bulletin Volcanologique Volume 20 ; 20 >
     au < ready ; 1959 ; Bulletin Volcanologique Volume 21 ; 21 >
     au < ready ; 1959 ; Bulletin Volcanologique Volume 22 ; 22 >
     au < ready ; 1960 ; Bulletin Volcanologique Volume 23 ; 23 >
-    au < testing ; 1962 ; Bulletin Volcanologique Volume 24 ; 24 >
+    au < ready ; 1962 ; Bulletin Volcanologique Volume 24 ; 24 >
     au < ready ; 1963 ; Bulletin Volcanologique Volume 25 ; 25 >
     au < ready ; 1963 ; Bulletin Volcanologique Volume 26 ; 26 >
     au < ready ; 1964 ; Bulletin Volcanologique Volume 27 ; 27 >
@@ -6180,7 +6181,7 @@
     au < ready ; 2004 ; Bulletin of Volcanology Volume 67 ; 67 >
     au < ready ; 2005 ; Bulletin of Volcanology Volume 68 ; 68 >
     au < ready ; 2006 ; Bulletin of Volcanology Volume 69 ; 69 >
-    au < testing ; 2007 ; Bulletin of Volcanology Volume 70 ; 70 >
+    au < ready ; 2007 ; Bulletin of Volcanology Volume 70 ; 70 >
     au < ready ; 2009 ; Bulletin of Volcanology Volume 71 ; 71 >
     au < ready ; 2010 ; Bulletin of Volcanology Volume 72 ; 72 >
     au < ready ; 2011 ; Bulletin of Volcanology Volume 73 ; 73 >
@@ -15806,7 +15807,8 @@
     >
 
     param[journal_issn] = 0948-6143
-    attr[where] = content6b 
+    attr[where] = 
+ 
 
     au < manifest ; 1958-1959 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section Histochemie Volume 1 ; 1 >
     au < manifest ; 1960-1962 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section Histochemie Volume 2 ; 2 >
@@ -15897,51 +15899,51 @@
     au < manifest ; 1987-1988 ; Histochemistry Volume 88 ; 88 >
     au < manifest ; 1988 ; Histochemistry Volume 89 ; 89 >
     au < manifest ; 1988-1989 ; Histochemistry Volume 90 ; 90 >
-    au < manifest ; 1989 ; Histochemistry Volume 91 ; 91 >
-    au < manifest ; 1989 ; Histochemistry Volume 92 ; 92 >
-    au < manifest ; 1989-1990 ; Histochemistry Volume 93 ; 93 >
-    au < manifest ; 1990 ; Histochemistry Volume 94 ; 94 >
-    au < manifest ; 1990-1991 ; Histochemistry Volume 95 ; 95 >
-    au < manifest ; 1991 ; Histochemistry Volume 96 ; 96 >
-    au < manifest ; 1992 ; Histochemistry Volume 97 ; 97 >
-    au < manifest ; 1992 ; Histochemistry Volume 98 ; 98 >
-    au < manifest ; 1993 ; Histochemistry Volume 99 ; 99 >
-    au < manifest ; 1993 ; Histochemistry Volume 100 ; 100 >
-    au < manifest ; 1994 ; Histochemistry Volume 101 ; 101 >
-    au < manifest ; 1994 ; Histochemistry Volume 102 ; 102 >
-    au < manifest ; 1995 ; Histochemistry and Cell Biology Volume 103 ; 103 >
-    au < manifest ; 1995 ; Histochemistry and Cell Biology Volume 104 ; 104 >
-    au < manifest ; 1996 ; Histochemistry and Cell Biology Volume 105 ; 105 >
-    au < manifest ; 1996 ; Histochemistry and Cell Biology Volume 106 ; 106 >
-    au < manifest ; 1997 ; Histochemistry and Cell Biology Volume 107 ; 107 >
-    au < manifest ; 1997 ; Histochemistry and Cell Biology Volume 108 ; 108 >
-    au < manifest ; 1997 ; Histochemistry and Cell Biology Volume 109 ; 109 >
-    au < manifest ; 1998 ; Histochemistry and Cell Biology Volume 110 ; 110 >
-    au < manifest ; 1999 ; Histochemistry and Cell Biology Volume 111 ; 111 >
-    au < manifest ; 1999 ; Histochemistry and Cell Biology Volume 112 ; 112 >
-    au < manifest ; 2000 ; Histochemistry and Cell Biology Volume 113 ; 113 >
-    au < manifest ; 2000 ; Histochemistry and Cell Biology Volume 114 ; 114 >
-    au < manifest ; 2001 ; Histochemistry and Cell Biology Volume 115 ; 115 >
-    au < testing ; 2001 ; Histochemistry and Cell Biology Volume 116 ; 116 >
-    au < testing ; 2002 ; Histochemistry and Cell Biology Volume 117 ; 117 >
-    au < testing ; 2002 ; Histochemistry and Cell Biology Volume 118 ; 118 >
-    au < testing ; 2003 ; Histochemistry and Cell Biology Volume 119 ; 119 >
-    au < testing ; 2003 ; Histochemistry and Cell Biology Volume 120 ; 120 >
+    au < testing ; 1989 ; Histochemistry Volume 91 ; 91 >
+    au < testing ; 1989 ; Histochemistry Volume 92 ; 92 >
+    au < testing ; 1989-1990 ; Histochemistry Volume 93 ; 93 >
+    au < testing ; 1990 ; Histochemistry Volume 94 ; 94 >
+    au < testing ; 1990-1991 ; Histochemistry Volume 95 ; 95 >
+    au < testing ; 1991 ; Histochemistry Volume 96 ; 96 >
+    au < testing ; 1992 ; Histochemistry Volume 97 ; 97 >
+    au < testing ; 1992 ; Histochemistry Volume 98 ; 98 >
+    au < testing ; 1993 ; Histochemistry Volume 99 ; 99 >
+    au < testing ; 1993 ; Histochemistry Volume 100 ; 100 >
+    au < testing ; 1994 ; Histochemistry Volume 101 ; 101 >
+    au < testing ; 1994 ; Histochemistry Volume 102 ; 102 >
+    au < testing ; 1995 ; Histochemistry and Cell Biology Volume 103 ; 103 >
+    au < testing ; 1995 ; Histochemistry and Cell Biology Volume 104 ; 104 >
+    au < testing ; 1996 ; Histochemistry and Cell Biology Volume 105 ; 105 >
+    au < testing ; 1996 ; Histochemistry and Cell Biology Volume 106 ; 106 >
+    au < testing ; 1997 ; Histochemistry and Cell Biology Volume 107 ; 107 >
+    au < testing ; 1997 ; Histochemistry and Cell Biology Volume 108 ; 108 >
+    au < testing ; 1997 ; Histochemistry and Cell Biology Volume 109 ; 109 >
+    au < testing ; 1998 ; Histochemistry and Cell Biology Volume 110 ; 110 >
+    au < testing ; 1999 ; Histochemistry and Cell Biology Volume 111 ; 111 >
+    au < testing ; 1999 ; Histochemistry and Cell Biology Volume 112 ; 112 >
+    au < testing ; 2000 ; Histochemistry and Cell Biology Volume 113 ; 113 >
+    au < testing ; 2000 ; Histochemistry and Cell Biology Volume 114 ; 114 >
+    au < testing ; 2001 ; Histochemistry and Cell Biology Volume 115 ; 115 >
+    au < ready ; 2001 ; Histochemistry and Cell Biology Volume 116 ; 116 >
+    au < ready ; 2002 ; Histochemistry and Cell Biology Volume 117 ; 117 >
+    au < ready ; 2002 ; Histochemistry and Cell Biology Volume 118 ; 118 >
+    au < ready ; 2003 ; Histochemistry and Cell Biology Volume 119 ; 119 >
+    au < ready ; 2003 ; Histochemistry and Cell Biology Volume 120 ; 120 >
     au < testing ; 2004 ; Histochemistry and Cell Biology Volume 121 ; 121 >
-    au < testing ; 2004 ; Histochemistry and Cell Biology Volume 122 ; 122 >
-    au < testing ; 2005 ; Histochemistry and Cell Biology Volume 123 ; 123 >
-    au < testing ; 2005 ; Histochemistry and Cell Biology Volume 124 ; 124 >
-    au < testing ; 2006 ; Histochemistry and Cell Biology Volume 125 ; 125 >
-    au < testing ; 2006 ; Histochemistry and Cell Biology Volume 126 ; 126 >
-    au < testing ; 2007 ; Histochemistry and Cell Biology Volume 127 ; 127 >
-    au < testing ; 2007 ; Histochemistry and Cell Biology Volume 128 ; 128 >
-    au < testing ; 2008 ; Histochemistry and Cell Biology Volume 129 ; 129 >
-    au < testing ; 2008 ; Histochemistry and Cell Biology Volume 130 ; 130 >
-    au < testing ; 2009 ; Histochemistry and Cell Biology Volume 131 ; 131 >
-    au < testing ; 2009 ; Histochemistry and Cell Biology Volume 132 ; 132 >
-    au < testing ; 2010 ; Histochemistry and Cell Biology Volume 133 ; 133 >
-    au < testing ; 2010 ; Histochemistry and Cell Biology Volume 134 ; 134 >
-    au < testing ; 2011 ; Histochemistry and Cell Biology Volume 135 ; 135 >
+    au < ready ; 2004 ; Histochemistry and Cell Biology Volume 122 ; 122 >
+    au < ready ; 2005 ; Histochemistry and Cell Biology Volume 123 ; 123 >
+    au < ready ; 2005 ; Histochemistry and Cell Biology Volume 124 ; 124 >
+    au < ready ; 2006 ; Histochemistry and Cell Biology Volume 125 ; 125 >
+    au < ready ; 2006 ; Histochemistry and Cell Biology Volume 126 ; 126 >
+    au < ready ; 2007 ; Histochemistry and Cell Biology Volume 127 ; 127 >
+    au < ready ; 2007 ; Histochemistry and Cell Biology Volume 128 ; 128 >
+    au < ready ; 2008 ; Histochemistry and Cell Biology Volume 129 ; 129 >
+    au < ready ; 2008 ; Histochemistry and Cell Biology Volume 130 ; 130 >
+    au < ready ; 2009 ; Histochemistry and Cell Biology Volume 131 ; 131 >
+    au < ready ; 2009 ; Histochemistry and Cell Biology Volume 132 ; 132 >
+    au < ready ; 2010 ; Histochemistry and Cell Biology Volume 133 ; 133 >
+    au < ready ; 2010 ; Histochemistry and Cell Biology Volume 134 ; 134 >
+    au < ready ; 2011 ; Histochemistry and Cell Biology Volume 135 ; 135 >
 
   }
 
@@ -16667,15 +16669,15 @@
     au < testing ; 1992 ; Immunogenetics Volume 36 ; 36 >
     au < testing ; 1992-1993 ; Immunogenetics Volume 37 ; 37 >
     au < testing ; 1993 ; Immunogenetics Volume 38 ; 38 >
-    au < testing ; 1994 ; Immunogenetics Volume 39 ; 39 >
-    au < testing ; 1994 ; Immunogenetics Volume 40 ; 40 >
-    au < testing ; 1995 ; Immunogenetics Volume 41 ; 41 >
+    au < ready ; 1994 ; Immunogenetics Volume 39 ; 39 >
+    au < ready ; 1994 ; Immunogenetics Volume 40 ; 40 >
+    au < ready ; 1995 ; Immunogenetics Volume 41 ; 41 >
     au < testing ; 1995 ; Immunogenetics Volume 42 ; 42 >
     au < testing ; 1995-1996 ; Immunogenetics Volume 43 ; 43 >
     au < testing ; 1996 ; Immunogenetics Volume 44 ; 44 >
     au < testing ; 1996-1997 ; Immunogenetics Volume 45 ; 45 >
-    au < testing ; 1997 ; Immunogenetics Volume 46 ; 46 >
-    au < testing ; 1997 ; Immunogenetics Volume 47 ; 47 >
+    au < ready ; 1997 ; Immunogenetics Volume 46 ; 46 >
+    au < ready ; 1997 ; Immunogenetics Volume 47 ; 47 >
     au < ready ; 1998 ; Immunogenetics Volume 48 ; 48 >
     au < ready ; 1999 ; Immunogenetics Volume 49 ; 49 >
     au < ready ; 1999 ; Immunogenetics Volume 50 ; 50 >
@@ -16683,11 +16685,11 @@
     au < ready ; 2000 ; Immunogenetics Volume 52 ; 52 >
     au < ready ; 2001 ; Immunogenetics Volume 53 ; 53 >
     au < ready ; 2002 ; Immunogenetics Volume 54 ; 54 >
-    au < testing ; 2003 ; Immunogenetics Volume 55 ; 55 >
+    au < ready ; 2003 ; Immunogenetics Volume 55 ; 55 >
     au < testing ; 2004 ; Immunogenetics Volume 56 ; 56 >
-    au < testing ; 2005 ; Immunogenetics Volume 57 ; 57 >
+    au < ready ; 2005 ; Immunogenetics Volume 57 ; 57 >
     au < testing ; 2006 ; Immunogenetics Volume 58 ; 58 >
-    au < testing ; 2007 ; Immunogenetics Volume 59 ; 59 >
+    au < ready ; 2007 ; Immunogenetics Volume 59 ; 59 >
     au < testing ; 2008 ; Immunogenetics Volume 60 ; 60 >
     au < testing ; 2009 ; Immunogenetics Volume 61 ; 61 >
     au < ready ; 2010 ; Immunogenetics Volume 62 ; 62 >
@@ -21850,6 +21852,7 @@
     >
 
     param[journal_issn] = 0944-1174
+    attr[where] = content5b
     
     au < manifest ; 1966 ; Journal of Gastroenterology Volume 1 ; 1 >
     au < manifest ; 1967 ; Journal of Gastroenterology Volume 2 ; 2 >
@@ -23573,7 +23576,7 @@
     au < ready ; 1982 ; Journal of Neurocytology Volume 11 ; 11 >
     au < ready ; 1983 ; Journal of Neurocytology Volume 12 ; 12 >
     au < ready ; 1984 ; Journal of Neurocytology Volume 13 ; 13 >
-    au < testing ; 1985 ; Journal of Neurocytology Volume 14 ; 14 >
+    au < ready ; 1985 ; Journal of Neurocytology Volume 14 ; 14 >
     au < ready ; 1986 ; Journal of Neurocytology Volume 15 ; 15 >
     au < ready ; 1987 ; Journal of Neurocytology Volume 16 ; 16 >
     au < ready ; 1988 ; Journal of Neurocytology Volume 17 ; 17 >
@@ -26452,27 +26455,27 @@
     param[journal_issn] = 0938-8990
     attr[where] = content3a
 
-    au < testing ; 1991 ; Mammalian Genome Volume 1 ; 1 >
-    au < testing ; 1991-1992 ; Mammalian Genome Volume 2 ; 2 >
+    au < ready ; 1991 ; Mammalian Genome Volume 1 ; 1 >
+    au < ready ; 1991-1992 ; Mammalian Genome Volume 2 ; 2 >
     au < testing ; 1992 ; Mammalian Genome Volume 3 ; 3 >
-    au < testing ; 1993 ; Mammalian Genome Volume 4 ; 4 >
-    au < testing ; 1994 ; Mammalian Genome Volume 5 ; 5 >
-    au < testing ; 1995 ; Mammalian Genome Volume 6 ; 6 >
+    au < ready ; 1993 ; Mammalian Genome Volume 4 ; 4 >
+    au < ready ; 1994 ; Mammalian Genome Volume 5 ; 5 >
+    au < ready ; 1995 ; Mammalian Genome Volume 6 ; 6 >
     au < testing ; 1998 ; Mammalian Genome Volume 8 ; 8 >
     au < testing ; 1998 ; Mammalian Genome Volume 9 ; 9 >
-    au < testing ; 1999 ; Mammalian Genome Volume 10 ; 10 >
-    au < testing ; 2000 ; Mammalian Genome Volume 11 ; 11 >
+    au < ready ; 1999 ; Mammalian Genome Volume 10 ; 10 >
+    au < ready ; 2000 ; Mammalian Genome Volume 11 ; 11 >
     au < testing ; 2001 ; Mammalian Genome Volume 12 ; 12 >
-    au < testing ; 2002 ; Mammalian Genome Volume 13 ; 13 >
+    au < ready ; 2002 ; Mammalian Genome Volume 13 ; 13 >
     au < testing ; 2003 ; Mammalian Genome Volume 14 ; 14 >
     au < testing ; 2004 ; Mammalian Genome Volume 15 ; 15 >
     au < testing ; 2005 ; Mammalian Genome Volume 16 ; 16 >
-    au < testing ; 2006 ; Mammalian Genome Volume 17 ; 17 >
-    au < testing ; 2007 ; Mammalian Genome Volume 18 ; 18 >
-    au < testing ; 2008 ; Mammalian Genome Volume 19 ; 19 >
-    au < testing ; 2009 ; Mammalian Genome Volume 20 ; 20 >
-    au < testing ; 2010 ; Mammalian Genome Volume 21 ; 21 >
-    au < testing ; 2011 ; Mammalian Genome Volume 22 ; 22 >
+    au < ready ; 2006 ; Mammalian Genome Volume 17 ; 17 >
+    au < ready ; 2007 ; Mammalian Genome Volume 18 ; 18 >
+    au < ready ; 2008 ; Mammalian Genome Volume 19 ; 19 >
+    au < ready ; 2009 ; Mammalian Genome Volume 20 ; 20 >
+    au < ready ; 2010 ; Mammalian Genome Volume 21 ; 21 >
+    au < ready ; 2011 ; Mammalian Genome Volume 22 ; 22 >
 
   }
 
@@ -29652,8 +29655,8 @@
     au < testing ; 2007 ; Obesity Surgery Volume 17 ; 17 >
     au < testing ; 2008 ; Obesity Surgery Volume 18 ; 18 >
     au < testing ; 2009 ; Obesity Surgery Volume 19 ; 19 >
-    au < testing ; 2010 ; Obesity Surgery Volume 20 ; 20 >
-    au < testing ; 2011 ; Obesity Surgery Volume 21 ; 21 >
+    au < ready ; 2010 ; Obesity Surgery Volume 20 ; 20 >
+    au < ready ; 2011 ; Obesity Surgery Volume 21 ; 21 >
 
   }
 
@@ -37876,7 +37879,6 @@ Commet [pv] = now offline
     >
 
     param[journal_issn] = 0040-5752
-    attr[where] = content5a
 
     au < ready ; 1929 ; TAG Theoretical and Applied Genetics Volume 1 ; 1 >
     au < ready ; 1930 ; TAG Theoretical and Applied Genetics Volume 2 ; 2 >
@@ -37889,7 +37891,7 @@ Commet [pv] = now offline
     au < ready ; 1937 ; TAG Theoretical and Applied Genetics Volume 9 ; 9 >
     au < ready ; 1938 ; TAG Theoretical and Applied Genetics Volume 10 ; 10 >
     au < ready ; 1939 ; TAG Theoretical and Applied Genetics Volume 11 ; 11 >
-    au < testing ; 1940 ; TAG Theoretical and Applied Genetics Volume 12 ; 12 >
+    au < ready ; 1940 ; TAG Theoretical and Applied Genetics Volume 12 ; 12 >
     au < ready ; 1941 ; TAG Theoretical and Applied Genetics Volume 13 ; 13 >
     au < ready ; 1942 ; TAG Theoretical and Applied Genetics Volume 14 ; 14 >
     au < ready ; 1943 ; TAG Theoretical and Applied Genetics Volume 15 ; 15 >
