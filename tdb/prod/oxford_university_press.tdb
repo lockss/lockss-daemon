@@ -3387,7 +3387,7 @@
     au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 21 ; 21 >
     au < HighWirePressPlugin ; doNotProcess ; European Sociological Review Volume 22 ; 22 >
     au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; European Sociological Review Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; European Sociological Review Volume 24 ; 24 >
 
       }
 
@@ -3486,7 +3486,7 @@
     au < HighWireStrVolPlugin ; down ; Forestry Volume 78 ; 78 >
     au < HighWirePressPlugin ; doNotProcess ; Forestry Volume 79 ; 79 >
     au < HighWireStrVolPlugin ; down ; Forestry Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; testing ; Forestry Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; ready ; Forestry Volume 81 ; 81 >
 
       }
 
@@ -3583,7 +3583,7 @@
     au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 59 ; 59 >
     au < HighWirePressPlugin ; doNotProcess ; French Studies: A Quarterly Review Volume 60 ; 60 >
     au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; testing ; French Studies: A Quarterly Review Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; French Studies: A Quarterly Review Volume 62 ; 62 >
 
       }
 
@@ -3771,7 +3771,7 @@
     au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 60 ; 60 >
     au < HighWirePressPlugin ; doNotProcess ; History Workshop Journal Volume 61 ; 61 >
     au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; History Workshop Journal Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; History Workshop Journal Volume 63 ; 63 >
 
       }
 
@@ -3861,7 +3861,7 @@
     au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; down ; Human Molecular Genetics Volume 15 ; 15 >
     au < HighWireStrVolPlugin ; down ; Human Molecular Genetics Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; Human Molecular Genetics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; Human Molecular Genetics Volume 17 ; 17 >
 
       }
 
@@ -3894,7 +3894,7 @@
     au < HighWireStrVolPlugin ; down ; Human Reproduction Volume 20 ; 20 >
     au < HighWirePressPlugin ; doNotProcess ; Human Reproduction Volume 21 ; 21 >
     au < HighWireStrVolPlugin ; down ; Human Reproduction Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; Human Reproduction Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; Human Reproduction Volume 23 ; 23 >
 
       }
 
@@ -3927,7 +3927,7 @@
     au < HighWireStrVolPlugin ; down ; Human Reproduction Update Volume 11 ; 11 >
     au < HighWirePressPlugin ; doNotProcess ; Human Reproduction Update Volume 12 ; 12 >
     au < HighWireStrVolPlugin ; down ; Human Reproduction Update Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; Human Reproduction Update Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; Human Reproduction Update Volume 14 ; 14 >
 
       }
 
@@ -3959,7 +3959,7 @@
 
     au < HighWirePressPlugin ; doNotProcess ; Human Rights Law Review Volume 5 ; 5 >
     au < HighWireStrVolPlugin ; down ; Human Rights Law Review Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; Human Rights Law Review Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; Human Rights Law Review Volume 7 ; 7 >
 
       }
 
@@ -3980,7 +3980,7 @@
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; ICES Journal of Marine Science Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; ICES Journal of Marine Science Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; ICES Journal of Marine Science Volume 65 ; 65 >
 
       }
 
@@ -4105,7 +4105,7 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Applied Mathematics Volume 70 ; 70 >
     au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
     au < HighWireStrVolPlugin ; down ; IMA Journal of Applied Mathematics Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; testing ; IMA Journal of Applied Mathematics Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; ready ; IMA Journal of Applied Mathematics Volume 73 ; 73 >
 
       }
 
@@ -4138,7 +4138,7 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Management Mathematics Volume 16 ; 16 >
     au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Management Mathematics Volume 17 ; 17 >
     au < HighWireStrVolPlugin ; down ; IMA Journal of Management Mathematics Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; IMA Journal of Management Mathematics Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; IMA Journal of Management Mathematics Volume 19 ; 19 >
 
       }
 
@@ -4170,7 +4170,7 @@
 
     au < HighWireStrVolPlugin ; down ; IMA Journal of Mathematical Control and Information Volume 22 ; 22 >
     au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 >
 
       }
 
@@ -4206,7 +4206,7 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Numerical Analysis Volume 25 ; 25 >
     au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
     au < HighWireStrVolPlugin ; down ; IMA Journal of Numerical Analysis Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; IMA Journal of Numerical Analysis Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; IMA Journal of Numerical Analysis Volume 28 ; 28 >
 
       }
 
@@ -4238,7 +4238,7 @@
 
     au < HighWireStrVolPlugin ; down ; Industrial and Corporate Change Volume 14 ; 14 >
     au < HighWirePressPlugin ; doNotProcess ; Industrial and Corporate Change Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; Industrial and Corporate Change Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; Industrial and Corporate Change Volume 16 ; 16 >
 
       }
 
@@ -4270,7 +4270,7 @@
 
     au < HighWireStrVolPlugin ; down ; Industrial Law Journal Volume 34 ; 34 >
     au < HighWirePressPlugin ; doNotProcess ; Industrial Law Journal Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; Industrial Law Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; Industrial Law Journal Volume 36 ; 36 >
 
       }
 
@@ -4304,7 +4304,7 @@
 
     au < HighWireStrVolPlugin ; down ; Integrative and Comparative Biology Volume 45 ; 45 >
     au < HighWirePressPlugin ; doNotProcess ; Integrative and Comparative Biology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; Integrative and Comparative Biology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; Integrative and Comparative Biology Volume 47 ; 47 >
 
       }
 
@@ -4403,7 +4403,7 @@
     au < HighWireStrVolPlugin ; down ; International Journal for Quality in Health Care Volume 17 ; 17 >
     au < HighWirePressPlugin ; doNotProcess ; International Journal for Quality in Health Care Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; International Journal for Quality in Health Care Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; International Journal for Quality in Health Care Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; International Journal for Quality in Health Care Volume 20 ; 20 >
 
       }
 
@@ -4436,7 +4436,7 @@
     au < HighWireStrVolPlugin ; down ; International Journal of Constitutional Law Volume 3 ; 3 >
     au < HighWirePressPlugin ; doNotProcess ; International Journal of Constitutional Law Volume 4 ; 4 >
     au < HighWireStrVolPlugin ; down ; International Journal of Constitutional Law Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; International Journal of Constitutional Law Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; International Journal of Constitutional Law Volume 6 ; 6 >
 
       }
 
@@ -4468,7 +4468,7 @@
 
     au < HighWireStrVolPlugin ; down ; International Journal of Epidemiology Volume 34 ; 34 >
     au < HighWirePressPlugin ; doNotProcess ; International Journal of Epidemiology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; International Journal of Epidemiology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; International Journal of Epidemiology Volume 36 ; 36 >
 
       }
 
@@ -4502,7 +4502,7 @@
     au < HighWirePressPlugin ; doNotProcess ; International Journal of Law and Information Technology Volume 13 ; 13 >
     au < HighWireStrVolPlugin ; down ; International Journal of Law and Information Technology Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; down ; International Journal of Law and Information Technology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; International Journal of Law and Information Technology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; International Journal of Law and Information Technology Volume 16 ; 16 >
 
       }
 
@@ -5937,8 +5937,8 @@
 
     au < HighWirePressPlugin ; doNotProcess ; Journal of Plankton Research Volume 27 ; 27 >
     au < HighWireStrVolPlugin ; down ; Journal of Plankton Research Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Plankton Research Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Plankton Research Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Plankton Research Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Plankton Research Volume 30 ; 30 >
     au < HighWirePressPlugin ; down ; Journal of Plankton Research Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; Journal of Plankton Research Volume 32 ; 32 >
 
@@ -6007,8 +6007,8 @@
 
     au < HighWireStrVolPlugin ; down ; Journal of Public Health Volume 27 ; 27 >
     au < HighWirePressPlugin ; doNotProcess ; Journal of Public Health Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Public Health Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Public Health Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Public Health Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Public Health Volume 30 ; 30 >
     au < HighWirePressPlugin ; down ; Journal of Public Health Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; Journal of Public Health Volume 32 ; 32 >
 
@@ -6042,10 +6042,10 @@
 
     au < HighWirePressPlugin ; doNotProcess ; Journal of Refugee Studies Volume 18 ; 18 >
     au < HighWireStrVolPlugin ; down ; Journal of Refugee Studies Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Refugee Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Refugee Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Refugee Studies Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Refugee Studies Volume 21 ; 21 >
     au < HighWirePressPlugin ; down ; Journal of Refugee Studies Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Refugee Studies Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Refugee Studies Volume 23 ; 23 >
 
       }
 
@@ -6078,7 +6078,7 @@
     au < HighWirePressPlugin ; doNotProcess ; Journal of Semantics Volume 22 ; 22 >
     au < HighWireStrVolPlugin ; down ; Journal of Semantics Volume 23 ; 23 >
     au < HighWireStrVolPlugin ; down ; Journal of Semantics Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Semantics Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Semantics Volume 25 ; 25 >
     au < HighWirePressPlugin ; down ; Journal of Semantics Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; ready ; Journal of Semantics Volume 27 ; 27 >
 
@@ -6112,8 +6112,8 @@
 
     au < HighWireStrVolPlugin ; down ; Journal of Semitic Studies Volume 50 ; 50 >
     au < HighWirePressPlugin ; doNotProcess ; Journal of Semitic Studies Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; Journal of Semitic Studies Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Semitic Studies Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Semitic Studies Volume 53 ; 53 >
     au < HighWirePressPlugin ; down ; Journal of Semitic Studies Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; ready ; Journal of Semitic Studies Volume 55 ; 55 >
 
@@ -6164,7 +6164,7 @@
 
     au < HighWireStrVolPlugin ; down ; Journal of the American Academy of Religion Volume 73 ; 73 >
     au < HighWireStrVolPlugin ; down ; Journal of the American Academy of Religion Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; testing ; Journal of the American Academy of Religion Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; ready ; Journal of the American Academy of Religion Volume 75 ; 75 >
     au < HighWirePressPlugin ; down ; Journal of the American Academy of Religion Volume 76 ; 76 >
     au < HighWirePressPlugin ; down ; Journal of the American Academy of Religion Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; ready ; Journal of the American Academy of Religion Volume 78 ; 78 >
@@ -6199,7 +6199,7 @@
 
     au < HighWirePressPlugin ; doNotProcess ; Journal of the History of Collections Volume 17 ; 17 >
     au < HighWireStrVolPlugin ; down ; Journal of the History of Collections Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; Journal of the History of Collections Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; Journal of the History of Collections Volume 19 ; 19 >
     au < HighWirePressPlugin ; down ; Journal of the History of Collections Volume 20 ; 20 >
     au < HighWirePressPlugin ; down ; Journal of the History of Collections Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; Journal of the History of Collections Volume 22 ; 22 >
