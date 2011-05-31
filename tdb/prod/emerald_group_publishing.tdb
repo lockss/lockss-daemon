@@ -246,7 +246,7 @@
 
     param[journal_issn] = 0735-8547
     comment[platform] = online from 1995
-    comment[merged_into] = Policing
+    comment[merged_into] = 1363-951X
     
     au < released ; 1995 ; American Journal of Police Volume 14 ; 14 >
     au < released ; 1996 ; American Journal of Police Volume 15 ; 15 >
@@ -333,7 +333,7 @@
     >
 
     param[journal_issn] = 1363-8483
-    comment[merged_into] = Strategy & Leadership
+    comment[merged_into] = 1087-8572
     
     au < released ; 1996 ; The Antidote Volume 1 ; 1 >
     au < released ; 1997 ; The Antidote Volume 2 ; 2 >
@@ -425,7 +425,7 @@
 
     param[journal_issn] = 1017-6748
     comment[platform] = online from 1997
-    comment[merged_into] = New Library World
+    comment[merged_into] = 0307-4803
     
     au < released ; 1997 ; Asian Libraries Volume 6 ; 6 >
     au < released ; 1998 ; Asian Libraries Volume 7 ; 7 >
@@ -610,7 +610,7 @@
 
     param[journal_issn] = 0965-7967
     comment[platform] = online from 2000
-    comment[merged_into] = The Journal of Risk Finance
+    comment[merged_into] = 1526-5943
 
     au < released ; 2000 ; Balance Sheet Volume 8 ; 8 >
     au < released ; 2001 ; Balance Sheet Volume 9 ; 9 >
@@ -840,7 +840,7 @@
     >
 
     param[journal_issn] = 1466-4100
-    comment[platform] = Published as Clinical Governance from 2003
+    comment[continued_by] = 1477-7274
     
     au < released ; 1996 ; British Journal of Clinical Governance Volume 1 ; 1 >
     au < released ; 1997 ; British Journal of Clinical Governance Volume 2 ; 2 >
@@ -1113,7 +1113,7 @@
 
     param[journal_issn] = 1063-0279
     comment[platform] = online from 1999
-    comment[merged_into] = British Journal of Clinical Governance
+    comment[merged_into] = 1466-4100
     
     au < released ; 1999 ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
     au < released ; 2000 ; Clinical Performance and Quality Healthcare Volume 8 ; 8 >
@@ -1396,7 +1396,7 @@
     >
 
     param[journal_issn] = 1750-5933
-    comment[platform] = Currently published as Journal of Research in Interactive Marketing
+    comment[continued_by] = 2040-7122
     
     au < released ; 2007 ; Direct Marketing: An International Journal Volume 1 ; 1 >
     au < released ; 2009 ; Direct Marketing: An International Journal Volume 2 ; 2 >
@@ -1570,7 +1570,7 @@
     >
 
     param[journal_issn] = 1364-5137
-    comment[merged_into] = Reference Reviews
+    comment[merged_into] = 0950-4125
     
     au < released ; 1997 ; Electronic Resources Review Volume 1 ; 1 >
     au < released ; 1998 ; Electronic Resources Review Volume 2 ; 2 >
@@ -1634,7 +1634,7 @@
     >
 
     param[journal_issn] = 0968-4891
-    comment[platform] = Currently published as Participation and Empowerment
+    comment[continued_by] = 1463-4449
     
     au < released ; 1993 ; Empowerment in Organizations Volume 1 ; 1 >
     au < released ; 1994 ; Empowerment in Organizations Volume 2 ; 2 >
@@ -1726,7 +1726,7 @@
     >
 
     param[journal_issn] = 0956-6163
-    comment[platform] = Currently published as Management of Environmental Quality
+    comment[continued_by] = 1477-7835
     
     au < released ; 1990 ; Environmental Management and Health Volume 1 ; 1 >
     au < released ; 1991 ; Environmental Management and Health Volume 2 ; 2 >
@@ -1753,7 +1753,7 @@
     >
 
     param[journal_issn] = 0261-0159
-    comment[platform] = Currently published as Equality Diversity and Inclusion
+    comment[continued_by] = 2040-7149
     
     au < released ; 1981 ; Equal Opportunities International Volume 1 ; 1 >
     au < released ; 1983 ; Equal Opportunities International Volume 2 ; 2 >
@@ -1953,7 +1953,7 @@
 
     param[journal_issn] = 0953-3230
     comment[platform] = online from 1989
-    comment[merged_into] = Career Development International
+    comment[merged_into] = 1362-0436
 
     au < ready ; 1989 ; Executive Development Volume 2 ; 2 >
     au < ready ; 1990 ; Executive Development Volume 3 ; 3 >
@@ -2073,7 +2073,7 @@
     >
 
     param[journal_issn] = 1077-5730
-    comment[platform] = Published as Business Strategy Series from 2007 
+    comment[continued_by] = 1751-5637
     
     au < manifest ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
     au < doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 >
@@ -2129,7 +2129,7 @@
 
     param[journal_issn] = 0955-2065
     comment[platform] = online from 1992
-    comment[merged_into] = Journal of Management in Medicine
+    comment[merged_into] = 0268-9235
 
     au < manifest ; 1992 ; Health Manpower Management Volume 18 ; 18 >    
     au < manifest ; 1993 ; Health Manpower Management Volume 19 ; 19 >
@@ -2598,7 +2598,7 @@
     >
 
     param[journal_issn] = 0957-6061
-    comment[platform] = published as Journal of Manufacturing Technology Management from 2004
+    comment[continued_by] = 1741-038X
     
     au < manifest ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 >
     au < manifest ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 >
@@ -2733,7 +2733,7 @@
     >
 
     param[journal_issn] = 1465-4652
-    comment[merged_into] = Integrated Manufacturing 
+    comment[merged_into] = 0957-6061
 
     au < released ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
     au < released ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
@@ -2791,7 +2791,8 @@
     >
 
     param[journal_issn] = 0955-6214
-    comment[platform] =  online from 1990 and published as Career Development from 1996
+    comment[platform] =  online from 1990
+    comment[continued_by] = 1362-0436
 
     au < ready ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
     au < ready ; 1991 ; International Journal of Career Management Volume 3 ; 3 >
@@ -3730,7 +3731,7 @@
     >
 
     param[journal_issn] = 1359-8538
-    comment[merged_into] = Internationl Journal of Quality & Relibability
+    comment[merged_into] = 0265-671X
     
     au < released ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
     au < released ; 1997 ; International Journal of Quality Science Volume 2 ; 2 >
@@ -4005,7 +4006,7 @@
     >
 
     param[journal_issn] = 0954-7541
-    comment[platform] = published as International Journal of Wine Business from 2007
+    comment[continued_by] = 1751-1062
     
     au < released ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 >
     au < released ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 >
@@ -4675,9 +4676,9 @@
     >
 
     param[journal_issn] = 1726-0531
-    comment[platform] = 2002 not online
     
     au < released ; 2003 ; Journal of Engineering, Design and Technology Volume 1 ; 1 >
+    au < doesNotExist ; 2004 ; Journal of Engineering, Design and Technology Volume 2 ; 2 >    
     au < ready ; 2005 ; Journal of Engineering, Design and Technology Volume 3 ; 3 >
     au < ready ; 2006 ; Journal of Engineering, Design and Technology Volume 4 ; 4 >
     au < ready ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 >
@@ -5346,7 +5347,7 @@
     >
 
     param[journal_issn] = 1355-252X
-    comment[merged_into] = Management Decision
+    comment[merged_into] = 0025-1747
     
     au < released ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 >
     au < released ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 >
@@ -5366,7 +5367,7 @@
     >
 
     param[journal_issn] = 0268-9235
-    comment[platform] = Currently published as Journal of Health Organization
+    comment[continued_by] = 1477-7266
     
     au < released ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 >
     au < released ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 >
@@ -5457,7 +5458,7 @@
     >
 
     param[journal_issn] = 1355-2538
-    comment[merged_into] = Marketing Intelligence & Planning
+    comment[merged_into] = 0263-4503
     
     au < released ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
     au < released ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
@@ -5610,7 +5611,7 @@
     >
 
     param[journal_issn] = 0958-868X
-    comment[merged_into] = Journal of Property Valuation
+    comment[merged_into] = 0960-2712
     
     au < released ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
     au < released ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
@@ -5659,7 +5660,7 @@
     >
 
     param[journal_issn] = 0960-2712
-    comment[platform] = Currently published as Journal of Property Investment
+    comment[continued_by] = 1463-578X
     
     au < released ; 1983 ; Journal of Property Valuation and Investment Volume 1 ; 1 >
     au < released ; 1984 ; Journal of Property Valuation and Investment Volume 2 ; 2 >
@@ -6163,7 +6164,7 @@
     >
 
     param[journal_issn] = 0968-0810
-    comment[merged_into] = Library Management
+    comment[merged_into] = 0143-5124
     
     au < released ; 1993 ; Librarian Career Development Volume 1 ; 1 >
     au < released ; 1994 ; Librarian Career Development Volume 2 ; 2 >
@@ -6383,7 +6384,7 @@
     >
 
     param[journal_issn] = 0957-6053
-    comment[platform] = Currently Journal of Enterprise Information
+    comment[continued_by] = 1741-0398
     
     au < released ; 1988 ; Logistics Information Management Volume 1 ; 1 >
     au < released ; 1989 ; Logistics Information Management Volume 2 ; 2 >
@@ -6471,7 +6472,7 @@
 
     param[journal_issn] = 0962-2519
     comment[platform] = online from 1992
-    comment[merged_into] = Human Resource Management International Digest
+    comment[merged_into] = 0967-0734
 
     au < ready ; 1992 ; Management Development Review Volume 5 ; 5 >
     au < ready ; 1993 ; Management Development Review Volume 6 ; 6 >    
@@ -6514,7 +6515,7 @@
     >
 
     param[journal_issn] = 0140-9174
-    comment[platform] = Published as Management Research Development from 2009
+    comment[continued_by] = 2040-8269
     
     au < released ; 1978 ; Management Research News Volume 1 ; 1 >
     au < released ; 1979 ; Management Research News Volume 2 ; 2 >
@@ -6685,7 +6686,7 @@
     >
 
     param[journal_issn] = 0309-0558
-    comment[platform] = Currently published as International Journal of Law and Management
+    comment[continued_by] = 1754-243X
     
     au < exists ; 1966-1967 ; Managerial Law Volume 1 ; 1 >
     au < ready ; 1967 ; Managerial Law Volume 2 ; 2 >
@@ -7425,7 +7426,8 @@
     >
 
     param[journal_issn] = 0141-2949
-    comment[platform] = online from 1995 Currently published as Policing
+    comment[platform] = online from 1995 
+    comment[continued_by] = 1363-951X
     
     au < released ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 >
     au < released ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 >
@@ -7470,7 +7472,7 @@
 
     param[journal_issn] = 0968-4905
     comment[platform] = online from 1997
-    comment[merged_into] = Journal of Product & Brand Management
+    comment[merged_into] = 1061-0421
     
     au < released ; 1997 ; Pricing Strategy and Practice Volume 5 ; 5 >
 
@@ -8367,7 +8369,8 @@
     >
 
     param[journal_issn] = 1754-2731
-    comment[platform] = online from 2008 previously published as the TQM Magazine
+    comment[platform] = online from 2008 
+    comment[continues] = 0954-478X
     
     au < released ; 2008 ; The TQM Journal Volume 20 ; 20 >
     au < released ; 2009 ; The TQM Journal Volume 21 ; 21 >
@@ -8385,7 +8388,7 @@
     >
 
     param[journal_issn] = 0954-478X
-    comment[platform] = Currently published as The TQM Journal
+    comment[continued_by] = 1754-2731
     
     au < released ; 1988-1989 ; The TQM Magazine Volume 1 ; 1 >
     au < released ; 1990 ; The TQM Magazine Volume 2 ; 2 >
@@ -8418,7 +8421,7 @@
     >
 
     param[journal_issn] = 0968-4875
-    comment[merged_into] = The TQM Magazine
+    comment[merged_into] = 0954-478X
     
     au < released ; 1993 ; Training for Quality Volume 1 ; 1 >
     au < released ; 1994 ; Training for Quality Volume 2 ; 2 >
@@ -8437,7 +8440,8 @@
     >
 
     param[journal_issn] = 1369-7234
-    comment[platform] = Online from 2002 Currently published as Development and Learning in Organizations
+    comment[platform] = Online from 2002 
+    comment[continued_by] = 1477-7282
     
     au < released ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
 
@@ -8524,7 +8528,7 @@
     >
 
     param[journal_issn] = 0964-9425
-    comment[platform] = Currently published as Gender in Management
+    comment[continued_by] = 1754-2413
     
     au < released ; 1985-1986 ; Women in Management Review Volume 1 ; 1 >
     au < released ; 1987 ; Women in Management Review Volume 2 ; 2 >
@@ -8560,7 +8564,7 @@
     >
 
     param[journal_issn] = 0043-8022
-    comment[platform] = Currently published as International J of Productivity
+    comment[continued_by] = 1741-0401
     
     au < released ; 1952 ; Work Study Volume 1 ; 1 >
     au < released ; 1953 ; Work Study Volume 2 ; 2 >
