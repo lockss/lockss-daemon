@@ -1628,8 +1628,8 @@
         param[base_url] = http://ann.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[ann-181] = manifest page exists, but there is no content.
-        comment[ann-347] = manifest page exists, but there is no content.
+        comment[ann181] = manifest page exists, but there is no content.
+        comment[ann347] = manifest page exists, but there is no content.
 
         au < manifest ; 1890 ; The ANNALS of the American Academy of Political and Social Science Volume 1 ; 1 >
         au < manifest ; 1891 ; The ANNALS of the American Academy of Political and Social Science Volume 2 ; 2 >
@@ -6715,7 +6715,24 @@
         au < HighWireStrVolPlugin ; down ; Currents in Biblical Research Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; Currents in Biblical Research Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; down ; Currents in Biblical Research Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; manifest ; Currents in Biblical Research Volume 8 ; 8 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cbi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002-2003 ; Currents in Biblical Research Volume 1 ; 1 >
+        au < manifest ; 2003-2004 ; Currents in Biblical Research Volume 2 ; 2 >
+        au < manifest ; 2004-2005 ; Currents in Biblical Research Volume 3 ; 3 >
+        au < manifest ; 2005-2006 ; Currents in Biblical Research Volume 4 ; 4 >
+        au < manifest ; 2006-2007 ; Currents in Biblical Research Volume 5 ; 5 >
+        au < manifest ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 >
+        au < manifest ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 >
+        au < manifest ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 >
+        au < manifest ; 2010-2011 ; Currents in Biblical Research Volume 9 ; 9 >
 
       }
 
