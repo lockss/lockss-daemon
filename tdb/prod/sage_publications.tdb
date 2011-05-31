@@ -247,7 +247,6 @@
         au < HighWireStrVolPlugin ; down ; Active Learning in Higher Education Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; ready ; Active Learning in Higher Education Volume 11 ; 11 >
 
       }
 
@@ -1150,8 +1149,6 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; ready ; American Journal of Medical Quality Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 24 ; 24 >
 
@@ -1183,8 +1180,8 @@
         au < manifest ; 2003 ; American Journal of Medical Quality Volume 18 ; 18 >
         au < manifest ; 2004 ; American Journal of Medical Quality Volume 19 ; 19 >
         au < manifest ; 2005 ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < manifest ; 2006 ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < manifest ; 2007 ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < ready ; 2006 ; American Journal of Medical Quality Volume 21 ; 21 >
+        au < ready ; 2007 ; American Journal of Medical Quality Volume 22 ; 22 >
         au < manifest ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 >
         au < manifest ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 >
         au < ready ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 >
@@ -1306,7 +1303,6 @@
         au < HighWireStrVolPlugin ; down ; American Politics Research Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; American Politics Research Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; American Politics Research Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; manifest ; American Politics Research Volume 38 ; 38 >
 
       }
 
@@ -3557,7 +3553,6 @@
         au < HighWireStrVolPlugin ; down ; Business & Society Volume 46 ; 46 >
         au < HighWirePressPlugin ; down ; Business & Society Volume 47 ; 47 >
         au < HighWirePressPlugin ; down ; Business & Society Volume 48 ; 48 >
-        au < HighWirePressH20Plugin ; manifest ; Business & Society Volume 49 ; 49 >
 
       }
 
@@ -3641,7 +3636,6 @@
         au < HighWireStrVolPlugin ; down ; Business Communication Quarterly Volume 70 ; 70 >
         au < HighWirePressPlugin ; down ; Business Communication Quarterly Volume 71 ; 71 >
         au < HighWirePressPlugin ; down ; Business Communication Quarterly Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; manifest ; Business Communication Quarterly Volume 73 ; 73 >
 
       }
 
@@ -5012,7 +5006,6 @@
         au < HighWireStrVolPlugin ; down ; Comparative Political Studies Volume 40 ; 40 >
         au < HighWirePressPlugin ; down ; Comparative Political Studies Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; Comparative Political Studies Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; manifest ; Comparative Political Studies Volume 43 ; 43 >
 
       }
 
@@ -5246,7 +5239,6 @@
         au < HighWireStrVolPlugin ; down ; Concurrent Engineering Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Concurrent Engineering Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Concurrent Engineering Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; Concurrent Engineering Volume 18 ; 18 >
 
       }
 
@@ -6612,7 +6604,6 @@
         au < HighWireStrVolPlugin ; down ; Current Sociology Volume 55 ; 55 >
         au < HighWirePressPlugin ; down ; Current Sociology Volume 56 ; 56 >
         au < HighWireStrVolPlugin ; down ; Current Sociology Volume 57 ; 57 >
-        au < HighWirePressH20Plugin ; manifest ; Current Sociology Volume 58 ; 58 >
 
       }
 
@@ -6757,7 +6748,25 @@
         au < HighWireStrVolPlugin ; down ; Dementia Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Dementia Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Dementia Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; Dementia Volume 9 ; 9 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dem.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Dementia Volume 1 ; 1 >
+        au < manifest ; 2003 ; Dementia Volume 2 ; 2 >
+        au < manifest ; 2004 ; Dementia Volume 3 ; 3 >
+        au < manifest ; 2005 ; Dementia Volume 4 ; 4 >
+        au < manifest ; 2006 ; Dementia Volume 5 ; 5 >
+        au < manifest ; 2007 ; Dementia Volume 6 ; 6 >
+        au < manifest ; 2008 ; Dementia Volume 7 ; 7 >
+        au < manifest ; 2009 ; Dementia Volume 8 ; 8 >
+        au < manifest ; 2010 ; Dementia Volume 9 ; 9 >
+        au < manifest ; 2011 ; Dementia Volume 10 ; 10 >
 
       }
 
@@ -6792,7 +6801,50 @@
         au < HighWireStrVolPlugin ; down ; The Diabetes Educator Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; The Diabetes Educator Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; The Diabetes Educator Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; The Diabetes Educator Volume 36 ; 36 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tde.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[tde7] = Issues 7:2 & 7:3 in the publ website are marked as 1984, but likely are from 1981.
+
+        au < doesNotExist ; 0 ; The Diabetes Educator Volume 5 ; 5 >
+        au < manifest ; 1980 ; The Diabetes Educator Volume 6 ; 6 >
+        au < manifest ; 1981-1982 ; The Diabetes Educator Volume 7 ; 7 >
+        au < manifest ; 1982-1983 ; The Diabetes Educator Volume 8 ; 8 >
+        au < manifest ; 1983-1984 ; The Diabetes Educator Volume 9 ; 9 >
+        au < manifest ; 1984-1985 ; The Diabetes Educator Volume 10 ; 10 >
+        au < manifest ; 1985 ; The Diabetes Educator Volume 11 ; 11 >
+        au < manifest ; 1986 ; The Diabetes Educator Volume 12 ; 12 >
+        au < manifest ; 1987 ; The Diabetes Educator Volume 13 ; 13 >
+        au < manifest ; 1988 ; The Diabetes Educator Volume 14 ; 14 >
+        au < manifest ; 1989 ; The Diabetes Educator Volume 15 ; 15 >
+        au < manifest ; 1990 ; The Diabetes Educator Volume 16 ; 16 >
+        au < manifest ; 1991 ; The Diabetes Educator Volume 17 ; 17 >
+        au < manifest ; 1992 ; The Diabetes Educator Volume 18 ; 18 >
+        au < manifest ; 1993 ; The Diabetes Educator Volume 19 ; 19 >
+        au < manifest ; 1994 ; The Diabetes Educator Volume 20 ; 20 >
+        au < manifest ; 1995 ; The Diabetes Educator Volume 21 ; 21 >
+        au < manifest ; 1996 ; The Diabetes Educator Volume 22 ; 22 >
+        au < manifest ; 1997 ; The Diabetes Educator Volume 23 ; 23 >
+        au < manifest ; 1998 ; The Diabetes Educator Volume 24 ; 24 >
+        au < manifest ; 1999 ; The Diabetes Educator Volume 25 ; 25 >
+        au < manifest ; 2000 ; The Diabetes Educator Volume 26 ; 26 >
+        au < manifest ; 2001 ; The Diabetes Educator Volume 27 ; 27 >
+        au < manifest ; 2002 ; The Diabetes Educator Volume 28 ; 28 >
+        au < manifest ; 2003 ; The Diabetes Educator Volume 29 ; 29 >
+        au < manifest ; 2004 ; The Diabetes Educator Volume 30 ; 30 >
+        au < manifest ; 2005 ; The Diabetes Educator Volume 31 ; 31 >
+        au < manifest ; 2006 ; The Diabetes Educator Volume 32 ; 32 >
+        au < manifest ; 2007 ; The Diabetes Educator Volume 33 ; 33 >
+        au < manifest ; 2008 ; The Diabetes Educator Volume 34 ; 34 >
+        au < manifest ; 2009 ; The Diabetes Educator Volume 35 ; 35 >
+        au < manifest ; 2010 ; The Diabetes Educator Volume 36 ; 36 >
+        au < manifest ; 2011 ; The Diabetes Educator Volume 37 ; 37 >
 
       }
 
@@ -6924,7 +6976,20 @@
         au < HighWireStrVolPlugin ; down ; Discourse & Communication Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Discourse & Communication Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; Discourse & Communication Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; Discourse & Communication Volume 4 ; 4 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dcm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2007 ; Discourse & Communication Volume 1 ; 1 >
+        au < manifest ; 2008 ; Discourse & Communication Volume 2 ; 2 >
+        au < manifest ; 2009 ; Discourse & Communication Volume 3 ; 3 >
+        au < manifest ; 2010 ; Discourse & Communication Volume 4 ; 4 >
+        au < manifest ; 2011 ; Discourse & Communication Volume 5 ; 5 >
 
       }
 
@@ -6949,7 +7014,37 @@
         au < HighWireStrVolPlugin ; down ; Discourse & Society Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; Discourse & Society Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Discourse & Society Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; Discourse & Society Volume 21 ; 21 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://das.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; Discourse & Society Volume 1 ; 1 >
+        au < manifest ; 1991 ; Discourse & Society Volume 2 ; 2 >
+        au < manifest ; 1992 ; Discourse & Society Volume 3 ; 3 >
+        au < manifest ; 1993 ; Discourse & Society Volume 4 ; 4 >
+        au < manifest ; 1994 ; Discourse & Society Volume 5 ; 5 >
+        au < manifest ; 1995 ; Discourse & Society Volume 6 ; 6 >
+        au < manifest ; 1996 ; Discourse & Society Volume 7 ; 7 >
+        au < manifest ; 1997 ; Discourse & Society Volume 8 ; 8 >
+        au < manifest ; 1998 ; Discourse & Society Volume 9 ; 9 >
+        au < manifest ; 1999 ; Discourse & Society Volume 10 ; 10 >
+        au < manifest ; 2000 ; Discourse & Society Volume 11 ; 11 >
+        au < manifest ; 2001 ; Discourse & Society Volume 12 ; 12 >
+        au < manifest ; 2002 ; Discourse & Society Volume 13 ; 13 >
+        au < manifest ; 2003 ; Discourse & Society Volume 14 ; 14 >
+        au < manifest ; 2004 ; Discourse & Society Volume 15 ; 15 >
+        au < manifest ; 2005 ; Discourse & Society Volume 16 ; 16 >
+        au < manifest ; 2006 ; Discourse & Society Volume 17 ; 17 >
+        au < manifest ; 2007 ; Discourse & Society Volume 18 ; 18 >
+        au < manifest ; 2008 ; Discourse & Society Volume 19 ; 19 >
+        au < manifest ; 2009 ; Discourse & Society Volume 20 ; 20 >
+        au < manifest ; 2010 ; Discourse & Society Volume 21 ; 21 >
+        au < manifest ; 2011 ; Discourse & Society Volume 22 ; 22 >
 
       }
 
@@ -6974,7 +7069,28 @@
         au < HighWireStrVolPlugin ; down ; Discourse Studies Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Discourse Studies Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Discourse Studies Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; manifest ; Discourse Studies Volume 12 ; 12 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dis.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1999 ; Discourse Studies Volume 1 ; 1 >
+        au < manifest ; 2000 ; Discourse Studies Volume 2 ; 2 >
+        au < manifest ; 2001 ; Discourse Studies Volume 3 ; 3 >
+        au < manifest ; 2002 ; Discourse Studies Volume 4 ; 4 >
+        au < manifest ; 2003 ; Discourse Studies Volume 5 ; 5 >
+        au < manifest ; 2004 ; Discourse Studies Volume 6 ; 6 >
+        au < manifest ; 2005 ; Discourse Studies Volume 7 ; 7 >
+        au < manifest ; 2006 ; Discourse Studies Volume 8 ; 8 >
+        au < manifest ; 2007 ; Discourse Studies Volume 9 ; 9 >
+        au < manifest ; 2008 ; Discourse Studies Volume 10 ; 10 >
+        au < manifest ; 2009 ; Discourse Studies Volume 11 ; 11 >
+        au < manifest ; 2010 ; Discourse Studies Volume 12 ; 12 >
+        au < manifest ; 2011 ; Discourse Studies Volume 13 ; 13 >
 
       }
 
@@ -6999,7 +7115,40 @@
         au < HighWireStrVolPlugin ; down ; East European Politics & Societies Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; East European Politics & Societies Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; East European Politics & Societies Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; East European Politics & Societies Volume 24 ; 24 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eep.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; East European Politics & Societies Volume 1 ; 1 >
+        au < manifest ; 1987 ; East European Politics & Societies Volume 2 ; 2 >
+        au < manifest ; 1988 ; East European Politics & Societies Volume 3 ; 3 >
+        au < manifest ; 1989 ; East European Politics & Societies Volume 4 ; 4 >
+        au < manifest ; 1990 ; East European Politics & Societies Volume 5 ; 5 >
+        au < manifest ; 1991 ; East European Politics & Societies Volume 6 ; 6 >
+        au < manifest ; 1992 ; East European Politics & Societies Volume 7 ; 7 >
+        au < manifest ; 1993 ; East European Politics & Societies Volume 8 ; 8 >
+        au < manifest ; 1994 ; East European Politics & Societies Volume 9 ; 9 >
+        au < manifest ; 1995 ; East European Politics & Societies Volume 10 ; 10 >
+        au < manifest ; 1996 ; East European Politics & Societies Volume 11 ; 11 >
+        au < manifest ; 1997 ; East European Politics & Societies Volume 12 ; 12 >
+        au < manifest ; 1998 ; East European Politics & Societies Volume 13 ; 13 >
+        au < manifest ; 1999 ; East European Politics & Societies Volume 14 ; 14 >
+        au < manifest ; 2000 ; East European Politics & Societies Volume 15 ; 15 >
+        au < manifest ; 2002 ; East European Politics & Societies Volume 16 ; 16 >
+        au < manifest ; 2003 ; East European Politics & Societies Volume 17 ; 17 >
+        au < manifest ; 2004 ; East European Politics & Societies Volume 18 ; 18 >
+        au < manifest ; 2005 ; East European Politics & Societies Volume 19 ; 19 >
+        au < manifest ; 2006 ; East European Politics & Societies Volume 20 ; 20 >
+        au < manifest ; 2007 ; East European Politics & Societies Volume 21 ; 21 >
+        au < manifest ; 2008 ; East European Politics & Societies Volume 22 ; 22 >
+        au < manifest ; 2009 ; East European Politics & Societies Volume 23 ; 23 >
+        au < manifest ; 2010 ; East European Politics & Societies Volume 24 ; 24 >
+        au < manifest ; 2011 ; East European Politics & Societies Volume 25 ; 25 >
 
       }
 
@@ -7025,7 +7174,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Ecclesiology Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; Ecclesiology Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; down ; Ecclesiology Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; manifest ; Ecclesiology Volume 5 ; 5 >
 
       }
 
@@ -7054,6 +7202,47 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eid.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1980 ; Economic and Industrial Democracy Volume 1 ; 1 >
+        au < manifest ; 1981 ; Economic and Industrial Democracy Volume 2 ; 2 >
+        au < manifest ; 1982 ; Economic and Industrial Democracy Volume 3 ; 3 >
+        au < manifest ; 1983 ; Economic and Industrial Democracy Volume 4 ; 4 >
+        au < manifest ; 1984 ; Economic and Industrial Democracy Volume 5 ; 5 >
+        au < manifest ; 1985 ; Economic and Industrial Democracy Volume 6 ; 6 >
+        au < manifest ; 1986 ; Economic and Industrial Democracy Volume 7 ; 7 >
+        au < manifest ; 1987 ; Economic and Industrial Democracy Volume 8 ; 8 >
+        au < manifest ; 1988 ; Economic and Industrial Democracy Volume 9 ; 9 >
+        au < manifest ; 1989 ; Economic and Industrial Democracy Volume 10 ; 10 >
+        au < manifest ; 1990 ; Economic and Industrial Democracy Volume 11 ; 11 >
+        au < manifest ; 1991 ; Economic and Industrial Democracy Volume 12 ; 12 >
+        au < manifest ; 1992 ; Economic and Industrial Democracy Volume 13 ; 13 >
+        au < manifest ; 1993 ; Economic and Industrial Democracy Volume 14 ; 14 >
+        au < manifest ; 1994 ; Economic and Industrial Democracy Volume 15 ; 15 >
+        au < manifest ; 1995 ; Economic and Industrial Democracy Volume 16 ; 16 >
+        au < manifest ; 1996 ; Economic and Industrial Democracy Volume 17 ; 17 >
+        au < manifest ; 1997 ; Economic and Industrial Democracy Volume 18 ; 18 >
+        au < manifest ; 1998 ; Economic and Industrial Democracy Volume 19 ; 19 >
+        au < manifest ; 1999 ; Economic and Industrial Democracy Volume 20 ; 20 >
+        au < manifest ; 2000 ; Economic and Industrial Democracy Volume 21 ; 21 >
+        au < manifest ; 2001 ; Economic and Industrial Democracy Volume 22 ; 22 >
+        au < manifest ; 2002 ; Economic and Industrial Democracy Volume 23 ; 23 >
+        au < manifest ; 2003 ; Economic and Industrial Democracy Volume 24 ; 24 >
+        au < manifest ; 2004 ; Economic and Industrial Democracy Volume 25 ; 25 >
+        au < manifest ; 2005 ; Economic and Industrial Democracy Volume 26 ; 26 >
+        au < manifest ; 2006 ; Economic and Industrial Democracy Volume 27 ; 27 >
+        au < manifest ; 2007 ; Economic and Industrial Democracy Volume 28 ; 28 >
+        au < manifest ; 2008 ; Economic and Industrial Democracy Volume 29 ; 29 >
+        au < manifest ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 >
+        au < manifest ; 2010 ; Economic and Industrial Democracy Volume 31 ; 31 >
+        au < manifest ; 2011 ; Economic and Industrial Democracy Volume 32 ; 32 >
+
+      }
+
     }
 
     {
@@ -7076,6 +7265,40 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; Economic Development Quarterly Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Economic Development Quarterly Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; manifest ; Economic Development Quarterly Volume 24 ; 24 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://edq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Economic Development Quarterly Volume 1 ; 1 >
+        au < manifest ; 1988 ; Economic Development Quarterly Volume 2 ; 2 >
+        au < manifest ; 1989 ; Economic Development Quarterly Volume 3 ; 3 >
+        au < manifest ; 1990 ; Economic Development Quarterly Volume 4 ; 4 >
+        au < manifest ; 1991 ; Economic Development Quarterly Volume 5 ; 5 >
+        au < manifest ; 1992 ; Economic Development Quarterly Volume 6 ; 6 >
+        au < manifest ; 1993 ; Economic Development Quarterly Volume 7 ; 7 >
+        au < manifest ; 1994 ; Economic Development Quarterly Volume 8 ; 8 >
+        au < manifest ; 1995 ; Economic Development Quarterly Volume 9 ; 9 >
+        au < manifest ; 1996 ; Economic Development Quarterly Volume 10 ; 10 >
+        au < manifest ; 1997 ; Economic Development Quarterly Volume 11 ; 11 >
+        au < manifest ; 1998 ; Economic Development Quarterly Volume 12 ; 12 >
+        au < manifest ; 1999 ; Economic Development Quarterly Volume 13 ; 13 >
+        au < manifest ; 2000 ; Economic Development Quarterly Volume 14 ; 14 >
+        au < manifest ; 2001 ; Economic Development Quarterly Volume 15 ; 15 >
+        au < manifest ; 2002 ; Economic Development Quarterly Volume 16 ; 16 >
+        au < manifest ; 2003 ; Economic Development Quarterly Volume 17 ; 17 >
+        au < manifest ; 2004 ; Economic Development Quarterly Volume 18 ; 18 >
+        au < manifest ; 2005 ; Economic Development Quarterly Volume 19 ; 19 >
+        au < manifest ; 2006 ; Economic Development Quarterly Volume 20 ; 20 >
+        au < manifest ; 2007 ; Economic Development Quarterly Volume 21 ; 21 >
+        au < manifest ; 2008 ; Economic Development Quarterly Volume 22 ; 22 >
+        au < manifest ; 2009 ; Economic Development Quarterly Volume 23 ; 23 >
+        au < manifest ; 2010 ; Economic Development Quarterly Volume 24 ; 24 >
+        au < manifest ; 2011 ; Economic Development Quarterly Volume 25 ; 25 >
 
       }
 
@@ -7114,6 +7337,58 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eus.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1968 ; Education and Urban Society Volume 1 ; 1 >
+        au < manifest ; 1969 ; Education and Urban Society Volume 2 ; 2 >
+        au < manifest ; 1971 ; Education and Urban Society Volume 3 ; 3 >
+        au < manifest ; 1972 ; Education and Urban Society Volume 4 ; 4 >
+        au < manifest ; 1972 ; Education and Urban Society Volume 5 ; 5 >
+        au < manifest ; 1973 ; Education and Urban Society Volume 6 ; 6 >
+        au < manifest ; 1974 ; Education and Urban Society Volume 7 ; 7 >
+        au < manifest ; 1976 ; Education and Urban Society Volume 8 ; 8 >
+        au < manifest ; 1977 ; Education and Urban Society Volume 9 ; 9 >
+        au < manifest ; 1977 ; Education and Urban Society Volume 10 ; 10 >
+        au < manifest ; 1978 ; Education and Urban Society Volume 11 ; 11 >
+        au < manifest ; 1979 ; Education and Urban Society Volume 12 ; 12 >
+        au < manifest ; 1980 ; Education and Urban Society Volume 13 ; 13 >
+        au < manifest ; 1981 ; Education and Urban Society Volume 14 ; 14 >
+        au < manifest ; 1982 ; Education and Urban Society Volume 15 ; 15 >
+        au < manifest ; 1983 ; Education and Urban Society Volume 16 ; 16 >
+        au < manifest ; 1984 ; Education and Urban Society Volume 17 ; 17 >
+        au < manifest ; 1985 ; Education and Urban Society Volume 18 ; 18 >
+        au < manifest ; 1986 ; Education and Urban Society Volume 19 ; 19 >
+        au < manifest ; 1987 ; Education and Urban Society Volume 20 ; 20 >
+        au < manifest ; 1988 ; Education and Urban Society Volume 21 ; 21 >
+        au < manifest ; 1989 ; Education and Urban Society Volume 22 ; 22 >
+        au < manifest ; 1990 ; Education and Urban Society Volume 23 ; 23 >
+        au < manifest ; 1991 ; Education and Urban Society Volume 24 ; 24 >
+        au < manifest ; 1992 ; Education and Urban Society Volume 25 ; 25 >
+        au < manifest ; 1993 ; Education and Urban Society Volume 26 ; 26 >
+        au < manifest ; 1994 ; Education and Urban Society Volume 27 ; 27 >
+        au < manifest ; 1995 ; Education and Urban Society Volume 28 ; 28 >
+        au < manifest ; 1996 ; Education and Urban Society Volume 29 ; 29 >
+        au < manifest ; 1997 ; Education and Urban Society Volume 30 ; 30 >
+        au < manifest ; 1998 ; Education and Urban Society Volume 31 ; 31 >
+        au < manifest ; 1999 ; Education and Urban Society Volume 32 ; 32 >
+        au < manifest ; 2000 ; Education and Urban Society Volume 33 ; 33 >
+        au < manifest ; 2001 ; Education and Urban Society Volume 34 ; 34 >
+        au < manifest ; 2002 ; Education and Urban Society Volume 35 ; 35 >
+        au < manifest ; 2003 ; Education and Urban Society Volume 36 ; 36 >
+        au < manifest ; 2004 ; Education and Urban Society Volume 37 ; 37 >
+        au < manifest ; 2005 ; Education and Urban Society Volume 38 ; 38 >
+        au < manifest ; 2006 ; Education and Urban Society Volume 39 ; 39 >
+        au < manifest ; 2007 ; Education and Urban Society Volume 40 ; 40 >
+        au < manifest ; 2008 ; Education and Urban Society Volume 41 ; 41 >
+        au < manifest ; 2009 ; Education and Urban Society Volume 42 ; 42 >
+        au < manifest ; 2011 ; Education and Urban Society Volume 43 ; 43 >
+
+      }
+
     }
 
     {
@@ -7135,6 +7410,21 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; Education, Citizenship and Social Justice Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; down ; Education, Citizenship and Social Justice Volume 4 ; 4 >
         au < HighWirePressH20Plugin ; manifest ; Education, Citizenship and Social Justice Volume 5 ; 5 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://esj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2006 ; Education, Citizenship and Social Justice Volume 1 ; 1 >
+        au < manifest ; 2007 ; Education, Citizenship and Social Justice Volume 2 ; 2 >
+        au < manifest ; 2008 ; Education, Citizenship and Social Justice Volume 3 ; 3 >
+        au < manifest ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 >
+        au < manifest ; 2010 ; Education, Citizenship and Social Justice Volume 5 ; 5 >
+        au < manifest ; 2011 ; Education, Citizenship and Social Justice Volume 6 ; 6 >
 
       }
 
@@ -7173,6 +7463,62 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eaq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1965 ; Educational Administration Quarterly Volume 1 ; 1 >
+        au < manifest ; 1966 ; Educational Administration Quarterly Volume 2 ; 2 >
+        au < manifest ; 1967 ; Educational Administration Quarterly Volume 3 ; 3 >
+        au < manifest ; 1968 ; Educational Administration Quarterly Volume 4 ; 4 >
+        au < manifest ; 1969 ; Educational Administration Quarterly Volume 5 ; 5 >
+        au < manifest ; 1970 ; Educational Administration Quarterly Volume 6 ; 6 >
+        au < manifest ; 1971 ; Educational Administration Quarterly Volume 7 ; 7 >
+        au < manifest ; 1972 ; Educational Administration Quarterly Volume 8 ; 8 >
+        au < manifest ; 1973 ; Educational Administration Quarterly Volume 9 ; 9 >
+        au < manifest ; 1974 ; Educational Administration Quarterly Volume 10 ; 10 >
+        au < manifest ; 1975 ; Educational Administration Quarterly Volume 11 ; 11 >
+        au < manifest ; 1976 ; Educational Administration Quarterly Volume 12 ; 12 >
+        au < manifest ; 1977 ; Educational Administration Quarterly Volume 13 ; 13 >
+        au < manifest ; 1978 ; Educational Administration Quarterly Volume 14 ; 14 >
+        au < manifest ; 1979 ; Educational Administration Quarterly Volume 15 ; 15 >
+        au < manifest ; 1980 ; Educational Administration Quarterly Volume 16 ; 16 >
+        au < manifest ; 1981 ; Educational Administration Quarterly Volume 17 ; 17 >
+        au < manifest ; 1982 ; Educational Administration Quarterly Volume 18 ; 18 >
+        au < manifest ; 1983 ; Educational Administration Quarterly Volume 19 ; 19 >
+        au < manifest ; 1984 ; Educational Administration Quarterly Volume 20 ; 20 >
+        au < manifest ; 1985 ; Educational Administration Quarterly Volume 21 ; 21 >
+        au < manifest ; 1986 ; Educational Administration Quarterly Volume 22 ; 22 >
+        au < manifest ; 1987 ; Educational Administration Quarterly Volume 23 ; 23 >
+        au < manifest ; 1988 ; Educational Administration Quarterly Volume 24 ; 24 >
+        au < manifest ; 1989 ; Educational Administration Quarterly Volume 25 ; 25 >
+        au < manifest ; 1990 ; Educational Administration Quarterly Volume 26 ; 26 >
+        au < manifest ; 1991 ; Educational Administration Quarterly Volume 27 ; 27 >
+        au < manifest ; 1992 ; Educational Administration Quarterly Volume 28 ; 28 >
+        au < manifest ; 1993 ; Educational Administration Quarterly Volume 29 ; 29 >
+        au < manifest ; 1994 ; Educational Administration Quarterly Volume 30 ; 30 >
+        au < manifest ; 1995 ; Educational Administration Quarterly Volume 31 ; 31 >
+        au < manifest ; 1996 ; Educational Administration Quarterly Volume 32 ; 32 >
+        au < manifest ; 1997 ; Educational Administration Quarterly Volume 33 ; 33 >
+        au < manifest ; 1998 ; Educational Administration Quarterly Volume 34 ; 34 >
+        au < manifest ; 1999 ; Educational Administration Quarterly Volume 35 ; 35 >
+        au < manifest ; 2000 ; Educational Administration Quarterly Volume 36 ; 36 >
+        au < manifest ; 2001 ; Educational Administration Quarterly Volume 37 ; 37 >
+        au < manifest ; 2002 ; Educational Administration Quarterly Volume 38 ; 38 >
+        au < manifest ; 2003 ; Educational Administration Quarterly Volume 39 ; 39 >
+        au < manifest ; 2004 ; Educational Administration Quarterly Volume 40 ; 40 >
+        au < manifest ; 2005 ; Educational Administration Quarterly Volume 41 ; 41 >
+        au < manifest ; 2006 ; Educational Administration Quarterly Volume 42 ; 42 >
+        au < manifest ; 2007 ; Educational Administration Quarterly Volume 43 ; 43 >
+        au < manifest ; 2008 ; Educational Administration Quarterly Volume 44 ; 44 >
+        au < manifest ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 >
+        au < manifest ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 >
+        au < manifest ; 2011 ; Educational Administration Quarterly Volume 47 ; 47 >
+
+      }
+
     }
 
     {
@@ -7198,6 +7544,86 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://epm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1941 ; Educational and Psychological Measurement Volume 1 ; 1 >
+        au < manifest ; 1942 ; Educational and Psychological Measurement Volume 2 ; 2 >
+        au < manifest ; 1943 ; Educational and Psychological Measurement Volume 3 ; 3 >
+        au < manifest ; 1944 ; Educational and Psychological Measurement Volume 4 ; 4 >
+        au < manifest ; 1945 ; Educational and Psychological Measurement Volume 5 ; 5 >
+        au < manifest ; 1946 ; Educational and Psychological Measurement Volume 6 ; 6 >
+        au < manifest ; 1947 ; Educational and Psychological Measurement Volume 7 ; 7 >
+        au < manifest ; 1948 ; Educational and Psychological Measurement Volume 8 ; 8 >
+        au < manifest ; 1949 ; Educational and Psychological Measurement Volume 9 ; 9 >
+        au < manifest ; 1950 ; Educational and Psychological Measurement Volume 10 ; 10 >
+        au < manifest ; 1951 ; Educational and Psychological Measurement Volume 11 ; 11 >
+        au < manifest ; 1952 ; Educational and Psychological Measurement Volume 12 ; 12 >
+        au < manifest ; 1953 ; Educational and Psychological Measurement Volume 13 ; 13 >
+        au < manifest ; 1954 ; Educational and Psychological Measurement Volume 14 ; 14 >
+        au < manifest ; 1955 ; Educational and Psychological Measurement Volume 15 ; 15 >
+        au < manifest ; 1956 ; Educational and Psychological Measurement Volume 16 ; 16 >
+        au < manifest ; 1957 ; Educational and Psychological Measurement Volume 17 ; 17 >
+        au < manifest ; 1958 ; Educational and Psychological Measurement Volume 18 ; 18 >
+        au < manifest ; 1959 ; Educational and Psychological Measurement Volume 19 ; 19 >
+        au < manifest ; 1960 ; Educational and Psychological Measurement Volume 20 ; 20 >
+        au < manifest ; 1961 ; Educational and Psychological Measurement Volume 21 ; 21 >
+        au < manifest ; 1962 ; Educational and Psychological Measurement Volume 22 ; 22 >
+        au < manifest ; 1963 ; Educational and Psychological Measurement Volume 23 ; 23 >
+        au < manifest ; 1964 ; Educational and Psychological Measurement Volume 24 ; 24 >
+        au < manifest ; 1965 ; Educational and Psychological Measurement Volume 25 ; 25 >
+        au < manifest ; 1966 ; Educational and Psychological Measurement Volume 26 ; 26 >
+        au < manifest ; 1967 ; Educational and Psychological Measurement Volume 27 ; 27 >
+        au < manifest ; 1968 ; Educational and Psychological Measurement Volume 28 ; 28 >
+        au < manifest ; 1969 ; Educational and Psychological Measurement Volume 29 ; 29 >
+        au < manifest ; 1970 ; Educational and Psychological Measurement Volume 30 ; 30 >
+        au < manifest ; 1971 ; Educational and Psychological Measurement Volume 31 ; 31 >
+        au < manifest ; 1972 ; Educational and Psychological Measurement Volume 32 ; 32 >
+        au < manifest ; 1973 ; Educational and Psychological Measurement Volume 33 ; 33 >
+        au < manifest ; 1974 ; Educational and Psychological Measurement Volume 34 ; 34 >
+        au < manifest ; 1975 ; Educational and Psychological Measurement Volume 35 ; 35 >
+        au < manifest ; 1976 ; Educational and Psychological Measurement Volume 36 ; 36 >
+        au < manifest ; 1977 ; Educational and Psychological Measurement Volume 37 ; 37 >
+        au < manifest ; 1978 ; Educational and Psychological Measurement Volume 38 ; 38 >
+        au < manifest ; 1979 ; Educational and Psychological Measurement Volume 39 ; 39 >
+        au < manifest ; 1980 ; Educational and Psychological Measurement Volume 40 ; 40 >
+        au < manifest ; 1981 ; Educational and Psychological Measurement Volume 41 ; 41 >
+        au < manifest ; 1982 ; Educational and Psychological Measurement Volume 42 ; 42 >
+        au < manifest ; 1983 ; Educational and Psychological Measurement Volume 43 ; 43 >
+        au < manifest ; 1984 ; Educational and Psychological Measurement Volume 44 ; 44 >
+        au < manifest ; 1985 ; Educational and Psychological Measurement Volume 45 ; 45 >
+        au < manifest ; 1986 ; Educational and Psychological Measurement Volume 46 ; 46 >
+        au < manifest ; 1987 ; Educational and Psychological Measurement Volume 47 ; 47 >
+        au < manifest ; 1988 ; Educational and Psychological Measurement Volume 48 ; 48 >
+        au < manifest ; 1989 ; Educational and Psychological Measurement Volume 49 ; 49 >
+        au < manifest ; 1990 ; Educational and Psychological Measurement Volume 50 ; 50 >
+        au < manifest ; 1991 ; Educational and Psychological Measurement Volume 51 ; 51 >
+        au < manifest ; 1992 ; Educational and Psychological Measurement Volume 52 ; 52 >
+        au < manifest ; 1993 ; Educational and Psychological Measurement Volume 53 ; 53 >
+        au < manifest ; 1994 ; Educational and Psychological Measurement Volume 54 ; 54 >
+        au < manifest ; 1995 ; Educational and Psychological Measurement Volume 55 ; 55 >
+        au < manifest ; 1996 ; Educational and Psychological Measurement Volume 56 ; 56 >
+        au < manifest ; 1997 ; Educational and Psychological Measurement Volume 57 ; 57 >
+        au < manifest ; 1998 ; Educational and Psychological Measurement Volume 58 ; 58 >
+        au < manifest ; 1999 ; Educational and Psychological Measurement Volume 59 ; 59 >
+        au < manifest ; 2000 ; Educational and Psychological Measurement Volume 60 ; 60 >
+        au < manifest ; 2001 ; Educational and Psychological Measurement Volume 61 ; 61 >
+        au < manifest ; 2002 ; Educational and Psychological Measurement Volume 62 ; 62 >
+        au < manifest ; 2003 ; Educational and Psychological Measurement Volume 63 ; 63 >
+        au < manifest ; 2004 ; Educational and Psychological Measurement Volume 64 ; 64 >
+        au < manifest ; 2005 ; Educational and Psychological Measurement Volume 65 ; 65 >
+        au < manifest ; 2006 ; Educational and Psychological Measurement Volume 66 ; 66 >
+        au < manifest ; 2007 ; Educational and Psychological Measurement Volume 67 ; 67 >
+        au < manifest ; 2008 ; Educational and Psychological Measurement Volume 68 ; 68 >
+        au < manifest ; 2009 ; Educational and Psychological Measurement Volume 69 ; 69 >
+        au < manifest ; 2010 ; Educational and Psychological Measurement Volume 70 ; 70 >
+        au < manifest ; 2011 ; Educational and Psychological Measurement Volume 71 ; 71 >
+
+      }
+
     }
 
     {
@@ -7218,6 +7644,48 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; manifest ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://epa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1979 ; Educational Evaluation and Policy Analysis Volume 1 ; 1 >
+        au < manifest ; 1980 ; Educational Evaluation and Policy Analysis Volume 2 ; 2 >
+        au < manifest ; 1981 ; Educational Evaluation and Policy Analysis Volume 3 ; 3 >
+        au < manifest ; 1982 ; Educational Evaluation and Policy Analysis Volume 4 ; 4 >
+        au < manifest ; 1983 ; Educational Evaluation and Policy Analysis Volume 5 ; 5 >
+        au < manifest ; 1984 ; Educational Evaluation and Policy Analysis Volume 6 ; 6 >
+        au < manifest ; 1985 ; Educational Evaluation and Policy Analysis Volume 7 ; 7 >
+        au < manifest ; 1986 ; Educational Evaluation and Policy Analysis Volume 8 ; 8 >
+        au < manifest ; 1987 ; Educational Evaluation and Policy Analysis Volume 9 ; 9 >
+        au < manifest ; 1988 ; Educational Evaluation and Policy Analysis Volume 10 ; 10 >
+        au < manifest ; 1989 ; Educational Evaluation and Policy Analysis Volume 11 ; 11 >
+        au < manifest ; 1990 ; Educational Evaluation and Policy Analysis Volume 12 ; 12 >
+        au < manifest ; 1991 ; Educational Evaluation and Policy Analysis Volume 13 ; 13 >
+        au < manifest ; 1992 ; Educational Evaluation and Policy Analysis Volume 14 ; 14 >
+        au < manifest ; 1993 ; Educational Evaluation and Policy Analysis Volume 15 ; 15 >
+        au < manifest ; 1994 ; Educational Evaluation and Policy Analysis Volume 16 ; 16 >
+        au < manifest ; 1995 ; Educational Evaluation and Policy Analysis Volume 17 ; 17 >
+        au < manifest ; 1996 ; Educational Evaluation and Policy Analysis Volume 18 ; 18 >
+        au < manifest ; 1997 ; Educational Evaluation and Policy Analysis Volume 19 ; 19 >
+        au < manifest ; 1998 ; Educational Evaluation and Policy Analysis Volume 20 ; 20 >
+        au < manifest ; 1999 ; Educational Evaluation and Policy Analysis Volume 21 ; 21 >
+        au < manifest ; 2000 ; Educational Evaluation and Policy Analysis Volume 22 ; 22 >
+        au < manifest ; 2001 ; Educational Evaluation and Policy Analysis Volume 23 ; 23 >
+        au < manifest ; 2002 ; Educational Evaluation and Policy Analysis Volume 24 ; 24 >
+        au < manifest ; 2003 ; Educational Evaluation and Policy Analysis Volume 25 ; 25 >
+        au < manifest ; 2004 ; Educational Evaluation and Policy Analysis Volume 26 ; 26 >
+        au < manifest ; 2005 ; Educational Evaluation and Policy Analysis Volume 27 ; 27 >
+        au < manifest ; 2006 ; Educational Evaluation and Policy Analysis Volume 28 ; 28 >
+        au < manifest ; 2007 ; Educational Evaluation and Policy Analysis Volume 29 ; 29 >
+        au < manifest ; 2008 ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
+        au < manifest ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
+        au < manifest ; 2010 ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
+        au < manifest ; 2011 ; Educational Evaluation and Policy Analysis Volume 33 ; 33 >
 
       }
 
@@ -7256,6 +7724,54 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ema.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972-1973 ; Educational Management Administration & Leadership Volume 1 ; 1 >
+        au < manifest ; 1973-1974 ; Educational Management Administration & Leadership Volume 2 ; 2 >
+        au < manifest ; 1974-1975 ; Educational Management Administration & Leadership Volume 3 ; 3 >
+        au < manifest ; 1975-1976 ; Educational Management Administration & Leadership Volume 4 ; 4 >
+        au < manifest ; 1976-1977 ; Educational Management Administration & Leadership Volume 5 ; 5 >
+        au < manifest ; 1977-1978 ; Educational Management Administration & Leadership Volume 6 ; 6 >
+        au < exists ; 1978-1979 ; Educational Management Administration & Leadership Volume 7 ; 7 >
+        au < exists ; 1979 ; Educational Management Administration & Leadership Volume 8 ; 8 >
+        au < exists ; 1980-1981 ; Educational Management Administration & Leadership Volume 9 ; 9 >
+        au < manifest ; 1982 ; Educational Management Administration & Leadership Volume 10 ; 10 >
+        au < manifest ; 1983 ; Educational Management Administration & Leadership Volume 11 ; 11 >
+        au < manifest ; 1984 ; Educational Management Administration & Leadership Volume 12 ; 12 >
+        au < manifest ; 1985 ; Educational Management Administration & Leadership Volume 13 ; 13 >
+        au < manifest ; 1986 ; Educational Management Administration & Leadership Volume 14 ; 14 >
+        au < manifest ; 1987 ; Educational Management Administration & Leadership Volume 15 ; 15 >
+        au < manifest ; 1988 ; Educational Management Administration & Leadership Volume 16 ; 16 >
+        au < manifest ; 1989 ; Educational Management Administration & Leadership Volume 17 ; 17 >
+        au < manifest ; 1990 ; Educational Management Administration & Leadership Volume 18 ; 18 >
+        au < manifest ; 1991 ; Educational Management Administration & Leadership Volume 19 ; 19 >
+        au < manifest ; 1992 ; Educational Management Administration & Leadership Volume 20 ; 20 >
+        au < manifest ; 1993 ; Educational Management Administration & Leadership Volume 21 ; 21 >
+        au < manifest ; 1994 ; Educational Management Administration & Leadership Volume 22 ; 22 >
+        au < manifest ; 1995 ; Educational Management Administration & Leadership Volume 23 ; 23 >
+        au < manifest ; 1996 ; Educational Management Administration & Leadership Volume 24 ; 24 >
+        au < manifest ; 1997 ; Educational Management Administration & Leadership Volume 25 ; 25 >
+        au < manifest ; 1998 ; Educational Management Administration & Leadership Volume 26 ; 26 >
+        au < manifest ; 1999 ; Educational Management Administration & Leadership Volume 27 ; 27 >
+        au < manifest ; 2000 ; Educational Management Administration & Leadership Volume 28 ; 28 >
+        au < manifest ; 2001 ; Educational Management Administration & Leadership Volume 29 ; 29 >
+        au < manifest ; 2002 ; Educational Management Administration & Leadership Volume 30 ; 30 >
+        au < manifest ; 2003 ; Educational Management Administration & Leadership Volume 31 ; 31 >
+        au < manifest ; 2004 ; Educational Management Administration & Leadership Volume 32 ; 32 >
+        au < manifest ; 2005 ; Educational Management Administration & Leadership Volume 33 ; 33 >
+        au < manifest ; 2006 ; Educational Management Administration & Leadership Volume 34 ; 34 >
+        au < manifest ; 2007 ; Educational Management Administration & Leadership Volume 35 ; 35 >
+        au < manifest ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 >
+        au < manifest ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 >
+        au < manifest ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 >
+        au < manifest ; 2011 ; Educational Management Administration & Leadership Volume 39 ; 39 >
+
+      }
+
     }
 
     {
@@ -7281,6 +7797,40 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://epx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Educational Policy Volume 1 ; 1 >
+        au < manifest ; 1988 ; Educational Policy Volume 2 ; 2 >
+        au < manifest ; 1989 ; Educational Policy Volume 3 ; 3 >
+        au < manifest ; 1990 ; Educational Policy Volume 4 ; 4 >
+        au < manifest ; 1991 ; Educational Policy Volume 5 ; 5 >
+        au < manifest ; 1992 ; Educational Policy Volume 6 ; 6 >
+        au < manifest ; 1993 ; Educational Policy Volume 7 ; 7 >
+        au < manifest ; 1994 ; Educational Policy Volume 8 ; 8 >
+        au < manifest ; 1995 ; Educational Policy Volume 9 ; 9 >
+        au < manifest ; 1996 ; Educational Policy Volume 10 ; 10 >
+        au < manifest ; 1997 ; Educational Policy Volume 11 ; 11 >
+        au < manifest ; 1998 ; Educational Policy Volume 12 ; 12 >
+        au < manifest ; 1999 ; Educational Policy Volume 13 ; 13 >
+        au < manifest ; 2000 ; Educational Policy Volume 14 ; 14 >
+        au < manifest ; 2001 ; Educational Policy Volume 15 ; 15 >
+        au < manifest ; 2002 ; Educational Policy Volume 16 ; 16 >
+        au < manifest ; 2003 ; Educational Policy Volume 17 ; 17 >
+        au < manifest ; 2004 ; Educational Policy Volume 18 ; 18 >
+        au < manifest ; 2005 ; Educational Policy Volume 19 ; 19 >
+        au < manifest ; 2006 ; Educational Policy Volume 20 ; 20 >
+        au < manifest ; 2007 ; Educational Policy Volume 21 ; 21 >
+        au < manifest ; 2008 ; Educational Policy Volume 22 ; 22 >
+        au < manifest ; 2009 ; Educational Policy Volume 23 ; 23 >
+        au < manifest ; 2010 ; Educational Policy Volume 24 ; 24 >
+        au < manifest ; 2011 ; Educational Policy Volume 25 ; 25 >
+
+      }
+
     }
 
     {
@@ -7303,6 +7853,55 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; notReady ; Educational Researcher Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; notReady ; Educational Researcher Volume 38 ; 38 >
         au < HighWirePressH20Plugin ; manifest ; Educational Researcher Volume 39 ; 39 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://edr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972 ; Educational Researcher Volume 1 ; 1 >
+        au < manifest ; 1973 ; Educational Researcher Volume 2 ; 2 >
+        au < manifest ; 1974 ; Educational Researcher Volume 3 ; 3 >
+        au < manifest ; 1975 ; Educational Researcher Volume 4 ; 4 >
+        au < manifest ; 1976 ; Educational Researcher Volume 5 ; 5 >
+        au < manifest ; 1977 ; Educational Researcher Volume 6 ; 6 >
+        au < manifest ; 1978 ; Educational Researcher Volume 7 ; 7 >
+        au < manifest ; 1979 ; Educational Researcher Volume 8 ; 8 >
+        au < manifest ; 1980 ; Educational Researcher Volume 9 ; 9 >
+        au < manifest ; 1981 ; Educational Researcher Volume 10 ; 10 >
+        au < manifest ; 1982 ; Educational Researcher Volume 11 ; 11 >
+        au < manifest ; 1983 ; Educational Researcher Volume 12 ; 12 >
+        au < manifest ; 1984 ; Educational Researcher Volume 13 ; 13 >
+        au < manifest ; 1985 ; Educational Researcher Volume 14 ; 14 >
+        au < manifest ; 1986 ; Educational Researcher Volume 15 ; 15 >
+        au < manifest ; 1987 ; Educational Researcher Volume 16 ; 16 >
+        au < manifest ; 1988 ; Educational Researcher Volume 17 ; 17 >
+        au < manifest ; 1989 ; Educational Researcher Volume 18 ; 18 >
+        au < manifest ; 1990 ; Educational Researcher Volume 19 ; 19 >
+        au < manifest ; 1991 ; Educational Researcher Volume 20 ; 20 >
+        au < manifest ; 1992 ; Educational Researcher Volume 21 ; 21 >
+        au < manifest ; 1993 ; Educational Researcher Volume 22 ; 22 >
+        au < manifest ; 1994 ; Educational Researcher Volume 23 ; 23 >
+        au < manifest ; 1995 ; Educational Researcher Volume 24 ; 24 >
+        au < manifest ; 1996 ; Educational Researcher Volume 25 ; 25 >
+        au < manifest ; 1997 ; Educational Researcher Volume 26 ; 26 >
+        au < manifest ; 1998 ; Educational Researcher Volume 27 ; 27 >
+        au < manifest ; 1999 ; Educational Researcher Volume 28 ; 28 >
+        au < manifest ; 2000 ; Educational Researcher Volume 29 ; 29 >
+        au < manifest ; 2001 ; Educational Researcher Volume 30 ; 30 >
+        au < manifest ; 2002 ; Educational Researcher Volume 31 ; 31 >
+        au < manifest ; 2003 ; Educational Researcher Volume 32 ; 32 >
+        au < manifest ; 2004 ; Educational Researcher Volume 33 ; 33 >
+        au < manifest ; 2005 ; Educational Researcher Volume 34 ; 34 >
+        au < manifest ; 2006 ; Educational Researcher Volume 35 ; 35 >
+        au < manifest ; 2007 ; Educational Researcher Volume 36 ; 36 >
+        au < manifest ; 2008 ; Educational Researcher Volume 37 ; 37 >
+        au < manifest ; 2009 ; Educational Researcher Volume 38 ; 38 >
+        au < manifest ; 2010 ; Educational Researcher Volume 39 ; 39 >
+        au < manifest ; 2011 ; Educational Researcher Volume 40 ; 40 >
 
       }
 
@@ -7362,6 +7961,58 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eab.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1969 ; Environment and Behavior Volume 1 ; 1 >
+        au < manifest ; 1970 ; Environment and Behavior Volume 2 ; 2 >
+        au < manifest ; 1971 ; Environment and Behavior Volume 3 ; 3 >
+        au < manifest ; 1972 ; Environment and Behavior Volume 4 ; 4 >
+        au < manifest ; 1973 ; Environment and Behavior Volume 5 ; 5 >
+        au < manifest ; 1974 ; Environment and Behavior Volume 6 ; 6 >
+        au < manifest ; 1975 ; Environment and Behavior Volume 7 ; 7 >
+        au < manifest ; 1976 ; Environment and Behavior Volume 8 ; 8 >
+        au < manifest ; 1977 ; Environment and Behavior Volume 9 ; 9 >
+        au < manifest ; 1978 ; Environment and Behavior Volume 10 ; 10 >
+        au < manifest ; 1979 ; Environment and Behavior Volume 11 ; 11 >
+        au < manifest ; 1980 ; Environment and Behavior Volume 12 ; 12 >
+        au < manifest ; 1981 ; Environment and Behavior Volume 13 ; 13 >
+        au < manifest ; 1982 ; Environment and Behavior Volume 14 ; 14 >
+        au < manifest ; 1983 ; Environment and Behavior Volume 15 ; 15 >
+        au < manifest ; 1984 ; Environment and Behavior Volume 16 ; 16 >
+        au < manifest ; 1985 ; Environment and Behavior Volume 17 ; 17 >
+        au < manifest ; 1986 ; Environment and Behavior Volume 18 ; 18 >
+        au < manifest ; 1987 ; Environment and Behavior Volume 19 ; 19 >
+        au < manifest ; 1988 ; Environment and Behavior Volume 20 ; 20 >
+        au < manifest ; 1989 ; Environment and Behavior Volume 21 ; 21 >
+        au < manifest ; 1990 ; Environment and Behavior Volume 22 ; 22 >
+        au < manifest ; 1991 ; Environment and Behavior Volume 23 ; 23 >
+        au < manifest ; 1992 ; Environment and Behavior Volume 24 ; 24 >
+        au < manifest ; 1993 ; Environment and Behavior Volume 25 ; 25 >
+        au < manifest ; 1994 ; Environment and Behavior Volume 26 ; 26 >
+        au < manifest ; 1995 ; Environment and Behavior Volume 27 ; 27 >
+        au < manifest ; 1996 ; Environment and Behavior Volume 28 ; 28 >
+        au < manifest ; 1997 ; Environment and Behavior Volume 29 ; 29 >
+        au < manifest ; 1998 ; Environment and Behavior Volume 30 ; 30 >
+        au < manifest ; 1999 ; Environment and Behavior Volume 31 ; 31 >
+        au < manifest ; 2000 ; Environment and Behavior Volume 32 ; 32 >
+        au < manifest ; 2001 ; Environment and Behavior Volume 33 ; 33 >
+        au < manifest ; 2002 ; Environment and Behavior Volume 34 ; 34 >
+        au < manifest ; 2003 ; Environment and Behavior Volume 35 ; 35 >
+        au < manifest ; 2004 ; Environment and Behavior Volume 36 ; 36 >
+        au < manifest ; 2005 ; Environment and Behavior Volume 37 ; 37 >
+        au < manifest ; 2006 ; Environment and Behavior Volume 38 ; 38 >
+        au < manifest ; 2007 ; Environment and Behavior Volume 39 ; 39 >
+        au < manifest ; 2008 ; Environment and Behavior Volume 40 ; 40 >
+        au < manifest ; 2009 ; Environment and Behavior Volume 41 ; 41 >
+        au < manifest ; 2010 ; Environment and Behavior Volume 42 ; 42 >
+        au < manifest ; 2011 ; Environment and Behavior Volume 43 ; 43 >
+
+      }
+
     }
 
     {
@@ -7398,6 +8049,38 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eau.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1989 ; Environment and Urbanization Volume 1 ; 1 >
+        au < manifest ; 1990 ; Environment and Urbanization Volume 2 ; 2 >
+        au < manifest ; 1991 ; Environment and Urbanization Volume 3 ; 3 >
+        au < manifest ; 1992 ; Environment and Urbanization Volume 4 ; 4 >
+        au < manifest ; 1993 ; Environment and Urbanization Volume 5 ; 5 >
+        au < manifest ; 1994 ; Environment and Urbanization Volume 6 ; 6 >
+        au < manifest ; 1995 ; Environment and Urbanization Volume 7 ; 7 >
+        au < manifest ; 1996 ; Environment and Urbanization Volume 8 ; 8 >
+        au < manifest ; 1997 ; Environment and Urbanization Volume 9 ; 9 >
+        au < manifest ; 1998 ; Environment and Urbanization Volume 10 ; 10 >
+        au < manifest ; 1999 ; Environment and Urbanization Volume 11 ; 11 >
+        au < manifest ; 2000 ; Environment and Urbanization Volume 12 ; 12 >
+        au < manifest ; 2001 ; Environment and Urbanization Volume 13 ; 13 >
+        au < manifest ; 2002 ; Environment and Urbanization Volume 14 ; 14 >
+        au < manifest ; 2003 ; Environment and Urbanization Volume 15 ; 15 >
+        au < manifest ; 2004 ; Environment and Urbanization Volume 16 ; 16 >
+        au < manifest ; 2005 ; Environment and Urbanization Volume 17 ; 17 >
+        au < manifest ; 2006 ; Environment and Urbanization Volume 18 ; 18 >
+        au < manifest ; 2007 ; Environment and Urbanization Volume 19 ; 19 >
+        au < manifest ; 2008 ; Environment and Urbanization Volume 20 ; 20 >
+        au < manifest ; 2009 ; Environment and Urbanization Volume 21 ; 21 >
+        au < manifest ; 2010 ; Environment and Urbanization Volume 22 ; 22 >
+        au < manifest ; 2011 ; Environment and Urbanization Volume 23 ; 23 >
+
+      }
+
     }
 
     {
@@ -7410,27 +8093,27 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://erg.sagepub.com/
-        implicit < status ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
-        au < exists ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 >
+        au < exists ; 1993 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 >
+        au < exists ; 1994 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 >
+        au < exists ; 1995 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 >
+        au < exists ; 1996 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 >
+        au < exists ; 1997 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 >
+        au < exists ; 1998 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 >
+        au < exists ; 1999 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 >
+        au < exists ; 2000 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 >
+        au < exists ; 2001 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 >
+        au < exists ; 2002 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 >
+        au < exists ; 2003 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 >
+        au < exists ; 2004 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 >
+        au < exists ; 2005 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 >
+        au < exists ; 2006 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 >
+        au < exists ; 2007 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 >
+        au < exists ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 >
+        au < exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
+        au < exists ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
+        au < exists ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 >
 
       }
 
@@ -7469,6 +8152,26 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://etn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Ethnicities Volume 1 ; 1 >
+        au < manifest ; 2002 ; Ethnicities Volume 2 ; 2 >
+        au < manifest ; 2003 ; Ethnicities Volume 3 ; 3 >
+        au < manifest ; 2004 ; Ethnicities Volume 4 ; 4 >
+        au < manifest ; 2005 ; Ethnicities Volume 5 ; 5 >
+        au < manifest ; 2006 ; Ethnicities Volume 6 ; 6 >
+        au < manifest ; 2007 ; Ethnicities Volume 7 ; 7 >
+        au < manifest ; 2008 ; Ethnicities Volume 8 ; 8 >
+        au < manifest ; 2009 ; Ethnicities Volume 9 ; 9 >
+        au < manifest ; 2010 ; Ethnicities Volume 10 ; 10 >
+        au < manifest ; 2011 ; Ethnicities Volume 11 ; 11 >
+
+      }
+
     }
 
     {
@@ -7491,6 +8194,27 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; Ethnography Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Ethnography Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; Ethnography Volume 11 ; 11 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eth.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Ethnography Volume 1 ; 1 >
+        au < manifest ; 2001 ; Ethnography Volume 2 ; 2 >
+        au < manifest ; 2002 ; Ethnography Volume 3 ; 3 >
+        au < manifest ; 2003 ; Ethnography Volume 4 ; 4 >
+        au < manifest ; 2004 ; Ethnography Volume 5 ; 5 >
+        au < manifest ; 2005 ; Ethnography Volume 6 ; 6 >
+        au < manifest ; 2006 ; Ethnography Volume 7 ; 7 >
+        au < manifest ; 2007 ; Ethnography Volume 8 ; 8 >
+        au < manifest ; 2008 ; Ethnography Volume 9 ; 9 >
+        au < manifest ; 2009 ; Ethnography Volume 10 ; 10 >
+        au < manifest ; 2010 ; Ethnography Volume 11 ; 11 >
+        au < manifest ; 2011 ; Ethnography Volume 12 ; 12 >
 
       }
 
@@ -7529,6 +8253,56 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ehq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1971 ; European History Quarterly Volume 1 ; 1 >
+        au < manifest ; 1972 ; European History Quarterly Volume 2 ; 2 >
+        au < manifest ; 1973 ; European History Quarterly Volume 3 ; 3 >
+        au < manifest ; 1974 ; European History Quarterly Volume 4 ; 4 >
+        au < manifest ; 1975 ; European History Quarterly Volume 5 ; 5 >
+        au < manifest ; 1976 ; European History Quarterly Volume 6 ; 6 >
+        au < manifest ; 1977 ; European History Quarterly Volume 7 ; 7 >
+        au < manifest ; 1978 ; European History Quarterly Volume 8 ; 8 >
+        au < manifest ; 1979 ; European History Quarterly Volume 9 ; 9 >
+        au < manifest ; 1980 ; European History Quarterly Volume 10 ; 10 >
+        au < manifest ; 1981 ; European History Quarterly Volume 11 ; 11 >
+        au < manifest ; 1982 ; European History Quarterly Volume 12 ; 12 >
+        au < manifest ; 1983 ; European History Quarterly Volume 13 ; 13 >
+        au < manifest ; 1984 ; European History Quarterly Volume 14 ; 14 >
+        au < manifest ; 1985 ; European History Quarterly Volume 15 ; 15 >
+        au < manifest ; 1986 ; European History Quarterly Volume 16 ; 16 >
+        au < manifest ; 1987 ; European History Quarterly Volume 17 ; 17 >
+        au < manifest ; 1988 ; European History Quarterly Volume 18 ; 18 >
+        au < manifest ; 1989 ; European History Quarterly Volume 19 ; 19 >
+        au < manifest ; 1990 ; European History Quarterly Volume 20 ; 20 >
+        au < manifest ; 1991 ; European History Quarterly Volume 21 ; 21 >
+        au < manifest ; 1992 ; European History Quarterly Volume 22 ; 22 >
+        au < manifest ; 1993 ; European History Quarterly Volume 23 ; 23 >
+        au < manifest ; 1994 ; European History Quarterly Volume 24 ; 24 >
+        au < manifest ; 1995 ; European History Quarterly Volume 25 ; 25 >
+        au < manifest ; 1996 ; European History Quarterly Volume 26 ; 26 >
+        au < manifest ; 1997 ; European History Quarterly Volume 27 ; 27 >
+        au < manifest ; 1998 ; European History Quarterly Volume 28 ; 28 >
+        au < manifest ; 1999 ; European History Quarterly Volume 29 ; 29 >
+        au < manifest ; 2000 ; European History Quarterly Volume 30 ; 30 >
+        au < manifest ; 2001 ; European History Quarterly Volume 31 ; 31 >
+        au < manifest ; 2002 ; European History Quarterly Volume 32 ; 32 >
+        au < manifest ; 2003 ; European History Quarterly Volume 33 ; 33 >
+        au < manifest ; 2004 ; European History Quarterly Volume 34 ; 34 >
+        au < manifest ; 2005 ; European History Quarterly Volume 35 ; 35 >
+        au < manifest ; 2006 ; European History Quarterly Volume 36 ; 36 >
+        au < manifest ; 2007 ; European History Quarterly Volume 37 ; 37 >
+        au < manifest ; 2008 ; European History Quarterly Volume 38 ; 38 >
+        au < manifest ; 2009 ; European History Quarterly Volume 39 ; 39 >
+        au < manifest ; 2010 ; European History Quarterly Volume 40 ; 40 >
+        au < manifest ; 2011 ; European History Quarterly Volume 41 ; 41 >
+
+      }
+
     }
 
     {
@@ -7561,6 +8335,28 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Archaeology Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; European Journal of Archaeology Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; European Journal of Archaeology Volume 12 ; 12 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eja.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; European Journal of Archaeology Volume 1 ; 1 >
+        au < manifest ; 1999 ; European Journal of Archaeology Volume 2 ; 2 >
+        au < manifest ; 2000 ; European Journal of Archaeology Volume 3 ; 3 >
+        au < manifest ; 2001 ; European Journal of Archaeology Volume 4 ; 4 >
+        au < manifest ; 2002 ; European Journal of Archaeology Volume 5 ; 5 >
+        au < manifest ; 2003 ; European Journal of Archaeology Volume 6 ; 6 >
+        au < manifest ; 2004 ; European Journal of Archaeology Volume 7 ; 7 >
+        au < manifest ; 2005 ; European Journal of Archaeology Volume 8 ; 8 >
+        au < manifest ; 2006 ; European Journal of Archaeology Volume 9 ; 9 >
+        au < manifest ; 2007 ; European Journal of Archaeology Volume 10 ; 10 >
+        au < manifest ; 2008 ; European Journal of Archaeology Volume 11 ; 11 >
+        au < manifest ; 2009 ; European Journal of Archaeology Volume 12 ; 12 >
+        au < manifest ; 2010 ; European Journal of Archaeology Volume 13 ; 13 >
 
       }
 
@@ -7625,6 +8421,41 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ejc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; European Journal of Communication Volume 1 ; 1 >
+        au < manifest ; 1987 ; European Journal of Communication Volume 2 ; 2 >
+        au < manifest ; 1988 ; European Journal of Communication Volume 3 ; 3 >
+        au < manifest ; 1989 ; European Journal of Communication Volume 4 ; 4 >
+        au < manifest ; 1990 ; European Journal of Communication Volume 5 ; 5 >
+        au < manifest ; 1991 ; European Journal of Communication Volume 6 ; 6 >
+        au < manifest ; 1992 ; European Journal of Communication Volume 7 ; 7 >
+        au < manifest ; 1993 ; European Journal of Communication Volume 8 ; 8 >
+        au < manifest ; 1994 ; European Journal of Communication Volume 9 ; 9 >
+        au < manifest ; 1995 ; European Journal of Communication Volume 10 ; 10 >
+        au < manifest ; 1996 ; European Journal of Communication Volume 11 ; 11 >
+        au < manifest ; 1997 ; European Journal of Communication Volume 12 ; 12 >
+        au < manifest ; 1998 ; European Journal of Communication Volume 13 ; 13 >
+        au < manifest ; 1999 ; European Journal of Communication Volume 14 ; 14 >
+        au < manifest ; 2000 ; European Journal of Communication Volume 15 ; 15 >
+        au < manifest ; 2001 ; European Journal of Communication Volume 16 ; 16 >
+        au < manifest ; 2002 ; European Journal of Communication Volume 17 ; 17 >
+        au < manifest ; 2003 ; European Journal of Communication Volume 18 ; 18 >
+        au < manifest ; 2004 ; European Journal of Communication Volume 19 ; 19 >
+        au < manifest ; 2005 ; European Journal of Communication Volume 20 ; 20 >
+        au < manifest ; 2006 ; European Journal of Communication Volume 21 ; 21 >
+        au < manifest ; 2007 ; European Journal of Communication Volume 22 ; 22 >
+        au < manifest ; 2008 ; European Journal of Communication Volume 23 ; 23 >
+        au < manifest ; 2009 ; European Journal of Communication Volume 24 ; 24 >
+        au < manifest ; 2010 ; European Journal of Communication Volume 25 ; 25 >
+        au < manifest ; 2011 ; European Journal of Communication Volume 26 ; 26 >
+
+      }
+
     }
 
     {
@@ -7650,6 +8481,23 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://euc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2004 ; European Journal of Criminology Volume 1 ; 1 >
+        au < manifest ; 2005 ; European Journal of Criminology Volume 2 ; 2 >
+        au < manifest ; 2006 ; European Journal of Criminology Volume 3 ; 3 >
+        au < manifest ; 2007 ; European Journal of Criminology Volume 4 ; 4 >
+        au < manifest ; 2008 ; European Journal of Criminology Volume 5 ; 5 >
+        au < manifest ; 2009 ; European Journal of Criminology Volume 6 ; 6 >
+        au < manifest ; 2010 ; European Journal of Criminology Volume 7 ; 7 >
+        au < manifest ; 2011 ; European Journal of Criminology Volume 8 ; 8 >
+
+      }
+
     }
 
     {
@@ -7672,6 +8520,29 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; European Journal of Cultural Studies Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; European Journal of Cultural Studies Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; European Journal of Cultural Studies Volume 13 ; 13 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ecs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; European Journal of Cultural Studies Volume 1 ; 1 >
+        au < manifest ; 1999 ; European Journal of Cultural Studies Volume 2 ; 2 >
+        au < manifest ; 2000 ; European Journal of Cultural Studies Volume 3 ; 3 >
+        au < manifest ; 2001 ; European Journal of Cultural Studies Volume 4 ; 4 >
+        au < manifest ; 2002 ; European Journal of Cultural Studies Volume 5 ; 5 >
+        au < manifest ; 2003 ; European Journal of Cultural Studies Volume 6 ; 6 >
+        au < manifest ; 2004 ; European Journal of Cultural Studies Volume 7 ; 7 >
+        au < manifest ; 2005 ; European Journal of Cultural Studies Volume 8 ; 8 >
+        au < manifest ; 2006 ; European Journal of Cultural Studies Volume 9 ; 9 >
+        au < manifest ; 2007 ; European Journal of Cultural Studies Volume 10 ; 10 >
+        au < manifest ; 2008 ; European Journal of Cultural Studies Volume 11 ; 11 >
+        au < manifest ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 >
+        au < manifest ; 2010 ; European Journal of Cultural Studies Volume 13 ; 13 >
+        au < manifest ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 >
 
       }
 
@@ -7710,6 +8581,32 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ejd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; European Journal of Industrial Relations Volume 1 ; 1 >
+        au < manifest ; 1996 ; European Journal of Industrial Relations Volume 2 ; 2 >
+        au < manifest ; 1997 ; European Journal of Industrial Relations Volume 3 ; 3 >
+        au < manifest ; 1998 ; European Journal of Industrial Relations Volume 4 ; 4 >
+        au < manifest ; 1999 ; European Journal of Industrial Relations Volume 5 ; 5 >
+        au < manifest ; 2000 ; European Journal of Industrial Relations Volume 6 ; 6 >
+        au < manifest ; 2001 ; European Journal of Industrial Relations Volume 7 ; 7 >
+        au < manifest ; 2002 ; European Journal of Industrial Relations Volume 8 ; 8 >
+        au < manifest ; 2003 ; European Journal of Industrial Relations Volume 9 ; 9 >
+        au < manifest ; 2004 ; European Journal of Industrial Relations Volume 10 ; 10 >
+        au < manifest ; 2005 ; European Journal of Industrial Relations Volume 11 ; 11 >
+        au < manifest ; 2006 ; European Journal of Industrial Relations Volume 12 ; 12 >
+        au < manifest ; 2007 ; European Journal of Industrial Relations Volume 13 ; 13 >
+        au < manifest ; 2008 ; European Journal of Industrial Relations Volume 14 ; 14 >
+        au < manifest ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 >
+        au < manifest ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 >
+        au < manifest ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 >
+
+      }
+
     }
 
     {
@@ -7742,6 +8639,32 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; European Journal of International Relations Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; European Journal of International Relations Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; European Journal of International Relations Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ejt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; European Journal of International Relations Volume 1 ; 1 >
+        au < manifest ; 1996 ; European Journal of International Relations Volume 2 ; 2 >
+        au < manifest ; 1997 ; European Journal of International Relations Volume 3 ; 3 >
+        au < manifest ; 1998 ; European Journal of International Relations Volume 4 ; 4 >
+        au < manifest ; 1999 ; European Journal of International Relations Volume 5 ; 5 >
+        au < manifest ; 2000 ; European Journal of International Relations Volume 6 ; 6 >
+        au < manifest ; 2001 ; European Journal of International Relations Volume 7 ; 7 >
+        au < manifest ; 2002 ; European Journal of International Relations Volume 8 ; 8 >
+        au < manifest ; 2003 ; European Journal of International Relations Volume 9 ; 9 >
+        au < manifest ; 2004 ; European Journal of International Relations Volume 10 ; 10 >
+        au < manifest ; 2005 ; European Journal of International Relations Volume 11 ; 11 >
+        au < manifest ; 2006 ; European Journal of International Relations Volume 12 ; 12 >
+        au < manifest ; 2007 ; European Journal of International Relations Volume 13 ; 13 >
+        au < manifest ; 2008 ; European Journal of International Relations Volume 14 ; 14 >
+        au < manifest ; 2009 ; European Journal of International Relations Volume 15 ; 15 >
+        au < manifest ; 2010 ; European Journal of International Relations Volume 16 ; 16 >
+        au < manifest ; 2011 ; European Journal of International Relations Volume 17 ; 17 >
 
       }
 
@@ -7780,6 +8703,25 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ept.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; European Journal of Political Theory Volume 1 ; 1 >
+        au < manifest ; 2003 ; European Journal of Political Theory Volume 2 ; 2 >
+        au < manifest ; 2004 ; European Journal of Political Theory Volume 3 ; 3 >
+        au < manifest ; 2005 ; European Journal of Political Theory Volume 4 ; 4 >
+        au < manifest ; 2006 ; European Journal of Political Theory Volume 5 ; 5 >
+        au < manifest ; 2007 ; European Journal of Political Theory Volume 6 ; 6 >
+        au < manifest ; 2008 ; European Journal of Political Theory Volume 7 ; 7 >
+        au < manifest ; 2009 ; European Journal of Political Theory Volume 8 ; 8 >
+        au < manifest ; 2010 ; European Journal of Political Theory Volume 9 ; 9 >
+        au < manifest ; 2011 ; European Journal of Political Theory Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -7802,6 +8744,29 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; European Journal of Social Theory Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; European Journal of Social Theory Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; European Journal of Social Theory Volume 13 ; 13 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://est.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; European Journal of Social Theory Volume 1 ; 1 >
+        au < manifest ; 1999 ; European Journal of Social Theory Volume 2 ; 2 >
+        au < manifest ; 2000 ; European Journal of Social Theory Volume 3 ; 3 >
+        au < manifest ; 2001 ; European Journal of Social Theory Volume 4 ; 4 >
+        au < manifest ; 2002 ; European Journal of Social Theory Volume 5 ; 5 >
+        au < manifest ; 2003 ; European Journal of Social Theory Volume 6 ; 6 >
+        au < manifest ; 2004 ; European Journal of Social Theory Volume 7 ; 7 >
+        au < manifest ; 2005 ; European Journal of Social Theory Volume 8 ; 8 >
+        au < manifest ; 2006 ; European Journal of Social Theory Volume 9 ; 9 >
+        au < manifest ; 2007 ; European Journal of Social Theory Volume 10 ; 10 >
+        au < manifest ; 2008 ; European Journal of Social Theory Volume 11 ; 11 >
+        au < manifest ; 2009 ; European Journal of Social Theory Volume 12 ; 12 >
+        au < manifest ; 2010 ; European Journal of Social Theory Volume 13 ; 13 >
+        au < manifest ; 2011 ; European Journal of Social Theory Volume 14 ; 14 >
 
       }
 
@@ -7840,6 +8805,33 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ejw.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; European Journal of Women's Studies Volume 1 ; 1 >
+        au < manifest ; 1995 ; European Journal of Women's Studies Volume 2 ; 2 >
+        au < manifest ; 1996 ; European Journal of Women's Studies Volume 3 ; 3 >
+        au < manifest ; 1997 ; European Journal of Women's Studies Volume 4 ; 4 >
+        au < manifest ; 1998 ; European Journal of Women's Studies Volume 5 ; 5 >
+        au < manifest ; 1999 ; European Journal of Women's Studies Volume 6 ; 6 >
+        au < manifest ; 2000 ; European Journal of Women's Studies Volume 7 ; 7 >
+        au < manifest ; 2001 ; European Journal of Women's Studies Volume 8 ; 8 >
+        au < manifest ; 2002 ; European Journal of Women's Studies Volume 9 ; 9 >
+        au < manifest ; 2003 ; European Journal of Women's Studies Volume 10 ; 10 >
+        au < manifest ; 2004 ; European Journal of Women's Studies Volume 11 ; 11 >
+        au < manifest ; 2005 ; European Journal of Women's Studies Volume 12 ; 12 >
+        au < manifest ; 2006 ; European Journal of Women's Studies Volume 13 ; 13 >
+        au < manifest ; 2007 ; European Journal of Women's Studies Volume 14 ; 14 >
+        au < manifest ; 2008 ; European Journal of Women's Studies Volume 15 ; 15 >
+        au < manifest ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 >
+        au < manifest ; 2010 ; European Journal of Women's Studies Volume 17 ; 17 >
+        au < manifest ; 2011 ; European Journal of Women's Studies Volume 18 ; 18 >
+
+      }
+
     }
 
     {
@@ -7864,6 +8856,30 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://epe.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; European Physical Education Review Volume 1 ; 1 >
+        au < manifest ; 1996 ; European Physical Education Review Volume 2 ; 2 >
+        au < manifest ; 1997 ; European Physical Education Review Volume 3 ; 3 >
+        au < manifest ; 1998 ; European Physical Education Review Volume 4 ; 4 >
+        au < manifest ; 1999 ; European Physical Education Review Volume 5 ; 5 >
+        au < manifest ; 2000 ; European Physical Education Review Volume 6 ; 6 >
+        au < manifest ; 2001 ; European Physical Education Review Volume 7 ; 7 >
+        au < manifest ; 2002 ; European Physical Education Review Volume 8 ; 8 >
+        au < manifest ; 2003 ; European Physical Education Review Volume 9 ; 9 >
+        au < manifest ; 2004 ; European Physical Education Review Volume 10 ; 10 >
+        au < manifest ; 2005 ; European Physical Education Review Volume 11 ; 11 >
+        au < manifest ; 2006 ; European Physical Education Review Volume 12 ; 12 >
+        au < manifest ; 2007 ; European Physical Education Review Volume 13 ; 13 >
+        au < manifest ; 2008 ; European Physical Education Review Volume 14 ; 14 >
+        au < manifest ; 2009 ; European Physical Education Review Volume 15 ; 15 >
+        au < manifest ; 2010 ; European Physical Education Review Volume 16 ; 16 >
+
+      }
     }
 
     {
@@ -7896,6 +8912,27 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; European Union Politics Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; European Union Politics Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; European Union Politics Volume 11 ; 11 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eup.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; European Union Politics Volume 1 ; 1 >
+        au < manifest ; 2001 ; European Union Politics Volume 2 ; 2 >
+        au < manifest ; 2002 ; European Union Politics Volume 3 ; 3 >
+        au < manifest ; 2003 ; European Union Politics Volume 4 ; 4 >
+        au < manifest ; 2004 ; European Union Politics Volume 5 ; 5 >
+        au < manifest ; 2005 ; European Union Politics Volume 6 ; 6 >
+        au < manifest ; 2006 ; European Union Politics Volume 7 ; 7 >
+        au < manifest ; 2007 ; European Union Politics Volume 8 ; 8 >
+        au < manifest ; 2008 ; European Union Politics Volume 9 ; 9 >
+        au < manifest ; 2009 ; European Union Politics Volume 10 ; 10 >
+        au < manifest ; 2010 ; European Union Politics Volume 11 ; 11 >
+        au < manifest ; 2011 ; European Union Politics Volume 12 ; 12 >
 
       }
 
@@ -7934,6 +8971,33 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eur.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; European Urban and Regional Studies Volume 1 ; 1 >
+        au < manifest ; 1995 ; European Urban and Regional Studies Volume 2 ; 2 >
+        au < manifest ; 1996 ; European Urban and Regional Studies Volume 3 ; 3 >
+        au < manifest ; 1997 ; European Urban and Regional Studies Volume 4 ; 4 >
+        au < manifest ; 1998 ; European Urban and Regional Studies Volume 5 ; 5 >
+        au < manifest ; 1999 ; European Urban and Regional Studies Volume 6 ; 6 >
+        au < manifest ; 2000 ; European Urban and Regional Studies Volume 7 ; 7 >
+        au < manifest ; 2001 ; European Urban and Regional Studies Volume 8 ; 8 >
+        au < manifest ; 2002 ; European Urban and Regional Studies Volume 9 ; 9 >
+        au < manifest ; 2003 ; European Urban and Regional Studies Volume 10 ; 10 >
+        au < manifest ; 2004 ; European Urban and Regional Studies Volume 11 ; 11 >
+        au < manifest ; 2005 ; European Urban and Regional Studies Volume 12 ; 12 >
+        au < manifest ; 2006 ; European Urban and Regional Studies Volume 13 ; 13 >
+        au < manifest ; 2007 ; European Urban and Regional Studies Volume 14 ; 14 >
+        au < manifest ; 2008 ; European Urban and Regional Studies Volume 15 ; 15 >
+        au < manifest ; 2009 ; European Urban and Regional Studies Volume 16 ; 16 >
+        au < manifest ; 2010 ; European Urban and Regional Studies Volume 17 ; 17 >
+        au < manifest ; 2011 ; European Urban and Regional Studies Volume 18 ; 18 >
+
+      }
+
     }
 
     {
@@ -7956,6 +9020,32 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWirePressPlugin ; down ; Evaluation Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; Evaluation Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Evaluation Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://evi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Evaluation Volume 1 ; 1 >
+        au < manifest ; 1996 ; Evaluation Volume 2 ; 2 >
+        au < manifest ; 1997 ; Evaluation Volume 3 ; 3 >
+        au < manifest ; 1998 ; Evaluation Volume 4 ; 4 >
+        au < manifest ; 1999 ; Evaluation Volume 5 ; 5 >
+        au < manifest ; 2000 ; Evaluation Volume 6 ; 6 >
+        au < manifest ; 2001 ; Evaluation Volume 7 ; 7 >
+        au < manifest ; 2002 ; Evaluation Volume 8 ; 8 >
+        au < manifest ; 2003 ; Evaluation Volume 9 ; 9 >
+        au < manifest ; 2004 ; Evaluation Volume 10 ; 10 >
+        au < manifest ; 2005 ; Evaluation Volume 11 ; 11 >
+        au < manifest ; 2006 ; Evaluation Volume 12 ; 12 >
+        au < manifest ; 2007 ; Evaluation Volume 13 ; 13 >
+        au < manifest ; 2008 ; Evaluation Volume 14 ; 14 >
+        au < manifest ; 2009 ; Evaluation Volume 15 ; 15 >
+        au < manifest ; 2010 ; Evaluation Volume 16 ; 16 >
+        au < manifest ; 2011 ; Evaluation Volume 17 ; 17 >
 
       }
 
@@ -7994,6 +9084,49 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ehp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1978 ; Evaluation & the Health Professions Volume 1 ; 1 >
+        au < manifest ; 1979 ; Evaluation & the Health Professions Volume 2 ; 2 >
+        au < manifest ; 1980 ; Evaluation & the Health Professions Volume 3 ; 3 >
+        au < manifest ; 1981 ; Evaluation & the Health Professions Volume 4 ; 4 >
+        au < manifest ; 1982 ; Evaluation & the Health Professions Volume 5 ; 5 >
+        au < manifest ; 1983 ; Evaluation & the Health Professions Volume 6 ; 6 >
+        au < manifest ; 1984 ; Evaluation & the Health Professions Volume 7 ; 7 >
+        au < manifest ; 1985 ; Evaluation & the Health Professions Volume 8 ; 8 >
+        au < manifest ; 1986 ; Evaluation & the Health Professions Volume 9 ; 9 >
+        au < manifest ; 1987 ; Evaluation & the Health Professions Volume 10 ; 10 >
+        au < manifest ; 1988 ; Evaluation & the Health Professions Volume 11 ; 11 >
+        au < manifest ; 1989 ; Evaluation & the Health Professions Volume 12 ; 12 >
+        au < manifest ; 1990 ; Evaluation & the Health Professions Volume 13 ; 13 >
+        au < manifest ; 1991 ; Evaluation & the Health Professions Volume 14 ; 14 >
+        au < manifest ; 1992 ; Evaluation & the Health Professions Volume 15 ; 15 >
+        au < manifest ; 1993 ; Evaluation & the Health Professions Volume 16 ; 16 >
+        au < manifest ; 1994 ; Evaluation & the Health Professions Volume 17 ; 17 >
+        au < manifest ; 1995 ; Evaluation & the Health Professions Volume 18 ; 18 >
+        au < manifest ; 1996 ; Evaluation & the Health Professions Volume 19 ; 19 >
+        au < manifest ; 1997 ; Evaluation & the Health Professions Volume 20 ; 20 >
+        au < manifest ; 1998 ; Evaluation & the Health Professions Volume 21 ; 21 >
+        au < manifest ; 1999 ; Evaluation & the Health Professions Volume 22 ; 22 >
+        au < manifest ; 2000 ; Evaluation & the Health Professions Volume 23 ; 23 >
+        au < manifest ; 2001 ; Evaluation & the Health Professions Volume 24 ; 24 >
+        au < manifest ; 2002 ; Evaluation & the Health Professions Volume 25 ; 25 >
+        au < manifest ; 2003 ; Evaluation & the Health Professions Volume 26 ; 26 >
+        au < manifest ; 2004 ; Evaluation & the Health Professions Volume 27 ; 27 >
+        au < manifest ; 2005 ; Evaluation & the Health Professions Volume 28 ; 28 >
+        au < manifest ; 2006 ; Evaluation & the Health Professions Volume 29 ; 29 >
+        au < manifest ; 2007 ; Evaluation & the Health Professions Volume 30 ; 30 >
+        au < manifest ; 2008 ; Evaluation & the Health Professions Volume 31 ; 31 >
+        au < manifest ; 2009 ; Evaluation & the Health Professions Volume 32 ; 32 >
+        au < manifest ; 2010 ; Evaluation & the Health Professions Volume 33 ; 33 >
+        au < manifest ; 2011 ; Evaluation & the Health Professions Volume 34 ; 34 >
+
+      }
+
     }
 
     {
@@ -8026,6 +9159,50 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; notReady ; Evaluation Review Volume 32 ; 32 >
         au < HighWireStrVolPlugin ; down ; Evaluation Review Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; Evaluation Review Volume 34 ; 34 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://erx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1977 ; Evaluation Review Volume 1 ; 1 >
+        au < manifest ; 1978 ; Evaluation Review Volume 2 ; 2 >
+        au < manifest ; 1979 ; Evaluation Review Volume 3 ; 3 >
+        au < manifest ; 1980 ; Evaluation Review Volume 4 ; 4 >
+        au < manifest ; 1981 ; Evaluation Review Volume 5 ; 5 >
+        au < manifest ; 1982 ; Evaluation Review Volume 6 ; 6 >
+        au < manifest ; 1983 ; Evaluation Review Volume 7 ; 7 >
+        au < manifest ; 1984 ; Evaluation Review Volume 8 ; 8 >
+        au < manifest ; 1985 ; Evaluation Review Volume 9 ; 9 >
+        au < manifest ; 1986 ; Evaluation Review Volume 10 ; 10 >
+        au < manifest ; 1987 ; Evaluation Review Volume 11 ; 11 >
+        au < manifest ; 1988 ; Evaluation Review Volume 12 ; 12 >
+        au < manifest ; 1989 ; Evaluation Review Volume 13 ; 13 >
+        au < manifest ; 1990 ; Evaluation Review Volume 14 ; 14 >
+        au < manifest ; 1991 ; Evaluation Review Volume 15 ; 15 >
+        au < manifest ; 1992 ; Evaluation Review Volume 16 ; 16 >
+        au < manifest ; 1993 ; Evaluation Review Volume 17 ; 17 >
+        au < manifest ; 1994 ; Evaluation Review Volume 18 ; 18 >
+        au < manifest ; 1995 ; Evaluation Review Volume 19 ; 19 >
+        au < manifest ; 1996 ; Evaluation Review Volume 20 ; 20 >
+        au < manifest ; 1997 ; Evaluation Review Volume 21 ; 21 >
+        au < manifest ; 1998 ; Evaluation Review Volume 22 ; 22 >
+        au < manifest ; 1999 ; Evaluation Review Volume 23 ; 23 >
+        au < manifest ; 2000 ; Evaluation Review Volume 24 ; 24 >
+        au < manifest ; 2001 ; Evaluation Review Volume 25 ; 25 >
+        au < manifest ; 2002 ; Evaluation Review Volume 26 ; 26 >
+        au < manifest ; 2003 ; Evaluation Review Volume 27 ; 27 >
+        au < manifest ; 2004 ; Evaluation Review Volume 28 ; 28 >
+        au < manifest ; 2005 ; Evaluation Review Volume 29 ; 29 >
+        au < manifest ; 2006 ; Evaluation Review Volume 30 ; 30 >
+        au < manifest ; 2007 ; Evaluation Review Volume 31 ; 31 >
+        au < manifest ; 2008 ; Evaluation Review Volume 32 ; 32 >
+        au < manifest ; 2009 ; Evaluation Review Volume 33 ; 33 >
+        au < manifest ; 2010 ; Evaluation Review Volume 34 ; 34 >
+        au < manifest ; 2011 ; Evaluation Review Volume 35 ; 35 >
 
       }
 
@@ -8086,6 +9263,137 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ext.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1898-1890 ; The Expository Times Volume 1 ; 1 >
+        au < manifest ; 1890-1891 ; The Expository Times Volume 2 ; 2 >
+        au < manifest ; 1891-1892 ; The Expository Times Volume 3 ; 3 >
+        au < manifest ; 1892-1893 ; The Expository Times Volume 4 ; 4 >
+        au < manifest ; 1893-1894 ; The Expository Times Volume 5 ; 5 >
+        au < manifest ; 1894-1895 ; The Expository Times Volume 6 ; 6 >
+        au < manifest ; 1895-1896 ; The Expository Times Volume 7 ; 7 >
+        au < manifest ; 1896-1897 ; The Expository Times Volume 8 ; 8 >
+        au < manifest ; 1897-1898 ; The Expository Times Volume 9 ; 9 >
+        au < manifest ; 1898-1899 ; The Expository Times Volume 10 ; 10 >
+        au < manifest ; 1899-1900 ; The Expository Times Volume 11 ; 11 >
+        au < manifest ; 1900-1901 ; The Expository Times Volume 12 ; 12 >
+        au < manifest ; 1901-1902 ; The Expository Times Volume 13 ; 13 >
+        au < manifest ; 1902-1903 ; The Expository Times Volume 14 ; 14 >
+        au < manifest ; 1903-1904 ; The Expository Times Volume 15 ; 15 >
+        au < manifest ; 1904-1905 ; The Expository Times Volume 16 ; 16 >
+        au < manifest ; 1905-1906 ; The Expository Times Volume 17 ; 17 >
+        au < manifest ; 1906-1907 ; The Expository Times Volume 18 ; 18 >
+        au < manifest ; 1907-1908 ; The Expository Times Volume 19 ; 19 >
+        au < manifest ; 1908-1909 ; The Expository Times Volume 20 ; 20 >
+        au < manifest ; 1909-1910 ; The Expository Times Volume 21 ; 21 >
+        au < manifest ; 1910-1911 ; The Expository Times Volume 22 ; 22 >
+        au < manifest ; 1911-1912 ; The Expository Times Volume 23 ; 23 >
+        au < manifest ; 1912-1913 ; The Expository Times Volume 24 ; 24 >
+        au < manifest ; 1913-1914 ; The Expository Times Volume 25 ; 25 >
+        au < manifest ; 1914-1915 ; The Expository Times Volume 26 ; 26 >
+        au < manifest ; 1915-1916 ; The Expository Times Volume 27 ; 27 >
+        au < manifest ; 1916-1917 ; The Expository Times Volume 28 ; 28 >
+        au < manifest ; 1917-1918 ; The Expository Times Volume 29 ; 29 >
+        au < manifest ; 1918-1919 ; The Expository Times Volume 30 ; 30 >
+        au < manifest ; 1919-1920 ; The Expository Times Volume 31 ; 31 >
+        au < manifest ; 1920-1921 ; The Expository Times Volume 32 ; 32 >
+        au < manifest ; 1921-1922 ; The Expository Times Volume 33 ; 33 >
+        au < manifest ; 1922-1923 ; The Expository Times Volume 34 ; 34 >
+        au < manifest ; 1923-1924 ; The Expository Times Volume 35 ; 35 >
+        au < manifest ; 1924-1925 ; The Expository Times Volume 36 ; 36 >
+        au < manifest ; 1925-1926 ; The Expository Times Volume 37 ; 37 >
+        au < manifest ; 1926-1927 ; The Expository Times Volume 38 ; 38 >
+        au < manifest ; 1927-1928 ; The Expository Times Volume 39 ; 39 >
+        au < manifest ; 1928-1929 ; The Expository Times Volume 40 ; 40 >
+        au < manifest ; 1929-1930 ; The Expository Times Volume 41 ; 41 >
+        au < manifest ; 1930-1931 ; The Expository Times Volume 42 ; 42 >
+        au < manifest ; 1931-1932 ; The Expository Times Volume 43 ; 43 >
+        au < manifest ; 1932-1933 ; The Expository Times Volume 44 ; 44 >
+        au < manifest ; 1933-1934 ; The Expository Times Volume 45 ; 45 >
+        au < manifest ; 1934-1935 ; The Expository Times Volume 46 ; 46 >
+        au < manifest ; 1935-1936 ; The Expository Times Volume 47 ; 47 >
+        au < manifest ; 1936-1937 ; The Expository Times Volume 48 ; 48 >
+        au < manifest ; 1937-1938 ; The Expository Times Volume 49 ; 49 >
+        au < manifest ; 1938-1939 ; The Expository Times Volume 50 ; 50 >
+        au < manifest ; 1939-1940 ; The Expository Times Volume 51 ; 51 >
+        au < manifest ; 1940-1941 ; The Expository Times Volume 52 ; 52 >
+        au < manifest ; 1941-1942 ; The Expository Times Volume 53 ; 53 >
+        au < manifest ; 1942-1943 ; The Expository Times Volume 54 ; 54 >
+        au < manifest ; 1943-1944 ; The Expository Times Volume 55 ; 55 >
+        au < manifest ; 1944-1945 ; The Expository Times Volume 56 ; 56 >
+        au < manifest ; 1945-1946 ; The Expository Times Volume 57 ; 57 >
+        au < manifest ; 1946-1947 ; The Expository Times Volume 58 ; 58 >
+        au < manifest ; 1947-1948 ; The Expository Times Volume 59 ; 59 >
+        au < manifest ; 1948-1949 ; The Expository Times Volume 60 ; 60 >
+        au < manifest ; 1949-1950 ; The Expository Times Volume 61 ; 61 >
+        au < manifest ; 1950-1951 ; The Expository Times Volume 62 ; 62 >
+        au < manifest ; 1951-1952 ; The Expository Times Volume 63 ; 63 >
+        au < manifest ; 1952-1953 ; The Expository Times Volume 64 ; 64 >
+        au < manifest ; 1953-1954 ; The Expository Times Volume 65 ; 65 >
+        au < manifest ; 1954-1955 ; The Expository Times Volume 66 ; 66 >
+        au < manifest ; 1955-1956 ; The Expository Times Volume 67 ; 67 >
+        au < manifest ; 1956-1957 ; The Expository Times Volume 68 ; 68 >
+        au < manifest ; 1957-1958 ; The Expository Times Volume 69 ; 69 >
+        au < manifest ; 1958-1959 ; The Expository Times Volume 70 ; 70 >
+        au < manifest ; 1959-1960 ; The Expository Times Volume 71 ; 71 >
+        au < manifest ; 1960-1961 ; The Expository Times Volume 72 ; 72 >
+        au < manifest ; 1961-1962 ; The Expository Times Volume 73 ; 73 >
+        au < manifest ; 1962-1963 ; The Expository Times Volume 74 ; 74 >
+        au < manifest ; 1963-1964 ; The Expository Times Volume 75 ; 75 >
+        au < manifest ; 1964-1965 ; The Expository Times Volume 76 ; 76 >
+        au < manifest ; 1965-1966 ; The Expository Times Volume 77 ; 77 >
+        au < manifest ; 1966-1967 ; The Expository Times Volume 78 ; 78 >
+        au < manifest ; 1967-1968 ; The Expository Times Volume 79 ; 79 >
+        au < manifest ; 1968-1969 ; The Expository Times Volume 80 ; 80 >
+        au < manifest ; 1969-1970 ; The Expository Times Volume 81 ; 81 >
+        au < manifest ; 1970-1971 ; The Expository Times Volume 82 ; 82 >
+        au < manifest ; 1971-1972 ; The Expository Times Volume 83 ; 83 >
+        au < manifest ; 1972-1973 ; The Expository Times Volume 84 ; 84 >
+        au < manifest ; 1973-1974 ; The Expository Times Volume 85 ; 85 >
+        au < manifest ; 1974-1975 ; The Expository Times Volume 86 ; 86 >
+        au < manifest ; 1975-1976 ; The Expository Times Volume 87 ; 87 >
+        au < manifest ; 1976-1977 ; The Expository Times Volume 88 ; 88 >
+        au < manifest ; 1977-1978 ; The Expository Times Volume 89 ; 89 >
+        au < manifest ; 1978-1979 ; The Expository Times Volume 90 ; 90 >
+        au < manifest ; 1979-1980 ; The Expository Times Volume 91 ; 91 >
+        au < manifest ; 1980-1981 ; The Expository Times Volume 92 ; 92 >
+        au < manifest ; 1981-1982 ; The Expository Times Volume 93 ; 93 >
+        au < manifest ; 1982-1983 ; The Expository Times Volume 94 ; 94 >
+        au < manifest ; 1983-1984 ; The Expository Times Volume 95 ; 95 >
+        au < manifest ; 1984-1985 ; The Expository Times Volume 96 ; 96 >
+        au < manifest ; 1985-1986 ; The Expository Times Volume 97 ; 97 >
+        au < manifest ; 1986-1987 ; The Expository Times Volume 98 ; 98 >
+        au < manifest ; 1987-1988 ; The Expository Times Volume 99 ; 99 >
+        au < manifest ; 1988-1989 ; The Expository Times Volume 100 ; 100 >
+        au < manifest ; 1989-1990 ; The Expository Times Volume 101 ; 101 >
+        au < manifest ; 1990-1991 ; The Expository Times Volume 102 ; 102 >
+        au < manifest ; 1991-1992 ; The Expository Times Volume 103 ; 103 >
+        au < manifest ; 1992-1993 ; The Expository Times Volume 104 ; 104 >
+        au < manifest ; 1993-1994 ; The Expository Times Volume 105 ; 105 >
+        au < manifest ; 1994-1995 ; The Expository Times Volume 106 ; 106 >
+        au < manifest ; 1995-1996 ; The Expository Times Volume 107 ; 107 >
+        au < manifest ; 1996-1997 ; The Expository Times Volume 108 ; 108 >
+        au < manifest ; 1997-1998 ; The Expository Times Volume 109 ; 109 >
+        au < manifest ; 1998-1999 ; The Expository Times Volume 110 ; 110 >
+        au < manifest ; 1999-2000 ; The Expository Times Volume 111 ; 111 >
+        au < manifest ; 2000-2001 ; The Expository Times Volume 112 ; 112 >
+        au < manifest ; 2001-2002 ; The Expository Times Volume 113 ; 113 >
+        au < manifest ; 2002-2003 ; The Expository Times Volume 114 ; 114 >
+        au < manifest ; 2003-2004 ; The Expository Times Volume 115 ; 115 >
+        au < manifest ; 2004-2005 ; The Expository Times Volume 116 ; 116 >
+        au < manifest ; 2005-2006 ; The Expository Times Volume 117 ; 117 >
+        au < manifest ; 2006-2007 ; The Expository Times Volume 118 ; 118 >
+        au < manifest ; 2007-2008 ; The Expository Times Volume 119 ; 119 >
+        au < manifest ; 2008-2009 ; The Expository Times Volume 120 ; 120 >
+        au < manifest ; 2009-2010 ; The Expository Times Volume 121 ; 121 >
+        au < manifest ; 2010-2011 ; The Expository Times Volume 122 ; 122 >
+
+      }
+
     }
 
     {
@@ -8137,6 +9445,34 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tfj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1993 ; The Family Journal Volume 1 ; 1 >
+        au < manifest ; 1994 ; The Family Journal Volume 2 ; 2 >
+        au < manifest ; 1995 ; The Family Journal Volume 3 ; 3 >
+        au < manifest ; 1996 ; The Family Journal Volume 4 ; 4 >
+        au < manifest ; 1997 ; The Family Journal Volume 5 ; 5 >
+        au < manifest ; 1998 ; The Family Journal Volume 6 ; 6 >
+        au < manifest ; 1999 ; The Family Journal Volume 7 ; 7 >
+        au < manifest ; 2000 ; The Family Journal Volume 8 ; 8 >
+        au < manifest ; 2001 ; The Family Journal Volume 9 ; 9 >
+        au < manifest ; 2002 ; The Family Journal Volume 10 ; 10 >
+        au < manifest ; 2003 ; The Family Journal Volume 11 ; 11 >
+        au < manifest ; 2004 ; The Family Journal Volume 12 ; 12 >
+        au < manifest ; 2005 ; The Family Journal Volume 13 ; 13 >
+        au < manifest ; 2006 ; The Family Journal Volume 14 ; 14 >
+        au < manifest ; 2007 ; The Family Journal Volume 15 ; 15 >
+        au < manifest ; 2008 ; The Family Journal Volume 16 ; 16 >
+        au < manifest ; 2009 ; The Family Journal Volume 17 ; 17 >
+        au < manifest ; 2010 ; The Family Journal Volume 18 ; 18 >
+        au < manifest ; 2011 ; The Family Journal Volume 19 ; 19 >
+
+      }
+
     }
 
     {
@@ -8172,6 +9508,36 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fap.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; Feminism & Psychology Volume 1 ; 1 >
+        au < manifest ; 1992 ; Feminism & Psychology Volume 2 ; 2 >
+        au < manifest ; 1993 ; Feminism & Psychology Volume 3 ; 3 >
+        au < manifest ; 1994 ; Feminism & Psychology Volume 4 ; 4 >
+        au < manifest ; 1995 ; Feminism & Psychology Volume 5 ; 5 >
+        au < manifest ; 1996 ; Feminism & Psychology Volume 6 ; 6 >
+        au < manifest ; 1997 ; Feminism & Psychology Volume 7 ; 7 >
+        au < manifest ; 1998 ; Feminism & Psychology Volume 8 ; 8 >
+        au < manifest ; 1999 ; Feminism & Psychology Volume 9 ; 9 >
+        au < manifest ; 2000 ; Feminism & Psychology Volume 10 ; 10 >
+        au < manifest ; 2001 ; Feminism & Psychology Volume 11 ; 11 >
+        au < manifest ; 2002 ; Feminism & Psychology Volume 12 ; 12 >
+        au < manifest ; 2003 ; Feminism & Psychology Volume 13 ; 13 >
+        au < manifest ; 2004 ; Feminism & Psychology Volume 14 ; 14 >
+        au < manifest ; 2005 ; Feminism & Psychology Volume 15 ; 15 >
+        au < manifest ; 2006 ; Feminism & Psychology Volume 16 ; 16 >
+        au < manifest ; 2007 ; Feminism & Psychology Volume 17 ; 17 >
+        au < manifest ; 2008 ; Feminism & Psychology Volume 18 ; 18 >
+        au < manifest ; 2009 ; Feminism & Psychology Volume 19 ; 19 >
+        au < manifest ; 2010 ; Feminism & Psychology Volume 20 ; 20 >
+        au < manifest ; 2011 ; Feminism & Psychology Volume 21 ; 21 >
+
+      }
+
     }
 
     {
@@ -8193,6 +9559,21 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Feminist Criminology Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; down ; Feminist Criminology Volume 4 ; 4 >
         au < HighWirePressH20Plugin ; manifest ; Feminist Criminology Volume 5 ; 5 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fcx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2006 ; Feminist Criminology Volume 1 ; 1 >
+        au < manifest ; 2007 ; Feminist Criminology Volume 2 ; 2 >
+        au < manifest ; 2008 ; Feminist Criminology Volume 3 ; 3 >
+        au < manifest ; 2009 ; Feminist Criminology Volume 4 ; 4 >
+        au < manifest ; 2010 ; Feminist Criminology Volume 5 ; 5 >
+        au < manifest ; 2011 ; Feminist Criminology Volume 6 ; 6 >
 
       }
 
@@ -8221,6 +9602,34 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fth.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992-1993 ; Feminist Theology Volume 1 ; 1 >
+        au < manifest ; 1993-1994 ; Feminist Theology Volume 2 ; 2 >
+        au < manifest ; 1994-1995 ; Feminist Theology Volume 3 ; 3 >
+        au < manifest ; 1995-1996 ; Feminist Theology Volume 4 ; 4 >
+        au < manifest ; 1996-1997 ; Feminist Theology Volume 5 ; 5 >
+        au < manifest ; 1997-1998 ; Feminist Theology Volume 6 ; 6 >
+        au < manifest ; 1998-1999 ; Feminist Theology Volume 7 ; 7 >
+        au < manifest ; 1999-2000 ; Feminist Theology Volume 8 ; 8 >
+        au < manifest ; 2000-2001 ; Feminist Theology Volume 9 ; 9 >
+        au < manifest ; 2001-2002 ; Feminist Theology Volume 10 ; 10 >
+        au < manifest ; 2002-2003 ; Feminist Theology Volume 11 ; 11 >
+        au < manifest ; 2003-2004 ; Feminist Theology Volume 12 ; 12 >
+        au < manifest ; 2004-2005 ; Feminist Theology Volume 13 ; 13 >
+        au < manifest ; 2005-2006 ; Feminist Theology Volume 14 ; 14 >
+        au < manifest ; 2006-2007 ; Feminist Theology Volume 15 ; 15 >
+        au < manifest ; 2007-2008 ; Feminist Theology Volume 16 ; 16 >
+        au < manifest ; 2008-2009 ; Feminist Theology Volume 17 ; 17 >
+        au < manifest ; 2009-2010 ; Feminist Theology Volume 18 ; 18 >
+        au < manifest ; 2010-2011 ; Feminist Theology Volume 19 ; 19 >
+
+      }
+
     }
 
     {
@@ -8246,6 +9655,27 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fty.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Feminist Theory Volume 1 ; 1 >
+        au < manifest ; 2001 ; Feminist Theory Volume 2 ; 2 >
+        au < manifest ; 2002 ; Feminist Theory Volume 3 ; 3 >
+        au < manifest ; 2003 ; Feminist Theory Volume 4 ; 4 >
+        au < manifest ; 2004 ; Feminist Theory Volume 5 ; 5 >
+        au < manifest ; 2005 ; Feminist Theory Volume 6 ; 6 >
+        au < manifest ; 2006 ; Feminist Theory Volume 7 ; 7 >
+        au < manifest ; 2007 ; Feminist Theory Volume 8 ; 8 >
+        au < manifest ; 2008 ; Feminist Theory Volume 9 ; 9 >
+        au < manifest ; 2009 ; Feminist Theory Volume 10 ; 10 >
+        au < manifest ; 2010 ; Feminist Theory Volume 11 ; 11 >
+        au < manifest ; 2011 ; Feminist Theory Volume 12 ; 12 >
+
+      }
+
     }
 
     {
@@ -8268,6 +9698,38 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Field Methods Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Field Methods Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Field Methods Volume 22 ; 22 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fmx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1989 ; Field Methods Volume 1 ; 1 >
+        au < manifest ; 1990 ; Field Methods Volume 2 ; 2 >
+        au < manifest ; 1991 ; Field Methods Volume 3 ; 3 >
+        au < manifest ; 1992 ; Field Methods Volume 4 ; 4 >
+        au < manifest ; 1993 ; Field Methods Volume 5 ; 5 >
+        au < manifest ; 1994 ; Field Methods Volume 6 ; 6 >
+        au < manifest ; 1995 ; Field Methods Volume 7 ; 7 >
+        au < manifest ; 1996 ; Field Methods Volume 8 ; 8 >
+        au < manifest ; 1997 ; Field Methods Volume 9 ; 9 >
+        au < manifest ; 1998 ; Field Methods Volume 10 ; 10 >
+        au < manifest ; 1999 ; Field Methods Volume 11 ; 11 >
+        au < manifest ; 2000 ; Field Methods Volume 12 ; 12 >
+        au < manifest ; 2001 ; Field Methods Volume 13 ; 13 >
+        au < manifest ; 2002 ; Field Methods Volume 14 ; 14 >
+        au < manifest ; 2003 ; Field Methods Volume 15 ; 15 >
+        au < manifest ; 2004 ; Field Methods Volume 16 ; 16 >
+        au < manifest ; 2005 ; Field Methods Volume 17 ; 17 >
+        au < manifest ; 2006 ; Field Methods Volume 18 ; 18 >
+        au < manifest ; 2007 ; Field Methods Volume 19 ; 19 >
+        au < manifest ; 2008 ; Field Methods Volume 20 ; 20 >
+        au < manifest ; 2009 ; Field Methods Volume 21 ; 21 >
+        au < manifest ; 2010 ; Field Methods Volume 22 ; 22 >
+        au < manifest ; 2011 ; Field Methods Volume 23 ; 23 >
 
       }
 
@@ -8306,6 +9768,46 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fla.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1980 ; First Language Volume 1 ; 1 >
+        au < manifest ; 1981 ; First Language Volume 2 ; 2 >
+        au < manifest ; 1982 ; First Language Volume 3 ; 3 >
+        au < manifest ; 1983 ; First Language Volume 4 ; 4 >
+        au < manifest ; 1984 ; First Language Volume 5 ; 5 >
+        au < manifest ; 1986 ; First Language Volume 6 ; 6 >
+        au < manifest ; 1987 ; First Language Volume 7 ; 7 >
+        au < manifest ; 1988 ; First Language Volume 8 ; 8 >
+        au < manifest ; 1989 ; First Language Volume 9 ; 9 >
+        au < manifest ; 1990 ; First Language Volume 10 ; 10 >
+        au < manifest ; 1991 ; First Language Volume 11 ; 11 >
+        au < manifest ; 1992 ; First Language Volume 12 ; 12 >
+        au < manifest ; 1993 ; First Language Volume 13 ; 13 >
+        au < manifest ; 1994 ; First Language Volume 14 ; 14 >
+        au < manifest ; 1995 ; First Language Volume 15 ; 15 >
+        au < manifest ; 1996 ; First Language Volume 16 ; 16 >
+        au < manifest ; 1997 ; First Language Volume 17 ; 17 >
+        au < manifest ; 1998 ; First Language Volume 18 ; 18 >
+        au < manifest ; 1999 ; First Language Volume 19 ; 19 >
+        au < manifest ; 2000 ; First Language Volume 20 ; 20 >
+        au < manifest ; 2001 ; First Language Volume 21 ; 21 >
+        au < exists ; 2002 ; First Language Volume 22 ; 22 >
+        au < manifest ; 2003 ; First Language Volume 23 ; 23 >
+        au < manifest ; 2004 ; First Language Volume 24 ; 24 >
+        au < manifest ; 2005 ; First Language Volume 25 ; 25 >
+        au < manifest ; 2006 ; First Language Volume 26 ; 26 >
+        au < manifest ; 2007 ; First Language Volume 27 ; 27 >
+        au < manifest ; 2008 ; First Language Volume 28 ; 28 >
+        au < manifest ; 2009 ; First Language Volume 29 ; 29 >
+        au < manifest ; 2010 ; First Language Volume 30 ; 30 >
+        au < manifest ; 2011 ; First Language Volume 31 ; 31 >
+
+      }
+
     }
 
     {
@@ -8328,7 +9830,42 @@ comment[exm] = now published by Springer
 
       }
 
-  }
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://foa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Focus on Autism and Other Developmental Disabilities Volume 1 ; 1 >
+        au < manifest ; 1987 ; Focus on Autism and Other Developmental Disabilities Volume 2 ; 2 >
+        au < manifest ; 1988 ; Focus on Autism and Other Developmental Disabilities Volume 3 ; 3 >
+        au < manifest ; 1989 ; Focus on Autism and Other Developmental Disabilities Volume 4 ; 4 >
+        au < manifest ; 1990 ; Focus on Autism and Other Developmental Disabilities Volume 5 ; 5 >
+        au < manifest ; 1991 ; Focus on Autism and Other Developmental Disabilities Volume 6 ; 6 >
+        au < manifest ; 1992 ; Focus on Autism and Other Developmental Disabilities Volume 7 ; 7 >
+        au < manifest ; 1993 ; Focus on Autism and Other Developmental Disabilities Volume 8 ; 8 >
+        au < manifest ; 1994 ; Focus on Autism and Other Developmental Disabilities Volume 9 ; 9 >
+        au < manifest ; 1995 ; Focus on Autism and Other Developmental Disabilities Volume 10 ; 10 >
+        au < manifest ; 1996 ; Focus on Autism and Other Developmental Disabilities Volume 11 ; 11 >
+        au < manifest ; 1997 ; Focus on Autism and Other Developmental Disabilities Volume 12 ; 12 >
+        au < manifest ; 1998 ; Focus on Autism and Other Developmental Disabilities Volume 13 ; 13 >
+        au < manifest ; 1999 ; Focus on Autism and Other Developmental Disabilities Volume 14 ; 14 >
+        au < manifest ; 2000 ; Focus on Autism and Other Developmental Disabilities Volume 15 ; 15 >
+        au < manifest ; 2001 ; Focus on Autism and Other Developmental Disabilities Volume 16 ; 16 >
+        au < manifest ; 2002 ; Focus on Autism and Other Developmental Disabilities Volume 17 ; 17 >
+        au < manifest ; 2003 ; Focus on Autism and Other Developmental Disabilities Volume 18 ; 18 >
+        au < manifest ; 2004 ; Focus on Autism and Other Developmental Disabilities Volume 19 ; 19 >
+        au < manifest ; 2005 ; Focus on Autism and Other Developmental Disabilities Volume 20 ; 20 >
+        au < manifest ; 2006 ; Focus on Autism and Other Developmental Disabilities Volume 21 ; 21 >
+        au < manifest ; 2007 ; Focus on Autism and Other Developmental Disabilities Volume 22 ; 22 >
+        au < manifest ; 2008 ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 >
+        au < manifest ; 2009 ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
+        au < manifest ; 2010 ; Focus on Autism and Other Developmental Disabilities Volume 25 ; 25 >
+        au < manifest ; 2011 ; Focus on Autism and Other Developmental Disabilities Volume 26 ; 26 >
+
+      }
+
+    }
 
     {
 
@@ -8350,6 +9887,32 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Food Science and Technology International Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Food Science and Technology International Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Food Science and Technology International Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fst.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Food Science and Technology International Volume 1 ; 1 >
+        au < manifest ; 1996 ; Food Science and Technology International Volume 2 ; 2 >
+        au < manifest ; 1997 ; Food Science and Technology International Volume 3 ; 3 >
+        au < manifest ; 1998 ; Food Science and Technology International Volume 4 ; 4 >
+        au < manifest ; 1999 ; Food Science and Technology International Volume 5 ; 5 >
+        au < manifest ; 2000 ; Food Science and Technology International Volume 6 ; 6 >
+        au < manifest ; 2001 ; Food Science and Technology International Volume 7 ; 7 >
+        au < manifest ; 2002 ; Food Science and Technology International Volume 8 ; 8 >
+        au < manifest ; 2003 ; Food Science and Technology International Volume 9 ; 9 >
+        au < manifest ; 2004 ; Food Science and Technology International Volume 10 ; 10 >
+        au < manifest ; 2005 ; Food Science and Technology International Volume 11 ; 11 >
+        au < manifest ; 2006 ; Food Science and Technology International Volume 12 ; 12 >
+        au < manifest ; 2007 ; Food Science and Technology International Volume 13 ; 13 >
+        au < manifest ; 2008 ; Food Science and Technology International Volume 14 ; 14 >
+        au < manifest ; 2009 ; Food Science and Technology International Volume 15 ; 15 >
+        au < manifest ; 2010 ; Food Science and Technology International Volume 16 ; 16 >
+        au < manifest ; 2011 ; Food Science and Technology International Volume 17 ; 17 >
 
       }
 
@@ -8375,7 +9938,20 @@ comment[exm] = now published by Springer
 
       }
   
-  }
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Foot & Ankle Specialist Volume 1 ; 1 >
+        au < manifest ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 >
+        au < manifest ; 2010 ; Foot & Ankle Specialist Volume 3 ; 3 >
+        au < manifest ; 2011 ; Foot & Ankle Specialist Volume 4 ; 4 >
+
+      }
+
+    }
 
     {
 
@@ -8407,6 +9983,37 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; French Cultural Studies Volume 21 ; 21 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://frc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; French Cultural Studies Volume 1 ; 1 >
+        au < manifest ; 1991 ; French Cultural Studies Volume 2 ; 2 >
+        au < manifest ; 1992 ; French Cultural Studies Volume 3 ; 3 >
+        au < manifest ; 1993 ; French Cultural Studies Volume 4 ; 4 >
+        au < manifest ; 1994 ; French Cultural Studies Volume 5 ; 5 >
+        au < manifest ; 1995 ; French Cultural Studies Volume 6 ; 6 >
+        au < manifest ; 1996 ; French Cultural Studies Volume 7 ; 7 >
+        au < manifest ; 1997 ; French Cultural Studies Volume 8 ; 8 >
+        au < manifest ; 1998 ; French Cultural Studies Volume 9 ; 9 >
+        au < manifest ; 1999 ; French Cultural Studies Volume 10 ; 10 >
+        au < manifest ; 2000 ; French Cultural Studies Volume 11 ; 11 >
+        au < manifest ; 2001 ; French Cultural Studies Volume 12 ; 12 >
+        au < manifest ; 2002 ; French Cultural Studies Volume 13 ; 13 >
+        au < manifest ; 2003 ; French Cultural Studies Volume 14 ; 14 >
+        au < manifest ; 2004 ; French Cultural Studies Volume 15 ; 15 >
+        au < manifest ; 2005 ; French Cultural Studies Volume 16 ; 16 >
+        au < manifest ; 2006 ; French Cultural Studies Volume 17 ; 17 >
+        au < manifest ; 2007 ; French Cultural Studies Volume 18 ; 18 >
+        au < manifest ; 2008 ; French Cultural Studies Volume 19 ; 19 >
+        au < manifest ; 2009 ; French Cultural Studies Volume 20 ; 20 >
+        au < manifest ; 2010 ; French Cultural Studies Volume 21 ; 21 >
+        au < manifest ; 2011 ; French Cultural Studies Volume 22 ; 22 >
 
       }
 
@@ -8444,6 +10051,21 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gac.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2006 ; Games and Culture Volume 1 ; 1 >
+        au < manifest ; 2007 ; Games and Culture Volume 2 ; 2 >
+        au < manifest ; 2008 ; Games and Culture Volume 3 ; 3 >
+        au < manifest ; 2009 ; Games and Culture Volume 4 ; 4 >
+        au < manifest ; 2010 ; Games and Culture Volume 5 ; 5 >
+        au < manifest ; 2011 ; Games and Culture Volume 6 ; 6 >
+
+      }
+
     }
 
     {
@@ -8466,6 +10088,40 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Gender & Society Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Gender & Society Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; manifest ; Gender & Society Volume 24 ; 24 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Gender & Society Volume 1 ; 1 >
+        au < manifest ; 1988 ; Gender & Society Volume 2 ; 2 >
+        au < manifest ; 1989 ; Gender & Society Volume 3 ; 3 >
+        au < manifest ; 1990 ; Gender & Society Volume 4 ; 4 >
+        au < manifest ; 1991 ; Gender & Society Volume 5 ; 5 >
+        au < manifest ; 1992 ; Gender & Society Volume 6 ; 6 >
+        au < manifest ; 1993 ; Gender & Society Volume 7 ; 7 >
+        au < manifest ; 1994 ; Gender & Society Volume 8 ; 8 >
+        au < manifest ; 1995 ; Gender & Society Volume 9 ; 9 >
+        au < manifest ; 1996 ; Gender & Society Volume 10 ; 10 >
+        au < manifest ; 1997 ; Gender & Society Volume 11 ; 11 >
+        au < manifest ; 1998 ; Gender & Society Volume 12 ; 12 >
+        au < manifest ; 1999 ; Gender & Society Volume 13 ; 13 >
+        au < manifest ; 2000 ; Gender & Society Volume 14 ; 14 >
+        au < manifest ; 2001 ; Gender & Society Volume 15 ; 15 >
+        au < manifest ; 2002 ; Gender & Society Volume 16 ; 16 >
+        au < manifest ; 2003 ; Gender & Society Volume 17 ; 17 >
+        au < manifest ; 2004 ; Gender & Society Volume 18 ; 18 >
+        au < manifest ; 2005 ; Gender & Society Volume 19 ; 19 >
+        au < manifest ; 2006 ; Gender & Society Volume 20 ; 20 >
+        au < manifest ; 2007 ; Gender & Society Volume 21 ; 21 >
+        au < manifest ; 2008 ; Gender & Society Volume 22 ; 22 >
+        au < manifest ; 2009 ; Gender & Society Volume 23 ; 23 >
+        au < manifest ; 2010 ; Gender & Society Volume 24 ; 24 >
+        au < manifest ; 2011 ; Gender & Society Volume 25 ; 25 >
 
       }
 
@@ -8493,6 +10149,29 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gtd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Gender, Technology and Development Volume 1 ; 1 >
+        au < manifest ; 1998 ; Gender, Technology and Development Volume 2 ; 2 >
+        au < manifest ; 1999 ; Gender, Technology and Development Volume 3 ; 3 >
+        au < manifest ; 2000 ; Gender, Technology and Development Volume 4 ; 4 >
+        au < manifest ; 2001 ; Gender, Technology and Development Volume 5 ; 5 >
+        au < manifest ; 2002 ; Gender, Technology and Development Volume 6 ; 6 >
+        au < manifest ; 2003 ; Gender, Technology and Development Volume 7 ; 7 >
+        au < manifest ; 2004 ; Gender, Technology and Development Volume 8 ; 8 >
+        au < manifest ; 2005 ; Gender, Technology and Development Volume 9 ; 9 >
+        au < manifest ; 2006 ; Gender, Technology and Development Volume 10 ; 10 >
+        au < manifest ; 2007 ; Gender, Technology and Development Volume 11 ; 11 >
+        au < manifest ; 2008 ; Gender, Technology and Development Volume 12 ; 12 >
+        au < manifest ; 2009 ; Gender, Technology and Development Volume 13 ; 13 >
+        au < manifest ; 2010 ; Gender, Technology and Development Volume 14 ; 14 >
+
+      }
+
     }
 
     {
@@ -8507,6 +10186,9 @@ comment[exm] = now published by Springer
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://gos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 >
+        au < exists ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 >
 
       }
 
@@ -8533,7 +10215,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; doNotProcess ; German History Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; German History Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; German History Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; manifest ; German History Volume 26 ; 26 >
 
       }
 
@@ -8558,6 +10239,70 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Gifted Child Quarterly Volume 52 ; 52 >
         au < HighWirePressPlugin ; down ; Gifted Child Quarterly Volume 53 ; 53 >
         au < HighWirePressH20Plugin ; manifest ; Gifted Child Quarterly Volume 54 ; 54 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gcq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1957 ; Gifted Child Quarterly Volume 1 ; 1 >
+        au < manifest ; 1958 ; Gifted Child Quarterly Volume 2 ; 2 >
+        au < manifest ; 1959 ; Gifted Child Quarterly Volume 3 ; 3 >
+        au < manifest ; 1960 ; Gifted Child Quarterly Volume 4 ; 4 >
+        au < manifest ; 1961 ; Gifted Child Quarterly Volume 5 ; 5 >
+        au < manifest ; 1962 ; Gifted Child Quarterly Volume 6 ; 6 >
+        au < manifest ; 1963 ; Gifted Child Quarterly Volume 7 ; 7 >
+        au < manifest ; 1964 ; Gifted Child Quarterly Volume 8 ; 8 >
+        au < manifest ; 1965 ; Gifted Child Quarterly Volume 9 ; 9 >
+        au < manifest ; 1966 ; Gifted Child Quarterly Volume 10 ; 10 >
+        au < manifest ; 1967 ; Gifted Child Quarterly Volume 11 ; 11 >
+        au < manifest ; 1968 ; Gifted Child Quarterly Volume 12 ; 12 >
+        au < manifest ; 1969 ; Gifted Child Quarterly Volume 13 ; 13 >
+        au < manifest ; 1970 ; Gifted Child Quarterly Volume 14 ; 14 >
+        au < manifest ; 1971 ; Gifted Child Quarterly Volume 15 ; 15 >
+        au < manifest ; 1972 ; Gifted Child Quarterly Volume 16 ; 16 >
+        au < manifest ; 1973 ; Gifted Child Quarterly Volume 17 ; 17 >
+        au < manifest ; 1974 ; Gifted Child Quarterly Volume 18 ; 18 >
+        au < manifest ; 1975 ; Gifted Child Quarterly Volume 19 ; 19 >
+        au < manifest ; 1976 ; Gifted Child Quarterly Volume 20 ; 20 >
+        au < manifest ; 1977 ; Gifted Child Quarterly Volume 21 ; 21 >
+        au < manifest ; 1978 ; Gifted Child Quarterly Volume 22 ; 22 >
+        au < manifest ; 1979 ; Gifted Child Quarterly Volume 23 ; 23 >
+        au < manifest ; 1980 ; Gifted Child Quarterly Volume 24 ; 24 >
+        au < manifest ; 1981 ; Gifted Child Quarterly Volume 25 ; 25 >
+        au < manifest ; 1982 ; Gifted Child Quarterly Volume 26 ; 26 >
+        au < manifest ; 1983 ; Gifted Child Quarterly Volume 27 ; 27 >
+        au < manifest ; 1984 ; Gifted Child Quarterly Volume 28 ; 28 >
+        au < manifest ; 1985 ; Gifted Child Quarterly Volume 29 ; 29 >
+        au < manifest ; 1986 ; Gifted Child Quarterly Volume 30 ; 30 >
+        au < manifest ; 1987 ; Gifted Child Quarterly Volume 31 ; 31 >
+        au < manifest ; 1988 ; Gifted Child Quarterly Volume 32 ; 32 >
+        au < manifest ; 1989 ; Gifted Child Quarterly Volume 33 ; 33 >
+        au < manifest ; 1990 ; Gifted Child Quarterly Volume 34 ; 34 >
+        au < manifest ; 1991 ; Gifted Child Quarterly Volume 35 ; 35 >
+        au < manifest ; 1992 ; Gifted Child Quarterly Volume 36 ; 36 >
+        au < manifest ; 1993 ; Gifted Child Quarterly Volume 37 ; 37 >
+        au < manifest ; 1994 ; Gifted Child Quarterly Volume 38 ; 38 >
+        au < manifest ; 1995 ; Gifted Child Quarterly Volume 39 ; 39 >
+        au < manifest ; 1996 ; Gifted Child Quarterly Volume 40 ; 40 >
+        au < manifest ; 1997 ; Gifted Child Quarterly Volume 41 ; 41 >
+        au < manifest ; 1998 ; Gifted Child Quarterly Volume 42 ; 42 >
+        au < manifest ; 1999 ; Gifted Child Quarterly Volume 43 ; 43 >
+        au < manifest ; 2000 ; Gifted Child Quarterly Volume 44 ; 44 >
+        au < manifest ; 2001 ; Gifted Child Quarterly Volume 45 ; 45 >
+        au < manifest ; 2002 ; Gifted Child Quarterly Volume 46 ; 46 >
+        au < manifest ; 2003 ; Gifted Child Quarterly Volume 47 ; 47 >
+        au < manifest ; 2004 ; Gifted Child Quarterly Volume 48 ; 48 >
+        au < manifest ; 2005 ; Gifted Child Quarterly Volume 49 ; 49 >
+        au < manifest ; 2006 ; Gifted Child Quarterly Volume 50 ; 50 >
+        au < manifest ; 2007 ; Gifted Child Quarterly Volume 51 ; 51 >
+        au < manifest ; 2008 ; Gifted Child Quarterly Volume 52 ; 52 >
+        au < manifest ; 2009 ; Gifted Child Quarterly Volume 53 ; 53 >
+        au < manifest ; 2010 ; Gifted Child Quarterly Volume 54 ; 54 >
+        au < manifest ; 2011 ; Gifted Child Quarterly Volume 55 ; 55 >
 
       }
 
@@ -8586,6 +10331,27 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gbr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Global Business Review Volume 1 ; 1 >
+        au < manifest ; 2001 ; Global Business Review Volume 2 ; 2 >
+        au < manifest ; 2002 ; Global Business Review Volume 3 ; 3 >
+        au < manifest ; 2003 ; Global Business Review Volume 4 ; 4 >
+        au < manifest ; 2004 ; Global Business Review Volume 5 ; 5 >
+        au < manifest ; 2005 ; Global Business Review Volume 6 ; 6 >
+        au < manifest ; 2006 ; Global Business Review Volume 7 ; 7 >
+        au < manifest ; 2007 ; Global Business Review Volume 8 ; 8 >
+        au < manifest ; 2008 ; Global Business Review Volume 9 ; 9 >
+        au < manifest ; 2009 ; Global Business Review Volume 10 ; 10 >
+        au < manifest ; 2010 ; Global Business Review Volume 11 ; 11 >
+        au < manifest ; 2011 ; Global Business Review Volume 12 ; 12 >
+
+      }
+
     }
 
     {
@@ -8608,6 +10374,33 @@ comment[exm] = now published by Springer
 
       }
       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ped.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; Global Health Promotion Volume 1 ; 1 >
+        au < manifest ; 1995 ; Global Health Promotion Volume 2 ; 2 >
+        au < manifest ; 1996 ; Global Health Promotion Volume 3 ; 3 >
+        au < manifest ; 1997 ; Global Health Promotion Volume 4 ; 4 >
+        au < manifest ; 1998 ; Global Health Promotion Volume 5 ; 5 >
+        au < manifest ; 1999 ; Global Health Promotion Volume 6 ; 6 >
+        au < manifest ; 2000 ; Global Health Promotion Volume 7 ; 7 >
+        au < manifest ; 2001 ; Global Health Promotion Volume 8 ; 8 >
+        au < manifest ; 2002 ; Global Health Promotion Volume 9 ; 9 >
+        au < manifest ; 2003 ; Global Health Promotion Volume 10 ; 10 >
+        au < manifest ; 2004 ; Global Health Promotion Volume 11 ; 11 >
+        au < manifest ; 2005 ; Global Health Promotion Volume 12 ; 12 >
+        au < manifest ; 2006 ; Global Health Promotion Volume 13 ; 13 >
+        au < manifest ; 2007 ; Global Health Promotion Volume 14 ; 14 >
+        au < manifest ; 2008 ; Global Health Promotion Volume 15 ; 15 >
+        au < manifest ; 2009 ; Global Health Promotion Volume 16 ; 16 >
+        au < manifest ; 2010 ; Global Health Promotion Volume 17 ; 17 >
+        au < manifest ; 2011 ; Global Health Promotion Volume 18 ; 18 >
+
+      }
+
     }
 
     {
@@ -8626,6 +10419,18 @@ comment[exm] = now published by Springer
 
         au < HighWirePressPlugin ; down ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; manifest ; Global Journal of Emerging Market Economies Volume 2 ; 2 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eme.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
+        au < manifest ; 2010 ; Global Journal of Emerging Market Economies Volume 2 ; 2 >
+        au < manifest ; 2011 ; Global Journal of Emerging Market Economies Volume 3 ; 3 >
 
       }
 
@@ -8654,6 +10459,22 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gmc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2005 ; Global Media and Communication Volume 1 ; 1 >
+        au < manifest ; 2006 ; Global Media and Communication Volume 2 ; 2 >
+        au < manifest ; 2007 ; Global Media and Communication Volume 3 ; 3 >
+        au < manifest ; 2008 ; Global Media and Communication Volume 4 ; 4 >
+        au < manifest ; 2009 ; Global Media and Communication Volume 5 ; 5 >
+        au < manifest ; 2010 ; Global Media and Communication Volume 6 ; 6 >
+        au < manifest ; 2011 ; Global Media and Communication Volume 7 ; 7 >
+
+      }
+
     }
 
     {
@@ -8676,6 +10497,26 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Global Social Policy Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Global Social Policy Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; Global Social Policy Volume 10 ; 10 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gsp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Global Social Policy Volume 1 ; 1 >
+        au < manifest ; 2002 ; Global Social Policy Volume 2 ; 2 >
+        au < manifest ; 2003 ; Global Social Policy Volume 3 ; 3 >
+        au < manifest ; 2004 ; Global Social Policy Volume 4 ; 4 >
+        au < manifest ; 2005 ; Global Social Policy Volume 5 ; 5 >
+        au < manifest ; 2006 ; Global Social Policy Volume 6 ; 6 >
+        au < manifest ; 2007 ; Global Social Policy Volume 7 ; 7 >
+        au < manifest ; 2008 ; Global Social Policy Volume 8 ; 8 >
+        au < manifest ; 2009 ; Global Social Policy Volume 9 ; 9 >
+        au < manifest ; 2010 ; Global Social Policy Volume 10 ; 10 >
+        au < manifest ; 2011 ; Global Social Policy Volume 11 ; 11 >
 
       }
 
@@ -8714,6 +10555,51 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gom.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1976 ; Group & Organization Management Volume 1 ; 1 >
+        au < manifest ; 1977 ; Group & Organization Management Volume 2 ; 2 >
+        au < manifest ; 1978 ; Group & Organization Management Volume 3 ; 3 >
+        au < manifest ; 1979 ; Group & Organization Management Volume 4 ; 4 >
+        au < manifest ; 1980 ; Group & Organization Management Volume 5 ; 5 >
+        au < manifest ; 1981 ; Group & Organization Management Volume 6 ; 6 >
+        au < manifest ; 1982 ; Group & Organization Management Volume 7 ; 7 >
+        au < manifest ; 1983 ; Group & Organization Management Volume 8 ; 8 >
+        au < manifest ; 1984 ; Group & Organization Management Volume 9 ; 9 >
+        au < manifest ; 1985 ; Group & Organization Management Volume 10 ; 10 >
+        au < manifest ; 1986 ; Group & Organization Management Volume 11 ; 11 >
+        au < manifest ; 1987 ; Group & Organization Management Volume 12 ; 12 >
+        au < manifest ; 1988 ; Group & Organization Management Volume 13 ; 13 >
+        au < manifest ; 1989 ; Group & Organization Management Volume 14 ; 14 >
+        au < manifest ; 1990 ; Group & Organization Management Volume 15 ; 15 >
+        au < manifest ; 1991 ; Group & Organization Management Volume 16 ; 16 >
+        au < manifest ; 1992 ; Group & Organization Management Volume 17 ; 17 >
+        au < manifest ; 1993 ; Group & Organization Management Volume 18 ; 18 >
+        au < manifest ; 1994 ; Group & Organization Management Volume 19 ; 19 >
+        au < manifest ; 1995 ; Group & Organization Management Volume 20 ; 20 >
+        au < manifest ; 1996 ; Group & Organization Management Volume 21 ; 21 >
+        au < manifest ; 1997 ; Group & Organization Management Volume 22 ; 22 >
+        au < manifest ; 1998 ; Group & Organization Management Volume 23 ; 23 >
+        au < manifest ; 1999 ; Group & Organization Management Volume 24 ; 24 >
+        au < manifest ; 2000 ; Group & Organization Management Volume 25 ; 25 >
+        au < manifest ; 2001 ; Group & Organization Management Volume 26 ; 26 >
+        au < manifest ; 2002 ; Group & Organization Management Volume 27 ; 27 >
+        au < manifest ; 2003 ; Group & Organization Management Volume 28 ; 28 >
+        au < manifest ; 2004 ; Group & Organization Management Volume 29 ; 29 >
+        au < manifest ; 2005 ; Group & Organization Management Volume 30 ; 30 >
+        au < manifest ; 2006 ; Group & Organization Management Volume 31 ; 31 >
+        au < manifest ; 2007 ; Group & Organization Management Volume 32 ; 32 >
+        au < manifest ; 2008 ; Group & Organization Management Volume 33 ; 33 >
+        au < manifest ; 2009 ; Group & Organization Management Volume 34 ; 34 >
+        au < manifest ; 2010 ; Group & Organization Management Volume 35 ; 35 >
+        au < manifest ; 2011 ; Group & Organization Management Volume 36 ; 36 >
+
+      }
+
     }
 
     {
@@ -8736,6 +10622,59 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Group Analysis Volume 41 ; 41 >
         au < HighWirePressPlugin ; down ; Group Analysis Volume 42 ; 42 >
         au < HighWirePressH20Plugin ; manifest ; Group Analysis Volume 43 ; 43 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gaq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1967 ; Group Analysis Volume 1 ; 1 >
+        au < manifest ; 1969 ; Group Analysis Volume 2 ; 2 >
+        au < manifest ; 1970 ; Group Analysis Volume 3 ; 3 >
+        au < manifest ; 1971 ; Group Analysis Volume 4 ; 4 >
+        au < manifest ; 1972 ; Group Analysis Volume 5 ; 5 >
+        au < manifest ; 1973 ; Group Analysis Volume 6 ; 6 >
+        au < manifest ; 1974 ; Group Analysis Volume 7 ; 7 >
+        au < manifest ; 1975 ; Group Analysis Volume 8 ; 8 >
+        au < manifest ; 1976 ; Group Analysis Volume 9 ; 9 >
+        au < manifest ; 1977 ; Group Analysis Volume 10 ; 10 >
+        au < manifest ; 1978 ; Group Analysis Volume 11 ; 11 >
+        au < manifest ; 1979 ; Group Analysis Volume 12 ; 12 >
+        au < manifest ; 1980 ; Group Analysis Volume 13 ; 13 >
+        au < manifest ; 1981 ; Group Analysis Volume 14 ; 14 >
+        au < manifest ; 1982 ; Group Analysis Volume 15 ; 15 >
+        au < manifest ; 1983 ; Group Analysis Volume 16 ; 16 >
+        au < exists ; 1984 ; Group Analysis Volume 17 ; 17 >
+        au < exists ; 1985 ; Group Analysis Volume 18 ; 18 >
+        au < manifest ; 1986 ; Group Analysis Volume 19 ; 19 >
+        au < manifest ; 1987 ; Group Analysis Volume 20 ; 20 >
+        au < manifest ; 1988 ; Group Analysis Volume 21 ; 21 >
+        au < manifest ; 1989 ; Group Analysis Volume 22 ; 22 >
+        au < manifest ; 1990 ; Group Analysis Volume 23 ; 23 >
+        au < manifest ; 1991 ; Group Analysis Volume 24 ; 24 >
+        au < manifest ; 1992 ; Group Analysis Volume 25 ; 25 >
+        au < manifest ; 1993 ; Group Analysis Volume 26 ; 26 >
+        au < manifest ; 1994 ; Group Analysis Volume 27 ; 27 >
+        au < manifest ; 1995 ; Group Analysis Volume 28 ; 28 >
+        au < manifest ; 1996 ; Group Analysis Volume 29 ; 29 >
+        au < manifest ; 1997 ; Group Analysis Volume 30 ; 30 >
+        au < manifest ; 1998 ; Group Analysis Volume 31 ; 31 >
+        au < manifest ; 1999 ; Group Analysis Volume 32 ; 32 >
+        au < manifest ; 2000 ; Group Analysis Volume 33 ; 33 >
+        au < manifest ; 2001 ; Group Analysis Volume 34 ; 34 >
+        au < manifest ; 2002 ; Group Analysis Volume 35 ; 35 >
+        au < manifest ; 2003 ; Group Analysis Volume 36 ; 36 >
+        au < manifest ; 2004 ; Group Analysis Volume 37 ; 37 >
+        au < manifest ; 2005 ; Group Analysis Volume 38 ; 38 >
+        au < manifest ; 2006 ; Group Analysis Volume 39 ; 39 >
+        au < manifest ; 2007 ; Group Analysis Volume 40 ; 40 >
+        au < manifest ; 2008 ; Group Analysis Volume 41 ; 41 >
+        au < manifest ; 2009 ; Group Analysis Volume 42 ; 42 >
+        au < manifest ; 2010 ; Group Analysis Volume 43 ; 43 >
+        au < manifest ; 2011 ; Group Analysis Volume 44 ; 44 >
 
       }
 
@@ -8774,6 +10713,29 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gpi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; Group Processes & Intergroup Relations Volume 1 ; 1 >
+        au < manifest ; 1999 ; Group Processes & Intergroup Relations Volume 2 ; 2 >
+        au < manifest ; 2000 ; Group Processes & Intergroup Relations Volume 3 ; 3 >
+        au < manifest ; 2001 ; Group Processes & Intergroup Relations Volume 4 ; 4 >
+        au < manifest ; 2002 ; Group Processes & Intergroup Relations Volume 5 ; 5 >
+        au < manifest ; 2003 ; Group Processes & Intergroup Relations Volume 6 ; 6 >
+        au < manifest ; 2004 ; Group Processes & Intergroup Relations Volume 7 ; 7 >
+        au < manifest ; 2005 ; Group Processes & Intergroup Relations Volume 8 ; 8 >
+        au < manifest ; 2006 ; Group Processes & Intergroup Relations Volume 9 ; 9 >
+        au < manifest ; 2007 ; Group Processes & Intergroup Relations Volume 10 ; 10 >
+        au < manifest ; 2008 ; Group Processes & Intergroup Relations Volume 11 ; 11 >
+        au < manifest ; 2009 ; Group Processes & Intergroup Relations Volume 12 ; 12 >
+        au < manifest ; 2010 ; Group Processes & Intergroup Relations Volume 13 ; 13 >
+        au < manifest ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 >
+
+      }
+
     }
 
     {
@@ -8809,6 +10771,31 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hij.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1996 ; The International Journal of Press/Politics Volume 1 ; 1 >
+        au < manifest ; 1997 ; The International Journal of Press/Politics Volume 2 ; 2 >
+        au < manifest ; 1998 ; The International Journal of Press/Politics Volume 3 ; 3 >
+        au < manifest ; 1999 ; The International Journal of Press/Politics Volume 4 ; 4 >
+        au < manifest ; 2000 ; The International Journal of Press/Politics Volume 5 ; 5 >
+        au < manifest ; 2001 ; The International Journal of Press/Politics Volume 6 ; 6 >
+        au < manifest ; 2002 ; The International Journal of Press/Politics Volume 7 ; 7 >
+        au < manifest ; 2003 ; The International Journal of Press/Politics Volume 8 ; 8 >
+        au < manifest ; 2004 ; The International Journal of Press/Politics Volume 9 ; 9 >
+        au < manifest ; 2005 ; The International Journal of Press/Politics Volume 10 ; 10 >
+        au < manifest ; 2006 ; The International Journal of Press/Politics Volume 11 ; 11 >
+        au < manifest ; 2007 ; The International Journal of Press/Politics Volume 12 ; 12 >
+        au < manifest ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 >
+        au < manifest ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 >
+        au < manifest ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 >
+        au < manifest ; 2011 ; The International Journal of Press/Politics Volume 16 ; 16 >
+
+      }
+
     }
 
     {
@@ -8841,6 +10828,53 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Health Education & Behavior Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Health Education & Behavior Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; manifest ; Health Education & Behavior Volume 37 ; 37 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://heb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; Health Education & Behavior Volume 1 ; 1 >
+        au < manifest ; 1974 ; Health Education & Behavior Volume 2 ; 2 >
+        au < manifest ; 1975 ; Health Education & Behavior Volume 3 ; 3 >
+        au < manifest ; 1976 ; Health Education & Behavior Volume 4 ; 4 >
+        au < manifest ; 1977 ; Health Education & Behavior Volume 5 ; 5 >
+        au < manifest ; 1978 ; Health Education & Behavior Volume 6 ; 6 >
+        au < manifest ; 1980 ; Health Education & Behavior Volume 7 ; 7 >
+        au < manifest ; 1981 ; Health Education & Behavior Volume 8 ; 8 >
+        au < manifest ; 1982 ; Health Education & Behavior Volume 9 ; 9 >
+        au < manifest ; 1983 ; Health Education & Behavior Volume 10 ; 10 >
+        au < manifest ; 1984 ; Health Education & Behavior Volume 11 ; 11 >
+        au < manifest ; 1985 ; Health Education & Behavior Volume 12 ; 12 >
+        au < manifest ; 1986 ; Health Education & Behavior Volume 13 ; 13 >
+        au < manifest ; 1987 ; Health Education & Behavior Volume 14 ; 14 >
+        au < manifest ; 1988 ; Health Education & Behavior Volume 15 ; 15 >
+        au < manifest ; 1989 ; Health Education & Behavior Volume 16 ; 16 >
+        au < manifest ; 1990 ; Health Education & Behavior Volume 17 ; 17 >
+        au < manifest ; 1991 ; Health Education & Behavior Volume 18 ; 18 >
+        au < manifest ; 1992 ; Health Education & Behavior Volume 19 ; 19 >
+        au < manifest ; 1993 ; Health Education & Behavior Volume 20 ; 20 >
+        au < manifest ; 1994 ; Health Education & Behavior Volume 21 ; 21 >
+        au < manifest ; 1994 ; Health Education & Behavior Volume 22 ; 22 >
+        au < manifest ; 1996 ; Health Education & Behavior Volume 23 ; 23 >
+        au < manifest ; 1997 ; Health Education & Behavior Volume 24 ; 24 >
+        au < manifest ; 1998 ; Health Education & Behavior Volume 25 ; 25 >
+        au < manifest ; 1999 ; Health Education & Behavior Volume 26 ; 26 >
+        au < manifest ; 2000 ; Health Education & Behavior Volume 27 ; 27 >
+        au < manifest ; 2001 ; Health Education & Behavior Volume 28 ; 28 >
+        au < manifest ; 2002 ; Health Education & Behavior Volume 29 ; 29 >
+        au < manifest ; 2003 ; Health Education & Behavior Volume 30 ; 30 >
+        au < manifest ; 2004 ; Health Education & Behavior Volume 31 ; 31 >
+        au < manifest ; 2005 ; Health Education & Behavior Volume 32 ; 32 >
+        au < manifest ; 2006 ; Health Education & Behavior Volume 33 ; 33 >
+        au < manifest ; 2007 ; Health Education & Behavior Volume 34 ; 34 >
+        au < manifest ; 2008 ; Health Education & Behavior Volume 35 ; 35 >
+        au < manifest ; 2009 ; Health Education & Behavior Volume 36 ; 36 >
+        au < manifest ; 2010 ; Health Education & Behavior Volume 37 ; 37 >
+        au < manifest ; 2011 ; Health Education & Behavior Volume 38 ; 38 >
 
       }
 
