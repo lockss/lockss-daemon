@@ -1,10 +1,10 @@
 /*
- * $Id: TopazHtmlFilterFactory.java,v 1.4 2009-06-11 21:51:01 greya Exp $
+ * $Id: TopazHtmlFilterFactory.java,v 1.5 2011-05-31 18:48:14 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,8 @@ package org.lockss.plugin.topaz;
 
 import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -44,29 +46,15 @@ public class TopazHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <div id="rhc">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "rhc")),
-        
-        // Filter out <div id="powered">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "powered")),         
-        // Filter out <div id="topbanner">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "topbanner")),
-               
-        // Filter out <div id="bannerRight">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "bannerRight")),                                                                   
+    NodeFilter[] filters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rhc"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "powered"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "topbanner"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "bannerRight"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }

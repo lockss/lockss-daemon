@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -28,8 +28,6 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sarticle/browse\.action\?.*year=%d&quot;, base_url, year</string>
-      <string>1,&quot;^%sjournals/%s/lockss\.txt$&quot;, base_url, journal_id</string>
       <string>1,&quot;^%sarticle/info(:|%%3A)doi(/|%%2F)&quot;, base_url</string>
       <string>1,&quot;^%sarticle/(citationList|fetch(First|Single)Representation|fetchObject(Attachment)?|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?&quot;, base_url</string>
       <string>1,&quot;^%sjournals/%s/article/fetchObject(Attachment)?\.action\?&quot;, base_url, journal_id</string>
@@ -55,7 +53,7 @@
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%sjournals/%s/lockss.txt&quot;, base_url, journal_id</string>      
+    <string>&quot;%slockss.txt&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
