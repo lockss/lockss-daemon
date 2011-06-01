@@ -5,7 +5,7 @@
 # export PYLORUS_MAIL="myemail@stanford.edu"
 
 # Use sleep command for debug.
-./pylorus.py $*
+$(dirname "$0")/pylorus.py $*
 # sleep 5
 
 # Use mailx to send a notification.
