@@ -10902,6 +10902,85 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hej.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1943 ; Health Education Journal Volume 1 ; 1 >
+        au < manifest ; 1944 ; Health Education Journal Volume 2 ; 2 >
+        au < manifest ; 1945 ; Health Education Journal Volume 3 ; 3 >
+        au < manifest ; 1946 ; Health Education Journal Volume 4 ; 4 >
+        au < manifest ; 1947 ; Health Education Journal Volume 5 ; 5 >
+        au < manifest ; 1948 ; Health Education Journal Volume 6 ; 6 >
+        au < manifest ; 1949 ; Health Education Journal Volume 7 ; 7 >
+        au < manifest ; 1950 ; Health Education Journal Volume 8 ; 8 >
+        au < manifest ; 1951 ; Health Education Journal Volume 9 ; 9 >
+        au < manifest ; 1952 ; Health Education Journal Volume 10 ; 10 >
+        au < manifest ; 1953 ; Health Education Journal Volume 11 ; 11 >
+        au < manifest ; 1954 ; Health Education Journal Volume 12 ; 12 >
+        au < manifest ; 1955 ; Health Education Journal Volume 13 ; 13 >
+        au < manifest ; 1956 ; Health Education Journal Volume 14 ; 14 >
+        au < manifest ; 1957 ; Health Education Journal Volume 15 ; 15 >
+        au < manifest ; 1958 ; Health Education Journal Volume 16 ; 16 >
+        au < manifest ; 1959 ; Health Education Journal Volume 17 ; 17 >
+        au < manifest ; 1960 ; Health Education Journal Volume 18 ; 18 >
+        au < manifest ; 1961 ; Health Education Journal Volume 19 ; 19 >
+        au < manifest ; 1962 ; Health Education Journal Volume 20 ; 20 >
+        au < manifest ; 1963 ; Health Education Journal Volume 21 ; 21 >
+        au < manifest ; 1964 ; Health Education Journal Volume 22 ; 22 >
+        au < manifest ; 1965 ; Health Education Journal Volume 23 ; 23 >
+        au < manifest ; 1965 ; Health Education Journal Volume 24 ; 24 >
+        au < manifest ; 1966 ; Health Education Journal Volume 25 ; 25 >
+        au < manifest ; 1967 ; Health Education Journal Volume 26 ; 26 >
+        au < manifest ; 1968 ; Health Education Journal Volume 27 ; 27 >
+        au < manifest ; 1969 ; Health Education Journal Volume 28 ; 28 >
+        au < manifest ; 1970 ; Health Education Journal Volume 29 ; 29 >
+        au < manifest ; 1971 ; Health Education Journal Volume 30 ; 30 >
+        au < manifest ; 1972 ; Health Education Journal Volume 31 ; 31 >
+        au < manifest ; 1973 ; Health Education Journal Volume 32 ; 32 >
+        au < manifest ; 1974 ; Health Education Journal Volume 33 ; 33 >
+        au < manifest ; 1975 ; Health Education Journal Volume 34 ; 34 >
+        au < manifest ; 1976 ; Health Education Journal Volume 35 ; 35 >
+        au < manifest ; 1977 ; Health Education Journal Volume 36 ; 36 >
+        au < manifest ; 1978 ; Health Education Journal Volume 37 ; 37 >
+        au < manifest ; 1979 ; Health Education Journal Volume 38 ; 38 >
+        au < manifest ; 1980 ; Health Education Journal Volume 39 ; 39 >
+        au < manifest ; 1981 ; Health Education Journal Volume 40 ; 40 >
+        au < manifest ; 1982 ; Health Education Journal Volume 41 ; 41 >
+        au < manifest ; 1983 ; Health Education Journal Volume 42 ; 42 >
+        au < manifest ; 1984 ; Health Education Journal Volume 43 ; 43 >
+        au < manifest ; 1985 ; Health Education Journal Volume 44 ; 44 >
+        au < manifest ; 1986 ; Health Education Journal Volume 45 ; 45 >
+        au < manifest ; 1987 ; Health Education Journal Volume 46 ; 46 >
+        au < manifest ; 1988 ; Health Education Journal Volume 47 ; 47 >
+        au < manifest ; 1988 ; Health Education Journal Volume 48 ; 48 >
+        au < manifest ; 1990 ; Health Education Journal Volume 49 ; 49 >
+        au < manifest ; 1991 ; Health Education Journal Volume 50 ; 50 >
+        au < manifest ; 1992 ; Health Education Journal Volume 51 ; 51 >
+        au < manifest ; 1993 ; Health Education Journal Volume 52 ; 52 >
+        au < manifest ; 1994 ; Health Education Journal Volume 53 ; 53 >
+        au < manifest ; 1995 ; Health Education Journal Volume 54 ; 54 >
+        au < manifest ; 1996 ; Health Education Journal Volume 55 ; 55 >
+        au < manifest ; 1997 ; Health Education Journal Volume 56 ; 56 >
+        au < manifest ; 1998 ; Health Education Journal Volume 57 ; 57 >
+        au < manifest ; 1999 ; Health Education Journal Volume 58 ; 58 >
+        au < manifest ; 2000 ; Health Education Journal Volume 59 ; 59 >
+        au < manifest ; 2001 ; Health Education Journal Volume 60 ; 60 >
+        au < manifest ; 2002 ; Health Education Journal Volume 61 ; 61 >
+        au < manifest ; 2003 ; Health Education Journal Volume 62 ; 62 >
+        au < manifest ; 2004 ; Health Education Journal Volume 63 ; 63 >
+        au < manifest ; 2005 ; Health Education Journal Volume 64 ; 64 >
+        au < manifest ; 2006 ; Health Education Journal Volume 65 ; 65 >
+        au < manifest ; 2007 ; Health Education Journal Volume 66 ; 66 >
+        au < manifest ; 2008 ; Health Education Journal Volume 67 ; 67 >
+        au < manifest ; 2009 ; Health Education Journal Volume 68 ; 68 >
+        au < manifest ; 2010 ; Health Education Journal Volume 69 ; 69 >
+        au < manifest ; 2011 ; Health Education Journal Volume 70 ; 70 >
+
+      }
+
     }
 
     {
@@ -10934,6 +11013,32 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Health Informatics Journal Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Health Informatics Journal Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Health Informatics Journal Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jhi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Health Informatics Journal Volume 1 ; 1 >
+        au < manifest ; 1996 ; Health Informatics Journal Volume 2 ; 2 >
+        au < manifest ; 1997 ; Health Informatics Journal Volume 3 ; 3 >
+        au < manifest ; 1998 ; Health Informatics Journal Volume 4 ; 4 >
+        au < manifest ; 1999 ; Health Informatics Journal Volume 5 ; 5 >
+        au < manifest ; 2000 ; Health Informatics Journal Volume 6 ; 6 >
+        au < manifest ; 2001 ; Health Informatics Journal Volume 7 ; 7 >
+        au < manifest ; 2002 ; Health Informatics Journal Volume 8 ; 8 >
+        au < manifest ; 2003 ; Health Informatics Journal Volume 9 ; 9 >
+        au < manifest ; 2004 ; Health Informatics Journal Volume 10 ; 10 >
+        au < manifest ; 2005 ; Health Informatics Journal Volume 11 ; 11 >
+        au < manifest ; 2006 ; Health Informatics Journal Volume 12 ; 12 >
+        au < manifest ; 2007 ; Health Informatics Journal Volume 13 ; 13 >
+        au < manifest ; 2008 ; Health Informatics Journal Volume 14 ; 14 >
+        au < manifest ; 2009 ; Health Informatics Journal Volume 15 ; 15 >
+        au < manifest ; 2010 ; Health Informatics Journal Volume 16 ; 16 >
+        au < exists ; 2011 ; Health Informatics Journal Volume 17 ; 17 >
 
       }
 
@@ -10972,12 +11077,33 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hpp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Health Promotion Practice Volume 1 ; 1 >
+        au < manifest ; 2001 ; Health Promotion Practice Volume 2 ; 2 >
+        au < manifest ; 2002 ; Health Promotion Practice Volume 3 ; 3 >
+        au < manifest ; 2003 ; Health Promotion Practice Volume 4 ; 4 >
+        au < manifest ; 2004 ; Health Promotion Practice Volume 5 ; 5 >
+        au < manifest ; 2005 ; Health Promotion Practice Volume 6 ; 6 >
+        au < manifest ; 2006 ; Health Promotion Practice Volume 7 ; 7 >
+        au < manifest ; 2007 ; Health Promotion Practice Volume 8 ; 8 >
+        au < manifest ; 2008 ; Health Promotion Practice Volume 9 ; 9 >
+        au < manifest ; 2009 ; Health Promotion Practice Volume 10 ; 10 >
+        au < manifest ; 2010 ; Health Promotion Practice Volume 11 ; 11 >
+        au < manifest ; 2011 ; Health Promotion Practice Volume 12 ; 12 >
+
+      }
+
     }
 
     {
 
       title <
-        name = Health: ;
+        name = Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine ;
         issn = 1363-4593 ;
         eissn = 1461-7196 ;
         issnl = 1363-4593
@@ -11007,6 +11133,30 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hea.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Health: Volume 1 ; 1 >
+        au < manifest ; 1998 ; Health: Volume 2 ; 2 >
+        au < manifest ; 1999 ; Health: Volume 3 ; 3 >
+        au < manifest ; 2000 ; Health: Volume 4 ; 4 >
+        au < manifest ; 2001 ; Health: Volume 5 ; 5 >
+        au < manifest ; 2002 ; Health: Volume 6 ; 6 >
+        au < manifest ; 2003 ; Health: Volume 7 ; 7 >
+        au < manifest ; 2004 ; Health: Volume 8 ; 8 >
+        au < manifest ; 2005 ; Health: Volume 9 ; 9 >
+        au < manifest ; 2006 ; Health: Volume 10 ; 10 >
+        au < manifest ; 2007 ; Health: Volume 11 ; 11 >
+        au < manifest ; 2008 ; Health: Volume 12 ; 12 >
+        au < manifest ; 2009 ; Health: Volume 13 ; 13 >
+        au < manifest ; 2010 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 14 ; 14 >
+        au < manifest ; 2011 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 15 ; 15 >
+
+      }
+
     }
 
     {
@@ -11029,6 +11179,38 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; High Performance Polymers Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; High Performance Polymers Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; High Performance Polymers Volume 22 ; 22 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hip.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1989 ; High Performance Polymers Volume 1 ; 1 >
+        au < exists ; 1990 ; High Performance Polymers Volume 2 ; 2 >
+        au < manifest ; 1991 ; High Performance Polymers Volume 3 ; 3 >
+        au < manifest ; 1992 ; High Performance Polymers Volume 4 ; 4 >
+        au < manifest ; 1993 ; High Performance Polymers Volume 5 ; 5 >
+        au < manifest ; 1994 ; High Performance Polymers Volume 6 ; 6 >
+        au < manifest ; 1995 ; High Performance Polymers Volume 7 ; 7 >
+        au < manifest ; 1996 ; High Performance Polymers Volume 8 ; 8 >
+        au < manifest ; 1997 ; High Performance Polymers Volume 9 ; 9 >
+        au < manifest ; 1998 ; High Performance Polymers Volume 10 ; 10 >
+        au < manifest ; 1999 ; High Performance Polymers Volume 11 ; 11 >
+        au < manifest ; 2000 ; High Performance Polymers Volume 12 ; 12 >
+        au < manifest ; 2001 ; High Performance Polymers Volume 13 ; 13 >
+        au < manifest ; 2002 ; High Performance Polymers Volume 14 ; 14 >
+        au < manifest ; 2003 ; High Performance Polymers Volume 15 ; 15 >
+        au < manifest ; 2004 ; High Performance Polymers Volume 16 ; 16 >
+        au < manifest ; 2005 ; High Performance Polymers Volume 17 ; 17 >
+        au < manifest ; 2006 ; High Performance Polymers Volume 18 ; 18 >
+        au < manifest ; 2007 ; High Performance Polymers Volume 21 ; 19 >
+        au < manifest ; 2008 ; High Performance Polymers Volume 20 ; 20 >
+        au < manifest ; 2009 ; High Performance Polymers Volume 21 ; 21 >
+        au < manifest ; 2010 ; High Performance Polymers Volume 22 ; 22 >
+        au < manifest ; 2011 ; High Performance Polymers Volume 23 ; 23 >
 
       }
 
@@ -11067,6 +11249,48 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hjb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1979 ; Hispanic Journal of Behavioral Sciences Volume 1 ; 1 >
+        au < manifest ; 1980 ; Hispanic Journal of Behavioral Sciences Volume 2 ; 2 >
+        au < manifest ; 1981 ; Hispanic Journal of Behavioral Sciences Volume 3 ; 3 >
+        au < manifest ; 1982 ; Hispanic Journal of Behavioral Sciences Volume 4 ; 4 >
+        au < manifest ; 1983 ; Hispanic Journal of Behavioral Sciences Volume 5 ; 5 >
+        au < manifest ; 1984 ; Hispanic Journal of Behavioral Sciences Volume 6 ; 6 >
+        au < manifest ; 1985 ; Hispanic Journal of Behavioral Sciences Volume 7 ; 7 >
+        au < manifest ; 1986 ; Hispanic Journal of Behavioral Sciences Volume 8 ; 8 >
+        au < manifest ; 1987 ; Hispanic Journal of Behavioral Sciences Volume 9 ; 9 >
+        au < manifest ; 1988 ; Hispanic Journal of Behavioral Sciences Volume 10 ; 10 >
+        au < manifest ; 1989 ; Hispanic Journal of Behavioral Sciences Volume 11 ; 11 >
+        au < manifest ; 1990 ; Hispanic Journal of Behavioral Sciences Volume 12 ; 12 >
+        au < manifest ; 1991 ; Hispanic Journal of Behavioral Sciences Volume 13 ; 13 >
+        au < manifest ; 1992 ; Hispanic Journal of Behavioral Sciences Volume 14 ; 14 >
+        au < manifest ; 1993 ; Hispanic Journal of Behavioral Sciences Volume 15 ; 15 >
+        au < manifest ; 1994 ; Hispanic Journal of Behavioral Sciences Volume 16 ; 16 >
+        au < manifest ; 1995 ; Hispanic Journal of Behavioral Sciences Volume 17 ; 17 >
+        au < manifest ; 1996 ; Hispanic Journal of Behavioral Sciences Volume 18 ; 18 >
+        au < manifest ; 1997 ; Hispanic Journal of Behavioral Sciences Volume 19 ; 19 >
+        au < manifest ; 1998 ; Hispanic Journal of Behavioral Sciences Volume 20 ; 20 >
+        au < manifest ; 1999 ; Hispanic Journal of Behavioral Sciences Volume 21 ; 21 >
+        au < manifest ; 2000 ; Hispanic Journal of Behavioral Sciences Volume 22 ; 22 >
+        au < manifest ; 2001 ; Hispanic Journal of Behavioral Sciences Volume 23 ; 23 >
+        au < manifest ; 2002 ; Hispanic Journal of Behavioral Sciences Volume 24 ; 24 >
+        au < manifest ; 2003 ; Hispanic Journal of Behavioral Sciences Volume 25 ; 25 >
+        au < manifest ; 2004 ; Hispanic Journal of Behavioral Sciences Volume 26 ; 26 >
+        au < manifest ; 2005 ; Hispanic Journal of Behavioral Sciences Volume 27 ; 27 >
+        au < manifest ; 2006 ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
+        au < manifest ; 2007 ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
+        au < manifest ; 2008 ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
+        au < manifest ; 2009 ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
+        au < manifest ; 2010 ; Hispanic Journal of Behavioral Sciences Volume 32 ; 32 >
+        au < manifest ; 2011 ; Hispanic Journal of Behavioral Sciences Volume 33 ; 33 >
+
+      }
+
     }
 
     {
@@ -11080,6 +11304,20 @@ comment[exm] = now published by Springer
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://hsa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hsa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; History and Sociology of South Asia Volume 1 ; 1 >
+        au < doesNotExist ; 0 ; History and Sociology of South Asia Volume 2 ; 2 >
+        au < doesNotExist ; 0 ; History and Sociology of South Asia Volume 3 ; 3 >
+        au < manifest ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 >
+        au < manifest ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 >
 
       }
 
@@ -11118,6 +11356,37 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hpy.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; History of Psychiatry Volume 1 ; 1 >
+        au < manifest ; 1991 ; History of Psychiatry Volume 2 ; 2 >
+        au < manifest ; 1992 ; History of Psychiatry Volume 3 ; 3 >
+        au < manifest ; 1993 ; History of Psychiatry Volume 4 ; 4 >
+        au < manifest ; 1994 ; History of Psychiatry Volume 5 ; 5 >
+        au < manifest ; 1995 ; History of Psychiatry Volume 6 ; 6 >
+        au < manifest ; 1996 ; History of Psychiatry Volume 7 ; 7 >
+        au < manifest ; 1997 ; History of Psychiatry Volume 8 ; 8 >
+        au < manifest ; 1998 ; History of Psychiatry Volume 9 ; 9 >
+        au < manifest ; 1999 ; History of Psychiatry Volume 10 ; 10 >
+        au < manifest ; 2000 ; History of Psychiatry Volume 11 ; 11 >
+        au < manifest ; 2001 ; History of Psychiatry Volume 12 ; 12 >
+        au < manifest ; 2002 ; History of Psychiatry Volume 13 ; 13 >
+        au < manifest ; 2003 ; History of Psychiatry Volume 14 ; 14 >
+        au < manifest ; 2004 ; History of Psychiatry Volume 15 ; 15 >
+        au < manifest ; 2005 ; History of Psychiatry Volume 16 ; 16 >
+        au < manifest ; 2006 ; History of Psychiatry Volume 17 ; 17 >
+        au < manifest ; 2007 ; History of Psychiatry Volume 18 ; 18 >
+        au < manifest ; 2008 ; History of Psychiatry Volume 19 ; 19 >
+        au < manifest ; 2009 ; History of Psychiatry Volume 20 ; 20 >
+        au < manifest ; 2010 ; History of Psychiatry Volume 21 ; 21 >
+        au < manifest ; 2011 ; History of Psychiatry Volume 22 ; 22 >
+
+      }
+
     }
 
     {
@@ -11153,6 +11422,39 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hhs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; History of the Human Sciences Volume 1 ; 1 >
+        au < manifest ; 1989 ; History of the Human Sciences Volume 2 ; 2 >
+        au < manifest ; 1990 ; History of the Human Sciences Volume 3 ; 3 >
+        au < manifest ; 1991 ; History of the Human Sciences Volume 4 ; 4 >
+        au < manifest ; 1992 ; History of the Human Sciences Volume 5 ; 5 >
+        au < manifest ; 1993 ; History of the Human Sciences Volume 6 ; 6 >
+        au < manifest ; 1994 ; History of the Human Sciences Volume 7 ; 7 >
+        au < manifest ; 1995 ; History of the Human Sciences Volume 8 ; 8 >
+        au < manifest ; 1996 ; History of the Human Sciences Volume 9 ; 9 >
+        au < manifest ; 1997 ; History of the Human Sciences Volume 10 ; 10 >
+        au < manifest ; 1998 ; History of the Human Sciences Volume 11 ; 11 >
+        au < manifest ; 1999 ; History of the Human Sciences Volume 12 ; 12 >
+        au < manifest ; 2000 ; History of the Human Sciences Volume 13 ; 13 >
+        au < manifest ; 2001 ; History of the Human Sciences Volume 14 ; 14 >
+        au < manifest ; 2002 ; History of the Human Sciences Volume 15 ; 15 >
+        au < manifest ; 2003 ; History of the Human Sciences Volume 16 ; 16 >
+        au < manifest ; 2004 ; History of the Human Sciences Volume 17 ; 17 >
+        au < manifest ; 2005 ; History of the Human Sciences Volume 18 ; 18 >
+        au < manifest ; 2006 ; History of the Human Sciences Volume 19 ; 19 >
+        au < manifest ; 2007 ; History of the Human Sciences Volume 20 ; 20 >
+        au < manifest ; 2008 ; History of the Human Sciences Volume 21 ; 21 >
+        au < manifest ; 2009 ; History of the Human Sciences Volume 22 ; 22 >
+        au < manifest ; 2010 ; History of the Human Sciences Volume 23 ; 23 >
+        au < manifest ; 2011 ; History of the Human Sciences Volume 24 ; 24 >
+
+      }
+
     }
 
     {
@@ -11174,6 +11476,36 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; The Holocene Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; The Holocene Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; The Holocene Volume 20 ; 20 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hol.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; The Holocene Volume 1 ; 1 >
+        au < manifest ; 1992 ; The Holocene Volume 2 ; 2 >
+        au < manifest ; 1993 ; The Holocene Volume 3 ; 3 >
+        au < manifest ; 1994 ; The Holocene Volume 4 ; 4 >
+        au < manifest ; 1995 ; The Holocene Volume 5 ; 5 >
+        au < manifest ; 1996 ; The Holocene Volume 6 ; 6 >
+        au < manifest ; 1997 ; The Holocene Volume 7 ; 7 >
+        au < manifest ; 1998 ; The Holocene Volume 8 ; 8 >
+        au < manifest ; 1999 ; The Holocene Volume 9 ; 9 >
+        au < manifest ; 2000 ; The Holocene Volume 10 ; 10 >
+        au < manifest ; 2001 ; The Holocene Volume 11 ; 11 >
+        au < manifest ; 2002 ; The Holocene Volume 12 ; 12 >
+        au < manifest ; 2003 ; The Holocene Volume 13 ; 13 >
+        au < manifest ; 2004 ; The Holocene Volume 14 ; 14 >
+        au < manifest ; 2005 ; The Holocene Volume 15 ; 15 >
+        au < manifest ; 2006 ; The Holocene Volume 16 ; 16 >
+        au < manifest ; 2007 ; The Holocene Volume 17 ; 17 >
+        au < manifest ; 2008 ; The Holocene Volume 18 ; 18 >
+        au < manifest ; 2009 ; The Holocene Volume 19 ; 19 >
+        au < manifest ; 2010 ; The Holocene Volume 20 ; 20 >
+        au < manifest ; 2011 ; The Holocene Volume 21 ; 21 >
 
       }
 
@@ -11199,6 +11531,38 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Home Health Care Management & Practice Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Home Health Care Management & Practice Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Home Health Care Management & Practice Volume 22 ; 22 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hhc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; Home Health Care Management & Practice Volume 1 ; 1 >
+        au < manifest ; 1989-1990 ; Home Health Care Management & Practice Volume 2 ; 2 >
+        au < manifest ; 1991 ; Home Health Care Management & Practice Volume 3 ; 3 >
+        au < manifest ; 1992 ; Home Health Care Management & Practice Volume 4 ; 4 >
+        au < manifest ; 1993 ; Home Health Care Management & Practice Volume 5 ; 5 >
+        au < manifest ; 1993-1994 ; Home Health Care Management & Practice Volume 6 ; 6 >
+        au < manifest ; 1994-1995 ; Home Health Care Management & Practice Volume 7 ; 7 >
+        au < manifest ; 1995-1996 ; Home Health Care Management & Practice Volume 8 ; 8 >
+        au < manifest ; 1996-1997 ; Home Health Care Management & Practice Volume 9 ; 9 >
+        au < exists ; 1997-1998 ; Home Health Care Management & Practice Volume 10 ; 10 >
+        au < manifest ; 1998-1999 ; Home Health Care Management & Practice Volume 11 ; 11 >
+        au < manifest ; 1999-2001 ; Home Health Care Management & Practice Volume 12 ; 12 >
+        au < manifest ; 2001 ; Home Health Care Management & Practice Volume 13 ; 13 >
+        au < manifest ; 2001-2002 ; Home Health Care Management & Practice Volume 14 ; 14 >
+        au < manifest ; 2002-2003 ; Home Health Care Management & Practice Volume 15 ; 15 >
+        au < manifest ; 2003-2004 ; Home Health Care Management & Practice Volume 16 ; 16 >
+        au < manifest ; 2004-2005 ; Home Health Care Management & Practice Volume 17 ; 17 >
+        au < manifest ; 2005-2006 ; Home Health Care Management & Practice Volume 18 ; 18 >
+        au < manifest ; 2006-2007 ; Home Health Care Management & Practice Volume 19 ; 19 >
+        au < manifest ; 2007-2008 ; Home Health Care Management & Practice Volume 20 ; 20 >
+        au < manifest ; 2008-2009 ; Home Health Care Management & Practice Volume 21 ; 21 >
+        au < manifest ; 2009-2010 ; Home Health Care Management & Practice Volume 22 ; 22 >
+        au < manifest ; 2011 ; Home Health Care Management & Practice Volume 23 ; 23 >
 
       }
 
@@ -11237,6 +11601,30 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hsx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Homicide Studies Volume 1 ; 1 >
+        au < manifest ; 1998 ; Homicide Studies Volume 2 ; 2 >
+        au < manifest ; 1999 ; Homicide Studies Volume 3 ; 3 >
+        au < manifest ; 2000 ; Homicide Studies Volume 4 ; 4 >
+        au < manifest ; 2001 ; Homicide Studies Volume 5 ; 5 >
+        au < manifest ; 2002 ; Homicide Studies Volume 6 ; 6 >
+        au < manifest ; 2003 ; Homicide Studies Volume 7 ; 7 >
+        au < manifest ; 2004 ; Homicide Studies Volume 8 ; 8 >
+        au < manifest ; 2005 ; Homicide Studies Volume 9 ; 9 >
+        au < manifest ; 2006 ; Homicide Studies Volume 10 ; 10 >
+        au < manifest ; 2007 ; Homicide Studies Volume 11 ; 11 >
+        au < manifest ; 2008 ; Homicide Studies Volume 12 ; 12 >
+        au < manifest ; 2009 ; Homicide Studies Volume 13 ; 13 >
+        au < manifest ; 2010 ; Homicide Studies Volume 14 ; 14 >
+        au < manifest ; 2011 ; Homicide Studies Volume 15 ; 15 >
+
+      }
+
     }
 
     {
@@ -11262,6 +11650,45 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Human & Experimental Toxicology Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; Human & Experimental Toxicology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; manifest ; Human & Experimental Toxicology Volume 29 ; 29 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://het.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1981 ; Human & Experimental Toxicology Volume 1 ; 1 >
+        au < manifest ; 1983 ; Human & Experimental Toxicology Volume 2 ; 2 >
+        au < manifest ; 1984 ; Human & Experimental Toxicology Volume 3 ; 3 >
+        au < manifest ; 1985 ; Human & Experimental Toxicology Volume 4 ; 4 >
+        au < manifest ; 1986 ; Human & Experimental Toxicology Volume 5 ; 5 >
+        au < manifest ; 1987 ; Human & Experimental Toxicology Volume 6 ; 6 >
+        au < manifest ; 1988 ; Human & Experimental Toxicology Volume 7 ; 7 >
+        au < manifest ; 1989 ; Human & Experimental Toxicology Volume 8 ; 8 >
+        au < manifest ; 1990 ; Human & Experimental Toxicology Volume 9 ; 9 >
+        au < manifest ; 1991 ; Human & Experimental Toxicology Volume 10 ; 10 >
+        au < manifest ; 1992 ; Human & Experimental Toxicology Volume 11 ; 11 >
+        au < manifest ; 1993 ; Human & Experimental Toxicology Volume 12 ; 12 >
+        au < manifest ; 1994 ; Human & Experimental Toxicology Volume 13 ; 13 >
+        au < manifest ; 1995 ; Human & Experimental Toxicology Volume 14 ; 14 >
+        au < manifest ; 1996 ; Human & Experimental Toxicology Volume 15 ; 15 >
+        au < manifest ; 1997 ; Human & Experimental Toxicology Volume 16 ; 16 >
+        au < manifest ; 1998 ; Human & Experimental Toxicology Volume 17 ; 17 >
+        au < manifest ; 1999 ; Human & Experimental Toxicology Volume 18 ; 18 >
+        au < manifest ; 2000 ; Human & Experimental Toxicology Volume 19 ; 19 >
+        au < manifest ; 2001 ; Human & Experimental Toxicology Volume 20 ; 20 >
+        au < manifest ; 2002 ; Human & Experimental Toxicology Volume 21 ; 21 >
+        au < manifest ; 2003 ; Human & Experimental Toxicology Volume 22 ; 22 >
+        au < manifest ; 2004 ; Human & Experimental Toxicology Volume 23 ; 23 >
+        au < manifest ; 2005 ; Human & Experimental Toxicology Volume 24 ; 24 >
+        au < manifest ; 2006 ; Human & Experimental Toxicology Volume 25 ; 25 >
+        au < manifest ; 2007 ; Human & Experimental Toxicology Volume 26 ; 26 >
+        au < manifest ; 2008 ; Human & Experimental Toxicology Volume 27 ; 27 >
+        au < manifest ; 2009 ; Human & Experimental Toxicology Volume 28 ; 28 >
+        au < manifest ; 2010 ; Human & Experimental Toxicology Volume 29 ; 29 >
+        au < manifest ; 2011 ; Human & Experimental Toxicology Volume 30 ; 30 >
 
       }
 
@@ -11300,6 +11727,79 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hum.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1947 ; Human Relations Volume 1 ; 1 >
+        au < manifest ; 1949 ; Human Relations Volume 2 ; 2 >
+        au < manifest ; 1950 ; Human Relations Volume 3 ; 3 >
+        au < manifest ; 1951 ; Human Relations Volume 4 ; 4 >
+        au < manifest ; 1952 ; Human Relations Volume 5 ; 5 >
+        au < manifest ; 1953 ; Human Relations Volume 6 ; 6 >
+        au < manifest ; 1954 ; Human Relations Volume 7 ; 7 >
+        au < manifest ; 1955 ; Human Relations Volume 8 ; 8 >
+        au < manifest ; 1956 ; Human Relations Volume 9 ; 9 >
+        au < manifest ; 1957 ; Human Relations Volume 10 ; 10 >
+        au < manifest ; 1958 ; Human Relations Volume 11 ; 11 >
+        au < manifest ; 1959 ; Human Relations Volume 12 ; 12 >
+        au < manifest ; 1960 ; Human Relations Volume 13 ; 13 >
+        au < manifest ; 1961 ; Human Relations Volume 14 ; 14 >
+        au < manifest ; 1962 ; Human Relations Volume 15 ; 15 >
+        au < manifest ; 1963 ; Human Relations Volume 16 ; 16 >
+        au < manifest ; 1964 ; Human Relations Volume 17 ; 17 >
+        au < manifest ; 1965 ; Human Relations Volume 18 ; 18 >
+        au < manifest ; 1966 ; Human Relations Volume 19 ; 19 >
+        au < manifest ; 1967 ; Human Relations Volume 20 ; 20 >
+        au < manifest ; 1968 ; Human Relations Volume 21 ; 21 >
+        au < manifest ; 1969 ; Human Relations Volume 22 ; 22 >
+        au < manifest ; 1970 ; Human Relations Volume 23 ; 23 >
+        au < manifest ; 1971 ; Human Relations Volume 24 ; 24 >
+        au < manifest ; 1972 ; Human Relations Volume 25 ; 25 >
+        au < manifest ; 1973 ; Human Relations Volume 26 ; 26 >
+        au < manifest ; 1974 ; Human Relations Volume 27 ; 27 >
+        au < manifest ; 1975 ; Human Relations Volume 28 ; 28 >
+        au < manifest ; 1976 ; Human Relations Volume 29 ; 29 >
+        au < manifest ; 1977 ; Human Relations Volume 30 ; 30 >
+        au < manifest ; 1978 ; Human Relations Volume 31 ; 31 >
+        au < manifest ; 1979 ; Human Relations Volume 32 ; 32 >
+        au < manifest ; 1980 ; Human Relations Volume 33 ; 33 >
+        au < manifest ; 1981 ; Human Relations Volume 34 ; 34 >
+        au < manifest ; 1982 ; Human Relations Volume 35 ; 35 >
+        au < manifest ; 1983 ; Human Relations Volume 36 ; 36 >
+        au < manifest ; 1984 ; Human Relations Volume 37 ; 37 >
+        au < manifest ; 1985 ; Human Relations Volume 38 ; 38 >
+        au < manifest ; 1986 ; Human Relations Volume 39 ; 39 >
+        au < manifest ; 1987 ; Human Relations Volume 40 ; 40 >
+        au < manifest ; 1988 ; Human Relations Volume 41 ; 41 >
+        au < manifest ; 1989 ; Human Relations Volume 42 ; 42 >
+        au < manifest ; 1990 ; Human Relations Volume 43 ; 43 >
+        au < manifest ; 1991 ; Human Relations Volume 44 ; 44 >
+        au < manifest ; 1992 ; Human Relations Volume 45 ; 45 >
+        au < manifest ; 1993 ; Human Relations Volume 46 ; 46 >
+        au < manifest ; 1994 ; Human Relations Volume 47 ; 47 >
+        au < manifest ; 1995 ; Human Relations Volume 48 ; 48 >
+        au < manifest ; 1996 ; Human Relations Volume 49 ; 49 >
+        au < manifest ; 1997 ; Human Relations Volume 50 ; 50 >
+        au < manifest ; 1998 ; Human Relations Volume 51 ; 51 >
+        au < manifest ; 1999 ; Human Relations Volume 52 ; 52 >
+        au < manifest ; 2000 ; Human Relations Volume 53 ; 53 >
+        au < manifest ; 2001 ; Human Relations Volume 54 ; 54 >
+        au < manifest ; 2002 ; Human Relations Volume 55 ; 55 >
+        au < manifest ; 2003 ; Human Relations Volume 56 ; 56 >
+        au < manifest ; 2004 ; Human Relations Volume 57 ; 57 >
+        au < manifest ; 2005 ; Human Relations Volume 58 ; 58 >
+        au < manifest ; 2006 ; Human Relations Volume 59 ; 59 >
+        au < manifest ; 2007 ; Human Relations Volume 60 ; 60 >
+        au < manifest ; 2008 ; Human Relations Volume 61 ; 61 >
+        au < manifest ; 2009 ; Human Relations Volume 62 ; 62 >
+        au < manifest ; 2010 ; Human Relations Volume 63 ; 63 >
+        au < manifest ; 2011 ; Human Relations Volume 64 ; 64 >
+
+      }
+
     }
 
     {
@@ -11332,6 +11832,25 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Human Resource Development Review Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Human Resource Development Review Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; Human Resource Development Review Volume 9 ; 9 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hrd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Human Resource Development Review Volume 1 ; 1 >
+        au < manifest ; 2003 ; Human Resource Development Review Volume 2 ; 2 >
+        au < manifest ; 2004 ; Human Resource Development Review Volume 3 ; 3 >
+        au < manifest ; 2005 ; Human Resource Development Review Volume 4 ; 4 >
+        au < manifest ; 2006 ; Human Resource Development Review Volume 5 ; 5 >
+        au < manifest ; 2007 ; Human Resource Development Review Volume 6 ; 6 >
+        au < manifest ; 2008 ; Human Resource Development Review Volume 7 ; 7 >
+        au < manifest ; 2009 ; Human Resource Development Review Volume 8 ; 8 >
+        au < manifest ; 2010 ; Human Resource Development Review Volume 9 ; 9 >
+        au < manifest ; 2011 ; Human Resource Development Review Volume 10 ; 10 >
 
       }
 
@@ -11370,6 +11889,52 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ifl.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1975 ; IFLA Journal Volume 1 ; 1 >
+        au < manifest ; 1976 ; IFLA Journal Volume 2 ; 2 >
+        au < manifest ; 1977 ; IFLA Journal Volume 3 ; 3 >
+        au < manifest ; 1978 ; IFLA Journal Volume 4 ; 4 >
+        au < manifest ; 1979 ; IFLA Journal Volume 5 ; 5 >
+        au < manifest ; 1980 ; IFLA Journal Volume 6 ; 6 >
+        au < manifest ; 1981 ; IFLA Journal Volume 7 ; 7 >
+        au < manifest ; 1982 ; IFLA Journal Volume 8 ; 8 >
+        au < manifest ; 1983 ; IFLA Journal Volume 9 ; 9 >
+        au < manifest ; 1984 ; IFLA Journal Volume 10 ; 10 >
+        au < manifest ; 1985 ; IFLA Journal Volume 11 ; 11 >
+        au < manifest ; 1986 ; IFLA Journal Volume 12 ; 12 >
+        au < manifest ; 1987 ; IFLA Journal Volume 13 ; 13 >
+        au < manifest ; 1988 ; IFLA Journal Volume 14 ; 14 >
+        au < manifest ; 1989 ; IFLA Journal Volume 15 ; 15 >
+        au < manifest ; 1990 ; IFLA Journal Volume 16 ; 16 >
+        au < manifest ; 1991 ; IFLA Journal Volume 17 ; 17 >
+        au < manifest ; 1992 ; IFLA Journal Volume 18 ; 18 >
+        au < manifest ; 1993 ; IFLA Journal Volume 19 ; 19 >
+        au < manifest ; 1994 ; IFLA Journal Volume 20 ; 20 >
+        au < manifest ; 1995 ; IFLA Journal Volume 21 ; 21 >
+        au < manifest ; 1996 ; IFLA Journal Volume 22 ; 22 >
+        au < manifest ; 1997 ; IFLA Journal Volume 23 ; 23 >
+        au < manifest ; 1998 ; IFLA Journal Volume 24 ; 24 >
+        au < manifest ; 1999 ; IFLA Journal Volume 25 ; 25 >
+        au < manifest ; 2000 ; IFLA Journal Volume 26 ; 26 >
+        au < manifest ; 2001 ; IFLA Journal Volume 27 ; 27 >
+        au < manifest ; 2002 ; IFLA Journal Volume 28 ; 28 >
+        au < manifest ; 2003 ; IFLA Journal Volume 29 ; 29 >
+        au < manifest ; 2004 ; IFLA Journal Volume 30 ; 30 >
+        au < manifest ; 2005 ; IFLA Journal Volume 31 ; 31 >
+        au < manifest ; 2006 ; IFLA Journal Volume 32 ; 32 >
+        au < manifest ; 2007 ; IFLA Journal Volume 33 ; 33 >
+        au < manifest ; 2008 ; IFLA Journal Volume 34 ; 34 >
+        au < manifest ; 2009 ; IFLA Journal Volume 35 ; 35 >
+        au < manifest ; 2010 ; IFLA Journal Volume 36 ; 36 >
+        au < manifest ; 2011 ; IFLA Journal Volume 37 ; 37 >
+
+      }
+
     }
 
     {
@@ -11405,6 +11970,29 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://imp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; Improving Schools Volume 1 ; 1 >
+        au < manifest ; 1999 ; Improving Schools Volume 2 ; 2 >
+        au < manifest ; 2000 ; Improving Schools Volume 3 ; 3 >
+        au < manifest ; 2001 ; Improving Schools Volume 4 ; 4 >
+        au < exists ; 2002 ; Improving Schools Volume 5 ; 5 >
+        au < doesNotExist ; 2003 ; Improving Schools Volume 6 ; 6 >
+        au < manifest ; 2004 ; Improving Schools Volume 7 ; 7 >
+        au < manifest ; 2005 ; Improving Schools Volume 8 ; 8 >
+        au < manifest ; 2006 ; Improving Schools Volume 9 ; 9 >
+        au < manifest ; 2007 ; Improving Schools Volume 10 ; 10 >
+        au < manifest ; 2008 ; Improving Schools Volume 11 ; 11 >
+        au < manifest ; 2009 ; Improving Schools Volume 12 ; 12 >
+        au < manifest ; 2010 ; Improving Schools Volume 13 ; 13 >
+        au < manifest ; 2011 ; Improving Schools Volume 14 ; 14 >
+
+      }
+
     }
 
     {
@@ -11436,6 +12024,63 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Indian Economic & Social History Review Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; down ; Indian Economic & Social History Review Volume 46 ; 46 >
         au < HighWirePressH20Plugin ; manifest ; Indian Economic & Social History Review Volume 47 ; 47 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ier.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1964 ; Indian Economic & Social History Review Volume 1 ; 1 >
+        au < manifest ; 1964 ; Indian Economic & Social History Review Volume 2 ; 2 >
+        au < manifest ; 1966 ; Indian Economic & Social History Review Volume 3 ; 3 >
+        au < manifest ; 1967 ; Indian Economic & Social History Review Volume 4 ; 4 >
+        au < exists ; 1968 ; Indian Economic & Social History Review Volume 5 ; 5 >
+        au < exists ; 1969 ; Indian Economic & Social History Review Volume 6 ; 6 >
+        au < manifest ; 1970 ; Indian Economic & Social History Review Volume 7 ; 7 >
+        au < manifest ; 1971 ; Indian Economic & Social History Review Volume 8 ; 8 >
+        au < manifest ; 1972 ; Indian Economic & Social History Review Volume 9 ; 9 >
+        au < manifest ; 1973 ; Indian Economic & Social History Review Volume 10 ; 10 >
+        au < manifest ; 1974 ; Indian Economic & Social History Review Volume 11 ; 11 >
+        au < manifest ; 1975 ; Indian Economic & Social History Review Volume 12 ; 12 >
+        au < manifest ; 1976 ; Indian Economic & Social History Review Volume 13 ; 13 >
+        au < manifest ; 1977 ; Indian Economic & Social History Review Volume 14 ; 14 >
+        au < manifest ; 1978 ; Indian Economic & Social History Review Volume 15 ; 15 >
+        au < manifest ; 1979 ; Indian Economic & Social History Review Volume 16 ; 16 >
+        au < manifest ; 1980 ; Indian Economic & Social History Review Volume 17 ; 17 >
+        au < manifest ; 1981 ; Indian Economic & Social History Review Volume 18 ; 18 >
+        au < manifest ; 1982 ; Indian Economic & Social History Review Volume 19 ; 19 >
+        au < manifest ; 1983 ; Indian Economic & Social History Review Volume 20 ; 20 >
+        au < manifest ; 1984 ; Indian Economic & Social History Review Volume 21 ; 21 >
+        au < manifest ; 1985 ; Indian Economic & Social History Review Volume 22 ; 22 >
+        au < manifest ; 1986 ; Indian Economic & Social History Review Volume 23 ; 23 >
+        au < manifest ; 1987 ; Indian Economic & Social History Review Volume 24 ; 24 >
+        au < manifest ; 1988 ; Indian Economic & Social History Review Volume 25 ; 25 >
+        au < manifest ; 1989 ; Indian Economic & Social History Review Volume 26 ; 26 >
+        au < manifest ; 1990 ; Indian Economic & Social History Review Volume 27 ; 27 >
+        au < manifest ; 1991 ; Indian Economic & Social History Review Volume 28 ; 28 >
+        au < manifest ; 1992 ; Indian Economic & Social History Review Volume 29 ; 29 >
+        au < manifest ; 1993 ; Indian Economic & Social History Review Volume 30 ; 30 >
+        au < manifest ; 1994 ; Indian Economic & Social History Review Volume 31 ; 31 >
+        au < manifest ; 1995 ; Indian Economic & Social History Review Volume 32 ; 32 >
+        au < manifest ; 1996 ; Indian Economic & Social History Review Volume 33 ; 33 >
+        au < manifest ; 1997 ; Indian Economic & Social History Review Volume 34 ; 34 >
+        au < manifest ; 1998 ; Indian Economic & Social History Review Volume 35 ; 35 >
+        au < manifest ; 1999 ; Indian Economic & Social History Review Volume 36 ; 36 >
+        au < manifest ; 2000 ; Indian Economic & Social History Review Volume 37 ; 37 >
+        au < manifest ; 2001 ; Indian Economic & Social History Review Volume 38 ; 38 >
+        au < manifest ; 2002 ; Indian Economic & Social History Review Volume 39 ; 39 >
+        au < manifest ; 2003 ; Indian Economic & Social History Review Volume 40 ; 40 >
+        au < manifest ; 2004 ; Indian Economic & Social History Review Volume 41 ; 41 >
+        au < manifest ; 2005 ; Indian Economic & Social History Review Volume 42 ; 42 >
+        au < manifest ; 2006 ; Indian Economic & Social History Review Volume 43 ; 43 >
+        au < manifest ; 2007 ; Indian Economic & Social History Review Volume 44 ; 44 >
+        au < manifest ; 2008 ; Indian Economic & Social History Review Volume 45 ; 45 >
+        au < manifest ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 >
+        au < manifest ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 >
+        au < manifest ; 2011 ; Indian Economic & Social History Review Volume 48 ; 48 >
 
       }
 
@@ -11474,6 +12119,33 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; Indian Journal of Gender Studies Volume 1 ; 1 >
+        au < manifest ; 1995 ; Indian Journal of Gender Studies Volume 2 ; 2 >
+        au < manifest ; 1996 ; Indian Journal of Gender Studies Volume 3 ; 3 >
+        au < manifest ; 1997 ; Indian Journal of Gender Studies Volume 4 ; 4 >
+        au < manifest ; 1998 ; Indian Journal of Gender Studies Volume 5 ; 5 >
+        au < manifest ; 1999 ; Indian Journal of Gender Studies Volume 6 ; 6 >
+        au < manifest ; 2000 ; Indian Journal of Gender Studies Volume 7 ; 7 >
+        au < manifest ; 2001 ; Indian Journal of Gender Studies Volume 8 ; 8 >
+        au < manifest ; 2002 ; Indian Journal of Gender Studies Volume 9 ; 9 >
+        au < manifest ; 2003 ; Indian Journal of Gender Studies Volume 10 ; 10 >
+        au < manifest ; 2004 ; Indian Journal of Gender Studies Volume 11 ; 11 >
+        au < manifest ; 2005 ; Indian Journal of Gender Studies Volume 12 ; 12 >
+        au < manifest ; 2006 ; Indian Journal of Gender Studies Volume 13 ; 13 >
+        au < manifest ; 2007 ; Indian Journal of Gender Studies Volume 14 ; 14 >
+        au < manifest ; 2008 ; Indian Journal of Gender Studies Volume 15 ; 15 >
+        au < manifest ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 >
+        au < manifest ; 2010 ; Indian Journal of Gender Studies Volume 17 ; 17 >
+        au < manifest ; 2011 ; Indian Journal of Gender Studies Volume 18 ; 18 >
+
+      }
+
     }
 
     {
@@ -11506,6 +12178,35 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; Indoor and Built Environment Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; Indoor and Built Environment Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; Indoor and Built Environment Volume 19 ; 19 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ibe.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Indoor and Built Environment Volume 1 ; 1 >
+        au < manifest ; 1993 ; Indoor and Built Environment Volume 2 ; 2 >
+        au < manifest ; 1994 ; Indoor and Built Environment Volume 3 ; 3 >
+        au < manifest ; 1995 ; Indoor and Built Environment Volume 4 ; 4 >
+        au < manifest ; 1996 ; Indoor and Built Environment Volume 5 ; 5 >
+        au < manifest ; 1997 ; Indoor and Built Environment Volume 6 ; 6 >
+        au < manifest ; 1998 ; Indoor and Built Environment Volume 7 ; 7 >
+        au < manifest ; 1999 ; Indoor and Built Environment Volume 8 ; 8 >
+        au < manifest ; 2000 ; Indoor and Built Environment Volume 9 ; 9 >
+        au < manifest ; 2001 ; Indoor and Built Environment Volume 10 ; 10 >
+        au < manifest ; 2002 ; Indoor and Built Environment Volume 11 ; 11 >
+        au < manifest ; 2003 ; Indoor and Built Environment Volume 12 ; 12 >
+        au < manifest ; 2004 ; Indoor and Built Environment Volume 13 ; 13 >
+        au < manifest ; 2005 ; Indoor and Built Environment Volume 14 ; 14 >
+        au < manifest ; 2006 ; Indoor and Built Environment Volume 15 ; 15 >
+        au < manifest ; 2007 ; Indoor and Built Environment Volume 16 ; 16 >
+        au < manifest ; 2008 ; Indoor and Built Environment Volume 17 ; 17 >
+        au < manifest ; 2009 ; Indoor and Built Environment Volume 18 ; 18 >
+        au < manifest ; 2010 ; Indoor and Built Environment Volume 19 ; 19 >
+        au < manifest ; 2011 ; Indoor and Built Environment Volume 20 ; 20 >
 
       }
 
@@ -11544,6 +12245,42 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://idv.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1985 ; Information Development Volume 1 ; 1 >
+        au < manifest ; 1986 ; Information Development Volume 2 ; 2 >
+        au < manifest ; 1987 ; Information Development Volume 3 ; 3 >
+        au < manifest ; 1988 ; Information Development Volume 4 ; 4 >
+        au < manifest ; 1989 ; Information Development Volume 5 ; 5 >
+        au < manifest ; 1990 ; Information Development Volume 6 ; 6 >
+        au < manifest ; 1991 ; Information Development Volume 7 ; 7 >
+        au < manifest ; 1992 ; Information Development Volume 8 ; 8 >
+        au < manifest ; 1993 ; Information Development Volume 9 ; 9 >
+        au < manifest ; 1994 ; Information Development Volume 10 ; 10 >
+        au < manifest ; 1995 ; Information Development Volume 11 ; 11 >
+        au < manifest ; 1996 ; Information Development Volume 12 ; 12 >
+        au < manifest ; 1997 ; Information Development Volume 13 ; 13 >
+        au < manifest ; 1998 ; Information Development Volume 14 ; 14 >
+        au < manifest ; 1999 ; Information Development Volume 15 ; 15 >
+        au < manifest ; 2000 ; Information Development Volume 16 ; 16 >
+        au < manifest ; 2001 ; Information Development Volume 17 ; 17 >
+        au < manifest ; 2002 ; Information Development Volume 18 ; 18 >
+        au < manifest ; 2003 ; Information Development Volume 19 ; 19 >
+        au < manifest ; 2004 ; Information Development Volume 20 ; 20 >
+        au < manifest ; 2005 ; Information Development Volume 21 ; 21 >
+        au < manifest ; 2006 ; Information Development Volume 22 ; 22 >
+        au < manifest ; 2007 ; Information Development Volume 23 ; 23 >
+        au < manifest ; 2008 ; Information Development Volume 24 ; 24 >
+        au < manifest ; 2009 ; Information Development Volume 25 ; 25 >
+        au < manifest ; 2010 ; Information Development Volume 26 ; 26 >
+        au < manifest ; 2011 ; Information Development Volume 27 ; 27 >
+
+      }
+
     }
 
     {
@@ -11567,7 +12304,8 @@ comment[exm] = now published by Springer
         au < exists ; Information Visualization Volume 6 ; 6 >
         au < exists ; Information Visualization Volume 7 ; 7 >
         au < exists ; Information Visualization Volume 8 ; 8 >
-        au < exists ; Information Visualization Volume 9 ; 9 >
+        au < manifest ; Information Visualization Volume 9 ; 9 >
+        au < manifest ; Information Visualization Volume 10 ; 10 >
 
       }
 
@@ -11606,6 +12344,25 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ict.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Integrative Cancer Therapies Volume 1 ; 1 >
+        au < manifest ; 2003 ; Integrative Cancer Therapies Volume 2 ; 2 >
+        au < manifest ; 2004 ; Integrative Cancer Therapies Volume 3 ; 3 >
+        au < manifest ; 2005 ; Integrative Cancer Therapies Volume 4 ; 4 >
+        au < manifest ; 2006 ; Integrative Cancer Therapies Volume 5 ; 5 >
+        au < manifest ; 2007 ; Integrative Cancer Therapies Volume 6 ; 6 >
+        au < manifest ; 2008 ; Integrative Cancer Therapies Volume 7 ; 7 >
+        au < manifest ; 2009 ; Integrative Cancer Therapies Volume 8 ; 8 >
+        au < manifest ; 2010 ; Integrative Cancer Therapies Volume 9 ; 9 >
+        au < manifest ; 2011 ; Integrative Cancer Therapies Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -11641,6 +12398,88 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gaz.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1955 ; International Communication Gazette Volume 1 ; 1 >
+        au < manifest ; 1956 ; International Communication Gazette Volume 2 ; 2 >
+        au < manifest ; 1957 ; International Communication Gazette Volume 3 ; 3 >
+        au < manifest ; 1958 ; International Communication Gazette Volume 4 ; 4 >
+        au < manifest ; 1959 ; International Communication Gazette Volume 5 ; 5 >
+        au < manifest ; 1960 ; International Communication Gazette Volume 6 ; 6 >
+        au < manifest ; 1961 ; International Communication Gazette Volume 7 ; 7 >
+        au < manifest ; 1962 ; International Communication Gazette Volume 8 ; 8 >
+        au < manifest ; 1963 ; International Communication Gazette Volume 9 ; 9 >
+        au < manifest ; 1964 ; International Communication Gazette Volume 10 ; 10 >
+        au < manifest ; 1965 ; International Communication Gazette Volume 11 ; 11 >
+        au < manifest ; 1966 ; International Communication Gazette Volume 12 ; 12 >
+        au < manifest ; 1967 ; International Communication Gazette Volume 13 ; 13 >
+        au < manifest ; 1968 ; International Communication Gazette Volume 14 ; 14 >
+        au < manifest ; 1969 ; International Communication Gazette Volume 15 ; 15 >
+        au < manifest ; 1970 ; International Communication Gazette Volume 16 ; 16 >
+        au < manifest ; 1971 ; International Communication Gazette Volume 17 ; 17 >
+        au < manifest ; 1972 ; International Communication Gazette Volume 18 ; 18 >
+        au < manifest ; 1973 ; International Communication Gazette Volume 19 ; 19 >
+        au < manifest ; 1974 ; International Communication Gazette Volume 20 ; 20 >
+        au < manifest ; 1975 ; International Communication Gazette Volume 21 ; 21 >
+        au < manifest ; 1976 ; International Communication Gazette Volume 22 ; 22 >
+        au < manifest ; 1977 ; International Communication Gazette Volume 23 ; 23 >
+        au < manifest ; 1978 ; International Communication Gazette Volume 24 ; 24 >
+        au < manifest ; 1979 ; International Communication Gazette Volume 25 ; 25 >
+        au < manifest ; 1980 ; International Communication Gazette Volume 26 ; 26 >
+        au < manifest ; 1981 ; International Communication Gazette Volume 27 ; 27 >
+        au < manifest ; 1981 ; International Communication Gazette Volume 28 ; 28 >
+        au < manifest ; 1982 ; International Communication Gazette Volume 29 ; 29 >
+        au < manifest ; 1982 ; International Communication Gazette Volume 30 ; 30 >
+        au < manifest ; 1983 ; International Communication Gazette Volume 31 ; 31 >
+        au < manifest ; 1983 ; International Communication Gazette Volume 32 ; 32 >
+        au < manifest ; 1984 ; International Communication Gazette Volume 33 ; 33 >
+        au < manifest ; 1984 ; International Communication Gazette Volume 34 ; 34 >
+        au < manifest ; 1985 ; International Communication Gazette Volume 35 ; 35 >
+        au < manifest ; 1985 ; International Communication Gazette Volume 36 ; 36 >
+        au < manifest ; 1986 ; International Communication Gazette Volume 37 ; 37 >
+        au < manifest ; 1986 ; International Communication Gazette Volume 38 ; 38 >
+        au < manifest ; 1987 ; International Communication Gazette Volume 39 ; 39 >
+        au < manifest ; 1987 ; International Communication Gazette Volume 40 ; 40 >
+        au < manifest ; 1988 ; International Communication Gazette Volume 41 ; 41 >
+        au < manifest ; 1988 ; International Communication Gazette Volume 42 ; 42 >
+        au < manifest ; 1989 ; International Communication Gazette Volume 43 ; 43 >
+        au < manifest ; 1989 ; International Communication Gazette Volume 44 ; 44 >
+        au < manifest ; 1990 ; International Communication Gazette Volume 45 ; 45 >
+        au < manifest ; 1990 ; International Communication Gazette Volume 46 ; 46 >
+        au < manifest ; 1991 ; International Communication Gazette Volume 47 ; 47 >
+        au < manifest ; 1991 ; International Communication Gazette Volume 48 ; 48 >
+        au < manifest ; 1992 ; International Communication Gazette Volume 49 ; 49 >
+        au < manifest ; 1992 ; International Communication Gazette Volume 50 ; 50 >
+        au < manifest ; 1993 ; International Communication Gazette Volume 51 ; 51 >
+        au < manifest ; 1993 ; International Communication Gazette Volume 52 ; 52 >
+        au < manifest ; 1994 ; International Communication Gazette Volume 53 ; 53 >
+        au < manifest ; 1995 ; International Communication Gazette Volume 54 ; 54 >
+        au < manifest ; 1996 ; International Communication Gazette Volume 55 ; 55 >
+        au < manifest ; 1996 ; International Communication Gazette Volume 56 ; 56 >
+        au < manifest ; 1996 ; International Communication Gazette Volume 57 ; 57 >
+        au < manifest ; 1996 ; International Communication Gazette Volume 58 ; 58 >
+        au < manifest ; 1997 ; International Communication Gazette Volume 59 ; 59 >
+        au < manifest ; 1998 ; International Communication Gazette Volume 60 ; 60 >
+        au < manifest ; 1999 ; International Communication Gazette Volume 61 ; 61 >
+        au < manifest ; 2000 ; International Communication Gazette Volume 62 ; 62 >
+        au < manifest ; 2001 ; International Communication Gazette Volume 63 ; 63 >
+        au < manifest ; 2002 ; International Communication Gazette Volume 64 ; 64 >
+        au < manifest ; 2003 ; International Communication Gazette Volume 65 ; 65 >
+        au < manifest ; 2004 ; International Communication Gazette Volume 66 ; 66 >
+        au < manifest ; 2005 ; International Communication Gazette Volume 67 ; 67 >
+        au < manifest ; 2006 ; International Communication Gazette Volume 68 ; 68 >
+        au < manifest ; 2007 ; International Communication Gazette Volume 69 ; 69 >
+        au < manifest ; 2008 ; International Communication Gazette Volume 70 ; 70 >
+        au < manifest ; 2009 ; International Communication Gazette Volume 71 ; 71 >
+        au < manifest ; 2010 ; International Communication Gazette Volume 72 ; 72 >
+        au < manifest ; 2011 ; International Communication Gazette Volume 73 ; 73 >
+
+      }
+
     }
 
     {
@@ -11673,6 +12512,36 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Criminal Justice Review Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; International Criminal Justice Review Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; International Criminal Justice Review Volume 20 ; 20 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://icj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; International Criminal Justice Review Volume 1 ; 1 >
+        au < manifest ; 1992 ; International Criminal Justice Review Volume 2 ; 2 >
+        au < manifest ; 1993 ; International Criminal Justice Review Volume 3 ; 3 >
+        au < manifest ; 1994 ; International Criminal Justice Review Volume 4 ; 4 >
+        au < manifest ; 1995 ; International Criminal Justice Review Volume 5 ; 5 >
+        au < manifest ; 1996 ; International Criminal Justice Review Volume 6 ; 6 >
+        au < manifest ; 1997 ; International Criminal Justice Review Volume 7 ; 7 >
+        au < manifest ; 1998 ; International Criminal Justice Review Volume 8 ; 8 >
+        au < manifest ; 1999 ; International Criminal Justice Review Volume 9 ; 9 >
+        au < manifest ; 2000 ; International Criminal Justice Review Volume 10 ; 10 >
+        au < manifest ; 2001 ; International Criminal Justice Review Volume 11 ; 11 >
+        au < manifest ; 2002 ; International Criminal Justice Review Volume 12 ; 12 >
+        au < manifest ; 2003 ; International Criminal Justice Review Volume 13 ; 13 >
+        au < doesNotExist ; 2004 ; International Criminal Justice Review Volume 14 ; 14 >
+        au < manifest ; 2005 ; International Criminal Justice Review Volume 15 ; 15 >
+        au < manifest ; 2006 ; International Criminal Justice Review Volume 16 ; 16 >
+        au < manifest ; 2007 ; International Criminal Justice Review Volume 17 ; 17 >
+        au < manifest ; 2008 ; International Criminal Justice Review Volume 18 ; 18 >
+        au < manifest ; 2009 ; International Criminal Justice Review Volume 19 ; 19 >
+        au < manifest ; 2010 ; International Criminal Justice Review Volume 20 ; 20 >
+        au < manifest ; 2011 ; International Criminal Justice Review Volume 21 ; 21 >
 
       }
 
@@ -11714,6 +12583,50 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1978 ; International Journal of Behavioral Development Volume 1 ; 1 >
+        au < manifest ; 1979 ; International Journal of Behavioral Development Volume 2 ; 2 >
+        au < manifest ; 1980 ; International Journal of Behavioral Development Volume 3 ; 3 >
+        au < manifest ; 1981 ; International Journal of Behavioral Development Volume 4 ; 4 >
+        au < manifest ; 1982 ; International Journal of Behavioral Development Volume 5 ; 5 >
+        au < manifest ; 1983 ; International Journal of Behavioral Development Volume 6 ; 6 >
+        au < manifest ; 1984 ; International Journal of Behavioral Development Volume 7 ; 7 >
+        au < manifest ; 1985 ; International Journal of Behavioral Development Volume 8 ; 8 >
+        au < manifest ; 1986 ; International Journal of Behavioral Development Volume 9 ; 9 >
+        au < manifest ; 1987 ; International Journal of Behavioral Development Volume 10 ; 10 >
+        au < manifest ; 1988 ; International Journal of Behavioral Development Volume 11 ; 11 >
+        au < manifest ; 1989 ; International Journal of Behavioral Development Volume 12 ; 12 >
+        au < manifest ; 1990 ; International Journal of Behavioral Development Volume 13 ; 13 >
+        au < manifest ; 1991 ; International Journal of Behavioral Development Volume 14 ; 14 >
+        au < manifest ; 1992 ; International Journal of Behavioral Development Volume 15 ; 15 >
+        au < manifest ; 1993 ; International Journal of Behavioral Development Volume 16 ; 16 >
+        au < manifest ; 1994 ; International Journal of Behavioral Development Volume 17 ; 17 >
+        au < manifest ; 1995 ; International Journal of Behavioral Development Volume 18 ; 18 >
+        au < manifest ; 1996 ; International Journal of Behavioral Development Volume 19 ; 19 >
+        au < manifest ; 1997 ; International Journal of Behavioral Development Volume 20 ; 20 >
+        au < manifest ; 1997 ; International Journal of Behavioral Development Volume 21 ; 21 >
+        au < manifest ; 1998 ; International Journal of Behavioral Development Volume 22 ; 22 >
+        au < manifest ; 1999 ; International Journal of Behavioral Development Volume 23 ; 23 >
+        au < manifest ; 2000 ; International Journal of Behavioral Development Volume 24 ; 24 >
+        au < manifest ; 2001 ; International Journal of Behavioral Development Volume 25 ; 25 >
+        au < manifest ; 2002 ; International Journal of Behavioral Development Volume 26 ; 26 >
+        au < manifest ; 2003 ; International Journal of Behavioral Development Volume 27 ; 27 >
+        au < manifest ; 2004 ; International Journal of Behavioral Development Volume 28 ; 28 >
+        au < manifest ; 2005 ; International Journal of Behavioral Development Volume 29 ; 29 >
+        au < manifest ; 2006 ; International Journal of Behavioral Development Volume 30 ; 30 >
+        au < manifest ; 2007 ; International Journal of Behavioral Development Volume 31 ; 31 >
+        au < manifest ; 2008 ; International Journal of Behavioral Development Volume 32 ; 32 >
+        au < manifest ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 >
+        au < manifest ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 >
+        au < manifest ; 2011 ; International Journal of Behavioral Development Volume 35 ; 35 >
+
+      }
+
     }
 
     {
@@ -11746,6 +12659,67 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Journal of Comparative Sociology Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; down ; International Journal of Comparative Sociology Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; manifest ; International Journal of Comparative Sociology Volume 51 ; 51 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cos.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1960 ; International Journal of Comparative Sociology Volume 1 ; 1 >
+        au < manifest ; 1961 ; International Journal of Comparative Sociology Volume 2 ; 2 >
+        au < manifest ; 1962 ; International Journal of Comparative Sociology Volume 3 ; 3 >
+        au < manifest ; 1963 ; International Journal of Comparative Sociology Volume 4 ; 4 >
+        au < manifest ; 1964 ; International Journal of Comparative Sociology Volume 5 ; 5 >
+        au < manifest ; 1965 ; International Journal of Comparative Sociology Volume 6 ; 6 >
+        au < manifest ; 1966 ; International Journal of Comparative Sociology Volume 7 ; 7 >
+        au < manifest ; 1967 ; International Journal of Comparative Sociology Volume 8 ; 8 >
+        au < manifest ; 1968 ; International Journal of Comparative Sociology Volume 9 ; 9 >
+        au < manifest ; 1969 ; International Journal of Comparative Sociology Volume 10 ; 10 >
+        au < manifest ; 1970 ; International Journal of Comparative Sociology Volume 11 ; 11 >
+        au < manifest ; 1971 ; International Journal of Comparative Sociology Volume 12 ; 12 >
+        au < manifest ; 1972 ; International Journal of Comparative Sociology Volume 13 ; 13 >
+        au < manifest ; 1973 ; International Journal of Comparative Sociology Volume 14 ; 14 >
+        au < manifest ; 1974 ; International Journal of Comparative Sociology Volume 15 ; 15 >
+        au < manifest ; 1975 ; International Journal of Comparative Sociology Volume 16 ; 16 >
+        au < manifest ; 1976 ; International Journal of Comparative Sociology Volume 17 ; 17 >
+        au < manifest ; 1977 ; International Journal of Comparative Sociology Volume 18 ; 18 >
+        au < manifest ; 1978 ; International Journal of Comparative Sociology Volume 19 ; 19 >
+        au < manifest ; 1979 ; International Journal of Comparative Sociology Volume 20 ; 20 >
+        au < manifest ; 1980 ; International Journal of Comparative Sociology Volume 21 ; 21 >
+        au < manifest ; 1981 ; International Journal of Comparative Sociology Volume 22 ; 22 >
+        au < manifest ; 1982 ; International Journal of Comparative Sociology Volume 23 ; 23 >
+        au < manifest ; 1983 ; International Journal of Comparative Sociology Volume 24 ; 24 >
+        au < manifest ; 1984 ; International Journal of Comparative Sociology Volume 25 ; 25 >
+        au < manifest ; 1985 ; International Journal of Comparative Sociology Volume 26 ; 26 >
+        au < manifest ; 1986 ; International Journal of Comparative Sociology Volume 27 ; 27 >
+        au < manifest ; 1987 ; International Journal of Comparative Sociology Volume 28 ; 28 >
+        au < manifest ; 1988 ; International Journal of Comparative Sociology Volume 29 ; 29 >
+        au < manifest ; 1989 ; International Journal of Comparative Sociology Volume 30 ; 30 >
+        au < manifest ; 1990 ; International Journal of Comparative Sociology Volume 31 ; 31 >
+        au < manifest ; 1991 ; International Journal of Comparative Sociology Volume 32 ; 32 >
+        au < manifest ; 1992 ; International Journal of Comparative Sociology Volume 33 ; 33 >
+        au < manifest ; 1993 ; International Journal of Comparative Sociology Volume 34 ; 34 >
+        au < manifest ; 1994 ; International Journal of Comparative Sociology Volume 35 ; 35 >
+        au < manifest ; 1995 ; International Journal of Comparative Sociology Volume 36 ; 36 >
+        au < manifest ; 1996 ; International Journal of Comparative Sociology Volume 37 ; 37 >
+        au < manifest ; 1997 ; International Journal of Comparative Sociology Volume 38 ; 38 >
+        au < manifest ; 1998 ; International Journal of Comparative Sociology Volume 39 ; 39 >
+        au < manifest ; 1999 ; International Journal of Comparative Sociology Volume 40 ; 40 >
+        au < manifest ; 2000 ; International Journal of Comparative Sociology Volume 41 ; 41 >
+        au < manifest ; 2001 ; International Journal of Comparative Sociology Volume 42 ; 42 >
+        au < manifest ; 2002 ; International Journal of Comparative Sociology Volume 43 ; 43 >
+        au < manifest ; 2003 ; International Journal of Comparative Sociology Volume 44 ; 44 >
+        au < manifest ; 2004 ; International Journal of Comparative Sociology Volume 45 ; 45 >
+        au < manifest ; 2005 ; International Journal of Comparative Sociology Volume 46 ; 46 >
+        au < manifest ; 2006 ; International Journal of Comparative Sociology Volume 47 ; 47 >
+        au < manifest ; 2007 ; International Journal of Comparative Sociology Volume 48 ; 48 >
+        au < manifest ; 2008 ; International Journal of Comparative Sociology Volume 49 ; 49 >
+        au < manifest ; 2009 ; International Journal of Comparative Sociology Volume 50 ; 50 >
+        au < manifest ; 2010 ; International Journal of Comparative Sociology Volume 51 ; 51 >
+        au < manifest ; 2011 ; International Journal of Comparative Sociology Volume 52 ; 52 >
 
       }
 
@@ -11784,6 +12758,26 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ccm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; International Journal of Cross Cultural Management Volume 1 ; 1 >
+        au < manifest ; 2002 ; International Journal of Cross Cultural Management Volume 2 ; 2 >
+        au < manifest ; 2003 ; International Journal of Cross Cultural Management Volume 3 ; 3 >
+        au < manifest ; 2004 ; International Journal of Cross Cultural Management Volume 4 ; 4 >
+        au < manifest ; 2005 ; International Journal of Cross Cultural Management Volume 5 ; 5 >
+        au < manifest ; 2006 ; International Journal of Cross Cultural Management Volume 6 ; 6 >
+        au < manifest ; 2007 ; International Journal of Cross Cultural Management Volume 7 ; 7 >
+        au < manifest ; 2008 ; International Journal of Cross Cultural Management Volume 8 ; 8 >
+        au < manifest ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 >
+        au < manifest ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 >
+        au < manifest ; 2011 ; International Journal of Cross Cultural Management Volume 11 ; 11 >
+
+      }
+
     }
 
     {
@@ -11816,6 +12810,29 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Journal of Cultural Studies Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; International Journal of Cultural Studies Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; manifest ; International Journal of Cultural Studies Volume 13 ; 13 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ics.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; International Journal of Cultural Studies Volume 1 ; 1 >
+        au < manifest ; 1999 ; International Journal of Cultural Studies Volume 2 ; 2 >
+        au < manifest ; 2000 ; International Journal of Cultural Studies Volume 3 ; 3 >
+        au < manifest ; 2001 ; International Journal of Cultural Studies Volume 4 ; 4 >
+        au < manifest ; 2002 ; International Journal of Cultural Studies Volume 5 ; 5 >
+        au < manifest ; 2003 ; International Journal of Cultural Studies Volume 6 ; 6 >
+        au < manifest ; 2004 ; International Journal of Cultural Studies Volume 7 ; 7 >
+        au < manifest ; 2005 ; International Journal of Cultural Studies Volume 8 ; 8 >
+        au < manifest ; 2006 ; International Journal of Cultural Studies Volume 9 ; 9 >
+        au < manifest ; 2007 ; International Journal of Cultural Studies Volume 10 ; 10 >
+        au < manifest ; 2008 ; International Journal of Cultural Studies Volume 11 ; 11 >
+        au < manifest ; 2009 ; International Journal of Cultural Studies Volume 12 ; 12 >
+        au < manifest ; 2010 ; International Journal of Cultural Studies Volume 13 ; 13 >
+        au < manifest ; 2011 ; International Journal of Cultural Studies Volume 14 ; 14 >
 
       }
 
@@ -11854,6 +12871,35 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; International Journal of Damage Mechanics Volume 1 ; 1 >
+        au < manifest ; 1993 ; International Journal of Damage Mechanics Volume 2 ; 2 >
+        au < manifest ; 1994 ; International Journal of Damage Mechanics Volume 3 ; 3 >
+        au < manifest ; 1995 ; International Journal of Damage Mechanics Volume 4 ; 4 >
+        au < manifest ; 1996 ; International Journal of Damage Mechanics Volume 5 ; 5 >
+        au < manifest ; 1997 ; International Journal of Damage Mechanics Volume 6 ; 6 >
+        au < manifest ; 1998 ; International Journal of Damage Mechanics Volume 7 ; 7 >
+        au < manifest ; 1999 ; International Journal of Damage Mechanics Volume 8 ; 8 >
+        au < manifest ; 2000 ; International Journal of Damage Mechanics Volume 9 ; 9 >
+        au < manifest ; 2001 ; International Journal of Damage Mechanics Volume 10 ; 10 >
+        au < manifest ; 2002 ; International Journal of Damage Mechanics Volume 11 ; 11 >
+        au < manifest ; 2003 ; International Journal of Damage Mechanics Volume 12 ; 12 >
+        au < manifest ; 2004 ; International Journal of Damage Mechanics Volume 13 ; 13 >
+        au < manifest ; 2005 ; International Journal of Damage Mechanics Volume 14 ; 14 >
+        au < manifest ; 2006 ; International Journal of Damage Mechanics Volume 15 ; 15 >
+        au < manifest ; 2007 ; International Journal of Damage Mechanics Volume 16 ; 16 >
+        au < manifest ; 2008 ; International Journal of Damage Mechanics Volume 17 ; 17 >
+        au < manifest ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 >
+        au < manifest ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 >
+        au < manifest ; 2011 ; International Journal of Damage Mechanics Volume 20 ; 20 >
+
+      }
+
     }
 
     {
@@ -11879,7 +12925,7 @@ comment[exm] = now published by Springer
         au < exists ; International Journal of Engine Research 8 ; 8 >
         au < exists ; International Journal of Engine Research 9 ; 9 >
         au < exists ; International Journal of Engine Research 10 ; 10 >
-        au < exists ; International Journal of Engine Research 11 ; 11 >
+        au < manifest ; International Journal of Engine Research 11 ; 11 >
 
       }
 
@@ -11918,6 +12964,40 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hpc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; International Journal of High Performance Computing Applications Volume 1 ; 1 >
+        au < manifest ; 1988 ; International Journal of High Performance Computing Applications Volume 2 ; 2 >
+        au < manifest ; 1989 ; International Journal of High Performance Computing Applications Volume 3 ; 3 >
+        au < manifest ; 1990 ; International Journal of High Performance Computing Applications Volume 4 ; 4 >
+        au < manifest ; 1991 ; International Journal of High Performance Computing Applications Volume 5 ; 5 >
+        au < manifest ; 1992 ; International Journal of High Performance Computing Applications Volume 6 ; 6 >
+        au < manifest ; 1993 ; International Journal of High Performance Computing Applications Volume 7 ; 7 >
+        au < manifest ; 1994 ; International Journal of High Performance Computing Applications Volume 8 ; 8 >
+        au < manifest ; 1995 ; International Journal of High Performance Computing Applications Volume 9 ; 9 >
+        au < manifest ; 1996 ; International Journal of High Performance Computing Applications Volume 10 ; 10 >
+        au < manifest ; 1997 ; International Journal of High Performance Computing Applications Volume 11 ; 11 >
+        au < manifest ; 1998 ; International Journal of High Performance Computing Applications Volume 12 ; 12 >
+        au < manifest ; 1999 ; International Journal of High Performance Computing Applications Volume 13 ; 13 >
+        au < manifest ; 2000 ; International Journal of High Performance Computing Applications Volume 14 ; 14 >
+        au < manifest ; 2001 ; International Journal of High Performance Computing Applications Volume 15 ; 15 >
+        au < manifest ; 2002 ; International Journal of High Performance Computing Applications Volume 16 ; 16 >
+        au < manifest ; 2003 ; International Journal of High Performance Computing Applications Volume 17 ; 17 >
+        au < manifest ; 2004 ; International Journal of High Performance Computing Applications Volume 18 ; 18 >
+        au < manifest ; 2005 ; International Journal of High Performance Computing Applications Volume 19 ; 19 >
+        au < manifest ; 2006 ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
+        au < manifest ; 2007 ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
+        au < manifest ; 2008 ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
+        au < manifest ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
+        au < manifest ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 >
+        au < manifest ; 2011 ; International Journal of High Performance Computing Applications Volume 25 ; 25 >
+
+      }
+
     }
 
     {
@@ -11943,6 +13023,25 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijl.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; The International Journal of Lower Extremity Wounds Volume 1 ; 1 >
+        au < manifest ; 2003 ; The International Journal of Lower Extremity Wounds Volume 2 ; 2 >
+        au < manifest ; 2004 ; The International Journal of Lower Extremity Wounds Volume 3 ; 3 >
+        au < manifest ; 2005 ; The International Journal of Lower Extremity Wounds Volume 4 ; 4 >
+        au < manifest ; 2006 ; The International Journal of Lower Extremity Wounds Volume 5 ; 5 >
+        au < manifest ; 2007 ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
+        au < manifest ; 2008 ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
+        au < manifest ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
+        au < manifest ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 >
+        au < manifest ; 2011 ; The International Journal of Lower Extremity Wounds Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -11965,6 +13064,57 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Journal of Music Education Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; International Journal of Music Education Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; International Journal of Music Education Volume 28 ; 28 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[ijm40] = Original series ended at vol 40, and issue numbering started at 22 again in 2004.
+
+        au < manifest ; 1983 ; International Journal of Music Education Volume 1 ; 1 >
+        au < manifest ; 1983 ; International Journal of Music Education Volume 2 ; 2 >
+        au < manifest ; 1984 ; International Journal of Music Education Volume 3 ; 3 >
+        au < manifest ; 1984 ; International Journal of Music Education Volume 4 ; 4 >
+        au < manifest ; 1985 ; International Journal of Music Education Volume 5 ; 5 >
+        au < manifest ; 1985 ; International Journal of Music Education Volume 6 ; 6 >
+        au < manifest ; 1986 ; International Journal of Music Education Volume 7 ; 7 >
+        au < manifest ; 1986 ; International Journal of Music Education Volume 8 ; 8 >
+        au < manifest ; 1987 ; International Journal of Music Education Volume 9 ; 9 >
+        au < manifest ; 1987 ; International Journal of Music Education Volume 10 ; 10 >
+        au < manifest ; 1988 ; International Journal of Music Education Volume 11 ; 11 >
+        au < manifest ; 1988 ; International Journal of Music Education Volume 12 ; 12 >
+        au < manifest ; 1989 ; International Journal of Music Education Volume 13 ; 13 >
+        au < manifest ; 1989 ; International Journal of Music Education Volume 14 ; 14 >
+        au < manifest ; 1990 ; International Journal of Music Education Volume 15 ; 15 >
+        au < manifest ; 1990 ; International Journal of Music Education Volume 16 ; 16 >
+        au < manifest ; 1991 ; International Journal of Music Education Volume 17 ; 17 >
+        au < manifest ; 1991 ; International Journal of Music Education Volume 18 ; 18 >
+        au < manifest ; 1992 ; International Journal of Music Education Volume 19 ; 19 >
+        au < manifest ; 1992 ; International Journal of Music Education Volume 20 ; 20 >
+        au < manifest ; 1993 ; International Journal of Music Education Volume 21 ; 21 >
+        au < manifest ; 1993-2004 ; International Journal of Music Education Volume 22 ; 22 >
+        au < manifest ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
+        au < manifest ; 1994-2006 ; International Journal of Music Education Volume 24 ; 24 >
+        au < manifest ; 1995-2007 ; International Journal of Music Education Volume 25 ; 25 >
+        au < manifest ; 1995-2008 ; International Journal of Music Education Volume 26 ; 26 >
+        au < manifest ; 1996-2009 ; International Journal of Music Education Volume 27 ; 27 >
+        au < manifest ; 1996-2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < manifest ; 1997-2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < manifest ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
+        au < manifest ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
+        au < manifest ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
+        au < manifest ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
+        au < manifest ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
+        au < manifest ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
+        au < manifest ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
+        au < manifest ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
+        au < manifest ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
+        au < manifest ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
+        au < manifest ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
 
       }
 
