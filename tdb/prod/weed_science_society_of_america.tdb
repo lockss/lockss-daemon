@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0043-1745
   
-      au < superseded ; Weed Science Volume 48 ; 48 >
-      au < superseded ; Weed Science Volume 49 ; 49 >
-      au < superseded ; Weed Science Volume 50 ; 50 >
-      au < superseded ; Weed Science Volume 51 ; 51 >
-      au < superseded ; Weed Science Volume 52 ; 52 >
-      au < doNotProcess ; Weed Science Volume 53 ; 53 >
-      au < superseded ; Weed Science Volume 53 ; 053 >
-      au < superseded ; Weed Science Volume 54 ; 54 >
-      au < superseded ; Weed Science Volume 55 ; 55 >
+      au < superseded ; 2000 ; Weed Science Volume 48 ; 48 >
+      au < superseded ; 2001 ; Weed Science Volume 49 ; 49 >
+      au < superseded ; 2002 ; Weed Science Volume 50 ; 50 >
+      au < superseded ; 2003 ; Weed Science Volume 51 ; 51 >
+      au < superseded ; 2004 ; eed Science Volume 52 ; 52 >
+      au < doNotProcess ; 2005 ; Weed Science Volume 53 ; 53 >
+      au < superseded ; 2005 ; Weed Science Volume 53 ; 053 >
+      au < superseded ; 2006 ; Weed Science Volume 54 ; 54 >
+      au < superseded ; 2007 ; Weed Science Volume 55 ; 55 >
     }
 
   }
@@ -41,20 +41,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0890-037X
   
-      au < superseded ; Weed Technology Volume 14 ; 14 >
-      au < superseded ; Weed Technology Volume 15 ; 15 >
-      au < superseded ; Weed Technology Volume 16 ; 16 >
-      au < superseded ; Weed Technology Volume 17 ; 17 >
-      au < doNotProcess ; Weed Technology Volume 18 ; 18 >
-      au < superseded ; Weed Technology Volume 18 ; 018 >
-      au < superseded ; Weed Technology Volume 19 ; 19 >
-      au < superseded ; Weed Technology Volume 20 ; 20 >
-      au < superseded ; Weed Technology Volume 21 ; 21 >
+      au < superseded ; 2000 ; Weed Technology Volume 14 ; 14 >
+      au < superseded ; 2001 ; Weed Technology Volume 15 ; 15 >
+      au < superseded ; 2002 ; Weed Technology Volume 16 ; 16 >
+      au < superseded ; 2003 ; Weed Technology Volume 17 ; 17 >
+      au < doNotProcess ; 2004 ; Weed Technology Volume 18 ; 18 >
+      au < superseded ; 2004 ; Weed Technology Volume 18 ; 018 >
+      au < superseded ; 2005 ; Weed Technology Volume 19 ; 19 >
+      au < superseded ; 2006 ; Weed Technology Volume 20 ; 20 >
+      au < superseded ; 2007 ; Weed Technology Volume 21 ; 21 >
     }
 
     {
