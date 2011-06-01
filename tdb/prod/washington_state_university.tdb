@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,9 +19,9 @@ comment[esq54] = 500 error on a page
 
     param[journal_dir] = esq
 
-    au < ready ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
-    au < notReady ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
-    au < ready ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
+    au < ready ; 2007 ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
+    au < notReady ; 2008 ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
+    au < ready ; 2009 ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
 
   }
 

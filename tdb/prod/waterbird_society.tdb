@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1524-4695
   
-      au < doNotProcess ; Waterbirds Volume 25 ; 25 >
-      au < doNotProcess ; Waterbirds Volume 26 ; 26 >
-      au < superseded ; Waterbirds Volume 27 ; 027 >
-      au < doNotProcess ; Waterbirds Volume 28 ; 28 >
-      au < doNotProcess ; Waterbirds Volume 29 ; 29 >
-      au < doNotProcess ; Waterbirds Volume 30 ; 30 >
+      au < doNotProcess ; 2002 ; Waterbirds Volume 25 ; 25 >
+      au < doNotProcess ; 2003 ; Waterbirds Volume 26 ; 26 >
+      au < superseded ; 2004 ; Waterbirds Volume 27 ; 027 >
+      au < doNotProcess ; 2005 ; Waterbirds Volume 28 ; 28 >
+      au < doNotProcess ; 2006 ; Waterbirds Volume 29 ; 29 >
+      au < doNotProcess ; 2007 ; Waterbirds Volume 30 ; 30 >
     }
 
     {
