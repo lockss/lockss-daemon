@@ -666,7 +666,7 @@
     au < released ; 2008 ; Benchmarking: An International Journal Volume 15 ; 15 >
     au < released ; 2009 ; Benchmarking: An International Journal Volume 16 ; 16 >
     au < testing ; 2010 ; Benchmarking: An International Journal Volume 17 ; 17 >
-    au < testing ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
+    au < ready ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
   }
 
   { 
@@ -701,7 +701,7 @@
     au < released ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 >
     au < released ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 >
     au < released ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 >
-    au < testing ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 >
+    au < ready ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 >
 
   }
 
@@ -1832,29 +1832,29 @@
     param[journal_issn] = 0955-534X
     comment[platform] = online from 1989
     
-    au < manifest ; 1989 ; European Business Review Volume 89 ; 89 >
-    au < manifest ; 1990 ; European Business Review Volume 90 ; 90 >
-    au < manifest ; 1991 ; European Business Review Volume 91 ; 91 >
-    au < manifest ; 1992 ; European Business Review Volume 92 ; 92 >
-    au < manifest ; 1993 ; European Business Review Volume 93 ; 93 >
+    au < ready ; 1989 ; European Business Review Volume 89 ; 89 >
+    au < ready ; 1990 ; European Business Review Volume 90 ; 90 >
+    au < ready ; 1991 ; European Business Review Volume 91 ; 91 >
+    au < ready ; 1992 ; European Business Review Volume 92 ; 92 >
+    au < ready ; 1993 ; European Business Review Volume 93 ; 93 >
     au < released ; 1994 ; European Business Review Volume 94 ; 94 >
     au < released ; 1995 ; European Business Review Volume 95 ; 95 >
     au < released ; 1996 ; European Business Review Volume 96 ; 96 >
     au < released ; 1997 ; European Business Review Volume 97 ; 97 >
     au < released ; 1998 ; European Business Review Volume 98 ; 98 >
     au < released ; 1999 ; European Business Review Volume 99 ; 99 >
-    au < manifest ; 2000 ; European Business Review Volume 12 ; 12 >
-    au < manifest ; 2001 ; European Business Review Volume 13 ; 13 >
-    au < manifest ; 2002 ; European Business Review Volume 14 ; 14 >
-    au < manifest ; 2003 ; European Business Review Volume 15 ; 15 >
-    au < manifest ; 2004 ; European Business Review Volume 16 ; 16 >
-    au < manifest ; 2005 ; European Business Review Volume 17 ; 17 >
-    au < manifest ; 2006 ; European Business Review Volume 18 ; 18 >
-    au < manifest ; 2007 ; European Business Review Volume 19 ; 19 >
-    au < manifest ; 2008 ; European Business Review Volume 20 ; 20 >
-    au < manifest ; 2009 ; European Business Review Volume 21 ; 21 >
-    au < manifest ; 2010 ; European Business Review Volume 22 ; 22 >
-    au < manifest ; 2011 ; European Business Review Volume 23 ; 23 >
+    au < ready ; 2000 ; European Business Review Volume 12 ; 12 >
+    au < ready ; 2001 ; European Business Review Volume 13 ; 13 >
+    au < ready ; 2002 ; European Business Review Volume 14 ; 14 >
+    au < ready ; 2003 ; European Business Review Volume 15 ; 15 >
+    au < ready ; 2004 ; European Business Review Volume 16 ; 16 >
+    au < ready ; 2005 ; European Business Review Volume 17 ; 17 >
+    au < ready ; 2006 ; European Business Review Volume 18 ; 18 >
+    au < ready ; 2007 ; European Business Review Volume 19 ; 19 >
+    au < ready ; 2008 ; European Business Review Volume 20 ; 20 >
+    au < ready ; 2009 ; European Business Review Volume 21 ; 21 >
+    au < ready ; 2010 ; European Business Review Volume 22 ; 22 >
+    au < ready ; 2011 ; European Business Review Volume 23 ; 23 >
     
   }
 
@@ -1895,51 +1895,51 @@
 
     param[journal_issn] = 0309-0566
   
-    au < manifest ; 1967 ; European Journal of Marketing Volume 1 ; 1 >
-    au < manifest ; 1968 ; European Journal of Marketing Volume 2 ; 2 >
-    au < manifest ; 1969 ; European Journal of Marketing Volume 3 ; 3 >
-    au < manifest ; 1970 ; European Journal of Marketing Volume 4 ; 4 >
-    au < manifest ; 1971 ; European Journal of Marketing Volume 5 ; 5 >
-    au < manifest ; 1972 ; European Journal of Marketing Volume 6 ; 6 >
-    au < manifest ; 1973 ; European Journal of Marketing Volume 7 ; 7 >
-    au < manifest ; 1974 ; European Journal of Marketing Volume 8 ; 8 >
-    au < manifest ; 1975 ; European Journal of Marketing Volume 9 ; 9 >
-    au < manifest ; 1976 ; European Journal of Marketing Volume 10 ; 10 >
-    au < manifest ; 1977 ; European Journal of Marketing Volume 11 ; 11 >
-    au < manifest ; 1978 ; European Journal of Marketing Volume 12 ; 12 >
-    au < manifest ; 1979 ; European Journal of Marketing Volume 13 ; 13 >
-    au < manifest ; 1980 ; European Journal of Marketing Volume 14 ; 14 >
-    au < manifest ; 1981 ; European Journal of Marketing Volume 15 ; 15 >
-    au < manifest ; 1982 ; European Journal of Marketing Volume 16 ; 16 >
-    au < manifest ; 1983 ; European Journal of Marketing Volume 17 ; 17 >
-    au < manifest ; 1984 ; European Journal of Marketing Volume 18 ; 18 >
-    au < manifest ; 1985 ; European Journal of Marketing Volume 19 ; 19 >
-    au < manifest ; 1986 ; European Journal of Marketing Volume 20 ; 20 >
-    au < manifest ; 1987 ; European Journal of Marketing Volume 21 ; 21 >
-    au < manifest ; 1988 ; European Journal of Marketing Volume 22 ; 22 >
-    au < manifest ; 1989 ; European Journal of Marketing Volume 23 ; 23 >
-    au < manifest ; 1990 ; European Journal of Marketing Volume 24 ; 24 >
-    au < manifest ; 1991 ; European Journal of Marketing Volume 25 ; 25 >
-    au < manifest ; 1992 ; European Journal of Marketing Volume 26 ; 26 >
-    au < manifest ; 1993 ; European Journal of Marketing Volume 27 ; 27 >
-    au < manifest ; 1994 ; European Journal of Marketing Volume 28 ; 28 >
-    au < manifest ; 1995 ; European Journal of Marketing Volume 29 ; 29 >
-    au < manifest ; 1996 ; European Journal of Marketing Volume 30 ; 30 >
-    au < manifest ; 1997 ; European Journal of Marketing Volume 31 ; 31 >
-    au < manifest ; 1998 ; European Journal of Marketing Volume 32 ; 32 >
-    au < manifest ; 1999 ; European Journal of Marketing Volume 33 ; 33 >
-    au < manifest ; 2000 ; European Journal of Marketing Volume 34 ; 34 >
-    au < manifest ; 2001 ; European Journal of Marketing Volume 35 ; 35 >
-    au < manifest ; 2002 ; European Journal of Marketing Volume 36 ; 36 >
-    au < manifest ; 2003 ; European Journal of Marketing Volume 37 ; 37 >
-    au < manifest ; 2004 ; European Journal of Marketing Volume 38 ; 38 >
-    au < manifest ; 2005 ; European Journal of Marketing Volume 39 ; 39 >
-    au < manifest ; 2006 ; European Journal of Marketing Volume 40 ; 40 >
-    au < manifest ; 2007 ; European Journal of Marketing Volume 41 ; 41 >
-    au < manifest ; 2008 ; European Journal of Marketing Volume 42 ; 42 >
-    au < manifest ; 2009 ; European Journal of Marketing Volume 43 ; 43 >
-    au < manifest ; 2010 ; European Journal of Marketing Volume 44 ; 44 >
-    au < manifest ; 2011 ; European Journal of Marketing Volume 45 ; 45 >
+    au < testing ; 1967 ; European Journal of Marketing Volume 1 ; 1 >
+    au < testing ; 1968 ; European Journal of Marketing Volume 2 ; 2 >
+    au < testing ; 1969 ; European Journal of Marketing Volume 3 ; 3 >
+    au < testing ; 1970 ; European Journal of Marketing Volume 4 ; 4 >
+    au < testing ; 1971 ; European Journal of Marketing Volume 5 ; 5 >
+    au < testing ; 1972 ; European Journal of Marketing Volume 6 ; 6 >
+    au < testing ; 1973 ; European Journal of Marketing Volume 7 ; 7 >
+    au < testing ; 1974 ; European Journal of Marketing Volume 8 ; 8 >
+    au < testing ; 1975 ; European Journal of Marketing Volume 9 ; 9 >
+    au < testing ; 1976 ; European Journal of Marketing Volume 10 ; 10 >
+    au < testing ; 1977 ; European Journal of Marketing Volume 11 ; 11 >
+    au < testing ; 1978 ; European Journal of Marketing Volume 12 ; 12 >
+    au < testing ; 1979 ; European Journal of Marketing Volume 13 ; 13 >
+    au < testing ; 1980 ; European Journal of Marketing Volume 14 ; 14 >
+    au < testing ; 1981 ; European Journal of Marketing Volume 15 ; 15 >
+    au < testing ; 1982 ; European Journal of Marketing Volume 16 ; 16 >
+    au < testing ; 1983 ; European Journal of Marketing Volume 17 ; 17 >
+    au < testing ; 1984 ; European Journal of Marketing Volume 18 ; 18 >
+    au < testing ; 1985 ; European Journal of Marketing Volume 19 ; 19 >
+    au < testing ; 1986 ; European Journal of Marketing Volume 20 ; 20 >
+    au < testing ; 1987 ; European Journal of Marketing Volume 21 ; 21 >
+    au < testing ; 1988 ; European Journal of Marketing Volume 22 ; 22 >
+    au < testing ; 1989 ; European Journal of Marketing Volume 23 ; 23 >
+    au < testing ; 1990 ; European Journal of Marketing Volume 24 ; 24 >
+    au < testing ; 1991 ; European Journal of Marketing Volume 25 ; 25 >
+    au < testing ; 1992 ; European Journal of Marketing Volume 26 ; 26 >
+    au < testing ; 1993 ; European Journal of Marketing Volume 27 ; 27 >
+    au < testing ; 1994 ; European Journal of Marketing Volume 28 ; 28 >
+    au < testing ; 1995 ; European Journal of Marketing Volume 29 ; 29 >
+    au < testing ; 1996 ; European Journal of Marketing Volume 30 ; 30 >
+    au < testing ; 1997 ; European Journal of Marketing Volume 31 ; 31 >
+    au < testing ; 1998 ; European Journal of Marketing Volume 32 ; 32 >
+    au < testing ; 1999 ; European Journal of Marketing Volume 33 ; 33 >
+    au < testing ; 2000 ; European Journal of Marketing Volume 34 ; 34 >
+    au < testing ; 2001 ; European Journal of Marketing Volume 35 ; 35 >
+    au < testing ; 2002 ; European Journal of Marketing Volume 36 ; 36 >
+    au < testing ; 2003 ; European Journal of Marketing Volume 37 ; 37 >
+    au < testing ; 2004 ; European Journal of Marketing Volume 38 ; 38 >
+    au < testing ; 2005 ; European Journal of Marketing Volume 39 ; 39 >
+    au < testing ; 2006 ; European Journal of Marketing Volume 40 ; 40 >
+    au < testing ; 2007 ; European Journal of Marketing Volume 41 ; 41 >
+    au < testing ; 2008 ; European Journal of Marketing Volume 42 ; 42 >
+    au < testing ; 2009 ; European Journal of Marketing Volume 43 ; 43 >
+    au < testing ; 2010 ; European Journal of Marketing Volume 44 ; 44 >
+    au < testing ; 2011 ; European Journal of Marketing Volume 45 ; 45 >
 
   }
 
@@ -2075,13 +2075,13 @@
     param[journal_issn] = 1077-5730
     comment[continued_by] = 1751-5637
     
-    au < manifest ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
+    au < ready ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
     au < doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 >
     au < doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 >    
-    au < manifest ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 >
-    au < manifest ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 >
-    au < manifest ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
-    au < manifest ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 >
+    au < ready ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 >
+    au < ready ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 >
+    au < ready ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
+    au < ready ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 >
     
   }
 
@@ -2503,19 +2503,19 @@
     param[journal_issn] = 1463-6697
 
     
-    au < manifest ; 1999 ; info Volume 1 ; 1 >
-    au < manifest ; 2000 ; info Volume 2 ; 2 >
-    au < manifest ; 2001 ; info Volume 3 ; 3 >
-    au < manifest ; 2002 ; info Volume 4 ; 4 >
-    au < manifest ; 2003 ; info Volume 5 ; 5 >
-    au < manifest ; 2004 ; info Volume 6 ; 6 >
-    au < manifest ; 2005 ; info Volume 7 ; 7 >
-    au < manifest ; 2006 ; info Volume 8 ; 8 >
-    au < manifest ; 2007 ; info Volume 9 ; 9 >
-    au < manifest ; 2008 ; info Volume 10 ; 10 >
-    au < manifest ; 2009 ; info Volume 11 ; 11 >
-    au < manifest ; 2010 ; info Volume 12 ; 12 >
-    au < manifest ; 2011 ; info Volume 13 ; 13 >
+    au < ready ; 1999 ; info Volume 1 ; 1 >
+    au < ready ; 2000 ; info Volume 2 ; 2 >
+    au < ready ; 2001 ; info Volume 3 ; 3 >
+    au < ready ; 2002 ; info Volume 4 ; 4 >
+    au < ready ; 2003 ; info Volume 5 ; 5 >
+    au < ready ; 2004 ; info Volume 6 ; 6 >
+    au < ready ; 2005 ; info Volume 7 ; 7 >
+    au < ready ; 2006 ; info Volume 8 ; 8 >
+    au < ready ; 2007 ; info Volume 9 ; 9 >
+    au < ready ; 2008 ; info Volume 10 ; 10 >
+    au < ready ; 2009 ; info Volume 11 ; 11 >
+    au < ready ; 2010 ; info Volume 12 ; 12 >
+    au < ready ; 2011 ; info Volume 13 ; 13 >
 
   }
 
@@ -2562,30 +2562,30 @@
 
     param[journal_issn] = 0959-3845
     
-    au < manifest ; 1982-1983 ; Information Technology & People Volume 1 ; 1 >
-    au < manifest ; 1985 ; Information Technology & People Volume 2 ; 2 >
-    au < manifest ; 1987 ; Information Technology & People Volume 3 ; 3 >
-    au < manifest ; 1988 ; Information Technology & People Volume 4 ; 4 >
-    au < manifest ; 1989 ; Information Technology & People Volume 5 ; 5 >
-    au < manifest ; 1992 ; Information Technology & People Volume 6 ; 6 >
-    au < manifest ; 1994 ; Information Technology & People Volume 7 ; 7 >
-    au < manifest ; 1995 ; Information Technology & People Volume 8 ; 8 >
-    au < manifest ; 1996 ; Information Technology & People Volume 9 ; 9 >
-    au < manifest ; 1997 ; Information Technology & People Volume 10 ; 10 >
-    au < manifest ; 1998 ; Information Technology & People Volume 11 ; 11 >
-    au < manifest ; 1999 ; Information Technology & People Volume 12 ; 12 >
-    au < manifest ; 2000 ; Information Technology & People Volume 13 ; 13 >
-    au < manifest ; 2001 ; Information Technology & People Volume 14 ; 14 >
-    au < manifest ; 2002 ; Information Technology & People Volume 15 ; 15 >
-    au < manifest ; 2003 ; Information Technology & People Volume 16 ; 16 >
-    au < manifest ; 2004 ; Information Technology & People Volume 17 ; 17 >
-    au < manifest ; 2005 ; Information Technology & People Volume 18 ; 18 >
-    au < manifest ; 2006 ; Information Technology & People Volume 19 ; 19 >
-    au < manifest ; 2007 ; Information Technology & People Volume 20 ; 20 >
-    au < manifest ; 2008 ; Information Technology & People Volume 21 ; 21 >
-    au < manifest ; 2009 ; Information Technology & People Volume 22 ; 22 >
-    au < manifest ; 2010 ; Information Technology & People Volume 23 ; 23 >
-    au < manifest ; 2011 ; Information Technology & People Volume 24 ; 24 >
+    au < ready ; 1982-1983 ; Information Technology & People Volume 1 ; 1 >
+    au < ready ; 1985 ; Information Technology & People Volume 2 ; 2 >
+    au < ready ; 1987 ; Information Technology & People Volume 3 ; 3 >
+    au < ready ; 1988 ; Information Technology & People Volume 4 ; 4 >
+    au < ready ; 1989 ; Information Technology & People Volume 5 ; 5 >
+    au < ready ; 1992 ; Information Technology & People Volume 6 ; 6 >
+    au < ready ; 1994 ; Information Technology & People Volume 7 ; 7 >
+    au < ready ; 1995 ; Information Technology & People Volume 8 ; 8 >
+    au < ready ; 1996 ; Information Technology & People Volume 9 ; 9 >
+    au < ready ; 1997 ; Information Technology & People Volume 10 ; 10 >
+    au < ready ; 1998 ; Information Technology & People Volume 11 ; 11 >
+    au < ready ; 1999 ; Information Technology & People Volume 12 ; 12 >
+    au < ready ; 2000 ; Information Technology & People Volume 13 ; 13 >
+    au < ready ; 2001 ; Information Technology & People Volume 14 ; 14 >
+    au < ready ; 2002 ; Information Technology & People Volume 15 ; 15 >
+    au < ready ; 2003 ; Information Technology & People Volume 16 ; 16 >
+    au < ready ; 2004 ; Information Technology & People Volume 17 ; 17 >
+    au < ready ; 2005 ; Information Technology & People Volume 18 ; 18 >
+    au < ready ; 2006 ; Information Technology & People Volume 19 ; 19 >
+    au < ready ; 2007 ; Information Technology & People Volume 20 ; 20 >
+    au < ready ; 2008 ; Information Technology & People Volume 21 ; 21 >
+    au < testing ; 2009 ; Information Technology & People Volume 22 ; 22 >
+    au < ready ; 2010 ; Information Technology & People Volume 23 ; 23 >
+    au < ready ; 2011 ; Information Technology & People Volume 24 ; 24 >
 
   }
 
@@ -2600,20 +2600,20 @@
     param[journal_issn] = 0957-6061
     comment[continued_by] = 1741-038X
     
-    au < manifest ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 >
-    au < manifest ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 >
-    au < manifest ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 >
-    au < manifest ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 >
-    au < manifest ; 1994 ; Integrated Manufacturing Systems Volume 5 ; 5 >
-    au < manifest ; 1995 ; Integrated Manufacturing Systems Volume 6 ; 6 >
-    au < manifest ; 1996 ; Integrated Manufacturing Systems Volume 7 ; 7 >
-    au < manifest ; 1997 ; Integrated Manufacturing Systems Volume 8 ; 8 >
-    au < manifest ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 >
-    au < manifest ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 >
-    au < manifest ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 >
-    au < manifest ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 >
-    au < manifest ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 >
-    au < manifest ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 >
+    au < ready ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 >
+    au < ready ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 >
+    au < ready ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 >
+    au < ready ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 >
+    au < ready ; 1994 ; Integrated Manufacturing Systems Volume 5 ; 5 >
+    au < ready ; 1995 ; Integrated Manufacturing Systems Volume 6 ; 6 >
+    au < ready ; 1996 ; Integrated Manufacturing Systems Volume 7 ; 7 >
+    au < ready ; 1997 ; Integrated Manufacturing Systems Volume 8 ; 8 >
+    au < ready ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 >
+    au < ready ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 >
+    au < ready ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 >
+    au < ready ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 >
+    au < ready ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 >
+    au < ready ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 >
 
   }
 
@@ -2628,13 +2628,13 @@
     param[journal_issn] = 1741-5659
 
     
-    au < manifest ; 2004 ; Interactive Technology and Smart Education Volume 1 ; 1 >
-    au < manifest ; 2005 ; Interactive Technology and Smart Education Volume 2 ; 2 >
-    au < manifest ; 2006 ; Interactive Technology and Smart Education Volume 3 ; 3 >
-    au < manifest ; 2007 ; Interactive Technology and Smart Education Volume 4 ; 4 >
-    au < manifest ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 >
-    au < manifest ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 >
-    au < manifest ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 >
+    au < ready ; 2004 ; Interactive Technology and Smart Education Volume 1 ; 1 >
+    au < ready ; 2005 ; Interactive Technology and Smart Education Volume 2 ; 2 >
+    au < ready ; 2006 ; Interactive Technology and Smart Education Volume 3 ; 3 >
+    au < ready ; 2007 ; Interactive Technology and Smart Education Volume 4 ; 4 >
+    au < ready ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 >
+    au < ready ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 >
+    au < ready ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 >
     au < testing ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 >
 
   }
@@ -2650,45 +2650,45 @@
     param[journal_issn] = 0264-1615
 
     
-    au < testing ; 1973 ; Interlending & Document Supply Volume 1 ; 1 >
-    au < testing ; 1974 ; Interlending & Document Supply Volume 2 ; 2 >
-    au < testing ; 1975 ; Interlending & Document Supply Volume 3 ; 3 >
-    au < testing ; 1976 ; Interlending & Document Supply Volume 4 ; 4 >
-    au < testing ; 1977 ; Interlending & Document Supply Volume 5 ; 5 >
-    au < testing ; 1978 ; Interlending & Document Supply Volume 6 ; 6 >
-    au < testing ; 1979 ; Interlending & Document Supply Volume 7 ; 7 >
-    au < testing ; 1980 ; Interlending & Document Supply Volume 8 ; 8 >
-    au < testing ; 1981 ; Interlending & Document Supply Volume 9 ; 9 >
-    au < testing ; 1982 ; Interlending & Document Supply Volume 10 ; 10 >
-    au < testing ; 1983 ; Interlending & Document Supply Volume 11 ; 11 >
-    au < testing ; 1984 ; Interlending & Document Supply Volume 12 ; 12 >
-    au < testing ; 1985 ; Interlending & Document Supply Volume 13 ; 13 >
-    au < testing ; 1986 ; Interlending & Document Supply Volume 14 ; 14 >
-    au < testing ; 1987 ; Interlending & Document Supply Volume 15 ; 15 >
-    au < testing ; 1988 ; Interlending & Document Supply Volume 16 ; 16 >
-    au < testing ; 1989 ; Interlending & Document Supply Volume 17 ; 17 >
-    au < testing ; 1990 ; Interlending & Document Supply Volume 18 ; 18 >
-    au < testing ; 1991 ; Interlending & Document Supply Volume 19 ; 19 >
-    au < testing ; 1992 ; Interlending & Document Supply Volume 20 ; 20 >
-    au < testing ; 1993 ; Interlending & Document Supply Volume 21 ; 21 >
-    au < testing ; 1994 ; Interlending & Document Supply Volume 22 ; 22 >
-    au < testing ; 1995 ; Interlending & Document Supply Volume 23 ; 23 >
-    au < testing ; 1996 ; Interlending & Document Supply Volume 24 ; 24 >
-    au < testing ; 1997 ; Interlending & Document Supply Volume 25 ; 25 >
-    au < testing ; 1998 ; Interlending & Document Supply Volume 26 ; 26 >
-    au < testing ; 1999 ; Interlending & Document Supply Volume 27 ; 27 >
-    au < testing ; 2000 ; Interlending & Document Supply Volume 28 ; 28 >
-    au < testing ; 2001 ; Interlending & Document Supply Volume 29 ; 29 >
-    au < testing ; 2002 ; Interlending & Document Supply Volume 30 ; 30 >
-    au < testing ; 2003 ; Interlending & Document Supply Volume 31 ; 31 >
-    au < testing ; 2004 ; Interlending & Document Supply Volume 32 ; 32 >
-    au < testing ; 2005 ; Interlending & Document Supply Volume 33 ; 33 >
-    au < testing ; 2006 ; Interlending & Document Supply Volume 34 ; 34 >
-    au < testing ; 2007 ; Interlending & Document Supply Volume 35 ; 35 >
-    au < testing ; 2008 ; Interlending & Document Supply Volume 36 ; 36 >
-    au < testing ; 2009 ; Interlending & Document Supply Volume 37 ; 37 >
-    au < testing ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
-    au < testing ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
+    au < ready ; 1973 ; Interlending & Document Supply Volume 1 ; 1 >
+    au < ready ; 1974 ; Interlending & Document Supply Volume 2 ; 2 >
+    au < ready ; 1975 ; Interlending & Document Supply Volume 3 ; 3 >
+    au < ready ; 1976 ; Interlending & Document Supply Volume 4 ; 4 >
+    au < ready ; 1977 ; Interlending & Document Supply Volume 5 ; 5 >
+    au < ready ; 1978 ; Interlending & Document Supply Volume 6 ; 6 >
+    au < ready ; 1979 ; Interlending & Document Supply Volume 7 ; 7 >
+    au < ready ; 1980 ; Interlending & Document Supply Volume 8 ; 8 >
+    au < ready ; 1981 ; Interlending & Document Supply Volume 9 ; 9 >
+    au < ready ; 1982 ; Interlending & Document Supply Volume 10 ; 10 >
+    au < ready ; 1983 ; Interlending & Document Supply Volume 11 ; 11 >
+    au < ready ; 1984 ; Interlending & Document Supply Volume 12 ; 12 >
+    au < ready ; 1985 ; Interlending & Document Supply Volume 13 ; 13 >
+    au < ready ; 1986 ; Interlending & Document Supply Volume 14 ; 14 >
+    au < ready ; 1987 ; Interlending & Document Supply Volume 15 ; 15 >
+    au < ready ; 1988 ; Interlending & Document Supply Volume 16 ; 16 >
+    au < ready ; 1989 ; Interlending & Document Supply Volume 17 ; 17 >
+    au < ready ; 1990 ; Interlending & Document Supply Volume 18 ; 18 >
+    au < ready ; 1991 ; Interlending & Document Supply Volume 19 ; 19 >
+    au < ready ; 1992 ; Interlending & Document Supply Volume 20 ; 20 >
+    au < ready ; 1993 ; Interlending & Document Supply Volume 21 ; 21 >
+    au < ready ; 1994 ; Interlending & Document Supply Volume 22 ; 22 >
+    au < ready ; 1995 ; Interlending & Document Supply Volume 23 ; 23 >
+    au < ready ; 1996 ; Interlending & Document Supply Volume 24 ; 24 >
+    au < ready ; 1997 ; Interlending & Document Supply Volume 25 ; 25 >
+    au < ready ; 1998 ; Interlending & Document Supply Volume 26 ; 26 >
+    au < ready ; 1999 ; Interlending & Document Supply Volume 27 ; 27 >
+    au < ready ; 2000 ; Interlending & Document Supply Volume 28 ; 28 >
+    au < ready ; 2001 ; Interlending & Document Supply Volume 29 ; 29 >
+    au < ready ; 2002 ; Interlending & Document Supply Volume 30 ; 30 >
+    au < ready ; 2003 ; Interlending & Document Supply Volume 31 ; 31 >
+    au < ready ; 2004 ; Interlending & Document Supply Volume 32 ; 32 >
+    au < ready ; 2005 ; Interlending & Document Supply Volume 33 ; 33 >
+    au < ready ; 2006 ; Interlending & Document Supply Volume 34 ; 34 >
+    au < ready ; 2007 ; Interlending & Document Supply Volume 35 ; 35 >
+    au < ready ; 2008 ; Interlending & Document Supply Volume 36 ; 36 >
+    au < ready ; 2009 ; Interlending & Document Supply Volume 37 ; 37 >
+    au < ready ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
+    au < ready ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
 
   }
 
@@ -2814,8 +2814,8 @@
     param[journal_issn] = 1756-8692 
 
     au < released ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
-    au < manifest ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
-    au < manifest ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 >    
+    au < ready ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
+    au < ready ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 >    
 
   }
 
@@ -3096,30 +3096,30 @@
 
     title <
       name = International Journal of Entrepreneurial Behaviour & Research ;
-      issn = 1355-2554 ;
+      issn = ready ;
       eissn = 1758-6534 ;
       issnl = 1355-2554
     >
 
     param[journal_issn] = 1355-2554
     
-    au < manifest ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
-    au < manifest ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
-    au < manifest ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
-    au < manifest ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
-    au < manifest ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
-    au < manifest ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
-    au < manifest ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
-    au < manifest ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
-    au < manifest ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
-    au < manifest ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
-    au < manifest ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
-    au < manifest ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
-    au < manifest ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
-    au < manifest ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
-    au < manifest ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
-    au < manifest ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
-    au < manifest ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 >
+    au < ready ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
+    au < ready ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
+    au < ready ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
+    au < ready ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
+    au < ready ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
+    au < ready ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
+    au < ready ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
+    au < ready ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
+    au < ready ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
+    au < ready ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
+    au < ready ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
+    au < ready ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
+    au < ready ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
+    au < ready ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
+    au < ready ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
+    au < ready ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
+    au < ready ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 >
 
   }
 
