@@ -1,14 +1,14 @@
 #!/bin/bash
 #
 # Simple wrapper script to send notification e-mail when process is complete.
-# PYLORUS_MAIL="mellen@make-do.org 4088230436@cingularme.com"
+# Add this variable to .profile with your email address
+# export PYLORUS_MAIL="myemail@stanford.edu"
 
-# Replace the "sleep 60" command with the command that you wish to run.
+# Use sleep command for debug.
 ./pylorus.py $*
 # sleep 5
 
 # Use mailx to send a notification.
-#`echo "Job is done" | mailx -s "Job Complete" mellen\@make-do.org 4088230436\@cingularme.com`
 if [ "x$PYLORUS_MAIL" != "x" ]
 then 
 `echo "$USER: Job: $* on $HOSTNAME at $PWD" | mailx -s "Job Complete" ${PYLORUS_MAIL}`
