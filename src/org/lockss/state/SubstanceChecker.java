@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.2 2011-01-10 09:19:58 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.3 2011-06-02 19:00:20 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class SubstanceChecker {
    */
   public static final String PARAM_DETECT_NO_SUBSTANCE_MODE =
     PREFIX + "detectNoSubstanceMode";
-  public static final String DEFAULT_DETECT_NO_SUBSTANCE_MODE = "None";
+  public static final String DEFAULT_DETECT_NO_SUBSTANCE_MODE = "All";
 
   /** State is Unknown iff the AU has no substance patterns, otherwise No
    * if no substance URL has been detected so far, else Yes */
