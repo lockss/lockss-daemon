@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.212 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: PollManager.java,v 1.213 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -2208,7 +2208,7 @@ public class PollManager
     }
     // Do not call polls on AUs that have not crawled, UNLESS that AU
     // is marked pubdown.
-    if (auState.getLastCrawlTime() == -1 && !AuUtil.isPubDown(au)) {
+    if (!auState.hasCrawled() && !AuUtil.isPubDown(au)) {
       theLog.debug3("Not crawled or down, not calling a poll on " + au);
       return false;
     }

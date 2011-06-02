@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.16 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.17 2011-06-02 18:59:51 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastCrawlAttempt());
     assertEquals(-1, aus.getLastCrawlResult());
     assertFalse(aus.isCrawlActive());
+    assertFalse(aus.hasCrawled());
     assertNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(t1);
@@ -78,6 +79,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastCrawlAttempt());
     assertEquals(-1, aus.getLastCrawlResult());
     assertTrue(aus.isCrawlActive());
+    assertFalse(aus.hasCrawled());
     assertNotNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(t2);
@@ -87,6 +89,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(Crawler.STATUS_ERROR, aus.getLastCrawlResult());
     assertEquals("Plorg", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
+    assertFalse(aus.hasCrawled());
 
     TimeBase.setSimulated(t3);
     aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "Syrah");
@@ -95,6 +98,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
+    assertTrue(aus.hasCrawled());
 
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastCrawlTime());
@@ -102,6 +106,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
+    assertTrue(aus.hasCrawled());
 
     TimeBase.setSimulated(t4);
     aus.newCrawlStarted();
@@ -109,7 +114,7 @@ public class TestAuState extends LockssTestCase {
     assertEquals(t1, aus.getLastCrawlAttempt());
     assertEquals(Crawler.STATUS_SUCCESSFUL, aus.getLastCrawlResult());
     assertEquals("Syrah", aus.getLastCrawlResultMsg());
-
+    assertTrue(aus.hasCrawled());
   }
 
   public void testDaemonCrashedDuringCrawl() throws Exception {

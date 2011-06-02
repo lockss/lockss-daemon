@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.32 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.33 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class V3PollFactory extends BasePollFactory {
     // enoough.  Should vote only after *complete* crawl or recovery (which
     // might be determined by poll agreement), but might have substance
     // after incomplete crawl.
-    if (aus.getLastCrawlTime() <= 0) { 
+    if (!aus.hasCrawled()) { 
       log.debug("AU not crawled, not voting: " + pollspec.getAuId());
       sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
       return null;

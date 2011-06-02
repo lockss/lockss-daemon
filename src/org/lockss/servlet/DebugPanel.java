@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.19 2011-05-11 03:31:56 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.20 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -262,8 +262,7 @@ public class DebugPanel extends LockssServlet {
 	return;
       }
       // Don't poll if never crawled & not down
-      if (nodeMgr.getAuState().getLastCrawlTime() < 0 &&
-	  !AuUtil.isPubDown(au)) {
+      if (!AuUtil.hasCrawled(au) && !AuUtil.isPubDown(au)) {
 	errMsg = "Not crawled yet.  Click again to force new poll.";
 	showForcePoll = true;
 	return;

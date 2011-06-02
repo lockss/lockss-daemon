@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.67 2011-03-16 08:34:10 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.68 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -1787,7 +1787,7 @@ public class ServletUtil {
 	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
 	  String url = (String)uiter.next();
 	  tbl.add(xform.transformUrl(url, au));
-	  if (checkCollected && AuUtil.getAuState(au).getLastCrawlTime() < 0) {
+	  if (checkCollected && !AuUtil.hasCrawled(au)) {
 	    tbl.add(" (not fully collected)");
 	  }
 	  if (uiter.hasNext()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.26 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.27 2011-06-02 18:59:53 tlipkis Exp $
  */
 
 /*
@@ -190,6 +190,14 @@ public class AuUtil {
     return getBoolValue(getAuParamOrTitleDefault(au,
 						 ConfigParamDescr.AU_CLOSED),
 			false);
+  }
+
+  /**
+   * Returns true if the AU has ever successfully completed a new content
+   * crawl
+   */
+  public static boolean hasCrawled(ArchivalUnit au) {
+    return getAuState(au).getLastCrawlTime() >= 0;
   }
 
   public static boolean isPubDown(ArchivalUnit au) {

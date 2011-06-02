@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.41 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: AuState.java,v 1.42 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -223,6 +223,14 @@ public class AuState implements LockssSerializable {
   }
 
   /**
+   * Returns true if the AU has ever successfully completed a new content
+   * crawl
+   */
+  public boolean hasCrawled() {
+    return getLastCrawlTime() >= 0;
+  }
+
+  /**
    * Returns the last time a top level poll completed.
    * @return the last poll time in ms
    */
@@ -326,7 +334,7 @@ public class AuState implements LockssSerializable {
   /**
    * Sets the last crawl time to the current time.  Saves itself to disk.
    */
-  protected void newCrawlFinished(int result, String resultMsg) {
+  public void newCrawlFinished(int result, String resultMsg) {
     lastCrawlResultMsg = resultMsg;
     switch (result) {
     case Crawler.STATUS_SUCCESSFUL:

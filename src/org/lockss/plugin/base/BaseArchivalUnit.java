@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.149 2011-03-18 09:56:05 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.150 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -645,7 +645,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (logger.isDebug2()) {
       logger.debug2("Deciding whether to do new content crawl for "+aus);
     }
-    if (aus.getLastCrawlTime() == 0 || timeDiff > (newContentCrawlIntv)) {
+    if (!aus.hasCrawled() || timeDiff > (newContentCrawlIntv)) {
       logger.debug2("New content crawl needed for "+aus);
       return true;
     }

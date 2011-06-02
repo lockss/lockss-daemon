@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.98 2011-04-26 23:53:07 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.99 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -1618,7 +1618,7 @@ public class ArchivalUnitStatus
 	  AuState aus = AuUtil.getAuState(au);
 	  if (AuUtil.isPubDown(au)) {
 	  } else {
-	    if (aus.getLastCrawlTime() <= 0) {
+	    if (!aus.hasCrawled()) {
 	      neverCrawled++;
 	    } else if (au.shouldCrawlForNewContent(aus)) {
 	      needsRecrawl++;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.14 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.15 2011-06-02 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,18 @@ public class TestAuUtil extends LockssTestCase {
     AuState aus = AuUtil.getAuState(mau);
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testHasCrawled() throws IOException {
+    setUpDiskPaths();
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    getMockLockssDaemon().getNodeManager(mau).startService();
+    assertFalse(AuUtil.hasCrawled(mau));
+    AuState aus = AuUtil.getAuState(mau);
+    aus.newCrawlFinished(Crawler.STATUS_ERROR, "foo");
+    assertFalse(AuUtil.hasCrawled(mau));
+    aus.newCrawlFinished(Crawler.STATUS_SUCCESSFUL, "foo");
+    assertTrue(AuUtil.hasCrawled(mau));
   }
 
   public void testIsClosed() throws Exception {
