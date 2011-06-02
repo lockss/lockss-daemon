@@ -2116,9 +2116,9 @@
     au < manifest ; 1999 ; Annals of Hematology Volume 78 ; 78 >
     au < manifest ; 2000 ; Annals of Hematology Volume 79 ; 79 >
     au < manifest ; 2001 ; Annals of Hematology Volume 80 ; 80 >
-    au < testing ; 2002 ; Annals of Hematology Volume 81 ; 81 >
+    au < ready ; 2002 ; Annals of Hematology Volume 81 ; 81 >
     au < testing ; 2003 ; Annals of Hematology Volume 82 ; 82 >
-    au < testing ; 2004 ; Annals of Hematology Volume 83 ; 83 >
+    au < ready ; 2004 ; Annals of Hematology Volume 83 ; 83 >
     au < testing ; 2005 ; Annals of Hematology Volume 84 ; 84 >
     au < testing ; 2006 ; Annals of Hematology Volume 85 ; 85 >
     au < testing ; 2007 ; Annals of Hematology Volume 86 ; 86 >
@@ -2656,11 +2656,11 @@
     au < manifest ; 2002 ; Applied Microbiology and Biotechnology Volume 59 ; 59 >
     au < manifest ; 2002 ; Applied Microbiology and Biotechnology Volume 60 ; 60 >
     au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 61 ; 61 >
-    au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 62 ; 62 >
+    au < ready ; 2003 ; Applied Microbiology and Biotechnology Volume 62 ; 62 >
     au < testing ; 2003 ; Applied Microbiology and Biotechnology Volume 63 ; 63 >
     au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 64 ; 64 >
     au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 65 ; 65 >
-    au < testing ; 2004 ; Applied Microbiology and Biotechnology Volume 66 ; 66 >
+    au < ready ; 2004 ; Applied Microbiology and Biotechnology Volume 66 ; 66 >
     au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 67 ; 67 >
     au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 68 ; 68 >
     au < testing ; 2005 ; Applied Microbiology and Biotechnology Volume 69 ; 69 >
@@ -4352,17 +4352,17 @@
     attr[where] = content3b
 
     au < testing ; 2000 ; Biogerontology Volume 1 ; 1 >
-    au < testing ; 2001 ; Biogerontology Volume 2 ; 2 >
+    au < ready ; 2001 ; Biogerontology Volume 2 ; 2 >
     au < testing ; 2002 ; Biogerontology Volume 3 ; 3 >
-    au < testing ; 2003 ; Biogerontology Volume 4 ; 4 >
+    au < ready ; 2003 ; Biogerontology Volume 4 ; 4 >
     au < testing ; 2004 ; Biogerontology Volume 5 ; 5 >
     au < testing ; 2005 ; Biogerontology Volume 6 ; 6 >
     au < testing ; 2006 ; Biogerontology Volume 7 ; 7 >
-    au < testing ; 2007 ; Biogerontology Volume 8 ; 8 >
+    au < ready ; 2007 ; Biogerontology Volume 8 ; 8 >
     au < testing ; 2008 ; Biogerontology Volume 9 ; 9 >
     au < testing ; 2009 ; Biogerontology Volume 10 ; 10 >
     au < testing ; 2010 ; Biogerontology Volume 11 ; 11 >
-    au < testing ; 2011 ; Biogerontology Volume 12 ; 12 >
+    au < ready ; 2011 ; Biogerontology Volume 12 ; 12 >
 
   }
 
@@ -13850,76 +13850,76 @@
     au < manifest ; 1960-1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 178 ; 178 >
     au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 179 ; 179 >
     au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 180 ; 180 >
-    au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 181 ; 181 >
-    au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 182 ; 182 >
-    au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 183 ; 183 >
-    au < manifest ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 184 ; 184 >
-    au < manifest ; 1961-1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 185 ; 185 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 186 ; 186 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 187 ; 187 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 188 ; 188 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 189 ; 189 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 190 ; 190 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 191 ; 191 >
-    au < manifest ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 192 ; 192 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 193 ; 193 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 194 ; 194 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 195 ; 195 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 196 ; 196 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 197 ; 197 >
-    au < manifest ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 198 ; 198 >
-    au < manifest ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 199 ; 199 >
-    au < manifest ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 200 ; 200 >
+    au < testing ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 181 ; 181 >
+    au < testing ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 182 ; 182 >
+    au < testing ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 183 ; 183 >
+    au < testing ; 1961 ; Fresenius Zeitschrift für Analytische Chemie Volume 184 ; 184 >
+    au < testing ; 1961-1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 185 ; 185 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 186 ; 186 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 187 ; 187 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 188 ; 188 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 189 ; 189 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 190 ; 190 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 191 ; 191 >
+    au < testing ; 1962 ; Fresenius Zeitschrift für Analytische Chemie Volume 192 ; 192 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 193 ; 193 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 194 ; 194 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 195 ; 195 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 196 ; 196 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 197 ; 197 >
+    au < testing ; 1963 ; Fresenius Zeitschrift für Analytische Chemie Volume 198 ; 198 >
+    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 199 ; 199 >
+    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 200 ; 200 >
     au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 201 ; 201 >
-    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 202 ; 202 >
+    au < ready ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 202 ; 202 >
     au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 203 ; 203 >
-    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 204 ; 204 >
-    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 205 ; 205 >
-    au < testing ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 206 ; 206 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 207 ; 207 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 208 ; 208 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 209 ; 209 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 210 ; 210 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 211 ; 211 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 212 ; 212 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 213 ; 213 >
-    au < testing ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 214 ; 214 >
-    au < testing ; 1965-1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 215 ; 215 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 216 ; 216 >
+    au < ready ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 204 ; 204 >
+    au < ready ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 205 ; 205 >
+    au < ready ; 1964 ; Fresenius Zeitschrift für Analytische Chemie Volume 206 ; 206 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 207 ; 207 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 208 ; 208 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 209 ; 209 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 210 ; 210 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 211 ; 211 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 212 ; 212 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 213 ; 213 >
+    au < ready ; 1965 ; Fresenius Zeitschrift für Analytische Chemie Volume 214 ; 214 >
+    au < ready ; 1965-1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 215 ; 215 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 216 ; 216 >
     au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 217 ; 217 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 218 ; 218 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 219 ; 219 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 220 ; 220 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 221 ; 221 >
-    au < testing ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 222 ; 222 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 218 ; 218 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 219 ; 219 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 220 ; 220 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 221 ; 221 >
+    au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 222 ; 222 >
     au < ready ; 1966 ; Fresenius Zeitschrift für Analytische Chemie Volume 223 ; 223 >
-    au < testing ; 1966-1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 224 ; 224 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 225 ; 225 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 226 ; 226 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 227 ; 227 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 228 ; 228 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 229 ; 229 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 230 ; 230 >
+    au < ready ; 1966-1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 224 ; 224 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 225 ; 225 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 226 ; 226 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 227 ; 227 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 228 ; 228 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 229 ; 229 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 230 ; 230 >
     au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 231 ; 231 >
-    au < testing ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 232 ; 232 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 233 ; 233 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 234 ; 234 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 235 ; 235 >
+    au < ready ; 1967 ; Fresenius Zeitschrift für Analytische Chemie Volume 232 ; 232 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 233 ; 233 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 234 ; 234 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 235 ; 235 >
     au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 236 ; 236 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 237 ; 237 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 238 ; 238 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 237 ; 237 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 238 ; 238 >
     au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 239 ; 239 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 240 ; 240 >
-    au < testing ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 241 ; 241 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 240 ; 240 >
+    au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 241 ; 241 >
     au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 242 ; 242 >
     au < ready ; 1968 ; Fresenius Zeitschrift für Analytische Chemie Volume 243 ; 243 >
-    au < testing ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 244 ; 244 >
-    au < testing ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 245 ; 245 >
-    au < testing ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 246 ; 246 >
-    au < testing ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 247 ; 247 >
-    au < testing ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 248 ; 248 >
-    au < testing ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 249 ; 249 >
-    au < testing ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 250 ; 250 >
+    au < ready ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 244 ; 244 >
+    au < ready ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 245 ; 245 >
+    au < ready ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 246 ; 246 >
+    au < ready ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 247 ; 247 >
+    au < ready ; 1969 ; Fresenius Zeitschrift für Analytische Chemie Volume 248 ; 248 >
+    au < ready ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 249 ; 249 >
+    au < ready ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 250 ; 250 >
     au < ready ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 251 ; 251 >
     au < ready ; 1970 ; Fresenius Zeitschrift für Analytische Chemie Volume 252 ; 252 >
     au < ready ; 1971 ; Fresenius Zeitschrift für Analytische Chemie Volume 253 ; 253 >
@@ -15640,8 +15640,8 @@
 
     au < testing ; 1997 ; Hematology and Cell Therapy Volume 38 ; 38 >
     au < testing ; 1997 ; Hematology and Cell Therapy Volume 39 ; 39 >
-    au < testing ; 1999 ; Hematology and Cell Therapy Volume 41 ; 41 >
-    au < testing ; 2000 ; Hematology and Cell Therapy Volume 42 ; 42 >
+    au < ready ; 1999 ; Hematology and Cell Therapy Volume 41 ; 41 >
+    au < ready ; 2000 ; Hematology and Cell Therapy Volume 42 ; 42 >
 
   }
 
@@ -16663,30 +16663,30 @@
     au < manifest ; 1983 ; Immunogenetics Volume 18 ; 18 >
     au < manifest ; 1984 ; Immunogenetics Volume 19 ; 19 >
     au < manifest ; 1984 ; Immunogenetics Volume 20 ; 20 >
-    au < manifest ; 1985 ; Immunogenetics Volume 21 ; 21 >
-    au < manifest ; 1985 ; Immunogenetics Volume 22 ; 22 >
-    au < manifest ; 1986 ; Immunogenetics Volume 23 ; 23 >
-    au < manifest ; 1986 ; Immunogenetics Volume 24 ; 24 >
-    au < manifest ; 1987 ; Immunogenetics Volume 25 ; 25 >
-    au < manifest ; 1987 ; Immunogenetics Volume 26 ; 26 >
-    au < manifest ; 1988 ; Immunogenetics Volume 27 ; 27 >
-    au < manifest ; 1988 ; Immunogenetics Volume 28 ; 28 >
-    au < manifest ; 1989 ; Immunogenetics Volume 29 ; 29 >
-    au < manifest ; 1989 ; Immunogenetics Volume 30 ; 30 >
-    au < manifest ; 1990 ; Immunogenetics Volume 31 ; 31 >
-    au < manifest ; 1990 ; Immunogenetics Volume 32 ; 32 >
-    au < manifest ; 1991 ; Immunogenetics Volume 33 ; 33 >
-    au < manifest ; 1991 ; Immunogenetics Volume 34 ; 34 >
-    au < testing ; 1992 ; Immunogenetics Volume 35 ; 35 >
-    au < testing ; 1992 ; Immunogenetics Volume 36 ; 36 >
-    au < testing ; 1992-1993 ; Immunogenetics Volume 37 ; 37 >
-    au < testing ; 1993 ; Immunogenetics Volume 38 ; 38 >
+    au < testing ; 1985 ; Immunogenetics Volume 21 ; 21 >
+    au < testing ; 1985 ; Immunogenetics Volume 22 ; 22 >
+    au < testing ; 1986 ; Immunogenetics Volume 23 ; 23 >
+    au < testing ; 1986 ; Immunogenetics Volume 24 ; 24 >
+    au < testing ; 1987 ; Immunogenetics Volume 25 ; 25 >
+    au < testing ; 1987 ; Immunogenetics Volume 26 ; 26 >
+    au < testing ; 1988 ; Immunogenetics Volume 27 ; 27 >
+    au < testing ; 1988 ; Immunogenetics Volume 28 ; 28 >
+    au < testing ; 1989 ; Immunogenetics Volume 29 ; 29 >
+    au < testing ; 1989 ; Immunogenetics Volume 30 ; 30 >
+    au < testing ; 1990 ; Immunogenetics Volume 31 ; 31 >
+    au < testing ; 1990 ; Immunogenetics Volume 32 ; 32 >
+    au < testing ; 1991 ; Immunogenetics Volume 33 ; 33 >
+    au < testing ; 1991 ; Immunogenetics Volume 34 ; 34 >
+    au < ready ; 1992 ; Immunogenetics Volume 35 ; 35 >
+    au < ready ; 1992 ; Immunogenetics Volume 36 ; 36 >
+    au < ready ; 1992-1993 ; Immunogenetics Volume 37 ; 37 >
+    au < ready ; 1993 ; Immunogenetics Volume 38 ; 38 >
     au < ready ; 1994 ; Immunogenetics Volume 39 ; 39 >
     au < ready ; 1994 ; Immunogenetics Volume 40 ; 40 >
     au < ready ; 1995 ; Immunogenetics Volume 41 ; 41 >
-    au < testing ; 1995 ; Immunogenetics Volume 42 ; 42 >
-    au < testing ; 1995-1996 ; Immunogenetics Volume 43 ; 43 >
-    au < testing ; 1996 ; Immunogenetics Volume 44 ; 44 >
+    au < ready ; 1995 ; Immunogenetics Volume 42 ; 42 >
+    au < ready ; 1995-1996 ; Immunogenetics Volume 43 ; 43 >
+    au < ready ; 1996 ; Immunogenetics Volume 44 ; 44 >
     au < testing ; 1996-1997 ; Immunogenetics Volume 45 ; 45 >
     au < ready ; 1997 ; Immunogenetics Volume 46 ; 46 >
     au < ready ; 1997 ; Immunogenetics Volume 47 ; 47 >
@@ -16698,12 +16698,12 @@
     au < ready ; 2001 ; Immunogenetics Volume 53 ; 53 >
     au < ready ; 2002 ; Immunogenetics Volume 54 ; 54 >
     au < ready ; 2003 ; Immunogenetics Volume 55 ; 55 >
-    au < testing ; 2004 ; Immunogenetics Volume 56 ; 56 >
+    au < ready ; 2004 ; Immunogenetics Volume 56 ; 56 >
     au < ready ; 2005 ; Immunogenetics Volume 57 ; 57 >
-    au < testing ; 2006 ; Immunogenetics Volume 58 ; 58 >
+    au < ready ; 2006 ; Immunogenetics Volume 58 ; 58 >
     au < ready ; 2007 ; Immunogenetics Volume 59 ; 59 >
-    au < testing ; 2008 ; Immunogenetics Volume 60 ; 60 >
-    au < testing ; 2009 ; Immunogenetics Volume 61 ; 61 >
+    au < ready ; 2008 ; Immunogenetics Volume 60 ; 60 >
+    au < ready ; 2009 ; Immunogenetics Volume 61 ; 61 >
     au < ready ; 2010 ; Immunogenetics Volume 62 ; 62 >
     au < ready ; 2011 ; Immunogenetics Volume 63 ; 63 >
 
@@ -19092,40 +19092,40 @@
     au < manifest ; 2002 ; Inventiones Mathematicae Volume 148 ; 148 >
     au < manifest ; 2002 ; Inventiones Mathematicae Volume 149 ; 149 >
     au < manifest ; 2002 ; Inventiones Mathematicae Volume 150 ; 150 >
-    au < manifest ; 2003 ; Inventiones Mathematicae Volume 151 ; 151 >
-    au < manifest ; 2003 ; Inventiones Mathematicae Volume 152 ; 152 >
-    au < manifest ; 2003 ; Inventiones Mathematicae Volume 153 ; 153 >
-    au < manifest ; 2003 ; Inventiones Mathematicae Volume 154 ; 154 >
-    au < manifest ; 2004 ; Inventiones Mathematicae Volume 155 ; 155 >
-    au < manifest ; 2004 ; Inventiones Mathematicae Volume 156 ; 156 >
-    au < manifest ; 2004 ; Inventiones Mathematicae Volume 157 ; 157 >
-    au < manifest ; 2004 ; Inventiones Mathematicae Volume 158 ; 158 >
-    au < manifest ; 2005 ; Inventiones Mathematicae Volume 159 ; 159 >
-    au < manifest ; 2005 ; Inventiones Mathematicae Volume 160 ; 160 >
-    au < manifest ; 2005 ; Inventiones Mathematicae Volume 161 ; 161 >
-    au < manifest ; 2005 ; Inventiones Mathematicae Volume 162 ; 162 >
-    au < manifest ; 2006 ; Inventiones Mathematicae Volume 163 ; 163 >
-    au < manifest ; 2006 ; Inventiones Mathematicae Volume 164 ; 164 >
-    au < testing ; 2006 ; Inventiones Mathematicae Volume 165 ; 165 >
-    au < testing ; 2006 ; Inventiones Mathematicae Volume 166 ; 166 >
-    au < testing ; 2007 ; Inventiones Mathematicae Volume 167 ; 167 >
-    au < testing ; 2007 ; Inventiones Mathematicae Volume 168 ; 168 >
-    au < testing ; 2007 ; Inventiones Mathematicae Volume 169 ; 169 >
-    au < testing ; 2007 ; Inventiones Mathematicae Volume 170 ; 170 >
-    au < testing ; 2008 ; Inventiones Mathematicae Volume 171 ; 171 >
-    au < testing ; 2008 ; Inventiones Mathematicae Volume 172 ; 172 >
+    au < testing ; 2003 ; Inventiones Mathematicae Volume 151 ; 151 >
+    au < testing ; 2003 ; Inventiones Mathematicae Volume 152 ; 152 >
+    au < testing ; 2003 ; Inventiones Mathematicae Volume 153 ; 153 >
+    au < testing ; 2003 ; Inventiones Mathematicae Volume 154 ; 154 >
+    au < testing ; 2004 ; Inventiones Mathematicae Volume 155 ; 155 >
+    au < testing ; 2004 ; Inventiones Mathematicae Volume 156 ; 156 >
+    au < testing ; 2004 ; Inventiones Mathematicae Volume 157 ; 157 >
+    au < testing ; 2004 ; Inventiones Mathematicae Volume 158 ; 158 >
+    au < testing ; 2005 ; Inventiones Mathematicae Volume 159 ; 159 >
+    au < testing ; 2005 ; Inventiones Mathematicae Volume 160 ; 160 >
+    au < testing ; 2005 ; Inventiones Mathematicae Volume 161 ; 161 >
+    au < testing ; 2005 ; Inventiones Mathematicae Volume 162 ; 162 >
+    au < testing ; 2006 ; Inventiones Mathematicae Volume 163 ; 163 >
+    au < testing ; 2006 ; Inventiones Mathematicae Volume 164 ; 164 >
+    au < ready ; 2006 ; Inventiones Mathematicae Volume 165 ; 165 >
+    au < ready ; 2006 ; Inventiones Mathematicae Volume 166 ; 166 >
+    au < ready ; 2007 ; Inventiones Mathematicae Volume 167 ; 167 >
+    au < ready ; 2007 ; Inventiones Mathematicae Volume 168 ; 168 >
+    au < ready ; 2007 ; Inventiones Mathematicae Volume 169 ; 169 >
+    au < ready ; 2007 ; Inventiones Mathematicae Volume 170 ; 170 >
+    au < ready ; 2008 ; Inventiones Mathematicae Volume 171 ; 171 >
+    au < ready ; 2008 ; Inventiones Mathematicae Volume 172 ; 172 >
     au < testing ; 2008 ; Inventiones Mathematicae Volume 173 ; 173 >
-    au < testing ; 2008 ; Inventiones Mathematicae Volume 174 ; 174 >
-    au < testing ; 2009 ; Inventiones Mathematicae Volume 175 ; 175 >
+    au < ready ; 2008 ; Inventiones Mathematicae Volume 174 ; 174 >
+    au < ready ; 2009 ; Inventiones Mathematicae Volume 175 ; 175 >
     au < testing ; 2009 ; Inventiones Mathematicae Volume 176 ; 176 >
-    au < testing ; 2009 ; Inventiones Mathematicae Volume 177 ; 177 >
-    au < testing ; 2009 ; Inventiones Mathematicae Volume 178 ; 178 >
-    au < testing ; 2010 ; Inventiones Mathematicae Volume 179 ; 179 >
-    au < testing ; 2010 ; Inventiones Mathematicae Volume 180 ; 180 >
+    au < ready ; 2009 ; Inventiones Mathematicae Volume 177 ; 177 >
+    au < ready ; 2009 ; Inventiones Mathematicae Volume 178 ; 178 >
+    au < ready ; 2010 ; Inventiones Mathematicae Volume 179 ; 179 >
+    au < ready ; 2010 ; Inventiones Mathematicae Volume 180 ; 180 >
     au < testing ; 2010 ; Inventiones Mathematicae Volume 181 ; 181 >
-    au < testing ; 2010 ; Inventiones Mathematicae Volume 182 ; 182 >
-    au < testing ; 2011 ; Inventiones Mathematicae Volume 183 ; 183 >
-    au < testing ; 2011 ; Inventiones Mathematicae Volume 184 ; 184 >
+    au < ready ; 2010 ; Inventiones Mathematicae Volume 182 ; 182 >
+    au < ready ; 2011 ; Inventiones Mathematicae Volume 183 ; 183 >
+    au < ready ; 2011 ; Inventiones Mathematicae Volume 184 ; 184 >
 
   }
 
@@ -22071,27 +22071,27 @@
     au < manifest ; 1983 ; Journal of Gastroenterology Volume 18 ; 18 >
     au < manifest ; 1984 ; Journal of Gastroenterology Volume 19 ; 19 >
     au < manifest ; 1985 ; Journal of Gastroenterology Volume 20 ; 20 >
-    au < manifest ; 1986 ; Journal of Gastroenterology Volume 21 ; 21 >
-    au < manifest ; 1987 ; Journal of Gastroenterology Volume 22 ; 22 >
-    au < manifest ; 1988 ; Journal of Gastroenterology Volume 23 ; 23 >
-    au < manifest ; 1989 ; Journal of Gastroenterology Volume 24 ; 24 >
-    au < manifest ; 1990 ; Journal of Gastroenterology Volume 25 ; 25 >
-    au < manifest ; 1991 ; Journal of Gastroenterology Volume 26 ; 26 >
+    au < testing ; 1986 ; Journal of Gastroenterology Volume 21 ; 21 >
+    au < testing ; 1987 ; Journal of Gastroenterology Volume 22 ; 22 >
+    au < testing ; 1988 ; Journal of Gastroenterology Volume 23 ; 23 >
+    au < testing ; 1989 ; Journal of Gastroenterology Volume 24 ; 24 >
+    au < testing ; 1990 ; Journal of Gastroenterology Volume 25 ; 25 >
+    au < testing ; 1991 ; Journal of Gastroenterology Volume 26 ; 26 >
     au < testing ; 1992 ; Journal of Gastroenterology Volume 27 ; 27 >
-    au < testing ; 1993 ; Journal of Gastroenterology Volume 28 ; 28 >
+    au < ready ; 1993 ; Journal of Gastroenterology Volume 28 ; 28 >
     au < testing ; 1994 ; Journal of Gastroenterology Volume 29 ; 29 >
     au < testing ; 1995 ; Journal of Gastroenterology Volume 30 ; 30 >
     au < testing ; 1996 ; Journal of Gastroenterology Volume 31 ; 31 >
     au < testing ; 1997 ; Journal of Gastroenterology Volume 32 ; 32 >
-    au < testing ; 1998 ; Journal of Gastroenterology Volume 33 ; 33 >
-    au < testing ; 1999 ; Journal of Gastroenterology Volume 34 ; 34 >
-    au < testing ; 2000 ; Journal of Gastroenterology Volume 35 ; 35 >
+    au < ready ; 1998 ; Journal of Gastroenterology Volume 33 ; 33 >
+    au < ready ; 1999 ; Journal of Gastroenterology Volume 34 ; 34 >
+    au < ready ; 2000 ; Journal of Gastroenterology Volume 35 ; 35 >
     au < testing ; 2001 ; Journal of Gastroenterology Volume 36 ; 36 >
-    au < testing ; 2002 ; Journal of Gastroenterology Volume 37 ; 37 >
-    au < testing ; 2003 ; Journal of Gastroenterology Volume 38 ; 38 >
-    au < testing ; 2004 ; Journal of Gastroenterology Volume 39 ; 39 >
+    au < ready ; 2002 ; Journal of Gastroenterology Volume 37 ; 37 >
+    au < ready ; 2003 ; Journal of Gastroenterology Volume 38 ; 38 >
+    au < ready ; 2004 ; Journal of Gastroenterology Volume 39 ; 39 >
     au < testing ; 2005 ; Journal of Gastroenterology Volume 40 ; 40 >
-    au < testing ; 2006 ; Journal of Gastroenterology Volume 41 ; 41 >
+    au < ready ; 2006 ; Journal of Gastroenterology Volume 41 ; 41 >
     au < testing ; 2007 ; Journal of Gastroenterology Volume 42 ; 42 >
     au < testing ; 2008 ; Journal of Gastroenterology Volume 43 ; 43 >
     au < testing ; 2009 ; Journal of Gastroenterology Volume 44 ; 44 >
@@ -28990,8 +28990,8 @@
     param[journal_issn] = 1931-7573
     attr[where] = content1a
 
-    au < testing ; 2006 ; Nanoscale Research Letters Volume 1 ; 1 >
-    au < testing ; 2007 ; Nanoscale Research Letters Volume 2 ; 2 >
+    au < ready ; 2006 ; Nanoscale Research Letters Volume 1 ; 1 >
+    au < ready ; 2007 ; Nanoscale Research Letters Volume 2 ; 2 >
     au < testing ; 2008 ; Nanoscale Research Letters Volume 3 ; 3 >
     au < testing ; 2009 ; Nanoscale Research Letters Volume 4 ; 4 >
     au < testing ; 2010 ; Nanoscale Research Letters Volume 5 ; 5 >
@@ -30075,7 +30075,7 @@
     au < ready ; 2000 ; Oecologia Volume 123 ; 123 >
     au < ready ; 2000 ; Oecologia Volume 124 ; 124 >
     au < ready ; 2000 ; Oecologia Volume 125 ; 125 >
-    au < testing ; 2001 ; Oecologia Volume 126 ; 126 >
+    au < ready ; 2001 ; Oecologia Volume 126 ; 126 >
     au < ready ; 2001 ; Oecologia Volume 127 ; 127 >
     au < ready ; 2001 ; Oecologia Volume 128 ; 128 >
     au < ready ; 2001 ; Oecologia Volume 129 ; 129 >
@@ -30087,17 +30087,17 @@
     au < ready ; 2003 ; Oecologia Volume 135 ; 135 >
     au < ready ; 2003 ; Oecologia Volume 136 ; 136 >
     au < testing ; 2003 ; Oecologia Volume 137 ; 137 >
-    au < testing ; 2004 ; Oecologia Volume 138 ; 138 >
+    au < ready ; 2004 ; Oecologia Volume 138 ; 138 >
     au < ready ; 2004 ; Oecologia Volume 139 ; 139 >
     au < ready ; 2004 ; Oecologia Volume 140 ; 140 >
     au < testing ; 2004 ; Oecologia Volume 141 ; 141 >
-    au < testing ; 2005 ; Oecologia Volume 142 ; 142 >
-    au < testing ; 2005 ; Oecologia Volume 143 ; 143 >
+    au < ready ; 2005 ; Oecologia Volume 142 ; 142 >
+    au < ready ; 2005 ; Oecologia Volume 143 ; 143 >
     au < testing ; 2005 ; Oecologia Volume 144 ; 144 >
     au < testing ; 2005 ; Oecologia Volume 145 ; 145 >
-    au < testing ; 2005 ; Oecologia Volume 146 ; 146 >
+    au < ready ; 2005 ; Oecologia Volume 146 ; 146 >
     au < ready ; 2006 ; Oecologia Volume 147 ; 147 >
-    au < testing ; 2006 ; Oecologia Volume 148 ; 148 >
+    au < ready ; 2006 ; Oecologia Volume 148 ; 148 >
     au < testing ; 2006 ; Oecologia Volume 149 ; 149 >
     au < ready ; 2006 ; Oecologia Volume 150 ; 150 >
     au < testing ; 2007 ; Oecologia Volume 151 ; 151 >
@@ -30108,9 +30108,9 @@
     au < ready ; 2008 ; Oecologia Volume 156 ; 156 >
     au < ready ; 2008 ; Oecologia Volume 157 ; 157 >
     au < ready ; 2008 ; Oecologia Volume 158 ; 158 >
-    au < testing ; 2009 ; Oecologia Volume 159 ; 159 >
+    au < ready ; 2009 ; Oecologia Volume 159 ; 159 >
     au < testing ; 2009 ; Oecologia Volume 160 ; 160 >
-    au < testing ; 2009 ; Oecologia Volume 161 ; 161 >
+    au < ready ; 2009 ; Oecologia Volume 161 ; 161 >
     au < ready ; 2010 ; Oecologia Volume 162 ; 162 >
     au < testing ; 2010 ; Oecologia Volume 163 ; 163 >
     au < ready ; 2010 ; Oecologia Volume 164 ; 164 >
@@ -33790,13 +33790,13 @@ Commet [pv] = now offline
     param[journal_issn] = 1573-9538
     attr[where] = content5a
 
-    au < testing ; 2004 ; Purinergic Signalling Volume 1 ; 1 >
-    au < testing ; 2006 ; Purinergic Signalling Volume 2 ; 2 >
-    au < testing ; 2007 ; Purinergic Signalling Volume 3 ; 3 >
-    au < testing ; 2008 ; Purinergic Signalling Volume 4 ; 4 >
-    au < testing ; 2009 ; Purinergic Signalling Volume 5 ; 5 >
+    au < ready ; 2004 ; Purinergic Signalling Volume 1 ; 1 >
+    au < ready ; 2006 ; Purinergic Signalling Volume 2 ; 2 >
+    au < ready ; 2007 ; Purinergic Signalling Volume 3 ; 3 >
+    au < ready ; 2008 ; Purinergic Signalling Volume 4 ; 4 >
+    au < ready ; 2009 ; Purinergic Signalling Volume 5 ; 5 >
     au < testing ; 2010 ; Purinergic Signalling Volume 6 ; 6 >
-    au < testing ; 2011 ; Purinergic Signalling Volume 7 ; 7 >
+    au < ready ; 2011 ; Purinergic Signalling Volume 7 ; 7 >
 
   }
 
@@ -35790,35 +35790,35 @@ Commet [pv] = now offline
     au < manifest ; 2002 ; Scientometrics Volume 55 ; 55 >
     au < manifest ; 2003 ; Scientometrics Volume 56 ; 56 >
     au < manifest ; 2003 ; Scientometrics Volume 57 ; 57 >
-    au < manifest ; 2003 ; Scientometrics Volume 58 ; 58 >
-    au < manifest ; 2004 ; Scientometrics Volume 59 ; 59 >
-    au < manifest ; 2004 ; Scientometrics Volume 60 ; 60 >
-    au < manifest ; 2004 ; Scientometrics Volume 61 ; 61 >
-    au < manifest ; 2005 ; Scientometrics Volume 62 ; 62 >
-    au < manifest ; 2005 ; Scientometrics Volume 63 ; 63 >
-    au < manifest ; 2005 ; Scientometrics Volume 64 ; 64 >
-    au < manifest ; 2005 ; Scientometrics Volume 65 ; 65 >
-    au < manifest ; 2006 ; Scientometrics Volume 66 ; 66 >
-    au < manifest ; 2006 ; Scientometrics Volume 67 ; 67 >
-    au < testing ; 2006 ; Scientometrics Volume 68 ; 68 >
-    au < testing ; 2006 ; Scientometrics Volume 69 ; 69 >
+    au < testing ; 2003 ; Scientometrics Volume 58 ; 58 >
+    au < testing ; 2004 ; Scientometrics Volume 59 ; 59 >
+    au < testing ; 2004 ; Scientometrics Volume 60 ; 60 >
+    au < testing ; 2004 ; Scientometrics Volume 61 ; 61 >
+    au < testing ; 2005 ; Scientometrics Volume 62 ; 62 >
+    au < testing ; 2005 ; Scientometrics Volume 63 ; 63 >
+    au < testing ; 2005 ; Scientometrics Volume 64 ; 64 >
+    au < testing ; 2005 ; Scientometrics Volume 65 ; 65 >
+    au < testing ; 2006 ; Scientometrics Volume 66 ; 66 >
+    au < testing ; 2006 ; Scientometrics Volume 67 ; 67 >
+    au < ready ; 2006 ; Scientometrics Volume 68 ; 68 >
+    au < ready ; 2006 ; Scientometrics Volume 69 ; 69 >
     au < testing ; 2007 ; Scientometrics Volume 70 ; 70 >
-    au < testing ; 2007 ; Scientometrics Volume 71 ; 71 >
-    au < testing ; 2007 ; Scientometrics Volume 72 ; 72 >
+    au < ready ; 2007 ; Scientometrics Volume 71 ; 71 >
+    au < ready ; 2007 ; Scientometrics Volume 72 ; 72 >
     au < testing ; 2007 ; Scientometrics Volume 73 ; 73 >
-    au < testing ; 2008 ; Scientometrics Volume 74 ; 74 >
-    au < testing ; 2008 ; Scientometrics Volume 75 ; 75 >
-    au < testing ; 2008 ; Scientometrics Volume 76 ; 76 >
-    au < testing ; 2008 ; Scientometrics Volume 77 ; 77 >
-    au < testing ; 2009 ; Scientometrics Volume 78 ; 78 >
-    au < testing ; 2009 ; Scientometrics Volume 79 ; 79 >
-    au < testing ; 2009 ; Scientometrics Volume 80 ; 80 >
+    au < ready ; 2008 ; Scientometrics Volume 74 ; 74 >
+    au < ready ; 2008 ; Scientometrics Volume 75 ; 75 >
+    au < ready ; 2008 ; Scientometrics Volume 76 ; 76 >
+    au < ready ; 2008 ; Scientometrics Volume 77 ; 77 >
+    au < ready ; 2009 ; Scientometrics Volume 78 ; 78 >
+    au < ready ; 2009 ; Scientometrics Volume 79 ; 79 >
+    au < ready ; 2009 ; Scientometrics Volume 80 ; 80 >
     au < testing ; 2009 ; Scientometrics Volume 81 ; 81 >
     au < testing ; 2010 ; Scientometrics Volume 82 ; 82 >
-    au < testing ; 2010 ; Scientometrics Volume 83 ; 83 >
-    au < testing ; 2010 ; Scientometrics Volume 84 ; 84 >
+    au < ready ; 2010 ; Scientometrics Volume 83 ; 83 >
+    au < ready ; 2010 ; Scientometrics Volume 84 ; 84 >
     au < testing ; 2010 ; Scientometrics Volume 85 ; 85 >
-    au < testing ; 2011 ; Scientometrics Volume 86 ; 86 >
+    au < ready ; 2011 ; Scientometrics Volume 86 ; 86 >
     au < testing ; 2011 ; Scientometrics Volume 87 ; 87 >
 
   }
