@@ -79,11 +79,24 @@
     >
 
     plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
-    param[base_url] = http://digdata1.lib.auburn.edu/CivilWar_Documents/
     implicit < status ; name ; param[directory] >
-  
-    au < released ; Auburn University Civil War Documents Digital Collection: Diaries ; Diaries >
 
+    {
+  
+      param[base_url] = http://digdata1.lib.auburn.edu/CivilWar_Documents/
+    
+      au < down ; Auburn University Civil War Documents Digital Collection: Diaries [superseded] ; Diaries >
+
+    }
+  
+    {
+  
+      param[base_url] = http://digdata4.lib.auburn.edu/CivilWar_Documents/
+    
+      au < manifest ; Auburn University Civil War Documents Digital Collection: Diaries ; Diaries >
+
+    }
+  
   }
   
   {
@@ -200,7 +213,8 @@
     implicit < status ; name ; param[directory] >
   
     au < released ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
-    au < released ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCentury >
+    au < down ; Auburn University Historic Catalogs Digital Collection: 20th. Century [superseded] ; 20thCentury >
+    au < manifest ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCenturyA >
 
   }
   
@@ -225,12 +239,26 @@
     >
 
     plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
-    param[base_url] = http://digdata1.lib.auburn.edu/PianoBenchCollection/
     implicit < status ; name ; param[directory] >
   
-    au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
-    au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+    {
 
+      param[base_url] = http://digdata1.lib.auburn.edu/PianoBenchCollection/
+    
+      au < down ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans [superseded] ; PianoBench_2006 >
+      au < down ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans [superseded] ; PianoBench_2010 >
+
+    }
+  
+    {
+
+      param[base_url] = http://digdata4.lib.auburn.edu/PianoBenchCollection/
+    
+      au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
+      au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+
+    }
+  
   }
   
   {
