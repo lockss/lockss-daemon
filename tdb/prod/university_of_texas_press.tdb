@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,12 +17,13 @@
 
     param[journal_dir] = asian_music
 
-    au < released ; Asian Music Volume 36 ; 36 >
-    au < released ; Asian Music Volume 37 ; 37 >
-    au < ready ; Asian Music Volume 38 ; 38 >
-    au < ready ; Asian Music Volume 39 ; 39 >
-    au < ready ; Asian Music Volume 40 ; 40 >
-    au < ready ; Asian Music Volume 41 ; 41 >
+    au < released ; 2005 ; Asian Music Volume 36 ; 36 >
+    au < released ; 2006 ; Asian Music Volume 37 ; 37 >
+    au < ready ; 2007 ; Asian Music Volume 38 ; 38 >
+    au < ready ; 2008 ; Asian Music Volume 39 ; 39 >
+    au < ready ; 2009 ; Asian Music Volume 40 ; 40 >
+    au < ready ; 2010 ; Asian Music Volume 41 ; 41 >
+    au < manifest ; 2011 ; Asian Music Volume 42 ; 42 >
 
   }
 
@@ -36,17 +37,18 @@
 
     param[journal_dir] = cinema_journal
 
-    au < released ; Cinema Journal Volume 39 ; 39 >
-    au < released ; Cinema Journal Volume 40 ; 40 >
-    au < released ; Cinema Journal Volume 41 ; 41 >
-    au < released ; Cinema Journal Volume 42 ; 42 >
-    au < released ; Cinema Journal Volume 43 ; 43 >
-    au < released ; Cinema Journal Volume 44 ; 44 >
-    au < released ; Cinema Journal Volume 45 ; 45 >
-    au < released ; Cinema Journal Volume 46 ; 46 >
-    au < ready ; Cinema Journal Volume 47 ; 47 >
-    au < ready ; Cinema Journal Volume 48 ; 48 >
-    au < ready ; Cinema Journal  49 ; 49 >
+    au < released ; 1999-2000 ; Cinema Journal Volume 39 ; 39 >
+    au < released ; 2000-2001 ; Cinema Journal Volume 40 ; 40 >
+    au < released ; 2001-2002 ; Cinema Journal Volume 41 ; 41 >
+    au < released ; 2002-2003 ; Cinema Journal Volume 42 ; 42 >
+    au < released ; 2003-2004 ; Cinema Journal Volume 43 ; 43 >
+    au < released ; 2004-2005 ; Cinema Journal Volume 44 ; 44 >
+    au < released ; 2005-2006 ; Cinema Journal Volume 45 ; 45 >
+    au < released ; 2006-2007 ; Cinema Journal Volume 46 ; 46 >
+    au < ready ; 2007-2008 ; Cinema Journal Volume 47 ; 47 >
+    au < ready ; 2008-2009 ; Cinema Journal Volume 48 ; 48 >
+    au < ready ; 2009-2010 ; Cinema Journal Volume 49 ; 49 >
+    au < manifest ; 2010-2011 ; Cinema Journal Volume 50 ; 50 >
 
   }
 
@@ -60,16 +62,17 @@
 
     param[journal_dir] = journal_of_the_history_of_sexuality
 
-    au < released ; Journal of the History of Sexuality Volume 10 ; 10 >
-    au < released ; Journal of the History of Sexuality Volume 11 ; 11 >
-    au < released ; Journal of the History of Sexuality Volume 12 ; 12 >
-    au < released ; Journal of the History of Sexuality Volume 13 ; 13 >
-    au < released ; Journal of the History of Sexuality Volume 14 ; 14 >
-    au < released ; Journal of the History of Sexuality Volume 15 ; 15 >
-    au < ready ; Journal of the History of Sexuality Volume 16 ; 16 >
-    au < ready ; Journal of the History of Sexuality Volume 17 ; 17 >
-    au < ready ; Journal of the History of Sexuality Volume 18 ; 18 >
-    au < ready ; Journal of the History of Sexuality Volume 19 ; 19 >
+    au < released ; 2001 ; Journal of the History of Sexuality Volume 10 ; 10 >
+    au < released ; 2002 ; Journal of the History of Sexuality Volume 11 ; 11 >
+    au < released ; 2003 ; Journal of the History of Sexuality Volume 12 ; 12 >
+    au < released ; 2004 ; Journal of the History of Sexuality Volume 13 ; 13 >
+    au < released ; 2005 ; Journal of the History of Sexuality Volume 14 ; 14 >
+    au < released ; 2006 ; Journal of the History of Sexuality Volume 15 ; 15 >
+    au < ready ; 2007 ; Journal of the History of Sexuality Volume 16 ; 16 >
+    au < ready ; 2008 ; Journal of the History of Sexuality Volume 17 ; 17 >
+    au < ready ; 2009 ; Journal of the History of Sexuality Volume 18 ; 18 >
+    au < ready ; 2010 ; Journal of the History of Sexuality Volume 19 ; 19 >
+    au < manifest ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
 
   }
 
@@ -83,15 +86,16 @@
 
     param[journal_dir] = latin_american_music_review
 
-    au < released ; Latin American Music Review Volume 22 ; 22 >
-    au < released ; Latin American Music Review Volume 23 ; 23 >
-    au < released ; Latin American Music Review Volume 24 ; 24 >
-    au < released ; Latin American Music Review Volume 25 ; 25 >
-    au < released ; Latin American Music Review Volume 26 ; 26 >
-    au < released ; Latin American Music Review Volume 27 ; 27 >
-    au < ready ; Latin American Music Review Volume 28 ; 28 >
-    au < ready ; Latin American Music Review Volume 29 ; 29 >
-    au < ready ; Latin American Music Review Volume 30 ; 30 >
+    au < released ; 2001 ; Latin American Music Review Volume 22 ; 22 >
+    au < released ; 2002 ; Latin American Music Review Volume 23 ; 23 >
+    au < released ; 2003 ; Latin American Music Review Volume 24 ; 24 >
+    au < released ; 2004 ; Latin American Music Review Volume 25 ; 25 >
+    au < released ; 2005 ; Latin American Music Review Volume 26 ; 26 >
+    au < released ; 2006 ; Latin American Music Review Volume 27 ; 27 >
+    au < ready ; 2007 ; Latin American Music Review Volume 28 ; 28 >
+    au < ready ; 2008 ; Latin American Music Review Volume 29 ; 29 >
+    au < ready ; 2009 ; Latin American Music Review Volume 30 ; 30 >
+    au < manifest ; 2010 ; Latin American Music Review Volume 31 ; 31 >
 
   }
 
@@ -105,16 +109,17 @@
 
     param[journal_dir] = libraries_and_culture
 
-    au < released ; Libraries & the Cultural Record Volume 36 ; 36 >
-    au < released ; Libraries & the Cultural Record Volume 37 ; 37 >
-    au < released ; Libraries & the Cultural Record Volume 38 ; 38 >
-    au < released ; Libraries & the Cultural Record Volume 39 ; 39 >
-    au < released ; Libraries & the Cultural Record Volume 40 ; 40 >
-    au < released ; Libraries & the Cultural Record Volume 41 ; 41 >
-    au < released ; Libraries & the Cultural Record Volume 42 ; 42 >
-    au < ready ; Libraries & the Cultural Record Volume 43 ; 43 >
-    au < ready ; Libraries & the Cultural Record Volume 44 ; 44 >
-    au < ready ; Libraries & the Cultural Record Volume 45 ; 45 >
+    au < released ; 2001 ; Libraries & the Cultural Record Volume 36 ; 36 >
+    au < released ; 2002 ; Libraries & the Cultural Record Volume 37 ; 37 >
+    au < released ; 2003 ; Libraries & the Cultural Record Volume 38 ; 38 >
+    au < released ; 2004 ; Libraries & the Cultural Record Volume 39 ; 39 >
+    au < released ; 2005 ; Libraries & the Cultural Record Volume 40 ; 40 >
+    au < released ; 2006 ; Libraries & the Cultural Record Volume 41 ; 41 >
+    au < released ; 2007 ; Libraries & the Cultural Record Volume 42 ; 42 >
+    au < ready ; 2008 ; Libraries & the Cultural Record Volume 43 ; 43 >
+    au < ready ; 2009 ; Libraries & the Cultural Record Volume 44 ; 44 >
+    au < ready ; 2010 ; Libraries & the Cultural Record Volume 45 ; 45 >
+    au < manifest ; 2011 ; Libraries & the Cultural Record Volume 46 ; 46 >
 
   }
 
@@ -128,7 +133,11 @@
 
     param[journal_dir] = southwestern_historical_quarterly
 
-    au < released ; Southwestern Historical Quarterly Volume 110 ; 110 >
+    au < released ; 2006-2007 ; Southwestern Historical Quarterly Volume 110 ; 110 >
+    au < doesNotExist ; 2007-2008 ; Southwestern Historical Quarterly Volume 111 ; 111 >
+    au < doesNotExist ; 2008-2009 ; Southwestern Historical Quarterly Volume 112 ; 112 >
+    au < doesNotExist ; 2009-2010 ; Southwestern Historical Quarterly Volume 113 ; 113 >
+    au < manifest ; 2010-2011 ; Southwestern Historical Quarterly Volume 114 ; 114 >
 
   }
 
@@ -142,16 +151,17 @@
 
     param[journal_dir] = texas_studies_in_literature_and_language
 
-    au < released ; Texas Studies in Literature and Language Volume 43 ; 43 >
-    au < released ; Texas Studies in Literature and Language Volume 44 ; 44 >
-    au < released ; Texas Studies in Literature and Language Volume 45 ; 45 >
-    au < released ; Texas Studies in Literature and Language Volume 46 ; 46 >
-    au < released ; Texas Studies in Literature and Language Volume 47 ; 47 >
-    au < released ; Texas Studies in Literature and Language Volume 48 ; 48 >
-    au < released ; Texas Studies in Literature and Language Volume 49 ; 49 >
-    au < ready ; Texas Studies in Literature and Language Volume 50 ; 50 >
-    au < ready ; Texas Studies in Literature and Language Volume 51 ; 51 >
-    au < ready ; Texas Studies in Literature and Language Volume 52 ; 52 >
+    au < released ; 2001 ; Texas Studies in Literature and Language Volume 43 ; 43 >
+    au < released ; 2002 ; Texas Studies in Literature and Language Volume 44 ; 44 >
+    au < released ; 2003 ; Texas Studies in Literature and Language Volume 45 ; 45 >
+    au < released ; 2004 ; Texas Studies in Literature and Language Volume 46 ; 46 >
+    au < released ; 2005 ; Texas Studies in Literature and Language Volume 47 ; 47 >
+    au < released ; 2006 ; Texas Studies in Literature and Language Volume 48 ; 48 >
+    au < released ; 2007 ; Texas Studies in Literature and Language Volume 49 ; 49 >
+    au < ready ; 2008 ; Texas Studies in Literature and Language Volume 50 ; 50 >
+    au < ready ; 2009 ; Texas Studies in Literature and Language Volume 51 ; 51 >
+    au < ready ; 2010 ; Texas Studies in Literature and Language Volume 52 ; 52 >
+    au < manifest ; 2011 ; Texas Studies in Literature and Language Volume 53 ; 53 >
 
   }
 
@@ -165,21 +175,23 @@
 
     param[journal_dir] = the_velvet_light_trap
 
-    au < released ; The Velvet Light Trap Volume 51 ; 51 >
-    au < released ; The Velvet Light Trap Volume 52 ; 52 >
-    au < released ; The Velvet Light Trap Volume 53 ; 53 >
-    au < released ; The Velvet Light Trap Volume 54 ; 54 >
-    au < released ; The Velvet Light Trap Volume 55 ; 55 >
-    au < released ; The Velvet Light Trap Volume 56 ; 56 >
-    au < released ; The Velvet Light Trap Volume 57 ; 57 >
-    au < released ; The Velvet Light Trap Volume 58 ; 58 >
-    au < released ; The Velvet Light Trap Volume 59 ; 59 >
-    au < ready ; The Velvet Light Trap Volume 60 ; 60 >
-    au < ready ; The Velvet Light Trap Volume 61 ; 61 >
-    au < ready ; The Velvet Light Trap Volume 62 ; 62 >
-    au < ready ; The Velvet Light Trap Volume 63 ; 63 >
-    au < ready ; The Velvet Light Trap Number 64 ; 64 >
-    au < ready ; The Velvet Light Trap Number 65 ; 65 >
+    au < released ; 2003 ; The Velvet Light Trap Volume 51 ; 51 >
+    au < released ; 2003 ; The Velvet Light Trap Volume 52 ; 52 >
+    au < released ; 2004 ; The Velvet Light Trap Volume 53 ; 53 >
+    au < released ; 2004 ; The Velvet Light Trap Volume 54 ; 54 >
+    au < released ; 2005 ; The Velvet Light Trap Volume 55 ; 55 >
+    au < released ; 2005 ; The Velvet Light Trap Volume 56 ; 56 >
+    au < released ; 2006 ; The Velvet Light Trap Volume 57 ; 57 >
+    au < released ; 2006 ; The Velvet Light Trap Volume 58 ; 58 >
+    au < released ; 2007 ; The Velvet Light Trap Volume 59 ; 59 >
+    au < ready ; 2007 ;The Velvet Light Trap Volume 60 ; 60 >
+    au < ready ; 2008 ; The Velvet Light Trap Volume 61 ; 61 >
+    au < ready ; 2008 ; The Velvet Light Trap Volume 62 ; 62 >
+    au < ready ; 2009 ; The Velvet Light Trap Volume 63 ; 63 >
+    au < ready ; 2009 ; The Velvet Light Trap Number 64 ; 64 >
+    au < ready ; 2010 ; The Velvet Light Trap Number 65 ; 65 >
+    au < manifest ; 2010 ; The Velvet Light Trap Number 66 ; 66 >
+    au < manifest ; 2011 ; The Velvet Light Trap Number 67 ; 67 >
 
   }
 
