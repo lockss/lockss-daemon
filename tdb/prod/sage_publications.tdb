@@ -13073,48 +13073,48 @@ comment[exm] = now published by Springer
         param[base_url] = http://ijm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[ijm40] = Original series ended at vol 40, and issue numbering started at 22 again in 2004.
+        comment[ijm40] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
 
-        au < manifest ; 1983 ; International Journal of Music Education Volume 1 ; 1 >
-        au < manifest ; 1983 ; International Journal of Music Education Volume 2 ; 2 >
-        au < manifest ; 1984 ; International Journal of Music Education Volume 3 ; 3 >
-        au < manifest ; 1984 ; International Journal of Music Education Volume 4 ; 4 >
-        au < manifest ; 1985 ; International Journal of Music Education Volume 5 ; 5 >
-        au < manifest ; 1985 ; International Journal of Music Education Volume 6 ; 6 >
-        au < manifest ; 1986 ; International Journal of Music Education Volume 7 ; 7 >
-        au < manifest ; 1986 ; International Journal of Music Education Volume 8 ; 8 >
-        au < manifest ; 1987 ; International Journal of Music Education Volume 9 ; 9 >
-        au < manifest ; 1987 ; International Journal of Music Education Volume 10 ; 10 >
-        au < manifest ; 1988 ; International Journal of Music Education Volume 11 ; 11 >
-        au < manifest ; 1988 ; International Journal of Music Education Volume 12 ; 12 >
-        au < manifest ; 1989 ; International Journal of Music Education Volume 13 ; 13 >
-        au < manifest ; 1989 ; International Journal of Music Education Volume 14 ; 14 >
-        au < manifest ; 1990 ; International Journal of Music Education Volume 15 ; 15 >
-        au < manifest ; 1990 ; International Journal of Music Education Volume 16 ; 16 >
-        au < manifest ; 1991 ; International Journal of Music Education Volume 17 ; 17 >
-        au < manifest ; 1991 ; International Journal of Music Education Volume 18 ; 18 >
-        au < manifest ; 1992 ; International Journal of Music Education Volume 19 ; 19 >
-        au < manifest ; 1992 ; International Journal of Music Education Volume 20 ; 20 >
-        au < manifest ; 1993 ; International Journal of Music Education Volume 21 ; 21 >
-        au < manifest ; 1993-2004 ; International Journal of Music Education Volume 22 ; 22 >
-        au < manifest ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
-        au < manifest ; 1994-2006 ; International Journal of Music Education Volume 24 ; 24 >
-        au < manifest ; 1995-2007 ; International Journal of Music Education Volume 25 ; 25 >
-        au < manifest ; 1995-2008 ; International Journal of Music Education Volume 26 ; 26 >
-        au < manifest ; 1996-2009 ; International Journal of Music Education Volume 27 ; 27 >
-        au < manifest ; 1996-2010 ; International Journal of Music Education Volume 28 ; 28 >
-        au < manifest ; 1997-2011 ; International Journal of Music Education Volume 29 ; 29 >
-        au < manifest ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
-        au < manifest ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
-        au < manifest ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
-        au < manifest ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
-        au < manifest ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
-        au < manifest ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
-        au < manifest ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
-        au < manifest ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
-        au < manifest ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
-        au < manifest ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
-        au < manifest ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
+        au < exists ; 1983 ; International Journal of Music Education Volume 1 ; 1 >
+        au < exists ; 1983 ; International Journal of Music Education Volume 2 ; 2 >
+        au < exists ; 1984 ; International Journal of Music Education Volume 3 ; 3 >
+        au < exists ; 1984 ; International Journal of Music Education Volume 4 ; 4 >
+        au < exists ; 1985 ; International Journal of Music Education Volume 5 ; 5 >
+        au < exists ; 1985 ; International Journal of Music Education Volume 6 ; 6 >
+        au < exists ; 1986 ; International Journal of Music Education Volume 7 ; 7 >
+        au < exists ; 1986 ; International Journal of Music Education Volume 8 ; 8 >
+        au < exists ; 1987 ; International Journal of Music Education Volume 9 ; 9 >
+        au < exists ; 1987 ; International Journal of Music Education Volume 10 ; 10 >
+        au < exists ; 1988 ; International Journal of Music Education Volume 11 ; 11 >
+        au < exists ; 1988 ; International Journal of Music Education Volume 12 ; 12 >
+        au < exists ; 1989 ; International Journal of Music Education Volume 13 ; 13 >
+        au < exists ; 1989 ; International Journal of Music Education Volume 14 ; 14 >
+        au < exists ; 1990 ; International Journal of Music Education Volume 15 ; 15 >
+        au < exists ; 1990 ; International Journal of Music Education Volume 16 ; 16 >
+        au < exists ; 1991 ; International Journal of Music Education Volume 17 ; 17 >
+        au < exists ; 1991 ; International Journal of Music Education Volume 18 ; 18 >
+        au < exists ; 1992 ; International Journal of Music Education Volume 19 ; 19 >
+        au < exists ; 1992 ; International Journal of Music Education Volume 20 ; 20 >
+        au < exists ; 1993 ; International Journal of Music Education Volume 21 ; 21 >
+        au < exists ; 1993-2004 ; International Journal of Music Education Volume 22 ; 22 >
+        au < exists ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
+        au < exists ; 1994-2006 ; International Journal of Music Education Volume 24 ; 24 >
+        au < exists ; 1995-2007 ; International Journal of Music Education Volume 25 ; 25 >
+        au < exists ; 1995-2008 ; International Journal of Music Education Volume 26 ; 26 >
+        au < exists ; 1996-2009 ; International Journal of Music Education Volume 27 ; 27 >
+        au < exists ; 1996-2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < exists ; 1997-2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < exists ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
+        au < exists ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
+        au < exists ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
+        au < exists ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
+        au < exists ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
+        au < exists ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
+        au < exists ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
+        au < exists ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
+        au < exists ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
+        au < exists ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
+        au < exists ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
 
       }
 
@@ -13153,6 +13153,63 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijo.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 1965 ; International Journal of Offender Therapy and Comparative Criminology Volume 9 ; 9 >
+        au < manifest ; 1966 ; International Journal of Offender Therapy and Comparative Criminology Volume 10 ; 10 >
+        au < manifest ; 1967 ; International Journal of Offender Therapy and Comparative Criminology Volume 11 ; 11 >
+        au < manifest ; 1968 ; International Journal of Offender Therapy and Comparative Criminology Volume 12 ; 12 >
+        au < manifest ; 1969 ; International Journal of Offender Therapy and Comparative Criminology Volume 13 ; 13 >
+        au < manifest ; 1970 ; International Journal of Offender Therapy and Comparative Criminology Volume 14 ; 14 >
+        au < manifest ; 1971 ; International Journal of Offender Therapy and Comparative Criminology Volume 15 ; 15 >
+        au < manifest ; 1972 ; International Journal of Offender Therapy and Comparative Criminology Volume 16 ; 16 >
+        au < manifest ; 1973 ; International Journal of Offender Therapy and Comparative Criminology Volume 17 ; 17 >
+        au < manifest ; 1974 ; International Journal of Offender Therapy and Comparative Criminology Volume 18 ; 18 >
+        au < manifest ; 1975 ; International Journal of Offender Therapy and Comparative Criminology Volume 19 ; 19 >
+        au < manifest ; 1976 ; International Journal of Offender Therapy and Comparative Criminology Volume 20 ; 20 >
+        au < manifest ; 1977 ; International Journal of Offender Therapy and Comparative Criminology Volume 21 ; 21 >
+        au < manifest ; 1978 ; International Journal of Offender Therapy and Comparative Criminology Volume 22 ; 22 >
+        au < manifest ; 1979 ; International Journal of Offender Therapy and Comparative Criminology Volume 23 ; 23 >
+        au < manifest ; 1980 ; International Journal of Offender Therapy and Comparative Criminology Volume 24 ; 24 >
+        au < manifest ; 1981 ; International Journal of Offender Therapy and Comparative Criminology Volume 25 ; 25 >
+        au < manifest ; 1982 ; International Journal of Offender Therapy and Comparative Criminology Volume 26 ; 26 >
+        au < manifest ; 1983 ; International Journal of Offender Therapy and Comparative Criminology Volume 27 ; 27 >
+        au < manifest ; 1984 ; International Journal of Offender Therapy and Comparative Criminology Volume 28 ; 28 >
+        au < manifest ; 1985 ; International Journal of Offender Therapy and Comparative Criminology Volume 29 ; 29 >
+        au < manifest ; 1986 ; International Journal of Offender Therapy and Comparative Criminology Volume 30 ; 30 >
+        au < manifest ; 1987 ; International Journal of Offender Therapy and Comparative Criminology Volume 31 ; 31 >
+        au < manifest ; 1988 ; International Journal of Offender Therapy and Comparative Criminology Volume 32 ; 32 >
+        au < manifest ; 1989 ; International Journal of Offender Therapy and Comparative Criminology Volume 33 ; 33 >
+        au < manifest ; 1990 ; International Journal of Offender Therapy and Comparative Criminology Volume 34 ; 34 >
+        au < manifest ; 1991 ; International Journal of Offender Therapy and Comparative Criminology Volume 35 ; 35 >
+        au < manifest ; 1992 ; International Journal of Offender Therapy and Comparative Criminology Volume 36 ; 36 >
+        au < manifest ; 1993 ; International Journal of Offender Therapy and Comparative Criminology Volume 37 ; 37 >
+        au < manifest ; 1994 ; International Journal of Offender Therapy and Comparative Criminology Volume 38 ; 38 >
+        au < manifest ; 1995 ; International Journal of Offender Therapy and Comparative Criminology Volume 39 ; 39 >
+        au < manifest ; 1996 ; International Journal of Offender Therapy and Comparative Criminology Volume 40 ; 40 >
+        au < manifest ; 1997 ; International Journal of Offender Therapy and Comparative Criminology Volume 41 ; 41 >
+        au < manifest ; 1998 ; International Journal of Offender Therapy and Comparative Criminology Volume 42 ; 42 >
+        au < manifest ; 1999 ; International Journal of Offender Therapy and Comparative Criminology Volume 43 ; 43 >
+        au < manifest ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 44 ; 44 >
+        au < manifest ; 2001 ; International Journal of Offender Therapy and Comparative Criminology Volume 45 ; 45 >
+        au < manifest ; 2002 ; International Journal of Offender Therapy and Comparative Criminology Volume 46 ; 46 >
+        au < manifest ; 2003 ; International Journal of Offender Therapy and Comparative Criminology Volume 47 ; 47 >
+        au < manifest ; 2004 ; International Journal of Offender Therapy and Comparative Criminology Volume 48 ; 48 >
+        au < manifest ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 >
+        au < manifest ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
+        au < manifest ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
+        au < manifest ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
+        au < manifest ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
+        au < manifest ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 >
+        au < manifest ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 >
+        
+      }
+
+
     }
 
     {
@@ -13188,6 +13245,45 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1982 ; The International Journal of Robotics Research Volume 1 ; 1 >
+        au < manifest ; 1983 ; The International Journal of Robotics Research Volume 2 ; 2 >
+        au < manifest ; 1984 ; The International Journal of Robotics Research Volume 3 ; 3 >
+        au < manifest ; 1985 ; The International Journal of Robotics Research Volume 4 ; 4 >
+        au < manifest ; 1986 ; The International Journal of Robotics Research Volume 5 ; 5 >
+        au < manifest ; 1987 ; The International Journal of Robotics Research Volume 6 ; 6 >
+        au < manifest ; 1988 ; The International Journal of Robotics Research Volume 7 ; 7 >
+        au < manifest ; 1989 ; The International Journal of Robotics Research Volume 8 ; 8 >
+        au < manifest ; 1990 ; The International Journal of Robotics Research Volume 9 ; 9 >
+        au < manifest ; 1991 ; The International Journal of Robotics Research Volume 10 ; 10 >
+        au < manifest ; 1992 ; The International Journal of Robotics Research Volume 11 ; 11 >
+        au < manifest ; 1993 ; The International Journal of Robotics Research Volume 12 ; 12 >
+        au < manifest ; 1994 ; The International Journal of Robotics Research Volume 13 ; 13 >
+        au < manifest ; 1995 ; The International Journal of Robotics Research Volume 14 ; 14 >
+        au < manifest ; 1996 ; The International Journal of Robotics Research Volume 15 ; 15 >
+        au < manifest ; 1997 ; The International Journal of Robotics Research Volume 16 ; 16 >
+        au < manifest ; 1998 ; The International Journal of Robotics Research Volume 17 ; 17 >
+        au < manifest ; 1999 ; The International Journal of Robotics Research Volume 18 ; 18 >
+        au < manifest ; 2000 ; The International Journal of Robotics Research Volume 19 ; 19 >
+        au < manifest ; 2001 ; The International Journal of Robotics Research Volume 20 ; 20 >
+        au < manifest ; 2002 ; The International Journal of Robotics Research Volume 21 ; 21 >
+        au < manifest ; 2003 ; The International Journal of Robotics Research Volume 22 ; 22 >
+        au < manifest ; 2004 ; The International Journal of Robotics Research Volume 23 ; 23 >
+        au < manifest ; 2005 ; The International Journal of Robotics Research Volume 24 ; 24 >
+        au < manifest ; 2006 ; The International Journal of Robotics Research Volume 25 ; 25 >
+        au < manifest ; 2007 ; The International Journal of Robotics Research Volume 26 ; 26 >
+        au < manifest ; 2008 ; The International Journal of Robotics Research Volume 27 ; 27 >
+        au < manifest ; 2009 ; The International Journal of Robotics Research Volume 28 ; 28 >
+        au < manifest ; 2010 ; The International Journal of Robotics Research Volume 29 ; 29 >
+        au < manifest ; 2011 ; The International Journal of Robotics Research Volume 30 ; 30 >
+
+      }
+
     }
 
     {
@@ -13207,6 +13303,21 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Rural Management Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; International Journal of Rural Management Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; manifest ; International Journal of Rural Management Volume 4 ; 4 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://irm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2005 ; International Journal of Rural Management Volume 1 ; 1 >
+        au < manifest ; 2006 ; International Journal of Rural Management Volume 2 ; 2 >
+        au < manifest ; 2007 ; International Journal of Rural Management Volume 3 ; 3 >
+        au < manifest ; 2008 ; International Journal of Rural Management Volume 4 ; 4 >
+        au < manifest ; 2009 ; International Journal of Rural Management Volume 5 ; 5 >
+        au < doesNotExist ; 2010 ; International Journal of Rural Management Volume 6 ; 6 >
 
       }
 
@@ -13235,6 +13346,72 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://isp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1955 ; International Journal of Social Psychiatry Volume 1 ; 1 >
+        au < manifest ; 1956 ; International Journal of Social Psychiatry Volume 2 ; 2 >
+        au < manifest ; 1957 ; International Journal of Social Psychiatry Volume 3 ; 3 >
+        au < manifest ; 1958 ; International Journal of Social Psychiatry Volume 4 ; 4 >
+        au < manifest ; 1959 ; International Journal of Social Psychiatry Volume 5 ; 5 >
+        au < manifest ; 1960 ; International Journal of Social Psychiatry Volume 6 ; 6 >
+        au < manifest ; 1960 ; International Journal of Social Psychiatry Volume 7 ; 7 >
+        au < manifest ; 1961 ; International Journal of Social Psychiatry Volume 8 ; 8 >
+        au < manifest ; 1963 ; International Journal of Social Psychiatry Volume 9 ; 9 >
+        au < manifest ; 1964 ; International Journal of Social Psychiatry Volume 10 ; 10 >
+        au < manifest ; 1965 ; International Journal of Social Psychiatry Volume 11 ; 11 >
+        au < manifest ; 1966 ; International Journal of Social Psychiatry Volume 12 ; 12 >
+        au < manifest ; 1967 ; International Journal of Social Psychiatry Volume 13 ; 13 >
+        au < manifest ; 1968 ; International Journal of Social Psychiatry Volume 14 ; 14 >
+        au < manifest ; 1969 ; International Journal of Social Psychiatry Volume 15 ; 15 >
+        au < manifest ; 1970 ; International Journal of Social Psychiatry Volume 16 ; 16 >
+        au < manifest ; 1971 ; International Journal of Social Psychiatry Volume 17 ; 17 >
+        au < manifest ; 1972 ; International Journal of Social Psychiatry Volume 18 ; 18 >
+        au < manifest ; 1973 ; International Journal of Social Psychiatry Volume 19 ; 19 >
+        au < manifest ; 1974 ; International Journal of Social Psychiatry Volume 20 ; 20 >
+        au < manifest ; 1975 ; International Journal of Social Psychiatry Volume 21 ; 21 >
+        au < manifest ; 1976 ; International Journal of Social Psychiatry Volume 22 ; 22 >
+        au < manifest ; 1977 ; International Journal of Social Psychiatry Volume 23 ; 23 >
+        au < manifest ; 1978 ; International Journal of Social Psychiatry Volume 24 ; 24 >
+        au < manifest ; 1979 ; International Journal of Social Psychiatry Volume 25 ; 25 >
+        au < manifest ; 1980 ; International Journal of Social Psychiatry Volume 26 ; 26 >
+        au < manifest ; 1981 ; International Journal of Social Psychiatry Volume 27 ; 27 >
+        au < manifest ; 1982 ; International Journal of Social Psychiatry Volume 28 ; 28 >
+        au < manifest ; 1983 ; International Journal of Social Psychiatry Volume 29 ; 29 >
+        au < manifest ; 1984 ; International Journal of Social Psychiatry Volume 30 ; 30 >
+        au < manifest ; 1985 ; International Journal of Social Psychiatry Volume 31 ; 31 >
+        au < manifest ; 1986 ; International Journal of Social Psychiatry Volume 32 ; 32 >
+        au < manifest ; 1987 ; International Journal of Social Psychiatry Volume 33 ; 33 >
+        au < manifest ; 1988 ; International Journal of Social Psychiatry Volume 34 ; 34 >
+        au < manifest ; 1989 ; International Journal of Social Psychiatry Volume 35 ; 35 >
+        au < manifest ; 1990 ; International Journal of Social Psychiatry Volume 36 ; 36 >
+        au < manifest ; 1991 ; International Journal of Social Psychiatry Volume 37 ; 37 >
+        au < manifest ; 1992 ; International Journal of Social Psychiatry Volume 38 ; 38 >
+        au < manifest ; 1993 ; International Journal of Social Psychiatry Volume 39 ; 39 >
+        au < manifest ; 1994 ; International Journal of Social Psychiatry Volume 40 ; 40 >
+        au < manifest ; 1995 ; International Journal of Social Psychiatry Volume 41 ; 41 >
+        au < manifest ; 1996 ; International Journal of Social Psychiatry Volume 42 ; 42 >
+        au < manifest ; 1997 ; International Journal of Social Psychiatry Volume 43 ; 43 >
+        au < manifest ; 1998 ; International Journal of Social Psychiatry Volume 44 ; 44 >
+        au < manifest ; 1999 ; International Journal of Social Psychiatry Volume 45 ; 45 >
+        au < manifest ; 2000 ; International Journal of Social Psychiatry Volume 46 ; 46 >
+        au < manifest ; 2001 ; International Journal of Social Psychiatry Volume 47 ; 47 >
+        au < manifest ; 2002 ; International Journal of Social Psychiatry Volume 48 ; 48 >
+        au < manifest ; 2003 ; International Journal of Social Psychiatry Volume 49 ; 49 >
+        au < manifest ; 2004 ; International Journal of Social Psychiatry Volume 50 ; 50 >
+        au < manifest ; 2005 ; International Journal of Social Psychiatry Volume 51 ; 51 >
+        au < manifest ; 2006 ; International Journal of Social Psychiatry Volume 52 ; 52 >
+        au < manifest ; 2007 ; International Journal of Social Psychiatry Volume 53 ; 53 >
+        au < manifest ; 2008 ; International Journal of Social Psychiatry Volume 54 ; 54 >
+        au < manifest ; 2009 ; International Journal of Social Psychiatry Volume 55 ; 55 >
+        au < manifest ; 2010 ; International Journal of Social Psychiatry Volume 56 ; 56 >
+        au < manifest ; 2011 ; International Journal of Social Psychiatry Volume 57 ; 57 >
+
+      }
+
     }
 
     {
@@ -13256,6 +13433,34 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Journal of Surgical Pathology Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; International Journal of Surgical Pathology Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; International Journal of Surgical Pathology Volume 18 ; 18 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1993-1994 ; International Journal of Surgical Pathology Volume 1 ; 1 >
+        au < manifest ; 1994-1995 ; International Journal of Surgical Pathology Volume 2 ; 2 >
+        au < exists ; 1995-1996 ; International Journal of Surgical Pathology Volume 3 ; 3 >
+        au < manifest ; 1996-1997 ; International Journal of Surgical Pathology Volume 4 ; 4 >
+        au < manifest ; 1997 ; International Journal of Surgical Pathology Volume 5 ; 5 >
+        au < manifest ; 1998 ; International Journal of Surgical Pathology Volume 6 ; 6 >
+        au < manifest ; 1999 ; International Journal of Surgical Pathology Volume 7 ; 7 >
+        au < manifest ; 2000 ; International Journal of Surgical Pathology Volume 8 ; 8 >
+        au < manifest ; 2001 ; International Journal of Surgical Pathology Volume 9 ; 9 >
+        au < manifest ; 2002 ; International Journal of Surgical Pathology Volume 10 ; 10 >
+        au < manifest ; 2003 ; International Journal of Surgical Pathology Volume 11 ; 11 >
+        au < manifest ; 2004 ; International Journal of Surgical Pathology Volume 12 ; 12 >
+        au < manifest ; 2005 ; International Journal of Surgical Pathology Volume 13 ; 13 >
+        au < manifest ; 2006 ; International Journal of Surgical Pathology Volume 14 ; 14 >
+        au < manifest ; 2007 ; International Journal of Surgical Pathology Volume 15 ; 15 >
+        au < manifest ; 2008 ; International Journal of Surgical Pathology Volume 16 ; 16 >
+        au < manifest ; 2009 ; International Journal of Surgical Pathology Volume 17 ; 17 >
+        au < manifest ; 2010 ; International Journal of Surgical Pathology Volume 18 ; 18 >
+        au < manifest ; 2011 ; International Journal of Surgical Pathology Volume 19 ; 19 >
 
       }
 
@@ -13282,6 +13487,20 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://iab.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2007 ; International Political Science Abstracts Volume 67 ; 57 >
+        au < exists ; 2008 ; International Political Science Abstracts Volume 68 ; 58 >
+        au < exists ; 2009 ; International Political Science Abstracts Volume 59 ; 59 >
+        au < exists ; 2010 ; International Political Science Abstracts Volume 60 ; 60 >
+        au < exists ; 2011 ; International Political Science Abstracts Volume 61 ; 61 >
+
+      }
+
     }
 
     {
@@ -13304,6 +13523,47 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Political Science Review Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; International Political Science Review Volume 30 ; 30 >
         au < HighWirePressH20Plugin ; manifest ; International Political Science Review Volume 31 ; 31 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ips.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1980 ; International Political Science Review Volume 1 ; 1 >
+        au < manifest ; 1981 ; International Political Science Review Volume 2 ; 2 >
+        au < manifest ; 1982 ; International Political Science Review Volume 3 ; 3 >
+        au < manifest ; 1983 ; International Political Science Review Volume 4 ; 4 >
+        au < manifest ; 1984 ; International Political Science Review Volume 5 ; 5 >
+        au < manifest ; 1985 ; International Political Science Review Volume 6 ; 6 >
+        au < manifest ; 1986 ; International Political Science Review Volume 7 ; 7 >
+        au < manifest ; 1987 ; International Political Science Review Volume 8 ; 8 >
+        au < manifest ; 1988 ; International Political Science Review Volume 9 ; 9 >
+        au < manifest ; 1989 ; International Political Science Review Volume 10 ; 10 >
+        au < manifest ; 1990 ; International Political Science Review Volume 11 ; 11 >
+        au < manifest ; 1991 ; International Political Science Review Volume 12 ; 12 >
+        au < manifest ; 1992 ; International Political Science Review Volume 13 ; 13 >
+        au < manifest ; 1993 ; International Political Science Review Volume 14 ; 14 >
+        au < manifest ; 1994 ; International Political Science Review Volume 15 ; 15 >
+        au < manifest ; 1995 ; International Political Science Review Volume 16 ; 16 >
+        au < manifest ; 1996 ; International Political Science Review Volume 17 ; 17 >
+        au < manifest ; 1997 ; International Political Science Review Volume 18 ; 18 >
+        au < manifest ; 1998 ; International Political Science Review Volume 19 ; 19 >
+        au < manifest ; 1999 ; International Political Science Review Volume 20 ; 20 >
+        au < manifest ; 2000 ; International Political Science Review Volume 21 ; 21 >
+        au < manifest ; 2001 ; International Political Science Review Volume 22 ; 22 >
+        au < manifest ; 2002 ; International Political Science Review Volume 23 ; 23 >
+        au < manifest ; 2003 ; International Political Science Review Volume 24 ; 24 >
+        au < manifest ; 2004 ; International Political Science Review Volume 25 ; 25 >
+        au < manifest ; 2005 ; International Political Science Review Volume 26 ; 26 >
+        au < manifest ; 2006 ; International Political Science Review Volume 27 ; 27 >
+        au < manifest ; 2007 ; International Political Science Review Volume 28 ; 28 >
+        au < manifest ; 2008 ; International Political Science Review Volume 29 ; 29 >
+        au < manifest ; 2009 ; International Political Science Review Volume 30 ; 30 >
+        au < manifest ; 2010 ; International Political Science Review Volume 31 ; 31 >
+        au < manifest ; 2011 ; International Political Science Review Volume 32 ; 32 >
 
       }
 
@@ -13342,6 +13602,50 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://irx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1975 ; International Regional Science Review Volume 1 ; 1 >
+        au < manifest ; 1977 ; International Regional Science Review Volume 2 ; 2 >
+        au < manifest ; 1978 ; International Regional Science Review Volume 3 ; 3 >
+        au < manifest ; 1979 ; International Regional Science Review Volume 4 ; 4 >
+        au < manifest ; 1980 ; International Regional Science Review Volume 5 ; 5 >
+        au < manifest ; 1981 ; International Regional Science Review Volume 6 ; 6 >
+        au < manifest ; 1982 ; International Regional Science Review Volume 7 ; 7 >
+        au < manifest ; 1983 ; International Regional Science Review Volume 8 ; 8 >
+        au < manifest ; 1984 ; International Regional Science Review Volume 9 ; 9 >
+        au < manifest ; 1986 ; International Regional Science Review Volume 10 ; 10 >
+        au < manifest ; 1987 ; International Regional Science Review Volume 11 ; 11 >
+        au < manifest ; 1989 ; International Regional Science Review Volume 12 ; 12 >
+        au < manifest ; 1990 ; International Regional Science Review Volume 13 ; 13 >
+        au < manifest ; 1991 ; International Regional Science Review Volume 14 ; 14 >
+        au < manifest ; 1992 ; International Regional Science Review Volume 15 ; 15 >
+        au < manifest ; 1993 ; International Regional Science Review Volume 16 ; 16 >
+        au < manifest ; 1994 ; International Regional Science Review Volume 17 ; 17 >
+        au < manifest ; 1995 ; International Regional Science Review Volume 18 ; 18 >
+        au < manifest ; 1995 ; International Regional Science Review Volume 18 ; 18 >
+        au < exists ; 1996 ; International Regional Science Review Volume 19 ; 19 >
+        au < manifest ; 1997 ; International Regional Science Review Volume 20 ; 20 >
+        au < manifest ; 1998 ; International Regional Science Review Volume 21 ; 21 >
+        au < manifest ; 1999 ; International Regional Science Review Volume 22 ; 22 >
+        au < manifest ; 2000 ; International Regional Science Review Volume 23 ; 23 >
+        au < manifest ; 2001 ; International Regional Science Review Volume 24 ; 24 >
+        au < manifest ; 2002 ; International Regional Science Review Volume 25 ; 25 >
+        au < manifest ; 2003 ; International Regional Science Review Volume 26 ; 26 >
+        au < manifest ; 2004 ; International Regional Science Review Volume 27 ; 27 >
+        au < manifest ; 2005 ; International Regional Science Review Volume 28 ; 28 >
+        au < manifest ; 2006 ; International Regional Science Review Volume 29 ; 29 >
+        au < manifest ; 2007 ; International Regional Science Review Volume 30 ; 30 >
+        au < manifest ; 2008 ; International Regional Science Review Volume 31 ; 31 >
+        au < manifest ; 2009 ; International Regional Science Review Volume 32 ; 32 >
+        au < manifest ; 2010 ; International Regional Science Review Volume 33 ; 33 >
+        au < manifest ; 2011 ; International Regional Science Review Volume 34 ; 34 >
+
+      }
+
     }
 
     {
@@ -13367,6 +13671,40 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ire.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 1959 ; International Relations Volume 1 ; 1 >
+        au < manifest ; 1960 ; International Relations Volume 2 ; 2 >
+        au < manifest ; 1967 ; International Relations Volume 3 ; 3 >
+        au < manifest ; 1972 ; International Relations Volume 4 ; 4 >
+        au < manifest ; 1975 ; International Relations Volume 5 ; 5 >
+        au < manifest ; 1978 ; International Relations Volume 6 ; 6 >
+        au < manifest ; 1981 ; International Relations Volume 7 ; 7 >
+        au < manifest ; 1984 ; International Relations Volume 8 ; 8 >
+        au < manifest ; 1987 ; International Relations Volume 9 ; 9 >
+        au < manifest ; 1990 ; International Relations Volume 10 ; 10 >
+        au < manifest ; 1992 ; International Relations Volume 11 ; 11 >
+        au < manifest ; 1994 ; International Relations Volume 12 ; 12 >
+        au < manifest ; 1996 ; International Relations Volume 13 ; 13 >
+        au < manifest ; 1998 ; International Relations Volume 14 ; 14 >
+        au < manifest ; 2000 ; International Relations Volume 15 ; 15 >
+        au < manifest ; 2002 ; International Relations Volume 16 ; 16 >
+        au < manifest ; 2003 ; International Relations Volume 17 ; 17 >
+        au < manifest ; 2004 ; International Relations Volume 18 ; 18 >
+        au < manifest ; 2005 ; International Relations Volume 19 ; 19 >
+        au < manifest ; 2006 ; International Relations Volume 20 ; 20 >
+        au < manifest ; 2007 ; International Relations Volume 21 ; 21 >
+        au < manifest ; 2008 ; International Relations Volume 22 ; 22 >
+        au < manifest ; 2009 ; International Relations Volume 23 ; 23 >
+        au < manifest ; 2010 ; International Relations Volume 24 ; 24 >
+        au < manifest ; 2011 ; International Relations Volume 25 ; 25 >
+
+      }
+
     }
 
     {
@@ -13389,6 +13727,61 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Review for the Sociology of Sport Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; down ; International Review for the Sociology of Sport Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; manifest ; International Review for the Sociology of Sport Volume 45 ; 45 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://irs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; International Review for the Sociology of Sport Volume 1 ; 1 >
+        au < manifest ; 1967 ; International Review for the Sociology of Sport Volume 2 ; 2 >
+        au < manifest ; 1968 ; International Review for the Sociology of Sport Volume 3 ; 3 >
+        au < manifest ; 1969 ; International Review for the Sociology of Sport Volume 4 ; 4 >
+        au < manifest ; 1970 ; International Review for the Sociology of Sport Volume 5 ; 5 >
+        au < manifest ; 1971 ; International Review for the Sociology of Sport Volume 6 ; 6 >
+        au < manifest ; 1972 ; International Review for the Sociology of Sport Volume 7 ; 7 >
+        au < manifest ; 1973 ; International Review for the Sociology of Sport Volume 8 ; 8 >
+        au < manifest ; 1974 ; International Review for the Sociology of Sport Volume 9 ; 9 >
+        au < manifest ; 1975 ; International Review for the Sociology of Sport Volume 10 ; 10 >
+        au < manifest ; 1976 ; International Review for the Sociology of Sport Volume 11 ; 11 >
+        au < manifest ; 1977 ; International Review for the Sociology of Sport Volume 12 ; 12 >
+        au < manifest ; 1978 ; International Review for the Sociology of Sport Volume 13 ; 13 >
+        au < manifest ; 1979 ; International Review for the Sociology of Sport Volume 14 ; 14 >
+        au < manifest ; 1980 ; International Review for the Sociology of Sport Volume 15 ; 15 >
+        au < manifest ; 1981 ; International Review for the Sociology of Sport Volume 16 ; 16 >
+        au < manifest ; 1982 ; International Review for the Sociology of Sport Volume 17 ; 17 >
+        au < manifest ; 1983 ; International Review for the Sociology of Sport Volume 18 ; 18 >
+        au < manifest ; 1984 ; International Review for the Sociology of Sport Volume 19 ; 19 >
+        au < manifest ; 1985 ; International Review for the Sociology of Sport Volume 20 ; 20 >
+        au < manifest ; 1986 ; International Review for the Sociology of Sport Volume 21 ; 21 >
+        au < manifest ; 1987 ; International Review for the Sociology of Sport Volume 22 ; 22 >
+        au < manifest ; 1988 ; International Review for the Sociology of Sport Volume 23 ; 23 >
+        au < manifest ; 1989 ; International Review for the Sociology of Sport Volume 24 ; 24 >
+        au < manifest ; 1990 ; International Review for the Sociology of Sport Volume 25 ; 25 >
+        au < manifest ; 1991 ; International Review for the Sociology of Sport Volume 26 ; 26 >
+        au < manifest ; 1992 ; International Review for the Sociology of Sport Volume 27 ; 27 >
+        au < manifest ; 1993 ; International Review for the Sociology of Sport Volume 28 ; 28 >
+        au < manifest ; 1994 ; International Review for the Sociology of Sport Volume 29 ; 29 >
+        au < manifest ; 1995 ; International Review for the Sociology of Sport Volume 30 ; 30 >
+        au < manifest ; 1996 ; International Review for the Sociology of Sport Volume 31 ; 31 >
+        au < manifest ; 1997 ; International Review for the Sociology of Sport Volume 32 ; 32 >
+        au < manifest ; 1998 ; International Review for the Sociology of Sport Volume 33 ; 33 >
+        au < manifest ; 1999 ; International Review for the Sociology of Sport Volume 34 ; 34 >
+        au < manifest ; 2000 ; International Review for the Sociology of Sport Volume 35 ; 35 >
+        au < manifest ; 2001 ; International Review for the Sociology of Sport Volume 36 ; 36 >
+        au < manifest ; 2002 ; International Review for the Sociology of Sport Volume 37 ; 37 >
+        au < manifest ; 2003 ; International Review for the Sociology of Sport Volume 38 ; 38 >
+        au < manifest ; 2004 ; International Review for the Sociology of Sport Volume 39 ; 39 >
+        au < manifest ; 2005 ; International Review for the Sociology of Sport Volume 40 ; 40 >
+        au < manifest ; 2006 ; International Review for the Sociology of Sport Volume 41 ; 41 >
+        au < manifest ; 2007 ; International Review for the Sociology of Sport Volume 42 ; 42 >
+        au < manifest ; 2008 ; International Review for the Sociology of Sport Volume 43 ; 43 >
+        au < manifest ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 >
+        au < manifest ; 2010 ; International Review for the Sociology of Sport Volume 45 ; 45 >
+        au < manifest ; 2011 ; International Review for the Sociology of Sport Volume 46 ; 46 >
 
       }
 
@@ -13427,6 +13820,71 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ras.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; International Review of Administrative Sciences Volume 22 ; 22 >
+        au < manifest ; 1957 ; International Review of Administrative Sciences Volume 23 ; 23 >
+        au < manifest ; 1958 ; International Review of Administrative Sciences Volume 24 ; 24 >
+        au < manifest ; 1959 ; International Review of Administrative Sciences Volume 25 ; 25 >
+        au < manifest ; 1960 ; International Review of Administrative Sciences Volume 26 ; 26 >
+        au < manifest ; 1961 ; International Review of Administrative Sciences Volume 27 ; 27 >
+        au < manifest ; 1962 ; International Review of Administrative Sciences Volume 28 ; 28 >
+        au < manifest ; 1963 ; International Review of Administrative Sciences Volume 29 ; 29 >
+        au < manifest ; 1964 ; International Review of Administrative Sciences Volume 30 ; 30 >
+        au < manifest ; 1965 ; International Review of Administrative Sciences Volume 31 ; 31 >
+        au < manifest ; 1966 ; International Review of Administrative Sciences Volume 32 ; 32 >
+        au < manifest ; 1967 ; International Review of Administrative Sciences Volume 33 ; 33 >
+        au < manifest ; 1968 ; International Review of Administrative Sciences Volume 34 ; 34 >
+        au < manifest ; 1969 ; International Review of Administrative Sciences Volume 35 ; 35 >
+        au < manifest ; 1970 ; International Review of Administrative Sciences Volume 36 ; 36 >
+        au < manifest ; 1971 ; International Review of Administrative Sciences Volume 37 ; 37 >
+        au < manifest ; 1972 ; International Review of Administrative Sciences Volume 38 ; 38 >
+        au < manifest ; 1973 ; International Review of Administrative Sciences Volume 39 ; 39 >
+        au < manifest ; 1974 ; International Review of Administrative Sciences Volume 40 ; 40 >
+        au < manifest ; 1975 ; International Review of Administrative Sciences Volume 41 ; 41 >
+        au < manifest ; 1976 ; International Review of Administrative Sciences Volume 42 ; 42 >
+        au < manifest ; 1977 ; International Review of Administrative Sciences Volume 43 ; 43 >
+        au < manifest ; 1978 ; International Review of Administrative Sciences Volume 44 ; 44 >
+        au < manifest ; 1979 ; International Review of Administrative Sciences Volume 45 ; 45 >
+        au < manifest ; 1980 ; International Review of Administrative Sciences Volume 46 ; 46 >
+        au < manifest ; 1980 ; International Review of Administrative Sciences Volume 47 ; 47 >
+        au < manifest ; 1982 ; International Review of Administrative Sciences Volume 48 ; 48 >
+        au < manifest ; 1983 ; International Review of Administrative Sciences Volume 49 ; 49 >
+        au < manifest ; 1984 ; International Review of Administrative Sciences Volume 50 ; 50 >
+        au < manifest ; 1985 ; International Review of Administrative Sciences Volume 51 ; 51 >
+        au < manifest ; 1986 ; International Review of Administrative Sciences Volume 52 ; 52 >
+        au < manifest ; 1987 ; International Review of Administrative Sciences Volume 53 ; 53 >
+        au < manifest ; 1988 ; International Review of Administrative Sciences Volume 54 ; 54 >
+        au < manifest ; 1989 ; International Review of Administrative Sciences Volume 55 ; 55 >
+        au < manifest ; 1990 ; International Review of Administrative Sciences Volume 56 ; 56 >
+        au < manifest ; 1991 ; International Review of Administrative Sciences Volume 57 ; 57 >
+        au < manifest ; 1992 ; International Review of Administrative Sciences Volume 58 ; 58 >
+        au < manifest ; 1993 ; International Review of Administrative Sciences Volume 59 ; 59 >
+        au < manifest ; 1994 ; International Review of Administrative Sciences Volume 60 ; 60 >
+        au < manifest ; 1995 ; International Review of Administrative Sciences Volume 61 ; 61 >
+        au < manifest ; 1996 ; International Review of Administrative Sciences Volume 62 ; 62 >
+        au < manifest ; 1997 ; International Review of Administrative Sciences Volume 63 ; 63 >
+        au < manifest ; 1998 ; International Review of Administrative Sciences Volume 64 ; 64 >
+        au < manifest ; 1999 ; International Review of Administrative Sciences Volume 65 ; 65 >
+        au < manifest ; 2000 ; International Review of Administrative Sciences Volume 66 ; 66 >
+        au < manifest ; 2001 ; International Review of Administrative Sciences Volume 67 ; 67 >
+        au < manifest ; 2002 ; International Review of Administrative Sciences Volume 68 ; 68 >
+        au < manifest ; 2003 ; International Review of Administrative Sciences Volume 69 ; 69 >
+        au < manifest ; 2004 ; International Review of Administrative Sciences Volume 70 ; 70 >
+        au < manifest ; 2005 ; International Review of Administrative Sciences Volume 71 ; 71 >
+        au < manifest ; 2006 ; International Review of Administrative Sciences Volume 72 ; 72 >
+        au < manifest ; 2007 ; International Review of Administrative Sciences Volume 73 ; 73 >
+        au < manifest ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 >
+        au < manifest ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 >
+        au < manifest ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 >
+        au < manifest ; 2011 ; International Review of Administrative Sciences Volume 77 ; 77 >
+
+      }
+
     }
 
     {
@@ -13449,6 +13907,44 @@ comment[exm] = now published by Springer
         au < HighWirePressPlugin ; down ; International Small Business Journal Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; International Small Business Journal Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; International Small Business Journal Volume 28 ; 28 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://isb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1982 ; International Small Business Journal Volume 1 ; 1 >
+        au < manifest ; 1983 ; International Small Business Journal Volume 2 ; 2 >
+        au < manifest ; 1984 ; International Small Business Journal Volume 3 ; 3 >
+        au < manifest ; 1985 ; International Small Business Journal Volume 4 ; 4 >
+        au < manifest ; 1986 ; International Small Business Journal Volume 5 ; 5 >
+        au < manifest ; 1987 ; International Small Business Journal Volume 6 ; 6 >
+        au < manifest ; 1988 ; International Small Business Journal Volume 7 ; 7 >
+        au < manifest ; 1989 ; International Small Business Journal Volume 8 ; 8 >
+        au < manifest ; 1991 ; International Small Business Journal Volume 9 ; 9 >
+        au < manifest ; 1991 ; International Small Business Journal Volume 10 ; 10 >
+        au < manifest ; 1992 ; International Small Business Journal Volume 11 ; 11 >
+        au < manifest ; 1993 ; International Small Business Journal Volume 12 ; 12 >
+        au < manifest ; 1994 ; International Small Business Journal Volume 13 ; 13 >
+        au < manifest ; 1995 ; International Small Business Journal Volume 14 ; 14 >
+        au < manifest ; 1996 ; International Small Business Journal Volume 15 ; 15 >
+        au < manifest ; 1997 ; International Small Business Journal Volume 16 ; 16 >
+        au < manifest ; 1998 ; International Small Business Journal Volume 17 ; 17 >
+        au < manifest ; 1999 ; International Small Business Journal Volume 18 ; 18 >
+        au < manifest ; 2000 ; International Small Business Journal Volume 19 ; 19 >
+        au < manifest ; 2002 ; International Small Business Journal Volume 20 ; 20 >
+        au < manifest ; 2003 ; International Small Business Journal Volume 21 ; 21 >
+        au < manifest ; 2004 ; International Small Business Journal Volume 22 ; 22 >
+        au < manifest ; 2005 ; International Small Business Journal Volume 23 ; 23 >
+        au < manifest ; 2006 ; International Small Business Journal Volume 24 ; 24 >
+        au < manifest ; 2007 ; International Small Business Journal Volume 25 ; 25 >
+        au < manifest ; 2008 ; International Small Business Journal Volume 26 ; 26 >
+        au < manifest ; 2009 ; International Small Business Journal Volume 27 ; 27 >
+        au < manifest ; 2010 ; International Small Business Journal Volume 28 ; 28 >
+        au < manifest ; 2011 ; International Small Business Journal Volume 29 ; 29 >
 
       }
 
