@@ -93,7 +93,7 @@
   
       param[base_url] = http://digdata4.lib.auburn.edu/CivilWar_Documents/
     
-      au < manifest ; Auburn University Civil War Documents Digital Collection: Diaries ; Diaries >
+      au < testing ; Auburn University Civil War Documents Digital Collection: Diaries ; Diaries >
 
     }
   
@@ -112,7 +112,7 @@
     au < released ; Auburn University Alabama Cooperative Extension Service Photographs ; autest >
     au < released ; Auburn University Caroline Dean Wildflower Collection ; flora >
     au < released ; Auburn University Football Program ; football >
-    au < manifest ; Auburn University Photographs Collection ; aunumphoto >
+    au < ready ; Auburn University Numbered Photographs Collection ; aunumphoto >
   
   }
       
@@ -214,7 +214,7 @@
   
     au < released ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
     au < down ; Auburn University Historic Catalogs Digital Collection: 20th. Century [superseded] ; 20thCentury >
-    au < manifest ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCenturyA >
+    au < testing ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCenturyA >
 
   }
   
@@ -254,8 +254,8 @@
 
       param[base_url] = http://digdata4.lib.auburn.edu/PianoBenchCollection/
     
-      au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
-      au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+      au < testing ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
+      au < testing ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
 
     }
   
