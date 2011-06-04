@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.279 2011-05-16 22:06:57 tlipkis Exp $
+ $Id: build.xml,v 1.280 2011-06-04 21:56:53 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1265,6 +1265,89 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
      </then>
     </if>
     <move file="${solaris.files}" todir="${protosolaris.top}/RPMS" />
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="debian-pkg" depends="jar-lockss,check.contrib"
+   description="Package up the daemon as a Debian package" >
+
+    <path id="ant-deb.classpath">
+        <fileset dir="${lib}" includes="ant-deb-0.0.1.jar"/>
+    </path>
+
+    <taskdef name="deb" classname="com.googlecode.ant_deb_task.Deb" classpathref="ant-deb.classpath"/>
+
+    <mkdir dir="${temp.build}" />
+    <tempfile property="temp.debian.dir" destdir="${temp.build}" prefix="debian"/>
+    <mkdir dir="${temp.debian.dir}" />
+
+    <property name="debianrelease" value="1" />
+
+    <property name="protodebian.top" value="${basedir}/rpms" />
+    <property name="debian.top" value="${temp.debian.dir}" />
+    <property name="debian.build" value="${debian.top}/BUILD" />
+    <property name="debian.root" value="${debian.build}/lockss-daemon-root" />
+    <property name="target.jardir" value="/usr/share/lockss" />
+    <property name="debian.jardir" value="${debian.root}${target.jardir}" />
+    <property name="debian.lockss.etc" value="${debian.root}/etc/lockss" />
+    <property name="debian.rpms" value="${protodebian.top}/RPMS" />
+    <property name="debian.preinstall" value="${protodebian.top}/Debian/preinstall" />
+    <property name="debian.postinstall" value="${protodebian.top}/Debian/postinstall" />
+    <property name="debian.preremove" value="${protodebian.top}/Debian/preremove" />
+
+    <!-- make classpath to substitute into start script -->
+    <pathconvert refid="prod.run.classpath" property="debian.clspth"
+       targetos="unix">
+      <map from="${basedir}/lib" to="${target.jardir}" />
+    </pathconvert>
+    <!-- copy prototype rpm tree to tmp dir -->
+    <copy todir="${debian.top}" >
+      <fileset dir="${protodebian.top}">
+       <exclude name="RPMS/**/*"/>
+      </fileset>
+      <filterset>
+       <filter token="CLASSPATH" value="${debian.clspth}"/>
+       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="RPMRELEASE" value="${debianrelease}"/>
+       <filter token="PLATFORM_VERSION" value="Debian-${debianrelease}"/>
+      </filterset>
+    </copy>
+
+    <!-- copy jars on run.classpath to jardir -->
+    <pathtofileset dir="" pathrefid="prod.run.classpath"
+      name="debian.jars.set" ignorenonrelative="true" />
+    <copy todir="${debian.jardir}" flatten="true" >
+     <fileset refid="debian.jars.set" />
+    </copy>
+        <deb
+            todir="${debian.rpms}"
+            package="lockss"
+            section="web"
+            depends="sun-java5-jre | sun-java6-jre | openjdk-6-jre"
+            preinst="${debian.preinstall}"
+            postinst="${debian.postinstall}"
+            prerm="${debian.preremove}"
+        >
+            <version upstream="${debianrelease}" />
+            <maintainer email="LOCKSS Team" name="lockss-support@lockss.org"/>
+            <description synopsis="LOCKSS Daemon">
+The LOCKSS system collects and preserves in a peer-to-peer network content
+published on the Web. http://www.lockss.org
+            </description>
+            <tarfileset dir="${debian.root}/usr/share/lockss" prefix="usr/share/lockss">
+                <include name="*"/>
+            </tarfileset>
+            <tarfileset dir="${debian.root}/etc/lockss" prefix="etc/lockss">
+                <exclude name="*solaris"/>
+            </tarfileset>
+            <tarfileset dir="${debian.root}/etc/init.d" prefix="etc/init.d">
+                <include name="lockss"/>
+            </tarfileset>
+            <tarfileset dir="${debian.root}/etc/logrotate.d" prefix="etc/logrotate.d">
+                <include name="lockss"/>
+            </tarfileset>
+        </deb>
+
   </target>
 
   <!-- ==================================================================== -->
