@@ -538,7 +538,7 @@ EOF
                 ;;
             esac
             CONFIG_OK=Y
-            if ! mail -s "Config for ${2}@${LOCKSS_HOSTNAME}" -c ${LOCKSS_TEAM} ${LOCKSS_EMAIL} <${1} ; then
+            if ! mail -s "Config for ${2}@${LOCKSS_HOSTNAME}" ${LOCKSS_EMAIL} ${LOCKSS_TEAM} <${1} ; then
                 echo "Sending mail failed. Please check mail configuration."
                 echo "Please also send ${1} to ${LOCKSS_TEAM}."
             fi

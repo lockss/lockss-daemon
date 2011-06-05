@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.280 2011-06-04 21:56:53 dshr Exp $
+ $Id: build.xml,v 1.281 2011-06-05 22:26:03 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1323,7 +1323,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
             todir="${debian.rpms}"
             package="lockss"
             section="web"
-            depends="sun-java5-jre | sun-java6-jre | openjdk-6-jre"
+            depends="sun-java5-jre | sun-java6-jre | openjdk-6-jre, mailutils"
             preinst="${debian.preinstall}"
             postinst="${debian.postinstall}"
             prerm="${debian.preremove}"

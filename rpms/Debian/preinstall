@@ -1,3 +1,3 @@
 #!/bin/sh
-grep -q ^lockss: /etc/passwd || ( useradd -d /home/lockss -s /bin/false lockss ; echo "Created user 'lockss'" )
+grep -q ^lockss: /etc/passwd || ( if useradd -s /bin/false lockss ; then mkdir -p /home/lockss ; chown lockss:lockss /home/lockss ; chmod 755 /home/lockss ; echo "Created user 'lockss'" ; else echo "Can't create user lockss" ; exit 1 ; fi )
 if [ -x /etc/init.d/lockss -a -s /etc/lockss/config.dat ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; rm -f ~lockss/KeepGoing ; PS=`ps a | grep 'startdaemon lockss' | sed 's/\([0-9][0-9]*\) .*/\1/'` ; if [ "X${PS}" != X ]; then for A in ${PS} ; do if kill -9 ${A} >/dev/null 2>&1 ; then echo "Killed ${A}" ; fi ; done ; fi ; fi
