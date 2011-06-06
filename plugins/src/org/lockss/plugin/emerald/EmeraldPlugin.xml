@@ -37,6 +37,18 @@
     <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
+    <string>au_issue_url</string>
+    <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+  </entry>
+  <entry>
+    <string>au_volume_url</string>
+    <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_title_url</string>
+    <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
+  </entry> 
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -74,5 +86,12 @@
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.emerald.EmeraldLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*show=pdf$&quot;, base_url, journal_issn, volume_name</string>
+      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*view=printarticle&quot;, base_url, journal_issn, volume_name</string>
+    </list>
   </entry>
 </map>
