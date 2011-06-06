@@ -2848,18 +2848,18 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; ELT Journal Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; ELT Journal Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; ELT Journal Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; ELT Journal Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; ELT Journal Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; ELT Journal Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; ELT Journal Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; ELT Journal Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; ELT Journal Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; ELT Journal Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; ELT Journal Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; ELT Journal Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; ELT Journal Volume 63 ; 63 >
     au < HighWireStrVolPlugin ; down ; 2005 ; ELT Journal Volume 59 ; 59 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; ELT Journal Volume 60 ; 60 >
     au < HighWireStrVolPlugin ; down ; 2007 ; ELT Journal Volume 61 ; 61 >
     au < HighWirePressPlugin ; down ; 2008 ; ELT Journal Volume 62 ; 62 >
     au < HighWirePressPlugin ; down ; 2009 ; ELT Journal Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; ELT Journal Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; ELT Journal Volume 65 ; 65 > 
+    au < HighWirePressH20Plugin ; testing ; 2011 ; ELT Journal Volume 65 ; 65 > 
 
     }
 
@@ -2999,15 +2999,15 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; English Historical Review Volume CXVIII ; CXVIII >
     au < HighWirePressH20Plugin ; exists ; 2004 ; English Historical Review Volume CXIX ; CXIX >
     au < HighWirePressH20Plugin ; exists ; 2005 ; English Historical Review Volume CXX ; CXX >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; English Historical Review Volume CXXI ; CXXI >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; English Historical Review Volume CXXI ; CXXI >
     au < HighWireStrVolPlugin ; down ; 2004 ; English Historical Review Volume 120 ; 120 >
     au < HighWireStrVolPlugin ; down ; 2005 ; English Historical Review Volume CXXI ; CXXI >
     au < HighWireStrVolPlugin ; down ; 2006 ; English Historical Review Volume CXXII ; CXXII >
     au < HighWirePressH20Plugin ; ready ; 2007 ; English Historical Review Volume CXXII ; CXXII >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; English Historical Review Volume CXXIII ; CXXIII >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; English Historical Review Volume CXXIV ; CXXIV >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; English Historical Review Volume CXXV ; CXXV >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; English Historical Review Volume CXXVI ; CXXVI >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; English Historical Review Volume CXXIII ; CXXIII >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; English Historical Review Volume CXXIV ; CXXIV >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; English Historical Review Volume CXXV ; CXXV >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; English Historical Review Volume CXXVI ; CXXVI >
 
     }
 
@@ -3026,24 +3026,34 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://es.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; yesr ; name ; param[volume] >
 
-    au < down ; Enterprise & Society Volume 7 ; 7 >
+    au < down ; 2006 ; Enterprise & Society Volume 7 ; 7 >
 
     }
 
     {
 
     param[base_url] = http://es.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; Enterprise & Society Volume 6 ; 6 >
-    au < HighWirePressPlugin ; doNotProcess ; Enterprise & Society Volume 7 ; 7 >
-    au < HighWirePressPlugin ; down ; Enterprise & Society Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; Enterprise & Society Volume 9 ; 9 >
-    au < HighWirePressPlugin ; down ; Enterprise & Society Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; ready ; Enterprise & Society Volume 11 ; 11 >
-
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Enterprise & Society Volume 6 ; 6 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Enterprise & Society Volume 7 ; 7 >
+    au < HighWirePressPlugin ; down ; 2007 ; Enterprise & Society Volume 8 ; 8 >
+    au < HighWirePressPlugin ; down ; 2008 ; Enterprise & Society Volume 9 ; 9 >
+    au < HighWirePressPlugin ; down ; 2009 ; Enterprise & Society Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Enterprise & Society Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Enterprise & Society Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Enterprise & Society Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Enterprise & Society Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Enterprise & Society Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Enterprise & Society Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     }
 
   }
@@ -3061,21 +3071,51 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://epirev.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Epidemiologic Reviews Volume 27 ; 27 >
+    au < down ; 2005 ; Epidemiologic Reviews Volume 27 ; 27 >
 
     }
 
     {
 
     param[base_url] = http://epirev.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; Epidemiologic Reviews Volume 27 ; 27 >
-    au < HighWireStrVolPlugin ; down ; Epidemiologic Reviews Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; Epidemiologic Reviews Volume 29 ; 29 >
-
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Epidemiologic Reviews Volume 27 ; 27 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Epidemiologic Reviews Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Epidemiologic Reviews Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Epidemiologic Reviews Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Epidemiologic Reviews Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Epidemiologic Reviews Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Epidemiologic Reviews Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Epidemiologic Reviews Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Epidemiologic Reviews Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Epidemiologic Reviews Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Epidemiologic Reviews Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Epidemiologic Reviews Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Epidemiologic Reviews Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Epidemiologic Reviews Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Epidemiologic Reviews Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Epidemiologic Reviews Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Epidemiologic Reviews Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Epidemiologic Reviews Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Epidemiologic Reviews Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Epidemiologic Reviews Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Epidemiologic Reviews Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Epidemiologic Reviews Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Epidemiologic Reviews Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Epidemiologic Reviews Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Epidemiologic Reviews Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Epidemiologic Reviews Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Epidemiologic Reviews Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Epidemiologic Reviews Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Epidemiologic Reviews Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Epidemiologic Reviews Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Epidemiologic Reviews Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 >
     }
 
   }
@@ -3093,21 +3133,27 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://eshremonographs.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; ESHRE Monographs 2005 ; 2005 >
+    au < down ; 2005 ; ESHRE Monographs 2005 ; 2005 >
 
     }
 
     {
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; ESHRE Monographs 2005 ; 2005 >
-    au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2006 ; 2006 >
-    au < HighWireStrVolPlugin ; down ; ESHRE Monographs 2007 ; 2007 >
-    au < HighWirePressH20Plugin ; ready ; ESHRE Monographs 2008 ; 2008 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; ESHRE Monographs 2005 ; 2005 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; ESHRE Monographs 2006 ; 2006 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; ESHRE Monographs 2007 ; 2007 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; ESHRE Monographs Volume 2002 ; 2002 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; ESHRE Monographs Volume 2003 ; 2003 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; ESHRE Monographs Volume 2004 ; 2004 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; ESHRE Monographs Volume 2005 ; 2005 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; ESHRE Monographs Volume 2006 ; 2006 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; ESHRE Monographs Volume 2007 ; 2007 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 >
 
     }
 
@@ -3126,22 +3172,81 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://eic.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Essays in Criticism Volume 55 ; 55 >
+    au < down ; 2005 ; Essays in Criticism Volume 55 ; 55 >
 
     }
 
     {
 
     param[base_url] = http://eic.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; Essays in Criticism Volume 55 ; 55 >
-    au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 56 ; 56 >
-    au < HighWireStrVolPlugin ; down ; Essays in Criticism Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; ready ; Essays in Criticism Volume 58 ; 58 >
-
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ;Essays in Criticism Volume 55 ; 55 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Essays in Criticism Volume 56 ; 56 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Essays in Criticism Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; exists ; 1951 ; Essays in Criticism Volume I ; I >
+    au < HighWirePressH20Plugin ; exists ; 1952 ; Essays in Criticism Volume II ; II >
+    au < HighWirePressH20Plugin ; exists ; 1953 ; Essays in Criticism Volume III ; III >
+    au < HighWirePressH20Plugin ; exists ; 1954 ; Essays in Criticism Volume IV ; IV >
+    au < HighWirePressH20Plugin ; exists ; 1955 ; Essays in Criticism Volume V ; V >
+    au < HighWirePressH20Plugin ; exists ; 1956 ; Essays in Criticism Volume VI ; VI >
+    au < HighWirePressH20Plugin ; exists ; 1957 ; Essays in Criticism Volume VII ; VII >
+    au < HighWirePressH20Plugin ; exists ; 1958 ; Essays in Criticism Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; exists ; 1959 ; Essays in Criticism Volume IX ; IX >
+    au < HighWirePressH20Plugin ; exists ; 1960 ; Essays in Criticism Volume X ; X >
+    au < HighWirePressH20Plugin ; exists ; 1961 ; Essays in Criticism Volume XI ; XI >
+    au < HighWirePressH20Plugin ; exists ; 1962 ; Essays in Criticism Volume XII ; XII >
+    au < HighWirePressH20Plugin ; exists ; 1963 ; Essays in Criticism Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; exists ; 1964 ; Essays in Criticism Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; exists ; 1965 ; Essays in Criticism Volume XV ; XV >
+    au < HighWirePressH20Plugin ; exists ; 1966 ; Essays in Criticism Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; exists ; 1967 ; Essays in Criticism Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; exists ; 1968 ; Essays in Criticism Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; exists ; 1969 ; Essays in Criticism Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; exists ; 1970 ; Essays in Criticism Volume XX ; XX >
+    au < HighWirePressH20Plugin ; exists ; 1971 ; Essays in Criticism Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; exists ; 1972 ; Essays in Criticism Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; exists ; 1973 ; Essays in Criticism Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; Essays in Criticism Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; exists ; 1975 ; Essays in Criticism Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; Essays in Criticism Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; Essays in Criticism Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; Essays in Criticism Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Essays in Criticism Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Essays in Criticism Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Essays in Criticism Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Essays in Criticism Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Essays in Criticism Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Essays in Criticism Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Essays in Criticism Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Essays in Criticism Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Essays in Criticism Volume XXXVII ; XXXVII >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Essays in Criticism Volume XXXVIII ; XXXVIII >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Essays in Criticism Volume XXXIX ; XXXIX >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Essays in Criticism Volume XL ; XL >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Essays in Criticism Volume XLI ; XLI >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Essays in Criticism Volume XLII ; XLII >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Essays in Criticism Volume XLIII ; XLIII >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Essays in Criticism Volume XLIV ; XLIV >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Essays in Criticism Volume XLV ; XLV >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Essays in Criticism Volume XLVI ; XLVI >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Essays in Criticism Volume XLVII ; XLVII >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Essays in Criticism Volume XLVIII ; XLVIII >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Essays in Criticism Volume XLIX ; XLIX >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Essays in Criticism Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Essays in Criticism Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Essays in Criticism Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Essays in Criticism Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Essays in Criticism Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Essays in Criticism Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Essays in Criticism Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Essays in Criticism Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Essays in Criticism Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Essays in Criticism Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Essays in Criticism Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Essays in Criticism Volume 61 ; 61 >
     }
 
   }
@@ -3159,21 +3264,32 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://europace.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Europace Volume 8 ; 8 >
+    au < down ; 2006 ; Europace Volume 8 ; 8 >
 
     }
 
     {
 
     param[base_url] = http://europace.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; Europace Volume 8 ; 8 >
-    au < HighWireStrVolPlugin ; down ; Europace Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; Europace Volume 10 ; 10 >
-
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Europace Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Europace Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Europace Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Europace Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Europace Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Europace Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Europace Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Europace Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Europace Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Europace Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Europace Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Europace Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Europace Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Europace Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Europace Volume 13 ; 13 >
     }
 
   }
@@ -3192,13 +3308,44 @@
     comment[h20] = has switched to H20 early
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 26 ; 26 >
-    au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 27 ; 27 >
-    au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; European Heart Journal Volume 29 ; 29 >
-
+    au < HighWireStrVolPlugin ; down ; 2005 ; European Heart Journal Volume 26 ; 26 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; European Heart Journal Volume 27 ; 27 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; European Heart Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; European Heart Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; European Heart Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; European Heart Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; European Heart Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; European Heart Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; European Heart Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; European Heart Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; European Heart Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; European Heart Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; European Heart Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Heart Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Heart Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Heart Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Heart Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Heart Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Heart Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Heart Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; European Heart Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Heart Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; European Heart Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; European Heart Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Heart Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Heart Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Heart Journal Volume 32 ; 32 >
+    
     }
 
   }
@@ -3218,9 +3365,9 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; European Heart Journal Supplements Volume 8 ; 8 >
+    au < down ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
 
     }
 
@@ -3229,12 +3376,21 @@
     comment[h20] = has switched to H20 early
 
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 7 ; 7 >
-    au < HighWirePressPlugin ; doNotProcess ; European Heart Journal Supplements Volume 8 ; 8 >
-    au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; European Heart Journal Supplements Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 >
 
     }
 
@@ -3253,21 +3409,41 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ejil.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; European Journal of International Law Volume 17 ; 17 >
+    au < down ; 2006 ; European Journal of International Law Volume 17 ; 17 >
 
     }
 
     {
 
     param[base_url] = http://ejil.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; European Journal of International Law Volume 16 ; 16 >
-    au < HighWirePressPlugin ; doNotProcess ; European Journal of International Law Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; ready ; European Journal of International Law Volume 18 ; 18 >
-
+    au < HighWireStrVolPlugin ; down ; 2005 ; European Journal of International Law Volume 16 ; 16 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; European Journal of International Law Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; European Journal of International Law Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Journal of International Law Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Journal of International Law Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of International Law Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Journal of International Law Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Journal of International Law Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Journal of International Law Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Journal of International Law Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Journal of International Law Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Journal of International Law Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Journal of International Law Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Journal of International Law Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Journal of International Law Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Journal of International Law Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Journal of International Law Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; European Journal of International Law Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Journal of International Law Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; European Journal of International Law Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; European Journal of International Law Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Journal of International Law Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Journal of International Law Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Journal of International Law Volume 22 ; 22 >
     }
 
   }
@@ -3285,26 +3461,57 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ejo.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; European Journal of Orthodontics Volume 28 ; 28 >
+    au < down ; 2006; European Journal of Orthodontics Volume 28 ; 28 >
 
       }
 
       {
 
     param[base_url] = http://ejo.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; European Journal of Orthodontics Volume 28 ; 28 >
-    au < HighWireStrVolPlugin ; down ; European Journal of Orthodontics Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; ready ; European Journal of Orthodontics Volume 30 ; 30 >
-
-      }
-
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; European Journal of Orthodontics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; European Journal of Orthodontics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; European Journal of Orthodontics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; European Journal of Orthodontics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; European Journal of Orthodontics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; European Journal of Orthodontics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; European Journal of Orthodontics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; European Journal of Orthodontics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; European Journal of Orthodontics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; European Journal of Orthodontics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; European Journal of Orthodontics Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Journal of Orthodontics Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Journal of Orthodontics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Orthodontics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Journal of Orthodontics Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Journal of Orthodontics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Journal of Orthodontics Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Journal of Orthodontics Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Journal of Orthodontics Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Journal of Orthodontics Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Journal of Orthodontics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Journal of Orthodontics Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Journal of Orthodontics Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Journal of Orthodontics Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Journal of Orthodontics Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; European Journal of Orthodontics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; European Journal of Orthodontics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 >    
     }
 
-    {
+  }
+
+  {
 
     title <
       name = European Journal of Public Health ;
@@ -3313,31 +3520,51 @@
       issnl = 1101-1262
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://eurpub.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; European Journal of Public Health Volume 16 ; 16 >
-
-      }
-
-      {
-
-    param[base_url] = http://eurpub.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; European Journal of Public Health Volume 15 ; 15 >
-    au < HighWirePressPlugin ; doNotProcess ; European Journal of Public Health Volume 16 ; 16 >
-    au < HighWireStrVolPlugin ; down ; European Journal of Public Health Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; European Journal of Public Health Volume 18 ; 18 >
-
-      }
+    au < down ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
 
     }
 
     {
+
+    param[base_url] = http://eurpub.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Public Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Journal of Public Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Journal of Public Health Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Journal of Public Health Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Journal of Public Health Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Journal of Public Health Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Journal of Public Health Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Journal of Public Health Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Journal of Public Health Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Journal of Public Health Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Journal of Public Health Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Journal of Public Health Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Journal of Public Health Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Journal of Public Health Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Journal of Public Health Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; European Journal of Public Health Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Journal of Public Health Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; European Journal of Public Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; European Journal of Public Health Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Journal of Public Health Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Journal of Public Health Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Journal of Public Health Volume 21 ; 21 >
+    
+    }
+
+  }
+
+  {
 
     title <
       name = European Review of Agricultural Economics ;
@@ -3346,21 +3573,55 @@
       issnl = 0165-1587
     >
 
-      {
+    {
 
     param[base_url] = http://erae.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; ready ; European Review of Agricultural Economics Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; ready ; European Review of Agricultural Economics Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; ready ; European Review of Agricultural Economics Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; ready ; European Review of Agricultural Economics Volume 35 ; 35 >
-
-     }
-
+    au < HighWirePressH20Plugin ; exists ; 1973 ; European Review of Agricultural Economics Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; European Review of Agricultural Economics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; European Review of Agricultural Economics Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; European Review of Agricultural Economics Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; European Review of Agricultural Economics Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; European Review of Agricultural Economics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; European Review of Agricultural Economics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; European Review of Agricultural Economics Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; European Review of Agricultural Economics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; European Review of Agricultural Economics Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; European Review of Agricultural Economics Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; European Review of Agricultural Economics Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; European Review of Agricultural Economics Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; European Review of Agricultural Economics Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; European Review of Agricultural Economics Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; European Review of Agricultural Economics Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; European Review of Agricultural Economics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Review of Agricultural Economics Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Review of Agricultural Economics Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Review of Agricultural Economics Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Review of Agricultural Economics Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Review of Agricultural Economics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Review of Agricultural Economics Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Review of Agricultural Economics Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Review of Agricultural Economics Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Review of Agricultural Economics Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Review of Agricultural Economics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Review of Agricultural Economics Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Review of Agricultural Economics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Review of Agricultural Economics Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Review of Agricultural Economics Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; European Review of Agricultural Economics Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; European Review of Agricultural Economics Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; European Review of Agricultural Economics Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 >   
+    
     }
 
-    {
+  }
+
+  {
 
     title <
       name = European Sociological Review ;
@@ -3369,31 +3630,57 @@
       issnl = 0266-7215
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://esr.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; European Sociological Review Volume 22 ; 22 >
-
-      }
-
-      {
-
-    param[base_url] = http://esr.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 21 ; 21 >
-    au < HighWirePressPlugin ; doNotProcess ; European Sociological Review Volume 22 ; 22 >
-    au < HighWireStrVolPlugin ; down ; European Sociological Review Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; European Sociological Review Volume 24 ; 24 >
-
-      }
+    au < down ; 2006 ; European Sociological Review Volume 22 ; 22 >
 
     }
 
     {
+
+    param[base_url] = http://esr.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; European Sociological Review Volume 21 ; 21 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; European Sociological Review Volume 22 ; 22 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; European Sociological Review Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; European Sociological Review Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; European Sociological Review Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; European Sociological Review Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; European Sociological Review Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; European Sociological Review Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; European Sociological Review Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; European Sociological Review Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; European Sociological Review Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; European Sociological Review Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; European Sociological Review Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; European Sociological Review Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; European Sociological Review Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; European Sociological Review Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; European Sociological Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; European Sociological Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; European Sociological Review Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; European Sociological Review Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; European Sociological Review Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; European Sociological Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; European Sociological Review Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; European Sociological Review Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; European Sociological Review Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; European Sociological Review Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; European Sociological Review Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; European Sociological Review Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; European Sociological Review Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; European Sociological Review Volume 27 ; 27 >
+    
+    }
+
+  }
+
+  {
 
     title <
       name = Evidence-based Complementary and Alternative Medicine ;
@@ -3404,7 +3691,7 @@
 
       comment[ecam] = This journal url does not exist or the URL has changed 
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ecam.oxfordjournals.org/
@@ -3412,9 +3699,9 @@
 
     au < down ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://ecam.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3423,11 +3710,11 @@
     au < HighWirePressPlugin ; doNotProcess ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Family Practice ;
@@ -3436,30 +3723,57 @@
       issnl = 0263-2136
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://fampra.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Family Practice Volume 23 ; 23 >
-
-      }
-
-      {
-
-    param[base_url] = http://fampra.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; Family Practice Volume 22 ; 22 >
-    au < HighWirePressPlugin ; doNotProcess ; Family Practice Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; Family Practice Volume 24 ; 24 >
-
-      }
+    au < down ; 2006 ; Family Practice Volume 23 ; 23 >
 
     }
 
     {
+
+    param[base_url] = http://fampra.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; Family Practice Volume 22 ; 22 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Family Practice Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Family Practice Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Family Practice Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Family Practice Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Family Practice Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Family Practice Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Family Practice Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Family Practice Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Family Practice Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Family Practice Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Family Practice Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Family Practice Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Family Practice Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Family Practice Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Family Practice Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Family Practice Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Family Practice Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Family Practice Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Family Practice Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Family Practice Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Family Practice Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Family Practice Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Family Practice Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Family Practice Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Family Practice Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Family Practice Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Family Practice Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Family Practice Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Family Practice Volume 28 ; 28 >
+
+    }
+
+  }
+
+  {
 
     title <
       name = Forestry ;
@@ -3468,31 +3782,114 @@
       issnl = 0015-752X
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://forestry.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Forestry Volume 79 ; 79 >
-
-      }
-
-      {
-
-    param[base_url] = http://forestry.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; Forestry Volume 78 ; 78 >
-    au < HighWirePressPlugin ; doNotProcess ; Forestry Volume 79 ; 79 >
-    au < HighWireStrVolPlugin ; down ; Forestry Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; ready ; Forestry Volume 81 ; 81 >
-
-      }
+    au < down ; 2006 ; Forestry Volume 79 ; 79 >
 
     }
 
     {
+      
+    param[base_url] = http://forestry.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; Forestry Volume 78 ; 78 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Forestry Volume 79 ; 79 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Forestry Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; exists ; 1927 ; Forestry Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1928 ; Forestry Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1929 ; Forestry Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1930 ; Forestry Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1931 ; Forestry Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1932 ; Forestry Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1933 ; Forestry Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1934 ; Forestry Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1935 ; Forestry Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1936 ; Forestry Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1937 ; Forestry Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1938 ; Forestry Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1939 ; Forestry Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1940 ; Forestry Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1941 ; Forestry Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1942 ; Forestry Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1943 ; Forestry Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1944 ; Forestry Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1945 ; Forestry Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1947 ; Forestry Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1948 ; Forestry Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1949 ; Forestry Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1950 ; Forestry Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1951 ; Forestry Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 1952 ; Forestry Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 1953 ; Forestry Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 1954 ; Forestry Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 1955 ; Forestry Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1956 ; Forestry Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 1957 ; Forestry Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 1958 ; Forestry Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 1959 ; Forestry Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 1960 ; Forestry Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 1961 ; Forestry Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 1962 ; Forestry Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 1963 ; Forestry Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 1964 ; Forestry Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 1965 ; Forestry Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 1966 ; Forestry Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 1967 ; Forestry Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; exists ; 1968 ; Forestry Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; exists ; 1969 ; Forestry Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 1970 ; Forestry Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; exists ; 1971 ; Forestry Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; exists ; 1972 ; Forestry Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; exists ; 1973 ; Forestry Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; Forestry Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; exists ; 1975 ; Forestry Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; Forestry Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; Forestry Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; Forestry Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Forestry Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Forestry Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Forestry Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Forestry Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Forestry Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Forestry Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Forestry Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Forestry Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Forestry Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Forestry Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Forestry Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Forestry Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Forestry Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Forestry Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Forestry Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Forestry Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Forestry Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Forestry Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Forestry Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Forestry Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Forestry Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Forestry Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Forestry Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Forestry Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Forestry Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Forestry Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Forestry Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Forestry Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Forestry Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Forestry Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Forestry Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Forestry Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Forestry Volume 84 ; 84 >
+    
+    }
+
+  }
+
+  {
 
     title <
       name = Forum for Modern Language Studies ;
@@ -3501,30 +3898,75 @@
       issnl = 0015-8518
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://fmls.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Forum for Modern Language Studies Volume 42 ; 42 >
-
-      }
-
-      {
-
-    param[base_url] = http://fmls.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; Forum for Modern Language Studies Volume 41 ; 41 >
-    au < HighWirePressPlugin ; doNotProcess ; Forum for Modern Language Studies Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; ready ; Forum for Modern Language Studies Volume 43 ; 43 >
-
-      }
+    au < down ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 >
 
     }
 
     {
+
+    param[base_url] = http://fmls.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 1965 ; Forum for Modern Language Studies Volume I ; I >
+    au < HighWirePressH20Plugin ; exists ; 1966 ; Forum for Modern Language Studies Volume II ; II >
+    au < HighWirePressH20Plugin ; exists ; 1967 ; Forum for Modern Language Studies Volume III ; III >
+    au < HighWirePressH20Plugin ; exists ; 1968 ; Forum for Modern Language Studies Volume IV ; IV >
+    au < HighWirePressH20Plugin ; exists ; 1969 ; Forum for Modern Language Studies Volume V ; V >
+    au < HighWirePressH20Plugin ; exists ; 1970 ; Forum for Modern Language Studies Volume VI ; VI >
+    au < HighWirePressH20Plugin ; exists ; 1971 ; Forum for Modern Language Studies Volume VII ; VII >
+    au < HighWirePressH20Plugin ; exists ; 1972 ; Forum for Modern Language Studies Volume VIII ; VIII >
+    au < HighWirePressH20Plugin ; exists ; 1973 ; Forum for Modern Language Studies Volume IX ; IX >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; Forum for Modern Language Studies Volume X ; X >
+    au < HighWirePressH20Plugin ; exists ; 1975 ; Forum for Modern Language Studies Volume XI ; XI >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; Forum for Modern Language Studies Volume XII ; XII >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; Forum for Modern Language Studies Volume XIII ; XIII >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; Forum for Modern Language Studies Volume XIV ; XIV >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; Forum for Modern Language Studies Volume XV ; XV >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; Forum for Modern Language Studies Volume XVI ; XVI >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; Forum for Modern Language Studies Volume XVII ; XVII >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; Forum for Modern Language Studies Volume XVIII ; XVIII >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; Forum for Modern Language Studies Volume XIX ; XIX >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Forum for Modern Language Studies Volume XX ; XX >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; Forum for Modern Language Studies Volume XXI ; XXI >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Forum for Modern Language Studies Volume XXII ; XXII >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Forum for Modern Language Studies Volume XXIII ; XXIII >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Forum for Modern Language Studies Volume XXIV ; XXIV >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Forum for Modern Language Studies Volume XXV ; XXV >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Forum for Modern Language Studies Volume XXVI ; XXVI >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Forum for Modern Language Studies Volume XXVII ; XXVII >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Forum for Modern Language Studies Volume XXVIII ; XXVIII >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Forum for Modern Language Studies Volume XXIX ; XXIX >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Forum for Modern Language Studies Volume XXX ; XXX >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Forum for Modern Language Studies Volume XXXI ; XXXI >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Forum for Modern Language Studies Volume XXXII ; XXXII >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Forum for Modern Language Studies Volume XXXIII ; XXXIII >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Forum for Modern Language Studies Volume XXXIV ; XXXIV >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Forum for Modern Language Studies Volume XXXV ; XXXV >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Forum for Modern Language Studies Volume XXXVI ; XXXVI >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Forum for Modern Language Studies Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Forum for Modern Language Studies Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Forum for Modern Language Studies Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Forum for Modern Language Studies Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Forum for Modern Language Studies Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >   
+    }
+
+  }
+
+  {
 
     title <
       name = French History ;
@@ -3533,30 +3975,54 @@
       issnl = 0269-1191
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://fh.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; French History Volume 20 ; 20 >
-
-      }
-
-      {
-
-    param[base_url] = http://fh.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; French History Volume 19 ; 19 >
-    au < HighWirePressPlugin ; doNotProcess ; French History Volume 20 ; 20 >
-    au < HighWirePressH21Plugin ; testing ; French History Volume 21 ; 21 >
-
-      }
+    au < down ; 2006 ; French History Volume 20 ; 20 >
 
     }
 
     {
+
+    param[base_url] = http://fh.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; French History Volume 19 ; 19 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; French History Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; French History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; French History Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; French History Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; French History Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; French History Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; French History Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; French History Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; French History Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; French History Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; French History Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; French History Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; French History Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; French History Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; French History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; French History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; French History Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; French History Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; French History Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; French History Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; French History Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; French History Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; French History Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; French History Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; French History Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; French History Volume 25 ; 25 >
+    
+    }
+
+  }
+
+  {
 
     title <
       name = French Studies: A Quarterly Review ;
@@ -3565,31 +4031,95 @@
       issnl = 0016-1128
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://fs.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; French Studies: A Quarterly Review Volume 60 ; 60 >
-
-      }
-
-      {
-
-    param[base_url] = http://fs.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 59 ; 59 >
-    au < HighWirePressPlugin ; doNotProcess ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; down ; French Studies: A Quarterly Review Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; ready ; French Studies: A Quarterly Review Volume 62 ; 62 >
-
-      }
+    au < down ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
 
     }
 
     {
+
+    param[base_url] = http://fs.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; exists ; 1947 ; French Studies: A Quarterly Review Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1948 ; French Studies: A Quarterly Review Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1949 ; French Studies: A Quarterly Review Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1950 ; French Studies: A Quarterly Review Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1951 ; French Studies: A Quarterly Review Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1952 ; French Studies: A Quarterly Review Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1953 ; French Studies: A Quarterly Review Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1954 ; French Studies: A Quarterly Review Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1955 ; French Studies: A Quarterly Review Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1956 ; French Studies: A Quarterly Review Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1957 ; French Studies: A Quarterly Review Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1958 ; French Studies: A Quarterly Review Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1959 ; French Studies: A Quarterly Review Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1960 ; French Studies: A Quarterly Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1961 ; French Studies: A Quarterly Review Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1962 ; French Studies: A Quarterly Review Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1963 ; French Studies: A Quarterly Review Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1964 ; French Studies: A Quarterly Review Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1965 ; French Studies: A Quarterly Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1966 ; French Studies: A Quarterly Review Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1967 ; French Studies: A Quarterly Review Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1968 ; French Studies: A Quarterly Review Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1969 ; French Studies: A Quarterly Review Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1970 ; French Studies: A Quarterly Review Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 1971 ; French Studies: A Quarterly Review Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 1972 ; French Studies: A Quarterly Review Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 1973 ; French Studies: A Quarterly Review Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; French Studies: A Quarterly Review Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1975 ; French Studies: A Quarterly Review Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; French Studies: A Quarterly Review Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; French Studies: A Quarterly Review Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; French Studies: A Quarterly Review Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; French Studies: A Quarterly Review Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; French Studies: A Quarterly Review Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; French Studies: A Quarterly Review Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; French Studies: A Quarterly Review Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; French Studies: A Quarterly Review Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; French Studies: A Quarterly Review Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; French Studies: A Quarterly Review Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; French Studies: A Quarterly Review Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; French Studies: A Quarterly Review Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; French Studies: A Quarterly Review Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; French Studies: A Quarterly Review Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; French Studies: A Quarterly Review Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; French Studies: A Quarterly Review Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; French Studies: A Quarterly Review Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; French Studies: A Quarterly Review Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; French Studies: A Quarterly Review Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; French Studies: A Quarterly Review Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; French Studies: A Quarterly Review Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; French Studies: A Quarterly Review Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; French Studies: A Quarterly Review Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; French Studies: A Quarterly Review Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; French Studies: A Quarterly Review Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; French Studies: A Quarterly Review Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; French Studies: A Quarterly Review Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; French Studies: A Quarterly Review Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 >
+ 
+    }
+
+  }
+
+  {
 
     title <
       name = French Studies Bulletin ;
@@ -3598,21 +4128,21 @@
       issnl = 0262-2750
     >
 
-      {
+    {
 
     param[base_url] = http://fsb.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        comment = there is no such volume, this was probably an error
+    comment = there is no such volume, this was probably an error
 
     au < HighWireStrVolPlugin ; down ; French Studies Bulletin Volume LX ; LX >
     au < HighWirePressH20Plugin ; down ; French Studies Bulletin Volume LX ; LX >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Glycobiology ;
@@ -3620,27 +4150,47 @@
       eissn = 1460-2423 ;
       issnl = 0959-6658
     >
-
-      {
+    
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://glycob.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Glycobiology Volume 15 ; 15 >
+    au < down ; 2005 ; Glycobiology Volume 15 ; 15 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://glycob.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; Glycobiology Volume 15 ; 15 >
-    au < HighWireStrVolPlugin ; down ; Glycobiology Volume 16 ; 16 >
-    au < HighWireStrVolPlugin ; down ; Glycobiology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; ready ; Glycobiology Volume 18 ; 18 >
-
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Glycobiology Volume 15 ; 15 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Glycobiology Volume 16 ; 16 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Glycobiology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Glycobiology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Glycobiology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Glycobiology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Glycobiology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Glycobiology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Glycobiology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Glycobiology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Glycobiology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Glycobiology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Glycobiology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Glycobiology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Glycobiology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Glycobiology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Glycobiology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Glycobiology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Glycobiology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Glycobiology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Glycobiology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Glycobiology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Glycobiology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Glycobiology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Glycobiology Volume 21 ; 21 >
       }
 
     }
@@ -3658,27 +4208,52 @@
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://her.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Health Education Research Volume 21 ; 21 >
+    au < down ; 2006 ; Health Education Research Volume 21 ; 21 >
 
       }
 
       {
 
     param[base_url] = http://her.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; Health Education Research Volume 20 ; 20 >
-    au < HighWirePressPlugin ; doNotProcess ; Health Education Research Volume 21 ; 21 >
-    au < HighWireStrVolPlugin ; down ; Health Education Research Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; ready ; Health Education Research Volume 23 ; 23 >
-
-      }
+    au < HighWireStrVolPlugin ; down ; 2005 ; Health Education Research Volume 20 ; 20 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Health Education Research Volume 21 ; 21 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Health Education Research Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Health Education Research Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Health Education Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Health Education Research Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Health Education Research Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Health Education Research Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Health Education Research Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Health Education Research Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Health Education Research Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Health Education Research Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Health Education Research Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Health Education Research Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Health Education Research Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Health Education Research Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Health Education Research Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Health Education Research Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Health Education Research Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Health Education Research Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Health Education Research Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Health Education Research Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Health Education Research Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Health Education Research Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Health Education Research Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Health Education Research Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Health Education Research Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Health Education Research Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Health Education Research Volume 26 ; 26 >
 
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Health Policy and Planning ;
@@ -3687,31 +4262,56 @@
       issnl = 0268-1080
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://heapol.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Health Policy and Planning Volume 21 ; 21 >
-
-      }
-
-      {
-
-    param[base_url] = http://heapol.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; Health Policy and Planning Volume 20 ; 20 >
-    au < HighWirePressPlugin ; doNotProcess ; Health Policy and Planning Volume 21 ; 21 >
-    au < HighWireStrVolPlugin ; down ; Health Policy and Planning Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; ready ; Health Policy and Planning Volume 23 ; 23 >
-
-      }
+    au < down ; 2005 ; Health Policy and Planning Volume 21 ; 21 >
 
     }
 
     {
+
+    param[base_url] = http://heapol.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2004 ; Health Policy and Planning Volume 20 ; 20 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Health Policy and Planning Volume 21 ; 21 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Health Policy and Planning Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Health Policy and Planning Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Health Policy and Planning Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Health Policy and Planning Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Health Policy and Planning Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Health Policy and Planning Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Health Policy and Planning Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Health Policy and Planning Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Health Policy and Planning Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Health Policy and Planning Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Health Policy and Planning Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Health Policy and Planning Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Health Policy and Planning Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Health Policy and Planning Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Health Policy and Planning Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Health Policy and Planning Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Health Policy and Planning Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Health Policy and Planning Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Health Policy and Planning Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Health Policy and Planning Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Health Policy and Planning Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Health Policy and Planning Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Health Policy and Planning Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Health Policy and Planning Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Health Policy and Planning Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Health Policy and Planning Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Health Policy and Planning Volume 26 ; 26 >
+
+    }
+
+  }
+
+  {
 
     title <
       name = Health Promotion International ;
@@ -3720,30 +4320,55 @@
       issnl = 0957-4824
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://heapro.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Health Promotion International Volume 21 ; 21 >
-
-      }
-
-      {
-
-    param[base_url] = http://heapro.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; Health Promotion International Volume 20 ; 20 >
-    au < HighWirePressPlugin ; doNotProcess ; Health Promotion International Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; ready ; Health Promotion International Volume 22 ; 22 >
-
-      }
+    au < down ; 2006 ; Health Promotion International Volume 21 ; 21 >
 
     }
 
     {
+
+    param[base_url] = http://heapro.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2005 ; Health Promotion International Volume 20 ; 20 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Health Promotion International Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; Health Promotion International Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; Health Promotion International Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; Health Promotion International Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; Health Promotion International Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; Health Promotion International Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; Health Promotion International Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Health Promotion International Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; Health Promotion International Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; Health Promotion International Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Health Promotion International Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Health Promotion International Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Health Promotion International Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Health Promotion International Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Health Promotion International Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Health Promotion International Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Health Promotion International Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Health Promotion International Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Health Promotion International Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Health Promotion International Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; Health Promotion International Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Health Promotion International Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Health Promotion International Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Health Promotion International Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Health Promotion International Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; Health Promotion International Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Health Promotion International Volume 26 ; 26 >
+    
+    }
+
+  }
+
+  {
 
     title <
       name = History Workshop Journal ;
@@ -3752,32 +4377,96 @@
       issnl = 1363-3554
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://hwj.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; History Workshop Journal Volume 61 ; 61 >
-
-      }
-
-      {
-
-    param[base_url] = http://hwj.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-    au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 59 ; 59 >
-    au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 60 ; 60 >
-    au < HighWirePressPlugin ; doNotProcess ; History Workshop Journal Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; down ; History Workshop Journal Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; ready ; History Workshop Journal Volume 63 ; 63 >
-
-      }
+    au < down ; 2005 ; History Workshop Journal Volume 61 ; 61 >
 
     }
-
+    
     {
+ 
+    param[base_url] = http://hwj.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireStrVolPlugin ; down ; 2003 ; History Workshop Journal Volume 59 ; 59 >
+    au < HighWireStrVolPlugin ; down ; 2004 ; History Workshop Journal Volume 60 ; 60 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; History Workshop Journal Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; History Workshop Journal Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; History Workshop Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; History Workshop Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; History Workshop Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; History Workshop Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; History Workshop Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; History Workshop Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; History Workshop Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; History Workshop Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; History Workshop Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; History Workshop Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; History Workshop Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; History Workshop Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; History Workshop Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; History Workshop Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; History Workshop Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; History Workshop Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; History Workshop Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; History Workshop Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; History Workshop Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; History Workshop Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; History Workshop Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; History Workshop Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; History Workshop Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; History Workshop Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; History Workshop Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; History Workshop Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; History Workshop Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; History Workshop Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; History Workshop Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; History Workshop Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; History Workshop Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; History Workshop Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; History Workshop Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; History Workshop Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; History Workshop Journal Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; History Workshop Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; History Workshop Journal Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; History Workshop Journal Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; History Workshop Journal Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; History Workshop Journal Volume 40 ; 40 >     
+    au < HighWirePressH20Plugin ; exists ; 1996 ; History Workshop Journal Volume 1996 ; 1996 >     
+    au < HighWirePressH20Plugin ; exists ; 1997 ; History Workshop Journal Volume 1997 ; 1997 >     
+    au < HighWirePressH20Plugin ; exists ; 1998 ; History Workshop Journal Volume 1998 ; 1998 >     
+    au < HighWirePressH20Plugin ; exists ; 1999 ; History Workshop Journal Volume 1999 ; 1999 >     
+    au < HighWirePressH20Plugin ; exists ; 2000 ; History Workshop Journal Volume 2000 ; 2000 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; History Workshop Journal Volume 2001 ; 2001 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; History Workshop Journal Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; History Workshop Journal Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; History Workshop Journal Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; History Workshop Journal Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; History Workshop Journal Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; History Workshop Journal Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; History Workshop Journal Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; History Workshop Journal Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; History Workshop Journal Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; History Workshop Journal Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; History Workshop Journal Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; History Workshop Journal Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; History Workshop Journal Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; History Workshop Journal Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; History Workshop Journal Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; History Workshop Journal Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; History Workshop Journal Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; History Workshop Journal Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; History Workshop Journal Volume 71 ; 71 >
+  
+    }
+
+  }
+
+  {
 
     title <
       name = Holocaust and Genocide Studies ;
@@ -3786,7 +4475,7 @@
       issnl = 1476-7937
     >
 
-      {
+    {
 
     param[base_url] = http://hgs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3795,11 +4484,11 @@
     au < HighWireStrVolPlugin ; down ; Holocaust and Genocide Studies Volume 20 ; 20 >
     au < HighWirePressH21Plugin ; testing ; Holocaust and Genocide Studies Volume 21 ; 21 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Human Communication Research ;
@@ -3808,20 +4497,20 @@
       issnl = 0360-3989
     >
 
-        comment[hcr] = This journal has transferred from Oxford Journals to another publisher in previous years
+    comment[hcr] = This journal has transferred from Oxford Journals to another publisher in previous years
 
-      {
+    {
 
-        pluginSuffix = HighWirePlugin
-        param[base_url] = http://hcr.oxfordjournals.org/
-        comment[down] = Published by Blackwell Publishing from Volume 32, 2006.
-        implicit < status ; name ; param[volume] >
+    pluginSuffix = HighWirePlugin
+    param[base_url] = http://hcr.oxfordjournals.org/
+    comment[down] = Published by Blackwell Publishing from Volume 32, 2006.
+    implicit < status ; name ; param[volume] >
 
     au < down ; Human Communication Research Volume 31 ; 31 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://hcr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3829,11 +4518,11 @@
     au < HighWirePressPlugin ; doNotProcess ; Human Communication Research Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; down ; Human Communication Research Volume 32 ; 32 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Human Molecular Genetics ;
@@ -3842,7 +4531,7 @@
       issnl = 0964-6906
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://hmg.oxfordjournals.org/
@@ -3850,9 +4539,9 @@
 
     au < down ; Human Molecular Genetics Volume 14 ; 14 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://hmg.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3863,11 +4552,11 @@
     au < HighWireStrVolPlugin ; down ; Human Molecular Genetics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; Human Molecular Genetics Volume 17 ; 17 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Human Reproduction ;
@@ -3876,7 +4565,7 @@
       issnl = 0268-1161
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://humrep.oxfordjournals.org/
@@ -3884,9 +4573,9 @@
 
     au < down ; Human Reproduction Volume 21 ; 21 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://humrep.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3896,11 +4585,11 @@
     au < HighWireStrVolPlugin ; down ; Human Reproduction Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; Human Reproduction Volume 23 ; 23 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Human Reproduction Update ;
@@ -3909,7 +4598,7 @@
       issnl = 1355-4786
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://humupd.oxfordjournals.org/
@@ -3917,9 +4606,9 @@
 
     au < down ; Human Reproduction Update Volume 12 ; 12 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://humupd.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3929,11 +4618,11 @@
     au < HighWireStrVolPlugin ; down ; Human Reproduction Update Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; Human Reproduction Update Volume 14 ; 14 >
 
-      }
-
     }
 
-    {
+   }
+
+  {
 
     title <
       name = Human Rights Law Review ;
@@ -3942,7 +4631,7 @@
       issnl = 1461-7781
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://hrlr.oxfordjournals.org/
@@ -3950,9 +4639,9 @@
 
     au < down ; Human Rights Law Review Volume 5 ; 5 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://hrlr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3961,11 +4650,11 @@
     au < HighWireStrVolPlugin ; down ; Human Rights Law Review Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; ready ; Human Rights Law Review Volume 7 ; 7 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = ICES Journal of Marine Science ;
@@ -3974,7 +4663,7 @@
       issnl = 1054-3139
     >
 
-      {
+    {
 
     param[base_url] = http://icesjms.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -3982,11 +4671,11 @@
     au < HighWireStrVolPlugin ; down ; ICES Journal of Marine Science Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; ready ; ICES Journal of Marine Science Volume 65 ; 65 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IEICE-Transactions on Communications ;
@@ -3995,11 +4684,11 @@
       issnl = 0916-8516
     >
 
-      {
+    {
 
-        param[base_url] = http://ietcom.oxfordjournals.org/
-        comment[down] = The online versions of the journals have moved to JSTAGE
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    param[base_url] = http://ietcom.oxfordjournals.org/
+    comment[down] = The online versions of the journals have moved to JSTAGE
+    implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Communications Volume E89-B ; E89-B >
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Communications Volume E90-B ; E90-B >
@@ -4018,21 +4707,21 @@
       issnl = 0916-8524
     >
 
-      {
+    {
 
-        param[base_url] = http://ietele.oxfordjournals.org/
-        comment[down] = The online versions of the journals have moved to JSTAGE
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
+    param[base_url] = http://ietele.oxfordjournals.org/
+    comment[down] = The online versions of the journals have moved to JSTAGE
+    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+ 
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Electronics Volume E89-C ; E89-C >
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Electronics Volume E90-C ; E90-C >
     au < HighWirePressH20Plugin ; down ; IEICE-Transactions on Electronics Volume E90-C ; E90-C >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science ;
@@ -4041,21 +4730,21 @@
       issnl = 0916-8508
     >
 
-      {
+    {
 
-        param[base_url] = http://ietfec.oxfordjournals.org/
-        comment[down] = The online versions of the journals have moved to JSTAGE
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    param[base_url] = http://ietfec.oxfordjournals.org/
+    comment[down] = The online versions of the journals have moved to JSTAGE
+    implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A ; E89-A >
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
     au < HighWirePressH20Plugin ; down ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IEICE-Transactions on Information and Systems ;
@@ -4064,21 +4753,21 @@
       issnl = 0916-8532
     >
 
-      {
+    {
 
-        param[base_url] = http://ietisy.oxfordjournals.org/
-        comment[down] = The online versions of the journals have moved to JSTAGE
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    param[base_url] = http://ietisy.oxfordjournals.org/
+    comment[down] = The online versions of the journals have moved to JSTAGE
+    implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Information and Systems Volume E89-D ; E89-D >
     au < HighWireStrVolPlugin ; down ; IEICE-Transactions on Information and Systems Volume E90-D ; E90-D >
     au < HighWirePressH20Plugin ; down ; IEICE-Transactions on Information and Systems Volume E90-D ; E90-D >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IMA Journal of Applied Mathematics ;
@@ -4087,7 +4776,7 @@
       issnl = 0272-4960
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://imamat.oxfordjournals.org/
@@ -4095,9 +4784,9 @@
 
     au < down ; IMA Journal of Applied Mathematics Volume 71 ; 71 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://imamat.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4107,9 +4796,9 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Applied Mathematics Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; ready ; IMA Journal of Applied Mathematics Volume 73 ; 73 >
 
-      }
-
     }
+
+  }
 
     {
 
@@ -4120,7 +4809,7 @@
       issnl = 1471-678X
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://imaman.oxfordjournals.org/
@@ -4128,9 +4817,9 @@
 
     au < down ; IMA Journal of Management Mathematics Volume 17 ; 17 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://imaman.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4140,11 +4829,11 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Management Mathematics Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; IMA Journal of Management Mathematics Volume 19 ; 19 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IMA Journal of Mathematical Control and Information ;
@@ -4153,7 +4842,7 @@
       issnl = 0265-0754
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://imamci.oxfordjournals.org/
@@ -4161,9 +4850,9 @@
 
     au < down ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://imamci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4172,11 +4861,11 @@
     au < HighWirePressPlugin ; doNotProcess ; IMA Journal of Mathematical Control and Information Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; IMA Journal of Mathematical Control and Information Volume 24 ; 24 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = IMA Journal of Numerical Analysis ;
@@ -4186,19 +4875,19 @@
     >
 
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://imanum.oxfordjournals.org/
     implicit < status ; name ; param[volume] >
 
-        comment = moved to http://imajna.oxfordjournals.org/
+    comment = moved to http://imajna.oxfordjournals.org/
 
     au < down ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://imajna.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4208,11 +4897,11 @@
     au < HighWireStrVolPlugin ; down ; IMA Journal of Numerical Analysis Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; ready ; IMA Journal of Numerical Analysis Volume 28 ; 28 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Industrial and Corporate Change ;
@@ -4221,7 +4910,7 @@
       issnl = 0960-6491
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://icc.oxfordjournals.org/
@@ -4229,9 +4918,9 @@
 
     au < down ; Industrial and Corporate Change Volume 15 ; 15 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://icc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4240,11 +4929,11 @@
     au < HighWirePressPlugin ; doNotProcess ; Industrial and Corporate Change Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; Industrial and Corporate Change Volume 16 ; 16 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Industrial Law Journal ;
@@ -4253,7 +4942,7 @@
       issnl = 0305-9332
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ilj.oxfordjournals.org/
@@ -4261,9 +4950,9 @@
 
     au < down ; Industrial Law Journal Volume 35 ; 35 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://ilj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4272,11 +4961,11 @@
     au < HighWirePressPlugin ; doNotProcess ; Industrial Law Journal Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; Industrial Law Journal Volume 36 ; 36 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = Integrative and Comparative Biology ;
@@ -4285,7 +4974,7 @@
       issnl = 1540-7063
     >
       
-      comment = there is a BioOne incarnation of this journal under Society for Integrative and Comparative Biology
+    comment = there is a BioOne incarnation of this journal under Society for Integrative and Comparative Biology
 
       {
 
@@ -4295,9 +4984,9 @@
 
     au < down ; Integrative and Comparative Biology Volume 46 ; 46 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://icb.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4306,11 +4995,11 @@
     au < HighWirePressPlugin ; doNotProcess ; Integrative and Comparative Biology Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; ready ; Integrative and Comparative Biology Volume 47 ; 47 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International and Comparative Law Quarterly ;
@@ -4318,33 +5007,33 @@
       eissn = 1471-6895
     >
 
-      {
+    {
 
-        pluginSuffix = HighWirePlugin
-        param[base_url] = http://iclq.oxfordjournals.org/
-        comment[down] = Published by Cambridge University Press from Volume 57, 2008.
-        implicit < status ; name ; param[volume] >
+    pluginSuffix = HighWirePlugin
+    param[base_url] = http://iclq.oxfordjournals.org/
+    comment[down] = Published by Cambridge University Press from Volume 57, 2008.
+    implicit < status ; name ; param[volume] >
 
     au < down ; International and Comparative Law Quarterly Volume 55 ; 55 >
 
-      }
+    }
 
-      {
+    {
 
-        param[base_url] = http://iclq.oxfordjournals.org/
-        comment[down] = Published by Cambridge University Press from Volume 57, 2008.
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    param[base_url] = http://iclq.oxfordjournals.org/
+    comment[down] = Published by Cambridge University Press from Volume 57, 2008.
+    implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 54 ; 54 >
     au < HighWirePressPlugin ; doNotProcess ; International and Comparative Law Quarterly Volume 55 ; 55 >
     au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; down ; International and Comparative Law Quarterly Volume 57 ; 57 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Immunology ;
@@ -4353,7 +5042,7 @@
       issnl = 0953-8178
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://intimm.oxfordjournals.org/
@@ -4361,9 +5050,9 @@
 
     au < down ; International Immunology Volume 18 ; 18 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://intimm.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4372,11 +5061,11 @@
     au < HighWireStrVolPlugin ; down ; International Immunology Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; International Immunology Volume 20 ; 20 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal for Quality in Health Care ;
@@ -4385,7 +5074,7 @@
       issnl = 1353-4505
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://intqhc.oxfordjournals.org/
@@ -4393,9 +5082,9 @@
 
     au < down ; International Journal for Quality in Health Care Volume 18 ; 18 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://intqhc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4405,11 +5094,11 @@
     au < HighWireStrVolPlugin ; down ; International Journal for Quality in Health Care Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; International Journal for Quality in Health Care Volume 20 ; 20 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal of Constitutional Law ;
@@ -4418,7 +5107,7 @@
       issnl = 1474-2640
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://icon.oxfordjournals.org/
@@ -4426,9 +5115,9 @@
 
     au < down ; International Journal of Constitutional Law Volume 4 ; 4 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://icon.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4438,11 +5127,11 @@
     au < HighWireStrVolPlugin ; down ; International Journal of Constitutional Law Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; ready ; International Journal of Constitutional Law Volume 6 ; 6 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal of Epidemiology ;
@@ -4451,7 +5140,7 @@
       issnl = 0300-5771
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ije.oxfordjournals.org/
@@ -4459,9 +5148,9 @@
 
     au < down ; International Journal of Epidemiology Volume 35 ; 35 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://ije.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4470,11 +5159,11 @@
     au < HighWirePressPlugin ; doNotProcess ; International Journal of Epidemiology Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; ready ; International Journal of Epidemiology Volume 36 ; 36 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal of Law and Information Technology ;
@@ -4483,7 +5172,7 @@
       issnl = 0967-0769
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://ijlit.oxfordjournals.org/
@@ -4492,9 +5181,9 @@
     au < down ; International Journal of Law and Information Technology Volume 13 ; 13 >
     au < down ; International Journal of Law and Information Technology Volume 14 [superseded] ; 14 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://ijlit.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4504,11 +5193,11 @@
     au < HighWireStrVolPlugin ; down ; International Journal of Law and Information Technology Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; International Journal of Law and Information Technology Volume 16 ; 16 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal of Law, Policy and the Family ;
@@ -4517,7 +5206,7 @@
       issnl = 1360-9939
     >
 
-      {
+    {
 
     pluginSuffix = HighWirePlugin
     param[base_url] = http://lawfam.oxfordjournals.org/
@@ -4525,9 +5214,9 @@
 
     au < down ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
 
-      }
+    }
 
-      {
+    {
 
     param[base_url] = http://lawfam.oxfordjournals.org/
     implicit < pluginSuffix ; status ; name ; param[volume_name] >
@@ -4536,11 +5225,11 @@
     au < HighWirePressPlugin ; doNotProcess ; International Journal of Law, Policy and the Family Volume 20 ; 20 >
     au < HighWirePressH21Plugin ; testing ; International Journal of Law, Policy and the Family Volume 21 ; 21 >
 
-      }
-
     }
 
-    {
+  }
+
+  {
 
     title <
       name = International Journal of Lexicography ;
@@ -4927,7 +5616,7 @@
     au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; exists ; Journal of American History Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; manifest ; Journal of American History Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; testing ; Journal of American History Volume 97 ; 97 >
       
       }
       
@@ -7256,7 +7945,7 @@
     au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; exists ; OAH Magazine of History Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; OAH Magazine of History Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; OAH Magazine of History Volume 25 ; 25 >
               
       }
       
@@ -8895,12 +9584,12 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Year's Work in English Studies Journal Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The Year's Work in English Studies Journal Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; The Year's Work in English Studies Journal Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; The Year's Work in English Studies Journal Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; The Year's Work in English Studies Journal Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; The Year's Work in English Studies Journal Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; The Year's Work in English Studies Journal Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; The Year's Work in English Studies Journal Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; The Year's Work in English Studies Journal Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; The Year's Work in English Studies Journal Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; The Year's Work in English Studies Journal Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; The Year's Work in English Studies Journal Volume 88 ; 88 >
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; The Year's Work in English Studies Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; The Year's Work in English Studies Journal Volume 88 ; 88 >
     au < HighWireStrVolPlugin ; down ; 2006 ; The Year's Work in English Studies Volume 85 ; 85 >
     au < HighWirePressPlugin ; down ; 2007 ; The Year's Work in English Studies Volume 86 ; 86 >
     au < HighWirePressPlugin ; down ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 >
