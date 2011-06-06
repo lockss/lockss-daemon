@@ -51,7 +51,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://bloodjournal.hematologylibrary.org/
       implicit < status ; year ; name ; param[volume_name] >
 
