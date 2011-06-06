@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.8.46.2 2011-05-23 22:34:24 dshr Exp $
+ * $Id: TestRepositoryManager.java,v 1.8.46.3 2011-06-06 23:29:05 dshr Exp $
  */
 
 /*
@@ -112,9 +112,28 @@ public class TestRepositoryManager extends LockssTestCase {
     assertEquals(ListUtil.list(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar"),
                  mgr.getRepositoryList());
     ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "s3://user:passwd/foo/bar");
+    assertEquals(ListUtil.list("s3://user:passwd/foo/bar"),
+                 mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
 				  "/foo/bar;/cache2");
-    assertEquals(ListUtil.list(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar",
-                 RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache2"),
+    assertEquals(ListUtil.list(
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar",
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache2"),
+		 mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "/foo/bar;/cache2;s3://user:passwd/foo/bar");
+    assertEquals(ListUtil.list(
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar",
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache2",
+                   "s3://user:passwd/foo/bar"),
+		 mgr.getRepositoryList());
+    ConfigurationUtil.setFromArgs("org.lockss.platform.diskSpacePaths",
+				  "s3://user:passwd/foo/bar;/foo/bar;/cache2");
+    assertEquals(ListUtil.list(
+                   "s3://user:passwd/foo/bar",
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo/bar",
+                   RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache2"),
 		 mgr.getRepositoryList());
   }
 

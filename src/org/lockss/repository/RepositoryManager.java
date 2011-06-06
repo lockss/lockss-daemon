@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.13.2.2 2011-05-23 22:34:23 dshr Exp $
+ * $Id: RepositoryManager.java,v 1.13.2.3 2011-06-06 23:29:05 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.net.*;
 import java.util.*;
+import java.io.File;
 import org.apache.commons.collections.map.LinkedMap;
 
 import org.lockss.app.*;
@@ -103,7 +104,11 @@ public class RepositoryManager
   static final double DEFAULT_DISK_FULL_FRRE_PERCENT = .01;
 
   public static final String LOCAL_REPO_PROTOCOL = "file://";
-  public static final String REPO_PROTOCOLS[] = { LOCAL_REPO_PROTOCOL, };
+  public static final String S3_REPO_PROTOCOL = "s3://";
+  public static final String REPO_PROTOCOLS[] = {
+    LOCAL_REPO_PROTOCOL,
+    S3_REPO_PROTOCOL,
+  };
 
   private PlatformUtil platInfo = PlatformUtil.getInstance();
   private List repoList = Collections.EMPTY_LIST;
@@ -142,7 +147,11 @@ public class RepositoryManager
       List paths = StringUtil.breakAt(dspace, ';');
       if (paths != null) {
 	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	  lst.add(LOCAL_REPO_PROTOCOL + (String)iter.next()); // Abs path
+          String spaceURI = (String)iter.next();
+          if (spaceURI.startsWith(File.separator)) {
+            spaceURI = LOCAL_REPO_PROTOCOL + spaceURI; // Abs path
+          }
+          lst.add(spaceURI);
 	}
       }
       repoList = lst;
