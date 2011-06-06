@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jneurosci.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -46,6 +46,8 @@
       au < manifest ; Journal of Neuroscience Volume 27 ; 27 >
       au < manifest ; Journal of Neuroscience Volume 28 ; 28 >
       au < manifest ; Journal of Neuroscience Volume 29 ; 29 >
+      au < manifest ; Journal of Neuroscience Volume 30 ; 30 >
+      au < manifest ; Journal of Neuroscience Volume 31 ; 31 >
 
     }
 
