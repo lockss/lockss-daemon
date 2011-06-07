@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.16 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.17 2011-06-07 06:29:22 tlipkis Exp $
  */
 
 /*
@@ -192,8 +192,8 @@ public class TestV3Voter extends LockssTestCase {
     // Transfer pid1's reputation to pid2 and pid2's to
     // pid3
     ConfigurationUtil.addFromArgs(V3Voter.PARAM_REPUTATION_TRANSFER_MAP,
-				  pid1.getIdString() + ","
-				  + pid2.getIdString() + ";"
+				  pid1.getIdString() + " , "
+				  + pid2.getIdString() + " ; "
 				  + pid2.getIdString() + ","
 				  + pid3.getIdString());
     assertTrue(voter.serveRepairs(pid1, au, repairUrl));

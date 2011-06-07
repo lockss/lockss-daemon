@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.90 2011-02-23 08:41:04 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.91 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import junit.framework.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;
@@ -418,13 +419,14 @@ public class TestPluginManager extends LockssTestCase {
   List reconfigEvents = new ArrayList();
 
   class MyAuEventHandler extends AuEventHandler.Base {
-    public void auCreated(ArchivalUnit au) {
+    @Override public void auCreated(AuEvent event, ArchivalUnit au) {
       createEvents.add(au);
     }
-    public void auDeleted(ArchivalUnit au) {
+    @Override public void auDeleted(AuEvent event, ArchivalUnit au) {
       deleteEvents.add(au);
     }
-    public void auReconfigured(ArchivalUnit au, Configuration oldAuConf) {
+    @Override public void auReconfigured(AuEvent event, ArchivalUnit au,
+					 Configuration oldAuConf) {
       reconfigEvents.add(ListUtil.list(au, oldAuConf));
     }
   }
@@ -1462,7 +1464,7 @@ public class TestPluginManager extends LockssTestCase {
     chInfo.setComplete(true);
     mgr.applyAuEvent(new PluginManager.AuEventClosure() {
 	public void execute(AuEventHandler hand) {
-	  hand.auContentChanged(au, chInfo);
+	  hand.auContentChanged(AuEvent.ContentChanged, au, chInfo);
 	}
       });
   }

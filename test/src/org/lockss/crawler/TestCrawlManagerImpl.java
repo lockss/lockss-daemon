@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.85 2011-05-09 00:41:39 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.86 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -489,8 +489,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore eventSem = new SimpleBinarySemaphore();
 
     class MyAuEventHandler extends AuEventHandler.Base {
-      public void auContentChanged(ArchivalUnit au,
-				   AuEventHandler.ChangeInfo info) {
+      @Override public void auContentChanged(PluginManager.AuEvent event,
+					     ArchivalUnit au,
+					     AuEventHandler.ChangeInfo info) {
 	changeEvents.add(info);
 	eventSem.give();
       }

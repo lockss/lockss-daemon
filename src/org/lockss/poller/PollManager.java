@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.213 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: PollManager.java,v 1.214 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -412,10 +412,12 @@ public class PollManager
 
     // register our AU event handler
     auEventHandler = new AuEventHandler.Base() {
-	public void auCreated(ArchivalUnit au) {
+	@Override public void auCreated(PluginManager.AuEvent event,
+					ArchivalUnit au) {
  	  restoreAuPolls(au);
 	}
-	public void auDeleted(ArchivalUnit au) {
+	@Override public void auDeleted(PluginManager.AuEvent event,
+					ArchivalUnit au) {
 	  cancelAuPolls(au);
 	}};
     pluginMgr.registerAuEventHandler(auEventHandler);

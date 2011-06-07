@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.135 2011-04-07 00:09:14 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.136 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.oro.text.regex.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
+
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -50,6 +51,7 @@ import org.lockss.alert.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.exploded.*;
+import org.lockss.plugin.PluginManager.AuEvent;
 
 /**
  * This is the interface for the object that will sit between the crawler
@@ -300,14 +302,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public void startService() {
     super.startService();
 
-    paramOdc = CurrentConfig.getBooleanParam(PARAM_USE_ODC, DEFAULT_USE_ODC);
+    LockssDaemon daemon = getDaemon();
+      
+    pluginMgr = daemon.getPluginManager();
+    alertMgr = daemon.getAlertManager();
 
+    paramOdc = CurrentConfig.getBooleanParam(PARAM_USE_ODC, DEFAULT_USE_ODC);
     cmStatus = new CrawlManagerStatus(histSize);
     cmStatus.setOdc(paramOdc);
 
-    pluginMgr = getDaemon().getPluginManager();
-    alertMgr = getDaemon().getAlertManager();
-    StatusService statusServ = getDaemon().getStatusService();
+    StatusService statusServ = daemon.getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
 				      new CrawlManagerStatusAccessor(this));
     statusServ.registerOverviewAccessor(CRAWL_STATUS_TABLE_NAME,
@@ -318,10 +322,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
                                       new SingleCrawlStatusAccessor(this));     
     // register our AU event handler
     auCreateDestroyHandler = new AuEventHandler.Base() {
-	public void auDeleted(ArchivalUnit au) {
+	@Override public void auDeleted(AuEvent event, ArchivalUnit au) {
 	  auEventDeleted(au);
 	}
-	public void auCreated(ArchivalUnit au) {
+	@Override public void auCreated(AuEvent event, ArchivalUnit au) {
 	  rebuildQueueSoon();
 	}
       };
@@ -1084,10 +1088,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     chInfo.setAu(au);
     chInfo.setComplete(!cs.isCrawlError());
     pluginMgr.applyAuEvent(new PluginManager.AuEventClosure() {
-	public void execute(AuEventHandler hand) {
-	  hand.auContentChanged(au, chInfo);
-	}
-      });
+			     public void execute(AuEventHandler hand) {
+			       hand.auContentChanged(AuEvent.ContentChanged,
+						     au, chInfo);
+			     }
+			   });
   }
 
   // For testing only.  See TestCrawlManagerImpl

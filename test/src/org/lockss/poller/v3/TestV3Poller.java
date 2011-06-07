@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.33 2010-05-18 06:15:37 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.34 2011-06-07 06:29:22 tlipkis Exp $
  */
 
 /*
@@ -857,8 +857,9 @@ public class TestV3Poller extends LockssTestCase {
   List<AuEventHandler.ChangeInfo> changeEvents = new ArrayList();
 
   class MyAuEventHandler extends AuEventHandler.Base {
-    public void auContentChanged(ArchivalUnit au,
-				 AuEventHandler.ChangeInfo info) {
+    @Override public void auContentChanged(PluginManager.AuEvent event,
+					   ArchivalUnit au,
+					   AuEventHandler.ChangeInfo info) {
       changeEvents.add(info);
     }
   }

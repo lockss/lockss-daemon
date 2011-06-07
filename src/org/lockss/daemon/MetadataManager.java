@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.18 2011-05-24 16:44:53 pgust Exp $
+ * $Id: MetadataManager.java,v 1.19 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -345,7 +345,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
 
       /** Called before the AU is deleted */
-      public void auDeleted(ArchivalUnit au) {
+      @Override public void auDeleted(PluginManager.AuEvent event,
+				      ArchivalUnit au) {
         synchronized (reindexingTasks) {
           ReindexingTask task = reindexingTasks.get(au);
           if (task != null) {
@@ -376,7 +377,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
       }
       /** Called after a change to the AU's content */
-      public void auContentChanged(ArchivalUnit au, ChangeInfo info) {
+      @Override public void auContentChanged(PluginManager.AuEvent event,
+					     ArchivalUnit au,
+					     ChangeInfo info) {
         if (info.isComplete()) {
           synchronized (reindexingTasks) {
             ReindexingTask task = reindexingTasks.get(au);

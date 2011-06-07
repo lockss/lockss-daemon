@@ -1,5 +1,5 @@
 /*
- * $Id: AuEventHandler.java,v 1.3 2010-05-18 06:15:38 tlipkis Exp $
+ * $Id: AuEventHandler.java,v 1.4 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.plugin;
 import java.util.*;
 
 import org.lockss.config.*;
+import org.lockss.plugin.PluginManager.AuEvent;
+
 
 /**
  * Handler for AU transition events such as created, deleted, reconfigured.
@@ -45,13 +47,13 @@ import org.lockss.config.*;
 public interface AuEventHandler {
   /** Called after the AU is created (either by user action or at daemon
    * start time */
-  void auCreated(ArchivalUnit au);
+  void auCreated(AuEvent event, ArchivalUnit au);
   /** Called before the AU is deleted */
-  void auDeleted(ArchivalUnit au);
+  void auDeleted(AuEvent event, ArchivalUnit au);
   /** Called after an existing AU's configuration is changed */
-  void auReconfigured(ArchivalUnit au, Configuration oldAuConf);
+  void auReconfigured(AuEvent event, ArchivalUnit au, Configuration oldAuConf);
   /** Called after a change to the AU's content */
-  void auContentChanged(ArchivalUnit au, ChangeInfo info);
+  void auContentChanged(AuEvent event, ArchivalUnit au, ChangeInfo info);
 
   /** Passed to {@link #auContentChanged(ArchivalUnit,ChangeInfo)} to
    * describe the nature of the content change. */
@@ -152,9 +154,11 @@ public interface AuEventHandler {
   /** Convenience class with null handlers for all AuEventHandler events.
    * Specialize this and override the events of interest */
   public class Base implements AuEventHandler {
-    public void auCreated(ArchivalUnit au) {}
-    public void auDeleted(ArchivalUnit au) {}
-    public void auReconfigured(ArchivalUnit au, Configuration oldAuConf) {}
-    public void auContentChanged(ArchivalUnit au, ChangeInfo info) {}
+    public void auCreated(AuEvent event, ArchivalUnit au) {}
+    public void auDeleted(AuEvent event, ArchivalUnit au) {}
+    public void auReconfigured(AuEvent event, ArchivalUnit au,
+			       Configuration oldAuConf) {}
+    public void auContentChanged(AuEvent event, ArchivalUnit au,
+				 ChangeInfo info) {}
   }
 }

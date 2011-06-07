@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.103 2010-09-01 07:58:06 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.104 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.poller.v3.V3Serializer.*;
@@ -1822,9 +1823,10 @@ public class V3Poller extends BasePoll {
       chInfo.setComplete(true);
       PluginManager plugMgr = theDaemon.getPluginManager();
       plugMgr.applyAuEvent(new PluginManager.AuEventClosure() {
-	  public void execute(AuEventHandler hand) {
-	    hand.auContentChanged(au, chInfo);
-	  }
+			     public void execute(AuEventHandler hand) {
+			       hand.auContentChanged(AuEvent.ContentChanged,
+						     au, chInfo);
+			     }
 	});
     }
   }

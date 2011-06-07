@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.217 2011-03-20 21:51:59 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.218 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -869,8 +869,29 @@ public class PluginManager
     return auid != null && auMap.get(auid) == au;
   }
 
-  public enum AuEvent {Create, Delete, Reconfig,
-      RestartCreate, RestartDelete, StartupCreate};
+  /** Describes the event that caused the AuEventHandler to be invoked.
+   * May provide more detail than the AuEventHandler method name. */
+  public enum AuEvent {
+    /** AU created via UI. */
+    Create,
+      /** AU deleted via UI. */
+      Delete,
+      /** Previously created AU started at daemon startup. */
+      StartupCreate,
+      /** AU deactivated via UI. */
+      Deactivate,
+      /** AU reactivated via UI.  (Not currently used.) */
+      Reactivate,
+      /** AU briefly deleted as part of a restart operation. */
+      RestartDelete,
+      /** AU recreated as part of a restart operation. */
+      RestartCreate,
+      /** AU config changed (non-def params only, doesn't happen in normal
+       * use. */
+      Reconfig,
+      /** AU's content chaged. */
+      ContentChanged,
+      };
 
   /**
    * Register a handler for AU events: create, delete, reconfigure.  May be
@@ -910,10 +931,11 @@ public class PluginManager
       // falls through
     case RestartCreate:
     case StartupCreate:
+    case Reactivate:
       applyAuEvent(new AuEventClosure() {
 	  public void execute(AuEventHandler hand) {
 	    try {
-	      hand.auCreated(au);
+	      hand.auCreated(how, au);
 	    } catch (Exception e) {
 	      log.error("AuEventHandler threw", e);
 	    }
@@ -922,11 +944,12 @@ public class PluginManager
     case Delete:
       raiseAlert(Alert.auAlert(Alert.AU_DELETED, au), "AU deleted");
       // falls through
+    case Deactivate:
     case RestartDelete:
       applyAuEvent(new AuEventClosure() {
 	  public void execute(AuEventHandler hand) {
 	    try {
-	      hand.auDeleted(au);
+	      hand.auDeleted(how, au);
 	    } catch (Exception e) {
 	      log.error("AuEventHandler threw", e);
 	    }
@@ -936,7 +959,7 @@ public class PluginManager
       applyAuEvent(new AuEventClosure() {
 	  public void execute(AuEventHandler hand) {
 	    try {
-	      hand.auReconfigured(au, oldAuConfig);
+	      hand.auReconfigured(how, au, oldAuConfig);
 	    } catch (Exception e) {
 	      log.error("AuEventHandler threw", e);
 	    }
@@ -954,7 +977,7 @@ public class PluginManager
   /** Apply an {@link #AuEventClosure} to each registered {@link
    * #AuEventHandler} */
   public void applyAuEvent(AuEventClosure closure) {
-    // copy the list of handler as it could change during the loop.
+    // copy the list of handlers as it could change during the loop.
     for (AuEventHandler hand : new ArrayList<AuEventHandler>(auEventHandlers)) {
       try {
 	closure.execute(hand);
@@ -1183,7 +1206,7 @@ public class PluginManager
       deactivateAuConfiguration(au);
       if (isRemoveStoppedAus()) {
 	String auid = au.getAuId();
-	stopAu(au, AuEvent.Delete);
+	stopAu(au, AuEvent.Deactivate);
 	inactiveAuIds.add(auid);
       }
     }
@@ -2595,8 +2618,8 @@ public class PluginManager
   }
 
   class RegistryAuEventHandler extends AuEventHandler.Base {
-    public void auContentChanged(ArchivalUnit au,
-				 AuEventHandler.ChangeInfo info) {
+    @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
+					   AuEventHandler.ChangeInfo info) {
       if (isRegistryAu(au)) {
 	processRegistryAus(ListUtil.list(au), true);
       }

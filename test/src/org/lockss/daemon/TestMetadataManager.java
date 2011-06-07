@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.6 2011-05-24 16:44:53 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.7 2011-06-07 06:29:23 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
+import org.lockss.plugin.PluginManager.AuEvent;
 import org.lockss.plugin.simulated.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -311,14 +312,16 @@ public class TestMetadataManager extends LockssTestCase {
     ausReindexed.clear();
 
     // simulate an au change
-    theDaemon.getPluginManager().applyAuEvent(new PluginManager.AuEventClosure() {
-      public void execute(AuEventHandler hand) {
-        AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
-        chInfo.setAu(sau0);        // reindex simulated AU
-        chInfo.setComplete(true);   // crawl was complete
-        hand.auContentChanged(sau0, chInfo);
-      }
-    });
+    pluginManager.applyAuEvent(new PluginManager.AuEventClosure() {
+	public void execute(AuEventHandler hand) {
+	  AuEventHandler.ChangeInfo chInfo =
+	    new AuEventHandler.ChangeInfo();
+	  chInfo.setAu(sau0);        // reindex simulated AU
+	  chInfo.setComplete(true);   // crawl was complete
+	  hand.auContentChanged(AuEvent.ContentChanged,
+				sau0, chInfo);
+	}
+      });
     
     // ensure only expected number of AUs were reindexed
     final int expectedAuCount = 1;
@@ -360,12 +363,13 @@ public class TestMetadataManager extends LockssTestCase {
     ausReindexed.clear();
 
     // simulate an au deletion
-    theDaemon.getPluginManager().applyAuEvent(new PluginManager.AuEventClosure() {
-      public void execute(AuEventHandler hand) {
-        hand.auDeleted(sau0);
-      }
-    });
-    
+    pluginManager.applyAuEvent(new PluginManager.AuEventClosure() {
+	public void execute(AuEventHandler hand) {
+	  hand.auDeleted(AuEvent.Delete,
+			 sau0);
+	}
+      });
+
     // ensure metadata table entries for the AU are deleted
     resultSet = stmt.executeQuery(query);
     results = new HashSet<String>();
