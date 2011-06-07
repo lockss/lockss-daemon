@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,8 +17,9 @@
 
     param[journal_dir] = restoration
 
-    au < ready ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 ; 32 >
-    au < ready ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 ; 33 >
+    au < ready ; 2008 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 ; 32 >
+    au < ready ; 2009 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 ; 33 >
+    au < manifest ; 2010 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 34 ; 34 >
 
   }
 
