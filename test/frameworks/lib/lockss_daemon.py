@@ -518,6 +518,18 @@ class Client:
         finally:
             hash_lock.release()
 
+    def getViewContentUrl( self, AU, url, filter ):
+        content_url = '%sViewContent?frame=content&filter=1&' \
+            'auid=%s&url=%s' % \
+            (self.base_URL, urllib.quote_plus(AU.auId),
+             urllib.quote_plus(url))
+        return content_url
+
+    def getViewContent( self, AU, url, filter ):
+        """Return the contents of the url, as stored at the daemon."""
+        content_url = self.getViewContentUrl( AU, url, filter )
+        return lockss_util.HTTP_request( self.URL_opener, content_url )
+
     def getPollResults( self, AU ):
         """Return the current poll results for the AU."""
         table = self._getStatusTable( 'ArchivalUnitTable', AU.auId )[ 0 ]
