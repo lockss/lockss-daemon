@@ -104,7 +104,7 @@
       
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://asj.sagepub.com/
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume_name] >
         comment[asj1960] = journal apparently suspended 1960-1961
 
         au < testing ; 1956 ; Acta Sociologica Volume 1 ; 1 >
@@ -202,7 +202,7 @@
       
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://arj.sagepub.com/
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2003 ; Action Research Volume 1 ; 1 >
         au < manifest ; 2004 ; Action Research Volume 2 ; 2 >
@@ -988,7 +988,7 @@
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://aje.sagepub.com/
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume_name] >
 
         au < doesNotExist ; 0 ; American Journal of Evaluation Volume 1 ; 1 >
         au < manifest ; 1981 ; American Journal of Evaluation Volume 2 ; 2 >
