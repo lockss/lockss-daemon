@@ -2404,7 +2404,6 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Armed Forces & Society Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; exists ; Armed Forces & Society Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Armed Forces & Society Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Armed Forces & Society Volume 32 ; 32 >
         au < HighWireStrVolPlugin ; down ; Armed Forces & Society Volume 33 ; 33 >
@@ -7198,7 +7197,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Economic and Industrial Democracy Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Economic and Industrial Democracy Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; Economic and Industrial Democracy Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; manifest ; Economic and Industrial Democracy Volume 31 ; 31 >
 
       }
 
@@ -7264,7 +7262,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Economic Development Quarterly Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Economic Development Quarterly Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Economic Development Quarterly Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; Economic Development Quarterly Volume 24 ; 24 >
 
       }
 
@@ -7333,7 +7330,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Education and Urban Society Volume 39 ; 39 >
         au < HighWireStrVolPlugin ; down ; Education and Urban Society Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; down ; Education and Urban Society Volume 41 ; 41 >
-        au < HighWirePressH20Plugin ; manifest ; Education and Urban Society Volume 42 ; 42 >
 
       }
 
@@ -7409,7 +7405,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Education, Citizenship and Social Justice Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Education, Citizenship and Social Justice Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; down ; Education, Citizenship and Social Justice Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; manifest ; Education, Citizenship and Social Justice Volume 5 ; 5 >
 
       }
 
@@ -7459,7 +7454,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational Administration Quarterly Volume 43 ; 43 >
         au < HighWirePressPlugin ; down ; Educational Administration Quarterly Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; down ; Educational Administration Quarterly Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; manifest ; Educational Administration Quarterly Volume 46 ; 46 >
 
       }
 
@@ -7540,7 +7534,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational and Psychological Measurement Volume 67 ; 67 >
         au < HighWirePressPlugin ; down ; Educational and Psychological Measurement Volume 68 ; 68 >
         au < HighWireStrVolPlugin ; down ; Educational and Psychological Measurement Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; manifest ; Educational and Psychological Measurement Volume 70 ; 70 >
 
       }
 
@@ -7643,7 +7636,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational Evaluation and Policy Analysis Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Educational Evaluation and Policy Analysis Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Educational Evaluation and Policy Analysis Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; manifest ; Educational Evaluation and Policy Analysis Volume 32 ; 32 >
 
       }
 
@@ -7720,7 +7712,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational Management Administration & Leadership Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Educational Management Administration & Leadership Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; down ; Educational Management Administration & Leadership Volume 37 ; 37 >
-        au < HighWirePressH20Plugin ; manifest ; Educational Management Administration & Leadership Volume 38 ; 38 >
 
       }
 
@@ -7793,7 +7784,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational Policy Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Educational Policy Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Educational Policy Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; Educational Policy Volume 24 ; 24 >
 
       }
 
@@ -7852,7 +7842,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Educational Researcher Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; notReady ; Educational Researcher Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; notReady ; Educational Researcher Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; manifest ; Educational Researcher Volume 39 ; 39 >
 
       }
 
@@ -7957,7 +7946,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Environment and Behavior Volume 39 ; 39 >
         au < HighWireStrVolPlugin ; down ; Environment and Behavior Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; down ; Environment and Behavior Volume 41 ; 41 >
-        au < HighWirePressH20Plugin ; manifest ; Environment and Behavior Volume 42 ; 42 >
 
       }
 
@@ -8045,7 +8033,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Environment and Urbanization Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Environment and Urbanization Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Environment and Urbanization Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Environment and Urbanization Volume 22 ; 22 >
 
       }
 
@@ -8148,7 +8135,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Ethnicities Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Ethnicities Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; Ethnicities Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Ethnicities Volume 10 ; 10 >
 
       }
 
@@ -8193,7 +8179,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Ethnography Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Ethnography Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Ethnography Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; Ethnography Volume 11 ; 11 >
 
       }
 
@@ -8249,7 +8234,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European History Quarterly Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; European History Quarterly Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; down ; European History Quarterly Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; manifest ; European History Quarterly Volume 40 ; 40 >
 
       }
 
@@ -8334,7 +8318,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Archaeology Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; European Journal of Archaeology Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; European Journal of Archaeology Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Archaeology Volume 12 ; 12 >
 
       }
 
@@ -8417,7 +8400,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Communication Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; European Journal of Communication Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; European Journal of Communication Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Communication Volume 25 ; 25 >
 
       }
 
@@ -8477,7 +8459,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Criminology Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; European Journal of Criminology Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; European Journal of Criminology Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Criminology Volume 7 ; 7 >
 
       }
 
@@ -8519,7 +8500,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Cultural Studies Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; European Journal of Cultural Studies Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; European Journal of Cultural Studies Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Cultural Studies Volume 13 ; 13 >
 
       }
 
@@ -8577,7 +8557,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Industrial Relations Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; European Journal of Industrial Relations Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; European Journal of Industrial Relations Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Industrial Relations Volume 16 ; 16 >
 
       }
 
@@ -8638,7 +8617,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of International Relations Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; European Journal of International Relations Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; European Journal of International Relations Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of International Relations Volume 16 ; 16 >
 
       }
 
@@ -8699,7 +8677,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Political Theory Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; European Journal of Political Theory Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; European Journal of Political Theory Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Political Theory Volume 9 ; 9 >
 
       }
 
@@ -8743,7 +8720,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Social Theory Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; European Journal of Social Theory Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; European Journal of Social Theory Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Social Theory Volume 13 ; 13 >
 
       }
 
@@ -8801,7 +8777,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Journal of Women's Studies Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; European Journal of Women's Studies Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; European Journal of Women's Studies Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; manifest ; European Journal of Women's Studies Volume 17 ; 17 >
 
       }
 
@@ -8851,8 +8826,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; European Physical Education Review Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; European Physical Education Review Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; European Physical Education Review Volume 15 ; 15 >
 
       }
 
@@ -8911,7 +8884,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Union Politics Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; European Union Politics Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; European Union Politics Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; European Union Politics Volume 11 ; 11 >
 
       }
 
@@ -8967,7 +8939,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; European Urban and Regional Studies Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; European Urban and Regional Studies Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; European Urban and Regional Studies Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; manifest ; European Urban and Regional Studies Volume 17 ; 17 >
 
       }
 
@@ -9019,7 +8990,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Evaluation Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Evaluation Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; Evaluation Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Evaluation Volume 16 ; 16 >
 
       }
 
@@ -9080,7 +9050,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Evaluation & the Health Professions Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; Evaluation & the Health Professions Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Evaluation & the Health Professions Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; Evaluation & the Health Professions Volume 33 ; 33 >
 
       }
 
@@ -9158,7 +9127,6 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < HighWireStrVolPlugin ; down ; Evaluation Review Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; notReady ; Evaluation Review Volume 32 ; 32 >
         au < HighWireStrVolPlugin ; down ; Evaluation Review Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; Evaluation Review Volume 34 ; 34 >
 
       }
 
@@ -9259,7 +9227,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The Expository Times Volume 118 ; 118 >
         au < HighWireStrVolPlugin ; down ; The Expository Times Volume 119 ; 119 >
         au < HighWireStrVolPlugin ; down ; The Expository Times Volume 120 ; 120 >
-        au < HighWirePressH20Plugin ; manifest ; The Expository Times Volume 121 ; 121 >
 
       }
 
@@ -9441,7 +9408,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The Family Journal Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; The Family Journal Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; The Family Journal Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; The Family Journal Volume 18 ; 18 >
 
       }
 
@@ -9504,7 +9470,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Feminism & Psychology Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; Feminism & Psychology Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; notReady ; Feminism & Psychology Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; manifest ; Feminism & Psychology Volume 20 ; 20 >
 
       }
 
@@ -9558,7 +9523,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Feminist Criminology Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Feminist Criminology Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; down ; Feminist Criminology Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; manifest ; Feminist Criminology Volume 5 ; 5 >
 
       }
 
@@ -9598,7 +9562,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Feminist Theology Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Feminist Theology Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Feminist Theology Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; Feminist Theology Volume 18 ; 18 >
 
       }
 
@@ -9651,7 +9614,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Feminist Theory Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Feminist Theory Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Feminist Theory Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; Feminist Theory Volume 11 ; 11 >
 
       }
 
@@ -9697,7 +9659,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Field Methods Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Field Methods Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Field Methods Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Field Methods Volume 22 ; 22 >
 
       }
 
@@ -9764,7 +9725,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; First Language Volume 27 ; 27 >
         au < HighWirePressPlugin ; down ; First Language Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; First Language Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; manifest ; First Language Volume 30 ; 30 >
 
       }
 
@@ -9824,9 +9784,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://foa.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 25 ; 25 >
 
       }
 
@@ -9886,7 +9844,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Food Science and Technology International Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Food Science and Technology International Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Food Science and Technology International Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Food Science and Technology International Volume 16 ; 16 >
 
       }
 
@@ -9932,9 +9889,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://fas.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Foot & Ankle Specialist Volume 2 ; 2 >
-        au < HighWirePressH30Plugin ; manifest ; Foot & Ankle Specialist Volume 3 ; 3 >
 
       }
   
@@ -9982,7 +9937,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; French Cultural Studies Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; French Cultural Studies Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; French Cultural Studies Volume 21 ; 21 >
 
       }
 
@@ -10047,7 +10001,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Games and Culture Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Games and Culture Volume 3 ; 3 >
         au < HighWirePressPlugin ; down ; Games and Culture Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; manifest ; Games and Culture Volume 5 ; 5 >
 
       }
 
@@ -10087,7 +10040,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Gender & Society Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Gender & Society Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Gender & Society Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; Gender & Society Volume 24 ; 24 >
 
       }
 
@@ -10145,7 +10097,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Gender, Technology and Development Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Gender, Technology and Development Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Gender, Technology and Development Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; Gender, Technology and Development Volume 13 ; 13 >
 
       }
 
@@ -10238,7 +10189,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Gifted Child Quarterly Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; Gifted Child Quarterly Volume 52 ; 52 >
         au < HighWirePressPlugin ; down ; Gifted Child Quarterly Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; manifest ; Gifted Child Quarterly Volume 54 ; 54 >
 
       }
 
@@ -10327,7 +10277,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Global Business Review Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Global Business Review Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Global Business Review Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; Global Business Review Volume 11 ; 11 >
 
       }
 
@@ -10368,9 +10317,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://ped.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; manifest ; Global Health Promotion Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Global Health Promotion Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; manifest ; Global Health Promotion Volume 17 ; 17 >
 
       }
       
@@ -10418,7 +10365,6 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; down ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; manifest ; Global Journal of Emerging Market Economies Volume 2 ; 2 >
 
       }
 
@@ -10455,7 +10401,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Global Media and Communication Volume 3 ; 3 >
         au < HighWirePressPlugin ; down ; Global Media and Communication Volume 4 ; 4 >
         au < HighWirePressPlugin ; down ; Global Media and Communication Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; Global Media and Communication Volume 6 ; 6 >
 
       }
 
@@ -10496,7 +10441,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Global Social Policy Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Global Social Policy Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Global Social Policy Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Global Social Policy Volume 10 ; 10 >
 
       }
 
@@ -10551,7 +10495,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Group & Organization Management Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Group & Organization Management Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Group & Organization Management Volume 34 ; 34 >
-        au < HighWirePressH20Plugin ; manifest ; Group & Organization Management Volume 35 ; 35 >
 
       }
 
@@ -10621,7 +10564,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Group Analysis Volume 40 ; 40 >
         au < HighWirePressPlugin ; down ; Group Analysis Volume 41 ; 41 >
         au < HighWirePressPlugin ; down ; Group Analysis Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; manifest ; Group Analysis Volume 43 ; 43 >
 
       }
 
@@ -10709,7 +10651,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Group Processes & Intergroup Relations Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Group Processes & Intergroup Relations Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Group Processes & Intergroup Relations Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; Group Processes & Intergroup Relations Volume 13 ; 13 >
 
       }
 
@@ -10767,7 +10708,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The International Journal of Press/Politics Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; The International Journal of Press/Politics Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; down ; The International Journal of Press/Politics Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; The International Journal of Press/Politics Volume 15 ; 15 >
 
       }
 
@@ -10827,7 +10767,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Health Education & Behavior Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; Health Education & Behavior Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Health Education & Behavior Volume 36 ; 36 >
-        au < HighWirePressH20Plugin ; manifest ; Health Education & Behavior Volume 37 ; 37 >
 
       }
 
@@ -10898,7 +10837,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Health Education Journal Volume 66 ; 66 >
         au < HighWirePressPlugin ; down ; Health Education Journal Volume 67 ; 67 >
         au < HighWirePressPlugin ; down ; Health Education Journal Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; manifest ; Health Education Journal Volume 69 ; 69 >
 
       }
 
@@ -11012,7 +10950,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Health Informatics Journal Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Health Informatics Journal Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Health Informatics Journal Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Health Informatics Journal Volume 16 ; 16 >
 
       }
 
@@ -11073,7 +11010,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Health Promotion Practice Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Health Promotion Practice Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; Health Promotion Practice Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; Health Promotion Practice Volume 11 ; 11 >
 
       }
 
@@ -11129,7 +11065,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Health: Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Health: Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Health: Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; Health: Volume 14 ; 14 >
 
       }
 
@@ -11178,7 +11113,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; High Performance Polymers Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; High Performance Polymers Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; High Performance Polymers Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; High Performance Polymers Volume 22 ; 22 >
 
       }
 
@@ -11245,7 +11179,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Hispanic Journal of Behavioral Sciences Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; manifest ; Hispanic Journal of Behavioral Sciences Volume 32 ; 32 >
 
       }
 
@@ -11352,7 +11285,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; History of Psychiatry Volume 18 ; 18 >
         au < HighWirePressPlugin ; down ; History of Psychiatry Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; History of Psychiatry Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; History of Psychiatry Volume 21 ; 21 >
 
       }
 
@@ -11418,7 +11350,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; History of the Human Sciences Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; History of the Human Sciences Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; History of the Human Sciences Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; manifest ; History of the Human Sciences Volume 23 ; 23 >
 
       }
 
@@ -11475,7 +11406,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The Holocene Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; The Holocene Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; The Holocene Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; manifest ; The Holocene Volume 20 ; 20 >
 
       }
 
@@ -11530,7 +11460,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Home Health Care Management & Practice Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Home Health Care Management & Practice Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Home Health Care Management & Practice Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Home Health Care Management & Practice Volume 22 ; 22 >
 
       }
 
@@ -11597,7 +11526,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Homicide Studies Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Homicide Studies Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Homicide Studies Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; Homicide Studies Volume 14 ; 14 >
 
       }
 
@@ -11642,14 +11570,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Human & Experimental Toxicology Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; exists ; Human & Experimental Toxicology Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; exists ; Human & Experimental Toxicology Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; exists ; Human & Experimental Toxicology Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; Human & Experimental Toxicology Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; down ; Human & Experimental Toxicology Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Human & Experimental Toxicology Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; Human & Experimental Toxicology Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; manifest ; Human & Experimental Toxicology Volume 29 ; 29 >
 
       }
 
@@ -11723,7 +11647,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Human Relations Volume 60 ; 60 >
         au < HighWirePressPlugin ; down ; Human Relations Volume 61 ; 61 >
         au < HighWireStrVolPlugin ; down ; Human Relations Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; manifest ; Human Relations Volume 63 ; 63 >
 
       }
 
@@ -11831,7 +11754,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Human Resource Development Review Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Human Resource Development Review Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Human Resource Development Review Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; Human Resource Development Review Volume 9 ; 9 >
 
       }
 
@@ -11885,7 +11807,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; IFLA Journal Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; IFLA Journal Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; IFLA Journal Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; IFLA Journal Volume 36 ; 36 >
 
       }
 
@@ -11966,7 +11887,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Improving Schools Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Improving Schools Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; Improving Schools Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; Improving Schools Volume 13 ; 13 >
 
       }
 
@@ -12023,7 +11943,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Indian Economic & Social History Review Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; Indian Economic & Social History Review Volume 45 ; 45 >
         au < HighWireStrVolPlugin ; down ; Indian Economic & Social History Review Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; manifest ; Indian Economic & Social History Review Volume 47 ; 47 >
 
       }
 
@@ -12115,7 +12034,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Indian Journal of Gender Studies Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Indian Journal of Gender Studies Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Indian Journal of Gender Studies Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; manifest ; Indian Journal of Gender Studies Volume 17 ; 17 >
 
       }
 
@@ -12177,7 +12095,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Indoor and Built Environment Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Indoor and Built Environment Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; Indoor and Built Environment Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; manifest ; Indoor and Built Environment Volume 19 ; 19 >
 
       }
 
@@ -12241,7 +12158,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Information Development Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Information Development Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; Information Development Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; manifest ; Information Development Volume 26 ; 26 >
 
       }
 
@@ -12340,7 +12256,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Integrative Cancer Therapies Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; Integrative Cancer Therapies Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; Integrative Cancer Therapies Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; Integrative Cancer Therapies Volume 9 ; 9 >
 
       }
 
@@ -12394,7 +12309,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Communication Gazette Volume 69 ; 69 >
         au < HighWirePressPlugin ; down ; International Communication Gazette Volume 70 ; 70 >
         au < HighWireStrVolPlugin ; down ; International Communication Gazette Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; manifest ; International Communication Gazette Volume 72 ; 72 >
 
       }
 
@@ -12511,7 +12425,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Criminal Justice Review Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; International Criminal Justice Review Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; International Criminal Justice Review Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; manifest ; International Criminal Justice Review Volume 20 ; 20 >
 
       }
 
@@ -12579,7 +12492,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Behavioral Development Volume 31 ; 31 >
         au < HighWirePressPlugin ; down ; International Journal of Behavioral Development Volume 32 ; 32 >
         au < HighWireStrVolPlugin ; down ; International Journal of Behavioral Development Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Behavioral Development Volume 34 ; 34 >
 
       }
 
@@ -12658,7 +12570,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Comparative Sociology Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; International Journal of Comparative Sociology Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; down ; International Journal of Comparative Sociology Volume 50 ; 50 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Comparative Sociology Volume 51 ; 51 >
 
       }
 
@@ -12754,7 +12665,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Cross Cultural Management Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; International Journal of Cross Cultural Management Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; International Journal of Cross Cultural Management Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Cross Cultural Management Volume 10 ; 10 >
 
       }
 
@@ -12809,7 +12719,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Cultural Studies Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; International Journal of Cultural Studies Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; International Journal of Cultural Studies Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Cultural Studies Volume 13 ; 13 >
 
       }
 
@@ -12867,7 +12776,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Damage Mechanics Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; International Journal of Damage Mechanics Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; down ; International Journal of Damage Mechanics Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Damage Mechanics Volume 19 ; 19 >
 
       }
 
@@ -12960,7 +12868,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of High Performance Computing Applications Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; International Journal of High Performance Computing Applications Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; International Journal of High Performance Computing Applications Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of High Performance Computing Applications Volume 24 ; 24 >
 
       }
 
@@ -13019,7 +12926,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The International Journal of Lower Extremity Wounds Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 >
 
       }
 
@@ -13063,7 +12969,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Music Education Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; International Journal of Music Education Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; International Journal of Music Education Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Music Education Volume 28 ; 28 >
 
       }
 
@@ -13149,7 +13054,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 >
         au < HighWireStrVolPlugin ; down ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 >
 
       }
 
@@ -13241,7 +13145,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; The International Journal of Robotics Research Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; The International Journal of Robotics Research Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; The International Journal of Robotics Research Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; manifest ; The International Journal of Robotics Research Volume 29 ; 29 >
 
       }
 
@@ -13302,7 +13205,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Rural Management Volume 1 ; 1 >
         au < HighWireStrVolPlugin ; down ; International Journal of Rural Management Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; International Journal of Rural Management Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Rural Management Volume 4 ; 4 >
 
       }
 
@@ -13342,7 +13244,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Social Psychiatry Volume 53 ; 53 >
         au < HighWirePressPlugin ; down ; International Journal of Social Psychiatry Volume 54 ; 54 >
         au < HighWireStrVolPlugin ; down ; International Journal of Social Psychiatry Volume 55 ; 55 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Social Psychiatry Volume 56 ; 56 >
 
       }
 
@@ -13432,7 +13333,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Journal of Surgical Pathology Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; International Journal of Surgical Pathology Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; International Journal of Surgical Pathology Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; International Journal of Surgical Pathology Volume 18 ; 18 >
 
       }
 
@@ -13483,7 +13383,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Political Science Abstracts Volume 57 ; 57 >
         au < HighWirePressPlugin ; down ; International Political Science Abstracts Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; down ; International Political Science Abstracts Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; manifest ; International Political Science Abstracts Volume 60 ; 60 >
 
       }
 
@@ -13522,7 +13421,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Political Science Review Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; International Political Science Review Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; International Political Science Review Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; manifest ; International Political Science Review Volume 31 ; 31 >
 
       }
 
@@ -13598,7 +13496,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Regional Science Review Volume 30 ; 30 >
         au < HighWirePressPlugin ; down ; International Regional Science Review Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; International Regional Science Review Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; International Regional Science Review Volume 33 ; 33 >
 
       }
 
@@ -13667,7 +13564,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Relations Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; International Relations Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; International Relations Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; International Relations Volume 24 ; 24 >
 
       }
 
@@ -13726,7 +13622,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Review for the Sociology of Sport Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; International Review for the Sociology of Sport Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; down ; International Review for the Sociology of Sport Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; manifest ; International Review for the Sociology of Sport Volume 45 ; 45 >
 
       }
 
@@ -13816,7 +13711,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Review of Administrative Sciences Volume 73 ; 73 >
         au < HighWirePressPlugin ; down ; International Review of Administrative Sciences Volume 74 ; 74 >
         au < HighWireStrVolPlugin ; down ; International Review of Administrative Sciences Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; manifest ; International Review of Administrative Sciences Volume 76 ; 76 >
 
       }
 
@@ -13906,7 +13800,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Small Business Journal Volume 25 ; 25 >
         au < HighWirePressPlugin ; down ; International Small Business Journal Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; International Small Business Journal Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; International Small Business Journal Volume 28 ; 28 >
 
       }
 
@@ -13969,7 +13862,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Social Work Volume 50 ; 50 >
         au < HighWirePressPlugin ; down ; International Social Work Volume 51 ; 51 >
         au < HighWireStrVolPlugin ; down ; International Social Work Volume 52 ; 52 >
-        au < HighWirePressH20Plugin ; manifest ; International Social Work Volume 53 ; 53 >
 
       }
 
@@ -14057,7 +13949,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Sociology Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; International Sociology Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; International Sociology Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; International Sociology Volume 25 ; 25 >
 
       }
 
@@ -14116,7 +14007,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Studies Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; down ; International Studies Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; down ; International Studies Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; manifest ; International Studies Volume 46 ; 46 >
 
       }
 
@@ -14197,7 +14087,6 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; Irish Theological Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; down ; Irish Theological Quarterly Volume 73 ; 73 >
         au < HighWireStrVolPlugin ; down ; Irish Theological Quarterly Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; manifest ; Irish Theological Quarterly Volume 75 ; 75 >
 
       }
 
@@ -14316,8 +14205,6 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the New Testament Volume 28 ; 28 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the New Testament Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the New Testament Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the New Testament Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the New Testament Volume 32 ; 32 >
 
       }
 
@@ -14394,7 +14281,6 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Old Testament Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Old Testament Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Journal for the Study of the Old Testament Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Old Testament Volume 34 ; 34 >
 
       }
 
@@ -14462,8 +14348,6 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; down ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 >
 
       }
 
@@ -14546,7 +14430,6 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; Journal of Adolescent Research Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Journal of Adolescent Research Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; Journal of Adolescent Research Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Adolescent Research Volume 25 ; 25 >
 
       }
 
@@ -14615,8 +14498,6 @@ comment[jhj] = now published by Brill
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Aging and Health Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; Journal of Aging and Health Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Aging and Health Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 22 ; 22 >
 
       }
 
@@ -14681,7 +14562,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Anglican Studies Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Anglican Studies Volume 4 ; 4 >
 
       }
 
@@ -14714,9 +14594,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; The Journal of Applied Behavioral Science Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
         au < HighWireStrVolPlugin ; down ; The Journal of Applied Behavioral Science Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Applied Behavioral Science Volume 46 ; 46 >
 
       }
 
@@ -14805,9 +14682,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Applied Gerontology Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Applied Gerontology Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; down ; Journal of Applied Gerontology Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 29 ; 29 >
 
       }
 
@@ -14879,9 +14753,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Asian and African Studies Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Asian and African Studies Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; Journal of Asian and African Studies Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Asian and African Studies Volume 45 ; 45 >
 
       }
 
@@ -14960,9 +14831,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; Journal of Attention Disorders Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Attention Disorders Volume 14 ; 14 >
 
       }
 
@@ -15009,9 +14877,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 >
 
       }
 
@@ -15081,7 +14946,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Biological Rhythms Volume 22 ; 22 >
         au < HighWirePressPlugin ; testing ; Journal of Biological Rhythms Volume 23 ; 23 >
         au < HighWirePressPlugin ; testing ; Journal of Biological Rhythms Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Biological Rhythms Volume 25 ; 25 >
 
       }
 
@@ -15142,7 +15006,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Biomaterials Applications Volume 22 ; 22 >
         au < HighWirePressPlugin ; testing ; Journal of Biomaterials Applications Volume 23 ; 23 >
         au < HighWirePressPlugin ; testing ; Journal of Biomaterials Applications Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Biomaterials Applications Volume 25 ; 25 >
 
       }
 
@@ -15211,7 +15074,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Biomolecular Screening Volume 12 ; 12 >
         au < HighWirePressPlugin ; testing ; Journal of Biomolecular Screening Volume 13 ; 13 >
         au < HighWirePressPlugin ; testing ; Journal of Biomolecular Screening Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Biomolecular Screening Volume 15 ; 15 >
 
       }
 
@@ -15271,7 +15133,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Black Psychology Volume 33 ; 33 >
         au < HighWirePressPlugin ; testing ; Journal of Black Psychology Volume 34 ; 34 >
         au < HighWirePressPlugin ; testing ; Journal of Black Psychology Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Black Psychology Volume 36 ; 36 >
 
       }
 
@@ -15352,7 +15213,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Black Studies Volume 37 ; 37 >
         au < HighWireStrVolPlugin ; down ; Journal of Black Studies Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Journal of Black Studies Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Black Studies Volume 40 ; 40 >
 
       }
 
