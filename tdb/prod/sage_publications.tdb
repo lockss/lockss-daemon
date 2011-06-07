@@ -13973,6 +13973,69 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://isw.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; International Social Work Volume 1 ; 1 >
+        au < manifest ; 1959 ; International Social Work Volume 2 ; 2 >
+        au < manifest ; 1960 ; International Social Work Volume 3 ; 3 >
+        au < manifest ; 1961 ; International Social Work Volume 4 ; 4 >
+        au < manifest ; 1962 ; International Social Work Volume 5 ; 5 >
+        au < manifest ; 1963 ; International Social Work Volume 6 ; 6 >
+        au < manifest ; 1964 ; International Social Work Volume 7 ; 7 >
+        au < manifest ; 1965 ; International Social Work Volume 8 ; 8 >
+        au < manifest ; 1966 ; International Social Work Volume 9 ; 9 >
+        au < manifest ; 1967 ; International Social Work Volume 10 ; 10 >
+        au < manifest ; 1968 ; International Social Work Volume 11 ; 11 >
+        au < manifest ; 1969 ; International Social Work Volume 12 ; 12 >
+        au < manifest ; 1970 ; International Social Work Volume 13 ; 13 >
+        au < manifest ; 1971 ; International Social Work Volume 14 ; 14 >
+        au < manifest ; 1972 ; International Social Work Volume 15 ; 15 >
+        au < manifest ; 1973 ; International Social Work Volume 16 ; 16 >
+        au < manifest ; 1974 ; International Social Work Volume 17 ; 17 >
+        au < manifest ; 1975 ; International Social Work Volume 18 ; 18 >
+        au < manifest ; 1976 ; International Social Work Volume 19 ; 19 >
+        au < manifest ; 1977 ; International Social Work Volume 20 ; 20 >
+        au < manifest ; 1978 ; International Social Work Volume 21 ; 21 >
+        au < manifest ; 1979 ; International Social Work Volume 22 ; 22 >
+        au < manifest ; 1980 ; International Social Work Volume 23 ; 23 >
+        au < manifest ; 1981 ; International Social Work Volume 24 ; 24 >
+        au < manifest ; 1982 ; International Social Work Volume 25 ; 25 >
+        au < manifest ; 1983 ; International Social Work Volume 26 ; 26 >
+        au < manifest ; 1984 ; International Social Work Volume 27 ; 27 >
+        au < manifest ; 1985 ; International Social Work Volume 28 ; 28 >
+        au < manifest ; 1986 ; International Social Work Volume 29 ; 29 >
+        au < manifest ; 1987 ; International Social Work Volume 30 ; 30 >
+        au < manifest ; 1988 ; International Social Work Volume 31 ; 31 >
+        au < manifest ; 1989 ; International Social Work Volume 32 ; 32 >
+        au < manifest ; 1990 ; International Social Work Volume 33 ; 33 >
+        au < manifest ; 1991 ; International Social Work Volume 34 ; 34 >
+        au < manifest ; 1992 ; International Social Work Volume 35 ; 35 >
+        au < manifest ; 1993 ; International Social Work Volume 36 ; 36 >
+        au < manifest ; 1994 ; International Social Work Volume 37 ; 37 >
+        au < manifest ; 1995 ; International Social Work Volume 38 ; 38 >
+        au < manifest ; 1996 ; International Social Work Volume 39 ; 39 >
+        au < manifest ; 1997 ; International Social Work Volume 40 ; 40 >
+        au < manifest ; 1998 ; International Social Work Volume 41 ; 41 >
+        au < manifest ; 1999 ; International Social Work Volume 42 ; 42 >
+        au < manifest ; 2000 ; International Social Work Volume 43 ; 43 >
+        au < manifest ; 2001 ; International Social Work Volume 44 ; 44 >
+        au < manifest ; 2002 ; International Social Work Volume 45 ; 45 >
+        au < manifest ; 2003 ; International Social Work Volume 46 ; 46 >
+        au < manifest ; 2004 ; International Social Work Volume 47 ; 47 >
+        au < manifest ; 2005 ; International Social Work Volume 48 ; 48 >
+        au < manifest ; 2006 ; International Social Work Volume 49 ; 49 >
+        au < manifest ; 2007 ; International Social Work Volume 50 ; 50 >
+        au < manifest ; 2008 ; International Social Work Volume 51 ; 51 >
+        au < manifest ; 2009 ; International Social Work Volume 52 ; 52 >
+        au < manifest ; 2010 ; International Social Work Volume 53 ; 53 >
+        au < manifest ; 2011 ; International Social Work Volume 54 ; 54 >
+
+      }
+
     }
 
     {
@@ -13998,6 +14061,41 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://iss.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; International Sociology Volume 1 ; 1 >
+        au < manifest ; 1987 ; International Sociology Volume 2 ; 2 >
+        au < manifest ; 1988 ; International Sociology Volume 3 ; 3 >
+        au < manifest ; 1989 ; International Sociology Volume 4 ; 4 >
+        au < manifest ; 1990 ; International Sociology Volume 5 ; 5 >
+        au < manifest ; 1991 ; International Sociology Volume 6 ; 6 >
+        au < manifest ; 1992 ; International Sociology Volume 7 ; 7 >
+        au < manifest ; 1993 ; International Sociology Volume 8 ; 8 >
+        au < manifest ; 1994 ; International Sociology Volume 9 ; 9 >
+        au < manifest ; 1995 ; International Sociology Volume 10 ; 10 >
+        au < manifest ; 1996 ; International Sociology Volume 11 ; 11 >
+        au < manifest ; 1997 ; International Sociology Volume 12 ; 12 >
+        au < manifest ; 1998 ; International Sociology Volume 13 ; 13 >
+        au < manifest ; 1999 ; International Sociology Volume 14 ; 14 >
+        au < manifest ; 2000 ; International Sociology Volume 15 ; 15 >
+        au < manifest ; 2001 ; International Sociology Volume 16 ; 16 >
+        au < manifest ; 2002 ; International Sociology Volume 17 ; 17 >
+        au < manifest ; 2003 ; International Sociology Volume 18 ; 18 >
+        au < manifest ; 2004 ; International Sociology Volume 19 ; 19 >
+        au < manifest ; 2005 ; International Sociology Volume 20 ; 20 >
+        au < manifest ; 2006 ; International Sociology Volume 21 ; 21 >
+        au < manifest ; 2007 ; International Sociology Volume 22 ; 22 >
+        au < manifest ; 2008 ; International Sociology Volume 23 ; 23 >
+        au < manifest ; 2009 ; International Sociology Volume 24 ; 24 >
+        au < manifest ; 2010 ; International Sociology Volume 25 ; 25 >
+        au < manifest ; 2011 ; International Sociology Volume 26 ; 26 >
+
+      }
+
     }
 
     {
@@ -14019,6 +14117,63 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; down ; International Studies Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; down ; International Studies Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; manifest ; International Studies Volume 46 ; 46 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://isq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1959 ; International Studies Volume 1 ; 1 >
+        au < manifest ; 1960 ; International Studies Volume 2 ; 2 >
+        au < manifest ; 1961 ; International Studies Volume 3 ; 3 >
+        au < manifest ; 1962 ; International Studies Volume 4 ; 4 >
+        au < manifest ; 1963 ; International Studies Volume 5 ; 5 >
+        au < manifest ; 1964 ; International Studies Volume 6 ; 6 >
+        au < manifest ; 1965 ; International Studies Volume 7 ; 7 >
+        au < manifest ; 1966 ; International Studies Volume 8 ; 8 >
+        au < manifest ; 1967 ; International Studies Volume 9 ; 9 >
+        au < manifest ; 1968 ; International Studies Volume 10 ; 10 >
+        au < manifest ; 1969 ; International Studies Volume 11 ; 11 >
+        au < manifest ; 1973 ; International Studies Volume 12 ; 12 >
+        au < manifest ; 1974 ; International Studies Volume 13 ; 13 >
+        au < manifest ; 1975 ; International Studies Volume 14 ; 14 >
+        au < manifest ; 1976 ; International Studies Volume 15 ; 15 >
+        au < manifest ; 1977 ; International Studies Volume 16 ; 16 >
+        au < manifest ; 1978 ; International Studies Volume 17 ; 17 >
+        au < manifest ; 1979 ; International Studies Volume 18 ; 18 >
+        au < manifest ; 1980 ; International Studies Volume 19 ; 19 >
+        au < manifest ; 1981 ; International Studies Volume 20 ; 20 >
+        au < manifest ; 1982 ; International Studies Volume 21 ; 21 >
+        au < manifest ; 1985 ; International Studies Volume 22 ; 22 >
+        au < manifest ; 1986 ; International Studies Volume 23 ; 23 >
+        au < manifest ; 1987 ; International Studies Volume 24 ; 24 >
+        au < manifest ; 1988 ; International Studies Volume 25 ; 25 >
+        au < manifest ; 1989 ; International Studies Volume 26 ; 26 >
+        au < manifest ; 1990 ; International Studies Volume 27 ; 27 >
+        au < manifest ; 1991 ; International Studies Volume 28 ; 28 >
+        au < manifest ; 1992 ; International Studies Volume 29 ; 29 >
+        au < manifest ; 1993 ; International Studies Volume 30 ; 30 >
+        au < manifest ; 1994 ; International Studies Volume 31 ; 31 >
+        au < manifest ; 1995 ; International Studies Volume 32 ; 32 >
+        au < manifest ; 1996 ; International Studies Volume 33 ; 33 >
+        au < manifest ; 1997 ; International Studies Volume 34 ; 34 >
+        au < manifest ; 1998 ; International Studies Volume 35 ; 35 >
+        au < manifest ; 1999 ; International Studies Volume 36 ; 36 >
+        au < manifest ; 2000 ; International Studies Volume 37 ; 37 >
+        au < manifest ; 2001 ; International Studies Volume 38 ; 38 >
+        au < manifest ; 2002 ; International Studies Volume 39 ; 39 >
+        au < manifest ; 2003 ; International Studies Volume 40 ; 40 >
+        au < manifest ; 2004 ; International Studies Volume 41 ; 41 >
+        au < manifest ; 2005 ; International Studies Volume 42 ; 42 >
+        au < manifest ; 2006 ; International Studies Volume 43 ; 43 >
+        au < manifest ; 2007 ; International Studies Volume 44 ; 44 >
+        au < manifest ; 2008 ; International Studies Volume 45 ; 45 >
+        au < manifest ; 2009 ; International Studies Volume 46 ; 46 >
+        au < doesNotExist ; 0 ; International Studies Volume 47 ; 47 >
+        au < doesNotExist ; 0 ; International Studies Volume 48 ; 48 >
 
       }
 
@@ -14064,11 +14219,10 @@ comment[jhj] = now published by Brill
         param[base_url] = http://jhj.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; Journal for the Study of the Historical Jesus Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; doNotProcess ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
 
       }
 
@@ -14107,6 +14261,48 @@ comment[jhj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jnt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1978-1979 ; Journal for the Study of the New Testament Volume 1 ; 1 >
+        au < manifest ; 1979-1980 ; Journal for the Study of the New Testament Volume 2 ; 2 >
+        au < manifest ; 1980-1981 ; Journal for the Study of the New Testament Volume 3 ; 3 >
+        au < manifest ; 1981-1982 ; Journal for the Study of the New Testament Volume 4 ; 4 >
+        au < manifest ; 1982-1983 ; Journal for the Study of the New Testament Volume 5 ; 5 >
+        au < manifest ; 1983-1984 ; Journal for the Study of the New Testament Volume 6 ; 6 >
+        au < manifest ; 1984-1985 ; Journal for the Study of the New Testament Volume 7 ; 7 >
+        au < manifest ; 1985-1986 ; Journal for the Study of the New Testament Volume 8 ; 8 >
+        au < manifest ; 1986-1987 ; Journal for the Study of the New Testament Volume 9 ; 9 >
+        au < manifest ; 1987-1988 ; Journal for the Study of the New Testament Volume 10 ; 10 >
+        au < manifest ; 1988-1989 ; Journal for the Study of the New Testament Volume 11 ; 11 >
+        au < manifest ; 1989-1990 ; Journal for the Study of the New Testament Volume 12 ; 12 >
+        au < manifest ; 1990-1991 ; Journal for the Study of the New Testament Volume 13 ; 13 >
+        au < manifest ; 1991-1992 ; Journal for the Study of the New Testament Volume 14 ; 14 >
+        au < manifest ; 1992-1993 ; Journal for the Study of the New Testament Volume 15 ; 15 >
+        au < manifest ; 1993-1994 ; Journal for the Study of the New Testament Volume 16 ; 16 >
+        au < manifest ; 1995 ; Journal for the Study of the New Testament Volume 17 ; 17 >
+        au < manifest ; 1996 ; Journal for the Study of the New Testament Volume 18 ; 18 >
+        au < manifest ; 1997 ; Journal for the Study of the New Testament Volume 19 ; 19 >
+        au < manifest ; 1998 ; Journal for the Study of the New Testament Volume 20 ; 20 >
+        au < manifest ; 1999 ; Journal for the Study of the New Testament Volume 21 ; 21 >
+        au < manifest ; 2000 ; Journal for the Study of the New Testament Volume 22 ; 22 >
+        au < manifest ; 2001 ; Journal for the Study of the New Testament Volume 23 ; 23 >
+        au < manifest ; 2001-2002 ; Journal for the Study of the New Testament Volume 24 ; 24 >
+        au < manifest ; 2002-2003 ; Journal for the Study of the New Testament Volume 25 ; 25 >
+        au < manifest ; 2003-2004 ; Journal for the Study of the New Testament Volume 26 ; 26 >
+        au < manifest ; 2004-2005 ; Journal for the Study of the New Testament Volume 27 ; 27 >
+        au < manifest ; 2005-2006 ; Journal for the Study of the New Testament Volume 28 ; 28 >
+        au < manifest ; 2006-2007 ; Journal for the Study of the New Testament Volume 29 ; 29 >
+        au < manifest ; 2007-2008 ; Journal for the Study of the New Testament Volume 30 ; 30 >
+        au < manifest ; 2008-2009 ; Journal for the Study of the New Testament Volume 31 ; 31 >
+        au < manifest ; 2009-2010 ; Journal for the Study of the New Testament Volume 32 ; 32 >
+        au < manifest ; 2010-2011 ; Journal for the Study of the New Testament Volume 33 ; 33 >
+
+      }
+
     }
 
     {
@@ -14142,6 +14338,50 @@ comment[jhj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jot.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1976 ; Journal for the Study of the Old Testament Volume 1 ; 1 >
+        au < manifest ; 1977 ; Journal for the Study of the Old Testament Volume 2 ; 2 >
+        au < manifest ; 1978 ; Journal for the Study of the Old Testament Volume 3 ; 3 >
+        au < manifest ; 1979 ; Journal for the Study of the Old Testament Volume 4 ; 4 >
+        au < manifest ; 1980 ; Journal for the Study of the Old Testament Volume 5 ; 5 >
+        au < manifest ; 1981 ; Journal for the Study of the Old Testament Volume 6 ; 6 >
+        au < manifest ; 1982 ; Journal for the Study of the Old Testament Volume 7 ; 7 >
+        au < manifest ; 1983 ; Journal for the Study of the Old Testament Volume 8 ; 8 >
+        au < manifest ; 1984 ; Journal for the Study of the Old Testament Volume 9 ; 9 >
+        au < manifest ; 1985 ; Journal for the Study of the Old Testament Volume 10 ; 10 >
+        au < manifest ; 1986 ; Journal for the Study of the Old Testament Volume 11 ; 11 >
+        au < manifest ; 1987 ; Journal for the Study of the Old Testament Volume 12 ; 12 >
+        au < manifest ; 1988 ; Journal for the Study of the Old Testament Volume 13 ; 13 >
+        au < manifest ; 1989 ; Journal for the Study of the Old Testament Volume 14 ; 14 >
+        au < manifest ; 1990 ; Journal for the Study of the Old Testament Volume 15 ; 15 >
+        au < manifest ; 1991 ; Journal for the Study of the Old Testament Volume 16 ; 16 >
+        au < manifest ; 1992 ; Journal for the Study of the Old Testament Volume 17 ; 17 >
+        au < manifest ; 1993 ; Journal for the Study of the Old Testament Volume 18 ; 18 >
+        au < manifest ; 1994 ; Journal for the Study of the Old Testament Volume 19 ; 19 >
+        au < manifest ; 1995 ; Journal for the Study of the Old Testament Volume 20 ; 20 >
+        au < manifest ; 1996 ; Journal for the Study of the Old Testament Volume 21 ; 21 >
+        au < manifest ; 1997 ; Journal for the Study of the Old Testament Volume 22 ; 22 >
+        au < manifest ; 1998 ; Journal for the Study of the Old Testament Volume 23 ; 23 >
+        au < doesNotExist ; 1999 ; Journal for the Study of the Old Testament Volume 24 ; 24 >
+        au < doesNotExist ; 2000 ; Journal for the Study of the Old Testament Volume 25 ; 25 >
+        au < manifest ; 2001-2002 ; Journal for the Study of the Old Testament Volume 26 ; 26 >
+        au < manifest ; 2002-2003 ; Journal for the Study of the Old Testament Volume 27 ; 27 >
+        au < manifest ; 2003-2004 ; Journal for the Study of the Old Testament Volume 28 ; 28 >
+        au < manifest ; 2004-2005 ; Journal for the Study of the Old Testament Volume 29 ; 29 >
+        au < manifest ; 2005-2006 ; Journal for the Study of the Old Testament Volume 30 ; 30 >
+        au < manifest ; 2006-2007 ; Journal for the Study of the Old Testament Volume 31 ; 31 >
+        au < manifest ; 2007-2008 ; Journal for the Study of the Old Testament Volume 32 ; 32 >
+        au < manifest ; 2008-2009 ; Journal for the Study of the Old Testament Volume 33 ; 33 >
+        au < manifest ; 2009-2010 ; Journal for the Study of the Old Testament Volume 34 ; 34 >
+        au < manifest ; 2010-2011 ; Journal for the Study of the Old Testament Volume 35 ; 35 >
+
+      }
+
     }
 
     {
@@ -14167,6 +14407,35 @@ comment[jhj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jsp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Journal for the Study of the Pseudepigrapha Volume 1 ; 1 >
+        au < manifest ; 1988 ; Journal for the Study of the Pseudepigrapha Volume 2 ; 2 >
+        au < manifest ; 1989 ; Journal for the Study of the Pseudepigrapha Volume 3 ; 3 >
+        au < manifest ; 1990 ; Journal for the Study of the Pseudepigrapha Volume 4 ; 4 >
+        au < manifest ; 1991 ; Journal for the Study of the Pseudepigrapha Volume 5 ; 5 >
+        au < manifest ; 1993 ; Journal for the Study of the Pseudepigrapha Volume 6 ; 6 >
+        au < manifest ; 1995 ; Journal for the Study of the Pseudepigrapha Volume 7 ; 7 >
+        au < manifest ; 1997 ; Journal for the Study of the Pseudepigrapha Volume 8 ; 8 >
+        au < manifest ; 1998 ; Journal for the Study of the Pseudepigrapha Volume 9 ; 9 >
+        au < manifest ; 1999 ; Journal for the Study of the Pseudepigrapha Volume 10 ; 10 >
+        au < manifest ; 2000 ; Journal for the Study of the Pseudepigrapha Volume 11 ; 11 >
+        au < manifest ; 2001 ; Journal for the Study of the Pseudepigrapha Volume 12 ; 12 >
+        au < manifest ; 2002 ; Journal for the Study of the Pseudepigrapha Volume 13 ; 13 >
+        au < manifest ; 2004-2005 ; Journal for the Study of the Pseudepigrapha Volume 14 ; 14 >
+        au < manifest ; 2005-2006 ; Journal for the Study of the Pseudepigrapha Volume 15 ; 15 >
+        au < manifest ; 2006-2007 ; Journal for the Study of the Pseudepigrapha Volume 16 ; 16 >
+        au < manifest ; 2007-2008 ; Journal for the Study of the Pseudepigrapha Volume 17 ; 17 >
+        au < manifest ; 2008-2009 ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 >
+        au < manifest ; 2009-2010 ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 >
+        au < manifest ; 2010-2011 ; Journal for the Study of the Pseudepigrapha Volume 20 ; 20 >
+
+      }
+
     }
 
     {
@@ -14180,6 +14449,9 @@ comment[jhj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jaf.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2011 ; Journal of Accounting, Auditing &  Finance Volume 1 ; 1 >
+        au < exists ; 2011 ; Journal of Accounting, Auditing &  Finance Volume 2 ; 2 >
 
       }
 
@@ -14218,6 +14490,41 @@ comment[jhj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jar.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Journal of Adolescent Research Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Adolescent Research Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Adolescent Research Volume 3 ; 3 >
+        au < manifest ; 1989 ; Journal of Adolescent Research Volume 4 ; 4 >
+        au < manifest ; 1990 ; Journal of Adolescent Research Volume 5 ; 5 >
+        au < manifest ; 1991 ; Journal of Adolescent Research Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Adolescent Research Volume 7 ; 7 >
+        au < manifest ; 1993 ; Journal of Adolescent Research Volume 8 ; 8 >
+        au < manifest ; 1994 ; Journal of Adolescent Research Volume 9 ; 9 >
+        au < manifest ; 1995 ; Journal of Adolescent Research Volume 10 ; 10 >
+        au < manifest ; 1996 ; Journal of Adolescent Research Volume 11 ; 11 >
+        au < manifest ; 1997 ; Journal of Adolescent Research Volume 12 ; 12 >
+        au < manifest ; 1998 ; Journal of Adolescent Research Volume 13 ; 13 >
+        au < manifest ; 1999 ; Journal of Adolescent Research Volume 14 ; 14 >
+        au < manifest ; 2000 ; Journal of Adolescent Research Volume 15 ; 15 >
+        au < manifest ; 2001 ; Journal of Adolescent Research Volume 16 ; 16 >
+        au < manifest ; 2002 ; Journal of Adolescent Research Volume 17 ; 17 >
+        au < manifest ; 2003 ; Journal of Adolescent Research Volume 18 ; 18 >
+        au < manifest ; 2004 ; Journal of Adolescent Research Volume 19 ; 19 >
+        au < manifest ; 2005 ; Journal of Adolescent Research Volume 20 ; 20 >
+        au < manifest ; 2006 ; Journal of Adolescent Research Volume 21 ; 21 >
+        au < manifest ; 2007 ; Journal of Adolescent Research Volume 22 ; 22 >
+        au < manifest ; 2008 ; Journal of Adolescent Research Volume 23 ; 23 >
+        au < manifest ; 2009 ; Journal of Adolescent Research Volume 24 ; 24 >
+        au < manifest ; 2010 ; Journal of Adolescent Research Volume 25 ; 25 >
+        au < manifest ; 2011 ; Journal of Adolescent Research Volume 26 ; 26 >
+
+      }
+
     }
 
     {
@@ -14250,6 +14557,38 @@ comment[jhj] = now published by Brill
         au < HighWirePressPlugin ; down ; Journal of Aging and Health Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Aging and Health Volume 22 ; 22 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jah.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1989 ; Journal of Aging and Health Volume 1 ; 1 >
+        au < manifest ; 1990 ; Journal of Aging and Health Volume 2 ; 2 >
+        au < manifest ; 1991 ; Journal of Aging and Health Volume 3 ; 3 >
+        au < manifest ; 1992 ; Journal of Aging and Health Volume 4 ; 4 >
+        au < manifest ; 1993 ; Journal of Aging and Health Volume 5 ; 5 >
+        au < manifest ; 1994 ; Journal of Aging and Health Volume 6 ; 6 >
+        au < manifest ; 1995 ; Journal of Aging and Health Volume 7 ; 7 >
+        au < manifest ; 1996 ; Journal of Aging and Health Volume 8 ; 8 >
+        au < manifest ; 1997 ; Journal of Aging and Health Volume 9 ; 9 >
+        au < manifest ; 1998 ; Journal of Aging and Health Volume 10 ; 10 >
+        au < manifest ; 1999 ; Journal of Aging and Health Volume 11 ; 11 >
+        au < manifest ; 2000 ; Journal of Aging and Health Volume 12 ; 12 >
+        au < manifest ; 2001 ; Journal of Aging and Health Volume 13 ; 13 >
+        au < manifest ; 2002 ; Journal of Aging and Health Volume 14 ; 14 >
+        au < manifest ; 2003 ; Journal of Aging and Health Volume 15 ; 15 >
+        au < manifest ; 2004 ; Journal of Aging and Health Volume 16 ; 16 >
+        au < manifest ; 2005 ; Journal of Aging and Health Volume 17 ; 17 >
+        au < manifest ; 2006 ; Journal of Aging and Health Volume 18 ; 18 >
+        au < manifest ; 2007 ; Journal of Aging and Health Volume 19 ; 19 >
+        au < manifest ; 2008 ; Journal of Aging and Health Volume 20 ; 20 >
+        au < manifest ; 2009 ; Journal of Aging and Health Volume 21 ; 21 >
+        au < manifest ; 2010 ; Journal of Aging and Health Volume 22 ; 22 >
+        au < manifest ; 2011 ; Journal of Aging and Health Volume 23 ; 23 >
 
       }
 
@@ -14321,6 +14660,62 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jab.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1965 ; The Journal of Applied Behavioral Science Volume 1 ; 1 >
+        au < manifest ; 1966 ; The Journal of Applied Behavioral Science Volume 2 ; 2 >
+        au < manifest ; 1967 ; The Journal of Applied Behavioral Science Volume 3 ; 3 >
+        au < manifest ; 1968 ; The Journal of Applied Behavioral Science Volume 4 ; 4 >
+        au < manifest ; 1969 ; The Journal of Applied Behavioral Science Volume 5 ; 5 >
+        au < manifest ; 1970 ; The Journal of Applied Behavioral Science Volume 6 ; 6 >
+        au < manifest ; 1971 ; The Journal of Applied Behavioral Science Volume 7 ; 7 >
+        au < manifest ; 1972 ; The Journal of Applied Behavioral Science Volume 8 ; 8 >
+        au < manifest ; 1973 ; The Journal of Applied Behavioral Science Volume 9 ; 9 >
+        au < manifest ; 1974 ; The Journal of Applied Behavioral Science Volume 10 ; 10 >
+        au < manifest ; 1975 ; The Journal of Applied Behavioral Science Volume 11 ; 11 >
+        au < manifest ; 1976 ; The Journal of Applied Behavioral Science Volume 12 ; 12 >
+        au < manifest ; 1977 ; The Journal of Applied Behavioral Science Volume 13 ; 13 >
+        au < manifest ; 1978 ; The Journal of Applied Behavioral Science Volume 14 ; 14 >
+        au < manifest ; 1979 ; The Journal of Applied Behavioral Science Volume 15 ; 15 >
+        au < manifest ; 1980 ; The Journal of Applied Behavioral Science Volume 16 ; 16 >
+        au < manifest ; 1981 ; The Journal of Applied Behavioral Science Volume 17 ; 17 >
+        au < manifest ; 1982 ; The Journal of Applied Behavioral Science Volume 18 ; 18 >
+        au < manifest ; 1983 ; The Journal of Applied Behavioral Science Volume 19 ; 19 >
+        au < manifest ; 1984 ; The Journal of Applied Behavioral Science Volume 20 ; 20 >
+        au < manifest ; 1985 ; The Journal of Applied Behavioral Science Volume 21 ; 21 >
+        au < manifest ; 1986 ; The Journal of Applied Behavioral Science Volume 22 ; 22 >
+        au < manifest ; 1987 ; The Journal of Applied Behavioral Science Volume 23 ; 23 >
+        au < manifest ; 1988 ; The Journal of Applied Behavioral Science Volume 24 ; 24 >
+        au < manifest ; 1989 ; The Journal of Applied Behavioral Science Volume 25 ; 25 >
+        au < manifest ; 1990 ; The Journal of Applied Behavioral Science Volume 26 ; 26 >
+        au < manifest ; 1991 ; The Journal of Applied Behavioral Science Volume 27 ; 27 >
+        au < manifest ; 1992 ; The Journal of Applied Behavioral Science Volume 28 ; 28 >
+        au < manifest ; 1993 ; The Journal of Applied Behavioral Science Volume 29 ; 29 >
+        au < manifest ; 1994 ; The Journal of Applied Behavioral Science Volume 30 ; 30 >
+        au < manifest ; 1995 ; The Journal of Applied Behavioral Science Volume 31 ; 31 >
+        au < manifest ; 1996 ; The Journal of Applied Behavioral Science Volume 32 ; 32 >
+        au < manifest ; 1997 ; The Journal of Applied Behavioral Science Volume 33 ; 33 >
+        au < manifest ; 1998 ; The Journal of Applied Behavioral Science Volume 34 ; 34 >
+        au < manifest ; 1999 ; The Journal of Applied Behavioral Science Volume 35 ; 35 >
+        au < manifest ; 2000 ; The Journal of Applied Behavioral Science Volume 36 ; 36 >
+        au < manifest ; 2001 ; The Journal of Applied Behavioral Science Volume 37 ; 37 >
+        au < manifest ; 2002 ; The Journal of Applied Behavioral Science Volume 38 ; 38 >
+        au < manifest ; 2003 ; The Journal of Applied Behavioral Science Volume 39 ; 39 >
+        au < manifest ; 2004 ; The Journal of Applied Behavioral Science Volume 40 ; 40 >
+        au < manifest ; 2005 ; The Journal of Applied Behavioral Science Volume 41 ; 41 >
+        au < manifest ; 2006 ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
+        au < manifest ; 2007 ; The Journal of Applied Behavioral Science Volume 43 ; 43 >
+        au < manifest ; 2008 ; The Journal of Applied Behavioral Science Volume 44 ; 44 >
+        au < manifest ; 2009 ; The Journal of Applied Behavioral Science Volume 45 ; 45 >
+        au < manifest ; 2010 ; The Journal of Applied Behavioral Science Volume 46 ; 46 >
+        au < manifest ; 2011 ; The Journal of Applied Behavioral Science Volume 47 ; 47 >
+
+      }
+
     }
 
     {
@@ -14353,6 +14748,45 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Applied Gerontology Volume 29 ; 29 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jag.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1982 ; Journal of Applied Gerontology Volume 1 ; 1 >
+        au < manifest ; 1983 ; Journal of Applied Gerontology Volume 2 ; 2 >
+        au < manifest ; 1984 ; Journal of Applied Gerontology Volume 3 ; 3 >
+        au < manifest ; 1985 ; Journal of Applied Gerontology Volume 4 ; 4 >
+        au < manifest ; 1986 ; Journal of Applied Gerontology Volume 5 ; 5 >
+        au < manifest ; 1987 ; Journal of Applied Gerontology Volume 6 ; 6 >
+        au < manifest ; 1988 ; Journal of Applied Gerontology Volume 7 ; 7 >
+        au < manifest ; 1989 ; Journal of Applied Gerontology Volume 8 ; 8 >
+        au < manifest ; 1990 ; Journal of Applied Gerontology Volume 9 ; 9 >
+        au < manifest ; 1991 ; Journal of Applied Gerontology Volume 10 ; 10 >
+        au < manifest ; 1992 ; Journal of Applied Gerontology Volume 11 ; 11 >
+        au < manifest ; 1993 ; Journal of Applied Gerontology Volume 12 ; 12 >
+        au < manifest ; 1994 ; Journal of Applied Gerontology Volume 13 ; 13 >
+        au < manifest ; 1995 ; Journal of Applied Gerontology Volume 14 ; 14 >
+        au < manifest ; 1996 ; Journal of Applied Gerontology Volume 15 ; 15 >
+        au < manifest ; 1997 ; Journal of Applied Gerontology Volume 16 ; 16 >
+        au < manifest ; 1998 ; Journal of Applied Gerontology Volume 17 ; 17 >
+        au < manifest ; 1999 ; Journal of Applied Gerontology Volume 18 ; 18 >
+        au < manifest ; 2000 ; Journal of Applied Gerontology Volume 19 ; 19 >
+        au < manifest ; 2001 ; Journal of Applied Gerontology Volume 20 ; 20 >
+        au < manifest ; 2002 ; Journal of Applied Gerontology Volume 21 ; 21 >
+        au < manifest ; 2003 ; Journal of Applied Gerontology Volume 22 ; 22 >
+        au < manifest ; 2004 ; Journal of Applied Gerontology Volume 23 ; 23 >
+        au < manifest ; 2005 ; Journal of Applied Gerontology Volume 24 ; 24 >
+        au < manifest ; 2006 ; Journal of Applied Gerontology Volume 25 ; 25 >
+        au < manifest ; 2007 ; Journal of Applied Gerontology Volume 26 ; 26 >
+        au < manifest ; 2008 ; Journal of Applied Gerontology Volume 27 ; 27 >
+        au < manifest ; 2009 ; Journal of Applied Gerontology Volume 28 ; 28 >
+        au < manifest ; 2010 ; Journal of Applied Gerontology Volume 29 ; 29 >
+        au < manifest ; 2011 ; Journal of Applied Gerontology Volume 30 ; 30 >
 
       }
 
@@ -14391,6 +14825,61 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; Journal of Asian and African Studies Volume 1 ; 1 >
+        au < manifest ; 1967 ; Journal of Asian and African Studies Volume 2 ; 2 >
+        au < manifest ; 1968 ; Journal of Asian and African Studies Volume 3 ; 3 >
+        au < manifest ; 1969 ; Journal of Asian and African Studies Volume 4 ; 4 >
+        au < manifest ; 1970 ; Journal of Asian and African Studies Volume 5 ; 5 >
+        au < manifest ; 1971 ; Journal of Asian and African Studies Volume 6 ; 6 >
+        au < manifest ; 1972 ; Journal of Asian and African Studies Volume 7 ; 7 >
+        au < manifest ; 1973 ; Journal of Asian and African Studies Volume 8 ; 8 >
+        au < manifest ; 1974 ; Journal of Asian and African Studies Volume 9 ; 9 >
+        au < manifest ; 1975 ; Journal of Asian and African Studies Volume 10 ; 10 >
+        au < manifest ; 1976 ; Journal of Asian and African Studies Volume 11 ; 11 >
+        au < manifest ; 1977 ; Journal of Asian and African Studies Volume 12 ; 12 >
+        au < manifest ; 1978 ; Journal of Asian and African Studies Volume 13 ; 13 >
+        au < manifest ; 1979 ; Journal of Asian and African Studies Volume 14 ; 14 >
+        au < manifest ; 1980 ; Journal of Asian and African Studies Volume 15 ; 15 >
+        au < manifest ; 1981 ; Journal of Asian and African Studies Volume 16 ; 16 >
+        au < manifest ; 1982 ; Journal of Asian and African Studies Volume 17 ; 17 >
+        au < manifest ; 1983 ; Journal of Asian and African Studies Volume 18 ; 18 >
+        au < manifest ; 1984 ; Journal of Asian and African Studies Volume 19 ; 19 >
+        au < manifest ; 1985 ; Journal of Asian and African Studies Volume 20 ; 20 >
+        au < manifest ; 1986 ; Journal of Asian and African Studies Volume 21 ; 21 >
+        au < manifest ; 1987 ; Journal of Asian and African Studies Volume 22 ; 22 >
+        au < manifest ; 1988 ; Journal of Asian and African Studies Volume 23 ; 23 >
+        au < manifest ; 1989 ; Journal of Asian and African Studies Volume 24 ; 24 >
+        au < manifest ; 1990 ; Journal of Asian and African Studies Volume 25 ; 25 >
+        au < manifest ; 1991 ; Journal of Asian and African Studies Volume 26 ; 26 >
+        au < manifest ; 1992 ; Journal of Asian and African Studies Volume 27 ; 27 >
+        au < manifest ; 1993 ; Journal of Asian and African Studies Volume 28 ; 28 >
+        au < manifest ; 1994 ; Journal of Asian and African Studies Volume 29 ; 29 >
+        au < manifest ; 1995 ; Journal of Asian and African Studies Volume 30 ; 30 >
+        au < manifest ; 1996 ; Journal of Asian and African Studies Volume 31 ; 31 >
+        au < manifest ; 1997 ; Journal of Asian and African Studies Volume 32 ; 32 >
+        au < manifest ; 1998 ; Journal of Asian and African Studies Volume 33 ; 33 >
+        au < manifest ; 1999 ; Journal of Asian and African Studies Volume 34 ; 34 >
+        au < manifest ; 2000 ; Journal of Asian and African Studies Volume 35 ; 35 >
+        au < manifest ; 2001 ; Journal of Asian and African Studies Volume 36 ; 36 >
+        au < manifest ; 2002 ; Journal of Asian and African Studies Volume 37 ; 37 >
+        au < manifest ; 2003 ; Journal of Asian and African Studies Volume 38 ; 38 >
+        au < manifest ; 2004 ; Journal of Asian and African Studies Volume 39 ; 39 >
+        au < manifest ; 2005 ; Journal of Asian and African Studies Volume 40 ; 40 >
+        au < manifest ; 2006 ; Journal of Asian and African Studies Volume 41 ; 41 >
+        au < manifest ; 2007 ; Journal of Asian and African Studies Volume 42 ; 42 >
+        au < manifest ; 2008 ; Journal of Asian and African Studies Volume 43 ; 43 >
+        au < manifest ; 2009 ; Journal of Asian and African Studies Volume 44 ; 44 >
+        au < manifest ; 2010 ; Journal of Asian and African Studies Volume 45 ; 45 >
+        au < manifest ; 2011 ; Journal of Asian and African Studies Volume 46 ; 46 >
+
+      }
+
     }
 
     {
@@ -14417,6 +14906,30 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jad.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1996 ; Journal of Attention Disorders Volume 1 ; 1 >
+        au < manifest ; 1997 ; Journal of Attention Disorders Volume 2 ; 2 >
+        au < manifest ; 1999 ; Journal of Attention Disorders Volume 3 ; 3 >
+        au < manifest ; 2000 ; Journal of Attention Disorders Volume 4 ; 4 >
+        au < manifest ; 2001 ; Journal of Attention Disorders Volume 5 ; 5 >
+        au < manifest ; 2002 ; Journal of Attention Disorders Volume 6 ; 6 >
+        au < manifest ; 2003 ; Journal of Attention Disorders Volume 7 ; 7 >
+        au < manifest ; 2004 ; Journal of Attention Disorders Volume 8 ; 8 >
+        au < manifest ; 2005 ; Journal of Attention Disorders Volume 9 ; 9 >
+        au < manifest ; 2006 ; Journal of Attention Disorders Volume 10 ; 10 >
+        au < manifest ; 2007 ; Journal of Attention Disorders Volume 11 ; 11 >
+        au < manifest ; 2008 ; Journal of Attention Disorders Volume 12 ; 12 >
+        au < manifest ; 2009 ; Journal of Attention Disorders Volume 13 ; 13 >
+        au < manifest ; 2010 ; Journal of Attention Disorders Volume 14 ; 14 >
+        au < manifest ; 2011 ; Journal of Attention Disorders Volume 15 ; 15 >
+
+      }
+
     }
 
     {
@@ -14439,6 +14952,41 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Journal of Bioactive and Compatible Polymers Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Bioactive and Compatible Polymers Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Bioactive and Compatible Polymers Volume 3 ; 3 >
+        au < manifest ; 1989 ; Journal of Bioactive and Compatible Polymers Volume 4 ; 4 >
+        au < manifest ; 1990 ; Journal of Bioactive and Compatible Polymers Volume 5 ; 5 >
+        au < manifest ; 1991 ; Journal of Bioactive and Compatible Polymers Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Bioactive and Compatible Polymers Volume 7 ; 7 >
+        au < manifest ; 1993 ; Journal of Bioactive and Compatible Polymers Volume 8 ; 8 >
+        au < manifest ; 1994 ; Journal of Bioactive and Compatible Polymers Volume 9 ; 9 >
+        au < manifest ; 1995 ; Journal of Bioactive and Compatible Polymers Volume 10 ; 10 >
+        au < manifest ; 1996 ; Journal of Bioactive and Compatible Polymers Volume 11 ; 11 >
+        au < manifest ; 1997 ; Journal of Bioactive and Compatible Polymers Volume 12 ; 12 >
+        au < manifest ; 1998 ; Journal of Bioactive and Compatible Polymers Volume 13 ; 13 >
+        au < manifest ; 1999 ; Journal of Bioactive and Compatible Polymers Volume 14 ; 14 >
+        au < manifest ; 2000 ; Journal of Bioactive and Compatible Polymers Volume 15 ; 15 >
+        au < manifest ; 2001 ; Journal of Bioactive and Compatible Polymers Volume 16 ; 16 >
+        au < manifest ; 2002 ; Journal of Bioactive and Compatible Polymers Volume 17 ; 17 >
+        au < manifest ; 2003 ; Journal of Bioactive and Compatible Polymers Volume 18 ; 18 >
+        au < manifest ; 2004 ; Journal of Bioactive and Compatible Polymers Volume 19 ; 19 >
+        au < manifest ; 2005 ; Journal of Bioactive and Compatible Polymers Volume 20 ; 20 >
+        au < manifest ; 2006 ; Journal of Bioactive and Compatible Polymers Volume 21 ; 21 >
+        au < manifest ; 2007 ; Journal of Bioactive and Compatible Polymers Volume 22 ; 22 >
+        au < manifest ; 2008 ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 >
+        au < manifest ; 2009 ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 >
+        au < manifest ; 2010 ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 >
+        au < manifest ; 2011 ; Journal of Bioactive and Compatible Polymers Volume 26 ; 26 >
 
       }
 
@@ -14477,6 +15025,41 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Journal of Biological Rhythms Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Biological Rhythms Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Biological Rhythms Volume 3 ; 3 >
+        au < manifest ; 1989 ; Journal of Biological Rhythms Volume 4 ; 4 >
+        au < manifest ; 1990 ; Journal of Biological Rhythms Volume 5 ; 5 >
+        au < manifest ; 1991 ; Journal of Biological Rhythms Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Biological Rhythms Volume 7 ; 7 >
+        au < manifest ; 1993 ; Journal of Biological Rhythms Volume 8 ; 8 >
+        au < manifest ; 1994 ; Journal of Biological Rhythms Volume 9 ; 9 >
+        au < manifest ; 1995 ; Journal of Biological Rhythms Volume 10 ; 10 >
+        au < manifest ; 1996 ; Journal of Biological Rhythms Volume 11 ; 11 >
+        au < manifest ; 1997 ; Journal of Biological Rhythms Volume 12 ; 12 >
+        au < manifest ; 1998 ; Journal of Biological Rhythms Volume 13 ; 13 >
+        au < manifest ; 1999 ; Journal of Biological Rhythms Volume 14 ; 14 >
+        au < manifest ; 2000 ; Journal of Biological Rhythms Volume 15 ; 15 >
+        au < manifest ; 2001 ; Journal of Biological Rhythms Volume 16 ; 16 >
+        au < manifest ; 2002 ; Journal of Biological Rhythms Volume 17 ; 17 >
+        au < manifest ; 2003 ; Journal of Biological Rhythms Volume 18 ; 18 >
+        au < manifest ; 2004 ; Journal of Biological Rhythms Volume 19 ; 19 >
+        au < manifest ; 2005 ; Journal of Biological Rhythms Volume 20 ; 20 >
+        au < manifest ; 2006 ; Journal of Biological Rhythms Volume 21 ; 21 >
+        au < manifest ; 2007 ; Journal of Biological Rhythms Volume 22 ; 22 >
+        au < manifest ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 >
+        au < manifest ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 >
+        au < manifest ; 2010 ; Journal of Biological Rhythms Volume 25 ; 25 >
+        au < manifest ; 2011 ; Journal of Biological Rhythms Volume 26 ; 26 >
+
+      }
+
     }
 
     {
@@ -14503,6 +15086,40 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jba.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Journal of Biomaterials Applications Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Biomaterials Applications Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Biomaterials Applications Volume 3 ; 3 >
+        au < manifest ; 1989-1990 ; Journal of Biomaterials Applications Volume 4 ; 4 >
+        au < manifest ; 1990-1991 ; Journal of Biomaterials Applications Volume 5 ; 5 >
+        au < manifest ; 1991-1992 ; Journal of Biomaterials Applications Volume 6 ; 6 >
+        au < manifest ; 1992-1993 ; Journal of Biomaterials Applications Volume 7 ; 7 >
+        au < manifest ; 1993-1994 ; Journal of Biomaterials Applications Volume 8 ; 8 >
+        au < manifest ; 1994-1995 ; Journal of Biomaterials Applications Volume 9 ; 9 >
+        au < manifest ; 1995-1996 ; Journal of Biomaterials Applications Volume 10 ; 10 >
+        au < manifest ; 1996-1997 ; Journal of Biomaterials Applications Volume 11 ; 11 >
+        au < manifest ; 1997-1998 ; Journal of Biomaterials Applications Volume 12 ; 12 >
+        au < manifest ; 1998-1999 ; Journal of Biomaterials Applications Volume 13 ; 13 >
+        au < manifest ; 1999-2000 ; Journal of Biomaterials Applications Volume 14 ; 14 >
+        au < manifest ; 2000-2001 ; Journal of Biomaterials Applications Volume 15 ; 15 >
+        au < manifest ; 2001-2002 ; Journal of Biomaterials Applications Volume 16 ; 16 >
+        au < manifest ; 2002-2003 ; Journal of Biomaterials Applications Volume 17 ; 17 >
+        au < manifest ; 2003-2004 ; Journal of Biomaterials Applications Volume 18 ; 18 >
+        au < manifest ; 2004-2005 ; Journal of Biomaterials Applications Volume 19 ; 19 >
+        au < manifest ; 2005-2006 ; Journal of Biomaterials Applications Volume 20 ; 20 >
+        au < manifest ; 2006-2007 ; Journal of Biomaterials Applications Volume 21 ; 21 >
+        au < manifest ; 2007-2008 ; Journal of Biomaterials Applications Volume 22 ; 22 >
+        au < manifest ; 2008-2009 ; Journal of Biomaterials Applications Volume 23 ; 23 >
+        au < manifest ; 2009-2010 ; Journal of Biomaterials Applications Volume 24 ; 24 >
+        au < manifest ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 >
+
+      }
+      
     }
 
     {
@@ -14535,6 +15152,31 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; testing ; Journal of Biomolecular Screening Volume 13 ; 13 >
         au < HighWirePressPlugin ; testing ; Journal of Biomolecular Screening Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Biomolecular Screening Volume 15 ; 15 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1996 ; Journal of Biomolecular Screening Volume 1 ; 1 >
+        au < manifest ; 1997 ; Journal of Biomolecular Screening Volume 2 ; 2 >
+        au < manifest ; 1998 ; Journal of Biomolecular Screening Volume 3 ; 3 >
+        au < manifest ; 1999 ; Journal of Biomolecular Screening Volume 4 ; 4 >
+        au < manifest ; 2000 ; Journal of Biomolecular Screening Volume 5 ; 5 >
+        au < manifest ; 2001 ; Journal of Biomolecular Screening Volume 6 ; 6 >
+        au < manifest ; 2002 ; Journal of Biomolecular Screening Volume 7 ; 7 >
+        au < manifest ; 2003 ; Journal of Biomolecular Screening Volume 8 ; 8 >
+        au < manifest ; 2004 ; Journal of Biomolecular Screening Volume 9 ; 9 >
+        au < manifest ; 2005 ; Journal of Biomolecular Screening Volume 10 ; 10 >
+        au < manifest ; 2006 ; Journal of Biomolecular Screening Volume 11 ; 11 >
+        au < manifest ; 2007 ; Journal of Biomolecular Screening Volume 12 ; 12 >
+        au < manifest ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 >
+        au < manifest ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 >
+        au < manifest ; 2010 ; Journal of Biomolecular Screening Volume 15 ; 15 >
+        au < manifest ; 2011 ; Journal of Biomolecular Screening Volume 16 ; 16 >
 
       }
 
@@ -14573,6 +15215,52 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; Journal of Black Psychology Volume 1 ; 1 >
+        au < doesNotExist ; 0 ; Journal of Black Psychology Volume 2 ; 2 >
+        au < doesNotExist ; 0 ; Journal of Black Psychology Volume 3 ; 3 >
+        au < doesNotExist ; 0 ; Journal of Black Psychology Volume 4 ; 4 >
+        au < manifest ; 1978 ; Journal of Black Psychology Volume 5 ; 5 >
+        au < manifest ; 1979 ; Journal of Black Psychology Volume 6 ; 6 >
+        au < manifest ; 1980 ; Journal of Black Psychology Volume 7 ; 7 >
+        au < manifest ; 1981 ; Journal of Black Psychology Volume 8 ; 8 >
+        au < manifest ; 1982 ; Journal of Black Psychology Volume 9 ; 9 >
+        au < manifest ; 1983 ; Journal of Black Psychology Volume 10 ; 10 >
+        au < manifest ; 1984 ; Journal of Black Psychology Volume 11 ; 11 >
+        au < manifest ; 1985 ; Journal of Black Psychology Volume 12 ; 12 >
+        au < manifest ; 1986 ; Journal of Black Psychology Volume 13 ; 13 >
+        au < manifest ; 1987 ; Journal of Black Psychology Volume 14 ; 14 >
+        au < manifest ; 1988 ; Journal of Black Psychology Volume 15 ; 15 >
+        au < manifest ; 1989 ; Journal of Black Psychology Volume 16 ; 16 >
+        au < manifest ; 1990 ; Journal of Black Psychology Volume 17 ; 17 >
+        au < manifest ; 1991 ; Journal of Black Psychology Volume 18 ; 18 >
+        au < manifest ; 1993 ; Journal of Black Psychology Volume 19 ; 19 >
+        au < manifest ; 1994 ; Journal of Black Psychology Volume 20 ; 20 >
+        au < manifest ; 1995 ; Journal of Black Psychology Volume 21 ; 21 >
+        au < manifest ; 1996 ; Journal of Black Psychology Volume 22 ; 22 >
+        au < manifest ; 1997 ; Journal of Black Psychology Volume 23 ; 23 >
+        au < manifest ; 1998 ; Journal of Black Psychology Volume 24 ; 24 >
+        au < manifest ; 1999 ; Journal of Black Psychology Volume 25 ; 25 >
+        au < manifest ; 2000 ; Journal of Black Psychology Volume 26 ; 26 >
+        au < manifest ; 2001 ; Journal of Black Psychology Volume 27 ; 27 >
+        au < manifest ; 2002 ; Journal of Black Psychology Volume 28 ; 28 >
+        au < manifest ; 2003 ; Journal of Black Psychology Volume 29 ; 29 >
+        au < manifest ; 2004 ; Journal of Black Psychology Volume 30 ; 30 >
+        au < manifest ; 2005 ; Journal of Black Psychology Volume 31 ; 31 >
+        au < manifest ; 2006 ; Journal of Black Psychology Volume 32 ; 32 >
+        au < manifest ; 2007 ; Journal of Black Psychology Volume 33 ; 33 >
+        au < manifest ; 2008 ; Journal of Black Psychology Volume 34 ; 34 >
+        au < manifest ; 2009 ; Journal of Black Psychology Volume 35 ; 35 >
+        au < manifest ; 2010 ; Journal of Black Psychology Volume 36 ; 36 >
+        au < manifest ; 2011 ; Journal of Black Psychology Volume 37 ; 37 >
+
+      }
+
     }
 
     {
@@ -14605,6 +15293,57 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Black Studies Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Journal of Black Studies Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Black Studies Volume 40 ; 40 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1970-1971 ; Journal of Black Studies Volume 1 ; 1 >
+        au < exists ; 1971-1972 ; Journal of Black Studies Volume 2 ; 2 >
+        au < manifest ; 1972-1973 ; Journal of Black Studies Volume 3 ; 3 >
+        au < manifest ; 1974-1974 ; Journal of Black Studies Volume 4 ; 4 >
+        au < manifest ; 1974-1975 ; Journal of Black Studies Volume 5 ; 5 >
+        au < manifest ; 1975-1976 ; Journal of Black Studies Volume 6 ; 6 >
+        au < manifest ; 1976-1977 ; Journal of Black Studies Volume 7 ; 7 >
+        au < manifest ; 1977-1978 ; Journal of Black Studies Volume 8 ; 8 >
+        au < manifest ; 1978-1979 ; Journal of Black Studies Volume 9 ; 9 >
+        au < manifest ; 1979-1980 ; Journal of Black Studies Volume 10 ; 10 >
+        au < manifest ; 1980-1981 ; Journal of Black Studies Volume 11 ; 11 >
+        au < manifest ; 1981-1982 ; Journal of Black Studies Volume 12 ; 12 >
+        au < manifest ; 1982-1983 ; Journal of Black Studies Volume 13 ; 13 >
+        au < manifest ; 1983-1984 ; Journal of Black Studies Volume 14 ; 14 >
+        au < manifest ; 1984-1985 ; Journal of Black Studies Volume 15 ; 15 >
+        au < manifest ; 1985-1986 ; Journal of Black Studies Volume 16 ; 16 >
+        au < manifest ; 1986-1987 ; Journal of Black Studies Volume 17 ; 17 >
+        au < manifest ; 1987-1988 ; Journal of Black Studies Volume 18 ; 18 >
+        au < manifest ; 1989-1989 ; Journal of Black Studies Volume 19 ; 19 >
+        au < manifest ; 1989-1990 ; Journal of Black Studies Volume 20 ; 20 >
+        au < manifest ; 1991-1991 ; Journal of Black Studies Volume 21 ; 21 >
+        au < manifest ; 1992-1992 ; Journal of Black Studies Volume 22 ; 22 >
+        au < manifest ; 1992-1993 ; Journal of Black Studies Volume 23 ; 23 >
+        au < manifest ; 1993-1994 ; Journal of Black Studies Volume 24 ; 24 >
+        au < manifest ; 1994-1995 ; Journal of Black Studies Volume 25 ; 25 >
+        au < manifest ; 1995-1996 ; Journal of Black Studies Volume 26 ; 26 >
+        au < manifest ; 1996-1997 ; Journal of Black Studies Volume 27 ; 27 >
+        au < manifest ; 1998 ; Journal of Black Studies Volume 28 ; 28 >
+        au < manifest ; 1998-1999 ; Journal of Black Studies Volume 29 ; 29 >
+        au < manifest ; 1999-2000 ; Journal of Black Studies Volume 30 ; 30 >
+        au < manifest ; 2000-2001 ; Journal of Black Studies Volume 31 ; 31 >
+        au < manifest ; 2001-2002 ; Journal of Black Studies Volume 32 ; 32 >
+        au < manifest ; 2002-2003 ; Journal of Black Studies Volume 33 ; 33 >
+        au < manifest ; 2003-2004 ; Journal of Black Studies Volume 34 ; 34 >
+        au < manifest ; 2004-2005 ; Journal of Black Studies Volume 35 ; 35 >
+        au < manifest ; 2005-2006 ; Journal of Black Studies Volume 36 ; 36 >
+        au < manifest ; 2006-2007 ; Journal of Black Studies Volume 37 ; 37 >
+        au < manifest ; 2007-2008 ; Journal of Black Studies Volume 38 ; 38 >
+        au < manifest ; 2008-2009 ; Journal of Black Studies Volume 39 ; 39 >
+        au < manifest ; 2009-2010 ; Journal of Black Studies Volume 40 ; 40 >
+        au < manifest ; 2010-2011 ; Journal of Black Studies Volume 41 ; 41 >
+        au < manifest ; 2011-2012 ; Journal of Black Studies Volume 42 ; 42 >
 
       }
 
