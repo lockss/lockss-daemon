@@ -14201,6 +14201,66 @@ comment[exm] = now published by Springer
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://itq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1959 ; Irish Theological Quarterly Volume 26 ; 26 >
+        au < manifest ; 1960 ; Irish Theological Quarterly Volume 27 ; 27 >
+        au < manifest ; 1961 ; Irish Theological Quarterly Volume 28 ; 28 >
+        au < manifest ; 1962 ; Irish Theological Quarterly Volume 29 ; 29 >
+        au < manifest ; 1963 ; Irish Theological Quarterly Volume 30 ; 30 >
+        au < manifest ; 1964 ; Irish Theological Quarterly Volume 31 ; 31 >
+        au < manifest ; 1965 ; Irish Theological Quarterly Volume 32 ; 32 >
+        au < manifest ; 1966 ; Irish Theological Quarterly Volume 33 ; 33 >
+        au < manifest ; 1967 ; Irish Theological Quarterly Volume 34 ; 34 >
+        au < manifest ; 1968 ; Irish Theological Quarterly Volume 35 ; 35 >
+        au < doesNotExist ; 1969 ; Irish Theological Quarterly Volume 36 ; 36 >
+        au < doesNotExist ; 1970 ; Irish Theological Quarterly Volume 37 ; 37 >
+        au < doesNotExist ; 1971 ; Irish Theological Quarterly Volume 38 ; 38 >
+        au < manifest ; 1972 ; Irish Theological Quarterly Volume 39 ; 39 >
+        au < manifest ; 1973 ; Irish Theological Quarterly Volume 40 ; 40 >
+        au < manifest ; 1974 ; Irish Theological Quarterly Volume 41 ; 41 >
+        au < manifest ; 1975 ; Irish Theological Quarterly Volume 42 ; 42 >
+        au < manifest ; 1976 ; Irish Theological Quarterly Volume 43 ; 43 >
+        au < manifest ; 1977 ; Irish Theological Quarterly Volume 44 ; 44 >
+        au < manifest ; 1978 ; Irish Theological Quarterly Volume 45 ; 45 >
+        au < manifest ; 1979 ; Irish Theological Quarterly Volume 46 ; 46 >
+        au < manifest ; 1980 ; Irish Theological Quarterly Volume 47 ; 47 >
+        au < manifest ; 1981 ; Irish Theological Quarterly Volume 48 ; 48 >
+        au < manifest ; 1982 ; Irish Theological Quarterly Volume 49 ; 49 >
+        au < doesNotExist ; 0 ; Irish Theological Quarterly Volume 50 ; 50 >
+        au < manifest ; 1985 ; Irish Theological Quarterly Volume 51 ; 51 >
+        au < manifest ; 1986 ; Irish Theological Quarterly Volume 52 ; 52 >
+        au < manifest ; 1987 ; Irish Theological Quarterly Volume 53 ; 53 >
+        au < manifest ; 1988 ; Irish Theological Quarterly Volume 54 ; 54 >
+        au < manifest ; 1989 ; Irish Theological Quarterly Volume 55 ; 55 >
+        au < manifest ; 1990 ; Irish Theological Quarterly Volume 56 ; 56 >
+        au < manifest ; 1991 ; Irish Theological Quarterly Volume 57 ; 57 >
+        au < manifest ; 1992 ; Irish Theological Quarterly Volume 58 ; 58 >
+        au < manifest ; 1993 ; Irish Theological Quarterly Volume 59 ; 59 >
+        au < manifest ; 1994 ; Irish Theological Quarterly Volume 60 ; 60 >
+        au < manifest ; 1995 ; Irish Theological Quarterly Volume 61 ; 61 >
+        au < manifest ; 1996 ; Irish Theological Quarterly Volume 62 ; 62 >
+        au < manifest ; 1998 ; Irish Theological Quarterly Volume 63 ; 63 >
+        au < manifest ; 1999 ; Irish Theological Quarterly Volume 64 ; 64 >
+        au < manifest ; 2000 ; Irish Theological Quarterly Volume 65 ; 65 >
+        au < manifest ; 2001 ; Irish Theological Quarterly Volume 66 ; 66 >
+        au < manifest ; 2002 ; Irish Theological Quarterly Volume 67 ; 67 >
+        au < manifest ; 2003 ; Irish Theological Quarterly Volume 68 ; 68 >
+        au < manifest ; 2004 ; Irish Theological Quarterly Volume 69 ; 69 >
+        au < manifest ; 2005 ; Irish Theological Quarterly Volume 70 ; 70 >
+        au < manifest ; 2006 ; Irish Theological Quarterly Volume 71 ; 71 >
+        au < manifest ; 2007 ; Irish Theological Quarterly Volume 72 ; 72 >
+        au < manifest ; 2008 ; Irish Theological Quarterly Volume 73 ; 73 >
+        au < manifest ; 2009 ; Irish Theological Quarterly Volume 74 ; 74 >
+        au < manifest ; 2010 ; Irish Theological Quarterly Volume 75 ; 75 >
+        au < manifest ; 2011 ; Irish Theological Quarterly Volume 76 ; 76 >
+
+      }
+
     }
 
     {
