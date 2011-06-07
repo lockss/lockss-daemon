@@ -37,13 +37,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1559-4491
   
-      au < superseded ; The Wilson Journal of Ornithology Volume 118 ; 118 >
-      au < superseded ; The Wilson Journal of Ornithology Volume 119 ; 119 >
+      au < superseded ; 2006 ; The Wilson Journal of Ornithology Volume 118 ; 118 >
+      au < superseded ; 2007 ; The Wilson Journal of Ornithology Volume 119 ; 119 >
     }
 
     {
