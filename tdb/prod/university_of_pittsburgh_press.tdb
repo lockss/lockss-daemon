@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,12 +17,14 @@
 
     param[journal_dir] = cuban_studies
 
-    au < released ; Cuban Studies Volume 34 ; 34 >
-    au < released ; Cuban Studies Volume 35 ; 35 >
-    au < released ; Cuban Studies Volume 36 ; 36 >
-    au < released ; Cuban Studies Volume 37 ; 37 >
-    au < ready ; Cuban Studies Volume 38 ; 38 >
-    au < ready ; Cuban Studies Volume 39 ; 39 >
+    au < released ; 2003 ; Cuban Studies Volume 34 ; 34 >
+    au < released ; 2004 ; Cuban Studies Volume 35 ; 35 >
+    au < released ; 2005 ;  Cuban Studies Volume 36 ; 36 >
+    au < released ; 2006 ; Cuban Studies Volume 37 ; 37 >
+    au < ready ; 2007 ; Cuban Studies Volume 38 ; 38 >
+    au < ready ; 2008 ; Cuban Studies Volume 39 ; 39 >
+    au < manifest ; 2009 ; Cuban Studies Volume 40 ; 40 >
+    au < manifest ; 2010 ; Cuban Studies Volume 41 ; 41 >
 
   }
 
