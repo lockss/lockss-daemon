@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,17 +17,18 @@
 
     param[journal_dir] = logos
 
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 5 ; 5 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 6 ; 6 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 7 ; 7 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 11 ; 11 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
-    au < ready ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
+    au < ready ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
+    au < ready ; 2001 ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
+    au < ready ; 2002 ; Logos: A Journal of Catholic Thought and Culture Volume 5 ; 5 >
+    au < ready ; 2003 ; Logos: A Journal of Catholic Thought and Culture Volume 6 ; 6 >
+    au < ready ; 2004 ; Logos: A Journal of Catholic Thought and Culture Volume 7 ; 7 >
+    au < ready ; 2005 ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
+    au < ready ; 2006 ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
+    au < ready ; 2007 ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
+    au < ready ; 2008 ; Logos: A Journal of Catholic Thought and Culture Volume 11 ; 11 >
+    au < ready ; 2009 ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
+    au < ready ; 2010 ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
+    au < manifest ; 2011 ; Logos: A Journal of Catholic Thought and Culture Volume 14 ; 14 >
     
   }
 
