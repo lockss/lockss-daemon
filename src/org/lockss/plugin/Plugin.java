@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.34 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: Plugin.java,v 1.35 2011-06-07 06:29:47 tlipkis Exp $
  */
 
 /*
@@ -220,18 +220,23 @@ public interface Plugin {
    */
   public enum Feature {
     /**
-     * Plugin data that affects polling, such as hash filters, crawl rules
-     * (usually), etc.  Version should be changed whenver the plugin's
-     * polling behavior changes in a way that makes it unable to correctly
-     * participate in a poll with a peer running a different version.
+     * Version of Plugin data that affects polling, such as hash filters,
+     * crawl rules (usually), start URL, etc.  Should be changed whenver
+     * the plugin's polling behavior changes in a way that makes it unable
+     * to correctly participate in a poll with a peer running a different
+     * version.
      */
     Poll,
       /**
-       * Article iterators, metadata extractors and factories, etc.
-       * Version should be changed whenever this code changes in a way that
+       * Version of article iterators, metadata extractors and factories,
+       * etc.  Should be changed whenever this code changes in a way that
        * requires re-extraction of metadata.
        */
       Metadata,
+      /**
+       * Version of substance checker patterns.
+       */
+      Substance,
       };
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.40 2011-05-26 03:00:09 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.41 2011-06-07 06:29:47 tlipkis Exp $
  */
 
 /*
@@ -247,6 +247,8 @@ public class TestDefinablePlugin extends LockssTestCase {
 		 definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
     assertEquals("Metadata_7",
 		 definablePlugin.getFeatureVersion(Plugin.Feature.Metadata));
+    assertEquals("Substance_farty-two",
+		 definablePlugin.getFeatureVersion(Plugin.Feature.Substance));
   }
 
   public void testGetPluginId() throws Exception {
