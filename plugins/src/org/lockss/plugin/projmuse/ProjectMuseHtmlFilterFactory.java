@@ -1,9 +1,9 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.3 2010-03-30 20:45:36 greya Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.4 2011-06-08 02:18:29 thib_gc Exp $*/
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,8 @@ package org.lockss.plugin.projmuse;
 
 import java.io.*;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.html.*;
@@ -45,30 +47,18 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <div id="access_statement">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "access_statement")),
-        
-        // Filter out <div id="sidebar2">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "sidebar2")),         
-        // Filter out <div id="credits">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "credits")),                                                                  
-        // Filter out <div id="citationsblock">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "citationsblock")), 
+    NodeFilter[] filters = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("div", "id", "access_statement"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "access-statement"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar2"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "credits"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "citationsblock"),
     };
     
     // First filter with HtmlParser
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
-                                                           new HtmlCompoundTransform(transforms));
+                                                           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     
     // Then filter with ProjectMuseFilterRule
     Reader reader = FilterUtil.getReader(filteredStream, encoding);
