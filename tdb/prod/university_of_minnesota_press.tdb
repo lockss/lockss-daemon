@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -18,9 +18,10 @@
 
     param[journal_dir] = buildings_and_landscapes
 
-    au < released ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 ; 14 >
-    au < released ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 ; 15 >
-    au < released ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 ; 16 >
+    au < released ; 2007 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 ; 14 >
+    au < released ; 2008 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 ; 15 >
+    au < released ; 2009 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 ; 16 >
+    au < manifest ; 2010 ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 17 ; 17 >
 
   }
 
@@ -34,33 +35,37 @@
 
     param[journal_dir] = cultural_critique
 
-    au < released ; Cultural Critique Volume 47 ; 47 >
-    au < released ; Cultural Critique Volume 48 ; 48 >
-    au < released ; Cultural Critique Volume 49 ; 49 >
-    au < released ; Cultural Critique Volume 50 ; 50 >
-    au < released ; Cultural Critique Volume 51 ; 51 >
-    au < released ; Cultural Critique Volume 52 ; 52 >
-    au < released ; Cultural Critique Volume 53 ; 53 >
-    au < released ; Cultural Critique Volume 54 ; 54 >
-    au < released ; Cultural Critique Volume 55 ; 55 >
-    au < released ; Cultural Critique Volume 56 ; 56 >
-    au < released ; Cultural Critique Volume 57 ; 57 >
-    au < released ; Cultural Critique Volume 58 ; 58 >
-    au < released ; Cultural Critique Volume 59 ; 59 >
-    au < released ; Cultural Critique Volume 60 ; 60 >
-    au < released ; Cultural Critique Volume 61 ; 61 >
-    au < released ; Cultural Critique Volume 62 ; 62 >
-    au < released ; Cultural Critique Volume 63 ; 63 >
-    au < released ; Cultural Critique Volume 64 ; 64 >
-    au < released ; Cultural Critique Volume 65 ; 65 >
-    au < released ; Cultural Critique Volume 66 ; 66 >
-    au < released ; Cultural Critique Volume 67 ; 67 >
-    au < released ; Cultural Critique Volume 68 ; 68 >
-    au < released ; Cultural Critique Volume 69 ; 69 >
-    au < released ; Cultural Critique Volume 70 ; 70 >
-    au < released ; Cultural Critique Volume 71 ; 71 >
-    au < released ; Cultural Critique  72 ; 72 >
-    au < released ; Cultural Critique Number 73 ; 73 >
+    au < released ; 2001 ; Cultural Critique 47 ; 47 >
+    au < released ; 2001 ; Cultural Critique 48 ; 48 >
+    au < released ; 2001 ; Cultural Critique 49 ; 49 >
+    au < released ; 2002 ; Cultural Critique 50 ; 50 >
+    au < released ; 2002 ; Cultural Critique 51 ; 51 >
+    au < released ; 2002 ; Cultural Critique 52 ; 52 >
+    au < released ; 2003 ; Cultural Critique 53 ; 53 >
+    au < released ; 2003 ; Cultural Critique 54 ; 54 >
+    au < released ; 2003 ; Cultural Critique 55 ; 55 >
+    au < released ; 2004 ; Cultural Critique 56 ; 56 >
+    au < released ; 2004 ; Cultural Critique 57 ; 57 >
+    au < released ; 2004 ; Cultural Critique 58 ; 58 >
+    au < released ; 2005 ; Cultural Critique 59 ; 59 >
+    au < released ; 2005 ; Cultural Critique 60 ; 60 >
+    au < released ; 2005 ; Cultural Critique 61 ; 61 >
+    au < released ; 2006 ; Cultural Critique 62 ; 62 >
+    au < released ; 2006 ; Cultural Critique 63 ; 63 >
+    au < released ; 2006 ; Cultural Critique 64 ; 64 >
+    au < released ; 2007 ; Cultural Critique 65 ; 65 >
+    au < released ; 2007 ; Cultural Critique 66 ; 66 >
+    au < released ; 2007 ; Cultural Critique 67 ; 67 >
+    au < released ; 2008 ; Cultural Critique 68 ; 68 >
+    au < released ; 2008 ; Cultural Critique 69 ; 69 >
+    au < released ; 2008 ; Cultural Critique 70 ; 70 >
+    au < released ; 2009 ; Cultural Critique 71 ; 71 >
+    au < released ; 2009 ; Cultural Critique 72 ; 72 >
+    au < released ; 2009 ; Cultural Critique Number 73 ; 73 >
+    au < manifest ; 2010 ; Cultural Critique Number 74 ; 74 >
+    au < manifest ; 2010 ; Cultural Critique Number 75 ; 75 >
+    au < manifest ; 2010 ; Cultural Critique Number 76 ; 76 >
+    au < manifest ; 2011 ; Cultural Critique Number 77 ; 77 >
 
   }
 
@@ -74,8 +79,9 @@
 
     param[journal_dir] = future_anterior
 
-    au < released ; Future Anterior Volume 5 ; 5 >
-    au < released ; Future Anterior Volume 6 ; 6 >
+    au < released ; 2008 ; Future Anterior Volume 5 ; 5 >
+    au < released ; 2009 ; Future Anterior Volume 6 ; 6 >
+    au < manifest ; 2010 ; Future Anterior Volume 7 ; 7 >
 
   }
 
@@ -89,10 +95,11 @@
 
     param[journal_dir] = mechademia
 
-    au < released ; Mechademia Volume 1 ; 1 >
-    au < released ; Mechademia Volume 2 ; 2 >
-    au < released ; Mechademia Volume 3 ; 3 >
-    au < released ; Mechademia Volume 4 ; 4 >
+    au < released ; 2006 ; Mechademia Volume 1 ; 1 >
+    au < released ; 2007 ; Mechademia Volume 2 ; 2 >
+    au < released ; 2008 ; Mechademia Volume 3 ; 3 >
+    au < released ; 2009 ; Mechademia Volume 4 ; 4 >
+    au < manifest ; 2010 ; Mechademia Volume 5 ; 5 >
 
   }
 
@@ -106,13 +113,14 @@
 
     param[journal_dir] = the_moving_image
 
-    au < released ; The Moving Image Volume 3 ; 3 >
-    au < released ; The Moving Image Volume 4 ; 4 >
-    au < released ; The Moving Image Volume 5 ; 5 >
-    au < released ; The Moving Image Volume 6 ; 6 >
-    au < released ; The Moving Image Volume 7 ; 7 >
-    au < released ; The Moving Image Volume 8 ; 8 >
-    au < released ; The Moving Image Volume 9 ; 9 >
+    au < released ; 2003 ; The Moving Image Volume 3 ; 3 >
+    au < released ; 2004 ; The Moving Image Volume 4 ; 4 >
+    au < released ; 2005 ; The Moving Image Volume 5 ; 5 >
+    au < released ; 2006 ; The Moving Image Volume 6 ; 6 >
+    au < released ; 2007 ; The Moving Image Volume 7 ; 7 >
+    au < released ; 2008 ; The Moving Image Volume 8 ; 8 >
+    au < released ; 2009 ; The Moving Image Volume 9 ; 9 >
+    au < manifest ; 2010 ; The Moving Image Volume 10 ; 10 >
 
   }
 
@@ -126,16 +134,18 @@
 
     param[journal_dir] = wicazo_sa_review
 
-    au < released ; Wicazo Sa Review Volume 15 ; 15 >
-    au < released ; Wicazo Sa Review Volume 16 ; 16 >
-    au < released ; Wicazo Sa Review Volume 17 ; 17 >
-    au < released ; Wicazo Sa Review Volume 18 ; 18 >
-    au < released ; Wicazo Sa Review Volume 19 ; 19 >
-    au < released ; Wicazo Sa Review Volume 20 ; 20 >
-    au < released ; Wicazo Sa Review Volume 21 ; 21 >
-    au < released ; Wicazo Sa Review Volume 22 ; 22 >
-    au < released ; Wicazo Sa Review Volume 23 ; 23 >
-    au < released ; Wicazo Sa Review Volume 24 ; 24 >
+    au < released ; 2000 ; Wicazo Sa Review Volume 15 ; 15 >
+    au < released ; 2001 ; Wicazo Sa Review Volume 16 ; 16 >
+    au < released ; 2002 ; Wicazo Sa Review Volume 17 ; 17 >
+    au < released ; 2003 ; Wicazo Sa Review Volume 18 ; 18 >
+    au < released ; 2004 ; Wicazo Sa Review Volume 19 ; 19 >
+    au < released ; 2005 ; Wicazo Sa Review Volume 20 ; 20 >
+    au < released ; 2006 ; Wicazo Sa Review Volume 21 ; 21 >
+    au < released ; 2007 ; Wicazo Sa Review Volume 22 ; 22 >
+    au < released ; 2008 ; Wicazo Sa Review Volume 23 ; 23 >
+    au < released ; 2009 ; Wicazo Sa Review Volume 24 ; 24 >
+    au < manifest ; 2010 ; Wicazo Sa Review Volume 25 ; 25 >
+    au < manifest ; 2011 ; Wicazo Sa Review Volume 26 ; 26 >
 
   }
 
