@@ -1030,15 +1030,15 @@
     au < ready ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 284 ; 284 >
     au < ready ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 285 ; 285 >
     au < ready ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 286 ; 286 >
-    au < testing ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 287 ; 287 >
+    au < ready ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 287 ; 287 >
     au < ready ; 1965 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 288 ; 288 >
     au < ready ; 1965-1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 289 ; 289 >
     au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 290 ; 290 >
-    au < testing ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 >
-    au < testing ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 >
+    au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 >
+    au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 >
     au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 293 ; 293 >
     au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 294 ; 294 >
-    au < testing ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 295 ; 295 >
+    au < ready ; 1966 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 295 ; 295 >
     au < ready ; 1967 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 296 ; 296 >
     au < ready ; 1967 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 297 ; 297 >
     au < ready ; 1967 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 298 ; 298 >
@@ -1136,15 +1136,15 @@
     au < ready ; 1983 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 390 ; 390 >
     au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 391 ; 391 >
     au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 392 ; 392 >
-    au < testing ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 393 ; 393 >
+    au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 393 ; 393 >
     au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 394 ; 394 >
     au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 395 ; 395 >
     au < ready ; 1984 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 396 ; 396 >
     au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 397 ; 397 >
-    au < testing ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 398 ; 398 >
+    au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 398 ; 398 >
     au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 399 ; 399 >
     au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 400 ; 400 >
-    au < testing ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 401 ; 401 >
+    au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 401 ; 401 >
     au < ready ; 1985 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 402 ; 402 >
     au < ready ; 1986 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 403 ; 403 >
     au < ready ; 1986 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 404 ; 404 >
@@ -1222,7 +1222,7 @@
       issnl = 0962-8452
     >
 
-    param[base_url] = http://rspb.royalsocietypublishing.org/
+    param[base_url] = http://.royalsocietypublishing.org/
 
     au < released ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 >
     au < released ; 1905-1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 77 ; 77 >
