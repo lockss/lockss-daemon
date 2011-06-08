@@ -4,6 +4,10 @@
     name = University of Iowa
   >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
     {
       title <
         name = Syllecta Classica ;
@@ -11,7 +15,10 @@
         eissn = 2160-5157
       >
 
-      comment[platform] = project muse
+      param[journal_dir] = syllecta_classica
+
+      au < manifest ; 2009 ; Syllecta Classica Volume 20 ; 20 >
+      au < manifest ; 2010 ; Syllecta Classica Volume 21 ; 21 >
 
     }
     
