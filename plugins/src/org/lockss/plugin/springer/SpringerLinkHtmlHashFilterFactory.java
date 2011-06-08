@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.8 2011-04-08 23:40:19 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.9 2011-06-08 02:51:51 thib_gc Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "Header"),
         // Contains account and user agent information
         HtmlNodeFilters.tagWithAttribute("ul", "id", "Footer"),
+        // Contains the name and year of the latest known volume
+        HtmlNodeFilters.tagWithAttributeRegex("p", "class", "coverage"),
         // Contains SFX links
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
         // Has a session cookie

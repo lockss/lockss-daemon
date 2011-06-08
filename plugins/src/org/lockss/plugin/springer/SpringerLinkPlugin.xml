@@ -5,7 +5,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+	<string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
