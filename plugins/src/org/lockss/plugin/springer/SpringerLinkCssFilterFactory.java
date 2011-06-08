@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerLinkCssFilterFactory.java,v 1.1 2010-10-25 21:09:53 thib_gc Exp $
+ * $Id: SpringerLinkCssFilterFactory.java,v 1.2 2011-06-08 23:07:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,9 +47,8 @@ public class SpringerLinkCssFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    Reader reader = StreamUtil.getReader(null, encoding);
-    Reader filteredReader = new HtmlTagFilter(reader, new TagPair("url(", ")"));
-    return new ReaderInputStream(filteredReader);
+    return new ReaderInputStream(new HtmlTagFilter(StreamUtil.getReader(null, encoding),
+                                                   new TagPair("url(", ")")));
   }
   
 }

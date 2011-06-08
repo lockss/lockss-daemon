@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.9 2011-06-08 02:51:51 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.10 2011-06-08 23:07:55 thib_gc Exp $
  */
 
 /*
@@ -32,21 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
-import java.io.InputStream;
+import java.io.*;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
 
+  public static class FilteringException extends PluginException {
+    public FilteringException() { super(); }
+    public FilteringException(String msg, Throwable cause) { super(msg, cause); }
+    public FilteringException(String msg) { super(msg); }
+    public FilteringException(Throwable cause) { super(cause); }
+  }
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         // Contains ad-specific cookies
         new TagNameFilter("script"),
@@ -81,22 +91,17 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // Static, but was added after thousands of AUs had crawled already
         HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    InputStream filteredStream = new HtmlFilterInputStream(in,
+                                                           encoding,
+                                                           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    // Then apply WhitespaceFilter
+    try {
+      return new ReaderInputStream(new WhiteSpaceFilter(new InputStreamReader(filteredStream, encoding)));
+    }
+    catch (UnsupportedEncodingException uee) {
+      throw new FilteringException(uee);
+    }
   }
   
-  public static void main(String[] args) throws Exception {
-    if (args.length == 0) {
-      args = new String[] {
-          "/tmp/HashCUS1", "/tmp/HashCUS2"
-      };
-    }
-    FilterFactory filt = new SpringerLinkHtmlHashFilterFactory();
-    for (String str : args) {
-      InputStream in = filt.createFilteredInputStream(null, new java.io.FileInputStream(str), "UTF-8");
-      org.apache.commons.io.IOUtils.copy(in, new java.io.FileOutputStream(str + ".out"));
-    }
-  }
-
 }
