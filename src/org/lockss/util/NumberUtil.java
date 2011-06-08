@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.1 2011-06-05 19:16:49 pgust Exp $
+ * $Id: NumberUtil.java,v 1.2 2011-06-08 23:19:25 pgust Exp $
  */
 
 /*
@@ -284,72 +284,82 @@ public class NumberUtil {
    * If a list is provided, it will contain Roman number tokens 
    * corresponding to the input string. The roman string "MCMDLLLIX" 
    * returns ["M" "CM" "D" "L" "L" "L" "IX"], while the string 
-   * "(MCM)DLLLIX" returns ["(M)" "(CM)", "D" "L" "L" "IX"]
+   * "(MCM)DLLLIX" returns ["(M)" "(CM)", "D" "L" "L" "IX"]. If the
+   * input roman number is not normalized, the tokens will not be either.
    * 
    * @param s the input Roman string
    * @return roman array of numbers corresponding to the input number
    * @throws NumberFormatException if the input is not a valid Roman number
    */
-  private static int parseRomanNumber(String roman, List<String> list) 
+  private static int parseRomanNumber(String roman, List<String> tokens) 
     throws NumberFormatException {
     String notRomanNumber = "Not a roman number: " + roman;
-    int romanNumber = 0;
-
     if (StringUtil.isNullString(roman)) {
       throw new NumberFormatException(notRomanNumber);
     }
     roman = roman.trim().toUpperCase();
     int romanLength = roman.length();
-
+    
     // determine paren count and corresponding scale of number
     int parenCount = 0;
     int scale = 1;
     int i = 0;
     for (; i < romanLength && (roman.charAt(i) == '('); i++) {
-      parenCount++;
+      if (++parenCount > 2) {
+        throw new NumberFormatException(notRomanNumber);
+      }
       scale *= 1000;  // scale by thousands
     }
 
-    while (i < romanLength) {
+    int romanNumber = 0;
+    int lastTokenVal = Integer.MAX_VALUE;
+    List<String> list = (tokens != null) ? new ArrayList<String>() : null;
+
+    for ( ; i < romanLength; i++) {
       if (roman.charAt(i) == ')') {
         if (--parenCount < 0) {
           throw new NumberFormatException(notRomanNumber);
         }
         scale /= 1000;
-        i++;
+        lastTokenVal = Integer.MAX_VALUE;
       } else {
-        Integer val = null;
-        String token = null;
-        try {
-          token = roman.substring(i,i+2);
-          val = romanToNum.get(token);
-        } catch (IndexOutOfBoundsException ex) {}  // substring checks args
-        if (val == null) {
-          token = roman.substring(i,i+1);
-          val = romanToNum.get(token);
-          if (val == null) {
-            throw new NumberFormatException(notRomanNumber);
-          }
+        String token = roman.substring(i,i+1);
+        Integer tokenVal = romanToNum.get(token);
+        if (tokenVal == null) {
+          throw new NumberFormatException(notRomanNumber);
         }
         // add scaled value and validate number
-        romanNumber += val * scale;
+        tokenVal *= scale;
+        romanNumber += tokenVal;
+        if (tokenVal > lastTokenVal) {
+          // back down number if previous token modified current one (e.g. IV)
+          romanNumber -= 2 * lastTokenVal;
+          if (list != null) {
+            // use previous and current character as token 
+            token = roman.substring(i-1,i+1);
+            list.set(list.size()-1, String.format(romanFmt[parenCount], token));
+          }
+        } else if (list != null) {
+          // add roman token to return list 
+          list.add(String.format(romanFmt[parenCount], token));
+        }
+        lastTokenVal = tokenVal;
         if (romanNumber <= 0) {
           throw new NumberFormatException(notRomanNumber);
         }
-        // add roman token to return list 
-        if (list != null) {
-          list.add(String.format(romanFmt[parenCount], token));
-        }
-        
-        i += token.length();
       }
     }
     
     if (parenCount != 0) {
       throw new NumberFormatException(notRomanNumber);
     }
+    
+    // return tokens and roman number
+    if (list != null) {
+      tokens.addAll(list);
+    }
 
-    return romanNumber;
+    return (int)romanNumber;
   }
   
   /**
