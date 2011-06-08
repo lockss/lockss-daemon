@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.101 2011-04-28 02:23:58 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.102 2011-06-08 23:35:38 pgust Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.text.*;
+import java.text.Normalizer.Form;
 import java.lang.reflect.*;
 import org.apache.oro.text.regex.*;
 import org.apache.commons.lang.StringUtils;
@@ -608,6 +609,15 @@ public class StringUtil {
     Substitution subst = new Perl5Substitution("\\\\$1");
     return Util.substitute(RegexpUtil.getMatcher(), alphanum, subst, str,
 			   Util.SUBSTITUTE_ALL);
+  }
+
+  /**
+   * Normalize string by removing diacritical marks.
+   * @param s the string
+   * @return the string with diacritical marks removed
+   */
+  static public String toUnaccented(String s) {
+    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
   }
 
   /** Escape values (and keys) to be included in a comma-separated string
