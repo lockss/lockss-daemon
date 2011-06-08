@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,7 +17,9 @@
 
     param[journal_dir] = studies_in_the_novel
 
-    au < ready ; Studies in the Novel Volume 40 ; 40 >
+    au < ready ; 2008 ; Studies in the Novel Volume 40 ; 40 >
+    au < manifest ; 2009 ; Studies in the Novel Volume 41 ; 41 >
+    au < manifest ; 2010 ; Studies in the Novel Volume 42 ; 42 >    
 
   }
 

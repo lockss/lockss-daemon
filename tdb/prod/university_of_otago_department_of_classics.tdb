@@ -15,25 +15,25 @@
     rights = openaccess
     plugin = nz.ac.otago.plugin.scholia.ScholiaPlugin
     param[base_url] = http://www.otago.ac.nz/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     
-    au < down ; Scholia Volume 1 ; 1 >
-    au < down ; Scholia Volume 2 ; 2 >
-    au < down ; Scholia Volume 3 ; 3 >
-    au < down ; Scholia Volume 4 ; 4 >
-    au < down ; Scholia Volume 5 ; 5 >
-    au < down ; Scholia Volume 6 ; 6 >
-    au < down ; Scholia Volume 7 ; 7 >
-    au < down ; Scholia Volume 8 ; 8 >
-    au < down ; Scholia Volume 9 ; 9 >
-    au < down ; Scholia Volume 10 ; 10 >
-    au < down ; Scholia Volume 11 ; 11 >
-    au < down ; Scholia Volume 12 ; 12 >
-    au < down ; Scholia Volume 13 ; 13 >
-    au < doNotProcess ; Scholia Volume 14 ; 14 >
-    au < doNotProcess ; Scholia Volume 15 ; 15 >
-    au < doNotProcess ; Scholia Volume 16 ; 16 >
-    au < doNotProcess ; Scholia Volume 17 ; 17 >
+    au < down ; 1992 ; Scholia Volume 1 ; 1 >
+    au < down ; 1993 ; Scholia Volume 2 ; 2 >
+    au < down ; 1994 ; Scholia Volume 3 ; 3 >
+    au < down ; 1995 ; Scholia Volume 4 ; 4 >
+    au < down ; 1996 ; Scholia Volume 5 ; 5 >
+    au < down ; 1997 ; Scholia Volume 6 ; 6 >
+    au < down ; 1998 ; Scholia Volume 7 ; 7 >
+    au < down ; 1999 ; Scholia Volume 8 ; 8 >
+    au < down ; 2000 ; Scholia Volume 9 ; 9 >
+    au < down ; 2001 ; Scholia Volume 10 ; 10 >
+    au < down ; 2002 ; Scholia Volume 11 ; 11 >
+    au < down ; 2003 ; Scholia Volume 12 ; 12 >
+    au < down ; 2004 ; Scholia Volume 13 ; 13 >
+    au < doNotProcess ; 2005 ; Scholia Volume 14 ; 14 >
+    au < doNotProcess ; 2006 ; Scholia Volume 15 ; 15 >
+    au < doNotProcess ; 2007 ; Scholia Volume 16 ; 16 >
+    au < doNotProcess ; 2008 ; Scholia Volume 17 ; 17 >
 
   }
   
