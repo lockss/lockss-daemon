@@ -14,6 +14,13 @@
   
     rights = openaccess
     comment[platform] = OJS2
+
+    param[base_url] = http://www.logicandanalysis.org/
+    param[journal_dir] = jla
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2009 ; Journal of Logic and Analysis Volume 1 ; 1 >
+    au < exists ; 2010 ; Journal of Logic and Analysis Volume 2 ; 2 >
     
   }
 
