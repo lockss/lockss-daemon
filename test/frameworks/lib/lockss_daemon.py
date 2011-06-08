@@ -557,6 +557,22 @@ class Client:
             if 'NodeStatus' in row and row[ 'NodeName' ] == ( node.url if node else 'lockssau' ):
                 return row[ 'NodeStatus' ] == 'Damaged'
 
+    def hasNoSubstance( self, AU ):
+        """Return False if the AU has substance, True if it does not,
+        and None if the AU has no substance checking. The annoying
+        negative logic allows code to check 'if hasNoSubstance()' and
+        have both False (meaning Yes, there is substance) and None
+        (meaning there is no substance checking) to go down one
+        branch, while the other branch means that the AU's substance
+        checkers have run, and have found that there is no
+        substance."""
+        table = self._getStatusTable( 'ArchivalUnitTable', AU.auId,
+                                      noRows = True )[ 0 ]
+        try:
+            return table[ 'Has Substance' ] == 'No'
+        except KeyError:
+            return None
+
     def crawl_successful( self, AU, new_crawl = True ):
         """True if the specified AU has (newly if new_crawl) crawled successfully."""
         try:
@@ -930,7 +946,7 @@ class Client:
     ###
 
     def _getStatusTable( self, statusTable, key = None, unlimited_rows = False,
-                         outputVersion = None , columns = None):
+                         outputVersion = None, columns = None, noRows = None ):
         """Given an XML string, parse it as a status table and return
         a list of dictionaries representing the data.  Each item in
         the list is a dictionary of column names to values, stored as
@@ -940,10 +956,12 @@ class Client:
             form_data[ 'key' ] = key
         if unlimited_rows:
             form_data[ 'numrows' ] = 0x7fffffff # JAVA Integer.MAX_VALUE
-        if outputVersion:
+        if outputVersion is not None:
             form_data[ 'outputVersion' ] = outputVersion
         if columns:
             form_data[ 'columns' ] = columns
+        if noRows:
+            form_data[ 'norows' ] = 1
         XML = self.__execute_post( 'DaemonStatus', form_data ).read()
         log.debug3( 'Received XML response:\n' + XML )
         doc = xml.dom.minidom.parseString( XML )
