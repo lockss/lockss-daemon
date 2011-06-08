@@ -1,5 +1,5 @@
 /*
- * $Id: AlphanumericComparator.java,v 1.4 2011-05-25 13:31:11 easyonthemayo Exp $
+ * $Id: AlphanumericComparator.java,v 1.5 2011-06-08 23:38:03 pgust Exp $
  */
 
 /*
@@ -159,22 +159,13 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
   }
   
   /**
-   * Normalize string by removing diacritical marks.
-   * @param s the string
-   * @return the string with diacritical marks removed
-   */
-  static String toUnaccented(String s) {
-    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-  }
- 
-  /**
    * Perform any string normalisation required for comparison. Currently this involves 
    * removing accents and/or lower casing, based on the flags defined in this class.
    * @param s the string to normalise
    * @return the normalised string
    */
   private String normalise(String s) {
-    if (UNACCENTED_COMPARISON_DEFAULT) s = toUnaccented(s);
+    if (UNACCENTED_COMPARISON_DEFAULT) s = StringUtil.toUnaccented(s);
     return caseSensitive ? s : s.toLowerCase();
   }
     
@@ -315,8 +306,8 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
       tok2 = tok2.toLowerCase(); 
     }
     // Remove accents for comparison
-    tok1 = toUnaccented(tok1);
-    tok2 = toUnaccented(tok2);
+    tok1 = StringUtil.toUnaccented(tok1);
+    tok2 = StringUtil.toUnaccented(tok2);
 
     // -------------------------------------------------------------------------------------------
     // NOTE

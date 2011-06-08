@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.4 2011-02-16 00:27:48 pgust Exp $
+ * $Id: PublicationDate.java,v 1.5 2011-06-08 23:36:25 pgust Exp $
  */
 
 /*
@@ -31,14 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import java.text.Normalizer;
-import java.text.Normalizer.Form;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import org.lockss.util.StringUtil;
 
 /**
  * This class implements a journal or book publication date. The date
@@ -372,14 +372,14 @@ public class PublicationDate {
   public PublicationDate(String dateStr, Locale locale) {
     
     // normalize by stripping accents and lower-casing
-    dateStr = toUnaccented(dateStr).toLowerCase(locale);
+    dateStr = StringUtil.toUnaccented(dateStr).toLowerCase(locale);
 
     // get season
     Map<String,Integer> myseasons = seasons.get(locale.getLanguage());
     if (myseasons != null) {
       // match season phrases as whole words.
       for (Map.Entry<String,Integer> entry : myseasons.entrySet()) {
-        String key = toUnaccented(entry.getKey()).toLowerCase(locale);
+        String key = StringUtil.toUnaccented(entry.getKey()).toLowerCase(locale);
         String match = key + " ";
         if (!dateStr.startsWith(match)) {
           match = key + ",";
@@ -407,7 +407,7 @@ public class PublicationDate {
     if (myquarters != null) {
       // match quarter phrases as whole words.
       for (Map.Entry<String,Integer> entry : myquarters.entrySet()) {
-        String key = toUnaccented(entry.getKey()).toLowerCase(locale);
+        String key = StringUtil.toUnaccented(entry.getKey()).toLowerCase(locale);
         String match = key + " ";
         if (!dateStr.startsWith(match)) {
           match = key + ",";
@@ -450,7 +450,7 @@ public class PublicationDate {
         for (Map.Entry<String,Integer> entry : months.entrySet()) {
           // strip punctuation because keys for a few locales 
           // include trailing punctuation with their abbreviations
-          if (toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(w)) {
+          if (StringUtil.toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(w)) {
             month = entry.getValue()+1;
             break;
           }
@@ -495,7 +495,7 @@ public class PublicationDate {
       for (int i = 0; i < len; i++) {
         Integer n = null;
         for (Map.Entry<String, Integer> entry : months.entrySet()) {
-          if (toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
+          if (StringUtil.toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
             n = entry.getValue();
             break;
           }
@@ -620,15 +620,6 @@ public class PublicationDate {
     return new PublicationDate(pubDateStr, locale);
   }
   
-  /**
-   * Normalize string by removing diacriticle marks.
-   * @param s the string
-   * @return the string with diacritical marks removed
-   */
-  static private String toUnaccented(String s) {
-    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-  }
-
   /**
    * Return string representation of the publication date in extended
    * ISO-8601 format: YYYY, YYYY-MM, YYYY-MM-DD, YYYY-QQ, YYYY-SS, where
