@@ -461,7 +461,7 @@
     au < released ; 2008 ; Asian Review of Accounting Volume 16 ; 16 >
     au < released ; 2009 ; Asian Review of Accounting Volume 17 ; 17 >
     au < ready ; 2010 ; Asian Review of Accounting Volume 18 ; 18 >
-    au < testing ; 2011 ; Asian Review of Accounting Volume 19 ; 19 >
+    au < ready ; 2011 ; Asian Review of Accounting Volume 19 ; 19 >
 
   }
 
@@ -2097,26 +2097,26 @@
     param[journal_issn] = 0965-4283
     comment[platform] = online from 1992
     
-    au < manifest ; 1992 ; Health Education Volume 92 ; 92 >
-    au < manifest ; 1993 ; Health Education Volume 93 ; 93 >
-    au < manifest ; 1994 ; Health Education Volume 94 ; 94 >
-    au < manifest ; 1995 ; Health Education Volume 95 ; 95 >
-    au < manifest ; 1996 ; Health Education Volume 96 ; 96 >
-    au < manifest ; 1997 ; Health Education Volume 97 ; 97 >
-    au < manifest ; 1998 ; Health Education Volume 98 ; 98 >
-    au < manifest ; 1999 ; Health Education Volume 99 ; 99 >
-    au < manifest ; 2000 ; Health Education Volume 100 ; 100 >
-    au < manifest ; 2001 ; Health Education Volume 101 ; 101 >
-    au < manifest ; 2002 ; Health Education Volume 102 ; 102 >
-    au < manifest ; 2003 ; Health Education Volume 103 ; 103 >
-    au < manifest ; 2004 ; Health Education Volume 104 ; 104 >
-    au < manifest ; 2005 ; Health Education Volume 105 ; 105 >
-    au < manifest ; 2006 ; Health Education Volume 106 ; 106 >
-    au < manifest ; 2007 ; Health Education Volume 107 ; 107 >
-    au < manifest ; 2008 ; Health Education Volume 108 ; 108 >
-    au < manifest ; 2009 ; Health Education Volume 109 ; 109 >
-    au < manifest ; 2010 ; Health Education Volume 110 ; 110 >
-    au < manifest ; 2011 ; Health Education Volume 111 ; 111 >
+    au < ready ; 1992 ; Health Education Volume 92 ; 92 >
+    au < ready ; 1993 ; Health Education Volume 93 ; 93 >
+    au < ready ; 1994 ; Health Education Volume 94 ; 94 >
+    au < ready ; 1995 ; Health Education Volume 95 ; 95 >
+    au < ready ; 1996 ; Health Education Volume 96 ; 96 >
+    au < ready ; 1997 ; Health Education Volume 97 ; 97 >
+    au < ready ; 1998 ; Health Education Volume 98 ; 98 >
+    au < ready ; 1999 ; Health Education Volume 99 ; 99 >
+    au < ready ; 2000 ; Health Education Volume 100 ; 100 >
+    au < ready ; 2001 ; Health Education Volume 101 ; 101 >
+    au < ready ; 2002 ; Health Education Volume 102 ; 102 >
+    au < ready ; 2003 ; Health Education Volume 103 ; 103 >
+    au < ready ; 2004 ; Health Education Volume 104 ; 104 >
+    au < ready ; 2005 ; Health Education Volume 105 ; 105 >
+    au < ready ; 2006 ; Health Education Volume 106 ; 106 >
+    au < ready ; 2007 ; Health Education Volume 107 ; 107 >
+    au < ready ; 2008 ; Health Education Volume 108 ; 108 >
+    au < ready ; 2009 ; Health Education Volume 109 ; 109 >
+    au < ready ; 2010 ; Health Education Volume 110 ; 110 >
+    au < ready ; 2011 ; Health Education Volume 111 ; 111 >
 
   }
 
@@ -3132,8 +3132,8 @@
 
     param[journal_issn] = 1758-2954
 
-    au < testing ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 >
-    au < testing ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 >
+    au < ready ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 >
+    au < ready ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 >
 
   }
 
@@ -6688,6 +6688,7 @@
 
     param[journal_issn] = 0309-0558
     comment[continued_by] = 1754-243X
+    comment[1] = empty manifest roundup issue 3507
     
     au < exists ; 1966-1967 ; Managerial Law Volume 1 ; 1 >
     au < ready ; 1967 ; Managerial Law Volume 2 ; 2 >
@@ -7088,6 +7089,7 @@
 
     param[journal_issn] = 0034-6659
     comment[platform] = online from 1971
+    comment[93] = empty manifest roundup issue 3507
 
     au < ready ; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
     au < ready ; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
@@ -7635,9 +7637,9 @@
 
     param[journal_issn] = 1755-4179
 
-    au < testing ; 2009 ; Qualitative Research in Financial Markets Volume 1 ; 1 >
-    au < testing ; 2010 ; Qualitative Research in Financial Markets Volume 2 ; 2 >
-    au < testing ; 2011 ; Qualitative Research in Financial Markets Volume 3 ; 3 >
+    au < ready ; 2009 ; Qualitative Research in Financial Markets Volume 1 ; 1 >
+    au < ready ; 2010 ; Qualitative Research in Financial Markets Volume 2 ; 2 >
+    au < ready ; 2011 ; Qualitative Research in Financial Markets Volume 3 ; 3 >
 
   }
 
@@ -8358,7 +8360,7 @@
     au < released ; 2008 ; Tourism Review Volume 63 ; 63 >
     au < released ; 2009 ; Tourism Review Volume 64 ; 64 >
     au < released ; 2010 ; Tourism Review Volume 65 ; 65 >
-    au < testing ; 2011 ; Tourism Review Volume 66 ; 66 >
+    au < ready ; 2011 ; Tourism Review Volume 66 ; 66 >
 
   }
 
