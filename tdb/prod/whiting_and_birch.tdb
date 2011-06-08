@@ -4,11 +4,14 @@
     name = Whiting and Birch
   >
 
-    comment[platform] = Ingenta
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = wab
+    implicit < status ; year; name ; param[volume_name] >
+    comment[0] = check tdb with plugin 
 
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://www.ingentaconnect.com/content/wab/
- 
   {
   
     title <
@@ -19,6 +22,7 @@
     >
 
       param[journal_dir] = gijwg
+      param[journal_issn] = 0951-824X
 
       au < exists ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
       au < exists ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
@@ -40,6 +44,7 @@
     >
 
       param[journal_dir] = jpthsw                                  
+      param[journal_issn] = 1460-6690
 
       au < exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
       au < exists ; 2006 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
@@ -60,6 +65,7 @@
     >
 
       param[journal_dir] = swssr
+      param[journal_issn] = 0953-5225
 
       au < exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
       au < exists ; 2005,2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
