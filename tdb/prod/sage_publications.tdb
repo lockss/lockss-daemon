@@ -15293,6 +15293,49 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jen.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1977-1978 ; Journal of Building Physics Volume 1 ; 1 >
+        au < manifest ; 1978-1979 ; Journal of Building Physics Volume 2 ; 2 >
+        au < manifest ; 1979-1980 ; Journal of Building Physics Volume 3 ; 3 >
+        au < manifest ; 1980-1981 ; Journal of Building Physics Volume 4 ; 4 >
+        au < manifest ; 1981-1982 ; Journal of Building Physics Volume 5 ; 5 >
+        au < manifest ; 1982-1983 ; Journal of Building Physics Volume 6 ; 6 >
+        au < manifest ; 1983-1984 ; Journal of Building Physics Volume 7 ; 7 >
+        au < manifest ; 1984-1985 ; Journal of Building Physics Volume 8 ; 8 >
+        au < manifest ; 1985-1986 ; Journal of Building Physics Volume 9 ; 9 >
+        au < manifest ; 1986-1987 ; Journal of Building Physics Volume 10 ; 10 >
+        au < manifest ; 1987-1988 ; Journal of Building Physics Volume 11 ; 11 >
+        au < manifest ; 1988-1989 ; Journal of Building Physics Volume 12 ; 12 >
+        au < manifest ; 1989-1990 ; Journal of Building Physics Volume 13 ; 13 >
+        au < manifest ; 1990-1991 ; Journal of Building Physics Volume 14 ; 14 >
+        au < manifest ; 1991-1992 ; Journal of Building Physics Volume 15 ; 15 >
+        au < manifest ; 1992-1993 ; Journal of Building Physics Volume 16 ; 16 >
+        au < manifest ; 1993-1994 ; Journal of Building Physics Volume 17 ; 17 >
+        au < manifest ; 1994-1995 ; Journal of Building Physics Volume 18 ; 18 >
+        au < manifest ; 1995-1996 ; Journal of Building Physics Volume 19 ; 19 >
+        au < manifest ; 1996-1997 ; Journal of Building Physics Volume 20 ; 20 >
+        au < manifest ; 1997-1998 ; Journal of Building Physics Volume 21 ; 21 >
+        au < manifest ; 1998-1999 ; Journal of Building Physics Volume 22 ; 22 >
+        au < manifest ; 1999-2000 ; Journal of Building Physics Volume 23 ; 23 >
+        au < manifest ; 2000-2001 ; Journal of Building Physics Volume 24 ; 24 >
+        au < manifest ; 2001-2002 ; Journal of Building Physics Volume 25 ; 25 >
+        au < manifest ; 2002-2003 ; Journal of Building Physics Volume 26 ; 26 >
+        au < manifest ; 2003-2004 ; Journal of Building Physics Volume 27 ; 27 >
+        au < manifest ; 2004-2005 ; Journal of Building Physics Volume 28 ; 28 >
+        au < manifest ; 2005-2006 ; Journal of Building Physics Volume 29 ; 29 >
+        au < manifest ; 2006-2007 ; Journal of Building Physics Volume 30 ; 30 >
+        au < manifest ; 2007-2008 ; Journal of Building Physics Volume 31 ; 31 >
+        au < manifest ; 2008-2009 ; Journal of Building Physics Volume 32 ; 32 >
+        au < manifest ; 2009-2010 ; Journal of Building Physics Volume 33 ; 33 >
+        au < manifest ; 2010-2011 ; Journal of Building Physics Volume 34 ; 34 >
+
+      }
+
     }
 
     {
@@ -15328,6 +15371,40 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jbt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Journal of Business and Technical Communication Volume 1 ; 1 >
+        au < manifest ; 1988 ; Journal of Business and Technical Communication Volume 2 ; 2 >
+        au < manifest ; 1989 ; Journal of Business and Technical Communication Volume 3 ; 3 >
+        au < manifest ; 1990 ; Journal of Business and Technical Communication Volume 4 ; 4 >
+        au < manifest ; 1991 ; Journal of Business and Technical Communication Volume 5 ; 5 >
+        au < manifest ; 1992 ; Journal of Business and Technical Communication Volume 6 ; 6 >
+        au < manifest ; 1993 ; Journal of Business and Technical Communication Volume 7 ; 7 >
+        au < manifest ; 1994 ; Journal of Business and Technical Communication Volume 8 ; 8 >
+        au < manifest ; 1995 ; Journal of Business and Technical Communication Volume 9 ; 9 >
+        au < manifest ; 1996 ; Journal of Business and Technical Communication Volume 10 ; 10 >
+        au < manifest ; 1997 ; Journal of Business and Technical Communication Volume 11 ; 11 >
+        au < manifest ; 1998 ; Journal of Business and Technical Communication Volume 12 ; 12 >
+        au < manifest ; 1999 ; Journal of Business and Technical Communication Volume 13 ; 13 >
+        au < manifest ; 2000 ; Journal of Business and Technical Communication Volume 14 ; 14 >
+        au < manifest ; 2001 ; Journal of Business and Technical Communication Volume 15 ; 15 >
+        au < manifest ; 2002 ; Journal of Business and Technical Communication Volume 16 ; 16 >
+        au < manifest ; 2003 ; Journal of Business and Technical Communication Volume 17 ; 17 >
+        au < manifest ; 2004 ; Journal of Business and Technical Communication Volume 18 ; 18 >
+        au < manifest ; 2005 ; Journal of Business and Technical Communication Volume 19 ; 19 >
+        au < manifest ; 2006 ; Journal of Business and Technical Communication Volume 20 ; 20 >
+        au < manifest ; 2007 ; Journal of Business and Technical Communication Volume 21 ; 21 >
+        au < manifest ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 >
+        au < manifest ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 >
+        au < manifest ; 2010 ; Journal of Business and Technical Communication Volume 24 ; 24 >
+        au < manifest ; 2011 ; Journal of Business and Technical Communication Volume 25 ; 25 >
+
+      }
+
     }
 
     {
@@ -15350,6 +15427,105 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jdr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1919 ; Journal of Dental Research Volume 1 ; 1 >
+        au < manifest ; 1920 ; Journal of Dental Research Volume 2 ; 2 >
+        au < manifest ; 1921 ; Journal of Dental Research Volume 3 ; 3 >
+        au < manifest ; 1922 ; Journal of Dental Research Volume 4 ; 4 >
+        au < manifest ; 1923 ; Journal of Dental Research Volume 5 ; 5 >
+        au < manifest ; 1924 ; Journal of Dental Research Volume 6 ; 6 >
+        au < manifest ; 1927 ; Journal of Dental Research Volume 7 ; 7 >
+        au < manifest ; 1928 ; Journal of Dental Research Volume 8 ; 8 >
+        au < manifest ; 1929 ; Journal of Dental Research Volume 9 ; 9 >
+        au < manifest ; 1930 ; Journal of Dental Research Volume 10 ; 10 >
+        au < manifest ; 1931 ; Journal of Dental Research Volume 11 ; 11 >
+        au < manifest ; 1932 ; Journal of Dental Research Volume 12 ; 12 >
+        au < manifest ; 1933 ; Journal of Dental Research Volume 13 ; 13 >
+        au < manifest ; 1934 ; Journal of Dental Research Volume 14 ; 14 >
+        au < manifest ; 1935 ; Journal of Dental Research Volume 15 ; 15 >
+        au < manifest ; 1937 ; Journal of Dental Research Volume 16 ; 16 >
+        au < manifest ; 1938 ; Journal of Dental Research Volume 17 ; 17 >
+        au < manifest ; 1939 ; Journal of Dental Research Volume 18 ; 18 >
+        au < manifest ; 1940 ; Journal of Dental Research Volume 19 ; 19 >
+        au < manifest ; 1941 ; Journal of Dental Research Volume 20 ; 20 >
+        au < manifest ; 1942 ; Journal of Dental Research Volume 21 ; 21 >
+        au < manifest ; 1943 ; Journal of Dental Research Volume 22 ; 22 >
+        au < manifest ; 1944 ; Journal of Dental Research Volume 23 ; 23 >
+        au < manifest ; 1945 ; Journal of Dental Research Volume 24 ; 24 >
+        au < manifest ; 1946 ; Journal of Dental Research Volume 25 ; 25 >
+        au < manifest ; 1947 ; Journal of Dental Research Volume 26 ; 26 >
+        au < manifest ; 1948 ; Journal of Dental Research Volume 27 ; 27 >
+        au < manifest ; 1949 ; Journal of Dental Research Volume 28 ; 28 >
+        au < manifest ; 1950 ; Journal of Dental Research Volume 29 ; 29 >
+        au < manifest ; 1951 ; Journal of Dental Research Volume 30 ; 30 >
+        au < manifest ; 1952 ; Journal of Dental Research Volume 31 ; 31 >
+        au < manifest ; 1953 ; Journal of Dental Research Volume 32 ; 32 >
+        au < manifest ; 1954 ; Journal of Dental Research Volume 33 ; 33 >
+        au < manifest ; 1955 ; Journal of Dental Research Volume 34 ; 34 >
+        au < manifest ; 1956 ; Journal of Dental Research Volume 35 ; 35 >
+        au < manifest ; 1957 ; Journal of Dental Research Volume 36 ; 36 >
+        au < manifest ; 1958 ; Journal of Dental Research Volume 37 ; 37 >
+        au < manifest ; 1959 ; Journal of Dental Research Volume 38 ; 38 >
+        au < manifest ; 1960 ; Journal of Dental Research Volume 39 ; 39 >
+        au < manifest ; 1961 ; Journal of Dental Research Volume 40 ; 40 >
+        au < manifest ; 1962 ; Journal of Dental Research Volume 41 ; 41 >
+        au < manifest ; 1963 ; Journal of Dental Research Volume 42 ; 42 >
+        au < manifest ; 1964 ; Journal of Dental Research Volume 43 ; 43 >
+        au < manifest ; 1965 ; Journal of Dental Research Volume 44 ; 44 >
+        au < manifest ; 1966 ; Journal of Dental Research Volume 45 ; 45 >
+        au < manifest ; 1967 ; Journal of Dental Research Volume 46 ; 46 >
+        au < manifest ; 1968 ; Journal of Dental Research Volume 47 ; 47 >
+        au < manifest ; 1969 ; Journal of Dental Research Volume 48 ; 48 >
+        au < manifest ; 1970 ; Journal of Dental Research Volume 49 ; 49 >
+        au < manifest ; 1971 ; Journal of Dental Research Volume 50 ; 50 >
+        au < manifest ; 1972 ; Journal of Dental Research Volume 51 ; 51 >
+        au < manifest ; 1973 ; Journal of Dental Research Volume 52 ; 52 >
+        au < manifest ; 1974 ; Journal of Dental Research Volume 53 ; 53 >
+        au < manifest ; 1975 ; Journal of Dental Research Volume 54 ; 54 >
+        au < manifest ; 1976 ; Journal of Dental Research Volume 55 ; 55 >
+        au < manifest ; 1977 ; Journal of Dental Research Volume 56 ; 56 >
+        au < manifest ; 1978 ; Journal of Dental Research Volume 57 ; 57 >
+        au < manifest ; 1979 ; Journal of Dental Research Volume 58 ; 58 >
+        au < manifest ; 1980 ; Journal of Dental Research Volume 59 ; 59 >
+        au < manifest ; 1981 ; Journal of Dental Research Volume 60 ; 60 >
+        au < manifest ; 1982 ; Journal of Dental Research Volume 61 ; 61 >
+        au < manifest ; 1983 ; Journal of Dental Research Volume 62 ; 62 >
+        au < manifest ; 1984 ; Journal of Dental Research Volume 63 ; 63 >
+        au < manifest ; 1985 ; Journal of Dental Research Volume 64 ; 64 >
+        au < manifest ; 1986 ; Journal of Dental Research Volume 65 ; 65 >
+        au < manifest ; 1987 ; Journal of Dental Research Volume 66 ; 66 >
+        au < manifest ; 1988 ; Journal of Dental Research Volume 67 ; 67 >
+        au < manifest ; 1989 ; Journal of Dental Research Volume 68 ; 68 >
+        au < manifest ; 1990 ; Journal of Dental Research Volume 69 ; 69 >
+        au < manifest ; 1991 ; Journal of Dental Research Volume 70 ; 70 >
+        au < manifest ; 1992 ; Journal of Dental Research Volume 71 ; 71 >
+        au < manifest ; 1993 ; Journal of Dental Research Volume 72 ; 72 >
+        au < manifest ; 1994 ; Journal of Dental Research Volume 73 ; 73 >
+        au < manifest ; 1995 ; Journal of Dental Research Volume 74 ; 74 >
+        au < manifest ; 1996 ; Journal of Dental Research Volume 75 ; 75 >
+        au < manifest ; 1997 ; Journal of Dental Research Volume 76 ; 76 >
+        au < manifest ; 1998 ; Journal of Dental Research Volume 77 ; 77 >
+        au < manifest ; 1999 ; Journal of Dental Research Volume 78 ; 78 >
+        au < manifest ; 2000 ; Journal of Dental Research Volume 79 ; 79 >
+        au < manifest ; 2001 ; Journal of Dental Research Volume 80 ; 80 >
+        au < manifest ; 2002 ; Journal of Dental Research Volume 81 ; 81 >
+        au < manifest ; 2003 ; Journal of Dental Research Volume 82 ; 82 >
+        au < manifest ; 2004 ; Journal of Dental Research Volume 83 ; 83 >
+        au < manifest ; 2005 ; Journal of Dental Research Volume 84 ; 84 >
+        au < manifest ; 2006 ; Journal of Dental Research Volume 85 ; 85 >
+        au < manifest ; 2007 ; Journal of Dental Research Volume 86 ; 86 >
+        au < manifest ; 2008 ; Journal of Dental Research Volume 87 ; 87 >
+        au < manifest ; 2009 ; Journal of Dental Research Volume 88 ; 88 >
+        au < manifest ; 2010 ; Journal of Dental Research Volume 89 ; 89 >
+        au < manifest ; 2011 ; Journal of Dental Research Volume 90 ; 90 >
+
+      }
+
     }
   
     {
@@ -15385,6 +15561,63 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://job.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1963 ; Journal of Business Communication Volume 1 ; 1 >
+        au < manifest ; 1965 ; Journal of Business Communication Volume 2 ; 2 >
+        au < manifest ; 1966 ; Journal of Business Communication Volume 3 ; 3 >
+        au < manifest ; 1967 ; Journal of Business Communication Volume 4 ; 4 >
+        au < manifest ; 1967 ; Journal of Business Communication Volume 5 ; 5 >
+        au < manifest ; 1968 ; Journal of Business Communication Volume 6 ; 6 >
+        au < manifest ; 1969 ; Journal of Business Communication Volume 7 ; 7 >
+        au < manifest ; 1970 ; Journal of Business Communication Volume 8 ; 8 >
+        au < manifest ; 1971 ; Journal of Business Communication Volume 9 ; 9 >
+        au < manifest ; 1972 ; Journal of Business Communication Volume 10 ; 10 >
+        au < manifest ; 1973 ; Journal of Business Communication Volume 11 ; 11 >
+        au < manifest ; 1974 ; Journal of Business Communication Volume 12 ; 12 >
+        au < manifest ; 1975 ; Journal of Business Communication Volume 13 ; 13 >
+        au < manifest ; 1976 ; Journal of Business Communication Volume 14 ; 14 >
+        au < manifest ; 1977 ; Journal of Business Communication Volume 15 ; 15 >
+        au < manifest ; 1978 ; Journal of Business Communication Volume 16 ; 16 >
+        au < manifest ; 1979 ; Journal of Business Communication Volume 17 ; 17 >
+        au < manifest ; 1981 ; Journal of Business Communication Volume 18 ; 18 >
+        au < manifest ; 1982 ; Journal of Business Communication Volume 19 ; 19 >
+        au < manifest ; 1983 ; Journal of Business Communication Volume 20 ; 20 >
+        au < manifest ; 1984 ; Journal of Business Communication Volume 21 ; 21 >
+        au < manifest ; 1985 ; Journal of Business Communication Volume 22 ; 22 >
+        au < manifest ; 1986 ; Journal of Business Communication Volume 23 ; 23 >
+        au < manifest ; 1987 ; Journal of Business Communication Volume 24 ; 24 >
+        au < manifest ; 1988 ; Journal of Business Communication Volume 25 ; 25 >
+        au < manifest ; 1989 ; Journal of Business Communication Volume 26 ; 26 >
+        au < manifest ; 1990 ; Journal of Business Communication Volume 27 ; 27 >
+        au < manifest ; 1991 ; Journal of Business Communication Volume 28 ; 28 >
+        au < manifest ; 1992 ; Journal of Business Communication Volume 29 ; 29 >
+        au < manifest ; 1993 ; Journal of Business Communication Volume 30 ; 30 >
+        au < manifest ; 1994 ; Journal of Business Communication Volume 31 ; 31 >
+        au < manifest ; 1995 ; Journal of Business Communication Volume 32 ; 32 >
+        au < manifest ; 1996 ; Journal of Business Communication Volume 33 ; 33 >
+        au < manifest ; 1997 ; Journal of Business Communication Volume 34 ; 34 >
+        au < manifest ; 1998 ; Journal of Business Communication Volume 35 ; 35 >
+        au < manifest ; 1999 ; Journal of Business Communication Volume 36 ; 36 >
+        au < manifest ; 2000 ; Journal of Business Communication Volume 37 ; 37 >
+        au < manifest ; 2001 ; Journal of Business Communication Volume 38 ; 38 >
+        au < manifest ; 2002 ; Journal of Business Communication Volume 39 ; 39 >
+        au < manifest ; 2003 ; Journal of Business Communication Volume 40 ; 40 >
+        au < manifest ; 2004 ; Journal of Business Communication Volume 41 ; 41 >
+        au < manifest ; 2005 ; Journal of Business Communication Volume 42 ; 42 >
+        au < manifest ; 2006 ; Journal of Business Communication Volume 43 ; 43 >
+        au < manifest ; 2007 ; Journal of Business Communication Volume 44 ; 44 >
+        au < manifest ; 2008 ; Journal of Business Communication Volume 45 ; 45 >
+        au < manifest ; 2009 ; Journal of Business Communication Volume 46 ; 46 >
+        au < manifest ; 2010 ; Journal of Business Communication Volume 47 ; 47 >
+        au < manifest ; 2011 ; Journal of Business Communication Volume 48 ; 48 >
+
+      }
+
     }
 
     {
@@ -15407,6 +15640,31 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cpt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1996 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 1 ; 1 >
+        au < manifest ; 1997 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 2 ; 2 >
+        au < manifest ; 1998 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 3 ; 3 >
+        au < manifest ; 1999 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 4 ; 4 >
+        au < manifest ; 2000 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 5 ; 5 >
+        au < manifest ; 2001 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 6 ; 6 >
+        au < manifest ; 2002 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 7 ; 7 >
+        au < manifest ; 2003 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 8 ; 8 >
+        au < manifest ; 2004 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 9 ; 9 >
+        au < manifest ; 2005 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 10 ; 10 >
+        au < manifest ; 2006 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 11 ; 11 >
+        au < manifest ; 2007 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 12 ; 12 >
+        au < manifest ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
+        au < manifest ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
+        au < manifest ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 >
+        au < manifest ; 2011 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 16 ; 16 >
 
       }
 
@@ -15445,6 +15703,34 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jca.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1993 ; Journal of Career Assessment Volume 1 ; 1 >
+        au < manifest ; 1994 ; Journal of Career Assessment Volume 2 ; 2 >
+        au < manifest ; 1995 ; Journal of Career Assessment Volume 3 ; 3 >
+        au < manifest ; 1996 ; Journal of Career Assessment Volume 4 ; 4 >
+        au < manifest ; 1997 ; Journal of Career Assessment Volume 5 ; 5 >
+        au < manifest ; 1998 ; Journal of Career Assessment Volume 6 ; 6 >
+        au < manifest ; 1999 ; Journal of Career Assessment Volume 7 ; 7 >
+        au < manifest ; 2000 ; Journal of Career Assessment Volume 8 ; 8 >
+        au < manifest ; 2001 ; Journal of Career Assessment Volume 9 ; 9 >
+        au < manifest ; 2002 ; Journal of Career Assessment Volume 10 ; 10 >
+        au < manifest ; 2003 ; Journal of Career Assessment Volume 11 ; 11 >
+        au < manifest ; 2004 ; Journal of Career Assessment Volume 12 ; 12 >
+        au < manifest ; 2005 ; Journal of Career Assessment Volume 13 ; 13 >
+        au < manifest ; 2006 ; Journal of Career Assessment Volume 14 ; 14 >
+        au < manifest ; 2007 ; Journal of Career Assessment Volume 15 ; 15 >
+        au < manifest ; 2008 ; Journal of Career Assessment Volume 16 ; 16 >
+        au < manifest ; 2009 ; Journal of Career Assessment Volume 17 ; 17 >
+        au < manifest ; 2010 ; Journal of Career Assessment Volume 18 ; 18 >
+        au < manifest ; 2011 ; Journal of Career Assessment Volume 19 ; 19 >
+
+      }
+
     }
 
     {
@@ -15479,6 +15765,53 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972-1973 ; Journal of Career Development Volume 1 ; 1 >
+        au < manifest ; 1975-1976 ; Journal of Career Development Volume 2 ; 2 >
+        au < manifest ; 1976-1977 ; Journal of Career Development Volume 3 ; 3 >
+        au < manifest ; 1977-1978 ; Journal of Career Development Volume 4 ; 4 >
+        au < manifest ; 1978-1979 ; Journal of Career Development Volume 5 ; 5 >
+        au < manifest ; 1979-1980 ; Journal of Career Development Volume 6 ; 6 >
+        au < manifest ; 1980-1981 ; Journal of Career Development Volume 7 ; 7 >
+        au < manifest ; 1981-1982 ; Journal of Career Development Volume 8 ; 8 >
+        au < manifest ; 1982-1983 ; Journal of Career Development Volume 9 ; 9 >
+        au < manifest ; 1983-1984 ; Journal of Career Development Volume 10 ; 10 >
+        au < manifest ; 1984-1985 ; Journal of Career Development Volume 11 ; 11 >
+        au < manifest ; 1985-1986 ; Journal of Career Development Volume 12 ; 12 >
+        au < manifest ; 1986-1987 ; Journal of Career Development Volume 13 ; 13 >
+        au < manifest ; 1987-1988 ; Journal of Career Development Volume 14 ; 14 >
+        au < manifest ; 1988-1989 ; Journal of Career Development Volume 15 ; 15 >
+        au < manifest ; 1989-1990 ; Journal of Career Development Volume 16 ; 16 >
+        au < manifest ; 1990-1991 ; Journal of Career Development Volume 17 ; 17 >
+        au < manifest ; 1991-1992 ; Journal of Career Development Volume 18 ; 18 >
+        au < manifest ; 1992-1993 ; Journal of Career Development Volume 19 ; 19 >
+        au < manifest ; 1993-1994 ; Journal of Career Development Volume 20 ; 20 >
+        au < manifest ; 1994-1995 ; Journal of Career Development Volume 21 ; 21 >
+        au < manifest ; 1995-1996 ; Journal of Career Development Volume 22 ; 22 >
+        au < manifest ; 1996-1997 ; Journal of Career Development Volume 23 ; 23 >
+        au < manifest ; 1997-1998 ; Journal of Career Development Volume 24 ; 24 >
+        au < manifest ; 1998-1999 ; Journal of Career Development Volume 25 ; 25 >
+        au < manifest ; 1999-2000 ; Journal of Career Development Volume 26 ; 26 >
+        au < manifest ; 2000-2001 ; Journal of Career Development Volume 27 ; 27 >
+        au < exists ; 2001-2002 ; Journal of Career Development Volume 28 ; 28 >
+        au < manifest ; 2002-2003 ; Journal of Career Development Volume 29 ; 29 >
+        au < manifest ; 2003-2004 ; Journal of Career Development Volume 30 ; 30 >
+        au < manifest ; 2004-2005 ; Journal of Career Development Volume 31 ; 31 >
+        au < manifest ; 2005-2006 ; Journal of Career Development Volume 32 ; 32 >
+        au < manifest ; 2006-2007 ; Journal of Career Development Volume 33 ; 33 >
+        au < manifest ; 2007-2008 ; Journal of Career Development Volume 34 ; 34 >
+        au < manifest ; 2008-2009 ; Journal of Career Development Volume 35 ; 35 >
+        au < manifest ; 2009-2010 ; Journal of Career Development Volume 36 ; 36 >
+        au < manifest ; 2010-2011 ; Journal of Career Development Volume 37 ; 37 >
+        au < manifest ; 2011-2012 ; Journal of Career Development Volume 38 ; 38 >
+
+      }
+
     }
 
     {
@@ -15499,6 +15832,28 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Cases in Educational Leadership Volume 12 ; 12 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jel.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; Journal of Cases in Educational Leadership Volume 1 ; 1 >
+        au < manifest ; 1999 ; Journal of Cases in Educational Leadership Volume 2 ; 2 >
+        au < manifest ; 2000 ; Journal of Cases in Educational Leadership Volume 3 ; 3 >
+        au < manifest ; 2001 ; Journal of Cases in Educational Leadership Volume 4 ; 4 >
+        au < manifest ; 2002 ; Journal of Cases in Educational Leadership Volume 5 ; 5 >
+        au < manifest ; 2003 ; Journal of Cases in Educational Leadership Volume 6 ; 6 >
+        au < manifest ; 2004 ; Journal of Cases in Educational Leadership Volume 7 ; 7 >
+        au < manifest ; 2005 ; Journal of Cases in Educational Leadership Volume 8 ; 8 >
+        au < manifest ; 2006 ; Journal of Cases in Educational Leadership Volume 9 ; 9 >
+        au < manifest ; 2007 ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
+        au < manifest ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
+        au < manifest ; 2009 ; Journal of Cases in Educational Leadership Volume 12 ; 12 >
+        au < manifest ; 2010 ; Journal of Cases in Educational Leadership Volume 13 ; 13 >
 
       }
 
@@ -15524,6 +15879,62 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Cellular Plastics Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; Journal of Cellular Plastics Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Cellular Plastics Volume 46 ; 46 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cel.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1965 ; Journal of Cellular Plastics Volume 1 ; 1 >
+        au < manifest ; 1966 ; Journal of Cellular Plastics Volume 2 ; 2 >
+        au < manifest ; 1967 ; Journal of Cellular Plastics Volume 3 ; 3 >
+        au < manifest ; 1968 ; Journal of Cellular Plastics Volume 4 ; 4 >
+        au < manifest ; 1969 ; Journal of Cellular Plastics Volume 5 ; 5 >
+        au < manifest ; 1970 ; Journal of Cellular Plastics Volume 6 ; 6 >
+        au < manifest ; 1971 ; Journal of Cellular Plastics Volume 7 ; 7 >
+        au < manifest ; 1972 ; Journal of Cellular Plastics Volume 8 ; 8 >
+        au < manifest ; 1973 ; Journal of Cellular Plastics Volume 9 ; 9 >
+        au < manifest ; 1974 ; Journal of Cellular Plastics Volume 10 ; 10 >
+        au < manifest ; 1975 ; Journal of Cellular Plastics Volume 11 ; 11 >
+        au < manifest ; 1976 ; Journal of Cellular Plastics Volume 12 ; 12 >
+        au < manifest ; 1977 ; Journal of Cellular Plastics Volume 13 ; 13 >
+        au < manifest ; 1978 ; Journal of Cellular Plastics Volume 14 ; 14 >
+        au < manifest ; 1979 ; Journal of Cellular Plastics Volume 15 ; 15 >
+        au < manifest ; 1980 ; Journal of Cellular Plastics Volume 16 ; 16 >
+        au < manifest ; 1981 ; Journal of Cellular Plastics Volume 17 ; 17 >
+        au < manifest ; 1982 ; Journal of Cellular Plastics Volume 18 ; 18 >
+        au < manifest ; 1983 ; Journal of Cellular Plastics Volume 19 ; 19 >
+        au < manifest ; 1984 ; Journal of Cellular Plastics Volume 20 ; 20 >
+        au < manifest ; 1985 ; Journal of Cellular Plastics Volume 21 ; 21 >
+        au < manifest ; 1986 ; Journal of Cellular Plastics Volume 22 ; 22 >
+        au < manifest ; 1987 ; Journal of Cellular Plastics Volume 23 ; 23 >
+        au < manifest ; 1988 ; Journal of Cellular Plastics Volume 24 ; 24 >
+        au < manifest ; 1989 ; Journal of Cellular Plastics Volume 25 ; 25 >
+        au < manifest ; 1990 ; Journal of Cellular Plastics Volume 26 ; 26 >
+        au < manifest ; 1991 ; Journal of Cellular Plastics Volume 27 ; 27 >
+        au < manifest ; 1992 ; Journal of Cellular Plastics Volume 28 ; 28 >
+        au < manifest ; 1993 ; Journal of Cellular Plastics Volume 29 ; 29 >
+        au < manifest ; 1994 ; Journal of Cellular Plastics Volume 30 ; 30 >
+        au < manifest ; 1995 ; Journal of Cellular Plastics Volume 31 ; 31 >
+        au < manifest ; 1996 ; Journal of Cellular Plastics Volume 32 ; 32 >
+        au < manifest ; 1997 ; Journal of Cellular Plastics Volume 33 ; 33 >
+        au < manifest ; 1998 ; Journal of Cellular Plastics Volume 34 ; 34 >
+        au < manifest ; 1999 ; Journal of Cellular Plastics Volume 35 ; 35 >
+        au < manifest ; 2000 ; Journal of Cellular Plastics Volume 36 ; 36 >
+        au < manifest ; 2001 ; Journal of Cellular Plastics Volume 37 ; 37 >
+        au < manifest ; 2002 ; Journal of Cellular Plastics Volume 38 ; 38 >
+        au < manifest ; 2003 ; Journal of Cellular Plastics Volume 39 ; 39 >
+        au < manifest ; 2004 ; Journal of Cellular Plastics Volume 40 ; 40 >
+        au < manifest ; 2005 ; Journal of Cellular Plastics Volume 41 ; 41 >
+        au < manifest ; 2006 ; Journal of Cellular Plastics Volume 42 ; 42 >
+        au < manifest ; 2007 ; Journal of Cellular Plastics Volume 43 ; 43 >
+        au < manifest ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 >
+        au < manifest ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 >
+        au < manifest ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 >
+        au < manifest ; 2011 ; Journal of Cellular Plastics Volume 47 ; 47 >
 
       }
 
@@ -15563,6 +15974,30 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://chc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Journal of Child Health Care Volume 1 ; 1 >
+        au < manifest ; 1998 ; Journal of Child Health Care Volume 2 ; 2 >
+        au < manifest ; 1999 ; Journal of Child Health Care Volume 3 ; 3 >
+        au < manifest ; 2000 ; Journal of Child Health Care Volume 4 ; 4 >
+        au < manifest ; 2001 ; Journal of Child Health Care Volume 5 ; 5 >
+        au < manifest ; 2002 ; Journal of Child Health Care Volume 6 ; 6 >
+        au < manifest ; 2003 ; Journal of Child Health Care Volume 7 ; 7 >
+        au < manifest ; 2004 ; Journal of Child Health Care Volume 8 ; 8 >
+        au < manifest ; 2005 ; Journal of Child Health Care Volume 9 ; 9 >
+        au < manifest ; 2006 ; Journal of Child Health Care Volume 10 ; 10 >
+        au < manifest ; 2007 ; Journal of Child Health Care Volume 11 ; 11 >
+        au < manifest ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
+        au < manifest ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
+        au < manifest ; 2010 ; Journal of Child Health Care Volume 14 ; 14 >
+        au < manifest ; 2011 ; Journal of Child Health Care Volume 15 ; 15 >
+
+      }
+
     }
 
     {
@@ -15584,6 +16019,41 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Child Neurology Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Journal of Child Neurology Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Child Neurology Volume 25 ; 25 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Journal of Child Neurology Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Child Neurology Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Child Neurology Volume 3 ; 3 >
+        au < manifest ; 1989 ; Journal of Child Neurology Volume 4 ; 4 >
+        au < manifest ; 1990 ; Journal of Child Neurology Volume 5 ; 5 >
+        au < manifest ; 1991 ; Journal of Child Neurology Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Child Neurology Volume 7 ; 7 >
+        au < manifest ; 1993 ; Journal of Child Neurology Volume 8 ; 8 >
+        au < manifest ; 1994 ; Journal of Child Neurology Volume 9 ; 9 >
+        au < manifest ; 1995 ; Journal of Child Neurology Volume 10 ; 10 >
+        au < manifest ; 1996 ; Journal of Child Neurology Volume 11 ; 11 >
+        au < manifest ; 1997 ; Journal of Child Neurology Volume 12 ; 12 >
+        au < manifest ; 1998 ; Journal of Child Neurology Volume 13 ; 13 >
+        au < manifest ; 1999 ; Journal of Child Neurology Volume 14 ; 14 >
+        au < manifest ; 2000 ; Journal of Child Neurology Volume 15 ; 15 >
+        au < manifest ; 2001 ; Journal of Child Neurology Volume 16 ; 16 >
+        au < manifest ; 2002 ; Journal of Child Neurology Volume 17 ; 17 >
+        au < manifest ; 2003 ; Journal of Child Neurology Volume 18 ; 18 >
+        au < manifest ; 2004 ; Journal of Child Neurology Volume 19 ; 19 >
+        au < manifest ; 2005 ; Journal of Child Neurology Volume 20 ; 20 >
+        au < manifest ; 2006 ; Journal of Child Neurology Volume 21 ; 21 >
+        au < manifest ; 2007 ; Journal of Child Neurology Volume 22 ; 22 >
+        au < manifest ; 2008 ; Journal of Child Neurology Volume 23 ; 23 >
+        au < manifest ; 2009 ; Journal of Child Neurology Volume 24 ; 24 >
+        au < manifest ; 2010 ; Journal of Child Neurology Volume 25 ; 25 >
+        au < manifest ; 2011 ; Journal of Child Neurology Volume 26 ; 26 >
 
       }
 
@@ -15612,6 +16082,26 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Journal of Classical Sociology Volume 1 ; 1 >
+        au < manifest ; 2002 ; Journal of Classical Sociology Volume 2 ; 2 >
+        au < manifest ; 2003 ; Journal of Classical Sociology Volume 3 ; 3 >
+        au < manifest ; 2004 ; Journal of Classical Sociology Volume 4 ; 4 >
+        au < manifest ; 2005 ; Journal of Classical Sociology Volume 5 ; 5 >
+        au < manifest ; 2006 ; Journal of Classical Sociology Volume 6 ; 6 >
+        au < manifest ; 2007 ; Journal of Classical Sociology Volume 7 ; 7 >
+        au < manifest ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 >
+        au < manifest ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 >
+        au < manifest ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 >
+        au < manifest ; 2011 ; Journal of Classical Sociology Volume 11 ; 11 >
+
+      }
+
     }
 
     {
@@ -15636,6 +16126,66 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; down ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
         au < HighWirePressH20Plugin ; manifest ; The Journal of Clinical Pharmacology Volume 50 ; 50 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1961 ; The Journal of Clinical Pharmacology Volume 1  ; 1  >
+        au < exists ; 1962 ; The Journal of Clinical Pharmacology Volume 2  ; 2  >
+        au < exists ; 1963 ; The Journal of Clinical Pharmacology Volume 3  ; 3  >
+        au < exists ; 1964 ; The Journal of Clinical Pharmacology Volume 4  ; 4  >
+        au < exists ; 1965 ; The Journal of Clinical Pharmacology Volume 5  ; 5  >
+        au < exists ; 1966 ; The Journal of Clinical Pharmacology Volume 6  ; 6  >
+        au < exists ; 1967 ; The Journal of Clinical Pharmacology Volume 7  ; 7  >
+        au < exists ; 1968 ; The Journal of Clinical Pharmacology Volume 8  ; 8  >
+        au < exists ; 1969 ; The Journal of Clinical Pharmacology Volume 9  ; 9  >
+        au < exists ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 >
+        au < exists ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 >
+        au < exists ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 >
+        au < exists ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 >
+        au < exists ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 >
+        au < exists ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 >
+        au < exists ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 >
+        au < exists ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 >
+        au < exists ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 >
+        au < exists ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 >
+        au < exists ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 >
+        au < exists ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 >
+        au < exists ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 >
+        au < exists ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 >
+        au < exists ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 >
+        au < exists ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 >
+        au < exists ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 >
+        au < exists ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 >
+        au < exists ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 >
+        au < exists ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 >
+        au < exists ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 >
+        au < exists ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 >
+        au < exists ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 >
+        au < exists ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 >
+        au < exists ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 >
+        au < exists ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 >
+        au < exists ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 >
+        au < exists ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 >
+        au < exists ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 >
+        au < exists ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 >
+        au < exists ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 >
+        au < exists ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 >
+        au < exists ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 >
+        au < exists ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 >
+        au < exists ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 >
+        au < manifest ; 2005 ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
+        au < manifest ; 2006 ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
+        au < manifest ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
+        au < manifest ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
+        au < manifest ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
+        au < manifest ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 >
+        au < manifest ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 >
 
       }
 
