@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,12 +17,14 @@
 
     param[journal_dir] = missouri_review
 
-    au < released ; The Missouri Review Volume 27 ; 27 >
-    au < released ; The Missouri Review Volume 28 ; 28 >
-    au < released ; The Missouri Review Volume 29 ; 29 >
-    au < released ; The Missouri Review Volume 30 ; 30 >
-    au < manifest ; The Missouri Review Volume 31 ; 31 >
-    au < manifest ; The Missouri Review Volume 32 ; 32 >
+    au < released ; 2004 ; The Missouri Review Volume 27 ; 27 >
+    au < released ; 2005 ; The Missouri Review Volume 28 ; 28 >
+    au < released ; 2006 ; The Missouri Review Volume 29 ; 29 >
+    au < released ; 2007 ; The Missouri Review Volume 30 ; 30 >
+    au < manifest ; 2008 ; The Missouri Review Volume 31 ; 31 >
+    au < manifest ; 2009 ; The Missouri Review Volume 32 ; 32 >
+    au < manifest ; 2010 ; The Missouri Review Volume 33 ; 33 >
+    au < manifest ; 2011 ; The Missouri Review Volume 34 ; 34 >
 
   }
 
