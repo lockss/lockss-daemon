@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -18,28 +18,31 @@
     >
 
     param[journal_dir] = transformation
+    comment[0] = combined numbers listed under first
 
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 49 ; 49 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 50 ; 50 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 51 ; 51 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 52 ; 52 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 53 ; 53 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 54 ; 54 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 55 ; 55 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 56 ; 56 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 57 ; 57 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 58 ; 58 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 59 ; 59 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 60 ; 60 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 61 ; 61 >
-    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 62 ; 62 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 63 ; 63 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 64 ; 64 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 65 ; 65 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 66 ; 66 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 68 ; 68 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 69 ; 69 >
-    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 70 ; 70 >
+    au < released ; 2002 ; Transformation: Critical Perspectives on Southern Africa Number 49 ; 49 >
+    au < released ; 2002 ; Transformation: Critical Perspectives on Southern Africa Number 50 ; 50 >
+    au < released ; 2003 ; Transformation: Critical Perspectives on Southern Africa Number 51 ; 51 >
+    au < released ; 2003 ; Transformation: Critical Perspectives on Southern Africa Number 52 ; 52 >
+    au < released ; 2004 ; Transformation: Critical Perspectives on Southern Africa Number 53 ; 53 >
+    au < released ; 2004 ; Transformation: Critical Perspectives on Southern Africa Number 54 ; 54 >
+    au < released ; 2004 ; Transformation: Critical Perspectives on Southern Africa Number 55 ; 55 >
+    au < released ; 2004 ; Transformation: Critical Perspectives on Southern Africa Number 56 ; 56 >
+    au < released ; 2005 ; Transformation: Critical Perspectives on Southern Africa Number 57 ; 57 >
+    au < released ; 2005 ; Transformation: Critical Perspectives on Southern Africa Number 58 ; 58 >
+    au < released ; 2005 ; Transformation: Critical Perspectives on Southern Africa Number 59 ; 59 >
+    au < released ; 2006 ; Transformation: Critical Perspectives on Southern Africa Number 60 ; 60 >
+    au < released ; 2006 ; Transformation: Critical Perspectives on Southern Africa Number 61 ; 61 >
+    au < released ; 2006 ; Transformation: Critical Perspectives on Southern Africa Number 62 ; 62 >
+    au < manifest ; 2007 ; Transformation: Critical Perspectives on Southern Africa Number 63 ; 63 >
+    au < manifest ; 2007 ; Transformation: Critical Perspectives on Southern Africa Number 64 ; 64 >
+    au < manifest ; 2008 ; Transformation: Critical Perspectives on Southern Africa Number 65 ; 65 >
+    au < manifest ; 2008 ; Transformation: Critical Perspectives on Southern Africa Number 66/67 ; 66 >
+    au < manifest ; 2008 ; Transformation: Critical Perspectives on Southern Africa Number 68 ; 68 >
+    au < manifest ; 2009 ; Transformation: Critical Perspectives on Southern Africa Number 69 ; 69 >
+    au < manifest ; 2009 ; Transformation: Critical Perspectives on Southern Africa Number 70 ; 70 >
+    au < manifest ; 2010 ; Transformation: Critical Perspectives on Southern Africa Number 71 ; 71 >
+    au < manifest ; 2010 ; Transformation: Critical Perspectives on Southern Africa Number 72/73 ; 72 >
 
   }
 
