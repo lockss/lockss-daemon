@@ -12,8 +12,8 @@
       issnl = 0021-9355
     >
 
-    comment[volume_strings] = Volumes have always been like "45-B", but manifest page URLs only include the -B starting with volume 90-B.
-
+    comment[volume_strings1] = Volumes have always been like "45-B", but manifest page URLs only include the -B starting with volume 91-B.
+    
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
