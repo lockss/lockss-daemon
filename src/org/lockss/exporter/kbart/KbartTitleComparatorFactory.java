@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleComparatorFactory.java,v 1.4 2011-02-26 21:40:30 easyonthemayo Exp $
+ * $Id: KbartTitleComparatorFactory.java,v 1.5 2011-06-08 23:47:18 pgust Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Comparator;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.exporter.kbart.KbartTitle.Field.SortType;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 /**
  * A factory for comparators that will order <code>KbartTitle</code>s by a specified field.
@@ -89,8 +90,8 @@ public class KbartTitleComparatorFactory {
       str2 = str2.toLowerCase();
     }
     if (UNACCENTED_COMPARISON_DEFAULT) {
-      str1 = AlphanumericComparator.toUnaccented(str1);
-      str2 = AlphanumericComparator.toUnaccented(str2);
+      str1 = StringUtil.toUnaccented(str1);
+      str2 = StringUtil.toUnaccented(str2);
     }
     //log.debug(String.format("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2));
     return str1.compareTo(str2);
