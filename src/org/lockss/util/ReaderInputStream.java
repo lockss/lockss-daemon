@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.12 2010-06-25 07:40:58 tlipkis Exp $
+ * $Id: ReaderInputStream.java,v 1.13 2011-06-08 20:25:27 thib_gc Exp $
  */
 
 /*
@@ -39,14 +39,14 @@ import java.nio.charset.*;
 
 /**
  * Wrapper to turn a Reader into an InputStream.  The previous version of
- * this class did not handle correctly encode unicode characters; it was
+ * this class did not handle correctly encode Unicode characters; it was
  * used primarily for hash filtering, where the result must be a
  * reproducible byte sequence but needn't necessarily be exactly
  * reconstructible to the original character sequence.  This stream is now
  * used by link rewriters, which do have to produce a valid decodable
  * result, so it now handles character encoding.  But this version isn't
  * necessarily reproducible because some encodings aren't unique - the
- * exact sequance of bytes produced can depend on the number of bytes read
+ * exact sequence of bytes produced can depend on the number of bytes read
  * at a time.
  *
  * If called with no encoder, this version reproduces the previous
