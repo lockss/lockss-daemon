@@ -20,11 +20,23 @@
   
       au < superseded ; South American Journal of Herpetology Volume 1 ; 1 >
       au < superseded ; South American Journal of Herpetology Volume 2 ; 2 >
+      
     }
 
     {
 
-comment[0] = Atypon AUs
+comment[0] = Atypon AUs. Needs BioOne plugin.
+
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://www.bioone.org/loi/
+      param[journal_id] = sajh
+      
+      au < exists ; 2006 ; South American Journal of Herpetology Volume 1 ; 1 >
+      au < exists ; 2007 ; South American Journal of Herpetology Volume 2 ; 2 >
+      au < exists ; 2008 ; South American Journal of Herpetology Volume 3 ; 3 >
+      au < exists ; 2009 ; South American Journal of Herpetology Volume 4 ; 4 >
+      au < exists ; 2010 ; South American Journal of Herpetology Volume 5 ; 5 >
+      au < exists ; 2011 ; South American Journal of Herpetology Volume 6 ; 6 >
 
     }
 
