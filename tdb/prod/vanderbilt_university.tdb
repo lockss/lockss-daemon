@@ -17,12 +17,12 @@
     param[base_url] = http://ejournals.library.vanderbilt.edu/ameriquests/
     implicit < status ; year ; name ; param[year] >
     
-    au < released ; AmeriQuests Volume 1 ; 2004 >
-    au < exists ; AmeriQuests Volume 2 ; 2005 >
-    au < exists ; AmeriQuests Volume 3 ; 2006 >
-    au < exists ; AmeriQuests Volume 4 ; 2007 > 
-    au < exists ; AmeriQuests Volumes 5-6 ; 2008 >
-    au < exists ; AmeriQuests Volume 7 ; 2010 > 
+    au < released ; 2004 ; AmeriQuests Volume 1 ; 2004 >
+    au < exists ; 2005 ; AmeriQuests Volume 2 ; 2005 >
+    au < exists ; 2006 ; AmeriQuests Volume 3 ; 2006 >
+    au < exists ; 2007 ; AmeriQuests Volume 4 ; 2007 > 
+    au < exists ; 2008 ; AmeriQuests Volume 5-6 ; 2008 >
+    au < exists ; 2010 ; AmeriQuests Volume 7 ; 2010 > 
 
   }
 
