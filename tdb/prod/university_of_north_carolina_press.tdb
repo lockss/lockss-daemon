@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,132 +17,10 @@
 
     param[journal_dir] = appalachian_heritage
 
-    au < ready ; Appalachian Heritage Volume 36 ; 36 >
-    au < ready ; Appalachian Heritage Volume 37 ; 37 >
-    au < ready ; Appalachian Heritage Volume 38 ; 38 >
-
-  }
-
-  {
-    title <
-      name = Early American Literature ;
-      issn = 0012-8163 ;
-      eissn = 1534-147X ;
-      issnl = 0012-8163
-    >
-
-    param[journal_dir] = early_american_literature
-
-    au < released ; Early American Literature Volume 35 ; 35 >
-    au < released ; Early American Literature Volume 36 ; 36 >
-    au < released ; Early American Literature Volume 37 ; 37 >
-    au < released ; Early American Literature Volume 38 ; 38 >
-    au < released ; Early American Literature Volume 39 ; 39 >
-    au < released ; Early American Literature Volume 40 ; 40 >
-    au < released ; Early American Literature Volume 41 ; 41 >
-    au < released ; Early American Literature Volume 42 ; 42 >
-    au < manifest ; Early American Literature Volume 43 ; 43 >
-    au < manifest ; Early American Literature Volume 44 ; 44 >
-
-  }
-
-  {
-    title <
-      name = Journal of the Civil War Era ;
-      issn = 2154-4727 ;
-      eissn = 2159-9807
-    >
-
-    param[journal_dir] = journal_of_the_civil_war_era
-
-    au < exists ; Journal of the Civil War Era Volume 1 ; 1 >
-
-  }
-
-  {
-    title <
-      name = Social Forces ;
-      issn = 1534-7605 ;
-      eissn = 0037-7732 ;
-      issnl = 0037-7732
-    >
-
-    param[journal_dir] = social_forces
-
-    au < released ; Social Forces Volume 79 ; 79 >
-    au < released ; Social Forces Volume 80 ; 80 >
-    au < released ; Social Forces Volume 81 ; 81 >
-    au < released ; Social Forces Volume 82 ; 82 >
-    au < released ; Social Forces Volume 83 ; 83 >
-    au < released ; Social Forces Volume 84 ; 84 >
-    au < released ; Social Forces Volume 85 ; 85 >
-    au < manifest ; Social Forces Volume 86 ; 86 >
-    au < manifest ; Social Forces Volume 87 ; 87 >
-    au < manifest ; Social Forces Volume 88 ; 88 >
-
-  }
-
-  {
-    title <
-      name = Southeastern Geographer ;
-      issn = 0038-366X ;
-      eissn = 1549-6929 ;
-      issnl = 0038-366X
-    >
-
-    param[journal_dir] = southeastern_geographer
-
-    au < released ; Southeastern Geographer Volume 44 ; 44 >
-    au < released ; Southeastern Geographer Volume 45 ; 45 >
-    au < released ; Southeastern Geographer Volume 46 ; 46 >
-    au < released ; Southeastern Geographer Volume 47 ; 47 >
-    au < manifest ; Southeastern Geographer Volume 48 ; 48 >
-    au < manifest ; Southeastern Geographer Volume 49 ; 49 >
-
-  }
-
-  {
-    title <
-      name = Southern Cultures ;
-      issn = 1068-8218 ;
-      eissn = 1534-1488 ;
-      issnl = 1068-8218
-    >
-
-    param[journal_dir] = southern_cultures
-
-    au < released ; Southern Cultures Volume 6 ; 6 >
-    au < released ; Southern Cultures Volume 7 ; 7 >
-    au < released ; Southern Cultures Volume 8 ; 8 >
-    au < released ; Southern Cultures Volume 9 ; 9 >
-    au < released ; Southern Cultures Volume 10 ; 10 >
-    au < released ; Southern Cultures Volume 11 ; 11 >
-    au < released ; Southern Cultures Volume 12 ; 12 >
-    au < released ; Southern Cultures Volume 13 ; 13 >
-    au < manifest ; Southern Cultures Volume 14 ; 14 >
-    au < manifest ; Southern Cultures Volume 15 ; 15 >
-    au < manifest ; Southern Cultures Volume 16 ; 16 >
-
-  }
-
-  {
-    title <
-      name = Studies in Philology ;
-      issn = 0039-3738 ;
-      eissn = 1543-0383 ;
-      issnl = 0039-3738
-    >
-
-    param[journal_dir] = studies_in_philology
-
-    au < released ; Studies in Philology Volume 100 ; 100 >
-    au < released ; Studies in Philology Volume 101 ; 101 >
-    au < released ; Studies in Philology Volume 102 ; 102 >
-    au < released ; Studies in Philology Volume 103 ; 103 >
-    au < released ; Studies in Philology Volume 104 ; 104 >
-    au < manifest ; Studies in Philology Volume 105 ; 105 >
-    au < manifest ; Studies in Philology Volume 106 ; 106 >
-    au < manifest ; Studies in Philology Volume 107 ; 107 >
+    au < ready ; 2008 ; Appalachian Heritage Volume 36 ; 36 >
+    au < ready ; 2009 ; Appalachian Heritage Volume 37 ; 37 >
+    au < ready ; 2010 ; Appalachian Heritage Volume 38 ; 38 >
+    au < manifest ; 2011 ; Appalachian Heritage Volume 39 ; 39 >
 
   }
 
@@ -156,11 +34,50 @@
 
     param[journal_dir] = the_comparatist
 
-    au < released ; The Comparatist Volume 29 ; 29 >
-    au < released ; The Comparatist Volume 30 ; 30 >
-    au < released ; The Comparatist Volume 31 ; 31 >
-    au < manifest ; The Comparatist Volume 32 ; 32 >
-    au < manifest ; The Comparatist Volume 33 ; 33 >
+    au < released ; 2005 ; The Comparatist Volume 29 ; 29 >
+    au < released ; 2006 ; The Comparatist Volume 30 ; 30 >
+    au < released ; 2007 ; The Comparatist Volume 31 ; 31 >
+    au < manifest ; 2008 ; The Comparatist Volume 32 ; 32 >
+    au < manifest ; 2009 ; The Comparatist Volume 33 ; 33 >
+    au < manifest ; 2010 ; The Comparatist Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Early American Literature ;
+      issn = 0012-8163 ;
+      eissn = 1534-147X ;
+      issnl = 0012-8163
+    >
+
+    param[journal_dir] = early_american_literature
+
+    au < released ; 2000 ; Early American Literature Volume 35 ; 35 >
+    au < released ; 2001 ; Early American Literature Volume 36 ; 36 >
+    au < released ; 2002 ; Early American Literature Volume 37 ; 37 >
+    au < released ; 2003 ; Early American Literature Volume 38 ; 38 >
+    au < released ; 2004 ; Early American Literature Volume 39 ; 39 >
+    au < released ; 2005 ; Early American Literature Volume 40 ; 40 >
+    au < released ; 2006 ; Early American Literature Volume 41 ; 41 >
+    au < released ; 2007 ; Early American Literature Volume 42 ; 42 >
+    au < manifest ; 2008 ; Early American Literature Volume 43 ; 43 >
+    au < manifest ; 2009 ; Early American Literature Volume 44 ; 44 >
+    au < manifest ; 2010 ; Early American Literature Volume 45 ; 45 >
+    au < manifest ; 2011 ; Early American Literature Volume 46 ; 46 >    
+
+  }
+
+  {
+    title <
+      name = Journal of the Civil War Era ;
+      issn = 2154-4727 ;
+      eissn = 2159-9807
+    >
+
+    param[journal_dir] = journal_of_the_civil_war_era
+
+    au < manifest ; 2011 ; Journal of the Civil War Era Volume 1 ; 1 >
 
   }
 
@@ -174,16 +91,87 @@
 
     param[journal_dir] = high_school_journal
 
-    au < released ; The High School Journal Volume 84 ; 84 >
-    au < released ; The High School Journal Volume 85 ; 85 >
-    au < released ; The High School Journal Volume 86 ; 86 >
-    au < released ; The High School Journal Volume 87 ; 87 >
-    au < released ; The High School Journal Volume 88 ; 88 >
-    au < released ; The High School Journal Volume 89 ; 89 >
-    au < released ; The High School Journal Volume 90 ; 90 >
-    au < ready ; The High School Journal Volume 91 ; 91 >
-    au < ready ; The High School Journal Volume 92 ; 92 >
-    au < ready ; The High School Journal Volume 93 ; 93 >
+    au < released ; 2001 ; The High School Journal Volume 84 ; 84 >
+    au < released ; 2002 ; The High School Journal Volume 85 ; 85 >
+    au < released ; 2003 ; The High School Journal Volume 86 ; 86 >
+    au < released ; 2004 ; The High School Journal Volume 87 ; 87 >
+    au < released ; 2005 ; The High School Journal Volume 88 ; 88 >
+    au < released ; 2006 ; The High School Journal Volume 89 ; 89 >
+    au < released ; 2007 ; The High School Journal Volume 90 ; 90 >
+    au < ready ; 2008 ; The High School Journal Volume 91 ; 91 >
+    au < ready ; 2009 ; The High School Journal Volume 92 ; 92 >
+    au < ready ; 2010 ; The High School Journal Volume 93 ; 93 >
+    au < manifest; 2011 ; The High School Journal Volume 94 ; 94 >
+
+  }
+
+  {
+    title <
+      name = Social Forces ;
+      issn = 1534-7605 ;
+      eissn = 0037-7732 ;
+      issnl = 0037-7732
+    >
+
+    param[journal_dir] = social_forces
+
+    au < released ; 2001 ; Social Forces Volume 79 ; 79 >
+    au < released ; 2002 ; Social Forces Volume 80 ; 80 >
+    au < released ; 2003 ; Social Forces Volume 81 ; 81 >
+    au < released ; 2004 ; Social Forces Volume 82 ; 82 >
+    au < released ; 2005 ; Social Forces Volume 83 ; 83 >
+    au < released ; 2006 ; Social Forces Volume 84 ; 84 >
+    au < released ; 2007 ; Social Forces Volume 85 ; 85 >
+    au < manifest ; 2008 ; Social Forces Volume 86 ; 86 >
+    au < manifest ; 2009 ; Social Forces Volume 87 ; 87 >
+    au < manifest ; 2010 ; Social Forces Volume 88 ; 88 >
+    au < manifest ; 2011 ; Social Forces Volume 89 ; 89 >
+
+  }
+
+  {
+    title <
+      name = Southeastern Geographer ;
+      issn = 0038-366X ;
+      eissn = 1549-6929 ;
+      issnl = 0038-366X
+    >
+
+    param[journal_dir] = southeastern_geographer
+
+    au < released ; 2004 ; Southeastern Geographer Volume 44 ; 44 >
+    au < released ; 2005 ; Southeastern Geographer Volume 45 ; 45 >
+    au < released ; 2006 ; Southeastern Geographer Volume 46 ; 46 >
+    au < released ; 2007 ; Southeastern Geographer Volume 47 ; 47 >
+    au < manifest ; 2008 ; Southeastern Geographer Volume 48 ; 48 >
+    au < manifest ; 2009 ; Southeastern Geographer Volume 49 ; 49 >
+    au < manifest ; 2010 ; Southeastern Geographer Volume 50 ; 50 >
+    au < manifest ; 2011 ; Southeastern Geographer Volume 51 ; 51 >    
+
+  }
+
+  {
+    title <
+      name = Southern Cultures ;
+      issn = 1068-8218 ;
+      eissn = 1534-1488 ;
+      issnl = 1068-8218
+    >
+
+    param[journal_dir] = southern_cultures
+
+    au < released ; 2000 ; Southern Cultures Volume 6 ; 6 >
+    au < released ; 2001 ; Southern Cultures Volume 7 ; 7 >
+    au < released ; 2002 ; Southern Cultures Volume 8 ; 8 >
+    au < released ; 2003 ; Southern Cultures Volume 9 ; 9 >
+    au < released ; 2004 ; Southern Cultures Volume 10 ; 10 >
+    au < released ; 2005 ; Southern Cultures Volume 11 ; 11 >
+    au < released ; 2006 ; Southern Cultures Volume 12 ; 12 >
+    au < released ; 2007 ; Southern Cultures Volume 13 ; 13 >
+    au < manifest ; 2008 ; Southern Cultures Volume 14 ; 14 >
+    au < manifest ; 2009 ; Southern Cultures Volume 15 ; 15 >
+    au < manifest ; 2010 ; Southern Cultures Volume 16 ; 16 >
+    au < manifest ; 2011 ; Southern Cultures Volume 17 ; 17 >
 
   }
 
@@ -197,16 +185,39 @@
 
     param[journal_dir] = southern_literary_journal
 
-    au < released ; The Southern Literary Journal Volume 33 ; 33 >
-    au < released ; The Southern Literary Journal Volume 34 ; 34 >
-    au < released ; The Southern Literary Journal Volume 35 ; 35 >
-    au < released ; The Southern Literary Journal Volume 36 ; 36 >
-    au < released ; The Southern Literary Journal Volume 37 ; 37 >
-    au < released ; The Southern Literary Journal Volume 38 ; 38 >
-    au < released ; The Southern Literary Journal Volume 39 ; 39 >
-    au < ready ; The Southern Literary Journal Volume 40 ; 40 >
-    au < ready ; The Southern Literary Journal Volume 41 ; 41 >
-    au < ready ; The Southern Literary Journal Volume 42 ; 42 >
+    au < released ; 2000-2001 ; The Southern Literary Journal Volume 33 ; 33 >
+    au < released ; 2001-2002 ; The Southern Literary Journal Volume 34 ; 34 >
+    au < released ; 2002-2003 ; The Southern Literary Journal Volume 35 ; 35 >
+    au < released ; 2003-2004 ; The Southern Literary Journal Volume 36 ; 36 >
+    au < released ; 2004-2005 ; The Southern Literary Journal Volume 37 ; 37 >
+    au < released ; 2005-2006 ; The Southern Literary Journal Volume 38 ; 38 >
+    au < released ; 2006-2007 ; The Southern Literary Journal Volume 39 ; 39 >
+    au < ready ; 2007-2008 ; The Southern Literary Journal Volume 40 ; 40 >
+    au < ready ; 2008-2009 ; The Southern Literary Journal Volume 41 ; 41 >
+    au < ready ; 2009-2010 ; The Southern Literary Journal Volume 42 ; 42 >
+    au < manifest ; 2010-2011 ; The Southern Literary Journal Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Studies in Philology ;
+      issn = 0039-3738 ;
+      eissn = 1543-0383 ;
+      issnl = 0039-3738
+    >
+
+    param[journal_dir] = studies_in_philology
+
+    au < released ; 2003 ; Studies in Philology Volume 100 ; 100 >
+    au < released ; 2004 ; Studies in Philology Volume 101 ; 101 >
+    au < released ; 2005 ; Studies in Philology Volume 102 ; 102 >
+    au < released ; 2006 ; Studies in Philology Volume 103 ; 103 >
+    au < released ; 2007 ; Studies in Philology Volume 104 ; 104 >
+    au < manifest ; 2008 ; Studies in Philology Volume 105 ; 105 >
+    au < manifest ; 2009 ; Studies in Philology Volume 106 ; 106 >
+    au < manifest ; 2010 ; Studies in Philology Volume 107 ; 107 >
+    au < manifest ; 2011 ; Studies in Philology Volume 108 ; 108 >
 
   }
 
