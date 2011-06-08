@@ -7,7 +7,7 @@
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
     {
@@ -19,9 +19,10 @@
 
       param[journal_dir] = american_literary_realism
 
-      au < released ; American Literary Realism Volume 40 ; 40 >
-      au < released ; American Literary Realism Volume 41 ; 41 >
-      au < released ; American Literary Realism Volume 42 ; 42 >
+      au < released ; 2007 ; American Literary Realism Volume 40 ; 40 >
+      au < released ; 2008 ; American Literary Realism Volume 41 ; 41 >
+      au < released ; 2009 ; American Literary Realism Volume 42 ; 42 >
+      au < manifest ; 2010 ; American Literary Realism Volume 43 ; 43 >
 
     }
 
@@ -35,7 +36,8 @@
 
       param[journal_dir] = american_music
 
-      au < wanted ; American Music Volume 27 ; 27 >
+      au < testing ; 2009 ; American Music Volume 27 ; 27 >
+      au < testing ; 2010 ; American Music Volume 28 ; 28 >
 
     }
 
@@ -49,7 +51,9 @@
 
       param[journal_dir] = black_women_gender_and_families
 
-      au < released ; Black Women, Gender & Families Volume 3 ; 3 >
+      au < released ; 2009 ; Black Women, Gender & Families Volume 3 ; 3 >
+      au < manifest ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
+      au < manifest ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
 
     }
 
@@ -63,8 +67,9 @@
 
       param[journal_dir] = dance_research_journal
 
-      au < released ; Dance Research Journal Volume 40 ; 40 >
-      au < released ; Dance Research Journal Volume 41 ; 41 >
+      au < released ; 2008 ; Dance Research Journal Volume 40 ; 40 >
+      au < released ; 2009 ; Dance Research Journal Volume 41 ; 41 >
+      au < manifest ; 2010 ; Dance Research Journal Volume 42 ; 42 >
 
     }
 
@@ -78,8 +83,9 @@
 
       param[journal_dir] = feminist_teacher
 
-      au < released ; Feminist Teacher Volume 18 ; 18 >
-      au < released ; Feminist Teacher Volume 19 ; 19 >
+      au < released ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
+      au < released ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
+      au < manifest ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
 
     }
 
@@ -93,8 +99,9 @@
 
       param[journal_dir] = journal_of_english_and_germanic_philology
 
-      au < released ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
-      au < released ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
+      au < released ; 2008 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
+      au < released ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
+      au < manifest ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
 
     }
 
@@ -108,14 +115,15 @@
 
       param[journal_dir] = the_journal_of_aesthetic_education
 
-      au < released ; The Journal of Aesthetic Education Volume 37 ; 37 >
-      au < released ; The Journal of Aesthetic Education Volume 38 ; 38 >
-      au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
-      au < released ; The Journal of Aesthetic Education Volume 40 ; 40 >
-      au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
-      au < released ; The Journal of Aesthetic Education Volume 42 ; 42 >
-      au < released ; The Journal of Aesthetic Education Volume 43 ; 43 >
-      au < released ; The Journal of Aesthetic Education Volume 44 ; 44 >
+      au < released ; 2003 ; The Journal of Aesthetic Education Volume 37 ; 37 >
+      au < released ; 2004 ; The Journal of Aesthetic Education Volume 38 ; 38 >
+      au < released ; 2005 ; The Journal of Aesthetic Education Volume 39 ; 39 >
+      au < released ; 2006 ; The Journal of Aesthetic Education Volume 40 ; 40 >
+      au < released ; 2007 ; The Journal of Aesthetic Education Volume 41 ; 41 >
+      au < released ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
+      au < released ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
+      au < released ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
+      au < manifest ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
 
     }
 
@@ -129,7 +137,8 @@
 
       param[journal_dir] = journal_of_education_finance
 
-      au < released ; Journal of Education Finance Volume 35 ; 35 >
+      au < released ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
+      au < manifest ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
 
     }
 
@@ -143,9 +152,10 @@
 
       param[journal_dir] = journal_of_film_and_video
 
-      au < released ; Journal of Film and Video Volume 60 ; 60 >
-      au < released ; Journal of Film and Video Volume 61 ; 61 >
-      au < released ; Journal of Film and Video Volume 62 ; 62 >
+      au < released ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
+      au < released ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
+      au < released ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
+      au < manifest ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
 
     }
 
@@ -159,7 +169,9 @@
 
       param[journal_dir] = the_pluralist
 
-      au < released ; The Pluralist Volume 4 ; 4 >
+      au < released ; 2009 ; The Pluralist Volume 4 ; 4 >
+      au < manifest ; 2010 ; The Pluralist Volume 5 ; 5 >
+      au < manifest ; 2011 ; The Pluralist Volume 6 ; 6 >
 
     }
     
@@ -173,12 +185,16 @@
 
       param[journal_dir] = radical_teacher
 
-      au < released ; Radical Teacher Number 81 ; 81 >
-      au < released ; Radical Teacher Number 82 ; 82 >
-      au < released ; Radical Teacher Number 83 ; 83 >
-      au < released ; Radical Teacher Number 84 ; 84 >
-      au < released ; Radical Teacher Number 85 ; 85 >
-      au < released ; Radical Teacher Number 86 ; 86 >
+      au < released ; 2008 ; Radical Teacher Number 81 ; 81 >
+      au < released ; 2008 ; Radical Teacher Number 82 ; 82 >
+      au < released ; 2008 ; Radical Teacher Number 83 ; 83 >
+      au < released ; 2009 ; Radical Teacher Number 84 ; 84 >
+      au < released ; 2009 ; Radical Teacher Number 85 ; 85 >
+      au < released ; 2009 ; Radical Teacher Number 86 ; 86 >
+      au < manifest ; 2010 ; Radical Teacher Number 87 ; 87 >
+      au < manifest ; 2010 ; Radical Teacher Number 88 ; 88 >
+      au < manifest ; 2010 ; Radical Teacher Number 89 ; 89 >
+      au < manifest ; 2011 ; Radical Teacher Number 90 ; 90 >
 
     }
 
