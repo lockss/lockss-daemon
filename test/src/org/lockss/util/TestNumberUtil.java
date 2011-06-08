@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.1 2011-06-05 19:17:49 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.2 2011-06-08 23:20:50 pgust Exp $
  */
 
 /*
@@ -123,11 +123,11 @@ public class TestNumberUtil extends LockssTestCase {
    */
   public void testUnnormalized() {
 	String[] validUnnormalizedRomanStrings = {
-	  "VIIII", "LXXXXI", "DDDDIV", "((I))", "(MMMDCCCLII)CDXXIX",
+	  "VIIII", "LXXXXI", "IM", "DDDDIV", "((I))", "(MMMDCCCLII)CDXXIX",
 	  "((MMCXLVII)CDLXXXIII)DCXLVII"
 	};
     String[] equivalentArabicStrings = {
-        "9", "91", "2004", "1000000", "3852429",
+        "9", "91", "999", "2004", "1000000", "3852429",
         Integer.toString(Integer.MAX_VALUE)
       };
 		  
