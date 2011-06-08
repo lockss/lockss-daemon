@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,17 +19,18 @@
 
     param[journal_dir] = american_indian_quarterly
 
-    au < released ; The American Indian Quarterly Volume 24 ; 24 >
-    au < released ; The American Indian Quarterly Volume 25 ; 25 >
-    au < released ; The American Indian Quarterly Volume 26 ; 26 >
-    au < released ; The American Indian Quarterly Volume 27 ; 27 >
-    au < released ; The American Indian Quarterly Volume 28 ; 28 >
-    au < released ; The American Indian Quarterly Volume 29 ; 29 >
-    au < released ; The American Indian Quarterly Volume 30 ; 30 >
-    au < released ; The American Indian Quarterly Volume 31 ; 31 >
-    au < released ; The American Indian Quarterly Volume 32 ; 32 >
-    au < released ; The American Indian Quarterly Volume 33 ; 33 >
-    au < released ; The American Indian Quarterly Volume 34 ; 34 >
+    au < released ; 2000 ; The American Indian Quarterly Volume 24 ; 24 >
+    au < released ; 2001 ; The American Indian Quarterly Volume 25 ; 25 >
+    au < released ; 2002 ; The American Indian Quarterly Volume 26 ; 26 >
+    au < released ; 2003 ; The American Indian Quarterly Volume 27 ; 27 >
+    au < released ; 2004 ; The American Indian Quarterly Volume 28 ; 28 >
+    au < released ; 2005 ; The American Indian Quarterly Volume 29 ; 29 >
+    au < released ; 2006 ; The American Indian Quarterly Volume 30 ; 30 >
+    au < released ; 2007 ; The American Indian Quarterly Volume 31 ; 31 >
+    au < released ; 2008 ; The American Indian Quarterly Volume 32 ; 32 >
+    au < released ; 2009 ; The American Indian Quarterly Volume 33 ; 33 >
+    au < released ; 2010 ; The American Indian Quarterly Volume 34 ; 34 >
+    au < manifest ; 2011 ; The American Indian Quarterly Volume 35 ; 35 >
 
   }
 
@@ -44,7 +45,7 @@
 
     param[journal_dir] = an_sionnach
 
-    au < released ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
+    au < released ; 2009 ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
 
   }
 
@@ -59,7 +60,8 @@
 
     param[journal_dir] = anthropological_linguistics
 
-    au < released ; Anthropological Linguistics Volume 51 ; 51 >
+    au < released ; 2009 ; Anthropological Linguistics Volume 51 ; 51 >
+    au < manifest ; 2010 ; Anthropological Linguistics Volume 52 ; 52 >
 
   }
 
@@ -74,8 +76,9 @@
 
     param[journal_dir] = collaborative_anthropologies
 
-    au < released ; Collaborative Anthropologies Volume 1 ; 1 >
-    au < released ; Collaborative Anthropologies Volume 2 ; 2 >
+    au < released ; 2008 ; Collaborative Anthropologies Volume 1 ; 1 >
+    au < released ; 2009 ; Collaborative Anthropologies Volume 2 ; 2 >
+    au < manifest ; 2010 ; Collaborative Anthropologies Volume 3 ; 3 >
 
   }
 
@@ -90,15 +93,16 @@
 
     param[journal_dir] = french_forum
 
-    au < released ; French Forum Volume 26 ; 26 >
-    au < released ; French Forum Volume 27 ; 27 >
-    au < released ; French Forum Volume 28 ; 28 >
-    au < released ; French Forum Volume 29 ; 29 >
-    au < released ; French Forum Volume 30 ; 30 >
-    au < released ; French Forum Volume 31 ; 31 >
-    au < released ; French Forum Volume 32 ; 32 >
-    au < released ; French Forum Volume 33 ; 33 >
-    au < released ; French Forum Volume 34 ; 34 >
+    au < released ; 2001 ; French Forum Volume 26 ; 26 >
+    au < released ; 2002 ; French Forum Volume 27 ; 27 >
+    au < released ; 2003 ; French Forum Volume 28 ; 28 >
+    au < released ; 2004 ; French Forum Volume 29 ; 29 >
+    au < released ; 2005 ; French Forum Volume 30 ; 30 >
+    au < released ; 2006 ; French Forum Volume 31 ; 31 >
+    au < released ; 2007 ; French Forum Volume 32 ; 32 >
+    au < released ; 2008 ; French Forum Volume 33 ; 33 >
+    au < released ; 2009 ; French Forum Volume 34 ; 34 >
+    au < manifest ; 2010 ; French Forum Volume 35 ; 35 >
 
   }
 
@@ -113,15 +117,17 @@
 
     param[journal_dir] = frontiers
 
-    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
+    au < released ; 2001 ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
+    au < released ; 2002 ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
+    au < released ; 2003 ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
+    au < released ; 2004 ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
+    au < released ; 2005 ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
+    au < released ; 2006 ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
+    au < released ; 2007 ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
+    au < released ; 2008 ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
+    au < released ; 2009 ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
+    au < manifest ; 2010 ; Frontiers: A Journal of Women Studies Volume 31 ; 31 >
+    au < manifest ; 2011 ; Frontiers: A Journal of Women Studies Volume 32 ; 32 >
 
   }
 
@@ -136,11 +142,12 @@
 
     param[journal_dir] = histories_of_anthropology_annual
 
-    au < released ; Histories of Anthropology Annual Volume 1 ; 1 >
-    au < released ; Histories of Anthropology Annual Volume 2 ; 2 >
-    au < released ; Histories of Anthropology Annual Volume 3 ; 3 >
-    au < released ; Histories of Anthropology Annual Volume 4 ; 4 >
-    au < released ; Histories of Anthropology Annual Volume 5 ; 5 >
+    au < released ; 2005 ; Histories of Anthropology Annual Volume 1 ; 1 >
+    au < released ; 2006 ; Histories of Anthropology Annual Volume 2 ; 2 >
+    au < released ; 2007 ; Histories of Anthropology Annual Volume 3 ; 3 >
+    au < released ; 2008 ; Histories of Anthropology Annual Volume 4 ; 4 >
+    au < released ; 2009 ; Histories of Anthropology Annual Volume 5 ; 5 >
+    au < manifest ; 2010 ; Histories of Anthropology Annual Volume 6 ; 6 >
 
   }
 
@@ -155,11 +162,12 @@
 
     param[journal_dir] = journal_of_sports_media
 
-    au < released ; Journal of Sports Media Volume 1 ; 1 >
-    au < released ; Journal of Sports Media Volume 2 ; 2 >
-    au < released ; Journal of Sports Media Volume 3 ; 3 >
-    au < released ; Journal of Sports Media Volume 4 ; 4 >
-    au < released ; Journal of Sports Media Volume 5 ; 5 >
+    au < released ; 2006 ; Journal of Sports Media Volume 1 ; 1 >
+    au < released ; 2007 ; Journal of Sports Media Volume 2 ; 2 >
+    au < released ; 2008 ; Journal of Sports Media Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Sports Media Volume 4 ; 4 >
+    au < released ; 2010 ; Journal of Sports Media Volume 5 ; 5 >
+    au < manifest ; 2011 ; Journal of Sports Media Volume 6 ; 6 >
 
   }
 
@@ -174,16 +182,17 @@
 
     param[journal_dir] = legacy
 
-    au < released ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
-    au < released ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
+    au < released ; 2000 ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
+    au < released ; 2001 ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
+    au < released ; 2002 ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
+    au < released ; 2003 ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
+    au < released ; 2004 ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
+    au < released ; 2005 ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
+    au < released ; 2006 ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
+    au < released ; 2007 ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
+    au < released ; 2008 ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
+    au < released ; 2009 ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
+    au < manifest ; 2010 ; Legacy: A Journal of American Women Writers Volume 27 ; 27 >
 
   }
 
@@ -198,9 +207,9 @@
 
     param[journal_dir] = native_south
 
-    au < released ; Native South Volume 1 ; 1 >
-    au < released ; Native South Volume 2 ; 2 >
-
+    au < released ; 2008 ; Native South Volume 1 ; 1 >
+    au < released ; 2009 ; Native South Volume 2 ; 2 >
+    au < manifest ; 2010 ; Native South Volume 3 ; 3 >
   }
 
   {
@@ -214,16 +223,17 @@
 
     param[journal_dir] = nine
 
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
-    au < released ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
+    au < released ; 2001 ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
+    au < released ; 2001-2002 ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
+    au < released ; 2002-2003 ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
+    au < released ; 2003-2004 ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
+    au < released ; 2004-2005 ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
+    au < released ; 2005-2006 ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
+    au < released ; 2006-2007 ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
+    au < released ; 2007-2008 ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
+    au < released ; 2008-2009 ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
+    au < released ; 2009-2010 ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
+    au < manifest ; 2010 ; NINE: A Journal of Baseball History and Culture Volume 19 ; 19 >
 
   }
 
@@ -238,16 +248,17 @@
 
     param[journal_dir] = nineteenth_century_french_studies
 
-    au < released ; Nineteenth-Century French Studies Volume 29 ; 29 >
-    au < notReady ; Nineteenth-Century French Studies Volume 30 ; 30 >
-    au < released ; Nineteenth-Century French Studies Volume 31 ; 31 >
-    au < released ; Nineteenth-Century French Studies Volume 32 ; 32 >
-    au < released ; Nineteenth-Century French Studies Volume 33 ; 33 >
-    au < released ; Nineteenth-Century French Studies Volume 34 ; 34 >
-    au < released ; Nineteenth-Century French Studies Volume 35 ; 35 >
-    au < released ; Nineteenth-Century French Studies Volume 36 ; 36 >
-    au < released ; Nineteenth-Century French Studies Volume 37 ; 37 >
-    au < released ; Nineteenth-Century French Studies Volume 38 ; 38 >
+    au < released ; 2001 ; Nineteenth-Century French Studies Volume 29 ; 29 >
+    au < notReady ; 2001-2002 ; Nineteenth-Century French Studies Volume 30 ; 30 >
+    au < released ; 2002-2003 ; Nineteenth-Century French Studies Volume 31 ; 31 >
+    au < released ; 2003-2004 ; Nineteenth-Century French Studies Volume 32 ; 32 >
+    au < released ; 2004-2005 ; Nineteenth-Century French Studies Volume 33 ; 33 >
+    au < released ; 2005-2006 ; Nineteenth-Century French Studies Volume 34 ; 34 >
+    au < released ; 2006-2007 ; Nineteenth-Century French Studies Volume 35 ; 35 >
+    au < released ; 2007-2008 ; Nineteenth-Century French Studies Volume 36 ; 36 >
+    au < released ; 2008-2009 ; Nineteenth-Century French Studies Volume 37 ; 37 >
+    au < released ; 2009-2010 ; Nineteenth-Century French Studies Volume 38 ; 38 >
+    au < manifest ; 2010-2011 ; Nineteenth-Century French Studies Volume 39 ; 39 >
 
   }
 
@@ -262,13 +273,15 @@
 
     param[journal_dir] = prairie_schooner
 
-    au < released ; Prairie Schooner Volume 77 ; 77 >
-    au < released ; Prairie Schooner Volume 78 ; 78 >
-    au < released ; Prairie Schooner Volume 79 ; 79 >
-    au < released ; Prairie Schooner Volume 80 ; 80 >
-    au < released ; Prairie Schooner Volume 81 ; 81 >
-    au < released ; Prairie Schooner Volume 82 ; 82 >
-    au < released ; Prairie Schooner Volume 83 ; 83 >
+    au < released ; 2003 ; Prairie Schooner Volume 77 ; 77 >
+    au < released ; 2004 ; Prairie Schooner Volume 78 ; 78 >
+    au < released ; 2005 ; Prairie Schooner Volume 79 ; 79 >
+    au < released ; 2006 ; Prairie Schooner Volume 80 ; 80 >
+    au < released ; 2007 ; Prairie Schooner Volume 81 ; 81 >
+    au < released ; 2008 ; Prairie Schooner Volume 82 ; 82 >
+    au < released ; 2009 ; Prairie Schooner Volume 83 ; 83 >
+    au < manifest ; 2010 ; Prairie Schooner Volume 84 ; 84 >
+    au < manifest ; 2011 ; Prairie Schooner Volume 85 ; 85 >    
 
   }
 
@@ -283,7 +296,8 @@
 
     param[journal_dir] = qui_parle
 
-    au < released ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
+    au < released ; 2009-2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
+    au < manifest ; 2010-2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 ; 19 >
 
   }
 
@@ -298,12 +312,14 @@
 
     param[journal_dir] = studies_in_american_indian_literatures
 
-    au < released ; Studies in American Indian Literatures Volume 16 ; 16 >
-    au < released ; Studies in American Indian Literatures Volume 17 ; 17 >
-    au < released ; Studies in American Indian Literatures Volume 18 ; 18 >
-    au < released ; Studies in American Indian Literatures Volume 19 ; 19 >
-    au < released ; Studies in American Indian Literatures Volume 20 ; 20 >
-    au < released ; Studies in American Indian Literatures Volume 21 ; 21 >
+    au < released ; 2004 ; Studies in American Indian Literatures Volume 16 ; 16 >
+    au < released ; 2005 ; Studies in American Indian Literatures Volume 17 ; 17 >
+    au < released ; 2006 ; Studies in American Indian Literatures Volume 18 ; 18 >
+    au < released ; 2007 ; Studies in American Indian Literatures Volume 19 ; 19 >
+    au < released ; 2008 ; Studies in American Indian Literatures Volume 20 ; 20 >
+    au < released ; 2009 ; Studies in American Indian Literatures Volume 21 ; 21 >
+    au < manifest ; 2010 ; Studies in American Indian Literatures Volume 22 ; 22 >
+    au < manifest ; 2011 ; Studies in American Indian Literatures Volume 23 ; 23 >
 
   }
 
@@ -318,7 +334,8 @@
 
     param[journal_dir] = studies_in_american_naturalism
 
-    au < released ; Studies in American Naturalism Volume 4 ; 4 >
+    au < released ; 2009 ; Studies in American Naturalism Volume 4 ; 4 >
+    au < manifest ; 2010 ; Studies in American Naturalism Volume 5 ; 5 >
 
   }
 
@@ -333,18 +350,20 @@
 
     param[journal_dir] = symploke
 
-    au < released ; symploke Volume 5 ; 5 >
-    au < released ; symploke Volume 6 ; 6 >
-    au < released ; symploke Volume 7 ; 7 >
-    au < released ; symploke Volume 8 ; 8 >
-    au < released ; symploke Volume 9 ; 9 >
-    au < released ; symploke Volume 10 ; 10 >
-    au < manifest ; symploke Volume 11 ; 11 >
-    au < manifest ; symploke Volume 12 ; 12 >
-    au < manifest ; symploke Volume 13 ; 13 >
-    au < manifest ; symploke Volume 14 ; 14 >
-    au < manifest ; symploke Volume 15 ; 15 >
-    au < manifest ; symploke Volume 16 ; 16 >
+    au < released ; 1997 ; symploke Volume 5 ; 5 >
+    au < released ; 1998 ; symploke Volume 6 ; 6 >
+    au < released ; 1999 ; symploke Volume 7 ; 7 >
+    au < released ; 2000 ; symploke Volume 8 ; 8 >
+    au < released ; 2001 ; symploke Volume 9 ; 9 >
+    au < released ; 2002 ; symploke Volume 10 ; 10 >
+    au < manifest ; 2003 ; symploke Volume 11 ; 11 >
+    au < manifest ; 2004 ; symploke Volume 12 ; 12 >
+    au < manifest ; 2005 ; symploke Volume 13 ; 13 >
+    au < manifest ; 2006 ; symploke Volume 14 ; 14 >
+    au < manifest ; 2007 ; symploke Volume 15 ; 15 >
+    au < manifest ; 2008 ; symploke Volume 16 ; 16 >
+    au < manifest ; 2009 ; symploke Volume 17 ; 17 >
+    au < manifest ; 2010 ; symploke Volume 18 ; 18 >    
 
   }
 
@@ -359,13 +378,13 @@
 
     param[journal_dir] = women_and_music
 
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
-    au < released ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
-
+    au < released ; 2004 ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
+    au < released ; 2005 ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
+    au < released ; 2006 ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
+    au < released ; 2007 ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
+    au < released ; 2008 ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
+    au < released ; 2009 ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
+    au < manifest ; 2010 ; Women and Music: A Journal of Gender and Culture Volume 14 ; 13 >
   }
 
   {
@@ -379,10 +398,33 @@
 
     param[journal_dir] = women_in_german_yearbook
 
-    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
-    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
-    au < released ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
-
+    au < manifest ; 1985 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 1 ; 1 >
+    au < manifest ; 1986 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 2 ; 2 >
+    au < manifest ; 1987 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 3 ; 3 >
+    au < manifest ; 1988 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 4 ; 4 >
+    au < manifest ; 1989 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 5 ; 5 >
+    au < manifest ; 1990 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 6 ; 6 >
+    au < manifest ; 1991 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 7 ; 7 >
+    au < manifest ; 1992 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 8 ; 8 >
+    au < manifest ; 1993 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 9 ; 9 >
+    au < manifest ; 1994 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 10 ; 10 >
+    au < manifest ; 1995 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 11 ; 11 >
+    au < manifest ; 1996 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 12 ; 12 >
+    au < manifest ; 1997 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 13 ; 13 >
+    au < manifest ; 1998 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 14 ; 14 >
+    au < manifest ; 1999 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 15 ; 15 >
+    au < manifest ; 2000 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 16 ; 16 >
+    au < manifest ; 2001 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 17 ; 17 >
+    au < manifest ; 2002 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 18 ; 18 >
+    au < manifest ; 2003 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 19 ; 19 >
+    au < manifest ; 2004 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 20 ; 20 >
+    au < manifest ; 2005 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 21 ; 21 >
+    au < manifest ; 2006 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 22 ; 22 >  
+    au < released ; 2007 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
+    au < released ; 2008 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
+    au < released ; 2009 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
+    au < manifest ; 2010 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 26 ; 26 >
+    
   }
 
 }
