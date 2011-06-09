@@ -65,10 +65,16 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = arctic_anthropology
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Arctic Anthropology Volume 45 ; 45 >
-      au < released ; Arctic Anthropology Volume 46 ; 46 >
+      au < manifest ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
+      au < manifest ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
+      au < manifest ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
+      au < manifest ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
+      au < manifest ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
+      au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
+      au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
+      au < manifest ; 2010 ; Arctic Anthropology Volume 46 ; 47 >
 
     }
     
