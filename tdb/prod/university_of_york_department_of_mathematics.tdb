@@ -13,11 +13,10 @@
     >
   
     rights = openaccess
-    comment[platform] = OJS2
-
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.logicandanalysis.org/
     param[journal_dir] = jla
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[year] >
 
     au < exists ; 2009 ; Journal of Logic and Analysis Volume 1 ; 1 >
     au < exists ; 2010 ; Journal of Logic and Analysis Volume 2 ; 2 >
