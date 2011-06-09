@@ -13,10 +13,10 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1808-9798
+      implicit < status ; name ; param[volume] >
   
       au < superseded ; South American Journal of Herpetology Volume 1 ; 1 >
       au < superseded ; South American Journal of Herpetology Volume 2 ; 2 >
@@ -25,11 +25,10 @@
 
     {
 
-comment[0] = Atypon AUs. Needs BioOne plugin.
-
-      implicit < status ; year ; name ; param[volume] >
+      plugin = needs.plugin
       param[base_url] = http://www.bioone.org/loi/
       param[journal_id] = sajh
+      implicit < status ; year ; name ; param[volume] >
       
       au < exists ; 2006 ; South American Journal of Herpetology Volume 1 ; 1 >
       au < exists ; 2007 ; South American Journal of Herpetology Volume 2 ; 2 >
