@@ -3,7 +3,6 @@
     name = Brookings Institution Press
   >
 
-  implicit < status ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -17,6 +16,7 @@
     >
 
     param[journal_dir] = brookings_papers_on_economic_activity
+    implicit < status ; name ; param[volume] >
 
     au < released ; Brookings Papers on Economic Activity 2000 ; 2000 >
     au < released ; Brookings Papers on Economic Activity 2001 ; 2001 >
@@ -28,6 +28,7 @@
     au < released ; Brookings Papers on Economic Activity 2007 ; 2007 >
     au < released ; Brookings Papers on Economic Activity 2008 ; 2008 >
     au < released ; Brookings Papers on Economic Activity 2009 ; 2009 >
+    au < manifest ; Brookings Papers on Economic Activity 2010 ; 2010 >
 
 
   }
@@ -41,6 +42,7 @@
     >
 
     param[journal_dir] = brookings_papers_on_education_policy
+    implicit < status ; name ; param[volume] >
 
     au < released ; Brookings Papers on Education Policy 2000 ; 2000 >
     au < released ; Brookings Papers on Education Policy 2001 ; 2001 >
@@ -49,6 +51,7 @@
     au < released ; Brookings Papers on Education Policy 2004 ; 2004 >
     au < released ; Brookings Papers on Education Policy 2005 ; 2005 >
     au < released ; Brookings Papers on Education Policy 2006 ; 2006 >
+    au < doesNotExist ; Brookings Papers on Education Policy 2007 ; 2007 >
 
   }
 
@@ -61,6 +64,7 @@
     >
 
     param[journal_dir] = brookings_trade_forum
+    implicit < status ; name ; param[volume] >
 
     au < released ; Brookings Trade Forum 2000 ; 2000 >
     au < released ; Brookings Trade Forum 2001 ; 2001 >
@@ -71,6 +75,7 @@
     au < released ; Brookings Trade Forum 2006 ; 2006 >
     au < released ; Brookings Trade Forum 2007 ; 2007 >
     au < released ; Brookings Trade Forum 2008 ; 2008 >
+    au < doesNotExist ; Brookings Trade Forum 2009 ; 2009 >
 
   }
 
@@ -83,12 +88,14 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_financial_services
+    implicit < status ; name ; param[volume] >
 
     au < released ; Brookings-Wharton Papers on Financial Services 2000 ; 2000 >
     au < released ; Brookings-Wharton Papers on Financial Services 2001 ; 2001 >
     au < released ; Brookings-Wharton Papers on Financial Services 2002 ; 2002 >
     au < released ; Brookings-Wharton Papers on Financial Services 2003 ; 2003 >
     au < released ; Brookings-Wharton Papers on Financial Services 2004 ; 2004 >
+    au < doesNotExist ; Brookings-Wharton Papers on Financial Services 2005 ; 2005 >
 
   }
 
@@ -101,6 +108,7 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_urban_affairs
+    implicit < status ; name ; param[volume] >
 
     au < released ; Brookings-Wharton Papers on Urban Affairs 2000 ; 2000 >
     au < released ; Brookings-Wharton Papers on Urban Affairs 2001 ; 2001 >
@@ -112,6 +120,7 @@
     au < released ; Brookings-Wharton Papers on Urban Affairs 2007 ; 2007 >
     au < released ; Brookings-Wharton Papers on Urban Affairs 2008 ; 2008 >
     au < released ; Brookings-Wharton Papers on Urban Affairs 2009 ; 2009 >
+    au < doesNotExist ; Brookings-Wharton Papers on Urban Affairs 2010 ; 2010 >
 
   }
 
@@ -124,16 +133,19 @@
     >
 
     param[journal_dir] = economia
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Economía Volume 1 ; 1 >
-    au < released ; Economía Volume 2 ; 2 >
-    au < released ; Economía Volume 3 ; 3 >
-    au < released ; Economía Volume 4 ; 4 >
-    au < released ; Economía Volume 5 ; 5 >
-    au < released ; Economía Volume 6 ; 6 >
-    au < released ; Economía Volume 7 ; 7 >
-    au < released ; Economía Volume 8 ; 8 >
-    au < released ; Economía Volume 9 ; 9 >
+    au < released ; 2000-2001 ; Economía Volume 1 ; 1 >
+    au < released ; 2001-2002 ; Economía Volume 2 ; 2 >
+    au < released ; 2002-2003 ; Economía Volume 3 ; 3 >
+    au < released ; 2003-2004 ; Economía Volume 4 ; 4 >
+    au < released ; 2004-2005 ; Economía Volume 5 ; 5 >
+    au < released ; 2005-2006 ; Economía Volume 6 ; 6 >
+    au < released ; 2006-2007 ; Economía Volume 7 ; 7 >
+    au < released ; 2007-2008 ; Economía Volume 8 ; 8 >
+    au < released ; 2008-2009 ; Economía Volume 9 ; 9 >
+    au < manifest ; 2009-2010 ; Economía Volume 10 ; 10 >
+    au < manifest ; 2010-2011 ; Economía Volume 11 ; 11 >
 
   }
 
