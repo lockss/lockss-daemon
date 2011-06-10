@@ -16,6 +16,77 @@
     param[base_url] = http://www.biolreprod.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
+    au < manifest ; exists ; 1969 ; Biology of Reproduction Volume 1 ; 1 >
+    au < manifest ; exists ; 1970 ; Biology of Reproduction Volume 2 ; 2 >
+    au < manifest ; exists ; 1970 ; Biology of Reproduction Volume 3 ; 3 >
+    au < manifest ; exists ; 1971 ; Biology of Reproduction Volume 4 ; 4 >
+    au < manifest ; exists ; 1971 ; Biology of Reproduction Volume 5 ; 5 >
+    au < manifest ; exists ; 1972 ; Biology of Reproduction Volume 6 ; 6 >
+    au < manifest ; exists ; 1972 ; Biology of Reproduction Volume 7 ; 7 >
+    au < manifest ; exists ; 1973 ; Biology of Reproduction Volume 8 ; 8 >
+    au < manifest ; exists ; 1973 ; Biology of Reproduction Volume 9 ; 9 >
+    au < manifest ; exists ; 1974 ; Biology of Reproduction Volume 10 ; 10 >
+    au < manifest ; exists ; 1974 ; Biology of Reproduction Volume 11 ; 11 >
+    au < manifest ; exists ; 1975 ; Biology of Reproduction Volume 12 ; 12 >
+    au < manifest ; exists ; 1975 ; Biology of Reproduction Volume 13 ; 13 >
+    au < manifest ; exists ; 1976 ; Biology of Reproduction Volume 14 ; 14 >
+    au < manifest ; exists ; 1976 ; Biology of Reproduction Volume 15 ; 15 >
+    au < manifest ; exists ; 1977 ; Biology of Reproduction Volume 16 ; 16 >
+    au < manifest ; exists ; 1977 ; Biology of Reproduction Volume 17 ; 17 >
+    au < manifest ; exists ; 1978 ; Biology of Reproduction Volume 18 ; 18 >
+    au < manifest ; exists ; 1978 ; Biology of Reproduction Volume 19 ; 19 >
+    au < manifest ; exists ; 1979 ; Biology of Reproduction Volume 20 ; 20 >
+    au < manifest ; exists ; 1979 ; Biology of Reproduction Volume 21 ; 21 >
+    au < manifest ; exists ; 1980 ; Biology of Reproduction Volume 22 ; 22 >
+    au < manifest ; exists ; 1980 ; Biology of Reproduction Volume 23 ; 23 >
+    au < manifest ; exists ; 1981 ; Biology of Reproduction Volume 24 ; 24 >
+    au < manifest ; exists ; 1981 ; Biology of Reproduction Volume 25 ; 25 >
+    au < manifest ; exists ; 1982 ; Biology of Reproduction Volume 26 ; 26 >
+    au < manifest ; exists ; 1982 ; Biology of Reproduction Volume 27 ; 27 >
+    au < manifest ; exists ; 1983 ; Biology of Reproduction Volume 28 ; 28 >
+    au < manifest ; exists ; 1983 ; Biology of Reproduction Volume 29 ; 29 >
+    au < manifest ; exists ; 1984 ; Biology of Reproduction Volume 30 ; 30 >
+    au < manifest ; exists ; 1984 ; Biology of Reproduction Volume 31 ; 31 >
+    au < manifest ; exists ; 1985 ; Biology of Reproduction Volume 32 ; 32 >
+    au < manifest ; exists ; 1985 ; Biology of Reproduction Volume 33 ; 33 >
+    au < manifest ; exists ; 1986 ; Biology of Reproduction Volume 34 ; 34 >
+    au < manifest ; exists ; 1986 ; Biology of Reproduction Volume 35 ; 35 >
+    au < manifest ; exists ; 1987 ; Biology of Reproduction Volume 36 ; 36 >
+    au < manifest ; exists ; 1987 ; Biology of Reproduction Volume 37 ; 37 >
+    au < manifest ; exists ; 1988 ; Biology of Reproduction Volume 38 ; 38 >
+    au < manifest ; exists ; 1988 ; Biology of Reproduction Volume 39 ; 39 >
+    au < manifest ; exists ; 1989 ; Biology of Reproduction Volume 40 ; 40 >
+    au < manifest ; exists ; 1989 ; Biology of Reproduction Volume 41 ; 41 >
+    au < manifest ; exists ; 1990 ; Biology of Reproduction Volume 42 ; 42 >
+    au < manifest ; exists ; 1990 ; Biology of Reproduction Volume 43 ; 43 >
+    au < manifest ; exists ; 1991 ; Biology of Reproduction Volume 44 ; 44 >
+    au < manifest ; exists ; 1991 ; Biology of Reproduction Volume 45 ; 45 >
+    au < manifest ; exists ; 1992 ; Biology of Reproduction Volume 46 ; 46 >
+    au < manifest ; exists ; 1992 ; Biology of Reproduction Volume 47 ; 47 >
+    au < manifest ; exists ; 1993 ; Biology of Reproduction Volume 48 ; 48 >
+    au < manifest ; exists ; 1993 ; Biology of Reproduction Volume 49 ; 49 >
+    au < manifest ; exists ; 1994 ; Biology of Reproduction Volume 50 ; 50 >
+    au < manifest ; exists ; 1994 ; Biology of Reproduction Volume 51 ; 51 >
+    au < manifest ; exists ; 1995 ; Biology of Reproduction Volume 52 ; 52 >
+    au < manifest ; exists ; 1995 ; Biology of Reproduction Volume 53 ; 53 >
+    au < manifest ; exists ; 1996 ; Biology of Reproduction Volume 54 ; 54 >
+    au < manifest ; exists ; 1996 ; Biology of Reproduction Volume 55 ; 55 >
+    au < manifest ; exists ; 1997 ; Biology of Reproduction Volume 56 ; 56 >
+    au < manifest ; exists ; 1997 ; Biology of Reproduction Volume 57 ; 57 >
+    au < manifest ; exists ; 1998 ; Biology of Reproduction Volume 58 ; 58 >
+    au < manifest ; exists ; 1998 ; Biology of Reproduction Volume 59 ; 59 >
+    au < manifest ; exists ; 1999 ; Biology of Reproduction Volume 60 ; 60 >
+    au < manifest ; exists ; 1999 ; Biology of Reproduction Volume 61 ; 61 >
+    au < manifest ; exists ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
+    au < manifest ; exists ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
+    au < manifest ; exists ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
+    au < manifest ; exists ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
+    au < manifest ; exists ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
+    au < manifest ; exists ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
+    au < manifest ; exists ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
+    au < manifest ; exists ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
+    au < manifest ; exists ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
+    au < manifest ; exists ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
     au < manifest ; exists ; 2005 ; Biology of Reproduction Volume 72 ; 72 >
     au < manifest ; exists ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
     au < manifest ; exists ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
@@ -28,6 +99,7 @@
     au < manifest ; exists ; 2009 ; Biology of Reproduction Volume 81 ; 81 >
     au < released ; crawling ; 2010 ; Biology of Reproduction Volume 82 ; 82 >
     au < released ; crawling ; 2010 ; Biology of Reproduction Volume 83 ; 83 >
+    au < manifest ; exists ; 2011 ; Biology of Reproduction Volume 84 ; 84 >
 
   }
 

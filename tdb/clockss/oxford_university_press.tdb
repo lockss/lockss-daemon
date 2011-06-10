@@ -1362,7 +1362,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Early Music Volume 38 ; 38 ; >
+      au < released ; manifest ; 2010 ; Early Music Volume 38 ; 38 ; >
 
     }
 
@@ -1445,7 +1445,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; EP Europace Volume 12 ; 12 ; >
+      au < released ; manifest ; 2010 ; EP Europace Volume 12 ; 12 ; >
 
     }
 
@@ -1635,7 +1635,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
+      au < released ; manifest ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
 
     }
 
@@ -1664,7 +1664,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; The European Journal of Orthodontics Volume 32 ; 32 ; >
+      au < released ; manifest ; 2010 ; The European Journal of Orthodontics Volume 32 ; 32 ; >
 
     }
 
@@ -1865,7 +1865,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
+      au < released ; manifest ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
 
     }
 
@@ -1894,7 +1894,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; French History Volume 24 ; 24 ; >
+      au < released ; manifest ; 2010 ; French History Volume 24 ; 24 ; >
 
     }
 
@@ -1923,7 +1923,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; French Studies Volume 64 ; 64 ; >
+      au < released ; manifest ; 2010 ; French Studies Volume 64 ; 64 ; >
 
     }
 
@@ -1952,7 +1952,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; German History Volume 28 ; 28 ; >
+      au < released ; manifest ; 2010 ; German History Volume 28 ; 28 ; >
 
     }
 
@@ -1978,7 +1978,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
+      au < released ; manifest ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
 
     }
 
@@ -2007,7 +2007,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Glycobiology Volume 20 ; 20 ; >
+      au < released ; manifest ; 2010 ; Glycobiology Volume 20 ; 20 ; >
 
     }
 
@@ -2036,7 +2036,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Health Education Research Volume 25 ; 25 ; >
+      au < released ; manifest ; 2010 ; Health Education Research Volume 25 ; 25 ; >
 
     }
 
@@ -2065,7 +2065,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
+      au < released ; manifest ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
 
     }
 
@@ -2094,7 +2094,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
+      au < released ; manifest ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
 
     }
 
@@ -2124,9 +2124,10 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      comment[xyz] = uh oh there is clearly an enumeration problem here
 
-      au < testing ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
-      au < testing ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+      au < notReady ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
+      au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
 
     }
 
@@ -2155,7 +2156,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
+      au < released ; manifest ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
 
     }
 
@@ -2184,7 +2185,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
+      au < released ; manifest ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
 
     }
 
@@ -2242,7 +2243,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
+      au < released ; manifest ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
 
     }
 
@@ -2271,7 +2272,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
+      au < released ; manifest ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
 
     }
 
@@ -2298,7 +2299,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
+      au < released ; manifest ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
 
     }
 
@@ -2399,7 +2400,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
+      au < released ; manifest ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
 
     }
 
@@ -2428,7 +2429,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
+      au < released ; manifest ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
 
     }
 
@@ -2457,7 +2458,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
+      au < released ; manifest ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
 
     }
 
@@ -2486,7 +2487,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
+      au < released ; manifest ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
 
     }
 
@@ -2515,7 +2516,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
+      au < released ; manifest ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
 
     }
 
@@ -2571,7 +2572,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; InnovAiT Volume 3 ; 3 ; >
+      au < released ; manifest ; 2010 ; InnovAiT Volume 3 ; 3 ; >
 
     }
 
@@ -2600,7 +2601,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
+      au < released ; manifest ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
 
     }
 
@@ -2627,7 +2628,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
+      au < released ; manifest ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
 
     }
 
@@ -5487,7 +5488,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
-      au < testing ; exists ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
+      au < down ; manifest ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
     }
 
@@ -5516,7 +5517,7 @@
       pluginSuffix = ClockssHighWirePlugin
 
       au < down ; crawling ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
-      au < testing ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
+      au < down ; manifest ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
 
     }
 

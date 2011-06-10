@@ -118,13 +118,12 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < released ; crawling ; 2008 ; Pediatrics Volume 121 ; 121 >
-      au < released ; crawling ; 2008 ; Pediatrics Volume 122 ; 122 >
-      au < released ; crawling ; 2009 ; Pediatrics Volume 123 ; 123 >
-      au < released ; crawling ; 2009 ; Pediatrics Volume 124 ; 124 >
-      au < released ; crawling ; 2010 ; Pediatrics Volume 125 ; 125 >
-      au < released ; crawling ; 2010 ; Pediatrics Volume 126 ; 126 >
-      au < manifest ; exists ; 2011 ; Pediatrics Volume 127 ; 127 >
+      au < down ; crawling ; 2008 ; Pediatrics Volume 121 ; 121 >
+      au < down ; crawling ; 2008 ; Pediatrics Volume 122 ; 122 >
+      au < down ; crawling ; 2009 ; Pediatrics Volume 123 ; 123 >
+      au < down ; crawling ; 2009 ; Pediatrics Volume 124 ; 124 >
+      au < down ; crawling ; 2010 ; Pediatrics Volume 125 ; 125 >
+      au < down ; crawling ; 2010 ; Pediatrics Volume 126 ; 126 >
   
     }
     
@@ -132,6 +131,8 @@
     
       pluginSuffix = ClockssHighWirePressH20Plugin
     
+      au < crawling ; exists ; 2011 ; Pediatrics Volume 127 ; 127 >
+
     }
   
   }

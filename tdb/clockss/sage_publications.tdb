@@ -30,8 +30,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1996 ; Accounting History Volume 16 ; 1 ;  >
+      au < manifest ; exists ; 1997 ; Accounting History Volume 16 ; 2 ;  >
+      au < manifest ; exists ; 1998 ; Accounting History Volume 16 ; 3 ;  >
+      au < manifest ; exists ; 1999 ; Accounting History Volume 16 ; 4 ;  >
+      au < manifest ; exists ; 2000 ; Accounting History Volume 16 ; 5 ;  >
+      au < manifest ; exists ; 2001 ; Accounting History Volume 16 ; 6 ;  >
+      au < manifest ; exists ; 2002 ; Accounting History Volume 16 ; 7 ;  >
+      au < manifest ; exists ; 2003 ; Accounting History Volume 16 ; 8 ;  >
+      au < manifest ; exists ; 2004 ; Accounting History Volume 16 ; 9 ;  >
+      au < manifest ; exists ; 2005 ; Accounting History Volume 16 ; 10 ;  >
+      au < manifest ; exists ; 2006 ; Accounting History Volume 16 ; 11 ;  >
+      au < manifest ; exists ; 2007 ; Accounting History Volume 16 ; 12 ;  >
+      au < manifest ; exists ; 2008 ; Accounting History Volume 13 ; 13 ;  >
       au < manifest ; exists ; 2009 ; Accounting History Volume 14 ; 14 ;  >
       au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ;  >
+      au < manifest ; exists ; 2011 ; Accounting History Volume 16 ; 16 ;  >
 
     }
 
@@ -60,8 +74,63 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1956 ; Acta Sociologica Volume 1 ; 1 >
+      au < manifest ; exists ; 1957 ; Acta Sociologica Volume 2 ; 2 >
+      au < manifest ; exists ; 1958 ; Acta Sociologica Volume 3 ; 3 >
+      au < manifest ; exists ; 1959 ; Acta Sociologica Volume 4 ; 4 >
+      au < manifest ; exists ; 1962 ; Acta Sociologica Volume 5 ; 5 >
+      au < manifest ; exists ; 1963 ; Acta Sociologica Volume 6 ; 6 >
+      au < manifest ; exists ; 1964 ; Acta Sociologica Volume 7 ; 7 >
+      au < manifest ; exists ; 1965 ; Acta Sociologica Volume 8 ; 8 >
+      au < manifest ; exists ; 1966 ; Acta Sociologica Volume 9 ; 9 >
+      au < manifest ; exists ; 1967 ; Acta Sociologica Volume 10 ; 10 >
+      au < manifest ; exists ; 1968 ; Acta Sociologica Volume 11 ; 11 >
+      au < manifest ; exists ; 1969 ; Acta Sociologica Volume 12 ; 12 >
+      au < manifest ; exists ; 1970 ; Acta Sociologica Volume 13 ; 13 >
+      au < manifest ; exists ; 1971 ; Acta Sociologica Volume 14 ; 14 >
+      au < manifest ; exists ; 1972 ; Acta Sociologica Volume 15 ; 15 >
+      au < manifest ; exists ; 1973 ; Acta Sociologica Volume 16 ; 16 >
+      au < manifest ; exists ; 1974 ; Acta Sociologica Volume 17 ; 17 >
+      au < manifest ; exists ; 1975 ; Acta Sociologica Volume 18 ; 18 >
+      au < manifest ; exists ; 1976 ; Acta Sociologica Volume 19 ; 19 >
+      au < manifest ; exists ; 1977 ; Acta Sociologica Volume 20 ; 20 >
+      au < manifest ; exists ; 1978 ; Acta Sociologica Volume 21 ; 21 >
+      au < manifest ; exists ; 1979 ; Acta Sociologica Volume 22 ; 22 >
+      au < manifest ; exists ; 1980 ; Acta Sociologica Volume 23 ; 23 >
+      au < manifest ; exists ; 1981 ; Acta Sociologica Volume 24 ; 24 >
+      au < manifest ; exists ; 1982 ; Acta Sociologica Volume 25 ; 25 >
+      au < manifest ; exists ; 1983 ; Acta Sociologica Volume 26 ; 26 >
+      au < manifest ; exists ; 1984 ; Acta Sociologica Volume 27 ; 27 >
+      au < manifest ; exists ; 1985 ; Acta Sociologica Volume 28 ; 28 >
+      au < manifest ; exists ; 1986 ; Acta Sociologica Volume 29 ; 29 >
+      au < manifest ; exists ; 1987 ; Acta Sociologica Volume 30 ; 30 >
+      au < manifest ; exists ; 1988 ; Acta Sociologica Volume 31 ; 31 >
+      au < manifest ; exists ; 1989 ; Acta Sociologica Volume 32 ; 32 >
+      au < manifest ; exists ; 1990 ; Acta Sociologica Volume 33 ; 33 >
+      au < manifest ; exists ; 1991 ; Acta Sociologica Volume 34 ; 34 >
+      au < manifest ; exists ; 1992 ; Acta Sociologica Volume 35 ; 35 >
+      au < manifest ; exists ; 1993 ; Acta Sociologica Volume 36 ; 36 >
+      au < manifest ; exists ; 1994 ; Acta Sociologica Volume 37 ; 37 >
+      au < manifest ; exists ; 1995 ; Acta Sociologica Volume 38 ; 38 >
+      au < manifest ; exists ; 1996 ; Acta Sociologica Volume 39 ; 39 >
+      au < manifest ; exists ; 1997 ; Acta Sociologica Volume 40 ; 40 >
+      au < manifest ; exists ; 1998 ; Acta Sociologica Volume 41 ; 41 >
+      au < manifest ; exists ; 1999 ; Acta Sociologica Volume 42 ; 42 >
+      au < manifest ; exists ; 2000 ; Acta Sociologica Volume 43 ; 43 >
+      au < doesNotExist ; none ; 2001 ; Acta Sociologica Volume 44 ; 44 >
+      au < exists ; none ; 2002 ; Acta Sociologica Volume 45 ; 45 >
+      au < manifest ; exists ; 2003 ; Acta Sociologica Volume 46 ; 46 >
+      au < manifest ; exists ; 2004 ; Acta Sociologica Volume 47 ; 47 >
+      au < manifest ; exists ; 2005 ; Acta Sociologica Volume 48 ; 48 >
+      au < manifest ; exists ; 2006 ; Acta Sociologica Volume 49 ; 49 >
+      au < manifest ; exists ; 2007 ; Acta Sociologica Volume 50 ; 50 >
+      au < manifest ; exists ; 2008 ; Acta Sociologica Volume 51 ; 51 >
+      au < manifest ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 >
+      au < manifest ; exists ; 2010 ; Acta Sociologica Volume 53 ; 53 >
+      au < manifest ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 >
       au < manifest ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 ;  >
       au < released ; crawling ; 2010 ; Acta Sociologica Volume 53 ; 53 ;  >
+      au < manifest ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 ;  >
 
     }
 
@@ -2740,7 +2809,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Culture & Psychology Volume 16 ; 16 ;  >
+      au < released ; manifest ; 2010 ; Culture & Psychology Volume 16 ; 16 ;  >
 
     }
 
@@ -2824,7 +2893,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Dementia Volume 9 ; 9 ;  >
+      au < released ; manifest ; 2010 ; Dementia Volume 9 ; 9 ;  >
 
     }
 
@@ -2884,7 +2953,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; The Diabetes Educator Volume 36 ; 36 ;  >
+      au < released ; manifest ; 2010 ; The Diabetes Educator Volume 36 ; 36 ;  >
 
     }
 
@@ -2966,7 +3035,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Discourse & Society Volume 21 ; 21 ;  >
+      au < released ; manifest ; 2010 ; Discourse & Society Volume 21 ; 21 ;  >
 
     }
 
@@ -2996,7 +3065,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Discourse Studies Volume 12 ; 12 ;  >
+      au < released ; manifest ; 2010 ; Discourse Studies Volume 12 ; 12 ;  >
 
     }
 
@@ -3056,7 +3125,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Economic and Industrial Democracy Volume 31 ; 31 ;  >
+      au < released ; manifest ; 2010 ; Economic and Industrial Democracy Volume 31 ; 31 ;  >
 
     }
 
@@ -3086,7 +3155,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Economic Development Quarterly Volume 24 ; 24 ;  >
+      au < released ; manifest ; 2010 ; Economic Development Quarterly Volume 24 ; 24 ;  >
 
     }
 
@@ -3177,7 +3246,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 ;  >
+      au < released ; manifest ; 2010 ; Educational Administration Quarterly Volume 46 ; 46 ;  >
 
     }
 
@@ -3267,7 +3336,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 ;  >
+      au < released ; manifest ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 ;  >
 
     }
 
@@ -3348,7 +3417,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Emotion Review Volume 2 ; 2 ;  >
+      au < released ; manifest ; 2010 ; Emotion Review Volume 2 ; 2 ;  >
 
     }
 
@@ -3378,7 +3447,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2008 ; Environment and Behavior Volume 40 ; 40 ;  >
-      au < testing ; exists ; 2010 ; Environment and Behavior Volume 42 ; 42 ;  >
+      au < released ; manifest ; 2010 ; Environment and Behavior Volume 42 ; 42 ;  >
 
     }
 
@@ -5931,7 +6000,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; The International Journal of Robotics Research Volume 29 ; 29 ;  >
+      au < released ; manifest ; 2010 ; The International Journal of Robotics Research Volume 29 ; 29 ;  >
 
     }
 
@@ -6223,7 +6292,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 ;  >
+      au < released ; manifest ; 2010 ; International Review of Administrative Sciences Volume 76 ; 76 ;  >
 
     }
 
@@ -6850,7 +6919,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2009 ; Journal of Black Studies Volume 40 ; 40 ;  >
-      au < testing ; exists ; 2010 ; Journal of Black Studies Volume 41 ; 41 ;  >
+      au < released ; manifest ; 2010 ; Journal of Black Studies Volume 41 ; 41 ;  >
 
     }
 
@@ -6969,7 +7038,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 ;  >
+      au < released ; manifest ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 ;  >
 
     }
 
@@ -6999,7 +7068,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Career Assessment Volume 18 ; 18 ;  >
+      au < released ; manifest ; 2010 ; Journal of Career Assessment Volume 18 ; 18 ;  >
 
     }
 
@@ -7029,7 +7098,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Career Development Volume 37 ; 37 ;  >
+      au < released ; manifest ; 2010 ; Journal of Career Development Volume 37 ; 37 ;  >
 
     }
 
@@ -7057,8 +7126,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Cases in Educational Leadership Volume 12 ; 12 ;  >
-      au < testing ; exists ; 2010 ; Journal of Cases in Educational Leadership Volume 13 ; 13 ;  >
+      au < released ; manifest ; 2010 ; Journal of Cases in Educational Leadership Volume 12 ; 12 ;  >
+      au < released ; manifest ; 2010 ; Journal of Cases in Educational Leadership Volume 13 ; 13 ;  >
 
     }
 
@@ -7088,7 +7157,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 ;  >
+      au < released ; manifest ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 ;  >
 
     }
 
@@ -7118,7 +7187,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ;  >
+      au < released ; manifest ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ;  >
 
     }
 
@@ -7148,7 +7217,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Child Neurology Volume 25 ; 25 ;  >
+      au < released ; manifest ; 2010 ; Journal of Child Neurology Volume 25 ; 25 ;  >
 
     }
 
@@ -7178,7 +7247,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 ;  >
+      au < released ; manifest ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 ;  >
 
     }
 
@@ -7230,7 +7299,7 @@
 
       au < manifest ; exists ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 ;  >
       au < manifest ; exists ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 ;  >
-      au < testing ; exists ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 ;  >
+      au < released ; manifest ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 ;  >
 
     }
 
@@ -7252,7 +7321,7 @@
 
       au < manifest ; exists ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 ;  >
       au < manifest ; exists ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 ;  >
-      au < testing ; exists ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 ;  >
+      au < released ; manifest ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 ;  >
 
     }
 
@@ -7282,7 +7351,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Composite Materials Volume 44 ; 44 ;  >
+      au < released ; manifest ; 2010 ; Journal of Composite Materials Volume 44 ; 44 ;  >
 
     }
 
@@ -7312,7 +7381,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ;  >
+      au < released ; manifest ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ;  >
 
     }
 
@@ -7342,7 +7411,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 ;  >
+      au < released ; manifest ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 ;  >
 
     }
 
@@ -7372,7 +7441,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 ;  >
+      au < released ; manifest ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 ;  >
 
     }
 
@@ -7402,7 +7471,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ;  >
+      au < released ; manifest ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ;  >
 
     }
 
@@ -7432,7 +7501,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Contemporary History Volume 45 ; 45 ;  >
+      au < released ; manifest ; 2010 ; Journal of Contemporary History Volume 45 ; 45 ;  >
 
     }
 
@@ -7462,7 +7531,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ;  >
+      au < released ; manifest ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ;  >
 
     }
 
@@ -7522,7 +7591,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Cross-Cultural Psychology Volume 41 ; 41 ;  >
+      au < released ; manifest ; 2010 ; Journal of Cross-Cultural Psychology Volume 41 ; 41 ;  >
 
     }
 
@@ -7552,7 +7621,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < wanted ; exists ; 2009 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 ;  >
-      au < testing ; exists ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 ;  >
+      au < released ; manifest ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 ;  >
 
     }
 
@@ -7582,7 +7651,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Journal of Dental Research Volume 89 ; 89 ;  >
+      au < released ; manifest ; 2010 ; Journal of Dental Research Volume 89 ; 89 ;  >
 
     }
 
@@ -7612,7 +7681,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2009 ; Journal of Developing Societies Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2010 ; Journal of Developing Societies Volume 26 ; 26 ;  >
+      au < released ; manifest ; 2010 ; Journal of Developing Societies Volume 26 ; 26 ;  >
 
     }
 
@@ -12625,7 +12694,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Public Understanding of Science Volume 19 ; 19 ;  >
+      au < released ; manifest ; 2010 ; Public Understanding of Science Volume 19 ; 19 ;  >
 
     }
 
@@ -12655,7 +12724,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Public Works Management & Policy Volume 15 ; 15 ;  >
+      au < released ; manifest ; 2010 ; Public Works Management & Policy Volume 15 ; 15 ;  >
 
     }
 
@@ -12685,7 +12754,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Punishment & Society Volume 12 ; 12 ;  >
+      au < released ; manifest ; 2010 ; Punishment & Society Volume 12 ; 12 ;  >
 
     }
 
@@ -12715,7 +12784,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Qualitative Health Research Volume 20 ; 20 ;  >
+      au < released ; manifest ; 2010 ; Qualitative Health Research Volume 20 ; 20 ;  >
 
     }
 
@@ -12745,7 +12814,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ;  >
+      au < released ; manifest ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ;  >
 
     }
 
