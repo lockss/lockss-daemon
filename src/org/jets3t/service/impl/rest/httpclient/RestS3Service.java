@@ -327,8 +327,12 @@ public class RestS3Service extends S3Service {
      */
     @Override
     public String getEndpoint() {
-    	return this.jets3tProperties.getStringProperty(
+        String ret = System.getProperty("org.jets3t.servicehostname");
+        if (ret == null) {
+            ret = this.jets3tProperties.getStringProperty(
                 "s3service.s3-endpoint", Constants.S3_DEFAULT_HOSTNAME);
+        }
+    	return ret;
     }
 
     /**

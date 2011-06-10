@@ -450,8 +450,9 @@ public class CloudFrontService implements AWSRequestAuthorizer {
     public List<Distribution> listDistributionsByBucketName(boolean isStreaming, String bucketName)
         throws CloudFrontServiceException
     {
-        String s3Endpoint = this.jets3tProperties.getStringProperty(
-            "s3service.s3-endpoint", Constants.S3_DEFAULT_HOSTNAME);
+        String systemS3Endpoint = System.getProperty("org.jets3t.servicehostname");
+        String s3Endpoint = (systemS3Endpoint != null ? systemS3Endpoint :
+            this.jets3tProperties.getStringProperty( "s3service.s3-endpoint", Constants.S3_DEFAULT_HOSTNAME));
         if (log.isDebugEnabled()) {
             log.debug("Listing "
                 + (isStreaming ? "streaming" : "")

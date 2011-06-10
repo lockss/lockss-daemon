@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.2 2011-06-07 01:03:56 dshr Exp $
+ * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.3 2011-06-10 03:11:35 dshr Exp $
  */
 
 /*
@@ -60,17 +60,33 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   private LockssRepositoryImpl repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
-  private static final String tempDirURI = "s3://mumble";
+  private String tempDirURI;
   private static FileSystemOptions fso = S3FileProvider.getDefaultFileSystemOptions();
   private static DefaultFileSystemConfigBuilder fscb = new DefaultFileSystemConfigBuilder();
-  private static UserAuthenticator ua = new StaticUserAuthenticator("domain", "user", "password");
+  private static UserAuthenticator ua;
 
   public void setUp() throws Exception {
     super.setUp();
+    // XXX must use property files to set these - must not be checked in!
+    // XXX these are not good ways to switch services
+    if (false) {
+      // Use Internet Archive
+      System.setProperty("com.intridea.io.vfs.provider.s3.servicehostname", "s3.us.archive.org");
+      System.setProperty("org.jets3t.servicehostname", "s3.us.archive.org");
+      ua = new StaticUserAuthenticator("domain", "UUAPbWZiPLcW1sWb", "G4hKSN1kA65U0lFY");
+    } else {
+      // Use Amazon
+      ua = new StaticUserAuthenticator("domain", "AKIAIZL53QYLMLVCE4ZA", "wukpXLAnZtIpzgJvyOT13Q65gw6g1AJCuCtbDot1");
+    }
     daemon = getMockLockssDaemon();
     repoMgr = daemon.getRepositoryManager();
+    tempDirURI = "s3://test.lockss.org" + File.separator + "unit" +
+      File.separator + ((new Date()).getTime()/1000);
     Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirURI);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+		      tempDirURI);
+    if (true)
+      props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     fscb.setUserAuthenticator(fso, ua);
@@ -92,12 +108,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return LockssRepositoryImpl.getCacheLocation();
   }
 
-  public void testGetCacheLocation() {
-    if (false)
-    assertSame(tempDirURI, getCacheLocation());
-  }
-
-  public void dontTestGetLocalRepository() throws Exception {
+  public void testGetLocalRepository() throws Exception {
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
@@ -141,8 +152,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
       LockssRepositoryImpl.getLocalRepository(mau);
     localRepo.auMap = null;
     Map aumap = localRepo.getAuMap();
-    logger.debug3("location: " + location + " addSlash " + addSlash(location) + " auId: " + aumap.get(mau.getAuId()));
-    assertEquals(addSlash(location), aumap.get(mau.getAuId()));
+    String id = mau.getAuId();
+    logger.debug3("location: " + location + " addSlash " + addSlash(location) + " auId: " + id + " map " + aumap);
+    assertNotNull(aumap);
+    assertEquals(addSlash(location), aumap.get(id));
   }
 
   String addSlash(String s) {

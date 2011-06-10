@@ -83,6 +83,8 @@ import org.jets3t.service.utils.signedurl.SignedUrlHandler;
 public abstract class S3Service extends RestStorageService implements SignedUrlHandler {
 
     private static final Log log = LogFactory.getLog(S3Service.class);
+    private static final String S3ServiceHostname =
+      System.getProperty("org.jets3t.servicehostname", Constants.S3_DEFAULT_HOSTNAME);
 
     protected S3Service(ProviderCredentials credentials, String invokingApplicationDescription,
         CredentialsProvider credentialsProvider, Jets3tProperties jets3tProperties,
@@ -1334,11 +1336,11 @@ public abstract class S3Service extends RestStorageService implements SignedUrlH
         String url = null;
         if (usePathStyleUrl) {
             url = "http" + (isSecureHttp? "s" : "") +
-                "://s3.amazonaws.com/" +  bucketName;
+                "://" + S3ServiceHostname + "/" +  bucketName;
         } else {
             // Sub-domain URL style
             url = "http" + (isSecureHttp? "s" : "") +
-                "://" + bucketName + ".s3.amazonaws.com/";
+                "://" + bucketName + "." + S3ServiceHostname + "/";
         }
 
         // Construct the entire form.

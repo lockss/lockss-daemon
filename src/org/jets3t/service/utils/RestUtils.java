@@ -446,10 +446,12 @@ public class RestUtils {
         String proxyHostAddress, int proxyPort, String proxyUser,
         String proxyPassword, String proxyDomain)
     {
+        String systemS3Endpoint = System.getProperty("org.jets3t.servicehostname");
         String s3Endpoint = jets3tProperties.getStringProperty(
                 "s3service.s3-endpoint", Constants.S3_DEFAULT_HOSTNAME);
         initHttpProxy(httpClient, jets3tProperties, proxyAutodetect, proxyHostAddress, proxyPort,
-            proxyUser, proxyPassword, proxyDomain, s3Endpoint);
+            proxyUser, proxyPassword, proxyDomain,
+            (systemS3Endpoint != null ? systemS3Endpoint : s3Endpoint));
     }
 
     /**

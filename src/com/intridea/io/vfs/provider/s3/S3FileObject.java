@@ -101,6 +101,9 @@ public class S3FileObject extends AbstractFileObject {
      * Class logger
      */
     private Log logger = LogFactory.getLog(S3FileObject.class);
+    // XXX DSHR - not a good way to do this
+    private static final String S3ServiceHostname =
+      System.getProperty("com.intridea.io.vfs.provider.s3.servicehostname", "s3.amazonaws.com");
 
 
     public S3FileObject(FileName fileName, S3FileSystem fileSystem,
@@ -313,6 +316,9 @@ public class S3FileObject extends AbstractFileObject {
         if (cacheFile == null) {
             cacheFile = File.createTempFile("scalr.", ".s3");
         }
+	// Ensure the CONTENT_LENGTH metadata matches the length of the
+	// temporary file.
+	object.setContentLength(cacheFile.length());
         return new RandomAccessFile(cacheFile, "rw").getChannel();
     }
 
@@ -513,7 +519,7 @@ public class S3FileObject extends AbstractFileObject {
      * @return
      */
     public String getHttpUrl() {
-        StringBuilder sb = new StringBuilder("http://" + bucket.getName() + ".s3.amazonaws.com/");
+        StringBuilder sb = new StringBuilder("http://" + bucket.getName() + "." + S3ServiceHostname + "/");
         String key = getS3Key();
 
         // Determine context. Object or Bucket

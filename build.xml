@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.263.2.2 2011-05-17 21:49:24 dshr Exp $
+ $Id: build.xml,v 1.263.2.3 2011-06-10 03:11:35 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -211,7 +211,7 @@ Args:
   <property name="commons.codec.jar"
   				  value="${lib}/commons-codec-1.4.jar"/>
   <property name="commons.httpclient.jar"
-  			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
+  			value="${lib}/commons-httpclient-3.1.jar"/>
   <property name="commons.io.jar"
 	        value="${lib}/commons-io-1.4.jar" />
   <property name="commons.jxpath.jar"
@@ -251,7 +251,7 @@ Args:
   <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
   <!-- Needed by VFS-S3: -->
-  <property name="jets3t.jar" value="${lib}/jets3t-0.8.1.jar" />
+  <property name="xmlbuilder.jar" value="${lib}/java-xmlbuilder-0.4.jar" />
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
@@ -343,7 +343,7 @@ Args:
     <pathelement path="${heritrix.jar}" />
     <pathelement path="${heritrix-fastutil.jar}" />
     <!-- jars needed for VFS-S3 -->
-    <pathelement path="${jets3t.jar}" />
+    <pathelement path="${xmlbuilder.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -699,6 +699,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
           <include name="**/*.props"/>
           <include name="**/*.keystore"/>
           <include name="commons-logging.properties"/>
+          <include name="jets3t.properties"/>
           <include name="org/lockss/htdocs/**/*"/>
 	  <include name="**/urlrewriter.js"/> <!-- IA/WERA javascript -->
        </fileset>

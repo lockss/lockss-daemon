@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.9 2011-05-23 22:34:23 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.10 2011-06-10 03:11:35 dshr Exp $
  */
 
 /*
@@ -713,10 +713,39 @@ public class LockssRepositoryImpl
     }
     try {
       logger.debug3("Saving au id properties at '" + location + "'.");
+      if (logger.isDebug3()) {
+	logger.debug3("Contents: ");
+	Enumeration keys = props.propertyNames();
+	while (keys.hasMoreElements()) {
+	  String key = (String)keys.nextElement();
+	  logger.debug3(key + "=" + props.getProperty(key));
+	}
+	logger.debug3("End");
+      }
       OutputStream os =
 	new BufferedOutputStream(propFile.getContent().getOutputStream());
-      props.store(os, "ArchivalUnit id info");
-      os.close();
+      if (false) {
+        // XXX DSHR - need to check if this works.
+	props.store(os, "ArchivalUnit id info");
+	os.flush();
+	os.close();
+      } else {
+	ByteArrayOutputStream baos = new ByteArrayOutputStream();
+	PrintWriter pw = new PrintWriter(baos);
+	pw.println("#ArchivalUnit id info");
+	pw.println("#" + (new Date()).toString());
+	Enumeration keys = props.propertyNames();
+	while (keys.hasMoreElements()) {
+	  String key = (String)keys.nextElement();
+	  pw.println(key + "=" + props.getProperty(key));
+	}
+	pw.flush();
+	pw.close();
+	byte[] buf = baos.toByteArray();
+	os.write(buf);
+	os.flush();
+	os.close();
+      }	
       // XXX propFile.setReadOnly();
     } catch (IOException ioe) {
       logger.error("Couldn't write properties for " +
