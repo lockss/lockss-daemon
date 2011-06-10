@@ -363,4 +363,18 @@
     
   }
 
+  {
+  
+    title <
+      name = Simon Fraser University CONTENTdm Collections
+    >
+
+    plugin = ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin
+    param[base_url] = http://lib-general.lib.sfu.ca/ 
+    implicit < status ; name ; param[collection_alias] >
+    
+    au < ready ; CCICED Collection [test collection] ; /cciced >
+
+  }
+
 }

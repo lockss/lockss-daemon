@@ -1,0 +1,62 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>CONTENTdm Front-End Plugin (Simon Fraser University)</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_alias</key>
+        <displayName>Collection Alias</displayName>
+        <description>The collection's alias, including the leading slash, e.g. /digColl123</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;CONTENTdm Front-End Plugin (Simon Fraser University), Base URL %s, Collection Alias %s&quot;, base_url, collection_alias</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%scontentdm-lockss/lockss.php?alias=%s&quot;, base_url, collection_alias</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%scontentdm-lockss/lockss\.php\?(alias|contentdm_reference_url)=%s&quot;, base_url, collection_alias</string>
+      <string>1,&quot;^%scontentdm-proxy-cgi/(getimage|showfile|thumbnail)\.exe\?CISOROOT=%s&quot;, base_url, collection_alias</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>

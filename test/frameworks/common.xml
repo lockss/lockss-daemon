@@ -211,6 +211,7 @@
 	<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
 	<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
 	<value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
+	<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
       </list>
     </property>
 
