@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.10 2011-06-08 23:07:55 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.11 2011-06-10 21:17:21 thib_gc Exp $
  */
 
 /*
@@ -88,8 +88,15 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "Modes"),
         // Text includes number of reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
+        
+        // MAINTENANCE
+        
+        // Sadly, the "copyright" <meta> tag isn't the publication year
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "copyright"),
         // Static, but was added after thousands of AUs had crawled already
         HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
+        // Eventually changed from <h1 lang="en" class="title"> to <h1>
+        new TagNameFilter("h1"),
     };
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
