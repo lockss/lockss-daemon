@@ -1,0 +1,163 @@
+{
+
+  publisher <
+    name = BioMed Central
+  >
+  
+  rights = openaccess
+  implicit < status ; name ; param[volume_name] >
+
+  {
+
+    plugin = org.lockss.plugin.bmc.BMCPlugin
+    param[base_url] = http://www.biomedcentral.com/    
+
+    {
+
+      title <
+        name = BMC Anesthesiology ;
+        eissn = 1471-2253
+      >
+
+      param[journal_issn] = 1471-2253
+
+      au < released ; BMC Anesthesiology Volume 1 ; 1 >
+      au < released ; BMC Anesthesiology Volume 2 ; 2 >
+      au < released ; BMC Anesthesiology Volume 3 ; 3 >
+      
+    }
+
+  }
+
+  {
+
+    plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
+
+    {
+
+      title <
+        name = Acta Veterinaria Scandinavica ;
+        eissn = 1751-0147
+      >
+
+      param[base_url] = http://www.actavetscand.com/
+      param[journal_issn] = 1751-0147
+
+      au < released ; Acta Veterinaria Scandinavica Volume 42 ; 42 >
+      au < released ; Acta Veterinaria Scandinavica Volume 43 ; 43 >
+      au < released ; Acta Veterinaria Scandinavica Volume 44 ; 44 >
+      
+    }
+
+  }
+
+}
+
+{
+
+  publisher <
+    name = State of Alaska
+  >
+
+  {
+
+    title <
+      name = Alaska State Documents
+
+    >
+
+    rights = openaccess
+    plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
+    param[base_url] = http://library.state.ak.us/asp/
+    implicit < status ; year ; name ; param[year] >
+
+    au < released ; 2006 ; Alaska State Documents 2006 ; 2006 >
+    au < released ; 2007 ; Alaska State Documents 2007 ; 2007 >
+    au < released ; 2008 ; Alaska State Documents 2008 ; 2008 >
+
+  }
+  
+}
+
+{
+
+  publisher <
+    name = TESL-EJ
+  >
+  
+  {
+  
+    title <
+      name = TESL-EJ: The Electronic Journal for English as a Second Language ;
+      issn = 1072-4303 ;
+      issnl = 1072-4303
+    >
+    
+    rights = openaccess
+    plugin = gov.loc.plugin.TESLEJPlugin
+    param[base_url] = http://www.tesl-ej.org/
+    implicit < status ; name ; param[volume] ; param[num_issue_range] >
+      
+    au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 ; 33-36 >
+    au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 ; 37-40 >
+    au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 ; 41-44 >
+    
+  }
+
+}
+
+{
+
+  publisher <
+    name = University of Limerick
+  >
+  
+  {
+  
+    title <
+      name = Minerva: An Internet Journal of Philosophy ;
+      issn = 1393-614X ;
+      issnl = 1393-614X
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.minerva.MinervaPlugin
+    param[base_url] = http://www.ul.ie/
+    param[base_url2] = http://www.mic.ul.ie/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < released ; 2004 ; Minerva: An Internet Journal of Philosophy Volume 8 ; 8 >
+    au < released ; 2005 ; Minerva: An Internet Journal of Philosophy Volume 9 ; 9 >
+    au < released ; 2006 ; Minerva: An Internet Journal of Philosophy Volume 10 ; 10 >
+    
+  }
+
+}
+
+{
+
+  publisher <
+    name = University of Nebraska at Omaha
+  >
+
+  {
+
+    title <
+      name = The Journal of Religion and Film ;
+      issn = 1092-1311 ;
+      issnl = 1092-1311
+    >
+
+    rights = openaccess
+    plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
+    param[base_url] = http://www.unomaha.edu/jrf/
+    implicit < status ; name ; param[volume] >
+
+    au < released ; The Journal of Religion and Film Volume 7 ; 7 >
+    au < released ; The Journal of Religion and Film Volume 8 ; 8 >
+    au < released ; The Journal of Religion and Film Volume 9 ; 9 >
+
+  }
+
+}
+
