@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.5 2011-03-22 12:58:51 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.6 2011-06-11 21:47:47 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.5 2011-03-22 12:58:51 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.6 2011-06-11 21:47:47 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -154,8 +154,19 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("1971-1977", au.getYear());
     assertEquals("1971", au.getStartYear());
     assertEquals("1977", au.getEndYear());
-    assertTrue(au.includesYear("1971"));
+    assertTrue(au.includesYear("1971")); 
+    assertTrue(au.includesYear("1975"));
     assertFalse(au.includesYear("1970"));
+    assertFalse(au.includesYear("1979"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("year", "MCMLXXI-1977");
+    assertEquals("MCMLXXI-1977", au.getYear());
+    assertEquals("MCMLXXI", au.getStartYear());
+    assertEquals("1977", au.getEndYear());
+    assertTrue(au.includesYear("MCMLXXVII"));
+    assertTrue(au.includesYear("MCMLXXV"));
+    assertFalse(au.includesYear("MCMLXX"));
     assertFalse(au.includesYear("1979"));
   }
   
@@ -169,21 +180,50 @@ public class TestTdbAu extends LockssTestCase {
     assertNull(au.getStartVolume());
     assertNull(au.getEndVolume());
     
+    // test single arabic  number
     au.setParam("volume", "1971");
     assertEquals("1971", au.getVolume());
     assertEquals("1971", au.getStartVolume());
     assertEquals("1971", au.getEndVolume());
     assertTrue(au.includesVolume("1971"));
     assertFalse(au.includesVolume("1970"));
+    assertFalse(au.includesVolume("1979"));
 
+    // test arabic number range
     au = new TdbAu("TestAU", "pluginA");
     au.setAttr("volume", "1971-1977");
     assertEquals("1971-1977", au.getVolume());
     assertEquals("1971", au.getStartVolume());
     assertEquals("1977", au.getEndVolume());
     assertTrue(au.includesVolume("1971"));
+    assertTrue(au.includesVolume("1975"));
     assertFalse(au.includesVolume("1970"));
     assertFalse(au.includesVolume("1979"));
+
+    // test interchangeability of arabic and roman numbers
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("volume", "MCMLXXI-1977");
+    assertEquals("MCMLXXI-1977", au.getVolume());
+    assertEquals("MCMLXXI", au.getStartVolume());
+    assertEquals("1977", au.getEndVolume());
+    assertTrue(au.includesVolume("MCMLXXVII"));
+    assertTrue(au.includesVolume("MCMLXXV"));
+    assertFalse(au.includesVolume("MCMLXX"));
+    assertFalse(au.includesVolume("1979"));
+
+    // test volume ranges as "topic ranges"
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("volume", "Ge-Ma");
+    assertEquals("Ge-Ma", au.getVolume());
+    assertEquals("Ge", au.getStartVolume());
+    assertEquals("Ma", au.getEndVolume());
+    assertTrue(au.includesVolume("Ge"));
+    assertTrue(au.includesVolume("Georgia"));
+    assertTrue(au.includesVolume("M"));
+    assertTrue(au.includesVolume("Ma"));
+    assertTrue(au.includesVolume("Mathematics"));
+    assertFalse(au.includesVolume("G"));
+    assertFalse(au.includesVolume("Mbone"));
   }
   
   /**

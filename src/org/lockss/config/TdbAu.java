@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.7 2011-03-22 12:58:52 pgust Exp $
+ * $Id: TdbAu.java,v 1.8 2011-06-11 21:47:47 pgust Exp $
  */
 
 /*
@@ -581,9 +581,18 @@ public class TdbAu {
   }
 
   /**
-   * Determine whether a range include a given value.
-   * @param range a start/stop range separated by a dash.
-   * @param value
+   * Determine whether a range include a given value. The range can be a
+   * single value  or a start/stop range separated by a dash. If the range
+   * is a single value, it will be used as both the start and stop values.
+   * <p>
+   * If the range and value can be interpreted as numbers (Arabic or Roman),
+   * the value is compared numerically with the range. Otherwise, the value 
+   * is compared to the range start and stop values as a topic range. That 
+   * is, "Georgia", "Kanasas", and "Massachusetts" are topics within the 
+   * volume "Ge-Ma.
+   * 
+   * @param range a single value or a start/stop range separated by a dash.
+   * @param value the value
    * @return <code>true</code> if this range includes the value
    */
   static private boolean rangeIncludes(String range, String value) {
@@ -595,20 +604,16 @@ public class TdbAu {
     String endRange = (i > 0) ? range.substring(i+1) : range;
     try {
       // see if value is within range
-      int srange = Integer.parseInt(startRange);
-      int erange = Integer.parseInt(endRange);
-      for (int v = srange; v <= erange; v++) {
-        if (value.equals(Integer.toString(v))) {
-          return true;
-        }
-      }
+      int srange = NumberUtil.parseInt(startRange);
+      int erange = NumberUtil.parseInt(endRange);
+      int ival = NumberUtil.parseInt(value);
+      return ( ival >= srange && ival <= erange);
     } catch (NumberFormatException ex) {
-      // can't compare numerically, so compare range ends only
-      if (value.startsWith(startRange) || value.startsWith(endRange)) {
-        return true;
-      }
+      // can't compare numerically, so compare as topic ranges
+      return     (value.compareTo(startRange) >= 0) 
+              && (   (value.compareTo(endRange) <= 0)
+                  || value.startsWith(endRange));
     }
-    return false;
   }
 
   /**
