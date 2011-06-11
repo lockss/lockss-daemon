@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.2 2011-06-08 23:20:50 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.3 2011-06-11 21:44:15 pgust Exp $
  */
 
 /*
@@ -92,16 +92,14 @@ public class TestNumberUtil extends LockssTestCase {
 		int intValue = Integer.parseInt(arabicValue);
         // roman value represents a valid Roman number
         assertTrue(NumberUtil.isRomanNumber(romanValue));
-        // roman value represents a normalized number
-        assertTrue(NumberUtil.isNormalizedCountingNumber(romanValue));
 		// roman value is normalized
 		assertEquals(romanValue, NumberUtil.toRomanNumber(romanValue));
 		// roman is normalized
 		Roman.parseRoman(romanValue, true);
 		// matches roman value
-		assertEquals(intValue, NumberUtil.parseCountingNumber(romanValue));
+		assertEquals(intValue, NumberUtil.parseInt(romanValue));
 	    // matches arabic value
-	    assertEquals(intValue, NumberUtil.parseCountingNumber(arabicValue));
+	    assertEquals(intValue, NumberUtil.parseInt(arabicValue));
 	    // match split roman string
 	    assertEquals(equivalentRomanDigits[i], 
 	                 NumberUtil.toRomanDigits(romanValue));
@@ -138,16 +136,14 @@ public class TestNumberUtil extends LockssTestCase {
 	  try {
 	    // roman value represents a valid Roman number
 	    assertTrue(NumberUtil.isRomanNumber(romanValue));
-        // roman value does not represent a normalized number
-        assertFalse(NumberUtil.isNormalizedCountingNumber(romanValue));
 		// unnormalized roman value matches roman string representation
 		assertNotEquals(romanValue, NumberUtil.toRomanNumber(romanValue));
 		// roman matches arabic
 		assertEquals(NumberUtil.toRomanNumber(romanValue),
 		             NumberUtil.toRomanNumber(arabicValue));
 		// roman matches integer
-		assertEquals(NumberUtil.parseCountingNumber(romanValue), 
-		             NumberUtil.parseCountingNumber(arabicValue));
+		assertEquals(NumberUtil.parseInt(romanValue), 
+		             NumberUtil.parseInt(arabicValue));
 	  } catch (NumberFormatException ex) {
 		fail(ex.getMessage());
 	  } catch (IllegalArgumentException ex) {
@@ -170,7 +166,7 @@ public class TestNumberUtil extends LockssTestCase {
    */
   public void testInvalid() {
 	String[] invalidRomanStrings = {
-	  "xyzzy", "1234abc", "", "-iv", 
+	  "xyzzy", "1234IV", "", "-iv", "100",
 	  "((MMCXLVII)CDLXXXIII)DCXLVIII"  // too large
 	};
 		  
@@ -179,7 +175,7 @@ public class TestNumberUtil extends LockssTestCase {
         // String is not a Roman number
 	    assertFalse(NumberUtil.isRomanNumber(s));
         // String is not a Roman number
-		NumberUtil.parseCountingNumber(s); 
+		NumberUtil.parseRomanNumber(s); 
 		fail(s + " is an invaid Roman string");
 	  } catch (NumberFormatException ex) {
 	  } catch (IllegalArgumentException ex) {
@@ -194,16 +190,6 @@ public class TestNumberUtil extends LockssTestCase {
 	  try {
         // String is not a Roman number
         assertFalse(NumberUtil.isRomanNumber(s));
-        // String is not a Roman number
-        NumberUtil.parseCountingNumber(s); 
-		fail(s + " is an invalid Arabic String");
-	  } catch (NumberFormatException ex) {
-	  } catch (IllegalArgumentException ex) {
-	  }
-	}
-	
-	for (String s : invalidArabicStrings) {
-	  try {
 		int intValue = Integer.parseInt(s);
 	    NumberUtil.toRomanNumber(intValue); 
 		fail(intValue + " is an invalid integer value");

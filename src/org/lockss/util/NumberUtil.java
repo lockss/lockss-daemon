@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.2 2011-06-08 23:19:25 pgust Exp $
+ * $Id: NumberUtil.java,v 1.3 2011-06-11 21:43:44 pgust Exp $
  */
 
 /*
@@ -53,12 +53,6 @@ import java.util.Map;
  * http://www.web40571.clarahost.co.uk/roman/howtheywork.htm#larger
  */
 public class NumberUtil {
-  /** A constant holding the minimum value a counting number can have */
-  public static final int MIN_COUNTING_NUMBER = 1;
-  
-  /** A constant holding the maximum value a counting number can have */
-  public static final int MAX_COUNTING_NUMBER = Integer.MAX_VALUE;
-  
   /** Roman digits and numbers; descending order important for toRoman() */
   private final static Map<String,Integer> romanToNum; 
   static {
@@ -80,18 +74,17 @@ public class NumberUtil {
   private NumberUtil() {}
   
   /**
-   * Determines the Roman value of the system property with the specified name.
+   * Determines the value of the system property with the specified name.
    * The argument is treated as the name of a system property. The string
-   * value of this property is interpreted as Roman or Arabic value and the
-   * corresponding Roman object is returned.  Returns null if the system
-   * property does not have the correct format, or if the specified name is
-   * empty or <tt>null</tt>
+   * value of this property is interpreted as Arabic or Roman number 
+   * and the corresponding value is returned.
    * 
    * @param nm property name
-   * @return the Roman value of the property
+   * @return the Integervalue of the property or <tt>null</tt> if the property
+   *   is not defined or is not an integer
    */
-  public static Integer getCountingNumber(String nm) {
-    return NumberUtil.getCountingNumber(nm, null);
+  public static Integer getInteger(String nm) {
+    return NumberUtil.getInteger(nm, null);
   }
   
   /**
@@ -106,17 +99,13 @@ public class NumberUtil {
    * 
    * @param nm property name
    * @param val the default value
-   * @return the Roman value of the property
+   * @return the Integer value of the property
    */
-  public static Integer getCountingNumber(String nm, Integer val) {
-    if ((val != null) && !isCountingNumber(val)) {
-      throw new IllegalArgumentException("Not a counting number: " + val);
-    }
-    
+  public static Integer getInteger(String nm, Integer val) {
     String prop = System.getProperty(nm);
     if (!StringUtil.isNullString(prop)) {
       try {
-        val = NumberUtil.parseCountingNumber(prop);
+        val = NumberUtil.parseInt(prop);
       } catch (NumberFormatException ex) {
       // fall through
       }
@@ -125,87 +114,34 @@ public class NumberUtil {
   }
   
   /**
-   * Determines whether the number is a counting number in the range 1 - 2^31-1.
-   * 
-   * @param n the number
-   * @return <tt>true</tt> if number is a counting number
-   */
-  public static boolean isCountingNumber(int n) {
-    return    (n <= NumberUtil.MAX_COUNTING_NUMBER)  
-           && (n >= NumberUtil.MIN_COUNTING_NUMBER);
-  }
-  
-  /**
-   * Determines whether the number represented by the String is a 
-   * counting number in the range 1-2^31-1.
-   * 
-   * @param n the number
-   * @return <tt>true</tt> if number is a counting number
-   */
-  public static boolean isCountingNumber(String s) {
-    try {
-      NumberUtil.parseCountingNumber(s);
-      return true;
-    } catch (NumberFormatException ex) {
-      return false;
-    }
-  }
-  
-  /**
-   * Returns <tt>true</tt> if the Arabic or Roman counting number represented 
-   * by the input string is in normal form for its number system. For example,
-   * "01" and "IIII" are not normalized, while "1" and "IV" are.
-   * 
-   * @param s the String
-   * @return <tt>true</tt> if String representing Arabic or Roman 
-   *  counting number is normalized
-   */
-  public static boolean isNormalizedCountingNumber(String s) {
-    try {
-      NumberUtil.parseRomanNumber(s, true);
-      return true;
-    } catch (NumberFormatException ex) {
-      try {
-        return NumberUtil.toArabicNumber(s).equals(s);
-      } catch (IllegalArgumentException ex2) {
-      }
-    }
-    return false;
-  }
-  
-  /**
    * Determines whether the input string represents a Roman number.
    * 
    * @param s the input String
    * @return <tt>true</tt> if the input string represents a Roman number
    */
-  public static boolean isRomanNumber(String roman) {
+  public static boolean isRomanNumber(String s) {
     try {
-      NumberUtil.parseRomanNumber(roman, false);
+      NumberUtil.parseRomanNumber(s, false);
       return true;
     } catch (NumberFormatException ex) {
       return false;
     }
   }
   /**
-   * Returns an integer from a String representing a counting number in the 
-   * Arabic or Roman number system, within the range 1 - 2^31-1.
+   * Returns an integer from a String representing a number in the 
+   * Arabic or Roman number system.
    * 
    * @param s the String
    * @return the number
    * @throws NumberFormatException if the String does not represent a valid
    *     counting number in the Arabic or Roman number systems
    */
-  public static int parseCountingNumber(String s) 
+  public static int parseInt(String s) 
     throws NumberFormatException {
     try {
-      return NumberUtil.parseRomanNumber(s, false);
+      return NumberUtil.parseRomanNumber(s);
     } catch (NumberFormatException ex) {
-      int n = Integer.parseInt(s);
-      if (!isCountingNumber(n)) {
-        throw new NumberFormatException("Not a counting number: " + s);
-      }
-      return n;
+      return Integer.parseInt(s);
     }
   }
   
@@ -242,6 +178,23 @@ public class NumberUtil {
     return romanValue;
   }
   
+  /**
+   * Returns an integer from a String representing a number in the
+   * Roman number system. The number must be within the range 1 - 2^31-1.
+   * The string may not contain any other characters than allowed by the 
+   * Roman numeral alphabet (the characters 'I', 'V', 'X', 'L', 'C', 'D' 
+   * and 'M' are allowed). Parentheses can be used for large Roman numbers.
+   * If the string does not represent a Roman number, the exception is thrown. 
+   * 
+   * @param roman the String
+   * @return the integer
+   * @throws NumberFormatException if the String does not represent a valid
+   *    number in the Roman number system
+   */
+  public static int parseRomanNumber(String roman) 
+    throws NumberFormatException {
+    return parseRomanNumber(roman, false);
+  }
   /**
    * Returns an integer from a String representing a number in the
    * Roman number system. The number must be within the range 1 - 2^31-1.
@@ -382,9 +335,6 @@ public class NumberUtil {
       NumberUtil.parseRomanNumber(s, romanChars);
     } catch (NumberFormatException ex) {
       int n = Integer.parseInt(s);
-      if (!NumberUtil.isCountingNumber(n)) {
-        throw new NumberFormatException("Not a counting number: " + s);
-      }
       parseRomanNumber(NumberUtil.toRomanNumber(n), romanChars);
     }
     return romanChars.toArray(new String[romanChars.size()]);
@@ -401,7 +351,7 @@ public class NumberUtil {
    */
   public static String toArabicNumber(String s) 
     throws NumberFormatException {
-    return Integer.toString(NumberUtil.parseCountingNumber(s));
+    return Integer.toString(NumberUtil.parseInt(s));
   }
   
   /**
@@ -419,7 +369,7 @@ public class NumberUtil {
    */
   public static String toRomanNumber(String s) 
     throws NumberFormatException {
-    return NumberUtil.toRomanNumber(NumberUtil.parseCountingNumber(s));
+    return NumberUtil.toRomanNumber(NumberUtil.parseInt(s));
   }
   
   /**
@@ -431,7 +381,7 @@ public class NumberUtil {
    * @return the String representation in the Roman number system
    */
   public static String toRomanNumber(int value) {
-    if (!isCountingNumber(value)) {
+    if (value <= 0) {
       throw new IllegalArgumentException("Not a counting number: " + value);
     }
     StringBuilder result = new StringBuilder();
@@ -492,9 +442,9 @@ public class NumberUtil {
     // obviously only ready for test purposes, very ugly code
     try {
       if (args.length >= 2) {
-        int start = NumberUtil.parseCountingNumber(args[1]);
+        int start = NumberUtil.parseInt(args[1]);
         int end = (args.length > 2) 
-                    ? NumberUtil.parseCountingNumber(args[2]) : start;
+                    ? NumberUtil.parseInt(args[2]) : start;
         for (int i = start; i <= end; i++) {
           if (args[0].equals("-i")) {
               System.out.println(i);
