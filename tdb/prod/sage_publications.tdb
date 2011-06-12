@@ -16246,6 +16246,61 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcl.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; The Journal of Commonwealth Literature Volume 1 ; 1 >
+        au < manifest ; 1967 ; The Journal of Commonwealth Literature Volume 2 ; 2 >
+        au < manifest ; 1968 ; The Journal of Commonwealth Literature Volume 3 ; 3 >
+        au < manifest ; 1969 ; The Journal of Commonwealth Literature Volume 4 ; 4 >
+        au < manifest ; 1970 ; The Journal of Commonwealth Literature Volume 5 ; 5 >
+        au < manifest ; 1971 ; The Journal of Commonwealth Literature Volume 6 ; 6 >
+        au < manifest ; 1972 ; The Journal of Commonwealth Literature Volume 7 ; 7 >
+        au < manifest ; 1973 ; The Journal of Commonwealth Literature Volume 8 ; 8 >
+        au < manifest ; 1974 ; The Journal of Commonwealth Literature Volume 9 ; 9 >
+        au < manifest ; 1975 ; The Journal of Commonwealth Literature Volume 10 ; 10 >
+        au < manifest ; 1976 ; The Journal of Commonwealth Literature Volume 11 ; 11 >
+        au < manifest ; 1977 ; The Journal of Commonwealth Literature Volume 12 ; 12 >
+        au < manifest ; 1978 ; The Journal of Commonwealth Literature Volume 13 ; 13 >
+        au < manifest ; 1979 ; The Journal of Commonwealth Literature Volume 14 ; 14 >
+        au < manifest ; 1980 ; The Journal of Commonwealth Literature Volume 15 ; 15 >
+        au < manifest ; 1981 ; The Journal of Commonwealth Literature Volume 16 ; 16 >
+        au < manifest ; 1982 ; The Journal of Commonwealth Literature Volume 17 ; 17 >
+        au < manifest ; 1983 ; The Journal of Commonwealth Literature Volume 18 ; 18 >
+        au < manifest ; 1984 ; The Journal of Commonwealth Literature Volume 19 ; 19 >
+        au < manifest ; 1985 ; The Journal of Commonwealth Literature Volume 20 ; 20 >
+        au < manifest ; 1986 ; The Journal of Commonwealth Literature Volume 21 ; 21 >
+        au < manifest ; 1987 ; The Journal of Commonwealth Literature Volume 22 ; 22 >
+        au < manifest ; 1988 ; The Journal of Commonwealth Literature Volume 23 ; 23 >
+        au < manifest ; 1989 ; The Journal of Commonwealth Literature Volume 24 ; 24 >
+        au < manifest ; 1990 ; The Journal of Commonwealth Literature Volume 25 ; 25 >
+        au < manifest ; 1991 ; The Journal of Commonwealth Literature Volume 26 ; 26 >
+        au < manifest ; 1992 ; The Journal of Commonwealth Literature Volume 27 ; 27 >
+        au < manifest ; 1993 ; The Journal of Commonwealth Literature Volume 28 ; 28 >
+        au < manifest ; 1994 ; The Journal of Commonwealth Literature Volume 29 ; 29 >
+        au < manifest ; 1995 ; The Journal of Commonwealth Literature Volume 30 ; 30 >
+        au < manifest ; 1996 ; The Journal of Commonwealth Literature Volume 31 ; 31 >
+        au < manifest ; 1997 ; The Journal of Commonwealth Literature Volume 32 ; 32 >
+        au < manifest ; 1998 ; The Journal of Commonwealth Literature Volume 33 ; 33 >
+        au < manifest ; 1999 ; The Journal of Commonwealth Literature Volume 34 ; 34 >
+        au < manifest ; 2000 ; The Journal of Commonwealth Literature Volume 35 ; 35 >
+        au < manifest ; 2001 ; The Journal of Commonwealth Literature Volume 36 ; 36 >
+        au < manifest ; 2002 ; The Journal of Commonwealth Literature Volume 37 ; 37 >
+        au < manifest ; 2003 ; The Journal of Commonwealth Literature Volume 38 ; 38 >
+        au < manifest ; 2004 ; The Journal of Commonwealth Literature Volume 39 ; 39 >
+        au < manifest ; 2005 ; The Journal of Commonwealth Literature Volume 40 ; 40 >
+        au < manifest ; 2006 ; The Journal of Commonwealth Literature Volume 41 ; 41 >
+        au < manifest ; 2007 ; The Journal of Commonwealth Literature Volume 42 ; 42 >
+        au < manifest ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 >
+        au < manifest ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 >
+        au < manifest ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 >
+        au < manifest ; 2011 ; The Journal of Commonwealth Literature Volume 46 ; 46 >
+
+      }
+
     }
 
     {
@@ -16281,6 +16336,50 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jci.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1974 ; Journal of Communication Inquiry Volume 1 ; 1 >
+        au < manifest ; 1976 ; Journal of Communication Inquiry Volume 2 ; 2 >
+        au < manifest ; 1977 ; Journal of Communication Inquiry Volume 3 ; 3 >
+        au < manifest ; 1978 ; Journal of Communication Inquiry Volume 4 ; 4 >
+        au < manifest ; 1979 ; Journal of Communication Inquiry Volume 5 ; 5 >
+        au < manifest ; 1980 ; Journal of Communication Inquiry Volume 6 ; 6 >
+        au < manifest ; 1981 ; Journal of Communication Inquiry Volume 7 ; 7 >
+        au < manifest ; 1984 ; Journal of Communication Inquiry Volume 8 ; 8 >
+        au < manifest ; 1985 ; Journal of Communication Inquiry Volume 9 ; 9 >
+        au < manifest ; 1986 ; Journal of Communication Inquiry Volume 10 ; 10 >
+        au < doesNotExist ; 1987 ; Journal of Communication Inquiry Volume 11 ; 11 >
+        au < manifest ; 1988 ; Journal of Communication Inquiry Volume 12 ; 12 >
+        au < manifest ; 1989 ; Journal of Communication Inquiry Volume 13 ; 13 >
+        au < manifest ; 1990 ; Journal of Communication Inquiry Volume 14 ; 14 >
+        au < manifest ; 1991 ; Journal of Communication Inquiry Volume 15 ; 15 >
+        au < manifest ; 1992 ; Journal of Communication Inquiry Volume 16 ; 16 >
+        au < manifest ; 1993 ; Journal of Communication Inquiry Volume 17 ; 17 >
+        au < manifest ; 1994 ; Journal of Communication Inquiry Volume 18 ; 18 >
+        au < manifest ; 1995 ; Journal of Communication Inquiry Volume 19 ; 19 >
+        au < manifest ; 1996 ; Journal of Communication Inquiry Volume 20 ; 20 >
+        au < manifest ; 1997 ; Journal of Communication Inquiry Volume 21 ; 21 >
+        au < manifest ; 1998 ; Journal of Communication Inquiry Volume 22 ; 22 >
+        au < manifest ; 1999 ; Journal of Communication Inquiry Volume 23 ; 23 >
+        au < manifest ; 2000 ; Journal of Communication Inquiry Volume 24 ; 24 >
+        au < manifest ; 2001 ; Journal of Communication Inquiry Volume 25 ; 25 >
+        au < manifest ; 2002 ; Journal of Communication Inquiry Volume 26 ; 26 >
+        au < manifest ; 2003 ; Journal of Communication Inquiry Volume 27 ; 27 >
+        au < manifest ; 2004 ; Journal of Communication Inquiry Volume 28 ; 28 >
+        au < manifest ; 2005 ; Journal of Communication Inquiry Volume 29 ; 29 >
+        au < manifest ; 2006 ; Journal of Communication Inquiry Volume 30 ; 30 >
+        au < manifest ; 2007 ; Journal of Communication Inquiry Volume 31 ; 31 >
+        au < manifest ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 >
+        au < manifest ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 >
+        au < manifest ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 >
+        au < manifest ; 2011 ; Journal of Communication Inquiry Volume 35 ; 35 >
+
+      }
+      
     }
 
     {
@@ -16313,6 +16412,60 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Composite Materials Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; Journal of Composite Materials Volume 43 ; 43 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Composite Materials Volume 44 ; 44 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1967 ; Journal of Composite Materials Volume 1 ; 1 >
+        au < manifest ; 1968 ; Journal of Composite Materials Volume 2 ; 2 >
+        au < manifest ; 1969 ; Journal of Composite Materials Volume 3 ; 3 >
+        au < manifest ; 1970 ; Journal of Composite Materials Volume 4 ; 4 >
+        au < manifest ; 1971 ; Journal of Composite Materials Volume 5 ; 5 >
+        au < manifest ; 1972 ; Journal of Composite Materials Volume 6 ; 6 >
+        au < manifest ; 1973 ; Journal of Composite Materials Volume 7 ; 7 >
+        au < manifest ; 1974 ; Journal of Composite Materials Volume 8 ; 8 >
+        au < manifest ; 1975 ; Journal of Composite Materials Volume 9 ; 9 >
+        au < manifest ; 1976 ; Journal of Composite Materials Volume 10 ; 10 >
+        au < manifest ; 1977 ; Journal of Composite Materials Volume 11 ; 11 >
+        au < manifest ; 1978 ; Journal of Composite Materials Volume 12 ; 12 >
+        au < manifest ; 1979 ; Journal of Composite Materials Volume 13 ; 13 >
+        au < manifest ; 1980 ; Journal of Composite Materials Volume 14 ; 14 >
+        au < manifest ; 1981 ; Journal of Composite Materials Volume 15 ; 15 >
+        au < manifest ; 1982 ; Journal of Composite Materials Volume 16 ; 16 >
+        au < manifest ; 1983 ; Journal of Composite Materials Volume 17 ; 17 >
+        au < manifest ; 1984 ; Journal of Composite Materials Volume 18 ; 18 >
+        au < manifest ; 1985 ; Journal of Composite Materials Volume 19 ; 19 >
+        au < manifest ; 1986 ; Journal of Composite Materials Volume 20 ; 20 >
+        au < manifest ; 1987 ; Journal of Composite Materials Volume 21 ; 21 >
+        au < manifest ; 1988 ; Journal of Composite Materials Volume 22 ; 22 >
+        au < manifest ; 1989 ; Journal of Composite Materials Volume 23 ; 23 >
+        au < manifest ; 1990 ; Journal of Composite Materials Volume 24 ; 24 >
+        au < exists ; 1991 ; Journal of Composite Materials Volume 25 ; 25
+        au < manifest ; 1992 ; Journal of Composite Materials Volume 26 ; 26 >
+        au < manifest ; 1993 ; Journal of Composite Materials Volume 27 ; 27 >
+        au < manifest ; 1994 ; Journal of Composite Materials Volume 28 ; 28 >
+        au < manifest ; 1995 ; Journal of Composite Materials Volume 29 ; 29 >
+        au < manifest ; 1996 ; Journal of Composite Materials Volume 30 ; 30 >
+        au < manifest ; 1997 ; Journal of Composite Materials Volume 31 ; 31 >
+        au < manifest ; 1998 ; Journal of Composite Materials Volume 32 ; 32 >
+        au < manifest ; 1999 ; Journal of Composite Materials Volume 33 ; 33 >
+        au < manifest ; 2000 ; Journal of Composite Materials Volume 34 ; 34 >
+        au < manifest ; 2001 ; Journal of Composite Materials Volume 35 ; 35 >
+        au < manifest ; 2002 ; Journal of Composite Materials Volume 36 ; 36 >
+        au < manifest ; 2003 ; Journal of Composite Materials Volume 37 ; 37 >
+        au < manifest ; 2004 ; Journal of Composite Materials Volume 38 ; 38 >
+        au < manifest ; 2005 ; Journal of Composite Materials Volume 39 ; 39 >
+        au < manifest ; 2006 ; Journal of Composite Materials Volume 40 ; 40 >
+        au < manifest ; 2007 ; Journal of Composite Materials Volume 41 ; 41 >
+        au < manifest ; 2008 ; Journal of Composite Materials Volume 42 ; 42 >
+        au < manifest ; 2009 ; Journal of Composite Materials Volume 43 ; 43 >
+        au < manifest ; 2010 ; Journal of Composite Materials Volume 44 ; 44 >
+        au < manifest ; 2011 ; Journal of Composite Materials Volume 45 ; 45 >
 
       }
 
