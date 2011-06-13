@@ -6,6 +6,7 @@
   
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   implicit < status ; status2 ; year ; name ; param[volume] >
+  param[base_url] = http://lawdigitalcommons.bc.edu/
   
   {
 
@@ -14,7 +15,6 @@
       issn = 0161-6587
     >
 
-    param[base_url] = http://lawdigitalcommons.bc.edu/
     param[journal_abbr] = bclr
 
     au < manifest ; exists ; 1959-1960 ; Boston College Law Review Volume 1 ; 1 >
@@ -69,6 +69,21 @@
     au < manifest ; exists ; 2009 ; Boston College Law Review Volume 50 ; 50 >
     au < manifest ; exists ; 2010 ; Boston College Law Review Volume 51 ; 51 >
     au < manifest ; exists ; 2011 ; Boston College Law Review Volume 52 ; 52 >
+
+  }
+
+  {
+
+    title <
+      name = Boston College Third World Law Journal ;
+      issn = 0276-3583
+    >
+
+    param[journal_abbr] = twlj
+
+    au < manifest ; exists ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 >
+    au < manifest ; exists ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 >
+    au < manifest ; exists ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 >
 
   }
 
