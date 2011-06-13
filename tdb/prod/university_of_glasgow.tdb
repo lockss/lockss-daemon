@@ -15,9 +15,9 @@
     rights = openaccess
     plugin = uk.org.lockss.plugin.jelit.JeLitPlugin
     param[base_url] = http://www.jelit.org/
-    implicit < status ; name >
+    implicit < status ; year ; name >
     
-    au < released ; JeLit: Journal of eLiteracy >
+    au < released ; 2004-2005 ; JeLit: Journal of eLiteracy >
   
   }
 
