@@ -1457,7 +1457,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
-    au < testing ; exists ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
+    au < released ; manifest ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1473,7 +1473,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
+    au < released ; manifest ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1487,8 +1487,8 @@
 
     param[journal_id] = nsmb
 
-    au < testing ; exists ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
-    au < testing ; exists ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
+    au < released ; manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
+    au < released ; manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < testing ; exists ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
 
   }
@@ -1592,7 +1592,7 @@
     au < manifest ; exists ; 2007 ; Prostate Cancer and Prostatic Diseases Volume 10 ; 2007 ; 10 >
     au < released ; crawling ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
-    au < testing ; exists ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
+    au < released ; manifest ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1643,11 +1643,12 @@
     >
 
     param[journal_id] = vital
-    comment[years] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
     
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
-    au < released ; crawling ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
-    au < testing ; exists ; 2010 ; Vital Volume 7 (year 2010) ; 2010 ; 7 >
+    au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
+    au < released ; manifest ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
+    au < manifest ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+
   }
 
 }
