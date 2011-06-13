@@ -17,13 +17,13 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.biophysj.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; Biophysical Journal Volume 88 ; 88 >
-      au < down ; Biophysical Journal Volume 89 ; 89 >
-      au < down ; Biophysical Journal Volume 90 ; 90 >
-      au < down ; Biophysical Journal Volume 91 ; 91 >
-      au < down ; Biophysical Journal Volume 92 ; 92 >
+      au < down ; 2003 ; Biophysical Journal Volume 88 ; 88 >
+      au < down ; 2004 ; Biophysical Journal Volume 89 ; 89 >
+      au < down ; 2005 ; Biophysical Journal Volume 90 ; 90 >
+      au < down ; 2006 ; Biophysical Journal Volume 91 ; 91 >
+      au < down ; 2007 ; Biophysical Journal Volume 92 ; 92 >
 
     }
 
