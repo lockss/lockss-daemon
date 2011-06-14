@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.6 2011-04-08 21:21:32 tlipkis Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.7 2011-06-14 09:26:33 tlipkis Exp $
  */
 
 /*
@@ -45,31 +45,40 @@ public class HighWirePressH20ArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("HighWirePressH20ArticleIteratorFactory");
+  protected static Logger log =
+    Logger.getLogger("HighWirePressH20ArticleIteratorFactory");
 
-  protected static final String ROOT_TEMPLATE = "\"%scontent/%s/\", base_url, volume_name";
+  protected static final String ROOT_TEMPLATE =
+    "\"%scontent/%s/\", base_url, volume_name";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%scontent/%s/([^/]+/)?[^/]+\\.full(\\.pdf)?$\", base_url, volume_name";
+  protected static final String PATTERN_TEMPLATE =
+    "\"^%scontent/%s/([^/]+/)?[^/]+\\.full(\\.pdf)?$\", base_url, volume_name";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new HighWirePressH20ArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                                   .setTarget(target)
-                                                   .setRootTemplate(ROOT_TEMPLATE)
-                                                   .setPatternTemplate(PATTERN_TEMPLATE));
+    return new
+      HighWirePressH20ArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)
+				      .setRootTemplate(ROOT_TEMPLATE)
+				      .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
-  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(null);
   }
   
-  protected static class HighWirePressH20ArticleIterator extends SubTreeArticleIterator {
+  protected static class HighWirePressH20ArticleIterator
+    extends SubTreeArticleIterator {
     
-    protected static Pattern HTML_PATTERN = Pattern.compile("/([^/]+)\\.full$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern HTML_PATTERN =
+      Pattern.compile("/([^/]+)\\.full$", Pattern.CASE_INSENSITIVE);
     
-    protected static Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.full\\.pdf$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PDF_PATTERN =
+      Pattern.compile("/([^/]+)\\.full\\.pdf$", Pattern.CASE_INSENSITIVE);
     
     public HighWirePressH20ArticleIterator(ArchivalUnit au,
                                            SubTreeArticleIterator.Spec spec) {
@@ -95,7 +104,8 @@ public class HighWirePressH20ArticleIteratorFactory
       return null;
     }
 
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
+    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
+					       Matcher htmlMat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);

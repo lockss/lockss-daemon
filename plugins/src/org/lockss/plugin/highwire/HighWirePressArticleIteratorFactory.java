@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.7 2011-03-13 21:51:29 tlipkis Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.8 2011-06-14 09:26:33 tlipkis Exp $
  */
 
 /*
@@ -45,19 +45,26 @@ public class HighWirePressArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("HighWirePressArticleIteratorFactory");
+  protected static Logger log =
+    Logger.getLogger("HighWirePressArticleIteratorFactory");
 
-  protected static final String ROOT_TEMPLATE_HTML = "\"%scgi/content/full/%s/\", base_url, volume_name";
+  protected static final String ROOT_TEMPLATE_HTML =
+    "\"%scgi/content/full/%s/\", base_url, volume_name";
   
-  protected static final String OLD_ROOT_TEMPLATE_HTML = "\"%scgi/content/full/%d/\", base_url, volume";
+  protected static final String OLD_ROOT_TEMPLATE_HTML =
+    "\"%scgi/content/full/%d/\", base_url, volume";
   
-  protected static final String ROOT_TEMPLATE_PDF = "\"%scgi/reprint/%s/\", base_url, volume_name";
+  protected static final String ROOT_TEMPLATE_PDF =
+    "\"%scgi/reprint/%s/\", base_url, volume_name";
   
-  protected static final String OLD_ROOT_TEMPLATE_PDF = "\"%scgi/reprint/%d/\", base_url, volume";
+  protected static final String OLD_ROOT_TEMPLATE_PDF =
+    "\"%scgi/reprint/%d/\", base_url, volume";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%scgi/(content/full/([^/]+;)?%s/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+\\.pdf)$\", base_url, volume_name, volume_name";
+  protected static final String PATTERN_TEMPLATE =
+    "\"^%scgi/(content/full/([^/]+;)?%s/[^/]+/[^/]+|reprint/([^/]+;)?%s/[^/]+/[^/]+\\.pdf)$\", base_url, volume_name, volume_name";
 
-  protected static final String OLD_PATTERN_TEMPLATE = "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%d/[^/]+/[^/]+\\.pdf)$\", base_url, volume, volume";
+  protected static final String OLD_PATTERN_TEMPLATE =
+    "\"^%scgi/(content/full/([^/]+;)?%d/[^/]+/[^/]+|reprint/([^/]+;)?%d/[^/]+/[^/]+\\.pdf)$\", base_url, volume, volume";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -66,30 +73,38 @@ public class HighWirePressArticleIteratorFactory
     if ("org.lockss.plugin.highwire.HighWirePlugin".equals(au.getPluginId())) {
       rootTemplates.add(OLD_ROOT_TEMPLATE_HTML);
       rootTemplates.add(OLD_ROOT_TEMPLATE_PDF);
-      return new HighWirePressArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                                  .setTarget(target)
-                                                  .setRootTemplates(rootTemplates)
-                                                  .setPatternTemplate(OLD_PATTERN_TEMPLATE));
+      return
+	new HighWirePressArticleIterator(au,
+					 new SubTreeArticleIterator.Spec()
+					 .setTarget(target)
+					 .setRootTemplates(rootTemplates)
+					 .setPatternTemplate(OLD_PATTERN_TEMPLATE));
     }
     rootTemplates.add(ROOT_TEMPLATE_HTML);
     rootTemplates.add(ROOT_TEMPLATE_PDF);
-    return new HighWirePressArticleIterator(au, new SubTreeArticleIterator.Spec()
-                                                .setTarget(target)
-                                                .setRootTemplates(rootTemplates)
-                                                .setPatternTemplate(PATTERN_TEMPLATE));
+    return new
+      HighWirePressArticleIterator(au,
+				   new SubTreeArticleIterator.Spec()
+				   .setTarget(target)
+				   .setRootTemplates(rootTemplates)
+				   .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
-  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(null);
 //     return new HighWirePressArticleMetadataExtractor();
   }
   
-  protected static class HighWirePressArticleIterator extends SubTreeArticleIterator {
+  protected static class HighWirePressArticleIterator
+    extends SubTreeArticleIterator {
     
-    protected static Pattern HTML_PATTERN = Pattern.compile("/cgi/content/full/([^/]+;)?([^/]+/[^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern HTML_PATTERN =
+      Pattern.compile("/cgi/content/full/([^/]+;)?([^/]+/[^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
     
-    protected static Pattern PDF_PATTERN = Pattern.compile("/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PDF_PATTERN =
+      Pattern.compile("/cgi/reprint/([^/]+;)?([^/]+/[^/]+/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
     
     public HighWirePressArticleIterator(ArchivalUnit au,
                                         SubTreeArticleIterator.Spec spec) {
@@ -121,13 +136,15 @@ public class HighWirePressArticleIteratorFactory
       return null;
     }
 
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
+    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
+					       Matcher htmlMat) {
       CachedUrl altCu = guessDifferentFrom(htmlCu, htmlMat,
                                            "/cgi/content/full/$2");
 
       if (altCu != null) {
         if (log.isDebug2()) {
-          log.debug2("Skipping " + htmlCu.getUrl() + " because of " + altCu.getUrl());
+          log.debug2("Skipping " + htmlCu.getUrl()
+		     + " because of " + altCu.getUrl());
         }
         return null;
       }
@@ -148,7 +165,8 @@ public class HighWirePressArticleIteratorFactory
                                            "/cgi/content/full/$2");
       if (altCu != null) {
         if (log.isDebug2()) {
-          log.debug2("Skipping " + pdfCu.getUrl() + " because of " + altCu.getUrl());
+          log.debug2("Skipping " + pdfCu.getUrl()
+		     + " because of " + altCu.getUrl());
         }
         return null;
       }
@@ -275,7 +293,9 @@ public class HighWirePressArticleIteratorFactory
                                            String... replPats) {
       for (String replPat : replPats) {
         CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
-        if (guessCu != null && guessCu.hasContent() && !guessCu.getUrl().equals(original.getUrl())) {
+        if (guessCu != null
+	    && guessCu.hasContent()
+	    && !guessCu.getUrl().equals(original.getUrl())) {
           return guessCu;
         }
       }
@@ -299,7 +319,8 @@ public class HighWirePressArticleIteratorFactory
   }
 
   public static void main(String[] args) {
-    String input = "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
+    String input =
+      "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
     Matcher mat = HighWirePressArticleIterator.PDF_PATTERN.matcher(input);
     System.out.println(mat.find());
     System.out.println(mat.replaceFirst("/cgi/content/full/$1$2"));
