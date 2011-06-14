@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.7 2011-05-09 00:31:56 tlipkis Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.8 2011-06-14 09:28:22 tlipkis Exp $
  */
 
 /*
@@ -39,9 +39,13 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
+/** Simple line-at-a-time text-based XML metadata extractor.  Can handle
+ * malformed XML but only finds constructs completely contained on one line.
+ * @see SaxMetadataExtractor
+ */
 public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
   static Logger log = Logger.getLogger("SimpleXmlMetadataExtractor");
-  private Collection<String> tags;
+  protected Collection<String> tags;
 
   /**
    * Create an extractor what will extract the value(s) of the xml tags in
@@ -62,9 +66,6 @@ public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
     this.tags = tagMap.keySet();
   }
 
-  /*
-   * XXX this should really do an XML parse and get all the metadata
-   */
   public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
     if (cu == null) {
@@ -91,7 +92,7 @@ public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
     return ret;
   }
 
-  private void scanForTag(String line, String tag, ArticleMetadata ret) {
+  protected void scanForTag(String line, String tag, ArticleMetadata ret) {
     int i = 0;
     String begin = "<" + tag + ">";
     String end = "</" + tag + ">";

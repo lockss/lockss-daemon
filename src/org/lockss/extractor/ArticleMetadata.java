@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.5 2011-04-28 02:23:40 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.6 2011-06-14 09:28:22 tlipkis Exp $
  */
 
 /*
@@ -337,9 +337,9 @@ public class ArticleMetadata {
     return get(field.getKey());
   }
 
-  /** Return the list of values associated with a key,or an empty list if
-   * none */
-  private List<String> getList(String key) {
+  /** Return the list of values associated with a key, or an empty list if
+   * none. */
+  public List<String> getList(String key) {
     List lst = getCollection(key);
     if (lst.isEmpty() || lst.get(0) instanceof InvalidValue) {
       return Collections.<String>emptyList();
