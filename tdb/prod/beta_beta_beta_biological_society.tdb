@@ -14,15 +14,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0005-3155
   
-      au < superseded ; BIOS Volume 75 ; 075 >
-      au < doNotProcess ; BIOS Volume 76 ; 76 >
-      au < doNotProcess ; BIOS Volume 77 ; 77 >
-      au < doNotProcess ; BIOS Volume 78 ; 78 >
+      au < superseded ; 2004 ; BIOS Volume 75 ; 075 >
+      au < doNotProcess ; 2005 ; BIOS Volume 76 ; 76 >
+      au < doNotProcess ; 2006 ; BIOS Volume 77 ; 77 >
+      au < doNotProcess ; 2007 ; BIOS Volume 78 ; 78 >
     }
 
     {
