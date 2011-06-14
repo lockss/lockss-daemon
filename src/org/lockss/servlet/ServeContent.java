@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.32 2011-05-26 07:55:00 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.33 2011-06-14 09:28:51 tlipkis Exp $
  */
 
 /*
@@ -67,19 +67,52 @@ public class ServeContent extends LockssServlet {
   /** Prefix for this server's config tree */
   public static final String PREFIX = Configuration.PREFIX + "serveContent.";
 
-  /** Determines actions when a URL is requested that is not in the cache.
-   * One of <code>Error_404</code>, <code>HostAuIndex</code>,
-   * <code>AuIndex</code>, <code>Redirect</code>. */
+  /** Determines action taken when a requested file is not cached locally,
+   * and it's not available from the publisher.  "Not available" means any
+   * of:
+   * <ul><li>neverProxy is true,</li>
+   * <li>the publisher's site did not respond</li>
+   * <li>the publisher returned a response code other than 200</li>
+   * <li>the publisher's site did not respond recently and
+   *     proxy.hostDownAction is set to HOST_DOWN_NO_CACHE_ACTION_504</li>
+   * </ul>
+   * Can be set to one of:
+   *  <ul>
+   *   <li><tt>Error_404</tt>: Return a 404.</li>
+   *   <li><tt>HostAuIndex</tt>: Generate an index of all AUs with content
+   *     on the same host.</li>
+   *   <li><tt>AuIndex</tt>: Generate an index of all AUs.</li>
+   *   <li><tt>Redirect</tt>: Respond with a redirect to the publisher iff
+   *     it isn't known to be down, else same as HostAuIndex.</li>
+   *   <li><tt>AlwaysRedirect</tt>: Respond with a redirect to the
+   *     publisher.</li>
+   *  </ul>
+   */
   public static final String PARAM_MISSING_FILE_ACTION =
     PREFIX + "missingFileAction";
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
     MissingFileAction.HostAuIndex;;
 
+  /** Determines action taken when a requested file is not cached locally,
+   * and it's not available from the publisher.  "Not available" means any
+   * of
+   * <ul><li>neverProxy is true,</li>
+   * <li>the publisher's site did not respond</li>
+   * <li>the publisher returned a response code other than 200</li>
+   * <li>the publisher's site did not respond recently and
+   *     proxy.hostDownAction is set to HOST_DOWN_NO_CACHE_ACTION_504</li>
+   * </ul> */
   public static enum MissingFileAction {
+    /** Return a 404 */
     Error_404,
+      /** Generate an index of all AUs with content on the same host. */
       HostAuIndex,
+      /** Generate an index of all AUs. */
       AuIndex,
+      /** Respond with a redirect to the publisher iff it isn't known to be
+       * down, else same as HostAuIndex. */
       Redirect,
+      /** Respond with a redirect to the publisher. */
       AlwaysRedirect,
       }
   
@@ -124,7 +157,7 @@ public class ServeContent extends LockssServlet {
     PREFIX + "maxBufferedRewrite";
   public static final int DEFAULT_MAX_BUFFERED_REWRITE = 64 * 1024;
 
-  /** If true, never forward request to publisher */
+  /** If true, never forward request nor redirect to publisher */
   public static final String PARAM_NEVER_PROXY = PREFIX + "neverProxy";
   public static final boolean DEFAULT_NEVER_PROXY = false;
 
@@ -496,7 +529,7 @@ public class ServeContent extends LockssServlet {
       pstate = PubState.KnownDown;
 
       // tear down connection
-      safeClose(conn);
+      IOUtil.safeRelease(conn);
       conn = null;
     }
     
@@ -516,7 +549,7 @@ public class ServeContent extends LockssServlet {
       }
     } finally {
       // ensure connection is closed
-      safeClose(conn);
+      IOUtil.safeRelease(conn);
     }
     
     // Either failed to open connection or got non-200 response.
@@ -648,16 +681,6 @@ public class ServeContent extends LockssServlet {
 
     handleRewriteInputStream(respStrm, mimeType, charset,
 			     conn.getResponseContentLength());
-  }
-
-  protected void safeClose(LockssUrlConnection conn) {
-    // close connection once done
-    if (conn != null) {
-      try {
-        conn.release();
-      } catch (Exception e) {}
-    }
-    
   }
 
   LinkRewriterFactory getLinkRewriterFactory(String mimeType) {
