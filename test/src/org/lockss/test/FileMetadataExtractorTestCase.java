@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.4 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.5 2011-06-14 09:30:12 tlipkis Exp $
  */
 
 /*
@@ -34,14 +34,15 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+import java.net.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-/** Framework for FileMetadataExtractor tests.  Subs must implement only
- * {@link #getFactory()} and {@link #getMimeType()}, and tests which call
- * {@link #extractFrom(String)}. */
+/** Framework for FileMetadataExtractor tests.  Subclassess must implement
+ * only {@link #getFactory()} and {@link #getMimeType()}, and tests which
+ * call {@link #extractFrom(String)}. */
 public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
 
@@ -64,54 +65,128 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     encoding = getEncoding();
   }
 
-  public abstract String getMimeType();
-  public abstract FileMetadataExtractorFactory getFactory();
+  /** Return the MIME type of the MetadataExtractor under test. */
+  protected abstract String getMimeType();
 
-  public MetadataTarget getTarget() {
+  /** Return a factory that creates instances of the MetadataExtractor to
+   * test. */
+  protected abstract FileMetadataExtractorFactory getFactory();
+
+  protected MetadataTarget getTarget() {
     return MetadataTarget.Any;
   }
 
-  public String getEncoding() {
+  protected String getEncoding() {
     return Constants.DEFAULT_ENCODING;
   }
 
-  public String getUrl() {
+  protected String getUrl() {
     return URL;
   }
 
-  protected void assertMdEmpty(String text) {
-    assertEquals(0, extractFrom(text).rawSize());
+  protected void assertRawEmpty(ArticleMetadata md) {
+    assertEquals(0, md.rawSize());
   }
 
-  protected void assertMdEquals(String expkey1, String expval1,
-				String text) {
-    ArticleMetadata md = extractFrom(text);
-    assertEquals(expval1, md.getRaw(expkey1));
-    assertEquals(1, extractFrom(text).rawSize());
+  protected void assertRawEquals(String expkey1, String expval1,
+				ArticleMetadata md) {
+    assertRawEquals(MapUtil.map(expkey1, expval1), md);
   }
 
-  protected void assertMdEquals(String expkey1, String expval1,
+  protected void assertRawEquals(String expkey1, String expval1,
 				String expkey2, String expval2,
-				String text) {
-    ArticleMetadata md = extractFrom(text);
-    assertEquals(expval1, md.getRaw(expkey1));
-    assertEquals(expval2, md.getRaw(expkey2));
-    assertEquals(2, extractFrom(text).rawSize());
+				ArticleMetadata md) {
+    assertRawEquals(MapUtil.map(expkey1, expval1, expkey2, expval2), md);
   }
 
-  protected void assertMdEquals(List<String> keyvaluepairs,
-				String text) {
-    assertEquals("Invalid call to assertMdEquals: odd length key/value list",
-		 0, keyvaluepairs.size() % 1);
+  /** Compare the raw metedata extracted from text with the key-value
+   * pairs.  The keys are compared case-independently */
+  protected void assertRawEquals(List<String> keyvaluepairs,
+				ArticleMetadata md) {
+    assertRawEquals(MapUtil.fromList(keyvaluepairs), md);
+  }
 
-    ArticleMetadata md = extractFrom(text);
-    Iterator<String> iter = keyvaluepairs.iterator();
-    while (iter.hasNext()) {
-      String key = iter.next();
-      String val = iter.next();
-      assertEquals(val, md.getRaw(key));
+  /** Compare the raw metedata with the expected map.  The case of the map
+   * keys is ignored. */
+  protected void assertRawEquals(Map expMap, ArticleMetadata md) {
+    Set<String> seen = new HashSet<String>();
+    List<String> errors = new ArrayList<String>();
+    for (String key : (Collection<String>)expMap.keySet()) {
+      seen.add(key);
+      Object expval = expMap.get(key);
+      if (expval instanceof List) {
+	List actual = md.getRawList(key);
+	if (!expval.equals(actual)) {
+	  errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+		     + actual + ">");
+	}
+      } else {
+	String actual = md.getRaw(key);
+	if (!expval.equals(actual)) {
+	  errors.add("Key: " + key + " expected:<" + expval + "> but was:<"
+		     + actual + ">");
+	}
+      }
     }
-    assertEquals(keyvaluepairs.size() / 2, md.rawSize());
+    if (seen.size() != md.rawSize()) {
+      for (String key : md.rawKeySet()) {
+	if (!seen.contains(key)) {
+	  errors.add("Key: " + key + " unexpected, was:<"
+		     + md.getRawList(key) + ">");
+	}
+      }
+    }
+    if (!errors.isEmpty()) {
+      fail("Incorrect raw metdata: " +
+	   StringUtil.separatedString(errors, ",    \n"));
+    }
+  }
+
+  /** Compare the cooked metedata with the expected map.  The case of the
+   * map keys is ignored. */
+  protected void assertCookedEquals(Map<MetadataField,Object> expMap,
+				    ArticleMetadata md) {
+    Set<String> seen = new HashSet<String>();
+    List<String> errors = new ArrayList<String>();
+    for (MetadataField field : expMap.keySet()) {
+      String key = field.getKey();
+      seen.add(key);
+      Object expval = expMap.get(field);
+      log.info("field: " + field.getKey() + ", " + field.getCardinality());
+      if (expval instanceof List) {
+	switch (field.getCardinality()) {
+	case Single: {
+	  throw new IllegalArgumentException("Field " + field.getKey() +
+					     ": multivalue expected for single-valued field");
+	}
+	case Multi: {
+	  List actual = md.getList(field);
+	  if (!expval.equals(actual)) {
+	    errors.add("Key: " + key + " expected:<" + expval
+		       + "> but was:<" + actual + ">");
+	  }
+	}
+	}
+      } else {
+	String actual = md.get(field);
+	if (!expval.equals(actual)) {
+	  errors.add("Key: " + key + " expected:<" + expval
+		     + "> but was:<" + actual + ">");
+	}
+      }
+    }
+    if (seen.size() != md.size()) {
+      for (String key : md.keySet()) {
+	if (!seen.contains(key)) {
+	  errors.add("Key: " + key + " unexpected, was:<"
+		     + md.getList(key) + ">");
+	}
+      }
+    }
+    if (!errors.isEmpty()) {
+      fail("Incorrect cooked metdata: " +
+	   StringUtil.separatedString(errors, ",    \n"));
+    }
   }
 
   public void testEmptyFileReturnsEmptyMetadata() throws Exception {
@@ -129,6 +204,7 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     }
   }
 
+  /** Extract metadata from the string and return it */ 
   protected ArticleMetadata extractFrom(String content) {
     try {
       List<ArticleMetadata> lst = extractor.extract(getTarget(),
@@ -140,4 +216,22 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     return null;			// impossible
   }
       
+  /** Extract metadata from the named resource (e.g., a file in the test
+   * directory) */ 
+  protected ArticleMetadata extractFromResource(String resname) {
+    String content;
+    try {
+      content = resourceContent(resname);
+    } catch (IOException e) {
+      throw new RuntimeException("Couldn't read file", e);
+    }
+    return extractFrom(content);
+  }
+      
+  protected String resourceContent(String resname) throws IOException {
+    URL url = getClass().getResource(resname);
+    assertNotNull(resname + " missing.", url);
+    InputStream istr = UrlUtil.openInputStream(url.toString());
+    return StringUtil.fromInputStream(istr);
+  }  
 }

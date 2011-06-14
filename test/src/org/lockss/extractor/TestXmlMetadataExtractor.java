@@ -1,32 +1,32 @@
 /*
- * $Id: TestXmlMetadataExtractor.java,v 1.1 2011-05-18 04:04:22 tlipkis Exp $
+ * $Id: TestXmlMetadataExtractor.java,v 1.2 2011-06-14 09:30:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+  Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
 
 */
 
@@ -40,10 +40,12 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 
+/** Tests for both SimpleXmlMetadataExtractor and SaxMetadataExtractor */
 public abstract class TestXmlMetadataExtractor
   extends FileMetadataExtractorTestCase {
   static Logger log = Logger.getLogger("TestXmlMetadataExtractor");
 
+  // Variant to test SaxMetadataExtractor
   public static class TestSax extends TestXmlMetadataExtractor {
     public FileMetadataExtractorFactory getFactory() {
       return new FileMetadataExtractorFactory() {
@@ -53,8 +55,23 @@ public abstract class TestXmlMetadataExtractor
           return new SaxMetadataExtractor(Arrays.asList(TEST_TAGS));
         }};
     }
+
+    // SaxMetadataExtractor ignores unmatched tags
+    public void testNestedTag() throws Exception {
+      String text =
+	"<root>" +
+	"<FirstTag>FirstValue</FirstTag>" +
+	"<SecondTag>SecondValue" +
+	"<ThirdTag>ThirdValue</ThirdTag>" +
+	"MoreValueSecond</SecondTag>" +
+	"</root>";
+      assertRawEquals(ListUtil.list("firsttag", "FirstValue",
+				    "thirdtag", "ThirdValue"),
+		      extractFrom(text));
+    }
   }
 
+  // Variant to test SimpleXmlMetadataExtractor
   public static class TestSimple extends TestXmlMetadataExtractor {
     public FileMetadataExtractorFactory getFactory() {
       return new FileMetadataExtractorFactory() {
@@ -63,6 +80,22 @@ public abstract class TestXmlMetadataExtractor
 	    throws PluginException {
           return new SimpleXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
         }};
+    }
+
+    // SimpleXmlMetadataExtractor handles nested tags inelegantly
+    public void testNestedTag() throws Exception {
+      String text =
+	"<root>" +
+	"<FirstTag>FirstValue</FirstTag>" +
+	"<SecondTag>SecondValue" +
+	"<ThirdTag>ThirdValue</ThirdTag>" +
+	"MoreValueSecond</SecondTag>" +
+	"</root>";
+      assertRawEquals(ListUtil.list("firsttag", "FirstValue",
+				    "secondtag", "SecondValue<ThirdTag>ThirdValue</ThirdTag>MoreValueSecond",
+				    "thirdtag", "ThirdValue"),
+				   
+		      extractFrom(text));
     }
   }
 
@@ -78,36 +111,36 @@ public abstract class TestXmlMetadataExtractor
   }
 
   public void testSingleTag() throws Exception {
-    assertMdEquals("FirstTag", "FirstValue",
-		   "<FirstTag>FirstValue</FirstTag>");
-    assertMdEquals("SecondTag", "SecondValue",
-		   "<SecondTag>SecondValue</SecondTag>");
+    assertRawEquals("FirstTag", "FirstValue",
+		    extractFrom("<FirstTag>FirstValue</FirstTag>"));
+    assertRawEquals("SecondTag", "SecondValue",
+		    extractFrom("<SecondTag>SecondValue</SecondTag>"));
   }
 
   public void testSingleTagNoContent() throws Exception {
-    assertMdEmpty("<FirstTag></FirstTag>");
+    assertRawEmpty(extractFrom("<FirstTag></FirstTag>"));
   }
 
   public void testSingleTagUnmatched() throws Exception {
-    assertMdEmpty("<FirstTag>FirstValue");
-    assertMdEmpty("FirstValue</FirstTag>");
+    assertRawEmpty(extractFrom("<FirstTag>FirstValue"));
+    assertRawEmpty(extractFrom("FirstValue</FirstTag>"));
   }
 
   public void testSingleTagMalformed() throws Exception {
-    assertMdEmpty("<FirstTag>FirstValue");
-    assertMdEmpty("<FirstTag FirstValue</FirstTag>");
+    assertRawEmpty(extractFrom("<FirstTag>FirstValue"));
+    assertRawEmpty(extractFrom("<FirstTag FirstValue</FirstTag>"));
     // SAX parses this although there is the trailing space
     // in the opening tag:
-    // assertMdEmpty("<FirstTag >FirstValue</FirstTag>");
-    assertMdEmpty("<FirstTag>FirstValue</FirstTag");
+    // assertRawEmpty("<FirstTag >FirstValue</FirstTag>");
+    assertRawEmpty(extractFrom("<FirstTag>FirstValue</FirstTag"));
     // SAX parses this although there is the trailing space
     // in the closing tag:
-    // assertMdEmpty("<FirstTag>FirstValue</FirstTag >");
+    // assertRawEmpty(extractFrom("<FirstTag>FirstValue</FirstTag >"));
   }
 
   public void testSingleTagIgnoreCase() throws Exception {
-    assertMdEquals("fIRSTtAG", "FirstValue",
-		   "<fIRSTtAG>FirstValue</fIRSTtAG>");
+    assertRawEquals("fIRSTtAG", "FirstValue",
+		    extractFrom("<fIRSTtAG>FirstValue</fIRSTtAG>"));
   }
 
   public void testMultipleTag() throws Exception {
@@ -119,12 +152,12 @@ public abstract class TestXmlMetadataExtractor
       "<FourthTag>FourthValue</FourthTag>" +
       "<FifthTag>FifthValue</FifthTag>" +
       "</root>";
-    assertMdEquals(ListUtil.list("firsttag", "FirstValue",
-				 "secondtag", "SecondValue",
-				 "thirdtag", "ThirdValue",
-				 "fourthtag", "FourthValue",
-				 "fifthtag", "FifthValue"),
-		   text);
+    assertRawEquals(ListUtil.list("firsttag", "FirstValue",
+				  "secondtag", "SecondValue",
+				  "thirdtag", "ThirdValue",
+				  "fourthtag", "FourthValue",
+				  "fifthtag", "FifthValue"),
+		    extractFrom(text));
   }
 
   public void testMultipleTagWithNoise() throws Exception {
@@ -145,12 +178,12 @@ public abstract class TestXmlMetadataExtractor
       "<ThirdTag>ThirdValue</ThirdTag>" +
       "</root>";
 
-    assertMdEquals(ListUtil.list("firsttag", "FirstValue",
-				 "secondtag", "SecondValue",
-				 "thirdtag", "ThirdValue",
-				 "fourthtag", "FourthValue",
-				 "fifthtag", "FifthValue"),
-		   text);
+    assertRawEquals(ListUtil.list("firsttag", "FirstValue",
+				  "secondtag", "SecondValue",
+				  "thirdtag", "ThirdValue",
+				  "fourthtag", "FourthValue",
+				  "fifthtag", "FifthValue"),
+		    extractFrom(text));
   }
 
   public void testXmlDecoding() throws Exception {
@@ -161,10 +194,10 @@ public abstract class TestXmlMetadataExtractor
       "<ThirdTag>l&lt;g&gt;a&amp;q&quot;a&apos;z</ThirdTag>" +
       "</root>";
 
-    assertMdEquals(ListUtil.list("FirstTag", "\"Quoted\" Title",
-				 "SecondTag", "foo\"bar\" ",
-				 "ThirdTag", "l<g>a&q\"a'z"),
-		   text);
+    assertRawEquals(ListUtil.list("FirstTag", "\"Quoted\" Title",
+				  "SecondTag", "foo\"bar\" ",
+				  "ThirdTag", "l<g>a&q\"a'z"),
+		    extractFrom(text));
   }
 
 
