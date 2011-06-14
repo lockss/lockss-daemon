@@ -818,19 +818,19 @@
     param[collection_id] = USCODE
     implicit < status ; year ; name ; param[year] >
 
-    au < manifest ; 1994 ; United States Code 1994 ; 1994 >
-    au < manifest ; 1995 ; United States Code 1995 ; 1995 >
-    au < manifest ; 1996 ; United States Code 1996 ; 1996 >
-    au < manifest ; 1997 ; United States Code 1997 ; 1997 >
-    au < manifest ; 1998 ; United States Code 1998 ; 1998 >
-    au < manifest ; 1999 ; United States Code 1999 ; 1999 >
-    au < manifest ; 2000 ; United States Code 2000 ; 2000 >
-    au < manifest ; 2001 ; United States Code 2001 ; 2001 >
-    au < manifest ; 2002 ; United States Code 2002 ; 2002 >
-    au < manifest ; 2003 ; United States Code 2003 ; 2003 >
-    au < manifest ; 2004 ; United States Code 2004 ; 2004 >
-    au < manifest ; 2005 ; United States Code 2005 ; 2005 >
-    au < manifest ; 2006 ; United States Code 2006 ; 2006 >
+    au < ready ; 1994 ; United States Code 1994 ; 1994 >
+    au < ready ; 1995 ; United States Code 1995 ; 1995 >
+    au < ready ; 1996 ; United States Code 1996 ; 1996 >
+    au < ready ; 1997 ; United States Code 1997 ; 1997 >
+    au < ready ; 1998 ; United States Code 1998 ; 1998 >
+    au < ready ; 1999 ; United States Code 1999 ; 1999 >
+    au < ready ; 2000 ; United States Code 2000 ; 2000 >
+    au < ready ; 2001 ; United States Code 2001 ; 2001 >
+    au < ready ; 2002 ; United States Code 2002 ; 2002 >
+    au < ready ; 2003 ; United States Code 2003 ; 2003 >
+    au < ready ; 2004 ; United States Code 2004 ; 2004 >
+    au < ready ; 2005 ; United States Code 2005 ; 2005 >
+    au < ready ; 2006 ; United States Code 2006 ; 2006 >
     au < ready ; 2007 ; United States Code 2007 ; 2007 >
     au < ready ; 2008 ; United States Code 2008 ; 2008 >
     au < ready ; 2009 ; United States Code 2009 ; 2009 >
