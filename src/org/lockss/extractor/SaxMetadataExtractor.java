@@ -1,5 +1,5 @@
 /*
- * $Id: SaxMetadataExtractor.java,v 1.1 2011-05-18 04:04:23 tlipkis Exp $
+ * $Id: SaxMetadataExtractor.java,v 1.2 2011-06-14 09:28:35 tlipkis Exp $
  */
 
 /*
@@ -39,20 +39,20 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 import org.xml.sax.*;
-import org.xml.sax.helpers.XMLReaderFactory;
+import org.xml.sax.helpers.*;
 
-public class SaxMetadataExtractor extends SimpleFileMetadataExtractor
-  implements ContentHandler {
-
+/** SAX-based XML metadata extractor.  Requires XML to be well-formed; see
+ * {@link SimpleXmlMetadataExtractor} for a more permissive alternative.
+*/
+public class SaxMetadataExtractor extends SimpleFileMetadataExtractor {
   static Logger log = Logger.getLogger("SaxMetadataExtractor");
-  private Collection<String> tags;
-  private StringBuilder charBuf = new StringBuilder();
-  private ArticleMetadata am;
+  protected Collection<String> tags;
+  protected ArticleMetadata am;
 
   /**
-   * Create an extractor what will extract the value(s) of the xml tags in
-   * <code>tags</code>
-   * @param tags the list of XML tags whose value to extract
+   * Create an extractor that will extract the value(s) of the xml tags in
+   * <code>tags</code>.  Tags are matched independent of case.
+   * @param tags the collection of XML tags whose value to extract
    */
   public SaxMetadataExtractor(Collection<String> tags) {
     this.tags = tags;
@@ -60,12 +60,12 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor
 
   /**
    * Create an extractor that will extract the value(s) of the xml tags in
-   * <code>tagMap.keySet()</code>
-   * @param tagMap a map from XML tags to cooked keys.  (Only the set of
-   * tags is used by this object.)
+   * <code>tagMap.keySet()</code>  Tags are matched independent of case.
+   * @param tagMap a map whose keys are the XML tags whose value to
+   * extract.  (The values in the map are not used.)
    */
-  public SaxMetadataExtractor(Map tagMap) {
-    this.tags = tagMap.keySet();
+  public SaxMetadataExtractor(Map<String,? extends Object> tagMap) {
+    this(tagMap.keySet());
   }
 
   /*
@@ -76,12 +76,12 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor
     if (cu == null) {
       throw new IllegalArgumentException("extract() called with null CachedUrl");
     }
-    this.am = new ArticleMetadata();
+    am = new ArticleMetadata();
     InputSource bReader = new InputSource(cu.openForReading());
     try {
       XMLReader xmlReader = XMLReaderFactory.createXMLReader();
       xmlReader.setErrorHandler(new LoggingErrorHandler());
-      xmlReader.setContentHandler(this);
+      xmlReader.setContentHandler(getContentHandler());
       xmlReader.parse(bReader);
     } catch (SAXException e) {
       // XXX Should this terminate the extraction?
@@ -91,43 +91,52 @@ public class SaxMetadataExtractor extends SimpleFileMetadataExtractor
     return am;
   }
 
-  public void characters(char[] ch, int start, int length)
-      throws SAXException {
-    charBuf.append(ch, start, length);
+  /** Override to use a custom ContentHandler */
+  protected ContentHandler getContentHandler() {
+    return new SaxEventHandler();
+  }
+    
+  /** Return true if this is a tag whose value we should record */
+  protected boolean isInterestingTagName(String tagName) {
+    for (String tag : tags) {
+      if (tagName.equalsIgnoreCase(tag)) {
+	return true;
+      }
+    }
+    return false;
   }
 
-  public void startElement(String uri, String localName, String qName,
-			   Attributes atts) throws SAXException {
-    charBuf = new StringBuilder();
-  }
+  /** Default SAX ContentHandler records values of matching tags */
+  protected class SaxEventHandler extends DefaultHandler {
+    protected StringBuilder charBuf = null;
 
-  public void endElement(String uri, String localName, String qName)
-      throws SAXException {
+    public void characters(char[] ch, int start, int length)
+	throws SAXException {
+      // Collect chars iff we're in a tag of interest
+      if (charBuf != null) {
+	charBuf.append(ch, start, length);
+      }
+    }
 
-    for (Iterator it = tags.iterator(); it.hasNext();) {
-      String tag = (String)it.next();
-      if (localName.equalsIgnoreCase(tag) && (charBuf.length() != 0)) {
-        am.putRaw(tag, charBuf.toString());
+    public void startElement(String uri, String localName, String qName,
+			     Attributes atts) throws SAXException {
+      if (isInterestingTagName(localName)) {
+	charBuf = new StringBuilder();
+      } else {
+ 	charBuf = null;
+      }
+    }
+
+    public void endElement(String uri, String localName, String qName)
+	throws SAXException {
+      if (charBuf != null && charBuf.length() != 0) {
+	am.putRaw(localName, charBuf.toString());
+	charBuf = null;
       }
     }
   }
 
-  public void endDocument() throws SAXException {}
-  public void endPrefixMapping(String prefix) throws SAXException {}
-  public void ignorableWhitespace(char[] ch, int start, int length)
-      throws SAXException {}
-  public void processingInstruction(String target, String data)
-      throws SAXException {}
-  public void setDocumentLocator(Locator locator) {  }
-  public void skippedEntity(String name) throws SAXException {}
-  public void startDocument() throws SAXException {}
-  public void startPrefixMapping(String prefix, String uri)
-      throws SAXException {}
-
-  /**
-   * Simple SAX error handler that logs output instead of dumping to
-   * stderr.
-   */
+  /** SAX error handler that logs output to LOCKSS logger. */
   private static class LoggingErrorHandler implements ErrorHandler {
     public void error(SAXParseException e) {
       log.warning("Recoverable parse error: " + e.getMessage());
