@@ -48,7 +48,7 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
   }
 
   public static class EmeraldHtmlMetadataExtractor
-    extends SimpleHtmlMetaTagMetadataExtractor {
+    extends SimpleFileMetadataExtractor {
 
     // Map Emerald's Google Scholar HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -66,10 +66,11 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
     }
 
-    @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+	throws IOException, PluginException {
+      SimpleFileMetadataExtractor extr =
+	new SimpleHtmlMetaTagMetadataExtractor();
+      ArticleMetadata am = extr.extract(target, cu);
       am.cook(tagMap);
       return am;
     }
