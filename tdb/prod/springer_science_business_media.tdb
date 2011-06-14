@@ -16743,27 +16743,26 @@
     >
 
     param[journal_issn] = 0093-7711
-    attr[where] = sul-lockss30b
 
-    au < testing ; 1974 ; Immunogenetics Volume 1 ; 1 >
-    au < testing ; 1975 ; Immunogenetics Volume 2 ; 2 >
-    au < testing ; 1976 ; Immunogenetics Volume 3 ; 3 >
+    au < ready ; 1974 ; Immunogenetics Volume 1 ; 1 >
+    au < ready ; 1975 ; Immunogenetics Volume 2 ; 2 >
+    au < ready ; 1976 ; Immunogenetics Volume 3 ; 3 >
     au < ready ; 1977 ; Immunogenetics Volume 4 ; 4 >
     au < ready ; 1977 ; Immunogenetics Volume 5 ; 5 >
-    au < testing ; 1978 ; Immunogenetics Volume 6 ; 6 >
+    au < ready ; 1978 ; Immunogenetics Volume 6 ; 6 >
     au < ready ; 1978 ; Immunogenetics Volume 7 ; 7 >
-    au < testing ; 1979 ; Immunogenetics Volume 8 ; 8 >
+    au < ready ; 1979 ; Immunogenetics Volume 8 ; 8 >
     au < ready ; 1979 ; Immunogenetics Volume 9 ; 9 >
-    au < testing ; 1980 ; Immunogenetics Volume 10 ; 10 >
-    au < testing ; 1980 ; Immunogenetics Volume 11 ; 11 >
+    au < ready ; 1980 ; Immunogenetics Volume 10 ; 10 >
+    au < ready ; 1980 ; Immunogenetics Volume 11 ; 11 >
     au < ready ; 1981 ; Immunogenetics Volume 12 ; 12 >
-    au < testing ; 1981 ; Immunogenetics Volume 13 ; 13 >
-    au < testing ; 1981 ; Immunogenetics Volume 14 ; 14 >
+    au < ready ; 1981 ; Immunogenetics Volume 13 ; 13 >
+    au < ready ; 1981 ; Immunogenetics Volume 14 ; 14 >
     au < ready ; 1982 ; Immunogenetics Volume 15 ; 15 >
-    au < testing ; 1982 ; Immunogenetics Volume 16 ; 16 >
-    au < testing ; 1983 ; Immunogenetics Volume 17 ; 17 >
+    au < ready ; 1982 ; Immunogenetics Volume 16 ; 16 >
+    au < ready ; 1983 ; Immunogenetics Volume 17 ; 17 >
     au < ready ; 1983 ; Immunogenetics Volume 18 ; 18 >
-    au < testing ; 1984 ; Immunogenetics Volume 19 ; 19 >
+    au < ready ; 1984 ; Immunogenetics Volume 19 ; 19 >
     au < ready ; 1984 ; Immunogenetics Volume 20 ; 20 >
     au < ready ; 1985 ; Immunogenetics Volume 21 ; 21 >
     au < ready ; 1985 ; Immunogenetics Volume 22 ; 22 >
@@ -16789,7 +16788,7 @@
     au < ready ; 1995 ; Immunogenetics Volume 42 ; 42 >
     au < ready ; 1995-1996 ; Immunogenetics Volume 43 ; 43 >
     au < ready ; 1996 ; Immunogenetics Volume 44 ; 44 >
-    au < testing ; 1996-1997 ; Immunogenetics Volume 45 ; 45 >
+    au < notReady ; 1996-1997 ; Immunogenetics Volume 45 ; 45 >
     au < ready ; 1997 ; Immunogenetics Volume 46 ; 46 >
     au < ready ; 1997 ; Immunogenetics Volume 47 ; 47 >
     au < ready ; 1998 ; Immunogenetics Volume 48 ; 48 >
