@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.6 2011-06-14 09:25:39 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class ElsevierXmlMetadataExtractorFactory
   }
 
   public static class ElsevierXmlMetadataExtractor
-    extends SimpleXmlMetadataExtractor {
+    extends SimpleFileMetadataExtractor {
     static Logger log = Logger.getLogger("ElsevierXmlMetadataExtractor");
 
     private static MultiMap tagMap = new MultiValueMap();
@@ -63,13 +63,12 @@ public class ElsevierXmlMetadataExtractorFactory
     };
 
     public ElsevierXmlMetadataExtractor() {
-      super(tagMap);
     }
 
-    @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+	throws IOException, PluginException {
+      SimpleFileMetadataExtractor extr = new SimpleXmlMetadataExtractor(tagMap);
+      ArticleMetadata am = extr.extract(target, cu);
       // extract metadata from BePress specific metadata tags
       am.cook(tagMap);
       return am;

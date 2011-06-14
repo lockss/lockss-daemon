@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.6 2011-06-14 09:25:39 tlipkis Exp $
  */
 
 /*
@@ -71,16 +71,12 @@ public class SpringerXmlMetadataExtractorFactory
   }
 
   public static class SpringerXmlMetadataExtractor
-    extends SimpleXmlMetadataExtractor {
+    extends SimpleFileMetadataExtractor {
 
-    public SpringerXmlMetadataExtractor() {
-      super(tags);
-    }
-
-    @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl xmlCu)
-	throws IOException {
-      ArticleMetadata am = super.extract(target, xmlCu);
+	throws IOException, PluginException {
+      SimpleFileMetadataExtractor extr = new SimpleXmlMetadataExtractor(tags);
+      ArticleMetadata am = extr.extract(target, xmlCu);
       am.cook(tagMap);
       // Springer doesn't prefix the DOI in dc.Identifier with doi:
 
