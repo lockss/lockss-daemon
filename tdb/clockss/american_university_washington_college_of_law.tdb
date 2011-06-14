@@ -1,0 +1,189 @@
+{
+
+  publisher <
+    name = American University Washington College of Law
+  >
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = http://digitalcommons.wcl.american.edu/
+  implicit < status1 ; status ; year ; name ; param[volume] >
+  
+  {
+
+    title <
+      name = Administrative Law Review ;
+      issn = 0001-8368
+    >
+
+    param[journal_abbr] = alr
+
+    au < manifest ; exists ; 2010 ; Administrative Law Review Volume 62 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = American University International Law Review ;
+      issn = 0003-1453
+    >
+
+    param[journal_abbr] = auilr
+
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 11 ; 11 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 12 ; 12 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 13 ; 13 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 14 ; 14 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 15 ; 15 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 16 ; 16 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 17 ; 17 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 18 ; 18 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 19 ; 19 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 20 ; 20 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 21 ; 21 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 22 ; 22 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 23 ; 23 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 24 ; 24 >
+    au < manifest ; exists ; 0 ; American University International Law Review Volume 25 ; 25 >
+
+  }
+
+  {
+
+    title <
+      name = American University Intellectual Property Brief
+    >
+
+    param[journal_abbr] = ipbrief
+
+    au < manifest ; exists ; 2010 ; American University Intellectual Property Brief Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; American University Intellectual Property Brief Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = American University Labor & Employment Law Forum
+    >
+
+    param[journal_abbr] = lelb
+
+    au < released ; manifest ; 2011 ; American University Labor & Employment Law Forum Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = American University Law Review ;
+      issn = 1943-5673
+    >
+
+    param[journal_abbr] = aulr
+
+    au < manifest ; exists ; 1992-1993 ; American University Law Review Volume 42 ; 42 >
+    au < manifest ; exists ; 1993-1994 ; American University Law Review Volume 43 ; 43 >
+    au < manifest ; exists ; 1994-1995 ; American University Law Review Volume 44 ; 44 >
+    au < manifest ; exists ; 1995-1996 ; American University Law Review Volume 45 ; 45 >
+    au < manifest ; exists ; 1996-1997 ; American University Law Review Volume 46 ; 46 >
+    au < manifest ; exists ; 1997-1998 ; American University Law Review Volume 47 ; 47 >
+    au < manifest ; exists ; 1999 ; American University Law Review Volume 48 ; 48 >
+    au < manifest ; exists ; 1999-2000 ; American University Law Review Volume 49 ; 49 >
+
+    au < manifest ; exists ; 2001-2002 ; American University Law Review Volume 51 ; 51 >
+
+    au < manifest ; exists ; 2003-2004 ; American University Law Review Volume 53 ; 53 >
+
+    au < manifest ; exists ; 2005-2006 ; American University Law Review Volume 55 ; 55 >
+    au < manifest ; exists ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
+    au < manifest ; exists ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
+    au < manifest ; exists ; 2008-2009 ; American University Law Review Volume 58 ; 58 >
+    au < manifest ; exists ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Gender, Social Policy & the Law ;
+      issn = 1557-3753
+    >
+
+    param[journal_abbr] = jgspl
+
+    au < manifest ; exists ; 0 ; The Modern American Volume 1 ; 1 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 2 ; 2 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 3 ; 3 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 4 ; 4 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 5 ; 5 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 6 ; 6 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 7 ; 7 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 8 ; 8 >
+
+
+
+    au < manifest ; exists ; 0 ; The Modern American Volume 12 ; 12 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 13 ; 13 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 14 ; 14 >
+    au < manifest ; exists ; 0 ; The Modern American Volume 15 ; 15 >
+    au < manifest ; exists ; 2007-2008 ; The Modern American Volume 16 ; 16 >
+    au < manifest ; exists ; 2009 ; The Modern American Volume 17 ; 17 >
+    au < released ; manifest ; 2010-2011 ; The Modern American Volume 18 ; 18 >
+
+  }
+
+  {
+
+    title <
+      name = Legislation and Policy Brief
+    >
+
+    param[journal_abbr] = lpb
+
+    au < manifest ; exists ; 2009 ; Legislation and Policy Brief Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; Legislation and Policy Brief Volume 2 ; 2 >
+    au < released ; manifest ; 2011 ; Legislation and Policy Brief Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = The Modern American
+    >
+
+    param[journal_abbr] = tma
+
+    au < manifest ; exists ; 2005 ; The Modern American Volume 1 ; 1 >
+    au < manifest ; exists ; 2006 ; The Modern American Volume 2 ; 2 >
+    au < manifest ; exists ; 2007 ; The Modern American Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; The Modern American Volume 4 ; 4 >
+    au < manifest ; exists ; 2009 ; The Modern American Volume 5 ; 5 >
+    au < manifest ; exists ; 2010 ; The Modern American Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Sustainable Development Law & Policy
+    >
+
+    param[journal_abbr] = sdlp
+
+    au < manifest ; exists ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
+    au < manifest ; exists ; 2006-2007 ; Sustainable Development Law & Policy Volume 7 ; 7 >
+    au < manifest ; exists ; 2007-2008 ; Sustainable Development Law & Policy Volume 8 ; 8 >
+    au < manifest ; exists ; 2008-2009 ; Sustainable Development Law & Policy Volume 9 ; 9 >
+    au < manifest ; exists ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
+    au < released ; manifest ; 2010-2011 ; Sustainable Development Law & Policy Volume 11 ; 11 >
+
+  }
+
+}

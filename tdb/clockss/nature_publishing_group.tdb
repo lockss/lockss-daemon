@@ -1201,7 +1201,7 @@
 
     au < released ; crawling ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; crawling ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
-    au < testing ; exists ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
+    au < released ; manifest ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
 
   }
 
@@ -1329,7 +1329,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
     au < released ; manifest ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
+    au < released ; manifest ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1361,7 +1361,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
     au < released ; crawling ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
-    au < testing ; exists ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
+    au < released ; manifest ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
 
   }
 
@@ -1393,7 +1393,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
-    au < testing ; exists ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
+    au < released ; manifest ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -1425,7 +1425,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
-    au < testing ; exists ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
+    au < released ; manifest ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1457,7 +1457,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
-    au < testing ; exists ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
+    au < released ; manifest ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1473,7 +1473,7 @@
 
     au < released ; crawling ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
-    au < testing ; exists ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
+    au < released ; manifest ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1487,8 +1487,8 @@
 
     param[journal_id] = nsmb
 
-    au < testing ; exists ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
-    au < testing ; exists ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
+    au < released ; manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
+    au < released ; manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < testing ; exists ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
 
   }
@@ -1566,7 +1566,7 @@
     au < manifest ; exists ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 >
     au < released ; crawling ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
     au < notReady ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
-    au < testing ; exists ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
+    au < released ; manifest ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     
   }
 
@@ -1592,7 +1592,7 @@
     au < manifest ; exists ; 2007 ; Prostate Cancer and Prostatic Diseases Volume 10 ; 2007 ; 10 >
     au < released ; crawling ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
-    au < testing ; exists ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
+    au < released ; manifest ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1630,7 +1630,7 @@
     au < manifest ; exists ; 2007 ; Spinal Cord Volume 45 ; 2007 ; 45 >
     au < released ; crawling ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
-    au < testing ; exists ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
+    au < released ; manifest ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     
   }
 
@@ -1643,11 +1643,12 @@
     >
 
     param[journal_id] = vital
-    comment[years] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
     
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
-    au < released ; crawling ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
-    au < testing ; exists ; 2010 ; Vital Volume 7 (year 2010) ; 2010 ; 7 >
+    au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
+    au < released ; manifest ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
+    au < manifest ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+
   }
 
 }
