@@ -270,8 +270,8 @@
       param[collection_id] = CHRG
       implicit < status ; year ; name ; param[year] >
 
-      au < manifest ; 1995 ; Congressional Hearings 1995 ; 1995 >
-      au < manifest ; 1996 ; Congressional Hearings 1996 ; 1996 >
+      au < testing ; 1995 ; Congressional Hearings 1995 ; 1995 >
+      au < testing ; 1996 ; Congressional Hearings 1996 ; 1996 >
       au < manifest ; 1997 ; Congressional Hearings 1997 ; 1997 >
       au < manifest ; 1998 ; Congressional Hearings 1998 ; 1998 >
       au < manifest ; 1999 ; Congressional Hearings 1999 ; 1999 >
