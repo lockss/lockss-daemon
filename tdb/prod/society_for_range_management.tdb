@@ -13,15 +13,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-5028
   
-      au < doNotProcess ; Rangeland Ecology & Management Volume 57 ; 57 >
-      au < superseded ; Rangeland Ecology & Management Volume 58 ; 058 >
-      au < doNotProcess ; Rangeland Ecology & Management Volume 59 ; 59 >
-      au < doNotProcess ; Rangeland Ecology & Management Volume 60 ; 60 >
+      au < doNotProcess ; 2004 ; Rangeland Ecology & Management Volume 57 ; 57 >
+      au < superseded ; 2005 ; Rangeland Ecology & Management Volume 58 ; 058 >
+      au < doNotProcess ; 2006 ; Rangeland Ecology & Management Volume 59 ; 59 >
+      au < doNotProcess ; 2007 ; Rangeland Ecology & Management Volume 60 ; 60 >
     }
 
   }
@@ -36,15 +36,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-501X
   
-      au < doNotProcess ; Rangelands Volume 26 ; 26 >
-      au < doNotProcess ; Rangelands Volume 27 ; 27 >
-      au < doNotProcess ; Rangelands Volume 28 ; 28 >
-      au < doNotProcess ; Rangelands Volume 29 ; 29 >
+      au < doNotProcess ; 2004 ; Rangelands Volume 26 ; 26 >
+      au < doNotProcess ; 2005 ; Rangelands Volume 27 ; 27 >
+      au < doNotProcess ; 2006 ; Rangelands Volume 28 ; 28 >
+      au < doNotProcess ; 2007 ; Rangelands Volume 29 ; 29 >
     }
 
     {

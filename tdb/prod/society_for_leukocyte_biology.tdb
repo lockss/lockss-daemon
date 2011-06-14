@@ -15,20 +15,20 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.jleukbio.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; Journal of Leukocyte Biology Volume 77 ; 77 >
-    au < HighWireStrVolPlugin ; down ; Journal of Leukocyte Biology Volume 78 ; 78 >
-    au < HighWireStrVolPlugin ; down ; Journal of Leukocyte Biology Volume 79 ; 79 >
-    au < HighWireStrVolPlugin ; down ; Journal of Leukocyte Biology Volume 80 ; 80 >
-    au < HighWireStrVolPlugin ; down ; Journal of Leukocyte Biology Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; released ; Journal of Leukocyte Biology Volume 88 ; 88 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Leukocyte Biology Volume 77 ; 77 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Leukocyte Biology Volume 78 ; 78 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Leukocyte Biology Volume 79 ; 79 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Leukocyte Biology Volume 80 ; 80 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Leukocyte Biology Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Leukocyte Biology Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Leukocyte Biology Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Leukocyte Biology Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Leukocyte Biology Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Leukocyte Biology Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Leukocyte Biology Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Leukocyte Biology Volume 88 ; 88 >
       
   }
 

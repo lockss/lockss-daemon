@@ -12,13 +12,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0003-1569
   
-      au < doNotProcess ; American Zoologist Volume 40 ; 40 >
-      au < superseded ; American Zoologist Volume 41 ; 41 >
+      au < doNotProcess ; 2000 ; American Zoologist Volume 40 ; 40 >
+      au < superseded ; 2001 ; American Zoologist Volume 41 ; 41 >
     }
 
   }
@@ -36,15 +36,15 @@
 
     {
     
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1540-7063
   
-      au < doNotProcess ; Integrative and Comparative Biology Volume 42 ; 42 >
-      au < doNotProcess ; Integrative and Comparative Biology Volume 43 ; 43 >
-      au < superseded ; Integrative and Comparative Biology Volume 44 ; 044 >
-      au < doNotProcess ; Integrative and Comparative Biology Volume 45 ; 45 >
+      au < doNotProcess ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
+      au < doNotProcess ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
+      au < superseded ; 2004 ; Integrative and Comparative Biology Volume 44 ; 044 >
+      au < doNotProcess ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
     }
 
     {

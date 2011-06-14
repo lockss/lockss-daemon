@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-1511
   
-      au < doNotProcess ; Journal of Herpetology Volume 36 ; 36 >
-      au < doNotProcess ; Journal of Herpetology Volume 37 ; 37 >
-      au < superseded ; Journal of Herpetology Volume 38 ; 038 >
-      au < doNotProcess ; Journal of Herpetology Volume 39 ; 39 >
-      au < doNotProcess ; Journal of Herpetology Volume 40 ; 40 >
-      au < doNotProcess ; Journal of Herpetology Volume 41 ; 41 >
+      au < doNotProcess ; 2002 ; Journal of Herpetology Volume 36 ; 36 >
+      au < doNotProcess ; 2003 ; Journal of Herpetology Volume 37 ; 37 >
+      au < superseded ; 2004 ; Journal of Herpetology Volume 38 ; 038 >
+      au < doNotProcess ; 2005 ; Journal of Herpetology Volume 39 ; 39 >
+      au < doNotProcess ; 2006 ; Journal of Herpetology Volume 40 ; 40 >
+      au < doNotProcess ; 2007 ; Journal of Herpetology Volume 41 ; 41 >
     }
 
     {

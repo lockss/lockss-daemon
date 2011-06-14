@@ -13,15 +13,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1051-1733
   
-      au < superseded ; Northwestern Naturalist Volume 85 ; 085 >
-      au < doNotProcess ; Northwestern Naturalist Volume 86 ; 86 >
-      au < doNotProcess ; Northwestern Naturalist Volume 87 ; 87 >
-      au < doNotProcess ; Northwestern Naturalist Volume 88 ; 88 >
+      au < superseded ; 2004 ; Northwestern Naturalist Volume 85 ; 085 >
+      au < doNotProcess ; 2005 ; Northwestern Naturalist Volume 86 ; 86 >
+      au < doNotProcess ; 2006 ; Northwestern Naturalist Volume 87 ; 87 >
+      au < doNotProcess ; 2007 ; Northwestern Naturalist Volume 88 ; 88 >
     }
 
     {
