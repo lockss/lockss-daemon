@@ -1,5 +1,5 @@
 /*
- * $Id: MapUtil.java,v 1.2 2005-08-02 22:54:36 troberts Exp $
+ * $Id: MapUtil.java,v 1.3 2011-06-14 09:29:47 tlipkis Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -76,4 +76,28 @@ public class MapUtil {
     return m;
   }
 
+  /** Return a map with keys and values taken from alternating list
+   * elements (<code>[key1, val1, key2, val2, ...]</code>), or from
+   * sublists (<code>[ [key1, val1], [key2, val2], ...]</code>) */
+  public static Map fromList(List keyvaluepairs) {
+    Map map = new HashMap();
+    if (keyvaluepairs.isEmpty()) {
+      return map;
+    }
+    try {
+      if (keyvaluepairs.get(0) instanceof List) {
+	for (List sub : (List<List>)keyvaluepairs) {
+	  map.put(sub.get(0), sub.get(1));
+	}
+      } else {
+	Iterator<String> iter = keyvaluepairs.iterator();
+	while (iter.hasNext()) {
+	  map.put(iter.next(), iter.next());
+	}
+      }
+      return map;
+    } catch (RuntimeException e) {
+      throw new IllegalArgumentException("arg must be an even-length list of strings or a list of 2-element lists of strings");
+    }
+  }
 }
