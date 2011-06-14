@@ -13,13 +13,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0097-0298
   
-      au < superseded ; Bulletin of the Biological Society of Washington Volume 13 ; 13 >
-      au < superseded ; Bulletin of the Biological Society of Washington Volume 14 ; 14 >
+      au < superseded ; 2005 ; Bulletin of the Biological Society of Washington Volume 13 ; 13 >
+      au < superseded ; 2006 ; Bulletin of the Biological Society of Washington Volume 14 ; 14 >
     }
 
   }
@@ -35,14 +35,14 @@
 
     {
     
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-324X
   
-      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 118 ; 118 >
-      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 119 ; 119 >
-      au < doNotProcess ; Proceedings of the Biological Society of Washington Volume 120 ; 120 >
+      au < doNotProcess ; 2005 ; Proceedings of the Biological Society of Washington Volume 118 ; 118 >
+      au < doNotProcess ; 2006 ; Proceedings of the Biological Society of Washington Volume 119 ; 119 >
+      au < doNotProcess ; 2007 ; Proceedings of the Biological Society of Washington Volume 120 ; 120 >
     
     }
 
