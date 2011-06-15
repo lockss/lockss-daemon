@@ -16,6 +16,12 @@
       param[base_url] = http://bsj.pitt.edu/ojs/
       param[journal_id] = bsj
 
+      comment[bsj] = combined manifest page for v15-17
+
+      au < exists ; 2008 ; Bolivian Studies Journal Volume 15 ; 15 >
+      au < exists ; 2009 ; Bolivian Studies Journal Volume 16 ; 16 >
+      au < exists ; 2010 ; Bolivian Studies Journal Volume 17 ; 17 >
+
     }
 
     {
@@ -28,6 +34,8 @@
       param[base_url] = http://ehe.pitt.edu/ojs/
       param[journal_id] = ehe
 
+      au < manifest ; 2010 ; Excellence in Higher Education Volume 1 ; 1 >
+
     }
 
     {
@@ -38,6 +46,9 @@
 
       param[base_url] = http://telerehab.pitt.edu/ojs/
       param[journal_id] = telerehab
+
+      au < manifest ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 1 >
+      au < manifest ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2 >
 
     }
 
@@ -51,6 +62,26 @@
       param[base_url] = http://jffp.pitt.edu/ojs/
       param[journal_id] = jffp
 
+      au < manifest ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 >
+      au < manifest ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 2 >
+      au < manifest ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 3 >
+      au < manifest ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 4 >
+      au < manifest ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 5 >
+      au < manifest ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 6 >
+      au < manifest ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 7 >
+      au < manifest ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 8 >
+      au < manifest ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 9 >
+      au < manifest ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 10 >
+      au < manifest ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 11 >
+      au < manifest ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 12 >
+      au < manifest ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 13 >
+      au < manifest ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 14 >
+      au < manifest ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 15 >
+      au < manifest ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 16 >
+      au < manifest ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 17 >
+      au < manifest ; 2008-2010 ; Journal of French and Francophone Philosophy Volume 18 ; 18 >
+      au < manifest ; 2011 ; Journal of French and Francophone Philosophy Volume 18 ; 19 >
+
     }
 
     {
@@ -63,6 +94,33 @@
       param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
       param[journal_id] = Iberoamericana
 
+      comment[0] = change plugin param to volume_name to accommodate Roman numerals?
+      comment[1] = fill in AUs
+
+      au < manifest ; 1939 ; Revista Iberoamericana Volume I ; I >
+      au < manifest ; 1940 ; Revista Iberoamericana Volume II ; II >
+      au < manifest ; 1941 ; Revista Iberoamericana Volume III ; III >      
+      au < manifest ; 1941-1942 ; Revista Iberoamericana Volume IV ; IV >
+      au < manifest ; 1942 ; Revista Iberoamericana Volume V ; V >
+      au < manifest ; 1943 ; Revista Iberoamericana Volume VI ; VI >
+      au < manifest ; 1943-1944 ; Revista Iberoamericana Volume VII ; VII >
+      au < manifest ; 1944 ; Revista Iberoamericana Volume VII ; VII >
+      au < manifest ; 1945 ; Revista Iberoamericana Volume IX ; IX >
+      au < manifest ; 1945-1946 ; Revista Iberoamericana Volume X ; X >
+      au < manifest ; 2000 ; Revista Iberoamericana Volume LXVI ; LXVI >
+      au < manifest ; 2001 ; Revista Iberoamericana Volume LXVII ; LXVII >
+      au < manifest ; 2002 ; Revista Iberoamericana Volume LXVIII ; LXVIII >
+      au < manifest ; 2003 ; Revista Iberoamericana Volume LXIX ; LXXIX >
+      au < manifest ; 2004 ; Revista Iberoamericana Volume LXX ; LXX >
+      au < manifest ; 2005 ; Revista Iberoamericana Volume LXXI ; LXXI >
+      au < manifest ; 2006 ; Revista Iberoamericana Volume LXXII ; LXXII >
+      au < manifest ; 2007 ; Revista Iberoamericana Volume LXXIII ; LXXIII >
+      au < manifest ; 2008 ; Revista Iberoamericana Volume LXXIV ; LXXIV >
+      au < manifest ; 2009 ; Revista Iberoamericana Volume LXXV ; LXXV >
+      au < manifest ; 2010 ; Revista Iberoamericana Volume LXXVI ; LXXVI >
+      au < manifest ; 2011 ; Revista Iberoamericana Volume LXXVII ; LXXVII >
+
+
     }
 
     {
@@ -73,6 +131,8 @@
 
       param[base_url] = http://ricoeur.pitt.edu/ojs/
       param[journal_id] = ricoeur
+
+      au < manifest ; 2010 ; Ricoeur Studies Volume 1 ; 1 >
 
     }
 
