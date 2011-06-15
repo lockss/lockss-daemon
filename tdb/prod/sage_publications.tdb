@@ -16504,6 +16504,70 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1957 ; Journal of Conflict Resolution Volume 1 ; 1 >
+        au < manifest ; 1958 ; Journal of Conflict Resolution Volume 2 ; 2 >
+        au < manifest ; 1959 ; Journal of Conflict Resolution Volume 3 ; 3 >
+        au < manifest ; 1960 ; Journal of Conflict Resolution Volume 4 ; 4 >
+        au < manifest ; 1961 ; Journal of Conflict Resolution Volume 5 ; 5 >
+        au < manifest ; 1962 ; Journal of Conflict Resolution Volume 6 ; 6 >
+        au < manifest ; 1963 ; Journal of Conflict Resolution Volume 7 ; 7 >
+        au < manifest ; 1964 ; Journal of Conflict Resolution Volume 8 ; 8 >
+        au < manifest ; 1965 ; Journal of Conflict Resolution Volume 9 ; 9 >
+        au < manifest ; 1966 ; Journal of Conflict Resolution Volume 10 ; 10 >
+        au < manifest ; 1967 ; Journal of Conflict Resolution Volume 11 ; 11 >
+        au < manifest ; 1968 ; Journal of Conflict Resolution Volume 12 ; 12 >
+        au < manifest ; 1969 ; Journal of Conflict Resolution Volume 13 ; 13 >
+        au < manifest ; 1970 ; Journal of Conflict Resolution Volume 14 ; 14 >
+        au < manifest ; 1971 ; Journal of Conflict Resolution Volume 15 ; 15 >
+        au < manifest ; 1972 ; Journal of Conflict Resolution Volume 16 ; 16 >
+        au < manifest ; 1973 ; Journal of Conflict Resolution Volume 17 ; 17 >
+        au < manifest ; 1974 ; Journal of Conflict Resolution Volume 18 ; 18 >
+        au < manifest ; 1975 ; Journal of Conflict Resolution Volume 19 ; 19 >
+        au < manifest ; 1976 ; Journal of Conflict Resolution Volume 20 ; 20 >
+        au < manifest ; 1977 ; Journal of Conflict Resolution Volume 21 ; 21 >
+        au < manifest ; 1978 ; Journal of Conflict Resolution Volume 22 ; 22 >
+        au < manifest ; 1979 ; Journal of Conflict Resolution Volume 23 ; 23 >
+        au < manifest ; 1980 ; Journal of Conflict Resolution Volume 24 ; 24 >
+        au < manifest ; 1981 ; Journal of Conflict Resolution Volume 25 ; 25 >
+        au < manifest ; 1982 ; Journal of Conflict Resolution Volume 26 ; 26 >
+        au < manifest ; 1983 ; Journal of Conflict Resolution Volume 27 ; 27 >
+        au < manifest ; 1984 ; Journal of Conflict Resolution Volume 28 ; 28 >
+        au < manifest ; 1985 ; Journal of Conflict Resolution Volume 29 ; 29 >
+        au < manifest ; 1986 ; Journal of Conflict Resolution Volume 30 ; 30 >
+        au < manifest ; 1987 ; Journal of Conflict Resolution Volume 31 ; 31 >
+        au < manifest ; 1988 ; Journal of Conflict Resolution Volume 32 ; 32 >
+        au < manifest ; 1989 ; Journal of Conflict Resolution Volume 33 ; 33 >
+        au < manifest ; 1990 ; Journal of Conflict Resolution Volume 34 ; 34 >
+        au < manifest ; 1991 ; Journal of Conflict Resolution Volume 35 ; 35 >
+        au < manifest ; 1992 ; Journal of Conflict Resolution Volume 36 ; 36 >
+        au < manifest ; 1993 ; Journal of Conflict Resolution Volume 37 ; 37 >
+        au < manifest ; 1994 ; Journal of Conflict Resolution Volume 38 ; 38 >
+        au < manifest ; 1995 ; Journal of Conflict Resolution Volume 39 ; 39 >
+        au < manifest ; 1996 ; Journal of Conflict Resolution Volume 40 ; 40 >
+        au < manifest ; 1997 ; Journal of Conflict Resolution Volume 41 ; 41 >
+        au < manifest ; 1998 ; Journal of Conflict Resolution Volume 42 ; 42 >
+        au < manifest ; 1999 ; Journal of Conflict Resolution Volume 43 ; 43 >
+        au < manifest ; 2000 ; Journal of Conflict Resolution Volume 44 ; 44 >
+        au < manifest ; 2001 ; Journal of Conflict Resolution Volume 45 ; 45 >
+        au < manifest ; 2002 ; Journal of Conflict Resolution Volume 46 ; 46 >
+        au < manifest ; 2003 ; Journal of Conflict Resolution Volume 47 ; 47 >
+        au < manifest ; 2004 ; Journal of Conflict Resolution Volume 48 ; 48 >
+        au < manifest ; 2005 ; Journal of Conflict Resolution Volume 49 ; 49 >
+        au < manifest ; 2006 ; Journal of Conflict Resolution Volume 50 ; 50 >
+        au < manifest ; 2007 ; Journal of Conflict Resolution Volume 51 ; 51 >
+        au < manifest ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 >
+        au < manifest ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 >
+        au < manifest ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 >
+        au < manifest ; 2011 ; Journal of Conflict Resolution Volume 55 ; 55 >
+
+      }
+
     }
 
     {
@@ -16526,6 +16590,26 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Consumer Culture Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of Consumer Culture Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Consumer Culture Volume 10 ; 10 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://joc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Journal of Consumer Culture Volume 1 ; 1 >
+        au < manifest ; 2002 ; Journal of Consumer Culture Volume 2 ; 2 >
+        au < manifest ; 2003 ; Journal of Consumer Culture Volume 3 ; 3 >
+        au < manifest ; 2004 ; Journal of Consumer Culture Volume 4 ; 4 >
+        au < manifest ; 2005 ; Journal of Consumer Culture Volume 5 ; 5 >
+        au < manifest ; 2006 ; Journal of Consumer Culture Volume 6 ; 6 >
+        au < manifest ; 2007 ; Journal of Consumer Culture Volume 7 ; 7 >
+        au < manifest ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 >
+        au < manifest ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 >
+        au < manifest ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 >
+        au < manifest ; 2011 ; Journal of Consumer Culture Volume 11 ; 11 >
 
       }
 
@@ -16564,6 +16648,42 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ccj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1978 ; Journal of Contemporary Criminal Justice Volume 1 ; 1 >
+        au < manifest ; 1981 ; Journal of Contemporary Criminal Justice Volume 2 ; 2 >
+        au < manifest ; 1987 ; Journal of Contemporary Criminal Justice Volume 3 ; 3 >
+        au < manifest ; 1988 ; Journal of Contemporary Criminal Justice Volume 4 ; 4 >
+        au < manifest ; 1989 ; Journal of Contemporary Criminal Justice Volume 5 ; 5 >
+        au < manifest ; 1990 ; Journal of Contemporary Criminal Justice Volume 6 ; 6 >
+        au < manifest ; 1991 ; Journal of Contemporary Criminal Justice Volume 7 ; 7 >
+        au < manifest ; 1992 ; Journal of Contemporary Criminal Justice Volume 8 ; 8 >
+        au < manifest ; 1993 ; Journal of Contemporary Criminal Justice Volume 9 ; 9 >
+        au < manifest ; 1994 ; Journal of Contemporary Criminal Justice Volume 10 ; 10 >
+        au < manifest ; 1995 ; Journal of Contemporary Criminal Justice Volume 11 ; 11 >
+        au < manifest ; 1996 ; Journal of Contemporary Criminal Justice Volume 12 ; 12 >
+        au < manifest ; 1997 ; Journal of Contemporary Criminal Justice Volume 13 ; 13 >
+        au < manifest ; 1998 ; Journal of Contemporary Criminal Justice Volume 14 ; 14 >
+        au < manifest ; 1999 ; Journal of Contemporary Criminal Justice Volume 15 ; 15 >
+        au < manifest ; 2000 ; Journal of Contemporary Criminal Justice Volume 16 ; 16 >
+        au < manifest ; 2001 ; Journal of Contemporary Criminal Justice Volume 17 ; 17 >
+        au < manifest ; 2002 ; Journal of Contemporary Criminal Justice Volume 18 ; 18 >
+        au < manifest ; 2003 ; Journal of Contemporary Criminal Justice Volume 19 ; 19 >
+        au < manifest ; 2004 ; Journal of Contemporary Criminal Justice Volume 20 ; 20 >
+        au < manifest ; 2005 ; Journal of Contemporary Criminal Justice Volume 21 ; 21 >
+        au < manifest ; 2006 ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
+        au < manifest ; 2007 ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
+        au < manifest ; 2008 ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
+        au < manifest ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
+        au < manifest ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 >
+        au < manifest ; 2011 ; Journal of Contemporary Criminal Justice Volume 27 ; 27 >
+
+      }
+
     }
 
     {
@@ -16586,6 +16706,55 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Contemporary Ethnography Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary Ethnography Volume 38 ; 38 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Contemporary Ethnography Volume 39 ; 39 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jce.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972 ; Journal of Contemporary Ethnography Volume 1 ; 1 >
+        au < manifest ; 1973 ; Journal of Contemporary Ethnography Volume 2 ; 2 >
+        au < manifest ; 1974 ; Journal of Contemporary Ethnography Volume 3 ; 3 >
+        au < manifest ; 1975 ; Journal of Contemporary Ethnography Volume 4 ; 4 >
+        au < manifest ; 1976 ; Journal of Contemporary Ethnography Volume 5 ; 5 >
+        au < manifest ; 1977 ; Journal of Contemporary Ethnography Volume 6 ; 6 >
+        au < manifest ; 1978 ; Journal of Contemporary Ethnography Volume 7 ; 7 >
+        au < manifest ; 1979 ; Journal of Contemporary Ethnography Volume 8 ; 8 >
+        au < manifest ; 1980 ; Journal of Contemporary Ethnography Volume 9 ; 9 >
+        au < manifest ; 1981 ; Journal of Contemporary Ethnography Volume 10 ; 10 >
+        au < manifest ; 1982 ; Journal of Contemporary Ethnography Volume 11 ; 11 >
+        au < manifest ; 1983 ; Journal of Contemporary Ethnography Volume 12 ; 12 >
+        au < manifest ; 1984 ; Journal of Contemporary Ethnography Volume 13 ; 13 >
+        au < manifest ; 1985 ; Journal of Contemporary Ethnography Volume 14 ; 14 >
+        au < manifest ; 1986 ; Journal of Contemporary Ethnography Volume 15 ; 15 >
+        au < manifest ; 1987 ; Journal of Contemporary Ethnography Volume 16 ; 16 >
+        au < manifest ; 1988 ; Journal of Contemporary Ethnography Volume 17 ; 17 >
+        au < manifest ; 1989 ; Journal of Contemporary Ethnography Volume 18 ; 18 >
+        au < manifest ; 1990 ; Journal of Contemporary Ethnography Volume 19 ; 19 >
+        au < manifest ; 1991 ; Journal of Contemporary Ethnography Volume 20 ; 20 >
+        au < manifest ; 1992 ; Journal of Contemporary Ethnography Volume 21 ; 21 >
+        au < manifest ; 1993 ; Journal of Contemporary Ethnography Volume 22 ; 22 >
+        au < manifest ; 1994 ; Journal of Contemporary Ethnography Volume 23 ; 23 >
+        au < manifest ; 1995 ; Journal of Contemporary Ethnography Volume 24 ; 24 >
+        au < manifest ; 1996 ; Journal of Contemporary Ethnography Volume 25 ; 25 >
+        au < manifest ; 1997 ; Journal of Contemporary Ethnography Volume 26 ; 26 >
+        au < manifest ; 1998 ; Journal of Contemporary Ethnography Volume 27 ; 27 >
+        au < manifest ; 1999 ; Journal of Contemporary Ethnography Volume 28 ; 28 >
+        au < manifest ; 2000 ; Journal of Contemporary Ethnography Volume 29 ; 29 >
+        au < manifest ; 2001 ; Journal of Contemporary Ethnography Volume 30 ; 30 >
+        au < manifest ; 2002 ; Journal of Contemporary Ethnography Volume 31 ; 31 >
+        au < manifest ; 2003 ; Journal of Contemporary Ethnography Volume 32 ; 32 >
+        au < manifest ; 2004 ; Journal of Contemporary Ethnography Volume 33 ; 33 >
+        au < manifest ; 2005 ; Journal of Contemporary Ethnography Volume 34 ; 34 >
+        au < manifest ; 2006 ; Journal of Contemporary Ethnography Volume 35 ; 35 >
+        au < manifest ; 2007 ; Journal of Contemporary Ethnography Volume 36 ; 36 >
+        au < manifest ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 >
+        au < manifest ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 >
+        au < manifest ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 >
+        au < manifest ; 2011 ; Journal of Contemporary Ethnography Volume 40 ; 40 >
 
       }
 
@@ -16624,6 +16793,61 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jch.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; Journal of Contemporary History Volume 1 ; 1 >
+        au < manifest ; 1967 ; Journal of Contemporary History Volume 2 ; 2 >
+        au < exists ; 1968 ; Journal of Contemporary History Volume 3 ; 3 >
+        au < manifest ; 1969 ; Journal of Contemporary History Volume 4 ; 4 >
+        au < manifest ; 1970 ; Journal of Contemporary History Volume 5 ; 5 >
+        au < manifest ; 1971 ; Journal of Contemporary History Volume 6 ; 6 >
+        au < manifest ; 1972 ; Journal of Contemporary History Volume 7 ; 7 >
+        au < manifest ; 1973 ; Journal of Contemporary History Volume 8 ; 8 >
+        au < manifest ; 1974 ; Journal of Contemporary History Volume 9 ; 9 >
+        au < manifest ; 1975 ; Journal of Contemporary History Volume 10 ; 10 >
+        au < manifest ; 1976 ; Journal of Contemporary History Volume 11 ; 11 >
+        au < manifest ; 1977 ; Journal of Contemporary History Volume 12 ; 12 >
+        au < manifest ; 1978 ; Journal of Contemporary History Volume 13 ; 13 >
+        au < manifest ; 1979 ; Journal of Contemporary History Volume 14 ; 14 >
+        au < manifest ; 1980 ; Journal of Contemporary History Volume 15 ; 15 >
+        au < manifest ; 1981 ; Journal of Contemporary History Volume 16 ; 16 >
+        au < manifest ; 1982 ; Journal of Contemporary History Volume 17 ; 17 >
+        au < manifest ; 1983 ; Journal of Contemporary History Volume 18 ; 18 >
+        au < manifest ; 1984 ; Journal of Contemporary History Volume 19 ; 19 >
+        au < manifest ; 1985 ; Journal of Contemporary History Volume 20 ; 20 >
+        au < manifest ; 1986 ; Journal of Contemporary History Volume 21 ; 21 >
+        au < manifest ; 1987 ; Journal of Contemporary History Volume 22 ; 22 >
+        au < manifest ; 1988 ; Journal of Contemporary History Volume 23 ; 23 >
+        au < manifest ; 1989 ; Journal of Contemporary History Volume 24 ; 24 >
+        au < manifest ; 1990 ; Journal of Contemporary History Volume 25 ; 25 >
+        au < manifest ; 1991 ; Journal of Contemporary History Volume 26 ; 26 >
+        au < manifest ; 1992 ; Journal of Contemporary History Volume 27 ; 27 >
+        au < manifest ; 1993 ; Journal of Contemporary History Volume 28 ; 28 >
+        au < manifest ; 1994 ; Journal of Contemporary History Volume 29 ; 29 >
+        au < manifest ; 1995 ; Journal of Contemporary History Volume 30 ; 30 >
+        au < manifest ; 1996 ; Journal of Contemporary History Volume 31 ; 31 >
+        au < manifest ; 1997 ; Journal of Contemporary History Volume 32 ; 32 >
+        au < manifest ; 1998 ; Journal of Contemporary History Volume 33 ; 33 >
+        au < manifest ; 1999 ; Journal of Contemporary History Volume 34 ; 34 >
+        au < manifest ; 2000 ; Journal of Contemporary History Volume 35 ; 35 >
+        au < manifest ; 2001 ; Journal of Contemporary History Volume 36 ; 36 >
+        au < manifest ; 2002 ; Journal of Contemporary History Volume 37 ; 37 >
+        au < manifest ; 2003 ; Journal of Contemporary History Volume 38 ; 38 >
+        au < manifest ; 2004 ; Journal of Contemporary History Volume 39 ; 39 >
+        au < manifest ; 2005 ; Journal of Contemporary History Volume 40 ; 40 >
+        au < manifest ; 2006 ; Journal of Contemporary History Volume 41 ; 41 >
+        au < manifest ; 2007 ; Journal of Contemporary History Volume 42 ; 42 >
+        au < manifest ; 2008 ; Journal of Contemporary History Volume 43 ; 43 >
+        au < manifest ; 2009 ; Journal of Contemporary History Volume 44 ; 44 >
+        au < manifest ; 2010 ; Journal of Contemporary History Volume 45 ; 45 >
+        au < manifest ; 2011 ; Journal of Contemporary History Volume 46 ; 46 >
+
+      }
+
     }
 
     {
@@ -16645,6 +16869,32 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Correctional Health Care Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Journal of Correctional Health Care Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Correctional Health Care Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; Journal of Correctional Health Care Volume 1 ; 1 >
+        au < manifest ; 1995 ; Journal of Correctional Health Care Volume 2 ; 2 >
+        au < manifest ; 1996 ; Journal of Correctional Health Care Volume 3 ; 3 >
+        au < manifest ; 1997 ; Journal of Correctional Health Care Volume 4 ; 4 >
+        au < manifest ; 1998 ; Journal of Correctional Health Care Volume 5 ; 5 >
+        au < manifest ; 1999 ; Journal of Correctional Health Care Volume 6 ; 6 >
+        au < manifest ; 2000 ; Journal of Correctional Health Care Volume 7 ; 7 >
+        au < manifest ; 2001 ; Journal of Correctional Health Care Volume 8 ; 8 >
+        au < manifest ; 2002 ; Journal of Correctional Health Care Volume 9 ; 9 >
+        au < manifest ; 2003 ; Journal of Correctional Health Care Volume 10 ; 10 >
+        au < manifest ; 2004 ; Journal of Correctional Health Care Volume 11 ; 11 >
+        au < manifest ; 2006 ; Journal of Correctional Health Care Volume 12 ; 12 >
+        au < manifest ; 2007 ; Journal of Correctional Health Care Volume 13 ; 13 >
+        au < manifest ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 >
+        au < manifest ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 >
+        au < manifest ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 >
+        au < manifest ; 2011 ; Journal of Correctional Health Care Volume 17 ; 17 >
 
       }
 
@@ -16671,6 +16921,19 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://crc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2006 ; Journal of Creative Communications Volume 1 ; 1 >
+        au < manifest ; 2007 ; Journal of Creative Communications Volume 2 ; 2 >
+        au < manifest ; 2008 ; Journal of Creative Communications Volume 3 ; 3 >
+        au < manifest ; 2009 ; Journal of Creative Communications Volume 4 ; 4 >
+
+      }
+
     }
 
     {
@@ -16692,6 +16955,23 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
   
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dms.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2004 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 1 ; 1 >
+        au < manifest ; 2005 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 2 ; 2 >
+        au < manifest ; 2006 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 3 ; 3 >
+        au < manifest ; 2007 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 4 ; 4 >
+        au < manifest ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+        au < manifest ; 2009 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 >
+        au < manifest ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 >
+        au < manifest ; 2011 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 8 ; 8 >
+
+      }
+
     }
     
     {
@@ -16727,6 +17007,57 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jcc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1970 ; Journal of Cross-Cultural Psychology Volume 1 ; 1 >
+        au < manifest ; 1971 ; Journal of Cross-Cultural Psychology Volume 2 ; 2 >
+        au < manifest ; 1972 ; Journal of Cross-Cultural Psychology Volume 3 ; 3 >
+        au < manifest ; 1973 ; Journal of Cross-Cultural Psychology Volume 4 ; 4 >
+        au < manifest ; 1974 ; Journal of Cross-Cultural Psychology Volume 5 ; 5 >
+        au < manifest ; 1975 ; Journal of Cross-Cultural Psychology Volume 6 ; 6 >
+        au < manifest ; 1976 ; Journal of Cross-Cultural Psychology Volume 7 ; 7 >
+        au < manifest ; 1977 ; Journal of Cross-Cultural Psychology Volume 8 ; 8 >
+        au < manifest ; 1978 ; Journal of Cross-Cultural Psychology Volume 9 ; 9 >
+        au < manifest ; 1979 ; Journal of Cross-Cultural Psychology Volume 10 ; 10 >
+        au < manifest ; 1980 ; Journal of Cross-Cultural Psychology Volume 11 ; 11 >
+        au < manifest ; 1981 ; Journal of Cross-Cultural Psychology Volume 12 ; 12 >
+        au < manifest ; 1982 ; Journal of Cross-Cultural Psychology Volume 13 ; 13 >
+        au < manifest ; 1983 ; Journal of Cross-Cultural Psychology Volume 14 ; 14 >
+        au < manifest ; 1984 ; Journal of Cross-Cultural Psychology Volume 15 ; 15 >
+        au < manifest ; 1985 ; Journal of Cross-Cultural Psychology Volume 16 ; 16 >
+        au < manifest ; 1986 ; Journal of Cross-Cultural Psychology Volume 17 ; 17 >
+        au < manifest ; 1987 ; Journal of Cross-Cultural Psychology Volume 18 ; 18 >
+        au < manifest ; 1988 ; Journal of Cross-Cultural Psychology Volume 19 ; 19 >
+        au < manifest ; 1989 ; Journal of Cross-Cultural Psychology Volume 20 ; 20 >
+        au < manifest ; 1990 ; Journal of Cross-Cultural Psychology Volume 21 ; 21 >
+        au < manifest ; 1991 ; Journal of Cross-Cultural Psychology Volume 22 ; 22 >
+        au < manifest ; 1992 ; Journal of Cross-Cultural Psychology Volume 23 ; 23 >
+        au < manifest ; 1993 ; Journal of Cross-Cultural Psychology Volume 24 ; 24 >
+        au < manifest ; 1994 ; Journal of Cross-Cultural Psychology Volume 25 ; 25 >
+        au < manifest ; 1995 ; Journal of Cross-Cultural Psychology Volume 26 ; 26 >
+        au < manifest ; 1996 ; Journal of Cross-Cultural Psychology Volume 27 ; 27 >
+        au < manifest ; 1997 ; Journal of Cross-Cultural Psychology Volume 28 ; 28 >
+        au < manifest ; 1998 ; Journal of Cross-Cultural Psychology Volume 29 ; 29 >
+        au < manifest ; 1999 ; Journal of Cross-Cultural Psychology Volume 30 ; 30 >
+        au < manifest ; 2000 ; Journal of Cross-Cultural Psychology Volume 31 ; 31 >
+        au < manifest ; 2001 ; Journal of Cross-Cultural Psychology Volume 32 ; 32 >
+        au < manifest ; 2002 ; Journal of Cross-Cultural Psychology Volume 33 ; 33 >
+        au < manifest ; 2003 ; Journal of Cross-Cultural Psychology Volume 34 ; 34 >
+        au < manifest ; 2004 ; Journal of Cross-Cultural Psychology Volume 35 ; 35 >
+        au < manifest ; 2005 ; Journal of Cross-Cultural Psychology Volume 36 ; 36 >
+        au < manifest ; 2006 ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
+        au < manifest ; 2007 ; Journal of Cross-Cultural Psychology Volume 38 ; 38 >
+        au < manifest ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
+        au < manifest ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
+        au < manifest ; 2010 ; Journal of Cross-Cultural Psychology Volume 41 ; 41 >
+        au < manifest ; 2011 ; Journal of Cross-Cultural Psychology Volume 42 ; 42 >
+
+      }
+
     }
 
     {
@@ -16748,6 +17079,26 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Developing Societies Volume 23 ; 23 >
         au < HighWirePressPlugin ; testing ; Journal of Developing Societies Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Developing Societies Volume 25 ; 25 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jds.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 2001 ; Journal of Developing Societies Volume 17 ; 17 >
+        au < manifest ; 2002 ; Journal of Developing Societies Volume 18 ; 18 >
+        au < manifest ; 2003 ; Journal of Developing Societies Volume 19 ; 19 >
+        au < manifest ; 2004 ; Journal of Developing Societies Volume 20 ; 20 >
+        au < manifest ; 2005 ; Journal of Developing Societies Volume 21 ; 21 >
+        au < manifest ; 2006 ; Journal of Developing Societies Volume 22 ; 22 >
+        au < manifest ; 2007 ; Journal of Developing Societies Volume 23 ; 23 >
+        au < manifest ; 2008 ; Journal of Developing Societies Volume 24 ; 24 >
+        au < manifest ; 2009 ; Journal of Developing Societies Volume 25 ; 25 >
+        au < manifest ; 2010 ; Journal of Developing Societies Volume 26 ; 26 >
+        au < manifest ; 2011 ; Journal of Developing Societies Volume 27 ; 27 >
 
       }
 
@@ -16776,6 +17127,42 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jdm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1985 ; Journal of Diagnostic Medical Sonography Volume 1 ; 1 >
+        au < manifest ; 1986 ; Journal of Diagnostic Medical Sonography Volume 2 ; 2 >
+        au < manifest ; 1987 ; Journal of Diagnostic Medical Sonography Volume 3 ; 3 >
+        au < manifest ; 1988 ; Journal of Diagnostic Medical Sonography Volume 4 ; 4 >
+        au < manifest ; 1989 ; Journal of Diagnostic Medical Sonography Volume 5 ; 5 >
+        au < manifest ; 1990 ; Journal of Diagnostic Medical Sonography Volume 6 ; 6 >
+        au < manifest ; 1991 ; Journal of Diagnostic Medical Sonography Volume 7 ; 7 >
+        au < manifest ; 1992 ; Journal of Diagnostic Medical Sonography Volume 8 ; 8 >
+        au < manifest ; 1993 ; Journal of Diagnostic Medical Sonography Volume 9 ; 9 >
+        au < manifest ; 1994 ; Journal of Diagnostic Medical Sonography Volume 10 ; 10 >
+        au < manifest ; 1995 ; Journal of Diagnostic Medical Sonography Volume 11 ; 11 >
+        au < manifest ; 1996 ; Journal of Diagnostic Medical Sonography Volume 12 ; 12 >
+        au < manifest ; 1997 ; Journal of Diagnostic Medical Sonography Volume 13 ; 13 >
+        au < manifest ; 1998 ; Journal of Diagnostic Medical Sonography Volume 14 ; 14 >
+        au < manifest ; 1999 ; Journal of Diagnostic Medical Sonography Volume 15 ; 15 >
+        au < manifest ; 2000 ; Journal of Diagnostic Medical Sonography Volume 16 ; 16 >
+        au < manifest ; 2001 ; Journal of Diagnostic Medical Sonography Volume 17 ; 17 >
+        au < manifest ; 2002 ; Journal of Diagnostic Medical Sonography Volume 18 ; 18 >
+        au < manifest ; 2003 ; Journal of Diagnostic Medical Sonography Volume 19 ; 19 >
+        au < manifest ; 2004 ; Journal of Diagnostic Medical Sonography Volume 20 ; 20 >
+        au < manifest ; 2005 ; Journal of Diagnostic Medical Sonography Volume 21 ; 21 >
+        au < manifest ; 2006 ; Journal of Diagnostic Medical Sonography Volume 22 ; 22 >
+        au < manifest ; 2007 ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 >
+        au < manifest ; 2008 ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
+        au < manifest ; 2009 ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
+        au < manifest ; 2010 ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 >
+        au < manifest ; 2011 ; Journal of Diagnostic Medical Sonography Volume 27 ; 27 >
+
+      }
+
     }
 
     {
@@ -16798,6 +17185,37 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       } 
       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dps.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; Journal of Disability Policy Studies Volume 1 ; 1 >
+        au < manifest ; 1991 ; Journal of Disability Policy Studies Volume 2 ; 2 >
+        au < manifest ; 1992 ; Journal of Disability Policy Studies Volume 3 ; 3 >
+        au < manifest ; 1993 ; Journal of Disability Policy Studies Volume 4 ; 4 >
+        au < manifest ; 1994 ; Journal of Disability Policy Studies Volume 5 ; 5 >
+        au < manifest ; 1995 ; Journal of Disability Policy Studies Volume 6 ; 6 >
+        au < manifest ; 1996 ; Journal of Disability Policy Studies Volume 7 ; 7 >
+        au < manifest ; 1997 ; Journal of Disability Policy Studies Volume 8 ; 8 >
+        au < manifest ; 1998 ; Journal of Disability Policy Studies Volume 9 ; 9 >
+        au < manifest ; 1999 ; Journal of Disability Policy Studies Volume 10 ; 10 >
+        au < manifest ; 2000 ; Journal of Disability Policy Studies Volume 11 ; 11 >
+        au < manifest ; 2001 ; Journal of Disability Policy Studies Volume 12 ; 12 >
+        au < manifest ; 2002 ; Journal of Disability Policy Studies Volume 13 ; 13 >
+        au < manifest ; 2003 ; Journal of Disability Policy Studies Volume 14 ; 14 >
+        au < manifest ; 2004 ; Journal of Disability Policy Studies Volume 15 ; 15 >
+        au < manifest ; 2005 ; Journal of Disability Policy Studies Volume 16 ; 16 >
+        au < manifest ; 2006 ; Journal of Disability Policy Studies Volume 17 ; 17 >
+        au < manifest ; 2007 ; Journal of Disability Policy Studies Volume 18 ; 18 >
+        au < manifest ; 2008 ; Journal of Disability Policy Studies Volume 19 ; 19 >
+        au < manifest ; 2009 ; Journal of Disability Policy Studies Volume 20 ; 20 >
+        au < manifest ; 2010 ; Journal of Disability Policy Studies Volume 21 ; 21 >
+        au < manifest ; 2011 ; Journal of Disability Policy Studies Volume 22 ; 22 >
+
+      }
+
     }
   
     {
@@ -16833,6 +17251,46 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jea.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1981 ; The Journal of Early Adolescence Volume 1 ; 1 >
+        au < manifest ; 1982 ; The Journal of Early Adolescence Volume 2 ; 2 >
+        au < manifest ; 1983 ; The Journal of Early Adolescence Volume 3 ; 3 >
+        au < manifest ; 1984 ; The Journal of Early Adolescence Volume 4 ; 4 >
+        au < manifest ; 1985 ; The Journal of Early Adolescence Volume 5 ; 5 >
+        au < manifest ; 1986 ; The Journal of Early Adolescence Volume 6 ; 6 >
+        au < manifest ; 1987 ; The Journal of Early Adolescence Volume 7 ; 7 >
+        au < manifest ; 1988 ; The Journal of Early Adolescence Volume 8 ; 8 >
+        au < manifest ; 1989 ; The Journal of Early Adolescence Volume 9 ; 9 >
+        au < manifest ; 1990 ; The Journal of Early Adolescence Volume 10 ; 10 >
+        au < manifest ; 1991 ; The Journal of Early Adolescence Volume 11 ; 11 >
+        au < manifest ; 1992 ; The Journal of Early Adolescence Volume 12 ; 12 >
+        au < manifest ; 1993 ; The Journal of Early Adolescence Volume 13 ; 13 >
+        au < manifest ; 1994 ; The Journal of Early Adolescence Volume 14 ; 14 >
+        au < manifest ; 1995 ; The Journal of Early Adolescence Volume 15 ; 15 >
+        au < manifest ; 1996 ; The Journal of Early Adolescence Volume 16 ; 16 >
+        au < manifest ; 1997 ; The Journal of Early Adolescence Volume 17 ; 17 >
+        au < manifest ; 1998 ; The Journal of Early Adolescence Volume 18 ; 18 >
+        au < manifest ; 1999 ; The Journal of Early Adolescence Volume 19 ; 19 >
+        au < manifest ; 2000 ; The Journal of Early Adolescence Volume 20 ; 20 >
+        au < manifest ; 2001 ; The Journal of Early Adolescence Volume 21 ; 21 >
+        au < manifest ; 2002 ; The Journal of Early Adolescence Volume 22 ; 22 >
+        au < manifest ; 2003 ; The Journal of Early Adolescence Volume 23 ; 23 >
+        au < manifest ; 2004 ; The Journal of Early Adolescence Volume 24 ; 24 >
+        au < manifest ; 2005 ; The Journal of Early Adolescence Volume 25 ; 25 >
+        au < manifest ; 2006 ; The Journal of Early Adolescence Volume 26 ; 26 >
+        au < manifest ; 2007 ; The Journal of Early Adolescence Volume 27 ; 27 >
+        au < manifest ; 2008 ; The Journal of Early Adolescence Volume 28 ; 28 >
+        au < manifest ; 2009 ; The Journal of Early Adolescence Volume 29 ; 29 >
+        au < manifest ; 2010 ; The Journal of Early Adolescence Volume 30 ; 30 >
+        au < manifest ; 2011 ; The Journal of Early Adolescence Volume 31 ; 31 >
+
+      }
+
     }
 
     {
@@ -16855,6 +17313,26 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Early Childhood Literacy Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of Early Childhood Literacy Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Early Childhood Literacy Volume 10 ; 10 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ecl.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Journal of Early Childhood Literacy Volume 1 ; 1 >
+        au < manifest ; 2002 ; Journal of Early Childhood Literacy Volume 2 ; 2 >
+        au < manifest ; 2003 ; Journal of Early Childhood Literacy Volume 3 ; 3 >
+        au < manifest ; 2004 ; Journal of Early Childhood Literacy Volume 4 ; 4 >
+        au < manifest ; 2005 ; Journal of Early Childhood Literacy Volume 5 ; 5 >
+        au < manifest ; 2006 ; Journal of Early Childhood Literacy Volume 6 ; 6 >
+        au < manifest ; 2007 ; Journal of Early Childhood Literacy Volume 7 ; 7 >
+        au < manifest ; 2008 ; Journal of Early Childhood Literacy Volume 8 ; 8 >
+        au < manifest ; 2009 ; Journal of Early Childhood Literacy Volume 9 ; 9 >
+        au < manifest ; 2010 ; Journal of Early Childhood Literacy Volume 10 ; 10 >
+        au < manifest ; 2011 ; Journal of Early Childhood Literacy Volume 11 ; 11 >
 
       }
 
@@ -16883,6 +17361,24 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ecr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2003 ; Journal of Early Childhood Research Volume 1 ; 1 >
+        au < manifest ; 2004 ; Journal of Early Childhood Research Volume 2 ; 2 >
+        au < manifest ; 2005 ; Journal of Early Childhood Research Volume 3 ; 3 >
+        au < manifest ; 2006 ; Journal of Early Childhood Research Volume 4 ; 4 >
+        au < manifest ; 2007 ; Journal of Early Childhood Research Volume 5 ; 5 >
+        au < manifest ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 >
+        au < manifest ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 >
+        au < manifest ; 2010 ; Journal of Early Childhood Research Volume 8 ; 8 >
+        au < manifest ; 2011 ; Journal of Early Childhood Research Volume 9 ; 9 >
+
+      }
+
     }
 
     {
@@ -16903,6 +17399,48 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jei.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < doesNotExist ; 0 ; Journal of Early Intervention Volume 1 ; 1 >
+        au < manifest ; 1981 ; Journal of Early Intervention Volume 2 ; 2 >
+        au < manifest ; 1981 ; Journal of Early Intervention Volume 3 ; 3 >
+        au < manifest ; 1981 ; Journal of Early Intervention Volume 4 ; 4 >
+        au < manifest ; 1982 ; Journal of Early Intervention Volume 5 ; 5 >
+        au < manifest ; 1982 ; Journal of Early Intervention Volume 6 ; 6 >
+        au < manifest ; 1983 ; Journal of Early Intervention Volume 7 ; 7 >
+        au < manifest ; 1984 ; Journal of Early Intervention Volume 8 ; 8 >
+        au < manifest ; 1984 ; Journal of Early Intervention Volume 9 ; 9 >
+        au < manifest ; 1986 ; Journal of Early Intervention Volume 10 ; 10 >
+        au < manifest ; 1986 ; Journal of Early Intervention Volume 11 ; 11 >
+        au < manifest ; 1987 ; Journal of Early Intervention Volume 12 ; 12 >
+        au < manifest ; 1989 ; Journal of Early Intervention Volume 13 ; 13 >
+        au < manifest ; 1990 ; Journal of Early Intervention Volume 14 ; 14 >
+        au < manifest ; 1991 ; Journal of Early Intervention Volume 15 ; 15 >
+        au < manifest ; 1992 ; Journal of Early Intervention Volume 16 ; 16 >
+        au < manifest ; 1993 ; Journal of Early Intervention Volume 17 ; 17 >
+        au < manifest ; 1994 ; Journal of Early Intervention Volume 18 ; 18 >
+        au < manifest ; 1995 ; Journal of Early Intervention Volume 19 ; 19 >
+        au < manifest ; 1996 ; Journal of Early Intervention Volume 20 ; 20 >
+        au < manifest ; 1997 ; Journal of Early Intervention Volume 21 ; 21 >
+        au < manifest ; 1999 ; Journal of Early Intervention Volume 22 ; 22 >
+        au < manifest ; 2000 ; Journal of Early Intervention Volume 23 ; 23 >
+        au < manifest ; 2001 ; Journal of Early Intervention Volume 24 ; 24 >
+        au < manifest ; 2002 ; Journal of Early Intervention Volume 25 ; 25 >
+        au < manifest ; 2003 ; Journal of Early Intervention Volume 26 ; 26 >
+        au < manifest ; 2004 ; Journal of Early Intervention Volume 27 ; 27 >
+        au < manifest ; 2005 ; Journal of Early Intervention Volume 28 ; 28 >
+        au < manifest ; 2006 ; Journal of Early Intervention Volume 29 ; 29 >
+        au < manifest ; 2007 ; Journal of Early Intervention Volume 30 ; 30 >
+        au < manifest ; 2008 ; Journal of Early Intervention Volume 31 ; 31 >
+        au < manifest ; 2009 ; Journal of Early Intervention Volume 32 ; 32 >
+        au < manifest ; 2011 ; Journal of Early Intervention Volume 33 ; 33 >
+
+      }
+
     }
     
     {
@@ -16926,6 +17464,20 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jsd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2007 ; Journal of Education for Sustainable Development Volume 1 ; 1 >
+        au < manifest ; 2008 ; Journal of Education for Sustainable Development Volume 2 ; 2 >
+        au < manifest ; 2009 ; Journal of Education for Sustainable Development Volume 3 ; 3 >
+        au < manifest ; 2010 ; Journal of Education for Sustainable Development Volume 4 ; 4 >
+        au < manifest ; 2011 ; Journal of Education for Sustainable Development Volume 5 ; 5 >
+
+      }
+
     }
 
     {
@@ -16946,6 +17498,51 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
         au < HighWirePressH20Plugin ; manifest ; Journal of Educational and Behavioral Statistics Volume 35 ; 35 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jeb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1976 ; Journal of Educational and Behavioral Statistics Volume 1 ; 1 >
+        au < manifest ; 1977 ; Journal of Educational and Behavioral Statistics Volume 2 ; 2 >
+        au < manifest ; 1978 ; Journal of Educational and Behavioral Statistics Volume 3 ; 3 >
+        au < manifest ; 1979 ; Journal of Educational and Behavioral Statistics Volume 4 ; 4 >
+        au < manifest ; 1980 ; Journal of Educational and Behavioral Statistics Volume 5 ; 5 >
+        au < manifest ; 1981 ; Journal of Educational and Behavioral Statistics Volume 6 ; 6 >
+        au < manifest ; 1982 ; Journal of Educational and Behavioral Statistics Volume 7 ; 7 >
+        au < manifest ; 1983 ; Journal of Educational and Behavioral Statistics Volume 8 ; 8 >
+        au < manifest ; 1984 ; Journal of Educational and Behavioral Statistics Volume 9 ; 9 >
+        au < manifest ; 1985 ; Journal of Educational and Behavioral Statistics Volume 10 ; 10 >
+        au < manifest ; 1986 ; Journal of Educational and Behavioral Statistics Volume 11 ; 11 >
+        au < manifest ; 1987 ; Journal of Educational and Behavioral Statistics Volume 12 ; 12 >
+        au < manifest ; 1988 ; Journal of Educational and Behavioral Statistics Volume 13 ; 13 >
+        au < manifest ; 1989 ; Journal of Educational and Behavioral Statistics Volume 14 ; 14 >
+        au < manifest ; 1990 ; Journal of Educational and Behavioral Statistics Volume 15 ; 15 >
+        au < manifest ; 1991 ; Journal of Educational and Behavioral Statistics Volume 16 ; 16 >
+        au < manifest ; 1992 ; Journal of Educational and Behavioral Statistics Volume 17 ; 17 >
+        au < manifest ; 1993 ; Journal of Educational and Behavioral Statistics Volume 18 ; 18 >
+        au < manifest ; 1994 ; Journal of Educational and Behavioral Statistics Volume 19 ; 19 >
+        au < manifest ; 1995 ; Journal of Educational and Behavioral Statistics Volume 20 ; 20 >
+        au < manifest ; 1996 ; Journal of Educational and Behavioral Statistics Volume 21 ; 21 >
+        au < manifest ; 1997 ; Journal of Educational and Behavioral Statistics Volume 22 ; 22 >
+        au < manifest ; 1998 ; Journal of Educational and Behavioral Statistics Volume 23 ; 23 >
+        au < manifest ; 1999 ; Journal of Educational and Behavioral Statistics Volume 24 ; 24 >
+        au < manifest ; 2000 ; Journal of Educational and Behavioral Statistics Volume 25 ; 25 >
+        au < manifest ; 2001 ; Journal of Educational and Behavioral Statistics Volume 26 ; 26 >
+        au < manifest ; 2002 ; Journal of Educational and Behavioral Statistics Volume 27 ; 27 >
+        au < manifest ; 2003 ; Journal of Educational and Behavioral Statistics Volume 28 ; 28 >
+        au < manifest ; 2004 ; Journal of Educational and Behavioral Statistics Volume 29 ; 29 >
+        au < manifest ; 2005 ; Journal of Educational and Behavioral Statistics Volume 30 ; 30 >
+        au < manifest ; 2006 ; Journal of Educational and Behavioral Statistics Volume 31 ; 31 >
+        au < manifest ; 2007 ; Journal of Educational and Behavioral Statistics Volume 32 ; 32 >
+        au < manifest ; 2008 ; Journal of Educational and Behavioral Statistics Volume 33 ; 33 >
+        au < manifest ; 2009 ; Journal of Educational and Behavioral Statistics Volume 34 ; 34 >
+        au < manifest ; 2010 ; Journal of Educational and Behavioral Statistics Volume 35 ; 35 >
+        au < manifest ; 2011 ; Journal of Educational and Behavioral Statistics Volume 36 ; 36 >
 
       }
 
@@ -16974,6 +17571,58 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jep.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1969 ; Journal of Elastomers and Plastics Volume 1 ; 1 >
+        au < manifest ; 1970 ; Journal of Elastomers and Plastics Volume 2 ; 2 >
+        au < manifest ; 1971 ; Journal of Elastomers and Plastics Volume 3 ; 3 >
+        au < manifest ; 1972 ; Journal of Elastomers and Plastics Volume 4 ; 4 >
+        au < manifest ; 1973 ; Journal of Elastomers and Plastics Volume 5 ; 5 >
+        au < manifest ; 1974 ; Journal of Elastomers and Plastics Volume 6 ; 6 >
+        au < manifest ; 1975 ; Journal of Elastomers and Plastics Volume 7 ; 7 >
+        au < manifest ; 1976 ; Journal of Elastomers and Plastics Volume 8 ; 8 >
+        au < doesNotExist ; 1976 ; Journal of Elastomers and Plastics Volume 9 ; 9 >
+        au < manifest ; 1978 ; Journal of Elastomers and Plastics Volume 10 ; 10 >
+        au < manifest ; 1979 ; Journal of Elastomers and Plastics Volume 11 ; 11 >
+        au < manifest ; 1980 ; Journal of Elastomers and Plastics Volume 12 ; 12 >
+        au < manifest ; 1981 ; Journal of Elastomers and Plastics Volume 13 ; 13 >
+        au < manifest ; 1982 ; Journal of Elastomers and Plastics Volume 14 ; 14 >
+        au < manifest ; 1983 ; Journal of Elastomers and Plastics Volume 15 ; 15 >
+        au < manifest ; 1984 ; Journal of Elastomers and Plastics Volume 16 ; 16 >
+        au < manifest ; 1985 ; Journal of Elastomers and Plastics Volume 17 ; 17 >
+        au < manifest ; 1986 ; Journal of Elastomers and Plastics Volume 18 ; 18 >
+        au < manifest ; 1987 ; Journal of Elastomers and Plastics Volume 19 ; 19 >
+        au < manifest ; 1988 ; Journal of Elastomers and Plastics Volume 20 ; 20 >
+        au < manifest ; 1989 ; Journal of Elastomers and Plastics Volume 21 ; 21 >
+        au < manifest ; 1990 ; Journal of Elastomers and Plastics Volume 22 ; 22 >
+        au < manifest ; 1991 ; Journal of Elastomers and Plastics Volume 23 ; 23 >
+        au < manifest ; 1992 ; Journal of Elastomers and Plastics Volume 24 ; 24 >
+        au < manifest ; 1993 ; Journal of Elastomers and Plastics Volume 25 ; 25 >
+        au < manifest ; 1994 ; Journal of Elastomers and Plastics Volume 26 ; 26 >
+        au < manifest ; 1995 ; Journal of Elastomers and Plastics Volume 27 ; 27 >
+        au < manifest ; 1996 ; Journal of Elastomers and Plastics Volume 28 ; 28 >
+        au < manifest ; 1997 ; Journal of Elastomers and Plastics Volume 29 ; 29 >
+        au < manifest ; 1998 ; Journal of Elastomers and Plastics Volume 30 ; 30 >
+        au < manifest ; 1999 ; Journal of Elastomers and Plastics Volume 31 ; 31 >
+        au < manifest ; 2000 ; Journal of Elastomers and Plastics Volume 32 ; 32 >
+        au < manifest ; 2001 ; Journal of Elastomers and Plastics Volume 33 ; 33 >
+        au < manifest ; 2002 ; Journal of Elastomers and Plastics Volume 34 ; 34 >
+        au < manifest ; 2003 ; Journal of Elastomers and Plastics Volume 35 ; 35 >
+        au < manifest ; 2004 ; Journal of Elastomers and Plastics Volume 36 ; 36 >
+        au < manifest ; 2005 ; Journal of Elastomers and Plastics Volume 37 ; 37 >
+        au < manifest ; 2006 ; Journal of Elastomers and Plastics Volume 38 ; 38 >
+        au < manifest ; 2007 ; Journal of Elastomers and Plastics Volume 39 ; 39 >
+        au < manifest ; 2008 ; Journal of Elastomers and Plastics Volume 40 ; 40 >
+        au < manifest ; 2009 ; Journal of Elastomers and Plastics Volume 41 ; 41 >
+        au < manifest ; 2010 ; Journal of Elastomers and Plastics Volume 42 ; 42 >
+        au < manifest ; 2011 ; Journal of Elastomers and Plastics Volume 43 ; 43 >
+
+      }
+
     }
 
     {
@@ -16999,6 +17648,25 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://emf.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Journal of Emerging Market Finance Volume 1 ; 1 >
+        au < manifest ; 2003 ; Journal of Emerging Market Finance Volume 2 ; 2 >
+        au < manifest ; 2004 ; Journal of Emerging Market Finance Volume 3 ; 3 >
+        au < manifest ; 2005 ; Journal of Emerging Market Finance Volume 4 ; 4 >
+        au < manifest ; 2006 ; Journal of Emerging Market Finance Volume 5 ; 5 >
+        au < manifest ; 2007 ; Journal of Emerging Market Finance Volume 6 ; 6 >
+        au < manifest ; 2008 ; Journal of Emerging Market Finance Volume 7 ; 7 >
+        au < manifest ; 2009 ; Journal of Emerging Market Finance Volume 8 ; 8 >
+        au < manifest ; 2010 ; Journal of Emerging Market Finance Volume 9 ; 9 >
+        au < manifest ; 2011 ; Journal of Emerging Market Finance Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -17009,6 +17677,9 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         eissn = 1743-2839 ;
         issnl = 0968-0519
       >
+      
+      comment[continued _by] = 1753-4259
+      comment[ini] = Discontinued in 2007. Continued by Innate Immunity.
 
       {
 
@@ -17017,8 +17688,45 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < HighWireStrVolPlugin ; down ; Journal of Endotoxin Research Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Endotoxin Research Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Endotoxin Research Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Endotoxin Research Volume 16 ; 16 >
+
+      }
+      
+    }
+
+    {
+
+      title <
+        name = Innate Immunity ;
+        issn = 1753-4259 ;
+        eissn = 1753-4267 
+      >
+
+      comment[continued _from] = 1743-2839
+      comment[ini] = In 2007 continued from Journal of Endotoxin Research.
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ini.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; Innate Immunity Volume 1 ; 1 >
+        au < manifest ; 1995 ; Innate Immunity Volume 2 ; 2 >
+        au < manifest ; 1996 ; Innate Immunity Volume 3 ; 3 >
+        au < manifest ; 1997 ; Innate Immunity Volume 4 ; 4 >
+        au < manifest ; 1999 ; Innate Immunity Volume 5 ; 5 >
+        au < manifest ; 2000 ; Innate Immunity Volume 6 ; 6 >
+        au < manifest ; 2001 ; Innate Immunity Volume 7 ; 7 >
+        au < manifest ; 2002 ; Innate Immunity Volume 8 ; 8 >
+        au < manifest ; 2003 ; Innate Immunity Volume 9 ; 9 >
+        au < manifest ; 2004 ; Innate Immunity Volume 10 ; 10 >
+        au < manifest ; 2005 ; Innate Immunity Volume 11 ; 11 >
+        au < manifest ; 2006 ; Innate Immunity Volume 12 ; 12 >
+        au < manifest ; 2007 ; Innate Immunity Volume 13 ; 13 >
+        au < manifest ; 2008 ; Innate Immunity Volume 14 ; 14 >
+        au < manifest ; 2009 ; Innate Immunity Volume 15 ; 15 >
+        au < manifest ; 2010 ; Innate Immunity Volume 16 ; 16 >
+        au < manifest ; 2011 ; Innate Immunity Volume 17 ; 17 >
 
       }
 
@@ -17044,6 +17752,34 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ebx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1993 ; Journal of Emotional and Behavioral Disorders Volume 1 ; 1 >
+        au < manifest ; 1994 ; Journal of Emotional and Behavioral Disorders Volume 2 ; 2 >
+        au < manifest ; 1995 ; Journal of Emotional and Behavioral Disorders Volume 3 ; 3 >
+        au < manifest ; 1996 ; Journal of Emotional and Behavioral Disorders Volume 4 ; 4 >
+        au < manifest ; 1997 ; Journal of Emotional and Behavioral Disorders Volume 5 ; 5 >
+        au < manifest ; 1998 ; Journal of Emotional and Behavioral Disorders Volume 6 ; 6 >
+        au < manifest ; 1999 ; Journal of Emotional and Behavioral Disorders Volume 7 ; 7 >
+        au < manifest ; 2000 ; Journal of Emotional and Behavioral Disorders Volume 8 ; 8 >
+        au < manifest ; 2001 ; Journal of Emotional and Behavioral Disorders Volume 9 ; 9 >
+        au < manifest ; 2002 ; Journal of Emotional and Behavioral Disorders Volume 10 ; 10 >
+        au < manifest ; 2003 ; Journal of Emotional and Behavioral Disorders Volume 11 ; 11 >
+        au < manifest ; 2004 ; Journal of Emotional and Behavioral Disorders Volume 12 ; 12 >
+        au < manifest ; 2005 ; Journal of Emotional and Behavioral Disorders Volume 13 ; 13 >
+        au < manifest ; 2006 ; Journal of Emotional and Behavioral Disorders Volume 14 ; 14 >
+        au < manifest ; 2007 ; Journal of Emotional and Behavioral Disorders Volume 15 ; 15 >
+        au < manifest ; 2008 ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
+        au < manifest ; 2009 ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
+        au < manifest ; 2010 ; Journal of Emotional and Behavioral Disorders Volume 18 ; 18 >
+        au < manifest ; 2011 ; Journal of Emotional and Behavioral Disorders Volume 19 ; 19 >
+
+      }
+
     }
   
     {
@@ -17076,6 +17812,54 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of English Linguistics Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Journal of English Linguistics Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; Journal of English Linguistics Volume 38 ; 38 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eng.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1967 ; Journal of English Linguistics Volume 1 ; 1 >
+        au < manifest ; 1968 ; Journal of English Linguistics Volume 2 ; 2 >
+        au < manifest ; 1969 ; Journal of English Linguistics Volume 3 ; 3 >
+        au < manifest ; 1970 ; Journal of English Linguistics Volume 4 ; 4 >
+        au < manifest ; 1971 ; Journal of English Linguistics Volume 5 ; 5 >
+        au < manifest ; 1972 ; Journal of English Linguistics Volume 6 ; 6 >
+        au < manifest ; 1973 ; Journal of English Linguistics Volume 7 ; 7 >
+        au < manifest ; 1974 ; Journal of English Linguistics Volume 8 ; 8 >
+        au < manifest ; 1975 ; Journal of English Linguistics Volume 9 ; 9 >
+        au < manifest ; 1976 ; Journal of English Linguistics Volume 10 ; 10 >
+        au < manifest ; 1977 ; Journal of English Linguistics Volume 11 ; 11 >
+        au < manifest ; 1978 ; Journal of English Linguistics Volume 12 ; 12 >
+        au < manifest ; 1979 ; Journal of English Linguistics Volume 13 ; 13 >
+        au < manifest ; 1980 ; Journal of English Linguistics Volume 14 ; 14 >
+        au < manifest ; 1981 ; Journal of English Linguistics Volume 15 ; 15 >
+        au < manifest ; 1983 ; Journal of English Linguistics Volume 16 ; 16 >
+        au < manifest ; 1984 ; Journal of English Linguistics Volume 17 ; 17 >
+        au < manifest ; 1985 ; Journal of English Linguistics Volume 18 ; 18 >
+        au < manifest ; 1986 ; Journal of English Linguistics Volume 19 ; 19 >
+        au < manifest ; 1987 ; Journal of English Linguistics Volume 20 ; 20 >
+        au < manifest ; 1988 ; Journal of English Linguistics Volume 21 ; 21 >
+        au < manifest ; 1989 ; Journal of English Linguistics Volume 22 ; 22 >
+        au < manifest ; 1990 ; Journal of English Linguistics Volume 23 ; 23 >
+        au < manifest ; 1996 ; Journal of English Linguistics Volume 24 ; 24 >
+        au < manifest ; 1997 ; Journal of English Linguistics Volume 25 ; 25 >
+        au < manifest ; 1998 ; Journal of English Linguistics Volume 26 ; 26 >
+        au < manifest ; 1999 ; Journal of English Linguistics Volume 27 ; 27 >
+        au < manifest ; 2000 ; Journal of English Linguistics Volume 28 ; 28 >
+        au < manifest ; 2001 ; Journal of English Linguistics Volume 29 ; 29 >
+        au < manifest ; 2002 ; Journal of English Linguistics Volume 30 ; 30 >
+        au < manifest ; 2003 ; Journal of English Linguistics Volume 31 ; 31 >
+        au < manifest ; 2004 ; Journal of English Linguistics Volume 32 ; 32 >
+        au < manifest ; 2005 ; Journal of English Linguistics Volume 33 ; 33 >
+        au < manifest ; 2006 ; Journal of English Linguistics Volume 34 ; 34 >
+        au < manifest ; 2007 ; Journal of English Linguistics Volume 35 ; 35 >
+        au < manifest ; 2008 ; Journal of English Linguistics Volume 36 ; 36 >
+        au < manifest ; 2009 ; Journal of English Linguistics Volume 37 ; 37 >
+        au < manifest ; 2010 ; Journal of English Linguistics Volume 38 ; 38 >
+        au < manifest ; 2011 ; Journal of English Linguistics Volume 39 ; 39 >
 
       }
 
@@ -17114,6 +17898,35 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://joe.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Journal of Entrepreneurship Volume 1 ; 1 >
+        au < manifest ; 1993 ; Journal of Entrepreneurship Volume 2 ; 2 >
+        au < manifest ; 1994 ; Journal of Entrepreneurship Volume 3 ; 3 >
+        au < manifest ; 1995 ; Journal of Entrepreneurship Volume 4 ; 4 >
+        au < manifest ; 1996 ; Journal of Entrepreneurship Volume 5 ; 5 >
+        au < manifest ; 1997 ; Journal of Entrepreneurship Volume 6 ; 6 >
+        au < manifest ; 1998 ; Journal of Entrepreneurship Volume 7 ; 7 >
+        au < manifest ; 1999 ; Journal of Entrepreneurship Volume 8 ; 8 >
+        au < manifest ; 2000 ; Journal of Entrepreneurship Volume 9 ; 9 >
+        au < manifest ; 2001 ; Journal of Entrepreneurship Volume 10 ; 10 >
+        au < manifest ; 2002 ; Journal of Entrepreneurship Volume 11 ; 11 >
+        au < manifest ; 2003 ; Journal of Entrepreneurship Volume 12 ; 12 >
+        au < manifest ; 2004 ; Journal of Entrepreneurship Volume 13 ; 13 >
+        au < manifest ; 2005 ; Journal of Entrepreneurship Volume 14 ; 14 >
+        au < manifest ; 2006 ; Journal of Entrepreneurship Volume 15 ; 15 >
+        au < manifest ; 2007 ; Journal of Entrepreneurship Volume 16 ; 16 >
+        au < manifest ; 2008 ; Journal of Entrepreneurship Volume 17 ; 17 >
+        au < manifest ; 2009 ; Journal of Entrepreneurship Volume 18 ; 18 >
+        au < manifest ; 2010 ; Journal of Entrepreneurship Volume 19 ; 19 >
+        au < manifest ; 2011 ; Journal of Entrepreneurship Volume 20 ; 20 >
+
+      }
+
     }
 
     {
@@ -17146,6 +17959,35 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; The Journal of Environment & Development Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; The Journal of Environment & Development Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; The Journal of Environment & Development Volume 19 ; 19 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jed.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; The Journal of Environment & Development Volume 1 ; 1 >
+        au < manifest ; 1993 ; The Journal of Environment & Development Volume 2 ; 2 >
+        au < manifest ; 1994 ; The Journal of Environment & Development Volume 3 ; 3 >
+        au < manifest ; 1995 ; The Journal of Environment & Development Volume 4 ; 4 >
+        au < manifest ; 1996 ; The Journal of Environment & Development Volume 5 ; 5 >
+        au < manifest ; 1997 ; The Journal of Environment & Development Volume 6 ; 6 >
+        au < manifest ; 1998 ; The Journal of Environment & Development Volume 7 ; 7 >
+        au < manifest ; 1999 ; The Journal of Environment & Development Volume 8 ; 8 >
+        au < manifest ; 2000 ; The Journal of Environment & Development Volume 9 ; 9 >
+        au < manifest ; 2001 ; The Journal of Environment & Development Volume 10 ; 10 >
+        au < manifest ; 2002 ; The Journal of Environment & Development Volume 11 ; 11 >
+        au < manifest ; 2003 ; The Journal of Environment & Development Volume 12 ; 12 >
+        au < manifest ; 2004 ; The Journal of Environment & Development Volume 13 ; 13 >
+        au < manifest ; 2005 ; The Journal of Environment & Development Volume 14 ; 14 >
+        au < manifest ; 2006 ; The Journal of Environment & Development Volume 15 ; 15 >
+        au < manifest ; 2007 ; The Journal of Environment & Development Volume 16 ; 16 >
+        au < manifest ; 2008 ; The Journal of Environment & Development Volume 17 ; 17 >
+        au < manifest ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 >
+        au < manifest ; 2010 ; The Journal of Environment & Development Volume 19 ; 19 >
+        au < manifest ; 2011 ; The Journal of Environment & Development Volume 20 ; 20 >
 
       }
 
@@ -17184,6 +18026,36 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://esp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; Journal of European Social Policy Volume 1 ; 1 >
+        au < manifest ; 1992 ; Journal of European Social Policy Volume 2 ; 2 >
+        au < manifest ; 1993 ; Journal of European Social Policy Volume 3 ; 3 >
+        au < manifest ; 1994 ; Journal of European Social Policy Volume 4 ; 4 >
+        au < manifest ; 1995 ; Journal of European Social Policy Volume 5 ; 5 >
+        au < manifest ; 1996 ; Journal of European Social Policy Volume 6 ; 6 >
+        au < manifest ; 1997 ; Journal of European Social Policy Volume 7 ; 7 >
+        au < manifest ; 1998 ; Journal of European Social Policy Volume 8 ; 8 >
+        au < manifest ; 1999 ; Journal of European Social Policy Volume 9 ; 9 >
+        au < manifest ; 2000 ; Journal of European Social Policy Volume 10 ; 10 >
+        au < manifest ; 2001 ; Journal of European Social Policy Volume 11 ; 11 >
+        au < manifest ; 2002 ; Journal of European Social Policy Volume 12 ; 12 >
+        au < manifest ; 2003 ; Journal of European Social Policy Volume 13 ; 13 >
+        au < manifest ; 2004 ; Journal of European Social Policy Volume 14 ; 14 >
+        au < manifest ; 2005 ; Journal of European Social Policy Volume 15 ; 15 >
+        au < manifest ; 2006 ; Journal of European Social Policy Volume 16 ; 16 >
+        au < manifest ; 2007 ; Journal of European Social Policy Volume 17 ; 17 >
+        au < manifest ; 2008 ; Journal of European Social Policy Volume 18 ; 18 >
+        au < manifest ; 2009 ; Journal of European Social Policy Volume 19 ; 19 >
+        au < manifest ; 2010 ; Journal of European Social Policy Volume 20 ; 20 >
+        au < manifest ; 2011 ; Journal of European Social Policy Volume 21 ; 21 >
+
+      }
+
     }
 
     {
@@ -17216,6 +18088,56 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWirePressPlugin ; down ; Journal of European Studies Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Journal of European Studies Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; manifest ; Journal of European Studies Volume 40 ; 40 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jes.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1971 ; Journal of European Studies Volume 1 ; 1 >
+        au < manifest ; 1972 ; Journal of European Studies Volume 2 ; 2 >
+        au < manifest ; 1973 ; Journal of European Studies Volume 3 ; 3 >
+        au < manifest ; 1974 ; Journal of European Studies Volume 4 ; 4 >
+        au < manifest ; 1975 ; Journal of European Studies Volume 5 ; 5 >
+        au < manifest ; 1976 ; Journal of European Studies Volume 6 ; 6 >
+        au < manifest ; 1977 ; Journal of European Studies Volume 7 ; 7 >
+        au < manifest ; 1978 ; Journal of European Studies Volume 8 ; 8 >
+        au < manifest ; 1979 ; Journal of European Studies Volume 9 ; 9 >
+        au < manifest ; 1980 ; Journal of European Studies Volume 10 ; 10 >
+        au < manifest ; 1981 ; Journal of European Studies Volume 11 ; 11 >
+        au < manifest ; 1982 ; Journal of European Studies Volume 12 ; 12 >
+        au < manifest ; 1983 ; Journal of European Studies Volume 13 ; 13 >
+        au < manifest ; 1984 ; Journal of European Studies Volume 14 ; 14 >
+        au < manifest ; 1985 ; Journal of European Studies Volume 15 ; 15 >
+        au < manifest ; 1986 ; Journal of European Studies Volume 16 ; 16 >
+        au < manifest ; 1987 ; Journal of European Studies Volume 17 ; 17 >
+        au < manifest ; 1988 ; Journal of European Studies Volume 18 ; 18 >
+        au < manifest ; 1989 ; Journal of European Studies Volume 19 ; 19 >
+        au < manifest ; 1990 ; Journal of European Studies Volume 20 ; 20 >
+        au < manifest ; 1991 ; Journal of European Studies Volume 21 ; 21 >
+        au < manifest ; 1992 ; Journal of European Studies Volume 22 ; 22 >
+        au < manifest ; 1993 ; Journal of European Studies Volume 23 ; 23 >
+        au < manifest ; 1994 ; Journal of European Studies Volume 24 ; 24 >
+        au < manifest ; 1995 ; Journal of European Studies Volume 25 ; 25 >
+        au < manifest ; 1996 ; Journal of European Studies Volume 26 ; 26 >
+        au < manifest ; 1997 ; Journal of European Studies Volume 27 ; 27 >
+        au < manifest ; 1998 ; Journal of European Studies Volume 28 ; 28 >
+        au < manifest ; 1999 ; Journal of European Studies Volume 29 ; 29 >
+        au < manifest ; 2000 ; Journal of European Studies Volume 30 ; 30 >
+        au < manifest ; 2001 ; Journal of European Studies Volume 31 ; 31 >
+        au < manifest ; 2002 ; Journal of European Studies Volume 32 ; 32 >
+        au < manifest ; 2003 ; Journal of European Studies Volume 33 ; 33 >
+        au < manifest ; 2004 ; Journal of European Studies Volume 34 ; 34 >
+        au < manifest ; 2005 ; Journal of European Studies Volume 35 ; 35 >
+        au < manifest ; 2006 ; Journal of European Studies Volume 36 ; 36 >
+        au < manifest ; 2007 ; Journal of European Studies Volume 37 ; 37 >
+        au < manifest ; 2008 ; Journal of European Studies Volume 38 ; 38 >
+        au < manifest ; 2009 ; Journal of European Studies Volume 39 ; 39 >
+        au < manifest ; 2010 ; Journal of European Studies Volume 40 ; 40 >
+        au < manifest ; 2011 ; Journal of European Studies Volume 41 ; 41 >
 
       }
 
