@@ -20,16 +20,17 @@
       param[base_url] = http://ejournals.library.vanderbilt.edu/ameriquests/
       implicit < status ; year ; name ; param[year] >
     
-      au < released ; 2004 ; AmeriQuests Volume 1 ; 2004 >
+      au < down ; 2004 ; AmeriQuests Volume 1 [superseded] ; 2004 >
     
     }
     
     {
     
-      plugin = org.lockss.plugin.ojs.OJS2Plugin
-      param[base_url] = http://ejournals.library.vanderbilt.edu/ameriquests/
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[base_url] = http://ejournals.library.vanderbilt.edu/ojs/
       implicit < status ; year ; name ; param[year] >
     
+      au < manifest ; 2004 ; AmeriQuests Volume 1 ; 2004 >
       au < manifest ; 2005 ; AmeriQuests Volume 2 ; 2005 >
       au < manifest ; 2006 ; AmeriQuests Volume 3 ; 2006 >
       au < manifest ; 2007 ; AmeriQuests Volume 4 ; 2007 > 
