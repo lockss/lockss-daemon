@@ -12,16 +12,16 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1066-5234
   
-      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
-      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
-      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
-      au < doNotProcess ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
-      au < superseded ; The Journal of Eukaryotic Microbiology Volume 51 ; 051 >
+      au < doNotProcess ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+      au < doNotProcess ; 2001 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+      au < doNotProcess ; 2002 ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+      au < doNotProcess ; 2003 ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+      au < superseded ; 2004 ; The Journal of Eukaryotic Microbiology Volume 51 ; 051 >
     }
 
     {

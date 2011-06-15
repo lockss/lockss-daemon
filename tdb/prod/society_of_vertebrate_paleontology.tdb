@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0272-4634
   
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 21 ; 21 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 22 ; 22 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 23 ; 23 >
-      au < superseded ; Journal of Vertebrate Paleontology Volume 24 ; 024 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 25 ; 25 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 26 ; 26 >
-      au < doNotProcess ; Journal of Vertebrate Paleontology Volume 27 ; 27 >
+      au < doNotProcess ; 2000 ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
+      au < doNotProcess ; 2001 ; Journal of Vertebrate Paleontology Volume 21 ; 21 >
+      au < doNotProcess ; 2002 ; Journal of Vertebrate Paleontology Volume 22 ; 22 >
+      au < doNotProcess ; 2003 ; Journal of Vertebrate Paleontology Volume 23 ; 23 >
+      au < superseded ; 2004 ; Journal of Vertebrate Paleontology Volume 24 ; 024 >
+      au < doNotProcess ; 2005 ; Journal of Vertebrate Paleontology Volume 25 ; 25 >
+      au < doNotProcess ; 2006 ; Journal of Vertebrate Paleontology Volume 26 ; 26 >
+      au < doNotProcess ; 2007 ; Journal of Vertebrate Paleontology Volume 27 ; 27 >
     }
 
     {
