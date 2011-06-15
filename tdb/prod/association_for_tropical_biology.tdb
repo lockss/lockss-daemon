@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-3606
   
-      au < superseded ; BIOTROPICA Volume 32 ; 32 >
-      au < superseded ; BIOTROPICA Volume 33 ; 33 >
-      au < superseded ; BIOTROPICA Volume 34 ; 34 >
-      au < superseded ; BIOTROPICA Volume 35 ; 35 >
-      au < superseded ; BIOTROPICA Volume 36 ; 036 >
-      au < doNotProcess ; BIOTROPICA Volume 36 ; 36 >
+      au < superseded ; 2000 ; BIOTROPICA Volume 32 ; 32 >
+      au < superseded ; 2001 ; BIOTROPICA Volume 33 ; 33 >
+      au < superseded ; 2002 ; BIOTROPICA Volume 34 ; 34 >
+      au < superseded ; 2003 ; BIOTROPICA Volume 35 ; 35 >
+      au < superseded ; 2004 ; BIOTROPICA Volume 36 ; 036 >
+      au < doNotProcess ; 2005 ; BIOTROPICA Volume 36 ; 36 >
     }
 
     {

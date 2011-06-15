@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,10 +17,10 @@
 
     param[journal_dir] = le_mouvement_social
 
-    au < released ; Le Mouvement Social Numéro 226 ; 226 >
-    au < released ; Le Mouvement Social Numéro 227 ; 227 >
-    au < released ; Le Mouvement Social Numéro 228 ; 228 >
-    au < released ; Le Mouvement Social Numéro 229 ; 229 >
+    au < released ; 2009 ; Le Mouvement Social Numéro 226 ; 226 >
+    au < released ; 2009 ; Le Mouvement Social Numéro 227 ; 227 >
+    au < released ; 2009 ; Le Mouvement Social Numéro 228 ; 228 >
+    au < released ; 2009 ; Le Mouvement Social Numéro 229 ; 229 >
 
   }
 
