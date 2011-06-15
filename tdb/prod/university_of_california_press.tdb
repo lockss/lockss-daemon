@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
   param[base_url] = http://caliber.ucpress.net/
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
 
@@ -19,15 +19,15 @@
 
     param[journal_id] = ncm
 
-    au < down ; 19th-Century Music Volume 25 ; 25 >
-    au < down ; 19th-Century Music Volume 26 ; 26 >
-    au < down ; 19th-Century Music Volume 27 ; 27 >
-    au < down ; 19th-Century Music Volume 28 ; 28 >
-    au < down ; 19th-Century Music Volume 29 ; 29 >
-    au < down ; 19th-Century Music Volume 30 ; 30 >
-    au < down ; 19th-Century Music Volume 31 ; 31 >
-    au < down ; 19th-Century Music Volume 32 ; 32 >
-    au < down ; 19th-Century Music Volume 33 ; 33 >
+    au < down ; 2001 ; 19th-Century Music Volume 25 ; 25 >
+    au < down ; 2002-2003 ; 19th-Century Music Volume 26 ; 26 >
+    au < down ; 2003-2004 ; 19th-Century Music Volume 27 ; 27 >
+    au < down ; 2004-2005 ; 19th-Century Music Volume 28 ; 28 >
+    au < down ; 2005-2006 ; 19th-Century Music Volume 29 ; 29 >
+    au < down ; 2006-2007 ; 19th-Century Music Volume 30 ; 30 >
+    au < down ; 2007-2008 ; 19th-Century Music Volume 31 ; 31 >
+    au < down ; 2008-2009 ; 19th-Century Music Volume 32 ; 32 >
+    au < down ; 2009-2010 ; 19th-Century Music Volume 33 ; 33 >
 
   }
 
@@ -42,16 +42,16 @@
 
     param[journal_id] = as
 
-    au < down ; Asian Survey Volume 41 ; 41 >
-    au < down ; Asian Survey Volume 42 ; 42 >
-    au < down ; Asian Survey Volume 43 ; 43 >
-    au < down ; Asian Survey Volume 44 ; 44 >
-    au < down ; Asian Survey Volume 45 ; 45 >
-    au < down ; Asian Survey Volume 46 ; 46 >
-    au < down ; Asian Survey Volume 47 ; 47 >
-    au < down ; Asian Survey Volume 48 ; 48 >
-    au < down ; Asian Survey Volume 49 ; 49 >
-    au < down ; Asian Survey Volume 50 ; 50 >
+    au < down ; 2001 ; Asian Survey Volume 41 ; 41 >
+    au < down ; 2002 ; Asian Survey Volume 42 ; 42 >
+    au < down ; 2003 ; Asian Survey Volume 43 ; 43 >
+    au < down ; 2004 ; Asian Survey Volume 44 ; 44 >
+    au < down ; 2005 ; Asian Survey Volume 45 ; 45 >
+    au < down ; 2006 ; Asian Survey Volume 46 ; 46 >
+    au < down ; 2007 ; Asian Survey Volume 47 ; 47 >
+    au < down ; 2008 ; Asian Survey Volume 48 ; 48 >
+    au < down ; 2009 ; Asian Survey Volume 49 ; 49 >
+    au < down ; 2010 ; Asian Survey Volume 50 ; 50 >
 
   }
 
@@ -66,9 +66,9 @@
 
     param[journal_id] = auk
 
-    au < down ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
-    au < down ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
-    au < down ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
+    au < down ; 2008 ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
+    au < down ; 2009 ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
+    au < down ; 2010 ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
   
   }
 
@@ -83,16 +83,16 @@
 
     param[journal_id] = ca
 
-    au < down ; Classical Antiquity Volume 20 ; 20 >
-    au < down ; Classical Antiquity Volume 21 ; 21 >
-    au < down ; Classical Antiquity Volume 22 ; 22 >
-    au < down ; Classical Antiquity Volume 23 ; 23 >
-    au < down ; Classical Antiquity Volume 24 ; 24 >
-    au < down ; Classical Antiquity Volume 25 ; 25 >
-    au < down ; Classical Antiquity Volume 26 ; 26 >
-    au < down ; Classical Antiquity Volume 27 ; 27 >
-    au < down ; Classical Antiquity Volume 28 ; 28 >
-    au < down ; Classical Antiquity Volume 29 ; 29 >
+    au < down ; 2001 ; Classical Antiquity Volume 20 ; 20 >
+    au < down ; 2002 ; Classical Antiquity Volume 21 ; 21 >
+    au < down ; 2003 ; Classical Antiquity Volume 22 ; 22 >
+    au < down ; 2004 ; Classical Antiquity Volume 23 ; 23 >
+    au < down ; 2005 ; Classical Antiquity Volume 24 ; 24 >
+    au < down ; 2006 ; Classical Antiquity Volume 25 ; 25 >
+    au < down ; 2007 ; Classical Antiquity Volume 26 ; 26 >
+    au < down ; 2008 ; Classical Antiquity Volume 27 ; 27 >
+    au < down ; 2009 ; Classical Antiquity Volume 28 ; 28 >
+    au < down ; 2010 ; Classical Antiquity Volume 29 ; 29 >
   
   }
 
@@ -106,9 +106,9 @@
 
     param[journal_id] = cond
 
-    au < down ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
-    au < down ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
-    au < down ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
+    au < down ; 2008 ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
+    au < down ; 2009 ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
+    au < down ; 2010 ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
  
   }
 
@@ -123,15 +123,15 @@
 
     param[journal_id] = ctx
 
-    au < down ; Contexts Volume 1 ; 1 >
-    au < down ; Contexts Volume 2 ; 2 >
-    au < down ; Contexts Volume 3 ; 3 >
-    au < down ; Contexts Volume 4 ; 4 >
-    au < down ; Contexts Volume 5 ; 5 >
-    au < down ; Contexts Volume 6 ; 6 >
-    au < down ; Contexts Volume 7 ; 7 >
-    au < down ; Contexts Volume 8 ; 8 >
-    au < down ; Contexts Volume 9 ; 9 >
+    au < down ; 2002 ; Contexts Volume 1 ; 1 >
+    au < down ; 2003 ; Contexts Volume 2 ; 2 >
+    au < down ; 2004 ; Contexts Volume 3 ; 3 >
+    au < down ; 2005 ; Contexts Volume 4 ; 4 >
+    au < down ; 2006 ; Contexts Volume 5 ; 5 >
+    au < down ; 2007 ; Contexts Volume 6 ; 6 >
+    au < down ; 2008 ; Contexts Volume 7 ; 7 >
+    au < down ; 2009 ; Contexts Volume 8 ; 8 >
+    au < down ; 2010 ; Contexts Volume 9 ; 9 >
  
   }
 
@@ -146,16 +146,16 @@
 
     param[journal_id] = fsr
 
-    au < down ; Federal Sentencing Reporter Volume 13 ; 13 >
-    au < down ; Federal Sentencing Reporter Volume 14 ; 14 >
-    au < down ; Federal Sentencing Reporter Volume 15 ; 15 >
-    au < down ; Federal Sentencing Reporter Volume 16 ; 16 >
-    au < down ; Federal Sentencing Reporter Volume 17 ; 17 >
-    au < down ; Federal Sentencing Reporter Volume 18 ; 18 >
-    au < down ; Federal Sentencing Reporter Volume 19 ; 19 >
-    au < down ; Federal Sentencing Reporter Volume 20 ; 20 >
-    au < down ; Federal Sentencing Reporter Volume 21 ; 21 >
-    au < down ; Federal Sentencing Reporter Volume 22 ; 22 >
+    au < down ; 2000-2001 ; Federal Sentencing Reporter Volume 13 ; 13 >
+    au < down ; 2001-2002 ; Federal Sentencing Reporter Volume 14 ; 14 >
+    au < down ; 2002-2003 ; Federal Sentencing Reporter Volume 15 ; 15 >
+    au < down ; 2003-2004 ; Federal Sentencing Reporter Volume 16 ; 16 >
+    au < down ; 2004-2005 ; Federal Sentencing Reporter Volume 17 ; 17 >
+    au < down ; 2005-2006 ; Federal Sentencing Reporter Volume 18 ; 18 >
+    au < down ; 2006-2007 ; Federal Sentencing Reporter Volume 19 ; 19 >
+    au < down ; 2007-2008 ; Federal Sentencing Reporter Volume 20 ; 20 >
+    au < down ; 2008-2009 ; Federal Sentencing Reporter Volume 21 ; 21 >
+    au < down ; 2009-2010 ; Federal Sentencing Reporter Volume 22 ; 22 >
  
   }
 
@@ -170,15 +170,15 @@
 
     param[journal_id] = fq
 
-    au < down ; Film Quarterly Volume 55 ; 55 >
-    au < down ; Film Quarterly Volume 56 ; 56 >
-    au < down ; Film Quarterly Volume 57 ; 57 >
-    au < down ; Film Quarterly Volume 58 ; 58 >
-    au < down ; Film Quarterly Volume 59 ; 59 >
-    au < down ; Film Quarterly Volume 60 ; 60 >
-    au < down ; Film Quarterly Volume 61 ; 61 >
-    au < down ; Film Quarterly Volume 62 ; 62 >
-    au < down ; Film Quarterly Volume 63 ; 63 >
+    au < down ; 2001-2002 ; Film Quarterly Volume 55 ; 55 >
+    au < down ; 2002-2003 ; Film Quarterly Volume 56 ; 56 >
+    au < down ; 2003-2004 ; Film Quarterly Volume 57 ; 57 >
+    au < down ; 2004-2005 ; Film Quarterly Volume 58 ; 58 >
+    au < down ; 2005-2006 ; Film Quarterly Volume 59 ; 59 >
+    au < down ; 2006-2007 ; Film Quarterly Volume 60 ; 60 >
+    au < down ; 2007-2008 ; Film Quarterly Volume 61 ; 61 >
+    au < down ; 2008-2009 ; Film Quarterly Volume 62 ; 62 >
+    au < down ; 2009-2010 ; Film Quarterly Volume 63 ; 63 >
  
   }
 
@@ -193,16 +193,16 @@
 
     param[journal_id] = gfc
 
-    au < down ; Gastronomica Volume 1 ; 1 >
-    au < down ; Gastronomica Volume 2 ; 2 >
-    au < down ; Gastronomica Volume 3 ; 3 >
-    au < down ; Gastronomica Volume 4 ; 4 >
-    au < down ; Gastronomica Volume 5 ; 5 >
-    au < down ; Gastronomica Volume 6 ; 6 >
-    au < down ; Gastronomica Volume 7 ; 7 >
-    au < down ; Gastronomica Volume 8 ; 8 >
-    au < down ; Gastronomica Volume 9 ; 9 >
-    au < down ; Gastronomica Volume 10 ; 10 >
+    au < down ; 2001 ; Gastronomica Volume 1 ; 1 >
+    au < down ; 2002 ; Gastronomica Volume 2 ; 2 >
+    au < down ; 2003 ; Gastronomica Volume 3 ; 3 >
+    au < down ; 2004 ; Gastronomica Volume 4 ; 4 >
+    au < down ; 2005 ; Gastronomica Volume 5 ; 5 >
+    au < down ; 2006 ; Gastronomica Volume 6 ; 6 >
+    au < down ; 2007 ; Gastronomica Volume 7 ; 7 >
+    au < down ; 2008 ; Gastronomica Volume 8 ; 8 >
+    au < down ; 2009 ; Gastronomica Volume 9 ; 9 >
+    au < down ; 2010 ; Gastronomica Volume 10 ; 10 >
  
   }
 
@@ -217,16 +217,16 @@
 
     param[journal_id] = hsns
 
-    au < down ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
-    au < down ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
-    au < down ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
-    au < down ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
-    au < down ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
-    au < down ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
-    au < down ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
-    au < down ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
-    au < down ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
-    au < down ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
+    au < down ; 2001 ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
+    au < down ; 2002 ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
+    au < down ; 2003 ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
+    au < down ; 2004 ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
+    au < down ; 2005 ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
+    au < down ; 2006 ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+    au < down ; 2007 ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
+    au < down ; 2008 ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
+    au < down ; 2009 ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
+    au < down ; 2010 ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
  
   }
 
@@ -241,13 +241,13 @@
 
     param[journal_id] = hlq
 
-    au < down ; Huntington Library Quarterly Volume 67 ; 67 >
-    au < down ; Huntington Library Quarterly Volume 68 ; 68 >
-    au < down ; Huntington Library Quarterly Volume 69 ; 69 >
-    au < down ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < down ; Huntington Library Quarterly Volume 71 ; 71 >
-    au < down ; Huntington Library Quarterly Volume 72 ; 72 >
-    au < down ; Huntington Library Quarterly Volume 73 ; 73 >
+    au < down ; 2004 ; Huntington Library Quarterly Volume 67 ; 67 >
+    au < down ; 2005 ; Huntington Library Quarterly Volume 68 ; 68 >
+    au < down ; 2006 ; Huntington Library Quarterly Volume 69 ; 69 >
+    au < down ; 2007 ; Huntington Library Quarterly Volume 70 ; 70 >
+    au < down ; 2008 ; Huntington Library Quarterly Volume 71 ; 71 >
+    au < down ; 2009 ; Huntington Library Quarterly Volume 72 ; 72 >
+    au < down ; 2010 ; Huntington Library Quarterly Volume 73 ; 73 >
 
   }
 
@@ -262,11 +262,11 @@
 
     param[journal_id] = jer
 
-    au < down ; Journal of Empirical Research on Human Research Ethics Volume 1 ; 1 >
-    au < down ; Journal of Empirical Research on Human Research Ethics Volume 2 ; 2 >
-    au < down ; Journal of Empirical Research on Human Research Ethics Volume 3 ; 3 >
-    au < down ; Journal of Empirical Research on Human Research Ethics Volume 4 ; 4 >
-    au < down ; Journal of Empirical Research on Human Research Ethics Volume 5 ; 5 >
+    au < down ; 2006 ; Journal of Empirical Research on Human Research Ethics Volume 1 ; 1 >
+    au < down ; 2007 ; Journal of Empirical Research on Human Research Ethics Volume 2 ; 2 >
+    au < down ; 2008 ; Journal of Empirical Research on Human Research Ethics Volume 3 ; 3 >
+    au < down ; 2009 ; Journal of Empirical Research on Human Research Ethics Volume 4 ; 4 >
+    au < down ; 2010 ; Journal of Empirical Research on Human Research Ethics Volume 5 ; 5 >
 
   }
 
@@ -282,15 +282,15 @@
 
     param[journal_id] = jm
 
-    au < down ; Journal of Musicology Volume 19 ; 19 >
-    au < down ; Journal of Musicology Volume 20 ; 20 >
-    au < down ; Journal of Musicology Volume 21 ; 21 >
-    au < down ; Journal of Musicology Volume 22 ; 22 >
-    au < down ; Journal of Musicology Volume 23 ; 23 >
-    au < down ; Journal of Musicology Volume 24 ; 24 >
-    au < down ; Journal of Musicology Volume 25 ; 25 >
-    au < down ; Journal of Musicology Volume 26 ; 26 >
-    au < down ; Journal of Musicology Volume 27 ; 27 >
+    au < down ; 2002 ; Journal of Musicology Volume 19 ; 19 >
+    au < down ; 2003 ; Journal of Musicology Volume 20 ; 20 >
+    au < down ; 2004 ; Journal of Musicology Volume 21 ; 21 >
+    au < down ; 2005 ; Journal of Musicology Volume 22 ; 22 >
+    au < down ; 2006 ; Journal of Musicology Volume 23 ; 23 >
+    au < down ; 2007 ; Journal of Musicology Volume 24 ; 24 >
+    au < down ; 2008 ; Journal of Musicology Volume 25 ; 25 >
+    au < down ; 2009 ; Journal of Musicology Volume 26 ; 26 >
+    au < down ; 2010 ; Journal of Musicology Volume 27 ; 27 >
  
   }
 
@@ -305,15 +305,15 @@
 
     param[journal_id] = jps
 
-    au < down ; Journal of Palestine Studies Volume 31 ; 31 >
-    au < down ; Journal of Palestine Studies Volume 32 ; 32 >
-    au < down ; Journal of Palestine Studies Volume 33 ; 33 >
-    au < down ; Journal of Palestine Studies Volume 34 ; 34 >
-    au < down ; Journal of Palestine Studies Volume 35 ; 35 >
-    au < down ; Journal of Palestine Studies Volume 36 ; 36 >
-    au < down ; Journal of Palestine Studies Volume 37 ; 37 >
-    au < down ; Journal of Palestine Studies Volume 38 ; 38 >
-    au < down ; Journal of Palestine Studies Volume 39 ; 39 >
+    au < down ; 2001-2002 ; Journal of Palestine Studies Volume 31 ; 31 >
+    au < down ; 2002-2003 ; Journal of Palestine Studies Volume 32 ; 32 >
+    au < down ; 2003-2004 ; Journal of Palestine Studies Volume 33 ; 33 >
+    au < down ; 2004-2005 ; Journal of Palestine Studies Volume 34 ; 34 >
+    au < down ; 2005-2006 ; Journal of Palestine Studies Volume 35 ; 35 >
+    au < down ; 2006-2007 ; Journal of Palestine Studies Volume 36 ; 36 >
+    au < down ; 2007-2008 ; Journal of Palestine Studies Volume 37 ; 37 >
+    au < down ; 2008-2009 ; Journal of Palestine Studies Volume 38 ; 38 >
+    au < down ; 2009-2010 ; Journal of Palestine Studies Volume 39 ; 39 >
  
   }
 
@@ -330,16 +330,16 @@
 
     param[journal_id] = jams
 
-    au < down ; Journal of the American Musicological Society Volume 54 ; 54 >
-    au < down ; Journal of the American Musicological Society Volume 55 ; 55 >
-    au < down ; Journal of the American Musicological Society Volume 56 ; 56 >
-    au < down ; Journal of the American Musicological Society Volume 57 ; 57 >
-    au < down ; Journal of the American Musicological Society Volume 58 ; 58 >
-    au < down ; Journal of the American Musicological Society Volume 59 ; 59 >
-    au < down ; Journal of the American Musicological Society Volume 60 ; 60 >
-    au < down ; Journal of the American Musicological Society Volume 61 ; 61 >
-    au < down ; Journal of the American Musicological Society Volume 62 ; 62 >
-    au < down ; Journal of the American Musicological Society Volume 63 ; 63 >
+    au < down ; 2001 ; Journal of the American Musicological Society Volume 54 ; 54 >
+    au < down ; 2002 ; Journal of the American Musicological Society Volume 55 ; 55 >
+    au < down ; 2003 ; Journal of the American Musicological Society Volume 56 ; 56 >
+    au < down ; 2004 ; Journal of the American Musicological Society Volume 57 ; 57 >
+    au < down ; 2005 ; Journal of the American Musicological Society Volume 58 ; 58 >
+    au < down ; 2006 ; Journal of the American Musicological Society Volume 59 ; 59 >
+    au < down ; 2007 ; Journal of the American Musicological Society Volume 60 ; 60 >
+    au < down ; 2008 ; Journal of the American Musicological Society Volume 61 ; 61 >
+    au < down ; 2009 ; Journal of the American Musicological Society Volume 62 ; 62 >
+    au < down ; 2010 ; Journal of the American Musicological Society Volume 63 ; 63 >
  
   }
 
@@ -355,11 +355,11 @@
 
     param[journal_id] = vs
 
-    au < down ; Journal of Vietnamese Studies Volume 1 ; 1 >
-    au < down ; Journal of Vietnamese Studies Volume 2 ; 2 >
-    au < down ; Journal of Vietnamese Studies Volume 3 ; 3 >
-    au < down ; Journal of Vietnamese Studies Volume 4 ; 4 >
-    au < down ; Journal of Vietnamese Studies Volume 5 ; 5 >
+    au < down ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
+    au < down ; 2007 ; Journal of Vietnamese Studies Volume 2 ; 2 >
+    au < down ; 2008 ; Journal of Vietnamese Studies Volume 3 ; 3 >
+    au < down ; 2009 ; Journal of Vietnamese Studies Volume 4 ; 4 >
+    au < down ; 2010 ; Journal of Vietnamese Studies Volume 5 ; 5 >
  
   }
 
@@ -372,10 +372,10 @@
 
     param[journal_id] = jung
 
-    au < down ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
-    au < down ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
-    au < down ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
-    au < down ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
+    au < down ; 2007 ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < down ; 2008 ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
+    au < down ; 2009 ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
+    au < down ; 2010 ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
  
   }
 
@@ -391,16 +391,16 @@
 
     param[journal_id] = lal
 
-    au < down ; Law and Literature Volume 13 ; 13 >
-    au < down ; Law and Literature Volume 14 ; 14 >
-    au < down ; Law and Literature Volume 15 ; 15 >
-    au < down ; Law and Literature Volume 16 ; 16 >
-    au < down ; Law and Literature Volume 17 ; 17 >
-    au < down ; Law and Literature Volume 18 ; 18 >
-    au < down ; Law and Literature Volume 19 ; 19 >
-    au < down ; Law and Literature Volume 20 ; 20 >
-    au < down ; Law and Literature Volume 21 ; 21 >
-    au < down ; Law and Literature Volume 22 ; 22 >
+    au < down ; 2001 ; Law and Literature Volume 13 ; 13 >
+    au < down ; 2002 ; Law and Literature Volume 14 ; 14 >
+    au < down ; 2003 ; Law and Literature Volume 15 ; 15 >
+    au < down ; 2004 ; Law and Literature Volume 16 ; 16 >
+    au < down ; 2005 ; Law and Literature Volume 17 ; 17 >
+    au < down ; 2006 ; Law and Literature Volume 18 ; 18 >
+    au < down ; 2007 ; Law and Literature Volume 19 ; 19 >
+    au < down ; 2008 ; Law and Literature Volume 20 ; 20 >
+    au < down ; 2009 ; Law and Literature Volume 21 ; 21 >
+    au < down ; 2010 ; Law and Literature Volume 22 ; 22 >
  
   }
 
@@ -415,16 +415,16 @@
 
     param[journal_id] = msem
 
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 17 ; 17 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 18 ; 18 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 19 ; 19 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 20 ; 20 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 21 ; 21 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 24 ; 24 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 25 ; 25 >
-    au < down ; Mexican Studies/Estudios Mexicanos Volume 24 ; 26 >
+    au < down ; 2001 ; Mexican Studies/Estudios Mexicanos Volume 17 ; 17 >
+    au < down ; 2002 ; Mexican Studies/Estudios Mexicanos Volume 18 ; 18 >
+    au < down ; 2003 ; Mexican Studies/Estudios Mexicanos Volume 19 ; 19 >
+    au < down ; 2004 ; Mexican Studies/Estudios Mexicanos Volume 20 ; 20 >
+    au < down ; 2005 ; Mexican Studies/Estudios Mexicanos Volume 21 ; 21 >
+    au < down ; 2006 ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
+    au < down ; 2007 ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
+    au < down ; 2008 ; Mexican Studies/Estudios Mexicanos Volume 24 ; 24 >
+    au < down ; 2009 ; Mexican Studies/Estudios Mexicanos Volume 25 ; 25 >
+    au < down ; 2010 ; Mexican Studies/Estudios Mexicanos Volume 26 ; 26 >
 
   }
 
@@ -439,16 +439,16 @@
 
     param[journal_id] = mp
 
-    au < down ; Music Perception Volume 18 ; 18 >
-    au < down ; Music Perception Volume 19 ; 19 >
-    au < down ; Music Perception Volume 20 ; 20 >
-    au < down ; Music Perception Volume 21 ; 21 >
-    au < down ; Music Perception Volume 22 ; 22 >
-    au < down ; Music Perception Volume 23 ; 23 >
-    au < down ; Music Perception Volume 24 ; 24 >
-    au < down ; Music Perception Volume 25 ; 25 >
-    au < down ; Music Perception Volume 26 ; 26 >
-    au < down ; Music Perception Volume 27 ; 27 >
+    au < down ; 2000-2001 ; Music Perception Volume 18 ; 18 >
+    au < down ; 2001-2002 ; Music Perception Volume 19 ; 19 >
+    au < down ; 2002-2003 ; Music Perception Volume 20 ; 20 >
+    au < down ; 2003-2004 ; Music Perception Volume 21 ; 21 >
+    au < down ; 2004-2005 ; Music Perception Volume 22 ; 22 >
+    au < down ; 2005-2006 ; Music Perception Volume 23 ; 23 >
+    au < down ; 2006-2007 ; Music Perception Volume 24 ; 24 >
+    au < down ; 2007-2008 ; Music Perception Volume 25 ; 25 >
+    au < down ; 2008-2009 ; Music Perception Volume 26 ; 26 >
+    au < down ; 2009-2010 ; Music Perception Volume 27 ; 27 >
  
   }
 
@@ -463,16 +463,16 @@
 
     param[journal_id] = mts
 
-    au < down ; Music Theory Spectrum Volume 23 ; 23 >
-    au < down ; Music Theory Spectrum Volume 24 ; 24 >
-    au < down ; Music Theory Spectrum Volume 25 ; 25 >
-    au < down ; Music Theory Spectrum Volume 26 ; 26 >
-    au < down ; Music Theory Spectrum Volume 27 ; 27 >
-    au < down ; Music Theory Spectrum Volume 28 ; 28 >
-    au < down ; Music Theory Spectrum Volume 29 ; 29 >
-    au < down ; Music Theory Spectrum Volume 30 ; 30 >
-    au < down ; Music Theory Spectrum Volume 31 ; 31 >
-    au < down ; Music Theory Spectrum Volume 32 ; 32 >
+    au < down ; 2001 ; Music Theory Spectrum Volume 23 ; 23 >
+    au < down ; 2002 ; Music Theory Spectrum Volume 24 ; 24 >
+    au < down ; 2003 ; Music Theory Spectrum Volume 25 ; 25 >
+    au < down ; 2004 ; Music Theory Spectrum Volume 26 ; 26 >
+    au < down ; 2005 ; Music Theory Spectrum Volume 27 ; 27 >
+    au < down ; 2006 ; Music Theory Spectrum Volume 28 ; 28 >
+    au < down ; 2007 ; Music Theory Spectrum Volume 29 ; 29 >
+    au < down ; 2008 ; Music Theory Spectrum Volume 30 ; 30 >
+    au < down ; 2009 ; Music Theory Spectrum Volume 31 ; 31 >
+    au < down ; 2010 ; Music Theory Spectrum Volume 32 ; 32 >
  
   }
 
@@ -487,19 +487,19 @@
 
     param[journal_id] = nclr
 
-    au < down ; New Criminal Law Review Volume 1 ; 1 >
-    au < down ; New Criminal Law Review Volume 2 ; 2 >
-    au < down ; New Criminal Law Review Volume 3 ; 3 >
-    au < down ; New Criminal Law Review Volume 4 ; 4 >
-    au < down ; New Criminal Law Review Volume 5 ; 5 >
-    au < down ; New Criminal Law Review Volume 6 ; 6 >
-    au < down ; New Criminal Law Review Volume 7 ; 7 >
-    au < down ; New Criminal Law Review Volume 8 ; 8 >
-    au < down ; New Criminal Law Review Volume 9 ; 9 >
-    au < down ; New Criminal Law Review Volume 10 ; 10 >
-    au < down ; New Criminal Law Review Volume 11 ; 11 >
-    au < down ; New Criminal Law Review Volume 12 ; 12 >
-    au < down ; New Criminal Law Review Volume 13 ; 13 >
+    au < down ; 1998 ; New Criminal Law Review Volume 1 ; 1 >
+    au < down ; 1999 ; New Criminal Law Review Volume 2 ; 2 >
+    au < down ; 2000 ; New Criminal Law Review Volume 3 ; 3 >
+    au < down ; 2001 ; New Criminal Law Review Volume 4 ; 4 >
+    au < down ; 2002 ; New Criminal Law Review Volume 5 ; 5 >
+    au < down ; 2003 ; New Criminal Law Review Volume 6 ; 6 >
+    au < down ; 2004 ; New Criminal Law Review Volume 7 ; 7 >
+    au < down ; 2005 ; New Criminal Law Review Volume 8 ; 8 >
+    au < down ; 2006 ; New Criminal Law Review Volume 9 ; 9 >
+    au < down ; 2007 ; New Criminal Law Review Volume 10 ; 10 >
+    au < down ; 2008 ; New Criminal Law Review Volume 11 ; 11 >
+    au < down ; 2009 ; New Criminal Law Review Volume 12 ; 12 >
+    au < down ; 2010 ; New Criminal Law Review Volume 13 ; 13 >
  
   }
 
@@ -514,16 +514,16 @@
 
     param[journal_id] = ncl
 
-    au < down ; Nineteenth-Century Literature Volume 56 ; 56 >
-    au < down ; Nineteenth-Century Literature Volume 57 ; 57 >
-    au < down ; Nineteenth-Century Literature Volume 58 ; 58 >
-    au < down ; Nineteenth-Century Literature Volume 59 ; 59 >
-    au < down ; Nineteenth-Century Literature Volume 60 ; 60 >
-    au < down ; Nineteenth-Century Literature Volume 61 ; 61 >
-    au < down ; Nineteenth-Century Literature Volume 62 ; 62 >
-    au < down ; Nineteenth-Century Literature Volume 63 ; 63 >
-    au < down ; Nineteenth-Century Literature Volume 64 ; 64 >
-    au < down ; Nineteenth-Century Literature Volume 65 ; 65 >
+    au < down ; 2001-2002 ; Nineteenth-Century Literature Volume 56 ; 56 >
+    au < down ; 2002-2003 ; Nineteenth-Century Literature Volume 57 ; 57 >
+    au < down ; 2003-2004 ; Nineteenth-Century Literature Volume 58 ; 58 >
+    au < down ; 2004-2005 ; Nineteenth-Century Literature Volume 59 ; 59 >
+    au < down ; 2005-2006 ; Nineteenth-Century Literature Volume 60 ; 60 >
+    au < down ; 2006-2007 ; Nineteenth-Century Literature Volume 61 ; 61 >
+    au < down ; 2007-2008 ; Nineteenth-Century Literature Volume 62 ; 62 >
+    au < down ; 2008-2009 ; Nineteenth-Century Literature Volume 63 ; 63 >
+    au < down ; 2009-2010 ; Nineteenth-Century Literature Volume 64 ; 64 >
+    au < down ; 2010-2011 ; Nineteenth-Century Literature Volume 65 ; 65 >
  
   }
 
@@ -538,20 +538,20 @@
 
     param[journal_id] = nr
 
-    au < down ; Nova Religioi Volume 1 ; 1 >
-    au < down ; Nova Religioi Volume 2 ; 2 >
-    au < down ; Nova Religioi Volume 3 ; 3 >
-    au < down ; Nova Religioi Volume 4 ; 4 >
-    au < down ; Nova Religioi Volume 5 ; 5 >
-    au < down ; Nova Religioi Volume 6 ; 6 >
-    au < down ; Nova Religioi Volume 7 ; 7 >
-    au < down ; Nova Religioi Volume 8 ; 8 >
-    au < down ; Nova Religioi Volume 9 ; 9 >
-    au < down ; Nova Religioi Volume 10 ; 10 >
-    au < down ; Nova Religioi Volume 11 ; 11 >
-    au < down ; Nova Religioi Volume 12 ; 12 >
-    au < down ; Nova Religioi Volume 13 ; 13 >
-    au < down ; Nova Religioi Volume 14 ; 14 >
+    au < down ; 1997-1998 ; Nova Religioi Volume 1 ; 1 >
+    au < down ; 1998-1999 ; Nova Religioi Volume 2 ; 2 >
+    au < down ; 1999-2000 ; Nova Religioi Volume 3 ; 3 >
+    au < down ; 2000-2001 ; Nova Religioi Volume 4 ; 4 >
+    au < down ; 2001-2002 ; Nova Religioi Volume 5 ; 5 >
+    au < down ; 2002-2003 ; Nova Religioi Volume 6 ; 6 >
+    au < down ; 2003-2004 ; Nova Religioi Volume 7 ; 7 >
+    au < down ; 2004-2005 ; Nova Religioi Volume 8 ; 8 >
+    au < down ; 2005-2006 ; Nova Religioi Volume 9 ; 9 >
+    au < down ; 2006-2007 ; Nova Religioi Volume 10 ; 10 >
+    au < down ; 2007-2008 ; Nova Religioi Volume 11 ; 11 >
+    au < down ; 2008-2009 ; Nova Religioi Volume 12 ; 12 >
+    au < down ; 2009-2010 ; Nova Religioi Volume 13 ; 13 >
+    au < down ; 2010-2011 ; Nova Religioi Volume 14 ; 14 >
 
   }
 
@@ -567,13 +567,13 @@
     param[journal_id] = ohr
     comment[down] = Moved to Oxford University Press
 
-    au < down ; Oral History Review Volume 28 ; 28 >
-    au < down ; Oral History Review Volume 29 ; 29 >
-    au < down ; Oral History Review Volume 30 ; 30 >
-    au < down ; Oral History Review Volume 31 ; 31 >
-    au < down ; Oral History Review Volume 32 ; 32 >
-    au < down ; Oral History Review Volume 33 ; 33 >
-    au < down ; Oral History Review Volume 34 ; 34 >
+    au < down ; 2001 ; Oral History Review Volume 28 ; 28 >
+    au < down ; 2002 ; Oral History Review Volume 29 ; 29 >
+    au < down ; 2003 ; Oral History Review Volume 30 ; 30 >
+    au < down ; 2004 ; Oral History Review Volume 31 ; 31 >
+    au < down ; 2005 ; Oral History Review Volume 32 ; 32 >
+    au < down ; 2006 ; Oral History Review Volume 33 ; 33 >
+    au < down ; 2007 ; Oral History Review Volume 34 ; 34 >
  
   }
 
@@ -588,10 +588,10 @@
 
     param[journal_id] = om
 
-    au < down ; Ornithological Monographs Volume 65 ; 65 >
-    au < down ; Ornithological Monographs Volume 66 ; 66 >
-    au < down ; Ornithological Monographs Volume 67 ; 67 >
-    au < down ; Ornithological Monographs Volume 68 ; 68 >
+    au < down ; 2008 ; Ornithological Monographs Volume 65 ; 65 >
+    au < down ; 2009 ; Ornithological Monographs Volume 66 ; 66 >
+    au < down ; 2010 ; Ornithological Monographs Volume 67 ; 67 >
+    au < down ; 2010 ; Ornithological Monographs Volume 68 ; 68 >
  
   }
 
@@ -606,16 +606,16 @@
 
     param[journal_id] = phr
 
-    au < down ; Pacific Historical Review Volume 70 ; 70 >
-    au < down ; Pacific Historical Review Volume 71 ; 71 >
-    au < down ; Pacific Historical Review Volume 72 ; 72 >
-    au < down ; Pacific Historical Review Volume 73 ; 73 >
-    au < down ; Pacific Historical Review Volume 74 ; 74 >
-    au < down ; Pacific Historical Review Volume 75 ; 75 >
-    au < down ; Pacific Historical Review Volume 76 ; 76 >
-    au < down ; Pacific Historical Review Volume 77 ; 77 >
-    au < down ; Pacific Historical Review Volume 78 ; 78 >
-    au < down ; Pacific Historical Review Volume 79 ; 79 >
+    au < down ; 2001 ; Pacific Historical Review Volume 70 ; 70 >
+    au < down ; 2002 ; Pacific Historical Review Volume 71 ; 71 >
+    au < down ; 2003; Pacific Historical Review Volume 72 ; 72 >
+    au < down ; 2004 ; Pacific Historical Review Volume 73 ; 73 >
+    au < down ; 2005 ; Pacific Historical Review Volume 74 ; 74 >
+    au < down ; 2006 ; Pacific Historical Review Volume 75 ; 75 >
+    au < down ; 2007 ; Pacific Historical Review Volume 76 ; 76 >
+    au < down ; 2008 ; Pacific Historical Review Volume 77 ; 77 >
+    au < down ; 2009 ; Pacific Historical Review Volume 78 ; 78 >
+    au < down ; 2010 ; Pacific Historical Review Volume 79 ; 79 >
  
   }
 
@@ -630,16 +630,16 @@
 
     param[journal_id] = tph
 
-    au < down ; The Public Historian Volume 23 ; 23 >
-    au < down ; The Public Historian Volume 24 ; 24 >
-    au < down ; The Public Historian Volume 25 ; 25 >
-    au < down ; The Public Historian Volume 26 ; 26 >
-    au < down ; The Public Historian Volume 27 ; 27 >
-    au < down ; The Public Historian Volume 28 ; 28 >
-    au < down ; The Public Historian Volume 29 ; 29 >
-    au < down ; The Public Historian Volume 30 ; 30 >
-    au < down ; The Public Historian Volume 31 ; 31 >
-    au < down ; The Public Historian Volume 32 ; 32 >
+    au < down ; 2001 ; The Public Historian Volume 23 ; 23 >
+    au < down ; 2002 ; The Public Historian Volume 24 ; 24 >
+    au < down ; 2003 ; The Public Historian Volume 25 ; 25 >
+    au < down ; 2004 ; The Public Historian Volume 26 ; 26 >
+    au < down ; 2005 ; The Public Historian Volume 27 ; 27 >
+    au < down ; 2006 ; The Public Historian Volume 28 ; 28 >
+    au < down ; 2007 ; The Public Historian Volume 29 ; 29 >
+    au < down ; 2008 ; The Public Historian Volume 30 ; 30 >
+    au < down ; 2009 ; The Public Historian Volume 31 ; 31 >
+    au < down ; 2010 ; The Public Historian Volume 32 ; 32 >
  
   }
 
@@ -654,16 +654,16 @@
 
     param[journal_id] = rac
 
-    au < down ; Religion and American Culture Volume 11 ; 11 >
-    au < down ; Religion and American Culture Volume 12 ; 12 >
-    au < down ; Religion and American Culture Volume 13 ; 13 >
-    au < down ; Religion and American Culture Volume 14 ; 14 >
-    au < down ; Religion and American Culture Volume 15 ; 15 >
-    au < down ; Religion and American Culture Volume 16 ; 16 >
-    au < down ; Religion and American Culture Volume 17 ; 17 >
-    au < down ; Religion and American Culture Volume 18 ; 18 >
-    au < down ; Religion and American Culture Volume 19 ; 19 >
-    au < down ; Religion and American Culture Volume 20 ; 20 >
+    au < down ; 2001 ; Religion and American Culture Volume 11 ; 11 >
+    au < down ; 2002 ; Religion and American Culture Volume 12 ; 12 >
+    au < down ; 2003 ; Religion and American Culture Volume 13 ; 13 >
+    au < down ; 2004 ; Religion and American Culture Volume 14 ; 14 >
+    au < down ; 2005 ; Religion and American Culture Volume 15 ; 15 >
+    au < down ; 2006 ; Religion and American Culture Volume 16 ; 16 >
+    au < down ; 2007 ; Religion and American Culture Volume 17 ; 17 >
+    au < down ; 2008 ; Religion and American Culture Volume 18 ; 18 >
+    au < down ; 2009 ; Religion and American Culture Volume 19 ; 19 >
+    au < down ; 2010 ; Religion and American Culture Volume 20 ; 20 >
  
   }
 
@@ -678,45 +678,45 @@
 
     param[journal_id] = rep
 
-    au < down ; Representations Volume 73 ; 73 >
-    au < down ; Representations Volume 74 ; 74 >
-    au < down ; Representations Volume 75 ; 75 >
-    au < down ; Representations Volume 76 ; 76 >
-    au < down ; Representations Volume 77 ; 77 >
-    au < down ; Representations Volume 78 ; 78 >
-    au < down ; Representations Volume 79 ; 79 >
-    au < down ; Representations Volume 80 ; 80 >
-    au < down ; Representations Volume 81 ; 81 >
-    au < down ; Representations Volume 82 ; 82 >
-    au < down ; Representations Volume 83 ; 83 >
-    au < down ; Representations Volume 84 ; 84 >
-    au < down ; Representations Volume 85 ; 85 >
-    au < down ; Representations Volume 86 ; 86 >
-    au < down ; Representations Volume 87 ; 87 >
-    au < down ; Representations Volume 88 ; 88 >
-    au < down ; Representations Volume 89 ; 89 >
-    au < down ; Representations Volume 90 ; 90 >
-    au < down ; Representations Volume 91 ; 91 >
-    au < down ; Representations Volume 92 ; 92 >
-    au < down ; Representations Volume 93 ; 93 >
-    au < down ; Representations Volume 94 ; 94 >
-    au < down ; Representations Volume 95 ; 95 >
-    au < down ; Representations Volume 96 ; 96 >
-    au < down ; Representations Volume 97 ; 97 >
-    au < down ; Representations Volume 98 ; 98 >
-    au < down ; Representations Volume 99 ; 99 >
-    au < down ; Representations Volume 100 ; 100 >
-    au < down ; Representations Volume 101 ; 101 >
-    au < down ; Representations Volume 102 ; 102 >
-    au < down ; Representations Volume 103 ; 103 > 
-    au < down ; Representations Volume 104 ; 104 > 
-    au < down ; Representations Volume 105 ; 105 > 
-    au < down ; Representations Volume 106 ; 106 > 
-    au < down ; Representations Volume 107 ; 107 > 
-    au < down ; Representations Volume 108 ; 108 > 
-    au < down ; Representations Volume 109 ; 109 > 
-    au < down ; Representations Volume 110 ; 110 > 
-    au < down ; Representations Volume 111 ; 111 > 
+    au < down ; 2001 ; Representations Volume 73 ; 73 >
+    au < down ; 2001 ; Representations Volume 74 ; 74 >
+    au < down ; 2001 ; Representations Volume 75 ; 75 >
+    au < down ; 2001 ; Representations Volume 76 ; 76 >
+    au < down ; 2002 ; Representations Volume 77 ; 77 >
+    au < down ; 2002 ; Representations Volume 78 ; 78 >
+    au < down ; 2002 ; Representations Volume 79 ; 79 >
+    au < down ; 2002 ; Representations Volume 80 ; 80 >
+    au < down ; 2003 ; Representations Volume 81 ; 81 >
+    au < down ; 2003 ; Representations Volume 82 ; 82 >
+    au < down ; 2003 ; Representations Volume 83 ; 83 >
+    au < down ; 2003 ; Representations Volume 84 ; 84 >
+    au < down ; 2004 ; Representations Volume 85 ; 85 >
+    au < down ; 2004 ; Representations Volume 86 ; 86 >
+    au < down ; 2004 ; Representations Volume 87 ; 87 >
+    au < down ; 2004 ; Representations Volume 88 ; 88 >
+    au < down ; 2005 ; Representations Volume 89 ; 89 >
+    au < down ; 2005 ; Representations Volume 90 ; 90 >
+    au < down ; 2005 ; Representations Volume 91 ; 91 >
+    au < down ; 2005 ; Representations Volume 92 ; 92 >
+    au < down ; 2006 ; Representations Volume 93 ; 93 >
+    au < down ; 2006 ; Representations Volume 94 ; 94 >
+    au < down ; 2006 ; Representations Volume 95 ; 95 >
+    au < down ; 2006 ; Representations Volume 96 ; 96 >
+    au < down ; 2007 ; Representations Volume 97 ; 97 >
+    au < down ; 2007 ; Representations Volume 98 ; 98 >
+    au < down ; 2007 ; Representations Volume 99 ; 99 >
+    au < down ; 2007 ; Representations Volume 100 ; 100 >
+    au < down ; 2008 ; Representations Volume 101 ; 101 >
+    au < down ; 2008 ; Representations Volume 102 ; 102 >
+    au < down ; 2008 ; Representations Volume 103 ; 103 > 
+    au < down ; 2008 ; Representations Volume 104 ; 104 > 
+    au < down ; 2009 ; Representations Volume 105 ; 105 > 
+    au < down ; 2009 ; Representations Volume 106 ; 106 > 
+    au < down ; 2009 ; Representations Volume 107 ; 107 > 
+    au < down ; 2009 ; Representations Volume 108 ; 108 > 
+    au < down ; 2010 ; Representations Volume 109 ; 109 > 
+    au < down ; 2010 ; Representations Volume 110 ; 110 > 
+    au < down ; 2010 ; Representations Volume 111 ; 111 > 
  
   }
 
@@ -731,34 +731,34 @@
 
     param[journal_id] = rh
 
-    au < down ; Rhetorica Volume 1 ; 1 >
-    au < down ; Rhetorica Volume 2 ; 2 >
-    au < down ; Rhetorica Volume 3 ; 3 >
-    au < down ; Rhetorica Volume 4 ; 4 >
-    au < down ; Rhetorica Volume 5 ; 5 >
-    au < down ; Rhetorica Volume 6 ; 6 >
-    au < down ; Rhetorica Volume 7 ; 7 >
-    au < down ; Rhetorica Volume 8 ; 8 >
-    au < down ; Rhetorica Volume 9 ; 9 >
-    au < down ; Rhetorica Volume 10 ; 10 >
-    au < down ; Rhetorica Volume 11 ; 11 >
-    au < down ; Rhetorica Volume 12 ; 12 >
-    au < down ; Rhetorica Volume 13 ; 13 >
-    au < down ; Rhetorica Volume 14 ; 14 >
-    au < down ; Rhetorica Volume 15 ; 15 >
-    au < down ; Rhetorica Volume 16 ; 16 >
-    au < down ; Rhetorica Volume 17 ; 17 >
-    au < down ; Rhetorica Volume 18 ; 18 >
-    au < down ; Rhetorica Volume 19 ; 19 >
-    au < down ; Rhetorica Volume 20 ; 20 >
-    au < down ; Rhetorica Volume 21 ; 21 >
-    au < down ; Rhetorica Volume 22 ; 22 >
-    au < down ; Rhetorica Volume 23 ; 23 >
-    au < down ; Rhetorica Volume 24 ; 24 >
-    au < down ; Rhetorica Volume 25 ; 25 >
-    au < down ; Rhetorica Volume 26 ; 26 >
-    au < down ; Rhetorica Volume 27 ; 27 >
-    au < down ; Rhetorica Volume 28 ; 28 >
+    au < down ; 1983 ; Rhetorica Volume 1 ; 1 >
+    au < down ; 1984 ; Rhetorica Volume 2 ; 2 >
+    au < down ; 1985 ; Rhetorica Volume 3 ; 3 >
+    au < down ; 1986 ; Rhetorica Volume 4 ; 4 >
+    au < down ; 1987 ; Rhetorica Volume 5 ; 5 >
+    au < down ; 1988 ; Rhetorica Volume 6 ; 6 >
+    au < down ; 1989 ; Rhetorica Volume 7 ; 7 >
+    au < down ; 1990 ; Rhetorica Volume 8 ; 8 >
+    au < down ; 1991 ; Rhetorica Volume 9 ; 9 >
+    au < down ; 1992 ; Rhetorica Volume 10 ; 10 >
+    au < down ; 1993 ; Rhetorica Volume 11 ; 11 >
+    au < down ; 1994 ; Rhetorica Volume 12 ; 12 >
+    au < down ; 1995 ; Rhetorica Volume 13 ; 13 >
+    au < down ; 1996 ; Rhetorica Volume 14 ; 14 >
+    au < down ; 1997 ; Rhetorica Volume 15 ; 15 >
+    au < down ; 1998 ; Rhetorica Volume 16 ; 16 >
+    au < down ; 1999 ; Rhetorica Volume 17 ; 17 >
+    au < down ; 2000 ; Rhetorica Volume 18 ; 18 >
+    au < down ; 2001 ; Rhetorica Volume 19 ; 19 >
+    au < down ; 2002 ; Rhetorica Volume 20 ; 20 >
+    au < down ; 2003 ; Rhetorica Volume 21 ; 21 >
+    au < down ; 2004 ; Rhetorica Volume 22 ; 22 >
+    au < down ; 2005 ; Rhetorica Volume 23 ; 23 >
+    au < down ; 2006 ; Rhetorica Volume 24 ; 24 >
+    au < down ; 2007 ; Rhetorica Volume 25 ; 25 >
+    au < down ; 2008 ; Rhetorica Volume 26 ; 26 >
+    au < down ; 2009 ; Rhetorica Volume 27 ; 27 >
+    au < down ; 2010 ; Rhetorica Volume 28 ; 28 >
   
   }
 
@@ -773,16 +773,16 @@
 
     param[journal_id] = sp
 
-    au < down ; Social Problems Volume 48 ; 48 >
-    au < down ; Social Problems Volume 49 ; 49 >
-    au < down ; Social Problems Volume 50 ; 50 >
-    au < down ; Social Problems Volume 51 ; 51 >
-    au < down ; Social Problems Volume 52 ; 52 >
-    au < down ; Social Problems Volume 53 ; 53 >
-    au < down ; Social Problems Volume 54 ; 54 >
-    au < down ; Social Problems Volume 55 ; 55 >
-    au < down ; Social Problems Volume 56 ; 56 >
-    au < down ; Social Problems Volume 57 ; 57 >
+    au < down ; 2001 ; Social Problems Volume 48 ; 48 >
+    au < down ; 2002 ; Social Problems Volume 49 ; 49 >
+    au < down ; 2003 ; Social Problems Volume 50 ; 50 >
+    au < down ; 2004 ; Social Problems Volume 51 ; 51 >
+    au < down ; 2005 ; Social Problems Volume 52 ; 52 >
+    au < down ; 2006 ; Social Problems Volume 53 ; 53 >
+    au < down ; 2007 ; Social Problems Volume 54 ; 54 >
+    au < down ; 2008 ; Social Problems Volume 55 ; 55 >
+    au < down ; 2009 ; Social Problems Volume 56 ; 56 >
+    au < down ; 2010 ; Social Problems Volume 57 ; 57 >
   
   }
 
@@ -797,16 +797,16 @@
 
     param[journal_id] = sop
 
-    au < down ; Sociological Perspectives Volume 44 ; 44 >
-    au < down ; Sociological Perspectives Volume 45 ; 45 >
-    au < down ; Sociological Perspectives Volume 46 ; 46 >
-    au < down ; Sociological Perspectives Volume 47 ; 47 >
-    au < down ; Sociological Perspectives Volume 48 ; 48 >
-    au < down ; Sociological Perspectives Volume 49 ; 49 >
-    au < down ; Sociological Perspectives Volume 50 ; 50 >
-    au < down ; Sociological Perspectives Volume 51 ; 51 >
-    au < down ; Sociological Perspectives Volume 52 ; 52 >
-    au < down ; Sociological Perspectives Volume 53 ; 53 >
+    au < down ; 2001 ; Sociological Perspectives Volume 44 ; 44 >
+    au < down ; 2002 ; Sociological Perspectives Volume 45 ; 45 >
+    au < down ; 2003 ; Sociological Perspectives Volume 46 ; 46 >
+    au < down ; 2004 ; Sociological Perspectives Volume 47 ; 47 >
+    au < down ; 2005 ; Sociological Perspectives Volume 48 ; 48 >
+    au < down ; 2006 ; Sociological Perspectives Volume 49 ; 49 >
+    au < down ; 2007 ; Sociological Perspectives Volume 50 ; 50 >
+    au < down ; 2008 ; Sociological Perspectives Volume 51 ; 51 >
+    au < down ; 2009 ; Sociological Perspectives Volume 52 ; 52 >
+    au < down ; 2010 ; Sociological Perspectives Volume 53 ; 53 >
   
   }
 
@@ -821,39 +821,39 @@
 
     param[journal_id] = si
 
-    au < down ; Symbolic Interaction Volume 1 ; 1 >
-    au < down ; Symbolic Interaction Volume 2 ; 2 >
-    au < down ; Symbolic Interaction Volume 3 ; 3 >
-    au < down ; Symbolic Interaction Volume 4 ; 4 >
-    au < down ; Symbolic Interaction Volume 5 ; 5 >
-    au < down ; Symbolic Interaction Volume 6 ; 6 >
-    au < down ; Symbolic Interaction Volume 7 ; 7 >
-    au < down ; Symbolic Interaction Volume 8 ; 8 >
-    au < down ; Symbolic Interaction Volume 9 ; 9 >
-    au < down ; Symbolic Interaction Volume 10 ; 10 >
-    au < down ; Symbolic Interaction Volume 11 ; 11 >
-    au < down ; Symbolic Interaction Volume 12 ; 12 >
-    au < down ; Symbolic Interaction Volume 13 ; 13 >
-    au < down ; Symbolic Interaction Volume 14 ; 14 >
-    au < down ; Symbolic Interaction Volume 15 ; 15 >
-    au < down ; Symbolic Interaction Volume 16 ; 16 >
-    au < down ; Symbolic Interaction Volume 17 ; 17 >
-    au < down ; Symbolic Interaction Volume 18 ; 18 >
-    au < down ; Symbolic Interaction Volume 19 ; 19 >
-    au < down ; Symbolic Interaction Volume 20 ; 20 >
-    au < down ; Symbolic Interaction Volume 21 ; 21 >
-    au < down ; Symbolic Interaction Volume 22 ; 22 >
-    au < down ; Symbolic Interaction Volume 23 ; 23 >
-    au < down ; Symbolic Interaction Volume 24 ; 24 >
-    au < down ; Symbolic Interaction Volume 25 ; 25 >
-    au < down ; Symbolic Interaction Volume 26 ; 26 >
-    au < down ; Symbolic Interaction Volume 27 ; 27 >
-    au < down ; Symbolic Interaction Volume 28 ; 28 >
-    au < down ; Symbolic Interaction Volume 29 ; 29 >
-    au < down ; Symbolic Interaction Volume 30 ; 30 >
-    au < down ; Symbolic Interaction Volume 31 ; 31 >
-    au < down ; Symbolic Interaction Volume 32 ; 32 >
-    au < down ; Symbolic Interaction Volume 33 ; 33 >
+    au < down ; 1978 ; Symbolic Interaction Volume 1 ; 1 >
+    au < down ; 1979 ; Symbolic Interaction Volume 2 ; 2 >
+    au < down ; 1980 ; Symbolic Interaction Volume 3 ; 3 >
+    au < down ; 1981 ; Symbolic Interaction Volume 4 ; 4 >
+    au < down ; 1982 ; Symbolic Interaction Volume 5 ; 5 >
+    au < down ; 1983 ; Symbolic Interaction Volume 6 ; 6 >
+    au < down ; 1984 ; Symbolic Interaction Volume 7 ; 7 >
+    au < down ; 1985 ; Symbolic Interaction Volume 8 ; 8 >
+    au < down ; 1986 ; Symbolic Interaction Volume 9 ; 9 >
+    au < down ; 1987 ; Symbolic Interaction Volume 10 ; 10 >
+    au < down ; 1988 ; Symbolic Interaction Volume 11 ; 11 >
+    au < down ; 1989 ; Symbolic Interaction Volume 12 ; 12 >
+    au < down ; 1990 ; Symbolic Interaction Volume 13 ; 13 >
+    au < down ; 1991 ; Symbolic Interaction Volume 14 ; 14 >
+    au < down ; 1992 ; Symbolic Interaction Volume 15 ; 15 >
+    au < down ; 1993 ; Symbolic Interaction Volume 16 ; 16 >
+    au < down ; 1994 ; Symbolic Interaction Volume 17 ; 17 >
+    au < down ; 1995 ; Symbolic Interaction Volume 18 ; 18 >
+    au < down ; 1996 ; Symbolic Interaction Volume 19 ; 19 >
+    au < down ; 1997 ; Symbolic Interaction Volume 20 ; 20 >
+    au < down ; 1998 ; Symbolic Interaction Volume 21 ; 21 >
+    au < down ; 1999 ; Symbolic Interaction Volume 22 ; 22 >
+    au < down ; 2000 ; Symbolic Interaction Volume 23 ; 23 >
+    au < down ; 2001 ; Symbolic Interaction Volume 24 ; 24 >
+    au < down ; 2002 ; Symbolic Interaction Volume 25 ; 25 >
+    au < down ; 2003 ; Symbolic Interaction Volume 26 ; 26 >
+    au < down ; 2004 ; Symbolic Interaction Volume 27 ; 27 >
+    au < down ; 2005 ; Symbolic Interaction Volume 28 ; 28 >
+    au < down ; 2006 ; Symbolic Interaction Volume 29 ; 29 >
+    au < down ; 2007 ; Symbolic Interaction Volume 30 ; 30 >
+    au < down ; 2008 ; Symbolic Interaction Volume 31 ; 31 >
+    au < down ; 2009 ; Symbolic Interaction Volume 32 ; 32 >
+    au < down ; 2010 ; Symbolic Interaction Volume 33 ; 33 >
   
   }
 
