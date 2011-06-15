@@ -15,13 +15,13 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.iovs.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; Investigative Ophthalmology & Visual Science Volume 46 ; 46 >
-    au < HighWireStrVolPlugin ; down ; Investigative Ophthalmology & Visual Science Volume 47 ; 47 >
-    au < HighWireStrVolPlugin ; down ; Investigative Ophthalmology & Visual Science Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; released ; Investigative Ophthalmology & Visual Science Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; released ; Investigative Ophthalmology & Visual Science Volume 50 ; 50 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Investigative Ophthalmology & Visual Science Volume 46 ; 46 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Investigative Ophthalmology & Visual Science Volume 47 ; 47 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Investigative Ophthalmology & Visual Science Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Investigative Ophthalmology & Visual Science Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Investigative Ophthalmology & Visual Science Volume 50 ; 50 >
 
   }
 
