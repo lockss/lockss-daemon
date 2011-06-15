@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ;  name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-3793
   
-      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
-      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
-      au < doNotProcess ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
+      au < doNotProcess ; 2005 ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
+      au < doNotProcess ; 2006 ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
+      au < doNotProcess ; 2007 ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
     }
 
     {
