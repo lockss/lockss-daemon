@@ -3,7 +3,7 @@
     name = Canadian Journal of Philosophy
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,10 +18,12 @@
 
     param[journal_dir] = canadian_journal_of_philosophy
 
-    au < released ; Canadian Journal of Philosophy Volume 36 ; 36 >
-    au < released ; Canadian Journal of Philosophy Volume 37 ; 37 >
-    au < released ; Canadian Journal of Philosophy Volume 38 ; 38 >
-    au < released ; Canadian Journal of Philosophy Volume 39 ; 39 >
+    au < released ; 2006 ; Canadian Journal of Philosophy Volume 36 ; 36 >
+    au < released ; 2007 ; Canadian Journal of Philosophy Volume 37 ; 37 >
+    au < released ; 2008 ; Canadian Journal of Philosophy Volume 38 ; 38 >
+    au < released ; 2009 ; Canadian Journal of Philosophy Volume 39 ; 39 >
+    au < manifest ; 2010 ; Canadian Journal of Philosophy Volume 40 ; 40 >
+    au < manifest ; 2011 ; Canadian Journal of Philosophy Volume 41 ; 41 >
 
   }
 
