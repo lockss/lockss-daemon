@@ -15,18 +15,18 @@
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
     param[base_url] = http://soil.scijournals.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; Soil Science Society of America Journal Volume 62 ; 62 >
-    au < down ; Soil Science Society of America Journal Volume 63 ; 63 >
-    au < down ; Soil Science Society of America Journal Volume 64 ; 64 >
-    au < down ; Soil Science Society of America Journal Volume 65 ; 65 >
-    au < down ; Soil Science Society of America Journal Volume 66 ; 66 >
-    au < down ; Soil Science Society of America Journal Volume 67 ; 67 >
-    au < down ; Soil Science Society of America Journal Volume 68 ; 68 >
-    au < down ; Soil Science Society of America Journal Volume 69 ; 69 >
-    au < down ; Soil Science Society of America Journal Volume 70 ; 70 >
-    au < down ; Soil Science Society of America Journal Volume 71 ; 71 >
+    au < down ; 1998 ; Soil Science Society of America Journal Volume 62 ; 62 >
+    au < down ; 1999 ; Soil Science Society of America Journal Volume 63 ; 63 >
+    au < down ; 2000 ; Soil Science Society of America Journal Volume 64 ; 64 >
+    au < down ; 2001 ; Soil Science Society of America Journal Volume 65 ; 65 >
+    au < down ; 2002 ; Soil Science Society of America Journal Volume 66 ; 66 >
+    au < down ; 2003 ; Soil Science Society of America Journal Volume 67 ; 67 >
+    au < down ; 2004 ; Soil Science Society of America Journal Volume 68 ; 68 >
+    au < down ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 >
+    au < down ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 >
+    au < down ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 >
 
   }
 
