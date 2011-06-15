@@ -15,39 +15,39 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jneurosci.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; Journal of Neuroscience Volume 1 ; 1 >
-      au < manifest ; Journal of Neuroscience Volume 2 ; 2 >
-      au < manifest ; Journal of Neuroscience Volume 3 ; 3 >
-      au < manifest ; Journal of Neuroscience Volume 4 ; 4 >
-      au < manifest ; Journal of Neuroscience Volume 5 ; 5 >
-      au < manifest ; Journal of Neuroscience Volume 6 ; 6 >
-      au < manifest ; Journal of Neuroscience Volume 7 ; 7 >
-      au < manifest ; Journal of Neuroscience Volume 8 ; 8 >
-      au < manifest ; Journal of Neuroscience Volume 9 ; 9 >
-      au < manifest ; Journal of Neuroscience Volume 10 ; 10 >
-      au < manifest ; Journal of Neuroscience Volume 11 ; 11 >
-      au < manifest ; Journal of Neuroscience Volume 12 ; 12 >
-      au < manifest ; Journal of Neuroscience Volume 13 ; 13 >
-      au < manifest ; Journal of Neuroscience Volume 14 ; 14 >
-      au < manifest ; Journal of Neuroscience Volume 15 ; 15 >
-      au < manifest ; Journal of Neuroscience Volume 16 ; 16 >
-      au < manifest ; Journal of Neuroscience Volume 17 ; 17 >
-      au < manifest ; Journal of Neuroscience Volume 18 ; 18 >
-      au < manifest ; Journal of Neuroscience Volume 19 ; 19 >
-      au < manifest ; Journal of Neuroscience Volume 20 ; 20 >
-      au < manifest ; Journal of Neuroscience Volume 21 ; 21 >
-      au < manifest ; Journal of Neuroscience Volume 22 ; 22 >
-      au < manifest ; Journal of Neuroscience Volume 23 ; 23 >
-      au < manifest ; Journal of Neuroscience Volume 24 ; 24 >
-      au < manifest ; Journal of Neuroscience Volume 25 ; 25 >
-      au < manifest ; Journal of Neuroscience Volume 26 ; 26 >
-      au < manifest ; Journal of Neuroscience Volume 27 ; 27 >
-      au < manifest ; Journal of Neuroscience Volume 28 ; 28 >
-      au < manifest ; Journal of Neuroscience Volume 29 ; 29 >
-      au < testing ; Journal of Neuroscience Volume 30 ; 30 >
-      au < testing ; Journal of Neuroscience Volume 31 ; 31 >
+      au < manifest ; 1981 ; Journal of Neuroscience Volume 1 ; 1 >
+      au < manifest ; 1982 ; Journal of Neuroscience Volume 2 ; 2 >
+      au < manifest ; 1983 ; Journal of Neuroscience Volume 3 ; 3 >
+      au < manifest ; 1984 ; Journal of Neuroscience Volume 4 ; 4 >
+      au < manifest ; 1985 ; Journal of Neuroscience Volume 5 ; 5 >
+      au < manifest ; 1986 ; Journal of Neuroscience Volume 6 ; 6 >
+      au < manifest ; 1987 ; Journal of Neuroscience Volume 7 ; 7 >
+      au < manifest ; 1988 ; Journal of Neuroscience Volume 8 ; 8 >
+      au < manifest ; 1989 ; Journal of Neuroscience Volume 9 ; 9 >
+      au < manifest ; 1990 ; Journal of Neuroscience Volume 10 ; 10 >
+      au < manifest ; 1991 ; Journal of Neuroscience Volume 11 ; 11 >
+      au < manifest ; 1992 ; Journal of Neuroscience Volume 12 ; 12 >
+      au < manifest ; 1993 ; Journal of Neuroscience Volume 13 ; 13 >
+      au < manifest ; 1994 ; Journal of Neuroscience Volume 14 ; 14 >
+      au < manifest ; 1995 ; Journal of Neuroscience Volume 15 ; 15 >
+      au < manifest ; 1996 ; Journal of Neuroscience Volume 16 ; 16 >
+      au < manifest ; 1997 ; Journal of Neuroscience Volume 17 ; 17 >
+      au < manifest ; 1998 ; Journal of Neuroscience Volume 18 ; 18 >
+      au < manifest ; 1999 ; Journal of Neuroscience Volume 19 ; 19 >
+      au < manifest ; 2000 ; Journal of Neuroscience Volume 20 ; 20 >
+      au < manifest ; 2001 ; Journal of Neuroscience Volume 21 ; 21 >
+      au < manifest ; 2002 ; Journal of Neuroscience Volume 22 ; 22 >
+      au < manifest ; 2003 ; Journal of Neuroscience Volume 23 ; 23 >
+      au < manifest ; 2004 ; Journal of Neuroscience Volume 24 ; 24 >
+      au < manifest ; 2005 ; Journal of Neuroscience Volume 25 ; 25 >
+      au < manifest ; 2006 ; Journal of Neuroscience Volume 26 ; 26 >
+      au < manifest ; 2007 ; Journal of Neuroscience Volume 27 ; 27 >
+      au < manifest ; 2008 ; Journal of Neuroscience Volume 28 ; 28 >
+      au < manifest ; 2009 ; Journal of Neuroscience Volume 29 ; 29 >
+      au < testing ; 2010 ; Journal of Neuroscience Volume 30 ; 30 >
+      au < testing ; 2011 ; Journal of Neuroscience Volume 31 ; 31 >
 
     }
 
