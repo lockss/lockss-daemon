@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1533-6085
   
-      au < doNotProcess ; Journal of the Arizona-Nevada Academy of Science Volume 37 ; 37 >
-      au < doNotProcess ; Journal of the Arizona-Nevada Academy of Science Volume 38 ; 38 >
-      au < doNotProcess ; Journal of the Arizona-Nevada Academy of Science Volume 39 ; 39 >
+      au < doNotProcess ; 2005 ; Journal of the Arizona-Nevada Academy of Science Volume 37 ; 37 >
+      au < doNotProcess ; 2006 ; Journal of the Arizona-Nevada Academy of Science Volume 38 ; 38 >
+      au < doNotProcess ; 2007 ; Journal of the Arizona-Nevada Academy of Science Volume 39 ; 39 >
     }
 
     {

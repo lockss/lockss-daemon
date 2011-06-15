@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,13 +17,13 @@
 
     param[journal_dir] = river_teeth
 
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 5 ; 5 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 6 ; 6 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 7 ; 7 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 8 ; 8 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 9 ; 9 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 10 ; 10 >
-    au < released ; River Teeth: A Journal of Nonfiction Narrative Volume 11 ; 11 >
+    au < released ; 2003 ; River Teeth: A Journal of Nonfiction Narrative Volume 5 ; 5 >
+    au < released ; 2004 ; River Teeth: A Journal of Nonfiction Narrative Volume 6 ; 6 >
+    au < released ; 2005 ; River Teeth: A Journal of Nonfiction Narrative Volume 7 ; 7 >
+    au < released ; 2006 ; River Teeth: A Journal of Nonfiction Narrative Volume 8 ; 8 >
+    au < released ; 2007 ; River Teeth: A Journal of Nonfiction Narrative Volume 9 ; 9 >
+    au < released ; 2008 ; River Teeth: A Journal of Nonfiction Narrative Volume 10 ; 10 >
+    au < released ; 2009 ; River Teeth: A Journal of Nonfiction Narrative Volume 11 ; 11 >
 
   }
 
