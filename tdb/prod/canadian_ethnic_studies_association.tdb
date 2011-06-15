@@ -3,7 +3,7 @@
     name = Canadian Ethnic Studies Association
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,8 +18,8 @@
 
     param[journal_dir] = canadian_ethnic_studies
 
-    au < released ; Canadian Ethnic Studies Volume 39 ; 39 >
-    au < released ; Canadian Ethnic Studies Volume 40 ; 40 >
+    au < released ; 2007 ; Canadian Ethnic Studies Volume 39 ; 39 >
+    au < released ; 2008 ; Canadian Ethnic Studies Volume 40 ; 40 >
 
   }
 
