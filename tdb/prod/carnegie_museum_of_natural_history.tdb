@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0097-4463
   
-      au < superseded ; Annals of Carnegie Museum Volume 74 ; 74 >
-      au < superseded ; Annals of Carnegie Museum Volume 75 ; 75 >
-      au < superseded ; Annals of Carnegie Museum Volume 76 ; 76 >
+      au < superseded ; 2005-2006 ; Annals of Carnegie Museum Volume 74 ; 74 >
+      au < superseded ; 2006-2007 ; Annals of Carnegie Museum Volume 75 ; 75 >
+      au < superseded ; 2007-2008 ; Annals of Carnegie Museum Volume 76 ; 76 >
     }
 
   }
@@ -34,14 +34,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0145-9058
   
-      au < superseded ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
-      au < superseded ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
-      au < superseded ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
+      au < superseded ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
+      au < superseded ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >
+      au < superseded ; 2006 ; Bulletin of Carnegie Museum of Natural History Volume 37 ; 37 >
     }
 
     {
