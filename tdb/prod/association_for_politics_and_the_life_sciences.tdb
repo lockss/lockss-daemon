@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1471-5457
   
-      au < superseded ; Politics and the Life Sciences Volume 23 ; 23 >
-      au < superseded ; Politics and the Life Sciences Volume 24 ; 24 >
-      au < superseded ; Politics and the Life Sciences Volume 25 ; 25 >
+      au < superseded ; 2004 ; Politics and the Life Sciences Volume 23 ; 23 >
+      au < superseded ; 2005 ; Politics and the Life Sciences Volume 24 ; 24 >
+      au < superseded ; 2006 ; Politics and the Life Sciences Volume 25 ; 25 >
     }
 
     {
