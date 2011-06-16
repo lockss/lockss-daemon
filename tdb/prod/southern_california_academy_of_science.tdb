@@ -12,14 +12,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0038-3872
   
-      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
-      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
-      au < doNotProcess ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
+      au < doNotProcess ; 2005 ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
+      au < doNotProcess ; 2006 ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
+      au < doNotProcess ; 2007 ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
     }
 
     {

@@ -13,15 +13,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0008-7475
   
-      au < superseded ; Castanea Volume 69 ; 069 >
-      au < doNotProcess ; Castanea Volume 70 ; 70 >
-      au < doNotProcess ; Castanea Volume 71 ; 71 >
-      au < doNotProcess ; Castanea Volume 72 ; 72 >
+      au < superseded ; 2004 ; Castanea Volume 69 ; 069 >
+      au < doNotProcess ; 2005 ; Castanea Volume 70 ; 70 >
+      au < doNotProcess ; 2006 ; Castanea Volume 71 ; 71 >
+      au < doNotProcess ; 2007 ; Castanea Volume 72 ; 72 >
     }
 
     {

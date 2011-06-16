@@ -16,19 +16,20 @@
     rights = openaccess
     plugin = za.ac.nlsa.lockss.plugin.WaterSAPlugin
     param[base_url] = za.ac.nlsa.lockss.plugin.WaterSAPlugin
-    implicit < status ; name ; param[year] >
-    
-    au < down ; Water SA 1998 ; 1998 >
-    au < down ; Water SA 1999 ; 1999 >
-    au < down ; Water SA 2000 ; 2000 >
-    au < down ; Water SA 2001 ; 2001 >
-    au < down ; Water SA 2002 ; 2002 >
-    au < down ; Water SA 2003 ; 2003 >
-    au < down ; Water SA 2004 ; 2004 >
-    au < down ; Water SA 2005 ; 2005 >
-    au < down ; Water SA 2006 ; 2006 >
-    au < exists ; Water SA 2007 ; 2007 >
-    au < exists ; Water SA 2008 ; 2008 >
+    implicit < status ; year ; name ; param[year] >
+    comment[0] = aka Volume 24 (1998) to Volume 34 (2008)    
+
+    au < down ; 1998 ; Water SA 1998 ; 1998 >
+    au < down ; 1999 ; Water SA 1999 ; 1999 >
+    au < down ; 2000 ; Water SA 2000 ; 2000 >
+    au < down ; 2001 ; Water SA 2001 ; 2001 >
+    au < down ; 2002 ; Water SA 2002 ; 2002 >
+    au < down ; 2003 ; Water SA 2003 ; 2003 >
+    au < down ; 2004 ; Water SA 2004 ; 2004 >
+    au < down ; 2005 ; Water SA 2005 ; 2005 >
+    au < down ; 2006 ; Water SA 2006 ; 2006 >
+    au < exists ; 2007 ; Water SA 2007 ; 2007 >
+    au < exists ; 2008 ; Water SA 2008 ; 2008 >
   
   }
 
