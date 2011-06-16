@@ -21,9 +21,9 @@
     
       plugin = org.lockss.plugin.janushead.JanusHeadPluginLegacy
       param[base_url] = http://www.janushead.org/
-      implicit < status ; name >
+      implicit < status ; year ; name >
     
-      au < manifest ; Janus Head Volume 1-2 >
+      au < manifest ; 1998 -1999 ; Janus Head Volume 1-2 >
     
     }
     
@@ -31,16 +31,16 @@
 
       plugin = org.lockss.plugin.janushead.JanusHeadPlugin
       param[base_url] = http://www.janushead.org/
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
     
-      au < manifest ; Janus Head Volume 3 ; 3 >
-      au < manifest ; Janus Head Volume 4 ; 4 >
-      au < manifest ; Janus Head Volume 5 ; 5 >
-      au < manifest ; Janus Head Volume 6 ; 6 >
-      au < manifest ; Janus Head Volume 7 ; 7 >
-      au < manifest ; Janus Head Volume 8 ; 8 >
-      au < manifest ; Janus Head Volume 9 ; 9 >
-      au < manifest ; Janus Head Volume 10 ; 10 >
+      au < manifest ; 2000 ; Janus Head Volume 3 ; 3 >
+      au < manifest ; 2001 ; Janus Head Volume 4 ; 4 >
+      au < manifest ; 2002 ; Janus Head Volume 5 ; 5 >
+      au < manifest ; 2003 ; Janus Head Volume 6 ; 6 >
+      au < manifest ; 2004 ; Janus Head Volume 7 ; 7 >
+      au < manifest ; 2005 ; Janus Head Volume 8 ; 8 >
+      au < manifest ; 2006-2007 ; Janus Head Volume 9 ; 9 >
+      au < manifest ; 2007 ; Janus Head Volume 10 ; 10 >
     
     }
 
