@@ -14,12 +14,16 @@
     
     rights = openaccess
     plugin = gov.loc.plugin.TESLEJPlugin
-    implicit < status ; name ; param[volume] ; param[num_issue_range] >
     
     {
 
       param[base_url] = http://writing.berkeley.edu/TESL-EJ/
-      
+      implicit < status ; name ; param[volume] ; param[num_issue_range] >
+
+      comment[0] = only volumes 1 and 2 were listed when checked 2011-06-16
+      comment[1] = 1994-1995
+      comment[2] = 1996-1997      
+
       au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 [superseded] ; 1 ; 01-04 >
       au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 [superseded] ; 2 ; 05-08 >
       au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 [superseded] ; 3 ; 09-12 >
@@ -35,19 +39,20 @@
     {
     
       param[base_url] = http://www.tesl-ej.org/
-      
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 ; 01-04 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 ; 05-08 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 ; 3 ; 09-12 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 ; 4 ; 13-16 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 ; 5 ; 17-20 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 ; 6 ; 21-24 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 ; 7 ; 25-28 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 ; 8 ; 29-32 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 ; 33-36 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 ; 37-40 >
-      au < released ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 ; 41-44 >
-      au < exists ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 ; 45-48 >
+      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >      
+
+      au < released ; 1994-1995 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 ; 01-04 >
+      au < released ; 1996-1997 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 ; 05-08 >
+      au < released ; 1997-1999 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 ; 3 ; 09-12 >
+      au < released ; 1999-2000 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 ; 4 ; 13-16 >
+      au < released ; 2001-2002 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 ; 5 ; 17-20 >
+      au < released ; 2002-2003 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 ; 6 ; 21-24 >
+      au < released ; 2003-2004 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 ; 7 ; 25-28 >
+      au < released ; 2004-2005 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 ; 8 ; 29-32 >
+      au < released ; 2005-2006 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 ; 33-36 >
+      au < released ; 2006-2007 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 ; 37-40 >
+      au < released ; 2007-2008 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 ; 41-44 >
+      au < exists ; 2008-2009 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 ; 45-48 >
     
     }
   
