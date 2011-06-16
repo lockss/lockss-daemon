@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.3 2011-06-11 21:44:15 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.4 2011-06-16 11:25:15 pgust Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestNumberUtil extends LockssTestCase {
    */
   public void testNormalized() {
 	String[] validNormalizedRomanStrings = {
-	  "I", "VI", "XIII", "LXXX", "XC", 
+	  "N", "I", "VI", "XIII", "LXXX", "XC", 
 	  "DLXI", "MCMLXXIV",
 	  "(MMMDCCCL)MMCDXXIX", 
 	  "MMM", "(IV)", "(V)M",
@@ -61,7 +61,7 @@ public class TestNumberUtil extends LockssTestCase {
 	  "((MMCXLV)MMCDLXXX)MMMDCXLVII"
 	};
     String[] equivalentArabicStrings = {
-        "1", "6", "13", "80", "90", 
+        "0", "1", "6", "13", "80", "90", 
         "561", "1974",
         "3852429", 
         "3000", "4000", "6000",
@@ -71,7 +71,7 @@ public class TestNumberUtil extends LockssTestCase {
 
     // string arrays of roman digits split from normalized roman strings
     String[][] equivalentRomanDigits = {
-      {"I"}, {"V","I"}, {"X","I","I","I"}, {"L","X","X","X"}, {"XC"}, 
+      {"N"}, {"I"}, {"V","I"}, {"X","I","I","I"}, {"L","X","X","X"}, {"XC"}, 
       {"D","L","X","I"}, {"M","CM","L","X","X","IV"},
       {"(M)","(M)","(M)","(D)","(C)","(C)","(C)","(L)",
        "M","M","CD","X","X","IX"}, 
@@ -95,7 +95,7 @@ public class TestNumberUtil extends LockssTestCase {
 		// roman value is normalized
 		assertEquals(romanValue, NumberUtil.toRomanNumber(romanValue));
 		// roman is normalized
-		Roman.parseRoman(romanValue, true);
+		NumberUtil.parseRomanNumber(romanValue, true);
 		// matches roman value
 		assertEquals(intValue, NumberUtil.parseInt(romanValue));
 	    // matches arabic value
@@ -183,7 +183,7 @@ public class TestNumberUtil extends LockssTestCase {
 	}
 	
 	String[] invalidArabicStrings = {
-	  "-1", "0", Long.toString(Roman.MAX_VALUE+1)
+	  "-1", Long.toString(Integer.MAX_VALUE+1)
 	};
 			  
 	for (String s : invalidArabicStrings) {
