@@ -14,11 +14,11 @@
     rights = openaccess
     plugin = edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin
     param[base_url] = http://www.worldhaikureview.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     
-    au < down ; World Haiku Review Volume 1 ; 1 >
-    au < down ; World Haiku Review Volume 2 ; 2 >
-    au < down ; World Haiku Review Volume 3 ; 3 >
+    au < down ; 2001 ; World Haiku Review Volume 1 ; 1 >
+    au < down ; 2002 ; World Haiku Review Volume 2 ; 2 >
+    au < down ; 2003 ; World Haiku Review Volume 3 ; 3 >
   
   }
 
