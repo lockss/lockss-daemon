@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,13 +17,13 @@
     
     param[journal_code] = trre
   
-    au < exists ; Tree-Ring Research Volume 60 ; 60 >
-    au < exists ; Tree-Ring Research Volume 61 ; 61 >
-    au < exists ; Tree-Ring Research Volume 62 ; 62 >
-    au < exists ; Tree-Ring Research Volume 63 ; 63 >
-    au < exists ; Tree-Ring Research Volume 64 ; 64 >
-    au < exists ; Tree-Ring Research Volume 65 ; 65 >
-    au < exists ; Tree-Ring Research Volume 66 ; 66 >
+    au < exists ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
+    au < exists ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
+    au < exists ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
+    au < exists ; 2007 ; Tree-Ring Research Volume 63 ; 63 >
+    au < exists ; 2008 ; Tree-Ring Research Volume 64 ; 64 >
+    au < exists ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
+    au < exists ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
 
   }
   

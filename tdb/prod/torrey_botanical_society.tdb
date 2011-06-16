@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1095-5674
   
-      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
-      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >
-      au < doNotProcess ; The Journal of the Torrey Botanical Society Volume 134 ; 134 >
+      au < doNotProcess ; 2005 ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
+      au < doNotProcess ; 2006 ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >
+      au < doNotProcess ; 2007 ;The Journal of the Torrey Botanical Society Volume 134 ; 134 >
     }
 
     {
