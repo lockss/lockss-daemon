@@ -40,13 +40,13 @@
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
     param[base_url] = http://vzj.scijournals.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; Vadose Zone Journal Volume 1 ; 1 >
-    au < down ; Vadose Zone Journal Volume 2 ; 2 >
-    au < down ; Vadose Zone Journal Volume 3 ; 3 >
-    au < down ; Vadose Zone Journal Volume 4 ; 4 >
-    au < down ; Vadose Zone Journal Volume 5 ; 5 >
+    au < down ; 2002 ; Vadose Zone Journal Volume 1 ; 1 >
+    au < down ; 2003 ; Vadose Zone Journal Volume 2 ; 2 >
+    au < down ; 2004 ; Vadose Zone Journal Volume 3 ; 3 >
+    au < down ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
+    au < down ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
 
   }
 
