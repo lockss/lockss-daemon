@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.3 2011-06-11 21:43:44 pgust Exp $
+ * $Id: NumberUtil.java,v 1.4 2011-06-16 02:26:07 pgust Exp $
  */
 
 /*
@@ -127,6 +127,7 @@ public class NumberUtil {
       return false;
     }
   }
+
   /**
    * Returns an integer from a String representing a number in the 
    * Arabic or Roman number system.
@@ -134,7 +135,7 @@ public class NumberUtil {
    * @param s the String
    * @return the number
    * @throws NumberFormatException if the String does not represent a valid
-   *     counting number in the Arabic or Roman number systems
+   *     integer in the Arabic or Roman number systems
    */
   public static int parseInt(String s) 
     throws NumberFormatException {
@@ -142,6 +143,24 @@ public class NumberUtil {
       return NumberUtil.parseRomanNumber(s);
     } catch (NumberFormatException ex) {
       return Integer.parseInt(s);
+    }
+  }
+  
+  /**
+   * Returns a long from a String representing a number in the 
+   * Arabic or Roman number system.
+   * 
+   * @param s the String
+   * @return the number
+   * @throws NumberFormatException if the String does not represent a valid
+   *     long in the Arabic or Roman number systems
+   */
+  public static long parseLong(String s) 
+    throws NumberFormatException {
+    try {
+      return NumberUtil.parseRomanNumber(s);
+    } catch (NumberFormatException ex) {
+      return Long.parseLong(s);
     }
   }
   
