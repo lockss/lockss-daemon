@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.4 2011-06-16 02:26:07 pgust Exp $
+ * $Id: NumberUtil.java,v 1.5 2011-06-16 11:22:21 pgust Exp $
  */
 
 /*
@@ -41,9 +41,10 @@ import java.util.Map;
 /**
  * This utility class contains a collection of number handling static methods.
  * <p>
- * The roman numeral methods accept and output counting numbers in 
- * both Arabic and Roman number systems, from 1 to 2^31-1, or from
- * I to ((MMCXLVII)CDLXXXIII)DCXLVIIMMMCMXCIX.
+ * The roman numeral methods accept and output natural numbers in 
+ * both Arabic and Roman number systems, from 0 to 2^31-1, or from
+ * N to ((MMCXLVII)CDLXXXIII)DCXLVIIMMMCMXCIX. Bede first used 'N' (nulla) 
+ * for 0 c. 725AD in a table of lunar epacts.
  * <p>
  * Roman numerals larger than M are represented by lower-valued Roman numerals 
  * within parentheses, indicating multiplication by 1000. Parentheses can be 
@@ -90,7 +91,7 @@ public class NumberUtil {
   /**
    * Determines the value of the system property with the specified name.
    * The first argument is treated as the name of a system property. The string
-   * value of this property is interpreted as Arabic or Roman counting number 
+   * value of this property is interpreted as Arabic or Roman natural number 
    * and the corresponding value is returned.
    * <p>
    * The second argument is the default value. This value is returned if the
@@ -129,6 +130,29 @@ public class NumberUtil {
   }
 
   /**
+   * Returns a short from a String representing a number in the 
+   * Arabic or Roman number system.
+   * 
+   * @param s the String
+   * @return the number
+   * @throws NumberFormatException if the String does not represent a valid
+   *     short in the Arabic or Roman number systems
+   */
+  public static short parseShort(String s) 
+    throws NumberFormatException {
+    try {
+      return Short.parseShort(s);
+    } catch (NumberFormatException ex) {
+      int value = NumberUtil.parseRomanNumber(s);
+      if (value > Short.MAX_VALUE) {
+        throw new NumberFormatException(
+            "Value out of range. Value:\"" + s + "\"");
+      }
+      return (short)value;
+    }
+  }
+  
+  /**
    * Returns an integer from a String representing a number in the 
    * Arabic or Roman number system.
    * 
@@ -140,9 +164,9 @@ public class NumberUtil {
   public static int parseInt(String s) 
     throws NumberFormatException {
     try {
-      return NumberUtil.parseRomanNumber(s);
-    } catch (NumberFormatException ex) {
       return Integer.parseInt(s);
+    } catch (NumberFormatException ex) {
+      return NumberUtil.parseRomanNumber(s);
     }
   }
   
@@ -158,15 +182,51 @@ public class NumberUtil {
   public static long parseLong(String s) 
     throws NumberFormatException {
     try {
-      return NumberUtil.parseRomanNumber(s);
-    } catch (NumberFormatException ex) {
       return Long.parseLong(s);
+    } catch (NumberFormatException ex) {
+      return NumberUtil.parseRomanNumber(s);
+    }
+  }
+  
+  /**
+   * Returns a float from a String representing a number in the 
+   * Arabic or Roman number system.
+   * 
+   * @param s the String
+   * @return the number
+   * @throws NumberFormatException if the String does not represent a valid
+   *     float in the Arabic or Roman number systems
+   */
+  public static float parseFloat(String s) 
+    throws NumberFormatException {
+    try {
+      return Float.parseFloat(s);
+    } catch (NumberFormatException ex) {
+      return NumberUtil.parseRomanNumber(s);
+    }
+  }
+  
+  /**
+   * Returns a double from a String representing a number in the 
+   * Arabic or Roman number system.
+   * 
+   * @param s the String
+   * @return the number
+   * @throws NumberFormatException if the String does not represent a valid
+   *     double in the Arabic or Roman number systems
+   */
+  public static double parseDouble(String s) 
+    throws NumberFormatException {
+    try {
+      return Double.parseDouble(s);
+    } catch (NumberFormatException ex) {
+      return NumberUtil.parseRomanNumber(s);
     }
   }
   
   /**
    * Returns an integer from a String array representing a number in
-   * the Roman number system. The number must be in the range 1 - 2^31-1.
+   * the Roman number system. The number must be in the range 0 - 2^31-1.
    * Elements of the array represent individual roman digits, of the 
    * kind returned by {@link #toRomanDigits()}.
    * 
@@ -176,6 +236,10 @@ public class NumberUtil {
   public static int parseRomanDigits(String[] tokens) {
     if ((tokens == null) || (tokens.length == 0)) {
       throw new IllegalArgumentException();
+    }
+    // special-case "N" (nulla) as 0
+    if ((tokens.length == 1) && "N".equals(tokens[0])) {
+      return 0;
     }
     int romanValue = 0;
     for (String s : tokens) {
@@ -199,11 +263,13 @@ public class NumberUtil {
   
   /**
    * Returns an integer from a String representing a number in the
-   * Roman number system. The number must be within the range 1 - 2^31-1.
+   * Roman number system. The number must be within the range 0 - 2^31-1.
    * The string may not contain any other characters than allowed by the 
-   * Roman numeral alphabet (the characters 'I', 'V', 'X', 'L', 'C', 'D' 
-   * and 'M' are allowed). Parentheses can be used for large Roman numbers.
-   * If the string does not represent a Roman number, the exception is thrown. 
+   * Roman numeral alphabet: 'I', 'V', 'X', 'L', 'C', 'D' and 'M'. The
+   * letter 'N' is also allowed. The Bede first used 'N' (nulla) for 0 
+   * around 725AD in a table of lunar epacts. Parentheses can be used for 
+   * large Roman numbers. If the string does not represent a Roman number, 
+   * the exception is thrown. 
    * 
    * @param roman the String
    * @return the integer
@@ -216,11 +282,13 @@ public class NumberUtil {
   }
   /**
    * Returns an integer from a String representing a number in the
-   * Roman number system. The number must be within the range 1 - 2^31-1.
+   * Roman number system. The number must be within the range 0 - 2^31-1.
    * The string may not contain any other characters than allowed by the 
-   * Roman numeral alphabet (the characters 'I', 'V', 'X', 'L', 'C', 'D' 
-   * and 'M' are allowed). Parentheses can be used for large Roman numbers.
-   * If the string does not represent a Roman number, the exception is thrown. 
+   * Roman numeral alphabet: 'I', 'V', 'X', 'L', 'C', 'D' and 'M'. The
+   * letter 'N' is also allowed. The Bede first used 'N' (nulla) for 0 
+   * around 725AD in a table of lunar epacts. Parentheses can be used for 
+   * large Roman numbers. If the string does not represent a Roman number, 
+   * the exception is thrown. 
    * <p>
    * The input String is validated by comparing it to the String representation
    * of the parsed value, which is in normalized form. There are many examples
@@ -251,7 +319,9 @@ public class NumberUtil {
   
   /**
    * Returns an integer from a String representing a number in the
-   * Roman number system. The number must be in the range 1 - 2^31-1.
+   * Roman number system. The number must be in the range 0 - 2^31-1.
+   * The Bede first used 'N' (nulla) for 0 around 725AD in a table
+   * of epacts. 
    * <p>
    * If a list is provided, it will contain Roman number tokens 
    * corresponding to the input string. The roman string "MCMDLLLIX" 
@@ -270,6 +340,13 @@ public class NumberUtil {
       throw new NumberFormatException(notRomanNumber);
     }
     roman = roman.trim().toUpperCase();
+    // special-case "N" (nulla) for 0
+    if ("N".equals(roman)) {
+      if (tokens != null) {
+        tokens.add("N");
+      }
+      return 0;
+    }
     int romanLength = roman.length();
     
     // determine paren count and corresponding scale of number
@@ -360,8 +437,8 @@ public class NumberUtil {
   }
   
   /**
-   * Returns a String representation of an Arabic counting number
-   * that is equivalent to an Arabic or Roman counting number string. 
+   * Returns a String representation of an Arabic natural number
+   * that is equivalent to an Arabic or Roman natural number string. 
    * 
    * @param s string representing Arabic or possibly unnormalized Roman number
    * @return the normalized form of the input Roman number
@@ -375,7 +452,7 @@ public class NumberUtil {
   
   /**
    * Returns a String representation of a normalized Roman number that is 
-   * equivalent to an Arabic or Roman counting number string. 
+   * equivalent to an Arabic or Roman natural number string. 
    * <p>
    * There are many examples of non-normal Roman number representations on 
    * monuments and books. See the Wikipedia article on "Roman_numerals" 
@@ -393,16 +470,20 @@ public class NumberUtil {
   
   /**
    * Returns the String representation of the value in the Roman number system.
-   * The value must be in the range 1-2^31-1, or IllegalArgumentException is
+   * The value must be in the range 0-2^31-1, or IllegalArgumentException is
    * thrown.
    *  
    * @param value the value
    * @return the String representation in the Roman number system
    */
   public static String toRomanNumber(int value) {
-    if (value <= 0) {
-      throw new IllegalArgumentException("Not a counting number: " + value);
+    if (value < 0) {
+      throw new IllegalArgumentException("Value out of range: " + value);
     }
+    if (value == 0) {
+      return "N";
+    }
+    
     StringBuilder result = new StringBuilder();
     
     if (value > 3999) {  // largest "regular" roman number
@@ -445,10 +526,10 @@ public class NumberUtil {
   private static void showUsageAndExit() {
     System.out.print(
         "Usage:"
-        + "\n\tjava NumberUtil -i <counting_number>"
-        + "\n\tjava NumberUtil -i <start counting_number> <end counting_number>"
-        + "\n\tjava NumberUtil -r <counting_number>"
-        + "\n\tjava NumberUtil -r <start counting_number> <end counting_number>"
+        + "\n\tjava NumberUtil -i <natural_number>"
+        + "\n\tjava NumberUtil -i <start natural_number> <end natural_number>"
+        + "\n\tjava NumberUtil -r <natural_number>"
+        + "\n\tjava NumberUtil -r <start natural_number> <end natural_number>"
         + "\n");
     System.exit(-1);
   }
@@ -458,7 +539,6 @@ public class NumberUtil {
    * @param args the test arguments
    */
   public static void main(String[] args) {
-    // obviously only ready for test purposes, very ugly code
     try {
       if (args.length >= 2) {
         int start = NumberUtil.parseInt(args[1]);
