@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0363-6445
   
-      au < superseded ; Systematic Botany Volume 25 ; 25 >
-      au < superseded ; Systematic Botany Volume 26 ; 26 >
-      au < superseded ; Systematic Botany Volume 27 ; 27 >
-      au < superseded ; Systematic Botany Volume 28 ; 028 >
-      au < doNotProcess ; Systematic Botany Volume 28 ; 28 >
-      au < superseded ; Systematic Botany Volume 29 ; 29 >
-      au < superseded ; Systematic Botany Volume 30 ; 30 >
-      au < superseded ; Systematic Botany Volume 31 ; 31 >
-      au < superseded ; Systematic Botany Volume 32 ; 32 >
+      au < superseded ; 2000 ; Systematic Botany Volume 25 ; 25 >
+      au < superseded ; 2001 ; Systematic Botany Volume 26 ; 26 >
+      au < superseded ; 2002 ; Systematic Botany Volume 27 ; 27 >
+      au < superseded ; 2003 ; Systematic Botany Volume 28 ; 028 >
+      au < doNotProcess ; 2003 ; Systematic Botany Volume 28 ; 28 >
+      au < superseded ; 2004 ; Systematic Botany Volume 29 ; 29 >
+      au < superseded ; 2005 ; Systematic Botany Volume 30 ; 30 >
+      au < superseded ; 2006 ; Systematic Botany Volume 31 ; 31 >
+      au < superseded ; 2007 ; Systematic Botany Volume 32 ; 32 >
     }
 
     {
