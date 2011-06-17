@@ -17,15 +17,12 @@
     param[base_url] = http://dictynna.revue.univ-lille3.fr/
     implicit < status ; year ; name ; param[volume_name] >
 
-    comment[0] = base url redirects to http://dictynna.revues.org/
+    comment[moved] = base url redirects to http://dictynna.revues.org/
 
-    au < released ; 2001 ; Dictynna Numéro 1 ; 1 >
-    au < released ; 2002 ; Dictynna Numéro 2 ; 2 >
-    au < released ; 2003 ; Dictynna Numéro 3 ; 3 >
-    au < released ; 2004 ; Dictynna Numéro 4 ; 4 >
-    au < manifest ; 2005 ; Dictynna Numéro 5 ; 5 >
-    au < manifest ; 2006 ; Dictynna Numéro 6 ; 6 >
-    au < exists ; 2007 ; Dictynna Numéro 7 ; 7 >
+    au < down ; 2001 ; Dictynna Numéro 1 ; 1 >
+    au < down ; 2002 ; Dictynna Numéro 2 ; 2 >
+    au < down ; 2003 ; Dictynna Numéro 3 ; 3 >
+    au < down ; 2004 ; Dictynna Numéro 4 ; 4 >
     
   }
 
