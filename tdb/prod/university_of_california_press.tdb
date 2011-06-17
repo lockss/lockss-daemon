@@ -7,6 +7,7 @@
   plugin = org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
   param[base_url] = http://caliber.ucpress.net/
   implicit < status ; year ; name ; param[volume_name] >
+  comment[moved] = All University of California Press journals are now hosted on JSTOR 
   
   {
 
