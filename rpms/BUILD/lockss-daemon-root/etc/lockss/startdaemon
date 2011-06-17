@@ -23,6 +23,10 @@ is_secure() {
 }
 
 MAX_STARTS=3	# Max number of quick daemon deaths before give up
+RMDUP_SCRIPT=${LOCKSS_HOME}/etc/lockss/rmdup.pl
+RMDUP_PID=${LOCKSS_HOME}/var/run/lockss/rmdup.pid
+RMDUP_STATE=${LOCKSS_HOME}/var/run/lockss/rmdup.state
+
 case `uname -s` in
 SunOS)
     PATH=/usr/xpg4/bin:$PATH
@@ -128,6 +132,37 @@ while [ -f ${KEEP_GOING} ]; do
             fi
         fi
     fi
+    case `uname -s` in
+    Linux)
+        if [ -x ${RMDUP_SCRIPT} ]; then
+            # There is an RMDUP script, is there a PID file for it?
+            RUN_RMDUP=NO
+            if [ -f ${RMDUP_PID} ]; then
+                if [ X`find ${RMDUP_PID} -ctime +1` != X ] ; then
+                    # It is more than a day old - assume its dead
+                    rm ${RMDUP_PID}
+                fi
+            fi
+            if [ ! -s ${RMDUP_PID} ]; then
+                if [ -f ${RMDUP_STATE} ]; then
+                    if [ X`find ${RMDUP_STATE} -atime +14` != X ]; then
+                        # The state is too old - run script again
+                        RUN_RMDUP=YES
+                    fi
+                else
+                    RUN_RMDUP=YES
+                    cat /dev/null >${RMDUP_STATE}
+                fi
+            fi
+            chown $1 ${RMDUP_STATE}
+            if [ "X${RUN_RMDUP}" = XYES ]; then
+                runuser -s /bin/sh - $1 -c "nice -10 ${RMDUP_SCRIPT} ${RMDUP_PID} ${RMDUP_STATE}" &
+                echo $! >${RMDUP_PID}
+                chown $1 ${RMDUP_PID}
+            fi
+        fi
+        ;;
+    esac &
     FLAG_FILE=`mktemp /tmp/lockss.flag.XXXXX`
     chown $1 ${FLAG_FILE}
     export FLAG_FILE
