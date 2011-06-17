@@ -1041,7 +1041,7 @@
     param[journal_id] = nchem
 
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
-    au < testing ; exists ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
+    au < released ; manifest ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
 
   }
 
@@ -1233,7 +1233,7 @@
 
     au < released ; manifest ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < released ; crawling ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
-    au < testing ; exists ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
+    au < released ; manifest ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
 
   }
 
