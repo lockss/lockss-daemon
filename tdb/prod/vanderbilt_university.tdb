@@ -28,6 +28,7 @@
     
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[base_url] = http://ejournals.library.vanderbilt.edu/ojs/
+      param[journal_id] = ameriquests
       implicit < status ; year ; name ; param[year] >
     
       au < manifest ; 2004 ; AmeriQuests Volume 1 ; 2004 >
@@ -35,6 +36,7 @@
       au < manifest ; 2006 ; AmeriQuests Volume 3 ; 2006 >
       au < manifest ; 2007 ; AmeriQuests Volume 4 ; 2007 > 
       au < manifest ; 2008 ; AmeriQuests Volume 5-6 ; 2008 >
+      au < doesNotExist ; 2009 ; AmeriQuests ; 2009 >
       au < manifest ; 2010 ; AmeriQuests Volume 7 ; 2010 > 
    
     }
