@@ -294,16 +294,16 @@
     au < HighWirePressH20Plugin ; manifest ; 1857-1960 ; BMJ Volume s4-1 ; s4-1 >
     au < HighWirePressH20Plugin ; manifest ; 1861-1979 ; BMJ Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1861-1979 ; BMJ Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; BMJ Volume 280 ; 280 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; BMJ Volume 281 ; 281 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; BMJ Volume 282 ; 282 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; BMJ Volume 283 ; 283 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; BMJ Volume 284 ; 284 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; BMJ Volume 285 ; 285 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; BMJ Volume 286 ; 286 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; BMJ Volume 287 ; 287 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; BMJ Volume 288 ; 288 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; BMJ Volume 289 ; 289 >
+    au < HighWirePressH20Plugin ; notReady ; 1980 ; BMJ Volume 280 ; 280 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; BMJ Volume 281 ; 281 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; BMJ Volume 282 ; 282 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; BMJ Volume 283 ; 283 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; BMJ Volume 284 ; 284 >
+    au < HighWirePressH20Plugin ; notReady ; 1982 ; BMJ Volume 285 ; 285 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; BMJ Volume 286 ; 286 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; BMJ Volume 287 ; 287 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; BMJ Volume 288 ; 288 >
+    au < HighWirePressH20Plugin ; notReady ; 1984 ; BMJ Volume 289 ; 289 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; BMJ Volume 290 ; 290 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; BMJ Volume 291 ; 291 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; BMJ Volume 292 ; 292 >
@@ -345,10 +345,10 @@
     au < HighWirePressH20Plugin ; testing ; 2004 ; BMJ Volume 328 ; 328 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; BMJ Volume 329 ; 329 >
     au < HighWirePressH20Plugin ; testing ; 2005 ; BMJ Volume 330 ; 330 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; BMJ Volume 331 ; 331 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; BMJ Volume 331 ; 331 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; BMJ Volume 332 ; 332 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; BMJ Volume 333 ; 333 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; BMJ Volume 334 ; 334 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; BMJ Volume 334 ; 334 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; BMJ Volume 335 ; 335 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; BMJ Volume 336 ; 336 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; BMJ Volume 337 ; 337 >
