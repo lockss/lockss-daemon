@@ -26,6 +26,7 @@ MAX_STARTS=3	# Max number of quick daemon deaths before give up
 RMDUP_SCRIPT=${LOCKSS_HOME}/etc/lockss/rmdup.pl
 RMDUP_PID=${LOCKSS_HOME}/var/run/lockss/rmdup.pid
 RMDUP_STATE=${LOCKSS_HOME}/var/run/lockss/rmdup.state
+RMDUP_OUT=${LOCKSS_HOME}/var/run/lockss/rmdup.sh
 
 case `uname -s` in
 SunOS)
@@ -156,7 +157,10 @@ while [ -f ${KEEP_GOING} ]; do
             fi
             chown $1 ${RMDUP_STATE}
             if [ "X${RUN_RMDUP}" = XYES ]; then
-                runuser -s /bin/sh - $1 -c "nice -10 ${RMDUP_SCRIPT} ${RMDUP_PID} ${RMDUP_STATE}" &
+                rm -f ${RMDUP_OUT}
+                cat /dev/null >${RMDUP_OUT}
+                chown $1 ${RMDUP_OUT}
+                runuser -s /bin/sh - $1 -c "nice -10 ${RMDUP_SCRIPT} ${RMDUP_PID} ${RMDUP_STATE} ${CFG_FILE} ${RMDUP_OUT}" &
                 echo $! >${RMDUP_PID}
                 chown $1 ${RMDUP_PID}
             fi
