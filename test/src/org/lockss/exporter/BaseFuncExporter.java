@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.4 2011-04-04 07:15:03 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.5 2011-06-20 07:07:15 tlipkis Exp $
  */
 
 /*
@@ -123,7 +123,6 @@ public abstract class BaseFuncExporter extends LockssTestCase {
       if (node.hasContent()) {
 	String url = AuUtil.getCu(node).getUrl();
 	auUrls.add(url);
-	log.info("xxxx: " + url);
 	if (dirpat.matcher(url).matches()) {
 	  auDirs.add(url);
 	}

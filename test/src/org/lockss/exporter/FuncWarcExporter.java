@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExporter.java,v 1.4 2011-04-04 07:15:03 tlipkis Exp $
+ * $Id: FuncWarcExporter.java,v 1.5 2011-06-20 07:07:15 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class FuncWarcExporter extends BaseFuncExporter {
     }
     exp.export();
 
-    int numWarcRecords = 0;
+    List<String> warcUrls = new ArrayList<String>();
     File expFile;
     while ((expFile = nextExportFile()) != null) {
       ArchiveReader ardr = WARCReaderFactory.get(expFile);
@@ -90,6 +90,8 @@ public class FuncWarcExporter extends BaseFuncExporter {
 	  ArchiveRecordHeader hdr = rec.getHeader();
 
 	  String url = hdr.getUrl();
+	  warcUrls.add(url);
+
 	  CachedUrl cu = sau.makeCachedUrl(url);
 	  log.debug("Comp " + hdr.getMimetype() + ": " + url);
 	  assertTrue("No content in AU: " + url, cu.hasContent());
@@ -110,15 +112,14 @@ public class FuncWarcExporter extends BaseFuncExporter {
 			 hdr.getLength() - hdr.getContentBegin());
 	    assertEquals(cu.getContentType(), hdr.getMimetype());
 	  }
-	  numWarcRecords++;
-
 	} finally {
 	  IOUtil.safeClose(rec);
 	}
       }
 
     }
-    assertEquals(auUrls.size(), numWarcRecords);
+    assertEquals("auUrls: " + auUrls + ", warcUrls: " + warcUrls,
+		 auUrls.size(), warcUrls.size());
     if (maxSize <= 0) {
       assertEquals(1, exportFiles.length);
     } else {
