@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.43 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: AuState.java,v 1.44 2011-06-20 16:30:32 tlipkis Exp $
  */
 
 /*
@@ -461,6 +461,7 @@ public class AuState implements LockssSerializable {
     return hasSubstance == SubstanceChecker.State.No;
   }
 
+  /** Get the version string that was last set for the given feature */
   public String getFeatureVersion(Plugin.Feature feat) {
     switch (feat) {
     case Substance: return substanceVersion;
@@ -469,6 +470,8 @@ public class AuState implements LockssSerializable {
     }
   }
 
+  /** Set the version of the feature that was just used to process the
+   * AU */
   public void setFeatureVersion(Plugin.Feature feat, String ver) {
     switch (feat) {
     case Substance: substanceVersion = ver; break;
