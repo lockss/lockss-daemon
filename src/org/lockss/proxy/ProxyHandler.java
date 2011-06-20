@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.69 2011-01-25 07:14:35 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.70 2011-06-20 07:05:34 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.69 2011-01-25 07:14:35 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.70 2011-06-20 07:05:34 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -287,6 +287,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     if (!proxyMgr.isMethodAllowed(request.getMethod())) {
       sendForbid(request,response,uri);
+      logAccess(request, "forbidden method");
       return;
     }
       
@@ -294,6 +295,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (HttpRequest.__CONNECT.equals(request.getMethod())) {
       response.setField(HttpFields.__Connection,"close"); // XXX Needed for IE????
       handleConnect(pathInContext,pathParams,request,response);
+      logAccess(request, "CONNECT forbidden");
       return;
     }
 
@@ -315,6 +317,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     String urlString = uri.toString();
     if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
       sendIndexPage(request, response);
+      logAccess(request, "200 index page");
       return;
     }
     // Does the URL point to a resolver rather than a
@@ -324,6 +327,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (resolvedUrl != null) {
       // Yes - send a redirect
       sendRedirect(request, response, resolvedUrl);
+      logAccess(request, "302 redirect to resolved DOI");
       return;
     }
 */
@@ -359,6 +363,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  }
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
+	  logAccess(request, "200 from cache");
 	  return;
 	} else {
 	  // Not found on cache and told not to forward request
@@ -370,9 +375,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 			  response,
 			  404, errmsg,
 			  pluginMgr.getCandidateAus(urlString));
+	    logAccess(request, "not present, no forward, 404 w/index");
 	  } else {
 	    response.sendError(HttpResponse.__404_Not_Found, errmsg);
 	    request.setHandled(true);
+	    logAccess(request, "not present, no forward, 404");
 	  }
 	  return;
 	}
@@ -386,6 +393,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 		      hostMsg("Can't connect to", uri.getHost(),
 			      "Host not responding (cached status)"),
 		      pluginMgr.getCandidateAus(urlString));
+	logAccess(request, "not present, host down, 504");
 	return;
       }
       if (UrlUtil.isHttpUrl(urlString)) {
@@ -396,6 +404,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	}
       }
       doSun(pathInContext, pathParams, request, response);
+      logAccess(request, "unrecognized request type, forwarded");
     } finally {
       AuUtil.safeRelease(cu);
     }
@@ -546,6 +555,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     return cu != null && AuUtil.isPubNever(cu.getArchivalUnit());
   }
 
+  void logAccess(HttpRequest request, String msg) {
+    proxyMgr.logAccess("Proxy", request.getURI().toString(), msg);
+  }
+
   /** Proxy a connection using LockssUrlConnection */
   void doLockss(String pathInContext,
 		String pathParams,
@@ -565,21 +578,30 @@ public class ProxyHandler extends AbstractHttpHandler {
 			|| isPubNever(cu))) {
 	if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
 	serveFromCache(pathInContext, pathParams, request, response, cu);
+	logAccess(request, "200 from cache");
 	return;
       }
       if (isPubNever(cu)) {
-	Collection<ArchivalUnit> candidateAus =
-	  pluginMgr.getCandidateAus(urlString);
-	if (candidateAus != null && !candidateAus.isEmpty()) {
-	  sendErrorPage(request, response, 404,
-			"Host " + request.getURI().getHost() +
-			" no longer has content",
-			candidateAus);
-	  return;
+	if (isInCache) {
+	// shouldn't happen, (isInCache && isPubNever) handled before
+	// calling this method.
+	  log.error("Shouldn't happen, isInCache && isPubNever: " +
+		    cu.getUrl());
 	} else {
-	  // what to do here?  No content, no candidate AUs, no pub.
-	  // send 404
-	  return;
+	  Collection<ArchivalUnit> candidateAus =
+	    pluginMgr.getCandidateAus(urlString);
+	  if (candidateAus != null && !candidateAus.isEmpty()) {
+	    sendErrorPage(request, response, 404,
+			  "Host " + request.getURI().getHost() +
+			  " no longer has content",
+			  candidateAus);
+	    logAccess(request, "not present, pub_never, 404 with index");
+	    return;
+	  } else {
+	    // what to do here?  No content, no candidate AUs, no pub.
+	    // send 404
+	    return;
+	  }
 	}
       }
       boolean useQuick =

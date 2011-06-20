@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.46 2011-03-06 00:11:54 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.47 2011-06-20 07:05:34 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,12 @@ public class ProxyManager extends BaseProxyManager {
    * cache does not trigger a request to the publisher */
   static final String PARAM_URL_CACHE_ENABLED = PREFIX + "urlCache.enabled";
   static final boolean DEFAULT_URL_CACHE_ENABLED = false;
+
+  /** The log level at which to log all proxy and content server accesses.
+   * To normally log all content accesses (proxy or ServeContent), set to
+   * <tt>info</tt>.  */
+  static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
+  static final String DEFAULT_ACCESS_LOG_LEVEL = "debug2";
 
   /** Duration during which successive accesses to a recently accessed URL
    * does not trigger a request to the publisher */
@@ -186,11 +192,23 @@ public class ProxyManager extends BaseProxyManager {
   private TimerQueue.Request closeTimer;
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickConnPool = null;
+  private int paramAccessLogLevel = -1;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(PREFIX)) {
+      // access log is called by other components (ServeContent) so
+      // configure even if not starting proxy.  Should be moved elsewhere
+      try {
+	String accessLogLevel = config.get(PARAM_ACCESS_LOG_LEVEL,
+					   DEFAULT_ACCESS_LOG_LEVEL);
+	paramAccessLogLevel = Logger.levelOf(accessLogLevel);
+      } catch (RuntimeException e) {
+	log.error("Couldn't set access log level", e);
+	paramAccessLogLevel = -1;
+      }	  
+
       port = config.getInt(PARAM_PORT, DEFAULT_PORT);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
 
@@ -468,4 +486,9 @@ public class ProxyManager extends BaseProxyManager {
     return ! disallowedMethods.contains(method);
   }
 
+  public void logAccess(String type, String url, String msg) {
+    if (paramAccessLogLevel >= 0) {
+      log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
+    }
+  }
 }

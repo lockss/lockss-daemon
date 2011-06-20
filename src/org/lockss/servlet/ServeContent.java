@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.33 2011-06-14 09:28:51 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.34 2011-06-20 07:05:34 tlipkis Exp $
  */
 
 /*
@@ -176,6 +176,8 @@ public class ServeContent extends LockssServlet {
   private String url;
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
+  private String accessLogInfo;
+  private AccessLogType requestType;
 
   private PluginManager pluginMgr;
   private ProxyManager proxyMgr;
@@ -183,6 +185,8 @@ public class ServeContent extends LockssServlet {
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
+    accessLogInfo = null;
+    requestType = AccessLogType.None;
     cu = null;
     url = null;
     au = null;
@@ -254,6 +258,35 @@ public class ServeContent extends LockssServlet {
     return true;
   }
 
+  enum AccessLogType { None, Url, Doi, OpenUrl };
+
+  void logAccess(String msg) {
+    switch (requestType) {
+    case None:
+      proxyMgr.logAccess("Content", url, msg);
+      break;
+    case Url:
+      proxyMgr.logAccess("Content", "URL: " + url, msg);
+      break;
+    case Doi:
+      proxyMgr.logAccess("Content",
+			 "DOI: " + accessLogInfo + " resolved to URL: " + url,
+			 msg);
+      break;
+    case OpenUrl:
+      proxyMgr.logAccess("Content",
+			 "OpenUrl: " + accessLogInfo +
+			 " resolved to URL: " + url,
+			 msg);
+      break;
+    }
+
+  }
+
+  String present(boolean isInCache, String msg) {
+    return isInCache ? "present, " + msg : "not present, " + msg;
+  }
+
   /**
    * Handle a request
    * @throws IOException
@@ -276,6 +309,7 @@ public class ServeContent extends LockssServlet {
       // handle html-encoded URLs with characters like &amp;
       // that can appear as links embedded in HTML pages
       url = StringEscapeUtils.unescapeHtml(url);
+      requestType = AccessLogType.Url;
       
       if (normalizeUrl) {
 	String normUrl;
@@ -306,11 +340,13 @@ public class ServeContent extends LockssServlet {
         // (ignore other parameters)
         if (log.isDebug3()) log.debug3("Resolving DOI: " + doi);
         url = openUrlResolver.resolveFromDOI(doi);
+	requestType = AccessLogType.Doi;
       } else {
 	// pass all params to Open Url resolver
 	Map<String,String> pmap = getParamsAsMap();
         if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
         url = openUrlResolver.resolveOpenUrl(pmap);
+	requestType = AccessLogType.OpenUrl;
       }
       if (!StringUtil.isNullString(url)) {
         log.debug2("Resolved OpenUrl to: " + url);
@@ -325,6 +361,7 @@ public class ServeContent extends LockssServlet {
     // this is also the default case for the bare ServeContent URL, which
     // should generate an index with no message.
     displayIndexPage();
+    logAccess("200 index page");
   }
 
   /**
@@ -355,6 +392,7 @@ public class ServeContent extends LockssServlet {
       } else if (!isNeverProxy()) {
         log.debug2("Content not cached: redirecting to " + url);
         resp.sendRedirect(url);
+	logAccess("not configured, 302 redirect to pub");
       } else {
 	handleMissingUrlRequest(url, PubState.Unknown);
       }
@@ -366,115 +404,6 @@ public class ServeContent extends LockssServlet {
     }
   }
 
-  // Patterm to extract url query arg from Referer string
-  String URL_ARG_REGEXP = "url=([^&]*)";
-  Pattern URL_ARG_PAT = Pattern.compile(URL_ARG_REGEXP);
-
-
-  protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool pool)
-    throws IOException {
-
-    boolean isInCache = isInCache();
-    String ifModified = null;
-    String referer = null;
-    
-    LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
-
-    // check connection header
-    String connectionHdr = req.getHeader(HttpFields.__Connection);
-    if (connectionHdr!=null &&
-        (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
-         connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
-      connectionHdr=null;
-
-    // copy request headers into new request
-    for (Enumeration en = req.getHeaderNames();
-         en.hasMoreElements(); ) {
-      String hdr=(String)en.nextElement();
-
-      if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0) continue;
-
-      if (isInCache) {
-        if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
-          ifModified = req.getHeader(hdr);
-          continue;
-        }
-      }
-
-      if (HttpFields.__Referer.equalsIgnoreCase(hdr)) {
-	referer = req.getHeader(hdr);
-	continue;
-      }
-
-      // XXX Conceivably should suppress Accept-Encoding: header if it
-      // specifies an encoding we don't understand, as that would prevent
-      // us from rewriting.
-
-      // copy request headers to connection
-      Enumeration vals = req.getHeaders(hdr);
-      while (vals.hasMoreElements()) {
-        String val = (String)vals.nextElement();
-        if (val!=null) {
-          conn.addRequestProperty(hdr, val);
-        }
-      }
-    }
-
-    // If the user sent an if-modified-since header, use it unless the
-    // cache file has a later last-modified
-    if (isInCache) {
-      CIProperties cuprops = cu.getProperties();
-      String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
-      if (log.isDebug3()) {
-        log.debug3("ifModified: " + ifModified);
-        log.debug3("cuLast: " + cuLast);
-      }
-      try {
-	ifModified = HeaderUtil.later(ifModified, cuLast);
-      } catch (DateParseException e) {
-	// preserve user's header if parse failure
-      }
-    }
-
-    if (ifModified != null) {
-      conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
-    }
-
-    // If the Referer: is a ServeContent URL then the real referring page
-    // is in the url query arg.
-    if (referer != null) {
-      try {
-	URI refUri = new URI(referer);
-	if (refUri.getPath().endsWith(myServletDescr().getPath())) {
-	  String rawquery = refUri.getRawQuery();
-	  if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
-	  if (!StringUtil.isNullString(rawquery))  {
-	    Matcher m1 = URL_ARG_PAT.matcher(rawquery);
-	    if (m1.find()) {
-	      referer = UrlUtil.decodeUrl(m1.group(1));
-	    }
-	  }
-	}
-      } catch (URISyntaxException e) {
-	log.siteWarning("Can't perse Referer:, ignoring: " + referer);
-      }
-
-      log.debug2("Sending referer: " + referer);
-      conn.setRequestProperty(HttpFields.__Referer, referer);
-    }
-    // send address of original requester
-    conn.addRequestProperty(HttpFields.__XForwardedFor,
-                            req.getRemoteAddr());
-
-    String cookiePolicy = proxyMgr.getCookiePolicy();
-    if (cookiePolicy != null &&
-	!cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
-      conn.setCookiePolicy(cookiePolicy);
-    }
-    
-    return conn;
-  }
-  
   /**
    * Handle request for content that belongs to one of our AUs, whether or
    * not we have content for that URL.  Serve content either from publisher
@@ -491,6 +420,7 @@ public class ServeContent extends LockssServlet {
     if (isNeverProxy()) {
       if (isInCache) {
 	serveFromCache();
+	logAccess("200 from cache");
       } else {
 	handleMissingUrlRequest(url, PubState.KnownDown);
       }
@@ -540,8 +470,9 @@ public class ServeContent extends LockssServlet {
 	  log.debug2("response: " + response + " " + conn.getResponseMessage());
         if (response == HttpResponse.__200_OK) {
           // If publisher responds with content, serve it to user
-	  // XXX Possibly should check for a login page here
+	  // XXX Should check for a login page here
           serveFromPublisher(conn);
+	  logAccess(present(isInCache, "200 from publisher"));
           return;
         } else {
 	  pstate = PubState.NoContent;
@@ -555,6 +486,7 @@ public class ServeContent extends LockssServlet {
     // Either failed to open connection or got non-200 response.
     if (isInCache) {
       serveFromCache();
+      logAccess("present, 200 from cache");
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
@@ -683,6 +615,116 @@ public class ServeContent extends LockssServlet {
 			     conn.getResponseContentLength());
   }
 
+  // Patterm to extract url query arg from Referer string
+  String URL_ARG_REGEXP = "url=([^&]*)";
+  Pattern URL_ARG_PAT = Pattern.compile(URL_ARG_REGEXP);
+
+
+  protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool
+							pool)
+    throws IOException {
+
+    boolean isInCache = isInCache();
+    String ifModified = null;
+    String referer = null;
+    
+    LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
+
+    // check connection header
+    String connectionHdr = req.getHeader(HttpFields.__Connection);
+    if (connectionHdr!=null &&
+        (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
+         connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
+      connectionHdr=null;
+
+    // copy request headers into new request
+    for (Enumeration en = req.getHeaderNames();
+         en.hasMoreElements(); ) {
+      String hdr=(String)en.nextElement();
+
+      if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0) continue;
+
+      if (isInCache) {
+        if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
+          ifModified = req.getHeader(hdr);
+          continue;
+        }
+      }
+
+      if (HttpFields.__Referer.equalsIgnoreCase(hdr)) {
+	referer = req.getHeader(hdr);
+	continue;
+      }
+
+      // XXX Conceivably should suppress Accept-Encoding: header if it
+      // specifies an encoding we don't understand, as that would prevent
+      // us from rewriting.
+
+      // copy request headers to connection
+      Enumeration vals = req.getHeaders(hdr);
+      while (vals.hasMoreElements()) {
+        String val = (String)vals.nextElement();
+        if (val!=null) {
+          conn.addRequestProperty(hdr, val);
+        }
+      }
+    }
+
+    // If the user sent an if-modified-since header, use it unless the
+    // cache file has a later last-modified
+    if (isInCache) {
+      CIProperties cuprops = cu.getProperties();
+      String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+      if (log.isDebug3()) {
+        log.debug3("ifModified: " + ifModified);
+        log.debug3("cuLast: " + cuLast);
+      }
+      try {
+	ifModified = HeaderUtil.later(ifModified, cuLast);
+      } catch (DateParseException e) {
+	// preserve user's header if parse failure
+      }
+    }
+
+    if (ifModified != null) {
+      conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
+    }
+
+    // If the Referer: is a ServeContent URL then the real referring page
+    // is in the url query arg.
+    if (referer != null) {
+      try {
+	URI refUri = new URI(referer);
+	if (refUri.getPath().endsWith(myServletDescr().getPath())) {
+	  String rawquery = refUri.getRawQuery();
+	  if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
+	  if (!StringUtil.isNullString(rawquery))  {
+	    Matcher m1 = URL_ARG_PAT.matcher(rawquery);
+	    if (m1.find()) {
+	      referer = UrlUtil.decodeUrl(m1.group(1));
+	    }
+	  }
+	}
+      } catch (URISyntaxException e) {
+	log.siteWarning("Can't perse Referer:, ignoring: " + referer);
+      }
+
+      log.debug2("Sending referer: " + referer);
+      conn.setRequestProperty(HttpFields.__Referer, referer);
+    }
+    // send address of original requester
+    conn.addRequestProperty(HttpFields.__XForwardedFor,
+                            req.getRemoteAddr());
+
+    String cookiePolicy = proxyMgr.getCookiePolicy();
+    if (cookiePolicy != null &&
+	!cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
+      conn.setCookiePolicy(cookiePolicy);
+    }
+    
+    return conn;
+  }
+
   LinkRewriterFactory getLinkRewriterFactory(String mimeType) {
     try {
       if (StringUtil.isNullString(getParameter("norewrite"))) {
@@ -795,6 +837,7 @@ public class ServeContent extends LockssServlet {
     case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
 		     missing + " is not preserved on this LOCKSS box");
+      logAccess("not present, 404");
       break;
     case Redirect:
     case AlwaysRedirect:
@@ -809,9 +852,11 @@ public class ServeContent extends LockssServlet {
 			 + " ) is not preserved on this LOCKSS box.  "
 			 + "Possibly related content may be found "
 			 + "in the following Archival Units");
+	logAccess("not present, 404 with index");
       } else {
 	resp.sendError(HttpResponse.__404_Not_Found,
 		       missing + " is not preserved on this LOCKSS box");
+	logAccess("not present, 404");
       }
       break;
     case AuIndex:
@@ -819,6 +864,7 @@ public class ServeContent extends LockssServlet {
 		       HttpResponse.__404_Not_Found,
 		       "Requested URL ( " + missing
 		       + " ) is not preserved on this LOCKSS box.");
+      logAccess("not present, 404 with index");
       break;
     }
   }
@@ -939,5 +985,5 @@ public class ServeContent extends LockssServlet {
     public boolean mightHaveContent() {
       return false;
     }
-}
+  }
 }
