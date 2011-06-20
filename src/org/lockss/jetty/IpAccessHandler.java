@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.8 2010-10-02 22:25:53 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.9 2011-06-20 07:03:30 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.8 2010-10-02 22:25:53 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.9 2011-06-20 07:03:30 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -50,10 +50,13 @@ public class IpAccessHandler extends AbstractHttpHandler {
 
   private static Logger log = Logger.getLogger("IpAccess");
 
+  private static String LOCAL_IP_FILTERS = "127.0.0.0/8";
+//   private static String LOCAL_IP_FILTERS = "127.0.0.0/8;::1";
+
   private IpFilter filter = new IpFilter();
   private String serverName;
   private boolean allowLocal = false;
-  private Set localIps;
+  private IpFilter localFilter;
   private boolean logForbidden;
   private String _403Msg;
 
@@ -74,10 +77,14 @@ public class IpAccessHandler extends AbstractHttpHandler {
   }
 
   public void setAllowLocal(boolean allowLocal) {
-    if (localIps == null) {
-      HashSet set = new HashSet();
-      set.add("127.0.0.1");
-      localIps = set;			// set atomically
+    if (localFilter == null) {
+      IpFilter filt = new IpFilter();
+      try {
+	filt.setFilters(LOCAL_IP_FILTERS, null);
+      } catch (IpFilter.MalformedException e) {
+	log.error("Failed to allow loopback addresses" , e);
+      }
+      localFilter = filt;		// set atomically
       // tk - add local interfaces
     }
     this.allowLocal = allowLocal;
@@ -88,7 +95,8 @@ public class IpAccessHandler extends AbstractHttpHandler {
   }
 
   public boolean isIpAuthorized(String ip) throws IpFilter.MalformedException {
-    return (filter.isIpAllowed(ip) || (allowLocal && localIps.contains(ip)));
+    return (filter.isIpAllowed(ip) ||
+	    (allowLocal && localFilter.isIpAllowed(ip)));
   }
 
   /**
