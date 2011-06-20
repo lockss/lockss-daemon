@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleFileMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: SimpleFileMetadataExtractor.java,v 1.3 2011-06-20 07:02:52 tlipkis Exp $
  */
 
 /*
@@ -42,9 +42,13 @@ import org.lockss.plugin.*;
 public abstract class SimpleFileMetadataExtractor
   implements FileMetadataExtractor {
 
-  public void extract(MetadataTarget target, 
-		      CachedUrl cu,
-		      FileMetadataExtractor.Emitter emitter)
+  /** Call the simplified extract() method and emit what it returns.  This
+   * method is final to prevent SimpleFileMetadataExtractors from
+   * accidentally implementing a method that would allow them to emit more
+   * than one ArticleMetadata */
+  public final void extract(MetadataTarget target, 
+			    CachedUrl cu,
+			    FileMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
     ArticleMetadata md = extract(target, cu);
     if (md != null) {
