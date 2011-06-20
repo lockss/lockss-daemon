@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.3 2011-05-18 04:11:26 tlipkis Exp $
+ * $Id: PrintfConverter.java,v 1.4 2011-06-20 07:04:57 tlipkis Exp $
  */
 
 /*
@@ -315,12 +315,13 @@ public abstract class PrintfConverter {
 	     iter.hasNext(); ) {
 	  Object[] oneCombo = (Object[])iter.next();
 	  if (log.isDebug3()) {
-	    log.debug3("sprintf(\""+format+"\", "+oneCombo+")");
+	    log.debug3("sprintf(\""+format+"\", "
+		       + StringUtil.separatedString(oneCombo, ", ")+")");
 	  }
 	  try {
 	    res.add(pf.sprintf(oneCombo));
 	  } catch (Exception e) {
-	    throw new PluginException.InvalidDefinition(e);
+	    throw new PluginException.InvalidDefinition(format, e);
 	  }
 	}
 	res.trimToSize();
