@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.39 2011-06-20 07:01:45 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.40 2011-06-20 16:30:04 tlipkis Exp $
  */
 
 /*
@@ -470,7 +470,7 @@ public abstract class BaseCrawler
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
     if (!crawlStatus.isCrawlError()) {
-      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED); 
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED);
     }
     return false;
   }

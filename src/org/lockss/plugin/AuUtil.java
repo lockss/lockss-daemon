@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.28 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.29 2011-06-20 16:30:03 tlipkis Exp $
  */
 
 /*
@@ -253,7 +253,6 @@ public class AuUtil {
     return StringUtil.equalStrings(plugin.getFeatureVersion(feat),
 				   aus.getFeatureVersion(feat));
   }
-
 
   public static class AuProxyInfo {
     String host = null;
