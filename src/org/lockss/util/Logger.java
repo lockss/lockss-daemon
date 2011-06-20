@@ -1,10 +1,10 @@
 /*
- * $Id: Logger.java,v 1.55 2009-06-13 09:11:08 tlipkis Exp $
+ * $Id: Logger.java,v 1.56 2011-06-20 07:06:15 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -331,7 +331,7 @@ public class Logger {
 
   /** Return numeric log level (<code>Logger.LEVEL_XXX</code>) for given name.
    */
-  static int levelOf(String name) throws IllegalArgumentException {
+  public static int levelOf(String name) throws IllegalArgumentException {
     for (int ix = 0; ix < levelDescrs.length; ix++) {
       LevelDescr l = levelDescrs[ix];
       if (l.name.equalsIgnoreCase(name)) {
