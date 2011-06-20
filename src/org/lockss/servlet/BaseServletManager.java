@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.33 2011-05-09 00:40:41 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.34 2011-06-20 07:05:59 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,13 @@ public abstract class BaseServletManager
   public static final String SUFFIX_PORT = "port";
   /** Listen port for named server */
   public static final String PARAM_PORT = DOC_PREFIX + SUFFIX_PORT;
+
+  public static final String SUFFIX_BIND_ADDRS = "bindAddrs";
+  /** List of IP addresses to which to bind listen socket.  If not set,
+   * server listens on all interfaces.  All listeners must be on the same
+   * port, given by the <tt>port</tt> parameter.  Changing this requires
+   * daemon restart. */
+  public static final String PARAM_BIND_ADDRS = DOC_PREFIX + SUFFIX_BIND_ADDRS;
 
   // IP access list tree below org.lockss.<server>.access.ip
   public static final String SUFFIX_IP_ACCESS_PREFIX = "access.ip.";
@@ -192,6 +199,7 @@ public abstract class BaseServletManager
 
   ManagerInfo mi;
   protected int port;
+  protected List<String> bindAddrs;
   protected UserRealm realm;
   private boolean start;
   private String includeIps;
@@ -260,6 +268,8 @@ public abstract class BaseServletManager
     String prefix = mi.prefix;
     if (changedKeys.contains(prefix)) {
       port = config.getInt(prefix + SUFFIX_PORT, mi.defaultPort);
+      bindAddrs = config.getList(prefix + SUFFIX_BIND_ADDRS,
+				 Collections.EMPTY_LIST);
       start = config.getBoolean(prefix + SUFFIX_START, mi.defaultStart);
       _403Msg = config.get(prefix + SUFFIX_403_MSG, mi.default403Msg);
       enableDebugUser = config.getBoolean(prefix + SUFFIX_ENABLE_DEBUG_USER,
@@ -372,35 +382,19 @@ public abstract class BaseServletManager
       if (resolveRemoteHost) {
 	server.setResolveRemoteHost(true);
       }
-      HttpListener listener;
-      // Create a port listener
+
+      KeyManagerFactory kmf = null;
       if (useSsl) {
-	LockssSslListener lsl =
-	  new LockssSslListener(new org.mortbay.util.InetAddrPort(port));
-	KeyManagerFactory kmf =
-	  keystoreMgr.getKeyManagerFactory(sslKeystoreName,
-					   mi.serverName + " server");
+	kmf = keystoreMgr.getKeyManagerFactory(sslKeystoreName,
+					       mi.serverName + " server");
 	if (kmf == null) {
 	  log.critical("Keystore " + sslKeystoreName +
 		       " not found, not starting " + mi.serverName + " server");
 	  return;
 	}
- 	lsl.setKeyManagerFactory(kmf);
-	listener = lsl;
-
-	if (sslRedirFromPort > 0) {
-	  // Setup redirect from insecure port
-	  log.debug("redir from: " + sslRedirFromPort);
-	  SocketListener redirListener =
-	    new SocketListener(new org.mortbay.util.InetAddrPort(sslRedirFromPort));
-	  redirListener.setIntegralPort(port);
-// 	  redirListener.setConfidentialPort(port);
-	  server.addListener(redirListener);
-	}
-      } else {
-	listener = new SocketListener(new org.mortbay.util.InetAddrPort(port));
       }
-      server.addListener(listener);
+
+      addListeners(server, kmf);
 
       setupAuthRealm();
 
@@ -411,6 +405,56 @@ public abstract class BaseServletManager
     } catch (Exception e) {
       log.warning("Couldn't start servlets", e);
     }
+  }
+
+  protected void addListeners(HttpServer server, KeyManagerFactory kmf) {
+    if (bindAddrs.isEmpty()) {
+      try {
+	addListener(server, null, port, kmf);
+      } catch (UnknownHostException e) {
+	log.critical("UnknownHostException with null host, not starting "
+		     + mi.serverName + " server");
+      }
+    } else {
+      for (String host : bindAddrs) {
+	try {
+	  addListener(server, host, port, kmf);
+	} catch (UnknownHostException e) {
+	  log.critical("Bind addr " + host +
+		       " not found, " + mi.serverName +
+		       " not listening on that address");
+	}
+      }
+    }
+  }
+
+  protected void addListener(HttpServer server,
+			     String host, int port,
+			     KeyManagerFactory kmf)
+      throws UnknownHostException {
+    HttpListener listener;
+    // Create a port listener
+    if (useSsl) {
+      LockssSslListener lsl =
+	new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port));
+      lsl.setKeyManagerFactory(kmf);
+      listener = lsl;
+
+      if (sslRedirFromPort > 0) {
+	// Setup redirect from insecure port
+	log.debug("redir from: " + sslRedirFromPort);
+	SocketListener redirListener =
+	  new SocketListener(new org.mortbay.util.InetAddrPort(host,
+							       sslRedirFromPort));
+	redirListener.setIntegralPort(port);
+	// 	  redirListener.setConfidentialPort(port);
+	server.addListener(redirListener);
+      }
+    } else {
+      listener =
+	new SocketListener(new org.mortbay.util.InetAddrPort(host,port));
+    }
+    server.addListener(listener);
   }
 
   // common context setup
