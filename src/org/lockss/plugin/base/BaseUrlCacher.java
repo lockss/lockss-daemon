@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.84 2011-01-10 09:13:21 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.85 2011-06-20 07:01:21 tlipkis Exp $
  */
 
 /*
@@ -644,6 +644,10 @@ public class BaseUrlCacher implements UrlCacher {
    * site and throws if we get an error code
    */
   private void openOneConnection(String lastModified) throws IOException {
+    if (conn != null) {
+      throw
+	new IllegalStateException("Must call reset() before reusing UrlCacher");
+    }
     try {
       conn = makeConnection(fetchUrl, connectionPool);
       if (proxyHost != null) {
