@@ -1,8 +1,8 @@
 /*
- * $Id: MapUtil.java,v 1.3 2011-06-14 09:29:47 tlipkis Exp $
+ * $Id: MapUtil.java,v 1.4 2011-06-20 07:06:34 tlipkis Exp $
  *
 
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -99,5 +99,21 @@ public class MapUtil {
     } catch (RuntimeException e) {
       throw new IllegalArgumentException("arg must be an even-length list of strings or a list of 2-element lists of strings");
     }
+  }
+
+  /** Returns a copy of the map, treating keys as semicolon-separated list
+   * of alternative actual keys.  (<i>Eg</i>, the map [k1 => v1, k2;k3 =>
+   * v2] is transformed into [k1 => v1, k2 => v2, k3 => v2]
+   */
+  public static Map<String,?> expandAlternativeKeyLists(Map<String,?> map) {
+    Map res = new HashMap();
+    for (Map.Entry<String,?> ent : map.entrySet()) {
+      String multiKey = ent.getKey();
+      Object val = ent.getValue();
+      for (String key : StringUtil.breakAt(multiKey, ";")) {
+ 	res.put(key, val);
+      }
+    }
+    return res;
   }
 }
