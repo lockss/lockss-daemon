@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExploder.java,v 1.11 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ArcExploder.java,v 1.12 2011-06-20 06:59:15 tlipkis Exp $
  */
 
 /*
@@ -186,6 +186,7 @@ public class ArcExploder extends Exploder {
 	  }
 	}
       }
+      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {

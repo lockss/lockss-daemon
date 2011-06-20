@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExploder.java,v 1.2 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: WarcExploder.java,v 1.3 2011-06-20 06:59:15 tlipkis Exp $
  */
 
 /*
@@ -187,6 +187,7 @@ public class WarcExploder extends Exploder {
           }
         }
       }
+      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {

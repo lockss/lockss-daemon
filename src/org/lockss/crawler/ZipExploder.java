@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExploder.java,v 1.13 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: ZipExploder.java,v 1.14 2011-06-20 06:59:15 tlipkis Exp $
  */
 
 /*
@@ -175,6 +175,7 @@ public class ZipExploder extends Exploder {
 	}
 	reTry = maxRetries+1;
       }
+      break;
     } catch (IOException ex) {
       throw new CacheException.ExploderException(ex);
     } finally {
