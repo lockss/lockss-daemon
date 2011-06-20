@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionChecker.java,v 1.4 2006-02-14 05:19:49 tlipkis Exp $
+ * $Id: MockPermissionChecker.java,v 1.5 2011-06-20 07:09:44 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.test;
+
 import java.io.Reader;
+import java.util.*;
+
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 
@@ -39,12 +42,21 @@ public class MockPermissionChecker implements PermissionChecker {
   private static Logger logger = Logger.getLogger("MockPermissionChecker");
 
   int numPermissionGranted=0;
+  Collection<String> permOkUrls;
   int numCalls=0;
 
   String permissionUrl = null;
 
   public MockPermissionChecker(int numPermissionGranted) {
     this.numPermissionGranted = numPermissionGranted;
+  }
+
+  public MockPermissionChecker(String permOkUrl) {
+    this(ListUtil.list(permOkUrl));
+  }
+
+  public MockPermissionChecker(Collection<String> permOkUrls) {
+    this.permOkUrls = permOkUrls;
   }
 
   public void setNumPermissionGranted(int num){
@@ -61,6 +73,15 @@ public class MockPermissionChecker implements PermissionChecker {
 				 Reader reader, String permissionUrl) {
     numCalls++;
     this.permissionUrl = permissionUrl;
+    if (permOkUrls != null) {
+      if (permOkUrls.contains(permissionUrl))  {
+	logger.debug3("Granting permission on "+permissionUrl);
+	return true;
+      } else {
+	logger.debug3("Denying permission on "+permissionUrl);
+	return false;
+      }
+    }
     if (numPermissionGranted-- > 0) {
       logger.debug3("Granting permission on "+permissionUrl);
       return true;

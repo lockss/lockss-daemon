@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.36 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.37 2011-06-20 07:09:44 tlipkis Exp $
  */
 
 /*
@@ -1222,7 +1222,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
 
     //set Crawl spec
-    spec = new SpiderCrawlSpec(urlsToCrawl, permissionPages, crawlRule, 1);
+    spec = new SpiderCrawlSpec(urlsToCrawl,
+			       (permissionPages != null
+				? permissionPages : urlsToCrawl),
+			       crawlRule, 1);
     mmau.setCrawlSpec(spec);
     //set Crawler
     crawler = new TestableFollowLinkCrawler(mmau, spec, new MockAuState());
@@ -1251,6 +1254,33 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.setCrawlSpec(spec);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, mau);
+
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2, url3, url4));
+    assertTrue(crawler.doCrawl());
+    Set expected = SetUtil.fromList(urls);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testMultiStartPageShouldPassPermission(){
+    String permissionUrl1 = "http://www.example.com/index.html";
+    String permissionUrl2 = "http://www.foo.com/index.html";
+    List permissionList = ListUtil.list(permissionUrl1,permissionUrl2);
+
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.foo.com/link3.html";
+    String url4= "http://www.foo.com/link4.html";
+    List urls =
+      ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
+
+    MyMockArchivalUnit mau = new MyMockArchivalUnit();
+    mau.setCrawlSpec(spec);
+
+//     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, mau);
+    MockCachedUrlSet cus =
+      permissionPageTestSetup(null, 2,
+			      ListUtil.append(permissionList, urls),
+			      mau);
 
     crawler.setUrlsToFollow(ListUtil.list(url1, url2, url3, url4));
     assertTrue(crawler.doCrawl());

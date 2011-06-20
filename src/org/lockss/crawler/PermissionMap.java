@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.28 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: PermissionMap.java,v 1.29 2011-06-20 07:09:44 tlipkis Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class PermissionMap {
    * pages grant permission.
    */
   public boolean init() {
-    List pUrls = au.getCrawlSpec().getPermissionPages();
+    List<String> pUrls = au.getCrawlSpec().getPermissionPages();
     boolean abortOnFirstNoPermission =
       CurrentConfig.getBooleanParam(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
                                     BaseCrawler.DEFAULT_ABORT_ON_FIRST_NO_PERMISSION);
@@ -172,9 +172,20 @@ public class PermissionMap {
 					       DEFAULT_PERMISSION_BUF_MAX);
 
     logger.info("Checking permission for " + au + " at " + pUrls);
-    for (Iterator iter = pUrls.iterator(); iter.hasNext(); ) {
-      String permissionPage = (String)iter.next();
+    for (String permissionPage : pUrls) {
       try {
+	String host = UrlUtil.getHost(permissionPage).toLowerCase();
+	PermissionRecord oldRec = permissionAtUrl.get(host);
+	if (oldRec != null) {
+	  if (oldRec.getStatus() == PermissionRecord.PERMISSION_OK) {
+	    logger.debug("Already found permission on " + host +
+			 ", skipping permission page " + permissionPage);
+	    break;
+	  } else {
+	    logger.debug("Previous permission page on " + host +
+			 ", had no permission, trying " + permissionPage);
+	  }
+	}
 	PermissionRecord rec = createRecord(permissionPage);
 	probe(rec);
 	switch (rec.getStatus()) {

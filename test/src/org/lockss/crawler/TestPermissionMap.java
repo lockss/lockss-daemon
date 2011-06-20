@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.13 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.14 2011-06-20 07:09:44 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,9 @@ public class TestPermissionMap extends LockssTestCase {
   private static final String permissionPage1 =
     "http://www.example.com/perm.html";
 
+  private static final String nonPermissionPage1 =
+    "http://www.example.com/noperm.html";
+
   public void testCheckPermissionDaemonPermissionOnly() throws Exception {
     PermissionMap map =
       new PermissionMap(mau, helper,
@@ -158,13 +161,75 @@ public class TestPermissionMap extends LockssTestCase {
                  helper.getCrawlerStatus().getCrawlStatusMsg());
   }
 
+  public void testSameHostFirstHasPermission() throws Exception {
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    mau.addUrl(nonPermissionPage1);
+    CrawlSpec spec =
+      new SpiderCrawlSpec(ListUtil.list(permissionPage1),
+                          ListUtil.list(permissionPage1, nonPermissionPage1),
+                          crawlRule, 1);
+
+    mau.setCrawlSpec(spec);
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(permissionPage1)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertTrue(map.hasPermission("http://www.example.com/"));
+    assertFalse(helper.getCrawlerStatus().isCrawlError());
+  }
+
+  public void testSameHostSecondHasPermission() throws Exception {
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    mau.addUrl(nonPermissionPage1);
+    CrawlSpec spec =
+      new SpiderCrawlSpec(ListUtil.list(permissionPage1),
+                          ListUtil.list(nonPermissionPage1, permissionPage1),
+                          crawlRule, 1);
+
+    mau.setCrawlSpec(spec);
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(permissionPage1)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertFalse(map.hasPermission("http://www.example.com/"));
+    assertTrue(helper.getCrawlerStatus().isCrawlError());
+  }
+
+  public void testSameHostSecondHasPermissionOkDefer() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_ABORT_ON_FIRST_NO_PERMISSION,
+				  "false");
+    MockCrawlRule crawlRule = new MockCrawlRule();
+    crawlRule.addUrlToCrawl(permissionPage1);
+    mau.addUrl(permissionPage1);
+    mau.addUrl(nonPermissionPage1);
+    CrawlSpec spec =
+      new SpiderCrawlSpec(ListUtil.list(permissionPage1),
+                          ListUtil.list(nonPermissionPage1, permissionPage1),
+                          crawlRule, 1);
+
+    mau.setCrawlSpec(spec);
+    PermissionMap map =
+      new PermissionMap(mau, helper,
+                        ListUtil.list(new MockPermissionChecker(permissionPage1)),
+                        new MockPermissionChecker(999));
+    map.init();
+    assertTrue(map.hasPermission("http://www.example.com/"));
+    assertFalse(helper.getCrawlerStatus().isCrawlError());
+  }
+
   // XXX unfinished
   class MyMockPermissionHelper extends MockPermissionHelper {
     CrawlerStatus cStatus = new CrawlerStatus(MockArchivalUnit.newInited(),
 					      null, null);
 
     public UrlCacher makeUrlCacher(String url) {
-      MockUrlCacher muc =  new MockUrlCacher("foo", new MockArchivalUnit());
+      MockUrlCacher muc =  new MockUrlCacher(url, new MockArchivalUnit());
       muc.setUncachedInputStream(new StringInputStream("Blah"));
       return muc;
     }
