@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.102 2011-06-08 23:35:38 pgust Exp $
+ * $Id: StringUtil.java,v 1.103 2011-06-20 07:06:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -353,10 +353,10 @@ public class StringUtil {
    * included in the result.
    * @param trimEachString is true, each string in the result will be trim()ed
    */
-  public static Vector breakAt(String s, String sep,
-			       int maxItems,
-			       boolean discardEmptyStrings,
-			       boolean trimEachString) {
+  public static Vector<String> breakAt(String s, String sep,
+				       int maxItems,
+				       boolean discardEmptyStrings,
+				       boolean trimEachString) {
     Vector res = new Vector();
     int len;
     if (s == null || (len = s.length()) == 0) {
@@ -396,9 +396,9 @@ public class StringUtil {
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result. */
-  public static Vector breakAt(String s, char sep,
-			       int maxItems,
-			       boolean discardEmptyStrings) {
+  public static Vector<String> breakAt(String s, char sep,
+				       int maxItems,
+				       boolean discardEmptyStrings) {
     return breakAt(s, sep, maxItems, discardEmptyStrings, false);
   }
 
@@ -407,7 +407,7 @@ public class StringUtil {
    * @param s string containing zero or more occurrences of separator
    * @param sep the separator char
    */
-  public static Vector breakAt(String s, char sep) {
+  public static Vector<String> breakAt(String s, char sep) {
     return breakAt(s, sep, 0);
   }
 
@@ -418,7 +418,7 @@ public class StringUtil {
    * @param maxItems maximum size of returned vector, 0 = unlimited.  If
    * nonzero, substrings past the nth are discarded.
    */
-  public static Vector breakAt(String s, char sep, int maxItems) {
+  public static Vector<String> breakAt(String s, char sep, int maxItems) {
     return breakAt(s, sep, maxItems, false);
   }
 
@@ -431,9 +431,9 @@ public class StringUtil {
    * @param discardEmptyStrings if true, empty strings (caused by delimiters
    * at the start or end of the string, or adjacent delimiters) will not be
    * included in the result. */
-  public static Vector breakAt(String s, String sep,
-			       int maxItems,
-			       boolean discardEmptyStrings) {
+  public static Vector<String> breakAt(String s, String sep,
+					    int maxItems,
+					    boolean discardEmptyStrings) {
     return breakAt(s, sep, maxItems, discardEmptyStrings, false);
   }
 
@@ -442,7 +442,7 @@ public class StringUtil {
    * @param s string containing zero or more occurrences of separator
    * @param sep the separator String
    */
-  public static Vector breakAt(String s, String sep) {
+  public static Vector<String> breakAt(String s, String sep) {
     return breakAt(s, sep, 0);
   }
 
@@ -453,7 +453,7 @@ public class StringUtil {
    * @param maxItems maximum size of returned vector, 0 = unlimited.  If
    * nonzero, substrings past the nth are discarded.
    */
-  public static Vector breakAt(String s, String sep, int maxItems) {
+  public static Vector<String> breakAt(String s, String sep, int maxItems) {
     return breakAt(s, sep, maxItems, false);
   }
 
@@ -611,13 +611,16 @@ public class StringUtil {
 			   Util.SUBSTITUTE_ALL);
   }
 
+  private static java.util.regex.Pattern COMBINING_DIACRIT_PAT =
+    java.util.regex.Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+
   /**
    * Normalize string by removing diacritical marks.
    * @param s the string
    * @return the string with diacritical marks removed
    */
   static public String toUnaccented(String s) {
-    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+    return COMBINING_DIACRIT_PAT.matcher(Normalizer.normalize(s, Form.NFD)).replaceAll("");
   }
 
   /** Escape values (and keys) to be included in a comma-separated string
