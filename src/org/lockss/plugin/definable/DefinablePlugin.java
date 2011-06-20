@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.57 2011-05-26 03:00:09 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.58 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,7 @@ public class DefinablePlugin extends BasePlugin {
     super.initPlugin(daemon);
     initMimeMap();
     initFeatureVersions();
+    initAuFeatureMap();
     checkParamAgreement();
   }
 
@@ -592,7 +593,7 @@ public class DefinablePlugin extends BasePlugin {
     if (definitionMap.containsKey(KEY_PLUGIN_FEATURE_VERSION_MAP)) {
       Map<Plugin.Feature,String> map = new HashMap<Plugin.Feature,String>();
       Map<String,String> spec =
-	definitionMap.getMap(KEY_PLUGIN_FEATURE_VERSION_MAP);
+	(Map<String,String>)definitionMap.getMap(KEY_PLUGIN_FEATURE_VERSION_MAP);
       log.debug2("features: " + spec);
       for (Map.Entry<String,String> ent : spec.entrySet()) {
 	try {
@@ -614,6 +615,18 @@ public class DefinablePlugin extends BasePlugin {
     }
   }
 
+  protected void initAuFeatureMap() {
+    if (definitionMap.containsKey(DefinableArchivalUnit.KEY_AU_FEATURE_URL_MAP)) {
+      Map<String,?> featMap =
+	definitionMap.getMap(DefinableArchivalUnit.KEY_AU_FEATURE_URL_MAP);
+      for (Map.Entry ent : featMap.entrySet()) {
+	Object val = ent.getValue();
+	if (val instanceof Map) {
+	  ent.setValue(MapUtil.expandAlternativeKeyLists((Map)val));
+	}
+      }
+    }
+  }
 
   /** Create a CrawlWindow if necessary and return it.  The CrawlWindow
    * must be thread-safe. */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.55 2010-10-02 22:24:21 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.56 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -602,18 +602,25 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws ConfigurationException  {
     // uncofigured base url - return an empty list
-    assertIsomorphic(Collections.EMPTY_LIST, mbau.getUrlStems());
+    assertEmpty(mbau.getUrlStems());
     Properties props = new Properties();
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
-    assertEquals(ListUtil.list("http://www.example.com/"), mbau.getUrlStems());
+    assertSameElements(ListUtil.list("http://www.example.com/"),
+		       mbau.getUrlStems());
 
     mbau.setPermissionPages(ListUtil.list(baseUrl,
 					  "http://foo.other.com:8080/vol20/manifest.html"));
-    assertEquals(ListUtil.list("http://www.example.com/",
-			       "http://foo.other.com:8080/"),
-		 mbau.getUrlStems());
+    assertSameElements(ListUtil.list("http://www.example.com/",
+				     "http://foo.other.com:8080/"),
+		       mbau.getUrlStems());
+    mbau.setPermissionPages(ListUtil.list(baseUrl,
+					  "http://foo.other.com:8080/vol20/manifest.html",
+					  "http://foo.other.com:8080/vol21/"));
+    assertSameElements(ListUtil.list("http://www.example.com/",
+				     "http://foo.other.com:8080/"),
+		       mbau.getUrlStems());
   }
 
 

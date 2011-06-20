@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.86 2011-05-18 04:12:38 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.87 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_redirect_to_login_url_pattern";
   public static final String KEY_DONT_POLL =
     "au_dont_poll";
+  public static final String KEY_AU_FEATURE_URL_MAP = "au_feature_urls";
+
+  public static final String AU_FEATURE_SELECTION_ATTR = "au_feature_key";
 
   protected ExternalizableMap definitionMap;
 
@@ -280,6 +283,62 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN,
 			     RegexpContext.Url);
   }
+
+  Map<String,List<String>> featureUrlMap;
+
+  /** Return URLs expanded from au_feature_urls. */
+  public List<String> getAuFeatureUrls(String auFeature) {
+    if (featureUrlMap == null) {
+      featureUrlMap = makeAuFeatureUrlMap();
+    }
+    List<String> res = featureUrlMap.get(auFeature);
+    return res != null ? res : Collections.EMPTY_LIST;
+  }
+
+  protected Map<String,List<String>> makeAuFeatureUrlMap() {
+    Map<String,?> plugFeatureUrlMap =
+      definitionMap.getMap(KEY_AU_FEATURE_URL_MAP, null);
+    if (plugFeatureUrlMap == null) {
+      return Collections.EMPTY_MAP;
+    } else {
+      Map<String,List<String>> res = new HashMap<String,List<String>>();
+      for (Map.Entry<String,?> ent : plugFeatureUrlMap.entrySet()) {
+	String featKey = ent.getKey();
+	Object val = ent.getValue();
+	res.put(featKey, convertFeatureUrlVal(val));
+      }
+      return res;
+    }
+  }
+
+  private List<String> convertFeatureUrlVal(Object val) {
+    if (val instanceof String) {
+      return convertUrlList((String)val);
+    } else if (val instanceof List) {
+      return convertUrlList((List)val, KEY_AU_FEATURE_URL_MAP);
+    } else if (val instanceof Map) {
+      TitleConfig tc = getTitleConfig();
+      String selkey = (tc != null)
+	? AuUtil.getTitleAttribute(this, AU_FEATURE_SELECTION_ATTR)
+	: null;
+      if (selkey == null) {
+	selkey = "*";
+      }
+      Object selval = ((Map)val).get(selkey);
+      if (selval == null && !selkey.equals("*")) {
+	selval = ((Map)val).get("*");
+      }
+      if (selval == null) {
+	return null;
+      }
+      return convertFeatureUrlVal(selval);
+    }
+    log.warning("Unknown feature URL datatype ("
+		+ StringUtil.shortName(val.getClass())
+		+ "): " + val);
+    return null;
+  }
+
 
   List<Pattern> compileRegexpList(String key, RegexpContext context)
       throws ArchivalUnit.ConfigurationException {

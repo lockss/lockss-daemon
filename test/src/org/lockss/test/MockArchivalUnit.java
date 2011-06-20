@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.94 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.95 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -567,6 +567,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setCrawlUrlComparator(Comparator<CrawlUrl> cmprtr) {
     crawlUrlCmp = cmprtr;
+  }
+
+  public List<String> getAuFeatureUrls(String auFeature) {
+    return null;
   }
 
   public String toString() {

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.106 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.107 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -562,6 +562,9 @@ public class NullPlugin {
       return null;
     }
 
+    public List<String> getAuFeatureUrls(String auFeature) {
+      return null;
+    }
   }
 
   /**

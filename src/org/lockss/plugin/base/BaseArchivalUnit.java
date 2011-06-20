@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.150 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.151 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -342,6 +342,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return titleConfig;
   }
 
+  /** AUs have no feature URLs by default */
+  public List<String> getAuFeatureUrls(String auFeature) {
+    return null;
+  }
+
   /**
    * Returns the plugin for this AU
    * @return the plugin for this AU
@@ -390,14 +395,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public Collection<String> getUrlStems() {
     try {
       List<String> perms = getPermissionPages();
-      ArrayList<String> res = new ArrayList<String>(perms.size());
+      Set<String> set = new HashSet<String>();
       for (String url : perms) {
 	String stem = UrlUtil.getUrlPrefix(url);
-	res.add(stem);
+	set.add(stem);
       }
-      res.trimToSize();
+      ArrayList<String> res = new ArrayList<String>(set);
+//       res.trimToSize();
       return res;
     } catch (Exception e) {
+      logger.error("getUrlStems(" + getName() + ")", e);
       // TODO: This should throw an exception. ProxyInfo assumes that a
       // collection will be returned and makes no attempt to catch exceptions
       return Collections.<String>emptyList();

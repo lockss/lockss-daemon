@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.57 2011-03-18 09:56:05 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.58 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -349,6 +349,11 @@ public interface ArchivalUnit {
    * match any TitleCOnfig in the title db.
    */
   public TitleConfig getTitleConfig();
+
+  /**
+   * Returns a list of URLs that may contain the desired feature (e.g.,
+   * au_title, au_volume, au_issue) */
+  public List<String> getAuFeatureUrls(String auFeature);
 
   @SuppressWarnings("serial")
   public class ConfigurationException extends Exception {

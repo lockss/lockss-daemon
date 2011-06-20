@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.50 2011-05-18 04:12:37 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.51 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -627,7 +627,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     cau.setConfiguration(ConfigurationUtil.fromProps(props));
     String expected = "http://www.example.com/contents-by-date.2003.shtml";
     assertEquals(ListUtil.list(expected), cau.getPermissionPages());
-    assertEquals(ListUtil.list("http://www.example.com/"), cau.getUrlStems());
+    assertSameElements(ListUtil.list("http://www.example.com/"),
+		       cau.getUrlStems());
   }
 
   public void testGetMultiplePermissionPages() throws Exception {
@@ -648,7 +649,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String exp1 = "http://www.example.com/foo/";
     String exp2 = "http://mmm.example.org/bar/";
     assertEquals(ListUtil.list(exp1, exp2), cau.getPermissionPages());
-    assertEquals(ListUtil.list("http://www.example.com/",
+    assertSameElements(ListUtil.list("http://www.example.com/",
 			       "http://mmm.example.org/"),
 		 cau.getUrlStems());
   }
@@ -1029,10 +1030,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     }
   }
 
-  public void testLargePlugin() throws Exception {
-    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
-				  "false");
-
+  MyDefinablePlugin loadLargePlugin() {
     MyPluginManager pmgr = new MyPluginManager();
     getMockLockssDaemon().setPluginManager(pmgr);
     pmgr.initService(getMockLockssDaemon());
@@ -1045,7 +1043,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     Plugin plug = pmgr.getPlugin(key);
     assertTrue(plug.toString() + " not a DefinablePlugin",
 	       plug instanceof DefinablePlugin);
-    MyDefinablePlugin defplug = (MyDefinablePlugin)plug;
+    return (MyDefinablePlugin)plug;
+  }
+
+  public void testLargePlugin() throws Exception {
+    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
+				  "false");
+
+    MyDefinablePlugin defplug = loadLargePlugin();
 
     // Configure and create an AU
     Properties p = new Properties();
@@ -1056,9 +1061,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     p.put("issue_set", "1,2,3,3a");
     p.put("num_issue_range", "3-7");
     Configuration auConfig = ConfigManager.fromProperties(p);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
 
-    assertSame(plug, au.getPlugin());
+    assertSame(defplug, au.getPlugin());
 
     // Test that the AU does everything correctly
 
@@ -1091,9 +1097,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
 
-    assertEquals("application/pdf", plug.getDefaultArticleMimeType());
+    assertEquals("application/pdf", defplug.getDefaultArticleMimeType());
 
-    ArticleIteratorFactory afact = plug.getArticleIteratorFactory();
+    ArticleIteratorFactory afact = defplug.getArticleIteratorFactory();
     assertTrue(afact instanceof ArticleIteratorFactoryWrapper);
     assertTrue(""+WrapperUtil.unwrap(afact),
 	       WrapperUtil.unwrap(afact) instanceof MockFactories.ArtIterFact);
@@ -1150,6 +1156,58 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       getHttpResultMap(defplug).mapException(null, null, 522, null);
     assertClass(CacheException.RetryDeadLinkException.class, ex);
     assertEquals("522 from handler", ex.getMessage());
+  }
+
+  public void testFeatureUrls() throws Exception {
+    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
+				  "false");
+
+    MyDefinablePlugin defplug = loadLargePlugin();
+    // Configure and create an AU
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("resolver_url", "http://resolv.er/path/");
+    p.put("journal_code", "J47");
+    p.put("year", "1984");
+//     p.put("issue_set", "1,2,3,3a");
+    p.put("issue_set", "1,2");
+    p.put("num_issue_range", "3-3");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au =
+      (DefinableArchivalUnit)defplug.createAu(auConfig);
+
+    assertEmpty(au.getAuFeatureUrls("wrong_key"));
+    assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3"),
+		 au.getAuFeatureUrls("au_feat_single"));
+    assertEquals(ListUtil.list("http://base.foo/base_path/?issue=3",
+			       "http://base.foo/base_path/foo",
+			       "http://base.foo/base_path/set/1",
+			       "http://base.foo/base_path/set/2"),
+		 au.getAuFeatureUrls("au_feat_list"));
+    assertEquals(ListUtil.list("http://base.foo/base_path/222",
+			       "http://base.foo/base_path/333/1",
+			       "http://base.foo/base_path/333/2"),
+		 au.getAuFeatureUrls("au_feat_map"));
+
+    // Set selector attr in tdb to key1
+    MyDefinableArchivalUnit au2 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc = new TitleConfig("Foo", defplug);
+    tc.setAttributes(MapUtil.map("au_feature_key", "key1"));
+    au2.setTitleConfig(tc);
+    assertEquals(ListUtil.list("http://base.foo/base_path/bar"),
+		 au2.getAuFeatureUrls("au_feat_map"));
+
+    // Set selector attr in tdb to unknown key, should select * entry
+    MyDefinableArchivalUnit au3 =
+      (MyDefinableArchivalUnit)defplug.createAu(auConfig);
+    TitleConfig tc2 = new TitleConfig("Foo", defplug);
+    tc2.setAttributes(MapUtil.map("au_feature_key", "notkey17"));
+    au3.setTitleConfig(tc2);
+    assertEquals(ListUtil.list("http://base.foo/base_path/222",
+			       "http://base.foo/base_path/333/1",
+			       "http://base.foo/base_path/333/2"),
+		 au3.getAuFeatureUrls("au_feat_map"));
   }
 
   public void testOaiDefaultDC() throws Exception {
@@ -1339,6 +1397,25 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public static class MyDefinablePlugin extends DefinablePlugin {
     public MimeTypeInfo getMimeTypeInfo(String contentType) {
       return super.getMimeTypeInfo(contentType);
+    }
+
+    protected ArchivalUnit createAu0(Configuration auConfig)
+	throws ArchivalUnit.ConfigurationException {
+      DefinableArchivalUnit au =
+	new MyDefinableArchivalUnit(this, definitionMap);
+      au.setConfiguration(auConfig);
+      return au;
+    }
+  }
+
+  public static class MyDefinableArchivalUnit extends DefinableArchivalUnit {
+    protected MyDefinableArchivalUnit(DefinablePlugin myPlugin,
+				      ExternalizableMap definitionMap) {
+      super(myPlugin, definitionMap);
+    }
+
+    public void setTitleConfig(TitleConfig tc) {
+      titleConfig = tc;
     }
   }
 

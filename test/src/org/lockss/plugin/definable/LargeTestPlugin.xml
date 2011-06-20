@@ -105,7 +105,7 @@
         <description>A comma delimited list of issues. (eg issue1, issue2)</description>
         <type>9</type>
         <size>20</size>
-        <definitional>true</definitional>
+        <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
@@ -176,5 +176,38 @@
       <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
       <string>522=org.lockss.plugin.definable.LargeTestHttpResponseHandler</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+	<string>au_feat_single</string>
+	<string>&quot;%s?issue=%d&quot;, base_url, num_issue_range</string>
+      </entry>
+      <entry>
+	<string>au_feat_list</string>
+	<list>
+	  <string>&quot;%s?issue=%d&quot;, base_url, num_issue_range</string>
+	  <string>&quot;%sfoo&quot;, base_url</string>
+	  <string>&quot;%sset/%s&quot;, base_url, issue_set</string>
+	</list>
+      </entry>
+      <entry>
+	<string>au_feat_map</string>
+	<map>
+	  <entry>
+	    <string>key1</string>
+	    <string>&quot;%sbar&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>key2;*</string>
+	    <list>
+	      <string>&quot;%s222&quot;, base_url</string>
+	      <string>&quot;%s333/%s&quot;, base_url, issue_set</string>
+	    </list>
+	  </entry>
+	</map>
+      </entry>
+    </map>
   </entry>
 </map>

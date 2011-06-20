@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.7 2007-01-14 08:13:08 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.8 2011-06-20 07:12:45 tlipkis Exp $
  */
 
 /*
@@ -86,9 +86,7 @@ public class TestRegistryPlugin extends LockssTestCase {
 	       "http://foo.com/bar");
     ArchivalUnit au = m_plugin.createAu(auConf);
     assertTrue(au instanceof RegistryArchivalUnit);
-    List urlStems = new ArrayList(au.getUrlStems());
-    assertEquals(1, urlStems.size());
-    assertEquals("http://foo.com/", (urlStems.get(0).toString()));
+    assertSameElements(ListUtil.list("http://foo.com/"), au.getUrlStems());
   }
 
   // Both of these methods are currently empty implementations on
