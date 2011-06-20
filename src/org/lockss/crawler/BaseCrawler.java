@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.38 2011-01-25 07:14:23 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.39 2011-06-20 07:01:45 tlipkis Exp $
  */
 
 /*
@@ -306,19 +306,11 @@ public abstract class BaseCrawler
       alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			  "Crawl of " + au.getName() +
 			  " threw " + e.getMessage());
-      if (isWholeAU()) {
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
-					    e.getMessage());
-      }
+      setThrownStatus(e);
       throw e;
     } catch (OutOfMemoryError e) {
       logger.error("doCrawl0()", e);
-      if (isWholeAU()) {
-	NodeManager nodeManager = getDaemon().getNodeManager(au);
-	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
-					    e.getMessage());
-      }
+      setThrownStatus(e);
       throw e;
     } finally {
       crawlStatus.signalCrawlEnded();
@@ -330,6 +322,18 @@ public abstract class BaseCrawler
 	  logger.warning("closeIdleConnections", e);
 	}
       }
+    }
+  }
+
+  void setThrownStatus(Throwable t) {
+    if (!crawlStatus.isCrawlError()) {
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED,
+				 "Aborted: " + t.getMessage()); 
+    }
+    if (isWholeAU()) {
+      NodeManager nodeManager = getDaemon().getNodeManager(au);
+      nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
+					  t.getMessage());
     }
   }
 
@@ -466,7 +470,7 @@ public abstract class BaseCrawler
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
     if (!crawlStatus.isCrawlError()) {
-      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ABORTED); 
     }
     return false;
   }
