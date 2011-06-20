@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.17 2011-06-02 18:59:51 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.18 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -340,6 +340,20 @@ public class TestAuState extends LockssTestCase {
     aus.setSubstanceState(SubstanceChecker.State.No);
     assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
     assertTrue(aus.hasNoSubstance());
+  }
+
+  public void testFeatureVersion() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertNull(aus.getFeatureVersion(Plugin.Feature.Substance));
+    assertNull(aus.getFeatureVersion(Plugin.Feature.Metadata));
+    assertNull(aus.getFeatureVersion(Plugin.Feature.Poll));
+    aus.setFeatureVersion(Plugin.Feature.Metadata, "foo");
+    assertNull(aus.getFeatureVersion(Plugin.Feature.Substance));
+    assertEquals("foo", aus.getFeatureVersion(Plugin.Feature.Metadata));
+    aus.setFeatureVersion(Plugin.Feature.Substance, "sub_42");
+    assertEquals("sub_42", aus.getFeatureVersion(Plugin.Feature.Substance));
+    assertEquals("foo", aus.getFeatureVersion(Plugin.Feature.Metadata));
+    assertNull(aus.getFeatureVersion(Plugin.Feature.Poll));
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.35 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.36 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private MyMockArchivalUnit mau = null;
   private MockCachedUrlSet mcus = null;
   private CrawlSpec spec = null;
-  private MockAuState aus = new MockAuState();
+  private MockAuState aus;
   private static List testUrlList = ListUtil.list("http://example.com");
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
@@ -77,6 +77,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.setAuId("MyMockTestAu");
     MockNodeManager nodeManager = new MockNodeManager();
     getMockLockssDaemon().setNodeManager(nodeManager, mau);
+    aus = new MockAuState(mau);
     nodeManager.setAuState(aus);
     startUrls = ListUtil.list(startUrl);
     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();

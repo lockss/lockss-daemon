@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.26 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.27 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -128,11 +128,14 @@ public class FuncV3Voter extends LockssTestCase {
     theDaemon.setRouterManager(new MyMockLcapRouter());
     setupAu();
 
-    theDaemon.setNodeManager(new MockNodeManager(), mau);
+    MockNodeManager nodeManager = new MockNodeManager();
+    theDaemon.setNodeManager(nodeManager, mau);
     theDaemon.getPluginManager();
     theDaemon.setDaemonInited(true);
     theDaemon.getSchedService().startService();
 
+    MockAuState aus = new MockAuState(mau);
+    nodeManager.setAuState(aus);
 
     theDaemon.getActivityRegulator(mau).startService();
     idmgr.startService();
@@ -349,7 +352,7 @@ public class FuncV3Voter extends LockssTestCase {
 
 
   private class MyMockV3Voter extends V3Voter {
-    private FifoQueue sentMessages = new FifoQueue();
+    private SimpleQueue sentMessages = new SimpleQueue.Fifo();
 
     public MyMockV3Voter(LockssDaemon daemon, V3LcapMessage msg)
         throws PollSerializerException {
@@ -368,7 +371,7 @@ public class FuncV3Voter extends LockssTestCase {
     public V3LcapMessage getSentMessage() throws InterruptedException {
       log.debug2("Waiting for next message...");
       V3LcapMessage msg =
-	(V3LcapMessage)sentMessages.get(Deadline.in(TIMEOUT_SHOULDNT));
+	(V3LcapMessage)sentMessages.get(TIMEOUT_SHOULDNT);
       log.debug2("Got message: " + msg);
       return msg;
     }

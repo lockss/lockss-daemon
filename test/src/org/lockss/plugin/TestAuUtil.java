@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.15 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.16 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,35 @@ public class TestAuUtil extends LockssTestCase {
     AuState aus = AuUtil.getAuState(mau);
     assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
 		 aus.getClockssSubscriptionStatus());
+  }
+
+  public void testIsCurrentFeatureVersion() throws IOException {
+    setUpDiskPaths();
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    getMockLockssDaemon().getNodeManager(mau).startService();
+    AuState aus = AuUtil.getAuState(mau);
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    mbp.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "3"));
+    assertFalse(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    aus.setFeatureVersion(Plugin.Feature.Substance, "3");
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    mbp.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "3",
+					 Plugin.Feature.Metadata, "18"));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertFalse(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    aus.setFeatureVersion(Plugin.Feature.Metadata, "18");
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    mbp.setFeatureVersionMap(MapUtil.map(Plugin.Feature.Substance, "4",
+					 Plugin.Feature.Metadata, "18"));
+    assertFalse(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
+    aus.setSubstanceState(SubstanceChecker.State.Yes);
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Substance));
+    assertTrue(AuUtil.isCurrentFeatureVersion(mau, Plugin.Feature.Metadata));
   }
 
   public void testHasCrawled() throws IOException {

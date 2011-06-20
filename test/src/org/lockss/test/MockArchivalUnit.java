@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.93 2011-05-09 00:41:16 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.94 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   private HashSet urlsToCache = new HashSet();
 
-  private Plugin plugin;
+  private Plugin plugin = new MockPlugin();
   private String name = "MockAU";
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.27 2011-06-02 18:59:53 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.28 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -241,6 +241,19 @@ public class AuUtil {
                        CurrentConfig.getIntParam(PARAM_POLL_PROTOCOL_VERSION,
                                                  DEFAULT_POLL_PROTOCOL_VERSION));
   }
+
+  /** Return true iff the AU's plugin's implementation version of the named
+   * Feature is the same as that recorded in the AU's AuState the last time
+   * the feature was invoked.  (I.e., if false, the plugin has changed
+   * since the AU was processed, so the AU may need to be reprocessed */
+  public static boolean isCurrentFeatureVersion(ArchivalUnit au,
+						Plugin.Feature feat) {
+    Plugin plugin = au.getPlugin();
+    AuState aus = AuUtil.getAuState(au);
+    return StringUtil.equalStrings(plugin.getFeatureVersion(feat),
+				   aus.getFeatureVersion(feat));
+  }
+
 
   public static class AuProxyInfo {
     String host = null;

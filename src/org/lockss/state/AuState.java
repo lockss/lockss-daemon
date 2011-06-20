@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.42 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: AuState.java,v 1.43 2011-06-20 07:00:06 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.Plugin;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
@@ -69,6 +70,8 @@ public class AuState implements LockssSerializable {
   protected double highestV3Agreement = -1.0;
   protected AccessType accessType;
   protected SubstanceChecker.State hasSubstance;
+  protected String substanceVersion;
+  protected String metadataVersion;
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -443,6 +446,8 @@ public class AuState implements LockssSerializable {
   
   public void setSubstanceState(SubstanceChecker.State state) {
     hasSubstance = state;
+    setFeatureVersion(Plugin.Feature.Substance,
+		      au.getPlugin().getFeatureVersion(Plugin.Feature.Substance));
   }
 
   public SubstanceChecker.State getSubstanceState() {
@@ -454,6 +459,23 @@ public class AuState implements LockssSerializable {
 
   public boolean hasNoSubstance() {
     return hasSubstance == SubstanceChecker.State.No;
+  }
+
+  public String getFeatureVersion(Plugin.Feature feat) {
+    switch (feat) {
+    case Substance: return substanceVersion;
+    case Metadata: return metadataVersion;
+    default: return null;
+    }
+  }
+
+  public void setFeatureVersion(Plugin.Feature feat, String ver) {
+    switch (feat) {
+    case Substance: substanceVersion = ver; break;
+    case Metadata: metadataVersion = ver; break;
+    default:
+    }
+    storeAuState();
   }
 
   /**
