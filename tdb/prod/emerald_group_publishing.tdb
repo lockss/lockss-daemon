@@ -6688,9 +6688,8 @@
 
     param[journal_issn] = 0309-0558
     comment[continued_by] = 1754-243X
-    comment[1] = empty manifest roundup issue 3507
     
-    au < exists ; 1966-1967 ; Managerial Law Volume 1 ; 1 >
+    au < testing ; 1966-1967 ; Managerial Law Volume 1 ; 1 >
     au < released ; 1967 ; Managerial Law Volume 2 ; 2 >
     au < released ; 1967-1968 ; Managerial Law Volume 3 ; 3 >
     au < released ; 1968 ; Managerial Law Volume 4 ; 4 >
@@ -7089,7 +7088,6 @@
 
     param[journal_issn] = 0034-6659
     comment[platform] = online from 1971
-    comment[93] = empty manifest roundup issue 3507
 
     au < released ; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
     au < released ; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
@@ -7113,7 +7111,7 @@
     au < released ; 1990 ; Nutrition & Food Science Volume 90 ; 90 >
     au < released ; 1991 ; Nutrition & Food Science Volume 91 ; 91 >
     au < released ; 1992 ; Nutrition & Food Science Volume 92 ; 92 >
-    au < exists ; 1993 ; Nutrition & Food Science Volume 93 ; 93 >
+    au < testing ; 1993 ; Nutrition & Food Science Volume 93 ; 93 >
     au < released ; 1994 ; Nutrition & Food Science Volume 94 ; 94 >
     au < released ; 1995 ; Nutrition & Food Science Volume 95 ; 95 >
     au < released ; 1996 ; Nutrition & Food Science Volume 96 ; 96 >
