@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-3395
   
-      au < superseded ; Journal of Parasitology Volume 86 ; 86 >
-      au < superseded ; Journal of Parasitology Volume 87 ; 87 >
-      au < superseded ; Journal of Parasitology Volume 88 ; 88 >
-      au < superseded ; Journal of Parasitology Volume 89 ; 89 >
-      au < superseded ; Journal of Parasitology Volume 90 ; 090 >
-      au < doNotProcess ; Journal of Parasitology Volume 90 ; 90 >
-      au < superseded ; Journal of Parasitology Volume 91 ; 91 >
-      au < superseded ; Journal of Parasitology Volume 92 ; 92 >
-      au < superseded ; Journal of Parasitology Volume 93 ; 93 >
+      au < superseded ; 2000 ; Journal of Parasitology Volume 86 ; 86 >
+      au < superseded ; 2001 ; Journal of Parasitology Volume 87 ; 87 >
+      au < superseded ; 2002 ; Journal of Parasitology Volume 88 ; 88 >
+      au < superseded ; 2003 ; Journal of Parasitology Volume 89 ; 89 >
+      au < superseded ; 2004 ; Journal of Parasitology Volume 90 ; 090 >
+      au < doNotProcess ; 2004 ; Journal of Parasitology Volume 90 ; 90 >
+      au < superseded ; 2005 ; Journal of Parasitology Volume 91 ; 91 >
+      au < superseded ; 2006 ; Journal of Parasitology Volume 92 ; 92 >
+      au < superseded ; 2007 ; Journal of Parasitology Volume 93 ; 93 >
     }
 
     {
