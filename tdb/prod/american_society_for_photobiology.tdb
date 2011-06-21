@@ -13,24 +13,24 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0031-8655
   
-      au < superseded ; Photochemistry and Photobiology Volume 71 ; 71 >
-      au < doNotProcess ; Photochemistry and Photobiology Volume 72 ; 72 >
-      au < superseded ; Photochemistry and Photobiology Volume 73 ; 73 >
-      au < superseded ; Photochemistry and Photobiology Volume 74 ; 74 >
-      au < superseded ; Photochemistry and Photobiology Volume 75 ; 75 >
-      au < doNotProcess ; Photochemistry and Photobiology Volume 76 ; 76 >
-      au < superseded ; Photochemistry and Photobiology Volume 77 ; 77 >
-      au < superseded ; Photochemistry and Photobiology Volume 78 ; 78 >
-      au < superseded ; Photochemistry and Photobiology Volume 79 ; 79 >
-      au < superseded ; Photochemistry and Photobiology Volume 80 ; 080 >
-      au < doNotProcess ; Photochemistry and Photobiology Volume 80 ; 80 >
-      au < superseded ; Photochemistry and Photobiology Volume 81 ; 81 >
-      au < superseded ; Photochemistry and Photobiology Volume 82 ; 82 >
+      au < superseded ; 2000 ; Photochemistry and Photobiology Volume 71 ; 71 >
+      au < doNotProcess ; 2000 ; Photochemistry and Photobiology Volume 72 ; 72 >
+      au < superseded ; 2001 ; Photochemistry and Photobiology Volume 73 ; 73 >
+      au < superseded ; 2001 ; Photochemistry and Photobiology Volume 74 ; 74 >
+      au < superseded ; 2002 ; Photochemistry and Photobiology Volume 75 ; 75 >
+      au < doNotProcess ; 2002 ; Photochemistry and Photobiology Volume 76 ; 76 >
+      au < superseded ; 2003 ; Photochemistry and Photobiology Volume 77 ; 77 >
+      au < superseded ; 2003 ; Photochemistry and Photobiology Volume 78 ; 78 >
+      au < superseded ; 2004 ; Photochemistry and Photobiology Volume 79 ; 79 >
+      au < superseded ; 2004 ; Photochemistry and Photobiology Volume 80 ; 080 >
+      au < doNotProcess ; 2004 ; Photochemistry and Photobiology Volume 80 ; 80 >
+      au < superseded ; 2005 ; Photochemistry and Photobiology Volume 81 ; 81 >
+      au < superseded ; 2006 ; Photochemistry and Photobiology Volume 82 ; 82 >
     }
 
     {

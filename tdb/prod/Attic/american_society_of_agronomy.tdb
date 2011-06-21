@@ -15,18 +15,18 @@
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
     param[base_url] = http://agron.scijournals.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; Agronomy Journal Volume 90 ; 90 >
-    au < down ; Agronomy Journal Volume 91 ; 91 >
-    au < down ; Agronomy Journal Volume 92 ; 92 >
-    au < down ; Agronomy Journal Volume 93 ; 93 >
-    au < down ; Agronomy Journal Volume 94 ; 94 >
-    au < down ; Agronomy Journal Volume 95 ; 95 >
-    au < down ; Agronomy Journal Volume 96 ; 96 >
-    au < down ; Agronomy Journal Volume 97 ; 97 >
-    au < down ; Agronomy Journal Volume 98 ; 98 >
-    au < down ; Agronomy Journal Volume 99 ; 99 >
+    au < down ; 1998 ; Agronomy Journal Volume 90 ; 90 >
+    au < down ; 1999 ; Agronomy Journal Volume 91 ; 91 >
+    au < down ; 2000 ; Agronomy Journal Volume 92 ; 92 >
+    au < down ; 2001 ; Agronomy Journal Volume 93 ; 93 >
+    au < down ; 2002 ; Agronomy Journal Volume 94 ; 94 >
+    au < down ; 2003 ; Agronomy Journal Volume 95 ; 95 >
+    au < down ; 2004 ; Agronomy Journal Volume 96 ; 96 >
+    au < down ; 2005 ; Agronomy Journal Volume 97 ; 97 >
+    au < down ; 2006 ; Agronomy Journal Volume 98 ; 98 >
+    au < down ; 2007 ; Agronomy Journal Volume 99 ; 99 >
 
   }
 
@@ -41,15 +41,15 @@
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
     param[base_url] = http://jeq.scijournals.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; Journal of Environmental Quality Volume 30 ; 30 >
-    au < down ; Journal of Environmental Quality Volume 31 ; 31 >
-    au < down ; Journal of Environmental Quality Volume 32 ; 32 >
-    au < down ; Journal of Environmental Quality Volume 33 ; 33 >
-    au < down ; Journal of Environmental Quality Volume 34 ; 34 >
-    au < down ; Journal of Environmental Quality Volume 35 ; 35 >
-    au < down ; Journal of Environmental Quality Volume 36 ; 36 >
+    au < down ; 2001 ; Journal of Environmental Quality Volume 30 ; 30 >
+    au < down ; 2002 ; Journal of Environmental Quality Volume 31 ; 31 >
+    au < down ; 2003 ; Journal of Environmental Quality Volume 32 ; 32 >
+    au < down ; 2004 ; Journal of Environmental Quality Volume 33 ; 33 >
+    au < down ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < down ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < down ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
 
   }
 
