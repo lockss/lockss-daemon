@@ -585,7 +585,7 @@ class Client:
             log.debug( 'AU not found' )
             return False
         if status == 'Successful':
-            if not new_crawl or not isinstance( AU, Simulated_AU ) or int( table[ 0 ][ 'num_urls_fetched' ] ) == AU.expectedUrlCount():
+            if not new_crawl or not isinstance( AU, Simulated_AU ) or int(self.valueOfRef( table[ 0 ][ 'num_urls_fetched' ] )) == AU.expectedUrlCount():
                 return True
             raise LockssError( "Crawl on client %s collected only %s of %i URL's" % ( self, table[ 0 ][ 'num_urls_fetched' ], AU.expectedUrlCount() ) )
         elif status not in ( 'Pending', 'Active', 'Interrupted by daemon exit' ):
@@ -1218,7 +1218,7 @@ class Simulated_AU( AU ):
             return ( flags + ( flags >> 4 ) & 0x0f0f0f0f )*0x01010101 >> 24
 
         # There is an index for each branch and the top level, plus the initial URL
-        return self.numFiles*bit_count( self.fileTypes )*( self.branch + max( 1, self.depth ) ) + self.branch + 2
+        return self.numFiles*bit_count( self.fileTypes )*( self.branch + max( 1, self.depth ) ) + self.branch + 1
 
 
 hash_locks = {}
