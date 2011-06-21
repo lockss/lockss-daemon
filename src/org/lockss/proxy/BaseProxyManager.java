@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.15 2007-11-06 07:09:17 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.16 2011-06-21 22:10:35 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
+import java.net.*;
 import java.util.*;
+
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -62,6 +64,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected IpAccessHandler accessHandler;
   protected ProxyHandler handler;
   private String _403Msg;
+  protected List<String> bindAddrs;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -111,6 +114,35 @@ public abstract class BaseProxyManager extends JettyManager {
     }
   }
 
+  protected void addListeners(HttpServer server) {
+    if (/*bindAddrs != null && */bindAddrs.isEmpty()) {
+      try {
+	addListener(server, null, port);
+      } catch (UnknownHostException e) {
+	log.critical("UnknownHostException with null host, not starting "
+		     + getServerName() + " server");
+      }
+    } else {
+      for (String host : bindAddrs) {
+	try {
+	  addListener(server, host, port);
+	} catch (UnknownHostException e) {
+	  log.critical("Bind addr " + host +
+		       " not found, " + getServerName() +
+		       " not listening on that address");
+	}
+      }
+    }
+  }
+
+  protected void addListener(HttpServer server,
+			     String host, int port)
+      throws UnknownHostException {
+    HttpListener listener =
+      new SocketListener(new org.mortbay.util.InetAddrPort(host,port));
+    server.addListener(listener);
+  }
+
   /** Start a Jetty handler for the proxy.  May be called redundantly, or
    * to change ports.  */
   protected void startProxy() {
@@ -121,13 +153,11 @@ public abstract class BaseProxyManager extends JettyManager {
     if (isServerRunning()) {
       stopProxy();
     }
-    HttpServer server;
     try {
       // Create the server
-      server = new HttpServer();
+      HttpServer server = new HttpServer();
 
-      // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort(port));
+      addListeners(server);
 
       // Create a context
       HttpContext context = server.getContext(null, "/");

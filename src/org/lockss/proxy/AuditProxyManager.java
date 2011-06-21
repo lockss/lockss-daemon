@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.10 2009-07-22 06:40:41 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.11 2011-06-21 22:10:35 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
+import java.util.*;
+
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 
@@ -50,6 +52,12 @@ public class AuditProxyManager extends BaseProxyManager {
   public static final boolean DEFAULT_INDEX = false;
 
   public static final String PARAM_PORT = PREFIX + "port";
+
+  /** List of IP addresses to which to bind listen socket.  If not set,
+   * server listens on all interfaces.  All listeners must be on the same
+   * port, given by the <tt>port</tt> parameter.  Changing this requires
+   * daemon restart. */
+  public static final String PARAM_BIND_ADDRS = PREFIX + "bindAddrs";
 
   protected boolean auditIndex = DEFAULT_INDEX;
 
@@ -74,6 +82,7 @@ public class AuditProxyManager extends BaseProxyManager {
       start = config.getBoolean(PARAM_START, DEFAULT_START);
       auditIndex = config.getBoolean(PARAM_INDEX, DEFAULT_INDEX);
       if (start) {
+	bindAddrs = config.getList(PARAM_BIND_ADDRS, Collections.EMPTY_LIST);
 	if (getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.47 2011-06-20 07:05:34 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.48 2011-06-21 22:10:35 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,12 @@ public class ProxyManager extends BaseProxyManager {
   public static final String PARAM_PORT = PREFIX + "port";
   public static final int DEFAULT_PORT = 9090;
 
+  /** List of IP addresses to which to bind listen socket.  If not set,
+   * server listens on all interfaces.  All listeners must be on the same
+   * port, given by the <tt>port</tt> parameter.  Changing this requires
+   * daemon restart. */
+  public static final String PARAM_BIND_ADDRS = PREFIX + "bindAddrs";
+
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
@@ -65,16 +71,16 @@ public class ProxyManager extends BaseProxyManager {
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
+  /** The log level at which to log all proxy accesses.  To normally log
+   * all content accesses (proxy or ServeContent), set to <tt>info</tt>.
+   * To disable set to <tt>none</tt>. */
+  static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
+  static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
   /** If true, successive accesses to recently accessed content on the
    * cache does not trigger a request to the publisher */
   static final String PARAM_URL_CACHE_ENABLED = PREFIX + "urlCache.enabled";
   static final boolean DEFAULT_URL_CACHE_ENABLED = false;
-
-  /** The log level at which to log all proxy and content server accesses.
-   * To normally log all content accesses (proxy or ServeContent), set to
-   * <tt>info</tt>.  */
-  static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
-  static final String DEFAULT_ACCESS_LOG_LEVEL = "debug2";
 
   /** Duration during which successive accesses to a recently accessed URL
    * does not trigger a request to the publisher */
@@ -213,6 +219,7 @@ public class ProxyManager extends BaseProxyManager {
       start = config.getBoolean(PARAM_START, DEFAULT_START);
 
       if (start) {
+	bindAddrs = config.getList(PARAM_BIND_ADDRS, Collections.EMPTY_LIST);
 	paramCloseIdleConnectionsInterval =
 	  config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_INTERVAL,
 				 DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL);
