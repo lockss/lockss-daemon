@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.214 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: PollManager.java,v 1.215 2011-06-21 22:08:29 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,11 @@ public class PollManager
   static final String PARAM_DELETE_INVALID_POLL_STATE_DIRS =
     PREFIX + "deleteInvalidPollStateDirs";
   static final boolean DEFAULT_DELETE_INVALID_POLL_STATE_DIRS = true;
+  
+  /** If true, discard saved poll state at startup (i.e., don't restore
+   * polls that were running before exit).  */
+  static final String PARAM_DISCARD_SAVED_POLLS = PREFIX + "discardSavedPolls";
+  static final boolean DEFAULT_DISCARD_SAVED_POLLS = false;
   
   public static final String PARAM_ENABLE_V3_POLLER =
     org.lockss.poller.v3.V3PollFactory.PARAM_ENABLE_V3_POLLER;
@@ -246,7 +251,8 @@ public class PollManager
   private long paramMinPollAttemptInterval = DEFAULT_MIN_POLL_ATTEMPT_INTERVAL;
   private double paramMinPercentForRepair =
     V3Voter.DEFAULT_MIN_PERCENT_AGREEMENT_FOR_REPAIRS;
-
+  private boolean paramDiscardSavedPolls =
+    DEFAULT_DISCARD_SAVED_POLLS;
 
   private boolean isAsynch = DEFAULT_PSM_ASYNCH;
   private long wrongGroupRetryTime = DEFAULT_WRONG_GROUP_RETRY_TIME;
@@ -1042,6 +1048,10 @@ public class PollManager
         newConfig.getBoolean(PARAM_DELETE_INVALID_POLL_STATE_DIRS,
                              DEFAULT_DELETE_INVALID_POLL_STATE_DIRS);
 
+      paramDiscardSavedPolls =
+        newConfig.getBoolean(PARAM_DISCARD_SAVED_POLLS,
+			     DEFAULT_DISCARD_SAVED_POLLS);
+
       paramToplevelPollInterval =
 	newConfig.getTimeInterval(PARAM_TOPLEVEL_POLL_INTERVAL,
 				  DEFAULT_TOPLEVEL_POLL_INTERVAL);
@@ -1479,10 +1489,10 @@ public class PollManager
               new V3PollerSerializer(getDaemon(), dirs[ix]);
             PollerStateBean psb = pollSerializer.loadPollerState();
             // Check to see if this poll has expired.
-            long now = TimeBase.nowMs();
-            if (psb.getPollDeadline() <= now) {
-              theLog.info("Poll found in directory " + dirs[ix] + 
-                          " has expired, cleaning up directory and skipping.");
+            boolean expired = psb.getPollDeadline() <= TimeBase.nowMs();
+            if (paramDiscardSavedPolls || expired) {
+              theLog.debug("Discarding poll " + (expired ? "(expired) " : "")
+			   + "in directory " + dirs[ix]);
               FileUtil.delTree(dirs[ix]);
               continue;
             }
@@ -1520,10 +1530,10 @@ public class PollManager
               new V3VoterSerializer(getDaemon(), dirs[ix]);
             VoterUserData vd = voterSerializer.loadVoterUserData();
             // Check to see if this poll has expired.
-            long now = TimeBase.nowMs();
-            if (vd.getDeadline() <= now) {
-              theLog.info("Voter found in directory " + dirs[ix] + 
-                          " has expired, cleaning up directory and skipping.");
+            boolean expired = vd.getDeadline() <= TimeBase.nowMs();
+            if (paramDiscardSavedPolls || expired) {
+              theLog.debug("Discarding vote " + (expired ? "(expired) " : "")
+			   + "in directory " + dirs[ix]);
               FileUtil.delTree(dirs[ix]);
               continue;
             }
