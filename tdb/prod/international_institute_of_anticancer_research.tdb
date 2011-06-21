@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
 
@@ -17,13 +17,14 @@
 
     param[base_url] = http://ar.iiarjournals.org/
 
-    au < released ; Anticancer Research Volume 24 ; 24 >
-    au < released ; Anticancer Research Volume 25 ; 25 >
-    au < released ; Anticancer Research Volume 26 ; 26 >
-    au < released ; Anticancer Research Volume 27 ; 27 >
-    au < released ; Anticancer Research Volume 28 ; 28 >
-    au < released ; Anticancer Research Volume 29 ; 29 >
-    au < released ; Anticancer Research Volume 30 ; 30 >
+    au < released ; 2004 ; Anticancer Research Volume 24 ; 24 >
+    au < released ; 2005 ; Anticancer Research Volume 25 ; 25 >
+    au < released ; 2006 ; Anticancer Research Volume 26 ; 26 >
+    au < released ; 2007 ; Anticancer Research Volume 27 ; 27 >
+    au < released ; 2008 ; Anticancer Research Volume 28 ; 28 >
+    au < released ; 2009 ; Anticancer Research Volume 29 ; 29 >
+    au < released ; 2010 ; Anticancer Research Volume 30 ; 30 >
+    au < manifest ; 2011 ; Anticancer Research Volume 31 ; 31 >
 
   }
   
@@ -37,13 +38,15 @@
   
    param[base_url] = http://cgp.iiarjournals.org/
 
-    au < manifest ; Cancer Genomics and Proteomics Volume 1 ; 1 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 2 ; 2 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 3 ; 3 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 4 ; 4 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 5 ; 5 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 6 ; 6 >
-    au < manifest ; Cancer Genomics and Proteomics Volume 7 ; 7 >
+    au < manifest ; 2004 ; Cancer Genomics and Proteomics Volume 1 ; 1 >
+    au < manifest ; 2005 ; Cancer Genomics and Proteomics Volume 2 ; 2 >
+    au < manifest ; 2006 ; Cancer Genomics and Proteomics Volume 3 ; 3 >
+    au < manifest ; 2007 ; Cancer Genomics and Proteomics Volume 4 ; 4 >
+    au < manifest ; 2008 ; Cancer Genomics and Proteomics Volume 5 ; 5 >
+    au < manifest ; 2009 ; Cancer Genomics and Proteomics Volume 6 ; 6 >
+    au < manifest ; 2010 ; Cancer Genomics and Proteomics Volume 7 ; 7 >
+    au < manifest ; 2011 ; Cancer Genomics and Proteomics Volume 8 ; 8 >
+
 
   }
   
@@ -58,13 +61,15 @@
 
     param[base_url] = http://iv.iiarjournals.org/
 
-    au < manifest ; In Vivo Volume 18 ; 18 >
-    au < manifest ; In Vivo Volume 19 ; 19 >
-    au < manifest ; In Vivo Volume 20 ; 20 >
-    au < manifest ; In Vivo Volume 21 ; 21 >
-    au < manifest ; In Vivo Volume 22 ; 22 >
-    au < manifest ; In Vivo Volume 23 ; 23 >
-    au < manifest ; In Vivo Volume 24 ; 24 >
+    au < manifest ; 2004 ; In Vivo Volume 18 ; 18 >
+    au < manifest ; 2005 ; In Vivo Volume 19 ; 19 >
+    au < manifest ; 2006 ; In Vivo Volume 20 ; 20 >
+    au < manifest ; 2007 ; In Vivo Volume 21 ; 21 >
+    au < manifest ; 2008 ; In Vivo Volume 22 ; 22 >
+    au < manifest ; 2009 ; In Vivo Volume 23 ; 23 >
+    au < manifest ; 2010 ; In Vivo Volume 24 ; 24 >
+    au < manifest ; 2011 ; In Vivo Volume 25 ; 25 >
+
 
   }
 
