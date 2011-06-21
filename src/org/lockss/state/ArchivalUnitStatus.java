@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.99 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.100 2011-06-21 00:31:47 tlipkis Exp $
  */
 
 /*
@@ -83,8 +83,6 @@ public class ArchivalUnitStatus
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
 
-
-  static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
   private static Logger logger = Logger.getLogger("AuStatus");
   private static int defaultNumRows = DEFAULT_MAX_NODES_TO_DISPLAY;
@@ -698,8 +696,8 @@ public class ArchivalUnitStatus
       if (status != null) {
 	rowMap.put("NodeStatus", status);
       }
-      Object versionObj = DASH;
-      Object sizeObj = DASH;
+      Object versionObj = StatusTable.NO_VALUE;
+      Object sizeObj = StatusTable.NO_VALUE;
       if (hasContent) {
 	int version = node.getCurrentVersion();
         versionObj = new OrderedObject(new Long(version));
@@ -726,8 +724,8 @@ public class ArchivalUnitStatus
 	  rowMap.put("NodeTreeSize", new OrderedObject(new Long(treeSize)));
 	}
       } else {
-	rowMap.put("NodeChildCount", DASH);
-	rowMap.put("NodeTreeSize", DASH);
+	rowMap.put("NodeChildCount", StatusTable.NO_VALUE);
+	rowMap.put("NodeTreeSize", StatusTable.NO_VALUE);
       }
       return rowMap;
     }

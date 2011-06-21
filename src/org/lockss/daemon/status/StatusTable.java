@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.55 2011-03-18 09:55:36 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.56 2011-06-21 00:31:47 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ public class StatusTable {
 
   public static final int OPTION_NO_ROWS = 1;
   public static final int OPTION_DEBUG_USER = 2;
+  public static final OrderedObject NO_VALUE =
+    new OrderedObject("-", new Long(-1));
 
   private String name;
   private String key;

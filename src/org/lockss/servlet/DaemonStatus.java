@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.81 2010-12-10 08:03:11 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.82 2011-06-21 00:31:47 tlipkis Exp $
  */
 
 /*
@@ -728,6 +728,10 @@ public class DaemonStatus extends LockssServlet {
 
   // Handle lists
   private String getTextDisplayString(Object val) {
+    if (val == StatusTable.NO_VALUE) {
+      // Some, but not all text formats avoid calling this with NO_VALUE
+      return "";
+    }
     if (val instanceof java.util.List) {
       StringBuilder sb = new StringBuilder();
       for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {

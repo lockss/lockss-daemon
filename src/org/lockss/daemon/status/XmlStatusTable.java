@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.15 2010-12-10 08:03:12 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.16 2011-06-21 00:31:47 tlipkis Exp $
  */
 
 /*
@@ -281,19 +281,21 @@ public class XmlStatusTable {
   Element addNonLinkValueElement(Element parent, Object value, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
-    if (value instanceof StatusTable.DisplayedValue) {
-      // A DisplayedValue - save display characteristics
-      StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
-      String color = dv.getColor();
-      if (color != null) {
-	xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
+    if (value != StatusTable.NO_VALUE) {
+      if (value instanceof StatusTable.DisplayedValue) {
+	// A DisplayedValue - save display characteristics
+	StatusTable.DisplayedValue dv = (StatusTable.DisplayedValue)value;
+	String color = dv.getColor();
+	if (color != null) {
+	  xmlBuilder.setAttribute(element, XmlStatusConstants.COLOR, color);
+	}
+	if (dv.getBold()) {
+	  xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
+	}
+	value = dv.getValue();
       }
-      if (dv.getBold()) {
-	xmlBuilder.setAttribute(element, XmlStatusConstants.BOLD, "true");
-      }
-      value = dv.getValue();
+      XmlDomBuilder.addText(element, formatByType(value, type));
     }
-    XmlDomBuilder.addText(element, formatByType(value, type));
     return element;
   }
 
