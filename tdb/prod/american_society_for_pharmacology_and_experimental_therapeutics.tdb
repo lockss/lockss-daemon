@@ -5,7 +5,7 @@
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; name ; param[volume_name] >
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
 
@@ -18,12 +18,12 @@
 
     param[base_url] = http://dmd.aspetjournals.org/
 
-    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 33 ; 33 >
-    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 34 ; 34 >
-    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; released ; Drug Metabolism and Disposition Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; released ; Drug Metabolism and Disposition Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; released ; Drug Metabolism and Disposition Volume 38 ; 38 >
+    au < HighWireStrVolPlugin ; released ; 2005 ; Drug Metabolism and Disposition Volume 33 ; 33 >
+    au < HighWireStrVolPlugin ; released ; 2006 ; Drug Metabolism and Disposition Volume 34 ; 34 >
+    au < HighWireStrVolPlugin ; released ; 2007 ; Drug Metabolism and Disposition Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Drug Metabolism and Disposition Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Drug Metabolism and Disposition Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Drug Metabolism and Disposition Volume 38 ; 38 >
 
   }
 
@@ -38,28 +38,28 @@
 
     param[base_url] = http://jpet.aspetjournals.org/
 
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
-    au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 327 ; 327 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 328 ; 328 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 329 ; 329 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 330 ; 330 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 331 ; 331 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 332 ; 332 >
-    au < HighWirePressH20Plugin ; released ; Journal of Pharmacology and Experimental Therapeutics Volume 333 ; 333 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
+    au < HighWirePressH20Plugin ; released ; 2006 ;Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Pharmacology and Experimental Therapeutics Volume 327 ; 327 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Pharmacology and Experimental Therapeutics Volume 328 ; 328 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Pharmacology and Experimental Therapeutics Volume 329 ; 329 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Pharmacology and Experimental Therapeutics Volume 330 ; 330 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Pharmacology and Experimental Therapeutics Volume 331 ; 331 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 332 ; 332 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Pharmacology and Experimental Therapeutics Volume 333 ; 333 >
 
   }
 
@@ -74,17 +74,17 @@
     comment[urgent] = ceasing publication
     param[base_url] = http://molinterv.aspetjournals.org/
 
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; released ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; released ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; released ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; released ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; released ; 2011 ;  Molecular Interventions Volume 11 ; 11 >
 
   }
 
@@ -99,17 +99,17 @@
 
     param[base_url] = http://molpharm.aspetjournals.org/
 
-    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 67 ; 67 >
-    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 68 ; 68 >
-    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 69 ; 69 >
-    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 70 ; 70 >
-    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 77 ; 77 >
+    au < HighWireStrVolPlugin ; released ; 2005 ; Molecular Pharmacology Volume 67 ; 67 >
+    au < HighWireStrVolPlugin ; released ; 2005 ; Molecular Pharmacology Volume 68 ; 68 >
+    au < HighWireStrVolPlugin ; released ; 2006 ; Molecular Pharmacology Volume 69 ; 69 >
+    au < HighWireStrVolPlugin ; released ; 2006 ; Molecular Pharmacology Volume 70 ; 70 >
+    au < HighWireStrVolPlugin ; released ; 2007 ; Molecular Pharmacology Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Molecular Pharmacology Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Pharmacology Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Pharmacology Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Pharmacology Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Molecular Pharmacology Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Pharmacology Volume 77 ; 77 >
 
   }
 
@@ -124,12 +124,12 @@
 
     param[base_url] = http://pharmrev.aspetjournals.org/
 
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; released ; Pharmacological Reviews Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; Pharmacological Reviews Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; Pharmacological Reviews Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; released ; 2007 ; Pharmacological Reviews Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; released ; 2008 ; Pharmacological Reviews Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Pharmacological Reviews Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Pharmacological Reviews Volume 62 ; 62 >
 
   }
 
