@@ -15,60 +15,60 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
     param[journal_id] = lo
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     
-    au < ready ; Limnology and Oceanography Volume 1 ; 1 >
-    au < ready ; Limnology and Oceanography Volume 2 ; 2 >
-    au < ready ; Limnology and Oceanography Volume 3 ; 3 >
-    au < ready ; Limnology and Oceanography Volume 4 ; 4 >
-    au < ready ; Limnology and Oceanography Volume 5 ; 5 >
-    au < ready ; Limnology and Oceanography Volume 6 ; 6 >
-    au < ready ; Limnology and Oceanography Volume 7 ; 7 >
-    au < ready ; Limnology and Oceanography Volume 8 ; 8 >
-    au < ready ; Limnology and Oceanography Volume 9 ; 9 >
-    au < ready ; Limnology and Oceanography Volume 10 ; 10 >
-    au < ready ; Limnology and Oceanography Volume 11 ; 11 >
-    au < ready ; Limnology and Oceanography Volume 12 ; 12 >
-    au < ready ; Limnology and Oceanography Volume 13 ; 13 >
-    au < ready ; Limnology and Oceanography Volume 14 ; 14 >
-    au < ready ; Limnology and Oceanography Volume 15 ; 15 >
-    au < ready ; Limnology and Oceanography Volume 16 ; 16 >
-    au < ready ; Limnology and Oceanography Volume 17 ; 17 >
-    au < ready ; Limnology and Oceanography Volume 18 ; 18 >
-    au < ready ; Limnology and Oceanography Volume 19 ; 19 >
-    au < ready ; Limnology and Oceanography Volume 20 ; 20 >
-    au < ready ; Limnology and Oceanography Volume 21 ; 21 >
-    au < ready ; Limnology and Oceanography Volume 22 ; 22 >
-    au < ready ; Limnology and Oceanography Volume 23 ; 23 >
-    au < ready ; Limnology and Oceanography Volume 24 ; 24 >
-    au < ready ; Limnology and Oceanography Volume 25 ; 25 >
-    au < ready ; Limnology and Oceanography Volume 26 ; 26 >
-    au < ready ; Limnology and Oceanography Volume 27 ; 27 >
-    au < ready ; Limnology and Oceanography Volume 28 ; 28 >
-    au < ready ; Limnology and Oceanography Volume 29 ; 29 >
-    au < ready ; Limnology and Oceanography Volume 30 ; 30 >
-    au < ready ; Limnology and Oceanography Volume 31 ; 31 >
-    au < ready ; Limnology and Oceanography Volume 32 ; 32 >
-    au < ready ; Limnology and Oceanography Volume 33 ; 33 >
-    au < ready ; Limnology and Oceanography Volume 34 ; 34 >
-    au < ready ; Limnology and Oceanography Volume 35 ; 35 >
-    au < ready ; Limnology and Oceanography Volume 36 ; 36 >
-    au < ready ; Limnology and Oceanography Volume 37 ; 37 >
-    au < ready ; Limnology and Oceanography Volume 38 ; 38 >
-    au < ready ; Limnology and Oceanography Volume 39 ; 39 >
-    au < ready ; Limnology and Oceanography Volume 40 ; 40 >
-    au < ready ; Limnology and Oceanography Volume 41 ; 41 >
-    au < ready ; Limnology and Oceanography Volume 42 ; 42 >
-    au < ready ; Limnology and Oceanography Volume 43 ; 43 >
-    au < ready ; Limnology and Oceanography Volume 44 ; 44 >
-    au < ready ; Limnology and Oceanography Volume 45 ; 45 >
-    au < ready ; Limnology and Oceanography Volume 46 ; 46 >
-    au < ready ; Limnology and Oceanography Volume 47 ; 47 >
-    au < ready ; Limnology and Oceanography Volume 48 ; 48 >
-    au < ready ; Limnology and Oceanography Volume 49 ; 49 >
-    au < ready ; Limnology and Oceanography Volume 50 ; 50 >
-    au < ready ; Limnology and Oceanography Volume 51 ; 51 >
-    au < ready ; Limnology and Oceanography Volume 52 ; 52 >
+    au < ready ; 1958 ; Limnology and Oceanography Volume 1 ; 1 >
+    au < ready ; 1959 ; Limnology and Oceanography Volume 2 ; 2 >
+    au < ready ; 1960 ; Limnology and Oceanography Volume 3 ; 3 >
+    au < ready ; 1961 ; Limnology and Oceanography Volume 4 ; 4 >
+    au < ready ; 1962 ; Limnology and Oceanography Volume 5 ; 5 >
+    au < ready ; 1963 ; Limnology and Oceanography Volume 6 ; 6 >
+    au < ready ; 1962 ; Limnology and Oceanography Volume 7 ; 7 >
+    au < ready ; 1963 ; Limnology and Oceanography Volume 8 ; 8 >
+    au < ready ; 1964 ; Limnology and Oceanography Volume 9 ; 9 >
+    au < ready ; 1965 ; Limnology and Oceanography Volume 10 ; 10 >
+    au < ready ; 1966 ; Limnology and Oceanography Volume 11 ; 11 >
+    au < ready ; 1967 ; Limnology and Oceanography Volume 12 ; 12 >
+    au < ready ; 1968 ; Limnology and Oceanography Volume 13 ; 13 >
+    au < ready ; 1969 ; Limnology and Oceanography Volume 14 ; 14 >
+    au < ready ; 1970 ; Limnology and Oceanography Volume 15 ; 15 >
+    au < ready ; 1971 ; Limnology and Oceanography Volume 16 ; 16 >
+    au < ready ; 1972 ; Limnology and Oceanography Volume 17 ; 17 >
+    au < ready ; 1973 ; Limnology and Oceanography Volume 18 ; 18 >
+    au < ready ; 1974 ; Limnology and Oceanography Volume 19 ; 19 >
+    au < ready ; 1975 ; Limnology and Oceanography Volume 20 ; 20 >
+    au < ready ; 1976 ; Limnology and Oceanography Volume 21 ; 21 >
+    au < ready ; 1977 ; Limnology and Oceanography Volume 22 ; 22 >
+    au < ready ; 1978 ; Limnology and Oceanography Volume 23 ; 23 >
+    au < ready ; 1979 ; Limnology and Oceanography Volume 24 ; 24 >
+    au < ready ; 1980 ; Limnology and Oceanography Volume 25 ; 25 >
+    au < ready ; 1981 ; Limnology and Oceanography Volume 26 ; 26 >
+    au < ready ; 1982 ; Limnology and Oceanography Volume 27 ; 27 >
+    au < ready ; 1983 ; Limnology and Oceanography Volume 28 ; 28 >
+    au < ready ; 1984 ; Limnology and Oceanography Volume 29 ; 29 >
+    au < ready ; 1985 ; Limnology and Oceanography Volume 30 ; 30 >
+    au < ready ; 1986 ; Limnology and Oceanography Volume 31 ; 31 >
+    au < ready ; 1987 ; Limnology and Oceanography Volume 32 ; 32 >
+    au < ready ; 1988 ; Limnology and Oceanography Volume 33 ; 33 >
+    au < ready ; 1989 ; Limnology and Oceanography Volume 34 ; 34 >
+    au < ready ; 1990 ; Limnology and Oceanography Volume 35 ; 35 >
+    au < ready ; 1991 ; Limnology and Oceanography Volume 36 ; 36 >
+    au < ready ; 1992 ; Limnology and Oceanography Volume 37 ; 37 >
+    au < ready ; 1993 ; Limnology and Oceanography Volume 38 ; 38 >
+    au < ready ; 1994 ; Limnology and Oceanography Volume 39 ; 39 >
+    au < ready ; 1995 ; Limnology and Oceanography Volume 40 ; 40 >
+    au < ready ; 1996 ; Limnology and Oceanography Volume 41 ; 41 >
+    au < ready ; 1997 ; Limnology and Oceanography Volume 42 ; 42 >
+    au < ready ; 1998 ; Limnology and Oceanography Volume 43 ; 43 >
+    au < ready ; 1999 ; Limnology and Oceanography Volume 44 ; 44 >
+    au < ready ; 2000 ; Limnology and Oceanography Volume 45 ; 45 >
+    au < ready ; 2001 ; Limnology and Oceanography Volume 46 ; 46 >
+    au < ready ; 2002 ; Limnology and Oceanography Volume 47 ; 47 >
+    au < ready ; 2003 ; Limnology and Oceanography Volume 48 ; 48 >
+    au < ready ; 2004 ; Limnology and Oceanography Volume 49 ; 49 >
+    au < ready ; 2005 ; Limnology and Oceanography Volume 50 ; 50 >
+    au < ready ; 2006 ; Limnology and Oceanography Volume 51 ; 51 >
+    au < ready ; 2007 ; Limnology and Oceanography Volume 52 ; 52 >
 
   }
   
