@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.31 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.32 2011-06-21 22:09:49 tlipkis Exp $
  */
 
 /*
@@ -643,6 +643,66 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  // Ensure that in the normal case the listen socket isn't bound to a
+  // specific IP
+  public void testIncomingToAlternateAddress() throws IOException {
+    setupComm1();
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      IPAddr altIP = IPAddr.getByName("127.0.0.2");
+      Socket sock = sf.newSocket(altIP, pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      InputStream ins = sock.getInputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
+    }
+  }
+
+  public void testIncomingBindLocalOnlySameIP() throws IOException {
+    ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
+				  "true");
+    setupComm1();
+    Interrupter intr1 = null;
+    SockAbort intr2 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      Socket sock = sf.newSocket(pad1.getIPAddr(), pad1.getPort());
+      intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+      InputStream ins = sock.getInputStream();
+      StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+      assertHeaderOp(rcvHeader, OP_PEERID);
+      assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    } finally {
+      if (intr1 != null) intr1.cancel();
+      if (intr2 != null) intr2.cancel();
+    }
+  }
+
+  public void testIncomingBindLocalOnlyWrongIP() throws IOException {
+    ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
+				  "true");
+    setupComm1();
+    Interrupter intr1 = null;
+    try {
+      intr1 = interruptMeIn(TIMEOUT_SHOULD);
+      BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
+      IPAddr altIP = IPAddr.getByName("127.0.0.2");
+      Socket sock = sf.newSocket(altIP, pad1.getPort());
+      fail("connect to different IP then listen IP should fail");
+    } catch (ConnectException e) {
+    } finally {
+      if (intr1 != null) intr1.cancel();
+    }
+  }
+
   public void testIncomingRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
     log.debug("Incoming rcv pid " + peerid);
@@ -705,7 +765,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       setupComm1();
       setupPid(2);
       BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-      ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
+      ServerSocket server = sf.newServerSocket(null, pad2.getPort(), 3);
       intr1 = abortIn(TIMEOUT_SHOULDNT, server);
       comm1.findOrMakeChannel(pid2);
       Socket sock = server.accept();
@@ -742,7 +802,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       setupPid(2);
       log.debug2("Listening on " + pad2.getPort());
       BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-      ServerSocket server = sf.newServerSocket(pad2.getPort(), 3);
+      ServerSocket server = sf.newServerSocket(null, pad2.getPort(), 3);
       intr1 = abortIn(TIMEOUT_SHOULDNT, server);
       comm1.findOrMakeChannel(pid2);
       Socket sock = server.accept();
@@ -1779,12 +1839,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
       sf = s;
     }
 
-    public ServerSocket newServerSocket(int port, int backlog)
+    @Override public ServerSocket newServerSocket(String bindAddr,
+						  int port,
+						  int backlog)
 	throws IOException {
       if (useInternalSockets) {
 	return new InternalServerSocket(port, backlog);
       } else {
-	ServerSocket ss = sf.newServerSocket(port, backlog);
+	ServerSocket ss = sf.newServerSocket(bindAddr, port, backlog);
 	if (isCheckSocketType()) {
 	  if (isSsl()) {
 	    assertClass(SSLServerSocket.class, ss);

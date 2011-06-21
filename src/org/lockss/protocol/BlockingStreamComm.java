@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.53 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.54 2011-06-21 22:09:50 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,12 @@ public class BlockingStreamComm
   /** SSL protocol to use **/
   public static final String PARAM_SSL_PROTOCOL = PREFIX + "sslProtocol";
   public static final String DEFAULT_SSL_PROTOCOL = "TLSv1";
+
+  /** If true, listen socket will be bound only to the configured local IP
+   * address **/
+  public static final String PARAM_BIND_TO_LOCAL_IP_ONLY =
+    PREFIX + "bindToLocalIpOnly";
+  public static final boolean DEFAULT_BIND_TO_LOCAL_IP_ONLY = false;
 
   /** Max peer channels.  Only affects outgoing messages; incoming
    * connections are always accepted. */
@@ -301,6 +307,7 @@ public class BlockingStreamComm
   private boolean enabled = DEFAULT_ENABLED;
   private boolean running = false;
 
+  private String bindAddr;
   private SocketFactory sockFact;
   private ServerSocket listenSock;
   private PeerIdentity myPeerId;
@@ -995,6 +1002,12 @@ public class BlockingStreamComm
     paramPoolKeepaliveTime =
       config.getTimeInterval(PARAM_CHANNEL_THREAD_POOL_KEEPALIVE,
 			     DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE);
+
+    if (config.getBoolean(PARAM_BIND_TO_LOCAL_IP_ONLY,
+			  DEFAULT_BIND_TO_LOCAL_IP_ONLY)) {
+      bindAddr = config.get(IdentityManager.PARAM_LOCAL_IP);
+    }
+
     if (changedKeys.contains(PARAM_USE_V3_OVER_SSL)) {
       paramUseV3OverSsl = config.getBoolean(PARAM_USE_V3_OVER_SSL,
 					    DEFAULT_USE_V3_OVER_SSL);
@@ -1325,9 +1338,13 @@ public class BlockingStreamComm
 							   SERVER_NAME)) {
 	throw new IOException("TCP port " + port + " unavailable");
       }
-      log.debug("Listening on port " + port);
+      if (bindAddr != null) {
+	log.debug("Listening on port " + port + " on " + bindAddr);
+      } else {
+	log.debug("Listening on port " + port);
+      }
       listenSock =
-	getSocketFactory().newServerSocket(port, paramBacklog);
+	getSocketFactory().newServerSocket(bindAddr, port, paramBacklog);
     } catch (IOException e) {
       log.critical("Can't create listen socket", e);
       return;
@@ -1819,7 +1836,8 @@ public class BlockingStreamComm
       sockets and peer channels */
   interface SocketFactory {
     /** Return a listen socket of the appropriate type */
-    ServerSocket newServerSocket(int port, int backlog) throws IOException;
+    ServerSocket newServerSocket(String bindAddr, int port, int backlog)
+	throws IOException;
 
     /** Return a socket of the appropriate type connected to the remote
      * address, with its options set */
@@ -1838,9 +1856,13 @@ public class BlockingStreamComm
 
   /** Normal socket factory creates real TCP Sockets */
   class NormalSocketFactory implements SocketFactory {
-    public ServerSocket newServerSocket(int port, int backlog)
+    public ServerSocket newServerSocket(String bindAddr, int port, int backlog)
 	throws IOException {
-      return new ServerSocket(port, backlog);
+      if (bindAddr != null) {
+	return new ServerSocket(port, backlog, InetAddress.getByName(bindAddr));
+      } else {
+	return new ServerSocket(port, backlog);
+      }
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
@@ -1864,13 +1886,20 @@ public class BlockingStreamComm
 
   /** SSL socket factory */
   class SslSocketFactory implements SocketFactory {
-    public ServerSocket newServerSocket(int port, int backlog)
+    public ServerSocket newServerSocket(String bindAddr, int port, int backlog)
       throws IOException {
       if (sslServerSocketFactory == null) {
 	throw new IOException("no SSL server socket factory");
       }
-      SSLServerSocket s = (SSLServerSocket)
-	sslServerSocketFactory.createServerSocket(port, backlog);
+      SSLServerSocket s;
+      if (bindAddr != null) {
+	s = (SSLServerSocket)
+	  sslServerSocketFactory.createServerSocket(port, backlog,
+						    InetAddress.getByName(bindAddr));
+      } else {
+	s = (SSLServerSocket)
+	  sslServerSocketFactory.createServerSocket(port, backlog);
+      }
       s.setNeedClientAuth(paramSslClientAuth);
       log.debug("New SSL server socket: " + port + " backlog " + backlog +
 		" clientAuth " + paramSslClientAuth);
