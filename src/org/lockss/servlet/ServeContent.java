@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.34 2011-06-20 07:05:34 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.35 2011-06-21 22:10:54 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,12 @@ public class ServeContent extends LockssServlet {
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
     MissingFileAction.HostAuIndex;;
 
+  /** The log level at which to log all content server accesses.
+   * To normally log all content accesses (proxy or ServeContent), set to
+   * <tt>info</tt>.  To disable set to <tt>none</tt>. */
+  static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
+  static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
   /** Determines action taken when a requested file is not cached locally,
    * and it's not available from the publisher.  "Not available" means any
    * of
@@ -170,6 +176,7 @@ public class ServeContent extends LockssServlet {
   private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
   private static int maxBufferedRewrite = DEFAULT_MAX_BUFFERED_REWRITE;
   private static boolean neverProxy = DEFAULT_NEVER_PROXY;
+  private static int paramAccessLogLevel = -1;
 
 
   private ArchivalUnit au;
@@ -206,6 +213,14 @@ public class ServeContent extends LockssServlet {
 			Configuration oldConfig,
 			Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
+      try {
+	String accessLogLevel = config.get(PARAM_ACCESS_LOG_LEVEL,
+					   DEFAULT_ACCESS_LOG_LEVEL);
+	paramAccessLogLevel = Logger.levelOf(accessLogLevel);
+      } catch (RuntimeException e) {
+	log.error("Couldn't set access log level", e);
+	paramAccessLogLevel = -1;
+      }	  
       missingFileAction =
 	(MissingFileAction)config.getEnum(MissingFileAction.class,
 					  PARAM_MISSING_FILE_ACTION,
@@ -261,26 +276,31 @@ public class ServeContent extends LockssServlet {
   enum AccessLogType { None, Url, Doi, OpenUrl };
 
   void logAccess(String msg) {
-    switch (requestType) {
-    case None:
-      proxyMgr.logAccess("Content", url, msg);
-      break;
-    case Url:
-      proxyMgr.logAccess("Content", "URL: " + url, msg);
-      break;
-    case Doi:
-      proxyMgr.logAccess("Content",
-			 "DOI: " + accessLogInfo + " resolved to URL: " + url,
-			 msg);
-      break;
-    case OpenUrl:
-      proxyMgr.logAccess("Content",
-			 "OpenUrl: " + accessLogInfo +
-			 " resolved to URL: " + url,
-			 msg);
-      break;
+    if (paramAccessLogLevel >= 0) {
+      switch (requestType) {
+      case None:
+	proxyMgr.logAccess("Content", url, msg);
+	break;
+      case Url:
+	proxyMgr.logAccess("Content", "URL: " + url, msg);
+	break;
+      case Doi:
+	proxyMgr.logAccess("Content",
+			   "DOI: " + accessLogInfo + " resolved to URL: " + url,
+			   msg);
+	break;
+      case OpenUrl:
+	proxyMgr.logAccess("Content",
+			   "OpenUrl: " + accessLogInfo +
+			   " resolved to URL: " + url,
+			   msg);
+	break;
+      }
     }
+  }
 
+  void logAccess(String type, String url, String msg) {
+    log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
   }
 
   String present(boolean isInCache, String msg) {
