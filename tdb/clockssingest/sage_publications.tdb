@@ -386,8 +386,7 @@
 
 	  {
 	
-	    pluginSuffix = HighWirePressH20Plugin
-      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	    pluginSuffix = ClockssHighWirePressH20Plugin
 	
 	    au < exists ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ;  >
 	    au < exists ; exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ;  >
@@ -1112,7 +1111,7 @@
    
    {
 
-     pluginSuffix = HighWirePressH20Plugin
+     pluginSuffix = ClockssHighWirePressH20Plugin
      param[base_url] = http://aus.sagepub.com/
 
      au < manifest ; exists ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 ; >
