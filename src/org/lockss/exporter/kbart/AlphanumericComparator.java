@@ -1,5 +1,5 @@
 /*
- * $Id: AlphanumericComparator.java,v 1.5 2011-06-08 23:38:03 pgust Exp $
+ * $Id: AlphanumericComparator.java,v 1.6 2011-06-22 23:53:07 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.apache.oro.text.regex.PatternMatcherInput;
 import org.apache.oro.text.regex.Perl5Matcher;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.Logger;
+import org.lockss.util.NumberUtil;
 import org.lockss.util.RegexpUtil;
 import org.lockss.util.StringUtil;
 
@@ -281,8 +282,8 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
   protected int compareNumberTokens(String tok1, String tok2) {
     try {
       // Parse number tokens as integers
-      Integer i1 = new Integer(tok1);
-      Integer i2 = new Integer(tok2);
+      Integer i1 = NumberUtil.parseInt(tok1);
+      Integer i2 = NumberUtil.parseInt(tok2);
       return i1.compareTo(i2);
     } catch (NumberFormatException e) {
       log.warning(String.format("Could not compare as numbers: '%s' and '%s'\n", tok1, tok2));

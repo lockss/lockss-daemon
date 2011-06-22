@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.11 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.12 2011-06-22 23:52:27 pgust Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
 import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.NumberUtil;
 
 import static org.lockss.exporter.kbart.KbartTdbAuUtil.*;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
@@ -439,7 +440,7 @@ public class KbartConverter {
     // Get a year for each AU
     try {
       for (TdbAu au : aus) {
-	//years.add(new Integer( type.findAuInfo(au, yearKey) ));
+	//years.add(NumberUtil.parseInt( type.findAuInfo(au, yearKey) ));
 	//YearRange yrRng = new YearRange( type.findAuInfo(au, yearKey) );
 	YearRange yrRng = new YearRange( au.getYear() );
 	// If the range is not valid, give up producing years
@@ -497,8 +498,8 @@ public class KbartConverter {
     try {
      Integer lastVol = null;
       for (TdbAu au : aus) {
-	Integer vol = new Integer(au.getVolume());
-	//Integer vol = new Integer( type.findAuInfo(au, volKey) );
+	Integer vol = NumberUtil.parseInt(au.getVolume());
+	//Integer vol = NumberUtil.parseInt( type.findAuInfo(au, volKey) );
 	vols.add(vol);
 	// If there are multiple AUs, the last vol is non-null, and it and the current vol differ,
 	// consider that we've got a variety of values

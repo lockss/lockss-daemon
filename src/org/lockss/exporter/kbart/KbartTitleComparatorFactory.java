@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleComparatorFactory.java,v 1.5 2011-06-08 23:47:18 pgust Exp $
+ * $Id: KbartTitleComparatorFactory.java,v 1.6 2011-06-22 23:52:27 pgust Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Comparator;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.exporter.kbart.KbartTitle.Field.SortType;
 import org.lockss.util.Logger;
+import org.lockss.util.NumberUtil;
 import org.lockss.util.StringUtil;
 
 /**
@@ -156,8 +157,8 @@ public class KbartTitleComparatorFactory {
 	String tok2 = f2.getField(field);
 	try {
 	  // Parse number tokens as integers
-	  Integer i1 = new Integer(tok1);
-	  Integer i2 = new Integer(tok2);
+	  Integer i1 = NumberUtil.parseInt(tok1);
+	  Integer i2 = NumberUtil.parseInt(tok2);
 	  return i1.compareTo(i2);
 	} catch (NumberFormatException e) {
 	  log.debug(String.format("Could not compare as numbers: '%s' and '%s'\n", tok1, tok2));

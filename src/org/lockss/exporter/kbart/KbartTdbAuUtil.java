@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.8 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.9 2011-06-22 23:52:27 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.apache.oro.text.regex.Perl5Matcher;
 import org.lockss.config.TdbAu;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.NumberUtil;
 import org.lockss.util.RegexpUtil;
 
 /**
@@ -99,8 +100,8 @@ public class KbartTdbAuUtil {
   static int compareIntStrings(String int1, String int2) throws NumberFormatException {
     // Return zero if the strings are equal
     if (int1.equals(int2)) return 0;
-    Integer i1 = new Integer(int1);
-    Integer i2 = new Integer(int2);
+    Integer i1 = NumberUtil.parseInt(int1);
+    Integer i2 = NumberUtil.parseInt(int2);
     return i1.compareTo(i2);
   }
 
@@ -372,7 +373,7 @@ public class KbartTdbAuUtil {
    */
   static int stringYearAsInt(String yr) {
     if (!yr.equals("")) try {
-      return Integer.parseInt(yr);
+      return NumberUtil.parseInt(yr);
     } catch (NumberFormatException e) { }
     return 0;
   }
