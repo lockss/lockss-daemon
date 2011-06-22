@@ -1427,7 +1427,7 @@
   {
   
     title <
-      name = EP Europace
+      name = Europace
     >
 
     param[base_url] = http://europace.oxfordjournals.org/
@@ -1436,8 +1436,8 @@
 
       pluginSuffix = ClockssHighWirePlugin
 
-      au < down ; crawling ; 2008 ; EP Europace Volume 10 ; 10 ; >
-      au < down ; crawling ; 2009 ; EP Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < down ; crawling ; 2008 ; Europace Volume 10 ; 10 ; >
+      au < down ; crawling ; 2009 ; Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -1445,7 +1445,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < released ; manifest ; 2010 ; EP Europace Volume 12 ; 12 ; >
+      au < released ; manifest ; 2010 ; Europace Volume 12 ; 12 ; >
 
     }
 
