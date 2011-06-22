@@ -3369,7 +3369,7 @@
     {
 
       title <
-        name = Building Service Engineering Research and Technology ;
+        name = Building Services Engineering Research and Technology ;
         issn = 0143-6244 ;
         eissn = 1477-0849 ;
         issnl = 0143-6244
@@ -3380,10 +3380,10 @@
         param[base_url] = http://bse.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Building Service Engineering Research and Technology Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; down ; Building Service Engineering Research and Technology Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; Building Service Engineering Research and Technology Volume 29 ; 29 >
-        au < HighWirePressPlugin ; down ; Building Service Engineering Research and Technology Volume 30 ; 30 >
+        au < HighWireStrVolPlugin ; down ; Building Services Engineering Research and Technology Volume 27 ; 27 >
+        au < HighWireStrVolPlugin ; down ; Building Services Engineering Research and Technology Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; Building Services Engineering Research and Technology Volume 29 ; 29 >
+        au < HighWirePressPlugin ; down ; Building Services Engineering Research and Technology Volume 30 ; 30 >
 
       }
 
