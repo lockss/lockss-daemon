@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.13 2011-05-18 04:12:38 tlipkis Exp $
+ * $Id: OpenUrlResolver.java,v 1.14 2011-06-22 23:30:44 pgust Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -125,8 +126,39 @@ public class OpenUrlResolver {
 
 
   /** maximum redirects for looking up DOI url */
-  private final int MAX_REDIRECTS = 10;
+  private static final int MAX_REDIRECTS = 10;
   
+  /**
+   * Keys to search for a matching journal feature. The order of the keys is 
+   * the order they will be tried, from issue, to volume, to title TOC.
+   */
+  private static final String[] auJournalauFeatures = {
+    "au_feature_urls/au_issue",
+    "au_issue_url",
+    "au_features_urls/au_volume",
+    "au_volume_url",
+    "au_start_url",
+    "au_feature_urls/au_title",
+    "au_title_url"
+  };
+  
+  /**
+   * Keys to search for a matching book feature. The order of the keys is the
+   * the order they will be tried, from chapter, to volume, to title TOC.
+   */
+  private static final String[] auBookauFeatures = {
+    "au_feature_urls/au_chapter",
+    "au_chapter_url",
+    "au_features_urls/au_volume",
+    "au_volume_url",
+    "au_start_url",
+    "au_feature_urls/au_title",
+    "au_title_url"
+  };
+  
+  /** The name of the TDB au_feature key selector */
+  static final String AU_FEATURE_KEY = "au_feature_key";
+
   /**
    * Create a resolver for the specified metadata manager.
    * 
@@ -351,7 +383,7 @@ public class OpenUrlResolver {
 
         // search titles with no ISBN or ISSN identifier 
         for (TdbTitle tdbTitle : notitles) {
-          String url = resolveJournalFromTdbTitle(tdbTitle, date, volume, issue);
+          String url = resolveJournalFromTdbTitle(tdbTitle,date,volume,issue);
           if (url != null) {
             if (log.isDebug3()) log.debug3("Located url " + url +
                       ", title \"" + tdbTitle.getName() + "\"" +
@@ -1032,6 +1064,9 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume_name", volumeName);
   	  paramMap.setMapElement("year", year);
   	  paramMap.setMapElement("edition", edition);
+  	  // auFeatureKey selects feature from a map of values
+  	  // for the same feature (e.g. au_feature_urls/au_year)
+      paramMap.setMapElement("auFeatureKey", tdbau.getAttr(AU_FEATURE_KEY));
 
       url = getBookUrl(plugin, paramMap);
       log.debug3("Found starting url from definable plugin: " + url);
@@ -1049,20 +1084,11 @@ public class OpenUrlResolver {
    * @return the issue URL
    */
   private static String getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
-	String startUrl = getPluginUrl(plugin, "au_edition_url", paramMap);
-	if (startUrl == null) {
-	  startUrl = getPluginUrl(plugin, "au_volume_url", paramMap);
-	  if (startUrl == null) {
-		startUrl = getPluginUrl(plugin, "au_start_url", paramMap);
-		if (startUrl == null) {
-		  startUrl = getPluginUrl(plugin, "au_title_url", paramMap);
-		  if (startUrl == null) {
-			startUrl = paramMap.getString("base_url");
-		  }
-		}
-	  }
-	}
-	return startUrl;
+    String url = getPluginUrl(plugin, auBookauFeatures, paramMap);
+    if (url == null) {
+      url = paramMap.getString("base_url");
+    }
+    return url;
   }
 
   /**
@@ -1111,6 +1137,9 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
       paramMap.setMapElement("issue", issue);
+      // AU_FEATURE_KEY selects feature from a map of values
+      // for the same feature (e.g. au_feature_urls/au_year)
+      paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
       url = getJournalUrl(plugin, paramMap);
       log.debug3("Found starting url from definable plugin: " + url);
     } else {
@@ -1119,7 +1148,6 @@ public class OpenUrlResolver {
     return url;
   }
     
-
   /**
    * Get the issueURL for the plugin.
    * @param plugin the plugin
@@ -1127,20 +1155,11 @@ public class OpenUrlResolver {
    * @return the issue URL
    */
   private static String getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
-	String startUrl = getPluginUrl(plugin, "au_issue_url", paramMap);
-	if (startUrl == null) {
-	  startUrl = getPluginUrl(plugin, "au_volume_url", paramMap);
-	  if (startUrl == null) {
-		startUrl = getPluginUrl(plugin, "au_start_url", paramMap);
-		if (startUrl == null) {
-		  startUrl = getPluginUrl(plugin, "au_title_url", paramMap);
-		  if (startUrl == null) {
-			startUrl = paramMap.getString("base_url");
-		  }
-		}
-	  }
-	}
-	return startUrl;
+    String url = getPluginUrl(plugin, auJournalauFeatures, paramMap);
+    if (url == null) {
+      url = paramMap.getString("base_url");
+    }
+    return url;
   }
   
   /**
@@ -1151,12 +1170,13 @@ public class OpenUrlResolver {
    * @return the URL for the specified key
    */
   private static String
-  	getPluginUrl(Plugin plugin, String pluginKey, TypedEntryMap paramMap) {
+  	getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
     ExternalizableMap map;
 
     // get printf pattern for pluginKey property
     try {
-      Method method = plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
+      Method method = 
+        plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
       Object obj = method.invoke(plugin);
       if (!(obj instanceof ExternalizableMap)) {
        return null;
@@ -1167,42 +1187,76 @@ public class OpenUrlResolver {
       return null;
     }
         
-    Object obj = map.getMapElement(pluginKey);
-    String printfString = null;
-    if (obj instanceof String) {
-      // get single pattern for start url
-      printfString = (String)obj;
-    } else if (obj instanceof Collection) {
-      // get the first pattern for start url
-      @SuppressWarnings("rawtypes")
-      Collection c = (Collection)obj;
-      if (!c.isEmpty()) {
-        Object o = c.iterator().next();
-        if (o instanceof String) {
-          printfString = (String)o;
+    for (String pluginKey : pluginKeys) {
+      // locate object value for plugin key path
+      String[] pluginKeyPath = pluginKey.split("/");
+      Object obj = map.getMapElement(pluginKeyPath[0]);
+      for (int i = 1; (i < pluginKeyPath.length); i++) {
+        if (obj instanceof Map) {
+          obj = ((Map<String,?>)obj).get(pluginKeyPath[i]);
+        } else {
+          // all path elements except last one must be a map;
+          obj = null;
+          break;
+        }
+      }
+      
+      if (obj instanceof Map) {
+        // match TDB AU_FEATURE_KEY value to key in map 
+        String auFeatureKey = "*";  // default entry
+        try {
+          auFeatureKey = paramMap.getString(AU_FEATURE_KEY);
+        } catch (NoSuchElementException ex) {}
+        
+        // entry may have multiple keys; '*' is the default entry
+        Object val = null;
+        for (Map.Entry<String,?> entry : ((Map<String,?>)obj).entrySet()) {
+          String key = entry.getKey();
+          if (   key.equals(auFeatureKey)
+              || key.startsWith(auFeatureKey + ";")
+              || key.endsWith(";" + auFeatureKey)
+              || (key.indexOf(";" + auFeatureKey + ";") >= 0)) {
+            val = entry.getValue();
+            break;
+          }
+        }
+        obj = val;
+        pluginKey += "/" + auFeatureKey;
+      }
+
+      if (obj == null) {
+        log.debug("unknown plugin key: " + pluginKey);
+        continue;
+      } 
+      
+      Collection<String> printfStrings = null;
+      if (obj instanceof String) {
+        // get single pattern for start url
+        printfStrings = Collections.singleton((String)obj);
+      } else if (obj instanceof Collection) {
+        printfStrings = (Collection<String>)obj;
+      } else {
+        log.debug(  "unknown type for plugin key: " + pluginKey 
+                  + ": " + obj.getClass().getName());
+        continue;
+      }
+      
+      UrlListConverter converter = 
+        PrintfConverter.newUrlListConverter(plugin, paramMap);
+      for (String s : printfStrings) {
+        try {
+          List<String> urls = converter.getUrlList(s);
+          if (!urls.isEmpty()) {
+            // if multiple urls match, the first one will do
+            return urls.get(0);
+          }
+        } catch (Throwable ex) {
+          log.debug("invalid  conversion: " + ex.getMessage());
         }
       }
     }
-
-    if (printfString == null) {
-      log.debug("unknown plugin key: " + pluginKey);
-      return null;
-    }
-    
-    String url = null;
-    try {
-      UrlListConverter converter = 
-	PrintfConverter.newUrlListConverter(plugin, paramMap); 
-      List<String> urls = converter.getUrlList(printfString);
-      if (urls.size() > 0) {
-        url = urls.get(0);
-        log.debug3("evaluated: " + printfString + " to url: " + url);
-      }
-    } catch (Throwable ex) {
-      log.debug("invalid  conversion: " + ex.getMessage());
-    }
       
-    return url;
+    return null;
   }
   
     
