@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.32 2011-06-21 22:09:49 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.33 2011-06-22 22:37:34 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,15 @@ public class TestBlockingStreamComm extends LockssTestCase {
   // limit on number of BlockingStreamComm instances, and number created by
   // testMultipleChannels
   static final int MAX_COMMS = 5;
+
+  /** A few tests (binding listen socket to a specific local address)
+   * require a second loopback address.  While the entire 127.0.0.0/8 block
+   * is supposed to loop back, connections to it hang on (some?) MacOS, and
+   * get "Network is unreachable" on OpenBSD (unless a loopback interface
+   * is explicitly configured at that address).  Using IPv6 loopback seems
+   * less likely to cause problems, but will fail on machines where IPv6
+   * isn't enabled. */
+  static final String ALT_IP_ADDR = "::1";
 
   static final int HEADER_LEN = PeerChannel.HEADER_LEN;
   static final int HEADER_CHECK = PeerChannel.HEADER_CHECK;
@@ -652,7 +661,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     try {
       intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
       BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-      IPAddr altIP = IPAddr.getByName("127.0.0.2");
+      IPAddr altIP = IPAddr.getByName(ALT_IP_ADDR);
       Socket sock = sf.newSocket(altIP, pad1.getPort());
       intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
       InputStream ins = sock.getInputStream();
@@ -694,7 +703,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     try {
       intr1 = interruptMeIn(TIMEOUT_SHOULD);
       BlockingStreamComm.SocketFactory sf = comm1.getSocketFactory();
-      IPAddr altIP = IPAddr.getByName("127.0.0.2");
+      IPAddr altIP = IPAddr.getByName(ALT_IP_ADDR);
       Socket sock = sf.newSocket(altIP, pad1.getPort());
       fail("connect to different IP then listen IP should fail");
     } catch (ConnectException e) {
