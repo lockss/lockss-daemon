@@ -376,6 +376,31 @@
 
   }
 
+	{
+	  title <
+	    name = Alternatives: Global, Local, Political ;
+	    issn = 0304-3754
+	  >
+	
+	    param[base_url] = http://alt.sagepub.com/
+
+	  {
+	
+	    pluginSuffix = HighWirePressH20Plugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+	
+	    au < exists ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ;  >
+	    au < exists ; exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ;  >
+	    au < exists ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ;  >
+	    au < exists ; exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ;  >
+	    au < exists ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ;  >
+	    au < exists ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ;  >
+	    au < manifest ; exists ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ;  >
+	
+	  }
+	
+	}
+
   {
   
     title <
@@ -440,7 +465,8 @@
   
     title <
       name = American Journal of Alzheimer's Disease and Other Dementias ;
-      issn = 1533-3175
+      issn = 1533-3175;
+      eissn = 1938-2731
     >
 
     param[base_url] = http://aja.sagepub.com/
@@ -499,7 +525,8 @@
   
     title <
       name = American Journal of Hospice and Palliative Medicine ;
-      issn = 1049-9091
+      issn = 1049-9091;
+      eissn = 1938-2715
     >
 
     param[base_url] = http://ajh.sagepub.com/
@@ -678,7 +705,8 @@
   
     title <
       name = Angiology ;
-      issn = 0003-3197
+      issn = 0003-3197;
+      eissn = 1940-1574
     >
 
     param[base_url] = http://ang.sagepub.com/
@@ -928,7 +956,8 @@
   
     title <
       name = Asia-Pacific Journal of Public Health ;
-      issn = 1010-5395
+      issn = 1010-5395;
+      eissn = 1941-2479
     >
 
     param[base_url] = http://aph.sagepub.com/
@@ -957,7 +986,8 @@
   
     title <
       name = Asian Journal of Management Cases ;
-      issn = 0972-8201
+      issn = 0972-8201;
+      eissn = 0973-0621
     >
 
     param[base_url] = http://ajc.sagepub.com/
@@ -1016,7 +1046,8 @@
   
     title <
       name = Assessment for Effective Intervention ;
-      issn = 1534-5084
+      issn = 1534-5084;
+      eissn = 1938-7458
     >
 
     param[base_url] = http://aei.sagepub.com/
@@ -1070,6 +1101,26 @@
     }
 
   }
+
+ {
+
+   title <
+     name = Australian & New Zealand Journal of Criminology ;
+     issn = 0004-8658 ;
+     eissn = 1837-9273
+   >
+   
+   {
+
+     pluginSuffix = HighWirePressH20Plugin
+     param[base_url] = http://aus.sagepub.com/
+
+     au < manifest ; exists ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 ; >
+     au < manifest ; exists ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 ; >
+   
+   }
+   
+ }
 
   {
   
@@ -1434,7 +1485,8 @@
   
     title <
       name = Canadian Journal of School Psychology ;
-      issn = 0829-5735
+      issn = 0829-5735;
+      eissn = 2154-3984
     >
 
     param[base_url] = http://cjs.sagepub.com/
@@ -1463,7 +1515,8 @@
   
     title <
       name = Career Development for Exceptional Individuals ;
-      issn = 0885-7288
+      issn = 0885-7288;
+      eissn = 1557-5047
     >
 
     param[base_url] = http://cde.sagepub.com/
@@ -1641,7 +1694,8 @@
   
     title <
       name = China Report ;
-      issn = 0009-4455
+      issn = 0009-4455;
+      eissn = 0973-063X
     >
 
     param[base_url] = http://chr.sagepub.com/
@@ -1751,7 +1805,8 @@
   
     title <
       name = Clinical and Applied Thrombosis/Hemostasis ;
-      issn = 1076-0296
+      issn = 1076-0296;
+      eissn = 1938-2723
     >
 
     param[base_url] = http://cat.sagepub.com/
@@ -1870,7 +1925,8 @@
   
     title <
       name = Clinical Pediatrics ;
-      issn = 0009-9228
+      issn = 0009-9228;
+      eissn = 1938-2707
     >
 
     param[base_url] = http://cpj.sagepub.com/
@@ -1959,7 +2015,8 @@
   
     title <
       name = Clothing and Textiles Research Journal ;
-      issn = 0887-302X
+      issn = 0887-302X;
+      eissn = 1940-2473
     >
 
     param[base_url] = http://ctr.sagepub.com/
@@ -2049,7 +2106,8 @@
   
     title <
       name = Community College Review ;
-      issn = 0091-5521
+      issn = 0091-5521;
+      eissn = 1940-2325
     >
 
     param[base_url] = http://crw.sagepub.com/
@@ -2228,7 +2286,8 @@
   
     title <
       name = Contributions to Indian Sociology ;
-      issn = 0069-9667
+      issn = 0069-9667;
+      eissn = 0973-0648
     >
 
     param[base_url] = http://cis.sagepub.com/
@@ -4310,7 +4369,8 @@
   
     title <
       name = Focus on Autism and Other Developmental Disabilities ;
-      issn = 1088-3576
+      issn = 1088-3576;
+      eissn = 1538-4829
     >
 
     param[base_url] = http://foa.sagepub.com/
@@ -4489,7 +4549,8 @@
   
     title <
       name = Gender, Technology and Development ;
-      issn = 0971-8524
+      issn = 0971-8524;
+      eissn = 0973-0656
     >
 
     param[base_url] = http://gtd.sagepub.com/
@@ -4577,7 +4638,8 @@
   
     title <
       name = Global Business Review ;
-      issn = 0972-1509
+      issn = 0972-1509;
+      eissn = 0973-0664
     >
 
     param[base_url] = http://gbr.sagepub.com/
@@ -4934,7 +4996,7 @@
   {
   
     title <
-      name = Health: ;
+      name = Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine ;
       issn = 1363-4593 ;
       eissn = 1461-7196
     >
@@ -4946,8 +5008,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Health: Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Health: Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2008 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 13 ; 13 ;  >
 
     }
 
@@ -4955,7 +5017,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < released ; crawling ; 2010 ; Health: Volume 14 ; 14 ;  >
+      au < released ; crawling ; 2010 ; Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine Volume 14 ; 14 ;  >
 
     }
 
@@ -5441,7 +5503,8 @@
   
     title <
       name = Indian Journal of Gender Studies ;
-      issn = 0971-5215
+      issn = 0971-5215;
+      eissn = 0973-0672
     >
 
     param[base_url] = http://ijg.sagepub.com/
@@ -6063,7 +6126,8 @@
   
     title <
       name = International Journal of Surgical Pathology ;
-      issn = 1066-8969
+      issn = 1066-8969;
+      eissn = 1938-9116
     >
 
     param[base_url] = http://ijs.sagepub.com/
@@ -6392,7 +6456,8 @@
   
     title <
       name = International Studies ;
-      issn = 0020-8817
+      issn = 0020-8817;
+      eissn = 0973-0702
     >
 
     param[base_url] = http://isq.sagepub.com/
@@ -7019,7 +7084,8 @@
   
     title <
       name = Journal of Cardiovascular Pharmacology and Therapeutics ;
-      issn = 1074-2484
+      issn = 1074-2484;
+      eissn = 1940-4034
     >
 
     param[base_url] = http://cpt.sagepub.com/
@@ -7721,7 +7787,8 @@
   
     title <
       name = Journal of Disability Policy Studies ;
-      issn = 1044-2073
+      issn = 1044-2073;
+      eissn = 1538-4802
     >
 
     param[base_url] = http://dps.sagepub.com/
@@ -7840,7 +7907,8 @@
   
     title <
       name = Journal of Early Intervention ;
-      issn = 1053-8151
+      issn = 1053-8151;
+      eissn = 1741-2927
     >
 
     param[base_url] = http://jei.sagepub.com/
@@ -7869,7 +7937,8 @@
   
     title <
       name = Journal of Education for Sustainable Development ;
-      issn = 0973-4082
+      issn = 0973-4082;
+      eissn = 0973-4074
     >
 
     param[base_url] = http://jsd.sagepub.com/
@@ -7958,7 +8027,8 @@
   
     title <
       name = Journal of Emerging Market Finance ;
-      issn = 0972-6527
+      issn = 0972-6527;
+      eissn = 0973-0710
     >
 
     param[base_url] = http://emf.sagepub.com/
@@ -7987,7 +8057,8 @@
   
     title <
       name = Journal of Emotional and Behavioral Disorders ;
-      issn = 1063-4266
+      issn = 1063-4266;
+      eissn = 1538-4799
     >
 
     param[base_url] = http://ebx.sagepub.com/
@@ -8046,7 +8117,8 @@
   
     title <
       name = Journal of Entrepreneurship ;
-      issn = 0971-3557
+      issn = 0971-3557;
+      eissn = 0973-0745
     >
 
     param[base_url] = http://joe.sagepub.com/
