@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.4 2011-06-14 09:30:12 tlipkis Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.5 2011-06-22 22:38:56 pgust Exp $
  */
 
 /*
@@ -98,8 +98,8 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
 
   public void testMultipleTag() throws Exception {
     String text =
-      "<meta name=\"FirstName\" content=\"FirstContent\">\n" +
-      "<meta name=\"SecondName\" content=\"SecondContent\">\n" +
+      "<meta name=\"FirstName\" content=\"FirstContent\">" +
+      "<meta name=\"SecondName\" content=\"SecondContent\">" +
       "<meta name=\"ThirdName\" content=\"ThirdContent\">\n" +
       "<meta name=\"FourthName\" content=\"FourthContent\">\n" +
       "<meta name=\"FifthName\" content=\"FifthContent\">\n";
@@ -136,10 +136,10 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       "<link rel=\"stylesheet\" type=\"text/css\" href=\"@@file/style.css\">\n" +
       "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n" +
       "</head>\n" +
-      "<body class=\"body\">\n" +
-
-      "<meta name=\"FirstName\" content=\"FirstContent\">\n" +
-      "<meta name=\"SecondName\" content=\"SecondContent\">\n" +
+      "<body class=\"body\">" +
+      "<meta name=\"FirstName\" content=\"FirstContent\"></meta>" +
+      "<meta name=\"SecondName\" content=\"SecondContent\">" +
+      "<p>\n" + 
       "<meta name=\"ThirdName\" content=\"ThirdContent\">\n" +
       "<meta name=\"FourthName\" content=\"FourthContent\">\n" +
       "<meta name=\"FifthName\" content=\"FifthContent\">\n" +
