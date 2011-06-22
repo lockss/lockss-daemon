@@ -47,11 +47,11 @@ public class TdbTestUtil {
   public static String DEFAULT_URL = "http://www.some.url.com/title";
   
   public static String RANGE_1_START = "2000";
-  public static String RANGE_1_END = "2000";
+  public static String RANGE_1_END = "MM";  // 2000
   public static String RANGE_1_START_VOL = "1";
   public static String RANGE_1_END_VOL = "1";
 
-  public static String RANGE_2_START = "2005";
+  public static String RANGE_2_START = "MMV"; // 2005
   public static String RANGE_2_END = "2006";
   public static String RANGE_2_START_VOL = "2";
   public static String RANGE_2_END_VOL = "3";

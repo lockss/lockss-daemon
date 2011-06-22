@@ -58,11 +58,18 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
     // Check that the result is right; check for NFE?
     String yr1 = "2000";
     String yr2 = "1999";
+    String yr3 = "MMI"; // 2001
+    String yr4 = "MCM"; // 1900
     assertTrue(yr1+" is not greater than "+yr2, KbartTdbAuUtil.compareStringYears(yr1, yr2) > 0);
     assertTrue(yr1+" is not less than "+yr2, KbartTdbAuUtil.compareStringYears(yr2, yr1) < 0);
     assertTrue(yr1+" is not equal to "+yr1, KbartTdbAuUtil.compareStringYears(yr1, yr1) == 0);
     assertTrue(yr2+" is not equal to "+yr2, KbartTdbAuUtil.compareStringYears(yr2, yr2) == 0);
-  }
+
+    assertTrue(yr3+" is not greater than "+yr2, KbartTdbAuUtil.compareStringYears(yr3, yr2) > 0);
+    assertTrue(yr4+" is not less than "+yr2, KbartTdbAuUtil.compareStringYears(yr4, yr1) < 0);
+    assertTrue(yr1+" is not equal to "+yr1, KbartTdbAuUtil.compareStringYears(yr1, yr1) == 0);
+    assertTrue(yr2+" is not equal to "+yr2, KbartTdbAuUtil.compareStringYears(yr2, yr2) == 0);
+}
 
   /**
    * The AU's property maps are searched for the following, in the order given: 
