@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.3 2011-05-09 00:31:56 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.4 2011-06-22 20:49:46 pgust Exp $
  */
 
 /*
@@ -58,9 +58,16 @@ public class SimpleHtmlMetaTagMetadataExtractor
 	 line != null;
 	 line = bReader.readLine()) {
       line = line.trim();
-      if (StringUtil.startsWithIgnoreCase(line, "<meta ")) {
-	if (log.isDebug3()) log.debug3("Line: " + line);
-	addTag(line, ret);
+      int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
+      while (i >= 0) {
+        int j = StringUtil.indexOfIgnoreCase(line, ">", i+1);
+        if (j < 0) {
+          break;
+        }
+        String meta = line.substring(i, j+1);
+        if (log.isDebug3()) log.debug3("meta: " + meta);
+        addTag(meta, ret);
+        i = StringUtil.indexOfIgnoreCase(line, "<meta ", j+1);
       }
     }
     IOUtil.safeClose(bReader);
