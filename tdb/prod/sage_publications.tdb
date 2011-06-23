@@ -4843,6 +4843,57 @@
       }
 
     }
+    
+    {
+
+      title <
+        name = Communication Disorders Quarterly ;
+        issn = 1525-7401 ;
+        eissn = 1538-4837 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cdq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1976 ; Communication Disorders Quarterly Volume 1 ; 1 >
+        au < manifest ; 1978 ; Communication Disorders Quarterly Volume 2 ; 2 >
+        au < manifest ; 1979 ; Communication Disorders Quarterly Volume 3 ; 3 >
+        au < manifest ; 1980 ; Communication Disorders Quarterly Volume 4 ; 4 >
+        au < manifest ; 1981 ; Communication Disorders Quarterly Volume 5 ; 5 >
+        au < manifest ; 1982-1983 ; Communication Disorders Quarterly Volume 6 ; 6 >
+        au < manifest ; 1983-1984 ; Communication Disorders Quarterly Volume 7 ; 7 >
+        au < manifest ; 1984-1985 ; Communication Disorders Quarterly Volume 8 ; 8 >
+        au < manifest ; 1985-1986 ; Communication Disorders Quarterly Volume 9 ; 9 >
+        au < manifest ; 1986-1987 ; Communication Disorders Quarterly Volume 10 ; 10 >
+        au < manifest ; 1987-1988 ; Communication Disorders Quarterly Volume 11 ; 11 >
+        au < manifest ; 1988-1989 ; Communication Disorders Quarterly Volume 12 ; 12 >
+        au < manifest ; 1990 ; Communication Disorders Quarterly Volume 13 ; 13 >
+        au < manifest ; 1988-1992 ; Communication Disorders Quarterly Volume 14 ; 14 >
+        au < manifest ; 1993 ; Communication Disorders Quarterly Volume 15 ; 15 >
+        au < manifest ; 1994-1995 ; Communication Disorders Quarterly Volume 16 ; 16 >
+        au < manifest ; 1995 ; Communication Disorders Quarterly Volume 17 ; 17 >
+        au < manifest ; 1997 ; Communication Disorders Quarterly Volume 18 ; 18 >
+        au < manifest ; 1997-1998 ; Communication Disorders Quarterly Volume 19 ; 19 >
+        au < manifest ; 1998-1999 ; Communication Disorders Quarterly Volume 20 ; 20 >
+        au < manifest ; 1999-2000 ; Communication Disorders Quarterly Volume 21 ; 21 >
+        au < manifest ; 2000-2001 ; Communication Disorders Quarterly Volume 22 ; 22 >
+        au < manifest ; 2001-2002 ; Communication Disorders Quarterly Volume 23 ; 23 >
+        au < manifest ; 2002-2003 ; Communication Disorders Quarterly Volume 24 ; 24 >
+        au < manifest ; 2003-2004 ; Communication Disorders Quarterly Volume 25 ; 25 >
+        au < manifest ; 2004-2005 ; Communication Disorders Quarterly Volume 26 ; 26 >
+        au < manifest ; 2005-2006 ; Communication Disorders Quarterly Volume 27 ; 27 >
+        au < manifest ; 2006-2007 ; Communication Disorders Quarterly Volume 28 ; 28 >
+        au < manifest ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 >
+        au < manifest ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 >
+        au < manifest ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 >
+        au < manifest ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 >
+
+      }
+      
+    }
 
     {
 
@@ -12132,6 +12183,28 @@ comment[exm] = now published by Springer
     {
 
       title <
+        name = ICAN: Infant, Child, & Adolescent Nutrition ;
+        issn = 1941-4064 ;
+        eissn = 1941-4072 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://can.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 1 ; 1 >
+        au < manifest ; 2010 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 2 ; 2 >
+        au < manifest ; 2011 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+    
+      title <
         name = Information Development ;
         issn = 0266-6669 ;
         eissn = 1741-6469 ;
@@ -19420,6 +19493,37 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       }
 
     }
+    
+    {
+
+      title <
+        name = Journal of Infection Prevention ;
+        issn = 1757-1774 ;
+        eissn = 1757-1782 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bji.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2000 ; Journal of Infection Prevention Volume 1 ; 1 >
+        au < exists ; 2001 ; Journal of Infection Prevention Volume 2 ; 2 >
+        au < exists ; 2002 ; Journal of Infection Prevention Volume 3 ; 3 >
+        au < exists ; 2003 ; Journal of Infection Prevention Volume 4 ; 4 >
+        au < manifest ; 2004 ; Journal of Infection Prevention Volume 5 ; 5 >
+        au < manifest ; 2005 ; Journal of Infection Prevention Volume 6 ; 6 >
+        au < manifest ; 2006 ; Journal of Infection Prevention Volume 7 ; 7 >
+        au < manifest ; 2007 ; Journal of Infection Prevention Volume 8 ; 8 >
+        au < manifest ; 2008 ; Journal of Infection Prevention Volume 9 ; 9 >
+        au < manifest ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 >
+        au < manifest ; 2010 ; Journal of Infection Prevention Volume 11 ; 11 >
+        au < manifest ; 2011 ; Journal of Infection Prevention Volume 12 ; 12 >
+
+      }
+      
+    }
 
     {
 
@@ -22145,7 +22249,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of the International Association of Physicians in AIDS Care ;
+        name = Journal of the International Association of Physicians in AIDS Care (JIAPAC) ;
         issn = 1545-1097 ;
         eissn = 1557-0886 ;
         issnl = 1545-1097
@@ -22156,12 +22260,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care Volume 6 ; 6 >
-        au < HighWirePressPlugin ; down ; Journal of the International Association of Physicians in AIDS Care Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; Journal of the International Association of Physicians in AIDS Care Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of the International Association of Physicians in AIDS Care Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 6 ; 6 >
+        au < HighWirePressPlugin ; down ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 8 ; 8 >
 
       }
 
@@ -23318,7 +23421,7 @@ comment[mpj] = now published by Brill
 
       title <
         name = Lighting Research and Technology ;
-        issn = 1365-7828 ;
+        issn = 1477-1535 ;
         eissn = 1477-0938
       >
 
