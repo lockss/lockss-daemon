@@ -47,7 +47,7 @@ public class TdbTestUtil {
   public static String DEFAULT_URL = "http://www.some.url.com/title";
   
   public static String RANGE_1_START = "2000";
-  public static String RANGE_1_END = "MM";  // 2000
+  public static String RANGE_1_END = "2000";
   public static String RANGE_1_START_VOL = "1";
   public static String RANGE_1_END_VOL = "1";
 
