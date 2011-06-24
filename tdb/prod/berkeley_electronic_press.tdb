@@ -1,11 +1,12 @@
 {
+
   publisher <
     name = Berkeley Electronic Press
   >
   
-  implicit < status ; name ; param[volume] ; year >
   plugin = org.lockss.plugin.bepress.BePressPlugin
   param[base_url] = http://www.bepress.com/    
+  implicit < status ; name ; param[volume] ; year >
   
   {
     title <

@@ -34,7 +34,7 @@
 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejeap
-    comment[years] = There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004.
+    comment[years] = There is no typo below as of this writing. Volume 1 was published in 2005. Volume 3 was published in 2004. They may fix this in the future.
 
     au < crawling ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
     au < crawling ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
