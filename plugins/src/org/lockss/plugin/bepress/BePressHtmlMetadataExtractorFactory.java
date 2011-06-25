@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.10 2011-03-24 23:53:22 pgust Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.11 2011-06-25 14:59:44 pgust Exp $
  */
 
 /*
@@ -33,12 +33,14 @@
 package org.lockss.plugin.bepress;
 
 import java.io.*;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.FileMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
 
 /**
@@ -56,8 +58,8 @@ public class BePressHtmlMetadataExtractorFactory
     return new BePressHtmlMetadataExtractor();
   }
 
-  public static class BePressHtmlMetadataExtractor
-    extends SimpleHtmlMetaTagMetadataExtractor {
+  public static class BePressHtmlMetadataExtractor 
+    implements FileMetadataExtractor {
 
     // Map BePress-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -81,11 +83,10 @@ public class BePressHtmlMetadataExtractorFactory
      * to cooked fields, then extract the ISSN by reading the file.
      */
     @Override
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
-
-      // extract metadata from BePress specific metadata tags
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+      throws IOException {
+      ArticleMetadata am = 
+        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 
       // XXX Should this be conditional on
@@ -94,25 +95,21 @@ public class BePressHtmlMetadataExtractorFactory
       // The ISSN is not in a meta tag but we can find it in the source
       // code. Here we need to some string manipulation and use some REGEX
       // to find the right index where the ISSN number is located.
-      if (cu == null) {
-	throw new IllegalArgumentException("extract(null)");
-      }
       BufferedReader bReader = new BufferedReader(cu.openForReading());
       try {
-	for (String line = bReader.readLine();
-	     line != null;
-	     line = bReader.readLine()) {
-	  line = line.trim();
-	  if (StringUtil.startsWithIgnoreCase(line, "<div id=\"issn\">") ||
-	      StringUtil.startsWithIgnoreCase(line, "<p>ISSN:")) {
-	    log.debug2("Line: " + line);
-	    addISSN(line, am);
-	  }
-	}
+        for (String line = bReader.readLine();
+             line != null; line = bReader.readLine()) {
+          line = line.trim();
+          if (   StringUtil.startsWithIgnoreCase(line, "<div id=\"issn\">") 
+              || StringUtil.startsWithIgnoreCase(line, "<p>ISSN:")) {
+            log.debug2("Line: " + line);
+            addISSN(line, am);
+          }
+        }
       } finally {
-	IOUtil.safeClose(bReader);
+        IOUtil.safeClose(bReader);
       }
-      return am;
+      emitter.emitMetadata(cu, am);
     }
 		
     /**
