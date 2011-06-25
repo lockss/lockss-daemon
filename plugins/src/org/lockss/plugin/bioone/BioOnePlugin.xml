@@ -65,7 +65,11 @@
   	<map>
   	  <entry>
   	    <string>au_volume</string>
-    	<string>&quot;%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
+    	<string>&quot;%sperlserv/?request-get-toc&amp;issn=%s&amp;volume=%d&quot;, base_url, journal_id, volume</string>
+  	  </entry>
+  	  <entry>
+  	  	<string>au_issue</string>
+  	  	<string>&quot;%sperlserv/?request=get-toc&amp;issn=%s&amp;volume=%d&amp;issue=%s&quot;, base_url, journal_id, volume, issue</string>
   	  </entry>
   	</map>
   </entry>
