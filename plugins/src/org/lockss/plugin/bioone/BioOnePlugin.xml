@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -61,6 +61,15 @@
     <string>&quot;%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+  	    <string>au_volume</string>
+    	<string>&quot;%sperlserv/?request=archive-lockss&amp;issn=%s&amp;volume=%.03d&quot;, base_url, journal_id, volume</string>
+  	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -91,7 +100,7 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
-<!--
+
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bioone.BioOneArticleIteratorFactory</string>
@@ -113,5 +122,5 @@
       </entry>
     </map>
   </entry>
--->
+
 </map>
