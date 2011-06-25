@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.6 2011-06-25 15:31:33 pgust Exp $
  */
 
 /*
@@ -45,32 +45,38 @@ public class EdinburghUniversityPressArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger("EdinburghUniversityPressArticleIteratorFactory");
+  protected static Logger log = 
+    Logger.getLogger("EdinburghUniversityPressArticleIteratorFactory");
 
   protected static final String ROOT_TEMPLATE = "\"%sdoi/pdfplus/\", base_url";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%sdoi/pdfplus/[.0-9]+/\", base_url";
+  protected static final String PATTERN_TEMPLATE = 
+    "\"^%sdoi/pdfplus/[.0-9]+/\", base_url";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    return new EdinburghUniversityPressArticleIterator(au, new SubTreeArticleIterator.Spec()
-				                           .setTarget(target)
-				                           .setRootTemplate(ROOT_TEMPLATE)
-				                           .setPatternTemplate(PATTERN_TEMPLATE));
+    return new EdinburghUniversityPressArticleIterator(
+        au, new SubTreeArticleIterator.Spec()
+				                      .setTarget(target)
+				                      .setRootTemplate(ROOT_TEMPLATE)
+				                      .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new EdinburghUniversityPressArticleMetadataExtractor();
+    throws PluginException {
+    return new BaseArticleMetadataExtractor(null);
   }
   
-  protected static class EdinburghUniversityPressArticleIterator extends SubTreeArticleIterator {
+  protected static class EdinburghUniversityPressArticleIterator 
+    extends SubTreeArticleIterator {
     
-    protected static Pattern PDF_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+/.+)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PDF_PATTERN = 
+      Pattern.compile("/doi/pdfplus/([.0-9]+/.+)$", Pattern.CASE_INSENSITIVE);
     
-    public EdinburghUniversityPressArticleIterator(ArchivalUnit au,
-                                                   SubTreeArticleIterator.Spec spec) {
+    public EdinburghUniversityPressArticleIterator(
+        ArchivalUnit au, SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
     
@@ -81,7 +87,8 @@ public class EdinburghUniversityPressArticleIteratorFactory
       if (mat.find()) {
         return processFullTextPdf(cu, mat);
       }
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
+      log.warning(  "Mismatch between article iterator factory"
+                  + "and article iterator: " + url);
       return null;
     }
     
@@ -100,25 +107,4 @@ public class EdinburghUniversityPressArticleIteratorFactory
     
   }
   
-  protected static class EdinburghUniversityPressArticleMetadataExtractor extends SingleArticleMetadataExtractor {
-
-    @Override
-    public ArticleMetadata extract(MetadataTarget target, ArticleFiles af)
-	throws IOException, PluginException {
-      String url = af.getFullTextUrl();
-      Matcher mat = EdinburghUniversityPressArticleIterator.PDF_PATTERN.matcher(url);
-      if (!mat.find()) {
-        log.warning("Mismatch between the article iterator and the article metadata extractor: " + url);
-        return null;
-      }
-      String doi = mat.group(1);
-      
-      ArticleMetadata am = new ArticleMetadata();
-      am.put(MetadataField.FIELD_ACCESS_URL, url);
-      am.put(MetadataField.FIELD_DOI, doi);
-      return am;
-    }
-
-  }
-
 }
