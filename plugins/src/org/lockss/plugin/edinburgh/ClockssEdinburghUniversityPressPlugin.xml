@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -39,6 +39,19 @@
     <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+  	    <string>au_issue</string>
+        <string>&quot;%stoc/%s/%s/&s&quot;, base_url, journal_id, volume_name, issue</string>
+  	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressUrlNormalizer</string>
   </entry>
@@ -61,6 +74,15 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.edinburgh.EdinburghHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
