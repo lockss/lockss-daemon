@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.41 2009-11-24 04:33:45 dshr Exp $
+ * $Id: IpAccessControl.java,v 1.42 2011-06-26 20:20:10 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
 
 import javax.servlet.*;
 
@@ -86,12 +87,12 @@ public abstract class IpAccessControl extends LockssServlet {
   protected ConfigManager configMgr;
 
   // Values read from form
-  private Vector formIncl;
-  private Vector formExcl;
+  private List<String> formIncl;
+  private List<String> formExcl;
 
   // Used to insert error messages into the page
-  private Vector inclErrs;
-  private Vector exclErrs;
+  private List<String> inclErrs;
+  private List<String> exclErrs;
   protected boolean isForm;
 
   private int warnBits;
@@ -135,8 +136,8 @@ public abstract class IpAccessControl extends LockssServlet {
 			     DEFAULT_WARN_BELOW_BITS);
     errorBits = config.getInt(PARAM_ERROR_BELOW_BITS,
 			      DEFAULT_ERROR_BELOW_BITS);
-    formIncl = ipStrToVector(req.getParameter(ALLOW_IPS_NAME));
-    formExcl = ipStrToVector(req.getParameter(DENY_IPS_NAME));
+    formIncl = ipStrToList(req.getParameter(ALLOW_IPS_NAME));
+    formExcl = ipStrToList(req.getParameter(DENY_IPS_NAME));
     inclErrs = findInvalidIps(formIncl, (confirm ? PermissivenessCheck.ERROR :
 					 PermissivenessCheck.WARN));
     exclErrs = findInvalidIps(formExcl, PermissivenessCheck.NONE);
@@ -165,8 +166,8 @@ public abstract class IpAccessControl extends LockssServlet {
     if (formIncl != null || formExcl != null) {
       displayPage(formIncl, formExcl);
     } else {
-      Vector incl = getListFromParam(getIncludeParam());
-      Vector excl = getListFromParam(getExcludeParam());
+      List<String> incl = getListFromParam(getIncludeParam());
+      List<String> excl = getListFromParam(getExcludeParam());
       // hack to remove possibly duplicated first element from platform subnet
       if (incl.size() >= 2 && incl.get(0).equals(incl.get(1))) {
 	incl.remove(0);
@@ -175,17 +176,17 @@ public abstract class IpAccessControl extends LockssServlet {
     }
   }
 
-  private Vector getListFromParam(String param) {
+  private List<String> getListFromParam(String param) {
     Configuration config = CurrentConfig.getCurrentConfig();
-    return new Vector(config.getList(param));
+    return config.getList(param);
   }
 
   /**
    * Display the UpdateIps page.
-   * @param incl vector of included ip addresses
-   * @param excl vector of excluded ip addresses
+   * @param incl list of included ip addresses
+   * @param excl list of excluded ip addresses
    */
-  private void displayPage(Vector incl, Vector excl)
+  private void displayPage(List<String> incl, List<String> excl)
       throws IOException {
     // Create and start laying out page
     Page page = newPage();
@@ -213,39 +214,43 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   /**
-   * Checks the validity of a vector of IP addresses
-   * @param ipList vector containing strings representing the ip addresses
-   * @return vector of the malformed ip addresses
+   * Checks the validity of a list of IP addresses
+   * Elements that start with # are comments, ignored.
+   * @param ipList List containing strings representing the ip addresses
+   * @return List of the malformed ip addresses
    */
-  public Vector findInvalidIps(Vector ipList, PermissivenessCheck perm) {
-    Vector errorIPs = new Vector();
+  public List<String> findInvalidIps(List<String> ipList,
+				     PermissivenessCheck perm) {
+    List<String> errorIPs = new ArrayList<String>();
 
     if (ipList != null) {
-      for (Iterator iter =  ipList.iterator(); iter.hasNext();) {
-	String ipStr = (String)iter.next();
+      for (String ipStr : ipList) {
+	if (ipStr.startsWith("#")) {
+	  continue;
+	}
 	IpFilter.Mask ip;
 	try {
 	  // Constructor throws if malformed
-	  ip = new IpFilter.Mask(ipStr, true);
+	  ip = IpFilter.newMask(ipStr);
 	  switch (perm) {
 	  case WARN:
 	  case ERROR:
 	    int b = ip.getMaskBits();
 	    if (b < errorBits) {
-	      errorIPs.addElement(ipStr + ": Subnet mask with fewer than " +
-				  errorBits + " bits not allowed");
+	      errorIPs.add(ipStr + ": Subnet mask with fewer than " +
+			   errorBits + " bits not allowed");
 	    } else if (perm == PermissivenessCheck.WARN && b < warnBits) {
 	      warnings++;
-	      errorIPs.addElement(ipStr +
-				  ": Please confirm that you wish to allow " +
-				  "access from all " + (1 << (32 - b)) +
-				  " IP addresses in this range");
+	      errorIPs.add(ipStr +
+			   ": Please confirm that you wish to allow " +
+			   "access from all " + (1 << (32 - b)) +
+			   " IP addresses in this range");
 	    }
 	    break;
 	  case NONE:
 	  }
 	} catch (IpFilter.MalformedException e) {
-	  errorIPs.addElement(ipStr + ":  " + e.getMessage());
+	  errorIPs.add(ipStr + ":  " + e.getMessage());
 	}
       }
     }
@@ -253,14 +258,21 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   /**
-   * Convert a string of newline separated IP addresses to a vector of strings,
-   * removing duplicates
+   * Convert a string of newline separated IP addresses and comments to a
+   * list of strings.  Comment lines start with # and may not contain
+   * semicolon.  (Any semicolons will be changed to colon; as these lists
+   * are stored as semicolon-separated strings)
    *
-   * @param ipStr string to convert into a vector
-   * @return vector of strings representing ip addresses
+   * @param ipStr string to convert into a list
+   * @return List of strings representing ip addresses
    */
-  private Vector ipStrToVector(String ipStr) {
-    return StringUtil.breakAt(ipStr, '\n', 0, true, true);
+  private List<String> ipStrToList(String ipStr) {
+    List<String> res = new ArrayList<String>();
+    // 
+    for (String str : StringUtil.breakAt(ipStr, '\n', 0, true, true)) {
+      res.add(str.replace(';', ':'));
+    }
+    return res;
   }
 
   /**
