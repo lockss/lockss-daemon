@@ -37,17 +37,22 @@
     <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
-    <string>au_issue_url</string>
-    <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+        <string>au_issue</string>
+    	<string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+  	  </entry>
+  	  <entry>
+    	<string>au_volume</string>
+    	<string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+  	  </entry>
+  	  <entry>
+    	<string>au_title</string>
+    	<string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
+  	  </entry> 
+	</map>
   </entry>
-  <entry>
-    <string>au_volume_url</string>
-    <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_title_url</string>
-    <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
-  </entry> 
   <entry>
     <string>plugin_config_props</string>
     <list>
