@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.4 2011-02-24 13:22:02 pgust Exp $
+ * $Id: TestMetadataField.java,v 1.5 2011-06-26 06:09:42 pgust Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
+import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import static org.lockss.extractor.MetadataField.*;
@@ -51,21 +52,57 @@ public class TestMetadataField extends LockssTestCase {
   }
 
   public void testPredefined() {
-    assertField(KEY_DOI, Cardinality.Single, FIELD_DOI);
-    assertField(KEY_ISSN, Cardinality.Single, FIELD_ISSN);
-    assertField(KEY_EISSN, Cardinality.Single, FIELD_EISSN);
-    assertField(KEY_VOLUME, Cardinality.Single, FIELD_VOLUME);
-    assertField(KEY_ISSUE, Cardinality.Single, FIELD_ISSUE);
-    assertField(KEY_START_PAGE, Cardinality.Single, FIELD_START_PAGE);
-    assertField(KEY_DATE, Cardinality.Single, FIELD_DATE);
-    assertField(KEY_ARTICLE_TITLE, Cardinality.Single, FIELD_ARTICLE_TITLE);
-    assertField(KEY_JOURNAL_TITLE, Cardinality.Single, FIELD_JOURNAL_TITLE);
-    assertField(KEY_AUTHOR, Cardinality.Multi, FIELD_AUTHOR);
     assertField(KEY_ACCESS_URL, Cardinality.Single, FIELD_ACCESS_URL);
+    assertField(KEY_ARTICLE_TITLE, Cardinality.Single, FIELD_ARTICLE_TITLE);
+    assertField(KEY_AUTHOR, Cardinality.Multi, FIELD_AUTHOR);
+    assertField(KEY_DATE, Cardinality.Single, FIELD_DATE);
+    assertField(KEY_DOI, Cardinality.Single, FIELD_DOI);
+    assertField(KEY_EISSN, Cardinality.Single, FIELD_EISSN);
+    assertField(KEY_ISSUE, Cardinality.Single, FIELD_ISSUE);
+    assertField(KEY_ISSN, Cardinality.Single, FIELD_ISSN);
+    assertField(KEY_JOURNAL_TITLE, Cardinality.Single, FIELD_JOURNAL_TITLE);
     assertField(KEY_KEYWORDS, Cardinality.Multi, FIELD_KEYWORDS);
-    assertField(DC_KEY_IDENTIFIER, Cardinality.Single, DC_FIELD_IDENTIFIER);
+    assertField(KEY_PUBLISHER, Cardinality.Multi, FIELD_PUBLISHER);
+    assertField(KEY_START_PAGE, Cardinality.Single, FIELD_START_PAGE);
+    assertField(KEY_VOLUME, Cardinality.Single, FIELD_VOLUME);
+    
+    assertField(DC_KEY_CITATION_CHAPTER, 
+                Cardinality.Single, DC_FIELD_CITATION_CHAPTER);
+    assertField(DC_KEY_CITATION_EPAGE, 
+                Cardinality.Single, DC_FIELD_CITATION_EPAGE);
+    assertField(DC_KEY_CITATION_ISSUE, 
+                Cardinality.Single, DC_FIELD_CITATION_ISSUE);
+    assertField(DC_KEY_CITATION_SPAGE, 
+                Cardinality.Single, DC_FIELD_CITATION_SPAGE);
+    assertField(DC_KEY_CITATION_VOLUME, 
+                Cardinality.Single, DC_FIELD_CITATION_VOLUME);
+    assertField(DC_KEY_CONTRIBUTOR, Cardinality.Multi, DC_FIELD_CONTRIBUTOR);
     assertField(DC_KEY_DATE, Cardinality.Single, DC_FIELD_DATE);
-    assertField(DC_KEY_CONTRIBUTOR, Cardinality.Single, DC_FIELD_CONTRIBUTOR);
+    assertField(DC_KEY_COVERAGE, 
+                Cardinality.Single, DC_FIELD_COVERAGE);
+    assertField(DC_KEY_DESCRIPTION, Cardinality.Single, DC_FIELD_DESCRIPTION);
+    assertField(DC_KEY_FORMAT, 
+                Cardinality.Single, DC_FIELD_FORMAT);
+    assertField(DC_KEY_IDENTIFIER, Cardinality.Multi, DC_FIELD_IDENTIFIER);
+    assertField(DC_KEY_IDENTIFIER_ISSN, 
+                Cardinality.Single, DC_FIELD_IDENTIFIER_ISSN);
+    assertField(DC_KEY_IDENTIFIER_EISSN, 
+        Cardinality.Single, DC_FIELD_IDENTIFIER_EISSN);
+    assertField(DC_KEY_IDENTIFIER_ISSNL, 
+        Cardinality.Single, DC_FIELD_IDENTIFIER_ISSNL);
+    assertField(DC_KEY_IDENTIFIER_ISBN, 
+        Cardinality.Single, DC_FIELD_IDENTIFIER_ISBN);
+    assertField(DC_KEY_ISSUED, 
+                Cardinality.Single, DC_FIELD_ISSUED);
+    assertField(DC_KEY_LANGUAGE, Cardinality.Single, DC_FIELD_LANGUAGE);
+    assertField(DC_KEY_PUBLISHER, Cardinality.Single, DC_FIELD_PUBLISHER);
+    assertField(DC_KEY_RELATION, Cardinality.Multi, DC_FIELD_RELATION);
+    assertField(DC_KEY_RELATION_ISPARTOF, 
+                Cardinality.Single, DC_FIELD_RELATION_ISPARTOF);
+    assertField(DC_KEY_RIGHTS, Cardinality.Single, DC_FIELD_RIGHTS);
+    assertField(DC_KEY_RIGHTS, Cardinality.Single, DC_FIELD_RIGHTS);
+    assertField(DC_KEY_SUBJECT, Cardinality.Single, DC_FIELD_SUBJECT);
+    assertField(DC_KEY_TITLE, Cardinality.Single, DC_FIELD_TITLE);
   }
 
   public void testDefault() throws MetadataException. ValidationException {
