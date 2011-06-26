@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.68 2011-06-02 18:59:52 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.69 2011-06-26 20:20:23 tlipkis Exp $
  */
 
 /*
@@ -842,11 +842,11 @@ public class ServletUtil {
 
   public static void layoutIpAllowDenyTable(LockssServlet servlet,
                                             Composite composite,
-                                            Vector allow,
-                                            Vector deny,
+                                            List<String> allow,
+                                            List<String> deny,
                                             String ipFootnote,
-                                            Vector allowErrs,
-                                            Vector denyErrs,
+                                            List<String> allowErrs,
+                                            List<String> denyErrs,
                                             String allowName,
                                             String denyName) {
     Table table = new Table(ALLOWDENY_TABLE_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
@@ -1513,7 +1513,7 @@ public class ServletUtil {
   }
 
   private static void layoutIpAllowDenyErrors(Composite composite,
-                                              Vector errs) {
+                                              List<String> errs) {
     int size;
     if (errs != null && (size = errs.size()) > 0) {
       composite.add(ALLOWDENYERRORS_BEFORE);
