@@ -29,6 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.emerald;
 
 import java.io.*;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
@@ -47,8 +48,8 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
     return new EmeraldHtmlMetadataExtractor();
   }
 
-  public static class EmeraldHtmlMetadataExtractor
-    extends SimpleFileMetadataExtractor {
+  public static class EmeraldHtmlMetadataExtractor 
+    implements FileMetadataExtractor {
 
     // Map Emerald's Google Scholar HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -66,14 +67,13 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
     }
 
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException, PluginException {
-      SimpleFileMetadataExtractor extr =
-	new SimpleHtmlMetaTagMetadataExtractor();
-      ArticleMetadata am = extr.extract(target, cu);
+    @Override
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+        throws IOException {
+      ArticleMetadata am = 
+        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      return am;
+      emitter.emitMetadata(cu, am);
     }
   }
-
 }
