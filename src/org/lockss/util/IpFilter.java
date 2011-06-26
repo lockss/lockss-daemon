@@ -1,10 +1,10 @@
 /*
- * $Id: IpFilter.java,v 1.13 2008-08-29 09:23:13 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.14 2011-06-26 20:20:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import java.net.*;
 import java.util.*;
+import java.util.regex.*;
+
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 
 /**
- * IpFilter objects represent either an IP address or a range of addresses
- * (addr and mask).
- * Static methods support a single pair of include and exclude filter arrays,
- * and lookups.
+ * IpFilter accepts or rejects IP addresses based on an include list and an
+ * exclude list of address masks.  To be accepted, a candidate IP address
+ * must match at least one mask on the include list, and must not match any
+ * patterns on the exclude list.  IPv4 masks are specified as either a
+ * complete address, an address with 1-3 final stars (<i>eg</i>10.*.*.*) or
+ * in CIDR notation (<i>eg</i>10.0.0.0/8).  IPv6 masks are specified as
+ * either a complete address or in CIDR notation (<i>eg</i>ffff:1234::/32).
+ * IPv4-mapped addresses are not allowed.
  */
 public class IpFilter {
   private static Logger log = Logger.getLogger("IpFilter");
@@ -51,14 +58,11 @@ public class IpFilter {
 
   /** Return the union of two filter lists */
   public static String unionFilters(String filters1, String filters2) {
-    List lst1 =
-      StringUtil.breakAt(filters1, Constants.LIST_DELIM_CHAR, 0, true, true);
-    List lst2 =
-      StringUtil.breakAt(filters2, Constants.LIST_DELIM_CHAR, 0, true, true);
-    for (Iterator iter = lst2.iterator(); iter.hasNext(); ) {
-      Object o = iter.next();
-      if (!lst1.contains(o)) {
-	lst1.add(o);
+    List<String> lst1 = breakStr(filters1);
+    List<String> lst2 = breakStr(filters2);
+    for (String s2 : lst2) {
+      if (!lst1.contains(s2)) {
+	lst1.add(s2);
       }
     }
     return StringUtil.separatedString(lst1, Constants.LIST_DELIM);
@@ -68,11 +72,15 @@ public class IpFilter {
    */
   public void setFilters(String includeList, String excludeList)
       throws MalformedException {
-    setFilters(StringUtil.breakAt(includeList, Constants.LIST_DELIM_CHAR),
-	       StringUtil.breakAt(excludeList, Constants.LIST_DELIM_CHAR));
+    setFilters(breakStr(includeList), breakStr(excludeList));
   }
 
-  /** Set include and exclude access lists from vectors of Mask strings.
+  private static List<String> breakStr(String str) {
+    return StringUtil.breakAt(str, Constants.LIST_DELIM_CHAR, 0, true, true);
+  }
+
+  /** Set include and exclude access lists from lists of Mask strings.
+   * Elements that start with # are comments, ignored.
    * Malformed entries in the include list are ignored (and logged),
    * malformed entries in the exclude list cause failure, as omitting an
    * exclude entry could be dangerous.
@@ -80,36 +88,38 @@ public class IpFilter {
    */
   public void setFilters(List inclVec, List exclVec)
       throws MalformedException {
-    inclFilters = new Mask[inclVec.size()];
-    exclFilters = new Mask[exclVec.size()];
-    int i = 0;
-    for (Iterator iter = inclVec.iterator(); iter.hasNext();) {
-      try {
-	// must be separate statements to ensure i doesn't get incremented
-	// if Mask constructor throws
-	Mask mask = new Mask((String)iter.next(), true);
-	inclFilters[i++] = mask;
-      } catch (MalformedException e) {
-	log.warning("Malformed IP filter in include list, ignoring: " +
-		    e.getMalformedIp(), e);
-	// make the array shorter by one.
-	Mask[] tmp = new Mask[inclFilters.length - 1];
-	System.arraycopy(inclFilters, 0, tmp, 0, i);
-	inclFilters = tmp;
-      }
-    }
-    i = 0;
-    for (Iterator iter = exclVec.iterator(); iter.hasNext();) {
-      exclFilters[i++] = new Mask((String)iter.next(), true);
-    }
+    inclFilters = parseMasks(inclVec, "include", false);
+    exclFilters = parseMasks(exclVec, "exclude", true);
 //      logFilters();
   }
 
+
+  Mask[] parseMasks(List<String> masks, String msg, boolean malformedIsFatal)
+      throws MalformedException {
+    List<Mask> res = new ArrayList<Mask>();
+    for (String str : masks) {
+      if (str.startsWith("#")) {
+	continue;
+      }
+      try {
+	res.add(newMask(str));
+      } catch (MalformedException e) {
+	log.warning("Malformed IP filter in " + msg + " list, ignoring: " +
+		    e.getMalformedIp(), e);
+	if (malformedIsFatal) {
+	  throw e;
+	}
+      }
+    }
+    return (res.toArray(new Mask[0]));
+  }
+
+
   /** Search for matching element in filter list
    */
-  private boolean isInList(Mask ip, Mask[] list) {
+  private boolean isInList(Addr ip, Mask[] list) {
     for (int i = 0; i < list.length; i++) {
-      if (ip.match(list[i])) {
+      if (list[i].match(ip)) {
 	return true;
       }
     }
@@ -120,7 +130,7 @@ public class IpFilter {
    */
   public boolean isIpAllowed(String ipstr)
       throws MalformedException {
-    Addr ip = new Addr(ipstr);
+    Addr ip = newAddr(ipstr);
     return isIpAllowed(ip);
   }
 
@@ -134,7 +144,7 @@ public class IpFilter {
   }
 
   private void logFilters() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("Include: ");
     for (int i = 0; i < inclFilters.length; i++) {
       sb.append(inclFilters[i]);
@@ -149,17 +159,72 @@ public class IpFilter {
     System.err.print(sb.toString());
   }
 
-  /** Represents an IP address mask */
-  public static class Mask {
+  // Patterns used to quickly distinguish IPv4 from IPv6 addresses & masks,
+  // and to ensure they are numeric.  More stringent syntax checks are
+  // performed in the Mask4 and Mask6 constructors.
 
-    private int addr = 0;
-    private int mask = -1;
-    private int cidr = 32;
+  private static Pattern IPV4_ADDR = Pattern.compile("[\\d*.]+");
+  private static Pattern IPV6_ADDR = Pattern.compile("[\\p{XDigit}:]+");
+
+  private static Pattern IPV4_MASK =
+    Pattern.compile("[\\d*.]+(?:/[\\d.]+)?");
+  // This one is also used to separate addr from CIDR
+  private static Pattern IPV6_MASK =
+    Pattern.compile("([\\p{XDigit}:]+)(?:/([\\d.]+))?");
+
+  /** Create a new IPv4 or IPv6 Address object */
+  public static Addr newAddr(String str) throws MalformedException {
+    Matcher m4 = IPV4_ADDR.matcher(str);
+    if (m4.matches()) {
+      return new Addr4(str);
+    }
+    Matcher m6 = IPV6_ADDR.matcher(str);
+    if (m6.matches()) {
+      return new Addr6(str);
+    }
+    // Produce better message if matches mask pattern
+    if (IPV4_MASK.matcher(str).matches() ||
+	IPV6_MASK.matcher(str).matches()) {
+      throw new MalformedException("Mask not allowed", str);
+    }
+    throw new MalformedException("Unknown IP address format", str);
+  }
+
+  /** Create a new IPv4 or IPv6 Mask object */
+  public static Mask newMask(String str) throws MalformedException {
+    Matcher m4 = IPV4_MASK.matcher(str);
+    if (m4.matches()) {
+      return new Mask4(str, true);
+    }
+    Matcher m6 = IPV6_MASK.matcher(str);
+    if (m6.matches()) {
+      return new Mask6(m6.group(1), m6.group(2), true);
+    }
+    throw new MalformedException("Unknown IP address format", str);
+  }
+
+  /** An IP address and mask */
+  public interface Mask {
+    public boolean match(Addr ip);
+    public int getMaskBits();
+  }
+
+  /**  An IP address */
+  public interface Addr extends Mask {
+  }
+
+
+  /** An IPv4 address and mask */
+  public static class Mask4 implements Mask {
+
+    protected int addr = 0;
+    protected int mask = -1;
+    protected int maskBits = 32;
 
     /**/
     /** Constructor for an IP address possibly including a mask
      */
-    public Mask(String s, boolean maskOk) throws MalformedException {
+    private Mask4(String s, boolean maskOk) throws MalformedException {
       s = s.trim();
       StringTokenizer en = new StringTokenizer(s, "./", true);
       boolean seenStar = false;
@@ -176,7 +241,7 @@ public class IpFilter {
 	  }
 	  if (b == -1) {
 	    if (!seenStar) {
-	      cidr = n * 8;
+	      maskBits = n * 8;
 	    }
 	    seenStar = true;
 	    b = 0;
@@ -199,8 +264,8 @@ public class IpFilter {
 		throw new MalformedException("Illegal CIDR notation", s);
 	      }
 	      tok = en.nextToken();
-	      cidr = Integer.parseInt(tok);
-	      if (cidr < 0 || cidr > 32) {
+	      maskBits = Integer.parseInt(tok);
+	      if (maskBits < 0 || maskBits > 32) {
 		throw new MalformedException("Illegal CIDR notation", s);
 	      }
 	      if (en.hasMoreTokens()) {
@@ -218,10 +283,10 @@ public class IpFilter {
       if (n != 4) {
 	throw new MalformedException("Must have 4 bytes", s);
       }
-      switch (cidr) {
+      switch (maskBits) {
       case 0: mask = 0; break;
       case 32: mask = -1; break;
-      default: mask = -(1 << (32 - cidr)); break;
+      default: mask = -(1 << (32 - maskBits)); break;
       }
       if (mask != -1 && !maskOk) {
 	throw new MalformedException("Mask not allowed", s);
@@ -234,8 +299,8 @@ public class IpFilter {
     /** Return true if obj equal this.
      */
     public boolean equals(Object obj) {
-      if (obj instanceof Mask) {
-	Mask ip = (Mask)obj;
+      if (obj instanceof Mask4) {
+	Mask4 ip = (Mask4)obj;
 	return (addr == ip.addr) && (mask == ip.mask);
       }
       return false;
@@ -245,30 +310,30 @@ public class IpFilter {
       return 3*addr + mask;
     }
 
-    /** Return true if ip is equal to this, or if either ip or this is a
-     * mask that matches the other.
+    /** Return true if ip is equal to this, or if this is a mask that
+     * matches ip.
      */
-    public boolean match(Mask ip) {
-      if (ip.mask == -1) {
-	return (ip.addr & mask) == addr;
-      } else if (mask == -1) {
-	return ip.match(this);
-      } else {
-	// both have mask, treat as equals()
-	return equals(ip);
+    public boolean match(Addr ip) {
+      if (ip instanceof Addr4) {
+	return match((Addr4)ip);
       }
+      return false;
+    }
+
+    public boolean match(Addr4 ip) {
+      return (ip.addr & mask) == addr;
     }
 
     /** Return number of one bits in mask
      */
     public int getMaskBits() {
-      return cidr;
+      return maskBits;
     }
 
     /** Return string representation
      */
     public String toString () {
-      StringBuffer sb = new StringBuffer(19);
+      StringBuilder sb = new StringBuilder(19);
       for (int i = 24; i >= 0; i -= 8) {
 	sb.append(Integer.toString((addr >>> i) & 0xff));
 	if (i > 0) {
@@ -277,18 +342,155 @@ public class IpFilter {
       }
       if (mask != -1) {
 	sb.append("/");
-	sb.append(Integer.toString(cidr));
+	sb.append(Integer.toString(maskBits));
       }
       return sb.toString();
     }
   }
 
-  public static class Addr extends Mask {
+  /** An IPv6 address and mask */
+  public static class Mask6 implements Mask {
+
+    InetAddress inet;
+    protected byte[] addr;
+    protected int maskBits;
+
+    /**/
+    /** Constructor for an IPv6 address possibly including a mask
+     */
+    private Mask6(String ipstr, String bitStr, boolean maskOk)
+	throws MalformedException {
+      try {
+	inet = InetAddress.getByName(ipstr);
+	if (bitStr != null) {
+	  if (!maskOk) {
+	    throw new MalformedException("Mask not allowed",
+					 ipstr + "/" + bitStr);
+	  }
+	  maskBits = Integer.parseInt(bitStr);
+	  if (maskBits < 0 || maskBits > 128) {
+	    throw new MalformedException("Illegal CIDR notation",
+					 ipstr + "/" + bitStr);
+	  }
+	} else {
+	  maskBits = 128;
+	}
+	int nBytes = (maskBits + 7) / 8;
+	byte[] tmp = inet.getAddress();
+	if (maskBits == 128) {
+	  // all bits are significant
+	  addr = tmp;
+	} else {
+	  // error if any masked out bytes are nonzero
+	  for (int ix = nBytes; ix < 16; ix++) {
+	    if (tmp[ix] != 0) {
+	      throw new MalformedException("Illegal CIDR notation",
+					   ipstr + "/" + bitStr);
+	    }
+	  }
+	  int oddBits = maskBits % 8;
+	  if (oddBits != 0) {
+	    int mask = -(1 << (8 - oddBits));
+	    // error if any masked out bits in last byte are nonzero
+	    if ((tmp[nBytes-1] & ~mask) != 0) {
+	      throw new MalformedException("Illegal CIDR notation",
+					   ipstr + "/" + bitStr);
+	    }
+	  }
+	  // save only the significant bytes
+	  addr = new byte[nBytes];
+	  System.arraycopy(tmp, 0, addr, 0, nBytes);
+	}
+      } catch (UnknownHostException e) {
+	throw new MalformedException("Unparseable IPv6 address", ipstr);
+      }
+    }
+
+    /** Return true if obj equal this.
+     */
+    public boolean equals(Object obj) {
+      if (obj instanceof Mask6) {
+	Mask6 other = (Mask6)obj;
+ 	return (maskBits == other.maskBits && inet.equals(other.inet));
+      }
+      return false;
+    }
+
+    public int hashCode() {
+      return 5*inet.hashCode() + 3*maskBits + 1;
+    }
+
+    /** Return true if ip is equal to this, or if this is a mask that
+     * matches ip.
+     */
+    public boolean match(Addr ip) {
+      if (ip instanceof Addr6) {
+	return match((Addr6)ip);
+      }
+      return false;
+    }
+
+
+    public boolean match(Addr6 ip) {
+      switch (maskBits) {
+      case 0: return true;
+      case 128:
+	// all bits are significant
+	return Arrays.equals(addr, ip.addr);
+      default:
+	int nBytes = maskBits / 8;
+	// compare masked-in whole bytes
+	for (int ix = 0; ix < nBytes; ix++) {
+	  if (addr[ix] != ip.addr[ix]) {
+	    return false;
+	  }
+	}
+	int oddBits = maskBits % 8;
+	if (oddBits != 0) {
+	  int mask = -(1 << (8 - oddBits));
+	  // compare masked-in bits in last byte
+	  return (0xff & (ip.addr[nBytes] & mask)) == addr[nBytes];
+	}
+	return true;
+      }
+    }
+
+    /** Return number of one bits in mask
+     */
+    public int getMaskBits() {
+      return maskBits;
+    }
+
+    /** Return string representation
+     */
+    public String toString () {
+      StringBuilder sb = new StringBuilder(19);
+      sb.append(inet.getHostAddress());
+      if (maskBits != 128) {
+	sb.append("/");
+	sb.append(Integer.toString(maskBits));
+      }
+      return sb.toString();
+    }
+  }
+
+  /** IPv4 address */
+  public static class Addr4 extends Mask4 implements Addr {
     /**
      * Constructor for single IP address (no mask)
      */
-    public Addr(String ipAddr) throws MalformedException {
+    private Addr4(String ipAddr) throws MalformedException {
       super(ipAddr, false);
+    }
+  }
+
+  /** IPv6 address */
+  public static class Addr6 extends Mask6 implements Addr {
+    /**
+     * Constructor for single IP address (no mask)
+     */
+    private Addr6(String ipAddr) throws MalformedException {
+      super(ipAddr, null, false);
     }
   }
 
