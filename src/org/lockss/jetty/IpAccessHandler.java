@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.9 2011-06-20 07:03:30 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.9.2.1 2011-06-26 21:12:10 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.9 2011-06-20 07:03:30 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.9.2.1 2011-06-26 21:12:10 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -50,8 +50,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
 
   private static Logger log = Logger.getLogger("IpAccess");
 
-  private static String LOCAL_IP_FILTERS = "127.0.0.0/8";
-//   private static String LOCAL_IP_FILTERS = "127.0.0.0/8;::1";
+  private static String LOCAL_IP_FILTERS = "127.0.0.0/8;::1";
 
   private IpFilter filter = new IpFilter();
   private String serverName;

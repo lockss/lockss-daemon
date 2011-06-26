@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.6 2008-10-05 05:54:58 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.6.40.1 2011-06-26 21:12:10 tlipkis Exp $
  */
 
 /*
@@ -129,6 +129,17 @@ public class TestPeerAddress extends LockssTestCase {
 		     PeerAddress.makePeerAddress("tcp:[33.44.55.66]:1234"));
     assertIpAddrPort("33.44.55.66", 65530,
 		     PeerAddress.makePeerAddress("tcp:[33.44.55.66]:65530"));
+
+    // IPV6 addresses
+    assertIpAddrPort("0:0:0:0:0:0:0:1", 65530,
+		     PeerAddress.makePeerAddress("tcp:[::1]:65530"));
+    assertIpAddrPort("0:0:0:0:0:0:0:1", 1234,
+		     PeerAddress.makePeerAddress("tcp:[0:0:0:0:0:0:0:1]:1234"));
+
+    assertIpAddrPort("ffff:0:0:0:0:0:0:abcd", 8888,
+		     PeerAddress.makePeerAddress("tcp:[ffff:0:0:0:0:0:0:abcd]:8888"));
+    assertIpAddrPort("ffff:0:0:0:0:0:0:abcd", 8888,
+		     PeerAddress.makePeerAddress("tcp:[ffff::abcd]:8888"));
   }
 
   public void assertIllegal(String key) {
@@ -162,15 +173,18 @@ public class TestPeerAddress extends LockssTestCase {
     assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "-2"));
     assertIllegal(IDUtil.ipAddrToKey("1.2.3.4", "X"));
 
+    // IPV6 addresses
+    assertLegal("::1");
+    assertLegal("11:22:33:44:55:66:77:88");
+    assertLegal("ffff::1234");
+    assertLegal(IDUtil.ipAddrToKey("ffff::1234", "65535"));
+    assertIllegal(IDUtil.ipAddrToKey("ffff::1234", "65536"));
+
     // no abbreviated IP address
     assertIllegal("1");
     assertIllegal("1.2");
-    // no IPV6 addresses for now
-    assertIllegal("11:22:33:44:55:66:77:88");
-    assertIllegal("::1");
 
     // no dns lookup
     assertIllegal("lockss.org");
-    assertIllegal("::1");
   }
 }
