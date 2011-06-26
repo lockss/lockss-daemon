@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.33 2011-06-22 22:37:34 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.33.2.1 2011-06-26 21:12:24 tlipkis Exp $
  */
 
 /*
@@ -69,8 +69,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
    * is supposed to loop back, connections to it hang on (some?) MacOS, and
    * get "Network is unreachable" on OpenBSD (unless a loopback interface
    * is explicitly configured at that address).  Using IPv6 loopback seems
-   * less likely to cause problems, but will fail on machines where IPv6
-   * isn't enabled. */
+   * less likely to cause problems but still isn't supported everywhere, so
+   * a test connection is attempted before relying on it. */
   static final String ALT_IP_ADDR = "::1";
 
   static final int HEADER_LEN = PeerChannel.HEADER_LEN;
@@ -652,9 +652,35 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  // Test that ALT_IP_ADDR is usable before relying on it.  Some JVMs don't
+  // have IPv6 support.
+  private boolean isAltAddrUsable() {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    try {
+      ServerSocket server = new ServerSocket(port);
+      Socket sock = new Socket(InetAddress.getByName(ALT_IP_ADDR), port);
+      log.debug2("Socket opened to " + sock.getInetAddress());
+      sock.close();
+      return true;
+    } catch (IOException e) {
+      log.debug2("No IPv6 support", e);
+    return false;
+    }
+  }
+
+  private void logSkipped(String testName) {
+    log.warning("2nd local address (" + ALT_IP_ADDR +
+		") not supported, skipping " + testName);
+  }
+
+
   // Ensure that in the normal case the listen socket isn't bound to a
   // specific IP
   public void testIncomingToAlternateAddress() throws IOException {
+    if (!isAltAddrUsable()) {
+      logSkipped("testIncomingToAlternateAddress");
+      return;
+    }
     setupComm1();
     Interrupter intr1 = null;
     SockAbort intr2 = null;
@@ -675,6 +701,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void testIncomingBindLocalOnlySameIP() throws IOException {
+    if (!isAltAddrUsable()) {
+      logSkipped("testIncomingBindLocalOnlySameIP");
+      return;
+    }
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
 				  "true");
     setupComm1();
