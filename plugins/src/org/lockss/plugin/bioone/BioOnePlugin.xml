@@ -104,7 +104,7 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
-
+<!--
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bioone.BioOneArticleIteratorFactory</string>
@@ -126,5 +126,5 @@
       </entry>
     </map>
   </entry>
-
+-->
 </map>
