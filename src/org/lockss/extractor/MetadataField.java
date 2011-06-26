@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.4 2011-02-24 00:27:58 pgust Exp $
+ * $Id: MetadataField.java,v 1.5 2011-06-26 05:42:06 pgust Exp $
  */
 
 /*
@@ -113,6 +113,10 @@ public class MetadataField {
       return isbn;
     }};
 
+  public static final String KEY_PUBLISHER = "publisher";
+  public static final MetadataField FIELD_PUBLISHER =
+    new MetadataField(KEY_PUBLISHER, Cardinality.Single);
+
   public static final String KEY_VOLUME = "volume";
   public static final MetadataField FIELD_VOLUME =
     new MetadataField(KEY_VOLUME, Cardinality.Single);
@@ -153,19 +157,212 @@ public class MetadataField {
   public static final MetadataField FIELD_KEYWORDS =
     new MetadataField(KEY_KEYWORDS, Cardinality.Multi);
 
-  // Dublin code fields
+  // Dublin code fields.  See http://dublincore.org/documents/dces/ for
+  // more information on the fields.  See also 
+  // http://scholar.google.com/intl/en/scholar/inclusion.html for
+  // recommended usage of citation subfields for serial publications
+  // and books. The National Library of Medicine of the National Institutes 
+  // of Health has also published the NLM Metadata Schema that includes
+  // approved Dublin Core elements with approved NLM defined qualifiers.
+  // See: http://www.nlm.nih.gov/tsd/cataloging/metafilenew.html.
+  
+  /** The chapter of a book (Google Scholar non-standard) */
+  public static final String DC_KEY_CITATION_CHAPTER = "dc.citation.chapter";
+  public static final MetadataField DC_FIELD_CITATION_CHAPTER =
+    new MetadataField(DC_KEY_CITATION_CHAPTER, Cardinality.Single);
 
-  public static final String DC_KEY_IDENTIFIER = "dc.identifier";
-  public static final MetadataField DC_FIELD_IDENTIFIER =
-    new MetadataField(DC_KEY_IDENTIFIER, Cardinality.Single);
+  /** 
+   * The ending page of an article in a serial or a chapter in a book
+   * (Google Scholar non-standard).
+   */
+  public static final String DC_KEY_CITATION_EPAGE = "dc.citation_epage";
+  public static final MetadataField DC_FIELD_CITATION_EPAGE =
+    new MetadataField(DC_KEY_CITATION_EPAGE, Cardinality.Single);
 
+  /** The issue of a serial publication (Google Scholar non-standard) */
+  public static final String DC_KEY_CITATION_ISSUE = "dc.citation.issue";
+  public static final MetadataField DC_FIELD_CITATION_ISSUE =
+    new MetadataField(DC_KEY_CITATION_ISSUE, Cardinality.Single);
+
+  /** 
+   * The starting page of an article in a serial or a chapter in a book 
+   * (Google Scholar non-standard).
+   */
+  public static final String DC_KEY_CITATION_SPAGE = "dc.citation_spage";
+  public static final MetadataField DC_FIELD_CITATION_SPAGE =
+    new MetadataField(DC_KEY_CITATION_SPAGE, Cardinality.Single);
+
+  /** The volume of a serial publication (Google Scholar non-standard). */
+  public static final String DC_KEY_CITATION_VOLUME = "dc.citation_volume";
+  public static final MetadataField DC_FIELD_CITATION_VOLUME =
+    new MetadataField(DC_KEY_CITATION_VOLUME, Cardinality.Single);
+
+  /** An entity responsible for making contributions to the resource. */
+  public static final String DC_KEY_CONTRIBUTOR = "dc.contributor";
+  public static final MetadataField DC_FIELD_CONTRIBUTOR =
+    new MetadataField(DC_KEY_CONTRIBUTOR, Cardinality.Multi);
+
+  /** 
+   * The spatial or temporal topic of the resource, the spatial applicability 
+   * of the resource, or the jurisdiction under which the resource is relevant.
+   */
+  public static final String DC_KEY_COVERAGE = "dc.coverage";
+  public static final MetadataField DC_FIELD_COVERAGE =
+    new MetadataField(DC_KEY_COVERAGE, Cardinality.Single);
+
+  /** An entity primarily responsible for making the resource. */
+  public static final String DC_KEY_CREATOR = "dc.creator";
+  public static final MetadataField DC_FIELD_CREATOR =
+    new MetadataField(DC_KEY_CREATOR, Cardinality.Multi);
+
+  /** 
+   * A point or period of time associated with an event in the lifecycle 
+   * of the resource. Recommended best practice is to use an encoding scheme, 
+   * such as the W3CDTF profile of ISO 8601 [W3CDTF].
+   */
   public static final String DC_KEY_DATE = "dc.date";
   public static final MetadataField DC_FIELD_DATE =
     new MetadataField(DC_KEY_DATE, Cardinality.Single);
 
-  public static final String DC_KEY_CONTRIBUTOR = "dc.contributor";
-  public static final MetadataField DC_FIELD_CONTRIBUTOR =
-    new MetadataField(DC_KEY_CONTRIBUTOR, Cardinality.Single);
+  /** 
+   * An account of the resource. May include but is not limited to: an 
+   * abstract, a table of contents, a graphical representation, or a 
+   * free-text account of the resource.
+   */
+  public static final String DC_KEY_DESCRIPTION = "dc.description";
+  public static final MetadataField DC_FIELD_DESCRIPTION =
+    new MetadataField(DC_KEY_DESCRIPTION, Cardinality.Single);
+
+  /**
+   * The file format, physical medium, or dimensions of the resource.
+   * Recommended best practice is to use a controlled vocabulary such 
+   * as the list of Internet Media Types [MIME].
+   */
+  public static final String DC_KEY_FORMAT = "dc.format";
+  public static final MetadataField DC_FIELD_FORMAT =
+    new MetadataField(DC_KEY_FORMAT, Cardinality.Single);
+
+  /**
+   * An unambiguous reference to the resource within a given context.
+   * Recommended best practice is to identify the resource by means 
+   * of a string conforming to a formal identification system.
+   * <p>
+   * According to Google Scholar, "If a page shows only the abstract 
+   * of the paper and you have the full text in a separate file, e.g., 
+   * in the PDF format, please specify the locations of all full text 
+   * versions using ... DC.identifier tags. The content of the tag is 
+   * the absolute URL of the PDF file; for security reasons, it must 
+   * refer to a file in the same subdirectory as the HTML abstract."
+   */
+  public static final String DC_KEY_IDENTIFIER = "dc.identifier";
+  public static final MetadataField DC_FIELD_IDENTIFIER =
+    new MetadataField(DC_KEY_IDENTIFIER, Cardinality.Multi);
+
+  /** The ISSN of the resource (dc qualified: non-standard NIH) */
+  public static final String DC_KEY_IDENTIFIER_ISSN = "dc.identifier.issn";
+  public static final MetadataField DC_FIELD_IDENTIFIER_ISSN =
+    new MetadataField(DC_KEY_IDENTIFIER_ISSN, Cardinality.Single);
+
+  /** The EISSN of the resource (dc qualified: non-standard NIH) */
+  public static final String DC_KEY_IDENTIFIER_EISSN = "dc.identifier.eissn";
+  public static final MetadataField DC_FIELD_IDENTIFIER_EISSN =
+    new MetadataField(DC_KEY_IDENTIFIER_EISSN, Cardinality.Single);
+
+  /** The ISSNL of the resource (dc qualified: non-standard NIH) */
+  public static final String DC_KEY_IDENTIFIER_ISSNL = "dc.identifier.issnl";
+  public static final MetadataField DC_FIELD_IDENTIFIER_ISSNL =
+    new MetadataField(DC_KEY_IDENTIFIER_ISSNL, Cardinality.Single);
+
+  /** The ISBN of the resource (dc qualified: non-standard NIH) */
+  public static final String DC_KEY_IDENTIFIER_ISBN = "dc.identifier.isbn";
+  public static final MetadataField DC_FIELD_IDENTIFIER_ISBN =
+    new MetadataField(DC_KEY_IDENTIFIER_ISBN, Cardinality.Single);
+
+  /**
+   * Date of publication, i.e., the date that would normally be cited 
+   * in references to this paper from other papers. Don't use it for the
+   * date of entry into the repository. Provide full dates in the 
+   * "2010/5/12" format if available; or a year alone otherwise.
+   */
+  public static final String DC_KEY_ISSUED = "dc.issued";
+  public static final MetadataField DC_FIELD_ISSUED =
+    new MetadataField(DC_KEY_ISSUED, Cardinality.Single);
+
+  /**
+   * A language of the resource. Recommended best practice is to 
+   * use a controlled vocabulary such as RFC 4646 [RFC4646].
+   */
+  public static final String DC_KEY_LANGUAGE = "dc.language";
+  public static final MetadataField DC_FIELD_LANGUAGE =
+    new MetadataField(DC_KEY_LANGUAGE, Cardinality.Single);
+
+  /** An entity responsible for making the resource available. */
+  public static final String DC_KEY_PUBLISHER = "dc.publisher";
+  public static final MetadataField DC_FIELD_PUBLISHER =
+    new MetadataField(DC_KEY_PUBLISHER, Cardinality.Single);
+
+  /**
+   * A related resource. Recommended best practice is to 
+   * identify the related resource by means of a string 
+   * conforming to a formal identification system.
+   */
+  public static final String DC_KEY_RELATION = "dc.relation";
+  public static final MetadataField DC_FIELD_RELATION =
+    new MetadataField(DC_KEY_RELATION, Cardinality.Multi);
+
+  /**
+   * The resource of which this resource is a part. For an article
+   * in a journal or proceedings, identifies the publication
+   * (dc qualified: by Google Scholar).
+   */
+  public static final String DC_KEY_RELATION_ISPARTOF = "dc.relation.ispartof";
+  public static final MetadataField DC_FIELD_RELATION_ISPARTOF =
+    new MetadataField(DC_KEY_RELATION_ISPARTOF, Cardinality.Single);
+
+  /**
+   * Information about rights held in and over the resource.
+   * Typically, rights information includes a statement about 
+   * various property rights associated with the resource, 
+   * including intellectual property rights.
+   */
+  public static final String DC_KEY_RIGHTS = "dc.rights";
+  public static final MetadataField DC_FIELD_RIGHTS =
+    new MetadataField(DC_KEY_RIGHTS, Cardinality.Single);
+
+  /**
+   * A related resource from which the described resource is 
+   * derived. Typically, the subject will be represented using 
+   * keywords, key phrases, or classification codes.
+   */
+  public static final String DC_KEY_SOURCE = "dc.source";
+  public static final MetadataField DC_FIELD_SOURCE =
+    new MetadataField(DC_KEY_SOURCE, Cardinality.Single);
+
+  /**
+   * The topic of the resource. Typically, the subject will be 
+   * represented using keywords, key phrases, or classification codes.
+   */
+  public static final String DC_KEY_SUBJECT = "dc.subject";
+  public static final MetadataField DC_FIELD_SUBJECT =
+    new MetadataField(DC_KEY_SUBJECT, Cardinality.Single);
+
+  /**
+   * A name given to the resource. Typically, a Title will be 
+   * a name by which the resource is formally known.
+   */
+  public static final String DC_KEY_TITLE = "dc.title";
+  public static final MetadataField DC_FIELD_TITLE =
+    new MetadataField(DC_KEY_TITLE, Cardinality.Single);
+
+  /**
+   * The nature or genre of the resource. Recommended best practice 
+   * is to use a controlled vocabulary such as the DCMI Type 
+   * Vocabulary [DCMITYPE]. To describe the file format, physical medium, 
+   * or dimensions of the resource, use the Format element.
+   */
+  public static final String DC_KEY_TYPE = "dc.type";
+  public static final MetadataField DC_FIELD_TYPE =
+    new MetadataField(DC_KEY_TYPE, Cardinality.Single);
 
   private static MetadataField[] fields = {
     FIELD_VOLUME,
