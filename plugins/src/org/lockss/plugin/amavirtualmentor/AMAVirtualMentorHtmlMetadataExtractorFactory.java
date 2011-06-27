@@ -1,4 +1,8 @@
 /*
+ * $Id: AMAVirtualMentorHtmlMetadataExtractorFactory.java,v 1.2 2011-06-27 23:12:25 pgust Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -29,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.amavirtualmentor;
 
 import java.io.*;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
@@ -50,8 +55,8 @@ public class AMAVirtualMentorHtmlMetadataExtractorFactory implements FileMetadat
     return new AMAVirtualMentorHtmlMetadataExtractor();
   }
 
-  public static class AMAVirtualMentorHtmlMetadataExtractor
-    extends SimpleHtmlMetaTagMetadataExtractor {
+  public static class AMAVirtualMentorHtmlMetadataExtractor 
+    implements FileMetadataExtractor {
 
     // Map AMAVirtualMentor's Google Scholar HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -77,12 +82,11 @@ public class AMAVirtualMentorHtmlMetadataExtractorFactory implements FileMetadat
     }
 
     @Override
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+    throws IOException {
+      ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      return am;
+      emitter.emitMetadata(cu,am);
     }
   }
-
 }
