@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.15 2011-06-27 22:49:45 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.16 2011-06-27 23:28:36 pgust Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.NumberUtil;
+import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
@@ -1064,8 +1065,11 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume_str",volumeName);
   	  paramMap.setMapElement("volume_name", volumeName);
   	  paramMap.setMapElement("year", year);
-  	  paramMap.setMapElement("au_short_year",
-  	                     String.format("%02d", NumberUtil.parseInt(year)%100));
+      if (!StringUtil.isNullString(year)) {
+        log.critical("Year = " + year);
+        paramMap.setMapElement("au_short_year",
+          String.format("%02d", NumberUtil.parseInt(year)%100));
+      }
   	  paramMap.setMapElement("edition", edition);
   	  // auFeatureKey selects feature from a map of values
   	  // for the same feature (e.g. au_feature_urls/au_year)
@@ -1139,8 +1143,10 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
-      paramMap.setMapElement("au_short_year",
+      if (!StringUtil.isNullString(year)) {
+        paramMap.setMapElement("au_short_year",
           String.format("%02d", NumberUtil.parseInt(year)%100));
+      }
       paramMap.setMapElement("issue", issue);
       // AU_FEATURE_KEY selects feature from a map of values
       // for the same feature (e.g. au_feature_urls/au_year)
