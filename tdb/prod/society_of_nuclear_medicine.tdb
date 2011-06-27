@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jnm.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -80,7 +80,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://tech.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
