@@ -2,6 +2,7 @@ package org.lockss.config;
 
 import java.util.Calendar;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import org.lockss.config.Tdb.TdbException;
 
@@ -52,9 +53,9 @@ public class TdbTestUtil {
   public static String RANGE_1_END_VOL = "1";
 
   public static String RANGE_2_START = "2005";
-  public static String RANGE_2_END = "2006";
+  public static String RANGE_2_END = "MMVI"; // "2006";
   public static String RANGE_2_START_VOL = "2";
-  public static String RANGE_2_END_VOL = "3";
+  public static String RANGE_2_END_VOL = "III"; // 3
 
   // Parameters for a journal which runs up to now and must therefore produce empty "last*" fields.
   // There is no coverage gap so only a single output title should be produced.
@@ -194,6 +195,30 @@ public class TdbTestUtil {
     t1p1.addTdbAu(v4au1p1);
     t1p1.addTdbAu(v5au1p1);
    
+    return t1p1;
+  }
+
+  
+  /**
+   * Create a TdbTitle with a variety of year attributes. This is only for volume-related testing; in full
+   * use, if AUs identified by the same ISSN and title have different parameter keys, the export will fail.
+   * Additionally, provides AUs with an incorrect volume value set against other keys, which should be ignored.  
+   * 
+   * @param vol the volume string to use in each AU
+   * @return a new TdbTitle
+   * @throws TdbException
+   */
+  public static TdbTitle makeYearTestTitle(String ... years) 
+    throws TdbException {
+
+    TdbTitle t1p1 = new TdbTitle("t1p1", DEFAULT_TITLE_ID);
+    
+    for (int i = 0; i < years.length; i++) {
+      // Create AUs with basic properties and different year
+      TdbAu au = createBasicAu("v"+i+"au1p1", DEFAULT_PLUGIN, DEFAULT_ISSN_1, DEFAULT_EISSN_1);
+      au.setParam("year", years[i]);
+      t1p1.addTdbAu(au);
+    }
     return t1p1;
   }
 
