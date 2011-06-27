@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.35 2011-06-27 16:29:58 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.36 2011-06-27 16:52:55 tlipkis Exp $
  */
 
 /*
@@ -722,7 +722,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testIncomingBindLocalOnlyWrongIP() throws IOException {
     if (!isAltAddrUsable()) {
-      logSkipped("testIncomingBindLocalOnlySameIP");
+      logSkipped("testIncomingBindLocalOnlyWrongIP");
       return;
     }
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
