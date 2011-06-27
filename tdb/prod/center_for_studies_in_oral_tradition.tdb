@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,12 +17,14 @@
 
     param[journal_dir] = oral_tradition
 
-    au < released ; Oral Tradition Volume 18 ; 18 >
-    au < released ; Oral Tradition Volume 19 ; 19 >
-    au < released ; Oral Tradition Volume 20 ; 20 >
-    au < released ; Oral Tradition Volume 21 ; 21 >
-    au < released ; Oral Tradition Volume 22 ; 22 >
-    au < released ; Oral Tradition Volume 23 ; 23 >
+    au < released ; 2003 ; Oral Tradition Volume 18 ; 18 >
+    au < released ; 2004 ; Oral Tradition Volume 19 ; 19 >
+    au < released ; 2005 ; Oral Tradition Volume 20 ; 20 >
+    au < released ; 2006 ; Oral Tradition Volume 21 ; 21 >
+    au < released ; 2007 ; Oral Tradition Volume 22 ; 22 >
+    au < released ; 2008 ; Oral Tradition Volume 23 ; 23 >
+    au < manifest ; 2009 ; Oral Tradition Volume 24 ; 24 >
+    au < manifest ; 2010 ; Oral Tradition Volume 25 ; 25 >
 
   }
 
