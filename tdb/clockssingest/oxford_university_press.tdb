@@ -2156,8 +2156,8 @@
   
     title <
       name = Enterprise & Society: The International Journal of Business History ;
-      issn = 1467-2227;
-      eissn = 1467-2235;
+      issn = 1467-2227 ;
+      eissn = 1467-2235 ;
       issnl = 1467-2227
     >
 
@@ -2320,6 +2320,36 @@
   }
 
   {
+
+    title <
+      name = European Heart Journal Supplements ;
+      issn = 1520-765X ;
+      eissn = 1554-2815 ;
+      issnl = 1520-765X
+    >
+
+    param[base_url] = http://eurheartjsupp.oxfordjournals.org/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < manifest ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2002 ; European Heart Journal Supplements Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2003 ; European Heart Journal Supplements Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2004 ; European Heart Journal Supplements Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2005 ; European Heart Journal Supplements Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+
+    }
+
+  }
+  
+  {
   
     title <
       name = European Journal of Echocardiography;
@@ -2381,9 +2411,9 @@
   {
   
     title <
-      name = European Journal of Heart Failure;
-      issn = 1388-9842;
-      eissn = 1879-0844;
+      name = European Journal of Heart Failure ;
+      issn = 1388-9842 ;
+      eissn = 1879-0844 ;
       issnl = 1388-9842
     >
 
@@ -3350,7 +3380,7 @@
   {
   
     title <
-      name = InnovAiT;
+      name = InnovAiT ;
       issn = 1755-7380 ;
       eissn = 1755-7399 ;
       issnl = 1755-7380
@@ -3409,9 +3439,9 @@
   {
   
     title <
-      name = Interdisciplinary Studies in Literature and Environment;
+      name = Interdisciplinary Studies in Literature and Environment ;
       issn = 1076-0962 ;
-      eissn = 1759-1090;
+      eissn = 1759-1090 ;
       issnl = 1076-0962
     >
 
@@ -3613,7 +3643,7 @@
   {
   
     title <
-      name = International Journal of Low-Carbon Technologies;
+      name = International Journal of Low-Carbon Technologies ;
       issn = 1748-1317;
       eissn = 1748-1325;
       issnl = 1748-1317
@@ -3674,7 +3704,8 @@
     title <
       name = International Journal for Quality in Health Care ;
       issn = 1353-4505 ;
-      eissn = 1464-3677
+      eissn = 1464-3677 ;
+      issnl = 1353-4505
     >
 
     param[base_url] = http://intqhc.oxfordjournals.org/
@@ -3928,6 +3959,124 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = Journal of American History ;
+      issn = 0021-8723 ;
+      eissn = 1945-2314 ;
+      issnl = 1945-2314
+    >
+
+    param[base_url] = http://jah.oxfordjournals.org/
+
+    {
+       
+    pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    au < exists ; exists ; 1914 ; Journal of American History Volume 1 ; 1 ; >
+    au < exists ; exists ; 1915 ; Journal of American History Volume 2 ; 2 ; >
+    au < exists ; exists ; 1916 ; Journal of American History Volume 3 ; 3 ; >
+    au < exists ; exists ; 1917 ; Journal of American History Volume 4 ; 4 ; >
+    au < exists ; exists ; 1918 ; Journal of American History Volume 5 ; 5 ; >
+    au < exists ; exists ; 1919 ; Journal of American History Volume 6 ; 6 ; >
+    au < exists ; exists ; 1920 ; Journal of American History Volume 7 ; 7 ; >
+    au < exists ; exists ; 1921 ; Journal of American History Volume 8 ; 8 ; >
+    au < exists ; exists ; 1922 ; Journal of American History Volume 9 ; 9 ; >
+    au < exists ; exists ; 1923 ; Journal of American History Volume 10 ; 10 ; >
+    au < exists ; exists ; 1924 ; Journal of American History Volume 11 ; 11 ; >
+    au < exists ; exists ; 1925 ; Journal of American History Volume 12 ; 12 ; >
+    au < exists ; exists ; 1926 ; Journal of American History Volume 13 ; 13 ; >
+    au < exists ; exists ; 1927 ; Journal of American History Volume 14 ; 14 ; >
+    au < exists ; exists ; 1928 ; Journal of American History Volume 15 ; 15 ; >
+    au < exists ; exists ; 1929 ; Journal of American History Volume 16 ; 16 ; >
+    au < exists ; exists ; 1930 ; Journal of American History Volume 17 ; 17 ; >
+    au < exists ; exists ; 1931 ; Journal of American History Volume 18 ; 18 ; >
+    au < exists ; exists ; 1932 ; Journal of American History Volume 19 ; 19 ; >
+    au < exists ; exists ; 1933 ; Journal of American History Volume 20 ; 20 ; >
+    au < exists ; exists ; 1934 ; Journal of American History Volume 21 ; 21 ; >
+    au < exists ; exists ; 1935 ; Journal of American History Volume 22 ; 22 ; >
+    au < exists ; exists ; 1936 ; Journal of American History Volume 23 ; 23 ; >
+    au < exists ; exists ; 1937 ; Journal of American History Volume 24 ; 24 ; >
+    au < exists ; exists ; 1938 ; Journal of American History Volume 25 ; 25 ; >
+    au < exists ; exists ; 1939 ; Journal of American History Volume 26 ; 26 ; >
+    au < exists ; exists ; 1940 ; Journal of American History Volume 27 ; 27 ; >
+    au < exists ; exists ; 1941 ; Journal of American History Volume 28 ; 28 ; >
+    au < exists ; exists ; 1942 ; Journal of American History Volume 29 ; 29 ; >
+    au < exists ; exists ; 1943 ; Journal of American History Volume 30 ; 30 ; >
+    au < exists ; exists ; 1944 ; Journal of American History Volume 31 ; 31 ; >
+    au < exists ; exists ; 1945 ; Journal of American History Volume 32 ; 32 ; >
+    au < exists ; exists ; 1946 ; Journal of American History Volume 33 ; 33 ; >
+    au < exists ; exists ; 1947 ; Journal of American History Volume 34 ; 34 ; >
+    au < exists ; exists ; 1948 ; Journal of American History Volume 35 ; 35 ; >
+    au < exists ; exists ; 1949 ; Journal of American History Volume 36 ; 36 ; >
+    au < exists ; exists ; 1950 ; Journal of American History Volume 37 ; 37 ; >
+    au < exists ; exists ; 1951 ; Journal of American History Volume 38 ; 38 ; >
+    au < exists ; exists ; 1952 ; Journal of American History Volume 39 ; 39 ; >
+    au < exists ; exists ; 1953 ; Journal of American History Volume 40 ; 40 ; >
+    au < exists ; exists ; 1954 ; Journal of American History Volume 41 ; 41 ; >
+    au < exists ; exists ; 1955 ; Journal of American History Volume 42 ; 42 ; >
+    au < exists ; exists ; 1956 ; Journal of American History Volume 43 ; 43 ; >
+    au < exists ; exists ; 1957 ; Journal of American History Volume 44 ; 44 ; >
+    au < exists ; exists ; 1958 ; Journal of American History Volume 45 ; 45 ; >
+    au < exists ; exists ; 1959 ; Journal of American History Volume 46 ; 46 ; >
+    au < exists ; exists ; 1960 ; Journal of American History Volume 47 ; 47 ; >
+    au < exists ; exists ; 1961 ; Journal of American History Volume 48 ; 48 ; >
+    au < exists ; exists ; 1962 ; Journal of American History Volume 49 ; 49 ; >
+    au < exists ; exists ; 1963 ; Journal of American History Volume 50 ; 50 ; >
+    au < exists ; exists ; 1964 ; Journal of American History Volume 51 ; 51 ; >
+    au < exists ; exists ; 1965 ; Journal of American History Volume 52 ; 52 ; >
+    au < exists ; exists ; 1966 ; Journal of American History Volume 53 ; 53 ; >
+    au < exists ; exists ; 1967 ; Journal of American History Volume 54 ; 54 ; >
+    au < exists ; exists ; 1968 ; Journal of American History Volume 55 ; 55 ; >
+    au < exists ; exists ; 1969 ; Journal of American History Volume 56 ; 56 ; >
+    au < exists ; exists ; 1970 ; Journal of American History Volume 57 ; 57 ; >
+    au < exists ; exists ; 1971 ; Journal of American History Volume 58 ; 58 ; >
+    au < exists ; exists ; 1972 ; Journal of American History Volume 59 ; 59 ; >
+    au < exists ; exists ; 1973 ; Journal of American History Volume 60 ; 60 ; >
+    au < exists ; exists ; 1974 ; Journal of American History Volume 61 ; 61 ; >
+    au < exists ; exists ; 1975 ; Journal of American History Volume 62 ; 62 ; >
+    au < exists ; exists ; 1976 ; Journal of American History Volume 63 ; 63 ; >
+    au < exists ; exists ; 1977 ; Journal of American History Volume 64 ; 64 ; >
+    au < exists ; exists ; 1978 ; Journal of American History Volume 65 ; 65 ; >
+    au < exists ; exists ; 1979 ; Journal of American History Volume 66 ; 66 ; >
+    au < exists ; exists ; 1980 ; Journal of American History Volume 67 ; 67 ; >
+    au < exists ; exists ; 1981 ; Journal of American History Volume 68 ; 68 ; >
+    au < exists ; exists ; 1982 ; Journal of American History Volume 69 ; 69 ; >
+    au < exists ; exists ; 1983 ; Journal of American History Volume 70 ; 70 ; >
+    au < exists ; exists ; 1984 ; Journal of American History Volume 71 ; 71 ; >
+    au < exists ; exists ; 1985 ; Journal of American History Volume 72 ; 72 ; >
+    au < exists ; exists ; 1986 ; Journal of American History Volume 73 ; 73 ; >
+    au < exists ; exists ; 1987 ; Journal of American History Volume 74 ; 74 ; >
+    au < exists ; exists ; 1988 ; Journal of American History Volume 75 ; 75 ; >
+    au < exists ; exists ; 1989 ; Journal of American History Volume 76 ; 76 ; >
+    au < exists ; exists ; 1990 ; Journal of American History Volume 77 ; 77 ; >
+    au < exists ; exists ; 1991 ; Journal of American History Volume 78 ; 78 ; >
+    au < exists ; exists ; 1992 ; Journal of American History Volume 79 ; 79 ; >
+    au < exists ; exists ; 1993 ; Journal of American History Volume 80 ; 80 ; >
+    au < exists ; exists ; 1994 ; Journal of American History Volume 81 ; 81 ; >
+    au < exists ; exists ; 1995 ; Journal of American History Volume 82 ; 82 ; >
+    au < exists ; exists ; 1996 ; Journal of American History Volume 83 ; 83 ; >
+    au < exists ; exists ; 1997 ; Journal of American History Volume 84 ; 84 ; >
+    au < exists ; exists ; 1998 ; Journal of American History Volume 85 ; 85 ; >
+    au < exists ; exists ; 1999 ; Journal of American History Volume 86 ; 86 ; >
+    au < exists ; exists ; 2000 ; Journal of American History Volume 87 ; 87 ; >
+    au < exists ; exists ; 2001 ; Journal of American History Volume 88 ; 88 ; >
+    au < exists ; exists ; 2002 ; Journal of American History Volume 89 ; 89 ; >
+    au < exists ; exists ; 2003 ; Journal of American History Volume 90 ; 90 ; >
+    au < exists ; exists ; 2004 ; Journal of American History Volume 91 ; 91 ; >
+    au < exists ; exists ; 2005 ; Journal of American History Volume 92 ; 92 ; >
+    au < exists ; exists ; 2006 ; Journal of American History Volume 93 ; 93 ; >
+    au < exists ; exists ; 2007 ; Journal of American History Volume 94 ; 94 ; >
+    au < exists ; exists ; 2008 ; Journal of American History Volume 95 ; 95 ; >
+    au < exists ; exists ; 2009 ; Journal of American History Volume 96 ; 96 ; >
+    au < exists ; exists ; 2010 ; Journal of American History Volume 97 ; 97 ; >
+    au < exists ; exists ; 2011 ; Journal of American History Volume 98 ; 98 ; >
+      
+    }
+      
   }
 
   {
@@ -4291,7 +4440,7 @@
   {
   
     title <
-      name = The Journals of Gerontology: Series A;
+      name = The Journals of Gerontology: Series A ;
       issn = 1079-5006 ;
       eissn = 1758-535X;
       issnl = 1079-5006
@@ -4409,7 +4558,8 @@
     title <
       name = Journal of the History of Collections ;
       issn = 0954-6650 ;
-      eissn = 1477-8564
+      eissn = 1477-8564 ;
+      issnl = 0954-6650
     >
 
     param[base_url] = http://jhc.oxfordjournals.org/
@@ -4438,7 +4588,8 @@
     title <
       name = Journal of the History of Medicine and Allied Sciences ;
       issn = 0022-5045 ;
-      eissn = 1468-4373
+      eissn = 1468-4373 ;
+      issnl = 0022-5045
     >
 
     param[base_url] = http://jhmas.oxfordjournals.org/
@@ -4467,7 +4618,8 @@
     title <
       name = Journal of Human Rights Practice ;
       issn = 1757-9619 ;
-      eissn = 1757-9627
+      eissn = 1757-9627 ;
+      issnl = 1757-9619
     >
 
     param[base_url] = http://jhrp.oxfordjournals.org/
@@ -4490,6 +4642,34 @@
 
   }
 
+  {
+
+    title <
+      name = Journal of the ICRU ;
+      issn = 1473-6691 ;
+      eissn = 1742-3422 ;
+      issnl = 1473-6691
+    >
+
+    param[base_url] = http://jicru.oxfordjournals.org/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2004 ; Journal of the ICRU Volume 4 ; 4 ; >
+    au < exists ; exists ; 2005 ; Journal of the ICRU Volume 5 ; 5 ; >
+    au < exists ; exists ; 2006 ; Journal of the ICRU Volume 6 ; 6 ; >
+    au < exists ; exists ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
+    au < exists ; exists ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < exists ; exists ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
+    au < exists ; exists ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
+    au < exists ; exists ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
+
+    }
+    
+  }
+    
   {
   
     title <
@@ -4515,6 +4695,230 @@
 
     au < wanted ; exists ; 2010 ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 ; >
 
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Infectious Diseases ;
+      issn =  0022-1899;
+      eissn = 1537-6613 ;
+      issnl = 0022-1899
+    >
+
+    param[base_url] = http://jid.oxfordjournals.org/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ;  exists ; 1904 ; Journal of Infectious Diseases Volume 1-50 ; 1-50 ; >
+    au < exists ;  exists ; 1904 ; Journal of Infectious Diseases Volume 1 ; 1 ; >
+    au < exists ;  exists ; 1905 ; Journal of Infectious Diseases Volume 2 ; 2 ; >
+    au < exists ;  exists ; 1906 ; Journal of Infectious Diseases Volume 3 ; 3 ; >
+    au < exists ;  exists ; 1907 ; Journal of Infectious Diseases Volume 4 ; 4 ; >
+    au < exists ;  exists ; 1908 ; Journal of Infectious Diseases Volume 5 ; 5 ; >
+    au < exists ;  exists ; 1909 ; Journal of Infectious Diseases Volume 6 ; 6 ; >
+    au < exists ;  exists ; 1910 ; Journal of Infectious Diseases Volume 7 ; 7 ; >
+    au < exists ;  exists ; 1911 ; Journal of Infectious Diseases Volume 8 ; 8 ; >
+    au < exists ;  exists ; 1911 ; Journal of Infectious Diseases Volume 9 ; 9 ; >
+    au < exists ;  exists ; 1912 ; Journal of Infectious Diseases Volume 10 ; 10 ; >
+    au < exists ;  exists ; 1912 ; Journal of Infectious Diseases Volume 11 ; 11 ; >
+    au < exists ;  exists ; 1913 ; Journal of Infectious Diseases Volume 12 ; 12 ; >
+    au < exists ;  exists ; 1913 ; Journal of Infectious Diseases Volume 13 ; 13 ; >
+    au < exists ;  exists ; 1914 ; Journal of Infectious Diseases Volume 14 ; 14 ; >
+    au < exists ;  exists ; 1914 ; Journal of Infectious Diseases Volume 15 ; 15 ; >
+    au < exists ;  exists ; 1915 ; Journal of Infectious Diseases Volume 16 ; 16 ; >
+    au < exists ;  exists ; 1915 ; Journal of Infectious Diseases Volume 17 ; 17 ; >
+    au < exists ;  exists ; 1916 ; Journal of Infectious Diseases Volume 18 ; 18 ; >
+    au < exists ;  exists ; 1916 ; Journal of Infectious Diseases Volume 19 ; 19 ; >
+    au < exists ;  exists ; 1917 ; Journal of Infectious Diseases Volume 20 ; 20 ; >
+    au < exists ;  exists ; 1917 ; Journal of Infectious Diseases Volume 21 ; 21 ; >
+    au < exists ;  exists ; 1918 ; Journal of Infectious Diseases Volume 22 ; 22 ; >
+    au < exists ;  exists ; 1918 ; Journal of Infectious Diseases Volume 23 ; 23 ; >
+    au < exists ;  exists ; 1919 ; Journal of Infectious Diseases Volume 24 ; 24 ; >
+    au < exists ;  exists ; 1919 ; Journal of Infectious Diseases Volume 25 ; 25 ; >
+    au < exists ;  exists ; 1920 ; Journal of Infectious Diseases Volume 26 ; 26 ; >
+    au < exists ;  exists ; 1920 ; Journal of Infectious Diseases Volume 27 ; 27 ; >
+    au < exists ;  exists ; 1921 ; Journal of Infectious Diseases Volume 28 ; 28 ; >
+    au < exists ;  exists ; 1921 ; Journal of Infectious Diseases Volume 29 ; 29 ; >
+    au < exists ;  exists ; 1922 ; Journal of Infectious Diseases Volume 30 ; 30 ; >
+    au < exists ;  exists ; 1922 ; Journal of Infectious Diseases Volume 31 ; 31 ; >
+    au < exists ;  exists ; 1923 ; Journal of Infectious Diseases Volume 32 ; 32 ; >
+    au < exists ;  exists ; 1923 ; Journal of Infectious Diseases Volume 33 ; 33 ; >
+    au < exists ;  exists ; 1924 ; Journal of Infectious Diseases Volume 34 ; 34 ; >
+    au < exists ;  exists ; 1924 ; Journal of Infectious Diseases Volume 35 ; 35 ; >
+    au < exists ;  exists ; 1925 ; Journal of Infectious Diseases Volume 36 ; 36 ; >
+    au < exists ;  exists ; 1925 ; Journal of Infectious Diseases Volume 37 ; 37 ; >
+    au < exists ;  exists ; 1926 ; Journal of Infectious Diseases Volume 38 ; 38 ; >
+    au < exists ;  exists ; 1926 ; Journal of Infectious Diseases Volume 39 ; 39 ; >
+    au < exists ;  exists ; 1927 ; Journal of Infectious Diseases Volume 40 ; 40 ; >
+    au < exists ;  exists ; 1927 ; Journal of Infectious Diseases Volume 41 ; 41 ; >
+    au < exists ;  exists ; 1928 ; Journal of Infectious Diseases Volume 42 ; 42 ; >
+    au < exists ;  exists ; 1928 ; Journal of Infectious Diseases Volume 43 ; 43 ; >
+    au < exists ;  exists ; 1929 ; Journal of Infectious Diseases Volume 44 ; 44 ; >
+    au < exists ;  exists ; 1929 ; Journal of Infectious Diseases Volume 45 ; 45 ; >
+    au < exists ;  exists ; 1930 ; Journal of Infectious Diseases Volume 46 ; 46 ; >
+    au < exists ;  exists ; 1930 ; Journal of Infectious Diseases Volume 47 ; 47 ; >
+    au < exists ;  exists ; 1931 ; Journal of Infectious Diseases Volume 48 ; 48 ; >
+    au < exists ;  exists ; 1931 ; Journal of Infectious Diseases Volume 49 ; 49 ; >
+    au < exists ;  exists ; 1932 ; Journal of Infectious Diseases Volume 50 ; 50 ; >
+    au < exists ;  exists ; 1932 ; Journal of Infectious Diseases Volume 51 ; 51 ; >
+    au < exists ;  exists ; 1933 ; Journal of Infectious Diseases Volume 52 ; 52 ; >
+    au < exists ;  exists ; 1933 ; Journal of Infectious Diseases Volume 53 ; 53 ; >
+    au < exists ;  exists ; 1934 ; Journal of Infectious Diseases Volume 54 ; 54 ; >
+    au < exists ;  exists ; 1934 ; Journal of Infectious Diseases Volume 55 ; 55 ; >
+    au < exists ;  exists ; 1935 ; Journal of Infectious Diseases Volume 56 ; 56 ; >
+    au < exists ;  exists ; 1935 ; Journal of Infectious Diseases Volume 57 ; 57 ; >
+    au < exists ;  exists ; 1936 ; Journal of Infectious Diseases Volume 58 ; 58 ; >
+    au < exists ;  exists ; 1936 ; Journal of Infectious Diseases Volume 59 ; 59 ; >
+    au < exists ;  exists ; 1937 ; Journal of Infectious Diseases Volume 60 ; 60 ; >
+    au < exists ;  exists ; 1937 ; Journal of Infectious Diseases Volume 61 ; 61 ; >
+    au < exists ;  exists ; 1938 ; Journal of Infectious Diseases Volume 62 ; 62 ; >
+    au < exists ;  exists ; 1938 ; Journal of Infectious Diseases Volume 63 ; 63 ; >
+    au < exists ;  exists ; 1939 ; Journal of Infectious Diseases Volume 64 ; 64 ; >
+    au < exists ;  exists ; 1939 ; Journal of Infectious Diseases Volume 65 ; 65 ; >
+    au < exists ;  exists ; 1940 ; Journal of Infectious Diseases Volume 66 ; 66 ; >
+    au < exists ;  exists ; 1940 ; Journal of Infectious Diseases Volume 67 ; 67 ; >
+    au < exists ;  exists ; 1941 ; Journal of Infectious Diseases Volume 68 ; 68 ; >
+    au < exists ;  exists ; 1941 ; Journal of Infectious Diseases Volume 69 ; 69 ; >
+    au < exists ;  exists ; 1942 ; Journal of Infectious Diseases Volume 70 ; 70 ; >
+    au < exists ;  exists ; 1942 ; Journal of Infectious Diseases Volume 71 ; 71 ; >
+    au < exists ;  exists ; 1943 ; Journal of Infectious Diseases Volume 72 ; 72 ; >
+    au < exists ;  exists ; 1943 ; Journal of Infectious Diseases Volume 73 ; 73 ; >
+    au < exists ;  exists ; 1944 ; Journal of Infectious Diseases Volume 74 ; 74 ; >
+    au < exists ;  exists ; 1944 ; Journal of Infectious Diseases Volume 75 ; 75 ; >
+    au < exists ;  exists ; 1945 ; Journal of Infectious Diseases Volume 76 ; 76 ; >
+    au < exists ;  exists ; 1945 ; Journal of Infectious Diseases Volume 77 ; 77 ; >
+    au < exists ;  exists ; 1946 ; Journal of Infectious Diseases Volume 78 ; 78 ; >
+    au < exists ;  exists ; 1946 ; Journal of Infectious Diseases Volume 79 ; 79 ; >
+    au < exists ;  exists ; 1947 ; Journal of Infectious Diseases Volume 80 ; 80 ; >
+    au < exists ;  exists ; 1947 ; Journal of Infectious Diseases Volume 81 ; 81 ; >
+    au < exists ;  exists ; 1948 ; Journal of Infectious Diseases Volume 82 ; 82 ; >
+    au < exists ;  exists ; 1948 ; Journal of Infectious Diseases Volume 83 ; 83 ; >
+    au < exists ;  exists ; 1949 ; Journal of Infectious Diseases Volume 84 ; 84 ; >
+    au < exists ;  exists ; 1949 ; Journal of Infectious Diseases Volume 85 ; 85 ; >
+    au < exists ;  exists ; 1950 ; Journal of Infectious Diseases Volume 86 ; 86 ; >
+    au < exists ;  exists ; 1950 ; Journal of Infectious Diseases Volume 87 ; 87 ; >
+    au < exists ;  exists ; 1951 ; Journal of Infectious Diseases Volume 88 ; 88 ; >
+    au < exists ;  exists ; 1951 ; Journal of Infectious Diseases Volume 89 ; 89 ; >
+    au < exists ;  exists ; 1952 ; Journal of Infectious Diseases Volume 90 ; 90 ; >
+    au < exists ;  exists ; 1952 ; Journal of Infectious Diseases Volume 91 ; 91 ; >
+    au < exists ;  exists ; 1953 ; Journal of Infectious Diseases Volume 92 ; 92 ; >
+    au < exists ;  exists ; 1953 ; Journal of Infectious Diseases Volume 93 ; 93 ; >
+    au < exists ;  exists ; 1954 ; Journal of Infectious Diseases Volume 94 ; 94 ; >
+    au < exists ;  exists ; 1954 ; Journal of Infectious Diseases Volume 95 ; 95 ; >
+    au < exists ;  exists ; 1955 ; Journal of Infectious Diseases Volume 96 ; 96 ; >
+    au < exists ;  exists ; 1955 ; Journal of Infectious Diseases Volume 97 ; 97 ; >
+    au < exists ;  exists ; 1956 ; Journal of Infectious Diseases Volume 98 ; 98 ; >
+    au < exists ;  exists ; 1956 ; Journal of Infectious Diseases Volume 99 ; 99 ; >
+    au < exists ;  exists ; 1957 ; Journal of Infectious Diseases Volume 100 ; 100 ; >
+    au < exists ;  exists ; 1957 ; Journal of Infectious Diseases Volume 101 ; 101 ; >
+    au < exists ;  exists ; 1958 ; Journal of Infectious Diseases Volume 102 ; 102 ; >
+    au < exists ;  exists ; 1958 ; Journal of Infectious Diseases Volume 103 ; 103 ; >
+    au < exists ;  exists ; 1959 ; Journal of Infectious Diseases Volume 104 ; 104 ; >
+    au < exists ;  exists ; 1959 ; Journal of Infectious Diseases Volume 105 ; 105 ; >
+    au < exists ;  exists ; 1960 ; Journal of Infectious Diseases Volume 106 ; 106 ; >
+    au < exists ;  exists ; 1960 ; Journal of Infectious Diseases Volume 107 ; 107 ; >
+    au < exists ;  exists ; 1961 ; Journal of Infectious Diseases Volume 108 ; 108 ; >
+    au < exists ;  exists ; 1961 ; Journal of Infectious Diseases Volume 109 ; 109 ; >
+    au < exists ;  exists ; 1962 ; Journal of Infectious Diseases Volume 110 ; 110 ; >
+    au < exists ;  exists ; 1962 ; Journal of Infectious Diseases Volume 111 ; 111 ; >     
+    au < exists ;  exists ; 1963 ; Journal of Infectious Diseases Volume 112 ; 112 ; >
+    au < exists ;  exists ; 1963 ; Journal of Infectious Diseases Volume 113 ; 113 ; >
+    au < exists ;  exists ; 1964 ; Journal of Infectious Diseases Volume 114 ; 114 ; >
+    au < exists ;  exists ; 1965 ; Journal of Infectious Diseases Volume 115 ; 115 ; >
+    au < exists ;  exists ; 1966 ; Journal of Infectious Diseases Volume 116 ; 116 ; >
+    au < exists ;  exists ; 1967 ; Journal of Infectious Diseases Volume 117 ; 117 ; >
+    au < exists ;  exists ; 1968 ; Journal of Infectious Diseases Volume 118 ; 118 ; >
+    au < exists ;  exists ; 1969 ; Journal of Infectious Diseases Volume 119 ; 119 ; >
+    au < exists ;  exists ; 1969 ; Journal of Infectious Diseases Volume 120 ; 120 ; >
+    au < exists ;  exists ; 1970 ; Journal of Infectious Diseases Volume 121 ; 121 ; >
+    au < exists ;  exists ; 1970 ; Journal of Infectious Diseases Volume 122 ; 122 ; >
+    au < exists ;  exists ; 1971 ; Journal of Infectious Diseases Volume 123 ; 123 ; >
+    au < exists ;  exists ; 1971 ; Journal of Infectious Diseases Volume 124 ; 124 ; >
+    au < exists ;  exists ; 1972 ; Journal of Infectious Diseases Volume 125 ; 125 ; >
+    au < exists ;  exists ; 1972 ; Journal of Infectious Diseases Volume 126 ; 126 ; >
+    au < exists ;  exists ; 1973 ; Journal of Infectious Diseases Volume 127 ; 127 ; >
+    au < exists ;  exists ; 1973 ; Journal of Infectious Diseases Volume 128 ; 128 ; >
+    au < exists ;  exists ; 1974 ; Journal of Infectious Diseases Volume 129 ; 129 ; >
+    au < exists ;  exists ; 1974 ; Journal of Infectious Diseases Volume 130 ; 130 ; >
+    au < exists ;  exists ; 1975 ; Journal of Infectious Diseases Volume 131 ; 131 ; >
+    au < exists ;  exists ; 1975 ; Journal of Infectious Diseases Volume 132 ; 132 ; >
+    au < exists ;  exists ; 1976 ; Journal of Infectious Diseases Volume 133 ; 133 ; >
+    au < exists ;  exists ; 1976 ; Journal of Infectious Diseases Volume 134 ; 134 ; >
+    au < exists ;  exists ; 1977 ; Journal of Infectious Diseases Volume 135 ; 135 ; >
+    au < exists ;  exists ; 1977 ; Journal of Infectious Diseases Volume 136 ; 136 ; >
+    au < exists ;  exists ; 1978 ; Journal of Infectious Diseases Volume 137 ; 137 ; >
+    au < exists ;  exists ; 1978 ; Journal of Infectious Diseases Volume 138 ; 138 ; >
+    au < exists ;  exists ; 1979 ; Journal of Infectious Diseases Volume 139 ; 139 ; >
+    au < exists ;  exists ; 1979 ; Journal of Infectious Diseases Volume 140 ; 140 ; >
+    au < exists ;  exists ; 1980 ; Journal of Infectious Diseases Volume 141 ; 141 ; >
+    au < exists ;  exists ; 1980 ; Journal of Infectious Diseases Volume 142 ; 142 ; >
+    au < exists ;  exists ; 1981 ; Journal of Infectious Diseases Volume 143 ; 143 ; >
+    au < exists ;  exists ; 1981 ; Journal of Infectious Diseases Volume 144 ; 144 ; >
+    au < exists ;  exists ; 1982 ; Journal of Infectious Diseases Volume 145 ; 145 ; >
+    au < exists ;  exists ; 1982 ; Journal of Infectious Diseases Volume 146 ; 146 ; >
+    au < exists ;  exists ; 1983 ; Journal of Infectious Diseases Volume 147 ; 147 ; >
+    au < exists ;  exists ; 1983 ; Journal of Infectious Diseases Volume 148 ; 148 ; >
+    au < exists ;  exists ; 1984 ; Journal of Infectious Diseases Volume 149 ; 149 ; >
+    au < exists ;  exists ; 1984 ; Journal of Infectious Diseases Volume 150 ; 150 ; >
+    au < exists ;  exists ; 1985 ; Journal of Infectious Diseases Volume 151 ; 151 ; >
+    au < exists ;  exists ; 1985 ; Journal of Infectious Diseases Volume 152 ; 152 ; >
+    au < exists ;  exists ; 1986 ; Journal of Infectious Diseases Volume 153 ; 153 ; >
+    au < exists ;  exists ; 1986 ; Journal of Infectious Diseases Volume 154 ; 154 ; >
+    au < exists ;  exists ; 1987 ; Journal of Infectious Diseases Volume 155 ; 155 ; >
+    au < exists ;  exists ; 1987 ; Journal of Infectious Diseases Volume 156 ; 156 ; >
+    au < exists ;  exists ; 1988 ; Journal of Infectious Diseases Volume 157 ; 157 ; >
+    au < exists ;  exists ; 1988 ; Journal of Infectious Diseases Volume 158 ; 158 ; >
+    au < exists ;  exists ; 1989 ; Journal of Infectious Diseases Volume 159 ; 159 ; >
+    au < exists ;  exists ; 1989 ; Journal of Infectious Diseases Volume 160 ; 160 ; >
+    au < exists ;  exists ; 1990 ; Journal of Infectious Diseases Volume 161 ; 161 ; >
+    au < exists ;  exists ; 1990 ; Journal of Infectious Diseases Volume 162 ; 162 ; >
+    au < exists ;  exists ; 1991 ; Journal of Infectious Diseases Volume 163 ; 163 ; >
+    au < exists ;  exists ; 1991 ; Journal of Infectious Diseases Volume 164 ; 164 ; >
+    au < exists ;  exists ; 1992 ; Journal of Infectious Diseases Volume 165 ; 165 ; >
+    au < exists ;  exists ; 1992 ; Journal of Infectious Diseases Volume 166 ; 166 ; >
+    au < exists ;  exists ; 1993 ; Journal of Infectious Diseases Volume 167 ; 167 ; >
+    au < exists ;  exists ; 1993 ; Journal of Infectious Diseases Volume 168 ; 168 ; >
+    au < exists ;  exists ; 1994 ; Journal of Infectious Diseases Volume 169 ; 169 ; >
+    au < exists ;  exists ; 1994 ; Journal of Infectious Diseases Volume 170 ; 170 ; >
+    au < exists ;  exists ; 1995 ; Journal of Infectious Diseases Volume 171 ; 171 ; >
+    au < exists ;  exists ; 1995 ; Journal of Infectious Diseases Volume 172 ; 172 ; >
+    au < exists ;  exists ; 1996 ; Journal of Infectious Diseases Volume 173 ; 173 ; >
+    au < exists ;  exists ; 1996 ; Journal of Infectious Diseases Volume 174 ; 174 ; >
+    au < exists ;  exists ; 1997 ; Journal of Infectious Diseases Volume 175 ; 175 ; >
+    au < exists ;  exists ; 1997 ; Journal of Infectious Diseases Volume 176 ; 176 ; >
+    au < exists ;  exists ; 1998 ; Journal of Infectious Diseases Volume 177 ; 177 ; >
+    au < exists ;  exists ; 1998 ; Journal of Infectious Diseases Volume 178 ; 178 ; >
+    au < exists ;  exists ; 1999 ; Journal of Infectious Diseases Volume 179 ; 179 ; >
+    au < exists ;  exists ; 1999 ; Journal of Infectious Diseases Volume 180 ; 180 ; >
+    au < exists ;  exists ; 2000 ; Journal of Infectious Diseases Volume 181 ; 181 ; >
+    au < exists ;  exists ; 2000 ; Journal of Infectious Diseases Volume 182 ; 182 ; >
+    au < exists ;  exists ; 2001 ; Journal of Infectious Diseases Volume 183 ; 183 ; >
+    au < exists ;  exists ; 2001 ; Journal of Infectious Diseases Volume 184 ; 184 ; >
+    au < exists ;  exists ; 2002 ; Journal of Infectious Diseases Volume 185 ; 185 ; >
+    au < exists ;  exists ; 2002 ; Journal of Infectious Diseases Volume 186 ; 186 ; >
+    au < exists ;  exists ; 2003 ; Journal of Infectious Diseases Volume 187 ; 187 ; >
+    au < exists ;  exists ; 2003 ; Journal of Infectious Diseases Volume 188 ; 188 ; >
+    au < exists ;  exists ; 2004 ; Journal of Infectious Diseases Volume 189 ; 189 ; >
+    au < exists ;  exists ; 2004 ; Journal of Infectious Diseases Volume 190 ; 190 ; >
+    au < exists ;  exists ; 2005 ; Journal of Infectious Diseases Volume 191 ; 191 ; >
+    au < exists ;  exists ; 2005 ; Journal of Infectious Diseases Volume 192 ; 192 ; >
+    au < exists ;  exists ; 2006 ; Journal of Infectious Diseases Volume 193 ; 193 ; >
+    au < exists ;  exists ; 2006 ; Journal of Infectious Diseases Volume 194 ; 194 ; >
+    au < exists ;  exists ; 2007 ; Journal of Infectious Diseases Volume 195 ; 195 ; >
+    au < exists ;  exists ; 2007 ; Journal of Infectious Diseases Volume 196 ; 196 ; >
+    au < exists ;  exists ; 2008 ; Journal of Infectious Diseases Volume 197 ; 197 ; >
+    au < exists ;  exists ; 2008 ; Journal of Infectious Diseases Volume 198 ; 198 ; >
+    au < exists ;  exists ; 2009 ; Journal of Infectious Diseases Volume 199 ; 199 ; >
+    au < exists ;  exists ; 2009 ; Journal of Infectious Diseases Volume 200 ; 200 ; >
+    au < exists ;  exists ; 2010 ; Journal of Infectious Diseases Volume 201 ; 201 ; >
+    au < exists ;  exists ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
+    au < exists ;  exists ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
+    au < exists ;  exists ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
+         
     }
 
   }
@@ -4609,9 +5013,10 @@
   {
   
     title <
-      name = The Journal of Law, Economics, and Organization ;
+      name = Journal of Law, Economics, and Organization ;
       issn = 8756-6222 ;
-      eissn = 1465-7341
+      eissn = 1465-7341 ;
+      issnl = 1465-7341
     >
 
     param[base_url] = http://jleo.oxfordjournals.org/
@@ -4620,8 +5025,8 @@
 
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
-    au < down ; crawling ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
+    au < down ; crawling ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
+    au < down ; crawling ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
 
     }
 
@@ -4629,7 +5034,7 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < wanted ; exists ; 2010 ; The Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
+    au < wanted ; exists ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
 
     }
 
@@ -4640,7 +5045,8 @@
     title <
       name = Journal of Logic and Computation ;
       issn = 0955-792X ;
-      eissn = 1465-363X
+      eissn = 1465-363X ;
+      issnl = 0955-792X
     >
 
     param[base_url] = http://logcom.oxfordjournals.org/
@@ -4669,7 +5075,8 @@
     title <
       name = Journal of the London Mathematical Society ;
       issn = 0024-6107 ;
-      eissn = 1469-7750
+      eissn = 1469-7750 ;
+      issnl = 0024-6107
     >
 
     param[base_url] = http://jlms.oxfordjournals.org/
@@ -4964,7 +5371,7 @@
   {
   
     title <
-      name = Journal of Plant Ecology;
+      name = Journal of Plant Ecology ;
       issn = 1752-9921 ;
       eissn = 1752-993X ;
       issnl = 1752-9921
@@ -5489,9 +5896,165 @@
   }
 
   {
+
+    title <
+      name = Mind ;
+      issn = 0026-4423 ;
+      eissn = 1460-2113 ;
+      issnl = 0026-4423
+    >
+
+    param[base_url] = http://mind.oxfordjournals.org/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < manifest ; exists ; 1876 ; Mind Volume os-1 ; os-1 ; >
+    au < manifest ; exists ; 1877 ; Mind Volume os-2 ; os-2 ; >
+    au < manifest ; exists ; 1878 ; Mind Volume os-3 ; os-3 ; >
+    au < manifest ; exists ; 1879 ; Mind Volume os-4 ; os-4 ; >
+    au < manifest ; exists ; 1880 ; Mind Volume os-V ; os-V ; >
+    au < manifest ; exists ; 1881 ; Mind Volume os-VI ; os-VI ; >
+    au < manifest ; exists ; 1882 ; Mind Volume os-VII ; os-VII ; >
+    au < manifest ; exists ; 1883 ; Mind Volume os-VIII ; os-VIII ; >
+    au < manifest ; exists ; 1884 ; Mind Volume os-IX ; os-IX ; >
+    au < manifest ; exists ; 1885 ; Mind Volume os-X ; os-X ; >
+    au < manifest ; exists ; 1886 ; Mind Volume os-XI ; os-XI ; >
+    au < manifest ; exists ; 1887 ; Mind Volume os-12 ; os-12 ; >
+    au < manifest ; exists ; 1888 ; Mind Volume os-XIII ; os-XIII ; >
+    au < manifest ; exists ; 1889 ; Mind Volume XIV ; XIV ; >
+    au < manifest ; exists ; 1890 ; Mind Volume os-XV ; os-XV ; >
+    au < manifest ; exists ; 1891 ; Mind Volume os-XVI ; os-XVI ; >
+    au < manifest ; exists ; 1892 ; Mind Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1893 ; Mind Volume II ; II ; >
+    au < manifest ; exists ; 1894 ; Mind Volume III ; III ; >
+    au < manifest ; exists ; 1895 ; Mind Volume IV ; IV ; >
+    au < manifest ; exists ; 1896 ; Mind Volume V ; V ; >
+    au < manifest ; exists ; 1897 ; Mind Volume VI ; VI ; >
+    au < manifest ; exists ; 1898 ; Mind Volume VII ; VII ; >
+    au < manifest ; exists ; 1899 ; Mind Volume VIII ; VIII ; >
+    au < manifest ; exists ; 1900 ; Mind Volume IX ; IX ; >
+    au < manifest ; exists ; 1901 ; Mind Volume X ; X ; >
+    au < manifest ; exists ; 1902 ; Mind Volume XI ; XI ; >
+    au < manifest ; exists ; 1903 ; Mind Volume XII ; XII ; >
+    au < manifest ; exists ; 1904 ; Mind Volume XIII ; XIII ; >
+    au < manifest ; exists ; 1905 ; Mind Volume XIV ; XIV ; >
+    au < manifest ; exists ; 1906 ; Mind Volume XV ; XV ; >
+    au < manifest ; exists ; 1907 ; Mind Volume XVI ; XVI ; >
+    au < manifest ; exists ; 1908 ; Mind Volume XVII ; XVII ; >
+    au < manifest ; exists ; 1909 ; Mind Volume XVIII ; XVIII ; >
+    au < manifest ; exists ; 1910 ; Mind Volume XIX ; XIX ; >
+    au < manifest ; exists ; 1911 ; Mind Volume XX ; XX ; >
+    au < manifest ; exists ; 1912 ; Mind Volume XXI ; XXI ; >
+    au < manifest ; exists ; 1913 ; Mind Volume XXII ; XXII ; >
+    au < manifest ; exists ; 1914 ; Mind Volume XXIII ; XXIII ; >
+    au < manifest ; exists ; 1915 ; Mind Volume XXIV ; XXIV ; >
+    au < manifest ; exists ; 1916 ; Mind Volume XXV ; XXV ; >
+    au < manifest ; exists ; 1917 ; Mind Volume XXVI ; XXVI ; >
+    au < manifest ; exists ; 1918 ; Mind Volume XXVII ; XXVII ; >
+    au < manifest ; exists ; 1919 ; Mind Volume XXVIII ; XXVIII ; >
+    au < manifest ; exists ; 1920 ; Mind Volume XXIX ; XXIX ; >
+    au < manifest ; exists ; 1921 ; Mind Volume XXX ; XXX ; >
+    au < manifest ; exists ; 1922 ; Mind Volume XXXI ; XXXI ; >
+    au < manifest ; exists ; 1923 ; Mind Volume XXXII ; XXXII ; >
+    au < manifest ; exists ; 1924 ; Mind Volume XXXIII ; XXXIII ; >
+    au < manifest ; exists ; 1925 ; Mind Volume XXXIV ; XXXIV ; >
+    au < manifest ; exists ; 1926 ; Mind Volume XXXV ; XXXV ; >
+    au < manifest ; exists ; 1927 ; Mind Volume XXXVI ; XXXVI ; >
+    au < manifest ; exists ; 1928 ; Mind Volume XXXVII ; XXXVII ; >
+    au < manifest ; exists ; 1929 ; Mind Volume XXXVIII ; XXXVIII ; >
+    au < manifest ; exists ; 1930 ; Mind Volume XXXIX ; XXXIX ; >
+    au < manifest ; exists ; 1931 ; Mind Volume XL ; XL ; >
+    au < manifest ; exists ; 1932 ; Mind Volume XLI ; XLI ; >
+    au < manifest ; exists ; 1933 ; Mind Volume XLII ; XLII ; >
+    au < manifest ; exists ; 1934 ; Mind Volume XLIII ; XLIII ; >
+    au < manifest ; exists ; 1935 ; Mind Volume XLIV ; XLIV ; >
+    au < manifest ; exists ; 1936 ; Mind Volume XLV ; XLV ; >
+    au < manifest ; exists ; 1937 ; Mind Volume XLVI ; XLVI ; >
+    au < manifest ; exists ; 1938 ; Mind Volume XLVII ; XLVII ; >
+    au < manifest ; exists ; 1939 ; Mind Volume XLVIII ; XLVIII ; >
+    au < manifest ; exists ; 1940 ; Mind Volume XLIX ; XLIX ; >
+    au < manifest ; exists ; 1941 ; Mind Volume L ; L ; >
+    au < manifest ; exists ; 1942 ; Mind Volume LI ; LI ; >
+    au < manifest ; exists ; 1943 ; Mind Volume LII ; LII ; >
+    au < manifest ; exists ; 1944 ; Mind Volume LIII ; LIII ; >
+    au < manifest ; exists ; 1945 ; Mind Volume LIV ; LIV ; >
+    au < manifest ; exists ; 1946 ; Mind Volume LV ; LV ; >
+    au < manifest ; exists ; 1947 ; Mind Volume LVI ; LVI ; >
+    au < manifest ; exists ; 1948 ; Mind Volume LVII ; LVII ; >
+    au < manifest ; exists ; 1949 ; Mind Volume LVIII ; LVIII ; >
+    au < manifest ; exists ; 1950 ; Mind Volume LIX ; LIX ; >
+    au < manifest ; exists ; 1951 ; Mind Volume LX ; LX ; >
+    au < manifest ; exists ; 1952 ; Mind Volume LXI ; LXI ; >
+    au < manifest ; exists ; 1953 ; Mind Volume LXII ; LXII ; >
+    au < manifest ; exists ; 1954 ; Mind Volume LXIII ; LXIII ; >
+    au < manifest ; exists ; 1955 ; Mind Volume LXIV ; LXIV ; >
+    au < manifest ; exists ; 1956 ; Mind Volume LXV ; LXV ; >
+    au < manifest ; exists ; 1957 ; Mind Volume LXVI ; LXVI ; >
+    au < manifest ; exists ; 1958 ; Mind Volume LXVII ; LXVII ; >
+    au < manifest ; exists ; 1959 ; Mind Volume LXVIII ; LXVIII ; >
+    au < manifest ; exists ; 1960 ; Mind Volume LXIX ; LXIX ; >
+    au < manifest ; exists ; 1961 ; Mind Volume LXX ; LXX ; >
+    au < manifest ; exists ; 1962 ; Mind Volume LXXI ; LXXI ; >
+    au < manifest ; exists ; 1963 ; Mind Volume LXXII ; LXXII ; >
+    au < manifest ; exists ; 1964 ; Mind Volume LXXIII ; LXXIII ; >
+    au < manifest ; exists ; 1965 ; Mind Volume LXXIV ; LXXIV ; >
+    au < manifest ; exists ; 1966 ; Mind Volume LXXV ; LXXV ; >
+    au < manifest ; exists ; 1967 ; Mind Volume LXXVI ; LXXVI ; >
+    au < manifest ; exists ; 1968 ; Mind Volume LXXVII ; LXXVII ; >
+    au < manifest ; exists ; 1969 ; Mind Volume LXXVIII ; LXXVIII ; >
+    au < manifest ; exists ; 1970 ; Mind Volume LXXIX ; LXXIX ; >
+    au < manifest ; exists ; 1971 ; Mind Volume LXXX ; LXXX ; >
+    au < manifest ; exists ; 1972 ; Mind Volume LXXXI ; LXXXI ; >
+    au < manifest ; exists ; 1973 ; Mind Volume LXXXII ; LXXXII ; >
+    au < manifest ; exists ; 1974 ; Mind Volume LXXXIII ; LXXXIII ; >
+    au < manifest ; exists ; 1975 ; Mind Volume LXXXIV ; LXXXIV ; >
+    au < manifest ; exists ; 1976 ; Mind Volume LXXXV ; LXXXV ; >
+    au < manifest ; exists ; 1977 ; Mind Volume LXXXVI ; LXXXVI ; >
+    au < manifest ; exists ; 1978 ; Mind Volume LXXXVII ; LXXXVII ; >
+    au < manifest ; exists ; 1979 ; Mind Volume LXXXVIII ; LXXXVIII ; >
+    au < manifest ; exists ; 1980 ; Mind Volume LXXXIX ; LXXXIX ; >
+    au < manifest ; exists ; 1981 ; Mind Volume XC ; XC ; >
+    au < manifest ; exists ; 1982 ; Mind Volume XCI ; XCI ; >
+    au < manifest ; exists ; 1983 ; Mind Volume XCII ; XCII ; >
+    au < manifest ; exists ; 1984 ; Mind Volume XCIII ; XCIII ; >
+    au < manifest ; exists ; 1985 ; Mind Volume XCIV ; XCIV ; >
+    au < manifest ; exists ; 1986 ; Mind Volume XCV ; XCV ; >
+    au < manifest ; exists ; 1987 ; Mind Volume XCVI ; XCVI ; >
+    au < manifest ; exists ; 1988 ; Mind Volume XCVII ; XCVII ; >
+    au < manifest ; exists ; 1989 ; Mind Volume XCVIII ; XCVIII ; >
+    au < manifest ; exists ; 1990 ; Mind Volume XCIX ; XCIX ; >
+    au < manifest ; exists ; 1991 ; Mind Volume C ; C ; >
+    au < manifest ; exists ; 1992 ; Mind Volume 101 ; 101 ; >
+    au < manifest ; exists ; 1993 ; Mind Volume 102 ; 102 ; >
+    au < manifest ; exists ; 1994 ; Mind Volume 103 ; 103 ; >
+    au < manifest ; exists ; 1995 ; Mind Volume 104 ; 104 ; >
+    au < manifest ; exists ; 1996 ; Mind Volume 105 ; 105 ; >
+    au < manifest ; exists ; 1997 ; Mind Volume 106 ; 106 ; >
+    au < manifest ; exists ; 1998 ; Mind Volume 107 ; 107 ; >
+    au < manifest ; exists ; 1999 ; Mind Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2000 ; Mind Volume 109 ; 109 ; >
+    au < manifest ; exists ; 2001 ; Mind Volume 110 ; 110 ; >
+    au < manifest ; exists ; 2002 ; Mind Volume 111 ; 111 ; >
+    au < manifest ; exists ; 2003 ; Mind Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2004 ; Mind Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2005 ; Mind Volume 114 ; 114 ; >
+    au < manifest ; exists ; 2006 ; Mind Volume 115 ; 115 ; >
+    au < manifest ; exists ; 2007 ; Mind Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2008 ; Mind Volume 117 ; 117 ; >
+    au < manifest ; exists ; 2009 ; Mind Volume 118 ; 118 ; >
+    au < manifest ; exists ; 2010 ; Mind Volume 119 ; 119 ; >
+    au < manifest ; exists ; 2011 ; Mind Volume 120 ; 120 ; >
+
+    }
+    
+  }
+  
+  {
   
     title <
-      name = MHR: Basic science of reproductive medicine;
+      name = MHR: Basic science of reproductive medicine ;
       issn = 1360-9947 ;
       eissn = 1460-2407 ;
       issnl = 1360-9947
@@ -5576,7 +6139,44 @@
     }
 
   }
+  
+  {
 
+    title <
+      name = Molecular Human Reproduction ;
+      issn = 1360-9947 ;
+      eissn = 1460-2407 ;
+      issnl = 1360-9947
+    >
+
+    param[base_url] = http://molehr.oxfordjournals.org/
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < manifest ; exists ; 1995 ; Molecular Human Reproduction Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1996 ; Molecular Human Reproduction Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1997 ; Molecular Human Reproduction Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1998 ; Molecular Human Reproduction Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1999 ; Molecular Human Reproduction Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2000 ; Molecular Human Reproduction Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2001 ; Molecular Human Reproduction Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2002 ; Molecular Human Reproduction Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2003 ; Molecular Human Reproduction Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2004 ; Molecular Human Reproduction Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2005 ; Molecular Human Reproduction Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2006 ; Molecular Human Reproduction Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2007 ; Molecular Human Reproduction Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2008 ; Molecular Human Reproduction Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2009 ; Molecular Human Reproduction Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2010 ; Molecular Human Reproduction Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2011 ; Molecular Human Reproduction Volume 17 ; 17 ; >
+        
+    }
+    
+  }
+  
   {
   
     title <
@@ -5875,7 +6475,8 @@
     title <
       name = The Oral History Review ;
       issn = 0094-0798 ;
-      eissn = 1533-8592
+      eissn = 1533-8592 ;
+      issnl = 0094-0798
     >
 
     param[base_url] = http://ohr.oxfordjournals.org/
@@ -5987,11 +6588,59 @@
   }
 
   {
+
+    title <
+      name = OAH Magazine of History ;
+      issn = 0882-228X ;
+      eissn = 1938-2340;
+      issnl = 0882-228X        
+    >
+
+    param[base_url] = http://maghis.oxfordjournals.org/
+      
+    {
+      
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    au < exists ; exists ; 1985 ; OAH Magazine of History Volume 1 ; 1 ; >
+    au < exists ; exists ; 1986 ; OAH Magazine of History Volume 2 ; 2 ; >
+    au < exists ; exists ; 1987 ; OAH Magazine of History Volume 2 ; 2 ; >
+    au < exists ; exists ; 1988 ; OAH Magazine of History Volume 3 ; 3 ; >
+    au < exists ; exists ; 1989-1990 ; OAH Magazine of History Volume 4 ; 4 ; >
+    au < exists ; exists ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 ; >              
+    au < exists ; exists ; 1991-1992 ; OAH Magazine of History Volume 6 ; 6 ; >
+    au < exists ; exists ; 1992-1993 ; OAH Magazine of History Volume 7 ; 7 ; >
+    au < exists ; exists ; 1993-1994 ; OAH Magazine of History Volume 8 ; 8 ; >
+    au < exists ; exists ; 1994-1995 ; OAH Magazine of History Volume 9 ; 9 ; >
+    au < exists ; exists ; 1995-1996 ; OAH Magazine of History Volume 10 ; 10 ; >
+    au < exists ; exists ; 1996-1997 ; OAH Magazine of History Volume 11 ; 11 ; >
+    au < exists ; exists ; 1998 ; OAH Magazine of History Volume 12 ; 12 ; >
+    au < exists ; exists ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 ; >
+    au < exists ; exists ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 ; >
+    au < exists ; exists ; 1999-2000 ; OAH Magazine of History Volume 14 ; 14 ; >
+    au < exists ; exists ; 2000-2001 ; OAH Magazine of History Volume 15 ; 15 ; >
+    au < exists ; exists ; 2001-2002 ; OAH Magazine of History Volume 16 ; 16 ; >
+    au < exists ; exists ; 2002-2003 ; OAH Magazine of History Volume 17 ; 17 ; >
+    au < exists ; exists ; 2003-2004 ; OAH Magazine of History Volume 18 ; 18 ; >
+    au < exists ; exists ; 2005 ; OAH Magazine of History Volume 19 ; 19 ; >
+    au < exists ; exists ; 2006 ; OAH Magazine of History Volume 20 ; 20 ; >
+    au < exists ; exists ; 2007 ; OAH Magazine of History Volume 21 ; 21 ; >
+    au < exists ; exists ; 2008 ; OAH Magazine of History Volume 22 ; 22 ; >
+    au < exists ; exists ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
+    au < exists ; exists ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
+    au < exists ; exists ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
+        
+    }
+    
+  }  
+  
+  {
   
     title <
       name = Oxford Review of Economic Policy ;
       issn = 0266-903X ;
-      eissn = 1460-2121
+      eissn = 1460-2121 ;
+      issnl = 0266-903X 
     >
 
     param[base_url] = http://oxrep.oxfordjournals.org/
@@ -6594,7 +7243,8 @@
     title <
       name = The Review of Financial Studies ;
       issn = 0893-9454 ;
-      eissn = 1465-7368
+      eissn = 1465-7368 ;
+      issnl = 0893-9454
     >
 
     param[base_url] = http://rfs.oxfordjournals.org/
@@ -6856,6 +7506,7 @@
     title <
       name = Sociology of Religion;
       issn = 1069-4404 ;
+      eissn = 1759-8818 ;
       issnl = 1069-4404
     >
 

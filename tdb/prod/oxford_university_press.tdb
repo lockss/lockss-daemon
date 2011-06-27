@@ -3844,6 +3844,63 @@
     }
 
   }
+  
+  {
+  
+    title <
+      name = European Journal of Echocardiography;
+      issn = 1525-2167 ;
+      eissn = 1532-2114 ;
+      issnl = 1525-2167
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ejechocard.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 >
+    au < exists ; 2001 ; European Journal of Echocardiography Volume 2 ; 2 >
+    au < exists ; 2002 ; European Journal of Echocardiography Volume 3 ; 3 >
+    au < exists ; 2003 ; European Journal of Echocardiography Volume 4 ; 4 >
+    au < exists ; 2004 ; European Journal of Echocardiography Volume 5 ; 5 >
+    au < manifest ; 2005 ; European Journal of Echocardiography Volume 6 ; 6 >
+    au < manifest ; 2006 ; European Journal of Echocardiography Volume 7 ; 7 >
+    au < manifest ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 >
+    au < manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 >
+    au < manifest ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 >
+    au < manifest ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 >
+    au < manifest ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 >
+
+  }
+
+  {
+  
+    title <
+      name = European Journal of Heart Failure ;
+      issn = 1388-9842 ;
+      eissn = 1879-0844 ;
+      issnl = 1388-9842
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://eurjhf.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+  
+    au < exists ; 1999 ; European Journal of Heart Failure Volume 1 ; 1 >
+    au < exists ; 2000 ; European Journal of Heart Failure Volume 2 ; 2 >
+    au < exists ; 2001 ; European Journal of Heart Failure Volume 3 ; 3 >
+    au < exists ; 2002 ; European Journal of Heart Failure Volume 4 ; 4 >
+    au < exists ; 2003 ; European Journal of Heart Failure Volume 5 ; 5 >
+    au < exists ; 2004 ; European Journal of Heart Failure Volume 6 ; 6 >
+    au < exists ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 >
+    au < exists ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 >
+    au < exists ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 >
+    au < exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 >
+    au < manifest ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 >
+    au < manifest ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 >
+    au < manifest ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 >
+    
+  }
 
   {
 
@@ -4117,13 +4174,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; European Sociological Review Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; European Sociological Review Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; European Sociological Review Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; European Sociological Review Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; European Sociological Review Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; European Sociological Review Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; European Sociological Review Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; European Sociological Review Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; European Sociological Review Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; European Sociological Review Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; European Sociological Review Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; European Sociological Review Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; European Sociological Review Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; European Sociological Review Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; European Sociological Review Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; European Sociological Review Volume 27 ; 27 >
     
     }
 
@@ -4210,13 +4267,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Family Practice Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Family Practice Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Family Practice Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Family Practice Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Family Practice Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Family Practice Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Family Practice Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Family Practice Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Family Practice Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Family Practice Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Family Practice Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Family Practice Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Family Practice Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Family Practice Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Family Practice Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Family Practice Volume 28 ; 28 >
 
     }
 
@@ -4326,13 +4383,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Forestry Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Forestry Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Forestry Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Forestry Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Forestry Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Forestry Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Forestry Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Forestry Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Forestry Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; Forestry Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Forestry Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Forestry Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Forestry Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Forestry Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Forestry Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Forestry Volume 84 ; 84 >
     
     }
 
@@ -4404,13 +4461,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Forum for Modern Language Studies Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Forum for Modern Language Studies Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Forum for Modern Language Studies Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Forum for Modern Language Studies Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Forum for Modern Language Studies Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Forum for Modern Language Studies Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >   
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 >   
     }
 
   }
@@ -4591,6 +4648,118 @@
 
   }
 
+  {
+  
+    title <
+      name = German History ;
+      issn = 0266-3554 ;
+      eissn = 1477-089X ;
+      issnl = 0266-3554
+    >
+    
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://gh.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 1984 ; German History Volume 1 ; 1 >
+    au < exists ; 1985 ; German History Volume 2 ; 2 >
+    au < exists ; 1986 ; German History Volume 3 ; 3 >
+    au < exists ; 1987 ; German History Volume 4 ; 4 >
+    au < exists ; 1987 ; German History Volume 5 ; 5 >
+    au < exists ; 1988 ; German History Volume 6 ; 6 >
+    au < exists ; 1989 ; German History Volume 7 ; 7 >
+    au < exists ; 1990 ; German History Volume 8 ; 8 >
+    au < exists ; 1991 ; German History Volume 9 ; 9 >
+    au < exists ; 1992 ; German History Volume 10 ; 10 >
+    au < exists ; 1993 ; German History Volume 11 ; 11 >
+    au < exists ; 1994 ; German History Volume 12 ; 12 >
+    au < exists ; 1995 ; German History Volume 13 ; 13 >
+    au < exists ; 1996 ; German History Volume 14 ; 14 >
+    au < exists ; 1997 ; German History Volume 15 ; 15 >
+    au < exists ; 1998 ; German History Volume 16 ; 16 >
+    au < exists ; 1999 ; German History Volume 17 ; 17 >
+    au < exists ; 2000 ; German History Volume 18 ; 18 >
+    au < exists ; 2001 ; German History Volume 19 ; 19 >
+    au < exists ; 2002 ; German History Volume 20 ; 20 >
+    au < exists ; 2003 ; German History Volume 21 ; 21 >
+    au < exists ; 2004 ; German History Volume 22 ; 22 >
+    au < exists ; 2005 ; German History Volume 23 ; 23 >
+    au < exists ; 2006 ; German History Volume 24 ; 24 >
+    au < exists ; 2007 ; German History Volume 25 ; 25 >
+    au < manifest ; 2008 ; German History Volume 26 ; 26 >
+    au < manifest ; 2009 ; German History Volume 27 ; 27 >
+    au < manifest ; 2010 ; German History Volume 28 ; 28 >
+    au < manifest ; 2011 ; German History Volume 29 ; 29 >
+
+  }
+
+  {
+  
+    title <
+      name = The Gerontologist ;
+      issn = 0016-9013;
+      eissn = 1758-5341;
+      issnl = 0016-9013
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://gerontologist.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+     au < exists ; 1961 ; The Gerontologist Volume 1 ; 1 >
+    au < exists ; 1962 ; The Gerontologist Volume 2 ; 2 >
+    au < exists ; 1963 ; The Gerontologist Volume 3 ; 3 >
+    au < exists ; 1964 ; The Gerontologist Volume 4 ; 4 >
+    au < exists ; 1965 ; The Gerontologist Volume 5 ; 5 >
+    au < exists ; 1966 ; The Gerontologist Volume 6 ; 6 >
+    au < exists ; 1967 ; The Gerontologist Volume 7 ; 7 >
+    au < exists ; 1968 ; The Gerontologist Volume 8 ; 8 >
+    au < exists ; 1969 ; The Gerontologist Volume 9 ; 9 >
+    au < exists ; 1970 ; The Gerontologist Volume 10 ; 10 >
+    au < exists ; 1971 ; The Gerontologist Volume 11 ; 11 >
+    au < exists ; 1972 ; The Gerontologist Volume 12 ; 12 >
+    au < exists ; 1973 ; The Gerontologist Volume 13 ; 13 >
+    au < exists ; 1974 ; The Gerontologist Volume 14 ; 14 >
+    au < exists ; 1975 ; The Gerontologist Volume 15 ; 15 >
+    au < exists ; 1976 ; The Gerontologist Volume 16 ; 16 >
+    au < exists ; 1977 ; The Gerontologist Volume 17 ; 17 >
+    au < exists ; 1978 ; The Gerontologist Volume 18 ; 18 >
+    au < exists ; 1979 ; The Gerontologist Volume 19 ; 19 >
+    au < exists ; 1980 ; The Gerontologist Volume 20 ; 20 >
+    au < exists ; 1981 ; The Gerontologist Volume 21 ; 21 >
+    au < exists ; 1982 ; The Gerontologist Volume 22 ; 22 >
+    au < exists ; 1983 ; The Gerontologist Volume 23 ; 23 >
+    au < exists ; 1984 ; The Gerontologist Volume 24 ; 24 >
+    au < exists ; 1985 ; The Gerontologist Volume 25 ; 25 >
+    au < exists ; 1986 ; The Gerontologist Volume 26 ; 26 >
+    au < exists ; 1987 ; The Gerontologist Volume 27 ; 27 >
+    au < exists ; 1988 ; The Gerontologist Volume 28 ; 28 >
+    au < exists ; 1989 ; The Gerontologist Volume 29 ; 29 >
+    au < exists ; 1990 ; The Gerontologist Volume 30 ; 30 >
+    au < exists ; 1991 ; The Gerontologist Volume 31 ; 31 >
+    au < exists ; 1992 ; The Gerontologist Volume 32 ; 32 >
+    au < exists ; 1993 ; The Gerontologist Volume 33 ; 33 >
+    au < exists ; 1994 ; The Gerontologist Volume 34 ; 34 >
+    au < exists ; 1995 ; The Gerontologist Volume 35 ; 35 >
+    au < exists ; 1996 ; The Gerontologist Volume 36 ; 36 >
+    au < exists ; 1997 ; The Gerontologist Volume 37 ; 37 >
+    au < exists ; 1998 ; The Gerontologist Volume 38 ; 38 >
+    au < exists ; 1999 ; The Gerontologist Volume 39 ; 39 >
+    au < exists ; 2000 ; The Gerontologist Volume 40 ; 40 >
+    au < exists ; 2001 ; The Gerontologist Volume 41 ; 41 >
+    au < exists ; 2002 ; The Gerontologist Volume 42 ; 42 >
+    au < exists ; 2003 ; The Gerontologist Volume 43 ; 43 >
+    au < exists ; 2004 ; The Gerontologist Volume 44 ; 44 >
+    au < exists ; 2005 ; The Gerontologist Volume 45 ; 45 >
+    au < exists ; 2006 ; The Gerontologist Volume 46 ; 46 >
+    au < exists ; 2007 ; The Gerontologist Volume 47 ; 47 >
+    au < exists ; 2008 ; The Gerontologist Volume 48 ; 48 >
+    au < manifest ; 2009 ; The Gerontologist Volume 49 ; 49 >
+    au < manifest ; 2010 ; The Gerontologist Volume 50 ; 50 >
+    au < manifest ; 2011 ; The Gerontologist Volume 51 ; 51 >
+  
+  }
+  
   {
 
     title <
@@ -5322,7 +5491,7 @@
 
     {
 
-    param[base_url] = http://ietele.oxfordjournals.org/
+    param[base_url] = http://	.oxfordjournals.org/
     comment[down] = The online versions of the journals have moved to JSTAGE
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
  
@@ -5790,6 +5959,60 @@
   }
 
   {
+  
+    title <
+      name = InnovAiT ;
+      issn = 1755-7380 ;
+      eissn = 1755-7399 ;
+      issnl = 1755-7380
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2008 ; InnovAiT Volume 1 ; 1 >
+    au < exists ; 2009 ; InnovAiT Volume 2 ; 2 >
+    au < exists ; 2010 ; InnovAiT Volume 3 ; 3 >
+    au < exists ; 2011 ; InnovAiT Volume 4 ; 4 >
+      
+  }
+
+  {
+  
+    title <
+      name = Interdisciplinary Studies in Literature and Environment ;
+      issn = 1076-0962 ;
+      eissn = 1759-1090;
+      issnl = 1076-0962
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://isle.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1993 ; Interdisciplinary Studies in Literature and Environment Volume 1 ; 1 >
+    au < exists ; 1994,1996 ; Interdisciplinary Studies in Literature and Environment Volume 2 ; 2 >
+    au < exists ; 1996 ; Interdisciplinary Studies in Literature and Environment Volume 3 ; 3 >
+    au < exists ; 1997 ; Interdisciplinary Studies in Literature and Environment Volume 4 ; 4 >
+    au < exists ; 1998 ; Interdisciplinary Studies in Literature and Environment Volume 5 ; 5 >
+    au < exists ; 1999 ; Interdisciplinary Studies in Literature and Environment Volume 6 ; 6 >
+    au < exists ; 2000 ; Interdisciplinary Studies in Literature and Environment Volume 7 ; 7 >
+    au < exists ; 2001 ; Interdisciplinary Studies in Literature and Environment Volume 8 ; 8 >
+    au < exists ; 2002 ; Interdisciplinary Studies in Literature and Environment Volume 9 ; 9 >
+    au < exists ; 2003 ; Interdisciplinary Studies in Literature and Environment Volume 10 ; 10 >
+    au < exists ; 2004 ; Interdisciplinary Studies in Literature and Environment Volume 11 ; 11 >
+    au < exists ; 2005 ; Interdisciplinary Studies in Literature and Environment Volume 12 ; 12 >
+    au < exists ; 2006 ; Interdisciplinary Studies in Literature and Environment Volume 13 ; 13 >
+    au < exists ; 2007 ; Interdisciplinary Studies in Literature and Environment Volume 14 ; 14 >
+    au < exists ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 >
+    au < exists ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 >
+    au < exists ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 >
+    au < exists ; 2011 ; Interdisciplinary Studies in Literature and Environment Volume 18 ; 18 >
+
+  }
+
+  {
 
     title <
       name = Integrative and Comparative Biology ;
@@ -5877,7 +6100,8 @@
     title <
       name = International and Comparative Law Quarterly ;
       issn = 0030-5893 ;
-      eissn = 1471-6895
+      eissn = 1471-6895 ;
+      issnl = 0030-5893
     >
 
     {
@@ -5958,6 +6182,28 @@
     
     }
 
+  }
+
+  {
+  
+    title <
+      name = International Journal of Low-Carbon Technologies ;
+      issn = 1748-1317;
+      eissn = 1748-1325;
+      issnl = 1748-1317
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://ijlct.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >    
+    
+    au < exists ; 2006 ; International Journal of Low-Carbon Technologies Volume 1 ; 1 >
+    au < exists ; 2007 ; International Journal of Low-Carbon Technologies Volume 2 ; 2 >
+    au < manifest ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 >
+    au < manifest ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 >
+    au < manifest ; 2010 ; International Journal of Low-Carbon Technologies Volume 5 ; 5 >
+    au < manifest ; 2011 ; International Journal of Low-Carbon Technologies Volume 6 ; 6 >
+    
   }
 
   {
@@ -6419,6 +6665,43 @@
     
     }
 
+  }
+
+  {
+  
+    title <
+      name = International Mathematics Research Notices;
+      issn = 1073-7928 ;
+      eissn = 1687-0247 ;
+      issnl = 1073-7928
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://imrn.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >     
+    
+    au < exists ; 1991 ; International Journal of Low-Carbon Technologies Volume 1991 ; 1991 >
+    au < exists ; 1992 ; International Journal of Low-Carbon Technologies Volume 1992 ; 1992 >
+    au < exists ; 1993 ; International Journal of Low-Carbon Technologies Volume 1993 ; 1993 >
+    au < exists ; 1994 ; International Journal of Low-Carbon Technologies Volume 1994 ; 1994 >
+    au < exists ; 1995 ; International Journal of Low-Carbon Technologies Volume 1995 ; 1995 >
+    au < exists ; 1996 ; International Journal of Low-Carbon Technologies Volume 1996 ; 1996 >
+    au < exists ; 1997 ; International Journal of Low-Carbon Technologies Volume 1997 ; 1997 >
+    au < exists ; 1998 ; International Journal of Low-Carbon Technologies Volume 1998 ; 1998 >
+    au < exists ; 1999 ; International Journal of Low-Carbon Technologies Volume 1999 ; 1999 >
+    au < exists ; 2000 ; International Journal of Low-Carbon Technologies Volume 2000 ; 2000 >
+    au < exists ; 2001 ; International Journal of Low-Carbon Technologies Volume 2001 ; 2001 >
+    au < exists ; 2002 ; International Journal of Low-Carbon Technologies Volume 2002 ; 2002 >
+    au < exists ; 2003 ; International Journal of Low-Carbon Technologies Volume 2003 ; 2003 >
+    au < exists ; 2004 ; International Journal of Low-Carbon Technologies Volume 2004 ; 2004 >
+    au < exists ; 2005 ; International Journal of Low-Carbon Technologies Volume 2005 ; 2005 >
+    au < manifest ; 2006 ; International Journal of Low-Carbon Technologies Volume 2006 ; 2006 >
+    au < manifest ; 2007 ; International Journal of Low-Carbon Technologies Volume 2007 ; 2007 >
+    au < manifest ; 2008 ; International Journal of Low-Carbon Technologies Volume 2008 ; 2008 >
+    au < manifest ; 2009 ; International Journal of Low-Carbon Technologies Volume 2009 ; 2009 >
+    au < manifest ; 2010 ; International Journal of Low-Carbon Technologies Volume 2010 ; 2010 >
+    au < manifest ; 2011 ; International Journal of Low-Carbon Technologies Volume 2011 ; 2011 >
+    
   }
 
   {
@@ -7086,8 +7369,98 @@
     au < HighWirePressH20Plugin ; ready ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 >
+   
     }
     
+  }
+
+  {
+  
+    title <
+      name = The Journal of Hindu Studies ;
+      issn = 1756-4255 ;
+      eissn = 1756-4263 ;
+      issnl = 1756-4255
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://jhs.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >     
+
+    au < manifest ; 2008 ; The Journal of Hindu Studies Volume 1 ; 1 >
+    au < manifest ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 >
+    au < manifest ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 >
+    au < manifest ; 2011 ; The Journal of Hindu Studies Volume 4 ; 4 >
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Church and State ;
+      issn = 0021-969X ;
+      eissn = 2040-4867 ;
+      issnl = 0021-969X
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://jcs.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >     
+
+    au < exists ; 1959 ; International Journal of Low-Carbon Technologies Volume 1 ; 1 >
+    au < exists ; 1960 ; International Journal of Low-Carbon Technologies Volume 2 ; 2 >
+    au < exists ; 1961 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 >
+    au < exists ; 1962 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 >
+    au < exists ; 1963 ; International Journal of Low-Carbon Technologies Volume 5 ; 5 >
+    au < exists ; 1964 ; International Journal of Low-Carbon Technologies Volume 6 ; 6 >
+    au < exists ; 1965 ; International Journal of Low-Carbon Technologies Volume 7 ; 7 >
+    au < exists ; 1966 ; International Journal of Low-Carbon Technologies Volume 8 ; 8 >
+    au < exists ; 1967 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 >
+    au < exists ; 1968 ; International Journal of Low-Carbon Technologies Volume 10 ; 10 >
+    au < exists ; 1969 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 >
+    au < exists ; 1970 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 >
+    au < exists ; 1971 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 >
+    au < exists ; 1972 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 >
+    au < exists ; 1973 ; International Journal of Low-Carbon Technologies Volume 15 ; 15 >
+    au < exists ; 1974 ; International Journal of Low-Carbon Technologies Volume 16 ; 16 >
+    au < exists ; 1975 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 >
+    au < exists ; 1976 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 >
+    au < exists ; 1977 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 >
+    au < exists ; 1978 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 >
+    au < exists ; 1979 ; International Journal of Low-Carbon Technologies Volume 21 ; 21 >
+    au < exists ; 1980 ; International Journal of Low-Carbon Technologies Volume 22 ; 22 >
+    au < exists ; 1981 ; International Journal of Low-Carbon Technologies Volume 23 ; 23 >
+    au < exists ; 1982 ; International Journal of Low-Carbon Technologies Volume 24 ; 24 >
+    au < exists ; 1983 ; International Journal of Low-Carbon Technologies Volume 25 ; 25 >
+    au < exists ; 1984 ; International Journal of Low-Carbon Technologies Volume 26 ; 26 >
+    au < exists ; 1985 ; International Journal of Low-Carbon Technologies Volume 27 ; 27 >
+    au < exists ; 1986 ; International Journal of Low-Carbon Technologies Volume 28 ; 28 >
+    au < exists ; 1987 ; International Journal of Low-Carbon Technologies Volume 29 ; 29 >
+    au < exists ; 1988 ; International Journal of Low-Carbon Technologies Volume 30 ; 30 >
+    au < exists ; 1989 ; International Journal of Low-Carbon Technologies Volume 31 ; 31 >
+    au < exists ; 1990 ; International Journal of Low-Carbon Technologies Volume 32 ; 32 >
+    au < exists ; 1991 ; International Journal of Low-Carbon Technologies Volume 33 ; 33 >
+    au < exists ; 1992 ; International Journal of Low-Carbon Technologies Volume 34 ; 34 >
+    au < exists ; 1993 ; International Journal of Low-Carbon Technologies Volume 35 ; 35 >
+    au < exists ; 1994 ; International Journal of Low-Carbon Technologies Volume 36 ; 36 >
+    au < exists ; 1995 ; International Journal of Low-Carbon Technologies Volume 37 ; 37 >
+    au < exists ; 1996 ; International Journal of Low-Carbon Technologies Volume 38 ; 38 >
+    au < exists ; 1997 ; International Journal of Low-Carbon Technologies Volume 39 ; 39 >
+    au < exists ; 1998 ; International Journal of Low-Carbon Technologies Volume 40 ; 40 >
+    au < exists ; 1999 ; International Journal of Low-Carbon Technologies Volume 41 ; 41 >
+    au < exists ; 2000 ; International Journal of Low-Carbon Technologies Volume 42 ; 42 >
+    au < exists ; 2001 ; International Journal of Low-Carbon Technologies Volume 43 ; 43 >
+    au < exists ; 2002 ; International Journal of Low-Carbon Technologies Volume 44 ; 44 >
+    au < exists ; 2003 ; International Journal of Low-Carbon Technologies Volume 45 ; 45 >
+    au < exists ; 2004 ; International Journal of Low-Carbon Technologies Volume 46 ; 46 >
+    au < exists ; 2005 ; International Journal of Low-Carbon Technologies Volume 47 ; 47 >
+    au < exists ; 2006 ; International Journal of Low-Carbon Technologies Volume 48 ; 48 >
+    au < exists ; 2007 ; International Journal of Low-Carbon Technologies Volume 49 ; 49 >
+    au < exists ; 2008 ; International Journal of Low-Carbon Technologies Volume 50 ; 50 >
+    au < exists ; 2009 ; International Journal of Low-Carbon Technologies Volume 51 ; 51 >
+    au < exists ; 2010 ; International Journal of Low-Carbon Technologies Volume 52 ; 52 >
+    au < exists ; 2011 ; International Journal of Low-Carbon Technologies Volume 53 ; 53 >
+
   }
 
   {
@@ -7791,8 +8164,9 @@
   {
     title <
       name = Journal of Infectious Diseases ;
-      issn = 1537-6613 ;
-      eissn = 0022-1899
+      issn =  0022-1899;
+      eissn = 1537-6613 ;
+      issnl = 0022-1899
     >
 
     {
@@ -8071,12 +8445,12 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of International Criminal Justice Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of International Criminal Justice Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of International Criminal Justice Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of International Criminal Justice Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 >
     
     }
 
@@ -8117,13 +8491,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of International Economic Law Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of International Economic Law Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of International Economic Law Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Journal of International Economic Law Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Journal of International Economic Law Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of International Economic Law Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of International Economic Law Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of International Economic Law Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Journal of International Economic Law Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of International Economic Law Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of International Economic Law Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of International Economic Law Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of International Economic Law Volume 14 ; 14 >
     
     }
 
@@ -8173,13 +8547,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Islamic Studies Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Islamic Studies Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Islamic Studies Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Journal of Islamic Studies Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of Islamic Studies Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Journal of Islamic Studies Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Journal of Islamic Studies Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; Journal of Islamic Studies Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 >
     
     }
 
@@ -8236,7 +8610,7 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Law, Economics, and Organization Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; testing ; 2005 ; Journal of Law, Economics, and Organization Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of Law, Economics, and Organization Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of Law, Economics, and Organization Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 >
@@ -8290,10 +8664,10 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Logic and Computation Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Logic and Computation Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; testing ; 2005 ; Journal of Logic and Computation Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Journal of Logic and Computation Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Journal of Logic and Computation Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Journal of Logic and Computation Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of Logic and Computation Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 >
     }
@@ -9083,6 +9457,72 @@
   }
 
   {
+  
+    title <
+      name = The Journals of Gerontology: Series A ;
+      issn = 1079-5006 ;
+      eissn = 1758-535X;
+      issnl = 1079-5006
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://biomedgerontology.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 1995 ; The Journals of Gerontology: Series A Volume 50A ; 50A >
+    au < exists ; 1996 ; The Journals of Gerontology: Series A Volume 51A ; 51A >
+    au < exists ; 1997 ; The Journals of Gerontology: Series A Volume 52A ; 52A >
+    au < exists ; 1998 ; The Journals of Gerontology: Series A Volume 53A ; 53A >
+    au < exists ; 1999 ; The Journals of Gerontology: Series A Volume 54A ; 54A >
+    au < exists ; 2000 ; The Journals of Gerontology: Series A Volume 55A ; 55A >
+    au < exists ; 2001 ; The Journals of Gerontology: Series A Volume 56A ; 56A >
+    au < exists ; 2002 ; The Journals of Gerontology: Series A Volume 57A ; 57A >
+    au < exists ; 2003 ; The Journals of Gerontology: Series A Volume 58A ; 58A >
+    au < exists ; 2004 ; The Journals of Gerontology: Series A Volume 59A ; 59A >
+    au < exists ; 2005 ; The Journals of Gerontology: Series A Volume 60A ; 60A >
+    au < exists ; 2006 ; The Journals of Gerontology: Series A Volume 61A ; 61A >
+    au < exists ; 2007 ; The Journals of Gerontology: Series A Volume 62A ; 62A >
+    au < exists ; 2008 ; The Journals of Gerontology: Series A Volume 63A ; 63A >
+    au < exists ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A >
+    au < exists ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A >
+    au < exists ; 2011 ; The Journals of Gerontology: Series A Volume 66A ; 66A >
+
+  }
+
+  {
+  
+    title <
+      name = The Journals of Gerontology: Series B;
+      issn = 1079-5014;
+      eissn = 1758-5368;
+      issnl = 1079-5014
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://psychsocgerontology.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 1995 ; The Journals of Gerontology: Series B Volume 50B ; 50B >
+    au < exists ; 1996 ; The Journals of Gerontology: Series B Volume 51B ; 51B >
+    au < exists ; 1997 ; The Journals of Gerontology: Series B Volume 52B ; 52B >
+    au < exists ; 1998 ; The Journals of Gerontology: Series B Volume 53B ; 53B >
+    au < exists ; 1999 ; The Journals of Gerontology: Series B Volume 54B ; 54B >
+    au < exists ; 2000 ; The Journals of Gerontology: Series B Volume 55B ; 55B >
+    au < exists ; 2001 ; The Journals of Gerontology: Series B Volume 56B ; 56B >
+    au < exists ; 2002 ; The Journals of Gerontology: Series B Volume 57B ; 57B >
+    au < exists ; 2003 ; The Journals of Gerontology: Series B Volume 58B ; 58B >
+    au < exists ; 2004 ; The Journals of Gerontology: Series B Volume 59B ; 59B >
+    au < exists ; 2005 ; The Journals of Gerontology: Series B Volume 60B ; 60B >
+    au < exists ; 2006 ; The Journals of Gerontology: Series B Volume 61B ; 61B >
+    au < exists ; 2007 ; The Journals of Gerontology: Series B Volume 62B ; 62B >
+    au < exists ; 2008 ; The Journals of Gerontology: Series B Volume 63B ; 63B >
+    au < exists ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B >
+    au < exists ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B >
+    au < exists ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
+
+  }
+    
+  {
 
     title <
       name = Journal of the History of Collections ;
@@ -9451,9 +9891,33 @@
   }
 
   {
+  
+    title <
+      name = Journal of the International Commission on Radiation Units and Measurements ;
+      issn = 1473-6691;
+      eissn = 1742-3422;
+      issnl = 1473-6691
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://jicru.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 >
+    au < manifest ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 >
+    au < manifest ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
+    au < manifest ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 >
+    au < manifest ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
+    au < manifest ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
+    au < manifest ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 >
+    au < manifest ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 >
+     
+  }
+  
+  {
 
     title <
-      name = Journal of Medicine and Philosophy ;
+      name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine;
       issn = 0360-5310 ;
       eissn = 1744-5019 ;
       issnl = 0360-5310
@@ -9464,44 +9928,44 @@
     param[base_url] = http://jmp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of Medicine and Philosophy Volume 34 ; 34 >
-    au < HighWirePressPlugin ; doNotProcess ; 2010 ; Journal of Medicine and Philosophy Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of Medicine and Philosophy Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of Medicine and Philosophy Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of Medicine and Philosophy Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of Medicine and Philosophy Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of Medicine and Philosophy Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of Medicine and Philosophy Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of Medicine and Philosophy Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of Medicine and Philosophy Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Medicine and Philosophy Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Medicine and Philosophy Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of Medicine and Philosophy Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of Medicine and Philosophy Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Journal of Medicine and Philosophy Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Journal of Medicine and Philosophy Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Journal of Medicine and Philosophy Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Journal of Medicine and Philosophy Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Journal of Medicine and Philosophy Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of Medicine and Philosophy Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of Medicine and Philosophy Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Medicine and Philosophy Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Medicine and Philosophy Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Medicine and Philosophy Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Medicine and Philosophy Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Medicine and Philosophy Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Medicine and Philosophy Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Medicine and Philosophy Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Medicine and Philosophy Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Medicine and Philosophy Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Medicine and Philosophy Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Medicine and Philosophy Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Medicine and Philosophy Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Medicine and Philosophy Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Journal of Medicine and Philosophy Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medicine and Philosophy Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medicine and Philosophy Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Medicine and Philosophy Volume 36 ; 36 >
+    au < HighWirePressPlugin ; down ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 >
+    au < HighWirePressPlugin ; doNotProcess ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; The Journal of Medicine and Philosophy Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; The Journal of Medicine and Philosophy Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; The Journal of Medicine and Philosophy Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; The Journal of Medicine and Philosophy Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; The Journal of Medicine and Philosophy Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; The Journal of Medicine and Philosophy Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; The Journal of Medicine and Philosophy Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; The Journal of Medicine and Philosophy Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; The Journal of Medicine and Philosophy Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; The Journal of Medicine and Philosophy Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; The Journal of Medicine and Philosophy Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; The Journal of Medicine and Philosophy Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; The Journal of Medicine and Philosophy Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; The Journal of Medicine and Philosophy Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; The Journal of Medicine and Philosophy Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; The Journal of Medicine and Philosophy Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; The Journal of Medicine and Philosophy Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; The Journal of Medicine and Philosophy Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; The Journal of Medicine and Philosophy Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; The Journal of Medicine and Philosophy Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; The Journal of Medicine and Philosophy Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; The Journal of Medicine and Philosophy Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; The Journal of Medicine and Philosophy Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; The Journal of Medicine and Philosophy Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; The Journal of Medicine and Philosophy Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; The Journal of Medicine and Philosophy Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; The Journal of Medicine and Philosophy Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; The Journal of Medicine and Philosophy Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; The Journal of Medicine and Philosophy Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; The Journal of Medicine and Philosophy Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; The Journal of Medicine and Philosophy Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; The Journal of Medicine and Philosophy Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; The Journal of Medicine and Philosophy Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 >
     
     }
 
@@ -9528,6 +9992,26 @@
     au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 >
 
     }
+
+  }
+       
+  {
+  
+    title <
+      name = Journal of Plant Ecology ;
+      issn = 1752-9921 ;
+      eissn = 1752-993X ;
+      issnl = 1752-9921
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://jpe.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 >
+    au < exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 >
+    au < exists ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 >
+    au < exists ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 >
 
   }
        
@@ -9818,6 +10302,26 @@
 
     }
 
+  }
+
+  {
+  
+    title <
+      name = The Journal of World Energy Law & Business ;
+      issn = 1754-9957 ;
+      eissn = 1754-9965 ;
+      issnl = 1754-9957
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://jwelb.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
+    au < manifest ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
+    au < manifest ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 >
+    au < manifest ; 2011 ; The Journal of World Energy Law & Business Volume 4 ; 4 >
+    
   }
 
   {
@@ -10518,6 +11022,39 @@
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Mind Volume 120 ; 120 >
     
     }
+
+  }
+  
+  {
+  
+    title <
+      name = MHR: Basic science of reproductive medicine;
+      issn = 1360-9947 ;
+      eissn = 1460-2407 ;
+      issnl = 1360-9947
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://molehr.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1995 ; MHR: Basic science of reproductive medicine Volume 1 ; 1 >
+    au < exists ; 1996 ; MHR: Basic science of reproductive medicine Volume 2 ; 2 >
+    au < exists ; 1997 ; MHR: Basic science of reproductive medicine Volume 3 ; 3 >
+    au < exists ; 1998 ; MHR: Basic science of reproductive medicine Volume 4 ; 4 >
+    au < exists ; 1999 ; MHR: Basic science of reproductive medicine Volume 5 ; 5 >
+    au < exists ; 2000 ; MHR: Basic science of reproductive medicine Volume 6 ; 6 >
+    au < exists ; 2001 ; MHR: Basic science of reproductive medicine Volume 7 ; 7 >
+    au < exists ; 2002 ; MHR: Basic science of reproductive medicine Volume 8 ; 8 >
+    au < exists ; 2003 ; MHR: Basic science of reproductive medicine Volume 9 ; 9 >
+    au < exists ; 2004 ; MHR: Basic science of reproductive medicine Volume 10 ; 10 >
+    au < manifest ; 2005 ; MHR: Basic science of reproductive medicine Volume 11 ; 11 >
+    au < manifest ; 2006 ; MHR: Basic science of reproductive medicine Volume 12 ; 12 >
+    au < manifest ; 2007 ; MHR: Basic science of reproductive medicine Volume 13 ; 13 >
+    au < manifest ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
+    au < manifest ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
+    au < manifest ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 >
+    au < manifest ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 >
 
   }
 
@@ -13834,6 +14371,57 @@
   }
 
   {
+  
+    title <
+      name = Reports of Patent, Design and Trade Mark Cases ;
+      issn = 0080-1364;
+      eissn = 1756-1000 ;
+      issnl = 0080-1364
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://rpc.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >   
+    
+    au < exists ; 1977 ; Reports of Patent, Design and Trade Mark Cases Volume 94 ; 94 >
+    au < exists ; 1978 ; Reports of Patent, Design and Trade Mark Cases Volume 95 ; 95 >
+    au < exists ; 1979 ; Reports of Patent, Design and Trade Mark Cases Volume 96 ; 96 >
+    au < exists ; 1980 ; Reports of Patent, Design and Trade Mark Cases Volume 97 ; 97 >
+    au < exists ; 1981 ; Reports of Patent, Design and Trade Mark Cases Volume 98 ; 98 >
+    au < exists ; 1982 ; Reports of Patent, Design and Trade Mark Cases Volume 99 ; 99 >
+    au < exists ; 1983 ; Reports of Patent, Design and Trade Mark Cases Volume 100 ; 100 >
+    au < exists ; 1984 ; Reports of Patent, Design and Trade Mark Cases Volume 101 ; 101 >
+    au < exists ; 1985 ; Reports of Patent, Design and Trade Mark Cases Volume 102 ; 102 >
+    au < exists ; 1986 ; Reports of Patent, Design and Trade Mark Cases Volume 103 ; 103 >
+    au < exists ; 1987 ; Reports of Patent, Design and Trade Mark Cases Volume 104 ; 104 >
+    au < exists ; 1988 ; Reports of Patent, Design and Trade Mark Cases Volume 105 ; 105 >
+    au < exists ; 1989 ; Reports of Patent, Design and Trade Mark Cases Volume 106 ; 106 >
+    au < exists ; 1990 ; Reports of Patent, Design and Trade Mark Cases Volume 107 ; 107 >
+    au < exists ; 1991 ; Reports of Patent, Design and Trade Mark Cases Volume 108 ; 108 >
+    au < exists ; 1992 ; Reports of Patent, Design and Trade Mark Cases Volume 109 ; 109 >
+    au < exists ; 1993 ; Reports of Patent, Design and Trade Mark Cases Volume 110 ; 110 >
+    au < exists ; 1994 ; Reports of Patent, Design and Trade Mark Cases Volume 111 ; 111 >
+    au < exists ; 1995 ; Reports of Patent, Design and Trade Mark Cases Volume 112 ; 112 >
+    au < exists ; 1996 ; Reports of Patent, Design and Trade Mark Cases Volume 113 ; 113 >
+    au < exists ; 1997 ; Reports of Patent, Design and Trade Mark Cases Volume 114 ; 114 >
+    au < exists ; 1998 ; Reports of Patent, Design and Trade Mark Cases Volume 115 ; 115 >
+    au < exists ; 1999 ; Reports of Patent, Design and Trade Mark Cases Volume 116 ; 116 >
+    au < exists ; 2000 ; Reports of Patent, Design and Trade Mark Cases Volume 117 ; 117 >
+    au < exists ; 2001 ; Reports of Patent, Design and Trade Mark Cases Volume 118 ; 118 >
+    au < exists ; 2002 ; Reports of Patent, Design and Trade Mark Cases Volume 119 ; 119 >
+    au < exists ; 2003 ; Reports of Patent, Design and Trade Mark Cases Volume 120 ; 120 >
+    au < exists ; 2004 ; Reports of Patent, Design and Trade Mark Cases Volume 121 ; 121 >
+    au < exists ; 2005 ; Reports of Patent, Design and Trade Mark Cases Volume 122 ; 122 >
+    au < exists ; 2006 ; Reports of Patent, Design and Trade Mark Cases Volume 123 ; 123 >
+    au < exists ; 2007 ; Reports of Patent, Design and Trade Mark Cases Volume 124 ; 124 >
+    au < manifest ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 >
+    au < manifest ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 >
+    au < manifest ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 >
+    au < manifest ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 >  
+  
+  }
+
+  {
 
     title <
         name = The Review of English Studies ;
@@ -14017,7 +14605,7 @@
   {
 
     title <
-      name = Review of Financial Studies ;
+      name = The Review of Financial Studies ;
       issn = 0893-9454 ;
       eissn = 1465-7368 ;
       issnl = 0893-9454
@@ -14029,7 +14617,7 @@
     param[base_url] = http://rfs.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006 ; Review of Financial Studies Volume 19 ; 19 >
+    au < down ; 2006 ; The Review of Financial Studies Volume 19 ; 19 >
 
     }
 
@@ -14038,36 +14626,36 @@
     param[base_url] = http://rfs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Review of Financial Studies Volume 18 ; 18 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Review of Financial Studies Volume 19 ; 19 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Review of Financial Studies Volume 20 ; 20 >
-    au < HighWirePressPlugin ; down ; 2008 ; Review of Financial Studies Volume 21 ; 21 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Review of Financial Studies Volume 22 ; 22 >
-    au < HighWirePressPlugin ; doNotProcess ; 2010 ; Review of Financial Studies Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; exists ; 1988 ; Review of Financial Studies Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1989 ; Review of Financial Studies Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Review of Financial Studies Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Review of Financial Studies Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Review of Financial Studies Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; Review of Financial Studies Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Review of Financial Studies Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Review of Financial Studies Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Review of Financial Studies Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Review of Financial Studies Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Review of Financial Studies Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Review of Financial Studies Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Review of Financial Studies Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Review of Financial Studies Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Review of Financial Studies Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Review of Financial Studies Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Review of Financial Studies Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Review of Financial Studies Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Review of Financial Studies Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Review of Financial Studies Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Review of Financial Studies Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Review of Financial Studies Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Review of Financial Studies Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; ready ; 2011 ; Review of Financial Studies Volume 24 ; 24 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; The Review of Financial Studies Volume 18 ; 18 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; The Review of Financial Studies Volume 19 ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; The Review of Financial Studies Volume 20 ; 20 >
+    au < HighWirePressPlugin ; down ; 2008 ; The Review of Financial Studies Volume 21 ; 21 >
+    au < HighWirePressPlugin ; doNotProcess ; 2009 ; The Review of Financial Studies Volume 22 ; 22 >
+    au < HighWirePressPlugin ; doNotProcess ; 2010 ; The Review of Financial Studies Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; The Review of Financial Studies Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; The Review of Financial Studies Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; The Review of Financial Studies Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; The Review of Financial Studies Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; The Review of Financial Studies Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; The Review of Financial Studies Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; The Review of Financial Studies Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; The Review of Financial Studies Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; The Review of Financial Studies Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; The Review of Financial Studies Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; The Review of Financial Studies Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; The Review of Financial Studies Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; The Review of Financial Studies Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; The Review of Financial Studies Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; The Review of Financial Studies Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; The Review of Financial Studies Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; The Review of Financial Studies Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; The Review of Financial Studies Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; The Review of Financial Studies Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Review of Financial Studies Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; The Review of Financial Studies Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; The Review of Financial Studies Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Review of Financial Studies Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; The Review of Financial Studies Volume 24 ; 24 >
 
     }
 
@@ -14332,6 +14920,82 @@
   }
 
   {
+  
+    title <
+      name = Systematic Biology;
+      issn = 1063-5157;
+      eissn = 1076-836X ;
+      issnl = 1063-5157
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://sysbio.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 1952 ; Systematic Biology Volume 1 ; 1 >
+    au < exists ; 1953 ; Systematic Biology Volume 2 ; 2 >
+    au < exists ; 1954 ; Systematic Biology Volume 3 ; 3 >
+    au < exists ; 1955 ; Systematic Biology Volume 4 ; 4 >
+    au < exists ; 1956 ; Systematic Biology Volume 5 ; 5 >
+    au < exists ; 1957 ; Systematic Biology Volume 6 ; 6 >
+    au < exists ; 1958 ; Systematic Biology Volume 7 ; 7 >
+    au < exists ; 1959 ; Systematic Biology Volume 8 ; 8 >
+    au < exists ; 1960 ; Systematic Biology Volume 9 ; 9 >
+    au < exists ; 1961 ; Systematic Biology Volume 10 ; 10 >
+    au < exists ; 1962 ; Systematic Biology Volume 11 ; 11 >
+    au < exists ; 1963 ; Systematic Biology Volume 12 ; 12 >
+    au < exists ; 1964 ; Systematic Biology Volume 13 ; 13 >
+    au < exists ; 1965 ; Systematic Biology Volume 14 ; 14 >
+    au < exists ; 1966 ; Systematic Biology Volume 15 ; 15 >
+    au < exists ; 1967 ; Systematic Biology Volume 16 ; 16 >
+    au < exists ; 1968 ; Systematic Biology Volume 17 ; 17 >
+    au < exists ; 1969 ; Systematic Biology Volume 18 ; 18 >
+    au < exists ; 1970 ; Systematic Biology Volume 19 ; 19 >
+    au < exists ; 1971 ; Systematic Biology Volume 20 ; 20 >
+    au < exists ; 1972 ; Systematic Biology Volume 21 ; 21 >
+    au < exists ; 1973 ; Systematic Biology Volume 22 ; 22 >
+    au < exists ; 1974 ; Systematic Biology Volume 23 ; 23 >
+    au < exists ; 1975 ; Systematic Biology Volume 24 ; 24 >
+    au < exists ; 1976 ; Systematic Biology Volume 25 ; 25 >
+    au < exists ; 1977 ; Systematic Biology Volume 26 ; 26 >
+    au < exists ; 1978 ; Systematic Biology Volume 27 ; 27 >
+    au < exists ; 1979 ; Systematic Biology Volume 28 ; 28 >
+    au < exists ; 1980 ; Systematic Biology Volume 29 ; 29 >
+    au < exists ; 1981 ; Systematic Biology Volume 30 ; 30 >
+    au < exists ; 1982 ; Systematic Biology Volume 31 ; 31 >
+    au < exists ; 1983 ; Systematic Biology Volume 32 ; 32 >
+    au < exists ; 1984 ; Systematic Biology Volume 33 ; 33 >
+    au < exists ; 1985 ; Systematic Biology Volume 34 ; 34 >
+    au < exists ; 1986 ; Systematic Biology Volume 35 ; 35 >
+    au < exists ; 1987 ; Systematic Biology Volume 36 ; 36 >
+    au < exists ; 1988 ; Systematic Biology Volume 37 ; 37 >
+    au < exists ; 1989 ; Systematic Biology Volume 38 ; 38 >
+    au < exists ; 1990 ; Systematic Biology Volume 39 ; 39 >
+    au < exists ; 1991 ; Systematic Biology Volume 40 ; 40 >
+    au < exists ; 1992 ; Systematic Biology Volume 41 ; 41 >
+    au < exists ; 1993 ; Systematic Biology Volume 42 ; 42 >
+    au < exists ; 1994 ; Systematic Biology Volume 43 ; 43 >
+    au < exists ; 1995 ; Systematic Biology Volume 44 ; 44 >
+    au < exists ; 1996 ; Systematic Biology Volume 45 ; 45 >
+    au < exists ; 1997 ; Systematic Biology Volume 46 ; 46 >
+    au < exists ; 1998 ; Systematic Biology Volume 47 ; 47 >
+    au < exists ; 1999 ; Systematic Biology Volume 48 ; 48 >
+    au < exists ; 2000 ; Systematic Biology Volume 49 ; 49 >
+    au < exists ; 2001 ; Systematic Biology Volume 50 ; 50 >
+    au < exists ; 2002 ; Systematic Biology Volume 51 ; 51 >
+    au < exists ; 2003 ; Systematic Biology Volume 52 ; 52 >
+    au < exists ; 2004 ; Systematic Biology Volume 53 ; 53 >
+    au < exists ; 2005 ; Systematic Biology Volume 54 ; 54 >
+    au < exists ; 2006 ; Systematic Biology Volume 55 ; 55 >
+    au < exists ; 2007 ; Systematic Biology Volume 56 ; 56 >
+    au < exists ; 2008 ; Systematic Biology Volume 57 ; 57 >
+    au < manifest ; 2009 ; Systematic Biology Volume 58 ; 58 >
+    au < manifest ; 2010 ; Systematic Biology Volume 59 ; 59 >
+    au < manifest ; 2011 ; Systematic Biology Volume 60 ; 60 >
+    
+  }
+  
+  {
 
     title <
       name = Social History of Medicine ;
@@ -14439,6 +15103,70 @@
 
   }
 
+  {
+  
+    title <
+      name = Sociology of Religion ;
+      issn = 1069-4404 ;
+      eissn = 1759-8818 ;
+      issnl = 1069-4404
+    >
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://socrel.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+   
+    au < exists ; 1964 ; Sociology of Religion Volume 25 ; 25 >
+    au < exists ; 1965 ; Sociology of Religion Volume 26 ; 26 >
+    au < exists ; 1966 ; Sociology of Religion Volume 27 ; 27 >
+    au < exists ; 1967 ; Sociology of Religion Volume 28 ; 28 >
+    au < exists ; 1968 ; Sociology of Religion Volume 29 ; 29 >
+    au < exists ; 1969 ; Sociology of Religion Volume 30 ; 30 >
+    au < exists ; 1970 ; Sociology of Religion Volume 31 ; 31 >
+    au < exists ; 1971 ; Sociology of Religion Volume 32 ; 32 >
+    au < exists ; 1972 ; Sociology of Religion Volume 33 ; 33 >
+    au < exists ; 1973 ; Sociology of Religion Volume 34 ; 34 >
+    au < exists ; 1974 ; Sociology of Religion Volume 35 ; 35 >
+    au < exists ; 1975 ; Sociology of Religion Volume 36 ; 36 >
+    au < exists ; 1976 ; Sociology of Religion Volume 37 ; 37 >
+    au < exists ; 1977 ; Sociology of Religion Volume 38 ; 38 >
+    au < exists ; 1978 ; Sociology of Religion Volume 39 ; 39 >
+    au < exists ; 1979 ; Sociology of Religion Volume 40 ; 40 >
+    au < exists ; 1980 ; Sociology of Religion Volume 41 ; 41 >
+    au < exists ; 1981 ; Sociology of Religion Volume 42 ; 42 >
+    au < exists ; 1982 ; Sociology of Religion Volume 43 ; 43 >
+    au < exists ; 1983 ; Sociology of Religion Volume 44 ; 44 >
+    au < exists ; 1984 ; Sociology of Religion Volume 45 ; 45 >
+    au < exists ; 1985 ; Sociology of Religion Volume 46 ; 46 >
+    au < exists ; 1986 ; Sociology of Religion Volume 47 ; 47 >
+    au < exists ; 1987 ; Sociology of Religion Volume 48 ; 48 >
+    au < exists ; 1988 ; Sociology of Religion Volume 49 ; 49 >
+    au < exists ; 1989 ; Sociology of Religion Volume 50 ; 50 >
+    au < exists ; 1990 ; Sociology of Religion Volume 51 ; 51 >
+    au < exists ; 1991 ; Sociology of Religion Volume 52 ; 52 >
+    au < exists ; 1992 ; Sociology of Religion Volume 53 ; 53 >
+    au < exists ; 1993 ; Sociology of Religion Volume 54 ; 54 >
+    au < exists ; 1994 ; Sociology of Religion Volume 55 ; 55 >
+    au < exists ; 1995 ; Sociology of Religion Volume 56 ; 56 >
+    au < exists ; 1996 ; Sociology of Religion Volume 57 ; 57 >
+    au < exists ; 1997 ; Sociology of Religion Volume 58 ; 58 >
+    au < exists ; 1998 ; Sociology of Religion Volume 59 ; 59 >
+    au < exists ; 1999 ; Sociology of Religion Volume 60 ; 60 >
+    au < exists ; 2000 ; Sociology of Religion Volume 61 ; 61 >
+    au < exists ; 2001 ; Sociology of Religion Volume 62 ; 62 >
+    au < exists ; 2002 ; Sociology of Religion Volume 63 ; 63 >
+    au < exists ; 2003 ; Sociology of Religion Volume 64 ; 64 >
+    au < exists ; 2004 ; Sociology of Religion Volume 65 ; 65 >
+    au < exists ; 2005 ; Sociology of Religion Volume 66 ; 66 >
+    au < exists ; 2006 ; Sociology of Religion Volume 67 ; 67 >
+    au < exists ; 2007 ; Sociology of Religion Volume 68 ; 68 >
+    au < exists ; 2008 ; Sociology of Religion Volume 69 ; 69 >
+    au < manifest ; 2009 ; Sociology of Religion Volume 70 ; 70 >
+    au < manifest ; 2010 ; Sociology of Religion Volume 71 ; 71 >
+    au < manifest ; 2011 ; Sociology of Religion Volume 72 ; 72 >
+
+  }
+  
   {
 
     title <
@@ -14920,7 +15648,7 @@
     au < HighWirePressH20Plugin ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; Trusts & Trustees Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Trusts & Trustees Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Trusts & Trustees Volume 15 ; 15 >
@@ -14974,9 +15702,9 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Twentieth Century British History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Twentieth Century British History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Twentieth Century British History Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Twentieth Century British History Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Twentieth Century British History Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; Twentieth Century British History Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Twentieth Century British History Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Twentieth Century British History Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Twentieth Century British History Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Twentieth Century British History Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; testing ; 2010 ; Twentieth Century British History Volume 21 ; 21 >
@@ -15033,13 +15761,13 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; The World Bank Economic Review Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The World Bank Economic Review Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; The World Bank Economic Review Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; The World Bank Economic Review Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; The World Bank Economic Review Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; 2006 ; The World Bank Economic Review Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; The World Bank Economic Review Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; The World Bank Economic Review Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; The World Bank Economic Review Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; The World Bank Economic Review Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; The World Bank Economic Review Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; The World Bank Economic Review Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; The World Bank Economic Review Volume 25 ; 25 >
     
     }
 
@@ -15093,7 +15821,7 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; The World Bank Research Observer Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; The World Bank Research Observer Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; 2005 ; The World Bank Research Observer Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; The World Bank Research Observer Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; The World Bank Research Observer Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; The World Bank Research Observer Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; The World Bank Research Observer Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; The World Bank Research Observer Volume 24 ; 24 >
@@ -15145,8 +15873,8 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Year's Work in Critical and Cultural Theory Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The Year's Work in Critical and Cultural Theory Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; The Year's Work in Critical and Cultural Theory Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
