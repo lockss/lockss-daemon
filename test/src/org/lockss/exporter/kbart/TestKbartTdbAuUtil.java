@@ -1,5 +1,6 @@
 package org.lockss.exporter.kbart;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import org.lockss.config.Tdb.TdbException;
 import org.lockss.exporter.kbart.KbartTdbAuUtil.AuInfoType;
 import org.lockss.exporter.kbart.KbartTdbAuUtil.IssueFormat;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.NumberUtil;
 
 public class TestKbartTdbAuUtil extends LockssTestCase {
 
@@ -210,36 +212,40 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
    * Should work with a year or a range of years; returns null if not parsable.
    */
   public void testGetFirstYear() {
-    String noAnswer = "";
-    String noAnswerErr = "Answer should be empty string";
-    
-    // Various valid ranges
-    assertEquals("getFirstYear", KbartTdbAuUtil.getFirstYear("1976-2010"), "1976");
-    assertEquals(KbartTdbAuUtil.getFirstYear("1976 - 2010"), "1976");
-    assertEquals(KbartTdbAuUtil.getFirstYear(" 1976 - 2010"), "1976");
-    assertEquals(KbartTdbAuUtil.getFirstYear("1976"), "1976");
-    assertEquals(KbartTdbAuUtil.getFirstYear("-1976"), noAnswer);
-    // Inappropriate formats
-    assertEquals(noAnswerErr, KbartTdbAuUtil.getFirstYear("last year - this year"), noAnswer);
-    assertEquals(noAnswerErr, KbartTdbAuUtil.getFirstYear("1976 to 2010"), noAnswer);
-    assertEquals(noAnswerErr, KbartTdbAuUtil.getFirstYear("1976--2010"), noAnswer);
+    TdbTitle title;
+    try {
+      title = TdbTestUtil.makeYearTestTitle("2000", "2002-MMV", "2006", "MMVIII-2011");
+    } catch (TdbException e) {
+      fail("Exception encountered making year test title: "+e);
+      return;
+    }
+
+    // Try and find AU info type for each AU
+    for (TdbAu au: title.getTdbAus()) {
+      // Various valid ranges
+      assertEquals(NumberUtil.toArabicNumber(au.getStartYear()), 
+                   ""+KbartTdbAuUtil.getFirstYearAsInt(au));
+    }
   }
 
   /**
    * Should work with a year or a range of years; returns null if not parsable.
    */
   public void testGetLastYear() {
-    // Various valid ranges
-    assertEquals(KbartTdbAuUtil.getLastYear("1976-2010"), "2010");
-    assertEquals(KbartTdbAuUtil.getLastYear("1976 - 2010"), "2010");
-    assertEquals(KbartTdbAuUtil.getLastYear(" 1976 - 2010"), "2010");
-    assertEquals(KbartTdbAuUtil.getLastYear("1976"), "1976");
-    // Inappropriate formats
-    assertEquals(KbartTdbAuUtil.getLastYear("-1976"), "");
-    assertEquals(KbartTdbAuUtil.getLastYear("1976-"), "");
-    assertEquals(KbartTdbAuUtil.getFirstYear("last year - this year"), "");
-    assertEquals(KbartTdbAuUtil.getFirstYear("1976 to 2010"), "");
-    assertEquals(KbartTdbAuUtil.getFirstYear("1976--2010"), "");
+    TdbTitle title;
+    try {
+      title = TdbTestUtil.makeYearTestTitle("2000", "2002-MMV", "2006", "MMVIII-2011");
+    } catch (TdbException e) {
+      fail("Exception encountered making year test title: "+e);
+      return;
+    }
+
+    // Try and find AU info type for each AU
+    for (TdbAu au: title.getTdbAus()) {
+      // Various valid ranges
+      assertEquals(NumberUtil.toArabicNumber(au.getEndYear()), 
+          ""+KbartTdbAuUtil.getLastYearAsInt(au));
+    }
   }
 
   /**
