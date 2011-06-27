@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.12 2011-06-22 23:52:27 pgust Exp $
+ * $Id: KbartConverter.java,v 1.13 2011-06-27 17:26:10 pgust Exp $
  */
 
 /*
@@ -442,7 +442,7 @@ public class KbartConverter {
       for (TdbAu au : aus) {
 	//years.add(NumberUtil.parseInt( type.findAuInfo(au, yearKey) ));
 	//YearRange yrRng = new YearRange( type.findAuInfo(au, yearKey) );
-	YearRange yrRng = new YearRange( au.getYear() );
+	YearRange yrRng = new YearRange( au );
 	// If the range is not valid, give up producing years
 	if (!yrRng.isValid()) return null;
 	years.add(yrRng);
@@ -566,10 +566,10 @@ public class KbartConverter {
      * If the string cannot be parsed according to these criteria, the years are set to zero.
      * @param yearRange a string containing either a single year or a hyphenated year range
      */
-    YearRange(String yearRange) {
+    YearRange(TdbAu au) {
       this(
-	  KbartTdbAuUtil.getFirstYearAsInt(yearRange),
-	  KbartTdbAuUtil.getLastYearAsInt(yearRange)
+	  KbartTdbAuUtil.getFirstYearAsInt(au),
+	  KbartTdbAuUtil.getLastYearAsInt(au)
       );
     }
 
@@ -591,8 +591,8 @@ public class KbartConverter {
      * @param lastYear last year of the range
      */
     YearRange(TdbAu first, TdbAu last) {
-      this.firstYear = KbartTdbAuUtil.getFirstYearAsInt(KbartTdbAuUtil.findYear(first));
-      this.lastYear = KbartTdbAuUtil.getLastYearAsInt(KbartTdbAuUtil.findYear(last));
+      this.firstYear = KbartTdbAuUtil.getFirstYearAsInt(first);
+      this.lastYear = KbartTdbAuUtil.getLastYearAsInt(last);
     }
     
     public boolean isValid() {

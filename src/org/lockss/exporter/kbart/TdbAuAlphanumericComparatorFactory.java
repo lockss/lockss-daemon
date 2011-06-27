@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.1 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.2 2011-06-27 17:25:30 pgust Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TdbAuAlphanumericComparatorFactory {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
-	return KbartTdbAuUtil.getFirstYear( KbartTdbAuUtil.findYear(tdbAu) );
+        return tdbAu.getStartYear();
       }
     };
   }
@@ -93,7 +93,7 @@ public class TdbAuAlphanumericComparatorFactory {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
-	return KbartTdbAuUtil.getLastYear( KbartTdbAuUtil.findYear(tdbAu) );
+	return tdbAu.getEndYear();
       }
     };
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.9 2011-06-22 23:52:27 pgust Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.10 2011-06-27 17:25:30 pgust Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.NumberUtil;
 import org.lockss.util.RegexpUtil;
+import org.lockss.util.StringUtil;
 
 /**
  * Utility methods for extracting KBART data from a <code>Tdb</code> structure.
@@ -160,14 +161,14 @@ public class KbartTdbAuUtil {
    * @return a valid ISSN from the value of an existing key, or the empty String
    */
   static String findIssn(TdbAu au) {
-    String s = findAuInfo(au, DEFAULT_ISSN_PROP, AuInfoType.PROP);
-    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
-    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
-      return s;
-    } else {
+    String s = au.getPrintIssn();
+    if (!StringUtils.isEmpty(s)) {
+      if (MetadataUtil.isISSN(s)) {
+        return s;
+      }
       log.warning(String.format("AU %s yielded an invalid non-empty ISSN: %s", au, s));
-      return "";
     }
+    return "";
   }
 
   /**
@@ -181,16 +182,14 @@ public class KbartTdbAuUtil {
    * @return a valid ISSN from the value of an existing key, or the empty String
    */
   static String findEissn(TdbAu au) {
-    String s = findAuInfo(au, DEFAULT_EISSN_PROP, AuInfoType.PROP);
-    //AuInfoType type = findAuInfoType(au, DEFAULT_EISSN_PROP);
-    //String s = findAuInfo(au, DEFAULT_EISSN_PROP, type);
-    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
-    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
-      return s;
-    } else {
-      log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));      
-      return "";
+    String s = au.getEissn();
+    if (!StringUtils.isEmpty(s)) {
+      if (MetadataUtil.isISSN(s)) {
+        return s;
+      }
+      log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));
     }
+    return "";
   }
   
 
@@ -205,16 +204,14 @@ public class KbartTdbAuUtil {
    * @return a valid ISSN from the value of an existing key, or the empty String
    */
   static String findIssnL(TdbAu au) {
-    String s = findAuInfo(au, DEFAULT_ISSNL_PROP, AuInfoType.PROP);
-    //AuInfoType type = findAuInfoType(au, DEFAULT_EISSN_PROP);
-    //String s = findAuInfo(au, DEFAULT_EISSN_PROP, type);
-    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
-    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
-      return s;
-    } else {
-      log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));      
-      return "";
+    String s = au.getIssnL();
+    if (!StringUtils.isEmpty(s)) {
+      if (MetadataUtil.isISSN(s)) {
+        return s;
+      }
+      log.warning(String.format("AU %s yielded an invalid non-empty ISSNL: %s", au, s));
     }
+    return "";
   }
   
 
@@ -332,58 +329,23 @@ public class KbartTdbAuUtil {
   }
   
   /**
-   * Return the first year in a string. The string is expected to be
-   * in the form of a single year, or a year range separated by a hyphen.
-   *  
-   * @param yStr string representing a year or year range
-   * @return the first year string found, or empty string
-   */
-  static String getFirstYear(String yStr) {
-    if (yStr==null || yStr.equals("")) return "";
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    String y = null;
-    if (matcher.contains(yStr, defaultYearPattern)) {
-      y = matcher.getMatch().group(1);
-    }
-    return y==null ? "" : y; 
-  }
-  
-  /**
-   * Return the last year in a string. The string is expected to be
-   * in the form of a single year, or a year range separated by a hyphen.
-   * 
-   * @param yStr string representing a year or year range
-   * @return the last year string found, or empty string
-   */
-  static String getLastYear(String yStr) {
-    if (yStr==null || yStr.equals("")) return "";
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    String y = null;
-    if (matcher.contains(yStr, defaultYearPattern)) {
-      y = matcher.getMatch().group(2);
-      if (y==null) y = matcher.getMatch().group(1);
-    }
-    return y==null ? "" : y; 
-  }
-
-  /**
    * Parse a string representation of an integer year as a string.
    * @param yr a string representing an integer year
    * @return the year as an int, or 0 if it could not be parsed
    */
   static int stringYearAsInt(String yr) {
-    if (!yr.equals("")) try {
+    if (!StringUtil.isNullString(yr)) try {
       return NumberUtil.parseInt(yr);
-    } catch (NumberFormatException e) { }
+    } catch (NumberFormatException e) {}
     return 0;
   }
   
-  static int getFirstYearAsInt(String yStr) {
-    return stringYearAsInt(getFirstYear(yStr)); 
+  static int getFirstYearAsInt(TdbAu au) {
+    return stringYearAsInt(au.getStartYear()); 
   }
   
-  static int getLastYearAsInt(String yStr) {
-    return stringYearAsInt(getLastYear(yStr)); 
+  static int getLastYearAsInt(TdbAu au) {
+    return stringYearAsInt(au.getEndYear()); 
   }
   
   
