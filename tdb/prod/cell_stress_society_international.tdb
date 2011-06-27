@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1466-1268
   
-      au < superseded ; Cell Stress & Chaperones Volume 5 ; 5 >
-      au < superseded ; Cell Stress & Chaperones Volume 6 ; 6 >
-      au < superseded ; Cell Stress & Chaperones Volume 7 ; 7 >
-      au < superseded ; Cell Stress & Chaperones Volume 8 ; 8 >
-      au < superseded ; Cell Stress & Chaperones Volume 9 ; 009 >
-      au < doNotProcess ; Cell Stress & Chaperones Volume 9 ; 9 >
-      au < superseded ; Cell Stress & Chaperones Volume 10 ; 10 >
-      au < superseded ; Cell Stress & Chaperones Volume 11 ; 11 >
-      au < superseded ; Cell Stress & Chaperones Volume 12 ; 12 >
+      au < superseded ; 2000 ; Cell Stress & Chaperones Volume 5 ; 5 >
+      au < superseded ; 2001 ; Cell Stress & Chaperones Volume 6 ; 6 >
+      au < superseded ; 2002 ; Cell Stress & Chaperones Volume 7 ; 7 >
+      au < superseded ; 2003 ; Cell Stress & Chaperones Volume 8 ; 8 >
+      au < superseded ; 2004 ; Cell Stress & Chaperones Volume 9 ; 009 >
+      au < doNotProcess ; 2004 ; Cell Stress & Chaperones Volume 9 ; 9 >
+      au < superseded ; 2005 ; Cell Stress & Chaperones Volume 10 ; 10 >
+      au < superseded ; 2006 ; Cell Stress & Chaperones Volume 11 ; 11 >
+      au < superseded ; 2007 ; Cell Stress & Chaperones Volume 12 ; 12 >
     }
 
     {

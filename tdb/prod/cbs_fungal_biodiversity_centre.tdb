@@ -15,18 +15,24 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.studiesinmycology.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Studies in Mycology Volume 53 ; 53 >
-      au < exists ; Studies in Mycology Volume 54 ; 54 >
-      au < exists ; Studies in Mycology Volume 55 ; 55 >
-      au < exists ; Studies in Mycology Volume 56 ; 56 >
-      au < exists ; Studies in Mycology Volume 57 ; 57 >
-      au < exists ; Studies in Mycology Volume 58 ; 58 >
-      au < exists ; Studies in Mycology Volume 59 ; 59 >
-      au < exists ; Studies in Mycology Volume 60 ; 60 >
-      au < exists ; Studies in Mycology Volume 61 ; 61 >
-      au < exists ; Studies in Mycology Volume 62 ; 62 >
+      au < exists ; 2005 ; Studies in Mycology Volume 53 ; 53 >
+      au < exists ; 2006 ; Studies in Mycology Volume 54 ; 54 >
+      au < exists ; 2006 ; Studies in Mycology Volume 55 ; 55 >
+      au < exists ; 2006 ; Studies in Mycology Volume 56 ; 56 >
+      au < exists ; 2007 ; Studies in Mycology Volume 57 ; 57 >
+      au < exists ; 2007 ; Studies in Mycology Volume 58 ; 58 >
+      au < exists ; 2007 ; Studies in Mycology Volume 59 ; 59 >
+      au < exists ; 2008 ; Studies in Mycology Volume 60 ; 60 >
+      au < exists ; 2008 ; Studies in Mycology Volume 61 ; 61 >
+      au < exists ; 2008 ; Studies in Mycology Volume 62 ; 62 >
+      au < exists ; 2009 ; Studies in Mycology Volume 63 ; 63 >
+      au < exists ; 2009 ; Studies in Mycology Volume 64 ; 64 >
+      au < exists ; 2010 ; Studies in Mycology Volume 65 ; 65 >
+      au < exists ; 2010 ; Studies in Mycology Volume 66 ; 66 >
+      au < exists ; 2010 ; Studies in Mycology Volume 67 ; 67 >
+      au < exists ; 2011 ; Studies in Mycology Volume 68 ; 68 >
 
     }
 
