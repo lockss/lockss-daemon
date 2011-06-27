@@ -1,5 +1,5 @@
 /*
- * $Id: AMAVirtualMentorArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:15 thib_gc Exp $
+ * $Id: AMAVirtualMentorArticleIteratorFactory.java,v 1.3 2011-06-27 23:13:37 pgust Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.Iterator;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -121,5 +123,11 @@ public class AMAVirtualMentorArticleIteratorFactory implements ArticleIteratorFa
 //    }
     
   }
-  
+
+  public ArticleMetadataExtractor
+  createArticleMetadataExtractor(MetadataTarget target)
+    throws PluginException {
+  return new BaseArticleMetadataExtractor(null);
+}
+
 }
