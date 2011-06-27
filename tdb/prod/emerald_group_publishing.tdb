@@ -66,11 +66,11 @@
   {
     title <
       name = Advances in Dual Diagnosis ;
-      issn = 1575-0972 ;
-      issnl = 1575-0972
+      issn = 1757-0972 ;
+      issnl = 1757-0972
     >
 
-    param[journal_issn] = 1575-0972
+    param[journal_issn] = 1757-0972
 
     au < exists ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
     au < exists ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
@@ -892,7 +892,7 @@
       issnl = 1463-6646
     >
 
-    param[journal_issn] = 1466-4100
+    param[journal_issn] = 1463-6646
     
     au < exists ; 1999 ; The British Journal of Forensic Practice Volume 1 ; 1 >
     au < exists ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 >
@@ -2277,6 +2277,8 @@
     issnl = 1460-8790 
     >
 
+    param[journal_issn] = 1460-8790
+
     au < exists ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 >
     au < exists ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 >
     au < exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 >
@@ -2290,7 +2292,6 @@
     au < exists ; 2008 ; Housing, Care and Support: A journal on policy, research and practice Volume 11 ; 11 >    
     au < exists ; 2009 ; Housing, Care and Support: A journal on policy, research and practice Volume 12 ; 12 >
     au < exists ; 2010 ; Housing, Care and Support: A journal on policy, research and practice Volume 13 ; 13 >
-
     
   }
 
@@ -3396,7 +3397,8 @@
   { 
     title <
       name = The International Journal of Leadership in Public Services ;
-      issn = 1747-9886
+      issn = 1747-9886 ; 
+      issnl = 1747-9886
     >
 
     param[journal_issn] = 1747-9886
@@ -3414,7 +3416,8 @@
   { 
     title <
       name = International Journal of Lean Six Sigma ;
-      issn = 2040-4166
+      issn = 2040-4166 ;
+      issnl = 2040-4166
     >
 
     param[journal_issn] = 2040-4166
@@ -8106,8 +8109,8 @@
     au < exists ; 2009 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 10 ; 10 >
     au < exists ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 >
     au < exists ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 12 ; 12 >
-    au < doesNotexist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 13 ; 13 >
-    au < doesNotexist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 14 ; 14 >                
+    au < doesNotExist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 13 ; 13 >
+    au < doesNotExist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 14 ; 14 >                
     au < exists ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 15 ; 15 >    
 
   }
