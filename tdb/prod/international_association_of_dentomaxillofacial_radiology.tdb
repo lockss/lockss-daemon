@@ -1,6 +1,3 @@
-
-
-
 {
 
   publisher <
@@ -8,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
     
   {
 
@@ -21,29 +18,29 @@
 
     param[base_url] = http://dmfr.birjournals.org/
    
-    au < exists ; Dentomaxillofacial Radiology Volume 18 ; 18 >
-    au < exists ; Dentomaxillofacial Radiology Volume 19 ; 19 >
-    au < exists ; Dentomaxillofacial Radiology Volume 20 ; 20 >
-    au < exists ; Dentomaxillofacial Radiology Volume 21 ; 21 >
-    au < exists ; Dentomaxillofacial Radiology Volume 22 ; 22 >
-    au < exists ; Dentomaxillofacial Radiology Volume 23 ; 23 >
-    au < exists ; Dentomaxillofacial Radiology Volume 24 ; 24 >
-    au < exists ; Dentomaxillofacial Radiology Volume 25 ; 25 >
-    au < exists ; Dentomaxillofacial Radiology Volume 26 ; 26 >
-    au < exists ; Dentomaxillofacial Radiology Volume 27 ; 27 >
-    au < exists ; Dentomaxillofacial Radiology Volume 28 ; 28 >
-    au < exists ; Dentomaxillofacial Radiology Volume 29 ; 29 >
-    au < exists ; Dentomaxillofacial Radiology Volume 30 ; 30 >
-    au < exists ; Dentomaxillofacial Radiology Volume 31 ; 31 >
-    au < exists ; Dentomaxillofacial Radiology Volume 32 ; 32 >
-    au < exists ; Dentomaxillofacial Radiology Volume 33 ; 33 >
-    au < exists ; Dentomaxillofacial Radiology Volume 34 ; 34 >
-    au < exists ; Dentomaxillofacial Radiology Volume 35 ; 35 >
-    au < exists ; Dentomaxillofacial Radiology Volume 36 ; 36 >
-    au < exists ; Dentomaxillofacial Radiology Volume 37 ; 37 >
-    au < exists ; Dentomaxillofacial Radiology Volume 38 ; 38 >
-    au < exists ; Dentomaxillofacial Radiology Volume 39 ; 39 >
-    au < exists ; Dentomaxillofacial Radiology Volume 40 ; 40 >
+    au < exists ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 18 >
+    au < exists ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 19 >
+    au < exists ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 20 >
+    au < exists ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 21 >
+    au < exists ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 22 >
+    au < exists ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 23 >
+    au < exists ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 24 >
+    au < exists ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 25 >
+    au < exists ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 26 >
+    au < exists ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 27 >
+    au < exists ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 28 >
+    au < exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 >
+    au < exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 >
+    au < exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 >
+    au < exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
+    au < exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
+    au < exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
+    au < exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+    au < exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
+    au < exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
+    au < exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
+    au < exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 >
+    au < exists ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 >
     
   }
     
