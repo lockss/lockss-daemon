@@ -36,6 +36,23 @@
     <string>&quot;%s%s/toc/vol_%s/lockss.html&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s%s/toc/index.html&quot;, base_url, journal_id</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+      <string>1,&quot;^%s%s/toc/vol_%s/&quot;, base_url, journal_id, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%s%s/toc/vol_%s/issue_%s&quot;, base_url, journal_id, volume_name, issue</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>

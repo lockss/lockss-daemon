@@ -37,6 +37,19 @@
     <string>&quot;%s%s/free/%d/lockss.html&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s%s/index.html&quot;, base_url, journal_id, year</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%s%s/free/%d/index.html&quot;, base_url, journal_id, year</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
