@@ -13,18 +13,18 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0010-065X
   
-      au < doNotProcess ; The Coleopterists Bulletin Volume 54 ; 54 >
-      au < doNotProcess ; The Coleopterists Bulletin Volume 55 ; 55 >
-      au < doNotProcess ; The Coleopterists Bulletin Volume 56 ; 56 >
-      au < doNotProcess ; The Coleopterists Bulletin Volume 57 ; 57 >
-      au < superseded ; The Coleopterists Bulletin Volume 58 ; 058 >
-      au < doNotProcess ; The Coleopterists Bulletin Volume 59 ; 59 >
-      au < doNotProcess ; The Coleopterists Bulletin Volume 60 ; 60 >
+      au < doNotProcess ; 2000 ; The Coleopterists Bulletin Volume 54 ; 54 >
+      au < doNotProcess ; 2001 ; The Coleopterists Bulletin Volume 55 ; 55 >
+      au < doNotProcess ; 2002 ; The Coleopterists Bulletin Volume 56 ; 56 >
+      au < doNotProcess ; 2003 ; The Coleopterists Bulletin Volume 57 ; 57 >
+      au < superseded ; 2004 ; The Coleopterists Bulletin Volume 58 ; 058 >
+      au < doNotProcess ; 2005 ; The Coleopterists Bulletin Volume 59 ; 59 >
+      au < doNotProcess ; 2006 ; The Coleopterists Bulletin Volume 60 ; 60 >
     }
 
     {
