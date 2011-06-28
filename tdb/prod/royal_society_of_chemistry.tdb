@@ -120,9 +120,7 @@
 
     title <
       name = Chemical Communications ;
-      issn = 1359-7345 ;
-      eissn = 1364-548X ;
-      issnl = 1359-7345
+      issn = 0009-241X  
     >
 
     param[journal_code] = cc
@@ -202,7 +200,7 @@
 
     title <
       name = CrystEngComm ;
-      issn = 1466-8033 ;
+      eissn = 1466-8033 ;
       issnl = 1466-8033
     >
 
@@ -376,6 +374,7 @@
     title <
       name = Journal of Chemical Research, Synopses ;
       issn = 0308-2342 ;
+      eissn = 1364-5560 ;
       issnl = 0308-2342
     >
 
@@ -406,9 +405,9 @@
 
     title <
       name = Journal of the Chemical Society, Perkin Transactions 1 ;
-      issn = 0300-922X ;
-      eissn = 1364-5463 ;
-      issnl = 0300-922X
+      issn = 1472-7781 ;
+      eissn = 1472-7781 ;
+      issnl = 1472-7781
     >
 
     param[journal_code] = p1
@@ -426,9 +425,9 @@
 
     title <
       name = Journal of the Chemical Society, Perkin Transactions 2 ;
-      issn = 0300-9580 ;
+      issn = 1472-779X ;
       eissn = 1364-5471 ;
-      issnl = 0300-9580
+      issnl = 1364-5471
     >
 
     param[journal_code] = p2
@@ -472,7 +471,6 @@
     title <
       name = Journal of Materials Chemistry ;
       issn = 0959-9428 ;
-      eissn = 1364-5501 ;
       issnl = 0959-9428
     >
 
@@ -555,7 +553,9 @@
   
     title <
       name = Nanoscale ;
-      issn = 2040-3364
+      issn = 2040-3364 ;
+      eissn = 2040-3372 ;
+      issnl = 2040-3364
     >
     
     param[journal_code] = nr
