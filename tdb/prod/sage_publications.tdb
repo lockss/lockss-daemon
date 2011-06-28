@@ -7,7 +7,6 @@
   {
   
     pluginPrefix = org.lockss.plugin.highwire.
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
       
     {
 
@@ -21,23 +20,27 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ach.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2000 ; Accounting History Volume 5 ; 5 >
-
+        
       }
 
       {
 
         param[base_url] = http://ach.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Accounting History Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Accounting History Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Accounting History Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; 2008 ; Accounting History Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; 2009 ; Accounting History Volume 14 ; 14 >
+        
       }
       
       {
@@ -79,6 +82,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://asj.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -89,7 +93,10 @@
       {
 
         param[base_url] = http://asj.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Acta Sociologica Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Acta Sociologica Volume 50 ; 50 >
@@ -176,6 +183,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://arj.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -186,7 +194,10 @@
       {
 
         param[base_url] = http://arj.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+
 
         au < HighWireStrVolPlugin ; down ; 2004 ; Action Research Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; 2003 ; Action Research Volume 5 ; 5 >
@@ -227,6 +238,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://alh.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -237,7 +249,10 @@
       {
 
         param[base_url] = http://alh.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 >
@@ -281,6 +296,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://adb.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -291,7 +307,9 @@
       {
 
         param[base_url] = http://adb.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Adaptive Behavior Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Adaptive Behavior Volume 15 ; 15 >
@@ -342,6 +360,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://aas.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -352,7 +371,9 @@
       {
 
         param[base_url] = http://aas.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Administration & Society Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Administration & Society Volume 39 ; 39 >
@@ -427,7 +448,9 @@
       {
 
         param[base_url] = http://adr.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWirePressPlugin ; down ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
 
@@ -479,6 +502,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://aeq.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -489,7 +513,9 @@
       {
 
         param[base_url] = http://aeq.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2004 ; Adult Education Quarterly Volume 55 ; 55 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Adult Education Quarterly Volume 57 ; 57 >
@@ -582,6 +608,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://adh.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -592,7 +619,9 @@
       {
 
         param[base_url] = http://adh.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Advances in Developing Human Resources Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Advances in Developing Human Resources Volume 9 ; 9 >
@@ -636,6 +665,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://aff.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -646,7 +676,9 @@
       {
 
         param[base_url] = http://aff.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; Affilia Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Affilia Volume 22 ; 22 >
@@ -728,7 +760,9 @@
       {
 
         param[base_url] = http://abs.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2004 ; American Behavioral Scientist Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; down ; 2005 ; American Behavioral Scientist Volume 49 ; 49 >
@@ -817,7 +851,9 @@
       {
 
         param[base_url] = http://aer.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2007 ; American Educational Research Journal Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; 2008 ; American Educational Research Journal Volume 45 ; 45 >
@@ -896,7 +932,9 @@
       {
 
         param[base_url] = http://aja.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 >
@@ -955,6 +993,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://aje.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -965,7 +1004,9 @@
       {
 
         param[base_url] = http://aje.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Evaluation Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Evaluation Volume 28 ; 28 >
@@ -1029,7 +1070,9 @@
       {
 
         param[base_url] = http://ajh.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
@@ -1090,7 +1133,9 @@
       {
 
         param[base_url] = http://ajl.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Lifestyle Medicine Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 >
@@ -1126,6 +1171,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ajm.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -1136,7 +1182,9 @@
       {
 
         param[base_url] = http://ajm.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWirePressPlugin ; down ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 >
@@ -1192,7 +1240,9 @@
       {
 
         param[base_url] = http://jmh.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Men's Health Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; 2008 ; American Journal of Men's Health Volume 2 ; 2 >
@@ -1228,6 +1278,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
@@ -1238,7 +1289,9 @@
       {
 
         param[base_url] = http://ajs.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
 
         au < HighWireStrVolPlugin ; down ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 >
 
@@ -1274,6 +1327,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://apr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -1562,6 +1616,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ann.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -2309,6 +2364,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://apm.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -2859,6 +2915,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://bmo.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -3044,6 +3101,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://brn.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -3100,6 +3158,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://bod.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -3424,6 +3483,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://bst.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -3517,6 +3577,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://bas.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -4074,6 +4135,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cin.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -4473,6 +4535,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ccp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -4531,6 +4594,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cnr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5104,6 +5168,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cbr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5190,6 +5255,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://chp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5248,6 +5314,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cer.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5364,6 +5431,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cis.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5451,6 +5519,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://con.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5589,6 +5658,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cqx.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -5683,6 +5753,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://tcp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6009,6 +6080,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cjp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6209,6 +6281,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://coa.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6282,6 +6355,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ccr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6555,6 +6629,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cap.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6706,6 +6781,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cbi.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -6800,6 +6876,7 @@
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://tde.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -7329,6 +7406,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eus.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -7452,6 +7530,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eaq.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -7709,6 +7788,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ema.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -7919,6 +7999,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ebd.sagepub.com/
         implicit < status ; name ; param[volume] >
      
@@ -7942,6 +8023,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eab.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8027,6 +8109,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eau.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8129,6 +8212,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://etn.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8227,6 +8311,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ehq.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8310,6 +8395,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eja.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8548,6 +8634,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ejd.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8607,6 +8694,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ejt.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8666,6 +8754,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ept.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8765,6 +8854,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ejw.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8871,6 +8961,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eup.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -8925,6 +9016,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eur.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9035,6 +9127,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ehp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9111,6 +9204,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://erx.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9189,6 +9283,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 comment[exm] = now published by Springer
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://exm.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9210,6 +9305,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ext.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9452,6 +9548,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://fap.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9706,6 +9803,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://fla.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9917,6 +10015,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://frc.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -9981,6 +10080,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://gac.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10471,6 +10571,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://gom.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10626,6 +10727,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://gpi.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10682,6 +10784,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hij.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10740,6 +10843,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://heb.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10922,6 +11026,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhi.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -10981,6 +11086,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hpp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11035,6 +11141,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hea.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11148,6 +11255,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hjb.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11253,6 +11361,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hpy.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11317,6 +11426,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hhs.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11492,6 +11602,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hsx.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11612,6 +11723,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hum.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11718,6 +11830,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hrd.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11770,6 +11883,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ifl.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11849,6 +11963,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://imp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11904,6 +12019,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ier.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -11994,6 +12110,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ijg.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12054,6 +12171,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ibe.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12138,6 +12256,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://idv.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12235,6 +12354,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ict.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12287,6 +12407,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://gaz.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12402,6 +12523,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://icj.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12465,6 +12587,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbd.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12545,6 +12668,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://cos.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12639,6 +12763,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ccm.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12692,6 +12817,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ics.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12748,6 +12874,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ijd.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -12839,6 +12966,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://hpc.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -13024,6 +13152,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ijo.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -13114,6 +13243,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ijr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -13464,6 +13594,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://irx.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -13678,6 +13809,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ras.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14147,6 +14279,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jnt.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14221,6 +14354,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jot.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14369,6 +14503,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jar.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14437,6 +14572,7 @@ comment[exm] = now published by Springer
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jah.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14503,6 +14639,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ast.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14524,6 +14661,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jab.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14611,6 +14749,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jag.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14681,6 +14820,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jas.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14871,6 +15011,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -14998,6 +15139,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbx.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15056,6 +15198,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15135,6 +15278,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbs.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15286,6 +15430,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jbt.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15473,6 +15618,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://job.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15612,6 +15758,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jca.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15673,6 +15820,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcd.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -15876,6 +16024,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://chc.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16144,6 +16293,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcl.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16230,6 +16380,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jci.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16306,6 +16457,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcm.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16393,6 +16545,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcr.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16534,6 +16687,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ccj.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16676,6 +16830,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jch.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -16875,6 +17030,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jcc.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17114,6 +17270,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jea.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17658,6 +17815,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://eng.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17739,6 +17897,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://joe.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17801,6 +17960,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jed.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17863,6 +18023,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://esp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -17926,6 +18087,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jes.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18032,6 +18194,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jfh.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18175,6 +18338,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jfn.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18376,6 +18540,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jgp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18593,6 +18758,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhh.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18724,6 +18890,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhn.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18795,6 +18962,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jht.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18872,6 +19040,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhl.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18941,6 +19110,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhv.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -18999,6 +19169,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jhp.sagepub.com/
         implicit < status ; name ; param[volume] >
 
@@ -20823,6 +20994,7 @@ comment[mpj] = now published by Brill
       {
 
         pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://jpa.sagepub.com/
         implicit < status ; name ; param[volume] >
 
