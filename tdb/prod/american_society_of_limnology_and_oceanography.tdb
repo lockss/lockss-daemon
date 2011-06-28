@@ -69,6 +69,10 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     au < ready ; 2005 ; Limnology and Oceanography Volume 50 ; 50 >
     au < ready ; 2006 ; Limnology and Oceanography Volume 51 ; 51 >
     au < ready ; 2007 ; Limnology and Oceanography Volume 52 ; 52 >
+    au < exists ; 2008 ; Limnology and Oceanography Volume 53 ; 53 >
+    au < exists ; 2009 ; Limnology and Oceanography Volume 54 ; 54 >
+    au < exists ; 2010 ; Limnology and Oceanography Volume 55 ; 55 >
+    au < exists ; 2011 ; Limnology and Oceanography Volume 56 ; 56 >
 
   }
   
@@ -90,12 +94,17 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyMethodsPlugin
     param[journal_id] = lomethods
-    implicit < status ; name ; param[year] >
+    implicit < status ; name ; attr[volume] ; param[year] >
     
-    au < ready ; Limnology and Oceanography: Methods Volume 1 ; 2003 >   
-    au < ready ; Limnology and Oceanography: Methods Volume 2 ; 2004 >   
-    au < ready ; Limnology and Oceanography: Methods Volume 3 ; 2005 >   
-    au < ready ; Limnology and Oceanography: Methods Volume 4 ; 2006 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 3 ; 3 ; 2005 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 4 ; 4 ; 2006 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 5 ; 5 ; 2007 >   
+    au < exists ; Limnology and Oceanography: Methods Volume 6 ; 6 ; 2008 >   
+    au < exists ; Limnology and Oceanography: Methods Volume 4 ; 7 ; 2009 >   
+    au < exists ; Limnology and Oceanography: Methods Volume 4 ; 8 ; 2010 >   
+    au < exists ; Limnology and Oceanography: Methods Volume 4 ; 9 ; 2011 >   
         
   }
   
