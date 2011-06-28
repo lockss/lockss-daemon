@@ -25,6 +25,19 @@
     <string>&quot;%slockss-%d.html&quot;, base_url, volume</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+    	<string>au_volume</string>
+	    <string>&quot;%slockss-%d.html&quot;, base_url, volume</string>
+  	  </entry>
+  	  <entry>
+    	<string>au_title</string>
+    	<string>&quot;%s&quot;, base_url</string>
+  	  </entry> 
+	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
