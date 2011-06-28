@@ -231,22 +231,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://alh.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Active Learning in Higher Education Volume 6 ; 6 >
+        au < down ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
 
       }
 
       {
 
         param[base_url] = http://alh.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Active Learning in Higher Education Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; Active Learning in Higher Education Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; Active Learning in Higher Education Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; Active Learning in Higher Education Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; 2005 ; doNotProcess ; Active Learning in Higher Education Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; 2006 ; down ; Active Learning in Higher Education Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; 2007 ; down ; Active Learning in Higher Education Volume 8 ; 8 >
+        au < HighWirePressPlugin ; 2008 ; down ; Active Learning in Higher Education Volume 9 ; 9 >
+        au < HighWirePressPlugin ; 2009 ; down ; Active Learning in Higher Education Volume 10 ; 10 >
 
       }
 
@@ -286,22 +286,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://adb.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Adaptive Behavior Volume 13 ; 13 >
+        au < down ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
 
       }
 
       {
 
         param[base_url] = http://adb.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Adaptive Behavior Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; Adaptive Behavior Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; Adaptive Behavior Volume 15 ; 15 >
-        au < HighWirePressPlugin ; down ; Adaptive Behavior Volume 16 ; 16 >
-        au < HighWirePressPlugin ; down ; Adaptive Behavior Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; 2005 ; doNotProcess ; Adaptive Behavior Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; 2006 ; down ; Adaptive Behavior Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; 2007 ; down ; Adaptive Behavior Volume 15 ; 15 >
+        au < HighWirePressPlugin ; 2008 ; down ; Adaptive Behavior Volume 16 ; 16 >
+        au < HighWirePressPlugin ; 2009 ; down ; Adaptive Behavior Volume 17 ; 17 >
 
       }
 
@@ -348,22 +348,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://aas.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Administration & Society Volume 37 ; 37 >
+        au < down ; 2005 ; Administration & Society Volume 37 ; 37 >
 
       }
 
       {
 
         param[base_url] = http://aas.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Administration & Society Volume 37 ; 37 >
-        au < HighWireStrVolPlugin ; down ; Administration & Society Volume 38 ; 38 >
-        au < HighWireStrVolPlugin ; down ; Administration & Society Volume 39 ; 39 >
-        au < HighWirePressPlugin ; down ; Administration & Society Volume 40 ; 40 >
-        au < HighWirePressPlugin ; down ; Administration & Society Volume 41 ; 41 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Administration & Society Volume 37 ; 37 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Administration & Society Volume 38 ; 38 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Administration & Society Volume 39 ; 39 >
+        au < HighWirePressPlugin ; down ; 2008 ; Administration & Society Volume 40 ; 40 >
+        au < HighWirePressPlugin ; down ; 2009 ; Administration & Society Volume 41 ; 41 >
 
       }
 
@@ -433,9 +433,9 @@
       {
 
         param[base_url] = http://adr.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; down ; Advances in Dental Research Volume 21 ; 21 >
+        au < HighWirePressPlugin ; down ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
 
       }
 
@@ -486,22 +486,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://aeq.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Adult Education Quarterly Volume 56 ; 56 >
+        au < down ; 2005 ; Adult Education Quarterly Volume 56 ; 56 >
 
       }
 
       {
 
         param[base_url] = http://aeq.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; Adult Education Quarterly Volume 55 ; 55 >
-        au < HighWireStrVolPlugin ; doNotProcess ; Adult Education Quarterly Volume 56 ; 56 >
-        au < HighWireStrVolPlugin ; down ; Adult Education Quarterly Volume 57 ; 57 >
-        au < HighWireStrVolPlugin ; down ; Adult Education Quarterly Volume 58 ; 58 >
-        au < HighWirePressPlugin ; down ; Adult Education Quarterly Volume 59 ; 59 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Adult Education Quarterly Volume 55 ; 55 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Adult Education Quarterly Volume 56 ; 56 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Adult Education Quarterly Volume 57 ; 57 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Adult Education Quarterly Volume 58 ; 58 >
+        au < HighWirePressPlugin ; down ; 2008 ; Adult Education Quarterly Volume 59 ; 59 >
 
       }
 
@@ -590,22 +590,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://adh.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Advances in Developing Human Resources Volume 7 ; 7 >
+        au < down ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 >
 
       }
 
       {
 
         param[base_url] = http://adh.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Advances in Developing Human Resources Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; Advances in Developing Human Resources Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; down ; Advances in Developing Human Resources Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; Advances in Developing Human Resources Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; Advances in Developing Human Resources Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Advances in Developing Human Resources Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Advances in Developing Human Resources Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 >
 
       }
 
@@ -645,22 +645,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://aff.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; Affilia Volume 20 ; 20 >
+        au < down ; 2005 ; Affilia Volume 20 ; 20 >
 
       }
 
       {
 
         param[base_url] = http://aff.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; Affilia Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; Affilia Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; Affilia Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; Affilia Volume 23 ; 23 >
-        au < HighWirePressPlugin ; down ; Affilia Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Affilia Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Affilia Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Affilia Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2008 ; Affilia Volume 23 ; 23 >
+        au < HighWirePressPlugin ; down ; 2009 ; Affilia Volume 24 ; 24 >
 
       }
 
@@ -737,14 +737,14 @@
       {
 
         param[base_url] = http://abs.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; American Behavioral Scientist Volume 48 ; 48 >
-        au < HighWireStrVolPlugin ; down ; American Behavioral Scientist Volume 49 ; 49 >
-        au < HighWireStrVolPlugin ; down ; American Behavioral Scientist Volume 50 ; 50 >
-        au < HighWireStrVolPlugin ; down ; American Behavioral Scientist Volume 51 ; 51 >
-        au < HighWirePressPlugin ; down ; American Behavioral Scientist Volume 52 ; 52 >
-        au < HighWirePressPlugin ; down ; American Behavioral Scientist Volume 53 ; 53 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; American Behavioral Scientist Volume 48 ; 48 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; American Behavioral Scientist Volume 49 ; 49 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; American Behavioral Scientist Volume 50 ; 50 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Behavioral Scientist Volume 51 ; 51 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Behavioral Scientist Volume 52 ; 52 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Behavioral Scientist Volume 53 ; 53 >
 
       }
 
@@ -826,11 +826,11 @@
       {
 
         param[base_url] = http://aer.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; American Educational Research Journal Volume 44 ; 44 >
-        au < HighWirePressPlugin ; down ; American Educational Research Journal Volume 45 ; 45 >
-        au < HighWirePressPlugin ; down ; American Educational Research Journal Volume 46 ; 46 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Educational Research Journal Volume 44 ; 44 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Educational Research Journal Volume 45 ; 45 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Educational Research Journal Volume 46 ; 46 >
 
       }
 
@@ -905,13 +905,13 @@
       {
 
         param[base_url] = http://aja.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
-        au < HighWirePressPlugin ; down ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 >
 
       }
 
@@ -965,22 +965,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://aje.sagepub.com/
-        implicit < status ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] >
 
-        au < down ; American Journal of Evaluation Volume 26 ; 26 >
+        au < down ; 2005 ; American Journal of Evaluation Volume 26 ; 26 >
 
       }
 
       {
 
         param[base_url] = http://aje.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Evaluation Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Evaluation Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Evaluation Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 29 ; 29 >
-        au < HighWirePressPlugin ; down ; American Journal of Evaluation Volume 30 ; 30 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; American Journal of Evaluation Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Evaluation Volume 27 ; 27 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Evaluation Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Journal of Evaluation Volume 29 ; 29 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Journal of Evaluation Volume 30 ; 30 >
 
       }
 
@@ -1039,13 +1039,13 @@
       {
 
         param[base_url] = http://ajh.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
-        au < HighWirePressPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
-        au < HighWirePressPlugin ; down ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 >
 
       }
 
