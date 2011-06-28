@@ -1980,7 +1980,7 @@
   {
 
     title <
-      name = Journal of Care Services Management - from 2006 ;
+      name = Journal of Care Services Management ;
       issn = 1750-1679 ;
       eissn = 1750-1687
     >
@@ -2006,7 +2006,7 @@
   {
 
     title <
-      name = Journal of Communication in Healthcare - from 2008 ;
+      name = Journal of Communication in Healthcare ;
       issn = 1753-8068 ;
       eissn = 1753-8076
     >
@@ -2046,12 +2046,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
-    au < exists ; 2005 ; Journal of Conflict Archaeology  Volume 1 ; 1 > 
-    au < exists ; 2006 ; Journal of Conflict Archaeology  Volume 2 ; 2 > 
-    au < exists ; 2007 ; Journal of Conflict Archaeology  Volume 3 ; 3 > 
-    au < exists ; 2008 ; Journal of Conflict Archaeology  Volume 4 ; 4 > 
-    au < exists ; 2009 ; Journal of Conflict Archaeology  Volume 5 ; 5 > 
-    au < exists ; 2011 ; Journal of Conflict Archaeology  Volume 6 ; 6 > 
+    au < exists ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
+    au < exists ; 2006 ; Journal of Conflict Archaeology Volume 2 ; 2 > 
+    au < exists ; 2007 ; Journal of Conflict Archaeology Volume 3 ; 3 > 
+    au < exists ; 2008 ; Journal of Conflict Archaeology Volume 4 ; 4 > 
+    au < exists ; 2009 ; Journal of Conflict Archaeology Volume 5 ; 5 > 
+    au < exists ; 2011 ; Journal of Conflict Archaeology Volume 6 ; 6 > 
 
   }
 
@@ -2170,7 +2170,7 @@
   {
 
     title <
-      name = Journal of Management & Marketing in Healthcare - from 2007 ;
+      name = Journal of Management & Marketing in Healthcare ;
       issn = 1753-3031 ;
       eissn = 1753-304X
     >
@@ -2185,10 +2185,10 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
-    au < exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 1 ; 1 > 
-    au < exists ; 2009 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 2 ; 2 > 
-    au < exists ; 2010 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 3 ; 3 > 
-    au < exists ; 2011 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 4 ; 4 > 
+    au < exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
+    au < exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
+    au < exists ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 > 
+    au < exists ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 > 
 
   }
 
