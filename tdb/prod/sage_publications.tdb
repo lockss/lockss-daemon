@@ -242,11 +242,11 @@
         param[base_url] = http://alh.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; 2005 ; doNotProcess ; Active Learning in Higher Education Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; 2006 ; down ; Active Learning in Higher Education Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; 2007 ; down ; Active Learning in Higher Education Volume 8 ; 8 >
-        au < HighWirePressPlugin ; 2008 ; down ; Active Learning in Higher Education Volume 9 ; 9 >
-        au < HighWirePressPlugin ; 2009 ; down ; Active Learning in Higher Education Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 >
 
       }
 
@@ -297,11 +297,11 @@
         param[base_url] = http://adb.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; 2005 ; doNotProcess ; Adaptive Behavior Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; 2006 ; down ; Adaptive Behavior Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; 2007 ; down ; Adaptive Behavior Volume 15 ; 15 >
-        au < HighWirePressPlugin ; 2008 ; down ; Adaptive Behavior Volume 16 ; 16 >
-        au < HighWirePressPlugin ; 2009 ; down ; Adaptive Behavior Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; doNotProcess ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Adaptive Behavior Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Adaptive Behavior Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2008 ; Adaptive Behavior Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2009 ; Adaptive Behavior Volume 17 ; 17 >
 
       }
 
@@ -15360,9 +15360,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Journal of Building Physics Volume 31 ; 31 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Building Physics Volume 32 ; 32 >
         au < HighWirePressPlugin ; down ; Journal of Building Physics Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Building Physics Volume 34 ; 34 >
 
       }
 
@@ -15440,7 +15438,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Business and Technical Communication Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; Journal of Business and Technical Communication Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Journal of Business and Technical Communication Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Business and Technical Communication Volume 24 ; 24 >
 
       }
 
@@ -15496,7 +15493,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 87 ; 87 >
         au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 88 ; 88 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Dental Research Volume 89 ; 89 >
 
       }
       
@@ -15630,7 +15626,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Business Communication Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; Journal of Business Communication Volume 45 ; 45 >
         au < HighWirePressPlugin ; down ; Journal of Business Communication Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Business Communication Volume 47 ; 47 >
 
       }
 
@@ -15712,7 +15707,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 >
 
       }
 
@@ -15772,7 +15766,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Career Assessment Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Journal of Career Assessment Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Journal of Career Assessment Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Career Assessment Volume 18 ; 18 >
 
       }
 
@@ -15834,7 +15827,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Career Development Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; down ; Journal of Career Development Volume 34 ; 34 >
         au < HighWirePressPlugin ; down ; Journal of Career Development Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Career Development Volume 36 ; 36 >
 
       }
 
@@ -15904,7 +15896,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Cases in Educational Leadership Volume 9 ; 9 >
         au < HighWireStrVolPlugin ; down ; Journal of Cases in Educational Leadership Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Journal of Cases in Educational Leadership Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Cases in Educational Leadership Volume 12 ; 12 >
 
       }
 
@@ -15951,7 +15942,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Cellular Plastics Volume 43 ; 43 >
         au < HighWirePressPlugin ; down ; Journal of Cellular Plastics Volume 44 ; 44 >
         au < HighWirePressPlugin ; down ; Journal of Cellular Plastics Volume 45 ; 45 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Cellular Plastics Volume 46 ; 46 >
 
       }
 
@@ -16043,7 +16033,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Child Health Care Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Journal of Child Health Care Volume 12 ; 12 >
         au < HighWirePressPlugin ; down ; Journal of Child Health Care Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Child Health Care Volume 14 ; 14 >
 
       }
 
@@ -16091,7 +16080,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Child Neurology Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; Journal of Child Neurology Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Journal of Child Neurology Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Child Neurology Volume 25 ; 25 >
 
       }
 
@@ -16151,7 +16139,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Classical Sociology Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Journal of Classical Sociology Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of Classical Sociology Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Classical Sociology Volume 10 ; 10 >
 
       }
 
@@ -16198,7 +16185,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
         au < HighWirePressPlugin ; down ; The Journal of Clinical Pharmacology Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; down ; The Journal of Clinical Pharmacology Volume 49 ; 49 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Clinical Pharmacology Volume 50 ; 50 >
 
       }
 
@@ -16313,9 +16299,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; The Journal of Commonwealth Literature Volume 40 ; 40 >
         au < HighWireStrVolPlugin ; doNotProcess ; The Journal of Commonwealth Literature Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; down ; The Journal of Commonwealth Literature Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Commonwealth Literature Volume 45 ; 45 >
 
       }
 
@@ -16404,8 +16387,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Communication Inquiry Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; down ; Journal of Communication Inquiry Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; down ; Journal of Communication Inquiry Volume 32 ; 32 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Communication Inquiry Volume 33 ; 33 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Communication Inquiry Volume 34 ; 34 >
 
       }
 
@@ -16484,7 +16465,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Composite Materials Volume 41 ; 41 >
         au < HighWirePressPlugin ; down ; Journal of Composite Materials Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; Journal of Composite Materials Volume 43 ; 43 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Composite Materials Volume 44 ; 44 >
 
       }
 
@@ -16573,7 +16553,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Conflict Resolution Volume 51 ; 51 >
         au < HighWirePressPlugin ; down ; Journal of Conflict Resolution Volume 52 ; 52 >
         au < HighWirePressPlugin ; down ; Journal of Conflict Resolution Volume 53 ; 53 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Conflict Resolution Volume 54 ; 54 >
 
       }
 
@@ -16662,7 +16641,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Consumer Culture Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; Journal of Consumer Culture Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; Journal of Consumer Culture Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Consumer Culture Volume 10 ; 10 >
 
       }
 
@@ -16717,7 +16695,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Contemporary Criminal Justice Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary Criminal Justice Volume 24 ; 24 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary Criminal Justice Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Contemporary Criminal Justice Volume 26 ; 26 >
 
       }
 
@@ -16778,7 +16755,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Contemporary Ethnography Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary Ethnography Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary Ethnography Volume 38 ; 38 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Contemporary Ethnography Volume 39 ; 39 >
 
       }
 
@@ -16862,7 +16838,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Contemporary History Volume 42 ; 42 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary History Volume 43 ; 43 >
         au < HighWirePressPlugin ; down ; Journal of Contemporary History Volume 44 ; 44 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Contemporary History Volume 45 ; 45 >
 
       }
 
@@ -16941,7 +16916,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Correctional Health Care Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; Journal of Correctional Health Care Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Journal of Correctional Health Care Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Correctional Health Care Volume 16 ; 16 >
 
       }
 
@@ -16988,9 +16962,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Journal of Creative Communications Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Creative Communications Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Journal of Creative Communications Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Creative Communications Volume 4 ; 4 >
 
       }
 
@@ -17018,16 +16990,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         issnl = 1548-5129
       >
 
-      {
-
-        param[base_url] = http://dms.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 >
-
-      }
-  
       {
 
         pluginSuffix = HighWirePressH20Plugin
@@ -17076,7 +17038,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Cross-Cultural Psychology Volume 38 ; 38 >
         au < HighWirePressPlugin ; down ; Journal of Cross-Cultural Psychology Volume 39 ; 39 >
         au < HighWirePressPlugin ; down ; Journal of Cross-Cultural Psychology Volume 40 ; 40 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Cross-Cultural Psychology Volume 41 ; 41 >
 
       }
 
@@ -17151,7 +17112,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Developing Societies Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; Journal of Developing Societies Volume 23 ; 23 >
         au < HighWirePressPlugin ; testing ; Journal of Developing Societies Volume 24 ; 24 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Developing Societies Volume 25 ; 25 >
 
       }
 
@@ -17196,7 +17156,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; down ; Journal of Diagnostic Medical Sonography Volume 23 ; 23 >
         au < HighWirePressPlugin ; testing ; Journal of Diagnostic Medical Sonography Volume 24 ; 24 >
         au < HighWirePressPlugin ; testing ; Journal of Diagnostic Medical Sonography Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Diagnostic Medical Sonography Volume 26 ; 26 >
 
       }
 
@@ -17254,7 +17213,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < HighWirePressPlugin ; down ; Journal of Disability Policy Studies Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; Journal of Disability Policy Studies Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; Journal of Disability Policy Studies Volume 21 ; 21 >
 
       } 
       
