@@ -41,6 +41,23 @@
     <string>&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%sarchives.htm&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%slockss/lockss-volume%d.htm&quot;, base_url, volume</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%sv%sn%s/index.htm&quot;, base_url, volume, issue</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
