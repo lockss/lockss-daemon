@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -18,9 +18,9 @@
     
     param[journal_code] = sawr
   
-    au < exists ; South African Journal of Wildlife Research Volume 37 ; 37 >
-    au < exists ; South African Journal of Wildlife Research Volume 38 ; 38 >
-    au < exists ; South African Journal of Wildlife Research Volume 39 ; 39 >
+    au < exists ; 2007 ; South African Journal of Wildlife Research Volume 37 ; 37 >
+    au < exists ; 2008 ; South African Journal of Wildlife Research Volume 38 ; 38 >
+    au < exists ; 2009 ; South African Journal of Wildlife Research Volume 39 ; 39 >
 
   }
   
