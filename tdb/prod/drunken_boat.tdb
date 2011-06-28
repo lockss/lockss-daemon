@@ -14,20 +14,22 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.drunkenboat.DrunkenBoatPlugin
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; name ; param[volume_name] ; attr[year]>
     param[base_url] = http://www.drunkenboat.com/
   
-    au < ready ; Drunken Boat Volume 1 ; 1 >
-    au < ready ; Drunken Boat Volume 2 ; 2 >
-    au < ready ; Drunken Boat Volume 3 ; 3 >
-    au < ready ; Drunken Boat Volume 4 ; 4 >
-    au < ready ; Drunken Boat Volume 5 ; 5 >
-    au < ready ; Drunken Boat Volume 6 ; 6 >
-    au < ready ; Drunken Boat Volume 7 ; 7 >
-    au < ready ; Drunken Boat Volume 8 ; 8 >
-    au < ready ; Drunken Boat Volume 9 ; 9 >
-    au < ready ; Drunken Boat Volume 10 ; 10 >
-    au < ready ; Drunken Boat Volume 11 ; 11 >
+    au < ready ; Drunken Boat Volume 1 ; 1  ; 2000 >
+    au < ready ; Drunken Boat Volume 2 ; 2  ; 2001 >
+    au < ready ; Drunken Boat Volume 3 ; 3  ; 2001-2002 >
+    au < ready ; Drunken Boat Volume 4 ; 4  ; 2002 >
+    au < ready ; Drunken Boat Volume 5 ; 5 ; 2002-2003 >
+    au < ready ; Drunken Boat Volume 6 ; 6 ; 2004 >
+    au < ready ; Drunken Boat Volume 7 ; 7 ; 2005 >
+    au < ready ; Drunken Boat Volume 8 ; 8 ; 2006 >
+    au < ready ; Drunken Boat Volume 9 ; 9 ; 2008 >
+    au < ready ; Drunken Boat Volume 10 ; 10 ; 2009 >
+    au < ready ; Drunken Boat Volume 11 ; 11 ; 2010 >
+    au < ready ; Drunken Boat Volume 12 ; 12 ; 2010 >
+    au < ready ; Drunken Boat Volume 13 ; 13 ; 2010 >
 
   }
   
