@@ -39,6 +39,23 @@
     <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s%s&quot;, base_url, journal_abbr</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%s%s/vol%d&quot;, base_url, journal_abbr, volume</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%s%s/vol%d/iss%s&quot;, base_url, journal_abbr, volume, issue</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
