@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-5036
 
       comment[journal_id] = conventionally we use the ISSN for journal_id but this one we got wrong
   
-      au < superseded ; Journal of Coastal Research Volume 20 ; 20 >
-      au < superseded ; Journal of Coastal Research Volume 21 ; 21 >
-      au < superseded ; Journal of Coastal Research Volume 22 ; 22 >
-      au < superseded ; Journal of Coastal Research Volume 23 ; 23 >
+      au < superseded ; 2004 ; Journal of Coastal Research Volume 20 ; 20 >
+      au < superseded ; 2005 ; Journal of Coastal Research Volume 21 ; 21 >
+      au < superseded ; 2006 ; Journal of Coastal Research Volume 22 ; 22 >
+      au < superseded ; 2007 ; Journal of Coastal Research Volume 23 ; 23 >
     }
 
     {
