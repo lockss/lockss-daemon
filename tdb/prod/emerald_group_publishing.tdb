@@ -4367,6 +4367,7 @@
     au < released ; 2008 ; Journal of Advances in Management Research Volume 5 ; 5 >
     au < released ; 2009 ; Journal of Advances in Management Research Volume 6 ; 6 >
     au < released ; 2010 ; Journal of Advances in Management Research Volume 7 ; 7 >
+    au < exists ; 2011 ; Journal of Advances in Management Research Volume 8 ; 8 >
 
   }
 
@@ -4405,6 +4406,7 @@
     au < released ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 >
     au < released ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 >
+    au < exists ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 >
 
   }
 
@@ -4602,6 +4604,7 @@
     param[journal_issn] = 2040-8005
     
     au < released ; 2010 ; Journal of Chinese Human Resource Management Volume 1 ; 1 >
+    au < exists ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
 
   }
 
@@ -6827,27 +6830,6 @@
 
   {  
     title <
-      name = Management Research: The Journal of the Iberoamerican Academy of Management  ;
-      issn = 1536-5433 ;
-      issnl = 1536-5433
-    >
-
-    param[journal_issn] = 1536-5433
-    
-    au < exists ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 >
-    au < exists ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 >
-    au < exists ; 2005 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 3 ; 3 >
-    au < exists ; 2006 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 4 ; 4 >
-    au < exists ; 2007 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 5 ; 5 >
-    au < exists ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 >
-    au < exists ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
-    au < exists ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
-    au < exists ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 >
-    
-  }
-
-  {  
-    title <
       name = Management Research News ;
       issn = 0140-9174 ;
       eissn = 1758-6135 ;
@@ -6916,7 +6898,7 @@
     >
 
     param[journal_issn] = 1536-5433
-    
+
     au < released ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 >
     au < released ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 >
     au < released ; 2005 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 3 ; 3 >
@@ -6925,6 +6907,7 @@
     au < released ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 >
     au < released ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
     au < released ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
+    au < exists ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 >
 
   }
 
@@ -8381,7 +8364,8 @@
     au < released ; 2008 ; Social Enterprise Journal Volume 4 ; 4 >
     au < released ; 2009 ; Social Enterprise Journal Volume 5 ; 5 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
-
+    au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
+    au < exists; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
   }
 
   {
