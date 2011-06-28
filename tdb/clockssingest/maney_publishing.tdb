@@ -4,6 +4,10 @@
     name = Maney Publishing
   >
 
+ {
+comment[0] = needs Clockss Ingenta plugin
+ }
+
   {
 
     title <
@@ -12,7 +16,7 @@
       eissn = 1743-6761
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -22,13 +26,13 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < manifest ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
-    au < manifest ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
-    au < manifest ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 > 
-    au < manifest ; 2008 ; Advances in Applied Ceramics Volume 107 ; 107 > 
-    au < manifest ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 > 
-    au < manifest ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 > 
-    au < manifest ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 > 
+    au < manifest ; manifest ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
+    au < manifest ; manifest ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
+    au < manifest ; manifest ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 > 
+    au < manifest ; manifest ; 2008 ; Advances in Applied Ceramics Volume 107 ; 107 > 
+    au < manifest ; manifest ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 > 
+    au < manifest ; manifest ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 > 
+    au < manifest ; manifest ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 > 
 
   }
 
@@ -40,27 +44,27 @@
       eissn = 1472-1481
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://apt.rcpsych.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < exists ; exists ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 > 
-    au < exists ; exists ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 > 
-    au < exists ; exists ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 > 
-    au < exists ; exists ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 > 
-    au < exists ; exists ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 > 
-    au < exists ; exists ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 > 
-    au < exists ; exists ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 > 
-    au < exists ; exists ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 > 
-    au < exists ; exists ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 > 
-    au < exists ; exists ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 > 
-    au < manifest ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 > 
-    au < manifest ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 > 
-    au < manifest ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 > 
-    au < manifest ; 2008 ; Advances in Psychiatric Treatment Volume 14 ; 14 > 
-    au < manifest ; 2009 ; Advances in Psychiatric Treatment Volume 15 ; 15 > 
-    au < manifest ; 2010 ; Advances in Psychiatric Treatment Volume 16 ; 16 > 
-    au < manifest ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 > 
+    au < exists ; manifest ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 > 
+    au < exists ; manifest ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 > 
+    au < exists ; manifest ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 > 
+    au < exists ; manifest ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 > 
+    au < exists ; manifest ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 > 
+    au < exists ; manifest ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 > 
+    au < exists ; manifest ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 > 
+    au < exists ; manifest ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 > 
+    au < exists ; manifest ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 > 
+    au < exists ; manifest ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 > 
+    au < manifest ; manifest ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 > 
+    au < manifest ; manifest ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 > 
+    au < manifest ; manifest ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 > 
+    au < manifest ; manifest ; 2008 ; Advances in Psychiatric Treatment Volume 14 ; 14 > 
+    au < manifest ; manifest ; 2009 ; Advances in Psychiatric Treatment Volume 15 ; 15 > 
+    au < manifest ; manifest ; 2010 ; Advances in Psychiatric Treatment Volume 16 ; 16 > 
+    au < manifest ; manifest ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 > 
 
   }
 
@@ -72,7 +76,7 @@
       eissn = 1745-8234
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -82,64 +86,64 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < manifest ; 1937 ; Ambix Volume 1 ; 1 > 
-    au < manifest ; 1938-1946 ; Ambix Volume 2 ; 2 > 
-    au < manifest ; 1948-1949 ; Ambix Volume 3 ; 3 > 
-    au < manifest ; 1949-1951 ; Ambix Volume 4 ; 4 > 
-    au < manifest ; 1953-1956 ; Ambix Volume 5 ; 5 > 
-    au < manifest ; 1957-1958 ; Ambix Volume 6 ; 6 > 
-    au < manifest ; 1959 ; Ambix Volume 7 ; 7 >
-    au < manifest ; 1960 ; Ambix Volume 8 ; 8 >
-    au < manifest ; 1961 ; Ambix Volume 9 ; 9 >
-    au < manifest ; 1962 ; Ambix Volume 10 ; 10 >
-    au < manifest ; 1963 ; Ambix Volume 11 ; 11 >
-    au < manifest ; 1964 ; Ambix Volume 12 ; 12 > 
-    au < manifest ; 1965-1966 ; Ambix Volume 13 ; 13 > 
-    au < manifest ; 1967 ; Ambix Volume 14 ; 14 >
-    au < manifest ; 1968 ; Ambix Volume 15 ; 15 >
-    au < manifest ; 1969 ; Ambix Volume 16 ; 16 >
-    au < manifest ; 1970 ; Ambix Volume 17 ; 17 >
-    au < manifest ; 1971 ; Ambix Volume 18 ; 18 >
-    au < manifest ; 1972 ; Ambix Volume 19 ; 19 >
-    au < manifest ; 1973 ; Ambix Volume 20 ; 20 >
-    au < manifest ; 1974 ; Ambix Volume 21 ; 21 >
-    au < manifest ; 1975 ; Ambix Volume 22 ; 22 >
-    au < manifest ; 1976 ; Ambix Volume 23 ; 23 >
-    au < manifest ; 1977 ; Ambix Volume 24 ; 24 >
-    au < manifest ; 1978 ; Ambix Volume 25 ; 25 >
-    au < manifest ; 1979 ; Ambix Volume 26 ; 26 >
-    au < manifest ; 1980 ; Ambix Volume 27 ; 27 >
-    au < manifest ; 1981 ; Ambix Volume 28 ; 28 >
-    au < manifest ; 1982 ; Ambix Volume 29 ; 29 >
-    au < manifest ; 1983 ; Ambix Volume 30 ; 30 >
-    au < manifest ; 1984 ; Ambix Volume 31 ; 31 >
-    au < manifest ; 1985 ; Ambix Volume 32 ; 32 >
-    au < manifest ; 1986 ; Ambix Volume 33 ; 33 >
-    au < manifest ; 1987 ; Ambix Volume 34 ; 34 >
-    au < manifest ; 1988 ; Ambix Volume 35 ; 35 >
-    au < manifest ; 1989 ; Ambix Volume 36 ; 36 >
-    au < manifest ; 1990 ; Ambix Volume 37 ; 37 >
-    au < manifest ; 1991 ; Ambix Volume 38 ; 38 >
-    au < manifest ; 1992 ; Ambix Volume 39 ; 39 >
-    au < manifest ; 1993 ; Ambix Volume 40 ; 40 >
-    au < manifest ; 1994 ; Ambix Volume 41 ; 41 >
-    au < manifest ; 1995 ; Ambix Volume 42 ; 42 >
-    au < manifest ; 1996 ; Ambix Volume 43 ; 43 >
-    au < manifest ; 1997 ; Ambix Volume 44 ; 44 >
-    au < manifest ; 1998 ; Ambix Volume 45 ; 45 >
-    au < manifest ; 1999 ; Ambix Volume 46 ; 46 >
-    au < manifest ; 2000 ; Ambix Volume 47 ; 47 >
-    au < manifest ; 2001 ; Ambix Volume 48 ; 48 >
-    au < manifest ; 2002 ; Ambix Volume 49 ; 49 >
-    au < manifest ; 2003 ; Ambix Volume 50 ; 50 >
-    au < manifest ; 2004 ; Ambix Volume 51 ; 51 >
-    au < manifest ; 2005 ; Ambix Volume 52 ; 52 >
-    au < manifest ; 2006 ; Ambix Volume 53 ; 53 >
-    au < manifest ; 2007 ; Ambix Volume 54 ; 54 >
-    au < manifest ; 2008 ; Ambix Volume 55 ; 55 >
-    au < manifest ; 2009 ; Ambix Volume 56 ; 56 >
-    au < manifest ; 2010 ; Ambix Volume 57 ; 57 >
-    au < manifest ; 2011 ; Ambix Volume 58 ; 58 >
+    au < manifest ; manifest ; 1937 ; Ambix Volume 1 ; 1 >
+    au < manifest ; manifest ; 1938-1946 ; Ambix Volume 2 ; 2 >
+    au < manifest ; manifest ; 1948-1949 ; Ambix Volume 3 ; 3 >
+    au < manifest ; manifest ; 1949-1951 ; Ambix Volume 4 ; 4 >
+    au < manifest ; manifest ; 1953-1956 ; Ambix Volume 5 ; 5 >
+    au < manifest ; manifest ; 1957-1958 ; Ambix Volume 6 ; 6 >
+    au < manifest ; manifest ; 1959 ; Ambix Volume 7 ; 7 >
+    au < manifest ; manifest ; 1960 ; Ambix Volume 8 ; 8 >
+    au < manifest ; manifest ; 1961 ; Ambix Volume 9 ; 9 >
+    au < manifest ; manifest ; 1962 ; Ambix Volume 10 ; 10 >
+    au < manifest ; manifest ; 1963 ; Ambix Volume 11 ; 11 >
+    au < manifest ; manifest ; 1964 ; Ambix Volume 12 ; 12 >
+    au < manifest ; manifest ; 1965-1966 ; Ambix Volume 13 ; 13 >
+    au < manifest ; manifest ; 1967 ; Ambix Volume 14 ; 14 >
+    au < manifest ; manifest ; 1968 ; Ambix Volume 15 ; 15 >
+    au < manifest ; manifest ; 1969 ; Ambix Volume 16 ; 16 >
+    au < manifest ; manifest ; 1970 ; Ambix Volume 17 ; 17 >
+    au < manifest ; manifest ; 1971 ; Ambix Volume 18 ; 18 >
+    au < manifest ; manifest ; 1972 ; Ambix Volume 19 ; 19 >
+    au < manifest ; manifest ; 1973 ; Ambix Volume 20 ; 20 >
+    au < manifest ; manifest ; 1974 ; Ambix Volume 21 ; 21 >
+    au < manifest ; manifest ; 1975 ; Ambix Volume 22 ; 22 >
+    au < manifest ; manifest ; 1976 ; Ambix Volume 23 ; 23 >
+    au < manifest ; manifest ; 1977 ; Ambix Volume 24 ; 24 >
+    au < manifest ; manifest ; 1978 ; Ambix Volume 25 ; 25 >
+    au < manifest ; manifest ; 1979 ; Ambix Volume 26 ; 26 >
+    au < manifest ; manifest ; 1980 ; Ambix Volume 27 ; 27 >
+    au < manifest ; manifest ; 1981 ; Ambix Volume 28 ; 28 >
+    au < manifest ; manifest ; 1982 ; Ambix Volume 29 ; 29 >
+    au < manifest ; manifest ; 1983 ; Ambix Volume 30 ; 30 >
+    au < manifest ; manifest ; 1984 ; Ambix Volume 31 ; 31 >
+    au < manifest ; manifest ; 1985 ; Ambix Volume 32 ; 32 >
+    au < manifest ; manifest ; 1986 ; Ambix Volume 33 ; 33 >
+    au < manifest ; manifest ; 1987 ; Ambix Volume 34 ; 34 >
+    au < manifest ; manifest ; 1988 ; Ambix Volume 35 ; 35 >
+    au < manifest ; manifest ; 1989 ; Ambix Volume 36 ; 36 >
+    au < manifest ; manifest ; 1990 ; Ambix Volume 37 ; 37 >
+    au < manifest ; manifest ; 1991 ; Ambix Volume 38 ; 38 >
+    au < manifest ; manifest ; 1992 ; Ambix Volume 39 ; 39 >
+    au < manifest ; manifest ; 1993 ; Ambix Volume 40 ; 40 >
+    au < manifest ; manifest ; 1994 ; Ambix Volume 41 ; 41 >
+    au < manifest ; manifest ; 1995 ; Ambix Volume 42 ; 42 >
+    au < manifest ; manifest ; 1996 ; Ambix Volume 43 ; 43 >
+    au < manifest ; manifest ; 1997 ; Ambix Volume 44 ; 44 >
+    au < manifest ; manifest ; 1998 ; Ambix Volume 45 ; 45 >
+    au < manifest ; manifest ; 1999 ; Ambix Volume 46 ; 46 >
+    au < manifest ; manifest ; 2000 ; Ambix Volume 47 ; 47 >
+    au < manifest ; manifest ; 2001 ; Ambix Volume 48 ; 48 >
+    au < manifest ; manifest ; 2002 ; Ambix Volume 49 ; 49 >
+    au < manifest ; manifest ; 2003 ; Ambix Volume 50 ; 50 >
+    au < manifest ; manifest ; 2004 ; Ambix Volume 51 ; 51 >
+    au < manifest ; manifest ; 2005 ; Ambix Volume 52 ; 52 >
+    au < manifest ; manifest ; 2006 ; Ambix Volume 53 ; 53 >
+    au < manifest ; manifest ; 2007 ; Ambix Volume 54 ; 54 >
+    au < manifest ; manifest ; 2008 ; Ambix Volume 55 ; 55 >
+    au < manifest ; manifest ; 2009 ; Ambix Volume 56 ; 56 >
+    au < manifest ; manifest ; 2010 ; Ambix Volume 57 ; 57 >
+    au < manifest ; manifest ; 2011 ; Ambix Volume 58 ; 58 >
 
   }
 
@@ -151,7 +155,7 @@
       eissn = 1364-8594
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -182,7 +186,7 @@
       eissn = 1465-3281
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -213,7 +217,7 @@
       eissn = 1743-2758
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -223,17 +227,17 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
-    au < manifest ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
-    au < manifest ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
-    au < manifest ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
-    au < manifest ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
-    au < manifest ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
-    au < manifest ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
-    au < manifest ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
-    au < manifest ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
-    au < manifest ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
-    au < manifest ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
+    au < manifest ; manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
+    au < manifest ; manifest ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
+    au < manifest ; manifest ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
+    au < manifest ; manifest ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
+    au < manifest ; manifest ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
+    au < manifest ; manifest ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
+    au < manifest ; manifest ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
+    au < manifest ; manifest ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
+    au < manifest ; manifest ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
+    au < manifest ; manifest ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
+    au < manifest ; manifest ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
 
   }
 
@@ -245,7 +249,7 @@
       eissn = 1749-6268
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -255,14 +259,14 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
-    au < manifest ; 2005 ; Arms & Armour Volume 2 ; 2 > 
-    au < manifest ; 2006 ; Arms & Armour Volume 3 ; 3 > 
-    au < manifest ; 2007 ; Arms & Armour Volume 4 ; 4 > 
-    au < manifest ; 2008 ; Arms & Armour Volume 5 ; 5 > 
-    au < manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
-    au < manifest ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < manifest ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < manifest ; manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
+    au < manifest ; manifest ; 2005 ; Arms & Armour Volume 2 ; 2 > 
+    au < manifest ; manifest ; 2006 ; Arms & Armour Volume 3 ; 3 > 
+    au < manifest ; manifest ; 2007 ; Arms & Armour Volume 4 ; 4 > 
+    au < manifest ; manifest ; 2008 ; Arms & Armour Volume 5 ; 5 > 
+    au < manifest ; manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
+    au < manifest ; manifest ; 2010 ; Arms & Armour Volume 7 ; 7 > 
+    au < manifest ; manifest ; 2011 ; Arms & Armour Volume 8 ; 8 > 
 
   }
 
@@ -274,7 +278,7 @@
       eissn = 1472-1465
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://bjp.rcpsych.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -291,7 +295,7 @@
     au < exists ; exists ; 1866-1867 ; British Journal of Psychiatry Volume 12 ; 12 > 
     au < exists ; exists ; 1867 ; British Journal of Psychiatry Volume 13 ; 13 > 
     au < exists ; exists ; 1868-1869 ; British Journal of Psychiatry Volume 14 ; 14 > 
-    au < doesNotexist ; ; British Journal of Psychiatry Volume 15 ; 15 > 
+    au < doesNotExist ; doesNotExist ; 1869 ; British Journal of Psychiatry Volume 15 ; 15 >
     au < exists ; exists ; 1870-1871 ; British Journal of Psychiatry Volume 16 ; 16 > 
     au < exists ; exists ; 1871-1872 ; British Journal of Psychiatry Volume 17 ; 17 > 
     au < exists ; exists ; 1872-1873 ; British Journal of Psychiatry Volume 18 ; 18 > 
@@ -462,19 +466,19 @@
     au < exists ; exists ; 2003 ; British Journal of Psychiatry Volume 183 ; 183 > 
     au < exists ; exists ; 2004 ; British Journal of Psychiatry Volume 184 ; 184 > 
     au < exists ; exists ; 2004 ; British Journal of Psychiatry Volume 185 ; 185 > 
-    au < manifest ; 2005 ; British Journal of Psychiatry Volume 186 ; 186 > 
-    au < manifest ; 2005 ; British Journal of Psychiatry Volume 187 ; 187 > 
-    au < manifest ; 2006 ; British Journal of Psychiatry Volume 188 ; 188 > 
-    au < manifest ; 2006 ; British Journal of Psychiatry Volume 189 ; 189 > 
-    au < manifest ; 2007 ; British Journal of Psychiatry Volume 190 ; 190 > 
-    au < manifest ; 2007 ; British Journal of Psychiatry Volume 191 ; 191 > 
-    au < manifest ; 2008 ; British Journal of Psychiatry Volume 192 ; 192 > 
-    au < manifest ; 2008 ; British Journal of Psychiatry Volume 193 ; 193 > 
-    au < manifest ; 2009 ; British Journal of Psychiatry Volume 194 ; 194 > 
-    au < manifest ; 2009 ; British Journal of Psychiatry Volume 195 ; 195 > 
-    au < manifest ; 2010 ; British Journal of Psychiatry Volume 196 ; 196 > 
-    au < manifest ; 2010 ; British Journal of Psychiatry Volume 197 ; 197 > 
-    au < manifest ; 2011 ; British Journal of Psychiatry Volume 198 ; 198 > 
+    au < manifest ; exists ; 2005 ; British Journal of Psychiatry Volume 186 ; 186 > 
+    au < manifest ; exists ; 2005 ; British Journal of Psychiatry Volume 187 ; 187 > 
+    au < manifest ; exists ; 2006 ; British Journal of Psychiatry Volume 188 ; 188 > 
+    au < manifest ; exists ; 2006 ; British Journal of Psychiatry Volume 189 ; 189 > 
+    au < manifest ; exists ; 2007 ; British Journal of Psychiatry Volume 190 ; 190 > 
+    au < manifest ; exists ; 2007 ; British Journal of Psychiatry Volume 191 ; 191 > 
+    au < manifest ; exists ; 2008 ; British Journal of Psychiatry Volume 192 ; 192 > 
+    au < manifest ; exists ; 2008 ; British Journal of Psychiatry Volume 193 ; 193 > 
+    au < manifest ; exists ; 2009 ; British Journal of Psychiatry Volume 194 ; 194 > 
+    au < manifest ; exists ; 2009 ; British Journal of Psychiatry Volume 195 ; 195 > 
+    au < manifest ; exists ; 2010 ; British Journal of Psychiatry Volume 196 ; 196 > 
+    au < manifest ; exists ; 2010 ; British Journal of Psychiatry Volume 197 ; 197 > 
+    au < manifest ; exists ; 2011 ; British Journal of Psychiatry Volume 198 ; 198 > 
 
   }
 
@@ -487,7 +491,7 @@
     >
 
     comment[continues] = Bronte Society Transactions: The Journal of Bronte Studies, 1997-2001
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -518,7 +522,7 @@
       eissn = 1758-8979
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -542,7 +546,7 @@
       eissn = 1752-7279
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -568,7 +572,7 @@
       eissn = 1749-625X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -624,7 +628,7 @@
       eissn = 1879-1395
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -646,7 +650,7 @@
       eissn = 1743-2774
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -715,7 +719,7 @@
       eissn = 1745-8218
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -745,7 +749,7 @@
       eissn = 1754-7628
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -778,7 +782,7 @@
       eissn = 1741-2676
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -808,7 +812,7 @@
       eissn = 1477-2221
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -839,7 +843,7 @@
       eissn = 1753-5522
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -873,7 +877,7 @@
     >
 
     comment[continues] = British Corrosion Journal, 1999-2002
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -903,7 +907,7 @@
       eissn = 1749-6306
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -969,7 +973,7 @@
       eissn = 1557-069X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1003,7 +1007,7 @@
       eissn = 1478-7318
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1039,7 +1043,7 @@
       eissn = 2042-1729
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1061,7 +1065,7 @@
       eissn = 1759-7854
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1085,7 +1089,7 @@
       eissn = 1946-7842
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1123,7 +1127,7 @@
       eissn = 1748-9245
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1148,7 +1152,7 @@
       eissn = 1749-6314
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1184,7 +1188,7 @@
       eissn = 1399-3003
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://erj.ersjournals.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -1223,8 +1227,8 @@
     au < exists ; exists ; 2009 ; European Respiratory Journal Volume 33 ; 33 > 
     au < exists ; exists ; 2009 ; European Respiratory Journal Volume 34 ; 34 > 
     au < exists ; exists ; 2010 ; European Respiratory Journal Volume 35 ; 35 > 
-    au < manifest ; 2010 ; European Respiratory Journal Volume 36 ; 36 > 
-    au < manifest ; 2011 ; European Respiratory Journal Volume 37 ; 37 > 
+    au < manifest ; exists ; 2010 ; European Respiratory Journal Volume 36 ; 36 > 
+    au < manifest ; exists ; 2011 ; European Respiratory Journal Volume 37 ; 37 > 
 
   }
 
@@ -1236,7 +1240,7 @@
       eissn = 1753-3074
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1280,7 +1284,7 @@
       eissn = 1751-3812
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1306,7 +1310,7 @@
       eissn = 1759-670X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1330,7 +1334,7 @@
       eissn = 1934-8916
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1356,7 +1360,7 @@
       eissn = 1607-8454
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1387,7 +1391,7 @@
       eissn = 1745-820X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1420,7 +1424,7 @@
       eissn = 1756-7513
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1443,7 +1447,7 @@
       eissn = 1743-131X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1472,7 +1476,7 @@
       eissn = 1745-8196
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1525,7 +1529,7 @@
       eissn = 1743-2790
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1582,7 +1586,7 @@
       eissn = 1749-5156
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1609,7 +1613,7 @@
     >
 
     comment[continues] = Transactions of the Newcomen Society, 2006-2008
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1633,7 +1637,7 @@
       eissn = 1743-1336
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1662,7 +1666,7 @@
       eissn = 1743-2804
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1708,7 +1712,7 @@
       eissn = 1753-6154
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1734,7 +1738,7 @@
     >
 
     comment[continues] = 0020-3203
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1757,7 +1761,7 @@
       eissn = 1743-2812
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1791,7 +1795,7 @@
       eissn = 1559-0909
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1815,7 +1819,7 @@
       eissn = 1748-6181
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1902,7 +1906,7 @@
       eissn = 1748-619X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1954,7 +1958,7 @@
       eissn = 1743-2820
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1980,12 +1984,12 @@
   {
 
     title <
-      name = Journal of Care Services Management - from 2006 ;
+      name = Journal of Care Services Management ;
       issn = 1750-1679 ;
       eissn = 1750-1687
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2006,12 +2010,12 @@
   {
 
     title <
-      name = Journal of Communication in Healthcare - from 2008 ;
+      name = Journal of Communication in Healthcare ;
       issn = 1753-8068 ;
       eissn = 1753-8076
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2036,7 +2040,7 @@
       eissn = 1574-0781
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2046,12 +2050,12 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2005 ; Journal of Conflict Archaeology  Volume 1 ; 1 > 
-    au < exists ; exists ; 2006 ; Journal of Conflict Archaeology  Volume 2 ; 2 > 
-    au < exists ; exists ; 2007 ; Journal of Conflict Archaeology  Volume 3 ; 3 > 
-    au < exists ; exists ; 2008 ; Journal of Conflict Archaeology  Volume 4 ; 4 > 
-    au < exists ; exists ; 2009 ; Journal of Conflict Archaeology  Volume 5 ; 5 > 
-    au < exists ; exists ; 2011 ; Journal of Conflict Archaeology  Volume 6 ; 6 > 
+    au < exists ; exists ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
+    au < exists ; exists ; 2006 ; Journal of Conflict Archaeology Volume 2 ; 2 > 
+    au < exists ; exists ; 2007 ; Journal of Conflict Archaeology Volume 3 ; 3 > 
+    au < exists ; exists ; 2008 ; Journal of Conflict Archaeology Volume 4 ; 4 > 
+    au < exists ; exists ; 2009 ; Journal of Conflict Archaeology Volume 5 ; 5 > 
+    au < exists ; exists ; 2011 ; Journal of Conflict Archaeology Volume 6 ; 6 > 
 
   }
 
@@ -2063,7 +2067,7 @@
       eissn = 2042-4582
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2120,7 +2124,7 @@
       eissn = 2046-0236
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2170,12 +2174,12 @@
   {
 
     title <
-      name = Journal of Management & Marketing in Healthcare - from 2007 ;
+      name = Journal of Management & Marketing in Healthcare ;
       issn = 1753-3031 ;
       eissn = 1753-304X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2185,10 +2189,10 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 1 ; 1 > 
-    au < exists ; exists ; 2009 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 2 ; 2 > 
-    au < exists ; exists ; 2010 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 3 ; 3 > 
-    au < exists ; exists ; 2011 ; Journal of Management & Marketing in Healthcare - from 2007 Volume 4 ; 4 > 
+    au < exists ; exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
+    au < exists ; exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
+    au < exists ; exists ; 2010 ; Journal of Management & Marketing in Healthcare Volume 3 ; 3 > 
+    au < exists ; exists ; 2011 ; Journal of Management & Marketing in Healthcare Volume 4 ; 4 > 
 
   }
 
@@ -2200,7 +2204,7 @@
       eissn = 2042-6186
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2244,44 +2248,44 @@
     param[base_url] = http://jorthod.maneyjournals.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 1973-1974 ; Journal of Orthodontics Volume 1 ; 1 >
-    au < manifest ; exists ; 1975 ; Journal of Orthodontics Volume 2 ; 2 >
-    au < manifest ; exists ; 1976 ; Journal of Orthodontics Volume 3 ; 3 >
-    au < manifest ; exists ; 1977 ; Journal of Orthodontics Volume 4 ; 4 >
-    au < manifest ; exists ; 1978 ; Journal of Orthodontics Volume 5 ; 5 >
-    au < manifest ; exists ; 1979 ; Journal of Orthodontics Volume 6 ; 6 >
-    au < manifest ; exists ; 1980 ; Journal of Orthodontics Volume 7 ; 7 >
-    au < manifest ; exists ; 1981 ; Journal of Orthodontics Volume 8 ; 8 >
-    au < manifest ; exists ; 1982 ; Journal of Orthodontics Volume 9 ; 9 >
-    au < manifest ; exists ; 1983 ; Journal of Orthodontics Volume 10 ; 10 >
-    au < manifest ; exists ; 1984 ; Journal of Orthodontics Volume 11 ; 11 >
-    au < manifest ; exists ; 1985 ; Journal of Orthodontics Volume 12 ; 12 >
-    au < manifest ; exists ; 1986 ; Journal of Orthodontics Volume 13 ; 13 >
-    au < manifest ; exists ; 1987 ; Journal of Orthodontics Volume 14 ; 14 >
-    au < manifest ; exists ; 1988 ; Journal of Orthodontics Volume 15 ; 15 >
-    au < manifest ; exists ; 1989 ; Journal of Orthodontics Volume 16 ; 16 >
-    au < manifest ; exists ; 1990 ; Journal of Orthodontics Volume 17 ; 17 >
-    au < manifest ; exists ; 1991 ; Journal of Orthodontics Volume 18 ; 18 >
-    au < manifest ; exists ; 1992 ; Journal of Orthodontics Volume 19 ; 19 >
-    au < manifest ; exists ; 1993 ; Journal of Orthodontics Volume 20 ; 20 >
-    au < manifest ; exists ; 1994 ; Journal of Orthodontics Volume 21 ; 21 >
-    au < manifest ; exists ; 1995 ; Journal of Orthodontics Volume 22 ; 22 >
-    au < manifest ; exists ; 1996 ; Journal of Orthodontics Volume 23 ; 23 >
-    au < manifest ; exists ; 1997 ; Journal of Orthodontics Volume 24 ; 24 >
-    au < manifest ; exists ; 1998 ; Journal of Orthodontics Volume 25 ; 25 >
-    au < manifest ; exists ; 1999 ; Journal of Orthodontics Volume 26 ; 26 >
-    au < manifest ; exists ; 2000 ; Journal of Orthodontics Volume 27 ; 27 >
-    au < manifest ; exists ; 2001 ; Journal of Orthodontics Volume 28 ; 28 >
-    au < manifest ; exists ; 2002 ; Journal of Orthodontics Volume 29 ; 29 >
-    au < manifest ; exists ; 2003 ; Journal of Orthodontics Volume 30 ; 30 >
-    au < manifest ; exists ; 2004 ; Journal of Orthodontics Volume 31 ; 31 >
-    au < manifest ; exists ; 2005 ; Journal of Orthodontics Volume 32 ; 32 >
-    au < manifest ; exists ; 2006 ; Journal of Orthodontics Volume 33 ; 33 >
-    au < manifest ; exists ; 2007 ; Journal of Orthodontics Volume 34 ; 34 >
-    au < manifest ; exists ; 2008 ; Journal of Orthodontics Volume 35 ; 35 >
-    au < manifest ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 >
+    au < manifest ; manifest ; 1973-1974 ; Journal of Orthodontics Volume 1 ; 1 >
+    au < manifest ; manifest ; 1975 ; Journal of Orthodontics Volume 2 ; 2 >
+    au < manifest ; manifest ; 1976 ; Journal of Orthodontics Volume 3 ; 3 >
+    au < manifest ; manifest ; 1977 ; Journal of Orthodontics Volume 4 ; 4 >
+    au < manifest ; manifest ; 1978 ; Journal of Orthodontics Volume 5 ; 5 >
+    au < manifest ; manifest ; 1979 ; Journal of Orthodontics Volume 6 ; 6 >
+    au < manifest ; manifest ; 1980 ; Journal of Orthodontics Volume 7 ; 7 >
+    au < manifest ; manifest ; 1981 ; Journal of Orthodontics Volume 8 ; 8 >
+    au < manifest ; manifest ; 1982 ; Journal of Orthodontics Volume 9 ; 9 >
+    au < manifest ; manifest ; 1983 ; Journal of Orthodontics Volume 10 ; 10 >
+    au < manifest ; manifest ; 1984 ; Journal of Orthodontics Volume 11 ; 11 >
+    au < manifest ; manifest ; 1985 ; Journal of Orthodontics Volume 12 ; 12 >
+    au < manifest ; manifest ; 1986 ; Journal of Orthodontics Volume 13 ; 13 >
+    au < manifest ; manifest ; 1987 ; Journal of Orthodontics Volume 14 ; 14 >
+    au < manifest ; manifest ; 1988 ; Journal of Orthodontics Volume 15 ; 15 >
+    au < manifest ; manifest ; 1989 ; Journal of Orthodontics Volume 16 ; 16 >
+    au < manifest ; manifest ; 1990 ; Journal of Orthodontics Volume 17 ; 17 >
+    au < manifest ; manifest ; 1991 ; Journal of Orthodontics Volume 18 ; 18 >
+    au < manifest ; manifest ; 1992 ; Journal of Orthodontics Volume 19 ; 19 >
+    au < manifest ; manifest ; 1993 ; Journal of Orthodontics Volume 20 ; 20 >
+    au < manifest ; manifest ; 1994 ; Journal of Orthodontics Volume 21 ; 21 >
+    au < manifest ; manifest ; 1995 ; Journal of Orthodontics Volume 22 ; 22 >
+    au < manifest ; manifest ; 1996 ; Journal of Orthodontics Volume 23 ; 23 >
+    au < manifest ; manifest ; 1997 ; Journal of Orthodontics Volume 24 ; 24 >
+    au < manifest ; manifest ; 1998 ; Journal of Orthodontics Volume 25 ; 25 >
+    au < manifest ; manifest ; 1999 ; Journal of Orthodontics Volume 26 ; 26 >
+    au < manifest ; manifest ; 2000 ; Journal of Orthodontics Volume 27 ; 27 >
+    au < manifest ; manifest ; 2001 ; Journal of Orthodontics Volume 28 ; 28 >
+    au < manifest ; manifest ; 2002 ; Journal of Orthodontics Volume 29 ; 29 >
+    au < manifest ; manifest ; 2003 ; Journal of Orthodontics Volume 30 ; 30 >
+    au < manifest ; manifest ; 2004 ; Journal of Orthodontics Volume 31 ; 31 >
+    au < manifest ; manifest ; 2005 ; Journal of Orthodontics Volume 32 ; 32 >
+    au < manifest ; manifest ; 2006 ; Journal of Orthodontics Volume 33 ; 33 >
+    au < manifest ; manifest ; 2007 ; Journal of Orthodontics Volume 34 ; 34 >
+    au < manifest ; manifest ; 2008 ; Journal of Orthodontics Volume 35 ; 35 >
+    au < manifest ; manifest ; 2009 ; Journal of Orthodontics Volume 36 ; 36 >
     au < released ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 >
-    au < manifest ; exists ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
+    au < manifest ; manifest ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
 
   }
 
@@ -2293,7 +2297,7 @@
       eissn = 1747-6704
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2345,7 +2349,7 @@
       eissn = 1746-0220
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2373,7 +2377,7 @@
       eissn = 2041-9430
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2399,7 +2403,7 @@
       eissn = 2042-1362
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2422,7 +2426,7 @@
       eissn = 1745-8188
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2450,7 +2454,7 @@
       eissn = 1759-7544
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2474,7 +2478,7 @@
       eissn = 1756-3801
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2538,7 +2542,7 @@
       eissn = 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2564,7 +2568,7 @@
     >
 
     comment[continues] = 0024-2306
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2588,7 +2592,7 @@
       eissn = 1749-6322
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2645,7 +2649,7 @@
       eissn = 1433-075X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2673,7 +2677,7 @@
     >
 
     comment[continues] = Metal Science Journal, 1967-1984
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2721,7 +2725,7 @@
       eissn = 1753-5557
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2748,7 +2752,7 @@
       eissn = 1745-817X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2780,7 +2784,7 @@
       eissn = 1749-6276
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2806,7 +2810,7 @@
       eissn = 1756-381X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2863,7 +2867,7 @@
       eissn = 1743-2855
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2896,7 +2900,7 @@
       eissn = 1759-7595
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2923,8 +2927,8 @@
     au < exists ; exists ; 1989 ; Ming Studies Volume 1989 ; 1989 > 
     au < exists ; exists ; 1990 ; Ming Studies Volume 1990 ; 1990 > 
     au < exists ; exists ; 1991 ; Ming Studies Volume 1991 ; 1991 > 
-    au < doesNotexist ; 1992 ; Ming Studies Volume 1992 ; 1992 > 
-    au < doesNotExist ; 1993 ; Ming Studies Volume 1993 ; 1993 > 
+    au < doesNotExist ; doesNotExist ; 1992 ; Ming Studies Volume 1992 ; 1992 > 
+    au < doesNotExist ; doesNotExist ; 1993 ; Ming Studies Volume 1993 ; 1993 > 
     au < exists ; exists ; 1994 ; Ming Studies Volume 1994 ; 1994 > 
     au < exists ; exists ; 1995 ; Ming Studies Volume 1993 ; 1993 > 
     au < exists ; exists ; 1996 ; Ming Studies Volume 1994 ; 1994 > 
@@ -2933,7 +2937,7 @@
     au < exists ; exists ; 1999 ; Ming Studies Volume 1997 ; 1997 > 
     au < exists ; exists ; 2000 ; Ming Studies Volume 2000 ; 2000 > 
     au < exists ; exists ; 2001 ; Ming Studies Volume 2002 ; 2001 > 
-    au < doesNotExist ; 2002 ; Ming Studies Volume 2002 ; 2002 >
+    au < doesNotExist ; doesNotExist ; 2002 ; Ming Studies Volume 2002 ; 2002 >
     au < exists ; exists ; 2003 ; Ming Studies Volume 2003 ; 2003 > 
     au < exists ; exists ; 2004 ; Ming Studies Volume 2004 ; 2004 > 
     au < exists ; exists ; 2005 ; Ming Studies Volume 2005 ; 2005 > 
@@ -2953,7 +2957,7 @@
       eissn = 1743-2863
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2986,7 +2990,7 @@
       eissn = 1756-2279
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3011,7 +3015,7 @@
       eissn = 1743-1328
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3043,7 +3047,7 @@
       eissn = 1745-8706
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3055,7 +3059,7 @@
 
     au < exists ; exists ; 1966 ; Northern History Volume 1 ; 1 > 
     au < exists ; exists ; 1967 ; Northern History Volume 2 ; 2 > 
-    au < doesNotExist ; 1968 ; Northern History Volume 3 ; 3 > 
+    au < doesNotExist ; doesNotExist ; 1968 ; Northern History Volume 3 ; 3 > 
     au < exists ; exists ; 1969 ; Northern History Volume 4 ; 4 > 
     au < exists ; exists ; 1970 ; Northern History Volume 5 ; 5 > 
     au < exists ; exists ; 1971 ; Northern History Volume 6 ; 6 > 
@@ -3069,7 +3073,7 @@
     au < exists ; exists ; 1978 ; Northern History Volume 14 ; 14 > 
     au < exists ; exists ; 1979 ; Northern History Volume 15 ; 15 > 
     au < exists ; exists ; 1980 ; Northern History Volume 16 ; 16 > 
-    au < doesNotExist ; 1981 ; Northern History Volume 17 ; 17 > 
+    au < doesNotExist ; doesNotExist ; 1981 ; Northern History Volume 17 ; 17 > 
     au < exists ; exists ; 1982 ; Northern History Volume 18 ; 18 > 
     au < exists ; exists ; 1983 ; Northern History Volume 19 ; 19 > 
     au < exists ; exists ; 1984 ; Northern History Volume 20 ; 20 > 
@@ -3112,7 +3116,7 @@
       eissn = 1028-415X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3143,7 +3147,7 @@
       eissn = 1745-9214
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3204,7 +3208,7 @@
       eissn = 1746-5109
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3233,7 +3237,7 @@
       eissn = 1743-1301
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3262,7 +3266,7 @@
       eissn = 1757-093X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3286,7 +3290,7 @@
       eissn = 1743-288X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3323,7 +3327,7 @@
       eissn = 1743-2898
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3357,7 +3361,7 @@
       eissn = 1745-8137
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3385,7 +3389,7 @@
       eissn = 1743-2901
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3419,7 +3423,7 @@
       eissn = 1743-291X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3449,7 +3453,7 @@
       eissn = 1758-3217
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://pb.rcpsych.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -3481,13 +3485,13 @@
     au < exists ; exists ; 2002 ; The Psychiatrist Volume 26 ; 26 > 
     au < exists ; exists ; 2003 ; The Psychiatrist Volume 27 ; 27 > 
     au < exists ; exists ; 2004 ; The Psychiatrist Volume 28 ; 28 > 
-    au < manifest ; 2005 ; The Psychiatrist Volume 29 ; 29 > 
-    au < manifest ; 2006 ; The Psychiatrist Volume 30 ; 30 > 
-    au < manifest ; 2007 ; The Psychiatrist Volume 31 ; 31 > 
-    au < manifest ; 2008 ; The Psychiatrist Volume 32 ; 32 > 
-    au < manifest ; 2009 ; The Psychiatrist Volume 33 ; 33 > 
-    au < manifest ; 2010 ; The Psychiatrist Volume 34 ; 34 > 
-    au < manifest ; 2011 ; The Psychiatrist Volume 35 ; 35 > 
+    au < manifest ; exists ; 2005 ; The Psychiatrist Volume 29 ; 29 > 
+    au < manifest ; exists ; 2006 ; The Psychiatrist Volume 30 ; 30 > 
+    au < manifest ; exists ; 2007 ; The Psychiatrist Volume 31 ; 31 > 
+    au < manifest ; exists ; 2008 ; The Psychiatrist Volume 32 ; 32 > 
+    au < manifest ; exists ; 2009 ; The Psychiatrist Volume 33 ; 33 > 
+    au < manifest ; exists ; 2010 ; The Psychiatrist Volume 34 ; 34 > 
+    au < manifest ; exists ; 2011 ; The Psychiatrist Volume 35 ; 35 > 
 
   }
 
@@ -3499,7 +3503,7 @@
       eissn = 1753-5530
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3530,7 +3534,7 @@
       eissn = 1749-6284
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3557,7 +3561,7 @@
       eissn = 1743-2928
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3591,7 +3595,7 @@
       eissn = 1745-8153
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3641,7 +3645,7 @@
       eissn = 1743-2936
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3678,7 +3682,7 @@
       eissn = 1752-2692
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3731,7 +3735,7 @@
       eissn = 1745-8145
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3769,7 +3773,7 @@
       eissn = 1743-2944
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3803,7 +3807,7 @@
       eissn = 1752-2706
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3867,7 +3871,7 @@
       eissn = 1759-7633
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3878,7 +3882,7 @@
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
     au < exists ; exists ; 1982 ; T'ang Studies Volume 1982 ; 1982 > 
-    au < doesNotExist ; 1983 ; T'ang Studies Volume 1983 ; 1983 >
+    au < doesNotExist ; doesNotExist ; 1983 ; T'ang Studies Volume 1983 ; 1983 >
     au < exists ; exists ; 1984 ; T'ang Studies Volume 1984 ; 1984 > 
     au < exists ; exists ; 1985 ; T'ang Studies Volume 1985 ; 1985 > 
     au < exists ; exists ; 1986 ; T'ang Studies Volume 1986 ; 1986 > 
@@ -3886,22 +3890,22 @@
     au < exists ; exists ; 1988 ; T'ang Studies Volume 1988 ; 1988 > 
     au < exists ; exists ; 1989 ; T'ang Studies Volume 1989 ; 1989 > 
     au < exists ; exists ; 1990 ; T'ang Studies Volume 1990 ; 1990 > 
-    au < doesNotExist ; 1991 ; T'ang Studies Volume 1991 ; 1991 > 
+    au < doesNotExist ; doesNotExist ; 1991 ; T'ang Studies Volume 1991 ; 1991 > 
     au < exists ; exists ; 1992 ; T'ang Studies Volume 1992 ; 1992 > 
-    au < doesNotExist ; 1993 ; T'ang Studies Volume 1993 ; 1993 > 
+    au < doesNotExist ; doesNotExist ; 1993 ; T'ang Studies Volume 1993 ; 1993 > 
     au < exists ; exists ; 1994 ; T'ang Studies Volume 1994 ; 1994 > 
     au < exists ; exists ; 1995 ; T'ang Studies Volume 1995 ; 1995 > 
     au < exists ; exists ; 1996 ; T'ang Studies Volume 1996 ; 1996 > 
     au < exists ; exists ; 1997 ; T'ang Studies Volume 1997 ; 1997 > 
-    au < doesNotExist ; 1998 ; T'ang Studies Volume 1998 ; 1998 > 
+    au < doesNotExist ; doesNotExist ; 1998 ; T'ang Studies Volume 1998 ; 1998 > 
     au < exists ; exists ; 1999 ; T'ang Studies Volume 1999 ; 1999 > 
     au < exists ; exists ; 2000 ; T'ang Studies Volume 2000 ; 2000 > 
-    au < doesNotExist ; 2001 ; T'ang Studies Volume 2001 ; 2001 > 
+    au < doesNotExist ; doesNotExist ; 2001 ; T'ang Studies Volume 2001 ; 2001 > 
     au < exists ; exists ; 2002 ; T'ang Studies Volume 2002 ; 2002 > 
-    au < doesNotExist ; 2003 ; T'ang Studies Volume 2003 ; 2003 > 
+    au < doesNotExist ; doesNotExist ; 2003 ; T'ang Studies Volume 2003 ; 2003 > 
     au < exists ; exists ; 2004 ; T'ang Studies Volume 2004 ; 2004 > 
     au < exists ; exists ; 2005 ; T'ang Studies Volume 2005 ; 2005 > 
-    au < doesNotExist ; 2006 ; T'ang Studies Volume 2006 ; 2006 > 
+    au < doesNotExist ; doesNotExist ; 2006 ; T'ang Studies Volume 2006 ; 2006 > 
     au < exists ; exists ; 2007 ; T'ang Studies Volume 2007 ; 2007 > 
     au < exists ; exists ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < exists ; exists ; 2009 ; T'ang Studies Volume 2009 ; 2009 > 
@@ -3917,7 +3921,7 @@
       eissn = 2040-4786
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3976,7 +3980,7 @@
       eissn = 2040-8706
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4040,7 +4044,7 @@
       eissn = 1743-2952
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4103,7 +4107,7 @@
       eissn = 1745-9192
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4131,7 +4135,7 @@
       eissn = 1750-3523
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4155,7 +4159,7 @@
       eissn = 1751-584X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4181,7 +4185,7 @@
       eissn = 2041-0999
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4204,7 +4208,7 @@
       eissn = 1749-6292
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4215,7 +4219,7 @@
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
     au < exists ; exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
-    au < doesNotExist ; ; Vernacular Architecture Volume 2 ; 2 > 
+    au < doesNotExist ; doesNotExist ; 1971 ; Vernacular Architecture Volume 2 ; 2 > 
     au < exists ; exists ; 1972 ; Vernacular Architecture Volume 3 ; 3 > 
     au < exists ; exists ; 1973 ; Vernacular Architecture Volume 4 ; 4 > 
     au < exists ; exists ; 1974 ; Vernacular Architecture Volume 5 ; 5 > 
@@ -4258,6 +4262,7 @@
 
   }
 
+
   {
 
     title <
@@ -4266,7 +4271,7 @@
       eissn = 2042-4345
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
