@@ -74,6 +74,7 @@
     au < released ; 2007 ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
     au < released ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < released ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
+    au < manifest ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
 
   }
 
@@ -94,6 +95,7 @@
     au < released ; 2008 ; Biology Letters Volume 4 ; 4 >
     au < released ; 2009 ; Biology Letters Volume 5 ; 5 >
     au < released ; 2010 ; Biology Letters Volume 6 ; 6 >
+    au < manifest ; 2011 ; Biology Letters Volume 7 ; 7 >
 
   }
 
@@ -130,6 +132,7 @@
     au < released ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
+    au < manifest ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
 
   }
 
@@ -208,9 +211,24 @@
     au < released ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
     au < released ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < released ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
+    au < manifest ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
 
   }
 
+  {
+
+    title <
+      name = Open Biology ;
+      issn = ;
+      eissn = ;
+      issnl = 
+    >
+    
+    param[base_url] = 
+    comment = Open Biology will begin receiving submissions of research articles starting in July 2011
+      
+  }
+  
   {
 
     title <
@@ -413,6 +431,7 @@
     au < released ; 2008 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
     au < released ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < released ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
+    au < manifest ; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
 
   }
 
@@ -615,6 +634,7 @@
     au < released ; 2008 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
     au < released ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
     au < released ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
+    au < manifest ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
 
   }
 
@@ -1210,6 +1230,7 @@
     au < released ; 2008 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 >
     au < released ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
     au < released ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
+    au < manifest ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
 
   }
 
@@ -1426,6 +1447,7 @@
     au < released ; 2008 ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
     au < released ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
+    au < manifest ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
 
   }
 
@@ -1434,7 +1456,7 @@
     title <
       name = Proceedings of the Royal Society of London ;
       issn = 0370-1662 ;
-      issnl = 0370-1662
+      issnl = 0370-1662 
     >
 
     param[base_url] = http://rspl.royalsocietypublishing.org/
