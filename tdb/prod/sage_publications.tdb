@@ -1332,7 +1332,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; American Politics Research Volume 34 ; 34 >
+        au < down ; 2006 ; American Politics Research Volume 34 ; 34 >
 
       }
 
@@ -1342,10 +1342,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; American Politics Research Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; down ; 0 ; American Politics Research Volume 35 ; 35 >
-        au < HighWirePressPlugin ; down ; 0 ; American Politics Research Volume 36 ; 36 >
-        au < HighWirePressPlugin ; down ; 0 ; American Politics Research Volume 37 ; 37 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; American Politics Research Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; American Politics Research Volume 35 ; 35 >
+        au < HighWirePressPlugin ; down ; 2008 ; American Politics Research Volume 36 ; 36 >
+        au < HighWirePressPlugin ; down ; 2009 ; American Politics Research Volume 37 ; 37 >
 
       }
 
@@ -1414,11 +1414,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; The American Review of Public Administration Volume 35 ; 35 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The American Review of Public Administration Volume 36 ; 36 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The American Review of Public Administration Volume 37 ; 37 >
-        au < HighWirePressPlugin ; down ; 0 ; The American Review of Public Administration Volume 38 ; 38 >
-        au < HighWirePressPlugin ; down ; 0 ; The American Review of Public Administration Volume 39 ; 39 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The American Review of Public Administration Volume 35 ; 35 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The American Review of Public Administration Volume 36 ; 36 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The American Review of Public Administration Volume 37 ; 37 >
+        au < HighWirePressPlugin ; down ; 2008 ; The American Review of Public Administration Volume 38 ; 38 >
+        au < HighWirePressPlugin ; down ; 2009 ; The American Review of Public Administration Volume 39 ; 39 >
 
       }
 
@@ -1489,11 +1489,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Angiology Volume 56 ; 56 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Angiology Volume 57 ; 57 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Angiology Volume 58 ; 58 >
-        au < HighWirePressPlugin ; down ; 0 ; Angiology Volume 59 ; 59 >
-        au < HighWirePressPlugin ; down ; 0 ; Angiology Volume 60 ; 60 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Angiology Volume 56 ; 56 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Angiology Volume 57 ; 57 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Angiology Volume 58 ; 58 >
+        au < HighWirePressPlugin ; down ; 2008 ; Angiology Volume 59 ; 59 >
+        au < HighWirePressPlugin ; down ; 2009 ; Angiology Volume 60 ; 60 >
 
       }
 
@@ -1585,10 +1585,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Animation Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Animation Volume 2 ; 2 >
-        au < HighWirePressPlugin ; down ; 0 ; Animation Volume 3 ; 3 >
-        au < HighWirePressPlugin ; down ; 0 ; Animation Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Animation Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Animation Volume 2 ; 2 >
+        au < HighWirePressPlugin ; down ; 2008 ; Animation Volume 3 ; 3 >
+        au < HighWirePressPlugin ; down ; 2009 ; Animation Volume 4 ; 4 >
 
       }
 
@@ -1626,7 +1626,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 604 ; 604 >
+        au < down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 604 ; 604 >
 
       }
 
@@ -1636,33 +1636,33 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 598 ; 598 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 599 ; 599 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 601 ; 601 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 602 ; 602 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 603 ; 603 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 605 ; 605 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 606 ; 606 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 607 ; 607 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 608 ; 608 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 609 ; 609 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 610 ; 610 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 611 ; 611 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
-        au < HighWireStrVolPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
-        au < HighWirePressPlugin ; down ; 0 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Annals of the American Academy of Political and Social Science Volume 598 ; 598 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Annals of the American Academy of Political and Social Science Volume 599 ; 599 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Annals of the American Academy of Political and Social Science Volume 600 ; 600 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Annals of the American Academy of Political and Social Science Volume 601 ; 601 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Annals of the American Academy of Political and Social Science Volume 602 ; 602 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 603 ; 603 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 605 ; 605 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 606 ; 606 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 607 ; 607 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Annals of the American Academy of Political and Social Science Volume 608 ; 608 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 609 ; 609 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 610 ; 610 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 611 ; 611 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
+        au < HighWirePressPlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
+        au < HighWirePressPlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
+        au < HighWirePressPlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
+        au < HighWirePressPlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 >
+        au < HighWirePressPlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 >
 
       }
 
@@ -2330,11 +2330,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Anthropological Theory Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Anthropological Theory Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Anthropological Theory Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 0 ; Anthropological Theory Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 0 ; Anthropological Theory Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Anthropological Theory Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Anthropological Theory Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Anthropological Theory Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2008 ; Anthropological Theory Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2009 ; Anthropological Theory Volume 9 ; 9 >
 
       }
 
@@ -2377,7 +2377,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Applied Psychological Measurement Volume 30 ; 30 >
+        au < down ; 2006 ; Applied Psychological Measurement Volume 30 ; 30 >
 
       }
 
@@ -2387,10 +2387,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Applied Psychological Measurement Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Applied Psychological Measurement Volume 31 ; 31 >
-        au < HighWirePressPlugin ; down ; 0 ; Applied Psychological Measurement Volume 32 ; 32 >
-        au < HighWirePressPlugin ; down ; 0 ; Applied Psychological Measurement Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Applied Psychological Measurement Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Applied Psychological Measurement Volume 31 ; 31 >
+        au < HighWirePressPlugin ; down ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 >
+        au < HighWirePressPlugin ; down ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 >
 
       }
 
@@ -2455,12 +2455,12 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Armed Forces & Society Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Armed Forces & Society Volume 31 ; 31 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Armed Forces & Society Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Armed Forces & Society Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Armed Forces & Society Volume 34 ; 34 >
-        au < HighWirePressPlugin ; down ; 0 ; Armed Forces & Society Volume 35 ; 35 >
+        au < HighWireStrVolPlugin ; down ; 2002 ; Armed Forces & Society Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Armed Forces & Society Volume 31 ; 31 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Armed Forces & Society Volume 32 ; 32 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Armed Forces & Society Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Armed Forces & Society Volume 34 ; 34 >
+        au < HighWirePressPlugin ; down ; 2008 ; Armed Forces & Society Volume 35 ; 35 >
 
       }
 
@@ -2527,11 +2527,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Arts and Humanities in Higher Education Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Arts and Humanities in Higher Education Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Arts and Humanities in Higher Education Volume 6 ; 6 >
-        au < HighWirePressPlugin ; down ; 0 ; Arts and Humanities in Higher Education Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 0 ; Arts and Humanities in Higher Education Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Arts and Humanities in Higher Education Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Arts and Humanities in Higher Education Volume 6 ; 6 >
+        au < HighWirePressPlugin ; down ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
 
@@ -2571,11 +2571,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
-        au < HighWirePressPlugin ; down ; 0 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
-        au < HighWirePressPlugin ; down ; 0 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
+        au < HighWirePressPlugin ; down ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
+        au < HighWirePressPlugin ; down ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
 
@@ -2633,7 +2633,7 @@
         au < manifest ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
         au < manifest ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
         au < manifest ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
-        au < manifest ; 2011 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
+        au < manifest ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 >
         
       }
 
@@ -2654,9 +2654,9 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 0 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < HighWirePressPlugin ; down ; 0 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
+        au < HighWirePressPlugin ; down ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -2708,11 +2708,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Asian Journal of Management Cases Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Asian Journal of Management Cases Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Asian Journal of Management Cases Volume 4 ; 4 >
-        au < HighWirePressPlugin ; down ; 0 ; Asian Journal of Management Cases Volume 5 ; 5 >
-        au < HighWirePressPlugin ; down ; 0 ; Asian Journal of Management Cases Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Asian Journal of Management Cases Volume 4 ; 4 >
+        au < HighWirePressPlugin ; down ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 >
+        au < HighWirePressPlugin ; down ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
 
@@ -2750,11 +2750,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Assessment Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Assessment Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Assessment Volume 14 ; 14 >
-        au < HighWirePressPlugin ; down ; 0 ; Assessment Volume 15 ; 15 >
-        au < HighWirePressPlugin ; down ; 0 ; Assessment Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Assessment Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Assessment Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Assessment Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2008 ; Assessment Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2009 ; Assessment Volume 16 ; 16 >
 
       }
 
@@ -2802,9 +2802,9 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 0 ; Assessment for Effective Intervention Volume 33 ; 33 >
-        au < HighWirePressPlugin ; down ; 0 ; Assessment for Effective Intervention Volume 34 ; 34 >
-        au < HighWirePressPlugin ; down ; 0 ; Assessment for Effective Intervention Volume 35 ; 35 >
+        au < HighWirePressPlugin ; down ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 >
+        au < HighWirePressPlugin ; down ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 >
 
       }
      
@@ -2866,11 +2866,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Autism Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Autism Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Autism Volume 11 ; 11 >
-        au < HighWirePressPlugin ; down ; 0 ; Autism Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; 0 ; Autism Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Autism Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Autism Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Autism Volume 11 ; 11 >
+        au < HighWirePressPlugin ; down ; 2008 ; Autism Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2009 ; Autism Volume 13 ; 13 >
 
       }
 
@@ -2938,7 +2938,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Behavior Modification Volume 30 ; 30 >
+        au < down ; 2006 ; Behavior Modification Volume 30 ; 30 >
 
       }
 
@@ -2948,10 +2948,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Behavior Modification Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Behavior Modification Volume 31 ; 31 >
-        au < HighWirePressPlugin ; down ; 0 ; Behavior Modification Volume 32 ; 32 >
-        au < HighWirePressPlugin ; down ; 0 ; Behavior Modification Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Behavior Modification Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Behavior Modification Volume 31 ; 31 >
+        au < HighWirePressPlugin ; down ; 2007 ; Behavior Modification Volume 32 ; 32 >
+        au < HighWirePressPlugin ; down ; 2008 ; Behavior Modification Volume 33 ; 33 >
 
       }
 
@@ -3018,8 +3018,8 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Behavioral and Cognitive Neuroscience Reviews Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Behavioral and Cognitive Neuroscience Reviews Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Behavioral and Cognitive Neuroscience Reviews Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Behavioral and Cognitive Neuroscience Reviews Volume 5 ; 5 >
 
       }
 
@@ -3054,8 +3054,8 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 0 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 >
-        au < HighWirePressPlugin ; down ; 0 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 >
+        au < HighWirePressPlugin ; down ; 2008 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 >
+        au < HighWirePressPlugin ; down ; 2009 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 >
 
       }
 
@@ -3128,7 +3128,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Biological Research For Nursing Volume 7 ; 7 >
+        au < down ; 2005 ; Biological Research For Nursing Volume 7 ; 7 >
 
       }
 
@@ -3138,11 +3138,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Biological Research For Nursing Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Biological Research For Nursing Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Biological Research For Nursing Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; 0 ; Biological Research For Nursing Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; 0 ; Biological Research For Nursing Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Biological Research For Nursing Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Biological Research For Nursing Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Biological Research For Nursing Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2008 ; Biological Research For Nursing Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2009 ; Biological Research For Nursing Volume 11 ; 11 >
 
       }
 
@@ -3187,7 +3187,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Body & Society Volume 12 ; 12 >
+        au < down ; 2006 ; Body & Society Volume 12 ; 12 >
 
       }
 
@@ -3197,10 +3197,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Body & Society Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Body & Society Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 0 ; Body & Society Volume 14 ; 14 >
-        au < HighWirePressPlugin ; down ; 0 ; Body & Society Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Body & Society Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Body & Society Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2008 ; Body & Society Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2009 ; Body & Society Volume 15 ; 15 >
 
       }
 
@@ -3247,8 +3247,8 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 0 ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 0 ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2008 ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2009 ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 >
 
       }
 
@@ -3289,9 +3289,9 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journal of Infection Control Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journal of Infection Control Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journal of Infection Control Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; British Journal of Infection Control Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; British Journal of Infection Control Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2009 ; British Journal of Infection Control Volume 10 ; 10 >
 
       }
 
@@ -3333,11 +3333,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journal of Visual Impairment Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journal of Visual Impairment Volume 24 ; 24 >
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journal of Visual Impairment Volume 25 ; 25 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journal of Visual Impairment Volume 26 ; 26 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journal of Visual Impairment Volume 27 ; 27 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; British Journal of Visual Impairment Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; British Journal of Visual Impairment Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; British Journal of Visual Impairment Volume 25 ; 25 >
+        au < HighWirePressPlugin ; down ; 2008 ; British Journal of Visual Impairment Volume 26 ; 26 >
+        au < HighWirePressPlugin ; down ; 2009 ; British Journal of Visual Impairment Volume 27 ; 27 >
 
       }
 
@@ -3396,11 +3396,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journalism Review Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journalism Review Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; down ; 0 ; British Journalism Review Volume 18 ; 18 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journalism Review Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 0 ; British Journalism Review Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; British Journalism Review Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; British Journalism Review Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; British Journalism Review Volume 18 ; 18 >
+        au < HighWirePressPlugin ; down ; 2008 ; British Journalism Review Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2009 ; British Journalism Review Volume 20 ; 20 >
 
       }
 
@@ -25708,7 +25708,7 @@ comment[mpj] = now published by Brill
 
     {
       title <
-          name = Otolaryngology-Head and Neck Surgery ;
+          name = Otolaryngology -- Head and Neck Surgery ;
           issn = 0194-5998 ;
           eissn = 1097-6817
       >
@@ -25718,6 +25718,41 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://oto.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 >
+        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 >
+        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 >
+        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 115 ; 115 >
+        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 >
+        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 >
+        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 118 ; 118 >
+        au < exists ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 119 ; 119 >
+        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 >
+        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 121 ; 121 >
+        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 122 ; 122 >
+        au < exists ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 123 ; 123 >
+        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 >
+        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 >
+        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 >
+        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 >
+        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 >
+        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 >
+        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 >
+        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 >
+        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 132 ; 132 >
+        au < exists ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 133 ; 133 >
+        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 >
+        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 >
+        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 >
+        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
+        au < exists ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
+        au < exists ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
+        au < exists ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
+        au < exists ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
+        au < exists ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 >
+        au < manifest ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 >
+        au < manifest ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 >
+        au < manifest ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 >
 
       }
 
@@ -25743,7 +25778,40 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Palliative Medicine Volume 21 ; 21 >
         au < HighWirePressPlugin ; down ; 0 ; Palliative Medicine Volume 22 ; 22 >
         au < HighWireStrVolPlugin ; down ; 0 ; Palliative Medicine Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Palliative Medicine Volume 24 ; 24 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pmj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Palliative Medicine Volume 1 ; 1 >
+        au < manifest ; 1988 ; Palliative Medicine Volume 2 ; 2 >
+        au < manifest ; 1989 ; Palliative Medicine Volume 3 ; 3 >
+        au < manifest ; 1990 ; Palliative Medicine Volume 4 ; 4 >
+        au < manifest ; 1991 ; Palliative Medicine Volume 5 ; 5 >
+        au < manifest ; 1992 ; Palliative Medicine Volume 6 ; 6 >
+        au < manifest ; 1993 ; Palliative Medicine Volume 7 ; 7 >
+        au < manifest ; 1994 ; Palliative Medicine Volume 8 ; 8 >
+        au < manifest ; 1995 ; Palliative Medicine Volume 9 ; 9 >
+        au < manifest ; 1996 ; Palliative Medicine Volume 10 ; 10 >
+        au < manifest ; 1997 ; Palliative Medicine Volume 11 ; 11 >
+        au < manifest ; 1998 ; Palliative Medicine Volume 12 ; 12 >
+        au < manifest ; 1999 ; Palliative Medicine Volume 13 ; 13 >
+        au < manifest ; 2000 ; Palliative Medicine Volume 14 ; 14 >
+        au < manifest ; 2001 ; Palliative Medicine Volume 15 ; 15 >
+        au < manifest ; 2002 ; Palliative Medicine Volume 16 ; 16 >
+        au < manifest ; 2003 ; Palliative Medicine Volume 17 ; 17 >
+        au < manifest ; 2004 ; Palliative Medicine Volume 18 ; 18 >
+        au < manifest ; 2005 ; Palliative Medicine Volume 19 ; 19 >
+        au < manifest ; 2006 ; Palliative Medicine Volume 20 ; 20 >
+        au < manifest ; 2007 ; Palliative Medicine Volume 21 ; 21 >
+        au < manifest ; 2008 ; Palliative Medicine Volume 22 ; 22 >
+        au < manifest ; 2009 ; Palliative Medicine Volume 23 ; 23 >
+        au < manifest ; 2010 ; Palliative Medicine Volume 24 ; 24 >
+        au < manifest ; 2011 ; Palliative Medicine Volume 25 ; 25 >
 
       }
 
@@ -25769,7 +25837,32 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Party Politics Volume 13 ; 13 >
         au < HighWirePressPlugin ; down ; 0 ; Party Politics Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; down ; 0 ; Party Politics Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Party Politics Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ppq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Party Politics Volume 1 ; 1 >
+        au < manifest ; 1996 ; Party Politics Volume 2 ; 2 >
+        au < manifest ; 1997 ; Party Politics Volume 3 ; 3 >
+        au < manifest ; 1998 ; Party Politics Volume 4 ; 4 >
+        au < manifest ; 1999 ; Party Politics Volume 5 ; 5 >
+        au < manifest ; 2000 ; Party Politics Volume 6 ; 6 >
+        au < manifest ; 2001 ; Party Politics Volume 7 ; 7 >
+        au < manifest ; 2002 ; Party Politics Volume 8 ; 8 >
+        au < manifest ; 2003 ; Party Politics Volume 9 ; 9 >
+        au < manifest ; 2004 ; Party Politics Volume 10 ; 10 >
+        au < manifest ; 2005 ; Party Politics Volume 11 ; 11 >
+        au < manifest ; 2006 ; Party Politics Volume 12 ; 12 >
+        au < manifest ; 2007 ; Party Politics Volume 13 ; 13 >
+        au < manifest ; 2008 ; Party Politics Volume 14 ; 14 >
+        au < manifest ; 2009 ; Party Politics Volume 15 ; 15 >
+        au < manifest ; 2010 ; Party Politics Volume 16 ; 16 >
+        au < manifest ; 2011 ; Party Politics Volume 17 ; 17 >
 
       }
 
@@ -25793,7 +25886,41 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Perfusion Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; down ; 0 ; Perfusion Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; 0 ; Perfusion Volume 23 ; 23 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Perfusion Volume 24 ; 24 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://prf.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Perfusion Volume 1 ; 1 >
+        au < manifest ; 1987 ; Perfusion Volume 2 ; 2 >
+        au < manifest ; 1988 ; Perfusion Volume 3 ; 3 >
+        au < manifest ; 1989 ; Perfusion Volume 4 ; 4 >
+        au < manifest ; 1990 ; Perfusion Volume 5 ; 5 >
+        au < manifest ; 1991 ; Perfusion Volume 6 ; 6 >
+        au < manifest ; 1992 ; Perfusion Volume 7 ; 7 >
+        au < manifest ; 1993 ; Perfusion Volume 8 ; 8 >
+        au < manifest ; 1994 ; Perfusion Volume 9 ; 9 >
+        au < manifest ; 1995 ; Perfusion Volume 10 ; 10 >
+        au < manifest ; 1996 ; Perfusion Volume 11 ; 11 >
+        au < manifest ; 1997 ; Perfusion Volume 12 ; 12 >
+        au < manifest ; 1998 ; Perfusion Volume 13 ; 13 >
+        au < manifest ; 1999 ; Perfusion Volume 14 ; 14 >
+        au < manifest ; 2000 ; Perfusion Volume 15 ; 15 >
+        au < manifest ; 2001 ; Perfusion Volume 16 ; 16 >
+        au < manifest ; 2002 ; Perfusion Volume 17 ; 17 >
+        au < manifest ; 2003 ; Perfusion Volume 18 ; 18 >
+        au < manifest ; 2004 ; Perfusion Volume 19 ; 19 >
+        au < manifest ; 2005 ; Perfusion Volume 20 ; 20 >
+        au < manifest ; 2006 ; Perfusion Volume 21 ; 21 >
+        au < manifest ; 2007 ; Perfusion Volume 22 ; 22 >
+        au < manifest ; 2008 ; Perfusion Volume 23 ; 23 >
+        au < manifest ; 2009 ; Perfusion Volume 24 ; 24 >
+        au < manifest ; 2010 ; Perfusion Volume 25 ; 25 >
+        au < manifest ; 2011 ; Perfusion Volume 26 ; 26 >
 
       }
 
@@ -25819,7 +25946,52 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; 0 ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; 0 ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Personality and Social Psychology Bulletin Volume 36 ; 36 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://psp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1974 ; Personality and Social Psychology Bulletin Volume 1 ; 1 >
+        au < manifest ; 1976 ; Personality and Social Psychology Bulletin Volume 2 ; 2 >
+        au < manifest ; 1976 ; Personality and Social Psychology Bulletin Volume 3 ; 3 >
+        au < manifest ; 1978 ; Personality and Social Psychology Bulletin Volume 4 ; 4 >
+        au < manifest ; 1979 ; Personality and Social Psychology Bulletin Volume 5 ; 5 >
+        au < manifest ; 1980 ; Personality and Social Psychology Bulletin Volume 6 ; 6 >
+        au < manifest ; 1981 ; Personality and Social Psychology Bulletin Volume 7 ; 7 >
+        au < manifest ; 1982 ; Personality and Social Psychology Bulletin Volume 8 ; 8 >
+        au < manifest ; 1983 ; Personality and Social Psychology Bulletin Volume 9 ; 9 >
+        au < manifest ; 1984 ; Personality and Social Psychology Bulletin Volume 10 ; 10 >
+        au < manifest ; 1985 ; Personality and Social Psychology Bulletin Volume 11 ; 11 >
+        au < manifest ; 1986 ; Personality and Social Psychology Bulletin Volume 12 ; 12 >
+        au < manifest ; 1987 ; Personality and Social Psychology Bulletin Volume 13 ; 13 >
+        au < manifest ; 1988 ; Personality and Social Psychology Bulletin Volume 14 ; 14 >
+        au < manifest ; 1989 ; Personality and Social Psychology Bulletin Volume 15 ; 15 >
+        au < manifest ; 1990 ; Personality and Social Psychology Bulletin Volume 16 ; 16 >
+        au < manifest ; 1991 ; Personality and Social Psychology Bulletin Volume 17 ; 17 >
+        au < manifest ; 1992 ; Personality and Social Psychology Bulletin Volume 18 ; 18 >
+        au < manifest ; 1993 ; Personality and Social Psychology Bulletin Volume 19 ; 19 >
+        au < manifest ; 1994 ; Personality and Social Psychology Bulletin Volume 20 ; 20 >
+        au < manifest ; 1995 ; Personality and Social Psychology Bulletin Volume 21 ; 21 >
+        au < manifest ; 1996 ; Personality and Social Psychology Bulletin Volume 22 ; 22 >
+        au < manifest ; 1997 ; Personality and Social Psychology Bulletin Volume 23 ; 23 >
+        au < manifest ; 1998 ; Personality and Social Psychology Bulletin Volume 24 ; 24 >
+        au < manifest ; 1999 ; Personality and Social Psychology Bulletin Volume 25 ; 25 >
+        au < manifest ; 2000 ; Personality and Social Psychology Bulletin Volume 26 ; 26 >
+        au < manifest ; 2001 ; Personality and Social Psychology Bulletin Volume 27 ; 27 >
+        au < manifest ; 2002 ; Personality and Social Psychology Bulletin Volume 28 ; 28 >
+        au < manifest ; 2003 ; Personality and Social Psychology Bulletin Volume 29 ; 29 >
+        au < manifest ; 2004 ; Personality and Social Psychology Bulletin Volume 30 ; 30 >
+        au < manifest ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
+        au < manifest ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
+        au < manifest ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
+        au < manifest ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
+        au < manifest ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
+        au < manifest ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 >
+        au < manifest ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 >
 
       }
 
@@ -25843,7 +26015,30 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Personality and Social Psychology Review Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; 0 ; Personality and Social Psychology Review Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; 0 ; Personality and Social Psychology Review Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Personality and Social Psychology Review Volume 14 ; 14 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://psr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Personality and Social Psychology Review Volume 1 ; 1 >
+        au < manifest ; 1998 ; Personality and Social Psychology Review Volume 2 ; 2 >
+        au < manifest ; 1999 ; Personality and Social Psychology Review Volume 3 ; 3 >
+        au < manifest ; 2000 ; Personality and Social Psychology Review Volume 4 ; 4 >
+        au < manifest ; 2001 ; Personality and Social Psychology Review Volume 5 ; 5 >
+        au < manifest ; 2002 ; Personality and Social Psychology Review Volume 6 ; 6 >
+        au < manifest ; 2003 ; Personality and Social Psychology Review Volume 7 ; 7 >
+        au < manifest ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
+        au < manifest ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
+        au < manifest ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
+        au < manifest ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
+        au < manifest ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
+        au < manifest ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
+        au < manifest ; 2010 ; Personality and Social Psychology Review Volume 14 ; 14 >
+        au < manifest ; 2011 ; Personality and Social Psychology Review Volume 15 ; 15 >
 
       }
 
@@ -25869,7 +26064,37 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
         au < HighWirePressPlugin ; down ; 0 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; down ; 0 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pvs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 1 ; 1 >
+        au < manifest ; 1989 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 2 ; 2 >
+        au < manifest ; 1990 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 3 ; 3 >
+        au < manifest ; 1991 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 4 ; 4 >
+        au < manifest ; 1992 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 5 ; 5 >
+        au < manifest ; 1993 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 6 ; 6 >
+        au < manifest ; 1994 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 7 ; 7 >
+        au < manifest ; 1995 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 8 ; 8 >
+        au < manifest ; 1996 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 9 ; 9 >
+        au < manifest ; 1999 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 10 ; 10 >
+        au < manifest ; 1999 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 11 ; 11 >
+        au < manifest ; 1999 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 12 ; 12 >
+        au < manifest ; 2000 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 13 ; 13 >
+        au < manifest ; 2001 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 14 ; 14 >
+        au < manifest ; 2002 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 15 ; 15 >
+        au < manifest ; 2004 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 16 ; 16 >
+        au < manifest ; 2005 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
+        au < manifest ; 2006 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
+        au < manifest ; 2007 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
+        au < manifest ; 2008 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
+        au < manifest ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
+        au < manifest ; 2010 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 >
 
       }
 
@@ -25895,7 +26120,52 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Philosophy & Social Criticism Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; 0 ; Philosophy & Social Criticism Volume 34 ; 34 >
         au < HighWireStrVolPlugin ; down ; 0 ; Philosophy & Social Criticism Volume 35 ; 35 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Philosophy & Social Criticism Volume 36 ; 36 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://psc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1973 ; Philosophy & Social Criticism Volume 1 ; 1 >
+        au < manifest ; 1974 ; Philosophy & Social Criticism Volume 2 ; 2 >
+        au < manifest ; 1975 ; Philosophy & Social Criticism Volume 3 ; 3 >
+        au < manifest ; 1976 ; Philosophy & Social Criticism Volume 4 ; 4 >
+        au < manifest ; 1978 ; Philosophy & Social Criticism Volume 5 ; 5 >
+        au < manifest ; 1979 ; Philosophy & Social Criticism Volume 6 ; 6 >
+        au < manifest ; 1980 ; Philosophy & Social Criticism Volume 7 ; 7 >
+        au < manifest ; 1981 ; Philosophy & Social Criticism Volume 8 ; 8 >
+        au < manifest ; 1982 ; Philosophy & Social Criticism Volume 9 ; 9 >
+        au < manifest ; 1984 ; Philosophy & Social Criticism Volume 10 ; 10 >
+        au < manifest ; 1985 ; Philosophy & Social Criticism Volume 11 ; 11 >
+        au < manifest ; 1987 ; Philosophy & Social Criticism Volume 12 ; 12 >
+        au < manifest ; 1987 ; Philosophy & Social Criticism Volume 13 ; 13 >
+        au < manifest ; 1988 ; Philosophy & Social Criticism Volume 14 ; 14 >
+        au < manifest ; 1989 ; Philosophy & Social Criticism Volume 15 ; 15 >
+        au < manifest ; 1990 ; Philosophy & Social Criticism Volume 16 ; 16 >
+        au < manifest ; 1991 ; Philosophy & Social Criticism Volume 17 ; 17 >
+        au < manifest ; 1992 ; Philosophy & Social Criticism Volume 18 ; 18 >
+        au < manifest ; 1993 ; Philosophy & Social Criticism Volume 19 ; 19 >
+        au < manifest ; 1994 ; Philosophy & Social Criticism Volume 20 ; 20 >
+        au < manifest ; 1995 ; Philosophy & Social Criticism Volume 21 ; 21 >
+        au < manifest ; 1996 ; Philosophy & Social Criticism Volume 22 ; 22 >
+        au < manifest ; 1997 ; Philosophy & Social Criticism Volume 23 ; 23 >
+        au < manifest ; 1998 ; Philosophy & Social Criticism Volume 24 ; 24 >
+        au < manifest ; 1999 ; Philosophy & Social Criticism Volume 25 ; 25 >
+        au < manifest ; 2000 ; Philosophy & Social Criticism Volume 26 ; 26 >
+        au < manifest ; 2001 ; Philosophy & Social Criticism Volume 27 ; 27 >
+        au < manifest ; 2002 ; Philosophy & Social Criticism Volume 28 ; 28 >
+        au < manifest ; 2003 ; Philosophy & Social Criticism Volume 29 ; 29 >
+        au < manifest ; 2004 ; Philosophy & Social Criticism Volume 30 ; 30 >
+        au < manifest ; 2005 ; Philosophy & Social Criticism Volume 31 ; 31 >
+        au < manifest ; 2006 ; Philosophy & Social Criticism Volume 32 ; 32 >
+        au < manifest ; 2007 ; Philosophy & Social Criticism Volume 33 ; 33 >
+        au < manifest ; 2008 ; Philosophy & Social Criticism Volume 34 ; 34 >
+        au < manifest ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 >
+        au < manifest ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 >
+        au < manifest ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 >
 
       }
 
@@ -25921,7 +26191,56 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Philosophy of the Social Sciences Volume 37 ; 37 >
         au < HighWirePressPlugin ; down ; 0 ; Philosophy of the Social Sciences Volume 38 ; 38 >
         au < HighWireStrVolPlugin ; down ; 0 ; Philosophy of the Social Sciences Volume 39 ; 39 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Philosophy of the Social Sciences Volume 40 ; 40 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pos.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1971 ; Philosophy of the Social Sciences Volume 1 ; 1 >
+        au < manifest ; 1972 ; Philosophy of the Social Sciences Volume 2 ; 2 >
+        au < manifest ; 1973 ; Philosophy of the Social Sciences Volume 3 ; 3 >
+        au < manifest ; 1974 ; Philosophy of the Social Sciences Volume 4 ; 4 >
+        au < manifest ; 1975 ; Philosophy of the Social Sciences Volume 5 ; 5 >
+        au < manifest ; 1976 ; Philosophy of the Social Sciences Volume 6 ; 6 >
+        au < manifest ; 1977 ; Philosophy of the Social Sciences Volume 7 ; 7 >
+        au < manifest ; 1978 ; Philosophy of the Social Sciences Volume 8 ; 8 >
+        au < manifest ; 1979 ; Philosophy of the Social Sciences Volume 9 ; 9 >
+        au < manifest ; 1980 ; Philosophy of the Social Sciences Volume 10 ; 10 >
+        au < manifest ; 1981 ; Philosophy of the Social Sciences Volume 11 ; 11 >
+        au < manifest ; 1982 ; Philosophy of the Social Sciences Volume 12 ; 12 >
+        au < manifest ; 1983 ; Philosophy of the Social Sciences Volume 13 ; 13 >
+        au < manifest ; 1984 ; Philosophy of the Social Sciences Volume 14 ; 14 >
+        au < manifest ; 1985 ; Philosophy of the Social Sciences Volume 15 ; 15 >
+        au < manifest ; 1986 ; Philosophy of the Social Sciences Volume 16 ; 16 >
+        au < manifest ; 1987 ; Philosophy of the Social Sciences Volume 17 ; 17 >
+        au < manifest ; 1988 ; Philosophy of the Social Sciences Volume 18 ; 18 >
+        au < manifest ; 1989 ; Philosophy of the Social Sciences Volume 19 ; 19 >
+        au < manifest ; 1990 ; Philosophy of the Social Sciences Volume 20 ; 20 >
+        au < manifest ; 1991 ; Philosophy of the Social Sciences Volume 21 ; 21 >
+        au < manifest ; 1992 ; Philosophy of the Social Sciences Volume 22 ; 22 >
+        au < manifest ; 1993 ; Philosophy of the Social Sciences Volume 23 ; 23 >
+        au < manifest ; 1994 ; Philosophy of the Social Sciences Volume 24 ; 24 >
+        au < manifest ; 1995 ; Philosophy of the Social Sciences Volume 25 ; 25 >
+        au < manifest ; 1996 ; Philosophy of the Social Sciences Volume 26 ; 26 >
+        au < manifest ; 1997 ; Philosophy of the Social Sciences Volume 27 ; 27 >
+        au < manifest ; 1998 ; Philosophy of the Social Sciences Volume 28 ; 28 >
+        au < manifest ; 1999 ; Philosophy of the Social Sciences Volume 29 ; 29 >
+        au < manifest ; 2000 ; Philosophy of the Social Sciences Volume 30 ; 30 >
+        au < manifest ; 2001 ; Philosophy of the Social Sciences Volume 31 ; 31 >
+        au < manifest ; 2002 ; Philosophy of the Social Sciences Volume 32 ; 32 >
+        au < manifest ; 2003 ; Philosophy of the Social Sciences Volume 33 ; 33 >
+        au < manifest ; 2004 ; Philosophy of the Social Sciences Volume 34 ; 34 >
+        au < manifest ; 2005 ; Philosophy of the Social Sciences Volume 35 ; 35 >
+        au < manifest ; 2006 ; Philosophy of the Social Sciences Volume 36 ; 36 >
+        au < manifest ; 2007 ; Philosophy of the Social Sciences Volume 37 ; 37 >
+        au < manifest ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 >
+        au < manifest ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 >
+        au < manifest ; 2010 ; Philosophy of the Social Sciences Volume 40 ; 40 >
+        au < manifest ; 2011 ; Philosophy of the Social Sciences Volume 41 ; 41 >
 
       }
 
@@ -25945,8 +26264,25 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Planning Theory Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; 0 ; Planning Theory Volume 6 ; 6 >
         au < HighWirePressPlugin ; down ; 0 ; Planning Theory Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Planning Theory Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Planning Theory Volume 9 ; 9 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://plt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Planning Theory Volume 1 ; 1 >
+        au < manifest ; 2003 ; Planning Theory Volume 2 ; 2 >
+        au < manifest ; 2004 ; Planning Theory Volume 3 ; 3 >
+        au < manifest ; 2005 ; Planning Theory Volume 4 ; 4 >
+        au < manifest ; 2006 ; Planning Theory Volume 5 ; 5 >
+        au < manifest ; 2007 ; Planning Theory Volume 6 ; 6 >
+        au < manifest ; 2008 ; Planning Theory Volume 7 ; 7 >
+        au < manifest ; 2009 ; Planning Theory Volume 8 ; 8 >
+        au < manifest ; 2010 ; Planning Theory Volume 9 ; 9 >
+        au < manifest ; 2011 ; Planning Theory Volume 10 ; 10 >
 
       }
 
@@ -25972,7 +26308,29 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Police Quarterly Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; 0 ; Police Quarterly Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; 0 ; Police Quarterly Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Police Quarterly Volume 13 ; 13 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pqx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1998 ; Police Quarterly Volume 1 ; 1 >
+        au < manifest ; 1999 ; Police Quarterly Volume 2 ; 2 >
+        au < manifest ; 2000 ; Police Quarterly Volume 3 ; 3 >
+        au < manifest ; 2001 ; Police Quarterly Volume 4 ; 4 >
+        au < manifest ; 2002 ; Police Quarterly Volume 5 ; 5 >
+        au < manifest ; 2003 ; Police Quarterly Volume 6 ; 6 >
+        au < manifest ; 2004 ; Police Quarterly Volume 7 ; 7 >
+        au < manifest ; 2005 ; Police Quarterly Volume 8 ; 8 >
+        au < manifest ; 2006 ; Police Quarterly Volume 9 ; 9 >
+        au < manifest ; 2007 ; Police Quarterly Volume 10 ; 10 >
+        au < manifest ; 2008 ; Police Quarterly Volume 11 ; 11 >
+        au < manifest ; 2009 ; Police Quarterly Volume 12 ; 12 >
+        au < manifest ; 2010 ; Police Quarterly Volume 13 ; 13 >
+        au < manifest ; 2011 ; Police Quarterly Volume 14 ; 14 >
 
       }
 
@@ -25994,11 +26352,29 @@ comment[mpj] = now published by Brill
 
 
         au < HighWireStrVolPlugin ; down ; 0 ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; 0 ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; 0 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
         au < HighWirePressPlugin ; down ; 0 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ppn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Policy, Politics, & Nursing Practice Volume 1 ; 1 >
+        au < manifest ; 2001 ; Policy, Politics, & Nursing Practice Volume 2 ; 2 >
+        au < manifest ; 2002 ; Policy, Politics, & Nursing Practice Volume 3 ; 3 >
+        au < manifest ; 2003 ; Policy, Politics, & Nursing Practice Volume 4 ; 4 >
+        au < manifest ; 2004 ; Policy, Politics, & Nursing Practice Volume 5 ; 5 >
+        au < manifest ; 2005 ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
+        au < manifest ; 2006 ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
+        au < manifest ; 2007 ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
+        au < manifest ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
+        au < manifest ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
+        au < manifest ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 >
 
       }
 
@@ -26023,7 +26399,79 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Political Research Quarterly Volume 60 ; 60 >
         au < HighWirePressPlugin ; down ; 0 ; Political Research Quarterly Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; 0 ; Political Research Quarterly Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; manifest ; 0 ; Political Research Quarterly Volume 63 ; 63 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://prq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1948 ; Political Research Quarterly Volume 1 ; 1 >
+        au < manifest ; 1949 ; Political Research Quarterly Volume 2 ; 2 >
+        au < manifest ; 1950 ; Political Research Quarterly Volume 3 ; 3 >
+        au < manifest ; 1951 ; Political Research Quarterly Volume 4 ; 4 >
+        au < manifest ; 1952 ; Political Research Quarterly Volume 5 ; 5 >
+        au < manifest ; 1953 ; Political Research Quarterly Volume 6 ; 6 >
+        au < manifest ; 1954 ; Political Research Quarterly Volume 7 ; 7 >
+        au < manifest ; 1955 ; Political Research Quarterly Volume 8 ; 8 >
+        au < manifest ; 1956 ; Political Research Quarterly Volume 9 ; 9 >
+        au < manifest ; 1957 ; Political Research Quarterly Volume 10 ; 10 >
+        au < manifest ; 1958 ; Political Research Quarterly Volume 11 ; 11 >
+        au < manifest ; 1959 ; Political Research Quarterly Volume 12 ; 12 >
+        au < manifest ; 1960 ; Political Research Quarterly Volume 13 ; 13 >
+        au < manifest ; 1961 ; Political Research Quarterly Volume 14 ; 14 >
+        au < manifest ; 1962 ; Political Research Quarterly Volume 15 ; 15 >
+        au < manifest ; 1963 ; Political Research Quarterly Volume 16 ; 16 >
+        au < manifest ; 1964 ; Political Research Quarterly Volume 17 ; 17 >
+        au < manifest ; 1965 ; Political Research Quarterly Volume 18 ; 18 >
+        au < manifest ; 1966 ; Political Research Quarterly Volume 19 ; 19 >
+        au < manifest ; 1967 ; Political Research Quarterly Volume 20 ; 20 >
+        au < manifest ; 1968 ; Political Research Quarterly Volume 21 ; 21 >
+        au < manifest ; 1969 ; Political Research Quarterly Volume 22 ; 22 >
+        au < manifest ; 1970 ; Political Research Quarterly Volume 23 ; 23 >
+        au < manifest ; 1971 ; Political Research Quarterly Volume 24 ; 24 >
+        au < manifest ; 1972 ; Political Research Quarterly Volume 25 ; 25 >
+        au < manifest ; 1973 ; Political Research Quarterly Volume 26 ; 26 >
+        au < manifest ; 1974 ; Political Research Quarterly Volume 27 ; 27 >
+        au < manifest ; 1975 ; Political Research Quarterly Volume 28 ; 28 >
+        au < manifest ; 1976 ; Political Research Quarterly Volume 29 ; 29 >
+        au < manifest ; 1977 ; Political Research Quarterly Volume 30 ; 30 >
+        au < manifest ; 1978 ; Political Research Quarterly Volume 31 ; 31 >
+        au < manifest ; 1979 ; Political Research Quarterly Volume 32 ; 32 >
+        au < manifest ; 1980 ; Political Research Quarterly Volume 33 ; 33 >
+        au < manifest ; 1981 ; Political Research Quarterly Volume 34 ; 34 >
+        au < manifest ; 1982 ; Political Research Quarterly Volume 35 ; 35 >
+        au < manifest ; 1983 ; Political Research Quarterly Volume 36 ; 36 >
+        au < manifest ; 1984 ; Political Research Quarterly Volume 37 ; 37 >
+        au < manifest ; 1985 ; Political Research Quarterly Volume 38 ; 38 >
+        au < manifest ; 1986 ; Political Research Quarterly Volume 39 ; 39 >
+        au < manifest ; 1987 ; Political Research Quarterly Volume 40 ; 40 >
+        au < manifest ; 1988 ; Political Research Quarterly Volume 41 ; 41 >
+        au < manifest ; 1989 ; Political Research Quarterly Volume 42 ; 42 >
+        au < manifest ; 1990 ; Political Research Quarterly Volume 43 ; 43 >
+        au < manifest ; 1991 ; Political Research Quarterly Volume 44 ; 44 >
+        au < manifest ; 1992 ; Political Research Quarterly Volume 45 ; 45 >
+        au < manifest ; 1993 ; Political Research Quarterly Volume 46 ; 46 >
+        au < manifest ; 1994 ; Political Research Quarterly Volume 47 ; 47 >
+        au < manifest ; 1995 ; Political Research Quarterly Volume 48 ; 48 >
+        au < manifest ; 1996 ; Political Research Quarterly Volume 49 ; 49 >
+        au < manifest ; 1997 ; Political Research Quarterly Volume 50 ; 50 >
+        au < manifest ; 1998 ; Political Research Quarterly Volume 51 ; 51 >
+        au < manifest ; 1999 ; Political Research Quarterly Volume 52 ; 52 >
+        au < manifest ; 2000 ; Political Research Quarterly Volume 53 ; 53 >
+        au < manifest ; 2001 ; Political Research Quarterly Volume 54 ; 54 >
+        au < manifest ; 2002 ; Political Research Quarterly Volume 55 ; 55 >
+        au < manifest ; 2003 ; Political Research Quarterly Volume 56 ; 56 >
+        au < manifest ; 2004 ; Political Research Quarterly Volume 57 ; 57 >
+        au < manifest ; 2005 ; Political Research Quarterly Volume 58 ; 58 >
+        au < manifest ; 2006 ; Political Research Quarterly Volume 59 ; 59 >
+        au < manifest ; 2007 ; Political Research Quarterly Volume 60 ; 60 >
+        au < manifest ; 2008 ; Political Research Quarterly Volume 61 ; 61 >
+        au < manifest ; 2009 ; Political Research Quarterly Volume 62 ; 62 >
+        au < manifest ; 2010 ; Political Research Quarterly Volume 63 ; 63 >
+        au < manifest ; 2011 ; Political Research Quarterly Volume 64 ; 64 >
 
       }
 
@@ -26053,6 +26501,54 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ptx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1973 ; Political Theory Volume 1 ; 1 >
+        au < manifest ; 1974 ; Political Theory Volume 2 ; 2 >
+        au < exists ; 1975 ; Political Theory Volume 3 ; 3 >
+        au < manifest ; 1976 ; Political Theory Volume 4 ; 4 >
+        au < manifest ; 1977 ; Political Theory Volume 5 ; 5 >
+        au < manifest ; 1978 ; Political Theory Volume 6 ; 6 >
+        au < manifest ; 1979 ; Political Theory Volume 7 ; 7 >
+        au < exists ; 1980 ; Political Theory Volume 8 ; 8 >
+        au < manifest ; 1981 ; Political Theory Volume 9 ; 9 >
+        au < manifest ; 1982 ; Political Theory Volume 10 ; 10 >
+        au < manifest ; 1983 ; Political Theory Volume 11 ; 11 >
+        au < manifest ; 1984 ; Political Theory Volume 12 ; 12 >
+        au < manifest ; 1985 ; Political Theory Volume 13 ; 13 >
+        au < manifest ; 1986 ; Political Theory Volume 14 ; 14 >
+        au < manifest ; 1987 ; Political Theory Volume 15 ; 15 >
+        au < manifest ; 1988 ; Political Theory Volume 16 ; 16 >
+        au < manifest ; 1989 ; Political Theory Volume 17 ; 17 >
+        au < manifest ; 1990 ; Political Theory Volume 18 ; 18 >
+        au < manifest ; 1991 ; Political Theory Volume 19 ; 19 >
+        au < manifest ; 1992 ; Political Theory Volume 20 ; 20 >
+        au < manifest ; 1993 ; Political Theory Volume 21 ; 21 >
+        au < manifest ; 1994 ; Political Theory Volume 22 ; 22 >
+        au < manifest ; 1995 ; Political Theory Volume 23 ; 23 >
+        au < manifest ; 1996 ; Political Theory Volume 24 ; 24 >
+        au < manifest ; 1997 ; Political Theory Volume 25 ; 25 >
+        au < manifest ; 1998 ; Political Theory Volume 26 ; 26 >
+        au < manifest ; 1999 ; Political Theory Volume 27 ; 27 >
+        au < manifest ; 2000 ; Political Theory Volume 28 ; 28 >
+        au < manifest ; 2001 ; Political Theory Volume 29 ; 29 >
+        au < manifest ; 2002 ; Political Theory Volume 30 ; 30 >
+        au < manifest ; 2003 ; Political Theory Volume 31 ; 31 >
+        au < manifest ; 2004 ; Political Theory Volume 32 ; 32 >
+        au < manifest ; 2005 ; Political Theory Volume 33 ; 33 >
+        au < manifest ; 2006 ; Political Theory Volume 34 ; 34 >
+        au < manifest ; 2007 ; Political Theory Volume 35 ; 35 >
+        au < manifest ; 2008 ; Political Theory Volume 36 ; 36 >
+        au < manifest ; 2009 ; Political Theory Volume 37 ; 37 >
+        au < manifest ; 2010 ; Political Theory Volume 38 ; 38 >
+        au < manifest ; 2011 ; Political Theory Volume 39 ; 39 >
+
+      }
+
     }
 
     {
@@ -26076,6 +26572,54 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Politics & Society Volume 36 ; 36 >
         au < HighWirePressPlugin ; down ; 0 ; Politics & Society Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Politics & Society Volume 38 ; 38 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1970 ; Politics & Society Volume 1 ; 1 >
+        au < manifest ; 1971 ; Politics & Society Volume 2 ; 2 >
+        au < manifest ; 1972 ; Politics & Society Volume 3 ; 3 >
+        au < manifest ; 1973 ; Politics & Society Volume 4 ; 4 >
+        au < manifest ; 1975 ; Politics & Society Volume 5 ; 5 >
+        au < manifest ; 1976 ; Politics & Society Volume 6 ; 6 >
+        au < manifest ; 1977 ; Politics & Society Volume 7 ; 7 >
+        au < manifest ; 1978 ; Politics & Society Volume 8 ; 8 >
+        au < manifest ; 1979 ; Politics & Society Volume 9 ; 9 >
+        au < manifest ; 1980 ; Politics & Society Volume 10 ; 10 >
+        au < manifest ; 1982 ; Politics & Society Volume 11 ; 11 >
+        au < manifest ; 1983 ; Politics & Society Volume 12 ; 12 >
+        au < manifest ; 1984 ; Politics & Society Volume 13 ; 13 >
+        au < manifest ; 1985 ; Politics & Society Volume 14 ; 14 >
+        au < manifest ; 1986 ; Politics & Society Volume 15 ; 15 >
+        au < manifest ; 1988 ; Politics & Society Volume 16 ; 16 >
+        au < manifest ; 1989 ; Politics & Society Volume 17 ; 17 >
+        au < manifest ; 1990 ; Politics & Society Volume 18 ; 18 >
+        au < manifest ; 1991 ; Politics & Society Volume 19 ; 19 >
+        au < manifest ; 1992 ; Politics & Society Volume 20 ; 20 >
+        au < manifest ; 1993 ; Politics & Society Volume 21 ; 21 >
+        au < manifest ; 1994 ; Politics & Society Volume 22 ; 22 >
+        au < manifest ; 1995 ; Politics & Society Volume 23 ; 23 >
+        au < manifest ; 1996 ; Politics & Society Volume 24 ; 24 >
+        au < manifest ; 1997 ; Politics & Society Volume 25 ; 25 >
+        au < manifest ; 1998 ; Politics & Society Volume 26 ; 26 >
+        au < manifest ; 1999 ; Politics & Society Volume 27 ; 27 >
+        au < manifest ; 2000 ; Politics & Society Volume 28 ; 28 >
+        au < manifest ; 2001 ; Politics & Society Volume 29 ; 29 >
+        au < manifest ; 2002 ; Politics & Society Volume 30 ; 30 >
+        au < manifest ; 2003 ; Politics & Society Volume 31 ; 31 >
+        au < manifest ; 2004 ; Politics & Society Volume 32 ; 32 >
+        au < manifest ; 2005 ; Politics & Society Volume 33 ; 33 >
+        au < manifest ; 2006 ; Politics & Society Volume 34 ; 34 >
+        au < manifest ; 2007 ; Politics & Society Volume 35 ; 35 >
+        au < manifest ; 2008 ; Politics & Society Volume 36 ; 36 >
+        au < manifest ; 2009 ; Politics & Society Volume 37 ; 37 >
+        au < manifest ; 2010 ; Politics & Society Volume 38 ; 38 >
+        au < manifest ; 2011 ; Politics & Society Volume 39 ; 39 >
 
       }
 
@@ -26105,6 +26649,25 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ppe.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Politics, Philosophy & Economics Volume 1 ; 1 >
+        au < manifest ; 2003 ; Politics, Philosophy & Economics Volume 2 ; 2 >
+        au < manifest ; 2004 ; Politics, Philosophy & Economics Volume 3 ; 3 >
+        au < manifest ; 2005 ; Politics, Philosophy & Economics Volume 4 ; 4 >
+        au < manifest ; 2006 ; Politics, Philosophy & Economics Volume 5 ; 5 >
+        au < manifest ; 2007 ; Politics, Philosophy & Economics Volume 6 ; 6 >
+        au < manifest ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 >
+        au < manifest ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 >
+        au < manifest ; 2010 ; Politics, Philosophy & Economics Volume 9 ; 9 >
+        au < manifest ; 2011 ; Politics, Philosophy & Economics Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -26131,6 +26694,106 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tpj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1921 ; The Prison Journal Volume 1 ; 1 >
+        au < manifest ; 1922 ; The Prison Journal Volume 2 ; 2 >
+        au < manifest ; 1923 ; The Prison Journal Volume 3 ; 3 >
+        au < manifest ; 1924 ; The Prison Journal Volume 4 ; 4 >
+        au < manifest ; 1925 ; The Prison Journal Volume 5 ; 5 >
+        au < manifest ; 1926 ; The Prison Journal Volume 6 ; 6 >
+        au < manifest ; 1927 ; The Prison Journal Volume 7 ; 7 >
+        au < manifest ; 1928 ; The Prison Journal Volume 8 ; 8 >
+        au < manifest ; 1929 ; The Prison Journal Volume 9 ; 9 >
+        au < manifest ; 1930 ; The Prison Journal Volume 10 ; 10 >
+        au < manifest ; 1931 ; The Prison Journal Volume 11 ; 11 >
+        au < manifest ; 1932 ; The Prison Journal Volume 12 ; 12 >
+        au < manifest ; 1933 ; The Prison Journal Volume 13 ; 13 >
+        au < manifest ; 1934 ; The Prison Journal Volume 14 ; 14 >
+        au < manifest ; 1935 ; The Prison Journal Volume 15 ; 15 >
+        au < manifest ; 1936 ; The Prison Journal Volume 16 ; 16 >
+        au < manifest ; 1937 ; The Prison Journal Volume 17 ; 17 >
+        au < manifest ; 1938 ; The Prison Journal Volume 18 ; 18 >
+        au < manifest ; 1939 ; The Prison Journal Volume 19 ; 19 >
+        au < manifest ; 1940 ; The Prison Journal Volume 20 ; 20 >
+        au < manifest ; 1941 ; The Prison Journal Volume 21 ; 21 >
+        au < manifest ; 1942 ; The Prison Journal Volume 22 ; 22 >
+        au < manifest ; 1943 ; The Prison Journal Volume 23 ; 23 >
+        au < manifest ; 1944 ; The Prison Journal Volume 24 ; 24 >
+        au < manifest ; 1945 ; The Prison Journal Volume 25 ; 25 >
+        au < manifest ; 1946 ; The Prison Journal Volume 26 ; 26 >
+        au < manifest ; 1947 ; The Prison Journal Volume 27 ; 27 >
+        au < manifest ; 1948 ; The Prison Journal Volume 28 ; 28 >
+        au < manifest ; 1949 ; The Prison Journal Volume 29 ; 29 >
+        au < manifest ; 1950 ; The Prison Journal Volume 30 ; 30 >
+        au < manifest ; 1951 ; The Prison Journal Volume 31 ; 31 >
+        au < manifest ; 1952 ; The Prison Journal Volume 32 ; 32 >
+        au < manifest ; 1953 ; The Prison Journal Volume 33 ; 33 >
+        au < manifest ; 1954 ; The Prison Journal Volume 34 ; 34 >
+        au < manifest ; 1955 ; The Prison Journal Volume 35 ; 35 >
+        au < manifest ; 1956 ; The Prison Journal Volume 36 ; 36 >
+        au < manifest ; 1957 ; The Prison Journal Volume 37 ; 37 >
+        au < manifest ; 1958 ; The Prison Journal Volume 38 ; 38 >
+        au < manifest ; 1959 ; The Prison Journal Volume 39 ; 39 >
+        au < manifest ; 1960 ; The Prison Journal Volume 40 ; 40 >
+        au < manifest ; 1961 ; The Prison Journal Volume 41 ; 41 >
+        au < manifest ; 1962 ; The Prison Journal Volume 42 ; 42 >
+        au < manifest ; 1963 ; The Prison Journal Volume 43 ; 43 >
+        au < manifest ; 1964 ; The Prison Journal Volume 44 ; 44 >
+        au < manifest ; 1965 ; The Prison Journal Volume 45 ; 45 >
+        au < manifest ; 1966 ; The Prison Journal Volume 46 ; 46 >
+        au < manifest ; 1967 ; The Prison Journal Volume 47 ; 47 >
+        au < manifest ; 1968 ; The Prison Journal Volume 48 ; 48 >
+        au < manifest ; 1969 ; The Prison Journal Volume 49 ; 49 >
+        au < manifest ; 1970 ; The Prison Journal Volume 50 ; 50 >
+        au < manifest ; 1971 ; The Prison Journal Volume 51 ; 51 >
+        au < manifest ; 1972 ; The Prison Journal Volume 52 ; 52 >
+        au < manifest ; 1973 ; The Prison Journal Volume 53 ; 53 >
+        au < manifest ; 1974 ; The Prison Journal Volume 54 ; 54 >
+        au < manifest ; 1975 ; The Prison Journal Volume 55 ; 55 >
+        au < manifest ; 1976 ; The Prison Journal Volume 56 ; 56 >
+        au < manifest ; 1977 ; The Prison Journal Volume 57 ; 57 >
+        au < manifest ; 1978 ; The Prison Journal Volume 58 ; 58 >
+        au < manifest ; 1979 ; The Prison Journal Volume 59 ; 59 >
+        au < manifest ; 1980 ; The Prison Journal Volume 60 ; 60 >
+        au < manifest ; 1981 ; The Prison Journal Volume 61 ; 61 >
+        au < manifest ; 1982 ; The Prison Journal Volume 62 ; 62 >
+        au < manifest ; 1983 ; The Prison Journal Volume 63 ; 63 >
+        au < manifest ; 1984 ; The Prison Journal Volume 64 ; 64 >
+        au < manifest ; 1985 ; The Prison Journal Volume 65 ; 65 >
+        au < manifest ; 1986 ; The Prison Journal Volume 66 ; 66 >
+        au < manifest ; 1987 ; The Prison Journal Volume 67 ; 67 >
+        au < manifest ; 1988 ; The Prison Journal Volume 68 ; 68 >
+        au < manifest ; 1989 ; The Prison Journal Volume 69 ; 69 >
+        au < manifest ; 1990 ; The Prison Journal Volume 70 ; 70 >
+        au < doesNotExist ; 1991 ; The Prison Journal Volume 71 ; 71 >
+        au < manifest ; 1992 ; The Prison Journal Volume 72 ; 72 >
+        au < manifest ; 1993 ; The Prison Journal Volume 73 ; 73 >
+        au < manifest ; 1994 ; The Prison Journal Volume 74 ; 74 >
+        au < manifest ; 1995 ; The Prison Journal Volume 75 ; 75 >
+        au < manifest ; 1996 ; The Prison Journal Volume 76 ; 76 >
+        au < manifest ; 1997 ; The Prison Journal Volume 77 ; 77 >
+        au < manifest ; 1998 ; The Prison Journal Volume 78 ; 78 >
+        au < manifest ; 1999 ; The Prison Journal Volume 79 ; 79 >
+        au < manifest ; 2000 ; The Prison Journal Volume 80 ; 80 >
+        au < manifest ; 2001 ; The Prison Journal Volume 81 ; 81 >
+        au < manifest ; 2002 ; The Prison Journal Volume 82 ; 82 >
+        au < manifest ; 2003 ; The Prison Journal Volume 83 ; 83 >
+        au < manifest ; 2004 ; The Prison Journal Volume 84 ; 84 >
+        au < manifest ; 2005 ; The Prison Journal Volume 85 ; 85 >
+        au < manifest ; 2006 ; The Prison Journal Volume 86 ; 86 >
+        au < manifest ; 2007 ; The Prison Journal Volume 87 ; 87 >
+        au < manifest ; 2008 ; The Prison Journal Volume 88 ; 88 >
+        au < manifest ; 2009 ; The Prison Journal Volume 89 ; 89 >
+        au < manifest ; 2010 ; The Prison Journal Volume 90 ; 90 >
+        au < manifest ; 2011 ; The Prison Journal Volume 91 ; 91 >
+
+      }
+
     }
 
     {
@@ -26154,6 +26817,73 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Probation Journal Volume 55 ; 55 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Probation Journal Volume 56 ; 56 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Probation Journal Volume 57 ; 57 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://prb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1929 ; Probation Journal Volume 1 ; 1 >
+        au < manifest ; 1935 ; Probation Journal Volume 2 ; 2 >
+        au < manifest ; 1938 ; Probation Journal Volume 3 ; 3 >
+        au < manifest ; 1942 ; Probation Journal Volume 4 ; 4 >
+        au < manifest ; 1946-1949 ; Probation Journal Volume 5 ; 5 >
+        au < doesNotExist ; 0 ; Probation Journal Volume 6 ; 6 >
+        au < exists ; 1954 ; Probation Journal Volume 7 ; 7 >
+        au < manifest ; 1956 ; Probation Journal Volume 8 ; 8 >
+        au < manifest ; 1959 ; Probation Journal Volume 9 ; 9 >
+        au < manifest ; 1962 ; Probation Journal Volume 10 ; 10 >
+        au < manifest ; 1965 ; Probation Journal Volume 11 ; 11 >
+        au < manifest ; 1966 ; Probation Journal Volume 12 ; 12 >
+        au < manifest ; 1967 ; Probation Journal Volume 13 ; 13 >
+        au < manifest ; 1968 ; Probation Journal Volume 14 ; 14 >
+        au < manifest ; 1969 ; Probation Journal Volume 15 ; 15 >
+        au < manifest ; 1970 ; Probation Journal Volume 16 ; 16 >
+        au < manifest ; 1971 ; Probation Journal Volume 17 ; 17 >
+        au < manifest ; 1972 ; Probation Journal Volume 18 ; 18 >
+        au < manifest ; 1973 ; Probation Journal Volume 19 ; 19 >
+        au < manifest ; 1973 ; Probation Journal Volume 20 ; 20 >
+        au < manifest ; 1974 ; Probation Journal Volume 21 ; 21 >
+        au < manifest ; 1975 ; Probation Journal Volume 22 ; 22 >
+        au < manifest ; 1976 ; Probation Journal Volume 23 ; 23 >
+        au < manifest ; 1977 ; Probation Journal Volume 24 ; 24 >
+        au < manifest ; 1978 ; Probation Journal Volume 25 ; 25 >
+        au < manifest ; 1979 ; Probation Journal Volume 26 ; 26 >
+        au < manifest ; 1980 ; Probation Journal Volume 27 ; 27 >
+        au < manifest ; 1981 ; Probation Journal Volume 28 ; 28 >
+        au < manifest ; 1982 ; Probation Journal Volume 29 ; 29 >
+        au < manifest ; 1983 ; Probation Journal Volume 30 ; 30 >
+        au < manifest ; 1984 ; Probation Journal Volume 31 ; 31 >
+        au < manifest ; 1985 ; Probation Journal Volume 32 ; 32 >
+        au < manifest ; 1986 ; Probation Journal Volume 33 ; 33 >
+        au < manifest ; 1987 ; Probation Journal Volume 34 ; 34 >
+        au < manifest ; 1988 ; Probation Journal Volume 35 ; 35 >
+        au < manifest ; 1989 ; Probation Journal Volume 36 ; 36 >
+        au < manifest ; 1990 ; Probation Journal Volume 37 ; 37 >
+        au < manifest ; 1991 ; Probation Journal Volume 38 ; 38 >
+        au < manifest ; 1992 ; Probation Journal Volume 39 ; 39 >
+        au < manifest ; 1993 ; Probation Journal Volume 40 ; 40 >
+        au < manifest ; 1994 ; Probation Journal Volume 41 ; 41 >
+        au < manifest ; 1995 ; Probation Journal Volume 42 ; 42 >
+        au < manifest ; 1996 ; Probation Journal Volume 43 ; 43 >
+        au < manifest ; 1997 ; Probation Journal Volume 44 ; 44 >
+        au < manifest ; 1998 ; Probation Journal Volume 45 ; 45 >
+        au < manifest ; 1999 ; Probation Journal Volume 46 ; 46 >
+        au < manifest ; 2000 ; Probation Journal Volume 47 ; 47 >
+        au < manifest ; 2001 ; Probation Journal Volume 48 ; 48 >
+        au < manifest ; 2002 ; Probation Journal Volume 49 ; 49 >
+        au < manifest ; 2003 ; Probation Journal Volume 50 ; 50 >
+        au < manifest ; 2004 ; Probation Journal Volume 51 ; 51 >
+        au < manifest ; 2005 ; Probation Journal Volume 52 ; 52 >
+        au < manifest ; 2006 ; Probation Journal Volume 53 ; 53 >
+        au < manifest ; 2007 ; Probation Journal Volume 54 ; 54 >
+        au < manifest ; 2008 ; Probation Journal Volume 55 ; 55 >
+        au < manifest ; 2009 ; Probation Journal Volume 56 ; 56 >
+        au < manifest ; 2010 ; Probation Journal Volume 57 ; 57 >
+        au < manifest ; 2011 ; Probation Journal Volume 58 ; 58 >
 
       }
 
