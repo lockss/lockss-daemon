@@ -3452,10 +3452,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Building Services Engineering Research and Technology Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Building Services Engineering Research and Technology Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; 0 ; Building Services Engineering Research and Technology Volume 29 ; 29 >
-        au < HighWirePressPlugin ; down ; 0 ; Building Services Engineering Research and Technology Volume 30 ; 30 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Building Services Engineering Research and Technology Volume 27 ; 27 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Building Services Engineering Research and Technology Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; 2008 ; Building Services Engineering Research and Technology Volume 29 ; 29 >
+        au < HighWirePressPlugin ; down ; 2009 ; Building Services Engineering Research and Technology Volume 30 ; 30 >
 
       }
 
@@ -3519,7 +3519,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Bulletin of Science, Technology & Society Volume 26 [superseded] ; 26 >
+        au < down ; 2006 ; Bulletin of Science, Technology & Society Volume 26 [superseded] ; 26 >
 
       }
 
@@ -3529,11 +3529,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
-        au < HighWirePressPlugin ; down ; 0 ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; 0 ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
+        au < HighWirePressPlugin ; down ; 2008 ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; 2009 ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
 
       }
 
@@ -3615,7 +3615,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Business & Society Volume 45 ; 45 >
+        au < down ; 2006 ; Business & Society Volume 45 ; 45 >
 
       }
 
@@ -3625,10 +3625,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Business & Society Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Business & Society Volume 46 ; 46 >
-        au < HighWirePressPlugin ; down ; 0 ; Business & Society Volume 47 ; 47 >
-        au < HighWirePressPlugin ; down ; 0 ; Business & Society Volume 48 ; 48 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Business & Society Volume 44 ; 44 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Business & Society Volume 46 ; 46 >
+        au < HighWirePressPlugin ; down ; 2008 ; Business & Society Volume 47 ; 47 >
+        au < HighWirePressPlugin ; down ; 2009 ; Business & Society Volume 48 ; 48 >
 
       }
 
@@ -3708,11 +3708,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Communication Quarterly Volume 68 ; 68 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Communication Quarterly Volume 69 ; 69 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Communication Quarterly Volume 70 ; 70 >
-        au < HighWirePressPlugin ; down ; 0 ; Business Communication Quarterly Volume 71 ; 71 >
-        au < HighWirePressPlugin ; down ; 0 ; Business Communication Quarterly Volume 72 ; 72 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Business Communication Quarterly Volume 68 ; 68 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Business Communication Quarterly Volume 69 ; 69 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Business Communication Quarterly Volume 70 ; 70 >
+        au < HighWirePressPlugin ; down ; 2008 ; Business Communication Quarterly Volume 71 ; 71 >
+        au < HighWirePressPlugin ; down ; 2009 ; Business Communication Quarterly Volume 72 ; 72 >
 
       }
 
@@ -3786,11 +3786,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Information Review Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Information Review Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Business Information Review Volume 24 ; 24 >
-        au < HighWirePressPlugin ; down ; 0 ; Business Information Review Volume 25 ; 25 >
-        au < HighWirePressPlugin ; down ; 0 ; Business Information Review Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Business Information Review Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Business Information Review Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Business Information Review Volume 24 ; 24 >
+        au < HighWirePressPlugin ; down ; 2008 ; Business Information Review Volume 25 ; 25 >
+        au < HighWirePressPlugin ; down ; 2009 ; Business Information Review Volume 26 ; 26 >
 
       }
 
@@ -3848,12 +3848,12 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 18 ; 18 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 23 ; 23 >
-        au < HighWirePressPlugin ; down ; 0 ; Canadian Journal of School Psychology Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 2003 ; Canadian Journal of School Psychology Volume 18 ; 18 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Journal of School Psychology Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Canadian Journal of School Psychology Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Canadian Journal of School Psychology Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2008 ; Canadian Journal of School Psychology Volume 23 ; 23 >
+        au < HighWirePressPlugin ; down ; 2009 ; Canadian Journal of School Psychology Volume 24 ; 24 >
 
       }
 
@@ -3921,7 +3921,7 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 0 ; Career Development for Exceptional Individuals Volume 32 ; 32 >
+        au < HighWirePressPlugin ; down ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 >
 
       }
 
@@ -3985,7 +3985,7 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 0 ; Cartilage Volume 1 ; 1 >
+        au < HighWirePressPlugin ; down ; 2009 ; Cartilage Volume 1 ; 1 >
 
       }
 
@@ -4019,10 +4019,10 @@
 
         comment[20] = manifest page incomplete
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Child Language Teaching and Therapy Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Child Language Teaching and Therapy Volume 23 ; 23 >
-        au < HighWirePressPlugin ; down ; 0 ; Child Language Teaching and Therapy Volume 24 ; 24 >
-        au < HighWirePressPlugin ; down ; 0 ; Child Language Teaching and Therapy Volume 25 ; 25 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Child Language Teaching and Therapy Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Child Language Teaching and Therapy Volume 23 ; 23 >
+        au < HighWirePressPlugin ; down ; 2008 ; Child Language Teaching and Therapy Volume 24 ; 24 >
+        au < HighWirePressPlugin ; down ; 2009 ; Child Language Teaching and Therapy Volume 25 ; 25 >
 
       }
 
@@ -4079,11 +4079,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Child Maltreatment Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Child Maltreatment Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Child Maltreatment Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; 0 ; Child Maltreatment Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 0 ; Child Maltreatment Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Child Maltreatment Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Child Maltreatment Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Child Maltreatment Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2008 ; Child Maltreatment Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2009 ; Child Maltreatment Volume 14 ; 14 >
 
       }
 
@@ -4129,11 +4129,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Childhood Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Childhood Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Childhood Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Childhood Volume 15 ; 15 >
-        au < HighWirePressPlugin ; down ; 0 ; Childhood Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Childhood Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Childhood Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Childhood Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Childhood Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2009 ; Childhood Volume 16 ; 16 >
 
       }
 
@@ -4183,7 +4183,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; China Information Volume 19 ; 19 >
+        au < down ; 2005 ; China Information Volume 19 ; 19 >
 
       }
 
@@ -4193,10 +4193,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; China Information Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 0 ; China Information Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; 0 ; China Information Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; 0 ; China Information Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; China Information Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; China Information Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; China Information Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2009 ; China Information Volume 23 ; 23 >
 
       }
 
@@ -4251,10 +4251,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; China Report Volume 41 ; 41 >
-        au < HighWireStrVolPlugin ; down ; 0 ; China Report Volume 42 ; 42 >
-        au < HighWireStrVolPlugin ; down ; 0 ; China Report Volume 43 ; 43 >
-        au < HighWireStrVolPlugin ; down ; 0 ; China Report Volume 44 ; 44 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; China Report Volume 41 ; 41 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; China Report Volume 42 ; 42 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; China Report Volume 43 ; 43 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; China Report Volume 44 ; 44 >
 
       }
 
@@ -4330,9 +4330,9 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Chronic Illness Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Chronic Illness Volume 3 ; 3 >
-        au < HighWirePressPlugin ; down ; 0 ; Chronic Illness Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Chronic Illness Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Chronic Illness Volume 3 ; 3 >
+        au < HighWirePressPlugin ; down ; 2008 ; Chronic Illness Volume 5 ; 5 >
 
       }
 
@@ -4369,10 +4369,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Chronic Respiratory Disease Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Chronic Respiratory Disease Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Chronic Respiratory Disease Volume 5 ; 5 >
-        au < HighWirePressPlugin ; down ; 0 ; Chronic Respiratory Disease Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Chronic Respiratory Disease Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Chronic Respiratory Disease Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Chronic Respiratory Disease Volume 5 ; 5 >
+        au < HighWirePressPlugin ; down ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 >
 
       }
 
@@ -4410,12 +4410,12 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clin-Alert Volume 42 ; 42 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clin-Alert Volume 43 ; 43 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clin-Alert Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clin-Alert Volume 45 ; 45 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clin-Alert Volume 46 ; 46 >
-        au < HighWirePressPlugin ; down ; 0 ; Clin-Alert Volume 47 ; 47 >
+        au < HighWireStrVolPlugin ; down ; 2004 ; Clin-Alert Volume 42 ; 42 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clin-Alert Volume 43 ; 43 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Clin-Alert Volume 44 ; 44 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clin-Alert Volume 45 ; 45 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Clin-Alert Volume 46 ; 46 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clin-Alert Volume 47 ; 47 >
 
       }
 
@@ -4494,11 +4494,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical and Applied Thrombosis/Hemostasis Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clinical and Applied Thrombosis/Hemostasis Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 >
 
       }
 
@@ -4545,11 +4545,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Case Studies Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Case Studies Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Case Studies Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Case Studies Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Case Studies Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clinical Case Studies Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Case Studies Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Case Studies Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Clinical Case Studies Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical Case Studies Volume 8 ; 8 >
 
       }
 
@@ -4591,7 +4591,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
+        au < down ; 2006 ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 >
 
       }
 
@@ -4601,10 +4601,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Child Psychology and Psychiatry Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clinical Child Psychology and Psychiatry Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2008 ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 >
 
       }
 
@@ -4652,7 +4652,7 @@
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 0 ; Clinical Nursing Research Volume 15 ; 15 >
+        au < down ; 2006 ; Clinical Nursing Research Volume 15 ; 15 >
 
       }
 
@@ -4662,10 +4662,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Nursing Research Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Nursing Research Volume 16 ; 16 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Nursing Research Volume 17 ; 17 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Nursing Research Volume 18 ; 18 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clinical Nursing Research Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Nursing Research Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2008 ; Clinical Nursing Research Volume 17 ; 17 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical Nursing Research Volume 18 ; 18 >
 
       }
 
@@ -4715,11 +4715,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Pediatrics Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Pediatrics Volume 45 ; 45 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Pediatrics Volume 46 ; 46 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Pediatrics Volume 47 ; 47 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Pediatrics Volume 48 ; 48 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Clinical Pediatrics Volume 44 ; 44 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Pediatrics Volume 45 ; 45 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Pediatrics Volume 46 ; 46 >
+        au < HighWirePressPlugin ; down ; 2008 ; Clinical Pediatrics Volume 47 ; 47 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical Pediatrics Volume 48 ; 48 >
 
       }
 
@@ -4799,10 +4799,10 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Rehabilitation Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Rehabilitation Volume 21 ; 21 >
-        au < HighWirePressPlugin ; down ; 0 ; Clinical Rehabilitation Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; down ; 0 ; Clinical Rehabilitation Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Rehabilitation Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Clinical Rehabilitation Volume 21 ; 21 >
+        au < HighWirePressPlugin ; down ; 2008 ; Clinical Rehabilitation Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 >
 
       }
 
@@ -26899,6 +26899,7 @@ comment[mpj] = now published by Brill
 
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+        comment[phfes] = Not published by Sage as of 20110628
 
       }
 
@@ -26933,6 +26934,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pib.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
 
       }
 
@@ -27199,6 +27201,26 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pdj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Progress in Development Studies Volume 1 ; 1 >
+        au < manifest ; 2002 ; Progress in Development Studies Volume 2 ; 2 >
+        au < manifest ; 2003 ; Progress in Development Studies Volume 3 ; 3 >
+        au < manifest ; 2004 ; Progress in Development Studies Volume 4 ; 4 >
+        au < manifest ; 2005 ; Progress in Development Studies Volume 5 ; 5 >
+        au < manifest ; 2006 ; Progress in Development Studies Volume 6 ; 6 >
+        au < manifest ; 2007 ; Progress in Development Studies Volume 7 ; 7 >
+        au < manifest ; 2008 ; Progress in Development Studies Volume 8 ; 8 >
+        au < manifest ; 2009 ; Progress in Development Studies Volume 9 ; 9 >
+        au < manifest ; 2010 ; Progress in Development Studies Volume 10 ; 10 >
+        au < manifest ; 2011 ; Progress in Development Studies Volume 11 ; 11 >
+
+      }
+
     }
 
     {
@@ -27225,6 +27247,50 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://phg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1977 ; Progress in Human Geography Volume 1 ; 1 >
+        au < exists ; 1978 ; Progress in Human Geography Volume 2 ; 2 >
+        au < manifest ; 1979 ; Progress in Human Geography Volume 3 ; 3 >
+        au < exists ; 1980 ; Progress in Human Geography Volume 4 ; 4 >
+        au < manifest ; 1981 ; Progress in Human Geography Volume 5 ; 5 >
+        au < exists ; 1982 ; Progress in Human Geography Volume 6 ; 6 >
+        au < exists ; 1983 ; Progress in Human Geography Volume 7 ; 7 >
+        au < doesNotExist ; 1984 ; Progress in Human Geography Volume 8 ; 8 >
+        au < doesNotExist ; 1985 ; Progress in Human Geography Volume 9 ; 9 >
+        au < doesNotExist ; 1986 ; Progress in Human Geography Volume 10 ; 10 >
+        au < manifest ; 1987 ; Progress in Human Geography Volume 11 ; 11 >
+        au < manifest ; 1988 ; Progress in Human Geography Volume 12 ; 12 >
+        au < manifest ; 1989 ; Progress in Human Geography Volume 13 ; 13 >
+        au < manifest ; 1990 ; Progress in Human Geography Volume 14 ; 14 >
+        au < manifest ; 1991 ; Progress in Human Geography Volume 15 ; 15 >
+        au < manifest ; 1992 ; Progress in Human Geography Volume 16 ; 16 >
+        au < manifest ; 1993 ; Progress in Human Geography Volume 17 ; 17 >
+        au < manifest ; 1994 ; Progress in Human Geography Volume 18 ; 18 >
+        au < manifest ; 1995 ; Progress in Human Geography Volume 19 ; 19 >
+        au < manifest ; 1996 ; Progress in Human Geography Volume 20 ; 20 >
+        au < manifest ; 1997 ; Progress in Human Geography Volume 21 ; 21 >
+        au < manifest ; 1998 ; Progress in Human Geography Volume 22 ; 22 >
+        au < manifest ; 1999 ; Progress in Human Geography Volume 23 ; 23 >
+        au < manifest ; 2000 ; Progress in Human Geography Volume 24 ; 24 >
+        au < manifest ; 2001 ; Progress in Human Geography Volume 25 ; 25 >
+        au < manifest ; 2002 ; Progress in Human Geography Volume 26 ; 26 >
+        au < manifest ; 2003 ; Progress in Human Geography Volume 27 ; 27 >
+        au < manifest ; 2004 ; Progress in Human Geography Volume 28 ; 28 >
+        au < manifest ; 2005 ; Progress in Human Geography Volume 29 ; 29 >
+        au < manifest ; 2006 ; Progress in Human Geography Volume 30 ; 30 >
+        au < manifest ; 2007 ; Progress in Human Geography Volume 31 ; 31 >
+        au < manifest ; 2008 ; Progress in Human Geography Volume 32 ; 32 >
+        au < manifest ; 2009 ; Progress in Human Geography Volume 33 ; 33 >
+        au < manifest ; 2010 ; Progress in Human Geography Volume 34 ; 34 >
+        au < manifest ; 2011 ; Progress in Human Geography Volume 35 ; 35 >
+
+      }
+
     }
 
     {
@@ -27247,6 +27313,50 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Progress in Physical Geography Volume 32 ; 32 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Progress in Physical Geography Volume 33 ; 33 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Progress in Physical Geography Volume 34 ; 34 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ppg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1977 ; Progress in Physical Geography Volume 1 ; 1 >
+        au < manifest ; 1978 ; Progress in Physical Geography Volume 2 ; 2 >
+        au < manifest ; 1979 ; Progress in Physical Geography Volume 3 ; 3 >
+        au < manifest ; 1980 ; Progress in Physical Geography Volume 4 ; 4 >
+        au < manifest ; 1981 ; Progress in Physical Geography Volume 5 ; 5 >
+        au < manifest ; 1982 ; Progress in Physical Geography Volume 6 ; 6 >
+        au < manifest ; 1983 ; Progress in Physical Geography Volume 7 ; 7 >
+        au < manifest ; 1984 ; Progress in Physical Geography Volume 8 ; 8 >
+        au < manifest ; 1985 ; Progress in Physical Geography Volume 9 ; 9 >
+        au < manifest ; 1986 ; Progress in Physical Geography Volume 10 ; 10 >
+        au < manifest ; 1987 ; Progress in Physical Geography Volume 11 ; 11 >
+        au < manifest ; 1988 ; Progress in Physical Geography Volume 12 ; 12 >
+        au < manifest ; 1989 ; Progress in Physical Geography Volume 13 ; 13 >
+        au < manifest ; 1990 ; Progress in Physical Geography Volume 14 ; 14 >
+        au < manifest ; 1991 ; Progress in Physical Geography Volume 15 ; 15 >
+        au < manifest ; 1992 ; Progress in Physical Geography Volume 16 ; 16 >
+        au < manifest ; 1993 ; Progress in Physical Geography Volume 17 ; 17 >
+        au < manifest ; 1994 ; Progress in Physical Geography Volume 18 ; 18 >
+        au < manifest ; 1995 ; Progress in Physical Geography Volume 19 ; 19 >
+        au < manifest ; 1996 ; Progress in Physical Geography Volume 20 ; 20 >
+        au < manifest ; 1997 ; Progress in Physical Geography Volume 21 ; 21 >
+        au < manifest ; 1998 ; Progress in Physical Geography Volume 22 ; 22 >
+        au < manifest ; 1999 ; Progress in Physical Geography Volume 23 ; 23 >
+        au < manifest ; 2000 ; Progress in Physical Geography Volume 24 ; 24 >
+        au < manifest ; 2001 ; Progress in Physical Geography Volume 25 ; 25 >
+        au < manifest ; 2002 ; Progress in Physical Geography Volume 26 ; 26 >
+        au < manifest ; 2003 ; Progress in Physical Geography Volume 27 ; 27 >
+        au < manifest ; 2004 ; Progress in Physical Geography Volume 28 ; 28 >
+        au < manifest ; 2005 ; Progress in Physical Geography Volume 29 ; 29 >
+        au < manifest ; 2006 ; Progress in Physical Geography Volume 30 ; 30 >
+        au < manifest ; 2007 ; Progress in Physical Geography Volume 31 ; 31 >
+        au < manifest ; 2008 ; Progress in Physical Geography Volume 32 ; 32 >
+        au < manifest ; 2009 ; Progress in Physical Geography Volume 33 ; 33 >
+        au < manifest ; 2010 ; Progress in Physical Geography Volume 34 ; 34 >
+        au < manifest ; 2011 ; Progress in Physical Geography Volume 35 ; 35 >
 
       }
 
@@ -27330,6 +27440,38 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pds.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1989 ; Psychology & Developing Societies Volume 1 ; 1 >
+        au < manifest ; 1990 ; Psychology & Developing Societies Volume 2 ; 2 >
+        au < manifest ; 1991 ; Psychology & Developing Societies Volume 3 ; 3 >
+        au < manifest ; 1992 ; Psychology & Developing Societies Volume 4 ; 4 >
+        au < manifest ; 1993 ; Psychology & Developing Societies Volume 5 ; 5 >
+        au < manifest ; 1994 ; Psychology & Developing Societies Volume 6 ; 6 >
+        au < manifest ; 1995 ; Psychology & Developing Societies Volume 7 ; 7 >
+        au < manifest ; 1996 ; Psychology & Developing Societies Volume 8 ; 8 >
+        au < manifest ; 1997 ; Psychology & Developing Societies Volume 9 ; 9 >
+        au < manifest ; 1998 ; Psychology & Developing Societies Volume 10 ; 10 >
+        au < manifest ; 1999 ; Psychology & Developing Societies Volume 11 ; 11 >
+        au < manifest ; 2000 ; Psychology & Developing Societies Volume 12 ; 12 >
+        au < manifest ; 2001 ; Psychology & Developing Societies Volume 13 ; 13 >
+        au < manifest ; 2002 ; Psychology & Developing Societies Volume 14 ; 14 >
+        au < manifest ; 2003 ; Psychology & Developing Societies Volume 15 ; 15 >
+        au < manifest ; 2004 ; Psychology & Developing Societies Volume 16 ; 16 >
+        au < manifest ; 2005 ; Psychology & Developing Societies Volume 17 ; 17 >
+        au < manifest ; 2006 ; Psychology & Developing Societies Volume 18 ; 18 >
+        au < manifest ; 2007 ; Psychology & Developing Societies Volume 19 ; 19 >
+        au < manifest ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 >
+        au < manifest ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 >
+        au < manifest ; 2010 ; Psychology & Developing Societies Volume 22 ; 22 >
+        au < manifest ; 2011 ; Psychology & Developing Societies Volume 23 ; 23 >
+
+      }
+
     }
 
     {
@@ -27353,6 +27495,54 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Psychology of Music Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Psychology of Music Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Psychology of Music Volume 38 ; 38 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pom.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1973 ; Psychology of Music Volume 1 ; 1 >
+        au < manifest ; 1974 ; Psychology of Music Volume 2 ; 2 >
+        au < manifest ; 1975 ; Psychology of Music Volume 3 ; 3 >
+        au < manifest ; 1976 ; Psychology of Music Volume 4 ; 4 >
+        au < manifest ; 1977 ; Psychology of Music Volume 5 ; 5 >
+        au < manifest ; 1978 ; Psychology of Music Volume 6 ; 6 >
+        au < manifest ; 1979 ; Psychology of Music Volume 7 ; 7 >
+        au < manifest ; 1980 ; Psychology of Music Volume 8 ; 8 >
+        au < manifest ; 1981 ; Psychology of Music Volume 9 ; 9 >
+        au < manifest ; 1982 ; Psychology of Music Volume 10 ; 10 >
+        au < manifest ; 1983 ; Psychology of Music Volume 11 ; 11 >
+        au < manifest ; 1984 ; Psychology of Music Volume 12 ; 12 >
+        au < manifest ; 1985 ; Psychology of Music Volume 13 ; 13 >
+        au < manifest ; 1986 ; Psychology of Music Volume 14 ; 14 >
+        au < manifest ; 1987 ; Psychology of Music Volume 15 ; 15 >
+        au < manifest ; 1988 ; Psychology of Music Volume 16 ; 16 >
+        au < manifest ; 1989 ; Psychology of Music Volume 17 ; 17 >
+        au < manifest ; 1990 ; Psychology of Music Volume 18 ; 18 >
+        au < manifest ; 1991 ; Psychology of Music Volume 19 ; 19 >
+        au < manifest ; 1992 ; Psychology of Music Volume 20 ; 20 >
+        au < manifest ; 1993 ; Psychology of Music Volume 21 ; 21 >
+        au < manifest ; 1994 ; Psychology of Music Volume 22 ; 22 >
+        au < manifest ; 1995 ; Psychology of Music Volume 23 ; 23 >
+        au < manifest ; 1996 ; Psychology of Music Volume 24 ; 24 >
+        au < manifest ; 1997 ; Psychology of Music Volume 25 ; 25 >
+        au < manifest ; 1998 ; Psychology of Music Volume 26 ; 26 >
+        au < manifest ; 1999 ; Psychology of Music Volume 27 ; 27 >
+        au < manifest ; 2000 ; Psychology of Music Volume 28 ; 28 >
+        au < manifest ; 2001 ; Psychology of Music Volume 29 ; 29 >
+        au < manifest ; 2002 ; Psychology of Music Volume 30 ; 30 >
+        au < manifest ; 2003 ; Psychology of Music Volume 31 ; 31 >
+        au < manifest ; 2004 ; Psychology of Music Volume 32 ; 32 >
+        au < manifest ; 2005 ; Psychology of Music Volume 33 ; 33 >
+        au < manifest ; 2006 ; Psychology of Music Volume 34 ; 34 >
+        au < manifest ; 2007 ; Psychology of Music Volume 35 ; 35 >
+        au < manifest ; 2008 ; Psychology of Music Volume 36 ; 36 >
+        au < manifest ; 2009 ; Psychology of Music Volume 37 ; 37 >
+        au < manifest ; 2010 ; Psychology of Music Volume 38 ; 38 >
+        au < manifest ; 2011 ; Psychology of Music Volume 39 ; 39 >
 
       }
 
@@ -27398,6 +27588,54 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pfr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1973 ; Public Finance Review Volume 1 ; 1 >
+        au < manifest ; 1974 ; Public Finance Review Volume 2 ; 2 >
+        au < doesNotExist ; 1975 ; Public Finance Review Volume 3 ; 3 >
+        au < manifest ; 1976 ; Public Finance Review Volume 4 ; 4 >
+        au < manifest ; 1977 ; Public Finance Review Volume 5 ; 5 >
+        au < manifest ; 1978 ; Public Finance Review Volume 6 ; 6 >
+        au < manifest ; 1979 ; Public Finance Review Volume 7 ; 7 >
+        au < manifest ; 1980 ; Public Finance Review Volume 8 ; 8 >
+        au < manifest ; 1981 ; Public Finance Review Volume 9 ; 9 >
+        au < manifest ; 1982 ; Public Finance Review Volume 10 ; 10 >
+        au < manifest ; 1983 ; Public Finance Review Volume 11 ; 11 >
+        au < manifest ; 1984 ; Public Finance Review Volume 12 ; 12 >
+        au < manifest ; 1985 ; Public Finance Review Volume 13 ; 13 >
+        au < manifest ; 1986 ; Public Finance Review Volume 14 ; 14 >
+        au < manifest ; 1987 ; Public Finance Review Volume 15 ; 15 >
+        au < doesNotExist ; 1988 ; Public Finance Review Volume 16 ; 16 >
+        au < manifest ; 1989 ; Public Finance Review Volume 17 ; 17 >
+        au < manifest ; 1990 ; Public Finance Review Volume 18 ; 18 >
+        au < manifest ; 1991 ; Public Finance Review Volume 19 ; 19 >
+        au < manifest ; 1992 ; Public Finance Review Volume 20 ; 20 >
+        au < manifest ; 1993 ; Public Finance Review Volume 21 ; 21 >
+        au < manifest ; 1994 ; Public Finance Review Volume 22 ; 22 >
+        au < manifest ; 1995 ; Public Finance Review Volume 23 ; 23 >
+        au < manifest ; 1996 ; Public Finance Review Volume 24 ; 24 >
+        au < manifest ; 1997 ; Public Finance Review Volume 25 ; 25 >
+        au < manifest ; 1998 ; Public Finance Review Volume 26 ; 26 >
+        au < manifest ; 1999 ; Public Finance Review Volume 27 ; 27 >
+        au < manifest ; 2000 ; Public Finance Review Volume 28 ; 28 >
+        au < manifest ; 2001 ; Public Finance Review Volume 29 ; 29 >
+        au < manifest ; 2002 ; Public Finance Review Volume 30 ; 30 >
+        au < manifest ; 2003 ; Public Finance Review Volume 31 ; 31 >
+        au < manifest ; 2004 ; Public Finance Review Volume 32 ; 32 >
+        au < manifest ; 2005 ; Public Finance Review Volume 33 ; 33 >
+        au < manifest ; 2006 ; Public Finance Review Volume 34 ; 34 >
+        au < manifest ; 2007 ; Public Finance Review Volume 35 ; 35 >
+        au < manifest ; 2008 ; Public Finance Review Volume 36 ; 36 >
+        au < manifest ; 2009 ; Public Finance Review Volume 37 ; 37 >
+        au < manifest ; 2010 ; Public Finance Review Volume 38 ; 38 >
+        au < manifest ; 2011 ; Public Finance Review Volume 39 ; 39 >
+
+      }
+
     }
 
     {
@@ -27420,6 +27658,41 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Public Policy and Administration Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; 0 ; Public Policy and Administration Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Public Policy and Administration Volume 25 ; 25 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ppa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Public Policy and Administration Volume 1 ; 1 >
+        au < manifest ; 1987 ; Public Policy and Administration Volume 2 ; 2 >
+        au < manifest ; 1988 ; Public Policy and Administration Volume 3 ; 3 >
+        au < manifest ; 1989 ; Public Policy and Administration Volume 4 ; 4 >
+        au < manifest ; 1990 ; Public Policy and Administration Volume 5 ; 5 >
+        au < manifest ; 1991 ; Public Policy and Administration Volume 6 ; 6 >
+        au < manifest ; 1992 ; Public Policy and Administration Volume 7 ; 7 >
+        au < manifest ; 1993 ; Public Policy and Administration Volume 8 ; 8 >
+        au < manifest ; 1994 ; Public Policy and Administration Volume 9 ; 9 >
+        au < manifest ; 1995 ; Public Policy and Administration Volume 10 ; 10 >
+        au < manifest ; 1996 ; Public Policy and Administration Volume 11 ; 11 >
+        au < manifest ; 1997 ; Public Policy and Administration Volume 12 ; 12 >
+        au < manifest ; 1998 ; Public Policy and Administration Volume 13 ; 13 >
+        au < manifest ; 1999 ; Public Policy and Administration Volume 14 ; 14 >
+        au < manifest ; 2000 ; Public Policy and Administration Volume 15 ; 15 >
+        au < manifest ; 2001 ; Public Policy and Administration Volume 16 ; 16 >
+        au < manifest ; 2002 ; Public Policy and Administration Volume 17 ; 17 >
+        au < manifest ; 2003 ; Public Policy and Administration Volume 18 ; 18 >
+        au < manifest ; 2004 ; Public Policy and Administration Volume 19 ; 19 >
+        au < manifest ; 2005 ; Public Policy and Administration Volume 20 ; 20 >
+        au < manifest ; 2006 ; Public Policy and Administration Volume 21 ; 21 >
+        au < manifest ; 2007 ; Public Policy and Administration Volume 22 ; 22 >
+        au < manifest ; 2008 ; Public Policy and Administration Volume 23 ; 23 >
+        au < manifest ; 2009 ; Public Policy and Administration Volume 24 ; 24 >
+        au < manifest ; 2010 ; Public Policy and Administration Volume 25 ; 25 >
+        au < manifest ; 2011 ; Public Policy and Administration Volume 26 ; 26 >
 
       }
 
@@ -27446,6 +27719,35 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Public Understanding of Science Volume 17 ; 17 >
         au < HighWirePressPlugin ; down ; 0 ; Public Understanding of Science Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Public Understanding of Science Volume 19 ; 19 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pus.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Public Understanding of Science Volume 1 ; 1 >
+        au < manifest ; 1993 ; Public Understanding of Science Volume 2 ; 2 >
+        au < manifest ; 1994 ; Public Understanding of Science Volume 3 ; 3 >
+        au < manifest ; 1995 ; Public Understanding of Science Volume 4 ; 4 >
+        au < manifest ; 1996 ; Public Understanding of Science Volume 5 ; 5 >
+        au < manifest ; 1997 ; Public Understanding of Science Volume 6 ; 6 >
+        au < manifest ; 1998 ; Public Understanding of Science Volume 7 ; 7 >
+        au < manifest ; 1999 ; Public Understanding of Science Volume 8 ; 8 >
+        au < manifest ; 2000 ; Public Understanding of Science Volume 9 ; 9 >
+        au < manifest ; 2001 ; Public Understanding of Science Volume 10 ; 10 >
+        au < manifest ; 2002 ; Public Understanding of Science Volume 11 ; 11 >
+        au < manifest ; 2003 ; Public Understanding of Science Volume 12 ; 12 >
+        au < manifest ; 2004 ; Public Understanding of Science Volume 13 ; 13 >
+        au < manifest ; 2005 ; Public Understanding of Science Volume 14 ; 14 >
+        au < manifest ; 2006 ; Public Understanding of Science Volume 15 ; 15 >
+        au < manifest ; 2007 ; Public Understanding of Science Volume 16 ; 16 >
+        au < manifest ; 2008 ; Public Understanding of Science Volume 17 ; 17 >
+        au < manifest ; 2009 ; Public Understanding of Science Volume 18 ; 18 >
+        au < manifest ; 2010 ; Public Understanding of Science Volume 19 ; 19 >
+        au < manifest ; 2011 ; Public Understanding of Science Volume 20 ; 20 >
 
       }
 
@@ -27476,6 +27778,31 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pwm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Public Works Management & Policy Volume 1 ; 1 >
+        au < manifest ; 1997 ; Public Works Management & Policy Volume 2 ; 2 >
+        au < manifest ; 1999 ; Public Works Management & Policy Volume 3 ; 3 >
+        au < manifest ; 1999 ; Public Works Management & Policy Volume 4 ; 4 >
+        au < manifest ; 2000 ; Public Works Management & Policy Volume 5 ; 5 >
+        au < manifest ; 2001 ; Public Works Management & Policy Volume 6 ; 6 >
+        au < manifest ; 2002 ; Public Works Management & Policy Volume 7 ; 7 >
+        au < manifest ; 2003 ; Public Works Management & Policy Volume 8 ; 8 >
+        au < manifest ; 2004 ; Public Works Management & Policy Volume 9 ; 9 >
+        au < manifest ; 2005 ; Public Works Management & Policy Volume 10 ; 10 >
+        au < manifest ; 2006 ; Public Works Management & Policy Volume 11 ; 11 >
+        au < manifest ; 2007 ; Public Works Management & Policy Volume 12 ; 12 >
+        au < manifest ; 2008 ; Public Works Management & Policy Volume 13 ; 13 >
+        au < manifest ; 2009 ; Public Works Management & Policy Volume 14 ; 14 >
+        au < manifest ; 2010 ; Public Works Management & Policy Volume 15 ; 15 >
+        au < manifest ; 2011 ; Public Works Management & Policy Volume 16 ; 16 >
+
+      }
+
     }
 
     {
@@ -27499,6 +27826,28 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Punishment & Society Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; 0 ; Punishment & Society Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Punishment & Society Volume 12 ; 12 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pun.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1999 ; Punishment & Society Volume 1 ; 1 >
+        au < manifest ; 2000 ; Punishment & Society Volume 2 ; 2 >
+        au < manifest ; 2001 ; Punishment & Society Volume 3 ; 3 >
+        au < manifest ; 2002 ; Punishment & Society Volume 4 ; 4 >
+        au < manifest ; 2003 ; Punishment & Society Volume 5 ; 5 >
+        au < manifest ; 2004 ; Punishment & Society Volume 6 ; 6 >
+        au < manifest ; 2005 ; Punishment & Society Volume 7 ; 7 >
+        au < manifest ; 2006 ; Punishment & Society Volume 8 ; 8 >
+        au < manifest ; 2007 ; Punishment & Society Volume 9 ; 9 >
+        au < manifest ; 2008 ; Punishment & Society Volume 10 ; 10 >
+        au < manifest ; 2009 ; Punishment & Society Volume 11 ; 11 >
+        au < manifest ; 2010 ; Punishment & Society Volume 12 ; 12 >
+        au < manifest ; 2011 ; Punishment & Society Volume 13 ; 13 >
 
       }
 
@@ -27528,6 +27877,36 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://qhr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; Qualitative Health Research Volume 1 ; 1 >
+        au < manifest ; 1992 ; Qualitative Health Research Volume 2 ; 2 >
+        au < manifest ; 1993 ; Qualitative Health Research Volume 3 ; 3 >
+        au < manifest ; 1994 ; Qualitative Health Research Volume 4 ; 4 >
+        au < manifest ; 1995 ; Qualitative Health Research Volume 5 ; 5 >
+        au < manifest ; 1996 ; Qualitative Health Research Volume 6 ; 6 >
+        au < manifest ; 1997 ; Qualitative Health Research Volume 7 ; 7 >
+        au < manifest ; 1998 ; Qualitative Health Research Volume 8 ; 8 >
+        au < manifest ; 1999 ; Qualitative Health Research Volume 9 ; 9 >
+        au < manifest ; 2000 ; Qualitative Health Research Volume 10 ; 10 >
+        au < manifest ; 2001 ; Qualitative Health Research Volume 11 ; 11 >
+        au < manifest ; 2002 ; Qualitative Health Research Volume 12 ; 12 >
+        au < manifest ; 2003 ; Qualitative Health Research Volume 13 ; 13 >
+        au < manifest ; 2004 ; Qualitative Health Research Volume 14 ; 14 >
+        au < manifest ; 2005 ; Qualitative Health Research Volume 15 ; 15 >
+        au < manifest ; 2006 ; Qualitative Health Research Volume 16 ; 16 >
+        au < manifest ; 2007 ; Qualitative Health Research Volume 17 ; 17 >
+        au < manifest ; 2008 ; Qualitative Health Research Volume 18 ; 18 >
+        au < manifest ; 2009 ; Qualitative Health Research Volume 19 ; 19 >
+        au < manifest ; 2010 ; Qualitative Health Research Volume 20 ; 20 >
+        au < manifest ; 2011 ; Qualitative Health Research Volume 21 ; 21 >
+
+      }
+
     }
 
     {
@@ -27551,6 +27930,32 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 0 ; Qualitative Inquiry Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; 0 ; Qualitative Inquiry Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Qualitative Inquiry Volume 16 ; 16 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://qix.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Qualitative Inquiry Volume 1 ; 1 >
+        au < manifest ; 1996 ; Qualitative Inquiry Volume 2 ; 2 >
+        au < manifest ; 1997 ; Qualitative Inquiry Volume 3 ; 3 >
+        au < manifest ; 1998 ; Qualitative Inquiry Volume 4 ; 4 >
+        au < manifest ; 1999 ; Qualitative Inquiry Volume 5 ; 5 >
+        au < manifest ; 2000 ; Qualitative Inquiry Volume 6 ; 6 >
+        au < manifest ; 2001 ; Qualitative Inquiry Volume 7 ; 7 >
+        au < manifest ; 2002 ; Qualitative Inquiry Volume 8 ; 8 >
+        au < manifest ; 2003 ; Qualitative Inquiry Volume 9 ; 9 >
+        au < manifest ; 2004 ; Qualitative Inquiry Volume 10 ; 10 >
+        au < manifest ; 2005 ; Qualitative Inquiry Volume 11 ; 11 >
+        au < manifest ; 2006 ; Qualitative Inquiry Volume 12 ; 12 >
+        au < manifest ; 2007 ; Qualitative Inquiry Volume 13 ; 13 >
+        au < manifest ; 2008 ; Qualitative Inquiry Volume 14 ; 14 >
+        au < manifest ; 2009 ; Qualitative Inquiry Volume 15 ; 15 >
+        au < manifest ; 2010 ; Qualitative Inquiry Volume 16 ; 16 >
+        au < manifest ; 2011 ; Qualitative Inquiry Volume 17 ; 17 >
 
       }
 
@@ -27580,6 +27985,26 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://qrj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Qualitative Research Volume 1 ; 1 >
+        au < manifest ; 2002 ; Qualitative Research Volume 2 ; 2 >
+        au < manifest ; 2003 ; Qualitative Research Volume 3 ; 3 >
+        au < manifest ; 2004 ; Qualitative Research Volume 4 ; 4 >
+        au < manifest ; 2005 ; Qualitative Research Volume 5 ; 5 >
+        au < manifest ; 2006 ; Qualitative Research Volume 6 ; 6 >
+        au < manifest ; 2007 ; Qualitative Research Volume 7 ; 7 >
+        au < manifest ; 2008 ; Qualitative Research Volume 8 ; 8 >
+        au < manifest ; 2009 ; Qualitative Research Volume 9 ; 9 >
+        au < manifest ; 2010 ; Qualitative Research Volume 10 ; 10 >
+        au < manifest ; 2011 ; Qualitative Research Volume 11 ; 11 >
+
+      }
+
     }
 
     {
@@ -27606,6 +28031,25 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://qsw.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Qualitative Social Work Volume 1 ; 1 >
+        au < manifest ; 2003 ; Qualitative Social Work Volume 2 ; 2 >
+        au < manifest ; 2004 ; Qualitative Social Work Volume 3 ; 3 >
+        au < manifest ; 2005 ; Qualitative Social Work Volume 4 ; 4 >
+        au < manifest ; 2006 ; Qualitative Social Work Volume 5 ; 5 >
+        au < manifest ; 2007 ; Qualitative Social Work Volume 6 ; 6 >
+        au < manifest ; 2008 ; Qualitative Social Work Volume 7 ; 7 >
+        au < manifest ; 2009 ; Qualitative Social Work Volume 8 ; 8 >
+        au < manifest ; 2010 ; Qualitative Social Work Volume 9 ; 9 >
+        au < manifest ; 2011 ; Qualitative Social Work Volume 10 ; 10 >
+
+      }
+
     }
 
     {
@@ -27629,6 +28073,68 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 0 ; Race & Class Volume 49 ; 49 >
         au < HighWirePressPlugin ; down ; 0 ; Race & Class Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Race & Class Volume 51 ; 51 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rac.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1959 ; Race & Class Volume 1 ; 1 >
+        au < manifest ; 1960 ; Race & Class Volume 2 ; 2 >
+        au < manifest ; 1961 ; Race & Class Volume 3 ; 3 >
+        au < manifest ; 1962 ; Race & Class Volume 4 ; 4 >
+        au < manifest ; 1963 ; Race & Class Volume 5 ; 5 >
+        au < manifest ; 1964 ; Race & Class Volume 6 ; 6 >
+        au < manifest ; 1965 ; Race & Class Volume 7 ; 7 >
+        au < manifest ; 1966 ; Race & Class Volume 8 ; 8 >
+        au < manifest ; 1967 ; Race & Class Volume 9 ; 9 >
+        au < manifest ; 1968 ; Race & Class Volume 10 ; 10 >
+        au < manifest ; 1969 ; Race & Class Volume 11 ; 11 >
+        au < manifest ; 1970 ; Race & Class Volume 12 ; 12 >
+        au < manifest ; 1971 ; Race & Class Volume 13 ; 13 >
+        au < manifest ; 1972 ; Race & Class Volume 14 ; 14 >
+        au < manifest ; 1973 ; Race & Class Volume 15 ; 15 >
+        au < manifest ; 1974 ; Race & Class Volume 16 ; 16 >
+        au < manifest ; 1975 ; Race & Class Volume 17 ; 17 >
+        au < manifest ; 1976 ; Race & Class Volume 18 ; 18 >
+        au < manifest ; 1977 ; Race & Class Volume 19 ; 19 >
+        au < manifest ; 1978 ; Race & Class Volume 20 ; 20 >
+        au < manifest ; 1979 ; Race & Class Volume 21 ; 21 >
+        au < manifest ; 1980 ; Race & Class Volume 22 ; 22 >
+        au < manifest ; 1981 ; Race & Class Volume 23 ; 23 >
+        au < manifest ; 1982 ; Race & Class Volume 24 ; 24 >
+        au < manifest ; 1983 ; Race & Class Volume 25 ; 25 >
+        au < manifest ; 1984 ; Race & Class Volume 26 ; 26 >
+        au < manifest ; 1985 ; Race & Class Volume 27 ; 27 >
+        au < manifest ; 1986 ; Race & Class Volume 28 ; 28 >
+        au < manifest ; 1987 ; Race & Class Volume 29 ; 29 >
+        au < manifest ; 1988 ; Race & Class Volume 30 ; 30 >
+        au < manifest ; 1989 ; Race & Class Volume 31 ; 31 >
+        au < manifest ; 1990 ; Race & Class Volume 32 ; 32 >
+        au < manifest ; 1991 ; Race & Class Volume 33 ; 33 >
+        au < manifest ; 1992 ; Race & Class Volume 34 ; 34 >
+        au < manifest ; 1993 ; Race & Class Volume 35 ; 35 >
+        au < manifest ; 1994 ; Race & Class Volume 36 ; 36 >
+        au < manifest ; 1995 ; Race & Class Volume 37 ; 37 >
+        au < manifest ; 1996 ; Race & Class Volume 38 ; 38 >
+        au < manifest ; 1997 ; Race & Class Volume 39 ; 39 >
+        au < manifest ; 1998 ; Race & Class Volume 40 ; 40 >
+        au < manifest ; 2000 ; Race & Class Volume 41 ; 41 >
+        au < manifest ; 2000 ; Race & Class Volume 42 ; 42 >
+        au < manifest ; 2001 ; Race & Class Volume 43 ; 43 >
+        au < manifest ; 2002 ; Race & Class Volume 44 ; 44 >
+        au < manifest ; 2003 ; Race & Class Volume 45 ; 45 >
+        au < manifest ; 2004 ; Race & Class Volume 46 ; 46 >
+        au < manifest ; 2005 ; Race & Class Volume 47 ; 47 >
+        au < manifest ; 2006 ; Race & Class Volume 48 ; 48 >
+        au < manifest ; 2007 ; Race & Class Volume 49 ; 49 >
+        au < manifest ; 2008 ; Race & Class Volume 50 ; 50 >
+        au < manifest ; 2009 ; Race & Class Volume 51 ; 51 >
+        au < manifest ; 2010 ; Race & Class Volume 52 ; 52 >
+        au < manifest ; 2011 ; Race & Class Volume 53 ; 53 >
 
       }
 
