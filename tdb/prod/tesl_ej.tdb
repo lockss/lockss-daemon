@@ -18,21 +18,19 @@
     {
 
       param[base_url] = http://writing.berkeley.edu/TESL-EJ/
-      implicit < status ; name ; param[volume] ; param[num_issue_range] >
+      implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >
 
       comment[0] = only volumes 1 and 2 were listed when checked 2011-06-16
-      comment[1] = 1994-1995
-      comment[2] = 1996-1997      
 
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 [superseded] ; 1 ; 01-04 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 [superseded] ; 2 ; 05-08 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 [superseded] ; 3 ; 09-12 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 [superseded] ; 4 ; 13-16 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 [superseded] ; 5 ; 17-20 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 [superseded] ; 6 ; 21-24 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 [superseded] ; 7 ; 25-28 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 [superseded] ; 8 ; 29-32 >
-      au < superseded ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 [superseded] ; 9 ; 33-36 >
+      au < superseded ; 1994-1995 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 [superseded] ; 1 ; 01-04 >
+      au < superseded ; 1996-1997 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 [superseded] ; 2 ; 05-08 >
+      au < superseded ; 1997-1999 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 [superseded] ; 3 ; 09-12 >
+      au < superseded ; 1999-2000 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 [superseded] ; 4 ; 13-16 >
+      au < superseded ; 2001-2002 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 [superseded] ; 5 ; 17-20 >
+      au < superseded ; 2002-2003 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 [superseded] ; 6 ; 21-24 >
+      au < superseded ; 2003-2004 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 [superseded] ; 7 ; 25-28 >
+      au < superseded ; 2004-2005 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 [superseded] ; 8 ; 29-32 >
+      au < superseded ; 2005-2006 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 [superseded] ; 9 ; 33-36 >
 
     }
 
