@@ -35,6 +35,23 @@
     <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s/issues.aspx?issn=%s&quot;, base_url, issn</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%s/Articles.aspx?issn=%s&amp;volume=%s&amp;issue=%s&amp;cyear=%s&amp;jstor=False&quot;, base_url, issn, volume_name, issue, year</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.anthrosource.AnthroSourcePdfFilterFactory</string>
   </entry>
