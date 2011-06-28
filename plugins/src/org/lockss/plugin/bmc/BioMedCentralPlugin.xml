@@ -46,6 +46,19 @@
     <string>&quot;%sarticles/browse.asp?volume=%s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%sarticles/browse.asp&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%sarticles/browse.asp?volume=%s&quot;, base_url, volume_name</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>au_manifest</string>
     <string>&quot;%slockss/&quot;, base_url</string>
   </entry>
