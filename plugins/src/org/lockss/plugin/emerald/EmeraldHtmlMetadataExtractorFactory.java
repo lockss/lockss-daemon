@@ -1,4 +1,8 @@
 /*
+ * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.4 2011-06-28 21:19:39 pgust Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
