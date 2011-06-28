@@ -16,19 +16,19 @@
     >
 
     param[journal_dir] = brookings_papers_on_economic_activity
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Brookings Papers on Economic Activity 2000 ; 2000 >
-    au < released ; Brookings Papers on Economic Activity 2001 ; 2001 >
-    au < released ; Brookings Papers on Economic Activity 2002 ; 2002 >
-    au < released ; Brookings Papers on Economic Activity 2003 ; 2003 >
-    au < released ; Brookings Papers on Economic Activity 2004 ; 2004 >
-    au < released ; Brookings Papers on Economic Activity 2005 ; 2005 >
-    au < released ; Brookings Papers on Economic Activity 2006 ; 2006 >
-    au < released ; Brookings Papers on Economic Activity 2007 ; 2007 >
-    au < released ; Brookings Papers on Economic Activity 2008 ; 2008 >
-    au < released ; Brookings Papers on Economic Activity 2009 ; 2009 >
-    au < manifest ; Brookings Papers on Economic Activity 2010 ; 2010 >
+    au < released ; 2000 ; Brookings Papers on Economic Activity 2000 ; 2000 >
+    au < released ; 2001 ; Brookings Papers on Economic Activity 2001 ; 2001 >
+    au < released ; 2002 ; Brookings Papers on Economic Activity 2002 ; 2002 >
+    au < released ; 2003 ; Brookings Papers on Economic Activity 2003 ; 2003 >
+    au < released ; 2004 ; Brookings Papers on Economic Activity 2004 ; 2004 >
+    au < released ; 2005 ; Brookings Papers on Economic Activity 2005 ; 2005 >
+    au < released ; 2006 ; Brookings Papers on Economic Activity 2006 ; 2006 >
+    au < released ; 2007 ; Brookings Papers on Economic Activity 2007 ; 2007 >
+    au < released ; 2008 ; Brookings Papers on Economic Activity 2008 ; 2008 >
+    au < released ; 2009 ; Brookings Papers on Economic Activity 2009 ; 2009 >
+    au < manifest ; 2010 ; Brookings Papers on Economic Activity 2010 ; 2010 >
 
 
   }
@@ -42,16 +42,16 @@
     >
 
     param[journal_dir] = brookings_papers_on_education_policy
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Brookings Papers on Education Policy 2000 ; 2000 >
-    au < released ; Brookings Papers on Education Policy 2001 ; 2001 >
-    au < released ; Brookings Papers on Education Policy 2002 ; 2002 >
-    au < released ; Brookings Papers on Education Policy 2003 ; 2003 >
-    au < released ; Brookings Papers on Education Policy 2004 ; 2004 >
-    au < released ; Brookings Papers on Education Policy 2005 ; 2005 >
-    au < released ; Brookings Papers on Education Policy 2006 ; 2006 >
-    au < doesNotExist ; Brookings Papers on Education Policy 2007 ; 2007 >
+    au < released ; 2000 ; Brookings Papers on Education Policy 2000 ; 2000 >
+    au < released ; 2001 ; Brookings Papers on Education Policy 2001 ; 2001 >
+    au < released ; 2002 ; Brookings Papers on Education Policy 2002 ; 2002 >
+    au < released ; 2003 ; Brookings Papers on Education Policy 2003 ; 2003 >
+    au < released ; 2004 ; Brookings Papers on Education Policy 2004 ; 2004 >
+    au < released ; 2005 ; Brookings Papers on Education Policy 2005 ; 2005 >
+    au < released ; 2006 ; Brookings Papers on Education Policy 2006 ; 2006 >
+    au < doesNotExist ; 2007 ; Brookings Papers on Education Policy 2007 ; 2007 >
 
   }
 
@@ -64,18 +64,18 @@
     >
 
     param[journal_dir] = brookings_trade_forum
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Brookings Trade Forum 2000 ; 2000 >
-    au < released ; Brookings Trade Forum 2001 ; 2001 >
-    au < released ; Brookings Trade Forum 2002 ; 2002 >
-    au < released ; Brookings Trade Forum 2003 ; 2003 >
-    au < released ; Brookings Trade Forum 2004 ; 2004 >
-    au < released ; Brookings Trade Forum 2005 ; 2005 >
-    au < released ; Brookings Trade Forum 2006 ; 2006 >
-    au < released ; Brookings Trade Forum 2007 ; 2007 >
-    au < released ; Brookings Trade Forum 2008 ; 2008 >
-    au < doesNotExist ; Brookings Trade Forum 2009 ; 2009 >
+    au < released ; 2000 ; Brookings Trade Forum 2000 ; 2000 >
+    au < released ; 2001 ; Brookings Trade Forum 2001 ; 2001 >
+    au < released ; 2002 ; Brookings Trade Forum 2002 ; 2002 >
+    au < released ; 2003 ; Brookings Trade Forum 2003 ; 2003 >
+    au < released ; 2004 ; Brookings Trade Forum 2004 ; 2004 >
+    au < released ; 2005 ; Brookings Trade Forum 2005 ; 2005 >
+    au < released ; 2006 ; Brookings Trade Forum 2006 ; 2006 >
+    au < released ; 2007 ; Brookings Trade Forum 2007 ; 2007 >
+    au < released ; 2008 ; Brookings Trade Forum 2008 ; 2008 >
+    au < doesNotExist ; 2009 ; Brookings Trade Forum 2009 ; 2009 >
 
   }
 
@@ -88,14 +88,14 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_financial_services
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Brookings-Wharton Papers on Financial Services 2000 ; 2000 >
-    au < released ; Brookings-Wharton Papers on Financial Services 2001 ; 2001 >
-    au < released ; Brookings-Wharton Papers on Financial Services 2002 ; 2002 >
-    au < released ; Brookings-Wharton Papers on Financial Services 2003 ; 2003 >
-    au < released ; Brookings-Wharton Papers on Financial Services 2004 ; 2004 >
-    au < doesNotExist ; Brookings-Wharton Papers on Financial Services 2005 ; 2005 >
+    au < released ; 2000 ; Brookings-Wharton Papers on Financial Services 2000 ; 2000 >
+    au < released ; 2001 ; Brookings-Wharton Papers on Financial Services 2001 ; 2001 >
+    au < released ; 2002 ; Brookings-Wharton Papers on Financial Services 2002 ; 2002 >
+    au < released ; 2003 ; Brookings-Wharton Papers on Financial Services 2003 ; 2003 >
+    au < released ; 2004 ; Brookings-Wharton Papers on Financial Services 2004 ; 2004 >
+    au < doesNotExist ; 2005 ; Brookings-Wharton Papers on Financial Services 2005 ; 2005 >
 
   }
 
@@ -108,19 +108,19 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_urban_affairs
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2000 ; 2000 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2001 ; 2001 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2002 ; 2002 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2003 ; 2003 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2004 ; 2004 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2005 ; 2005 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2006 ; 2006 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2007 ; 2007 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2008 ; 2008 >
-    au < released ; Brookings-Wharton Papers on Urban Affairs 2009 ; 2009 >
-    au < doesNotExist ; Brookings-Wharton Papers on Urban Affairs 2010 ; 2010 >
+    au < released ; 2000 ; Brookings-Wharton Papers on Urban Affairs 2000 ; 2000 >
+    au < released ; 2001 ; Brookings-Wharton Papers on Urban Affairs 2001 ; 2001 >
+    au < released ; 2002 ; Brookings-Wharton Papers on Urban Affairs 2002 ; 2002 >
+    au < released ; 2003 ; Brookings-Wharton Papers on Urban Affairs 2003 ; 2003 >
+    au < released ; 2004 ; Brookings-Wharton Papers on Urban Affairs 2004 ; 2004 >
+    au < released ; 2005 ; Brookings-Wharton Papers on Urban Affairs 2005 ; 2005 >
+    au < released ; 2006 ; Brookings-Wharton Papers on Urban Affairs 2006 ; 2006 >
+    au < released ; 2007 ; Brookings-Wharton Papers on Urban Affairs 2007 ; 2007 >
+    au < released ; 2008 ; Brookings-Wharton Papers on Urban Affairs 2008 ; 2008 >
+    au < released ; 2009 ; Brookings-Wharton Papers on Urban Affairs 2009 ; 2009 >
+    au < doesNotExist ; 2010 ; Brookings-Wharton Papers on Urban Affairs 2010 ; 2010 >
 
   }
 
