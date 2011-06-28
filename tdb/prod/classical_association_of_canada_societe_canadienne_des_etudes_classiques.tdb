@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,8 +17,8 @@
 
     param[journal_dir] = mouseion_journal_of_the_classical_association_of_canada
 
-    au < released ; Mouseion: Journal of the Classical Association of Canada Volume 7 ; 7 >
-    au < released ; Mouseion: Journal of the Classical Association of Canada Volume 8 ; 8 >
+    au < released ; 2007 ; Mouseion: Journal of the Classical Association of Canada Volume 7 ; 7 >
+    au < released ; 2008 ; Mouseion: Journal of the Classical Association of Canada Volume 8 ; 8 >
 
   }
 

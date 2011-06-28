@@ -13,13 +13,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1071-8443
   
-      au < superseded ; Chelonian Conservation and Biology Volume 5 ; 5 >
-      au < superseded ; Chelonian Conservation and Biology Volume 6 ; 6 >
+      au < superseded ; 2006 ; Chelonian Conservation and Biology Volume 5 ; 5 >
+      au < superseded ; 2007 ; Chelonian Conservation and Biology Volume 6 ; 6 >
     }
 
   }

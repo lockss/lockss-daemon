@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0007-9367
   
-      au < superseded ; Cactus and Succulent Journal Volume 77 ; 77 >
-      au < superseded ; Cactus and Succulent Journal Volume 78 ; 78 >
-      au < superseded ; Cactus and Succulent Journal Volume 79 ; 79 >
+      au < superseded ; 2005 ; Cactus and Succulent Journal Volume 77 ; 77 >
+      au < superseded ; 2006 ; Cactus and Succulent Journal Volume 78 ; 78 >
+      au < superseded ; 2007 ; Cactus and Succulent Journal Volume 79 ; 79 >
     }
 
   }
@@ -35,13 +35,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1070-0048
   
-      au < superseded ; Haseltonia Volume 11 ; 11 >
-      au < superseded ; Haseltonia Volume 12 ; 12 >
+      au < superseded ; 2005 ; Haseltonia Volume 11 ; 11 >
+      au < superseded ; 2006 ; Haseltonia Volume 12 ; 12 >
     }
 
     {
