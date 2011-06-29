@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.84 2011-04-07 00:08:59 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.84.4.1 2011-06-29 07:01:47 tlipkis Exp $
  */
 
 /*
@@ -1281,6 +1281,13 @@ public class ConfigManager implements LockssManager {
     if (!StringUtil.isNullString(tmpdir)) {
       System.setProperty("java.io.tmpdir", tmpdir);
     }
+
+    String fromParam = LockssDaemon.PARAM_BIND_ADDRS;
+    setIfNotSet(config, fromParam, AdminServletManager.PARAM_BIND_ADDRS);
+    setIfNotSet(config, fromParam, ContentServletManager.PARAM_BIND_ADDRS);
+    setIfNotSet(config, fromParam, ProxyManager.PARAM_BIND_ADDRS);
+    setIfNotSet(config, fromParam, AuditProxyManager.PARAM_BIND_ADDRS);
+//     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
   }
 
   // Backward compatibility for param settings

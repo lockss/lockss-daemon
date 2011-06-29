@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.20 2011-04-26 23:54:33 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.20.4.1 2011-06-29 07:01:47 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,12 @@ public class AdminServletManager extends BaseServletManager {
   /** The port the admin UI listens on */
   public static final String PARAM_PORT = PREFIX + SUFFIX_PORT;
   public static final int DEFAULT_PORT = 8081;
+
+  /** List of IP addresses to which to bind listen socket.  If not set,
+   * server listens on all interfaces.  All listeners are on the same
+   * port, given by the <tt>port</tt> parameter.  Changing this requires
+   * daemon restart. */
+  public static final String PARAM_BIND_ADDRS = PREFIX + SUFFIX_BIND_ADDRS;
 
   /** If true the admin UI will be started */
   public static final String PARAM_START = PREFIX + SUFFIX_START;

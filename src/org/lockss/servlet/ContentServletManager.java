@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.6 2011-04-26 23:54:33 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.6.4.1 2011-06-29 07:01:47 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,12 @@ public class ContentServletManager
   // some are also used by other packages to set the params referenced here
   public static final String PARAM_PORT = PREFIX + SUFFIX_PORT;
   public static final int DEFAULT_PORT = 8080;
+
+  /** List of IP addresses to which to bind listen socket.  If not set,
+   * server listens on all interfaces.  All listeners are on the same
+   * port, given by the <tt>port</tt> parameter.  Changing this requires
+   * daemon restart. */
+  public static final String PARAM_BIND_ADDRS = PREFIX + SUFFIX_BIND_ADDRS;
 
   public static final String PARAM_START = PREFIX + SUFFIX_START;
   public static final boolean DEFAULT_START = false;
