@@ -14,13 +14,13 @@
   
     rights = openaccess
     plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
   
     {
     
       param[base_url] = http://eserver.org/clogic/
       
-      au < superseded ; Cultural Logic 2003 [superseded] ; 2003 >
+      au < superseded ; 2003 ; Cultural Logic 2003 [superseded] ; 2003 >
       
     }
     
@@ -28,16 +28,18 @@
     
       param[base_url] = http://clogic.eserver.org/
 
-      au < released ; Cultural Logic Volume 1 ; 0001 >
-      au < released ; Cultural Logic Volume 2 ; 0002 >
-      au < released ; Cultural Logic Volume 3 ; 0003 >
-      au < released ; Cultural Logic Volume 4 ; 0004 >
-      au < released ; Cultural Logic 2002 ; 2002 >
-      au < released ; Cultural Logic 2003 ; 2003 >
-      au < released ; Cultural Logic 2004 ; 2004 >
-      au < released ; Cultural Logic 2005 ; 2005 >
-      au < released ; Cultural Logic 2006 ; 2006 >
-      au < exists ; Cultural Logic 2007 ; 2007 >
+      au < released ; 1997-1998 ; Cultural Logic Volume 1 ; 0001 >
+      au < released ; 1998-1999 ; Cultural Logic Volume 2 ; 0002 >
+      au < released ; 1999-2000 ; Cultural Logic Volume 3 ; 0003 >
+      au < released ; 2000-2001 ; Cultural Logic Volume 4 ; 0004 >
+      au < released ; 2002 ; Cultural Logic Volume 5 ; 2002 >
+      au < released ; 2003 ; Cultural Logic Volume 6 ; 2003 >
+      au < released ; 2004 ; Cultural Logic Volume 7 ; 2004 >
+      au < released ; 2005 ; Cultural Logic Volume 8 ; 2005 >
+      au < released ; 2006 ; Cultural Logic Volume 9 ; 2006 >
+      au < exists ; 2007 ; Cultural Logic 2007 ; 2007 >
+      au < exists ; 2008 ; Cultural Logic 2008 ; 2008 >
+      au < exists ; 2009 ; Cultural Logic 2009 ; 2009 >
     
     }
   
