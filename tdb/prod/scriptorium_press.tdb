@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
 
@@ -19,9 +19,10 @@
 
     param[journal_dir] = arthuriana
 
-    au < released ; Arthuriana Volume 18 ; 18 >
-    au < released ; Arthuriana Volume 19 ; 19 >
-    au < released ; Arthuriana Volume 20 ; 20 >
+    au < released ; 2008 ; Arthuriana Volume 18 ; 18 >
+    au < released ; 2009 ; Arthuriana Volume 19 ; 19 >
+    au < released ; 2010 ; Arthuriana Volume 20 ; 20 >
+    au < manifest ; 2011 ; Arthuriana Volume 21 ; 21 >
 
   }
 
