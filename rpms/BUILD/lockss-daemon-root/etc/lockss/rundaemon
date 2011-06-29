@@ -39,7 +39,7 @@ set_lockss_user ${USER}
 set_variables ${USER}
 if [ "${WATCHDOG}X" = X ]
 then
-    WATCHDOG=/tmp/lockss.${USER}.watchdog
+    XXXWATCHDOG=/tmp/lockss.${USER}.watchdog
 fi
 if [ "${WATCHDOG_SECS}X" = X ]
 then
