@@ -5,7 +5,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+	<string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -132,5 +141,11 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.ingenta.IngentaUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[0-9]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
+    </list>
   </entry>
 </map>

@@ -5,7 +5,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+	<string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -26,10 +35,10 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*(show=pdf$|view=printarticle)&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -37,21 +46,21 @@
     <string>&quot;%scrawlers/lockss.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
         <string>au_issue</string>
-    	<string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
-  	  </entry>
-  	  <entry>
-    	<string>au_volume</string>
-    	<string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
-  	  </entry>
-  	  <entry>
-    	<string>au_title</string>
-    	<string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
-  	  </entry> 
-	</map>
+        <string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&amp;issue=%s&quot;, base_url, journal_issn, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%sjournals.htm?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%sjournals.htm?issn=%s&quot;, base_url, journal_issn</string>
+      </entry> 
+    </map>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -95,8 +104,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*show=pdf$&quot;, base_url, journal_issn, volume_name</string>
-      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*view=printarticle&quot;, base_url, journal_issn, volume_name</string>
+      <string>&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*&amp;articleid=[^&amp;]*&amp;show=(html|pdf)&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
 </map>

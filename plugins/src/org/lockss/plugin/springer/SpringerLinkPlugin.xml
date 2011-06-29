@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -13,6 +13,10 @@
       <entry>
         <string>Poll</string>
 	<string>4</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+	<string>2</string>
       </entry>
     </map>
   </entry>
@@ -66,8 +70,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
       <string>2,&quot;^%s.*\?target=save$&quot;, base_url</string>
       <string>1,&quot;^%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
@@ -98,6 +102,12 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_30S</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.(html|pdf)$&quot;, base_url, volume_name</string>
     </list>
   </entry>
 </map>

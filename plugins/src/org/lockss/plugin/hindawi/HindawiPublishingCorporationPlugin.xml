@@ -9,7 +9,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+	<string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
@@ -100,6 +109,13 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>400=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%sjournals/%s/%s/[^/]+/$&quot;, base_url, journal_id, volume_name</string>
+      <string>&quot;^%sjournals/%s/%s/[^/]+\.pdf$&quot;, download_url, journal_id, volume_name</string>
     </list>
   </entry>
 </map>
