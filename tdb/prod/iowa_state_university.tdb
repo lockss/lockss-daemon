@@ -14,13 +14,13 @@
   
     rights = openaccess
     plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; attr[volume] ; param[year] >
   
     {
     
       param[base_url] = http://eserver.org/clogic/
       
-      au < superseded ; 2003 ; Cultural Logic 2003 [superseded] ; 2003 >
+      au < superseded ; 2003 ; Cultural Logic 2003 [superseded] ; 6 ; 2003 >
       
     }
     
@@ -28,18 +28,18 @@
     
       param[base_url] = http://clogic.eserver.org/
 
-      au < released ; 1997-1998 ; Cultural Logic Volume 1 ; 0001 >
-      au < released ; 1998-1999 ; Cultural Logic Volume 2 ; 0002 >
-      au < released ; 1999-2000 ; Cultural Logic Volume 3 ; 0003 >
-      au < released ; 2000-2001 ; Cultural Logic Volume 4 ; 0004 >
-      au < released ; 2002 ; Cultural Logic Volume 5 ; 2002 >
-      au < released ; 2003 ; Cultural Logic Volume 6 ; 2003 >
-      au < released ; 2004 ; Cultural Logic Volume 7 ; 2004 >
-      au < released ; 2005 ; Cultural Logic Volume 8 ; 2005 >
-      au < released ; 2006 ; Cultural Logic Volume 9 ; 2006 >
-      au < exists ; 2007 ; Cultural Logic 2007 ; 2007 >
-      au < exists ; 2008 ; Cultural Logic 2008 ; 2008 >
-      au < exists ; 2009 ; Cultural Logic 2009 ; 2009 >
+      au < released ; 1997-1998 ; Cultural Logic Volume 1 ; 1 ; 0001 >
+      au < released ; 1998-1999 ; Cultural Logic Volume 2 ; 2 ; 0002 >
+      au < released ; 1999-2000 ; Cultural Logic Volume 3 ; 3 ; 0003 >
+      au < released ; 2000-2001 ; Cultural Logic Volume 4 ; 4 ; 0004 >
+      au < released ; 2002 ; Cultural Logic Volume 5 ; 5 ; 2002 >
+      au < released ; 2003 ; Cultural Logic Volume 6 ; 6 ; 2003 >
+      au < released ; 2004 ; Cultural Logic Volume 7 ; 7 ; 2004 >
+      au < released ; 2005 ; Cultural Logic Volume 8 ; 8 ; 2005 >
+      au < released ; 2006 ; Cultural Logic Volume 9 ; 9 ; 2006 >
+      au < exists ; 2007 ; Cultural Logic 2007 ; ; 2007 >
+      au < exists ; 2008 ; Cultural Logic 2008 ; ; 2008 >
+      au < exists ; 2009 ; Cultural Logic 2009 ; ; 2009 >
     
     }
   
@@ -55,13 +55,13 @@
 
     rights = openaccess
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://emc.eserver.org/
     
-    au < released ; Early Modern Culture Volume 1 ; 1 >
-    au < released ; Early Modern Culture Volume 2 ; 2 >
-    au < released ; Early Modern Culture Volume 3 ; 3 >
-    au < released ; Early Modern Culture Volume 4 ; 4 >
+    au < released ; 2000 ; Early Modern Culture Issue 1 ; 1 >
+    au < released ; 2002 ; Early Modern Culture Issue 2 ; 2 >
+    au < released ; 2003 ; Early Modern Culture Issue 3 ; 3 >
+    au < released ; 2004 ; Early Modern Culture Issue 4 ; 4 >
   
   }
   
