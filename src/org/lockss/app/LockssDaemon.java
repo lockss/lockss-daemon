@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.106 2011-01-25 00:04:17 pgust Exp $
+ * $Id: LockssDaemon.java,v 1.107 2011-06-29 07:06:33 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     PARAM_DAEMON_DEADLINE_REASONABLE + "future";
   static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE =
     20 * Constants.WEEK;
+
+  /** List of local IP addresses to which to bind listen sockets for
+   * servers (admin ui, content, proxy).  If not set, servers listen on all
+   * interfaces.  Does not affect the port on which various servers listen.
+   * Changing this requires daemon restart. */
+  public static final String PARAM_BIND_ADDRS = PREFIX + "bindAddrs";
 
   // Parameter keys for daemon managers
   public static final String RANDOM_MANAGER = "RandomManager";

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.16 2011-06-21 22:10:35 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.17 2011-06-29 07:06:33 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public abstract class BaseProxyManager extends JettyManager {
   }
 
   protected void addListeners(HttpServer server) {
-    if (/*bindAddrs != null && */bindAddrs.isEmpty()) {
+    if (bindAddrs.isEmpty()) {
       try {
 	addListener(server, null, port);
       } catch (UnknownHostException e) {
