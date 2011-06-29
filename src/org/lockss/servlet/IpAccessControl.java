@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.41.20.1 2011-06-26 21:11:07 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.41.20.2 2011-06-29 16:38:41 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,8 @@ public abstract class IpAccessControl extends LockssServlet {
     "class A, B or C subnets (<code>10.*.*.*</code> ,&nbsp " +
     "<code>172.16.31.*</code>) or CIDR notation " +
     "subnets (<code>172.16.31.0/24</code>). " +
-    "<br>Enter each address or subnet on a separate line. ";
+    "<br>Enter each address or subnet on a separate line. " +
+    "Lines that start with # are comments.";
 
   protected static final String commonExp =
     "To be allowed access, an IP address must match some entry on the " +
