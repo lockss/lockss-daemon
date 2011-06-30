@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0044-7447
   
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
-      au < superseded ; AMBIO: A Journal of the Human Environment Volume 33 ; 33 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
-      au < doNotProcess ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
+      au < doNotProcess ; 2000 ; AMBIO: A Journal of the Human Environment Volume 29 ; 29 >
+      au < doNotProcess ; 2001 ; AMBIO: A Journal of the Human Environment Volume 30 ; 30 >
+      au < doNotProcess ; 2002 ; AMBIO: A Journal of the Human Environment Volume 31 ; 31 >
+      au < doNotProcess ; 2003 ; AMBIO: A Journal of the Human Environment Volume 32 ; 32 >
+      au < superseded ; 2004 ; AMBIO: A Journal of the Human Environment Volume 33 ; 33 >
+      au < doNotProcess ; 2005 ; AMBIO: A Journal of the Human Environment Volume 34 ; 34 >
+      au < doNotProcess ; 2006 ; AMBIO: A Journal of the Human Environment Volume 35 ; 35 >
+      au < doNotProcess ; 2007 ; AMBIO: A Journal of the Human Environment Volume 36 ; 36 >
     }
 
     {
