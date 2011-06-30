@@ -64,7 +64,7 @@
       au < manifest ; 2008 ; Journal of Nuclear Medicine Volume 49 ; 49 >
       au < manifest ; 2009 ; Journal of Nuclear Medicine Volume 50 ; 50 >
       au < manifest ; 2010 ; Journal of Nuclear Medicine Volume 51 ; 51 >
-      au < testing ; 2011 ; Journal of Nuclear Medicine Volume 52 ; 52 >
+      au < ready ; 2011 ; Journal of Nuclear Medicine Volume 52 ; 52 >
 
     }
 
@@ -83,6 +83,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://tech.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[tech] = fetch errors 37-39
 
       au < manifest ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
       au < manifest ; 1998 ; Journal of Nuclear Medicine Technology Volume 26 ; 26 >
@@ -96,9 +97,9 @@
       au < manifest ; 2006 ; Journal of Nuclear Medicine Technology Volume 34 ; 34 >
       au < manifest ; 2007 ; Journal of Nuclear Medicine Technology Volume 35 ; 35 >
       au < manifest ; 2008 ; Journal of Nuclear Medicine Technology Volume 36 ; 36 >
-      au < manifest ; 2009 ; Journal of Nuclear Medicine Technology Volume 37 ; 37 >
-      au < manifest ; 2010 ; Journal of Nuclear Medicine Technology Volume 38 ; 38 >
-      au < testing ; 2011 ; Journal of Nuclear Medicine Technology Volume 39 ; 39 >
+      au < notReady ; 2009 ; Journal of Nuclear Medicine Technology Volume 37 ; 37 >
+      au < notReady ; 2010 ; Journal of Nuclear Medicine Technology Volume 38 ; 38 >
+      au < notReady ; 2011 ; Journal of Nuclear Medicine Technology Volume 39 ; 39 >
 
     }
 
