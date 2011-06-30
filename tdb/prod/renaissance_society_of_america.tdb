@@ -3,7 +3,7 @@
     name = Renaissance Society of America
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,8 +18,10 @@
 
     param[journal_dir] = renaissance_quarterly
 
-    au < manifest ; Renaissance Quarterly Volume 60 ; 60 >
-    au < manifest ; Renaissance Quarterly Volume 61 ; 61 >
+    au < manifest ; 2005 ; Renaissance Quarterly Volume 58 ; 58 >
+    au < manifest ; 2006 ; Renaissance Quarterly Volume 59 ; 59 >
+    au < manifest ; 2007 ; Renaissance Quarterly Volume 60 ; 60 >
+    au < manifest ; 2008 ; Renaissance Quarterly Volume 61 ; 61 >
 
   }
 
