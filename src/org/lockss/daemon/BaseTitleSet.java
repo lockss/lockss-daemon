@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.8 2011-02-23 08:41:04 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.9 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,8 @@ public abstract class BaseTitleSet implements TitleSet {
    * @param allTitles collection of {@link TitleConfig}s to be filtered
    * @return a collection of {@link TitleConfig}s
    */
-  abstract Collection filterTitles(Collection allTitles);
+  abstract protected Collection<TitleConfig>
+    filterTitles(Collection<TitleConfig> allTitles);
 
   /** Match action with actionable set from implementation */
   public final boolean isSetActionable(int action) {

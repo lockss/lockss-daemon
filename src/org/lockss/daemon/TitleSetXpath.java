@@ -1,10 +1,10 @@
 /*
- * $Id: TitleSetXpath.java,v 1.7 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: TitleSetXpath.java,v 1.8 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import java.util.regex.*;
 
 import org.apache.commons.jxpath.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * A set of titles defined as an XPath predicate used to match some subset
@@ -63,7 +65,7 @@ public class TitleSetXpath extends BaseTitleSet {
    * @param xpathPred an XPath predicate (<i>eg</i>,
    * <code>[journalTitle='Dog Journal']</code> )
    */
-  public TitleSetXpath(LockssDaemon daemon, String name, String xpathPred) {
+  TitleSetXpath(LockssDaemon daemon, String name, String xpathPred) {
     super(daemon, name);
     if (!(xpathPred.startsWith("[") && xpathPred.endsWith("]"))) {
       throw new IllegalArgumentException("XPath predicate must be enclosed in \"[\" ... \"]\"");
@@ -76,12 +78,14 @@ public class TitleSetXpath extends BaseTitleSet {
    * @param allTitles collection of {@link TitleConfig}s to be filtered
    * @return a collection of {@link TitleConfig}s
    */
-  Collection filterTitles(Collection allTitles) {
+  protected Collection<TitleConfig>
+    filterTitles(Collection<TitleConfig> allTitles) {
+
     JXPathContext context = JXPathContext.newContext(sharedContext, allTitles);
     return selectNodes(expr, context);
   }
 
-  List selectNodes(CompiledExpression expr, JXPathContext context) {
+  private List selectNodes(CompiledExpression expr, JXPathContext context) {
     ArrayList list = new ArrayList();
     for (Iterator iter = expr.iteratePointers(context); iter.hasNext(); ) {
       Pointer pointer = (Pointer)iter.next();
@@ -119,10 +123,129 @@ public class TitleSetXpath extends BaseTitleSet {
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer(40);
+    StringBuilder sb = new StringBuilder(40);
     sb.append("[TS.XPath: ");
     sb.append(xpath);
     sb.append("]");
     return sb.toString();
+  }
+
+  /** Special case for xpath: <code>[pluginName='plugname']</code>,
+   * optimized to avoid evaluating zpath expression */
+  static class Plugin extends TitleSetXpath {
+
+    private String pluginName;
+
+    /** Create a TitleSet that consists of all known AUs using the named plugin
+     * @param pluginName plugin name
+     */
+    public Plugin(LockssDaemon daemon, String name,
+		  String xpath, String pluginName) {
+      super(daemon, name, xpath);
+      this.pluginName = pluginName;
+    }
+
+    protected Collection<TitleConfig>
+      filterTitles(Collection<TitleConfig> allTitles) {
+
+      ArrayList<TitleConfig> res = new ArrayList<TitleConfig>();
+      for (TitleConfig tc : allTitles) {
+	if (pluginName.equals(tc.getPluginName())) {
+	  res.add(tc);
+	}
+      }
+      res.trimToSize();
+      return res;
+    }
+
+    public String toString() {
+      StringBuilder sb = new StringBuilder(40);
+      sb.append("[TS.Plugin: ");
+      sb.append(pluginName);
+      sb.append("]");
+      return sb.toString();
+    }
+  }
+
+  /** Special case for xpath:
+   * <code>[attributes/publisher='pubname']</code>, optimized to avoid
+   * evaluating zpath expression */
+  static class Attr extends TitleSetXpath {
+
+    private String attr;
+    private String val;
+
+    /** Create a TitleSet that consists of all AUs with the given attribute
+     * value
+     * @param attribute attribute name
+     * @param val attribute value
+     */
+    public Attr(LockssDaemon daemon, String name,
+		String xpath, String attribute, String value) {
+      super(daemon, name, xpath);
+      this.attr = attribute;
+      this.val = value;
+    }
+
+    protected Collection<TitleConfig>
+      filterTitles(Collection<TitleConfig> allTitles) {
+
+      ArrayList<TitleConfig> res = new ArrayList<TitleConfig>();
+      for (TitleConfig tc : allTitles) {
+	if (val.equals(tc.getAttributes().get(attr))) {
+	  res.add(tc);
+	}
+      }
+      res.trimToSize();
+      return res;
+    }
+
+    public String toString() {
+      StringBuilder sb = new StringBuilder(40);
+      sb.append("[TS.Attr: ");
+      sb.append(attr);
+      sb.append(" = ");
+      sb.append(val);
+      sb.append("]");
+      return sb.toString();
+    }
+  }
+
+  // Identifier
+  private static String IDENT = "[a-zA-Z0-9_$.]+";
+  // String quoted with ' or "
+  private static String STRVAL = "(?:(?:'([^']+)')|(?:\"([^\"]+)\"))";
+
+  private static Pattern XPATH_PLUGIN =
+    Pattern.compile("\\[pluginName=" + STRVAL + "\\]",
+		    Pattern.CASE_INSENSITIVE);
+
+  private static Pattern XPATH_ATTR =
+    Pattern.compile("\\[attributes/(" + IDENT + ")=" + STRVAL + "\\]",
+		    Pattern.CASE_INSENSITIVE);
+
+
+  /** Factory method to create TitleSetXpath or an optimized version if
+   * possible */
+  public static TitleSetXpath create(LockssDaemon daemon,
+				     String name,
+				     String xpathPred) {
+
+    Matcher mplug = XPATH_PLUGIN.matcher(xpathPred);
+    if (mplug.matches()) {
+      return new Plugin(daemon, name, xpathPred,
+			or(mplug.group(1), mplug.group(2)));
+    }
+    Matcher mattr = XPATH_ATTR.matcher(xpathPred);
+    if (mattr.matches()) {
+      return new Attr(daemon, name, xpathPred, mattr.group(1),
+			or(mattr.group(2), mattr.group(3)));
+    }
+    return new TitleSetXpath(daemon, name, xpathPred);
+  }
+
+  private static String or(String s1, String s2) {
+    if (s1 == null) return s2;
+    return s1;
   }
 }

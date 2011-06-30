@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.4 2005-10-05 06:05:26 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.5 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -81,8 +81,12 @@ public class TestTitleSetXpath extends LockssTestCase {
     titles = ListUtil.list(tc1, tc2, tc3, tc4, tc5, tc6);
   }
 
-  TitleSetXpath newSet(String pred) {
+  TitleSetXpath newSet0(String pred) {
     return new TitleSetXpath(getMockLockssDaemon(), "Name1", pred);
+  }
+
+  TitleSetXpath newSet(String pred) {
+    return TitleSetXpath.create(getMockLockssDaemon(), "Name1", pred);
   }
 
   public void testConstructor() {
@@ -201,6 +205,33 @@ public class TestTitleSetXpath extends LockssTestCase {
       fail("Illegal regexp, should have thrown");
     } catch (JXPathException e) {
     }
+  }
+
+
+  public void testOptimizedPlugin() {
+    TitleSetXpath tsp1 = newSet("[pluginName='o.l.plug2']");
+    assertClass(TitleSetXpath.Plugin.class, tsp1);
+    TitleSetXpath tsp2 = newSet("[pluginName=\"o.l.plug2\"]");
+    assertClass(TitleSetXpath.Plugin.class, tsp2);
+    TitleSetXpath tsp3 = newSet("[pluginName='o.l.plug2' or attributes/X='Y']");
+    assertNotClass(TitleSetXpath.Plugin.class, tsp3);
+
+    assertSameElements(ListUtil.list(tc4, tc5, tc6), tsp1.filterTitles(titles));
+    assertSameElements(ListUtil.list(tc4, tc5, tc6), tsp2.filterTitles(titles));
+    assertSameElements(ListUtil.list(tc4, tc5, tc6), tsp3.filterTitles(titles));
+  }
+
+  public void testOptimizedAttr() {
+    TitleSetXpath tsa1 = newSet("[attributes/key1='val1']");
+    assertClass(TitleSetXpath.Attr.class, tsa1);
+    TitleSetXpath tsa2 = newSet("[attributes/key1=\"val1\"]");
+    assertClass(TitleSetXpath.Attr.class, tsa2);
+    TitleSetXpath tsa3 = newSet("[attributes/key1='val1' or false]");
+    assertNotClass(TitleSetXpath.Attr.class, tsa3);
+
+    assertSameElements(ListUtil.list(tc5), tsa1.filterTitles(titles));
+    assertSameElements(ListUtil.list(tc5), tsa2.filterTitles(titles));
+    assertSameElements(ListUtil.list(tc5), tsa3.filterTitles(titles));
   }
 
 }

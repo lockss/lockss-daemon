@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.218 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.219 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -546,8 +546,8 @@ public class PluginManager
     String cls = config.get(TITLE_SET_PARAM_CLASS);
     String name = config.get(TITLE_SET_PARAM_NAME);
     if (cls.equalsIgnoreCase(TITLE_SET_CLASS_XPATH)) {
-      return new TitleSetXpath(getDaemon(), name,
-			       config.get(TITLE_SET_XPATH_XPATH));
+      return TitleSetXpath.create(getDaemon(), name,
+				  config.get(TITLE_SET_XPATH_XPATH));
     }
     if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
       return new TitleSetAllTitles(getDaemon());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.4 2011-02-23 08:41:04 tlipkis Exp $
+ * $Id: TestTitleSet.java,v 1.5 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -59,12 +59,12 @@ public class TestTitleSet extends LockssTestCase {
     } catch (NullPointerException e) {
     }
     try {
-      new TitleSetXpath(null, "T1", "[foo]");
+      TitleSetXpath.create(null, "T1", "[foo]");
       fail("Should throw NullPointerException");
     } catch (NullPointerException e) {
     }
     try {
-      new TitleSetXpath(daemon, null, "[foo]");
+      TitleSetXpath.create(daemon, null, "[foo]");
       fail("Should throw NullPointerException");
     } catch (NullPointerException e) {
     }
@@ -73,9 +73,9 @@ public class TestTitleSet extends LockssTestCase {
   public void testSort() throws Exception {
     TitleSet tsAll1 = new TitleSetAllTitles(daemon);
     TitleSet tsAll2 = new TitleSetActiveAus(daemon);
-    TitleSet ts1 = new TitleSetXpath(daemon, "Title a", "[foo]");
-    TitleSet ts2 = new TitleSetXpath(daemon, "Title B", "[foo]");
-    TitleSet ts3 = new TitleSetXpath(daemon, "Title c", "[foo]");
+    TitleSet ts1 = TitleSetXpath.create(daemon, "Title a", "[foo]");
+    TitleSet ts2 = TitleSetXpath.create(daemon, "Title B", "[foo]");
+    TitleSet ts3 = TitleSetXpath.create(daemon, "Title c", "[foo]");
     assertCompareIsGreaterThan(ts1, tsAll1);
     assertCompareIsGreaterThan(ts1, tsAll2);
     assertCompareIsGreaterThan(ts2, ts1);

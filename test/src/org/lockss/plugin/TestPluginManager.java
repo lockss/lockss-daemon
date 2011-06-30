@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.91 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.92 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -688,8 +688,10 @@ public class TestPluginManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Map map = mgr.getTitleSetMap();
     assertEquals(2, map.size());
-    assertEquals(new TitleSetXpath(theDaemon, title1, path1), map.get(title1));
-    assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
+    assertEquals(TitleSetXpath.create(theDaemon, title1, path1),
+		 map.get(title1));
+    assertEquals(TitleSetXpath.create(theDaemon, title2, path2),
+		 map.get(title2));
   }
 
   public void testTitleSetOrder() throws Exception {
@@ -738,7 +740,8 @@ public class TestPluginManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Map map = mgr.getTitleSetMap();
     assertEquals(1, map.size());
-    assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
+    assertEquals(TitleSetXpath.create(theDaemon, title2, path2),
+		 map.get(title2));
   }
 
   static class MyMockLockssDaemon extends MockLockssDaemon {

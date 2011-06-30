@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.11 2010-04-02 23:18:13 pgust Exp $
+ * $Id: TitleSetActiveAus.java,v 1.12 2011-06-30 19:06:00 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,9 @@ public class TitleSetActiveAus extends BaseTitleSet {
    * but should never be called.
    * @throw UnsupportedOperationException
   */
-  Collection filterTitles(Collection allTitles) {
+  protected Collection<TitleConfig>
+    filterTitles(Collection<TitleConfig> allTitles) {
+
     throw
       new UnsupportedOperationException("This method should never be called");
   }
