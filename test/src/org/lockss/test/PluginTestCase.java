@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginTestCase.java,v 1.1 2011-03-13 21:53:56 tlipkis Exp $
+n * $Id: PluginTestCase.java,v 1.2 2011-06-30 19:06:55 tlipkis Exp $
  */
 
 /*
@@ -113,17 +113,18 @@ public class PluginTestCase extends LockssTestCase {
     if (StringUtil.isNullString(args)) {
       return;
     }
-    int failed = 0;
+    List<String> failed = new ArrayList<String>();
     for (String pluginName : (List<String>)StringUtil.breakAt(args, ";")) {
       try {
  	System.err.println("Testing plugin: " + pluginName);
 	resetAndTest(pluginName);
       } catch (Exception e) {
-	failed++;
+	failed.add(pluginName);
       }
     }
-    if (failed > 0) {
-      fail(StringUtil.numberOfUnits(failed, "plugin") + " failed");
+    if (!failed.isEmpty()) {
+      fail(StringUtil.numberOfUnits(failed.size(), "plugin") + " failed: "
+	   + failed);
     }
   }
 
