@@ -501,16 +501,16 @@ comment[0] = needs Clockss Ingenta plugin
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2002 ; Bronte Studies Volume 27 ; 27 > 
-    au < exists ; exists ; 2003 ; Bronte Studies Volume 28 ; 28 > 
-    au < exists ; exists ; 2004 ; Bronte Studies Volume 29 ; 29 > 
-    au < exists ; exists ; 2005 ; Bronte Studies Volume 30 ; 30 > 
-    au < exists ; exists ; 2006 ; Bronte Studies Volume 31 ; 31 > 
-    au < exists ; exists ; 2007 ; Bronte Studies Volume 32 ; 32 > 
-    au < exists ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
-    au < exists ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
-    au < exists ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < exists ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < manifest ; manifest ; 2002 ; Bronte Studies Volume 27 ; 27 >
+    au < doesNotExist ; doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 >
+    au < doesNotExist ; doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 >
+    au < manifest ; manifest ; 2005 ; Bronte Studies Volume 30 ; 30 >
+    au < manifest ; manifest ; 2006 ; Bronte Studies Volume 31 ; 31 >
+    au < manifest ; manifest ; 2007 ; Bronte Studies Volume 32 ; 32 >
+    au < manifest ; manifest ; 2008 ; Bronte Studies Volume 33 ; 33 >
+    au < manifest ; manifest ; 2009 ; Bronte Studies Volume 34 ; 34 >
+    au < manifest ; manifest ; 2010 ; Bronte Studies Volume 35 ; 35 >
+    au < manifest ; manifest ; 2011 ; Bronte Studies Volume 36 ; 36 >
 
   }
 
@@ -532,9 +532,9 @@ comment[0] = needs Clockss Ingenta plugin
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
-    au < exists ; exists ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
-    au < exists ; exists ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
+    au < manifest ; manifest ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
+    au < manifest ; manifest ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
+    au < manifest ; manifest ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
 
   }
 
@@ -556,11 +556,11 @@ comment[0] = needs Clockss Ingenta plugin
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
-    au < exists ; exists ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
-    au < exists ; exists ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
-    au < exists ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
+    au < manifest ; manifest ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 >
+    au < manifest ; manifest ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 >
+    au < manifest ; manifest ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 >
+    au < manifest ; manifest ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 >
+    au < manifest ; manifest ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 >
 
   }
 
@@ -582,41 +582,41 @@ comment[0] = needs Clockss Ingenta plugin
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 > 
-    au < exists ; exists ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 > 
-    au < exists ; exists ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 > 
-    au < exists ; exists ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 > 
-    au < exists ; exists ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 > 
-    au < exists ; exists ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 > 
-    au < exists ; exists ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 > 
-    au < exists ; exists ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 > 
-    au < exists ; exists ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 > 
-    au < exists ; exists ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 > 
-    au < exists ; exists ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 > 
-    au < exists ; exists ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 > 
-    au < exists ; exists ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 > 
-    au < exists ; exists ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 > 
-    au < exists ; exists ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 > 
-    au < exists ; exists ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 > 
-    au < exists ; exists ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 > 
-    au < exists ; exists ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 > 
-    au < exists ; exists ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 > 
-    au < exists ; exists ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 > 
-    au < exists ; exists ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 > 
-    au < exists ; exists ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 > 
-    au < exists ; exists ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 > 
-    au < exists ; exists ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 > 
-    au < exists ; exists ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 > 
-    au < exists ; exists ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 > 
-    au < exists ; exists ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 > 
-    au < exists ; exists ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 > 
-    au < exists ; exists ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 > 
-    au < exists ; exists ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 > 
-    au < exists ; exists ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 > 
-    au < exists ; exists ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 > 
-    au < exists ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 > 
-    au < exists ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 > 
-    au < exists ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 > 
+    au < manifest ; manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
+    au < manifest ; manifest ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
+    au < manifest ; manifest ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
+    au < manifest ; manifest ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
+    au < manifest ; manifest ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
+    au < manifest ; manifest ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
+    au < manifest ; manifest ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
+    au < manifest ; manifest ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
+    au < manifest ; manifest ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
+    au < manifest ; manifest ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
+    au < manifest ; manifest ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
+    au < manifest ; manifest ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
+    au < manifest ; manifest ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
+    au < manifest ; manifest ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
+    au < manifest ; manifest ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
+    au < manifest ; manifest ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
+    au < manifest ; manifest ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
+    au < manifest ; manifest ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
+    au < manifest ; manifest ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
+    au < manifest ; manifest ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
+    au < manifest ; manifest ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
+    au < manifest ; manifest ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
+    au < manifest ; manifest ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
+    au < manifest ; manifest ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
+    au < manifest ; manifest ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
+    au < manifest ; manifest ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
+    au < manifest ; manifest ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
+    au < manifest ; manifest ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
+    au < manifest ; manifest ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
+    au < manifest ; manifest ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
+    au < manifest ; manifest ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
+    au < manifest ; manifest ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
+    au < manifest ; manifest ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
+    au < manifest ; manifest ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
+    au < manifest ; manifest ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
 
   }
 
@@ -638,7 +638,56 @@ comment[0] = needs Clockss Ingenta plugin
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year; name ; param[volume_name] >
 
-    au < exists ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 > 
+    au < manifest ; manifest ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
+    au < manifest ; manifest ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
+    au < manifest ; manifest ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
+    au < manifest ; manifest ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
+    au < manifest ; manifest ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
+    au < manifest ; manifest ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
+    au < manifest ; manifest ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
+    au < manifest ; manifest ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
+    au < manifest ; manifest ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
+    au < manifest ; manifest ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
+    au < manifest ; manifest ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
+    au < manifest ; manifest ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
+    au < manifest ; manifest ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
+    au < manifest ; manifest ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
+    au < manifest ; manifest ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
+    au < doesNotExist ; doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
+    au < doesNotExist ; doesNotExist ; 1978 ; Canadian Metallurgical Quarterly Volume 17 ; 17 >
+    au < manifest ; manifest ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
+    au < manifest ; manifest ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
+    au < manifest ; manifest ; 1981 ; Canadian Metallurgical Quarterly Volume 20 ; 20 >
+    au < manifest ; manifest ; 1982 ; Canadian Metallurgical Quarterly Volume 21 ; 21 >
+    au < manifest ; manifest ; 1983 ; Canadian Metallurgical Quarterly Volume 22 ; 22 >
+    au < manifest ; manifest ; 1984 ; Canadian Metallurgical Quarterly Volume 23 ; 23 >
+    au < manifest ; manifest ; 1985 ; Canadian Metallurgical Quarterly Volume 24 ; 24 >
+    au < manifest ; manifest ; 1986 ; Canadian Metallurgical Quarterly Volume 25 ; 25 >
+    au < manifest ; manifest ; 1987 ; Canadian Metallurgical Quarterly Volume 26 ; 26 >
+    au < manifest ; manifest ; 1988 ; Canadian Metallurgical Quarterly Volume 27 ; 27 >
+    au < manifest ; manifest ; 1989 ; Canadian Metallurgical Quarterly Volume 28 ; 28 >
+    au < manifest ; manifest ; 1990 ; Canadian Metallurgical Quarterly Volume 29 ; 29 >
+    au < manifest ; manifest ; 1991 ; Canadian Metallurgical Quarterly Volume 30 ; 30 >
+    au < manifest ; manifest ; 1992 ; Canadian Metallurgical Quarterly Volume 31 ; 31 >
+    au < manifest ; manifest ; 1993 ; Canadian Metallurgical Quarterly Volume 32 ; 32 >
+    au < manifest ; manifest ; 1994 ; Canadian Metallurgical Quarterly Volume 33 ; 33 >
+    au < manifest ; manifest ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
+    au < manifest ; manifest ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
+    au < manifest ; manifest ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
+    au < doesNotExist ; doesNotExist ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
+    au < doesNotExist ; doesNotExist ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
+    au < manifest ; manifest ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
+    au < manifest ; manifest ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
+    au < manifest ; manifest ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
+    au < manifest ; manifest ; 2003 ; Canadian Metallurgical Quarterly Volume 42 ; 42 >
+    au < manifest ; manifest ; 2004 ; Canadian Metallurgical Quarterly Volume 43 ; 43 >
+    au < manifest ; manifest ; 2005 ; Canadian Metallurgical Quarterly Volume 44 ; 44 >
+    au < manifest ; manifest ; 2006 ; Canadian Metallurgical Quarterly Volume 45 ; 45 >
+    au < manifest ; manifest ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
+    au < manifest ; manifest ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
+    au < manifest ; manifest ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
+    au < manifest ; manifest ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
+    au < manifest ; manifest ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
 
   }
 
