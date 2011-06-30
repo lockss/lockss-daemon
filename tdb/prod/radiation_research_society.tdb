@@ -13,27 +13,27 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0033-7587
   
-      au < superseded ; Radiation Research Volume 153 ; 153 >
-      au < superseded ; Radiation Research Volume 154 ; 154 >
-      au < superseded ; Radiation Research Volume 155 ; 155 >
-      au < superseded ; Radiation Research Volume 156 ; 156 >
-      au < superseded ; Radiation Research Volume 157 ; 157 >
-      au < superseded ; Radiation Research Volume 158 ; 158 >
-      au < superseded ; Radiation Research Volume 159 ; 159 >
-      au < superseded ; Radiation Research Volume 160 ; 160 >
-      au < superseded ; Radiation Research Volume 161 ; 161 >
-      au < superseded ; Radiation Research Volume 162 ; 162 >
-      au < superseded ; Radiation Research Volume 163 ; 163 >
-      au < superseded ; Radiation Research Volume 164 ; 164 >
-      au < superseded ; Radiation Research Volume 165 ; 165 >
-      au < superseded ; Radiation Research Volume 166 ; 166 >
-      au < superseded ; Radiation Research Volume 167 ; 167 >
-      au < superseded ; Radiation Research Volume 168 ; 168 >
+      au < superseded ; 2000 ; Radiation Research Volume 153 ; 153 >
+      au < superseded ; 2000 ; Radiation Research Volume 154 ; 154 >
+      au < superseded ; 2001 ; Radiation Research Volume 155 ; 155 >
+      au < superseded ; 2001 ; Radiation Research Volume 156 ; 156 >
+      au < superseded ; 2002 ; Radiation Research Volume 157 ; 157 >
+      au < superseded ; 2002 ; Radiation Research Volume 158 ; 158 >
+      au < superseded ; 2003 ; Radiation Research Volume 159 ; 159 >
+      au < superseded ; 2003 ; Radiation Research Volume 160 ; 160 >
+      au < superseded ; 2004 ; Radiation Research Volume 161 ; 161 >
+      au < superseded ; 2004 ; Radiation Research Volume 162 ; 162 >
+      au < superseded ; 2005 ; Radiation Research Volume 163 ; 163 >
+      au < superseded ; 2005 ; Radiation Research Volume 164 ; 164 >
+      au < superseded ; 2006 ; Radiation Research Volume 165 ; 165 >
+      au < superseded ; 2006 ; Radiation Research Volume 166 ; 166 >
+      au < superseded ; 2007 ; Radiation Research Volume 167 ; 167 >
+      au < superseded ; 2007 ; Radiation Research Volume 168 ; 168 >
     }
 
     {
