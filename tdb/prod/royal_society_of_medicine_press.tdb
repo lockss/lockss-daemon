@@ -106,19 +106,19 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://cr.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; Clinical Risk Volume 7 ; 7 >
-      au < ready ; Clinical Risk Volume 8 ; 8 >
-      au < ready ; Clinical Risk Volume 9 ; 9 >
-      au < ready ; Clinical Risk Volume 10 ; 10 >
-      au < ready ; Clinical Risk Volume 11 ; 11 >
-      au < ready ; Clinical Risk Volume 12 ; 12 >
-      au < ready ; Clinical Risk Volume 13 ; 13 >
-      au < ready ; Clinical Risk Volume 14 ; 14 >
-      au < wanted ; Clinical Risk Volume 15 ; 15 >
-      au < wanted ; Clinical Risk Volume 16 ; 16 >
-      au < wanted ; Clinical Risk Volume 17 ; 17 >
+      au < ready ; 2001 ; Clinical Risk Volume 7 ; 7 >
+      au < ready ; 2002 ; Clinical Risk Volume 8 ; 8 >
+      au < ready ; 2003 ; Clinical Risk Volume 9 ; 9 >
+      au < ready ; 2004 ; Clinical Risk Volume 10 ; 10 >
+      au < ready ; 2005 ; Clinical Risk Volume 11 ; 11 >
+      au < ready ; 2006 ; Clinical Risk Volume 12 ; 12 >
+      au < ready ; 2007 ; Clinical Risk Volume 13 ; 13 >
+      au < ready ; 2008 ; Clinical Risk Volume 14 ; 14 >
+      au < wanted ; 2009 ; Clinical Risk Volume 15 ; 15 >
+      au < wanted ; 2010 ; Clinical Risk Volume 16 ; 16 >
+      au < wanted ; 2011 ; Clinical Risk Volume 17 ; 17 >
 
     }
 
@@ -136,23 +136,25 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ebm.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Experimental Biology and Medicine Volume 222 ; 222 >
-      au < exists ; Experimental Biology and Medicine Volume 223 ; 223 >
-      au < exists ; Experimental Biology and Medicine Volume 224 ; 224 >
-      au < exists ; Experimental Biology and Medicine Volume 225 ; 225 >
-      au < exists ; Experimental Biology and Medicine Volume 226 ; 226 >
-      au < exists ; Experimental Biology and Medicine Volume 227 ; 227 >
-      au < exists ; Experimental Biology and Medicine Volume 228 ; 228 >
-      au < exists ; Experimental Biology and Medicine Volume 229 ; 229 >
-      au < exists ; Experimental Biology and Medicine Volume 230 ; 230 >
-      au < exists ; Experimental Biology and Medicine Volume 231 ; 231 >
-      au < exists ; Experimental Biology and Medicine Volume 232 ; 232 >
-      au < exists ; Experimental Biology and Medicine Volume 233 ; 233 >
-      au < exists ; Experimental Biology and Medicine Volume 234 ; 234 >
-      au < exists ; Experimental Biology and Medicine Volume 235 ; 235 >
-      au < exists ; Experimental Biology and Medicine Volume 236 ; 236 >
+      au < exists ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
+      au < exists ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
+      au < exists ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
+      au < exists ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
+      au < exists ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
+      au < exists ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
+      au < exists ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
+      au < exists ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
+      au < exists ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
+      au < exists ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
+      au < exists ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
+      au < exists ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
+      au < exists ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
+      au < exists ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
+      au < exists ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
+      au < exists ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
+      au < exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
 
     }
 
@@ -173,8 +175,8 @@
       param[base_url] = http://ht.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2001 ; Hand Therapy Volume 6 ; 6 >
-      au < exists ; 2002 ; Hand Therapy Volume 7 ; 7 >
+      au < manifest ; 2001 ; Hand Therapy Volume 6 ; 6 >
+      au < manifest ; 2002 ; Hand Therapy Volume 7 ; 7 >
       au < exists ; 2003 ; Hand Therapy Volume 8 ; 8 >
       au < exists ; 2004 ; Hand Therapy Volume 9 ; 9 >
       au < exists ; 2005 ; Hand Therapy Volume 10 ; 10 >
@@ -211,54 +213,54 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://hii.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; He@lth Information on the Internet Volume 21 ; 21 >
-      au < exists ; He@lth Information on the Internet Volume 22 ; 22 >
-      au < exists ; He@lth Information on the Internet Volume 23 ; 23 >
-      au < exists ; He@lth Information on the Internet Volume 24 ; 24 >
-      au < exists ; He@lth Information on the Internet Volume 25 ; 25 >
-      au < exists ; He@lth Information on the Internet Volume 26 ; 26 >
-      au < exists ; He@lth Information on the Internet Volume 27 ; 27 >
-      au < exists ; He@lth Information on the Internet Volume 28 ; 28 >
-      au < exists ; He@lth Information on the Internet Volume 29 ; 29 >
-      au < exists ; He@lth Information on the Internet Volume 30 ; 30 >
-      au < exists ; He@lth Information on the Internet Volume 31 ; 31 >
-      au < exists ; He@lth Information on the Internet Volume 32 ; 32 >
-      au < exists ; He@lth Information on the Internet Volume 33 ; 33 >
-      au < exists ; He@lth Information on the Internet Volume 34 ; 34 >
-      au < exists ; He@lth Information on the Internet Volume 35 ; 35 >
-      au < exists ; He@lth Information on the Internet Volume 36 ; 36 >
-      au < exists ; He@lth Information on the Internet Volume 37 ; 37 >
-      au < exists ; He@lth Information on the Internet Volume 38 ; 38 >
-      au < exists ; He@lth Information on the Internet Volume 39 ; 39 >
-      au < exists ; He@lth Information on the Internet Volume 40 ; 40 >
-      au < exists ; He@lth Information on the Internet Volume 41 ; 41 >
-      au < exists ; He@lth Information on the Internet Volume 42 ; 42 >
-      au < exists ; He@lth Information on the Internet Volume 43 ; 43 >
-      au < exists ; He@lth Information on the Internet Volume 44 ; 44 >
-      au < exists ; He@lth Information on the Internet Volume 45 ; 45 >
-      au < exists ; He@lth Information on the Internet Volume 46 ; 46 >
-      au < exists ; He@lth Information on the Internet Volume 47 ; 47 >
-      au < exists ; He@lth Information on the Internet Volume 48 ; 48 >
-      au < exists ; He@lth Information on the Internet Volume 49 ; 49 >
-      au < exists ; He@lth Information on the Internet Volume 50 ; 50 >
-      au < exists ; He@lth Information on the Internet Volume 51 ; 51 >
-      au < exists ; He@lth Information on the Internet Volume 52 ; 52 >
-      au < exists ; He@lth Information on the Internet Volume 53 ; 53 >
-      au < exists ; He@lth Information on the Internet Volume 54 ; 54 >
-      au < exists ; He@lth Information on the Internet Volume 55 ; 55 >
-      au < exists ; He@lth Information on the Internet Volume 56 ; 56 >
-      au < exists ; He@lth Information on the Internet Volume 57 ; 57 >
-      au < exists ; He@lth Information on the Internet Volume 58 ; 58 >
-      au < exists ; He@lth Information on the Internet Volume 59 ; 59 >
-      au < exists ; He@lth Information on the Internet Volume 60 ; 60 >
-      au < exists ; He@lth Information on the Internet Volume 61 ; 61 >
-      au < exists ; He@lth Information on the Internet Volume 62 ; 62 >
-      au < exists ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < exists ; He@lth Information on the Internet Volume 64 ; 64 >
-      au < wanted ; He@lth Information on the Internet Volume 65 ; 65 >
-      au < wanted ; He@lth Information on the Internet Volume 66 ; 66 >
+      au < manifest ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
+      au < manifest ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
+      au < manifest ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
+      au < manifest ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
+      au < manifest ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+      au < manifest ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+      au < manifest ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
+      au < manifest ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
+      au < manifest ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+      au < manifest ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+      au < manifest ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+      au < manifest ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+      au < manifest ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
+      au < exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < wanted ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < wanted ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
@@ -335,24 +337,24 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ijsa.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; International Journal of STD & AIDS Volume 7 ; 7 >
-      au < released ; International Journal of STD & AIDS Volume 8 ; 8 >
-      au < released ; International Journal of STD & AIDS Volume 9 ; 9 >
-      au < released ; International Journal of STD & AIDS Volume 10 ; 10 >
-      au < released ; International Journal of STD & AIDS Volume 11 ; 11 >
-      au < released ; International Journal of STD & AIDS Volume 12 ; 12 >
-      au < released ; International Journal of STD & AIDS Volume 13 ; 13 >
-      au < released ; International Journal of STD & AIDS Volume 14 ; 14 >
-      au < released ; International Journal of STD & AIDS Volume 15 ; 15 >
-      au < released ; International Journal of STD & AIDS Volume 16 ; 16 >
-      au < released ; International Journal of STD & AIDS Volume 17 ; 17 >
-      au < released ; International Journal of STD & AIDS Volume 18 ; 18 >
-      au < released ; International Journal of STD & AIDS Volume 19 ; 19 >
-      au < released ; International Journal of STD & AIDS Volume 20 ; 20 >
-      au < released ; International Journal of STD & AIDS Volume 21 ; 21 >
-      au < released ; International Journal of STD & AIDS Volume 22 ; 22 >
+      au < released ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
+      au < released ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
+      au < released ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
+      au < released ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
+      au < released ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
+      au < released ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
+      au < released ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
+      au < released ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
+      au < released ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
+      au < released ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
+      au < released ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
+      au < released ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
+      au < released ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
+      au < released ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
+      au < released ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
+      au < released ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
 
     }
 
@@ -499,55 +501,55 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jrsm.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; JRSM Volume 58 ; 58 >
-      au < wanted ; JRSM Volume 59 ; 59 >
-      au < wanted ; JRSM Volume 60 ; 60 >
-      au < wanted ; JRSM Volume 61 ; 61 >
-      au < wanted ; JRSM Volume 62 ; 62 >
-      au < wanted ; JRSM Volume 63 ; 63 >
-      au < wanted ; JRSM Volume 64 ; 64 >
-      au < wanted ; JRSM Volume 65 ; 65 >
-      au < wanted ; JRSM Volume 66 ; 66 >
-      au < wanted ; JRSM Volume 67 ; 67 >
-      au < wanted ; JRSM Volume 68 ; 68 >
-      au < wanted ; JRSM Volume 69 ; 69 >
-      au < wanted ; JRSM Volume 70 ; 70 >
-      au < wanted ; JRSM Volume 71 ; 71 >
-      au < wanted ; JRSM Volume 72 ; 72 >
-      au < wanted ; JRSM Volume 73 ; 73 >
-      au < wanted ; JRSM Volume 74 ; 74 >
-      au < wanted ; JRSM Volume 75 ; 75 >
-      au < wanted ; JRSM Volume 76 ; 76 >
-      au < wanted ; JRSM Volume 77 ; 77 >
-      au < wanted ; JRSM Volume 78 ; 78 >
-      au < wanted ; JRSM Volume 79 ; 79 >
-      au < wanted ; JRSM Volume 80 ; 80 >
-      au < wanted ; JRSM Volume 81 ; 81 >
-      au < wanted ; JRSM Volume 82 ; 82 >
-      au < wanted ; JRSM Volume 83 ; 83 >
-      au < wanted ; JRSM Volume 84 ; 84 >
-      au < ready ; JRSM Volume 85 ; 85 >
-      au < ready ; JRSM Volume 86 ; 86 >
-      au < ready ; JRSM Volume 87 ; 87 >
-      au < ready ; JRSM Volume 88 ; 88 >
-      au < ready ; JRSM Volume 89 ; 89 >
-      au < ready ; JRSM Volume 90 ; 90 >
-      au < ready ; JRSM Volume 91 ; 91 >
-      au < ready ; JRSM Volume 92 ; 92 >
-      au < ready ; JRSM Volume 93 ; 93 >
-      au < ready ; JRSM Volume 94 ; 94 >
-      au < ready ; JRSM Volume 95 ; 95 >
-      au < ready ; JRSM Volume 96 ; 96 >
-      au < ready ; JRSM Volume 97 ; 97 >
-      au < ready ; JRSM Volume 98 ; 98 >
-      au < ready ; JRSM Volume 99 ; 99 >
-      au < ready ; JRSM Volume 100 ; 100 >
-      au < ready ; JRSM Volume 101 ; 101 >
-      au < ready ; JRSM Volume 102 ; 102 >
-      au < ready ; JRSM Volume 103 ; 103 >
-      au < ready ; JRSM Volume 104 ; 104 >
+      au < wanted ; 1965 ; JRSM Volume 58 ; 58 >
+      au < wanted ; 1966 ; JRSM Volume 59 ; 59 >
+      au < wanted ; 1967 ; JRSM Volume 60 ; 60 >
+      au < wanted ; 1968 ; JRSM Volume 61 ; 61 >
+      au < wanted ; 1969 ; JRSM Volume 62 ; 62 >
+      au < wanted ; 1970 ; JRSM Volume 63 ; 63 >
+      au < wanted ; 1971 ; JRSM Volume 64 ; 64 >
+      au < wanted ; 1972 ; JRSM Volume 65 ; 65 >
+      au < wanted ; 1973 ; JRSM Volume 66 ; 66 >
+      au < wanted ; 1974 ; JRSM Volume 67 ; 67 >
+      au < wanted ; 1975 ; JRSM Volume 68 ; 68 >
+      au < wanted ; 1976 ; JRSM Volume 69 ; 69 >
+      au < wanted ; 1977 ; JRSM Volume 70 ; 70 >
+      au < wanted ; 1978 ; JRSM Volume 71 ; 71 >
+      au < wanted ; 1979 ; JRSM Volume 72 ; 72 >
+      au < wanted ; 1980 ; JRSM Volume 73 ; 73 >
+      au < wanted ; 1981 ; JRSM Volume 74 ; 74 >
+      au < wanted ; 1982 ; JRSM Volume 75 ; 75 >
+      au < wanted ; 1983 ; JRSM Volume 76 ; 76 >
+      au < wanted ; 1984 ; JRSM Volume 77 ; 77 >
+      au < wanted ; 1985 ; JRSM Volume 78 ; 78 >
+      au < wanted ; 1986 ; JRSM Volume 79 ; 79 >
+      au < wanted ; 1987 ; JRSM Volume 80 ; 80 >
+      au < wanted ; 1988 ; JRSM Volume 81 ; 81 >
+      au < wanted ; 1989 ; JRSM Volume 82 ; 82 >
+      au < wanted ; 1990 ; JRSM Volume 83 ; 83 >
+      au < wanted ; 1991 ; JRSM Volume 84 ; 84 >
+      au < ready ; 1992 ; JRSM Volume 85 ; 85 >
+      au < ready ; 1993 ; JRSM Volume 86 ; 86 >
+      au < ready ; 1994 ; JRSM Volume 87 ; 87 >
+      au < ready ; 1995 ; JRSM Volume 88 ; 88 >
+      au < ready ; 1996 ; JRSM Volume 89 ; 89 >
+      au < ready ; 1997 ; JRSM Volume 90 ; 90 >
+      au < ready ; 1998 ; JRSM Volume 91 ; 91 >
+      au < ready ; 1999 ; JRSM Volume 92 ; 92 >
+      au < ready ; 2000 ; JRSM Volume 93 ; 93 >
+      au < ready ; 2001 ; JRSM Volume 94 ; 94 >
+      au < ready ; 2002 ; JRSM Volume 95 ; 95 >
+      au < ready ; 2003 ; JRSM Volume 96 ; 96 >
+      au < ready ; 2004 ; JRSM Volume 97 ; 97 >
+      au < ready ; 2005 ; JRSM Volume 98 ; 98 >
+      au < ready ; 2006 ; JRSM Volume 99 ; 99 >
+      au < ready ; 2007 ; JRSM Volume 100 ; 100 >
+      au < ready ; 2008 ; JRSM Volume 101 ; 101 >
+      au < ready ; 2009 ; JRSM Volume 102 ; 102 >
+      au < ready ; 2010 ; JRSM Volume 103 ; 103 >
+      au < ready ; 2011 ; JRSM Volume 104 ; 104 >
 
     }
 
@@ -582,53 +584,53 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://la.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Laboratory Animals Volume 1 ; 1 >
-      au < released ; Laboratory Animals Volume 2 ; 2 >
-      au < released ; Laboratory Animals Volume 3 ; 3 >
-      au < released ; Laboratory Animals Volume 4 ; 4 >
-      au < released ; Laboratory Animals Volume 5 ; 5 >
-      au < released ; Laboratory Animals Volume 6 ; 6 >
-      au < released ; Laboratory Animals Volume 7 ; 7 >
-      au < released ; Laboratory Animals Volume 8 ; 8 >
-      au < released ; Laboratory Animals Volume 9 ; 9 >
-      au < released ; Laboratory Animals Volume 10 ; 10 >
-      au < released ; Laboratory Animals Volume 11 ; 11 >
-      au < released ; Laboratory Animals Volume 12 ; 12 >
-      au < released ; Laboratory Animals Volume 13 ; 13 >
-      au < released ; Laboratory Animals Volume 14 ; 14 >
-      au < released ; Laboratory Animals Volume 15 ; 15 >
-      au < released ; Laboratory Animals Volume 16 ; 16 >
-      au < released ; Laboratory Animals Volume 17 ; 17 >
-      au < released ; Laboratory Animals Volume 18 ; 18 >
-      au < released ; Laboratory Animals Volume 19 ; 19 >
-      au < released ; Laboratory Animals Volume 20 ; 20 >
-      au < released ; Laboratory Animals Volume 21 ; 21 >
-      au < released ; Laboratory Animals Volume 22 ; 22 >
-      au < released ; Laboratory Animals Volume 23 ; 23 >
-      au < released ; Laboratory Animals Volume 24 ; 24 >
-      au < released ; Laboratory Animals Volume 25 ; 25 >
-      au < released ; Laboratory Animals Volume 26 ; 26 >
-      au < released ; Laboratory Animals Volume 27 ; 27 >
-      au < released ; Laboratory Animals Volume 28 ; 28 >
-      au < released ; Laboratory Animals Volume 29 ; 29 >
-      au < released ; Laboratory Animals Volume 30 ; 30 >
-      au < released ; Laboratory Animals Volume 31 ; 31 >
-      au < released ; Laboratory Animals Volume 32 ; 32 >
-      au < released ; Laboratory Animals Volume 33 ; 33 >
-      au < released ; Laboratory Animals Volume 34 ; 34 >
-      au < released ; Laboratory Animals Volume 35 ; 35 >
-      au < released ; Laboratory Animals Volume 36 ; 36 >
-      au < released ; Laboratory Animals Volume 37 ; 37 >
-      au < released ; Laboratory Animals Volume 38 ; 38 >
-      au < released ; Laboratory Animals Volume 39 ; 39 >
-      au < released ; Laboratory Animals Volume 40 ; 40 >
-      au < released ; Laboratory Animals Volume 41 ; 41 >
-      au < released ; Laboratory Animals Volume 42 ; 42 >
-      au < released ; Laboratory Animals Volume 43 ; 43 >
-      au < released ; Laboratory Animals Volume 44 ; 44 >
-      au < released ; Laboratory Animals Volume 45 ; 45 >
+      au < released ; 1967 ; Laboratory Animals Volume 1 ; 1 >
+      au < released ; 1968 ; Laboratory Animals Volume 2 ; 2 >
+      au < released ; 1969 ; Laboratory Animals Volume 3 ; 3 >
+      au < released ; 1970 ; Laboratory Animals Volume 4 ; 4 >
+      au < released ; 1971 ; Laboratory Animals Volume 5 ; 5 >
+      au < released ; 1972 ; Laboratory Animals Volume 6 ; 6 >
+      au < released ; 1973 ; Laboratory Animals Volume 7 ; 7 >
+      au < released ; 1974 ; Laboratory Animals Volume 8 ; 8 >
+      au < released ; 1975 ; Laboratory Animals Volume 9 ; 9 >
+      au < released ; 1976 ; Laboratory Animals Volume 10 ; 10 >
+      au < released ; 1977 ; Laboratory Animals Volume 11 ; 11 >
+      au < released ; 1978 ; Laboratory Animals Volume 12 ; 12 >
+      au < released ; 1979 ; Laboratory Animals Volume 13 ; 13 >
+      au < released ; 1980 ; Laboratory Animals Volume 14 ; 14 >
+      au < released ; 1981 ; Laboratory Animals Volume 15 ; 15 >
+      au < released ; 1982 ; Laboratory Animals Volume 16 ; 16 >
+      au < released ; 1983 ; Laboratory Animals Volume 17 ; 17 >
+      au < released ; 1984 ; Laboratory Animals Volume 18 ; 18 >
+      au < released ; 1985 ; Laboratory Animals Volume 19 ; 19 >
+      au < released ; 1986 ; Laboratory Animals Volume 20 ; 20 >
+      au < released ; 1987 ; Laboratory Animals Volume 21 ; 21 >
+      au < released ; 1988 ; Laboratory Animals Volume 22 ; 22 >
+      au < released ; 1989 ; Laboratory Animals Volume 23 ; 23 >
+      au < released ; 1990 ; Laboratory Animals Volume 24 ; 24 >
+      au < released ; 1991 ; Laboratory Animals Volume 25 ; 25 >
+      au < released ; 1992 ; Laboratory Animals Volume 26 ; 26 >
+      au < released ; 1993 ; Laboratory Animals Volume 27 ; 27 >
+      au < released ; 1994 ; Laboratory Animals Volume 28 ; 28 >
+      au < released ; 1995 ; Laboratory Animals Volume 29 ; 29 >
+      au < released ; 1996 ; Laboratory Animals Volume 30 ; 30 >
+      au < released ; 1997 ; Laboratory Animals Volume 31 ; 31 >
+      au < released ; 1998 ; Laboratory Animals Volume 32 ; 32 >
+      au < released ; 1999 ; Laboratory Animals Volume 33 ; 33 >
+      au < released ; 2000 ; Laboratory Animals Volume 34 ; 34 >
+      au < released ; 2001 ; Laboratory Animals Volume 35 ; 35 >
+      au < released ; 2002 ; Laboratory Animals Volume 36 ; 36 >
+      au < released ; 2003 ; Laboratory Animals Volume 37 ; 37 >
+      au < released ; 2004 ; Laboratory Animals Volume 38 ; 38 >
+      au < released ; 2005 ; Laboratory Animals Volume 39 ; 39 >
+      au < released ; 2006 ; Laboratory Animals Volume 40 ; 40 >
+      au < released ; 2007 ; Laboratory Animals Volume 41 ; 41 >
+      au < released ; 2008 ; Laboratory Animals Volume 42 ; 42 >
+      au < released ; 2009 ; Laboratory Animals Volume 43 ; 43 >
+      au < released ; 2010 ; Laboratory Animals Volume 44 ; 44 >
+      au < released ; 2011 ; Laboratory Animals Volume 45 ; 45 >
 
     }
 
@@ -646,17 +648,17 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://msl.rsmjournals.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Medicine, Science and the Law Volume 43 ; 43 >
-      au < exists ; Medicine, Science and the Law Volume 44 ; 44 >
-      au < exists ; Medicine, Science and the Law Volume 45 ; 45 >
-      au < exists ; Medicine, Science and the Law Volume 46 ; 46 >
-      au < exists ; Medicine, Science and the Law Volume 47 ; 47 >
-      au < exists ; Medicine, Science and the Law Volume 48 ; 48 >
-      au < exists ; Medicine, Science and the Law Volume 49 ; 49 >
-      au < exists ; Medicine, Science and the Law Volume 50 ; 50 >
-      au < exists ; Medicine, Science and the Law Volume 51 ; 51 >
+      au < exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
+      au < exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
+      au < exists ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
+      au < exists ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 >
+      au < exists ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 >
+      au < exists ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 >
+      au < exists ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
+      au < exists ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
+      au < exists ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
 
     }
 
