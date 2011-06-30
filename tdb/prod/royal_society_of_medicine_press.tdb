@@ -87,7 +87,7 @@
       au < released ; 2008 ; Clinical Ethics Volume 3 ; 3 >
       au < released ; 2009 ; Clinical Ethics Volume 4 ; 4 >
       au < released ; 2010 ; Clinical Ethics Volume 5 ; 5 >
-      au < testing ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+      au < ready ; 2011 ; Clinical Ethics Volume 6 ; 6 >
 
     }
 
@@ -116,9 +116,9 @@
       au < ready ; 2006 ; Clinical Risk Volume 12 ; 12 >
       au < ready ; 2007 ; Clinical Risk Volume 13 ; 13 >
       au < ready ; 2008 ; Clinical Risk Volume 14 ; 14 >
-      au < testing ; 2009 ; Clinical Risk Volume 15 ; 15 >
-      au < testing ; 2010 ; Clinical Risk Volume 16 ; 16 >
-      au < testing ; 2011 ; Clinical Risk Volume 17 ; 17 >
+      au < ready ; 2009 ; Clinical Risk Volume 15 ; 15 >
+      au < ready ; 2010 ; Clinical Risk Volume 16 ; 16 >
+      au < ready ; 2011 ; Clinical Risk Volume 17 ; 17 >
 
     }
 
@@ -175,17 +175,17 @@
       param[base_url] = http://ht.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001 ; Hand Therapy Volume 6 ; 6 >
-      au < manifest ; 2002 ; Hand Therapy Volume 7 ; 7 >
+      au < testing ; 2001 ; Hand Therapy Volume 6 ; 6 >
+      au < testing ; 2002 ; Hand Therapy Volume 7 ; 7 >
       au < exists ; 2003 ; Hand Therapy Volume 8 ; 8 >
       au < exists ; 2004 ; Hand Therapy Volume 9 ; 9 >
       au < exists ; 2005 ; Hand Therapy Volume 10 ; 10 >
       au < exists ; 2006 ; Hand Therapy Volume 11 ; 11 >
       au < exists ; 2007 ; Hand Therapy Volume 12 ; 12 >
       au < exists ; 2008 ; Hand Therapy Volume 13 ; 13 >
-      au < wanted ; 2009 ; Hand Therapy Volume 14 ; 14 >
-      au < wanted ; 2010 ; Hand Therapy Volume 15 ; 15 >
-      au < wanted ; 2011 ; Hand Therapy Volume 16 ; 16 >
+      au < testing ; 2009 ; Hand Therapy Volume 14 ; 14 >
+      au < testing ; 2010 ; Hand Therapy Volume 15 ; 15 >
+      au < testing ; 2011 ; Hand Therapy Volume 16 ; 16 >
 
     }
 
