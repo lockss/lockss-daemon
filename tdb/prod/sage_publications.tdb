@@ -5434,6 +5434,52 @@
 
     {
       title <
+         name = Conflict Management and Peace Science ;
+         issn = 0738-8942 ;
+         eissn = 1549-9219
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cmp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1973 ; Conflict Management and Peace Science Volume 1 ; 1 >
+        au < manifest ; 1976 ; Conflict Management and Peace Science Volume 2 ; 2 >
+        au < manifest ; 1978 ; Conflict Management and Peace Science Volume 3 ; 3 >
+        au < manifest ; 1979 ; Conflict Management and Peace Science Volume 4 ; 4 >
+        au < manifest ; 1980 ; Conflict Management and Peace Science Volume 5 ; 5 >
+        au < manifest ; 1981 ; Conflict Management and Peace Science Volume 6 ; 6 >
+        au < manifest ; 1983 ; Conflict Management and Peace Science Volume 7 ; 7 >
+        au < manifest ; 1984 ; Conflict Management and Peace Science Volume 8 ; 8 >
+        au < manifest ; 1985 ; Conflict Management and Peace Science Volume 9 ; 9 >
+        au < manifest ; 1988 ; Conflict Management and Peace Science Volume 10 ; 10 >
+        au < manifest ; 1990 ; Conflict Management and Peace Science Volume 11 ; 11 >
+        au < manifest ; 1992 ; Conflict Management and Peace Science Volume 12 ; 12 >
+        au < manifest ; 1993 ; Conflict Management and Peace Science Volume 13 ; 13 >
+        au < manifest ; 1995 ; Conflict Management and Peace Science Volume 14 ; 14 >
+        au < manifest ; 1996 ; Conflict Management and Peace Science Volume 15 ; 15 >
+        au < manifest ; 1998 ; Conflict Management and Peace Science Volume 16 ; 16 >
+        au < manifest ; 1999 ; Conflict Management and Peace Science Volume 17 ; 17 >
+        au < manifest ; 2000 ; Conflict Management and Peace Science Volume 18 ; 18 >
+        au < manifest ; 2002 ; Conflict Management and Peace Science Volume 19 ; 19 >
+        au < manifest ; 2003 ; Conflict Management and Peace Science Volume 20 ; 20 >
+        au < manifest ; 2004 ; Conflict Management and Peace Science Volume 21 ; 21 >
+        au < manifest ; 2005 ; Conflict Management and Peace Science Volume 22 ; 22 >
+        au < manifest ; 2006 ; Conflict Management and Peace Science Volume 23 ; 23 >
+        au < manifest ; 2007 ; Conflict Management and Peace Science Volume 24 ; 24 >
+        au < manifest ; 2008 ; Conflict Management and Peace Science Volume 25 ; 25 >
+        au < manifest ; 2009 ; Conflict Management and Peace Science Volume 26 ; 26 >
+        au < manifest ; 2010 ; Conflict Management and Peace Science Volume 27 ; 27 >
+        au < manifest ; 2011 ; Conflict Management and Peace Science Volume 28 ; 28 >
+
+      }
+      
+    }
+
+    {
+      title <
           name = Contemporary Education Dialogue ;
           issn = 0973-1849
       >
@@ -6354,6 +6400,61 @@
       }
 
     }
+    
+    {
+      title <
+        name = Critical Sociology ;
+        issn = 0896-9205 ;
+        eissn = 1569-1632
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://crs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1969 ; Critical Sociology Volume 1 ; 1 >
+        au < manifest ; 1971 ; Critical Sociology Volume 2 ; 2 >
+        au < manifest ; 1972 ; Critical Sociology Volume 3 ; 3 >
+        au < manifest ; 1973 ; Critical Sociology Volume 4 ; 4 >
+        au < manifest ; 1974 ; Critical Sociology Volume 5 ; 5 >
+        au < manifest ; 1975 ; Critical Sociology Volume 6 ; 6 >
+        au < manifest ; 1977 ; Critical Sociology Volume 7 ; 7 >
+        au < manifest ; 1978 ; Critical Sociology Volume 8 ; 8 >
+        au < manifest ; 1979 ; Critical Sociology Volume 9 ; 9 >
+        au < manifest ; 1980 ; Critical Sociology Volume 10 ; 10 >
+        au < manifest ; 1982 ; Critical Sociology Volume 11 ; 11 >
+        au < manifest ; 1984 ; Critical Sociology Volume 12 ; 12 >
+        au < manifest ; 1985 ; Critical Sociology Volume 13 ; 13 >
+        au < manifest ; 1987 ; Critical Sociology Volume 14 ; 14 >
+        au < manifest ; 1988 ; Critical Sociology Volume 15 ; 15 >
+        au < manifest ; 1989 ; Critical Sociology Volume 16 ; 16 >
+        au < manifest ; 1990 ; Critical Sociology Volume 17 ; 17 >
+        au < manifest ; 1991 ; Critical Sociology Volume 18 ; 18 >
+        au < manifest ; 1992 ; Critical Sociology Volume 19 ; 19 >
+        au < manifest ; 1994 ; Critical Sociology Volume 20 ; 20 >
+        au < manifest ; 1995 ; Critical Sociology Volume 21 ; 21 >
+        au < manifest ; 1996 ; Critical Sociology Volume 22 ; 22 >
+        au < manifest ; 1997 ; Critical Sociology Volume 23 ; 23 >
+        au < manifest ; 1998 ; Critical Sociology Volume 24 ; 24 >
+        au < manifest ; 1999 ; Critical Sociology Volume 25 ; 25 >
+        au < manifest ; 2000 ; Critical Sociology Volume 26 ; 26 >
+        au < manifest ; 2001 ; Critical Sociology Volume 27 ; 27 >
+        au < manifest ; 2002 ; Critical Sociology Volume 28 ; 28 >
+        au < manifest ; 2003 ; Critical Sociology Volume 29 ; 29 >
+        au < manifest ; 2004 ; Critical Sociology Volume 30 ; 30 >
+        au < manifest ; 2005 ; Critical Sociology Volume 31 ; 31 >
+        au < manifest ; 2006 ; Critical Sociology Volume 32 ; 32 >
+        au < manifest ; 2007 ; Critical Sociology Volume 33 ; 33 >
+        au < manifest ; 2008 ; Critical Sociology Volume 34 ; 34 >
+        au < manifest ; 2009 ; Critical Sociology Volume 35 ; 35 >
+        au < manifest ; 2010 ; Critical Sociology Volume 36 ; 36 >
+        au < manifest ; 2011 ; Critical Sociology Volume 37 ; 37 >
+
+      }
+    
+    }
 
     {
 
@@ -6964,6 +7065,32 @@
 
     }
 
+    {
+      title <
+        name = Diabetes and Vascular Disease Research ;
+        issn = 1479-1641 ;
+        eissn = 1752-8984
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dvr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2004 ; Diabetes and Vascular Disease Research Volume 1 ; 1 >
+        au < manifest ; 2005 ; Diabetes and Vascular Disease Research Volume 2 ; 2 >
+        au < manifest ; 2006 ; Diabetes and Vascular Disease Research Volume 3 ; 3 >
+        au < manifest ; 2007 ; Diabetes and Vascular Disease Research Volume 4 ; 4 >
+        au < manifest ; 2008 ; Diabetes and Vascular Disease Research Volume 5 ; 5 >
+        au < manifest ; 2009 ; Diabetes and Vascular Disease Research Volume 6 ; 6 >
+        au < manifest ; 2010 ; Diabetes and Vascular Disease Research Volume 7 ; 7 >
+        au < manifest ; 2011 ; Diabetes and Vascular Disease Research Volume 8 ; 8 >
+
+      }
+      
+    }
+    
     {
 
       title <
@@ -8110,6 +8237,27 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
 
     {
       title <
+        name = Emotion Review ;
+        issn = 1754-0739 ;
+        eissn = 1754-0747
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://emr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Emotion Review Volume 1 ; 1 >
+        au < manifest ; 2010 ; Emotion Review Volume 2 ; 2 >
+        au < manifest ; 2011 ; Emotion Review Volume 3 ; 3 >
+
+      }
+
+    }
+    
+    {
+      title <
         name = Emotional & Behavioural Difficulties ;
         issn = 1363-2752 ;
         eissn = 1741-2692
@@ -8125,7 +8273,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
      
         comment[ebd] = now published by Taylor & Francis
 
-        au < down ; 2000 ; Emotional & Behavioural Difficulties Volume 10 ; 10 >
+        au < down ; 2006 ; Emotional & Behavioural Difficulties Volume 10 ; 10 >
 
       }
 
@@ -8622,11 +8770,11 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Communication Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Communication Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Communication Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; 2000 ; European Journal of Communication Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Communication Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; European Journal of Communication Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; European Journal of Communication Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Communication Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2008 ; European Journal of Communication Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; European Journal of Communication Volume 24 ; 24 >
 
       }
 
@@ -8682,11 +8830,11 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Criminology Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Criminology Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Criminology Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Criminology Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Criminology Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; European Journal of Criminology Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; European Journal of Criminology Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Criminology Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; European Journal of Criminology Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; European Journal of Criminology Volume 6 ; 6 >
 
       }
 
@@ -8724,11 +8872,11 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Cultural Studies Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Cultural Studies Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Cultural Studies Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; 2000 ; European Journal of Cultural Studies Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; European Journal of Cultural Studies Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; European Journal of Cultural Studies Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; European Journal of Cultural Studies Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; European Journal of Cultural Studies Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2008 ; European Journal of Cultural Studies Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 >
 
       }
 
@@ -8774,7 +8922,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Journal of Industrial Relations Volume 12 ; 12 >
+        au < down ; 2006 ; European Journal of Industrial Relations Volume 12 ; 12 >
 
       }
 
@@ -8836,7 +8984,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Journal of International Relations Volume 12 ; 12 >
+        au < down ; 2006 ; European Journal of International Relations Volume 12 ; 12 >
 
       }
 
@@ -8898,7 +9046,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Journal of Political Theory Volume 5 ; 5 >
+        au < down ; 2006 ; European Journal of Political Theory Volume 5 ; 5 >
 
       }
 
@@ -9001,7 +9149,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Journal of Women's Studies Volume 13 ; 13 >
+        au < down ; 2006 ; European Journal of Women's Studies Volume 13 ; 13 >
 
       }
 
@@ -9111,7 +9259,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Union Politics Volume 7 ; 7 >
+        au < down ; 2006 ; European Union Politics Volume 7 ; 7 >
 
       }
 
@@ -9168,7 +9316,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; European Urban and Regional Studies Volume 13 ; 13 >
+        au < down ; 2006 ; European Urban and Regional Studies Volume 13 ; 13 >
 
       }
 
@@ -9282,7 +9430,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Evaluation & the Health Professions Volume 29 ; 29 >
+        au < down ; 2006 ; Evaluation & the Health Professions Volume 29 ; 29 >
 
       }
 
@@ -9361,7 +9509,7 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Evaluation Review Volume 30 ; 30 >
+        au < down ; 2006 ; Evaluation Review Volume 30 ; 30 >
 
       }
 
@@ -9371,9 +9519,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Evaluation Review Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Evaluation Review Volume 31 ; 31 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Evaluation Review Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Evaluation Review Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Evaluation Review Volume 31 ; 31 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Evaluation Review Volume 33 ; 33 >
 
       }
 
@@ -9441,7 +9589,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Experimental Mechanics Volume 45 ; 45 >
+        au < down ; 2006 ; Experimental Mechanics Volume 45 ; 45 >
 
       }
 
@@ -9464,7 +9612,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The Expository Times Volume 117 ; 117 >
+        au < down ; 2005-2006 ; The Expository Times Volume 117 ; 117 >
 
       }
 
@@ -9474,10 +9622,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Expository Times Volume 116 ; 116 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Expository Times Volume 118 ; 118 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Expository Times Volume 119 ; 119 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Expository Times Volume 120 ; 120 >
+        au < HighWireStrVolPlugin ; down ; 2004-2005 ; The Expository Times Volume 116 ; 116 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; The Expository Times Volume 118 ; 118 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; The Expository Times Volume 119 ; 119 >
+        au < HighWireStrVolPlugin ; down ; 2008-2009 ; The Expository Times Volume 120 ; 120 >
 
       }
 
@@ -9631,16 +9779,58 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Family and Consumer Sciences Research Journal Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Family and Consumer Sciences Research Journal Volume 34 ; 34 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Family and Consumer Sciences Research Journal Volume 35 ; 35 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Family and Consumer Sciences Research Journal Volume 36 ; 36 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Family and Consumer Sciences Research Journal Volume 37 ; 37 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Family and Consumer Sciences Research Journal Volume 33 ; 33 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Family and Consumer Sciences Research Journal Volume 34 ; 34 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Family and Consumer Sciences Research Journal Volume 35 ; 35 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; Family and Consumer Sciences Research Journal Volume 36 ; 36 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Family and Consumer Sciences Research Journal Volume 37 ; 37 >
 
       }
 
     }
 
+    {
+      title <
+        name = Family Business Review ;
+        issn = 0894-4865 ;
+        eissn = 1741-6248
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://fbr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; Family Business Review Volume 1 ; 1 >
+        au < manifest ; 1989 ; Family Business Review Volume 2 ; 2 >
+        au < manifest ; 1990 ; Family Business Review Volume 3 ; 3 >
+        au < manifest ; 1991 ; Family Business Review Volume 4 ; 4 >
+        au < manifest ; 1992 ; Family Business Review Volume 5 ; 5 >
+        au < manifest ; 1993 ; Family Business Review Volume 6 ; 6 >
+        au < manifest ; 1994 ; Family Business Review Volume 7 ; 7 >
+        au < manifest ; 1995 ; Family Business Review Volume 8 ; 8 >
+        au < manifest ; 1996 ; Family Business Review Volume 9 ; 9 >
+        au < manifest ; 1997 ; Family Business Review Volume 10 ; 10 >
+        au < manifest ; 1998 ; Family Business Review Volume 11 ; 11 >
+        au < manifest ; 1999 ; Family Business Review Volume 12 ; 12 >
+        au < manifest ; 2000 ; Family Business Review Volume 13 ; 13 >
+        au < manifest ; 2001 ; Family Business Review Volume 14 ; 14 >
+        au < manifest ; 2002 ; Family Business Review Volume 15 ; 15 >
+        au < manifest ; 2003 ; Family Business Review Volume 16 ; 16 >
+        au < manifest ; 2004 ; Family Business Review Volume 17 ; 17 >
+        au < manifest ; 2005 ; Family Business Review Volume 18 ; 18 >
+        au < manifest ; 2006 ; Family Business Review Volume 19 ; 19 >
+        au < manifest ; 2007 ; Family Business Review Volume 20 ; 20 >
+        au < manifest ; 2008 ; Family Business Review Volume 21 ; 21 >
+        au < manifest ; 2009 ; Family Business Review Volume 22 ; 22 >
+        au < manifest ; 2010 ; Family Business Review Volume 23 ; 23 >
+        au < manifest ; 2011 ; Family Business Review Volume 24 ; 24 >
+
+      }
+
+    }
+    
     {
 
       title <
@@ -9656,11 +9846,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Family Journal Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Family Journal Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Family Journal Volume 15 ; 15 >
-        au < HighWirePressPlugin ; down ; 2000 ; The Family Journal Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The Family Journal Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The Family Journal Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; The Family Journal Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The Family Journal Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2008 ; The Family Journal Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; The Family Journal Volume 17 ; 17 >
 
       }
 
@@ -9711,7 +9901,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Feminism & Psychology Volume 16 ; 16 >
+        au < down ; 2006 ; Feminism & Psychology Volume 16 ; 16 >
 
       }
 
@@ -9721,9 +9911,9 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminism & Psychology Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminism & Psychology Volume 17 ; 17 >
-        au < HighWirePressPlugin ; down ; 2000 ; Feminism & Psychology Volume 18 ; 18 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Feminism & Psychology Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Feminism & Psychology Volume 17 ; 17 >
+        au < HighWirePressPlugin ; down ; 2008 ; Feminism & Psychology Volume 18 ; 18 >
 
       }
 
@@ -9774,10 +9964,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Criminology Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Criminology Volume 2 ; 2 >
-        au < HighWirePressPlugin ; down ; 2000 ; Feminist Criminology Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Criminology Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Feminist Criminology Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Feminist Criminology Volume 2 ; 2 >
+        au < HighWirePressPlugin ; down ; 2008 ; Feminist Criminology Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Feminist Criminology Volume 4 ; 4 >
 
       }
 
@@ -9813,11 +10003,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theology Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theology Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theology Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theology Volume 16 ; 16 >
-        au < HighWirePressPlugin ; down ; 2000 ; Feminist Theology Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2004-2005 ; Feminist Theology Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2005-2006 ; Feminist Theology Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Feminist Theology Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Feminist Theology Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Feminist Theology Volume 17 ; 17 >
 
       }
 
@@ -9866,11 +10056,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theory Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theory Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theory Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 2000 ; Feminist Theory Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Feminist Theory Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Feminist Theory Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Feminist Theory Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Feminist Theory Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Feminist Theory Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Feminist Theory Volume 10 ; 10 >
 
       }
 
@@ -9912,11 +10102,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Field Methods Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Field Methods Volume 18 ; 18 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Field Methods Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 2000 ; Field Methods Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Field Methods Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Field Methods Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Field Methods Volume 18 ; 18 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Field Methods Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2008 ; Field Methods Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Field Methods Volume 21 ; 21 >
 
       }
 
@@ -9971,7 +10161,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; First Language Volume 26 ; 26 >
+        au < down ; 2006 ; First Language Volume 26 ; 26 >
 
       }
 
@@ -9981,10 +10171,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; First Language Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; First Language Volume 27 ; 27 >
-        au < HighWirePressPlugin ; down ; 2000 ; First Language Volume 28 ; 28 >
-        au < HighWirePressPlugin ; down ; 2000 ; First Language Volume 29 ; 29 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; First Language Volume 25 ; 25 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; First Language Volume 27 ; 27 >
+        au < HighWirePressPlugin ; down ; 2008 ; First Language Volume 28 ; 28 >
+        au < HighWirePressPlugin ; down ; 2009 ; First Language Volume 29 ; 29 >
 
       }
 
@@ -10045,7 +10235,7 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 2000 ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
+        au < HighWirePressPlugin ; down ; 2009 ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
 
       }
 
@@ -10101,11 +10291,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Food Science and Technology International Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Food Science and Technology International Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Food Science and Technology International Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 2000 ; Food Science and Technology International Volume 14 ; 14 >
-        au < HighWirePressPlugin ; down ; 2000 ; Food Science and Technology International Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Food Science and Technology International Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Food Science and Technology International Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Food Science and Technology International Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2008 ; Food Science and Technology International Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2009 ; Food Science and Technology International Volume 15 ; 15 >
 
       }
 
@@ -10152,7 +10342,7 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 2000 ; Foot & Ankle Specialist Volume 2 ; 2 >
+        au < HighWirePressPlugin ; down ; 2009 ; Foot & Ankle Specialist Volume 2 ; 2 >
 
       }
   
@@ -10188,7 +10378,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; French Cultural Studies Volume 17 ; 17 >
+        au < down ; 2006 ; French Cultural Studies Volume 17 ; 17 >
 
       }
 
@@ -10198,10 +10388,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; French Cultural Studies Volume 16 ; 16 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; French Cultural Studies Volume 18 ; 18 >
-        au < HighWirePressPlugin ; down ; 2000 ; French Cultural Studies Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 2000 ; French Cultural Studies Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; French Cultural Studies Volume 16 ; 16 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; French Cultural Studies Volume 18 ; 18 >
+        au < HighWirePressPlugin ; down ; 2008 ; French Cultural Studies Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2009 ; French Cultural Studies Volume 20 ; 20 >
 
       }
 
@@ -10255,7 +10445,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Games and Culture Volume 1 ; 1 >
+        au < down ; 2006 ; Games and Culture Volume 1 ; 1 >
 
       }
 
@@ -10265,9 +10455,9 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Games and Culture Volume 2 ; 2 >
-        au < HighWirePressPlugin ; down ; 2000 ; Games and Culture Volume 3 ; 3 >
-        au < HighWirePressPlugin ; down ; 2000 ; Games and Culture Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Games and Culture Volume 2 ; 2 >
+        au < HighWirePressPlugin ; down ; 2008 ; Games and Culture Volume 3 ; 3 >
+        au < HighWirePressPlugin ; down ; 2009 ; Games and Culture Volume 4 ; 4 >
 
       }
 
@@ -10303,11 +10493,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender & Society Volume 19 ; 19 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender & Society Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender & Society Volume 21 ; 21 >
-        au < HighWirePressPlugin ; down ; 2000 ; Gender & Society Volume 22 ; 22 >
-        au < HighWirePressPlugin ; down ; 2000 ; Gender & Society Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Gender & Society Volume 19 ; 19 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Gender & Society Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Gender & Society Volume 21 ; 21 >
+        au < HighWirePressPlugin ; down ; 2008 ; Gender & Society Volume 22 ; 22 >
+        au < HighWirePressPlugin ; down ; 2009 ; Gender & Society Volume 23 ; 23 >
 
       }
 
@@ -10362,10 +10552,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender, Technology and Development Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender, Technology and Development Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gender, Technology and Development Volume 11 ; 11 >
-        au < HighWirePressPlugin ; down ; 2000 ; Gender, Technology and Development Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Gender, Technology and Development Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Gender, Technology and Development Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Gender, Technology and Development Volume 11 ; 11 >
+        au < HighWirePressPlugin ; down ; 2008 ; Gender, Technology and Development Volume 12 ; 12 >
 
       }
 
@@ -10431,9 +10621,9 @@ comment[exm] = now published by Springer
 
         comment[ghj] = now published by Oxford Univeristy Press
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; German History Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; German History Volume 24 ; 24 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; German History Volume 25 ; 25 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; German History Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2008 ; German History Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; German History Volume 25 ; 25 >
 
       }
 
@@ -10454,10 +10644,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gifted Child Quarterly Volume 50 ; 50 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Gifted Child Quarterly Volume 51 ; 51 >
-        au < HighWirePressPlugin ; down ; 2000 ; Gifted Child Quarterly Volume 52 ; 52 >
-        au < HighWirePressPlugin ; down ; 2000 ; Gifted Child Quarterly Volume 53 ; 53 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Gifted Child Quarterly Volume 50 ; 50 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Gifted Child Quarterly Volume 51 ; 51 >
+        au < HighWirePressPlugin ; down ; 2008 ; Gifted Child Quarterly Volume 52 ; 52 >
+        au < HighWirePressPlugin ; down ; 2009 ; Gifted Child Quarterly Volume 53 ; 53 >
 
       }
 
@@ -10542,11 +10732,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Business Review Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Business Review Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Business Review Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Business Review Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Business Review Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Global Business Review Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Global Business Review Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Global Business Review Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Global Business Review Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2009 ; Global Business Review Volume 10 ; 10 >
 
       }
 
@@ -10588,7 +10778,7 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 2000 ; Global Health Promotion Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2009 ; Global Health Promotion Volume 16 ; 16 >
 
       }
       
@@ -10636,7 +10826,7 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWirePressPlugin ; down ; 2000 ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
+        au < HighWirePressPlugin ; down ; 2009 ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
 
       }
 
@@ -10669,11 +10859,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Media and Communication Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Media and Communication Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Media and Communication Volume 3 ; 3 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Media and Communication Volume 4 ; 4 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Media and Communication Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Global Media and Communication Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Global Media and Communication Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Global Media and Communication Volume 3 ; 3 >
+        au < HighWirePressPlugin ; down ; 2008 ; Global Media and Communication Volume 4 ; 4 >
+        au < HighWirePressPlugin ; down ; 2009 ; Global Media and Communication Volume 5 ; 5 >
 
       }
 
@@ -10710,11 +10900,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Social Policy Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Social Policy Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Global Social Policy Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Social Policy Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 2000 ; Global Social Policy Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Global Social Policy Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Global Social Policy Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Global Social Policy Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2008 ; Global Social Policy Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2009 ; Global Social Policy Volume 9 ; 9 >
 
       }
 
@@ -10757,7 +10947,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Group & Organization Management Volume 31 ; 31 >
+        au < down ; 2006 ; Group & Organization Management Volume 31 ; 31 >
 
       }
 
@@ -10767,10 +10957,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group & Organization Management Volume 30 ; 30 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group & Organization Management Volume 32 ; 32 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group & Organization Management Volume 33 ; 33 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group & Organization Management Volume 34 ; 34 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Group & Organization Management Volume 30 ; 30 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Group & Organization Management Volume 32 ; 32 >
+        au < HighWirePressPlugin ; down ; 2007 ; Group & Organization Management Volume 33 ; 33 >
+        au < HighWirePressPlugin ; down ; 2008 ; Group & Organization Management Volume 34 ; 34 >
 
       }
 
@@ -10836,11 +11026,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group Analysis Volume 38 ; 38 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group Analysis Volume 39 ; 39 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group Analysis Volume 40 ; 40 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group Analysis Volume 41 ; 41 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group Analysis Volume 42 ; 42 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Group Analysis Volume 38 ; 38 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Group Analysis Volume 39 ; 39 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Group Analysis Volume 40 ; 40 >
+        au < HighWirePressPlugin ; down ; 2008 ; Group Analysis Volume 41 ; 41 >
+        au < HighWirePressPlugin ; down ; 2009 ; Group Analysis Volume 42 ; 42 >
 
       }
 
@@ -10916,7 +11106,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Group Processes & Intergroup Relations Volume 9 ; 9 >
+        au < down ; 2006 ; Group Processes & Intergroup Relations Volume 9 ; 9 >
 
       }
 
@@ -10926,10 +11116,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group Processes & Intergroup Relations Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Group Processes & Intergroup Relations Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group Processes & Intergroup Relations Volume 11 ; 11 >
-        au < HighWirePressPlugin ; down ; 2000 ; Group Processes & Intergroup Relations Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Group Processes & Intergroup Relations Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Group Processes & Intergroup Relations Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2008 ; Group Processes & Intergroup Relations Volume 11 ; 11 >
+        au < HighWirePressPlugin ; down ; 2009 ; Group Processes & Intergroup Relations Volume 12 ; 12 >
 
       }
 
@@ -10959,6 +11149,39 @@ comment[exm] = now published by Springer
     }
 
     {
+      title <
+        name = International Journal of Bilingualism ;
+        issn = 1367-0069 ;
+        eissn = 1756-6878
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 >
+        au < exists ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 >
+        au < manifest ; 1999 ; International Journal of Bilingualism Volume 3 ; 3 >
+        au < manifest ; 2000 ; International Journal of Bilingualism Volume 4 ; 4 >
+        au < manifest ; 2001 ; International Journal of Bilingualism Volume 5 ; 5 >
+        au < manifest ; 2002 ; International Journal of Bilingualism Volume 6 ; 6 >
+        au < manifest ; 2003 ; International Journal of Bilingualism Volume 7 ; 7 >
+        au < manifest ; 2004 ; International Journal of Bilingualism Volume 8 ; 8 >
+        au < manifest ; 2005 ; International Journal of Bilingualism Volume 9 ; 9 >
+        au < manifest ; 2006 ; International Journal of Bilingualism Volume 10 ; 10 >
+        au < manifest ; 2007 ; International Journal of Bilingualism Volume 11 ; 11 >
+        au < manifest ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 >
+        au < manifest ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 >
+        au < manifest ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 >
+        au < manifest ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
+
+      }
+
+    }
+    
+    {
 
       title <
         name = The International Journal of Press/Politics ;
@@ -10975,7 +11198,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The International Journal of Press/Politics Volume 11 ; 11 >
+        au < down ; 2006 ; The International Journal of Press/Politics Volume 11 ; 11 >
 
       }
 
@@ -10985,10 +11208,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; The International Journal of Press/Politics Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The International Journal of Press/Politics Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; 2000 ; The International Journal of Press/Politics Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; The International Journal of Press/Politics Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; The International Journal of Press/Politics Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; The International Journal of Press/Politics Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 >
 
       }
 
@@ -11020,6 +11243,54 @@ comment[exm] = now published by Springer
     }
 
     {
+      title <
+        name = International Journal of Toxicology ;
+        issn = 1091-5818 ;
+        eissn = 1092-874X
+      >
+      
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1982 ; International Journal of Toxicology Volume 1 ; 1 >
+        au < manifest ; 1983 ; International Journal of Toxicology Volume 2 ; 2 >
+        au < manifest ; 1984 ; International Journal of Toxicology Volume 3 ; 3 >
+        au < manifest ; 1985 ; International Journal of Toxicology Volume 4 ; 4 >
+        au < manifest ; 1986 ; International Journal of Toxicology Volume 5 ; 5 >
+        au < manifest ; 1987 ; International Journal of Toxicology Volume 6 ; 6 >
+        au < manifest ; 1988 ; International Journal of Toxicology Volume 7 ; 7 >
+        au < manifest ; 1989 ; International Journal of Toxicology Volume 8 ; 8 >
+        au < manifest ; 1990 ; International Journal of Toxicology Volume 9 ; 9 >
+        au < manifest ; 1991 ; International Journal of Toxicology Volume 10 ; 10 >
+        au < manifest ; 1992 ; International Journal of Toxicology Volume 11 ; 11 >
+        au < manifest ; 1993 ; International Journal of Toxicology Volume 12 ; 12 >
+        au < manifest ; 1994 ; International Journal of Toxicology Volume 13 ; 13 >
+        au < manifest ; 1995 ; International Journal of Toxicology Volume 14 ; 14 >
+        au < manifest ; 1996 ; International Journal of Toxicology Volume 15 ; 15 >
+        au < manifest ; 1997 ; International Journal of Toxicology Volume 16 ; 16 >
+        au < manifest ; 1998 ; International Journal of Toxicology Volume 17 ; 17 >
+        au < manifest ; 1999 ; International Journal of Toxicology Volume 18 ; 18 >
+        au < manifest ; 2000 ; International Journal of Toxicology Volume 19 ; 19 >
+        au < manifest ; 2001 ; International Journal of Toxicology Volume 20 ; 20 >
+        au < manifest ; 2002 ; International Journal of Toxicology Volume 21 ; 21 >
+        au < manifest ; 2003 ; International Journal of Toxicology Volume 22 ; 22 >
+        au < manifest ; 2004 ; International Journal of Toxicology Volume 23 ; 23 >
+        au < manifest ; 2005 ; International Journal of Toxicology Volume 24 ; 24 >
+        au < manifest ; 2006 ; International Journal of Toxicology Volume 25 ; 25 >
+        au < manifest ; 2007 ; International Journal of Toxicology Volume 26 ; 26 >
+        au < manifest ; 2008 ; International Journal of Toxicology Volume 27 ; 27 >
+        au < manifest ; 2009 ; International Journal of Toxicology Volume 28 ; 28 >
+        au < manifest ; 2010 ; International Journal of Toxicology Volume 29 ; 29 >
+        au < manifest ; 2011 ; International Journal of Toxicology Volume 30 ; 30 >
+
+      }
+
+    }
+    
+    {
 
       title <
         name = Health Education & Behavior ;
@@ -11036,7 +11307,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Health Education & Behavior Volume 33 ; 33 >
+        au < down ; 2006 ; Health Education & Behavior Volume 33 ; 33 >
 
       }
 
@@ -11046,10 +11317,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Education & Behavior Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Education & Behavior Volume 34 ; 34 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Education & Behavior Volume 35 ; 35 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Education & Behavior Volume 36 ; 36 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Health Education & Behavior Volume 32 ; 32 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Health Education & Behavior Volume 34 ; 34 >
+        au < HighWirePressPlugin ; down ; 2008 ; Health Education & Behavior Volume 35 ; 35 >
+        au < HighWirePressPlugin ; down ; 2009 ; Health Education & Behavior Volume 36 ; 36 >
 
       }
 
@@ -11117,10 +11388,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Education Journal Volume 65 ; 65 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Education Journal Volume 66 ; 66 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Education Journal Volume 67 ; 67 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Education Journal Volume 68 ; 68 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Health Education Journal Volume 65 ; 65 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Health Education Journal Volume 66 ; 66 >
+        au < HighWirePressPlugin ; down ; 2008 ; Health Education Journal Volume 67 ; 67 >
+        au < HighWirePressPlugin ; down ; 2009 ; Health Education Journal Volume 68 ; 68 >
 
       }
 
@@ -11222,7 +11493,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Health Informatics Journal Volume 12 ; 12 >
+        au < down ; 2006 ; Health Informatics Journal Volume 12 ; 12 >
 
       }
 
@@ -11232,10 +11503,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Informatics Journal Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Informatics Journal Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Informatics Journal Volume 14 ; 14 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Informatics Journal Volume 15 ; 15 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Health Informatics Journal Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Health Informatics Journal Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2008 ; Health Informatics Journal Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2009 ; Health Informatics Journal Volume 15 ; 15 >
 
       }
 
@@ -11284,7 +11555,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Health Promotion Practice Volume 7 ; 7 >
+        au < down ; 2006 ; Health Promotion Practice Volume 7 ; 7 >
 
       }
 
@@ -11294,10 +11565,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Promotion Practice Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health Promotion Practice Volume 8 ; 8 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Promotion Practice Volume 9 ; 9 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health Promotion Practice Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Health Promotion Practice Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Health Promotion Practice Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2008 ; Health Promotion Practice Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2009 ; Health Promotion Practice Volume 10 ; 10 >
 
       }
 
@@ -11341,7 +11612,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Health: Volume 10 ; 10 >
+        au < down ; 2006 ; Health: Volume 10 ; 10 >
 
       }
 
@@ -11351,10 +11622,10 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health: Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health: Volume 11 ; 11 >
-        au < HighWirePressPlugin ; down ; 2000 ; Health: Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; Health: Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Health: Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Health: Volume 11 ; 11 >
+        au < HighWirePressPlugin ; down ; 2008 ; Health: Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Health: Volume 13 ; 13 >
 
       }
 
@@ -11399,11 +11670,11 @@ comment[exm] = now published by Springer
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2000 ; High Performance Polymers Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; High Performance Polymers Volume 18 ; 18 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; High Performance Polymers Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 2000 ; High Performance Polymers Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; 2000 ; High Performance Polymers Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; High Performance Polymers Volume 17 ; 17 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; High Performance Polymers Volume 18 ; 18 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; High Performance Polymers Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2008 ; High Performance Polymers Volume 20 ; 20 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; High Performance Polymers Volume 21 ; 21 >
 
       }
 
@@ -11458,7 +11729,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
+        au < down ; 2006 ; Hispanic Journal of Behavioral Sciences Volume 28 ; 28 >
 
       }
 
@@ -11566,7 +11837,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; History of Psychiatry Volume 17 ; 17 >
+        au < down ; 2006 ; History of Psychiatry Volume 17 ; 17 >
 
       }
 
@@ -11633,7 +11904,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; History of the Human Sciences Volume 19 ; 19 >
+        au < down ; 2006 ; History of the Human Sciences Volume 19 ; 19 >
 
       }
 
@@ -11813,7 +12084,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Homicide Studies Volume 10 ; 10 >
+        au < down ; 2006 ; Homicide Studies Volume 10 ; 10 >
 
       }
 
@@ -11937,7 +12208,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Human Relations Volume 59 ; 59 >
+        au < down ; 2006 ; Human Relations Volume 59 ; 59 >
 
       }
 
@@ -12046,7 +12317,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Human Resource Development Review Volume 5 ; 5 >
+        au < down ; 2006 ; Human Resource Development Review Volume 5 ; 5 >
 
       }
 
@@ -12101,7 +12372,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; IFLA Journal Volume 32 ; 32 >
+        au < down ; 2006 ; IFLA Journal Volume 32 ; 32 >
 
       }
 
@@ -12183,7 +12454,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Improving Schools Volume 9 ; 9 >
+        au < down ; 2006 ; Improving Schools Volume 9 ; 9 >
 
       }
 
@@ -12241,7 +12512,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Indian Economic & Social History Review Volume 42 ; 42 >
+        au < down ; 2005 ; Indian Economic & Social History Review Volume 42 ; 42 >
 
       }
 
@@ -12334,7 +12605,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Indian Journal of Gender Studies Volume 12 ; 12 >
+        au < down ; 2005 ; Indian Journal of Gender Studies Volume 12 ; 12 >
 
       }
 
@@ -12397,7 +12668,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Indoor and Built Environment Volume 15 ; 15 >
+        au < down ; 2006 ; Indoor and Built Environment Volume 15 ; 15 >
 
       }
 
@@ -12484,7 +12755,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Information Development Volume 22 ; 22 >
+        au < down ; 2006 ; Information Development Volume 22 ; 22 >
 
       }
 
@@ -12585,7 +12856,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Integrative Cancer Therapies Volume 5 ; 5 >
+        au < down ; 2006 ; Integrative Cancer Therapies Volume 5 ; 5 >
 
       }
 
@@ -12640,7 +12911,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Communication Gazette Volume 68 ; 68 >
+        au < down ; 2006 ; International Communication Gazette Volume 68 ; 68 >
 
       }
 
@@ -12758,7 +13029,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Criminal Justice Review Volume 15 ; 15 >
+        au < down ; 2005 ; International Criminal Justice Review Volume 15 ; 15 >
 
       }
 
@@ -12824,7 +13095,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Behavioral Development Volume 30 ; 30 >
+        au < down ; 2006 ; International Journal of Behavioral Development Volume 30 ; 30 >
 
       }
 
@@ -12907,7 +13178,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Comparative Sociology Volume 47 ; 47 >
+        au < down ; 2006 ; International Journal of Comparative Sociology Volume 47 ; 47 >
 
       }
 
@@ -13004,7 +13275,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Cross Cultural Management Volume 6 ; 6 >
+        au < down ; 2006 ; International Journal of Cross Cultural Management Volume 6 ; 6 >
 
       }
 
@@ -13060,7 +13331,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Cultural Studies Volume 9 ; 9 >
+        au < down ; 2006 ; International Journal of Cultural Studies Volume 9 ; 9 >
 
       }
 
@@ -13119,7 +13390,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Damage Mechanics Volume 15 ; 15 >
+        au < down ; 2006 ; International Journal of Damage Mechanics Volume 15 ; 15 >
 
       }
 
@@ -13214,7 +13485,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
+        au < down ; 2006 ; International Journal of High Performance Computing Applications Volume 20 ; 20 >
 
       }
 
@@ -13404,7 +13675,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
+        au < down ; 2006 ; International Journal of Offender Therapy and Comparative Criminology Volume 50 ; 50 >
 
       }
 
@@ -13497,7 +13768,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The International Journal of Robotics Research Volume 25 ; 25 >
+        au < down ; 2006 ; The International Journal of Robotics Research Volume 25 ; 25 >
 
       }
 
@@ -13855,7 +14126,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Regional Science Review Volume 29 ; 29 >
+        au < down ; 2006 ; International Regional Science Review Volume 29 ; 29 >
 
       }
 
@@ -14074,7 +14345,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; International Review of Administrative Sciences Volume 71 ; 71 >
+        au < down ; 2005 ; International Review of Administrative Sciences Volume 71 ; 71 >
 
       }
 
@@ -14551,7 +14822,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal for the Study of the New Testament Volume 28 ; 28 >
+        au < down ; 2005-2006 ; Journal for the Study of the New Testament Volume 28 ; 28 >
 
       }
 
@@ -14628,7 +14899,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal for the Study of the Old Testament Volume 30 ; 30 >
+        au < down ; 2005-2006 ; Journal for the Study of the Old Testament Volume 30 ; 30 >
 
       }
 
@@ -14780,7 +15051,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Adolescent Research Volume 21 ; 21 >
+        au < down ; 2006 ; Journal of Adolescent Research Volume 21 ; 21 >
 
       }
 
@@ -14851,7 +15122,7 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Aging and Health Volume 18 ; 18 >
+        au < down ; 2006 ; Journal of Aging and Health Volume 18 ; 18 >
 
       }
 
@@ -14920,7 +15191,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Anglican Studies Volume 3 ; 3 >
+        au < down ; 2006 ; Journal of Anglican Studies Volume 3 ; 3 >
 
       }
 
@@ -14943,7 +15214,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
+        au < down ; 2006 ; The Journal of Applied Behavioral Science Volume 42 ; 42 >
 
       }
 
@@ -15033,7 +15304,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Applied Gerontology Volume 25 ; 25 >
+        au < down ; 2006 ; Journal of Applied Gerontology Volume 25 ; 25 >
 
       }
 
@@ -15106,7 +15377,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Asian and African Studies Volume 41 ; 41 >
+        au < down ; 2006 ; Journal of Asian and African Studies Volume 41 ; 41 >
 
       }
 
@@ -15301,7 +15572,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Biological Rhythms Volume 21 ; 21 >
+        au < down ; 2006 ; Journal of Biological Rhythms Volume 21 ; 21 >
 
       }
 
@@ -15432,7 +15703,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Biomolecular Screening Volume 11 ; 11 >
+        au < down ; 2006 ; Journal of Biomolecular Screening Volume 11 ; 11 >
 
       }
 
@@ -15491,7 +15762,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Black Psychology Volume 32 ; 32 >
+        au < down ; 2006 ; Journal of Black Psychology Volume 32 ; 32 >
 
       }
 
@@ -15571,7 +15842,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Black Studies Volume 36 ; 36 >
+        au < down ; 2005-2006 ; Journal of Black Studies Volume 36 ; 36 >
 
       }
 
@@ -15726,7 +15997,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Business and Technical Communication Volume 20 ; 20 >
+        au < down ; 2006 ; Journal of Business and Technical Communication Volume 20 ; 20 >
 
       }
 
@@ -15906,7 +16177,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Business Communication Volume 43 ; 43 >
+        au < down ; 2006 ; Journal of Business Communication Volume 43 ; 43 >
 
       }
 
@@ -16049,7 +16320,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Career Assessment Volume 14 ; 14 >
+        au < down ; 2006 ; Journal of Career Assessment Volume 14 ; 14 >
 
       }
 
@@ -16113,7 +16384,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Career Development Volume 32 ; 32 >
+        au < down ; 2005-2006 ; Journal of Career Development Volume 32 ; 32 >
 
       }
 
@@ -16321,7 +16592,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Child Health Care Volume 10 ; 10 >
+        au < down ; 2006 ; Journal of Child Health Care Volume 10 ; 10 >
 
       }
 
@@ -16595,7 +16866,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The Journal of Commonwealth Literature Volume 41 ; 41 >
+        au < down ; 2006 ; The Journal of Commonwealth Literature Volume 41 ; 41 >
 
       }
 
@@ -16684,7 +16955,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Communication Inquiry Volume 30 ; 30 >
+        au < down ; 2006 ; Journal of Communication Inquiry Volume 30 ; 30 >
 
       }
 
@@ -16763,7 +17034,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Composite Materials Volume 40 ; 40 >
+        au < down ; 2006 ; Journal of Composite Materials Volume 40 ; 40 >
 
       }
 
@@ -16853,7 +17124,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Conflict Resolution Volume 50 ; 50 >
+        au < down ; 2006 ; Journal of Conflict Resolution Volume 50 ; 50 >
 
       }
 
@@ -16998,7 +17269,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
+        au < down ; 2006 ; Journal of Contemporary Criminal Justice Volume 22 ; 22 >
 
       }
 
@@ -17144,7 +17415,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Contemporary History Volume 41 ; 41 >
+        au < down ; 2006 ; Journal of Contemporary History Volume 41 ; 41 >
 
       }
 
@@ -17348,7 +17619,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
+        au < down ; 2006 ; Journal of Cross-Cultural Psychology Volume 37 ; 37 >
 
       }
 
@@ -17590,7 +17861,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The Journal of Early Adolescence Volume 26 ; 26 >
+        au < down ; 2006 ; The Journal of Early Adolescence Volume 26 ; 26 >
 
       }
 
@@ -18145,7 +18416,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of English Linguistics Volume 33 ; 33 >
+        au < down ; 2005 ; Journal of English Linguistics Volume 33 ; 33 >
 
       }
 
@@ -18229,7 +18500,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Entrepreneurship Volume 14 ; 14 >
+        au < down ; 2005 ; Journal of Entrepreneurship Volume 14 ; 14 >
 
       }
 
@@ -18294,7 +18565,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; The Journal of Environment & Development Volume 15 ; 15 >
+        au < down ; 2006 ; The Journal of Environment & Development Volume 15 ; 15 >
 
       }
 
@@ -18359,7 +18630,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of European Social Policy Volume 16 ; 16 >
+        au < down ; 2006 ; Journal of European Social Policy Volume 16 ; 16 >
 
       }
 
@@ -18425,7 +18696,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of European Studies Volume 36 ; 36 >
+        au < down ; 2006 ; Journal of European Studies Volume 36 ; 36 >
 
       }
 
@@ -18534,7 +18805,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Family History Volume 31 ; 31 >
+        au < down ; 2006 ; Journal of Family History Volume 31 ; 31 >
 
       }
 
@@ -18681,7 +18952,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Family Nursing Volume 12 ; 12 >
+        au < down ; 2006 ; Journal of Family Nursing Volume 12 ; 12 >
 
       }
 
@@ -18887,7 +19158,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
+        au < down ; 2006 ; Journal of Geriatric Psychiatry and Neurology Volume 19 ; 19 >
 
       }
 
@@ -19109,7 +19380,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Hispanic Higher Education Volume 5 ; 5 >
+        au < down ; 2006 ; Journal of Hispanic Higher Education Volume 5 ; 5 >
 
       }
 
@@ -19243,7 +19514,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Holistic Nursing Volume 24 ; 24 >
+        au < down ; 2006 ; Journal of Holistic Nursing Volume 24 ; 24 >
 
       }
 
@@ -19317,7 +19588,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Hospitality & Tourism Research Volume 29 ; 29 >
+        au < down ; 2005 ; Journal of Hospitality & Tourism Research Volume 29 ; 29 >
 
       }
 
@@ -19397,7 +19668,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Human Lactation Volume 22 ; 22 >
+        au < down ; 2006 ; Journal of Human Lactation Volume 22 ; 22 >
 
       }
 
@@ -19469,7 +19740,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Human Values Volume 11 ; 11 >
+        au < down ; 2005 ; Journal of Human Values Volume 11 ; 11 >
 
       }
 
@@ -19530,7 +19801,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Humanistic Psychology Volume 46 ; 46 >
+        au < down ; 2006 ; Journal of Humanistic Psychology Volume 46 ; 46 >
 
       }
 
@@ -21385,7 +21656,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume] >
 
 
-        au < down ; 2000 ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
+        au < down ; 2005 ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
 
       }
 
