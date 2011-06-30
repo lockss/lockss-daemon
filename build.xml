@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.282 2011-06-14 09:25:19 tlipkis Exp $
+ $Id: build.xml,v 1.283 2011-06-30 19:04:41 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -592,8 +592,14 @@ The target you have selected requires compiling under JDK 1.7.
   <!--  Public tasks -->
   <!-- ==================================================================== -->
   <target name="clean"
-     depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
+     depends="clean0"
    description="Delete all generated files and dirs" >
+    <delete dir="${tdb.xml.dir}" quiet="true"/>
+  </target>
+
+  <target name="clean0"
+     depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
+   description="Delete all generated files and dirs except tdbxml" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${plugins.classes}" quiet="true"/>
@@ -603,7 +609,6 @@ The target you have selected requires compiling under JDK 1.7.
     <delete dir="${javadoc}" quiet="true"/>
     <delete dir="${test.javadoc}" quiet="true"/>
     <delete dir="${plugins.dir}" quiet="true"/>
-    <delete dir="${tdb.xml.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.plugins.jar}" quiet="true"/>
@@ -2116,9 +2121,10 @@ Test results in ${test.results}
      <then>
       <echo message="Validating plugin xml files"/>
       <junit1 fork="${fork}" printsummary="yes" maxmemory="256m"
+	      haltonfailure="${halt}" failureproperty="failed"
 	      filtertrace="${filtertrace}" showoutput="${showoutput}">
         <test fork="${fork}" name="org.lockss.test.PluginTestCase" />
-	<!-- 	    <jvmarg value="-server"/> -->
+		    <jvmarg value="-server"/>
 	<formatter type="plain" usefile="@{usefile}" />
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.test.TestPluginNames"
@@ -2130,6 +2136,7 @@ Test results in ${test.results}
 	<sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
 	<sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       </junit1>
+      <fail if="failed" message="Test(s) failed" />
      </then>
      <else>
       <echo message="No plugin xml files found"/>
