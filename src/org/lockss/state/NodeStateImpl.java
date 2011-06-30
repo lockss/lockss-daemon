@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.39 2008-11-15 02:30:53 edwardsb1 Exp $
+ * $Id: NodeStateImpl.java,v 1.40 2011-06-30 19:06:17 tlipkis Exp $
  */
 
 /*
@@ -434,11 +434,13 @@ public class NodeStateImpl
   }
   
   public synchronized void closeV3Poll(String key) {
-    for (int idx = 0; idx < activeV3Polls.size(); idx++) { 
-      V3PollState state = (V3PollState)activeV3Polls.get(idx);
-      if (key.equals(state.getKey())) {
-        activeV3Polls.remove(idx);
-        completedV3Polls.add(state);
+    if (activeV3Polls != null) {
+      Collection<V3PollState> coll = new ArrayList<V3PollState>(activeV3Polls);
+      for (V3PollState state : coll) { 
+	if (key.equals(state.getKey())) {
+	  activeV3Polls.remove(state);
+	  completedV3Polls.add(state);
+	}
       }
     }
   }
