@@ -225,18 +225,18 @@
       au < ready ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
       au < ready ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
       au < ready ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
-      au < testing ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
-      au < testing ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+      au < ready ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+      au < ready ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
       au < testing ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
       au < testing ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
       au < testing ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
@@ -281,17 +281,17 @@
       param[base_url] = http://hsmr.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; 2001 ; Health Services Management Research Volume 14 ; 14 >
-      au < wanted ; 2002 ; Health Services Management Research Volume 15 ; 15 >
-      au < wanted ; 2003 ; Health Services Management Research Volume 16 ; 16 >
-      au < wanted ; 2004 ; Health Services Management Research Volume 17 ; 17 >
-      au < wanted ; 2005 ; Health Services Management Research Volume 18 ; 18 >
-      au < wanted ; 2006 ; Health Services Management Research Volume 19 ; 19 >
-      au < wanted ; 2007 ; Health Services Management Research Volume 20 ; 20 >
-      au < wanted ; 2008 ; Health Services Management Research Volume 21 ; 21 >
-      au < wanted ; 2009 ; Health Services Management Research Volume 22 ; 22 >
-      au < wanted ; 2010 ; Health Services Management Research Volume 23 ; 23 >
-      au < wanted ; 2011 ; Health Services Management Research Volume 24 ; 24 >
+      au < testing ; 2001 ; Health Services Management Research Volume 14 ; 14 >
+      au < testing ; 2002 ; Health Services Management Research Volume 15 ; 15 >
+      au < testing ; 2003 ; Health Services Management Research Volume 16 ; 16 >
+      au < testing ; 2004 ; Health Services Management Research Volume 17 ; 17 >
+      au < testing ; 2005 ; Health Services Management Research Volume 18 ; 18 >
+      au < testing ; 2006 ; Health Services Management Research Volume 19 ; 19 >
+      au < testing ; 2007 ; Health Services Management Research Volume 20 ; 20 >
+      au < testing ; 2008 ; Health Services Management Research Volume 21 ; 21 >
+      au < testing ; 2009 ; Health Services Management Research Volume 22 ; 22 >
+      au < testing ; 2010 ; Health Services Management Research Volume 23 ; 23 >
+      au < testing ; 2011 ; Health Services Management Research Volume 24 ; 24 >
 
     }
 
