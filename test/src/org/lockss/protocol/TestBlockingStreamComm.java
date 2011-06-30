@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.33.2.1 2011-06-26 21:12:24 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.33.2.2 2011-06-30 04:29:46 tlipkis Exp $
  */
 
 /*
@@ -673,7 +673,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 		") not supported, skipping " + testName);
   }
 
-
   // Ensure that in the normal case the listen socket isn't bound to a
   // specific IP
   public void testIncomingToAlternateAddress() throws IOException {
@@ -701,10 +700,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void testIncomingBindLocalOnlySameIP() throws IOException {
-    if (!isAltAddrUsable()) {
-      logSkipped("testIncomingBindLocalOnlySameIP");
-      return;
-    }
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
 				  "true");
     setupComm1();
@@ -726,6 +721,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void testIncomingBindLocalOnlyWrongIP() throws IOException {
+    if (!isAltAddrUsable()) {
+      logSkipped("testIncomingBindLocalOnlyWrongIP");
+      return;
+    }
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
 				  "true");
     setupComm1();
