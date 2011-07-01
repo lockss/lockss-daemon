@@ -17,7 +17,7 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://edrv.endojournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; Endocrine Reviews Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; exists ; Endocrine Reviews Volume 2 ; 2 >
@@ -67,7 +67,7 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://endo.endojournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; Endocrinology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; exists ; Endocrinology Volume 33 ; 33 >
@@ -206,7 +206,7 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jcem.endojournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; exists ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
@@ -320,7 +320,7 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mend.endojournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; Molecular Endocrinology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; exists ; Molecular Endocrinology Volume 2 ; 2 >
