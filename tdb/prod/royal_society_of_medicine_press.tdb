@@ -249,17 +249,17 @@
       au < ready ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
       au < ready ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
       au < ready ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
       au < testing ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
       au < testing ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
       au < testing ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
       au < testing ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < testing ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < ready ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
       au < testing ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
@@ -312,13 +312,13 @@
       param[base_url] = http://ijcp.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
-      au < testing ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
-      au < testing ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
-      au < testing ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
-      au < testing ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
-      au < testing ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
-      au < testing ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+      au < ready ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+      au < ready ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+      au < ready ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+      au < ready ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+      au < ready ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+      au < ready ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+      au < ready ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
 
     }
 
@@ -375,17 +375,17 @@
       param[base_url] = http://jhsrp.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-      au < testing ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-      au < testing ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-      au < testing ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-      au < testing ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-      au < wanted ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-      au < wanted ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-      au < wanted ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-      au < wanted ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-      au < wanted ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-      au < wanted ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+      au < ready ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+      au < ready ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+      au < ready ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+      au < ready ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+      au < ready ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+      au < testing ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+      au < testing ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+      au < testing ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+      au < testing ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+      au < testing ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+      au < testing ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
 
     }
 
@@ -406,13 +406,13 @@
       param[base_url] = http://jmb.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
-      au < wanted ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
-      au < wanted ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
-      au < wanted ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
-      au < wanted ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
-      au < wanted ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
-      au < wanted ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+      au < testing ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+      au < testing ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+      au < testing ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+      au < testing ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+      au < testing ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+      au < testing ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+      au < testing ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
 
     }
 
