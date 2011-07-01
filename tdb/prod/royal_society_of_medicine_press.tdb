@@ -254,13 +254,13 @@
       au < ready ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
       au < ready ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
       au < ready ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
-      au < testing ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < ready ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+      au < ready ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+      au < ready ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+      au < ready ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
+      au < exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
       au < ready ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
-      au < testing ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
+      au < ready ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
@@ -433,13 +433,13 @@
       param[base_url] = http://jms.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
-      au < wanted ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
-      au < wanted ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
-      au < wanted ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
-      au < wanted ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
-      au < wanted ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
-      au < wanted ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+      au < testing ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+      au < testing ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+      au < testing ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+      au < testing ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+      au < testing ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+      au < testing ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+      au < testing ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
       au < wanted ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
       au < wanted ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
       au < wanted ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
