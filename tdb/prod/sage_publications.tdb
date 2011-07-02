@@ -29630,6 +29630,102 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sim.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1963 ; SIMULATION Volume 1 ; 1 >
+        au < manifest ; 1964 ; SIMULATION Volume 2 ; 2 >
+        au < manifest ; 1964 ; SIMULATION Volume 3 ; 3 >
+        au < manifest ; 1965 ; SIMULATION Volume 4 ; 4 >
+        au < manifest ; 1965 ; SIMULATION Volume 5 ; 5 >
+        au < manifest ; 1966 ; SIMULATION Volume 6 ; 6 >
+        au < manifest ; 1966 ; SIMULATION Volume 7 ; 7 >
+        au < manifest ; 1967 ; SIMULATION Volume 8 ; 8 >
+        au < manifest ; 1967 ; SIMULATION Volume 9 ; 9 >
+        au < manifest ; 1968 ; SIMULATION Volume 10 ; 10 >
+        au < manifest ; 1968 ; SIMULATION Volume 11 ; 11 >
+        au < manifest ; 1969 ; SIMULATION Volume 12 ; 12 >
+        au < manifest ; 1969 ; SIMULATION Volume 13 ; 13 >
+        au < manifest ; 1970 ; SIMULATION Volume 14 ; 14 >
+        au < manifest ; 1970 ; SIMULATION Volume 15 ; 15 >
+        au < manifest ; 1971 ; SIMULATION Volume 16 ; 16 >
+        au < manifest ; 1971 ; SIMULATION Volume 17 ; 17 >
+        au < manifest ; 1972 ; SIMULATION Volume 18 ; 18 >
+        au < manifest ; 1972 ; SIMULATION Volume 19 ; 19 >
+        au < manifest ; 1973 ; SIMULATION Volume 20 ; 20 >
+        au < manifest ; 1973 ; SIMULATION Volume 21 ; 21 >
+        au < manifest ; 1974 ; SIMULATION Volume 22 ; 22 >
+        au < manifest ; 1974 ; SIMULATION Volume 23 ; 23 >
+        au < manifest ; 1975 ; SIMULATION Volume 24 ; 24 >
+        au < manifest ; 1975 ; SIMULATION Volume 25 ; 25 >
+        au < manifest ; 1976 ; SIMULATION Volume 26 ; 26 >
+        au < manifest ; 1976 ; SIMULATION Volume 27 ; 27 >
+        au < manifest ; 1977 ; SIMULATION Volume 28 ; 28 >
+        au < manifest ; 1977 ; SIMULATION Volume 29 ; 29 >
+        au < manifest ; 1978 ; SIMULATION Volume 30 ; 30 >
+        au < manifest ; 1978 ; SIMULATION Volume 31 ; 31 >
+        au < manifest ; 1979 ; SIMULATION Volume 32 ; 32 >
+        au < manifest ; 1979 ; SIMULATION Volume 33 ; 33 >
+        au < manifest ; 1980 ; SIMULATION Volume 34 ; 34 >
+        au < manifest ; 1980 ; SIMULATION Volume 35 ; 35 >
+        au < manifest ; 1981 ; SIMULATION Volume 36 ; 36 >
+        au < manifest ; 1981 ; SIMULATION Volume 37 ; 37 >
+        au < manifest ; 1982 ; SIMULATION Volume 38 ; 38 >
+        au < manifest ; 1982 ; SIMULATION Volume 39 ; 39 >
+        au < manifest ; 1983 ; SIMULATION Volume 40 ; 40 >
+        au < manifest ; 1983 ; SIMULATION Volume 41 ; 41 >
+        au < manifest ; 1984 ; SIMULATION Volume 42 ; 42 >
+        au < manifest ; 1984 ; SIMULATION Volume 43 ; 43 >
+        au < manifest ; 1985 ; SIMULATION Volume 44 ; 44 >
+        au < manifest ; 1985 ; SIMULATION Volume 45 ; 45 >
+        au < manifest ; 1986 ; SIMULATION Volume 46 ; 46 >
+        au < manifest ; 1986 ; SIMULATION Volume 47 ; 47 >
+        au < manifest ; 1987 ; SIMULATION Volume 48 ; 48 >
+        au < manifest ; 1987 ; SIMULATION Volume 49 ; 49 >
+        au < manifest ; 1988 ; SIMULATION Volume 50 ; 50 >
+        au < manifest ; 1988 ; SIMULATION Volume 51 ; 51 >
+        au < manifest ; 1989 ; SIMULATION Volume 52 ; 52 >
+        au < manifest ; 1989 ; SIMULATION Volume 53 ; 53 >
+        au < manifest ; 1990 ; SIMULATION Volume 54 ; 54 >
+        au < manifest ; 1990 ; SIMULATION Volume 55 ; 55 >
+        au < manifest ; 1991 ; SIMULATION Volume 56 ; 56 >
+        au < manifest ; 1991 ; SIMULATION Volume 57 ; 57 >
+        au < manifest ; 1992 ; SIMULATION Volume 58 ; 58 >
+        au < manifest ; 1992 ; SIMULATION Volume 59 ; 59 >
+        au < manifest ; 1993 ; SIMULATION Volume 60 ; 60 >
+        au < manifest ; 1993 ; SIMULATION Volume 61 ; 61 >
+        au < manifest ; 1994 ; SIMULATION Volume 62 ; 62 >
+        au < manifest ; 1994 ; SIMULATION Volume 63 ; 63 >
+        au < manifest ; 1995 ; SIMULATION Volume 64 ; 64 >
+        au < manifest ; 1995 ; SIMULATION Volume 65 ; 65 >
+        au < manifest ; 1996 ; SIMULATION Volume 66 ; 66 >
+        au < manifest ; 1996 ; SIMULATION Volume 67 ; 67 >
+        au < manifest ; 1997 ; SIMULATION Volume 68 ; 68 >
+        au < manifest ; 1997 ; SIMULATION Volume 69 ; 69 >
+        au < manifest ; 1998 ; SIMULATION Volume 70 ; 70 >
+        au < manifest ; 1998 ; SIMULATION Volume 71 ; 71 >
+        au < manifest ; 1999 ; SIMULATION Volume 72 ; 72 >
+        au < manifest ; 1999 ; SIMULATION Volume 73 ; 73 >
+        au < manifest ; 2000 ; SIMULATION Volume 74 ; 74 >
+        au < manifest ; 2000 ; SIMULATION Volume 75 ; 75 >
+        au < manifest ; 2001 ; SIMULATION Volume 76 ; 76 >
+        au < manifest ; 2001 ; SIMULATION Volume 77 ; 77 >
+        au < manifest ; 2002 ; SIMULATION Volume 78 ; 78 >
+        au < manifest ; 2003 ; SIMULATION Volume 79 ; 79 >
+        au < manifest ; 2004 ; SIMULATION Volume 80 ; 80 >
+        au < manifest ; 2005 ; SIMULATION Volume 81 ; 81 >
+        au < manifest ; 2006 ; SIMULATION Volume 82 ; 82 >
+        au < manifest ; 2007 ; SIMULATION Volume 83 ; 83 >
+        au < manifest ; 2008 ; SIMULATION Volume 84 ; 84 >
+        au < manifest ; 2009 ; SIMULATION Volume 85 ; 85 >
+        au < manifest ; 2010 ; SIMULATION Volume 86 ; 86 >
+        au < manifest ; 2011 ; SIMULATION Volume 87 ; 87 >
+
+      }
+
     }
 
     {
@@ -29653,6 +29749,57 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Simulation & Gaming Volume 39 ; 39 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Simulation & Gaming Volume 40 ; 40 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Simulation & Gaming Volume 41 ; 41 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sag.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1970 ; Simulation & Gaming Volume 1 ; 1 >
+        au < manifest ; 1971 ; Simulation & Gaming Volume 2 ; 2 >
+        au < manifest ; 1972 ; Simulation & Gaming Volume 3 ; 3 >
+        au < manifest ; 1973 ; Simulation & Gaming Volume 4 ; 4 >
+        au < manifest ; 1974 ; Simulation & Gaming Volume 5 ; 5 >
+        au < manifest ; 1975 ; Simulation & Gaming Volume 6 ; 6 >
+        au < manifest ; 1976 ; Simulation & Gaming Volume 7 ; 7 >
+        au < manifest ; 1977 ; Simulation & Gaming Volume 8 ; 8 >
+        au < manifest ; 1978 ; Simulation & Gaming Volume 9 ; 9 >
+        au < manifest ; 1979 ; Simulation & Gaming Volume 10 ; 10 >
+        au < manifest ; 1980 ; Simulation & Gaming Volume 11 ; 11 >
+        au < manifest ; 1981 ; Simulation & Gaming Volume 12 ; 12 >
+        au < manifest ; 1982 ; Simulation & Gaming Volume 13 ; 13 >
+        au < manifest ; 1983 ; Simulation & Gaming Volume 14 ; 14 >
+        au < manifest ; 1984 ; Simulation & Gaming Volume 15 ; 15 >
+        au < manifest ; 1985 ; Simulation & Gaming Volume 16 ; 16 >
+        au < manifest ; 1986 ; Simulation & Gaming Volume 17 ; 17 >
+        au < manifest ; 1987 ; Simulation & Gaming Volume 18 ; 18 >
+        au < manifest ; 1988 ; Simulation & Gaming Volume 19 ; 19 >
+        au < manifest ; 1989 ; Simulation & Gaming Volume 20 ; 20 >
+        au < manifest ; 1990 ; Simulation & Gaming Volume 21 ; 21 >
+        au < manifest ; 1991 ; Simulation & Gaming Volume 22 ; 22 >
+        au < manifest ; 1992 ; Simulation & Gaming Volume 23 ; 23 >
+        au < manifest ; 1993 ; Simulation & Gaming Volume 24 ; 24 >
+        au < manifest ; 1994 ; Simulation & Gaming Volume 25 ; 25 >
+        au < manifest ; 1995 ; Simulation & Gaming Volume 26 ; 26 >
+        au < manifest ; 1996 ; Simulation & Gaming Volume 27 ; 27 >
+        au < manifest ; 1997 ; Simulation & Gaming Volume 28 ; 28 >
+        au < manifest ; 1998 ; Simulation & Gaming Volume 29 ; 29 >
+        au < manifest ; 1999 ; Simulation & Gaming Volume 30 ; 30 >
+        au < manifest ; 2000 ; Simulation & Gaming Volume 31 ; 31 >
+        au < manifest ; 2001 ; Simulation & Gaming Volume 32 ; 32 >
+        au < manifest ; 2002 ; Simulation & Gaming Volume 33 ; 33 >
+        au < manifest ; 2003 ; Simulation & Gaming Volume 34 ; 34 >
+        au < manifest ; 2004 ; Simulation & Gaming Volume 35 ; 35 >
+        au < manifest ; 2005 ; Simulation & Gaming Volume 36 ; 36 >
+        au < manifest ; 2006 ; Simulation & Gaming Volume 37 ; 37 >
+        au < manifest ; 2007 ; Simulation & Gaming Volume 38 ; 38 >
+        au < manifest ; 2008 ; Simulation & Gaming Volume 39 ; 39 >
+        au < manifest ; 2009 ; Simulation & Gaming Volume 40 ; 40 >
+        au < manifest ; 2010 ; Simulation & Gaming Volume 41 ; 41 >
+        au < manifest ; 2011 ; Simulation & Gaming Volume 42 ; 42 >
 
       }
 
@@ -29682,6 +29829,57 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sgr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1970 ; Small Group Research Volume 1 ; 1 >
+        au < manifest ; 1971 ; Small Group Research Volume 2 ; 2 >
+        au < manifest ; 1972 ; Small Group Research Volume 3 ; 3 >
+        au < manifest ; 1973 ; Small Group Research Volume 4 ; 4 >
+        au < manifest ; 1974 ; Small Group Research Volume 5 ; 5 >
+        au < manifest ; 1975 ; Small Group Research Volume 6 ; 6 >
+        au < manifest ; 1976 ; Small Group Research Volume 7 ; 7 >
+        au < manifest ; 1977 ; Small Group Research Volume 8 ; 8 >
+        au < manifest ; 1978 ; Small Group Research Volume 9 ; 9 >
+        au < manifest ; 1979 ; Small Group Research Volume 10 ; 10 >
+        au < manifest ; 1980 ; Small Group Research Volume 11 ; 11 >
+        au < manifest ; 1981 ; Small Group Research Volume 12 ; 12 >
+        au < manifest ; 1982 ; Small Group Research Volume 13 ; 13 >
+        au < manifest ; 1983 ; Small Group Research Volume 14 ; 14 >
+        au < manifest ; 1984 ; Small Group Research Volume 15 ; 15 >
+        au < manifest ; 1985 ; Small Group Research Volume 16 ; 16 >
+        au < manifest ; 1986 ; Small Group Research Volume 17 ; 17 >
+        au < manifest ; 1987 ; Small Group Research Volume 18 ; 18 >
+        au < manifest ; 1988 ; Small Group Research Volume 19 ; 19 >
+        au < manifest ; 1989 ; Small Group Research Volume 20 ; 20 >
+        au < manifest ; 1990 ; Small Group Research Volume 21 ; 21 >
+        au < manifest ; 1991 ; Small Group Research Volume 22 ; 22 >
+        au < manifest ; 1992 ; Small Group Research Volume 23 ; 23 >
+        au < manifest ; 1993 ; Small Group Research Volume 24 ; 24 >
+        au < manifest ; 1994 ; Small Group Research Volume 25 ; 25 >
+        au < manifest ; 1995 ; Small Group Research Volume 26 ; 26 >
+        au < manifest ; 1996 ; Small Group Research Volume 27 ; 27 >
+        au < manifest ; 1997 ; Small Group Research Volume 28 ; 28 >
+        au < manifest ; 1998 ; Small Group Research Volume 29 ; 29 >
+        au < manifest ; 1999 ; Small Group Research Volume 30 ; 30 >
+        au < manifest ; 2000 ; Small Group Research Volume 31 ; 31 >
+        au < manifest ; 2001 ; Small Group Research Volume 32 ; 32 >
+        au < manifest ; 2002 ; Small Group Research Volume 33 ; 33 >
+        au < manifest ; 2003 ; Small Group Research Volume 34 ; 34 >
+        au < manifest ; 2004 ; Small Group Research Volume 35 ; 35 >
+        au < manifest ; 2005 ; Small Group Research Volume 36 ; 36 >
+        au < manifest ; 2006 ; Small Group Research Volume 37 ; 37 >
+        au < manifest ; 2007 ; Small Group Research Volume 38 ; 38 >
+        au < manifest ; 2008 ; Small Group Research Volume 39 ; 39 >
+        au < manifest ; 2009 ; Small Group Research Volume 40 ; 40 >
+        au < manifest ; 2010 ; Small Group Research Volume 41 ; 41 >
+        au < manifest ; 2011 ; Small Group Research Volume 42 ; 42 >
+
+      }
+
     }
 
     {
@@ -29705,6 +29903,35 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Social & Legal Studies Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Social & Legal Studies Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Social & Legal Studies Volume 19 ; 19 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sls.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Social & Legal Studies Volume 1 ; 1 >
+        au < manifest ; 1993 ; Social & Legal Studies Volume 2 ; 2 >
+        au < manifest ; 1994 ; Social & Legal Studies Volume 3 ; 3 >
+        au < manifest ; 1995 ; Social & Legal Studies Volume 4 ; 4 >
+        au < manifest ; 1996 ; Social & Legal Studies Volume 5 ; 5 >
+        au < manifest ; 1997 ; Social & Legal Studies Volume 6 ; 6 >
+        au < manifest ; 1998 ; Social & Legal Studies Volume 7 ; 7 >
+        au < manifest ; 1999 ; Social & Legal Studies Volume 8 ; 8 >
+        au < manifest ; 2000 ; Social & Legal Studies Volume 9 ; 9 >
+        au < manifest ; 2001 ; Social & Legal Studies Volume 10 ; 10 >
+        au < manifest ; 2002 ; Social & Legal Studies Volume 11 ; 11 >
+        au < manifest ; 2003 ; Social & Legal Studies Volume 12 ; 12 >
+        au < manifest ; 2004 ; Social & Legal Studies Volume 13 ; 13 >
+        au < manifest ; 2005 ; Social & Legal Studies Volume 14 ; 14 >
+        au < manifest ; 2006 ; Social & Legal Studies Volume 15 ; 15 >
+        au < manifest ; 2007 ; Social & Legal Studies Volume 16 ; 16 >
+        au < manifest ; 2008 ; Social & Legal Studies Volume 17 ; 17 >
+        au < manifest ; 2009 ; Social & Legal Studies Volume 18 ; 18 >
+        au < manifest ; 2010 ; Social & Legal Studies Volume 19 ; 19 >
+        au < manifest ; 2011 ; Social & Legal Studies Volume 20 ; 20 >
 
       }
 
@@ -29734,6 +29961,73 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://scp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1953 ; Social Compass Volume 1 ; 1 >
+        au < manifest ; 1954 ; Social Compass Volume 2 ; 2 >
+        au < manifest ; 1955 ; Social Compass Volume 3 ; 3 >
+        au < manifest ; 1956 ; Social Compass Volume 4 ; 4 >
+        au < manifest ; 1957 ; Social Compass Volume 5 ; 5 >
+        au < manifest ; 1958 ; Social Compass Volume 6 ; 6 >
+        au < manifest ; 1960 ; Social Compass Volume 7 ; 7 >
+        au < manifest ; 1961 ; Social Compass Volume 8 ; 8 >
+        au < manifest ; 1962 ; Social Compass Volume 9 ; 9 >
+        au < manifest ; 1963 ; Social Compass Volume 10 ; 10 >
+        au < manifest ; 1964 ; Social Compass Volume 11 ; 11 >
+        au < manifest ; 1965 ; Social Compass Volume 12 ; 12 >
+        au < manifest ; 1966 ; Social Compass Volume 13 ; 13 >
+        au < manifest ; 1967 ; Social Compass Volume 14 ; 14 >
+        au < manifest ; 1968 ; Social Compass Volume 15 ; 15 >
+        au < manifest ; 1969 ; Social Compass Volume 16 ; 16 >
+        au < manifest ; 1970 ; Social Compass Volume 17 ; 17 >
+        au < manifest ; 1971 ; Social Compass Volume 18 ; 18 >
+        au < manifest ; 1972 ; Social Compass Volume 19 ; 19 >
+        au < manifest ; 1973 ; Social Compass Volume 20 ; 20 >
+        au < manifest ; 1974 ; Social Compass Volume 21 ; 21 >
+        au < manifest ; 1975 ; Social Compass Volume 22 ; 22 >
+        au < manifest ; 1976 ; Social Compass Volume 23 ; 23 >
+        au < manifest ; 1977 ; Social Compass Volume 24 ; 24 >
+        au < manifest ; 1978 ; Social Compass Volume 25 ; 25 >
+        au < manifest ; 1979 ; Social Compass Volume 26 ; 26 >
+        au < manifest ; 1980 ; Social Compass Volume 27 ; 27 >
+        au < manifest ; 1981 ; Social Compass Volume 28 ; 28 >
+        au < manifest ; 1982 ; Social Compass Volume 29 ; 29 >
+        au < manifest ; 1983 ; Social Compass Volume 30 ; 30 >
+        au < manifest ; 1984 ; Social Compass Volume 31 ; 31 >
+        au < manifest ; 1985 ; Social Compass Volume 32 ; 32 >
+        au < manifest ; 1986 ; Social Compass Volume 33 ; 33 >
+        au < manifest ; 1987 ; Social Compass Volume 34 ; 34 >
+        au < manifest ; 1988 ; Social Compass Volume 35 ; 35 >
+        au < manifest ; 1989 ; Social Compass Volume 36 ; 36 >
+        au < manifest ; 1990 ; Social Compass Volume 37 ; 37 >
+        au < manifest ; 1991 ; Social Compass Volume 38 ; 38 >
+        au < manifest ; 1992 ; Social Compass Volume 39 ; 39 >
+        au < manifest ; 1993 ; Social Compass Volume 40 ; 40 >
+        au < manifest ; 1994 ; Social Compass Volume 41 ; 41 >
+        au < manifest ; 1995 ; Social Compass Volume 42 ; 42 >
+        au < manifest ; 1996 ; Social Compass Volume 43 ; 43 >
+        au < manifest ; 1997 ; Social Compass Volume 44 ; 44 >
+        au < manifest ; 1998 ; Social Compass Volume 45 ; 45 >
+        au < manifest ; 1999 ; Social Compass Volume 46 ; 46 >
+        au < manifest ; 2000 ; Social Compass Volume 47 ; 47 >
+        au < manifest ; 2001 ; Social Compass Volume 48 ; 48 >
+        au < manifest ; 2002 ; Social Compass Volume 49 ; 49 >
+        au < manifest ; 2003 ; Social Compass Volume 50 ; 50 >
+        au < manifest ; 2004 ; Social Compass Volume 51 ; 51 >
+        au < manifest ; 2005 ; Social Compass Volume 52 ; 52 >
+        au < manifest ; 2006 ; Social Compass Volume 53 ; 53 >
+        au < manifest ; 2007 ; Social Compass Volume 54 ; 54 >
+        au < manifest ; 2008 ; Social Compass Volume 55 ; 55 >
+        au < manifest ; 2009 ; Social Compass Volume 56 ; 56 >
+        au < manifest ; 2010 ; Social Compass Volume 57 ; 57 >
+        au < manifest ; 2011 ; Social Compass Volume 58 ; 58 >
+
+      }
+
     }
 
     {
@@ -29757,6 +30051,44 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Social Science Computer Review Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Social Science Computer Review Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Social Science Computer Review Volume 28 ; 28 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ssc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1983 ; Social Science Computer Review Volume 1 ; 1 >
+        au < manifest ; 1984 ; Social Science Computer Review Volume 2 ; 2 >
+        au < manifest ; 1985 ; Social Science Computer Review Volume 3 ; 3 >
+        au < manifest ; 1986 ; Social Science Computer Review Volume 4 ; 4 >
+        au < manifest ; 1987 ; Social Science Computer Review Volume 5 ; 5 >
+        au < manifest ; 1988 ; Social Science Computer Review Volume 6 ; 6 >
+        au < manifest ; 1989 ; Social Science Computer Review Volume 7 ; 7 >
+        au < manifest ; 1990 ; Social Science Computer Review Volume 8 ; 8 >
+        au < manifest ; 1991 ; Social Science Computer Review Volume 9 ; 9 >
+        au < manifest ; 1992 ; Social Science Computer Review Volume 10 ; 10 >
+        au < manifest ; 1993 ; Social Science Computer Review Volume 11 ; 11 >
+        au < manifest ; 1994 ; Social Science Computer Review Volume 12 ; 12 >
+        au < manifest ; 1995 ; Social Science Computer Review Volume 13 ; 13 >
+        au < manifest ; 1996 ; Social Science Computer Review Volume 14 ; 14 >
+        au < manifest ; 1997 ; Social Science Computer Review Volume 15 ; 15 >
+        au < manifest ; 1998 ; Social Science Computer Review Volume 16 ; 16 >
+        au < manifest ; 1999 ; Social Science Computer Review Volume 17 ; 17 >
+        au < manifest ; 2000 ; Social Science Computer Review Volume 18 ; 18 >
+        au < manifest ; 2001 ; Social Science Computer Review Volume 19 ; 19 >
+        au < manifest ; 2002 ; Social Science Computer Review Volume 20 ; 20 >
+        au < manifest ; 2003 ; Social Science Computer Review Volume 21 ; 21 >
+        au < manifest ; 2004 ; Social Science Computer Review Volume 22 ; 22 >
+        au < manifest ; 2005 ; Social Science Computer Review Volume 23 ; 23 >
+        au < manifest ; 2006 ; Social Science Computer Review Volume 24 ; 24 >
+        au < manifest ; 2007 ; Social Science Computer Review Volume 25 ; 25 >
+        au < manifest ; 2008 ; Social Science Computer Review Volume 26 ; 26 >
+        au < manifest ; 2009 ; Social Science Computer Review Volume 27 ; 27 >
+        au < manifest ; 2010 ; Social Science Computer Review Volume 28 ; 28 >
+        au < manifest ; 2011 ; Social Science Computer Review Volume 29 ; 29 >
 
       }
 
@@ -29786,6 +30118,65 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ssi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1962 ; Social Science Information Volume 1 ; 1 >
+        au < manifest ; 1963 ; Social Science Information Volume 2 ; 2 >
+        au < manifest ; 1964 ; Social Science Information Volume 3 ; 3 >
+        au < manifest ; 1965 ; Social Science Information Volume 4 ; 4 >
+        au < manifest ; 1966 ; Social Science Information Volume 5 ; 5 >
+        au < manifest ; 1967 ; Social Science Information Volume 6 ; 6 >
+        au < manifest ; 1968 ; Social Science Information Volume 7 ; 7 >
+        au < manifest ; 1969 ; Social Science Information Volume 8 ; 8 >
+        au < manifest ; 1970 ; Social Science Information Volume 9 ; 9 >
+        au < manifest ; 1971 ; Social Science Information Volume 10 ; 10 >
+        au < manifest ; 1972 ; Social Science Information Volume 11 ; 11 >
+        au < manifest ; 1973 ; Social Science Information Volume 12 ; 12 >
+        au < manifest ; 1974 ; Social Science Information Volume 13 ; 13 >
+        au < manifest ; 1975 ; Social Science Information Volume 14 ; 14 >
+        au < manifest ; 1976 ; Social Science Information Volume 15 ; 15 >
+        au < manifest ; 1977 ; Social Science Information Volume 16 ; 16 >
+        au < manifest ; 1978 ; Social Science Information Volume 17 ; 17 >
+        au < manifest ; 1979 ; Social Science Information Volume 18 ; 18 >
+        au < manifest ; 1980 ; Social Science Information Volume 19 ; 19 >
+        au < manifest ; 1981 ; Social Science Information Volume 20 ; 20 >
+        au < manifest ; 1982 ; Social Science Information Volume 21 ; 21 >
+        au < manifest ; 1983 ; Social Science Information Volume 22 ; 22 >
+        au < manifest ; 1984 ; Social Science Information Volume 23 ; 23 >
+        au < manifest ; 1985 ; Social Science Information Volume 24 ; 24 >
+        au < manifest ; 1986 ; Social Science Information Volume 25 ; 25 >
+        au < manifest ; 1987 ; Social Science Information Volume 26 ; 26 >
+        au < manifest ; 1988 ; Social Science Information Volume 27 ; 27 >
+        au < manifest ; 1989 ; Social Science Information Volume 28 ; 28 >
+        au < manifest ; 1990 ; Social Science Information Volume 29 ; 29 >
+        au < manifest ; 1991 ; Social Science Information Volume 30 ; 30 >
+        au < manifest ; 1992 ; Social Science Information Volume 31 ; 31 >
+        au < manifest ; 1993 ; Social Science Information Volume 32 ; 32 >
+        au < manifest ; 1994 ; Social Science Information Volume 33 ; 33 >
+        au < manifest ; 1995 ; Social Science Information Volume 34 ; 34 >
+        au < manifest ; 1996 ; Social Science Information Volume 35 ; 35 >
+        au < manifest ; 1997 ; Social Science Information Volume 36 ; 36 >
+        au < manifest ; 1998 ; Social Science Information Volume 37 ; 37 >
+        au < manifest ; 1999 ; Social Science Information Volume 38 ; 38 >
+        au < manifest ; 2000 ; Social Science Information Volume 39 ; 39 >
+        au < manifest ; 2001 ; Social Science Information Volume 40 ; 40 >
+        au < manifest ; 2002 ; Social Science Information Volume 41 ; 41 >
+        au < manifest ; 2003 ; Social Science Information Volume 42 ; 42 >
+        au < manifest ; 2004 ; Social Science Information Volume 43 ; 43 >
+        au < manifest ; 2005 ; Social Science Information Volume 44 ; 44 >
+        au < manifest ; 2006 ; Social Science Information Volume 45 ; 45 >
+        au < manifest ; 2007 ; Social Science Information Volume 46 ; 46 >
+        au < manifest ; 2008 ; Social Science Information Volume 47 ; 47 >
+        au < manifest ; 2009 ; Social Science Information Volume 48 ; 48 >
+        au < manifest ; 2010 ; Social Science Information Volume 49 ; 49 >
+        au < manifest ; 2011 ; Social Science Information Volume 50 ; 50 >
+
+      }
+
     }
 
     {
@@ -29812,6 +30203,56 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sss.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1971 ; Social Studies of Science Volume 1 ; 1 >
+        au < manifest ; 1972 ; Social Studies of Science Volume 2 ; 2 >
+        au < manifest ; 1973 ; Social Studies of Science Volume 3 ; 3 >
+        au < manifest ; 1974 ; Social Studies of Science Volume 4 ; 4 >
+        au < manifest ; 1975 ; Social Studies of Science Volume 5 ; 5 >
+        au < manifest ; 1976 ; Social Studies of Science Volume 6 ; 6 >
+        au < manifest ; 1977 ; Social Studies of Science Volume 7 ; 7 >
+        au < manifest ; 1978 ; Social Studies of Science Volume 8 ; 8 >
+        au < manifest ; 1979 ; Social Studies of Science Volume 9 ; 9 >
+        au < manifest ; 1980 ; Social Studies of Science Volume 10 ; 10 >
+        au < manifest ; 1981 ; Social Studies of Science Volume 11 ; 11 >
+        au < manifest ; 1982 ; Social Studies of Science Volume 12 ; 12 >
+        au < manifest ; 1983 ; Social Studies of Science Volume 13 ; 13 >
+        au < manifest ; 1984 ; Social Studies of Science Volume 14 ; 14 >
+        au < manifest ; 1985 ; Social Studies of Science Volume 15 ; 15 >
+        au < manifest ; 1986 ; Social Studies of Science Volume 16 ; 16 >
+        au < manifest ; 1987 ; Social Studies of Science Volume 17 ; 17 >
+        au < manifest ; 1988 ; Social Studies of Science Volume 18 ; 18 >
+        au < manifest ; 1989 ; Social Studies of Science Volume 19 ; 19 >
+        au < manifest ; 1990 ; Social Studies of Science Volume 20 ; 20 >
+        au < manifest ; 1991 ; Social Studies of Science Volume 21 ; 21 >
+        au < manifest ; 1992 ; Social Studies of Science Volume 22 ; 22 >
+        au < manifest ; 1993 ; Social Studies of Science Volume 23 ; 23 >
+        au < manifest ; 1994 ; Social Studies of Science Volume 24 ; 24 >
+        au < manifest ; 1995 ; Social Studies of Science Volume 25 ; 25 >
+        au < manifest ; 1996 ; Social Studies of Science Volume 26 ; 26 >
+        au < manifest ; 1997 ; Social Studies of Science Volume 27 ; 27 >
+        au < manifest ; 1998 ; Social Studies of Science Volume 28 ; 28 >
+        au < manifest ; 1999 ; Social Studies of Science Volume 29 ; 29 >
+        au < manifest ; 2000 ; Social Studies of Science Volume 30 ; 30 >
+        au < manifest ; 2001 ; Social Studies of Science Volume 31 ; 31 >
+        au < manifest ; 2002 ; Social Studies of Science Volume 32 ; 32 >
+        au < manifest ; 2003 ; Social Studies of Science Volume 33 ; 33 >
+        au < manifest ; 2004 ; Social Studies of Science Volume 34 ; 34 >
+        au < manifest ; 2005 ; Social Studies of Science Volume 35 ; 35 >
+        au < manifest ; 2006 ; Social Studies of Science Volume 36 ; 36 >
+        au < manifest ; 2007 ; Social Studies of Science Volume 37 ; 37 >
+        au < manifest ; 2008 ; Social Studies of Science Volume 38 ; 38 >
+        au < manifest ; 2009 ; Social Studies of Science Volume 39 ; 39 >
+        au < manifest ; 2010 ; Social Studies of Science Volume 40 ; 40 >
+        au < manifest ; 2011 ; Social Studies of Science Volume 41 ; 41 >
+
+      }
+
     }
 
     {
@@ -29824,7 +30265,10 @@ comment[mpj] = now published by Brill
       {
 
         pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://smh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Society and Mental Health Volume 1 ; 1 >
 
       }
 
@@ -29854,6 +30298,55 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://smr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972 ; Sociological Methods & Research Volume 1 ; 1 >
+        au < manifest ; 1973 ; Sociological Methods & Research Volume 2 ; 2 >
+        au < manifest ; 1974 ; Sociological Methods & Research Volume 3 ; 3 >
+        au < manifest ; 1975 ; Sociological Methods & Research Volume 4 ; 4 >
+        au < manifest ; 1976 ; Sociological Methods & Research Volume 5 ; 5 >
+        au < manifest ; 1977 ; Sociological Methods & Research Volume 6 ; 6 >
+        au < manifest ; 1978 ; Sociological Methods & Research Volume 7 ; 7 >
+        au < manifest ; 1979 ; Sociological Methods & Research Volume 8 ; 8 >
+        au < manifest ; 1980 ; Sociological Methods & Research Volume 9 ; 9 >
+        au < manifest ; 1982 ; Sociological Methods & Research Volume 10 ; 10 >
+        au < manifest ; 1982 ; Sociological Methods & Research Volume 11 ; 11 >
+        au < manifest ; 1983 ; Sociological Methods & Research Volume 12 ; 12 >
+        au < manifest ; 1984 ; Sociological Methods & Research Volume 13 ; 13 >
+        au < manifest ; 1985 ; Sociological Methods & Research Volume 14 ; 14 >
+        au < manifest ; 1986 ; Sociological Methods & Research Volume 15 ; 15 >
+        au < manifest ; 1987 ; Sociological Methods & Research Volume 16 ; 16 >
+        au < manifest ; 1988 ; Sociological Methods & Research Volume 17 ; 17 >
+        au < manifest ; 1989 ; Sociological Methods & Research Volume 18 ; 18 >
+        au < manifest ; 1990 ; Sociological Methods & Research Volume 19 ; 19 >
+        au < manifest ; 1991 ; Sociological Methods & Research Volume 20 ; 20 >
+        au < manifest ; 1992 ; Sociological Methods & Research Volume 21 ; 21 >
+        au < manifest ; 1993 ; Sociological Methods & Research Volume 22 ; 22 >
+        au < manifest ; 1994 ; Sociological Methods & Research Volume 23 ; 23 >
+        au < manifest ; 1995 ; Sociological Methods & Research Volume 24 ; 24 >
+        au < manifest ; 1996 ; Sociological Methods & Research Volume 25 ; 25 >
+        au < manifest ; 1997 ; Sociological Methods & Research Volume 26 ; 26 >
+        au < manifest ; 1998 ; Sociological Methods & Research Volume 27 ; 27 >
+        au < manifest ; 1999 ; Sociological Methods & Research Volume 28 ; 28 >
+        au < manifest ; 2000 ; Sociological Methods & Research Volume 29 ; 29 >
+        au < manifest ; 2001 ; Sociological Methods & Research Volume 30 ; 30 >
+        au < manifest ; 2002 ; Sociological Methods & Research Volume 31 ; 31 >
+        au < manifest ; 2003 ; Sociological Methods & Research Volume 32 ; 32 >
+        au < manifest ; 2004 ; Sociological Methods & Research Volume 33 ; 33 >
+        au < manifest ; 2005 ; Sociological Methods & Research Volume 34 ; 34 >
+        au < manifest ; 2006 ; Sociological Methods & Research Volume 35 ; 35 >
+        au < manifest ; 2007 ; Sociological Methods & Research Volume 36 ; 36 >
+        au < manifest ; 2008 ; Sociological Methods & Research Volume 37 ; 37 >
+        au < manifest ; 2009 ; Sociological Methods & Research Volume 38 ; 38 >
+        au < manifest ; 2010 ; Sociological Methods & Research Volume 39 ; 39 >
+        au < manifest ; 2011 ; Sociological Methods & Research Volume 40 ; 40 >
+
+      }
+
     }
 
     {
@@ -29880,6 +30373,60 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://soc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1967 ; Sociology Volume 1 ; 1 >
+        au < manifest ; 1968 ; Sociology Volume 2 ; 2 >
+        au < manifest ; 1969 ; Sociology Volume 3 ; 3 >
+        au < manifest ; 1970 ; Sociology Volume 4 ; 4 >
+        au < manifest ; 1971 ; Sociology Volume 5 ; 5 >
+        au < manifest ; 1972 ; Sociology Volume 6 ; 6 >
+        au < manifest ; 1973 ; Sociology Volume 7 ; 7 >
+        au < manifest ; 1974 ; Sociology Volume 8 ; 8 >
+        au < manifest ; 1975 ; Sociology Volume 9 ; 9 >
+        au < manifest ; 1976 ; Sociology Volume 10 ; 10 >
+        au < manifest ; 1977 ; Sociology Volume 11 ; 11 >
+        au < manifest ; 1978 ; Sociology Volume 12 ; 12 >
+        au < manifest ; 1979 ; Sociology Volume 13 ; 13 >
+        au < manifest ; 1980 ; Sociology Volume 14 ; 14 >
+        au < manifest ; 1981 ; Sociology Volume 15 ; 15 >
+        au < manifest ; 1982 ; Sociology Volume 16 ; 16 >
+        au < manifest ; 1983 ; Sociology Volume 17 ; 17 >
+        au < manifest ; 1984 ; Sociology Volume 18 ; 18 >
+        au < manifest ; 1985 ; Sociology Volume 19 ; 19 >
+        au < manifest ; 1986 ; Sociology Volume 20 ; 20 >
+        au < manifest ; 1987 ; Sociology Volume 21 ; 21 >
+        au < manifest ; 1988 ; Sociology Volume 22 ; 22 >
+        au < manifest ; 1989 ; Sociology Volume 23 ; 23 >
+        au < manifest ; 1990 ; Sociology Volume 24 ; 24 >
+        au < manifest ; 1991 ; Sociology Volume 25 ; 25 >
+        au < manifest ; 1992 ; Sociology Volume 26 ; 26 >
+        au < manifest ; 1993 ; Sociology Volume 27 ; 27 >
+        au < manifest ; 1994 ; Sociology Volume 28 ; 28 >
+        au < manifest ; 1995 ; Sociology Volume 29 ; 29 >
+        au < manifest ; 1996 ; Sociology Volume 30 ; 30 >
+        au < manifest ; 1997 ; Sociology Volume 31 ; 31 >
+        au < manifest ; 1998 ; Sociology Volume 32 ; 32 >
+        au < manifest ; 1999 ; Sociology Volume 33 ; 33 >
+        au < manifest ; 2000 ; Sociology Volume 34 ; 34 >
+        au < manifest ; 2001 ; Sociology Volume 35 ; 35 >
+        au < manifest ; 2002 ; Sociology Volume 36 ; 36 >
+        au < manifest ; 2003 ; Sociology Volume 37 ; 37 >
+        au < manifest ; 2004 ; Sociology Volume 38 ; 38 >
+        au < manifest ; 2005 ; Sociology Volume 39 ; 39 >
+        au < manifest ; 2006 ; Sociology Volume 40 ; 40 >
+        au < manifest ; 2007 ; Sociology Volume 41 ; 41 >
+        au < manifest ; 2008 ; Sociology Volume 42 ; 42 >
+        au < manifest ; 2009 ; Sociology Volume 43 ; 43 >
+        au < manifest ; 2010 ; Sociology Volume 44 ; 44 >
+        au < manifest ; 2011 ; Sociology Volume 45 ; 45 >
+
+      }
+
     }
 
     {
@@ -29901,6 +30448,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 0 ; South Asia Economic Journal Volume 8 ; 8 >
         au < HighWirePressPlugin ; down ; 2000 ; South Asia Economic Journal Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; South Asia Economic Journal Volume 10 ; 10 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sae.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; South Asia Economic Journal Volume 1 ; 1 >
+        au < manifest ; 2001 ; South Asia Economic Journal Volume 2 ; 2 >
+        au < manifest ; 2002 ; South Asia Economic Journal Volume 3 ; 3 >
+        au < manifest ; 2003 ; South Asia Economic Journal Volume 4 ; 4 >
+        au < manifest ; 2004 ; South Asia Economic Journal Volume 5 ; 5 >
+        au < manifest ; 2005 ; South Asia Economic Journal Volume 6 ; 6 >
+        au < manifest ; 2006 ; South Asia Economic Journal Volume 7 ; 7 >
+        au < manifest ; 2007 ; South Asia Economic Journal Volume 8 ; 8 >
+        au < manifest ; 2008 ; South Asia Economic Journal Volume 9 ; 9 >
+        au < manifest ; 2009 ; South Asia Economic Journal Volume 10 ; 10 >
+        au < manifest ; 2010 ; South Asia Economic Journal Volume 11 ; 11 >
+        au < manifest ; 2011 ; South Asia Economic Journal Volume 12 ; 12 >
 
       }
 
@@ -29930,6 +30498,46 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sar.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1981 ; South Asia Research Volume 1 ; 1 >
+        au < manifest ; 1982 ; South Asia Research Volume 2 ; 2 >
+        au < manifest ; 1983 ; South Asia Research Volume 3 ; 3 >
+        au < manifest ; 1984 ; South Asia Research Volume 4 ; 4 >
+        au < manifest ; 1985 ; South Asia Research Volume 5 ; 5 >
+        au < manifest ; 1986 ; South Asia Research Volume 6 ; 6 >
+        au < manifest ; 1987 ; South Asia Research Volume 7 ; 7 >
+        au < manifest ; 1988 ; South Asia Research Volume 8 ; 8 >
+        au < manifest ; 1989 ; South Asia Research Volume 9 ; 9 >
+        au < manifest ; 1990 ; South Asia Research Volume 10 ; 10 >
+        au < manifest ; 1991 ; South Asia Research Volume 11 ; 11 >
+        au < manifest ; 1992 ; South Asia Research Volume 12 ; 12 >
+        au < manifest ; 1993 ; South Asia Research Volume 13 ; 13 >
+        au < manifest ; 1994 ; South Asia Research Volume 14 ; 14 >
+        au < manifest ; 1995 ; South Asia Research Volume 15 ; 15 >
+        au < manifest ; 1996 ; South Asia Research Volume 16 ; 16 >
+        au < manifest ; 1997 ; South Asia Research Volume 17 ; 17 >
+        au < manifest ; 1998 ; South Asia Research Volume 18 ; 18 >
+        au < manifest ; 1999 ; South Asia Research Volume 19 ; 19 >
+        au < manifest ; 2000 ; South Asia Research Volume 20 ; 20 >
+        au < manifest ; 2001 ; South Asia Research Volume 21 ; 21 >
+        au < manifest ; 2002 ; South Asia Research Volume 22 ; 22 >
+        au < manifest ; 2003 ; South Asia Research Volume 23 ; 23 >
+        au < manifest ; 2004 ; South Asia Research Volume 24 ; 24 >
+        au < manifest ; 2005 ; South Asia Research Volume 25 ; 25 >
+        au < manifest ; 2006 ; South Asia Research Volume 26 ; 26 >
+        au < manifest ; 2007 ; South Asia Research Volume 27 ; 27 >
+        au < manifest ; 2008 ; South Asia Research Volume 28 ; 28 >
+        au < manifest ; 2009 ; South Asia Research Volume 29 ; 29 >
+        au < manifest ; 2010 ; South Asia Research Volume 30 ; 30 >
+        au < manifest ; 2011 ; South Asia Research Volume 31 ; 31 >
+
+      }
+
     }
 
     {
@@ -29952,6 +30560,32 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; South Asian Survey Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; South Asian Survey Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; South Asian Survey Volume 17 ; 17 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; South Asian Survey Volume 1 ; 1 >
+        au < manifest ; 1995 ; South Asian Survey Volume 2 ; 2 >
+        au < manifest ; 1996 ; South Asian Survey Volume 3 ; 3 >
+        au < manifest ; 1997 ; South Asian Survey Volume 4 ; 4 >
+        au < manifest ; 1998 ; South Asian Survey Volume 5 ; 5 >
+        au < manifest ; 1999 ; South Asian Survey Volume 6 ; 6 >
+        au < manifest ; 2000 ; South Asian Survey Volume 7 ; 7 >
+        au < manifest ; 2001 ; South Asian Survey Volume 8 ; 8 >
+        au < manifest ; 2002 ; South Asian Survey Volume 9 ; 9 >
+        au < manifest ; 2003 ; South Asian Survey Volume 10 ; 10 >
+        au < manifest ; 2004 ; South Asian Survey Volume 11 ; 11 >
+        au < manifest ; 2005 ; South Asian Survey Volume 12 ; 12 >
+        au < manifest ; 2006 ; South Asian Survey Volume 13 ; 13 >
+        au < manifest ; 2007 ; South Asian Survey Volume 14 ; 14 >
+        au < manifest ; 2008 ; South Asian Survey Volume 15 ; 15 >
+        au < manifest ; 2009 ; South Asian Survey Volume 16 ; 16 >
+        au < manifest ; 2010 ; South Asian Survey Volume 17 ; 17 >
 
       }
 
@@ -29981,6 +30615,29 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sac.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Space and Culture Volume 1 ; 1 >
+        au < manifest ; 1998 ; Space and Culture Volume 2 ; 2 >
+        au < manifest ; 2000 ; Space and Culture Volume 3 ; 3 >
+        au < exists ; 2000 ; NoManifestPage ; 4 >
+        au < manifest ; 2002 ; Space and Culture Volume 5 ; 5 >
+        au < manifest ; 2003 ; Space and Culture Volume 6 ; 6 >
+        au < manifest ; 2004 ; Space and Culture Volume 7 ; 7 >
+        au < manifest ; 2005 ; Space and Culture Volume 8 ; 8 >
+        au < manifest ; 2006 ; Space and Culture Volume 9 ; 9 >
+        au < manifest ; 2007 ; Space and Culture Volume 10 ; 10 >
+        au < manifest ; 2008 ; Space and Culture Volume 11 ; 11 >
+        au < manifest ; 2009 ; Space and Culture Volume 12 ; 12 >
+        au < manifest ; 2010 ; Space and Culture Volume 13 ; 13 >
+        au < manifest ; 2011 ; Space and Culture Volume 14 ; 14 >
+
+      }
+
     }
 
     {
@@ -29990,6 +30647,26 @@ comment[mpj] = now published by Brill
         issn = 1532-4400 ;
         eissn = 1946-1607
       >
+      
+      {
+      
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://http://spa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        au < manifest ; 2001 ; State Politics and Policy Volume 1 ; 1 >
+        au < manifest ; 2002 ; State Politics and Policy Volume 2 ; 2 >
+        au < manifest ; 2003 ; State Politics and Policy Volume 3 ; 3 >
+        au < manifest ; 2004 ; State Politics and Policy Volume 4 ; 4 >
+        au < manifest ; 2005 ; State Politics and Policy Volume 5 ; 5 >
+        au < manifest ; 2006 ; State Politics and Policy Volume 6 ; 6 >
+        au < manifest ; 2007 ; State Politics and Policy Volume 7 ; 7 >
+        au < manifest ; 2008 ; State Politics and Policy Volume 8 ; 8 >
+        au < manifest ; 2009 ; State Politics and Policy Volume 9 ; 9 >
+        au < manifest ; 2010 ; State Politics and Policy Volume 10 ; 10 >
+        au < manifest ; 2011 ; State Politics and Policy Volume 11 ; 11 >
+
+      }
       
     }
 
@@ -30013,6 +30690,35 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Statistical Methods in Medical Research Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Statistical Methods in Medical Research Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Statistical Methods in Medical Research Volume 19 ; 19 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://smm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Statistical Methods in Medical Research Volume 1 ; 1 >
+        au < manifest ; 1993 ; Statistical Methods in Medical Research Volume 2 ; 2 >
+        au < manifest ; 1994 ; Statistical Methods in Medical Research Volume 3 ; 3 >
+        au < manifest ; 1995 ; Statistical Methods in Medical Research Volume 4 ; 4 >
+        au < manifest ; 1996 ; Statistical Methods in Medical Research Volume 5 ; 5 >
+        au < manifest ; 1997 ; Statistical Methods in Medical Research Volume 6 ; 6 >
+        au < manifest ; 1998 ; Statistical Methods in Medical Research Volume 7 ; 7 >
+        au < manifest ; 1999 ; Statistical Methods in Medical Research Volume 8 ; 8 >
+        au < manifest ; 2000 ; Statistical Methods in Medical Research Volume 9 ; 9 >
+        au < manifest ; 2001 ; Statistical Methods in Medical Research Volume 10 ; 10 >
+        au < manifest ; 2002 ; Statistical Methods in Medical Research Volume 11 ; 11 >
+        au < manifest ; 2003 ; Statistical Methods in Medical Research Volume 12 ; 12 >
+        au < manifest ; 2004 ; Statistical Methods in Medical Research Volume 13 ; 13 >
+        au < manifest ; 2005 ; Statistical Methods in Medical Research Volume 14 ; 14 >
+        au < manifest ; 2006 ; Statistical Methods in Medical Research Volume 15 ; 15 >
+        au < manifest ; 2007 ; Statistical Methods in Medical Research Volume 16 ; 16 >
+        au < manifest ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 >
+        au < manifest ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 >
+        au < manifest ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 >
+        au < manifest ; 2011 ; Statistical Methods in Medical Research Volume 20 ; 20 >
 
       }
 
@@ -30042,6 +30748,24 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://soq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2003 ; Strategic Organization Volume 1 ; 1 >
+        au < manifest ; 2004 ; Strategic Organization Volume 2 ; 2 >
+        au < manifest ; 2005 ; Strategic Organization Volume 3 ; 3 >
+        au < manifest ; 2006 ; Strategic Organization Volume 4 ; 4 >
+        au < manifest ; 2007 ; Strategic Organization Volume 5 ; 5 >
+        au < manifest ; 2008 ; Strategic Organization Volume 6 ; 6 >
+        au < manifest ; 2009 ; Strategic Organization Volume 7 ; 7 >
+        au < manifest ; 2010 ; Strategic Organization Volume 8 ; 8 >
+        au < manifest ; 2011 ; Strategic Organization Volume 9 ; 9 >
+
+      }
+
     }
 
     {
@@ -30065,6 +30789,25 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Structural Health Monitoring Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Structural Health Monitoring Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Structural Health Monitoring Volume 9 ; 9 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://shm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2002 ; Structural Health Monitoring Volume 1 ; 1 >
+        au < manifest ; 2003 ; Structural Health Monitoring Volume 2 ; 2 >
+        au < manifest ; 2004 ; Structural Health Monitoring Volume 3 ; 3 >
+        au < manifest ; 2005 ; Structural Health Monitoring Volume 4 ; 4 >
+        au < manifest ; 2006 ; Structural Health Monitoring Volume 5 ; 5 >
+        au < manifest ; 2007 ; Structural Health Monitoring Volume 6 ; 6 >
+        au < manifest ; 2008 ; Structural Health Monitoring Volume 7 ; 7 >
+        au < manifest ; 2009 ; Structural Health Monitoring Volume 8 ; 8 >
+        au < manifest ; 2010 ; Structural Health Monitoring Volume 9 ; 9 >
+        au < manifest ; 2011 ; Structural Health Monitoring Volume 10 ; 10 >
 
       }
 
@@ -30094,6 +30837,39 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sce.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; Studies in Christian Ethics Volume 1 ; 1 >
+        au < manifest ; 1989 ; Studies in Christian Ethics Volume 2 ; 2 >
+        au < manifest ; 1990 ; Studies in Christian Ethics Volume 3 ; 3 >
+        au < manifest ; 1991 ; Studies in Christian Ethics Volume 4 ; 4 >
+        au < manifest ; 1992 ; Studies in Christian Ethics Volume 5 ; 5 >
+        au < manifest ; 1993 ; Studies in Christian Ethics Volume 6 ; 6 >
+        au < manifest ; 1994 ; Studies in Christian Ethics Volume 7 ; 7 >
+        au < manifest ; 1995 ; Studies in Christian Ethics Volume 8 ; 8 >
+        au < manifest ; 1996 ; Studies in Christian Ethics Volume 9 ; 9 >
+        au < manifest ; 1997 ; Studies in Christian Ethics Volume 10 ; 10 >
+        au < manifest ; 1998 ; Studies in Christian Ethics Volume 11 ; 11 >
+        au < manifest ; 1999 ; Studies in Christian Ethics Volume 12 ; 12 >
+        au < manifest ; 2000 ; Studies in Christian Ethics Volume 13 ; 13 >
+        au < manifest ; 2001 ; Studies in Christian Ethics Volume 14 ; 14 >
+        au < manifest ; 2002 ; Studies in Christian Ethics Volume 15 ; 15 >
+        au < manifest ; 2003 ; Studies in Christian Ethics Volume 16 ; 16 >
+        au < manifest ; 2004 ; Studies in Christian Ethics Volume 17 ; 17 >
+        au < manifest ; 2005 ; Studies in Christian Ethics Volume 18 ; 18 >
+        au < manifest ; 2006 ; Studies in Christian Ethics Volume 19 ; 19 >
+        au < manifest ; 2007 ; Studies in Christian Ethics Volume 20 ; 20 >
+        au < manifest ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 >
+        au < manifest ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
+        au < manifest ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 >
+        au < manifest ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
+
+      }
+
     }
 
     {
@@ -30116,6 +30892,41 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 2000 ; Studies in History Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; 2000 ; Studies in History Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Studies in History Volume 25 ; 25 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sih.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1985 ; Studies in History Volume 1 ; 1 >
+        au < manifest ; 1986 ; Studies in History Volume 2 ; 2 >
+        au < manifest ; 1987 ; Studies in History Volume 3 ; 3 >
+        au < manifest ; 1988 ; Studies in History Volume 4 ; 4 >
+        au < manifest ; 1989 ; Studies in History Volume 5 ; 5 >
+        au < manifest ; 1990 ; Studies in History Volume 6 ; 6 >
+        au < manifest ; 1991 ; Studies in History Volume 7 ; 7 >
+        au < manifest ; 1992 ; Studies in History Volume 8 ; 8 >
+        au < manifest ; 1993 ; Studies in History Volume 9 ; 9 >
+        au < manifest ; 1994 ; Studies in History Volume 10 ; 10 >
+        au < manifest ; 1995 ; Studies in History Volume 11 ; 11 >
+        au < manifest ; 1996 ; Studies in History Volume 12 ; 12 >
+        au < manifest ; 1997 ; Studies in History Volume 13 ; 13 >
+        au < manifest ; 1998 ; Studies in History Volume 14 ; 14 >
+        au < manifest ; 1999 ; Studies in History Volume 15 ; 15 >
+        au < manifest ; 2000 ; Studies in History Volume 16 ; 16 >
+        au < manifest ; 2001 ; Studies in History Volume 17 ; 17 >
+        au < manifest ; 2002 ; Studies in History Volume 18 ; 18 >
+        au < manifest ; 2003 ; Studies in History Volume 19 ; 19 >
+        au < manifest ; 2004 ; Studies in History Volume 20 ; 20 >
+        au < manifest ; 2005 ; Studies in History Volume 21 ; 21 >
+        au < manifest ; 2006 ; Studies in History Volume 22 ; 22 >
+        au < manifest ; 2007 ; Studies in History Volume 23 ; 23 >
+        au < manifest ; 2008 ; Studies in History Volume 24 ; 24 >
+        au < manifest ; 2009 ; Studies in History Volume 25 ; 25 >
+        au < manifest ; 2010 ; Studies in History Volume 26 ; 26 >
 
       }
 
@@ -30145,6 +30956,33 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sri.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994 ; Surgical Innovation Volume 1 ; 1 >
+        au < manifest ; 1995 ; Surgical Innovation Volume 2 ; 2 >
+        au < manifest ; 1996 ; Surgical Innovation Volume 3 ; 3 >
+        au < manifest ; 1997 ; Surgical Innovation Volume 4 ; 4 >
+        au < manifest ; 1998 ; Surgical Innovation Volume 5 ; 5 >
+        au < manifest ; 1999 ; Surgical Innovation Volume 6 ; 6 >
+        au < manifest ; 2000 ; Surgical Innovation Volume 7 ; 7 >
+        au < manifest ; 2001 ; Surgical Innovation Volume 8 ; 8 >
+        au < manifest ; 2002 ; Surgical Innovation Volume 9 ; 9 >
+        au < manifest ; 2003 ; Surgical Innovation Volume 10 ; 10 >
+        au < manifest ; 2004 ; Surgical Innovation Volume 11 ; 11 >
+        au < manifest ; 2005 ; Surgical Innovation Volume 12 ; 12 >
+        au < manifest ; 2006 ; Surgical Innovation Volume 13 ; 13 >
+        au < manifest ; 2007 ; Surgical Innovation Volume 14 ; 14 >
+        au < manifest ; 2008 ; Surgical Innovation Volume 15 ; 15 >
+        au < manifest ; 2009 ; Surgical Innovation Volume 16 ; 16 >
+        au < manifest ; 2010 ; Surgical Innovation Volume 17 ; 17 >
+        au < manifest ; 2011 ; Surgical Innovation Volume 18 ; 18 >
+
+      }
+
     }
 
     {
@@ -30156,6 +30994,16 @@ comment[mpj] = now published by Brill
         issnl = 0098-6283
       >
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://top.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Teaching of Psychology Volume 38 ; 38 >
+        
+      }
+      
     }
     
     {
@@ -30179,6 +31027,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Television & New Media Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Television & New Media Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Television & New Media Volume 11 ; 11 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tvn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Television & New Media Volume 1 ; 1 >
+        au < manifest ; 2001 ; Television & New Media Volume 2 ; 2 >
+        au < manifest ; 2002 ; Television & New Media Volume 3 ; 3 >
+        au < manifest ; 2003 ; Television & New Media Volume 4 ; 4 >
+        au < manifest ; 2004 ; Television & New Media Volume 5 ; 5 >
+        au < manifest ; 2005 ; Television & New Media Volume 6 ; 6 >
+        au < manifest ; 2006 ; Television & New Media Volume 7 ; 7 >
+        au < manifest ; 2007 ; Television & New Media Volume 8 ; 8 >
+        au < manifest ; 2008 ; Television & New Media Volume 9 ; 9 >
+        au < manifest ; 2009 ; Television & New Media Volume 10 ; 10 >
+        au < manifest ; 2010 ; Television & New Media Volume 11 ; 11 >
+        au < manifest ; 2011 ; Television & New Media Volume 12 ; 12 >
 
       }
 
@@ -30208,6 +31077,96 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://trj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1931 ; Textile Research Journal Volume 1 ; 1 >
+        au < manifest ; 1932 ; Textile Research Journal Volume 2 ; 2 >
+        au < manifest ; 1932 ; Textile Research Journal Volume 3 ; 3 >
+        au < manifest ; 1934 ; Textile Research Journal Volume 4 ; 4 >
+        au < manifest ; 1934 ; Textile Research Journal Volume 5 ; 5 >
+        au < manifest ; 1935 ; Textile Research Journal Volume 6 ; 6 >
+        au < manifest ; 1936 ; Textile Research Journal Volume 7 ; 7 >
+        au < manifest ; 1937 ; Textile Research Journal Volume 8 ; 8 >
+        au < manifest ; 1938 ; Textile Research Journal Volume 9 ; 9 >
+        au < manifest ; 1939 ; Textile Research Journal Volume 10 ; 10 >
+        au < manifest ; 1940 ; Textile Research Journal Volume 11 ; 11 >
+        au < manifest ; 1941 ; Textile Research Journal Volume 12 ; 12 >
+        au < manifest ; 1942 ; Textile Research Journal Volume 13 ; 13 >
+        au < manifest ; 1944 ; Textile Research Journal Volume 14 ; 14 >
+        au < manifest ; 1945 ; Textile Research Journal Volume 15 ; 15 >
+        au < manifest ; 1946 ; Textile Research Journal Volume 16 ; 16 >
+        au < manifest ; 1947 ; Textile Research Journal Volume 17 ; 17 >
+        au < manifest ; 1948 ; Textile Research Journal Volume 18 ; 18 >
+        au < manifest ; 1949 ; Textile Research Journal Volume 19 ; 19 >
+        au < manifest ; 1950 ; Textile Research Journal Volume 20 ; 20 >
+        au < manifest ; 1951 ; Textile Research Journal Volume 21 ; 21 >
+        au < manifest ; 1952 ; Textile Research Journal Volume 22 ; 22 >
+        au < manifest ; 1953 ; Textile Research Journal Volume 23 ; 23 >
+        au < manifest ; 1954 ; Textile Research Journal Volume 24 ; 24 >
+        au < manifest ; 1955 ; Textile Research Journal Volume 25 ; 25 >
+        au < manifest ; 1956 ; Textile Research Journal Volume 26 ; 26 >
+        au < manifest ; 1957 ; Textile Research Journal Volume 27 ; 27 >
+        au < manifest ; 1958 ; Textile Research Journal Volume 28 ; 28 >
+        au < manifest ; 1959 ; Textile Research Journal Volume 29 ; 29 >
+        au < manifest ; 1960 ; Textile Research Journal Volume 30 ; 30 >
+        au < manifest ; 1961 ; Textile Research Journal Volume 31 ; 31 >
+        au < manifest ; 1962 ; Textile Research Journal Volume 32 ; 32 >
+        au < doesNotExist ; 1963 ; Textile Research Journal Volume 33 ; 33 >
+        au < manifest ; 1964 ; Textile Research Journal Volume 34 ; 34 >
+        au < manifest ; 1965 ; Textile Research Journal Volume 35 ; 35 >
+        au < manifest ; 1966 ; Textile Research Journal Volume 36 ; 36 >
+        au < manifest ; 1967 ; Textile Research Journal Volume 37 ; 37 >
+        au < manifest ; 1968 ; Textile Research Journal Volume 38 ; 38 >
+        au < doesNotExist ; 1969 ; Textitle Research Journal Volume 39 ; 39 >
+        au < manifest ; 1970 ; Textile Research Journal Volume 40 ; 40 >
+        au < manifest ; 1971 ; Textile Research Journal Volume 41 ; 41 >
+        au < manifest ; 1972 ; Textile Research Journal Volume 42 ; 42 >
+        au < manifest ; 1973 ; Textile Research Journal Volume 43 ; 43 >
+        au < manifest ; 1974 ; Textile Research Journal Volume 44 ; 44 >
+        au < manifest ; 1975 ; Textile Research Journal Volume 45 ; 45 >
+        au < doesNotExist ; 1976 ; Textile Research Journal Volume 46 ; 46 >
+        au < doesNotExist ; 1977 ; Textile Research Journal Volume 47 ; 47 >
+        au < manifest ; 1978 ; Textile Research Journal Volume 48 ; 48 >
+        au < manifest ; 1979 ; Textile Research Journal Volume 49 ; 49 >
+        au < manifest ; 1980 ; Textile Research Journal Volume 50 ; 50 >
+        au < manifest ; 1981 ; Textile Research Journal Volume 51 ; 51 >
+        au < manifest ; 1982 ; Textile Research Journal Volume 52 ; 52 >
+        au < manifest ; 1983 ; Textile Research Journal Volume 53 ; 53 >
+        au < manifest ; 1984 ; Textile Research Journal Volume 54 ; 54 >
+        au < manifest ; 1985 ; Textile Research Journal Volume 55 ; 55 >
+        au < manifest ; 1986 ; Textile Research Journal Volume 56 ; 56 >
+        au < manifest ; 1987 ; Textile Research Journal Volume 57 ; 57 >
+        au < doesNotExist ; 1988 ; Textile Research Journal Volume 58 ; 58 >
+        au < manifest ; 1989 ; Textile Research Journal Volume 59 ; 59 >
+        au < manifest ; 1990 ; Textile Research Journal Volume 60 ; 60 >
+        au < manifest ; 1991 ; Textile Research Journal Volume 61 ; 61 >
+        au < doesNotExist ; 1992 ; Textile Research Journal Volume 62 ; 62 >
+        au < manifest ; 1993 ; Textile Research Journal Volume 63 ; 63 >
+        au < manifest ; 1994 ; Textile Research Journal Volume 64 ; 64 >
+        au < manifest ; 1995 ; Textile Research Journal Volume 65 ; 65 >
+        au < manifest ; 1996 ; Textile Research Journal Volume 66 ; 66 >
+        au < doesNotExist ; 1997 ; Textile Research Journal Volume 67 ; 67 >
+        au < manifest ; 1998 ; Textile Research Journal Volume 68 ; 68 >
+        au < manifest ; 1999 ; Textile Research Journal Volume 69 ; 69 >
+        au < manifest ; 2000 ; Textile Research Journal Volume 70 ; 70 >
+        au < exists ; 2001 ; Textile Research Journal Volume 71 ; 71 >
+        au < manifest ; 2002 ; Textile Research Journal Volume 72 ; 72 >
+        au < manifest ; 2003 ; Textile Research Journal Volume 73 ; 73 >
+        au < manifest ; 2004 ; Textile Research Journal Volume 74 ; 74 >
+        au < manifest ; 2005 ; Textile Research Journal Volume 75 ; 75 >
+        au < manifest ; 2006 ; Textile Research Journal Volume 76 ; 76 >
+        au < manifest ; 2007 ; Textile Research Journal Volume 77 ; 77 >
+        au < manifest ; 2008 ; Textile Research Journal Volume 78 ; 78 >
+        au < manifest ; 2009 ; Textile Research Journal Volume 79 ; 79 >
+        au < manifest ; 2010 ; Textile Research Journal Volume 80 ; 80 >
+        au < manifest ; 2011 ; Textile Research Journal Volume 81 ; 81 >
+
+      }
+
     }
     
     {
@@ -30217,6 +31176,18 @@ comment[mpj] = now published by Brill
         issn = 0040-571X ;
         eissn = 2044-2696
       >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tjx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+				au < exists ; 1947 ; Theology Volume 50 ; 50 >
+				au < exists ; 2010 ; Thology Volume 113 ; 113 >
+        au < manifest ; 2011 ; Theology Volume 114 ; 114 >
+        
+      }
 
     }
     
@@ -30243,6 +31214,29 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tse.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1994-1995 ; Theology and Sexuality Volume 1 ; 1 >
+        au < manifest ; 1995-1996 ; Theology and Sexuality Volume 2 ; 2 >
+        au < manifest ; 1996-1997 ; Theology and Sexuality Volume 3 ; 3 >
+        au < manifest ; 1997-1998 ; Theology and Sexuality Volume 4 ; 4 >
+        au < manifest ; 1998-1999 ; Theology and Sexuality Volume 5 ; 5 >
+        au < manifest ; 1999-2000 ; Theology and Sexuality Volume 6 ; 6 >
+        au < manifest ; 2000-2001 ; Theology and Sexuality Volume 7 ; 7 >
+        au < manifest ; 2001-2002 ; Theology and Sexuality Volume 8 ; 8 >
+        au < manifest ; 2002 ; Theology and Sexuality Volume 9 ; 9 >
+        au < manifest ; 2003-2004 ; Theology and Sexuality Volume 10 ; 10 >
+        au < manifest ; 2004-2005 ; Theology and Sexuality Volume 11 ; 11 >
+        au < manifest ; 2005-2006 ; Theology and Sexuality Volume 12 ; 12 >
+        au < manifest ; 2006-2007 ; Theology and Sexuality Volume 13 ; 13 >
+        au < manifest ; 2007-2008 ; Theology and Sexuality Volume 14 ; 14 >
+        
+      }
+
     }
     
     {
@@ -30258,24 +31252,25 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ttj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2011 ; Theology Today Volume 50 ; 50 >
-        au < exists ; 2011 ; Theology Today Volume 51 ; 51 >
-        au < exists ; 2011 ; Theology Today Volume 52 ; 52 >
-        au < exists ; 2011 ; Theology Today Volume 53 ; 53 >
-        au < exists ; 2011 ; Theology Today Volume 54 ; 54 >
-        au < exists ; 2011 ; Theology Today Volume 55 ; 55 >
-        au < exists ; 2011 ; Theology Today Volume 56 ; 56 >
-        au < exists ; 2011 ; Theology Today Volume 57 ; 57 >
-        au < exists ; 2011 ; Theology Today Volume 58 ; 58 >
-        au < exists ; 2011 ; Theology Today Volume 59 ; 59 >
-        au < exists ; 2011 ; Theology Today Volume 60 ; 60 >
-        au < exists ; 2011 ; Theology Today Volume 61 ; 61 >
-        au < exists ; 2011 ; Theology Today Volume 62 ; 62 >
-        au < exists ; 2011 ; Theology Today Volume 63 ; 63 >
-        au < exists ; 2011 ; Theology Today Volume 64 ; 64 >
-        au < exists ; 2011 ; Theology Today Volume 65 ; 65 >
-        au < exists ; 2011 ; Theology Today Volume 66 ; 66 >
-        au < manifest ; 2011 ; Theology Today Volume 67 ; 67 >
+        au < exists ; 1944-1945 ; Theology Today Volume 1 ; 1 >
+        au < exists ; 1993-1994 ; Theology Today Volume 50 ; 50 >
+        au < exists ; 1994-1995 ; Theology Today Volume 51 ; 51 >
+        au < exists ; 1995-1996 ; Theology Today Volume 52 ; 52 >
+        au < exists ; 1996-1997 ; Theology Today Volume 53 ; 53 >
+        au < exists ; 1997-1998 ; Theology Today Volume 54 ; 54 >
+        au < exists ; 1998-1999 ; Theology Today Volume 55 ; 55 >
+        au < exists ; 1999-2000 ; Theology Today Volume 56 ; 56 >
+        au < exists ; 2000-2001 ; Theology Today Volume 57 ; 57 >
+        au < exists ; 2001-2002 ; Theology Today Volume 58 ; 58 >
+        au < exists ; 2002-2003 ; Theology Today Volume 59 ; 59 >
+        au < exists ; 2003-2004 ; Theology Today Volume 60 ; 60 >
+        au < exists ; 2004-2005 ; Theology Today Volume 61 ; 61 >
+        au < exists ; 2005-2006 ; Theology Today Volume 62 ; 62 >
+        au < exists ; 2006-2008 ; Theology Today Volume 63 ; 63 >
+        au < exists ; 2007-2009 ; Theology Today Volume 64 ; 64 >
+        au < exists ; 2008-2010 ; Theology Today Volume 65 ; 65 >
+        au < exists ; 2009-2011 ; Theology Today Volume 66 ; 66 >
+        au < manifest ; 2011-2012 ; Theology Today Volume 67 ; 67 >
 
       }
 
@@ -30305,6 +31300,30 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tcr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Theoretical Criminology Volume 1 ; 1 >
+        au < manifest ; 1998 ; Theoretical Criminology Volume 2 ; 2 >
+        au < manifest ; 1999 ; Theoretical Criminology Volume 3 ; 3 >
+        au < manifest ; 2000 ; Theoretical Criminology Volume 4 ; 4 >
+        au < manifest ; 2001 ; Theoretical Criminology Volume 5 ; 5 >
+        au < manifest ; 2002 ; Theoretical Criminology Volume 6 ; 6 >
+        au < manifest ; 2003 ; Theoretical Criminology Volume 7 ; 7 >
+        au < manifest ; 2004 ; Theoretical Criminology Volume 8 ; 8 >
+        au < manifest ; 2005 ; Theoretical Criminology Volume 9 ; 9 >
+        au < manifest ; 2006 ; Theoretical Criminology Volume 10 ; 10 >
+        au < manifest ; 2007 ; Theoretical Criminology Volume 11 ; 11 >
+        au < manifest ; 2008 ; Theoretical Criminology Volume 12 ; 12 >
+        au < manifest ; 2009 ; Theoretical Criminology Volume 13 ; 13 >
+        au < manifest ; 2010 ; Theoretical Criminology Volume 14 ; 14 >
+        au < manifest ; 2011 ; Theoretical Criminology Volume 15 ; 15 >
+
+      }
+
     }
 
     {
@@ -30328,6 +31347,36 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Theory & Psychology Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Theory & Psychology Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Theory & Psychology Volume 20 ; 20 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tap.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1991 ; Theory & Psychology Volume 1 ; 1 >
+        au < manifest ; 1992 ; Theory & Psychology Volume 2 ; 2 >
+        au < manifest ; 1993 ; Theory & Psychology Volume 3 ; 3 >
+        au < manifest ; 1994 ; Theory & Psychology Volume 4 ; 4 >
+        au < manifest ; 1995 ; Theory & Psychology Volume 5 ; 5 >
+        au < manifest ; 1996 ; Theory & Psychology Volume 6 ; 6 >
+        au < manifest ; 1997 ; Theory & Psychology Volume 7 ; 7 >
+        au < manifest ; 1998 ; Theory & Psychology Volume 8 ; 8 >
+        au < manifest ; 1999 ; Theory & Psychology Volume 9 ; 9 >
+        au < manifest ; 2000 ; Theory & Psychology Volume 10 ; 10 >
+        au < manifest ; 2001 ; Theory & Psychology Volume 11 ; 11 >
+        au < manifest ; 2002 ; Theory & Psychology Volume 12 ; 12 >
+        au < manifest ; 2003 ; Theory & Psychology Volume 13 ; 13 >
+        au < manifest ; 2004 ; Theory & Psychology Volume 14 ; 14 >
+        au < manifest ; 2005 ; Theory & Psychology Volume 15 ; 15 >
+        au < manifest ; 2006 ; Theory & Psychology Volume 16 ; 16 >
+        au < manifest ; 2007 ; Theory & Psychology Volume 17 ; 17 >
+        au < manifest ; 2008 ; Theory & Psychology Volume 18 ; 18 >
+        au < manifest ; 2009 ; Theory & Psychology Volume 19 ; 19 >
+        au < manifest ; 2010 ; Theory & Psychology Volume 20 ; 20 >
+        au < manifest ; 2011 ; Theory & Psychology Volume 21 ; 21 >
 
       }
 
@@ -30357,6 +31406,24 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tre.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2003 ; Theory and Research in Education Volume 1 ; 1 >
+        au < manifest ; 2004 ; Theory and Research in Education Volume 2 ; 2 >
+        au < manifest ; 2005 ; Theory and Research in Education Volume 3 ; 3 >
+        au < manifest ; 2006 ; Theory and Research in Education Volume 4 ; 4 >
+        au < manifest ; 2007 ; Theory and Research in Education Volume 5 ; 5 >
+        au < manifest ; 2008 ; Theory and Research in Education Volume 6 ; 6 >
+        au < manifest ; 2009 ; Theory and Research in Education Volume 7 ; 7 >
+        au < manifest ; 2010 ; Theory and Research in Education Volume 8 ; 8 >
+        au < manifest ; 2011 ; Theory and Research in Education Volume 9 ; 9 >
+
+      }
+
     }
 
     {
@@ -30380,6 +31447,43 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2000 ; Theory, Culture & Society Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Theory, Culture & Society Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Theory, Culture & Society Volume 27 ; 27 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tcs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1982 ; Theory, Culture & Society Volume 1 ; 1 >
+        au < manifest ; 1983 ; Theory, Culture & Society Volume 2 ; 2 >
+        au < manifest ; 1986 ; Theory, Culture & Society Volume 3 ; 3 >
+        au < manifest ; 1987 ; Theory, Culture & Society Volume 4 ; 4 >
+        au < manifest ; 1988 ; Theory, Culture & Society Volume 5 ; 5 >
+        au < manifest ; 1989 ; Theory, Culture & Society Volume 6 ; 6 >
+        au < manifest ; 1990 ; Theory, Culture & Society Volume 7 ; 7 >
+        au < manifest ; 1991 ; Theory, Culture & Society Volume 8 ; 8 >
+        au < manifest ; 1992 ; Theory, Culture & Society Volume 9 ; 9 >
+        au < manifest ; 1993 ; Theory, Culture & Society Volume 10 ; 10 >
+        au < manifest ; 1994 ; Theory, Culture & Society Volume 11 ; 11 >
+        au < manifest ; 1995 ; Theory, Culture & Society Volume 12 ; 12 >
+        au < manifest ; 1996 ; Theory, Culture & Society Volume 13 ; 13 >
+        au < manifest ; 1997 ; Theory, Culture & Society Volume 14 ; 14 >
+        au < manifest ; 1998 ; Theory, Culture & Society Volume 15 ; 15 >
+        au < manifest ; 1999 ; Theory, Culture & Society Volume 16 ; 16 >
+        au < manifest ; 2000 ; Theory, Culture & Society Volume 17 ; 17 >
+        au < manifest ; 2001 ; Theory, Culture & Society Volume 18 ; 18 >
+        au < manifest ; 2002 ; Theory, Culture & Society Volume 19 ; 19 >
+        au < manifest ; 2003 ; Theory, Culture & Society Volume 20 ; 20 >
+        au < manifest ; 2004 ; Theory, Culture & Society Volume 21 ; 21 >
+        au < manifest ; 2005 ; Theory, Culture & Society Volume 22 ; 22 >
+        au < manifest ; 2006 ; Theory, Culture & Society Volume 23 ; 23 >
+        au < manifest ; 2007 ; Theory, Culture & Society Volume 24 ; 24 >
+        au < manifest ; 2008 ; Theory, Culture & Society Volume 25 ; 25 >
+        au < manifest ; 2009 ; Theory, Culture & Society Volume 26 ; 26 >
+        au < manifest ; 2010 ; Theory, Culture & Society Volume 27 ; 27 >
+        au < manifest ; 2011 ; Theory, Culture & Society Volume 28 ; 28 >
 
       }
 
@@ -30407,6 +31511,20 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tak.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2007 ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 >
+        au < manifest ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
+        au < manifest ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
+        au < manifest ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
+        au < manifest ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
+
+      }
+
     }
 
     {
@@ -30422,7 +31540,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://taw.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
+        au < exists ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
+
       }
+
     }
 
     {
@@ -30466,6 +31588,20 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tar.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2007 ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 >
+        au < manifest ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 >
+        au < manifest ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
+        au < manifest ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 >
+        au < manifest ; 2011 ; Therapeutic Advances in Respiratory Disease Volume 5 ; 5 >
+
+      }
+
     }
 
     {
@@ -30505,6 +31641,117 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://the.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1980 ; Thesis Eleven Volume 1 ; 1 >
+        au < manifest ; 1981 ; Thesis Eleven Volume 2 ; 2 >
+        au < manifest ; 1981 ; Thesis Eleven Volume 3 ; 3 >
+        au < manifest ; 1982 ; Thesis Eleven Volume 4 ; 4 >
+        au < exists ; 1982 ; Thesis Eleven Volume 5-6 ; 5-6 >
+        au < manifest ; 1983 ; Thesis Eleven Volume 7 ; 7 >
+        au < manifest ; 1984 ; Thesis Eleven Volume 8 ; 8 >
+        au < manifest ; 1984 ; Thesis Eleven Volume 9 ; 9 >
+        au < exists ; 1985 ; Thesis Eleven Volume 10-11 ; 10-11 >
+        au < manifest ; 1985 ; Thesis Eleven Volume 12 ; 12 >
+        au < manifest ; 1986 ; Thesis Eleven Volume 13 ; 13 >
+        au < manifest ; 1986 ; Thesis Eleven Volume 14 ; 14 >
+        au < manifest ; 1986 ; Thesis Eleven Volume 15 ; 15 >
+        au < manifest ; 1987 ; Thesis Eleven Volume 16 ; 16 >
+        au < manifest ; 1987 ; Thesis Eleven Volume 17 ; 17 >
+        au < exists ; 1987 ; Thesis Eleven Volume 18-19 ; 18-19 >
+        au < manifest ; 1988 ; Thesis Eleven Volume 20 ; 20 >
+        au < manifest ; 1988 ; Thesis Eleven Volume 21 ; 21 >
+        au < manifest ; 1989 ; Thesis Eleven Volume 22 ; 22 >
+        au < manifest ; 1989 ; Thesis Eleven Volume 23 ; 23 >
+        au < manifest ; 1989 ; Thesis Eleven Volume 24 ; 24 >
+        au < manifest ; 1990 ; Thesis Eleven Volume 25 ; 25 >
+        au < manifest ; 1990 ; Thesis Eleven Volume 26 ; 26 >
+        au < manifest ; 1990 ; Thesis Eleven Volume 27 ; 27 >
+        au < manifest ; 1991 ; Thesis Eleven Volume 28 ; 28 >
+        au < manifest ; 1991 ; Thesis Eleven Volume 29 ; 29 >
+        au < manifest ; 1991 ; Thesis Eleven Volume 30 ; 30 >
+        au < manifest ; 1992 ; Thesis Eleven Volume 31 ; 31 >
+        au < manifest ; 1992 ; Thesis Eleven Volume 32 ; 32 >
+        au < manifest ; 1992 ; Thesis Eleven Volume 33 ; 33 >
+        au < manifest ; 1993 ; Thesis Eleven Volume 34 ; 34 >
+        au < manifest ; 1993 ; Thesis Eleven Volume 35 ; 35 >
+        au < manifest ; 1993 ; Thesis Eleven Volume 36 ; 36 >
+        au < manifest ; 1994 ; Thesis Eleven Volume 37 ; 37 >
+        au < manifest ; 1994 ; Thesis Eleven Volume 38 ; 38 >
+        au < manifest ; 1994 ; Thesis Eleven Volume 39 ; 39 >
+        au < manifest ; 1995 ; Thesis Eleven Volume 40 ; 40 >
+        au < manifest ; 1995 ; Thesis Eleven Volume 41 ; 41 >
+        au < manifest ; 1995 ; Thesis Eleven Volume 42 ; 42 >
+        au < manifest ; 1995 ; Thesis Eleven Volume 43 ; 43 >
+        au < manifest ; 1996 ; Thesis Eleven Volume 44 ; 44 >
+        au < manifest ; 1996 ; Thesis Eleven Volume 45 ; 45 >
+        au < manifest ; 1996 ; Thesis Eleven Volume 46 ; 46 >
+        au < manifest ; 1996 ; Thesis Eleven Volume 47 ; 47 >
+        au < manifest ; 1997 ; Thesis Eleven Volume 48 ; 48 >
+        au < manifest ; 1997 ; Thesis Eleven Volume 49 ; 49 >
+        au < manifest ; 1997 ; Thesis Eleven Volume 50 ; 50 >
+        au < manifest ; 1997 ; Thesis Eleven Volume 51 ; 51 >
+        au < manifest ; 1998 ; Thesis Eleven Volume 52 ; 52 >
+        au < manifest ; 1998 ; Thesis Eleven Volume 53 ; 53 >
+        au < manifest ; 1998 ; Thesis Eleven Volume 54 ; 54 >
+        au < manifest ; 1998 ; Thesis Eleven Volume 55 ; 55 >
+        au < manifest ; 1999 ; Thesis Eleven Volume 56 ; 56 >
+        au < manifest ; 1999 ; Thesis Eleven Volume 57 ; 57 >
+        au < manifest ; 1999 ; Thesis Eleven Volume 58 ; 58 >
+        au < manifest ; 1999 ; Thesis Eleven Volume 59 ; 59 >
+        au < manifest ; 2000 ; Thesis Eleven Volume 60 ; 60 >
+        au < manifest ; 2000 ; Thesis Eleven Volume 61 ; 61 >
+        au < manifest ; 2000 ; Thesis Eleven Volume 62 ; 62 >
+        au < manifest ; 2000 ; Thesis Eleven Volume 63 ; 63 >
+        au < manifest ; 2001 ; Thesis Eleven Volume 64 ; 64 >
+        au < manifest ; 2001 ; Thesis Eleven Volume 65 ; 65 >
+        au < manifest ; 2001 ; Thesis Eleven Volume 66 ; 66 >
+        au < manifest ; 2001 ; Thesis Eleven Volume 67 ; 67 >
+        au < manifest ; 2002 ; Thesis Eleven Volume 68 ; 68 >
+        au < manifest ; 2002 ; Thesis Eleven Volume 69 ; 69 >
+        au < manifest ; 2002 ; Thesis Eleven Volume 70 ; 70 >
+        au < manifest ; 2002 ; Thesis Eleven Volume 71 ; 71 >
+        au < manifest ; 2003 ; Thesis Eleven Volume 72 ; 72 >
+        au < manifest ; 2003 ; Thesis Eleven Volume 73 ; 73 >
+        au < manifest ; 2003 ; Thesis Eleven Volume 74 ; 74 >
+        au < manifest ; 2003 ; Thesis Eleven Volume 75 ; 75 >
+        au < manifest ; 2004 ; Thesis Eleven Volume 76 ; 76 >
+        au < manifest ; 2004 ; Thesis Eleven Volume 77 ; 77 >
+        au < manifest ; 2004 ; Thesis Eleven Volume 78 ; 78 >
+        au < manifest ; 2004 ; Thesis Eleven Volume 79 ; 79 >
+        au < manifest ; 2005 ; Thesis Eleven Volume 80 ; 80 >
+        au < manifest ; 2005 ; Thesis Eleven Volume 81 ; 81 >
+        au < manifest ; 2005 ; Thesis Eleven Volume 82 ; 82 >
+        au < manifest ; 2005 ; Thesis Eleven Volume 83 ; 83 >
+        au < manifest ; 2006 ; Thesis Eleven Volume 84 ; 84 >
+        au < manifest ; 2006 ; Thesis Eleven Volume 85 ; 85 >
+        au < manifest ; 2006 ; Thesis Eleven Volume 86 ; 86 >
+        au < manifest ; 2006 ; Thesis Eleven Volume 87 ; 87 >
+        au < manifest ; 2007 ; Thesis Eleven Volume 88 ; 88 >
+        au < manifest ; 2007 ; Thesis Eleven Volume 89 ; 89 >
+        au < manifest ; 2007 ; Thesis Eleven Volume 90 ; 90 >
+        au < manifest ; 2007 ; Thesis Eleven Volume 91 ; 91 >
+        au < manifest ; 2008 ; Thesis Eleven Volume 92 ; 92 >
+        au < manifest ; 2008 ; Thesis Eleven Volume 93 ; 93 >
+        au < manifest ; 2008 ; Thesis Eleven Volume 94 ; 94 >
+        au < manifest ; 2008 ; Thesis Eleven Volume 95 ; 95 >
+        au < manifest ; 2009 ; Thesis Eleven Volume 96 ; 96 >
+        au < manifest ; 2009 ; Thesis Eleven Volume 97 ; 97 >
+        au < manifest ; 2009 ; Thesis Eleven Volume 98 ; 98 >
+        au < manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 >
+        au < manifest ; 2010 ; Thesis Eleven Volume 100 ; 100 >
+        au < manifest ; 2010 ; Thesis Eleven Volume 101 ; 101 >
+        au < manifest ; 2010 ; Thesis Eleven Volume 102 ; 102 >
+        au < manifest ; 2010 ; Thesis Eleven Volume 103 ; 103 >
+        au < manifest ; 2011 ; Thesis Eleven Volume 104 ; 104 >
+        au < manifest ; 2011 ; Thesis Eleven Volume 105 ; 105 >
+
+      }
+
     }
 
     {
@@ -30531,6 +31778,35 @@ comment[mpj] = now published by Brill
 
       }
 
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1992 ; Time & Society Volume 1 ; 1 >
+        au < manifest ; 1993 ; Time & Society Volume 2 ; 2 >
+        au < manifest ; 1994 ; Time & Society Volume 3 ; 3 >
+        au < manifest ; 1995 ; Time & Society Volume 4 ; 4 >
+        au < manifest ; 1996 ; Time & Society Volume 5 ; 5 >
+        au < manifest ; 1997 ; Time & Society Volume 6 ; 6 >
+        au < manifest ; 1998 ; Time & Society Volume 7 ; 7 >
+        au < manifest ; 1999 ; Time & Society Volume 8 ; 8 >
+        au < manifest ; 2000 ; Time & Society Volume 9 ; 9 >
+        au < manifest ; 2001 ; Time & Society Volume 10 ; 10 >
+        au < manifest ; 2002 ; Time & Society Volume 11 ; 11 >
+        au < manifest ; 2003 ; Time & Society Volume 12 ; 12 >
+        au < manifest ; 2004 ; Time & Society Volume 13 ; 13 >
+        au < manifest ; 2005 ; Time & Society Volume 14 ; 14 >
+        au < manifest ; 2006 ; Time & Society Volume 15 ; 15 >
+        au < manifest ; 2007 ; Time & Society Volume 16 ; 16 >
+        au < manifest ; 2008 ; Time & Society Volume 17 ; 17 >
+        au < manifest ; 2009 ; Time & Society Volume 18 ; 18 >
+        au < manifest ; 2010 ; Time & Society Volume 19 ; 19 >
+        au < manifest ; 2011 ; Time & Society Volume 20 ; 20 >
+
+      }
+
     }
 
     {
@@ -30540,7 +31816,25 @@ comment[mpj] = now published by Brill
         eissn = 1742-9692
       >
 
-      comment[platform] = HighWire
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://thr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2001 ; Tourism and Hospitality Research Volume 1 ; 1 >
+        au < exists ; 2002 ; Tourism and Hospitality Research Volume 2 ; 2 >
+        au < exists ; 2003 ; Tourism and Hospitality Research Volume 3 ; 3 >
+        au < exists ; 2004 ; Tourism and Hospitality Research Volume 4 ; 4 >
+        au < exists ; 2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
+        au < exists ; 2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
+        au < exists ; 2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
+        au < exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
+        au < exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
+        au < exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
+        au < manifest ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 >
+
+      }
 
     }
 
@@ -30565,6 +31859,25 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 2000 ; Tourist Studies Volume 7 ; 7 >
         au < HighWirePressPlugin ; down ; 2000 ; Tourist Studies Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 0 ; Tourist Studies Volume 9 ; 9 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tou.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Tourist Studies Volume 1 ; 1 >
+        au < manifest ; 2002 ; Tourist Studies Volume 2 ; 2 >
+        au < manifest ; 2003 ; Tourist Studies Volume 3 ; 3 >
+        au < manifest ; 2004 ; Tourist Studies Volume 4 ; 4 >
+        au < manifest ; 2005 ; Tourist Studies Volume 5 ; 5 >
+        au < manifest ; 2006 ; Tourist Studies Volume 6 ; 6 >
+        au < manifest ; 2007 ; Tourist Studies Volume 7 ; 7 >
+        au < manifest ; 2008 ; Tourist Studies Volume 8 ; 8 >
+        au < manifest ; 2009 ; Tourist Studies Volume 9 ; 9 >
+        au < manifest ; 2010 ; Tourist Studies Volume 10 ; 10 >
 
       }
 
