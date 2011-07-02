@@ -503,33 +503,33 @@
       param[base_url] = http://jrsm.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1965 ; JRSM Volume 58 ; 58 >
-      au < testing ; 1966 ; JRSM Volume 59 ; 59 >
-      au < testing ; 1967 ; JRSM Volume 60 ; 60 >
-      au < testing ; 1968 ; JRSM Volume 61 ; 61 >
-      au < testing ; 1969 ; JRSM Volume 62 ; 62 >
-      au < testing ; 1970 ; JRSM Volume 63 ; 63 >
-      au < testing ; 1971 ; JRSM Volume 64 ; 64 >
-      au < testing ; 1972 ; JRSM Volume 65 ; 65 >
-      au < testing ; 1973 ; JRSM Volume 66 ; 66 >
-      au < testing ; 1974 ; JRSM Volume 67 ; 67 >
-      au < testing ; 1975 ; JRSM Volume 68 ; 68 >
-      au < wanted ; 1976 ; JRSM Volume 69 ; 69 >
-      au < wanted ; 1977 ; JRSM Volume 70 ; 70 >
-      au < wanted ; 1978 ; JRSM Volume 71 ; 71 >
-      au < wanted ; 1979 ; JRSM Volume 72 ; 72 >
-      au < wanted ; 1980 ; JRSM Volume 73 ; 73 >
-      au < wanted ; 1981 ; JRSM Volume 74 ; 74 >
-      au < wanted ; 1982 ; JRSM Volume 75 ; 75 >
-      au < wanted ; 1983 ; JRSM Volume 76 ; 76 >
-      au < wanted ; 1984 ; JRSM Volume 77 ; 77 >
-      au < wanted ; 1985 ; JRSM Volume 78 ; 78 >
-      au < wanted ; 1986 ; JRSM Volume 79 ; 79 >
-      au < wanted ; 1987 ; JRSM Volume 80 ; 80 >
-      au < wanted ; 1988 ; JRSM Volume 81 ; 81 >
-      au < wanted ; 1989 ; JRSM Volume 82 ; 82 >
-      au < wanted ; 1990 ; JRSM Volume 83 ; 83 >
-      au < wanted ; 1991 ; JRSM Volume 84 ; 84 >
+      au < ready ; 1965 ; JRSM Volume 58 ; 58 >
+      au < ready ; 1966 ; JRSM Volume 59 ; 59 >
+      au < ready ; 1967 ; JRSM Volume 60 ; 60 >
+      au < ready ; 1968 ; JRSM Volume 61 ; 61 >
+      au < ready ; 1969 ; JRSM Volume 62 ; 62 >
+      au < ready ; 1970 ; JRSM Volume 63 ; 63 >
+      au < ready ; 1971 ; JRSM Volume 64 ; 64 >
+      au < ready ; 1972 ; JRSM Volume 65 ; 65 >
+      au < ready ; 1973 ; JRSM Volume 66 ; 66 >
+      au < ready ; 1974 ; JRSM Volume 67 ; 67 >
+      au < ready ; 1975 ; JRSM Volume 68 ; 68 >
+      au < testing ; 1976 ; JRSM Volume 69 ; 69 >
+      au < testing ; 1977 ; JRSM Volume 70 ; 70 >
+      au < testing ; 1978 ; JRSM Volume 71 ; 71 >
+      au < testing ; 1979 ; JRSM Volume 72 ; 72 >
+      au < testing ; 1980 ; JRSM Volume 73 ; 73 >
+      au < testing ; 1981 ; JRSM Volume 74 ; 74 >
+      au < testing ; 1982 ; JRSM Volume 75 ; 75 >
+      au < testing ; 1983 ; JRSM Volume 76 ; 76 >
+      au < testing ; 1984 ; JRSM Volume 77 ; 77 >
+      au < testing ; 1985 ; JRSM Volume 78 ; 78 >
+      au < testing ; 1986 ; JRSM Volume 79 ; 79 >
+      au < testing ; 1987 ; JRSM Volume 80 ; 80 >
+      au < testing ; 1988 ; JRSM Volume 81 ; 81 >
+      au < testing ; 1989 ; JRSM Volume 82 ; 82 >
+      au < testing ; 1990 ; JRSM Volume 83 ; 83 >
+      au < testing ; 1991 ; JRSM Volume 84 ; 84 >
       au < ready ; 1992 ; JRSM Volume 85 ; 85 >
       au < ready ; 1993 ; JRSM Volume 86 ; 86 >
       au < ready ; 1994 ; JRSM Volume 87 ; 87 >
@@ -868,6 +868,7 @@
     param[base_url] = http://vascular.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2004 ; Vascular Volume 12 ; 12 >
     au < wanted ; 2005 ; Vascular Volume 13 ; 13 >
     au < wanted ; 2006 ; Vascular Volume 14 ; 14 >
     au < wanted ; 2007 ; Vascular Volume 15 ; 15 >
