@@ -467,22 +467,22 @@
       param[base_url] = http://jtt.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-      au < testing ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-      au < testing ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-      au < testing ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-      au < testing ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-      au < testing ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-      au < testing ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-      au < testing ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-      au < testing ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-      au < testing ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-      au < testing ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-      au < testing ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-      au < testing ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-      au < testing ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-      au < testing ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-      au < testing ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+      au < ready ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+      au < ready ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+      au < ready ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+      au < ready ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+      au < ready ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+      au < ready ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+      au < ready ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+      au < ready ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+      au < ready ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+      au < ready ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+      au < ready ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+      au < ready ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+      au < ready ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+      au < ready ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+      au < ready ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+      au < ready ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
 
     }
 
@@ -514,22 +514,22 @@
       au < ready ; 1973 ; JRSM Volume 66 ; 66 >
       au < ready ; 1974 ; JRSM Volume 67 ; 67 >
       au < ready ; 1975 ; JRSM Volume 68 ; 68 >
-      au < testing ; 1976 ; JRSM Volume 69 ; 69 >
-      au < testing ; 1977 ; JRSM Volume 70 ; 70 >
-      au < testing ; 1978 ; JRSM Volume 71 ; 71 >
-      au < testing ; 1979 ; JRSM Volume 72 ; 72 >
-      au < testing ; 1980 ; JRSM Volume 73 ; 73 >
-      au < testing ; 1981 ; JRSM Volume 74 ; 74 >
-      au < testing ; 1982 ; JRSM Volume 75 ; 75 >
-      au < testing ; 1983 ; JRSM Volume 76 ; 76 >
-      au < testing ; 1984 ; JRSM Volume 77 ; 77 >
-      au < testing ; 1985 ; JRSM Volume 78 ; 78 >
-      au < testing ; 1986 ; JRSM Volume 79 ; 79 >
-      au < testing ; 1987 ; JRSM Volume 80 ; 80 >
-      au < testing ; 1988 ; JRSM Volume 81 ; 81 >
-      au < testing ; 1989 ; JRSM Volume 82 ; 82 >
-      au < testing ; 1990 ; JRSM Volume 83 ; 83 >
-      au < testing ; 1991 ; JRSM Volume 84 ; 84 >
+      au < ready ; 1976 ; JRSM Volume 69 ; 69 >
+      au < ready ; 1977 ; JRSM Volume 70 ; 70 >
+      au < ready ; 1978 ; JRSM Volume 71 ; 71 >
+      au < ready ; 1979 ; JRSM Volume 72 ; 72 >
+      au < ready ; 1980 ; JRSM Volume 73 ; 73 >
+      au < ready ; 1981 ; JRSM Volume 74 ; 74 >
+      au < ready ; 1982 ; JRSM Volume 75 ; 75 >
+      au < ready ; 1983 ; JRSM Volume 76 ; 76 >
+      au < ready ; 1984 ; JRSM Volume 77 ; 77 >
+      au < ready ; 1985 ; JRSM Volume 78 ; 78 >
+      au < ready ; 1986 ; JRSM Volume 79 ; 79 >
+      au < ready ; 1987 ; JRSM Volume 80 ; 80 >
+      au < ready ; 1988 ; JRSM Volume 81 ; 81 >
+      au < ready ; 1989 ; JRSM Volume 82 ; 82 >
+      au < ready ; 1990 ; JRSM Volume 83 ; 83 >
+      au < ready ; 1991 ; JRSM Volume 84 ; 84 >
       au < ready ; 1992 ; JRSM Volume 85 ; 85 >
       au < ready ; 1993 ; JRSM Volume 86 ; 86 >
       au < ready ; 1994 ; JRSM Volume 87 ; 87 >
@@ -678,18 +678,18 @@
       param[base_url] = http://mlj.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < wanted ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-      au < wanted ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-      au < wanted ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-      au < wanted ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-      au < wanted ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-      au < wanted ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-      au < wanted ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-      au < wanted ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-      au < wanted ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-      au < wanted ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-      au < wanted ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-      au < wanted ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+      au < ready ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+      au < ready ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+      au < ready ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+      au < ready ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+      au < ready ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+      au < ready ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+      au < ready ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+      au < ready ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+      au < ready ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+      au < ready ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+      au < ready ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+      au < ready ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
       au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
