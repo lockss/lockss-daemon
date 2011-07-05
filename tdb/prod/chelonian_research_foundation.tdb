@@ -34,13 +34,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1526-3096
   
-      au < superseded ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
-      au < superseded ; Turtle and Tortoise Newsletter Volume 10 ; 10 >
+      au < superseded ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
+      au < superseded ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >
     }
 
     {
