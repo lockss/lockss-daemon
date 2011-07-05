@@ -4,7 +4,7 @@
     name = Comediantes
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -19,7 +19,9 @@
 
     param[journal_dir] = bulletin_of_the_comediantes
 
-    au < released ; Bulletin of the Comediantes Volume 61 ; 61 >
+    au < released ; 2009 ; Bulletin of the Comediantes Volume 61 ; 61 >
+    au < manifest ; 2010 ; Bulletin of the Comediantes Volume 62 ; 62 >
+    au < manifest ; 2011 ; Bulletin of the Comediantes Volume 63 ; 63 >
 
   }
   
