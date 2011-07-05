@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,14 +17,16 @@
 
     param[journal_dir] = journal_of_latin_american_geography
 
-    au < released ; Journal of Latin American Geography Volume 1 ; 1 >
-    au < released ; Journal of Latin American Geography Volume 2 ; 2 >
-    au < released ; Journal of Latin American Geography Volume 3 ; 3 >
-    au < released ; Journal of Latin American Geography Volume 4 ; 4 >
-    au < released ; Journal of Latin American Geography Volume 5 ; 5 >
-    au < released ; Journal of Latin American Geography Volume 6 ; 6 >
-    au < released ; Journal of Latin American Geography Volume 7 ; 7 >
-    au < released ; Journal of Latin American Geography Volume 8 ; 8 >
+    au < released ; 2002 ; Journal of Latin American Geography Volume 1 ; 1 >
+    au < released ; 2003 ; Journal of Latin American Geography Volume 2 ; 2 >
+    au < released ; 2004 ; Journal of Latin American Geography Volume 3 ; 3 >
+    au < released ; 2005 ; Journal of Latin American Geography Volume 4 ; 4 >
+    au < released ; 2006 ; Journal of Latin American Geography Volume 5 ; 5 >
+    au < released ; 2007 ; Journal of Latin American Geography Volume 6 ; 6 >
+    au < released ; 2008 ; Journal of Latin American Geography Volume 7 ; 7 >
+    au < released ; 2009 ; Journal of Latin American Geography Volume 8 ; 8 >
+    au < released ; 2010 ; Journal of Latin American Geography Volume 9 ; 9 >
+    au < released ; 2011 ; Journal of Latin American Geography Volume 10 ; 10 >
 
   }
 
