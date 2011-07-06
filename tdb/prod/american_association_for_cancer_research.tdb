@@ -7,13 +7,18 @@
   {
 
     title <
-      name = Cancer Discovery
+      name = Cancer Discovery ;
+      issn = 2159-8274 ;
+      eissn = 2159-8290 
 
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://cancerdiscovery.aacrjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 2011 ; Cancer Discovery Volume 1 ; 1 >
+
 
   }
 
