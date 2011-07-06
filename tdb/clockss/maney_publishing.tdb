@@ -4,10 +4,6 @@
     name = Maney Publishing
   >
 
- {
-comment[0] = needs Clockss Ingenta plugin
- }
-
   {
 
     title <
@@ -25,13 +21,13 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 1743-6753
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
-    au < manifest ; manifest ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
-    au < manifest ; manifest ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 > 
-    au < manifest ; manifest ; 2008 ; Advances in Applied Ceramics Volume 107 ; 107 > 
-    au < manifest ; manifest ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 > 
-    au < manifest ; manifest ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 > 
-    au < manifest ; manifest ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 > 
+    au < manifest ; exists ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
+    au < manifest ; exists ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
+    au < manifest ; exists ; 2007 ; Advances in Applied Ceramics Volume 106 ; 106 > 
+    au < manifest ; exists ; 2008 ; Advances in Applied Ceramics Volume 107 ; 107 > 
+    au < manifest ; exists ; 2009 ; Advances in Applied Ceramics Volume 108 ; 108 > 
+    au < manifest ; exists ; 2010 ; Advances in Applied Ceramics Volume 109 ; 109 > 
+    au < manifest ; exists ; 2011 ; Advances in Applied Ceramics Volume 110 ; 110 > 
 
   }
 
@@ -47,23 +43,23 @@ comment[0] = needs Clockss Ingenta plugin
     param[base_url] = http://apt.rcpsych.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < exists ; manifest ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 > 
-    au < exists ; manifest ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 > 
-    au < exists ; manifest ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 > 
-    au < exists ; manifest ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 > 
-    au < exists ; manifest ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 > 
-    au < exists ; manifest ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 > 
-    au < exists ; manifest ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 > 
-    au < exists ; manifest ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 > 
-    au < exists ; manifest ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 > 
-    au < exists ; manifest ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 > 
-    au < manifest ; manifest ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 > 
-    au < manifest ; manifest ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 > 
-    au < manifest ; manifest ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 > 
-    au < manifest ; manifest ; 2008 ; Advances in Psychiatric Treatment Volume 14 ; 14 > 
-    au < manifest ; manifest ; 2009 ; Advances in Psychiatric Treatment Volume 15 ; 15 > 
-    au < manifest ; manifest ; 2010 ; Advances in Psychiatric Treatment Volume 16 ; 16 > 
-    au < manifest ; manifest ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 > 
+    au < exists ; exists ; 1994-1995 ; Advances in Psychiatric Treatment Volume 1 ; 1 >
+    au < exists ; exists ; 1996 ; Advances in Psychiatric Treatment Volume 2 ; 2 >
+    au < exists ; exists ; 1997 ; Advances in Psychiatric Treatment Volume 3 ; 3 >
+    au < exists ; exists ; 1998 ; Advances in Psychiatric Treatment Volume 4 ; 4 >
+    au < exists ; exists ; 1999 ; Advances in Psychiatric Treatment Volume 5 ; 5 >
+    au < exists ; exists ; 2000 ; Advances in Psychiatric Treatment Volume 6 ; 6 >
+    au < exists ; exists ; 2001 ; Advances in Psychiatric Treatment Volume 7 ; 7 >
+    au < exists ; exists ; 2002 ; Advances in Psychiatric Treatment Volume 8 ; 8 >
+    au < exists ; exists ; 2003 ; Advances in Psychiatric Treatment Volume 9 ; 9 >
+    au < exists ; exists ; 2004 ; Advances in Psychiatric Treatment Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; Advances in Psychiatric Treatment Volume 11 ; 11 > 
+    au < manifest ; exists ; 2006 ; Advances in Psychiatric Treatment Volume 12 ; 12 > 
+    au < manifest ; exists ; 2007 ; Advances in Psychiatric Treatment Volume 13 ; 13 > 
+    au < manifest ; exists ; 2008 ; Advances in Psychiatric Treatment Volume 14 ; 14 > 
+    au < manifest ; exists ; 2009 ; Advances in Psychiatric Treatment Volume 15 ; 15 > 
+    au < manifest ; exists ; 2010 ; Advances in Psychiatric Treatment Volume 16 ; 16 > 
+    au < manifest ; exists ; 2011 ; Advances in Psychiatric Treatment Volume 17 ; 17 > 
 
   }
 
@@ -84,64 +80,64 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 0002-6980
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 1937 ; Ambix Volume 1 ; 1 >
-    au < manifest ; manifest ; 1938-1946 ; Ambix Volume 2 ; 2 >
-    au < manifest ; manifest ; 1948-1949 ; Ambix Volume 3 ; 3 >
-    au < manifest ; manifest ; 1949-1951 ; Ambix Volume 4 ; 4 >
-    au < manifest ; manifest ; 1953-1956 ; Ambix Volume 5 ; 5 >
-    au < manifest ; manifest ; 1957-1958 ; Ambix Volume 6 ; 6 >
-    au < manifest ; manifest ; 1959 ; Ambix Volume 7 ; 7 >
-    au < manifest ; manifest ; 1960 ; Ambix Volume 8 ; 8 >
-    au < manifest ; manifest ; 1961 ; Ambix Volume 9 ; 9 >
-    au < manifest ; manifest ; 1962 ; Ambix Volume 10 ; 10 >
-    au < manifest ; manifest ; 1963 ; Ambix Volume 11 ; 11 >
-    au < manifest ; manifest ; 1964 ; Ambix Volume 12 ; 12 >
-    au < manifest ; manifest ; 1965-1966 ; Ambix Volume 13 ; 13 >
-    au < manifest ; manifest ; 1967 ; Ambix Volume 14 ; 14 >
-    au < manifest ; manifest ; 1968 ; Ambix Volume 15 ; 15 >
-    au < manifest ; manifest ; 1969 ; Ambix Volume 16 ; 16 >
-    au < manifest ; manifest ; 1970 ; Ambix Volume 17 ; 17 >
-    au < manifest ; manifest ; 1971 ; Ambix Volume 18 ; 18 >
-    au < manifest ; manifest ; 1972 ; Ambix Volume 19 ; 19 >
-    au < manifest ; manifest ; 1973 ; Ambix Volume 20 ; 20 >
-    au < manifest ; manifest ; 1974 ; Ambix Volume 21 ; 21 >
-    au < manifest ; manifest ; 1975 ; Ambix Volume 22 ; 22 >
-    au < manifest ; manifest ; 1976 ; Ambix Volume 23 ; 23 >
-    au < manifest ; manifest ; 1977 ; Ambix Volume 24 ; 24 >
-    au < manifest ; manifest ; 1978 ; Ambix Volume 25 ; 25 >
-    au < manifest ; manifest ; 1979 ; Ambix Volume 26 ; 26 >
-    au < manifest ; manifest ; 1980 ; Ambix Volume 27 ; 27 >
-    au < manifest ; manifest ; 1981 ; Ambix Volume 28 ; 28 >
-    au < manifest ; manifest ; 1982 ; Ambix Volume 29 ; 29 >
-    au < manifest ; manifest ; 1983 ; Ambix Volume 30 ; 30 >
-    au < manifest ; manifest ; 1984 ; Ambix Volume 31 ; 31 >
-    au < manifest ; manifest ; 1985 ; Ambix Volume 32 ; 32 >
-    au < manifest ; manifest ; 1986 ; Ambix Volume 33 ; 33 >
-    au < manifest ; manifest ; 1987 ; Ambix Volume 34 ; 34 >
-    au < manifest ; manifest ; 1988 ; Ambix Volume 35 ; 35 >
-    au < manifest ; manifest ; 1989 ; Ambix Volume 36 ; 36 >
-    au < manifest ; manifest ; 1990 ; Ambix Volume 37 ; 37 >
-    au < manifest ; manifest ; 1991 ; Ambix Volume 38 ; 38 >
-    au < manifest ; manifest ; 1992 ; Ambix Volume 39 ; 39 >
-    au < manifest ; manifest ; 1993 ; Ambix Volume 40 ; 40 >
-    au < manifest ; manifest ; 1994 ; Ambix Volume 41 ; 41 >
-    au < manifest ; manifest ; 1995 ; Ambix Volume 42 ; 42 >
-    au < manifest ; manifest ; 1996 ; Ambix Volume 43 ; 43 >
-    au < manifest ; manifest ; 1997 ; Ambix Volume 44 ; 44 >
-    au < manifest ; manifest ; 1998 ; Ambix Volume 45 ; 45 >
-    au < manifest ; manifest ; 1999 ; Ambix Volume 46 ; 46 >
-    au < manifest ; manifest ; 2000 ; Ambix Volume 47 ; 47 >
-    au < manifest ; manifest ; 2001 ; Ambix Volume 48 ; 48 >
-    au < manifest ; manifest ; 2002 ; Ambix Volume 49 ; 49 >
-    au < manifest ; manifest ; 2003 ; Ambix Volume 50 ; 50 >
-    au < manifest ; manifest ; 2004 ; Ambix Volume 51 ; 51 >
-    au < manifest ; manifest ; 2005 ; Ambix Volume 52 ; 52 >
-    au < manifest ; manifest ; 2006 ; Ambix Volume 53 ; 53 >
-    au < manifest ; manifest ; 2007 ; Ambix Volume 54 ; 54 >
-    au < manifest ; manifest ; 2008 ; Ambix Volume 55 ; 55 >
-    au < manifest ; manifest ; 2009 ; Ambix Volume 56 ; 56 >
-    au < manifest ; manifest ; 2010 ; Ambix Volume 57 ; 57 >
-    au < manifest ; manifest ; 2011 ; Ambix Volume 58 ; 58 >
+    au < manifest ; exists ; 1937 ; Ambix Volume 1 ; 1 > 
+    au < manifest ; exists ; 1938-1946 ; Ambix Volume 2 ; 2 > 
+    au < manifest ; exists ; 1948-1949 ; Ambix Volume 3 ; 3 > 
+    au < manifest ; exists ; 1949-1951 ; Ambix Volume 4 ; 4 > 
+    au < manifest ; exists ; 1953-1956 ; Ambix Volume 5 ; 5 > 
+    au < manifest ; exists ; 1957-1958 ; Ambix Volume 6 ; 6 > 
+    au < manifest ; exists ; 1959 ; Ambix Volume 7 ; 7 >
+    au < manifest ; exists ; 1960 ; Ambix Volume 8 ; 8 >
+    au < manifest ; exists ; 1961 ; Ambix Volume 9 ; 9 >
+    au < manifest ; exists ; 1962 ; Ambix Volume 10 ; 10 >
+    au < manifest ; exists ; 1963 ; Ambix Volume 11 ; 11 >
+    au < manifest ; exists ; 1964 ; Ambix Volume 12 ; 12 > 
+    au < manifest ; exists ; 1965-1966 ; Ambix Volume 13 ; 13 > 
+    au < manifest ; exists ; 1967 ; Ambix Volume 14 ; 14 >
+    au < manifest ; exists ; 1968 ; Ambix Volume 15 ; 15 >
+    au < manifest ; exists ; 1969 ; Ambix Volume 16 ; 16 >
+    au < manifest ; exists ; 1970 ; Ambix Volume 17 ; 17 >
+    au < manifest ; exists ; 1971 ; Ambix Volume 18 ; 18 >
+    au < manifest ; exists ; 1972 ; Ambix Volume 19 ; 19 >
+    au < manifest ; exists ; 1973 ; Ambix Volume 20 ; 20 >
+    au < manifest ; exists ; 1974 ; Ambix Volume 21 ; 21 >
+    au < manifest ; exists ; 1975 ; Ambix Volume 22 ; 22 >
+    au < manifest ; exists ; 1976 ; Ambix Volume 23 ; 23 >
+    au < manifest ; exists ; 1977 ; Ambix Volume 24 ; 24 >
+    au < manifest ; exists ; 1978 ; Ambix Volume 25 ; 25 >
+    au < manifest ; exists ; 1979 ; Ambix Volume 26 ; 26 >
+    au < manifest ; exists ; 1980 ; Ambix Volume 27 ; 27 >
+    au < manifest ; exists ; 1981 ; Ambix Volume 28 ; 28 >
+    au < manifest ; exists ; 1982 ; Ambix Volume 29 ; 29 >
+    au < manifest ; exists ; 1983 ; Ambix Volume 30 ; 30 >
+    au < manifest ; exists ; 1984 ; Ambix Volume 31 ; 31 >
+    au < manifest ; exists ; 1985 ; Ambix Volume 32 ; 32 >
+    au < manifest ; exists ; 1986 ; Ambix Volume 33 ; 33 >
+    au < manifest ; exists ; 1987 ; Ambix Volume 34 ; 34 >
+    au < manifest ; exists ; 1988 ; Ambix Volume 35 ; 35 >
+    au < manifest ; exists ; 1989 ; Ambix Volume 36 ; 36 >
+    au < manifest ; exists ; 1990 ; Ambix Volume 37 ; 37 >
+    au < manifest ; exists ; 1991 ; Ambix Volume 38 ; 38 >
+    au < manifest ; exists ; 1992 ; Ambix Volume 39 ; 39 >
+    au < manifest ; exists ; 1993 ; Ambix Volume 40 ; 40 >
+    au < manifest ; exists ; 1994 ; Ambix Volume 41 ; 41 >
+    au < manifest ; exists ; 1995 ; Ambix Volume 42 ; 42 >
+    au < manifest ; exists ; 1996 ; Ambix Volume 43 ; 43 >
+    au < manifest ; exists ; 1997 ; Ambix Volume 44 ; 44 >
+    au < manifest ; exists ; 1998 ; Ambix Volume 45 ; 45 >
+    au < manifest ; exists ; 1999 ; Ambix Volume 46 ; 46 >
+    au < manifest ; exists ; 2000 ; Ambix Volume 47 ; 47 >
+    au < manifest ; exists ; 2001 ; Ambix Volume 48 ; 48 >
+    au < manifest ; exists ; 2002 ; Ambix Volume 49 ; 49 >
+    au < manifest ; exists ; 2003 ; Ambix Volume 50 ; 50 >
+    au < manifest ; exists ; 2004 ; Ambix Volume 51 ; 51 >
+    au < manifest ; exists ; 2005 ; Ambix Volume 52 ; 52 >
+    au < manifest ; exists ; 2006 ; Ambix Volume 53 ; 53 >
+    au < manifest ; exists ; 2007 ; Ambix Volume 54 ; 54 >
+    au < manifest ; exists ; 2008 ; Ambix Volume 55 ; 55 >
+    au < manifest ; exists ; 2009 ; Ambix Volume 56 ; 56 >
+    au < manifest ; exists ; 2010 ; Ambix Volume 57 ; 57 >
+    au < manifest ; exists ; 2011 ; Ambix Volume 58 ; 58 >
 
   }
 
@@ -222,17 +218,17 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 0371-7453
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
-    au < manifest ; manifest ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
-    au < manifest ; manifest ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
-    au < manifest ; manifest ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
-    au < manifest ; manifest ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
-    au < manifest ; manifest ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
-    au < manifest ; manifest ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
-    au < manifest ; manifest ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
-    au < manifest ; manifest ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
-    au < manifest ; manifest ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
-    au < manifest ; manifest ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
+    au < manifest ; exists ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
+    au < manifest ; exists ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
+    au < manifest ; exists ; 2002 ; Applied Earth Science: IMM Transactions section B Volume 111 ; 111 > 
+    au < manifest ; exists ; 2003 ; Applied Earth Science: IMM Transactions section B Volume 112 ; 112 > 
+    au < manifest ; exists ; 2004 ; Applied Earth Science: IMM Transactions section B Volume 113 ; 113 > 
+    au < manifest ; exists ; 2005 ; Applied Earth Science: IMM Transactions section B Volume 114 ; 114 > 
+    au < manifest ; exists ; 2006 ; Applied Earth Science: IMM Transactions section B Volume 115 ; 115 > 
+    au < manifest ; exists ; 2007 ; Applied Earth Science: IMM Transactions section B Volume 116 ; 116 > 
+    au < manifest ; exists ; 2008 ; Applied Earth Science: IMM Transactions section B Volume 117 ; 117 > 
+    au < manifest ; exists ; 2009 ; Applied Earth Science: IMM Transactions section B Volume 118 ; 118 > 
+    au < manifest ; exists ; 2010 ; Applied Earth Science: IMM Transactions section B Volume 119 ; 119 > 
 
   }
 
@@ -253,14 +249,14 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 1741-6124
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
-    au < manifest ; manifest ; 2005 ; Arms & Armour Volume 2 ; 2 > 
-    au < manifest ; manifest ; 2006 ; Arms & Armour Volume 3 ; 3 > 
-    au < manifest ; manifest ; 2007 ; Arms & Armour Volume 4 ; 4 > 
-    au < manifest ; manifest ; 2008 ; Arms & Armour Volume 5 ; 5 > 
-    au < manifest ; manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
-    au < manifest ; manifest ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < manifest ; manifest ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < manifest ; exists ; 2004 ; Arms & Armour Volume 1 ; 1 > 
+    au < manifest ; exists ; 2005 ; Arms & Armour Volume 2 ; 2 > 
+    au < manifest ; exists ; 2006 ; Arms & Armour Volume 3 ; 3 > 
+    au < manifest ; exists ; 2007 ; Arms & Armour Volume 4 ; 4 > 
+    au < manifest ; exists ; 2008 ; Arms & Armour Volume 5 ; 5 > 
+    au < manifest ; exists ; 2009 ; Arms & Armour Volume 6 ; 6 > 
+    au < manifest ; exists ; 2010 ; Arms & Armour Volume 7 ; 7 > 
+    au < manifest ; exists ; 2011 ; Arms & Armour Volume 8 ; 8 > 
 
   }
 
@@ -494,16 +490,16 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 1474-8932
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2002 ; Bronte Studies Volume 27 ; 27 >
-    au < doesNotExist ; doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 >
-    au < doesNotExist ; doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 >
-    au < manifest ; manifest ; 2005 ; Bronte Studies Volume 30 ; 30 >
-    au < manifest ; manifest ; 2006 ; Bronte Studies Volume 31 ; 31 >
-    au < manifest ; manifest ; 2007 ; Bronte Studies Volume 32 ; 32 >
-    au < manifest ; manifest ; 2008 ; Bronte Studies Volume 33 ; 33 >
-    au < manifest ; manifest ; 2009 ; Bronte Studies Volume 34 ; 34 >
-    au < manifest ; manifest ; 2010 ; Bronte Studies Volume 35 ; 35 >
-    au < manifest ; manifest ; 2011 ; Bronte Studies Volume 36 ; 36 >
+    au < manifest ; exists ; 2002 ; Bronte Studies Volume 27 ; 27 > 
+    au < doesNotExist ; doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
+    au < doesNotExist ; doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 > 
+    au < manifest ; exists ; 2005 ; Bronte Studies Volume 30 ; 30 > 
+    au < manifest ; exists ; 2006 ; Bronte Studies Volume 31 ; 31 > 
+    au < manifest ; exists ; 2007 ; Bronte Studies Volume 32 ; 32 > 
+    au < manifest ; exists ; 2008 ; Bronte Studies Volume 33 ; 33 > 
+    au < manifest ; exists ; 2009 ; Bronte Studies Volume 34 ; 34 > 
+    au < manifest ; exists ; 2010 ; Bronte Studies Volume 35 ; 35 > 
+    au < manifest ; exists ; 2011 ; Bronte Studies Volume 36 ; 36 > 
 
   }
 
@@ -524,9 +520,9 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 1758-8960
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
-    au < manifest ; manifest ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
-    au < manifest ; manifest ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
+    au < manifest ; exists ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
+    au < manifest ; exists ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
 
   }
 
@@ -547,11 +543,11 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 1752-7260
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 >
-    au < manifest ; manifest ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 >
-    au < manifest ; manifest ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 >
-    au < manifest ; manifest ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 >
-    au < manifest ; manifest ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
+    au < manifest ; exists ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
+    au < manifest ; exists ; 2008 ; Bulletin of the Council for British Research in the Levant Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Bulletin of the Council for British Research in the Levant Volume 4 ; 4 > 
+    au < manifest ; exists ; 2010 ; Bulletin of the Council for British Research in the Levant Volume 5 ; 5 > 
 
   }
 
@@ -572,41 +568,41 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 0307-0131
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
-    au < manifest ; manifest ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
-    au < manifest ; manifest ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
-    au < manifest ; manifest ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
-    au < manifest ; manifest ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
-    au < manifest ; manifest ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
-    au < manifest ; manifest ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
-    au < manifest ; manifest ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
-    au < manifest ; manifest ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
-    au < manifest ; manifest ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
-    au < manifest ; manifest ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
-    au < manifest ; manifest ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
-    au < manifest ; manifest ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
-    au < manifest ; manifest ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
-    au < manifest ; manifest ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
-    au < manifest ; manifest ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
-    au < manifest ; manifest ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
-    au < manifest ; manifest ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
-    au < manifest ; manifest ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
-    au < manifest ; manifest ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
-    au < manifest ; manifest ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
-    au < manifest ; manifest ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
-    au < manifest ; manifest ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
-    au < manifest ; manifest ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
-    au < manifest ; manifest ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
-    au < manifest ; manifest ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
-    au < manifest ; manifest ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
-    au < manifest ; manifest ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
-    au < manifest ; manifest ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
-    au < manifest ; manifest ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
-    au < manifest ; manifest ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
-    au < manifest ; manifest ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
-    au < manifest ; manifest ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
-    au < manifest ; manifest ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
-    au < manifest ; manifest ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
+    au < manifest ; exists ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
+    au < manifest ; exists ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
+    au < manifest ; exists ; 1977 ; Byzantine and Modern Greek Studies Volume 3 ; 3 >
+    au < manifest ; exists ; 1978 ; Byzantine and Modern Greek Studies Volume 4 ; 4 >
+    au < manifest ; exists ; 1979 ; Byzantine and Modern Greek Studies Volume 5 ; 5 >
+    au < manifest ; exists ; 1980 ; Byzantine and Modern Greek Studies Volume 6 ; 6 >
+    au < manifest ; exists ; 1981 ; Byzantine and Modern Greek Studies Volume 7 ; 7 >
+    au < manifest ; exists ; 1982 ; Byzantine and Modern Greek Studies Volume 8 ; 8 >
+    au < manifest ; exists ; 1984 ; Byzantine and Modern Greek Studies Volume 9 ; 9 >
+    au < manifest ; exists ; 1986 ; Byzantine and Modern Greek Studies Volume 10 ; 10 >
+    au < manifest ; exists ; 1987 ; Byzantine and Modern Greek Studies Volume 11 ; 11 >
+    au < manifest ; exists ; 1988 ; Byzantine and Modern Greek Studies Volume 12 ; 12 >
+    au < manifest ; exists ; 1989 ; Byzantine and Modern Greek Studies Volume 13 ; 13 >
+    au < manifest ; exists ; 1990 ; Byzantine and Modern Greek Studies Volume 14 ; 14 >
+    au < manifest ; exists ; 1991 ; Byzantine and Modern Greek Studies Volume 15 ; 15 >
+    au < manifest ; exists ; 1992 ; Byzantine and Modern Greek Studies Volume 16 ; 16 >
+    au < manifest ; exists ; 1993 ; Byzantine and Modern Greek Studies Volume 17 ; 17 >
+    au < manifest ; exists ; 1994 ; Byzantine and Modern Greek Studies Volume 18 ; 18 >
+    au < manifest ; exists ; 1995 ; Byzantine and Modern Greek Studies Volume 19 ; 19 >
+    au < manifest ; exists ; 1996 ; Byzantine and Modern Greek Studies Volume 20 ; 20 >
+    au < manifest ; exists ; 1997 ; Byzantine and Modern Greek Studies Volume 21 ; 21 >
+    au < manifest ; exists ; 1998 ; Byzantine and Modern Greek Studies Volume 22 ; 22 >
+    au < manifest ; exists ; 1999 ; Byzantine and Modern Greek Studies Volume 23 ; 23 >
+    au < manifest ; exists ; 2000 ; Byzantine and Modern Greek Studies Volume 24 ; 24 >
+    au < manifest ; exists ; 2001 ; Byzantine and Modern Greek Studies Volume 25 ; 25 >
+    au < manifest ; exists ; 2002 ; Byzantine and Modern Greek Studies Volume 26 ; 26 >
+    au < manifest ; exists ; 2003 ; Byzantine and Modern Greek Studies Volume 27 ; 27 >
+    au < manifest ; exists ; 2004 ; Byzantine and Modern Greek Studies Volume 28 ; 28 >
+    au < manifest ; exists ; 2005 ; Byzantine and Modern Greek Studies Volume 29 ; 29 >
+    au < manifest ; exists ; 2006 ; Byzantine and Modern Greek Studies Volume 30 ; 30 >
+    au < manifest ; exists ; 2007 ; Byzantine and Modern Greek Studies Volume 31 ; 31 >
+    au < manifest ; exists ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
+    au < manifest ; exists ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
+    au < manifest ; exists ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
+    au < manifest ; exists ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
 
   }
 
@@ -627,56 +623,56 @@ comment[0] = needs Clockss Ingenta plugin
     param[journal_issn] = 0008-4433
     implicit < status1 ; status ; year; name ; param[volume_name] >
 
-    au < manifest ; manifest ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
-    au < manifest ; manifest ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
-    au < manifest ; manifest ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
-    au < manifest ; manifest ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
-    au < manifest ; manifest ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
-    au < manifest ; manifest ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
-    au < manifest ; manifest ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
-    au < manifest ; manifest ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
-    au < manifest ; manifest ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
-    au < manifest ; manifest ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
-    au < manifest ; manifest ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
-    au < manifest ; manifest ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
-    au < manifest ; manifest ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
-    au < manifest ; manifest ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
-    au < manifest ; manifest ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
-    au < doesNotExist ; doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
-    au < doesNotExist ; doesNotExist ; 1978 ; Canadian Metallurgical Quarterly Volume 17 ; 17 >
-    au < manifest ; manifest ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
-    au < manifest ; manifest ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
-    au < manifest ; manifest ; 1981 ; Canadian Metallurgical Quarterly Volume 20 ; 20 >
-    au < manifest ; manifest ; 1982 ; Canadian Metallurgical Quarterly Volume 21 ; 21 >
-    au < manifest ; manifest ; 1983 ; Canadian Metallurgical Quarterly Volume 22 ; 22 >
-    au < manifest ; manifest ; 1984 ; Canadian Metallurgical Quarterly Volume 23 ; 23 >
-    au < manifest ; manifest ; 1985 ; Canadian Metallurgical Quarterly Volume 24 ; 24 >
-    au < manifest ; manifest ; 1986 ; Canadian Metallurgical Quarterly Volume 25 ; 25 >
-    au < manifest ; manifest ; 1987 ; Canadian Metallurgical Quarterly Volume 26 ; 26 >
-    au < manifest ; manifest ; 1988 ; Canadian Metallurgical Quarterly Volume 27 ; 27 >
-    au < manifest ; manifest ; 1989 ; Canadian Metallurgical Quarterly Volume 28 ; 28 >
-    au < manifest ; manifest ; 1990 ; Canadian Metallurgical Quarterly Volume 29 ; 29 >
-    au < manifest ; manifest ; 1991 ; Canadian Metallurgical Quarterly Volume 30 ; 30 >
-    au < manifest ; manifest ; 1992 ; Canadian Metallurgical Quarterly Volume 31 ; 31 >
-    au < manifest ; manifest ; 1993 ; Canadian Metallurgical Quarterly Volume 32 ; 32 >
-    au < manifest ; manifest ; 1994 ; Canadian Metallurgical Quarterly Volume 33 ; 33 >
-    au < manifest ; manifest ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
-    au < manifest ; manifest ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
-    au < manifest ; manifest ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
-    au < doesNotExist ; doesNotExist ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
-    au < doesNotExist ; doesNotExist ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
-    au < manifest ; manifest ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
-    au < manifest ; manifest ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
-    au < manifest ; manifest ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
-    au < manifest ; manifest ; 2003 ; Canadian Metallurgical Quarterly Volume 42 ; 42 >
-    au < manifest ; manifest ; 2004 ; Canadian Metallurgical Quarterly Volume 43 ; 43 >
-    au < manifest ; manifest ; 2005 ; Canadian Metallurgical Quarterly Volume 44 ; 44 >
-    au < manifest ; manifest ; 2006 ; Canadian Metallurgical Quarterly Volume 45 ; 45 >
-    au < manifest ; manifest ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
-    au < manifest ; manifest ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
-    au < manifest ; manifest ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
-    au < manifest ; manifest ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
-    au < manifest ; manifest ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
+      au < manifest ; exists ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
+      au < manifest ; exists ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
+      au < manifest ; exists ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
+      au < manifest ; exists ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
+      au < manifest ; exists ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
+      au < manifest ; exists ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
+      au < manifest ; exists ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
+      au < manifest ; exists ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
+      au < manifest ; exists ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
+      au < manifest ; exists ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
+      au < manifest ; exists ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
+      au < manifest ; exists ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
+      au < manifest ; exists ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
+      au < manifest ; exists ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
+      au < manifest ; exists ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
+      au < doesNotExist ; doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
+      au < doesNotExist ; doesNotExist ; 1978 ; Canadian Metallurgical Quarterly Volume 17 ; 17 >
+      au < manifest ; exists ; 1979 ; Canadian Metallurgical Quarterly Volume 18 ; 18 >
+      au < manifest ; exists ; 1980 ; Canadian Metallurgical Quarterly Volume 19 ; 19 >
+      au < manifest ; exists ; 1981 ; Canadian Metallurgical Quarterly Volume 20 ; 20 >
+      au < manifest ; exists ; 1982 ; Canadian Metallurgical Quarterly Volume 21 ; 21 >
+      au < manifest ; exists ; 1983 ; Canadian Metallurgical Quarterly Volume 22 ; 22 >
+      au < manifest ; exists ; 1984 ; Canadian Metallurgical Quarterly Volume 23 ; 23 >
+      au < manifest ; exists ; 1985 ; Canadian Metallurgical Quarterly Volume 24 ; 24 >
+      au < manifest ; exists ; 1986 ; Canadian Metallurgical Quarterly Volume 25 ; 25 >
+      au < manifest ; exists ; 1987 ; Canadian Metallurgical Quarterly Volume 26 ; 26 >
+      au < manifest ; exists ; 1988 ; Canadian Metallurgical Quarterly Volume 27 ; 27 >
+      au < manifest ; exists ; 1989 ; Canadian Metallurgical Quarterly Volume 28 ; 28 >
+      au < manifest ; exists ; 1990 ; Canadian Metallurgical Quarterly Volume 29 ; 29 >
+      au < manifest ; exists ; 1991 ; Canadian Metallurgical Quarterly Volume 30 ; 30 >
+      au < manifest ; exists ; 1992 ; Canadian Metallurgical Quarterly Volume 31 ; 31 >
+      au < manifest ; exists ; 1993 ; Canadian Metallurgical Quarterly Volume 32 ; 32 >
+      au < manifest ; exists ; 1994 ; Canadian Metallurgical Quarterly Volume 33 ; 33 >
+      au < manifest ; exists ; 1995 ; Canadian Metallurgical Quarterly Volume 34 ; 34 >
+      au < manifest ; exists ; 1996 ; Canadian Metallurgical Quarterly Volume 35 ; 35 >
+      au < manifest ; exists ; 1997 ; Canadian Metallurgical Quarterly Volume 36 ; 36 >
+      au < doesNotExist ; doesNotExist ; 1998 ; Canadian Metallurgical Quarterly Volume 37 ; 37 >
+      au < doesNotExist ; doesNotExist ; 1999 ; Canadian Metallurgical Quarterly Volume 38 ; 38 >
+      au < manifest ; exists ; 2000 ; Canadian Metallurgical Quarterly Volume 39 ; 39 >
+      au < manifest ; exists ; 2001 ; Canadian Metallurgical Quarterly Volume 40 ; 40 >
+      au < manifest ; exists ; 2002 ; Canadian Metallurgical Quarterly Volume 41 ; 41 >
+      au < manifest ; exists ; 2003 ; Canadian Metallurgical Quarterly Volume 42 ; 42 >
+      au < manifest ; exists ; 2004 ; Canadian Metallurgical Quarterly Volume 43 ; 43 >
+      au < manifest ; exists ; 2005 ; Canadian Metallurgical Quarterly Volume 44 ; 44 >
+      au < manifest ; exists ; 2006 ; Canadian Metallurgical Quarterly Volume 45 ; 45 >
+      au < manifest ; exists ; 2007 ; Canadian Metallurgical Quarterly Volume 46 ; 46 >
+      au < manifest ; exists ; 2008 ; Canadian Metallurgical Quarterly Volume 47 ; 47 >
+      au < manifest ; exists ; 2009 ; Canadian Metallurgical Quarterly Volume 48 ; 48 >
+      au < manifest ; exists ; 2010 ; Canadian Metallurgical Quarterly Volume 49 ; 49 >
+      au < manifest ; exists ; 2011 ; Canadian Metallurgical Quarterly Volume 50 ; 50 >
 
   }
 
