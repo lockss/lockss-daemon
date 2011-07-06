@@ -12,17 +12,43 @@
       eissn = 1549-490X ;
       issnl = 1083-7159
     >
+    
+    {
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-    param[base_url] = http://theoncologist.alphamedpress.org/
-    implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://theoncologist.alphamedpress.org/
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < down ; 2005 ; The Oncologist Volume 10 ; 10 >
+      au < down ; 2006 ; The Oncologist Volume 11 ; 11 >
+      au < down ; 2007 ; The Oncologist Volume 12 ; 12 >
+      au < down ; 2008 ; The Oncologist Volume 13 ; 13 >
+      au < down ; 2009 ; The Oncologist Volume 14 ; 14 >
+      
+    }
+    
+    {
 
-    au < released ; 2005 ; The Oncologist Volume 10 ; 10 >
-    au < released ; 2006 ; The Oncologist Volume 11 ; 11 >
-    au < released ; 2007 ; The Oncologist Volume 12 ; 12 >
-    au < released ; 2008 ; The Oncologist Volume 13 ; 13 >
-    au < released ; 2009 ; The Oncologist Volume 14 ; 14 >
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://theoncologist.alphamedpress.org/
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2005 ; The Oncologist Volume 10 ; 10 >
+      au < exists ; 2006 ; The Oncologist Volume 11 ; 11 >
+      au < exists ; 2007 ; The Oncologist Volume 12 ; 12 >
+      au < exists ; 2008 ; The Oncologist Volume 13 ; 13 >
+      au < exists ; 2009 ; The Oncologist Volume 14 ; 14 >
+      
+    }
 
   }
+  
+  {
+
+    title <
+      name = Stem Cells: Translational Medicine 
+    >
+    
+  }  
 
 }
