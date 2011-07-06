@@ -17,10 +17,10 @@
       param[base_url] = http://erc.endocrinology-journals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1994 ; Endocrine-Related Cancer Volume 1 ; 1 >
-      au < exists ; 1995 ; Endocrine-Related Cancer Volume 2 ; 2 >
-      au < exists ; 1996 ; Endocrine-Related Cancer Volume 3 ; 3 >
-      au < exists ; 1997 ; Endocrine-Related Cancer Volume 4 ; 4 >
+      au < manifest ; 1994 ; Endocrine-Related Cancer Volume 1 ; 1 >
+      au < manifest ; 1995 ; Endocrine-Related Cancer Volume 2 ; 2 >
+      au < manifest ; 1996 ; Endocrine-Related Cancer Volume 3 ; 3 >
+      au < manifest ; 1997 ; Endocrine-Related Cancer Volume 4 ; 4 >
       au < manifest ; 1998 ; Endocrine-Related Cancer Volume 5 ; 5 >
       au < manifest ; 1999 ; Endocrine-Related Cancer Volume 6 ; 6 >
       au < manifest ; 2000 ; Endocrine-Related Cancer Volume 7 ; 7 >
@@ -55,38 +55,38 @@
       implicit < pluginSuffix ; status ; year ;  name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; 1939 ; Journal of Endocrinology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1940 ; Journal of Endocrinology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1942 ; Journal of Endocrinology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1944 ; Journal of Endocrinology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
-      au < HighWirePressH20Plugin ; exists ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
-      au < HighWirePressH20Plugin ; exists ; 1949-1950 ; Journal of Endocrinology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1950-1951 ; Journal of Endocrinology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; 1952 ; Journal of Endocrinology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; 1953 ; Journal of Endocrinology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 1953-1954 ; Journal of Endocrinology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; 1954 ; Journal of Endocrinology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; 1955 ; Journal of Endocrinology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; 1955-1956 ; Journal of Endocrinology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; 1956-1957 ; Journal of Endocrinology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; 1957 ; Journal of Endocrinology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; 1957-1958 ; Journal of Endocrinology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; 1958 ; Journal of Endocrinology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; 1959 ; Journal of Endocrinology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; 1959 ; Journal of Endocrinology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; 1960 ; Journal of Endocrinology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; 1960-1961 ; Journal of Endocrinology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; 1962 ; Journal of Endocrinology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; 1961-1962 ; Journal of Endocrinology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 1962 ; Journal of Endocrinology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 1962-1963 ; Journal of Endocrinology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; 1963 ; Journal of Endocrinology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; 1963 ; Journal of Endocrinology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; 1963-1964 ; Journal of Endocrinology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; 1964 ; Journal of Endocrinology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; 1964 ; Journal of Endocrinology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; 1964-1965 ; Journal of Endocrinology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; 1965 ; Journal of Endocrinology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1940 ; Journal of Endocrinology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1942 ; Journal of Endocrinology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1944 ; Journal of Endocrinology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
+      au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
+      au < HighWirePressH20Plugin ; manifest ; 1949-1950 ; Journal of Endocrinology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; Journal of Endocrinology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Endocrinology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Endocrinology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1953-1954 ; Journal of Endocrinology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Endocrinology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Endocrinology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1955-1956 ; Journal of Endocrinology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1956-1957 ; Journal of Endocrinology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Endocrinology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1957-1958 ; Journal of Endocrinology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Endocrinology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Endocrinology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Endocrinology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Endocrinology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1960-1961 ; Journal of Endocrinology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Endocrinology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1961-1962 ; Journal of Endocrinology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Endocrinology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1962-1963 ; Journal of Endocrinology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Endocrinology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Endocrinology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1963-1964 ; Journal of Endocrinology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Endocrinology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Endocrinology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1964-1965 ; Journal of Endocrinology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Endocrinology Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Endocrinology Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Endocrinology Volume 34 ; 34 > 
       au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Endocrinology Volume 35 ; 35 >
