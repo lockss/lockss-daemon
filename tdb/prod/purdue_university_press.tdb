@@ -7,7 +7,7 @@
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
     {
@@ -21,10 +21,12 @@
 
       param[journal_dir] = education_and_culture
 
-      au < released ; Education and Culture Volume 22 ; 22 >
-      au < released ; Education and Culture Volume 23 ; 23 >
-      au < released ; Education and Culture Volume 24 ; 24 >
-      au < released ; Education and Culture Volume 25 ; 25 >
+      au < released ; 2006 ; Education and Culture Volume 22 ; 22 >
+      au < released ; 2007 ; Education and Culture Volume 23 ; 23 >
+      au < released ; 2008 ; Education and Culture Volume 24 ; 24 >
+      au < released ; 2009 ; Education and Culture Volume 25 ; 25 >
+      au < manifest ; 2010 ; Education and Culture Volume 26 ; 26 >
+      au < manifest ; 2011 ; Education and Culture Volume 27 ; 27 >      
 
     }
 
@@ -39,15 +41,17 @@
 
       param[journal_dir] = shofar
 
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
-      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+      au < released ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
+      au < released ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
+      au < released ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
+      au < released ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
+      au < released ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
+      au < released ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
+      au < released ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
+      au < released ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
+      au < released ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+      au < manifest ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
+      au < manifest ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
 
     }
 
@@ -62,8 +66,9 @@
 
       param[journal_dir] = studies_in_american_jewish_literature
 
-      au < released ; Studies in American Jewish Literature Volume 27 ; 27 >
-      au < released ; Studies in American Jewish Literature Volume 28 ; 28 >
+      au < released ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
+      au < released ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
+      au < manifest ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
 
     }
 
