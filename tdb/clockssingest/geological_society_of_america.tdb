@@ -28,7 +28,8 @@
     title <
       name = Geological Society of America Bulletin ;
       issn = 0016-7606 ;
-      eissn = 1943-2674
+      eissn = 1943-2674 ;
+      issnl = 0016-7606
     >
 
     param[base_url] = http://gsabulletin.gsapubs.org/
@@ -152,7 +153,8 @@
     title <
       name = Geology ;
       issn = 0091-7613 ;
-      eissn = 1943-2682
+      eissn = 1943-2682 ;
+      issnl = 0091-7613
     >
 
     param[base_url] = http://geology.gsapubs.org/
