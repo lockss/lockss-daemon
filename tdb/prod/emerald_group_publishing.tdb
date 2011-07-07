@@ -72,7 +72,7 @@
 
     param[journal_issn] = 1757-0972
 
-    au < exists ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
+    au < testing ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
     au < exists ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
     au < exists ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
 
@@ -87,7 +87,7 @@
 
     param[journal_issn] = 2044-1282
 
-    au < exists ; 2007 ; Advances in Mental Health and Intellectual Disabilities Volume 1 ; 1 >
+    au < testing ; 2007 ; Advances in Mental Health and Intellectual Disabilities Volume 1 ; 1 >
     au < exists ; 2008 ; Advances in Mental Health and Intellectual Disabilities Volume 2 ; 2 >
     au < exists ; 2009 ; Advances in Mental Health and Intellectual Disabilities Volume 3 ; 3 >
     au < exists ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >    
@@ -894,7 +894,7 @@
 
     param[journal_issn] = 1463-6646
     
-    au < exists ; 1999 ; The British Journal of Forensic Practice Volume 1 ; 1 >
+    au < testing ; 1999 ; The British Journal of Forensic Practice Volume 1 ; 1 >
     au < exists ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 >
     au < exists ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 >
     au < exists ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 >
@@ -4367,7 +4367,7 @@
     au < released ; 2008 ; Journal of Advances in Management Research Volume 5 ; 5 >
     au < released ; 2009 ; Journal of Advances in Management Research Volume 6 ; 6 >
     au < released ; 2010 ; Journal of Advances in Management Research Volume 7 ; 7 >
-    au < exists ; 2011 ; Journal of Advances in Management Research Volume 8 ; 8 >
+    au < testing ; 2011 ; Journal of Advances in Management Research Volume 8 ; 8 >
 
   }
 
@@ -4406,7 +4406,7 @@
     au < released ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 >
     au < released ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 >
     au < released ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 >
-    au < exists ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 >
+    au < testing ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 >
 
   }
 
@@ -4421,7 +4421,7 @@
     
     au < released ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
     au < released ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
-    au < exists ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
+    au < testing ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 >
     
   }
     
@@ -4604,7 +4604,7 @@
     param[journal_issn] = 2040-8005
     
     au < released ; 2010 ; Journal of Chinese Human Resource Management Volume 1 ; 1 >
-    au < exists ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
+    au < testing ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
 
   }
 
@@ -5216,6 +5216,7 @@
     au < released ; 2008 ; Journal of Financial Reporting & Accounting Volume 6 ; 6 >
     au < released ; 2009 ; Journal of Financial Reporting & Accounting Volume 7 ; 7 >
     au < released ; 2010 ; Journal of Financial Reporting & Accounting Volume 8 ; 8 >
+    au < testing ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 >
 
   }
 
@@ -8365,7 +8366,7 @@
     au < released ; 2009 ; Social Enterprise Journal Volume 5 ; 5 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
-    au < exists; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
+    au < testing ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
   }
 
   {
