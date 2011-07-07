@@ -15,28 +15,28 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://japr.fass.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; The Journal of Applied Poultry Research Volume 1 ; 1 >
-      au < released ; The Journal of Applied Poultry Research Volume 2 ; 2 >
-      au < released ; The Journal of Applied Poultry Research Volume 3 ; 3 >
-      au < released ; The Journal of Applied Poultry Research Volume 4 ; 4 >
-      au < released ; The Journal of Applied Poultry Research Volume 5 ; 5 >
-      au < released ; The Journal of Applied Poultry Research Volume 6 ; 6 >
-      au < released ; The Journal of Applied Poultry Research Volume 7 ; 7 >
-      au < released ; The Journal of Applied Poultry Research Volume 8 ; 8 >
-      au < released ; The Journal of Applied Poultry Research Volume 9 ; 9 >
-      au < released ; The Journal of Applied Poultry Research Volume 10 ; 10 >
-      au < released ; The Journal of Applied Poultry Research Volume 11 ; 11 >
-      au < released ; The Journal of Applied Poultry Research Volume 12 ; 12 >
-      au < released ; The Journal of Applied Poultry Research Volume 13 ; 13 >
-      au < released ; The Journal of Applied Poultry Research Volume 14 ; 14 >
-      au < released ; The Journal of Applied Poultry Research Volume 15 ; 15 >
-      au < released ; The Journal of Applied Poultry Research Volume 16 ; 16 >
-      au < released ; The Journal of Applied Poultry Research Volume 17 ; 17 >
-      au < released ; The Journal of Applied Poultry Research Volume 18 ; 18 >
-      au < released ; The Journal of Applied Poultry Research Volume 19 ; 19 >
-      au < released ; The Journal of Applied Poultry Research Volume 20 ; 20 >
+      au < released ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 >
+      au < released ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 >
+      au < released ; 1994 ; The Journal of Applied Poultry Research Volume 3 ; 3 >
+      au < released ; 1995 ; The Journal of Applied Poultry Research Volume 4 ; 4 >
+      au < released ; 1996 ; The Journal of Applied Poultry Research Volume 5 ; 5 >
+      au < released ; 1997 ; The Journal of Applied Poultry Research Volume 6 ; 6 >
+      au < released ; 1998 ; The Journal of Applied Poultry Research Volume 7 ; 7 >
+      au < released ; 1999 ; The Journal of Applied Poultry Research Volume 8 ; 8 >
+      au < released ; 2000 ; The Journal of Applied Poultry Research Volume 9 ; 9 >
+      au < released ; 2001 ; The Journal of Applied Poultry Research Volume 10 ; 10 >
+      au < released ; 2002 ; The Journal of Applied Poultry Research Volume 11 ; 11 >
+      au < released ; 2003 ; The Journal of Applied Poultry Research Volume 12 ; 12 >
+      au < released ; 2004 ; The Journal of Applied Poultry Research Volume 13 ; 13 >
+      au < released ; 2005 ; The Journal of Applied Poultry Research Volume 14 ; 14 >
+      au < released ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 >
+      au < released ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 >
+      au < released ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 >
+      au < released ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 >
+      au < released ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 >
+      au < released ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 >
 
     }
 
@@ -54,23 +54,98 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ps.fass.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Poultry Science Volume 76 ; 76 >
-      au < released ; Poultry Science Volume 77 ; 77 >
-      au < released ; Poultry Science Volume 78 ; 78 >
-      au < released ; Poultry Science Volume 79 ; 79 >
-      au < released ; Poultry Science Volume 80 ; 80 >
-      au < released ; Poultry Science Volume 81 ; 81 >
-      au < released ; Poultry Science Volume 82 ; 82 >
-      au < released ; Poultry Science Volume 83 ; 83 >
-      au < released ; Poultry Science Volume 84 ; 84 >
-      au < released ; Poultry Science Volume 85 ; 85 >
-      au < released ; Poultry Science Volume 86 ; 86 >
-      au < released ; Poultry Science Volume 87 ; 87 >
-      au < released ; Poultry Science Volume 88 ; 88 >
-      au < released ; Poultry Science Volume 89 ; 89 >
-      au < released ; Poultry Science Volume 90 ; 90 >
+      au < exists ; 1922 ; Poultry Science Volume 1 ; 1 >
+      au < exists ; 1923 ; Poultry Science Volume 2 ; 2 >
+      au < exists ; 1924 ; Poultry Science Volume 3 ; 3 >
+      au < exists ; 1925 ; Poultry Science Volume 4 ; 4 >
+      au < exists ; 1926 ; Poultry Science Volume 5 ; 5 >
+      au < exists ; 1927 ; Poultry Science Volume 6 ; 6 >
+      au < exists ; 1928 ; Poultry Science Volume 7 ; 7 >
+      au < exists ; 1929 ; Poultry Science Volume 8 ; 8 >
+      au < exists ; 1930 ; Poultry Science Volume 9 ; 9 >
+      au < exists ; 1931 ; Poultry Science Volume 10 ; 10 >
+      au < exists ; 1932 ; Poultry Science Volume 11 ; 11 >
+      au < exists ; 1933 ; Poultry Science Volume 12 ; 12 >
+      au < exists ; 1934 ; Poultry Science Volume 13 ; 13 >
+      au < exists ; 1935 ; Poultry Science Volume 14 ; 14 >
+      au < exists ; 1936 ; Poultry Science Volume 15 ; 15 >
+      au < exists ; 1937 ; Poultry Science Volume 16 ; 16 >
+      au < exists ; 1938 ; Poultry Science Volume 17 ; 17 >
+      au < exists ; 1939 ; Poultry Science Volume 18 ; 18 >
+      au < exists ; 1940 ; Poultry Science Volume 19 ; 19 >
+      au < exists ; 1941 ; Poultry Science Volume 20 ; 20 >
+      au < exists ; 1942 ; Poultry Science Volume 21 ; 21 >
+      au < exists ; 1943 ; Poultry Science Volume 22 ; 22 >
+      au < exists ; 1944 ; Poultry Science Volume 23 ; 23 >
+      au < exists ; 1945 ; Poultry Science Volume 24 ; 24 >
+      au < exists ; 1946 ; Poultry Science Volume 25 ; 25 >
+      au < exists ; 1947 ; Poultry Science Volume 26 ; 26 >
+      au < exists ; 1948 ; Poultry Science Volume 27 ; 27 >
+      au < exists ; 1949 ; Poultry Science Volume 28 ; 28 >
+      au < exists ; 1950 ; Poultry Science Volume 29 ; 29 >
+      au < exists ; 1951 ; Poultry Science Volume 30 ; 30 >
+      au < exists ; 1952 ; Poultry Science Volume 31 ; 31 >
+      au < exists ; 1953 ; Poultry Science Volume 32 ; 32 >
+      au < exists ; 1954 ; Poultry Science Volume 33 ; 33 >
+      au < exists ; 1955 ; Poultry Science Volume 34 ; 34 >
+      au < exists ; 1956 ; Poultry Science Volume 35 ; 35 >
+      au < exists ; 1957 ; Poultry Science Volume 36 ; 36 >
+      au < exists ; 1958 ; Poultry Science Volume 37 ; 37 >
+      au < exists ; 1959 ; Poultry Science Volume 38 ; 38 >
+      au < exists ; 1960 ; Poultry Science Volume 39 ; 39 >
+      au < exists ; 1961 ; Poultry Science Volume 40 ; 40 >
+      au < exists ; 1962 ; Poultry Science Volume 41 ; 41 >
+      au < exists ; 1963 ; Poultry Science Volume 42 ; 42 >
+      au < exists ; 1964 ; Poultry Science Volume 43 ; 43 >
+      au < exists ; 1965 ; Poultry Science Volume 44 ; 44 >
+      au < exists ; 1966 ; Poultry Science Volume 45 ; 45 >
+      au < exists ; 1967 ; Poultry Science Volume 46 ; 46 >
+      au < exists ; 1968 ; Poultry Science Volume 47 ; 47 >
+      au < exists ; 1969 ; Poultry Science Volume 48 ; 48 >
+      au < exists ; 1970 ; Poultry Science Volume 49 ; 49 >
+      au < exists ; 1971 ; Poultry Science Volume 50 ; 50 >
+      au < exists ; 1972 ; Poultry Science Volume 51 ; 51 >
+      au < exists ; 1973 ; Poultry Science Volume 52 ; 52 >
+      au < exists ; 1974 ; Poultry Science Volume 53 ; 53 >
+      au < exists ; 1975 ; Poultry Science Volume 54 ; 54 >
+      au < exists ; 1976 ; Poultry Science Volume 55 ; 55 >
+      au < exists ; 1977 ; Poultry Science Volume 56 ; 56 >
+      au < exists ; 1978 ; Poultry Science Volume 57 ; 57 >
+      au < exists ; 1979 ; Poultry Science Volume 58 ; 58 >
+      au < exists ; 1980 ; Poultry Science Volume 59 ; 59 >
+      au < exists ; 1981 ; Poultry Science Volume 60 ; 60 >
+      au < exists ; 1982 ; Poultry Science Volume 61 ; 61 >
+      au < exists ; 1983 ; Poultry Science Volume 62 ; 62 >
+      au < exists ; 1984 ; Poultry Science Volume 63 ; 63 >
+      au < exists ; 1985 ; Poultry Science Volume 64 ; 64 >
+      au < exists ; 1986 ; Poultry Science Volume 65 ; 65 >
+      au < exists ; 1987 ; Poultry Science Volume 66 ; 66 >
+      au < exists ; 1988 ; Poultry Science Volume 67 ; 67 >
+      au < exists ; 1989 ; Poultry Science Volume 68 ; 68 >
+      au < exists ; 1990 ; Poultry Science Volume 69 ; 69 >
+      au < exists ; 1991 ; Poultry Science Volume 70 ; 70 >
+      au < exists ; 1992 ; Poultry Science Volume 71 ; 71 >
+      au < exists ; 1993 ; Poultry Science Volume 72 ; 72 >
+      au < exists ; 1994 ; Poultry Science Volume 73 ; 73 >
+      au < exists ; 1995 ; Poultry Science Volume 74 ; 74 >
+      au < exists ; 1996 ; Poultry Science Volume 75 ; 75 >
+      au < released ; 1997 ; Poultry Science Volume 76 ; 76 >
+      au < released ; 1998 ; Poultry Science Volume 77 ; 77 >
+      au < released ; 1999 ; Poultry Science Volume 78 ; 78 >
+      au < released ; 2000 ; Poultry Science Volume 79 ; 79 >
+      au < released ; 2001 ; Poultry Science Volume 80 ; 80 >
+      au < released ; 2002 ; Poultry Science Volume 81 ; 81 >
+      au < released ; 2003 ; Poultry Science Volume 82 ; 82 >
+      au < released ; 2004 ; Poultry Science Volume 83 ; 83 >
+      au < released ; 2005 ; Poultry Science Volume 84 ; 84 >
+      au < released ; 2006 ; Poultry Science Volume 85 ; 85 >
+      au < released ; 2007 ; Poultry Science Volume 86 ; 86 >
+      au < released ; 2008 ; Poultry Science Volume 87 ; 87 >
+      au < released ; 2009 ; Poultry Science Volume 88 ; 88 >
+      au < released ; 2010 ; Poultry Science Volume 89 ; 89 >
+      au < released ; 2011 ; Poultry Science Volume 90 ; 90 >
 
     }
 
