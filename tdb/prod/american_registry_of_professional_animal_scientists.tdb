@@ -15,21 +15,21 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://pas.fass.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; The Professional Animal Scientist Volume 13 ; 13 >
-    au < released ; The Professional Animal Scientist Volume 14 ; 14 >
-    au < released ; The Professional Animal Scientist Volume 15 ; 15 >
-    au < released ; The Professional Animal Scientist Volume 16 ; 16 >
-    au < released ; The Professional Animal Scientist Volume 17 ; 17 >
-    au < released ; The Professional Animal Scientist Volume 18 ; 18 >
-    au < released ; The Professional Animal Scientist Volume 19 ; 19 >
-    au < released ; The Professional Animal Scientist Volume 20 ; 20 >
-    au < released ; The Professional Animal Scientist Volume 21 ; 21 >
-    au < released ; The Professional Animal Scientist Volume 22 ; 22 >
-    au < released ; The Professional Animal Scientist Volume 23 ; 23 >
-    au < released ; The Professional Animal Scientist Volume 24 ; 24 >
-    au < released ; The Professional Animal Scientist Volume 25 ; 25 >
+    au < released ; 1997 ; The Professional Animal Scientist Volume 13 ; 13 >
+    au < released ; 1998 ; The Professional Animal Scientist Volume 14 ; 14 >
+    au < released ; 1999 ; The Professional Animal Scientist Volume 15 ; 15 >
+    au < released ; 2000 ; The Professional Animal Scientist Volume 16 ; 16 >
+    au < released ; 2001 ; The Professional Animal Scientist Volume 17 ; 17 >
+    au < released ; 2002 ; The Professional Animal Scientist Volume 18 ; 18 >
+    au < released ; 2003 ; The Professional Animal Scientist Volume 19 ; 19 >
+    au < released ; 2004 ; The Professional Animal Scientist Volume 20 ; 20 >
+    au < released ; 2005 ; The Professional Animal Scientist Volume 21 ; 21 >
+    au < released ; 2006 ; The Professional Animal Scientist Volume 22 ; 22 >
+    au < released ; 2007 ; The Professional Animal Scientist Volume 23 ; 23 >
+    au < released ; 2008 ; The Professional Animal Scientist Volume 24 ; 24 >
+    au < released ; 2009 ; The Professional Animal Scientist Volume 25 ; 25 >
 
   }
 
