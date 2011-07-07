@@ -7,7 +7,7 @@
   {
   
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
     {
@@ -21,11 +21,12 @@
 
       param[journal_dir] = future_of_children
 
-      au < released ; The Future of Children Volume 15 ; 15 >
-      au < released ; The Future of Children Volume 16 ; 16 >
-      au < released ; The Future of Children Volume 17 ; 17 >
-      au < released ; The Future of Children Volume 18 ; 18 >
-      au < released ; The Future of Children Volume 19 ; 19 >
+      au < released ; 2005 ; The Future of Children Volume 15 ; 15 >
+      au < released ; 2006 ; The Future of Children Volume 16 ; 16 >
+      au < released ; 2007 ; The Future of Children Volume 17 ; 17 >
+      au < released ; 2008 ; The Future of Children Volume 18 ; 18 >
+      au < released ; 2009 ; The Future of Children Volume 19 ; 19 >
+      au < manifest ; 2010 ; The Future of Children Volume 20 ; 20 >
 
     }
   
@@ -40,8 +41,8 @@
 
       param[journal_dir] = philosophy_and_public_affairs
 
-      au < released ; Philosophy & Public Affairs Volume 30 ; 30 >
-      au < released ; Philosophy & Public Affairs Volume 31 ; 31 >
+      au < released ; 2001 ; Philosophy & Public Affairs Volume 30 ; 30 >
+      au < released ; 2003 ; Philosophy & Public Affairs Volume 31 ; 31 >
 
     }
 
@@ -57,14 +58,15 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.prok.ProkPlugin
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[year] = listed copyright year from meta tag since volumes lack years
 
     {
     
       param[base_url] = http://prok.princeton.edu/
       
-      au < superseded ; Princeton Report on Knowledge Volume 1 [superseded] ; 1 >
-      au < superseded ; Princeton Report on Knowledge Volume 2 [superseded] ; 2 >
+      au < superseded ; 2009 ; Princeton Report on Knowledge Volume 1 [superseded] ; 1 >
+      au < superseded ; 2009 ; Princeton Report on Knowledge Volume 2 [superseded] ; 2 >
     
     }
     
@@ -72,9 +74,9 @@
     
       param[base_url] = http://www.princeton.edu/prok/
       
-      au < exists ; Princeton Report on Knowledge Volume 1 ; 1 >
-      au < exists ; Princeton Report on Knowledge Volume 2 ; 2 >
-      au < exists ; Princeton Report on Knowledge Volume 3 ; 3 >
+      au < exists ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
+      au < exists ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
+      au < exists ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
       
     }
 
