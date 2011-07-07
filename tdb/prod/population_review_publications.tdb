@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
 
@@ -21,14 +21,15 @@ comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller0
 
     param[journal_dir] = population_review
 
-    au < released ; Population Review Volume 42 ; 42 >
-    au < released ; Population Review Volume 43 ; 43 >
-    au < released ; Population Review Volume 44 ; 44 >
-    au < released ; Population Review Volume 45 ; 45 >
-    au < released ; Population Review Volume 46 ; 46 >
-    au < released ; Population Review Volume 47 ; 47 >
-    au < notReady ; Population Review Volume 48 ; 48 >
-    au < released ; Population Review Volume 49 ; 49 >
+    au < released ; 2003 ; Population Review Volume 42 ; 42 >
+    au < released ; 2004 ; Population Review Volume 43 ; 43 >
+    au < released ; 2005 ; Population Review Volume 44 ; 44 >
+    au < released ; 2006 ; Population Review Volume 45 ; 45 >
+    au < released ; 2007 ; Population Review Volume 46 ; 46 >
+    au < released ; 2008 ; Population Review Volume 47 ; 47 >
+    au < notReady ; 2009 ; Population Review Volume 48 ; 48 >
+    au < released ; 2010 ; Population Review Volume 49 ; 49 >
+    au < manifest ; 2011 ; Population Review Volume 50 ; 50 >
 
   }
 
