@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.7 2011-06-26 20:21:11 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.8 2011-07-07 05:23:03 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class TestPeerAddress extends LockssTestCase {
     PeerIdentity pid = newPI(key);
     assertEquals(pa, pid.getPeerAddress());
 
-    String key2 = "tcp:" + key;
+    String key2 = new String(key);
     PeerAddress pa2 = PeerAddress.makePeerAddress(key2);
     assertEquals(pa2, pa);
 

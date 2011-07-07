@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.6 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: TestPeerIdentity.java,v 1.7 2011-07-07 05:23:03 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,21 @@ public class TestPeerIdentity extends LockssTestCase {
   private PeerIdentity newPI(String key) throws Exception {
     return (PeerIdentity)PrivilegedAccessor.
       invokeConstructor(PeerIdentity.class.getName(), key);
+  }
+
+  // Ensure getId() returns normalized key
+  public void testGetId() throws Exception {
+    String id1 = "TCP:[1.1.1.1]:111";
+    assertEquals(id1, newPI(id1).getKey());
+    assertEquals(id1, newPI("tcp:[01.1.1.1]:111").getKey());
+    assertEquals(id1, newPI("tcp:[1.1.1.1]:0111").getKey());
+
+    assertEquals("TCP:[0:0:0:0:0:0:0:1]:9729",
+		 newPI("TCP:[0:0:0:0:0:0:0:1]:9729").getKey());
+    assertEquals("TCP:[0:0:0:0:0:0:0:1]:9729",
+		 newPI("tcp:[::1]:9729").getKey());
+    assertEquals("TCP:[0:0:0:0:0:0:0:1]:9729",
+		 newPI("tcp:[::1]:09729").getKey());
   }
 
   // ensure that equals() and hashCode() have not been overridden to behave

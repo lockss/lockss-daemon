@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.13 2008-12-13 07:24:54 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.14 2011-07-07 05:23:04 tlipkis Exp $
  */
 
 /*
@@ -49,8 +49,8 @@ public class PeerIdentity implements LockssSerializable {
 
   PeerIdentity(String newKey)
       throws IdentityManager.MalformedIdentityKeyException {
-    key = newKey;
-    pAddr = PeerAddress.makePeerAddress(key);
+    pAddr = PeerAddress.makePeerAddress(newKey);
+    key = pAddr.getNormalizedKey();
   }
 
   // Here only for Mock subclass

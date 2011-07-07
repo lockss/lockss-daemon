@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.14 2011-06-26 20:20:47 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.15 2011-07-07 05:23:04 tlipkis Exp $
  */
 
 /*
@@ -351,7 +351,7 @@ public class IpFilter {
   /** An IPv6 address and mask */
   public static class Mask6 implements Mask {
 
-    InetAddress inet;
+    IPAddr inet;
     protected byte[] addr;
     protected int maskBits;
 
@@ -361,7 +361,7 @@ public class IpFilter {
     private Mask6(String ipstr, String bitStr, boolean maskOk)
 	throws MalformedException {
       try {
-	inet = InetAddress.getByName(ipstr);
+	inet = IPAddr.getByName(ipstr);
 	if (bitStr != null) {
 	  if (!maskOk) {
 	    throw new MalformedException("Mask not allowed",

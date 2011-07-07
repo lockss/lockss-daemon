@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.37 2009-05-06 16:36:36 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.38 2011-07-07 05:23:04 tlipkis Exp $
  */
 
 /*
@@ -241,10 +241,19 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   protected Map<PeerIdentity,PeerIdentityStatus> theLcapIdentities;
 
   /**
-   * <p>A mapping of human-readable Peer Identity keys (for example,
-   * <tt>&quot;TCP:[192.168.0.1]:9729&quot;</tt>) to PeerIdentity objects.</p>
+   * Maps PeerIdentity key (<i>eg</i>, <tt>TCP:[192.168.0.1]:9729</tt>) to
+   * unique PeerIdentity object.  Multiple unnormalized keys, in addition
+   * to the single normalized key, may map to the same PeerIdentity.
    */
-  private Map<String,PeerIdentity> thePeerIdentities;
+  private Map<String,PeerIdentity> pidMap;
+
+  /**
+   * Set of all PeerIdentity objects.  Separate set required when
+   * enumerating pids as map may contain mappings from unnormalized keys.
+   */
+  // Currently duplicates theLcapIdentities.keySet(), but that will be
+  // going away.
+  private Set<PeerIdentity> pidSet;
 
   /**
    * <p>The IDDB file.</p>
@@ -276,7 +285,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public IdentityManagerImpl() {
     theLcapIdentities = new HashMap();
-    thePeerIdentities = new HashMap();
+    pidMap = new HashMap();
+    pidSet = new HashSet();
   }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
@@ -469,8 +479,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return The PeerIdentityStatus associated with the given PeerIdentity.
    */
   public PeerIdentityStatus getPeerIdentityStatus(String key) {
-    synchronized (thePeerIdentities) {
-      PeerIdentity pid = thePeerIdentities.get(key);
+    synchronized (pidMap) {
+      PeerIdentity pid = pidMap.get(key);
       if (pid != null) {
         return getPeerIdentityStatus(pid);
       } else {
@@ -487,11 +497,12 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private PeerIdentity findLocalPeerIdentity(String key)
       throws MalformedIdentityKeyException {
     PeerIdentity pid;
-    synchronized (thePeerIdentities) {
-      pid = thePeerIdentities.get(key);
+    synchronized (pidMap) {
+      pid = pidMap.get(key);
       if (pid == null || !pid.isLocalIdentity()) {
-        pid = new PeerIdentity.LocalIdentity(key);
-        thePeerIdentities.put(key, pid);
+        pid = ensureNormalizedPid(key, new PeerIdentity.LocalIdentity(key));
+        pidMap.put(key, pid);
+	pidSet.add(pid);
       }
     }
     // for now always make sure LcapIdentity instance exists
@@ -504,14 +515,35 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public PeerIdentity findPeerIdentity(String key)
       throws MalformedIdentityKeyException {
-    synchronized (thePeerIdentities) {
-      PeerIdentity pid = thePeerIdentities.get(key);
+    synchronized (pidMap) {
+      PeerIdentity pid = pidMap.get(key);
       if (pid == null) {
-        pid = new PeerIdentity(key);
-        thePeerIdentities.put(key, pid);
+        pid = ensureNormalizedPid(key, new PeerIdentity(key));
+	pidMap.put(key, pid);
+	pidSet.add(pid);
       }
       return pid;
     }
+  }
+
+  private PeerIdentity ensureNormalizedPid(String key, PeerIdentity pid) {
+    String normKey = pid.getKey();
+    if (!key.equals(normKey)) {
+      // The key we were given is unnormalized, see if we have already
+      // have a pid for the normalized key
+      PeerIdentity normPid = pidMap.get(normKey);
+      if (normPid == null) {
+	// this is a new pid, store under normalized key and continue using
+	// it
+	log.debug("Unnormalized key (new): " + key + " != " + normKey);
+	pidMap.put(normKey, pid);
+      } else {
+	// use existing pid
+	log.debug("Unnormalized key: " + key + " != " + normKey);
+	return normPid;
+      }
+    }
+    return pid;
   }
 
   /**
@@ -932,7 +964,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public Collection getUdpPeerIdentities() {
     Collection retVal = new ArrayList();
-    for (PeerIdentity id : thePeerIdentities.values()) {
+    for (PeerIdentity id : pidSet) {
       if (id.getPeerAddress() instanceof PeerAddress.Udp &&
 	  !id.isLocalIdentity())
 	retVal.add(id);
@@ -952,7 +984,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public Collection getTcpPeerIdentities(Predicate peerPredicate) {
     Collection retVal = new ArrayList();
-    for (PeerIdentity id : thePeerIdentities.values()) {
+    for (PeerIdentity id : pidSet) {
       if (id.getPeerAddress() instanceof PeerAddress.Tcp
 	  && !id.isLocalIdentity()
 	  && peerPredicate.evaluate(id)) {
@@ -1310,8 +1342,20 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   
   public synchronized void removePeer(String key) {
     log.debug("Removing peer " + key);
-    PeerIdentity pid = (PeerIdentity)(thePeerIdentities.get(key));
-    thePeerIdentities.remove(key);
+    PeerIdentity pid = (PeerIdentity)(pidMap.get(key));
+    // Must remove all mappings from unnormalized key, in addition to the
+    // normalized one.  This operation is rare, so searching for them is
+    // ok.
+    List<String> allKeys = new ArrayList<String>();
+    for (Map.Entry<String,PeerIdentity> ent : pidMap.entrySet()) {
+      if (ent.getValue() == pid) {
+	allKeys.add(ent.getKey());
+      }
+    }
+    for (String onekey : allKeys) {
+      pidMap.remove(onekey);
+    }
+    pidSet.remove(pid);
     theLcapIdentities.remove(pid);
     try {
       storeIdentities();
@@ -1554,7 +1598,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   boolean areMapsEqualSize() {
-    return thePeerIdentities.size() == theLcapIdentities.size();
+    return pidMap.size() == theLcapIdentities.size();
   }
 
   void unlinkOldIddbFiles() {

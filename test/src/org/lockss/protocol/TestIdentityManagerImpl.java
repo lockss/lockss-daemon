@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.22 2008-11-10 07:11:53 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.23 2011-07-07 05:23:03 tlipkis Exp $
  */
 
 /*
@@ -989,12 +989,32 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     idmgr.findPeerIdentity("127.0.0.3");
     idmgr.findPeerIdentity("127.0.0.4");
     tcpPeers = idmgr.getTcpPeerIdentities();
-    log.info("udp peers: " + tcpPeers);
+    log.info("tcp peers: " + tcpPeers);
     assertEquals(4, tcpPeers.size());
     Collection expectedPeers =
       ListUtil.list(id1, id2, id3, id4);
     assertTrue(tcpPeers.containsAll(expectedPeers));
     assertTrue(expectedPeers.containsAll(tcpPeers));
+  }
+
+  public void testNormalizePeerIdentities() throws Exception {
+    PeerIdentity id1 = idmgr.findPeerIdentity("tcp:[127.0.0.1]:8001");
+    assertSame(id1, idmgr.findPeerIdentity("tcp:[127.0.0.1]:8001"));
+    assertSame(id1, idmgr.findPeerIdentity("TCP:[127.0.0.1]:8001"));
+    assertSame(id1, idmgr.findPeerIdentity("tcp:[127.00.0.1]:8001"));
+    assertSame(id1, idmgr.findPeerIdentity("tcp:[127.0.0.1]:08001"));
+    assertSame(id1, idmgr.findPeerIdentity("tcp:[127.0.0.1]:8001"));
+    assertNotEquals(id1, idmgr.findPeerIdentity("tcp:[127.0.0.2]:8001"));
+    assertNotEquals(id1, idmgr.findPeerIdentity("tcp:[127.0.0.1]:8002"));
+
+    PeerIdentity id2 = idmgr.findPeerIdentity("tcp:[::1]:9729");
+    assertSame(id2, idmgr.findPeerIdentity("tcp:[::1]:9729"));
+    assertSame(id2, idmgr.findPeerIdentity("TCP:[::1]:9729"));
+    assertSame(id2, idmgr.findPeerIdentity("tcp:[0:0:0:0:0:0:0:1]:9729"));
+    assertSame(id2, idmgr.findPeerIdentity("tcp:[0:0:00:0000:0:0:0:1]:9729"));
+    assertSame(id2, idmgr.findPeerIdentity("TCP:[::1]:09729"));
+    assertNotEquals(id2, idmgr.findPeerIdentity("tcp:[::2]:9729"));
+    assertNotEquals(id2, idmgr.findPeerIdentity("tcp:[::1]:9720"));
   }
 
   void assertIsTcpAddr(String expIp, int expPort, PeerAddress pad) {

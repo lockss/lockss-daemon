@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.8 2011-06-26 20:20:47 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.9 2011-07-07 05:23:04 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public abstract class PeerAddress {
     RegexpUtil.uncheckedCompile("TCP:\\[([0-9a-f.:]+)\\]:([0-9]+)",
 				Perl5Compiler.CASE_INSENSITIVE_MASK);
 
-
   protected static PeerAddress makePeerAddress(String key)
       throws IdentityManager.MalformedIdentityKeyException {
     // V3 addresses start with "TCP:", to allow for other protocols (e.g.,
@@ -101,6 +100,8 @@ public abstract class PeerAddress {
   public boolean isAllowed(IpFilter filter) {
     return false;
   }    
+
+  abstract String getNormalizedKey();
 
   abstract boolean isStream();
 
@@ -156,6 +157,10 @@ public abstract class PeerAddress {
       return false;
     }
 
+    String getNormalizedKey() {
+      return addr.getHostAddress();
+    }
+
     public int hashCode() {
       throw new UnsupportedOperationException("Use PeerIdentity for key, not PeerAddress");
     }
@@ -191,6 +196,10 @@ public abstract class PeerAddress {
 	  getPort() == t.getPort();
       }
       return false;
+    }
+
+    String getNormalizedKey() {
+      return IDUtil.ipAddrToKey(addr, port);
     }
 
     public int hashCode() {
