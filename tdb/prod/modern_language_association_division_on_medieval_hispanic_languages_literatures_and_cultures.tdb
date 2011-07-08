@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,8 +19,8 @@
 
     param[journal_dir] = la_coronica
 
-    au < released ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 ; 37 >
-    au < released ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 ; 38 >
+    au < released ; 2008-2009 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 ; 37 >
+    au < released ; 2009-2010 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 ; 38 >
 
   }
 

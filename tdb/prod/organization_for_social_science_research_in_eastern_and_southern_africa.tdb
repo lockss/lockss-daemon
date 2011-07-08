@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
   
@@ -19,15 +19,15 @@
 
     param[journal_dir] = eastern_africa_social_science_research_review
 
-    au < released ; Eastern Africa Social Science Research Review Volume 18 ; 18 >
-    au < released ; Eastern Africa Social Science Research Review Volume 19 ; 19 >
-    au < released ; Eastern Africa Social Science Research Review Volume 20 ; 20 >
-    au < released ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
-    au < released ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
-    au < released ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
-    au < released ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
-    au < released ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
-    au < released ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
+    au < released ; 2002 ; Eastern Africa Social Science Research Review Volume 18 ; 18 >
+    au < released ; 2003 ; Eastern Africa Social Science Research Review Volume 19 ; 19 >
+    au < released ; 2004 ; Eastern Africa Social Science Research Review Volume 20 ; 20 >
+    au < released ; 2005 ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
+    au < released ; 2006 ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
+    au < released ; 2007 ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
+    au < released ; 2008 ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
+    au < released ; 2009 ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
+    au < released ; 2010 ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
 
   }
 

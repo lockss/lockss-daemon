@@ -8,28 +8,29 @@
     title <
       name = The American Biology Teacher ;
       issn = 0002-7685 ;
-      eissn = 1550-7408
+      eissn = 1550-7408 ;
+      issnl = 0002-7685 
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0002-7685
   
-      au < doNotProcess ; The American Biology Teacher Volume 62 ; 62 >
-      au < doNotProcess ; The American Biology Teacher Volume 63 ; 63 >
-      au < doNotProcess ; The American Biology Teacher Volume 64 ; 64 >
-      au < doNotProcess ; The American Biology Teacher Volume 65 ; 65 >
-      au < superseded ; The American Biology Teacher Volume 66 ; 66 >
-      au < doNotProcess ; The American Biology Teacher Volume 67 ; 67 >
-      au < doNotProcess ; The American Biology Teacher Volume 68 ; 68 >
-      au < doNotProcess ; The American Biology Teacher Volume 69 ; 69 >
+      au < doNotProcess ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
+      au < doNotProcess ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
+      au < doNotProcess ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
+      au < doNotProcess ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
+      au < superseded ; 2004 ; The American Biology Teacher Volume 66 ; 66 >
+      au < doNotProcess ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
+      au < doNotProcess ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
+      au < doNotProcess ; 2007 ; The American Biology Teacher Volume 69 ; 69 >
     }
 
     {
 
-comment[0] = Atypon AUs
+	  comment[0] = Atypon AUs
 
     }
 

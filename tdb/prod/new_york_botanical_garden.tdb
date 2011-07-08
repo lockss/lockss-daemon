@@ -12,17 +12,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0007-196X
   
-      au < superseded ; Brittonia Volume 54 ; 54 >
-      au < superseded ; Brittonia Volume 55 ; 55 >
-      au < superseded ; Brittonia Volume 56 ; 056 >
-      au < superseded ; Brittonia Volume 57 ; 57 >
-      au < superseded ; Brittonia Volume 58 ; 58 >
-      au < superseded ; Brittonia Volume 59 ; 59 >
+      au < superseded ; 2002 ; Brittonia Volume 54 ; 54 >
+      au < superseded ; 2003 ; Brittonia Volume 55 ; 55 >
+      au < superseded ; 2004 ; Brittonia Volume 56 ; 056 >
+      au < superseded ; 2005 ; Brittonia Volume 57 ; 57 >
+      au < superseded ; 2006 ; Brittonia Volume 58 ; 58 >
+      au < superseded ; 2007 ; Brittonia Volume 59 ; 59 >
     }
 
   }
@@ -36,17 +36,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; yera ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0013-0001
   
-      au < superseded ; Economic Botany Volume 56 ; 56 >
-      au < superseded ; Economic Botany Volume 57 ; 57 >
-      au < superseded ; Economic Botany Volume 58 ; 058 >
-      au < superseded ; Economic Botany Volume 59 ; 59 >
-      au < superseded ; Economic Botany Volume 60 ; 60 >
-      au < superseded ; Economic Botany Volume 61 ; 61 >
+      au < superseded ; 2002 ; Economic Botany Volume 56 ; 56 >
+      au < superseded ; 2003 ; Economic Botany Volume 57 ; 57 >
+      au < superseded ; 2004 ; Economic Botany Volume 58 ; 058 >
+      au < superseded ; 2005 ; Economic Botany Volume 59 ; 59 >
+      au < superseded ; 2006 ; Economic Botany Volume 60 ; 60 >
+      au < superseded ; 2007 ; Economic Botany Volume 61 ; 61 >
     }
 
   }
@@ -60,22 +60,22 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-8101
   
-      au < superseded ; The Botanical Review Volume 68 ; 68 >
-      au < superseded ; The Botanical Review Volume 69 ; 69 >
-      au < superseded ; The Botanical Review Volume 70 ; 070 >
-      au < superseded ; The Botanical Review Volume 71 ; 71 >
-      au < superseded ; The Botanical Review Volume 72 ; 72 >
-      au < superseded ; The Botanical Review Volume 73 ; 73 >
+      au < superseded ; 2002 ; The Botanical Review Volume 68 ; 68 >
+      au < superseded ; 2003 ; The Botanical Review Volume 69 ; 69 >
+      au < superseded ; 2004 ; The Botanical Review Volume 70 ; 070 >
+      au < superseded ; 2005 ; The Botanical Review Volume 71 ; 71 >
+      au < superseded ; 2006 ; The Botanical Review Volume 72 ; 72 >
+      au < superseded ; 2007 ; The Botanical Review Volume 73 ; 73 >
     }
 
     {
 
-comment[0] = Atypon AUs
+	  comment[0] = Atypon AUs
 
     }
 

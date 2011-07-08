@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,11 +17,11 @@
     
     param[journal_code] = naar
   
-    au < exists ; Natural Areas Journal Volume 26 ; 26 >
-    au < exists ; Natural Areas Journal Volume 27 ; 27 >
-    au < exists ; Natural Areas Journal Volume 28 ; 28 >
-    au < exists ; Natural Areas Journal Volume 29 ; 29 >
-    au < exists ; Natural Areas Journal Volume 30 ; 30 >
+    au < exists ; 2006 ; Natural Areas Journal Volume 26 ; 26 >
+    au < exists ; 2007 ; Natural Areas Journal Volume 27 ; 27 >
+    au < exists ; 2008 ; Natural Areas Journal Volume 28 ; 28 >
+    au < exists ; 2009 ; Natural Areas Journal Volume 29 ; 29 >
+    au < exists ; 2010 ; Natural Areas Journal Volume 30 ; 30 >
 
   }
   

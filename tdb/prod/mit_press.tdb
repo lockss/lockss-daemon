@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,16 +17,16 @@
 
     param[journal_dir] = computer_music_journal
 
-    au < released ; Computer Music Journal Volume 25 ; 25 >
-    au < released ; Computer Music Journal Volume 26 ; 26 >
-    au < released ; Computer Music Journal Volume 27 ; 27 >
-    au < released ; Computer Music Journal Volume 28 ; 28 >
-    au < released ; Computer Music Journal Volume 29 ; 29 >
-    au < released ; Computer Music Journal Volume 30 ; 30 >
-    au < released ; Computer Music Journal Volume 31 ; 31 >
-    au < released ; Computer Music Journal Volume 32 ; 32 >
-    au < released ; Computer Music Journal Volume 33 ; 33 >
-    au < released ; Computer Music Journal Volume 34 ; 34 >
+    au < released ; 2001 ; Computer Music Journal Volume 25 ; 25 >
+    au < released ; 2002 ; Computer Music Journal Volume 26 ; 26 >
+    au < released ; 2003 ; Computer Music Journal Volume 27 ; 27 >
+    au < released ; 2004 ; Computer Music Journal Volume 28 ; 28 >
+    au < released ; 2005 ; Computer Music Journal Volume 29 ; 29 >
+    au < released ; 2006 ; Computer Music Journal Volume 30 ; 30 >
+    au < released ; 2007 ; Computer Music Journal Volume 31 ; 31 >
+    au < released ; 2008 ; Computer Music Journal Volume 32 ; 32 >
+    au < released ; 2009 ; Computer Music Journal Volume 33 ; 33 >
+    au < released ; 2010 ; Computer Music Journal Volume 34 ; 34 >
 
   }
 
@@ -40,14 +40,14 @@
 
     param[journal_dir] = global_environmental_politics
 
-    au < released ; Global Environmental Politics Volume 3 ; 3 >
-    au < released ; Global Environmental Politics Volume 4 ; 4 >
-    au < released ; Global Environmental Politics Volume 5 ; 5 >
-    au < released ; Global Environmental Politics Volume 6 ; 6 >
-    au < released ; Global Environmental Politics Volume 7 ; 7 >
-    au < released ; Global Environmental Politics Volume 8 ; 8 >
-    au < released ; Global Environmental Politics Volume 9 ; 9 >
-    au < released ; Global Environmental Politics Volume 10 ; 10 >
+    au < released ; 2003 ; Global Environmental Politics Volume 3 ; 3 >
+    au < released ; 2004 ; Global Environmental Politics Volume 4 ; 4 >
+    au < released ; 2005 ; Global Environmental Politics Volume 5 ; 5 >
+    au < released ; 2006 ; Global Environmental Politics Volume 6 ; 6 >
+    au < released ; 2007 ; Global Environmental Politics Volume 7 ; 7 >
+    au < released ; 2008 ; Global Environmental Politics Volume 8 ; 8 >
+    au < released ; 2009 ; Global Environmental Politics Volume 9 ; 9 >
+    au < released ; 2010 ; Global Environmental Politics Volume 10 ; 10 >
 
   }
 
@@ -61,7 +61,7 @@
 
     param[journal_dir] = international_organization
 
-    au < released ; International Organization Volume 56 ; 56 >
+    au < released ; 2002 ; International Organization Volume 56 ; 56 >
 
   }
 
@@ -75,16 +75,16 @@
 
     param[journal_dir] = international_security
 
-    au < released ; International Security Volume 25 ; 25 >
-    au < released ; International Security Volume 26 ; 26 >
-    au < released ; International Security Volume 27 ; 27 >
-    au < released ; International Security Volume 28 ; 28 >
-    au < released ; International Security Volume 29 ; 29 >
-    au < released ; International Security Volume 30 ; 30 >
-    au < released ; International Security Volume 31 ; 31 >
-    au < released ; International Security Volume 32 ; 32 >
-    au < released ; International Security Volume 33 ; 33 >
-    au < released ; International Security Volume 34 ; 34 >
+    au < released ; 2001 ; International Security Volume 25 ; 25 >
+    au < released ; 2002 ; International Security Volume 26 ; 26 >
+    au < released ; 2003 ; International Security Volume 27 ; 27 >
+    au < released ; 2004 ; International Security Volume 28 ; 28 >
+    au < released ; 2005 ; International Security Volume 29 ; 29 >
+    au < released ; 2006 ; International Security Volume 30 ; 30 >
+    au < released ; 2007 ; International Security Volume 31 ; 31 >
+    au < released ; 2008 ; International Security Volume 32 ; 32 >
+    au < released ; 2009 ; International Security Volume 33 ; 33 >
+    au < released ; 2010 ; International Security Volume 34 ; 34 >
 
   }
 
@@ -98,17 +98,17 @@
 
     param[journal_dir] = journal_of_cold_war_studies
 
-    au < released ; Journal of Cold War Studies Volume 1 ; 1 >
-    au < released ; Journal of Cold War Studies Volume 2 ; 2 >
-    au < released ; Journal of Cold War Studies Volume 3 ; 3 >
-    au < released ; Journal of Cold War Studies Volume 4 ; 4 >
-    au < released ; Journal of Cold War Studies Volume 5 ; 5 >
-    au < released ; Journal of Cold War Studies Volume 6 ; 6 >
-    au < released ; Journal of Cold War Studies Volume 7 ; 7 >
-    au < released ; Journal of Cold War Studies Volume 8 ; 8 >
-    au < released ; Journal of Cold War Studies Volume 9 ; 9 >
-    au < released ; Journal of Cold War Studies Volume 10 ; 10 >
-    au < released ; Journal of Cold War Studies Volume 11 ; 11 >
+    au < released ; 1999 ; Journal of Cold War Studies Volume 1 ; 1 >
+    au < released ; 2000 ; Journal of Cold War Studies Volume 2 ; 2 >
+    au < released ; 2001 ; Journal of Cold War Studies Volume 3 ; 3 >
+    au < released ; 2002 ; Journal of Cold War Studies Volume 4 ; 4 >
+    au < released ; 2003 ; Journal of Cold War Studies Volume 5 ; 5 >
+    au < released ; 2004 ; Journal of Cold War Studies Volume 6 ; 6 >
+    au < released ; 2005 ; Journal of Cold War Studies Volume 7 ; 7 >
+    au < released ; 2006 ; Journal of Cold War Studies Volume 8 ; 8 >
+    au < released ; 2007 ; Journal of Cold War Studies Volume 9 ; 9 >
+    au < released ; 2008 ; Journal of Cold War Studies Volume 10 ; 10 >
+    au < released ; 2009 ; Journal of Cold War Studies Volume 11 ; 11 >
 
   }
 
@@ -122,17 +122,17 @@
 
     param[journal_dir] = journal_of_interdisciplinary_history
 
-    au < released ; Journal of Interdisciplinary History Volume 30 ; 30 >
-    au < released ; Journal of Interdisciplinary History Volume 31 ; 31 >
-    au < released ; Journal of Interdisciplinary History Volume 32 ; 32 >
-    au < released ; Journal of Interdisciplinary History Volume 33 ; 33 >
-    au < released ; Journal of Interdisciplinary History Volume 34 ; 34 >
-    au < released ; Journal of Interdisciplinary History Volume 35 ; 35 >
-    au < released ; Journal of Interdisciplinary History Volume 36 ; 36 >
-    au < released ; Journal of Interdisciplinary History Volume 37 ; 37 >
-    au < released ; Journal of Interdisciplinary History Volume 38 ; 38 >
-    au < released ; Journal of Interdisciplinary History Volume 39 ; 39 >
-    au < released ; Journal of Interdisciplinary History Volume 40 ; 40 >
+    au < released ; 1999 ; Journal of Interdisciplinary History Volume 30 ; 30 >
+    au < released ; 2000 ; Journal of Interdisciplinary History Volume 31 ; 31 >
+    au < released ; 2001 ; Journal of Interdisciplinary History Volume 32 ; 32 >
+    au < released ; 2002 ; Journal of Interdisciplinary History Volume 33 ; 33 >
+    au < released ; 2003 ; Journal of Interdisciplinary History Volume 34 ; 34 >
+    au < released ; 2004 ; Journal of Interdisciplinary History Volume 35 ; 35 >
+    au < released ; 2005 ; Journal of Interdisciplinary History Volume 36 ; 36 >
+    au < released ; 2006 ; Journal of Interdisciplinary History Volume 37 ; 37 >
+    au < released ; 2007 ; Journal of Interdisciplinary History Volume 38 ; 38 >
+    au < released ; 2008 ; Journal of Interdisciplinary History Volume 39 ; 39 >
+    au < released ; 2009 ; Journal of Interdisciplinary History Volume 40 ; 40 >
 
   }
 
@@ -146,16 +146,16 @@
 
     param[journal_dir] = leonardo
 
-    au < released ; Leonardo Volume 34 ; 34 >
-    au < released ; Leonardo Volume 35 ; 35 >
-    au < released ; Leonardo Volume 36 ; 36 >
-    au < released ; Leonardo Volume 37 ; 37 >
-    au < released ; Leonardo Volume 38 ; 38 >
-    au < released ; Leonardo Volume 39 ; 39 >
-    au < released ; Leonardo Volume 40 ; 40 >
-    au < released ; Leonardo Volume 41 ; 41 >
-    au < released ; Leonardo Volume 42 ; 42 >
-    au < released ; Leonardo Volume 43 ; 43 >
+    au < released ; 2001 ; Leonardo Volume 34 ; 34 >
+    au < released ; 2002 ; Leonardo Volume 35 ; 35 >
+    au < released ; 2003 ; Leonardo Volume 36 ; 36 >
+    au < released ; 2004 ; Leonardo Volume 37 ; 37 >
+    au < released ; 2005 ; Leonardo Volume 38 ; 38 >
+    au < released ; 2006 ; Leonardo Volume 39 ; 39 >
+    au < released ; 2007 ; Leonardo Volume 40 ; 40 >
+    au < released ; 2008 ; Leonardo Volume 41 ; 41 >
+    au < released ; 2009 ; Leonardo Volume 42 ; 42 >
+    au < released ; 2010 ; Leonardo Volume 43 ; 43 >
 
   }
 
@@ -169,16 +169,16 @@
 
     param[journal_dir] = leonardo_music_journal
 
-    au < released ; Leonardo Music Journal Volume 10 ; 10 >
-    au < released ; Leonardo Music Journal Volume 11 ; 11 >
-    au < released ; Leonardo Music Journal Volume 12 ; 12 >
-    au < released ; Leonardo Music Journal Volume 13 ; 13 >
-    au < released ; Leonardo Music Journal Volume 14 ; 14 >
-    au < released ; Leonardo Music Journal Volume 15 ; 15 >
-    au < released ; Leonardo Music Journal Volume 16 ; 16 >
-    au < released ; Leonardo Music Journal Volume 17 ; 17 >
-    au < released ; Leonardo Music Journal Volume 18 ; 18 >
-    au < released ; Leonardo Music Journal Volume 19 ; 19 >
+    au < released ; 2000 ; Leonardo Music Journal Volume 10 ; 10 >
+    au < released ; 2001 ; Leonardo Music Journal Volume 11 ; 11 >
+    au < released ; 2002 ; Leonardo Music Journal Volume 12 ; 12 >
+    au < released ; 2003 ; Leonardo Music Journal Volume 13 ; 13 >
+    au < released ; 2004 ; Leonardo Music Journal Volume 14 ; 14 >
+    au < released ; 2005 ; Leonardo Music Journal Volume 15 ; 15 >
+    au < released ; 2006 ; Leonardo Music Journal Volume 16 ; 16 >
+    au < released ; 2007 ; Leonardo Music Journal Volume 17 ; 17 >
+    au < released ; 2008 ; Leonardo Music Journal Volume 18 ; 18 >
+    au < released ; 2009 ; Leonardo Music Journal Volume 19 ; 19 >
 
   }
 
@@ -192,17 +192,17 @@
 
     param[journal_dir] = linguistic_inquiry
 
-    au < released ; Linguistic Inquiry Volume 31 ; 31 >
-    au < released ; Linguistic Inquiry Volume 32 ; 32 >
-    au < released ; Linguistic Inquiry Volume 33 ; 33 >
-    au < released ; Linguistic Inquiry Volume 34 ; 34 >
-    au < released ; Linguistic Inquiry Volume 35 ; 35 >
-    au < released ; Linguistic Inquiry Volume 36 ; 36 >
-    au < released ; Linguistic Inquiry Volume 37 ; 37 >
-    au < released ; Linguistic Inquiry Volume 38 ; 38 >
-    au < released ; Linguistic Inquiry Volume 39 ; 39 >
-    au < released ; Linguistic Inquiry Volume 40 ; 40 >
-    au < released ; Linguistic Inquiry Volume 41 ; 41 >
+    au < released ; 2000 ; Linguistic Inquiry Volume 31 ; 31 >
+    au < released ; 2001 ; Linguistic Inquiry Volume 32 ; 32 >
+    au < released ; 2002 ; Linguistic Inquiry Volume 33 ; 33 >
+    au < released ; 2003 ; Linguistic Inquiry Volume 34 ; 34 >
+    au < released ; 2004 ; Linguistic Inquiry Volume 35 ; 35 >
+    au < released ; 2005 ; Linguistic Inquiry Volume 36 ; 36 >
+    au < released ; 2006 ; Linguistic Inquiry Volume 37 ; 37 >
+    au < released ; 2007 ; Linguistic Inquiry Volume 38 ; 38 >
+    au < released ; 2008 ; Linguistic Inquiry Volume 39 ; 39 >
+    au < released ; 2009 ; Linguistic Inquiry Volume 40 ; 40 >
+    au < released ; 2010 ; Linguistic Inquiry Volume 41 ; 41 >
 
   }
 
@@ -216,19 +216,20 @@
 
     param[journal_dir] = performing_arts_journal
 
-    au < released ; PAJ: A Journal of Performance and Art Volume 18 ; 18 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 19 ; 19 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 20 ; 20 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 21 ; 21 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 22 ; 22 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 23 ; 23 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 24 ; 24 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 25 ; 25 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 26 ; 26 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 27 ; 27 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 28 ; 28 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 29 ; 29 >
-    au < released ; PAJ: A Journal of Performance and Art Volume 31 ; 31 >
+    au < released ; 1996 ; PAJ: A Journal of Performance and Art Volume 18 ; 18 >
+    au < released ; 1997 ; PAJ: A Journal of Performance and Art Volume 19 ; 19 >
+    au < released ; 1998 ; PAJ: A Journal of Performance and Art Volume 20 ; 20 >
+    au < released ; 1999 ; PAJ: A Journal of Performance and Art Volume 21 ; 21 >
+    au < released ; 2000 ; PAJ: A Journal of Performance and Art Volume 22 ; 22 >
+    au < released ; 2001 ; PAJ: A Journal of Performance and Art Volume 23 ; 23 >
+    au < released ; 2002 ; PAJ: A Journal of Performance and Art Volume 24 ; 24 >
+    au < released ; 2003 ; PAJ: A Journal of Performance and Art Volume 25 ; 25 >
+    au < released ; 2004 ; PAJ: A Journal of Performance and Art Volume 26 ; 26 >
+    au < released ; 2005 ; PAJ: A Journal of Performance and Art Volume 27 ; 27 >
+    au < released ; 2006 ; PAJ: A Journal of Performance and Art Volume 28 ; 28 >
+    au < released ; 2007 ; PAJ: A Journal of Performance and Art Volume 29 ; 29 >
+    au < released ; 2008 ; PAJ: A Journal of Performance and Art Volume 30 ; 30 >
+    au < released ; 2009 ; PAJ: A Journal of Performance and Art Volume 31 ; 31 >
 
   }
 
@@ -242,19 +243,19 @@
 
     param[journal_dir] = perspectives_on_science
 
-    au < released ; Perspectives on Science Volume 6 ; 6 >
-    au < released ; Perspectives on Science Volume 7 ; 7 >
-    au < released ; Perspectives on Science Volume 8 ; 8 >
-    au < released ; Perspectives on Science Volume 9 ; 9 >
-    au < released ; Perspectives on Science Volume 10 ; 10 >
-    au < released ; Perspectives on Science Volume 11 ; 11 >
-    au < released ; Perspectives on Science Volume 12 ; 12 >
-    au < released ; Perspectives on Science Volume 13 ; 13 >
-    au < released ; Perspectives on Science Volume 14 ; 14 >
-    au < released ; Perspectives on Science Volume 15 ; 15 >
-    au < released ; Perspectives on Science Volume 16 ; 16 >
-    au < released ; Perspectives on Science Volume 17 ; 17 >
-    au < released ; Perspectives on Science Volume 18 ; 18 >
+    au < released ; 1998 ; Perspectives on Science Volume 6 ; 6 >
+    au < released ; 1999 ; Perspectives on Science Volume 7 ; 7 >
+    au < released ; 2000 ; Perspectives on Science Volume 8 ; 8 >
+    au < released ; 2001 ; Perspectives on Science Volume 9 ; 9 >
+    au < released ; 2002 ; Perspectives on Science Volume 10 ; 10 >
+    au < released ; 2003 ; Perspectives on Science Volume 11 ; 11 >
+    au < released ; 2004 ; Perspectives on Science Volume 12 ; 12 >
+    au < released ; 2005 ; Perspectives on Science Volume 13 ; 13 >
+    au < released ; 2006 ; Perspectives on Science Volume 14 ; 14 >
+    au < released ; 2007 ; Perspectives on Science Volume 15 ; 15 >
+    au < released ; 2008 ; Perspectives on Science Volume 16 ; 16 >
+    au < released ; 2009 ; Perspectives on Science Volume 17 ; 17 >
+    au < released ; 2010 ; Perspectives on Science Volume 18 ; 18 >
 
   }
 
@@ -268,18 +269,19 @@
 
     param[journal_dir] = the_drama_review
 
-    au < released ; TDR: The Drama Review Volume 43 ; 43 >
-    au < released ; TDR: The Drama Review Volume 44 ; 44 >
-    au < released ; TDR: The Drama Review Volume 45 ; 45 >
-    au < released ; TDR: The Drama Review Volume 46 ; 46 >
-    au < released ; TDR: The Drama Review Volume 47 ; 47 >
-    au < released ; TDR: The Drama Review Volume 48 ; 48 >
-    au < released ; TDR: The Drama Review Volume 49 ; 49 >
-    au < released ; TDR: The Drama Review Volume 50 ; 50 >
-    au < released ; TDR: The Drama Review Volume 51 ; 51 >
-    au < released ; TDR: The Drama Review Volume 52 ; 52 >
-    au < released ; TDR: The Drama Review Volume 53 ; 53 >
-    au < released ; TDR: The Drama Review Volume 54 ; 54 >
+    au < exists ; 1999 ; TDR: The Drama Review Volume 43 ; 43 >
+    au < released ; 2000 ; TDR: The Drama Review Volume 44 ; 44 >
+    au < released ; 2001 ; TDR: The Drama Review Volume 45 ; 45 >
+    au < released ; 2002 ; TDR: The Drama Review Volume 46 ; 46 >
+    au < released ; 2003 ; TDR: The Drama Review Volume 47 ; 47 >
+    au < released ; 2004 ; TDR: The Drama Review Volume 48 ; 48 >
+    au < released ; 2005 ; TDR: The Drama Review Volume 49 ; 49 >
+    au < released ; 2006 ; TDR: The Drama Review Volume 50 ; 50 >
+    au < released ; 2007 ; TDR: The Drama Review Volume 51 ; 51 >
+    au < released ; 2008 ; TDR: The Drama Review Volume 52 ; 52 >
+    au < released ; 2009 ; TDR: The Drama Review Volume 53 ; 53 >
+    au < released ; 2010 ; TDR: The Drama Review Volume 54 ; 54 >
+
 
   }
 
@@ -293,10 +295,10 @@
 
     param[journal_dir] = american_journal_of_bioethics
 
-    au < released ; The American Journal of Bioethics Volume 1 ; 1 >
-    au < released ; The American Journal of Bioethics Volume 2 ; 2 >
-    au < released ; The American Journal of Bioethics Volume 3 ; 3 >
-    au < released ; The American Journal of Bioethics Volume 4 ; 4 >
+    au < released ; 2001 ; The American Journal of Bioethics Volume 1 ; 1 >
+    au < released ; 2002 ; The American Journal of Bioethics Volume 2 ; 2 >
+    au < released ; 2003 ; The American Journal of Bioethics Volume 3 ; 3 >
+    au < released ; 2004 ; The American Journal of Bioethics Volume 4 ; 4 >
 
   }
 
@@ -304,15 +306,16 @@
     title <
       name = The Harvard International Journal of Press/Politics ;
       issn = 1081-180X ;
-      eissn = 1531-328X
+      eissn = 1531-328X ;
+      issnl = 1081-180X
     >
 
     comment[publication] = this is a bit of a mystery, SAGE publishes it to this day under hij.sagepub.com and clearly overlap with these Muse volumes, but the SAGE publication has a new title and new ISSNs
 
     param[journal_dir] = harvard_international_journal_of_press_politics
 
-    au < released ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
-    au < released ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
+    au < released ; 1999 ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+    au < released ; 2000 ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
 
   }
 
@@ -326,15 +329,15 @@
 
     param[journal_dir] = washington_quarterly
 
-    au < released ; The Washington Quarterly Volume 23 ; 23 >
-    au < released ; The Washington Quarterly Volume 24 ; 24 >
-    au < released ; The Washington Quarterly Volume 25 ; 25 >
-    au < released ; The Washington Quarterly Volume 26 ; 26 >
-    au < released ; The Washington Quarterly Volume 27 ; 27 >
-    au < released ; The Washington Quarterly Volume 28 ; 28 >
-    au < released ; The Washington Quarterly Volume 29 ; 29 >
-    au < released ; The Washington Quarterly Volume 30 ; 30 >
-    au < released ; The Washington Quarterly Volume 31 ; 31 >
+    au < released ; 2000 ; The Washington Quarterly Volume 23 ; 23 >
+    au < released ; 2001 ; The Washington Quarterly Volume 24 ; 24 >
+    au < released ; 2002 ; The Washington Quarterly Volume 25 ; 25 >
+    au < released ; 2003 ; The Washington Quarterly Volume 26 ; 26 >
+    au < released ; 2004 ; The Washington Quarterly Volume 27 ; 27 >
+    au < released ; 2005 ; The Washington Quarterly Volume 28 ; 28 >
+    au < released ; 2006 ; The Washington Quarterly Volume 29 ; 29 >
+    au < released ; 2007 ; The Washington Quarterly Volume 30 ; 30 >
+    au < released ; 2008 ; The Washington Quarterly Volume 31 ; 31 >
 
   }
 

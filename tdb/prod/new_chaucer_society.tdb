@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
 
@@ -19,7 +19,7 @@
 
     param[journal_dir] = studies_in_the_age_of_chaucer
 
-    au < released ; Studies in the Age of Chaucer Volume 30 ; 30 >
+    au < released ; 2008 ; Studies in the Age of Chaucer Volume 30 ; 30 >
 
   }
 

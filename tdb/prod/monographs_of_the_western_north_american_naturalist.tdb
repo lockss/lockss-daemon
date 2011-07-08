@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,10 +17,10 @@
     
     param[journal_code] = mwna
   
-    au < exists ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
-    au < exists ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
-    au < exists ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
-    au < exists ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+    au < exists ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
+    au < exists ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
+    au < exists ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
+    au < exists ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
 
   }
   

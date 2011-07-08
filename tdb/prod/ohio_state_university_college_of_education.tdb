@@ -3,7 +3,7 @@
     name = Ohio State University College of Education
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,8 +18,8 @@
 
     param[journal_dir] = theory_into_practice
 
-    au < manifest ; Theory Into Practice Volume 42 ; 42 >
-    au < manifest ; Theory Into Practice Volume 43 ; 43 >
+    au < manifest ; 2003 ; Theory Into Practice Volume 42 ; 42 >
+    au < manifest ; 2004 ; Theory Into Practice Volume 43 ; 43 >
 
   }
 

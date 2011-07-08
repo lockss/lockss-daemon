@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,13 +19,13 @@
 
     param[journal_dir] = china
 
-    au < released ; China: An International Journal Volume 1 ; 1 >
-    au < released ; China: An International Journal Volume 2 ; 2 >
-    au < released ; China: An International Journal Volume 3 ; 3 >
-    au < released ; China: An International Journal Volume 4 ; 4 >
-    au < released ; China: An International Journal Volume 5 ; 5 >
-    au < released ; China: An International Journal Volume 6 ; 6 >
-    au < released ; China: An International Journal Volume 7 ; 7 >
+    au < released ; 2003 ; China: An International Journal Volume 1 ; 1 >
+    au < released ; 2004 ; China: An International Journal Volume 2 ; 2 >
+    au < released ; 2005 ; China: An International Journal Volume 3 ; 3 >
+    au < released ; 2006 ; China: An International Journal Volume 4 ; 4 >
+    au < released ; 2007 ; China: An International Journal Volume 5 ; 5 >
+    au < released ; 2008 ; China: An International Journal Volume 6 ; 6 >
+    au < released ; 2009 ; China: An International Journal Volume 7 ; 7 >
 
   }
 
@@ -40,21 +40,21 @@
 
     param[journal_dir] = journal_of_burma_studies
 
-    au < manifest ; Journal of Burma Studies Volume 1 ; 1 >
-    au < manifest ; Journal of Burma Studies Volume 2 ; 2 >
-    au < manifest ; Journal of Burma Studies Volume 3 ; 3 >
-    au < manifest ; Journal of Burma Studies Volume 4 ; 4 >
-    au < manifest ; Journal of Burma Studies Volume 5 ; 5 >
-    au < manifest ; Journal of Burma Studies Volume 6 ; 6 >
-    au < manifest ; Journal of Burma Studies Volume 7 ; 7 >
-    au < manifest ; Journal of Burma Studies Volume 8 ; 8 >
-    au < manifest ; Journal of Burma Studies Volume 9 ; 9 >
-    au < manifest ; Journal of Burma Studies Volume 10 ; 10 >
-    au < manifest ; Journal of Burma Studies Volume 11 ; 11 >
-    au < manifest ; Journal of Burma Studies Volume 12 ; 12 >
-    au < manifest ; Journal of Burma Studies Volume 13 ; 13 >
-    au < manifest ; Journal of Burma Studies Volume 14 ; 14 >
-    au < manifest ; Journal of Burma Studies Volume 15 ; 15 >
+    au < manifest ; 1997 ; Journal of Burma Studies Volume 1 ; 1 >
+    au < manifest ; 1998 ; Journal of Burma Studies Volume 2 ; 2 >
+    au < manifest ; 1999 ; Journal of Burma Studies Volume 3 ; 3 >
+    au < manifest ; 2000 ; Journal of Burma Studies Volume 4 ; 4 >
+    au < manifest ; 2001 ; Journal of Burma Studies Volume 5 ; 5 >
+    au < manifest ; 2002 ; Journal of Burma Studies Volume 6 ; 6 >
+    au < manifest ; 2003 ; Journal of Burma Studies Volume 7 ; 7 >
+    au < manifest ; 2004 ; Journal of Burma Studies Volume 8 ; 8 >
+    au < manifest ; 2005 ; Journal of Burma Studies Volume 9 ; 9 >
+    au < manifest ; 2006 ; Journal of Burma Studies Volume 10 ; 10 >
+    au < manifest ; 2007 ; Journal of Burma Studies Volume 11 ; 11 >
+    au < manifest ; 2008 ; Journal of Burma Studies Volume 12 ; 12 >
+    au < manifest ; 2009 ; Journal of Burma Studies Volume 13 ; 13 >
+    au < manifest ; 2010 ; Journal of Burma Studies Volume 14 ; 14 >
+    au < manifest ; 2011 ; Journal of Burma Studies Volume 15 ; 15 >
 
   }
 
@@ -69,10 +69,10 @@
 
     param[journal_dir] = journal_of_chinese_overseas
 
-    au < released ; Journal of Chinese Overseas Volume 1 ; 1 >
-    au < released ; Journal of Chinese Overseas Volume 2 ; 2 >
-    au < released ; Journal of Chinese Overseas Volume 3 ; 3 >
-    au < released ; Journal of Chinese Overseas Volume 4 ; 4 >
+    au < released ; 2005 ; Journal of Chinese Overseas Volume 1 ; 1 >
+    au < released ; 2006 ; Journal of Chinese Overseas Volume 2 ; 2 >
+    au < released ; 2007 ; Journal of Chinese Overseas Volume 3 ; 3 >
+    au < released ; 2008 ; Journal of Chinese Overseas Volume 4 ; 4 >
 
   }
 

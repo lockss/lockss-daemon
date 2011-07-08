@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0887-3593
   
-      au < doNotProcess ; Journal of the North American Benthological Society Volume 23 ; 23 >
-      au < superseded ; Journal of the North American Benthological Society Volume 24 ; 024 >
-      au < doNotProcess ; Journal of the North American Benthological Society Volume 25 ; 25 >
-      au < doNotProcess ; Journal of the North American Benthological Society Volume 26 ; 26 >
+      au < doNotProcess ; 2004 ; Journal of the North American Benthological Society Volume 23 ; 23 >
+      au < superseded ; 2005 ; Journal of the North American Benthological Society Volume 24 ; 24 >
+      au < doNotProcess ; 2006 ; Journal of the North American Benthological Society Volume 25 ; 25 >
+      au < doNotProcess ; 2007 ; Journal of the North American Benthological Society Volume 26 ; 26 >
     }
 
     {
 
-comment[0] = Atypon AUs
+	  comment[0] = Atypon AUs
 
     }
 

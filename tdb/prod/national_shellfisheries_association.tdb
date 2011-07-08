@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0730-8000
   
-      au < doNotProcess ; Journal of Shellfish Research Volume 24 ; 24 >
-      au < doNotProcess ; Journal of Shellfish Research Volume 25 ; 25 >
-      au < doNotProcess ; Journal of Shellfish Research Volume 26 ; 26 >
+      au < doNotProcess ; 2005 ; Journal of Shellfish Research Volume 24 ; 24 >
+      au < doNotProcess ; 2006 ; Journal of Shellfish Research Volume 25 ; 25 >
+      au < doNotProcess ; 2007 ; Journal of Shellfish Research Volume 26 ; 26 >
     }
 
     {
