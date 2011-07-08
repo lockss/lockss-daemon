@@ -13,14 +13,14 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.locksscard.LockssCardPlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
   
     {
 
       param[base_url] = http://www.lockss.org/
     
-      au < down ; LOCKSS Card 2005 ; 2005 >
-      au < down ; LOCKSS Card 2006 ; 2006 >
+      au < down ; 2005 ; LOCKSS Card 2005 ; 2005 >
+      au < down ; 2006 ; LOCKSS Card 2006 ; 2006 >
     
     }
     
@@ -28,7 +28,7 @@
 
       param[base_url] = http://www.lockss.org/za/
     
-      au < down ; LOCKSS Card 2006 (South Africa Edition) ; 2006 >
+      au < down ; 2006 ; LOCKSS Card 2006 (South Africa Edition) ; 2006 >
     
     }
       
@@ -36,7 +36,7 @@
 
       param[base_url] = http://www.lockss.org/za/proxy/
     
-      au < down ; LOCKSS Card 2006 (South Africa Proxy Edition) ; 2006 >
+      au < down ; 2006 ; LOCKSS Card 2006 (South Africa Proxy Edition) ; 2006 >
     
     }
 

@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1348-6160
   
-      au < doNotProcess ; Mammal Study Volume 30 ; 30 >
-      au < doNotProcess ; Mammal Study Volume 31 ; 31 >
-      au < doNotProcess ; Mammal Study Volume 32 ; 32 >
+      au < doNotProcess ; 2005 ; Mammal Study Volume 30 ; 30 >
+      au < doNotProcess ; 2006 ; Mammal Study Volume 31 ; 31 >
+      au < doNotProcess ; 2007 ; Mammal Study Volume 32 ; 32 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      comment[0] = Atypon AUs
 
     }
 

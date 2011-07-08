@@ -9,42 +9,43 @@
     title <
       name = Journal of Micropalaeontology ;
       issn = 0262-821X ;
-      eissn = 2041-4978
+      eissn = 2041-4978 ;
+      issnl = 0262-821X
     >  
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://jm.lyellcollection.org/
   
-    au < released ; Journal of Micropalaeontology Volume 1 ; 1 >
-    au < released ; Journal of Micropalaeontology Volume 2 ; 2 >
-    au < released ; Journal of Micropalaeontology Volume 3 ; 3 >
-    au < released ; Journal of Micropalaeontology Volume 4 ; 4 >
-    au < released ; Journal of Micropalaeontology Volume 5 ; 5 >
-    au < released ; Journal of Micropalaeontology Volume 6 ; 6 >
-    au < released ; Journal of Micropalaeontology Volume 7 ; 7 >
-    au < released ; Journal of Micropalaeontology Volume 8 ; 8 >
-    au < released ; Journal of Micropalaeontology Volume 9 ; 9 >
-    au < released ; Journal of Micropalaeontology Volume 10 ; 10 >
-    au < released ; Journal of Micropalaeontology Volume 11 ; 11 >
-    au < released ; Journal of Micropalaeontology Volume 12 ; 12 >
-    au < released ; Journal of Micropalaeontology Volume 13 ; 13 >
-    au < released ; Journal of Micropalaeontology Volume 14 ; 14 >
-    au < released ; Journal of Micropalaeontology Volume 15 ; 15 >
-    au < released ; Journal of Micropalaeontology Volume 16 ; 16 >
-    au < released ; Journal of Micropalaeontology Volume 17 ; 17 >
-    au < released ; Journal of Micropalaeontology Volume 18 ; 18 >
-    au < released ; Journal of Micropalaeontology Volume 19 ; 19 >
-    au < released ; Journal of Micropalaeontology Volume 20 ; 20 >
-    au < released ; Journal of Micropalaeontology Volume 21 ; 21 >
-    au < released ; Journal of Micropalaeontology Volume 22 ; 22 >
-    au < released ; Journal of Micropalaeontology Volume 23 ; 23 >
-    au < released ; Journal of Micropalaeontology Volume 24 ; 24 >
-    au < released ; Journal of Micropalaeontology Volume 25 ; 25 >
-    au < released ; Journal of Micropalaeontology Volume 26 ; 26 >
-    au < released ; Journal of Micropalaeontology Volume 27 ; 27 >
-    au < released ; Journal of Micropalaeontology Volume 28 ; 28 >
-    au < released ; Journal of Micropalaeontology Volume 29 ; 29 >
+    au < released ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 >
+    au < released ; 1983 ; Journal of Micropalaeontology Volume 2 ; 2 >
+    au < released ; 1984 ; Journal of Micropalaeontology Volume 3 ; 3 >
+    au < released ; 1985 ; Journal of Micropalaeontology Volume 4 ; 4 >
+    au < released ; 1986 ; Journal of Micropalaeontology Volume 5 ; 5 >
+    au < released ; 1987 ; Journal of Micropalaeontology Volume 6 ; 6 >
+    au < released ; 1988 ; Journal of Micropalaeontology Volume 7 ; 7 >
+    au < released ; 1989 ; Journal of Micropalaeontology Volume 8 ; 8 >
+    au < released ; 1990 ; Journal of Micropalaeontology Volume 9 ; 9 >
+    au < released ; 1991 ; Journal of Micropalaeontology Volume 10 ; 10 >
+    au < released ; 1992 ; Journal of Micropalaeontology Volume 11 ; 11 >
+    au < released ; 1993 ; Journal of Micropalaeontology Volume 12 ; 12 >
+    au < released ; 1994 ; Journal of Micropalaeontology Volume 13 ; 13 >
+    au < released ; 1995 ; Journal of Micropalaeontology Volume 14 ; 14 >
+    au < released ; 1996 ; Journal of Micropalaeontology Volume 15 ; 15 >
+    au < released ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 >
+    au < released ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 >
+    au < released ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 >
+    au < released ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 >
+    au < released ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 >
+    au < released ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 >
+    au < released ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 >
+    au < released ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 >
+    au < released ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 >
+    au < released ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 >
+    au < released ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 >
+    au < released ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 >
+    au < released ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 >
+    au < released ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 >
     
   }
   

@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,8 +19,8 @@
 
     param[journal_dir] = bulletin_of_hispanic_studies
 
-    au < released ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
-    au < released ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < released ; 2009 ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
+    au < released ; 2010 ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
 
   }
 
@@ -35,7 +35,7 @@
 
     param[journal_dir] = byron_journal
 
-    au < released ; The Byron Journal Volume 37 ; 37 >
+    au < released ; 2009 ; The Byron Journal Volume 37 ; 37 >
 
   }
 
@@ -50,7 +50,7 @@
 
     param[journal_dir] = journal_of_literary_and_cultural_disability_studies
 
-    au < released ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
 
   }
 
@@ -65,9 +65,9 @@
 
     param[journal_dir] = music_sound_and_the_moving_image
 
-    au < released ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-    au < released ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-    au < released ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+    au < released ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+    au < released ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+    au < released ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 >
 
   }
 
@@ -82,7 +82,7 @@
 
     param[journal_dir] = romani_studies
 
-    au < released ; Romani Studies Volume 19 ; 19 >
+    au < released ; 2009 ; Romani Studies Volume 19 ; 19 >
 
   }
 
@@ -97,8 +97,8 @@
 
     param[journal_dir] = science_fiction_film_and_television
 
-    au < released ; Science Fiction Film and Television Volume 1 ; 1 >
-    au < released ; Science Fiction Film and Television Volume 2 ; 2 >
+    au < released ; 2008 ; Science Fiction Film and Television Volume 1 ; 1 >
+    au < released ; 2009 ; Science Fiction Film and Television Volume 2 ; 2 >
 
   }
 

@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-8567
   
-      au < doNotProcess ; Journal of the Kansas Entomological Society Volume 77 ; 77 >
-      au < doNotProcess ; Journal of the Kansas Entomological Society Volume 78 ; 78 >
-      au < doNotProcess ; Journal of the Kansas Entomological Society Volume 79 ; 79 >
-      au < doNotProcess ; Journal of the Kansas Entomological Society Volume 80 ; 80 >
+      au < doNotProcess ; 2004 ; Journal of the Kansas Entomological Society Volume 77 ; 77 >
+      au < doNotProcess ; 2005 ; Journal of the Kansas Entomological Society Volume 78 ; 78 >
+      au < doNotProcess ; 2006 ; Journal of the Kansas Entomological Society Volume 79 ; 79 >
+      au < doNotProcess ; 2007 ; Journal of the Kansas Entomological Society Volume 80 ; 80 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      comment[0] = Atypon AUs
 
     }
 

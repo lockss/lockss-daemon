@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,14 +17,14 @@
 
     param[journal_dir] = latin_american_research_review
 
-    au < released ; Latin American Research Review Volume 38 ; 38 >
-    au < released ; Latin American Research Review Volume 39 ; 39 >
-    au < released ; Latin American Research Review Volume 40 ; 40 >
-    au < released ; Latin American Research Review Volume 41 ; 41 >
-    au < released ; Latin American Research Review Volume 42 ; 42 >
-    au < released ; Latin American Research Review Volume 43 ; 43 >
-    au < released ; Latin American Research Review Volume 44 ; 44 >
-    au < released ; Latin American Research Review Volume 45 ; 45 >
+    au < released ; 2003 ; Latin American Research Review Volume 38 ; 38 >
+    au < released ; 2004 ; Latin American Research Review Volume 39 ; 39 >
+    au < released ; 2005 ; Latin American Research Review Volume 40 ; 40 >
+    au < released ; 2006 ; Latin American Research Review Volume 41 ; 41 >
+    au < released ; 2007 ; Latin American Research Review Volume 42 ; 42 >
+    au < released ; 2008 ; Latin American Research Review Volume 43 ; 43 >
+    au < released ; 2009 ; Latin American Research Review Volume 44 ; 44 >
+    au < released ; 2010 ; Latin American Research Review Volume 45 ; 45 >
 
   }
 

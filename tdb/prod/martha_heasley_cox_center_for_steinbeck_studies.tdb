@@ -3,7 +3,7 @@
     name = Martha Heasley Cox Center for Steinbeck Studies
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -12,13 +12,14 @@
     title <
       name = Steinbeck Studies ;
       issn = 1551-6903 ;
-      eissn = 0898-7734
+      eissn = 0898-7734 ;
+      issnl = 1551-6903
     >
 
     param[journal_dir] = steinbeck_studies
 
-    au < manifest ; Steinbeck Studies Volume 15 ; 15 >
-    au < manifest ; Steinbeck Studies Volume 16 ; 16 >
+    au < manifest ; 2004 ; Steinbeck Studies Volume 15 ; 15 >
+    au < manifest ; 2005 ; Steinbeck Studies Volume 16 ; 16 >
  
   }
 
