@@ -776,27 +776,6 @@
     au < manifest ; exists ; 2011 ; American Literary History Volume 23 ; 23 ; >
 
     }
-
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = american_literary_history
-
-    au < wanted ; exists ; 2000 ; American Literary History Volume 12 ; 12 ; >
-    au < wanted ; exists ; 2001 ; American Literary History Volume 13 ; 13 ; >
-    au < wanted ; exists ; 2002 ; American Literary History Volume 14 ; 14 ; >
-    au < wanted ; exists ; 2003 ; American Literary History Volume 15 ; 15 ; >
-    au < wanted ; exists ; 2004 ; American Literary History Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2005 ; American Literary History Volume 17 ; 17 ; >
-    au < wanted ; exists ; 2006 ; American Literary History Volume 18 ; 18 ; >
-    au < wanted ; exists ; 2007 ; American Literary History Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2008 ; American Literary History Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2009 ; American Literary History Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2010 ; American Literary History Volume 22 ; 22 ; >
-    au < wanted ; exists ; 2011 ; American Literary History Volume 23 ; 23 ; >
-
-    }
     
   }
 
@@ -2861,21 +2840,6 @@
 
     }
     
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = cambridge_quarterly
-
-    au < manifest ; exists ; 2006 ; The Cambridge Quarterly Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 ; >
-
-    }
-    
   }
 
   {
@@ -3876,19 +3840,6 @@
     au < manifest ; exists ; 2011 ; Early Music Volume 39 ; 39 ; >
 
     }
-    
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = early_music
-
-    au < manifest ; exists ; 2004 ; Early Music Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2005 ; Early Music Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2006 ; Early Music Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2007 ; Early Music Volume 35 ; 35 ; >
-        
-    }
 
   }
   
@@ -4174,25 +4125,7 @@
     au < wanted ; exists ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
 
     }
-    
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = enterprise_and_society
-
-    au < manifest ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2005 ; Enterprise & Society Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2006 ; Enterprise & Society Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2007 ; Enterprise & Society Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
      
-    }
-    
   }
 
   {
@@ -4381,17 +4314,6 @@
     au < released ; manifest ; 2010 ; Essays in Criticism Volume 60 ; 60 ; >
     au < manifest ; exists ; 2011 ; Essays in Criticism Volume 61 ; 61 ; >
 
-    }
-
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = essays_in_criticism
-
-    au < manifest ; exists ; 2006 ; Essays in Criticism Volume 56 ; 56 ; >
-    au < manifest ; exists ; 2007 ; Essays in Criticism Volume 57 ; 57 ; >
-    
     }
     
   }
@@ -5352,21 +5274,6 @@
 
     }
     
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = french_studies_a_quarterly_review
-
-    au < manifest ; exists ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
-     
-    }
-    
   }
 
   {
@@ -5831,30 +5738,6 @@
 
     }
     
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = history_workshop_journal
-
-    au < manifest ; exists ; 2004 ; History Workshop Journal Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2004 ; History Workshop Journal Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2005 ; History Workshop Journal Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2005 ; History Workshop Journal Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2006 ; History Workshop Journal Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2006 ; History Workshop Journal Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2007 ; History Workshop Journal Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2007 ; History Workshop Journal Issue 64 ; 64 ; >
-    au < manifest ; exists ; 2008 ; History Workshop Journal Issue 65 ; 65 ; >
-    au < manifest ; exists ; 2008 ; History Workshop Journal Issue 66 ; 66 ; >
-    au < manifest ; exists ; 2009 ; History Workshop Journal Issue 67 ; 67 ; >
-    au < manifest ; exists ; 2009 ; History Workshop Journal Issue 68 ; 68 ; >
-    au < manifest ; exists ; 2010 ; History Workshop Journal Issue 69 ; 69 ; >
-    au < manifest ; exists ; 2010 ; History Workshop Journal Issue 70 ; 70 ; >
-    au < manifest ; exists ; 2011 ; History Workshop Journal Issue 71 ; 71 ; >
-
-    }
-    
   }
 
   {
@@ -5909,24 +5792,6 @@
     au < released ; manifest ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
     au < manifest ; exists ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
 
-    }
-
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = holocaust_and_genocide_studies
-
-    au < manifest ; exists ; 2003 ; Holocaust and Genocide Studie Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2004 ; Holocaust and Genocide Studie Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2005 ; Holocaust and Genocide Studie Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2006 ; Holocaust and Genocide Studie Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2007 ; Holocaust and Genocide Studie Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2008 ; Holocaust and Genocide Studie Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2009 ; Holocaust and Genocide Studie Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2010 ; Holocaust and Genocide Studie Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2011 ; Holocaust and Genocide Studie Volume 25 ; 25 ; >
-        
     }
     
   }
@@ -7825,18 +7690,7 @@
     au < manifest ; exists ; 2011 ; Journal of the American Academy of Religion Volume 79 ; 79 ; >
 
     }
-    
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = journal_of_the_american_academy_of_religion
 
-    au < manifest ; exists ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 ; >
-    
-    }
-    
   }
 
   {
@@ -9310,27 +9164,6 @@
 
     }
 
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
-
-    au < manifest ; exists ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 ; 56 ; >
-    au < manifest ; exists ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
-
-    }
-    
   }
 
   {
@@ -10775,26 +10608,6 @@
   }
 
   {
-
-    title <
-      name = Journal of the Royal Musical Association ;
-      issn = 0269-0403 ;
-      eissn = 1471-6933 ;
-      issnl = 0269-0403
-    >
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = journal_of_the_royal_musical_association
-
-    au < manifest ; exists ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 ; >
-    au < manifest ; exists ; 2006 ; Journal of the Royal Musical Association Volume 131 ; 131 ; >
-    au < manifest ; exists ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 ; >
-    au < manifest ; exists ; 2008 ; Journal of the Royal Musical Association Volume 133 ; 133 ; >
-
-  }
-
-  {
   
     title <
       name = Journal of Semantics ;
@@ -11538,21 +11351,6 @@
     au < exists ; exists ; 2011 ; The Library Volume 12 ; 12 ; >
 
     }
-
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
-
-    au < manifest ; exists ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 ; 12 ; >
-        
-    }
     
   }
 
@@ -12135,31 +11933,6 @@
     au < wanted ; exists ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
 
     }
-
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = modern_judaism
-
-    au < manifest ; exists ; 1996 ; Modern Judaism Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1997 ; Modern Judaism Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1998 ; Modern Judaism Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1999 ; Modern Judaism Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2000 ; Modern Judaism Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2001 ; Modern Judaism Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2002 ; Modern Judaism Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2003 ; Modern Judaism Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2004 ; Modern Judaism Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2005 ; Modern Judaism Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2006 ; Modern Judaism Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2007 ; Modern Judaism Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2008 ; Modern Judaism Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2010 ; Modern Judaism Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
-
-    }
     
   }
 
@@ -12414,23 +12187,6 @@
     au < wanted ; exists ; 2010 ; Music and Letters Volume 91 ; 91 ; >
     au < wanted ; exists ; 2011 ; Music and Letters Volume 92 ; 92 ; >
 
-    }
-
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = music_and_letters
-
-    au < manifest ; exists ; 2004 ; Music and Letters Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2005 ; Music and Letters Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2006 ; Music and Letters Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2007 ; Music and Letters Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2008 ; Music and Letters Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2009 ; Music and Letters Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2010 ; Music and Letters Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2011 ; Music and Letters Volume 92 ; 92 ; >
-            
     }
     
   }
@@ -13331,24 +13087,6 @@
     au < manifest ; exists ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
             
     }  
-    
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = opera_quarterly
-
-    au < manifest ; exists ; 2002 ; The Opera Quarterly Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2003 ; The Opera Quarterly Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2004 ; The Opera Quarterly Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2005 ; The Opera Quarterly Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2006 ; The Opera Quarterly Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2007 ; The Opera Quarterly Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2008 ; The Opera Quarterly Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2009 ; The Opera Quarterly Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
-    
-    }
         
   }
   
@@ -13416,18 +13154,6 @@
     au < exists ; exists ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < wanted ; exists ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
     au < exists ; exists ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
-
-    }
-
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = the_oral_history_review
-
-    au < manifest ; exists ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
 
     }
     
@@ -14059,27 +13785,6 @@
     au < wanted ; exists ; 2010 ; Past & Present Volume 202 ; 202 ; >
     au < wanted ; exists ; 2010 ; Past & Present Volume 204 ; 204 ; >
 
-    }
-
-    {
-
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = past_and_present
-
-    au < manifest ; exists ; 2005 ; Past & Present Volume 188 ; 188 ; >
-    au < manifest ; exists ; 2005 ; Past & Present Volume 189 ; 189 ; >
-    au < manifest ; exists ; 2006 ; Past & Present Volume 190 ; 190 ; >
-    au < manifest ; exists ; 2006 ; Past & Present Volume 191 ; 191 ; >
-    au < manifest ; exists ; 2006 ; Past & Present Volume 192 ; 192 ; >
-    au < manifest ; exists ; 2006 ; Past & Present Volume 193 ; 193 ; >
-    au < manifest ; exists ; 2006 ; Past & Present 2006 Supplement 1; 1 ; >
-    au < manifest ; exists ; 2007 ; Past & Present Number 194 ; 194 ; >
-    au < manifest ; exists ; 2007 ; Past & Present Number 195 ; 195 ; >
-    au < manifest ; exists ; 2007 ; Past & Present Number 196 ; 196 ; >
-    au < manifest ; exists ; 2007 ; Past & Present Number 197 ; 197 ; >
-    au < manifest ; exists ; 2007 ; Past & Present 2007 Supplement 2; 2 ; >
-        
     }
     
   }
@@ -16136,24 +15841,6 @@
     au < manifest ; exists ; 2008 ; Social Politics Volume 15 ; 15 ; >
     au < wanted ; exists ; 2009 ; Social Politics Volume 16 ; 16 ; >
     au < wanted ; exists ; 2010 ; Social Politics Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2011 ; Social Politics Volume 18 ; 18 ; >
-
-    }
-
-    {
-    
-    param[base_url] = http://muse.jhu.edu/
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[journal_dir] = social_politics
-
-    au < manifest ; exists ; 2003 ; Social Politics Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2004 ; Social Politics Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2005 ; Social Politics Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2006 ; Social Politics Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2007 ; Social Politics Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2008 ; Social Politics Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2009 ; Social Politics Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2010 ; Social Politics Volume 17 ; 17 ; >
     au < manifest ; exists ; 2011 ; Social Politics Volume 18 ; 18 ; >
 
     }
