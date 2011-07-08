@@ -73,8 +73,8 @@
     param[journal_issn] = 1757-0972
 
     au < ready ; 2008 ; Advances in Dual Diagnosis Volume 1 ; 1 >
-    au < testing ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
-    au < testing ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
+    au < ready ; 2009 ; Advances in Dual Diagnosis Volume 2 ; 2 >
+    au < ready ; 2010 ; Advances in Dual Diagnosis Volume 3 ; 3 >
 
   }
 
@@ -88,10 +88,10 @@
     param[journal_issn] = 2044-1282
 
     au < ready ; 2007 ; Advances in Mental Health and Intellectual Disabilities Volume 1 ; 1 >
-    au < testing ; 2008 ; Advances in Mental Health and Intellectual Disabilities Volume 2 ; 2 >
-    au < testing ; 2009 ; Advances in Mental Health and Intellectual Disabilities Volume 3 ; 3 >
-    au < testing ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >    
-    au < testing ; 2011 ; Advances in Mental Health and Intellectual Disabilities Volume 5 ; 5 >
+    au < ready ; 2008 ; Advances in Mental Health and Intellectual Disabilities Volume 2 ; 2 >
+    au < ready ; 2009 ; Advances in Mental Health and Intellectual Disabilities Volume 3 ; 3 >
+    au < ready ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >    
+    au < ready ; 2011 ; Advances in Mental Health and Intellectual Disabilities Volume 5 ; 5 >
 
   }
 
@@ -895,18 +895,18 @@
     param[journal_issn] = 1463-6646
     
     au < ready ; 1999 ; The British Journal of Forensic Practice Volume 1 ; 1 >
-    au < testing ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 >
-    au < testing ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 >
-    au < testing ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 >
-    au < testing ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 >
-    au < testing ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 >
-    au < testing ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 >
-    au < testing ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 >
-    au < testing ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 >
-    au < testing ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 >
-    au < testing ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 >    
-    au < testing ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 > 
-    au < testing ; 2011 ; The British Journal of Forensic Practice Volume 13 ; 13 >     
+    au < ready ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 >
+    au < ready ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 >
+    au < ready ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 >
+    au < ready ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 >
+    au < ready ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 >
+    au < ready ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 >
+    au < ready ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 >
+    au < ready ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 >
+    au < ready ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 >
+    au < ready ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 >    
+    au < ready ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 > 
+    au < ready ; 2011 ; The British Journal of Forensic Practice Volume 13 ; 13 >     
 
   }
 
@@ -1504,7 +1504,7 @@
 
     param[journal_issn] = 1745-9265
     
-    au < exists ; 2001 ; Drugs and Alcohol Today Volume 1 ; 1 >
+    au < testing ; 2001 ; Drugs and Alcohol Today Volume 1 ; 1 >
     au < exists ; 2002 ; Drugs and Alcohol Today Volume 2 ; 2 >
     au < exists ; 2003 ; Drugs and Alcohol Today Volume 3 ; 3 >
     au < exists ; 2004 ; Drugs and Alcohol Today Volume 4 ; 4 >    
@@ -1891,8 +1891,9 @@
     >
 
     param[journal_issn] = 1757-0980
+    comment[1] = fetch error
     
-    au < testing ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
+    au < notReady ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
     au < exists ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
     au < exists ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 >
 
@@ -2279,7 +2280,7 @@
 
     param[journal_issn] = 1460-8790
 
-    au < exists ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 >
+    au < testing ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 >
     au < exists ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 >
     au < exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 >
     au < exists ; 2001 ; Housing, Care and Support: A journal on policy, research and practice Volume 4 ; 4 >
@@ -2436,7 +2437,7 @@
       issnl = 0036-8792
     >
 
-    param[journal_issn] = ready
+    param[journal_issn] = 0036-8792
 
     
     au < released ; 1949-1950 ; Industrial Lubrication and Tribology Volume 1 ; 1 >
@@ -3403,7 +3404,7 @@
 
     param[journal_issn] = 1747-9886
 
-    au < exists ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 >
+    au < testing ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 >
     au < exists ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 >
     au < exists ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 >
     au < exists ; 2008 ; The International Journal of Leadership in Public Services Volume 4 ; 4 >
@@ -3554,7 +3555,7 @@
 
     param[journal_issn] = 1747-9894
 
-    au < exists ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 >
+    au < testing ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 >
     au < exists ; 2006 ; International Journal of Migration, Health and Social Care Volume 2 ; 2 >
     au < exists ; 2007 ; International Journal of Migration, Health and Social Care Volume 3 ; 3 >
     au < exists ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 >
@@ -4334,7 +4335,7 @@
 
     param[journal_issn] = 1463-8203
     
-    au < exists ; 1999 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 1 ; 1 >
+    au < testing ; 1999 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 1 ; 1 >
     au < exists ; 2000 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 2 ; 2 >
     au < exists ; 2001 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 3 ; 3 >
     au < exists ; 2002 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 4 ; 4 >
@@ -4381,9 +4382,9 @@
 
     param[journal_issn] = 1759-6599
 
-    au < testing ; 2008 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 >
-    au < exists ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 >
-    au < exists ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 >
+    au < ready ; 2008 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 >
+    au < testing ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 >
+    au < testing ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 >
         
   }
 
@@ -4452,7 +4453,7 @@
 
     param[journal_issn] = 1754-9450
 
-    au < exists ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 >
+    au < testing ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 >
     au < exists ; 2008 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 2 ; 2 >
     au < exists ; 2009 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 3 ; 3 >
     au < exists ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 >    
@@ -4602,9 +4603,10 @@
     >
 
     param[journal_issn] = 2040-8005
+    comment[2] = fetch error on 8084
     
     au < released ; 2010 ; Journal of Chinese Human Resource Management Volume 1 ; 1 >
-    au < testing ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
+    au < notReady ; 2011 ; Journal of Chinese Human Resource Management Volume 2 ; 2 >
 
   }
 
@@ -5554,8 +5556,8 @@
 
     param[journal_issn] = 2042-0927
     
-    au < testing ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
-    au < exists ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 > 
+    au < ready ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
+    au < testing ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 > 
  
   }
 
@@ -6908,7 +6910,7 @@
     au < released ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 >
     au < released ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
     au < released ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
-    au < testing ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 >
+    au < ready ; 2011 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 9 ; 9 >
 
   }
 
@@ -7295,7 +7297,7 @@
     comment[platform] = online from 2010
     
     au < released ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
-    au < testing ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
+    au < ready ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
 
   }
 
@@ -8344,8 +8346,8 @@
 
     param[journal_issn] = 2042-0919
     
-    au < testing ; 2010 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 1 ; 1 >
-    au < exists ; 2011 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 2 ; 2 >
+    au < ready ; 2010 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 1 ; 1 >
+    au < testing ; 2011 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 2 ; 2 >
 
   }
 
