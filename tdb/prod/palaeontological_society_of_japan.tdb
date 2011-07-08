@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1342-8144
   
-      au < doNotProcess ; Paleontological Research Volume 9 ; 9 >
-      au < doNotProcess ; Paleontological Research Volume 10 ; 10 >
-      au < doNotProcess ; Paleontological Research Volume 11 ; 11 >
+      au < doNotProcess ; 2005 ; Paleontological Research Volume 9 ; 9 >
+      au < doNotProcess ; 2006 ; Paleontological Research Volume 10 ; 10 >
+      au < doNotProcess ; 2007 ;  Paleontological Research Volume 11 ; 11 >
     }
 
     {

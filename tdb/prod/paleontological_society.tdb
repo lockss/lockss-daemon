@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0022-3360
   
-      au < superseded ; Journal of Paleontology Volume 74 ; 74 >
-      au < superseded ; Journal of Paleontology Volume 75 ; 75 >
-      au < superseded ; Journal of Paleontology Volume 76 ; 76 >
-      au < superseded ; Journal of Paleontology Volume 77 ; 77 >
-      au < superseded ; Journal of Paleontology Volume 78 ; 78 >
-      au < superseded ; Journal of Paleontology Volume 79 ; 79 >
-      au < superseded ; Journal of Paleontology Volume 80 ; 80 >
-      au < superseded ; Journal of Paleontology Volume 81 ; 81 >
+      au < superseded ; 2000 ; Journal of Paleontology Volume 74 ; 74 >
+      au < superseded ; 2001 ; Journal of Paleontology Volume 75 ; 75 >
+      au < superseded ; 2002 ; Journal of Paleontology Volume 76 ; 76 >
+      au < superseded ; 2003 ; Journal of Paleontology Volume 77 ; 77 >
+      au < superseded ; 2004 ; Journal of Paleontology Volume 78 ; 78 >
+      au < superseded ; 2005 ; Journal of Paleontology Volume 79 ; 79 >
+      au < superseded ; 2006 ; Journal of Paleontology Volume 80 ; 80 >
+      au < superseded ; 2007 ; Journal of Paleontology Volume 81 ; 81 >
     }
 
   }
@@ -40,21 +40,21 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0094-8373
   
-      au < superseded ; Paleobiology Volume 25 ; 25 >
-      au < superseded ; Paleobiology Volume 26 ; 26 >
-      au < superseded ; Paleobiology Volume 27 ; 27 >
-      au < superseded ; Paleobiology Volume 28 ; 28 >
-      au < superseded ; Paleobiology Volume 29 ; 29 >
-      au < superseded ; Paleobiology Volume 30 ; 30 >
-      au < doNotProcess ; Paleobiology Volume 31 ; 31 >
-      au < superseded ; Paleobiology Volume 31 ; 031 >
-      au < superseded ; Paleobiology Volume 32 ; 32 >
-      au < superseded ; Paleobiology Volume 33 ; 33 >
+      au < superseded ; 1999 ; Paleobiology Volume 25 ; 25 >
+      au < superseded ; 2000 ; Paleobiology Volume 26 ; 26 >
+      au < superseded ; 2001 ; Paleobiology Volume 27 ; 27 >
+      au < superseded ; 2002 ; Paleobiology Volume 28 ; 28 >
+      au < superseded ; 2003 ; Paleobiology Volume 29 ; 29 >
+      au < superseded ; 2004 ; Paleobiology Volume 30 ; 30 >
+      au < doNotProcess ; 2005 ; Paleobiology Volume 31 ; 31 >
+      au < superseded ; 2005 ; Paleobiology Volume 31 ; 031 >
+      au < superseded ; 2006 ; Paleobiology Volume 32 ; 32 >
+      au < superseded ; 2007 ; Paleobiology Volume 33 ; 33 >
     }
 
     {

@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,9 +17,9 @@
     
     param[journal_code] = panp
   
-    au < exists ; Pan-Pacific Entomologist Volume 83 ; 83 >
-    au < exists ; Pan-Pacific Entomologist Volume 84 ; 84 >
-    au < exists ; Pan-Pacific Entomologist Volume 85 ; 85 >
+    au < exists ; 2007 ; Pan-Pacific Entomologist Volume 83 ; 83 >
+    au < exists ; 2008 ; Pan-Pacific Entomologist Volume 84 ; 84 >
+    au < exists ; 2009 ; Pan-Pacific Entomologist Volume 85 ; 85 >
 
   }
   

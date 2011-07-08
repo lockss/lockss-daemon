@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,17 +19,18 @@
 
     param[journal_dir] = chaucer_review
 
-    au < released ; The Chaucer Review Volume 34 ; 34 >
-    au < released ; The Chaucer Review Volume 35 ; 35 >
-    au < released ; The Chaucer Review Volume 36 ; 36 >
-    au < released ; The Chaucer Review Volume 37 ; 37 >
-    au < released ; The Chaucer Review Volume 38 ; 38 >
-    au < released ; The Chaucer Review Volume 39 ; 39 >
-    au < released ; The Chaucer Review Volume 40 ; 40 >
-    au < released ; The Chaucer Review Volume 41 ; 41 >
-    au < testing ; The Chaucer Review Volume 42 ; 42 >
-    au < testing ; The Chaucer Review Volume 43 ; 43 >
-    au < testing ; The Chaucer Review Volume 44 ; 44 >
+    au < released ; 2000 ; The Chaucer Review Volume 34 ; 34 >
+    au < released ; 2001 ; The Chaucer Review Volume 35 ; 35 >
+    au < released ; 2002 ; The Chaucer Review Volume 36 ; 36 >
+    au < released ; 2003 ; The Chaucer Review Volume 37 ; 37 >
+    au < released ; 2004 ; The Chaucer Review Volume 38 ; 38 >
+    au < released ; 2005 ; The Chaucer Review Volume 39 ; 39 >
+    au < released ; 2006 ; The Chaucer Review Volume 40 ; 40 >
+    au < released ; 2007 ; The Chaucer Review Volume 41 ; 41 >
+    au < testing ; 2008 ; The Chaucer Review Volume 42 ; 42 >
+    au < testing ; 2009 ; The Chaucer Review Volume 43 ; 43 >
+    au < testing ; 2010 ; The Chaucer Review Volume 44 ; 44 >
+    au < testing ; 2011 ; The Chaucer Review Volume 45 ; 45 >
 
   }
 
@@ -44,17 +45,19 @@
 
     param[journal_dir] = comparative_literature_studies
 
-    au < released ; Comparative Literature Studies Volume 36 ; 36 >
-    au < released ; Comparative Literature Studies Volume 37 ; 37 >
-    au < released ; Comparative Literature Studies Volume 38 ; 38 >
-    au < released ; Comparative Literature Studies Volume 39 ; 39 >
-    au < released ; Comparative Literature Studies Volume 40 ; 40 >
-    au < released ; Comparative Literature Studies Volume 41 ; 41 >
-    au < released ; Comparative Literature Studies Volume 42 ; 42 >
-    au < released ; Comparative Literature Studies Volume 43 ; 43 >
-    au < released ; Comparative Literature Studies Volume 44 ; 44 >
-    au < released ; Comparative Literature Studies Volume 45 ; 45 >
-    au < released ; Comparative Literature Studies Volume 46 ; 46 >
+    au < released ; 1999 ; Comparative Literature Studies Volume 36 ; 36 >
+    au < released ; 2000 ; Comparative Literature Studies Volume 37 ; 37 >
+    au < released ; 2001 ; Comparative Literature Studies Volume 38 ; 38 >
+    au < released ; 2002 ; Comparative Literature Studies Volume 39 ; 39 >
+    au < released ; 2003 ; Comparative Literature Studies Volume 40 ; 40 >
+    au < released ; 2004 ; Comparative Literature Studies Volume 41 ; 41 >
+    au < released ; 2005 ; Comparative Literature Studies Volume 42 ; 42 >
+    au < released ; 2006 ; Comparative Literature Studies Volume 43 ; 43 >
+    au < released ; 2007 ; Comparative Literature Studies Volume 44 ; 44 >
+    au < released ; 2008 ; Comparative Literature Studies Volume 45 ; 45 >
+    au < released ; 2009 ; Comparative Literature Studies Volume 46 ; 46 >
+    au < released ; 2010 ; Comparative Literature Studies Volume 47 ; 47 >
+    au < released ; 2011 ; Comparative Literature Studies Volume 48 ; 48 >
 
   }
 
@@ -69,14 +72,15 @@
 
     param[journal_dir] = good_society
 
-    au < released ; The Good Society Volume 11 ; 11 >
-    au < released ; The Good Society Volume 12 ; 12 >
-    au < released ; The Good Society Volume 13 ; 13 >
-    au < released ; The Good Society Volume 14 ; 14 >
-    au < released ; The Good Society Volume 15 ; 15 >
-    au < released ; The Good Society Volume 16 ; 16 >
-    au < released ; The Good Society Volume 17 ; 17 >
-    au < released ; The Good Society Volume 18 ; 18 >
+    au < released ; 2002 ; The Good Society Volume 11 ; 11 >
+    au < released ; 2003 ; The Good Society Volume 12 ; 12 >
+    au < released ; 2004 ; The Good Society Volume 13 ; 13 >
+    au < released ; 2005 ; The Good Society Volume 14 ; 14 >
+    au < released ; 2006 ; The Good Society Volume 15 ; 15 >
+    au < released ; 2007 ; The Good Society Volume 16 ; 16 >
+    au < released ; 2008 ; The Good Society Volume 17 ; 17 >
+    au < released ; 2009 ; The Good Society Volume 18 ; 18 >
+    au < manifest ; 2010 ; The Good Society Volume 19 ; 19 >
 
   }
 
@@ -91,17 +95,18 @@
 
     param[journal_dir] = journal_of_general_education
 
-    au < released ; The Journal of General Education Volume 48 ; 48 >
-    au < released ; The Journal of General Education Volume 49 ; 49 >
-    au < released ; The Journal of General Education Volume 50 ; 50 >
-    au < released ; The Journal of General Education Volume 51 ; 51 >
-    au < released ; The Journal of General Education Volume 52 ; 52 >
-    au < released ; The Journal of General Education Volume 53 ; 53 >
-    au < released ; The Journal of General Education Volume 54 ; 54 >
-    au < released ; The Journal of General Education Volume 55 ; 55 >
-    au < released ; The Journal of General Education Volume 56 ; 56 >
-    au < released ; The Journal of General Education Volume 57 ; 57 >
-    au < released ; The Journal of General Education Volume 58 ; 58 >
+    au < released ; 1999 ; The Journal of General Education Volume 48 ; 48 >
+    au < released ; 2000 ; The Journal of General Education Volume 49 ; 49 >
+    au < released ; 2001 ; The Journal of General Education Volume 50 ; 50 >
+    au < released ; 2002 ; The Journal of General Education Volume 51 ; 51 >
+    au < released ; 2003 ; The Journal of General Education Volume 52 ; 52 >
+    au < released ; 2004 ; The Journal of General Education Volume 53 ; 53 >
+    au < released ; 2005-2006 ; The Journal of General Education Volume 54 ; 54 >
+    au < released ; 2006 ; The Journal of General Education Volume 55 ; 55 >
+    au < released ; 2007 ; The Journal of General Education Volume 56 ; 56 >
+    au < released ; 2008 ; The Journal of General Education Volume 57 ; 57 >
+    au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
+    au < manifest ; 2010 ; The Journal of General Education Volume 59 ; 59 >
 
   }
 
@@ -116,21 +121,24 @@
 
     param[journal_dir] = journal_of_nietzsche_studies
 
-    au < released ; The Journal of Nietzsche Studies Volume 23 ; 23 >
-    au < released ; The Journal of Nietzsche Studies Volume 24 ; 24 >
-    au < released ; The Journal of Nietzsche Studies Volume 25 ; 25 >
-    au < released ; The Journal of Nietzsche Studies Volume 26 ; 26 >
-    au < released ; The Journal of Nietzsche Studies Volume 27 ; 27 >
-    au < released ; The Journal of Nietzsche Studies Volume 28 ; 28 >
-    au < released ; The Journal of Nietzsche Studies Volume 29 ; 29 >
-    au < released ; The Journal of Nietzsche Studies Volume 30 ; 30 >
-    au < released ; The Journal of Nietzsche Studies Volume 31 ; 31 >
-    au < released ; The Journal of Nietzsche Studies Volume 32 ; 32 >
-    au < released ; The Journal of Nietzsche Studies Volume 33 ; 33 >
-    au < released ; The Journal of Nietzsche Studies Volume 34 ; 34 >
-    au < released ; The Journal of Nietzsche Studies Volume 35/36 ; 35 >
-    au < released ; The Journal of Nietzsche Studies Issue 37 ; 37 >
-    au < released ; The Journal of Nietzsche Studies Issue 38 ; 38 >
+    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 >
+    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 >
+    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 25 ; 25 >
+    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 26 ; 26 >
+    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 27 ; 27 >
+    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 28 ; 28 >
+    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 29 ; 29 >
+    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 30 ; 30 >
+    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 31 ; 31 >
+    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 32 ; 32 >
+    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 33 ; 33 >
+    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 34 ; 34 >
+    au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 >
+    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 >
+    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 >
+    au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 >
+    au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 >
+    au < manifest ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 >
     
   }
 
@@ -145,17 +153,19 @@
 
     param[journal_dir] = journal_of_speculative_philosophy
 
-    au < released ; The Journal of Speculative Philosophy Volume 13 ; 13 >
-    au < released ; The Journal of Speculative Philosophy Volume 14 ; 14 >
-    au < released ; The Journal of Speculative Philosophy Volume 15 ; 15 >
-    au < released ; The Journal of Speculative Philosophy Volume 16 ; 16 >
-    au < released ; The Journal of Speculative Philosophy Volume 17 ; 17 >
-    au < released ; The Journal of Speculative Philosophy Volume 18 ; 18 >
-    au < released ; The Journal of Speculative Philosophy Volume 19 ; 19 >
-    au < released ; The Journal of Speculative Philosophy Volume 20 ; 20 >
-    au < released ; The Journal of Speculative Philosophy Volume 21 ; 21 >
-    au < released ; The Journal of Speculative Philosophy Volume 22 ; 22 >
-    au < released ; The Journal of Speculative Philosophy Volume 23 ; 23 >
+    au < released ; 1999 ; The Journal of Speculative Philosophy Volume 13 ; 13 >
+    au < released ; 2000 ; The Journal of Speculative Philosophy Volume 14 ; 14 >
+    au < released ; 2001 ; The Journal of Speculative Philosophy Volume 15 ; 15 >
+    au < released ; 2002 ; The Journal of Speculative Philosophy Volume 16 ; 16 >
+    au < released ; 2003 ; The Journal of Speculative Philosophy Volume 17 ; 17 >
+    au < released ; 2004 ; The Journal of Speculative Philosophy Volume 18 ; 18 >
+    au < released ; 2005 ; The Journal of Speculative Philosophy Volume 19 ; 19 >
+    au < released ; 2006 ; The Journal of Speculative Philosophy Volume 20 ; 20 >
+    au < released ; 2007 ; The Journal of Speculative Philosophy Volume 21 ; 21 >
+    au < released ; 2008 ; The Journal of Speculative Philosophy Volume 22 ; 22 >
+    au < released ; 2009 ; The Journal of Speculative Philosophy Volume 23 ; 23 >
+    au < manifest ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
+    au < manifest ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
 
   }
 
@@ -169,7 +179,8 @@
 
     param[journal_dir] = pennsylvania_history
 
-    au < released ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+    au < released ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+    au < manifest ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
 
   }
 
@@ -184,17 +195,19 @@
 
     param[journal_dir] = philosophy_and_rhetoric
 
-    au < released ; Philosophy and Rhetoric Volume 32 ; 32 >
-    au < released ; Philosophy and Rhetoric Volume 33 ; 33 >
-    au < released ; Philosophy and Rhetoric Volume 34 ; 34 >
-    au < released ; Philosophy and Rhetoric Volume 35 ; 35 >
-    au < released ; Philosophy and Rhetoric Volume 36 ; 36 >
-    au < released ; Philosophy and Rhetoric Volume 37 ; 37 >
-    au < released ; Philosophy and Rhetoric Volume 38 ; 38 >
-    au < released ; Philosophy and Rhetoric Volume 39 ; 39 >
-    au < released ; Philosophy and Rhetoric Volume 40 ; 40 >
-    au < released ; Philosophy and Rhetoric Volume 41 ; 41 >
-    au < released ; Philosophy and Rhetoric Volume 42 ; 42 >
+    au < released ; 1999 ; Philosophy and Rhetoric Volume 32 ; 32 >
+    au < released ; 2000 ; Philosophy and Rhetoric Volume 33 ; 33 >
+    au < released ; 2001 ; Philosophy and Rhetoric Volume 34 ; 34 >
+    au < released ; 2002 ; Philosophy and Rhetoric Volume 35 ; 35 >
+    au < released ; 2003 ; Philosophy and Rhetoric Volume 36 ; 36 >
+    au < released ; 2004 ; Philosophy and Rhetoric Volume 37 ; 37 >
+    au < released ; 2005 ; Philosophy and Rhetoric Volume 38 ; 38 >
+    au < released ; 2006 ; Philosophy and Rhetoric Volume 39 ; 39 >
+    au < released ; 2007 ; Philosophy and Rhetoric Volume 40 ; 40 >
+    au < released ; 2008 ; Philosophy and Rhetoric Volume 41 ; 41 >
+    au < released ; 2009 ; Philosophy and Rhetoric Volume 42 ; 42 >
+    au < manifest ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
+    au < manifest ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
 
   }
 
@@ -209,9 +222,9 @@
 
     param[journal_dir] = resources_for_american_literary_study
 
-    au < released ; Resources for American Literary Study Volume 25 ; 25 >
-    au < released ; Resources for American Literary Study Volume 26 ; 26 >
-    au < released ; Resources for American Literary Study Volume 27 ; 27 >
+    au < released ; 1999 ; Resources for American Literary Study Volume 25 ; 25 >
+    au < released ; 2000 ; Resources for American Literary Study Volume 26 ; 26 >
+    au < released ; 2001 ; Resources for American Literary Study Volume 27 ; 27 >
 
   }
 
@@ -226,16 +239,17 @@
 
     param[journal_dir] = annual_of_bernard_shaw_studies
 
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
-    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
+    au < released ; 2000 ; SHAW The Annual of Bernard Shaw Studies Volume 20 ; 20 >
+    au < released ; 2001 ; SHAW The Annual of Bernard Shaw Studies Volume 21 ; 21 >
+    au < released ; 2002 ; SHAW The Annual of Bernard Shaw Studies Volume 22 ; 22 >
+    au < released ; 2003 ; SHAW The Annual of Bernard Shaw Studies Volume 23 ; 23 >
+    au < released ; 2004 ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
+    au < released ; 2005 ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
+    au < released ; 2006 ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
+    au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
+    au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
+    au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
+    au < manifest ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
 
   }
 
