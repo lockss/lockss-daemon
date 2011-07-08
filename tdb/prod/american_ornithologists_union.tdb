@@ -14,15 +14,15 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0078-6594
   
-      au < superseded ; Ornithological Monographs Volume 60 ; 60 >
-      au < superseded ; Ornithological Monographs Volume 61 ; 61 >
-      au < superseded ; Ornithological Monographs Volume 62 ; 62 >
-      au < superseded ; Ornithological Monographs Volume 63 ; 63 >
+      au < superseded ; 2009 ; Ornithological Monographs Volume 60 ; 60 >
+      au < superseded ; 2009 ; Ornithological Monographs Volume 61 ; 61 >
+      au < superseded ; 2009 ; Ornithological Monographs Volume 62 ; 62 >
+      au < superseded ; 2009 ; Ornithological Monographs Volume 63 ; 63 >
     }
 
   }
@@ -37,19 +37,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0004-8038
   
-      au < superseded ; The Auk Volume 117 ; 117 >
-      au < superseded ; The Auk Volume 118 ; 118 >
-      au < superseded ; The Auk Volume 119 ; 119 >
-      au < superseded ; The Auk Volume 120 ; 120 >
-      au < superseded ; The Auk Volume 121 ; 121 >
-      au < superseded ; The Auk Volume 122 ; 122 >
-      au < superseded ; The Auk Volume 123 ; 123 >
-      au < superseded ; The Auk Volume 124 ; 124 >
+      au < superseded ; 2000 ; The Auk Volume 117 ; 117 >
+      au < superseded ; 2001 ; The Auk Volume 118 ; 118 >
+      au < superseded ; 2002 ; The Auk Volume 119 ; 119 >
+      au < superseded ; 2003 ; The Auk Volume 120 ; 120 >
+      au < superseded ; 2004 ; The Auk Volume 121 ; 121 >
+      au < superseded ; 2005 ; The Auk Volume 122 ; 122 >
+      au < superseded ; 2006 ; The Auk Volume 123 ; 123 >
+      au < superseded ; 2007 ; The Auk Volume 124 ; 124 >
     }
 
     {
