@@ -1900,7 +1900,7 @@
     
     au < notReady ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
     au < ready ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
-    au < testing ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 >
+    au < ready ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 >
 
   }
 
@@ -5242,8 +5242,8 @@
 
     param[journal_issn] = 2041-2568
     
-    au < released ; 2010 ; Journal of Global Responsibility  Volume 1 ; 1 >
-    au < released ; 2011 ; Journal of Global Responsibility  Volume 2 ; 2 >
+    au < released ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 >
+    au < released ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 >
 
   }
 
@@ -6061,8 +6061,8 @@
     param[journal_issn] = 2040-7122
     comment[platform] = online from 2010
     
-    au < released ; 2010 ; Journal of Research in Interactive Marketing  Volume 4 ; 4 >
-    au < released ; 2011 ; Journal of Research in Interactive Marketing  Volume 5 ; 5 >
+    au < released ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 >
+    au < released ; 2011 ; Journal of Research in Interactive Marketing Volume 5 ; 5 >
 
   }
 
@@ -7197,20 +7197,20 @@
     comment[0] = formerly A Life in the Day
     
     au < ready ; 1997 ; Mental Health and Social Inclusion Volume 1 ; 1 >
-    au < exists ; 1998 ; Mental Health and Social Inclusion Volume 2 ; 2 >
-    au < exists ; 1999 ; Mental Health and Social Inclusion Volume 3 ; 3 >
-    au < exists ; 2000 ; Mental Health and Social Inclusion Volume 4 ; 4 >
-    au < exists ; 2001 ; Mental Health and Social Inclusion Volume 5 ; 5 >
-    au < exists ; 2002 ; Mental Health and Social Inclusion Volume 6 ; 4 >
-    au < exists ; 2003 ; Mental Health and Social Inclusion Volume 7 ; 5 >
-    au < exists ; 2004 ; Mental Health and Social Inclusion Volume 8 ; 4 >
-    au < exists ; 2005 ; Mental Health and Social Inclusion Volume 9 ; 5 >
-    au < exists ; 2006 ; Mental Health and Social Inclusion Volume 10 ; 10 >
-    au < exists ; 2007 ; Mental Health and Social Inclusion Volume 11 ; 11 >
-    au < exists ; 2008 ; Mental Health and Social Inclusion Volume 12 ; 12 >
-    au < exists ; 2009 ; Mental Health and Social Inclusion Volume 13 ; 13 >
-    au < exists ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 >
-    au < exists ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 >
+    au <  ; 1998 ; Mental Health and Social Inclusion Volume 2 ; 2 >
+    au <  ; 1999 ; Mental Health and Social Inclusion Volume 3 ; 3 >
+    au <  ; 2000 ; Mental Health and Social Inclusion Volume 4 ; 4 >
+    au <  ; 2001 ; Mental Health and Social Inclusion Volume 5 ; 5 >
+    au <  ; 2002 ; Mental Health and Social Inclusion Volume 6 ; 4 >
+    au <  ; 2003 ; Mental Health and Social Inclusion Volume 7 ; 5 >
+    au <  ; 2004 ; Mental Health and Social Inclusion Volume 8 ; 4 >
+    au <  ; 2005 ; Mental Health and Social Inclusion Volume 9 ; 5 >
+    au <  ; 2006 ; Mental Health and Social Inclusion Volume 10 ; 10 >
+    au <  ; 2007 ; Mental Health and Social Inclusion Volume 11 ; 11 >
+    au <  ; 2008 ; Mental Health and Social Inclusion Volume 12 ; 12 >
+    au <  ; 2009 ; Mental Health and Social Inclusion Volume 13 ; 13 >
+    au <  ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 >
+    au <  ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 >
     
   }  
  
@@ -7225,21 +7225,21 @@
     param[journal_issn] = 1361-9322
     
     au < ready ; 1996 ; Mental Health Review Journal: Research, Policy and Practice Volume 1 ; 1 >
-    au < exists ; 1997 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 >    
-    au < exists ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 3 ; 3 >  
-    au < exists ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 >
-    au < exists ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 >
-    au < exists ; 2001 ; Mental Health Review Journal: Research, Policy and Practice Volume 6 ; 6 >
-    au < exists ; 2002 ; Mental Health Review Journal: Research, Policy and Practice Volume 7 ; 7 >
-    au < exists ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 >
-    au < exists ; 2004 ; Mental Health Review Journal: Research, Policy and Practice Volume 9 ; 9 >
-    au < exists ; 2005 ; Mental Health Review Journal: Research, Policy and Practice Volume 10 ; 10 >
-    au < exists ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 >
-    au < exists ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 >
-    au < exists ; 2008 ; Mental Health Review Journal: Research, Policy and Practice Volume 13 ; 13 >
-    au < exists ; 2009 ; Mental Health Review Journal: Research, Policy and Practice Volume 14 ; 14 >
-    au < exists ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 >
-    au < exists ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 >    
+    au <  ; 1997 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 >    
+    au <  ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 3 ; 3 >  
+    au <  ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 >
+    au <  ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 >
+    au <  ; 2001 ; Mental Health Review Journal: Research, Policy and Practice Volume 6 ; 6 >
+    au <  ; 2002 ; Mental Health Review Journal: Research, Policy and Practice Volume 7 ; 7 >
+    au <  ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 >
+    au <  ; 2004 ; Mental Health Review Journal: Research, Policy and Practice Volume 9 ; 9 >
+    au <  ; 2005 ; Mental Health Review Journal: Research, Policy and Practice Volume 10 ; 10 >
+    au <  ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 >
+    au <  ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 >
+    au <  ; 2008 ; Mental Health Review Journal: Research, Policy and Practice Volume 13 ; 13 >
+    au <  ; 2009 ; Mental Health Review Journal: Research, Policy and Practice Volume 14 ; 14 >
+    au <  ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 >
+    au <  ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 >    
 
   }
     
@@ -8103,20 +8103,17 @@
     param[journal_issn] = 1471-7794
     
     au < ready ; 2000 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 1 ; 1 >
-    au < testing ; 2001 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 2 ; 2 >
-    au < testing ; 2002 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 3 ; 3 >
-    au < testing ; 2003 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 4 ; 4 >
-    au < testing ; 2004 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 5 ; 5 >
-    au < testing ; 2005 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 6 ; 6 >
-    au < testing ; 2006 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 7 ; 7 >
-    au < testing ; 2007 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 8 ; 8 >
-    au < testing ; 2008 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 9 ; 9 >
-    au < testing ; 2009 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 10 ; 10 >
-    au < testing ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 >
-    au < testing ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 12 ; 12 >
-    au < doesNotExist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 13 ; 13 >
-    au < doesNotExist ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 14 ; 14 >                
-    au < testing ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 15 ; 15 >    
+    au < ready ; 2001 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 2 ; 2 >
+    au < ready ; 2002 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 3 ; 3 >
+    au < ready ; 2003 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 4 ; 4 >
+    au < ready ; 2004 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 5 ; 5 >
+    au < ready ; 2005 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 6 ; 6 >
+    au < ready ; 2006 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 7 ; 7 >
+    au < ready ; 2007 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 8 ; 8 >
+    au < ready ; 2008 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 9 ; 9 >
+    au < ready ; 2009 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 10 ; 10 >
+    au < ready ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 >
+    au < ready ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 12 ; 12 >  
 
   }
 
@@ -8195,21 +8192,21 @@
     param[journal_issn] = 0950-4125
     comment[platform] = online from 1997
     
-    au < released ; 1997 ; Reference Reviews  Volume 11 ; 11 >
-    au < released ; 1998 ; Reference Reviews  Volume 12 ; 12 >
-    au < released ; 1999 ; Reference Reviews  Volume 13 ; 13 >
-    au < released ; 2000 ; Reference Reviews  Volume 14 ; 14 >
-    au < released ; 2001 ; Reference Reviews  Volume 15 ; 15 >
-    au < released ; 2002 ; Reference Reviews  Volume 16 ; 16 >
-    au < released ; 2003 ; Reference Reviews  Volume 17 ; 17 >
-    au < released ; 2004 ; Reference Reviews  Volume 18 ; 18 >
-    au < released ; 2005 ; Reference Reviews  Volume 19 ; 19 >
-    au < released ; 2006 ; Reference Reviews  Volume 20 ; 20 >
-    au < released ; 2007 ; Reference Reviews  Volume 21 ; 21 >
-    au < released ; 2008 ; Reference Reviews  Volume 22 ; 22 >
-    au < released ; 2009 ; Reference Reviews  Volume 23 ; 23 >
-    au < released ; 2010 ; Reference Reviews  Volume 24 ; 24 >
-    au < released ; 2011 ; Reference Reviews  Volume 25 ; 25 >
+    au < released ; 1997 ; Reference Reviews Volume 11 ; 11 >
+    au < released ; 1998 ; Reference Reviews Volume 12 ; 12 >
+    au < released ; 1999 ; Reference Reviews Volume 13 ; 13 >
+    au < released ; 2000 ; Reference Reviews Volume 14 ; 14 >
+    au < released ; 2001 ; Reference Reviews Volume 15 ; 15 >
+    au < released ; 2002 ; Reference Reviews Volume 16 ; 16 >
+    au < released ; 2003 ; Reference Reviews Volume 17 ; 17 >
+    au < released ; 2004 ; Reference Reviews Volume 18 ; 18 >
+    au < released ; 2005 ; Reference Reviews Volume 19 ; 19 >
+    au < released ; 2006 ; Reference Reviews Volume 20 ; 20 >
+    au < released ; 2007 ; Reference Reviews Volume 21 ; 21 >
+    au < released ; 2008 ; Reference Reviews Volume 22 ; 22 >
+    au < released ; 2009 ; Reference Reviews Volume 23 ; 23 >
+    au < released ; 2010 ; Reference Reviews Volume 24 ; 24 >
+    au < released ; 2011 ; Reference Reviews Volume 25 ; 25 >
 
   }
 
@@ -8299,15 +8296,15 @@
     param[journal_issn] = 1757-8043
     
     au < ready ; 2002 ; Safer Communities: A journal of practice, opinion, policy and research Volume 1 ; 1 >
-    au < testing ; 2003 ; Safer Communities: A journal of practice, opinion, policy and research Volume 2 ; 2 >
-    au < testing ; 2004 ; Safer Communities: A journal of practice, opinion, policy and research Volume 3 ; 3 >
-    au < testing ; 2005 ; Safer Communities: A journal of practice, opinion, policy and research Volume 4 ; 4 >
-    au < testing ; 2006 ; Safer Communities: A journal of practice, opinion, policy and research Volume 5 ; 5 >
-    au < testing ; 2007 ; Safer Communities: A journal of practice, opinion, policy and research Volume 6 ; 6 >
-    au < testing ; 2008 ; Safer Communities: A journal of practice, opinion, policy and research Volume 7 ; 7 >
-    au < testing ; 2009 ; Safer Communities: A journal of practice, opinion, policy and research Volume 8 ; 8 >
-    au < testing ; 2010 ; Safer Communities: A journal of practice, opinion, policy and research Volume 9 ; 9 >
-    au < testing ; 2011 ; Safer Communities: A journal of practice, opinion, policy and research Volume 10 ; 10 >
+    au < ready ; 2003 ; Safer Communities: A journal of practice, opinion, policy and research Volume 2 ; 2 >
+    au < ready ; 2004 ; Safer Communities: A journal of practice, opinion, policy and research Volume 3 ; 3 >
+    au < ready ; 2005 ; Safer Communities: A journal of practice, opinion, policy and research Volume 4 ; 4 >
+    au < ready ; 2006 ; Safer Communities: A journal of practice, opinion, policy and research Volume 5 ; 5 >
+    au < ready ; 2007 ; Safer Communities: A journal of practice, opinion, policy and research Volume 6 ; 6 >
+    au < ready ; 2008 ; Safer Communities: A journal of practice, opinion, policy and research Volume 7 ; 7 >
+    au < ready ; 2009 ; Safer Communities: A journal of practice, opinion, policy and research Volume 8 ; 8 >
+    au < ready ; 2010 ; Safer Communities: A journal of practice, opinion, policy and research Volume 9 ; 9 >
+    au < ready ; 2011 ; Safer Communities: A journal of practice, opinion, policy and research Volume 10 ; 10 >
 
 
   }
@@ -8763,21 +8760,21 @@
     param[journal_issn] = 1359-5474
     
     au < ready ; 1996 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 1 ; 1 >
-    au < testing ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 >
-    au < testing ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 >    
-    au < testing ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 >
-    au < testing ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 >
-    au < testing ; 2001 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 6 ; 6 >
-    au < testing ; 2002 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 7 ; 7 >
-    au < testing ; 2003 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 8 ; 8 >
-    au < testing ; 2004 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 9 ; 9 >
-    au < testing ; 2005 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 10 ; 10 >    
-    au < testing ; 2006 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 11 ; 11 >
-    au < testing ; 2007 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 12 ; 12 >
-    au < testing ; 2008 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 13 ; 13 >
-    au < testing ; 2009 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 14 ; 14 >
-    au < testing ; 2010 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 15 ; 15 >
-    au < testing ; 2011 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 16 ; 16 >
+    au < ready ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 >
+    au < ready ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 >    
+    au < ready ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 >
+    au < ready ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 >
+    au < ready ; 2001 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 6 ; 6 >
+    au < ready ; 2002 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 7 ; 7 >
+    au < ready ; 2003 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 8 ; 8 >
+    au < ready ; 2004 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 9 ; 9 >
+    au < ready ; 2005 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 10 ; 10 >    
+    au < ready ; 2006 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 11 ; 11 >
+    au < ready ; 2007 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 12 ; 12 >
+    au < ready ; 2008 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 13 ; 13 >
+    au < ready ; 2009 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 14 ; 14 >
+    au < ready ; 2010 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 15 ; 15 >
+    au < ready ; 2011 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 16 ; 16 >
 
   }
 
@@ -9132,17 +9129,17 @@
     param[journal_issn] = 1366-3666
     
     au < ready ; 2000 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 4 ; 4 >
-    au < testing ; 2001 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 5 ; 5 >
-    au < testing ; 2002 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 6 ; 6 >
-    au < testing ; 2003 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 7 ; 7 >
-    au < testing ; 2004 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 8 ; 8 >
-    au < testing ; 2005 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 9 ; 9 >    
-    au < testing ; 2006 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 10 ; 10 >
-    au < testing ; 2007 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 11 ; 11 >
-    au < testing ; 2008 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 12 ; 12 >
-    au < testing ; 2009 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 13 ; 13 >
-    au < testing ; 2010 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 14 ; 14 >
-    au < testing ; 2011 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 15 ; 15 >
+    au < ready ; 2001 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 5 ; 5 >
+    au < ready ; 2002 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 6 ; 6 >
+    au < ready ; 2003 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 7 ; 7 >
+    au < ready ; 2004 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 8 ; 8 >
+    au < ready ; 2005 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 9 ; 9 >    
+    au < ready ; 2006 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 10 ; 10 >
+    au < ready ; 2007 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 11 ; 11 >
+    au < ready ; 2008 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 12 ; 12 >
+    au < ready ; 2009 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 13 ; 13 >
+    au < ready ; 2010 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 14 ; 14 >
+    au < ready ; 2011 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 15 ; 15 >
 
   }
 
