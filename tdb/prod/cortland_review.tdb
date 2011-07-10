@@ -20,9 +20,9 @@
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin98
       param[base_url] = http://www.cortlandreview.com/ 
-      implicit < status ; name >
+      implicit < status ; year ; name >
       
-      au < exists ; Cortland Review 1998 >     
+      au < exists ; 1998 ; Cortland Review 1998 >     
     
     }
     
@@ -30,9 +30,9 @@
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin99
       param[base_url] = http://www.cortlandreview.com/ 
-      implicit < status ; name >
+      implicit < status ; year ; name >
       
-      au < exists ; Cortland Review 1999 >     
+      au < exists ; 1999 ; Cortland Review 1999 >     
     
     }
     
@@ -40,9 +40,9 @@
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin00
       param[base_url] = http://www.cortlandreview.com/ 
-      implicit < status ; name >
+      implicit < status ; year ; name >
       
-      au < exists ; Cortland Review 2000 >     
+      au < exists ; 2000 ; Cortland Review 2000 >     
     
     }
     

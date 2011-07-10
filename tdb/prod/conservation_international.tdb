@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -16,9 +16,9 @@
     
     param[journal_code] = aabs
   
-    au < exists ; Advances in Applied Biodiversity Science 2003 ; 2003 >
-    au < exists ; Advances in Applied Biodiversity Science 2004 ; 2004 >
-    au < exists ; Advances in Applied Biodiversity Science 2007 ; 2007 >
+    au < exists ; 2003 ; Advances in Applied Biodiversity Science 2003 ; 2003 >
+    au < exists ; 2004 ; Advances in Applied Biodiversity Science 2004 ; 2004 >
+    au < exists ; 2007 ; Advances in Applied Biodiversity Science 2007 ; 2007 >
 
   }
 
@@ -31,9 +31,9 @@
     
     param[journal_code] = eden
   
-    au < exists ; Edentata 2004 ; 2004 >
-    au < exists ; Edentata 2006 ; 2006 >
-    au < exists ; Edentata 2007 ; 2007 >
+    au < exists ; 2004 ; Edentata 2004 ; 2004 >
+    au < exists ; 2006 ; Edentata 2006 ; 2006 >
+    au < exists ; 2007 ; Edentata 2007 ; 2007 >
 
   }
   
@@ -46,11 +46,11 @@
     
     param[journal_code] = nepr
   
-    au < exists ; Neotropical Primates 2004 ; 2004 >
-    au < exists ; Neotropical Primates 2005 ; 2005 >
-    au < exists ; Neotropical Primates 2007 ; 2007 >
-    au < exists ; Neotropical Primates 2008 ; 2008 >
-    au < exists ; Neotropical Primates 2009 ; 2009 >
+    au < exists ; 2004 ; Neotropical Primates 2004 ; 2004 >
+    au < exists ; 2005 ; Neotropical Primates 2005 ; 2005 >
+    au < exists ; 2007 ; Neotropical Primates 2007 ; 2007 >
+    au < exists ; 2008 ; Neotropical Primates 2008 ; 2008 >
+    au < exists ; 2009 ; Neotropical Primates 2009 ; 2009 >
 
   }
   
@@ -63,9 +63,9 @@
     
     param[journal_code] = prco
   
-    au < exists ; Primate Conservation 2006 ; 2006 >
-    au < exists ; Primate Conservation 2007 ; 2007 >
-    au < exists ; Primate Conservation 2008 ; 2008 >
+    au < exists ; 2006 ; Primate Conservation 2006 ; 2006 >
+    au < exists ; 2007 ; Primate Conservation 2007 ; 2007 >
+    au < exists ; 2008 ; Primate Conservation 2008 ; 2008 >
 
   }
   
