@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -16,8 +16,8 @@
     
     param[journal_code] = noat
   
-    au < exists ; Journal of the North Atlantic Volume 1 ; 1 >
-    au < exists ; Journal of the North Atlantic Volume 2 ; 2 >
+    au < exists ; 2008 ; Journal of the North Atlantic Volume 1 ; 1 >
+    au < exists ; 2009 ; Journal of the North Atlantic Volume 2 ; 2 >
 
   }
   
