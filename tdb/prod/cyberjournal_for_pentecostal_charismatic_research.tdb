@@ -3,7 +3,7 @@
     name = Cyberjournal for Pentecostal-Charismatic Research
   >
   
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   plugin = gov.loc.plugin.CJPentecostalCharismaticResearchPlugin
   param[base_url] = http://www.pctii.org/cyberj/
   
@@ -17,25 +17,26 @@
 
     rights = openaccess
     
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 1 ; 1 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 2 ; 2 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 3 ; 3 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 4 ; 4 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 5 ; 5 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 6 ; 6 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 7 ; 7 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 8 ; 8 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 9 ; 9 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 10 ; 10 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 11 ; 11 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 12 ; 12 >
-    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 13 ; 13 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 14 ; 14 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 15 ; 15 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 16 ; 16 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 17 ; 17 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 18 ; 18 >
-    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 19 ; 19 >
+    au < released ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Issue 1 ; 1 >
+    au < released ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Issue 2 ; 2 >
+    au < released ; 1998 ; Cyberjournal for Pentecostal-Charismatic Research Issue 3 ; 3 >
+    au < released ; 1998 ; Cyberjournal for Pentecostal-Charismatic Research Issue 4 ; 4 >
+    au < released ; 1999 ; Cyberjournal for Pentecostal-Charismatic Research Issue 5 ; 5 >
+    au < released ; 1999 ; Cyberjournal for Pentecostal-Charismatic Research Issue 6 ; 6 >
+    au < released ; 2000 ; Cyberjournal for Pentecostal-Charismatic Research Issue 7 ; 7 >
+    au < released ; 2000 ; Cyberjournal for Pentecostal-Charismatic Research Issue 8 ; 8 >
+    au < released ; 2001 ; Cyberjournal for Pentecostal-Charismatic Research Issue 9 ; 9 >
+    au < released ; 2001 ; Cyberjournal for Pentecostal-Charismatic Research Issue 10 ; 10 >
+    au < released ; 2002 ; Cyberjournal for Pentecostal-Charismatic Research Issue 11 ; 11 >
+    au < released ; 2003 ; Cyberjournal for Pentecostal-Charismatic Research Issue 12 ; 12 >
+    au < released ; 2004 ; Cyberjournal for Pentecostal-Charismatic Research Issue 13 ; 13 >
+    au < exists ; 2005 ; Cyberjournal for Pentecostal-Charismatic Research Issue 14 ; 14 >
+    au < exists ; 2006 ; Cyberjournal for Pentecostal-Charismatic Research Issue 15 ; 15 >
+    au < exists ; 2007 ; Cyberjournal for Pentecostal-Charismatic Research Issue 16 ; 16 >
+    au < exists ; 2008 ; Cyberjournal for Pentecostal-Charismatic Research Issue 17 ; 17 >
+    au < exists ; 2009 ; Cyberjournal for Pentecostal-Charismatic Research Issue 18 ; 18 >
+    au < exists ; 2010 ; Cyberjournal for Pentecostal-Charismatic Research Issue 19 ; 19 >
+    au < exists ; 2011 ; Cyberjournal for Pentecostal-Charismatic Research Issue 20 ; 20 >
   
   }
   
