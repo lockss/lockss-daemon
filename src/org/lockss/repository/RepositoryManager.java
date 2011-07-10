@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.13.2.3 2011-06-06 23:29:05 dshr Exp $
+ * $Id: RepositoryManager.java,v 1.13.2.4 2011-07-10 20:31:40 dshr Exp $
  */
 
 /*
@@ -105,9 +105,13 @@ public class RepositoryManager
 
   public static final String LOCAL_REPO_PROTOCOL = "file://";
   public static final String S3_REPO_PROTOCOL = "s3://";
+  public static final String IAS3_REPO_PROTOCOL = "ias3://";
+  public static final String WALRUS_REPO_PROTOCOL = "walrus://";
   public static final String REPO_PROTOCOLS[] = {
     LOCAL_REPO_PROTOCOL,
     S3_REPO_PROTOCOL,
+    IAS3_REPO_PROTOCOL,
+    WALRUS_REPO_PROTOCOL,
   };
 
   private PlatformUtil platInfo = PlatformUtil.getInstance();

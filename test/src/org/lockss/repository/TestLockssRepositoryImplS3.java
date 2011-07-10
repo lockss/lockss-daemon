@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.3 2011-06-10 03:11:35 dshr Exp $
+ * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.4 2011-07-10 20:31:40 dshr Exp $
  */
 
 /*
@@ -36,14 +36,13 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.apache.commons.vfs.VFS;
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.FileSystemOptions;
-import org.apache.commons.vfs.UserAuthenticator;
 import org.apache.commons.vfs.UserAuthenticator;
 import org.apache.commons.vfs.auth.*;
 import org.apache.commons.vfs.impl.*;
@@ -61,46 +60,68 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   private MockArchivalUnit mau;
   private String tempDirPath;
   private String tempDirURI;
-  private static FileSystemOptions fso = S3FileProvider.getDefaultFileSystemOptions();
-  private static DefaultFileSystemConfigBuilder fscb = new DefaultFileSystemConfigBuilder();
-  private static UserAuthenticator ua;
+
+  // XXX temporary
+
+  private static final int serviceIAS3 = 1;
+  private static final int serviceWalrus = 2;
+  private static int service = serviceWalrus;
 
   public void setUp() throws Exception {
+    String serviceName = "bogus://";
     super.setUp();
-    // XXX must use property files to set these - must not be checked in!
-    // XXX these are not good ways to switch services
-    if (false) {
-      // Use Internet Archive
-      System.setProperty("com.intridea.io.vfs.provider.s3.servicehostname", "s3.us.archive.org");
-      System.setProperty("org.jets3t.servicehostname", "s3.us.archive.org");
-      ua = new StaticUserAuthenticator("domain", "UUAPbWZiPLcW1sWb", "G4hKSN1kA65U0lFY");
-    } else {
-      // Use Amazon
-      ua = new StaticUserAuthenticator("domain", "AKIAIZL53QYLMLVCE4ZA", "wukpXLAnZtIpzgJvyOT13Q65gw6g1AJCuCtbDot1");
+    switch (service) {
+    case serviceS3:
+      /*
+       * Use Amazon:
+       */
+      serviceName = "s3://";
+      break;
+    case serviceIAS3:
+      /*
+       * Use Internet Archive @ :"ia600607.s3dns.us.archive.org";
+       * really "s3.us.archive.org"
+       */
+      serviceName = "ias3://";
+      break;
+    case serviceWalrus:
+      /*
+       * Use Walrus
+       */
+      serviceName = "walrus://";
+      break;
     }
     daemon = getMockLockssDaemon();
     repoMgr = daemon.getRepositoryManager();
-    tempDirURI = "s3://test.lockss.org" + File.separator + "unit" +
+    tempDirURI = serviceName + "test.lockss.org" + File.separator + "unit" +
       File.separator + ((new Date()).getTime()/1000);
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 		      tempDirURI);
-    if (true)
+    if (true) // XXX
       props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    fscb.setUserAuthenticator(fso, ua);
-
-    mau = new MockArchivalUnit();
-    repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+    if (propertiesAreSet()) {
+      /*
+       * These tests are dependent on external services being available.
+       * Thus, as a special case, they succeed in the case where the
+       * properties pointing to these services have not been set.
+       */
+      mau = new MockArchivalUnit();
+      repo =
+	(LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
         mau);
+      repo.setNodeCacheSize(17);
+      repo.initService(daemon);
+    }
     // set small node cache; one test needs to fill it up
-    repo.setNodeCacheSize(17);
-    repo.initService(daemon);
   }
 
   public void tearDown() throws Exception {
-    repo.stopService();
+    if (repo != null) {
+      repo.stopService();
+    }
     super.tearDown();
   }
 
@@ -108,7 +129,26 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return LockssRepositoryImpl.getCacheLocation();
   }
 
+  boolean propertiesAreSet() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    String service;
+    try {
+      service = UrlUtil.getUrlPrefix(tempDirURI);
+    } catch (MalformedURLException ex) {
+      logger.error("Bad root spec: " + tempDirURI);
+      return false;
+    }
+    String prefix = RepositoryManager.PREFIX + "." + service;
+    String host = config.get(prefix + ".host", null);
+    String accessKey = config.get(prefix + ".accesskey", null);
+    String secretKey = config.get(prefix + ".secretkey", null);
+    return (host != null && accessKey != null && secretKey != null);
+  }
+
   public void testGetLocalRepository() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
@@ -132,7 +172,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return RepositoryManager.LOCAL_REPO_PROTOCOL + path;
   }
 
-  public void dontTestGetLocalRepositoryPath() throws Exception {
+  public void testGetLocalRepositoryPath() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo",
 		 LockssRepositoryImpl.getLocalRepositoryPath(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo"));
     assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/cache/foo",
@@ -141,7 +184,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
   }
 
-  public void dontTestLocalRepository_GetAuMap() {
+  public void testLocalRepository_GetAuMap() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     Properties newProps = new Properties();
     mau.setAuId("barfoo");
     newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
@@ -162,7 +208,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
-  public void dontTestGetRepositoryRoot() throws Exception {
+  public void testGetRepositoryRoot() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     assertEquals(tempDirURI, LockssRepositoryImpl.getRepositoryRoot(mau));
 
     Configuration auconf =
@@ -176,7 +225,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   // but testing that would require using Runtime.exec() to create such a
   // link.  So we test only that isDirInRepository() is canonicalizing the
   // path.
-  public void dontTestIsDirInRepository() throws Exception {
+  public void testIsDirInRepository() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo"));
     assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo/"));
     assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/../bar/a",
@@ -184,7 +236,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertFalse(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/bar"));
   }
 
-  public void dontTestFileLocation() throws Exception {
+  public void testFileLocation() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     String cacheURI =
       LockssRepositoryImpl.mapAuToFileLocation(tempDirURI, mau);
     FileObject testFileObject = VFS.getManager().resolveFile(cacheURI);
@@ -200,7 +255,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(testFileObject.exists());
   }
 
-  public void dontTestGetRepositoryNode() throws Exception {
+  public void testGetRepositoryNode() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1/leaf2",
@@ -224,7 +282,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
   }
 
-  public void dontTestGetNodeWithQuery() throws Exception {
+  public void testGetNodeWithQuery() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     // check if '?' allowed on system
     if (FileUtil.canWriteToFileWithChar(tempDirPath, '?')) {
       createLeaf("http://www.example.com/testDir?leaf=2",
@@ -238,7 +299,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     }
   }
 
-  public void dontTestGetNodeWithPort() throws Exception {
+  public void testGetNodeWithPort() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com:22/testDir", "test stream", null);
     assertNull(repo.getNode("http://www.example.com/testDir"));
     RepositoryNode node =
@@ -247,7 +311,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("http://www.example.com:22/testDir", node.getNodeUrl());
   }
 
-  public void dontTestDotUrlHandling() throws Exception {
+  public void testDotUrlHandling() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     //testing correction of nodes with bad '..'-including urls,
     //filtering the first '..' but resolving the second
     RepositoryNode node = repo.createNewNode(
@@ -269,7 +336,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     } catch (MalformedURLException mue) { }
   }
 
-  public void dontTestCanonicalizePath() throws Exception {
+  public void testCanonicalizePath() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     assertEquals("http://www.example.com/test",
 		 repo.canonicalizePath("http://www.example.com/test/"));
     assertEquals("http://foo.com/test",
@@ -280,7 +350,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 		 repo.canonicalizePath("http://foo.com:20/bar/../test/"));
   }
 
-  public void dontTestGetAuNode() throws Exception {
+  public void testGetAuNode() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/testDir1/leaf1", "test stream", null);
     createLeaf("http://www.example.com/testDir2/leaf2", "test stream", null);
     createLeaf("http://image.example.com/testDir3/leaf3", "test stream", null);
@@ -303,7 +376,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  public void dontTestDeleteNode() throws Exception {
+  public void testDeleteNode() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/test1", "test stream", null);
 
     RepositoryNode node = repo.getNode("http://www.example.com/test1");
@@ -314,7 +390,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(node.isDeleted());
   }
 
-  public void dontTestDeactivateNode() throws Exception {
+  public void testDeactivateNode() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/test1", "test stream", null);
 
     RepositoryNode node = repo.getNode("http://www.example.com/test1");
@@ -325,7 +404,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(node.isContentInactive());
   }
 
-  public void dontTestCaching() throws Exception {
+  public void testCaching() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
     LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
@@ -342,7 +424,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals(misses, repoImpl.getCacheMisses());
   }
 
-  public void dontTestWeakReferenceCaching() throws Exception {
+  public void testWeakReferenceCaching() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
 
     LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
@@ -367,7 +452,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals(refHits+1, repoImpl.getRefHits());
   }
 
-  public void dontTestConsistencyCheck() throws Exception {
+  public void testConsistencyCheck() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)
@@ -391,7 +479,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertFalse(leaf.hasContent());
   }
 
-  public void dontTestRecursiveConsistencyCheck() throws Exception {
+  public void testRecursiveConsistencyCheck() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     createLeaf("http://www.example.com", "test stream", null);
     createLeaf("http://www.example.com/testDir", "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf", "test stream", null);
@@ -428,7 +519,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 
   // test static naming calls
 
-  public void dontTestGetNextDirName() {
+  public void testGetNextDirName() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     assertEquals("a", LockssRepositoryImpl.getNextDirName(""));
     assertEquals("b", LockssRepositoryImpl.getNextDirName("a"));
     assertEquals("c", LockssRepositoryImpl.getNextDirName("b"));
@@ -439,7 +533,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("aaa", LockssRepositoryImpl.getNextDirName("zz"));
   }
 
-  public void dontTestGetAuDirFromMap() {
+  public void testGetAuDirFromMap() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
@@ -448,7 +545,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
   }
 
-  public void dontTestGetAuDirFromMapNoCacheWrongRepo() {
+  public void testGetAuDirFromMapNoCacheWrongRepo() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository("/foo");
     Map aumap = localRepo.getAuMap();
@@ -459,12 +559,18 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
   }
 
-  public void dontTestGetAuDirNoCreate() {
+  public void testGetAuDirNoCreate() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     mau.setAuId("foobar23");
     assertNull(LockssRepositoryImpl.getAuDir(mau, "/tmp", false));
   }
 
-  public void dontTestSaveAndLoadNames() throws Exception {
+  public void testSaveAndLoadNames() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     String location =
       LockssRepositoryImpl.mapAuToFileLocation(tempDirURI, mau);
 
@@ -477,7 +583,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
                  props.getProperty(LockssRepositoryImpl.AU_ID_PROP));
   }
 
-  public void dontTestMapAuToFileLocation() {
+  public void testMapAuToFileLocation() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.localRepositories.clear();
     LockssRepositoryImpl.lastPluginDir = "ba";
     String expectedStr = getCacheLocation() + "bb/";
@@ -488,7 +597,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 							  new MockArchivalUnit()));
   }
 
-  public void dontTestDoesAuDirExist() {
+  public void testDoesAuDirExist() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.localRepositories.clear();
     MockArchivalUnit mau = new MockArchivalUnit();
     String auid = "sdflkjsd";
@@ -503,7 +615,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirURI));
   }
 
-  public void dontTestGetAuDirInitWithOne() {
+  public void testGetAuDirInitWithOne() {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     assertEquals(FileUtil.sysDepPath(root + "b/"),
@@ -511,7 +626,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 							  new MockArchivalUnit()));
   }
 
-  public void dontTestGetAuDirSkipping() throws Exception {
+  public void testGetAuDirSkipping() throws Exception {
+    if (!propertiesAreSet()) {
+      return;
+    }
     LockssRepositoryImpl.localRepositories.clear();
     String root = getCacheLocation();
     // a already made by setup
@@ -547,7 +665,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 						    new MockArchivalUnit());
   }
 
-  public void dontTestMapUrlToFileLocation() throws MalformedURLException {
+  public void testMapUrlToFileLocation() throws MalformedURLException {
+    if (!propertiesAreSet()) {
+      return;
+    }
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(FileUtil.sysDepPath(expectedStr),
@@ -565,7 +686,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     } catch (MalformedURLException mue) {}
   }
 
-  public void dontTestCharacterEscaping() throws MalformedURLException {
+  public void testCharacterEscaping() throws MalformedURLException {
+    if (!propertiesAreSet()) {
+      return;
+    }
     String testStr = "http://www.example.com/"+UrlUtil.encodeUrl("#")+"nodestate.xml";
     String expectedStr = "root/www.example.com/http/##nodestate.xml";
 //    assertEquals(FileUtil.sysDepPath(expectedStr),

@@ -1196,7 +1196,11 @@ public abstract class RestStorageService extends StorageService implements AWSRe
 
         try {
             // Ensure bucket exists and is accessible by performing a HEAD request
-            httpMethod = performRestHead(bucketName, null, null, null);
+            if (false) { // XXX DSHR for Walrus
+                httpMethod = performRestHead(bucketName, null, null, null);
+            } else {
+                httpMethod = performRestGet(bucketName, null, null, null);
+            }
 
             // This request may return an XML document that we're not interested in. Clean this up.
             if (httpMethod.getResponseBodyAsStream() != null) {

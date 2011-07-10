@@ -396,11 +396,16 @@ public class StorageObject extends BaseStorageItem implements Cloneable {
      */
     public long getContentLength() {
         Object contentLength = getMetadata(METADATA_HEADER_CONTENT_LENGTH);
-        if (contentLength == null) {
-            return 0;
-        } else {
-            return Long.parseLong(contentLength.toString());
+        //  XXX DSHR
+        long ret = 0;
+        if (contentLength != null) {
+          ret = Long.parseLong(contentLength.toString());
+          if (ret == 1) {
+            (new Throwable()).printStackTrace();
+            ret = 0; // XXX
+          }
         }
+        return ret;
     }
 
     /**

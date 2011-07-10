@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.10 2011-06-10 03:11:35 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.11 2011-07-10 20:31:40 dshr Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.apache.commons.vfs.*;
+import org.apache.commons.vfs.auth.*;
+import org.apache.commons.vfs.impl.*;
+import com.intridea.io.vfs.provider.s3.S3FileProvider;
 
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.app.*;
@@ -368,6 +371,7 @@ public class LockssRepositoryImpl
       throw new LockssRepository.RepositoryStateException(
           "Couldn't load param.");
     }
+    setupRepositoryParameters(root);
     String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
     logger.debug("repo: " + auDir + ", au: " + au.getName());
     staticCacheLocation = extendCacheLocation(root);
@@ -426,10 +430,45 @@ public class LockssRepositoryImpl
         }
       }
       if (repoSpec.startsWith(File.separator)) {
-	return RepositoryManager.LOCAL_REPO_PROTOCOL + repoSpec;
+	return RepositoryManager.LOCAL_REPO_PROTOCOL + repoSpec.substring(1);
       }
     }
     return null;
+  }
+
+  /*
+   * Use properties of the form org.lockss.repository.{s3,ias3,walrus}
+   * to set the system and VFS configuration for the service in
+   * question.
+   */
+  protected static void setupRepositoryParameters(String root) {
+    Configuration config = ConfigManager.getCurrentConfig();
+    String service;
+    try {
+      service = UrlUtil.getUrlPrefix(root);
+    } catch (MalformedURLException ex) {
+      logger.error("Bad root spec: " + root);
+      return;
+    }
+    String prefix = RepositoryManager.PREFIX + "." + service;
+    String host = config.get(prefix + ".host", null);
+    String accessKey = config.get(prefix + ".accesskey", null);
+    String secretKey = config.get(prefix + ".secretkey", null);
+    if (host != null) {
+      System.setProperty("com.intridea.io.vfs.provider.s3.servicehostname", host);
+      System.setProperty("org.jets3t.servicehostname", host);
+    }
+    if (accessKey != null && secretKey != null) {
+      UserAuthenticator ua =
+	new StaticUserAuthenticator("domain", accessKey, secretKey);
+      FileSystemOptions fso = S3FileProvider.getDefaultFileSystemOptions();
+      DefaultFileSystemConfigBuilder fscb = new DefaultFileSystemConfigBuilder();
+      try {
+	fscb.setUserAuthenticator(fso, ua);
+      } catch (FileSystemException ex) {
+	logger.warning("Can't set user authenticator: " + ex);
+      }
+    }
   }
 
 
@@ -707,7 +746,7 @@ public class LockssRepositoryImpl
       propFile = propDir.resolveFile(AU_ID_FILE);
       propFile.createFile();
     } catch (FileSystemException e) {
-      logger.error("Can't create directory " + location);
+      logger.error("Can't create directory " + location + "\n" + e);
       throw new LockssRepository.RepositoryStateException(
 	  "Couldn't create au id properties file.");
     }
