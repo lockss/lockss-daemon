@@ -20,18 +20,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literary_scholarship
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; American Literary Scholarship 1998 ; 1998 >
-      au < released ; American Literary Scholarship 1999 ; 1999 >
-      au < released ; American Literary Scholarship 2000 ; 2000 >
-      au < released ; American Literary Scholarship 2001 ; 2001 >
-      au < released ; American Literary Scholarship 2002 ; 2002 >
-      au < released ; American Literary Scholarship 2003 ; 2003 >
-      au < released ; American Literary Scholarship 2004 ; 2004 >
-      au < released ; American Literary Scholarship 2005 ; 2005 >
-      au < released ; American Literary Scholarship 2006 ; 2006 >
-      au < released ; American Literary Scholarship 2007 ; 2007 >
+      au < released ; 1998 ; American Literary Scholarship 1998 ; 1998 >
+      au < released ; 1999 ; American Literary Scholarship 1999 ; 1999 >
+      au < released ; 2000 ; American Literary Scholarship 2000 ; 2000 >
+      au < released ; 2001 ; American Literary Scholarship 2001 ; 2001 >
+      au < released ; 2002 ; American Literary Scholarship 2002 ; 2002 >
+      au < released ; 2003 ; American Literary Scholarship 2003 ; 2003 >
+      au < released ; 2004 ; American Literary Scholarship 2004 ; 2004 >
+      au < released ; 2005 ; American Literary Scholarship 2005 ; 2005 >
+      au < released ; 2006 ; American Literary Scholarship 2006 ; 2006 >
+      au < released ; 2007 ; American Literary Scholarship 2007 ; 2007 >
         
     }
 
@@ -39,16 +39,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://als.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; American Literary Scholarship 2003 ; 2003 >
-      au < HighWireStrVolPlugin ; released ; American Literary Scholarship 2004 ; 2004 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2005 ; 2005 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2006 ; 2006 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2007 ; 2007 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2008 ; 2008 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2009 ; 2009 >
-      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2010 ; 2010 >      
+      au < HighWireStrVolPlugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2003 >
+      au < HighWireStrVolPlugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2004 >
+      au < HighWirePressPlugin ; wanted ; 2005 ; American Literary Scholarship 2005 ; 2005 >
+      au < HighWirePressPlugin ; wanted ; 2006 ; American Literary Scholarship 2006 ; 2006 >
+      au < HighWirePressPlugin ; wanted ; 2007 ; American Literary Scholarship 2007 ; 2007 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; American Literary Scholarship 2008 ; 2008 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; American Literary Scholarship 2009 ; 2009 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; American Literary Scholarship 2010 ; 2010 >      
       
     }
     
@@ -66,16 +66,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literature
 
-      au < released ; American Literature Volume 71 ; 71 >
-      au < released ; American Literature Volume 72 ; 72 >
-      au < released ; American Literature Volume 73 ; 73 >
-      au < released ; American Literature Volume 74 ; 74 >
-      au < released ; American Literature Volume 75 ; 75 >
-      au < released ; American Literature Volume 76 ; 76 >
+      au < released ; 1999 ; American Literature Volume 71 ; 71 >
+      au < released ; 2000 ; American Literature Volume 72 ; 72 >
+      au < released ; 2001 ; American Literature Volume 73 ; 73 >
+      au < released ; 2002 ; American Literature Volume 74 ; 74 >
+      au < released ; 2003 ; American Literature Volume 75 ; 75 >
+      au < released ; 2004 ; American Literature Volume 76 ; 76 >
       
     }
     
@@ -83,14 +83,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanliterature.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; American Literature Volume 77 ; 77 >
-      au < HighWireStrVolPlugin ; released ; American Literature Volume 78 ; 78 >
-      au < HighWireStrVolPlugin ; released ; American Literature Volume 79 ; 79 >      
-      au < HighWirePressPlugin ; wanted ; American Literature Volume 80 ; 80 >
-      au < HighWirePressPlugin ; wanted ; American Literature Volume 81 ; 81 >
-      au < HighWirePressPlugin ; wanted ; American Literature Volume 82 ; 82 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; American Literature Volume 77 ; 77 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; American Literature Volume 78 ; 78 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; American Literature Volume 79 ; 79 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; American Literature Volume 80 ; 80 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; American Literature Volume 81 ; 81 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; American Literature Volume 82 ; 82 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; American Literature Volume 83 ; 83 >
     
     }
     
@@ -108,16 +109,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_speech
 
-      au < released ; American Speech Volume 74 ; 74 >
-      au < released ; American Speech Volume 75 ; 75 >
-      au < released ; American Speech Volume 76 ; 76 >
-      au < released ; American Speech Volume 77 ; 77 >
-      au < released ; American Speech Volume 78 ; 78 >
-      au < released ; American Speech Volume 79 ; 79 >
+      au < released ; 1999 ; American Speech Volume 74 ; 74 >
+      au < released ; 2000 ; American Speech Volume 75 ; 75 >
+      au < released ; 2001 ; American Speech Volume 76 ; 76 >
+      au < released ; 2002 ; American Speech Volume 77 ; 77 >
+      au < released ; 2003 ; American Speech Volume 78 ; 78 >
+      au < released ; 2004 ; American Speech Volume 79 ; 79 >
       
     }
     
@@ -125,14 +126,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanspeech.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; American Speech Volume 80 ; 80 >
-      au < HighWireStrVolPlugin ; released ; American Speech Volume 81 ; 81 >
-      au < HighWireStrVolPlugin ; released ; American Speech Volume 82 ; 82 >
-      au < HighWirePressPlugin ; wanted ; American Speech Volume 83 ; 83 >
-      au < HighWirePressPlugin ; wanted ; American Speech Volume 84 ; 84 >
-      au < HighWirePressPlugin ; wanted ; American Speech Volume 85 ; 85 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; American Speech Volume 80 ; 80 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; American Speech Volume 81 ; 81 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; American Speech Volume 82 ; 82 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; American Speech Volume 83 ; 83 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; American Speech Volume 84 ; 84 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; American Speech Volume 85 ; 85 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; American Speech Volume 86 ; 86 >
     
     }
     
@@ -152,14 +154,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = boundary
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; boundary 2 Volume 26 ; 26 >
-      au < released ; boundary 2 Volume 27 ; 27 >
-      au < released ; boundary 2 Volume 28 ; 28 >
-      au < released ; boundary 2 Volume 29 ; 29 >
-      au < released ; boundary 2 Volume 30 ; 30 >
-      au < released ; boundary 2 Volume 31 ; 31 >
+      au < released ; 1999 ; boundary 2 Volume 26 ; 26 >
+      au < released ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < released ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < released ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < released ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < released ; 2004 ; boundary 2 Volume 31 ; 31 >
       
     }
     
@@ -167,14 +169,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://boundary2.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 32 ; 32 >
-      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 33 ; 33 >
-      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 34 ; 34 >      
-      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 35 ; 35 >
-      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 36 ; 36 >
-      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 37 ; 37 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; boundary 2 Volume 32 ; 32 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; boundary 2 Volume 33 ; 33 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; boundary 2 Volume 34 ; 34 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; boundary 2 Volume 35 ; 35 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; boundary 2 Volume 36 ; 36 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; boundary 2 Volume 37 ; 37 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; boundary 2 Volume 38 ; 38 >
       
     }
     
@@ -194,13 +197,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = camera_obscura
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 >
+      au < released ; 2000 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
+      au < released ; 2001 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 16 ; 16 >
+      au < released ; 2002 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 17 ; 17 >
+      au < released ; 2003 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 18 ; 18 >
+      au < released ; 2004 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 19 ; 19 >
       
     }
     
@@ -208,14 +211,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cameraobscura.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
-      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
-      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
-      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
-      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
-      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       
     }
     
@@ -235,18 +238,20 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < released ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
+      au < released ; 2001 ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
+      au < released ; 2002 ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
+      au < released ; 2003 ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
+      au < released ; 2004 ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
+      au < released ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < released ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < released ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
+      au < released ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < wanted ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < wanted ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
 
     }
     
@@ -254,14 +259,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cssaame.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
-      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
-      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
-      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
-      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
       
     }
     
@@ -278,16 +284,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = differences
 
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      au < released ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
+      au < released ; 2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < released ; 2001 ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < released ; 2002 ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < released ; 2003 ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < released ; 2004 ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
       
     }
     
@@ -295,14 +301,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://differences.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
-      au < HighWireStrVolPlugin ; released ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
-      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
-      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
+      au < HighWirePressPlugin ; wanted ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
       
     }
     
@@ -322,23 +329,24 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eighteenth-century_life
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Eighteenth-Century Life Volume 20 ; 20 >
-      au < released ; Eighteenth-Century Life Volume 21 ; 21 >
-      au < released ; Eighteenth-Century Life Volume 22 ; 22 >
-      au < released ; Eighteenth-Century Life Volume 23 ; 23 >
-      au < released ; Eighteenth-Century Life Volume 24 ; 24 >
-      au < released ; Eighteenth-Century Life Volume 25 ; 25 >
-      au < released ; Eighteenth-Century Life Volume 26 ; 26 >
-      au < released ; Eighteenth-Century Life Volume 27 ; 27 >
-      au < released ; Eighteenth-Century Life Volume 28 ; 28 >
-      au < released ; Eighteenth-Century Life Volume 29 ; 29 >
-      au < released ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < released ; Eighteenth-Century Life Volume 31 ; 31 >
-      au < released ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < released ; Eighteenth-Century Life Volume 33 ; 33 >
-      au < released ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < released ; 1996 ; Eighteenth-Century Life Volume 20 ; 20 >
+      au < released ; 1997 ; Eighteenth-Century Life Volume 21 ; 21 >
+      au < released ; 1998 ; Eighteenth-Century Life Volume 22 ; 22 >
+      au < released ; 1999 ; Eighteenth-Century Life Volume 23 ; 23 >
+      au < released ; 2000 ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < released ; 2001 ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < released ; 2002 ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < released ; 2003 ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < released ; 2004 ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < released ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
+      au < released ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
+      au < released ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >
+      au < released ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < exists ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
 
     }
 
@@ -346,14 +354,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ecl.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 29 ; 29 >
-      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 31 ; 31 >      
-      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 33 ; 33 >
-      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
 
     }
     
@@ -370,16 +379,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ethnohistory
 
-      au < released ; Ethnohistory Volume 46 ; 46 >
-      au < released ; Ethnohistory Volume 47 ; 47 >
-      au < released ; Ethnohistory Volume 48 ; 48 >
-      au < released ; Ethnohistory Volume 49 ; 49 >
-      au < released ; Ethnohistory Volume 50 ; 50 >
-      au < released ; Ethnohistory Volume 51 ; 51 >
+      au < released ; 1999 ; Ethnohistory Volume 46 ; 46 >
+      au < released ; 2000 ; Ethnohistory Volume 47 ; 47 >
+      au < released ; 2001 ; Ethnohistory Volume 48 ; 48 >
+      au < released ; 2002 ; Ethnohistory Volume 49 ; 49 >
+      au < released ; 2003 ; Ethnohistory Volume 50 ; 50 >
+      au < released ; 2004 ; Ethnohistory Volume 51 ; 51 >
       
     }
     
@@ -387,15 +396,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 52 ; 52 >
-     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 53 ; 53 >
-     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 54 ; 54 >      
-     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 55 ; 55 >
-     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 56 ; 56 >
-     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 57 ; 57 >
-     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 58 ; 58 >
+     au < HighWireStrVolPlugin ; released ; 2005 ; Ethnohistory Volume 52 ; 52 >
+     au < HighWireStrVolPlugin ; released ; 2006 ; Ethnohistory Volume 53 ; 53 >
+     au < HighWireStrVolPlugin ; released ; 2007 ; Ethnohistory Volume 54 ; 54 >      
+     au < HighWirePressPlugin ; wanted ; 2008 ; Ethnohistory Volume 55 ; 55 >
+     au < HighWirePressPlugin ; wanted ; 2009 ; Ethnohistory Volume 56 ; 56 >
+     au < HighWirePressPlugin ; wanted ; 2010 ; Ethnohistory Volume 57 ; 57 >
+     au < HighWirePressPlugin ; wanted ; 2011 ; Ethnohistory Volume 58 ; 58 >
     
     }
     
@@ -412,16 +421,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = french_historical_studies
 
-      au < released ; French Historical Studies Volume 22 ; 22 >
-      au < released ; French Historical Studies Volume 23 ; 23 >
-      au < released ; French Historical Studies Volume 24 ; 24 >
-      au < released ; French Historical Studies Volume 25 ; 25 >
-      au < released ; French Historical Studies Volume 26 ; 26 >
-      au < released ; French Historical Studies Volume 27 ; 27 >
+      au < released ; 1999 ; French Historical Studies Volume 22 ; 22 >
+      au < released ; 2000 ; French Historical Studies Volume 23 ; 23 >
+      au < released ; 2001 ; French Historical Studies Volume 24 ; 24 >
+      au < released ; 2002 ; French Historical Studies Volume 25 ; 25 >
+      au < released ; 2003 ; French Historical Studies Volume 26 ; 26 >
+      au < released ; 2004 ; French Historical Studies Volume 27 ; 27 >
       
     }
     
@@ -429,14 +438,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://fhs.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 28 ; 28 >
-     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 29 ; 29 >
-     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 30 ; 30 >      
-     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 31 ; 31 >
-     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 32 ; 32 >
-     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 33 ; 33 >
+     au < HighWireStrVolPlugin ; released ; 2005 ; French Historical Studies Volume 28 ; 28 >
+     au < HighWireStrVolPlugin ; released ; 2006 ; French Historical Studies Volume 29 ; 29 >
+     au < HighWireStrVolPlugin ; released ; 2007 ; French Historical Studies Volume 30 ; 30 >      
+     au < HighWirePressPlugin ; wanted ; 2008 ; French Historical Studies Volume 31 ; 31 >
+     au < HighWirePressPlugin ; wanted ; 2009 ; French Historical Studies Volume 32 ; 32 >
+     au < HighWirePressPlugin ; wanted ; 2010 ; French Historical Studies Volume 33 ; 33 >
     
     }
     
@@ -484,22 +493,23 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_lesbian_and_gay_studies
 
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < released ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < released ; 2001 ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < released ; 2002 ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < released ; 2003 ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < released ; 2004 ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < released ; 2005 ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < released ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+      au < released ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
+      au < released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < manifest ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
       
     }
 
@@ -507,14 +517,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://glq.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-      au < HighWireStrVolPlugin ; released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
-      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
-      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
 
     }
     
@@ -531,16 +541,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hispanic_american_historical_review
 
-      au < manifest ; Hispanic American Historical Review Volume 79 ; 79 >
-      au < released ; Hispanic American Historical Review Volume 80 ; 80 >
-      au < released ; Hispanic American Historical Review Volume 81 ; 81 >
-      au < released ; Hispanic American Historical Review Volume 82 ; 82 >
-      au < released ; Hispanic American Historical Review Volume 83 ; 83 >
-      au < released ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < manifest ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
+      au < released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < released ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < released ; 2003 ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < released ; 2004 ; Hispanic American Historical Review Volume 84 ; 84 >
       
     }
     
@@ -548,15 +558,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hahr.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 85 ; 85 >
-     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 86 ; 86 >
-     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 87 ; 87 >      
-     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 88 ; 88 >
-     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 89 ; 89 >
-     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 90 ; 90 >
-     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWireStrVolPlugin ; released ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
+     au < HighWireStrVolPlugin ; released ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
+     au < HighWireStrVolPlugin ; released ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
+     au < HighWirePressPlugin ; wanted ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
+     au < HighWirePressPlugin ; wanted ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
+     au < HighWirePressPlugin ; wanted ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
+     au < HighWirePressPlugin ; wanted ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
     
     }
     
@@ -573,16 +583,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = history_of_political_economy
 
-      au < released ; History of Political Economy Volume 31 ; 31 >
-      au < released ; History of Political Economy Volume 32 ; 32 >
-      au < released ; History of Political Economy Volume 33 ; 33 >
-      au < released ; History of Political Economy Volume 34 ; 34 >
-      au < released ; History of Political Economy Volume 35 ; 35 >
-      au < released ; History of Political Economy Volume 36 ; 36 >
+      au < released ; 1999 ; History of Political Economy Volume 31 ; 31 >
+      au < released ; 2000 ; History of Political Economy Volume 32 ; 32 >
+      au < released ; 2001 ; History of Political Economy Volume 33 ; 33 >
+      au < released ; 2002 ; History of Political Economy Volume 34 ; 34 >
+      au < released ; 2003 ; History of Political Economy Volume 35 ; 35 >
+      au < released ; 2004 ; History of Political Economy Volume 36 ; 36 >
       
     }
     
@@ -590,14 +600,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hope.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 37 ; 37 >
-     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 38 ; 38 >
-     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 39 ; 39 >      
-     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 40 ; 40 >
-     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 41 ; 41 >
-     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 42 ; 42 >
+     au < HighWireStrVolPlugin ; released ; 2005 ; History of Political Economy Volume 37 ; 37 >
+     au < HighWireStrVolPlugin ; released ; 2006 ; History of Political Economy Volume 38 ; 38 >
+     au < HighWireStrVolPlugin ; released ; 2007 ; History of Political Economy Volume 39 ; 39 >      
+     au < HighWirePressPlugin ; wanted ; 2008 ; History of Political Economy Volume 40 ; 40 >
+     au < HighWirePressPlugin ; wanted ; 2009 ; History of Political Economy Volume 41 ; 41 >
+     au < HighWirePressPlugin ; wanted ; 2010 ; History of Political Economy Volume 42 ; 42 >
+     au < HighWirePressPlugin ; wanted ; 2011 ; History of Political Economy Volume 43 ; 43 >
     
     }
     
@@ -614,16 +625,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_health_politics_policy_and_law
 
-      au < released ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
+      au < released ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
+      au < released ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
+      au < released ; 2001 ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
+      au < released ; 2002 ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
+      au < released ; 2003 ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
+      au < released ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
       
     }
     
@@ -631,14 +642,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
-      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
-      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
-      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
-      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
     
     }
     
@@ -655,16 +666,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_medieval_and_early_modern_studies
 
-      au < released ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+      au < released ; 1997 ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
+      au < released ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
+      au < released ; 2001 ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+      au < released ; 2002 ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
+      au < released ; 2003 ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
+      au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
       
     }
     
@@ -672,14 +683,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmems.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
-      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
-      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
-      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
-      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
-      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
     
     }
     
@@ -697,14 +708,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://labor.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
-      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
-      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
-      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
-      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
-      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
     
     }
     
@@ -724,19 +735,21 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = mediterranean_quarterly
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Mediterranean Quarterly Volume 10 ; 10 >
-      au < released ; Mediterranean Quarterly Volume 11 ; 11 >
-      au < released ; Mediterranean Quarterly Volume 12 ; 12 >
-      au < released ; Mediterranean Quarterly Volume 13 ; 13 >
-      au < released ; Mediterranean Quarterly Volume 14 ; 14 >
-      au < released ; Mediterranean Quarterly Volume 15 ; 15 >
-      au < released ; Mediterranean Quarterly Volume 16 ; 16 >
-      au < released ; Mediterranean Quarterly Volume 17 ; 17 >
-      au < released ; Mediterranean Quarterly Volume 18 ; 18 >
-      au < released ; Mediterranean Quarterly Volume 19 ; 19 >
-      au < released ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < released ; 1999 ; Mediterranean Quarterly Volume 10 ; 10 >
+      au < released ; 2000 ; Mediterranean Quarterly Volume 11 ; 11 >
+      au < released ; 2001 ; Mediterranean Quarterly Volume 12 ; 12 >
+      au < released ; 2002 ; Mediterranean Quarterly Volume 13 ; 13 >
+      au < released ; 2003 ; Mediterranean Quarterly Volume 14 ; 14 >
+      au < released ; 2004 ; Mediterranean Quarterly Volume 15 ; 15 >
+      au < released ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < released ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < released ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >
+      au < released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < exists ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < exists ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
 
     }
     
@@ -744,14 +757,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mq.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 16 ; 16 >
-      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 17 ; 17 >
-      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 18 ; 18 >      
-      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
 
     }
     
@@ -769,14 +782,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://minnesotareview.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < status ; year ; name ; param[volume_name] >  
       
-      au < exists ; The Minnesota Review Volume 2005 ; 2005 >
-      au < exists ; The Minnesota Review Volume 2006 ; 2006 >
-      au < exists ; The Minnesota Review Volume 2007 ; 2007 >
-      au < exists ; The Minnesota Review Volume 2008 ; 2008 >
-      au < exists ; The Minnesota Review Volume 2009 ; 2009 >
-      au < exists ; The Minnesota Review Volume 2010 ; 2010 >
+      au < exists ; 2005 ; The Minnesota Review Volume 2005 ; 2005 >
+      au < exists ; 2006 ; The Minnesota Review Volume 2006 ; 2006 >
+      au < exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
+      au < exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
+      au < exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
+      au < exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
       
     }
     
@@ -793,16 +806,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = modern_language_quarterly
 
-      au < released ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
-      au < released ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
-      au < released ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
-      au < released ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
-      au < released ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
-      au < released ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
+      au < released ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
+      au < released ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
+      au < released ; 2001 ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
+      au < released ; 2002 ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
+      au < released ; 2003 ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
+      au < released ; 2004 ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
       
     }
     
@@ -810,14 +823,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlq.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
-      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
-      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
-      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
-      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
-      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
     
     }
     
@@ -834,16 +848,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = poetics_today
 
-      au < released ; Poetics Today Volume 20 ; 20 >
-      au < released ; Poetics Today Volume 21 ; 21 >
-      au < released ; Poetics Today Volume 22 ; 22 >
-      au < released ; Poetics Today Volume 23 ; 23 >
-      au < released ; Poetics Today Volume 24 ; 24 >
-      au < released ; Poetics Today Volume 25 ; 25 >
+      au < released ; 1999 ; Poetics Today Volume 20 ; 20 >
+      au < released ; 2000 ; Poetics Today Volume 21 ; 21 >
+      au < released ; 2001 ; Poetics Today Volume 22 ; 22 >
+      au < released ; 2002 ; Poetics Today Volume 23 ; 23 >
+      au < released ; 2003 ; Poetics Today Volume 24 ; 24 >
+      au < released ; 2004 ; Poetics Today Volume 25 ; 25 >
       
     }
     
@@ -851,14 +865,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://poeticstoday.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 26 ; 26 >
-      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 27 ; 27 >
-      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 28 ; 28 >      
-      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 29 ; 29 >
-      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 30 ; 30 >
-      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Poetics Today Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Poetics Today Volume 27 ; 27 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Poetics Today Volume 28 ; 28 >      
+      au < HighWirePressPlugin ; wanted ; 2008 ; Poetics Today Volume 29 ; 29 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Poetics Today Volume 30 ; 30 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Poetics Today Volume 31 ; 31 >
     
     }
     
@@ -878,19 +892,21 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = positions
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; positions: east asia cultures critique Volume 7 ; 7 >
-      au < released ; positions: east asia cultures critique Volume 8 ; 8 >
-      au < released ; positions: east asia cultures critique Volume 9 ; 9 >
-      au < released ; positions: east asia cultures critique Volume 10 ; 10 >
-      au < released ; positions: east asia cultures critique Volume 11 ; 11 >
-      au < released ; positions: east asia cultures critique Volume 12 ; 12 >
-      au < released ; positions: east asia cultures critique Volume 13 ; 13 >
-      au < released ; positions: east asia cultures critique Volume 14 ; 14 >
-      au < released ; positions: east asia cultures critique Volume 15 ; 15 >
-      au < released ; positions: east asia cultures critique Volume 16 ; 16 >
-      au < released ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < released ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < released ; 2000 ; positions: east asia cultures critique Volume 8 ; 8 >
+      au < released ; 2001 ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < released ; 2002 ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < released ; 2003 ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < released ; 2004 ; positions: east asia cultures critique Volume 12 ; 12 >
+      au < released ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < released ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < released ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < released ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < released ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < exists ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < exists ; 2011 ; positions: east asia cultures critique Volume 19 ; 19 >
 
     }
     
@@ -898,14 +914,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 13 ; 13 >
-      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 14 ; 14 >
-      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 15 ; 15 >
-      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 16 ; 16 >
-      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 17 ; 17 >
-      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
 
     }
     
@@ -921,19 +937,20 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressPlugin ; manifest ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressPlugin ; manifest ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressPlugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressPlugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressPlugin ; manifest ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressPlugin ; manifest ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressPlugin ; manifest ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressPlugin ; manifest ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressPlugin ; manifest ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressPlugin ; manifest ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
 
     }
   
@@ -950,16 +967,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = public_culture
 
-      au < released ; Public Culture Volume 11 ; 11 >
-      au < released ; Public Culture Volume 12 ; 12 >
-      au < released ; Public Culture Volume 13 ; 13 >
-      au < released ; Public Culture Volume 14 ; 14 >
-      au < released ; Public Culture Volume 15 ; 15 >
-      au < released ; Public Culture Volume 16 ; 16 >
+      au < released ; 1999 ; Public Culture Volume 11 ; 11 >
+      au < released ; 2000 ; Public Culture Volume 12 ; 12 >
+      au < released ; 2001 ; Public Culture Volume 13 ; 13 >
+      au < released ; 2002 ; Public Culture Volume 14 ; 14 >
+      au < released ; 2003 ; Public Culture Volume 15 ; 15 >
+      au < released ; 2004 ; Public Culture Volume 16 ; 16 >
       
     }
     
@@ -967,14 +984,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://publicculture.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Public Culture Volume 17 ; 17 >
-      au < HighWireStrVolPlugin ; released ; Public Culture Volume 18 ; 18 >
-      au < HighWireStrVolPlugin ; released ; Public Culture Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; Public Culture Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; Public Culture Volume 21 ; 21 >
-      au < HighWirePressPlugin ; wanted ; Public Culture Volume 22 ; 22 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Public Culture Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Public Culture Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Public Culture Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; 2008 ; Public Culture Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; 2009 ; Public Culture Volume 21 ; 21 >
+      au < HighWirePressPlugin ; wanted ; 2010 ; Public Culture Volume 22 ; 22 >
+      au < HighWirePressPlugin ; wanted ; 2011 ; Public Culture Volume 23 ; 23 >
     
     }
   
@@ -991,22 +1009,22 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = radical_history_review
 
-      au < released ; Radical History Review Volume 79 ; 79 >
-      au < released ; Radical History Review Volume 80 ; 80 >
-      au < released ; Radical History Review Volume 81 ; 81 >
-      au < released ; Radical History Review Volume 82 ; 82 >
-      au < released ; Radical History Review Volume 83 ; 83 >
-      au < released ; Radical History Review Volume 84 ; 84 >
-      au < released ; Radical History Review Volume 85 ; 85 >
-      au < released ; Radical History Review Volume 86 ; 86 >
-      au < released ; Radical History Review Volume 87 ; 87 >
-      au < released ; Radical History Review Volume 88 ; 88 >
-      au < released ; Radical History Review Volume 89 ; 89 >
-      au < released ; Radical History Review Volume 90 ; 90 >
+      au < released ; 2001 ; Radical History Review Issue 79 ; 79 >
+      au < released ; 2001 ; Radical History Review Issue 80 ; 80 >
+      au < released ; 2001 ; Radical History Review Issue 81 ; 81 >
+      au < released ; 2002 ; Radical History Review Issue 82 ; 82 >
+      au < released ; 2002 ; Radical History Review Issue 83 ; 83 >
+      au < released ; 2002 ; Radical History Review Issue 84 ; 84 >
+      au < released ; 2003 ; Radical History Review Issue 85 ; 85 >
+      au < released ; 2003 ; Radical History Review Issue 86 ; 86 >
+      au < released ; 2003 ; Radical History Review Issue 87 ; 87 >
+      au < released ; 2004 ; Radical History Review Issue 88 ; 88 >
+      au < released ; 2004 ; Radical History Review Issue 89 ; 89 >
+      au < released ; 2004 ; Radical History Review Issue 90 ; 90 >
       
     }
     
@@ -1014,15 +1032,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Radical History Review 2005 ; 2005 >
-      au < HighWireStrVolPlugin ; released ; Radical History Review 2006 ; 2006 >
-      au < HighWireStrVolPlugin ; released ; Radical History Review 2007 ; 2007 >
-      au < HighWirePressPlugin ; manifest ; Radical History Review 2007 ; 2008 >
-      au < HighWirePressPlugin ; manifest ; Radical History Review 2009 ; 2009 >
-      au < HighWirePressPlugin ; manifest ; Radical History Review 2010 ; 2010 >
-      au < HighWirePressPlugin ; manifest ; Radical History Review 2011 ; 2011 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Radical History Review 2005 ; 2005 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Radical History Review 2006 ; 2006 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Radical History Review 2007 ; 2007 >
+      au < HighWirePressPlugin ; manifest ; 2007 ; Radical History Review 2007 ; 2008 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; Radical History Review 2009 ; 2009 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; Radical History Review 2010 ; 2010 >
+      au < HighWirePressPlugin ; manifest ; 2011 ; Radical History Review 2011 ; 2011 >
     
     }
   
@@ -1042,20 +1060,21 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_science_history
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < released ; Social Science History Volume 23 ; 23 >
-      au < released ; Social Science History Volume 24 ; 24 >
-      au < released ; Social Science History Volume 25 ; 25 >
-      au < released ; Social Science History Volume 26 ; 26 >
-      au < released ; Social Science History Volume 27 ; 27 >
-      au < released ; Social Science History Volume 28 ; 28 >
-      au < released ; Social Science History Volume 29 ; 29 >
-      au < released ; Social Science History Volume 30 ; 30 >
-      au < released ; Social Science History Volume 31 ; 31 >
-      au < released ; Social Science History Volume 32 ; 32 >
-      au < released ; Social Science History Volume 33 ; 33 >
-      au < released ; Social Science History Volume 34 ; 34 >
+      au < released ; 1999 ; Social Science History Volume 23 ; 23 >
+      au < released ; 2000 ; Social Science History Volume 24 ; 24 >
+      au < released ; 2001 ; Social Science History Volume 25 ; 25 >
+      au < released ; 2002 ; Social Science History Volume 26 ; 26 >
+      au < released ; 2003 ; Social Science History Volume 27 ; 27 >
+      au < released ; 2004 ; Social Science History Volume 28 ; 28 >
+      au < released ; 2005 ; Social Science History Volume 29 ; 29 >
+      au < released ; 2006 ; Social Science History Volume 30 ; 30 >
+      au < released ; 2007 ; Social Science History Volume 31 ; 31 >
+      au < released ; 2008 ; Social Science History Volume 32 ; 32 >
+      au < released ; 2009 ; Social Science History Volume 33 ; 33 >
+      au < released ; 2010 ; Social Science History Volume 34 ; 34 >
+      au < manifest ; 2011 ; Social Science History Volume 35 ; 35 >
       
     }
 
@@ -1063,14 +1082,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Social Science History Volume 29 ; 29 >
-      au < HighWireStrVolPlugin ; released ; Social Science History Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; Social Science History Volume 31 ; 31 >
-      au < HighWirePressPlugin ; manifest ; Social Science History Volume 32 ; 32 >
-      au < HighWirePressPlugin ; manifest ; Social Science History Volume 33 ; 33 >
-      au < HighWirePressPlugin ; manifest ; Social Science History Volume 34 ; 34 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Social Science History Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Social Science History Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Social Science History Volume 31 ; 31 >
+      au < HighWirePressPlugin ; manifest ; 2008 ; Social Science History Volume 32 ; 32 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; Social Science History Volume 33 ; 33 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; Social Science History Volume 34 ; 34 >
     
     }
   
@@ -1087,16 +1106,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_text
 
-      au < released ; Social Text Volume 17 ; 17 >
-      au < released ; Social Text Volume 18 ; 18 >
-      au < released ; Social Text Volume 19 ; 19 >
-      au < released ; Social Text Volume 20 ; 20 >
-      au < released ; Social Text Volume 21 ; 21 >
-      au < released ; Social Text Volume 22 ; 22 >
+      au < released ; 1999 ; Social Text Volume 17 ; 17 >
+      au < released ; 2000 ; Social Text Volume 18 ; 18 >
+      au < released ; 2001 ; Social Text Volume 19 ; 19 >
+      au < released ; 2002 ; Social Text Volume 20 ; 20 >
+      au < released ; 2003 ; Social Text Volume 21 ; 21 >
+      au < released ; 2004 ; Social Text Volume 22 ; 22 >
       
     }
     
@@ -1104,14 +1123,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://socialtext.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Social Text Volume 23 ; 23 >
-      au < HighWireStrVolPlugin ; released ; Social Text Volume 24 ; 24 >
-      au < HighWirePressPlugin ; manifest ; Social Text Volume 25 ; 25 >
-      au < HighWirePressPlugin ; manifest ; Social Text Volume 26 ; 26 >
-      au < HighWirePressPlugin ; manifest ; Social Text Volume 27 ; 27 >
-      au < HighWirePressPlugin ; manifest ; Social Text Volume 28 ; 28 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Social Text Volume 23 ; 23 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Social Text Volume 24 ; 24 >
+      au < HighWirePressPlugin ; manifest ; 2007 ; Social Text Volume 25 ; 25 >
+      au < HighWirePressPlugin ; manifest ; 2008 ; Social Text Volume 26 ; 26 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; Social Text Volume 27 ; 27 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; Social Text Volume 28 ; 28 >
     
     }
   
@@ -1128,16 +1147,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = south_atlantic_quarterly
 
-      au < released ; The South Atlantic Quarterly Volume 98 ; 98 >
-      au < released ; The South Atlantic Quarterly Volume 99 ; 99 >
-      au < released ; The South Atlantic Quarterly Volume 100 ; 100 >
-      au < released ; The South Atlantic Quarterly Volume 101 ; 101 >
-      au < released ; The South Atlantic Quarterly Volume 102 ; 102 >
-      au < released ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < released ; 1999 ; The South Atlantic Quarterly Volume 98 ; 98 >
+      au < released ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < released ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < released ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < released ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < released ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
       
     }
     
@@ -1145,15 +1164,15 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://saq.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 104 ; 104 >
-      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 105 ; 105 >
-      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 106 ; 106 >
-      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 107 ; 107 >
-      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 108 ; 108 >
-      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 109 ; 109 >
-      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 110 ; 110 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
+      au < HighWirePressPlugin ; manifest ; 2008 ; The South Atlantic Quarterly Volume 107 ; 107 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
+      au < HighWirePressPlugin ; manifest ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
     
     }
   
@@ -1170,16 +1189,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = theater
 
-      au < released ; Theater Volume 29 ; 29 >
-      au < released ; Theater Volume 30 ; 30 >
-      au < released ; Theater Volume 31 ; 31 >
-      au < released ; Theater Volume 32 ; 32 >
-      au < released ; Theater Volume 33 ; 33 >
-      au < released ; Theater Volume 34 ; 34 >
+      au < released ; 1999 ; Theater Volume 29 ; 29 >
+      au < released ; 2000 ; Theater Volume 30 ; 30 >
+      au < released ; 2001 ; Theater Volume 31 ; 31 >
+      au < released ; 2002 ; Theater Volume 32 ; 32 >
+      au < released ; 2003 ; Theater Volume 33 ; 33 >
+      au < released ; 2004 ; Theater Volume 34 ; 34 >
       
     }
     
@@ -1187,14 +1206,14 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; Theater Volume 35 ; 35 >
-      au < HighWireStrVolPlugin ; released ; Theater Volume 36 ; 36 >
-      au < HighWireStrVolPlugin ; released ; Theater Volume 37 ; 37 >
-      au < HighWirePressPlugin ; manifest ; Theater Volume 38 ; 38 >
-      au < HighWirePressPlugin ; manifest ; Theater Volume 39 ; 39 >
-      au < HighWirePressPlugin ; manifest ; Theater Volume 40 ; 40 >
+      au < HighWireStrVolPlugin ; released ; 2005 ; Theater Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; released ; 2006 ; Theater Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; released ; 2007 ; Theater Volume 37 ; 37 >
+      au < HighWirePressPlugin ; manifest ; 2008 ; Theater Volume 38 ; 38 >
+      au < HighWirePressPlugin ; manifest ; 2009 ; Theater Volume 39 ; 39 >
+      au < HighWirePressPlugin ; manifest ; 2010 ; Theater Volume 40 ; 40 >
     
     }
   
@@ -1203,7 +1222,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
 
     {
@@ -1216,15 +1235,16 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
       param[journal_dir] = common_knowledge
 
-      au < released ; Common Knowledge Volume 8 ; 8 >
-      au < released ; Common Knowledge Volume 9 ; 9 >
-      au < released ; Common Knowledge Volume 10 ; 10 >
-      au < released ; Common Knowledge Volume 11 ; 11 >
-      au < released ; Common Knowledge Volume 12 ; 12 >
-      au < released ; Common Knowledge Volume 13 ; 13 >
-      au < released ; Common Knowledge Volume 14 ; 14 >
-      au < released ; Common Knowledge Volume 15 ; 15 >
-      au < released ; Common Knowledge Volume 16 ; 16 >
+      au < released ; 2002 ; Common Knowledge Volume 8 ; 8 >
+      au < released ; 2003 ; Common Knowledge Volume 9 ; 9 >
+      au < released ; 2004 ; Common Knowledge Volume 10 ; 10 >
+      au < released ; 2005 ; Common Knowledge Volume 11 ; 11 >
+      au < released ; 2006 ; Common Knowledge Volume 12 ; 12 >
+      au < released ; 2007 ; Common Knowledge Volume 13 ; 13 >
+      au < released ; 2008 ; Common Knowledge Volume 14 ; 14 >
+      au < released ; 2009 ; Common Knowledge Volume 15 ; 15 >
+      au < released ; 2010 ; Common Knowledge Volume 16 ; 16 >
+      au < manifest ; 2011 ; Common Knowledge Volume 17 ; 17 >
 
     }
 
@@ -1238,8 +1258,8 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
       param[journal_dir] = hopscotch
 
-      au < released ; Hopscotch: A Cultural Review Volume 1 ; 1 >
-      au < released ; Hopscotch: A Cultural Review Volume 2 ; 2 >
+      au < released ; 1999 ; Hopscotch: A Cultural Review Volume 1 ; 1 >
+      au < released ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 ; 2 >
 
     }
 
@@ -1253,10 +1273,10 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
       param[journal_dir] = nepantla
 
-      au < released ; Nepantla: Views from South Volume 1 ; 1 >
-      au < released ; Nepantla: Views from South Volume 2 ; 2 >
-      au < released ; Nepantla: Views from South Volume 3 ; 3 >
-      au < released ; Nepantla: Views from South Volume 4 ; 4 >
+      au < released ; 2000 ; Nepantla: Views from South Volume 1 ; 1 >
+      au < released ; 2001 ; Nepantla: Views from South Volume 2 ; 2 >
+      au < released ; 2002 ; Nepantla: Views from South Volume 3 ; 3 >
+      au < released ; 2003 ; Nepantla: Views from South Volume 4 ; 4 >
 
     }
 
@@ -1270,16 +1290,17 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
       param[journal_dir] = pedagogy
 
-      au < released ; Pedagogy Volume 1 ; 1 >
-      au < released ; Pedagogy Volume 2 ; 2 >
-      au < released ; Pedagogy Volume 3 ; 3 >
-      au < released ; Pedagogy Volume 4 ; 4 >
-      au < released ; Pedagogy Volume 5 ; 5 >
-      au < released ; Pedagogy Volume 6 ; 6 >
-      au < released ; Pedagogy Volume 7 ; 7 >
-      au < released ; Pedagogy Volume 8 ; 8 >
-      au < released ; Pedagogy Volume 9 ; 9 >
-      au < released ; Pedagogy Volume 10 ; 10 >
+      au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
+      au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
+      au < released ; 2003 ; Pedagogy Volume 3 ; 3 >
+      au < released ; 2004 ; Pedagogy Volume 4 ; 4 >
+      au < released ; 2005 ; Pedagogy Volume 5 ; 5 >
+      au < released ; 2006 ; Pedagogy Volume 6 ; 6 >
+      au < released ; 2007 ; Pedagogy Volume 7 ; 7 >
+      au < released ; 2008 ; Pedagogy Volume 8 ; 8 >
+      au < released ; 2009 ; Pedagogy Volume 9 ; 9 >
+      au < released ; 2010 ; Pedagogy Volume 10 ; 10 >
+      au < manifest ; 2011 ; Pedagogy Volume 11 ; 11 >
 
     }
 
@@ -1293,15 +1314,17 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
       param[journal_dir] = small_axe
 
-      au < released ; Small Axe Volume 5 ; 5 >
-      au < released ; Small Axe Volume 6 ; 6 >
-      au < released ; Small Axe Volume 7 ; 7 >
-      au < released ; Small Axe Volume 8 ; 8 >
-      au < released ; Small Axe Volume 9 ; 9 >
-      au < released ; Small Axe Volume 10 ; 10 >
-      au < released ; Small Axe Volume 11 ; 11 >
-      au < released ; Small Axe Volume 12 ; 12 >
-      au < released ; Small Axe Volume 13 ; 13 >
+      au < released ; 2001 ; Small Axe Volume 5 ; 5 >
+      au < released ; 2002 ; Small Axe Volume 6 ; 6 >
+      au < released ; 2003 ; Small Axe Volume 7 ; 7 >
+      au < released ; 2004 ; Small Axe Volume 8 ; 8 >
+      au < released ; 2005 ; Small Axe Volume 9 ; 9 >
+      au < released ; 2006 ; Small Axe Volume 10 ; 10 >
+      au < released ; 2007 ; Small Axe Volume 11 ; 11 >
+      au < released ; 2008 ; Small Axe Volume 12 ; 12 >
+      au < released ; 2009 ; Small Axe Volume 13 ; 13 >
+      au < manifest ; 2010 ; Small Axe Volume 14 ; 14 >
+      au < manifest ; 2011 ; Small Axe Volume 15 ; 15 >
 
     }
 
