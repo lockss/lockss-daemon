@@ -18,9 +18,9 @@
     
       plugin = edu.cornell.library.epr.EPRPlugin2001
       param[base_url] = http://www.epoetry.org/  
-      implicit < status ; name >
+      implicit < status ; year ; name >
   
-      au < released ; Electronic Poetry Review 2001 >
+      au < released ; 2001 ; Electronic Poetry Review 2001 >
       
     }
     
