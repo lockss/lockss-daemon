@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ;  name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,13 +17,13 @@
     
     param[journal_code] = malb
   
-    au < exists ; American Malacological Bulletin Volume 22 ; 22 >
-    au < exists ; American Malacological Bulletin Volume 23 ; 23 >
-    au < exists ; American Malacological Bulletin Volume 24 ; 24 >
-    au < exists ; American Malacological Bulletin Volume 25 ; 25 >
-    au < exists ; American Malacological Bulletin Volume 26 ; 26 >
-    au < exists ; American Malacological Bulletin Volume 27 ; 27 >
-    au < exists ; American Malacological Bulletin Volume 28 ; 28 >
+    au < exists ; 2007 ; American Malacological Bulletin Volume 22 ; 22 >
+    au < exists ; 2007 ; American Malacological Bulletin Volume 23 ; 23 >
+    au < exists ; 2008 ; American Malacological Bulletin Volume 24 ; 24 >
+    au < exists ; 2008 ; American Malacological Bulletin Volume 25 ; 25 >
+    au < exists ; 2008 ; American Malacological Bulletin Volume 26 ; 26 >
+    au < exists ; 2009 ; American Malacological Bulletin Volume 27 ; 27 >
+    au < exists ; 2010 ; American Malacological Bulletin Volume 28 ; 28 >
 
   }
   

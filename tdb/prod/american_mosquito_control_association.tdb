@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 8756-971X
   
-      au < superseded ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
-      au < superseded ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
-      au < superseded ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
+      au < superseded ; 2005 ; Journal of the American Mosquito Control Association Volume 21 ; 21 >
+      au < superseded ; 2006 ; Journal of the American Mosquito Control Association Volume 22 ; 22 >
+      au < superseded ; 2007 ; Journal of the American Mosquito Control Association Volume 23 ; 23 >
     }
 
     {
