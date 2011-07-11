@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.11 2011-05-20 20:17:23 barry409 Exp $
+# $Id: tdbout.py,v 1.12 2011-07-11 15:05:28 thib_gc Exp $
 
-# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.3'''
+__version__ = '''0.3.4'''
 
 from optparse import OptionGroup, OptionParser
 import sys
@@ -83,6 +83,10 @@ class TdboutConstants:
     OPTION_OUTPUT_FILE_SHORT = 'o'
     OPTION_OUTPUT_FILE_HELP = 'write output to a file'
 
+    OPTION_JOURNALS = 'journals'
+    OPTION_JOURNALS_SHORT = 'j'
+    OPTION_JOURNALS_HELP = 'iterate over titles (not AUs) and output a CSV list of publishers, titles, ISSNs and eISSNs'
+
 def process_tdbout(tdb, options):
     fields = options.fields.split(',')
     result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
@@ -98,6 +102,13 @@ def process_tdbout(tdb, options):
         for lst in result: writer.writerow(lst)
     else:
         for lst in result: print '\t'.join(lst) 
+
+# Temporary hack until we have better publisher-title-AU visitors (currently AU-oriented)
+def process_journals(tdb, options):
+    result = [[title.publisher().name(), title.name(), title.issn() or '', title.eissn() or ''] for title in tdb.titles()]
+    import csv
+    writer = csv.writer(sys.stdout, dialect='excel')
+    for row in result: writer.writerow(row)
 
 def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
@@ -173,11 +184,16 @@ def __option_parser__(parser=None):
                             '--' + TdboutConstants.OPTION_WARNINGS,
                             action='store_true',
                             help=TdboutConstants.OPTION_WARNINGS_HELP)
+    tdbout_group.add_option('-' + TdboutConstants.OPTION_JOURNALS_SHORT,
+                            '--' + TdboutConstants.OPTION_JOURNALS,
+                            action='store_true',
+                            help=TdboutConstants.OPTION_JOURNALS_HELP)
     parser.add_option_group(tdbout_group)
     return parser
 
 def __reprocess_options__(parser, options):
     tdbparse.__reprocess_options__(parser, options)
+    if options.journals: return
     if not options.fields: parser.error('no field(s) specified')
     for fd in options.fields.split(','):
         if tdbq.str_to_lambda_au(fd) is None: parser.error('invalid field name: %s' % (fd,))
@@ -201,6 +217,9 @@ if __name__ == '__main__':
         try:
             if options.output_file:
                 sys.stdout = open(options.output_file, 'w')
-            process_tdbout(tdb, options)
+            if options.journals:
+                process_journals(tdb, options)
+            else:
+                process_tdbout(tdb, options)
         finally:
             sys.stdout = saveout
