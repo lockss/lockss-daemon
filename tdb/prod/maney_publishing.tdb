@@ -19,7 +19,6 @@
     param[publisher_id] = maney
     param[journal_id] = aac 
     param[journal_issn] = 1743-6753
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
@@ -79,7 +78,6 @@
     param[publisher_id] = maney
     param[journal_id] = amb 
     param[journal_issn] = 0002-6980
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 1937 ; Ambix Volume 1 ; 1 > 
@@ -158,7 +156,6 @@
     param[publisher_id] = maney
     param[journal_id] = atmp 
     param[journal_issn] = 0003-4983
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
@@ -189,7 +186,6 @@
     param[publisher_id] = maney
     param[journal_id] = atp 
     param[journal_issn] = 0272-4936
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Annals of Tropical Paediatrics: International Child Health Volume 22 ; 22 > 
@@ -220,7 +216,6 @@
     param[publisher_id] = maney
     param[journal_id] = aes 
     param[journal_issn] = 0371-7453
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
@@ -252,7 +247,6 @@
     param[publisher_id] = maney
     param[journal_id] = aaa 
     param[journal_issn] = 1741-6124
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
@@ -494,7 +488,6 @@
     param[publisher_id] = maney
     param[journal_id] = bst 
     param[journal_issn] = 1474-8932
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2002 ; Bronte Studies Volume 27 ; 27 > 
@@ -525,7 +518,6 @@
     param[publisher_id] = maney
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
@@ -549,7 +541,6 @@
     param[publisher_id] = maney
     param[journal_id] = brl 
     param[journal_issn] = 1752-7260
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
@@ -575,7 +566,6 @@
     param[publisher_id] = maney
     param[journal_id] = byz 
     param[journal_issn] = 0307-0131
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
@@ -631,7 +621,6 @@
     param[publisher_id] = maney
     param[journal_id] =   
     param[journal_issn] = 0008-4433
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
       au < manifest ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
@@ -702,7 +691,6 @@
     param[publisher_id] = maney
     param[journal_id] = caj 
     param[journal_issn] = 0008-7041
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
@@ -771,7 +759,6 @@
     param[publisher_id] = maney
     param[journal_id] = ceu 
     param[journal_issn] = 1479-0963
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2003 ; Central Europe Volume 1 ; 1 > 
@@ -801,7 +788,6 @@
     param[publisher_id] = maney
     param[journal_id] = cii 
     param[journal_issn] = 1467-0100
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
@@ -834,7 +820,6 @@
     param[publisher_id] = maney
     param[journal_id] = cas 
     param[journal_issn] = 1477-5700
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
@@ -864,7 +849,6 @@
     param[publisher_id] = maney
     param[journal_id] = com 
     param[journal_issn] = 1024-5294
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Competition and Change Volume 6 ; 6 > 
@@ -895,7 +879,6 @@
     param[publisher_id] = maney
     param[journal_id] = cma 
     param[journal_issn] = 1350-5033
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1995-1996 ; Conservation and Management of Archaeological Sites Volume 1 ; 1 > 
@@ -929,7 +912,6 @@
     param[publisher_id] = maney
     param[journal_id] = cest 
     param[journal_issn] = 1478-422X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
@@ -959,7 +941,6 @@
     param[publisher_id] = maney
     param[journal_id] = cos 
     param[journal_issn] = 0590-8876
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1965-1967 ; Costume Volume 1 ; 1 > 
@@ -1025,7 +1006,6 @@
     param[publisher_id] = maney
     param[journal_id] = dei 
     param[journal_issn] = 1464-3154
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
@@ -1059,7 +1039,6 @@
     param[publisher_id] = maney
     param[journal_id] = dix 
     param[journal_issn] = 1478-7318
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2003 ; Dix-Neuf Volume 1 ; 1 > 
@@ -1095,7 +1074,6 @@
     param[publisher_id] = maney
     param[journal_id] = dre 
     param[journal_issn] = 0361-2112
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2010 ; Dress Volume 36 ; 36 > 
@@ -1117,7 +1095,6 @@
     param[publisher_id] = maney
     param[journal_id] = dtc 
     param[journal_issn] = 0309-6564
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
@@ -1141,7 +1118,6 @@
     param[publisher_id] = maney
     param[journal_id] = emc 
     param[journal_issn] = 1529-9104
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1994 ; Early Medieval China Volume 1994 ; 1994 > 
@@ -1179,7 +1155,6 @@
     param[publisher_id] = maney
     param[journal_id] = ema 
     param[journal_issn] = 1748-9237
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Energy Materials Volume 1 ; 1 > 
@@ -1204,7 +1179,6 @@
     param[publisher_id] = maney
     param[journal_id] = env 
     param[journal_issn] = 1461-4103
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1996 ; Environmental Archaeology Volume 1 ; 1 > 
@@ -1292,7 +1266,6 @@
     param[publisher_id] = maney
     param[journal_id] = exm 
     param[journal_issn] = 1041-2573
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1989 ; Exemplaria Volume 1 ; 1 > 
@@ -1336,7 +1309,6 @@
     param[publisher_id] = maney
     param[journal_id] = fch 
     param[journal_issn] = 1463-1180
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Family & Community History Volume 9 ; 9 > 
@@ -1362,7 +1334,6 @@
     param[publisher_id] = maney
     param[journal_id] = flk 
     param[journal_issn] = 0430-8778
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
@@ -1386,7 +1357,6 @@
     param[publisher_id] = maney
     param[journal_id] = hdy 
     param[journal_issn] = 1934-8908
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
@@ -1412,7 +1382,6 @@
     param[publisher_id] = maney
     param[journal_id] = em 
     param[journal_issn] = 1024-5332
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Hematology Volume 7 ; 7 > 
@@ -1443,7 +1412,6 @@
     param[publisher_id] = maney
     param[journal_id] = hrj 
     param[journal_issn] = 1468-2737
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000 ; Hispanic Research Journal Volume 1 ; 1 > 
@@ -1476,7 +1444,6 @@
     param[publisher_id] = maney
     param[journal_id] = hen 
     param[journal_issn] = 1756-7505
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
@@ -1499,7 +1466,6 @@
     param[publisher_id] = maney
     param[journal_id] = isj 
     param[journal_issn] = 1368-2199
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
@@ -1528,7 +1494,6 @@
     param[publisher_id] = maney
     param[journal_id] = iar 
     param[journal_issn] = 0309-0728
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1976-1977 ; Industrial Archaeology Review Volume 1 ; 1 > 
@@ -1581,7 +1546,6 @@
     param[publisher_id] = maney
     param[journal_id] = isr 
     param[journal_issn] = 0308-0188
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
@@ -1638,7 +1602,6 @@
     param[publisher_id] = maney
     param[journal_id] = iht 
     param[journal_issn] = 1749-5148
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
@@ -1665,7 +1628,6 @@
     param[publisher_id] = maney
     param[journal_id] = het 
     param[journal_issn] = 1758-1206
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
@@ -1689,7 +1651,6 @@
     param[publisher_id] = maney
     param[journal_id] = ijcmr 
     param[journal_issn] = 1364-0461
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
@@ -1718,7 +1679,6 @@
     param[publisher_id] = maney
     param[journal_id] = imr 
     param[journal_issn] = 0950-6608
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1987 ; International Materials Reviews Volume 32 ; 32 > 
@@ -1764,7 +1724,6 @@
     param[publisher_id] = maney
     param[journal_id] = imm 
     param[journal_issn] = 1753-6146
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
@@ -1790,7 +1749,6 @@
     param[publisher_id] = maney
     param[journal_id] = iwp 
     param[journal_issn] = 2042-6445
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
@@ -1813,7 +1771,6 @@
     param[publisher_id] = maney
     param[journal_id] = ias 
     param[journal_issn] = 0301-9233
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
@@ -1847,7 +1804,6 @@
     param[publisher_id] = maney
     param[journal_id] = itc 
     param[journal_issn] = 0161-4622
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2009 ; Italian Culture Volume 27 ; 27 > 
@@ -1871,7 +1827,6 @@
     param[publisher_id] = maney
     param[journal_id] = its 
     param[journal_issn] = 0075-1634
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1937-1938 ; Italian Studies Volume 1 ; 1 > 
@@ -1958,7 +1913,6 @@
     param[publisher_id] = maney
     param[journal_id] = ita 
     param[journal_issn] = 0261-4340
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1981 ; The Italianist Volume 1 ; 1 > 
@@ -2010,7 +1964,6 @@
     param[publisher_id] = maney
     param[journal_id] = jbr 
     param[journal_issn] = 0373-6687
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
@@ -2041,7 +1994,6 @@
     param[publisher_id] = maney
     param[journal_id] = csm 
     param[journal_issn] = 1750-1679
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
@@ -2067,7 +2019,6 @@
     param[publisher_id] = maney
     param[journal_id] = cih 
     param[journal_issn] = 1753-8068
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
@@ -2092,7 +2043,6 @@
     param[publisher_id] = maney
     param[journal_id] = jca 
     param[journal_issn] = 1574-0773
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
@@ -2119,7 +2069,6 @@
     param[publisher_id] = maney
     param[journal_id] = jfa 
     param[journal_issn] = 0093-4690
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1974 ; Journal of Field Archaeology Volume 1 ; 1 > 
@@ -2176,7 +2125,6 @@
     param[publisher_id] = maney
     param[journal_id] = his 
     param[journal_issn] = 0147-8885
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
@@ -2231,7 +2179,6 @@
     param[publisher_id] = maney
     param[journal_id] = mmh 
     param[journal_issn] = 1753-3031
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
@@ -2256,7 +2203,6 @@
     param[publisher_id] = maney
     param[journal_id] = jmt 
     param[journal_issn] = 1066-9817
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
@@ -2349,7 +2295,6 @@
     param[publisher_id] = maney
     param[journal_id] = jba 
     param[journal_issn] = 0068-1288
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1980 ; Journal of the British Archaeological Association Volume 133 ; 133 > 
@@ -2401,7 +2346,6 @@
     param[publisher_id] = maney
     param[journal_id] = eni 
     param[journal_issn] = 0144-2600
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
@@ -2429,7 +2373,6 @@
     param[publisher_id] = maney
     param[journal_id] = wsc 
     param[journal_issn] = 0020-3203
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     comment[continued_by] = 2042-6445
@@ -2455,7 +2398,6 @@
     param[publisher_id] = maney
     param[journal_id] = ksr 
     param[journal_issn] = 0952-4142
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
@@ -2478,7 +2420,6 @@
     param[publisher_id] = maney
     param[journal_id] = lhr 
     param[journal_issn] = 0961-5652
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Labour History Review Volume 70 ; 70 > 
@@ -2506,7 +2447,6 @@
     param[publisher_id] = maney
     param[journal_id] = lhi 
     param[journal_issn] = 1759-7536
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
  
     au < exists ; 2009 ; Language & History Volume 52 ; 52 > 
@@ -2530,7 +2470,6 @@
     param[publisher_id] = maney
     param[journal_id] = lev 
     param[journal_issn] = 0075-8914
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1969 ; Levant Volume 1 ; 1 > 
@@ -2594,7 +2533,6 @@
     param[publisher_id] = maney
     param[journal_id] = lbh 
     param[journal_issn] = 0024-2306
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Library History Volume 21 ; 21 > 
@@ -2620,7 +2558,6 @@
     param[publisher_id] = maney
     param[journal_id] = lih 
     param[journal_issn] = 1758-3489
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
@@ -2644,7 +2581,6 @@
     param[publisher_id] = maney
     param[journal_id] = ldn 
     param[journal_issn] = 0305-8034
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1975 ; The London Journal Volume 1 ; 1 > 
@@ -2701,7 +2637,6 @@
     param[publisher_id] = maney
     param[journal_id] = mri 
     param[journal_issn] = 1432-8917
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
@@ -2729,7 +2664,6 @@
     param[publisher_id] = maney
     param[journal_id] = mst 
     param[journal_issn] = 0267-0836
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
@@ -2777,7 +2711,6 @@
     param[publisher_id] = maney
     param[journal_id] = mte 
     param[journal_issn] = 1066-7857
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
@@ -2804,7 +2737,6 @@
     param[publisher_id] = maney
     param[journal_id] = med 
     param[journal_issn] = 0076-6097
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000 ; Medieval Archaeology Volume 44 ; 44 > 
@@ -2836,7 +2768,6 @@
     param[publisher_id] = maney
     param[journal_id] = mss 
     param[journal_issn] = 1366-0691
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Medieval Sermon Studies Volume 50 ; 50 > 
@@ -2862,7 +2793,6 @@
     param[publisher_id] = maney
     param[journal_id] = mdh 
     param[journal_issn] = 0047-729X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1971-1972 ; Midland History Volume 1 ; 1 > 
@@ -2919,7 +2849,6 @@
     param[publisher_id] = maney
     param[journal_id] = mpem 
     param[journal_issn] = 0371-9553
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
@@ -2952,7 +2881,6 @@
     param[publisher_id] = maney
     param[journal_id] = mng 
     param[journal_issn] = 0147-037X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1975 ; Ming Studies Volume 1975 ; 1975 > 
@@ -3009,7 +2937,6 @@
     param[publisher_id] = maney
     param[journal_id] = mint 
     param[journal_issn] = 1474-9009
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000 ; Mining Technology Volume 109 ; 109 > 
@@ -3042,7 +2969,6 @@
     param[publisher_id] = maney
     param[journal_id] = nam 
     param[journal_issn] = 0027-7738
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
@@ -3067,7 +2993,6 @@
     param[publisher_id] = maney
     param[journal_id] = nres 
     param[journal_issn] = 0161-6412
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2001 ; Neurological Research Volume 23 ; 23 > 
@@ -3099,7 +3024,6 @@
     param[publisher_id] = maney
     param[journal_id] = nhi 
     param[journal_issn] = 0078-172X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1966 ; Northern History Volume 1 ; 1 > 
@@ -3168,7 +3092,6 @@
     param[publisher_id] = maney
     param[journal_id] = nns 
     param[journal_issn] = 1028-415X
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
@@ -3199,7 +3122,6 @@
     param[publisher_id] = maney
     param[journal_id] = ogs 
     param[journal_issn] = 0078-7191
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1966 ; Oxford German Studies Volume 1 ; 1 > 
@@ -3260,7 +3182,6 @@
     param[publisher_id] = maney
     param[journal_id] = prm 
     param[journal_issn] = 1746-5095
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
@@ -3289,7 +3210,6 @@
     param[publisher_id] = maney
     param[journal_id] = peq 
     param[journal_issn] = 0031-0328
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2004 ; Palestine Exploration Quarterly Volume 136 ; 136 > 
@@ -3318,7 +3238,6 @@
     param[publisher_id] = maney
     param[journal_id] = pha 
     param[journal_issn] = 1757-0921
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
@@ -3342,7 +3261,6 @@
     param[publisher_id] = maney
     param[journal_id] = ptr 
     param[journal_issn] = 1083-3196
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
@@ -3379,7 +3297,6 @@
     param[publisher_id] = maney
     param[journal_id] = prc 
     param[journal_issn] = 1465-8011
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
@@ -3413,7 +3330,6 @@
     param[publisher_id] = maney
     param[journal_id] = pma 
     param[journal_issn] = 0079-4236
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Post-Medieval Archaeology Volume 39 ; 39 > 
@@ -3441,7 +3357,6 @@
     param[publisher_id] = maney
     param[journal_id] = pma 
     param[journal_issn] = 0032-5899
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
@@ -3475,7 +3390,6 @@
     param[publisher_id] = maney
     param[journal_id] = ppc 
     param[journal_issn] = 0969-9260
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
@@ -3555,7 +3469,6 @@
     param[publisher_id] = maney
     param[journal_id] = pua 
     param[journal_issn] = 1465-5187
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2000-2001 ; Public Archaeology Volume 1 ; 1 > 
@@ -3586,7 +3499,6 @@
     param[publisher_id] = maney
     param[journal_id] = peg 
     param[journal_issn] = 0959-3683
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Publications of the English Goethe Society Volume 75 ; 75 > 
@@ -3613,7 +3525,6 @@
     param[publisher_id] = maney
     param[journal_id] = rer 
     param[journal_issn] = 1351-0002
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Redox Report Volume 4 ; 4 > 
@@ -3647,7 +3558,6 @@
     param[publisher_id] = maney
     param[journal_id] = ros 
     param[journal_issn] = 0263-9904
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1982-1983 ; Romance Studies Volume 1 ; 1 > 
@@ -3697,7 +3607,6 @@
     param[publisher_id] = maney
     param[journal_id] = stwj 
     param[journal_issn] = 1362-1718
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
@@ -3734,7 +3643,6 @@
     param[publisher_id] = maney
     param[journal_id] = c17 
     param[journal_issn] = 1361-7427
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 > 
@@ -3787,7 +3695,6 @@
     param[publisher_id] = maney
     param[journal_id] = sla 
     param[journal_issn] = 1361-7427
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1994 ; Slavonica Volume 1 ; 1 > 
@@ -3825,7 +3732,6 @@
     param[publisher_id] = maney
     param[journal_id] = se 
     param[journal_issn] = 0267-0844
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1999 ; Surface Engineering Volume 15 ; 15 > 
@@ -3859,7 +3765,6 @@
     param[publisher_id] = maney
     param[journal_id] = sre 
     param[journal_issn] = 0039-6265
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1931-1932 ; Survey Review Volume 1 ; 1 > 
@@ -3923,7 +3828,6 @@
     param[publisher_id] = maney
     param[journal_id] = tang 
     param[journal_issn] = 0737-5034
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1982 ; T'ang Studies Volume 1982 ; 1982 > 
@@ -3973,7 +3877,6 @@
     param[publisher_id] = maney
     param[journal_id] = tav 
     param[journal_issn] = 0334-4355
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1974 ; 1974 > 
@@ -4032,7 +3935,6 @@
     param[publisher_id] = maney
     param[journal_id] = tin 
     param[journal_issn] = 0082-2884
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1969 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 1 ; 1 > 
@@ -4096,7 +3998,6 @@
     param[publisher_id] = maney
     param[journal_id] = tex 
     param[journal_issn] = 0040-4969
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1968-1970 ; Textile History Volume 1 ; 1 > 
@@ -4159,7 +4060,6 @@
     param[publisher_id] = maney
     param[journal_id] = imf 
     param[journal_issn] = 0020-2967
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
@@ -4187,7 +4087,6 @@
     param[publisher_id] = maney
     param[journal_id] = tns 
     param[journal_issn] = 0372-0187
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
@@ -4211,7 +4110,6 @@
     param[publisher_id] = maney
     param[journal_id] = trb 
     param[journal_issn] = 1751-5831
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
@@ -4237,7 +4135,6 @@
     param[publisher_id] = maney
     param[journal_id] = usu 
     param[journal_issn] = 1757-8949
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
@@ -4260,7 +4157,6 @@
     param[publisher_id] = maney
     param[journal_id] = vea 
     param[journal_issn] = 0305-5477
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
@@ -4322,7 +4218,6 @@
     param[publisher_id] = maney
     param[journal_id] = war 
     param[journal_issn] = 0729-2473
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
 
     au < exists ; 1983 ; War & Society Volume 1 ; 1 > 
