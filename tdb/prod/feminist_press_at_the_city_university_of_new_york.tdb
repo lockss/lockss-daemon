@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,8 +17,8 @@
 
     param[journal_dir] = wsq
 
-    au < released ; WSQ: Women's Studies Quarterly Volume 36 ; 36 >
-    au < released ; WSQ: Women's Studies Quarterly Volume 37 ; 37 >
+    au < released ; 2008 ; WSQ: Women's Studies Quarterly Volume 36 ; 36 >
+    au < released ; 2009 ; WSQ: Women's Studies Quarterly Volume 37 ; 37 >
 
   }
 
