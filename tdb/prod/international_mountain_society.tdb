@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0276-4741
   
-      au < doNotProcess ; Mountain Research and Development Volume 20 ; 20 >
-      au < doNotProcess ; Mountain Research and Development Volume 21 ; 21 >
-      au < doNotProcess ; Mountain Research and Development Volume 22 ; 22 >
-      au < doNotProcess ; Mountain Research and Development Volume 23 ; 23 >
-      au < superseded ; Mountain Research and Development Volume 24 ; 24 >
-      au < doNotProcess ; Mountain Research and Development Volume 25 ; 25 >
-      au < doNotProcess ; Mountain Research and Development Volume 26 ; 26 >
-      au < doNotProcess ; Mountain Research and Development Volume 27 ; 27 >
+      au < doNotProcess ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
+      au < doNotProcess ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
+      au < doNotProcess ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
+      au < doNotProcess ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
+      au < superseded ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
+      au < doNotProcess ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
+      au < doNotProcess ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
+      au < doNotProcess ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
     }
 
     {

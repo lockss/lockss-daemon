@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1402-2001
   
-      au < doNotProcess ; Applied Vegetation Science Volume 5 ; 5 >
-      au < doNotProcess ; Applied Vegetation Science Volume 6 ; 6 >
-      au < superseded ; Applied Vegetation Science Volume 7 ; 7 >
-      au < doNotProcess ; Applied Vegetation Science Volume 8 ; 8 >
-      au < doNotProcess ; Applied Vegetation Science Volume 9 ; 9 >
-      au < doNotProcess ; Applied Vegetation Science Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
+      au < doNotProcess ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
+      au < superseded ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
+      au < doNotProcess ; 2005 ; Applied Vegetation Science Volume 8 ; 8 >
+      au < doNotProcess ; 2006 ; Applied Vegetation Science Volume 9 ; 9 >
+      au < doNotProcess ; 2007 ; Applied Vegetation Science Volume 10 ; 10 >
     }
 
   }

@@ -3840,7 +3840,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://em.oxfordjournals.org/
-    implicit < pluginSuffix ; year ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Early Music Volume 33 ; 33 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Early Music Volume 34 ; 34 >
@@ -4201,7 +4201,7 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://es.oxfordjournals.org/
-    implicit < status ; yesr ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2006 ; Enterprise & Society Volume 7 ; 7 >
 
@@ -5444,12 +5444,40 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://fsb.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    comment[fsb] = there is no such volume, this was probably an error
-
-    au < HighWireStrVolPlugin ; down ; French Studies Bulletin Volume LX ; LX >
-    au < HighWirePressH20Plugin ; down ; French Studies Bulletin Volume LX ; LX >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; French Studies Bulletin Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; French Studies Bulletin Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; French Studies Bulletin Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; French Studies Bulletin Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; French Studies Bulletin Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; French Studies Bulletin Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; French Studies Bulletin Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 1994 ; French Studies Bulletin Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; French Studies Bulletin Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; French Studies Bulletin Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; French Studies Bulletin Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; French Studies Bulletin Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; French Studies Bulletin Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; French Studies Bulletin Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
 
     }
 
@@ -9758,9 +9786,9 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://jicj.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Journal of International Criminal Justice Volume 4 ; 4 >
+    au < down ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
 
     }
 
@@ -10268,7 +10296,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mollus.oxfordjournals.org/
-    implicit < pluginSuffix ; year ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of Molluscan Studies Volume 72 ; 72 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
@@ -10521,7 +10549,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://petrology.oxfordjournals.org/
-    implicit < pluginSuffix ; year ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of Petrology Volume 46 ; 46 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Petrology Volume 47 ; 47 >
@@ -10867,9 +10895,9 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://jrma.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Journal of the Royal Musical Association Volume 130 ; 130 >
+    au < down ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 >
 
     }
 
@@ -10879,11 +10907,11 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrma.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; Journal of the Royal Musical Association Volume 130 ; 130 >
-    au < HighWireStrVolPlugin ; down ; Journal of the Royal Musical Association Volume 131 ; 131 >
-    au < HighWirePressH20Plugin ; down ; Journal of the Royal Musical Association Volume 132 ; 132 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the Royal Musical Association Volume 131 ; 131 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 >
 
     }
     
@@ -12814,7 +12842,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ndt.oxfordjournals.org/
-    implicit < pluginSuffix ; year; status ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
@@ -14484,9 +14512,9 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://pan.oxfordjournals.org/
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < down ; Political Analysis Volume 14 ; 14 >
+    au < down ; 2006 ; Political Analysis Volume 14 ; 14 >
 
     }
 
@@ -15710,7 +15738,7 @@
        
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://raps.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; name ; param[volume] >   
+    implicit < pluginSuffix ; status ; year ; name ; param[volume] >   
           
     }
     

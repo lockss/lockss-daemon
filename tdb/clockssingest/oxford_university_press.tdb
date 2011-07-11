@@ -5277,6 +5277,57 @@
   }
 
   {
+
+    title <
+      name = French Studies Bulletin ;
+      issn = 0262-2750 ;
+      eissn = 1748-9180 ;
+      issnl = 0262-2750
+    >
+
+    {
+    param[base_url] = http://fsb.oxfordjournals.org/
+    pluginPrefix = org.lockss.plugin.highwire.
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
+    au < exists ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 ; >
+    au < exists ; exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1984 ; French Studies Bulletin Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1986 ; French Studies Bulletin Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1987 ; French Studies Bulletin Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1988 ; French Studies Bulletin Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1989 ; French Studies Bulletin Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1990 ; French Studies Bulletin Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1991 ; French Studies Bulletin Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 ; >
+    au < doesNotExist ; doesNotExist ; 1994 ; French Studies Bulletin Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1999 ; French Studies Bulletin Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2000 ; French Studies Bulletin Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2001 ; French Studies Bulletin Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2002 ; French Studies Bulletin Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2003 ; French Studies Bulletin Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2004 ; French Studies Bulletin Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2005 ; French Studies Bulletin Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2006 ; French Studies Bulletin Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2007 ; French Studies Bulletin Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
+    
+    }
+      
+  }
+      
+  {
   
     title <
       name = German History ;
