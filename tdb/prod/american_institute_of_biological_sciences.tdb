@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-3568
   
-      au < doNotProcess ; BioScience Volume 50 ; 50 >
-      au < doNotProcess ; BioScience Volume 51 ; 51 >
-      au < doNotProcess ; BioScience Volume 52 ; 52 >
-      au < doNotProcess ; BioScience Volume 53 ; 53 >
-      au < doNotProcess ; BioScience Volume 54 ; 54 >
-      au < doNotProcess ; BioScience Volume 55 ; 55 >
-      au < superseded ; BioScience Volume 55 ; 055 >
-      au < doNotProcess ; BioScience Volume 56 ; 56 >
-      au < doNotProcess ; BioScience Volume 57 ; 57 >
+      au < doNotProcess ; 2000 ; BioScience Volume 50 ; 50 >
+      au < doNotProcess ; 2001 ; BioScience Volume 51 ; 51 >
+      au < doNotProcess ; 2002 ; BioScience Volume 52 ; 52 >
+      au < doNotProcess ; 2003 ; BioScience Volume 53 ; 53 >
+      au < doNotProcess ; 2004 ; BioScience Volume 54 ; 54 >
+      au < doNotProcess ; 2005 ; BioScience Volume 55 ; 55 >
+      au < superseded ; 2005 ; BioScience Volume 55 ; 055 >
+      au < doNotProcess ; 2006 ; BioScience Volume 56 ; 56 >
+      au < doNotProcess ; 2007 ; BioScience Volume 57 ; 57 >
     }
 
     {
