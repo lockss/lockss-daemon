@@ -11,7 +11,9 @@
       issn = 1093-5371 ;
       issnl = 1093-5371
     >
-    
+
+    comment[RLG] = "RLG has merged with OCLC and you have activated an RLG link that is no longer in service"
+       
     rights = openaccess
     plugin = org.lockss.plugin.rlg.RLGDigiNewsPlugin
     param[base_url] = http://www.rlg.org/

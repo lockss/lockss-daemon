@@ -12,7 +12,7 @@
   param[graphics_url] = http://graphics.ingentaconnect.com/    
   param[publisher_id] = stl
   comment[platform] = Ingenta
-  implicit < status ; year; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
 

@@ -288,7 +288,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://pb.rcpsych.org/
-      implicit < status ; year ;  name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       
       au < released ; 2005 ; Psychiatric Bulletin Volume 29 ; 29 >      
       

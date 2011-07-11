@@ -487,7 +487,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.jgp.org/
-      implicit < status ; year ;  name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2006 ; The Journal of General Physiology Volume 127 ; 127 >
 

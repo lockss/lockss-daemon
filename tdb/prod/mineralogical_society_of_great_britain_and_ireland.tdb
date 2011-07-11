@@ -11,7 +11,7 @@
   param[publisher_id] = minsoc
   comment[platform] = Ingenta
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.MineralogicalSocietyPdfTransform
-  implicit < status ; year; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
  
   {
   

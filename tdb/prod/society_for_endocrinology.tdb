@@ -52,7 +52,7 @@
 
       plugin = org.lockss.plugin.highwire.
       param[base_url] = http://joe.endocrinology-journals.org/
-      implicit < pluginSuffix ; status ; year ;  name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; exists ; 1939 ; Journal of Endocrinology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1940 ; Journal of Endocrinology Volume 2 ; 2 >

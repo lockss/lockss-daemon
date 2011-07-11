@@ -19,7 +19,7 @@
     param[publisher_id] = maney
     param[journal_id] = aac 
     param[journal_issn] = 1743-6753
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2005 ; Advances in Applied Ceramics Volume 104 ; 104 > 
     au < manifest ; 2006 ; Advances in Applied Ceramics Volume 105 ; 105 > 
@@ -78,7 +78,7 @@
     param[publisher_id] = maney
     param[journal_id] = amb 
     param[journal_issn] = 0002-6980
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1937 ; Ambix Volume 1 ; 1 > 
     au < manifest ; 1938-1946 ; Ambix Volume 2 ; 2 > 
@@ -156,7 +156,7 @@
     param[publisher_id] = maney
     param[journal_id] = atmp 
     param[journal_issn] = 0003-4983
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 > 
     au < exists ; 2003 ; Annals of Tropical Medicine and Parasitology Volume 97 ; 97 > 
@@ -186,7 +186,7 @@
     param[publisher_id] = maney
     param[journal_id] = atp 
     param[journal_issn] = 0272-4936
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Annals of Tropical Paediatrics: International Child Health Volume 22 ; 22 > 
     au < exists ; 2003 ; Annals of Tropical Paediatrics: International Child Health Volume 23 ; 23 > 
@@ -216,7 +216,7 @@
     param[publisher_id] = maney
     param[journal_id] = aes 
     param[journal_issn] = 0371-7453
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2000 ; Applied Earth Science: IMM Transactions section B Volume 109 ; 109 > 
     au < manifest ; 2001 ; Applied Earth Science: IMM Transactions section B Volume 110 ; 110 > 
@@ -247,7 +247,7 @@
     param[publisher_id] = maney
     param[journal_id] = aaa 
     param[journal_issn] = 1741-6124
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
     au < manifest ; 2005 ; Arms & Armour Volume 2 ; 2 > 
@@ -488,7 +488,7 @@
     param[publisher_id] = maney
     param[journal_id] = bst 
     param[journal_issn] = 1474-8932
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
@@ -518,7 +518,7 @@
     param[publisher_id] = maney
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < manifest ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
@@ -541,7 +541,7 @@
     param[publisher_id] = maney
     param[journal_id] = brl 
     param[journal_issn] = 1752-7260
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 > 
     au < manifest ; 2007 ; Bulletin of the Council for British Research in the Levant Volume 2 ; 2 > 
@@ -566,7 +566,7 @@
     param[publisher_id] = maney
     param[journal_id] = byz 
     param[journal_issn] = 0307-0131
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
     au < manifest ; 1976 ; Byzantine and Modern Greek Studies Volume 2 ; 2 >
@@ -621,7 +621,7 @@
     param[publisher_id] = maney
     param[journal_id] =   
     param[journal_issn] = 0008-4433
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
       au < manifest ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
@@ -691,7 +691,7 @@
     param[publisher_id] = maney
     param[journal_id] = caj 
     param[journal_issn] = 0008-7041
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1964 ; The Cartographic Journal Volume 1 ; 1 > 
     au < exists ; 1965 ; The Cartographic Journal Volume 2 ; 2 > 
@@ -759,7 +759,7 @@
     param[publisher_id] = maney
     param[journal_id] = ceu 
     param[journal_issn] = 1479-0963
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2003 ; Central Europe Volume 1 ; 1 > 
     au < exists ; 2004 ; Central Europe Volume 2 ; 2 > 
@@ -788,7 +788,7 @@
     param[publisher_id] = maney
     param[journal_id] = cii 
     param[journal_issn] = 1467-0100
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000 ; Cochlear Implants International Volume 1 ; 1 > 
     au < exists ; 2001 ; Cochlear Implants International Volume 2 ; 2 > 
@@ -820,7 +820,7 @@
     param[publisher_id] = maney
     param[journal_id] = cas 
     param[journal_issn] = 1477-5700
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2003 ; Comparative American Studies Volume 1 ; 1 > 
     au < exists ; 2004 ; Comparative American Studies Volume 2 ; 2 > 
@@ -849,7 +849,7 @@
     param[publisher_id] = maney
     param[journal_id] = com 
     param[journal_issn] = 1024-5294
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Competition and Change Volume 6 ; 6 > 
     au < exists ; 2003 ; Competition and Change Volume 7 ; 7 > 
@@ -879,7 +879,7 @@
     param[publisher_id] = maney
     param[journal_id] = cma 
     param[journal_issn] = 1350-5033
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1995-1996 ; Conservation and Management of Archaeological Sites Volume 1 ; 1 > 
     au < exists ; 1997-1998 ; Conservation and Management of Archaeological Sites Volume 2 ; 2 > 
@@ -912,7 +912,7 @@
     param[publisher_id] = maney
     param[journal_id] = cest 
     param[journal_issn] = 1478-422X
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
     au < exists ; 2004 ; Corrosion Engineering, Science and Technology Volume 39 ; 39 > 
@@ -941,7 +941,7 @@
     param[publisher_id] = maney
     param[journal_id] = cos 
     param[journal_issn] = 0590-8876
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1965-1967 ; Costume Volume 1 ; 1 > 
     au < exists ; 1968 ; Costume Volume 2 ; 2 > 
@@ -1006,7 +1006,7 @@
     param[publisher_id] = maney
     param[journal_id] = dei 
     param[journal_issn] = 1464-3154
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Deafness & Education International Volume 1 ; 1 > 
     au < exists ; 2000 ; Deafness & Education International Volume 2 ; 2 > 
@@ -1039,7 +1039,7 @@
     param[publisher_id] = maney
     param[journal_id] = dix 
     param[journal_issn] = 1478-7318
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2003 ; Dix-Neuf Volume 1 ; 1 > 
     au < exists ; 2004 ; Dix-Neuf Volume 2 ; 2 > 
@@ -1074,7 +1074,7 @@
     param[publisher_id] = maney
     param[journal_id] = dre 
     param[journal_issn] = 0361-2112
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; Dress Volume 36 ; 36 > 
 
@@ -1095,7 +1095,7 @@
     param[publisher_id] = maney
     param[journal_id] = dtc 
     param[journal_issn] = 0309-6564
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2009 ; Dutch Crossing: Journal of Low Countries Studies Volume 33 ; 33 > 
     au < exists ; 2010 ; Dutch Crossing: Journal of Low Countries Studies Volume 34 ; 34 > 
@@ -1118,7 +1118,7 @@
     param[publisher_id] = maney
     param[journal_id] = emc 
     param[journal_issn] = 1529-9104
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1994 ; Early Medieval China Volume 1994 ; 1994 > 
     au < exists ; 1995 ; Early Medieval China Volume 1995 ; 1995 > 
@@ -1155,7 +1155,7 @@
     param[publisher_id] = maney
     param[journal_id] = ema 
     param[journal_issn] = 1748-9237
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Energy Materials Volume 1 ; 1 > 
     au < exists ; 2007 ; Energy Materials Volume 2 ; 2 > 
@@ -1179,7 +1179,7 @@
     param[publisher_id] = maney
     param[journal_id] = env 
     param[journal_issn] = 1461-4103
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1996 ; Environmental Archaeology Volume 1 ; 1 > 
     au < exists ; 1997 ; Environmental Archaeology Volume 2 ; 2 > 
@@ -1266,7 +1266,7 @@
     param[publisher_id] = maney
     param[journal_id] = exm 
     param[journal_issn] = 1041-2573
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1989 ; Exemplaria Volume 1 ; 1 > 
     au < exists ; 1990 ; Exemplaria Volume 2 ; 2 > 
@@ -1309,7 +1309,7 @@
     param[publisher_id] = maney
     param[journal_id] = fch 
     param[journal_issn] = 1463-1180
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Family & Community History Volume 9 ; 9 > 
     au < exists ; 2007 ; Family & Community History Volume 10 ; 10 > 
@@ -1334,7 +1334,7 @@
     param[publisher_id] = maney
     param[journal_id] = flk 
     param[journal_issn] = 0430-8778
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2009 ; Folk Life: Journal of Ethnological Studies Volume 47 ; 47 > 
     au < exists ; 2010 ; Folk Life: Journal of Ethnological Studies Volume 48 ; 48 > 
@@ -1357,7 +1357,7 @@
     param[publisher_id] = maney
     param[journal_id] = hdy 
     param[journal_issn] = 1934-8908
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
     au < exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
@@ -1382,7 +1382,7 @@
     param[publisher_id] = maney
     param[journal_id] = em 
     param[journal_issn] = 1024-5332
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Hematology Volume 7 ; 7 > 
     au < exists ; 2003 ; Hematology Volume 8 ; 8 > 
@@ -1412,7 +1412,7 @@
     param[publisher_id] = maney
     param[journal_id] = hrj 
     param[journal_issn] = 1468-2737
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000 ; Hispanic Research Journal Volume 1 ; 1 > 
     au < exists ; 2001 ; Hispanic Research Journal Volume 2 ; 2 > 
@@ -1444,7 +1444,7 @@
     param[publisher_id] = maney
     param[journal_id] = hen 
     param[journal_issn] = 1756-7505
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; The Historic Environment: Policy & Practice Volume 1 ; 1 > 
     au < exists ; 2011 ; The Historic Environment: Policy & Practice Volume 2 ; 2 > 
@@ -1466,7 +1466,7 @@
     param[publisher_id] = maney
     param[journal_id] = isj 
     param[journal_issn] = 1368-2199
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2004 ; The Imaging Science Journal Volume 52 ; 52 > 
     au < exists ; 2005 ; The Imaging Science Journal Volume 53 ; 53 > 
@@ -1494,7 +1494,7 @@
     param[publisher_id] = maney
     param[journal_id] = iar 
     param[journal_issn] = 0309-0728
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1976-1977 ; Industrial Archaeology Review Volume 1 ; 1 > 
     au < exists ; 1977-1978 ; Industrial Archaeology Review Volume 2 ; 2 > 
@@ -1546,7 +1546,7 @@
     param[publisher_id] = maney
     param[journal_id] = isr 
     param[journal_issn] = 0308-0188
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1976 ; Interdisciplinary Science Reviews Volume 1 ; 1 > 
     au < exists ; 1977 ; Interdisciplinary Science Reviews Volume 2 ; 2 > 
@@ -1602,7 +1602,7 @@
     param[publisher_id] = maney
     param[journal_id] = iht 
     param[journal_issn] = 1749-5148
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2007 ; International Heat Treatment & Surface Engineering Volume 1 ; 1 > 
     au < exists ; 2008 ; International Heat Treatment & Surface Engineering Volume 2 ; 2 > 
@@ -1628,7 +1628,7 @@
     param[publisher_id] = maney
     param[journal_id] = het 
     param[journal_issn] = 1758-1206
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < exists ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
@@ -1651,7 +1651,7 @@
     param[publisher_id] = maney
     param[journal_id] = ijcmr 
     param[journal_issn] = 1364-0461
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 > 
     au < exists ; 2005 ; International Journal of Cast Metals Research Volume 18 ; 18 > 
@@ -1679,7 +1679,7 @@
     param[publisher_id] = maney
     param[journal_id] = imr 
     param[journal_issn] = 0950-6608
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1987 ; International Materials Reviews Volume 32 ; 32 > 
     au < exists ; 1988 ; International Materials Reviews Volume 33 ; 33 > 
@@ -1724,7 +1724,7 @@
     param[publisher_id] = maney
     param[journal_id] = imm 
     param[journal_issn] = 1753-6146
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2008 ; International Musculoskeletal Medicine Volume 30 ; 30 > 
     au < exists ; 2009 ; International Musculoskeletal Medicine Volume 31 ; 31 > 
@@ -1749,7 +1749,7 @@
     param[publisher_id] = maney
     param[journal_id] = iwp 
     param[journal_issn] = 2042-6445
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
     au < exists ; 2011 ; International Wood Products Journal Volume 2 ; 2 > 
@@ -1771,7 +1771,7 @@
     param[publisher_id] = maney
     param[journal_id] = ias 
     param[journal_issn] = 0301-9233
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 > 
     au < exists ; 2000 ; Ironmaking & Steelmaking Volume 27 ; 27 > 
@@ -1804,7 +1804,7 @@
     param[publisher_id] = maney
     param[journal_id] = itc 
     param[journal_issn] = 0161-4622
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2009 ; Italian Culture Volume 27 ; 27 > 
     au < exists ; 2010 ; Italian Culture Volume 28 ; 28 > 
@@ -1827,7 +1827,7 @@
     param[publisher_id] = maney
     param[journal_id] = its 
     param[journal_issn] = 0075-1634
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1937-1938 ; Italian Studies Volume 1 ; 1 > 
     au < exists ; 1938-1939 ; Italian Studies Volume 2 ; 2 > 
@@ -1913,7 +1913,7 @@
     param[publisher_id] = maney
     param[journal_id] = ita 
     param[journal_issn] = 0261-4340
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1981 ; The Italianist Volume 1 ; 1 > 
     au < exists ; 1982 ; The Italianist Volume 2 ; 2 > 
@@ -1964,7 +1964,7 @@
     param[publisher_id] = maney
     param[journal_id] = jbr 
     param[journal_issn] = 0373-6687
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Journal of Bryology Volume 24 ; 24 > 
     au < exists ; 2003 ; Journal of Bryology Volume 25 ; 25 > 
@@ -1994,7 +1994,7 @@
     param[publisher_id] = maney
     param[journal_id] = csm 
     param[journal_issn] = 1750-1679
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006-2007 ; Journal of Care Services Management Volume 1 ; 1 > 
     au < exists ; 2007-2008 ; Journal of Care Services Management Volume 2 ; 2 > 
@@ -2019,7 +2019,7 @@
     param[publisher_id] = maney
     param[journal_id] = cih 
     param[journal_issn] = 1753-8068
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2008 ; Journal of Communication in Healthcare Volume 1 ; 1 > 
     au < exists ; 2009 ; Journal of Communication in Healthcare Volume 2 ; 2 > 
@@ -2043,7 +2043,7 @@
     param[publisher_id] = maney
     param[journal_id] = jca 
     param[journal_issn] = 1574-0773
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Journal of Conflict Archaeology Volume 1 ; 1 > 
     au < exists ; 2006 ; Journal of Conflict Archaeology Volume 2 ; 2 > 
@@ -2069,7 +2069,7 @@
     param[publisher_id] = maney
     param[journal_id] = jfa 
     param[journal_issn] = 0093-4690
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1974 ; Journal of Field Archaeology Volume 1 ; 1 > 
     au < exists ; 1975 ; Journal of Field Archaeology Volume 2 ; 2 > 
@@ -2125,7 +2125,7 @@
     param[publisher_id] = maney
     param[journal_id] = his 
     param[journal_issn] = 0147-8885
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1977-1978 ; Journal of Histotechnology Volume 1 ; 1 > 
     au < exists ; 1979 ; Journal of Histotechnology Volume 2 ; 2 > 
@@ -2179,7 +2179,7 @@
     param[publisher_id] = maney
     param[journal_id] = mmh 
     param[journal_issn] = 1753-3031
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 > 
     au < exists ; 2009 ; Journal of Management & Marketing in Healthcare Volume 2 ; 2 > 
@@ -2203,7 +2203,7 @@
     param[publisher_id] = maney
     param[journal_id] = jmt 
     param[journal_issn] = 1066-9817
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1993 ; Journal of Manual & Manipulative Therapy Volume 1 ; 1 > 
     au < exists ; 1994 ; Journal of Manual & Manipulative Therapy Volume 2 ; 2 > 
@@ -2295,7 +2295,7 @@
     param[publisher_id] = maney
     param[journal_id] = jba 
     param[journal_issn] = 0068-1288
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1980 ; Journal of the British Archaeological Association Volume 133 ; 133 > 
     au < exists ; 1981 ; Journal of the British Archaeological Association Volume 134 ; 134 > 
@@ -2346,7 +2346,7 @@
     param[publisher_id] = maney
     param[journal_id] = eni 
     param[journal_issn] = 0144-2600
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 > 
     au < exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 > 
@@ -2373,7 +2373,7 @@
     param[publisher_id] = maney
     param[journal_id] = wsc 
     param[journal_issn] = 0020-3203
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     comment[continued_by] = 2042-6445
 
@@ -2398,7 +2398,7 @@
     param[publisher_id] = maney
     param[journal_id] = ksr 
     param[journal_issn] = 0952-4142
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; The Keats-Shelley Review Volume 24 ; 24 > 
     au < exists ; 2011 ; The Keats-Shelley Review Volume 25 ; 25 > 
@@ -2420,7 +2420,7 @@
     param[publisher_id] = maney
     param[journal_id] = lhr 
     param[journal_issn] = 0961-5652
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Labour History Review Volume 70 ; 70 > 
     au < exists ; 2006 ; Labour History Review Volume 71 ; 71 > 
@@ -2447,7 +2447,7 @@
     param[publisher_id] = maney
     param[journal_id] = lhi 
     param[journal_issn] = 1759-7536
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
  
     au < exists ; 2009 ; Language & History Volume 52 ; 52 > 
     au < exists ; 2010 ; Language & History Volume 53 ; 53 > 
@@ -2470,7 +2470,7 @@
     param[publisher_id] = maney
     param[journal_id] = lev 
     param[journal_issn] = 0075-8914
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1969 ; Levant Volume 1 ; 1 > 
     au < exists ; 1970 ; Levant Volume 2 ; 2 > 
@@ -2533,7 +2533,7 @@
     param[publisher_id] = maney
     param[journal_id] = lbh 
     param[journal_issn] = 0024-2306
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Library History Volume 21 ; 21 > 
     au < exists ; 2006 ; Library History Volume 22 ; 22 > 
@@ -2558,7 +2558,7 @@
     param[publisher_id] = maney
     param[journal_id] = lih 
     param[journal_issn] = 1758-3489
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < exists ; 2010 ; Library & Information History Volume 26 ; 26 > 
@@ -2581,7 +2581,7 @@
     param[publisher_id] = maney
     param[journal_id] = ldn 
     param[journal_issn] = 0305-8034
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1975 ; The London Journal Volume 1 ; 1 > 
     au < exists ; 1976 ; The London Journal Volume 2 ; 2 > 
@@ -2637,7 +2637,7 @@
     param[publisher_id] = maney
     param[journal_id] = mri 
     param[journal_issn] = 1432-8917
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Materials Research Innovations Volume 10 ; 10 > 
     au < exists ; 2007 ; Materials Research Innovations Volume 11 ; 11 > 
@@ -2664,7 +2664,7 @@
     param[publisher_id] = maney
     param[journal_id] = mst 
     param[journal_issn] = 0267-0836
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
     au < exists ; 1986 ; Materials Science and Technology Volume 2 ; 2 > 
@@ -2711,7 +2711,7 @@
     param[publisher_id] = maney
     param[journal_id] = mte 
     param[journal_issn] = 1066-7857
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Materials Technology: Advanced Performance Materials Volume 21 ; 21 > 
     au < exists ; 2007 ; Materials Technology: Advanced Performance Materials Volume 22 ; 22 > 
@@ -2737,7 +2737,7 @@
     param[publisher_id] = maney
     param[journal_id] = med 
     param[journal_issn] = 0076-6097
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000 ; Medieval Archaeology Volume 44 ; 44 > 
     au < exists ; 2001 ; Medieval Archaeology Volume 45 ; 45 > 
@@ -2768,7 +2768,7 @@
     param[publisher_id] = maney
     param[journal_id] = mss 
     param[journal_issn] = 1366-0691
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Medieval Sermon Studies Volume 50 ; 50 > 
     au < exists ; 2007 ; Medieval Sermon Studies Volume 51 ; 51 > 
@@ -2793,7 +2793,7 @@
     param[publisher_id] = maney
     param[journal_id] = mdh 
     param[journal_issn] = 0047-729X
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1971-1972 ; Midland History Volume 1 ; 1 > 
     au < exists ; 1973-1974 ; Midland History Volume 2 ; 2 > 
@@ -2849,7 +2849,7 @@
     param[publisher_id] = maney
     param[journal_id] = mpem 
     param[journal_issn] = 0371-9553
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000 ; Mineral Processing and Extractive Metallurgy Volume 109 ; 109 > 
     au < exists ; 2001 ; Mineral Processing and Extractive Metallurgy Volume 110 ; 110 > 
@@ -2881,7 +2881,7 @@
     param[publisher_id] = maney
     param[journal_id] = mng 
     param[journal_issn] = 0147-037X
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1975 ; Ming Studies Volume 1975 ; 1975 > 
     au < exists ; 1976 ; Ming Studies Volume 1976 ; 1976 > 
@@ -2937,7 +2937,7 @@
     param[publisher_id] = maney
     param[journal_id] = mint 
     param[journal_issn] = 1474-9009
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000 ; Mining Technology Volume 109 ; 109 > 
     au < exists ; 2001 ; Mining Technology Volume 110 ; 110 > 
@@ -2969,7 +2969,7 @@
     param[publisher_id] = maney
     param[journal_id] = nam 
     param[journal_issn] = 0027-7738
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2008 ; Names: A Journal of Onomastics Volume 56 ; 56 > 
     au < exists ; 2009 ; Names: A Journal of Onomastics Volume 57 ; 57 > 
@@ -2993,7 +2993,7 @@
     param[publisher_id] = maney
     param[journal_id] = nres 
     param[journal_issn] = 0161-6412
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2001 ; Neurological Research Volume 23 ; 23 > 
     au < exists ; 2002 ; Neurological Research Volume 24 ; 24 > 
@@ -3024,7 +3024,7 @@
     param[publisher_id] = maney
     param[journal_id] = nhi 
     param[journal_issn] = 0078-172X
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1966 ; Northern History Volume 1 ; 1 > 
     au < exists ; 1967 ; Northern History Volume 2 ; 2 > 
@@ -3092,7 +3092,7 @@
     param[publisher_id] = maney
     param[journal_id] = nns 
     param[journal_issn] = 1028-415X
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2002 ; Nutritional Neuroscience Volume 5 ; 5 > 
     au < exists ; 2003 ; Nutritional Neuroscience Volume 6 ; 6 > 
@@ -3122,7 +3122,7 @@
     param[publisher_id] = maney
     param[journal_id] = ogs 
     param[journal_issn] = 0078-7191
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1966 ; Oxford German Studies Volume 1 ; 1 > 
     au < exists ; 1967 ; Oxford German Studies Volume 2 ; 2 > 
@@ -3182,7 +3182,7 @@
     param[publisher_id] = maney
     param[journal_id] = prm 
     param[journal_issn] = 1746-5095
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2004 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 15 ; 15 > 
     au < exists ; 2005 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 16 ; 16 > 
@@ -3210,7 +3210,7 @@
     param[publisher_id] = maney
     param[journal_id] = peq 
     param[journal_issn] = 0031-0328
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2004 ; Palestine Exploration Quarterly Volume 136 ; 136 > 
     au < exists ; 2005 ; Palestine Exploration Quarterly Volume 137 ; 137 > 
@@ -3238,7 +3238,7 @@
     param[publisher_id] = maney
     param[journal_id] = pha 
     param[journal_issn] = 1757-0921
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 > 
     au < exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 > 
@@ -3261,7 +3261,7 @@
     param[publisher_id] = maney
     param[journal_id] = ptr 
     param[journal_issn] = 1083-3196
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1996 ; Physical Therapy Reviews Volume 1 ; 1 > 
     au < exists ; 1997 ; Physical Therapy Reviews Volume 2 ; 2 > 
@@ -3297,7 +3297,7 @@
     param[publisher_id] = maney
     param[journal_id] = prc 
     param[journal_issn] = 1465-8011
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Plastics, Rubber and Composites Volume 28 ; 28 > 
     au < exists ; 2000 ; Plastics, Rubber and Composites Volume 29 ; 29 > 
@@ -3330,7 +3330,7 @@
     param[publisher_id] = maney
     param[journal_id] = pma 
     param[journal_issn] = 0079-4236
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Post-Medieval Archaeology Volume 39 ; 39 > 
     au < exists ; 2006 ; Post-Medieval Archaeology Volume 40 ; 40 > 
@@ -3357,7 +3357,7 @@
     param[publisher_id] = maney
     param[journal_id] = pma 
     param[journal_issn] = 0032-5899
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Powder Metallurgy Volume 42 ; 42 > 
     au < exists ; 2000 ; Powder Metallurgy Volume 43 ; 43 > 
@@ -3390,7 +3390,7 @@
     param[publisher_id] = maney
     param[journal_id] = ppc 
     param[journal_issn] = 0969-9260
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2003 ; Progress in Palliative Care Volume 11 ; 11 > 
     au < exists ; 2004 ; Progress in Palliative Care Volume 12 ; 12 > 
@@ -3469,7 +3469,7 @@
     param[publisher_id] = maney
     param[journal_id] = pua 
     param[journal_issn] = 1465-5187
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2000-2001 ; Public Archaeology Volume 1 ; 1 > 
     au < exists ; 2001-2002 ; Public Archaeology Volume 2 ; 2 > 
@@ -3499,7 +3499,7 @@
     param[publisher_id] = maney
     param[journal_id] = peg 
     param[journal_issn] = 0959-3683
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Publications of the English Goethe Society Volume 75 ; 75 > 
     au < exists ; 2007 ; Publications of the English Goethe Society Volume 76 ; 76 > 
@@ -3525,7 +3525,7 @@
     param[publisher_id] = maney
     param[journal_id] = rer 
     param[journal_issn] = 1351-0002
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Redox Report Volume 4 ; 4 > 
     au < exists ; 2000 ; Redox Report Volume 5 ; 5 > 
@@ -3558,7 +3558,7 @@
     param[publisher_id] = maney
     param[journal_id] = ros 
     param[journal_issn] = 0263-9904
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1982-1983 ; Romance Studies Volume 1 ; 1 > 
     au < exists ; 1984 ; Romance Studies Volume 2 ; 2 > 
@@ -3607,7 +3607,7 @@
     param[publisher_id] = maney
     param[journal_id] = stwj 
     param[journal_issn] = 1362-1718
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1996 ; Science and Technology of Welding & Joining Volume 1 ; 1 > 
     au < exists ; 1997 ; Science and Technology of Welding & Joining Volume 2 ; 2 > 
@@ -3643,7 +3643,7 @@
     param[publisher_id] = maney
     param[journal_id] = c17 
     param[journal_issn] = 1361-7427
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 > 
     au < exists ; 1980 ; Seventeenth-Century French Studies Volume 2 ; 2 > 
@@ -3695,7 +3695,7 @@
     param[publisher_id] = maney
     param[journal_id] = sla 
     param[journal_issn] = 1361-7427
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1994 ; Slavonica Volume 1 ; 1 > 
     au < exists ; 1995 ; Slavonica Volume 2 ; 2 > 
@@ -3732,7 +3732,7 @@
     param[publisher_id] = maney
     param[journal_id] = se 
     param[journal_issn] = 0267-0844
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1999 ; Surface Engineering Volume 15 ; 15 > 
     au < exists ; 2000 ; Surface Engineering Volume 16 ; 16 > 
@@ -3765,7 +3765,7 @@
     param[publisher_id] = maney
     param[journal_id] = sre 
     param[journal_issn] = 0039-6265
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1931-1932 ; Survey Review Volume 1 ; 1 > 
     au < exists ; 1933-1934 ; Survey Review Volume 2 ; 2 > 
@@ -3828,7 +3828,7 @@
     param[publisher_id] = maney
     param[journal_id] = tang 
     param[journal_issn] = 0737-5034
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1982 ; T'ang Studies Volume 1982 ; 1982 > 
     au < doesNotExist ; 1983 ; T'ang Studies Volume 1983 ; 1983 >
@@ -3877,7 +3877,7 @@
     param[publisher_id] = maney
     param[journal_id] = tav 
     param[journal_issn] = 0334-4355
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1974 ; 1974 > 
     au < exists ; 1975 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1975 ; 1975 > 
@@ -3935,7 +3935,7 @@
     param[publisher_id] = maney
     param[journal_id] = tin 
     param[journal_issn] = 0082-2884
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1969 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 1 ; 1 > 
     au < exists ; 1970 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 2 ; 2 > 
@@ -3998,7 +3998,7 @@
     param[publisher_id] = maney
     param[journal_id] = tex 
     param[journal_issn] = 0040-4969
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1968-1970 ; Textile History Volume 1 ; 1 > 
     au < exists ; 1971 ; Textile History Volume 2 ; 2 > 
@@ -4060,7 +4060,7 @@
     param[publisher_id] = maney
     param[journal_id] = imf 
     param[journal_issn] = 0020-2967
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
     au < exists ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 > 
@@ -4087,7 +4087,7 @@
     param[publisher_id] = maney
     param[journal_id] = tns 
     param[journal_issn] = 0372-0187
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2006 ; Transactions of the Newcomen Society Volume 76 ; 76 > 
     au < exists ; 2007 ; Transactions of the Newcomen Society Volume 77 ; 77 > 
@@ -4110,7 +4110,7 @@
     param[publisher_id] = maney
     param[journal_id] = trb 
     param[journal_issn] = 1751-5831
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
     au < exists ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
@@ -4135,7 +4135,7 @@
     param[publisher_id] = maney
     param[journal_id] = usu 
     param[journal_issn] = 1757-8949
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
     au < exists ; 2011 ; Usus Antiquior Volume 2 ; 2 > 
@@ -4157,7 +4157,7 @@
     param[publisher_id] = maney
     param[journal_id] = vea 
     param[journal_issn] = 0305-5477
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1971 ; Vernacular Architecture Volume 1 ; 1 > 
     au < doesNotExist ; ; Vernacular Architecture Volume 2 ; 2 > 
@@ -4218,7 +4218,7 @@
     param[publisher_id] = maney
     param[journal_id] = war 
     param[journal_issn] = 0729-2473
-    implicit < status ; year; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1983 ; War & Society Volume 1 ; 1 > 
     au < exists ; 1984 ; War & Society Volume 2 ; 2 > 

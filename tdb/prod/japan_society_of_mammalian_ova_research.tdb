@@ -13,7 +13,7 @@
     >
 
     {
-      implicit < status ; year; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1347-5878
