@@ -3,7 +3,7 @@
     name = Johns Hopkins University Center for Talented Youth
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,9 +18,9 @@
     
       param[journal_dir] = imagine 
 
-      au < released ; Imagine Volume 4 ; 4 >
-      au < released ; Imagine Volume 5 ; 5 >
-      au < released ; Imagine Volume 6 ; 6 >
+      au < released ; 1996-1997 ; Imagine Volume 4 ; 4 >
+      au < released ; 1997-1998 ; Imagine Volume 5 ; 5 >
+      au < released ; 1998-1999 ; Imagine Volume 6 ; 6 >
 
   }
 

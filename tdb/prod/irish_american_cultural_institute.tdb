@@ -3,7 +3,7 @@
     name = Irish-American Cultural Institute
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,12 +18,12 @@
 
     param[journal_dir] = eire-ireland
 
-    au < testing ; Éire-Ireland Volume 39 ; 39 >
-    au < testing ; Éire-Ireland Volume 40 ; 40 >
-    au < testing ; Éire-Ireland Volume 41 ; 41 >
-    au < testing ; Éire-Ireland Volume 42 ; 42 >
-    au < testing ; Éire-Ireland Volume 43 ; 43 >
-    au < testing ; Éire-Ireland Volume 44 ; 44 >
+    au < released ; 2004 ; Éire-Ireland Volume 39 ; 39 >
+    au < released ; 2005 ; Éire-Ireland Volume 40 ; 40 >
+    au < released ; 2006 ; Éire-Ireland Volume 41 ; 41 >
+    au < released ; 2007 ; Éire-Ireland Volume 42 ; 42 >
+    au < released ; 2008 ; Éire-Ireland Volume 43 ; 43 >
+    au < released ; 2009 ; Éire-Ireland Volume 44 ; 44 >
 
   }
 

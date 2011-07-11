@@ -3,7 +3,7 @@
     name = Johns Hopkins University Press
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,22 +18,22 @@
 
     param[journal_dir] = american_imago
 
-    au < released ; American Imago Volume 52 ; 52 >
-    au < released ; American Imago Volume 53 ; 53 >
-    au < released ; American Imago Volume 54 ; 54 >
-    au < released ; American Imago Volume 55 ; 55 >
-    au < released ; American Imago Volume 56 ; 56 >
-    au < released ; American Imago Volume 57 ; 57 >
-    au < released ; American Imago Volume 58 ; 58 >
-    au < released ; American Imago Volume 59 ; 59 >
-    au < released ; American Imago Volume 60 ; 60 >
-    au < released ; American Imago Volume 61 ; 61 >
-    au < released ; American Imago Volume 62 ; 62 >
-    au < released ; American Imago Volume 63 ; 63 >
-    au < released ; American Imago Volume 64 ; 64 >
-    au < released ; American Imago Volume 65 ; 65 >
-    au < released ; American Imago Volume 66 ; 66 >
-    au < ready ; American Imago Volume 67 ; 67 >
+    au < released ; 1995 ; American Imago Volume 52 ; 52 >
+    au < released ; 1996 ; American Imago Volume 53 ; 53 >
+    au < released ; 1997 ; American Imago Volume 54 ; 54 >
+    au < released ; 1998 ; American Imago Volume 55 ; 55 >
+    au < released ; 1999 ; American Imago Volume 56 ; 56 >
+    au < released ; 2000 ; American Imago Volume 57 ; 57 >
+    au < released ; 2001 ; American Imago Volume 58 ; 58 >
+    au < released ; 2002 ; American Imago Volume 59 ; 59 >
+    au < released ; 2003 ; American Imago Volume 60 ; 60 >
+    au < released ; 2004 ; American Imago Volume 61 ; 61 >
+    au < released ; 2005 ; American Imago Volume 62 ; 62 >
+    au < released ; 2006 ; American Imago Volume 63 ; 63 >
+    au < released ; 2007 ; American Imago Volume 64 ; 64 >
+    au < released ; 2008 ; American Imago Volume 65 ; 65 >
+    au < released ; 2009 ; American Imago Volume 66 ; 66 >
+    au < ready ; 2010 ; American Imago Volume 67 ; 67 >
 
   }
 
@@ -47,17 +47,17 @@
 
     param[journal_dir] = american_jewish_history
 
-    au < released ; American Jewish History Volume 84 ; 84 >
-    au < released ; American Jewish History Volume 85 ; 85 >
-    au < released ; American Jewish History Volume 86 ; 86 >
-    au < released ; American Jewish History Volume 87 ; 87 >
-    au < released ; American Jewish History Volume 88 ; 88 >
-    au < released ; American Jewish History Volume 89 ; 89 >
-    au < released ; American Jewish History Volume 90 ; 90 >
-    au < released ; American Jewish History Volume 91 ; 91 >
-    au < released ; American Jewish History Volume 92 ; 92 >
-    au < released ; American Jewish History Volume 93 ; 93 >
-    au < released ; American Jewish History Volume 94 ; 94 >
+    au < released ; 1996 ; American Jewish History Volume 84 ; 84 >
+    au < released ; 1997 ; American Jewish History Volume 85 ; 85 >
+    au < released ; 1998 ; American Jewish History Volume 86 ; 86 >
+    au < released ; 1999 ; American Jewish History Volume 87 ; 87 >
+    au < released ; 2000 ; American Jewish History Volume 88 ; 88 >
+    au < released ; 2001 ; American Jewish History Volume 89 ; 89 >
+    au < released ; 2002 ; American Jewish History Volume 90 ; 90 >
+    au < released ; 2003 ; American Jewish History Volume 91 ; 91 >
+    au < released ; 2004 ; American Jewish History Volume 92 ; 92 >
+    au < released ; 2007 ; American Jewish History Volume 93 ; 93 >
+    au < released ; 2008 ; American Jewish History Volume 94 ; 94 >
 
   }
 
@@ -71,21 +71,21 @@
 
     param[journal_dir] = american_journal_of_mathematics
 
-    au < released ; American Journal of Mathematics Volume 118 ; 118 >
-    au < released ; American Journal of Mathematics Volume 119 ; 119 >
-    au < released ; American Journal of Mathematics Volume 120 ; 120 >
-    au < released ; American Journal of Mathematics Volume 121 ; 121 >
-    au < released ; American Journal of Mathematics Volume 122 ; 122 >
-    au < released ; American Journal of Mathematics Volume 123 ; 123 >
-    au < released ; American Journal of Mathematics Volume 124 ; 124 >
-    au < released ; American Journal of Mathematics Volume 125 ; 125 >
-    au < released ; American Journal of Mathematics Volume 126 ; 126 >
-    au < released ; American Journal of Mathematics Volume 127 ; 127 >
-    au < released ; American Journal of Mathematics Volume 128 ; 128 >
-    au < released ; American Journal of Mathematics Volume 129 ; 129 >
-    au < released ; American Journal of Mathematics Volume 130 ; 130 >
-    au < released ; American Journal of Mathematics Volume 131 ; 131 >
-    au < released ; American Journal of Mathematics Volume 132 ; 132 >
+    au < released ; 1996 ; American Journal of Mathematics Volume 118 ; 118 >
+    au < released ; 1997 ; American Journal of Mathematics Volume 119 ; 119 >
+    au < released ; 1998 ; American Journal of Mathematics Volume 120 ; 120 >
+    au < released ; 1999 ; American Journal of Mathematics Volume 121 ; 121 >
+    au < released ; 2000 ; American Journal of Mathematics Volume 122 ; 122 >
+    au < released ; 2001 ; American Journal of Mathematics Volume 123 ; 123 >
+    au < released ; 2002 ; American Journal of Mathematics Volume 124 ; 124 >
+    au < released ; 2003 ; American Journal of Mathematics Volume 125 ; 125 >
+    au < released ; 2004 ; American Journal of Mathematics Volume 126 ; 126 >
+    au < released ; 2005 ; American Journal of Mathematics Volume 127 ; 127 >
+    au < released ; 2006 ; American Journal of Mathematics Volume 128 ; 128 >
+    au < released ; 2007 ; American Journal of Mathematics Volume 129 ; 129 >
+    au < released ; 2008 ; American Journal of Mathematics Volume 130 ; 130 >
+    au < released ; 2009 ; American Journal of Mathematics Volume 131 ; 131 >
+    au < released ; 2010 ; American Journal of Mathematics Volume 132 ; 132 >
 
   }
 
@@ -99,20 +99,20 @@
 
     param[journal_dir] = american_journal_of_philology
 
-    au < released ; American Journal of Philology Volume 117 ; 117 >
-    au < released ; American Journal of Philology Volume 118 ; 118 >
-    au < released ; American Journal of Philology Volume 119 ; 119 >
-    au < released ; American Journal of Philology Volume 120 ; 120 >
-    au < released ; American Journal of Philology Volume 121 ; 121 >
-    au < released ; American Journal of Philology Volume 122 ; 122 >
-    au < released ; American Journal of Philology Volume 123 ; 123 >
-    au < released ; American Journal of Philology Volume 124 ; 124 >
-    au < released ; American Journal of Philology Volume 125 ; 125 >
-    au < released ; American Journal of Philology Volume 126 ; 126 >
-    au < released ; American Journal of Philology Volume 127 ; 127 >
-    au < released ; American Journal of Philology Volume 128 ; 128 >
-    au < released ; American Journal of Philology Volume 129 ; 129 >
-    au < released ; American Journal of Philology Volume 130 ; 130 >
+    au < released ; 1996 ; American Journal of Philology Volume Volume 117 ; 117 >
+    au < released ; 1997 ; American Journal of Philology Volume Volume 118 ; 118 >
+    au < released ; 1998 ; American Journal of Philology Volume Volume 119 ; 119 >
+    au < released ; 1999 ; American Journal of Philology Volume Volume 120 ; 120 >
+    au < released ; 2000 ; American Journal of Philology Volume Volume 121 ; 121 >
+    au < released ; 2001 ; American Journal of Philology Volume Volume 122 ; 122 >
+    au < released ; 2002 ; American Journal of Philology Volume Volume 123 ; 123 >
+    au < released ; 2003 ; American Journal of Philology Volume Volume 124 ; 124 >
+    au < released ; 2004 ; American Journal of Philology Volume Volume 125 ; 125 >
+    au < released ; 2005 ; American Journal of Philology Volume Volume 126 ; 126 >
+    au < released ; 2006 ; American Journal of Philology Volume Volume 127 ; 127 >
+    au < released ; 2007 ; American Journal of Philology Volume Volume 128 ; 128 >
+    au < released ; 2008 ; American Journal of Philology Volume Volume 129 ; 129 >
+    au < released ; 2009 ; American Journal of Philology Volume Volume 130 ; 130 >
 
   }
 
@@ -126,20 +126,20 @@
 
     param[journal_dir] = american_quarterly
 
-    au < released ; American Quarterly Volume 48 ; 48 >
-    au < released ; American Quarterly Volume 49 ; 49 >
-    au < released ; American Quarterly Volume 50 ; 50 >
-    au < released ; American Quarterly Volume 51 ; 51 >
-    au < released ; American Quarterly Volume 52 ; 52 >
-    au < released ; American Quarterly Volume 53 ; 53 >
-    au < released ; American Quarterly Volume 54 ; 54 >
-    au < released ; American Quarterly Volume 55 ; 55 >
-    au < released ; American Quarterly Volume 56 ; 56 >
-    au < released ; American Quarterly Volume 57 ; 57 >
-    au < released ; American Quarterly Volume 58 ; 58 >
-    au < released ; American Quarterly Volume 59 ; 59 >
-    au < released ; American Quarterly Volume 60 ; 60 >
-    au < released ; American Quarterly Volume 61 ; 61 >
+    au < released ; 1996 ; American Quarterly Volume 48 ; 48 >
+    au < released ; 1997 ; American Quarterly Volume 49 ; 49 >
+    au < released ; 1998 ; American Quarterly Volume 50 ; 50 >
+    au < released ; 1999 ; American Quarterly Volume 51 ; 51 >
+    au < released ; 2000 ; American Quarterly Volume 52 ; 52 >
+    au < released ; 2001 ; American Quarterly Volume 53 ; 53 >
+    au < released ; 2002 ; American Quarterly Volume 54 ; 54 >
+    au < released ; 2003 ; American Quarterly Volume 55 ; 55 >
+    au < released ; 2004 ; American Quarterly Volume 56 ; 56 >
+    au < released ; 2005 ; American Quarterly Volume 57 ; 57 >
+    au < released ; 2006 ; American Quarterly Volume 58 ; 58 >
+    au < released ; 2007 ; American Quarterly Volume 59 ; 59 >
+    au < released ; 2008 ; American Quarterly Volume 60 ; 60 >
+    au < released ; 2009 ; American Quarterly Volume 61 ; 61 >
 
   }
 
@@ -153,21 +153,21 @@
 
     param[journal_dir] = arethusa
 
-    au < released ; Arethusa Volume 29 ; 29 >
-    au < released ; Arethusa Volume 30 ; 30 >
-    au < released ; Arethusa Volume 31 ; 31 >
-    au < released ; Arethusa Volume 32 ; 32 >
-    au < released ; Arethusa Volume 33 ; 33 >
-    au < released ; Arethusa Volume 34 ; 34 >
-    au < released ; Arethusa Volume 35 ; 35 >
-    au < released ; Arethusa Volume 36 ; 36 >
-    au < released ; Arethusa Volume 37 ; 37 >
-    au < released ; Arethusa Volume 38 ; 38 >
-    au < released ; Arethusa Volume 39 ; 39 >
-    au < released ; Arethusa Volume 40 ; 40 >
-    au < released ; Arethusa Volume 41 ; 41 >
-    au < released ; Arethusa Volume 42 ; 42 >
-    au < released ; Arethusa Volume 43 ; 43 >
+    au < released ; 1996 ; Arethusa Volume 29 ; 29 >
+    au < released ; 1997 ; Arethusa Volume 30 ; 30 >
+    au < released ; 1998 ; Arethusa Volume 31 ; 31 >
+    au < released ; 1999 ; Arethusa Volume 32 ; 32 >
+    au < released ; 2000 ; Arethusa Volume 33 ; 33 >
+    au < released ; 2001 ; Arethusa Volume 34 ; 34 >
+    au < released ; 2002 ; Arethusa Volume 35 ; 35 >
+    au < released ; 2003 ; Arethusa Volume 36 ; 36 >
+    au < released ; 2004 ; Arethusa Volume 37 ; 37 >
+    au < released ; 2005 ; Arethusa Volume 38 ; 38 >
+    au < released ; 2006 ; Arethusa Volume 39 ; 39 >
+    au < released ; 2007 ; Arethusa Volume 40 ; 40 >
+    au < released ; 2008 ; Arethusa Volume 41 ; 41 >
+    au < released ; 2009 ; Arethusa Volume 42 ; 42 >
+    au < released ; 2010 ; Arethusa Volume 43 ; 43 >
 
   }
 
@@ -181,18 +181,18 @@
 
     param[journal_dir] = book_history
 
-    au < released ; Book History Volume 1 ; 1 >
-    au < released ; Book History Volume 2 ; 2 >
-    au < released ; Book History Volume 3 ; 3 >
-    au < released ; Book History Volume 4 ; 4 >
-    au < released ; Book History Volume 5 ; 5 >
-    au < released ; Book History Volume 6 ; 6 >
-    au < released ; Book History Volume 7 ; 7 >
-    au < released ; Book History Volume 8 ; 8 >
-    au < released ; Book History Volume 9 ; 9 >
-    au < released ; Book History Volume 10 ; 10 >
-    au < released ; Book History Volume 11 ; 11 >
-    au < released ; Book History Volume 12 ; 12 >
+    au < released ; 1998 ; Book History Volume 1 ; 1 >
+    au < released ; 1999 ; Book History Volume 2 ; 2 >
+    au < released ; 2000 ; Book History Volume 3 ; 3 >
+    au < released ; 2001 ; Book History Volume 4 ; 4 >
+    au < released ; 2002 ; Book History Volume 5 ; 5 >
+    au < released ; 2003 ; Book History Volume 6 ; 6 >
+    au < released ; 2004 ; Book History Volume 7 ; 7 >
+    au < released ; 2005 ; Book History Volume 8 ; 8 >
+    au < released ; 2006 ; Book History Volume 9 ; 9 >
+    au < released ; 2007 ; Book History Volume 10 ; 10 >
+    au < released ; 2008 ; Book History Volume 11 ; 11 >
+    au < released ; 2009 ; Book History Volume 12 ; 12 >
     
   }
 
@@ -207,9 +207,9 @@
 
     param[journal_dir] = bookbird
 
-    au < released ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
-    au < released ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
-    au < released ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
+    au < released ; 2008 ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
+    au < released ; 2009 ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
+    au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
 
   }
 
@@ -223,28 +223,12 @@
 
     param[journal_dir] = bulletin_of_the_center_for_childrens_books
 
-    au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
-    au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
-    au < released ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
-    au < released ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
-    au < released ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
+    au < released ; 2005 ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
+    au < released ; 2006 ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
+    au < released ; 2007 ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
+    au < released ; 2008 ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
+    au < released ; 2009 ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
     
-  }
-
-  {
-    title <
-      name = Bulletin of the Center for Children's Books ;
-      issn = 0008-9036 ;
-      eissn = 1558-6766
-    >
-
-    param[journal_dir] = bulletin_of_the_center_for_childrens_books
-
-    au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
-    au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
-    au < released ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
-    au < released ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
-
   }
 
   {
@@ -257,20 +241,20 @@
 
     param[journal_dir] = bulletin_of_the_history_of_medicine
 
-    au < released ; Bulletin of the History of Medicine Volume 70 ; 70 >
-    au < released ; Bulletin of the History of Medicine Volume 71 ; 71 >
-    au < released ; Bulletin of the History of Medicine Volume 72 ; 72 >
-    au < released ; Bulletin of the History of Medicine Volume 73 ; 73 >
-    au < released ; Bulletin of the History of Medicine Volume 74 ; 74 >
-    au < released ; Bulletin of the History of Medicine Volume 75 ; 75 >
-    au < released ; Bulletin of the History of Medicine Volume 76 ; 76 >
-    au < released ; Bulletin of the History of Medicine Volume 77 ; 77 >
-    au < released ; Bulletin of the History of Medicine Volume 78 ; 78 >
-    au < released ; Bulletin of the History of Medicine Volume 79 ; 79 >
-    au < released ; Bulletin of the History of Medicine Volume 80 ; 80 >
-    au < released ; Bulletin of the History of Medicine Volume 81 ; 81 >
-    au < released ; Bulletin of the History of Medicine Volume 82 ; 82 >
-    au < released ; Bulletin of the History of Medicine Volume 83 ; 83 >
+    au < released ; 1996 ; Bulletin of the History of Medicine Volume 70 ; 70 >
+    au < released ; 1997 ; Bulletin of the History of Medicine Volume 71 ; 71 >
+    au < released ; 1998 ; Bulletin of the History of Medicine Volume 72 ; 72 >
+    au < released ; 1999 ; Bulletin of the History of Medicine Volume 73 ; 73 >
+    au < released ; 2000 ; Bulletin of the History of Medicine Volume 74 ; 74 >
+    au < released ; 2001 ; Bulletin of the History of Medicine Volume 75 ; 75 >
+    au < released ; 2002 ; Bulletin of the History of Medicine Volume 76 ; 76 >
+    au < released ; 2003 ; Bulletin of the History of Medicine Volume 77 ; 77 >
+    au < released ; 2004 ; Bulletin of the History of Medicine Volume 78 ; 78 >
+    au < released ; 2005 ; Bulletin of the History of Medicine Volume 79 ; 79 >
+    au < released ; 2006 ; Bulletin of the History of Medicine Volume 80 ; 80 >
+    au < released ; 2007 ; Bulletin of the History of Medicine Volume 81 ; 81 >
+    au < released ; 2008 ; Bulletin of the History of Medicine Volume 82 ; 82 >
+    au < released ; 2009 ; Bulletin of the History of Medicine Volume 83 ; 83 >
 
   }
   
@@ -284,21 +268,22 @@
 
     param[journal_dir] = callaloo
 
-    au < released ; Callaloo Volume 18 ; 18 >
-    au < released ; Callaloo Volume 19 ; 19 >
-    au < released ; Callaloo Volume 20 ; 20 >
-    au < released ; Callaloo Volume 21 ; 21 >
-    au < released ; Callaloo Volume 22 ; 22 >
-    au < released ; Callaloo Volume 23 ; 23 >
-    au < released ; Callaloo Volume 24 ; 24 >
-    au < released ; Callaloo Volume 25 ; 25 >
-    au < released ; Callaloo Volume 26 ; 26 >
-    au < released ; Callaloo Volume 27 ; 27 >
-    au < released ; Callaloo Volume 28 ; 28 >
-    au < released ; Callaloo Volume 29 ; 29 >
-    au < released ; Callaloo Volume 30 ; 30 >
-    au < released ; Callaloo Volume 31 ; 31 >
-    au < released ; Callaloo Volume 32 ; 32 >
+    au < released ; 1995 ; Callaloo Volume 18 ; 18 >
+    au < released ; 1996 ; Callaloo Volume 19 ; 19 >
+    au < released ; 1997 ; Callaloo Volume 20 ; 20 >
+    au < released ; 1998 ; Callaloo Volume 21 ; 21 >
+    au < released ; 1999 ; Callaloo Volume 22 ; 22 >
+    au < released ; 2000 ; Callaloo Volume 23 ; 23 >
+    au < released ; 2001 ; Callaloo Volume 24 ; 24 >
+    au < released ; 2002 ; Callaloo Volume 25 ; 25 >
+    au < released ; 2003 ; Callaloo Volume 26 ; 26 >
+    au < released ; 2004 ; Callaloo Volume 27 ; 27 >
+    au < released ; 2005 ; Callaloo Volume 28 ; 28 >
+    au < released ; 2006 ; Callaloo Volume 29 ; 29 >
+    au < released ; 2007 ; Callaloo Volume 30 ; 30 >
+    au < released ; 2008 ; Callaloo Volume 31 ; 31 >
+    au < released ; 2009 ; Callaloo Volume 32 ; 32 >
+
 
   }
 
@@ -312,43 +297,43 @@
 
     param[journal_dir] = childrens_literature
 
-    au < released ; Children's Literature Volume 1 ; 1 >
-    au < released ; Children's Literature Volume 2 ; 2 >
-    au < released ; Children's Literature Volume 3 ; 3 >
-    au < released ; Children's Literature Volume 4 ; 4 >
-    au < released ; Children's Literature Volume 5 ; 5 >
-    au < released ; Children's Literature Volume 6 ; 6 >
-    au < released ; Children's Literature Volume 7 ; 7 >
-    au < released ; Children's Literature Volume 8 ; 8 >
-    au < released ; Children's Literature Volume 9 ; 9 >
-    au < released ; Children's Literature Volume 10 ; 10 >
-    au < released ; Children's Literature Volume 11 ; 11 >
-    au < released ; Children's Literature Volume 12 ; 12 >
-    au < released ; Children's Literature Volume 13 ; 13 >
-    au < released ; Children's Literature Volume 14 ; 14 >
-    au < released ; Children's Literature Volume 15 ; 15 >
-    au < released ; Children's Literature Volume 16 ; 16 >
-    au < released ; Children's Literature Volume 17 ; 17 >
-    au < released ; Children's Literature Volume 18 ; 18 >
-    au < released ; Children's Literature Volume 19 ; 19 >
-    au < released ; Children's Literature Volume 20 ; 20 >
-    au < released ; Children's Literature Volume 21 ; 21 >
-    au < released ; Children's Literature Volume 22 ; 22 >
-    au < released ; Children's Literature Volume 23 ; 23 >
-    au < released ; Children's Literature Volume 24 ; 24 >
-    au < released ; Children's Literature Volume 25 ; 25 >
-    au < released ; Children's Literature Volume 26 ; 26 >
-    au < released ; Children's Literature Volume 27 ; 27 >
-    au < released ; Children's Literature Volume 28 ; 28 >
-    au < released ; Children's Literature Volume 29 ; 29 >
-    au < released ; Children's Literature Volume 30 ; 30 >
-    au < released ; Children's Literature Volume 31 ; 31 >
-    au < released ; Children's Literature Volume 32 ; 32 >
-    au < released ; Children's Literature Volume 33 ; 33 >
-    au < released ; Children's Literature Volume 34 ; 34 >
-    au < released ; Children's Literature Volume 35 ; 35 >
-    au < released ; Children's Literature Volume 36 ; 36 >
-    au < released ; Children's Literature Volume 37 ; 37 >
+    au < released ; 1972 ; Children's Literature Volume 1 ; 1 >
+    au < released ; 1973 ; Children's Literature Volume 2 ; 2 >
+    au < released ; 1974 ; Children's Literature Volume 3 ; 3 >
+    au < released ; 1975 ; Children's Literature Volume 4 ; 4 >
+    au < released ; 1976 ; Children's Literature Volume 5 ; 5 >
+    au < released ; 1977 ; Children's Literature Volume 6 ; 6 >
+    au < released ; 1978 ; Children's Literature Volume 7 ; 7 >
+    au < released ; 1980 ; Children's Literature Volume 8 ; 8 >
+    au < released ; 1981 ; Children's Literature Volume 9 ; 9 >
+    au < released ; 1982 ; Children's Literature Volume 10 ; 10 >
+    au < released ; 1983 ; Children's Literature Volume 11 ; 11 >
+    au < released ; 1984 ; Children's Literature Volume 12 ; 12 >
+    au < released ; 1985 ; Children's Literature Volume 13 ; 13 >
+    au < released ; 1986 ; Children's Literature Volume 14 ; 14 >
+    au < released ; 1987 ; Children's Literature Volume 15 ; 15 >
+    au < released ; 1988 ; Children's Literature Volume 16 ; 16 >
+    au < released ; 1989 ; Children's Literature Volume 17 ; 17 >
+    au < released ; 1990 ; Children's Literature Volume 18 ; 18 >
+    au < released ; 1991 ; Children's Literature Volume 19 ; 19 >
+    au < released ; 1992 ; Children's Literature Volume 20 ; 20 >
+    au < released ; 1993 ; Children's Literature Volume 21 ; 21 >
+    au < released ; 1994 ; Children's Literature Volume 22 ; 22 >
+    au < released ; 1995 ; Children's Literature Volume 23 ; 23 >
+    au < released ; 1996 ; Children's Literature Volume 24 ; 24 >
+    au < released ; 1997 ; Children's Literature Volume 25 ; 25 >
+    au < released ; 1998 ; Children's Literature Volume 26 ; 26 >
+    au < released ; 1999 ; Children's Literature Volume 27 ; 27 >
+    au < released ; 2000 ; Children's Literature Volume 28 ; 28 >
+    au < released ; 2001 ; Children's Literature Volume 29 ; 29 >
+    au < released ; 2002 ; Children's Literature Volume 30 ; 30 >
+    au < released ; 2003 ; Children's Literature Volume 31 ; 31 >
+    au < released ; 2004 ; Children's Literature Volume 32 ; 32 >
+    au < released ; 2005 ; Children's Literature Volume 33 ; 33 >
+    au < released ; 2006 ; Children's Literature Volume 34 ; 34 >
+    au < released ; 2007 ; Children's Literature Volume 35 ; 35 >
+    au < released ; 2008 ; Children's Literature Volume 36 ; 36 >
+    au < released ; 2009 ; Children's Literature Volume 37 ; 37 >
 
   }
 
@@ -362,11 +347,11 @@
 
     param[journal_dir] = childrens_literature_association_quarterly
 
-    au < released ; Children's Literature Association Quarterly Volume 30 ; 30 >
-    au < released ; Children's Literature Association Quarterly Volume 31 ; 31 >
-    au < released ; Children's Literature Association Quarterly Volume 32 ; 32 >
-    au < released ; Children's Literature Association Quarterly Volume 33 ; 33 >
-    au < released ; Children's Literature Association Quarterly Volume 34 ; 34 >
+    au < released ; 2005 ; Children's Literature Association Quarterly Volume 30 ; 30 >
+    au < released ; 2006 ; Children's Literature Association Quarterly Volume 31 ; 31 >
+    au < released ; 2007 ; Children's Literature Association Quarterly Volume 32 ; 32 >
+    au < released ; 2008 ; Children's Literature Association Quarterly Volume 33 ; 33 >
+    au < released ; 2009 ; Children's Literature Association Quarterly Volume 34 ; 34 >
 
   }
 
@@ -380,12 +365,12 @@
 
     param[journal_dir] = comparative_technology_transfer_and_society
 
-    au < released ; Comparative Technology Transfer and Society Volume 1 ; 1 >
-    au < released ; Comparative Technology Transfer and Society Volume 2 ; 2 >
-    au < released ; Comparative Technology Transfer and Society Volume 3 ; 3 >
-    au < released ; Comparative Technology Transfer and Society Volume 4 ; 4 >
-    au < released ; Comparative Technology Transfer and Society Volume 5 ; 5 >
-    au < released ; Comparative Technology Transfer and Society Volume 6 ; 6 >
+    au < released ; 2003 ; Comparative Technology Transfer and Society Volume 1 ; 1 >
+    au < released ; 2004 ; Comparative Technology Transfer and Society Volume 2 ; 2 >
+    au < released ; 2005 ; Comparative Technology Transfer and Society Volume 3 ; 3 >
+    au < released ; 2006 ; Comparative Technology Transfer and Society Volume 4 ; 4 >
+    au < released ; 2007 ; Comparative Technology Transfer and Society Volume 5 ; 5 >
+    au < released ; 2008 ; Comparative Technology Transfer and Society Volume 6 ; 6 >
 
   }
 
@@ -399,21 +384,21 @@
 
     param[journal_dir] = configurations
 
-    au < released ; Configurations Volume 1 ; 1 >
-    au < released ; Configurations Volume 2 ; 2 >
-    au < released ; Configurations Volume 3 ; 3 >
-    au < released ; Configurations Volume 4 ; 4 >
-    au < released ; Configurations Volume 5 ; 5 >
-    au < released ; Configurations Volume 6 ; 6 >
-    au < released ; Configurations Volume 7 ; 7 >
-    au < released ; Configurations Volume 8 ; 8 >
-    au < released ; Configurations Volume 9 ; 9 >
-    au < released ; Configurations Volume 10 ; 10 >
-    au < released ; Configurations Volume 11 ; 11 >
-    au < released ; Configurations Volume 12 ; 12 >
-    au < released ; Configurations Volume 13 ; 13 >
-    au < released ; Configurations Volume 14 ; 14 >
-    au < released ; Configurations Volume 15 ; 15 >
+    au < released ; 1993 ; Configurations Volume 1 ; 1 >
+    au < released ; 1994 ; Configurations Volume 2 ; 2 >
+    au < released ; 1995 ; Configurations Volume 3 ; 3 >
+    au < released ; 1996 ; Configurations Volume 4 ; 4 >
+    au < released ; 1997 ; Configurations Volume 5 ; 5 >
+    au < released ; 1998 ; Configurations Volume 6 ; 6 >
+    au < released ; 1999 ; Configurations Volume 7 ; 7 >
+    au < released ; 2000 ; Configurations Volume 8 ; 8 >
+    au < released ; 2001 ; Configurations Volume 9 ; 9 >
+    au < released ; 2002 ; Configurations Volume 10 ; 10 >
+    au < released ; 2003 ; Configurations Volume 11 ; 11 >
+    au < released ; 2004 ; Configurations Volume 12 ; 12 >
+    au < released ; 2005 ; Configurations Volume 13 ; 13 >
+    au < released ; 2006 ; Configurations Volume 14 ; 14 >
+    au < released ; 2007 ; Configurations Volume 15 ; 15 >
 
   }
 
@@ -427,19 +412,19 @@
 
     param[journal_dir] = diacritics
 
-    au < released ; diacritics Volume 26 ; 26 >
-    au < released ; diacritics Volume 27 ; 27 >
-    au < released ; diacritics Volume 28 ; 28 >
-    au < released ; diacritics Volume 29 ; 29 >
-    au < released ; diacritics Volume 30 ; 30 >
-    au < released ; diacritics Volume 31 ; 31 >
-    au < released ; diacritics Volume 32 ; 32 >
-    au < released ; diacritics Volume 33 ; 33 >
-    au < released ; diacritics Volume 34 ; 34 >
-    au < released ; diacritics Volume 35 ; 35 >
-    au < released ; diacritics Volume 36 ; 36 >
-    au < released ; diacritics Volume 37 ; 37 >
-
+    au < released ; 1996 ; diacritics Volume 26 ; 26 >
+    au < released ; 1997 ; diacritics Volume 27 ; 27 >
+    au < released ; 1998 ; diacritics Volume 28 ; 28 >
+    au < released ; 1999 ; diacritics Volume 29 ; 29 >
+    au < released ; 2000 ; diacritics Volume 30 ; 30 >
+    au < released ; 2001 ; diacritics Volume 31 ; 31 >
+    au < released ; 2002 ; diacritics Volume 32 ; 32 >
+    au < released ; 2003 ; diacritics Volume 33 ; 33 >
+    au < released ; 2004 ; diacritics Volume 34 ; 34 >
+    au < released ; 2005 ; diacritics Volume 35 ; 35 >
+    au < released ; 2006 ; diacritics Volume 36 ; 36 >
+    au < released ; 2007 ; diacritics Volume 37 ; 37 >
+    
   }
 
   {
@@ -452,20 +437,20 @@
 
     param[journal_dir] = eighteenth-century_studies
 
-    au < released ; Eighteenth-Century Studies Volume 29 ; 29 >
-    au < released ; Eighteenth-Century Studies Volume 30 ; 30 >
-    au < released ; Eighteenth-Century Studies Volume 31 ; 31 >
-    au < released ; Eighteenth-Century Studies Volume 32 ; 32 >
-    au < released ; Eighteenth-Century Studies Volume 33 ; 33 >
-    au < released ; Eighteenth-Century Studies Volume 34 ; 34 >
-    au < released ; Eighteenth-Century Studies Volume 35 ; 35 >
-    au < released ; Eighteenth-Century Studies Volume 36 ; 36 >
-    au < released ; Eighteenth-Century Studies Volume 37 ; 37 >
-    au < released ; Eighteenth-Century Studies Volume 38 ; 38 >
-    au < released ; Eighteenth-Century Studies Volume 39 ; 39 >
-    au < released ; Eighteenth-Century Studies Volume 40 ; 40 >
-    au < released ; Eighteenth-Century Studies Volume 41 ; 41 >
-    au < released ; Eighteenth-Century Studies Volume 42 ; 42 >
+    au < released ; 1995-1996 ; Eighteenth-Century Studies Volume 29 ; 29 >
+    au < released ; 1996-1997 ; Eighteenth-Century Studies Volume 30 ; 30 >
+    au < released ; 1997-1998 ; Eighteenth-Century Studies Volume 31 ; 31 >
+    au < released ; 1998-1999 ; Eighteenth-Century Studies Volume 32 ; 32 >
+    au < released ; 1999-2000 ; Eighteenth-Century Studies Volume 33 ; 33 >
+    au < released ; 2000-2001 ; Eighteenth-Century Studies Volume 34 ; 34 >
+    au < released ; 2001-2002 ; Eighteenth-Century Studies Volume 35 ; 35 >
+    au < released ; 2002-2003 ; Eighteenth-Century Studies Volume 36 ; 36 >
+    au < released ; 2003-2004 ; Eighteenth-Century Studies Volume 37 ; 37 >
+    au < released ; 2004-2005 ; Eighteenth-Century Studies Volume 38 ; 38 >
+    au < released ; 2005-2006 ; Eighteenth-Century Studies Volume 39 ; 39 >
+    au < released ; 2006-2007 ; Eighteenth-Century Studies Volume 40 ; 40 >
+    au < released ; 2007-2008 ; Eighteenth-Century Studies Volume 41 ; 41 >
+    au < released ; 2008-2009 ; Eighteenth-Century Studies Volume 42 ; 42 >
 
   }
 
@@ -479,23 +464,23 @@
 
     param[journal_dir] = elh
 
-    au < released ; ELH Volume 60 ; 60 >
-    au < released ; ELH Volume 61 ; 61 >
-    au < released ; ELH Volume 62 ; 62 >
-    au < released ; ELH Volume 63 ; 63 >
-    au < released ; ELH Volume 64 ; 64 >
-    au < released ; ELH Volume 65 ; 65 >
-    au < released ; ELH Volume 66 ; 66 >
-    au < released ; ELH Volume 67 ; 67 >
-    au < released ; ELH Volume 68 ; 68 >
-    au < released ; ELH Volume 69 ; 69 >
-    au < released ; ELH Volume 70 ; 70 >
-    au < released ; ELH Volume 71 ; 71 >
-    au < released ; ELH Volume 72 ; 72 >
-    au < released ; ELH Volume 73 ; 73 >
-    au < released ; ELH Volume 74 ; 74 >
-    au < released ; ELH Volume 75 ; 75 >
-    au < released ; ELH Volume 76 ; 76 >
+    au < released ; 1993 ; ELH Volume 60 ; 60 >
+    au < released ; 1994 ; ELH Volume 61 ; 61 >
+    au < released ; 1995 ; ELH Volume 62 ; 62 >
+    au < released ; 1996 ; ELH Volume 63 ; 63 >
+    au < released ; 1997 ; ELH Volume 64 ; 64 >
+    au < released ; 1998 ; ELH Volume 65 ; 65 >
+    au < released ; 1999 ; ELH Volume 66 ; 66 >
+    au < released ; 2000 ; ELH Volume 67 ; 67 >
+    au < released ; 2001 ; ELH Volume 68 ; 68 >
+    au < released ; 2002 ; ELH Volume 69 ; 69 >
+    au < released ; 2003 ; ELH Volume 70 ; 70 >
+    au < released ; 2004 ; ELH Volume 71 ; 71 >
+    au < released ; 2005 ; ELH Volume 72 ; 72 >
+    au < released ; 2006 ; ELH Volume 73 ; 73 >
+    au < released ; 2007 ; ELH Volume 74 ; 74 >
+    au < released ; 2008 ; ELH Volume 75 ; 75 >
+    au < released ; 2009 ; ELH Volume 76 ; 76 >
 
   }
 
@@ -512,7 +497,7 @@
 
     param[journal_dir] = feminist_formations
     
-    au < released ; Feminist Formations Volume 22 ; 22 >
+    au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
 
   }
 
@@ -527,7 +512,7 @@
 
     param[journal_dir] = hispania
     
-    au < released ; Hispania Volume 93 ; 93 >
+    au < released ; 2010 ; Hispania Volume 93 ; 93 >
 
   }
 
@@ -542,8 +527,8 @@
 
     param[journal_dir] = historically_speaking
     
-    au < released ; Historically Speaking Volume 10 ; 10 >
-    au < released ; Historically Speaking Volume 11 ; 11 >
+    au < released ; 2009 ; Historically Speaking Volume 10 ; 10 >
+    au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
 
   }
 
@@ -558,9 +543,9 @@
 
     param[journal_dir] = the_hopkins_review
     
-    au < released ; The Hopkins Review Volume 1 ; 1 >
-    au < released ; The Hopkins Review Volume 2 ; 2 >
-    au < released ; The Hopkins Review Volume 3 ; 3 >
+    au < released ; 2008 ; The Hopkins Review Volume 1 ; 1 >
+    au < released ; 2009 ; The Hopkins Review Volume 2 ; 2 >
+    au < released ; 2010 ; The Hopkins Review Volume 3 ; 3 >
 
   }
   
@@ -574,21 +559,21 @@
 
     param[journal_dir] = human_rights_quarterly
 
-    au < released ; Human Rights Quarterly Volume 17 ; 17 >
-    au < released ; Human Rights Quarterly Volume 18 ; 18 >
-    au < released ; Human Rights Quarterly Volume 19 ; 19 >
-    au < released ; Human Rights Quarterly Volume 20 ; 20 >
-    au < released ; Human Rights Quarterly Volume 21 ; 21 >
-    au < released ; Human Rights Quarterly Volume 22 ; 22 >
-    au < released ; Human Rights Quarterly Volume 23 ; 23 >
-    au < released ; Human Rights Quarterly Volume 24 ; 24 >
-    au < released ; Human Rights Quarterly Volume 25 ; 25 >
-    au < released ; Human Rights Quarterly Volume 26 ; 26 >
-    au < released ; Human Rights Quarterly Volume 27 ; 27 >
-    au < released ; Human Rights Quarterly Volume 28 ; 28 >
-    au < released ; Human Rights Quarterly Volume 29 ; 29 >
-    au < released ; Human Rights Quarterly Volume 30 ; 30 >
-    au < released ; Human Rights Quarterly Volume 31 ; 31 >
+    au < released ; 1995 ; Human Rights Quarterly Volume 17 ; 17 >
+    au < released ; 1996 ; Human Rights Quarterly Volume 18 ; 18 >
+    au < released ; 1997 ; Human Rights Quarterly Volume 19 ; 19 >
+    au < released ; 1998 ; Human Rights Quarterly Volume 20 ; 20 >
+    au < released ; 1999 ; Human Rights Quarterly Volume 21 ; 21 >
+    au < released ; 2000 ; Human Rights Quarterly Volume 22 ; 22 >
+    au < released ; 2001 ; Human Rights Quarterly Volume 23 ; 23 >
+    au < released ; 2002 ; Human Rights Quarterly Volume 24 ; 24 >
+    au < released ; 2003 ; Human Rights Quarterly Volume 25 ; 25 >
+    au < released ; 2004 ; Human Rights Quarterly Volume 26 ; 26 >
+    au < released ; 2005 ; Human Rights Quarterly Volume 27 ; 27 >
+    au < released ; 2006 ; Human Rights Quarterly Volume 28 ; 28 >
+    au < released ; 2007 ; Human Rights Quarterly Volume 29 ; 29 >
+    au < released ; 2008 ; Human Rights Quarterly Volume 30 ; 30 >
+    au < released ; 2009 ; Human Rights Quarterly Volume 31 ; 31 >
 
   }
 
@@ -602,17 +587,17 @@
 
     param[journal_dir] = journal_of_asian_american_studies
 
-    au < released ; Journal of Asian American Studies Volume 1 ; 1 >
-    au < released ; Journal of Asian American Studies Volume 2 ; 2 >
-    au < released ; Journal of Asian American Studies Volume 3 ; 3 >
-    au < released ; Journal of Asian American Studies Volume 4 ; 4 >
-    au < released ; Journal of Asian American Studies Volume 5 ; 5 >
-    au < released ; Journal of Asian American Studies Volume 6 ; 6 >
-    au < released ; Journal of Asian American Studies Volume 7 ; 7 >
-    au < released ; Journal of Asian American Studies Volume 8 ; 8 >
-    au < released ; Journal of Asian American Studies Volume 9 ; 9 >
-    au < released ; Journal of Asian American Studies Volume 10 ; 10 >
-    au < released ; Journal of Asian American Studies Volume 11 ; 11 >
+    au < released ; 1998 ; Journal of Asian American Studies Volume 1 ; 1 >
+    au < released ; 1999 ; Journal of Asian American Studies Volume 2 ; 2 >
+    au < released ; 2000 ; Journal of Asian American Studies Volume 3 ; 3 >
+    au < released ; 2001 ; Journal of Asian American Studies Volume 4 ; 4 >
+    au < released ; 2002 ; Journal of Asian American Studies Volume 5 ; 5 >
+    au < released ; 2003 ; Journal of Asian American Studies Volume 6 ; 6 >
+    au < released ; 2004 ; Journal of Asian American Studies Volume 7 ; 7 >
+    au < released ; 2005 ; Journal of Asian American Studies Volume 8 ; 8 >
+    au < released ; 2006 ; Journal of Asian American Studies Volume 9 ; 9 >
+    au < released ; 2007 ; Journal of Asian American Studies Volume 10 ; 10 >
+    au < released ; 2008 ; Journal of Asian American Studies Volume 11 ; 11 >
 
   }
 
@@ -626,13 +611,13 @@
 
     param[journal_dir] = journal_of_college_student_development
 
-    au < released ; Journal of College Student Development Volume 44 ; 44 >
-    au < released ; Journal of College Student Development Volume 45 ; 45 >
-    au < released ; Journal of College Student Development Volume 46 ; 46 >
-    au < released ; Journal of College Student Development Volume 47 ; 47 >
-    au < released ; Journal of College Student Development Volume 48 ; 48 >
-    au < released ; Journal of College Student Development Volume 49 ; 49 >
-    au < released ; Journal of College Student Development Volume 50 ; 50 >
+    au < released ; 2003 ; Journal of College Student Development Volume 44 ; 44 >
+    au < released ; 2004 ; Journal of College Student Development Volume 45 ; 45 >
+    au < released ; 2005 ; Journal of College Student Development Volume 46 ; 46 >
+    au < released ; 2006 ; Journal of College Student Development Volume 47 ; 47 >
+    au < released ; 2007 ; Journal of College Student Development Volume 48 ; 48 >
+    au < released ; 2008 ; Journal of College Student Development Volume 49 ; 49 >
+    au < released ; 2009 ; Journal of College Student Development Volume 50 ; 50 >
 
   }
 
@@ -644,15 +629,15 @@
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
 
-    au < released ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
-    au < released ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
-    au < released ; Journal of Colonialism and Colonial History Volume 3 ; 3 >
-    au < released ; Journal of Colonialism and Colonial History Volume 4 ; 4 >
-    au < released ; Journal of Colonialism and Colonial History Volume 5 ; 5 >
-    au < released ; Journal of Colonialism and Colonial History Volume 6 ; 6 >
-    au < released ; Journal of Colonialism and Colonial History Volume 7 ; 7 >
-    au < released ; Journal of Colonialism and Colonial History Volume 8 ; 8 >
-    au < released ; Journal of Colonialism and Colonial History Volume 9 ; 9 >
+    au < released ; 2000 ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
+    au < released ; 2001 ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
+    au < released ; 2002 ; Journal of Colonialism and Colonial History Volume 3 ; 3 >
+    au < released ; 2003 ; Journal of Colonialism and Colonial History Volume 4 ; 4 >
+    au < released ; 2004 ; Journal of Colonialism and Colonial History Volume 5 ; 5 >
+    au < released ; 2005 ; Journal of Colonialism and Colonial History Volume 6 ; 6 >
+    au < released ; 2006 ; Journal of Colonialism and Colonial History Volume 7 ; 7 >
+    au < released ; 2007 ; Journal of Colonialism and Colonial History Volume 8 ; 8 >
+    au < released ; 2008 ; Journal of Colonialism and Colonial History Volume 9 ; 9 >
 
   }
 
@@ -666,21 +651,21 @@
 
     param[journal_dir] = journal_of_democracy
 
-    au < released ; Journal of Democracy Volume 6 ; 6 >
-    au < released ; Journal of Democracy Volume 7 ; 7 >
-    au < released ; Journal of Democracy Volume 8 ; 8 >
-    au < released ; Journal of Democracy Volume 9 ; 9 >
-    au < released ; Journal of Democracy Volume 10 ; 10 >
-    au < released ; Journal of Democracy Volume 11 ; 11 >
-    au < released ; Journal of Democracy Volume 12 ; 12 >
-    au < released ; Journal of Democracy Volume 13 ; 13 >
-    au < released ; Journal of Democracy Volume 14 ; 14 >
-    au < released ; Journal of Democracy Volume 15 ; 15 >
-    au < released ; Journal of Democracy Volume 16 ; 16 >
-    au < released ; Journal of Democracy Volume 17 ; 17 >
-    au < released ; Journal of Democracy Volume 18 ; 18 >
-    au < released ; Journal of Democracy Volume 19 ; 19 >
-    au < released ; Journal of Democracy Volume 20 ; 20 >
+    au < released ; 1995 ; Journal of Democracy Volume 6 ; 6 >
+    au < released ; 1996 ; Journal of Democracy Volume 7 ; 7 >
+    au < released ; 1997 ; Journal of Democracy Volume 8 ; 8 >
+    au < released ; 1998 ; Journal of Democracy Volume 9 ; 9 >
+    au < released ; 1999 ; Journal of Democracy Volume 10 ; 10 >
+    au < released ; 2000 ; Journal of Democracy Volume 11 ; 11 >
+    au < released ; 2001 ; Journal of Democracy Volume 12 ; 12 >
+    au < released ; 2002 ; Journal of Democracy Volume 13 ; 13 >
+    au < released ; 2003 ; Journal of Democracy Volume 14 ; 14 >
+    au < released ; 2004 ; Journal of Democracy Volume 15 ; 15 >
+    au < released ; 2005 ; Journal of Democracy Volume 16 ; 16 >
+    au < released ; 2006 ; Journal of Democracy Volume 17 ; 17 >
+    au < released ; 2007 ; Journal of Democracy Volume 18 ; 18 >
+    au < released ; 2008 ; Journal of Democracy Volume 19 ; 19 >
+    au < released ; 2009 ; Journal of Democracy Volume 20 ; 20 >
 
   }
 
@@ -694,20 +679,20 @@
 
     param[journal_dir] = journal_of_early_christian_studies
 
-    au < released ; Journal of Early Christian Studies Volume 4 ; 4 >
-    au < released ; Journal of Early Christian Studies Volume 5 ; 5 >
-    au < released ; Journal of Early Christian Studies Volume 6 ; 6 >
-    au < released ; Journal of Early Christian Studies Volume 7 ; 7 >
-    au < released ; Journal of Early Christian Studies Volume 8 ; 8 >
-    au < released ; Journal of Early Christian Studies Volume 9 ; 9 >
-    au < released ; Journal of Early Christian Studies Volume 10 ; 10 >
-    au < released ; Journal of Early Christian Studies Volume 11 ; 11 >
-    au < released ; Journal of Early Christian Studies Volume 12 ; 12 >
-    au < released ; Journal of Early Christian Studies Volume 13 ; 13 >
-    au < released ; Journal of Early Christian Studies Volume 14 ; 14 >
-    au < released ; Journal of Early Christian Studies Volume 15 ; 15 >
-    au < released ; Journal of Early Christian Studies Volume 16 ; 16 >
-    au < released ; Journal of Early Christian Studies Volume 17 ; 17 >
+    au < released ; 1996 ; Journal of Early Christian Studies Volume 4 ; 4 >
+    au < released ; 1997 ; Journal of Early Christian Studies Volume 5 ; 5 >
+    au < released ; 1998 ; Journal of Early Christian Studies Volume 6 ; 6 >
+    au < released ; 1999 ; Journal of Early Christian Studies Volume 7 ; 7 >
+    au < released ; 2000 ; Journal of Early Christian Studies Volume 8 ; 8 >
+    au < released ; 2001 ; Journal of Early Christian Studies Volume 9 ; 9 >
+    au < released ; 2002 ; Journal of Early Christian Studies Volume 10 ; 10 >
+    au < released ; 2003 ; Journal of Early Christian Studies Volume 11 ; 11 >
+    au < released ; 2004 ; Journal of Early Christian Studies Volume 12 ; 12 >
+    au < released ; 2005 ; Journal of Early Christian Studies Volume 13 ; 13 >
+    au < released ; 2006 ; Journal of Early Christian Studies Volume 14 ; 14 >
+    au < released ; 2007 ; Journal of Early Christian Studies Volume 15 ; 15 >
+    au < released ; 2008 ; Journal of Early Christian Studies Volume 16 ; 16 >
+    au < released ; 2009 ; Journal of Early Christian Studies Volume 17 ; 17 >
 
   }
 
@@ -721,12 +706,12 @@
 
     param[journal_dir] = journal_of_health_care_for_the_poor_and_underserved
 
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 15 ; 15 >
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 16 ; 16 >
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 17 ; 17 >
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 18 ; 18 >
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 19 ; 19 >
-    au < released ; Journal of Health Care for the Poor and Underserved Volume 20 ; 20 >
+    au < released ; 2004 ; Journal of Health Care for the Poor and Underserved Volume 15 ; 15 >
+    au < released ; 2005 ; Journal of Health Care for the Poor and Underserved Volume 16 ; 16 >
+    au < released ; 2006 ; Journal of Health Care for the Poor and Underserved Volume 17 ; 17 >
+    au < released ; 2007 ; Journal of Health Care for the Poor and Underserved Volume 18 ; 18 >
+    au < released ; 2008 ; Journal of Health Care for the Poor and Underserved Volume 19 ; 19 >
+    au < released ; 2009 ; Journal of Health Care for the Poor and Underserved Volume 20 ; 20 >
 
   }
 
@@ -741,8 +726,8 @@
 
     param[journal_dir] = journal_of_late_antiquity
     
-    au < released ; Journal of Late Antiquity Volume 1 ; 1 >
-    au < released ; Journal of Late Antiquity Volume 2 ; 2 >
+    au < released ; 2008 ; Journal of Late Antiquity Volume 1 ; 1 >
+    au < released ; 2009 ; Journal of Late Antiquity Volume 2 ; 2 >
 
   }
 
@@ -756,19 +741,19 @@
 
     param[journal_dir] = journal_of_modern_greek_studies
 
-    au < released ; Journal of Modern Greek Studies Volume 14 ; 14 >
-    au < released ; Journal of Modern Greek Studies Volume 15 ; 15 >
-    au < released ; Journal of Modern Greek Studies Volume 16 ; 16 >
-    au < released ; Journal of Modern Greek Studies Volume 17 ; 17 >
-    au < released ; Journal of Modern Greek Studies Volume 18 ; 18 >
-    au < released ; Journal of Modern Greek Studies Volume 19 ; 19 >
-    au < released ; Journal of Modern Greek Studies Volume 20 ; 20 >
-    au < released ; Journal of Modern Greek Studies Volume 21 ; 21 >
-    au < released ; Journal of Modern Greek Studies Volume 22 ; 22 >
-    au < released ; Journal of Modern Greek Studies Volume 23 ; 23 >
-    au < released ; Journal of Modern Greek Studies Volume 24 ; 24 >
-    au < released ; Journal of Modern Greek Studies Volume 25 ; 25 >
-    au < released ; Journal of Modern Greek Studies Volume 26 ; 26 >
+    au < released ; 1996 ; Journal of Modern Greek Studies Volume 14 ; 14 >
+    au < released ; 1997 ; Journal of Modern Greek Studies Volume 15 ; 15 >
+    au < released ; 1998 ; Journal of Modern Greek Studies Volume 16 ; 16 >
+    au < released ; 1999 ; Journal of Modern Greek Studies Volume 17 ; 17 >
+    au < released ; 2000 ; Journal of Modern Greek Studies Volume 18 ; 18 >
+    au < released ; 2001 ; Journal of Modern Greek Studies Volume 19 ; 19 >
+    au < released ; 2002 ; Journal of Modern Greek Studies Volume 20 ; 20 >
+    au < released ; 2003 ; Journal of Modern Greek Studies Volume 21 ; 21 >
+    au < released ; 2004 ; Journal of Modern Greek Studies Volume 22 ; 22 >
+    au < released ; 2005 ; Journal of Modern Greek Studies Volume 23 ; 23 >
+    au < released ; 2006 ; Journal of Modern Greek Studies Volume 24 ; 24 >
+    au < released ; 2007 ; Journal of Modern Greek Studies Volume 25 ; 25 >
+    au < released ; 2008 ; Journal of Modern Greek Studies Volume 26 ; 26 >
 
   }
 
@@ -783,9 +768,9 @@
 
     param[journal_dir] = journal_of_the_history_of_youth_and_childhood
     
-    au < released ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
-    au < released ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
-    au < released ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
+    au < released ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
+    au < released ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
+    au < released ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
 
   }
 
@@ -799,16 +784,16 @@
 
     param[journal_dir] = journal_of_the_history_of_philosophy
 
-    au < released ; Journal of the History of Philosophy Volume 38 ; 38 >
-    au < released ; Journal of the History of Philosophy Volume 39 ; 39 >
-    au < released ; Journal of the History of Philosophy Volume 40 ; 40 >
-    au < released ; Journal of the History of Philosophy Volume 41 ; 41 >
-    au < released ; Journal of the History of Philosophy Volume 42 ; 42 >
-    au < released ; Journal of the History of Philosophy Volume 43 ; 43 >
-    au < released ; Journal of the History of Philosophy Volume 44 ; 44 >
-    au < released ; Journal of the History of Philosophy Volume 45 ; 45 >
-    au < released ; Journal of the History of Philosophy Volume 46 ; 46 >
-    au < released ; Journal of the History of Philosophy Volume 47 ; 47 >
+    au < released ; 2000 ; Journal of the History of Philosophy Volume 38 ; 38 >
+    au < released ; 2001 ; Journal of the History of Philosophy Volume 39 ; 39 >
+    au < released ; 2002 ; Journal of the History of Philosophy Volume 40 ; 40 >
+    au < released ; 2003 ; Journal of the History of Philosophy Volume 41 ; 41 >
+    au < released ; 2004 ; Journal of the History of Philosophy Volume 42 ; 42 >
+    au < released ; 2005 ; Journal of the History of Philosophy Volume 43 ; 43 >
+    au < released ; 2006 ; Journal of the History of Philosophy Volume 44 ; 44 >
+    au < released ; 2007 ; Journal of the History of Philosophy Volume 45 ; 45 >
+    au < released ; 2008 ; Journal of the History of Philosophy Volume 46 ; 46 >
+    au < released ; 2009 ; Journal of the History of Philosophy Volume 47 ; 47 >
 
   }
 
@@ -822,17 +807,17 @@
 
     param[journal_dir] = journal_of_womens_history
 
-    au < released ; Journal of Women's History Volume 11 ; 11 >
-    au < released ; Journal of Women's History Volume 12 ; 12 >
-    au < released ; Journal of Women's History Volume 13 ; 13 >
-    au < released ; Journal of Women's History Volume 14 ; 14 >
-    au < released ; Journal of Women's History Volume 15 ; 15 >
-    au < released ; Journal of Women's History Volume 16 ; 16 >
-    au < released ; Journal of Women's History Volume 17 ; 17 >
-    au < released ; Journal of Women's History Volume 18 ; 18 >
-    au < released ; Journal of Women's History Volume 19 ; 19 >
-    au < released ; Journal of Women's History Volume 20 ; 20 >
-    au < released ; Journal of Women's History Volume 21 ; 21 >
+    au < released ; 1999-2000 ; Journal of Women's History Volume 11 ; 11 >
+    au < released ; 2000-2001 ; Journal of Women's History Volume 12 ; 12 >
+    au < released ; 2001-2002 ; Journal of Women's History Volume 13 ; 13 >
+    au < released ; 2002-2003 ; Journal of Women's History Volume 14 ; 14 >
+    au < released ; 2003-2004 ; Journal of Women's History Volume 15 ; 15 >
+    au < released ; 2004 ; Journal of Women's History Volume 16 ; 16 >
+    au < released ; 2005 ; Journal of Women's History Volume 17 ; 17 >
+    au < released ; 2006 ; Journal of Women's History Volume 18 ; 18 >
+    au < released ; 2007 ; Journal of Women's History Volume 19 ; 19 >
+    au < released ; 2008 ; Journal of Women's History Volume 20 ; 20 >
+    au < released ; 2009 ; Journal of Women's History Volume 21 ; 21 >
 
   }
 
@@ -846,19 +831,19 @@
 
     param[journal_dir] = kennedy_institute_of_ethics_journal
 
-    au < released ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 8 ; 8 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 9 ; 9 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 10 ; 10 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 11 ; 11 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 12 ; 12 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 13 ; 13 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 14 ; 14 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 15 ; 15 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
-    au < released ; Kennedy Institute of Ethics Journal Volume 18 ; 18 >
+    au < released ; 1996 ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
+    au < released ; 1997 ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
+    au < released ; 1998 ; Kennedy Institute of Ethics Journal Volume 8 ; 8 >
+    au < released ; 1999 ; Kennedy Institute of Ethics Journal Volume 9 ; 9 >
+    au < released ; 2000 ; Kennedy Institute of Ethics Journal Volume 10 ; 10 >
+    au < released ; 2001 ; Kennedy Institute of Ethics Journal Volume 11 ; 11 >
+    au < released ; 2002 ; Kennedy Institute of Ethics Journal Volume 12 ; 12 >
+    au < released ; 2003 ; Kennedy Institute of Ethics Journal Volume 13 ; 13 >
+    au < released ; 2004 ; Kennedy Institute of Ethics Journal Volume 14 ; 14 >
+    au < released ; 2005 ; Kennedy Institute of Ethics Journal Volume 15 ; 15 >
+    au < released ; 2006 ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
+    au < released ; 2007 ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
+    au < released ; 2008 ; Kennedy Institute of Ethics Journal Volume 18 ; 18 >
 
   }
 
@@ -872,9 +857,9 @@
 
     param[journal_dir] = lesprit_createur
 
-    au < released ; L'Esprit Créateur Volume 46 ; 46 >
-    au < released ; L'Esprit Créateur Volume 47 ; 47 >
-    au < released ; L'Esprit Créateur Volume 48 ; 48 >
+    au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
+    au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
+    au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
 
   }
 
@@ -888,19 +873,19 @@
 
     param[journal_dir] = late_imperial_china
 
-    au < released ; Late Imperial China Volume 17 ; 17 >
-    au < released ; Late Imperial China Volume 18 ; 18 >
-    au < released ; Late Imperial China Volume 19 ; 19 >
-    au < released ; Late Imperial China Volume 20 ; 20 >
-    au < released ; Late Imperial China Volume 21 ; 21 >
-    au < released ; Late Imperial China Volume 22 ; 22 >
-    au < released ; Late Imperial China Volume 23 ; 23 >
-    au < released ; Late Imperial China Volume 24 ; 24 >
-    au < released ; Late Imperial China Volume 25 ; 25 >
-    au < released ; Late Imperial China Volume 26 ; 26 >
-    au < released ; Late Imperial China Volume 27 ; 27 >
-    au < released ; Late Imperial China Volume 28 ; 28 >
-    au < released ; Late Imperial China Volume 29 ; 29 >
+    au < released ; 1996 ; Late Imperial China Volume 17 ; 17 >
+    au < released ; 1997 ; Late Imperial China Volume 18 ; 18 >
+    au < released ; 1998 ; Late Imperial China Volume 19 ; 19 >
+    au < released ; 1999 ; Late Imperial China Volume 20 ; 20 >
+    au < released ; 2000 ; Late Imperial China Volume 21 ; 21 >
+    au < released ; 2001 ; Late Imperial China Volume 22 ; 22 >
+    au < released ; 2002 ; Late Imperial China Volume 23 ; 23 >
+    au < released ; 2003 ; Late Imperial China Volume 24 ; 24 >
+    au < released ; 2004 ; Late Imperial China Volume 25 ; 25 >
+    au < released ; 2005 ; Late Imperial China Volume 26 ; 26 >
+    au < released ; 2006 ; Late Imperial China Volume 27 ; 27 >
+    au < released ; 2007 ; Late Imperial China Volume 28 ; 28 >
+    au < released ; 2008 ; Late Imperial China Volume 29 ; 29 >
 
   }
 
@@ -914,10 +899,10 @@
 
     param[journal_dir] = library_trends
 
-    au < released ; Library Trends Volume 54 ; 54 >
-    au < released ; Library Trends Volume 55 ; 55 >
-    au < released ; Library Trends Volume 56 ; 56 >
-    au < released ; Library Trends Volume 57 ; 57 >
+    au < released ; 2006 ; Library Trends Volume 54 ; 54 >
+    au < released ; 2007 ; Library Trends Volume 55 ; 55 >
+    au < released ; 2008 ; Library Trends Volume 56 ; 56 >
+    au < released ; 2009 ; Library Trends Volume 57 ; 57 >
 
   }
 
@@ -931,19 +916,19 @@
 
     param[journal_dir] = literature_and_medicine
 
-    au < released ; Literature and Medicine Volume 14 ; 14 >
-    au < released ; Literature and Medicine Volume 15 ; 15 >
-    au < released ; Literature and Medicine Volume 16 ; 16 >
-    au < released ; Literature and Medicine Volume 17 ; 17 >
-    au < released ; Literature and Medicine Volume 18 ; 18 >
-    au < released ; Literature and Medicine Volume 19 ; 19 >
-    au < released ; Literature and Medicine Volume 20 ; 20 >
-    au < released ; Literature and Medicine Volume 21 ; 21 >
-    au < released ; Literature and Medicine Volume 22 ; 22 >
-    au < released ; Literature and Medicine Volume 23 ; 23 >
-    au < released ; Literature and Medicine Volume 24 ; 24 >
-    au < released ; Literature and Medicine Volume 25 ; 25 >
-    au < released ; Literature and Medicine Volume 26 ; 26 >
+    au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
+    au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
+    au < released ; 1997 ; Literature and Medicine Volume 16 ; 16 >
+    au < released ; 1998 ; Literature and Medicine Volume 17 ; 17 >
+    au < released ; 1999 ; Literature and Medicine Volume 18 ; 18 >
+    au < released ; 2000 ; Literature and Medicine Volume 19 ; 19 >
+    au < released ; 2001 ; Literature and Medicine Volume 20 ; 20 >
+    au < released ; 2002 ; Literature and Medicine Volume 21 ; 21 >
+    au < released ; 2003 ; Literature and Medicine Volume 22 ; 22 >
+    au < released ; 2004 ; Literature and Medicine Volume 23 ; 23 >
+    au < released ; 2005 ; Literature and Medicine Volume 24 ; 24 >
+    au < released ; 2006 ; Literature and Medicine Volume 25 ; 25 >
+    au < released ; 2007 ; Literature and Medicine Volume 26 ; 26 >
 
   }
 
@@ -957,21 +942,21 @@
 
     param[journal_dir] = modern_fiction_studies
 
-    au < released ; MFS Modern Fiction Studies Volume 40 ; 40 >
-    au < released ; MFS Modern Fiction Studies Volume 41 ; 41 >
-    au < released ; MFS Modern Fiction Studies Volume 42 ; 42 >
-    au < released ; MFS Modern Fiction Studies Volume 43 ; 43 >
-    au < released ; MFS Modern Fiction Studies Volume 44 ; 44 >
-    au < released ; MFS Modern Fiction Studies Volume 45 ; 45 >
-    au < released ; MFS Modern Fiction Studies Volume 46 ; 46 >
-    au < released ; MFS Modern Fiction Studies Volume 47 ; 47 >
-    au < released ; MFS Modern Fiction Studies Volume 48 ; 48 >
-    au < released ; MFS Modern Fiction Studies Volume 49 ; 49 >
-    au < released ; MFS Modern Fiction Studies Volume 50 ; 50 >
-    au < released ; MFS Modern Fiction Studies Volume 51 ; 51 >
-    au < released ; MFS Modern Fiction Studies Volume 52 ; 52 >
-    au < released ; MFS Modern Fiction Studies Volume 53 ; 53 >
-    au < released ; MFS Modern Fiction Studies Volume 54 ; 54 >
+    au < released ; 1994 ; MFS Modern Fiction Studies Volume 40 ; 40 >
+    au < released ; 1995 ; MFS Modern Fiction Studies Volume 41 ; 41 >
+    au < released ; 1996 ; MFS Modern Fiction Studies Volume 42 ; 42 >
+    au < released ; 1997 ; MFS Modern Fiction Studies Volume 43 ; 43 >
+    au < released ; 1998 ; MFS Modern Fiction Studies Volume 44 ; 44 >
+    au < released ; 1999 ; MFS Modern Fiction Studies Volume 45 ; 45 >
+    au < released ; 2000 ; MFS Modern Fiction Studies Volume 46 ; 46 >
+    au < released ; 2001 ; MFS Modern Fiction Studies Volume 47 ; 47 >
+    au < released ; 2002 ; MFS Modern Fiction Studies Volume 48 ; 48 >
+    au < released ; 2003 ; MFS Modern Fiction Studies Volume 49 ; 49 >
+    au < released ; 2004 ; MFS Modern Fiction Studies Volume 50 ; 50 >
+    au < released ; 2005 ; MFS Modern Fiction Studies Volume 51 ; 51 >
+    au < released ; 2006 ; MFS Modern Fiction Studies Volume 52 ; 52 >
+    au < released ; 2007 ; MFS Modern Fiction Studies Volume 53 ; 53 >
+    au < released ; 2008 ; MFS Modern Fiction Studies Volume 54 ; 54 >
 
   }
 
@@ -985,10 +970,10 @@
 
     param[journal_dir] = milton_quarterly
 
-    au < released ; Milton Quarterly Volume 31 ; 31 >
-    au < released ; Milton Quarterly Volume 32 ; 32 >
-    au < released ; Milton Quarterly Volume 33 ; 33 >
-    au < released ; Milton Quarterly Volume 34 ; 34 >
+    au < released ; 1997 ; Milton Quarterly Volume 31 ; 31 >
+    au < released ; 1998 ; Milton Quarterly Volume 32 ; 32 >
+    au < released ; 1999 ; Milton Quarterly Volume 33 ; 33 >
+    au < released ; 2000 ; Milton Quarterly Volume 34 ; 34 >
 
   }
 
@@ -1002,20 +987,20 @@
 
     param[journal_dir] = mln
 
-    au < released ; MLN Volume 110 ; 110 >
-    au < released ; MLN Volume 111 ; 111 >
-    au < released ; MLN Volume 112 ; 112 >
-    au < released ; MLN Volume 113 ; 113 >
-    au < released ; MLN Volume 114 ; 114 >
-    au < released ; MLN Volume 115 ; 115 >
-    au < released ; MLN Volume 116 ; 116 >
-    au < released ; MLN Volume 117 ; 117 >
-    au < released ; MLN Volume 118 ; 118 >
-    au < released ; MLN Volume 119 ; 119 >
-    au < released ; MLN Volume 120 ; 120 >
-    au < released ; MLN Volume 121 ; 121 >
-    au < released ; MLN Volume 122 ; 122 >
-    au < released ; MLN Volume 123 ; 123 >
+    au < released ; 1995 ; MLN Volume 110 ; 110 >
+    au < released ; 1996 ; MLN Volume 111 ; 111 >
+    au < released ; 1997 ; MLN Volume 112 ; 112 >
+    au < released ; 1998 ; MLN Volume 113 ; 113 >
+    au < released ; 1999 ; MLN Volume 114 ; 114 >
+    au < released ; 2000 ; MLN Volume 115 ; 115 >
+    au < released ; 2001 ; MLN Volume 116 ; 116 >
+    au < released ; 2002 ; MLN Volume 117 ; 117 >
+    au < released ; 2003 ; MLN Volume 118 ; 118 >
+    au < released ; 2004 ; MLN Volume 119 ; 119 >
+    au < released ; 2005 ; MLN Volume 120 ; 120 >
+    au < released ; 2006 ; MLN Volume 121 ; 121 >
+    au < released ; 2007 ; MLN Volume 122 ; 122 >
+    au < released ; 2008 ; MLN Volume 123 ; 123 >
 
   }
 
@@ -1029,22 +1014,22 @@
 
     param[journal_dir] = modernism-modernity
 
-    au < released ; Modernism/modernity Volume 1 ; 1 >
-    au < released ; Modernism/modernity Volume 2 ; 2 >
-    au < released ; Modernism/modernity Volume 3 ; 3 >
-    au < released ; Modernism/modernity Volume 4 ; 4 >
-    au < released ; Modernism/modernity Volume 5 ; 5 >
-    au < released ; Modernism/modernity Volume 6 ; 6 >
-    au < released ; Modernism/modernity Volume 7 ; 7 >
-    au < released ; Modernism/modernity Volume 8 ; 8 >
-    au < released ; Modernism/modernity Volume 9 ; 9 >
-    au < released ; Modernism/modernity Volume 10 ; 10 >
-    au < released ; Modernism/modernity Volume 11 ; 11 >
-    au < released ; Modernism/modernity Volume 12 ; 12 >
-    au < released ; Modernism/modernity Volume 13 ; 13 >
-    au < released ; Modernism/modernity Volume 14 ; 14 >
-    au < released ; Modernism/modernity Volume 15 ; 15 >
-    au < released ; Modernism/modernity Volume 16 ; 16 >
+    au < released ; 1994 ; Modernism/modernity Volume 1 ; 1 >
+    au < released ; 1995 ; Modernism/modernity Volume 2 ; 2 >
+    au < released ; 1996 ; Modernism/modernity Volume 3 ; 3 >
+    au < released ; 1997 ; Modernism/modernity Volume 4 ; 4 >
+    au < released ; 1998 ; Modernism/modernity Volume 5 ; 5 >
+    au < released ; 1999 ; Modernism/modernity Volume 6 ; 6 >
+    au < released ; 2000 ; Modernism/modernity Volume 7 ; 7 >
+    au < released ; 2001 ; Modernism/modernity Volume 8 ; 8 >
+    au < released ; 2002 ; Modernism/modernity Volume 9 ; 9 >
+    au < released ; 2003 ; Modernism/modernity Volume 10 ; 10 >
+    au < released ; 2004 ; Modernism/modernity Volume 11 ; 11 >
+    au < released ; 2005 ; Modernism/modernity Volume 12 ; 12 >
+    au < released ; 2006 ; Modernism/modernity Volume 13 ; 13 >
+    au < released ; 2007 ; Modernism/modernity Volume 14 ; 14 >
+    au < released ; 2008 ; Modernism/modernity Volume 15 ; 15 >
+    au < released ; 2009 ; Modernism/modernity Volume 16 ; 16 >
 
   }
 
@@ -1058,20 +1043,20 @@
 
     param[journal_dir] = new_literary_history
 
-    au < released ; New Literary History Volume 26 ; 26 >
-    au < released ; New Literary History Volume 27 ; 27 >
-    au < released ; New Literary History Volume 28 ; 28 >
-    au < released ; New Literary History Volume 29 ; 29 >
-    au < released ; New Literary History Volume 30 ; 30 >
-    au < released ; New Literary History Volume 31 ; 31 >
-    au < released ; New Literary History Volume 32 ; 32 >
-    au < released ; New Literary History Volume 33 ; 33 >
-    au < released ; New Literary History Volume 34 ; 34 >
-    au < released ; New Literary History Volume 35 ; 35 >
-    au < released ; New Literary History Volume 36 ; 36 >
-    au < released ; New Literary History Volume 37 ; 37 >
-    au < released ; New Literary History Volume 38 ; 38 >
-    au < released ; New Literary History Volume 39 ; 39 >
+    au < released ; 1995 ; New Literary History Volume 26 ; 26 >
+    au < released ; 1996 ; New Literary History Volume 27 ; 27 >
+    au < released ; 1997 ; New Literary History Volume 28 ; 28 >
+    au < released ; 1998 ; New Literary History Volume 29 ; 29 >
+    au < released ; 1999 ; New Literary History Volume 30 ; 30 >
+    au < released ; 2000 ; New Literary History Volume 31 ; 31 >
+    au < released ; 2001 ; New Literary History Volume 32 ; 32 >
+    au < released ; 2002 ; New Literary History Volume 33 ; 33 >
+    au < released ; 2003 ; New Literary History Volume 34 ; 34 >
+    au < released ; 2004 ; New Literary History Volume 35 ; 35 >
+    au < released ; 2005 ; New Literary History Volume 36 ; 36 >
+    au < released ; 2006 ; New Literary History Volume 37 ; 37 >
+    au < released ; 2007 ; New Literary History Volume 38 ; 38 >
+    au < released ; 2008 ; New Literary History Volume 39 ; 39 >
 
   }
 
@@ -1082,22 +1067,23 @@
       eissn = 1527-1889 ;
       issnl = 1040-0656
     >
-
+    
+	comment[title] = The title of the journal has changed to Feminist Formations since Vol22. Formerly NWSA Journal, through Volume 21, No. 3, Fall 2009.
     comment[continuity] = continued by 2151-7363
 
     param[journal_dir] = nwsa_journal
 
-    au < released ; NWSA Journal Volume 11 ; 11 >
-    au < released ; NWSA Journal Volume 12 ; 12 >
-    au < released ; NWSA Journal Volume 13 ; 13 >
-    au < released ; NWSA Journal Volume 14 ; 14 >
-    au < released ; NWSA Journal Volume 15 ; 15 >
-    au < released ; NWSA Journal Volume 16 ; 16 >
-    au < released ; NWSA Journal Volume 17 ; 17 >
-    au < released ; NWSA Journal Volume 18 ; 18 >
-    au < released ; NWSA Journal Volume 19 ; 19 >
-    au < released ; NWSA Journal Volume 20 ; 20 >
-    au < released ; NWSA Journal Volume 21 ; 21 >
+    au < released ; 1999 ; NWSA Journal Volume 11 ; 11 >
+    au < released ; 2000 ; NWSA Journal Volume 12 ; 12 >
+    au < released ; 2001 ; NWSA Journal Volume 13 ; 13 >
+    au < released ; 2002 ; NWSA Journal Volume 14 ; 14 >
+    au < released ; 2003 ; NWSA Journal Volume 15 ; 15 >
+    au < released ; 2004 ; NWSA Journal Volume 16 ; 16 >
+    au < released ; 2005 ; NWSA Journal Volume 17 ; 17 >
+    au < released ; 2006 ; NWSA Journal Volume 18 ; 18 >
+    au < released ; 2007 ; NWSA Journal Volume 19 ; 19 >
+    au < released ; 2008 ; NWSA Journal Volume 20 ; 20 >
+    au < released ; 2009 ; NWSA Journal Volume 21 ; 21 >
 
   }
   
@@ -1110,9 +1096,9 @@
 
     param[journal_dir] = partial_answers
 
-    au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
-    au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
-    au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
+    au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
+    au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
+    au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
 
   }
 
@@ -1126,16 +1112,16 @@
 
     param[journal_dir] = perspectives_in_biology_and_medicine
 
-    au < released ; Perspectives in Biology and Medicine Volume 43 ; 43 >
-    au < released ; Perspectives in Biology and Medicine Volume 44 ; 44 >
-    au < released ; Perspectives in Biology and Medicine Volume 45 ; 45 >
-    au < released ; Perspectives in Biology and Medicine Volume 46 ; 46 >
-    au < released ; Perspectives in Biology and Medicine Volume 47 ; 47 >
-    au < released ; Perspectives in Biology and Medicine Volume 48 ; 48 >
-    au < released ; Perspectives in Biology and Medicine Volume 49 ; 49 >
-    au < released ; Perspectives in Biology and Medicine Volume 50 ; 50 >
-    au < released ; Perspectives in Biology and Medicine Volume 51 ; 51 >
-    au < released ; Perspectives in Biology and Medicine Volume 52 ; 52 >
+    au < released ; 2000 ; Perspectives in Biology and Medicine Volume 43 ; 43 >
+    au < released ; 2001 ; Perspectives in Biology and Medicine Volume 44 ; 44 >
+    au < released ; 2002 ; Perspectives in Biology and Medicine Volume 45 ; 45 >
+    au < released ; 2003 ; Perspectives in Biology and Medicine Volume 46 ; 46 >
+    au < released ; 2004 ; Perspectives in Biology and Medicine Volume 47 ; 47 >
+    au < released ; 2005 ; Perspectives in Biology and Medicine Volume 48 ; 48 >
+    au < released ; 2006 ; Perspectives in Biology and Medicine Volume 49 ; 49 >
+    au < released ; 2007 ; Perspectives in Biology and Medicine Volume 50 ; 50 >
+    au < released ; 2008 ; Perspectives in Biology and Medicine Volume 51 ; 51 >
+    au < released ; 2009 ; Perspectives in Biology and Medicine Volume 52 ; 52 >
 
   }
 
@@ -1149,20 +1135,20 @@
 
     param[journal_dir] = philosophy_and_literature
 
-    au < released ; Philosophy and Literature Volume 19 ; 19 >
-    au < released ; Philosophy and Literature Volume 20 ; 20 >
-    au < released ; Philosophy and Literature Volume 21 ; 21 >
-    au < released ; Philosophy and Literature Volume 22 ; 22 >
-    au < released ; Philosophy and Literature Volume 23 ; 23 >
-    au < released ; Philosophy and Literature Volume 24 ; 24 >
-    au < released ; Philosophy and Literature Volume 25 ; 25 >
-    au < released ; Philosophy and Literature Volume 26 ; 26 >
-    au < released ; Philosophy and Literature Volume 27 ; 27 >
-    au < released ; Philosophy and Literature Volume 28 ; 28 >
-    au < released ; Philosophy and Literature Volume 29 ; 29 >
-    au < released ; Philosophy and Literature Volume 30 ; 30 >
-    au < released ; Philosophy and Literature Volume 31 ; 31 >
-    au < released ; Philosophy and Literature Volume 32 ; 32 >
+    au < released ; 1995 ; Philosophy and Literature Volume 19 ; 19 >
+    au < released ; 1996 ; Philosophy and Literature Volume 20 ; 20 >
+    au < released ; 1997 ; Philosophy and Literature Volume 21 ; 21 >
+    au < released ; 1998 ; Philosophy and Literature Volume 22 ; 22 >
+    au < released ; 1999 ; Philosophy and Literature Volume 23 ; 23 >
+    au < released ; 2000 ; Philosophy and Literature Volume 24 ; 24 >
+    au < released ; 2001 ; Philosophy and Literature Volume 25 ; 25 >
+    au < released ; 2002 ; Philosophy and Literature Volume 26 ; 26 >
+    au < released ; 2003 ; Philosophy and Literature Volume 27 ; 27 >
+    au < released ; 2004 ; Philosophy and Literature Volume 28 ; 28 >
+    au < released ; 2005 ; Philosophy and Literature Volume 29 ; 29 >
+    au < released ; 2006 ; Philosophy and Literature Volume 30 ; 30 >
+    au < released ; 2007 ; Philosophy and Literature Volume 31 ; 31 >
+    au < released ; 2008 ; Philosophy and Literature Volume 32 ; 32 >
 
   }
 
@@ -1176,19 +1162,19 @@
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
 
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 5 ; 5 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 6 ; 6 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 7 ; 7 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 8 ; 8 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 9 ; 9 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 10 ; 10 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 11 ; 11 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 12 ; 12 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
-    au < released ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
+    au < released ; 1996 ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
+    au < released ; 1997 ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
+    au < released ; 1998 ; Philosophy, Psychiatry, & Psychology Volume 5 ; 5 >
+    au < released ; 1999 ; Philosophy, Psychiatry, & Psychology Volume 6 ; 6 >
+    au < released ; 2000 ; Philosophy, Psychiatry, & Psychology Volume 7 ; 7 >
+    au < released ; 2001 ; Philosophy, Psychiatry, & Psychology Volume 8 ; 8 >
+    au < released ; 2002 ; Philosophy, Psychiatry, & Psychology Volume 9 ; 9 >
+    au < released ; 2003 ; Philosophy, Psychiatry, & Psychology Volume 10 ; 10 >
+    au < released ; 2004 ; Philosophy, Psychiatry, & Psychology Volume 11 ; 11 >
+    au < released ; 2005 ; Philosophy, Psychiatry, & Psychology Volume 12 ; 12 >
+    au < released ; 2006 ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
+    au < released ; 2007 ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
+    au < released ; 2008 ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
 
   }
 
@@ -1202,15 +1188,15 @@
 
     param[journal_dir] = portal_libraries_and_the_academy
 
-    au < released ; portal: Libraries and the Academy Volume 1 ; 1 >
-    au < released ; portal: Libraries and the Academy Volume 2 ; 2 >
-    au < released ; portal: Libraries and the Academy Volume 3 ; 3 >
-    au < released ; portal: Libraries and the Academy Volume 4 ; 4 >
-    au < released ; portal: Libraries and the Academy Volume 5 ; 5 >
-    au < released ; portal: Libraries and the Academy Volume 6 ; 6 >
-    au < released ; portal: Libraries and the Academy Volume 7 ; 7 >
-    au < released ; portal: Libraries and the Academy Volume 8 ; 8 >
-    au < released ; portal: Libraries and the Academy Volume 9 ; 9 >
+    au < released ; 2001 ; portal: Libraries and the Academy Volume 1 ; 1 >
+    au < released ; 2002 ; portal: Libraries and the Academy Volume 2 ; 2 >
+    au < released ; 2003 ; portal: Libraries and the Academy Volume 3 ; 3 >
+    au < released ; 2004 ; portal: Libraries and the Academy Volume 4 ; 4 >
+    au < released ; 2005 ; portal: Libraries and the Academy Volume 5 ; 5 >
+    au < released ; 2006 ; portal: Libraries and the Academy Volume 6 ; 6 >
+    au < released ; 2007 ; portal: Libraries and the Academy Volume 7 ; 7 >
+    au < released ; 2008 ; portal: Libraries and the Academy Volume 8 ; 8 >
+    au < released ; 2009 ; portal: Libraries and the Academy Volume 9 ; 9 >
 
   }
 
@@ -1222,24 +1208,24 @@
 
     param[journal_dir] = postmodern_culture
 
-    au < released ; Postmodern Culture Volume 1 ; 1 >
-    au < released ; Postmodern Culture Volume 2 ; 2 >
-    au < released ; Postmodern Culture Volume 3 ; 3 >
-    au < released ; Postmodern Culture Volume 4 ; 4 >
-    au < released ; Postmodern Culture Volume 5 ; 5 >
-    au < released ; Postmodern Culture Volume 6 ; 6 >
-    au < released ; Postmodern Culture Volume 7 ; 7 >
-    au < released ; Postmodern Culture Volume 8 ; 8 >
-    au < released ; Postmodern Culture Volume 9 ; 9 >
-    au < released ; Postmodern Culture Volume 10 ; 10 >
-    au < released ; Postmodern Culture Volume 11 ; 11 >
-    au < released ; Postmodern Culture Volume 12 ; 12 >
-    au < released ; Postmodern Culture Volume 13 ; 13 >
-    au < released ; Postmodern Culture Volume 14 ; 14 >
-    au < released ; Postmodern Culture Volume 15 ; 15 >
-    au < released ; Postmodern Culture Volume 16 ; 16 >
-    au < released ; Postmodern Culture Volume 17 ; 17 >
-    au < released ; Postmodern Culture Volume 18 ; 18 >
+    au < released ; 1991 ; Postmodern Culture Volume 1 ; 1 >
+    au < released ; 1992 ; Postmodern Culture Volume 2 ; 2 >
+    au < released ; 1993 ; Postmodern Culture Volume 3 ; 3 >
+    au < released ; 1994 ; Postmodern Culture Volume 4 ; 4 >
+    au < released ; 1995 ; Postmodern Culture Volume 5 ; 5 >
+    au < released ; 1996 ; Postmodern Culture Volume 6 ; 6 >
+    au < released ; 1997 ; Postmodern Culture Volume 7 ; 7 >
+    au < released ; 1998 ; Postmodern Culture Volume 8 ; 8 >
+    au < released ; 1999 ; Postmodern Culture Volume 9 ; 9 >
+    au < released ; 2000 ; Postmodern Culture Volume 10 ; 10 >
+    au < released ; 2001 ; Postmodern Culture Volume 11 ; 11 >
+    au < released ; 2002 ; Postmodern Culture Volume 12 ; 12 >
+    au < released ; 2003 ; Postmodern Culture Volume 13 ; 13 >
+    au < released ; 2004 ; Postmodern Culture Volume 14 ; 14 >
+    au < released ; 2005 ; Postmodern Culture Volume 15 ; 15 >
+    au < released ; 2006 ; Postmodern Culture Volume 16 ; 16 >
+    au < released ; 2007 ; Postmodern Culture Volume 17 ; 17 >
+    au < released ; 2008 ; Postmodern Culture Volume 18 ; 18 >
 
   }
 
@@ -1253,8 +1239,8 @@
 
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
 
-    au < released ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
-    au < released ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
+    au < released ; 2007 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
+    au < released ; 2008 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
 
   }
 
@@ -1268,21 +1254,21 @@
 
     param[journal_dir] = reviews_in_american_history
 
-    au < released ; Reviews in American History Volume 23 ; 23 >
-    au < released ; Reviews in American History Volume 24 ; 24 >
-    au < released ; Reviews in American History Volume 25 ; 25 >
-    au < released ; Reviews in American History Volume 26 ; 26 >
-    au < released ; Reviews in American History Volume 27 ; 27 >
-    au < released ; Reviews in American History Volume 28 ; 28 >
-    au < released ; Reviews in American History Volume 29 ; 29 >
-    au < released ; Reviews in American History Volume 30 ; 30 >
-    au < released ; Reviews in American History Volume 31 ; 31 >
-    au < released ; Reviews in American History Volume 32 ; 32 >
-    au < released ; Reviews in American History Volume 33 ; 33 >
-    au < released ; Reviews in American History Volume 34 ; 34 >
-    au < released ; Reviews in American History Volume 35 ; 35 >
-    au < released ; Reviews in American History Volume 36 ; 36 >
-    au < released ; Reviews in American History Volume 37 ; 37 >
+    au < released ; 1995 ; Reviews in American History Volume 23 ; 23 >
+    au < released ; 1996 ; Reviews in American History Volume 24 ; 24 >
+    au < released ; 1997 ; Reviews in American History Volume 25 ; 25 >
+    au < released ; 1998 ; Reviews in American History Volume 26 ; 26 >
+    au < released ; 1999 ; Reviews in American History Volume 27 ; 27 >
+    au < released ; 2000 ; Reviews in American History Volume 28 ; 28 >
+    au < released ; 2001 ; Reviews in American History Volume 29 ; 29 >
+    au < released ; 2002 ; Reviews in American History Volume 30 ; 30 >
+    au < released ; 2003 ; Reviews in American History Volume 31 ; 31 >
+    au < released ; 2004 ; Reviews in American History Volume 32 ; 32 >
+    au < released ; 2005 ; Reviews in American History Volume 33 ; 33 >
+    au < released ; 2006 ; Reviews in American History Volume 34 ; 34 >
+    au < released ; 2007 ; Reviews in American History Volume 35 ; 35 >
+    au < released ; 2008 ; Reviews in American History Volume 36 ; 36 >
+    au < released ; 2009 ; Reviews in American History Volume 37 ; 37 >
 
   }
 
@@ -1295,20 +1281,20 @@
 
     param[journal_dir] = sais_review
 
-    au < released ; SAIS Review Volume 15 ; 15 >
-    au < released ; SAIS Review Volume 16 ; 16 >
-    au < released ; SAIS Review Volume 17 ; 17 >
-    au < released ; SAIS Review Volume 18 ; 18 >
-    au < released ; SAIS Review Volume 19 ; 19 >
-    au < released ; SAIS Review Volume 20 ; 20 >
-    au < released ; SAIS Review Volume 21 ; 21 >
-    au < released ; SAIS Review Volume 22 ; 22 >
-    au < released ; SAIS Review Volume 23 ; 23 >
-    au < released ; SAIS Review Volume 24 ; 24 >
-    au < released ; SAIS Review Volume 25 ; 25 >
-    au < released ; SAIS Review Volume 26 ; 26 >
-    au < released ; SAIS Review Volume 27 ; 27 >
-    au < released ; SAIS Review Volume 28 ; 28 >
+    au < released ; 1995 ; SAIS Review Volume 15 ; 15 >
+    au < released ; 1996 ; SAIS Review Volume 16 ; 16 >
+    au < released ; 1997 ; SAIS Review Volume 17 ; 17 >
+    au < released ; 1998 ; SAIS Review Volume 18 ; 18 >
+    au < released ; 1999 ; SAIS Review Volume 19 ; 19 >
+    au < released ; 2000 ; SAIS Review Volume 20 ; 20 >
+    au < released ; 2001 ; SAIS Review Volume 21 ; 21 >
+    au < released ; 2002 ; SAIS Review Volume 22 ; 22 >
+    au < released ; 2003 ; SAIS Review Volume 23 ; 23 >
+    au < released ; 2004 ; SAIS Review Volume 24 ; 24 >
+    au < released ; 2005 ; SAIS Review Volume 25 ; 25 >
+    au < released ; 2006 ; SAIS Review Volume 26 ; 26 >
+    au < released ; 2007 ; SAIS Review Volume 27 ; 27 >
+    au < released ; 2008 ; SAIS Review Volume 28 ; 28 >
 
   }
 
@@ -1322,17 +1308,17 @@
 
     param[journal_dir] = studies_in_english_literature
 
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 41 ; 41 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 42 ; 42 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 43 ; 43 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 44 ; 44 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
-    au < released ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
+    au < released ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
+    au < released ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
+    au < released ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41 ; 41 >
+    au < released ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42 ; 42 >
+    au < released ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43 ; 43 >
+    au < released ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44 ; 44 >
+    au < released ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
+    au < released ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
+    au < released ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
+    au < released ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
+    au < released ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
 
   }
 
@@ -1346,9 +1332,9 @@
 
     param[journal_dir] = sewanee_review
 
-    au < released ; Sewanee Review Volume 115 ; 115 >
-    au < released ; Sewanee Review Volume 116 ; 116 >
-    au < released ; Sewanee Review Volume 117 ; 117 >
+    au < released ; 2007 ; Sewanee Review Volume 115 ; 115 >
+    au < released ; 2008 ; Sewanee Review Volume 116 ; 116 >
+    au < released ; 2009 ; Sewanee Review Volume 117 ; 117 >
 
   }
 
@@ -1362,9 +1348,9 @@
 
     param[journal_dir] = shakespeare_bulletin
 
-    au < released ; Shakespeare Bulletin Volume 24 ; 24 >
-    au < released ; Shakespeare Bulletin Volume 25 ; 25 >
-    au < released ; Shakespeare Bulletin Volume 26 ; 26 >
+    au < released ; 2006 ; Shakespeare Bulletin Volume 24 ; 24 >
+    au < released ; 2007 ; Shakespeare Bulletin Volume 25 ; 25 >
+    au < released ; 2008 ; Shakespeare Bulletin Volume 26 ; 26 >
 
   }
 
@@ -1378,14 +1364,14 @@
 
     param[journal_dir] = shakespeare_quarterly
 
-    au < released ; Shakespeare Quarterly Volume 52 ; 52 >
-    au < released ; Shakespeare Quarterly Volume 53 ; 53 >
-    au < released ; Shakespeare Quarterly Volume 54 ; 54 >
-    au < released ; Shakespeare Quarterly Volume 55 ; 55 >
-    au < released ; Shakespeare Quarterly Volume 56 ; 56 >
-    au < released ; Shakespeare Quarterly Volume 57 ; 57 >
-    au < released ; Shakespeare Quarterly Volume 58 ; 58 >
-    au < released ; Shakespeare Quarterly Volume 59 ; 59 >
+    au < released ; 2001 ; Shakespeare Quarterly Volume 52 ; 52 >
+    au < released ; 2002 ; Shakespeare Quarterly Volume 53 ; 53 >
+    au < released ; 2003 ; Shakespeare Quarterly Volume 54 ; 54 >
+    au < released ; 2004 ; Shakespeare Quarterly Volume 55 ; 55 >
+    au < released ; 2005 ; Shakespeare Quarterly Volume 56 ; 56 >
+    au < released ; 2006 ; Shakespeare Quarterly Volume 57 ; 57 >
+    au < released ; 2007 ; Shakespeare Quarterly Volume 58 ; 58 >
+    au < released ; 2008 ; Shakespeare Quarterly Volume 59 ; 59 >
 
   }
 
@@ -1399,10 +1385,10 @@
 
     param[journal_dir] = sirena_poesia_arte_y_critica
 
-    au < released ; Sirena: poesia, arte y critica 2005 ; 2005 >
-    au < released ; Sirena: poesia, arte y critica 2006 ; 2006 >
-    au < released ; Sirena: poesia, arte y critica 2007 ; 2007 >
-    au < released ; Sirena: poesia, arte y critica 2008 ; 2008 >
+    au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
+    au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
+    au < released ; 2007 ; Sirena: poesia, arte y critica 2007 ; 2007 >
+    au < released ; 2008 ; Sirena: poesia, arte y critica 2008 ; 2008 >
 
   }
 
@@ -1416,11 +1402,11 @@
 
     param[journal_dir] = south_central_review
 
-    au < released ; South Central Review Volume 21 ; 21 >
-    au < released ; South Central Review Volume 22 ; 22 >
-    au < released ; South Central Review Volume 23 ; 23 >
-    au < released ; South Central Review Volume 24 ; 24 >
-    au < released ; South Central Review Volume 25 ; 25 >
+    au < released ; 2004 ; South Central Review Volume 21 ; 21 >
+    au < released ; 2005 ; South Central Review Volume 22 ; 22 >
+    au < released ; 2006 ; South Central Review Volume 23 ; 23 >
+    au < released ; 2007 ; South Central Review Volume 24 ; 24 >
+    au < released ; 2008 ; South Central Review Volume 25 ; 25 >
 
   }
 
@@ -1434,14 +1420,14 @@
 
     param[journal_dir] = spiritus
 
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 3 ; 3 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 4 ; 4 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
-    au < released ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
+    au < released ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
+    au < released ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
+    au < released ; 2003 ; Spiritus: A Journal of Christian Spirituality Volume 3 ; 3 >
+    au < released ; 2004 ; Spiritus: A Journal of Christian Spirituality Volume 4 ; 4 >
+    au < released ; 2005 ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
+    au < released ; 2006 ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
+    au < released ; 2007 ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
+    au < released ; 2008 ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
 
   }
 
@@ -1455,10 +1441,10 @@
 
     param[journal_dir] = studies_in_eighteenth_century_culture
 
-    au < released ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
-    au < released ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
-    au < released ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
-    au < released ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
+    au < released ; 2007 ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
+    au < released ; 2008 ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
+    au < released ; 2009 ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
+    au < released ; 2010 ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
 
   }
   
@@ -1472,18 +1458,18 @@
 
     param[journal_dir] = technology_and_culture
 
-    au < released ; Technology and Culture Volume 39 ; 39 >
-    au < released ; Technology and Culture Volume 40 ; 40 >
-    au < released ; Technology and Culture Volume 41 ; 41 >
-    au < released ; Technology and Culture Volume 42 ; 42 >
-    au < released ; Technology and Culture Volume 43 ; 43 >
-    au < released ; Technology and Culture Volume 44 ; 44 >
-    au < released ; Technology and Culture Volume 45 ; 45 >
-    au < released ; Technology and Culture Volume 46 ; 46 >
-    au < released ; Technology and Culture Volume 47 ; 47 >
-    au < released ; Technology and Culture Volume 48 ; 48 >
-    au < released ; Technology and Culture Volume 49 ; 49 >
-    au < released ; Technology and Culture Volume 50 ; 50 >
+    au < released ; 1998 ; Technology and Culture Volume 39 ; 39 >
+    au < released ; 1999 ; Technology and Culture Volume 40 ; 40 >
+    au < released ; 2000 ; Technology and Culture Volume 41 ; 41 >
+    au < released ; 2001 ; Technology and Culture Volume 42 ; 42 >
+    au < released ; 2002 ; Technology and Culture Volume 43 ; 43 >
+    au < released ; 2003 ; Technology and Culture Volume 44 ; 44 >
+    au < released ; 2004 ; Technology and Culture Volume 45 ; 45 >
+    au < released ; 2005 ; Technology and Culture Volume 46 ; 46 >
+    au < released ; 2006 ; Technology and Culture Volume 47 ; 47 >
+    au < released ; 2007 ; Technology and Culture Volume 48 ; 48 >
+    au < released ; 2008 ; Technology and Culture Volume 49 ; 49 >
+    au < released ; 2009 ; Technology and Culture Volume 50 ; 50 >
 
   }
 
@@ -1497,17 +1483,17 @@
 
     param[journal_dir] = emily_dickinson_journal
 
-    au < released ; The Emily Dickinson Journal Volume 7 ; 7 >
-    au < released ; The Emily Dickinson Journal Volume 8 ; 8 >
-    au < released ; The Emily Dickinson Journal Volume 9 ; 9 >
-    au < released ; The Emily Dickinson Journal Volume 10 ; 10 >
-    au < released ; The Emily Dickinson Journal Volume 11 ; 11 >
-    au < released ; The Emily Dickinson Journal Volume 12 ; 12 >
-    au < released ; The Emily Dickinson Journal Volume 13 ; 13 >
-    au < released ; The Emily Dickinson Journal Volume 14 ; 14 >
-    au < released ; The Emily Dickinson Journal Volume 15 ; 15 >
-    au < released ; The Emily Dickinson Journal Volume 16 ; 16 >
-    au < released ; The Emily Dickinson Journal Volume 17 ; 17 >
+    au < released ; 1985-1986 ; The Emily Dickinson Journal Volume 7 ; 7 >
+    au < released ; 1986-1987 ; The Emily Dickinson Journal Volume 8 ; 8 >
+    au < released ; 1987-1988 ; The Emily Dickinson Journal Volume 9 ; 9 >
+    au < released ; 1989 ; The Emily Dickinson Journal Volume 10 ; 10 >
+    au < released ; 1990 ; The Emily Dickinson Journal Volume 11 ; 11 >
+    au < released ; 1991 ; The Emily Dickinson Journal Volume 12 ; 12 >
+    au < released ; 1992 ; The Emily Dickinson Journal Volume 13 ; 13 >
+    au < released ; 1993 ; The Emily Dickinson Journal Volume 14 ; 14 >
+    au < released ; 1994 ; The Emily Dickinson Journal Volume 15 ; 15 >
+    au < released ; 1995 ; The Emily Dickinson Journal Volume 16 ; 16 >
+    au < released ; 1996 ; The Emily Dickinson Journal Volume 17 ; 17 >
 
   }
 
@@ -1521,21 +1507,21 @@
 
     param[journal_dir] = henry_james_review
 
-    au < released ; The Henry James Review Volume 16 ; 16 >
-    au < released ; The Henry James Review Volume 17 ; 17 >
-    au < released ; The Henry James Review Volume 18 ; 18 >
-    au < released ; The Henry James Review Volume 19 ; 19 >
-    au < released ; The Henry James Review Volume 20 ; 20 >
-    au < released ; The Henry James Review Volume 21 ; 21 >
-    au < released ; The Henry James Review Volume 22 ; 22 >
-    au < released ; The Henry James Review Volume 23 ; 23 >
-    au < released ; The Henry James Review Volume 24 ; 24 >
-    au < released ; The Henry James Review Volume 25 ; 25 >
-    au < released ; The Henry James Review Volume 26 ; 26 >
-    au < released ; The Henry James Review Volume 27 ; 27 >
-    au < released ; The Henry James Review Volume 28 ; 28 >
-    au < released ; The Henry James Review Volume 29 ; 29 >
-    au < released ; The Henry James Review Volume 30 ; 30 >
+    au < released ; 1995 ; The Henry James Review Volume 16 ; 16 >
+    au < released ; 1996 ; The Henry James Review Volume 17 ; 17 >
+    au < released ; 1997 ; The Henry James Review Volume 18 ; 18 >
+    au < released ; 1998 ; The Henry James Review Volume 19 ; 19 >
+    au < released ; 1999 ; The Henry James Review Volume 20 ; 20 >
+    au < released ; 2000 ; The Henry James Review Volume 21 ; 21 >
+    au < released ; 2001 ; The Henry James Review Volume 22 ; 22 >
+    au < released ; 2002 ; The Henry James Review Volume 23 ; 23 >
+    au < released ; 2003 ; The Henry James Review Volume 24 ; 24 >
+    au < released ; 2004 ; The Henry James Review Volume 25 ; 25 >
+    au < released ; 2005 ; The Henry James Review Volume 26 ; 26 >
+    au < released ; 2006 ; The Henry James Review Volume 27 ; 27 >
+    au < released ; 2007 ; The Henry James Review Volume 28 ; 28 >
+    au < released ; 2008 ; The Henry James Review Volume 29 ; 29 >
+    au < released ; 2009 ; The Henry James Review Volume 30 ; 30 >
 
   }
 
@@ -1549,21 +1535,21 @@
 
     param[journal_dir] = lion_and_the_unicorn
 
-    au < released ; The Lion and the Unicorn Volume 19 ; 19 >
-    au < released ; The Lion and the Unicorn Volume 20 ; 20 >
-    au < released ; The Lion and the Unicorn Volume 21 ; 21 >
-    au < released ; The Lion and the Unicorn Volume 22 ; 22 >
-    au < released ; The Lion and the Unicorn Volume 23 ; 23 >
-    au < released ; The Lion and the Unicorn Volume 24 ; 24 >
-    au < released ; The Lion and the Unicorn Volume 25 ; 25 >
-    au < released ; The Lion and the Unicorn Volume 26 ; 26 >
-    au < released ; The Lion and the Unicorn Volume 27 ; 27 >
-    au < released ; The Lion and the Unicorn Volume 28 ; 28 >
-    au < released ; The Lion and the Unicorn Volume 29 ; 29 >
-    au < released ; The Lion and the Unicorn Volume 30 ; 30 >
-    au < released ; The Lion and the Unicorn Volume 31 ; 31 >
-    au < released ; The Lion and the Unicorn Volume 32 ; 32 >
-    au < released ; The Lion and the Unicorn Volume 33 ; 33 >
+    au < released ; 1995 ; The Lion and the Unicorn Volume 19 ; 19 >
+    au < released ; 1996 ; The Lion and the Unicorn Volume 20 ; 20 >
+    au < released ; 1997 ; The Lion and the Unicorn Volume 21 ; 21 >
+    au < released ; 1998 ; The Lion and the Unicorn Volume 22 ; 22 >
+    au < released ; 1999 ; The Lion and the Unicorn Volume 23 ; 23 >
+    au < released ; 2000 ; The Lion and the Unicorn Volume 24 ; 24 >
+    au < released ; 2001 ; The Lion and the Unicorn Volume 25 ; 25 >
+    au < released ; 2002 ; The Lion and the Unicorn Volume 26 ; 26 >
+    au < released ; 2003 ; The Lion and the Unicorn Volume 27 ; 27 >
+    au < released ; 2004 ; The Lion and the Unicorn Volume 28 ; 28 >
+    au < released ; 2005 ; The Lion and the Unicorn Volume 29 ; 29 >
+    au < released ; 2006 ; The Lion and the Unicorn Volume 30 ; 30 >
+    au < released ; 2007 ; The Lion and the Unicorn Volume 31 ; 31 >
+    au < released ; 2008 ; The Lion and the Unicorn Volume 32 ; 32 >
+    au < released ; 2009 ; The Lion and the Unicorn Volume 33 ; 33 >
 
   }
 
@@ -1577,19 +1563,19 @@
 
     param[journal_dir] = review_of_higher_education
 
-    au < released ; The Review of Higher Education Volume 20 ; 20 >
-    au < released ; The Review of Higher Education Volume 21 ; 21 >
-    au < released ; The Review of Higher Education Volume 22 ; 22 >
-    au < released ; The Review of Higher Education Volume 23 ; 23 >
-    au < released ; The Review of Higher Education Volume 24 ; 24 >
-    au < released ; The Review of Higher Education Volume 25 ; 25 >
-    au < released ; The Review of Higher Education Volume 26 ; 26 >
-    au < released ; The Review of Higher Education Volume 27 ; 27 >
-    au < released ; The Review of Higher Education Volume 28 ; 28 >
-    au < released ; The Review of Higher Education Volume 29 ; 29 >
-    au < released ; The Review of Higher Education Volume 30 ; 30 >
-    au < released ; The Review of Higher Education Volume 31 ; 31 >
-    au < released ; The Review of Higher Education Volume 32 ; 32 >
+    au < released ; 1996-1997 ; The Review of Higher Education Volume 20 ; 20 >
+    au < released ; 1997-1998 ; The Review of Higher Education Volume 21 ; 21 >
+    au < released ; 1998-1999 ; The Review of Higher Education Volume 22 ; 22 >
+    au < released ; 1999-2000 ; The Review of Higher Education Volume 23 ; 23 >
+    au < released ; 2000-2001 ; The Review of Higher Education Volume 24 ; 24 >
+    au < released ; 2001-2002 ; The Review of Higher Education Volume 25 ; 25 >
+    au < released ; 2002-2003 ; The Review of Higher Education Volume 26 ; 26 >
+    au < released ; 2003-2004 ; The Review of Higher Education Volume 27 ; 27 >
+    au < released ; 2004-2005 ; The Review of Higher Education Volume 28 ; 28 >
+    au < released ; 2005-2006 ; The Review of Higher Education Volume 29 ; 29 >
+    au < released ; 2006-2007 ; The Review of Higher Education Volume 30 ; 30 >
+    au < released ; 2007-2008 ; The Review of Higher Education Volume 31 ; 31 >
+    au < released ; 2008-2009 ; The Review of Higher Education Volume 32 ; 32 >
 
   }
 
@@ -1603,16 +1589,16 @@
 
     param[journal_dir] = yale_journal_of_criticism
 
-    au < released ; The Yale Journal of Criticism Volume 9 ; 9 >
-    au < released ; The Yale Journal of Criticism Volume 10 ; 10 >
-    au < released ; The Yale Journal of Criticism Volume 11 ; 11 >
-    au < released ; The Yale Journal of Criticism Volume 12 ; 12 >
-    au < released ; The Yale Journal of Criticism Volume 13 ; 13 >
-    au < released ; The Yale Journal of Criticism Volume 14 ; 14 >
-    au < released ; The Yale Journal of Criticism Volume 15 ; 15 >
-    au < released ; The Yale Journal of Criticism Volume 16 ; 16 >
-    au < released ; The Yale Journal of Criticism Volume 17 ; 17 >
-    au < released ; The Yale Journal of Criticism Volume 18 ; 18 >
+    au < released ; 1996 ; The Yale Journal of Criticism Volume 9 ; 9 >
+    au < released ; 1997 ; The Yale Journal of Criticism Volume 10 ; 10 >
+    au < released ; 1998 ; The Yale Journal of Criticism Volume 11 ; 11 >
+    au < released ; 1999 ; The Yale Journal of Criticism Volume 12 ; 12 >
+    au < released ; 2000 ; The Yale Journal of Criticism Volume 13 ; 13 >
+    au < released ; 2001 ; The Yale Journal of Criticism Volume 14 ; 14 >
+    au < released ; 2002 ; The Yale Journal of Criticism Volume 15 ; 15 >
+    au < released ; 2003 ; The Yale Journal of Criticism Volume 16 ; 16 >
+    au < released ; 2004 ; The Yale Journal of Criticism Volume 17 ; 17 >
+    au < released ; 2005 ; The Yale Journal of Criticism Volume 18 ; 18 >
 
   }
 
@@ -1626,19 +1612,19 @@
 
     param[journal_dir] = theatre_journal
 
-    au < released ; Theatre Journal Volume 48 ; 48 >
-    au < released ; Theatre Journal Volume 49 ; 49 >
-    au < released ; Theatre Journal Volume 50 ; 50 >
-    au < released ; Theatre Journal Volume 51 ; 51 >
-    au < released ; Theatre Journal Volume 52 ; 52 >
-    au < released ; Theatre Journal Volume 53 ; 53 >
-    au < released ; Theatre Journal Volume 54 ; 54 >
-    au < released ; Theatre Journal Volume 55 ; 55 >
-    au < released ; Theatre Journal Volume 56 ; 56 >
-    au < released ; Theatre Journal Volume 57 ; 57 >
-    au < released ; Theatre Journal Volume 58 ; 58 >
-    au < released ; Theatre Journal Volume 59 ; 59 >
-    au < released ; Theatre Journal Volume 60 ; 60 >
+    au < released ; 1996 ; Theatre Journal Volume 48 ; 48 >
+    au < released ; 1997 ; Theatre Journal Volume 49 ; 49 >
+    au < released ; 1998 ; Theatre Journal Volume 50 ; 50 >
+    au < released ; 1999 ; Theatre Journal Volume 51 ; 51 >
+    au < released ; 2000 ; Theatre Journal Volume 52 ; 52 >
+    au < released ; 2001 ; Theatre Journal Volume 53 ; 53 >
+    au < released ; 2002 ; Theatre Journal Volume 54 ; 54 >
+    au < released ; 2003 ; Theatre Journal Volume 55 ; 55 >
+    au < released ; 2004 ; Theatre Journal Volume 56 ; 56 >
+    au < released ; 2005 ; Theatre Journal Volume 57 ; 57 >
+    au < released ; 2006 ; Theatre Journal Volume 58 ; 58 >
+    au < released ; 2007 ; Theatre Journal Volume 59 ; 59 >
+    au < released ; 2008 ; Theatre Journal Volume 60 ; 60 >
 
   }
 
@@ -1652,20 +1638,20 @@
 
     param[journal_dir] = theatre_topics
 
-    au < released ; Theatre Topics Volume 6 ; 6 >
-    au < released ; Theatre Topics Volume 7 ; 7 >
-    au < released ; Theatre Topics Volume 8 ; 8 >
-    au < released ; Theatre Topics Volume 9 ; 9 >
-    au < released ; Theatre Topics Volume 10 ; 10 >
-    au < released ; Theatre Topics Volume 11 ; 11 >
-    au < released ; Theatre Topics Volume 12 ; 12 >
-    au < released ; Theatre Topics Volume 13 ; 13 >
-    au < released ; Theatre Topics Volume 14 ; 14 >
-    au < released ; Theatre Topics Volume 15 ; 15 >
-    au < released ; Theatre Topics Volume 16 ; 16 >
-    au < released ; Theatre Topics Volume 17 ; 17 >
-    au < released ; Theatre Topics Volume 18 ; 18 >
-    au < released ; Theatre Topics Volume 19 ; 19 >
+    au < released ; 1996 ; Theatre Topics Volume 6 ; 6 >
+    au < released ; 1997 ; Theatre Topics Volume 7 ; 7 >
+    au < released ; 1998 ; Theatre Topics Volume 8 ; 8 >
+    au < released ; 1999 ; Theatre Topics Volume 9 ; 9 >
+    au < released ; 2000 ; Theatre Topics Volume 10 ; 10 >
+    au < released ; 2001 ; Theatre Topics Volume 11 ; 11 >
+    au < released ; 2002 ; Theatre Topics Volume 12 ; 12 >
+    au < released ; 2003 ; Theatre Topics Volume 13 ; 13 >
+    au < released ; 2004 ; Theatre Topics Volume 14 ; 14 >
+    au < released ; 2005 ; Theatre Topics Volume 15 ; 15 >
+    au < released ; 2006 ; Theatre Topics Volume 16 ; 16 >
+    au < released ; 2007 ; Theatre Topics Volume 17 ; 17 >
+    au < released ; 2008 ; Theatre Topics Volume 18 ; 18 >
+    au < released ; 2009 ; Theatre Topics Volume 19 ; 19 >
 
   }
 
@@ -1678,17 +1664,17 @@
 
     param[journal_dir] = theory_and_event
 
-    au < released ; Theory and Event Volume 1 ; 1 >
-    au < released ; Theory and Event Volume 2 ; 2 >
-    au < released ; Theory and Event Volume 3 ; 3 >
-    au < released ; Theory and Event Volume 4 ; 4 >
-    au < released ; Theory and Event Volume 5 ; 5 >
-    au < released ; Theory and Event Volume 6 ; 6 >
-    au < released ; Theory and Event Volume 7 ; 7 >
-    au < released ; Theory and Event Volume 8 ; 8 >
-    au < released ; Theory and Event Volume 9 ; 9 >
-    au < released ; Theory and Event Volume 10 ; 10 >
-    au < released ; Theory and Event Volume 11 ; 11 >
+    au < released ; 1997 ; Theory and Event Volume 1 ; 1 >
+    au < released ; 1998 ; Theory and Event Volume 2 ; 2 >
+    au < released ; 1999 ; Theory and Event Volume 3 ; 3 >
+    au < released ; 2000 ; Theory and Event Volume 4 ; 4 >
+    au < released ; 2001 ; Theory and Event Volume 5 ; 5 >
+    au < released ; 2002 ; Theory and Event Volume 6 ; 6 >
+    au < released ; 2003 ; Theory and Event Volume 7 ; 7 >
+    au < released ; 2004 ; Theory and Event Volume 8 ; 8 >
+    au < released ; 2005 ; Theory and Event Volume 9 ; 9 >
+    au < released ; 2006 ; Theory and Event Volume 10 ; 10 >
+    au < released ; 2007 ; Theory and Event Volume 11 ; 11 >
 
   }
 
@@ -1702,15 +1688,15 @@
 
     param[journal_dir] = transactions_of_the_american_philological_association
 
-    au < released ; Transactions of the American Philological Association Volume 130 ; 130 >
-    au < released ; Transactions of the American Philological Association Volume 131 ; 131 >
-    au < released ; Transactions of the American Philological Association Volume 132 ; 132 >
-    au < released ; Transactions of the American Philological Association Volume 133 ; 133 >
-    au < released ; Transactions of the American Philological Association Volume 134 ; 134 >
-    au < released ; Transactions of the American Philological Association Volume 135 ; 135 >
-    au < released ; Transactions of the American Philological Association Volume 136 ; 136 >
-    au < released ; Transactions of the American Philological Association Volume 137 ; 137 >
-    au < released ; Transactions of the American Philological Association Volume 138 ; 138 >
+    au < released ; 2000 ; Transactions of the American Philological Association Volume 130 ; 130 >
+    au < released ; 2001 ; Transactions of the American Philological Association Volume 131 ; 131 >
+    au < released ; 2002 ; Transactions of the American Philological Association Volume 132 ; 132 >
+    au < released ; 2003 ; Transactions of the American Philological Association Volume 133 ; 133 >
+    au < released ; 2004 ; Transactions of the American Philological Association Volume 134 ; 134 >
+    au < released ; 2005 ; Transactions of the American Philological Association Volume 135 ; 135 >
+    au < released ; 2006 ; Transactions of the American Philological Association Volume 136 ; 136 >
+    au < released ; 2007 ; Transactions of the American Philological Association Volume 137 ; 137 >
+    au < released ; 2008 ; Transactions of the American Philological Association Volume 138 ; 138 >
 
   }
   
@@ -1724,11 +1710,11 @@
 
     param[journal_dir] = victorian_periodicals_review
 
-    au < released ; Victorian Periodicals Review Volume 38 ; 38 >
-    au < released ; Victorian Periodicals Review Volume 39 ; 39 >
-    au < released ; Victorian Periodicals Review Volume 40 ; 40 >
-    au < released ; Victorian Periodicals Review Volume 41 ; 41 >
-    au < released ; Victorian Periodicals Review Volume 42 ; 42 >
+    au < released ; 2005 ; Victorian Periodicals Review Volume 38 ; 38 >
+    au < released ; 2006 ; Victorian Periodicals Review Volume 39 ; 39 >
+    au < released ; 2007 ; Victorian Periodicals Review Volume 40 ; 40 >
+    au < released ; 2008 ; Victorian Periodicals Review Volume 41 ; 41 >
+    au < released ; 2009 ; Victorian Periodicals Review Volume 42 ; 42 >
 
   }
   
@@ -1742,10 +1728,10 @@
 
     param[journal_dir] = wide_angle
 
-    au < released ; Wide Angle Volume 18 ; 18 >
-    au < released ; Wide Angle Volume 19 ; 19 >
-    au < released ; Wide Angle Volume 20 ; 20 >
-    au < released ; Wide Angle Volume 21 ; 21 >
+    au < released ; 1996 ; Wide Angle Volume 18 ; 18 >
+    au < released ; 1997 ; Wide Angle Volume 19 ; 19 >
+    au < released ; 1998 ; Wide Angle Volume 20 ; 20 >
+    au < released ; 1999 ; Wide Angle Volume 21 ; 21 >
 
   }
 
