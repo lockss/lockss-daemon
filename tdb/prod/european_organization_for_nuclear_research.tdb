@@ -14,23 +14,23 @@
 
     rights = openaccess
     plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
-    implicit < status ; name ; param[issue_no] >
+    implicit < status ; year ; name ; param[issue_no] >
 
     {  
       
       param[base_url] = http://library.cern.ch/
     
-      au < down ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
-      au < down ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
-      au < down ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
-      au < down ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
-      au < down ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
-      au < down ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
-      au < down ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
-      au < down ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
-      au < down ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
-      au < down ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
-      au < down ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < down ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
+      au < down ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
+      au < down ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
+      au < down ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
+      au < down ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
+      au < down ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
+      au < down ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
+      au < down ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
+      au < down ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
+      au < down ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < down ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
   
     }
 
@@ -38,10 +38,10 @@
       
       param[base_url] = http://library.web.cern.ch/ 
     
-      au < manifest ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
-      au < manifest ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
-      au < exists ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
-      au < exists ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
+      au < manifest ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < manifest ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
+      au < exists ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
       
     
     }

@@ -12,14 +12,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1400-0350
   
-      au < doNotProcess ; Journal of Coastal Conservation Volume 8 ; 8 >
-      au < superseded ; Journal of Coastal Conservation Volume 9 ; 009 >
-      au < doNotProcess ; Journal of Coastal Conservation Volume 10 ; 10 >
+      au < doNotProcess ; 2002 ; Journal of Coastal Conservation Volume 8 ; 8 >
+      au < superseded ; 2003 ; Journal of Coastal Conservation Volume 9 ; 009 >
+      au < doNotProcess ; 2004 ; Journal of Coastal Conservation Volume 10 ; 10 >
     }
 
     {
