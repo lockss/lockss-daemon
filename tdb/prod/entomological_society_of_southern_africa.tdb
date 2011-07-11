@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,9 +17,9 @@
     
     param[journal_code] = afen
   
-    au < exists ; African Entomology Volume 15 ; 15 >
-    au < exists ; African Entomology Volume 16 ; 16 >
-    au < exists ; African Entomology Volume 17 ; 17 >
+    au < exists ; 2007 ; African Entomology Volume 15 ; 15 >
+    au < exists ; 2008 ; African Entomology Volume 16 ; 16 >
+    au < exists ; 2009 ; African Entomology Volume 17 ; 17 >
 
   }
   
