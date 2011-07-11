@@ -15,15 +15,15 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.fasebj.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; The FASEB Journal Volume 19 ; 19 >
-    au < released ; The FASEB Journal Volume 20 ; 20 >
-    au < released ; The FASEB Journal Volume 21 ; 21 >
-    au < released ; The FASEB Journal Volume 22 ; 22 >
-    au < released ; The FASEB Journal Volume 23 ; 23 >
-    au < ready ; The FASEB Journal Volume 24 ; 24 >
-    au < wanted ; The FASEB Journal Volume 25 ; 25 >
+    au < released ; 2005 ; The FASEB Journal Volume 19 ; 19 >
+    au < released ; 2006 ; The FASEB Journal Volume 20 ; 20 >
+    au < released ; 2007 ; The FASEB Journal Volume 21 ; 21 >
+    au < released ; 2008 ; The FASEB Journal Volume 22 ; 22 >
+    au < released ; 2009 ; The FASEB Journal Volume 23 ; 23 >
+    au < ready ; 2010 ; The FASEB Journal Volume 24 ; 24 >
+    au < wanted ; 2011 ; The FASEB Journal Volume 25 ; 25 >
 
   }
 
