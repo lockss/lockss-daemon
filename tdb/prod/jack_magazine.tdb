@@ -19,8 +19,8 @@
     implicit < status ; year ; name ; param[volume_name] ; param[num_issue_range] >
     
     au < released ; 2000-2002 ; Jack Magazine Volume 1 ; 1 ; 1-4 >
-    au < released ; 2002-2008 ; Jack Magazine Volume 2 ; 2 ; 5-8 >
-    au < exists ; 2009 ; Jack Magazine Volume 3 ; 3 ; 9-10 >
+    au < released ; 2002-2004 ; Jack Magazine Volume 2 ; 2 ; 5-8 >
+    au < exists ; 2005-2009 ; Jack Magazine Volume 3 ; 3 ; 9-10 >
   
   }
   
