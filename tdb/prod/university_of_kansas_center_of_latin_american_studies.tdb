@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; name ; param[year] >
-  param[base_url] = https://journals.ku.edu/index.php/latr/
 
   {
   
@@ -14,6 +13,9 @@
       name = Latin American Theatre Review ;
       issn = 0023-8813 
     >
+    
+    param[base_url] = https://journals.ku.edu/
+    param[journal_id] = latr
 
     au < exists ; 1967-1968 ; Latin American Theatre Review Volume 1 ; 1 >
     au < exists ; 1968-1969 ; Latin American Theatre Review Volume 2 ; 2 >
