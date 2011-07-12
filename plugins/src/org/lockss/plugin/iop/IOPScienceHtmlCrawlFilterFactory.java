@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlFilterFactory.java,v 1.1 2011-07-12 20:12:34 thib_gc Exp $
+ * $Id: IOPScienceHtmlCrawlFilterFactory.java,v 1.1 2011-07-12 21:10:36 thib_gc Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 
-public class IOPScienceHtmlFilterFactory implements FilterFactory {
+public class IOPScienceHtmlCrawlFilterFactory implements FilterFactory {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -49,18 +49,8 @@ public class IOPScienceHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains the institution name and/or banner
-        HtmlNodeFilters.tagWithAttribute("div", "id", "banner"),
-        // Contains this year in the copyright notice
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        // Contains a jsessionid
-        HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
-        // Contains breadcrumbs to the most recently visited articles
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "javascripted"),
-        // Contains variable links to other content ("users also read", "related review articles", etc.)
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"),
-        // Contains variable ads, promos, etc.
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tacticalBanners"),
+        // These variants are not usefully different
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^\\?"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

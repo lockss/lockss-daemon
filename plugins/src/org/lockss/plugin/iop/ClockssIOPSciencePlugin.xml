@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -53,11 +53,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s$&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%s%s/%s/.*/cites$&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%s%s/%s/.*/(cites|refs/.*/doi)$&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%s%s/%s/&quot;, base_url, journal_issn, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.iop.IOPScienceHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.iop.IOPScienceHtmlCrawlFilterFactory</string>
   </entry>
 </map>
