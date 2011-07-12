@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,11 +17,12 @@
 
     param[journal_dir] = george_herbert_journal
 
-    au < released ; George Herbert Journal Volume 27 ; 27 >
-    au < released ; George Herbert Journal Volume 28 ; 28 >
-    au < released ; George Herbert Journal Volume 29 ; 29 >
-    au < released ; George Herbert Journal Volume 30 ; 30 >
-    au < released ; George Herbert Journal Volume 31 ; 31 >
+    au < released ; 2003-2004 ; George Herbert Journal Volume 27 ; 27 >
+    au < released ; 2004-2005 ; George Herbert Journal Volume 28 ; 28 >
+    au < released ; 2005-2006 ; George Herbert Journal Volume 29 ; 29 >
+    au < released ; 2006-2007 ; George Herbert Journal Volume 30 ; 30 >
+    au < released ; 2007-2008 ; George Herbert Journal Volume 31 ; 31 >
+    au < manifest ; 2008-2009 ; George Herbert Journal Volume 32 ; 32 >
 
   }
 
