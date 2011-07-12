@@ -7,6 +7,21 @@
   {
 
     title <
+      name = G3: Genes, Genomes, Genetics ;
+      eissn = 2160-1836 
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.g3journal.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 >
+    
+  }
+    
+  {
+
+    title <
       name = Genetics ;
       issn = 0016-6731 ;
       eissn = 1943-2631 ;
@@ -15,127 +30,128 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.genetics.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; Genetics Volume 64 ; 64 >
-    au < manifest ; Genetics Volume 65 ; 65 >
-    au < manifest ; Genetics Volume 66 ; 66 >
-    au < manifest ; Genetics Volume 67 ; 67 >
-    au < manifest ; Genetics Volume 68 ; 68 >
-    au < manifest ; Genetics Volume 69 ; 69 >
-    au < manifest ; Genetics Volume 70 ; 70 >
-    au < manifest ; Genetics Volume 71 ; 71 >
-    au < manifest ; Genetics Volume 72 ; 72 >
-    au < manifest ; Genetics Volume 73 ; 73 >
-    au < manifest ; Genetics Volume 74 ; 74 >
-    au < manifest ; Genetics Volume 75 ; 75 >
-    au < manifest ; Genetics Volume 76 ; 76 >
-    au < manifest ; Genetics Volume 77 ; 77 >
-    au < manifest ; Genetics Volume 78 ; 78 >
-    au < manifest ; Genetics Volume 79 ; 79 >
-    au < manifest ; Genetics Volume 80 ; 80 >
-    au < manifest ; Genetics Volume 81 ; 81 >
-    au < manifest ; Genetics Volume 82 ; 82 >
-    au < manifest ; Genetics Volume 83 ; 83 >
-    au < manifest ; Genetics Volume 84 ; 84 >
-    au < manifest ; Genetics Volume 85 ; 85 >
-    au < manifest ; Genetics Volume 86 ; 86 >
-    au < manifest ; Genetics Volume 87 ; 87 >
-    au < manifest ; Genetics Volume 88 ; 88 >
-    au < manifest ; Genetics Volume 89 ; 89 >
-    au < manifest ; Genetics Volume 90 ; 90 >
-    au < manifest ; Genetics Volume 91 ; 91 >
-    au < manifest ; Genetics Volume 92 ; 92 >
-    au < manifest ; Genetics Volume 93 ; 93 >
-    au < manifest ; Genetics Volume 94 ; 94 >
-    au < manifest ; Genetics Volume 95 ; 95 >
-    au < manifest ; Genetics Volume 96 ; 96 >
-    au < manifest ; Genetics Volume 97 ; 97 >
-    au < manifest ; Genetics Volume 98 ; 98 >
-    au < manifest ; Genetics Volume 99 ; 99 >
-    au < manifest ; Genetics Volume 100 ; 100 >
-    au < manifest ; Genetics Volume 101 ; 101 >
-    au < manifest ; Genetics Volume 102 ; 102 >
-    au < manifest ; Genetics Volume 103 ; 103 >
-    au < manifest ; Genetics Volume 104 ; 104 >
-    au < manifest ; Genetics Volume 105 ; 105 >
-    au < manifest ; Genetics Volume 106 ; 106 >
-    au < manifest ; Genetics Volume 107 ; 107 >
-    au < manifest ; Genetics Volume 108 ; 108 >
-    au < manifest ; Genetics Volume 109 ; 109 >
-    au < manifest ; Genetics Volume 110 ; 110 >
-    au < manifest ; Genetics Volume 111 ; 111 >
-    au < manifest ; Genetics Volume 112 ; 112 >
-    au < manifest ; Genetics Volume 113 ; 113 >
-    au < manifest ; Genetics Volume 114 ; 114 >
-    au < manifest ; Genetics Volume 115 ; 115 >
-    au < manifest ; Genetics Volume 116 ; 116 >
-    au < manifest ; Genetics Volume 117 ; 117 >
-    au < manifest ; Genetics Volume 118 ; 118 >
-    au < manifest ; Genetics Volume 119 ; 119 >
-    au < manifest ; Genetics Volume 120 ; 120 >
-    au < manifest ; Genetics Volume 121 ; 121 >
-    au < manifest ; Genetics Volume 122 ; 122 >
-    au < manifest ; Genetics Volume 123 ; 123 >
-    au < manifest ; Genetics Volume 124 ; 124 >
-    au < manifest ; Genetics Volume 125 ; 125 >
-    au < manifest ; Genetics Volume 126 ; 126 >
-    au < manifest ; Genetics Volume 127 ; 127 >
-    au < manifest ; Genetics Volume 128 ; 128 >
-    au < manifest ; Genetics Volume 129 ; 129 >
-    au < manifest ; Genetics Volume 130 ; 130 >
-    au < manifest ; Genetics Volume 131 ; 131 >
-    au < manifest ; Genetics Volume 132 ; 132 >
-    au < manifest ; Genetics Volume 133 ; 133 >
-    au < manifest ; Genetics Volume 134 ; 134 >
-    au < manifest ; Genetics Volume 135 ; 135 >
-    au < manifest ; Genetics Volume 136 ; 136 >
-    au < manifest ; Genetics Volume 137 ; 137 >
-    au < manifest ; Genetics Volume 138 ; 138 >
-    au < manifest ; Genetics Volume 139 ; 139 >
-    au < manifest ; Genetics Volume 140 ; 140 >
-    au < manifest ; Genetics Volume 141 ; 141 >
-    au < manifest ; Genetics Volume 142 ; 142 >
-    au < manifest ; Genetics Volume 143 ; 143 >
-    au < manifest ; Genetics Volume 144 ; 144 >
-    au < manifest ; Genetics Volume 145 ; 145 >
-    au < manifest ; Genetics Volume 146 ; 146 >
-    au < manifest ; Genetics Volume 147 ; 147 >
-    au < manifest ; Genetics Volume 148 ; 148 >
-    au < manifest ; Genetics Volume 149 ; 149 >
-    au < manifest ; Genetics Volume 150 ; 150 >
-    au < manifest ; Genetics Volume 151 ; 151 >
-    au < manifest ; Genetics Volume 152 ; 152 >
-    au < manifest ; Genetics Volume 153 ; 153 >
-    au < manifest ; Genetics Volume 154 ; 154 >
-    au < manifest ; Genetics Volume 155 ; 155 >
-    au < manifest ; Genetics Volume 156 ; 156 >
-    au < manifest ; Genetics Volume 157 ; 157 >
-    au < manifest ; Genetics Volume 158 ; 158 >
-    au < manifest ; Genetics Volume 159 ; 159 >
-    au < manifest ; Genetics Volume 160 ; 160 >
-    au < manifest ; Genetics Volume 161 ; 161 >
-    au < manifest ; Genetics Volume 162 ; 162 >
-    au < manifest ; Genetics Volume 163 ; 163 >
-    au < manifest ; Genetics Volume 164 ; 164 >
-    au < manifest ; Genetics Volume 165 ; 165 >
-    au < manifest ; Genetics Volume 166 ; 166 >
-    au < manifest ; Genetics Volume 167 ; 167 >
-    au < manifest ; Genetics Volume 168 ; 168 >
-    au < manifest ; Genetics Volume 169 ; 169 >
-    au < manifest ; Genetics Volume 170 ; 170 >
-    au < manifest ; Genetics Volume 171 ; 171 >
-    au < manifest ; Genetics Volume 172 ; 172 >
-    au < manifest ; Genetics Volume 173 ; 173 >
-    au < manifest ; Genetics Volume 174 ; 174 >
-    au < manifest ; Genetics Volume 175 ; 175 >
-    au < manifest ; Genetics Volume 176 ; 176 >
-    au < manifest ; Genetics Volume 177 ; 177 >
-    au < manifest ; Genetics Volume 178 ; 178 >
-    au < manifest ; Genetics Volume 179 ; 179 >
-    au < manifest ; Genetics Volume 180 ; 180 >
-    au < manifest ; Genetics Volume 181 ; 181 >
-    au < manifest ; Genetics Volume 182 ; 182 >
+    au < manifest ; 1970 ; Genetics Volume 64 ; 64 >
+    au < manifest ; 1970 ; Genetics Volume 65 ; 65 >
+    au < manifest ; 1970 ; Genetics Volume 66 ; 66 >
+    au < manifest ; 1971 ; Genetics Volume 67 ; 67 >
+    au < manifest ; 1971 ; Genetics Volume 68 ; 68 >
+    au < manifest ; 1971 ; Genetics Volume 69 ; 69 >
+    au < manifest ; 1972 ; Genetics Volume 70 ; 70 >
+    au < manifest ; 1972 ; Genetics Volume 71 ; 71 >
+    au < manifest ; 1972 ; Genetics Volume 72 ; 72 >
+    au < manifest ; 1973 ; Genetics Volume 73 ; 73 >
+    au < manifest ; 1973 ; Genetics Volume 74 ; 74 >
+    au < manifest ; 1973 ; Genetics Volume 75 ; 75 >
+    au < manifest ; 1974 ; Genetics Volume 76 ; 76 >
+    au < manifest ; 1974 ; Genetics Volume 77 ; 77 >
+    au < manifest ; 1974 ; Genetics Volume 78 ; 78 >
+    au < manifest ; 1975 ; Genetics Volume 79 ; 79 >
+    au < manifest ; 1975 ; Genetics Volume 80 ; 80 >
+    au < manifest ; 1975 ; Genetics Volume 81 ; 81 >
+    au < manifest ; 1976 ; Genetics Volume 82 ; 82 >
+    au < manifest ; 1976 ; Genetics Volume 83 ; 83 >
+    au < manifest ; 1976 ; Genetics Volume 84 ; 84 >
+    au < manifest ; 1977 ; Genetics Volume 85 ; 85 >
+    au < manifest ; 1977 ; Genetics Volume 86 ; 86 >
+    au < manifest ; 1977 ; Genetics Volume 87 ; 87 >
+    au < manifest ; 1978 ; Genetics Volume 88 ; 88 >
+    au < manifest ; 1978 ; Genetics Volume 89 ; 89 >
+    au < manifest ; 1978 ; Genetics Volume 90 ; 90 >
+    au < manifest ; 1979 ; Genetics Volume 91 ; 91 >
+    au < manifest ; 1979 ; Genetics Volume 92 ; 92 >
+    au < manifest ; 1979 ; Genetics Volume 93 ; 93 >
+    au < manifest ; 1980 ; Genetics Volume 94 ; 94 >
+    au < manifest ; 1980 ; Genetics Volume 95 ; 95 >
+    au < manifest ; 1980 ; Genetics Volume 96 ; 96 >
+    au < manifest ; 1981 ; Genetics Volume 97 ; 97 >
+    au < manifest ; 1981 ; Genetics Volume 98 ; 98 >
+    au < manifest ; 1981 ; Genetics Volume 99 ; 99 >
+    au < manifest ; 1982 ; Genetics Volume 100 ; 100 >
+    au < manifest ; 1982 ; Genetics Volume 101 ; 101 >
+    au < manifest ; 1982 ; Genetics Volume 102 ; 102 >
+    au < manifest ; 1983 ; Genetics Volume 103 ; 103 >
+    au < manifest ; 1983 ; Genetics Volume 104 ; 104 >
+    au < manifest ; 1983 ; Genetics Volume 105 ; 105 >
+    au < manifest ; 1984 ; Genetics Volume 106 ; 106 >
+    au < manifest ; 1984 ; Genetics Volume 107 ; 107 >
+    au < manifest ; 1984 ; Genetics Volume 108 ; 108 >
+    au < manifest ; 1985 ; Genetics Volume 109 ; 109 >
+    au < manifest ; 1985 ; Genetics Volume 110 ; 110 >
+    au < manifest ; 1985 ; Genetics Volume 111 ; 111 >
+    au < manifest ; 1986 ; Genetics Volume 112 ; 112 >
+    au < manifest ; 1986 ; Genetics Volume 113 ; 113 >
+    au < manifest ; 1986 ; Genetics Volume 114 ; 114 >
+    au < manifest ; 1987 ; Genetics Volume 115 ; 115 >
+    au < manifest ; 1987 ; Genetics Volume 116 ; 116 >
+    au < manifest ; 1987 ; Genetics Volume 117 ; 117 >
+    au < manifest ; 1988 ; Genetics Volume 118 ; 118 >
+    au < manifest ; 1988 ; Genetics Volume 119 ; 119 >
+    au < manifest ; 1988 ; Genetics Volume 120 ; 120 >
+    au < manifest ; 1989 ; Genetics Volume 121 ; 121 >
+    au < manifest ; 1989 ; Genetics Volume 122 ; 122 >
+    au < manifest ; 1989 ; Genetics Volume 123 ; 123 >
+    au < manifest ; 1990 ; Genetics Volume 124 ; 124 >
+    au < manifest ; 1990 ; Genetics Volume 125 ; 125 >
+    au < manifest ; 1990 ; Genetics Volume 126 ; 126 >
+    au < manifest ; 1991 ; Genetics Volume 127 ; 127 >
+    au < manifest ; 1991 ; Genetics Volume 128 ; 128 >
+    au < manifest ; 1991 ; Genetics Volume 129 ; 129 >
+    au < manifest ; 1992 ; Genetics Volume 130 ; 130 >
+    au < manifest ; 1992 ; Genetics Volume 131 ; 131 >
+    au < manifest ; 1992 ; Genetics Volume 132 ; 132 >
+    au < manifest ; 1993 ; Genetics Volume 133 ; 133 >
+    au < manifest ; 1993 ; Genetics Volume 134 ; 134 >
+    au < manifest ; 1993 ; Genetics Volume 135 ; 135 >
+    au < manifest ; 1994 ; Genetics Volume 136 ; 136 >
+    au < manifest ; 1994 ; Genetics Volume 137 ; 137 >
+    au < manifest ; 1994 ; Genetics Volume 138 ; 138 >
+    au < manifest ; 1995 ; Genetics Volume 139 ; 139 >
+    au < manifest ; 1995 ; Genetics Volume 140 ; 140 >
+    au < manifest ; 1995 ; Genetics Volume 141 ; 141 >
+    au < manifest ; 1996 ; Genetics Volume 142 ; 142 >
+    au < manifest ; 1996 ; Genetics Volume 143 ; 143 >
+    au < manifest ; 1996 ; Genetics Volume 144 ; 144 >
+    au < manifest ; 1997 ; Genetics Volume 145 ; 145 >
+    au < manifest ; 1997 ; Genetics Volume 146 ; 146 >
+    au < manifest ; 1997 ; Genetics Volume 147 ; 147 >
+    au < manifest ; 1998 ; Genetics Volume 148 ; 148 >
+    au < manifest ; 1998 ; Genetics Volume 149 ; 149 >
+    au < manifest ; 1998 ; Genetics Volume 150 ; 150 >
+    au < manifest ; 1999 ; Genetics Volume 151 ; 151 >
+    au < manifest ; 1999 ; Genetics Volume 152 ; 152 >
+    au < manifest ; 1999 ; Genetics Volume 153 ; 153 >
+    au < manifest ; 2000 ; Genetics Volume 154 ; 154 >
+    au < manifest ; 2000 ; Genetics Volume 155 ; 155 >
+    au < manifest ; 2000 ; Genetics Volume 156 ; 156 >
+    au < manifest ; 2001 ; Genetics Volume 157 ; 157 >
+    au < manifest ; 2001 ; Genetics Volume 158 ; 158 >
+    au < manifest ; 2001 ; Genetics Volume 159 ; 159 >
+    au < manifest ; 2002 ; Genetics Volume 160 ; 160 >
+    au < manifest ; 2002 ; Genetics Volume 161 ; 161 >
+    au < manifest ; 2002 ; Genetics Volume 162 ; 162 >
+    au < manifest ; 2003 ; Genetics Volume 163 ; 163 >
+    au < manifest ; 2003 ; Genetics Volume 164 ; 164 >
+    au < manifest ; 2003 ; Genetics Volume 165 ; 165 >
+    au < manifest ; 2004 ; Genetics Volume 166 ; 166 >
+    au < manifest ; 2004 ; Genetics Volume 167 ; 167 >
+    au < manifest ; 2004 ; Genetics Volume 168 ; 168 >
+    au < manifest ; 2005 ; Genetics Volume 169 ; 169 >
+    au < manifest ; 2005 ; Genetics Volume 170 ; 170 >
+    au < manifest ; 2005 ; Genetics Volume 171 ; 171 >
+    au < manifest ; 2006 ; Genetics Volume 172 ; 172 >
+    au < manifest ; 2006 ; Genetics Volume 173 ; 173 >
+    au < manifest ; 2006 ; Genetics Volume 174 ; 174 >
+    au < manifest ; 2007 ; Genetics Volume 175 ; 175 >
+    au < manifest ; 2007 ; Genetics Volume 176 ; 176 >
+    au < manifest ; 2007 ; Genetics Volume 177 ; 177 >
+    au < manifest ; 2008 ; Genetics Volume 178 ; 178 >
+    au < manifest ; 2008 ; Genetics Volume 179 ; 179 >
+    au < manifest ; 2008 ; Genetics Volume 180 ; 180 >
+    au < manifest ; 2009 ; Genetics Volume 181 ; 181 >
+    au < manifest ; 2009 ; Genetics Volume 182 ; 182 >
+    au < manifest ; 2009 ; Genetics Volume 183 ; 183 >
 
   }
 
