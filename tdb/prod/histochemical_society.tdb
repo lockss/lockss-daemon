@@ -18,25 +18,25 @@
 
       pluginSuffix = HighWirePlugin
       param[base_url] = http://www.jhc.org/
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       
-      au < down ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < down ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < down ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < down ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
 
     }
 
     {
 
       param[base_url] = http://www.jhc.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < HighWireStrVolPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-      au < HighWirePressPlugin ; doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-      au < HighWireStrVolPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+      au < HighWirePressPlugin ; doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+      au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
 
     }
 
@@ -44,17 +44,17 @@
     
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://jhc.sagepub.com/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       comment[uh] = This is probably wrong, the publisher should now be SAGE
 
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+      au < doNotProcess ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < doNotProcess ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+      au < doNotProcess ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < doNotProcess ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+      au < doNotProcess ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < doNotProcess ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+      au < doNotProcess ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
 
     }
 
