@@ -212,6 +212,7 @@
 	<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
 	<value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
 	<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
+        <Value>org.lockss.plugin.iop.ClockssIOPSciencePlugin</value>
       </list>
     </property>
 
