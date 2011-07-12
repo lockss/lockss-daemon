@@ -4,6 +4,10 @@
   >
 
   {
+    comment[0] = missing manifests see roundup issue 3601
+  } 
+
+  {
     title <
       name = International Journal of Systematic and Evolutionary Microbiology ;
       issn = 1466-5026 ;
@@ -13,7 +17,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -93,7 +97,18 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://vir.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 2005 ; Journal of General Virology Volume 86 ; 86 >
+      au < down ; 2006 ; Journal of General Virology Volume 87 ; 87 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://vir.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -182,8 +197,8 @@
       au < exists ; 2002 ; Journal of General Virology Volume 83 ; 83 >
       au < exists ; 2003 ; Journal of General Virology Volume 84 ; 84 >
       au < exists ; 2004 ; Journal of General Virology Volume 85 ; 85 >
-      au < released ; 2005 ; Journal of General Virology Volume 86 ; 86 >
-      au < released ; 2006 ; Journal of General Virology Volume 87 ; 87 >
+      au < manifest ; 2005 ; Journal of General Virology Volume 86 ; 86 >
+      au < manifest ; 2006 ; Journal of General Virology Volume 87 ; 87 >
       au < manifest ; 2007 ; Journal of General Virology Volume 88 ; 88 >
       au < manifest ; 2008 ; Journal of General Virology Volume 89 ; 89 >
       au < manifest ; 2009 ; Journal of General Virology Volume 90 ; 90 >
@@ -203,8 +218,18 @@
     >
 
     {
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://jmm.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      au < down ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 >
+      au < down ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jmm.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -261,8 +286,8 @@
       au < exists ; 2002 ; Journal of Medical Microbiology Volume 51 ; 51 >
       au < exists ; 2003 ; Journal of Medical Microbiology Volume 52 ; 52 >
       au < exists ; 2004 ; Journal of Medical Microbiology Volume 53 ; 53 >
-      au < released ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 >
-      au < released ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 >
+      au < manifest ; 2005 ; Journal of Medical Microbiology Volume 54 ; 54 >
+      au < manifest ; 2006 ; Journal of Medical Microbiology Volume 55 ; 55 >
       au < manifest ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 >
       au < manifest ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 >
       au < manifest ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 >
@@ -283,7 +308,18 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://mic.sgmjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < down ; 2005 ; Microbiology Volume 151 ; 151 >
+      au < down ; 2006 ; Microbiology Volume 152 ; 152 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://mic.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -437,8 +473,8 @@
       au < exists ; 2002 ; Microbiology Volume 148 ; 148 >
       au < exists ; 2003 ; Microbiology Volume 149 ; 149 >
       au < exists ; 2004 ; Microbiology Volume 150 ; 150 >
-      au < released ; 2005 ; Microbiology Volume 151 ; 151 >
-      au < released ; 2006 ; Microbiology Volume 152 ; 152 >
+      au < manifest ; 2005 ; Microbiology Volume 151 ; 151 >
+      au < manifest ; 2006 ; Microbiology Volume 152 ; 152 >
       au < manifest ; 2007 ; Microbiology Volume 153 ; 153 >
       au < manifest ; 2008 ; Microbiology Volume 154 ; 154 >
       au < manifest ; 2009 ; Microbiology Volume 155 ; 155 >
