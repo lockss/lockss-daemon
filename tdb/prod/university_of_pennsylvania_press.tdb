@@ -9,6 +9,20 @@
 
   {
     title <
+      name = Change Over Time ;
+      issn = 2153-053X ;
+      eissn = 2153-0548 ;
+      issnl = 2153-053X
+    >
+
+    param[journal_dir] = change_over_time
+
+    au < manifest ; 2011 ; Change Over Time Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Dissent ;
       issn = 0012-3846 ;
       eissn = 1946-0910 ;
