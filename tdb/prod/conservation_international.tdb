@@ -11,9 +11,9 @@
   {
     title <
       name = Advances in Applied Biodiversity Science
-
     >
     
+    comment[aabs_issn] = There is no issn for this title which appears to be a serial book. Each AU has an associated isbn.
     param[journal_code] = aabs
   
     au < exists ; 2003 ; Advances in Applied Biodiversity Science 2003 ; 2003 >
