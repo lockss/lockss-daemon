@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1043-4534
   
-      au < doNotProcess ; Harvard Papers in Botany Volume 10 ; 10 >
-      au < doNotProcess ; Harvard Papers in Botany Volume 11 ; 11 >
-      au < doNotProcess ; Harvard Papers in Botany Volume 12 ; 12 >
+      au < doNotProcess ; 2005 ; Harvard Papers in Botany Volume 10 ; 10 >
+      au < doNotProcess ; 2006-2007 ; Harvard Papers in Botany Volume 11 ; 11 >
+      au < doNotProcess ; 2007 ; Harvard Papers in Botany Volume 12 ; 12 >
     }
 
     {

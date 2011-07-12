@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -17,7 +17,7 @@
 
     param[journal_dir] = harvard_journal_of_asiatic_studies
 
-    au < released ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
+    au < released ; 2009 ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
 
   }
 

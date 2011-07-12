@@ -13,12 +13,12 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-9698
   
-      au < doNotProcess ; Breviora Volume 512 ; 512 >
+      au < doNotProcess ; 2004 ; Breviora Volume 512 ; 512 >
     }
 
   }
@@ -33,13 +33,13 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0027-4100
   
-      au < doNotProcess ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
-      au < doNotProcess ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 >
+      au < doNotProcess ; 2003-2007 ; Bulletin of the Museum of Comparative Zoology Volume 158 ; 158 >
+      au < doNotProcess ; 2007-2009 ; Bulletin of the Museum of Comparative Zoology Volume 159 ; 159 >
     }
 
     {

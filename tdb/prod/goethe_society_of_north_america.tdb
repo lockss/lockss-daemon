@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -19,9 +19,24 @@
 
     param[journal_dir] = goethe_yearbook
 
-    au < released ; Goethe Yearbook Volume 15 ; 15 >
-    au < released ; Goethe Yearbook Volume 16 ; 16 >
-    au < released ; Goethe Yearbook Volume 17 ; 17 >
+    au < manifest ; 1982 ; Goethe Yearbook Volume 1 ; 1 >
+    au < manifest ; 1984 ; Goethe Yearbook Volume 2 ; 2 >
+    au < manifest ; 1986 ; Goethe Yearbook Volume 3 ; 3 >
+    au < manifest ; 1988 ; Goethe Yearbook Volume 4 ; 4 >
+    au < manifest ; 1990 ; Goethe Yearbook Volume 5 ; 5 >
+    au < manifest ; 1992 ; Goethe Yearbook Volume 6 ; 6 >
+    au < manifest ; 1994 ; Goethe Yearbook Volume 7 ; 7 >
+    au < manifest ; 1996 ; Goethe Yearbook Volume 8 ; 8 >
+    au < manifest ; 1999 ; Goethe Yearbook Volume 9 ; 9 >
+    au < manifest ; 2001 ; Goethe Yearbook Volume 10 ; 10 >
+    au < manifest ; 2002 ; Goethe Yearbook Volume 11 ; 11 >
+    au < manifest ; 2004 ; Goethe Yearbook Volume 12 ; 12 >
+    au < manifest ; 2005 ; Goethe Yearbook Volume 13 ; 13 >
+    au < manifest ; 2006 ; Goethe Yearbook Volume 14 ; 14 >
+    au < released ; 2008 ; Goethe Yearbook Volume 15 ; 15 >
+    au < released ; 2009 ; Goethe Yearbook Volume 16 ; 16 >
+    au < released ; 2010 ; Goethe Yearbook Volume 17 ; 17 >
+    au < manifest ; 2011 ; Goethe Yearbook Volume 18 ; 18 >
 
   }
 
