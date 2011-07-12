@@ -13,17 +13,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0018-0831
   
-      au < doNotProcess ; Herpetologica Volume 58 ; 58 >
-      au < doNotProcess ; Herpetologica Volume 59 ; 59 >
-      au < doNotProcess ; Herpetologica Volume 60 ; 60 >
-      au < superseded ; Herpetologica Volume 61 ; 061 >
-      au < doNotProcess ; Herpetologica Volume 62 ; 62 >
-      au < doNotProcess ; Herpetologica Volume 63 ; 63 >
+      au < doNotProcess ; 2002 ; Herpetologica Volume 58 ; 58 >
+      au < doNotProcess ; 2003 ; Herpetologica Volume 59 ; 59 >
+      au < doNotProcess ; 2004 ; Herpetologica Volume 60 ; 60 >
+      au < superseded ; 2005 ; Herpetologica Volume 61 ; 061 >
+      au < doNotProcess ; 2006 ; Herpetologica Volume 62 ; 62 >
+      au < doNotProcess ; 2007 ; Herpetologica Volume 63 ; 63 >
     }
 
   }
@@ -38,16 +38,16 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0733-1347
   
-      au < doNotProcess ; Herpetological Monographs Volume 16 ; 16 >
-      au < doNotProcess ; Herpetological Monographs Volume 17 ; 17 >
-      au < superseded ; Herpetological Monographs Volume 18 ; 018 >
-      au < doNotProcess ; Herpetological Monographs Volume 19 ; 19 >
-      au < doNotProcess ; Herpetological Monographs Volume 20 ; 20 >
+      au < doNotProcess ; 2002 ; Herpetological Monographs Volume 16 ; 16 >
+      au < doNotProcess ; 2003 ; Herpetological Monographs Volume 17 ; 17 >
+      au < superseded ; 2004 ; Herpetological Monographs Volume 18 ; 018 >
+      au < doNotProcess ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
+      au < doNotProcess ; 2006 ; Herpetological Monographs Volume 20 ; 20 >
     }
 
     {
