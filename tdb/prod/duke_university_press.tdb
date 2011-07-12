@@ -318,6 +318,26 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
   {
 
     title <
+      name = East Asian Science, Technology and Society: an International Journal ;
+      issn = 1875-2160 ;
+      eissn = 1875-2152 
+    >
+
+    {
+    
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://easts.dukejournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
+      
+      au < HighWirePressPlugin ; manifest ; 2011 ; East Asian Science, Technology and Society: an International Journal Volume 5 ; 5 >
+
+    }
+    
+  }
+
+  {
+
+    title <
       name = Eighteenth-Century Life ;
       issn = 0098-2601 ;
       eissn = 1086-3192 ;
