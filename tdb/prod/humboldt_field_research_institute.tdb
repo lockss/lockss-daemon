@@ -13,19 +13,19 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1092-6194
   
-      au < doNotProcess ; Northeastern Naturalist Volume 7 ; 7 >
-      au < doNotProcess ; Northeastern Naturalist Volume 8 ; 8 >
-      au < doNotProcess ; Northeastern Naturalist Volume 9 ; 9 >
-      au < doNotProcess ; Northeastern Naturalist Volume 10 ; 10 >
-      au < superseded ; Northeastern Naturalist Volume 11 ; 011 >
-      au < doNotProcess ; Northeastern Naturalist Volume 12 ; 12 >
-      au < doNotProcess ; Northeastern Naturalist Volume 13 ; 13 >
-      au < doNotProcess ; Northeastern Naturalist Volume 14 ; 14 >
+      au < doNotProcess ; 2000 ; Northeastern Naturalist Volume 7 ; 7 >
+      au < doNotProcess ; 2001 ; Northeastern Naturalist Volume 8 ; 8 >
+      au < doNotProcess ; 2002 ; Northeastern Naturalist Volume 9 ; 9 >
+      au < doNotProcess ; 2003 ; Northeastern Naturalist Volume 10 ; 10 >
+      au < superseded ; 2004 ; Northeastern Naturalist Volume 11 ; 011 >
+      au < doNotProcess ; 2005 ; Northeastern Naturalist Volume 12 ; 12 >
+      au < doNotProcess ; 2006 ; Northeastern Naturalist Volume 13 ; 13 >
+      au < doNotProcess ; 2007 ; Northeastern Naturalist Volume 14 ; 14 >
     }
 
   }
@@ -40,17 +40,17 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1528-7092
   
-      au < doNotProcess ; Southeastern Naturalist Volume 1 ; 1 >
-      au < doNotProcess ; Southeastern Naturalist Volume 2 ; 2 >
-      au < superseded ; Southeastern Naturalist Volume 3 ; 003 >
-      au < doNotProcess ; Southeastern Naturalist Volume 4 ; 4 >
-      au < doNotProcess ; Southeastern Naturalist Volume 5 ; 5 >
-      au < doNotProcess ; Southeastern Naturalist Volume 6 ; 6 >
+      au < doNotProcess ; 2002 ; Southeastern Naturalist Volume 1 ; 1 >
+      au < doNotProcess ; 2003 ; Southeastern Naturalist Volume 2 ; 2 >
+      au < superseded ; 2004 ; Southeastern Naturalist Volume 3 ; 003 >
+      au < doNotProcess ; 2005 ; Southeastern Naturalist Volume 4 ; 4 >
+      au < doNotProcess ; 2006 ; Southeastern Naturalist Volume 5 ; 5 >
+      au < doNotProcess ; 2007 ; Southeastern Naturalist Volume 6 ; 6 >
     }
 
     {
