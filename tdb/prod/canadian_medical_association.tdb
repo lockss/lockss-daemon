@@ -17,6 +17,23 @@
       param[base_url] = http://www.cmaj.ca/
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < down ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
+      au < down ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
+      au < down ; 2006 ; Canadian Medical Association Journal Volume 174 ; 174 >
+      au < down ; 2006 ; Canadian Medical Association Journal Volume 175 ; 175 >
+      au < down ; 2007 ; Canadian Medical Association Journal Volume 176 ; 176 >
+      au < down ; 2007 ; Canadian Medical Association Journal Volume 177 ; 177 >
+      au < down ; 2008 ; Canadian Medical Association Journal Volume 178 ; 178 >
+      au < down ; 2008 ; Canadian Medical Association Journal Volume 179 ; 179 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.cmaj.ca/
+      implicit < status ; year ; name ; param[volume_name] >
+
       au < exists ; 1966 ; Canadian Medical Association Journal Volume 94 ; 94 >
       au < exists ; 1966 ; Canadian Medical Association Journal Volume 95 ; 95 >
       au < exists ; 1967 ; Canadian Medical Association Journal Volume 96 ; 96 >
@@ -95,18 +112,12 @@
       au < exists ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
       au < exists ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
       au < exists ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
-      au < released ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
-      au < released ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
-      au < released ; 2006 ; Canadian Medical Association Journal Volume 174 ; 174 >
-      au < released ; 2006 ; Canadian Medical Association Journal Volume 175 ; 175 >
-      au < released ; 2007 ; Canadian Medical Association Journal Volume 176 ; 176 >
-      au < released ; 2007 ; Canadian Medical Association Journal Volume 177 ; 177 >
-      au < released ; 2008 ; Canadian Medical Association Journal Volume 178 ; 178 >
-      au < released ; 2008 ; Canadian Medical Association Journal Volume 179 ; 179 >
-      au < testing ; 2009 ; Canadian Medical Association Journal Volume 180 ; 180 >
-      au < testing ; 2009 ; Canadian Medical Association Journal Volume 181 ; 181 >
+      
+      au < manifest ; 2009 ; Canadian Medical Association Journal Volume 180 ; 180 >
+      au < manifest ; 2009 ; Canadian Medical Association Journal Volume 181 ; 181 >
       au < manifest ; 2010 ; Canadian Medical Association Journal Volume 182 ; 182 >
       au < manifest ; 2010 ; Canadian Medical Association Journal Volume 183 ; 183 >
+      
 
     }
 
