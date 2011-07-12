@@ -120,24 +120,6 @@
     au < released ; 2009 ; PLoS Pathogens Volume 5 ; 2009 >
 
   }
-  
-  
-  {
-    title <
-      name = PLoS Hub Clinical Trials
-
-    >
-
-    comment[plos0] = no manifest
-
-    param[base_url] = http://clinicaltrials.ploshubs.org/    
-    param[journal_id] = clinicalTrials
-
-    au < exists ; 2006 ; PLoS Clinical Trials Volume 1 ; 2006 >
-    au < exists ; 2007 ; PLoS Clinical Trials Volume 2 ; 2007 >
-    au < exists ; 2008 ; PLoS Clinical Trials Volume 3 ; 2008 >
-
-  }
 
   {
     title <
