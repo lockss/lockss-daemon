@@ -242,6 +242,21 @@ comment[fnr2008] = 502 Proxy Error
   {
 
     title <
+      name = Microbial Ecology in Health and Disease ;
+      issn = 0891-060X ;
+      eissn = 1651-2235
+    >
+
+    param[base_url] = http://www.microbecolhealthdis.net/
+    param[journal_id] = mehd
+
+    au < manifest ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 2011 >
+
+  }
+
+  {
+
+    title <
       name = Nano Reviews ;
       issn = 2000-5121 ;
       issnl = 2000-5121
@@ -283,6 +298,20 @@ comment[fnr2008] = 502 Proxy Error
 
       param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
       param[journal_id] = snp
+
+  }
+
+  {
+
+    title <
+      name = Pathobiology of Aging & Age-related Diseases ;
+      eissn = 2001-0001
+    >
+
+    param[base_url] = http://www.pathobiologyofaging.net/
+    param[journal_id] = pba
+
+    au < manifest ; 2011 ; Pathobiology of Aging & Age-related Diseases Volume 1 ; 2011 >
 
   }
 
