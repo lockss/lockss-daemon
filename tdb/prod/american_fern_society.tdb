@@ -13,18 +13,18 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0002-8444
   
-      au < superseded ; American Fern Journal Volume 91 ; 91 >
-      au < superseded ; American Fern Journal Volume 92 ; 92 >
-      au < superseded ; American Fern Journal Volume 93 ; 93 >
-      au < superseded ; American Fern Journal Volume 94 ; 94 >
-      au < superseded ; American Fern Journal Volume 95 ; 95 >
-      au < superseded ; American Fern Journal Volume 96 ; 96 >
-      au < superseded ; American Fern Journal Volume 97 ; 97 >
+      au < superseded ; 2001 ; American Fern Journal Volume 91 ; 91 >
+      au < superseded ; 2002 ; American Fern Journal Volume 92 ; 92 >
+      au < superseded ; 2003 ; American Fern Journal Volume 93 ; 93 >
+      au < superseded ; 2004 ; American Fern Journal Volume 94 ; 94 >
+      au < superseded ; 2005 ; American Fern Journal Volume 95 ; 95 >
+      au < superseded ; 2006 ; American Fern Journal Volume 96 ; 96 >
+      au < superseded ; 2007 ; American Fern Journal Volume 97 ; 97 >
     }
 
     {
