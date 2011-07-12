@@ -164,6 +164,20 @@ comment[fnr2008] = 502 Proxy Error
   {
 
     title <
+      name = Journal of Community Hospital Internal Medicine Perspectives ;
+      eissn = 2000-9666 
+    >
+
+    param[base_url] = http://www.jchimp.net/
+    param[journal_id] = jchimp
+
+    au < exists ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 2011 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Oral Microbiology ;
       eissn = 2000-2297
     >
