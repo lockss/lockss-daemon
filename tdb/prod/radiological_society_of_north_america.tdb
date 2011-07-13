@@ -1,103 +1,95 @@
-
 {
 
   publisher <
     name = Radiological Society of North America
   >
   
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
   {
-  
-    pluginPrefix = org.lockss.plugin.highwire.
-  
+
+    title <
+      name = RadioGraphics ;
+      issn = 0271-5333 ;
+      eissn = 1527-1323 ;
+      issnl = 0271-5333
+    >
+
     {
 
-      title <
-        name = RadioGraphics ;
-        issn = 0271-5333 ;
-        eissn = 1527-1323 ;
-        issnl = 0271-5333
-      >
+      param[base_url] = http://radiographics.rsnajnls.org/
 
-      {
-
-        param[base_url] = http://radiographics.rsnajnls.org/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-        au < HighWireStrVolPlugin ; down ; 2006 ; RadioGraphics Volume 26 ; 26 >
-
-      }
-
-      {
-
-        param[base_url] = http://radiographics.rsna.org/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-        au < HighWirePressH20Plugin ; released ; 2005 ; RadioGraphics Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; ready ; 2006 ; RadioGraphics Volume 26 ; 26 >
-        au < HighWirePressH20Plugin ; released ; 2007 ; RadioGraphics Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; RadioGraphics Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; released ; 2009 ; RadioGraphics Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; ready ; 2010 ; RadioGraphics Volume 30 ; 30 >
-        au < HighWirePressH20Plugin ; ready ; 2011 ; RadioGraphics Volume 31 ; 31 >
-
-      }
+      au < HighWireStrVolPlugin ; down ; 2006 ; RadioGraphics Volume 26 ; 26 >
 
     }
 
     {
-      title <
-        name = Radiology ;
-        issn = 0033-8419 ;
-        eissn = 1527-1315 ;
-        issnl = 0033-8419
-      >
 
-      {
+      param[base_url] = http://radiographics.rsna.org/
 
-        param[base_url] = http://radiology.rsnajnls.org/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-        au < HighWireStrVolPlugin ; down ; 2006 ; Radiology Volume 241 ; 241 >
-
-      }
-
-      {
-
-        param[base_url] = http://radiology.rsna.org/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-        au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 234 ; 234 >
-        au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 235 ; 235 >
-        au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 236 ; 236 >
-        au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 237 ; 237 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Radiology Volume 238 ; 238 >
-        au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 239 ; 239 >
-        au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 240 ; 240 >
-        au < HighWirePressH20Plugin ; ready ; 2006 ; Radiology Volume 241 ; 241 >
-        au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 242 ; 242 >
-        au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 243 ; 243 >
-        au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 244 ; 244 >
-        au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 245 ; 245 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 246 ; 246 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 247 ; 247 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 248 ; 248 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 249 ; 249 >
-        au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 250 ; 250 >
-        au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 251 ; 251 >
-        au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 252 ; 252 >
-        au < HighWirePressH20Plugin ; ready ; 2009 ; Radiology Volume 253 ; 253 >
-        au < HighWirePressH20Plugin ; ready ; 2010 ; Radiology Volume 254 ; 254 >
-        au < HighWirePressH20Plugin ; ready ; 2010 ; Radiology Volume 255 ; 255 >
-        au < HighWirePressH20Plugin ; ready ; 2010 ; Radiology Volume 256 ; 256 >
-        au < HighWirePressH20Plugin ; ready ; 2010 ; Radiology Volume 257 ; 257 >
-        au < HighWirePressH20Plugin ; ready ; 2011 ; Radiology Volume 258 ; 258 >
-        au < HighWirePressH20Plugin ; ready ; 2011 ; Radiology Volume 259 ; 259 >
-        
-      }
+      au < HighWirePressH20Plugin ; released ; 2005 ; RadioGraphics Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; RadioGraphics Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; RadioGraphics Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; RadioGraphics Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; RadioGraphics Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; RadioGraphics Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; RadioGraphics Volume 31 ; 31 >
 
     }
 
   }
 
-}
+  {
+    
+    title <
+      name = Radiology ;
+      issn = 0033-8419 ;
+      eissn = 1527-1315 ;
+      issnl = 0033-8419
+    >
 
+    {
+
+      param[base_url] = http://radiology.rsnajnls.org/
+
+      au < HighWireStrVolPlugin ; down ; 2006 ; Radiology Volume 241 ; 241 >
+
+    }
+
+    {
+
+      param[base_url] = http://radiology.rsna.org/
+
+      au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 234 ; 234 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 235 ; 235 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 236 ; 236 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Radiology Volume 237 ; 237 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Radiology Volume 238 ; 238 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 239 ; 239 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Radiology Volume 240 ; 240 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Radiology Volume 241 ; 241 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 242 ; 242 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 243 ; 243 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 244 ; 244 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Radiology Volume 245 ; 245 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 246 ; 246 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 247 ; 247 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 248 ; 248 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Radiology Volume 249 ; 249 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 250 ; 250 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 251 ; 251 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Radiology Volume 252 ; 252 >
+      au < HighWirePressH20Plugin ; releasing ; 2009 ; Radiology Volume 253 ; 253 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; Radiology Volume 254 ; 254 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; Radiology Volume 255 ; 255 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; Radiology Volume 256 ; 256 >
+      au < HighWirePressH20Plugin ; releasing ; 2010 ; Radiology Volume 257 ; 257 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Radiology Volume 258 ; 258 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Radiology Volume 259 ; 259 >
+        
+    }
+
+  }
+
+}
