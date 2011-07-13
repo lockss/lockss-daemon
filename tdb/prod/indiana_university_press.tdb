@@ -190,14 +190,15 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = bridges_a_jewish_feminists_journal
       implicit < status ; year ; name ; param[volume] >
+      
+      comment[urgent] = ceasing publication? (noted July 2011)
 
-      au < exists ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
       au < released ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
       au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
       au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
       au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
       au < ready ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
-      au < exists ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 ; 16 >
+      au < testing ; 2011 ; Bridges: A Jewish Feminist Journal Volume 16 ; 16 >
 
     }
 
