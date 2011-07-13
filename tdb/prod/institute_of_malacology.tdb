@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.bioone.org/
 
   {
@@ -17,9 +17,9 @@
     
     param[journal_code] = mala
   
-    au < exists ; Malacologia Volume 49 ; 49 >
-    au < exists ; Malacologia Volume 51 ; 51 >
-    au < exists ; Malacologia Volume 50 ; 50 >
+    au < exists ; 2006-2007 ; Malacologia Volume 49 ; 49 >
+    au < exists ; 2008 ; Malacologia Volume 50 ; 50 >
+    au < exists ; 2009 ; Malacologia Volume 51 ; 51 >
 
   }
   

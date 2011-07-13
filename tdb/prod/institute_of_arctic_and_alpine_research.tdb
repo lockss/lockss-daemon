@@ -12,16 +12,16 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1523-0430
   
-      au < doNotProcess ; Arctic, Antarctic, and Alpine Research Volume 35 ; 35 >
-      au < superseded ; Arctic, Antarctic, and Alpine Research Volume 36 ; 36 >
-      au < doNotProcess ; Arctic, Antarctic, and Alpine Research Volume 37 ; 37 >
-      au < doNotProcess ; Arctic, Antarctic, and Alpine Research Volume 38 ; 38 >
-      au < doNotProcess ; Arctic, Antarctic, and Alpine Research Volume 39 ; 39 >
+      au < doNotProcess ; 2003 ; Arctic, Antarctic, and Alpine Research Volume 35 ; 35 >
+      au < superseded ; 2004 ; Arctic, Antarctic, and Alpine Research Volume 36 ; 36 >
+      au < doNotProcess ; 2005 ; Arctic, Antarctic, and Alpine Research Volume 37 ; 37 >
+      au < doNotProcess ; 2006 ; Arctic, Antarctic, and Alpine Research Volume 38 ; 38 >
+      au < doNotProcess ; 2007 ; Arctic, Antarctic, and Alpine Research Volume 39 ; 39 >
     }
 
     {

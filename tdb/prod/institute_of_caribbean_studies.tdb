@@ -16,10 +16,10 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = caribbean_studies
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Caribbean Studies Volume 36 ; 36 >
-    au < released ; Caribbean Studies Volume 37 ; 37 >
+    au < released ; 2008 ; Caribbean Studies Volume 36 ; 36 >
+    au < released ; 2009 ; Caribbean Studies Volume 37 ; 37 >
 
   }
 
