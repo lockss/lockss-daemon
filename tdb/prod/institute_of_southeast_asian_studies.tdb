@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   {
 
@@ -19,10 +19,15 @@
 
     param[journal_dir] = asean_economic_bulletin
 
-    au < released ; ASEAN Economic Bulletin Volume 23 ; 23 >
-    au < released ; ASEAN Economic Bulletin Volume 24 ; 24 >
-    au < released ; ASEAN Economic Bulletin Volume 25 ; 25 >
-    au < released ; ASEAN Economic Bulletin Volume 26 ; 26 >
+    au < manifest ; 2003 ; ASEAN Economic Bulletin Volume 20 ; 20 >
+    au < manifest ; 2004 ; ASEAN Economic Bulletin Volume 21 ; 21 >
+    au < manifest ; 2005 ; ASEAN Economic Bulletin Volume 22 ; 22 >
+    au < released ; 2006 ; ASEAN Economic Bulletin Volume 23 ; 23 >
+    au < released ; 2007 ; ASEAN Economic Bulletin Volume 24 ; 24 >
+    au < released ; 2008 ; ASEAN Economic Bulletin Volume 25 ; 25 >
+    au < released ; 2009 ; ASEAN Economic Bulletin Volume 26 ; 26 >
+    au < manifest ; 2010 ; ASEAN Economic Bulletin Volume 27 ; 27 >
+    au < manifest ; 2011 ; ASEAN Economic Bulletin Volume 28 ; 28 >
 
   }
 
@@ -37,10 +42,10 @@
 
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
 
-    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
-    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
-    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
-    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
+    au < released ; 2006 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
+    au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
+    au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
+    au < released ; 2009 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
 
   }
 
@@ -53,12 +58,12 @@
       issnl = 0217-9520
     >
 
-    param[journal_dir] = ready_journal_of_social_issues_in_southeast_asia
+    param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia 
 
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
+    au < manifest ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
+    au < manifest ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
+    au < manifest ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
+    au < manifest ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
 
   }
 
@@ -72,8 +77,8 @@
 
     param[journal_dir] = southeast_asian_affairs
 
-    au < released ; Southeast Asian Affairs Volume 2008 ; 2008 >
-    au < released ; Southeast Asian Affairs Volume 2009 ; 2009 >
+    au < released ; 2008 ; Southeast Asian Affairs Volume 2008 ; 2008 >
+    au < released ; 2009 ; Southeast Asian Affairs Volume 2009 ; 2009 >
 
   }
 
