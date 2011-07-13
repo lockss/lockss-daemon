@@ -3,7 +3,7 @@
     name = Institute for Ethnographic Research
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,16 +18,16 @@
 
     param[journal_dir] = anthropological_quarterly
 
-    au < released ; Anthropological Quarterly Volume 73 ; 73 >
-    au < released ; Anthropological Quarterly Volume 74 ; 74 >
-    au < released ; Anthropological Quarterly Volume 75 ; 75 >
-    au < released ; Anthropological Quarterly Volume 76 ; 76 >
-    au < released ; Anthropological Quarterly Volume 77 ; 77 >
-    au < released ; Anthropological Quarterly Volume 78 ; 78 >
-    au < released ; Anthropological Quarterly Volume 79 ; 79 >
-    au < released ; Anthropological Quarterly Volume 80 ; 80 >
-    au < released ; Anthropological Quarterly Volume 81 ; 81 >
-    au < released ; Anthropological Quarterly Volume 82 ; 82 >
+    au < released ; 2000 ; Anthropological Quarterly Volume 73 ; 73 >
+    au < released ; 2001 ; Anthropological Quarterly Volume 74 ; 74 >
+    au < released ; 2002 ; Anthropological Quarterly Volume 75 ; 75 >
+    au < released ; 2003 ; Anthropological Quarterly Volume 76 ; 76 >
+    au < released ; 2004 ; Anthropological Quarterly Volume 77 ; 77 >
+    au < released ; 2005 ; Anthropological Quarterly Volume 78 ; 78 >
+    au < released ; 2006 ; Anthropological Quarterly Volume 79 ; 79 >
+    au < released ; 2007 ; Anthropological Quarterly Volume 80 ; 80 >
+    au < released ; 2008 ; Anthropological Quarterly Volume 81 ; 81 >
+    au < released ; 2009 ; Anthropological Quarterly Volume 82 ; 82 >
 
   }
 
