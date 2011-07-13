@@ -16,9 +16,44 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = hume_studies
-    implicit < status ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
-    au < released ; Hume Studies Volume 34 ; 34 >
+    au < manifest ; 1975 ; Hume Studies Volume 1  ; 1  >
+    au < manifest ; 1976 ; Hume Studies Volume 2  ; 2  >
+    au < manifest ; 1977 ; Hume Studies Volume 3  ; 3  >
+    au < manifest ; 1978 ; Hume Studies Volume 4  ; 4  >
+    au < manifest ; 1979 ; Hume Studies Volume 5  ; 5  >
+    au < manifest ; 1980 ; Hume Studies Volume 6  ; 6  >
+    au < manifest ; 1981 ; Hume Studies Volume 7  ; 7  >
+    au < manifest ; 1982 ; Hume Studies Volume 8  ; 8  >
+    au < manifest ; 1983 ; Hume Studies Volume 9  ; 9  >
+    au < manifest ; 1984 ; Hume Studies Volume 10 ; 10 >
+    au < manifest ; 1985 ; Hume Studies Volume 11 ; 11 >
+    au < manifest ; 1986 ; Hume Studies Volume 12 ; 12 >
+    au < manifest ; 1987 ; Hume Studies Volume 13 ; 13 >
+    au < manifest ; 1988 ; Hume Studies Volume 14 ; 14 >
+    au < manifest ; 1989 ; Hume Studies Volume 15 ; 15 >
+    au < manifest ; 1990 ; Hume Studies Volume 16 ; 16 >
+    au < manifest ; 1991 ; Hume Studies Volume 17 ; 17 >
+    au < manifest ; 1992 ; Hume Studies Volume 18 ; 18 >
+    au < manifest ; 1993 ; Hume Studies Volume 19 ; 19 >
+    au < manifest ; 1994 ; Hume Studies Volume 20 ; 20 >
+    au < manifest ; 1995 ; Hume Studies Volume 21 ; 21 >
+    au < manifest ; 1996 ; Hume Studies Volume 22 ; 22 >
+    au < manifest ; 1997 ; Hume Studies Volume 23 ; 23 >
+    au < manifest ; 1998 ; Hume Studies Volume 24 ; 24 >
+    au < manifest ; 1999 ; Hume Studies Volume 25 ; 25 >
+    au < manifest ; 2000 ; Hume Studies Volume 26 ; 26 >
+    au < manifest ; 2001 ; Hume Studies Volume 27 ; 27 >
+    au < manifest ; 2002 ; Hume Studies Volume 28 ; 28 >
+    au < manifest ; 2003 ; Hume Studies Volume 29 ; 29 >
+    au < manifest ; 2004 ; Hume Studies Volume 30 ; 30 >
+    au < manifest ; 2005 ; Hume Studies Volume 31 ; 31 >
+    au < manifest ; 2006 ; Hume Studies Volume 32 ; 32 >
+    au < manifest ; 2007 ; Hume Studies Volume 33 ; 33 >
+    au < released ; 2008 ; Hume Studies Volume 34 ; 34 >
+    au < manifest ; 2009 ; Hume Studies Volume 35 ; 35 >
+    au < manifest ; 2010 ; Hume Studies Volume 36 ; 36 >
 
   }
 
