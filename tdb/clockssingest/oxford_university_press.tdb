@@ -15786,6 +15786,23 @@
   }
 
   {
+    title <
+      name = Social Forces ;
+      issn = 0037-7732 ;
+      eissn = 1534-7605 ;
+      issnl = 0037-7732
+    >
+
+    param[base_url] = http://sf.oxfordjournals.org/
+    pluginPrefix = org.lockss.plugin.highwire.
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[new] = moving to OUP in 2011 with no content online yet
+
+    au < doesNotExist ; doesNotExist ; 2011 ; Social Forces Volume 89 ; 89 ; >
+
+  }
+ 
+  {
   
     title <
       name = Social History of Medicine ;
