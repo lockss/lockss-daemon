@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = International Society for the Study of Pilgrimage Art
+  >
+
+  plugin = needs.plugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://peregrinations.kenyon.edu/
+
+  {
+    title <
+      name = Peregrinations ;
+      eissn = 1554-8678 
+    >
+
+    au < exists ; 2002-2004 ; Peregrinations Volume 1 ; 1 >
+    au < exists ; 2005-2009 ; Peregrinations Volume 2 ; 2 >
+    au < exists ; 2010-2011 ; Peregrinations Volume 3 ; 3 >
+
+  }
+
+}

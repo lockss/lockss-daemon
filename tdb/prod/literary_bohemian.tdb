@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = The Literary Bohemian
+  >
+
+  plugin = needs.plugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://www.literarybohemian.com/
+
+  {
+    title <
+      name = The Literary Bohemian ;
+      issn = 2000–1460  
+    >
+
+    au < exists ; 2008 ; The Literary Bohemian Issue 1 ; 1 >
+    au < exists ; 2008 ; The Literary Bohemian Issue 2 ; 2 >
+    au < exists ; 2009 ; The Literary Bohemian Issue 3 ; 3 >    
+    au < exists ; 2009 ; The Literary Bohemian Issue 4 ; 4 > 
+    au < exists ; 2009 ; The Literary Bohemian Issue 5 ; 5 > 
+    au < exists ; 2009 ; The Literary Bohemian Issue 6 ; 6 > 
+    au < exists ; 2009 ; The Literary Bohemian Issue 7 ; 7 > 
+    au < exists ; 2010 ; The Literary Bohemian Issue 8 ; 8 > 
+    au < exists ; 2010 ; The Literary Bohemian Issue 9 ; 9 >
+    au < exists ; 2011 ; The Literary Bohemian Issue 10 ; 10 >
+    au < exists ; 2011 ; The Literary Bohemian Issue 11 ; 11 >
+
+  }
+
+}
