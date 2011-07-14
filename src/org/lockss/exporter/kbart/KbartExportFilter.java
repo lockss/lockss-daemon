@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.5 2011-02-26 21:40:30 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.6 2011-07-14 13:34:22 easyonthemayo Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import org.apache.commons.collections.comparators.ComparatorChain;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
@@ -193,18 +194,16 @@ public class KbartExportFilter {
   /**
    * Sort the titles by each of the fields specified; the first field is the primary
    * sort field, then subsequent fields are consulted if the previous does not result 
-   * in an absolute ordering. This method creates a <code>CompositeComparator</code>
-   * for the sorting.
+   * in an absolute ordering.
    * 
    * @param fields a list of fields to sort on
-   * @see org.lockss.exporter.kbart.CompositeComparator
    */
   private void sortTitlesByFields(List<Field> fields) {
     if (fields==null || fields.size()==0) return;
-    CompositeComparator<KbartTitle> cc = new CompositeComparator<KbartTitle>();
+    ComparatorChain cc = new ComparatorChain();
     for (Field f : fields) {
       Comparator<KbartTitle> minor = KbartTitleComparatorFactory.getComparator(f);
-      cc = cc.compose(minor);
+      cc.addComparator(minor);
     }
     log.debug("Sorting titles by "+cc);
     Collections.sort(this.titles, cc);

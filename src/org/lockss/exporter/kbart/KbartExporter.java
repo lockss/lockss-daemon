@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.8 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.9 2011-07-14 13:34:22 easyonthemayo Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public abstract class KbartExporter {
   
   /** Default encoding for output. */
   public static final String DEFAULT_ENCODING = "UTF-8";
-  /** Default encoding for output. */
+  /** Whether to auto flush the writer streams. */
   protected static final boolean AUTO_FLUSH = true;
   
   

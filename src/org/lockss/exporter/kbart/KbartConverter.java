@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.13 2011-06-27 17:26:10 pgust Exp $
+ * $Id: KbartConverter.java,v 1.14 2011-07-14 13:34:22 easyonthemayo Exp $
  */
 
 /*
@@ -35,15 +35,14 @@ package org.lockss.exporter.kbart;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Vector;
 import java.util.ArrayList;
+import org.apache.commons.collections.comparators.ComparatorChain;
 
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
-import org.lockss.plugin.AuUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
 
@@ -164,12 +163,17 @@ public class KbartConverter {
    * @param aus a list of TdbAu objects
    */
   private static void sortAus(List<TdbAu> aus) {
-    CompositeComparator<TdbAu> cc = 
+    /*CompositeComparator<TdbAu> cc = 
       new CompositeComparator<TdbAu>(TdbAuAlphanumericComparatorFactory.getVolumeComparator())
       .compose(TdbAuAlphanumericComparatorFactory.getLastDateComparator())
       .compose(TdbAuAlphanumericComparatorFactory.getFirstDateComparator())
       .compose(TdbAuAlphanumericComparatorFactory.getNameComparator())
-      ;
+      ;*/
+    ComparatorChain cc = 
+      new ComparatorChain(TdbAuAlphanumericComparatorFactory.getVolumeComparator());
+    cc.addComparator(TdbAuAlphanumericComparatorFactory.getLastDateComparator());
+    cc.addComparator(TdbAuAlphanumericComparatorFactory.getFirstDateComparator());
+    cc.addComparator(TdbAuAlphanumericComparatorFactory.getNameComparator());
     Collections.sort(aus, cc);
   }
 
