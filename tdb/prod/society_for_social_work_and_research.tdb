@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Society for Social Work and Research
+  >
+
+    {
+      title <
+        name = Journal of the Society for Social Work and Research (JSSWR) ;
+        eissn = 1948-822X ;
+        issnl = 1948-822X
+      >
+
+      param[base_url] = http://www.jsswr.org/
+	  plugin = needs.plugin
+      comment[platform] = new platform similar to OJS2
+      
+     }
+     
+}
+
