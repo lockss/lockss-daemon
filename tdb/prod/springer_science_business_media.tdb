@@ -1214,11 +1214,59 @@
       name = American Journal of Community Psychology ;
       issn = 0091-0562 ;
       eissn = 1573-2770 ;
-      issnl = 0091-0562 ;
-      placeholder = True
+      issnl = 0091-0562
     >
 
     param[journal_issn] = 0091-0562
+    attr[where] = content1a
+
+    au < manifest ; 1973 ; American Journal of Community Psychology Volume 1 ; 1 >
+    au < manifest ; 1974 ; American Journal of Community Psychology Volume 2 ; 2 >
+    au < manifest ; 1975 ; American Journal of Community Psychology Volume 3 ; 3 >
+    au < manifest ; 1976 ; American Journal of Community Psychology Volume 4 ; 4 >
+    au < manifest ; 1977 ; American Journal of Community Psychology Volume 5 ; 5 >
+    au < manifest ; 1978 ; American Journal of Community Psychology Volume 6 ; 6 >
+    au < manifest ; 1979 ; American Journal of Community Psychology Volume 7 ; 7 >
+    au < manifest ; 1980 ; American Journal of Community Psychology Volume 8 ; 8 >
+    au < manifest ; 1981 ; American Journal of Community Psychology Volume 9 ; 9 >
+    au < manifest ; 1982 ; American Journal of Community Psychology Volume 10 ; 10 >
+    au < manifest ; 1983 ; American Journal of Community Psychology Volume 11 ; 11 >
+    au < manifest ; 1984 ; American Journal of Community Psychology Volume 12 ; 12 >
+    au < manifest ; 1985 ; American Journal of Community Psychology Volume 13 ; 13 >
+    au < manifest ; 1986 ; American Journal of Community Psychology Volume 14 ; 14 >
+    au < manifest ; 1987 ; American Journal of Community Psychology Volume 15 ; 15 >
+    au < manifest ; 1988 ; American Journal of Community Psychology Volume 16 ; 16 >
+    au < manifest ; 1989 ; American Journal of Community Psychology Volume 17 ; 17 >
+    au < manifest ; 1990 ; American Journal of Community Psychology Volume 18 ; 18 >
+    au < manifest ; 1991 ; American Journal of Community Psychology Volume 19 ; 19 >
+    au < manifest ; 1992 ; American Journal of Community Psychology Volume 20 ; 20 >
+    au < manifest ; 1993 ; American Journal of Community Psychology Volume 21 ; 21 >
+    au < manifest ; 1994 ; American Journal of Community Psychology Volume 22 ; 22 >
+    au < manifest ; 1995 ; American Journal of Community Psychology Volume 23 ; 23 >
+    au < manifest ; 1996 ; American Journal of Community Psychology Volume 24 ; 24 >
+    au < manifest ; 1997 ; American Journal of Community Psychology Volume 25 ; 25 >
+    au < manifest ; 1998 ; American Journal of Community Psychology Volume 26 ; 26 >
+    au < manifest ; 1999 ; American Journal of Community Psychology Volume 27 ; 27 >
+    au < manifest ; 2000 ; American Journal of Community Psychology Volume 28 ; 28 >
+    au < manifest ; 2001 ; American Journal of Community Psychology Volume 29 ; 29 >
+    au < manifest ; 2002 ; American Journal of Community Psychology Volume 30 ; 30 >
+    au < manifest ; 2003 ; American Journal of Community Psychology Volume 31 ; 31 >
+    au < manifest ; 2003 ; American Journal of Community Psychology Volume 32 ; 32 >
+    au < manifest ; 2004 ; American Journal of Community Psychology Volume 33 ; 33 >
+    au < manifest ; 2004 ; American Journal of Community Psychology Volume 34 ; 34 >
+    au < manifest ; 2005 ; American Journal of Community Psychology Volume 35 ; 35 >
+    au < manifest ; 2005 ; American Journal of Community Psychology Volume 36 ; 36 >
+    au < testing ; 2006 ; American Journal of Community Psychology Volume 37 ; 37 >
+    au < testing ; 2006 ; American Journal of Community Psychology Volume 38 ; 38 >
+    au < testing ; 2007 ; American Journal of Community Psychology Volume 39 ; 39 >
+    au < testing ; 2007 ; American Journal of Community Psychology Volume 40 ; 40 >
+    au < testing ; 2008 ; American Journal of Community Psychology Volume 41 ; 41 >
+    au < testing ; 2008 ; American Journal of Community Psychology Volume 42 ; 42 >
+    au < testing ; 2009 ; American Journal of Community Psychology Volume 43 ; 43 >
+    au < testing ; 2009 ; American Journal of Community Psychology Volume 44 ; 44 >
+    au < testing ; 2010 ; American Journal of Community Psychology Volume 45 ; 45 >
+    au < testing ; 2010 ; American Journal of Community Psychology Volume 46 ; 46 >
+    au < testing ; 2011 ; American Journal of Community Psychology Volume 47 ; 47 >
 
   }
 
@@ -18514,30 +18562,30 @@
     au < manifest ; 1961 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 51 ; 51 >
     au < manifest ; 1961-1962 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 52 ; 52 >
     au < manifest ; 1962-1963 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 53 ; 53 >
-    au < manifest ; 1963-1964 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 54 ; 54 >
-    au < manifest ; 1964 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 55 ; 55 >
-    au < manifest ; 1965 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 56 ; 56 >
-    au < manifest ; 1966 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 57 ; 57 >
-    au < manifest ; 1966 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 58 ; 58 >
-    au < manifest ; 1967 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 59 ; 59 >
-    au < manifest ; 1967 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 60 ; 60 >
-    au < manifest ; 1967-1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 61 ; 61 >
-    au < manifest ; 1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 62 ; 62 >
-    au < manifest ; 1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 63 ; 63 >
-    au < manifest ; 1968-1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 64 ; 64 >
-    au < manifest ; 1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 65 ; 65 >
-    au < testing ; 1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 66 ; 66 >
-    au < testing ; 1970 ; Zeitschrift für Rechtsmedizin Volume 67 ; 67 >
-    au < testing ; 1971 ; Zeitschrift für Rechtsmedizin Volume 68 ; 68 >
-    au < testing ; 1971 ; Zeitschrift für Rechtsmedizin Volume 69 ; 69 >
-    au < testing ; 1972 ; Zeitschrift für Rechtsmedizin Volume 70 ; 70 >
-    au < testing ; 1972-1973 ; Zeitschrift für Rechtsmedizin Volume 71 ; 71 >
+    au < testing ; 1963-1964 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 54 ; 54 >
+    au < testing ; 1964 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 55 ; 55 >
+    au < testing ; 1965 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 56 ; 56 >
+    au < testing ; 1966 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 57 ; 57 >
+    au < testing ; 1966 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 58 ; 58 >
+    au < testing ; 1967 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 59 ; 59 >
+    au < testing ; 1967 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 60 ; 60 >
+    au < testing ; 1967-1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 61 ; 61 >
+    au < testing ; 1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 62 ; 62 >
+    au < testing ; 1968 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 63 ; 63 >
+    au < testing ; 1968-1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 64 ; 64 >
+    au < testing ; 1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 65 ; 65 >
+    au < ready ; 1969 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 66 ; 66 >
+    au < ready ; 1970 ; Zeitschrift für Rechtsmedizin Volume 67 ; 67 >
+    au < ready ; 1971 ; Zeitschrift für Rechtsmedizin Volume 68 ; 68 >
+    au < ready ; 1971 ; Zeitschrift für Rechtsmedizin Volume 69 ; 69 >
+    au < ready ; 1972 ; Zeitschrift für Rechtsmedizin Volume 70 ; 70 >
+    au < ready ; 1972-1973 ; Zeitschrift für Rechtsmedizin Volume 71 ; 71 >
     au < testing ; 1973 ; Zeitschrift für Rechtsmedizin Volume 72 ; 72 >
-    au < testing ; 1973 ; Zeitschrift für Rechtsmedizin Volume 73 ; 73 >
-    au < testing ; 1974 ; Zeitschrift für Rechtsmedizin Volume 74 ; 74 >
+    au < ready ; 1973 ; Zeitschrift für Rechtsmedizin Volume 73 ; 73 >
+    au < ready ; 1974 ; Zeitschrift für Rechtsmedizin Volume 74 ; 74 >
     au < testing ; 1974-1975 ; Zeitschrift für Rechtsmedizin Volume 75 ; 75 >
-    au < testing ; 1975 ; Zeitschrift für Rechtsmedizin Volume 76 ; 76 >
-    au < testing ; 1975-1976 ; Zeitschrift für Rechtsmedizin Volume 77 ; 77 >
+    au < ready ; 1975 ; Zeitschrift für Rechtsmedizin Volume 76 ; 76 >
+    au < ready ; 1975-1976 ; Zeitschrift für Rechtsmedizin Volume 77 ; 77 >
     au < ready ; 1976 ; Zeitschrift für Rechtsmedizin Volume 78 ; 78 >
     au < ready ; 1977 ; Zeitschrift für Rechtsmedizin Volume 79 ; 79 >
     au < ready ; 1977-1978 ; Zeitschrift für Rechtsmedizin Volume 80 ; 80 >
@@ -19346,24 +19394,24 @@
     au < manifest ; 1992 ; Inventiones Mathematicae Volume 110 ; 110 >
     au < manifest ; 1993 ; Inventiones Mathematicae Volume 111 ; 111 >
     au < manifest ; 1993 ; Inventiones Mathematicae Volume 112 ; 112 >
-    au < manifest ; 1993 ; Inventiones Mathematicae Volume 113 ; 113 >
-    au < manifest ; 1993 ; Inventiones Mathematicae Volume 114 ; 114 >
-    au < manifest ; 1994 ; Inventiones Mathematicae Volume 115 ; 115 >
-    au < manifest ; 1994 ; Inventiones Mathematicae Volume 116 ; 116 >
-    au < manifest ; 1994 ; Inventiones Mathematicae Volume 117 ; 117 >
-    au < manifest ; 1994 ; Inventiones Mathematicae Volume 118 ; 118 >
-    au < manifest ; 1995 ; Inventiones Mathematicae Volume 119 ; 119 >
-    au < manifest ; 1995 ; Inventiones Mathematicae Volume 120 ; 120 >
-    au < manifest ; 1995 ; Inventiones Mathematicae Volume 121 ; 121 >
-    au < manifest ; 1995 ; Inventiones Mathematicae Volume 122 ; 122 >
-    au < testing ; 1996 ; Inventiones Mathematicae Volume 123 ; 123 >
-    au < testing ; 1996 ; Inventiones Mathematicae Volume 124 ; 124 >
-    au < testing ; 1996 ; Inventiones Mathematicae Volume 125 ; 125 >
-    au < testing ; 1996 ; Inventiones Mathematicae Volume 126 ; 126 >
+    au < testing ; 1993 ; Inventiones Mathematicae Volume 113 ; 113 >
+    au < testing ; 1993 ; Inventiones Mathematicae Volume 114 ; 114 >
+    au < testing ; 1994 ; Inventiones Mathematicae Volume 115 ; 115 >
+    au < testing ; 1994 ; Inventiones Mathematicae Volume 116 ; 116 >
+    au < testing ; 1994 ; Inventiones Mathematicae Volume 117 ; 117 >
+    au < testing ; 1994 ; Inventiones Mathematicae Volume 118 ; 118 >
+    au < testing ; 1995 ; Inventiones Mathematicae Volume 119 ; 119 >
+    au < testing ; 1995 ; Inventiones Mathematicae Volume 120 ; 120 >
+    au < testing ; 1995 ; Inventiones Mathematicae Volume 121 ; 121 >
+    au < testing ; 1995 ; Inventiones Mathematicae Volume 122 ; 122 >
+    au < ready ; 1996 ; Inventiones Mathematicae Volume 123 ; 123 >
+    au < ready ; 1996 ; Inventiones Mathematicae Volume 124 ; 124 >
+    au < ready ; 1996 ; Inventiones Mathematicae Volume 125 ; 125 >
+    au < ready ; 1996 ; Inventiones Mathematicae Volume 126 ; 126 >
     au < testing ; 1996-1997 ; Inventiones Mathematicae Volume 127 ; 127 >
     au < testing ; 1997 ; Inventiones Mathematicae Volume 128 ; 128 >
-    au < testing ; 1997 ; Inventiones Mathematicae Volume 129 ; 129 >
-    au < testing ; 1997 ; Inventiones Mathematicae Volume 130 ; 130 >
+    au < ready ; 1997 ; Inventiones Mathematicae Volume 129 ; 129 >
+    au < ready ; 1997 ; Inventiones Mathematicae Volume 130 ; 130 >
     au < ready ; 1997 ; Inventiones Mathematicae Volume 131 ; 131 >
     au < ready ; 1998 ; Inventiones Mathematicae Volume 132 ; 132 >
     au < ready ; 1998 ; Inventiones Mathematicae Volume 133 ; 133 >
@@ -19371,7 +19419,7 @@
     au < ready ; 1999 ; Inventiones Mathematicae Volume 135 ; 135 >
     au < ready ; 1999 ; Inventiones Mathematicae Volume 136 ; 136 >
     au < ready ; 1999 ; Inventiones Mathematicae Volume 137 ; 137 >
-    au < testing ; 1999 ; Inventiones Mathematicae Volume 138 ; 138 >
+    au < ready ; 1999 ; Inventiones Mathematicae Volume 138 ; 138 >
     au < ready ; 2000 ; Inventiones Mathematicae Volume 139 ; 139 >
     au < ready ; 2000 ; Inventiones Mathematicae Volume 140 ; 140 >
     au < ready ; 2000 ; Inventiones Mathematicae Volume 141 ; 141 >
@@ -19383,7 +19431,7 @@
     au < ready ; 2002 ; Inventiones Mathematicae Volume 147 ; 147 >
     au < ready ; 2002 ; Inventiones Mathematicae Volume 148 ; 148 >
     au < ready ; 2002 ; Inventiones Mathematicae Volume 149 ; 149 >
-    au < testing ; 2002 ; Inventiones Mathematicae Volume 150 ; 150 >
+    au < ready ; 2002 ; Inventiones Mathematicae Volume 150 ; 150 >
     au < ready ; 2003 ; Inventiones Mathematicae Volume 151 ; 151 >
     au < ready ; 2003 ; Inventiones Mathematicae Volume 152 ; 152 >
     au < ready ; 2003 ; Inventiones Mathematicae Volume 153 ; 153 >
@@ -24076,56 +24124,56 @@
     au < manifest ; 1998 ; Journal of Neuro-Oncology Volume 38 ; 38 >
     au < manifest ; 1998 ; Journal of Neuro-Oncology Volume 39 ; 39 >
     au < manifest ; 1998 ; Journal of Neuro-Oncology Volume 40 ; 40 >
-    au < manifest ; 1999 ; Journal of Neuro-Oncology Volume 41 ; 41 >
-    au < manifest ; 1999 ; Journal of Neuro-Oncology Volume 42 ; 42 >
-    au < manifest ; 1999 ; Journal of Neuro-Oncology Volume 43 ; 43 >
-    au < manifest ; 1999 ; Journal of Neuro-Oncology Volume 44 ; 44 >
-    au < manifest ; 1999 ; Journal of Neuro-Oncology Volume 45 ; 45 >
-    au < manifest ; 2000 ; Journal of Neuro-Oncology Volume 46 ; 46 >
-    au < manifest ; 2000 ; Journal of Neuro-Oncology Volume 47 ; 47 >
-    au < manifest ; 2000 ; Journal of Neuro-Oncology Volume 48 ; 48 >
-    au < manifest ; 2000 ; Journal of Neuro-Oncology Volume 49 ; 49 >
-    au < manifest ; 2000 ; Journal of Neuro-Oncology Volume 50 ; 50 >
-    au < manifest ; 2001 ; Journal of Neuro-Oncology Volume 51 ; 51 >
-    au < manifest ; 2001 ; Journal of Neuro-Oncology Volume 52 ; 52 >
-    au < manifest ; 2001 ; Journal of Neuro-Oncology Volume 53 ; 53 >
-    au < manifest ; 2001 ; Journal of Neuro-Oncology Volume 54 ; 54 >
-    au < manifest ; 2001 ; Journal of Neuro-Oncology Volume 55 ; 55 >
-    au < testing ; 2002 ; Journal of Neuro-Oncology Volume 56 ; 56 >
-    au < testing ; 2002 ; Journal of Neuro-Oncology Volume 57 ; 57 >
-    au < testing ; 2002 ; Journal of Neuro-Oncology Volume 58 ; 58 >
-    au < testing ; 2002 ; Journal of Neuro-Oncology Volume 59 ; 59 >
-    au < testing ; 2002 ; Journal of Neuro-Oncology Volume 60 ; 60 >
+    au < testing ; 1999 ; Journal of Neuro-Oncology Volume 41 ; 41 >
+    au < testing ; 1999 ; Journal of Neuro-Oncology Volume 42 ; 42 >
+    au < testing ; 1999 ; Journal of Neuro-Oncology Volume 43 ; 43 >
+    au < testing ; 1999 ; Journal of Neuro-Oncology Volume 44 ; 44 >
+    au < testing ; 1999 ; Journal of Neuro-Oncology Volume 45 ; 45 >
+    au < testing ; 2000 ; Journal of Neuro-Oncology Volume 46 ; 46 >
+    au < testing ; 2000 ; Journal of Neuro-Oncology Volume 47 ; 47 >
+    au < testing ; 2000 ; Journal of Neuro-Oncology Volume 48 ; 48 >
+    au < testing ; 2000 ; Journal of Neuro-Oncology Volume 49 ; 49 >
+    au < testing ; 2000 ; Journal of Neuro-Oncology Volume 50 ; 50 >
+    au < testing ; 2001 ; Journal of Neuro-Oncology Volume 51 ; 51 >
+    au < testing ; 2001 ; Journal of Neuro-Oncology Volume 52 ; 52 >
+    au < testing ; 2001 ; Journal of Neuro-Oncology Volume 53 ; 53 >
+    au < testing ; 2001 ; Journal of Neuro-Oncology Volume 54 ; 54 >
+    au < testing ; 2001 ; Journal of Neuro-Oncology Volume 55 ; 55 >
+    au < ready ; 2002 ; Journal of Neuro-Oncology Volume 56 ; 56 >
+    au < ready ; 2002 ; Journal of Neuro-Oncology Volume 57 ; 57 >
+    au < ready ; 2002 ; Journal of Neuro-Oncology Volume 58 ; 58 >
+    au < ready ; 2002 ; Journal of Neuro-Oncology Volume 59 ; 59 >
+    au < ready ; 2002 ; Journal of Neuro-Oncology Volume 60 ; 60 >
     au < ready ; 2003 ; Journal of Neuro-Oncology Volume 61 ; 61 >
-    au < testing ; 2003 ; Journal of Neuro-Oncology Volume 62 ; 62 >
+    au < ready ; 2003 ; Journal of Neuro-Oncology Volume 62 ; 62 >
     au < ready ; 2003 ; Journal of Neuro-Oncology Volume 63 ; 63 >
     au < ready ; 2003 ; Journal of Neuro-Oncology Volume 64 ; 64 >
     au < ready ; 2003 ; Journal of Neuro-Oncology Volume 65 ; 65 >
     au < ready ; 2004 ; Journal of Neuro-Oncology Volume 66 ; 66 >
-    au < testing ; 2004 ; Journal of Neuro-Oncology Volume 67 ; 67 >
-    au < testing ; 2004 ; Journal of Neuro-Oncology Volume 68 ; 68 >
-    au < testing ; 2004 ; Journal of Neuro-Oncology Volume 69 ; 69 >
+    au < ready ; 2004 ; Journal of Neuro-Oncology Volume 67 ; 67 >
+    au < ready ; 2004 ; Journal of Neuro-Oncology Volume 68 ; 68 >
+    au < ready ; 2004 ; Journal of Neuro-Oncology Volume 69 ; 69 >
     au < ready ; 2004 ; Journal of Neuro-Oncology Volume 70 ; 70 >
     au < ready ; 2005 ; Journal of Neuro-Oncology Volume 71 ; 71 >
-    au < testing ; 2005 ; Journal of Neuro-Oncology Volume 72 ; 72 >
-    au < testing ; 2005 ; Journal of Neuro-Oncology Volume 73 ; 73 >
+    au < ready ; 2005 ; Journal of Neuro-Oncology Volume 72 ; 72 >
+    au < ready ; 2005 ; Journal of Neuro-Oncology Volume 73 ; 73 >
     au < ready ; 2005 ; Journal of Neuro-Oncology Volume 74 ; 74 >
-    au < testing ; 2005 ; Journal of Neuro-Oncology Volume 75 ; 75 >
+    au < ready ; 2005 ; Journal of Neuro-Oncology Volume 75 ; 75 >
     au < ready ; 2006 ; Journal of Neuro-Oncology Volume 76 ; 76 >
-    au < testing ; 2006 ; Journal of Neuro-Oncology Volume 77 ; 77 >
-    au < testing ; 2006 ; Journal of Neuro-Oncology Volume 78 ; 78 >
+    au < ready ; 2006 ; Journal of Neuro-Oncology Volume 77 ; 77 >
+    au < ready ; 2006 ; Journal of Neuro-Oncology Volume 78 ; 78 >
     au < testing ; 2006 ; Journal of Neuro-Oncology Volume 79 ; 79 >
-    au < testing ; 2006 ; Journal of Neuro-Oncology Volume 80 ; 80 >
+    au < ready ; 2006 ; Journal of Neuro-Oncology Volume 80 ; 80 >
     au < ready ; 2007 ; Journal of Neuro-Oncology Volume 81 ; 81 >
-    au < testing ; 2007 ; Journal of Neuro-Oncology Volume 82 ; 82 >
-    au < testing ; 2007 ; Journal of Neuro-Oncology Volume 83 ; 83 >
+    au < ready ; 2007 ; Journal of Neuro-Oncology Volume 82 ; 82 >
+    au < ready ; 2007 ; Journal of Neuro-Oncology Volume 83 ; 83 >
     au < ready ; 2007 ; Journal of Neuro-Oncology Volume 84 ; 84 >
     au < ready ; 2007 ; Journal of Neuro-Oncology Volume 85 ; 85 >
     au < ready ; 2008 ; Journal of Neuro-Oncology Volume 86 ; 86 >
     au < ready ; 2008 ; Journal of Neuro-Oncology Volume 87 ; 87 >
     au < ready ; 2008 ; Journal of Neuro-Oncology Volume 88 ; 88 >
     au < ready ; 2008 ; Journal of Neuro-Oncology Volume 89 ; 89 >
-    au < testing ; 2008 ; Journal of Neuro-Oncology Volume 90 ; 90 >
+    au < ready ; 2008 ; Journal of Neuro-Oncology Volume 90 ; 90 >
     au < ready ; 2009 ; Journal of Neuro-Oncology Volume 91 ; 91 >
     au < ready ; 2009 ; Journal of Neuro-Oncology Volume 92 ; 92 >
     au < ready ; 2009 ; Journal of Neuro-Oncology Volume 93 ; 93 >
@@ -24317,15 +24365,14 @@
     >
 
     param[journal_issn] = 1071-3581
-    attr[where] = content1a
 
-    au < testing ; 1994 ; Journal of Nuclear Cardiology Volume 1 ; 1 >
-    au < testing ; 1995 ; Journal of Nuclear Cardiology Volume 2 ; 2 >
-    au < testing ; 1996 ; Journal of Nuclear Cardiology Volume 3 ; 3 >
+    au < ready ; 1994 ; Journal of Nuclear Cardiology Volume 1 ; 1 >
+    au < ready ; 1995 ; Journal of Nuclear Cardiology Volume 2 ; 2 >
+    au < ready ; 1996 ; Journal of Nuclear Cardiology Volume 3 ; 3 >
     au < ready ; 1997 ; Journal of Nuclear Cardiology Volume 4 ; 4 >
-    au < testing ; 1998 ; Journal of Nuclear Cardiology Volume 5 ; 5 >
+    au < ready ; 1998 ; Journal of Nuclear Cardiology Volume 5 ; 5 >
     au < ready ; 1999 ; Journal of Nuclear Cardiology Volume 6 ; 6 >
-    au < testing ; 2000 ; Journal of Nuclear Cardiology Volume 7 ; 7 >
+    au < ready ; 2000 ; Journal of Nuclear Cardiology Volume 7 ; 7 >
     au < ready ; 2001 ; Journal of Nuclear Cardiology Volume 8 ; 8 >
     au < ready ; 2002 ; Journal of Nuclear Cardiology Volume 9 ; 9 >
     au < ready ; 2003 ; Journal of Nuclear Cardiology Volume 10 ; 10 >
@@ -36143,29 +36190,29 @@
     param[journal_issn] = 0138-9130
     attr[where] = content4a
 
-    au < manifest ; 1978-1979 ; Scientometrics Volume 1 ; 1 >
-    au < manifest ; 1980 ; Scientometrics Volume 2 ; 2 >
-    au < manifest ; 1981 ; Scientometrics Volume 3 ; 3 >
-    au < manifest ; 1982 ; Scientometrics Volume 4 ; 4 >
-    au < manifest ; 1983 ; Scientometrics Volume 5 ; 5 >
-    au < manifest ; 1984 ; Scientometrics Volume 6 ; 6 >
-    au < manifest ; 1985 ; Scientometrics Volume 7 ; 7 >
-    au < manifest ; 1985 ; Scientometrics Volume 8 ; 8 >
-    au < manifest ; 1986 ; Scientometrics Volume 9 ; 9 >
-    au < manifest ; 1986 ; Scientometrics Volume 10 ; 10 >
-    au < manifest ; 1987 ; Scientometrics Volume 11 ; 11 >
-    au < manifest ; 1987 ; Scientometrics Volume 12 ; 12 >
-    au < testing ; 1988 ; Scientometrics Volume 13 ; 13 >
-    au < testing ; 1988 ; Scientometrics Volume 14 ; 14 >
-    au < testing ; 1989 ; Scientometrics Volume 15 ; 15 >
-    au < testing ; 1989 ; Scientometrics Volume 16 ; 16 >
-    au < testing ; 1989 ; Scientometrics Volume 17 ; 17 >
-    au < testing ; 1990 ; Scientometrics Volume 18 ; 18 >
-    au < testing ; 1990 ; Scientometrics Volume 19 ; 19 >
-    au < testing ; 1991 ; Scientometrics Volume 20 ; 20 >
-    au < testing ; 1991 ; Scientometrics Volume 21 ; 21 >
-    au < testing ; 1991 ; Scientometrics Volume 22 ; 22 >
-    au < testing ; 1992 ; Scientometrics Volume 23 ; 23 >
+    au < testing ; 1978-1979 ; Scientometrics Volume 1 ; 1 >
+    au < testing ; 1980 ; Scientometrics Volume 2 ; 2 >
+    au < testing ; 1981 ; Scientometrics Volume 3 ; 3 >
+    au < testing ; 1982 ; Scientometrics Volume 4 ; 4 >
+    au < testing ; 1983 ; Scientometrics Volume 5 ; 5 >
+    au < testing ; 1984 ; Scientometrics Volume 6 ; 6 >
+    au < testing ; 1985 ; Scientometrics Volume 7 ; 7 >
+    au < testing ; 1985 ; Scientometrics Volume 8 ; 8 >
+    au < testing ; 1986 ; Scientometrics Volume 9 ; 9 >
+    au < testing ; 1986 ; Scientometrics Volume 10 ; 10 >
+    au < testing ; 1987 ; Scientometrics Volume 11 ; 11 >
+    au < testing ; 1987 ; Scientometrics Volume 12 ; 12 >
+    au < ready ; 1988 ; Scientometrics Volume 13 ; 13 >
+    au < ready ; 1988 ; Scientometrics Volume 14 ; 14 >
+    au < ready ; 1989 ; Scientometrics Volume 15 ; 15 >
+    au < ready ; 1989 ; Scientometrics Volume 16 ; 16 >
+    au < ready ; 1989 ; Scientometrics Volume 17 ; 17 >
+    au < ready ; 1990 ; Scientometrics Volume 18 ; 18 >
+    au < ready ; 1990 ; Scientometrics Volume 19 ; 19 >
+    au < ready ; 1991 ; Scientometrics Volume 20 ; 20 >
+    au < ready ; 1991 ; Scientometrics Volume 21 ; 21 >
+    au < ready ; 1991 ; Scientometrics Volume 22 ; 22 >
+    au < ready ; 1992 ; Scientometrics Volume 23 ; 23 >
     au < ready ; 1992 ; Scientometrics Volume 24 ; 24 >
     au < ready ; 1992 ; Scientometrics Volume 25 ; 25 >
     au < ready ; 1993 ; Scientometrics Volume 26 ; 26 >
@@ -36174,14 +36221,14 @@
     au < ready ; 1994 ; Scientometrics Volume 29 ; 29 >
     au < ready ; 1994 ; Scientometrics Volume 30 ; 30 >
     au < ready ; 1994 ; Scientometrics Volume 31 ; 31 >
-    au < testing ; 1995 ; Scientometrics Volume 32 ; 32 >
-    au < testing ; 1995 ; Scientometrics Volume 33 ; 33 >
+    au < ready ; 1995 ; Scientometrics Volume 32 ; 32 >
+    au < ready ; 1995 ; Scientometrics Volume 33 ; 33 >
     au < ready ; 1995 ; Scientometrics Volume 34 ; 34 >
     au < ready ; 1996 ; Scientometrics Volume 35 ; 35 >
     au < ready ; 1996 ; Scientometrics Volume 36 ; 36 >
     au < ready ; 1996 ; Scientometrics Volume 37 ; 37 >
     au < ready ; 1997 ; Scientometrics Volume 38 ; 38 >
-    au < testing ; 1997 ; Scientometrics Volume 39 ; 39 >
+    au < ready ; 1997 ; Scientometrics Volume 39 ; 39 >
     au < ready ; 1997 ; Scientometrics Volume 40 ; 40 >
     au < ready ; 1998 ; Scientometrics Volume 41 ; 41 >
     au < ready ; 1998 ; Scientometrics Volume 42 ; 42 >
