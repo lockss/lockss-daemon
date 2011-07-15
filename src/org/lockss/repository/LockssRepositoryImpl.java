@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.11 2011-07-10 20:31:40 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.12 2011-07-15 19:37:12 dshr Exp $
  */
 
 /*
@@ -443,17 +443,16 @@ public class LockssRepositoryImpl
    */
   protected static void setupRepositoryParameters(String root) {
     Configuration config = ConfigManager.getCurrentConfig();
-    String service;
-    try {
-      service = UrlUtil.getUrlPrefix(root);
-    } catch (MalformedURLException ex) {
-      logger.error("Bad root spec: " + root);
-      return;
-    }
-    String prefix = RepositoryManager.PREFIX + "." + service;
+    String service = root.substring(0, root.indexOf(':')-1);
+    String prefix = RepositoryManager.PREFIX + service;
+    logger.debug("setupRepositoryParameters: " + prefix);
     String host = config.get(prefix + ".host", null);
     String accessKey = config.get(prefix + ".accesskey", null);
     String secretKey = config.get(prefix + ".secretkey", null);
+    logger.debug("service: " + service +
+      (host != null ? (" host " + host) : "")  +
+      (accessKey != null ? (" access: " + accessKey) : "") +
+      (secretKey != null ? (" secret: " + secretKey) : ""));
     if (host != null) {
       System.setProperty("com.intridea.io.vfs.provider.s3.servicehostname", host);
       System.setProperty("org.jets3t.servicehostname", host);

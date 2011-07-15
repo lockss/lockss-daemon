@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.4 2011-07-10 20:31:40 dshr Exp $
+ * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.5 2011-07-15 19:37:13 dshr Exp $
  */
 
 /*
@@ -50,10 +50,18 @@ import com.intridea.io.vfs.provider.s3.S3FileProvider;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
+ * using S3 and "compatible" services. The following properties must
+ * be set to use service "foo":
+ * - org.lockss.repository.foo.host
+ * - org.lockss.repository.foo.accessKey
+ * - org.lockss.repository.foor.secretKey
+ * Since the tests depend on external services being available and
+ * configured, if the properties are not set the tests succeed with
+ * a warning.
  */
 
 public class TestLockssRepositoryImplS3 extends LockssTestCase {
-  private static Logger logger = Logger.getLogger("LockssRepositoryImplS3");
+  private static Logger logger = Logger.getLogger("TestLockssRepositoryImplS3");
   private MockLockssDaemon daemon;
   private RepositoryManager repoMgr;
   private LockssRepositoryImpl repo;
@@ -61,61 +69,15 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   private String tempDirPath;
   private String tempDirURI;
 
-  // XXX temporary
+  // Services
+  private static final String[] serviceNames = { "s3", "ias3", "walrus"};
+  private static String serviceName = "bogus";
 
-  private static final int serviceIAS3 = 1;
-  private static final int serviceWalrus = 2;
-  private static int service = serviceWalrus;
 
   public void setUp() throws Exception {
-    String serviceName = "bogus://";
     super.setUp();
-    switch (service) {
-    case serviceS3:
-      /*
-       * Use Amazon:
-       */
-      serviceName = "s3://";
-      break;
-    case serviceIAS3:
-      /*
-       * Use Internet Archive @ :"ia600607.s3dns.us.archive.org";
-       * really "s3.us.archive.org"
-       */
-      serviceName = "ias3://";
-      break;
-    case serviceWalrus:
-      /*
-       * Use Walrus
-       */
-      serviceName = "walrus://";
-      break;
-    }
     daemon = getMockLockssDaemon();
     repoMgr = daemon.getRepositoryManager();
-    tempDirURI = serviceName + "test.lockss.org" + File.separator + "unit" +
-      File.separator + ((new Date()).getTime()/1000);
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-		      tempDirURI);
-    if (true) // XXX
-      props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    if (propertiesAreSet()) {
-      /*
-       * These tests are dependent on external services being available.
-       * Thus, as a special case, they succeed in the case where the
-       * properties pointing to these services have not been set.
-       */
-      mau = new MockArchivalUnit();
-      repo =
-	(LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
-        mau);
-      repo.setNodeCacheSize(17);
-      repo.initService(daemon);
-    }
-    // set small node cache; one test needs to fill it up
   }
 
   public void tearDown() throws Exception {
@@ -130,25 +92,73 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   boolean propertiesAreSet() {
+    boolean ret = false;
     Configuration config = ConfigManager.getCurrentConfig();
-    String service;
-    try {
-      service = UrlUtil.getUrlPrefix(tempDirURI);
-    } catch (MalformedURLException ex) {
-      logger.error("Bad root spec: " + tempDirURI);
-      return false;
-    }
-    String prefix = RepositoryManager.PREFIX + "." + service;
+    String prefix = RepositoryManager.PREFIX + serviceName;
+    logger.debug("propertiesAreSet: " + prefix);
+    Properties sysProps = System.getProperties();
     String host = config.get(prefix + ".host", null);
+    if (host == null) {
+      host = (String)sysProps.get(prefix + ".host");
+      if (host != null) {
+        config.put(prefix + ".host", host);
+      }
+    }
     String accessKey = config.get(prefix + ".accesskey", null);
+    if (accessKey == null) {
+      accessKey = (String)sysProps.get(prefix + ".accessKey");
+      if (accessKey != null) {
+        config.put(prefix + ".accessKey", accessKey);
+      }
+    }
     String secretKey = config.get(prefix + ".secretkey", null);
-    return (host != null && accessKey != null && secretKey != null);
+    if (secretKey == null) {
+      secretKey = (String)sysProps.get(prefix + ".secretKey");
+      if (secretKey != null) {
+        config.put(prefix + ".secretKey", secretKey);
+      }
+    }
+    logger.debug("propertiesAreSet: " + host + " + " + accessKey + " + " + secretKey);
+    ret = (host != null && accessKey != null && secretKey != null);
+    if (ret) {
+      tempDirURI = serviceName + "://test.lockss.org" + File.separator + "unit" +
+        File.separator + ((new Date()).getTime()/1000);
+      Properties props = new Properties();
+      props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+  		      tempDirURI);
+      if (true) // XXX
+        props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
+      ConfigurationUtil.setCurrentConfigFromProps(props);
+      mau = new MockArchivalUnit();
+      repo =
+	(LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+      repo.setNodeCacheSize(17);
+      repo.initService(daemon);
+    }
+    return ret;
   }
 
   public void testGetLocalRepository() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetLocalRepository();
+    }
+  }
+  public void doTestGetLocalRepository() throws Exception {
+    logger.debug("doTestGetLocalRepository: " + serviceName);
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
+
+    mau = new MockArchivalUnit();
+    repo =
+      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+      mau);
+    repo.setNodeCacheSize(17);
+    repo.initService(daemon);
+    // set small node cache; one test needs to fill it up
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
     assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
@@ -173,7 +183,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetLocalRepositoryPath() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetLocalRepositoryPath();
+    }
+  }
+  public void doTestGetLocalRepositoryPath() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     assertEquals(RepositoryManager.LOCAL_REPO_PROTOCOL + "/foo",
@@ -185,7 +202,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testLocalRepository_GetAuMap() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestLocalRepository_GetAuMap();
+    }
+  }
+  public void doTestLocalRepository_GetAuMap() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     Properties newProps = new Properties();
@@ -209,7 +233,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetRepositoryRoot() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetRepositoryRoot();
+    }
+  }
+  public void doTestGetRepositoryRoot() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     assertEquals(tempDirURI, LockssRepositoryImpl.getRepositoryRoot(mau));
@@ -226,7 +257,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   // link.  So we test only that isDirInRepository() is canonicalizing the
   // path.
   public void testIsDirInRepository() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestIsDirInRepository();
+    }
+  }
+  public void doTestIsDirInRepository() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     assertTrue(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/foo"));
@@ -237,7 +275,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestFileLocation();
+    }
+  }
+  public void doTestFileLocation() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     String cacheURI =
@@ -256,7 +301,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetRepositoryNode() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetRepositoryNode();
+    }
+  }
+  public void doTestGetRepositoryNode() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
@@ -283,7 +335,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetNodeWithQuery() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetNodeWithQuery();
+    }
+  }
+  public void doTestGetNodeWithQuery() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     // check if '?' allowed on system
@@ -300,7 +359,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetNodeWithPort() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetNodeWithPort();
+    }
+  }
+  public void doTestGetNodeWithPort() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com:22/testDir", "test stream", null);
@@ -312,7 +378,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testDotUrlHandling() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestDotUrlHandling();
+    }
+  }
+  public void doTestDotUrlHandling() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     //testing correction of nodes with bad '..'-including urls,
@@ -337,7 +410,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testCanonicalizePath() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestCanonicalizePath();
+    }
+  }
+  public void doTestCanonicalizePath() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     assertEquals("http://www.example.com/test",
@@ -351,7 +431,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuNode() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuNode();
+    }
+  }
+  public void doTestGetAuNode() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/testDir1/leaf1", "test stream", null);
@@ -377,7 +464,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testDeleteNode() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestDeleteNode();
+    }
+  }
+  public void doTestDeleteNode() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/test1", "test stream", null);
@@ -391,7 +485,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testDeactivateNode() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestDeactivateNode();
+    }
+  }
+  public void doTestDeactivateNode() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/test1", "test stream", null);
@@ -405,7 +506,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testCaching() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestCaching();
+    }
+  }
+  public void doTestCaching() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
@@ -425,7 +533,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testWeakReferenceCaching() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestWeakReferenceCaching();
+    }
+  }
+  public void doTestWeakReferenceCaching() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
@@ -453,7 +568,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testConsistencyCheck() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestConsistencyCheck();
+    }
+  }
+  public void doTestConsistencyCheck() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
@@ -480,7 +602,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testRecursiveConsistencyCheck() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestRecursiveConsistencyCheck();
+    }
+  }
+  public void doTestRecursiveConsistencyCheck() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     createLeaf("http://www.example.com", "test stream", null);
@@ -520,7 +649,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   // test static naming calls
 
   public void testGetNextDirName() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetNextDirName();
+    }
+  }
+  public void doTestGetNextDirName() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     assertEquals("a", LockssRepositoryImpl.getNextDirName(""));
@@ -534,7 +670,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuDirFromMap() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuDirFromMap();
+    }
+  }
+  public void doTestGetAuDirFromMap() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.LocalRepository localRepo =
@@ -546,7 +689,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuDirFromMapNoCacheWrongRepo() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuDirFromMapNoCacheWrongRepo();
+    }
+  }
+  public void doTestGetAuDirFromMapNoCacheWrongRepo() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.LocalRepository localRepo =
@@ -560,7 +710,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuDirNoCreate() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuDirNoCreate();
+    }
+  }
+  public void doTestGetAuDirNoCreate() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     mau.setAuId("foobar23");
@@ -568,7 +725,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testSaveAndLoadNames() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestSaveAndLoadNames();
+    }
+  }
+  public void doTestSaveAndLoadNames() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     String location =
@@ -584,7 +748,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testMapAuToFileLocation() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestMapAuToFileLocation();
+    }
+  }
+  public void doTestMapAuToFileLocation() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.localRepositories.clear();
@@ -598,7 +769,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testDoesAuDirExist() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestDoesAuDirExist();
+    }
+  }
+  public void doTestDoesAuDirExist() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.localRepositories.clear();
@@ -616,7 +794,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuDirInitWithOne() {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuDirInitWithOne();
+    }
+  }
+  public void doTestGetAuDirInitWithOne() {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.localRepositories.clear();
@@ -627,7 +812,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testGetAuDirSkipping() throws Exception {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestGetAuDirSkipping();
+    }
+  }
+  public void doTestGetAuDirSkipping() throws Exception {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     LockssRepositoryImpl.localRepositories.clear();
@@ -666,7 +858,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testMapUrlToFileLocation() throws MalformedURLException {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestMapUrlToFileLocation();
+    }
+  }
+  public void doTestMapUrlToFileLocation() throws MalformedURLException {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     String testStr = "http://www.example.com/branch1/branch2/index.html";
@@ -687,7 +886,14 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   }
 
   public void testCharacterEscaping() throws MalformedURLException {
+    for (int i = 0; i < serviceNames.length; i++) {
+      serviceName = serviceNames[i];
+      doTestCharacterEscaping();
+    }
+  }
+  public void doTestCharacterEscaping() throws MalformedURLException {
     if (!propertiesAreSet()) {
+      logger.warning("test disabled for " + serviceName + ": storage service host & key properties not set.");
       return;
     }
     String testStr = "http://www.example.com/"+UrlUtil.encodeUrl("#")+"nodestate.xml";

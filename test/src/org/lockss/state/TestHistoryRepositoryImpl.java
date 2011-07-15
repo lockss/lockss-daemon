@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.77 2010-09-01 07:54:31 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.77.2.1 2011-07-15 19:37:13 dshr Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     theDaemon.startDaemon();
     mau = new MockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    configHistoryParams(tempDirPath);
+    configHistoryParams("file://" + tempDirPath);
     repository = (HistoryRepositoryImpl)
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.initService(theDaemon);
