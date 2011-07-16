@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.12 2011-07-15 19:37:12 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.13 2011-07-16 03:31:09 dshr Exp $
  */
 
 /*
@@ -443,12 +443,12 @@ public class LockssRepositoryImpl
    */
   protected static void setupRepositoryParameters(String root) {
     Configuration config = ConfigManager.getCurrentConfig();
-    String service = root.substring(0, root.indexOf(':')-1);
+    String service = config.get(RepositoryManager.PREFIX + "service", "file");
     String prefix = RepositoryManager.PREFIX + service;
-    logger.debug("setupRepositoryParameters: " + prefix);
+    logger.debug("setupRepositoryParameters: " + prefix + " from " + root);
     String host = config.get(prefix + ".host", null);
-    String accessKey = config.get(prefix + ".accesskey", null);
-    String secretKey = config.get(prefix + ".secretkey", null);
+    String accessKey = config.get(prefix + ".accessKey", null);
+    String secretKey = config.get(prefix + ".secretKey", null);
     logger.debug("service: " + service +
       (host != null ? (" host " + host) : "")  +
       (accessKey != null ? (" access: " + accessKey) : "") +
