@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.1 2011-07-16 01:13:13 thib_gc Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.2 2011-07-16 02:00:45 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class IOPScienceArticleIteratorFactory
 
   protected static Logger log = Logger.getLogger("IOPScienceArticleIteratorFactory");
   
-  protected static final String ROOT_TEMPLATE = "\"^%s%s/%s\", base_url, journal_issn, volume_name";
+  protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_issn, volume_name";
   
   protected static final String PATTERN_TEMPLATE = "\"^%s%s/%s/[^/]+/[^/]+/pdf/[^/]+\\.pdf$\", base_url, journal_issn, volume_name";
 
