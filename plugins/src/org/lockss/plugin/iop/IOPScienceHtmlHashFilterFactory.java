@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.1 2011-07-12 21:10:36 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.2 2011-07-16 01:13:13 thib_gc Exp $
  */
 
 /*
@@ -51,14 +51,14 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains variable links to other content ("users also read", "related review articles", etc.)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"),
+        // Last 10 articles viewed; not the best characterization but unique enough
+        HtmlNodeFilters.tagWithAttribute("div", "class", "tabs javascripted"),
         // Contains the institution name and/or banner
         HtmlNodeFilters.tagWithAttribute("div", "id", "banner"),
         // Contains this year in the copyright notice
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
-        // Contains breadcrumbs to the most recently visited articles
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "javascripted"),
         // Contains variable ads, promos, etc.
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tacticalBanners"),
     };

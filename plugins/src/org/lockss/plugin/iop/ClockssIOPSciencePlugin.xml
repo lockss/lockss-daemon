@@ -5,7 +5,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+	<string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+	<string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+	<string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -56,7 +73,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s$&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%s%s/%s/.*/(cites|refs/.*/doi)$&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/cites$&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%s%s/%s/&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
@@ -67,5 +85,19 @@
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.iop.IOPScienceHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/%s/[^/]+/[^/]+/pdf/.*\.pdf$&quot;, base_url, journal_issn, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.iop.IOPScienceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.iop.IOPScienceArticleIteratorFactory</string>
   </entry>
 </map>

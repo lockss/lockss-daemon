@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlCrawlFilterFactory.java,v 1.1 2011-07-12 21:10:36 thib_gc Exp $
+ * $Id: IOPScienceHtmlCrawlFilterFactory.java,v 1.2 2011-07-16 01:13:13 thib_gc Exp $
  */
 
 /*
@@ -51,6 +51,8 @@ public class IOPScienceHtmlCrawlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // These variants are not usefully different
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^\\?"),
+        // Last 10 articles viewed; not the best characterization but unique enough
+        HtmlNodeFilters.tagWithAttribute("div", "class", "tabs javascripted"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
