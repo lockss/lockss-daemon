@@ -6,12 +6,12 @@
 
 # Use sleep command for debug.
 $(dirname "$0")/pylorus.py $*
-# sleep 5
+#sleep 5
 
 # Use mailx to send a notification.
 if [ "x$PYLORUS_MAIL" != "x" ]
 then 
-`echo "$USER: Job: $* on $HOSTNAME at $PWD" | mailx -s "Job Complete" ${PYLORUS_MAIL}`
+echo "$USER: Job: $* on $HOSTNAME at $PWD" | mailx -s "Job Complete" ${PYLORUS_MAIL}
 fi
 exit 0
 
