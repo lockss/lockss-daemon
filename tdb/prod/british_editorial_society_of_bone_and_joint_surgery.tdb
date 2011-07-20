@@ -5,6 +5,7 @@
   >
 
   {
+  
     title <
       name = Journal of Bone & Joint Surgery, British Volume ;
       issn = 0301-620X ;
@@ -12,80 +13,75 @@
       issnl = 0021-9355
     >
     
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://web.jbjs.org.uk/
+    implicit < status ; year ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://web.jbjs.org.uk/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < manifest ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30 >
-      au < manifest ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31 >
-      au < manifest ; 1950 ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32 >
-      au < manifest ; 1951 ; Journal of Bone & Joint Surgery, British Volume Volume 33 ; 33 >
-      au < manifest ; 1952 ; Journal of Bone & Joint Surgery, British Volume Volume 34 ; 34 >
-      au < manifest ; 1953 ; Journal of Bone & Joint Surgery, British Volume Volume 35 ; 35 >
-      au < manifest ; 1954 ; Journal of Bone & Joint Surgery, British Volume Volume 36 ; 36 >
-      au < manifest ; 1955 ; Journal of Bone & Joint Surgery, British Volume Volume 37 ; 37 >
-      au < manifest ; 1956 ; Journal of Bone & Joint Surgery, British Volume Volume 38 ; 38 >
-      au < manifest ; 1957 ; Journal of Bone & Joint Surgery, British Volume Volume 39 ; 39 >
-      au < manifest ; 1958 ; Journal of Bone & Joint Surgery, British Volume Volume 40 ; 40 >
-      au < manifest ; 1959 ; Journal of Bone & Joint Surgery, British Volume Volume 41 ; 41 >
-      au < manifest ; 1960 ; Journal of Bone & Joint Surgery, British Volume Volume 42 ; 42 >
-      au < manifest ; 1961 ; Journal of Bone & Joint Surgery, British Volume Volume 43 ; 43 >
-      au < manifest ; 1962 ; Journal of Bone & Joint Surgery, British Volume Volume 44 ; 44 >
-      au < manifest ; 1963 ; Journal of Bone & Joint Surgery, British Volume Volume 45 ; 45 >
-      au < manifest ; 1964 ; Journal of Bone & Joint Surgery, British Volume Volume 46 ; 46 >
-      au < manifest ; 1965 ; Journal of Bone & Joint Surgery, British Volume Volume 47 ; 47 >
-      au < manifest ; 1966 ; Journal of Bone & Joint Surgery, British Volume Volume 48 ; 48 >
-      au < manifest ; 1967 ; Journal of Bone & Joint Surgery, British Volume Volume 49 ; 49 >
-      au < manifest ; 1968 ; Journal of Bone & Joint Surgery, British Volume Volume 50 ; 50 >
-      au < manifest ; 1969 ; Journal of Bone & Joint Surgery, British Volume Volume 51 ; 51 >
-      au < manifest ; 1970 ; Journal of Bone & Joint Surgery, British Volume Volume 52 ; 52 >
-      au < manifest ; 1971 ; Journal of Bone & Joint Surgery, British Volume Volume 53 ; 53 >
-      au < manifest ; 1972 ; Journal of Bone & Joint Surgery, British Volume Volume 54 ; 54 >
-      au < manifest ; 1973 ; Journal of Bone & Joint Surgery, British Volume Volume 55 ; 55 >
-      au < manifest ; 1974 ; Journal of Bone & Joint Surgery, British Volume Volume 56 ; 56 >
-      au < manifest ; 1975 ; Journal of Bone & Joint Surgery, British Volume Volume 57 ; 57 >
-      au < manifest ; 1976 ; Journal of Bone & Joint Surgery, British Volume Volume 58 ; 58 >
-      au < manifest ; 1977 ; Journal of Bone & Joint Surgery, British Volume Volume 59 ; 59 >
-      au < manifest ; 1978 ; Journal of Bone & Joint Surgery, British Volume Volume 60 ; 60 >
-      au < manifest ; 1979 ; Journal of Bone & Joint Surgery, British Volume Volume 61 ; 61 >
-      au < manifest ; 1980 ; Journal of Bone & Joint Surgery, British Volume Volume 62 ; 62 >
-      au < manifest ; 1981 ; Journal of Bone & Joint Surgery, British Volume Volume 63 ; 63 >
-      au < manifest ; 1982 ; Journal of Bone & Joint Surgery, British Volume Volume 64 ; 64 >
-      au < manifest ; 1983 ; Journal of Bone & Joint Surgery, British Volume Volume 65 ; 65 >
-      au < manifest ; 1984 ; Journal of Bone & Joint Surgery, British Volume Volume 66 ; 66 >
-      au < manifest ; 1985 ; Journal of Bone & Joint Surgery, British Volume Volume 67 ; 67 >
-      au < manifest ; 1986 ; Journal of Bone & Joint Surgery, British Volume Volume 68 ; 68 >
-      au < manifest ; 1987 ; Journal of Bone & Joint Surgery, British Volume Volume 69 ; 69 >
-      au < manifest ; 1988 ; Journal of Bone & Joint Surgery, British Volume Volume 70 ; 70 >
-      au < manifest ; 1989 ; Journal of Bone & Joint Surgery, British Volume Volume 71 ; 71 >
-      au < manifest ; 1990 ; Journal of Bone & Joint Surgery, British Volume Volume 72 ; 72 >
-      au < manifest ; 1991 ; Journal of Bone & Joint Surgery, British Volume Volume 73 ; 73 >
-      au < manifest ; 1992 ; Journal of Bone & Joint Surgery, British Volume Volume 74 ; 74 >
-      au < manifest ; 1993 ; Journal of Bone & Joint Surgery, British Volume Volume 75 ; 75 >
-      au < manifest ; 1994 ; Journal of Bone & Joint Surgery, British Volume Volume 76 ; 76 >
-      au < manifest ; 1995 ; Journal of Bone & Joint Surgery, British Volume Volume 77 ; 77 >
-      au < manifest ; 1996 ; Journal of Bone & Joint Surgery, British Volume Volume 78 ; 78 >
-      au < manifest ; 1997 ; Journal of Bone & Joint Surgery, British Volume Volume 79 ; 79 >
-      au < manifest ; 1998 ; Journal of Bone & Joint Surgery, British Volume Volume 80 ; 80 >
-      au < manifest ; 1999 ; Journal of Bone & Joint Surgery, British Volume Volume 81 ; 81 >
-      au < manifest ; 2000 ; Journal of Bone & Joint Surgery, British Volume Volume 82 ; 82 >
-      au < manifest ; 2001 ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83 >
-      au < manifest ; 2002 ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84 >
-      au < manifest ; 2003 ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85 >
-      au < manifest ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86 >
-      au < manifest ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87 >
-      au < manifest ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88 >
-      au < manifest ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89 >
-      au < manifest ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90 >
-      au < manifest ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91 >
-      au < manifest ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92 >
-      au < manifest ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93 >
-
-    }
+    au < manifest ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
+    au < manifest ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
+    au < manifest ; 1950 ; Journal of Bone & Joint Surgery, British Volume Volume 32 ; 32-B >
+    au < manifest ; 1951 ; Journal of Bone & Joint Surgery, British Volume Volume 33 ; 33-B >
+    au < manifest ; 1952 ; Journal of Bone & Joint Surgery, British Volume Volume 34 ; 34-B >
+    au < manifest ; 1953 ; Journal of Bone & Joint Surgery, British Volume Volume 35 ; 35-B >
+    au < manifest ; 1954 ; Journal of Bone & Joint Surgery, British Volume Volume 36 ; 36-B >
+    au < manifest ; 1955 ; Journal of Bone & Joint Surgery, British Volume Volume 37 ; 37-B >
+    au < manifest ; 1956 ; Journal of Bone & Joint Surgery, British Volume Volume 38 ; 38-B >
+    au < manifest ; 1957 ; Journal of Bone & Joint Surgery, British Volume Volume 39 ; 39-B >
+    au < manifest ; 1958 ; Journal of Bone & Joint Surgery, British Volume Volume 40 ; 40-B >
+    au < manifest ; 1959 ; Journal of Bone & Joint Surgery, British Volume Volume 41 ; 41-B >
+    au < manifest ; 1960 ; Journal of Bone & Joint Surgery, British Volume Volume 42 ; 42-B >
+    au < manifest ; 1961 ; Journal of Bone & Joint Surgery, British Volume Volume 43 ; 43-B >
+    au < manifest ; 1962 ; Journal of Bone & Joint Surgery, British Volume Volume 44 ; 44-B >
+    au < manifest ; 1963 ; Journal of Bone & Joint Surgery, British Volume Volume 45 ; 45-B >
+    au < manifest ; 1964 ; Journal of Bone & Joint Surgery, British Volume Volume 46 ; 46-B >
+    au < manifest ; 1965 ; Journal of Bone & Joint Surgery, British Volume Volume 47 ; 47-B >
+    au < manifest ; 1966 ; Journal of Bone & Joint Surgery, British Volume Volume 48 ; 48-B >
+    au < manifest ; 1967 ; Journal of Bone & Joint Surgery, British Volume Volume 49 ; 49-B >
+    au < manifest ; 1968 ; Journal of Bone & Joint Surgery, British Volume Volume 50 ; 50-B >
+    au < manifest ; 1969 ; Journal of Bone & Joint Surgery, British Volume Volume 51 ; 51-B >
+    au < manifest ; 1970 ; Journal of Bone & Joint Surgery, British Volume Volume 52 ; 52-B >
+    au < manifest ; 1971 ; Journal of Bone & Joint Surgery, British Volume Volume 53 ; 53-B >
+    au < manifest ; 1972 ; Journal of Bone & Joint Surgery, British Volume Volume 54 ; 54-B >
+    au < manifest ; 1973 ; Journal of Bone & Joint Surgery, British Volume Volume 55 ; 55-B >
+    au < manifest ; 1974 ; Journal of Bone & Joint Surgery, British Volume Volume 56 ; 56-B >
+    au < manifest ; 1975 ; Journal of Bone & Joint Surgery, British Volume Volume 57 ; 57-B >
+    au < manifest ; 1976 ; Journal of Bone & Joint Surgery, British Volume Volume 58 ; 58-B >
+    au < manifest ; 1977 ; Journal of Bone & Joint Surgery, British Volume Volume 59 ; 59-B >
+    au < manifest ; 1978 ; Journal of Bone & Joint Surgery, British Volume Volume 60 ; 60-B >
+    au < manifest ; 1979 ; Journal of Bone & Joint Surgery, British Volume Volume 61 ; 61-B >
+    au < manifest ; 1980 ; Journal of Bone & Joint Surgery, British Volume Volume 62 ; 62-B >
+    au < manifest ; 1981 ; Journal of Bone & Joint Surgery, British Volume Volume 63 ; 63-B >
+    au < manifest ; 1982 ; Journal of Bone & Joint Surgery, British Volume Volume 64 ; 64-B >
+    au < manifest ; 1983 ; Journal of Bone & Joint Surgery, British Volume Volume 65 ; 65-B >
+    au < manifest ; 1984 ; Journal of Bone & Joint Surgery, British Volume Volume 66 ; 66-B >
+    au < manifest ; 1985 ; Journal of Bone & Joint Surgery, British Volume Volume 67 ; 67-B >
+    au < manifest ; 1986 ; Journal of Bone & Joint Surgery, British Volume Volume 68 ; 68-B >
+    au < manifest ; 1987 ; Journal of Bone & Joint Surgery, British Volume Volume 69 ; 69-B >
+    au < manifest ; 1988 ; Journal of Bone & Joint Surgery, British Volume Volume 70 ; 70-B >
+    au < manifest ; 1989 ; Journal of Bone & Joint Surgery, British Volume Volume 71 ; 71-B >
+    au < manifest ; 1990 ; Journal of Bone & Joint Surgery, British Volume Volume 72 ; 72-B >
+    au < manifest ; 1991 ; Journal of Bone & Joint Surgery, British Volume Volume 73 ; 73-B >
+    au < manifest ; 1992 ; Journal of Bone & Joint Surgery, British Volume Volume 74 ; 74-B >
+    au < manifest ; 1993 ; Journal of Bone & Joint Surgery, British Volume Volume 75 ; 75-B >
+    au < manifest ; 1994 ; Journal of Bone & Joint Surgery, British Volume Volume 76 ; 76-B >
+    au < manifest ; 1995 ; Journal of Bone & Joint Surgery, British Volume Volume 77 ; 77-B >
+    au < manifest ; 1996 ; Journal of Bone & Joint Surgery, British Volume Volume 78 ; 78-B >
+    au < manifest ; 1997 ; Journal of Bone & Joint Surgery, British Volume Volume 79 ; 79-B >
+    au < manifest ; 1998 ; Journal of Bone & Joint Surgery, British Volume Volume 80 ; 80-B >
+    au < manifest ; 1999 ; Journal of Bone & Joint Surgery, British Volume Volume 81 ; 81-B >
+    au < manifest ; 2000 ; Journal of Bone & Joint Surgery, British Volume Volume 82 ; 82-B >
+    au < manifest ; 2001 ; Journal of Bone & Joint Surgery, British Volume Volume 83 ; 83-B >
+    au < manifest ; 2002 ; Journal of Bone & Joint Surgery, British Volume Volume 84 ; 84-B >
+    au < manifest ; 2003 ; Journal of Bone & Joint Surgery, British Volume Volume 85 ; 85-B >
+    au < manifest ; 2004 ; Journal of Bone & Joint Surgery, British Volume Volume 86 ; 86-B >
+    au < manifest ; 2005 ; Journal of Bone & Joint Surgery, British Volume Volume 87 ; 87-B >
+    au < manifest ; 2006 ; Journal of Bone & Joint Surgery, British Volume Volume 88 ; 88-B >
+    au < manifest ; 2007 ; Journal of Bone & Joint Surgery, British Volume Volume 89 ; 89-B >
+    au < manifest ; 2008 ; Journal of Bone & Joint Surgery, British Volume Volume 90 ; 90-B >
+    au < manifest ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
+    au < manifest ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
+    au < manifest ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
 
   }
 
 }
-
