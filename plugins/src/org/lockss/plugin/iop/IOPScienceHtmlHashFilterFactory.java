@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.2 2011-07-16 01:13:13 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.3 2011-07-20 21:15:28 thib_gc Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         // Contains a jsessionid
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid"),
         // Contains variable ads, promos, etc.
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tacticalBanners"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "tacticalBanners"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

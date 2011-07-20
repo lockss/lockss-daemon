@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.2 2011-07-16 02:00:45 thib_gc Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.3 2011-07-20 21:15:28 thib_gc Exp $
  */
 
 /*
@@ -94,7 +94,8 @@ public class IOPScienceArticleIteratorFactory
       af.setFullTextCu(pdfCu);
       if (target != MetadataTarget.Article) {
         guessAbstract(af, pdfMat);
-        guessOtherParts(af, pdfMat);
+        guessReferences(af, pdfMat);
+        guessSupplementaryMaterials(af, pdfMat);
       }
       return af;
     }
@@ -106,10 +107,17 @@ public class IOPScienceArticleIteratorFactory
       }
     }
 
-    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
+    protected void guessReferences(ArticleFiles af, Matcher mat) {
       CachedUrl refCu = au.makeCachedUrl(mat.replaceFirst("/$1/refs"));
       if (refCu != null && refCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
+      }
+    }
+
+    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+      CachedUrl suppCu = au.makeCachedUrl(mat.replaceFirst("/$1/media"));
+      if (suppCu != null && suppCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
       }
     }
 
