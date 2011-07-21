@@ -14,7 +14,7 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin
-    comment[urgent] = website to be deleted.
+    comment[urgent] = website to be deleted. Needs release. (As of 7/2011)
     implicit < status ; year ; name ; param[year] >
 
     {
