@@ -107,9 +107,14 @@
       eissn = 2042-8901 ;
       issnl = 2042-8901
     >
+    
+    comment[rsfs] = From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
+    au < exists ; 2008 ; Interface Focus Volume 5 ; 5 >
+    au < exists ; 2009 ; Interface Focus Volume 6 ; 6 >
+    au < exists ; 2010 ; Interface Focus Volume 7 ; 7 >
     au < exists ; 2011 ; Interface Focus Volume 1 ; 1 >
 
   }
@@ -132,7 +137,7 @@
     au < released ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
-    au < testing ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
+    au < ready ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
 
   }
 
@@ -647,7 +652,7 @@
     au < released ; 2008 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
     au < released ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
     au < released ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
-    au < testing ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
+    au < ready ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
 
   }
 
@@ -1460,7 +1465,7 @@
     au < released ; 2008 ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
     au < released ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
     au < released ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
-    au < testing ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
+    au < ready ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
 
   }
 
