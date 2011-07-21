@@ -1720,6 +1720,20 @@
   
   {
     title <
+      name = Wallace Stevens Journal ;
+      issn = 0148-7132 ;
+      eissn = 2160-0570 ;
+      issnl = 0148-7132
+    >
+
+    param[journal_dir] = wallace_stevens_journal
+
+    au < manifest ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
+
+  }  
+  
+  {
+    title <
       name = Wide Angle ;
       issn = 0160-6840 ;
       eissn = 1086-3354 ;
