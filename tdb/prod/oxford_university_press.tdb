@@ -916,7 +916,7 @@
     au < HighWirePressH20Plugin ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 >
     au < HighWirePressH20Plugin ; exists ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 >
     au < HighWirePressH20Plugin ; exists ; 1889 ; Annals of Botany Volume os-3 ; os-3 >
-    au < HighWirePressH20Plugin ; exists ; 1890; Annals of Botany Volume os-4 ; os-4 >
+    au < HighWirePressH20Plugin ; exists ; 1890 ; Annals of Botany Volume os-4 ; os-4 >
     au < HighWirePressH20Plugin ; exists ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 >
     au < HighWirePressH20Plugin ; exists ; 1892 ; Annals of Botany Volume os-6 ; os-6 >
     au < HighWirePressH20Plugin ; exists ; 1893 ; Annals of Botany Volume os-7 ; os-7 >
@@ -2359,7 +2359,7 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bjps.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2005 ; The British Journal for the Philosophy of Science Volume 56 ; 56 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 >
@@ -3285,7 +3285,7 @@
   {
 
     title <
-      name =The Chinese Journal of International Politics ;
+      name = The Chinese Journal of International Politics ;
       issn = 1750-8916 ;
       eissn = 1750-8924 ;
       issnl = 1750-8916
@@ -3960,7 +3960,7 @@
     au < HighWireStrVolPlugin ; down ; 2006 ; English Historical Review Volume CXXII ; CXXII >
     au < HighWirePressH20Plugin ; exists ; 1886 ; English Historical Review Volume I ; I >
     au < HighWirePressH20Plugin ; exists ; 1887 ; English Historical Review Volume II ; II >
-    au < HighWirePressH20Plugin ; exists ; 1888 ; English Historical Review Volume III; III >
+    au < HighWirePressH20Plugin ; exists ; 1888 ; English Historical Review Volume III ; III >
     au < HighWirePressH20Plugin ; exists ; 1889 ; English Historical Review Volume IV ; IV >
     au < HighWirePressH20Plugin ; exists ; 1890 ; English Historical Review Volume V ; V >
     au < HighWirePressH20Plugin ; exists ; 1891 ; English Historical Review Volume VI ; VI >
@@ -4617,7 +4617,7 @@
   {
   
     title <
-      name = European Journal of Echocardiography;
+      name = European Journal of Echocardiography ;
       issn = 1525-2167 ;
       eissn = 1532-2114 ;
       issnl = 1525-2167
@@ -4748,7 +4748,7 @@
     param[base_url] = http://ejo.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006; European Journal of Orthodontics Volume 28 ; 28 >
+    au < down ; 2006 ; European Journal of Orthodontics Volume 28 ; 28 >
 
     }
       
@@ -5537,8 +5537,8 @@
   
     title <
       name = The Gerontologist ;
-      issn = 0016-9013;
-      eissn = 1758-5341;
+      issn = 0016-9013 ;
+      eissn = 1758-5341 ;
       issnl = 0016-9013
     >
 
@@ -5974,7 +5974,7 @@
     param[base_url] = http://hgs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005; Holocaust and Genocide Studies Volume 19 ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Holocaust and Genocide Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1987 ; Holocaust and Genocide Studies Volume 2 ; 2 >
@@ -6411,7 +6411,7 @@
   {
 
     title <
-      name = IEICE Transactions on Fundamentals of Electronics, Communication & Computer Science ;
+      name = IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science ;
       issn = 0916-8508 ;
       eissn = 1745-1337 ;
       issnl = 0916-8508
@@ -6425,9 +6425,9 @@
     param[base_url] = http://ietfec.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A ; E89-A >
-    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
-    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
+    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E89-A ; E89-A >
+    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E90-A ; E90-A >
+    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E90-A ; E90-A >
 
     }
 
@@ -6986,7 +6986,7 @@
     title <
       name = Interdisciplinary Studies in Literature and Environment ;
       issn = 1076-0962 ;
-      eissn = 1759-1090;
+      eissn = 1759-1090 ;
       issnl = 1076-0962
     >
 
@@ -7395,8 +7395,8 @@
   
     title <
       name = International Journal of Low-Carbon Technologies ;
-      issn = 1748-1317;
-      eissn = 1748-1325;
+      issn = 1748-1317 ;
+      eissn = 1748-1325 ;
       issnl = 1748-1317
     >
 
@@ -7612,7 +7612,7 @@
   {
   
     title <
-      name = International Mathematics Research Notices;
+      name = International Mathematics Research Notices ;
       issn = 1073-7928 ;
       eissn = 1687-0247 ;
       issnl = 1073-7928
@@ -8730,7 +8730,7 @@
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Economic Geography Volume 5 ; 5 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of Economic Geography Volume 6 ; 6 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Economic Geography Volume 7 ; 7 >
-    au < HighWirePressPlugin ; down ; 2008; Journal of Economic Geography Volume 8 ; 8 >
+    au < HighWirePressPlugin ; down ; 2008 ; Journal of Economic Geography Volume 8 ; 8 >
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Economic Geography Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Economic Geography Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Economic Geography Volume 2 ; 2 >
@@ -9039,7 +9039,7 @@
     title <
       name = The Journals of Gerontology: Series A ;
       issn = 1079-5006 ;
-      eissn = 1758-535X;
+      eissn = 1758-535X ;
       issnl = 1079-5006
     >
 
@@ -9074,9 +9074,9 @@
   {
   
     title <
-      name = The Journals of Gerontology: Series B;
-      issn = 1079-5014;
-      eissn = 1758-5368;
+      name = The Journals of Gerontology: Series B ;
+      issn = 1079-5014 ;
+      eissn = 1758-5368 ;
       issnl = 1079-5014
     >
 
@@ -9523,7 +9523,7 @@
   {
     title <
       name = Journal of Infectious Diseases ;
-      issn =  0022-1899;
+      issn =  0022-1899 ;
       eissn = 1537-6613 ;
       issnl = 0022-1899
     >
@@ -10194,7 +10194,7 @@
   {
 
     title <
-      name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine;
+      name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine ;
       issn = 0360-5310 ;
       eissn = 1744-5019 ;
       issnl = 0360-5310
@@ -11084,33 +11084,68 @@
   }
 
   {
-  
     title <
-        name = Journal of Social History: Societies & Cultures ;
-        issn = 0022-4529
-      >
-
-    comment[down] = cannot find the journal's home page
-
-    {
-
-    pluginPrefix = org.lockss.plugin.highwire.
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
-    }
-
-  }
-
-  {
-    title <
-      name = Journal of Social History ;
+      name = Journal of Social History: Societies & Cultures ;
       issn = 1527-1897 ;
       eissn = 0022-4529 ;
       issnl = 0022-4529
     >
     
-    comment[jsh] = moving to from George Mason U in Sept 2011
+    comment[jsh] = has moved to from George Mason U in summer 2011
+    
+    {
 
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jsh.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    au < HighWirePressH20Plugin ; exists ; 1967-1968 ; Journal of Social History Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1968-1969 ; Journal of Social History Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1969-1970 ; Journal of Social History Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1970-1971 ; Journal of Social History Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1971-1972 ; Journal of Social History Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1972-1973 ; Journal of Social History Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1973-1974 ; Journal of Social History Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1974-1975 ; Journal of Social History Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1975-1976 ; Journal of Social History Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1976-1977 ; Journal of Social History Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1977-1978 ; Journal of Social History Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1978-1979 ; Journal of Social History Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1979-1980 ; Journal of Social History Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1980-1981 ; Journal of Social History Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1981-1982 ; Journal of Social History Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1982-1983 ; Journal of Social History Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1983-1984 ; Journal of Social History Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1984-1985 ; Journal of Social History Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1985-1986 ; Journal of Social History Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1986-1987 ; Journal of Social History Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1987-1988 ; Journal of Social History Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1988-1989 ; Journal of Social History Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1989-1990 ; Journal of Social History Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1990-1991 ; Journal of Social History Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 1991-1992 ; Journal of Social History Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 1992-1993 ; Journal of Social History Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 1993-1994 ; Journal of Social History Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 1994-1995 ; Journal of Social History Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 1995-1996 ; Journal of Social History Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 1996-1997 ; Journal of Social History Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 1997-1998 ; Journal of Social History Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 1998-1999 ; Journal of Social History Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 1999-2000 ; Journal of Social History Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 2000-2001 ; Journal of Social History Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 2001-2002 ; Journal of Social History Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 2002-2003 ; Journal of Social History Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 2003-2004 ; Journal of Social History Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 2004-2005 ; Journal of Social History Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; exists ; 2005-2006 ; Journal of Social History Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; exists ; 2006-2007 ; Journal of Social History Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; exists ; 2007-2008 ; Journal of Social History Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; exists ; 2008-2009 ; Journal of Social History Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; exists ; 2009-2010 ; Journal of Social History Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 2010-2011 ; Journal of Social History Volume 44 ; 44 >
+    
+    }
+    
   }
 
   {
@@ -12204,7 +12239,7 @@
   {
   
     title <
-      name = MHR: Basic science of reproductive medicine;
+      name = MHR: Basic science of reproductive medicine ;
       issn = 1360-9947 ;
       eissn = 1460-2407 ;
       issnl = 1360-9947
@@ -13337,7 +13372,7 @@
     title <
       name = OAH Magazine of History ;
       issn = 0882-228X ;
-      eissn = 1938-2340;
+      eissn = 1938-2340 ;
       issnl = 0882-228X        
     >
       
@@ -14298,12 +14333,12 @@
     au < released ; 2006 ; Past & Present Volume 191 ; 191 >
     au < released ; 2006 ; Past & Present Volume 192 ; 192 >
     au < released ; 2006 ; Past & Present Volume 193 ; 193 >
-    au < ready ; 2006 ; Past & Present 2006 Supplement 1; 1 >
+    au < ready ; 2006 ; Past & Present 2006 Supplement 1 ; 1 >
     au < ready ; 2007 ; Past & Present Number 194 ; 194 >
     au < ready ; 2007 ; Past & Present Number 195 ; 195 >
     au < ready ; 2007 ; Past & Present Number 196 ; 196 >
     au < ready ; 2007 ; Past & Present Number 197 ; 197 >
-    au < ready ; 2007 ; Past & Present 2007 Supplement 2; 2 >
+    au < ready ; 2007 ; Past & Present 2007 Supplement 2 ; 2 >
         
     }
 
@@ -15444,7 +15479,7 @@
 
     au < HighWireStrVolPlugin ; down ; 2005 ; Radiation Protection Dosimetry Volume 113 ; 113 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Radiation Protection Dosimetry Volume 114 ; 114 >
-    au < HighWireStrVolPlugin ; down ; 2005; Radiation Protection Dosimetry Volume 117 ; 117 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Radiation Protection Dosimetry Volume 117 ; 117 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Radiation Protection Dosimetry Volume 118 ; 118 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Radiation Protection Dosimetry Volume 119 ; 119 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Radiation Protection Dosimetry Volume 120 ; 120 >
@@ -15673,7 +15708,7 @@
   
     title <
       name = Reports of Patent, Design and Trade Mark Cases ;
-      issn = 0080-1364;
+      issn = 0080-1364 ;
       eissn = 1756-1000 ;
       issnl = 0080-1364
     >
@@ -15739,7 +15774,7 @@
        
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://raps.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume] >   
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >   
           
     }
     
@@ -16629,8 +16664,8 @@
   {
   
     title <
-      name = Systematic Biology;
-      issn = 1063-5157;
+      name = Systematic Biology ;
+      issn = 1063-5157 ;
       eissn = 1076-836X ;
       issnl = 1063-5157
     >
