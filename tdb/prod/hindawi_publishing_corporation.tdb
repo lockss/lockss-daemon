@@ -403,8 +403,21 @@
     au < ready ; Advances in OptoElectronics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
-  
-{
+ 
+  {
+    title <
+      name = Advances in Orthopedicss ;
+      issn = 2090-3472 ;
+      issnl = 2090-3472
+    >
+
+    param[journal_id] = aop
+
+    au < manifest ; Advances in Orthopedicss Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
     title <
       name = Active and Passive Electronic Components ;
       issn = 0882-7516 ;
@@ -447,6 +460,64 @@
     au < ready ; Active and Passive Electronic Components Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Active and Passive Electronic Components Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+  
+  {
+    title <
+      name = Advances in Decision Sciences ;
+      issn = 2090-3359 ;
+      eissn = 2090-3367 ;
+      issnl = 2090-3359
+    >
+
+    param[journal_id] = ads
+
+    au < manifest ; Advances in Decision Sciences Volume 1997 (1997) ; 1997 ; 1997 ; 1997 >
+    au < manifest ; Advances in Decision Sciences Volume 1998 (1998) ; 1998 ; 1998 ; 1998 >
+    au < manifest ; Advances in Decision Sciences Volume 1999 (1999) ; 1999 ; 1999 ; 1999 >
+    au < manifest ; Advances in Decision Sciences Volume 2000 (2000) ; 2000 ; 2000 ; 2000 >
+    au < manifest ; Advances in Decision Sciences Volume 2001 (2001) ; 2001 ; 2001 ; 2001 >
+    au < manifest ; Advances in Decision Sciences Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
+    au < manifest ; Advances in Decision Sciences Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
+    au < manifest ; Advances in Decision Sciences Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < manifest ; Advances in Decision Sciences Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Advances in Decision Sciences Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Advances in Decision Sciences Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Advances in Decision Sciences Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Advances in Decision Sciences Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Decision Sciences Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Decision Sciences Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+ 
+  {
+    title <
+      name = Advances in Preventive Medicine ;
+      issn = 2090-3499 ;
+      issnl = 2090-3499
+    >
+    
+    param[journal_id] = apm    
+
+    au < manifest ; Advances in Preventive Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+    
+  {
+    title <
+      name = Advances in Power Electronics ;
+      issn = 2090-181X ;
+      eissn = 2090-1828 ;
+      issnl = 2090-181X
+    >
+    
+    param[journal_id] = ape    
+    
+    au < manifest ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
   
   {
@@ -546,7 +617,51 @@
     au < ready ; Advances in Virology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
+  
+  {
+    title <
+      name = AIDS Research and Treatment ;
+      issn = 2090-1240 ;
+      eissn = 2090-1259 ;
+      issnl = 2090-1240
+    >
 
+    param[journal_id] = art
+
+    au < manifest ; AIDS Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; AIDS Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+      
+  }
+  
+  {
+    title <
+      name = Anatomy Research International ;
+      issn = 2090-2743 ;
+      eissn = 2090-2751 ;
+      issnl = 2090-2743
+    >
+
+    param[journal_id] = ari
+
+    au < manifest ; Anatomy Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+      
+  } 
+
+  {
+    title <
+      name = Anemia ;
+      issn = 2090-1267 ;
+      eissn = 2090-1275 ;
+      issnl = 2090-1267 
+    >
+
+    param[journal_id] = ane
+
+    au < manifest ; Anemia Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Anemia Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+      
+  } 
+    
   {
     title <
       name = Anesthesiology Research and Practice ;
@@ -590,12 +705,96 @@
 
     param[journal_id] = acisc
 
-    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
+  {
+    title <
+      name = Archaea ;
+      issn = 1472-3646 ;
+      eissn = 1472-3654 ;
+      issnl = 1472-3646
+    >
+
+    param[journal_id] = arch
+
+    au < manifest ; Archaea Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
+    au < manifest ; Archaea Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
+    au < manifest ; Archaea Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < manifest ; Archaea Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < manifest ; Archaea Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < manifest ; Archaea Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Archaea Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Archaea Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Archaea Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Archaea Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Arthritis ;
+      issn = 2090-1984 ;
+      eissn = 2090-1992 ;
+      issnl = 2090-1984
+    >
+
+    param[journal_id] = arth
+
+    au < manifest ; Arthritis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Arthritis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Autism Research and Treatment ;
+      issn = 2090-1925 ;
+      eissn = 2090-1933 ;
+      issnl = 2090-1925
+    >
+
+    param[journal_id] = aurt
+
+    au < manifest ; Autism Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Autism Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Autoimmune Diseases ;
+      issn = 2090-0430 ;
+      issnl = 2090-0430
+    >
+
+    param[journal_id] = ad
+
+    au < manifest ; Autoimmune Diseases Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Autoimmune Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Biochemistry Research International ;
+      issn = 2090-2247 ;
+      eissn = 2090-2255 ;
+      issnl = 2090-2247
+    >
+
+    param[journal_id] = bcri
+
+    au < manifest ; Biochemistry Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Biochemistry Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Biochemistry Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Biochemistry Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+          
   {
     title <
       name = Bioinorganic Chemistry and Applications ;
@@ -617,12 +816,40 @@
     au < ready ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
+  
+  {
+    title <
+      name = Biotechnology Research International ;
+      issn = 2090-3146 ;
+      issnl = 2090-3146
+    >
 
+    param[journal_id] = btri
+
+    au < manifest ; Biotechnology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Bone Marrow Research ;
+      issn = 2090-2999 ;
+      eissn = 2090-3006 ;
+      issnl = 2090-2999
+    >
+
+    param[journal_id] = bmr
+
+    au < manifest ; Bone Marrow Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+    
   {
     title <
       name = Boundary Value Problems ;
       issn = 1687-2762 ;
-      eissn = 1687-2770
+      eissn = 1687-2770 ;
+      issnl = 1687-2762
     >
 
     param[journal_id] = bvp
@@ -650,6 +877,572 @@
     au < exists ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < exists ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < exists ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Cardiology Research and Practice ;
+      issn = 2090-0597 ;
+      issnl = 2090-0597
+    >
+
+    param[journal_id] = crp
+
+    au < manifest ; Cardiology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Cardiology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Cardiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+        
+  }
+
+  {
+    title <
+      name = Cardiovascular Psychiatry and Neurology ;
+      issn = 2090-0163 ;
+      eissn = 2090-0171 ;
+      issnl = 2090-0163
+    >
+
+    param[journal_id] = cpn
+
+    au < manifest ; Cardiovascular Psychiatry and Neurology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Cardiovascular Psychiatry and Neurology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Cardiovascular Psychiatry and Neurology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+      
+  {
+    title <
+      name = Case Reports in Allergy ;
+      issn = 2090-6366 ;
+      eissn = 2090-6374 ;
+      issnl = 2090-6366
+    >
+
+    param[journal_id] = crial
+
+    au < doesNotExist ; Case Reports in Allergy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Anesthesiology ;
+      issn = 2090-6382 ;
+      eissn = 2090-6390 ;
+      issnl = 2090-6382
+    >
+
+    param[journal_id] = crian
+
+    au < doesNotExist ; Case Reports in Anesthesiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Cardiology ;
+      issn = 2090-6404 ;
+      eissn = 2090-6412 ;
+      issnl = 2090-6404
+    >
+
+    param[journal_id] = cric
+
+    au < doesNotExist ; Case Reports in Cardiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Critical Care ;
+      issn = 2090-6420 ;
+      eissn = 2090-6439 ;
+      issnl = 2090-6420
+    >
+
+    param[journal_id] = cricc
+
+    au < manifest ; Case Reports in Critical Care Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }  
+
+  {
+    title <
+      name = Case Reports in Dentistry ;
+      issn = 2090-6447 ;
+      eissn = 2090-6455 ;
+      issnl = 2090-6447
+    >
+
+    param[journal_id] = crid
+
+    au < manifest ; Case Reports in Dentistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Dermatological Medicine ;
+      issn = 2090-6463 ;
+      eissn = 2090-6471 ;
+      issnl = 2090-6463
+    >
+
+    param[journal_id] = cridm
+
+    au < doesNotExist ; Case Reports in Dermatological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }  
+
+  {
+    title <
+      name = Case Reports in Emergency Medicine ;
+      issn = 2090-648X ;
+      eissn = 2090-6498 ;
+      issnl = 2090-648X
+    >
+
+    param[journal_id] = criem
+
+    au < doesNotExist ; Case Reports in Emergency Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Endocrinology ;
+      issn = 2090-6501 ;
+      eissn = 2090-651X ;
+      issnl = 2090-6501
+    >
+
+    param[journal_id] = crie
+
+    au < manifest ; Case Reports in Endocrinology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Gastrointestinal Medicine ;
+      issn = 2090-6528 ;
+      eissn = 2090-6536 ;
+      issnl = 2090-6528
+    >
+
+    param[journal_id] = crigm
+
+    au < manifest ; Case Reports in Gastrointestinal Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Genetics ;
+      issn = 2090-6544 ;
+      eissn = 2090-6552 ;
+      issnl = 2090-6544
+    >
+
+    param[journal_id] = crig
+
+    au < manifest ; Case Reports in Genetics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Hematology ;
+      issn = 2090-6560 ;
+      eissn = 2090-6579 ;
+      issnl = 2090-6560
+    >
+
+    param[journal_id] = crihem
+
+    au < manifest ; Case Reports in Hematology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Hepatology ;
+      issn = 2090-6587 ;
+      eissn = 2090-6595 ;
+      issnl = 2090-6587
+    >
+
+    param[journal_id] = crihep
+
+    au < manifest ; Case Reports in Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Immunology ;
+      issn = 2090-6609 ;
+      eissn = 2090-6617 ;
+      issnl = 2090-6609
+    >
+
+    param[journal_id] = crii
+
+    au < doesNotExist ; Case Reports in Immunology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Infectious Diseases ;
+      issn = 2090-6625 ;
+      eissn = 2090-6633 ;
+      issnl = 2090-6625
+    >
+
+    param[journal_id] = criid
+
+    au < manifest ; Case Reports in Infectious Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Medicine ;
+      issn = 1687-9627 ;
+      eissn = 1687-9635 ;
+      issnl = 1687-9627
+    >
+
+    param[journal_id] = crim
+
+    au < manifest ; Case Reports in Medicine Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Case Reports in Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Case Reports in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Case Reports in Nephrology ;
+      issn = 2090-6641 ;
+      eissn = 2090-665X ;
+      issnl = 2090-6641
+    >
+
+    param[journal_id] = crin
+
+    au < manifest ; Case Reports in Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Neurological Medicine ;
+      issn = 2090-6668 ;
+      eissn = 2090-6676 ;
+      issnl = 2090-6668
+    >
+
+    param[journal_id] = crinm
+
+    au < manifest ; Case Reports in Neurological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Obstetrics and Gynecology ;
+      issn = 2090-6684 ;
+      eissn = 2090-6692 ;
+      issnl = 2090-6684
+    >
+
+    param[journal_id] = criog
+
+    au < manifest ; Case Reports in Obstetrics and Gynecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Oncological Medicine ;
+      issn = 2090-6706 ;
+      eissn = 2090-6714 ;
+      issnl = 2090-6706
+    >
+
+    param[journal_id] = crionc
+
+    au < manifest ; Case Reports in Oncological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Ophthalmological Medicine ;
+      issn = 2090-6722 ;
+      eissn = 2090-6730 ;
+      issnl = 2090-6722
+    >
+
+    param[journal_id] = criom
+
+    au < doesNotExist ; Case Reports in Ophthalmological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+ 
+  {
+    title <
+      name = Case Reports in Orthopedics ;
+      issn = 2090-6749 ;
+      eissn = 2090-6757 ;
+      issnl = 2090-6749
+    >
+
+    param[journal_id] = crior
+
+    au < doesNotExist ; Case Reports in Orthopedics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Otolaryngology ;
+      issn = 2090-6765 ;
+      eissn = 2090-6773 ;
+      issnl = 2090-6765
+    >
+
+    param[journal_id] = criot
+
+    au < doesNotExist ; Case Reports in Otolaryngology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pathology ;
+      issn = 2090-6781 ;
+      eissn = 2090-679X ;
+      issnl = 2090-6781
+    >
+
+    param[journal_id] = cripa
+
+    au < doesNotExist ; Case Reports in Pathology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pediatrics ;
+      issn = 2090-6803 ;
+      eissn = 2090-6811 ;
+      issnl = 2090-6803
+    >
+
+    param[journal_id] = cripe
+
+    au < doesNotExist ; Case Reports in Pediatrics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Psychiatry ;
+      issn = 2090-682X ;
+      eissn = 2090-6838 ;
+      issnl = 2090-682X
+    >
+
+    param[journal_id] = crip
+
+    au < manifest ; Case Reports in Psychiatry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pulmonology ;
+      issn = 2090-6846 ;
+      eissn = 2090-6854 ;
+      issnl = 2090-6846
+    >
+
+    param[journal_id] = cripul
+
+    au < doesNotExist ; Case Reports in Pulmonology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Radiology ;
+      issn = 2090-6862 ;
+      eissn = 2090-6870 ;
+      issnl = 2090-6862
+    >
+
+    param[journal_id] = crirad
+
+    au < manifest ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Rheumatology ;
+      issn = 2090-6889 ;
+      eissn = 2090-6897 ;
+      issnl = 2090-6889
+    >
+
+    param[journal_id] = crirh
+
+    au < doesNotExist ; Case Reports in Rheumatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Surgery ;
+      issn = 2090-6900 ;
+      eissn = 2090-6919 ;
+      issnl = 2090-6900
+    >
+
+    param[journal_id] = cris
+
+    au < doesNotExist ; Case Reports in Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Toxicology ;
+      issn = 2090-6927 ;
+      eissn = 2090-6935 ;
+      issnl = 2090-6927
+    >
+
+    param[journal_id] = critox
+
+    au < doesNotExist ; Case Reports in Toxicology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Transplantation ;
+      issn = 2090-6943 ;
+      eissn = 2090-6951 ;
+      issnl = 2090-6943
+    >
+
+    param[journal_id] = critran
+
+    au < manifest ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Urology ;
+      issn = 2090-696X ;
+      eissn = 2090-6978 ;
+      issnl = 2090-696X
+    >
+
+    param[journal_id] = criu
+
+    au < manifest ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Vascular Medicine ;
+      issn = 2090-6986 ;
+      eissn = 2090-6994 ;
+      issnl = 2090-6986
+    >
+
+    param[journal_id] = crivas
+
+    au < doesNotExist ; Case Reports in Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Veterinary Medicine ;
+      issn = 2090-7001 ;
+      eissn = 2090-701X ;
+      issnl = 2090-7001
+    >
+
+    param[journal_id] = crivm
+
+    au < manifest ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Chemotherapy Research and Practice ;
+      issn = 2090-2107 ;
+      eissn = 2090-2115 ;
+      issnl = 2090-2107
+    >
+
+    param[journal_id] = chrp
+
+    au < manifest ; Chemotherapy Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Chemotherapy Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
+      name = Child Development Research ;
+      issn = 2090-3987 ;
+      eissn = 2090-3995 ;
+      issnl = 2090-3987
+    >
+
+    param[journal_id] = cdr
+
+    au < manifest ; Child Development Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
+      name = Cholesterol ;
+      issn = 2090-1283 ;
+      eissn = 2090-1291 ;
+      issnl = 2090-1283
+    >
+
+    param[journal_id] = chol
+
+    au < manifest ; Cholesterol Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Cholesterol Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Chromatography Research International ;
+      issn = 2090-3510 ;
+      issnl = 2090-3510
+    >
+
+    param[journal_id] = cri
+
+    au < manifest ; Chromatography Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -710,6 +1503,36 @@
 
   {
     title <
+      name = Computational and Mathematical Methods in Medicine ;
+      issn = 1748-670X ;
+      eissn = 1748-6718 ;
+      issnl = 1748-670X
+    >
+
+    param[journal_id] = cmmm
+
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 ; 1997 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 ; 1998 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1999) ; 1999 ; 1 ; 1999 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2 (1999) ; 1999 ; 2 ; 1999 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2 (2000) ; 2000 ; 2 ; 2000 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 3 (2000) ; 2000 ; 3 ; 2000 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 ; 2001 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 ; 2002 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 ; 2003 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 ; 2005 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 ; 2006 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 ; 2007 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 ; 2008 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 ; 2009 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 ; 2010 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+
+  }
+  
+  {
+    title <
       name = Computational Intelligence and Neuroscience ;
       issn = 1687-5265 ;
       eissn = 1687-5273 ;
@@ -728,6 +1551,22 @@
 
   {
     title <
+      name = Critical Care Research and Practice ;
+      issn = 2090-1305 ;
+      eissn = 2090-1313 ;
+      issnl = 2090-1305
+    >
+
+    param[journal_id] = ccrp
+
+    au < manifest ; Critical Care Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Critical Care Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Critical Care Research and Practice Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
+  }
+  
+  {
+    title <
       name = Current Gerontology and Geriatrics Research ;
       issn = 1687-7063 ;
       eissn = 1687-7071 ;
@@ -743,6 +1582,37 @@
 
   }
 
+  {
+    title <
+      name = Depression Research and Treatment ;
+      issn = 2090-1321 ;
+      eissn = 2090-133X ;
+      issnl = 2090-1321
+    >
+
+    param[journal_id] = drt
+
+    au < manifest ; Depression Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Depression Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Dermatology Research and Practice ;
+      issn = 1687-6105 ;
+      eissn = 1687-6113 ;
+      issnl = 1687-6105
+    >
+
+    param[journal_id] = drp
+
+    au < manifest ; Dermatology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Dermatology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Dermatology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
   {
     title <
       name = Diagnostic and Therapeutic Endoscopy ;
@@ -775,6 +1645,8 @@
       issnl = 1687-4099
     >
 
+    comment = the url "http://www.hindawi.com/journals/denm/" redirects to "http://www.hindawi.com/journals/ijde/", only manifest pages found in the listed volumes
+	
     param[journal_id] = denm
 
     au < released ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
@@ -812,6 +1684,116 @@
     au < ready ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+
+  {
+    title <
+      name = Economics Research International ;
+      issn = 2090-2123 ;
+      eissn = 2090-2131 ;
+      issnl = 2090-2123
+    >
+
+    param[journal_id] = econ
+
+    au < manifest ; Economics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Economics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Education Research International ;
+      issn = 2090-4002 ;
+      eissn = 2090-4010 ;
+      issnl = 2090-4002
+    >
+
+    param[journal_id] = edu
+
+    au < manifest ; Education Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Emergency Medicine International ;
+      issn = 2090-2840 ;
+      eissn = 2090-2859 ;
+      issnl = 2090-2840
+    >
+
+    param[journal_id] = emi
+
+    au < manifest ; Emergency Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Emergency Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Enzyme Research ;
+      issn = 2090-0414 ;
+      issnl = 2090-0414
+    >
+
+    param[journal_id] = er
+
+    au < manifest ; Enzyme Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Enzyme Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Epidemiology Research International ;
+      issn = 2090-2972 ;
+      eissn = 2090-2980 ;
+      issnl = 2090-2972
+    >
+
+    param[journal_id] = eri
+
+    au < manifest ; Epidemiology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Epilepsy Research and Treatment ;
+      issn = 2090-1348 ;
+      eissn = 2090-1356 ;
+      issnl = 2090-1348
+    >
+
+    param[journal_id] = ert
+
+    au < manifest ; Epilepsy Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Epilepsy Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Epilepsy Research and Treatment Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Evidence-Based Complementary and Alternative Medicine ;
+      issn = 1741-427X ;
+      eissn = 1741-4288 ;
+      issnl = 1741-427X
+    >
+
+    param[journal_id] = ecam
+
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 ; 2004 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 ; 2005 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 ; 2006 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 ; 2007 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 ; 2008 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 ; 2009 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 ; 2010 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+        
   }
 
   {
@@ -1014,6 +1996,48 @@
 
   {
     title <
+      name = Genetics Research International ;
+      issn = 2090-3162 ;
+      issnl = 2090-3162
+    >
+
+    param[journal_id] = gri
+
+    au < manifest ; Genetics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Headache Research and Treatment ;
+      issn = 2090-1909 ;
+      eissn = 2090-1917 ;
+      issnl = 2090-1909
+    >
+
+    param[journal_id] = hrt
+
+    au < manifest ; Headache Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Hepatitis Research and Treatment ;
+      issn = 2090-1364 ;
+      eissn = 2090-1372 ;
+      issnl = 2090-1364
+    >
+
+    param[journal_id] = heprt
+
+    au < manifest ; Hepatitis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Hepatitis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = HPB Surgery ;
       issn = 0894-8569 ;
       eissn = 1607-8462 ;
@@ -1091,6 +2115,21 @@
 
   {
     title <
+      name = Influenza Research and Treatment ;
+      issn = 2090-1380 ;
+      eissn = 2090-1399 ;
+      issnl = 2090-1380
+    >
+
+    param[journal_id] = irt
+
+    au < manifest ; Influenza Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Influenza Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = International Journal of Aerospace Engineering ;
       issn = 1687-5966 ;
       eissn = 1687-5974 ;
@@ -1121,6 +2160,21 @@
     au < ready ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+  
+  {
+    title <
+      name = International Journal of Alzheimer's Disease ;
+      issn = 2090-0252 ;
+      issnl = 2090-0252
+    >
+
+    param[journal_id] = ijad
+
+    au < manifest ; International Journal of Alzheimer's Disease Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Alzheimer's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Alzheimer's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
 
   {
@@ -1154,6 +2208,19 @@
     au < ready ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Breast Cancer ;
+      issn = 2090-3189 ;
+      issnl = 2090-3189
+    >
+
+    param[journal_id] = ijbc
+
+    au < manifest ; International Journal of Breast Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1341,6 +2408,26 @@
 
   {
     title <
+      name = International Journal of Distributed Sensor Networks ;
+      issn = 1550-1329 ;
+      eissn = 1550-1477 ;
+      issnl = 1550-1329
+    >
+
+    param[journal_id] = ijdsn
+
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; 2005 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; 2006 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; 2007 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; 2008 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Distributed Sensor Networks Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+        
+  }
+
+  {
+    title <
       name = International Journal of Ecology ;
       issn = 1687-9708 ;
       eissn = 1687-9716 ;
@@ -1349,9 +2436,29 @@
 
     param[journal_id] = ijeco
 
-
+    au < manifest ; International Journal of Ecology Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; International Journal of Ecology Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; International Journal of Ecology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Ecology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Ecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Ecology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
   }
 
+  {
+    title <
+      name = International Journal of Electrochemistry ;
+      issn = 2090-3537 ;
+      issnl = 2090-3537
+    >
+
+    param[journal_id] = ijelc
+
+    au < manifest ; International Journal of Electrochemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Electrochemistry Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
+  }
+  
   {
     title <
       name = International Journal of Endocrinology ;
@@ -1370,6 +2477,37 @@
 
   {
     title <
+      name = International Journal of Evolutionary Biology ;
+      issn = 2090-052X ;
+      issnl = 2090-052X
+    >
+
+    param[journal_id] = ijeb
+
+    au < manifest ; International Journal of Evolutionary Biology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Evolutionary Biology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Evolutionary Biology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
+      name = International Journal of Family Medicine ;
+      issn = 2090-2042 ;
+      eissn = 2090-2050 ;
+      issnl = 2090-2042
+    >
+
+    param[journal_id] = ijfm
+
+    au < manifest ; International Journal of Family Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Family Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+
+  {
+    title <
       name = International Journal of Forestry Research ;
       issn = 1687-9368 ;
       eissn = 1687-9376 ;
@@ -1378,7 +2516,38 @@
 
     param[journal_id] = ijfr
 
+    au < manifest ; International Journal of Forestry Research Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Forestry Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Forestry Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Forestry Research Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
+  }
+
+  {
+    title <
+      name = International Journal of Hepatology ;
+      issn = 2090-3456 ;
+      issnl = 2090-3456
+    >
+
+    param[journal_id] = ijhep
+
+    au < manifest ; International Journal of Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Hepatology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+  }
+
+  {
+    title <
+      name = International Journal of Hypertension ;
+      issn = 2090-0392 ;
+      issnl = 2090-0392
+    >
+
+    param[journal_id] = ijht
+
+    au < manifest ; International Journal of Hypertension Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Hypertension Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
 
   {
@@ -1394,6 +2563,51 @@
     au < exists ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < exists ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < exists ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Inflammation ;
+      issn = 2042-0099 ;
+      issnl = 2042-0099
+    >
+
+    param[journal_id] = iji
+
+    au < manifest ; International Journal of Inflammation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Inflammation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Inorganic Chemistry ;
+      issn = 2090-2026 ;
+      eissn = 2090-2034 ;
+      issnl = 2090-2026
+    >
+
+    param[journal_id] = ijic
+
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Medicinal Chemistry ;
+      issn = 2090-2069 ;
+      eissn = 2090-2077 ;
+      issnl = 2090-2069
+    >
+
+    param[journal_id] = ijmc
+
+    au < manifest ; International Journal of Medicinal Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1487,6 +2701,20 @@
 
   {
     title <
+      name = International Journal of Molecular Imaging ;
+      issn = 2090-1712 ;
+      eissn = 2090-1720 ;
+      issnl = 2090-1712
+    >
+
+    param[journal_id] = ijmi
+
+    au < manifest ; International Journal of Molecular Imaging Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
       name = International Journal of Navigation and Observation ;
       issn = 1687-5990 ;
       eissn = 1687-6008 ;
@@ -1502,6 +2730,21 @@
 
   }
 
+  {
+    title <
+      name = International Journal of Nephrology ;
+      issn = 2090-2158 ;
+      issnl = 2090-2158
+    >
+
+    param[journal_id] = ijn
+
+    au < manifest ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
+  }
+  
   {
     title <
       name = International Journal of Oceanography ;
@@ -1561,6 +2804,8 @@
       issnl = 1687-9848
     >
 
+	comment[ijpe] = This journal is transferring to BMC, but it's still available in Hindawi
+	
     param[journal_id] = ijpe
 
     au < doesNotExist ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -1657,12 +2902,13 @@
       issnl = 1687-6245
     >
 
+    comment[ijpse] = The page cannot be found
+    
     param[journal_id] = ijpse
 
     au < released ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < doesNotExist ; International Journal of Plasma Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Plasma Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1685,11 +2931,42 @@
 
   {
     title <
+      name = International Journal of Population Research ;
+      issn = 2090-4029 ;
+      eissn = 2090-4037 ;
+      issnl = 2090-4029
+    >
+
+    param[journal_id] = ijpr
+
+    au < manifest ; International Journal of Population Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Proteomics ;
+      issn = 2090-2166 ;
+      eissn = 2090-2174 ;
+      issnl = 2090-2166
+    >
+
+    param[journal_id] = ijpro
+
+    au < manifest ; International Journal of Proteomics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Proteomics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = International Journal of Power Management Electronics ;
       issn = 1687-6679 ;
       eissn = 1687-6687 ;
       issnl = 1687-6679
     >
+
+    comment[ijpme] = the url "http://www.hindawi.com/journals/ijpme/" redirects to "http://www.hindawi.com/journals/ape/"
 
     param[journal_id] = ijpme
 
@@ -1724,6 +3001,8 @@
       eissn = 1687-6024 ;
       issnl = 1687-6016
     >
+
+    comment[ijrs] = the url "http://www.hindawi.com/journals/ijrs/" redirects to "http://www.hindawi.com/journals/jc/"
 
     param[journal_id] = ijrs
 
@@ -1817,6 +3096,59 @@
 
   {
     title <
+      name = International Journal of Stochastic Analysis ;
+      issn = 2090-3332 ;
+      eissn = 2090-3340 ;
+      issnl = 2090-3332
+    >
+
+    param[journal_id] = ijsa
+
+    au < manifest ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+        
+  }
+
+  {
+    title <
+      name = International Journal of Surgical Oncology ;
+      issn = 2090-1402 ;
+      eissn = 2090-1410 ;
+      issnl = 2090-1402
+    >
+
+    param[journal_id] = ijso
+
+    au < manifest ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Surgical Oncology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = International Journal of Telemedicine and Applications ;
       issn = 1687-6415 ;
       eissn = 1687-6423 ;
@@ -1832,6 +3164,21 @@
 
   }
 
+  {
+    title <
+      name = International Journal of Vascular Medicine ;
+      issn = 2090-2824 ;
+      eissn = 2090-2832 ;
+      issnl = 2090-2824
+    >
+
+    param[journal_id] = ijvm
+
+    au < manifest ; International Journal of Vascular Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
   {
     title <
       name = International Journal of Vehicular Technology ;
@@ -1867,6 +3214,20 @@
 
   {
     title <
+      name = Journal of Aging Research ;
+      issn = 2090-2212 ;
+      issnl = 2090-2212
+    >
+
+    param[journal_id] = jar
+
+    au < manifest ; Journal of Aging Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Aging Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = Journal of Allergy ;
       issn = 1687-9783 ;
       eissn = 1687-9791 ;
@@ -1879,6 +3240,34 @@
     au < ready ;  International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ;  International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ;  International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Journal of Amino Acids ;
+      issn = 2090-0112 ;
+      issnl = 2090-0112
+    >
+
+    param[journal_id] = jaa
+
+    au < manifest ; Journal of Amino Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Amino Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Anthropology ;
+      issn = 2090-4045 ;
+      eissn = 2090-4053 ;
+      issnl = 2090-4045
+    >
+
+    param[journal_id] = janth
+
+    au < manifest ; Journal of Anthropology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1914,6 +3303,8 @@
       issnl = 1173-9126
     >
 
+	comment[jamds] = the url "http://www.hindawi.com/journals/jamds/" redirects to "http://www.hindawi.com/journals/ads/"
+
     param[journal_id] = jamds
 
     au < released ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 ; 1997 >
@@ -1942,7 +3333,9 @@
       issnl = 1048-9533
     >
 
-    param[journal_id] = ijsa
+	comment[jamsa] = this journal has moved from Hindawi to other publishers
+
+    param[journal_id] = jamsa
 
     au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
     au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
@@ -2091,6 +3484,22 @@
 
   {
     title <
+      name = Journal of Botany ;
+      issn = 2090-0120 ;
+      eissn = 2090-0139 ;
+      issnl = 2090-0120
+    >
+
+    param[journal_id] = jb
+
+    au < manifest ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = Journal of Cancer Epidemiology ;
       issn = 1687-8558 ;
       eissn = 1687-8566 ;
@@ -2108,18 +3517,53 @@
 
   {
     title <
+      name = Journal of Combustion ;
+      issn = 2090-1968 ;
+      eissn = 2090-1976 ;
+      issnl = 2090-1968
+    >
+
+    param[journal_id] = jc
+
+    au < manifest ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; Journal of Combustion Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Computer Networks and Communications ;
+      issn = 2090-7141 ;
+      eissn = 2090-715X ;
+      issnl = 2090-7141
+    >
+
+    param[journal_id] = jcnc
+
+    au < manifest ; Journal of Computer Networks and Communications Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Computer Networks and Communications Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Computer Networks and Communications Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Computer Networks and Communications Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = Journal of Computer Systems, Networks, and Communications ;
       issn = 1687-7381 ;
       eissn = 1687-739X ;
       issnl = 1687-7381
     >
+    
+    comment[jcsnc] = the url "http://www.hindawi.com/journals/jcsnc/" redirects to "http://www.hindawi.com/journals/jcnc/"
 
     param[journal_id] = jcsnc
 
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Journal of Computer Systems, Networks, and Communications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2139,6 +3583,38 @@
     au < released ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+
+  {
+    title <
+      name = Journal of Drug Delivery ;
+      issn = 2090-3014 ;
+      eissn = 2090-3022 ;
+      issnl = 2090-3014
+    >
+
+    param[journal_id] = jdd
+
+    au < manifest ; Journal of Drug Delivery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Journal of Electrical and Computer Engineering ;
+      issn = 2090-0147 ;
+      eissn = 2090-0155 ;
+      issnl = 2090-0147
+    >
+
+    param[journal_id] = jece
+
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
 
   {
@@ -2201,17 +3677,34 @@
 
   {
     title <
-      name = Journal of Magnetism ;
-      issn = 1023-621X ;
-      eissn = 1542-3034
+      name = Journal of Lipids ;
+      issn = 2090-3030 ;
+      eissn = 2090-3049 ;
+      issnl = 2090-3030
     >
 
+    param[journal_id] = jl
+
+    au < manifest ; Journal of Lipids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
+      name = Journal of Magnetism ;
+      issn = 1687-9821 ;
+      eissn = 1687-983X ;
+      issnl = 1687-9821
+    >
+
+	comment[jmag] = this journal has ceased publication
+	 
     param[journal_id] = jmag
 
     au < doesNotExist ; Journal of Magnetism Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Magnetism Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < doesNotExist ; Journal of Magnetism Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExists ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2285,6 +3778,50 @@
 
   {
     title <
+      name = Journal of Nucleic Acids ;
+      issn = 2090-021X ;
+      issnl = 2090-021X
+    >
+
+    param[journal_id] = jna
+
+    au < manifest ; Journal of Nucleic Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Nucleic Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Nutrition and Metabolism ;
+      issn = 2090-0724 ;
+      eissn = 2090-0732 ;
+      issnl = 2090-0724
+    >
+
+    param[journal_id] = jnume
+
+    au < manifest ; Journal of Nutrition and Metabolism Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Nutrition and Metabolism Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Obesity ;
+      issn = 2090-0708 ;
+      eissn = 2090-0716 ;
+      issnl = 2090-0708
+    >
+
+    param[journal_id] = jobes
+   
+    au < manifest ; Journal of Obesity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Obesity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = Journal of Oncology ;
       issn = 1687-8450 ;
       eissn = 1687-8469 ;
@@ -2302,6 +3839,36 @@
 
   {
     title <
+      name = Journal of Ophthalmology ;
+      issn = 2090-004X ;
+      eissn = 2090-0058 ;
+      issnl = 2090-004X
+    >
+
+    param[journal_id] = jop
+
+    au < manifest ; Journal of Ophthalmology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Journal of Ophthalmology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Ophthalmology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Osteoporosis ;
+      issn = 2042-0064 ;
+      issnl = 2042-0064
+    >
+
+    param[journal_id] = josteo
+
+    au < manifest ; Journal of Osteoporosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Osteoporosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = Journal of Parasitology Research ;
       issn = 2090-0023 ;
       eissn = 2090-0031 ;
@@ -2313,6 +3880,34 @@
     au < released ; Journal of Parasitology Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Parasitology Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Journal of Pathogens ;
+      issn = 2090-3065 ;
+      issnl = 2090-3065
+    >
+
+    param[journal_id] = jpath
+
+    au < manifest ; Journal of Pathogens Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Journal of Pregnancy ;
+      issn = 2090-2727 ;
+      eissn = 2090-2735 ;
+      issnl = 2090-2727
+    >
+
+    param[journal_id] = jp
+
+    au < manifest ; Journal of Pregnancy Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Pregnancy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2365,6 +3960,35 @@
 
   {
     title <
+      name = Journal of Signal Transduction ;
+      issn = 2090-1739 ;
+      eissn = 2090-1747 ;
+      issnl = 2090-1739
+    >
+
+    param[journal_id] = jst
+
+    au < manifest ; Journal of Signal Transduction Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Signal Transduction Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Skin Cancer ;
+      issn = 2090-2905 ;
+      eissn = 2090-2913 ;
+      issnl = 2090-2905
+    >
+
+    param[journal_id] = jsc
+
+    au < manifest ; Journal of Skin Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
       name = Journal of Thermodynamics ;
       issn = 1687-9244 ;
       eissn = 1687-9252 ;
@@ -2381,6 +4005,20 @@
 
   {
     title <
+      name = Journal of Thyroid Research ;
+      issn = 2042-0072 ;
+      issnl = 2042-0072
+    >
+
+    param[journal_id] = jtr
+
+    au < manifest ; Journal of Thyroid Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Journal of Thyroid Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = Journal of Toxicology ;
       issn = 1687-8191 ;
       eissn = 1687-8205 ;
@@ -2395,6 +4033,19 @@
 
   }
 
+  {
+    title <
+      name = Journal of Transfusion ;
+      issn = 2090-3081 ;
+      issnl = 2090-3081
+    >
+
+    param[journal_id] = jtf
+
+    au < manifest ; Journal of Transfusion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
   {
     title <
       name = Journal of Transplantation ;
@@ -2468,6 +4119,59 @@
     au < ready ; Laser Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < exists ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+
+  {
+    title <
+      name = Leukemia Research and Treatment ;
+      issn = 2090-3227 ;
+      issnl = 2090-3227
+    >
+
+    param[journal_id] = lrt
+
+    au < manifest ; Leukemia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Lung Cancer International ;
+      issn = 2090-3200 ;
+      issnl = 2090-3200
+    >
+
+    param[journal_id] = lci
+
+    au < manifest ; Lung Cancer International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Lymphoma ;
+      issn = 2090-3103 ;
+      issnl = 2090-3103
+    >
+
+    param[journal_id] = lymph
+
+    au < manifest ; Lymphoma Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Malaria Research and Treatment ;
+      issn = 2044-4362 ;
+      issnl = 2044-4362
+    >
+
+    param[journal_id] = mrt
+
+    au < manifest ; Malaria Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Malaria Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
 
   {
@@ -2562,6 +4266,20 @@
 
   {
     title <
+      name = Minimally Invasive Surgery ;
+      issn = 2090-1445 ;
+      eissn = 2090-1453 ;
+      issnl = 2090-1445
+    >
+
+    param[journal_id] = mis
+
+    au < manifest ; Minimally Invasive Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
       name = Modelling and Simulation in Engineering ;
       issn = 1687-5591 ;
       eissn = 1687-5605 ;
@@ -2576,6 +4294,35 @@
     au < released ; Modelling and Simulation in Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Modelling and Simulation in Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
+  }
+
+  {
+    title <
+      name = Molecular Biology International ;
+      issn = 2090-2190 ;
+      issnl = 2090-2190
+    >
+
+    param[journal_id] = mbi
+
+    au < manifest ; Molecular Biology International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Molecular Biology International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Multiple Sclerosis International ;
+      issn = 2090-2654 ;
+      eissn = 2090-2662 ;
+      issnl = 2090-2654
+    >
+
+    param[journal_id] = msi
+
+    au < manifest ; Multiple Sclerosis International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Multiple Sclerosis International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
   }
 
   {
@@ -2607,6 +4354,37 @@
     au < exists ; Neural Plasticity Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
+  
+  {
+    title <
+      name = Neurology Research International ;
+      issn = 2090-1852 ;
+      eissn = 2090-1860 ;
+      issnl = 2090-1852
+    >
+
+    param[journal_id] = nri
+
+    au < manifest ; Neurology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Neurology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Neurology Research International Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
+      name = Nursing Research and Practice ;
+      issn = 2090-1429 ;
+      eissn = 2090-1437 ;
+      issnl = 2090-1429
+    >
+
+    param[journal_id] = nrp
+
+    au < manifest ; Nursing Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Nursing Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
 
   {
     title <
@@ -2626,12 +4404,123 @@
 
   {
     title <
+      name = Organic Chemistry International ;
+      issn = 2090-200X ;
+      eissn = 2090-2018 ;
+      issnl = 2090-200X
+    >
+
+    param[journal_id] = oci
+
+    au < manifest ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Oxidative Medicine and Cellular Longevity ;
+      issn = 1942-0900 ;
+      eissn = 1942-0994 ;
+      issnl = 1942-0900
+    >
+
+    param[journal_id] = oximed
+
+    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Pain Research and Treatment ;
+      issn = 2090-1542 ;
+      eissn = 2090-1550 ;
+      issnl = 2090-1542
+    >
+
+    param[journal_id] = prt
+
+    au < manifest ; Pain Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Pain Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Parkinson's Disease ;
+      issn = 2042-0080 ;
+      issnl = 2042-0080
+    >
+
+    param[journal_id] = pd
+
+    au < manifest ; Parkinson's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Parkinson's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Pathology Research International ;
+      issn = 2042-003X ;
+      issnl = 2042-003X
+    >
+
+    param[journal_id] = pri
+
+    au < manifest ; Pathology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Pathology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Physics Research International ;
+      issn = 2090-2220 ;
+      eissn = 2090-2239 ;
+      issnl = 2090-2220
+    >
+
+    param[journal_id] = phys
+
+    au < manifest ; Physics Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < manifest ; Physics Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Physics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Physics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Plastic Surgery International ;
+      issn = 2090-1461 ;
+      eissn = 2090-147X ;
+      issnl = 2090-1461
+    >
+
+    param[journal_id] = psi
+
+    au < manifest ; Plastic Surgery International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Plastic Surgery International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = Physical Separation in Science and Engineering ;
       issn = 1478-6478 ;
       eissn = 1478-6486 ;
       issnl = 1478-6478
     >
 
+	comment[psse] = this page cannot be found
+	
     param[journal_id] = psse
 
     au < released ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 ; 1 ; 1994 >
@@ -2676,7 +4565,66 @@
 
   {
     title <
-      name = Psyche ;
+      name = Prostate Cancer ;
+      issn = 2090-3111 ;
+      eissn = 2090-312X ;
+      issnl = 2090-3111
+    >
+
+    param[journal_id] = pc
+
+    au < manifest ; Prostate Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Prostate Cancer Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    
+  }
+
+  {
+    title <
+      name = Pulmonary Medicine ;
+      issn = 2090-1836 ;
+      eissn = 2090-1844 ;
+      issnl = 2090-1836
+    >
+
+    param[journal_id] = pm
+
+    au < manifest ; Pulmonary Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Pulmonary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Radiology Research and Practice ;
+      issn = 2090-1941 ;
+      eissn = 2090-195X ;
+      issnl = 2090-1941
+    >
+
+    param[journal_id] = rrp
+
+    au < manifest ; Radiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Rehabilitation Research and Practice ;
+      issn = 2090-2867 ;
+      eissn = 2090-2875 ;
+      issnl = 2090-2867
+    >
+
+    param[journal_id] = rerp
+
+    au < manifest ; Rehabilitation Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Rehabilitation Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Psyche: A Journal of Entomology ;
       issn = 0033-2615 ;
       eissn = 1687-7438 ;
       issnl = 0033-2615
@@ -2684,7 +4632,7 @@
 
     param[journal_id] = psyche
 
-comment[volume_order] = volume order is wrong, goes back to 1974
+    comment[volume_order] = volume order is wrong, goes back to 1974
 
     au < released ; Psyche Volume 1 (1874) ; 1874 ; 1 ; 1874 >
     au < released ; Psyche Volume 1 (1875) ; 1875 ; 1 ; 1875 >
@@ -2827,7 +4775,9 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6717 ;
       issnl = 1687-6709
     >
-
+	
+	comment[rlbc] = this url http://www.hindawi.com/journals/rlbc/ redirects to http://www.hindawi.com/journals/bcri/
+	
     param[journal_id] = rlbc
 
     au < released ; Research Letters in Biochemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -2845,6 +4795,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       issnl = 1687-6741
     >
 
+	comment[rlc] = this url http://www.hindawi.com/journals/rlc/ redirects to http://www.hindawi.com/journals/jece/
+	
     param[journal_id] = rlc
 
     au < released ; Research Letters in Communications Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -2862,6 +4814,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6776 ;
       issnl = 1687-6768
     >
+    
+    comment[rleco] =  this url http://www.hindawi.com/journals/rleco/ redirects to http://www.hindawi.com/journals/ijeco/
 
     param[journal_id] = rleco
 
@@ -2880,6 +4834,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6792 ;
       issnl = 1687-6784
     >
+    
+    comment[rle] = this url http://www.hindawi.com/journals/rle/ redirects to http://www.hindawi.com/journals/jece/
 
     param[journal_id] = rle
 
@@ -2896,6 +4852,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6814 ;
       issnl = 1687-6806
     >
+    
+    comment[rlic] = this url http://www.hindawi.com/journals/rlic/ redicts to http://www.hindawi.com/journals/ijic/
 
     param[journal_id] = rlic
 
@@ -2913,7 +4871,9 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6830 ;
       issnl = 1687-6822
     >
-
+    
+    comment[rlms] = this url http://www.hindawi.com/journals/rlms/ redirects to http://www.hindawi.com/journals/amse/
+    
     param[journal_id] = rlms
 
     au < released ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -2931,6 +4891,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6857 ;
       issnl = 1687-6849
     >
+    
+    comment[rlnt] = this url http://www.hindawi.com/journals/rlnt/ redirects to http://www.hindawi.com/journals/jnt/
 
     param[journal_id] = rlnt
 
@@ -2948,6 +4910,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-8183 ;
       issnl = 1687-8175
     >
+    
+    comment[rlo] = this url http://www.hindawi.com/journals/rlo/ redirects to http://www.hindawi.com/journals/ijo/
 
     param[journal_id] = rlo
 
@@ -2964,7 +4928,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6938 ;
       issnl = 1687-6865
     >
-
+	comment[rloc] = this url http://www.hindawi.com/journals/rloc/ redirects to http://www.hindawi.com/journals/oci/
+	
     param[journal_id] = rloc
 
     au < released ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -2981,6 +4946,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6881 ;
       issnl = 1687-6873
     >
+    
+	comment[rlp] = this url http://www.hindawi.com/journals/rlpc/ redirects to http://www.hindawi.com/journals/apc/
 
     param[journal_id] = rlpc
 
@@ -2999,7 +4966,9 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       eissn = 1687-6903 ;
       issnl = 1687-689X
     >
-
+    
+	comment[rlp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/phys/
+	
     param[journal_id] = rlp
 
     au < released ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -3017,6 +4986,8 @@ comment[volume_order] = volume order is wrong, goes back to 1974
       issnl = 1687-6911
     >
 
+	comment[rlp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/jece/
+    
     param[journal_id] = rlsp
 
     au < released ; Research Letters in Signal Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
@@ -3057,6 +5028,20 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
   {
     title <
+      name = Schizophrenia Research and Treatment ;
+      issn = 2090-2085 ;
+      eissn = 2090-2093 ;
+      issnl = 2090-2085
+    >
+
+    param[journal_id] = sprt
+
+    au < manifest ; Schizophrenia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+  
+  {
+    title <
       name = Science and Technology of Nuclear Installations ;
       issn = 1687-6075 ;
       eissn = 1687-6083 ;
@@ -3075,12 +5060,85 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
   {
     title <
+      name = Sequencing ;
+      issn = 2090-0325 ;
+      eissn = 2090-0333 ;
+      issnl = 2090-0325
+    >
+
+    param[journal_id] = seq
+
+    au < manifest ; Sequencing Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+
+  }
+
+  {
+    title <
+      name = Sleep Disorders ;
+      issn = 2090-3545 ;
+      eissn = 2090-3553 ;
+      issnl = 2090-3545
+    >
+
+    param[journal_id] = sd
+
+    au < manifest ; Sleep Disorders Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Smart Materials Research ;
+      issn = 2090-3561 ;
+      eissn = 2090-357X ;
+      issnl = 2090-3561
+    >
+
+    param[journal_id] = smr
+
+    au < manifest ; Smart Materials Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Stem Cells International ;
+      issn = 1687-9678 ;
+      issnl = 1687-9678
+    >
+
+    param[journal_id] = sci
+
+    au < manifest ; Stem Cells International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Stem Cells International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Stroke Research and Treatment ;
+      issn = 2090-8105 ;
+      eissn = 2042-0056 ;
+      issnl = 2090-8105 
+    >
+
+    param[journal_id] = srt
+
+    au < manifest ; Stroke Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Stroke Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+  
+  {
+    title <
       name = Texture, Stress, and Microstructure ;
       issn = 1687-5397 ;
       eissn = 1687-5400 ;
       issnl = 1687-5397
     >
-
+    
+	comment[tsm] = this page cannot be found
+	
     param[journal_id] = tsm
 
     au < released ; Texture, Stress, and Microstructure Volume 1 (1972) ; 1972 ; 1 ; 1972 >
@@ -3122,6 +5180,79 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
   {
     title <
+      name = Thrombosis ;
+      issn = 2090-1488 ;
+      eissn = 2090-1496 ;
+      issnl = 2090-1488
+    >
+
+    param[journal_id] = thromb
+
+    au < manifest ; Thrombosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Thrombosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Tuberculosis Research and Treatment ;
+      issn = 2090-150X ;
+      eissn = 2090-1518 ;
+      issnl = 2090-150X
+    >
+
+    param[journal_id] = trt
+
+    au < manifest ; Tuberculosis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Tuberculosis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Ulcers ;
+      issn = 2090-1526 ;
+      eissn = 2090-1534 ;
+      issnl = 2090-1526
+    >
+
+    param[journal_id] = ulc
+
+    au < manifest ; Ulcers Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Ulcers Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
+      name = Urban Studies Research ;
+      issn = 2090-4185 ;
+      eissn = 2090-4193 ;
+      issnl = 2090-4185
+    >
+
+    param[journal_id] = usr
+
+    au < manifest ; Urban Studies Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
+  }
+
+  {
+    title <
+      name = Veterinary Medicine International ;
+      issn = 2042-0048 ;
+      issnl = 2042-0048
+    >
+
+    param[journal_id] = vmi
+
+    au < manifest ; Veterinary Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Veterinary Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    
+  }
+
+  {
+    title <
       name = VLSI Design ;
       issn = 1065-514X ;
       eissn = 1563-5171 ;
@@ -3130,7 +5261,7 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
     param[journal_id] = vlsi
 
-comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
+	comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
 
     au < released ; VLSI Design Volume 1 (1992) ; 1992 ; 1 ; 1992 >
     au < released ; VLSI Design Volume 2 (1993) ; 1993 ; 2 ; 1993 >
