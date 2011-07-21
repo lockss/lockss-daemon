@@ -17,9 +17,21 @@
 
   {
   
-    comment[1] = Field Guides
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://fieldguides.gsapubs.org/
+    title <
+      name = Field Guides 
+    >
+    
+    comment[1] = no issn
+    param[base_url] = http://fieldguides.gsapubs.org/
+    
+    au < manifest ; 2008 ; Field Guides Volume 14 ; 14 >
+    au < manifest ; 2009 ; Field Guides Volume 15 ; 15 >
+    au < manifest ; 2010 ; Field Guides Volume 16 ; 16 >
+    au < manifest ; 2010 ; Field Guides Volume 17 ; 17 >
+    au < manifest ; 2010 ; Field Guides Volume 18 ; 18 >
+    au < manifest ; 2011 ; Field Guides Volume 19 ; 19 >
+    au < manifest ; 2011 ; Field Guides Volume 20 ; 20 >
+    au < manifest ; 2011 ; Field Guides Volume 21 ; 21 >
   
   }
 
@@ -224,7 +236,8 @@
 
     comment[1] = GSA Today
     comment[2] = not in usual HighWire shape
-    comment[3] = http://www.geosociety.org/gsatoday/
+    comment[3] = http://www.geosociety.org/gsatoday/           
+    comment[4] = issn 1052-5173
     
   }
 
