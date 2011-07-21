@@ -439,6 +439,30 @@
     {
 
       title <
+        name = Administrative Science Quarterly ;
+        issn = 0001-8392 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://asq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
+        au < exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
+        au < exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
+        au < exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
+        au < exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
+        au < manifest ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Advances in Dental Research ;
         issn = 0895-9374 ;
         eissn = 1544-0737 ;
@@ -29126,6 +29150,24 @@ comment[mpj] = now published by Brill
 
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Sage Open ;
+        eissn = 2158-2440 
+      >
+
+      {
+
+        plugin = needs.plugin
+        param[base_url] = http://sgo.sagepub.com/
+        
+        comment[needs_plugin] = This journal does not seem to have AUs, but just a collection of articles.
 
       }
 
