@@ -10,7 +10,7 @@
       name = East View Information Services Source Content
     >
     
-    plugin = org.lockss.plugin.elsevier.ClockssEastViewSourcePlugin
+    plugin = org.lockss.plugin.eastview.ClockssEastViewSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
     proxy = DIRECT
     implicit < status ; year ; name ; param[year] >
