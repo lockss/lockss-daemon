@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = International Federation of Computational Logic
+  >
+  
+  {
+  
+    title <
+      name = Logical Methods in Computer Science ;
+      issn = 1860-5974 ;
+      issnl = 1860-5974
+    >
+	
+    rights = openaccess
+	
+	comment[ojs] = cannot find manifest pages following the rule of OJSplugin
+	
+    {
+    
+      plugin = org.lockss.plugin.ojs.OJSPlugin
+      param[base_url] = http://www.lmcs-online.org/ojs/
+      implicit < status ; year ; name ; param[year] >
+    
+      au < exists ; 2011 ; Logical Methods in Computer Science Volume 7 ; 2011 >
+    
+    }
+    
+  }
+
+}

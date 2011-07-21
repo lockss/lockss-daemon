@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Ploughshares
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Ploughshares ;
+      issn = 0048-4474  ;
+      eissn = 2162-0903 ;
+      issnl = 0048-4474 
+    >
+
+    param[journal_dir] = ploughshares
+   
+    au < manifest ; 2011 ; Ploughshares Volume 37 ; 37 >
+    
+  }
+  
+}

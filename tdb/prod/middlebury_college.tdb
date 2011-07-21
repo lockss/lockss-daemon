@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Middlebury College
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = New England Review ;
+      issn = 1053-1297 ;
+      eissn = 2161-9131 ;
+      issnl = 1053-1297
+    >
+
+    param[journal_dir] = new_england_review
+
+    au < manifest ; 2011 ; New England Review Volume 32 ; 32 >
+  
+  }
+  
+}
+	
