@@ -17,9 +17,9 @@
 
       plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
       param[base_url] = http://www.bigbridge.org/  
-      implicit < status ; name >
+      implicit < status ; name ; volume >
     
-      au < exists ; Big Bridge Volume 1 >
+      au < exists ; Big Bridge Volume 1 ; 1 >
       
     }
     

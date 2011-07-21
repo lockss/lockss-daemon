@@ -14,12 +14,12 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; name ; volume ; param[year] >
     param[base_url] = http://www.leahbrowning.net/
 
-    au < released ; Apple Valley Review Volume 1 ; 2006 >
-    au < released ; Apple Valley Review Volume 2 ; 2007 >
-    au < released ; Apple Valley Review Volume 3 ; 2008 >
+    au < released ; Apple Valley Review Volume 1 ; 1 ; 2006 >
+    au < released ; Apple Valley Review Volume 2 ; 2 ; 2007 >
+    au < released ; Apple Valley Review Volume 3 ; 3 ; 2008 >
   
   }
   
