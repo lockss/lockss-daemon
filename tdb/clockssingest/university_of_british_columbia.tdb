@@ -13,7 +13,7 @@
       issnl = 0030-851X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
