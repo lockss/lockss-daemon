@@ -186,6 +186,9 @@ X-p*)
     DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
     ;;
 esac
+if [ "X${LOCKSS_SSL_CONFIG}" != "X" -a -s ${LOCKSS_SSL_CONFIG} ]; then
+    DAEMON_ARGS="${DAEMON_ARGS} -p ${LOCKSS_SSL_CONFIG}"
+fi
 if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
     DAEMON_ARGS="-g ${LOCKSS_TEST_GROUP} ${DAEMON_ARGS}"
 else
