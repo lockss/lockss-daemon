@@ -680,6 +680,42 @@
     {
 
       title <
+        name = Aesthetic Surgery Journal ;
+        issn = 1090-820X ;
+        eissn = 1527-330X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://aes.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
+        au < exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
+        au < exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
+        au < exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
+        au < exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
+        au < exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
+        au < exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
+        au < exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
+        au < exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
+        au < exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
+        au < exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
+        au < exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
+        au < exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
+        au < exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
+        au < exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
+        au < manifest ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
+        au < manifest ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Affilia ;
         issn = 0886-1099 ;
         eissn = 1552-3020 ;
@@ -27195,10 +27231,11 @@ comment[mpj] = now published by Brill
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy ;
-          issn = 0957-6509 ;
-          eissn = 2041-2967
+        name = Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy ;
+        issn = 0957-6509 ;
+        eissn = 2041-2967 
       >
 
       {
@@ -27207,15 +27244,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pia.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture ;
-          issn = 0954-4054 ;
-          eissn = 2041-2975
+        name = Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture ;
+        issn = 0954-4054 ;
+        eissn = 2041-2975 
       >
 
       {
@@ -27224,16 +27278,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pib.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 >
 
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science ;
-          issn = 0954-4062 ;
-          eissn = 2041-2983
+        name = Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science ;
+        issn = 0954-4062 ;
+        eissn = 2041-2983 
       >
 
       {
@@ -27242,15 +27312,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pic.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering ;
-          issn = 0954-4070 ;
-          eissn = 2041-2991
+        name = Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering ;
+        issn = 0954-4070 ;
+        eissn = 2041-2991 
       >
 
       {
@@ -27259,15 +27346,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pid.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering ;
-          issn = 0954-4089 ;
-          eissn = 2041-3009
+        name = Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering ;
+        issn = 0954-4089 ;
+        eissn = 2041-3009 
       >
 
       {
@@ -27276,15 +27380,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pie.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit ;
-          issn = 0954-4097 ;
-          eissn = 2041-3017
+        name = Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit ;
+        issn = 0954-4097 ;
+        eissn = 2041-3017 
       >
 
       {
@@ -27293,15 +27414,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pif.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering ;
-          issn = 0954-4100 ;
-          eissn = 2041-3025
+        name = Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering ;
+        issn = 0954-4100 ;
+        eissn = 2041-3025 
       >
 
       {
@@ -27310,15 +27448,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pig.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine ;
-          issn = 0954-4119 ;
-          eissn = 2041-3033
+        name = Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine ;
+        issn = 0954-4119 ;
+        eissn = 2041-3033 
       >
 
       {
@@ -27327,15 +27482,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pih.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering ;
-          issn = 0959-6518 ;
-          eissn = 2041-3041
+        name = Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering ;
+        issn = 0959-6518 ;
+        eissn = 2041-3041 
       >
 
       {
@@ -27344,15 +27516,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pii.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology ;
-          issn = 1350-6501 ;
-          eissn = 2041-305X
+        name = Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology ;
+        issn = 1350-6501 ;
+        eissn = 2041-305X 
       >
 
       {
@@ -27361,15 +27550,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics ;
-          issn = 1464-4193 ;
-          eissn = 2041-3068
+        name = Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics ;
+        issn = 1464-4193 ;
+        eissn = 2041-3068 
       >
 
       {
@@ -27378,15 +27584,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pik.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications ;
-          issn = 1464-4207 ;
-          eissn = 2041-3076
+        name = Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications ;
+        issn = 1464-4207 ;
+        eissn = 2041-3076 
       >
 
       {
@@ -27395,15 +27618,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pil.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment ;
-          issn = 1475-0902 ;
-          eissn = 2041-3084
+        name = Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment ;
+        issn = 1475-0902 ;
+        eissn = 2041-3084 
       >
 
       {
@@ -27412,15 +27652,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pim.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part M: Journal of Engineering for the Maritime Environment Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems ;
-          issn = 1740-3499 ;
-          eissn = 2041-3092
+        name = Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems ;
+        issn = 1740-3499 ;
+        eissn = 2041-3092 
       >
 
       {
@@ -27429,15 +27686,31 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pin.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 >
+        au < manifest ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability ;
-          issn = 1748-006X ;
-          eissn = 1748-0078
+        name = Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability ;
+        issn = 1748-006X ;
+        eissn = 1748-0078 
       >
 
       {
@@ -27446,15 +27719,32 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pio.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part O: Journal of Risk and Reliability Volume 225 ; 225 >
+
       }
 
     }
 
     {
+
       title <
-          name = Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology ;
-          issn = 1754-3371 ;
-          eissn = 1754-338X
+        name = Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology ;
+        issn = 1754-3371 ;
+        eissn = 1754-338X 
       >
 
       {
@@ -27462,6 +27752,22 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://pip.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1997 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 211 ; 211 >
+        au < exists ; 1998 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 212 ; 212 >
+        au < exists ; 1999 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 213 ; 213 >
+        au < exists ; 2000 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 214 ; 214 >
+        au < exists ; 2001 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 215 ; 215 >
+        au < exists ; 2002 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 216 ; 216 >
+        au < exists ; 2003 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 217 ; 217 >
+        au < exists ; 2004 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 218 ; 218 >
+        au < exists ; 2005 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 219 ; 219 >
+        au < exists ; 2006 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 220 ; 220 >
+        au < exists ; 2007 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 221 ; 221 >
+        au < exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 222 ; 222 >
+        au < exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 223 ; 223 >
+        au < manifest ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 224 ; 224 >
+        au < manifest ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 225 ; 225 >
 
       }
 
@@ -32242,6 +32548,43 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Update: Applications of Research in Music Education ;
+        issn = 8755-1233 ;
+        eissn = 1945-0109 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://upd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1989-1990 ; Update: Applications of Research in Music Education Volume 8 ; 8 >
+        au < manifest ; 1990-1991 ; Update: Applications of Research in Music Education Volume 9 ; 9 >
+        au < manifest ; 1991-1992 ; Update: Applications of Research in Music Education Volume 10 ; 10 >
+        au < manifest ; 1992-1993 ; Update: Applications of Research in Music Education Volume 11 ; 11 >
+        au < manifest ; 1993-1994 ; Update: Applications of Research in Music Education Volume 12 ; 12 >
+        au < manifest ; 1998 ; Update: Applications of Research in Music Education Volume 17 ; 17 >
+        au < manifest ; 1999-2000 ; Update: Applications of Research in Music Education Volume 18 ; 18 >
+        au < manifest ; 2000-2001 ; Update: Applications of Research in Music Education Volume 19 ; 19 >
+        au < manifest ; 2001-2002 ; Update: Applications of Research in Music Education Volume 20 ; 20 >
+        au < manifest ; 2002 ; Update: Applications of Research in Music Education Volume 21 ; 21 >
+        au < manifest ; 2003-2004 ; Update: Applications of Research in Music Education Volume 22 ; 22 >
+        au < manifest ; 2004-2005 ; Update: Applications of Research in Music Education Volume 23 ; 23 >
+        au < manifest ; 2005-2006 ; Update: Applications of Research in Music Education Volume 24 ; 24 >
+        au < manifest ; 2006-2007 ; Update: Applications of Research in Music Education Volume 25 ; 25 >
+        au < manifest ; 2007-2008 ; Update: Applications of Research in Music Education Volume 26 ; 26 >
+        au < manifest ; 2008-2009 ; Update: Applications of Research in Music Education Volume 27 ; 27 >
+        au < manifest ; 2009-2010 ; Update: Applications of Research in Music Education Volume 28 ; 28 >
+        au < manifest ; 2010-2011 ; Update: Applications of Research in Music Education Volume 29 ; 29 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Urban Affairs Review ;
         issn = 1078-0874 ;
         eissn = 1552-8332 ;
@@ -32403,6 +32746,73 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Urban Studies ;
+        issn = 0042-0980 ;
+        eissn = 1360-063X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://usj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1964 ; Urban Studies Volume 1 ; 1 >
+        au < manifest ; 1965 ; Urban Studies Volume 2 ; 2 >
+        au < manifest ; 1966 ; Urban Studies Volume 3 ; 3 >
+        au < manifest ; 1967 ; Urban Studies Volume 4 ; 4 >
+        au < manifest ; 1968 ; Urban Studies Volume 5 ; 5 >
+        au < manifest ; 1969 ; Urban Studies Volume 6 ; 6 >
+        au < manifest ; 1970 ; Urban Studies Volume 7 ; 7 >
+        au < manifest ; 1971 ; Urban Studies Volume 8 ; 8 >
+        au < manifest ; 1972 ; Urban Studies Volume 9 ; 9 >
+        au < manifest ; 1973 ; Urban Studies Volume 10 ; 10 >
+        au < manifest ; 1974 ; Urban Studies Volume 11 ; 11 >
+        au < manifest ; 1975 ; Urban Studies Volume 12 ; 12 >
+        au < manifest ; 1976 ; Urban Studies Volume 13 ; 13 >
+        au < manifest ; 1977 ; Urban Studies Volume 14 ; 14 >
+        au < manifest ; 1978 ; Urban Studies Volume 15 ; 15 >
+        au < manifest ; 1979 ; Urban Studies Volume 16 ; 16 >
+        au < manifest ; 1980 ; Urban Studies Volume 17 ; 17 >
+        au < manifest ; 1981 ; Urban Studies Volume 18 ; 18 >
+        au < manifest ; 1982 ; Urban Studies Volume 19 ; 19 >
+        au < manifest ; 1983 ; Urban Studies Volume 20 ; 20 >
+        au < manifest ; 1984 ; Urban Studies Volume 21 ; 21 >
+        au < manifest ; 1985 ; Urban Studies Volume 22 ; 22 >
+        au < manifest ; 1986 ; Urban Studies Volume 23 ; 23 >
+        au < manifest ; 1987 ; Urban Studies Volume 24 ; 24 >
+        au < manifest ; 1988 ; Urban Studies Volume 25 ; 25 >
+        au < manifest ; 1989 ; Urban Studies Volume 26 ; 26 >
+        au < manifest ; 1990 ; Urban Studies Volume 27 ; 27 >
+        au < manifest ; 1991 ; Urban Studies Volume 28 ; 28 >
+        au < manifest ; 1992 ; Urban Studies Volume 29 ; 29 >
+        au < manifest ; 1993 ; Urban Studies Volume 30 ; 30 >
+        au < manifest ; 1994 ; Urban Studies Volume 31 ; 31 >
+        au < manifest ; 1995 ; Urban Studies Volume 32 ; 32 >
+        au < manifest ; 1996 ; Urban Studies Volume 33 ; 33 >
+        au < manifest ; 1997 ; Urban Studies Volume 34 ; 34 >
+        au < manifest ; 1998 ; Urban Studies Volume 35 ; 35 >
+        au < manifest ; 1999 ; Urban Studies Volume 36 ; 36 >
+        au < manifest ; 2000 ; Urban Studies Volume 37 ; 37 >
+        au < manifest ; 2001 ; Urban Studies Volume 38 ; 38 >
+        au < manifest ; 2002 ; Urban Studies Volume 39 ; 39 >
+        au < manifest ; 2003 ; Urban Studies Volume 40 ; 40 >
+        au < manifest ; 2004 ; Urban Studies Volume 41 ; 41 >
+        au < manifest ; 2005 ; Urban Studies Volume 42 ; 42 >
+        au < manifest ; 2006 ; Urban Studies Volume 43 ; 43 >
+        au < manifest ; 2007 ; Urban Studies Volume 44 ; 44 >
+        au < manifest ; 2008 ; Urban Studies Volume 45 ; 45 >
+        au < manifest ; 2009 ; Urban Studies Volume 46 ; 46 >
+        au < manifest ; 2010 ; Urban Studies Volume 47 ; 47 >
+        au < manifest ; 2011 ; Urban Studies Volume 48 ; 48 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Vascular and Endovascular Surgery ;
         issn = 1538-5744 ;
         eissn = 1938-9116 ;
@@ -32520,6 +32930,73 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Vascular Medicine Volume 14 ; 14 >
         au < manifest ; 2010 ; Vascular Medicine Volume 15 ; 15 >
         au < manifest ; 2011 ; Vascular Medicine Volume 16 ; 16 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Veterinary Pathology ;
+        issn = 0300-9858 ;
+        eissn = 1544-2217 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://vet.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1964 ; Veterinary Pathology Volume 1 ; 1 >
+        au < exists ; 1965 ; Veterinary Pathology Volume 2 ; 2 >
+        au < exists ; 1966 ; Veterinary Pathology Volume 3 ; 3 >
+        au < exists ; 1967 ; Veterinary Pathology Volume 4 ; 4 >
+        au < exists ; 1968 ; Veterinary Pathology Volume 5 ; 5 >
+        au < manifest ; 1969 ; Veterinary Pathology Volume 6 ; 6 >
+        au < exists ; 1970 ; Veterinary Pathology Volume 7 ; 7 >
+        au < exists ; 1971 ; Veterinary Pathology Volume 8 ; 8 >
+        au < manifest ; 1972 ; Veterinary Pathology Volume 9 ; 9 >
+        au < exists ; 1973 ; Veterinary Pathology Volume 10 ; 10 >
+        au < exists ; 1974 ; Veterinary Pathology Volume 11 ; 11 >
+        au < exists ; 1975 ; Veterinary Pathology Volume 12 ; 12 >
+        au < exists ; 1976 ; Veterinary Pathology Volume 13 ; 13 >
+        au < exists ; 1977 ; Veterinary Pathology Volume 14 ; 14 >
+        au < manifest ; 1978 ; Veterinary Pathology Volume 15 ; 15 >
+        au < manifest ; 1979 ; Veterinary Pathology Volume 16 ; 16 >
+        au < exists ; 1980 ; Veterinary Pathology Volume 17 ; 17 >
+        au < exists ; 1981 ; Veterinary Pathology Volume 18 ; 18 >
+        au < manifest ; 1982 ; Veterinary Pathology Volume 19 ; 19 >
+        au < manifest ; 1983 ; Veterinary Pathology Volume 20 ; 20 >
+        au < exists ; 1984 ; Veterinary Pathology Volume 21 ; 21 >
+        au < exists ; 1985 ; Veterinary Pathology Volume 22 ; 22 >
+        au < exists ; 1986 ; Veterinary Pathology Volume 23 ; 23 >
+        au < exists ; 1987 ; Veterinary Pathology Volume 24 ; 24 >
+        au < manifest ; 1988 ; Veterinary Pathology Volume 25 ; 25 >
+        au < manifest ; 1989 ; Veterinary Pathology Volume 26 ; 26 >
+        au < manifest ; 1990 ; Veterinary Pathology Volume 27 ; 27 >
+        au < exists ; 1991 ; Veterinary Pathology Volume 28 ; 28 >
+        au < exists ; 1992 ; Veterinary Pathology Volume 29 ; 29 >
+        au < exists ; 1993 ; Veterinary Pathology Volume 30 ; 30 >
+        au < manifest ; 1994 ; Veterinary Pathology Volume 31 ; 31 >
+        au < manifest ; 1995 ; Veterinary Pathology Volume 32 ; 32 >
+        au < manifest ; 1996 ; Veterinary Pathology Volume 33 ; 33 >
+        au < manifest ; 1997 ; Veterinary Pathology Volume 34 ; 34 >
+        au < manifest ; 1998 ; Veterinary Pathology Volume 35 ; 35 >
+        au < manifest ; 1999 ; Veterinary Pathology Volume 36 ; 36 >
+        au < manifest ; 2000 ; Veterinary Pathology Volume 37 ; 37 >
+        au < manifest ; 2001 ; Veterinary Pathology Volume 38 ; 38 >
+        au < manifest ; 2002 ; Veterinary Pathology Volume 39 ; 39 >
+        au < manifest ; 2003 ; Veterinary Pathology Volume 40 ; 40 >
+        au < manifest ; 2004 ; Veterinary Pathology Volume 41 ; 41 >
+        au < manifest ; 2005 ; Veterinary Pathology Volume 42 ; 42 >
+        au < manifest ; 2006 ; Veterinary Pathology Volume 43 ; 43 >
+        au < manifest ; 2007 ; Veterinary Pathology Volume 44 ; 44 >
+        au < manifest ; 2008 ; Veterinary Pathology Volume 45 ; 45 >
+        au < manifest ; 2009 ; Veterinary Pathology Volume 46 ; 46 >
+        au < manifest ; 2010 ; Veterinary Pathology Volume 47 ; 47 >
+        au < manifest ; 2011 ; Veterinary Pathology Volume 48 ; 48 >
 
       }
 
@@ -33144,6 +33621,38 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Young Exceptional Children ;
+        issn = 1096-2506 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://yec.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; Young Exceptional Children Volume 1 ; 1 >
+        au < manifest ; 1999 ; Young Exceptional Children Volume 2 ; 2 >
+        au < manifest ; 1999 ; Young Exceptional Children Volume 3 ; 3 >
+        au < manifest ; 2000 ; Young Exceptional Children Volume 4 ; 4 >
+        au < manifest ; 2001 ; Young Exceptional Children Volume 5 ; 5 >
+        au < manifest ; 2002 ; Young Exceptional Children Volume 6 ; 6 >
+        au < manifest ; 2003 ; Young Exceptional Children Volume 7 ; 7 >
+        au < manifest ; 2004 ; Young Exceptional Children Volume 8 ; 8 >
+        au < manifest ; 2005 ; Young Exceptional Children Volume 9 ; 9 >
+        au < manifest ; 2006 ; Young Exceptional Children Volume 10 ; 10 >
+        au < manifest ; 2007 ; Young Exceptional Children Volume 11 ; 11 >
+        au < manifest ; 2008 ; Young Exceptional Children Volume 12 ; 12 >
+        au < manifest ; 2009 ; Young Exceptional Children Volume 13 ; 13 >
+        au < manifest ; 2011 ; Young Exceptional Children Volume 14 ; 14 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Youth & Society ;
         issn = 0044-118X ;
         eissn = 1552-8499 ;
@@ -33302,6 +33811,2638 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 >
         au < manifest ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 >
         au < manifest ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = American Sociological Review ;
+        issn = 0003-1224 ;
+        eissn = 1939-8271 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://asr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; American Sociological Review Volume 69 ; 69 >
+        au < exists ; 2005 ; American Sociological Review Volume 70 ; 70 >
+        au < exists ; 2006 ; American Sociological Review Volume 71 ; 71 >
+        au < exists ; 2007 ; American Sociological Review Volume 72 ; 72 >
+        au < exists ; 2008 ; American Sociological Review Volume 73 ; 73 >
+        au < manifest ; 2009 ; American Sociological Review Volume 74 ; 74 >
+        au < manifest ; 2010 ; American Sociological Review Volume 75 ; 75 >
+        au < manifest ; 2011 ; American Sociological Review Volume 76 ; 76 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Australian Journal of Management ;
+        issn = 0312-8962 ;
+        eissn = 1327-2020 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://aum.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1976 ; Australian Journal of Management Volume 1 ; 1 >
+        au < exists ; 1977 ; Australian Journal of Management Volume 2 ; 2 >
+        au < exists ; 1978 ; Australian Journal of Management Volume 3 ; 3 >
+        au < exists ; 1979 ; Australian Journal of Management Volume 4 ; 4 >
+        au < exists ; 1980 ; Australian Journal of Management Volume 5 ; 5 >
+        au < exists ; 1981 ; Australian Journal of Management Volume 6 ; 6 >
+        au < exists ; 1982 ; Australian Journal of Management Volume 7 ; 7 >
+        au < exists ; 1983 ; Australian Journal of Management Volume 8 ; 8 >
+        au < exists ; 1984 ; Australian Journal of Management Volume 9 ; 9 >
+        au < exists ; 1985 ; Australian Journal of Management Volume 10 ; 10 >
+        au < exists ; 1986 ; Australian Journal of Management Volume 11 ; 11 >
+        au < exists ; 1987 ; Australian Journal of Management Volume 12 ; 12 >
+        au < exists ; 1988 ; Australian Journal of Management Volume 13 ; 13 >
+        au < exists ; 1989 ; Australian Journal of Management Volume 14 ; 14 >
+        au < exists ; 1990 ; Australian Journal of Management Volume 15 ; 15 >
+        au < exists ; 1991 ; Australian Journal of Management Volume 16 ; 16 >
+        au < exists ; 1992 ; Australian Journal of Management Volume 17 ; 17 >
+        au < exists ; 1993 ; Australian Journal of Management Volume 18 ; 18 >
+        au < exists ; 1994 ; Australian Journal of Management Volume 19 ; 19 >
+        au < exists ; 1995 ; Australian Journal of Management Volume 20 ; 20 >
+        au < exists ; 1996 ; Australian Journal of Management Volume 21 ; 21 >
+        au < exists ; 1997 ; Australian Journal of Management Volume 22 ; 22 >
+        au < exists ; 1998 ; Australian Journal of Management Volume 23 ; 23 >
+        au < exists ; 1999 ; Australian Journal of Management Volume 24 ; 24 >
+        au < exists ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
+        au < exists ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
+        au < exists ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
+        au < exists ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
+        au < exists ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
+        au < exists ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
+        au < exists ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
+        au < exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
+        au < exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 >
+        au < manifest ; 2009 ; Australian Journal of Management Volume 34 ; 34 >
+        au < manifest ; 2010 ; Australian Journal of Management Volume 35 ; 35 >
+        au < manifest ; 2011 ; Australian Journal of Management Volume 36 ; 36 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = BioScope: South Asian Screen Studies ;
+        issn = 0974-9276 ;
+        eissn = 0976-352X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bio.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 >
+        au < manifest ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = BMS: Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique ;
+        issn = 0759-1063 ;
+        eissn = 2070-2779 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://bms.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[bms] = V1-110 exist on journal site.
+
+        au < exists ; 1983 ; Bulletin de Méthodologie Sociologique Volume 1 ; 1 >
+        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 2 ; 2 >
+        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 3 ; 3 >
+        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 4 ; 4 >
+        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 5 ; 5 >
+        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 6 ; 6 >
+        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 7 ; 7 >
+        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 8 ; 8 >
+        au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 >
+        au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 >
+        au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 >
+        au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 107 ; 107 >
+        au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 108 ; 108 >
+        au < manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 >
+        au < manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Capital & Class ;
+        issn = 0309-8168 ;
+        eissn = 2041-0980 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cnc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1977 ; Capital & Class Volume 1 ; 1 >
+        au < exists ; 1978 ; Capital & Class Volume 2 ; 2 >
+        au < exists ; 1979 ; Capital & Class Volume 3 ; 3 >
+        au < exists ; 1980 ; Capital & Class Volume 4 ; 4 >
+        au < exists ; 1981 ; Capital & Class Volume 5 ; 5 >
+        au < exists ; 1982 ; Capital & Class Volume 6 ; 6 >
+        au < exists ; 1983 ; Capital & Class Volume 7 ; 7 >
+        au < exists ; 1984 ; Capital & Class Volume 8 ; 8 >
+        au < exists ; 1985 ; Capital & Class Volume 9 ; 9 >
+        au < exists ; 1986 ; Capital & Class Volume 10 ; 10 >
+        au < exists ; 1987 ; Capital & Class Volume 11 ; 11 >
+        au < exists ; 1988 ; Capital & Class Volume 12 ; 12 >
+        au < exists ; 1989 ; Capital & Class Volume 13 ; 13 >
+        au < exists ; 1990 ; Capital & Class Volume 14 ; 14 >
+        au < exists ; 1991 ; Capital & Class Volume 15 ; 15 >
+        au < exists ; 1992 ; Capital & Class Volume 16 ; 16 >
+        au < exists ; 1993 ; Capital & Class Volume 17 ; 17 >
+        au < exists ; 1994 ; Capital & Class Volume 18 ; 18 >
+        au < exists ; 1995 ; Capital & Class Volume 19 ; 19 >
+        au < exists ; 1996 ; Capital & Class Volume 20 ; 20 >
+        au < exists ; 1997 ; Capital & Class Volume 21 ; 21 >
+        au < exists ; 1998 ; Capital & Class Volume 22 ; 22 >
+        au < exists ; 1999 ; Capital & Class Volume 23 ; 23 >
+        au < exists ; 2000 ; Capital & Class Volume 24 ; 24 >
+        au < exists ; 2001 ; Capital & Class Volume 25 ; 25 >
+        au < exists ; 2002 ; Capital & Class Volume 26 ; 26 >
+        au < exists ; 2003 ; Capital & Class Volume 27 ; 27 >
+        au < exists ; 2004 ; Capital & Class Volume 28 ; 28 >
+        au < exists ; 2005 ; Capital & Class Volume 29 ; 29 >
+        au < exists ; 2006 ; Capital & Class Volume 30 ; 30 >
+        au < exists ; 2007 ; Capital & Class Volume 31 ; 31 >
+        au < exists ; 2008 ; Capital & Class Volume 32 ; 32 >
+        au < exists ; 2009 ; Capital & Class Volume 33 ; 33 >
+        au < manifest ; 2009 ; Capital & Class Volume 33 ; 33 >
+        au < manifest ; 2010 ; Capital & Class Volume 34 ; 34 >
+        au < manifest ; 2011 ; Capital & Class Volume 35 ; 35 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Cephalalgia ;
+        issn = 0333-1024 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cep.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1981 ; Cephalalgia Volume 1 ; 1 >
+        au < exists ; 1982 ; Cephalalgia Volume 2 ; 2 >
+        au < exists ; 1983 ; Cephalalgia Volume 3 ; 3 >
+        au < exists ; 1984 ; Cephalalgia Volume 4 ; 4 >
+        au < exists ; 1985 ; Cephalalgia Volume 5 ; 5 >
+        au < exists ; 1986 ; Cephalalgia Volume 6 ; 6 >
+        au < exists ; 1987 ; Cephalalgia Volume 7 ; 7 >
+        au < exists ; 1988 ; Cephalalgia Volume 8 ; 8 >
+        au < exists ; 1989 ; Cephalalgia Volume 9 ; 9 >
+        au < exists ; 1990 ; Cephalalgia Volume 10 ; 10 >
+        au < exists ; 1991 ; Cephalalgia Volume 11 ; 11 >
+        au < exists ; 1992 ; Cephalalgia Volume 12 ; 12 >
+        au < exists ; 1993 ; Cephalalgia Volume 13 ; 13 >
+        au < exists ; 1994 ; Cephalalgia Volume 14 ; 14 >
+        au < exists ; 1995 ; Cephalalgia Volume 15 ; 15 >
+        au < exists ; 1996 ; Cephalalgia Volume 16 ; 16 >
+        au < exists ; 1997 ; Cephalalgia Volume 17 ; 17 >
+        au < exists ; 1998 ; Cephalalgia Volume 18 ; 18 >
+        au < exists ; 1999 ; Cephalalgia Volume 19 ; 19 >
+        au < exists ; 2000 ; Cephalalgia Volume 20 ; 20 >
+        au < exists ; 2001 ; Cephalalgia Volume 21 ; 21 >
+        au < exists ; 2002 ; Cephalalgia Volume 22 ; 22 >
+        au < exists ; 2003 ; Cephalalgia Volume 23 ; 23 >
+        au < exists ; 2004 ; Cephalalgia Volume 24 ; 24 >
+        au < exists ; 2005 ; Cephalalgia Volume 25 ; 25 >
+        au < exists ; 2006 ; Cephalalgia Volume 26 ; 26 >
+        au < exists ; 2007 ; Cephalalgia Volume 27 ; 27 >
+        au < exists ; 2008 ; Cephalalgia Volume 28 ; 28 >
+        au < exists ; 2009 ; Cephalalgia Volume 29 ; 29 >
+        au < manifest ; 2010 ; Cephalalgia Volume 30 ; 30 >
+        au < manifest ; 2011 ; Cephalalgia Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Contemporary Sociology: A Journal of Reviews ;
+        issn = 0094-3061 ;
+        eissn = 1939-8638 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://csx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2004 ; Contemporary Sociology: A Journal of Reviews Volume 33 ; 33 >
+        au < manifest ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 34 ; 34 >
+        au < exists ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 >
+        au < exists ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 >
+        au < exists ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 >
+        au < manifest ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 >
+        au < manifest ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 >
+        au < manifest ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Counseling Outcome Research and Evaluation ;
+        issn = 2150-1378 ;
+        eissn = 2150-1386 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cor.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 >
+        au < manifest ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Critical Reviews in Oral Biology & Medicine ;
+        issn = 1045-4411 ;
+        eissn = 1544-1113 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cro.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; Critical Reviews in Oral Biology & Medicine Volume 1 ; 1 >
+        au < manifest ; 1991 ; Critical Reviews in Oral Biology & Medicine Volume 2 ; 2 >
+        au < manifest ; 1992 ; Critical Reviews in Oral Biology & Medicine Volume 3 ; 3 >
+        au < manifest ; 1992 ; Critical Reviews in Oral Biology & Medicine Volume 4 ; 4 >
+        au < manifest ; 1994 ; Critical Reviews in Oral Biology & Medicine Volume 5 ; 5 >
+        au < manifest ; 1995 ; Critical Reviews in Oral Biology & Medicine Volume 6 ; 6 >
+        au < manifest ; 1996 ; Critical Reviews in Oral Biology & Medicine Volume 7 ; 7 >
+        au < manifest ; 1997 ; Critical Reviews in Oral Biology & Medicine Volume 8 ; 8 >
+        au < manifest ; 1998 ; Critical Reviews in Oral Biology & Medicine Volume 9 ; 9 >
+        au < manifest ; 1999 ; Critical Reviews in Oral Biology & Medicine Volume 10 ; 10 >
+        au < manifest ; 2000 ; Critical Reviews in Oral Biology & Medicine Volume 11 ; 11 >
+        au < manifest ; 2001 ; Critical Reviews in Oral Biology & Medicine Volume 12 ; 12 >
+        au < manifest ; 2002 ; Critical Reviews in Oral Biology & Medicine Volume 13 ; 13 >
+        au < manifest ; 2003 ; Critical Reviews in Oral Biology & Medicine Volume 14 ; 14 >
+        au < manifest ; 2004 ; Critical Reviews in Oral Biology & Medicine Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Current Directions in Psychological Science ;
+        issn = 0963-7214 ;
+        eissn = 1467-8721 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cdp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1992 ; Current Directions in Psychological Science Volume 1 ; 1 >
+        au < exists ; 1993 ; Current Directions in Psychological Science Volume 2 ; 2 >
+        au < exists ; 1994 ; Current Directions in Psychological Science Volume 3 ; 3 >
+        au < exists ; 1995 ; Current Directions in Psychological Science Volume 4 ; 4 >
+        au < exists ; 1996 ; Current Directions in Psychological Science Volume 5 ; 5 >
+        au < exists ; 1997 ; Current Directions in Psychological Science Volume 6 ; 6 >
+        au < exists ; 1998 ; Current Directions in Psychological Science Volume 7 ; 7 >
+        au < exists ; 1999 ; Current Directions in Psychological Science Volume 8 ; 8 >
+        au < exists ; 2000 ; Current Directions in Psychological Science Volume 9 ; 9 >
+        au < exists ; 2001 ; Current Directions in Psychological Science Volume 10 ; 10 >
+        au < exists ; 2002 ; Current Directions in Psychological Science Volume 11 ; 11 >
+        au < exists ; 2003 ; Current Directions in Psychological Science Volume 12 ; 12 >
+        au < exists ; 2004 ; Current Directions in Psychological Science Volume 13 ; 13 >
+        au < exists ; 2005 ; Current Directions in Psychological Science Volume 14 ; 14 >
+        au < exists ; 2006 ; Current Directions in Psychological Science Volume 15 ; 15 >
+        au < exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 >
+        au < exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 >
+        au < manifest ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 >
+        au < manifest ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
+        au < manifest ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Electronic News ;
+        issn = 1931-2431 ;
+        eissn = 1931-244X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://enx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2007 ; Electronic News Volume 1 ; 1 >
+        au < exists ; 2008 ; Electronic News Volume 2 ; 2 >
+        au < exists ; 2009 ; Electronic News Volume 3 ; 3 >
+        au < manifest ; 2010 ; Electronic News Volume 4 ; 4 >
+        au < manifest ; 2011 ; Electronic News Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Environment and Urbanization Asia ;
+        issn = 0975-4253 ;
+        eissn = 0976-3546 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://eua.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 >
+        au < manifest ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = General Music Today ;
+        issn = 1048-3713 ;
+        eissn = 1931-3756 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gmt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1991 ; General Music Today Volume 5 ; 5 >
+        au < exists ; 1992 ; General Music Today Volume 6 ; 6 >
+        au < exists ; 1993 ; General Music Today Volume 7 ; 7 >
+        au < exists ; 1994 ; General Music Today Volume 8 ; 8 >
+        au < exists ; 1995 ; General Music Today Volume 9 ; 9 >
+        au < exists ; 1996 ; General Music Today Volume 10 ; 10 >
+        au < exists ; 1997 ; General Music Today Volume 11 ; 11 >
+        au < exists ; 1998 ; General Music Today Volume 12 ; 12 >
+        au < exists ; 1999 ; General Music Today Volume 13 ; 13 >
+        au < exists ; 2000 ; General Music Today Volume 14 ; 14 >
+        au < manifest ; 2001 ; General Music Today Volume 15 ; 15 >
+        au < manifest ; 2002 ; General Music Today Volume 16 ; 16 >
+        au < manifest ; 2003 ; General Music Today Volume 17 ; 17 >
+        au < manifest ; 2004 ; General Music Today Volume 18 ; 18 >
+        au < manifest ; 2005 ; General Music Today Volume 19 ; 19 >
+        au < manifest ; 2006 ; General Music Today Volume 20 ; 20 >
+        au < manifest ; 2007 ; General Music Today Volume 21 ; 21 >
+        au < manifest ; 2008 ; General Music Today Volume 22 ; 22 >
+        au < manifest ; 2009 ; General Music Today Volume 23 ; 23 >
+        au < manifest ; 2010 ; General Music Today Volume 24 ; 24 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Genes & Cancer ;
+        issn = 1947-6019 ;
+        eissn = 1947-6027 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://gan.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Genes & Cancer Volume 1 ; 1 >
+        au < manifest ; 2011 ; Genes & Cancer Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Human Factors: The Journal of the Human Factors and Ergonomics Society ;
+        issn = 0018-7208 ;
+        eissn = 1547-8181 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hfs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1968 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 10 ; 10 >
+        au < exists ; 1969 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 11 ; 11 >
+        au < exists ; 1970 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 12 ; 12 >
+        au < exists ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
+        au < exists ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
+        au < exists ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
+        au < exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
+        au < exists ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
+        au < exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
+        au < exists ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
+        au < exists ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 >
+        au < exists ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 >
+        au < exists ; 1980 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 22 ; 22 >
+        au < exists ; 1981 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 23 ; 23 >
+        au < exists ; 1982 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 24 ; 24 >
+        au < exists ; 1983 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 25 ; 25 >
+        au < exists ; 1984 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 26 ; 26 >
+        au < exists ; 1985 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 27 ; 27 >
+        au < exists ; 1986 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 28 ; 28 >
+        au < exists ; 1987 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 29 ; 29 >
+        au < exists ; 1988 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 30 ; 30 >
+        au < exists ; 1989 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 31 ; 31 >
+        au < exists ; 1990 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 32 ; 32 >
+        au < exists ; 1991 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 33 ; 33 >
+        au < exists ; 1992 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 34 ; 34 >
+        au < exists ; 1993 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 35 ; 35 >
+        au < exists ; 1994 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 36 ; 36 >
+        au < exists ; 1995 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 37 ; 37 >
+        au < exists ; 1996 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 38 ; 38 >
+        au < exists ; 1997 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 39 ; 39 >
+        au < exists ; 1998 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 40 ; 40 >
+        au < manifest ; 1999 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 41 ; 41 >
+        au < manifest ; 2000 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 42 ; 42 >
+        au < manifest ; 2001 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 43 ; 43 >
+        au < manifest ; 2002 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 44 ; 44 >
+        au < manifest ; 2003 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 45 ; 45 >
+        au < manifest ; 2004 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 46 ; 46 >
+        au < manifest ; 2005 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 47 ; 47 >
+        au < manifest ; 2006 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 48 ; 48 >
+        au < manifest ; 2007 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 49 ; 49 >
+        au < manifest ; 2008 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 50 ; 50 >
+        au < manifest ; 2009 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 51 ; 51 >
+        au < manifest ; 2010 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 52 ; 52 >
+        au < manifest ; 2011 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 53 ; 53 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = ICU Director ;
+        issn = 1944-4516 ;
+        eissn = 1944-4524 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://icu.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; ICU Director Volume 1 ; 1 >
+        au < manifest ; 2011 ; ICU Director Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Index on Censorship ;
+        issn = 0306-4220 ;
+        eissn = 1746-6067 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ioc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1968 ; Index on Censorship Volume 10 ; 10 >
+        au < exists ; 1969 ; Index on Censorship Volume 11 ; 11 >
+        au < exists ; 1970 ; Index on Censorship Volume 12 ; 12 >
+        au < exists ; 1971 ; Index on Censorship Volume 13 ; 13 >
+        au < exists ; 1972 ; Index on Censorship Volume 14 ; 14 >
+        au < exists ; 1973 ; Index on Censorship Volume 15 ; 15 >
+        au < exists ; 1974 ; Index on Censorship Volume 16 ; 16 >
+        au < exists ; 1975 ; Index on Censorship Volume 17 ; 17 >
+        au < exists ; 1976 ; Index on Censorship Volume 18 ; 18 >
+        au < exists ; 1977 ; Index on Censorship Volume 19 ; 19 >
+        au < exists ; 1978 ; Index on Censorship Volume 20 ; 20 >
+        au < exists ; 1979 ; Index on Censorship Volume 21 ; 21 >
+        au < exists ; 1980 ; Index on Censorship Volume 22 ; 22 >
+        au < exists ; 1981 ; Index on Censorship Volume 23 ; 23 >
+        au < exists ; 1982 ; Index on Censorship Volume 24 ; 24 >
+        au < exists ; 1983 ; Index on Censorship Volume 25 ; 25 >
+        au < exists ; 1984 ; Index on Censorship Volume 26 ; 26 >
+        au < exists ; 1985 ; Index on Censorship Volume 27 ; 27 >
+        au < exists ; 1986 ; Index on Censorship Volume 28 ; 28 >
+        au < exists ; 1987 ; Index on Censorship Volume 29 ; 29 >
+        au < exists ; 1988 ; Index on Censorship Volume 30 ; 30 >
+        au < exists ; 1989 ; Index on Censorship Volume 31 ; 31 >
+        au < exists ; 1990 ; Index on Censorship Volume 32 ; 32 >
+        au < exists ; 1991 ; Index on Censorship Volume 33 ; 33 >
+        au < exists ; 1992 ; Index on Censorship Volume 34 ; 34 >
+        au < exists ; 1993 ; Index on Censorship Volume 35 ; 35 >
+        au < exists ; 1994 ; Index on Censorship Volume 36 ; 36 >
+        au < exists ; 1995 ; Index on Censorship Volume 37 ; 37 >
+        au < manifest ; 2009 ; Index on Censorship Volume 38 ; 38 >
+        au < manifest ; 2010 ; Index on Censorship Volume 39 ; 39 >
+        au < manifest ; 2011 ; Index on Censorship Volume 40 ; 40 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = India Quarterly: A Journal of International Affairs ;
+        issn = 0974-9284 ;
+        eissn = 0975-2684 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://iqq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2005 ; India Quarterly: A Journal of International Affairs Volume 61 ; 61 >
+        au < exists ; 2006 ; India Quarterly: A Journal of International Affairs Volume 62 ; 62 >
+        au < exists ; 2007 ; India Quarterly: A Journal of International Affairs Volume 63 ; 63 >
+        au < exists ; 2008 ; India Quarterly: A Journal of International Affairs Volume 64 ; 64 >
+        au < manifest ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 >
+        au < manifest ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 >
+        au < manifest ; 2011 ; India Quarterly: A Journal of International Affairs Volume 67 ; 67 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Indian Historical Review ;
+        issn = 0376-9836 ;
+        eissn = 0975-5977 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ihr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1999 ; Indian Historical Review Volume 26 ; 26 >
+        au < exists ; 2000 ; Indian Historical Review Volume 27 ; 27 >
+        au < exists ; 2001 ; Indian Historical Review Volume 28 ; 28 >
+        au < exists ; 2002 ; Indian Historical Review Volume 29 ; 29 >
+        au < exists ; 2003 ; Indian Historical Review Volume 30 ; 30 >
+        au < exists ; 2004 ; Indian Historical Review Volume 31 ; 31 >
+        au < exists ; 2005 ; Indian Historical Review Volume 32 ; 32 >
+        au < exists ; 2006 ; Indian Historical Review Volume 33 ; 33 >
+        au < exists ; 2007 ; Indian Historical Review Volume 34 ; 34 >
+        au < exists ; 2008 ; Indian Historical Review Volume 35 ; 35 >
+        au < manifest ; 2009 ; Indian Historical Review Volume 36 ; 36 >
+        au < manifest ; 2010 ; Indian Historical Review Volume 37 ; 37 >
+        au < manifest ; 2011 ; Indian Historical Review Volume 38 ; 38 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Intervention in School and Clinic ;
+        issn = 1053-4512 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://isc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1965 ; Intervention in School and Clinic Volume 1 ; 1 >
+        au < manifest ; 1966 ; Intervention in School and Clinic Volume 2 ; 2 >
+        au < manifest ; 1967 ; Intervention in School and Clinic Volume 3 ; 3 >
+        au < manifest ; 1968 ; Intervention in School and Clinic Volume 4 ; 4 >
+        au < manifest ; 1969 ; Intervention in School and Clinic Volume 5 ; 5 >
+        au < manifest ; 1970 ; Intervention in School and Clinic Volume 6 ; 6 >
+        au < manifest ; 1971 ; Intervention in School and Clinic Volume 7 ; 7 >
+        au < manifest ; 1972 ; Intervention in School and Clinic Volume 8 ; 8 >
+        au < manifest ; 1973 ; Intervention in School and Clinic Volume 9 ; 9 >
+        au < manifest ; 1974 ; Intervention in School and Clinic Volume 10 ; 10 >
+        au < manifest ; 1975 ; Intervention in School and Clinic Volume 11 ; 11 >
+        au < manifest ; 1976 ; Intervention in School and Clinic Volume 12 ; 12 >
+        au < manifest ; 1977 ; Intervention in School and Clinic Volume 13 ; 13 >
+        au < manifest ; 1978 ; Intervention in School and Clinic Volume 14 ; 14 >
+        au < manifest ; 1979 ; Intervention in School and Clinic Volume 15 ; 15 >
+        au < manifest ; 1980 ; Intervention in School and Clinic Volume 16 ; 16 >
+        au < manifest ; 1981 ; Intervention in School and Clinic Volume 17 ; 17 >
+        au < manifest ; 1982 ; Intervention in School and Clinic Volume 18 ; 18 >
+        au < manifest ; 1983 ; Intervention in School and Clinic Volume 19 ; 19 >
+        au < manifest ; 1984 ; Intervention in School and Clinic Volume 20 ; 20 >
+        au < manifest ; 1985 ; Intervention in School and Clinic Volume 21 ; 21 >
+        au < manifest ; 1986 ; Intervention in School and Clinic Volume 22 ; 22 >
+        au < manifest ; 1987 ; Intervention in School and Clinic Volume 23 ; 23 >
+        au < manifest ; 1988 ; Intervention in School and Clinic Volume 24 ; 24 >
+        au < manifest ; 1989 ; Intervention in School and Clinic Volume 25 ; 25 >
+        au < manifest ; 1990 ; Intervention in School and Clinic Volume 26 ; 26 >
+        au < manifest ; 1991 ; Intervention in School and Clinic Volume 27 ; 27 >
+        au < manifest ; 1992 ; Intervention in School and Clinic Volume 28 ; 28 >
+        au < manifest ; 1993 ; Intervention in School and Clinic Volume 29 ; 29 >
+        au < manifest ; 1994 ; Intervention in School and Clinic Volume 30 ; 30 >
+        au < manifest ; 1995 ; Intervention in School and Clinic Volume 31 ; 31 >
+        au < manifest ; 1996 ; Intervention in School and Clinic Volume 32 ; 32 >
+        au < manifest ; 1997 ; Intervention in School and Clinic Volume 33 ; 33 >
+        au < manifest ; 1998 ; Intervention in School and Clinic Volume 34 ; 34 >
+        au < manifest ; 1999 ; Intervention in School and Clinic Volume 35 ; 35 >
+        au < manifest ; 2000 ; Intervention in School and Clinic Volume 36 ; 36 >
+        au < manifest ; 2001 ; Intervention in School and Clinic Volume 37 ; 37 >
+        au < manifest ; 2002 ; Intervention in School and Clinic Volume 38 ; 38 >
+        au < manifest ; 2003 ; Intervention in School and Clinic Volume 39 ; 39 >
+        au < manifest ; 2004 ; Intervention in School and Clinic Volume 40 ; 40 >
+        au < manifest ; 2005 ; Intervention in School and Clinic Volume 41 ; 41 >
+        au < manifest ; 2006 ; Intervention in School and Clinic Volume 42 ; 42 >
+        au < manifest ; 2007 ; Intervention in School and Clinic Volume 43 ; 43 >
+        au < manifest ; 2008 ; Intervention in School and Clinic Volume 44 ; 44 >
+        au < manifest ; 2009 ; Intervention in School and Clinic Volume 45 ; 45 >
+        au < manifest ; 2010 ; Intervention in School and Clinic Volume 46 ; 46 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Asthma & Allergy Educators ;
+        issn = 2150-1297 ;
+        eissn = 2150-1300 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jaa.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Journal of Asthma & Allergy Educators Volume 1 ; 1 >
+        au < manifest ; 2011 ; Journal of Asthma & Allergy Educators Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Health and Social Behavior ;
+        issn = 0022-1465 ;
+        eissn = 2150-6000 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hsb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 >
+        au < exists ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 >
+        au < exists ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 >
+        au < exists ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 >
+        au < exists ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 >
+        au < manifest ; 2009 ; Journal of Health and Social Behavior Volume 50 ; 50 >
+        au < manifest ; 2010 ; Journal of Health and Social Behavior Volume 51 ; 51 >
+        au < manifest ; 2011 ; Journal of Health and Social Behavior Volume 52 ; 52 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Learning Disabilities ;
+        issn = 0022-2194 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ldx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1968 ; Journal of Learning Disabilities Volume 1 ; 1 >
+        au < manifest ; 1969 ; Journal of Learning Disabilities Volume 2 ; 2 >
+        au < manifest ; 1970 ; Journal of Learning Disabilities Volume 3 ; 3 >
+        au < manifest ; 1971 ; Journal of Learning Disabilities Volume 4 ; 4 >
+        au < manifest ; 1972 ; Journal of Learning Disabilities Volume 5 ; 5 >
+        au < manifest ; 1973 ; Journal of Learning Disabilities Volume 6 ; 6 >
+        au < manifest ; 1974 ; Journal of Learning Disabilities Volume 7 ; 7 >
+        au < manifest ; 1975 ; Journal of Learning Disabilities Volume 8 ; 8 >
+        au < manifest ; 1976 ; Journal of Learning Disabilities Volume 9 ; 9 >
+        au < manifest ; 1977 ; Journal of Learning Disabilities Volume 10 ; 10 >
+        au < manifest ; 1978 ; Journal of Learning Disabilities Volume 11 ; 11 >
+        au < manifest ; 1979 ; Journal of Learning Disabilities Volume 12 ; 12 >
+        au < manifest ; 1980 ; Journal of Learning Disabilities Volume 13 ; 13 >
+        au < manifest ; 1981 ; Journal of Learning Disabilities Volume 14 ; 14 >
+        au < manifest ; 1982 ; Journal of Learning Disabilities Volume 15 ; 15 >
+        au < manifest ; 1983 ; Journal of Learning Disabilities Volume 16 ; 16 >
+        au < manifest ; 1984 ; Journal of Learning Disabilities Volume 17 ; 17 >
+        au < manifest ; 1985 ; Journal of Learning Disabilities Volume 18 ; 18 >
+        au < manifest ; 1986 ; Journal of Learning Disabilities Volume 19 ; 19 >
+        au < manifest ; 1987 ; Journal of Learning Disabilities Volume 20 ; 20 >
+        au < manifest ; 1988 ; Journal of Learning Disabilities Volume 21 ; 21 >
+        au < manifest ; 1989 ; Journal of Learning Disabilities Volume 22 ; 22 >
+        au < manifest ; 1990 ; Journal of Learning Disabilities Volume 23 ; 23 >
+        au < manifest ; 1991 ; Journal of Learning Disabilities Volume 24 ; 24 >
+        au < manifest ; 1992 ; Journal of Learning Disabilities Volume 25 ; 25 >
+        au < manifest ; 1993 ; Journal of Learning Disabilities Volume 26 ; 26 >
+        au < manifest ; 1994 ; Journal of Learning Disabilities Volume 27 ; 27 >
+        au < manifest ; 1995 ; Journal of Learning Disabilities Volume 28 ; 28 >
+        au < manifest ; 1996 ; Journal of Learning Disabilities Volume 29 ; 29 >
+        au < manifest ; 1997 ; Journal of Learning Disabilities Volume 30 ; 30 >
+        au < manifest ; 1998 ; Journal of Learning Disabilities Volume 31 ; 31 >
+        au < manifest ; 1999 ; Journal of Learning Disabilities Volume 32 ; 32 >
+        au < manifest ; 2000 ; Journal of Learning Disabilities Volume 33 ; 33 >
+        au < manifest ; 2001 ; Journal of Learning Disabilities Volume 34 ; 34 >
+        au < manifest ; 2002 ; Journal of Learning Disabilities Volume 35 ; 35 >
+        au < manifest ; 2003 ; Journal of Learning Disabilities Volume 36 ; 36 >
+        au < manifest ; 2004 ; Journal of Learning Disabilities Volume 37 ; 37 >
+        au < manifest ; 2005 ; Journal of Learning Disabilities Volume 38 ; 38 >
+        au < manifest ; 2006 ; Journal of Learning Disabilities Volume 39 ; 39 >
+        au < manifest ; 2007 ; Journal of Learning Disabilities Volume 40 ; 40 >
+        au < manifest ; 2008 ; Journal of Learning Disabilities Volume 41 ; 41 >
+        au < manifest ; 2009 ; Journal of Learning Disabilities Volume 42 ; 42 >
+        au < manifest ; 2010 ; Journal of Learning Disabilities Volume 43 ; 43 >
+        au < manifest ; 2011 ; Journal of Learning Disabilities Volume 44 ; 44 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Music Teacher Education ;
+        issn = 1057-0837 ;
+        eissn = 1945-0079 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jmt.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1991 ; Journal of Music Teacher Education Volume 1 ; 1 >
+        au < exists ; 1992 ; Journal of Music Teacher Education Volume 2 ; 2 >
+        au < exists ; 1993 ; Journal of Music Teacher Education Volume 3 ; 3 >
+        au < exists ; 1994 ; Journal of Music Teacher Education Volume 4 ; 4 >
+        au < exists ; 1995 ; Journal of Music Teacher Education Volume 5 ; 5 >
+        au < exists ; 1996 ; Journal of Music Teacher Education Volume 6 ; 6 >
+        au < exists ; 1997 ; Journal of Music Teacher Education Volume 7 ; 7 >
+        au < exists ; 1998 ; Journal of Music Teacher Education Volume 8 ; 8 >
+        au < exists ; 1999 ; Journal of Music Teacher Education Volume 9 ; 9 >
+        au < manifest ; 2001 ; Journal of Music Teacher Education Volume 10 ; 10 >
+        au < manifest ; 2001 ; Journal of Music Teacher Education Volume 11 ; 11 >
+        au < manifest ; 2002 ; Journal of Music Teacher Education Volume 12 ; 12 >
+        au < manifest ; 2003 ; Journal of Music Teacher Education Volume 13 ; 13 >
+        au < manifest ; 2004 ; Journal of Music Teacher Education Volume 14 ; 14 >
+        au < manifest ; 2005 ; Journal of Music Teacher Education Volume 15 ; 15 >
+        au < manifest ; 2006 ; Journal of Music Teacher Education Volume 16 ; 16 >
+        au < manifest ; 2007 ; Journal of Music Teacher Education Volume 17 ; 17 >
+        au < manifest ; 2008 ; Journal of Music Teacher Education Volume 18 ; 18 >
+        au < manifest ; 2009 ; Journal of Music Teacher Education Volume 19 ; 19 >
+        au < manifest ; 2010 ; Journal of Music Teacher Education Volume 20 ; 20 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Primary Care & Community Health ;
+        issn = 2150-1319 ;
+        eissn = 2150-1327 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jpc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Journal of Primary Care & Community Health Volume 1 ; 1 >
+        au < manifest ; 2011 ; Journal of Primary Care & Community Health Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Research in Music Education ;
+        issn = 0022-4294 ;
+        eissn = 1945-0095 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jrm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1953 ; Journal of Research in Music Education Volume 1 ; 1 >
+        au < manifest ; 1954 ; Journal of Research in Music Education Volume 2 ; 2 >
+        au < manifest ; 1955 ; Journal of Research in Music Education Volume 3 ; 3 >
+        au < manifest ; 1956 ; Journal of Research in Music Education Volume 4 ; 4 >
+        au < manifest ; 1957 ; Journal of Research in Music Education Volume 5 ; 5 >
+        au < manifest ; 1958 ; Journal of Research in Music Education Volume 6 ; 6 >
+        au < manifest ; 1959 ; Journal of Research in Music Education Volume 7 ; 7 >
+        au < manifest ; 1960 ; Journal of Research in Music Education Volume 8 ; 8 >
+        au < manifest ; 1961 ; Journal of Research in Music Education Volume 9 ; 9 >
+        au < manifest ; 1962 ; Journal of Research in Music Education Volume 10 ; 10 >
+        au < manifest ; 1963 ; Journal of Research in Music Education Volume 11 ; 11 >
+        au < manifest ; 1964 ; Journal of Research in Music Education Volume 12 ; 12 >
+        au < manifest ; 1965 ; Journal of Research in Music Education Volume 13 ; 13 >
+        au < manifest ; 1966 ; Journal of Research in Music Education Volume 14 ; 14 >
+        au < manifest ; 1967 ; Journal of Research in Music Education Volume 15 ; 15 >
+        au < manifest ; 1968 ; Journal of Research in Music Education Volume 16 ; 16 >
+        au < manifest ; 1969 ; Journal of Research in Music Education Volume 17 ; 17 >
+        au < manifest ; 1970 ; Journal of Research in Music Education Volume 18 ; 18 >
+        au < manifest ; 1971 ; Journal of Research in Music Education Volume 19 ; 19 >
+        au < manifest ; 1972 ; Journal of Research in Music Education Volume 20 ; 20 >
+        au < manifest ; 1973 ; Journal of Research in Music Education Volume 21 ; 21 >
+        au < manifest ; 1974 ; Journal of Research in Music Education Volume 22 ; 22 >
+        au < manifest ; 1975 ; Journal of Research in Music Education Volume 23 ; 23 >
+        au < manifest ; 1976 ; Journal of Research in Music Education Volume 24 ; 24 >
+        au < manifest ; 1977 ; Journal of Research in Music Education Volume 25 ; 25 >
+        au < manifest ; 1978 ; Journal of Research in Music Education Volume 26 ; 26 >
+        au < manifest ; 1979 ; Journal of Research in Music Education Volume 27 ; 27 >
+        au < manifest ; 1980 ; Journal of Research in Music Education Volume 28 ; 28 >
+        au < manifest ; 1981 ; Journal of Research in Music Education Volume 29 ; 29 >
+        au < manifest ; 1982 ; Journal of Research in Music Education Volume 30 ; 30 >
+        au < manifest ; 1983 ; Journal of Research in Music Education Volume 31 ; 31 >
+        au < manifest ; 1984 ; Journal of Research in Music Education Volume 32 ; 32 >
+        au < manifest ; 1985 ; Journal of Research in Music Education Volume 33 ; 33 >
+        au < manifest ; 1986 ; Journal of Research in Music Education Volume 34 ; 34 >
+        au < manifest ; 1987 ; Journal of Research in Music Education Volume 35 ; 35 >
+        au < manifest ; 1988 ; Journal of Research in Music Education Volume 36 ; 36 >
+        au < manifest ; 1989 ; Journal of Research in Music Education Volume 37 ; 37 >
+        au < manifest ; 1990 ; Journal of Research in Music Education Volume 38 ; 38 >
+        au < manifest ; 1991 ; Journal of Research in Music Education Volume 39 ; 39 >
+        au < manifest ; 1992 ; Journal of Research in Music Education Volume 40 ; 40 >
+        au < manifest ; 1993 ; Journal of Research in Music Education Volume 41 ; 41 >
+        au < manifest ; 1994 ; Journal of Research in Music Education Volume 42 ; 42 >
+        au < manifest ; 1995 ; Journal of Research in Music Education Volume 43 ; 43 >
+        au < manifest ; 1996 ; Journal of Research in Music Education Volume 44 ; 44 >
+        au < manifest ; 1997 ; Journal of Research in Music Education Volume 45 ; 45 >
+        au < manifest ; 1998 ; Journal of Research in Music Education Volume 46 ; 46 >
+        au < manifest ; 1999 ; Journal of Research in Music Education Volume 47 ; 47 >
+        au < manifest ; 2000 ; Journal of Research in Music Education Volume 48 ; 48 >
+        au < manifest ; 2001 ; Journal of Research in Music Education Volume 49 ; 49 >
+        au < manifest ; 2002 ; Journal of Research in Music Education Volume 50 ; 50 >
+        au < manifest ; 2003 ; Journal of Research in Music Education Volume 51 ; 51 >
+        au < manifest ; 2004 ; Journal of Research in Music Education Volume 52 ; 52 >
+        au < manifest ; 2005 ; Journal of Research in Music Education Volume 53 ; 53 >
+        au < manifest ; 2006 ; Journal of Research in Music Education Volume 54 ; 54 >
+        au < manifest ; 2007 ; Journal of Research in Music Education Volume 55 ; 55 >
+        au < manifest ; 2008 ; Journal of Research in Music Education Volume 56 ; 56 >
+        au < manifest ; 2009 ; Journal of Research in Music Education Volume 57 ; 57 >
+        au < manifest ; 2010 ; Journal of Research in Music Education Volume 58 ; 58 >
+        au < manifest ; 2011 ; Journal of Research in Music Education Volume 59 ; 59 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Academy of Marketing Science ;
+        issn = 0092-0703 ;
+        eissn = 1552-7824 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jam.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1973 ; Journal of the Academy of Marketing Science Volume 1 ; 1 >
+        au < manifest ; 1974 ; Journal of the Academy of Marketing Science Volume 2 ; 2 >
+        au < manifest ; 1975 ; Journal of the Academy of Marketing Science Volume 3 ; 3 >
+        au < manifest ; 1976 ; Journal of the Academy of Marketing Science Volume 4 ; 4 >
+        au < manifest ; 1977 ; Journal of the Academy of Marketing Science Volume 5 ; 5 >
+        au < manifest ; 1978 ; Journal of the Academy of Marketing Science Volume 6 ; 6 >
+        au < manifest ; 1979 ; Journal of the Academy of Marketing Science Volume 7 ; 7 >
+        au < manifest ; 1980 ; Journal of the Academy of Marketing Science Volume 8 ; 8 >
+        au < manifest ; 1981 ; Journal of the Academy of Marketing Science Volume 9 ; 9 >
+        au < manifest ; 1982 ; Journal of the Academy of Marketing Science Volume 10 ; 10 >
+        au < manifest ; 1983 ; Journal of the Academy of Marketing Science Volume 11 ; 11 >
+        au < manifest ; 1984 ; Journal of the Academy of Marketing Science Volume 12 ; 12 >
+        au < manifest ; 1985 ; Journal of the Academy of Marketing Science Volume 13 ; 13 >
+        au < manifest ; 1986 ; Journal of the Academy of Marketing Science Volume 14 ; 14 >
+        au < manifest ; 1987 ; Journal of the Academy of Marketing Science Volume 15 ; 15 >
+        au < manifest ; 1988 ; Journal of the Academy of Marketing Science Volume 16 ; 16 >
+        au < manifest ; 1989 ; Journal of the Academy of Marketing Science Volume 17 ; 17 >
+        au < manifest ; 1990 ; Journal of the Academy of Marketing Science Volume 18 ; 18 >
+        au < manifest ; 1991 ; Journal of the Academy of Marketing Science Volume 19 ; 19 >
+        au < manifest ; 1992 ; Journal of the Academy of Marketing Science Volume 20 ; 20 >
+        au < manifest ; 1993 ; Journal of the Academy of Marketing Science Volume 21 ; 21 >
+        au < manifest ; 1994 ; Journal of the Academy of Marketing Science Volume 22 ; 22 >
+        au < manifest ; 1994 ; Journal of the Academy of Marketing Science Volume 23 ; 23 >
+        au < manifest ; 1995 ; Journal of the Academy of Marketing Science Volume 24 ; 24 >
+        au < manifest ; 1996 ; Journal of the Academy of Marketing Science Volume 25 ; 25 >
+        au < manifest ; 1998 ; Journal of the Academy of Marketing Science Volume 26 ; 26 >
+        au < manifest ; 1999 ; Journal of the Academy of Marketing Science Volume 27 ; 27 >
+        au < manifest ; 2000 ; Journal of the Academy of Marketing Science Volume 28 ; 28 >
+        au < manifest ; 2001 ; Journal of the Academy of Marketing Science Volume 29 ; 29 >
+        au < manifest ; 2002 ; Journal of the Academy of Marketing Science Volume 30 ; 30 >
+        au < manifest ; 2003 ; Journal of the Academy of Marketing Science Volume 31 ; 31 >
+        au < manifest ; 2004 ; Journal of the Academy of Marketing Science Volume 32 ; 32 >
+        au < manifest ; 2005 ; Journal of the Academy of Marketing Science Volume 33 ; 33 >
+        au < manifest ; 2006 ; Journal of the Academy of Marketing Science Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the American Psychiatric Nurses Association ;
+        issn = 1078-3903 ;
+        eissn = 1532-5725 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jap.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1995 ; Journal of the American Psychiatric Nurses Association Volume 1 ; 1 >
+        au < manifest ; 1996 ; Journal of the American Psychiatric Nurses Association Volume 2 ; 2 >
+        au < manifest ; 1997 ; Journal of the American Psychiatric Nurses Association Volume 3 ; 3 >
+        au < manifest ; 1998 ; Journal of the American Psychiatric Nurses Association Volume 4 ; 4 >
+        au < manifest ; 1999 ; Journal of the American Psychiatric Nurses Association Volume 5 ; 5 >
+        au < manifest ; 2000 ; Journal of the American Psychiatric Nurses Association Volume 6 ; 6 >
+        au < manifest ; 2001 ; Journal of the American Psychiatric Nurses Association Volume 7 ; 7 >
+        au < manifest ; 2002 ; Journal of the American Psychiatric Nurses Association Volume 8 ; 8 >
+        au < manifest ; 2003 ; Journal of the American Psychiatric Nurses Association Volume 9 ; 9 >
+        au < manifest ; 2004 ; Journal of the American Psychiatric Nurses Association Volume 10 ; 10 >
+        au < manifest ; 2005 ; Journal of the American Psychiatric Nurses Association Volume 11 ; 11 >
+        au < manifest ; 2006 ; Journal of the American Psychiatric Nurses Association Volume 12 ; 12 >
+        au < manifest ; 2007 ; Journal of the American Psychiatric Nurses Association Volume 13 ; 13 >
+        au < manifest ; 2008 ; Journal of the American Psychiatric Nurses Association Volume 14 ; 14 >
+        au < manifest ; 2009 ; Journal of the American Psychiatric Nurses Association Volume 15 ; 15 >
+        au < manifest ; 2010 ; Journal of the American Psychiatric Nurses Association Volume 16 ; 16 >
+        au < manifest ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Renin-Angiotensin-Aldosterone System ;
+        issn = 1470-3203 ;
+        eissn = 1752-8976 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jra.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 1 ; 1 >
+        au < manifest ; 2001 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 2 ; 2 >
+        au < manifest ; 2002 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 3 ; 3 >
+        au < manifest ; 2003 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 4 ; 4 >
+        au < manifest ; 2004 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 5 ; 5 >
+        au < manifest ; 2005 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 6 ; 6 >
+        au < manifest ; 2006 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 7 ; 7 >
+        au < manifest ; 2007 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 8 ; 8 >
+        au < manifest ; 2008 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 9 ; 9 >
+        au < manifest ; 2009 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 10 ; 10 >
+        au < manifest ; 2010 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 11 ; 11 >
+        au < manifest ; 2011 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 12 ; 12 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of Veterinary Diagnostic Investigation ;
+        issn = 1040-6387 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://vdi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 >
+        au < exists ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 >
+        au < exists ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 >
+        au < exists ; 1992 ; Journal of Veterinary Diagnostic Investigation Volume 4 ; 4 >
+        au < exists ; 1993 ; Journal of Veterinary Diagnostic Investigation Volume 5 ; 5 >
+        au < exists ; 1994 ; Journal of Veterinary Diagnostic Investigation Volume 6 ; 6 >
+        au < exists ; 1995 ; Journal of Veterinary Diagnostic Investigation Volume 7 ; 7 >
+        au < exists ; 1996 ; Journal of Veterinary Diagnostic Investigation Volume 8 ; 8 >
+        au < exists ; 1997 ; Journal of Veterinary Diagnostic Investigation Volume 9 ; 9 >
+        au < exists ; 1998 ; Journal of Veterinary Diagnostic Investigation Volume 10 ; 10 >
+        au < exists ; 1999 ; Journal of Veterinary Diagnostic Investigation Volume 11 ; 11 >
+        au < exists ; 2000 ; Journal of Veterinary Diagnostic Investigation Volume 12 ; 12 >
+        au < exists ; 2001 ; Journal of Veterinary Diagnostic Investigation Volume 13 ; 13 >
+        au < exists ; 2002 ; Journal of Veterinary Diagnostic Investigation Volume 14 ; 14 >
+        au < exists ; 2003 ; Journal of Veterinary Diagnostic Investigation Volume 15 ; 15 >
+        au < exists ; 2004 ; Journal of Veterinary Diagnostic Investigation Volume 16 ; 16 >
+        au < exists ; 2005 ; Journal of Veterinary Diagnostic Investigation Volume 17 ; 17 >
+        au < exists ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 >
+        au < exists ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 >
+        au < exists ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 >
+        au < exists ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 >
+        au < exists ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 >
+        au < manifest ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Language and Speech ;
+        issn = 0023-8309 ;
+        eissn = 1756-6053 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://las.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1958 ; Language and Speech Volume 1 ; 1 >
+        au < exists ; 1959 ; Language and Speech Volume 2 ; 2 >
+        au < exists ; 1960 ; Language and Speech Volume 3 ; 3 >
+        au < exists ; 1961 ; Language and Speech Volume 4 ; 4 >
+        au < exists ; 1962 ; Language and Speech Volume 5 ; 5 >
+        au < exists ; 1963 ; Language and Speech Volume 6 ; 6 >
+        au < exists ; 1964 ; Language and Speech Volume 7 ; 7 >
+        au < exists ; 1965 ; Language and Speech Volume 8 ; 8 >
+        au < exists ; 1966 ; Language and Speech Volume 9 ; 9 >
+        au < exists ; 1967 ; Language and Speech Volume 10 ; 10 >
+        au < exists ; 1968 ; Language and Speech Volume 11 ; 11 >
+        au < exists ; 1969 ; Language and Speech Volume 12 ; 12 >
+        au < exists ; 1970 ; Language and Speech Volume 13 ; 13 >
+        au < exists ; 1971 ; Language and Speech Volume 14 ; 14 >
+        au < exists ; 1972 ; Language and Speech Volume 15 ; 15 >
+        au < exists ; 1973 ; Language and Speech Volume 16 ; 16 >
+        au < exists ; 1974 ; Language and Speech Volume 17 ; 17 >
+        au < exists ; 1975 ; Language and Speech Volume 18 ; 18 >
+        au < exists ; 1976 ; Language and Speech Volume 19 ; 19 >
+        au < exists ; 1977 ; Language and Speech Volume 20 ; 20 >
+        au < exists ; 1978 ; Language and Speech Volume 21 ; 21 >
+        au < exists ; 1979 ; Language and Speech Volume 22 ; 22 >
+        au < exists ; 1980 ; Language and Speech Volume 23 ; 23 >
+        au < exists ; 1981 ; Language and Speech Volume 24 ; 24 >
+        au < exists ; 1982 ; Language and Speech Volume 25 ; 25 >
+        au < exists ; 1983 ; Language and Speech Volume 26 ; 26 >
+        au < exists ; 1984 ; Language and Speech Volume 27 ; 27 >
+        au < exists ; 1985 ; Language and Speech Volume 28 ; 28 >
+        au < exists ; 1986 ; Language and Speech Volume 29 ; 29 >
+        au < exists ; 1987 ; Language and Speech Volume 30 ; 30 >
+        au < exists ; 1988 ; Language and Speech Volume 31 ; 31 >
+        au < exists ; 1989 ; Language and Speech Volume 32 ; 32 >
+        au < exists ; 1990 ; Language and Speech Volume 33 ; 33 >
+        au < exists ; 1991 ; Language and Speech Volume 34 ; 34 >
+        au < exists ; 1992 ; Language and Speech Volume 35 ; 35 >
+        au < exists ; 1993 ; Language and Speech Volume 36 ; 36 >
+        au < exists ; 1994 ; Language and Speech Volume 37 ; 37 >
+        au < exists ; 1995 ; Language and Speech Volume 38 ; 38 >
+        au < exists ; 1996 ; Language and Speech Volume 39 ; 39 >
+        au < exists ; 1997 ; Language and Speech Volume 40 ; 40 >
+        au < exists ; 1998 ; Language and Speech Volume 41 ; 41 >
+        au < manifest ; 1999 ; Language and Speech Volume 42 ; 42 >
+        au < manifest ; 2000 ; Language and Speech Volume 43 ; 43 >
+        au < manifest ; 2001 ; Language and Speech Volume 44 ; 44 >
+        au < manifest ; 2002 ; Language and Speech Volume 45 ; 45 >
+        au < manifest ; 2003 ; Language and Speech Volume 46 ; 46 >
+        au < manifest ; 2004 ; Language and Speech Volume 47 ; 47 >
+        au < manifest ; 2005 ; Language and Speech Volume 48 ; 48 >
+        au < manifest ; 2006 ; Language and Speech Volume 49 ; 49 >
+        au < manifest ; 2007 ; Language and Speech Volume 50 ; 50 >
+        au < manifest ; 2008 ; Language and Speech Volume 51 ; 51 >
+        au < manifest ; 2009 ; Language and Speech Volume 52 ; 52 >
+        au < manifest ; 2010 ; Language and Speech Volume 53 ; 53 >
+        au < manifest ; 2011 ; Language and Speech Volume 54 ; 54 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Measurement and Evaluation in Counseling and Development ;
+        issn = 0748-1756 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mec.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Measurement and Evaluation in Counseling and Development Volume 42 ; 42 >
+        au < manifest ; 2010 ; Measurement and Evaluation in Counseling and Development Volume 43 ; 43 >
+        au < manifest ; 2011 ; Measurement and Evaluation in Counseling and Development Volume 44 ; 44 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Media, War & Conflict ;
+        issn = 1750-6352 ;
+        eissn = 1750-6360 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mwc.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Media, War & Conflict Volume 1 ; 1 >
+        au < manifest ; 2009 ; Media, War & Conflict Volume 2 ; 2 >
+        au < manifest ; 2010 ; Media, War & Conflict Volume 3 ; 3 >
+        au < manifest ; 2011 ; Media, War & Conflict Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Memory Studies ;
+        issn = 1750-6980 ;
+        eissn = 1750-6999 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mss.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Memory Studies Volume 1 ; 1 >
+        au < manifest ; 2009 ; Memory Studies Volume 2 ; 2 >
+        au < manifest ; 2010 ; Memory Studies Volume 3 ; 3 >
+        au < manifest ; 2011 ; Memory Studies Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Millennium - Journal of International Studies ;
+        issn = 0305-8298 ;
+        eissn = 1477-9021 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mil.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1971 ; Millennium - Journal of International Studies Volume 1 ; 1 >
+        au < manifest ; 1973 ; Millennium - Journal of International Studies Volume 2 ; 2 >
+        au < manifest ; 1974 ; Millennium - Journal of International Studies Volume 3 ; 3 >
+        au < manifest ; 1975 ; Millennium - Journal of International Studies Volume 4 ; 4 >
+        au < manifest ; 1976 ; Millennium - Journal of International Studies Volume 5 ; 5 >
+        au < manifest ; 1977 ; Millennium - Journal of International Studies Volume 6 ; 6 >
+        au < manifest ; 1978 ; Millennium - Journal of International Studies Volume 7 ; 7 >
+        au < manifest ; 1979 ; Millennium - Journal of International Studies Volume 8 ; 8 >
+        au < manifest ; 1980 ; Millennium - Journal of International Studies Volume 9 ; 9 >
+        au < manifest ; 1981 ; Millennium - Journal of International Studies Volume 10 ; 10 >
+        au < manifest ; 1982 ; Millennium - Journal of International Studies Volume 11 ; 11 >
+        au < manifest ; 1983 ; Millennium - Journal of International Studies Volume 12 ; 12 >
+        au < manifest ; 1984 ; Millennium - Journal of International Studies Volume 13 ; 13 >
+        au < manifest ; 1985 ; Millennium - Journal of International Studies Volume 14 ; 14 >
+        au < manifest ; 1986 ; Millennium - Journal of International Studies Volume 15 ; 15 >
+        au < manifest ; 1987 ; Millennium - Journal of International Studies Volume 16 ; 16 >
+        au < manifest ; 1988 ; Millennium - Journal of International Studies Volume 17 ; 17 >
+        au < manifest ; 1989 ; Millennium - Journal of International Studies Volume 18 ; 18 >
+        au < manifest ; 1990 ; Millennium - Journal of International Studies Volume 19 ; 19 >
+        au < manifest ; 1991 ; Millennium - Journal of International Studies Volume 20 ; 20 >
+        au < manifest ; 1992 ; Millennium - Journal of International Studies Volume 21 ; 21 >
+        au < manifest ; 1993 ; Millennium - Journal of International Studies Volume 22 ; 22 >
+        au < manifest ; 1994 ; Millennium - Journal of International Studies Volume 23 ; 23 >
+        au < manifest ; 1995 ; Millennium - Journal of International Studies Volume 24 ; 24 >
+        au < manifest ; 1996 ; Millennium - Journal of International Studies Volume 25 ; 25 >
+        au < manifest ; 1997 ; Millennium - Journal of International Studies Volume 26 ; 26 >
+        au < manifest ; 1998 ; Millennium - Journal of International Studies Volume 27 ; 27 >
+        au < manifest ; 1999 ; Millennium - Journal of International Studies Volume 28 ; 28 >
+        au < manifest ; 2000 ; Millennium - Journal of International Studies Volume 29 ; 29 >
+        au < manifest ; 2001 ; Millennium - Journal of International Studies Volume 30 ; 30 >
+        au < manifest ; 2002 ; Millennium - Journal of International Studies Volume 31 ; 31 >
+        au < manifest ; 2003 ; Millennium - Journal of International Studies Volume 32 ; 32 >
+        au < manifest ; 2004 ; Millennium - Journal of International Studies Volume 33 ; 33 >
+        au < manifest ; 2005 ; Millennium - Journal of International Studies Volume 34 ; 34 >
+        au < manifest ; 2006 ; Millennium - Journal of International Studies Volume 35 ; 35 >
+        au < manifest ; 2007 ; Millennium - Journal of International Studies Volume 36 ; 36 >
+        au < manifest ; 2008 ; Millennium - Journal of International Studies Volume 37 ; 37 >
+        au < manifest ; 2009 ; Millennium - Journal of International Studies Volume 38 ; 38 >
+        au < manifest ; 2010 ; Millennium - Journal of International Studies Volume 39 ; 39 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Music and Medicine ;
+        issn = 1943-8621 ;
+        eissn = 1943-863X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mmd.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Music and Medicine Volume 1 ; 1 >
+        au < manifest ; 2010 ; Music and Medicine Volume 2 ; 2 >
+        au < manifest ; 2011 ; Music and Medicine Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Music Educators Journal ;
+        issn = 0027-4321 ;
+        eissn = 1945-0087 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mej.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1914 ; Music Educators Journal Volume 1 ; 1 >
+        au < manifest ; 1915 ; Music Educators Journal Volume 2 ; 2 >
+        au < manifest ; 1916 ; Music Educators Journal Volume 3 ; 3 >
+        au < manifest ; 1917 ; Music Educators Journal Volume 4 ; 4 >
+        au < manifest ; 1918 ; Music Educators Journal Volume 5 ; 5 >
+        au < manifest ; 1919 ; Music Educators Journal Volume 6 ; 6 >
+        au < manifest ; 1920 ; Music Educators Journal Volume 7 ; 7 >
+        au < manifest ; 1921 ; Music Educators Journal Volume 8 ; 8 >
+        au < manifest ; 1922 ; Music Educators Journal Volume 9 ; 9 >
+        au < manifest ; 1923 ; Music Educators Journal Volume 10 ; 10 >
+        au < manifest ; 1924 ; Music Educators Journal Volume 11 ; 11 >
+        au < manifest ; 1925 ; Music Educators Journal Volume 12 ; 12 >
+        au < manifest ; 1926 ; Music Educators Journal Volume 13 ; 13 >
+        au < manifest ; 1927 ; Music Educators Journal Volume 14 ; 14 >
+        au < manifest ; 1928 ; Music Educators Journal Volume 15 ; 15 >
+        au < manifest ; 1929 ; Music Educators Journal Volume 16 ; 16 >
+        au < manifest ; 1930 ; Music Educators Journal Volume 17 ; 17 >
+        au < manifest ; 1931 ; Music Educators Journal Volume 18 ; 18 >
+        au < manifest ; 1932 ; Music Educators Journal Volume 19 ; 19 >
+        au < manifest ; 1933 ; Music Educators Journal Volume 20 ; 20 >
+        au < manifest ; 1934 ; Music Educators Journal Volume 21 ; 21 >
+        au < manifest ; 1935 ; Music Educators Journal Volume 22 ; 22 >
+        au < manifest ; 1936 ; Music Educators Journal Volume 23 ; 23 >
+        au < manifest ; 1937 ; Music Educators Journal Volume 24 ; 24 >
+        au < manifest ; 1938 ; Music Educators Journal Volume 25 ; 25 >
+        au < manifest ; 1939 ; Music Educators Journal Volume 26 ; 26 >
+        au < manifest ; 1940 ; Music Educators Journal Volume 27 ; 27 >
+        au < manifest ; 1941 ; Music Educators Journal Volume 28 ; 28 >
+        au < manifest ; 1942 ; Music Educators Journal Volume 29 ; 29 >
+        au < manifest ; 1943 ; Music Educators Journal Volume 30 ; 30 >
+        au < manifest ; 1944 ; Music Educators Journal Volume 31 ; 31 >
+        au < manifest ; 1945 ; Music Educators Journal Volume 32 ; 32 >
+        au < manifest ; 1946 ; Music Educators Journal Volume 33 ; 33 >
+        au < manifest ; 1947 ; Music Educators Journal Volume 34 ; 34 >
+        au < manifest ; 1948 ; Music Educators Journal Volume 35 ; 35 >
+        au < manifest ; 1949 ; Music Educators Journal Volume 36 ; 36 >
+        au < manifest ; 1950 ; Music Educators Journal Volume 37 ; 37 >
+        au < manifest ; 1951 ; Music Educators Journal Volume 38 ; 38 >
+        au < manifest ; 1952 ; Music Educators Journal Volume 39 ; 39 >
+        au < manifest ; 1953 ; Music Educators Journal Volume 40 ; 40 >
+        au < manifest ; 1954 ; Music Educators Journal Volume 41 ; 41 >
+        au < manifest ; 1955 ; Music Educators Journal Volume 42 ; 42 >
+        au < manifest ; 1956 ; Music Educators Journal Volume 43 ; 43 >
+        au < manifest ; 1957 ; Music Educators Journal Volume 44 ; 44 >
+        au < manifest ; 1958 ; Music Educators Journal Volume 45 ; 45 >
+        au < manifest ; 1959 ; Music Educators Journal Volume 46 ; 46 >
+        au < manifest ; 1960 ; Music Educators Journal Volume 47 ; 47 >
+        au < manifest ; 1961 ; Music Educators Journal Volume 48 ; 48 >
+        au < manifest ; 1962 ; Music Educators Journal Volume 49 ; 49 >
+        au < manifest ; 1963 ; Music Educators Journal Volume 50 ; 50 >
+        au < manifest ; 1964 ; Music Educators Journal Volume 51 ; 51 >
+        au < manifest ; 1965 ; Music Educators Journal Volume 52 ; 52 >
+        au < manifest ; 1966 ; Music Educators Journal Volume 53 ; 53 >
+        au < manifest ; 1967 ; Music Educators Journal Volume 54 ; 54 >
+        au < manifest ; 1968 ; Music Educators Journal Volume 55 ; 55 >
+        au < manifest ; 1969 ; Music Educators Journal Volume 56 ; 56 >
+        au < manifest ; 1970 ; Music Educators Journal Volume 57 ; 57 >
+        au < manifest ; 1971 ; Music Educators Journal Volume 58 ; 58 >
+        au < manifest ; 1972 ; Music Educators Journal Volume 59 ; 59 >
+        au < manifest ; 1973 ; Music Educators Journal Volume 60 ; 60 >
+        au < manifest ; 1974 ; Music Educators Journal Volume 61 ; 61 >
+        au < manifest ; 1975 ; Music Educators Journal Volume 62 ; 62 >
+        au < manifest ; 1976 ; Music Educators Journal Volume 63 ; 63 >
+        au < manifest ; 1977 ; Music Educators Journal Volume 64 ; 64 >
+        au < manifest ; 1978 ; Music Educators Journal Volume 65 ; 65 >
+        au < manifest ; 1979 ; Music Educators Journal Volume 66 ; 66 >
+        au < manifest ; 1980 ; Music Educators Journal Volume 67 ; 67 >
+        au < manifest ; 1981 ; Music Educators Journal Volume 68 ; 68 >
+        au < manifest ; 1982 ; Music Educators Journal Volume 69 ; 69 >
+        au < manifest ; 1983 ; Music Educators Journal Volume 70 ; 70 >
+        au < manifest ; 1984 ; Music Educators Journal Volume 71 ; 71 >
+        au < manifest ; 1985 ; Music Educators Journal Volume 72 ; 72 >
+        au < manifest ; 1986 ; Music Educators Journal Volume 73 ; 73 >
+        au < manifest ; 1987 ; Music Educators Journal Volume 74 ; 74 >
+        au < manifest ; 1988 ; Music Educators Journal Volume 75 ; 75 >
+        au < manifest ; 1989 ; Music Educators Journal Volume 76 ; 76 >
+        au < manifest ; 1990 ; Music Educators Journal Volume 77 ; 77 >
+        au < manifest ; 1991 ; Music Educators Journal Volume 78 ; 78 >
+        au < manifest ; 1992 ; Music Educators Journal Volume 79 ; 79 >
+        au < manifest ; 1993 ; Music Educators Journal Volume 80 ; 80 >
+        au < manifest ; 1994 ; Music Educators Journal Volume 81 ; 81 >
+        au < manifest ; 1995 ; Music Educators Journal Volume 82 ; 82 >
+        au < manifest ; 1996 ; Music Educators Journal Volume 83 ; 83 >
+        au < manifest ; 1997 ; Music Educators Journal Volume 84 ; 84 >
+        au < manifest ; 1998 ; Music Educators Journal Volume 85 ; 85 >
+        au < manifest ; 1999 ; Music Educators Journal Volume 86 ; 86 >
+        au < manifest ; 2000 ; Music Educators Journal Volume 87 ; 87 >
+        au < manifest ; 2001 ; Music Educators Journal Volume 88 ; 88 >
+        au < manifest ; 2002 ; Music Educators Journal Volume 89 ; 89 >
+        au < manifest ; 2003 ; Music Educators Journal Volume 90 ; 90 >
+        au < manifest ; 2004 ; Music Educators Journal Volume 91 ; 91 >
+        au < manifest ; 2005 ; Music Educators Journal Volume 92 ; 92 >
+        au < manifest ; 2006 ; Music Educators Journal Volume 93 ; 93 >
+        au < manifest ; 2007 ; Music Educators Journal Volume 94 ; 94 >
+        au < manifest ; 2008 ; Music Educators Journal Volume 95 ; 95 >
+        au < manifest ; 2009 ; Music Educators Journal Volume 96 ; 96 >
+        au < manifest ; 2010 ; Music Educators Journal Volume 97 ; 97 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = NASN School Nurse ;
+        issn = 1942-602X ;
+        eissn = 1942-6038 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://nas.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; NASN School Nurse Volume 16 ; 16 >
+        au < manifest ; 2002 ; NASN School Nurse Volume 17 ; 17 >
+        au < manifest ; 2003 ; NASN School Nurse Volume 18 ; 18 >
+        au < manifest ; 2004 ; NASN School Nurse Volume 19 ; 19 >
+        au < manifest ; 2005 ; NASN School Nurse Volume 20 ; 20 >
+        au < manifest ; 2006 ; NASN School Nurse Volume 21 ; 21 >
+        au < manifest ; 2007 ; NASN School Nurse Volume 22 ; 22 >
+        au < manifest ; 2008 ; NASN School Nurse Volume 23 ; 23 >
+        au < manifest ; 2009 ; NASN School Nurse Volume 24 ; 24 >
+        au < manifest ; 2010 ; NASN School Nurse Volume 25 ; 25 >
+        au < manifest ; 2011 ; NASN School Nurse Volume 26 ; 26 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Perspectives on Psychological Science ;
+        issn = 1745-6916 ;
+        eissn = 1745-6924 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pps.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
+        au < exists ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
+        au < exists ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
+        au < exists ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
+        au < manifest ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 >
+        au < manifest ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Psychological Science ;
+        issn = 0956-7976 ;
+        eissn = 1467-9280 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://pss.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1990 ; Psychological Science Volume 1 ; 1 >
+        au < manifest ; 1991 ; Psychological Science Volume 2 ; 2 >
+        au < manifest ; 1992 ; Psychological Science Volume 3 ; 3 >
+        au < manifest ; 1993 ; Psychological Science Volume 4 ; 4 >
+        au < manifest ; 1994 ; Psychological Science Volume 5 ; 5 >
+        au < manifest ; 1995 ; Psychological Science Volume 6 ; 6 >
+        au < manifest ; 1996 ; Psychological Science Volume 7 ; 7 >
+        au < manifest ; 1997 ; Psychological Science Volume 8 ; 8 >
+        au < manifest ; 1998 ; Psychological Science Volume 9 ; 9 >
+        au < manifest ; 1999 ; Psychological Science Volume 10 ; 10 >
+        au < manifest ; 2000 ; Psychological Science Volume 11 ; 11 >
+        au < manifest ; 2001 ; Psychological Science Volume 12 ; 12 >
+        au < manifest ; 2002 ; Psychological Science Volume 13 ; 13 >
+        au < manifest ; 2003 ; Psychological Science Volume 14 ; 14 >
+        au < manifest ; 2004 ; Psychological Science Volume 15 ; 15 >
+        au < manifest ; 2005 ; Psychological Science Volume 16 ; 16 >
+        au < manifest ; 2006 ; Psychological Science Volume 17 ; 17 >
+        au < manifest ; 2007 ; Psychological Science Volume 18 ; 18 >
+        au < manifest ; 2008 ; Psychological Science Volume 19 ; 19 >
+        au < manifest ; 2009 ; Psychological Science Volume 20 ; 20 >
+        au < manifest ; 2010 ; Psychological Science Volume 21 ; 21 >
+        au < manifest ; 2011 ; Psychological Science Volume 22 ; 22 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Psychological Science in the Public Interest ;
+        issn = 1529-1006 ;
+        eissn = 1539-6053 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://psi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 >
+        au < exists ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 >
+        au < exists ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 >
+        au < exists ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 >
+        au < exists ; 2006 ; Psychological Science in the Public Interest Volume 7 ; 7 >
+        au < exists ; 2007 ; Psychological Science in the Public Interest Volume 8 ; 8 >
+        au < manifest ; 2008 ; Psychological Science in the Public Interest Volume 9 ; 9 >
+        au < manifest ; 2009 ; Psychological Science in the Public Interest Volume 10 ; 10 >
+        au < manifest ; 2010 ; Psychological Science in the Public Interest Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Rehabilitation Counseling Bulletin ;
+        issn = 0034-3552 ;
+        eissn = 1538-4853 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rcb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1999 ; Rehabilitation Counseling Bulletin Volume 43 ; 43 >
+        au < manifest ; 2000 ; Rehabilitation Counseling Bulletin Volume 44 ; 44 >
+        au < manifest ; 2001 ; Rehabilitation Counseling Bulletin Volume 45 ; 45 >
+        au < manifest ; 2002 ; Rehabilitation Counseling Bulletin Volume 46 ; 46 >
+        au < manifest ; 2003 ; Rehabilitation Counseling Bulletin Volume 47 ; 47 >
+        au < manifest ; 2004 ; Rehabilitation Counseling Bulletin Volume 48 ; 48 >
+        au < manifest ; 2005 ; Rehabilitation Counseling Bulletin Volume 49 ; 49 >
+        au < manifest ; 2006 ; Rehabilitation Counseling Bulletin Volume 50 ; 50 >
+        au < manifest ; 2007 ; Rehabilitation Counseling Bulletin Volume 51 ; 51 >
+        au < manifest ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 >
+        au < manifest ; 2009 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 >
+        au < manifest ; 2010 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Remedial and Special Education ;
+        issn = 0741-9325 ;
+        eissn = 1538-4756 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rse.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1984 ; Remedial and Special Education Volume 5 ; 5 >
+        au < manifest ; 1985 ; Remedial and Special Education Volume 6 ; 6 >
+        au < manifest ; 1986 ; Remedial and Special Education Volume 7 ; 7 >
+        au < manifest ; 1987 ; Remedial and Special Education Volume 8 ; 8 >
+        au < manifest ; 1988 ; Remedial and Special Education Volume 9 ; 9 >
+        au < manifest ; 1989 ; Remedial and Special Education Volume 10 ; 10 >
+        au < manifest ; 1990 ; Remedial and Special Education Volume 11 ; 11 >
+        au < manifest ; 1991 ; Remedial and Special Education Volume 12 ; 12 >
+        au < manifest ; 1992 ; Remedial and Special Education Volume 13 ; 13 >
+        au < manifest ; 1993 ; Remedial and Special Education Volume 14 ; 14 >
+        au < manifest ; 1994 ; Remedial and Special Education Volume 15 ; 15 >
+        au < manifest ; 1995 ; Remedial and Special Education Volume 16 ; 16 >
+        au < manifest ; 1996 ; Remedial and Special Education Volume 17 ; 17 >
+        au < manifest ; 1997 ; Remedial and Special Education Volume 18 ; 18 >
+        au < manifest ; 1998 ; Remedial and Special Education Volume 19 ; 19 >
+        au < manifest ; 1999 ; Remedial and Special Education Volume 20 ; 20 >
+        au < manifest ; 2000 ; Remedial and Special Education Volume 21 ; 21 >
+        au < manifest ; 2001 ; Remedial and Special Education Volume 22 ; 22 >
+        au < manifest ; 2002 ; Remedial and Special Education Volume 23 ; 23 >
+        au < manifest ; 2003 ; Remedial and Special Education Volume 24 ; 24 >
+        au < manifest ; 2004 ; Remedial and Special Education Volume 25 ; 25 >
+        au < manifest ; 2005 ; Remedial and Special Education Volume 26 ; 26 >
+        au < manifest ; 2006 ; Remedial and Special Education Volume 27 ; 27 >
+        au < manifest ; 2007 ; Remedial and Special Education Volume 28 ; 28 >
+        au < manifest ; 2008 ; Remedial and Special Education Volume 29 ; 29 >
+        au < manifest ; 2009 ; Remedial and Special Education Volume 30 ; 30 >
+        au < manifest ; 2010 ; Remedial and Special Education Volume 31 ; 31 >
+        au < manifest ; 2011 ; Remedial and Special Education Volume 32 ; 32 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Review of Market Integration ;
+        issn = 0974-9292 ;
+        eissn = 0975-4709 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rmi.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Review of Market Integration Volume 1 ; 1 >
+        au < manifest ; 2010 ; Review of Market Integration Volume 2 ; 2 >
+        au < manifest ; 2011 ; Review of Market Integration Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Reviews of Human Factors and Ergonomics ;
+        issn = 1557-234X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rev.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[rhfe] = V6 manifest is malformed. The link to the issue goes to no page.
+
+        au < exists ; 2006 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
+        au < exists ; 2007 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 >
+        au < exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 >
+        au < exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 >
+        au < exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
+        au < exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Scandinavian Journal of Public Health ;
+        issn = 1403-4948 ;
+        eissn = 1651-1905 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sjp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1973 ; Scandinavian Journal of Public Health Volume 1 ; 1 >
+        au < exists ; 1974 ; Scandinavian Journal of Public Health Volume 2 ; 2 >
+        au < exists ; 1975 ; Scandinavian Journal of Public Health Volume 3 ; 3 >
+        au < exists ; 1976 ; Scandinavian Journal of Public Health Volume 4 ; 4 >
+        au < exists ; 1977 ; Scandinavian Journal of Public Health Volume 5 ; 5 >
+        au < exists ; 1978 ; Scandinavian Journal of Public Health Volume 6 ; 6 >
+        au < exists ; 1979 ; Scandinavian Journal of Public Health Volume 7 ; 7 >
+        au < exists ; 1980 ; Scandinavian Journal of Public Health Volume 8 ; 8 >
+        au < exists ; 1981 ; Scandinavian Journal of Public Health Volume 9 ; 9 >
+        au < exists ; 1982 ; Scandinavian Journal of Public Health Volume 10 ; 10 >
+        au < exists ; 1983 ; Scandinavian Journal of Public Health Volume 11 ; 11 >
+        au < exists ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 >
+        au < exists ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 >
+        au < exists ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 >
+        au < exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 >
+        au < exists ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 >
+        au < manifest ; 1989 ; Scandinavian Journal of Public Health Volume 17 ; 17 >
+        au < manifest ; 1990 ; Scandinavian Journal of Public Health Volume 18 ; 18 >
+        au < manifest ; 1991 ; Scandinavian Journal of Public Health Volume 19 ; 19 >
+        au < manifest ; 1992 ; Scandinavian Journal of Public Health Volume 20 ; 20 >
+        au < manifest ; 1993 ; Scandinavian Journal of Public Health Volume 21 ; 21 >
+        au < manifest ; 1994 ; Scandinavian Journal of Public Health Volume 22 ; 22 >
+        au < manifest ; 1995 ; Scandinavian Journal of Public Health Volume 23 ; 23 >
+        au < manifest ; 1996 ; Scandinavian Journal of Public Health Volume 24 ; 24 >
+        au < manifest ; 1997 ; Scandinavian Journal of Public Health Volume 25 ; 25 >
+        au < manifest ; 1998 ; Scandinavian Journal of Public Health Volume 26 ; 26 >
+        au < manifest ; 1999 ; Scandinavian Journal of Public Health Volume 27 ; 27 >
+        au < manifest ; 2000 ; Scandinavian Journal of Public Health Volume 28 ; 28 >
+        au < manifest ; 2001 ; Scandinavian Journal of Public Health Volume 29 ; 29 >
+        au < manifest ; 2002 ; Scandinavian Journal of Public Health Volume 30 ; 30 >
+        au < manifest ; 2003 ; Scandinavian Journal of Public Health Volume 31 ; 31 >
+        au < manifest ; 2004 ; Scandinavian Journal of Public Health Volume 32 ; 32 >
+        au < manifest ; 2005 ; Scandinavian Journal of Public Health Volume 33 ; 33 >
+        au < manifest ; 2006 ; Scandinavian Journal of Public Health Volume 34 ; 34 >
+        au < manifest ; 2007 ; Scandinavian Journal of Public Health Volume 35 ; 35 >
+        au < manifest ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 >
+        au < manifest ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 >
+        au < manifest ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 >
+        au < manifest ; 2011 ; Scandinavian Journal of Public Health Volume 39 ; 39 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social Psychological and Personality Science ;
+        issn = 1948-5506 ;
+        eissn = 1948-5514 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://spp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Social Psychological and Personality Science Volume 1 ; 1 >
+        au < manifest ; 2011 ; Social Psychological and Personality Science Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Social Psychology Quarterly ;
+        issn = 0190-2725 ;
+        eissn = 1939-8999 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://spq.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
+        au < exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
+        au < exists ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
+        au < exists ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
+        au < exists ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
+        au < manifest ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
+        au < manifest ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 >
+        au < manifest ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Society and Mental Health ;
+        issn = 2156-8693 ;
+        eissn = 2156-8731 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://smh.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2011 ; Society and Mental Health Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Sociology of Education ;
+        issn = 0038-0407 ;
+        eissn = 1939-8573 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://soe.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; Sociology of Education Volume 77 ; 77 >
+        au < exists ; 2005 ; Sociology of Education Volume 78 ; 78 >
+        au < exists ; 2006 ; Sociology of Education Volume 79 ; 79 >
+        au < exists ; 2007 ; Sociology of Education Volume 80 ; 80 >
+        au < exists ; 2008 ; Sociology of Education Volume 81 ; 81 >
+        au < manifest ; 2009 ; Sociology of Education Volume 82 ; 82 >
+        au < manifest ; 2010 ; Sociology of Education Volume 83 ; 83 >
+        au < manifest ; 2011 ; Sociology of Education Volume 84 ; 84 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Sports Health: A Multidisciplinary Approach ;
+        issn = 1941-7381 ;
+        eissn = 1941-0921 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sph.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 >
+        au < manifest ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 >
+        au < manifest ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = State and Local Government Review ;
+        issn = 0160-323X ;
+        eissn = 1943-3409 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://slg.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1997 ; State and Local Government Review Volume 29 ; 29 >
+        au < exists ; 1998 ; State and Local Government Review Volume 30 ; 30 >
+        au < exists ; 1999 ; State and Local Government Review Volume 31 ; 31 >
+        au < exists ; 2000 ; State and Local Government Review Volume 32 ; 32 >
+        au < exists ; 2001 ; State and Local Government Review Volume 33 ; 33 >
+        au < exists ; 2002 ; State and Local Government Review Volume 34 ; 34 >
+        au < exists ; 2003 ; State and Local Government Review Volume 35 ; 35 >
+        au < exists ; 2004 ; State and Local Government Review Volume 36 ; 36 >
+        au < exists ; 2005 ; State and Local Government Review Volume 37 ; 37 >
+        au < exists ; 2006 ; State and Local Government Review Volume 38 ; 38 >
+        au < exists ; 2007 ; State and Local Government Review Volume 39 ; 39 >
+        au < exists ; 2008 ; State and Local Government Review Volume 40 ; 40 >
+        au < exists ; 2009 ; State and Local Government Review Volume 41 ; 41 >
+        au < manifest ; 2010 ; State and Local Government Review Volume 42 ; 42 >
+        au < manifest ; 2011 ; State and Local Government Review Volume 43 ; 43 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Statistical Modelling ;
+        issn = 1471-082X ;
+        eissn = 1477-0342 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://smj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2001 ; Statistical Modelling Volume 1 ; 1 >
+        au < manifest ; 2002 ; Statistical Modelling Volume 2 ; 2 >
+        au < manifest ; 2003 ; Statistical Modelling Volume 3 ; 3 >
+        au < manifest ; 2004 ; Statistical Modelling Volume 4 ; 4 >
+        au < manifest ; 2005 ; Statistical Modelling Volume 5 ; 5 >
+        au < manifest ; 2006 ; Statistical Modelling Volume 6 ; 6 >
+        au < manifest ; 2007 ; Statistical Modelling Volume 7 ; 7 >
+        au < manifest ; 2008 ; Statistical Modelling Volume 8 ; 8 >
+        au < manifest ; 2009 ; Statistical Modelling Volume 9 ; 9 >
+        au < manifest ; 2010 ; Statistical Modelling Volume 10 ; 10 >
+        au < manifest ; 2011 ; Statistical Modelling Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Studies in Religion/Sciences Religieuses ;
+        issn = 0008-4298 ;
+        eissn = 2042-0587 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sir.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 >
+        au < exists ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 >
+        au < exists ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 >
+        au < exists ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 >
+        au < exists ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 >
+        au < exists ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 >
+        au < exists ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 >
+        au < exists ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 >
+        au < exists ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 >
+        au < exists ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 >
+        au < exists ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 >
+        au < exists ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 >
+        au < exists ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 >
+        au < exists ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 >
+        au < exists ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 >
+        au < exists ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 >
+        au < exists ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 >
+        au < exists ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 >
+        au < exists ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 >
+        au < exists ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 >
+        au < exists ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 >
+        au < exists ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 >
+        au < exists ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 >
+        au < exists ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 >
+        au < exists ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 >
+        au < exists ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 >
+        au < exists ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 >
+        au < exists ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 >
+        au < exists ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 >
+        au < exists ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 >
+        au < exists ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 >
+        au < exists ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 >
+        au < exists ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 >
+        au < exists ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 >
+        au < exists ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 >
+        au < exists ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 >
+        au < manifest ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 >
+        au < manifest ; 2009 ; Studies in Religion/Sciences Religieuses Volume 38 ; 38 >
+        au < manifest ; 2010 ; Studies in Religion/Sciences Religieuses Volume 39 ; 39 >
+        au < manifest ; 2011 ; Studies in Religion/Sciences Religieuses Volume 40 ; 40 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children ;
+        issn = 0888-4064 ;
+        eissn = 1944-4931 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tes.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1977 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 1 ; 1 >
+        au < manifest ; 1978 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 2 ; 2 >
+        au < manifest ; 1980 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 3 ; 3 >
+        au < manifest ; 1981 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 4 ; 4 >
+        au < manifest ; 1982 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 5 ; 5 >
+        au < manifest ; 1983 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 6 ; 6 >
+        au < manifest ; 1984 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 7 ; 7 >
+        au < manifest ; 1985 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 8 ; 8 >
+        au < manifest ; 1986 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 9 ; 9 >
+        au < manifest ; 1987 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 10 ; 10 >
+        au < manifest ; 1988 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 11 ; 11 >
+        au < manifest ; 1989 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 12 ; 12 >
+        au < manifest ; 1990 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 13 ; 13 >
+        au < manifest ; 1991 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 14 ; 14 >
+        au < manifest ; 1992 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 15 ; 15 >
+        au < manifest ; 1993 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 16 ; 16 >
+        au < manifest ; 1994 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 17 ; 17 >
+        au < manifest ; 1995 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 18 ; 18 >
+        au < manifest ; 1996 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 19 ; 19 >
+        au < manifest ; 1997 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 20 ; 20 >
+        au < manifest ; 1998 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 21 ; 21 >
+        au < manifest ; 1999 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 22 ; 22 >
+        au < manifest ; 2000 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 23 ; 23 >
+        au < manifest ; 2001 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 24 ; 24 >
+        au < manifest ; 2002 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 25 ; 25 >
+        au < manifest ; 2003 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 26 ; 26 >
+        au < manifest ; 2004 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 27 ; 27 >
+        au < manifest ; 2005 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 28 ; 28 >
+        au < manifest ; 2006 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 29 ; 29 >
+        au < manifest ; 2007 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 30 ; 30 >
+        au < manifest ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 >
+        au < manifest ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 >
+        au < manifest ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 >
+        au < manifest ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Teaching Sociology ;
+        issn = 0092-055X ;
+        eissn = 1939-862X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tso.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; Teaching Sociology Volume 32 ; 32 >
+        au < exists ; 2005 ; Teaching Sociology Volume 33 ; 33 >
+        au < exists ; 2006 ; Teaching Sociology Volume 34 ; 34 >
+        au < exists ; 2007 ; Teaching Sociology Volume 35 ; 35 >
+        au < exists ; 2008 ; Teaching Sociology Volume 36 ; 36 >
+        au < manifest ; 2009 ; Teaching Sociology Volume 37 ; 37 >
+        au < manifest ; 2010 ; Teaching Sociology Volume 38 ; 38 >
+        au < manifest ; 2011 ; Teaching Sociology Volume 39 ; 39 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Journal of School Nursing ;
+        issn = 1059-8405 ;
+        eissn = 1546-8364 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jsn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2000 ; The Journal of School Nursing Volume 16 ; 16 >
+        au < manifest ; 2001 ; The Journal of School Nursing Volume 17 ; 17 >
+        au < manifest ; 2002 ; The Journal of School Nursing Volume 18 ; 18 >
+        au < manifest ; 2003 ; The Journal of School Nursing Volume 19 ; 19 >
+        au < manifest ; 2004 ; The Journal of School Nursing Volume 20 ; 20 >
+        au < manifest ; 2005 ; The Journal of School Nursing Volume 21 ; 21 >
+        au < manifest ; 2006 ; The Journal of School Nursing Volume 22 ; 22 >
+        au < manifest ; 2007 ; The Journal of School Nursing Volume 23 ; 23 >
+        au < manifest ; 2008 ; The Journal of School Nursing Volume 24 ; 24 >
+        au < manifest ; 2009 ; The Journal of School Nursing Volume 25 ; 25 >
+        au < manifest ; 2010 ; The Journal of School Nursing Volume 26 ; 26 >
+        au < manifest ; 2011 ; The Journal of School Nursing Volume 27 ; 27 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = The Journal of Special Education ;
+        issn = 0022-4669 ;
+        eissn = 1538-4764 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sed.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; The Journal of Special Education Volume 1 ; 1 >
+        au < manifest ; 1967 ; The Journal of Special Education Volume 2 ; 2 >
+        au < manifest ; 1969 ; The Journal of Special Education Volume 3 ; 3 >
+        au < manifest ; 1970 ; The Journal of Special Education Volume 4 ; 4 >
+        au < manifest ; 1971 ; The Journal of Special Education Volume 5 ; 5 >
+        au < manifest ; 1972 ; The Journal of Special Education Volume 6 ; 6 >
+        au < manifest ; 1973 ; The Journal of Special Education Volume 7 ; 7 >
+        au < manifest ; 1974 ; The Journal of Special Education Volume 8 ; 8 >
+        au < manifest ; 1975 ; The Journal of Special Education Volume 9 ; 9 >
+        au < manifest ; 1976 ; The Journal of Special Education Volume 10 ; 10 >
+        au < manifest ; 1977 ; The Journal of Special Education Volume 11 ; 11 >
+        au < manifest ; 1978 ; The Journal of Special Education Volume 12 ; 12 >
+        au < manifest ; 1979 ; The Journal of Special Education Volume 13 ; 13 >
+        au < manifest ; 1980 ; The Journal of Special Education Volume 14 ; 14 >
+        au < manifest ; 1981 ; The Journal of Special Education Volume 15 ; 15 >
+        au < manifest ; 1982 ; The Journal of Special Education Volume 16 ; 16 >
+        au < manifest ; 1983 ; The Journal of Special Education Volume 17 ; 17 >
+        au < manifest ; 1984 ; The Journal of Special Education Volume 18 ; 18 >
+        au < manifest ; 1985 ; The Journal of Special Education Volume 19 ; 19 >
+        au < manifest ; 1986 ; The Journal of Special Education Volume 20 ; 20 >
+        au < manifest ; 1987 ; The Journal of Special Education Volume 21 ; 21 >
+        au < manifest ; 1988 ; The Journal of Special Education Volume 22 ; 22 >
+        au < manifest ; 1989 ; The Journal of Special Education Volume 23 ; 23 >
+        au < manifest ; 1990 ; The Journal of Special Education Volume 24 ; 24 >
+        au < manifest ; 1991 ; The Journal of Special Education Volume 25 ; 25 >
+        au < manifest ; 1992 ; The Journal of Special Education Volume 26 ; 26 >
+        au < manifest ; 1993 ; The Journal of Special Education Volume 27 ; 27 >
+        au < manifest ; 1994 ; The Journal of Special Education Volume 28 ; 28 >
+        au < manifest ; 1995 ; The Journal of Special Education Volume 29 ; 29 >
+        au < manifest ; 1996 ; The Journal of Special Education Volume 30 ; 30 >
+        au < manifest ; 1997 ; The Journal of Special Education Volume 31 ; 31 >
+        au < manifest ; 1998 ; The Journal of Special Education Volume 32 ; 32 >
+        au < manifest ; 1999 ; The Journal of Special Education Volume 33 ; 33 >
+        au < manifest ; 2000 ; The Journal of Special Education Volume 34 ; 34 >
+        au < manifest ; 2001 ; The Journal of Special Education Volume 35 ; 35 >
+        au < manifest ; 2002 ; The Journal of Special Education Volume 36 ; 36 >
+        au < manifest ; 2003 ; The Journal of Special Education Volume 37 ; 37 >
+        au < manifest ; 2004 ; The Journal of Special Education Volume 38 ; 38 >
+        au < manifest ; 2005 ; The Journal of Special Education Volume 39 ; 39 >
+        au < manifest ; 2006 ; The Journal of Special Education Volume 40 ; 40 >
+        au < manifest ; 2007 ; The Journal of Special Education Volume 41 ; 41 >
+        au < manifest ; 2008 ; The Journal of Special Education Volume 42 ; 42 >
+        au < manifest ; 2009 ; The Journal of Special Education Volume 43 ; 43 >
+        au < manifest ; 2010 ; The Journal of Special Education Volume 44 ; 44 >
+        au < manifest ; 2011 ; The Journal of Special Education Volume 45 ; 45 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Theology ;
+        issn = 0040-571X ;
+        eissn = 2044-2696 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tjx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[tjx] = Theology, Volumes on web page: V50-114 (7/2011)
+
+        au < exists ; 1947 ; Theology Volume 50 ; 50 >
+        au < exists ; 1948 ; Theology Volume 51 ; 51 >
+        au < exists ; 1949 ; Theology Volume 52 ; 52 >
+        au < exists ; 1950 ; Theology Volume 53 ; 53 >
+        au < exists ; 2010 ; Theology Volume 113 ; 113 >
+        au < manifest ; 2011 ; Theology Volume 114 ; 114 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Chronic Disease ;
+        issn = 2040-6223 ;
+        eissn = 2040-6231 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://taj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Chronic Disease Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Drug Safety ;
+        issn = 2042-0986 ;
+        eissn = 2042-0994 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://taw.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
+        au < exists ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Endocrinology and Metabolism ;
+        issn = 2042-0188 ;
+        eissn = 2042-0196 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tae.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Gastroenterology ;
+        issn = 1756-283X ;
+        eissn = 1756-2848 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tag.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 >
+        au < manifest ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 >
+        au < manifest ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 >
+        au < manifest ; 2011 ; Therapeutic Advances in Gastroenterology Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Hematology ;
+        issn = 2040-6207 ;
+        eissn = 2040-6215 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tah.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Hematology Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Medical Oncology ;
+        issn = 1758-8340 ;
+        eissn = 1758-8359 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tam.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Musculoskeletal Disease ;
+        issn = 1759-720X ;
+        eissn = 1759-7218 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tab.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Musculoskeletal Disease Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Neurological Disorders ;
+        issn = 1756-2856 ;
+        eissn = 1756-2864 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tan.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 >
+        au < manifest ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 >
+        au < manifest ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 3 ; 3 >
+        au < manifest ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Urology ;
+        issn = 1756-2872 ;
+        eissn = 1756-2880 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tau.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Urology Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Topics in Early Childhood Special Education ;
+        issn = 0271-1214 ;
+        eissn = 1538-4845 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tec.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1981 ; Topics in Early Childhood Special Education Volume 1 ; 1 >
+        au < manifest ; 1982 ; Topics in Early Childhood Special Education Volume 2 ; 2 >
+        au < manifest ; 1983 ; Topics in Early Childhood Special Education Volume 3 ; 3 >
+        au < manifest ; 1984 ; Topics in Early Childhood Special Education Volume 4 ; 4 >
+        au < manifest ; 1985 ; Topics in Early Childhood Special Education Volume 5 ; 5 >
+        au < manifest ; 1986 ; Topics in Early Childhood Special Education Volume 6 ; 6 >
+        au < manifest ; 1987 ; Topics in Early Childhood Special Education Volume 7 ; 7 >
+        au < manifest ; 1988 ; Topics in Early Childhood Special Education Volume 8 ; 8 >
+        au < manifest ; 1989 ; Topics in Early Childhood Special Education Volume 9 ; 9 >
+        au < manifest ; 1990 ; Topics in Early Childhood Special Education Volume 10 ; 10 >
+        au < manifest ; 1991 ; Topics in Early Childhood Special Education Volume 11 ; 11 >
+        au < manifest ; 1992 ; Topics in Early Childhood Special Education Volume 12 ; 12 >
+        au < manifest ; 1993 ; Topics in Early Childhood Special Education Volume 13 ; 13 >
+        au < manifest ; 1994 ; Topics in Early Childhood Special Education Volume 14 ; 14 >
+        au < manifest ; 1995 ; Topics in Early Childhood Special Education Volume 15 ; 15 >
+        au < manifest ; 1996 ; Topics in Early Childhood Special Education Volume 16 ; 16 >
+        au < manifest ; 1997 ; Topics in Early Childhood Special Education Volume 17 ; 17 >
+        au < manifest ; 1998 ; Topics in Early Childhood Special Education Volume 18 ; 18 >
+        au < manifest ; 1999 ; Topics in Early Childhood Special Education Volume 19 ; 19 >
+        au < manifest ; 2000 ; Topics in Early Childhood Special Education Volume 20 ; 20 >
+        au < manifest ; 2001 ; Topics in Early Childhood Special Education Volume 21 ; 21 >
+        au < manifest ; 2002 ; Topics in Early Childhood Special Education Volume 22 ; 22 >
+        au < manifest ; 2003 ; Topics in Early Childhood Special Education Volume 23 ; 23 >
+        au < manifest ; 2004 ; Topics in Early Childhood Special Education Volume 24 ; 24 >
+        au < manifest ; 2005 ; Topics in Early Childhood Special Education Volume 25 ; 25 >
+        au < manifest ; 2006 ; Topics in Early Childhood Special Education Volume 26 ; 26 >
+        au < manifest ; 2007 ; Topics in Early Childhood Special Education Volume 27 ; 27 >
+        au < manifest ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 >
+        au < manifest ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 >
+        au < manifest ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 >
+        au < manifest ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Tourism and Hospitality Research ;
+        issn = 1467-3584 ;
+        eissn = 1742-9692 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://thr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
+        au < exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
+        au < exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
+        au < exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
+        au < exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
+        au < exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
+        au < manifest ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Toxicologic Pathology ;
+        issn = 0192-6233 ;
+        eissn = 1533-1601 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tpx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972 ; Toxicologic Pathology Volume 1 ; 1 >
+        au < manifest ; 1974 ; Toxicologic Pathology Volume 2 ; 2 >
+        au < manifest ; 1975 ; Toxicologic Pathology Volume 3 ; 3 >
+        au < manifest ; 1976 ; Toxicologic Pathology Volume 4 ; 4 >
+        au < manifest ; 1977 ; Toxicologic Pathology Volume 5 ; 5 >
+        au < manifest ; 1978 ; Toxicologic Pathology Volume 6 ; 6 >
+        au < manifest ; 1979 ; Toxicologic Pathology Volume 7 ; 7 >
+        au < manifest ; 1980 ; Toxicologic Pathology Volume 8 ; 8 >
+        au < manifest ; 1981 ; Toxicologic Pathology Volume 9 ; 9 >
+        au < manifest ; 1982 ; Toxicologic Pathology Volume 10 ; 10 >
+        au < manifest ; 1983 ; Toxicologic Pathology Volume 11 ; 11 >
+        au < manifest ; 1984 ; Toxicologic Pathology Volume 12 ; 12 >
+        au < manifest ; 1985 ; Toxicologic Pathology Volume 13 ; 13 >
+        au < manifest ; 1986 ; Toxicologic Pathology Volume 14 ; 14 >
+        au < manifest ; 1987 ; Toxicologic Pathology Volume 15 ; 15 >
+        au < manifest ; 1988 ; Toxicologic Pathology Volume 16 ; 16 >
+        au < manifest ; 1989 ; Toxicologic Pathology Volume 17 ; 17 >
+        au < manifest ; 1990 ; Toxicologic Pathology Volume 18 ; 18 >
+        au < manifest ; 1991 ; Toxicologic Pathology Volume 19 ; 19 >
+        au < manifest ; 1992 ; Toxicologic Pathology Volume 20 ; 20 >
+        au < manifest ; 1993 ; Toxicologic Pathology Volume 21 ; 21 >
+        au < manifest ; 1994 ; Toxicologic Pathology Volume 22 ; 22 >
+        au < manifest ; 1995 ; Toxicologic Pathology Volume 23 ; 23 >
+        au < manifest ; 1996 ; Toxicologic Pathology Volume 24 ; 24 >
+        au < manifest ; 1997 ; Toxicologic Pathology Volume 25 ; 25 >
+        au < manifest ; 1998 ; Toxicologic Pathology Volume 26 ; 26 >
+        au < manifest ; 1999 ; Toxicologic Pathology Volume 27 ; 27 >
+        au < manifest ; 2000 ; Toxicologic Pathology Volume 28 ; 28 >
+        au < manifest ; 2001 ; Toxicologic Pathology Volume 29 ; 29 >
+        au < manifest ; 2002 ; Toxicologic Pathology Volume 30 ; 30 >
+        au < manifest ; 2003 ; Toxicologic Pathology Volume 31 ; 31 >
+        au < manifest ; 2004 ; Toxicologic Pathology Volume 32 ; 32 >
+        au < manifest ; 2005 ; Toxicologic Pathology Volume 33 ; 33 >
+        au < manifest ; 2006 ; Toxicologic Pathology Volume 34 ; 34 >
+        au < manifest ; 2007 ; Toxicologic Pathology Volume 35 ; 35 >
+        au < manifest ; 2008 ; Toxicologic Pathology Volume 36 ; 36 >
+        au < manifest ; 2009 ; Toxicologic Pathology Volume 37 ; 37 >
+        au < manifest ; 2010 ; Toxicologic Pathology Volume 38 ; 38 >
+        au < manifest ; 2011 ; Toxicologic Pathology Volume 39 ; 39 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Transfer: European Review of Labour and Research ;
+        issn = 1024-2589 ;
+        eissn = 1996-7284 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://trs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 >
+        au < exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 >
+        au < exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 >
+        au < exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 >
+        au < exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 >
+        au < exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 >
+        au < exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 >
+        au < exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 >
+        au < exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 >
+        au < exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 >
+        au < exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 >
+        au < exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 >
+        au < exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 >
+        au < exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 >
+        au < manifest ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
+        au < manifest ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
+        au < manifest ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Transformation: An International Journal of Holistic Mission Studies ;
+        issn = 0265-3788 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://trn.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1984 ; Transformation: An International Journal of Holistic Mission Studies Volume 1 ; 1 >
+        au < exists ; 1985 ; Transformation: An International Journal of Holistic Mission Studies Volume 2 ; 2 >
+        au < exists ; 1986 ; Transformation: An International Journal of Holistic Mission Studies Volume 3 ; 3 >
+        au < exists ; 1987 ; Transformation: An International Journal of Holistic Mission Studies Volume 4 ; 4 >
+        au < exists ; 1988 ; Transformation: An International Journal of Holistic Mission Studies Volume 5 ; 5 >
+        au < exists ; 1989 ; Transformation: An International Journal of Holistic Mission Studies Volume 6 ; 6 >
+        au < exists ; 1990 ; Transformation: An International Journal of Holistic Mission Studies Volume 7 ; 7 >
+        au < exists ; 1991 ; Transformation: An International Journal of Holistic Mission Studies Volume 8 ; 8 >
+        au < exists ; 1992 ; Transformation: An International Journal of Holistic Mission Studies Volume 9 ; 9 >
+        au < exists ; 1993 ; Transformation: An International Journal of Holistic Mission Studies Volume 10 ; 10 >
+        au < exists ; 1994 ; Transformation: An International Journal of Holistic Mission Studies Volume 11 ; 11 >
+        au < exists ; 1995 ; Transformation: An International Journal of Holistic Mission Studies Volume 12 ; 12 >
+        au < exists ; 1996 ; Transformation: An International Journal of Holistic Mission Studies Volume 13 ; 13 >
+        au < exists ; 1997 ; Transformation: An International Journal of Holistic Mission Studies Volume 14 ; 14 >
+        au < exists ; 1998 ; Transformation: An International Journal of Holistic Mission Studies Volume 15 ; 15 >
+        au < exists ; 1999 ; Transformation: An International Journal of Holistic Mission Studies Volume 16 ; 16 >
+        au < exists ; 2000 ; Transformation: An International Journal of Holistic Mission Studies Volume 17 ; 17 >
+        au < exists ; 2001 ; Transformation: An International Journal of Holistic Mission Studies Volume 18 ; 18 >
+        au < exists ; 2002 ; Transformation: An International Journal of Holistic Mission Studies Volume 19 ; 19 >
+        au < exists ; 2003 ; Transformation: An International Journal of Holistic Mission Studies Volume 20 ; 20 >
+        au < exists ; 2004 ; Transformation: An International Journal of Holistic Mission Studies Volume 21 ; 21 >
+        au < exists ; 2005 ; Transformation: An International Journal of Holistic Mission Studies Volume 22 ; 22 >
+        au < exists ; 2006 ; Transformation: An International Journal of Holistic Mission Studies Volume 23 ; 23 >
+        au < exists ; 2007 ; Transformation: An International Journal of Holistic Mission Studies Volume 24 ; 24 >
+        au < exists ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 >
+        au < manifest ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 >
+        au < manifest ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 >
+        au < manifest ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 >
 
       }
 
