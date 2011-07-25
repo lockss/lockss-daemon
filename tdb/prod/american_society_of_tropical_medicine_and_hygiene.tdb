@@ -17,7 +17,10 @@
     param[base_url] = http://www.ajtmh.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    comment[exists] = issues exist on website from 1921 to present.
 
+    au < exists ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 70 ; 70 >
+    au < exists ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 71 ; 71 >
     au < ready ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 72 ; 72 >
     au < testing ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 73 ; 73 >
     au < ready ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 74 ; 74 >
@@ -28,6 +31,10 @@
     au < testing ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
     au < ready ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
     au < testing ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
+    au < manifest ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 82 ; 82 >
+    au < manifest ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
+    au < manifest ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
+    au < manifest ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
 
 
   }
