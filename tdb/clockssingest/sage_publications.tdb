@@ -9677,7 +9677,7 @@
   {
   
     title <
-      name = Journal of Renin-Angiotensin-Aldosterone System ;
+      name = Journal of the Renin-Angiotensin-Aldosterone System ;
       issn = 1470-3203
     >
 
@@ -9688,8 +9688,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Renin-Angiotensin-Aldosterone System Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Journal of Renin-Angiotensin-Aldosterone System Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2008 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 10 ; 10 ;  >
 
     }
 
@@ -9697,7 +9697,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < wanted ; exists ; 2010 ; Journal of Renin-Angiotensin-Aldosterone System Volume 11 ; 11 ;  >
+      au < wanted ; exists ; 2010 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 11 ; 11 ;  >
 
     }
 
@@ -11489,9 +11489,10 @@
   {
   
     title <
-      name = Multiple Sclerosis ;
-      issn = 1352-4585 ;
-      eissn = 1477-0970
+      name = Multiple Sclerosis Journal ;
+        issn = 1352-4585 ;
+        eissn = 1477-0970 ;
+        issnl = 1352-4585
     >
 
     param[base_url] = http://msj.sagepub.com/
