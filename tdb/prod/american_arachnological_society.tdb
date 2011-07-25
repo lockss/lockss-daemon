@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0161-8202
   
-      au < superseded ; Journal of Arachnology Volume 28 ; 28 >
-      au < superseded ; Journal of Arachnology Volume 29 ; 29 >
-      au < superseded ; Journal of Arachnology Volume 30 ; 30 >
-      au < superseded ; Journal of Arachnology Volume 31 ; 31 >
-      au < doNotProcess ; Journal of Arachnology Volume 32 ; 32 >
-      au < superseded ; Journal of Arachnology Volume 32 ; 032 >
-      au < superseded ; Journal of Arachnology Volume 33 ; 33 >
-      au < superseded ; Journal of Arachnology Volume 34 ; 34 >
-      au < superseded ; Journal of Arachnology Volume 35 ; 35 >
+      au < superseded ; 2000 ; Journal of Arachnology Volume 28 ; 28 >
+      au < superseded ; 2001 ; Journal of Arachnology Volume 29 ; 29 >
+      au < superseded ; 2002 ; Journal of Arachnology Volume 30 ; 30 >
+      au < superseded ; 2003 ; Journal of Arachnology Volume 31 ; 31 >
+      au < doNotProcess ; 2004 ; Journal of Arachnology Volume 32 ; 32 >
+      au < superseded ; 2004 ; Journal of Arachnology Volume 32 ; 032 >
+      au < superseded ; 2005 ; Journal of Arachnology Volume 33 ; 33 >
+      au < superseded ; 2006 ; Journal of Arachnology Volume 34 ; 34 >
+      au < superseded ; 2007 ; Journal of Arachnology Volume 35 ; 35 >
     }
 
     {

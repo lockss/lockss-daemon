@@ -15,19 +15,19 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://chestjournal.chestpubs.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; Chest Volume 127 ; 127 >
-    au < released ; Chest Volume 128 ; 128 >
-    au < released ; Chest Volume 129 ; 129 >
-    au < released ; Chest Volume 130 ; 130 >
-    au < released ; Chest Volume 131 ; 131 >
-    au < released ; Chest Volume 132 ; 132 >
-    au < released ; Chest Volume 133 ; 133 >
-    au < released ; Chest Volume 134 ; 134 >
-    au < released ; Chest Volume 135 ; 135 >
-    au < released ; Chest Volume 136 ; 136 >
-    au < released ; Chest Volume 137 ; 137 >
+    au < released ; 2005 ; Chest Volume 127 ; 127 >
+    au < released ; 2005 ; Chest Volume 128 ; 128 >
+    au < released ; 2006 ; Chest Volume 129 ; 129 >
+    au < released ; 2006 ; Chest Volume 130 ; 130 >
+    au < released ; 2007 ; Chest Volume 131 ; 131 >
+    au < released ; 2007 ; Chest Volume 132 ; 132 >
+    au < released ; 2008 ; Chest Volume 133 ; 133 >
+    au < released ; 2008 ; Chest Volume 134 ; 134 >
+    au < released ; 2009 ; Chest Volume 135 ; 135 >
+    au < released ; 2009 ; Chest Volume 136 ; 136 >
+    au < released ; 2010 ; Chest Volume 137 ; 137 >
 
   }
 

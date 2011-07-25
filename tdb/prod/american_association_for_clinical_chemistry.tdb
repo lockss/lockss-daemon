@@ -15,63 +15,63 @@
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://www.clinchem.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Clinical Chemistry Volume 1 ; 1 >
-      au < exists ; Clinical Chemistry Volume 2 ; 2 >
-      au < exists ; Clinical Chemistry Volume 3 ; 3 >
-      au < exists ; Clinical Chemistry Volume 4 ; 4 >
-      au < exists ; Clinical Chemistry Volume 5 ; 5 >
-      au < exists ; Clinical Chemistry Volume 6 ; 6 >
-      au < exists ; Clinical Chemistry Volume 7 ; 7 >
-      au < exists ; Clinical Chemistry Volume 8 ; 8 >
-      au < exists ; Clinical Chemistry Volume 9 ; 9 >
-      au < exists ; Clinical Chemistry Volume 10 ; 10 >
-      au < exists ; Clinical Chemistry Volume 11 ; 11 >
-      au < exists ; Clinical Chemistry Volume 12 ; 12 >
-      au < exists ; Clinical Chemistry Volume 13 ; 13 >
-      au < exists ; Clinical Chemistry Volume 14 ; 14 >
-      au < exists ; Clinical Chemistry Volume 15 ; 15 >
-      au < exists ; Clinical Chemistry Volume 16 ; 16 >
-      au < exists ; Clinical Chemistry Volume 17 ; 17 >
-      au < exists ; Clinical Chemistry Volume 18 ; 18 >
-      au < exists ; Clinical Chemistry Volume 19 ; 19 >
-      au < exists ; Clinical Chemistry Volume 20 ; 20 >
-      au < exists ; Clinical Chemistry Volume 21 ; 21 >
-      au < exists ; Clinical Chemistry Volume 22 ; 22 >
-      au < exists ; Clinical Chemistry Volume 23 ; 23 >
-      au < exists ; Clinical Chemistry Volume 24 ; 24 >
-      au < exists ; Clinical Chemistry Volume 25 ; 25 >
-      au < exists ; Clinical Chemistry Volume 26 ; 26 >
-      au < exists ; Clinical Chemistry Volume 27 ; 27 >
-      au < exists ; Clinical Chemistry Volume 28 ; 28 >
-      au < exists ; Clinical Chemistry Volume 29 ; 29 >
-      au < exists ; Clinical Chemistry Volume 30 ; 30 >
-      au < exists ; Clinical Chemistry Volume 31 ; 31 >
-      au < exists ; Clinical Chemistry Volume 32 ; 32 >
-      au < exists ; Clinical Chemistry Volume 33 ; 33 >
-      au < exists ; Clinical Chemistry Volume 34 ; 34 >
-      au < exists ; Clinical Chemistry Volume 35 ; 35 >
-      au < exists ; Clinical Chemistry Volume 36 ; 36 >
-      au < exists ; Clinical Chemistry Volume 37 ; 37 >
-      au < exists ; Clinical Chemistry Volume 38 ; 38 >
-      au < exists ; Clinical Chemistry Volume 39 ; 39 >
-      au < exists ; Clinical Chemistry Volume 40 ; 40 >
-      au < exists ; Clinical Chemistry Volume 41 ; 41 >
-      au < exists ; Clinical Chemistry Volume 42 ; 42 >
-      au < exists ; Clinical Chemistry Volume 43 ; 43 >
-      au < exists ; Clinical Chemistry Volume 44 ; 44 >
-      au < exists ; Clinical Chemistry Volume 45 ; 45 >
-      au < exists ; Clinical Chemistry Volume 46 ; 46 >
-      au < exists ; Clinical Chemistry Volume 47 ; 47 >
-      au < exists ; Clinical Chemistry Volume 48 ; 48 >
-      au < exists ; Clinical Chemistry Volume 49 ; 49 >
-      au < exists ; Clinical Chemistry Volume 50 ; 50 >
-      au < released ; Clinical Chemistry Volume 51 ; 51 >
-      au < released ; Clinical Chemistry Volume 52 ; 52 >
-      au < released ; Clinical Chemistry Volume 53 ; 53 >
-      au < manifest ; Clinical Chemistry Volume 54 ; 54 >
-      au < manifest ; Clinical Chemistry Volume 55 ; 55 >
+      au < exists ; 1955 ; Clinical Chemistry Volume 1 ; 1 >
+      au < exists ; 1956 ; Clinical Chemistry Volume 2 ; 2 >
+      au < exists ; 1957 ; Clinical Chemistry Volume 3 ; 3 >
+      au < exists ; 1958 ; Clinical Chemistry Volume 4 ; 4 >
+      au < exists ; 1959 ; Clinical Chemistry Volume 5 ; 5 >
+      au < exists ; 1960 ; Clinical Chemistry Volume 6 ; 6 >
+      au < exists ; 1961 ; Clinical Chemistry Volume 7 ; 7 >
+      au < exists ; 1962 ; Clinical Chemistry Volume 8 ; 8 >
+      au < exists ; 1963 ; Clinical Chemistry Volume 9 ; 9 >
+      au < exists ; 1964 ; Clinical Chemistry Volume 10 ; 10 >
+      au < exists ; 1965 ; Clinical Chemistry Volume 11 ; 11 >
+      au < exists ; 1966 ; Clinical Chemistry Volume 12 ; 12 >
+      au < exists ; 1967 ; Clinical Chemistry Volume 13 ; 13 >
+      au < exists ; 1968 ; Clinical Chemistry Volume 14 ; 14 >
+      au < exists ; 1969 ; Clinical Chemistry Volume 15 ; 15 >
+      au < exists ; 1970 ; Clinical Chemistry Volume 16 ; 16 >
+      au < exists ; 1971 ; Clinical Chemistry Volume 17 ; 17 >
+      au < exists ; 1972 ; Clinical Chemistry Volume 18 ; 18 >
+      au < exists ; 1973 ; Clinical Chemistry Volume 19 ; 19 >
+      au < exists ; 1974 ; Clinical Chemistry Volume 20 ; 20 >
+      au < exists ; 1975 ; Clinical Chemistry Volume 21 ; 21 >
+      au < exists ; 1976 ; Clinical Chemistry Volume 22 ; 22 >
+      au < exists ; 1977 ; Clinical Chemistry Volume 23 ; 23 >
+      au < exists ; 1978 ; Clinical Chemistry Volume 24 ; 24 >
+      au < exists ; 1979 ; Clinical Chemistry Volume 25 ; 25 >
+      au < exists ; 1980 ; Clinical Chemistry Volume 26 ; 26 >
+      au < exists ; 1981 ; Clinical Chemistry Volume 27 ; 27 >
+      au < exists ; 1982 ; Clinical Chemistry Volume 28 ; 28 >
+      au < exists ; 1983 ; Clinical Chemistry Volume 29 ; 29 >
+      au < exists ; 1984 ; Clinical Chemistry Volume 30 ; 30 >
+      au < exists ; 1985 ; Clinical Chemistry Volume 31 ; 31 >
+      au < exists ; 1986 ; Clinical Chemistry Volume 32 ; 32 >
+      au < exists ; 1987 ; Clinical Chemistry Volume 33 ; 33 >
+      au < exists ; 1988 ; Clinical Chemistry Volume 34 ; 34 >
+      au < exists ; 1989 ; Clinical Chemistry Volume 35 ; 35 >
+      au < exists ; 1990 ; Clinical Chemistry Volume 36 ; 36 >
+      au < exists ; 1991 ; Clinical Chemistry Volume 37 ; 37 >
+      au < exists ; 1992 ; Clinical Chemistry Volume 38 ; 38 >
+      au < exists ; 1993 ; Clinical Chemistry Volume 39 ; 39 >
+      au < exists ; 1994 ; Clinical Chemistry Volume 40 ; 40 >
+      au < exists ; 1995 ; Clinical Chemistry Volume 41 ; 41 >
+      au < exists ; 1996 ; Clinical Chemistry Volume 42 ; 42 >
+      au < exists ; 1997 ; Clinical Chemistry Volume 43 ; 43 >
+      au < exists ; 1998 ; Clinical Chemistry Volume 44 ; 44 >
+      au < exists ; 1999 ; Clinical Chemistry Volume 45 ; 45 >
+      au < exists ; 2000 ; Clinical Chemistry Volume 46 ; 46 >
+      au < exists ; 2001 ; Clinical Chemistry Volume 47 ; 47 >
+      au < exists ; 2002 ; Clinical Chemistry Volume 48 ; 48 >
+      au < exists ; 2003 ; Clinical Chemistry Volume 49 ; 49 >
+      au < exists ; 2004 ; Clinical Chemistry Volume 50 ; 50 >
+      au < released ; 2005 ; Clinical Chemistry Volume 51 ; 51 >
+      au < released ; 2006 ; Clinical Chemistry Volume 52 ; 52 >
+      au < released ; 2007 ; Clinical Chemistry Volume 53 ; 53 >
+      au < manifest ; 2008 ; Clinical Chemistry Volume 54 ; 54 >
+      au < manifest ; 2009 ; Clinical Chemistry Volume 55 ; 55 >
 
     }
 

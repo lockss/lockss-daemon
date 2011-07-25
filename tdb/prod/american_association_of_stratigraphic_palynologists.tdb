@@ -13,14 +13,14 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0191-6122
   
-      au < superseded ; Palynology Volume 28 ; 28 >
-      au < superseded ; Palynology Volume 29 ; 29 >
-      au < superseded ; Palynology Volume 30 ; 30 >
+      au < superseded ; 2004 ; Palynology Volume 28 ; 28 >
+      au < superseded ; 2005 ; Palynology Volume 29 ; 29 >
+      au < superseded ; 2006 ; Palynology Volume 30 ; 30 >
     }
 
     {

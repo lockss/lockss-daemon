@@ -15,16 +15,16 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://www.annfammed.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; The Annals of Family Medicine Volume 1 ; 1 >
-    au < released ; The Annals of Family Medicine Volume 2 ; 2 >
-    au < released ; The Annals of Family Medicine Volume 3 ; 3 >
-    au < released ; The Annals of Family Medicine Volume 4 ; 4 >
-    au < released ; The Annals of Family Medicine Volume 5 ; 5 >
-    au < released ; The Annals of Family Medicine Volume 6 ; 6 >
-    au < released ; The Annals of Family Medicine Volume 7 ; 7 >
-    au < released ; The Annals of Family Medicine Volume 8 ; 8 >
+    au < released ; 2003 ; The Annals of Family Medicine Volume 1 ; 1 >
+    au < released ; 2004 ; The Annals of Family Medicine Volume 2 ; 2 >
+    au < released ; 2005 ; The Annals of Family Medicine Volume 3 ; 3 >
+    au < released ; 2006 ; The Annals of Family Medicine Volume 4 ; 4 >
+    au < released ; 2007 ; The Annals of Family Medicine Volume 5 ; 5 >
+    au < released ; 2008 ; The Annals of Family Medicine Volume 6 ; 6 >
+    au < released ; 2009 ; The Annals of Family Medicine Volume 7 ; 7 >
+    au < released ; 2010 ; The Annals of Family Medicine Volume 8 ; 8 >
 
   }
 

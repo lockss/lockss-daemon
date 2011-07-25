@@ -15,33 +15,33 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapgrandrounds.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; AAP Grand Rounds Volume 1 ; 1 >
-      au < manifest ; AAP Grand Rounds Volume 2 ; 2 >
-      au < manifest ; AAP Grand Rounds Volume 3 ; 3 >
-      au < manifest ; AAP Grand Rounds Volume 4 ; 4 >
-      au < manifest ; AAP Grand Rounds Volume 5 ; 5 >
-      au < manifest ; AAP Grand Rounds Volume 6 ; 6 >
-      au < manifest ; AAP Grand Rounds Volume 7 ; 7 >
-      au < manifest ; AAP Grand Rounds Volume 8 ; 8 >
-      au < manifest ; AAP Grand Rounds Volume 9 ; 9 >
-      au < manifest ; AAP Grand Rounds Volume 10 ; 10 >
-      au < manifest ; AAP Grand Rounds Volume 11 ; 11 >
-      au < manifest ; AAP Grand Rounds Volume 12 ; 12 >
-      au < manifest ; AAP Grand Rounds Volume 13 ; 13 >
-      au < manifest ; AAP Grand Rounds Volume 14 ; 14 >
-      au < manifest ; AAP Grand Rounds Volume 15 ; 15 >
-      au < manifest ; AAP Grand Rounds Volume 16 ; 16 >
-      au < manifest ; AAP Grand Rounds Volume 17 ; 17 >
-      au < manifest ; AAP Grand Rounds Volume 18 ; 18 >
-      au < manifest ; AAP Grand Rounds Volume 19 ; 19 >
-      au < manifest ; AAP Grand Rounds Volume 20 ; 20 >
-      au < manifest ; AAP Grand Rounds Volume 21 ; 21 >
-      au < manifest ; AAP Grand Rounds Volume 22 ; 22 >
-      au < manifest ; AAP Grand Rounds Volume 23 ; 23 >
-      au < manifest ; AAP Grand Rounds Volume 24 ; 24 >
-      au < manifest ; AAP Grand Rounds Volume 25 ; 25 >
+      au < manifest ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
+      au < manifest ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
+      au < manifest ; 2000 ; AAP Grand Rounds Volume 3 ; 3 >
+      au < manifest ; 2000 ; AAP Grand Rounds Volume 4 ; 4 >
+      au < manifest ; 2001 ; AAP Grand Rounds Volume 5 ; 5 >
+      au < manifest ; 2001 ; AAP Grand Rounds Volume 6 ; 6 >
+      au < manifest ; 2002 ; AAP Grand Rounds Volume 7 ; 7 >
+      au < manifest ; 2002 ; AAP Grand Rounds Volume 8 ; 8 >
+      au < manifest ; 2003 ; AAP Grand Rounds Volume 9 ; 9 >
+      au < manifest ; 2003 ; AAP Grand Rounds Volume 10 ; 10 >
+      au < manifest ; 2004 ; AAP Grand Rounds Volume 11 ; 11 >
+      au < manifest ; 2004 ; AAP Grand Rounds Volume 12 ; 12 >
+      au < manifest ; 2005 ; AAP Grand Rounds Volume 13 ; 13 >
+      au < manifest ; 2005 ; AAP Grand Rounds Volume 14 ; 14 >
+      au < manifest ; 2006 ; AAP Grand Rounds Volume 15 ; 15 >
+      au < manifest ; 2006 ; AAP Grand Rounds Volume 16 ; 16 >
+      au < manifest ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
+      au < manifest ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
+      au < manifest ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+      au < manifest ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
+      au < manifest ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+      au < manifest ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < manifest ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
+      au < manifest ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
+      au < manifest ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
 
     }
 

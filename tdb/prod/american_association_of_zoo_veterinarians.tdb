@@ -13,20 +13,20 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1042-7260
   
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 31 ; 31 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 32 ; 32 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 33 ; 33 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 34 ; 34 >
-      au < doNotProcess ; Journal of Zoo and Wildlife Medicine Volume 35 ; 35 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 35 ; 035 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 36 ; 36 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 37 ; 37 >
-      au < superseded ; Journal of Zoo and Wildlife Medicine Volume 38 ; 38 >
+      au < superseded ; 1999 ; Journal of Zoo and Wildlife Medicine Volume 31 ; 31 >
+      au < superseded ; 2000 ; Journal of Zoo and Wildlife Medicine Volume 32 ; 32 >
+      au < superseded ; 2001 ; Journal of Zoo and Wildlife Medicine Volume 33 ; 33 >
+      au < superseded ; 2002 ; Journal of Zoo and Wildlife Medicine Volume 34 ; 34 >
+      au < doNotProcess ; 2003 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 35 >
+      au < superseded ; 2004 ; Journal of Zoo and Wildlife Medicine Volume 35 ; 035 >
+      au < superseded ; 2005 ; Journal of Zoo and Wildlife Medicine Volume 36 ; 36 >
+      au < superseded ; 2006 ; Journal of Zoo and Wildlife Medicine Volume 37 ; 37 >
+      au < superseded ; 2007 ; Journal of Zoo and Wildlife Medicine Volume 38 ; 38 >
     }
 
     {

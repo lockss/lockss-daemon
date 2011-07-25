@@ -13,121 +13,120 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0007-2745
   
-      au < doNotProcess ; The Bryologist Volume 1 ; 1 >
-      au < doNotProcess ; The Bryologist Volume 2 ; 2 >
-      au < doNotProcess ; The Bryologist Volume 3 ; 3 >
-      au < doNotProcess ; The Bryologist Volume 4 ; 4 >
-      au < doNotProcess ; The Bryologist Volume 5 ; 5 >
-      au < doNotProcess ; The Bryologist Volume 6 ; 6 >
-      au < doNotProcess ; The Bryologist Volume 7 ; 7 >
-      au < doNotProcess ; The Bryologist Volume 8 ; 8 >
-      au < doNotProcess ; The Bryologist Volume 9 ; 9 >
-      au < doNotProcess ; The Bryologist Volume 10 ; 10 >
-      au < doNotProcess ; The Bryologist Volume 11 ; 11 >
-      au < doNotProcess ; The Bryologist Volume 12 ; 12 >
-      au < doNotProcess ; The Bryologist Volume 13 ; 13 >
-      au < doNotProcess ; The Bryologist Volume 14 ; 14 >
-      au < doNotProcess ; The Bryologist Volume 15 ; 15 >
-      au < doNotProcess ; The Bryologist Volume 16 ; 16 >
-      au < doNotProcess ; The Bryologist Volume 17 ; 17 >
-      au < doNotProcess ; The Bryologist Volume 18 ; 18 >
-      au < doNotProcess ; The Bryologist Volume 19 ; 19 >
-      au < doNotProcess ; The Bryologist Volume 20 ; 20 >
-      au < doNotProcess ; The Bryologist Volume 21 ; 21 >
-      au < doNotProcess ; The Bryologist Volume 22 ; 22 >
-      au < doNotProcess ; The Bryologist Volume 23 ; 23 >
-      au < doNotProcess ; The Bryologist Volume 24 ; 24 >
-      au < doNotProcess ; The Bryologist Volume 25 ; 25 >
-      au < doNotProcess ; The Bryologist Volume 26 ; 26 >
-      au < doNotProcess ; The Bryologist Volume 27 ; 27 >
-      au < doNotProcess ; The Bryologist Volume 28 ; 28 >
-      au < doNotProcess ; The Bryologist Volume 29 ; 29 >
-      au < doNotProcess ; The Bryologist Volume 30 ; 30 >
-      au < doNotProcess ; The Bryologist Volume 31 ; 31 >
-      au < doNotProcess ; The Bryologist Volume 32 ; 32 >
-      au < doNotProcess ; The Bryologist Volume 33 ; 33 >
-      au < doNotProcess ; The Bryologist Volume 34 ; 34 >
-      au < doNotProcess ; The Bryologist Volume 35 ; 35 >
-      au < doNotProcess ; The Bryologist Volume 36 ; 36 >
-      au < doNotProcess ; The Bryologist Volume 37 ; 37 >
-      au < doNotProcess ; The Bryologist Volume 38 ; 38 >
-      au < doNotProcess ; The Bryologist Volume 39 ; 39 >
-      au < doNotProcess ; The Bryologist Volume 40 ; 40 >
-      au < doNotProcess ; The Bryologist Volume 41 ; 41 >
-      au < doNotProcess ; The Bryologist Volume 42 ; 42 >
-      au < doNotProcess ; The Bryologist Volume 43 ; 43 >
-      au < doNotProcess ; The Bryologist Volume 44 ; 44 >
-      au < doNotProcess ; The Bryologist Volume 45 ; 45 >
-      au < doNotProcess ; The Bryologist Volume 46 ; 46 >
-      au < doNotProcess ; The Bryologist Volume 47 ; 47 >
-      au < doNotProcess ; The Bryologist Volume 48 ; 48 >
-      au < doNotProcess ; The Bryologist Volume 49 ; 49 >
-      au < doNotProcess ; The Bryologist Volume 50 ; 50 >
-      au < doNotProcess ; The Bryologist Volume 51 ; 51 >
-      au < doNotProcess ; The Bryologist Volume 52 ; 52 >
-      au < doNotProcess ; The Bryologist Volume 53 ; 53 >
-      au < doNotProcess ; The Bryologist Volume 54 ; 54 >
-      au < doNotProcess ; The Bryologist Volume 55 ; 55 >
-      au < doNotProcess ; The Bryologist Volume 56 ; 56 >
-      au < doNotProcess ; The Bryologist Volume 57 ; 57 >
-      au < doNotProcess ; The Bryologist Volume 58 ; 58 >
-      au < doNotProcess ; The Bryologist Volume 59 ; 59 >
-      au < doNotProcess ; The Bryologist Volume 60 ; 60 >
-      au < doNotProcess ; The Bryologist Volume 61 ; 61 >
-      au < doNotProcess ; The Bryologist Volume 62 ; 62 >
-      au < doNotProcess ; The Bryologist Volume 63 ; 63 >
-      au < doNotProcess ; The Bryologist Volume 64 ; 64 >
-      au < doNotProcess ; The Bryologist Volume 65 ; 65 >
-      au < doNotProcess ; The Bryologist Volume 66 ; 66 >
-      au < doNotProcess ; The Bryologist Volume 67 ; 67 >
-      au < doNotProcess ; The Bryologist Volume 68 ; 68 >
-      au < doNotProcess ; The Bryologist Volume 69 ; 69 >
-      au < doNotProcess ; The Bryologist Volume 70 ; 70 >
-      au < doNotProcess ; The Bryologist Volume 71 ; 71 >
-      au < doNotProcess ; The Bryologist Volume 72 ; 72 >
-      au < doNotProcess ; The Bryologist Volume 73 ; 73 >
-      au < doNotProcess ; The Bryologist Volume 74 ; 74 >
-      au < doNotProcess ; The Bryologist Volume 75 ; 75 >
-      au < doNotProcess ; The Bryologist Volume 76 ; 76 >
-      au < doNotProcess ; The Bryologist Volume 77 ; 77 >
-      au < doNotProcess ; The Bryologist Volume 78 ; 78 >
-      au < doNotProcess ; The Bryologist Volume 79 ; 79 >
-      au < doNotProcess ; The Bryologist Volume 80 ; 80 >
-      au < doNotProcess ; The Bryologist Volume 81 ; 81 >
-      au < doNotProcess ; The Bryologist Volume 82 ; 82 >
-      au < doNotProcess ; The Bryologist Volume 83 ; 83 >
-      au < doNotProcess ; The Bryologist Volume 84 ; 84 >
-      au < doNotProcess ; The Bryologist Volume 85 ; 85 >
-      au < doNotProcess ; The Bryologist Volume 86 ; 86 >
-      au < doNotProcess ; The Bryologist Volume 87 ; 87 >
-      au < doNotProcess ; The Bryologist Volume 88 ; 88 >
-      au < doNotProcess ; The Bryologist Volume 89 ; 89 >
-      au < doNotProcess ; The Bryologist Volume 90 ; 90 >
-      au < doNotProcess ; The Bryologist Volume 91 ; 91 >
-      au < doNotProcess ; The Bryologist Volume 92 ; 92 >
-      au < doNotProcess ; The Bryologist Volume 93 ; 93 >
-      au < doNotProcess ; The Bryologist Volume 94 ; 94 >
-      au < doNotProcess ; The Bryologist Volume 95 ; 95 >
-      au < doNotProcess ; The Bryologist Volume 96 ; 96 >
-      au < doNotProcess ; The Bryologist Volume 97 ; 97 >
-      au < doNotProcess ; The Bryologist Volume 98 ; 98 >
-      au < doNotProcess ; The Bryologist Volume 99 ; 99 >
-      au < doNotProcess ; The Bryologist Volume 100 ; 100 >
-      au < doNotProcess ; The Bryologist Volume 101 ; 101 >
-      au < doNotProcess ; The Bryologist Volume 102 ; 102 >
-      au < doNotProcess ; The Bryologist Volume 103 ; 103 >
-      au < doNotProcess ; The Bryologist Volume 104 ; 104 >
-      au < doNotProcess ; The Bryologist Volume 105 ; 105 >
-      au < doNotProcess ; The Bryologist Volume 106 ; 106 >
-      au < superseded ; The Bryologist Volume 107 ; 107 >
-      au < doNotProcess ; The Bryologist Volume 108 ; 108 >
-      au < doNotProcess ; The Bryologist Volume 109 ; 109 >
-      au < doNotProcess ; The Bryologist Volume 110 ; 110 >
+      au < doNotProcess ; 1898 ; The Bryologist Volume 1 ; 1 >
+      au < doNotProcess ; 1899 ; The Bryologist Volume 2 ; 2 >
+      au < doNotProcess ; 1900 ; The Bryologist Volume 3 ; 3 >
+      au < doNotProcess ; 1901 ; The Bryologist Volume 4 ; 4 >
+      au < doNotProcess ; 1902 ; The Bryologist Volume 5 ; 5 >
+      au < doNotProcess ; 1903 ; The Bryologist Volume 6 ; 6 >
+      au < doNotProcess ; 1904 ; The Bryologist Volume 7 ; 7 >
+      au < doNotProcess ; 1905 ; The Bryologist Volume 8 ; 8 >
+      au < doNotProcess ; 1906 ; The Bryologist Volume 9 ; 9 >
+      au < doNotProcess ; 1907 ; The Bryologist Volume 10 ; 10 >
+      au < doNotProcess ; 1908 ; The Bryologist Volume 11 ; 11 >
+      au < doNotProcess ; 1909 ; The Bryologist Volume 12 ; 12 >
+      au < doNotProcess ; 1910 ; The Bryologist Volume 13 ; 13 >
+      au < doNotProcess ; 1911 ; The Bryologist Volume 14 ; 14 >
+      au < doNotProcess ; 1912 ; The Bryologist Volume 15 ; 15 >
+      au < doNotProcess ; 1913 ; The Bryologist Volume 16 ; 16 >
+      au < doNotProcess ; 1914 ; The Bryologist Volume 17 ; 17 >
+      au < doNotProcess ; 1915 ; The Bryologist Volume 18 ; 18 >
+      au < doNotProcess ; 1916 ; The Bryologist Volume 19 ; 19 >
+      au < doNotProcess ; 1917 ; The Bryologist Volume 20 ; 20 >
+      au < doNotProcess ; 1918 ; The Bryologist Volume 21 ; 21 >
+      au < doNotProcess ; 1919 ; The Bryologist Volume 22 ; 22 >
+      au < doNotProcess ; 1920 ; The Bryologist Volume 23 ; 23 >
+      au < doNotProcess ; 1921 ; The Bryologist Volume 24 ; 24 >
+      au < doNotProcess ; 1922 ; The Bryologist Volume 25 ; 25 >
+      au < doNotProcess ; 1923 ; The Bryologist Volume 26 ; 26 >
+      au < doNotProcess ; 1924 ; The Bryologist Volume 27 ; 27 >
+      au < doNotProcess ; 1925 ; The Bryologist Volume 28 ; 28 >
+      au < doNotProcess ; 1926 ; The Bryologist Volume 29 ; 29 >
+      au < doNotProcess ; 1927 ; The Bryologist Volume 30 ; 30 >
+      au < doNotProcess ; 1928 ; The Bryologist Volume 31 ; 31 >
+      au < doNotProcess ; 1929 ; The Bryologist Volume 32 ; 32 >
+      au < doNotProcess ; 1930 ; The Bryologist Volume 33 ; 33 >
+      au < doNotProcess ; 1931 ; The Bryologist Volume 34 ; 34 >
+      au < doNotProcess ; 1932 ; The Bryologist Volume 35 ; 35 >
+      au < doNotProcess ; 1933 ; The Bryologist Volume 36 ; 36 >
+      au < doNotProcess ; 1934 ; The Bryologist Volume 37 ; 37 >
+      au < doNotProcess ; 1935 ; The Bryologist Volume 38 ; 38 >
+      au < doNotProcess ; 1936 ; The Bryologist Volume 39 ; 39 >
+      au < doNotProcess ; 1937 ; The Bryologist Volume 40 ; 40 >
+      au < doNotProcess ; 1938 ; The Bryologist Volume 41 ; 41 >
+      au < doNotProcess ; 1939 ; The Bryologist Volume 42 ; 42 >
+      au < doNotProcess ; 1940 ; The Bryologist Volume 43 ; 43 >
+      au < doNotProcess ; 1941 ; The Bryologist Volume 44 ; 44 >
+      au < doNotProcess ; 1942 ; The Bryologist Volume 45 ; 45 >
+      au < doNotProcess ; 1943 ; The Bryologist Volume 46 ; 46 >
+      au < doNotProcess ; 1944 ; The Bryologist Volume 47 ; 47 >
+      au < doNotProcess ; 1945 ; The Bryologist Volume 48 ; 48 >
+      au < doNotProcess ; 1946 ; The Bryologist Volume 49 ; 49 >
+      au < doNotProcess ; 1947 ; The Bryologist Volume 50 ; 50 >
+      au < doNotProcess ; 1948 ; The Bryologist Volume 51 ; 51 >
+      au < doNotProcess ; 1949 ; The Bryologist Volume 52 ; 52 >
+      au < doNotProcess ; 1950 ; The Bryologist Volume 53 ; 53 >
+      au < doNotProcess ; 1951 ; The Bryologist Volume 54 ; 54 >
+      au < doNotProcess ; 1952 ; The Bryologist Volume 55 ; 55 >
+      au < doNotProcess ; 1953 ; The Bryologist Volume 56 ; 56 >
+      au < doNotProcess ; 1954 ; The Bryologist Volume 57 ; 57 >
+      au < doNotProcess ; 1955 ; The Bryologist Volume 58 ; 58 >
+      au < doNotProcess ; 1956 ; The Bryologist Volume 59 ; 59 >
+      au < doNotProcess ; 1957 ; The Bryologist Volume 60 ; 60 >
+      au < doNotProcess ; 1958 ; The Bryologist Volume 61 ; 61 >
+      au < doNotProcess ; 1959 ; The Bryologist Volume 62 ; 62 >
+      au < doNotProcess ; 1960 ; The Bryologist Volume 63 ; 63 >
+      au < doNotProcess ; 1961 ; The Bryologist Volume 64 ; 64 >
+      au < doNotProcess ; 1962 ; The Bryologist Volume 65 ; 65 >
+      au < doNotProcess ; 1963 ; The Bryologist Volume 66 ; 66 >
+      au < doNotProcess ; 1964 ; The Bryologist Volume 67 ; 67 >
+      au < doNotProcess ; 1965 ; The Bryologist Volume 68 ; 68 >
+      au < doNotProcess ; 1966 ; The Bryologist Volume 69 ; 69 >
+      au < doNotProcess ; 1967 ; The Bryologist Volume 70 ; 70 >
+      au < doNotProcess ; 1968 ; The Bryologist Volume 71 ; 71 >
+      au < doNotProcess ; 1969 ; The Bryologist Volume 72 ; 72 >
+      au < doNotProcess ; 1970 ; The Bryologist Volume 73 ; 73 >
+      au < doNotProcess ; 1971 ; The Bryologist Volume 74 ; 74 >
+      au < doNotProcess ; 1972 ; The Bryologist Volume 75 ; 75 >
+      au < doNotProcess ; 1973 ; The Bryologist Volume 76 ; 76 >
+      au < doNotProcess ; 1974 ; The Bryologist Volume 77 ; 77 >
+      au < doNotProcess ; 1975 ; The Bryologist Volume 78 ; 78 >
+      au < doNotProcess ; 1976 ; The Bryologist Volume 79 ; 79 >
+      au < doNotProcess ; 1977 ; The Bryologist Volume 80 ; 80 >
+      au < doNotProcess ; 1978 ; The Bryologist Volume 81 ; 81 >
+      au < doNotProcess ; 1979 ; The Bryologist Volume 82 ; 82 >
+      au < doNotProcess ; 1980 ; The Bryologist Volume 83 ; 83 >
+      au < doNotProcess ; 1981 ; The Bryologist Volume 84 ; 84 >
+      au < doNotProcess ; 1982 ; The Bryologist Volume 85 ; 85 >
+      au < doNotProcess ; 1983 ; The Bryologist Volume 86 ; 86 >
+      au < doNotProcess ; 1984 ; The Bryologist Volume 87 ; 87 >
+      au < doNotProcess ; 1985 ; The Bryologist Volume 88 ; 88 >
+      au < doNotProcess ; 1987 ; The Bryologist Volume 90 ; 90 >
+      au < doNotProcess ; 1988 ; The Bryologist Volume 91 ; 91 >
+      au < doNotProcess ; 1989 ; The Bryologist Volume 92 ; 92 >
+      au < doNotProcess ; 1990 ; The Bryologist Volume 93 ; 93 >
+      au < doNotProcess ; 1991 ; The Bryologist Volume 94 ; 94 >
+      au < doNotProcess ; 1992 ; The Bryologist Volume 95 ; 95 >
+      au < doNotProcess ; 1993 ; The Bryologist Volume 96 ; 96 >
+      au < doNotProcess ; 1994 ; The Bryologist Volume 97 ; 97 >
+      au < doNotProcess ; 1995 ; The Bryologist Volume 98 ; 98 >
+      au < doNotProcess ; 1996 ; The Bryologist Volume 99 ; 99 >
+      au < doNotProcess ; 1997 ; The Bryologist Volume 100 ; 100 >
+      au < doNotProcess ; 1998 ; The Bryologist Volume 101 ; 101 >
+      au < doNotProcess ; 1999 ; The Bryologist Volume 102 ; 102 >
+      au < doNotProcess ; 2000 ; The Bryologist Volume 103 ; 103 >
+      au < doNotProcess ; 2001 ; The Bryologist Volume 104 ; 104 >
+      au < doNotProcess ; 2002 ; The Bryologist Volume 105 ; 105 >
+      au < doNotProcess ; 2003 ; The Bryologist Volume 106 ; 106 >
+      au < superseded ; 2004 ; The Bryologist Volume 107 ; 107 >
+      au < doNotProcess ; 2005 ; The Bryologist Volume 108 ; 108 >
+      au < doNotProcess ; 2006 ; The Bryologist Volume 109 ; 109 >
+      au < doNotProcess ; 2007 ; The Bryologist Volume 110 ; 110 >
     }
 
     {

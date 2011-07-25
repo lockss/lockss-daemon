@@ -3,7 +3,7 @@
     name = Advertising Educational Foundation
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -17,16 +17,16 @@
 
     param[journal_dir] = advertising_and_society_review
 
-    au < released ; Advertising & Society Review Volume 1 ; 1 >
-    au < released ; Advertising & Society Review Volume 2 ; 2 >
-    au < released ; Advertising & Society Review Volume 3 ; 3 >
-    au < released ; Advertising & Society Review Volume 4 ; 4 >
-    au < released ; Advertising & Society Review Volume 5 ; 5 >
-    au < released ; Advertising & Society Review Volume 6 ; 6 >
-    au < released ; Advertising & Society Review Volume 7 ; 7 >
-    au < released ; Advertising & Society Review Volume 8 ; 8 >
-    au < released ; Advertising & Society Review Volume 9 ; 9 >
-    au < released ; Advertising & Society Review Volume 10 ; 10 >
+    au < released ; 2000 ; Advertising & Society Review Volume 1 ; 1 >
+    au < released ; 2001 ; Advertising & Society Review Volume 2 ; 2 >
+    au < released ; 2002 ; Advertising & Society Review Volume 3 ; 3 >
+    au < released ; 2003 ; Advertising & Society Review Volume 4 ; 4 >
+    au < released ; 2004 ; Advertising & Society Review Volume 5 ; 5 >
+    au < released ; 2005 ; Advertising & Society Review Volume 6 ; 6 >
+    au < released ; 2006 ; Advertising & Society Review Volume 7 ; 7 >
+    au < released ; 2007 ; Advertising & Society Review Volume 8 ; 8 >
+    au < released ; 2008 ; Advertising & Society Review Volume 9 ; 9 >
+    au < released ; 2009 ; Advertising & Society Review Volume 10 ; 10 >
 
   }
 

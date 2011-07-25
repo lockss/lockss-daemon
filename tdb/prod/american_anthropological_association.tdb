@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.anthrosource.AnthroSourcePlugin
-  implicit < status ; name ; param[volume_name] >
+  implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://www.anthrosource.net/
 
   {
@@ -19,17 +19,17 @@
     
     param[journal_id] = aa
 
-    au < down ; American Anthropologist Volume 99 ; 99 >
-    au < down ; American Anthropologist Volume 100 ; 100 >
-    au < down ; American Anthropologist Volume 101 ; 101 >
-    au < down ; American Anthropologist Volume 102 ; 102 >
-    au < down ; American Anthropologist Volume 103 ; 103 >
-    au < down ; American Anthropologist Volume 104 ; 104 >
-    au < down ; American Anthropologist Volume 105 ; 105 >
-    au < down ; American Anthropologist Volume 106 ; 106 >
-    au < down ; American Anthropologist Volume 107 ; 107 >
-    au < down ; American Anthropologist Volume 108 ; 108 >
-    au < down ; American Anthropologist Volume 109 ; 109 >
+    au < down ; 1997 ; American Anthropologist Volume 99 ; 99 >
+    au < down ; 1998 ; American Anthropologist Volume 100 ; 100 >
+    au < down ; 1999 ; American Anthropologist Volume 101 ; 101 >
+    au < down ; 2000 ; American Anthropologist Volume 102 ; 102 >
+    au < down ; 2001 ; American Anthropologist Volume 103 ; 103 >
+    au < down ; 2002 ; American Anthropologist Volume 104 ; 104 >
+    au < down ; 2003 ; American Anthropologist Volume 105 ; 105 >
+    au < down ; 2004 ; American Anthropologist Volume 106 ; 106 >
+    au < down ; 2005 ; American Anthropologist Volume 107 ; 107 >
+    au < down ; 2006 ; American Anthropologist Volume 108 ; 108 >
+    au < down ; 2007 ; American Anthropologist Volume 109 ; 109 >
 
   }
 
@@ -44,17 +44,17 @@
     
     param[journal_id] = ae
 
-    au < down ; American Ethnologist Volume 24 ; 24 >
-    au < down ; American Ethnologist Volume 25 ; 25 >
-    au < down ; American Ethnologist Volume 26 ; 26 >
-    au < down ; American Ethnologist Volume 27 ; 27 >
-    au < down ; American Ethnologist Volume 28 ; 28 >
-    au < down ; American Ethnologist Volume 29 ; 29 >
-    au < down ; American Ethnologist Volume 30 ; 30 >
-    au < down ; American Ethnologist Volume 31 ; 31 >
-    au < down ; American Ethnologist Volume 32 ; 32 >
-    au < down ; American Ethnologist Volume 33 ; 33 >
-    au < down ; American Ethnologist Volume 34 ; 34 >
+    au < down ; 1997 ; American Ethnologist Volume 24 ; 24 >
+    au < down ; 1998 ; American Ethnologist Volume 25 ; 25 >
+    au < down ; 1999 ; American Ethnologist Volume 26 ; 26 >
+    au < down ; 2000 ; American Ethnologist Volume 27 ; 27 >
+    au < down ; 2001 ; American Ethnologist Volume 28 ; 28 >
+    au < down ; 2002 ; American Ethnologist Volume 29 ; 29 >
+    au < down ; 2003 ; American Ethnologist Volume 30 ; 30 >
+    au < down ; 2004 ; American Ethnologist Volume 31 ; 31 >
+    au < down ; 2005 ; American Ethnologist Volume 32 ; 32 >
+    au < down ; 2006 ; American Ethnologist Volume 33 ; 33 >
+    au < down ; 2007 ; American Ethnologist Volume 34 ; 34 >
 
   }  
 
@@ -69,17 +69,17 @@
     
     param[journal_id] = aeq
 
-    au < down ; Anthropology & Education Quarterly Volume 28 ; 28 >
-    au < down ; Anthropology & Education Quarterly Volume 29 ; 29 >
-    au < down ; Anthropology & Education Quarterly Volume 30 ; 30 >
-    au < down ; Anthropology & Education Quarterly Volume 31 ; 31 >
-    au < down ; Anthropology & Education Quarterly Volume 32 ; 32 >
-    au < down ; Anthropology & Education Quarterly Volume 33 ; 33 >
-    au < down ; Anthropology & Education Quarterly Volume 34 ; 34 >
-    au < down ; Anthropology & Education Quarterly Volume 35 ; 35 >
-    au < down ; Anthropology & Education Quarterly Volume 36 ; 36 >
-    au < down ; Anthropology & Education Quarterly Volume 37 ; 37 >
-    au < down ; Anthropology & Education Quarterly Volume 38 ; 38 >
+    au < down ; 1997 ; Anthropology & Education Quarterly Volume 28 ; 28 >
+    au < down ; 1998 ; Anthropology & Education Quarterly Volume 29 ; 29 >
+    au < down ; 1999 ; Anthropology & Education Quarterly Volume 30 ; 30 >
+    au < down ; 2000 ; Anthropology & Education Quarterly Volume 31 ; 31 >
+    au < down ; 2001 ; Anthropology & Education Quarterly Volume 32 ; 32 >
+    au < down ; 2002 ; Anthropology & Education Quarterly Volume 33 ; 33 >
+    au < down ; 2003 ; Anthropology & Education Quarterly Volume 34 ; 34 >
+    au < down ; 2004 ; Anthropology & Education Quarterly Volume 35 ; 35 >
+    au < down ; 2005 ; Anthropology & Education Quarterly Volume 36 ; 36 >
+    au < down ; 2006 ; Anthropology & Education Quarterly Volume 37 ; 37 >
+    au < down ; 2007 ; Anthropology & Education Quarterly Volume 38 ; 38 >
     
   }  
 
@@ -94,38 +94,38 @@
     
     param[journal_id] = ahu
 
-    au < down ; Anthropology & Humanism Volume 1 ; 1 >
-    au < down ; Anthropology & Humanism Volume 2 ; 2 >
-    au < down ; Anthropology & Humanism Volume 3 ; 3 >
-    au < down ; Anthropology & Humanism Volume 4 ; 4 >
-    au < down ; Anthropology & Humanism Volume 5 ; 5 >
-    au < down ; Anthropology & Humanism Volume 6 ; 6 >
-    au < down ; Anthropology & Humanism Volume 7 ; 7 >
-    au < down ; Anthropology & Humanism Volume 8 ; 8 >
-    au < down ; Anthropology & Humanism Volume 9 ; 9 >
-    au < down ; Anthropology & Humanism Volume 10 ; 10 >
-    au < down ; Anthropology & Humanism Volume 11 ; 11 >
-    au < down ; Anthropology & Humanism Volume 12 ; 12 >
-    au < down ; Anthropology & Humanism Volume 13 ; 13 >
-    au < down ; Anthropology & Humanism Volume 14 ; 14 >
-    au < down ; Anthropology & Humanism Volume 15 ; 15 >
-    au < down ; Anthropology & Humanism Volume 16 ; 16 >
-    au < down ; Anthropology & Humanism Volume 17 ; 17 >
-    au < down ; Anthropology & Humanism Volume 18 ; 18 >
-    au < down ; Anthropology & Humanism Volume 19 ; 19 >
-    au < down ; Anthropology & Humanism Volume 20 ; 20 >
-    au < down ; Anthropology & Humanism Volume 21 ; 21 >
-    au < down ; Anthropology & Humanism Volume 22 ; 22 >
-    au < down ; Anthropology & Humanism Volume 23 ; 23 >
-    au < down ; Anthropology & Humanism Volume 24 ; 24 >
-    au < down ; Anthropology & Humanism Volume 25 ; 25 >
-    au < down ; Anthropology & Humanism Volume 26 ; 26 >
-    au < down ; Anthropology & Humanism Volume 27 ; 27 >
-    au < down ; Anthropology & Humanism Volume 28 ; 28 >
-    au < down ; Anthropology & Humanism Volume 29 ; 29 >
-    au < down ; Anthropology & Humanism Volume 30 ; 30 >
-    au < down ; Anthropology & Humanism Volume 31 ; 31 >
-    au < down ; Anthropology & Humanism Volume 32 ; 32 >
+    au < down ; 1976 ; Anthropology & Humanism Volume 1 ; 1 >
+    au < down ; 1977 ; Anthropology & Humanism Volume 2 ; 2 >
+    au < down ; 1978 ; Anthropology & Humanism Volume 3 ; 3 >
+    au < down ; 1979 ; Anthropology & Humanism Volume 4 ; 4 >
+    au < down ; 1980 ; Anthropology & Humanism Volume 5 ; 5 >
+    au < down ; 1981 ; Anthropology & Humanism Volume 6 ; 6 >
+    au < down ; 1982 ; Anthropology & Humanism Volume 7 ; 7 >
+    au < down ; 1983 ; Anthropology & Humanism Volume 8 ; 8 >
+    au < down ; 1984 ; Anthropology & Humanism Volume 9 ; 9 >
+    au < down ; 1985 ; Anthropology & Humanism Volume 10 ; 10 >
+    au < down ; 1986 ; Anthropology & Humanism Volume 11 ; 11 >
+    au < down ; 1987 ; Anthropology & Humanism Volume 12 ; 12 >
+    au < down ; 1988 ; Anthropology & Humanism Volume 13 ; 13 >
+    au < down ; 1989 ; Anthropology & Humanism Volume 14 ; 14 >
+    au < down ; 1990 ; Anthropology & Humanism Volume 15 ; 15 >
+    au < down ; 1991 ; Anthropology & Humanism Volume 16 ; 16 >
+    au < down ; 1992 ; Anthropology & Humanism Volume 17 ; 17 >
+    au < down ; 1993 ; Anthropology & Humanism Volume 18 ; 18 >
+    au < down ; 1994 ; Anthropology & Humanism Volume 19 ; 19 >
+    au < down ; 1995 ; Anthropology & Humanism Volume 20 ; 20 >
+    au < down ; 1996 ; Anthropology & Humanism Volume 21 ; 21 >
+    au < down ; 1997 ; Anthropology & Humanism Volume 22 ; 22 >
+    au < down ; 1998 ; Anthropology & Humanism Volume 23 ; 23 >
+    au < down ; 1999 ; Anthropology & Humanism Volume 24 ; 24 >
+    au < down ; 2000 ; Anthropology & Humanism Volume 25 ; 25 >
+    au < down ; 2001 ; Anthropology & Humanism Volume 26 ; 26 >
+    au < down ; 2002 ; Anthropology & Humanism Volume 27 ; 27 >
+    au < down ; 2003 ; Anthropology & Humanism Volume 28 ; 28 >
+    au < down ; 2004 ; Anthropology & Humanism Volume 29 ; 29 >
+    au < down ; 2005 ; Anthropology & Humanism Volume 30 ; 30 >
+    au < down ; 2006 ; Anthropology & Humanism Volume 31 ; 31 >
+    au < down ; 2007 ; Anthropology & Humanism Volume 32 ; 32 >
     
   }
 
@@ -140,29 +140,29 @@
     
     param[journal_id] = an
 
-    au < down ; Anthropology News Volume 1 ; 1 >
-    au < down ; Anthropology News Volume 2 ; 2 >
-    au < down ; Anthropology News Volume 3 ; 3 >
-    au < down ; Anthropology News Volume 4 ; 4 >
-    au < down ; Anthropology News Volume 5 ; 5 >
-    au < down ; Anthropology News Volume 6 ; 6 >
-    au < down ; Anthropology News Volume 7 ; 7 >
-    au < down ; Anthropology News Volume 8 ; 8 >
-    au < down ; Anthropology News Volume 9 ; 9 >
-    au < down ; Anthropology News Volume 10 ; 10 >
-    au < down ; Anthropology News Volume 11 ; 11 >
-    au < down ; Anthropology News Volume 12 ; 12 >
-    au < down ; Anthropology News Volume 13 ; 13 >
-    au < down ; Anthropology News Volume 14 ; 14 >
-    au < down ; Anthropology News Volume 15 ; 15 >
-    au < down ; Anthropology News Volume 16 ; 16 >
-    au < down ; Anthropology News Volume 17 ; 17 >
-    au < down ; Anthropology News Volume 18 ; 18 >
-    au < down ; Anthropology News Volume 19 ; 19 >
-    au < down ; Anthropology News Volume 20 ; 20 >
-    au < doNotProcess ; Anthropology News Volume 46 ; 46 >
-    au < doNotProcess ; Anthropology News Volume 47 ; 47 >
-    au < doNotProcess ; Anthropology News Volume 48 ; 48 >
+    au < down ; 1960 ; Anthropology News Volume 1 ; 1 >
+    au < down ; 1961 ; Anthropology News Volume 2 ; 2 >
+    au < down ; 1962 ; Anthropology News Volume 3 ; 3 >
+    au < down ; 1963 ; Anthropology News Volume 4 ; 4 >
+    au < down ; 1964 ; Anthropology News Volume 5 ; 5 >
+    au < down ; 1965 ; Anthropology News Volume 6 ; 6 >
+    au < down ; 1966 ; Anthropology News Volume 7 ; 7 >
+    au < down ; 1967 ; Anthropology News Volume 8 ; 8 >
+    au < down ; 1968 ; Anthropology News Volume 9 ; 9 >
+    au < down ; 1969 ; Anthropology News Volume 10 ; 10 >
+    au < down ; 1970 ; Anthropology News Volume 11 ; 11 >
+    au < down ; 1971 ; Anthropology News Volume 12 ; 12 >
+    au < down ; 1972 ; Anthropology News Volume 13 ; 13 >
+    au < down ; 1973 ; Anthropology News Volume 14 ; 14 >
+    au < down ; 1974 ; Anthropology News Volume 15 ; 15 >
+    au < down ; 1975 ; Anthropology News Volume 16 ; 16 >
+    au < down ; 1976 ; Anthropology News Volume 17 ; 17 >
+    au < down ; 1977 ; Anthropology News Volume 18 ; 18 >
+    au < down ; 1978 ; Anthropology News Volume 19 ; 19 >
+    au < down ; 1979 ; Anthropology News Volume 20 ; 20 >
+    au < doNotProcess ; 2005 ; Anthropology News Volume 46 ; 46 >
+    au < doNotProcess ; 2006 ; Anthropology News Volume 47 ; 47 >
+    au < doNotProcess ; 2007 ; Anthropology News Volume 48 ; 48 >
         
   }
 
@@ -177,24 +177,24 @@
     
     param[journal_id] = ac
 
-    au < down ; Anthropology of Consciousness Volume 1 ; 1 >
-    au < down ; Anthropology of Consciousness Volume 2 ; 2 >
-    au < down ; Anthropology of Consciousness Volume 3 ; 3 >
-    au < down ; Anthropology of Consciousness Volume 4 ; 4 >
-    au < down ; Anthropology of Consciousness Volume 5 ; 5 >
-    au < down ; Anthropology of Consciousness Volume 6 ; 6 >
-    au < down ; Anthropology of Consciousness Volume 7 ; 7 >
-    au < down ; Anthropology of Consciousness Volume 8 ; 8 >
-    au < down ; Anthropology of Consciousness Volume 9 ; 9 >
-    au < down ; Anthropology of Consciousness Volume 10 ; 10 >
-    au < down ; Anthropology of Consciousness Volume 11 ; 11 >
-    au < down ; Anthropology of Consciousness Volume 12 ; 12 >
-    au < down ; Anthropology of Consciousness Volume 13 ; 13 >
-    au < down ; Anthropology of Consciousness Volume 14 ; 14 >
-    au < down ; Anthropology of Consciousness Volume 15 ; 15 >
-    au < down ; Anthropology of Consciousness Volume 16 ; 16 >
-    au < down ; Anthropology of Consciousness Volume 17 ; 17 >
-    au < down ; Anthropology of Consciousness Volume 18 ; 18 >
+    au < down ; 1990 ; Anthropology of Consciousness Volume 1 ; 1 >
+    au < down ; 1991 ; Anthropology of Consciousness Volume 2 ; 2 >
+    au < down ; 1992 ; Anthropology of Consciousness Volume 3 ; 3 >
+    au < down ; 1993 ; Anthropology of Consciousness Volume 4 ; 4 >
+    au < down ; 1994 ; Anthropology of Consciousness Volume 5 ; 5 >
+    au < down ; 1995 ; Anthropology of Consciousness Volume 6 ; 6 >
+    au < down ; 1996 ; Anthropology of Consciousness Volume 7 ; 7 >
+    au < down ; 1997 ; Anthropology of Consciousness Volume 8 ; 8 >
+    au < down ; 1998 ; Anthropology of Consciousness Volume 9 ; 9 >
+    au < down ; 1999 ; Anthropology of Consciousness Volume 10 ; 10 >
+    au < down ; 2000 ; Anthropology of Consciousness Volume 11 ; 11 >
+    au < down ; 2001 ; Anthropology of Consciousness Volume 12 ; 12 >
+    au < down ; 2002 ; Anthropology of Consciousness Volume 13 ; 13 >
+    au < down ; 2003 ; Anthropology of Consciousness Volume 14 ; 14 >
+    au < down ; 2004 ; Anthropology of Consciousness Volume 15 ; 15 >
+    au < down ; 2005 ; Anthropology of Consciousness Volume 16 ; 16 >
+    au < down ; 2006 ; Anthropology of Consciousness Volume 17 ; 17 >
+    au < down ; 2007 ; Anthropology of Consciousness Volume 18 ; 18 >
     
   }
 
@@ -208,30 +208,30 @@
     
     param[journal_id] = awr
 
-    au < down ; Anthropology of Work Review Volume 1 ; 1 >
-    au < down ; Anthropology of Work Review Volume 2 ; 2 >
-    au < down ; Anthropology of Work Review Volume 3 ; 3 >
-    au < down ; Anthropology of Work Review Volume 4 ; 4 >
-    au < down ; Anthropology of Work Review Volume 5 ; 5 >
-    au < down ; Anthropology of Work Review Volume 6 ; 6 >
-    au < down ; Anthropology of Work Review Volume 7 ; 7 >
-    au < down ; Anthropology of Work Review Volume 8 ; 8 >
-    au < down ; Anthropology of Work Review Volume 9 ; 9 >
-    au < down ; Anthropology of Work Review Volume 10 ; 10 >
-    au < down ; Anthropology of Work Review Volume 11 ; 11 >
-    au < down ; Anthropology of Work Review Volume 12 ; 12 >
-    au < down ; Anthropology of Work Review Volume 13 ; 13 >
-    au < down ; Anthropology of Work Review Volume 14 ; 14 >
-    au < down ; Anthropology of Work Review Volume 15 ; 15 >
-    au < down ; Anthropology of Work Review Volume 16 ; 16 >
-    au < down ; Anthropology of Work Review Volume 17 ; 17 >
-    au < down ; Anthropology of Work Review Volume 18 ; 18 >
-    au < down ; Anthropology of Work Review Volume 19 ; 19 >
-    au < down ; Anthropology of Work Review Volume 20 ; 20 >
-    au < down ; Anthropology of Work Review Volume 21 ; 21 >
-    au < down ; Anthropology of Work Review Volume 22 ; 22 >
-    au < down ; Anthropology of Work Review Volume 23 ; 23 >
-    au < down ; Anthropology of Work Review Volume 24 ; 24 >
+    au < down ; 1980 ; Anthropology of Work Review Volume 1 ; 1 >
+    au < down ; 1981 ; Anthropology of Work Review Volume 2 ; 2 >
+    au < down ; 1982 ; Anthropology of Work Review Volume 3 ; 3 >
+    au < down ; 1983 ; Anthropology of Work Review Volume 4 ; 4 >
+    au < down ; 1984 ; Anthropology of Work Review Volume 5 ; 5 >
+    au < down ; 1985 ; Anthropology of Work Review Volume 6 ; 6 >
+    au < down ; 1986 ; Anthropology of Work Review Volume 7 ; 7 >
+    au < down ; 1987 ; Anthropology of Work Review Volume 8 ; 8 >
+    au < down ; 1988 ; Anthropology of Work Review Volume 9 ; 9 >
+    au < down ; 1989 ; Anthropology of Work Review Volume 10 ; 10 >
+    au < down ; 1990 ; Anthropology of Work Review Volume 11 ; 11 >
+    au < down ; 1991 ; Anthropology of Work Review Volume 12 ; 12 >
+    au < down ; 1992 ; Anthropology of Work Review Volume 13 ; 13 >
+    au < down ; 1993 ; Anthropology of Work Review Volume 14 ; 14 >
+    au < down ; 1994 ; Anthropology of Work Review Volume 15 ; 15 >
+    au < down ; 1995 ; Anthropology of Work Review Volume 16 ; 16 >
+    au < down ; 1996 ; Anthropology of Work Review Volume 17 ; 17 >
+    au < down ; 1997 ; Anthropology of Work Review Volume 18 ; 18 >
+    au < down ; 1998 ; Anthropology of Work Review Volume 19 ; 19 >
+    au < down ; 1999 ; Anthropology of Work Review Volume 20 ; 20 >
+    au < down ; 2000 ; Anthropology of Work Review Volume 21 ; 21 >
+    au < down ; 2001 ; Anthropology of Work Review Volume 22 ; 22 >
+    au < down ; 2002 ; Anthropology of Work Review Volume 23 ; 23 >
+    au < down ; 2003 ; Anthropology of Work Review Volume 24 ; 24 >
     
   }
 
@@ -246,23 +246,23 @@
     
     param[journal_id] = ap3a
 
-    au < down ; Archeological Papers of the American Anthropological Association Volume 1 ; 1 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 2 ; 2 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 3 ; 3 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 4 ; 4 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 5 ; 5 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 6 ; 6 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 7 ; 7 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 8 ; 8 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 9 ; 9 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 10 ; 10 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 11 ; 11 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 12 ; 12 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 13 ; 13 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 14 ; 14 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 15 ; 15 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 16 ; 16 >
-    au < down ; Archeological Papers of the American Anthropological Association Volume 17 ; 17 >
+    au < down ; 1989 ; Archeological Papers of the American Anthropological Association Volume 1 ; 1 >
+    au < down ; 1990 ; Archeological Papers of the American Anthropological Association Volume 2 ; 2 >
+    au < down ; 1992 ; Archeological Papers of the American Anthropological Association Volume 3 ; 3 >
+    au < down ; 1993 ; Archeological Papers of the American Anthropological Association Volume 4 ; 4 >
+    au < down ; 1994 ; Archeological Papers of the American Anthropological Association Volume 5 ; 5 >
+    au < down ; 1995 ; Archeological Papers of the American Anthropological Association Volume 6 ; 6 >
+    au < down ; 1997 ; Archeological Papers of the American Anthropological Association Volume 7 ; 7 >
+    au < down ; 1998 ; Archeological Papers of the American Anthropological Association Volume 8 ; 8 >
+    au < down ; 1999 ; Archeological Papers of the American Anthropological Association Volume 9 ; 9 >
+    au < down ; 2001 ; Archeological Papers of the American Anthropological Association Volume 10 ; 10 >
+    au < down ; 2002 ; Archeological Papers of the American Anthropological Association Volume 11 ; 11 >
+    au < down ; 2002 ; Archeological Papers of the American Anthropological Association Volume 12 ; 12 >
+    au < down ; 2003 ; Archeological Papers of the American Anthropological Association Volume 13 ; 13 >
+    au < down ; 2004 ; Archeological Papers of the American Anthropological Association Volume 14 ; 14 >
+    au < down ; 2005 ; Archeological Papers of the American Anthropological Association Volume 15 ; 15 >
+    au < down ; 2006 ; Archeological Papers of the American Anthropological Association Volume 16 ; 16 >
+    au < down ; 2007 ; Archeological Papers of the American Anthropological Association Volume 17 ; 17 >
     
   }
 
@@ -277,13 +277,13 @@
     
     param[journal_id] = nasa
 
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 5 ; 5 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 6 ; 6 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 7 ; 7 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 8 ; 8 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 9 ; 9 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 10 ; 10 >
-    au < down ; Bulletin of the National Association of Student Anthropologists Volume 11 ; 11 >
+    au < down ; 1990 ; Bulletin of the National Association of Student Anthropologists Volume 5 ; 5 >
+    au < down ; 1991 ; Bulletin of the National Association of Student Anthropologists Volume 6 ; 6 >
+    au < down ; 1992 ; Bulletin of the National Association of Student Anthropologists Volume 7 ; 7 >
+    au < down ; 1993 ; Bulletin of the National Association of Student Anthropologists Volume 8 ; 8 >
+    au < down ; 1994 ; Bulletin of the National Association of Student Anthropologists Volume 9 ; 9 >
+    au < down ; 1997 ; Bulletin of the National Association of Student Anthropologists Volume 10 ; 10 >
+    au < down ; 1999 ; Bulletin of the National Association of Student Anthropologists Volume 11 ; 11 >
 
   }
 
@@ -298,16 +298,16 @@
     
     param[journal_id] = cia
 
-    au < down ; Central Issues in Anthropology Volume 1 ; 1 >
-    au < down ; Central Issues in Anthropology Volume 2 ; 2 >
-    au < down ; Central Issues in Anthropology Volume 3 ; 3 >
-    au < down ; Central Issues in Anthropology Volume 4 ; 4 >
-    au < down ; Central Issues in Anthropology Volume 5 ; 5 >
-    au < down ; Central Issues in Anthropology Volume 6 ; 6 >
-    au < down ; Central Issues in Anthropology Volume 7 ; 7 >
-    au < down ; Central Issues in Anthropology Volume 8 ; 8 >
-    au < down ; Central Issues in Anthropology Volume 9 ; 9 >
-    au < down ; Central Issues in Anthropology Volume 10 ; 10 >
+    au < down ; 1979 ; Central Issues in Anthropology Volume 1 ; 1 >
+    au < down ; 1980 ; Central Issues in Anthropology Volume 2 ; 2 >
+    au < down ; 1981 ; Central Issues in Anthropology Volume 3 ; 3 >
+    au < down ; 1982 ; Central Issues in Anthropology Volume 4 ; 4 >
+    au < down ; 1984 ; Central Issues in Anthropology Volume 5 ; 5 >
+    au < down ; 1986 ; Central Issues in Anthropology Volume 6 ; 6 >
+    au < down ; 1987 ; Central Issues in Anthropology Volume 7 ; 7 >
+    au < down ; 1988 ; Central Issues in Anthropology Volume 8 ; 8 >
+    au < down ; 1991 ; Central Issues in Anthropology Volume 9 ; 9 >
+    au < down ; 1992 ; Central Issues in Anthropology Volume 10 ; 10 >
     
   }
 
@@ -322,25 +322,25 @@
     
     param[journal_id] = city
 
-    au < down ; City & Society Volume 1 ; 1 >
-    au < down ; City & Society Volume 2 ; 2 >
-    au < down ; City & Society Volume 3 ; 3 >
-    au < down ; City & Society Volume 4 ; 4 >
-    au < down ; City & Society Volume 5 ; 5 >
-    au < down ; City & Society Volume 6 ; 6 >
-    au < down ; City & Society Volume 7 ; 7 >
-    au < down ; City & Society Volume 8 ; 8 >
-    au < down ; City & Society Volume 9 ; 9 >
-    au < down ; City & Society Volume 10 ; 10 >
-    au < down ; City & Society Volume 11 ; 11 >
-    au < down ; City & Society Volume 12 ; 12 >
-    au < down ; City & Society Volume 13 ; 13 >
-    au < down ; City & Society Volume 14 ; 14 >
-    au < down ; City & Society Volume 15 ; 15 >
-    au < down ; City & Society Volume 16 ; 16 >
-    au < down ; City & Society Volume 17 ; 17 >
-    au < down ; City & Society Volume 18 ; 18 >
-    au < down ; City & Society Volume 19 ; 19 >
+    au < down ; 1989 ; City & Society Volume 1 ; 1 >
+    au < down ; 1990 ; City & Society Volume 2 ; 2 >
+    au < down ; 1991 ; City & Society Volume 3 ; 3 >
+    au < down ; 1992 ; City & Society Volume 4 ; 4 >
+    au < down ; 1993 ; City & Society Volume 5 ; 5 >
+    au < down ; 1994 ; City & Society Volume 6 ; 6 >
+    au < down ; 1995 ; City & Society Volume 7 ; 7 >
+    au < down ; 1996 ; City & Society Volume 8 ; 8 >
+    au < down ; 1997 ; City & Society Volume 9 ; 9 >
+    au < down ; 1998 ; City & Society Volume 10 ; 10 >
+    au < down ; 1999 ; City & Society Volume 11 ; 11 >
+    au < down ; 2000 ; City & Society Volume 12 ; 12 >
+    au < down ; 2001 ; City & Society Volume 13 ; 13 >
+    au < down ; 2002 ; City & Society Volume 14 ; 14 >
+    au < down ; 2003 ; City & Society Volume 15 ; 15 >
+    au < down ; 2004 ; City & Society Volume 16 ; 16 >
+    au < down ; 2005 ; City & Society Volume 17 ; 17 >
+    au < down ; 2006 ; City & Society Volume 18 ; 18 >
+    au < down ; 2007 ; City & Society Volume 19 ; 19 >
     
   }
 
@@ -355,48 +355,48 @@
     
     param[journal_id] = csas
 
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 1 ; 1 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 2 ; 2 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 3 ; 3 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 4 ; 4 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 5 ; 5 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 6 ; 6 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 7 ; 7 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 8 ; 8 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 9 ; 9 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 10 ; 10 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 11 ; 11 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 12 ; 12 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 13 ; 13 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 14 ; 14 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 15 ; 15 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 16 ; 16 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 17 ; 17 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 18 ; 18 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 19 ; 19 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 20 ; 20 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 21 ; 21 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 22 ; 22 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 23 ; 23 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 24 ; 24 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 25 ; 25 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 26 ; 26 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 27 ; 27 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 28 ; 28 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 29 ; 29 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 30 ; 30 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 31 ; 31 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 32 ; 32 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 33 ; 33 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 34 ; 34 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 35 ; 35 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 36 ; 36 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 37 ; 37 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 38 ; 38 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 39 ; 39 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 40 ; 40 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 41 ; 41 >
-    au < down ; CSAS Bulletin Central States Anthropological Society Volume 42 ; 42 >
+    au < down ; 1967 ; CSAS Bulletin Central States Anthropological Society Volume 1 ; 1 >
+    au < down ; 1968 ; CSAS Bulletin Central States Anthropological Society Volume 2 ; 2 >
+    au < down ; 1969 ; CSAS Bulletin Central States Anthropological Society Volume 3 ; 3 >
+    au < down ; 1970 ; CSAS Bulletin Central States Anthropological Society Volume 4 ; 4 >
+    au < down ; 1971 ; CSAS Bulletin Central States Anthropological Society Volume 5 ; 5 >
+    au < down ; 1972 ; CSAS Bulletin Central States Anthropological Society Volume 6 ; 6 >
+    au < down ; 1973 ; CSAS Bulletin Central States Anthropological Society Volume 7 ; 7 >
+    au < down ; 1974 ; CSAS Bulletin Central States Anthropological Society Volume 8 ; 8 >
+    au < down ; 1975 ; CSAS Bulletin Central States Anthropological Society Volume 9 ; 9 >
+    au < down ; 1976 ; CSAS Bulletin Central States Anthropological Society Volume 10 ; 10 >
+    au < down ; 1977 ; CSAS Bulletin Central States Anthropological Society Volume 11 ; 11 >
+    au < down ; 1978 ; CSAS Bulletin Central States Anthropological Society Volume 12 ; 12 >
+    au < down ; 1979 ; CSAS Bulletin Central States Anthropological Society Volume 13 ; 13 >
+    au < down ; 1980 ; CSAS Bulletin Central States Anthropological Society Volume 14 ; 14 >
+    au < down ; 1981 ; CSAS Bulletin Central States Anthropological Society Volume 15 ; 15 >
+    au < down ; 1982 ; CSAS Bulletin Central States Anthropological Society Volume 16 ; 16 >
+    au < down ; 1983 ; CSAS Bulletin Central States Anthropological Society Volume 17 ; 17 >
+    au < down ; 1984 ; CSAS Bulletin Central States Anthropological Society Volume 18 ; 18 >
+    au < down ; 1985 ; CSAS Bulletin Central States Anthropological Society Volume 19 ; 19 >
+    au < down ; 1986 ; CSAS Bulletin Central States Anthropological Society Volume 20 ; 20 >
+    au < down ; 1987 ; CSAS Bulletin Central States Anthropological Society Volume 21 ; 21 >
+    au < down ; 1988 ; CSAS Bulletin Central States Anthropological Society Volume 22 ; 22 >
+    au < down ; 1989 ; CSAS Bulletin Central States Anthropological Society Volume 23 ; 23 >
+    au < down ; 1989 ; CSAS Bulletin Central States Anthropological Society Volume 24 ; 24 >
+    au < down ; 1990 ; CSAS Bulletin Central States Anthropological Society Volume 25 ; 25 >
+    au < down ; 1991 ; CSAS Bulletin Central States Anthropological Society Volume 26 ; 26 >
+    au < down ; 1992 ; CSAS Bulletin Central States Anthropological Society Volume 27 ; 27 >
+    au < down ; 1993 ; CSAS Bulletin Central States Anthropological Society Volume 28 ; 28 >
+    au < down ; 1994 ; CSAS Bulletin Central States Anthropological Society Volume 29 ; 29 >
+    au < down ; 1995 ; CSAS Bulletin Central States Anthropological Society Volume 30 ; 30 >
+    au < down ; 1996 ; CSAS Bulletin Central States Anthropological Society Volume 31 ; 31 >
+    au < down ; 1997 ; CSAS Bulletin Central States Anthropological Society Volume 32 ; 32 >
+    au < down ; 1998 ; CSAS Bulletin Central States Anthropological Society Volume 33 ; 33 >
+    au < down ; 1999 ; CSAS Bulletin Central States Anthropological Society Volume 34 ; 34 >
+    au < down ; 2000 ; CSAS Bulletin Central States Anthropological Society Volume 35 ; 35 >
+    au < down ; 2001 ; CSAS Bulletin Central States Anthropological Society Volume 36 ; 36 >
+    au < down ; 2002 ; CSAS Bulletin Central States Anthropological Society Volume 37 ; 37 >
+    au < down ; 2003 ; CSAS Bulletin Central States Anthropological Society Volume 38 ; 38 >
+    au < down ; 2004 ; CSAS Bulletin Central States Anthropological Society Volume 39 ; 39 >
+    au < down ; 2005 ; CSAS Bulletin Central States Anthropological Society Volume 40 ; 40 >
+    au < down ; 2006 ; CSAS Bulletin Central States Anthropological Society Volume 41 ; 41 >
+    au < down ; 2007 ; CSAS Bulletin Central States Anthropological Society Volume 42 ; 42 >
     
   }
 
@@ -411,17 +411,17 @@
     
     param[journal_id] = can
 
-    au < down ; Cultural Anthropology Volume 12 ; 12 >
-    au < down ; Cultural Anthropology Volume 13 ; 13 >
-    au < down ; Cultural Anthropology Volume 14 ; 14 >
-    au < down ; Cultural Anthropology Volume 15 ; 15 >
-    au < down ; Cultural Anthropology Volume 16 ; 16 >
-    au < down ; Cultural Anthropology Volume 17 ; 17 >
-    au < down ; Cultural Anthropology Volume 18 ; 18 >
-    au < down ; Cultural Anthropology Volume 19 ; 19 >
-    au < down ; Cultural Anthropology Volume 20 ; 20 >
-    au < down ; Cultural Anthropology Volume 21 ; 21 >
-    au < down ; Cultural Anthropology Volume 22 ; 22 >
+    au < down ; 1997 ; Cultural Anthropology Volume 12 ; 12 >
+    au < down ; 1998 ; Cultural Anthropology Volume 13 ; 13 >
+    au < down ; 1999 ; Cultural Anthropology Volume 14 ; 14 >
+    au < down ; 2000 ; Cultural Anthropology Volume 15 ; 15 >
+    au < down ; 2001 ; Cultural Anthropology Volume 16 ; 16 >
+    au < down ; 2002 ; Cultural Anthropology Volume 17 ; 17 >
+    au < down ; 2003 ; Cultural Anthropology Volume 18 ; 18 >
+    au < down ; 2004 ; Cultural Anthropology Volume 19 ; 19 >
+    au < down ; 2005 ; Cultural Anthropology Volume 20 ; 20 >
+    au < down ; 2006 ; Cultural Anthropology Volume 21 ; 21 >
+    au < down ; 2007 ; Cultural Anthropology Volume 22 ; 22 >
     
   }
 
@@ -436,19 +436,19 @@
     
     param[journal_id] = cag
 
-    au < down ; Culture & Agriculture Volume 1-17 ; - >
-    au < down ; Culture & Agriculture Volume 18 ; 18 >
-    au < down ; Culture & Agriculture Volume 19 ; 19 >
-    au < down ; Culture & Agriculture Volume 20 ; 20 >
-    au < down ; Culture & Agriculture Volume 21 ; 21 >
-    au < down ; Culture & Agriculture Volume 22 ; 22 >
-    au < down ; Culture & Agriculture Volume 23 ; 23 >
-    au < down ; Culture & Agriculture Volume 24 ; 24 >
-    au < down ; Culture & Agriculture Volume 25 ; 25 >
-    au < down ; Culture & Agriculture Volume 26 ; 26 >
-    au < down ; Culture & Agriculture Volume 27 ; 27 >
-    au < down ; Culture & Agriculture Volume 28 ; 28 >
-    au < down ; Culture & Agriculture Volume 29 ; 29 >
+    au < down ; 1995 ; Culture & Agriculture Volume 1-17 ; - >
+    au < down ; 1996 ; Culture & Agriculture Volume 18 ; 18 >
+    au < down ; 1997 ; Culture & Agriculture Volume 19 ; 19 >
+    au < down ; 1998 ; Culture & Agriculture Volume 20 ; 20 >
+    au < down ; 1999 ; Culture & Agriculture Volume 21 ; 21 >
+    au < down ; 2000 ; Culture & Agriculture Volume 22 ; 22 >
+    au < down ; 2001 ; Culture & Agriculture Volume 23 ; 23 >
+    au < down ; 2002 ; Culture & Agriculture Volume 24 ; 24 >
+    au < down ; 2003 ; Culture & Agriculture Volume 25 ; 25 >
+    au < down ; 2004 ; Culture & Agriculture Volume 26 ; 26 >
+    au < down ; 2005 ; Culture & Agriculture Volume 27 ; 27 >
+    au < down ; 2006 ; Culture & Agriculture Volume 28 ; 28 >
+    au < down ; 2007 ; Culture & Agriculture Volume 29 ; 29 >
    
   }
 
@@ -462,9 +462,9 @@
     
     param[journal_id] = em
 
-    au < down ; El Mensajero Volume 1 ; 1 >
-    au < down ; El Mensajero Volume 2 ; 2 >
-    au < down ; El Mensajero Volume 3 ; 3 >
+    au < down ; 1972 ; El Mensajero Volume 1 ; 1 >
+    au < down ; 1973 ; El Mensajero Volume 2 ; 2 >
+    au < down ; 1974 ; El Mensajero Volume 3 ; 3 >
     
   }
 
@@ -478,8 +478,8 @@
     
     param[journal_id] = epic
 
-    au < down ; Ethnographic Praxis in Industry Conference Proceedings 2005 ; 2005 >
-    au < down ; Ethnographic Praxis in Industry Conference Proceedings 2006 ; 2006 >
+    au < down ; 2005 ; Ethnographic Praxis in Industry Conference Proceedings 2005 ; 2005 >
+    au < down ; 2006 ; Ethnographic Praxis in Industry Conference Proceedings 2006 ; 2006 >
     
   }
 
@@ -494,17 +494,17 @@
     
     param[journal_id] = eth
 
-    au < down ; Ethos Volume 25 ; 25 >
-    au < down ; Ethos Volume 26 ; 26 >
-    au < down ; Ethos Volume 27 ; 27 >
-    au < down ; Ethos Volume 28 ; 28 >
-    au < down ; Ethos Volume 29 ; 29 >
-    au < down ; Ethos Volume 30 ; 30 >
-    au < down ; Ethos Volume 31 ; 31 >
-    au < down ; Ethos Volume 32 ; 32 >
-    au < down ; Ethos Volume 33 ; 33 >
-    au < down ; Ethos Volume 34 ; 34 >
-    au < down ; Ethos Volume 35 ; 35 >
+    au < down ; 1997 ; Ethos Volume 25 ; 25 >
+    au < down ; 1998 ; Ethos Volume 26 ; 26 >
+    au < down ; 1999 ; Ethos Volume 27 ; 27 >
+    au < down ; 2000 ; Ethos Volume 28 ; 28 >
+    au < down ; 2001 ; Ethos Volume 29 ; 29 >
+    au < down ; 2002 ; Ethos Volume 30 ; 30 >
+    au < down ; 2003 ; Ethos Volume 31 ; 31 >
+    au < down ; 2004 ; Ethos Volume 32 ; 32 >
+    au < down ; 2005 ; Ethos Volume 33 ; 33 >
+    au < down ; 2006 ; Ethos Volume 34 ; 34 >
+    au < down ; 2007 ; Ethos Volume 35 ; 35 >
     
   }
 
@@ -519,20 +519,20 @@
     
     param[journal_id] = ga
 
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 1 ; 1 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 2 ; 2 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 3 ; 3 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 4 ; 4 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 5 ; 5 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 6 ; 6 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 7 ; 7 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 8 ; 8 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 9 ; 9 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 10 ; 10 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 11 ; 11 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 12 ; 12 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 13 ; 13 >
-    au < down ; General Anthropology Bulletin of the General Anthropology Division Volume 14 ; 14 >
+    au < down ; 1994 ; General Anthropology Bulletin of the General Anthropology Division Volume 1 ; 1 >
+    au < down ; 1995 ; General Anthropology Bulletin of the General Anthropology Division Volume 2 ; 2 >
+    au < down ; 1996 ; General Anthropology Bulletin of the General Anthropology Division Volume 3 ; 3 >
+    au < down ; 1997 ; General Anthropology Bulletin of the General Anthropology Division Volume 4 ; 4 >
+    au < down ; 1998 ; General Anthropology Bulletin of the General Anthropology Division Volume 5 ; 5 >
+    au < down ; 1999 ; General Anthropology Bulletin of the General Anthropology Division Volume 6 ; 6 >
+    au < down ; 2000 ; General Anthropology Bulletin of the General Anthropology Division Volume 7 ; 7 >
+    au < down ; 2001 ; General Anthropology Bulletin of the General Anthropology Division Volume 8 ; 8 >
+    au < down ; 2002 ; General Anthropology Bulletin of the General Anthropology Division Volume 9 ; 9 >
+    au < down ; 2003 ; General Anthropology Bulletin of the General Anthropology Division Volume 10 ; 10 >
+    au < down ; 2004 ; General Anthropology Bulletin of the General Anthropology Division Volume 11 ; 11 >
+    au < down ; 2005 ; General Anthropology Bulletin of the General Anthropology Division Volume 12 ; 12 >
+    au < down ; 2006 ; General Anthropology Bulletin of the General Anthropology Division Volume 13 ; 13 >
+    au < down ; 2007 ; General Anthropology Bulletin of the General Anthropology Division Volume 14 ; 14 >
     
   }
 
@@ -547,18 +547,18 @@
     
     param[journal_id] = jlat
 
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 1 ; 1 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 2 ; 2 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 3 ; 3 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 4 ; 4 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 5 ; 5 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 6 ; 6 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 7 ; 7 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 8 ; 8 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 9 ; 9 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 10 ; 10 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 11 ; 11 >
-    au < down ; Journal of Latin American and Caribbean Anthropology Volume 12 ; 12 >
+    au < down ; 1996 ; Journal of Latin American and Caribbean Anthropology Volume 1 ; 1 >
+    au < down ; 1997 ; Journal of Latin American and Caribbean Anthropology Volume 2 ; 2 >
+    au < down ; 1998 ; Journal of Latin American and Caribbean Anthropology Volume 3 ; 3 >
+    au < down ; 1999 ; Journal of Latin American and Caribbean Anthropology Volume 4 ; 4 >
+    au < down ; 2000 ; Journal of Latin American and Caribbean Anthropology Volume 5 ; 5 >
+    au < down ; 2001 ; Journal of Latin American and Caribbean Anthropology Volume 6 ; 6 >
+    au < down ; 2002 ; Journal of Latin American and Caribbean Anthropology Volume 7 ; 7 >
+    au < down ; 2003 ; Journal of Latin American and Caribbean Anthropology Volume 8 ; 8 >
+    au < down ; 2004 ; Journal of Latin American and Caribbean Anthropology Volume 9 ; 9 >
+    au < down ; 2005 ; Journal of Latin American and Caribbean Anthropology Volume 10 ; 10 >
+    au < down ; 2006 ; Journal of Latin American and Caribbean Anthropology Volume 11 ; 11 >
+    au < down ; 2007 ; Journal of Latin American and Caribbean Anthropology Volume 12 ; 12 >
     
   }  
 
@@ -573,23 +573,23 @@
     
     param[journal_id] = jlin
 
-    au < down ; Journal of Linguistic Anthropology Volume 1 ; 1 >
-    au < down ; Journal of Linguistic Anthropology Volume 2 ; 2 >
-    au < down ; Journal of Linguistic Anthropology Volume 3 ; 3 >
-    au < down ; Journal of Linguistic Anthropology Volume 4 ; 4 >
-    au < down ; Journal of Linguistic Anthropology Volume 5 ; 5 >
-    au < down ; Journal of Linguistic Anthropology Volume 6 ; 6 >
-    au < down ; Journal of Linguistic Anthropology Volume 7 ; 7 >
-    au < down ; Journal of Linguistic Anthropology Volume 8 ; 8 >
-    au < down ; Journal of Linguistic Anthropology Volume 9 ; 9 >
-    au < down ; Journal of Linguistic Anthropology Volume 10 ; 10 >
-    au < down ; Journal of Linguistic Anthropology Volume 11 ; 11 >
-    au < down ; Journal of Linguistic Anthropology Volume 12 ; 12 >
-    au < down ; Journal of Linguistic Anthropology Volume 13 ; 13 >
-    au < down ; Journal of Linguistic Anthropology Volume 14 ; 14 >
-    au < down ; Journal of Linguistic Anthropology Volume 15 ; 15 >
-    au < down ; Journal of Linguistic Anthropology Volume 16 ; 16 >
-    au < down ; Journal of Linguistic Anthropology Volume 17 ; 17 >
+    au < down ; 1991 ; Journal of Linguistic Anthropology Volume 1 ; 1 >
+    au < down ; 1992 ; Journal of Linguistic Anthropology Volume 2 ; 2 >
+    au < down ; 1993 ; Journal of Linguistic Anthropology Volume 3 ; 3 >
+    au < down ; 1994 ; Journal of Linguistic Anthropology Volume 4 ; 4 >
+    au < down ; 1995 ; Journal of Linguistic Anthropology Volume 5 ; 5 >
+    au < down ; 1996 ; Journal of Linguistic Anthropology Volume 6 ; 6 >
+    au < down ; 1997 ; Journal of Linguistic Anthropology Volume 7 ; 7 >
+    au < down ; 1998 ; Journal of Linguistic Anthropology Volume 8 ; 8 >
+    au < down ; 1999 ; Journal of Linguistic Anthropology Volume 9 ; 9 >
+    au < down ; 2000 ; Journal of Linguistic Anthropology Volume 10 ; 10 >
+    au < down ; 2001 ; Journal of Linguistic Anthropology Volume 11 ; 11 >
+    au < down ; 2002 ; Journal of Linguistic Anthropology Volume 12 ; 12 >
+    au < down ; 2003 ; Journal of Linguistic Anthropology Volume 13 ; 13 >
+    au < down ; 2004 ; Journal of Linguistic Anthropology Volume 14 ; 14 >
+    au < down ; 2005 ; Journal of Linguistic Anthropology Volume 15 ; 15 >
+    au < down ; 2006 ; Journal of Linguistic Anthropology Volume 16 ; 16 >
+    au < down ; 2007 ; Journal of Linguistic Anthropology Volume 17 ; 17 >
     
   }
 
@@ -604,12 +604,12 @@
     
     param[journal_id] = jsae
 
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 1 ; 1 >
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 2 ; 2 >
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 3 ; 3 >
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 4 ; 4 >
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 5 ; 5 >
-    au < down ; Journal of the Society for the Anthropology of Europe Volume 6 ; 6 >
+    au < down ; 2001 ; Journal of the Society for the Anthropology of Europe Volume 1 ; 1 >
+    au < down ; 2002 ; Journal of the Society for the Anthropology of Europe Volume 2 ; 2 >
+    au < down ; 2003 ; Journal of the Society for the Anthropology of Europe Volume 3 ; 3 >
+    au < down ; 2004 ; Journal of the Society for the Anthropology of Europe Volume 4 ; 4 >
+    au < down ; 2005 ; Journal of the Society for the Anthropology of Europe Volume 5 ; 5 >
+    au < down ; 2006 ; Journal of the Society for the Anthropology of Europe Volume 6 ; 6 >
       
   }
 
@@ -624,17 +624,17 @@
     
     param[journal_id] = maq
 
-    au < down ; Medical Anthropology Quarterly Volume 11 ; 11 >
-    au < down ; Medical Anthropology Quarterly Volume 12 ; 12 >
-    au < down ; Medical Anthropology Quarterly Volume 13 ; 13 >
-    au < down ; Medical Anthropology Quarterly Volume 14 ; 14 >
-    au < down ; Medical Anthropology Quarterly Volume 15 ; 15 >
-    au < down ; Medical Anthropology Quarterly Volume 16 ; 16 >
-    au < down ; Medical Anthropology Quarterly Volume 17 ; 17 >
-    au < down ; Medical Anthropology Quarterly Volume 18 ; 18 >
-    au < down ; Medical Anthropology Quarterly Volume 19 ; 19 >
-    au < down ; Medical Anthropology Quarterly Volume 20 ; 20 >
-    au < down ; Medical Anthropology Quarterly Volume 21 ; 21 >
+    au < down ; 1997 ; Medical Anthropology Quarterly Volume 11 ; 11 >
+    au < down ; 1998 ; Medical Anthropology Quarterly Volume 12 ; 12 >
+    au < down ; 1999 ; Medical Anthropology Quarterly Volume 13 ; 13 >
+    au < down ; 2000 ; Medical Anthropology Quarterly Volume 14 ; 14 >
+    au < down ; 2001 ; Medical Anthropology Quarterly Volume 15 ; 15 >
+    au < down ; 2002 ; Medical Anthropology Quarterly Volume 16 ; 16 >
+    au < down ; 2003 ; Medical Anthropology Quarterly Volume 17 ; 17 >
+    au < down ; 2004 ; Medical Anthropology Quarterly Volume 18 ; 18 >
+    au < down ; 2005 ; Medical Anthropology Quarterly Volume 19 ; 19 >
+    au < down ; 2006 ; Medical Anthropology Quarterly Volume 20 ; 20 >
+    au < down ; 2007 ; Medical Anthropology Quarterly Volume 21 ; 21 >
     
   }
 
@@ -649,36 +649,36 @@
     
     param[journal_id] = mua
 
-    au < down ; Museum Anthropology Volume 1 ; 1 >
-    au < down ; Museum Anthropology Volume 2 ; 2 >
-    au < down ; Museum Anthropology Volume 3 ; 3 >
-    au < down ; Museum Anthropology Volume 4 ; 4 >
-    au < down ; Museum Anthropology Volume 5 ; 5 >
-    au < down ; Museum Anthropology Volume 6 ; 6 >
-    au < down ; Museum Anthropology Volume 7 ; 7 >
-    au < down ; Museum Anthropology Volume 8 ; 8 >
-    au < down ; Museum Anthropology Volume 9 ; 9 >
-    au < down ; Museum Anthropology Volume 10 ; 10 >
-    au < down ; Museum Anthropology Volume 11 ; 11 >
-    au < down ; Museum Anthropology Volume 12 ; 12 >
-    au < down ; Museum Anthropology Volume 13 ; 13 >
-    au < down ; Museum Anthropology Volume 14 ; 14 >
-    au < down ; Museum Anthropology Volume 15 ; 15 >
-    au < down ; Museum Anthropology Volume 16 ; 16 >
-    au < down ; Museum Anthropology Volume 17 ; 17 >
-    au < down ; Museum Anthropology Volume 18 ; 18 >
-    au < down ; Museum Anthropology Volume 19 ; 19 >
-    au < down ; Museum Anthropology Volume 20 ; 20 >
-    au < down ; Museum Anthropology Volume 21 ; 21 >
-    au < down ; Museum Anthropology Volume 22 ; 22 >
-    au < down ; Museum Anthropology Volume 23 ; 23 >
-    au < down ; Museum Anthropology Volume 24 ; 24 >
-    au < down ; Museum Anthropology Volume 25 ; 25 >
-    au < down ; Museum Anthropology Volume 26 ; 26 >
-    au < down ; Museum Anthropology Volume 27 ; 27 >
-    au < down ; Museum Anthropology Volume 28 ; 28 >
-    au < down ; Museum Anthropology Volume 29 ; 29 >
-    au < down ; Museum Anthropology Volume 30 ; 30 >
+    au < down ; 1977 ; Museum Anthropology Volume 1 ; 1 >
+    au < down ; 1978 ; Museum Anthropology Volume 2 ; 2 >
+    au < down ; 1979 ; Museum Anthropology Volume 3 ; 3 >
+    au < down ; 1980 ; Museum Anthropology Volume 4 ; 4 >
+    au < down ; 1981 ; Museum Anthropology Volume 5 ; 5 >
+    au < down ; 1982 ; Museum Anthropology Volume 6 ; 6 >
+    au < down ; 1983 ; Museum Anthropology Volume 7 ; 7 >
+    au < down ; 1984 ; Museum Anthropology Volume 8 ; 8 >
+    au < down ; 1985 ; Museum Anthropology Volume 9 ; 9 >
+    au < down ; 1986 ; Museum Anthropology Volume 10 ; 10 >
+    au < down ; 1987 ; Museum Anthropology Volume 11 ; 11 >
+    au < down ; 1988 ; Museum Anthropology Volume 12 ; 12 >
+    au < down ; 1989 ; Museum Anthropology Volume 13 ; 13 >
+    au < down ; 1990 ; Museum Anthropology Volume 14 ; 14 >
+    au < down ; 1991 ; Museum Anthropology Volume 15 ; 15 >
+    au < down ; 1992 ; Museum Anthropology Volume 16 ; 16 >
+    au < down ; 1993 ; Museum Anthropology Volume 17 ; 17 >
+    au < down ; 1994 ; Museum Anthropology Volume 18 ; 18 >
+    au < down ; 1995 ; Museum Anthropology Volume 19 ; 19 >
+    au < down ; 1996 ; Museum Anthropology Volume 20 ; 20 >
+    au < down ; 1997 ; Museum Anthropology Volume 21 ; 21 >
+    au < down ; 1998 ; Museum Anthropology Volume 22 ; 22 >
+    au < down ; 1999 ; Museum Anthropology Volume 23 ; 23 >
+    au < down ; 2000 ; Museum Anthropology Volume 24 ; 24 >
+    au < down ; 2002 ; Museum Anthropology Volume 25 ; 25 >
+    au < down ; 2003 ; Museum Anthropology Volume 26 ; 26 >
+    au < down ; 2004 ; Museum Anthropology Volume 27 ; 27 >
+    au < down ; 2005 ; Museum Anthropology Volume 28 ; 28 >
+    au < down ; 2006 ; Museum Anthropology Volume 29 ; 29 >
+    au < down ; 2007 ; Museum Anthropology Volume 30 ; 30 >
     
   }
 
@@ -693,34 +693,34 @@
     
     param[journal_id] = napa
 
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 1 ; 1 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 2 ; 2 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 3 ; 3 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 4 ; 4 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 5 ; 5 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 6 ; 6 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 7 ; 7 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 8 ; 8 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 9 ; 9 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 10 ; 10 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 11 ; 11 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 12 ; 12 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 13 ; 13 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 14 ; 14 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 15 ; 15 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 16 ; 16 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 17 ; 17 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 18 ; 18 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 19 ; 19 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 20 ; 20 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 21 ; 21 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 22 ; 22 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 23 ; 23 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 24 ; 24 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 25 ; 25 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 26 ; 26 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 27 ; 27 >
-    au < down ; National Association for the Practice of Anthropology Bulletin Volume 28 ; 28 >
+    au < down ; 1985 ; National Association for the Practice of Anthropology Bulletin Volume 1 ; 1 >
+    au < down ; 1986 ; National Association for the Practice of Anthropology Bulletin Volume 2 ; 2 >
+    au < down ; 1987 ; National Association for the Practice of Anthropology Bulletin Volume 3 ; 3 >
+    au < down ; 1987 ; National Association for the Practice of Anthropology Bulletin Volume 4 ; 4 >
+    au < down ; 1988 ; National Association for the Practice of Anthropology Bulletin Volume 5 ; 5 >
+    au < down ; 1988 ; National Association for the Practice of Anthropology Bulletin Volume 6 ; 6 >
+    au < down ; 1989 ; National Association for the Practice of Anthropology Bulletin Volume 7 ; 7 >
+    au < down ; 1989 ; National Association for the Practice of Anthropology Bulletin Volume 8 ; 8 >
+    au < down ; 1990 ; National Association for the Practice of Anthropology Bulletin Volume 9 ; 9 >
+    au < down ; 1991 ; National Association for the Practice of Anthropology Bulletin Volume 10 ; 10 >
+    au < down ; 1992 ; National Association for the Practice of Anthropology Bulletin Volume 11 ; 11 >
+    au < down ; 1993 ; National Association for the Practice of Anthropology Bulletin Volume 12 ; 12 >
+    au < down ; 1993 ; National Association for the Practice of Anthropology Bulletin Volume 13 ; 13 >
+    au < down ; 1994 ; National Association for the Practice of Anthropology Bulletin Volume 14 ; 14 >
+    au < down ; 1995 ; National Association for the Practice of Anthropology Bulletin Volume 15 ; 15 >
+    au < down ; 1995 ; National Association for the Practice of Anthropology Bulletin Volume 16 ; 16 >
+    au < down ; 1997 ; National Association for the Practice of Anthropology Bulletin Volume 17 ; 17 >
+    au < down ; 2000 ; National Association for the Practice of Anthropology Bulletin Volume 18 ; 18 >
+    au < down ; 2000 ; National Association for the Practice of Anthropology Bulletin Volume 19 ; 19 >
+    au < down ; 2001 ; National Association for the Practice of Anthropology Bulletin Volume 20 ; 20 >
+    au < down ; 2001 ; National Association for the Practice of Anthropology Bulletin Volume 21 ; 21 >
+    au < down ; 2004 ; National Association for the Practice of Anthropology Bulletin Volume 22 ; 22 >
+    au < down ; 2004 ; National Association for the Practice of Anthropology Bulletin Volume 23 ; 23 >
+    au < down ; 2005 ; National Association for the Practice of Anthropology Bulletin Volume 24 ; 24 >
+    au < down ; 2006 ; National Association for the Practice of Anthropology Bulletin Volume 25 ; 25 >
+    au < down ; 2006 ; National Association for the Practice of Anthropology Bulletin Volume 26 ; 26 >
+    au < down ; 2007 ; National Association for the Practice of Anthropology Bulletin Volume 27 ; 27 >
+    au < down ; 2007 ; National Association for the Practice of Anthropology Bulletin Volume 28 ; 28 >
     
   }
 
@@ -735,16 +735,16 @@
     
     param[journal_id] = nad
 
-    au < down ; North American Dialogue Volume 1 ; 1 >
-    au < down ; North American Dialogue Volume 2 ; 2 >
-    au < down ; North American Dialogue Volume 3 ; 3 >
-    au < down ; North American Dialogue Volume 4 ; 4 >
-    au < down ; North American Dialogue Volume 5 ; 5 >
-    au < down ; North American Dialogue Volume 6 ; 6 >
-    au < down ; North American Dialogue Volume 7 ; 7 >
-    au < down ; North American Dialogue Volume 8 ; 8 >
-    au < down ; North American Dialogue Volume 9 ; 9 >
-    au < down ; North American Dialogue Volume 10 ; 10 >
+    au < down ; 1996 ; North American Dialogue Volume 1 ; 1 >
+    au < down ; 1997 ; North American Dialogue Volume 2 ; 2 >
+    au < down ; 1998 ; North American Dialogue Volume 3 ; 3 >
+    au < down ; 2001 ; North American Dialogue Volume 4 ; 4 >
+    au < down ; 2002 ; North American Dialogue Volume 5 ; 5 >
+    au < down ; 2003 ; North American Dialogue Volume 6 ; 6 >
+    au < down ; 2004 ; North American Dialogue Volume 7 ; 7 >
+    au < down ; 2005 ; North American Dialogue Volume 8 ; 8 >
+    au < down ; 2006 ; North American Dialogue Volume 9 ; 9 >
+    au < down ; 2007 ; North American Dialogue Volume 10 ; 10 >
     
   }
 
@@ -759,21 +759,21 @@
     
     param[journal_id] = nua
 
-    au < down ; Nutritional Anthropology Volume 11 ; 11 >
-    au < down ; Nutritional Anthropology Volume 12 ; 12 >
-    au < down ; Nutritional Anthropology Volume 13 ; 13 >
-    au < down ; Nutritional Anthropology Volume 14 ; 14 >
-    au < down ; Nutritional Anthropology Volume 15 ; 15 >
-    au < down ; Nutritional Anthropology Volume 16 ; 16 >
-    au < down ; Nutritional Anthropology Volume 17 ; 17 >
-    au < down ; Nutritional Anthropology Volume 18 ; 18 >
-    au < down ; Nutritional Anthropology Volume 19 ; 19 >
-    au < down ; Nutritional Anthropology Volume 20 ; 20 >
-    au < down ; Nutritional Anthropology Volume 21 ; 21 >
-    au < down ; Nutritional Anthropology Volume 22 ; 22 >
-    au < down ; Nutritional Anthropology Volume 23 ; 23 >
-    au < down ; Nutritional Anthropology Volume 24 ; 24 >
-    au < down ; Nutritional Anthropology Volume 25 ; 25 >
+    au < down ; 1987 ; Nutritional Anthropology Volume 11 ; 11 >
+    au < down ; 1988 ; Nutritional Anthropology Volume 12 ; 12 >
+    au < down ; 1989 ; Nutritional Anthropology Volume 13 ; 13 >
+    au < down ; 1990 ; Nutritional Anthropology Volume 14 ; 14 >
+    au < down ; 1991 ; Nutritional Anthropology Volume 15 ; 15 >
+    au < down ; 1992 ; Nutritional Anthropology Volume 16 ; 16 >
+    au < down ; 1993 ; Nutritional Anthropology Volume 17 ; 17 >
+    au < down ; 1994 ; Nutritional Anthropology Volume 18 ; 18 >
+    au < down ; 1995 ; Nutritional Anthropology Volume 19 ; 19 >
+    au < down ; 1996 ; Nutritional Anthropology Volume 20 ; 20 >
+    au < down ; 1997 ; Nutritional Anthropology Volume 21 ; 21 >
+    au < down ; 1999 ; Nutritional Anthropology Volume 22 ; 22 >
+    au < down ; 2000 ; Nutritional Anthropology Volume 23 ; 23 >
+    au < down ; 2001 ; Nutritional Anthropology Volume 24 ; 24 >
+    au < down ; 2002 ; Nutritional Anthropology Volume 25 ; 25 >
     
   }
 
@@ -788,36 +788,36 @@
     
     param[journal_id] = pol
 
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 1 ; 1 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 2 ; 2 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 3 ; 3 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 4 ; 4 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 5 ; 5 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 6 ; 6 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 7 ; 7 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 8 ; 8 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 9 ; 9 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 10 ; 10 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 11 ; 11 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 12 ; 12 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 13 ; 13 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 14 ; 14 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 15 ; 15 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 16 ; 16 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 17 ; 17 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 18 ; 18 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 19 ; 19 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 20 ; 20 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 21 ; 21 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 22 ; 22 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 23 ; 23 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 24 ; 24 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 25 ; 25 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 26 ; 26 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 27 ; 27 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 28 ; 28 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 29 ; 29 >
-    au < down ; PoLAR: Political and Legal Anthropology Review Volume 30 ; 30 >
+    au < down ; 1977 ; PoLAR: Political and Legal Anthropology Review Volume 1 ; 1 >
+    au < down ; 1978 ; PoLAR: Political and Legal Anthropology Review Volume 2 ; 2 >
+    au < down ; 1979 ; PoLAR: Political and Legal Anthropology Review Volume 3 ; 3 >
+    au < down ; 1980 ; PoLAR: Political and Legal Anthropology Review Volume 4 ; 4 >
+    au < down ; 1981 ; PoLAR: Political and Legal Anthropology Review Volume 5 ; 5 >
+    au < down ; 1982 ; PoLAR: Political and Legal Anthropology Review Volume 6 ; 6 >
+    au < down ; 1983 ; PoLAR: Political and Legal Anthropology Review Volume 7 ; 7 >
+    au < down ; 1985 ; PoLAR: Political and Legal Anthropology Review Volume 8 ; 8 >
+    au < down ; 1986 ; PoLAR: Political and Legal Anthropology Review Volume 9 ; 9 >
+    au < down ; 1987 ; PoLAR: Political and Legal Anthropology Review Volume 10 ; 10 >
+    au < down ; 1988 ; PoLAR: Political and Legal Anthropology Review Volume 11 ; 11 >
+    au < down ; 1989 ; PoLAR: Political and Legal Anthropology Review Volume 12 ; 12 >
+    au < down ; 1990 ; PoLAR: Political and Legal Anthropology Review Volume 13 ; 13 >
+    au < down ; 1991 ; PoLAR: Political and Legal Anthropology Review Volume 14 ; 14 >
+    au < down ; 1992 ; PoLAR: Political and Legal Anthropology Review Volume 15 ; 15 >
+    au < down ; 1993 ; PoLAR: Political and Legal Anthropology Review Volume 16 ; 16 >
+    au < down ; 1994 ; PoLAR: Political and Legal Anthropology Review Volume 17 ; 17 >
+    au < down ; 1995 ; PoLAR: Political and Legal Anthropology Review Volume 18 ; 18 >
+    au < down ; 1996 ; PoLAR: Political and Legal Anthropology Review Volume 19 ; 19 >
+    au < down ; 1997 ; PoLAR: Political and Legal Anthropology Review Volume 20 ; 20 >
+    au < down ; 1998 ; PoLAR: Political and Legal Anthropology Review Volume 21 ; 21 >
+    au < down ; 1999 ; PoLAR: Political and Legal Anthropology Review Volume 22 ; 22 >
+    au < down ; 2000 ; PoLAR: Political and Legal Anthropology Review Volume 23 ; 23 >
+    au < down ; 2001 ; PoLAR: Political and Legal Anthropology Review Volume 24 ; 24 >
+    au < down ; 2002 ; PoLAR: Political and Legal Anthropology Review Volume 25 ; 25 >
+    au < down ; 2003 ; PoLAR: Political and Legal Anthropology Review Volume 26 ; 26 >
+    au < down ; 2004 ; PoLAR: Political and Legal Anthropology Review Volume 27 ; 27 >
+    au < down ; 2005 ; PoLAR: Political and Legal Anthropology Review Volume 28 ; 28 >
+    au < down ; 2006 ; PoLAR: Political and Legal Anthropology Review Volume 29 ; 29 >
+    au < down ; 2007 ; PoLAR: Political and Legal Anthropology Review Volume 30 ; 30 >
     
   }
 
@@ -830,28 +830,28 @@
     
     param[journal_id] = sol
 
-    au < down ; SOLGAN Volume 1 ; 1 >
-    au < down ; SOLGAN Volume 2 ; 2 >
-    au < down ; SOLGAN Volume 3 ; 3 >
-    au < down ; SOLGAN Volume 4 ; 4 >
-    au < down ; SOLGAN Volume 5 ; 5 >
-    au < down ; SOLGAN Volume 6 ; 6 >
-    au < down ; SOLGAN Volume 7 ; 7 >
-    au < down ; SOLGAN Volume 8 ; 8 >
-    au < down ; SOLGAN Volume 9 ; 9 >
-    au < down ; SOLGAN Volume 10 ; 10 >
-    au < down ; SOLGAN Volume 11 ; 11 >
-    au < down ; SOLGAN Volume 12 ; 12 >
-    au < down ; SOLGAN Volume 13 ; 13 >
-    au < down ; SOLGAN Volume 14 ; 14 >
-    au < down ; SOLGAN Volume 15 ; 15 >
-    au < down ; SOLGAN Volume 16 ; 16 >
-    au < down ; SOLGAN Volume 17 ; 17 >
-    au < down ; SOLGAN Volume 18 ; 18 >
-    au < down ; SOLGAN Volume 19 ; 19 >
-    au < down ; SOLGAN Volume 20 ; 20 >
-    au < doNotProcess ; SOLGAN Volume 21 ; 21 >
-    au < down ; SOLGAN Volume 22 ; 22 >
+    au < down ; 1979 ; SOLGAN Volume 1 ; 1 >
+    au < down ; 1980 ; SOLGAN Volume 2 ; 2 >
+    au < down ; 1981 ; SOLGAN Volume 3 ; 3 >
+    au < down ; 1983 ; SOLGAN Volume 4 ; 4 >
+    au < down ; 1984 ; SOLGAN Volume 5 ; 5 >
+    au < down ; 1985 ; SOLGAN Volume 6 ; 6 >
+    au < down ; 1985 ; SOLGAN Volume 7 ; 7 >
+    au < down ; 1986 ; SOLGAN Volume 8 ; 8 >
+    au < down ; 1987 ; SOLGAN Volume 9 ; 9 >
+    au < down ; 1988 ; SOLGAN Volume 10 ; 10 >
+    au < down ; 1989 ; SOLGAN Volume 11 ; 11 >
+    au < down ; 1990 ; SOLGAN Volume 12 ; 12 >
+    au < down ; 1991 ; SOLGAN Volume 13 ; 13 >
+    au < down ; 1992 ; SOLGAN Volume 14 ; 14 >
+    au < down ; 1993 ; SOLGAN Volume 15 ; 15 >
+    au < down ; 1994 ; SOLGAN Volume 16 ; 16 >
+    au < down ; 1995 ; SOLGAN Volume 17 ; 17 >
+    au < down ; 1996 ; SOLGAN Volume 18 ; 18 >
+    au < down ; 1997 ; SOLGAN Volume 19 ; 19 >
+    au < down ; 1998 ; SOLGAN Volume 20 ; 20 >
+    au < doNotProcess ; 2000 ; SOLGAN Volume 21 ; 21 >
+    au < down ; 2003 ; SOLGAN Volume 22 ; 22 >
     
   }
 
@@ -865,16 +865,16 @@
     
     param[journal_id] = tea
 
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 1 ; 1 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 2 ; 2 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 3 ; 3 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 4 ; 4 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 5 ; 5 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 6 ; 6 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 7 ; 7 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 8 ; 8 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 9 ; 9 >
-    au < down ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 10 ; 10 >
+    au < down ; 1994 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 1 ; 1 >
+    au < down ; 1995 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 2 ; 2 >
+    au < down ; 1996 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 3 ; 3 >
+    au < down ; 1997 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 4 ; 4 >
+    au < down ; 1998 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 5 ; 5 >
+    au < down ; 1999 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 6 ; 6 >
+    au < down ; 2000 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 7 ; 7 >
+    au < down ; 2001 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 8 ; 8 >
+    au < down ; 2002 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 9 ; 9 >
+    au < down ; 2003 ; Teaching Anthropology: Society for Anthropology in Community Colleges Notes Volume 10 ; 10 >
     
   }
 
@@ -889,21 +889,21 @@
     
     param[journal_id] = tran
 
-    au < down ; Transforming Anthropology Volume 1 ; 1 >
-    au < down ; Transforming Anthropology Volume 2 ; 2 >
-    au < down ; Transforming Anthropology Volume 3 ; 3 >
-    au < down ; Transforming Anthropology Volume 4 ; 4 >
-    au < down ; Transforming Anthropology Volume 5 ; 5 >
-    au < down ; Transforming Anthropology Volume 6 ; 6 >
-    au < down ; Transforming Anthropology Volume 7 ; 7 >
-    au < down ; Transforming Anthropology Volume 8 ; 8 >
-    au < down ; Transforming Anthropology Volume 9 ; 9 >
-    au < down ; Transforming Anthropology Volume 10 ; 10 >
-    au < down ; Transforming Anthropology Volume 11 ; 11 >
-    au < down ; Transforming Anthropology Volume 12 ; 12 >
-    au < down ; Transforming Anthropology Volume 13 ; 13 >
-    au < down ; Transforming Anthropology Volume 14 ; 14 >
-    au < down ; Transforming Anthropology Volume 15 ; 15 >
+    au < down ; 1990 ; Transforming Anthropology Volume 1 ; 1 >
+    au < down ; 1991 ; Transforming Anthropology Volume 2 ; 2 >
+    au < down ; 1992 ; Transforming Anthropology Volume 3 ; 3 >
+    au < down ; 1993 ; Transforming Anthropology Volume 4 ; 4 >
+    au < down ; 1994 ; Transforming Anthropology Volume 5 ; 5 >
+    au < down ; 1997 ; Transforming Anthropology Volume 6 ; 6 >
+    au < down ; 1998 ; Transforming Anthropology Volume 7 ; 7 >
+    au < down ; 1999 ; Transforming Anthropology Volume 8 ; 8 >
+    au < down ; 2000 ; Transforming Anthropology Volume 9 ; 9 >
+    au < down ; 2001 ; Transforming Anthropology Volume 10 ; 10 >
+    au < down ; 2003 ; Transforming Anthropology Volume 11 ; 11 >
+    au < down ; 2004 ; Transforming Anthropology Volume 12 ; 12 >
+    au < down ; 2005 ; Transforming Anthropology Volume 13 ; 13 >
+    au < down ; 2006 ; Transforming Anthropology Volume 14 ; 14 >
+    au < down ; 2007 ; Transforming Anthropology Volume 15 ; 15 >
     
   }
 
@@ -918,29 +918,29 @@
     
     param[journal_id] = var
 
-    au < down ; Visual Anthropology Review Volume 1 ; 1 >
-    au < down ; Visual Anthropology Review Volume 2 ; 2 >
-    au < down ; Visual Anthropology Review Volume 3 ; 3 >
-    au < down ; Visual Anthropology Review Volume 4 ; 4 >
-    au < down ; Visual Anthropology Review Volume 5 ; 5 >
-    au < down ; Visual Anthropology Review Volume 6 ; 6 >
-    au < down ; Visual Anthropology Review Volume 7 ; 7 >
-    au < down ; Visual Anthropology Review Volume 8 ; 8 >
-    au < down ; Visual Anthropology Review Volume 9 ; 9 >
-    au < down ; Visual Anthropology Review Volume 10 ; 10 >
-    au < down ; Visual Anthropology Review Volume 11 ; 11 >
-    au < down ; Visual Anthropology Review Volume 12 ; 12 >
-    au < down ; Visual Anthropology Review Volume 13 ; 13 >
-    au < down ; Visual Anthropology Review Volume 14 ; 14 >
-    au < down ; Visual Anthropology Review Volume 15 ; 15 >
-    au < down ; Visual Anthropology Review Volume 16 ; 16 >
-    au < down ; Visual Anthropology Review Volume 17 ; 17 >
-    au < down ; Visual Anthropology Review Volume 18 ; 18 >
-    au < down ; Visual Anthropology Review Volume 19 ; 19 >
-    au < down ; Visual Anthropology Review Volume 20 ; 20 >
-    au < down ; Visual Anthropology Review Volume 21 ; 21 >
-    au < down ; Visual Anthropology Review Volume 22 ; 22 >
-    au < down ; Visual Anthropology Review Volume 23 ; 23 >
+    au < down ; 1985 ; Visual Anthropology Review Volume 1 ; 1 >
+    au < down ; 1986 ; Visual Anthropology Review Volume 2 ; 2 >
+    au < down ; 1987 ; Visual Anthropology Review Volume 3 ; 3 >
+    au < down ; 1988 ; Visual Anthropology Review Volume 4 ; 4 >
+    au < down ; 1989 ; Visual Anthropology Review Volume 5 ; 5 >
+    au < down ; 1990 ; Visual Anthropology Review Volume 6 ; 6 >
+    au < down ; 1991 ; Visual Anthropology Review Volume 7 ; 7 >
+    au < down ; 1992 ; Visual Anthropology Review Volume 8 ; 8 >
+    au < down ; 1993 ; Visual Anthropology Review Volume 9 ; 9 >
+    au < down ; 1994 ; Visual Anthropology Review Volume 10 ; 10 >
+    au < down ; 1995 ; Visual Anthropology Review Volume 11 ; 11 >
+    au < down ; 1996 ; Visual Anthropology Review Volume 12 ; 12 >
+    au < down ; 1997 ; Visual Anthropology Review Volume 13 ; 13 >
+    au < down ; 1998 ; Visual Anthropology Review Volume 14 ; 14 >
+    au < down ; 1999 ; Visual Anthropology Review Volume 15 ; 15 >
+    au < down ; 2000 ; Visual Anthropology Review Volume 16 ; 16 >
+    au < down ; 2001 ; Visual Anthropology Review Volume 17 ; 17 >
+    au < down ; 2002 ; Visual Anthropology Review Volume 18 ; 18 >
+    au < down ; 2003 ; Visual Anthropology Review Volume 19 ; 19 >
+    au < down ; 2004 ; Visual Anthropology Review Volume 20 ; 20 >
+    au < down ; 2005 ; Visual Anthropology Review Volume 21 ; 21 >
+    au < down ; 2006 ; Visual Anthropology Review Volume 22 ; 22 >
+    au < down ; 2007 ; Visual Anthropology Review Volume 23 ; 23 >
     
   }
 
@@ -955,11 +955,11 @@
     
     param[journal_id] = vo
 
-    au < down ; Voice Volume 1 ; 1 >
-    au < down ; Voice Volume 2 ; 2 >
-    au < down ; Voice Volume 4 ; 4 >
-    au < down ; Voice Volume 5 ; 5 >
-    au < down ; Voice Volume 6 ; 6 >
+    au < down ; 1996 ; Voice Volume 1 ; 1 >
+    au < down ; 1998 ; Voice Volume 2 ; 2 >
+    au < down ; 2000 ; Voice Volume 4 ; 4 >
+    au < down ; 2001 ; Voice Volume 5 ; 5 >
+    au < down ; 2002 ; Voice Volume 6 ; 6 >
     
   }
     

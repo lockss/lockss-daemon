@@ -15,36 +15,36 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.jacn.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; Journal of the American College of Nutrition Volume 1 ; 1 >
-    au < manifest ; Journal of the American College of Nutrition Volume 2 ; 2 >
-    au < manifest ; Journal of the American College of Nutrition Volume 3 ; 3 >
-    au < manifest ; Journal of the American College of Nutrition Volume 4 ; 4 >
-    au < manifest ; Journal of the American College of Nutrition Volume 5 ; 5 >
-    au < manifest ; Journal of the American College of Nutrition Volume 6 ; 6 >
-    au < manifest ; Journal of the American College of Nutrition Volume 7 ; 7 >
-    au < manifest ; Journal of the American College of Nutrition Volume 8 ; 8 >
-    au < manifest ; Journal of the American College of Nutrition Volume 9 ; 9 >
-    au < manifest ; Journal of the American College of Nutrition Volume 10 ; 10 >
-    au < manifest ; Journal of the American College of Nutrition Volume 11 ; 11 >
-    au < manifest ; Journal of the American College of Nutrition Volume 12 ; 12 >
-    au < manifest ; Journal of the American College of Nutrition Volume 13 ; 13 >
-    au < manifest ; Journal of the American College of Nutrition Volume 14 ; 14 >
-    au < manifest ; Journal of the American College of Nutrition Volume 15 ; 15 >
-    au < manifest ; Journal of the American College of Nutrition Volume 16 ; 16 >
-    au < manifest ; Journal of the American College of Nutrition Volume 17 ; 17 >
-    au < manifest ; Journal of the American College of Nutrition Volume 18 ; 18 >
-    au < manifest ; Journal of the American College of Nutrition Volume 19 ; 19 >
-    au < manifest ; Journal of the American College of Nutrition Volume 20 ; 20 >
-    au < manifest ; Journal of the American College of Nutrition Volume 21 ; 21 >
-    au < manifest ; Journal of the American College of Nutrition Volume 22 ; 22 >
-    au < manifest ; Journal of the American College of Nutrition Volume 23 ; 23 >
-    au < manifest ; Journal of the American College of Nutrition Volume 24 ; 24 >
-    au < manifest ; Journal of the American College of Nutrition Volume 25 ; 25 >
-    au < manifest ; Journal of the American College of Nutrition Volume 26 ; 26 >
-    au < manifest ; Journal of the American College of Nutrition Volume 27 ; 27 >
-    au < manifest ; Journal of the American College of Nutrition Volume 28 ; 28 >
+    au < manifest ; 1982 ; Journal of the American College of Nutrition Volume 1 ; 1 >
+    au < manifest ; 1983 ; Journal of the American College of Nutrition Volume 2 ; 2 >
+    au < manifest ; 1984 ; Journal of the American College of Nutrition Volume 3 ; 3 >
+    au < manifest ; 1985 ; Journal of the American College of Nutrition Volume 4 ; 4 >
+    au < manifest ; 1986 ; Journal of the American College of Nutrition Volume 5 ; 5 >
+    au < manifest ; 1987 ; Journal of the American College of Nutrition Volume 6 ; 6 >
+    au < manifest ; 1988 ; Journal of the American College of Nutrition Volume 7 ; 7 >
+    au < manifest ; 1989 ; Journal of the American College of Nutrition Volume 8 ; 8 >
+    au < manifest ; 1990 ; Journal of the American College of Nutrition Volume 9 ; 9 >
+    au < manifest ; 1991 ; Journal of the American College of Nutrition Volume 10 ; 10 >
+    au < manifest ; 1992 ; Journal of the American College of Nutrition Volume 11 ; 11 >
+    au < manifest ; 1993 ; Journal of the American College of Nutrition Volume 12 ; 12 >
+    au < manifest ; 1994 ; Journal of the American College of Nutrition Volume 13 ; 13 >
+    au < manifest ; 1995 ; Journal of the American College of Nutrition Volume 14 ; 14 >
+    au < manifest ; 1996 ; Journal of the American College of Nutrition Volume 15 ; 15 >
+    au < manifest ; 1997 ; Journal of the American College of Nutrition Volume 16 ; 16 >
+    au < manifest ; 1998 ; Journal of the American College of Nutrition Volume 17 ; 17 >
+    au < manifest ; 1999 ; Journal of the American College of Nutrition Volume 18 ; 18 >
+    au < manifest ; 2000 ; Journal of the American College of Nutrition Volume 19 ; 19 >
+    au < manifest ; 2001 ; Journal of the American College of Nutrition Volume 20 ; 20 >
+    au < manifest ; 2002 ; Journal of the American College of Nutrition Volume 21 ; 21 >
+    au < manifest ; 2003 ; Journal of the American College of Nutrition Volume 22 ; 22 >
+    au < manifest ; 2004 ; Journal of the American College of Nutrition Volume 23 ; 23 >
+    au < manifest ; 2005 ; Journal of the American College of Nutrition Volume 24 ; 24 >
+    au < manifest ; 2006 ; Journal of the American College of Nutrition Volume 25 ; 25 >
+    au < manifest ; 2007 ; Journal of the American College of Nutrition Volume 26 ; 26 >
+    au < manifest ; 2008 ; Journal of the American College of Nutrition Volume 27 ; 27 >
+    au < manifest ; 2009 ; Journal of the American College of Nutrition Volume 28 ; 28 >
 
   }
 

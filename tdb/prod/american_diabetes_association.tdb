@@ -17,17 +17,17 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://clinical.diabetesjournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Clinical Diabetes Volume 19 ; 19 >
-      au < exists ; Clinical Diabetes Volume 20 ; 20 >
-      au < exists ; Clinical Diabetes Volume 21 ; 21 >
-      au < exists ; Clinical Diabetes Volume 22 ; 22 >
-      au < exists ; Clinical Diabetes Volume 23 ; 23 >
-      au < exists ; Clinical Diabetes Volume 24 ; 24 >
-      au < exists ; Clinical Diabetes Volume 25 ; 25 >
-      au < exists ; Clinical Diabetes Volume 26 ; 26 >
-      au < exists ; Clinical Diabetes Volume 27 ; 27 >
+      au < exists ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
+      au < exists ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
+      au < exists ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
+      au < exists ; 2004 ; Clinical Diabetes Volume 22 ; 22 >
+      au < exists ; 2005 ; Clinical Diabetes Volume 23 ; 23 >
+      au < exists ; 2006 ; Clinical Diabetes Volume 24 ; 24 >
+      au < exists ; 2007 ; Clinical Diabetes Volume 25 ; 25 >
+      au < exists ; 2008 ; Clinical Diabetes Volume 26 ; 26 >
+      au < exists ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
 
     }
 
@@ -47,52 +47,52 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://diabetes.diabetesjournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Diabetes Volume 15 ; 15 >
-      au < exists ; Diabetes Volume 16 ; 16 >
-      au < exists ; Diabetes Volume 17 ; 17 >
-      au < exists ; Diabetes Volume 18 ; 18 >
-      au < exists ; Diabetes Volume 19 ; 19 >
-      au < exists ; Diabetes Volume 20 ; 20 >
-      au < exists ; Diabetes Volume 21 ; 21 >
-      au < exists ; Diabetes Volume 22 ; 22 >
-      au < exists ; Diabetes Volume 23 ; 23 >
-      au < exists ; Diabetes Volume 24 ; 24 >
-      au < exists ; Diabetes Volume 25 ; 25 >
-      au < exists ; Diabetes Volume 26 ; 26 >
-      au < exists ; Diabetes Volume 27 ; 27 >
-      au < exists ; Diabetes Volume 28 ; 28 >
-      au < exists ; Diabetes Volume 29 ; 29 >
-      au < exists ; Diabetes Volume 30 ; 30 >
-      au < exists ; Diabetes Volume 31 ; 31 >
-      au < exists ; Diabetes Volume 32 ; 32 >
-      au < exists ; Diabetes Volume 33 ; 33 >
-      au < exists ; Diabetes Volume 34 ; 34 >
-      au < exists ; Diabetes Volume 35 ; 35 >
-      au < exists ; Diabetes Volume 36 ; 36 >
-      au < exists ; Diabetes Volume 37 ; 37 >
-      au < exists ; Diabetes Volume 38 ; 38 >
-      au < exists ; Diabetes Volume 39 ; 39 >
-      au < exists ; Diabetes Volume 40 ; 40 >
-      au < exists ; Diabetes Volume 41 ; 41 >
-      au < exists ; Diabetes Volume 42 ; 42 >
-      au < exists ; Diabetes Volume 43 ; 43 >
-      au < exists ; Diabetes Volume 44 ; 44 >
-      au < exists ; Diabetes Volume 45 ; 45 >
-      au < exists ; Diabetes Volume 46 ; 46 >
-      au < exists ; Diabetes Volume 47 ; 47 >
-      au < exists ; Diabetes Volume 48 ; 48 >
-      au < exists ; Diabetes Volume 49 ; 49 >
-      au < exists ; Diabetes Volume 50 ; 50 >
-      au < exists ; Diabetes Volume 51 ; 51 >
-      au < exists ; Diabetes Volume 52 ; 52 >
-      au < exists ; Diabetes Volume 53 ; 53 >
-      au < exists ; Diabetes Volume 54 ; 54 >
-      au < exists ; Diabetes Volume 55 ; 55 >
-      au < exists ; Diabetes Volume 56 ; 56 >
-      au < exists ; Diabetes Volume 57 ; 57 >
-      au < exists ; Diabetes Volume 58 ; 58 >
+      au < exists ; 1966 ; Diabetes Volume 15 ; 15 >
+      au < exists ; 1967 ; Diabetes Volume 16 ; 16 >
+      au < exists ; 1968 ; Diabetes Volume 17 ; 17 >
+      au < exists ; 1969 ; Diabetes Volume 18 ; 18 >
+      au < exists ; 1970 ; Diabetes Volume 19 ; 19 >
+      au < exists ; 1971 ; Diabetes Volume 20 ; 20 >
+      au < exists ; 1972 ; Diabetes Volume 21 ; 21 >
+      au < exists ; 1973 ; Diabetes Volume 22 ; 22 >
+      au < exists ; 1974 ; Diabetes Volume 23 ; 23 >
+      au < exists ; 1975 ; Diabetes Volume 24 ; 24 >
+      au < exists ; 1976 ; Diabetes Volume 25 ; 25 >
+      au < exists ; 1977 ; Diabetes Volume 26 ; 26 >
+      au < exists ; 1978 ; Diabetes Volume 27 ; 27 >
+      au < exists ; 1979 ; Diabetes Volume 28 ; 28 >
+      au < exists ; 1980 ; Diabetes Volume 29 ; 29 >
+      au < exists ; 1981 ; Diabetes Volume 30 ; 30 >
+      au < exists ; 1982 ; Diabetes Volume 31 ; 31 >
+      au < exists ; 1983 ; Diabetes Volume 32 ; 32 >
+      au < exists ; 1984 ; Diabetes Volume 33 ; 33 >
+      au < exists ; 1985 ; Diabetes Volume 34 ; 34 >
+      au < exists ; 1986 ; Diabetes Volume 35 ; 35 >
+      au < exists ; 1987 ; Diabetes Volume 36 ; 36 >
+      au < exists ; 1988 ; Diabetes Volume 37 ; 37 >
+      au < exists ; 1989 ; Diabetes Volume 38 ; 38 >
+      au < exists ; 1990 ; Diabetes Volume 39 ; 39 >
+      au < exists ; 1991 ; Diabetes Volume 40 ; 40 >
+      au < exists ; 1992 ; Diabetes Volume 41 ; 41 >
+      au < exists ; 1993 ; Diabetes Volume 42 ; 42 >
+      au < exists ; 1994 ; Diabetes Volume 43 ; 43 >
+      au < exists ; 1995 ; Diabetes Volume 44 ; 44 >
+      au < exists ; 1996 ; Diabetes Volume 45 ; 45 >
+      au < exists ; 1997 ; Diabetes Volume 46 ; 46 >
+      au < exists ; 1998 ; Diabetes Volume 47 ; 47 >
+      au < exists ; 1999 ; Diabetes Volume 48 ; 48 >
+      au < exists ; 2000 ; Diabetes Volume 49 ; 49 >
+      au < exists ; 2001 ; Diabetes Volume 50 ; 50 >
+      au < exists ; 2002 ; Diabetes Volume 51 ; 51 >
+      au < exists ; 2003 ; Diabetes Volume 52 ; 52 >
+      au < exists ; 2004 ; Diabetes Volume 53 ; 53 >
+      au < exists ; 2005 ; Diabetes Volume 54 ; 54 >
+      au < exists ; 2006 ; Diabetes Volume 55 ; 55 >
+      au < exists ; 2007 ; Diabetes Volume 56 ; 56 >
+      au < exists ; 2008 ; Diabetes Volume 57 ; 57 >
+      au < exists ; 2009 ; Diabetes Volume 58 ; 58 >
 
     }
 
@@ -112,40 +112,40 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://care.diabetesjournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Diabetes Care Volume 1 ; 1 >
-      au < exists ; Diabetes Care Volume 2 ; 2 >
-      au < exists ; Diabetes Care Volume 3 ; 3 >
-      au < exists ; Diabetes Care Volume 4 ; 4 >
-      au < exists ; Diabetes Care Volume 5 ; 5 >
-      au < exists ; Diabetes Care Volume 6 ; 6 >
-      au < exists ; Diabetes Care Volume 7 ; 7 >
-      au < exists ; Diabetes Care Volume 8 ; 8 >
-      au < exists ; Diabetes Care Volume 9 ; 9 >
-      au < exists ; Diabetes Care Volume 10 ; 10 >
-      au < exists ; Diabetes Care Volume 11 ; 11 >
-      au < exists ; Diabetes Care Volume 12 ; 12 >
-      au < exists ; Diabetes Care Volume 13 ; 13 >
-      au < exists ; Diabetes Care Volume 14 ; 14 >
-      au < exists ; Diabetes Care Volume 15 ; 15 >
-      au < exists ; Diabetes Care Volume 16 ; 16 >
-      au < exists ; Diabetes Care Volume 17 ; 17 >
-      au < exists ; Diabetes Care Volume 18 ; 18 >
-      au < exists ; Diabetes Care Volume 19 ; 19 >
-      au < exists ; Diabetes Care Volume 20 ; 20 >
-      au < exists ; Diabetes Care Volume 21 ; 21 >
-      au < exists ; Diabetes Care Volume 22 ; 22 >
-      au < exists ; Diabetes Care Volume 23 ; 23 >
-      au < exists ; Diabetes Care Volume 24 ; 24 >
-      au < exists ; Diabetes Care Volume 25 ; 25 >
-      au < exists ; Diabetes Care Volume 26 ; 26 >
-      au < exists ; Diabetes Care Volume 27 ; 27 >
-      au < exists ; Diabetes Care Volume 28 ; 28 >
-      au < exists ; Diabetes Care Volume 29 ; 29 >
-      au < exists ; Diabetes Care Volume 30 ; 30 >
-      au < exists ; Diabetes Care Volume 31 ; 31 >
-      au < exists ; Diabetes Care Volume 32 ; 32 >
+      au < exists ; 1978 ; Diabetes Care Volume 1 ; 1 >
+      au < exists ; 1979 ; Diabetes Care Volume 2 ; 2 >
+      au < exists ; 1980 ; Diabetes Care Volume 3 ; 3 >
+      au < exists ; 1981 ; Diabetes Care Volume 4 ; 4 >
+      au < exists ; 1982 ; Diabetes Care Volume 5 ; 5 >
+      au < exists ; 1983 ; Diabetes Care Volume 6 ; 6 >
+      au < exists ; 1984 ; Diabetes Care Volume 7 ; 7 >
+      au < exists ; 1985 ; Diabetes Care Volume 8 ; 8 >
+      au < exists ; 1986 ; Diabetes Care Volume 9 ; 9 >
+      au < exists ; 1987 ; Diabetes Care Volume 10 ; 10 >
+      au < exists ; 1988 ; Diabetes Care Volume 11 ; 11 >
+      au < exists ; 1989 ; Diabetes Care Volume 12 ; 12 >
+      au < exists ; 1990 ; Diabetes Care Volume 13 ; 13 >
+      au < exists ; 1991 ; Diabetes Care Volume 14 ; 14 >
+      au < exists ; 1992 ; Diabetes Care Volume 15 ; 15 >
+      au < exists ; 1993 ; Diabetes Care Volume 16 ; 16 >
+      au < exists ; 1994 ; Diabetes Care Volume 17 ; 17 >
+      au < exists ; 1995 ; Diabetes Care Volume 18 ; 18 >
+      au < exists ; 1996 ; Diabetes Care Volume 19 ; 19 >
+      au < exists ; 1997 ; Diabetes Care Volume 20 ; 20 >
+      au < exists ; 1998 ; Diabetes Care Volume 21 ; 21 >
+      au < exists ; 1999 ; Diabetes Care Volume 22 ; 22 >
+      au < exists ; 2000 ; Diabetes Care Volume 23 ; 23 >
+      au < exists ; 2001 ; Diabetes Care Volume 24 ; 24 >
+      au < exists ; 2002 ; Diabetes Care Volume 25 ; 25 >
+      au < exists ; 2003 ; Diabetes Care Volume 26 ; 26 >
+      au < exists ; 2004 ; Diabetes Care Volume 27 ; 27 >
+      au < exists ; 2005 ; Diabetes Care Volume 28 ; 28 >
+      au < exists ; 2006 ; Diabetes Care Volume 29 ; 29 >
+      au < exists ; 2007 ; Diabetes Care Volume 30 ; 30 >
+      au < exists ; 2008 ; Diabetes Care Volume 31 ; 31 >
+      au < exists ; 2009 ; Diabetes Care Volume 32 ; 32 >
 
     }
 
@@ -165,17 +165,17 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://spectrum.diabetesjournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Diabetes Spectrum Volume 14 ; 14 >
-      au < exists ; Diabetes Spectrum Volume 15 ; 15 >
-      au < exists ; Diabetes Spectrum Volume 16 ; 16 >
-      au < exists ; Diabetes Spectrum Volume 17 ; 17 >
-      au < exists ; Diabetes Spectrum Volume 18 ; 18 >
-      au < exists ; Diabetes Spectrum Volume 19 ; 19 >
-      au < exists ; Diabetes Spectrum Volume 20 ; 20 >
-      au < exists ; Diabetes Spectrum Volume 21 ; 21 >
-      au < exists ; Diabetes Spectrum Volume 22 ; 22 >
+      au < exists ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
+      au < exists ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
+      au < exists ; 2003 ; Diabetes Spectrum Volume 16 ; 16 >
+      au < exists ; 2004 ; Diabetes Spectrum Volume 17 ; 17 >
+      au < exists ; 2005 ; Diabetes Spectrum Volume 18 ; 18 >
+      au < exists ; 2006 ; Diabetes Spectrum Volume 19 ; 19 >
+      au < exists ; 2007 ; Diabetes Spectrum Volume 20 ; 20 >
+      au < exists ; 2008 ; Diabetes Spectrum Volume 21 ; 21 >
+      au < exists ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
 
     }
 
@@ -195,13 +195,13 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://docnews.diabetesjournals.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; DOC News Volume 1 ; 1 >
-      au < exists ; DOC News Volume 2 ; 2 >
-      au < exists ; DOC News Volume 3 ; 3 >
-      au < exists ; DOC News Volume 4 ; 4 >
-      au < exists ; DOC News Volume 5 ; 5 >
+      au < exists ; 2004 ; DOC News Volume 1 ; 1 >
+      au < exists ; 2005 ; DOC News Volume 2 ; 2 >
+      au < exists ; 2006 ; DOC News Volume 3 ; 3 >
+      au < exists ; 2007 ; DOC News Volume 4 ; 4 >
+      au < exists ; 2008 ; DOC News Volume 5 ; 5 >
 
     }
 

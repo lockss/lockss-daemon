@@ -3,7 +3,7 @@
     name = African Studies Association
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,10 +18,10 @@
 
     param[journal_dir] = african_studies_review
 
-    au < released ; African Studies Review Volume 48 ; 48 >
-    au < released ; African Studies Review Volume 49 ; 49 >
-    au < released ; African Studies Review Volume 50 ; 50 >
-    au < released ; African Studies Review Volume 51 ; 51 >
+    au < released ; 2005 ; African Studies Review Volume 48 ; 48 >
+    au < released ; 2006 ; African Studies Review Volume 49 ; 49 >
+    au < released ; 2007 ; African Studies Review Volume 50 ; 50 >
+    au < released ; 2008 ; African Studies Review Volume 51 ; 51 >
     
   }
 
@@ -35,10 +35,10 @@
 
     param[journal_dir] = history_in_africa
 
-    au < released ; History in Africa Volume 32 ; 32 >
-    au < released ; History in Africa Volume 33 ; 33 >
-    au < released ; History in Africa Volume 34 ; 34 >
-    au < released ; History in Africa Volume 35 ; 35 >
+    au < released ; 2005 ; History in Africa Volume 32 ; 32 >
+    au < released ; 2006 ; History in Africa Volume 33 ; 33 >
+    au < released ; 2007 ; History in Africa Volume 34 ; 34 >
+    au < released ; 2008 ; History in Africa Volume 35 ; 35 >
 
   }
 
