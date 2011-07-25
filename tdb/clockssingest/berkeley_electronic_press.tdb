@@ -31,11 +31,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] =  apjri
 
-    au < manifest ; manifest ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 >
-    au < manifest ; manifest ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
-    au < manifest ; manifest ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 >
-    au < manifest ; manifest ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 >
-    au < manifest ; manifest ; 2010 ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 >
+    au < manifest ; exists ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 >
+    au < manifest ; exists ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
+    au < manifest ; exists ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 >
+    au < manifest ; exists ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 >
+    au < manifest ; exists ; 2010 ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 >
 
   }
 
@@ -54,7 +54,7 @@
     au < released ; crawling ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 >
-    au < manifest ; exists ; 2011 ; Asian Journal of Comparative Law Volume 6 ; 6 >
+    au < testing ; exists ; 2011 ; Asian Journal of Comparative Law Volume 6 ; 6 >
     
   }
 
