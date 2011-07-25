@@ -27226,6 +27226,8 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
         comment[phfes] = Not published by Sage as of 20110628
 
+        au < doesNotExist ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 1 ; 1 >
+
       }
 
     }
@@ -27966,41 +27968,41 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 1 ; 1 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 2 ; 2 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 3 ; 3 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 4 ; 4 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 5 ; 5 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 6 ; 6 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 7 ; 7 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 8 ; 8 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 9 ; 9 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 10 ; 10 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 11 ; 11 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 12 ; 12 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 13 ; 13 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 14 ; 14 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 15 ; 15 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 16 ; 16 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 17 ; 17 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 18 ; 18 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 19 ; 19 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 20 ; 20 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 21 ; 21 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 22 ; 22 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 23 ; 23 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 24 ; 24 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 25 ; 25 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 26 ; 26 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 27 ; 27 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 28 ; 28 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 29 ; 29 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 30 ; 30 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 31 ; 31 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 32 ; 32 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 33 ; 33 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 34 ; 34 >
-        au < exists ; 0 ; Prosthetics and Orthotics International Volume 35 ; 35 >
+        au < exists ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 >
+        au < exists ; 1978 ; Prosthetics and Orthotics International Volume 2 ; 2 >
+        au < exists ; 1979 ; Prosthetics and Orthotics International Volume 3 ; 3 >
+        au < exists ; 1980 ; Prosthetics and Orthotics International Volume 4 ; 4 >
+        au < exists ; 1981 ; Prosthetics and Orthotics International Volume 5 ; 5 >
+        au < exists ; 1982 ; Prosthetics and Orthotics International Volume 6 ; 6 >
+        au < exists ; 1983 ; Prosthetics and Orthotics International Volume 7 ; 7 >
+        au < exists ; 1984 ; Prosthetics and Orthotics International Volume 8 ; 8 >
+        au < exists ; 1985 ; Prosthetics and Orthotics International Volume 9 ; 9 >
+        au < exists ; 1986 ; Prosthetics and Orthotics International Volume 10 ; 10 >
+        au < exists ; 1987 ; Prosthetics and Orthotics International Volume 11 ; 11 >
+        au < exists ; 1988 ; Prosthetics and Orthotics International Volume 12 ; 12 >
+        au < exists ; 1989 ; Prosthetics and Orthotics International Volume 13 ; 13 >
+        au < exists ; 1990 ; Prosthetics and Orthotics International Volume 14 ; 14 >
+        au < exists ; 1991 ; Prosthetics and Orthotics International Volume 15 ; 15 >
+        au < exists ; 1992 ; Prosthetics and Orthotics International Volume 16 ; 16 >
+        au < exists ; 1993 ; Prosthetics and Orthotics International Volume 17 ; 17 >
+        au < exists ; 1994 ; Prosthetics and Orthotics International Volume 18 ; 18 >
+        au < exists ; 1995 ; Prosthetics and Orthotics International Volume 19 ; 19 >
+        au < exists ; 1996 ; Prosthetics and Orthotics International Volume 20 ; 20 >
+        au < exists ; 1997 ; Prosthetics and Orthotics International Volume 21 ; 21 >
+        au < exists ; 1998 ; Prosthetics and Orthotics International Volume 22 ; 22 >
+        au < exists ; 1999 ; Prosthetics and Orthotics International Volume 23 ; 23 >
+        au < exists ; 2000 ; Prosthetics and Orthotics International Volume 24 ; 24 >
+        au < exists ; 2001 ; Prosthetics and Orthotics International Volume 25 ; 25 >
+        au < exists ; 2002 ; Prosthetics and Orthotics International Volume 26 ; 26 >
+        au < exists ; 2003 ; Prosthetics and Orthotics International Volume 27 ; 27 >
+        au < exists ; 2004 ; Prosthetics and Orthotics International Volume 28 ; 28 >
+        au < exists ; 2005 ; Prosthetics and Orthotics International Volume 29 ; 29 >
+        au < exists ; 2006 ; Prosthetics and Orthotics International Volume 30 ; 30 >
+        au < exists ; 2007 ; Prosthetics and Orthotics International Volume 31 ; 31 >
+        au < exists ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 >
+        au < exists ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 >
+        au < manifest ; 2010 ; Prosthetics and Orthotics International Volume 34 ; 34 >
+        au < manifest ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 >
 
       }
 
