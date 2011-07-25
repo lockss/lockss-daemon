@@ -14,16 +14,17 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.lifescied.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; CBE - Life Sciences Education Volume 1 ; 1 >
-      au < released ; CBE - Life Sciences Education Volume 2 ; 2 >
-      au < released ; CBE - Life Sciences Education Volume 3 ; 3 >
-      au < released ; CBE - Life Sciences Education Volume 4 ; 4 >
-      au < released ; CBE - Life Sciences Education Volume 5 ; 5 >
-      au < testing ; CBE - Life Sciences Education Volume 6 ; 6 >
-      au < released ; CBE - Life Sciences Education Volume 7 ; 7 >
-      au < released ; CBE - Life Sciences Education Volume 8 ; 8 >
+      au < released ; 2002 ; CBE - Life Sciences Education Volume 1 ; 1 >
+      au < released ; 2003 ; CBE - Life Sciences Education Volume 2 ; 2 >
+      au < released ; 2004 ; CBE - Life Sciences Education Volume 3 ; 3 >
+      au < released ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
+      au < ready ; 2006 ; CBE - Life Sciences Education Volume 5 ; 5 >
+      au < testing ; 2007 ; CBE - Life Sciences Education Volume 6 ; 6 >
+      au < ready ; 2008 ; CBE - Life Sciences Education Volume 7 ; 7 >
+      au < ready ; 2009 ; CBE - Life Sciences Education Volume 8 ; 8 >
+
 
     }
 
@@ -41,26 +42,26 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.molbiolcell.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; Molecular Biology of the Cell Volume 3 ; 3 >
-      au < released ; Molecular Biology of the Cell Volume 4 ; 4 >
-      au < released ; Molecular Biology of the Cell Volume 5 ; 5 >
-      au < released ; Molecular Biology of the Cell Volume 6 ; 6 >
-      au < released ; Molecular Biology of the Cell Volume 7 ; 7 >
-      au < released ; Molecular Biology of the Cell Volume 8 ; 8 >
-      au < released ; Molecular Biology of the Cell Volume 9 ; 9 >
-      au < released ; Molecular Biology of the Cell Volume 10 ; 10 >
-      au < released ; Molecular Biology of the Cell Volume 11 ; 11 >
-      au < released ; Molecular Biology of the Cell Volume 12 ; 12 >
-      au < testing ; Molecular Biology of the Cell Volume 13 ; 13 >
-      au < released ; Molecular Biology of the Cell Volume 14 ; 14 >
-      au < released ; Molecular Biology of the Cell Volume 15 ; 15 >
-      au < testing ; Molecular Biology of the Cell Volume 16 ; 16 >
-      au < testing ; Molecular Biology of the Cell Volume 17 ; 17 >
-      au < released ; Molecular Biology of the Cell Volume 18 ; 18 >
-      au < released ; Molecular Biology of the Cell Volume 19 ; 19 >
-      au < released ; Molecular Biology of the Cell Volume 20 ; 20 >
+      au < released ; 1992 ; Molecular Biology of the Cell Volume 3 ; 3 >
+      au < released ; 1993 ; Molecular Biology of the Cell Volume 4 ; 4 >
+      au < released ; 1994 ; Molecular Biology of the Cell Volume 5 ; 5 >
+      au < released ; 1995 ; Molecular Biology of the Cell Volume 6 ; 6 >
+      au < ready ; 1996 ; Molecular Biology of the Cell Volume 7 ; 7 >
+      au < ready ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
+      au < testing ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
+      au < testing ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
+      au < ready ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
+      au < ready ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
+      au < testing ; 2002 ; Molecular Biology of the Cell Volume 13 ; 13 >
+      au < testing ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
+      au < testing ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
+      au < testing ; 2005 ; Molecular Biology of the Cell Volume 16 ; 16 >
+      au < testing ; 2006 ; Molecular Biology of the Cell Volume 17 ; 17 >
+      au < testing ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
+      au < ready ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
+      au < ready ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
 
     }
 
