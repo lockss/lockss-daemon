@@ -218,7 +218,7 @@
   
     plugin = org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin
     param[base_url] = http://www.psychiatryonline.com/
-    implicit < status ; name >
+    implicit < status ; year ; name >
 
     {
 
@@ -231,7 +231,7 @@
 
       param[resource_id] = 5
 
-      au < down ; The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition) >
+      au < down ; 2009 ; The American Psychiatric Publishing Textbook of Clinical Psychiatry (4th Edition) >
 
     }
 
@@ -246,7 +246,7 @@
 
       param[resource_id] = 7
 
-      au < down ; Essentials of Clinical Psychopharmacology (2nd Edition) >
+      au < down ; 2007 ; Essentials of Clinical Psychopharmacology (2nd Edition) >
 
     }
 
@@ -261,7 +261,7 @@
 
       param[resource_id] = 29
 
-      au < down ; Manual of Clinical Psychopharmacology (6th Edition) >
+      au < down ; 2000 ; Manual of Clinical Psychopharmacology (6th Edition) >
 
     }
 

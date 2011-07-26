@@ -17,9 +17,9 @@
       rights = openaccess
       plugin = uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin
       param[base_url] = http://psycprints.ecs.soton.ac.uk/
-      implicit < status ; name >
+      implicit < status ; year ; name >
       
-      au < superseded ; Psycoloquy [superseded] >
+      au < superseded ; 2002 ; Psycoloquy [superseded] >
       
     }
     

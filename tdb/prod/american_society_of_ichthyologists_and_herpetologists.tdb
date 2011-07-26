@@ -18,16 +18,16 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0045-8511
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
   
-      au < superseded ; Copeia 2000 ; 2000 >
-      au < superseded ; Copeia 2001 ; 2001 >
-      au < superseded ; Copeia 2002 ; 2002 >
-      au < superseded ; Copeia 2003 ; 2003 >
-      au < superseded ; Copeia 2004 ; 2004 >
-      au < superseded ; Copeia 2005 ; 2005 >
-      au < superseded ; Copeia 2006 ; 2006 >
-      au < superseded ; Copeia 2007 ; 2007 >
+      au < superseded ; 2000 ; Copeia 2000 ; 2000 >
+      au < superseded ; 2001 ; Copeia 2001 ; 2001 >
+      au < superseded ; 2002 ; Copeia 2002 ; 2002 >
+      au < superseded ; 2003 ; Copeia 2003 ; 2003 >
+      au < superseded ; 2004 ; Copeia 2004 ; 2004 >
+      au < superseded ; 2005 ; Copeia 2005 ; 2005 >
+      au < superseded ; 2006 ; Copeia 2006 ; 2006 >
+      au < superseded ; 2007 ; Copeia 2007 ; 2007 >
       
     }
     
@@ -36,19 +36,19 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       param[base_url] = http://www.bioone.org/
       param[journal_code] = cope
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < doNotProcess ; Copeia 2000 ; 2000 >  
-      au < doNotProcess ; Copeia 2001 ; 2001 >  
-      au < doNotProcess ; Copeia 2002 ; 2002 >  
-      au < doNotProcess ; Copeia 2003 ; 2003 >  
-      au < doNotProcess ; Copeia 2004 ; 2004 >  
-      au < doNotProcess ; Copeia 2005 ; 2005 >  
-      au < doNotProcess ; Copeia 2006 ; 2006 >  
-      au < doNotProcess ; Copeia 2007 ; 2007 >  
-      au < exists ; Copeia 2008 ; 2008 >  
-      au < exists ; Copeia 2009 ; 2009 >  
-      au < exists ; Copeia 2010 ; 2010 >  
+      au < doNotProcess ; 2000 ; Copeia 2000 ; 2000 >  
+      au < doNotProcess ; 2001 ; Copeia 2001 ; 2001 >  
+      au < doNotProcess ; 2002 ; Copeia 2002 ; 2002 >  
+      au < doNotProcess ; 2003 ; Copeia 2003 ; 2003 >  
+      au < doNotProcess ; 2004 ; Copeia 2004 ; 2004 >  
+      au < doNotProcess ; 2005 ; Copeia 2005 ; 2005 >  
+      au < doNotProcess ; 2006 ; Copeia 2006 ; 2006 >  
+      au < doNotProcess ; 2007 ; Copeia 2007 ; 2007 >  
+      au < exists ; 2008 ; Copeia 2008 ; 2008 >  
+      au < exists ; 2009 ; Copeia 2009 ; 2009 >  
+      au < exists ; 2010 ; Copeia 2010 ; 2010 >  
 
     }
 

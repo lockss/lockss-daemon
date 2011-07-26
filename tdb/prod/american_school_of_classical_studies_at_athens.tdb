@@ -3,7 +3,7 @@
     name = American School of Classical Studies at Athens
   >
 
-  implicit < status ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
@@ -18,7 +18,7 @@
 
     param[journal_dir] = hesperia
 
-    au < released ; Hesperia Volume 74 ; 74 >
+    au < released ; 2005 ; Hesperia Volume 74 ; 74 >
 
   }
 
