@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.6 2011-07-16 03:31:10 dshr Exp $
+ * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.7 2011-07-26 19:48:00 dshr Exp $
  */
 
 /*
@@ -61,8 +61,7 @@ import com.intridea.io.vfs.provider.s3.S3FileProvider;
  * a warning.
  */
 
-// XXX Some tests below disabled with void dontTest because they
-// XXX fail with "can't rename".
+// XXX Status - 7/16/11 - all tests passing with Walrus & S3
 
 public class TestLockssRepositoryImplS3 extends LockssTestCase {
   private static Logger logger = Logger.getLogger("TestLockssRepositoryImplS3");
@@ -108,23 +107,29 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
       host = env.get("S3_HOST");
       accessKey = env.get("EC2_ACCESS_KEY");
       secretKey = env.get("EC2_SECRET_KEY");
-      System.setProperty("s3service.https-only", "true");
+      if (host != null && accessKey != null && secretKey != null) {
+        System.setProperty("s3service.https-only", "true");
+      }
     } else if ("ias3".equals(serviceName)) {
       host = env.get("IAS3_HOST");
       accessKey = env.get("IAS3_ACCESS_KEY");
       secretKey = env.get("IAS3_SECRET_KEY");
-      System.setProperty("s3service.https-only", "false");
-      System.setProperty("s3service.s3-endpoint-http-port", "82");
+      if (host != null && accessKey != null && secretKey != null) {
+        System.setProperty("s3service.https-only", "false");
+        System.setProperty("s3service.s3-endpoint-http-port", "82");
+      }
     } else if ("walrus".equals(serviceName)) {
       host = env.get("WALRUS_HOST");
       accessKey = env.get("WALRUS_ACCESS_KEY");
       secretKey = env.get("WALRUS_SECRET_KEY");
-      System.setProperty("s3service.https-only", "true");
-      System.setProperty("s3service.s3-endpoint", host);
-      System.setProperty("s3service.s3-endpoint-http-port", "8773");
-      System.setProperty("s3service.s3-endpoint-https-port", "8443");
-      System.setProperty("s3service.disable-dns-buckets", "true");
-      System.setProperty("s3service.s3-endpoint-virtual-path", "/services/Walrus");
+      if (host != null && accessKey != null && secretKey != null) {
+        System.setProperty("s3service.https-only", "true");
+        System.setProperty("s3service.s3-endpoint", host);
+        System.setProperty("s3service.s3-endpoint-http-port", "8773");
+        System.setProperty("s3service.s3-endpoint-https-port", "8443");
+        System.setProperty("s3service.disable-dns-buckets", "true");
+        System.setProperty("s3service.s3-endpoint-virtual-path", "/services/Walrus");
+      }
     }
     Configuration config = ConfigManager.getCurrentConfig();
     String prefix = RepositoryManager.PREFIX + serviceName;
@@ -141,7 +146,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
         File.separator + ((new Date()).getTime()/1000);
       props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
   		      tempDirURI);
-      if (false) // XXX
+      if (true) // XXX
         props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
       ConfigurationUtil.setCurrentConfigFromProps(props);
       mau = new MockArchivalUnit();
@@ -154,7 +159,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return ret;
   }
 
-  public void testGetLocalRepository() throws Exception {	// XXX working
+  public void testGetLocalRepository() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetLocalRepository();
@@ -197,7 +202,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return RepositoryManager.LOCAL_REPO_PROTOCOL + path;
   }
 
-  public void testGetLocalRepositoryPath() throws Exception {	// XXX working
+  public void testGetLocalRepositoryPath() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetLocalRepositoryPath();
@@ -216,7 +221,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getLocalRepositoryPath("foo"));
   }
 
-  public void testLocalRepository_GetAuMap() {	// XXX working
+  public void testLocalRepository_GetAuMap() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestLocalRepository_GetAuMap();
@@ -247,7 +252,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
-  public void testGetRepositoryRoot() throws Exception {	// XXX working
+  public void testGetRepositoryRoot() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetRepositoryRoot();
@@ -271,7 +276,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   // but testing that would require using Runtime.exec() to create such a
   // link.  So we test only that isDirInRepository() is canonicalizing the
   // path.
-  public void testIsDirInRepository() throws Exception {	// XXX working
+  public void testIsDirInRepository() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestIsDirInRepository();
@@ -289,7 +294,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertFalse(LockssRepositoryImpl.isDirInRepository("/foo/bar", "/bar"));
   }
 
-  public void dontTestFileLocation() throws Exception {
+  public void testFileLocation() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestFileLocation();
@@ -315,7 +320,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(testFileObject.exists());
   }
 
-  public void dontTestGetRepositoryNode() throws Exception {
+  public void testGetRepositoryNode() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetRepositoryNode();
@@ -349,7 +354,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
   }
 
-  public void dontTestGetNodeWithQuery() throws Exception {
+  public void testGetNodeWithQuery() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNodeWithQuery();
@@ -373,7 +378,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     }
   }
 
-  public void dontTestGetNodeWithPort() throws Exception {
+  public void testGetNodeWithPort() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNodeWithPort();
@@ -392,7 +397,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("http://www.example.com:22/testDir", node.getNodeUrl());
   }
 
-  public void testDotUrlHandling() throws Exception {	// XXX working
+  public void testDotUrlHandling() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDotUrlHandling();
@@ -424,7 +429,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     } catch (MalformedURLException mue) { }
   }
 
-  public void testCanonicalizePath() throws Exception {	// XXX working
+  public void testCanonicalizePath() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCanonicalizePath();
@@ -445,7 +450,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 		 repo.canonicalizePath("http://foo.com:20/bar/../test/"));
   }
 
-  public void dontTestGetAuNode() throws Exception {
+  public void testGetAuNode() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuNode();
@@ -478,7 +483,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  public void dontTestDeleteNode() throws Exception {
+  public void testDeleteNode() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDeleteNode();
@@ -499,7 +504,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(node.isDeleted());
   }
 
-  public void dontTestDeactivateNode() throws Exception {
+  public void testDeactivateNode() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDeactivateNode();
@@ -520,7 +525,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(node.isContentInactive());
   }
 
-  public void dontTestCaching() throws Exception {
+  public void testCaching() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCaching();
@@ -547,7 +552,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals(misses, repoImpl.getCacheMisses());
   }
 
-  public void dontTestWeakReferenceCaching() throws Exception {
+  public void testWeakReferenceCaching() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestWeakReferenceCaching();
@@ -582,7 +587,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals(refHits+1, repoImpl.getRefHits());
   }
 
-  public void dontTestConsistencyCheck() throws Exception {
+  public void testConsistencyCheck() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestConsistencyCheck();
@@ -616,7 +621,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertFalse(leaf.hasContent());
   }
 
-  public void dontTestRecursiveConsistencyCheck() throws Exception {
+  public void testRecursiveConsistencyCheck() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestRecursiveConsistencyCheck();
@@ -663,7 +668,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 
   // test static naming calls
 
-  public void testGetNextDirName() {	// XXX working
+  public void testGetNextDirName() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNextDirName();
@@ -684,7 +689,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertEquals("aaa", LockssRepositoryImpl.getNextDirName("zz"));
   }
 
-  public void testGetAuDirFromMap() {	// XXX working
+  public void testGetAuDirFromMap() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirFromMap();
@@ -703,7 +708,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 		 LockssRepositoryImpl.getAuDir(mau, "/foo", false));
   }
 
-  public void testGetAuDirFromMapNoCacheWrongRepo() {	// XXX working
+  public void testGetAuDirFromMapNoCacheWrongRepo() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirFromMapNoCacheWrongRepo();
@@ -724,7 +729,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getAuDir(mau, "/other/repo", false));
   }
 
-  public void testGetAuDirNoCreate() {	// XXX working
+  public void testGetAuDirNoCreate() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirNoCreate();
@@ -739,7 +744,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertNull(LockssRepositoryImpl.getAuDir(mau, "/tmp", false));
   }
 
-  public void testSaveAndLoadNames() throws Exception {	// XXX working
+  public void testSaveAndLoadNames() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestSaveAndLoadNames();
@@ -762,7 +767,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
                  props.getProperty(LockssRepositoryImpl.AU_ID_PROP));
   }
 
-  public void testMapAuToFileLocation() {	// XXX working
+  public void testMapAuToFileLocation() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestMapAuToFileLocation();
@@ -783,7 +788,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 							  new MockArchivalUnit()));
   }
 
-  public void testDoesAuDirExist() {	// XXX working
+  public void testDoesAuDirExist() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDoesAuDirExist();
@@ -808,7 +813,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirURI));
   }
 
-  public void testGetAuDirInitWithOne() {	// XXX working
+  public void testGetAuDirInitWithOne() {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirInitWithOne();
@@ -826,7 +831,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 							  new MockArchivalUnit()));
   }
 
-  public void testGetAuDirSkipping() throws Exception {	// XXX working
+  public void testGetAuDirSkipping() throws Exception {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirSkipping();
@@ -872,7 +877,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
 						    new MockArchivalUnit());
   }
 
-  public void testMapUrlToFileLocation() throws MalformedURLException {	// XXX working
+  public void testMapUrlToFileLocation() throws MalformedURLException {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestMapUrlToFileLocation();
@@ -900,7 +905,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     } catch (MalformedURLException mue) {}
   }
 
-  public void testCharacterEscaping() throws MalformedURLException {	// XXX working
+  public void testCharacterEscaping() throws MalformedURLException {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCharacterEscaping();
