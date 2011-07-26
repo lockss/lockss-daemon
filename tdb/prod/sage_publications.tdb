@@ -5369,12 +5369,11 @@
     {
 
       title <
-        name = Complementary Health Practice Review ;
+        name = Journal of Evidence-Based Complementary & Alternative Medicine ;
         issn = 1533-2101 ;
         eissn = 1552-3845
       >
-        comment[continued_by] = 1533-2101
-        comment[chp] = 2011-01-01 name changed to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
+        comment[chp] = 2011-01-01 name changed from Complementary Health Practice Revew to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
 
       {
 
@@ -5422,7 +5421,7 @@
         au < manifest ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 >
         au < manifest ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 >
         au < manifest ; 2010 ; Complementary Health Practice Review Volume 15 ; 15 >
-        au < doNotProcess ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 >
+        au < manifest ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 >
 
       }
 
@@ -18828,29 +18827,6 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
     {
 
       title <
-        name = Journal of Evidence-Based Complementary & Alternative Medicine ;
-        issn = 1533-2101 ;
-        eissn = 1552-3845
-      >
-        comment[continued_from] = 1533-2101
-        comment[jebcam] = 2011-01-01 name changed from Complementary Health Practice, but ISSN did not.
-
-      {
-
-        param[base_url] = http://chp.sagepub.com/
-        pluginSuffix = HighWirePressH20Plugin
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < doNotProcess ; 2010 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 15 ; 15 >
-        au < manifest ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 >
-
-      }
-
-    }
-
-    {
-
-      title <
         name = Journal of Family History ;
         issn = 0363-1990 ;
         eissn = 1552-5473 ;
@@ -29510,19 +29486,8 @@ comment[mpj] = now published by Brill
 
     {
 
-      title <
-        name = Sage Open ;
-        eissn = 2158-2440 
-      >
-
-      {
-
-        plugin = needs.plugin
-        param[base_url] = http://sgo.sagepub.com/
-        
-        comment[needs_plugin] = This journal does not seem to have AUs, but just a collection of articles.
-
-      }
+      comment[so] = Sage Open, eissn = 2158-2440, base_url = http://sgo.sagepub.com/
+      comment[needs_plugin] = This journal does not seem to have AUs, but just a collection of articles.
 
     }
 
@@ -31051,7 +31016,7 @@ comment[mpj] = now published by Brill
       {
       
         pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://http://spa.sagepub.com/
+        param[base_url] = http://spa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
         au < manifest ; 2001 ; State Politics and Policy Volume 1 ; 1 >

@@ -2197,12 +2197,14 @@
   {
   
     title <
-      name = Complementary Health Practice Review ;
+      name = Journal of Evidence-Based Complementary & Alternative Medicine ;
       issn = 1533-2101 ;
       eissn = 1552-3845
     >
+    
+      comment[jebcam] = 2011-01-01 name changed from Complementary Health Practice to Journal of Evidence-Based Complementary & Alternative Medicine, but ISSN did not.
 
-    param[base_url] = http://chp.sagepub.com/
+      param[base_url] = http://chp.sagepub.com/
 
     {
 
@@ -2219,6 +2221,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2010 ; Complementary Health Practice Review Volume 15 ; 15 ;  >
+      au < manifest ; exists ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ;  >
 
     }
 
