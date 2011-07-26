@@ -59,41 +59,41 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapnews.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; AAP News Volume 1 ; 1 >
-      au < manifest ; AAP News Volume 2 ; 2 >
-      au < manifest ; AAP News Volume 3 ; 3 >
-      au < manifest ; AAP News Volume 4 ; 4 >
-      au < manifest ; AAP News Volume 5 ; 5 >
-      au < manifest ; AAP News Volume 6 ; 6 >
-      au < manifest ; AAP News Volume 7 ; 7 >
-      au < manifest ; AAP News Volume 8 ; 8 >
-      au < manifest ; AAP News Volume 9 ; 9 >
-      au < manifest ; AAP News Volume 10 ; 10 >
-      au < manifest ; AAP News Volume 11 ; 11 >
-      au < manifest ; AAP News Volume 12 ; 12 >
-      au < manifest ; AAP News Volume 13 ; 13 >
-      au < manifest ; AAP News Volume 14 ; 14 >
-      au < manifest ; AAP News Volume 15 ; 15 >
-      au < manifest ; AAP News Volume 16 ; 16 >
-      au < manifest ; AAP News Volume 17 ; 17 >
-      au < manifest ; AAP News Volume 18 ; 18 >
-      au < manifest ; AAP News Volume 19 ; 19 >
-      au < manifest ; AAP News Volume 20 ; 20 >
-      au < manifest ; AAP News Volume 21 ; 21 >
-      au < manifest ; AAP News Volume 22 ; 22 >
-      au < manifest ; AAP News Volume 23 ; 23 >
-      au < manifest ; AAP News Volume 24 ; 24 >
-      au < manifest ; AAP News Volume 25 ; 25 >
-      au < manifest ; AAP News Volume 26 ; 26 >
-      au < manifest ; AAP News Volume 27 ; 27 >
-      au < manifest ; AAP News Volume 28 ; 28 >
-      au < manifest ; AAP News Volume 29 ; 29 >
-      au < manifest ; AAP News Volume 30 ; 30 >
-      au < manifest ; AAP News Volume 31 ; 31 >
-      au < manifest ; AAP News Volume 32 ; 32 >
-      au < manifest ; AAP News Volume 33 ; 33 >
+      au < manifest ; 1985 ; AAP News Volume 1 ; 1 >
+      au < manifest ; 1986 ; AAP News Volume 2 ; 2 >
+      au < manifest ; 1987 ; AAP News Volume 3 ; 3 >
+      au < manifest ; 1988 ; AAP News Volume 4 ; 4 >
+      au < manifest ; 1989 ; AAP News Volume 5 ; 5 >
+      au < manifest ; 1990 ; AAP News Volume 6 ; 6 >
+      au < manifest ; 1991 ; AAP News Volume 7 ; 7 >
+      au < manifest ; 1992 ; AAP News Volume 8 ; 8 >
+      au < manifest ; 1993 ; AAP News Volume 9 ; 9 >
+      au < manifest ; 1994 ; AAP News Volume 10 ; 10 >
+      au < manifest ; 1995 ; AAP News Volume 11 ; 11 >
+      au < manifest ; 1996 ; AAP News Volume 12 ; 12 >
+      au < manifest ; 1997 ; AAP News Volume 13 ; 13 >
+      au < manifest ; 1998 ; AAP News Volume 14 ; 14 >
+      au < manifest ; 1999 ; AAP News Volume 15 ; 15 >
+      au < manifest ; 2000 ; AAP News Volume 16 ; 16 >
+      au < manifest ; 2000 ; AAP News Volume 17 ; 17 >
+      au < manifest ; 2001 ; AAP News Volume 18 ; 18 >
+      au < manifest ; 2001 ; AAP News Volume 19 ; 19 >
+      au < manifest ; 2002 ; AAP News Volume 20 ; 20 >
+      au < manifest ; 2002 ; AAP News Volume 21 ; 21 >
+      au < manifest ; 2003 ; AAP News Volume 22 ; 22 >
+      au < manifest ; 2003 ; AAP News Volume 23 ; 23 >
+      au < manifest ; 2004 ; AAP News Volume 24 ; 24 >
+      au < manifest ; 2004 ; AAP News Volume 25 ; 25 >
+      au < manifest ; 2005 ; AAP News Volume 26 ; 26 >
+      au < manifest ; 2006 ; AAP News Volume 27 ; 27 >
+      au < manifest ; 2007 ; AAP News Volume 28 ; 28 >
+      au < manifest ; 2008 ; AAP News Volume 29 ; 29 >
+      au < manifest ; 2009 ; AAP News Volume 30 ; 30 >
+      au < manifest ; 2010 ; AAP News Volume 31 ; 31 >
+      au < manifest ; 2011 ; AAP News Volume 32 ; 32 >
+      au < manifest ; 2012 ; AAP News Volume 33 ; 33 >
 
     }
 
@@ -110,21 +110,21 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://neoreviews.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; NeoReviews Volume 1 ; 1 >
-      au < manifest ; NeoReviews Volume 2 ; 2 >
-      au < manifest ; NeoReviews Volume 3 ; 3 >
-      au < manifest ; NeoReviews Volume 4 ; 4 >
-      au < manifest ; NeoReviews Volume 5 ; 5 >
-      au < manifest ; NeoReviews Volume 6 ; 6 >
-      au < manifest ; NeoReviews Volume 7 ; 7 >
-      au < manifest ; NeoReviews Volume 8 ; 8 >
-      au < manifest ; NeoReviews Volume 9 ; 9 >
-      au < manifest ; NeoReviews Volume 10 ; 10 >
-      au < manifest ; NeoReviews Volume 11 ; 11 >
-      au < manifest ; NeoReviews Volume 12 ; 12 >
-      au < manifest ; NeoReviews Volume 13 ; 13 >
+      au < manifest ; 2000 ; NeoReviews Volume 1 ; 1 >
+      au < manifest ; 2001 ; NeoReviews Volume 2 ; 2 >
+      au < manifest ; 2002 ; NeoReviews Volume 3 ; 3 >
+      au < manifest ; 2003 ; NeoReviews Volume 4 ; 4 >
+      au < manifest ; 2004 ; NeoReviews Volume 5 ; 5 >
+      au < manifest ; 2005 ; NeoReviews Volume 6 ; 6 >
+      au < manifest ; 2006 ; NeoReviews Volume 7 ; 7 >
+      au < manifest ; 2007 ; NeoReviews Volume 8 ; 8 >
+      au < manifest ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < manifest ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < manifest ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < manifest ; 2011 ; NeoReviews Volume 12 ; 12 >
+      au < manifest ; 2012 ; NeoReviews Volume 13 ; 13 >
 
     }
 
@@ -142,121 +142,121 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://pediatrics.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; Pediatrics Volume 15 ; 15 >
-      au < manifest ; Pediatrics Volume 16 ; 16 >
-      au < manifest ; Pediatrics Volume 17 ; 17 >
-      au < manifest ; Pediatrics Volume 18 ; 18 >
-      au < manifest ; Pediatrics Volume 19 ; 19 >
-      au < manifest ; Pediatrics Volume 20 ; 20 >
-      au < manifest ; Pediatrics Volume 21 ; 21 >
-      au < manifest ; Pediatrics Volume 22 ; 22 >
-      au < manifest ; Pediatrics Volume 23 ; 23 >
-      au < manifest ; Pediatrics Volume 24 ; 24 >
-      au < manifest ; Pediatrics Volume 25 ; 25 >
-      au < manifest ; Pediatrics Volume 26 ; 26 >
-      au < manifest ; Pediatrics Volume 27 ; 27 >
-      au < manifest ; Pediatrics Volume 28 ; 28 >
-      au < manifest ; Pediatrics Volume 29 ; 29 >
-      au < manifest ; Pediatrics Volume 30 ; 30 >
-      au < manifest ; Pediatrics Volume 31 ; 31 >
-      au < manifest ; Pediatrics Volume 32 ; 32 >
-      au < manifest ; Pediatrics Volume 33 ; 33 >
-      au < manifest ; Pediatrics Volume 34 ; 34 >
-      au < manifest ; Pediatrics Volume 35 ; 35 >
-      au < manifest ; Pediatrics Volume 36 ; 36 >
-      au < manifest ; Pediatrics Volume 37 ; 37 >
-      au < manifest ; Pediatrics Volume 38 ; 38 >
-      au < manifest ; Pediatrics Volume 39 ; 39 >
-      au < manifest ; Pediatrics Volume 40 ; 40 >
-      au < manifest ; Pediatrics Volume 41 ; 41 >
-      au < manifest ; Pediatrics Volume 42 ; 42 >
-      au < manifest ; Pediatrics Volume 43 ; 43 >
-      au < manifest ; Pediatrics Volume 44 ; 44 >
-      au < manifest ; Pediatrics Volume 45 ; 45 >
-      au < manifest ; Pediatrics Volume 46 ; 46 >
-      au < manifest ; Pediatrics Volume 47 ; 47 >
-      au < manifest ; Pediatrics Volume 48 ; 48 >
-      au < manifest ; Pediatrics Volume 49 ; 49 >
-      au < manifest ; Pediatrics Volume 50 ; 50 >
-      au < manifest ; Pediatrics Volume 51 ; 51 >
-      au < manifest ; Pediatrics Volume 52 ; 52 >
-      au < manifest ; Pediatrics Volume 53 ; 53 >
-      au < manifest ; Pediatrics Volume 54 ; 54 >
-      au < manifest ; Pediatrics Volume 55 ; 55 >
-      au < manifest ; Pediatrics Volume 56 ; 56 >
-      au < manifest ; Pediatrics Volume 57 ; 57 >
-      au < manifest ; Pediatrics Volume 58 ; 58 >
-      au < manifest ; Pediatrics Volume 59 ; 59 >
-      au < manifest ; Pediatrics Volume 60 ; 60 >
-      au < manifest ; Pediatrics Volume 61 ; 61 >
-      au < manifest ; Pediatrics Volume 62 ; 62 >
-      au < manifest ; Pediatrics Volume 63 ; 63 >
-      au < manifest ; Pediatrics Volume 64 ; 64 >
-      au < manifest ; Pediatrics Volume 65 ; 65 >
-      au < manifest ; Pediatrics Volume 66 ; 66 >
-      au < manifest ; Pediatrics Volume 67 ; 67 >
-      au < manifest ; Pediatrics Volume 68 ; 68 >
-      au < manifest ; Pediatrics Volume 69 ; 69 >
-      au < manifest ; Pediatrics Volume 70 ; 70 >
-      au < manifest ; Pediatrics Volume 71 ; 71 >
-      au < manifest ; Pediatrics Volume 72 ; 72 >
-      au < manifest ; Pediatrics Volume 73 ; 73 >
-      au < manifest ; Pediatrics Volume 74 ; 74 >
-      au < manifest ; Pediatrics Volume 75 ; 75 >
-      au < manifest ; Pediatrics Volume 76 ; 76 >
-      au < manifest ; Pediatrics Volume 77 ; 77 >
-      au < manifest ; Pediatrics Volume 78 ; 78 >
-      au < manifest ; Pediatrics Volume 79 ; 79 >
-      au < manifest ; Pediatrics Volume 80 ; 80 >
-      au < manifest ; Pediatrics Volume 81 ; 81 >
-      au < manifest ; Pediatrics Volume 82 ; 82 >
-      au < manifest ; Pediatrics Volume 83 ; 83 >
-      au < manifest ; Pediatrics Volume 84 ; 84 >
-      au < manifest ; Pediatrics Volume 85 ; 85 >
-      au < manifest ; Pediatrics Volume 86 ; 86 >
-      au < manifest ; Pediatrics Volume 87 ; 87 >
-      au < manifest ; Pediatrics Volume 88 ; 88 >
-      au < manifest ; Pediatrics Volume 89 ; 89 >
-      au < manifest ; Pediatrics Volume 90 ; 90 >
-      au < manifest ; Pediatrics Volume 91 ; 91 >
-      au < manifest ; Pediatrics Volume 92 ; 92 >
-      au < manifest ; Pediatrics Volume 93 ; 93 >
-      au < manifest ; Pediatrics Volume 94 ; 94 >
-      au < manifest ; Pediatrics Volume 95 ; 95 >
-      au < manifest ; Pediatrics Volume 96 ; 96 >
-      au < manifest ; Pediatrics Volume 97 ; 97 >
-      au < manifest ; Pediatrics Volume 98 ; 98 >
-      au < manifest ; Pediatrics Volume 99 ; 99 >
-      au < manifest ; Pediatrics Volume 100 ; 100 >
-      au < manifest ; Pediatrics Volume 101 ; 101 >
-      au < manifest ; Pediatrics Volume 102 ; 102 >
-      au < manifest ; Pediatrics Volume 103 ; 103 >
-      au < manifest ; Pediatrics Volume 104 ; 104 >
-      au < manifest ; Pediatrics Volume 105 ; 105 >
-      au < manifest ; Pediatrics Volume 106 ; 106 >
-      au < manifest ; Pediatrics Volume 107 ; 107 >
-      au < manifest ; Pediatrics Volume 108 ; 108 >
-      au < manifest ; Pediatrics Volume 109 ; 109 >
-      au < manifest ; Pediatrics Volume 110 ; 110 >
-      au < manifest ; Pediatrics Volume 111 ; 111 >
-      au < manifest ; Pediatrics Volume 112 ; 112 >
-      au < manifest ; Pediatrics Volume 113 ; 113 >
-      au < manifest ; Pediatrics Volume 114 ; 114 >
-      au < manifest ; Pediatrics Volume 115 ; 115 >
-      au < manifest ; Pediatrics Volume 116 ; 116 >
-      au < manifest ; Pediatrics Volume 117 ; 117 >
-      au < manifest ; Pediatrics Volume 118 ; 118 >
-      au < manifest ; Pediatrics Volume 119 ; 119 >
-      au < manifest ; Pediatrics Volume 120 ; 120 >
-      au < manifest ; Pediatrics Volume 121 ; 121 >
-      au < manifest ; Pediatrics Volume 122 ; 122 >
-      au < manifest ; Pediatrics Volume 123 ; 123 >
-      au < manifest ; Pediatrics Volume 124 ; 124 >
-      au < manifest ; Pediatrics Volume 125 ; 125 >
-      au < manifest ; Pediatrics Volume 126 ; 126 >
-      au < manifest ; Pediatrics Volume 127 ; 127 >
+      au < manifest ; 1955 ; Pediatrics Volume 15 ; 15 >
+      au < manifest ; 1955 ; Pediatrics Volume 16 ; 16 >
+      au < manifest ; 1956 ; Pediatrics Volume 17 ; 17 >
+      au < manifest ; 1956 ; Pediatrics Volume 18 ; 18 >
+      au < manifest ; 1957 ; Pediatrics Volume 19 ; 19 >
+      au < manifest ; 1957 ; Pediatrics Volume 20 ; 20 >
+      au < manifest ; 1958 ; Pediatrics Volume 21 ; 21 >
+      au < manifest ; 1958 ; Pediatrics Volume 22 ; 22 >
+      au < manifest ; 1959 ; Pediatrics Volume 23 ; 23 >
+      au < manifest ; 1959 ; Pediatrics Volume 24 ; 24 >
+      au < manifest ; 1960 ; Pediatrics Volume 25 ; 25 >
+      au < manifest ; 1960 ; Pediatrics Volume 26 ; 26 >
+      au < manifest ; 1961 ; Pediatrics Volume 27 ; 27 >
+      au < manifest ; 1961 ; Pediatrics Volume 28 ; 28 >
+      au < manifest ; 1962 ; Pediatrics Volume 29 ; 29 >
+      au < manifest ; 1962 ; Pediatrics Volume 30 ; 30 >
+      au < manifest ; 1963 ; Pediatrics Volume 31 ; 31 >
+      au < manifest ; 1963 ; Pediatrics Volume 32 ; 32 >
+      au < manifest ; 1964 ; Pediatrics Volume 33 ; 33 >
+      au < manifest ; 1964 ; Pediatrics Volume 34 ; 34 >
+      au < manifest ; 1965 ; Pediatrics Volume 35 ; 35 >
+      au < manifest ; 1965 ; Pediatrics Volume 36 ; 36 >
+      au < manifest ; 1966 ; Pediatrics Volume 37 ; 37 >
+      au < manifest ; 1966 ; Pediatrics Volume 38 ; 38 >
+      au < manifest ; 1967 ; Pediatrics Volume 39 ; 39 >
+      au < manifest ; 1967 ; Pediatrics Volume 40 ; 40 >
+      au < manifest ; 1968 ; Pediatrics Volume 41 ; 41 >
+      au < manifest ; 1968 ; Pediatrics Volume 42 ; 42 >
+      au < manifest ; 1969 ; Pediatrics Volume 43 ; 43 >
+      au < manifest ; 1969 ; Pediatrics Volume 44 ; 44 >
+      au < manifest ; 1970 ; Pediatrics Volume 45 ; 45 >
+      au < manifest ; 1970 ; Pediatrics Volume 46 ; 46 >
+      au < manifest ; 1971 ; Pediatrics Volume 47 ; 47 >
+      au < manifest ; 1971 ; Pediatrics Volume 48 ; 48 >
+      au < manifest ; 1972 ; Pediatrics Volume 49 ; 49 >
+      au < manifest ; 1972 ; Pediatrics Volume 50 ; 50 >
+      au < manifest ; 1973 ; Pediatrics Volume 51 ; 51 >
+      au < manifest ; 1973 ; Pediatrics Volume 52 ; 52 >
+      au < manifest ; 1974 ; Pediatrics Volume 53 ; 53 >
+      au < manifest ; 1974 ; Pediatrics Volume 54 ; 54 >
+      au < manifest ; 1975 ; Pediatrics Volume 55 ; 55 >
+      au < manifest ; 1975 ; Pediatrics Volume 56 ; 56 >
+      au < manifest ; 1976 ; Pediatrics Volume 57 ; 57 >
+      au < manifest ; 1976 ; Pediatrics Volume 58 ; 58 >
+      au < manifest ; 1977 ; Pediatrics Volume 59 ; 59 >
+      au < manifest ; 1977 ; Pediatrics Volume 60 ; 60 >
+      au < manifest ; 1978 ; Pediatrics Volume 61 ; 61 >
+      au < manifest ; 1978 ; Pediatrics Volume 62 ; 62 >
+      au < manifest ; 1979 ; Pediatrics Volume 63 ; 63 >
+      au < manifest ; 1979 ; Pediatrics Volume 64 ; 64 >
+      au < manifest ; 1980 ; Pediatrics Volume 65 ; 65 >
+      au < manifest ; 1980 ; Pediatrics Volume 66 ; 66 >
+      au < manifest ; 1981 ; Pediatrics Volume 67 ; 67 >
+      au < manifest ; 1981 ; Pediatrics Volume 68 ; 68 >
+      au < manifest ; 1982 ; Pediatrics Volume 69 ; 69 >
+      au < manifest ; 1982 ; Pediatrics Volume 70 ; 70 >
+      au < manifest ; 1983 ; Pediatrics Volume 71 ; 71 >
+      au < manifest ; 1983 ; Pediatrics Volume 72 ; 72 >
+      au < manifest ; 1984 ; Pediatrics Volume 73 ; 73 >
+      au < manifest ; 1984 ; Pediatrics Volume 74 ; 74 >
+      au < manifest ; 1985 ; Pediatrics Volume 75 ; 75 >
+      au < manifest ; 1985 ; Pediatrics Volume 76 ; 76 >
+      au < manifest ; 1986 ; Pediatrics Volume 77 ; 77 >
+      au < manifest ; 1986 ; Pediatrics Volume 78 ; 78 >
+      au < manifest ; 1987 ; Pediatrics Volume 79 ; 79 >
+      au < manifest ; 1987 ; Pediatrics Volume 80 ; 80 >
+      au < manifest ; 1988 ; Pediatrics Volume 81 ; 81 >
+      au < manifest ; 1988 ; Pediatrics Volume 82 ; 82 >
+      au < manifest ; 1989 ; Pediatrics Volume 83 ; 83 >
+      au < manifest ; 1989 ; Pediatrics Volume 84 ; 84 >
+      au < manifest ; 1990 ; Pediatrics Volume 85 ; 85 >
+      au < manifest ; 1990 ; Pediatrics Volume 86 ; 86 >
+      au < manifest ; 1991 ; Pediatrics Volume 87 ; 87 >
+      au < manifest ; 1991 ; Pediatrics Volume 88 ; 88 >
+      au < manifest ; 1992 ; Pediatrics Volume 89 ; 89 >
+      au < manifest ; 1992 ; Pediatrics Volume 90 ; 90 >
+      au < manifest ; 1993 ; Pediatrics Volume 91 ; 91 >
+      au < manifest ; 1993 ; Pediatrics Volume 92 ; 92 >
+      au < manifest ; 1994 ; Pediatrics Volume 93 ; 93 >
+      au < manifest ; 1994 ; Pediatrics Volume 94 ; 94 >
+      au < manifest ; 1995 ; Pediatrics Volume 95 ; 95 >
+      au < manifest ; 1995 ; Pediatrics Volume 96 ; 96 >
+      au < manifest ; 1996 ; Pediatrics Volume 97 ; 97 >
+      au < manifest ; 1996 ; Pediatrics Volume 98 ; 98 >
+      au < manifest ; 1997 ; Pediatrics Volume 99 ; 99 >
+      au < manifest ; 1997 ; Pediatrics Volume 100 ; 100 >
+      au < manifest ; 1998 ; Pediatrics Volume 101 ; 101 >
+      au < manifest ; 1998 ; Pediatrics Volume 102 ; 102 >
+      au < manifest ; 1999 ; Pediatrics Volume 103 ; 103 >
+      au < manifest ; 1999 ; Pediatrics Volume 104 ; 104 >
+      au < manifest ; 2000 ; Pediatrics Volume 105 ; 105 >
+      au < manifest ; 2000 ; Pediatrics Volume 106 ; 106 >
+      au < manifest ; 2001 ; Pediatrics Volume 107 ; 107 >
+      au < manifest ; 2001 ; Pediatrics Volume 108 ; 108 >
+      au < manifest ; 2002 ; Pediatrics Volume 109 ; 109 >
+      au < manifest ; 2002 ; Pediatrics Volume 110 ; 110 >
+      au < manifest ; 2003 ; Pediatrics Volume 111 ; 111 >
+      au < manifest ; 2003 ; Pediatrics Volume 112 ; 112 >
+      au < manifest ; 2004 ; Pediatrics Volume 113 ; 113 >
+      au < manifest ; 2004 ; Pediatrics Volume 114 ; 114 >
+      au < manifest ; 2005 ; Pediatrics Volume 115 ; 115 >
+      au < manifest ; 2005 ; Pediatrics Volume 116 ; 116 >
+      au < manifest ; 2006 ; Pediatrics Volume 117 ; 117 >
+      au < manifest ; 2006 ; Pediatrics Volume 118 ; 118 >
+      au < manifest ; 2007 ; Pediatrics Volume 119 ; 119 >
+      au < manifest ; 2007 ; Pediatrics Volume 120 ; 120 >
+      au < manifest ; 2008 ; Pediatrics Volume 121 ; 121 >
+      au < manifest ; 2008 ; Pediatrics Volume 122 ; 122 >
+      au < manifest ; 2009 ; Pediatrics Volume 123 ; 123 >
+      au < manifest ; 2009 ; Pediatrics Volume 124 ; 124 >
+      au < manifest ; 2010 ; Pediatrics Volume 125 ; 125 >
+      au < manifest ; 2010 ; Pediatrics Volume 126 ; 126 >
+      au < manifest ; 2011 ; Pediatrics Volume 127 ; 127 >
 
     }
 
@@ -274,41 +274,41 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://pedsinreview.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; Pediatrics in Review Volume 1 ; 1 >
-      au < manifest ; Pediatrics in Review Volume 2 ; 2 >
-      au < manifest ; Pediatrics in Review Volume 3 ; 3 >
-      au < manifest ; Pediatrics in Review Volume 4 ; 4 >
-      au < manifest ; Pediatrics in Review Volume 5 ; 5 >
-      au < manifest ; Pediatrics in Review Volume 6 ; 6 >
-      au < manifest ; Pediatrics in Review Volume 7 ; 7 >
-      au < manifest ; Pediatrics in Review Volume 8 ; 8 >
-      au < manifest ; Pediatrics in Review Volume 9 ; 9 >
-      au < manifest ; Pediatrics in Review Volume 10 ; 10 >
-      au < manifest ; Pediatrics in Review Volume 11 ; 11 >
-      au < manifest ; Pediatrics in Review Volume 12 ; 12 >
-      au < manifest ; Pediatrics in Review Volume 13 ; 13 >
-      au < manifest ; Pediatrics in Review Volume 14 ; 14 >
-      au < manifest ; Pediatrics in Review Volume 15 ; 15 >
-      au < manifest ; Pediatrics in Review Volume 16 ; 16 >
-      au < manifest ; Pediatrics in Review Volume 17 ; 17 >
-      au < manifest ; Pediatrics in Review Volume 18 ; 18 >
-      au < manifest ; Pediatrics in Review Volume 19 ; 19 >
-      au < manifest ; Pediatrics in Review Volume 20 ; 20 >
-      au < manifest ; Pediatrics in Review Volume 21 ; 21 >
-      au < manifest ; Pediatrics in Review Volume 22 ; 22 >
-      au < manifest ; Pediatrics in Review Volume 23 ; 23 >
-      au < manifest ; Pediatrics in Review Volume 24 ; 24 >
-      au < manifest ; Pediatrics in Review Volume 25 ; 25 >
-      au < manifest ; Pediatrics in Review Volume 26 ; 26 >
-      au < manifest ; Pediatrics in Review Volume 27 ; 27 >
-      au < manifest ; Pediatrics in Review Volume 28 ; 28 >
-      au < manifest ; Pediatrics in Review Volume 29 ; 29 >
-      au < manifest ; Pediatrics in Review Volume 30 ; 30 >
-      au < manifest ; Pediatrics in Review Volume 31 ; 31 >
-      au < manifest ; Pediatrics in Review Volume 32 ; 32 >
-      au < manifest ; Pediatrics in Review Volume 33 ; 33 >
+      au < manifest ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
+      au < manifest ; 1981 ; Pediatrics in Review Volume 2 ; 2 >
+      au < manifest ; 1982 ; Pediatrics in Review Volume 3 ; 3 >
+      au < manifest ; 1983 ; Pediatrics in Review Volume 4 ; 4 >
+      au < manifest ; 1984 ; Pediatrics in Review Volume 5 ; 5 >
+      au < manifest ; 1985 ; Pediatrics in Review Volume 6 ; 6 >
+      au < manifest ; 1986 ; Pediatrics in Review Volume 7 ; 7 >
+      au < manifest ; 1987 ; Pediatrics in Review Volume 8 ; 8 >
+      au < manifest ; 1988 ; Pediatrics in Review Volume 9 ; 9 >
+      au < manifest ; 1989 ; Pediatrics in Review Volume 10 ; 10 >
+      au < manifest ; 1990 ; Pediatrics in Review Volume 11 ; 11 >
+      au < manifest ; 1991 ; Pediatrics in Review Volume 12 ; 12 >
+      au < manifest ; 1992 ; Pediatrics in Review Volume 13 ; 13 >
+      au < manifest ; 1993 ; Pediatrics in Review Volume 14 ; 14 >
+      au < manifest ; 1994 ; Pediatrics in Review Volume 15 ; 15 >
+      au < manifest ; 1995 ; Pediatrics in Review Volume 16 ; 16 >
+      au < manifest ; 1996 ; Pediatrics in Review Volume 17 ; 17 >
+      au < manifest ; 1997 ; Pediatrics in Review Volume 18 ; 18 >
+      au < manifest ; 1998 ; Pediatrics in Review Volume 19 ; 19 >
+      au < manifest ; 1999 ; Pediatrics in Review Volume 20 ; 20 >
+      au < manifest ; 2000 ; Pediatrics in Review Volume 21 ; 21 >
+      au < manifest ; 2001 ; Pediatrics in Review Volume 22 ; 22 >
+      au < manifest ; 2002 ; Pediatrics in Review Volume 23 ; 23 >
+      au < manifest ; 2003 ; Pediatrics in Review Volume 24 ; 24 >
+      au < manifest ; 2004 ; Pediatrics in Review Volume 25 ; 25 >
+      au < manifest ; 2005 ; Pediatrics in Review Volume 26 ; 26 >
+      au < manifest ; 2006 ; Pediatrics in Review Volume 27 ; 27 >
+      au < manifest ; 2007 ; Pediatrics in Review Volume 28 ; 28 >
+      au < manifest ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
+      au < manifest ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+      au < manifest ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
+      au < manifest ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
+      au < manifest ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
 
     }
 
@@ -326,11 +326,11 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aapredbook.aappublications.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; Red Book Online Volume 2000 ; 2000 >
-      au < manifest ; Red Book Online Volume 2003 ; 2003 >
-      au < manifest ; Red Book Online Volume 2006 ; 2006 >
+      au < exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
+      au < manifest ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < manifest ; 2006 ; Red Book Online Volume 2006 ; 2006 >
 
     }
 
