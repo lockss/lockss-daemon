@@ -15,21 +15,21 @@
     rights = openaccess
     plugin = org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin
     comment[urgent] = website to be deleted. Needs release. (As of 7/2011)
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; volume ; param[year] >
 
     {
 
       param[base_url] = http://sfpoetry.org/
           
-      au < released ; 1998 ; Santa Fe Poetry Broadside 1998 ; 1998 >
-      au < released ; 1999 ; Santa Fe Poetry Broadside 1999 ; 1999 >
-      au < released ; 2000 ; Santa Fe Poetry Broadside 2000 ; 2000 >
-      au < released ; 2001 ; Santa Fe Poetry Broadside 2001 ; 2001 >
-      au < released ; 2002 ; Santa Fe Poetry Broadside 2002 ; 2002 >
-      au < released ; 2003 ; Santa Fe Poetry Broadside 2003 ; 2003 >
-      au < released ; 2004 ; Santa Fe Poetry Broadside 2004 ; 2004 >
-      au < released ; 2005 ; Santa Fe Poetry Broadside 2005 ; 2005 >
-      au < released ; 2006 ; Santa Fe Poetry Broadside 2006 ; 2006 >
+      au < released ; 1998 ; Santa Fe Poetry Broadside 1998 ; 1 ; 1998 >
+      au < released ; 1999 ; Santa Fe Poetry Broadside 1999 ; 1 ; 1999 >
+      au < released ; 2000 ; Santa Fe Poetry Broadside 2000 ; 2 ; 2000 >
+      au < released ; 2001 ; Santa Fe Poetry Broadside 2001 ; 2 ; 2001 >
+      au < released ; 2002 ; Santa Fe Poetry Broadside 2002 ; 3 ; 2002 >
+      au < released ; 2003 ; Santa Fe Poetry Broadside 2003 ; 3 ; 2003 >
+      au < released ; 2004 ; Santa Fe Poetry Broadside 2004 ; 3-4 ; 2004 >
+      au < released ; 2005 ; Santa Fe Poetry Broadside 2005 ; 4 ; 2005 >
+      au < released ; 2006 ; Santa Fe Poetry Broadside 2006 ; 4-5 ; 2006 >
       
     }
     
@@ -37,9 +37,9 @@
     
       param[base_url] = http://www.sfpoetry.org/
     
-      au < ready ; 2007 ; Santa Fe Poetry Broadside 2007 ; 2007 >
-      au < ready ; 2008 ; Santa Fe Poetry Broadside 2008 ; 2008 >
-      au < ready ; 2009 ; Santa Fe Poetry Broadside 2009 ; 2009 >
+      au < ready ; 2007 ; Santa Fe Poetry Broadside 2007 ; 5 ; 2007 >
+      au < ready ; 2008 ; Santa Fe Poetry Broadside 2008 ; 5 ; 2008 >
+      au < ready ; 2009 ; Santa Fe Poetry Broadside 2009 ; 5 ; 2009 >
 
     }
   

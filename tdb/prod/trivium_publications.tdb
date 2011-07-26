@@ -21,9 +21,9 @@
     
       plugin = org.lockss.plugin.janushead.JanusHeadPluginLegacy
       param[base_url] = http://www.janushead.org/
-      implicit < status ; year ; name >
+      implicit < status ; year ; name ; volume >
     
-      au < manifest ; 1998 -1999 ; Janus Head Volume 1-2 >
+      au < manifest ; 1998 -1999 ; Janus Head Volume 1-2 ; 1-2 >
     
     }
     

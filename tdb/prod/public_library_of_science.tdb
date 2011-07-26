@@ -5,7 +5,7 @@
   
   rights = openaccess
   plugin = org.lockss.plugin.topaz.TopazPlugin
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; volume ; param[year] >
 
   {
     title <
@@ -18,15 +18,15 @@
     param[base_url] = http://www.plosbiology.org/    
     param[journal_id] = pbio
 
-    au < exists ; 2003 ; PLoS Biology Volume 1 ; 2003 >
-    au < exists ; 2004 ; PLoS Biology Volume 2 ; 2004 >
-    au < exists ; 2005 ; PLoS Biology Volume 3 ; 2005 >
-    au < exists ; 2006 ; PLoS Biology Volume 4 ; 2006 >
-    au < exists ; 2007 ; PLoS Biology Volume 5 ; 2007 >
-    au < exists ; 2008 ; PLoS Biology Volume 6 ; 2008 >
-    au < exists ; 2009 ; PLoS Biology Volume 7 ; 2009 >
-    au < exists ; 2010 ; PLoS Biology Volume 8 ; 2010 >
-    au < exists ; 2011 ; PLoS Biology Volume 9 ; 2011 >
+    au < exists ; 2003 ; PLoS Biology Volume 1 ; 1 ; 2003 >
+    au < exists ; 2004 ; PLoS Biology Volume 2 ; 2 ; 2004 >
+    au < exists ; 2005 ; PLoS Biology Volume 3 ; 3 ; 2005 >
+    au < exists ; 2006 ; PLoS Biology Volume 4 ; 4 ; 2006 >
+    au < exists ; 2007 ; PLoS Biology Volume 5 ; 5 ; 2007 >
+    au < exists ; 2008 ; PLoS Biology Volume 6 ; 6 ; 2008 >
+    au < exists ; 2009 ; PLoS Biology Volume 7 ; 7 ; 2009 >
+    au < exists ; 2010 ; PLoS Biology Volume 8 ; 8 ; 2010 >
+    au < exists ; 2011 ; PLoS Biology Volume 9 ; 9 ; 2011 >
 
   }
 
@@ -41,10 +41,10 @@
     param[base_url] = http://www.plosgenetics.org/    
     param[journal_id] = genetics
 
-    au < released ; 2005 ; PLoS Genetics Volume 1 ; 2005 >
-    au < released ; 2006 ; PLoS Genetics Volume 2 ; 2006 >
-    au < released ; 2007 ; PLoS Genetics Volume 3 ; 2007 >
-    au < released ; 2008 ; PLoS Genetics Volume 4 ; 2008 >
+    au < released ; 2005 ; PLoS Genetics Volume 1 ; 1 ; 2005 >
+    au < released ; 2006 ; PLoS Genetics Volume 2 ; 2 ; 2006 >
+    au < released ; 2007 ; PLoS Genetics Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; PLoS Genetics Volume 4 ; 4 ; 2008 >
 
   }
 
@@ -59,10 +59,10 @@
     param[base_url] = http://www.ploscompbiol.org/    
     param[journal_id] = compbiol
 
-    au < released ; 2005 ; PLoS Computational Biology Volume 1 ; 2005 >
-    au < released ; 2006 ; PLoS Computational Biology Volume 2 ; 2006 >
-    au < released ; 2007 ; PLoS Computational Biology Volume 3 ; 2007 >
-    au < released ; 2008 ; PLoS Computational Biology Volume 4 ; 2008 >
+    au < released ; 2005 ; PLoS Computational Biology Volume 1 ; 1 ; 2005 >
+    au < released ; 2006 ; PLoS Computational Biology Volume 2 ; 2 ; 2006 >
+    au < released ; 2007 ; PLoS Computational Biology Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; PLoS Computational Biology Volume 4 ; 4 ; 2008 >
 
   }
 
@@ -79,9 +79,9 @@
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone
 
-    au < notReady ; 2006 ; PLoS One Volume 1 ; 2006 >
-    au < notReady ; 2007 ; PLoS One Volume 2 ; 2007 >
-    au < notReady ; 2008 ; PLoS One Volume 3 ; 2008 >
+    au < notReady ; 2006 ; PLoS One Volume 1 ; 1 ; 2006 >
+    au < notReady ; 2007 ; PLoS One Volume 2 ; 2 ; 2007 >
+    au < notReady ; 2008 ; PLoS One Volume 3 ; 3 ; 2008 >
 
   }
   
@@ -96,8 +96,8 @@
     param[base_url] = http://www.plosntds.org/    
     param[journal_id] = ntd
 
-    au < released ; 2007 ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
-    au < released ; 2008 ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
+    au < released ; 2007 ; PLoS Neglected Tropical Diseases Volume 1 ; 1 ; 2007 >
+    au < released ; 2008 ; PLoS Neglected Tropical Diseases Volume 2 ; 2 ; 2008 >
 
   }
   
@@ -113,11 +113,11 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < released ; 2005 ; PLoS Pathogens Volume 1 ; 2005 >
-    au < released ; 2006 ; PLoS Pathogens Volume 2 ; 2006 >
-    au < released ; 2007 ; PLoS Pathogens Volume 3 ; 2007 >
-    au < released ; 2008 ; PLoS Pathogens Volume 4 ; 2008 >
-    au < released ; 2009 ; PLoS Pathogens Volume 5 ; 2009 >
+    au < released ; 2005 ; PLoS Pathogens Volume 1 ; 1 ; 2005 >
+    au < released ; 2006 ; PLoS Pathogens Volume 2 ; 2 ; 2006 >
+    au < released ; 2007 ; PLoS Pathogens Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; PLoS Pathogens Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; PLoS Pathogens Volume 5 ; 5 ; 2009 >
 
   }
 
@@ -132,12 +132,12 @@
     param[base_url] = http://www.plosmedicine.org/   
     param[journal_id] = medicine
 
-    au < released ; 2004 ; PLoS Medicine Volume 1 ; 2004 >
-    au < released ; 2005 ; PLoS Medicine Volume 2 ; 2005 >
-    au < released ; 2006 ; PLoS Medicine Volume 3 ; 2006 >
-    au < released ; 2007 ; PLoS Medicine Volume 4 ; 2007 >
-    au < released ; 2008 ; PLoS Medicine Volume 5 ; 2008 >
-    au < released ; 2009 ; PLoS Medicine Volume 6 ; 2009 >
+    au < released ; 2004 ; PLoS Medicine Volume 1 ; 1 ; 2004 >
+    au < released ; 2005 ; PLoS Medicine Volume 2 ; 2 ; 2005 >
+    au < released ; 2006 ; PLoS Medicine Volume 3 ; 3 ; 2006 >
+    au < released ; 2007 ; PLoS Medicine Volume 4 ; 4 ; 2007 >
+    au < released ; 2008 ; PLoS Medicine Volume 5 ; 5 ; 2008 >
+    au < released ; 2009 ; PLoS Medicine Volume 6 ; 6 ; 2009 >
 
   }
 
