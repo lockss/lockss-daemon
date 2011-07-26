@@ -85,18 +85,18 @@
       implicit < status ; year ; name ; param[volume_name] >
       comment[tech] = fetch errors 37-39
 
-      au < manifest ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
-      au < manifest ; 1998 ; Journal of Nuclear Medicine Technology Volume 26 ; 26 >
-      au < manifest ; 1999 ; Journal of Nuclear Medicine Technology Volume 27 ; 27 >
-      au < manifest ; 2000 ; Journal of Nuclear Medicine Technology Volume 28 ; 28 >
-      au < manifest ; 2001 ; Journal of Nuclear Medicine Technology Volume 29 ; 29 >
-      au < manifest ; 2002 ; Journal of Nuclear Medicine Technology Volume 30 ; 30 >
-      au < manifest ; 2003 ; Journal of Nuclear Medicine Technology Volume 31 ; 31 >
-      au < manifest ; 2004 ; Journal of Nuclear Medicine Technology Volume 32 ; 32 >
-      au < manifest ; 2005 ; Journal of Nuclear Medicine Technology Volume 33 ; 33 >
-      au < manifest ; 2006 ; Journal of Nuclear Medicine Technology Volume 34 ; 34 >
-      au < manifest ; 2007 ; Journal of Nuclear Medicine Technology Volume 35 ; 35 >
-      au < manifest ; 2008 ; Journal of Nuclear Medicine Technology Volume 36 ; 36 >
+      au < ready ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
+      au < ready ; 1998 ; Journal of Nuclear Medicine Technology Volume 26 ; 26 >
+      au < ready ; 1999 ; Journal of Nuclear Medicine Technology Volume 27 ; 27 >
+      au < ready ; 2000 ; Journal of Nuclear Medicine Technology Volume 28 ; 28 >
+      au < ready ; 2001 ; Journal of Nuclear Medicine Technology Volume 29 ; 29 >
+      au < ready ; 2002 ; Journal of Nuclear Medicine Technology Volume 30 ; 30 >
+      au < ready ; 2003 ; Journal of Nuclear Medicine Technology Volume 31 ; 31 >
+      au < ready ; 2004 ; Journal of Nuclear Medicine Technology Volume 32 ; 32 >
+      au < ready ; 2005 ; Journal of Nuclear Medicine Technology Volume 33 ; 33 >
+      au < ready ; 2006 ; Journal of Nuclear Medicine Technology Volume 34 ; 34 >
+      au < ready ; 2007 ; Journal of Nuclear Medicine Technology Volume 35 ; 35 >
+      au < ready ; 2008 ; Journal of Nuclear Medicine Technology Volume 36 ; 36 >
       au < notReady ; 2009 ; Journal of Nuclear Medicine Technology Volume 37 ; 37 >
       au < notReady ; 2010 ; Journal of Nuclear Medicine Technology Volume 38 ; 38 >
       au < notReady ; 2011 ; Journal of Nuclear Medicine Technology Volume 39 ; 39 >
