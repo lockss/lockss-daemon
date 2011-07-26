@@ -79,6 +79,25 @@
 
   {
     title <
+      name = Global Issues in Communication Sciences and Related Disorders ;
+      eissn = 2161-1572 ;
+      issnl = 2161-1572
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://jshd.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < exists ; 2011 ; Global Issues in Communication Sciences and Related Disorders Volume 1 ; 1 >
+      
+    }
+      
+  }
+  
+  {
+    title <
       name = Journal of Speech and Hearing Disorders ;
       issn = 0022-4677 ;
       issnl = 0022-4677
