@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.9 2011-05-23 22:34:23 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.10 2011-07-26 19:40:16 dshr Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.apache.commons.vfs.FileSystemException;
 import org.apache.commons.vfs.FileContent;
 import org.apache.commons.vfs.FileType;
 import org.apache.commons.vfs.VFS;
+import org.apache.commons.vfs.AllFileSelector;
 
 import org.lockss.config.*;
 import org.lockss.protocol.*;
@@ -2074,21 +2075,39 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Version of PlatformUtil.updateAtomically for FileObject
    */
   protected static boolean updateAtomically(FileObject f1, FileObject f2) {
-    boolean res = false;
     if (f1.canRenameTo(f2)) {
       String f1Name = f1.getName().getURI();
       try {
 	f1.moveTo(f2);
-	res = true;
+	return true;
       } catch (FileSystemException ex) {
-	logger.error(f1Name + " moveTo threw: " + ex);
+	logger.debug(f1Name + " moveTo threw: " + ex);
       }
-    } else {
-      String n1 = f1.getName().getURI();
-      String n2 = f2.getName().getURI();
-      logger.debug3("Can't rename " + n1 + " to " + n2);
     }
-    return res;
+    // Either canRenameTo() was false or moveTo() threw.  Try
+    // copy and delete.
+    try {
+      if (f2.exists()) {
+        if (!f2.delete()) {
+          logger.error("Can't delete " + f2.getName().getURI());
+          return false;
+        }
+      }
+      f2.copyFrom(f1, new AllFileSelector());
+      if (f2.exists()) {
+        if (f1.delete()) {
+          return true;
+        } else {
+          logger.warning(f1.getName().getURI() + " could not delete");
+          return true;
+        }
+      }
+    } catch (FileSystemException ex) {
+      logger.error("copy fallback in updateAtomically threw: " + ex);
+      return false;
+    }
+    logger.error("Can't copy " + f1.getName().getURI() + " to " + f2.getName().getURI());
+    return false;
   }
 
   /*
