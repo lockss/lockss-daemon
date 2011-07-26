@@ -4,34 +4,11 @@
     name = Geological Society of America
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; year ; name ; param[volume_name] >
-
   {
   
     comment[1] = Environmental and Engineering Geoscience
     comment[2] = GeoScienceWorld
     comment[3] = http://eeg.geoscienceworld.org/
-  
-  }
-
-  {
-  
-    title <
-      name = Field Guides 
-    >
-    
-    comment[1] = no issn
-    param[base_url] = http://fieldguides.gsapubs.org/
-    
-    au < manifest ; 2008 ; Field Guides Volume 14 ; 14 >
-    au < manifest ; 2009 ; Field Guides Volume 15 ; 15 >
-    au < manifest ; 2010 ; Field Guides Volume 16 ; 16 >
-    au < manifest ; 2010 ; Field Guides Volume 17 ; 17 >
-    au < manifest ; 2010 ; Field Guides Volume 18 ; 18 >
-    au < manifest ; 2011 ; Field Guides Volume 19 ; 19 >
-    au < manifest ; 2011 ; Field Guides Volume 20 ; 20 >
-    au < manifest ; 2011 ; Field Guides Volume 21 ; 21 >
   
   }
 
@@ -44,7 +21,9 @@
       issnl = 0016-7606
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://gsabulletin.gsapubs.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
     au < exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
@@ -169,7 +148,9 @@
       issnl = 0091-7613
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://geology.gsapubs.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1973 ; Geology Volume 1 ; 1 >
     au < exists ; 1974 ; Geology Volume 2 ; 2 >
@@ -220,7 +201,9 @@
       eissn = 1553-040X
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://geosphere.gsapubs.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2005 ; Geosphere Volume 1 ; 1 >
     au < exists ; 2006 ; Geosphere Volume 2 ; 2 >
@@ -233,12 +216,52 @@
   }
 
   {
-
-    comment[1] = GSA Today
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://www.geosociety.org/gsatoday/           
-    comment[4] = issn 1052-5173
+  
+    title <
+      name = GSA Field Guides ;
+      type = bookSeries
+    >
     
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://fieldguides.gsapubs.org/
+
+
+    {
+    
+      implicit < status ; year ; name ; param[volume_name] >
+    
+      au < exists ; 1999 ; GSA Field Guides Volume 1 ; 1 >
+      au < exists ; 2000 ; GSA Field Guides Volume 2 ; 2 >
+      au < exists ; 2002 ; GSA Field Guides Volume 3 ; 3 >
+      au < exists ; 2003 ; GSA Field Guides Volume 4 ; 4 >
+      au < exists ; 2004 ; GSA Field Guides Volume 5 ; 5 >
+      au < exists ; 2005 ; GSA Field Guides Volume 6 ; 6 >
+      au < exists ; 2006 ; GSA Field Guides Volume 7 ; 7 >
+      au < exists ; 2006 ; GSA Field Guides Volume 8 ; 8 >
+      au < exists ; 2007 ; GSA Field Guides Volume 9 ; 9 >
+      au < exists ; 2008 ; GSA Field Guides Volume 10 ; 10 >
+      au < exists ; 2008 ; GSA Field Guides Volume 11 ; 11 >
+      au < exists ; 2008 ; GSA Field Guides Volume 12 ; 12 >
+      au < exists ; 2008 ; GSA Field Guides Volume 13 ; 13 >
+      
+    }
+    
+    {
+
+      implicit < status ; year ; comment[isbn] ; name ; param[volume_name] >
+    
+    
+      au < manifest ; 2008 ; 978-0-8137-0014-4 ; GSA Field Guides Volume 14 ; 14 >
+      au < manifest ; 2009 ; 978-0-8137-0015-1 ; GSA Field Guides Volume 15 ; 15 >
+      au < manifest ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
+      au < manifest ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
+      au < manifest ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
+      au < manifest ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
+      au < manifest ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
+      au < manifest ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
+
+    }
+  
   }
 
   {
@@ -250,7 +273,9 @@
       issnl = 1947-4253
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://lithosphere.gsapubs.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < ready ; 2009 ; Lithosphere Volume 1 ; 1 >
     au < ready ; 2010 ; Lithosphere Volume 2 ; 2 >
