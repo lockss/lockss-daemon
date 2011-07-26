@@ -13,6 +13,7 @@
     >
 
     comment[RLG] = "RLG has merged with OCLC and you have activated an RLG link that is no longer in service"
+    comment[down] = "RLG DigiNews ceased publication after the April 15, 2007 issue (Vol. 11, no. 1)" 
        
     rights = openaccess
     plugin = org.lockss.plugin.rlg.RLGDigiNewsPlugin
