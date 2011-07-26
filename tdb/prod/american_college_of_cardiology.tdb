@@ -11,7 +11,8 @@
     >
 
     {
-
+	
+	  comment[urgent] = urgent test
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://imaging.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -32,6 +33,7 @@
 
     {
 
+	  comment[urgent] = urgent test
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://interventions.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -53,6 +55,7 @@
 
     {
 
+	  comment[urgent] = urgent test
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://content.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
