@@ -2971,7 +2971,7 @@
       {
 
         pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://aus.sagepub.com/
+        param[base_url] = http://anj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 >
