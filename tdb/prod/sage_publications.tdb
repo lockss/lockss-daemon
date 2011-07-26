@@ -25799,6 +25799,51 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Nutrition in Clinical Practice ;
+        issn = 0884-5336 ;
+        eissn = 1941-2452 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ncp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1986 ; Nutrition in Clinical Practice Volume 1 ; 1 >
+        au < manifest ; 1987 ; Nutrition in Clinical Practice Volume 2 ; 2 >
+        au < manifest ; 1988 ; Nutrition in Clinical Practice Volume 3 ; 3 >
+        au < manifest ; 1989 ; Nutrition in Clinical Practice Volume 4 ; 4 >
+        au < manifest ; 1990 ; Nutrition in Clinical Practice Volume 5 ; 5 >
+        au < manifest ; 1991 ; Nutrition in Clinical Practice Volume 6 ; 6 >
+        au < manifest ; 1992 ; Nutrition in Clinical Practice Volume 7 ; 7 >
+        au < manifest ; 1993 ; Nutrition in Clinical Practice Volume 8 ; 8 >
+        au < manifest ; 1994 ; Nutrition in Clinical Practice Volume 9 ; 9 >
+        au < manifest ; 1995 ; Nutrition in Clinical Practice Volume 10 ; 10 >
+        au < manifest ; 1996 ; Nutrition in Clinical Practice Volume 11 ; 11 >
+        au < manifest ; 1997 ; Nutrition in Clinical Practice Volume 12 ; 12 >
+        au < manifest ; 1998 ; Nutrition in Clinical Practice Volume 13 ; 13 >
+        au < manifest ; 1999 ; Nutrition in Clinical Practice Volume 14 ; 14 >
+        au < manifest ; 2000 ; Nutrition in Clinical Practice Volume 15 ; 15 >
+        au < manifest ; 2001 ; Nutrition in Clinical Practice Volume 16 ; 16 >
+        au < manifest ; 2002 ; Nutrition in Clinical Practice Volume 17 ; 17 >
+        au < manifest ; 2003 ; Nutrition in Clinical Practice Volume 18 ; 18 >
+        au < manifest ; 2004 ; Nutrition in Clinical Practice Volume 19 ; 19 >
+        au < manifest ; 2005 ; Nutrition in Clinical Practice Volume 20 ; 20 >
+        au < manifest ; 2006 ; Nutrition in Clinical Practice Volume 21 ; 21 >
+        au < manifest ; 2007 ; Nutrition in Clinical Practice Volume 22 ; 22 >
+        au < manifest ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 >
+        au < manifest ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 >
+        au < manifest ; 2010 ; Nutrition in Clinical Practice Volume 25 ; 25 >
+        au < manifest ; 2011 ; Nutrition in Clinical Practice Volume 26 ; 26 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Organization ;
         issn = 1350-5084 ;
         eissn = 1461-7323 ;
@@ -29906,6 +29951,48 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
         au < manifest ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 >
         
+      }
+
+    }
+
+    {
+
+      title <
+        name = Sexual Abuse: A Journal of Research and Treatment ;
+        issn = 1079-0632 ;
+        eissn = 1573-286X 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sax.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1988 ; Sexual Abuse: A Journal of Research and Treatment Volume 1 ; 1 >
+        au < manifest ; 1989 ; Sexual Abuse: A Journal of Research and Treatment Volume 2 ; 2 >
+        au < manifest ; 1990 ; Sexual Abuse: A Journal of Research and Treatment Volume 3 ; 3 >
+        au < manifest ; 1991 ; Sexual Abuse: A Journal of Research and Treatment Volume 4 ; 4 >
+        au < manifest ; 1992 ; Sexual Abuse: A Journal of Research and Treatment Volume 5 ; 5 >
+        au < manifest ; 1993 ; Sexual Abuse: A Journal of Research and Treatment Volume 6 ; 6 >
+        au < manifest ; 1995 ; Sexual Abuse: A Journal of Research and Treatment Volume 7 ; 7 >
+        au < manifest ; 1996 ; Sexual Abuse: A Journal of Research and Treatment Volume 8 ; 8 >
+        au < manifest ; 1997 ; Sexual Abuse: A Journal of Research and Treatment Volume 9 ; 9 >
+        au < manifest ; 1998 ; Sexual Abuse: A Journal of Research and Treatment Volume 10 ; 10 >
+        au < manifest ; 1999 ; Sexual Abuse: A Journal of Research and Treatment Volume 11 ; 11 >
+        au < manifest ; 2000 ; Sexual Abuse: A Journal of Research and Treatment Volume 12 ; 12 >
+        au < manifest ; 2001 ; Sexual Abuse: A Journal of Research and Treatment Volume 13 ; 13 >
+        au < manifest ; 2002 ; Sexual Abuse: A Journal of Research and Treatment Volume 14 ; 14 >
+        au < manifest ; 2003 ; Sexual Abuse: A Journal of Research and Treatment Volume 15 ; 15 >
+        au < manifest ; 2004 ; Sexual Abuse: A Journal of Research and Treatment Volume 16 ; 16 >
+        au < manifest ; 2005 ; Sexual Abuse: A Journal of Research and Treatment Volume 17 ; 17 >
+        au < manifest ; 2006 ; Sexual Abuse: A Journal of Research and Treatment Volume 18 ; 18 >
+        au < manifest ; 2007 ; Sexual Abuse: A Journal of Research and Treatment Volume 19 ; 19 >
+        au < manifest ; 2008 ; Sexual Abuse: A Journal of Research and Treatment Volume 20 ; 20 >
+        au < manifest ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 >
+        au < manifest ; 2010 ; Sexual Abuse: A Journal of Research and Treatment Volume 22 ; 22 >
+        au < manifest ; 2011 ; Sexual Abuse: A Journal of Research and Treatment Volume 23 ; 23 >
+
       }
 
     }
