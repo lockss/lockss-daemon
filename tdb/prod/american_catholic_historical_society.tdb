@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = American Catholic Historical Society
+  >
+
+  {
+  
+    title <
+      name = American Catholic Studies ;
+      issn = 0002-7790 ; 
+      eissn = 2161-8534 ;
+      issnl = 0002-7790
+    >
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    param[journal_dir] = american_catholic_studies
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2011 ; American Catholic Studies Volume 122 ; 122 >
+
+    }
+  
+  }
+  
+}
