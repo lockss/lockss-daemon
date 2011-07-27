@@ -634,6 +634,23 @@
       au < ready ; 2011 ; BMC Infectious Diseases Volume 11 ; 11 >
 
     }
+    
+
+    {
+      title <
+        name = BMC International Journal of Pediatric Endocrinology ;
+        issn = 1687-9848 ;
+        eissn = 1687-9856 ;
+        issnl = 1687-9848
+      >
+      
+      param[journal_issn] = 1687-9856
+	    comment[ijpe] = This journal is transferring to BMC, but it's still available in Hindawi
+
+      au < exists ; 0 ; BMC International Journal of Pediatric Endocrinology Volume 1 ; 1 >
+      
+    }
+
 
     {
       title <
