@@ -24,6 +24,7 @@
     au < released ; 2008 ; Accounting Research Journal Volume 21 ; 21 >
     au < released ; 2009 ; Accounting Research Journal Volume 22 ; 22 >
     au < released ; 2010 ; Accounting Research Journal Volume 23 ; 23 >
+    au < testing ; 2011 ; Accounting Research Journal Volume 24 ; 24 >
 
   }
 
@@ -447,6 +448,7 @@
     au < released ; 2008 ; Asian Journal on Quality Volume 9 ; 9 >
     au < released ; 2009 ; Asian Journal on Quality Volume 10 ; 10 >
     au < released ; 2010 ; Asian Journal on Quality Volume 11 ; 11 >
+    au < testing ; 2011 ; Asian Journal on Quality Volume 12 ; 12 >
 
   }
 
@@ -1896,7 +1898,7 @@
     >
 
     param[journal_issn] = 1757-0980
-    comment[1] = fetch error
+    comment[1] = fetch error (DOI Not Found?)
     
     au < notReady ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
     au < released ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
@@ -5331,6 +5333,18 @@
 
   {
     title <
+      name = Journal of Humanitarian Logistics and Supply Chain Management ;
+      issn = 2042-6747 
+    >
+
+    param[journal_issn] = 2042-6747
+    
+    au < testing ; 2011 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Journal of Indian Business Research ;
       issn = 1755-4195 ;
       eissn = 1755-4209 ;
@@ -6088,6 +6102,7 @@
     au < released ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
     au < released ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
     au < released ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
+    au < testing ; 2011 ; Journal of Research in Marketing and Entrepreneurship Volume 13 ; 13 >
 
   }
 
@@ -8387,6 +8402,7 @@
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < released ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
+
   }
 
   {
