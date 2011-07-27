@@ -30,11 +30,11 @@
 
   {
     title <
-      name = Perspectives in International Librarianship ;
-      eissn = 2219-8962
+      name = Contemporary Islamic Studies ;
+      eissn = 2220-2757
     >
     
-    param[journal_dir] = pil
+    param[journal_dir] = cis
     
   }
 
@@ -50,21 +50,11 @@
 
   {
     title <
-      name = Contemporary Islamic Studies ;
-      eissn = 2220-2757
+      name = Perspectives in International Librarianship ;
+      eissn = 2219-8962
     >
     
-    param[journal_dir] = cis
-    
-  }
-
-  {
-    title <
-      name = Sustainable Technologies, Systems and Policies ;
-      eissn = 2220-2765
-    >
-    
-    param[journal_dir] = stsp
+    param[journal_dir] = pil
     
   }
 
@@ -75,6 +65,28 @@
     >
     
     param[journal_dir] = qfarf
+    
+  }
+
+  {
+    title <
+      name = QScience Connect ;
+      eissn = 2223-506X
+    >
+    
+    param[journal_dir] = ji_connect
+    comment[0] = no content yet
+    comment[journal_dir] = ? from http://www.qscience.com/page/ji_connect
+    
+  }
+
+  {
+    title <
+      name = Sustainable Technologies, Systems and Policies ;
+      eissn = 2220-2765
+    >
+    
+    param[journal_dir] = stsp
     
   }
 
