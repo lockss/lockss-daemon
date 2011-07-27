@@ -97,7 +97,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://vir.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -208,7 +208,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmm.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -287,7 +287,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mic.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 

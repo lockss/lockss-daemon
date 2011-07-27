@@ -50,7 +50,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://joe.endocrinology-journals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
