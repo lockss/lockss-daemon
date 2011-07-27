@@ -463,60 +463,6 @@
     {
 
       title <
-        name = Advances in Dental Research ;
-        issn = 0895-9374 ;
-        eissn = 1544-0737 ;
-        issnl = 0895-9374
-      >
-
-      {
-
-        param[base_url] = http://adr.sagepub.com/
-        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-
-        au < HighWirePressPlugin ; down ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
-
-      }
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://adr.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
-        au < manifest ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
-        au < manifest ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
-        au < manifest ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
-        au < manifest ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
-        au < manifest ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
-        au < manifest ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
-        au < manifest ; 1994 ; Advances in Dental Research Volume 8 ; 8 >
-        au < manifest ; 1995 ; Advances in Dental Research Volume 9 ; 9 >
-        au < manifest ; 1996 ; Advances in Dental Research Volume 10 ; 10 >
-        au < manifest ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
-        au < manifest ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
-        au < manifest ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
-        au < manifest ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
-        au < manifest ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
-        au < manifest ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
-        au < manifest ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
-        au < manifest ; 2005 ; Advances in Dental Research Volume 18 ; 18 >
-        au < manifest ; 2006 ; Advances in Dental Research Volume 19 ; 19 >
-        au < ready ; 2008 ; Advances in Dental Research Volume 20 ; 20 >
-        au < manifest ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
-        au < ready ; 2010 ; Advances in Dental Research Volume 22 ; 22 >
-        au < manifest ; 2011 ; Advances in Dental Research Volume 23 ; 23 >
-
-      }
-
-    }
-
-    {
-
-      title <
         name = Adult Education Quarterly ;
         issn = 0741-7136 ;
         eissn = 1552-3047 ;
@@ -615,6 +561,60 @@
         au < manifest ; 2008 ; Adult Education Quarterly Volume 59 ; 59 >
         au < ready ; 2009 ; Adult Education Quarterly Volume 60 ; 60 >
         au < manifest ; 2011 ; Adult Education Quarterly Volume 61 ; 61 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Advances in Dental Research ;
+        issn = 0895-9374 ;
+        eissn = 1544-0737 ;
+        issnl = 0895-9374
+      >
+
+      {
+
+        param[base_url] = http://adr.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+
+        au < HighWirePressPlugin ; down ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
+
+      }
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://adr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1987 ; Advances in Dental Research Volume 1 ; 1 >
+        au < manifest ; 1988 ; Advances in Dental Research Volume 2 ; 2 >
+        au < manifest ; 1989 ; Advances in Dental Research Volume 3 ; 3 >
+        au < manifest ; 1990 ; Advances in Dental Research Volume 4 ; 4 >
+        au < manifest ; 1991 ; Advances in Dental Research Volume 5 ; 5 >
+        au < manifest ; 1992 ; Advances in Dental Research Volume 6 ; 6 >
+        au < manifest ; 1993 ; Advances in Dental Research Volume 7 ; 7 >
+        au < manifest ; 1994 ; Advances in Dental Research Volume 8 ; 8 >
+        au < manifest ; 1995 ; Advances in Dental Research Volume 9 ; 9 >
+        au < manifest ; 1996 ; Advances in Dental Research Volume 10 ; 10 >
+        au < manifest ; 1997 ; Advances in Dental Research Volume 11 ; 11 >
+        au < manifest ; 1998 ; Advances in Dental Research Volume 12 ; 12 >
+        au < manifest ; 1999 ; Advances in Dental Research Volume 13 ; 13 >
+        au < manifest ; 2000 ; Advances in Dental Research Volume 14 ; 14 >
+        au < manifest ; 2001 ; Advances in Dental Research Volume 15 ; 15 >
+        au < manifest ; 2002 ; Advances in Dental Research Volume 16 ; 16 >
+        au < manifest ; 2003 ; Advances in Dental Research Volume 17 ; 17 >
+        au < manifest ; 2005 ; Advances in Dental Research Volume 18 ; 18 >
+        au < manifest ; 2006 ; Advances in Dental Research Volume 19 ; 19 >
+        au < ready ; 2008 ; Advances in Dental Research Volume 20 ; 20 >
+        au < manifest ; 2009 ; Advances in Dental Research Volume 21 ; 21 >
+        au < ready ; 2010 ; Advances in Dental Research Volume 22 ; 22 >
+        au < manifest ; 2011 ; Advances in Dental Research Volume 23 ; 23 >
 
       }
 
@@ -1529,6 +1529,33 @@
         au < manifest ; 2009 ; The American Review of Public Administration Volume 39 ; 39 >
         au < manifest ; 2010 ; The American Review of Public Administration Volume 40 ; 40 >
         au < manifest ; 2011 ; The American Review of Public Administration Volume 41 ; 41 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = American Sociological Review ;
+        issn = 0003-1224 ;
+        eissn = 1939-8271 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://asr.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2004 ; American Sociological Review Volume 69 ; 69 >
+        au < exists ; 2005 ; American Sociological Review Volume 70 ; 70 >
+        au < exists ; 2006 ; American Sociological Review Volume 71 ; 71 >
+        au < exists ; 2007 ; American Sociological Review Volume 72 ; 72 >
+        au < exists ; 2008 ; American Sociological Review Volume 73 ; 73 >
+        au < manifest ; 2009 ; American Sociological Review Volume 74 ; 74 >
+        au < manifest ; 2010 ; American Sociological Review Volume 75 ; 75 >
+        au < manifest ; 2011 ; American Sociological Review Volume 76 ; 76 >
 
       }
 
@@ -22647,6 +22674,70 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = The Journal of Special Education ;
+        issn = 0022-4669 ;
+        eissn = 1538-4764 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://sed.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1966 ; The Journal of Special Education Volume 1 ; 1 >
+        au < manifest ; 1967 ; The Journal of Special Education Volume 2 ; 2 >
+        au < manifest ; 1969 ; The Journal of Special Education Volume 3 ; 3 >
+        au < manifest ; 1970 ; The Journal of Special Education Volume 4 ; 4 >
+        au < manifest ; 1971 ; The Journal of Special Education Volume 5 ; 5 >
+        au < manifest ; 1972 ; The Journal of Special Education Volume 6 ; 6 >
+        au < manifest ; 1973 ; The Journal of Special Education Volume 7 ; 7 >
+        au < manifest ; 1974 ; The Journal of Special Education Volume 8 ; 8 >
+        au < manifest ; 1975 ; The Journal of Special Education Volume 9 ; 9 >
+        au < manifest ; 1976 ; The Journal of Special Education Volume 10 ; 10 >
+        au < manifest ; 1977 ; The Journal of Special Education Volume 11 ; 11 >
+        au < manifest ; 1978 ; The Journal of Special Education Volume 12 ; 12 >
+        au < manifest ; 1979 ; The Journal of Special Education Volume 13 ; 13 >
+        au < manifest ; 1980 ; The Journal of Special Education Volume 14 ; 14 >
+        au < manifest ; 1981 ; The Journal of Special Education Volume 15 ; 15 >
+        au < manifest ; 1982 ; The Journal of Special Education Volume 16 ; 16 >
+        au < manifest ; 1983 ; The Journal of Special Education Volume 17 ; 17 >
+        au < manifest ; 1984 ; The Journal of Special Education Volume 18 ; 18 >
+        au < manifest ; 1985 ; The Journal of Special Education Volume 19 ; 19 >
+        au < manifest ; 1986 ; The Journal of Special Education Volume 20 ; 20 >
+        au < manifest ; 1987 ; The Journal of Special Education Volume 21 ; 21 >
+        au < manifest ; 1988 ; The Journal of Special Education Volume 22 ; 22 >
+        au < manifest ; 1989 ; The Journal of Special Education Volume 23 ; 23 >
+        au < manifest ; 1990 ; The Journal of Special Education Volume 24 ; 24 >
+        au < manifest ; 1991 ; The Journal of Special Education Volume 25 ; 25 >
+        au < manifest ; 1992 ; The Journal of Special Education Volume 26 ; 26 >
+        au < manifest ; 1993 ; The Journal of Special Education Volume 27 ; 27 >
+        au < manifest ; 1994 ; The Journal of Special Education Volume 28 ; 28 >
+        au < manifest ; 1995 ; The Journal of Special Education Volume 29 ; 29 >
+        au < manifest ; 1996 ; The Journal of Special Education Volume 30 ; 30 >
+        au < manifest ; 1997 ; The Journal of Special Education Volume 31 ; 31 >
+        au < manifest ; 1998 ; The Journal of Special Education Volume 32 ; 32 >
+        au < manifest ; 1999 ; The Journal of Special Education Volume 33 ; 33 >
+        au < manifest ; 2000 ; The Journal of Special Education Volume 34 ; 34 >
+        au < manifest ; 2001 ; The Journal of Special Education Volume 35 ; 35 >
+        au < manifest ; 2002 ; The Journal of Special Education Volume 36 ; 36 >
+        au < manifest ; 2003 ; The Journal of Special Education Volume 37 ; 37 >
+        au < manifest ; 2004 ; The Journal of Special Education Volume 38 ; 38 >
+        au < manifest ; 2005 ; The Journal of Special Education Volume 39 ; 39 >
+        au < manifest ; 2006 ; The Journal of Special Education Volume 40 ; 40 >
+        au < manifest ; 2007 ; The Journal of Special Education Volume 41 ; 41 >
+        au < manifest ; 2008 ; The Journal of Special Education Volume 42 ; 42 >
+        au < manifest ; 2009 ; The Journal of Special Education Volume 43 ; 43 >
+        au < manifest ; 2010 ; The Journal of Special Education Volume 44 ; 44 >
+        au < manifest ; 2011 ; The Journal of Special Education Volume 45 ; 45 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Journal of Teacher Education ;
         issn = 0022-4871 ;
         eissn = 1552-7816 ;
@@ -29470,15 +29561,26 @@ comment[mpj] = now published by Brill
     }
 
     {
+
       title <
-          name = Reviews of Human Factors and Ergonomics ;
-          issn = 1557-234X
+        name = Reviews of Human Factors and Ergonomics ;
+        issn = 1557-234X 
       >
 
       {
 
         pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://rev.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[rhfe] = V6 manifest is malformed. The issue link to the issue goes to no page. Other volumes do not have manifest pages.
+
+        au < exists ; 2006 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
+        au < exists ; 2007 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 >
+        au < exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 >
+        au < exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 >
+        au < exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
+        au < exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
 
       }
 
@@ -30638,10 +30740,11 @@ comment[mpj] = now published by Brill
     }
 
     {
+
       title <
-          name = Society and Mental Health ;
-          issn = 2156-8693 ;
-          eissn = 2156-8731
+        name = Society and Mental Health ;
+        issn = 2156-8693 ;
+        eissn = 2156-8731 
       >
 
       {
@@ -31524,7 +31627,7 @@ comment[mpj] = now published by Brill
       title <
         name = Theology ;
         issn = 0040-571X ;
-        eissn = 2044-2696
+        eissn = 2044-2696 
       >
 
       {
@@ -31533,14 +31636,19 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-				au < exists ; 1947 ; Theology Volume 50 ; 50 >
-				au < exists ; 2010 ; Thology Volume 113 ; 113 >
+        comment[exists] = Theology, Volumes on web page: V50-114 (7/2011)
+
+        au < exists ; 1947 ; Theology Volume 50 ; 50 >
+        au < exists ; 1948 ; Theology Volume 51 ; 51 >
+        au < exists ; 1949 ; Theology Volume 52 ; 52 >
+        au < exists ; 1950 ; Theology Volume 53 ; 53 >
+        au < exists ; 2010 ; Theology Volume 113 ; 113 >
         au < manifest ; 2011 ; Theology Volume 114 ; 114 >
-        
+
       }
 
     }
-    
+
     {
 
       title <
@@ -31864,10 +31972,11 @@ comment[mpj] = now published by Brill
     }
 
     {
+
       title <
-          name = Therapeutic Advances in Drug Safety ;
-          issn = 2042-0986 ;
-          eissn = 2042-0994
+        name = Therapeutic Advances in Drug Safety ;
+        issn = 2042-0986 ;
+        eissn = 2042-0994 
       >
 
       {
@@ -31878,6 +31987,159 @@ comment[mpj] = now published by Brill
 
         au < exists ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
         au < exists ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Chronic Disease ;
+        issn = 2040-6223 ;
+        eissn = 2040-6231 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://taj.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Chronic Disease Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Endocrinology and Metabolism ;
+        issn = 2042-0188 ;
+        eissn = 2042-0196 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tae.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Gastroenterology ;
+        issn = 1756-283X ;
+        eissn = 1756-2848 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tag.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 >
+        au < manifest ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 >
+        au < manifest ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 >
+        au < manifest ; 2011 ; Therapeutic Advances in Gastroenterology Volume 4 ; 4 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Hematology ;
+        issn = 2040-6207 ;
+        eissn = 2040-6215 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tah.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2010 ; Therapeutic Advances in Hematology Volume 1 ; 1 >
+        au < manifest ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Medical Oncology ;
+        issn = 1758-8340 ;
+        eissn = 1758-8359 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tam.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Musculoskeletal Disease ;
+        issn = 1759-720X ;
+        eissn = 1759-7218 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tab.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Musculoskeletal Disease Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Neurological Disorders ;
+        issn = 1756-2856 ;
+        eissn = 1756-2864 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tan.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 >
+        au < manifest ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 >
+        au < manifest ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 3 ; 3 >
+        au < manifest ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
 
       }
 
@@ -31933,6 +32195,28 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
         au < manifest ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 >
         au < manifest ; 2011 ; Therapeutic Advances in Respiratory Disease Volume 5 ; 5 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Therapeutic Advances in Urology ;
+        issn = 1756-2872 ;
+        eissn = 1756-2880 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tau.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 >
+        au < manifest ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 >
+        au < manifest ; 2011 ; Therapeutic Advances in Urology Volume 3 ; 3 >
 
       }
 
@@ -32139,10 +32423,61 @@ comment[mpj] = now published by Brill
     }
 
     {
+
+      title <
+        name = Topics in Early Childhood Special Education ;
+        issn = 0271-1214 ;
+        eissn = 1538-4845 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tec.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1981 ; Topics in Early Childhood Special Education Volume 1 ; 1 >
+        au < manifest ; 1982 ; Topics in Early Childhood Special Education Volume 2 ; 2 >
+        au < manifest ; 1983 ; Topics in Early Childhood Special Education Volume 3 ; 3 >
+        au < manifest ; 1984 ; Topics in Early Childhood Special Education Volume 4 ; 4 >
+        au < manifest ; 1985 ; Topics in Early Childhood Special Education Volume 5 ; 5 >
+        au < manifest ; 1986 ; Topics in Early Childhood Special Education Volume 6 ; 6 >
+        au < manifest ; 1987 ; Topics in Early Childhood Special Education Volume 7 ; 7 >
+        au < manifest ; 1988 ; Topics in Early Childhood Special Education Volume 8 ; 8 >
+        au < manifest ; 1989 ; Topics in Early Childhood Special Education Volume 9 ; 9 >
+        au < manifest ; 1990 ; Topics in Early Childhood Special Education Volume 10 ; 10 >
+        au < manifest ; 1991 ; Topics in Early Childhood Special Education Volume 11 ; 11 >
+        au < manifest ; 1992 ; Topics in Early Childhood Special Education Volume 12 ; 12 >
+        au < manifest ; 1993 ; Topics in Early Childhood Special Education Volume 13 ; 13 >
+        au < manifest ; 1994 ; Topics in Early Childhood Special Education Volume 14 ; 14 >
+        au < manifest ; 1995 ; Topics in Early Childhood Special Education Volume 15 ; 15 >
+        au < manifest ; 1996 ; Topics in Early Childhood Special Education Volume 16 ; 16 >
+        au < manifest ; 1997 ; Topics in Early Childhood Special Education Volume 17 ; 17 >
+        au < manifest ; 1998 ; Topics in Early Childhood Special Education Volume 18 ; 18 >
+        au < manifest ; 1999 ; Topics in Early Childhood Special Education Volume 19 ; 19 >
+        au < manifest ; 2000 ; Topics in Early Childhood Special Education Volume 20 ; 20 >
+        au < manifest ; 2001 ; Topics in Early Childhood Special Education Volume 21 ; 21 >
+        au < manifest ; 2002 ; Topics in Early Childhood Special Education Volume 22 ; 22 >
+        au < manifest ; 2003 ; Topics in Early Childhood Special Education Volume 23 ; 23 >
+        au < manifest ; 2004 ; Topics in Early Childhood Special Education Volume 24 ; 24 >
+        au < manifest ; 2005 ; Topics in Early Childhood Special Education Volume 25 ; 25 >
+        au < manifest ; 2006 ; Topics in Early Childhood Special Education Volume 26 ; 26 >
+        au < manifest ; 2007 ; Topics in Early Childhood Special Education Volume 27 ; 27 >
+        au < manifest ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 >
+        au < manifest ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 >
+        au < manifest ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 >
+        au < manifest ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 >
+
+      }
+
+    }
+
+    {
+
       title <
         name = Tourism and Hospitality Research ;
         issn = 1467-3584 ;
-        eissn = 1742-9692
+        eissn = 1742-9692 
       >
 
       {
@@ -32151,13 +32486,9 @@ comment[mpj] = now published by Brill
         param[base_url] = http://thr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2001 ; Tourism and Hospitality Research Volume 1 ; 1 >
-        au < exists ; 2002 ; Tourism and Hospitality Research Volume 2 ; 2 >
-        au < exists ; 2003 ; Tourism and Hospitality Research Volume 3 ; 3 >
-        au < exists ; 2004 ; Tourism and Hospitality Research Volume 4 ; 4 >
-        au < exists ; 2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
-        au < exists ; 2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
-        au < exists ; 2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
+        au < exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
+        au < exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
+        au < exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
         au < exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
         au < exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
         au < exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
@@ -32265,6 +32596,64 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 >
         au < manifest ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 >
         au < manifest ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Toxicologic Pathology ;
+        issn = 0192-6233 ;
+        eissn = 1533-1601 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://tpx.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1972 ; Toxicologic Pathology Volume 1 ; 1 >
+        au < manifest ; 1974 ; Toxicologic Pathology Volume 2 ; 2 >
+        au < manifest ; 1975 ; Toxicologic Pathology Volume 3 ; 3 >
+        au < manifest ; 1976 ; Toxicologic Pathology Volume 4 ; 4 >
+        au < manifest ; 1977 ; Toxicologic Pathology Volume 5 ; 5 >
+        au < manifest ; 1978 ; Toxicologic Pathology Volume 6 ; 6 >
+        au < manifest ; 1979 ; Toxicologic Pathology Volume 7 ; 7 >
+        au < manifest ; 1980 ; Toxicologic Pathology Volume 8 ; 8 >
+        au < manifest ; 1981 ; Toxicologic Pathology Volume 9 ; 9 >
+        au < manifest ; 1982 ; Toxicologic Pathology Volume 10 ; 10 >
+        au < manifest ; 1983 ; Toxicologic Pathology Volume 11 ; 11 >
+        au < manifest ; 1984 ; Toxicologic Pathology Volume 12 ; 12 >
+        au < manifest ; 1985 ; Toxicologic Pathology Volume 13 ; 13 >
+        au < manifest ; 1986 ; Toxicologic Pathology Volume 14 ; 14 >
+        au < manifest ; 1987 ; Toxicologic Pathology Volume 15 ; 15 >
+        au < manifest ; 1988 ; Toxicologic Pathology Volume 16 ; 16 >
+        au < manifest ; 1989 ; Toxicologic Pathology Volume 17 ; 17 >
+        au < manifest ; 1990 ; Toxicologic Pathology Volume 18 ; 18 >
+        au < manifest ; 1991 ; Toxicologic Pathology Volume 19 ; 19 >
+        au < manifest ; 1992 ; Toxicologic Pathology Volume 20 ; 20 >
+        au < manifest ; 1993 ; Toxicologic Pathology Volume 21 ; 21 >
+        au < manifest ; 1994 ; Toxicologic Pathology Volume 22 ; 22 >
+        au < manifest ; 1995 ; Toxicologic Pathology Volume 23 ; 23 >
+        au < manifest ; 1996 ; Toxicologic Pathology Volume 24 ; 24 >
+        au < manifest ; 1997 ; Toxicologic Pathology Volume 25 ; 25 >
+        au < manifest ; 1998 ; Toxicologic Pathology Volume 26 ; 26 >
+        au < manifest ; 1999 ; Toxicologic Pathology Volume 27 ; 27 >
+        au < manifest ; 2000 ; Toxicologic Pathology Volume 28 ; 28 >
+        au < manifest ; 2001 ; Toxicologic Pathology Volume 29 ; 29 >
+        au < manifest ; 2002 ; Toxicologic Pathology Volume 30 ; 30 >
+        au < manifest ; 2003 ; Toxicologic Pathology Volume 31 ; 31 >
+        au < manifest ; 2004 ; Toxicologic Pathology Volume 32 ; 32 >
+        au < manifest ; 2005 ; Toxicologic Pathology Volume 33 ; 33 >
+        au < manifest ; 2006 ; Toxicologic Pathology Volume 34 ; 34 >
+        au < manifest ; 2007 ; Toxicologic Pathology Volume 35 ; 35 >
+        au < manifest ; 2008 ; Toxicologic Pathology Volume 36 ; 36 >
+        au < manifest ; 2009 ; Toxicologic Pathology Volume 37 ; 37 >
+        au < manifest ; 2010 ; Toxicologic Pathology Volume 38 ; 38 >
+        au < manifest ; 2011 ; Toxicologic Pathology Volume 39 ; 39 >
 
       }
 
@@ -32410,6 +32799,42 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 >
         au < manifest ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 >
         au < manifest ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Transfer: European Review of Labour and Research ;
+        issn = 1024-2589 ;
+        eissn = 1996-7284 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://trs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 >
+        au < exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 >
+        au < exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 >
+        au < exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 >
+        au < exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 >
+        au < exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 >
+        au < exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 >
+        au < exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 >
+        au < exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 >
+        au < exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 >
+        au < exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 >
+        au < exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 >
+        au < exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 >
+        au < exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 >
+        au < manifest ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
+        au < manifest ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
+        au < manifest ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
 
       }
 
@@ -33911,33 +34336,6 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 >
         au < manifest ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 >
         au < manifest ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = American Sociological Review ;
-        issn = 0003-1224 ;
-        eissn = 1939-8271 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://asr.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < exists ; 2004 ; American Sociological Review Volume 69 ; 69 >
-        au < exists ; 2005 ; American Sociological Review Volume 70 ; 70 >
-        au < exists ; 2006 ; American Sociological Review Volume 71 ; 71 >
-        au < exists ; 2007 ; American Sociological Review Volume 72 ; 72 >
-        au < exists ; 2008 ; American Sociological Review Volume 73 ; 73 >
-        au < manifest ; 2009 ; American Sociological Review Volume 74 ; 74 >
-        au < manifest ; 2010 ; American Sociological Review Volume 75 ; 75 >
-        au < manifest ; 2011 ; American Sociological Review Volume 76 ; 76 >
 
       }
 
@@ -35613,32 +36011,6 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Reviews of Human Factors and Ergonomics ;
-        issn = 1557-234X 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://rev.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-        
-        comment[rhfe] = V6 manifest is malformed. The link to the issue goes to no page.
-
-        au < exists ; 2006 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
-        au < exists ; 2007 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 >
-        au < exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 >
-        au < exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 >
-        au < exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
-        au < exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
-
-      }
-
-    }
-
-    {
-
-      title <
         name = Scandinavian Journal of Public Health ;
         issn = 1403-4948 ;
         eissn = 1651-1905 
@@ -35737,26 +36109,6 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
         au < manifest ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 >
         au < manifest ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Society and Mental Health ;
-        issn = 2156-8693 ;
-        eissn = 2156-8731 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://smh.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2011 ; Society and Mental Health Volume 1 ; 1 >
 
       }
 
@@ -36040,463 +36392,6 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; The Journal of School Nursing Volume 25 ; 25 >
         au < manifest ; 2010 ; The Journal of School Nursing Volume 26 ; 26 >
         au < manifest ; 2011 ; The Journal of School Nursing Volume 27 ; 27 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = The Journal of Special Education ;
-        issn = 0022-4669 ;
-        eissn = 1538-4764 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://sed.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 1966 ; The Journal of Special Education Volume 1 ; 1 >
-        au < manifest ; 1967 ; The Journal of Special Education Volume 2 ; 2 >
-        au < manifest ; 1969 ; The Journal of Special Education Volume 3 ; 3 >
-        au < manifest ; 1970 ; The Journal of Special Education Volume 4 ; 4 >
-        au < manifest ; 1971 ; The Journal of Special Education Volume 5 ; 5 >
-        au < manifest ; 1972 ; The Journal of Special Education Volume 6 ; 6 >
-        au < manifest ; 1973 ; The Journal of Special Education Volume 7 ; 7 >
-        au < manifest ; 1974 ; The Journal of Special Education Volume 8 ; 8 >
-        au < manifest ; 1975 ; The Journal of Special Education Volume 9 ; 9 >
-        au < manifest ; 1976 ; The Journal of Special Education Volume 10 ; 10 >
-        au < manifest ; 1977 ; The Journal of Special Education Volume 11 ; 11 >
-        au < manifest ; 1978 ; The Journal of Special Education Volume 12 ; 12 >
-        au < manifest ; 1979 ; The Journal of Special Education Volume 13 ; 13 >
-        au < manifest ; 1980 ; The Journal of Special Education Volume 14 ; 14 >
-        au < manifest ; 1981 ; The Journal of Special Education Volume 15 ; 15 >
-        au < manifest ; 1982 ; The Journal of Special Education Volume 16 ; 16 >
-        au < manifest ; 1983 ; The Journal of Special Education Volume 17 ; 17 >
-        au < manifest ; 1984 ; The Journal of Special Education Volume 18 ; 18 >
-        au < manifest ; 1985 ; The Journal of Special Education Volume 19 ; 19 >
-        au < manifest ; 1986 ; The Journal of Special Education Volume 20 ; 20 >
-        au < manifest ; 1987 ; The Journal of Special Education Volume 21 ; 21 >
-        au < manifest ; 1988 ; The Journal of Special Education Volume 22 ; 22 >
-        au < manifest ; 1989 ; The Journal of Special Education Volume 23 ; 23 >
-        au < manifest ; 1990 ; The Journal of Special Education Volume 24 ; 24 >
-        au < manifest ; 1991 ; The Journal of Special Education Volume 25 ; 25 >
-        au < manifest ; 1992 ; The Journal of Special Education Volume 26 ; 26 >
-        au < manifest ; 1993 ; The Journal of Special Education Volume 27 ; 27 >
-        au < manifest ; 1994 ; The Journal of Special Education Volume 28 ; 28 >
-        au < manifest ; 1995 ; The Journal of Special Education Volume 29 ; 29 >
-        au < manifest ; 1996 ; The Journal of Special Education Volume 30 ; 30 >
-        au < manifest ; 1997 ; The Journal of Special Education Volume 31 ; 31 >
-        au < manifest ; 1998 ; The Journal of Special Education Volume 32 ; 32 >
-        au < manifest ; 1999 ; The Journal of Special Education Volume 33 ; 33 >
-        au < manifest ; 2000 ; The Journal of Special Education Volume 34 ; 34 >
-        au < manifest ; 2001 ; The Journal of Special Education Volume 35 ; 35 >
-        au < manifest ; 2002 ; The Journal of Special Education Volume 36 ; 36 >
-        au < manifest ; 2003 ; The Journal of Special Education Volume 37 ; 37 >
-        au < manifest ; 2004 ; The Journal of Special Education Volume 38 ; 38 >
-        au < manifest ; 2005 ; The Journal of Special Education Volume 39 ; 39 >
-        au < manifest ; 2006 ; The Journal of Special Education Volume 40 ; 40 >
-        au < manifest ; 2007 ; The Journal of Special Education Volume 41 ; 41 >
-        au < manifest ; 2008 ; The Journal of Special Education Volume 42 ; 42 >
-        au < manifest ; 2009 ; The Journal of Special Education Volume 43 ; 43 >
-        au < manifest ; 2010 ; The Journal of Special Education Volume 44 ; 44 >
-        au < manifest ; 2011 ; The Journal of Special Education Volume 45 ; 45 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Theology ;
-        issn = 0040-571X ;
-        eissn = 2044-2696 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tjx.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-        
-        comment[tjx] = Theology, Volumes on web page: V50-114 (7/2011)
-
-        au < exists ; 1947 ; Theology Volume 50 ; 50 >
-        au < exists ; 1948 ; Theology Volume 51 ; 51 >
-        au < exists ; 1949 ; Theology Volume 52 ; 52 >
-        au < exists ; 1950 ; Theology Volume 53 ; 53 >
-        au < exists ; 2010 ; Theology Volume 113 ; 113 >
-        au < manifest ; 2011 ; Theology Volume 114 ; 114 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Chronic Disease ;
-        issn = 2040-6223 ;
-        eissn = 2040-6231 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://taj.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2010 ; Therapeutic Advances in Chronic Disease Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Drug Safety ;
-        issn = 2042-0986 ;
-        eissn = 2042-0994 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://taw.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < exists ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
-        au < exists ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Endocrinology and Metabolism ;
-        issn = 2042-0188 ;
-        eissn = 2042-0196 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tae.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Gastroenterology ;
-        issn = 1756-283X ;
-        eissn = 1756-2848 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tag.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 >
-        au < manifest ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 >
-        au < manifest ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 >
-        au < manifest ; 2011 ; Therapeutic Advances in Gastroenterology Volume 4 ; 4 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Hematology ;
-        issn = 2040-6207 ;
-        eissn = 2040-6215 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tah.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2010 ; Therapeutic Advances in Hematology Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Medical Oncology ;
-        issn = 1758-8340 ;
-        eissn = 1758-8359 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tam.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 >
-        au < manifest ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 >
-        au < manifest ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Musculoskeletal Disease ;
-        issn = 1759-720X ;
-        eissn = 1759-7218 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tab.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2009 ; Therapeutic Advances in Musculoskeletal Disease Volume 1 ; 1 >
-        au < manifest ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 >
-        au < manifest ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Neurological Disorders ;
-        issn = 1756-2856 ;
-        eissn = 1756-2864 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tan.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 >
-        au < manifest ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 >
-        au < manifest ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 3 ; 3 >
-        au < manifest ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Therapeutic Advances in Urology ;
-        issn = 1756-2872 ;
-        eissn = 1756-2880 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tau.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 >
-        au < manifest ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 >
-        au < manifest ; 2011 ; Therapeutic Advances in Urology Volume 3 ; 3 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Topics in Early Childhood Special Education ;
-        issn = 0271-1214 ;
-        eissn = 1538-4845 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tec.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 1981 ; Topics in Early Childhood Special Education Volume 1 ; 1 >
-        au < manifest ; 1982 ; Topics in Early Childhood Special Education Volume 2 ; 2 >
-        au < manifest ; 1983 ; Topics in Early Childhood Special Education Volume 3 ; 3 >
-        au < manifest ; 1984 ; Topics in Early Childhood Special Education Volume 4 ; 4 >
-        au < manifest ; 1985 ; Topics in Early Childhood Special Education Volume 5 ; 5 >
-        au < manifest ; 1986 ; Topics in Early Childhood Special Education Volume 6 ; 6 >
-        au < manifest ; 1987 ; Topics in Early Childhood Special Education Volume 7 ; 7 >
-        au < manifest ; 1988 ; Topics in Early Childhood Special Education Volume 8 ; 8 >
-        au < manifest ; 1989 ; Topics in Early Childhood Special Education Volume 9 ; 9 >
-        au < manifest ; 1990 ; Topics in Early Childhood Special Education Volume 10 ; 10 >
-        au < manifest ; 1991 ; Topics in Early Childhood Special Education Volume 11 ; 11 >
-        au < manifest ; 1992 ; Topics in Early Childhood Special Education Volume 12 ; 12 >
-        au < manifest ; 1993 ; Topics in Early Childhood Special Education Volume 13 ; 13 >
-        au < manifest ; 1994 ; Topics in Early Childhood Special Education Volume 14 ; 14 >
-        au < manifest ; 1995 ; Topics in Early Childhood Special Education Volume 15 ; 15 >
-        au < manifest ; 1996 ; Topics in Early Childhood Special Education Volume 16 ; 16 >
-        au < manifest ; 1997 ; Topics in Early Childhood Special Education Volume 17 ; 17 >
-        au < manifest ; 1998 ; Topics in Early Childhood Special Education Volume 18 ; 18 >
-        au < manifest ; 1999 ; Topics in Early Childhood Special Education Volume 19 ; 19 >
-        au < manifest ; 2000 ; Topics in Early Childhood Special Education Volume 20 ; 20 >
-        au < manifest ; 2001 ; Topics in Early Childhood Special Education Volume 21 ; 21 >
-        au < manifest ; 2002 ; Topics in Early Childhood Special Education Volume 22 ; 22 >
-        au < manifest ; 2003 ; Topics in Early Childhood Special Education Volume 23 ; 23 >
-        au < manifest ; 2004 ; Topics in Early Childhood Special Education Volume 24 ; 24 >
-        au < manifest ; 2005 ; Topics in Early Childhood Special Education Volume 25 ; 25 >
-        au < manifest ; 2006 ; Topics in Early Childhood Special Education Volume 26 ; 26 >
-        au < manifest ; 2007 ; Topics in Early Childhood Special Education Volume 27 ; 27 >
-        au < manifest ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 >
-        au < manifest ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 >
-        au < manifest ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 >
-        au < manifest ; 2011 ; Topics in Early Childhood Special Education Volume 31 ; 31 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Tourism and Hospitality Research ;
-        issn = 1467-3584 ;
-        eissn = 1742-9692 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://thr.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
-        au < exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
-        au < exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
-        au < exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
-        au < exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
-        au < exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
-        au < manifest ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Toxicologic Pathology ;
-        issn = 0192-6233 ;
-        eissn = 1533-1601 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://tpx.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 1972 ; Toxicologic Pathology Volume 1 ; 1 >
-        au < manifest ; 1974 ; Toxicologic Pathology Volume 2 ; 2 >
-        au < manifest ; 1975 ; Toxicologic Pathology Volume 3 ; 3 >
-        au < manifest ; 1976 ; Toxicologic Pathology Volume 4 ; 4 >
-        au < manifest ; 1977 ; Toxicologic Pathology Volume 5 ; 5 >
-        au < manifest ; 1978 ; Toxicologic Pathology Volume 6 ; 6 >
-        au < manifest ; 1979 ; Toxicologic Pathology Volume 7 ; 7 >
-        au < manifest ; 1980 ; Toxicologic Pathology Volume 8 ; 8 >
-        au < manifest ; 1981 ; Toxicologic Pathology Volume 9 ; 9 >
-        au < manifest ; 1982 ; Toxicologic Pathology Volume 10 ; 10 >
-        au < manifest ; 1983 ; Toxicologic Pathology Volume 11 ; 11 >
-        au < manifest ; 1984 ; Toxicologic Pathology Volume 12 ; 12 >
-        au < manifest ; 1985 ; Toxicologic Pathology Volume 13 ; 13 >
-        au < manifest ; 1986 ; Toxicologic Pathology Volume 14 ; 14 >
-        au < manifest ; 1987 ; Toxicologic Pathology Volume 15 ; 15 >
-        au < manifest ; 1988 ; Toxicologic Pathology Volume 16 ; 16 >
-        au < manifest ; 1989 ; Toxicologic Pathology Volume 17 ; 17 >
-        au < manifest ; 1990 ; Toxicologic Pathology Volume 18 ; 18 >
-        au < manifest ; 1991 ; Toxicologic Pathology Volume 19 ; 19 >
-        au < manifest ; 1992 ; Toxicologic Pathology Volume 20 ; 20 >
-        au < manifest ; 1993 ; Toxicologic Pathology Volume 21 ; 21 >
-        au < manifest ; 1994 ; Toxicologic Pathology Volume 22 ; 22 >
-        au < manifest ; 1995 ; Toxicologic Pathology Volume 23 ; 23 >
-        au < manifest ; 1996 ; Toxicologic Pathology Volume 24 ; 24 >
-        au < manifest ; 1997 ; Toxicologic Pathology Volume 25 ; 25 >
-        au < manifest ; 1998 ; Toxicologic Pathology Volume 26 ; 26 >
-        au < manifest ; 1999 ; Toxicologic Pathology Volume 27 ; 27 >
-        au < manifest ; 2000 ; Toxicologic Pathology Volume 28 ; 28 >
-        au < manifest ; 2001 ; Toxicologic Pathology Volume 29 ; 29 >
-        au < manifest ; 2002 ; Toxicologic Pathology Volume 30 ; 30 >
-        au < manifest ; 2003 ; Toxicologic Pathology Volume 31 ; 31 >
-        au < manifest ; 2004 ; Toxicologic Pathology Volume 32 ; 32 >
-        au < manifest ; 2005 ; Toxicologic Pathology Volume 33 ; 33 >
-        au < manifest ; 2006 ; Toxicologic Pathology Volume 34 ; 34 >
-        au < manifest ; 2007 ; Toxicologic Pathology Volume 35 ; 35 >
-        au < manifest ; 2008 ; Toxicologic Pathology Volume 36 ; 36 >
-        au < manifest ; 2009 ; Toxicologic Pathology Volume 37 ; 37 >
-        au < manifest ; 2010 ; Toxicologic Pathology Volume 38 ; 38 >
-        au < manifest ; 2011 ; Toxicologic Pathology Volume 39 ; 39 >
-
-      }
-
-    }
-
-    {
-
-      title <
-        name = Transfer: European Review of Labour and Research ;
-        issn = 1024-2589 ;
-        eissn = 1996-7284 
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://trs.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 >
-        au < exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 >
-        au < exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 >
-        au < exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 >
-        au < exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 >
-        au < exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 >
-        au < exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 >
-        au < exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 >
-        au < exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 >
-        au < exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 >
-        au < exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 >
-        au < exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 >
-        au < exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 >
-        au < exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 >
-        au < manifest ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
-        au < manifest ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
-        au < manifest ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
 
       }
 
