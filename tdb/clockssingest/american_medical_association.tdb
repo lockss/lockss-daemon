@@ -1666,22 +1666,22 @@
     >
     
     plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
     param[base_url] = http://virtualmentor.ama-assn.org/
     
-    au < released ; crawling ; 1999 ; Virtual Mentor Volume 1 ; 1999 >
-    au < released ; crawling ; 2000 ; Virtual Mentor Volume 2 ; 2000 >
-    au < released ; crawling ; 2001 ; Virtual Mentor Volume 3 ; 2001 >
-    au < released ; crawling ; 2002 ; Virtual Mentor Volume 4 ; 2002 >
-    au < released ; crawling ; 2003 ; Virtual Mentor Volume 5 ; 2003 >
-    au < released ; crawling ; 2004 ; Virtual Mentor Volume 6 ; 2004 >
-    au < released ; crawling ; 2005 ; Virtual Mentor Volume 7 ; 2005 >
-    au < released ; crawling ; 2006 ; Virtual Mentor Volume 8 ; 2006 >
-    au < released ; crawling ; 2007 ; Virtual Mentor Volume 9 ; 2007 >
-    au < released ; crawling ; 2008 ; Virtual Mentor Volume 10 ; 2008 >
-    au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 2009 >
-    au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 2010 >
-    au < manifest ; exists ; 2011 ; Virtual Mentor Volume 13 ; 2011 >
+    au < released ; crawling ; 1999 ; Virtual Mentor Volume 1 ; 1 ; 1999 >
+    au < released ; crawling ; 2000 ; Virtual Mentor Volume 2 ; 2 ; 2000 >
+    au < released ; crawling ; 2001 ; Virtual Mentor Volume 3 ; 3 ; 2001 >
+    au < released ; crawling ; 2002 ; Virtual Mentor Volume 4 ; 4 ; 2002 >
+    au < released ; crawling ; 2003 ; Virtual Mentor Volume 5 ; 5 ; 2003 >
+    au < released ; crawling ; 2004 ; Virtual Mentor Volume 6 ; 6 ; 2004 >
+    au < released ; crawling ; 2005 ; Virtual Mentor Volume 7 ; 7 ; 2005 >
+    au < released ; crawling ; 2006 ; Virtual Mentor Volume 8 ; 8 ; 2006 >
+    au < released ; crawling ; 2007 ; Virtual Mentor Volume 9 ; 9 ; 2007 >
+    au < released ; crawling ; 2008 ; Virtual Mentor Volume 10 ; 10 ; 2008 >
+    au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
+    au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
+    au < manifest ; exists ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
 
   }
   
