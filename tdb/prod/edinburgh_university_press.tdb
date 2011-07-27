@@ -4,21 +4,34 @@
     name = Edinburgh University Press
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
-  implicit < status ; year ; name ; param[volume] >
-
   {
 
     title <
       name = Africa: The Journal of the International African Institute ;
-      issn = 0954-8890 ;
-      eissn = 1755-1609 ;
-      issnl = 0954-8890
+      issn = 0001-9720 ;
+      eissn = 1750-0184 ;
+      issnl = 0001-9720
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = afr
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[2011] = from 2011 published by Cambridge University Press
+
+    au < doesNotExist ; 2011 ; Africa Volume 81 ; 81 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = africa_the_journal_of_the_international_african_institute
     attr[journal_abbr] = afr
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
     au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
@@ -27,8 +40,169 @@
     au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
     au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
 
+    }
+
   }
 
+  {
+
+    title <
+      name = Africa Bibliography ;
+      issn = 0266-6731 ;
+      eissn = 1757-1642 ;
+      issnl = 0266-6731 
+     >
+
+	{
+	
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = abib
+    implicit < status ; year ; name ; param[volume_name] >
+    comment[2011] = from 2011 published by Cambridge University Press
+
+    au < doesNotExist ; 2011 ; Africa Bibliography Volume 2010 (2011) ; 2010 >
+      
+    }
+    
+  }
+
+  {
+
+    title <
+      name = African Journal of International and Comparative Law ;
+      issn = 0954-8890 ;
+      eissn = 1755-1609 ;
+      issnl = 0954-8890 
+     >
+     
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = ajicl
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
+    au < exists ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
+    au < exists ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+    au < exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+    au < exists ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
+    au < ready ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
+    au < exists ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
+	
+	}
+	
+  }
+  
+  {
+
+    title <
+      name = Architectural Heritage ;
+      issn = 1350-7524 ;
+      eissn = 1755-1641 ;
+      issnl = 1350-7524 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = arch
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+    au < exists ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+    au < exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
+    au < exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
+    au < exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+    au < exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
+    au < exists ; 2009 ; Architectural Heritage Volume XX ; XX >
+    au < exists ; 2010 ; Architectural Heritage Volume 21 ; 21 >
+
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Archives of Natural History ;
+      issn = 0260-9541 ;
+      eissn = 1755-6260 ;
+      issnl = 0260-9541 
+     >
+	
+	{
+	
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = anh
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+    au < exists ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+    au < exists ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+    au < exists ; 2006 ; Archives of Natural History Volume 33 ; 33 >
+    au < exists ; 2007 ; Archives of Natural History Volume 34 ; 34 >
+    au < exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+    au < exists ; 2009 ; Archives of Natural History Volume 36 ; 36 >
+    au < ready ; 2010 ; Archives of Natural History Volume 37 ; 37 >
+	
+	}
+	
+  }
+  
+  {
+
+    title <
+      name = Ben Jonson Journal ;
+      issn = 1079-3453 ;
+      eissn = 1755-165X ;
+      issnl = 1079-3453 
+     >
+
+	{
+	
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = bjj
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
+    au < exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
+    au < exists ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
+    au < ready ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Britain and the World ;
+      issn = 2043-8567 ;
+      eissn = 2043-8575 ;
+      issnl = 2043-8567 
+     >
+
+	{
+	
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = brw
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < ready ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
+    au < ready ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
+    au < exists ; 2010 ; Britain and the World Volume 3 ; 3 >
+    au < exists ; 2011 ; Britain and the World Volume 4 ; 4 >
+
+	}
+	
+  }
+  
   {
 
     title <
@@ -38,15 +212,67 @@
       issnl = 1744-1854
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = ccs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
+    au < exists ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
+    au < exists ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+    au < exists ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+    au < exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+    au < exists ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
+    au < ready ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
+    au < exists ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
+    
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = comparative_critical_studies
     attr[journal_abbr] = ccs
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
     au < released ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
     au < released ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
 
+    }
+
   }
 
+  {
+
+    title <
+      name = Corpora ;
+      issn = 1749-5032 ;
+      eissn = 1755-1676 ;
+      issnl = 1749-5032 
+     >
+
+	{
+	
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = cor
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2006 ; Corpora Volume 1 ; 1 >
+    au < exists ; 2007 ; Corpora Volume 2 ; 2 >
+    au < exists ; 2008 ; Corpora Volume 3 ; 3 >
+    au < ready ; 2009 ; Corpora Volume 4 ; 4 >
+    au < ready ; 2010 ; Corpora Volume 5 ; 5 >
+	
+	}
+	
+  }
+  
   {
 
     title <
@@ -56,13 +282,120 @@
       issnl = 2064-2875
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = drs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2000 ; Dance Research Volume 18 ; 18 >
+    au < exists ; 2001 ; Dance Research Volume 19 ; 19 >
+    au < exists ; 2002 ; Dance Research Volume 20 ; 20 >
+    au < exists ; 2003 ; Dance Research Volume 21 ; 21 >
+    au < exists ; 2004 ; Dance Research Volume 22 ; 22 >
+    au < exists ; 2005 ; Dance Research Volume 23 ; 23 >
+    au < exists ; 2006 ; Dance Research Volume 24 ; 24 >
+    au < exists ; 2007 ; Dance Research Volume 25 ; 25 >
+    au < exists ; 2008 ; Dance Research Volume 26 ; 26 >
+    au < exists ; 2009 ; Dance Research Volume 27 ; 27 >
+    au < ready ; 2010 ; Dance Research Volume 28 ; 28 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = dance_research
     attr[journal_abbr] = dar
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Dance Research Volume 24 ; 24 >
     au < released ; 2007 ; Dance Research Volume 25 ; 25 >
     au < released ; 2008 ; Dance Research Volume 26 ; 26 >
 
+    }
+
+  }
+
+  {
+
+    title <
+      name = Deleuze Studies ;
+      issn = 1750-2241 ;
+      eissn = 1755-1684 ;
+      issnl = 1750-2241 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = dls
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2007 ; Deleuze Studies Volume 1 ; 1 >
+    au < exists ; 2008 ; Deleuze Studies Volume 2 ; 2 >
+    au < exists ; 2009 ; Deleuze Studies Volume 3 ; 3 >
+    au < ready ; 2010 ; Deleuze Studies Volume 4 ; 4 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Derrida Today ;
+      issn = 1754-8500 ;
+      eissn = 1754-8519 ;
+      issnl = 1754-8500 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = drt
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2008 ; Derrida Today Volume 1 ; 1 >
+    au < exists ; 2009 ; Derrida Today Volume 2 ; 2 >
+    au < ready ; 2010 ; Derrida Today Volume 3 ; 3 >
+
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Edinburgh Law Review ;
+      issn = 1364-9809 ;
+      eissn = 1755-1692 ;
+      issnl = 1364-9809 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = elr
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
+    au < exists ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
+    au < exists ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
+    au < exists ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
+    au < exists ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
+    au < exists ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
+    au < ready ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
+    au < exists ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
+	
+	}
+	
   }
 
   {
@@ -74,12 +407,38 @@
       issnl = 1742-3600
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = epi
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Episteme Volume 1 ; 1 >
+    au < exists ; 2005 ; Episteme Volume 2 ; 2 >
+    au < exists ; 2006 ; Episteme Volume 3 ; 3 >
+    au < exists ; 2007 ; Episteme Volume 4 ; 4 >
+    au < exists ; 2008 ; Episteme Volume 5 ; 5 >
+    au < exists ; 2009 ; Episteme Volume 6 ; 6 >
+    au < ready ; 2010 ; Episteme Volume 7 ; 7 >
+    au < exists ; 2011 ; Episteme Volume 8 ; 8 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = episteme
     attr[journal_abbr] = epi
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
     au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 ; 4 >
     au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 ; 5 >
+
+    }
 
   }
 
@@ -92,12 +451,37 @@
       issnl = 1474-9475
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = hls
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Holy Land Studies Volume 3 ; 3 >
+    au < exists ; 2005 ; Holy Land Studies Volume 4 ; 4 >
+    au < exists ; 2006 ; Holy Land Studies Volume 5 ; 5 >
+    au < exists ; 2007 ; Holy Land Studies Volume 6 ; 6 >
+    au < exists ; 2008 ; Holy Land Studies Volume 7 ; 7 >
+    au < exists ; 2009 ; Holy Land Studies Volume 8 ; 8 >
+    au < ready ; 2010 ; Holy Land Studies Volume 9 ; 9 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = holy_land_studies
     attr[journal_abbr] = hls
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
     au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 ; 6 >
     au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 ; 7 >
+
+    }
 
   }
 
@@ -110,14 +494,268 @@
       issnl = 0020-157X
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = inr
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Innes Review Volume 55 ; 55 >
+    au < exists ; 2005 ; Innes Review Volume 56 ; 56 >
+    au < exists ; 2006 ; Innes Review Volume 57 ; 57 >
+    au < exists ; 2007 ; Innes Review Volume 58 ; 58 >
+    au < exists ; 2008 ; Innes Review Volume 59 ; 59 >
+    au < exists ; 2009 ; Innes Review Volume 60 ; 60 >
+    au < ready ; 2010 ; Innes Review Volume 61 ; 61 >
+    
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = the_innes_review
     attr[journal_abbr] = inn
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
     au < released ; 2008 ; The Innes Review Volume 59 ; 59 >
-
+	
+	}
+	
   }
   
+  {
+
+    title <
+      name = International Journal of Humanities and Arts Computing ;
+      issn = 1753-8548 ;
+      eissn = 1755-1706 ;
+      issnl = 1753-8548 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = ijhac
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1994 ; International Journal of Humanities and Arts Computing Volume 6 (1994) ; 6 >
+    au < exists ; 1995 ; International Journal of Humanities and Arts Computing Volume 7 (1995) ; 7 >
+    au < exists ; 1996 ; International Journal of Humanities and Arts Computing Volume 8 (1996) ; 8 >
+    au < exists ; 1997 ; International Journal of Humanities and Arts Computing Volume 9 (1997) ; 9 >
+    au < exists ; 1998 ; International Journal of Humanities and Arts Computing Volume 10 (1998) ; 10 >
+    au < exists ; 1999 ; International Journal of Humanities and Arts Computing Volume 11 (1999) ; 11 >
+    au < exists ; 2000 ; International Journal of Humanities and Arts Computing Volume 12 (2000) ; 12 >
+    au < exists ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 (2001) ; 13 >
+    au < exists ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 (2002) ; 14 >
+    au < exists ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
+    au < exists ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
+    au < exists ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
+    au < exists ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
+    au < exists ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = International Research in Children's Literature ;
+      issn = 1755-6198 ;
+      eissn = 1755-6201 ;
+      issnl = 1755-6198 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = ircl
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
+    au < exists ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
+    au < ready ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Journal of Beckett Studies ;
+      issn = 0309-5207 ;
+      eissn = 1759-7811 ;
+      issnl = 0309-5207 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jobs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
+    au < exists ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
+    au < ready ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
+    au < exists ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Journal of British Cinema and Television ;
+      issn = 1743-4521 ;
+      eissn = 1755-1714 ;
+      issnl = 1743-4521 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jbctv
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
+    au < exists ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
+    au < exists ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
+    au < exists ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
+    au < exists ; 2008 ; Journal of British Cinema and Television Volume 5 ; 5 >
+    au < exists ; 2009 ; Journal of British Cinema and Television Volume 6 ; 6 >
+    au < ready ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Journal of International Political Theory ;
+      issn = 1755-0882 ;
+      eissn = 1755-1722 ;
+      issnl = 1755-0882 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jipt
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
+    au < exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
+    au < exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+    au < exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
+    au < exists ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
+    au < ready ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
+    au < exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
+	
+	}
+	
+  }    
+
+  {
+
+    title <
+      name = Journal of Qur'anic Studies ;
+      issn = 1465-3591 ;
+      eissn = 1755-1730 ;
+      issnl = 1465-3591 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jqs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 >
+    au < exists ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 >
+    au < exists ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
+    au < exists ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
+    au < exists ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
+    au < exists ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
+    au < exists ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Journal of Scottish Historical Studies ;
+      issn = 1748-538X ;
+      eissn = 1755-1749 ;
+      issnl = 1748-538X 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jshs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
+    au < exists ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
+    au < exists ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
+    au < exists ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
+    au < exists ; 2005 ; Journal of Scottish Historical Studies Volume 25 ; 25 >
+    au < exists ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
+    au < exists ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
+    au < exists ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
+    au < exists ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
+    au < ready ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Journal of Scottish Philosophy ;
+      issn = 1479-6651 ;
+      eissn = 1755-2001 ;
+      issnl = 1479-6651 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = jsp
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2003 ; Journal of Scottish Philosophy Volume 1 ; 1 >
+    au < exists ; 2004 ; Journal of Scottish Philosophy Volume 2 ; 2 >
+    au < exists ; 2005 ; Journal of Scottish Philosophy Volume 3 ; 3 >
+    au < exists ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 >
+    au < exists ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 >
+    au < exists ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
+    au < exists ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
+    au < ready ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
+    au < exists ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
+	
+	}
+	
+  }
+
   {
 
     title <
@@ -127,15 +765,141 @@
       issnl = 1355-5502
     >
 
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = journal_of_victorian_culture
     attr[journal_abbr] = jvc
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Journal of Victorian Culture Volume 11 ; 11 >
     au < released ; 2007 ; Journal of Victorian Culture Volume 12 ; 12 >
     au < released ; 2008 ; Journal of Victorian Culture Volume 13 ; 13 >
 
+    }
+
   }
 
+  {
+
+    title <
+      name = Katherine Mansfield Studies ;
+      issn = 2041-4501 ;
+      eissn = 2041-451X ;
+      issnl = 2041-4501 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = kms
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+    au < ready ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
+	
+	}
+	
+  }
+
+  {
+
+    title <
+      name = Modernist Cultures ;
+      issn = 2041-1022 ;
+      eissn = 1753-8629 ;
+      issnl = 2041-1022 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = mod
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2010 ; Modernist Cultures Volume 1 ; 1 >
+    au < exists ; 2010 ; Modernist Cultures Volume 2 ; 2 >
+    au < exists ; 2010 ; Modernist Cultures Volume 3 ; 3 >
+    au < exists ; 2010 ; Modernist Cultures Volume 4 ; 4 >
+    au < ready ; 2010 ; Modernist Cultures Volume 5 ; 5 >
+	
+	}
+
+  }
+
+  {
+
+    title <
+      name = The New Soundtrack ;
+      issn = 2042-8855 ;
+      eissn = 2042-8863 ;
+      issnl = 2042-8855 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = sound
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2011 ; The New Soundtrack Volume 1 ; 1 >
+
+	}
+
+  }
+
+  {
+
+    title <
+      name = Northern Scotland ;
+      issn = 0306-5278 ;
+      eissn = 2042-2717 ;
+      issnl = 0306-5278 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = nor
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < ready ; 2010 ; Northern Scotland Volume 1 ; 1 >
+	
+	}
+
+  }
+
+  {
+
+    title <
+      name = Oxford Literary Review ;
+      issn = 0305-1498 ;
+      eissn = 1757-1634 ;
+      issnl = 0305-1498 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = olr
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2007 ; Oxford Literary Review Volume 29 ; 29 >
+    au < exists ; 2008 ; Oxford Literary Review Volume 30 ; 30 >
+    au < exists ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
+    au < ready ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
+	
+	}
+	
+  }
+  
   {
 
     title <
@@ -145,12 +909,41 @@
       issnl = 0264-8334
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = para
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2001 ; Paragraph Volume 24 ; 24 >
+    au < exists ; 2002 ; Paragraph Volume 25 ; 25 >
+    au < exists ; 2003 ; Paragraph Volume 26 ; 26 >
+    au < exists ; 2004 ; Paragraph Volume 27 ; 27 >
+    au < exists ; 2005 ; Paragraph Volume 28 ; 28 >
+    au < exists ; 2006 ; Paragraph Volume 29 ; 29 >
+    au < exists ; 2007 ; Paragraph Volume 30 ; 30 >
+    au < exists ; 2008 ; Paragraph Volume 31 ; 31 >
+    au < exists ; 2009 ; Paragraph Volume 32 ; 32 >
+    au < ready ; 2010 ; Paragraph Volume 33 ; 33 >
+    au < exists ; 2011 ; Paragraph Volume 34 ; 34 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = paragraph
     attr[journal_abbr] = prg
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Paragraph Volume 29 ; 29 >
     au < released ; 2007 ; Paragraph Volume 30 ; 30 >
     au < released ; 2008 ; Paragraph Volume 31 ; 31 >
+
+    }
 
   }
 
@@ -163,14 +956,56 @@
       issnl = 0264-2824
     >
 
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = parliamentary_history
     attr[journal_abbr] = pah
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Parliamentary History Volume 25 ; 25 >
     au < released ; 2007 ; Parliamentary History Volume 26 ; 26 >
 
+    }
+
   }
 
+  {
+
+    title <
+      name = Psychoanalysis and History ;
+      issn = 1460-8235 ;
+      eissn = 1755-201X ;
+      issnl = 1460-8235 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = pah
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1999 ; Psychoanalysis and History Volume 1 ; 1 >
+    au < exists ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
+    au < exists ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
+    au < exists ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
+    au < exists ; 2003 ; Psychoanalysis and History Volume 5 ; 5 >
+    au < exists ; 2004 ; Psychoanalysis and History Volume 6 ; 6 >
+    au < exists ; 2005 ; Psychoanalysis and History Volume 7 ; 7 >
+    au < exists ; 2006 ; Psychoanalysis and History Volume 8 ; 8 >
+    au < exists ; 2007 ; Psychoanalysis and History Volume 9 ; 9 >
+    au < exists ; 2008 ; Psychoanalysis and History Volume 10 ; 10 >
+    au < exists ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
+    au < ready ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
+    au < exists ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
+	
+	}
+	
+  }
+  
   {
 
     title <
@@ -180,12 +1015,141 @@
       issnl = 1354-991X
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = rom
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2001 ; Romanticism Volume 7 ; 7 >
+    au < exists ; 2002 ; Romanticism Volume 8 ; 8 >
+    au < exists ; 2003 ; Romanticism Volume 9 ; 9 >
+    au < exists ; 2004 ; Romanticism Volume 10 ; 10 >
+    au < exists ; 2005 ; Romanticism Volume 11 ; 11 >
+    au < exists ; 2006 ; Romanticism Volume 12 ; 12 >
+    au < exists ; 2007 ; Romanticism Volume 13 ; 13 >
+    au < exists ; 2008 ; Romanticism Volume 14 ; 14 >
+    au < exists ; 2009 ; Romanticism Volume 15 ; 15 >
+    au < ready ; 2010 ; Romanticism Volume 16 ; 16 >
+    
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = romanticism
     attr[journal_abbr] = rom
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Romanticism Volume 12 ; 12 >
     au < released ; 2007 ; Romanticism Volume 13 ; 13 >
     au < released ; 2008 ; Romanticism Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Scottish Archaeological Journal ;
+      issn = 1471-5767 ;
+      eissn = 1755-2028 ;
+      issnl = 1471-5767 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = saj
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
+    au < exists ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
+    au < exists ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
+    au < exists ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
+    au < exists ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
+    au < exists ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
+    au < exists ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
+    au < exists ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
+    au < exists ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
+    au < exists ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
+    au < exists ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
+    au < exists ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
+    au < exists ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
+    au < exists ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
+    au < exists ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
+    au < exists ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
+    au < exists ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
+    au < exists ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
+    au < exists ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
+    au < exists ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
+    au < exists ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    au < exists ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
+    au < exists ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
+    au < exists ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
+    au < exists ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
+    au < exists ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
+    au < exists ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
+    au < exists ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
+    au < exists ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
+    au < exists ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+    au < exists ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+	
+	}
+	
+  }
+
+  {
+  
+    title <
+      name = Scottish Historical Review ;
+      issn = 0036-9241 ;
+      eissn = 1750-0222 ;
+      issnl = 0036-9241
+    >
+
+    {
+
+	comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010.0001
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = shr
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
+    au < exists ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
+    au < exists ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
+    au < exists ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
+    au < exists ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
+    au < exists ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
+    au < exists ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
+    au < exists ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
+    au < exists ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
+    au < exists ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
+    au < exists ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
+
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
+    param[journal_dir] = scottish_historical_review
+    attr[journal_abbr] = shr
+    implicit < status ; year ; name ; param[volume] >
+
+    au < released ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
+    au < released ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
+    au < released ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
+
+    }
 
   }
 
@@ -198,30 +1162,40 @@
       issnl = 1354-9901
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = swc
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
+    au < exists ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
+    au < exists ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
+    au < exists ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
+    au < exists ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
+    au < exists ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+    au < exists ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+    au < exists ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
+    au < exists ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
+    au < ready ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
+    
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = studies_in_world_christianity
     attr[journal_abbr] = swc
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
     au < released ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
     au < released ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
 
-  }
-
-  {
-  
-    title <
-      name = The Scottish Historical Review ;
-      issn = 0036-9241 ;
-      eissn = 1750-0222 ;
-      issnl = 0036-9241
-    >
-
-    param[journal_dir] = scottish_historical_review
-    attr[journal_abbr] = shr
-
-    au < released ; 2006 ; The Scottish Historical Review Volume 85 ; 85 >
-    au < released ; 2007 ; The Scottish Historical Review Volume 86 ; 86 >
-    au < released ; 2008 ; The Scottish Historical Review Volume 87 ; 87 >
+    }
 
   }
 
@@ -234,13 +1208,65 @@
       issnl = 0968-1361
     >
 
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = tal
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2002 ; Translation and Literature Volume 11 ; 11 >
+    au < exists ; 2003 ; Translation and Literature Volume 12 ; 12 >
+    au < exists ; 2004 ; Translation and Literature Volume 13 ; 13 >
+    au < exists ; 2005 ; Translation and Literature Volume 14 ; 14 >
+    au < exists ; 2006 ; Translation and Literature Volume 15 ; 15 >
+    au < exists ; 2007 ; Translation and Literature Volume 16 ; 16 >
+    au < exists ; 2008 ; Translation and Literature Volume 17 ; 17 >
+    au < exists ; 2009 ; Translation and Literature Volume 18 ; 18 >
+    au < ready ; 2010 ; Translation and Literature Volume 19 ; 19 >
+    au < exists ; 2011 ; Translation and Literature Volume 20 ; 20 >
+    
+    }
+
+    {
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    comment[down] = This journal no longer contributes new issues to MUSE
     param[journal_dir] = translation_and_literature
     attr[journal_abbr] = tal
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2006 ; Translation and Literature Volume 15 ; 15 >
     au < released ; 2007 ; Translation and Literature Volume 16 ; 16 >
     au < released ; 2008 ; Translation and Literature Volume 17 ; 17 >
+    
+    }
 
   }
 
+  {
+
+    title <
+      name = Word Structure ;
+      issn = 1750-1245 ;
+      eissn = 1755-2036 ;
+      issnl = 1750-1245 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = word
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2008 ; Word Structure Volume 1 ; 1 >
+    au < exists ; 2009 ; Word Structure Volume 2 ; 2 >
+    au < ready ; 2010 ; Word Structure Volume 3 ; 3 >
+	
+	}
+	
+  }
+  
 }
