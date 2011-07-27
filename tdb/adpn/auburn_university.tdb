@@ -28,7 +28,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Alabama Cooperative Extension Service Photographs, Archival Images ; ACES_images >
+    au < testing ; Auburn University Alabama Cooperative Extension Service Photographs, Archival Images ; ACES_images >
 
   }
   
