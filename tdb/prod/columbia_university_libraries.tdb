@@ -15,13 +15,13 @@
 
     rights = openaccess
     plugin = org.lockss.plugin.ojs.OJSPlugin
-    implicit < status ; year ; name ; param[year] >
+    implicit < status ; year ; name ; volume ; param[year] >
 
     {
 
       param[base_url] = http://www.cusj.columbia.edu/cusj/ 
 
-      au < down ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 2006 >
+      au < down ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 1 ; 2006 >
     
     }
     
@@ -29,9 +29,9 @@
     
       param[base_url] = http://cusj.columbia.edu/cusj/ 
   
-      au < manifest ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2007 >
-      au < manifest ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 2008 >
-      au < manifest ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 2009 >
+      au < manifest ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2 ; 2007 >
+      au < manifest ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 3 ; 2008 >
+      au < manifest ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 4 ; 2009 >
       
     }
   
