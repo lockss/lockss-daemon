@@ -15,30 +15,30 @@
     rights = openaccess
     plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin
     param[base_url] = http://www.chass.utoronto.ca/french/as-sa/
-    implicit < status ; year ; name ; param[issue_dir] ; param[issue_no.] >
+    implicit < status ; year ; name ; volume ; param[issue_dir] ; param[issue_no.] >
     
-    au < released ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 1 ; No1 ; 1 >
-    au < released ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 2 ; No2 ; 2 >
-    au < released ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 3 ; No3 ; 3 >
-    au < released ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 4 ; No4 ; 4 >
-    au < released ; 1998 ; Applied Semiotics / Sémiotique Appliquée Volume 5 ; No5 ; 5 >
-    au < released ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 6-7 ; 6-7 ; 6-7 >
-    au < released ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 8 ; No8 ; 8 >
-    au < released ; 2000 ; Applied Semiotics / Sémiotique Appliquée Volume 9 ; No9 ; 9 >
-    au < released ; 2000-2001 ; Applied Semiotics / Sémiotique Appliquée Volume 10 ; No10 ; 10 >
-    au < released ; 2002 ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 ; No11-12 ; 11-12 >
-    au < released ; 2003 ; Applied Semiotics / Sémiotique Appliquée Volume 13 ; No13 ; 13 >
-    au < released ; 2004 ; Applied Semiotics / Sémiotique Appliquée Volume 14 ; No14 ; 14 >
-    au < exists ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 15 ; No15 ; 15 >
-    au < exists ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 16 ; No16 ; 16 >
-    au < exists ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 17 ; No17 ; 17 >
-    au < exists ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 18 ; No18 ; 18 >
-    au < exists ; 2007 ; Applied Semiotics / Sémiotique Appliquée Volume 19 ; No19 ; 19 >
-    au < exists ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 20 ; No20 ; 20 >
-    au < exists ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 21 ; No21 ; 21 >
-    au < exists ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 22 ; No22 ; 22 >
-    au < exists ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 23 ; No23 ; 23 >
-    au < exists ; 2010 ; Applied Semiotics / Sémiotique Appliquée Volume 24 ; No24 ; 24 >
+    au < released ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 1 ; 1 ; No1 ; 1 >
+    au < released ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 2 ; 2 ; No2 ; 2 >
+    au < released ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 3 ; 3 ; No3 ; 3 >
+    au < released ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 4 ; 4 ; No4 ; 4 >
+    au < released ; 1998 ; Applied Semiotics / Sémiotique Appliquée Volume 5 ; 5 ; No5 ; 5 >
+    au < released ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 6-7 ; 6-7 ; 6-7 ; 6-7 >
+    au < released ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 8 ; 8 ; No8 ; 8 >
+    au < released ; 2000 ; Applied Semiotics / Sémiotique Appliquée Volume 9 ; 9 ; No9 ; 9 >
+    au < released ; 2000-2001 ; Applied Semiotics / Sémiotique Appliquée Volume 10 ; 10 ; No10 ; 10 >
+    au < released ; 2002 ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 ; 11-12 ; No11-12 ; 11-12 >
+    au < released ; 2003 ; Applied Semiotics / Sémiotique Appliquée Volume 13 ; 13 ; No13 ; 13 >
+    au < released ; 2004 ; Applied Semiotics / Sémiotique Appliquée Volume 14 ; 14 ; No14 ; 14 >
+    au < exists ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 15 ; 15 ; No15 ; 15 >
+    au < exists ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 16 ; 16 ; No16 ; 16 >
+    au < exists ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 17 ; 17 ; No17 ; 17 >
+    au < exists ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 18 ; 18 ; No18 ; 18 >
+    au < exists ; 2007 ; Applied Semiotics / Sémiotique Appliquée Volume 19 ; 19 ; No19 ; 19 >
+    au < exists ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 20 ; 20 ; No20 ; 20 >
+    au < exists ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 21 ; 21 ; No21 ; 21 >
+    au < exists ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 22 ; 22 ; No22 ; 22 >
+    au < exists ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 23 ; 23 ; No23 ; 23 >
+    au < exists ; 2010 ; Applied Semiotics / Sémiotique Appliquée Volume 24 ; 24 ; No24 ; 24 >
     
   }
   
