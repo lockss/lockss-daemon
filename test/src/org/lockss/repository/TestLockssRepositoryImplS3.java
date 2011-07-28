@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.7 2011-07-26 19:48:00 dshr Exp $
+ * $Id: TestLockssRepositoryImplS3.java,v 1.1.2.8 2011-07-28 03:50:25 dshr Exp $
  */
 
 /*
@@ -44,6 +44,10 @@ import org.apache.commons.vfs.VFS;
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.FileSystemOptions;
 import org.apache.commons.vfs.UserAuthenticator;
+import org.apache.commons.vfs.FileSystemManager;
+import org.apache.commons.vfs.impl.StandardFileSystemManager;
+import org.apache.commons.vfs.AllFileSelector;
+import org.apache.commons.vfs.FileSystemException;
 import org.apache.commons.vfs.auth.*;
 import org.apache.commons.vfs.impl.*;
 import com.intridea.io.vfs.provider.s3.S3FileProvider;
@@ -71,6 +75,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
   private MockArchivalUnit mau;
   private String tempDirPath;
   private String tempDirURI;
+  private boolean cleanUpAfter = true;
+  private static final String bucket = "s3://test.lockss.org";
+  private static final String bucketFolder =
+    bucket + File.separator + "unit" + File.separator;
 
   // Services
   private static final String[] serviceNames = { "s3", "ias3", "walrus"};
@@ -89,6 +97,49 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     }
     super.tearDown();
   }
+
+  void cleanUp() {
+    if (cleanUpAfter) {
+      emptyBucket(tempDirURI);
+    }
+  }
+
+  void emptyBucket(String folder) {
+    logger.debug("emptyBucket(" + folder + ");");
+    Configuration config = ConfigManager.getCurrentConfig();
+    String prefix = RepositoryManager.PREFIX + serviceName;
+    if (config.get(prefix + ".host", null) == null ||
+        config.get(prefix + ".accessKey", null) == null ||
+        config.get(prefix + ".secretKey", null) == null) {
+      logger.debug("Props not set for " + serviceName);
+      return;
+    }
+    try {
+      FileObject fo = VFS.getManager().resolveFile(folder);
+      if (fo == null) {
+        logger.error("Got null for " + folder);
+        return;
+      } else {
+        logger.debug2("Got FileObject for " + folder + " - " + fo.getURL().toString());
+      }
+      fo.refresh();
+      if (fo.exists() && fo.getType().hasChildren()) {
+        logger.debug(folder + "exists.");
+        if (logger.isDebug3()) {
+          fo.refresh();
+          FileObject[] children = fo.findFiles(new AllFileSelector());
+          logger.debug3(fo.getURL().toString() + " has " + children.length + " kids");
+          for (int i = 0; i < children.length; i++) {
+            logger.debug3(children[i].getURL().toString());
+          }
+        }
+        int count = fo.delete(new AllFileSelector());
+        logger.debug("Emptying " + folder + " deleted " + count + " items.");
+      }
+    } catch (FileSystemException ex) {
+      logger.warning("Cleaning " + folder + " threw " + ex);
+    }
+  }  
 
   String getCacheLocation() {
     return LockssRepositoryImpl.getCacheLocation();
@@ -142,11 +193,10 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
       props.put(prefix + ".accessKey", accessKey);
       props.put(prefix + ".secretKey", secretKey);
       props.put(RepositoryManager.PREFIX + "service", serviceName);
-      tempDirURI =  "s3://test.lockss.org" + File.separator + "unit" +
-        File.separator + ((new Date()).getTime()/1000);
+      tempDirURI =  bucketFolder + ((new Date()).getTime()/1000);
       props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
   		      tempDirURI);
-      if (true) // XXX
+      if (false) // XXX
         props.setProperty("org.lockss.defaultCommonsLogLevel", "debug");
       ConfigurationUtil.setCurrentConfigFromProps(props);
       mau = new MockArchivalUnit();
@@ -163,6 +213,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetLocalRepository();
+      cleanUp();
     }
   }
   public void doTestGetLocalRepository() throws Exception {
@@ -206,6 +257,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetLocalRepositoryPath();
+      cleanUp();
     }
   }
   public void doTestGetLocalRepositoryPath() throws Exception {
@@ -246,6 +298,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     logger.debug3("location: " + location + " addSlash " + addSlash(location) + " auId: " + id + " map " + aumap);
     assertNotNull(aumap);
     assertEquals(addSlash(location), aumap.get(id));
+    cleanUp();
   }
 
   String addSlash(String s) {
@@ -256,6 +309,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetRepositoryRoot();
+      cleanUp();
     }
   }
   public void doTestGetRepositoryRoot() throws Exception {
@@ -280,6 +334,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestIsDirInRepository();
+      cleanUp();
     }
   }
   public void doTestIsDirInRepository() throws Exception {
@@ -298,6 +353,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestFileLocation();
+      cleanUp();
     }
   }
   public void doTestFileLocation() throws Exception {
@@ -324,6 +380,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetRepositoryNode();
+      cleanUp();
     }
   }
   public void doTestGetRepositoryNode() throws Exception {
@@ -358,6 +415,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNodeWithQuery();
+      cleanUp();
     }
   }
   public void doTestGetNodeWithQuery() throws Exception {
@@ -382,6 +440,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNodeWithPort();
+      cleanUp();
     }
   }
   public void doTestGetNodeWithPort() throws Exception {
@@ -401,6 +460,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDotUrlHandling();
+      cleanUp();
     }
   }
   public void doTestDotUrlHandling() throws Exception {
@@ -433,6 +493,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCanonicalizePath();
+      cleanUp();
     }
   }
   public void doTestCanonicalizePath() throws Exception {
@@ -454,6 +515,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuNode();
+      cleanUp();
     }
   }
   public void doTestGetAuNode() throws Exception {
@@ -487,6 +549,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDeleteNode();
+      cleanUp();
     }
   }
   public void doTestDeleteNode() throws Exception {
@@ -508,6 +571,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDeactivateNode();
+      cleanUp();
     }
   }
   public void doTestDeactivateNode() throws Exception {
@@ -529,6 +593,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCaching();
+      cleanUp();
     }
   }
   public void doTestCaching() throws Exception {
@@ -556,6 +621,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestWeakReferenceCaching();
+      cleanUp();
     }
   }
   public void doTestWeakReferenceCaching() throws Exception {
@@ -591,6 +657,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestConsistencyCheck();
+      cleanUp();
     }
   }
   public void doTestConsistencyCheck() throws Exception {
@@ -625,6 +692,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestRecursiveConsistencyCheck();
+      cleanUp();
     }
   }
   public void doTestRecursiveConsistencyCheck() throws Exception {
@@ -672,6 +740,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetNextDirName();
+      cleanUp();
     }
   }
   public void doTestGetNextDirName() {
@@ -693,6 +762,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirFromMap();
+      cleanUp();
     }
   }
   public void doTestGetAuDirFromMap() {
@@ -712,6 +782,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirFromMapNoCacheWrongRepo();
+      cleanUp();
     }
   }
   public void doTestGetAuDirFromMapNoCacheWrongRepo() {
@@ -733,6 +804,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirNoCreate();
+      cleanUp();
     }
   }
   public void doTestGetAuDirNoCreate() {
@@ -748,6 +820,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestSaveAndLoadNames();
+      cleanUp();
     }
   }
   public void doTestSaveAndLoadNames() throws Exception {
@@ -771,6 +844,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestMapAuToFileLocation();
+      cleanUp();
     }
   }
   public void doTestMapAuToFileLocation() {
@@ -792,6 +866,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestDoesAuDirExist();
+      cleanUp();
     }
   }
   public void doTestDoesAuDirExist() {
@@ -817,6 +892,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirInitWithOne();
+      cleanUp();
     }
   }
   public void doTestGetAuDirInitWithOne() {
@@ -835,6 +911,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestGetAuDirSkipping();
+      cleanUp();
     }
   }
   public void doTestGetAuDirSkipping() throws Exception {
@@ -881,6 +958,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestMapUrlToFileLocation();
+      cleanUp();
     }
   }
   public void doTestMapUrlToFileLocation() throws MalformedURLException {
@@ -909,6 +987,7 @@ public class TestLockssRepositoryImplS3 extends LockssTestCase {
     for (int i = 0; i < serviceNames.length; i++) {
       serviceName = serviceNames[i];
       doTestCharacterEscaping();
+      cleanUp();
     }
   }
   public void doTestCharacterEscaping() throws MalformedURLException {
