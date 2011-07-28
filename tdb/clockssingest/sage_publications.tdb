@@ -30,18 +30,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1996 ; Accounting History Volume 16 ; 1 ;  >
-      au < manifest ; exists ; 1997 ; Accounting History Volume 16 ; 2 ;  >
-      au < manifest ; exists ; 1998 ; Accounting History Volume 16 ; 3 ;  >
-      au < manifest ; exists ; 1999 ; Accounting History Volume 16 ; 4 ;  >
-      au < manifest ; exists ; 2000 ; Accounting History Volume 16 ; 5 ;  >
-      au < manifest ; exists ; 2001 ; Accounting History Volume 16 ; 6 ;  >
-      au < manifest ; exists ; 2002 ; Accounting History Volume 16 ; 7 ;  >
-      au < manifest ; exists ; 2003 ; Accounting History Volume 16 ; 8 ;  >
-      au < manifest ; exists ; 2004 ; Accounting History Volume 16 ; 9 ;  >
-      au < manifest ; exists ; 2005 ; Accounting History Volume 16 ; 10 ;  >
-      au < manifest ; exists ; 2006 ; Accounting History Volume 16 ; 11 ;  >
-      au < manifest ; exists ; 2007 ; Accounting History Volume 16 ; 12 ;  >
+      au < manifest ; exists ; 1996 ; Accounting History Volume 1 ; 1 ;  >
+      au < manifest ; exists ; 1997 ; Accounting History Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 1998 ; Accounting History Volume 3 ; 3 ;  >
+      au < manifest ; exists ; 1999 ; Accounting History Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2000 ; Accounting History Volume 5 ; 5 ;  >
+      au < manifest ; exists ; 2001 ; Accounting History Volume 6 ; 6 ;  >
+      au < manifest ; exists ; 2002 ; Accounting History Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2003 ; Accounting History Volume 8 ; 8 ;  >
+      au < manifest ; exists ; 2004 ; Accounting History Volume 9 ; 9 ;  >
+      au < manifest ; exists ; 2005 ; Accounting History Volume 10 ; 10 ;  >
+      au < manifest ; exists ; 2006 ; Accounting History Volume 11 ; 11 ;  >
+      au < manifest ; exists ; 2007 ; Accounting History Volume 12 ; 12 ;  >
       au < manifest ; exists ; 2008 ; Accounting History Volume 13 ; 13 ;  >
       au < manifest ; exists ; 2009 ; Accounting History Volume 14 ; 14 ;  >
       au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ;  >
@@ -1969,7 +1969,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Clinical Rehabilitation Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2029,7 +2029,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Clothing and Textiles Research Journal Volume 26 ; 26 ;  >
-      au < down ; crawling ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ;  >
+      au < down ; crawling ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2090,7 +2090,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Communication Research Volume 35 ; 35 ;  >
-      au < down ; crawling ; 2009 ; Communication Research Volume 36 ; 36 ;  >
+      au < down ; crawling ; 2009 ; Communication Research Volume 36 ; 36 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2120,7 +2120,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Community College Review Volume 36 ; 36 ;  >
-      au < down ; crawling ; 2009 ; Community College Review Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; Community College Review Volume 37 ; 37 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2150,7 +2150,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Comparative Political Studies Volume 41 ; 41 ;  >
-      au < down ; crawling ; 2009 ; Comparative Political Studies Volume 42 ; 42 ;  >
+      au < down ; crawling ; 2009 ; Comparative Political Studies Volume 42 ; 42 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2180,7 +2180,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Compensation & Benefits Review Volume 40 ; 40 ;  >
-      au < down ; crawling ; 2009 ; Compensation & Benefits Review Volume 41 ; 41 ;  >
+      au < down ; crawling ; 2009 ; Compensation & Benefits Review Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2212,7 +2212,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 ;  >
-      au < down ; crawling ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ;  >
+      au < down ; crawling ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2243,7 +2243,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Concurrent Engineering Volume 16 ; 16 ;  >
-      au < down ; crawling ; 2009 ; Concurrent Engineering Volume 17 ; 17 ;  >
+      au < down ; crawling ; 2009 ; Concurrent Engineering Volume 17 ; 17 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2273,7 +2273,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Conflict Management and Peace Science Volume 25 ; 25 ;  >
-      au < down ; crawling ; 2009 ; Conflict Management and Peace Science Volume 26 ; 26 ;  >
+      au < down ; crawling ; 2009 ; Conflict Management and Peace Science Volume 26 ; 26 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2303,7 +2303,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Contributions to Indian Sociology Volume 42 ; 42 ;  >
-      au < down ; crawling ; 2009 ; Contributions to Indian Sociology Volume 43 ; 43 ;  >
+      au < down ; crawling ; 2009 ; Contributions to Indian Sociology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2325,7 +2325,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Convergence: The International Journal of Research into New Media Technologies Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Convergence: The International Journal of Research into New Media Technologies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2355,7 +2355,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cooperation and Conflict Volume 43 ; 43 ;  >
-      au < down ; crawling ; 2009 ; Cooperation and Conflict Volume 44 ; 44 ;  >
+      au < down ; crawling ; 2009 ; Cooperation and Conflict Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2385,7 +2385,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cornell Hospitality Quarterly Volume 49 ; 49 ;  >
-      au < down ; crawling ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ;  >
+      au < down ; crawling ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2415,7 +2415,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Counseling Psychologist Volume 36 ; 36 ;  >
-      au < down ; crawling ; 2009 ; The Counseling Psychologist Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; The Counseling Psychologist Volume 37 ; 37 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2445,7 +2445,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Crime & Delinquency Volume 54 ; 54 ;  >
-      au < down ; crawling ; 2009 ; Crime & Delinquency Volume 55 ; 55 ;  >
+      au < down ; crawling ; 2009 ; Crime & Delinquency Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2475,7 +2475,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Crime, Media, Culture Volume 4 ; 4 ;  >
-      au < down ; crawling ; 2009 ; Crime, Media, Culture Volume 5 ; 5 ;  >
+      au < down ; crawling ; 2009 ; Crime, Media, Culture Volume 5 ; 5 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2505,7 +2505,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Criminal Justice and Behavior Volume 35 ; 35 ;  >
-      au < down ; crawling ; 2009 ; Criminal Justice and Behavior Volume 36 ; 36 ;  >
+      au < down ; crawling ; 2009 ; Criminal Justice and Behavior Volume 36 ; 36 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2535,7 +2535,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Criminal Justice Policy Review Volume 19 ; 19 ;  >
-      au < down ; crawling ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 ;  >
+      au < down ; crawling ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2565,7 +2565,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Criminal Justice Review Volume 33 ; 33 ;  >
-      au < down ; crawling ; 2009 ; Criminal Justice Review Volume 34 ; 34 ;  >
+      au < down ; crawling ; 2009 ; Criminal Justice Review Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2595,7 +2595,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Criminology and Criminal Justice Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2625,7 +2625,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Critical Social Policy Volume 28 ; 28 ;  >
-      au < down ; crawling ; 2009 ; Critical Social Policy Volume 29 ; 29 ;  >
+      au < down ; crawling ; 2009 ; Critical Social Policy Volume 29 ; 29 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2655,7 +2655,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Critical Sociology Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; Critical Sociology Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; Critical Sociology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2685,7 +2685,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Critique of Anthropology Volume 28 ; 28 ;  >
-      au < down ; crawling ; 2009 ; Critique of Anthropology Volume 29 ; 29 ;  >
+      au < down ; crawling ; 2009 ; Critique of Anthropology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2715,7 +2715,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cross-Cultural Research Volume 42 ; 42 ;  >
-      au < down ; crawling ; 2009 ; Cross-Cultural Research Volume 43 ; 43 ;  >
+      au < down ; crawling ; 2009 ; Cross-Cultural Research Volume 43 ; 43 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2745,7 +2745,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cultural Dynamics Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Cultural Dynamics Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Cultural Dynamics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2775,7 +2775,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cultural Geographies Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Cultural Geographies Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Cultural Geographies Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2805,7 +2805,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Cultural Sociology Volume 2 ; 2 ;  >
-      au < down ; crawling ; 2009 ; Cultural Sociology Volume 3 ; 3 ;  >
+      au < down ; crawling ; 2009 ; Cultural Sociology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2865,7 +2865,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Culture & Psychology Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Culture & Psychology Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Culture & Psychology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2895,7 +2895,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Current Sociology Volume 56 ; 56 ;  >
-      au < down ; crawling ; 2009 ; Current Sociology Volume 57 ; 57 ;  >
+      au < down ; crawling ; 2009 ; Current Sociology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2949,7 +2949,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Dementia Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Dementia Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Dementia Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -2979,7 +2979,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Diabetes and Vascular Disease Research Volume 5 ; 5 ;  >
-      au < down ; crawling ; 2009 ; Diabetes and Vascular Disease Research Volume 6 ; 6 ;  >
+      au < down ; crawling ; 2009 ; Diabetes and Vascular Disease Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3009,7 +3009,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Diabetes Educator Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; The Diabetes Educator Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; The Diabetes Educator Volume 35 ; 35 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3039,7 +3039,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Diogenes Volume 55 ; 55 ;  >
-      au < down ; crawling ; 2009 ; Diogenes Volume 56 ; 56 ;  >
+      au < down ; crawling ; 2009 ; Diogenes Volume 56 ; 56 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3061,7 +3061,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Discourse & Communication Volume 2 ; 2 ;  >
-      au < down ; crawling ; 2009 ; Discourse & Communication Volume 3 ; 3 ;  >
+      au < down ; crawling ; 2009 ; Discourse & Communication Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3091,7 +3091,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Discourse & Society Volume 19 ; 19 ;  >
-      au < down ; crawling ; 2009 ; Discourse & Society Volume 20 ; 20 ;  >
+      au < down ; crawling ; 2009 ; Discourse & Society Volume 20 ; 20 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3121,7 +3121,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Discourse Studies Volume 10 ; 10 ;  >
-      au < down ; crawling ; 2009 ; Discourse Studies Volume 11 ; 11 ;  >
+      au < down ; crawling ; 2009 ; Discourse Studies Volume 11 ; 11 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -3151,7 +3151,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; East European Politics & Societies Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; East European Politics & Societies Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; East European Politics & Societies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3181,7 +3181,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Economic and Industrial Democracy Volume 29 ; 29 ;  >
-      au < down ; crawling ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 ;  >
+      au < down ; crawling ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 ; reingest1.clockss.org:8083 >
 
     }
 
@@ -3211,7 +3211,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Economic Development Quarterly Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Economic Development Quarterly Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Economic Development Quarterly Volume 23 ; 23 ; reingest1.clockss.org:8083 >
 
     }
 
@@ -3241,7 +3241,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ;  >
-      au < down ; crawling ; 2008-2009 ; Education and Urban Society Volume 41 ; 41 ;  >
+      au < down ; crawling ; 2008-2009 ; Education and Urban Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3272,7 +3272,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Education, Citizenship and Social Justice Volume 3 ; 3 ;  >
-      au < down ; crawling ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 ;  >
+      au < down ; crawling ; 2009 ; Education, Citizenship and Social Justice Volume 4 ; 4 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3302,7 +3302,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Educational Administration Quarterly Volume 44 ; 44 ;  >
-      au < down ; crawling ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 ;  >
+      au < down ; crawling ; 2009 ; Educational Administration Quarterly Volume 45 ; 45 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3332,7 +3332,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Educational and Psychological Measurement Volume 68 ; 68 ;  >
-      au < down ; crawling ; 2009 ; Educational and Psychological Measurement Volume 69 ; 69 ;  >
+      au < down ; crawling ; 2009 ; Educational and Psychological Measurement Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3362,7 +3362,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Educational Evaluation and Policy Analysis Volume 30 ; 30 ;  >
-      au < down ; crawling ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Educational Evaluation and Policy Analysis Volume 31 ; 31 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3392,7 +3392,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ;  >
-      au < down ; crawling ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3422,7 +3422,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Educational Policy Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Educational Policy Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Educational Policy Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3473,7 +3473,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Emotion Review Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; Emotion Review Volume 1 ; 1 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3502,7 +3502,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Environment and Behavior Volume 41 ; 41 ;  >
+      au < down ; crawling ; 2009 ; Environment and Behavior Volume 41 ; 41 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3532,7 +3532,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Environment and Urbanization Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Environment and Urbanization Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3563,7 +3563,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Ethnicities Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Ethnicities Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Ethnicities Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3593,7 +3593,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Ethnography Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Ethnography Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2009 ; Ethnography Volume 10 ; 10 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3623,7 +3623,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; European History Quarterly Volume 38 ; 38 ;  >
-      au < down ; crawling ; 2009 ; European History Quarterly Volume 39 ; 39 ;  >
+      au < down ; crawling ; 2009 ; European History Quarterly Volume 39 ; 39 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3683,7 +3683,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; European Journal of Communication Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; European Journal of Communication Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; European Journal of Communication Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3713,7 +3713,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; European Journal of Criminology Volume 5 ; 5 ;  >
-      au < down ; crawling ; 2009 ; European Journal of Criminology Volume 6 ; 6 ;  >
+      au < down ; crawling ; 2009 ; European Journal of Criminology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3743,7 +3743,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; European Journal of Cultural Studies Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3975,7 +3975,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; European Urban and Regional Studies Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; European Urban and Regional Studies Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; European Urban and Regional Studies Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4005,7 +4005,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Evaluation Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Evaluation Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Evaluation Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4035,7 +4035,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Evaluation & the Health Professions Volume 31 ; 31 ;  >
-      au < down ; crawling ; 2009 ; Evaluation & the Health Professions Volume 32 ; 32 ;  >
+      au < down ; crawling ; 2009 ; Evaluation & the Health Professions Volume 32 ; 32 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4065,7 +4065,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Evaluation Review Volume 32 ; 32 ;  >
-      au < down ; crawling ; 2009 ; Evaluation Review Volume 33 ; 33 ;  >
+      au < down ; crawling ; 2009 ; Evaluation Review Volume 33 ; 33 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4146,7 +4146,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Family Business Review Volume 21 ; 21 ;  >
-      au < down ; crawling ; 2009 ; Family Business Review Volume 22 ; 22 ;  >
+      au < down ; crawling ; 2009 ; Family Business Review Volume 22 ; 22 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4176,7 +4176,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Family Journal Volume 16 ; 16 ;  >
-      au < down ; crawling ; 2009 ; The Family Journal Volume 17 ; 17 ;  >
+      au < down ; crawling ; 2009 ; The Family Journal Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4206,7 +4206,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Feminism & Psychology Volume 18 ; 18 ;  >
-      au < down ; crawling ; 2009 ; Feminism & Psychology Volume 19 ; 19 ;  >
+      au < down ; crawling ; 2009 ; Feminism & Psychology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4236,7 +4236,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Feminist Criminology Volume 3 ; 3 ;  >
-      au < down ; crawling ; 2009 ; Feminist Criminology Volume 4 ; 4 ;  >
+      au < down ; crawling ; 2009 ; Feminist Criminology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4266,7 +4266,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Feminist Theology Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Feminist Theology Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Feminist Theology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4296,7 +4296,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Feminist Theory Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Feminist Theory Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2009 ; Feminist Theory Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4326,7 +4326,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Field Methods Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Field Methods Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Field Methods Volume 21 ; 21 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -4714,7 +4714,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Global Journal of Emerging Market Economies Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; Global Journal of Emerging Market Economies Volume 1 ; 1 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -5044,7 +5044,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; High Performance Polymers Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; High Performance Polymers Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; High Performance Polymers Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5074,7 +5074,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 ;  >
-      au < down ; crawling ; 2009 ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5104,7 +5104,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; History of Psychiatry Volume 19 ; 19 ;  >
-      au < down ; crawling ; 2009 ; History of Psychiatry Volume 20 ; 20 ;  >
+      au < down ; crawling ; 2009 ; History of Psychiatry Volume 20 ; 20 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5134,7 +5134,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; History of the Human Sciences Volume 21 ; 21 ;  >
-      au < down ; crawling ; 2009 ; History of the Human Sciences Volume 22 ; 22 ;  >
+      au < down ; crawling ; 2009 ; History of the Human Sciences Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5164,7 +5164,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Holocene Volume 18 ; 18 ;  >
-      au < down ; crawling ; 2009 ; The Holocene Volume 19 ; 19 ;  >
+      au < down ; crawling ; 2009 ; The Holocene Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5223,7 +5223,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Homicide Studies Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Homicide Studies Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Homicide Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5253,7 +5253,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Human & Experimental Toxicology Volume 27 ; 27 ;  >
-      au < down ; crawling ; 2009 ; Human & Experimental Toxicology Volume 28 ; 28 ;  >
+      au < down ; crawling ; 2009 ; Human & Experimental Toxicology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5283,7 +5283,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 50 ; 50 ;  >
-      au < down ; crawling ; 2009 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 51 ; 51 ;  >
+      au < down ; crawling ; 2009 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 51 ; 51 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5313,7 +5313,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Human Relations Volume 61 ; 61 ;  >
-      au < down ; crawling ; 2009 ; Human Relations Volume 62 ; 62 ;  >
+      au < down ; crawling ; 2009 ; Human Relations Volume 62 ; 62 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5343,7 +5343,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Human Resource Development Review Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Human Resource Development Review Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Human Resource Development Review Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5372,7 +5372,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5402,7 +5402,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; IFLA Journal Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; IFLA Journal Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; IFLA Journal Volume 35 ; 35 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5432,7 +5432,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Improving Schools Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; Improving Schools Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; Improving Schools Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5461,7 +5461,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 ;  >
+      au < down ; crawling ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5490,7 +5490,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Indian Economic & Social History Review Volume 45 ; 45 ;  >
-      au < down ; crawling ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 ;  >
+      au < down ; crawling ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5520,7 +5520,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Indian Journal of Gender Studies Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5550,7 +5550,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Indoor and Built Environment Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Indoor and Built Environment Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Indoor and Built Environment Volume 18 ; 18 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5580,7 +5580,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Information Development Volume 24 ; 24 ;  >
-      au < down ; crawling ; 2009 ; Information Development Volume 25 ; 25 ;  >
+      au < down ; crawling ; 2009 ; Information Development Volume 25 ; 25 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5610,7 +5610,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Innate Immunity Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Innate Immunity Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Innate Immunity Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5640,7 +5640,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Integrative Cancer Therapies Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Integrative Cancer Therapies Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Integrative Cancer Therapies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5670,7 +5670,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Communication Gazette Volume 70 ; 70 ;  >
-      au < down ; crawling ; 2009 ; International Communication Gazette Volume 71 ; 71 ;  >
+      au < down ; crawling ; 2009 ; International Communication Gazette Volume 71 ; 71 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5700,7 +5700,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Criminal Justice Review Volume 18 ; 18 ;  >
-      au < down ; crawling ; 2009 ; International Criminal Justice Review Volume 19 ; 19 ;  >
+      au < down ; crawling ; 2009 ; International Criminal Justice Review Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5730,7 +5730,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Behavioral Development Volume 32 ; 32 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5760,7 +5760,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5790,7 +5790,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Comparative Sociology Volume 49 ; 49 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Comparative Sociology Volume 50 ; 50 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Comparative Sociology Volume 50 ; 50 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5820,7 +5820,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Cross Cultural Management Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5850,7 +5850,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Cultural Studies Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Cultural Studies Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Cultural Studies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5880,7 +5880,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Damage Mechanics Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5910,7 +5910,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of High Performance Computing Applications Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5940,7 +5940,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -5970,7 +5970,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Music Education Volume 26 ; 26 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Music Education Volume 27 ; 27 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6000,7 +6000,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6030,7 +6030,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 ;  >
-      au < down ; crawling ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ;  >
+      au < down ; crawling ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6060,7 +6060,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The International Journal of Robotics Research Volume 27 ; 27 ;  >
-      au < down ; crawling ; 2009 ; The International Journal of Robotics Research Volume 28 ; 28 ;  >
+      au < down ; crawling ; 2009 ; The International Journal of Robotics Research Volume 28 ; 28 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6113,7 +6113,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Social Psychiatry Volume 54 ; 54 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Social Psychiatry Volume 55 ; 55 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Social Psychiatry Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6143,7 +6143,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Surgical Pathology Volume 16 ; 16 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Surgical Pathology Volume 17 ; 17 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Surgical Pathology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6173,7 +6173,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Journal of Toxicology Volume 27 ; 27 ;  >
-      au < down ; crawling ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ;  >
+      au < down ; crawling ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6203,7 +6203,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Political Science Abstracts Volume 58 ; 58 ;  >
-      au < down ; crawling ; 2009 ; International Political Science Abstracts Volume 59 ; 59 ;  >
+      au < down ; crawling ; 2009 ; International Political Science Abstracts Volume 59 ; 59 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6233,7 +6233,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Political Science Review Volume 29 ; 29 ;  >
-      au < down ; crawling ; 2009 ; International Political Science Review Volume 30 ; 30 ;  >
+      au < down ; crawling ; 2009 ; International Political Science Review Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6263,7 +6263,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Regional Science Review Volume 31 ; 31 ;  >
-      au < down ; crawling ; 2009 ; International Regional Science Review Volume 32 ; 32 ;  >
+      au < down ; crawling ; 2009 ; International Regional Science Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6293,7 +6293,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Relations Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; International Relations Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; International Relations Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6323,7 +6323,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Review for the Sociology of Sport Volume 43 ; 43 ;  >
-      au < down ; crawling ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 ;  >
+      au < down ; crawling ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6353,7 +6353,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Review of Administrative Sciences Volume 74 ; 74 ;  >
-      au < down ; crawling ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ;  >
+      au < down ; crawling ; 2009 ; International Review of Administrative Sciences Volume 75 ; 75 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6383,7 +6383,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Small Business Journal Volume 26 ; 26 ;  >
-      au < down ; crawling ; 2009 ; International Small Business Journal Volume 27 ; 27 ;  >
+      au < down ; crawling ; 2009 ; International Small Business Journal Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6413,7 +6413,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Social Work Volume 51 ; 51 ;  >
-      au < down ; crawling ; 2009 ; International Social Work Volume 52 ; 52 ;  >
+      au < down ; crawling ; 2009 ; International Social Work Volume 52 ; 52 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6443,7 +6443,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; International Sociology Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; International Sociology Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; International Sociology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6472,7 +6472,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; International Studies Volume 45 ; 45 ;  >
+      au < down ; crawling ; 2008 ; International Studies Volume 45 ; 45 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6501,7 +6501,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Intervention in School and Clinic Volume 44 ; 44 ;  >
-      au < down ; crawling ; 2009 ; Intervention in School and Clinic Volume 45 ; 45 ;  >
+      au < down ; crawling ; 2009 ; Intervention in School and Clinic Volume 45 ; 45 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6531,7 +6531,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Irish Theological Quarterly Volume 73 ; 73 ;  >
-      au < down ; crawling ; 2009 ; Irish Theological Quarterly Volume 74 ; 74 ;  >
+      au < down ; crawling ; 2009 ; Irish Theological Quarterly Volume 74 ; 74 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6651,7 +6651,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Adolescent Research Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; Journal of Adolescent Research Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; Journal of Adolescent Research Volume 24 ; 24 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6681,7 +6681,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Aging and Health Volume 20 ; 20 ;  >
-      au < notReady ; exists ; 2009 ; Journal of Aging and Health Volume 21 ; 21 ;  >
+      au < notReady ; exists ; 2009 ; Journal of Aging and Health Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6711,7 +6711,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Journal of Applied Behavioral Science Volume 44 ; 44 ;  >
-      au < down ; crawling ; 2009 ; The Journal of Applied Behavioral Science Volume 45 ; 45 ;  >
+      au < down ; crawling ; 2009 ; The Journal of Applied Behavioral Science Volume 45 ; 45 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6741,7 +6741,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Applied Gerontology Volume 27 ; 27 ;  >
-      au < down ; crawling ; 2009 ; Journal of Applied Gerontology Volume 28 ; 28 ;  >
+      au < down ; crawling ; 2009 ; Journal of Applied Gerontology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6771,7 +6771,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Asian and African Studies Volume 43 ; 43 ;  >
-      au < down ; crawling ; 2009 ; Journal of Asian and African Studies Volume 44 ; 44 ;  >
+      au < down ; crawling ; 2009 ; Journal of Asian and African Studies Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6801,7 +6801,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Attention Disorders Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Journal of Attention Disorders Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Journal of Attention Disorders Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -6831,7 +6831,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10614,7 +10614,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journal of Visual Culture Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Journal of Visual Culture Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Journal of Visual Culture Volume 8 ; 8 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10667,7 +10667,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Journalism Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Journalism Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2009 ; Journalism Volume 10 ; 10 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10697,7 +10697,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Labor Studies Journal Volume 33 ; 33 ;  >
-      au < down ; crawling ; 2009 ; Labor Studies Journal Volume 34 ; 34 ;  >
+      au < down ; crawling ; 2009 ; Labor Studies Journal Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10727,7 +10727,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Language and Literature Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Language and Literature Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Language and Literature Volume 18 ; 18 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10757,7 +10757,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Language and Speech Volume 51 ; 51 ;  >
-      au < down ; crawling ; 2009 ; Language and Speech Volume 52 ; 52 ;  >
+      au < down ; crawling ; 2009 ; Language and Speech Volume 52 ; 52 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10787,7 +10787,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Language Teaching Research Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Language Teaching Research Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Language Teaching Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10817,7 +10817,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Language Testing Volume 25 ; 25 ;  >
-      au < down ; crawling ; 2009 ; Language Testing Volume 26 ; 26 ;  >
+      au < down ; crawling ; 2009 ; Language Testing Volume 26 ; 26 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10847,7 +10847,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Latin American Perspectives Volume 35 ; 35 ;  >
-      au < down ; crawling ; 2009 ; Latin American Perspectives Volume 36 ; 36 ;  >
+      au < down ; crawling ; 2009 ; Latin American Perspectives Volume 36 ; 36 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10877,7 +10877,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Law, Culture and the Humanities Volume 4 ; 4 ;  >
-      au < down ; crawling ; 2009 ; Law, Culture and the Humanities Volume 5 ; 5 ;  >
+      au < down ; crawling ; 2009 ; Law, Culture and the Humanities Volume 5 ; 5 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10907,7 +10907,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Leadership Volume 4 ; 4 ;  >
-      au < down ; crawling ; 2009 ; Leadership Volume 5 ; 5 ;  >
+      au < down ; crawling ; 2009 ; Leadership Volume 5 ; 5 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10937,7 +10937,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Lighting Research and Technology Volume 40 ; 40 ;  >
-      au < down ; crawling ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ;  >
+      au < down ; crawling ; 2009 ; Lighting Research and Technology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10967,7 +10967,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Lupus Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Lupus Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Lupus Volume 18 ; 18 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -10997,7 +10997,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Management & Organizational History Volume 3 ; 3 ;  >
-      au < down ; crawling ; 2009 ; Management & Organizational History Volume 4 ; 4 ;  >
+      au < down ; crawling ; 2009 ; Management & Organizational History Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11027,7 +11027,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Management Communication Quarterly Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Management Communication Quarterly Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Management Communication Quarterly Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11057,7 +11057,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Management in Education Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Management in Education Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Management in Education Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11087,7 +11087,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Management Learning Volume 39 ; 39 ;  >
-      au < down ; crawling ; 2009 ; Management Learning Volume 40 ; 40 ;  >
+      au < down ; crawling ; 2009 ; Management Learning Volume 40 ; 40 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11117,7 +11117,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Margin: The Journal of Applied Economic Research Volume 2 ; 2 ;  >
-      au < down ; crawling ; 2009 ; Margin: The Journal of Applied Economic Research Volume 3 ; 3 ;  >
+      au < down ; crawling ; 2009 ; Margin: The Journal of Applied Economic Research Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11147,7 +11147,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Marketing Theory Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Marketing Theory Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Marketing Theory Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11177,7 +11177,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Mathematics and Mechanics of Solids Volume 13 ; 13 ;  >
-      au < down ; crawling ; 2009 ; Mathematics and Mechanics of Solids Volume 14 ; 14 ;  >
+      au < down ; crawling ; 2009 ; Mathematics and Mechanics of Solids Volume 14 ; 14 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11205,7 +11205,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Measurement and Evaluation in Counseling and Development Volume 42 ; 42 ;  >
+      au < down ; crawling ; 2009 ; Measurement and Evaluation in Counseling and Development Volume 42 ; 42 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11234,7 +11234,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Media, Culture & Society Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Media, Culture & Society Volume 31 ; 31 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11265,7 +11265,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Media, War & Conflict Volume 1 ; 1 ;  >
-      au < down ; crawling ; 2009 ; Media, War & Conflict Volume 2 ; 2 ;  >
+      au < down ; crawling ; 2009 ; Media, War & Conflict Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11295,7 +11295,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Medical Care Research and Review Volume 65 ; 65 ;  >
-      au < down ; crawling ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ;  >
+      au < down ; crawling ; 2009 ; Medical Care Research and Review Volume 66 ; 66 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11325,7 +11325,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Medical Decision Making Volume 28 ; 28 ;  >
-      au < down ; crawling ; 2009 ; Medical Decision Making Volume 29 ; 29 ;  >
+      au < down ; crawling ; 2009 ; Medical Decision Making Volume 29 ; 29 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11355,7 +11355,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Medieval History Journal Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; The Medieval History Journal Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; The Medieval History Journal Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11385,7 +11385,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Memory Studies Volume 1 ; 1 ;  >
-      au < down ; crawling ; 2009 ; Memory Studies Volume 2 ; 2 ;  >
+      au < down ; crawling ; 2009 ; Memory Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11445,7 +11445,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Millennium - Journal of International Studies Volume 37 ; 37 ;  >
-      au < down ; crawling ; 2009 ; Millennium - Journal of International Studies Volume 38 ; 38 ;  >
+      au < down ; crawling ; 2009 ; Millennium - Journal of International Studies Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11475,7 +11475,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Modern China Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; Modern China Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; Modern China Volume 35 ; 35 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -11506,7 +11506,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Multiple Sclerosis Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Multiple Sclerosis Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Multiple Sclerosis Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11535,7 +11535,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Music and Medicine Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; Music and Medicine Volume 1 ; 1 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11594,7 +11594,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; NASN School Nurse Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; NASN School Nurse Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; NASN School Nurse Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11624,7 +11624,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; NASSP Bulletin Volume 92 ; 92 ;  >
-      au < down ; crawling ; 2009 ; NASSP Bulletin Volume 93 ; 93 ;  >
+      au < down ; crawling ; 2009 ; NASSP Bulletin Volume 93 ; 93 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11657,9 +11657,9 @@
       au < down ; crawling ; 2008 ; National Institute Economic Review Volume 204 ; 204 ;  >
       au < down ; crawling ; 2008 ; National Institute Economic Review Volume 205 ; 205 ;  >
       au < down ; crawling ; 2008 ; National Institute Economic Review Volume 206 ; 206 ;  >
-      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 207 ; 207 ;  >
-      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 208 ; 208 ;  >
-      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 209 ; 209 ;  >
+      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 207 ; 207 ; reingest3.clockss.org:8083 >
+      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 208 ; 208 ; reingest3.clockss.org:8083 >
+      au < down ; crawling ; 2009 ; National Institute Economic Review Volume 209 ; 209 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11692,7 +11692,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Neurorehabilitation and Neural Repair Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11722,7 +11722,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; The Neuroscientist Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; The Neuroscientist Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; The Neuroscientist Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11752,7 +11752,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; New Media & Society Volume 10 ; 10 ;  >
-      au < down ; crawling ; 2009 ; New Media & Society Volume 11 ; 11 ;  >
+      au < down ; crawling ; 2009 ; New Media & Society Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11782,7 +11782,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 ;  >
-      au < down ; crawling ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ;  >
+      au < down ; crawling ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11812,7 +11812,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Nursing Ethics Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Nursing Ethics Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Nursing Ethics Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11842,7 +11842,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Nursing Science Quarterly Volume 21 ; 21 ;  >
-      au < down ; crawling ; 2009 ; Nursing Science Quarterly Volume 22 ; 22 ;  >
+      au < down ; crawling ; 2009 ; Nursing Science Quarterly Volume 22 ; 22 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11872,7 +11872,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11902,7 +11902,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Organization Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Organization Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Organization Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11932,7 +11932,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Organization & Environment Volume 21 ; 21 ;  >
-      au < down ; crawling ; 2009 ; Organization & Environment Volume 22 ; 22 ;  >
+      au < down ; crawling ; 2009 ; Organization & Environment Volume 22 ; 22 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11962,7 +11962,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Organization Studies Volume 29 ; 29 ;  >
-      au < down ; crawling ; 2009 ; Organization Studies Volume 30 ; 30 ;  >
+      au < down ; crawling ; 2009 ; Organization Studies Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -11992,7 +11992,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Organizational Research Methods Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; Organizational Research Methods Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; Organizational Research Methods Volume 12 ; 12 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12022,7 +12022,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Palliative Medicine Volume 22 ; 22 ;  >
-      au < down ; crawling ; 2009 ; Palliative Medicine Volume 23 ; 23 ;  >
+      au < down ; crawling ; 2009 ; Palliative Medicine Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12052,7 +12052,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Party Politics Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Party Politics Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Party Politics Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12082,7 +12082,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Perfusion Volume 23 ; 23 ;  >
-      au < down ; crawling ; 2009 ; Perfusion Volume 24 ; 24 ;  >
+      au < down ; crawling ; 2009 ; Perfusion Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12112,7 +12112,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12142,7 +12142,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12172,7 +12172,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Perspectives in Public Health Volume 128 ; 128 ;  >
-      au < down ; crawling ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ;  >
+      au < down ; crawling ; 2009 ; Perspectives in Public Health Volume 129 ; 129 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12202,7 +12202,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12232,7 +12232,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Philosophy & Social Criticism Volume 34 ; 34 ;  >
-      au < down ; crawling ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 ;  >
+      au < down ; crawling ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12262,7 +12262,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 ;  >
-      au < down ; crawling ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 ;  >
+      au < down ; crawling ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12292,7 +12292,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Planning Theory Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Planning Theory Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Planning Theory Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12532,7 +12532,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Probation Journal Volume 55 ; 55 ;  >
-      au < down ; crawling ; 2009 ; Probation Journal Volume 56 ; 56 ;  >
+      au < down ; crawling ; 2009 ; Probation Journal Volume 56 ; 56 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12562,7 +12562,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Progress in Development Studies Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Progress in Development Studies Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Progress in Development Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12592,7 +12592,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Progress in Human Geography Volume 32 ; 32 ;  >
-      au < down ; crawling ; 2009 ; Progress in Human Geography Volume 33 ; 33 ;  >
+      au < down ; crawling ; 2009 ; Progress in Human Geography Volume 33 ; 33 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12622,7 +12622,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Progress in Physical Geography Volume 32 ; 32 ;  >
-      au < down ; crawling ; 2009 ; Progress in Physical Geography Volume 33 ; 33 ;  >
+      au < down ; crawling ; 2009 ; Progress in Physical Geography Volume 33 ; 33 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12652,7 +12652,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12682,7 +12682,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Psychology of Music Volume 36 ; 36 ;  >
-      au < down ; crawling ; 2009 ; Psychology of Music Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; Psychology of Music Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12712,7 +12712,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Public Finance Review Volume 36 ; 36 ;  >
-      au < down ; crawling ; 2009 ; Public Finance Review Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; Public Finance Review Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12952,7 +12952,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Qualitative Social Work Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Qualitative Social Work Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -12982,7 +12982,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Race & Class Volume 50 ; 50 ;  >
-      au < down ; crawling ; 2009 ; Race & Class Volume 51 ; 51 ;  >
+      au < down ; crawling ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13012,7 +13012,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Rationality and Society Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Rationality and Society Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13071,7 +13071,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; RELC Journal Volume 39 ; 39 ;  >
-      au < down ; crawling ; 2009 ; RELC Journal Volume 40 ; 40 ;  >
+      au < down ; crawling ; 2009 ; RELC Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13100,7 +13100,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Remedial and Special Education Volume 29 ; 29 ;  >
-      au < down ; crawling ; 2009 ; Remedial and Special Education Volume 30 ; 30 ;  >
+      au < down ; crawling ; 2009 ; Remedial and Special Education Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13130,7 +13130,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Reproductive Sciences Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Reproductive Sciences Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Reproductive Sciences Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13160,7 +13160,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Research on Aging Volume 30 ; 30 ;  >
-      au < down ; crawling ; 2009 ; Research on Aging Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Research on Aging Volume 31 ; 31 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13190,7 +13190,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Research on Social Work Practice Volume 18 ; 18 ;  >
-      au < down ; crawling ; 2009 ; Research on Social Work Practice Volume 19 ; 19 ;  >
+      au < down ; crawling ; 2009 ; Research on Social Work Practice Volume 19 ; 19 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13220,7 +13220,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < notReady ; exists ; 2008 ; Research Studies in Music Education Volume 30 ; 30 ;  >
-      au < down ; crawling ; 2009 ; Research Studies in Music Education Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Research Studies in Music Education Volume 31 ; 31 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13272,7 +13272,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Review of Educational Research Volume 78 ; 78 ;  >
-      au < down ; crawling ; 2009 ; Review of Educational Research Volume 79 ; 79 ;  >
+      au < down ; crawling ; 2009 ; Review of Educational Research Volume 79 ; 79 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -13542,7 +13542,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Second Language Research Volume 24 ; 24 ;  >
-      au < down ; crawling ; 2009 ; Second Language Research Volume 25 ; 25 ;  >
+      au < down ; crawling ; 2009 ; Second Language Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -13572,7 +13572,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Security Dialogue Volume 39 ; 39 ;  >
-      au < down ; crawling ; 2009 ; Security Dialogue Volume 40 ; 40 ;  >
+      au < down ; crawling ; 2009 ; Security Dialogue Volume 40 ; 40 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -13602,7 +13602,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -13632,7 +13632,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Sexual Abuse: A Journal of Research and Treatment Volume 20 ; 20 ;  >
-      au < down ; crawling ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ;  >
+      au < down ; crawling ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13662,7 +13662,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Sexualities Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; Sexualities Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13692,7 +13692,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; SIMULATION Volume 84 ; 84 ;  >
-      au < down ; crawling ; 2009 ; SIMULATION Volume 85 ; 85 ;  >
+      au < down ; crawling ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13722,7 +13722,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Simulation & Gaming Volume 39 ; 39 ;  >
-      au < down ; crawling ; 2009 ; Simulation & Gaming Volume 40 ; 40 ;  >
+      au < down ; crawling ; 2009 ; Simulation & Gaming Volume 40 ; 40 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13752,7 +13752,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Small Group Research Volume 39 ; 39 ;  >
-      au < down ; crawling ; 2009 ; Small Group Research Volume 40 ; 40 ;  >
+      au < down ; crawling ; 2009 ; Small Group Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13782,7 +13782,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Social & Legal Studies Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Social & Legal Studies Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Social & Legal Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13812,7 +13812,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Social Compass Volume 55 ; 55 ;  >
-      au < down ; crawling ; 2009 ; Social Compass Volume 56 ; 56 ;  >
+      au < down ; crawling ; 2009 ; Social Compass Volume 56 ; 56 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13842,7 +13842,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Social Science Computer Review Volume 26 ; 26 ;  >
-      au < down ; crawling ; 2009 ; Social Science Computer Review Volume 27 ; 27 ;  >
+      au < down ; crawling ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13872,7 +13872,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Social Science Information Volume 47 ; 47 ;  >
-      au < down ; crawling ; 2009 ; Social Science Information Volume 48 ; 48 ;  >
+      au < down ; crawling ; 2009 ; Social Science Information Volume 48 ; 48 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13902,7 +13902,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Social Studies of Science Volume 38 ; 38 ;  >
-      au < down ; crawling ; 2009 ; Social Studies of Science Volume 39 ; 39 ;  >
+      au < down ; crawling ; 2009 ; Social Studies of Science Volume 39 ; 39 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -13962,7 +13962,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Sociology Volume 42 ; 42 ;  >
-      au < down ; crawling ; 2009 ; Sociology Volume 43 ; 43 ;  >
+      au < down ; crawling ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14021,7 +14021,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; South Asia Research Volume 28 ; 28 ;  >
-      au < down ; crawling ; 2009 ; South Asia Research Volume 29 ; 29 ;  >
+      au < down ; crawling ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14050,7 +14050,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; South Asian Survey Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; South Asian Survey Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14080,7 +14080,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Space and Culture Volume 11 ; 11 ;  >
-      au < down ; crawling ; 2009 ; Space and Culture Volume 12 ; 12 ;  >
+      au < down ; crawling ; 2009 ; Space and Culture Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14110,7 +14110,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14140,7 +14140,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Statistical Modelling Volume 8 ; 8 ;  >
-      au < down ; crawling ; 2009 ; Statistical Modelling Volume 9 ; 9 ;  >
+      au < down ; crawling ; 2009 ; Statistical Modelling Volume 9 ; 9 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14170,7 +14170,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Strategic Organization Volume 6 ; 6 ;  >
-      au < down ; crawling ; 2009 ; Strategic Organization Volume 7 ; 7 ;  >
+      au < down ; crawling ; 2009 ; Strategic Organization Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14200,7 +14200,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Structural Health Monitoring Volume 7 ; 7 ;  >
-      au < down ; crawling ; 2009 ; Structural Health Monitoring Volume 8 ; 8 ;  >
+      au < down ; crawling ; 2009 ; Structural Health Monitoring Volume 8 ; 8 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14230,7 +14230,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 ;  >
-      au < down ; crawling ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 ;  >
+      au < down ; crawling ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14290,7 +14290,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Surgical Innovation Volume 15 ; 15 ;  >
-      au < down ; crawling ; 2009 ; Surgical Innovation Volume 16 ; 16 ;  >
+      au < down ; crawling ; 2009 ; Surgical Innovation Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14320,7 +14320,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 ;  >
-      au < down ; crawling ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ;  >
+      au < down ; crawling ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14350,7 +14350,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Television & New Media Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Television & New Media Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14380,7 +14380,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Textile Research Journal Volume 78 ; 78 ;  >
-      au < down ; crawling ; 2009 ; Textile Research Journal Volume 79 ; 79 ;  >
+      au < down ; crawling ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14410,7 +14410,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Theoretical Criminology Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Theoretical Criminology Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Theoretical Criminology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14440,7 +14440,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Theory & Psychology Volume 18 ; 18 ;  >
-      au < down ; crawling ; 2009 ; Theory & Psychology Volume 19 ; 19 ;  >
+      au < down ; crawling ; 2009 ; Theory & Psychology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14470,7 +14470,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Theory and Research in Education Volume 6 ; 6 ;  >
-      au < down ; crawling ; 2009 ; Theory and Research in Education Volume 7 ; 7 ;  >
+      au < down ; crawling ; 2009 ; Theory and Research in Education Volume 7 ; 7 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14500,7 +14500,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ;  >
-      au < down ; crawling ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ;  >
+      au < down ; crawling ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14529,7 +14529,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14560,7 +14560,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 ;  >
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14589,7 +14589,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14619,7 +14619,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 ;  >
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14649,7 +14649,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 ;  >
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14678,7 +14678,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 ;  >
+      au < down ; crawling ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14711,9 +14711,9 @@
       au < down ; crawling ; 2008 ; Thesis Eleven Volume 93 ; 93 ;  >
       au < down ; crawling ; 2008 ; Thesis Eleven Volume 94 ; 94 ;  >
       au < down ; crawling ; 2008 ; Thesis Eleven Volume 95 ; 95 ;  >
-      au < down ; crawling ; 2009 ; Thesis Eleven Volume 96 ; 96 ;  >
-      au < down ; crawling ; 2009 ; Thesis Eleven Volume 97 ; 97 ;  >
-      au < down ; crawling ; 2009 ; Thesis Eleven Volume 98 ; 98 ;  >
+      au < down ; crawling ; 2009 ; Thesis Eleven Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+      au < down ; crawling ; 2009 ; Thesis Eleven Volume 97 ; 97 ; reingest2.clockss.org:8085 >
+      au < down ; crawling ; 2009 ; Thesis Eleven Volume 98 ; 98 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -14746,7 +14746,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Time & Society Volume 17 ; 17 ;  >
-      au < down ; crawling ; 2009 ; Time & Society Volume 18 ; 18 ;  >
+      au < down ; crawling ; 2009 ; Time & Society Volume 18 ; 18 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14775,7 +14775,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ;  >
-      au < down ; crawling ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ;  >
+      au < down ; crawling ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14834,7 +14834,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ;  >
+      au < down ; crawling ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14865,7 +14865,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 ;  >
-      au < down ; crawling ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ;  >
+      au < down ; crawling ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14895,7 +14895,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 ;  >
-      au < down ; crawling ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 ;  >
+      au < down ; crawling ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14925,7 +14925,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ;  >
-      au < down ; crawling ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ;  >
+      au < down ; crawling ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14953,7 +14953,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ;  >
+      au < down ; crawling ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -14983,7 +14983,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Trauma Volume 10 ; 10 ;  >
-      au < down ; crawling ; 2009 ; Trauma Volume 11 ; 11 ;  >
+      au < down ; crawling ; 2009 ; Trauma Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -15013,7 +15013,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ;  >
-      au < down ; crawling ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ;  >
+      au < down ; crawling ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -15043,7 +15043,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Traumatology Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Traumatology Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Traumatology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -15073,7 +15073,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Trends in Amplification Volume 12 ; 12 ;  >
-      au < down ; crawling ; 2009 ; Trends in Amplification Volume 13 ; 13 ;  >
+      au < down ; crawling ; 2009 ; Trends in Amplification Volume 13 ; 13 ; reingest4.clockss.org:8082 >
 
     }
 
@@ -15253,7 +15253,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Vascular Medicine Volume 13 ; 13 ;  >
-      au < down ; crawling ; 2009 ; Vascular Medicine Volume 14 ; 14 ;  >
+      au < down ; crawling ; 2009 ; Vascular Medicine Volume 14 ; 14 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -15283,7 +15283,7 @@
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
       au < down ; crawling ; 2008 ; Violence Against Women Volume 14 ; 14 ;  >
-      au < down ; crawling ; 2009 ; Violence Against Women Volume 15 ; 15 ;  >
+      au < down ; crawling ; 2009 ; Violence Against Women Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
