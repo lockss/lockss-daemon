@@ -59,7 +59,6 @@
       au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of Endocrinology Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of Endocrinology Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
-      au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of Endocrinology Volume 5 ; 5 >   
       au < HighWirePressH20Plugin ; testing ; 1949-1950 ; Journal of Endocrinology Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1950-1951 ; Journal of Endocrinology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Endocrinology Volume 8 ; 8 >
@@ -285,22 +284,22 @@
       comment[jme45] = Found a login page
       comment[jme46] = daemon doesn't see permission 
 
-      au < manifest ; 1988 ; Journal of Molecular Endocrinology Volume 1 ; 1 >
-      au < manifest ; 1989 ; Journal of Molecular Endocrinology Volume 2 ; 2 >
-      au < manifest ; 1989 ; Journal of Molecular Endocrinology Volume 3 ; 3 >
-      au < manifest ; 1990 ; Journal of Molecular Endocrinology Volume 4 ; 4 >
-      au < manifest ; 1990 ; Journal of Molecular Endocrinology Volume 5 ; 5 >
-      au < manifest ; 1991 ; Journal of Molecular Endocrinology Volume 6 ; 6 >
-      au < manifest ; 1991 ; Journal of Molecular Endocrinology Volume 7 ; 7 >
-      au < manifest ; 1992 ; Journal of Molecular Endocrinology Volume 8 ; 8 >
-      au < manifest ; 1992 ; Journal of Molecular Endocrinology Volume 9 ; 9 >
-      au < manifest ; 1993 ; Journal of Molecular Endocrinology Volume 10 ; 10 >
-      au < manifest ; 1993 ; Journal of Molecular Endocrinology Volume 11 ; 11 >
-      au < manifest ; 1994 ; Journal of Molecular Endocrinology Volume 12 ; 12 >
-      au < manifest ; 1994 ; Journal of Molecular Endocrinology Volume 13 ; 13 >
-      au < manifest ; 1995 ; Journal of Molecular Endocrinology Volume 14 ; 14 >
-      au < manifest ; 1995 ; Journal of Molecular Endocrinology Volume 15 ; 15 >
-      au < manifest ; 1996 ; Journal of Molecular Endocrinology Volume 16 ; 16 >
+      au < testing ; 1988 ; Journal of Molecular Endocrinology Volume 1 ; 1 >
+      au < testing ; 1989 ; Journal of Molecular Endocrinology Volume 2 ; 2 >
+      au < testing ; 1989 ; Journal of Molecular Endocrinology Volume 3 ; 3 >
+      au < testing ; 1990 ; Journal of Molecular Endocrinology Volume 4 ; 4 >
+      au < testing ; 1990 ; Journal of Molecular Endocrinology Volume 5 ; 5 >
+      au < testing ; 1991 ; Journal of Molecular Endocrinology Volume 6 ; 6 >
+      au < testing ; 1991 ; Journal of Molecular Endocrinology Volume 7 ; 7 >
+      au < testing ; 1992 ; Journal of Molecular Endocrinology Volume 8 ; 8 >
+      au < testing ; 1992 ; Journal of Molecular Endocrinology Volume 9 ; 9 >
+      au < testing ; 1993 ; Journal of Molecular Endocrinology Volume 10 ; 10 >
+      au < testing ; 1993 ; Journal of Molecular Endocrinology Volume 11 ; 11 >
+      au < testing ; 1994 ; Journal of Molecular Endocrinology Volume 12 ; 12 >
+      au < testing ; 1994 ; Journal of Molecular Endocrinology Volume 13 ; 13 >
+      au < testing ; 1995 ; Journal of Molecular Endocrinology Volume 14 ; 14 >
+      au < testing ; 1995 ; Journal of Molecular Endocrinology Volume 15 ; 15 >
+      au < testing ; 1996 ; Journal of Molecular Endocrinology Volume 16 ; 16 >
       au < manifest ; 1996 ; Journal of Molecular Endocrinology Volume 17 ; 17 >
       au < manifest ; 1997 ; Journal of Molecular Endocrinology Volume 18 ; 18 >
       au < manifest ; 1997 ; Journal of Molecular Endocrinology Volume 19 ; 19 >
