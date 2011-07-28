@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.18 2011-05-09 00:37:38 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.19 2011-07-28 02:57:46 tlipkis Exp $
  */
 
 /*
@@ -269,12 +269,12 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     // Combine the pipes
     NodeFilter[] filters = {
       base,
-      absLinkXform,
       relLinkXform,
-      absImportXform,
+      absLinkXform,
       relImportXform,
-      absRefreshXform,
+      absImportXform,
       relRefreshXform,
+      absRefreshXform,
     };
 
     NodeFilter linkXform = new OrFilter(filters);

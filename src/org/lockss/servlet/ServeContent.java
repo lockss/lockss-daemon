@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.35 2011-06-21 22:10:54 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.36 2011-07-28 02:57:46 tlipkis Exp $
  */
 
 /*
@@ -124,8 +124,7 @@ public class ServeContent extends LockssServlet {
   
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
-   * (/ServeContent?url=...).  NodeFilterHtmlLinkRewriterFactory may
-   * create bogus doubly-rewritten links if false. */
+   * (/ServeContent?url=...). */
   public static final String PARAM_ABSOLUTE_LINKS =
     PREFIX + "absoluteLinks";
   public static final boolean DEFAULT_ABSOLUTE_LINKS = true;
