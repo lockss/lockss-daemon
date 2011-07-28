@@ -2142,7 +2142,7 @@
       eissn = 1465-3133
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://jorthod.maneyjournals.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
@@ -2182,7 +2182,7 @@
     au < manifest ; exists ; 2007 ; Journal of Orthodontics Volume 34 ; 34 > 
     au < manifest ; exists ; 2008 ; Journal of Orthodontics Volume 35 ; 35 > 
     au < manifest ; exists ; 2009 ; Journal of Orthodontics Volume 36 ; 36 > 
-    au < manifest ; exists ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
+    au < released ; crawling ; 2010 ; Journal of Orthodontics Volume 37 ; 37 > 
     au < manifest ; exists ; 2011 ; Journal of Orthodontics Volume 38 ; 38 > 
 
   }
