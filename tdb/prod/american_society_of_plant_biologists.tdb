@@ -17,9 +17,9 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePlugin
       param[base_url] = http://www.plantcell.org/
-      implicit < status ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume] >
 
-      au < down ; The Plant Cell Volume 17 ; 17 >
+      au < down ; 2005 ; The Plant Cell Volume 17 ; 17 >
 
     }
 
@@ -27,13 +27,13 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.plantcell.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
-      au < doNotProcess ; The Plant Cell Volume 17 ; 17 >
-      au < down ; The Plant Cell Volume 18 ; 18 >
-      au < down ; The Plant Cell Volume 19 ; 19 >
-      au < down ; The Plant Cell Volume 20 ; 20 >
-      au < down ; The Plant Cell Volume 21 ; 21 >
+      au < doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
+      au < down ; 2006 ; The Plant Cell Volume 18 ; 18 >
+      au < down ; 2007 ; The Plant Cell Volume 19 ; 19 >
+      au < down ; 2008 ; The Plant Cell Volume 20 ; 20 >
+      au < down ; 2009 ; The Plant Cell Volume 21 ; 21 >
 
     }
 
@@ -50,22 +50,22 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://www.plantphysiol.org/
-    implicit < status ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
-    au < down ; Plant Physiology Volume 137 ; 137 >
-    au < down ; Plant Physiology Volume 138 ; 138 >
-    au < down ; Plant Physiology Volume 139 ; 139 >
-    au < down ; Plant Physiology Volume 140 ; 140 >
-    au < down ; Plant Physiology Volume 141 ; 141 >
-    au < down ; Plant Physiology Volume 142 ; 142 >
-    au < down ; Plant Physiology Volume 143 ; 143 >
-    au < down ; Plant Physiology Volume 144 ; 144 >
-    au < down ; Plant Physiology Volume 145 ; 145 >
-    au < down ; Plant Physiology Volume 146 ; 146 >
-    au < down ; Plant Physiology Volume 147 ; 147 >
-    au < down ; Plant Physiology Volume 148 ; 148 >
-    au < down ; Plant Physiology Volume 149 ; 149 >
-    au < down ; Plant Physiology Volume 150 ; 150 >
+    au < down ; 2005 ; Plant Physiology Volume 137 ; 137 >
+    au < down ; 2005 ; Plant Physiology Volume 138 ; 138 >
+    au < down ; 2005 ; Plant Physiology Volume 139 ; 139 >
+    au < down ; 2006 ; Plant Physiology Volume 140 ; 140 >
+    au < down ; 2006 ; Plant Physiology Volume 141 ; 141 >
+    au < down ; 2006 ; Plant Physiology Volume 142 ; 142 >
+    au < down ; 2007 ; Plant Physiology Volume 143 ; 143 >
+    au < down ; 2007 ; Plant Physiology Volume 144 ; 144 >
+    au < down ; 2007 ; Plant Physiology Volume 145 ; 145 >
+    au < down ; 2008 ; Plant Physiology Volume 146 ; 146 >
+    au < down ; 2008 ; Plant Physiology Volume 147 ; 147 >
+    au < down ; 2008 ; Plant Physiology Volume 148 ; 148 >
+    au < down ; 2009 ; Plant Physiology Volume 149 ; 149 >
+    au < down ; 2009 ; Plant Physiology Volume 150 ; 150 >
 
   }
 
