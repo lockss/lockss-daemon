@@ -17,7 +17,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] =  ael
 
-    au < exists ; exists ; 2011 ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 >
 
   }
 
@@ -287,7 +287,7 @@
 
     param[journal_abbr] = erj
 
-    au < exists ; exists ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
 
   }  
   
@@ -518,7 +518,14 @@
   }
 
   {
-    comment[0] = do not include Issues in Legal Scholarship (symposia)
+
+    title <
+      name = Issues in Legal Scholarship ;
+      issn = 1539-8323
+    >
+    
+    comment[scope] = not included (symposia)
+
   }
 
   {
@@ -593,7 +600,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
-    au < exists ; exists ; 2010 ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 >
 
   }
 
@@ -681,7 +688,17 @@
     au < manifest ; exists ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 >
 
   }
+  {
 
+    title <
+      name = Journal of Econometric Methods ; 
+      issn = 2156-6674
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jem
+
+  }
   {
 
     title <
@@ -745,13 +762,12 @@
 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jioe
-    comment[jioe] = manifest pages missing when checked 07-07-2011
 
     au < crawling ; exists ; 2006 ; Journal of Industrial Organization Education Volume 1 ; 1 >
     au < crawling ; exists ; 2007 ; Journal of Industrial Organization Education Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
-    au < exists ; exists ; 2010 ; Journal of Industrial Organization Education Volume 5 ; 5 >
+    au < manifest ; exists ; 2010 ; Journal of Industrial Organization Education Volume 5 ; 5 >
 
   }
 
@@ -1217,8 +1233,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = spp
 
-    au < exists ; exists ; 2010 ; Statistics, Politics, and Policy Volume 1 ; 1 >
-    au < exists ; exists ; 2011 ; Statistics, Politics, and Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; Statistics, Politics, and Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; Statistics, Politics, and Policy Volume 2 ; 2 >
 
   }
 
