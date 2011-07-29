@@ -230,13 +230,13 @@
       param[collection_id] = CDOC
       implicit < status ; year ; name ; param[year] >
 
-      au < manifest ; 1862 ; Congressional Documents 1862 ; 1862 >
-      au < manifest ; 1936 ; Congressional Documents 1936 ; 1936 >
-      au < manifest ; 1960 ; Congressional Documents 1960 ; 1960 >
-      au < manifest ; 1992 ; Congressional Documents 1992 ; 1992 >
-      au < manifest ; 1994 ; Congressional Documents 1994 ; 1994 >
-      au < manifest ; 1995 ; Congressional Documents 1995 ; 1995 >
-      au < manifest ; 1996 ; Congressional Documents 1996 ; 1996 >
+      au < testing ; 1862 ; Congressional Documents 1862 ; 1862 >
+      au < testing ; 1936 ; Congressional Documents 1936 ; 1936 >
+      au < testing ; 1960 ; Congressional Documents 1960 ; 1960 >
+      au < testing ; 1992 ; Congressional Documents 1992 ; 1992 >
+      au < testing ; 1994 ; Congressional Documents 1994 ; 1994 >
+      au < testing ; 1995 ; Congressional Documents 1995 ; 1995 >
+      au < testing ; 1996 ; Congressional Documents 1996 ; 1996 >
       au < manifest ; 1997 ; Congressional Documents 1997 ; 1997 >
       au < manifest ; 1998 ; Congressional Documents 1998 ; 1998 >
       au < manifest ; 1999 ; Congressional Documents 1999 ; 1999 >
@@ -278,14 +278,14 @@
       au < ready ; 2000 ; Congressional Hearings 2000 ; 2000 >
       au < ready ; 2001 ; Congressional Hearings 2001 ; 2001 >
       au < ready ; 2002 ; Congressional Hearings 2002 ; 2002 >
-      au < testing ; 2003 ; Congressional Hearings 2003 ; 2003 >
-      au < testing ; 2004 ; Congressional Hearings 2004 ; 2004 >
-      au < testing ; 2005 ; Congressional Hearings 2005 ; 2005 >
-      au < testing ; 2006 ; Congressional Hearings 2006 ; 2006 >
-      au < testing ; 2007 ; Congressional Hearings 2007 ; 2007 >
-      au < testing ; 2008 ; Congressional Hearings 2008 ; 2008 >
+      au < ready ; 2003 ; Congressional Hearings 2003 ; 2003 >
+      au < ready ; 2004 ; Congressional Hearings 2004 ; 2004 >
+      au < ready ; 2005 ; Congressional Hearings 2005 ; 2005 >
+      au < ready ; 2006 ; Congressional Hearings 2006 ; 2006 >
+      au < ready ; 2007 ; Congressional Hearings 2007 ; 2007 >
+      au < ready ; 2008 ; Congressional Hearings 2008 ; 2008 >
       au < testing ; 2009 ; Congressional Hearings 2009 ; 2009 >
-      au < testing ; 2010 ; Congressional Hearings 2010 ; 2010 >
+      au < ready ; 2010 ; Congressional Hearings 2010 ; 2010 >
 
     }
       
