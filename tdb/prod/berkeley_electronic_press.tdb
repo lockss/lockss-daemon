@@ -521,7 +521,14 @@
   }
 
   {
-    comment[0] = do not include Issues in Legal Scholarship (symposia)
+
+    title <
+      name = Issues in Legal Scholarship ;
+      issn = 1539-8323
+    >
+    
+    comment[scope] = not included (symposia)
+
   }
 
   {
@@ -681,6 +688,18 @@
     au < ready ; Journal of Drug Policy Analysis Volume 2 ; 2 ; 2009 >
     au < ready ; Journal of Drug Policy Analysis Volume 3 ; 3 ; 2010 >
     au < manifest ; Journal of Drug Policy Analysis Volume 4 ; 4 ; 2011 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Econometric Methods ; 
+      issn = 2156-6674
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = jem
 
   }
 
