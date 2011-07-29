@@ -30,22 +30,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1996 ; Accounting History Volume 1 ; 1 ;  >
-      au < manifest ; exists ; 1997 ; Accounting History Volume 2 ; 2 ;  >
-      au < manifest ; exists ; 1998 ; Accounting History Volume 3 ; 3 ;  >
-      au < manifest ; exists ; 1999 ; Accounting History Volume 4 ; 4 ;  >
-      au < manifest ; exists ; 2000 ; Accounting History Volume 5 ; 5 ;  >
-      au < manifest ; exists ; 2001 ; Accounting History Volume 6 ; 6 ;  >
-      au < manifest ; exists ; 2002 ; Accounting History Volume 7 ; 7 ;  >
-      au < manifest ; exists ; 2003 ; Accounting History Volume 8 ; 8 ;  >
-      au < manifest ; exists ; 2004 ; Accounting History Volume 9 ; 9 ;  >
-      au < manifest ; exists ; 2005 ; Accounting History Volume 10 ; 10 ;  >
-      au < manifest ; exists ; 2006 ; Accounting History Volume 11 ; 11 ;  >
-      au < manifest ; exists ; 2007 ; Accounting History Volume 12 ; 12 ;  >
-      au < manifest ; exists ; 2008 ; Accounting History Volume 13 ; 13 ;  >
-      au < manifest ; exists ; 2009 ; Accounting History Volume 14 ; 14 ;  >
-      au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ;  >
-      au < manifest ; exists ; 2011 ; Accounting History Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 1996 ; Accounting History Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1997 ; Accounting History Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1998 ; Accounting History Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1999 ; Accounting History Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Accounting History Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Accounting History Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Accounting History Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Accounting History Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Accounting History Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2005 ; Accounting History Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2006 ; Accounting History Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; Accounting History Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2008 ; Accounting History Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2009 ; Accounting History Volume 14 ; 14 ; >
+      au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2011 ; Accounting History Volume 16 ; 16 ; >
 
     }
 
@@ -74,7 +74,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1956 ; Acta Sociologica Volume 1 ; 1 ; >
+      au < exists ; exists ; 1956 ; Acta Sociologica Volume 1 ; 1 ; >
       au < manifest ; exists ; 1957 ; Acta Sociologica Volume 2 ; 2 ; >
       au < manifest ; exists ; 1958 ; Acta Sociologica Volume 3 ; 3 ; >
       au < manifest ; exists ; 1959 ; Acta Sociologica Volume 4 ; 4 ; >
@@ -118,7 +118,7 @@
       au < manifest ; exists ; 1999 ; Acta Sociologica Volume 42 ; 42 ; >
       au < manifest ; exists ; 2000 ; Acta Sociologica Volume 43 ; 43 ; >
       au < doesNotExist ; none ; 2001 ; Acta Sociologica Volume 44 ; 44 ; >
-      au < exists ; none ; 2002 ; Acta Sociologica Volume 45 ; 45 ; >
+      au < exists ; exists ; 2002 ; Acta Sociologica Volume 45 ; 45 ; >
       au < manifest ; exists ; 2003 ; Acta Sociologica Volume 46 ; 46 ; >
       au < manifest ; exists ; 2004 ; Acta Sociologica Volume 47 ; 47 ; >
       au < manifest ; exists ; 2005 ; Acta Sociologica Volume 48 ; 48 ; >
@@ -160,7 +160,15 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2003 ; Action Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2004 ; Action Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005 ; Action Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2006 ; Action Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Action Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2008 ; Action Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009 ; Action Research Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Action Research Volume 8 ; 8 ;  >
+      au < manifest ; exists ; 2011 ; Action Research Volume 9 ; 9 ; >
 
     }
 
@@ -190,7 +198,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2000 ; Active Learning in Higher Education Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; Active Learning in Higher Education Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; Active Learning in Higher Education Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; Active Learning in Higher Education Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; Active Learning in Higher Education Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; Active Learning in Higher Education Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; Active Learning in Higher Education Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ;  >
+      au < manifest ; exists ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 ; >
 
     }
 
@@ -220,7 +239,25 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1992 ; Adaptive Behavior Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1993 ; Adaptive Behavior Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1994 ; Adaptive Behavior Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1995 ; Adaptive Behavior Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1996 ; Adaptive Behavior Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1997 ; Adaptive Behavior Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1999 ; Adaptive Behavior Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2000 ; Adaptive Behavior Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2001 ; Adaptive Behavior Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2002 ; Adaptive Behavior Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2003 ; Adaptive Behavior Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2004 ; Adaptive Behavior Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2005 ; Adaptive Behavior Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2006 ; Adaptive Behavior Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2007 ; Adaptive Behavior Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Adaptive Behavior Volume 18 ; 18 ;  >
+      au < manifest ; exists ; 2011 ; Adaptive Behavior Volume 19 ; 19 ; >
 
     }
 
@@ -250,7 +287,49 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1969 ; Administration & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1970 ; Administration & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1971 ; Administration & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1972 ; Administration & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1973 ; Administration & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1974 ; Administration & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1975 ; Administration & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1976 ; Administration & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1977 ; Administration & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1978 ; Administration & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1979 ; Administration & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1980 ; Administration & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1981 ; Administration & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1982 ; Administration & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1983 ; Administration & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1984 ; Administration & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1985 ; Administration & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1986 ; Administration & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1987 ; Administration & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1988 ; Administration & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1989 ; Administration & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1990 ; Administration & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1991 ; Administration & Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1992 ; Administration & Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1993 ; Administration & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1994 ; Administration & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1995 ; Administration & Society Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1996 ; Administration & Society Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1997 ; Administration & Society Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1998 ; Administration & Society Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1999 ; Administration & Society Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2000 ; Administration & Society Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2001 ; Administration & Society Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2002 ; Administration & Society Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2003 ; Administration & Society Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2004 ; Administration & Society Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2005 ; Administration & Society Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2006 ; Administration & Society Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2007 ; Administration & Society Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2008 ; Administration & Society Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2009 ; Administration & Society Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Administration & Society Volume 42 ; 42 ;  >
+      au < manifest ; exists ; 2011 ; Administration & Society Volume 43 ; 43 ; >
 
     }
 
@@ -280,7 +359,67 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1950-1951 ; Adult Education Quarterly Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1951-1952 ; Adult Education Quarterly Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1952-1953 ; Adult Education Quarterly Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1953-1954 ; Adult Education Quarterly Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1954-1955 ; Adult Education Quarterly Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1955-1956 ; Adult Education Quarterly Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1956-1957 ; Adult Education Quarterly Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1957-1958 ; Adult Education Quarterly Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1958-1959 ; Adult Education Quarterly Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1959-1960 ; Adult Education Quarterly Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1960-1961 ; Adult Education Quarterly Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1961-1962 ; Adult Education Quarterly Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1962-1963 ; Adult Education Quarterly Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1963-1964 ; Adult Education Quarterly Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1964-1965 ; Adult Education Quarterly Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1965-1966 ; Adult Education Quarterly Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1966-1967 ; Adult Education Quarterly Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1967-1968 ; Adult Education Quarterly Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1968-1969 ; Adult Education Quarterly Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1969-1970 ; Adult Education Quarterly Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1970-1971 ; Adult Education Quarterly Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1971-1972 ; Adult Education Quarterly Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1972-1973 ; Adult Education Quarterly Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1973-1974 ; Adult Education Quarterly Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1974-1975 ; Adult Education Quarterly Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1975-1976 ; Adult Education Quarterly Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1976-1977 ; Adult Education Quarterly Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1977-1978 ; Adult Education Quarterly Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1978-1979 ; Adult Education Quarterly Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1979-1980 ; Adult Education Quarterly Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1980-1981 ; Adult Education Quarterly Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1981-1982 ; Adult Education Quarterly Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1982-1983 ; Adult Education Quarterly Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1983-1984 ; Adult Education Quarterly Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1984-1985 ; Adult Education Quarterly Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1985-1986 ; Adult Education Quarterly Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1986-1987 ; Adult Education Quarterly Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1987-1988 ; Adult Education Quarterly Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1988-1989 ; Adult Education Quarterly Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1990-1990 ; Adult Education Quarterly Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1990-1991 ; Adult Education Quarterly Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1992-1992 ; Adult Education Quarterly Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1992-1993 ; Adult Education Quarterly Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1993-1994 ; Adult Education Quarterly Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1994-1995 ; Adult Education Quarterly Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1995-1996 ; Adult Education Quarterly Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1996-1997 ; Adult Education Quarterly Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1997-1998 ; Adult Education Quarterly Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1998-1999 ; Adult Education Quarterly Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1999-2000 ; Adult Education Quarterly Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2000-2001 ; Adult Education Quarterly Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2001-2002 ; Adult Education Quarterly Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2002-2003 ; Adult Education Quarterly Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2003-2004 ; Adult Education Quarterly Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2004-2005 ; Adult Education Quarterly Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2005-2006 ; Adult Education Quarterly Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2006-2007 ; Adult Education Quarterly Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
       au < released ; crawling ; 2009-2010 ; Adult Education Quarterly Volume 60 ; 60 ;  >
+      au < manifest ; exists ; 2011 ; Adult Education Quarterly Volume 61 ; 61 ; >
 
     }
 
@@ -310,7 +449,29 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1987 ; Advances in Dental Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1988 ; Advances in Dental Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1989 ; Advances in Dental Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1990 ; Advances in Dental Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1991 ; Advances in Dental Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1992 ; Advances in Dental Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1993 ; Advances in Dental Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1994 ; Advances in Dental Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1995 ; Advances in Dental Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1996 ; Advances in Dental Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1997 ; Advances in Dental Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1998 ; Advances in Dental Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; Advances in Dental Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Advances in Dental Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; Advances in Dental Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; Advances in Dental Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; Advances in Dental Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2005 ; Advances in Dental Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2006 ; Advances in Dental Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Advances in Dental Research Volume 22 ; 22 ;  >
+      au < manifest ; exists ; 2011 ; Advances in Dental Research Volume 23 ; 23 ; >
 
     }
 
@@ -340,7 +501,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1999 ; Advances in Developing Human Resources Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2000 ; Advances in Developing Human Resources Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2001 ; Advances in Developing Human Resources Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2002 ; Advances in Developing Human Resources Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2003 ; Advances in Developing Human Resources Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2004 ; Advances in Developing Human Resources Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; Advances in Developing Human Resources Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2007 ; Advances in Developing Human Resources Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 ;  >
+      au < manifest ; exists ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 ; >
 
     }
 
@@ -370,7 +543,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1986 ; Affilia Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; Affilia Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; Affilia Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; Affilia Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; Affilia Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; Affilia Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; Affilia Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; Affilia Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; Affilia Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; Affilia Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; Affilia Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; Affilia Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; Affilia Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; Affilia Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; Affilia Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; Affilia Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; Affilia Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; Affilia Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; Affilia Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; Affilia Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; Affilia Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; Affilia Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; Affilia Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; Affilia Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Affilia Volume 25 ; 25 ;  >
+      au < manifest ; exists ; 2011 ; Affilia Volume 26 ; 26 ; >
 
     }
 
@@ -385,9 +583,9 @@
 	    param[base_url] = http://alt.sagepub.com/
 
 	  {
-	
+
 	    pluginSuffix = ClockssHighWirePressH20Plugin
-	
+
 	    au < exists ; exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 ;  >
 	    au < exists ; exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 ;  >
 	    au < exists ; exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 ;  >
@@ -424,7 +622,61 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1957 ; American Behavioral Scientist Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1958 ; American Behavioral Scientist Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1959 ; American Behavioral Scientist Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1960 ; American Behavioral Scientist Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1961 ; American Behavioral Scientist Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1962 ; American Behavioral Scientist Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1963 ; American Behavioral Scientist Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1964 ; American Behavioral Scientist Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1965 ; American Behavioral Scientist Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1966 ; American Behavioral Scientist Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1967 ; American Behavioral Scientist Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1968 ; American Behavioral Scientist Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1969 ; American Behavioral Scientist Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1970 ; American Behavioral Scientist Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1971 ; American Behavioral Scientist Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1972 ; American Behavioral Scientist Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1973 ; American Behavioral Scientist Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1974 ; American Behavioral Scientist Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1975 ; American Behavioral Scientist Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1976 ; American Behavioral Scientist Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1977 ; American Behavioral Scientist Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1978 ; American Behavioral Scientist Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1979 ; American Behavioral Scientist Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1980 ; American Behavioral Scientist Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1981 ; American Behavioral Scientist Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1982 ; American Behavioral Scientist Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1983 ; American Behavioral Scientist Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1984 ; American Behavioral Scientist Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1985 ; American Behavioral Scientist Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1986 ; American Behavioral Scientist Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1987 ; American Behavioral Scientist Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1988 ; American Behavioral Scientist Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1989 ; American Behavioral Scientist Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1990 ; American Behavioral Scientist Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1991 ; American Behavioral Scientist Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1992 ; American Behavioral Scientist Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1993 ; American Behavioral Scientist Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1994 ; American Behavioral Scientist Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1995 ; American Behavioral Scientist Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1996 ; American Behavioral Scientist Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1997 ; American Behavioral Scientist Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1998 ; American Behavioral Scientist Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1999 ; American Behavioral Scientist Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2000 ; American Behavioral Scientist Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2001 ; American Behavioral Scientist Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2002 ; American Behavioral Scientist Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2003 ; American Behavioral Scientist Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2004 ; American Behavioral Scientist Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2005 ; American Behavioral Scientist Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2006 ; American Behavioral Scientist Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2007 ; American Behavioral Scientist Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
       au < released ; crawling ; 2010 ; American Behavioral Scientist Volume 54 ; 54 ;  >
+      au < manifest ; exists ; 2011 ; American Behavioral Scientist Volume 55 ; 55 ; >
 
     }
 
@@ -453,8 +705,54 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1964 ; American Educational Research Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1965 ; American Educational Research Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1966 ; American Educational Research Journal Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1967 ; American Educational Research Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1968 ; American Educational Research Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1969 ; American Educational Research Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1970 ; American Educational Research Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1971 ; American Educational Research Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1972 ; American Educational Research Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1973 ; American Educational Research Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1974 ; American Educational Research Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1975 ; American Educational Research Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1976 ; American Educational Research Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1977 ; American Educational Research Journal Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1978 ; American Educational Research Journal Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1979 ; American Educational Research Journal Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1980 ; American Educational Research Journal Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1981 ; American Educational Research Journal Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1982 ; American Educational Research Journal Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1983 ; American Educational Research Journal Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1984 ; American Educational Research Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1985 ; American Educational Research Journal Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1986 ; American Educational Research Journal Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1987 ; American Educational Research Journal Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1988 ; American Educational Research Journal Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1989 ; American Educational Research Journal Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1990 ; American Educational Research Journal Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1991 ; American Educational Research Journal Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1992 ; American Educational Research Journal Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1993 ; American Educational Research Journal Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1994 ; American Educational Research Journal Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1995 ; American Educational Research Journal Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1996 ; American Educational Research Journal Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1997 ; American Educational Research Journal Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1998 ; American Educational Research Journal Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1999 ; American Educational Research Journal Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2000 ; American Educational Research Journal Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2001 ; American Educational Research Journal Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2002 ; American Educational Research Journal Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2003 ; American Educational Research Journal Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2004 ; American Educational Research Journal Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2005 ; American Educational Research Journal Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2006 ; American Educational Research Journal Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2007 ; American Educational Research Journal Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
       au < manifest ; exists ; 2009 ; American Educational Research Journal Volume 46 ; 46 ;  >
       au < released ; crawling ; 2010 ; American Educational Research Journal Volume 47 ; 47 ;  >
+      au < manifest ; exists ; 2011 ; American Educational Research Journal Volume 48 ; 48 ; >
 
     }
 
@@ -483,8 +781,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1986 ; American Journal of Alzheimer's Disease and Other Dementias Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Alzheimer's Disease and Other Dementias Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Alzheimer's Disease and Other Dementias Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Alzheimer's Disease and Other Dementias Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Alzheimer's Disease and Other Dementias Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Alzheimer's Disease and Other Dementias Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Alzheimer's Disease and Other Dementias Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Alzheimer's Disease and Other Dementias Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Alzheimer's Disease and Other Dementias Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Alzheimer's Disease and Other Dementias Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Alzheimer's Disease and Other Dementias Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Alzheimer's Disease and Other Dementias Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Alzheimer's Disease and Other Dementias Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Alzheimer's Disease and Other Dementias Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Alzheimer's Disease and Other Dementias Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Alzheimer's Disease and Other Dementias Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Alzheimer's Disease and Other Dementias Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Alzheimer's Disease and Other Dementias Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Alzheimer's Disease and Other Dementias Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Alzheimer's Disease and Other Dementias Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Alzheimer's Disease and Other Dementias Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Alzheimer's Disease and Other Dementias Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
       au < manifest ; exists ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ;  >
       au < released ; crawling ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
 
     }
 
