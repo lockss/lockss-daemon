@@ -17,7 +17,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ael
 
-    au < exists ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 ; 2011 >
+    au < manifest ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 ; 2011 >
 
   }
  
@@ -287,7 +287,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = erj
 
-    au < exists ; Entrepreneurship Research Journal Volume 1 ; 1 ; 2011 >
+    au < manifest ; Entrepreneurship Research Journal Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -603,7 +603,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
-    au < exists ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 ; 2010 >
+    au < manifest ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 ; 2010 >
 
   }
 
@@ -766,13 +766,12 @@
 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jioe
-    comment[jioe] = manifest pages missing when checked 07-07-2011
 
-    au < exists ; Journal of Industrial Organization Education Volume 1 ; 1 ; 2006 >
-    au < exists ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
+    au < manifest ; Journal of Industrial Organization Education Volume 1 ; 1 ; 2006 >
+    au < manifest ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
     au < ready ; Journal of Industrial Organization Education Volume 3 ; 3 ; 2008 >
     au < ready ; Journal of Industrial Organization Education Volume 4 ; 4 ; 2009 >
-    au < exists ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
+    au < manifest ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
 
   }
 
@@ -1222,8 +1221,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = spp
 
-    au < exists ; Statistics, Politics, and Policy Volume 1 ; 1 ; 2010 >
-    au < exists ; Statistics, Politics, and Policy Volume 2 ; 2 ; 2011 >
+    au < manifest ; Statistics, Politics, and Policy Volume 1 ; 1 ; 2010 >
+    au < manifest ; Statistics, Politics, and Policy Volume 2 ; 2 ; 2011 >
 
   }
 
