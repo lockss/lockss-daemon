@@ -4143,7 +4143,7 @@
 
     param[journal_id] = lci
 
-    au < manifest ; Lung Cancer International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Lung Cancer International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4156,7 +4156,7 @@
 
     param[journal_id] = lymph
 
-    au < manifest ; Lymphoma Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Lymphoma Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4169,8 +4169,8 @@
 
     param[journal_id] = mrt
 
-    au < manifest ; Malaria Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Malaria Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Malaria Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Malaria Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4274,7 +4274,7 @@
 
     param[journal_id] = mis
 
-    au < manifest ; Minimally Invasive Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Minimally Invasive Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4305,8 +4305,8 @@
 
     param[journal_id] = mbi
 
-    au < manifest ; Molecular Biology International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Molecular Biology International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Molecular Biology International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Molecular Biology International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4320,8 +4320,8 @@
 
     param[journal_id] = msi
 
-    au < manifest ; Multiple Sclerosis International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Multiple Sclerosis International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Multiple Sclerosis International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Multiple Sclerosis International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4365,9 +4365,9 @@
 
     param[journal_id] = nri
 
-    au < manifest ; Neurology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Neurology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Neurology Research International Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; Neurology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Neurology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Neurology Research International Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4381,8 +4381,8 @@
 
     param[journal_id] = nrp
 
-    au < manifest ; Nursing Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Nursing Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Nursing Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Nursing Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4412,10 +4412,10 @@
 
     param[journal_id] = oci
 
-    au < manifest ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4429,10 +4429,10 @@
 
     param[journal_id] = oximed
 
-    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Oxidative Medicine and Cellular Longevity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4446,8 +4446,8 @@
 
     param[journal_id] = prt
 
-    au < manifest ; Pain Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Pain Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Pain Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Pain Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4460,8 +4460,8 @@
 
     param[journal_id] = pd
 
-    au < manifest ; Parkinson's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Parkinson's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Parkinson's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Parkinson's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4474,8 +4474,8 @@
 
     param[journal_id] = pri
 
-    au < manifest ; Pathology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Pathology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Pathology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Pathology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4489,10 +4489,10 @@
 
     param[journal_id] = phys
 
-    au < manifest ; Physics Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Physics Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Physics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Physics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Physics Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Physics Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Physics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Physics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4506,8 +4506,8 @@
 
     param[journal_id] = psi
 
-    au < manifest ; Plastic Surgery International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Plastic Surgery International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Plastic Surgery International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Plastic Surgery International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4573,8 +4573,8 @@
 
     param[journal_id] = pc
 
-    au < manifest ; Prostate Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Prostate Cancer Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; Prostate Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Prostate Cancer Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4588,8 +4588,8 @@
 
     param[journal_id] = pm
 
-    au < manifest ; Pulmonary Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Pulmonary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Pulmonary Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Pulmonary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4603,7 +4603,7 @@
 
     param[journal_id] = rrp
 
-    au < manifest ; Radiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Radiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4617,7 +4617,7 @@
 
     param[journal_id] = rerp
 
-    au < testing ; Rehabilitation Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Rehabilitation Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; Rehabilitation Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -5036,7 +5036,7 @@
 
     param[journal_id] = sprt
 
-    au < testing ; Schizophrenia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Schizophrenia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -5082,7 +5082,7 @@
 
     param[journal_id] = sd
 
-    au < testing ; Sleep Disorders Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Sleep Disorders Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5096,7 +5096,7 @@
 
     param[journal_id] = smr
 
-    au < testing ; Smart Materials Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Smart Materials Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5109,8 +5109,8 @@
 
     param[journal_id] = sci
 
-    au < testing ; Stem Cells International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Stem Cells International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Stem Cells International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Stem Cells International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -5124,8 +5124,8 @@
 
     param[journal_id] = srt
 
-    au < testing ; Stroke Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Stroke Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Stroke Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Stroke Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -5188,7 +5188,7 @@
 
     param[journal_id] = thromb
 
-    au < testing ; Thrombosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Thrombosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; Thrombosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -5203,8 +5203,8 @@
 
     param[journal_id] = trt
 
-    au < testing ; Tuberculosis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Tuberculosis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Tuberculosis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Tuberculosis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -5218,8 +5218,8 @@
 
     param[journal_id] = ulc
 
-    au < testing ; Ulcers Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Ulcers Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Ulcers Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Ulcers Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -5233,7 +5233,7 @@
 
     param[journal_id] = usr
 
-    au < testing ; Urban Studies Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Urban Studies Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5246,8 +5246,8 @@
 
     param[journal_id] = vmi
 
-    au < testing ; Veterinary Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Veterinary Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Veterinary Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Veterinary Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
