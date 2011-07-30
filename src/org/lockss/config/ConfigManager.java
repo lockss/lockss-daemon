@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.77 2010-11-18 07:13:51 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.77.2.1 2011-07-30 13:36:46 dshr Exp $
  */
 
 /*
@@ -1236,9 +1236,11 @@ public class ConfigManager implements LockssManager {
     if (!StringUtil.isNullString(space)) {
       String firstSpace =
 	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
+      if (false) { // XXX DSHR
       platformOverride(config,
 		       LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 		       firstSpace);
+      }
       platformOverride(config, HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);
       platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
