@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.10 2011-07-26 19:40:16 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.11 2011-07-30 13:38:00 dshr Exp $
  */
 
 /*
@@ -733,22 +733,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
         FileObject inactivePropsFile = getInactivePropsFile();
 
         // if the files exist but there's a problem renaming them, throw
-	boolean ok = false;
 	try {
-	  ok = (inactiveCacheFile.exists() &&
-		!updateAtomically(inactiveCacheFile, currentCacheFile));
-	  if (ok) {
-	    ok = (inactivePropsFile.exists() &&
-		  !updateAtomically(inactivePropsFile, currentPropsFile));
-	  }
+          logger.debug(inactiveCacheFile.getURL().toString() + " exists? " +
+                       inactiveCacheFile.exists());
+          logger.debug(inactivePropsFile.getURL().toString() + " exists? " +
+                       inactivePropsFile.exists());
+          if ((inactiveCacheFile.exists() &&
+                !updateAtomically(inactiveCacheFile, currentCacheFile)) ||
+              (inactivePropsFile.exists() &&
+                !updateAtomically(inactivePropsFile, currentPropsFile))) {
+            logger.error("Couldn't rename inactive versions: " + url);
+            throw new LockssRepository.RepositoryStateException(
+                "Couldn't rename inactive versions.");
+          }
 	} catch (FileSystemException e) {
 	  logger.error("sealNewVersion() threw: " + e);
-	}
-	if (!ok) {
-          logger.error("Couldn't rename inactive versions: " + url);
           throw new LockssRepository.RepositoryStateException(
-              "Couldn't rename inactive versions.");
-        }
+                "Rename inactive versions threw: " + e);
+	}
 
         // add the 'was inactive' property so the knowledge isn't lost
         try {
