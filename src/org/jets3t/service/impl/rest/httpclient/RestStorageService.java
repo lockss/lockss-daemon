@@ -807,6 +807,7 @@ public abstract class RestStorageService extends StorageService implements AWSRe
                     + value);
             }
 
+            if (false) { // XXX DSHR
             // Ensure each AMZ header is uniquely identified according to the lowercase name.
             String duplicateValue = (String) headersAlreadySeenMap.get(key.toLowerCase());
             if (duplicateValue != null && !duplicateValue.equals(value)) {
@@ -817,6 +818,9 @@ public abstract class RestStorageService extends StorageService implements AWSRe
             }
 
             httpMethod.setRequestHeader(key, value);
+            } else {
+            httpMethod.setRequestHeader(key.toLowerCase(), value);
+            }
             headersAlreadySeenMap.put(key.toLowerCase(), value);
         }
     }
