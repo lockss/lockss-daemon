@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.13 2011-07-16 03:31:09 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.14 2011-07-30 13:37:21 dshr Exp $
  */
 
 /*
@@ -521,7 +521,9 @@ public class LockssRepositoryImpl
     }
     buffer.append(CACHE_ROOT_NAME);
     buffer.append(File.separator);
-    return buffer.toString();
+    String ret = buffer.toString();
+    logger.debug3("extendCacheLocation(" + cacheDir + ") = " + ret);
+    return ret;
   }
 
   /**
@@ -888,7 +890,8 @@ public class LockssRepositoryImpl
 	repoCacheFile =
 	  VFS.getManager().resolveFile(extendCacheLocation(repoPath));
       } catch (FileSystemException e) {
-	logger.error("Can't get root for repo: " + e);
+	logger.error("Can't get root for " + repoPath + ": " + e);
+        e.printStackTrace();
 	repoCacheFile = null;
       }
     }
