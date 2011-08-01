@@ -1,5 +1,5 @@
 /*
- * $Id: IOPFilterRule.java,v 1.3 2005-04-08 17:03:55 troberts Exp $
+ * $Id: IOPFilterRule.java,v 1.4 2011-08-01 22:29:50 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,9 @@ import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
 
 /**
- * Filters out menu, comments, javascript, html tags, and whitespace.
+ * <p>This URL normalizer goes with the ancient plugin
+ * org.lockss.plugin.iop.IOPPlugin, not with current plugins for the
+ * IOPscience platform.</p>
  */
 public class IOPFilterRule implements FilterRule {
   public Reader createFilteredReader(Reader reader) {

@@ -1,5 +1,5 @@
 /*
- * $Id: IOPNormalizer.java,v 1.1 2005-03-15 07:43:32 tlipkis Exp $
+ * $Id: IOPNormalizer.java,v 1.2 2011-08-01 22:29:50 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,11 @@ package org.lockss.plugin.iop;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
+/**
+ * <p>This URL normalizer goes with the ancient plugin
+ * org.lockss.plugin.iop.IOPPlugin, not with current plugins for the
+ * IOPscience platform.</p>
+ */
 public class IOPNormalizer implements UrlNormalizer {
 
   private static final String host = "http://www.iop.org/";

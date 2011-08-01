@@ -16,6 +16,10 @@
     <string>5</string>
   </entry>
   <entry>
+    <string>plugin_notes</string>
+    <string>This plugin is for an isolated number of AUs from a long time ago and is deprecated in favor of current plugins for the IOPscience platform.</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;IOP Publishing Plugin (Legacy), Base URL %s, Second Base URL %s, Journal ID %s, Volume %d&quot;, base_url, base_url2, journal_id, volume</string>
   </entry>
