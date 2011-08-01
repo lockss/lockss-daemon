@@ -4,6 +4,7 @@
     name = Oxford University Press
   >
 
+    pluginPrefix = org.lockss.plugin.highwire.
     implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
 
   {
@@ -18,7 +19,6 @@
     {
 
     param[base_url] = http://abbs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
@@ -29,7 +29,6 @@
     {
 
     param[base_url] = http://abbs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 ; >
@@ -57,7 +56,6 @@
     {
 
     param[base_url] = http://adaptation.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Adaptation Volume 1 ; 1 ; >
@@ -68,7 +66,6 @@
     {
 
     param[base_url] = http://adaptation.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2008 ; Adaptation Volume 1 ; 1 ; >
@@ -93,7 +90,6 @@
     {
     
     param[base_url] = http://afraf.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1901-1902 ; African Affairs Volume 1 ; 1 ; >
@@ -224,7 +220,6 @@
     {
 
     param[base_url] = http://ageing.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
@@ -235,7 +230,6 @@
     {
 
     param[base_url] = http://ageing.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1972 ; Age and Ageing Volume 1 ; 1 ; >
@@ -295,7 +289,6 @@
     {
 
     param[base_url] = http://alcalc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
@@ -306,7 +299,6 @@
     {
 
     param[base_url] = http://alcalc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1963-1964 ; Alcohol and Alcoholism Volume 1 ; 1 ; >
@@ -372,7 +364,6 @@
     {
 
     param[base_url] = http://ajae.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
        
     au < exists ; exists ; 1919 ; American Journal of Agricultural Economics Volume 1 ; 1 ; >
@@ -485,7 +476,6 @@
     {
 
     param[base_url] = http://aje.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
@@ -498,7 +488,6 @@
     {
 
     param[base_url] = http://aje.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1921 ; American Journal of Epidemiology Volume 1 ; 1 ; >
@@ -692,7 +681,6 @@
     {
 
     param[base_url] = http://aler.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
@@ -703,7 +691,6 @@
     {
 
     param[base_url] = http://aler.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; American Law and Economics Review Volume 1 ; 1 ; >
@@ -736,7 +723,6 @@
     {
 
     param[base_url] = http://alh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -746,7 +732,6 @@
     {
 
     param[base_url] = http://alh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; American Literary History Volume 1 ; 1 ; >
@@ -789,7 +774,6 @@
     {
 
     param[base_url] = http://analysis.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Analysis Volume 68 ; 68 ; >
@@ -800,7 +784,6 @@
     {
 
     param[base_url] = http://analysis.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1933-1934 ; Analysis Volume 1 ; 1 ; >
@@ -891,7 +874,6 @@
     {
 
     param[base_url] = http://aob.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
@@ -904,7 +886,6 @@
     {
 
     param[base_url] = http://aob.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 ; >
@@ -1081,7 +1062,6 @@
     {
 
     param[base_url] = http://annhyg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
@@ -1092,7 +1072,6 @@
     {
 
     param[base_url] = http://annhyg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 ; >
@@ -1161,7 +1140,6 @@
     {
 
     param[base_url] = http://annonc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
@@ -1172,7 +1150,6 @@
     {
 
     param[base_url] = http://annonc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; Annals of Oncology Volume 1 ; 1 ; >
@@ -1214,7 +1191,6 @@
     {
 
     param[base_url] = http://aepp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < exists ; exists ; 1988 ; Applied Economic Perspectives and Policy Volume 10 ; 10 ; >
@@ -1258,7 +1234,6 @@
     {
 
     param[base_url] = http://applij.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
@@ -1269,7 +1244,6 @@
     {
 
     param[base_url] = http://applij.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1980 ; Applied Linguistics Volume I ; I ; >
@@ -1321,7 +1295,6 @@
     {
 
     param[base_url] = http://alrr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < exists ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
@@ -1347,7 +1320,6 @@
     {
 
     param[base_url] = http://acn.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
@@ -1358,7 +1330,6 @@
     {
 
     param[base_url] = http://acn.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1986 ; Archives of Clinical Neuropsychology Volume 1 ; 1 ; >
@@ -1404,7 +1375,6 @@
     {
 
     param[base_url] = http://beheco.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
@@ -1415,7 +1385,6 @@
     {
 
     param[base_url] = http://beheco.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; Behavioral Ecology Volume 1 ; 1 ; >
@@ -1457,7 +1426,6 @@
     {
 
     param[base_url] = http://bioinformatics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
@@ -1468,7 +1436,6 @@
     {
 
     param[base_url] = http://bioinformatics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1985 ; Bioinformatics Volume 1 ; 1 ; >
@@ -1515,7 +1482,6 @@
     {
 
     param[base_url] = http://biomet.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Biometrika Volume 95 ; 95 ; >
@@ -1526,7 +1492,6 @@
     {
 
     param[base_url] = http://biomet.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1901-1902 ; Biometrika Volume 1 ; 1 ; >
@@ -1643,7 +1608,6 @@
     {
 
     param[base_url] = http://biohorizons.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
@@ -1654,7 +1618,6 @@
     {
 
     param[base_url] = http://biohorizons.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
@@ -1678,7 +1641,6 @@
     {
 
     param[base_url] = http://biostatistics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Biostatistics Volume 9 ; 9 ; >
@@ -1689,7 +1651,6 @@
     {
 
     param[base_url] = http://biostatistics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2000 ; Biostatistics Volume 1 ; 1 ; >
@@ -1721,7 +1682,6 @@
     {
 
     param[base_url] = http://brain.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Brain Volume 131 ; 131 ; >
@@ -1732,7 +1692,6 @@
     {
 
     param[base_url] = http://brain.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1878 ; Brain Volume 1 ; 1 ; >
@@ -1888,7 +1847,6 @@
     {
 
     param[base_url] = http://brief-treatment.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < doNotProcess ; exists ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; >
@@ -1916,7 +1874,6 @@
     {
 
     param[base_url] = http://bib.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
@@ -1927,7 +1884,6 @@
     {
 
     param[base_url] = http://bib.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2000 ; Briefings in Bioinformatics Volume 1 ; 1 ; >
@@ -1961,7 +1917,6 @@
     {
 
     param[base_url] = http://bfgp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
@@ -1972,7 +1927,6 @@
     {
 
     param[base_url] = http://bfgp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < released ; crawling ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
@@ -1993,7 +1947,6 @@
     {
 
     param[base_url] = http://bfg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
         
     au < manifest ; exists ; 2002 ; Briefings in Functional Genomics Volume 1 ; 1 ; >
@@ -2023,7 +1976,6 @@
     {
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
@@ -2034,7 +1986,6 @@
     {
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1960-1961 ; The British Journal of Aesthetics Volume 1 ; 1 ; >
@@ -2105,7 +2056,6 @@
     {
 
     param[base_url] = http://bja.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1923-1924 ; British Journal of Anaesthesia Volume 1 ; 1 ; >
@@ -2231,7 +2181,6 @@
     {
 
     param[base_url] = http://bjc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
@@ -2242,7 +2191,6 @@
     {
 
     param[base_url] = http://bjc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1960-1961 ; The British Journal of Criminology Volume 1 ; 1 ; >
@@ -2313,7 +2261,6 @@
     {
 
     param[base_url] = http://bjps.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
@@ -2324,7 +2271,6 @@
     {
 
     param[base_url] = http://bjps.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1950-1951 ; The British Journal for the Philosophy of Science Volume I ; I ; >
@@ -2405,7 +2351,6 @@
     {
 
     param[base_url] = http://bjsw.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
@@ -2416,7 +2361,6 @@
     {
 
     param[base_url] = http://bjsw.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1971 ; The British Journal of Social Work Volume 1 ; 1 ; >
@@ -2477,7 +2421,6 @@
     {
 
     param[base_url] = http://bmb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
@@ -2493,7 +2436,6 @@
     {
 
     param[base_url] = http://bmb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1943 ; British Medical Bulletin Volume 1 ; 1 ; >
@@ -2605,7 +2547,6 @@
     {
 
     param[base_url] = http://blms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
@@ -2616,7 +2557,6 @@
     {
 
     param[base_url] = http://blms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 ; >
@@ -2679,7 +2619,6 @@
     {
 
     param[base_url] = http://cje.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
@@ -2690,7 +2629,6 @@
     {
 
     param[base_url] = http://cje.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1977 ; Cambridge Journal of Economics Volume 1 ; 1 ; >
@@ -2745,7 +2683,6 @@
     {
 
     param[base_url] = http://cjres.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
@@ -2756,7 +2693,6 @@
     {
 
     param[base_url] = http://cjres.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
@@ -2780,7 +2716,6 @@
     {
 
     param[base_url] = http://camqtly.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
@@ -2791,7 +2726,6 @@
     {
 
     param[base_url] = http://camqtly.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1965 ; The Cambridge Quarterly Volume I ; I ; >
@@ -2852,7 +2786,6 @@
     {
 
     param[base_url] = http://cmlj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
@@ -2863,7 +2796,6 @@
     {
 
     param[base_url] = http://cmlj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < wanted ; exists ; 2006 ; Capital Markets Law Journal Volume 1 ; 1 ; >
@@ -2889,7 +2821,6 @@
     {
 
     param[base_url] = http://carcin.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
@@ -2900,7 +2831,6 @@
     {
 
     param[base_url] = http://carcin.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1980 ; Carcinogenesis Volume 1 ; 1 ; >
@@ -2952,7 +2882,6 @@
     {
 
     param[base_url] = http://cardiovascres.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
@@ -2969,7 +2898,6 @@
     {
 
     param[base_url] = http://cardiovascres.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
@@ -3080,7 +3008,6 @@
     {
 
     param[base_url] = http://cercor.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
@@ -3091,7 +3018,6 @@
     {
 
     param[base_url] = http://cercor.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1991 ; Cerebral Cortex Volume 1 ; 1 ; >
@@ -3132,7 +3058,6 @@
     {
 
     param[base_url] = http://cesifo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
@@ -3143,7 +3068,6 @@
     {
 
     param[base_url] = http://cesifo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2003 ; CESifo Economic Studies Volume 49 ; 49 ; >
@@ -3171,7 +3095,6 @@
     {
 
     param[base_url] = http://chemse.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
@@ -3182,7 +3105,6 @@
     {
 
     param[base_url] = http://chemse.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1974-1975 ; Chemical Senses Volume 1 ; 1 ; >
@@ -3238,7 +3160,6 @@
     {
 
     param[base_url] = http://chinesejil.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
@@ -3249,7 +3170,6 @@
     {
 
     param[base_url] = http://chinesejil.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2002 ; Chinese Journal of International Law Volume 1 ; 1 ; >
@@ -3279,7 +3199,6 @@
     {
 
     param[base_url] = http://cjip.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
@@ -3289,7 +3208,6 @@
     {
 
     param[base_url] = http://cjip.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006-2007 ;The Chinese Journal of International Politics Volume 1 ; 1 ; >
@@ -3312,7 +3230,6 @@
     {
 
     param[base_url] = http://cb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
@@ -3323,7 +3240,6 @@
     {
 
     param[base_url] = http://cb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1995 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 1 ; 1 ; >
@@ -3360,7 +3276,6 @@
     {
 
     param[base_url] = http://cid.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1979 ; Clinical Infectious Diseases Volume 1 ; 1 ; >
@@ -3432,7 +3347,6 @@
     {
 
     param[base_url] = http://cdj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
@@ -3443,7 +3357,6 @@
     {
 
     param[base_url] = http://cdj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1966 ; Community Development Journal Volume 1 ; 1 ; >
@@ -3509,7 +3422,6 @@
     {
 
     param[base_url] = http://comjnl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
@@ -3520,7 +3432,6 @@
     {
 
     param[base_url] = http://comjnl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1958-1959 ; The Computer Journal Volume 1 ; 1 ; >
@@ -3594,7 +3505,6 @@
     {
 
     param[base_url] = http://cww.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
@@ -3605,7 +3515,6 @@
     {
 
     param[base_url] = http://cww.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2007 ; Contemporary Women's Writing Volume 1 ; 1 ; >
@@ -3630,7 +3539,6 @@
     {
 
     param[base_url] = http://ceaccp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
@@ -3641,7 +3549,6 @@
     {
 
     param[base_url] = http://ceaccp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2001 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 1 ; 1 ; >
@@ -3672,7 +3579,6 @@
     {
 
     param[base_url] = http://cpe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
@@ -3683,7 +3589,6 @@
     {
 
     param[base_url] = http://cpe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1982 ; Contributions to Political Economy Volume 1 ; 1 ; >
@@ -3733,7 +3638,6 @@
     {
 
     param[base_url] = http://dnaresearch.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; DNA Research Volume 15 ; 15 ; >
@@ -3744,7 +3648,6 @@
     {
 
     param[base_url] = http://dnaresearch.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1994 ; DNA Research Volume 1 ; 1 ; >
@@ -3782,7 +3685,6 @@
     {
 
     param[base_url] = http://em.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Early Music Volume 36 ; 36 ; >
@@ -3793,7 +3695,6 @@
     {
 
     param[base_url] = http://em.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1973 ; Early Music Volume 1 ; 1 ; >
@@ -3852,7 +3753,6 @@
     {
 
     param[base_url] = http://ehr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1886 ; English Historical Review Volume I ; I ; >
@@ -3998,7 +3898,6 @@
     {
 
     param[base_url] = http://eltj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; ELT Journal Volume 62 ; 62 ; >
@@ -4009,7 +3908,6 @@
     {
 
     param[base_url] = http://eltj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1946-1947 ; ELT Journal Volume 1 ; 1 ; >
@@ -4094,7 +3992,6 @@
     {
 
     param[base_url] = http://es.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
@@ -4105,7 +4002,6 @@
     {
 
     param[base_url] = http://es.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
@@ -4137,7 +4033,6 @@
     {
 
     param[base_url] = http://epirev.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
@@ -4147,7 +4042,6 @@
     {
 
     param[base_url] = http://epirev.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1980 ; Epidemiologic Reviews Volume 2 ; 2 ; >
@@ -4198,7 +4092,6 @@
     {
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
@@ -4208,7 +4101,6 @@
     {
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
         
     au < manifest ; exists ; 2002 ; ESHRE Monographs Volume 2002 ; 2002 ; >
@@ -4235,7 +4127,6 @@
     {
 
     param[base_url] = http://eic.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
@@ -4246,7 +4137,6 @@
     {
 
     param[base_url] = http://eic.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1951 ; Essays in Criticism Volume I ; I ; >
@@ -4327,7 +4217,6 @@
     {
 
     param[base_url] = http://europace.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Europace Volume 10 ; 10 ; >
@@ -4338,7 +4227,6 @@
     {
 
     param[base_url] = http://europace.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; Europace Volume 1 ; 1 ; >
@@ -4371,7 +4259,6 @@
     {
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
@@ -4382,7 +4269,6 @@
     {
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1980 ; European Heart Journal Volume 1 ; 1 ; >
@@ -4434,7 +4320,6 @@
     {
 
     param[base_url] = http://eurheartjsupp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2001 ; European Heart Journal Supplements Volume 3 ; 3 ; >
@@ -4464,7 +4349,6 @@
     {
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
@@ -4475,7 +4359,6 @@
     {
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2000 ; European Journal of Echocardiography Volume 1 ; 1 ; >
@@ -4507,7 +4390,6 @@
     {
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
@@ -4518,7 +4400,6 @@
     {
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; European Journal of Heart Failure Volume 1 ; 1 ; >
@@ -4551,7 +4432,6 @@
     {
 
     param[base_url] = http://ejil.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
@@ -4562,7 +4442,6 @@
     {
 
     param[base_url] = http://ejil.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; European Journal of International Law Volume 1 ; 1 ; >
@@ -4604,7 +4483,6 @@
     {
 
     param[base_url] = http://ejo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
@@ -4615,7 +4493,6 @@
     {
 
     param[base_url] = http://ejo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < manifest ; exists ; 1979 ; European Journal of Orthodontics Volume 1 ; 1 ; >
@@ -4668,7 +4545,6 @@
     {
 
     param[base_url] = http://eurpub.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
@@ -4679,7 +4555,6 @@
     {
 
     param[base_url] = http://eurpub.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1991 ; European Journal of Public Health Volume 1 ; 1 ; >
@@ -4720,7 +4595,6 @@
     {
 
     param[base_url] = http://erae.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
@@ -4731,7 +4605,6 @@
     {
 
     param[base_url] = http://erae.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1973 ; European Review of Agricultural Economics Volume 1 ; 1 ; >
@@ -4789,7 +4662,6 @@
     {
 
     param[base_url] = http://esr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
@@ -4800,7 +4672,6 @@
     {
 
     param[base_url] = http://esr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1985 ; European Sociological Review Volume 1 ; 1 ; >
@@ -4849,7 +4720,6 @@
     {
 
     param[base_url] = http://ecam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
@@ -4860,7 +4730,6 @@
     {
 
     param[base_url] = http://ecam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < testing ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 ; 7 ; >
@@ -4881,7 +4750,6 @@
     {
 
     param[base_url] = http://fampra.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Family Practice Volume 25 ; 25 ; >
@@ -4892,7 +4760,6 @@
     {
 
     param[base_url] = http://fampra.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1984 ; Family Practice Volume 1 ; 1 ; >
@@ -4940,7 +4807,6 @@
     {
 
     param[base_url] = http://forestry.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
@@ -4951,7 +4817,6 @@
     {
 
     param[base_url] = http://forestry.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1927 ; Forestry Volume 1 ; 1 ; >
@@ -5055,7 +4920,6 @@
     {
 
     param[base_url] = http://fmls.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
@@ -5066,7 +4930,6 @@
     {
 
     param[base_url] = http://fmls.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1965 ; Forum for Modern Language Studies Volume I ; I ; >
@@ -5133,7 +4996,6 @@
     {
 
     param[base_url] = http://fh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; French History Volume 22 ; 22 ; >
@@ -5144,7 +5006,6 @@
     {
 
     param[base_url] = http://fh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1987 ; French History Volume 1 ; 1 ; >
@@ -5189,7 +5050,6 @@
     {
 
     param[base_url] = http://fs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; French Studies Volume 62 ; 62 ; >
@@ -5200,7 +5060,6 @@
     {
 
     param[base_url] = http://fs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1947 ; French Studies: A Quarterly Review Volume 1 ; 1 ; >
@@ -5284,7 +5143,6 @@
 
     {
     param[base_url] = http://fsb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
@@ -5336,7 +5194,6 @@
     {
 
     param[base_url] = http://gh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; German History Volume 26 ; 26 ; >
@@ -5347,7 +5204,6 @@
     {
 
     param[base_url] = http://gh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1984 ; German History Volume 1 ; 1 ; >
@@ -5396,7 +5252,6 @@
     {
 
     param[base_url] = http://gerontologist.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
@@ -5406,7 +5261,6 @@
     {
 
     param[base_url] = http://gerontologist.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1961 ; The Gerontologist Volume 1 ; 1 ; >
@@ -5477,7 +5331,6 @@
     {
 
     param[base_url] = http://glycob.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Glycobiology Volume 18 ; 18 ; >
@@ -5488,7 +5341,6 @@
     {
 
     param[base_url] = http://glycob.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; Glycobiology Volume 1 ; 1 ; >
@@ -5530,7 +5382,6 @@
     {
 
     param[base_url] = http://her.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Health Education Research Volume 23 ; 23 ; >
@@ -5541,7 +5392,6 @@
     {
 
     param[base_url] = http://her.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Health Education Research Volume 1 ; 1 ; >
@@ -5587,7 +5437,6 @@
     {
 
     param[base_url] = http://heapol.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
@@ -5598,7 +5447,6 @@
     {
 
     param[base_url] = http://heapol.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Health Policy and Planning Volume 1 ; 1 ; >
@@ -5644,7 +5492,6 @@
     {
 
     param[base_url] = http://heapro.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
@@ -5655,7 +5502,6 @@
     {
 
     param[base_url] = http://heapro.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Health Promotion International Volume 1 ; 1 ; >
@@ -5701,7 +5547,6 @@
     {
 
     param[base_url] = http://hwj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
@@ -5714,7 +5559,6 @@
     {
 
     param[base_url] = http://hwj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[xyz] = uh oh there is clearly an enumeration problem here
 
@@ -5800,7 +5644,6 @@
     {
 
     param[base_url] = http://hgs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
@@ -5811,7 +5654,6 @@
     {
 
     param[base_url] = http://hgs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Holocaust and Genocide Studies Volume 1 ; 1 ; >
@@ -5856,7 +5698,6 @@
     {
 
     param[base_url] = http://hmg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
@@ -5867,7 +5708,6 @@
     {
 
     param[base_url] = http://hmg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1992 ; Human Molecular Genetics Volume 1 ; 1 ; >
@@ -5907,7 +5747,6 @@
     {
 
     param[base_url] = http://humrep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
@@ -5918,7 +5757,6 @@
     {
 
     param[base_url] = http://humrep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Human Reproduction Volume 1 ; 1 ; >
@@ -5964,7 +5802,6 @@
     {
 
     param[base_url] = http://humupd.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
@@ -5975,7 +5812,6 @@
     {
 
     param[base_url] = http://humupd.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1995 ; Human Reproduction Update Volume 1 ; 1 ; >
@@ -6012,7 +5848,6 @@
     {
 
     param[base_url] = http://hrlr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
@@ -6023,7 +5858,6 @@
     {
 
     param[base_url] = http://hrlr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2001 ; Human Rights Law Review Volume 1 ; 1 ; >
@@ -6054,7 +5888,6 @@
     {
 
     param[base_url] = http://icesjms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
@@ -6065,7 +5898,6 @@
     {
 
     param[base_url] = http://icesjms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1903-1926 ; ICES Journal of Marine Science Volume s1 ; s1 ; >
@@ -6159,7 +5991,6 @@
     {
 
     param[base_url] = http://ietcom.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IEICE Transactions on Communications Volume E91-B ; E91-B ; >
@@ -6182,7 +6013,6 @@
     {
 
     param[base_url] = http://ietele.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IEICE Transactions on Electronics Volume E91-C ; E91-C ; >
@@ -6205,7 +6035,6 @@
     {
 
     param[base_url] = http://ietfec.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
@@ -6228,7 +6057,6 @@
     {
 
     param[base_url] = http://ietisy.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IEICE Transactions on Information and Systems Volume E91-D ; E91-D ; >
@@ -6249,7 +6077,6 @@
     {
 
     param[base_url] = http://imamat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
@@ -6260,7 +6087,6 @@
     {
 
     param[base_url] = http://imamat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1965 ; IMA Journal of Applied Mathematics Volume 1 ; 1 ; >
@@ -6356,7 +6182,6 @@
     {
 
     param[base_url] = http://imaman.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
@@ -6367,7 +6192,6 @@
     {
 
     param[base_url] = http://imaman.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; IMA Journal of Management Mathematics Volume 1 ; 1 ; >
@@ -6409,7 +6233,6 @@
     {
 
     param[base_url] = http://imamci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
@@ -6420,7 +6243,6 @@
     {
 
     param[base_url] = http://imamci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1984 ; IMA Journal of Mathematical Control and Information Volume 1 ; 1 ; >
@@ -6468,7 +6290,6 @@
     {
 
     param[base_url] = http://imajna.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
@@ -6479,7 +6300,6 @@
     {
 
     param[base_url] = http://imajna.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1981 ; IMA Journal of Numerical Analysis Volume 1 ; 1 ; >
@@ -6530,7 +6350,6 @@
     {
 
     param[base_url] = http://icc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
@@ -6541,7 +6360,6 @@
     {
 
     param[base_url] = http://icc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1992 ; Industrial and Corporate Change Volume 1 ; 1 ; >
@@ -6581,7 +6399,6 @@
     {
 
     param[base_url] = http://ilj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
@@ -6592,7 +6409,6 @@
     {
 
     param[base_url] = http://ilj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1972 ; Industrial Law Journal Volume 1 ; 1 ; >
@@ -6652,7 +6468,6 @@
     {
 
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
@@ -6663,7 +6478,6 @@
     {
 
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
@@ -6689,7 +6503,6 @@
     {
 
     param[base_url] = http://icb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
@@ -6700,7 +6513,6 @@
     {
 
     param[base_url] = http://icb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1961 ; Integrative and Comparative Biology Volume 1 ; 1 ; >
@@ -6770,7 +6582,6 @@
     {
 
     param[base_url] = http://isle.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
@@ -6781,7 +6592,6 @@
     {
 
     param[base_url] = http://isle.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1993 ; Interdisciplinary Studies in Literature and Environment Volume 1 ; 1 ; >
@@ -6819,7 +6629,6 @@
     {
 
     param[base_url] = http://intimm.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Immunology Volume 20 ; 20 ; >
@@ -6830,7 +6639,6 @@
     {
 
     param[base_url] = http://intimm.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; International Immunology Volume 1 ; 1 ; >
@@ -6873,7 +6681,6 @@
     {
 
     param[base_url] = http://icon.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
@@ -6884,7 +6691,6 @@
     {
 
     param[base_url] = http://icon.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2003 ; International Journal of Constitutional Law Volume 1 ; 1 ; >
@@ -6912,7 +6718,6 @@
     {
 
     param[base_url] = http://ije.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
@@ -6923,7 +6728,6 @@
     {
 
     param[base_url] = http://ije.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1972 ; International Journal of Epidemiology Volume 1 ; 1 ; >
@@ -6983,7 +6787,6 @@
     {
 
     param[base_url] = http://ijlit.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
@@ -6994,7 +6797,6 @@
     {
 
     param[base_url] = http://ijlit.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1993 ; International Journal of Law and Information Technology Volume 1 ; 1 ; >
@@ -7033,7 +6835,6 @@
     {
 
     param[base_url] = http://lawfam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
@@ -7044,7 +6845,6 @@
     {
 
     param[base_url] = http://lawfam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1987 ; International Journal of Law, Policy and the Family Volume 1 ; 1 ; >
@@ -7089,7 +6889,6 @@
     {
 
     param[base_url] = http://ijl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
@@ -7100,7 +6899,6 @@
     {
 
     param[base_url] = http://ijl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; International Journal of Lexicography Volume 1 ; 1 ; >
@@ -7144,7 +6942,6 @@
     {
 
     param[base_url] = http://ijlct.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
@@ -7155,7 +6952,6 @@
     {
 
     param[base_url] = http://ijlct.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006 ; International Journal of Low-Carbon Technologies Volume 1 ; 1 ; >
@@ -7181,7 +6977,6 @@
     {
 
     param[base_url] = http://ijpor.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
@@ -7192,7 +6987,6 @@
     {
 
     param[base_url] = http://ijpor.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; International Journal of Public Opinion Research Volume 1 ; 1 ; >
@@ -7235,7 +7029,6 @@
     {
 
     param[base_url] = http://intqhc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
@@ -7246,7 +7039,6 @@
     {
 
     param[base_url] = http://intqhc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; International Journal for Quality in Health Care Volume 1 ; 1 ; >
@@ -7289,7 +7081,6 @@
     {
 
     param[base_url] = http://ijrl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
@@ -7300,7 +7091,6 @@
     {
 
     param[base_url] = http://intqhc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; International Journal of Refugee Law Volume 1 ; 1 ; >
@@ -7343,7 +7133,6 @@
     {
 
     param[base_url] = http://ijtj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
@@ -7354,7 +7143,6 @@
     {
 
     param[base_url] = http://ijtj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < wanted ; exists ; 2007 ; International Journal of Transitional Justice Volume 1 ; 1 ; >
@@ -7379,7 +7167,6 @@
     {
 
     param[base_url] = http://imrn.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
@@ -7389,7 +7176,6 @@
     {
 
     param[base_url] = http://imrn.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1991 ; International Mathematics Research Notices Volume 1991 ; 1991 ; >
@@ -7430,7 +7216,6 @@
     {
 
     param[base_url] = http://irap.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
@@ -7441,7 +7226,6 @@
     {
 
     param[base_url] = http://irap.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2001 ; International Relations of the Asia-Pacific Volume 1 ; 1 ; >
@@ -7472,7 +7256,6 @@
     {
 
     param[base_url] = http://itnow.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; ITNOW Volume 50 ; 50 ; >
@@ -7483,7 +7266,6 @@
     {
 
     param[base_url] = http://itnow.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1995 ; ITNOW Volume 37 ; 37 ; >
@@ -7520,7 +7302,6 @@
     {
 
     param[base_url] = http://jjco.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
@@ -7531,7 +7312,6 @@
     {
 
     param[base_url] = http://jjco.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1971 ; Japanese Journal of Clinical Oncology Volume 1 ; 1 ; >
@@ -7592,7 +7372,6 @@
     {
 
     param[base_url] = http://jae.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
@@ -7603,7 +7382,6 @@
     {
 
     param[base_url] = http://jae.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1992 ; Journal of African Economies Volume 1 ; 1 ; >
@@ -7643,7 +7421,6 @@
     {
 
     param[base_url] = http://jaar.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
@@ -7654,7 +7431,6 @@
     {
 
     param[base_url] = http://jaar.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1933 ; Journal of the American Academy of Religion Volume 1 ; 1 ; >
@@ -7753,7 +7529,6 @@
     {
        
     param[base_url] = http://jah.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
       
     au < exists ; exists ; 1914 ; Journal of American History Volume 1 ; 1 ; >
@@ -7871,7 +7646,6 @@
     {
 
     param[base_url] = http://jac.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
@@ -7884,7 +7658,6 @@
     {
 
     param[base_url] = http://jac.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1975 ; Journal of Antimicrobial Chemotherapy Volume 1 ; 1 ; >
@@ -7970,7 +7743,6 @@
     {
 
     param[base_url] = http://jb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
@@ -7983,7 +7755,6 @@
     {
 
     param[base_url] = http://jb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1922 ; The Journal of Biochemistry Volume 1 ; 1 ; >
@@ -8152,7 +7923,6 @@
     {
 
     param[base_url] = http://jcs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
@@ -8162,7 +7932,6 @@
     {
 
     param[base_url] = http://jcs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1959 ; Journal of Church and State Volume 1 ; 1 ; >
@@ -8235,7 +8004,6 @@
     {
 
     param[base_url] = http://jcle.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
@@ -8246,7 +8014,6 @@
     {
 
     param[base_url] = http://jcle.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2005 ; Journal of Competition Law & Economics Volume 1 ; 1 ; >
@@ -8273,7 +8040,6 @@
     {
 
     param[base_url] = http://jcsl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
@@ -8284,7 +8050,6 @@
     {
 
     param[base_url] = http://jcsl.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1996 ; Journal of Conflict and Security Law Volume 1 ; 1 ; >
@@ -8320,7 +8085,6 @@
     {
 
     param[base_url] = http://jdsde.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
@@ -8331,7 +8095,6 @@
     {
 
     param[base_url] = http://jdsde.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1996 ; Journal of Deaf Studies and Deaf Education Volume 1 ; 1 ; >
@@ -8367,7 +8130,6 @@
     {
 
     param[base_url] = http://jdh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
@@ -8378,7 +8140,6 @@
     {
 
     param[base_url] = http://jdh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; Journal of Design History Volume 1 ; 1 ; >
@@ -8422,7 +8183,6 @@
     {
 
     param[base_url] = http://joeg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
@@ -8433,7 +8193,6 @@
     {
 
     param[base_url] = http://joeg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2001 ; Journal of Economic Geography Volume 1 ; 1 ; >
@@ -8464,7 +8223,6 @@
     {
 
     param[base_url] = http://jmicro.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
@@ -8475,7 +8233,6 @@
     {
 
     param[base_url] = http://joeg.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1953 ; Journal of Electron Microscopy Volume 1 ; 1 ; >
@@ -8555,7 +8312,6 @@
     {
 
     param[base_url] = http://jel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
@@ -8566,7 +8322,6 @@
     {
 
     param[base_url] = http://jel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; Journal of Environmental Law Volume 1 ; 1 ; >
@@ -8609,7 +8364,6 @@
     {
 
     param[base_url] = http://jxb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
@@ -8620,7 +8374,6 @@
     {
 
     param[base_url] = http://jxb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1950 ; Journal of Experimental Botany Volume 1 ; 1 ; >
@@ -8702,7 +8455,6 @@
     {
 
     param[base_url] = http://jfec.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
@@ -8713,7 +8465,6 @@
     {
 
     param[base_url] = http://jfec.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2003 ; Journal of Financial Econometrics Volume 1 ; 1 ; >
@@ -8742,7 +8493,6 @@
     {
 
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
@@ -8752,7 +8502,6 @@
     {
 
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1995 ; The Journals of Gerontology: Series A Volume 50A ; 50A ; >
@@ -8789,7 +8538,6 @@
     {
 
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
@@ -8799,7 +8547,6 @@
     {
 
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1995 ; The Journals of Gerontology: Series B Volume 50B ; 50B ; >
@@ -8836,7 +8583,6 @@
     {
 
     param[base_url] = http://jhered.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
@@ -8847,7 +8593,6 @@
     {
 
     param[base_url] = http://jhered.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1905 ; Journal of Heredity Volume os-1 ; os-1 ; >
@@ -8977,7 +8722,6 @@
     {
 
     param[base_url] = http://jhs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
@@ -8987,7 +8731,6 @@
     {
 
     param[base_url] = http://jhs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; The Journal of Hindu Studies Volume 1 ; 1 ; >
@@ -9011,7 +8754,6 @@
     {
 
     param[base_url] = http://jhc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
@@ -9022,7 +8764,6 @@
     {
 
     param[base_url] = http://jhc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; Journal of the History of Collections Volume 1 ; 1 ; >
@@ -9065,7 +8806,6 @@
     {
     
     param[base_url] = http://jhmas.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
@@ -9076,7 +8816,6 @@
     {
 
     param[base_url] = http://jhmas.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1946 ; Journal of the History of Medicine and Allied Sciences Volume 1 ; 1 ; >
@@ -9226,7 +8965,6 @@
     {
 
     param[base_url] = http://jhrp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
@@ -9236,7 +8974,6 @@
     {
 
     param[base_url] = http://jhrp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
@@ -9259,7 +8996,6 @@
     {
 
     param[base_url] = http://jicru.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2004 ; Journal of the ICRU Volume 4 ; 4 ; >
@@ -9286,7 +9022,6 @@
     {
 
     param[base_url] = http://jid.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ;  exists ; 1904 ; Journal of Infectious Diseases Volume 1-50 ; 1-50 ; >
@@ -9511,7 +9246,6 @@
     {
 
     param[base_url] = http://jiplp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
@@ -9522,7 +9256,6 @@
     {
 
     param[base_url] = http://jiplp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2005-2006 ; Journal of Intellectual Property Law & Practice Volume 1 ; 1 ; >
@@ -9548,7 +9281,6 @@
     {
 
     param[base_url] = http://jicj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
@@ -9559,7 +9291,6 @@
     {
 
     param[base_url] = http://jicj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2003 ; Journal of International Criminal Justice Volume 1 ; 1 ; >
@@ -9588,7 +9319,6 @@
     {
 
     param[base_url] = http://jiel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
@@ -9599,7 +9329,6 @@
     {
 
     param[base_url] = http://jiel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < manifest ; exists ; 1998 ; Journal of International Economic Law Volume 1 ; 1 ; >
@@ -9633,7 +9362,6 @@
     {
 
     param[base_url] = http://jis.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
@@ -9644,7 +9372,6 @@
     {
 
     param[base_url] = http://jis.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; Journal of Islamic Studies Volume 1 ; 1 ; >
@@ -9686,7 +9413,6 @@
     {
 
     param[base_url] = http://jleo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
@@ -9697,7 +9423,6 @@
     {
 
     param[base_url] = http://jleo.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1985 ; Journal of Law, Economics, and Organization Volume 1 ; 1 ; >
@@ -9744,7 +9469,6 @@
     {
 
     param[base_url] = http://logcom.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
@@ -9755,7 +9479,6 @@
     {
 
     param[base_url] = http://logcom.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990-1991 ; Journal of Logic and Computation Volume 1 ; 1 ; >
@@ -9796,7 +9519,6 @@
     {
 
     param[base_url] = http://jlms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
@@ -9809,7 +9531,6 @@
     {
 
     param[base_url] = http://jlms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1926 ; Journal of the London Mathematical Society Volume s1-1 ; s1-1 ; >
@@ -9956,7 +9677,6 @@
     {
 
     param[base_url] = http://jmp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
@@ -9967,7 +9687,6 @@
     {
 
     param[base_url] = http://jmp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1976 ; The Journal of Medicine and Philosophy Volume 1 ; 1 ; >
@@ -10023,7 +9742,6 @@
     {
 
     param[base_url] = http://jmcb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
@@ -10033,7 +9751,6 @@
     {
 
     param[base_url] = http://jmcb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
@@ -10056,7 +9773,6 @@
     {
 
     param[base_url] = http://mollus.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
@@ -10067,7 +9783,6 @@
     {
 
     param[base_url] = http://mollus.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ; >
@@ -10164,7 +9879,6 @@
     {
 
     param[base_url] = http://jnci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the National Cancer Institute Volume 100 ; 100 ; >
@@ -10175,7 +9889,6 @@
     {
 
     param[base_url] = http://jnci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; Journal of the National Cancer Institute Volume 80 ; 80 ; >
@@ -10219,7 +9932,6 @@
     {
 
     param[base_url] = http://jicru.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
@@ -10230,7 +9942,6 @@
     {
 
     param[base_url] = http://jicru.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 ; >
@@ -10258,7 +9969,6 @@
     {
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
@@ -10269,7 +9979,6 @@
     {
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1976 ; Journal of Pediatric Psychology Volume 1 ; 1 ; >
@@ -10325,7 +10034,6 @@
     {
 
     param[base_url] = http://petrology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
@@ -10336,7 +10044,6 @@
     {
 
     param[base_url] = http://petrology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1960 ; Journal of Petrology Volume 1 ; 1 ; >
@@ -10408,7 +10115,6 @@
     {
 
     param[base_url] = http://plankt.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
@@ -10419,7 +10125,6 @@
     {
 
     param[base_url] = http://plankt.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1979 ; Journal of Plankton Research Volume 1 ; 1 ; >
@@ -10472,7 +10177,6 @@
     {
 
     param[base_url] = http://jpe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
@@ -10496,7 +10200,6 @@
     {
 
     param[base_url] = http://jpart.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
@@ -10507,7 +10210,6 @@
     {
 
     param[base_url] = http://jpart.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1991 ; Journal of Public Administration Research and Theory Volume 1 ; 1 ; >
@@ -10548,7 +10250,6 @@
     {
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < manifest ; exists ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
@@ -10559,7 +10260,6 @@
     {
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1979 ; Journal of Public Health Volume 1 ; 1 ; >
@@ -10612,7 +10312,6 @@
     {
 
     param[base_url] = http://jrs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
@@ -10623,7 +10322,6 @@
     {
 
     param[base_url] = http://jrs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; Journal of Refugee Studies Volume 1 ; 1 ; >
@@ -10667,7 +10365,6 @@
     {
 
     param[base_url] = http://jos.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
@@ -10678,7 +10375,6 @@
     {
 
     param[base_url] = http://jos.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1982 ; Journal of Semantics Volume 1 ; 1 ; >
@@ -10726,7 +10422,6 @@
     {
 
     param[base_url] = http://jss.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
@@ -10737,7 +10432,6 @@
     {
 
     param[base_url] = http://jss.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1956 ; Journal of Semitic Studies Volume 1 ; 1 ; >
@@ -10814,7 +10508,6 @@
     {
 
     param[base_url] = http://jsh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
         
     au < exists ; exists ; 1967-1968 ; Journal of Social History Volume 1 ; 1 ; >
@@ -10878,7 +10571,6 @@
     {
 
     param[base_url] = http://jts.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
@@ -10889,7 +10581,6 @@
     {
 
     param[base_url] = http://jts.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ; >
@@ -11021,7 +10712,6 @@
     {
 
     param[base_url] = http://jtopol.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
@@ -11032,7 +10722,6 @@
     {
 
     param[base_url] = http://jtopol.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < wanted ; exists ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
@@ -11056,7 +10745,6 @@
     {
 
     param[base_url] = http://tropej.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
@@ -11067,7 +10755,6 @@
     {
 
     param[base_url] = http://tropej.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1955 ; Journal of Tropical Pediatrics Volume 1 ; 1 ; >
@@ -11144,7 +10831,6 @@
     {
 
     param[base_url] = http://jwelb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
@@ -11155,7 +10841,6 @@
     {
 
     param[base_url] = http://jwelb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
@@ -11179,7 +10864,6 @@
     {
 
     param[base_url] = http://lpr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
@@ -11190,7 +10874,6 @@
     {
 
     param[base_url] = http://lpr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2002 ; Law, Probability and Risk Volume 1 ; 1 ; >
@@ -11220,7 +10903,6 @@
     {
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
@@ -11231,7 +10913,6 @@
     {
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1956 ; The Leo Baeck Institute Yearbook Volume 1 ; 1 ; >
@@ -11306,7 +10987,6 @@
     {
 
     param[base_url] = http://library.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Library Volume 9 ; 9 ; >
@@ -11317,7 +10997,6 @@
     {
 
     param[base_url] = http://library.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1889 ; The Library Volume s1-1 ; s1-1 ; >
@@ -11479,7 +11158,6 @@
     {
 
     param[base_url] = http://llc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
@@ -11490,7 +11168,6 @@
     {
 
     param[base_url] = http://llc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 ; >
@@ -11536,7 +11213,6 @@
     {
 
     param[base_url] = http://litimag.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
@@ -11547,7 +11223,6 @@
     {
 
     param[base_url] = http://litimag.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; Literary Imagination Volume 1 ; 1 ; >
@@ -11580,7 +11255,6 @@
     {
 
     param[base_url] = http://litthe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
@@ -11591,7 +11265,6 @@
     {
 
     param[base_url] = http://litthe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1987 ; Literature and Theology Volume 1 ; 1 ; >
@@ -11636,7 +11309,6 @@
     {
 
     param[base_url] = http://jigpal.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < notReady ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
@@ -11647,7 +11319,6 @@
     {
 
     param[base_url] = http://jigpal.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1993 ; Logic Journal of the IGPL Volume 1 ; 1 ; >
@@ -11686,7 +11357,6 @@
     {
 
     param[base_url] = http://imammb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
@@ -11697,7 +11367,6 @@
     {
 
     param[base_url] = http://imammb.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1984 ; Mathematical Medicine and Biology Volume 1 ; 1 ; >
@@ -11745,7 +11414,6 @@
     {
 
     param[base_url] = http://medlaw.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
@@ -11756,7 +11424,6 @@
     {
 
     param[base_url] = http://medlaw.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1993 ; Medical Law Review Volume 1 ; 1 ; >
@@ -11795,7 +11462,6 @@
     {
 
     param[base_url] = http://mind.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1876 ; Mind Volume os-1 ; os-1 ; >
@@ -11951,7 +11617,6 @@
     {
 
     param[base_url] = http://molehr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
@@ -11962,7 +11627,6 @@
     {
 
     param[base_url] = http://molehr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1995 ; MHR: Basic science of reproductive medicine Volume 1 ; 1 ; >
@@ -11999,7 +11663,6 @@
     {
 
     param[base_url] = http://mj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Modern Judaism Volume 28 ; 28 ; >
@@ -12010,7 +11673,6 @@
     {
 
     param[base_url] = http://mj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1981 ; Modern Judaism Volume 1 ; 1 ; >
@@ -12061,7 +11723,6 @@
     {
 
     param[base_url] = http://mbe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
@@ -12072,7 +11733,6 @@
     {
 
     param[base_url] = http://mbe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1983-1984 ; Molecular Biology and Evolution Volume 1 ; 1 ; >
@@ -12120,7 +11780,6 @@
     {
 
     param[base_url] = http://molehr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < manifest ; exists ; 1995 ; Molecular Human Reproduction Volume 1 ; 1 ; >
@@ -12157,7 +11816,6 @@
     {
 
     param[base_url] = http://mplant.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < manifest ; exists ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
@@ -12168,7 +11826,6 @@
     {
 
     param[base_url] = http://mplant.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
@@ -12192,7 +11849,6 @@
     {
 
     param[base_url] = http://ml.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Music and Letters Volume 89 ; 89 ; >
@@ -12203,7 +11859,6 @@
     {
 
     param[base_url] = http://ml.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1920 ; Music and Letters Volume I ; I ; >
@@ -12316,7 +11971,6 @@
     {
 
     param[base_url] = http://mq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1915 ; The Musical Quarterly Volume I ; I ; >
@@ -12429,7 +12083,6 @@
     {
 
     param[base_url] = http://mutage.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
@@ -12440,7 +12093,6 @@
     {
 
     param[base_url] = http://mutage.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Mutagenesis Volume 1 ; 1 ; >
@@ -12486,7 +12138,6 @@
     {
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; NDT Plus Volume 1 ; 1 ; >
@@ -12497,7 +12148,6 @@
     {
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; NDT Plus Volume 1 ; 1 ; >
@@ -12521,7 +12171,6 @@
     {
 
     param[base_url] = http://ndt.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
@@ -12532,7 +12181,6 @@
     {
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; Nephrology Dialysis Transplantation Volume 1 ; 1 ; >
@@ -12578,7 +12226,6 @@
     {
 
     param[base_url] = http://ntr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
@@ -12589,7 +12236,6 @@
     {
 
     param[base_url] = http://ntr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; Nicotine and Tobacco Research Volume 1 ; 1 ; >
@@ -12622,7 +12268,6 @@
     {
 
     param[base_url] = http://nq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
@@ -12633,7 +12278,6 @@
     {
 
     param[base_url] = http://nq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1849-1850 ; Notes and Queries Volume s1-I ; s1-I ; >
@@ -12915,7 +12559,6 @@
     {
 
     param[base_url] = http://nar.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
@@ -12926,7 +12569,6 @@
     {
 
     param[base_url] = http://nar.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1974 ; Nucleic Acids Research Volume 1 ; 1 ; >
@@ -12985,7 +12627,6 @@
     {
 
     param[base_url] = http://nass.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
@@ -12996,7 +12637,6 @@
     {
 
     param[base_url] = http://nass.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1999 ; Nucleic Acids Symposium Series Volume 42 ; 42 ; >
@@ -13028,7 +12668,6 @@
     {
       
     param[base_url] = http://maghis.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     au < exists ; exists ; 1985 ; OAH Magazine of History Volume 1 ; 1 ; >
@@ -13075,7 +12714,6 @@
     {
 
     param[base_url] = http://occmed.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
@@ -13086,7 +12724,6 @@
     {
 
     param[base_url] = http://occmed.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1948-1949 ; Occupational Medicine Volume os-1 ; os-1 ; >
@@ -13168,7 +12805,6 @@
     {
     
     param[base_url] = http://oq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1983 ; The Opera Quarterly Volume 1 ; 1 ; >
@@ -13215,7 +12851,6 @@
     {
 
     param[base_url] = http://ohr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
@@ -13226,7 +12861,6 @@
     {
 
     param[base_url] = http://ohr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1973 ; The Oral History Review Volume 1 ; 1 ; >
@@ -13284,7 +12918,6 @@
     {
 
     param[base_url] = http://oaj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
@@ -13295,7 +12928,6 @@
     {
 
     param[base_url] = http://oaj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1978 ; Oxford Art Journa Volume 1 ; 1 ; >
@@ -13349,7 +12981,6 @@
     {
 
     param[base_url] = http://oep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
@@ -13360,7 +12991,6 @@
     {
 
     param[base_url] = http://oep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1938 ; Oxford Economic Papers Volume os-1 ; os-1 ; >
@@ -13451,7 +13081,6 @@
     {
 
     param[base_url] = http://ojls.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
@@ -13462,7 +13091,6 @@
     {
 
     param[base_url] = http://ojls.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1981 ; Oxford Journal of Legal Studies Volume 1 ; 1 ; >
@@ -13513,7 +13141,6 @@
     {
 
     param[base_url] = http://oxrep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
@@ -13524,7 +13151,6 @@
     {
 
     param[base_url] = http://oxrep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1985 ; Oxford Review of Economic Policy Volume 1 ; 1 ; >
@@ -13570,7 +13196,6 @@
     {
 
     param[base_url] = http://pa.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
@@ -13581,7 +13206,6 @@
     {
 
     param[base_url] = http://pa.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1947-1948 ; Parliamentary Affairs Volume I ; I ; >
@@ -13666,7 +13290,6 @@
     {
 
     param[base_url] = http://past.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Past & Present Volume 198 ; 198 ; >
@@ -13681,7 +13304,6 @@
     {
 
     param[base_url] = http://past.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1952 ; Past & Present Volume 1 ; 1 ; >
@@ -13912,7 +13534,6 @@
     {
 
     param[base_url] = http://philmat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
@@ -13923,7 +13544,6 @@
     {
 
     param[base_url] = http://philmat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1964 ; Philosophia Mathematica Volume s1-1 ; s1-1 ; >
@@ -13985,7 +13605,6 @@
     {
 
     param[base_url] = http://pcp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
@@ -13996,7 +13615,6 @@
     {
 
     param[base_url] = http://pcp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1959-1960 ; Plant and Cell Physiology Volume 1 ; 1 ; >
@@ -14068,7 +13686,6 @@
     {
 
     param[base_url] = http://policing.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
@@ -14079,7 +13696,6 @@
     {
 
     param[base_url] = http://policing.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < wanted ; exists ; 2007 ; Policing: A Journal of Policy and Practice Volume 1 ; 1 ; >
@@ -14104,7 +13720,6 @@
     {
 
     param[base_url] = http://pan.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Political Analysis Volume 16 ; 16 ; >
@@ -14115,7 +13730,6 @@
     {
 
     param[base_url] = http://pan.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1989 ; Political Analysis Volume 1 ; 1 ; >
@@ -14154,7 +13768,6 @@
     {
 
     param[base_url] = http://plms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
@@ -14167,7 +13780,6 @@
     {
 
     param[base_url] = http://plms.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1865 ; Proceedings of the London Mathematical Society Volume s1-1 ; s1-1 ; >
@@ -14386,7 +13998,6 @@
     {
 
     param[base_url] = http://peds.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
@@ -14397,7 +14008,6 @@
     {
 
     param[base_url] = http://peds.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986-1987 ; Protein engineering, design & selection : PEDS Volume 1 ; 1 ; >
@@ -14441,7 +14051,6 @@
     {
 
     param[base_url] = http://phe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
@@ -14452,7 +14061,6 @@
     {
 
     param[base_url] = http://phe.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
@@ -14476,7 +14084,6 @@
     {
 
     param[base_url] = http://poq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
@@ -14487,7 +14094,6 @@
     {
 
     param[base_url] = http://poq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1937 ; Public Opinion Quarterly Volume 1 ; 1 ; >
@@ -14582,7 +14188,6 @@
     {
 
     param[base_url] = http://publius.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
@@ -14593,7 +14198,6 @@
     {
 
     param[base_url] = http://publius.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1971 ; Publius: The Journal of Federalism Volume 1 ; 1 ; >
@@ -14654,7 +14258,6 @@
     {
 
     param[base_url] = http://qjmed.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
@@ -14665,7 +14268,6 @@
     {
 
     param[base_url] = http://qjmed.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1907-1908 ; QJM: An International Journal of Medicine Volume os1 ; os1 ; >
@@ -14813,7 +14415,6 @@
     {
 
     param[base_url] = http://qjmath.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
@@ -14824,7 +14425,6 @@
     {
 
     param[base_url] = http://qjmath.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1930 ; The Quarterly Journal of Mathematics Volume os-1 ; os-1 ; >
@@ -14926,7 +14526,6 @@
     {
 
     param[base_url] = http://qjmam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
@@ -14937,7 +14536,6 @@
     {
 
     param[base_url] = http://qjmam.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1948 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 1 ; 1 ; >
@@ -15021,7 +14619,6 @@
     {
 
     param[base_url] = http://rpd.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
@@ -15038,7 +14635,6 @@
     {
 
     param[base_url] = http://rpd.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1981 ; Radiation Protection Dosimetry Volume 1 ; 1 ; >
@@ -15203,7 +14799,6 @@
     {
 
     param[base_url] = http://rsq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
@@ -15214,7 +14809,6 @@
     {
 
     param[base_url] = http://rsq.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1982 ; Refugee Survey Quarterly Volume 1 ; 1 ; >
@@ -15264,7 +14858,6 @@
     {
 
     param[base_url] = http://rpc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
@@ -15275,7 +14868,6 @@
     {
 
     param[base_url] = http://rpc.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1977 ; Reports of Patent, Design and Trade Mark Cases Volume 94 ; 94 ; >
@@ -15332,7 +14924,6 @@
     {
    
     param[base_url] = http://raps.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
      
     }
@@ -15351,7 +14942,6 @@
     {
 
     param[base_url] = http://res.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1925 ; The Review of English Studies Volume os-I ; os-I ; >
@@ -15457,7 +15047,6 @@
     {
 
     param[base_url] = http://reep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
@@ -15468,7 +15057,6 @@
     {
 
     param[base_url] = http://reep.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < wanted ; exists ; 2007 ; Review of Environmental Economics and Policy Volume 1 ; 1 ; >
@@ -15492,7 +15080,6 @@
     {
 
     param[base_url] = http://rof.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Review of Finance Volume 12 ; 12 ; >
@@ -15503,7 +15090,6 @@
     {
 
     param[base_url] = http://rof.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1997 ; Review of Finance Volume 1 ; 1 ; >
@@ -15538,7 +15124,6 @@
     {
 
     param[base_url] = http://rfs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
@@ -15549,7 +15134,6 @@
     {
 
     param[base_url] = http://rfs.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; The Review of Financial Studies Volume 1 ; 1 ; >
@@ -15593,7 +15177,6 @@
     {
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Rheumatology Volume 47 ; 47 ; >
@@ -15604,7 +15187,6 @@
     {
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1952 ; Rheumatology Volume 1 ; 1 ; >
@@ -15683,7 +15265,6 @@
     {
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
@@ -15694,7 +15275,6 @@
     {
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 ; >
@@ -15751,7 +15331,6 @@
     {
 
     param[base_url] = http://screen.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Screen Volume 49 ; 49 ; >
@@ -15762,7 +15341,6 @@
     {
 
     param[base_url] = http://screen.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1969 ; Screen Volume 10 ; 10 ; >
@@ -15825,7 +15403,6 @@
     {
 
     param[base_url] = http://scan.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
@@ -15836,7 +15413,6 @@
     {
 
     param[base_url] = http://scan.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006 ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 ; >
@@ -15859,7 +15435,6 @@
     >
 
     param[base_url] = http://sf.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
     comment[new] = moving to OUP in 2011 with no content online yet
 
@@ -15879,7 +15454,6 @@
     {
 
     param[base_url] = http://shm.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
@@ -15890,7 +15464,6 @@
     {
 
     param[base_url] = http://shm.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1988 ; Social History of Medicine Volume 1 ; 1 ; >
@@ -15934,7 +15507,6 @@
     {
 
     param[base_url] = http://sp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Social Politics Volume 15 ; 15 ; >
@@ -15945,7 +15517,6 @@
     {
 
     param[base_url] = http://sp.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1994 ; Social Politics Volume 1 ; 1 ; >
@@ -15983,7 +15554,6 @@
     {
 
     param[base_url] = http://ssjj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
@@ -15994,7 +15564,6 @@
     {
 
     param[base_url] = http://ssjj.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1998 ; Social Science Japan Journal Volume 1 ; 1 ; >
@@ -16028,7 +15597,6 @@
     {
 
     param[base_url] = http://ser.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
@@ -16039,7 +15607,6 @@
     {
 
     param[base_url] = http://ser.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2003 ; Socio-Economic Review Volume 1 ; 1 ; >
@@ -16068,7 +15635,6 @@
     {
 
     param[base_url] = http://socrel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; manifest ; 2009 ; Sociology of Religion Volume 70 ; 70 ; reingest4.clockss.org:8082 >
@@ -16078,7 +15644,6 @@
     {
 
     param[base_url] = http://socrel.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1964 ; Sociology of Religion Volume 25 ; 25 ; >
@@ -16146,7 +15711,6 @@
     {
 
     param[base_url] = http://slr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
@@ -16157,7 +15721,6 @@
     {
 
     param[base_url] = http://slr.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1980 ; Statute Law Review Volume 1 ; 1 ; >
@@ -16209,7 +15772,6 @@
     {
 
     param[base_url] = http://sysbio.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
@@ -16220,7 +15782,6 @@
     {
 
     param[base_url] = http://sysbio.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1952 ; Systematic Biology Volume 1 ; 1 ; >
@@ -16300,7 +15861,6 @@
     {
 
     param[base_url] = http://teamat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
@@ -16311,7 +15871,6 @@
     {
 
     param[base_url] = http://teamat.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1982 ; Teaching Mathematics and its Applications Volume 1 ; 1 ; >
@@ -16361,7 +15920,6 @@
     {
 
     param[base_url] = http://toxsci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
@@ -16381,7 +15939,6 @@
     {
 
     param[base_url] = http://toxsci.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1981 ; Toxicological Sciences Volume 1 ; 1 ; >
@@ -16523,7 +16080,6 @@
     {
 
     param[base_url] = http://treephys.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < exists ; exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
@@ -16534,7 +16090,6 @@
     {
 
     param[base_url] = http://treephys.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1986 ; Tree Physiology Volume 1 ; 1 ; >
@@ -16585,7 +16140,6 @@
     {
 
     param[base_url] = http://tandt.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
@@ -16596,7 +16150,6 @@
     {
 
     param[base_url] = http://tandt.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1994-1995 ; Trusts & Trustees Volume 1 ; 1 ; >
@@ -16633,7 +16186,6 @@
     {
 
     param[base_url] = http://tcbh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
@@ -16644,7 +16196,6 @@
     {
 
     param[base_url] = http://tcbh.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1990 ; Twentieth Century British History Volume 1 ; 1 ; >
@@ -16686,7 +16237,6 @@
     {
 
     param[base_url] = http://wber.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
@@ -16697,7 +16247,6 @@
     {
 
     param[base_url] = http://wber.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986-1987 ; The World Bank Economic Review Volume 1 ; 1 ; >
@@ -16742,7 +16291,6 @@
     {
 
     param[base_url] = http://wbro.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
@@ -16753,7 +16301,6 @@
     {
 
     param[base_url] = http://wbro.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1986 ; The World Bank Research Observer Volume 1 ; 1 ; >
@@ -16799,7 +16346,6 @@
     {
 
     param[base_url] = http://ywcct.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
@@ -16810,7 +16356,6 @@
     {
 
     param[base_url] = http://ywcct.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1991 ; The Year's Work in Critical and Cultural Theory Volume 1 ; 1 ; >
@@ -16848,7 +16393,6 @@
     {
 
     param[base_url] = http://ywes.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePlugin
 
     au < down ; crawling ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
@@ -16858,7 +16402,6 @@
     {
 
     param[base_url] = http://ywes.oxfordjournals.org/
-    pluginPrefix = org.lockss.plugin.highwire.
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1919 ; The Year's Work in English Studies Volume 1 ; 1 ; >
