@@ -3610,10 +3610,10 @@
     param[journal_id] = jece
 
     au < manifest ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3685,7 +3685,7 @@
 
     param[journal_id] = jl
 
-    au < manifest ; Journal of Lipids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Lipids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -3785,8 +3785,8 @@
 
     param[journal_id] = jna
 
-    au < manifest ; Journal of Nucleic Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Nucleic Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Nucleic Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Nucleic Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3800,8 +3800,8 @@
 
     param[journal_id] = jnume
 
-    au < manifest ; Journal of Nutrition and Metabolism Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Nutrition and Metabolism Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Nutrition and Metabolism Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Nutrition and Metabolism Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3815,8 +3815,8 @@
 
     param[journal_id] = jobes
    
-    au < manifest ; Journal of Obesity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Obesity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Obesity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Obesity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3847,9 +3847,9 @@
 
     param[journal_id] = jop
 
-    au < manifest ; Journal of Ophthalmology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Ophthalmology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Ophthalmology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Ophthalmology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Journal of Ophthalmology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Ophthalmology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3862,8 +3862,8 @@
 
     param[journal_id] = josteo
 
-    au < manifest ; Journal of Osteoporosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Osteoporosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Osteoporosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Osteoporosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3892,7 +3892,7 @@
 
     param[journal_id] = jpath
 
-    au < manifest ; Journal of Pathogens Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Pathogens Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3906,8 +3906,8 @@
 
     param[journal_id] = jp
 
-    au < manifest ; Journal of Pregnancy Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Pregnancy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Pregnancy Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Pregnancy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3968,8 +3968,8 @@
 
     param[journal_id] = jst
 
-    au < manifest ; Journal of Signal Transduction Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Signal Transduction Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Signal Transduction Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Signal Transduction Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3983,7 +3983,7 @@
 
     param[journal_id] = jsc
 
-    au < manifest ; Journal of Skin Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Skin Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4012,8 +4012,8 @@
 
     param[journal_id] = jtr
 
-    au < manifest ; Journal of Thyroid Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Thyroid Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Thyroid Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Thyroid Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -4042,7 +4042,7 @@
 
     param[journal_id] = jtf
 
-    au < manifest ; Journal of Transfusion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Transfusion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4130,7 +4130,7 @@
 
     param[journal_id] = lrt
 
-    au < manifest ; Leukemia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Leukemia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4143,7 +4143,7 @@
 
     param[journal_id] = lci
 
-    au < testing ; Lung Cancer International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Lung Cancer International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4156,7 +4156,7 @@
 
     param[journal_id] = lymph
 
-    au < testing ; Lymphoma Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Lymphoma Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4169,8 +4169,8 @@
 
     param[journal_id] = mrt
 
-    au < testing ; Malaria Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Malaria Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Malaria Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Malaria Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4274,7 +4274,7 @@
 
     param[journal_id] = mis
 
-    au < testing ; Minimally Invasive Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Minimally Invasive Surgery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4305,8 +4305,8 @@
 
     param[journal_id] = mbi
 
-    au < testing ; Molecular Biology International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Molecular Biology International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Molecular Biology International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Molecular Biology International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4320,8 +4320,8 @@
 
     param[journal_id] = msi
 
-    au < testing ; Multiple Sclerosis International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Multiple Sclerosis International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Multiple Sclerosis International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Multiple Sclerosis International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4365,9 +4365,9 @@
 
     param[journal_id] = nri
 
-    au < testing ; Neurology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Neurology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; Neurology Research International Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; Neurology Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Neurology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Neurology Research International Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -4381,8 +4381,8 @@
 
     param[journal_id] = nrp
 
-    au < testing ; Nursing Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Nursing Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Nursing Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Nursing Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4412,10 +4412,10 @@
 
     param[journal_id] = oci
 
-    au < testing ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -4429,10 +4429,10 @@
 
     param[journal_id] = oximed
 
-    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Oxidative Medicine and Cellular Longevity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Oxidative Medicine and Cellular Longevity Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Oxidative Medicine and Cellular Longevity Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Oxidative Medicine and Cellular Longevity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Oxidative Medicine and Cellular Longevity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
