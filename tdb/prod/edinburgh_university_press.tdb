@@ -234,7 +234,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = comparative_critical_studies
     attr[journal_abbr] = ccs
     implicit < status ; year ; name ; param[volume] >
@@ -307,7 +307,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = dance_research
     attr[journal_abbr] = dar
     implicit < status ; year ; name ; param[volume] >
@@ -429,7 +429,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = episteme
     attr[journal_abbr] = epi
     implicit < status ; year ; name ; param[volume] >
@@ -472,7 +472,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = holy_land_studies
     attr[journal_abbr] = hls
     implicit < status ; year ; name ; param[volume] >
@@ -515,7 +515,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = the_innes_review
     attr[journal_abbr] = inn
     implicit < status ; year ; name ; param[volume] >
@@ -769,7 +769,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = journal_of_victorian_culture
     attr[journal_abbr] = jvc
     implicit < status ; year ; name ; param[volume] >
@@ -934,7 +934,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = paragraph
     attr[journal_abbr] = prg
     implicit < status ; year ; name ; param[volume] >
@@ -960,7 +960,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = parliamentary_history
     attr[journal_abbr] = pah
     implicit < status ; year ; name ; param[volume] >
@@ -1039,7 +1039,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = romanticism
     attr[journal_abbr] = rom
     implicit < status ; year ; name ; param[volume] >
@@ -1140,7 +1140,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = scottish_historical_review
     attr[journal_abbr] = shr
     implicit < status ; year ; name ; param[volume] >
@@ -1186,7 +1186,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = studies_in_world_christianity
     attr[journal_abbr] = swc
     implicit < status ; year ; name ; param[volume] >
@@ -1232,7 +1232,7 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
-    comment[down] = This journal no longer contributes new issues to MUSE
+    comment[platform] = This journal no longer contributes new issues to Muse
     param[journal_dir] = translation_and_literature
     attr[journal_abbr] = tal
     implicit < status ; year ; name ; param[volume] >

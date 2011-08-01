@@ -167,7 +167,9 @@
     }
   
   }
-   {
+
+  {
+
     title <
       name = Red Book Online ;
       issn = 1080-0131 ;
@@ -178,12 +180,12 @@
 
     {
 
+      comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
       pluginSuffix = ClockssHighWirePlugin
-      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
 
-      au < manifest ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
       au < manifest ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
       au < manifest ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < manifest ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
 
     }
 

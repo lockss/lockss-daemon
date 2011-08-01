@@ -152,6 +152,7 @@
     >
 
     param[base_url] = http://imaging.birjournals.org/
+    comment[0] = last published volume in 2009  
     
     au < manifest ; exists ; 1999 ; Imaging Volume 11 ; 11 >
     au < manifest ; exists ; 2000 ; Imaging Volume 12 ; 12 >
