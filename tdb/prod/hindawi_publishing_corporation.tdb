@@ -3174,8 +3174,8 @@
 
     param[journal_id] = ijvm
 
-    au < manifest ; International Journal of Vascular Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Vascular Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3221,8 +3221,8 @@
 
     param[journal_id] = jar
 
-    au < manifest ; Journal of Aging Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Aging Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Aging Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Aging Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3252,8 +3252,8 @@
 
     param[journal_id] = jaa
 
-    au < manifest ; Journal of Amino Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Amino Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Amino Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Amino Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3267,7 +3267,7 @@
 
     param[journal_id] = janth
 
-    au < manifest ; Journal of Anthropology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Anthropology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3492,9 +3492,9 @@
 
     param[journal_id] = jb
 
-    au < manifest ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3525,10 +3525,10 @@
 
     param[journal_id] = jc
 
-    au < manifest ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Combustion Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3542,10 +3542,10 @@
 
     param[journal_id] = jcnc
 
-    au < manifest ; Journal of Computer Networks and Communications Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Journal of Computer Networks and Communications Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Journal of Computer Networks and Communications Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Journal of Computer Networks and Communications Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Computer Networks and Communications Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; Journal of Computer Networks and Communications Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Journal of Computer Networks and Communications Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Journal of Computer Networks and Communications Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3595,7 +3595,7 @@
 
     param[journal_id] = jdd
 
-    au < manifest ; Journal of Drug Delivery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Drug Delivery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3609,7 +3609,7 @@
 
     param[journal_id] = jece
 
-    au < manifest ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < testing ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
     au < testing ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < testing ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < testing ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
