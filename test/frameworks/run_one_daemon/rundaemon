@@ -1,6 +1,7 @@
 #!/bin/sh
 
 TITLE_DBS=""
+HEAP_ARG=-mx512m
 
 while true ; do
   case "$1" in
@@ -26,6 +27,9 @@ while true ; do
       shift; shift; continue;;
     "-p" )
       EXTRA_PROP_URLS="${EXTRA_PROP_URLS} $2"
+      shift; shift; continue;;
+    "-heap" )
+      HEAP_ARG="$2"
       shift; shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
@@ -84,13 +88,12 @@ export CLASSPATH
 
 echo running at `date`
 #echo CLASSPATH=$CLASSPATH
-# for large caches, need to pass "-ms4m -mx64m" to java
-#java org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+
 if [ -z "$jdb" ]; then
- java -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+ java ${HEAP_ARG} $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
  echo $! >dpid
  wait `cat dpid`
  echo stopped with status $? at `date`
 else
- jdb -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
+ jdb ${HEAP_ARG} $args org.lockss.app.LockssDaemon ${PROP_ARGS}
 fi
