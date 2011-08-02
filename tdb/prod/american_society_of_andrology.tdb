@@ -15,25 +15,25 @@ Comment[urgent] = This publisher is leaving HWP Dec 2011
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.andrologyjournal.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1980 ; Journal of Andrology Volume 1 ; 1 >
-      au < testing ; 1981 ; Journal of Andrology Volume 2 ; 2 >
-      au < testing ; 1982 ; Journal of Andrology Volume 3 ; 3 >
-      au < testing ; 1983 ; Journal of Andrology Volume 4 ; 4 >
-      au < testing ; 1984 ; Journal of Andrology Volume 5 ; 5 >
-      au < testing ; 1985 ; Journal of Andrology Volume 6 ; 6 >
-      au < testing ; 1986 ; Journal of Andrology Volume 7 ; 7 >
-      au < testing ; 1987 ; Journal of Andrology Volume 8 ; 8 >
-      au < testing ; 1988 ; Journal of Andrology Volume 9 ; 9 >
-      au < testing ; 1989 ; Journal of Andrology Volume 10 ; 10 >
-      au < testing ; 1990 ; Journal of Andrology Volume 11 ; 11 >
-      au < testing ; 1991 ; Journal of Andrology Volume 12 ; 12 >
-      au < testing ; 1992 ; Journal of Andrology Volume 13 ; 13 >
-      au < testing ; 1993 ; Journal of Andrology Volume 14 ; 14 >
-      au < testing ; 1994 ; Journal of Andrology Volume 15 ; 15 >
+      au < ready ; 1980 ; Journal of Andrology Volume 1 ; 1 >
+      au < ready ; 1981 ; Journal of Andrology Volume 2 ; 2 >
+      au < ready ; 1982 ; Journal of Andrology Volume 3 ; 3 >
+      au < ready ; 1983 ; Journal of Andrology Volume 4 ; 4 >
+      au < ready ; 1984 ; Journal of Andrology Volume 5 ; 5 >
+      au < ready ; 1985 ; Journal of Andrology Volume 6 ; 6 >
+      au < ready ; 1986 ; Journal of Andrology Volume 7 ; 7 >
+      au < ready ; 1987 ; Journal of Andrology Volume 8 ; 8 >
+      au < ready ; 1988 ; Journal of Andrology Volume 9 ; 9 >
+      au < ready ; 1989 ; Journal of Andrology Volume 10 ; 10 >
+      au < ready ; 1990 ; Journal of Andrology Volume 11 ; 11 >
+      au < ready ; 1991 ; Journal of Andrology Volume 12 ; 12 >
+      au < ready ; 1992 ; Journal of Andrology Volume 13 ; 13 >
+      au < ready ; 1993 ; Journal of Andrology Volume 14 ; 14 >
+      au < ready ; 1994 ; Journal of Andrology Volume 15 ; 15 >
       au < testing ; 1995 ; Journal of Andrology Volume 16 ; 16 >
       au < testing ; 1996 ; Journal of Andrology Volume 17 ; 17 >
       au < testing ; 1997 ; Journal of Andrology Volume 18 ; 18 >

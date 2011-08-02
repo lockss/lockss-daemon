@@ -3862,8 +3862,8 @@
 
     param[journal_id] = josteo
 
-    au < testing ; Journal of Osteoporosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Osteoporosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Osteoporosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Osteoporosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3892,7 +3892,7 @@
 
     param[journal_id] = jpath
 
-    au < testing ; Journal of Pathogens Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Pathogens Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3906,8 +3906,8 @@
 
     param[journal_id] = jp
 
-    au < testing ; Journal of Pregnancy Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Pregnancy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Pregnancy Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Pregnancy Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3968,8 +3968,8 @@
 
     param[journal_id] = jst
 
-    au < testing ; Journal of Signal Transduction Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Signal Transduction Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Signal Transduction Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Signal Transduction Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3983,7 +3983,7 @@
 
     param[journal_id] = jsc
 
-    au < testing ; Journal of Skin Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Skin Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4012,8 +4012,8 @@
 
     param[journal_id] = jtr
 
-    au < testing ; Journal of Thyroid Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Thyroid Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Thyroid Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Thyroid Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -4042,7 +4042,7 @@
 
     param[journal_id] = jtf
 
-    au < testing ; Journal of Transfusion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Transfusion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4130,7 +4130,7 @@
 
     param[journal_id] = lrt
 
-    au < testing ; Leukemia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Leukemia Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4618,7 +4618,7 @@
     param[journal_id] = rerp
 
     au < ready ; Rehabilitation Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Rehabilitation Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Rehabilitation Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -5189,7 +5189,7 @@
     param[journal_id] = thromb
 
     au < ready ; Thrombosis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Thrombosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Thrombosis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
