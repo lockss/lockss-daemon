@@ -51,6 +51,20 @@
   {
 
     title <
+      name = Pace Environmental Law Review Online Companion ;
+      issn = 
+    >
+
+    comment[issn] = requested in RT ticket 3743
+    param[journal_abbr] = pelroc
+
+    au < manifest ; exists ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Pace International Law Review ;
       issn = 1553-7897
     >
@@ -80,6 +94,17 @@
     au < manifest ; exists ; 2009 ; Pace International Law Review Volume 21 ; 21 >
     au < manifest ; exists ; 2010 ; Pace International Law Review Volume 22 ; 22 >
     au < manifest ; exists ; 2011 ; Pace International Law Review Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Pace International Law Review Online Companion 
+    >
+   
+    comment[scope] = not included -- see RT ticket 3743 and roundup issue 3679
+    comment[url] = http://digitalcommons.pace.edu/pilronline/
 
   }
 
@@ -133,6 +158,7 @@
       issn = 
     >
 
+    comment[issn] = requested in RT ticket 3743
     param[journal_abbr] = pipself
 
     au < manifest ; exists ; 2011 ; Pace Law Review Volume 1 ; 1 >
