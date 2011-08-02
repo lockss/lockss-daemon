@@ -7,6 +7,16 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  
+  {
+  
+    title <
+      name = 14th Century English Mystics Newsletter ;
+      issn = 0737-5840 ;
+      issnl = 0737-5840
+    >
+    
+  }
 
   {
   
@@ -64,6 +74,17 @@
   {
   
     title <
+      name = The Eugene O'Neill Review ;
+      issn = 1040-9483 ;
+      eissn = 2161-4318 ;
+      issnl = 1040-9483 
+    >
+    
+  }
+
+  {
+  
+    title <
       name = The Good Society ;
       issn = 1089-0017 ;
       eissn = 1538-9731 ;
@@ -82,6 +103,28 @@
     au < released ; 2009 ; The Good Society Volume 18 ; 18 >
     au < manifest ; 2010 ; The Good Society Volume 19 ; 19 >
 
+  }
+  
+  {
+  
+    title <
+      name = Interdisciplinary Literary Studies ;
+      issn = 1524-8429 ;
+      eissn = 2161-427X ;
+      issnl = 1524-8429
+    >
+    
+  }
+  
+  {
+  
+    title <
+      name = Journal of Assessment & Institutional Effectiveness ;
+      issn = 2160-6765 ;
+      eissn = 2160-6757 ;
+      issnl = 2160-6757 
+    >
+    
   }
 
   {
@@ -108,6 +151,39 @@
     au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
     au < manifest ; 2010 ; The Journal of General Education Volume 59 ; 59 >
 
+  }
+
+  {
+  
+    title <
+      name = Journal of Medieval Religious Cultures ;
+      issn = 1947-6566 ;
+      eissn = 2153-9650 ;
+      issnl = 1947-6566
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Modern Periodical Studies ;
+      issn = 1947-6574 ;
+      eissn = 2152-2972 ;
+      issnl = 1947-6574
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Journal of Moravian History ;
+      issn = 1933-6632 ;
+      eissn = 2161-6310 ;
+      issnl = 1933-6632
+    >
+    
   }
 
   {
@@ -170,6 +246,27 @@
   }
 
   {
+  
+    title <
+      name = Mediterranean Studies ;
+      issn = 1074-164X ;
+      eissn = 2161-4741 ;
+      issnl = 1074-164X
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Mystics Quarterly ;
+      issn = 0742-5503 ;
+      issnl = 0742-5503
+    >
+    
+  }
+
+  {
     title <
       name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
       issn = 2153-2109 ;
@@ -214,6 +311,17 @@
   {
   
     title <
+      name = Preternature ;
+      issn = 2161-2196 ;
+      eissn = 2161-2188 ;
+      issnl = 2161-2188 
+    >
+    
+  }
+
+  {
+  
+    title <
       name = Resources for American Literary Study ;
       issn = 1529-1502 ;
       eissn = 0048-7384 ;
@@ -251,6 +359,50 @@
     au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
     au < manifest ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
 
+  }
+
+  {
+  
+    title <
+      name = Soundings ;
+      issn = 0038-1861 ;
+      eissn = 2161-6302 ;
+      issnl = 0038-1861 
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Studies in American Jewish Literature ;
+      issn = 0271-9274 ;
+      eissn = 1948-5077 ;
+      issnl = 0271-9274 
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Transportation Journal ;
+      issn = 0041-1612 ;
+      eissn = 2157-328X ;
+      issnl = 0041-1612 
+    >
+    
+  }
+
+  {
+  
+    title <
+      name = Utopian Studies ;
+      issn = 1045-991X ;
+      eissn = 2154-9648 ;
+      issnl = 1045-991X 
+    >
+    
   }
 
 }
