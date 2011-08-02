@@ -17,20 +17,20 @@
       param[base_url] = http://journal.telospress.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1998 ; Telos Volume 1998 ; 1998 >
-      au < testing ; 1999 ; Telos Volume 1999 ; 1999 >
-      au < testing ; 2000 ; Telos Volume 2000 ; 2000 >
-      au < testing ; 2001 ; Telos Volume 2001 ; 2001 >
-      au < testing ; 2002 ; Telos Volume 2002 ; 2002 >
-      au < testing ; 2003 ; Telos Volume 2003 ; 2003 >
-      au < testing ; 2004 ; Telos Volume 2004 ; 2004 >
-      au < testing ; 2005 ; Telos Volume 2005 ; 2005 >
-      au < testing ; 2006 ; Telos Volume 2006 ; 2006 >
-      au < testing ; 2007 ; Telos Volume 2007 ; 2007 >
-      au < testing ; 2008 ; Telos Volume 2008 ; 2008 >
-      au < testing ; 2009 ; Telos Volume 2009 ; 2009 >
-      au < testing ; 2010 ; Telos Volume 2010 ; 2010 >
-      au < testing ; 2011 ; Telos Volume 2011 ; 2011 >
+      au < ready ; 1998 ; Telos Volume 1998 ; 1998 >
+      au < ready ; 1999 ; Telos Volume 1999 ; 1999 >
+      au < ready ; 2000 ; Telos Volume 2000 ; 2000 >
+      au < ready ; 2001 ; Telos Volume 2001 ; 2001 >
+      au < ready ; 2002 ; Telos Volume 2002 ; 2002 >
+      au < ready ; 2003 ; Telos Volume 2003 ; 2003 >
+      au < ready ; 2004 ; Telos Volume 2004 ; 2004 >
+      au < ready ; 2005 ; Telos Volume 2005 ; 2005 >
+      au < ready ; 2006 ; Telos Volume 2006 ; 2006 >
+      au < ready ; 2007 ; Telos Volume 2007 ; 2007 >
+      au < ready ; 2008 ; Telos Volume 2008 ; 2008 >
+      au < ready ; 2009 ; Telos Volume 2009 ; 2009 >
+      au < ready ; 2010 ; Telos Volume 2010 ; 2010 >
+      au < ready ; 2011 ; Telos Volume 2011 ; 2011 >
 
     }
 
