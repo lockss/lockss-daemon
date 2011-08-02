@@ -4,6 +4,12 @@
     name = Royal Society of Medicine Press
   >
 
+  { 
+  
+    comment[0] = missing manifests requested--see roundup issue 3635
+
+  }
+
   {
   
     title <
@@ -288,10 +294,10 @@
       au < ready ; 2005 ; Health Services Management Research Volume 18 ; 18 >
       au < ready ; 2006 ; Health Services Management Research Volume 19 ; 19 >
       au < ready ; 2007 ; Health Services Management Research Volume 20 ; 20 >
-      au < testing ; 2008 ; Health Services Management Research Volume 21 ; 21 >
-      au < testing ; 2009 ; Health Services Management Research Volume 22 ; 22 >
-      au < testing ; 2010 ; Health Services Management Research Volume 23 ; 23 >
-      au < testing ; 2011 ; Health Services Management Research Volume 24 ; 24 >
+      au < ready ; 2008 ; Health Services Management Research Volume 21 ; 21 >
+      au < ready ; 2009 ; Health Services Management Research Volume 22 ; 22 >
+      au < ready ; 2010 ; Health Services Management Research Volume 23 ; 23 >
+      au < ready ; 2011 ; Health Services Management Research Volume 24 ; 24 >
 
     }
 
