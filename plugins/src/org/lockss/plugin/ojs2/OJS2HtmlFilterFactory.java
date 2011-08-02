@@ -1,10 +1,10 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.1 2010-04-10 02:00:14 thib_gc Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.2 2011-08-02 00:13:22 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,11 +47,12 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
         NodeFilter[] filters = new NodeFilter[] {
             // Some OJS sites have a tag cloud
             HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
+            // Popular location for sidebar customizations
+            HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
         };
-        OrFilter orFilter = new OrFilter(filters);
         return new HtmlFilterInputStream(in,
                                          encoding,
-                                         HtmlNodeFilterTransform.exclude(orFilter));
+                                         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     }
     
 }
