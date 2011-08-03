@@ -17,53 +17,53 @@
       param[base_url] = http://jnm.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1964 ; Journal of Nuclear Medicine Volume 5 ; 5 >
-      au < testing ; 1965 ; Journal of Nuclear Medicine Volume 6 ; 6 >
-      au < testing ; 1966 ; Journal of Nuclear Medicine Volume 7 ; 7 >
-      au < testing ; 1967 ; Journal of Nuclear Medicine Volume 8 ; 8 >
-      au < testing ; 1968 ; Journal of Nuclear Medicine Volume 9 ; 9 >
-      au < testing ; 1969 ; Journal of Nuclear Medicine Volume 10 ; 10 >
-      au < testing ; 1970 ; Journal of Nuclear Medicine Volume 11 ; 11 >
-      au < testing ; 1971 ; Journal of Nuclear Medicine Volume 12 ; 12 >
-      au < testing ; 1972 ; Journal of Nuclear Medicine Volume 13 ; 13 >
-      au < testing ; 1973 ; Journal of Nuclear Medicine Volume 14 ; 14 >
-      au < testing ; 1974 ; Journal of Nuclear Medicine Volume 15 ; 15 >
-      au < testing ; 1975 ; Journal of Nuclear Medicine Volume 16 ; 16 >
-      au < testing ; 1976 ; Journal of Nuclear Medicine Volume 17 ; 17 >
-      au < testing ; 1977 ; Journal of Nuclear Medicine Volume 18 ; 18 >
-      au < testing ; 1978 ; Journal of Nuclear Medicine Volume 19 ; 19 >
-      au < testing ; 1979 ; Journal of Nuclear Medicine Volume 20 ; 20 >
-      au < testing ; 1980 ; Journal of Nuclear Medicine Volume 21 ; 21 >
-      au < testing ; 1981 ; Journal of Nuclear Medicine Volume 22 ; 22 >
-      au < testing ; 1982 ; Journal of Nuclear Medicine Volume 23 ; 23 >
-      au < testing ; 1983 ; Journal of Nuclear Medicine Volume 24 ; 24 >
-      au < testing ; 1984 ; Journal of Nuclear Medicine Volume 25 ; 25 >
-      au < testing ; 1985 ; Journal of Nuclear Medicine Volume 26 ; 26 >
-      au < testing ; 1986 ; Journal of Nuclear Medicine Volume 27 ; 27 >
-      au < testing ; 1987 ; Journal of Nuclear Medicine Volume 28 ; 28 >
-      au < testing ; 1988 ; Journal of Nuclear Medicine Volume 29 ; 29 >
-      au < testing ; 1989 ; Journal of Nuclear Medicine Volume 30 ; 30 >
-      au < testing ; 1990 ; Journal of Nuclear Medicine Volume 31 ; 31 >
-      au < testing ; 1991 ; Journal of Nuclear Medicine Volume 32 ; 32 >
-      au < testing ; 1992 ; Journal of Nuclear Medicine Volume 33 ; 33 >
-      au < testing ; 1993 ; Journal of Nuclear Medicine Volume 34 ; 34 >
-      au < testing ; 1994 ; Journal of Nuclear Medicine Volume 35 ; 35 >
-      au < testing ; 1995 ; Journal of Nuclear Medicine Volume 36 ; 36 >
-      au < testing ; 1996 ; Journal of Nuclear Medicine Volume 37 ; 37 >
-      au < testing ; 1997 ; Journal of Nuclear Medicine Volume 38 ; 38 >
-      au < testing ; 1998 ; Journal of Nuclear Medicine Volume 39 ; 39 >
-      au < testing ; 1999 ; Journal of Nuclear Medicine Volume 40 ; 40 >
-      au < testing ; 2000 ; Journal of Nuclear Medicine Volume 41 ; 41 >
-      au < testing ; 2001 ; Journal of Nuclear Medicine Volume 42 ; 42 >
-      au < testing ; 2002 ; Journal of Nuclear Medicine Volume 43 ; 43 >
-      au < testing ; 2003 ; Journal of Nuclear Medicine Volume 44 ; 44 >
-      au < testing ; 2004 ; Journal of Nuclear Medicine Volume 45 ; 45 >
-      au < testing ; 2005 ; Journal of Nuclear Medicine Volume 46 ; 46 >
-      au < testing ; 2006 ; Journal of Nuclear Medicine Volume 47 ; 47 >
-      au < testing ; 2007 ; Journal of Nuclear Medicine Volume 48 ; 48 >
-      au < testing ; 2008 ; Journal of Nuclear Medicine Volume 49 ; 49 >
-      au < testing ; 2009 ; Journal of Nuclear Medicine Volume 50 ; 50 >
-      au < testing ; 2010 ; Journal of Nuclear Medicine Volume 51 ; 51 >
+      au < ready ; 1964 ; Journal of Nuclear Medicine Volume 5 ; 5 >
+      au < ready ; 1965 ; Journal of Nuclear Medicine Volume 6 ; 6 >
+      au < ready ; 1966 ; Journal of Nuclear Medicine Volume 7 ; 7 >
+      au < ready ; 1967 ; Journal of Nuclear Medicine Volume 8 ; 8 >
+      au < ready ; 1968 ; Journal of Nuclear Medicine Volume 9 ; 9 >
+      au < ready ; 1969 ; Journal of Nuclear Medicine Volume 10 ; 10 >
+      au < ready ; 1970 ; Journal of Nuclear Medicine Volume 11 ; 11 >
+      au < ready ; 1971 ; Journal of Nuclear Medicine Volume 12 ; 12 >
+      au < ready ; 1972 ; Journal of Nuclear Medicine Volume 13 ; 13 >
+      au < ready ; 1973 ; Journal of Nuclear Medicine Volume 14 ; 14 >
+      au < ready ; 1974 ; Journal of Nuclear Medicine Volume 15 ; 15 >
+      au < ready ; 1975 ; Journal of Nuclear Medicine Volume 16 ; 16 >
+      au < ready ; 1976 ; Journal of Nuclear Medicine Volume 17 ; 17 >
+      au < ready ; 1977 ; Journal of Nuclear Medicine Volume 18 ; 18 >
+      au < ready ; 1978 ; Journal of Nuclear Medicine Volume 19 ; 19 >
+      au < ready ; 1979 ; Journal of Nuclear Medicine Volume 20 ; 20 >
+      au < ready ; 1980 ; Journal of Nuclear Medicine Volume 21 ; 21 >
+      au < ready ; 1981 ; Journal of Nuclear Medicine Volume 22 ; 22 >
+      au < ready ; 1982 ; Journal of Nuclear Medicine Volume 23 ; 23 >
+      au < ready ; 1983 ; Journal of Nuclear Medicine Volume 24 ; 24 >
+      au < ready ; 1984 ; Journal of Nuclear Medicine Volume 25 ; 25 >
+      au < ready ; 1985 ; Journal of Nuclear Medicine Volume 26 ; 26 >
+      au < ready ; 1986 ; Journal of Nuclear Medicine Volume 27 ; 27 >
+      au < ready ; 1987 ; Journal of Nuclear Medicine Volume 28 ; 28 >
+      au < ready ; 1988 ; Journal of Nuclear Medicine Volume 29 ; 29 >
+      au < ready ; 1989 ; Journal of Nuclear Medicine Volume 30 ; 30 >
+      au < ready ; 1990 ; Journal of Nuclear Medicine Volume 31 ; 31 >
+      au < ready ; 1991 ; Journal of Nuclear Medicine Volume 32 ; 32 >
+      au < ready ; 1992 ; Journal of Nuclear Medicine Volume 33 ; 33 >
+      au < ready ; 1993 ; Journal of Nuclear Medicine Volume 34 ; 34 >
+      au < ready ; 1994 ; Journal of Nuclear Medicine Volume 35 ; 35 >
+      au < ready ; 1995 ; Journal of Nuclear Medicine Volume 36 ; 36 >
+      au < ready ; 1996 ; Journal of Nuclear Medicine Volume 37 ; 37 >
+      au < ready ; 1997 ; Journal of Nuclear Medicine Volume 38 ; 38 >
+      au < ready ; 1998 ; Journal of Nuclear Medicine Volume 39 ; 39 >
+      au < ready ; 1999 ; Journal of Nuclear Medicine Volume 40 ; 40 >
+      au < ready ; 2000 ; Journal of Nuclear Medicine Volume 41 ; 41 >
+      au < ready ; 2001 ; Journal of Nuclear Medicine Volume 42 ; 42 >
+      au < ready ; 2002 ; Journal of Nuclear Medicine Volume 43 ; 43 >
+      au < ready ; 2003 ; Journal of Nuclear Medicine Volume 44 ; 44 >
+      au < ready ; 2004 ; Journal of Nuclear Medicine Volume 45 ; 45 >
+      au < ready ; 2005 ; Journal of Nuclear Medicine Volume 46 ; 46 >
+      au < ready ; 2006 ; Journal of Nuclear Medicine Volume 47 ; 47 >
+      au < ready ; 2007 ; Journal of Nuclear Medicine Volume 48 ; 48 >
+      au < ready ; 2008 ; Journal of Nuclear Medicine Volume 49 ; 49 >
+      au < ready ; 2009 ; Journal of Nuclear Medicine Volume 50 ; 50 >
+      au < ready ; 2010 ; Journal of Nuclear Medicine Volume 51 ; 51 >
       au < ready ; 2011 ; Journal of Nuclear Medicine Volume 52 ; 52 >
 
     }
@@ -83,7 +83,9 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://tech.snmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[tech] = fetch errors 37-39
+      comment[37] = found a login page
+      comment[38] = found a login page
+      comment[39] = no permission
 
       au < ready ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
       au < ready ; 1998 ; Journal of Nuclear Medicine Technology Volume 26 ; 26 >
