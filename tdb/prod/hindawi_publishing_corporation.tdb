@@ -3143,7 +3143,7 @@
     param[journal_id] = ijso
 
     au < manifest ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Surgical Oncology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Surgical Oncology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3174,8 +3174,8 @@
 
     param[journal_id] = ijvm
 
-    au < testing ; International Journal of Vascular Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Vascular Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Vascular Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3221,8 +3221,8 @@
 
     param[journal_id] = jar
 
-    au < testing ; Journal of Aging Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Aging Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Aging Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Aging Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3252,8 +3252,8 @@
 
     param[journal_id] = jaa
 
-    au < testing ; Journal of Amino Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Amino Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Amino Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Amino Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3267,7 +3267,7 @@
 
     param[journal_id] = janth
 
-    au < testing ; Journal of Anthropology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Anthropology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3492,8 +3492,8 @@
 
     param[journal_id] = jb
 
-    au < testing ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -3525,10 +3525,10 @@
 
     param[journal_id] = jc
 
-    au < testing ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Combustion Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3542,10 +3542,10 @@
 
     param[journal_id] = jcnc
 
-    au < testing ; Journal of Computer Networks and Communications Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Computer Networks and Communications Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Computer Networks and Communications Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Computer Networks and Communications Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Computer Networks and Communications Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Journal of Computer Networks and Communications Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Computer Networks and Communications Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Computer Networks and Communications Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3595,7 +3595,7 @@
 
     param[journal_id] = jdd
 
-    au < testing ; Journal of Drug Delivery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Drug Delivery Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3609,11 +3609,11 @@
 
     param[journal_id] = jece
 
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3685,7 +3685,7 @@
 
     param[journal_id] = jl
 
-    au < testing ; Journal of Lipids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Lipids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -3785,8 +3785,8 @@
 
     param[journal_id] = jna
 
-    au < testing ; Journal of Nucleic Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Nucleic Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Nucleic Acids Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Nucleic Acids Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3800,8 +3800,8 @@
 
     param[journal_id] = jnume
 
-    au < testing ; Journal of Nutrition and Metabolism Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Nutrition and Metabolism Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Nutrition and Metabolism Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Nutrition and Metabolism Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -3815,8 +3815,8 @@
 
     param[journal_id] = jobes
    
-    au < testing ; Journal of Obesity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Obesity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Obesity Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Obesity Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3847,9 +3847,9 @@
 
     param[journal_id] = jop
 
-    au < testing ; Journal of Ophthalmology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Journal of Ophthalmology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Ophthalmology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Ophthalmology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Journal of Ophthalmology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Journal of Ophthalmology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
