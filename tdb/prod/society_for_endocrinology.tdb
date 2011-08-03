@@ -16,8 +16,8 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://erc.endocrinology-journals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[erc17] = Found a login page
-      comment[erc18] = Daemon doesn't see permission statement on manifest page
+      comment[erc17] = found a login page
+      comment[erc18] = no permission 
 
       au < ready ; 1994 ; Endocrine-Related Cancer Volume 1 ; 1 >
       au < ready ; 1995 ; Endocrine-Related Cancer Volume 2 ; 2 >
@@ -283,8 +283,8 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jme.endocrinology-journals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[jme45] = Found a login page
-      comment[jme46] = Daemon doesn't see permission statement on manifest page
+      comment[jme45] = found a login page
+      comment[jme46] = no permission 
 
       au < ready ; 1988 ; Journal of Molecular Endocrinology Volume 1 ; 1 >
       au < ready ; 1989 ; Journal of Molecular Endocrinology Volume 2 ; 2 >
