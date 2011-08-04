@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.6 2011-06-11 21:47:47 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.7 2011-08-04 19:06:42 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.6 2011-06-11 21:47:47 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.7 2011-08-04 19:06:42 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -224,6 +224,62 @@ public class TestTdbAu extends LockssTestCase {
     assertTrue(au.includesVolume("Mathematics"));
     assertFalse(au.includesVolume("G"));
     assertFalse(au.includesVolume("Mbone"));
+  }
+  
+  /**
+   * Test issue operations
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIssues() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getIssue());
+    assertNull(au.getStartIssue());
+    assertNull(au.getEndIssue());
+    
+    // test single arabic  number
+    au.setParam("issue", "1971");
+    assertEquals("1971", au.getIssue());
+    assertEquals("1971", au.getStartIssue());
+    assertEquals("1971", au.getEndIssue());
+    assertTrue(au.includesIssue("1971"));
+    assertFalse(au.includesIssue("1970"));
+    assertFalse(au.includesIssue("1979"));
+
+    // test arabic number range
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("issue", "1971-1977");
+    assertEquals("1971-1977", au.getIssue());
+    assertEquals("1971", au.getStartIssue());
+    assertEquals("1977", au.getEndIssue());
+    assertTrue(au.includesIssue("1971"));
+    assertTrue(au.includesIssue("1975"));
+    assertFalse(au.includesIssue("1970"));
+    assertFalse(au.includesIssue("1979"));
+
+    // test interchangeability of arabic and roman numbers
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("issue", "MCMLXXI-1977");
+    assertEquals("MCMLXXI-1977", au.getIssue());
+    assertEquals("MCMLXXI", au.getStartIssue());
+    assertEquals("1977", au.getEndIssue());
+    assertTrue(au.includesIssue("MCMLXXVII"));
+    assertTrue(au.includesIssue("MCMLXXV"));
+    assertFalse(au.includesIssue("MCMLXX"));
+    assertFalse(au.includesIssue("1979"));
+
+    // test volume ranges as "topic ranges"
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("issue", "Ge-Ma");
+    assertEquals("Ge-Ma", au.getIssue());
+    assertEquals("Ge", au.getStartIssue());
+    assertEquals("Ma", au.getEndIssue());
+    assertTrue(au.includesIssue("Ge"));
+    assertTrue(au.includesIssue("Georgia"));
+    assertTrue(au.includesIssue("M"));
+    assertTrue(au.includesIssue("Ma"));
+    assertTrue(au.includesIssue("Mathematics"));
+    assertFalse(au.includesIssue("G"));
+    assertFalse(au.includesIssue("Mbone"));
   }
   
   /**
