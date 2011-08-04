@@ -18,7 +18,7 @@
       issnl = 1743-6753 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -48,7 +48,7 @@
       issnl = 0002-6980 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -127,7 +127,7 @@
       issnl = 0003-4983 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -159,7 +159,7 @@
       issnl = 0272-4936 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -191,7 +191,7 @@
       issnl = 0371-7453 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -223,7 +223,7 @@
       issnl = 1741-6124 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -252,7 +252,7 @@
       issnl = 0967-9782 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -278,7 +278,7 @@
       issn = 0007-0599 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -302,7 +302,7 @@
       issn = 0309-7765 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -334,7 +334,7 @@
       issnl = 1474-8932 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -366,7 +366,7 @@
       issnl = 1758-8960 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -391,7 +391,7 @@
       issnl = 1752-7260 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -417,7 +417,7 @@
       issnl = 0307-0131 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -473,7 +473,7 @@
       issnl = 0008-4433
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -545,7 +545,7 @@
       issnl = 0008-7041 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -615,7 +615,7 @@
       issnl = 1479-0963 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -644,7 +644,7 @@
       eissn = 1754-7628
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -678,7 +678,7 @@
       issnl = 1477-5700 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -708,7 +708,7 @@
       issnl = 1024-5294 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -739,7 +739,7 @@
       issnl = 1350-5033 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -772,7 +772,7 @@
       issnl = 1478-422X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -803,7 +803,7 @@
       issnl = 0590-8876 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -869,7 +869,7 @@
       issnl = 1464-3154
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -904,7 +904,7 @@
       issnl = 1478-7318 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -940,7 +940,7 @@
       issnl = 0361-2112 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -962,7 +962,7 @@
       issnl = 0309-6564 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -986,7 +986,7 @@
       issnl = 1529-9104 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1024,7 +1024,7 @@
       issnl = 1748-9237 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1049,7 +1049,7 @@
       issnl = 1461-4103 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1085,7 +1085,7 @@
       issnl = 1041-2573 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1129,7 +1129,7 @@
       issnl = 1463-1180 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1155,7 +1155,7 @@
       issnl = 0430-8778 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1179,7 +1179,7 @@
       issnl = 1934-8908 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1205,7 +1205,7 @@
       issnl = 1024-5332 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1237,7 +1237,7 @@
       issnl = 1468-2737 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1270,7 +1270,7 @@
       issnl = 1756-7505 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1293,7 +1293,7 @@
       issnl = 1368-2199 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1323,7 +1323,7 @@
       issnl = 0309-0728 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1376,7 +1376,7 @@
       issnl = 0308-0188 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1434,7 +1434,7 @@
       issnl = 1749-5148 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1461,7 +1461,7 @@
       issnl = 1758-1206 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1486,7 +1486,7 @@
       issnl = 1364-0461 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1516,7 +1516,7 @@
       issnl = 0950-6608 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1563,7 +1563,7 @@
       issnl = 0367-9020 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1589,7 +1589,7 @@
       issnl = 0308-4590  
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1615,7 +1615,7 @@
       eissn = 1753-6154
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1640,7 +1640,7 @@
       eissn = 2042-6453
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1664,7 +1664,7 @@
       eissn = 1743-2812
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1698,7 +1698,7 @@
       eissn = 1559-0909
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1721,7 +1721,7 @@
       eissn = 1748-6181
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1807,7 +1807,7 @@
       eissn = 1748-619X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1858,7 +1858,7 @@
       eissn = 1743-2820
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1889,7 +1889,7 @@
       eissn = 1750-1687
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1915,7 +1915,7 @@
       eissn = 1753-8076
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1940,7 +1940,7 @@
       eissn = 1574-0781
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -1966,7 +1966,7 @@
       eissn = 2042-4582
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2022,7 +2022,7 @@
       eissn = 2046-0236
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2077,7 +2077,7 @@
       eissn = 1753-304X
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2102,7 +2102,7 @@
       eissn = 2042-6186
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2194,7 +2194,7 @@
       issn = 1079-0268 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2216,7 +2216,7 @@
       issnl = 0068-1288 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2268,7 +2268,7 @@
       issnl = 0144-2600 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2297,7 +2297,7 @@
       issnl = 0020-3203 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2322,7 +2322,7 @@
       issnl = 0952-4142 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2345,7 +2345,7 @@
       issnl = 0961-5652 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2373,7 +2373,7 @@
       issnl = 1759-7536 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2397,7 +2397,7 @@
       issnl = 0075-8914 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2459,7 +2459,7 @@
       issn = 0024-2306 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2485,7 +2485,7 @@
       issnl = 1758-3489 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2510,7 +2510,7 @@
       issnl = 0305-8034 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2567,7 +2567,7 @@
       issnl = 1432-8917 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2595,7 +2595,7 @@
       issnl = 0267-0836 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2645,7 +2645,7 @@
       issnl = 1066-7857 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2673,7 +2673,7 @@
       issnl = 0076-6097 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2705,7 +2705,7 @@
       issnl = 1366-0691 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2729,7 +2729,7 @@
       issn = 0306-3453 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2767,7 +2767,7 @@
       issn = 0076-6690 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2805,7 +2805,7 @@
       issnl = 0047-729X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2862,7 +2862,7 @@
       issnl = 0371-9553 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2896,7 +2896,7 @@
       issnl = 0147-037X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2953,7 +2953,7 @@
       issnl = 1474-9009 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -2987,7 +2987,7 @@
       issnl = 0027-7738 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3012,7 +3012,7 @@
       issnl = 0161-6412 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3045,7 +3045,7 @@
       issnl = 0078-172X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3114,7 +3114,7 @@
       issnl = 1028-415X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3146,7 +3146,7 @@
       issnl = 0078-7191 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3207,7 +3207,7 @@
       issnl = 1746-5095 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3237,7 +3237,7 @@
       issnl = 0169-1112 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3267,7 +3267,7 @@
       issnl = 0031-0328 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3296,7 +3296,7 @@
       issnl = 0957-4190 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3321,7 +3321,7 @@
       issnl = 1757-0921 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3345,7 +3345,7 @@
       issnl = 1083-3196 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3383,7 +3383,7 @@
       issnl = 1465-8011 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3418,7 +3418,7 @@
       issnl = 0079-4236 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3446,7 +3446,7 @@
       issnl = 0032-5899 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3481,7 +3481,7 @@
       issnl = 0969-9260 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3512,7 +3512,7 @@
       issnl = 1465-5187 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3543,7 +3543,7 @@
       issnl = 0959-3683 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3570,7 +3570,7 @@
       issnl = 1351-0002 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3605,7 +3605,7 @@
       issnl = 0263-9904 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3655,7 +3655,7 @@
       issnl = 1362-1718 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3693,7 +3693,7 @@
       issnl = 1361-7427 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3747,7 +3747,7 @@
       issnl = 1361-7427 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3785,7 +3785,7 @@
       issnl = 0267-0844 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3820,7 +3820,7 @@
       issnl = 0039-6265 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3884,7 +3884,7 @@
       issnl = 0737-5034 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3934,7 +3934,7 @@
       issnl = 0334-4355 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -3994,7 +3994,7 @@
       issnl = 0082-2884 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4058,7 +4058,7 @@
       issnl = 0040-4969 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4121,7 +4121,7 @@
       issnl = 0020-2967 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4150,7 +4150,7 @@
       issnl = 0372-0187 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4174,7 +4174,7 @@
       issnl = 1751-5831 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4199,7 +4199,7 @@
       issn = 1521-5385 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4227,7 +4227,7 @@
       issnl = 1742-271X 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4256,7 +4256,7 @@
       issnl = 1757-8949 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4279,7 +4279,7 @@
       issnl = 0305-5477 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4341,7 +4341,7 @@
       issnl = 0729-2473 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -4390,7 +4390,7 @@
       issn = 0084-4276 
     >
 
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
