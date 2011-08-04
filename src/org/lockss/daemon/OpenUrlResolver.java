@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.16 2011-06-27 23:28:36 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.17 2011-08-04 17:34:41 pgust Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class OpenUrlResolver {
   private static final String[] auJournalauFeatures = {
     "au_feature_urls/au_issue",
     "au_issue_url",
-    "au_features_urls/au_volume",
+    "au_feature_urls/au_volume",
     "au_volume_url",
     "au_start_url",
     "au_feature_urls/au_title",
@@ -1064,9 +1064,8 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume", volumeName);
   	  paramMap.setMapElement("volume_str",volumeName);
   	  paramMap.setMapElement("volume_name", volumeName);
-  	  paramMap.setMapElement("year", year);
       if (!StringUtil.isNullString(year)) {
-        log.critical("Year = " + year);
+        paramMap.setMapElement("year", year);
         paramMap.setMapElement("au_short_year",
           String.format("%02d", NumberUtil.parseInt(year)%100));
       }
@@ -1142,8 +1141,8 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume", volumeName);
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
-      paramMap.setMapElement("year", year);
       if (!StringUtil.isNullString(year)) {
+        paramMap.setMapElement("year", year);
         paramMap.setMapElement("au_short_year",
           String.format("%02d", NumberUtil.parseInt(year)%100));
       }
