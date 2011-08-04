@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.8 2011-06-11 21:47:47 pgust Exp $
+ * $Id: TdbAu.java,v 1.9 2011-08-04 18:28:47 pgust Exp $
  */
 
 /*
@@ -484,6 +484,31 @@ public class TdbAu {
    */
   public String getJournalTitle() {
     return (title != null) ? title.getName() : null;
+  }
+
+  /**
+   * Get the start issue for this AU.
+   * @return the start issue or <code>null</code> if not specified
+   */
+  public String getStartIssue() {
+    return getRangeStart(getIssue());
+  }
+
+  /**
+   * Get the end issue for this AU.
+   * @return the end issue or <code>null</code> if not specified
+   */
+  public String getEndIssue() {
+    return getRangeEnd(getIssue());
+  }
+
+  /**
+   * Determine whether issues(s) for this AU include a given issue.
+   * @param anIssue an issue
+   * @return <code>true</code> if this AU includes the issue
+   */
+  public boolean includesIssue(String anIssue) {
+    return rangeIncludes(getIssue(), anIssue);
   }
 
   /**
