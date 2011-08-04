@@ -2501,7 +2501,7 @@
     param[journal_id] = ijfm
 
     au < manifest ; International Journal of Family Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Family Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Family Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2516,10 +2516,10 @@
 
     param[journal_id] = ijfr
 
-    au < manifest ; International Journal of Forestry Research Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Forestry Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Forestry Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Forestry Research Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; International Journal of Forestry Research Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Forestry Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Forestry Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Forestry Research Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2532,8 +2532,8 @@
 
     param[journal_id] = ijhep
 
-    au < manifest ; International Journal of Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Hepatology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; International Journal of Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Hepatology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
   }
 
   {
@@ -2545,8 +2545,8 @@
 
     param[journal_id] = ijht
 
-    au < manifest ; International Journal of Hypertension Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Hypertension Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Hypertension Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Hypertension Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2575,8 +2575,8 @@
 
     param[journal_id] = iji
 
-    au < manifest ; International Journal of Inflammation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Inflammation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Inflammation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Inflammation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2590,10 +2590,10 @@
 
     param[journal_id] = ijic
 
-    au < manifest ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2607,7 +2607,7 @@
 
     param[journal_id] = ijmc
 
-    au < manifest ; International Journal of Medicinal Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Medicinal Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2709,7 +2709,7 @@
 
     param[journal_id] = ijmi
 
-    au < manifest ; International Journal of Molecular Imaging Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Molecular Imaging Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -2739,9 +2739,9 @@
 
     param[journal_id] = ijn
 
-    au < manifest ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -2939,7 +2939,7 @@
 
     param[journal_id] = ijpr
 
-    au < manifest ; International Journal of Population Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Population Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2953,8 +2953,8 @@
 
     param[journal_id] = ijpro
 
-    au < manifest ; International Journal of Proteomics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Proteomics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Proteomics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Proteomics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3104,31 +3104,31 @@
 
     param[journal_id] = ijsa
 
-    au < manifest ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
+    au < testing ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < testing ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < testing ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < testing ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < testing ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < testing ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < testing ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < testing ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < testing ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < testing ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < testing ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < testing ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < testing ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < testing ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < testing ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
 
@@ -3142,7 +3142,7 @@
 
     param[journal_id] = ijso
 
-    au < manifest ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Surgical Oncology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
