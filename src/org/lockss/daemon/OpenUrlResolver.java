@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.17 2011-08-04 17:34:41 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.18 2011-08-04 19:00:23 pgust Exp $
  */
 
 /*
@@ -948,13 +948,13 @@ public class OpenUrlResolver {
     if (tdbau != null) {
       if (found) {
     	if (year == null) {
-    	  year = tdbau.getYear();
+    	  year = tdbau.getStartYear();
     	}
     	if (volume == null) {
-    	  volume = tdbau.getVolume();
+    	  volume = tdbau.getStartVolume();
     	}
     	if (issue == null) {
-    	  issue  = tdbau.getIssue();
+    	  issue  = tdbau.getStartIssue();
     	}
       }
   	  url = getJournalUrl(tdbau, year, volume, issue);
@@ -1066,8 +1066,13 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume_name", volumeName);
       if (!StringUtil.isNullString(year)) {
         paramMap.setMapElement("year", year);
-        paramMap.setMapElement("au_short_year",
-          String.format("%02d", NumberUtil.parseInt(year)%100));
+        try {
+          paramMap.setMapElement("au_short_year",
+              String.format("%02d", NumberUtil.parseInt(year)%100));
+        } catch (NumberFormatException ex) {
+          log.info(  "Error parsing year '" + year 
+                   + "' as an int -- not setting au_short_year");
+        }
       }
   	  paramMap.setMapElement("edition", edition);
   	  // auFeatureKey selects feature from a map of values
@@ -1143,8 +1148,13 @@ public class OpenUrlResolver {
       paramMap.setMapElement("volume_name", volumeName);
       if (!StringUtil.isNullString(year)) {
         paramMap.setMapElement("year", year);
-        paramMap.setMapElement("au_short_year",
-          String.format("%02d", NumberUtil.parseInt(year)%100));
+        try {
+          paramMap.setMapElement("au_short_year",
+              String.format("%02d", NumberUtil.parseInt(year)%100));
+        } catch (NumberFormatException ex) {
+          log.info("Error parsing year '" + year
+                   + "' as an integer -- not setting au_short_year");
+        }
       }
       paramMap.setMapElement("issue", issue);
       // AU_FEATURE_KEY selects feature from a map of values
