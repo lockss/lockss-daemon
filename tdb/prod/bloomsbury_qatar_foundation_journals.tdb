@@ -3,90 +3,107 @@
   publisher <
     name = Bloomsbury Qatar Foundation Journals
   >
-  
+
+  rights = openaccess  
+  comment[platform] = Atypon -- RT ticket 3556
+  plugin = needs.plugin
+  param[base_url] = http://www.qscience.com/
   implicit < status ; year ; name ; param[volume_name] >
   
-  param[base_url] = http://www.qscience.com/
-  
   {
+  
     title <
       name = Aswan Heart Centre: Science and Practice Series ;
       eissn = 2220-2730
     >
     
     param[journal_dir] = ahcsps
+ 
+    au < exists ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
   
   }
 
   {
+  
     title <
       name = Avicenna ;
       eissn = 2220-2749
     >
     
     param[journal_dir] = avi
+
+    au < exists ; 2010 ; Avicenna Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Avicenna Volume 2011 ; 2011 >    
     
   }
 
   {
+  
     title <
       name = Contemporary Islamic Studies ;
       eissn = 2220-2757
     >
     
     param[journal_dir] = cis
+
+    au < exists ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >  
     
   }
 
   {
+  
     title <
       name = Near and Middle Eastern Journal of Research in Education ;
       eissn = 1703-1958
     >
     
     param[journal_dir] = nmejre
+
+    au < exists ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
+    au < exists ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
+    au < exists ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
     
   }
 
   {
+  
     title <
       name = Perspectives in International Librarianship ;
       eissn = 2219-8962
     >
     
     param[journal_dir] = pil
+
+    au < exists ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
+    au < exists ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >  
     
   }
 
   {
+  
     title <
       name = Qatar Foundation Annual Research Forum Proceedings ;
       eissn = 2220-251X
     >
     
     param[journal_dir] = qfarf
+
+    au < exists ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
     
   }
 
   {
-    title <
-      name = QScience Connect ;
-      eissn = 2223-506X
-    >
-    
-    param[journal_dir] = ji_connect
-    comment[0] = no content yet
-    comment[journal_dir] = ? from http://www.qscience.com/page/ji_connect
-    
-  }
-
-  {
+  
     title <
       name = Sustainable Technologies, Systems and Policies ;
       eissn = 2220-2765
     >
     
     param[journal_dir] = stsp
+
+    au < exists ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
     
   }
 
