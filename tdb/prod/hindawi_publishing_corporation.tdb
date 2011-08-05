@@ -1287,7 +1287,7 @@
 
     param[journal_id] = crirad
 
-    au < manifest ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1343,7 +1343,7 @@
 
     param[journal_id] = critran
 
-    au < manifest ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1357,7 +1357,7 @@
 
     param[journal_id] = criu
 
-    au < manifest ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1385,7 +1385,7 @@
 
     param[journal_id] = crivm
 
-    au < manifest ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1399,8 +1399,8 @@
 
     param[journal_id] = chrp
 
-    au < manifest ; Chemotherapy Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Chemotherapy Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Chemotherapy Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Chemotherapy Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -1414,7 +1414,7 @@
 
     param[journal_id] = cdr
 
-    au < manifest ; Child Development Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Child Development Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -1428,8 +1428,8 @@
 
     param[journal_id] = chol
 
-    au < manifest ; Cholesterol Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Cholesterol Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Cholesterol Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Cholesterol Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -1442,7 +1442,7 @@
 
     param[journal_id] = cri
 
-    au < manifest ; Chromatography Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Chromatography Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1511,23 +1511,23 @@
 
     param[journal_id] = cmmm
 
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 ; 1997 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 ; 1998 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 1 (1999) ; 1999 ; 1 ; 1999 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2 (1999) ; 1999 ; 2 ; 1999 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2 (2000) ; 2000 ; 2 ; 2000 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 3 (2000) ; 2000 ; 3 ; 2000 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 ; 2001 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 ; 2002 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 ; 2003 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 ; 2005 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 ; 2006 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 ; 2007 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 ; 2008 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 ; 2009 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 ; 2010 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Computational and Mathematical Methods in Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 ; 1997 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 ; 1998 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 1 (1999) ; 1999 ; 1 ; 1999 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 2 (1999) ; 1999 ; 2 ; 1999 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 2 (2000) ; 2000 ; 2 ; 2000 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 3 (2000) ; 2000 ; 3 ; 2000 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 ; 2001 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 ; 2002 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 ; 2003 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 ; 2005 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 ; 2006 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 ; 2007 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 ; 2008 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 ; 2009 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 ; 2010 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Computational and Mathematical Methods in Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
   }
   
@@ -1559,9 +1559,9 @@
 
     param[journal_id] = ccrp
 
-    au < manifest ; Critical Care Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Critical Care Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Critical Care Research and Practice Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; Critical Care Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Critical Care Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Critical Care Research and Practice Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -1592,8 +1592,8 @@
 
     param[journal_id] = drt
 
-    au < manifest ; Depression Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Depression Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Depression Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Depression Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1607,9 +1607,9 @@
 
     param[journal_id] = drp
 
-    au < manifest ; Dermatology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Dermatology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Dermatology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Dermatology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; Dermatology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Dermatology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -1696,8 +1696,8 @@
 
     param[journal_id] = econ
 
-    au < manifest ; Economics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Economics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Economics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Economics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -1711,7 +1711,7 @@
 
     param[journal_id] = edu
 
-    au < manifest ; Education Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Education Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1725,8 +1725,8 @@
 
     param[journal_id] = emi
 
-    au < manifest ; Emergency Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Emergency Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Emergency Medicine International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Emergency Medicine International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -1739,8 +1739,8 @@
 
     param[journal_id] = er
 
-    au < manifest ; Enzyme Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Enzyme Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Enzyme Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Enzyme Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -1754,7 +1754,7 @@
 
     param[journal_id] = eri
 
-    au < manifest ; Epidemiology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Epidemiology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1768,9 +1768,9 @@
 
     param[journal_id] = ert
 
-    au < manifest ; Epilepsy Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Epilepsy Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Epilepsy Research and Treatment Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; Epilepsy Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Epilepsy Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Epilepsy Research and Treatment Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -1784,15 +1784,15 @@
 
     param[journal_id] = ecam
 
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 ; 2004 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 ; 2005 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 ; 2006 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 ; 2007 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 ; 2008 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 ; 2009 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 ; 2010 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Evidence-Based Complementary and Alternative Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 ; 2004 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 ; 2005 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 ; 2006 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 ; 2007 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 ; 2008 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 ; 2009 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 ; 2010 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Evidence-Based Complementary and Alternative Medicine Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
         
   }
 
@@ -2003,7 +2003,7 @@
 
     param[journal_id] = gri
 
-    au < manifest ; Genetics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Genetics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2017,7 +2017,7 @@
 
     param[journal_id] = hrt
 
-    au < manifest ; Headache Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Headache Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2031,8 +2031,8 @@
 
     param[journal_id] = heprt
 
-    au < manifest ; Hepatitis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Hepatitis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Hepatitis Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Hepatitis Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2123,8 +2123,8 @@
 
     param[journal_id] = irt
 
-    au < manifest ; Influenza Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Influenza Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Influenza Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; Influenza Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -2171,9 +2171,9 @@
 
     param[journal_id] = ijad
 
-    au < manifest ; International Journal of Alzheimer's Disease Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Alzheimer's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Alzheimer's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Alzheimer's Disease Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Alzheimer's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Alzheimer's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2220,7 +2220,7 @@
 
     param[journal_id] = ijbc
 
-    au < manifest ; International Journal of Breast Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Breast Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2416,13 +2416,13 @@
 
     param[journal_id] = ijdsn
 
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; 2005 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; 2006 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; 2007 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; 2008 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Distributed Sensor Networks Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; 2005 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; 2006 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; 2007 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; 2008 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Distributed Sensor Networks Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
 
@@ -2436,12 +2436,12 @@
 
     param[journal_id] = ijeco
 
-    au < manifest ; International Journal of Ecology Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < manifest ; International Journal of Ecology Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; International Journal of Ecology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Ecology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Ecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Ecology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; International Journal of Ecology Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < testing ; International Journal of Ecology Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; International Journal of Ecology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Ecology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Ecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Ecology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
 
@@ -2454,8 +2454,8 @@
 
     param[journal_id] = ijelc
 
-    au < manifest ; International Journal of Electrochemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < manifest ; International Journal of Electrochemistry Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < testing ; International Journal of Electrochemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Electrochemistry Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -2484,9 +2484,9 @@
 
     param[journal_id] = ijeb
 
-    au < manifest ; International Journal of Evolutionary Biology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Evolutionary Biology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; International Journal of Evolutionary Biology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Evolutionary Biology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Evolutionary Biology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Evolutionary Biology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -2500,8 +2500,8 @@
 
     param[journal_id] = ijfm
 
-    au < manifest ; International Journal of Family Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Family Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Family Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Family Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2516,10 +2516,10 @@
 
     param[journal_id] = ijfr
 
-    au < testing ; International Journal of Forestry Research Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Forestry Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Forestry Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Forestry Research Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; International Journal of Forestry Research Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Forestry Research Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Forestry Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Forestry Research Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2532,8 +2532,8 @@
 
     param[journal_id] = ijhep
 
-    au < testing ; International Journal of Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Hepatology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; International Journal of Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Hepatology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
   }
 
   {
@@ -2545,8 +2545,8 @@
 
     param[journal_id] = ijht
 
-    au < testing ; International Journal of Hypertension Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Hypertension Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Hypertension Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Hypertension Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2575,8 +2575,8 @@
 
     param[journal_id] = iji
 
-    au < testing ; International Journal of Inflammation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Inflammation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Inflammation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Inflammation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2590,10 +2590,10 @@
 
     param[journal_id] = ijic
 
-    au < testing ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2607,7 +2607,7 @@
 
     param[journal_id] = ijmc
 
-    au < testing ; International Journal of Medicinal Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Medicinal Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2709,7 +2709,7 @@
 
     param[journal_id] = ijmi
 
-    au < testing ; International Journal of Molecular Imaging Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Molecular Imaging Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -2739,9 +2739,9 @@
 
     param[journal_id] = ijn
 
-    au < testing ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
   
@@ -2939,7 +2939,7 @@
 
     param[journal_id] = ijpr
 
-    au < testing ; International Journal of Population Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Population Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2953,8 +2953,8 @@
 
     param[journal_id] = ijpro
 
-    au < testing ; International Journal of Proteomics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Proteomics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Proteomics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Proteomics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -3104,31 +3104,31 @@
 
     param[journal_id] = ijsa
 
-    au < testing ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
-    au < testing ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < testing ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < testing ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < testing ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < testing ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < testing ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < testing ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < testing ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < testing ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < testing ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < testing ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < testing ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < testing ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < testing ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < testing ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
+    au < ready ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < ready ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < ready ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < ready ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < ready ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < ready ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < ready ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < ready ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < ready ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < ready ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < ready ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < ready ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < ready ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < ready ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
 
