@@ -24,6 +24,66 @@
   {
 
     title <
+      name = Advances in Economic Analysis & Policy ;
+      issn = 1538-0637
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap/advances
+    comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
+
+    au < manifest ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
+
+  }
+
+  {
+
+    title <
+      name = Advances in Macroeconomics ;
+      issn = 1534-6013
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm/advances
+    comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
+
+    au < manifest ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
+
+  }
+
+  {
+
+    title <
+      name = Advances in Theoretical Economics ;
+      issn = 1534-5963
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte/advances
+    comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
+
+    au < manifest ; exists ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
+
+  }
+
+  {
+
+    title <
       name = Asia-Pacific Journal of Risk and Insurance ;
       eissn = 2153-3792
     >
@@ -103,15 +163,21 @@
 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejeap
-    comment[bejeap1] = majority of articles published 2001-2002, frontiers articles published 2005 
-    comment[bejeap2] = 2002-2003, 2006
+    comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
+    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    comment[bejeap1] = duplicate of 1538-0629 volume 1
+    comment[bejeap2] = manifest page has no links
+    comment[bejeap3] = duplicate of 1538-0645 volume 3
+    comment[bejeap4] = duplicate of 1538-0645 volume 4
+    comment[bejeap5] = duplicate of 1538-0645 volume 5
+    comment[bejeap6] = duplicate of 1538-0653 volume 6
 
-    au < crawling ; exists ; 2001-2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
-    au < crawling ; exists ; 2002-2006 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
-    au < crawling ; exists ; 2003-2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
-    au < crawling ; exists ; 2004-2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
-    au < crawling ; exists ; 2005-2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2000 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
     au < crawling ; exists ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
@@ -131,15 +197,15 @@
 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejm
-    comment[bejm1] = 2001, 2004 
-    comment[bejm2] = 2002, 2006
+    comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
+    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
 
-    au < crawling ; exists ; 2001-2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
-    au < crawling ; exists ; 2002-2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
-    au < crawling ; exists ; 2003 ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
-    au < crawling ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
-    au < crawling ; exists ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 2003 ; The B.E. Journal of Macroeconomics Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Macroeconomics Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Macroeconomics Volume 5 ; 5 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Macroeconomics Volume 6 ; 6 >
     au < crawling ; exists ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 7 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
@@ -159,14 +225,15 @@
 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejte
-    comment[bejte1] = manifest page missing links
+    comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
+    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
 
-    au < crawling ; exists ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
-    au < crawling ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
-    au < crawling ; exists ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
-    au < crawling ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
-    au < crawling ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
+    au < doNotProcess ; exists ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
+    au < doNotProcess ; exists ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
+    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
+    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
     au < crawling ; exists ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
@@ -260,6 +327,66 @@
   {
 
     title <
+      name = Contributions to Economic Analysis & Policy ;
+      issn = 1538-0645       
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap/contributions
+    comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
+    comment[year] = vol 1 website label is 2001 but articles are dated 2002
+
+    au < manifest ; exists ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 >    
+    au < manifest ; exists ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 >    
+    au < manifest ; exists ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 >    
+
+  }
+
+  {
+
+    title <
+      name = Contributions to Macroeconomics ;
+      issn = 1534-6005       
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm/contributions
+    comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
+
+    au < manifest ; exists ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 >    
+    au < manifest ; exists ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 >    
+    au < manifest ; exists ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 > 
+
+  }
+
+  {
+
+    title <
+      name = Contributions to Theoretical Economics ;
+      issn = 1534-5971       
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte/contributions
+    comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
+
+    au < manifest ; exists ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
+    au < manifest ; exists ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
+    au < manifest ; exists ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
+
+  }
+
+  {
+
+    title <
       name = The Economists' Voice ;
       eissn = 1553-3832
     >
@@ -337,6 +464,54 @@
     au < released ; crawling ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
     au < released ; crawling ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
     au < manifest ; exists ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Economic Analysis & Policy ;
+      issn = 1538-0629      
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap/frontiers
+    comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
+
+    au < manifest ; exists ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >    
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Macroeconomics ;
+      issn = 1534-6021      
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm/frontiers
+    comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
+
+    au < manifest ; exists ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Frontiers of Theoretical Economics ;
+      issn = 1534-5955      
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte/frontiers
+    comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
+    comment[year] = vol 1 website label is 2001 but article is dated 2002
+    
+    au < manifest ; exists ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 >
 
   }
 
@@ -1307,6 +1482,66 @@
     au < released ; crawling ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Theoretical Inquiries in Law Volume 11 ; 11 >
     au < manifest ; exists ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Topics in Economic Analysis & Policy ;
+      issn = 1538-0653
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejeap/topics
+    comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
+
+    au < manifest ; exists ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 >    
+
+  }
+
+  {
+
+    title <
+      name = Topics in Macroeconomics ;
+      issn = 1534-5998
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejm/topics
+    comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
+
+    au < manifest ; exists ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 >    
+
+  }
+
+  {
+
+    title <
+      name = Topics in Theoretical Economics ;
+      issn = 1534-598X
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = bejte/topics
+    comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
+
+    au < manifest ; exists ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 >    
 
   }
 
