@@ -19,7 +19,7 @@
 
     param[journal_issn] = 2043-6254
 
-    au < manifest ; exists ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 > 
+    au < testing ; exists ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 > 
     au < manifest ; exists ; 2011 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 2 ; 2 > 
 
   }
@@ -83,7 +83,7 @@
     
     param[journal_issn] = 1758-5082
 
-    au < manifest ; exists ; 2009 ; Biofabrication Volume 1 ; 1 > 
+    au < testing ; exists ; 2009 ; Biofabrication Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; Biofabrication Volume 2 ; 2 > 
     au < manifest ; exists ; 2011 ; Biofabrication Volume 3 ; 3 > 
 
@@ -3473,7 +3473,7 @@
 
     param[journal_issn] = 1475-4878
 
-    au < exists ; exists ; 1899 ; Transactions of the Optical Society Volume 1 ; 1  > 
+    au < manifest ; exists ; 1899 ; Transactions of the Optical Society Volume 1 ; 1  > 
     au < exists ; exists ; 1900 ; Transactions of the Optical Society Volume 2 ; 2  > 
     au < exists ; exists ; 1901 ; Transactions of the Optical Society Volume 3 ; 3  > 
     au < exists ; exists ; 1902 ; Transactions of the Optical Society Volume 4 ; 4  > 
