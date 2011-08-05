@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.18 2011-08-04 19:00:23 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.19 2011-08-05 23:48:08 pgust Exp $
  */
 
 /*
@@ -131,10 +131,12 @@ public class OpenUrlResolver {
   private static final int MAX_REDIRECTS = 10;
   
   /**
-   * Keys to search for a matching journal feature. The order of the keys is 
-   * the order they will be tried, from issue, to volume, to title TOC.
+   * Keys to search for a matching journal feature. The order of the keys 
+   * is the order they will be tried, from article, to issue, to volume, 
+   * to title TOC.
    */
   private static final String[] auJournalauFeatures = {
+    "au_feature_urls/au_article",
     "au_feature_urls/au_issue",
     "au_issue_url",
     "au_feature_urls/au_volume",
@@ -385,7 +387,8 @@ public class OpenUrlResolver {
 
         // search titles with no ISBN or ISSN identifier 
         for (TdbTitle tdbTitle : notitles) {
-          String url = resolveJournalFromTdbTitle(tdbTitle,date,volume,issue);
+          String url = 
+            resolveJournalFromTdbTitle(tdbTitle,date,volume,issue, spage);
           if (url != null) {
             if (log.isDebug3()) log.debug3("Located url " + url +
                       ", title \"" + tdbTitle.getName() + "\"" +
@@ -748,7 +751,7 @@ public class OpenUrlResolver {
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
       } else {
-    	url = resolveJournalFromTdbTitle(title, date, volume, issue);
+    	url = resolveJournalFromTdbTitle(title, date, volume, issue, spage);
       }
     }
     return url;
@@ -902,10 +905,11 @@ public class OpenUrlResolver {
    * @param date the publication date
    * @param volume the volume
    * @param issue the issue
+   * @param spage the start page or article number
    * @return the article URL
    */
   private String resolveJournalFromTdbTitle(
-    TdbTitle tdbTitle, String date, String volume, String issue) {
+    TdbTitle tdbTitle, String date, String volume, String issue, String spage) {
     TdbAu tdbau = null;
     boolean found = false;
     
@@ -957,7 +961,7 @@ public class OpenUrlResolver {
     	  issue  = tdbau.getStartIssue();
     	}
       }
-  	  url = getJournalUrl(tdbau, year, volume, issue);
+  	  url = getJournalUrl(tdbau, year, volume, issue, spage);
     }
     return url;
   }
@@ -1128,10 +1132,11 @@ public class OpenUrlResolver {
    * @param year the year
    * @param volumeName the volume name
    * @param issue the issue
+   * @param spage the start page or article number
    * @return the starting URL
    */
   private String getJournalUrl(
-	  TdbAu tdbau, String year, String volumeName, String issue) {
+	  TdbAu tdbau, String year, String volumeName, String issue, String spage) {
     PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
@@ -1157,6 +1162,7 @@ public class OpenUrlResolver {
         }
       }
       paramMap.setMapElement("issue", issue);
+      paramMap.setMapElement("article", spage);
       // AU_FEATURE_KEY selects feature from a map of values
       // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement(AU_FEATURE_KEY, tdbau.getAttr(AU_FEATURE_KEY));
