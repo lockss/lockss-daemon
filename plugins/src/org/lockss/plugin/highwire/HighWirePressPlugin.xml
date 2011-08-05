@@ -46,6 +46,23 @@
     <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%slockss-manifest/vol_%s_manifest.dtl&quot;, base_url, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%scontent/vol%s/issue%s/&quot;, base_url, volume_name, issue</string>
+	  </entry>
+  	</map>
+  </entry>    
+  <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
   </entry>
