@@ -18,9 +18,9 @@
 
     param[base_url] = http://dmd.aspetjournals.org/
 
-    au < HighWireStrVolPlugin ; released ; 2005 ; Drug Metabolism and Disposition Volume 33 ; 33 >
-    au < HighWireStrVolPlugin ; released ; 2006 ; Drug Metabolism and Disposition Volume 34 ; 34 >
-    au < HighWireStrVolPlugin ; released ; 2007 ; Drug Metabolism and Disposition Volume 35 ; 35 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Drug Metabolism and Disposition Volume 33 ; 33 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Drug Metabolism and Disposition Volume 34 ; 34 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Drug Metabolism and Disposition Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Drug Metabolism and Disposition Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Drug Metabolism and Disposition Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Drug Metabolism and Disposition Volume 38 ; 38 >
@@ -99,11 +99,11 @@
 
     param[base_url] = http://molpharm.aspetjournals.org/
 
-    au < HighWireStrVolPlugin ; released ; 2005 ; Molecular Pharmacology Volume 67 ; 67 >
-    au < HighWireStrVolPlugin ; released ; 2005 ; Molecular Pharmacology Volume 68 ; 68 >
-    au < HighWireStrVolPlugin ; released ; 2006 ; Molecular Pharmacology Volume 69 ; 69 >
-    au < HighWireStrVolPlugin ; released ; 2006 ; Molecular Pharmacology Volume 70 ; 70 >
-    au < HighWireStrVolPlugin ; released ; 2007 ; Molecular Pharmacology Volume 71 ; 71 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Molecular Pharmacology Volume 67 ; 67 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Molecular Pharmacology Volume 68 ; 68 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Molecular Pharmacology Volume 69 ; 69 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Molecular Pharmacology Volume 70 ; 70 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Molecular Pharmacology Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Molecular Pharmacology Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Pharmacology Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Molecular Pharmacology Volume 74 ; 74 >
