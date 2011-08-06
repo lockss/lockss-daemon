@@ -1133,7 +1133,7 @@
 
     param[journal_id] = crin
 
-    au < manifest ; Case Reports in Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1147,7 +1147,7 @@
 
     param[journal_id] = crinm
 
-    au < manifest ; Case Reports in Neurological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Neurological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1161,7 +1161,7 @@
 
     param[journal_id] = criog
 
-    au < manifest ; Case Reports in Obstetrics and Gynecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Obstetrics and Gynecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1175,7 +1175,7 @@
 
     param[journal_id] = crionc
 
-    au < manifest ; Case Reports in Oncological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Oncological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1259,7 +1259,7 @@
 
     param[journal_id] = crip
 
-    au < manifest ; Case Reports in Psychiatry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Case Reports in Psychiatry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1287,7 +1287,7 @@
 
     param[journal_id] = crirad
 
-    au < testing ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1343,7 +1343,7 @@
 
     param[journal_id] = critran
 
-    au < testing ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1357,7 +1357,7 @@
 
     param[journal_id] = criu
 
-    au < testing ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1385,7 +1385,7 @@
 
     param[journal_id] = crivm
 
-    au < testing ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1399,8 +1399,8 @@
 
     param[journal_id] = chrp
 
-    au < testing ; Chemotherapy Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Chemotherapy Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Chemotherapy Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Chemotherapy Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -1414,7 +1414,7 @@
 
     param[journal_id] = cdr
 
-    au < testing ; Child Development Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Child Development Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -1428,8 +1428,8 @@
 
     param[journal_id] = chol
 
-    au < testing ; Cholesterol Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Cholesterol Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Cholesterol Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Cholesterol Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -1442,7 +1442,7 @@
 
     param[journal_id] = cri
 
-    au < testing ; Chromatography Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Chromatography Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1592,8 +1592,8 @@
 
     param[journal_id] = drt
 
-    au < testing ; Depression Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Depression Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Depression Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Depression Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3120,14 +3120,14 @@
     au < ready ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
     au < ready ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
     au < ready ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < testing ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
     au < ready ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
     au < ready ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < ready ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
