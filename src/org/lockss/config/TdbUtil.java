@@ -1,15 +1,16 @@
 package org.lockss.config;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.Vector;
+import java.util.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuHealthMetric;
+import org.lockss.plugin.AuOrderComparator;
+import org.lockss.plugin.AuHealthMetric.HealthMetric;
+import org.lockss.plugin.AuHealthMetric.PreservationStatus;
+import org.lockss.state.AuState;
+import org.lockss.state.SubstanceChecker;
 
 /**
  * Static utility methods for getting lists of Tdb entities. Sometimes the process of retrieving a list 
@@ -23,13 +24,22 @@ import org.lockss.plugin.ArchivalUnit;
  * <p>
  * Currently TdbAu objects are returned as Collections, but it might be more useful to return 
  * (ordered) Lists. 
- * 
+ * <p>
+ * Caching should be implemented for the lists of TdbTitles where possible. 
  * 
  * @author Neil Mayo
  *
  */
 public class TdbUtil {
   
+  /**
+   * The minimum health an ArchivalUnit must have in order to be included in
+   * the list of preserved AUs. If a unit's health falls below this value, it
+   * will not be included and that may result in a coverage gap within a range 
+   * of AUs.
+   */
+  public static final float DEFAULT_HEALTH_INCLUSION_THRESHOLD = .8f;
+
   /**
    * Get the Tdb record from the current configuration.
    * 
@@ -44,13 +54,13 @@ public class TdbUtil {
    * @param scope
    * @return
    */
-  public static int getTdbTitleCount(ContentScope scope) {
+  /*public static int getTdbTitleCount(ContentScope scope) {
     // If we just want the total available count, use the tdb method
     if (scope==ContentScope.ALL) return getTdb().getTdbTitleCount();
     // Otherwise we have to actually create a list of titles and count them, 
     // which is not very efficient  
     return getTdbTitles(scope).size();
-  }
+  }*/
   
   /**
    * Get the TdbTitle with which an AU is associated.
@@ -108,8 +118,14 @@ public class TdbUtil {
   }
   
   /**
-   * Retrieve a collection of all the TdbTitles available within a specified scope.
-   * If the scope is null then all titles available are returned.
+   * Retrieve a collection of all the TdbTitles available within a specified 
+   * scope. If the scope is null then all titles available are returned.  
+   * In the case of CONFIGURED or PRESERVED scopes, any title from which an AU 
+   * is configured or preserved respectively, gets included. This does not 
+   * suggest that the whole title is configured or preserved.
+   * <p>
+   * The list does not account for coverage gaps either; there may be more 
+   * than one range for each title.
    * 
    * @param scope the scope of content over which to get titles
    * @return a collection of TdbTitles representing titles in the requested scope
@@ -126,7 +142,60 @@ public class TdbUtil {
       return getAllTdbTitles();
     }
   }
+
+  /**
+   * Retrieve a collection of all the ArchivalUnits available within a specified 
+   * scope. If the scope is null or ALL, an empty collection is returned as we 
+   * cannot guarantee that any AUs are available unless they are configured.
+   * Perhaps we should throw something like an OperationNotSupported exception.
+   *  
+   * @param scope the scope of content over which to get titles
+   * @return a collection of ArchivalUnits, empty if the scope requested was not box-specific
+   */
+  public static Collection<ArchivalUnit> getAus(ContentScope scope) {
+    if (scope==null) return Collections.emptyList();
+    switch(scope) {
+    case CONFIGURED: 
+      return getConfiguredAus();
+    case PRESERVED: 
+      return getPreservedAus();
+    case ALL: 
+    default: 
+      return Collections.emptyList();
+    }
+  }
+  
+  /**
+   * Count the number of TdbTitles available in the given scope.  
+   * Note that it is necessary to get a list of AUs and construct from it a set 
+   * of all the titles covered by those AUs. This is quite an expensive 
+   * operation and is performed by {@link getTdbTitles()}, on whose result 
+   * size() is called. The same caveats apply as for getTdbTitles(), regarding the
+   * interpretation of the number for CONFIGURED or PRESERVED scopes.
+   * 
+   * @param scope the ContentScope in which to count titles
+   * @return the number of TdbTitles which have at least one AU in the given scope
+   */
+  public static int getNumberTdbTitles(ContentScope scope) {
+    return getTdbTitles(scope).size();
+  }
  
+  /**
+   * Get ArchivalUnit records for all the AUs which are available for preservation.
+   * At the moment the only way I am aware of to do this is to get all the TdbAus
+   * and then get their associated ArchivalUnits, which is expensive.
+   * 
+   * @return a collection of ArchivalUnit objects
+   */
+  /*public static Collection<ArchivalUnit> getAllAus() {
+    Collection<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
+    for (TdbAu tdbau : getAllTdbAus()) {
+      ArchivalUnit au;
+      aus.add(au);
+    }
+    return aus;
+  }*/
+
   /**
    * Get ArchivalUnit records for all the AUs which are configured in this LOCKSS box.
    * 
@@ -138,13 +207,20 @@ public class TdbUtil {
 
   /**
    * Get ArchivalUnit records for all the AUs which are preserved in this LOCKSS box.
-   * 
-   * NOT IMPLEMENTED; RETURNS EMPTY LIST
+   * This relies on the PreservationStatus enum class to provide an interpretation
+   * of the ArchivalUnit's status.  
    * 
    * @return a collection of ArchivalUnit objects
    */
   public static Collection<ArchivalUnit> getPreservedAus() {
-    return Collections.emptyList();
+    List<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
+    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    for (ArchivalUnit au : getConfiguredAus()) {
+      PreservationStatus ps = PreservationStatus.interpret(AuHealthMetric.getHealthMetrics(au));
+      //System.out.format("Checking AU health %s >= %s\n", ps.health, DEFAULT_HEALTH_INCLUSION_THRESHOLD);
+      if (ps.health >= DEFAULT_HEALTH_INCLUSION_THRESHOLD) aus.add(au);
+    }
+    return aus;
   }
 
 
@@ -160,7 +236,8 @@ public class TdbUtil {
 
   /**
    * Get records for all the TdbAus actually preserved in this box. An AU should 
-   * appear in this list iff it is configured for collection and has been collected.
+   * appear in this list iff it is configured for collection, has been collected,
+   * and has a health above the threshold.
    * 
    * @return a list of TdbAu objects
    */
@@ -170,8 +247,7 @@ public class TdbUtil {
 
   /**
    * Get a list of all titles from which at least one AU is configured to be archived locally 
-   * on this LOCKSS box. Note that this currently has to iterate through the entire list of AUs
-   * in order to establish the titles containing those AUs.
+   * on this LOCKSS box.
    * 
    * @return a collection of TdbTitle objects
    */
@@ -207,6 +283,28 @@ public class TdbUtil {
   }
   
   /**
+   * Go through the ArchivalUnits and group them under titles.
+   * @param units
+   * @return
+   */
+  public static Map<TdbTitle, List<ArchivalUnit>> mapTitlesToAus(Collection<ArchivalUnit> units) {
+    if (units==null) return Collections.emptyMap();
+    Map<TdbTitle, List<ArchivalUnit>> tdbTitles = new HashMap<TdbTitle, List<ArchivalUnit>>();
+    // Add each AU to a list for its title
+    for (final ArchivalUnit unit : units) {
+      TdbAu au = getTdbAu(unit);
+      if (au!=null) {
+	TdbTitle title = au.getTdbTitle();
+	if (tdbTitles.containsKey(title)) tdbTitles.get(title).add(unit);
+	else tdbTitles.put(title, new ArrayList<ArchivalUnit>(){{add(unit);}}); 
+      }
+    }
+    // Order each list
+    for (List<ArchivalUnit> list : tdbTitles.values()) Collections.sort(list, new AuOrderComparator());
+    return tdbTitles; 
+  }
+
+  /**
    * Get a collection of TdbAus which correspond to the the supplied ArchivalUnits. Note
    * that if an ArchivalUnit has no TitleConfig, there will be no corresponding TdbAu 
    * in the returned collection, and so it may differ in size to the argument.
@@ -225,16 +323,16 @@ public class TdbUtil {
 
   
   /** 
-   * An enum represnting the various scopes which can be requested and returned for the 
+   * An enum representing the various scopes which can be requested and returned for the 
    * contents of a LOCKSS box. 
    */
   public static enum ContentScope {
     /** Everything available according to the TDB files. */
-    ALL ("Available"),
+    ALL ("Available", false),
     /** Everything configured for collection. */
-    CONFIGURED ("Configured"),
+    CONFIGURED ("Configured", true),
     /** Everything preserved/collected and available in the LOCKSS box. */
-    PRESERVED ("Collected")
+    PRESERVED ("Collected", true)
     ;
     
     /** The default fallback scope. */
@@ -243,12 +341,24 @@ public class TdbUtil {
     /** A label for describing the scope in the UI. */
     public String label;
     
+    /** 
+     * A flag indicating whether this scope has ArchivalUnits. Only scopes
+     * which involve items being configured on the LOCKSS box can provide AUs. 
+     * For example, the list of all content is independent of whether anything 
+     * is preserved on the box, and ArchivalUnits will not be available for 
+     * unconfigured items.
+     * <p> 
+     * It is not possible to get from a TdbAu to an ArchivalUnit.
+     */
+    public boolean areAusAvailable;
+    
     /**
      * Create a scope option 
      * @param label the public label for the scope option
      */
-    ContentScope(String label) {
+    ContentScope(String label, boolean hasAus) {
       this.label = label;
+      this.areAusAvailable = hasAus;
     }
     
     /**

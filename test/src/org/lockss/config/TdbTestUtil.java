@@ -100,7 +100,16 @@ public class TdbTestUtil {
     return tdb;
   }
   
-
+  /**
+   * Create a simple title with no TdbAus, using the given id.
+   * @param id
+   * @return
+   * @throws TdbException
+   */
+  public static TdbTitle makeTitleWithNoAus(String id) throws TdbException {
+    return new TdbTitle("TdbTitle", id);
+  }
+    
   /**
    * Create and fill a title with ranged AUs, and add it to the supplied publisher.
    * Contains 1 title with 3 AUs, which should split into 2 title ranges for KBART.

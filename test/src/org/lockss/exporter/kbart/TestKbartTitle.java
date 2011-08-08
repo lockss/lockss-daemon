@@ -50,12 +50,12 @@ public class TestKbartTitle extends LockssTestCase {
   }
 
   /**
-   * Make a clone and check that it equal but not identical. 
+   * Make a clone and check that it is equal but not identical. 
    */
   public final void testClone() {
     KbartTitle clone = testTitle.clone();
     // The clone should have all the same values but be a different object
-    assertNotEquals(testTitle, clone);
+    assertEquals(testTitle, clone);
     assertNotSame(testTitle, clone);
     for (Field f : Field.values()) {
       assertEquals("Clone differs on "+f.getLabel(), testTitle.getField(f), clone.getField(f)); 

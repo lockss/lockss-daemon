@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.7 2011-03-18 16:34:10 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.8 2011-08-08 11:43:35 easyonthemayo Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -227,6 +228,9 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     }};
   }
 
+  /* (non-Javadoc)
+   * @see java.lang.Object#equals(java.lang.Object)
+   */
   @Override
    public int compareTo(KbartTitle o) {
     String thisName = getField(Field.PUBLICATION_TITLE);
@@ -234,6 +238,43 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     return thisName.compareTo(thatName); 
   }
 
+
+  /**
+   * Another KbartTitle equals() this one if the values of all of its fields 
+   * are the same.
+   * @param t another KbartTitle
+   * @return whether it is equal to this one
+   */
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o instanceof KbartTitle) {
+      KbartTitle t = (KbartTitle)o;
+      for (Field f : Field.values()) {
+	String s1 = getField(f);
+	if (s1!=null) {
+	  String s2 = t.getField(f);
+	  if (!s1.equals(s2)) return false;
+	}
+      }
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Implement hashCode() using all the field values as used in equals().
+   */
+  public int hashCode() {
+    HashCodeBuilder hcb = new HashCodeBuilder(); 
+    for (Field f : Field.values()) {
+      hcb.append(getField(f));
+    }
+    return hcb.toHashCode();
+  }
+  
+  /**
+   * Construct a string description from identifying fields of the KbartTitle.
+   */
   public String toString() {
    return String.format("KbartTitle {%s [%s] (%s-%s)}", 
        fields.get(Field.PUBLICATION_TITLE), 
@@ -323,7 +364,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     TITLE_ID("title_id",
     "Title ID"),
 
-    /** Emvargo information */
+    /** Embargo information */
     EMBARGO_INFO("embargo_info",
     "Embargo information"),
 
@@ -363,7 +404,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     
     /** 
      * The default approach to comparing strings which may have accented characters; 
-     * if true, characters are converted into two glyphs and then the diacritcal mark removed. 
+     * if true, characters are converted into two glyphs and then the diacritical mark removed. 
      */
     public static boolean UNACCENTED_COMPARISON_DEFAULT = true;
     
@@ -448,15 +489,13 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
       return EnumSet.allOf(Field.class);
     }
 
-    /** Each field will be of a particular ype which requires a particular type of sorting. */
+    /** Each field will be of a particular type which requires a particular type of sorting. */
     public static enum SortType {
       STRING, ALPHANUMERIC, NUMERIC, DATE;
     }
 
   }
 
-  
-  
   /**
    * An enum of the parameter values we use for OpenURL linking syntax.
    * Currently these are based on OpenURL 0.1 and 
@@ -475,6 +514,5 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     public String toString() { return label; } 
     
   }
-  
-  
+    
 }

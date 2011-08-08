@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.14 2011-07-14 13:34:22 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.15 2011-08-08 11:43:35 easyonthemayo Exp $
  */
 
 /*
@@ -32,17 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Vector;
-import java.util.ArrayList;
+import java.util.*;
+
 import org.apache.commons.collections.comparators.ComparatorChain;
 
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
 
@@ -106,7 +103,6 @@ public class KbartConverter {
   /** The minimum number that will be considered a date of publication. */
   public static final int MIN_PUB_DATE = 1600;
 
-  
   /**
    * Creates a KbartConverter which will extract information from the given TDB 
    * records and provide access to them as KBART-compatible objects.
@@ -133,6 +129,7 @@ public class KbartConverter {
    * KbartTitle objects and add them to a list. 
    * 
    * @return a List of KbartTitle objects representing all the TDB titles
+   * @deprecated instead use TdbUtil to get the list of TdbTitles, which can be cached, and pass it to convertTitles
    */
   public static List<KbartTitle> extractTitles(TdbUtil.ContentScope scope) {
     return convertTitles(TdbUtil.getTdbTitles(scope));
@@ -140,6 +137,10 @@ public class KbartConverter {
   
   /**
    * Convert the given collection of TdbTitles into KbartTitles.
+   * The number of KbartTitles returned is likely to be different to the number
+   * of TdbTitles which was originally supplied, as KbartTitles are grouped 
+   * based on their coverage period rather than purely by title. 
+   * 
    * @param titles a collection of TdbTitles
    * @return a list of KbartTitles
    */
@@ -148,6 +149,22 @@ public class KbartConverter {
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (TdbTitle t : titles) {
       list.addAll( createKbartTitles(t) );
+    }
+    return list;
+  }
+  
+  /**
+   * Convert the given collection of ArchivalUnits into KbartTitles representing
+   * coverage ranges.
+   * 
+   * @param auMap a map of TdbTitles to lists of ArchivalUnits
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertAus(Map<TdbTitle, List<ArchivalUnit>> auMap) {
+    if (auMap==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (List<ArchivalUnit> titleAus : auMap.values()) {
+      list.addAll( createKbartTitles(titleAus) );
     }
     return list;
   }
@@ -211,58 +228,100 @@ public class KbartConverter {
   private static boolean isPublicationDate(int year) {
     return (year >= MIN_PUB_DATE && year <= Calendar.getInstance().get(Calendar.YEAR));
   }
-
   
- /**
-  * Convert a TdbTitle into one or more KbartTitles using as much information as 
-  * possible. A TdbTitle will yield multiple KbartTitles if it has gaps in its 
-  * coverage of greater than a year, in accordance with KBART 5.3.1.9.
-  * Each KbartTitle is created with a publication title and an identifier which
-  * is a valid ISSN. An attempt is made to fill the first/last issue/volume fields.
-  * The title URL is set to a substitution parameter and issn argument. The parameter
-  * can be substituted during URL resolution to the local URL to ServeContent. 
-  * There are several other KBART fields for which the information is not available.
-  * <p>
-  * An attempt is made to fill the following KBART fields:
-  * <ul>
-  *   <li>publication_title</li>
-  *   <li>print_identifier</li>
-  *   <li>online_identifier</li>
-  *   <li>date_first_issue_online</li>
-  *   <li>date_last_issue_online</li>
-  *   <li>num_first_issue_online</li>
-  *   <li>num_last_issue_online</li>
-  *   <li>num_first_vol_online</li>
-  *   <li>num_last_vol_online</li>
-  *   <li>title_url</li>
-  *   <li>title_id</li>
-  *   <li>publisher_name</li>
-  * </ul>
-  * The following fields currently have no analog in the TDB data:
-  * <ul>
-  *   <li><del>first_author</del> (not relevant to journals)</li>
-  *   <li>embargo_info</li>
-  *   <li>coverage_depth</li>
-  *   <li>coverage_notes (free text field, may be used for PEPRS data)</li>
-  * </ul>
-  * <p>
-  * We assume AUs are listed in order from earliest to most recent, when they are
-  * listed alphabetically by name. See the Comparator defined in this class.
-  * 
-  * @param tdbt a TdbTitle from which to create the KbartTitle
-  * @return a list of KbartTitle objects
-  */
+  /**
+   * Convert a collection of ArchivalUnits into one or more KbartTitles using as 
+   * much information as possible. This version of the method acts upon a collection  
+   * of ArchivalUnits rather than a TdbTitle. This is necessary for calculations 
+   * with preserved or configured AUs, which may represent a subset of the items 
+   * available in a TdbTitle.
+   * 
+   * @param titleAus a list of ArchivalUnits relating to a single title
+   * @return a list of KbartTitle objects
+   */
+  public static List<KbartTitle> createKbartTitles(Collection<ArchivalUnit> titleAus) {
+    if (titleAus==null) return Collections.emptyList();
+    // Create a list of TdbAus from the ArchivalUnits so we can sort it.
+    List<TdbAu> aus = TdbUtil.getTdbAusFromAus(titleAus);
+    return createKbartTitles(aus);
+  }
+    
+  /**
+   * Convert a TdbTitle into one or more KbartTitles using as much information as 
+   * possible.
+   * 
+   * @param tdbt a TdbTitle from which to create the KbartTitle
+   * @return a list of KbartTitle objects
+   */
   public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
-
-    List<KbartTitle> kbtList = new Vector<KbartTitle>();
+    if (tdbt==null) return Collections.emptyList();
     // Create a list of AUs from the collection returned by the TdbTitle getter,
     // so we can sort it.
     List<TdbAu> aus = new ArrayList<TdbAu>(tdbt.getTdbAus());
-    // TODO: Remove any 'down' AUs from the list
-    // Chronologically sort the AUs from the collection
+    return createKbartTitles(aus);
+  }
+  
+  /**
+   * Convert a sorted list of TdbAus into one or more KbartTitles using as much
+   * information as possible. A list of TdbAus relating to a single 
+   * title will yield multiple KbartTitles if it has gaps in its 
+   * coverage of greater than a year, in accordance with KBART 5.3.1.9.
+   * Each KbartTitle is created with a publication title and an identifier which
+   * is a valid ISSN. An attempt is made to fill the first/last issue/volume fields.
+   * The title URL is set to a substitution parameter and issn argument. The parameter
+   * can be substituted during URL resolution to the local URL to ServeContent. 
+   * There are several other KBART fields for which the information is not available.
+   * <p>
+   * An attempt is made to fill the following KBART fields:
+   * <ul>
+   *   <li>publication_title</li>
+   *   <li>print_identifier</li>
+   *   <li>online_identifier</li>
+   *   <li>date_first_issue_online</li>
+   *   <li>date_last_issue_online</li>
+   *   <li>num_first_issue_online</li>
+   *   <li>num_last_issue_online</li>
+   *   <li>num_first_vol_online</li>
+   *   <li>num_last_vol_online</li>
+   *   <li>title_url</li>
+   *   <li>title_id</li>
+   *   <li>publisher_name</li>
+   * </ul>
+   * The following fields currently have no analog in the TDB data:
+   * <ul>
+   *   <li><del>first_author</del> (not relevant to journals)</li>
+   *   <li>embargo_info</li>
+   *   <li>coverage_depth</li>
+   *   <li>coverage_notes (free text field, may be used for PEPRS data)</li>
+   * </ul>
+   * <p>
+   * We assume AUs are listed in order from earliest to most recent, when they are
+   * listed alphabetically by name.
+   * 
+   * @param aus a list of TdbAus relating to a single title
+   * @return a list of KbartTitle objects
+   */
+  public static List<KbartTitle> createKbartTitles(List<TdbAu> aus) {
+
+    // If there are no aus, we have no title records to add
+    if (aus==null || aus.size()==0) return Collections.emptyList();
+
+    // Chronologically sort the AUs
     sortAus(aus);
- 
-    // ---------------------------------------------------------
+
+    // If there is at least one AU, get the first for reference
+    TdbAu firstAu = aus.get(0);
+    // Identify the issue format
+    IssueFormat issueFormat = identifyIssueFormat(firstAu);
+    // Reporting:
+    if (issueFormat!=null) {
+      log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
+	  firstAu, issueFormat.getKey(), issueFormat.getIssueString(firstAu)) );      
+    }
+
+    // -----------------------------------------------------------------------
+    // Get a TdbTitle for reference, and construct a base KbartTitle which can be cloned
+    TdbTitle tdbt = firstAu.getTdbTitle();
     // Title which will have the generic properties set; it can
     // be cloned as a base for KBART titles with different ranges.
     KbartTitle baseKbt = new KbartTitle();
@@ -271,56 +330,40 @@ public class KbartConverter {
     baseKbt.setField(PUBLISHER_NAME, tdbt.getTdbPublisher().getName());
     baseKbt.setField(PUBLICATION_TITLE, tdbt.getName());
 
-    // If there are no aus, we have nothing more to add
-    if (aus.size()==0) {
-      kbtList.add(baseKbt);
-      return kbtList;
-    }
- 
-    // ---------------------------------------------------------
     // Now add information that can be retrieved from the AUs
-    
-    // First AU in the list   
-    TdbAu firstAu = aus.get(0);
-    // Identify the issue format
-    IssueFormat issueFormat = identifyIssueFormat(firstAu);
-    
-    // Reporting:
-    if (issueFormat!=null) {
-      log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
-	  firstAu, issueFormat.getKey(), issueFormat.getIssueString(firstAu)) );      
-    }
-    
     // Add ISSN and EISSN if available in properties. If not, the title's unique id is used. 
     // According to TdbTitle, "The ID is guaranteed to be globally unique".
     baseKbt.setField(PRINT_IDENTIFIER, findIssn(firstAu)); 
     baseKbt.setField(ONLINE_IDENTIFIER, findEissn(firstAu)); 
     baseKbt.setField(TITLE_ID, findIssnL(firstAu));
-
+    
     // Title URL
     // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
     //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
     baseKbt.setField(TITLE_URL, LABEL_PARAM_LOCKSS_RESOLVER + baseKbt.getResolverUrlParams()); 
-	
+    
     // ---------------------------------------------------------
     // Attempt to create ranges for titles with a coverage gap.
     // Depends on the availability of years in AUs.
-    
+    List<KbartTitle> kbtList = new Vector<KbartTitle>();
+
+    // TODO: Remove any 'down' AUs from the list
+
     // Get a list of year ranges for the AUs, and figure out where the titles need to be split into ranges    
     TitleRangeInfo tri = getAuCoverageRanges(aus);
     List<TitleRange> ranges = tri.ranges;
-        
+    
     // Iterate through the year ranges creating a title for each range with a gap 
     // longer than a year (KBART 5.3.1.9)
     // We should also create a new title if the AU name changes somewhere down the list
     for (TitleRange range : ranges) {
       KbartTitle kbt = baseKbt.clone();
-
+      
       // If there are multiple ranges, make sure the title/issn is right (might change with the range?)
       if (ranges.size()>1) {
 	updateTitleProperties(range.first, baseKbt);  
       }
-	
+      
       // Volume numbers (we omit volumes if the title did not yield a full and consistent set)
       // Note that this omits uncertain volume data on close to 400 titles 
       if (tri.hasVols) {
@@ -330,13 +373,13 @@ public class KbartConverter {
       
       // Issue numbers
       if (issueFormat != null) {
-  	kbt.setField(NUM_FIRST_ISSUE_ONLINE, issueFormat.getFirstIssue(range.first));
-  	kbt.setField(NUM_LAST_ISSUE_ONLINE, issueFormat.getLastIssue(range.last));
+	kbt.setField(NUM_FIRST_ISSUE_ONLINE, issueFormat.getFirstIssue(range.first));
+	kbt.setField(NUM_LAST_ISSUE_ONLINE, issueFormat.getLastIssue(range.last));
       }
-
+      
       // Issue years (will be zero if years could not be found)
       if (isPublicationDate(range.getFirstYear()) && isPublicationDate(range.getLastYear())) {
-      //if (tri.hasYears) {
+	//if (tri.hasYears) {
 	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.getFirstYear()));
 	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.getLastYear()));
 	// If the final year in the range is this year or later, leave empty the last issue/volume/date fields 
@@ -781,5 +824,5 @@ public class KbartConverter {
       this.hasYears = false; 
     }
   }
-  
+
 }

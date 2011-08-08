@@ -30,18 +30,13 @@ package org.lockss.servlet;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
 import org.apache.commons.lang.StringUtils;
-import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
-import org.lockss.config.Tdb;
-import org.lockss.config.TdbUtil;
+import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartConverter;
 import org.lockss.exporter.kbart.KbartExportFilter;
@@ -52,6 +47,7 @@ import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering;
 import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
 import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFieldOrderingException;
 import org.lockss.exporter.kbart.KbartTitle.Field;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Composite;
@@ -281,14 +277,22 @@ public class ListHoldings extends LockssServlet {
    * @return a usable exporter, or null if one could not be created
    */
   private KbartExporter createExporter(OutputFormat outputFormat, ContentScope scope) {
-    // Thie following is an expensive operation! Caching may be required.
-    List<KbartTitle> titles = KbartConverter.extractTitles(scope);
     
+    // The following counts the number of TdbTitles informing the export, by 
+    // processing the list of AUs in the given scope. It is provided as 
+    // information in the export, but is actually a little meaningless and 
+    // should probably be omitted.
+    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope);     
+    
+    // The list of KbartTitles to export; each title represents a TdbTitle over
+    // a particular range of coverage.
+    List<KbartTitle> titles = getKbartTitlesForExport(scope);
+
     log.info(String.format("Creating exporter for %d titles in scope %s\n", titles.size(), scope));
     
     // Return if there are no titles
     if (titles.isEmpty()) {
-      errMsg = "No KBART titles extracted from TDB.";
+      errMsg = "No "+scope.label+" titles for export.";
       return null;
     }
     
@@ -303,7 +307,7 @@ public class ListHoldings extends LockssServlet {
     
     // Create and configure an exporter
     KbartExporter kexp = outputFormat.makeExporter(titles, filter);
-    kexp.setTdbTitleTotal(TdbUtil.getTdbTitles(scope).size());
+    kexp.setTdbTitleTotal(numTdbTitles);
     kexp.setContentScope(scope);
     
     // Set an HTML form for the HTML output
@@ -311,6 +315,32 @@ public class ListHoldings extends LockssServlet {
     return kexp;    
   }
   
+  /**
+   * Get the list of TdbTitles or AUs in the given scope, and turn them into 
+   * KbartTitles which represent the coverage ranges available for titles in 
+   * the scope.
+   * 
+   * @param scope the scope of titles to create
+   * @return a list of KbartTitles
+   */
+  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope) {
+    List<KbartTitle> titles;
+    
+    // If we are exporting in a scope where ArchivalUnits are not available, 
+    // act on a list of TdbTitles, with their full AU ranges. 
+    if (!scope.areAusAvailable) {
+      Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope);
+      titles = KbartConverter.convertTitles(tdbTitles);
+    }
+    // Otherwise we need to look at the lists of individual AUs in order to calculate ranges
+    else {
+      Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
+      Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
+      titles = KbartConverter.convertAus(map);
+    }
+    return titles;
+  }
+
   /**
    * Assign an HTML form of custom options to the exporter if necessary.
    * @param kexp the exporter 
@@ -476,9 +506,7 @@ public class ListHoldings extends LockssServlet {
     tab.newCell("align=\"center\" valign=\"middle\"");
     tab.add("Show: ");
     for (ContentScope scope : ContentScope.values()) {
-      // XXX Don't offer the PRESERVED option for the moment:
-      if (scope == ContentScope.PRESERVED) continue;
-      int total = TdbUtil.getTdbTitles(scope).size();
+      int total = TdbUtil.getNumberTdbTitles(scope);
       String label = String.format("%s (%d) &nbsp; ", scope.label, total);
       tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), label, scope==selectedScope));
     }
