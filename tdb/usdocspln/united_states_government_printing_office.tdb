@@ -169,23 +169,23 @@
       param[collection_id] = CPRT
       implicit < status ; year ; name ; param[year] >
 
-      au < testing ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
-      au < testing ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
-      au < testing ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
-      au < testing ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
-      au < testing ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
-      au < testing ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
-      au < testing ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
-      au < manifest ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
-      au < manifest ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
-      au < manifest ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
-      au < manifest ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
-      au < manifest ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
-      au < manifest ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
-      au < manifest ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
-      au < manifest ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
-      au < manifest ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
-      au < manifest ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
+      au < ready ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
+      au < ready ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
+      au < ready ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
+      au < ready ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
+      au < ready ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
+      au < ready ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
+      au < ready ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
+      au < testing ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
+      au < testing ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
+      au < testing ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
+      au < testing ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
+      au < testing ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
+      au < testing ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
+      au < testing ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
+      au < testing ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
+      au < testing ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
+      au < testing ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
 
     }
       
@@ -207,13 +207,13 @@
     au < ready ; 2000 ; Congressional Directory 2000 ; 2000 >
     au < ready ; 2001 ; Congressional Directory 2001 ; 2001 >
     au < ready ; 2002 ; Congressional Directory 2002 ; 2002 >
-    au < testing ; 2003 ; Congressional Directory 2003 ; 2003 >
-    au < testing ; 2004 ; Congressional Directory 2004 ; 2004 >
-    au < testing ; 2005 ; Congressional Directory 2005 ; 2005 >
-    au < testing ; 2006 ; Congressional Directory 2006 ; 2006 >
-    au < testing ; 2007 ; Congressional Directory 2007 ; 2007 >
-    au < testing ; 2008 ; Congressional Directory 2008 ; 2008 >
-    au < testing ; 2009 ; Congressional Directory 2009 ; 2009 >
+    au < ready ; 2003 ; Congressional Directory 2003 ; 2003 >
+    au < ready ; 2004 ; Congressional Directory 2004 ; 2004 >
+    au < ready ; 2005 ; Congressional Directory 2005 ; 2005 >
+    au < ready ; 2006 ; Congressional Directory 2006 ; 2006 >
+    au < ready ; 2007 ; Congressional Directory 2007 ; 2007 >
+    au < ready ; 2008 ; Congressional Directory 2008 ; 2008 >
+    au < ready ; 2009 ; Congressional Directory 2009 ; 2009 >
       
   }
 
