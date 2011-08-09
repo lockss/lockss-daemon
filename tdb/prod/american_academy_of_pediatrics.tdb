@@ -317,22 +317,11 @@
   {
     title <
       name = Red Book Online ;
+      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
     >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://aapredbook.aappublications.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
-      au < manifest ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < manifest ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-
-    }
 
   }
 
