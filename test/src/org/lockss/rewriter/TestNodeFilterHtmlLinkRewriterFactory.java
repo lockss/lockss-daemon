@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.18 2011-04-26 23:53:47 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.19 2011-08-09 03:59:53 tlipkis Exp $
  */
 
 /*
@@ -308,11 +308,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
-    xform = new ServletUtil.LinkTransform() {
-	public String rewrite(String url) {
-	  return "http://lockss.box:" + testPort + "/ServeContent?url=" + url;
-	}
-      };
     List l = new ArrayList();
     l.add(urlStem);
     au.setUrlStems(l);
@@ -320,6 +315,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testRewriting() throws Exception {
+    xform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "http://lockss.box:" + testPort + "/ServeContent?url=" + url;
+	}
+      };
     InputStream is = nfhlrf.createLinkRewriter("text/html", au,
 					       new StringInputStream(orig),
 					       encoding, url, xform);
@@ -327,6 +327,23 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     log.debug3("Original:\n" + orig);
     log.debug3("Transformed:\n" + out);
     assertEquals(xformed, out);
+  }
+
+  public void testHostRelativeRewriting() throws Exception {
+    xform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "/ServeContent?url=" + url;
+	}
+      };
+    InputStream is = nfhlrf.createLinkRewriter("text/html", au,
+					       new StringInputStream(orig),
+					       encoding, url, xform);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("Original:\n" + orig);
+    log.debug3("Transformed:\n" + out);
+    String relxformed =
+      StringUtil.replaceString(xformed, "http://lockss.box:" + testPort, "");
+    assertEquals(relxformed, out);
   }
 
   public static void main(String[] argv) {
