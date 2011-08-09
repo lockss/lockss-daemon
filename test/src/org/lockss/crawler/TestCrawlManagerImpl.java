@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.86 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.87 2011-08-09 04:18:19 tlipkis Exp $
  */
 
 /*
@@ -781,6 +781,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 						     "http://random.string/"));
       assertFalse(crawlManager.isGloballyExcludedUrl(null,
 						     "http://http://http://"));
+
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 				    "(http:.*){3,}");
       assertTrue(crawlManager.isGloballyExcludedUrl(null,
@@ -791,6 +792,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 						     "www.x.www.y.www.z"));
       assertFalse(crawlManager.isGloballyExcludedUrl(null,
 						     "www.x.www.y.www.z.www."));
+
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
 				    "((http:.*){3,})|((\\bwww\\..*){4,})");
       assertTrue(crawlManager.isGloballyExcludedUrl(null,
@@ -801,6 +803,31 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 						     "www.x.www.y.www.z"));
       assertTrue(crawlManager.isGloballyExcludedUrl(null,
 						    "www.x.www.y.www.z.www."));
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				    "http:/[^/]");
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://example.com/foo/(http:/www.foo/bar.html"));
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://example.com/foo/http:/www.foo/bar.html"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://http://https://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "www.x.www.y.www.z"));
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+				    "(http:/[^/])|((reports/most-read/){2,})");
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://example.com/foo/(http:/www.foo/bar.html"));
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://example.com/foo/http:/www.foo/bar.html"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "http://http://https://"));
+      assertFalse(crawlManager.isGloballyExcludedUrl(null,
+						     "www.x.www.y.www.z"));
+
+      assertTrue(crawlManager.isGloballyExcludedUrl(null,
+						    "http://bjo.bmj.com/content/93/2/176.abstract/reports/most-read/reports/most-read/reports/most-read/reports/most-read/reply"));
     }
   }
 
