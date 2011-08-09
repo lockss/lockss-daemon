@@ -47,6 +47,23 @@
     <string>&quot;%sjournals/%s/%s/&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%sjournals/%s/&quot;, base_url, journal_id</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%sjournals/%s/%s/&quot;, base_url, journal_id, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_article</string>
+	    <string>&quot;%sjournals/%s/%s/%s/&quot;, base_url, journal_id, volume_name, article</string>
+	  </entry>
+  	</map>
+  </entry>   
+  <entry>
     <string>au_manifest</string>
     <list>
       <string>&quot;%slockss.html&quot;, base_url</string>
