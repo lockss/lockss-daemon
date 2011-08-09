@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.100 2011-06-21 00:31:47 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.101 2011-08-09 03:59:38 tlipkis Exp $
  */
 
 /*
@@ -426,7 +426,10 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("AuId", "AU Id", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("CrawlPool", "Crawl Pool",
-			   ColumnDescriptor.TYPE_STRING)
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Publisher", "Publisher",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Year", "Year", ColumnDescriptor.TYPE_STRING)
       );
 
     private static final List<String> defaultCols =
@@ -492,6 +495,18 @@ public class ArchivalUnitStatus
       if (table.isIncludeColumn("CrawlPool")) {
 	String rateKey = au.getFetchRateLimiterKey();
 	rowMap.put("CrawlPool", rateKey != null ? rateKey : au.getAuId());
+      }
+      if (table.isIncludeColumn("Publisher")) {
+	String pub = AuUtil.getTitleAttribute(au, "publisher");
+	if (!StringUtil.isNullString(pub)) {
+	  rowMap.put("Publisher", pub);
+	}
+      }
+      if (table.isIncludeColumn("Year")) {
+	String year = AuUtil.getTitleAttribute(au, "year");
+	if (!StringUtil.isNullString(year)) {
+	  rowMap.put("Year", year);
+	}
       }
       return rowMap;
     }
