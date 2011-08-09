@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.107 2011-06-29 07:06:33 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.108 2011-08-09 04:16:28 tlipkis Exp $
  */
 
 /*
@@ -790,7 +790,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Calls 'stopService()' on all AU managers for all AUs,
    */
   public void stopAllAuManagers() {
-    for (ArchivalUnit au : auManagerMaps.keySet()) {
+    ArchivalUnit au;
+    while ((au = (ArchivalUnit)CollectionUtil.getAnElement(auManagerMaps.keySet())) != null) {
       log.debug2("Stopping all managers for " + au);
       stopAuManagers(au);
     }
@@ -952,7 +953,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
     if (CurrentConfig.getBooleanParam(PARAM_APP_EXIT_IMM,
                                       DEFAULT_APP_EXIT_IMM)) {
-      daemon.stop();
+      try {
+	daemon.stop();
+      } catch (RuntimeException e) {
+	// ignore errors stopping daemon
+      }
       System.exit(Constants.EXIT_CODE_NORMAL);
     }
     daemon.keepRunning();
