@@ -1,0 +1,172 @@
+{
+
+  publisher <
+    name = British Institute of Radiology
+  >
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
+  
+  {
+
+    title <
+      name = The British Journal of Radiology ;
+      issn = 0007-1285 ;
+      eissn = 1748-880X ;
+      issnl = 0007-1285
+    >
+
+    param[base_url] = http://bjr.birjournals.org/
+    
+    au < manifest ; exists ; 1928 ; British Journal of Radiology Volume 1 ; 1 >
+    au < manifest ; exists ; 1929 ; British Journal of Radiology Volume 2 ; 2 >
+    au < manifest ; exists ; 1930 ; British Journal of Radiology Volume 3 ; 3 >
+    au < manifest ; exists ; 1931 ; British Journal of Radiology Volume 4 ; 4 >
+    au < manifest ; exists ; 1932 ; British Journal of Radiology Volume 5 ; 5 >
+    au < manifest ; exists ; 1933 ; British Journal of Radiology Volume 6 ; 6 >
+    au < manifest ; exists ; 1934 ; British Journal of Radiology Volume 7 ; 7 >
+    au < manifest ; exists ; 1935 ; British Journal of Radiology Volume 8 ; 8 >
+    au < manifest ; exists ; 1936 ; British Journal of Radiology Volume 9 ; 9 >
+    au < manifest ; exists ; 1937 ; British Journal of Radiology Volume 10 ; 10 >
+    au < manifest ; exists ; 1938 ; British Journal of Radiology Volume 11 ; 11 >
+    au < manifest ; exists ; 1939 ; British Journal of Radiology Volume 12 ; 12 >
+    au < manifest ; exists ; 1940 ; British Journal of Radiology Volume 13 ; 13 >
+    au < manifest ; exists ; 1941 ; British Journal of Radiology Volume 14 ; 14 >
+    au < manifest ; exists ; 1942 ; British Journal of Radiology Volume 15 ; 15 >
+    au < manifest ; exists ; 1943 ; British Journal of Radiology Volume 16 ; 16 >
+    au < manifest ; exists ; 1944 ; British Journal of Radiology Volume 17 ; 17 >
+    au < manifest ; exists ; 1945 ; British Journal of Radiology Volume 18 ; 18 >
+    au < manifest ; exists ; 1946 ; British Journal of Radiology Volume 19 ; 19 >
+    au < manifest ; exists ; 1947 ; British Journal of Radiology Volume 20 ; 20 >
+    au < manifest ; exists ; 1948 ; British Journal of Radiology Volume 21 ; 21 >
+    au < manifest ; exists ; 1949 ; British Journal of Radiology Volume 22 ; 22 >
+    au < manifest ; exists ; 1950 ; British Journal of Radiology Volume 23 ; 23 >
+    au < manifest ; exists ; 1951 ; British Journal of Radiology Volume 24 ; 24 >
+    au < manifest ; exists ; 1952 ; British Journal of Radiology Volume 25 ; 25 >
+    au < manifest ; exists ; 1953 ; British Journal of Radiology Volume 26 ; 26 >
+    au < manifest ; exists ; 1954 ; British Journal of Radiology Volume 27 ; 27 >
+    au < manifest ; exists ; 1955 ; British Journal of Radiology Volume 28 ; 28 >
+    au < manifest ; exists ; 1956 ; British Journal of Radiology Volume 29 ; 29 >
+    au < manifest ; exists ; 1957 ; British Journal of Radiology Volume 30 ; 30 >
+    au < manifest ; exists ; 1958 ; British Journal of Radiology Volume 31 ; 31 >
+    au < manifest ; exists ; 1959 ; British Journal of Radiology Volume 32 ; 32 >
+    au < manifest ; exists ; 1960 ; British Journal of Radiology Volume 33 ; 33 >
+    au < manifest ; exists ; 1961 ; British Journal of Radiology Volume 34 ; 34 >
+    au < manifest ; exists ; 1962 ; British Journal of Radiology Volume 35 ; 35 >
+    au < manifest ; exists ; 1963 ; British Journal of Radiology Volume 36 ; 36 >
+    au < manifest ; exists ; 1964 ; British Journal of Radiology Volume 37 ; 37 >
+    au < manifest ; exists ; 1965 ; British Journal of Radiology Volume 38 ; 38 >
+    au < manifest ; exists ; 1966 ; British Journal of Radiology Volume 39 ; 39 >
+    au < manifest ; exists ; 1967 ; British Journal of Radiology Volume 40 ; 40 >
+    au < manifest ; exists ; 1968 ; British Journal of Radiology Volume 41 ; 41 >
+    au < manifest ; exists ; 1969 ; British Journal of Radiology Volume 42 ; 42 >
+    au < manifest ; exists ; 1970 ; British Journal of Radiology Volume 43 ; 43 >
+    au < manifest ; exists ; 1971 ; British Journal of Radiology Volume 44 ; 44 >
+    au < manifest ; exists ; 1972 ; British Journal of Radiology Volume 45 ; 45 >
+    au < manifest ; exists ; 1973 ; British Journal of Radiology Volume 46 ; 46 >
+    au < manifest ; exists ; 1974 ; British Journal of Radiology Volume 47 ; 47 >
+    au < manifest ; exists ; 1975 ; British Journal of Radiology Volume 48 ; 48 >
+    au < manifest ; exists ; 1976 ; British Journal of Radiology Volume 49 ; 49 >
+    au < manifest ; exists ; 1977 ; British Journal of Radiology Volume 50 ; 50 >
+    au < manifest ; exists ; 1978 ; British Journal of Radiology Volume 51 ; 51 >
+    au < manifest ; exists ; 1979 ; British Journal of Radiology Volume 52 ; 52 >
+    au < manifest ; exists ; 1980 ; British Journal of Radiology Volume 53 ; 53 >
+    au < manifest ; exists ; 1981 ; British Journal of Radiology Volume 54 ; 54 >
+    au < manifest ; exists ; 1982 ; British Journal of Radiology Volume 55 ; 55 >
+    au < manifest ; exists ; 1983 ; British Journal of Radiology Volume 56 ; 56 >
+    au < manifest ; exists ; 1984 ; British Journal of Radiology Volume 57 ; 57 >
+    au < manifest ; exists ; 1985 ; British Journal of Radiology Volume 58 ; 58 >
+    au < manifest ; exists ; 1986 ; British Journal of Radiology Volume 59 ; 59 >
+    au < manifest ; exists ; 1987 ; British Journal of Radiology Volume 60 ; 60 >
+    au < manifest ; exists ; 1988 ; British Journal of Radiology Volume 61 ; 61 >
+    au < manifest ; exists ; 1989 ; British Journal of Radiology Volume 62 ; 62 >
+    au < manifest ; exists ; 1990 ; British Journal of Radiology Volume 63 ; 63 >
+    au < manifest ; exists ; 1991 ; British Journal of Radiology Volume 64 ; 64 >
+    au < manifest ; exists ; 1992 ; British Journal of Radiology Volume 65 ; 65 >
+    au < manifest ; exists ; 1993 ; British Journal of Radiology Volume 66 ; 66 >
+    au < manifest ; exists ; 1994 ; British Journal of Radiology Volume 67 ; 67 >
+    au < manifest ; exists ; 1995 ; British Journal of Radiology Volume 68 ; 68 >
+    au < manifest ; exists ; 1996 ; British Journal of Radiology Volume 69 ; 69 >
+    au < manifest ; exists ; 1997 ; British Journal of Radiology Volume 70 ; 70 >
+    au < manifest ; exists ; 1998 ; British Journal of Radiology Volume 71 ; 71 >
+    au < manifest ; exists ; 1999 ; British Journal of Radiology Volume 72 ; 72 >
+    au < manifest ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
+    au < manifest ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
+    au < manifest ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
+    au < manifest ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
+    au < manifest ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
+    au < manifest ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
+    au < manifest ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
+    au < manifest ; exists ; 2007 ; British Journal of Radiology Volume 80 ; 80 >
+    au < manifest ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 >
+    au < manifest ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 >
+    au < manifest ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 >
+    au < manifest ; exists ; 2011 ; British Journal of Radiology Volume 84 ; 84 >
+    
+  }
+  
+  {
+
+    title <
+      name = Dentomaxillofacial Radiology ;
+      issn = 0250-832X ;
+      eissn = 1476-542X ;
+      issnl = 0250-832X 
+    >
+
+    param[base_url] = http://dmfr.birjournals.org/
+    
+    au < manifest ; exists ; 1989 ; Dentomaxillofacial Radiology Volume 18 ; 1989 >
+    au < manifest ; exists ; 1990 ; Dentomaxillofacial Radiology Volume 19 ; 1990 >
+    au < manifest ; exists ; 1991 ; Dentomaxillofacial Radiology Volume 20 ; 1991 >
+    au < manifest ; exists ; 1992 ; Dentomaxillofacial Radiology Volume 21 ; 1992 >
+    au < manifest ; exists ; 1993 ; Dentomaxillofacial Radiology Volume 22 ; 1993 >
+    au < manifest ; exists ; 1994 ; Dentomaxillofacial Radiology Volume 23 ; 1994 >
+    au < manifest ; exists ; 1995 ; Dentomaxillofacial Radiology Volume 24 ; 1995 >
+    au < manifest ; exists ; 1996 ; Dentomaxillofacial Radiology Volume 25 ; 1996 >
+    au < manifest ; exists ; 1997 ; Dentomaxillofacial Radiology Volume 26 ; 1997 >
+    au < manifest ; exists ; 1998 ; Dentomaxillofacial Radiology Volume 27 ; 1998 >
+    au < manifest ; exists ; 1999 ; Dentomaxillofacial Radiology Volume 28 ; 1999 >
+    au < manifest ; exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 2000 >
+    au < manifest ; exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 2001 >
+    au < manifest ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 2002 >
+    au < manifest ; exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 2003 >
+    au < manifest ; exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 2004 >
+    au < manifest ; exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 2005 >
+    au < manifest ; exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 2006 >
+    au < manifest ; exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 2007 >
+    au < manifest ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 2008 >
+    au < manifest ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 2009 >
+    au < manifest ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 2010 >
+    au < manifest ; exists ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 2011 >
+
+  }
+  
+  {
+
+    title <
+      name = Imaging ;
+      issn = 0965-6812 ;
+      eissn = 1748-8818 ;
+      issnl = 0965-6812
+    >
+
+    param[base_url] = http://imaging.birjournals.org/
+    comment[0] = last published volume in 2009  
+    
+    au < manifest ; exists ; 1999 ; Imaging Volume 11 ; 11 >
+    au < manifest ; exists ; 2000 ; Imaging Volume 12 ; 12 >
+    au < manifest ; exists ; 2001 ; Imaging Volume 13 ; 13 >
+    au < manifest ; exists ; 2002 ; Imaging Volume 14 ; 14 >
+    au < manifest ; exists ; 2003 ; Imaging Volume 15 ; 15 >
+    au < manifest ; exists ; 2004 ; Imaging Volume 16 ; 16 >
+    au < manifest ; exists ; 2005 ; Imaging Volume 17 ; 17 >
+    au < manifest ; exists ; 2006 ; Imaging Volume 18 ; 18 >
+    au < manifest ; exists ; 2007 ; Imaging Volume 19 ; 19 >
+    au < manifest ; exists ; 2008 ; Imaging Volume 20 ; 20 >
+    au < manifest ; exists ; 2009 ; Imaging Volume 21 ; 21 >
+    au < doesNotExist ; doesNotExist ; 2010 ; Imaging Volume 22 ; 22 >
+
+  }
+
+}

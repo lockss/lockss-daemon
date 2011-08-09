@@ -13,7 +13,8 @@
   
     title <
       name = AAP Grand Rounds ;
-      issn = 1099-6605
+      issn = 1099-6605 ;
+      eissn = 1556-326X
     >
     
     param[base_url] = http://aapgrandrounds.aappublications.org/
@@ -165,6 +166,29 @@
     
     }
   
+  }
+
+  {
+
+    title <
+      name = Red Book Online ;
+      issn = 1080-0131 ;
+      eissn = 1544-9300 
+    >
+    
+        param[base_url] = http://aapredbook.aappublications.org/
+
+    {
+
+      comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < manifest ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < manifest ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < manifest ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+
+    }
+
   }
 
 }
