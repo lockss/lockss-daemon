@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.36 2011-07-28 02:57:46 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.37 2011-08-09 03:59:23 tlipkis Exp $
  */
 
 /*
@@ -278,28 +278,25 @@ public class ServeContent extends LockssServlet {
     if (paramAccessLogLevel >= 0) {
       switch (requestType) {
       case None:
-	proxyMgr.logAccess("Content", url, msg);
+	logAccess(url, msg);
 	break;
       case Url:
-	proxyMgr.logAccess("Content", "URL: " + url, msg);
+	logAccess("URL: " + url, msg);
 	break;
       case Doi:
-	proxyMgr.logAccess("Content",
-			   "DOI: " + accessLogInfo + " resolved to URL: " + url,
-			   msg);
+	logAccess("DOI: " + accessLogInfo + " resolved to URL: " + url,
+		  msg);
 	break;
       case OpenUrl:
-	proxyMgr.logAccess("Content",
-			   "OpenUrl: " + accessLogInfo +
-			   " resolved to URL: " + url,
-			   msg);
+	logAccess("OpenUrl: " + accessLogInfo + " resolved to URL: " + url,
+		  msg);
 	break;
       }
     }
   }
 
-  void logAccess(String type, String url, String msg) {
-    log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
+  void logAccess(String url, String msg) {
+    log.log(paramAccessLogLevel, "Content access: " + url + " : " + msg);
   }
 
   String present(boolean isInCache, String msg) {
@@ -361,11 +358,13 @@ public class ServeContent extends LockssServlet {
         url = openUrlResolver.resolveFromDOI(doi);
 	requestType = AccessLogType.Doi;
       } else {
-	// pass all params to Open Url resolver
+	// If any params, pass them all to OpenUrl resolver
 	Map<String,String> pmap = getParamsAsMap();
-        if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-        url = openUrlResolver.resolveOpenUrl(pmap);
-	requestType = AccessLogType.OpenUrl;
+	if (!pmap.isEmpty()) {
+	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+	  url = openUrlResolver.resolveOpenUrl(pmap);
+	  requestType = AccessLogType.OpenUrl;
+	}
       }
       if (!StringUtil.isNullString(url)) {
         log.debug2("Resolved OpenUrl to: " + url);

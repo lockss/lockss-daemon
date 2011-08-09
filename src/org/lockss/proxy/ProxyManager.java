@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.48 2011-06-21 22:10:35 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.49 2011-08-09 03:59:23 tlipkis Exp $
  */
 
 /*
@@ -493,7 +493,7 @@ public class ProxyManager extends BaseProxyManager {
     return ! disallowedMethods.contains(method);
   }
 
-  public void logAccess(String type, String url, String msg) {
+  public void logAccess(String url, String msg) {
     if (paramAccessLogLevel >= 0) {
       log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
     }
