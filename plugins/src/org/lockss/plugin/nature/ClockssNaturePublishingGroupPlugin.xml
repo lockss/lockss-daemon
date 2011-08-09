@@ -72,6 +72,27 @@
     <string>&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>&quot;%s/%s&quot;, base_url, journal_id</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>&quot;%s%s/clockss/%s_clockss_%d.html&quot;, base_url, journal_id, journal_id, year</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>&quot;%s%s/journal/v%s/n%s/index.html&quot;, base_url, journal_id, volume_name, issue</string>
+	  </entry>
+	  <entry>
+	    <string>au_article</string>
+	    <string>&quot;%s%s/journal/v%s/n%s/full/%s.%d.%s.html&quot;, base_url, journal_id, volume_name, issue, journal_id, year, article</string>
+	  </entry>
+  	</map>
+  </entry>    
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
