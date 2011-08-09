@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurableCrawlWindowWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestConfigurableCrawlWindowWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestConfigurableCrawlWindowWrapper extends LockssTestCase {
   public void testWrap() throws PluginException, IOException {
     ConfigurableCrawlWindow obj = new MockConfigurableCrawlWindow();
     ConfigurableCrawlWindow wrapper =
-      (ConfigurableCrawlWindow)WrapperUtil.wrap(obj, ConfigurableCrawlWindow.class);
+      WrapperUtil.wrap(obj, ConfigurableCrawlWindow.class);
     assertTrue(wrapper instanceof ConfigurableCrawlWindowWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockConfigurableCrawlWindow);
 
@@ -58,7 +58,7 @@ public class TestConfigurableCrawlWindowWrapper extends LockssTestCase {
   public void testLinkageError() throws IOException {
     ConfigurableCrawlWindow obj = new MockConfigurableCrawlWindow();
     ConfigurableCrawlWindow wrapper =
-      (ConfigurableCrawlWindow)WrapperUtil.wrap(obj, ConfigurableCrawlWindow.class);
+      WrapperUtil.wrap(obj, ConfigurableCrawlWindow.class);
     assertTrue(wrapper instanceof ConfigurableCrawlWindowWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockConfigurableCrawlWindow);
     Error err = new LinkageError("bar");

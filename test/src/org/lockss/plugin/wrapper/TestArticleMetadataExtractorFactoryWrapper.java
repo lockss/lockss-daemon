@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorFactoryWrapper.java,v 1.2 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: TestArticleMetadataExtractorFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestArticleMetadataExtractorFactoryWrapper extends LockssTestCase {
     ArticleMetadataExtractorFactory obj =
       new MockArticleMetadataExtractorFactory();
     ArticleMetadataExtractorFactory wrapper =
-      (ArticleMetadataExtractorFactory)WrapperUtil.wrap(obj, ArticleMetadataExtractorFactory.class);
+      WrapperUtil.wrap(obj, ArticleMetadataExtractorFactory.class);
     assertTrue(wrapper instanceof ArticleMetadataExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockArticleMetadataExtractorFactory);
@@ -63,7 +63,7 @@ public class TestArticleMetadataExtractorFactoryWrapper extends LockssTestCase {
     ArticleMetadataExtractorFactory obj =
       new MockArticleMetadataExtractorFactory();
     ArticleMetadataExtractorFactory wrapper =
-      (ArticleMetadataExtractorFactory)WrapperUtil.wrap(obj, ArticleMetadataExtractorFactory.class);
+      WrapperUtil.wrap(obj, ArticleMetadataExtractorFactory.class);
     assertTrue(wrapper instanceof ArticleMetadataExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockArticleMetadataExtractorFactory);

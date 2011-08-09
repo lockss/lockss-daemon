@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorWrapper.java,v 1.4 2011-01-22 08:22:29 tlipkis Exp $
+ * $Id: TestArticleMetadataExtractorWrapper.java,v 1.5 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
   public void testWrap() throws PluginException, IOException {
     ArticleMetadataExtractor obj = new MyArticleMetadataExtractor();
     ArticleMetadataExtractor wrapper =
-      (ArticleMetadataExtractor)WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
+      WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
     assertTrue(wrapper instanceof ArticleMetadataExtractorWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MyArticleMetadataExtractor);
 
@@ -61,7 +61,7 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
   public void testLinkageError() throws IOException {
     ArticleMetadataExtractor obj = new MyArticleMetadataExtractor();
     ArticleMetadataExtractor wrapper =
-      (ArticleMetadataExtractor)WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
+      WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
     assertTrue(wrapper instanceof ArticleMetadataExtractorWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MyArticleMetadataExtractor);
     Error err = new LinkageError("bar");

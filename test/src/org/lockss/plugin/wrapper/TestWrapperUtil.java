@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperUtil.java,v 1.2 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestWrapperUtil.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -45,8 +45,7 @@ public class TestWrapperUtil extends LockssTestCase {
 
   public void testNoWrap() throws PluginException {
     AnInterface obj = new AClass();
-    AnInterface wrapper =
-      (AnInterface)WrapperUtil.wrap(obj, AnInterface.class);
+    AnInterface wrapper = WrapperUtil.wrap(obj, AnInterface.class);
     assertEquals("foo0", wrapper.op("foo"));
     AClass a = (AClass)obj;
     assertEquals("foo", a.arg);
@@ -57,8 +56,7 @@ public class TestWrapperUtil extends LockssTestCase {
     WrapperUtil.registerWrapperFactory(AnInterface.class,
 				       new AWrapper.Factory());
     AnInterface obj = new AClass();
-    AnInterface wrapper =
-      (AnInterface)WrapperUtil.wrap(obj, AnInterface.class);
+    AnInterface wrapper = WrapperUtil.wrap(obj, AnInterface.class);
     assertTrue(wrapper instanceof AWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof AClass);
 
@@ -71,8 +69,7 @@ public class TestWrapperUtil extends LockssTestCase {
     WrapperUtil.registerWrapperFactory(AnInterface.class,
 				       new AWrapper.Factory());
     AnInterface obj = new AClass();
-    AnInterface wrapper =
-      (AnInterface)WrapperUtil.wrap(obj, AnInterface.class);
+    AnInterface wrapper = WrapperUtil.wrap(obj, AnInterface.class);
     assertTrue(wrapper instanceof AWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof AClass);
     Error err = new LinkageError("bar");

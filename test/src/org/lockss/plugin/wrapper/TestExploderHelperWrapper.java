@@ -1,5 +1,5 @@
 /*
- * $Id: TestExploderHelperWrapper.java,v 1.2 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: TestExploderHelperWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -43,8 +43,7 @@ public class TestExploderHelperWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException {
     ExploderHelper obj = new MockExploderHelper();
-    ExploderHelper wrapper =
-      (ExploderHelper)WrapperUtil.wrap(obj, ExploderHelper.class);
+    ExploderHelper wrapper = WrapperUtil.wrap(obj, ExploderHelper.class);
     assertTrue(wrapper instanceof ExploderHelperWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockExploderHelper);
 
@@ -56,8 +55,7 @@ public class TestExploderHelperWrapper extends LockssTestCase {
 
   public void testLinkageError() {
     ExploderHelper obj = new MockExploderHelper();
-    ExploderHelper wrapper =
-      (ExploderHelper)WrapperUtil.wrap(obj, ExploderHelper.class);
+    ExploderHelper wrapper = WrapperUtil.wrap(obj, ExploderHelper.class);
     assertTrue(wrapper instanceof ExploderHelperWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockExploderHelper);
     Error err = new LinkageError("bar");

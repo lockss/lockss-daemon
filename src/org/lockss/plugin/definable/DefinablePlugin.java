@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.58 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.59 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -547,7 +547,8 @@ public class DefinablePlugin extends BasePlugin {
 	  if (resp instanceof CacheException) {
 	    val = resp.getClass();
 	  } else if (resp instanceof CacheResultHandler) {
-	    val = WrapperUtil.wrap(resp, CacheResultHandler.class);
+	    val = WrapperUtil.wrap((CacheResultHandler)resp,
+				   CacheResultHandler.class);
 	  } else {
             throw new
 	      PluginException.InvalidDefinition("Second arg not a " +

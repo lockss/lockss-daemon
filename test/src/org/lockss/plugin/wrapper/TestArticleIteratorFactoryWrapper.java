@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestArticleIteratorFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
   public void testWrap() throws PluginException, IOException {
     ArticleIteratorFactory obj = new MockArticleIteratorFactory();
     ArticleIteratorFactory wrapper =
-      (ArticleIteratorFactory)WrapperUtil.wrap(obj, ArticleIteratorFactory.class);
+      WrapperUtil.wrap(obj, ArticleIteratorFactory.class);
     assertTrue(wrapper instanceof ArticleIteratorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockArticleIteratorFactory);
@@ -60,7 +60,7 @@ public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
   public void testLinkageError() throws IOException {
     ArticleIteratorFactory obj = new MockArticleIteratorFactory();
     ArticleIteratorFactory wrapper =
-      (ArticleIteratorFactory)WrapperUtil.wrap(obj, ArticleIteratorFactory.class);
+      WrapperUtil.wrap(obj, ArticleIteratorFactory.class);
     assertTrue(wrapper instanceof ArticleIteratorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockArticleIteratorFactory);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCacheResultHandlerWrapper.java,v 1.4 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id: TestCacheResultHandlerWrapper.java,v 1.5 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
   public void testWrapInit() throws PluginException, IOException {
     CacheResultHandler obj = new MockCacheResultHandler();
     CacheResultHandler wrapper =
-      (CacheResultHandler)WrapperUtil.wrap(obj, CacheResultHandler.class);
+      WrapperUtil.wrap(obj, CacheResultHandler.class);
     assertTrue(wrapper instanceof CacheResultHandlerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCacheResultHandler);
 
@@ -57,7 +57,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
   public void testWrapHandleResult() throws PluginException, IOException {
     CacheResultHandler obj = new MockCacheResultHandler();
     CacheResultHandler wrapper =
-      (CacheResultHandler)WrapperUtil.wrap(obj, CacheResultHandler.class);
+      WrapperUtil.wrap(obj, CacheResultHandler.class);
     assertTrue(wrapper instanceof CacheResultHandlerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCacheResultHandler);
 
@@ -70,7 +70,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
   public void testLinkageErrorInit() throws IOException {
     CacheResultHandler obj = new MockCacheResultHandler();
     CacheResultHandler wrapper =
-      (CacheResultHandler)WrapperUtil.wrap(obj, CacheResultHandler.class);
+      WrapperUtil.wrap(obj, CacheResultHandler.class);
     assertTrue(wrapper instanceof CacheResultHandlerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCacheResultHandler);
     Error err = new LinkageError("bar");
@@ -87,7 +87,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
   public void testLinkageErrorHandleResult() throws IOException {
     CacheResultHandler obj = new MockCacheResultHandler();
     CacheResultHandler wrapper =
-      (CacheResultHandler)WrapperUtil.wrap(obj, CacheResultHandler.class);
+      WrapperUtil.wrap(obj, CacheResultHandler.class);
     assertTrue(wrapper instanceof CacheResultHandlerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCacheResultHandler);
     Error err = new LinkageError("bar");

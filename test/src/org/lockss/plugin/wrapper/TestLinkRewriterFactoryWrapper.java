@@ -1,5 +1,5 @@
 /*
- * $Id: TestLinkRewriterFactoryWrapper.java,v 1.2 2010-06-25 07:42:16 tlipkis Exp $
+ * $Id: TestLinkRewriterFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestLinkRewriterFactoryWrapper extends LockssTestCase {
   public void testWrap() throws PluginException, IOException {
     LinkRewriterFactory obj = new MockLinkRewriterFactory();
     LinkRewriterFactory wrapper =
-      (LinkRewriterFactory)WrapperUtil.wrap(obj, LinkRewriterFactory.class);
+      WrapperUtil.wrap(obj, LinkRewriterFactory.class);
     assertTrue(wrapper instanceof LinkRewriterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockLinkRewriterFactory);
@@ -61,7 +61,7 @@ public class TestLinkRewriterFactoryWrapper extends LockssTestCase {
   public void testLinkageError() throws IOException {
     LinkRewriterFactory obj = new MockLinkRewriterFactory();
     LinkRewriterFactory wrapper =
-      (LinkRewriterFactory)WrapperUtil.wrap(obj, LinkRewriterFactory.class);
+      WrapperUtil.wrap(obj, LinkRewriterFactory.class);
     assertTrue(wrapper instanceof LinkRewriterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockLinkRewriterFactory);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLinkExtractorFactoryWrapper.java,v 1.1 2007-02-06 01:03:07 tlipkis Exp $
+ * $Id: TestLinkExtractorFactoryWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class TestLinkExtractorFactoryWrapper extends LockssTestCase {
   public void testWrap() throws PluginException, IOException {
     LinkExtractorFactory obj = new MockLinkExtractorFactory();
     LinkExtractorFactory wrapper =
-      (LinkExtractorFactory)WrapperUtil.wrap(obj, LinkExtractorFactory.class);
+      WrapperUtil.wrap(obj, LinkExtractorFactory.class);
     assertTrue(wrapper instanceof LinkExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockLinkExtractorFactory);
@@ -58,7 +58,7 @@ public class TestLinkExtractorFactoryWrapper extends LockssTestCase {
   public void testLinkageError() throws IOException {
     LinkExtractorFactory obj = new MockLinkExtractorFactory();
     LinkExtractorFactory wrapper =
-      (LinkExtractorFactory)WrapperUtil.wrap(obj, LinkExtractorFactory.class);
+      WrapperUtil.wrap(obj, LinkExtractorFactory.class);
     assertTrue(wrapper instanceof LinkExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockLinkExtractorFactory);

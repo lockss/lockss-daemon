@@ -1,5 +1,5 @@
 /*
- * $Id: TestLoginPageCheckerWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestLoginPageCheckerWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -44,8 +44,7 @@ public class TestLoginPageCheckerWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException, IOException {
     LoginPageChecker obj = new MockLoginPageChecker();
-    LoginPageChecker wrapper =
-      (LoginPageChecker)WrapperUtil.wrap(obj, LoginPageChecker.class);
+    LoginPageChecker wrapper = WrapperUtil.wrap(obj, LoginPageChecker.class);
     assertTrue(wrapper instanceof LoginPageCheckerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockLoginPageChecker);
     Properties props = new Properties();
@@ -57,8 +56,7 @@ public class TestLoginPageCheckerWrapper extends LockssTestCase {
 
   public void testLinkageError() throws IOException {
     LoginPageChecker obj = new MockLoginPageChecker();
-    LoginPageChecker wrapper =
-      (LoginPageChecker)WrapperUtil.wrap(obj, LoginPageChecker.class);
+    LoginPageChecker wrapper = WrapperUtil.wrap(obj, LoginPageChecker.class);
     assertTrue(wrapper instanceof LoginPageCheckerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockLoginPageChecker);
     Error err = new LinkageError("bar");

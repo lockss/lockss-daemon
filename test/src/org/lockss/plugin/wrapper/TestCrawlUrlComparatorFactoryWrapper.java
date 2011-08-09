@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlUrlComparatorFactoryWrapper.java,v 1.2 2009-08-03 04:35:51 tlipkis Exp $
+ * $Id: TestCrawlUrlComparatorFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestCrawlUrlComparatorFactoryWrapper extends LockssTestCase {
   public void testWrap() throws PluginException {
     CrawlUrlComparatorFactory obj = new MockCrawlUrlComparatorFactory();
     CrawlUrlComparatorFactory wrapper =
-      (CrawlUrlComparatorFactory)WrapperUtil.wrap(obj, CrawlUrlComparatorFactory.class);
+      WrapperUtil.wrap(obj, CrawlUrlComparatorFactory.class);
     assertTrue(wrapper instanceof CrawlUrlComparatorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCrawlUrlComparatorFactory);
 
@@ -57,7 +57,7 @@ public class TestCrawlUrlComparatorFactoryWrapper extends LockssTestCase {
   public void testLinkageError() {
     CrawlUrlComparatorFactory obj = new MockCrawlUrlComparatorFactory();
     CrawlUrlComparatorFactory wrapper =
-      (CrawlUrlComparatorFactory)WrapperUtil.wrap(obj, CrawlUrlComparatorFactory.class);
+      WrapperUtil.wrap(obj, CrawlUrlComparatorFactory.class);
     assertTrue(wrapper instanceof CrawlUrlComparatorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCrawlUrlComparatorFactory);
     Error err = new LinkageError("bar");

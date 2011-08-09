@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlNormalizerWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestUrlNormalizerWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -42,8 +42,7 @@ public class TestUrlNormalizerWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException {
     UrlNormalizer obj = new MockUrlNormalizer();
-    UrlNormalizer wrapper =
-      (UrlNormalizer)WrapperUtil.wrap(obj, UrlNormalizer.class);
+    UrlNormalizer wrapper = WrapperUtil.wrap(obj, UrlNormalizer.class);
     assertTrue(wrapper instanceof UrlNormalizerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockUrlNormalizer);
 
@@ -55,8 +54,7 @@ public class TestUrlNormalizerWrapper extends LockssTestCase {
 
   public void testLinkageError() {
     UrlNormalizer obj = new MockUrlNormalizer();
-    UrlNormalizer wrapper =
-      (UrlNormalizer)WrapperUtil.wrap(obj, UrlNormalizer.class);
+    UrlNormalizer wrapper = WrapperUtil.wrap(obj, UrlNormalizer.class);
     assertTrue(wrapper instanceof UrlNormalizerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockUrlNormalizer);
     Error err = new LinkageError("bar");

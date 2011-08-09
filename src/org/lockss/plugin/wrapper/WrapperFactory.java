@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperFactory.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: WrapperFactory.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -36,5 +36,5 @@ import org.lockss.plugin.*;
 
 /** Factory that creates a wrapper for an instance of a plugin class */
 public interface WrapperFactory {
-  public Object wrap(Object obj);
+  public <T> T wrap(T obj);
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRuleWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestFilterRuleWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -43,8 +43,7 @@ public class TestFilterRuleWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException {
     FilterRule obj = new MockFilterRule();
-    FilterRule wrapper =
-      (FilterRule)WrapperUtil.wrap(obj, FilterRule.class);
+    FilterRule wrapper = WrapperUtil.wrap(obj, FilterRule.class);
     assertTrue(wrapper instanceof FilterRuleWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockFilterRule);
 
@@ -56,8 +55,7 @@ public class TestFilterRuleWrapper extends LockssTestCase {
 
   public void testLinkageError() {
     FilterRule obj = new MockFilterRule();
-    FilterRule wrapper =
-      (FilterRule)WrapperUtil.wrap(obj, FilterRule.class);
+    FilterRule wrapper = WrapperUtil.wrap(obj, FilterRule.class);
     assertTrue(wrapper instanceof FilterRuleWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockFilterRule);
     Error err = new LinkageError("bar");

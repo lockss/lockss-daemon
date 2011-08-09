@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.35 2011-06-07 06:29:47 tlipkis Exp $
+ * $Id: Plugin.java,v 1.36 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ public interface Plugin {
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
    */
-  public Object newAuxClass(String className, Class<?> expectedType);
+  public <T> T newAuxClass(String className, Class<T> expectedType);
 
   /**
    * Return an {@link ArticleMetadataExtractor} that knows how to interpret

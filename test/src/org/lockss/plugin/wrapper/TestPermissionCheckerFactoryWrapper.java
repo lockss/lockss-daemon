@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionCheckerFactoryWrapper.java,v 1.2 2007-08-17 21:41:09 thib_gc Exp $
+ * $Id: TestPermissionCheckerFactoryWrapper.java,v 1.3 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class TestPermissionCheckerFactoryWrapper extends LockssTestCase {
   public void testWrap() throws PluginException {
     PermissionCheckerFactory obj = new MockPermissionCheckerFactory();
     PermissionCheckerFactory wrapper =
-      (PermissionCheckerFactory)WrapperUtil.wrap(obj, PermissionCheckerFactory.class);
+      WrapperUtil.wrap(obj, PermissionCheckerFactory.class);
     assertTrue(wrapper instanceof PermissionCheckerFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockPermissionCheckerFactory);
 
@@ -57,7 +57,7 @@ public class TestPermissionCheckerFactoryWrapper extends LockssTestCase {
   public void testLinkageError() {
     PermissionCheckerFactory obj = new MockPermissionCheckerFactory();
     PermissionCheckerFactory wrapper =
-      (PermissionCheckerFactory)WrapperUtil.wrap(obj, PermissionCheckerFactory.class);
+      WrapperUtil.wrap(obj, PermissionCheckerFactory.class);
     assertTrue(wrapper instanceof PermissionCheckerFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockPermissionCheckerFactory);
     Error err = new LinkageError("bar");

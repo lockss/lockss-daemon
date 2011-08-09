@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterFactoryWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: TestFilterFactoryWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -43,8 +43,7 @@ public class TestFilterFactoryWrapper extends LockssTestCase {
 
   public void testWrap() throws PluginException {
     FilterFactory obj = new MockFilterFactory();
-    FilterFactory wrapper =
-      (FilterFactory)WrapperUtil.wrap(obj, FilterFactory.class);
+    FilterFactory wrapper = WrapperUtil.wrap(obj, FilterFactory.class);
     assertTrue(wrapper instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockFilterFactory);
 
@@ -57,8 +56,7 @@ public class TestFilterFactoryWrapper extends LockssTestCase {
 
   public void testLinkageError() {
     FilterFactory obj = new MockFilterFactory();
-    FilterFactory wrapper =
-      (FilterFactory)WrapperUtil.wrap(obj, FilterFactory.class);
+    FilterFactory wrapper = WrapperUtil.wrap(obj, FilterFactory.class);
     assertTrue(wrapper instanceof FilterFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockFilterFactory);
     Error err = new LinkageError("bar");

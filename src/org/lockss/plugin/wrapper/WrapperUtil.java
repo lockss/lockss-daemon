@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.11 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.12 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class WrapperUtil {
   }  
 
   /** Wrap the object using the wrapper factory registered for inter */
-  public static Object wrap(Object obj, Class inter) {
+  public static <T> T wrap(T obj, Class<? super T> inter) {
 //     ClassLoader objCL = obj.getClass().getClassLoader();
 //     if (WrapperUtil.class.getClassLoader() == objCL) {
 //       log.debug("Not wrapping " + obj.getClass());
@@ -104,7 +104,7 @@ public class WrapperUtil {
       warnNoWrapper(obj);
       return obj;
     }
-    Object wrapped = fact.wrap(obj);
+    T wrapped = fact.wrap(obj);
     log.debug2("Wrapped " + obj);
     return wrapped;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.77 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.78 2011-08-09 04:17:30 tlipkis Exp $
  */
 
 /*
@@ -388,8 +388,7 @@ public abstract class BasePlugin
 	// indicating it's part of a loadable plugin.
 	if (extractor.getClass().getClassLoader() !=
 	    this.getClass().getClassLoader()) {
-	  extractor =
-	    (LinkExtractor) WrapperUtil.wrap(extractor, LinkExtractor.class);
+	  extractor = WrapperUtil.wrap(extractor, LinkExtractor.class);
 	}
 	return extractor;
       } catch (PluginException e) {
@@ -561,9 +560,8 @@ public abstract class BasePlugin
       getArticleMetadataExtractorFactory(target);
     if (fact != null) {
       try {
-	return (ArticleMetadataExtractor)
-	  WrapperUtil.wrap(fact.createArticleMetadataExtractor(target),
-			   ArticleMetadataExtractor.class);
+	return WrapperUtil.wrap(fact.createArticleMetadataExtractor(target),
+				ArticleMetadataExtractor.class);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
@@ -596,9 +594,9 @@ public abstract class BasePlugin
     FileMetadataExtractorFactory fact = mti.getFileMetadataExtractorFactory();
     if (fact != null) {
       try {
-	return (FileMetadataExtractor)
-	  WrapperUtil.wrap(fact.createFileMetadataExtractor(target, contentType),
-			   FileMetadataExtractor.class);
+	return WrapperUtil.wrap(fact.createFileMetadataExtractor(target,
+								 contentType),
+				FileMetadataExtractor.class);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
@@ -631,7 +629,7 @@ public abstract class BasePlugin
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
    */
-  public Object newAuxClass(String className, Class<?> expectedType) {
+  public <T> T newAuxClass(String className, Class<T> expectedType) {
     return newAuxClass(className, expectedType, expectedType);
   }
 
@@ -641,14 +639,14 @@ public abstract class BasePlugin
    * @param wrapperType class to lookup wrapper, or null to not wrap the
    * result
    */
-  public Object newAuxClass(String className, Class<?> expectedType,
-			    Class<?> wrapperType) {
-    Object obj = null;
+  public <T> T newAuxClass(String className, Class<T> expectedType,
+			   Class<T> wrapperType) {
+    T obj = null;
     try {
       if (classLoader != null) {
-	obj = Class.forName(className, true, classLoader).newInstance();
+	obj = ((Class<T>)Class.forName(className, true, classLoader)).newInstance();
       } else {
-	obj = Class.forName(className).newInstance();
+	obj = ((Class<T>)Class.forName(className)).newInstance();
       }
     } catch (ExceptionInInitializerError e) {
       throw auxErr("Initializer error in dynamically loaded class "
