@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.32 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: Configuration.java,v 1.33 2011-08-09 03:59:01 tlipkis Exp $
  */
 
 /*
@@ -279,7 +279,14 @@ public abstract class Configuration {
     return null;
   }
 
+  /** Store as a properties file with a leading comment */
   public abstract boolean store(OutputStream ostr, String header)
+      throws IOException;
+
+  /** Store as a properties file, including the properties in
+   * additionalProps, and with a leading comment,  */
+  public abstract boolean store(OutputStream ostr, String header,
+				Properties additionalProps)
       throws IOException;
 
   /** Return the difference between this instance and another Configuration.  

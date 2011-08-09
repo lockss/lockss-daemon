@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.71 2010-04-02 23:27:53 pgust Exp $
+ * $Id: RemoteApi.java,v 1.72 2011-08-09 03:59:01 tlipkis Exp $
  */
 
 /*
@@ -794,8 +794,11 @@ public class RemoteApi
 				       BackupInfo bi) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
     BatchAuStatus bas = new BatchAuStatus();
+    BatchAuStatus.Entry lastStat = null;
     try {
-      configMgr.doingAuBatch(true);
+      if (doCreate) {
+	configMgr.startAuBatch();
+      }
       for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
 	String pluginKey = (String)iter.next();
 	PluginProxy pluginp = findPluginProxy(pluginKey);
@@ -805,17 +808,33 @@ public class RemoteApi
 	  String auKey = (String)auIter.next();
 	  Configuration auConf = pluginConf.getConfigTree(auKey);
 	  String auid = PluginManager.generateAuId(pluginKey, auKey);
-	  bas.add(batchProcessOneAu(doCreate, addOp,
-				    pluginp, auid, auConf, bi));
+	  lastStat = batchProcessOneAu(doCreate, addOp,
+				       pluginp, auid, auConf, bi);
+	  bas.add(lastStat);
 	}
       }
     } finally {
-      configMgr.doingAuBatch(false);
+      if (doCreate) {
+	try {
+	  configMgr.finishAuBatch();
+	} catch (IOException e) {
+	  batchFinishError(lastStat, e);
+	}
+      }
     }	       
     if (doCreate) {
       configMgr.requestReload();
     }
     return bas;
+  }
+
+  void batchFinishError(BatchAuStatus.Entry lastStat, IOException e) {
+    log.error("finishAuBatch", e);
+    if (lastStat != null) {
+      lastStat.setStatus("Error", STATUS_ORDER_ERROR);
+      lastStat.setExplanation("Error saving AU configurations: " +
+			      e.toString());
+    }
   }
 
   /** Delete a batch of AUs
@@ -824,8 +843,9 @@ public class RemoteApi
    */
   public BatchAuStatus deleteAus(List auids) {
     BatchAuStatus bas = new BatchAuStatus();
+    BatchAuStatus.Entry lastStat = null;
     try {
-      configMgr.doingAuBatch(true);
+      configMgr.startAuBatch();
       for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
 	String auid = (String)iter.next();
 	BatchAuStatus.Entry stat = bas.newEntry(auid);
@@ -835,6 +855,7 @@ public class RemoteApi
 	  try {
 	    pluginMgr.deleteAu(au);
 	    stat.setStatus("Deleted", STATUS_ORDER_NORM);
+	    lastStat = stat;
 	  } catch (Exception e) {
 	    log.warning("Error deleting AU", e);
 	    stat.setStatus("Possibly Not Deleted", STATUS_ORDER_WARN);
@@ -848,7 +869,11 @@ public class RemoteApi
       }
       return bas;
     } finally {
-      configMgr.doingAuBatch(false);
+      try {
+	configMgr.finishAuBatch();
+      } catch (IOException e) {
+	batchFinishError(lastStat, e);
+      }
     }	       
   }
 
@@ -858,8 +883,9 @@ public class RemoteApi
    */
   public BatchAuStatus deactivateAus(List auids) {
     BatchAuStatus bas = new BatchAuStatus();
+    BatchAuStatus.Entry lastStat = null;
     try {
-      configMgr.doingAuBatch(true);
+      configMgr.startAuBatch();
       for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
 	String auid = (String)iter.next();
 	BatchAuStatus.Entry stat = bas.newEntry(auid);
@@ -869,6 +895,7 @@ public class RemoteApi
 	  try {
 	    pluginMgr.deactivateAu(au);
 	    stat.setStatus("Deactivated", STATUS_ORDER_NORM);
+	    lastStat = stat;
 	  } catch (IOException e) {
 	    stat.setStatus("Not Deactivated", STATUS_ORDER_WARN);
 	    stat.setExplanation("Error deleting: " + e.getMessage());
@@ -881,7 +908,11 @@ public class RemoteApi
       }
       return bas;
     } finally {
-      configMgr.doingAuBatch(false);
+      try {
+	configMgr.finishAuBatch();
+      } catch (IOException e) {
+	batchFinishError(lastStat, e);
+      }
     }	       
   }
 

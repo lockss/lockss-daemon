@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.16 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.17 2011-08-09 03:59:00 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.config;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import org.apache.commons.io.*;
+
 import org.lockss.util.*;
 import org.lockss.config.ConfigFile;
 import org.lockss.config.Configuration;
@@ -362,6 +364,38 @@ public class TestConfiguration extends LockssTestCase {
     }
     assertTrue(config.containsKey("prop1"));
     assertFalse( config.containsKey("propnot"));
+  }
+
+  public void testStore() throws Exception {
+    File file = FileTestUtil.tempFile("cfgtest", ".txt");
+    Configuration config = newConfiguration();
+    config.put("fo.o", "x");
+    config.put("baz", "y");
+    config.put("bar", "Fran\u00E7ais");
+    config.put("fo.o3", " leading space");
+    config.put("fo.o1", "y");
+    config.put("Buenos d\u00edas", "Buenos d\u00edas");
+
+
+    OutputStream os = new FileOutputStream(file);
+    Properties addtl =
+      PropUtil.fromArgs("addtl1", "1");
+    config.store(os, "test header", addtl);
+    os.close();
+
+    // ensure result is sorted
+    String[] exp = {
+      "#test header",
+      "#\\w\\w\\w \\w\\w\\w ",		// date
+      "addtl1=1",
+      "Buenos\\\\ d\\\\u00EDas=Buenos d\\\\u00EDas",
+      "bar=Fran\\\\u00E7ais",
+      "baz=y",
+      "fo\\.o=x",
+      "fo\\.o1=y",
+      "fo\\.o3=\\\\ leading space",
+    };
+    assertMatchesREs(exp, FileUtils.readLines(file));
   }
 
   enum TestEnum {x, Y, zZ};

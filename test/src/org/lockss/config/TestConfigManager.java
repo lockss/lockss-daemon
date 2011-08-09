@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.41 2011-02-23 08:40:30 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.42 2011-08-09 03:59:00 tlipkis Exp $
  */
 
 /*
@@ -55,10 +55,12 @@ import static org.lockss.config.ConfigManager.*;
 public class TestConfigManager extends LockssTestCase {
 
   ConfigManager mgr;
+  MyConfigManager mymgr;
 
   public void setUp() throws Exception {
     super.setUp();
-    mgr = ConfigManager.makeConfigManager();
+    mgr = MyConfigManager.makeConfigManager();
+    mymgr = (MyConfigManager)mgr;
   }
 
   public void tearDown() throws Exception {
@@ -792,6 +794,16 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.isLegalExpertConfigKey("org.lockss.config.expert.allow"));
   }
 
+  void assertWriteArgs(Configuration expConfig, String expCacheConfigFileName,
+		       String expHeader, boolean expSuppressReload, List args) {
+    if (expConfig != null) assertEquals(expConfig, args.get(0));
+    if (expCacheConfigFileName != null)
+      assertEquals(expCacheConfigFileName, args.get(1));
+    if (expHeader != null) assertEquals(expHeader, args.get(2));
+    assertEquals(expSuppressReload, args.get(3));
+  }
+
+
   public void testUpdateAuConfig() throws Exception {
     String tmpdir = getTempDir().toString();
     // establish cache config dir
@@ -806,8 +818,13 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = CurrentConfig.getCurrentConfig();
     assertNull(config.get("org.lockss.au.auid.foo"));
 
+    assertEmpty(mymgr.writeArgs);
     // should create file first time
     mgr.updateAuConfigFile(p, "org.lockss.au.fooauid");
+    // check that file was written (see testBatchUpdateAuConfig())
+    assertEquals(1, mymgr.writeArgs.size());
+    assertWriteArgs(null, "au.txt", null, false, mymgr.writeArgs.get(0));
+
 
     // next update should load au config file
     assertTrue(mgr.updateConfig());
@@ -826,6 +843,8 @@ public class TestConfigManager extends LockssTestCase {
     updateAuLastModified(TimeBase.nowMs() + Constants.SECOND);
 
     mgr.updateAuConfigFile(p, "org.lockss.au.auid");
+    assertEquals(2, mymgr.writeArgs.size());
+    assertWriteArgs(null, "au.txt", null, false, mymgr.writeArgs.get(0));
 
     // next update should load au config file
     assertTrue(mgr.updateConfig());
@@ -850,6 +869,77 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(null, config.get("org.lockss.au.fooauid.baz"));
     assertEquals("11", config.get("org.lockss.au.auid.foo"));
     assertEquals("22", config.get("org.lockss.au.auid.bar"));
+  }
+
+  public void testBatchUpdateAuConfig() throws Exception {
+    String tmpdir = getTempDir().toString();
+    Configuration allConfig = ConfigManager.newConfiguration();
+    // establish cache config dir
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir,
+				  ConfigManager.PARAM_MAX_DEFERRED_AU_BATCH_SIZE,
+				  "3");
+
+    Properties p = new Properties();
+    p.put("org.lockss.au.auid11.foo", "111");
+    p.put("org.lockss.au.auid11.bar", "222");
+    p.put("org.lockss.au.auid11.baz", "333");
+
+    allConfig.copyFrom(ConfigurationUtil.fromProps(p));
+    Configuration config = CurrentConfig.getCurrentConfig();
+    assertNull(config.get("org.lockss.au.auid11.foo"));
+
+    mgr.startAuBatch();
+    mgr.updateAuConfigFile(p, "org.lockss.au.auid11");
+
+    // should be no update available
+    assertFalse(mgr.updateConfig());
+    config = CurrentConfig.getCurrentConfig();
+    assertNull(config.get("org.lockss.au.auid11.foo"));
+
+    // add au 2
+    p = new Properties();
+    p.put("org.lockss.auid22.foo", "11");
+    p.put("org.lockss.auid22.bar", "22");
+    allConfig.copyFrom(ConfigurationUtil.fromProps(p));
+
+    updateAuLastModified(TimeBase.nowMs() + Constants.SECOND);
+
+    mgr.updateAuConfigFile(p, "org.lockss.auid22");
+    assertEmpty(mymgr.writeArgs);
+
+    // still no file
+    assertFalse(mgr.updateConfig());
+    config = CurrentConfig.getCurrentConfig();
+    assertNull(config.get("org.lockss.auid22.foo"));
+
+    // add au 3
+    p = new Properties();
+    p.put("org.lockss.auid33.foo", "11");
+    p.put("org.lockss.auid33.bar", "22");
+    allConfig.copyFrom(ConfigurationUtil.fromProps(p));
+
+    updateAuLastModified(TimeBase.nowMs() + Constants.SECOND);
+
+    mgr.updateAuConfigFile(p, "org.lockss.auid33");
+    assertEquals(1, mymgr.writeArgs.size());
+    assertWriteArgs(allConfig, "au.txt", null, true, mymgr.writeArgs.get(0));
+
+    // add au 4
+    p = new Properties();
+    p.put("org.lockss.auid44.foo", "11");
+    p.put("org.lockss.auid44.bar", "22");
+    allConfig.copyFrom(ConfigurationUtil.fromProps(p));
+
+    updateAuLastModified(TimeBase.nowMs() + Constants.SECOND);
+
+    mgr.updateAuConfigFile(p, "org.lockss.auid44");
+    assertEquals(1, mymgr.writeArgs.size());
+
+    mgr.finishAuBatch();
+    allConfig.put("org.lockss.config.fileVersion.au", "1");
+    assertEquals(2, mymgr.writeArgs.size());
+    assertWriteArgs(allConfig, "au.txt", null, true, mymgr.writeArgs.get(1));
   }
 
   void updateAuLastModified(long time) {
@@ -1139,4 +1229,25 @@ public class TestConfigManager extends LockssTestCase {
   private Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
   }
+
+  static class MyConfigManager extends ConfigManager {
+    List<List> writeArgs = new ArrayList<List>();
+
+    public static ConfigManager makeConfigManager() {
+      theMgr = new MyConfigManager();
+      return theMgr;
+    }
+
+    @Override
+    public synchronized void writeCacheConfigFile(Configuration config,
+						  String cacheConfigFileName,
+						  String header,
+						  boolean suppressReload)
+	throws IOException {
+      super.writeCacheConfigFile(config, cacheConfigFileName,
+				 header, suppressReload);
+      writeArgs.add(ListUtil.list(config, cacheConfigFileName, header, suppressReload));
+    }
+  }
+
 }

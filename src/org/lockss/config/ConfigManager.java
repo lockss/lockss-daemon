@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.85 2011-06-29 07:06:33 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.86 2011-08-09 03:59:01 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,12 @@ public class ConfigManager implements LockssManager {
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
   /** Root of TitleDB definitions.  */
+  public static final String PARAM_MAX_DEFERRED_AU_BATCH_SIZE =
+    MYPREFIX + "maxDeferredAuBatchSize";
+  public static final int DEFAULT_MAX_DEFERRED_AU_BATCH_SIZE = 100;
+
+  /** Maximum number of AU config changes to to save up during a batch add
+   * or remove operation, before writing them to au.txt  */
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
   /** Prefix of TitleDB definitions.  */
   public static final String PREFIX_TITLE_DB = PARAM_TITLE_DB + ".";
@@ -407,7 +413,8 @@ public class ConfigManager implements LockssManager {
 
   private List configChangedCallbacks = new ArrayList();
 
-  private List cacheConfigFileList = null;
+  private List<LocalFileDescr> cacheConfigFileList = null;
+
   private List configUrlList;		// list of config file urls
   // XXX needs synchronization
   private List titledbUrlList;		// global titledb urls
@@ -444,6 +451,7 @@ public class ConfigManager implements LockssManager {
 
   private long reloadInterval = 10 * Constants.MINUTE;
   private long sendVersionEvery = DEFAULT_SEND_VERSION_EVERY;
+  private int maxDeferredAuBatchSize = DEFAULT_MAX_DEFERRED_AU_BATCH_SIZE;
 
   private List<Pattern> expertConfigAllowPats;
   private List<Pattern> expertConfigDenyPats;
@@ -506,7 +514,7 @@ public class ConfigManager implements LockssManager {
   public LockssApp getApp() {
     return theApp;
   }
-  private static ConfigManager theMgr;
+  protected static ConfigManager theMgr;
 
   public static ConfigManager makeConfigManager() {
     theMgr = new ConfigManager();
@@ -1179,13 +1187,14 @@ public class ConfigManager implements LockssManager {
 				   Configuration oldConfig,
 				   Configuration.Differences changedKeys) {
 
-    if (changedKeys.contains(PARAM_RELOAD_INTERVAL)) {
+    if (changedKeys.contains(MYPREFIX)) {
       reloadInterval = config.getTimeInterval(PARAM_RELOAD_INTERVAL,
 					      DEFAULT_RELOAD_INTERVAL);
-    }
-    if (changedKeys.contains(PARAM_SEND_VERSION_EVERY)) {
       sendVersionEvery = config.getTimeInterval(PARAM_SEND_VERSION_EVERY,
 						DEFAULT_SEND_VERSION_EVERY);
+      maxDeferredAuBatchSize =
+	config.getInt(PARAM_MAX_DEFERRED_AU_BATCH_SIZE,
+		      DEFAULT_MAX_DEFERRED_AU_BATCH_SIZE);
     }
 
     if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
@@ -1788,7 +1797,7 @@ public class ConfigManager implements LockssManager {
 						String cacheConfigFileName,
 						String header)
       throws IOException {
-    writeCacheConfigFile(config, cacheConfigFileName, header, false, false);
+    writeCacheConfigFile(config, cacheConfigFileName, header, false);
   }
 
   /** Write the named local cache config file into the previously determined
@@ -1800,8 +1809,7 @@ public class ConfigManager implements LockssManager {
   public synchronized void writeCacheConfigFile(Configuration config,
 						String cacheConfigFileName,
 						String header,
-						boolean suppressReload,
-						boolean mayAlterConfig)
+						boolean suppressReload)
       throws IOException {
     if (cacheConfigDir == null) {
       log.warning("Attempting to write cache config file: " +
@@ -1811,17 +1819,15 @@ public class ConfigManager implements LockssManager {
     // Write to a temp file and rename
     File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
     OutputStream os = new FileOutputStream(tempfile);
-
-    Configuration tmpConfig;
-    if (mayAlterConfig && !config.isSealed()) {
-      tmpConfig = config;
-    } else {
-      // make a copy and add the config file version number, write the copy
-      tmpConfig = config.copy();
+    // Add fileversion iff it's not already there.
+    Properties addtl = null;
+    String verProp = configVersionProp(cacheConfigFileName);
+    String verVal = "1";
+    if (!verVal.equals(config.get(verProp))) {
+      addtl = new Properties();
+      addtl.put(verProp, verVal);
     }
-    tmpConfig.put(configVersionProp(cacheConfigFileName), "1");
-    tmpConfig.seal();
-    tmpConfig.store(os, header);
+    config.store(os, header, addtl);
     os.close();
     File cfile = new File(cacheConfigDir, cacheConfigFileName);
     if (!PlatformUtil.updateAtomically(tempfile, cfile)) {
@@ -1831,7 +1837,7 @@ public class ConfigManager implements LockssManager {
     log.debug2("Wrote cache config file: " + cfile);
     ConfigFile cf = configCache.get(cfile.toString());
     if (cf instanceof FileConfigFile) {
-      ((FileConfigFile)cf).storedConfig(tmpConfig);
+      ((FileConfigFile)cf).storedConfig(config);
     } else {
       log.warning("Not a FileConfigFile: " + cf);
     }
@@ -1890,6 +1896,55 @@ public class ConfigManager implements LockssManager {
 				    "<filename>", noExt);
   }
 
+  /* Support for batching changes to au.txt, and to prevent a config
+   * reload from being triggered each time the AU config file is rewritten.
+   * Clients who call startAuBatch() <b>must</b> call finishAuBatch() when
+   * done (in a <code>finally</code>), then call requestReload() if
+   * appropriate */
+
+  private int auBatchDepth = 0;
+  private Configuration deferredAuConfig;
+  private List<String> deferredAuDeleteKeys;
+  private int deferredAuBatchSize;
+
+  /** Called before a batch of calls to {@link
+   * #updateAuConfigFile(Properties, String)} or {@link
+   * #updateAuConfigFile(Configuration, String)}, causes updates to be
+   * accumulated in memory, up to a maximum of {@link
+   * #PARAM_MAX_DEFERRED_AU_BATCH_SIZE}, before they are all written to
+   * disk.  {@link #finishAuBatch()} <b>MUST</b> be called at the end of
+   * the batch, to ensure the final batch is written.  All removals
+   * (<code>auPropKey</code> arg to updateAuConfigFile) in a batch are
+   * performed before any additions, so the result of the same sequence of
+   * updates in batched and non-batched mode is not necessarily equivalent.
+   * It is guaranteed to be so if no AU is updated more than once in the
+   * batch.  <br>This speeds up batch AU addition/deletion by a couple
+   * orders of magnitude, which will suffice until the AU config is moved
+   * to a database.
+   */
+  public synchronized void startAuBatch() {
+    auBatchDepth++;
+  }
+
+  public synchronized void finishAuBatch() throws IOException {
+    executeDeferredAuBatch();
+    if (--auBatchDepth < 0) {
+      log.warning("auBatchDepth want negative, resetting to zero",
+		  new Throwable("Marker"));
+      auBatchDepth = 0;
+    }
+  }
+
+  private void executeDeferredAuBatch() throws IOException {
+    if (deferredAuConfig != null &&
+	(!deferredAuConfig.isEmpty() || !deferredAuDeleteKeys.isEmpty())) {
+      updateAuConfigFile(deferredAuConfig, deferredAuDeleteKeys);
+      deferredAuConfig = null;
+      deferredAuDeleteKeys = null;
+      deferredAuBatchSize = 0;
+    }
+  }
+
   /** Replace one AU's config keys in the local AU config file.
    * @param auProps new properties for AU
    * @param auPropKey the common initial part of all keys in the AU's config
@@ -1903,7 +1958,34 @@ public class ConfigManager implements LockssManager {
    * @param auConfig new config for AU
    * @param auPropKey the common initial part of all keys in the AU's config
    */
-  public void updateAuConfigFile(Configuration auConfig, String auPropKey)
+  public synchronized void updateAuConfigFile(Configuration auConfig,
+					      String auPropKey)
+      throws IOException {
+    if (auBatchDepth > 0) {
+      if (deferredAuConfig == null) {
+	deferredAuConfig = newConfiguration();
+	deferredAuDeleteKeys = new ArrayList<String>();
+	deferredAuBatchSize = 0;
+      }
+      deferredAuConfig.copyFrom(auConfig);
+      if (auPropKey != null) {
+	deferredAuDeleteKeys.add(auPropKey);
+      }
+      if (++deferredAuBatchSize >= maxDeferredAuBatchSize) {
+	executeDeferredAuBatch();
+      }
+    } else {
+      updateAuConfigFile(auConfig,
+			 auPropKey == null ? null : ListUtil.list(auPropKey));
+    }
+  }
+
+  /** Replace one or more AUs' config keys in the local AU config file.
+   * @param auConfig new config for the AUs
+   * @param auPropKeys list of au subtree roots to remove
+   */
+  private void updateAuConfigFile(Configuration auConfig,
+				  List<String> auPropKeys)
       throws IOException {
     Configuration fileConfig;
     try {
@@ -1914,16 +1996,21 @@ public class ConfigManager implements LockssManager {
     if (fileConfig.isSealed()) {
       fileConfig = fileConfig.copy();
     }
-    // first remove all existing values for the AU
-    if (auPropKey != null) {
-      fileConfig.removeConfigTree(auPropKey);
+    // first remove all existing values for the AUs
+    if (auPropKeys != null) {
+      for (String key : auPropKeys) {
+	fileConfig.removeConfigTree(key);
+      }
     }
+    // then add the new config
     for (Iterator iter = auConfig.keySet().iterator(); iter.hasNext();) {
       String key = (String)iter.next();
       fileConfig.put(key, auConfig.get(key));
     }
+    // seal it so FileConfigFile.storedConfig() won't have to make a copy
+    fileConfig.seal();
     writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG,
-			 "AU Configuration", isDoingAuBatch, true);
+			 "AU Configuration", auBatchDepth > 0);
   }
 
   /**
@@ -2043,17 +2130,6 @@ public class ConfigManager implements LockssManager {
 
     // Write out file
     writeCacheConfigFile(fileConfig, cacheConfigFileName, header);
-  }
-
-  private boolean isDoingAuBatch = false;
-
-  /** hack to allow batch AU config operations to prevent a config reload
-   * from being triggered each time the AU config file is rewritten.
-   * Clients who set this true <b>must</b> reset it false when they are
-   * done (in a <code>finally</code>), and call requestReload() if
-   * appropriate */
-  public void doingAuBatch(boolean flg) {
-    isDoingAuBatch = flg;
   }
 
   // Testing assistance

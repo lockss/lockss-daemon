@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.12 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.13 2011-08-09 03:59:01 tlipkis Exp $
  */
 
 /*
@@ -59,10 +59,200 @@ public class ConfigurationPropTreeImpl extends Configuration {
   }
 
   public boolean store(OutputStream ostr, String header) throws IOException {
-    SortedProperties.fromProperties(props).store(ostr, header);
-//     props.store(ostr, header);
+    return store(ostr, header, null);
+  }
+
+  // Based on Properties#store(), modified to output additional properties
+  // first, and the main set of properties alphabetically
+  public boolean store(OutputStream out, String comments,
+		       Properties additionalProps)
+      throws IOException {
+    if (additionalProps != null) {
+      // If we were given additional props, write them first with the
+      // comment, then write ourself with no comment or date
+      additionalProps.store(out, comments);
+      store0(new BufferedWriter(new OutputStreamWriter(out, "8859_1")),
+	     null, false, true);
+    } else {
+      // else write ourself with the comment and date
+      store0(new BufferedWriter(new OutputStreamWriter(out, "8859_1")),
+	     comments, true, true);
+    }
     return true;
   }
+
+  private void store0(BufferedWriter bw, String comments,
+		      boolean addDateComment,
+		      boolean escUnicode)
+      throws IOException {
+    if (comments != null) {
+      writeComments(bw, comments);
+    }
+    if (addDateComment) {
+      bw.write("#" + new Date().toString());
+      bw.newLine();
+    }
+    synchronized (this) {
+      for (String key : sortedKeys()) {
+	String val = (String)get(key);
+	key = saveConvert(key, true, escUnicode);
+	// No need to escape embedded and trailing spaces for value
+	val = saveConvert(val, false, escUnicode);
+	bw.write(key);
+	bw.write("=");
+	bw.write(val);
+	bw.newLine();
+      }
+    }
+    bw.flush();
+  }
+
+  private Collection<String> sortedKeys() {
+     return new TreeSet(props.keySet());
+  }
+
+  private static void writeComments(BufferedWriter bw, String comments) 
+      throws IOException {
+    bw.write("#");
+    int len = comments.length();  
+    int current = 0;
+    int last = 0;
+    char[] uu = new char[6];
+    uu[0] = '\\';
+    uu[1] = 'u';
+    while (current < len) {
+      char c = comments.charAt(current);
+      if (c > '\u00ff' || c == '\n' || c == '\r') {
+	if (last != current) 
+	  bw.write(comments.substring(last, current));
+	if (c > '\u00ff') {
+	  uu[2] = toHex((c >> 12) & 0xf);
+	  uu[3] = toHex((c >>  8) & 0xf);
+	  uu[4] = toHex((c >>  4) & 0xf);
+	  uu[5] = toHex( c        & 0xf);
+	  bw.write(new String(uu));
+	} else {
+	  bw.newLine();
+	  if (c == '\r' && 
+	      current != len - 1 && 
+	      comments.charAt(current + 1) == '\n') {
+	    current++;
+	  }
+	  if (current == len - 1 ||
+	      (comments.charAt(current + 1) != '#' &&
+	       comments.charAt(current + 1) != '!'))
+	    bw.write("#");
+	}
+	last = current + 1;
+      } 
+      current++;
+    }
+    if (last != current) 
+      bw.write(comments.substring(last, current));
+    bw.newLine();
+  }
+
+  /*
+   * Converts unicodes to encoded &#92;uxxxx and escapes
+   * special characters with a preceding slash
+   */
+  // Based on Properties#saveConvert() with efficiency tweaks
+  private String saveConvert(String theString,
+			     boolean escapeSpace,
+			     boolean escapeUnicode) {
+    int len = theString.length();
+    boolean needEscape = false;
+    for (int ix = 0; ix < len; ix++) {
+      char aChar = theString.charAt(ix);
+      switch(aChar) {
+      case ' ':
+	needEscape = (ix == 0 || escapeSpace);
+	break;
+      case '\\':
+      case '\t':
+      case '\n':
+      case '\r':
+      case '\f':
+      case '=':
+      case ':':
+      case '#':
+      case '!':
+	needEscape = true;
+	break;
+      default:
+	needEscape = (escapeUnicode && ((aChar < 0x0020) || (aChar > 0x007e)));
+	break;
+      }
+      if (needEscape) {
+	int bufLen = len * 2;
+	if (bufLen < 0) {
+	  bufLen = Integer.MAX_VALUE;
+	}
+	StringBuilder sb = new StringBuilder(bufLen);
+	sb.append(theString, 0, ix);
+	for (int iy = ix; iy < len; iy++) {
+	  aChar = theString.charAt(iy);
+	  // Handle common case first, selecting largest block that
+	  // avoids the specials below
+	  if ((aChar > 61) && (aChar < 127)) {
+	    if (aChar == '\\') {
+	      sb.append('\\');
+	    }
+	    sb.append(aChar);
+	    continue;
+	  }
+	  switch(aChar) {
+	  case ' ':
+	    if (iy == 0 || escapeSpace) {
+	      sb.append('\\');
+	    }
+	    sb.append(' ');
+	    break;
+	  case '\t':sb.append('\\'); sb.append('t');
+	    break;
+	  case '\n':sb.append('\\'); sb.append('n');
+	    break;
+	  case '\r':sb.append('\\'); sb.append('r');
+	    break;
+	  case '\f':sb.append('\\'); sb.append('f');
+	    break;
+	  case '=': // Fall through
+	  case ':': // Fall through
+	  case '#': // Fall through
+	  case '!':
+	    sb.append('\\'); sb.append(aChar);
+	    break;
+	  default:
+	    if (escapeUnicode && ((aChar < 0x0020) || (aChar > 0x007e))) {
+	      sb.append('\\');
+	      sb.append('u');
+	      sb.append(toHex((aChar >> 12) & 0xF));
+	      sb.append(toHex((aChar >>  8) & 0xF));
+	      sb.append(toHex((aChar >>  4) & 0xF));
+	      sb.append(toHex( aChar        & 0xF));
+	    } else {
+	      sb.append(aChar);
+	    }
+	  }
+	}
+	return sb.toString();
+      }
+    }
+    return theString;
+  }
+
+  /**
+   * Convert a nibble to a hex character
+   * @param	nibble	the nibble to convert.
+   */
+  private static char toHex(int nibble) {
+    return hexDigit[(nibble & 0xF)];
+  }
+
+  /** A table of hex digits */
+  private static final char[] hexDigit = {
+    '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'
+  };
 
   /**
    * Reset this instance.
