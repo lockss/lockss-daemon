@@ -19,6 +19,6 @@ org.lockss.platform.sysadminemail=<email-addr>
 
 To run:
   cd test/frameworks/run_dev
-  ./start -p <prop-url>
+  ./start -p <prop-url> -g <PLN-name>
   ...   (connect to daemon on port 8081)
   ./stop
