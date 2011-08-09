@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.102 2011-03-13 21:52:19 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.103 2011-08-09 04:00:31 tlipkis Exp $
  */
 
 /*
@@ -1505,6 +1505,31 @@ public class LockssTestCase extends TestCase {
 	regexp.getPattern();
     }
     assertFalse(msg, isMatchRe(string, regexp));
+  }
+
+  /**
+   * Asserts that a collection of strings matches a collection of regular
+   * expressions.  The matches are unanchored; use "^...$" to ensure that
+   * the entire string is matched.
+   */
+  public static void assertMatchesREs(String[] regexps,
+				      Collection<String> strings) {
+    assertMatchesREs(null, regexps, strings);
+  }
+
+  /**
+   * Asserts that a collection of strings matches a collection of regular
+   * expressions.  The matches are unanchored; use "^...$" to ensure that
+   * the entire string is matched.
+   */
+  public static void assertMatchesREs(String msg,
+				      String[] regexps,
+				      Collection<String> strings) {
+    int ix = 0;
+    for (String str : strings) {
+      assertMatchesRE(msg, regexps[ix++], str);
+    }
+    assertEquals("length", regexps.length, strings.size());
   }
 
   /** Assert that a collection cannot be modified, <i>ie</i>, that all of
