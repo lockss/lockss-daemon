@@ -126,6 +126,7 @@
     <string>plugin_cache_result_list</string>
     <list>
       <string>400=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+      <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
   <entry>
