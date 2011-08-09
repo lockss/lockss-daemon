@@ -1,5 +1,5 @@
 /*
- * $Id: MockFactories.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: MockFactories.java,v 1.5 2011-08-09 04:18:33 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.io.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
