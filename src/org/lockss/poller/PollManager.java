@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.215 2011-06-21 22:08:29 tlipkis Exp $
+ * $Id: PollManager.java,v 1.216 2011-08-09 04:17:49 tlipkis Exp $
  */
 
 /*
@@ -1483,6 +1483,11 @@ public class PollManager
         File poller = new File(dirs[ix],
                                V3PollerSerializer.POLLER_STATE_BEAN);
         if (poller.exists()) {
+	  if (paramDiscardSavedPolls) {
+	    theLog.debug("Discarding poll in directory " + dirs[ix]);
+	    FileUtil.delTree(dirs[ix]);
+	    continue;
+	  }
           // Add this poll dir to the serialized polls map.
           try {
             V3PollerSerializer pollSerializer =
@@ -1490,9 +1495,8 @@ public class PollManager
             PollerStateBean psb = pollSerializer.loadPollerState();
             // Check to see if this poll has expired.
             boolean expired = psb.getPollDeadline() <= TimeBase.nowMs();
-            if (paramDiscardSavedPolls || expired) {
-              theLog.debug("Discarding poll " + (expired ? "(expired) " : "")
-			   + "in directory " + dirs[ix]);
+            if (expired) {
+              theLog.debug("Discarding expires poll in directory " + dirs[ix]);
               FileUtil.delTree(dirs[ix]);
               continue;
             }
@@ -1523,7 +1527,12 @@ public class PollManager
       if (enableVoters) {
         File voter = new File(dirs[ix],
                               V3VoterSerializer.VOTER_USER_DATA_FILE);
-        if (voter != null && voter.exists()) {
+        if (voter.exists()) {
+	  if (paramDiscardSavedPolls) {
+	    theLog.debug("Discarding vote in directory " + dirs[ix]);
+	    FileUtil.delTree(dirs[ix]);
+	    continue;
+	  }
           theLog.info("Found serialized voter in file: " + voter);
           try {
             V3VoterSerializer voterSerializer =
@@ -1531,9 +1540,8 @@ public class PollManager
             VoterUserData vd = voterSerializer.loadVoterUserData();
             // Check to see if this poll has expired.
             boolean expired = vd.getDeadline() <= TimeBase.nowMs();
-            if (paramDiscardSavedPolls || expired) {
-              theLog.debug("Discarding vote " + (expired ? "(expired) " : "")
-			   + "in directory " + dirs[ix]);
+            if (expired) {
+              theLog.debug("Discarding expired vote in directory " + dirs[ix]);
               FileUtil.delTree(dirs[ix]);
               continue;
             }
