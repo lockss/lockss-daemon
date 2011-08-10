@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.8 2011-08-08 11:43:35 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.9 2011-08-10 14:21:25 easyonthemayo Exp $
  */
 
 /*
@@ -53,11 +53,12 @@ import org.lockss.util.UrlUtil;
  * that provides default output such as a concatenated string representation 
  * or a property iterator, should provide them in the appropriate order.
  * For that reason they are stored as a SortedMap with a value for every field.
- * Null values are not allowed; an unused field returns the empty string as its value.
+ * Null values are not allowed; an unused field returns the empty string as its
+ * value.
  * <p>
- * Future enhancements might include format checking (currently performed externally) 
- * and normalisation, and defaults for field values. In particular, here are some of the 
- * more pressing recommendations taken from 
+ * Future enhancements might include format checking (currently performed 
+ * externally) and normalisation, and defaults for field values. In particular, 
+ * here are some of the more pressing recommendations taken from
  * <emph>KBART Phase I Recommended Practice</emph> document NISO-RP-9-2010
  * ({@url http://www.uksg.org/kbart/s1/summary})
  * along with their section references:
@@ -68,10 +69,11 @@ import org.lockss.util.UrlUtil;
  *  <li>Date formats should be ISO 8601, using as much of the YYYY-MM-DD format as necessary (5.3.2.5)</li>
  * </ul>
  * <p>
- * Note that this object implements <code>Comparable</code> so that a collection may be ordered.
- * This ordering is simply an alphabetic ordering of <code>KbartTitle</code> names.
- * This should perhaps be removed or adapted in favour of the more sophisticated AlphanumericComparator,
- * which accounts for the <i>magnitude</i> of numerical tokens. 
+ * Note that this object implements <code>Comparable</code> so that a 
+ * collection may be ordered. This ordering is simply an alphabetic ordering 
+ * of <code>KbartTitle</code> names. This should perhaps be removed or adapted 
+ * in favour of the more sophisticated AlphanumericComparator, which accounts 
+ * for the <i>magnitude</i> of numerical tokens. 
  * 
  * @author Neil Mayo
  */
@@ -116,9 +118,10 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     });
     
   /**
-   * Set the value of a field. If the field is null, nothing is added. If the value is null, 
-   * an empty value is added for the field. Some normalisation is performed; tabs are converted 
-   * to spaces and the string is made conformant to UTF-8.
+   * Set the value of a field. If the field is null, nothing is added. If the 
+   * value is null, an empty value is added for the field. Some normalisation 
+   * is performed; tabs are converted to spaces and the string is made 
+   * conformant to UTF-8.
    * 
    * @param field the Field to set
    * @param value the string value to give the field
@@ -152,8 +155,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   }
   
   /**
-   * Attempts to return a valid ISSN from the title's fields. If no ISSN, an eISSN is returned. 
-   * If neither is set, an empty string is returned.
+   * Attempts to return a valid ISSN from the title's fields. If no ISSN, 
+   * an eISSN is returned. If neither is set, an empty string is returned.
    * @return a valid issn, eissn, or the empty string
    */
   /*public String getValidIssnIdentifier() {
@@ -162,8 +165,9 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   }*/
 
   /**
-   * Construct a parameter string for LOCKSS Resolver URLs. Depending on what is available, one
-   * of the following sets of arguments is used. These are in order of preference, most to least:
+   * Construct a parameter string for LOCKSS Resolver URLs. Depending on what 
+   * is available, one of the following sets of arguments is used. These are 
+   * in order of preference, most to least:
    * <ul>
    *   <li>eISSN</li>
    *   <li>ISSN</li>
@@ -292,19 +296,20 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * Note that they are ordinal - the fields should be emitted in the order
    * given below, which the Java Enum class will number from zero.
    * <p>
-   * Each field also has a sort type, which specifies how each field will be ordered
-   * if such a thing is requested. The options are enumerated in the SortType enum and 
-   * allow for date ordering, numeric (magnitude) ordering, alphanumeric ordering (hybrid
-   * of string and numerical ordering as appropriate), or plain string ordering.
-   * By default any string comparison is performed according to the 
-   * <code>CASE_SENSITIVITY_DEFAULT</code> flag in Field but this can be overridden in the 
-   * comparator constructors.
+   * Each field also has a sort type, which specifies how each field will be 
+   * ordered if such a thing is requested. The options are enumerated in the 
+   * SortType enum and allow for date ordering, numeric (magnitude) ordering, 
+   * alphanumeric ordering (hybrid of string and numerical ordering as 
+   * appropriate), or plain string ordering. By default any string comparison 
+   * is performed according to the <code>CASE_SENSITIVITY_DEFAULT</code> flag 
+   * in Field but this can be overridden in the comparator constructors.
    * <p>
-   * If a sort type is not specified, the field defaults to plain string comparison. 
-   * Note that if there is any chance of a supposedly numerical field containing
-   * text, it might be safer to declare that field as alphanumerical. Although this will be less 
-   * efficient it should provide the desired effect. Examples of such fields are the 
-   * volume and issue number fields, which very occasionally have textual or mixed 'numbers'.
+   * If a sort type is not specified, the field defaults to plain string 
+   * comparison. Note that if there is any chance of a supposedly numerical 
+   * field containing text, it might be safer to declare that field as 
+   * alphanumerical. Although this will be less efficient it should provide the
+   * desired effect. Examples of such fields are the volume and issue number 
+   * fields, which very occasionally have textual or mixed 'numbers'.
    * 
    */
   public static enum Field {

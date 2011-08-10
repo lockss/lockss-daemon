@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.15 2011-08-08 11:43:35 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.16 2011-08-10 14:21:24 easyonthemayo Exp $
  */
 
 /*
@@ -267,10 +267,11 @@ public class KbartConverter {
    * title will yield multiple KbartTitles if it has gaps in its 
    * coverage of greater than a year, in accordance with KBART 5.3.1.9.
    * Each KbartTitle is created with a publication title and an identifier which
-   * is a valid ISSN. An attempt is made to fill the first/last issue/volume fields.
-   * The title URL is set to a substitution parameter and issn argument. The parameter
-   * can be substituted during URL resolution to the local URL to ServeContent. 
-   * There are several other KBART fields for which the information is not available.
+   * is a valid ISSN. An attempt is made to fill the first/last issue/volume 
+   * fields. The title URL is set to a substitution parameter and issn argument. 
+   * The parameter can be substituted during URL resolution to the local URL to 
+   * ServeContent. There are several other KBART fields for which the information 
+   * is not available.
    * <p>
    * An attempt is made to fill the following KBART fields:
    * <ul>
@@ -295,8 +296,8 @@ public class KbartConverter {
    *   <li>coverage_notes (free text field, may be used for PEPRS data)</li>
    * </ul>
    * <p>
-   * We assume AUs are listed in order from earliest to most recent, when they are
-   * listed alphabetically by name.
+   * We assume AUs are listed in order from earliest to most recent, when they 
+   * are listed alphabetically by name.
    * 
    * @param aus a list of TdbAus relating to a single title
    * @return a list of KbartTitle objects
@@ -652,20 +653,27 @@ public class KbartConverter {
   }
 
   /**
-   * Establish coverage gaps for the list of AUs, and return a list of title ranges, representing coverage 
-   * periods which can be turned directly into title records. The method firsts gets a list of either volumes or 
-   * years for the AUs, and uses them to figure out where the titles need to be split into ranges. If consecutive 
-   * AUs have a difference of more than 1 between their coverage values, it is considered a coverage gap.
-   * If no volumes or years could be established, the single full range of the list is returned.
+   * Establish coverage gaps for the list of AUs, and return a list of title 
+   * ranges, representing coverage periods which can be turned directly into 
+   * title records. The method firsts gets a list of either volumes or years 
+   * for the AUs, and uses them to figure out where the titles need to be 
+   * split into ranges. If consecutive AUs have a difference of more than 1 
+   * between their coverage values, it is considered a coverage gap. If no 
+   * volumes or years could be established, the single full range of the list 
+   * is returned.
    * <p>
-   * The volume information is considered preferentially, as it is more likely to give an indication of 
-   * a true coverage gap; in particular there are cases where a journal is released less frequently than 
-   * annually, so there is no actual coverage gap but the criteria recommended by KBART in 5.3.1.9 will 
-   * result in one. This point of the recommendations is particularly ambiguous and will be referred to 
-   * the KBART organisation. In the meantime this algorithm represents our own interpretation of "coverage gap".   
+   * The volume information is considered preferentially, as it is more likely 
+   * to give an indication of a true coverage gap; in particular there are 
+   * cases where a journal is released less frequently than annually, so 
+   * there is no actual coverage gap but the criteria recommended by KBART in 
+   * 5.3.1.9 will result in one. This point of the recommendations is 
+   * particularly ambiguous and will be referred to the KBART organisation. 
+   * In the meantime this algorithm represents our own interpretation of 
+   * "coverage gap".   
    * <p>
-   * Finally, if the last range in a title spans to the current year, we leave the last year, volume 
-   * and issue fields empty as suggested by KBART 5.3.2.8 - 5.3.2.10.
+   * Finally, if the last range in a title spans to the current year, we leave 
+   * the last year, volume and issue fields empty as suggested by 
+   * KBART 5.3.2.8 - 5.3.2.10.
    * 
    * @param aus ordered list of AUs
    * @return a TitleRangeInfo containing a similarly-ordered list of TitleRange objects 
@@ -685,23 +693,28 @@ public class KbartConverter {
       List<TitleRange> ranges = new ArrayList<TitleRange>() {{
 	add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
       }};
-      log.warning(aus.get(0).getTdbTitle().getName()+" lacks a complete and consistent set of vols or years; returning single range.");
+      log.warning(aus.get(0).getTdbTitle().getName() 
+	  + " lacks a complete and consistent set of vols or years;"
+	  + " returning single range.");
       return new TitleRangeInfo(ranges);
     }
 
-    List<TitleRange> ranges = hasVols ? getAuCoverageRangesImpl(aus, vols, years) : getAuCoverageRangesImpl(aus, years, years);
+    List<TitleRange> ranges = hasVols ? getAuCoverageRangesImpl(aus, vols, years) 
+	: getAuCoverageRangesImpl(aus, years, years);
     return new TitleRangeInfo(ranges, hasVols, hasYears);
   }
   
   /**
-   * A parameterised version of the <code>getAuCoverageRanges()</code> method to simplify the logic.
+   * A parameterised version of the <code>getAuCoverageRanges()</code> method 
+   * to simplify the logic.
    * @param <T>
    * @param aus
    * @param coverageValues
    * @param years
    * @return
    */
-  private static <T> List<TitleRange> getAuCoverageRangesImpl(List<TdbAu> aus, List<T> coverageValues, List<YearRange> years) {
+  private static <T> List<TitleRange> getAuCoverageRangesImpl(List<TdbAu> aus, 
+      List<T> coverageValues, List<YearRange> years) {
     T firstCoverageVal;       // The first coverage value in the current range
     T currentCoverageVal;     // The current coverage value (last value in the current range)
     T prevCoverageVal;        // The coverage from the previous loop
@@ -760,9 +773,10 @@ public class KbartConverter {
   }
 
   /**
-   * A generic method for establishing whether there is a coverage gap between the given parameters.
-   * The parameter type should be either Integer, representing volumes; or YearRange, representing 
-   * a year range consisting of two Integers. Unfortunately we then have to do an <code>instanceof</code> 
+   * A generic method for establishing whether there is a coverage gap between 
+   * the given parameters. The parameter type should be either Integer, 
+   * representing volumes; or YearRange, representing a year range consisting 
+   * of two Integers. Unfortunately we then have to do an <code>instanceof</code> 
    * to choose the correct method.
    * @param <T> the type of object passed to the method
    * @param prevCoverageVal
@@ -770,7 +784,8 @@ public class KbartConverter {
    * @return
    */
   private static <T> boolean isCoverageGap(T prevCoverageVal, T currentCoverageVal) {
-    return prevCoverageVal instanceof Integer ? isVolumeCoverageGap((Integer)prevCoverageVal, (Integer)currentCoverageVal)
+    return prevCoverageVal instanceof Integer ? 
+	isVolumeCoverageGap((Integer)prevCoverageVal, (Integer)currentCoverageVal)
 	: isYearCoverageGap((YearRange)prevCoverageVal, (YearRange)currentCoverageVal);
   }
 

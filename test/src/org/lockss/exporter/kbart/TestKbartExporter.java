@@ -35,7 +35,7 @@ public class TestKbartExporter extends LockssTestCase {
       }}));
     }};
 
-    this.basicKb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.KBART_HTML, this);
+    this.basicKb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
     basicKb.setFilter( KbartExportFilter.identityFilter(titles) );
   }
 
@@ -49,7 +49,7 @@ public class TestKbartExporter extends LockssTestCase {
    */
   public final void testExport() {
     // Test basic export
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.KBART_HTML, this);
+    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = false;
     this.filter = KbartExportFilter.identityFilter(titles);
     kb.setFilter(filter);
@@ -58,7 +58,7 @@ public class TestKbartExporter extends LockssTestCase {
     assertEquals("Number of titles does not match export count.", titles.size(), kb.exportCount);
     
     // Test predefined custom export
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.KBART_HTML, this);
+    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = false;
     this.filter = new KbartExportFilter(titles, PredefinedFieldOrdering.ISSN_ONLY, omitEmptyFields);
     kb.setFilter(filter);
@@ -72,7 +72,7 @@ public class TestKbartExporter extends LockssTestCase {
       add(Field.ONLINE_IDENTIFIER);
       add(Field.TITLE_ID);
     }};
-    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.KBART_HTML, this);
+    this.kb = new KbartDummyExporter(titles, KbartExporter.OutputFormat.HTML, this);
     this.omitEmptyFields = true;
     this.filter = new KbartExportFilter(titles, new CustomFieldOrdering(ordering), omitEmptyFields);
     kb.setFilter(filter);

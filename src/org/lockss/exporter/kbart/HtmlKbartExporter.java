@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.10 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.11 2011-08-10 14:21:24 easyonthemayo Exp $
  */
 
 /*
@@ -90,14 +90,14 @@ public class HtmlKbartExporter extends KbartExporter {
   public void sortByField(Field f) {
     Collections.sort(titles, KbartTitleComparatorFactory.getComparator(f));
   }
-
+  
   @Override
   public void setFilter(KbartExportFilter filter) {
     super.setFilter(filter);
     // Use the filter to sort the titles for custom output 
     filter.sortTitlesByFirstTwoFields();
   }
-
+  
   
   /**
    * An alternative constructor that allows one to specify whether or not to show columns 

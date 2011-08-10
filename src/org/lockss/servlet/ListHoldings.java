@@ -80,13 +80,15 @@ public class ListHoldings extends LockssServlet {
   
   static final String PREFIX = Configuration.PREFIX + "listHoldings.";
 
+  private static final String BREAK = "<br/><br/>";
+  
   /** Enable ListHoldings in UI.  Daemon restart required when set to true,
    * not when set false */
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
 
   /** Default output format is CSV. */
-  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_CSV;
+  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.CSV;
   /** Default field selection and ordering is KBART. */
   static final FieldOrdering FIELD_ORDERING_DEFAULT = CustomFieldOrdering.getDefaultOrdering();
   //static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT = PredefinedFieldOrdering.KBART;
@@ -299,7 +301,8 @@ public class ListHoldings extends LockssServlet {
     CustomHtmlOptions opts = getSessionCustomHtmlOpts();
     // Create a filter
     KbartExportFilter filter;
-    if (outputFormat.isHtml() && opts !=null) {
+    //if (outputFormat.isHtml() && opts !=null) {
+    if (opts !=null) {
       filter = new KbartExportFilter(titles, opts.fieldOrdering, opts.omitEmptyColumns);
     } else {
       filter = new KbartExportFilter(titles);
@@ -425,7 +428,20 @@ public class ListHoldings extends LockssServlet {
     // Create a form for whatever options we are showing
     Form form = ServletUtil.newForm(srvURL(myServletDescr()));
     form.add(new Input(Input.Hidden, "isForm", "true"));
-    form.add("There are "+tdb.getTdbTitleCount()+" titles available for preservation, from "+tdb.getTdbPublisherCount()+" publishers.");
+    form.add("This page allows you to export a list of all titles available " +
+	"for collection, those titles which are configured for collection in " +
+	"your LOCKSS box, or those titles which are preserved in your LOCKSS box."
+    );
+    form.add(addFootnote("The titles in the 'preserved' output are " +
+	"included based on a metric which assigns each configured volume " +
+	"a health value. This health value is currently experimental and the " +
+	"output of this option should not yet be considered authoritative."
+    ));
+    form.add(BREAK);
+    form.add(String.format(
+	"There are %s titles available for preservation, from %s publishers.", 
+	tdb.getTdbTitleCount(), tdb.getTdbPublisherCount()
+    ));
     // Add an option to select the scope of exported holdings
     form.add(layoutScopeOptions());
         
@@ -438,31 +454,27 @@ public class ListHoldings extends LockssServlet {
     Table subTab = new Table(0, "align=\"center\" width=\"80%\"");
     subTab.newRow();
     subTab.newCell("align=\"center\"");
+    addFormatOptions(subTab);
+    subTab.newRow();
+    subTab.newCell("align=\"center\"");
 
     // Add the appropriate options to the sub table in the form
     if (custom) {
       // Add HTML customisation options
-      subTab.add(new Heading(3, "Customise HTML output"));
+      subTab.add(new Heading(3, "Customise output"));
       subTab.add(new Link(srvURL(myServletDescr()), "Return to main export page"));
       layoutFormCustomHtmlOpts(subTab);
     } else {
-      // Add default output formats
-      subTab.add("Please choose from an export format below.<br/>");
-      // Add format links as buttons
-      for (OutputFormat fmt : OutputFormat.values()) {
-	subTab.newRow();
-	subTab.newCell("align=\"center\"");
-	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
-	//String label = "Export as "+fmt.getLabel();
-	//subTab.add( new Link(link, label) );
-	boolean selected = outputFormat!=null ? fmt==outputFormat : fmt==OUTPUT_DEFAULT;
-	subTab.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
-	subTab.add(addFootnote(fmt.getFootnote()));
-      }
-      addBlankRow(subTab);
-      subTab.newRow();
-      subTab.newCell("align=\"center\"");
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
+      //layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
+      subTab.add(BREAK+"By default, exports are in the industry-standard KBART " +
+      		"format, but they can also be customised by reordering and " +
+      		"omitting columns."+BREAK);
+      // Show the option to customise the export details, which are KBART by default:
+      //form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
+      form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(FIELD_ORDERING_DEFAULT)));
+      form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(false)));
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
     }
     
     // Add some space
@@ -475,6 +487,23 @@ public class ListHoldings extends LockssServlet {
     tab.newCell("align=\"center\"");
     tab.add(form);
     return tab;
+  }
+  
+  private void addFormatOptions(Table tab) {
+    // Add default output formats
+    tab.add("Please choose from an export format below.<br/>");
+    // Add format links as buttons
+    for (OutputFormat fmt : OutputFormat.values()) {
+	tab.newRow();
+	tab.newCell("align=\"center\"");
+	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
+	//String label = "Export as "+fmt.getLabel();
+	//subTab.add( new Link(link, label) );
+	boolean selected = outputFormat!=null ? fmt==outputFormat : fmt==OUTPUT_DEFAULT;
+	tab.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
+	tab.add(addFootnote(fmt.getFootnote()));
+    }
+    addBlankRow(tab);
   }
  
   
@@ -548,7 +577,7 @@ public class ListHoldings extends LockssServlet {
     CustomHtmlOptions opts = getSessionCustomHtmlOpts();
     
     // Add a format parameter
-    comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.KBART_HTML.name()));
+    comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
     // Add a hidden field listing the last manual ordering
     comp.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, lastManualOrdering));
     
@@ -608,7 +637,7 @@ public class ListHoldings extends LockssServlet {
   }
   
   /**
-   * Construct an HTML form providing a link to customisation options for HTML output.
+   * Construct an HTML form providing a link to customisation options for output.
    * This consists of a hidden list of ordered output fields, and a submit button,
    * and will appear on the output page.
    * 

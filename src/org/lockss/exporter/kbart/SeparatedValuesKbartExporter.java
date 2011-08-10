@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.4 2011-02-26 21:40:30 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.5 2011-08-10 14:21:25 easyonthemayo Exp $
  */
 
 /*
@@ -83,7 +83,8 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
     super.setup(os);
     // Write a byte-order mark (BOM) for excel 
     writeBOM(os);
-    printWriter.println( constructRecord(KbartTitle.Field.getLabels()) );
+    //printWriter.println( constructRecord(KbartTitle.Field.getLabels()) );
+    printWriter.println( constructRecord(filter.getVisibleFieldOrder()) );
   }
 
   @Override
@@ -96,16 +97,16 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
    * @param values list of field values
    * @return a properly formatted CSV row representing the data
    */
-  protected String constructRecord(List<String> values) {
+  protected <T> String constructRecord(List<T> values) {
     // If using a comma, encode as CSV with appropriate quoting and escaping
     if (SEPARATOR == SEPARATOR_COMMA) {
       StringBuilder sb = new StringBuilder();
       // Build the string for those values which need the separator appended
       for (int i=0; i<values.size()-1; i++) {
-	sb.append(StringUtil.csvEncode(values.get(i)) + SEPARATOR);
+	sb.append(StringUtil.csvEncode(values.get(i).toString()) + SEPARATOR);
       }
       // Add the last item
-      sb.append(StringUtil.csvEncode(values.get(values.size()-1)));
+      sb.append(StringUtil.csvEncode(values.get(values.size()-1).toString()));
       return sb.toString();
     }
     

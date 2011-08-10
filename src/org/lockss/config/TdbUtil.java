@@ -332,7 +332,7 @@ public class TdbUtil {
     /** Everything configured for collection. */
     CONFIGURED ("Configured", true),
     /** Everything preserved/collected and available in the LOCKSS box. */
-    PRESERVED ("Collected", true)
+    PRESERVED ("Preserved", true)
     ;
     
     /** The default fallback scope. */
