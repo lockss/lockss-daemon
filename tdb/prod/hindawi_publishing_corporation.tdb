@@ -68,7 +68,7 @@
     au < released ; Advances in Artificial Intelligence Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Artificial Intelligence Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Artificial Intelligence Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Artificial Intelligence Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -84,7 +84,7 @@
 
     au < released ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -135,7 +135,7 @@
     au < released ; Advances in Civil Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Civil Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Civil Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Civil Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -220,7 +220,7 @@
     au < released ; Advances in High Energy Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in High Energy Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -286,7 +286,7 @@
 
     au < released ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -347,9 +347,9 @@
 
     param[journal_id] = ana
 
-    au < exists ; Advances in Numerical Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Numerical Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -363,9 +363,10 @@
 
     param[journal_id] = aor
 
-    au < exists ; Advances in Operations Research Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Operations Research Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -413,7 +414,7 @@
 
     param[journal_id] = aop
 
-    au < manifest ; Advances in Orthopedicss Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Advances in Orthopedicss Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -472,21 +473,21 @@
 
     param[journal_id] = ads
 
-    au < manifest ; Advances in Decision Sciences Volume 1997 (1997) ; 1997 ; 1997 ; 1997 >
-    au < manifest ; Advances in Decision Sciences Volume 1998 (1998) ; 1998 ; 1998 ; 1998 >
-    au < manifest ; Advances in Decision Sciences Volume 1999 (1999) ; 1999 ; 1999 ; 1999 >
-    au < manifest ; Advances in Decision Sciences Volume 2000 (2000) ; 2000 ; 2000 ; 2000 >
-    au < manifest ; Advances in Decision Sciences Volume 2001 (2001) ; 2001 ; 2001 ; 2001 >
-    au < manifest ; Advances in Decision Sciences Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
-    au < manifest ; Advances in Decision Sciences Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
-    au < manifest ; Advances in Decision Sciences Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < manifest ; Advances in Decision Sciences Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < manifest ; Advances in Decision Sciences Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < manifest ; Advances in Decision Sciences Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < manifest ; Advances in Decision Sciences Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < manifest ; Advances in Decision Sciences Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < manifest ; Advances in Decision Sciences Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < manifest ; Advances in Decision Sciences Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < testing ; Advances in Decision Sciences Volume 1997 (1997) ; 1997 ; 1997 ; 1997 >
+    au < testing ; Advances in Decision Sciences Volume 1998 (1998) ; 1998 ; 1998 ; 1998 >
+    au < testing ; Advances in Decision Sciences Volume 1999 (1999) ; 1999 ; 1999 ; 1999 >
+    au < testing ; Advances in Decision Sciences Volume 2000 (2000) ; 2000 ; 2000 ; 2000 >
+    au < testing ; Advances in Decision Sciences Volume 2001 (2001) ; 2001 ; 2001 ; 2001 >
+    au < testing ; Advances in Decision Sciences Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
+    au < testing ; Advances in Decision Sciences Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
+    au < testing ; Advances in Decision Sciences Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < ready ; Advances in Decision Sciences Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < ready ; Advances in Decision Sciences Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < ready ; Advances in Decision Sciences Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < ready ; Advances in Decision Sciences Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Advances in Decision Sciences Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Decision Sciences Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Decision Sciences Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
  
@@ -499,7 +500,7 @@
     
     param[journal_id] = apm    
 
-    au < manifest ; Advances in Preventive Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Preventive Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
     
@@ -513,10 +514,10 @@
     
     param[journal_id] = ape    
     
-    au < testing ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < testing ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -563,9 +564,9 @@
 
     param[journal_id] = ase
 
-    au < exists ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -628,8 +629,8 @@
 
     param[journal_id] = art
 
-    au < testing ; AIDS Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; AIDS Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; AIDS Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; AIDS Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
       
   }
   
@@ -657,8 +658,8 @@
 
     param[journal_id] = ane
 
-    au < testing ; Anemia Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Anemia Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Anemia Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Anemia Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
       
   } 
     
@@ -705,9 +706,9 @@
 
     param[journal_id] = acisc
 
-    au < testing ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -721,16 +722,16 @@
 
     param[journal_id] = arch
 
-    au < testing ; Archaea Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
-    au < testing ; Archaea Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
-    au < testing ; Archaea Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < testing ; Archaea Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < testing ; Archaea Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < testing ; Archaea Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < testing ; Archaea Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Archaea Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Archaea Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Archaea Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Archaea Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
+    au < ready ; Archaea Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
+    au < ready ; Archaea Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < ready ; Archaea Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < ready ; Archaea Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < ready ; Archaea Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < ready ; Archaea Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Archaea Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Archaea Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Archaea Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -744,8 +745,8 @@
 
     param[journal_id] = arth
 
-    au < testing ; Arthritis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Arthritis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Arthritis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Arthritis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -759,8 +760,8 @@
 
     param[journal_id] = aurt
 
-    au < testing ; Autism Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Autism Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Autism Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Autism Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -773,8 +774,8 @@
 
     param[journal_id] = ad
 
-    au < testing ; Autoimmune Diseases Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Autoimmune Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Autoimmune Diseases Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Autoimmune Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -788,10 +789,10 @@
 
     param[journal_id] = bcri
 
-    au < testing ; Biochemistry Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Biochemistry Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Biochemistry Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Biochemistry Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Biochemistry Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; Biochemistry Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Biochemistry Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Biochemistry Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
           
@@ -826,7 +827,7 @@
 
     param[journal_id] = btri
 
-    au < testing ; Biotechnology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Biotechnology Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -840,7 +841,7 @@
 
     param[journal_id] = bmr
 
-    au < testing ; Bone Marrow Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Bone Marrow Research Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
     
@@ -874,9 +875,9 @@
 
     param[journal_id] = crm
 
-    au < exists ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -890,7 +891,7 @@
     param[journal_id] = crp
 
     au < testing ; Cardiology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Cardiology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Cardiology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; Cardiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
@@ -905,9 +906,9 @@
 
     param[journal_id] = cpn
 
-    au < testing ; Cardiovascular Psychiatry and Neurology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Cardiovascular Psychiatry and Neurology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Cardiovascular Psychiatry and Neurology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Cardiovascular Psychiatry and Neurology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Cardiovascular Psychiatry and Neurology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Cardiovascular Psychiatry and Neurology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
       
@@ -963,7 +964,7 @@
 
     param[journal_id] = cricc
 
-    au < testing ; Case Reports in Critical Care Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Critical Care Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }  
 
@@ -977,7 +978,7 @@
 
     param[journal_id] = crid
 
-    au < testing ; Case Reports in Dentistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Dentistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -1019,7 +1020,7 @@
 
     param[journal_id] = crie
 
-    au < testing ; Case Reports in Endocrinology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Endocrinology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1033,7 +1034,7 @@
 
     param[journal_id] = crigm
 
-    au < testing ; Case Reports in Gastrointestinal Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Gastrointestinal Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1047,7 +1048,7 @@
 
     param[journal_id] = crig
 
-    au < testing ; Case Reports in Genetics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Genetics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1061,7 +1062,7 @@
 
     param[journal_id] = crihem
 
-    au < testing ; Case Reports in Hematology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Hematology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1075,7 +1076,7 @@
 
     param[journal_id] = crihep
 
-    au < testing ; Case Reports in Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1103,7 +1104,7 @@
 
     param[journal_id] = criid
 
-    au < testing ; Case Reports in Infectious Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Infectious Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1117,8 +1118,8 @@
 
     param[journal_id] = crim
 
-    au < testing ; Case Reports in Medicine Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; Case Reports in Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Case Reports in Medicine Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Case Reports in Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; Case Reports in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -2187,9 +2188,10 @@
 
     param[journal_id] = ijac
 
-    au < exists ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2234,9 +2236,9 @@
 
     param[journal_id] = ijbm
 
-    au < exists ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2269,9 +2271,9 @@
 
     param[journal_id] = ijcc
 
-    au < exists ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2285,9 +2287,9 @@
 
     param[journal_id] = ijcb
 
-    au < exists ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2318,9 +2320,10 @@
 
     param[journal_id] = ijct
 
-    au < exists ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < manifest ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < manifest ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < manifest ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2351,9 +2354,9 @@
 
     param[journal_id] = ijc
 
-    au < exists ; International Journal of Corrosion Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Corrosion Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2367,9 +2370,9 @@
 
     param[journal_id] = ijd
 
-    au < exists ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2383,9 +2386,9 @@
 
     param[journal_id] = ijde
 
-    au < exists ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2560,9 +2563,9 @@
 
     param[journal_id] = ijgp
 
-    au < exists ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < exists ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < testing ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < testing ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2925,7 +2928,7 @@
     au < doesNotExist ; nternational Journal of Polymer Science Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < mainfest ; nternational Journal of Polymer Science Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ;  nternational Journal of Polymer Science Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; nternational Journal of Polymer Science Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; nternational Journal of Polymer Science Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3208,7 +3211,7 @@
 
     au < released ; International Journal of Zoology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; International Journal of Zoology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; International Journal of Zoology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; International Journal of Zoology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3377,7 +3380,7 @@
     au < released ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3704,7 +3707,7 @@
     au < doesNotExist ; Journal of Magnetism Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Magnetism Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < doesNotExist ; Journal of Magnetism Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < doesNotExists ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNottesting ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4117,7 +4120,7 @@
     au < released ; Laser Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Laser Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Laser Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4351,7 +4354,7 @@
     au < released ; Neural Plasticity Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Neural Plasticity Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Neural Plasticity Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Neural Plasticity Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; Neural Plasticity Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -4540,7 +4543,7 @@
     au < released ; Physical Separation in Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Physical Separation in Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Physical Separation in Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Physical Separation in Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5174,7 +5177,7 @@
     au < released ; Texture, Stress, and Microstructure Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Texture, Stress, and Microstructure Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Texture, Stress, and Microstructure Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; Texture, Stress, and Microstructure Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; Texture, Stress, and Microstructure Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5299,7 +5302,7 @@
     au < released ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < exists ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < testing ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
