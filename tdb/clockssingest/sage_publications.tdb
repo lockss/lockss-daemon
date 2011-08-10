@@ -125,9 +125,6 @@
       au < manifest ; exists ; 2006 ; Acta Sociologica Volume 49 ; 49 ; >
       au < manifest ; exists ; 2007 ; Acta Sociologica Volume 50 ; 50 ; >
       au < manifest ; exists ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2010 ; Acta Sociologica Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 ; >
       au < manifest ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 ;  >
       au < released ; crawling ; 2010 ; Acta Sociologica Volume 53 ; 53 ;  >
       au < manifest ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 ;  >
@@ -836,7 +833,38 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < doesNotExist ; doesNotExist ; 0 ; American Journal of Evaluation Volume 1 ; 1 ; >
+      au < exists ; exists ; 1981 ; American Journal of Evaluation Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1982 ; American Journal of Evaluation Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1983 ; American Journal of Evaluation Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1984 ; American Journal of Evaluation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1985 ; American Journal of Evaluation Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1986 ; American Journal of Evaluation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Evaluation Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Evaluation Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Evaluation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Evaluation Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Evaluation Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Evaluation Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Evaluation Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Evaluation Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Evaluation Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Evaluation Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Evaluation Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Evaluation Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Evaluation Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Evaluation Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Evaluation Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Evaluation Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Evaluation Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Evaluation Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Evaluation Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Evaluation Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Evaluation Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; American Journal of Evaluation Volume 31 ; 31 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Evaluation Volume 32 ; 32 ; >
 
     }
 
@@ -866,7 +894,34 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1984 ; American Journal of Hospice and Palliative Medicine Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1985 ; American Journal of Hospice and Palliative Medicine Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1986 ; American Journal of Hospice and Palliative Medicine Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Hospice and Palliative Medicine Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Hospice and Palliative Medicine Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Hospice and Palliative Medicine Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Hospice and Palliative Medicine Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Hospice and Palliative Medicine Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Hospice and Palliative Medicine Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Hospice and Palliative Medicine Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Hospice and Palliative Medicine Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Hospice and Palliative Medicine Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Hospice and Palliative Medicine Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Hospice and Palliative Medicine Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Hospice and Palliative Medicine Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Hospice and Palliative Medicine Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Hospice and Palliative Medicine Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Hospice and Palliative Medicine Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Hospice and Palliative Medicine Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Hospice and Palliative Medicine Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Hospice and Palliative Medicine Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Hospice and Palliative Medicine Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Hospice and Palliative Medicine Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Hospice and Palliative Medicine Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Hospice and Palliative Medicine Volume 28 ; 28 ; >
 
     }
 
@@ -896,7 +951,11 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2007 ; American Journal of Lifestyle Medicine Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; American Journal of Lifestyle Medicine Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
 
     }
 
@@ -926,7 +985,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1986 ; American Journal of Medical Quality Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Medical Quality Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Medical Quality Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Medical Quality Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Medical Quality Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Medical Quality Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Medical Quality Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Medical Quality Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Medical Quality Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Medical Quality Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Medical Quality Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Medical Quality Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Medical Quality Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Medical Quality Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Medical Quality Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Medical Quality Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Medical Quality Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Medical Quality Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Medical Quality Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Medical Quality Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Medical Quality Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Medical Quality Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Medical Quality Volume 26 ; 26 ; >
 
     }
 
@@ -956,7 +1040,11 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2007 ; American Journal of Men's Health Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
 
     }
 
@@ -986,7 +1074,45 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1973 ; American Politics Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1974 ; American Politics Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1975 ; American Politics Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1976 ; American Politics Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1977 ; American Politics Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1978 ; American Politics Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1979 ; American Politics Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1980 ; American Politics Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1981 ; American Politics Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1982 ; American Politics Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1983 ; American Politics Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1984 ; American Politics Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1985 ; American Politics Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1986 ; American Politics Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1987 ; American Politics Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1988 ; American Politics Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1989 ; American Politics Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1990 ; American Politics Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1991 ; American Politics Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1992 ; American Politics Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1993 ; American Politics Research Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1994 ; American Politics Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1995 ; American Politics Research Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1996 ; American Politics Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1997 ; American Politics Research Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1998 ; American Politics Research Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1999 ; American Politics Research Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2000 ; American Politics Research Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2001 ; American Politics Research Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2002 ; American Politics Research Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2003 ; American Politics Research Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2004 ; American Politics Research Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2005 ; American Politics Research Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; American Politics Research Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2007 ; American Politics Research Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; American Politics Research Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2009 ; American Politics Research Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; American Politics Research Volume 38 ; 38 ;  >
+      au < manifest ; exists ; 2011 ; American Politics Research Volume 39 ; 39 ; >
 
     }
 
@@ -1016,7 +1142,47 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1967 ; The American Review of Public Administration Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1968 ; The American Review of Public Administration Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1969 ; The American Review of Public Administration Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1970 ; The American Review of Public Administration Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1971 ; The American Review of Public Administration Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1972 ; The American Review of Public Administration Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1973 ; The American Review of Public Administration Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1974 ; The American Review of Public Administration Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1975 ; The American Review of Public Administration Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1976 ; The American Review of Public Administration Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1977 ; The American Review of Public Administration Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1978 ; The American Review of Public Administration Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1979 ; The American Review of Public Administration Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1980 ; The American Review of Public Administration Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1981 ; The American Review of Public Administration Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1982 ; The American Review of Public Administration Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1983 ; The American Review of Public Administration Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1988 ; The American Review of Public Administration Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1989 ; The American Review of Public Administration Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1990 ; The American Review of Public Administration Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1991 ; The American Review of Public Administration Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1992 ; The American Review of Public Administration Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1993 ; The American Review of Public Administration Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1994 ; The American Review of Public Administration Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1995 ; The American Review of Public Administration Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1996 ; The American Review of Public Administration Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1997 ; The American Review of Public Administration Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1998 ; The American Review of Public Administration Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1999 ; The American Review of Public Administration Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2000 ; The American Review of Public Administration Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2001 ; The American Review of Public Administration Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2002 ; The American Review of Public Administration Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2003 ; The American Review of Public Administration Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2004 ; The American Review of Public Administration Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2005 ; The American Review of Public Administration Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2006 ; The American Review of Public Administration Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2007 ; The American Review of Public Administration Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2008 ; The American Review of Public Administration Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; The American Review of Public Administration Volume 40 ; 40 ;  >
+      au < manifest ; exists ; 2011 ; The American Review of Public Administration Volume 41 ; 41 ; >
 
     }
 
@@ -1046,7 +1212,68 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1950 ; Angiology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1951 ; Angiology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1952 ; Angiology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1953 ; Angiology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1954 ; Angiology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1955 ; Angiology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1956 ; Angiology Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1957 ; Angiology Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1958 ; Angiology Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1959 ; Angiology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1960 ; Angiology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1961 ; Angiology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1962 ; Angiology Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1963 ; Angiology Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1964 ; Angiology Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1965 ; Angiology Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1966 ; Angiology Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1967 ; Angiology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1968 ; Angiology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1969 ; Angiology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1970 ; Angiology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1971 ; Angiology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1972 ; Angiology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1973 ; Angiology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1974 ; Angiology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1975 ; Angiology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1976 ; Angiology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1977 ; Angiology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1978 ; Angiology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1979 ; Angiology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1980 ; Angiology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1981 ; Angiology Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1982 ; Angiology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1983 ; Angiology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1984 ; Angiology Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1985 ; Angiology Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1986 ; Angiology Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1987 ; Angiology Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1988 ; Angiology Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1989 ; Angiology Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1990 ; Angiology Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1991 ; Angiology Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1992 ; Angiology Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1993 ; Angiology Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1994 ; Angiology Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1995 ; Angiology Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1996 ; Angiology Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1997 ; Angiology Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1998 ; Angiology Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1999 ; Angiology Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2000 ; Angiology Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2001 ; Angiology Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2002 ; Angiology Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2003 ; Angiology Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2004 ; Angiology Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2005 ; Angiology Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2006 ; Angiology Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2007 ; Angiology Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2008 ; Angiology Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2009 ; Angiology Volume 60 ; 60 ; >
       au < released ; crawling ; 2010 ; Angiology Volume 61 ; 61 ;  >
+      au < manifest ; exists ; 2011 ; Angiology Volume 62 ; 62 ; >
 
     }
 
@@ -1076,7 +1303,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2006 ; Animation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2007 ; Animation Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2008 ; Animation Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; Animation Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Animation Volume 5 ; 5 ;  >
+      au < manifest ; exists ; 2011 ; Animation Volume 6 ; 6 ; >
 
     }
 
@@ -1115,12 +1347,643 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
-      au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ;  >
+      au < manifest ; exists ; 1890 ; The ANNALS of the American Academy of Political and Social Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1891 ; The ANNALS of the American Academy of Political and Social Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1892 ; The ANNALS of the American Academy of Political and Social Science Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1893 ; The ANNALS of the American Academy of Political and Social Science Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1894 ; The ANNALS of the American Academy of Political and Social Science Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1895 ; The ANNALS of the American Academy of Political and Social Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1896 ; The ANNALS of the American Academy of Political and Social Science Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1896 ; The ANNALS of the American Academy of Political and Social Science Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1897 ; The ANNALS of the American Academy of Political and Social Science Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1897 ; The ANNALS of the American Academy of Political and Social Science Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1898 ; The ANNALS of the American Academy of Political and Social Science Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1898 ; The ANNALS of the American Academy of Political and Social Science Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1899 ; The ANNALS of the American Academy of Political and Social Science Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1899 ; The ANNALS of the American Academy of Political and Social Science Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1900 ; The ANNALS of the American Academy of Political and Social Science Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1900 ; The ANNALS of the American Academy of Political and Social Science Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1901 ; The ANNALS of the American Academy of Political and Social Science Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1901 ; The ANNALS of the American Academy of Political and Social Science Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1902 ; The ANNALS of the American Academy of Political and Social Science Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1902 ; The ANNALS of the American Academy of Political and Social Science Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1903 ; The ANNALS of the American Academy of Political and Social Science Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1903 ; The ANNALS of the American Academy of Political and Social Science Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1904 ; The ANNALS of the American Academy of Political and Social Science Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1904 ; The ANNALS of the American Academy of Political and Social Science Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1905 ; The ANNALS of the American Academy of Political and Social Science Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1905 ; The ANNALS of the American Academy of Political and Social Science Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1906 ; The ANNALS of the American Academy of Political and Social Science Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1906 ; The ANNALS of the American Academy of Political and Social Science Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1907 ; The ANNALS of the American Academy of Political and Social Science Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1907 ; The ANNALS of the American Academy of Political and Social Science Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1908 ; The ANNALS of the American Academy of Political and Social Science Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1908 ; The ANNALS of the American Academy of Political and Social Science Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1909 ; The ANNALS of the American Academy of Political and Social Science Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1909 ; The ANNALS of the American Academy of Political and Social Science Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1910 ; The ANNALS of the American Academy of Political and Social Science Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1910 ; The ANNALS of the American Academy of Political and Social Science Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1911 ; The ANNALS of the American Academy of Political and Social Science Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1911 ; The ANNALS of the American Academy of Political and Social Science Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1912 ; The ANNALS of the American Academy of Political and Social Science Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1913 ; The ANNALS of the American Academy of Political and Social Science Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1914 ; The ANNALS of the American Academy of Political and Social Science Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1915 ; The ANNALS of the American Academy of Political and Social Science Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1916 ; The ANNALS of the American Academy of Political and Social Science Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 69 ; 69 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 70 ; 70 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 71 ; 71 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 72 ; 72 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 73 ; 73 ; >
+      au < manifest ; exists ; 1917 ; The ANNALS of the American Academy of Political and Social Science Volume 74 ; 74 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 75 ; 75 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 76 ; 76 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 77 ; 77 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 78 ; 78 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 79 ; 79 ; >
+      au < manifest ; exists ; 1918 ; The ANNALS of the American Academy of Political and Social Science Volume 80 ; 80 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 81 ; 81 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 82 ; 82 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 83 ; 83 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 84 ; 84 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 85 ; 85 ; >
+      au < manifest ; exists ; 1919 ; The ANNALS of the American Academy of Political and Social Science Volume 86 ; 86 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 87 ; 87 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 88 ; 88 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 89 ; 89 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 90 ; 90 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 91 ; 91 ; >
+      au < manifest ; exists ; 1920 ; The ANNALS of the American Academy of Political and Social Science Volume 92 ; 92 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 93 ; 93 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 94 ; 94 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 95 ; 95 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 96 ; 96 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 97 ; 97 ; >
+      au < manifest ; exists ; 1921 ; The ANNALS of the American Academy of Political and Social Science Volume 98 ; 98 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 99 ; 99 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 100 ; 100 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 101 ; 101 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 102 ; 102 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 103 ; 103 ; >
+      au < manifest ; exists ; 1922 ; The ANNALS of the American Academy of Political and Social Science Volume 104 ; 104 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 105 ; 105 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 106 ; 106 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 107 ; 107 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 108 ; 108 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 109 ; 109 ; >
+      au < manifest ; exists ; 1923 ; The ANNALS of the American Academy of Political and Social Science Volume 110 ; 110 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 111 ; 111 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 112 ; 112 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 113 ; 113 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 114 ; 114 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 115 ; 115 ; >
+      au < manifest ; exists ; 1924 ; The ANNALS of the American Academy of Political and Social Science Volume 116 ; 116 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 117 ; 117 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 118 ; 118 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 119 ; 119 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 120 ; 120 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 121 ; 121 ; >
+      au < manifest ; exists ; 1925 ; The ANNALS of the American Academy of Political and Social Science Volume 122 ; 122 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 123 ; 123 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 124 ; 124 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 125 ; 125 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 126 ; 126 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 127 ; 127 ; >
+      au < manifest ; exists ; 1926 ; The ANNALS of the American Academy of Political and Social Science Volume 128 ; 128 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 129 ; 129 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 130 ; 130 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 131 ; 131 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 132 ; 132 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 133 ; 133 ; >
+      au < manifest ; exists ; 1927 ; The ANNALS of the American Academy of Political and Social Science Volume 134 ; 134 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 135 ; 135 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 136 ; 136 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 137 ; 137 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 138 ; 138 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 139 ; 139 ; >
+      au < manifest ; exists ; 1928 ; The ANNALS of the American Academy of Political and Social Science Volume 140 ; 140 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 141 ; 141 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 142 ; 142 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 143 ; 143 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 144 ; 144 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 145 ; 145 ; >
+      au < manifest ; exists ; 1929 ; The ANNALS of the American Academy of Political and Social Science Volume 146 ; 146 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 147 ; 147 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 148 ; 148 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 149 ; 149 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 150 ; 150 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 151 ; 151 ; >
+      au < manifest ; exists ; 1930 ; The ANNALS of the American Academy of Political and Social Science Volume 152 ; 152 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 153 ; 153 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 154 ; 154 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 155 ; 155 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 156 ; 156 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 157 ; 157 ; >
+      au < manifest ; exists ; 1931 ; The ANNALS of the American Academy of Political and Social Science Volume 158 ; 158 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 159 ; 159 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 160 ; 160 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 161 ; 161 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 162 ; 162 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 163 ; 163 ; >
+      au < manifest ; exists ; 1932 ; The ANNALS of the American Academy of Political and Social Science Volume 164 ; 164 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 165 ; 165 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 166 ; 166 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 167 ; 167 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 168 ; 168 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 169 ; 169 ; >
+      au < manifest ; exists ; 1933 ; The ANNALS of the American Academy of Political and Social Science Volume 170 ; 170 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 171 ; 171 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 172 ; 172 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 173 ; 173 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 174 ; 174 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 175 ; 175 ; >
+      au < manifest ; exists ; 1934 ; The ANNALS of the American Academy of Political and Social Science Volume 176 ; 176 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 177 ; 177 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 178 ; 178 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 179 ; 179 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 180 ; 180 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 181 ; 181 ; >
+      au < manifest ; exists ; 1935 ; The ANNALS of the American Academy of Political and Social Science Volume 182 ; 182 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 183 ; 183 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 184 ; 184 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 185 ; 185 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 186 ; 186 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 187 ; 187 ; >
+      au < manifest ; exists ; 1936 ; The ANNALS of the American Academy of Political and Social Science Volume 188 ; 188 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 189 ; 189 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 190 ; 190 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 191 ; 191 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 192 ; 192 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 193 ; 193 ; >
+      au < manifest ; exists ; 1937 ; The ANNALS of the American Academy of Political and Social Science Volume 194 ; 194 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 195 ; 195 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 196 ; 196 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 197 ; 197 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 198 ; 198 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 199 ; 199 ; >
+      au < manifest ; exists ; 1938 ; The ANNALS of the American Academy of Political and Social Science Volume 200 ; 200 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 201 ; 201 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 202 ; 202 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 203 ; 203 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 204 ; 204 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 205 ; 205 ; >
+      au < manifest ; exists ; 1939 ; The ANNALS of the American Academy of Political and Social Science Volume 206 ; 206 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 207 ; 207 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 208 ; 208 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 209 ; 209 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 210 ; 210 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 211 ; 211 ; >
+      au < manifest ; exists ; 1940 ; The ANNALS of the American Academy of Political and Social Science Volume 212 ; 212 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 213 ; 213 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 214 ; 214 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 215 ; 215 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 216 ; 216 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 217 ; 217 ; >
+      au < manifest ; exists ; 1941 ; The ANNALS of the American Academy of Political and Social Science Volume 218 ; 218 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 219 ; 219 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 220 ; 220 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 221 ; 221 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 222 ; 222 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 223 ; 223 ; >
+      au < manifest ; exists ; 1942 ; The ANNALS of the American Academy of Political and Social Science Volume 224 ; 224 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 225 ; 225 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 226 ; 226 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 227 ; 227 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 228 ; 228 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 229 ; 229 ; >
+      au < manifest ; exists ; 1943 ; The ANNALS of the American Academy of Political and Social Science Volume 230 ; 230 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 231 ; 231 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 232 ; 232 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 233 ; 233 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 234 ; 234 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 235 ; 235 ; >
+      au < manifest ; exists ; 1944 ; The ANNALS of the American Academy of Political and Social Science Volume 236 ; 236 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 237 ; 237 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 238 ; 238 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 239 ; 239 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 240 ; 240 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 241 ; 241 ; >
+      au < manifest ; exists ; 1945 ; The ANNALS of the American Academy of Political and Social Science Volume 242 ; 242 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 243 ; 243 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 244 ; 244 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 245 ; 245 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 246 ; 246 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 247 ; 247 ; >
+      au < manifest ; exists ; 1946 ; The ANNALS of the American Academy of Political and Social Science Volume 248 ; 248 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 249 ; 249 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 250 ; 250 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 251 ; 251 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 252 ; 252 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 253 ; 253 ; >
+      au < manifest ; exists ; 1947 ; The ANNALS of the American Academy of Political and Social Science Volume 254 ; 254 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 255 ; 255 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 256 ; 256 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 257 ; 257 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 258 ; 258 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 259 ; 259 ; >
+      au < manifest ; exists ; 1948 ; The ANNALS of the American Academy of Political and Social Science Volume 260 ; 260 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 261 ; 261 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 262 ; 262 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 263 ; 263 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 264 ; 264 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 265 ; 265 ; >
+      au < manifest ; exists ; 1949 ; The ANNALS of the American Academy of Political and Social Science Volume 266 ; 266 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 267 ; 267 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 268 ; 268 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 269 ; 269 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 270 ; 270 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 271 ; 271 ; >
+      au < manifest ; exists ; 1950 ; The ANNALS of the American Academy of Political and Social Science Volume 272 ; 272 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 273 ; 273 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 274 ; 274 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 275 ; 275 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 276 ; 276 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 277 ; 277 ; >
+      au < manifest ; exists ; 1951 ; The ANNALS of the American Academy of Political and Social Science Volume 278 ; 278 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 279 ; 279 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 280 ; 280 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 281 ; 281 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 282 ; 282 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 283 ; 283 ; >
+      au < manifest ; exists ; 1952 ; The ANNALS of the American Academy of Political and Social Science Volume 284 ; 284 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 285 ; 285 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 286 ; 286 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 287 ; 287 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 288 ; 288 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 289 ; 289 ; >
+      au < manifest ; exists ; 1953 ; The ANNALS of the American Academy of Political and Social Science Volume 290 ; 290 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 291 ; 291 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 292 ; 292 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 293 ; 293 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 294 ; 294 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 295 ; 295 ; >
+      au < manifest ; exists ; 1954 ; The ANNALS of the American Academy of Political and Social Science Volume 296 ; 296 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 297 ; 297 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 298 ; 298 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 299 ; 299 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 300 ; 300 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 301 ; 301 ; >
+      au < manifest ; exists ; 1955 ; The ANNALS of the American Academy of Political and Social Science Volume 302 ; 302 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 303 ; 303 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 304 ; 304 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 305 ; 305 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 306 ; 306 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 307 ; 307 ; >
+      au < manifest ; exists ; 1956 ; The ANNALS of the American Academy of Political and Social Science Volume 308 ; 308 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 309 ; 309 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 310 ; 310 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 311 ; 311 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 312 ; 312 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 313 ; 313 ; >
+      au < manifest ; exists ; 1957 ; The ANNALS of the American Academy of Political and Social Science Volume 314 ; 314 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 315 ; 315 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 316 ; 316 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 317 ; 317 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 318 ; 318 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 319 ; 319 ; >
+      au < manifest ; exists ; 1958 ; The ANNALS of the American Academy of Political and Social Science Volume 320 ; 320 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 321 ; 321 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 322 ; 322 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 323 ; 323 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 324 ; 324 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 325 ; 325 ; >
+      au < manifest ; exists ; 1959 ; The ANNALS of the American Academy of Political and Social Science Volume 326 ; 326 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 327 ; 327 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 328 ; 328 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 329 ; 329 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 330 ; 330 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 331 ; 331 ; >
+      au < manifest ; exists ; 1960 ; The ANNALS of the American Academy of Political and Social Science Volume 332 ; 332 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 333 ; 333 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 334 ; 334 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 335 ; 335 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 336 ; 336 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 337 ; 337 ; >
+      au < manifest ; exists ; 1961 ; The ANNALS of the American Academy of Political and Social Science Volume 338 ; 338 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 339 ; 339 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 340 ; 340 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 341 ; 341 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 342 ; 342 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 343 ; 343 ; >
+      au < manifest ; exists ; 1962 ; The ANNALS of the American Academy of Political and Social Science Volume 344 ; 344 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 345 ; 345 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 346 ; 346 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 347 ; 347 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 348 ; 348 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 349 ; 349 ; >
+      au < manifest ; exists ; 1963 ; The ANNALS of the American Academy of Political and Social Science Volume 350 ; 350 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 351 ; 351 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 352 ; 352 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 353 ; 353 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 354 ; 354 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 355 ; 355 ; >
+      au < manifest ; exists ; 1964 ; The ANNALS of the American Academy of Political and Social Science Volume 356 ; 356 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 357 ; 357 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 358 ; 358 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 359 ; 359 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 360 ; 360 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 361 ; 361 ; >
+      au < manifest ; exists ; 1965 ; The ANNALS of the American Academy of Political and Social Science Volume 362 ; 362 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 363 ; 363 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 364 ; 364 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 365 ; 365 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 366 ; 366 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 367 ; 367 ; >
+      au < manifest ; exists ; 1966 ; The ANNALS of the American Academy of Political and Social Science Volume 368 ; 368 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 369 ; 369 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 370 ; 370 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 371 ; 371 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 372 ; 372 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 373 ; 373 ; >
+      au < manifest ; exists ; 1967 ; The ANNALS of the American Academy of Political and Social Science Volume 374 ; 374 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 375 ; 375 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 376 ; 376 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 377 ; 377 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 378 ; 378 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 379 ; 379 ; >
+      au < manifest ; exists ; 1968 ; The ANNALS of the American Academy of Political and Social Science Volume 380 ; 380 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 381 ; 381 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 382 ; 382 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 383 ; 383 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 384 ; 384 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 385 ; 385 ; >
+      au < manifest ; exists ; 1969 ; The ANNALS of the American Academy of Political and Social Science Volume 386 ; 386 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 387 ; 387 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 388 ; 388 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 389 ; 389 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 390 ; 390 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 391 ; 391 ; >
+      au < manifest ; exists ; 1970 ; The ANNALS of the American Academy of Political and Social Science Volume 392 ; 392 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 393 ; 393 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 394 ; 394 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 395 ; 395 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 396 ; 396 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 397 ; 397 ; >
+      au < manifest ; exists ; 1971 ; The ANNALS of the American Academy of Political and Social Science Volume 398 ; 398 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 399 ; 399 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 400 ; 400 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 401 ; 401 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 402 ; 402 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 403 ; 403 ; >
+      au < manifest ; exists ; 1972 ; The ANNALS of the American Academy of Political and Social Science Volume 404 ; 404 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 405 ; 405 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 406 ; 406 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 407 ; 407 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 408 ; 408 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 409 ; 409 ; >
+      au < manifest ; exists ; 1973 ; The ANNALS of the American Academy of Political and Social Science Volume 410 ; 410 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 411 ; 411 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 412 ; 412 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 413 ; 413 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 414 ; 414 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 415 ; 415 ; >
+      au < manifest ; exists ; 1974 ; The ANNALS of the American Academy of Political and Social Science Volume 416 ; 416 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 417 ; 417 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 418 ; 418 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 419 ; 419 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 420 ; 420 ; >
+      au < exists ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 421 ; 421 ; >
+      au < manifest ; exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 422 ; 422 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 423 ; 423 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 424 ; 424 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 425 ; 425 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 426 ; 426 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 427 ; 427 ; >
+      au < manifest ; exists ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 428 ; 428 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 429 ; 429 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 430 ; 430 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 431 ; 431 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 432 ; 432 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 433 ; 433 ; >
+      au < manifest ; exists ; 1977 ; The ANNALS of the American Academy of Political and Social Science Volume 434 ; 434 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 435 ; 435 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 436 ; 436 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 437 ; 437 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 438 ; 438 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 439 ; 439 ; >
+      au < manifest ; exists ; 1978 ; The ANNALS of the American Academy of Political and Social Science Volume 440 ; 440 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 441 ; 441 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 442 ; 442 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 443 ; 443 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 444 ; 444 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 445 ; 445 ; >
+      au < manifest ; exists ; 1979 ; The ANNALS of the American Academy of Political and Social Science Volume 446 ; 446 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 447 ; 447 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 448 ; 448 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 449 ; 449 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 450 ; 450 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 451 ; 451 ; >
+      au < manifest ; exists ; 1980 ; The ANNALS of the American Academy of Political and Social Science Volume 452 ; 452 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 453 ; 453 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 454 ; 454 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 455 ; 455 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 456 ; 456 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 457 ; 457 ; >
+      au < manifest ; exists ; 1981 ; The ANNALS of the American Academy of Political and Social Science Volume 458 ; 458 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 459 ; 459 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 460 ; 460 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 461 ; 461 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 462 ; 462 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 463 ; 463 ; >
+      au < manifest ; exists ; 1982 ; The ANNALS of the American Academy of Political and Social Science Volume 464 ; 464 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 465 ; 465 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 466 ; 466 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 467 ; 467 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 468 ; 468 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 469 ; 469 ; >
+      au < manifest ; exists ; 1983 ; The ANNALS of the American Academy of Political and Social Science Volume 470 ; 470 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 471 ; 471 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 472 ; 472 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 473 ; 473 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 474 ; 474 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 475 ; 475 ; >
+      au < manifest ; exists ; 1984 ; The ANNALS of the American Academy of Political and Social Science Volume 476 ; 476 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 477 ; 477 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 478 ; 478 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 479 ; 479 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 480 ; 480 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 481 ; 481 ; >
+      au < manifest ; exists ; 1985 ; The ANNALS of the American Academy of Political and Social Science Volume 482 ; 482 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 483 ; 483 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 484 ; 484 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 485 ; 485 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 486 ; 486 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 487 ; 487 ; >
+      au < manifest ; exists ; 1986 ; The ANNALS of the American Academy of Political and Social Science Volume 488 ; 488 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 489 ; 489 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 490 ; 490 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 491 ; 491 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 492 ; 492 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 493 ; 493 ; >
+      au < manifest ; exists ; 1987 ; The ANNALS of the American Academy of Political and Social Science Volume 494 ; 494 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 495 ; 495 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 496 ; 496 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 497 ; 497 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 498 ; 498 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 499 ; 499 ; >
+      au < manifest ; exists ; 1988 ; The ANNALS of the American Academy of Political and Social Science Volume 500 ; 500 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 501 ; 501 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 502 ; 502 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 503 ; 503 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 504 ; 504 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 505 ; 505 ; >
+      au < manifest ; exists ; 1989 ; The ANNALS of the American Academy of Political and Social Science Volume 506 ; 506 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 507 ; 507 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 508 ; 508 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 509 ; 509 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 510 ; 510 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 511 ; 511 ; >
+      au < manifest ; exists ; 1990 ; The ANNALS of the American Academy of Political and Social Science Volume 512 ; 512 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 513 ; 513 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 514 ; 514 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 515 ; 515 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 516 ; 516 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 517 ; 517 ; >
+      au < manifest ; exists ; 1991 ; The ANNALS of the American Academy of Political and Social Science Volume 518 ; 518 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 519 ; 519 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 520 ; 520 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 521 ; 521 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 522 ; 522 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 523 ; 523 ; >
+      au < manifest ; exists ; 1992 ; The ANNALS of the American Academy of Political and Social Science Volume 524 ; 524 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 525 ; 525 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 526 ; 526 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 527 ; 527 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 528 ; 528 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 529 ; 529 ; >
+      au < manifest ; exists ; 1993 ; The ANNALS of the American Academy of Political and Social Science Volume 530 ; 530 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 531 ; 531 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 532 ; 532 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 533 ; 533 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 534 ; 534 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 535 ; 535 ; >
+      au < manifest ; exists ; 1994 ; The ANNALS of the American Academy of Political and Social Science Volume 536 ; 536 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 537 ; 537 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 538 ; 538 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 539 ; 539 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 540 ; 540 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 541 ; 541 ; >
+      au < manifest ; exists ; 1995 ; The ANNALS of the American Academy of Political and Social Science Volume 542 ; 542 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 543 ; 543 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 544 ; 544 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 545 ; 545 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 546 ; 546 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 547 ; 547 ; >
+      au < manifest ; exists ; 1996 ; The ANNALS of the American Academy of Political and Social Science Volume 548 ; 548 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 549 ; 549 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 550 ; 550 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 551 ; 551 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 552 ; 552 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 553 ; 553 ; >
+      au < manifest ; exists ; 1997 ; The ANNALS of the American Academy of Political and Social Science Volume 554 ; 554 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 555 ; 555 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 556 ; 556 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 557 ; 557 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 558 ; 558 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 559 ; 559 ; >
+      au < manifest ; exists ; 1998 ; The ANNALS of the American Academy of Political and Social Science Volume 560 ; 560 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 561 ; 561 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 562 ; 562 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 563 ; 563 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 564 ; 564 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 565 ; 565 ; >
+      au < manifest ; exists ; 1999 ; The ANNALS of the American Academy of Political and Social Science Volume 566 ; 566 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 567 ; 567 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 568 ; 568 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 569 ; 569 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 570 ; 570 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 571 ; 571 ; >
+      au < manifest ; exists ; 2000 ; The ANNALS of the American Academy of Political and Social Science Volume 572 ; 572 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 573 ; 573 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 574 ; 574 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 575 ; 575 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 576 ; 576 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 577 ; 577 ; >
+      au < manifest ; exists ; 2001 ; The ANNALS of the American Academy of Political and Social Science Volume 578 ; 578 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 579 ; 579 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 580 ; 580 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 581 ; 581 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 582 ; 582 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 583 ; 583 ; >
+      au < manifest ; exists ; 2002 ; The ANNALS of the American Academy of Political and Social Science Volume 584 ; 584 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 585 ; 585 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 586 ; 586 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 587 ; 587 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 588 ; 588 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 589 ; 589 ; >
+      au < manifest ; exists ; 2003 ; The ANNALS of the American Academy of Political and Social Science Volume 590 ; 590 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 591 ; 591 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 592 ; 592 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 593 ; 593 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 594 ; 594 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 595 ; 595 ; >
+      au < manifest ; exists ; 2004 ; The ANNALS of the American Academy of Political and Social Science Volume 596 ; 596 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 597 ; 597 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 598 ; 598 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 599 ; 599 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 600 ; 600 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 601 ; 601 ; >
+      au < manifest ; exists ; 2005 ; The ANNALS of the American Academy of Political and Social Science Volume 602 ; 602 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 603 ; 603 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 604 ; 604 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 605 ; 605 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 606 ; 606 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 607 ; 607 ; >
+      au < manifest ; exists ; 2006 ; The ANNALS of the American Academy of Political and Social Science Volume 608 ; 608 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 609 ; 609 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 610 ; 610 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 611 ; 611 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 612 ; 612 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 613 ; 613 ; >
+      au < manifest ; exists ; 2007 ; The ANNALS of the American Academy of Political and Social Science Volume 614 ; 614 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 615 ; 615 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 616 ; 616 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 617 ; 617 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 618 ; 618 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 619 ; 619 ; >
+      au < manifest ; exists ; 2008 ; The ANNALS of the American Academy of Political and Social Science Volume 620 ; 620 ; >
+      au < manifest ; exists ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 621 ; 621 ; >
+      au < manifest ; exists ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 622 ; 622 ; >
+      au < manifest ; exists ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 623 ; 623 ; >
+      au < manifest ; exists ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 624 ; 624 ; >
+      au < manifest ; exists ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 625 ; 625 ; >
+      au < released ; crawling ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ;  >
+      au < exists ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 ; >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ;  >
       au < released ; crawling ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ;  >
-      au < exists ; exists ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 631 ; 631 ;  >
+      au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
+      au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
+      au < exists ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
+      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
+      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
+      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
+      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
 
     }
 
@@ -1150,7 +2013,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2001 ; Anthropological Theory Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; Anthropological Theory Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; Anthropological Theory Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; Anthropological Theory Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; Anthropological Theory Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; Anthropological Theory Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; Anthropological Theory Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; Anthropological Theory Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Anthropological Theory Volume 10 ; 10 ;  >
+      au < manifest ; exists ; 2011 ; Anthropological Theory Volume 11 ; 11 ; >
 
     }
 
@@ -1180,7 +2053,41 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1977 ; Applied Psychological Measurement Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1978 ; Applied Psychological Measurement Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1979 ; Applied Psychological Measurement Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1980 ; Applied Psychological Measurement Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1981 ; Applied Psychological Measurement Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1982 ; Applied Psychological Measurement Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1983 ; Applied Psychological Measurement Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1984 ; Applied Psychological Measurement Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1985 ; Applied Psychological Measurement Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1986 ; Applied Psychological Measurement Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1987 ; Applied Psychological Measurement Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1988 ; Applied Psychological Measurement Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1989 ; Applied Psychological Measurement Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1990 ; Applied Psychological Measurement Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1991 ; Applied Psychological Measurement Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1992 ; Applied Psychological Measurement Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1993 ; Applied Psychological Measurement Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1994 ; Applied Psychological Measurement Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1995 ; Applied Psychological Measurement Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1996 ; Applied Psychological Measurement Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1997 ; Applied Psychological Measurement Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1998 ; Applied Psychological Measurement Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1999 ; Applied Psychological Measurement Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2000 ; Applied Psychological Measurement Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2001 ; Applied Psychological Measurement Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2002 ; Applied Psychological Measurement Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2003 ; Applied Psychological Measurement Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2004 ; Applied Psychological Measurement Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2005 ; Applied Psychological Measurement Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2006 ; Applied Psychological Measurement Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2007 ; Applied Psychological Measurement Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ;  >
+      au < manifest ; exists ; 2011 ; Applied Psychological Measurement Volume 35 ; 35 ; >
 
     }
 
@@ -1209,7 +2116,44 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1974 ; Armed Forces & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1975 ; Armed Forces & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1976 ; Armed Forces & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1977 ; Armed Forces & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1978 ; Armed Forces & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1979 ; Armed Forces & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1980 ; Armed Forces & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1981 ; Armed Forces & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1982 ; Armed Forces & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1983 ; Armed Forces & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1984 ; Armed Forces & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1985 ; Armed Forces & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1986 ; Armed Forces & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1987 ; Armed Forces & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1988 ; Armed Forces & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1989 ; Armed Forces & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1990 ; Armed Forces & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1991 ; Armed Forces & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1992 ; Armed Forces & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1993 ; Armed Forces & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1994 ; Armed Forces & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1995 ; Armed Forces & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1996 ; Armed Forces & Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1997 ; Armed Forces & Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1998 ; Armed Forces & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1999 ; Armed Forces & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2000 ; Armed Forces & Society Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2001 ; Armed Forces & Society Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2002 ; Armed Forces & Society Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2003 ; Armed Forces & Society Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2004 ; Armed Forces & Society Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2005 ; Armed Forces & Society Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2006 ; Armed Forces & Society Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2007 ; Armed Forces & Society Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2008 ; Armed Forces & Society Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2009 ; Armed Forces & Society Volume 36 ; 36 ; >
       au < released ; crawling ; 2010 ; Armed Forces & Society Volume 36 ; 36 ;  >
+      au < manifest ; exists ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
 
     }
 
@@ -1239,7 +2183,16 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; Arts and Humanities in Higher Education Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Arts and Humanities in Higher Education Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Arts and Humanities in Higher Education Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ;  >
+      au < manifest ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; >
 
     }
 
@@ -1269,7 +2222,55 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1966 ; Asia Pacific Journal of Human Resources Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1967 ; Asia Pacific Journal of Human Resources Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1968 ; Asia Pacific Journal of Human Resources Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1969 ; Asia Pacific Journal of Human Resources Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 5 ; 5 ; >
+      au < doesNotExist ; exists ; 1970 ; Asia Pacific Journal of Human Resources Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1972 ; Asia Pacific Journal of Human Resources Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1973 ; Asia Pacific Journal of Human Resources Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1974 ; Asia Pacific Journal of Human Resources Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1975 ; Asia Pacific Journal of Human Resources Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 11 ; 11 ; >
+      au < doesNotExist ; exists ; 1976 ; Asia Pacific Journal of Human Resources Volume 12 ; 12 ; >
+      au < doesNotExist ; exists ; 1977 ; Asia Pacific Journal of Human Resources Volume 13 ; 13 ; >
+      au < doesNotExist ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 14 ; 14 ; >
+      au < doesNotExist ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1978 ; Asia Pacific Journal of Human Resources Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1979 ; Asia Pacific Journal of Human Resources Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1980 ; Asia Pacific Journal of Human Resources Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1981 ; Asia Pacific Journal of Human Resources Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1982 ; Asia Pacific Journal of Human Resources Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1983 ; Asia Pacific Journal of Human Resources Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1984 ; Asia Pacific Journal of Human Resources Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1985 ; Asia Pacific Journal of Human Resources Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1986 ; Asia Pacific Journal of Human Resources Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1987 ; Asia Pacific Journal of Human Resources Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1988 ; Asia Pacific Journal of Human Resources Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1989 ; Asia Pacific Journal of Human Resources Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1990 ; Asia Pacific Journal of Human Resources Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1991 ; Asia Pacific Journal of Human Resources Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1992 ; Asia Pacific Journal of Human Resources Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1993 ; Asia Pacific Journal of Human Resources Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1994 ; Asia Pacific Journal of Human Resources Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1995 ; Asia Pacific Journal of Human Resources Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1996 ; Asia Pacific Journal of Human Resources Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1997 ; Asia Pacific Journal of Human Resources Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1998 ; Asia Pacific Journal of Human Resources Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1999 ; Asia Pacific Journal of Human Resources Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2000 ; Asia Pacific Journal of Human Resources Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2001 ; Asia Pacific Journal of Human Resources Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2002 ; Asia Pacific Journal of Human Resources Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2003 ; Asia Pacific Journal of Human Resources Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2004 ; Asia Pacific Journal of Human Resources Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2005 ; Asia Pacific Journal of Human Resources Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2006 ; Asia Pacific Journal of Human Resources Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2007 ; Asia Pacific Journal of Human Resources Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 ; >
       au < released ; crawling ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 ;  >
+      au < manifest ; exists ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 ; >
 
     }
 
@@ -1299,7 +2300,29 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1966 ; Asia-Pacific Journal of Public Health Volume 1 ; 1 ;>
+      au < exists ; exists ; 1967 ; Asia-Pacific Journal of Public Health Volume 2 ; 2 ; >
+      au < exists ; exists ; 1968 ; Asia-Pacific Journal of Public Health Volume 3 ; 3 ; >
+      au < exists ; exists ; 1969 ; Asia-Pacific Journal of Public Health Volume 4 ; 4 ; >
+      au < exists ; exists ; 1970 ; Asia-Pacific Journal of Public Health Volume 5 ; 5 ; >
+      au < exists ; exists ; 1971 ; Asia-Pacific Journal of Public Health Volume 6 ; 6 ; >
+      au < exists ; exists ; 1972 ; Asia-Pacific Journal of Public Health Volume 7 ; 7 ; >
+      au < exists ; exists ; 1973 ; Asia-Pacific Journal of Public Health Volume 8 ; 8 ; >
+      au < exists ; exists ; 1974 ; Asia-Pacific Journal of Public Health Volume 9 ; 9 ; >
+      au < exists ; exists ; 1975 ; Asia-Pacific Journal of Public Health Volume 10 ; 10 ; >
+      au < exists ; exists ; 1976 ; Asia-Pacific Journal of Public Health Volume 11 ; 11 ; >
+      au < exists ; exists ; 2000 ; Asia-Pacific Journal of Public Health Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Asia-Pacific Journal of Public Health Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Asia-Pacific Journal of Public Health Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2003 ; Asia-Pacific Journal of Public Health Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2004 ; Asia-Pacific Journal of Public Health Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ;  >
+      au < manifest ; exists ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 ; >
 
     }
 
@@ -1329,7 +2352,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2004 ; Asian Journal of Management Cases Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; Asian Journal of Management Cases Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 ; >
 
     }
 
@@ -1359,7 +2389,24 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1994 ; Assessment Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1995 ; Assessment Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1996 ; Assessment Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1997 ; Assessment Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1998 ; Assessment Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1999 ; Assessment Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2000 ; Assessment Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2001 ; Assessment Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2002 ; Assessment Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2003 ; Assessment Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2004 ; Assessment Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2005 ; Assessment Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2006 ; Assessment Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2007 ; Assessment Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2008 ; Assessment Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2009 ; Assessment Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Assessment Volume 17 ; 17 ;  >
+      au < manifest ; exists ; 2011 ; Assessment Volume 18 ; 18 ; >
 
     }
 
@@ -1389,7 +2436,38 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1979-1980 ; Assessment for Effective Intervention Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1980-1981 ; Assessment for Effective Intervention Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1981-1982 ; Assessment for Effective Intervention Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1982-1983 ; Assessment for Effective Intervention Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1983-1984 ; Assessment for Effective Intervention Volume 9 ; 9 ; >
+      au < exists ; exists ; 1984-1985 ; Assessment for Effective Intervention Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1985-1986 ; Assessment for Effective Intervention Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1986-1987 ; Assessment for Effective Intervention Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1987-1988 ; Assessment for Effective Intervention Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1988-1989 ; Assessment for Effective Intervention Volume 14 ; 14 ; >
+      au < exists ; exists ; 1989-1990 ; Assessment for Effective Intervention Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1990-1991 ; Assessment for Effective Intervention Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1991-1992 ; Assessment for Effective Intervention Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1992-1993 ; Assessment for Effective Intervention Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1993-1994 ; Assessment for Effective Intervention Volume 19 ; 19 ; >
+      au < exists ; exists ; 1994-1995 ; Assessment for Effective Intervention Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1995-1996 ; Assessment for Effective Intervention Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1996-1997 ; Assessment for Effective Intervention Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1997-1998 ; Assessment for Effective Intervention Volume 23 ; 23 ; >
+      au < exists ; exists ; 1998-1999 ; Assessment for Effective Intervention Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1999-2000 ; Assessment for Effective Intervention Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2000-2001 ; Assessment for Effective Intervention Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2001-2002 ; Assessment for Effective Intervention Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2002-2003 ; Assessment for Effective Intervention Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2003-2004 ; Assessment for Effective Intervention Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2004-2005 ; Assessment for Effective Intervention Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2005-2006 ; Assessment for Effective Intervention Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2006-2007 ; Assessment for Effective Intervention Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
       au < released ; crawling ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ;  >
+      au < manifest ; exists ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
 
     }
 
@@ -1419,7 +2497,21 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1997 ; Autism Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1998 ; Autism Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1999 ; Autism Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2000 ; Autism Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2001 ; Autism Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2002 ; Autism Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2003 ; Autism Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2004 ; Autism Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2005 ; Autism Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2006 ; Autism Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2007 ; Autism Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2008 ; Autism Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ;  >
+      au < manifest ; exists ; 2010 ; Autism Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2011 ; Autism Volume 15 ; 15 ; >
 
     }
 
@@ -1469,7 +2561,41 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1977 ; Behavior Modification Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1978 ; Behavior Modification Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1979 ; Behavior Modification Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1980 ; Behavior Modification Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1981 ; Behavior Modification Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1982 ; Behavior Modification Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1983 ; Behavior Modification Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1984 ; Behavior Modification Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1985 ; Behavior Modification Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1986 ; Behavior Modification Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1987 ; Behavior Modification Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1988 ; Behavior Modification Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1989 ; Behavior Modification Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1990 ; Behavior Modification Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1991 ; Behavior Modification Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1992 ; Behavior Modification Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1993 ; Behavior Modification Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1994 ; Behavior Modification Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1995 ; Behavior Modification Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1996 ; Behavior Modification Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1997 ; Behavior Modification Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1998 ; Behavior Modification Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1999 ; Behavior Modification Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2000 ; Behavior Modification Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2001 ; Behavior Modification Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2002 ; Behavior Modification Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2003 ; Behavior Modification Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2004 ; Behavior Modification Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2005 ; Behavior Modification Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2006 ; Behavior Modification Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2007 ; Behavior Modification Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Behavior Modification Volume 34 ; 34 ;  >
+      au < manifest ; exists ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
 
     }
 
@@ -1499,7 +2625,47 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < doesNotExist ; doesNotExist ; 0 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 1 ; 1 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 2 ; 2 ; >
+      au < exists ; exists ; 1973 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1975 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1976 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1977 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1978 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1979 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1980 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1981 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1982 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1983 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1984 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1985 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1986 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1987 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1988 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1989 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1990 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1991 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1992 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1993 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1994 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1995 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1996 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1997 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1998 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1999 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2000 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2001 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2002 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2003 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2004 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2005 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2006 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2007 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2008 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2009 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 40 ; 40 ;  >
+      au < manifest ; exists ; 2011 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 41 ; 41 ; >
 
     }
 
@@ -1529,7 +2695,19 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1999 ; Biological Research For Nursing Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2000 ; Biological Research For Nursing Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2001 ; Biological Research For Nursing Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2002 ; Biological Research For Nursing Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2003 ; Biological Research For Nursing Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2004 ; Biological Research For Nursing Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2005 ; Biological Research For Nursing Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; Biological Research For Nursing Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2007 ; Biological Research For Nursing Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2008 ; Biological Research For Nursing Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2009 ; Biological Research For Nursing Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Biological Research For Nursing Volume 12 ; 12 ;  >
+      au < manifest ; exists ; 2011 ; Biological Research For Nursing Volume 13 ; 13 ; >
 
     }
 
@@ -1559,7 +2737,23 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1995 ; Body & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; Body & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; Body & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; Body & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Body & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Body & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Body & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Body & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Body & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Body & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Body & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Body & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; Body & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; Body & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; Body & Society Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; Body & Society Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 2011 ; Body & Society Volume 17 ; 17 ; >
 
     }
 
@@ -1589,7 +2783,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2001 ; The British Journal of Diabetes & Vascular Disease Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; The British Journal of Diabetes & Vascular Disease Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; The British Journal of Diabetes & Vascular Disease Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; The British Journal of Diabetes & Vascular Disease Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; The British Journal of Diabetes & Vascular Disease Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; The British Journal of Diabetes & Vascular Disease Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; The British Journal of Diabetes & Vascular Disease Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; The British Journal of Diabetes & Vascular Disease Volume 10 ; 10 ;  >
+      au < manifest ; exists ; 2011 ; The British Journal of Diabetes & Vascular Disease Volume 11 ; 11 ; >
 
     }
 
@@ -1619,7 +2823,35 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1983 ; British Journal of Visual Impairment Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1984 ; British Journal of Visual Impairment Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1985 ; British Journal of Visual Impairment Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1986 ; British Journal of Visual Impairment Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1987 ; British Journal of Visual Impairment Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1988 ; British Journal of Visual Impairment Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1989 ; British Journal of Visual Impairment Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1990 ; British Journal of Visual Impairment Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1991 ; British Journal of Visual Impairment Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1992 ; British Journal of Visual Impairment Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1993 ; British Journal of Visual Impairment Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1994 ; British Journal of Visual Impairment Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1995 ; British Journal of Visual Impairment Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1996 ; British Journal of Visual Impairment Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1997 ; British Journal of Visual Impairment Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1998 ; British Journal of Visual Impairment Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1999 ; British Journal of Visual Impairment Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2000 ; British Journal of Visual Impairment Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2001 ; British Journal of Visual Impairment Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2002 ; British Journal of Visual Impairment Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2003 ; British Journal of Visual Impairment Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2004 ; British Journal of Visual Impairment Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2005 ; British Journal of Visual Impairment Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; British Journal of Visual Impairment Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2007 ; British Journal of Visual Impairment Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2008 ; British Journal of Visual Impairment Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2009 ; British Journal of Visual Impairment Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; British Journal of Visual Impairment Volume 28 ; 28 ;  >
+      au < manifest ; exists ; 2011 ; British Journal of Visual Impairment Volume 29 ; 29 ; >
 
     }
 
@@ -1649,7 +2881,28 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1989 ; British Journalism Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1990 ; British Journalism Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1992 ; British Journalism Review Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1993 ; British Journalism Review Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1994 ; British Journalism Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1995 ; British Journalism Review Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1996 ; British Journalism Review Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1997 ; British Journalism Review Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1998 ; British Journalism Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1999 ; British Journalism Review Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2000 ; British Journalism Review Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2001 ; British Journalism Review Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2002 ; British Journalism Review Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2003 ; British Journalism Review Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2004 ; British Journalism Review Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2005 ; British Journalism Review Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2006 ; British Journalism Review Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2007 ; British Journalism Review Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2008 ; British Journalism Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2009 ; British Journalism Review Volume 20 ; 20 ; >
       au < released ; crawling ; 2010 ; British Journalism Review Volume 21 ; 21 ;  >
+      au < manifest ; exists ; 2011 ; British Journalism Review Volume 22 ; 22 ; >
 
     }
 
@@ -1679,7 +2932,38 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1980 ; Building Services Engineering Research and Technology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1981 ; Building Services Engineering Research and Technology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1982 ; Building Services Engineering Research and Technology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1983 ; Building Services Engineering Research and Technology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1984 ; Building Services Engineering Research and Technology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1985 ; Building Services Engineering Research and Technology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1986 ; Building Services Engineering Research and Technology Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1987 ; Building Services Engineering Research and Technology Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1988 ; Building Services Engineering Research and Technology Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1989 ; Building Services Engineering Research and Technology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1990 ; Building Services Engineering Research and Technology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1991 ; Building Services Engineering Research and Technology Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1992 ; Building Services Engineering Research and Technology Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1993 ; Building Services Engineering Research and Technology Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1994 ; Building Services Engineering Research and Technology Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1995 ; Building Services Engineering Research and Technology Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1996 ; Building Services Engineering Research and Technology Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1997 ; Building Services Engineering Research and Technology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1998 ; Building Services Engineering Research and Technology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1999 ; Building Services Engineering Research and Technology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2000 ; Building Services Engineering Research and Technology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2001 ; Building Services Engineering Research and Technology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2002 ; Building Services Engineering Research and Technology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2003 ; Building Services Engineering Research and Technology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2004 ; Building Services Engineering Research and Technology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2005 ; Building Services Engineering Research and Technology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2006 ; Building Services Engineering Research and Technology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2007 ; Building Services Engineering Research and Technology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2008 ; Building Services Engineering Research and Technology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2009 ; Building Services Engineering Research and Technology Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; Building Services Engineering Research and Technology Volume 31 ; 31 ;  >
+      au < manifest ; exists ; 2011 ; Building Services Engineering Research and Technology Volume 32 ; 32 ; >
 
     }
 
@@ -1709,7 +2993,37 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1981 ; Bulletin of Science, Technology & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1982 ; Bulletin of Science, Technology & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1983 ; Bulletin of Science, Technology & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1984 ; Bulletin of Science, Technology & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1985 ; Bulletin of Science, Technology & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1986 ; Bulletin of Science, Technology & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1987 ; Bulletin of Science, Technology & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1988 ; Bulletin of Science, Technology & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1989 ; Bulletin of Science, Technology & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1990 ; Bulletin of Science, Technology & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1991 ; Bulletin of Science, Technology & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1992 ; Bulletin of Science, Technology & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1993 ; Bulletin of Science, Technology & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1994 ; Bulletin of Science, Technology & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1995 ; Bulletin of Science, Technology & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1996 ; Bulletin of Science, Technology & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1997 ; Bulletin of Science, Technology & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1998 ; Bulletin of Science, Technology & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1999 ; Bulletin of Science, Technology & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2000 ; Bulletin of Science, Technology & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2001 ; Bulletin of Science, Technology & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2002 ; Bulletin of Science, Technology & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2003 ; Bulletin of Science, Technology & Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2004 ; Bulletin of Science, Technology & Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2005 ; Bulletin of Science, Technology & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2006 ; Bulletin of Science, Technology & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2007 ; Bulletin of Science, Technology & Society Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2008 ; Bulletin of Science, Technology & Society Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2009 ; Bulletin of Science, Technology & Society Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 ;  >
+      au < manifest ; exists ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 ; >
 
     }
 
@@ -1739,7 +3053,56 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1960 ; Business & Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 1960 ; Business & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1962 ; Business & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1963 ; Business & Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1964 ; Business & Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1965 ; Business & Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1966 ; Business & Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1967 ; Business & Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1968 ; Business & Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1969 ; Business & Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1970 ; Business & Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1971 ; Business & Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1972 ; Business & Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1973 ; Business & Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1974 ; Business & Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1975 ; Business & Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1976 ; Business & Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1977 ; Business & Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1978 ; Business & Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1981 ; Business & Society Volume 20 ; 20 ; >
+      au < exists ; exists ; 1981 ; Business & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1983 ; Business & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1984 ; Business & Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1985 ; Business & Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1986 ; Business & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1987 ; Business & Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1988 ; Business & Society Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1989 ; Business & Society Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1990 ; Business & Society Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1991 ; Business & Society Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1992 ; Business & Society Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1993 ; Business & Society Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1994 ; Business & Society Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1995 ; Business & Society Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1996 ; Business & Society Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1997 ; Business & Society Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1998 ; Business & Society Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1999 ; Business & Society Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2000 ; Business & Society Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2001 ; Business & Society Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2002 ; Business & Society Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2003 ; Business & Society Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2004 ; Business & Society Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2005 ; Business & Society Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2006 ; Business & Society Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2007 ; Business & Society Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2008 ; Business & Society Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2009 ; Business & Society Volume 48 ; 48 ; >
       au < released ; crawling ; 2010 ; Business & Society Volume 49 ; 49 ;  >
+      au < manifest ; exists ; 2011 ; Business & Society Volume 50 ; 50 ; >
 
     }
 
@@ -1769,7 +3132,50 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < doesNotExist ; doesNotExist ; 0 ; Business Communication Quarterly Volume 31 ; 31 ; >
+      au < exists ; exists ; 1969 ; Business Communication Quarterly Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1970 ; Business Communication Quarterly Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1971 ; Business Communication Quarterly Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1972 ; Business Communication Quarterly Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1973 ; Business Communication Quarterly Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1974 ; Business Communication Quarterly Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1975 ; Business Communication Quarterly Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1976 ; Business Communication Quarterly Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1977 ; Business Communication Quarterly Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1978 ; Business Communication Quarterly Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1979 ; Business Communication Quarterly Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1980 ; Business Communication Quarterly Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1981 ; Business Communication Quarterly Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1982 ; Business Communication Quarterly Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1983 ; Business Communication Quarterly Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1984 ; Business Communication Quarterly Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1985 ; Business Communication Quarterly Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1986 ; Business Communication Quarterly Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1987 ; Business Communication Quarterly Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1988 ; Business Communication Quarterly Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1989 ; Business Communication Quarterly Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1990 ; Business Communication Quarterly Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1991 ; Business Communication Quarterly Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1992 ; Business Communication Quarterly Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1993 ; Business Communication Quarterly Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1994 ; Business Communication Quarterly Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1995 ; Business Communication Quarterly Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1996 ; Business Communication Quarterly Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1997 ; Business Communication Quarterly Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1998 ; Business Communication Quarterly Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1999 ; Business Communication Quarterly Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2000 ; Business Communication Quarterly Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2001 ; Business Communication Quarterly Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2002 ; Business Communication Quarterly Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2003 ; Business Communication Quarterly Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2004 ; Business Communication Quarterly Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2005 ; Business Communication Quarterly Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2006 ; Business Communication Quarterly Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2007 ; Business Communication Quarterly Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2008 ; Business Communication Quarterly Volume 71 ; 71 ; >
+      au < manifest ; exists ; 2009 ; Business Communication Quarterly Volume 72 ; 72 ; >
       au < released ; crawling ; 2010 ; Business Communication Quarterly Volume 73 ; 73 ;  >
+      au < manifest ; exists ; 2011 ; Business Communication Quarterly Volume 74 ; 74 ; >
 
     }
 
@@ -1799,7 +3205,34 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1984 ; Business Information Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1985 ; Business Information Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1986 ; Business Information Review Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1987 ; Business Information Review Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1988 ; Business Information Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1989 ; Business Information Review Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1990 ; Business Information Review Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1991 ; Business Information Review Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1992 ; Business Information Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1993 ; Business Information Review Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1994 ; Business Information Review Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1995 ; Business Information Review Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1996 ; Business Information Review Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1997 ; Business Information Review Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1998 ; Business Information Review Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1999 ; Business Information Review Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2000 ; Business Information Review Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2001 ; Business Information Review Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2002 ; Business Information Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2003 ; Business Information Review Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2004 ; Business Information Review Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2005 ; Business Information Review Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2006 ; Business Information Review Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2007 ; Business Information Review Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2008 ; Business Information Review Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2009 ; Business Information Review Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; Business Information Review Volume 27 ; 27 ;  >
+      au < manifest ; exists ; 2011 ; Business Information Review Volume 28 ; 28 ; >
 
     }
 
@@ -1859,7 +3292,40 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1978 ; Career Development for Exceptional Individuals Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1979 ; Career Development for Exceptional Individuals Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1980 ; Career Development for Exceptional Individuals Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1981 ; Career Development for Exceptional Individuals Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1982 ; Career Development for Exceptional Individuals Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1983 ; Career Development for Exceptional Individuals Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1984 ; Career Development for Exceptional Individuals Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1985 ; Career Development for Exceptional Individuals Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1986 ; Career Development for Exceptional Individuals Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1987 ; Career Development for Exceptional Individuals Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1988 ; Career Development for Exceptional Individuals Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1989 ; Career Development for Exceptional Individuals Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1990 ; Career Development for Exceptional Individuals Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1991 ; Career Development for Exceptional Individuals Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1992 ; Career Development for Exceptional Individuals Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1993 ; Career Development for Exceptional Individuals Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1994 ; Career Development for Exceptional Individuals Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1995 ; Career Development for Exceptional Individuals Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1996 ; Career Development for Exceptional Individuals Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1997 ; Career Development for Exceptional Individuals Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1998 ; Career Development for Exceptional Individuals Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1999 ; Career Development for Exceptional Individuals Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2000 ; Career Development for Exceptional Individuals Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2001 ; Career Development for Exceptional Individuals Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2002 ; Career Development for Exceptional Individuals Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2003 ; Career Development for Exceptional Individuals Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2004 ; Career Development for Exceptional Individuals Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2005 ; Career Development for Exceptional Individuals Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2006 ; Career Development for Exceptional Individuals Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2007 ; Career Development for Exceptional Individuals Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2008 ; Career Development for Exceptional Individuals Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
       au < released ; crawling ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 ;  >
+      au < manifest ; exists ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 ; >
 
     }
 
@@ -1888,6 +3354,8 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2009 ; Cartilage Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Cartilage Volume 2 ; 2 ; >
       au < wanted ; exists ; 2009 ; Cartilage Volume 2 ; 2 ;  >
 
     }
@@ -1918,7 +3386,33 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1985 ; Child Language Teaching and Therapy Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1986 ; Child Language Teaching and Therapy Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1987 ; Child Language Teaching and Therapy Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1988 ; Child Language Teaching and Therapy Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1989 ; Child Language Teaching and Therapy Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1990 ; Child Language Teaching and Therapy Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1991 ; Child Language Teaching and Therapy Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1992 ; Child Language Teaching and Therapy Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1993 ; Child Language Teaching and Therapy Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1994 ; Child Language Teaching and Therapy Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1995 ; Child Language Teaching and Therapy Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1996 ; Child Language Teaching and Therapy Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1997 ; Child Language Teaching and Therapy Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1998 ; Child Language Teaching and Therapy Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1999 ; Child Language Teaching and Therapy Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2000 ; Child Language Teaching and Therapy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2001 ; Child Language Teaching and Therapy Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2002 ; Child Language Teaching and Therapy Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2003 ; Child Language Teaching and Therapy Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2004 ; Child Language Teaching and Therapy Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2005 ; Child Language Teaching and Therapy Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2006 ; Child Language Teaching and Therapy Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2007 ; Child Language Teaching and Therapy Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2008 ; Child Language Teaching and Therapy Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2009 ; Child Language Teaching and Therapy Volume 25 ; 25 ; >
       au < released ; crawling ; 2010 ; Child Language Teaching and Therapy Volume 26 ; 26 ;  >
+      au < manifest ; exists ; 2011 ; Child Language Teaching and Therapy Volume 27 ; 27 ; >
 
     }
 
@@ -1948,7 +3442,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1996 ; Child Maltreatment Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1997 ; Child Maltreatment Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1998 ; Child Maltreatment Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1999 ; Child Maltreatment Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Child Maltreatment Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Child Maltreatment Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Child Maltreatment Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Child Maltreatment Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Child Maltreatment Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2005 ; Child Maltreatment Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2006 ; Child Maltreatment Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; Child Maltreatment Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2008 ; Child Maltreatment Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2009 ; Child Maltreatment Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; Child Maltreatment Volume 15 ; 15 ;  >
+      au < manifest ; exists ; 2011 ; Child Maltreatment Volume 16 ; 16 ; >
 
     }
 
@@ -1977,8 +3486,24 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Childhood Volume 15 ; 15 ;  >
+      au < manifest ; exists ; 1993 ; Childhood Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1994 ; Childhood Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1996 ; Childhood Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1997 ; Childhood Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1998 ; Childhood Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1999 ; Childhood Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2000 ; Childhood Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2001 ; Childhood Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2002 ; Childhood Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2003 ; Childhood Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2004 ; Childhood Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2005 ; Childhood Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2006 ; Childhood Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2007 ; Childhood Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2008 ; Childhood Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2009 ; Childhood Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Childhood Volume 17 ; 17 ;  >
+      au < manifest ; exists ; 2011 ; Childhood Volume 18 ; 18 ; >
 
     }
 
@@ -2007,8 +3532,31 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; China Information Volume 22 ; 22 ;  >
+      au < manifest ; exists ; 1986 ; China Information Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; China Information Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; China Information Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; China Information Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; China Information Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; China Information Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; China Information Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; China Information Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; China Information Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; China Information Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; China Information Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; China Information Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; China Information Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; China Information Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; China Information Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; China Information Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; China Information Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004 ; China Information Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2005 ; China Information Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2006 ; China Information Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2007 ; China Information Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2008 ; China Information Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2009 ; China Information Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; China Information Volume 24 ; 24 ;  >
+      au < manifest ; exists ; 2011 ; China Information Volume 25 ; 25 ; >
 
     }
 
@@ -2028,8 +3576,53 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; China Report Volume 44 ; 44 ;  >
+      au < exists ; exists ; 1965 ; China Report Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1966 ; China Report Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1967 ; China Report Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1968 ; China Report Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1969 ; China Report Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1970 ; China Report Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1971 ; China Report Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1972 ; China Report Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1973 ; China Report Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1974 ; China Report Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1975 ; China Report Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1976 ; China Report Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1977 ; China Report Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1978 ; China Report Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1979 ; China Report Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1980 ; China Report Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1981 ; China Report Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1982 ; China Report Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1983 ; China Report Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1984 ; China Report Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1985 ; China Report Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1986 ; China Report Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1987 ; China Report Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1988 ; China Report Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1989 ; China Report Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1990 ; China Report Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1991 ; China Report Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1992 ; China Report Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1993 ; China Report Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1994 ; China Report Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1995 ; China Report Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1996 ; China Report Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1997 ; China Report Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1998 ; China Report Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1999 ; China Report Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2000 ; China Report Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2001 ; China Report Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2002 ; China Report Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2003 ; China Report Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2004 ; China Report Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2005 ; China Report Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2006 ; China Report Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2007 ; China Report Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2008 ; China Report Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2009 ; China Report Volume 45 ; 45 ; >
       au < released ; crawling ; 2010 ; China Report Volume 45 ; 45 ;  >
+      au < exists ; exists ; 2010 ; China Report Volume 47 ; 47 ; >
 
     }
 
@@ -2058,8 +3651,13 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Chronic Illness Volume 4 ; 4 ;  >
+      au < manifest ; exists ; 2005 ; Chronic Illness Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; Chronic Illness Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; Chronic Illness Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; Chronic Illness Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; Chronic Illness Volume 5 ; 5 ; >
       au < released ; crawling ; 2010 ; Chronic Illness Volume 6 ; 6 ;  >
+      au < manifest ; exists ; 2011 ; Chronic Illness Volume 7 ; 7 ; >
 
     }
 
@@ -2088,8 +3686,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Chronic Respiratory Disease Volume 5 ; 5 ;  >
+      au < manifest ; exists ; 2004 ; Chronic Respiratory Disease Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; Chronic Respiratory Disease Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; Chronic Respiratory Disease Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; Chronic Respiratory Disease Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; Chronic Respiratory Disease Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; Chronic Respiratory Disease Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2011 ; Chronic Respiratory Disease Volume 8 ; 8 ; >
 
     }
 
@@ -2118,8 +3722,55 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Clin-Alert Volume 46 ; 46 ;  >
+      au < exists ; exists ; 1963 ; Clin-Alert Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1964 ; Clin-Alert Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1965 ; Clin-Alert Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1966 ; Clin-Alert Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1967 ; Clin-Alert Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1968 ; Clin-Alert Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1969 ; Clin-Alert Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1970 ; Clin-Alert Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1971 ; Clin-Alert Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1972 ; Clin-Alert Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1973 ; Clin-Alert Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1974 ; Clin-Alert Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1975 ; Clin-Alert Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1976 ; Clin-Alert Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1977 ; Clin-Alert Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1978 ; Clin-Alert Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1979 ; Clin-Alert Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1980 ; Clin-Alert Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1981 ; Clin-Alert Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1982 ; Clin-Alert Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1983 ; Clin-Alert Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1984 ; Clin-Alert Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1985 ; Clin-Alert Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1986 ; Clin-Alert Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1987 ; Clin-Alert Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1988 ; Clin-Alert Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1989 ; Clin-Alert Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1990 ; Clin-Alert Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1991 ; Clin-Alert Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1992 ; Clin-Alert Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1993 ; Clin-Alert Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1994 ; Clin-Alert Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1995 ; Clin-Alert Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1996 ; Clin-Alert Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1997 ; Clin-Alert Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1998 ; Clin-Alert Volume 36 ; 36 ; >
+      au < exists ; exists ; 1998 ; Clin-Alert Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2000 ; Clin-Alert Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2001 ; Clin-Alert Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2002 ; Clin-Alert Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2003 ; Clin-Alert Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2004 ; Clin-Alert Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2005 ; Clin-Alert Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2006 ; Clin-Alert Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2007 ; Clin-Alert Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2008 ; Clin-Alert Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
       au < released ; crawling ; 2010 ; Clin-Alert Volume 48 ; 48 ;  >
+      au < manifest ; exists ; 2011 ; Clin-Alert Volume 49 ; 49 ; >
 
     }
 
@@ -2148,8 +3799,23 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ;  >
+      au < manifest ; exists ; 1995 ; Clinical and Applied Thrombosis/Hemostasis Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; Clinical and Applied Thrombosis/Hemostasis Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; Clinical and Applied Thrombosis/Hemostasis Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; Clinical and Applied Thrombosis/Hemostasis Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Clinical and Applied Thrombosis/Hemostasis Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Clinical and Applied Thrombosis/Hemostasis Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Clinical and Applied Thrombosis/Hemostasis Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Clinical and Applied Thrombosis/Hemostasis Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Clinical and Applied Thrombosis/Hemostasis Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Clinical and Applied Thrombosis/Hemostasis Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Clinical and Applied Thrombosis/Hemostasis Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Clinical and Applied Thrombosis/Hemostasis Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; Clinical and Applied Thrombosis/Hemostasis Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; Clinical and Applied Thrombosis/Hemostasis Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 2011 ; Clinical and Applied Thrombosis/Hemostasis Volume 17 ; 17 ; >
 
     }
 
@@ -2178,8 +3844,16 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Clinical Case Studies Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2002 ; Clinical Case Studies Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; Clinical Case Studies Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; Clinical Case Studies Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; Clinical Case Studies Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Clinical Case Studies Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Clinical Case Studies Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Clinical Case Studies Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Clinical Case Studies Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Clinical Case Studies Volume 9 ; 9 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Case Studies Volume 10 ; 10 ; >
 
     }
 
@@ -2209,7 +3883,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1996 ; Clinical Child Psychology and Psychiatry Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1997 ; Clinical Child Psychology and Psychiatry Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1998 ; Clinical Child Psychology and Psychiatry Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1999 ; Clinical Child Psychology and Psychiatry Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Clinical Child Psychology and Psychiatry Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Clinical Child Psychology and Psychiatry Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Clinical Child Psychology and Psychiatry Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Clinical Child Psychology and Psychiatry Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Clinical Child Psychology and Psychiatry Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2005 ; Clinical Child Psychology and Psychiatry Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2006 ; Clinical Child Psychology and Psychiatry Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; Clinical Child Psychology and Psychiatry Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2008 ; Clinical Child Psychology and Psychiatry Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2009 ; Clinical Child Psychology and Psychiatry Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; Clinical Child Psychology and Psychiatry Volume 15 ; 15 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Child Psychology and Psychiatry Volume 16 ; 16 ; >
 
     }
 
@@ -2239,7 +3928,26 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1992 ; Clinical Nursing Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1993 ; Clinical Nursing Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1994 ; Clinical Nursing Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1995 ; Clinical Nursing Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1996 ; Clinical Nursing Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1997 ; Clinical Nursing Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1998 ; Clinical Nursing Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1999 ; Clinical Nursing Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2000 ; Clinical Nursing Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2001 ; Clinical Nursing Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2002 ; Clinical Nursing Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2003 ; Clinical Nursing Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2004 ; Clinical Nursing Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2005 ; Clinical Nursing Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2006 ; Clinical Nursing Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2007 ; Clinical Nursing Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2008 ; Clinical Nursing Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2009 ; Clinical Nursing Research Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; Clinical Nursing Research Volume 19 ; 19 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Nursing Research Volume 20 ; 20 ; >
 
     }
 
@@ -2269,7 +3977,56 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1962 ; Clinical Pediatrics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1963 ; Clinical Pediatrics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1964 ; Clinical Pediatrics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1965 ; Clinical Pediatrics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1966 ; Clinical Pediatrics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1967 ; Clinical Pediatrics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1968 ; Clinical Pediatrics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1969 ; Clinical Pediatrics Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1970 ; Clinical Pediatrics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1971 ; Clinical Pediatrics Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1972 ; Clinical Pediatrics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1973 ; Clinical Pediatrics Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1974 ; Clinical Pediatrics Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1975 ; Clinical Pediatrics Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1976 ; Clinical Pediatrics Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1977 ; Clinical Pediatrics Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1978 ; Clinical Pediatrics Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1979 ; Clinical Pediatrics Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1980 ; Clinical Pediatrics Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1981 ; Clinical Pediatrics Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1982 ; Clinical Pediatrics Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1983 ; Clinical Pediatrics Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1984 ; Clinical Pediatrics Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1985 ; Clinical Pediatrics Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1986 ; Clinical Pediatrics Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1987 ; Clinical Pediatrics Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1988 ; Clinical Pediatrics Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1989 ; Clinical Pediatrics Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1990 ; Clinical Pediatrics Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1991 ; Clinical Pediatrics Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1992 ; Clinical Pediatrics Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1993 ; Clinical Pediatrics Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1994 ; Clinical Pediatrics Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1995 ; Clinical Pediatrics Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1996 ; Clinical Pediatrics Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1997 ; Clinical Pediatrics Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1998 ; Clinical Pediatrics Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1999 ; Clinical Pediatrics Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2000 ; Clinical Pediatrics Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2001 ; Clinical Pediatrics Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2002 ; Clinical Pediatrics Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2003 ; Clinical Pediatrics Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2004 ; Clinical Pediatrics Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2005 ; Clinical Pediatrics Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2006 ; Clinical Pediatrics Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2007 ; Clinical Pediatrics Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2008 ; Clinical Pediatrics Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2009 ; Clinical Pediatrics Volume 48 ; 48 ; >
       au < released ; crawling ; 2010 ; Clinical Pediatrics Volume 49 ; 49 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Pediatrics Volume 50 ; 50 ; >
 
     }
 
@@ -2299,7 +4056,31 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1987 ; Clinical Rehabilitation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1988 ; Clinical Rehabilitation Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1989 ; Clinical Rehabilitation Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1990 ; Clinical Rehabilitation Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1991 ; Clinical Rehabilitation Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1992 ; Clinical Rehabilitation Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1993 ; Clinical Rehabilitation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1994 ; Clinical Rehabilitation Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1995 ; Clinical Rehabilitation Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1996 ; Clinical Rehabilitation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1997 ; Clinical Rehabilitation Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1998 ; Clinical Rehabilitation Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; Clinical Rehabilitation Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Clinical Rehabilitation Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; Clinical Rehabilitation Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; Clinical Rehabilitation Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; Clinical Rehabilitation Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004 ; Clinical Rehabilitation Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2005 ; Clinical Rehabilitation Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2006 ; Clinical Rehabilitation Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2007 ; Clinical Rehabilitation Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2008 ; Clinical Rehabilitation Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; Clinical Rehabilitation Volume 24 ; 24 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Rehabilitation Volume 25 ; 25 ; >
 
     }
 
@@ -2329,7 +4110,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2004 ; Clinical Trials Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; Clinical Trials Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; Clinical Trials Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; Clinical Trials Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; Clinical Trials Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; Clinical Trials Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2011 ; Clinical Trials Volume 8 ; 8 ; >
 
     }
 
@@ -2359,7 +4147,35 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1982 ; Clothing and Textiles Research Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1983 ; Clothing and Textiles Research Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1984 ; Clothing and Textiles Research Journal Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1985 ; Clothing and Textiles Research Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1986 ; Clothing and Textiles Research Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1987 ; Clothing and Textiles Research Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1988 ; Clothing and Textiles Research Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1989 ; Clothing and Textiles Research Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1990 ; Clothing and Textiles Research Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1991 ; Clothing and Textiles Research Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1992 ; Clothing and Textiles Research Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1993 ; Clothing and Textiles Research Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1995 ; Clothing and Textiles Research Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1996 ; Clothing and Textiles Research Journal Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1997 ; Clothing and Textiles Research Journal Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1998 ; Clothing and Textiles Research Journal Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1999 ; Clothing and Textiles Research Journal Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2000 ; Clothing and Textiles Research Journal Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2001 ; Clothing and Textiles Research Journal Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2002 ; Clothing and Textiles Research Journal Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2003 ; Clothing and Textiles Research Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2004 ; Clothing and Textiles Research Journal Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2005 ; Clothing and Textiles Research Journal Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; Clothing and Textiles Research Journal Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2007 ; Clothing and Textiles Research Journal Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2008 ; Clothing and Textiles Research Journal Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; >
       au < released ; crawling ; 2010 ; Clothing and Textiles Research Journal Volume 28 ; 28 ;  >
+      au < manifest ; exists ; 2011 ; Clothing and Textiles Research Journal Volume 29 ; 29 ; >
 
     }
 
@@ -2389,8 +4205,38 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ;  >
-      au < manifest ; exists ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ;  >
+      au < exists ; exists ; 1976 ; Communication Disorders Quarterly Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1978 ; Communication Disorders Quarterly Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1979 ; Communication Disorders Quarterly Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1980 ; Communication Disorders Quarterly Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1981 ; Communication Disorders Quarterly Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1982-1983 ; Communication Disorders Quarterly Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1983-1984 ; Communication Disorders Quarterly Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1984-1985 ; Communication Disorders Quarterly Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1985-1986 ; Communication Disorders Quarterly Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1986-1987 ; Communication Disorders Quarterly Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1987-1988 ; Communication Disorders Quarterly Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1988-1989 ; Communication Disorders Quarterly Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1990 ; Communication Disorders Quarterly Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1988-1992 ; Communication Disorders Quarterly Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1993 ; Communication Disorders Quarterly Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1994-1995 ; Communication Disorders Quarterly Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1995 ; Communication Disorders Quarterly Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1997 ; Communication Disorders Quarterly Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1997-1998 ; Communication Disorders Quarterly Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1998-1999 ; Communication Disorders Quarterly Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1999-2000 ; Communication Disorders Quarterly Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2000-2001 ; Communication Disorders Quarterly Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2001-2002 ; Communication Disorders Quarterly Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2002-2003 ; Communication Disorders Quarterly Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2003-2004 ; Communication Disorders Quarterly Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2004-2005 ; Communication Disorders Quarterly Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2005-2006 ; Communication Disorders Quarterly Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2006-2007 ; Communication Disorders Quarterly Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2010-2011 ; Communication Disorders Quarterly Volume 32 ; 32 ; >
 
     }
 
