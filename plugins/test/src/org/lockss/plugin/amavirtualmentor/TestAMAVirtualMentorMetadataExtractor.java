@@ -59,7 +59,7 @@ public class TestAMAVirtualMentorMetadataExtractor extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
-    "org.lockss.plugin.amavirtualmentor.AMAVirtualMentorPlugin";
+    "org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin";
 
   private static String BASE_URL = "http://virtualmentor.ama-assn.org/";
 //  private static String SIM_ROOT = BASE_URL + "xyzjn/";
