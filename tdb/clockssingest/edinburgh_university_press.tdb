@@ -19,6 +19,7 @@
 
     param[journal_id] = afr
     comment[2011] = from 2011 published by Cambridge University Press
+    comment[africa] = no issues currently exist on the EUP site 8/10/2011
 
     au < crawling ; exists ; 2000 ; Africa Volume 70 ; 70 >
     au < crawling ; exists ; 2001 ; Africa Volume 71 ; 71 >
@@ -46,6 +47,7 @@
 
     param[journal_id] = abib
     comment[2011] = from 2011 published by Cambridge University Press
+    comment[africa_bib] = no issues currently exist on the EUP site 09/10/2011
 
     au < crawling ; exists ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
     au < crawling ; exists ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
@@ -68,10 +70,10 @@
 
     param[journal_id] = ajicl
 
-    au < crawling ; exists ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
-    au < crawling ; exists ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
-    au < crawling ; exists ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
-    au < crawling ; exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+    au < testing ; exists ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
+    au < testing ; exists ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
+    au < testing ; exists ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+    au < testing ; exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
     au < released ; crawling ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
     au < released ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
     au < crawling ; exists ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
@@ -89,14 +91,15 @@
 
     param[journal_id] = arch
 
-    au < crawling ; exists ; 2003 ; Architectural Heritage Volume 14 ; 14 >
-    au < crawling ; exists ; 2004 ; Architectural Heritage Volume 15 ; 15 >
-    au < crawling ; exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
-    au < crawling ; exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
-    au < crawling ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
-    au < crawling ; exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
+    au < testing ; exists ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+    au < testing ; exists ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+    au < testing ; exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
+    au < testing ; exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
+    au < testing ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+    au < testing ; exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
-    au < testing ; exists ; 2010 ; Architectural Heritage Volume 21 ; 21 >
+    au < released ; manifest ; 2010 ; Architectural Heritage Volume 21 ; 21 >
+    au < testing ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
 
   }
 
@@ -111,14 +114,15 @@
 
     param[journal_id] = anh
 
-    au < crawling ; exists ; 2003 ; Archives of Natural History Volume 30 ; 30 >
-    au < crawling ; exists ; 2004 ; Archives of Natural History Volume 31 ; 31 >
-    au < crawling ; exists ; 2005 ; Archives of Natural History Volume 32 ; 32 >
-    au < crawling ; exists ; 2006 ; Archives of Natural History Volume 33 ; 33 >
-    au < crawling ; exists ; 2007 ; Archives of Natural History Volume 34 ; 34 >
-    au < crawling ; exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+    au < testing ; exists ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+    au < testing ; exists ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+    au < testing ; exists ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+    au < testing ; exists ; 2006 ; Archives of Natural History Volume 33 ; 33 >
+    au < testing ; exists ; 2007 ; Archives of Natural History Volume 34 ; 34 >
+    au < testing ; exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
     au < released ; crawling ; 2009 ; Archives of Natural History Volume 36 ; 36 >
     au < released ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
+    au < testing ; exists ; 2011 ; Archives of Natural History Volume 38 ; 38 >
 
   }
 
@@ -133,10 +137,11 @@
 
     param[journal_id] = bjj
 
-    au < crawling ; exists ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
-    au < crawling ; exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
+    au < testing ; exists ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
+    au < testing ; exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
     au < released ; crawling ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
     au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
+    au < testing ; exists ; 2010 ; Ben Jonson Journal Volume 18 ; 18 >
 
   }
 
@@ -153,7 +158,7 @@
 
     au < released ; crawling ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
     au < released ; crawling ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; Britain and the World Volume 3 ; 3 >
+    au < released ; manifest ; 2010 ; Britain and the World Volume 3 ; 3 >
     au < crawling ; exists ; 2011 ; Britain and the World Volume 4 ; 4 >
 
   }
@@ -368,7 +373,7 @@
     au < crawling ; exists ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
     au < crawling ; exists ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
     au < released ; crawling ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
-    au < testing ; exists ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
+    au < released ; manifest ; 2010 ; International Journal of Humanities and Arts Computing Volume 4 (2010) ; 4 >
     au < manifest ; exists ; 2011 ; International Journal of Humanities and Arts Computing Volume 5 (2011) ; 5 >
 
   }
@@ -466,7 +471,7 @@
     au < crawling ; exists ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
     au < crawling ; exists ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
     au < released ; crawling ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
-    au < testing ; exists ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
+    au < released ; manifest ; 2010 ; Journal of Qur'anic Studies Volume 12 ; 12 >
     au < manifest ; exists ; 2011 ; Journal of Qur'anic Studies Volume 13 ; 13 >
 
   }
@@ -529,7 +534,7 @@
 
     param[journal_id] = kms
 
-    au < testing ; exists ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+    au < released ; manifest ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
 
   }
@@ -545,10 +550,10 @@
 
     param[journal_id] = mod
 
-    au < testing ; exists ; 2010 ; Modernist Cultures Volume 1 ; 1 >
-    au < testing ; exists ; 2010 ; Modernist Cultures Volume 2 ; 2 >
-    au < testing ; exists ; 2010 ; Modernist Cultures Volume 3 ; 3 >
-    au < testing ; exists ; 2010 ; Modernist Cultures Volume 4 ; 4 >
+    au < released ; manifest ; 2010 ; Modernist Cultures Volume 1 ; 1 >
+    au < released ; manifest ; 2010 ; Modernist Cultures Volume 2 ; 2 >
+    au < released ; manifest ; 2010 ; Modernist Cultures Volume 3 ; 3 >
+    au < released ; manifest ; 2010 ; Modernist Cultures Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Modernist Cultures Volume 5 ; 5 >
 
 
@@ -721,7 +726,7 @@
     au < crawling ; exists ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
     au < crawling ; exists ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
     au < crawling ; exists ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
-    au < testing ; exists ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+    au < released ; manifest ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
 
   }
 
