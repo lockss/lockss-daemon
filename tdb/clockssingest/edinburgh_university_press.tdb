@@ -70,10 +70,10 @@
 
     param[journal_id] = ajicl
 
-    au < testing ; exists ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
-    au < testing ; exists ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
-    au < testing ; exists ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
-    au < testing ; exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+    au < released ; manifest ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
+    au < released ; manifest ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
+    au < released ; manifest ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+    au < released ; manifest ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
     au < released ; crawling ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
     au < released ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
     au < crawling ; exists ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
@@ -91,10 +91,10 @@
 
     param[journal_id] = arch
 
-    au < testing ; exists ; 2003 ; Architectural Heritage Volume 14 ; 14 >
-    au < testing ; exists ; 2004 ; Architectural Heritage Volume 15 ; 15 >
-    au < testing ; exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
-    au < testing ; exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
+    au < released ; manifest ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+    au < released ; manifest ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+    au < released ; manifest ; 2005 ; Architectural Heritage Volume 16 ; 16 >
+    au < released ; manifest ; 2006 ; Architectural Heritage Volume 17 ; 17 >
     au < testing ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
     au < testing ; exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
@@ -122,7 +122,7 @@
     au < testing ; exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
     au < released ; crawling ; 2009 ; Archives of Natural History Volume 36 ; 36 >
     au < released ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
-    au < testing ; exists ; 2011 ; Archives of Natural History Volume 38 ; 38 >
+    au < crawling ; exists ; 2011 ; Archives of Natural History Volume 38 ; 38 >
 
   }
 
@@ -137,11 +137,11 @@
 
     param[journal_id] = bjj
 
-    au < testing ; exists ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
+    au < released ; manifest ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
     au < testing ; exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
     au < released ; crawling ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
     au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
-    au < testing ; exists ; 2010 ; Ben Jonson Journal Volume 18 ; 18 >
+    au < crawling ; exists ; 2010 ; Ben Jonson Journal Volume 18 ; 18 >
 
   }
 
@@ -174,11 +174,11 @@
 
     param[journal_id] = ccs
 
-    au < crawling ; exists ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
-    au < crawling ; exists ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
-    au < crawling ; exists ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
-    au < crawling ; exists ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
-    au < crawling ; exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+    au < testing ; exists ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
+    au < testing ; exists ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
+    au < testing ; exists ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+    au < testing ; exists ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+    au < testing ; exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
     au < crawling ; exists ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
@@ -196,9 +196,9 @@
 
     param[journal_id] = cor
 
-    au < crawling ; exists ; 2006 ; Corpora Volume 1 ; 1 >
-    au < crawling ; exists ; 2007 ; Corpora Volume 2 ; 2 >
-    au < crawling ; exists ; 2008 ; Corpora Volume 3 ; 3 >
+    au < testing ; exists ; 2006 ; Corpora Volume 1 ; 1 >
+    au < testing ; exists ; 2007 ; Corpora Volume 2 ; 2 >
+    au < testing ; exists ; 2008 ; Corpora Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Corpora Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Corpora Volume 5 ; 5 >
 
