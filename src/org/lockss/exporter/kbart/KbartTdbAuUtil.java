@@ -1,10 +1,10 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.10 2011-06-27 17:25:30 pgust Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.11 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -85,8 +85,8 @@ public class KbartTdbAuUtil {
    * @param year2 a string representing a year
    * @return the value 0 if the years are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
    */
-    // Note that in practise if the strings do represent comparable publication years, 
   static int compareStringYears(String year1, String year2) throws NumberFormatException {
+    // Note that in practise if the strings do represent comparable publication years, 
     // they will be 4 digits long and so comparable as strings with the same results.
     return compareIntStrings(year1, year2);
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: KbartConverter.java,v 1.16 2011-08-10 14:21:24 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.17 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

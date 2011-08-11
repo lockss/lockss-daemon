@@ -1,10 +1,10 @@
 /*
- * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.2 2011-06-27 17:25:30 pgust Exp $
+ * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.3 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,25 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.util.Comparator;
+
 import org.lockss.config.TdbAu;
 
 /**
- * A factory for comparators which attempt sort <code>TdbAu</code>s alphanumerically on a 
- * particular property. The factory methods return a new {@link TdbAuAlphanumericComparator}
- * which overrides the <code>getTdbAuComparisonString()</code> method to provide the 
- * appropriate comparison string. The case-sensitivity of string comparison can be defined 
- * after construction using the {@link TdbAuAlphanumericComparator.setCaseSensitive()}
- * method. 
+ * A factory for comparators which attempt sort <code>TdbAu</code>s 
+ * alphanumerically on a particular property. The factory methods return 
+ * a new {@link TdbAuAlphanumericComparator} which overrides the 
+ * <code>getTdbAuComparisonString()</code> method to provide the appropriate 
+ * comparison string. 
  *	
  * @author neil
  */
 public class TdbAuAlphanumericComparatorFactory {
 
   /**
-   * Create a TdbAu comparator which sorts by the TdbAu name.
+   * Return a TdbAu comparator which sorts by the TdbAu name.
    * @return a TdbAu name comparator
    */
-  public static TdbAuAlphanumericComparator getNameComparator() {
+  public static Comparator<TdbAu> getNameComparator() {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
@@ -63,7 +64,7 @@ public class TdbAuAlphanumericComparatorFactory {
    * Create a TdbAu comparator which sorts by the TdbAu volume.
    * @return a TdbAu volume comparator
    */
-  public static TdbAuAlphanumericComparator getVolumeComparator() {
+  public static Comparator<TdbAu> getVolumeComparator() {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
@@ -76,7 +77,7 @@ public class TdbAuAlphanumericComparatorFactory {
    * Create a TdbAu comparator which sorts by the first date in the TdbAu year.
    * @return a TdbAu first date comparator
    */
-  public static TdbAuAlphanumericComparator getFirstDateComparator() {
+  public static Comparator<TdbAu> getFirstDateComparator() {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
@@ -89,7 +90,7 @@ public class TdbAuAlphanumericComparatorFactory {
    * Create a TdbAu comparator which sorts by the last date in the TdbAu year.
    * @return a TdbAu last date comparator
    */
-  public static TdbAuAlphanumericComparator getLastDateComparator() {
+  public static Comparator<TdbAu> getLastDateComparator() {
     return new TdbAuAlphanumericComparator() {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {

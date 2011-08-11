@@ -1,10 +1,10 @@
 /*
- * $Id: TdbAuAlphanumericComparator.java,v 1.4 2011-05-25 13:31:12 easyonthemayo Exp $
+ * $Id: TdbAuAlphanumericComparator.java,v 1.5 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +33,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.kbart;
 
 import org.lockss.config.TdbAu;
+import org.lockss.util.CachingComparator;
 
 /**
- * A comparator for sorting <code>TdbAu</code>s alphanumerically, based on the specified comparison string. 
- * The class is abstract so instances must each explicitly implement the method to provide their comparison string. 
+ * A comparator for sorting <code>TdbAu</code>s alphanumerically, based on the 
+ * specified comparison string. The class is abstract so instances must each 
+ * explicitly implement the method to provide their comparison string. This
+ * class does not provide any singletons for caching behaviour as the number
+ * of AUs is considered too large. 
  *	
  * @author neil
  */
-public abstract class TdbAuAlphanumericComparator extends AlphanumericComparator<TdbAu> {
+public abstract class TdbAuAlphanumericComparator extends CachingComparator<TdbAu> {
 
   /**
    * Create a comparator with the default case-sensitivity of KbartTitle fields.

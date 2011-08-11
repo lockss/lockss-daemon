@@ -1,10 +1,10 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.11 2011-01-13 20:11:10 pgust Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.12 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,198 +31,34 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.util;
-import java.util.*;
-
 
 /**
  * Comparator that implements a suitable ordering for titles in a library
  * catalogue.  Punctuation and initial determiners are removed, then a
  * case-independent comparison is done.  The translated sort keys are
  * cached, so performance will be enhanced by reusing the same instance of
- * the comparator.  The singleton {@link #SINGLETON} is provided for that
+ * the comparator.  The {@link getSingleton()} method is provided for that
  * purpose.
  */
+public class CatalogueOrderComparator extends CachingComparator<String> {
 
-public class CatalogueOrderComparator implements Comparator<String> {
-  static final String PUNCTUATION = ".,-:;\"\'/?()[]{}<>!#";
-  static final int PADLEN = 9;
-  /** An instance of the comparator. */
+  /** 
+   * An instance of the comparator. This is maintained as public for 
+   * backwards compatibility.
+   */
   public static final CatalogueOrderComparator SINGLETON =
     new CatalogueOrderComparator();
 
-  Map<String,String> keyMap = new HashMap<String,String>();
-
-  public int compare(String s1, String s2) {
-    // Don't allow null to cause NPE
-    if (s1 == null) {
-      return (s2 == null ? 0 : -1);
-    } else if (s2 == null) {
-      return 1;
-    }
-    return getSortKey(s1).compareToIgnoreCase(getSortKey(s2));
+  /**
+   * Create a CachingComparator with full normalisation. 
+   */
+  public CatalogueOrderComparator() {
+    super(); // full normalisation is the default
   }
-
-  synchronized String getSortKey(String s) {
-    String key = (String)keyMap.get(s);
-    if (key == null) {
-      key = xlate(s);
-      keyMap.put(s, key);
-    }
-    return key;
-  }
-
-  String xlate(String s) {
-    s = s.trim();
-    s = padNumbers(s, PADLEN);  
-    s = deleteAll(s, PUNCTUATION);
-    s = deleteSpaceBetweenInitials(s);
-    s = deleteInitial(s, "a");
-    s = deleteInitial(s, "an");
-    s = deleteInitial(s, "the");
-    s = replaceAccentedChar(s);
-    return s;
-  }
-
-  String padNumbers(String s, int padLen) {
-    int len = s.length();
-    StringBuffer sb = new StringBuffer(len + padLen - 1);
-    int ix = 0;
-    while (ix < len) {
-      char ch = s.charAt(ix);
-      if (Character.isDigit(ch)) {
-	int jx = ix;
-	while (++jx < len) {
-	  if (!Character.isDigit(s.charAt(jx))) {
-	    break;
-	  }
-	}
-	// jx now points one beyond end of number (or end of string)
-	for (int padix = padLen - (jx - ix); padix > 0; padix--) {
-	  sb.append('0');
-	}
-	do {
-	  sb.append(s.charAt(ix++));
-	} while (ix < jx);
-      } else {
-	sb.append(ch);
-	ix++;
-      }
-    }
-    return sb.toString();
-  }
-
-  String deleteInitial(String s, String sub) {
-    int sublen = sub.length();
-    if (StringUtil.startsWithIgnoreCase(s, sub) &&
-	s.length() > sublen &&
-	Character.isWhitespace(s.charAt(sublen))) {
-      s = s.substring(sublen + 1, s.length());
-      s = s.trim();
-    }
-    return s;
-  }
-
-  // assume all the letter in the abbreviation are in uppercase
-  // The method will also turn consecutive whitespace in to one whitespace
-  String deleteSpaceBetweenInitials(String s) {
-    boolean deleteStart = false;
-    StringBuffer sTmp = new StringBuffer();
-    StringTokenizer st = new StringTokenizer(s," ");
-    while (st.hasMoreTokens()) {
-	String token = st.nextToken();
-        //check the token is a single uppercase character
-	if (token.length() == 1 &&
-            Character.isUpperCase(token.charAt(0))) {
-	    if (deleteStart) {
-	      sTmp = sTmp.append(token);
-            }
-	    else { //when encounter the first Letter in the abbreviation
-	      sTmp = sTmp.append(" ").append(token);
-	      deleteStart = true;
-	    }
-	}
-	else {
-	  sTmp = sTmp.append(" ").append(token);
-	  deleteStart = false;
-	}
-    }
-    return sTmp.toString().trim();
-  }
-
-  String deleteAll(String s, String chars) {
-    for (int ix = 0; ix < chars.length(); ix++) {
-      String c = chars.substring(ix, ix + 1);
-      s = StringUtil.replaceString(s, c, "");
-    }
-    return s;
-  }
-
-    /** the accented character table except {Ð(\u00d0),Þ(\u00de),ß(\u00df), ð(\u00f0),þ(\u00fe)} */
-  static final String[][] ACCENTTABLE = {
-      {"\u00c0","A"}, // À, A with grave
-      {"\u00c1","A"}, // Á, A with acute
-      {"\u00c2","A"}, // Â, A with circumflex
-      {"\u00c3","A"}, // Â, A with tilde
-      {"\u00c4","A"}, // Ä, A with diaeresis
-      {"\u00c5","A"}, // Å, A with ring above
-      {"\u00c6","AE"}, // Æ, AE
-      {"\u00c7","C"}, // Ç, C with cedilla
-      {"\u00c8","E"}, // È, E with grave
-      {"\u00c9","E"}, // É, E with acute
-      {"\u00ca","E"}, // Ê, E with circumflex
-      {"\u00cb","E"}, // Ë, E with diaeresis
-      {"\u00cc","I"}, // Ì, I with grave
-      {"\u00cd","I"}, // Í, I with acute
-      {"\u00ce","I"}, // Î, I with circumflex
-      {"\u00cf","I"}, // Ï, I with diaeresis
-      {"\u00d1","N"}, // Ñ, N with tilde
-      {"\u00d2","O"}, // Ò, O with grave
-      {"\u00d3","O"}, // Ó, O with acute
-      {"\u00d4","O"}, // Ô, O with circumflex
-      {"\u00d5","O"}, // Õ, O with tilde
-      {"\u00d6","O"}, // Ö, O with diaeresis
-      {"\u00d8","O"}, // Ø, O with a stroke
-      {"\u00d9","U"}, // Ù, U with grave
-      {"\u00da","U"}, // Ú, U with acute
-      {"\u00db","U"}, // Û, U with circumflex
-      {"\u00dc","U"}, // Ü, U with diaeresis
-      {"\u00dd","Y"}, // Ý, Y with acute
-      {"\u00e0","a"}, // à, a with grave
-      {"\u00e1","a"}, // á, a with acute
-      {"\u00e2","a"}, // â, a with circumflex
-      {"\u00e3","a"}, // ã, a with tilde
-      {"\u00e4","a"}, // ä, a with diaeresis
-      {"\u00e5","a"}, // å, a with ring above
-      {"\u00e6","ae"}, // æ, ae
-      {"\u00e7","c"}, // ç, c with cedilla
-      {"\u00e8","e"}, // è, e with grave
-      {"\u00e9","e"}, // é, e with acute
-      {"\u00ea","e"}, // ê, e with circumflex
-      {"\u00eb","e"}, // ë, e with diaeresis
-      {"\u00ec","i"}, // ì, i with grave
-      {"\u00ed","i"}, // í, i with acute
-      {"\u00ee","i"}, // î, i with circumflex
-      {"\u00ef","i"}, // ï, i with diaeresis
-      {"\u00f1","n"}, // ñ, n with tilde
-      {"\u00f2","o"}, // ò, o with grave
-      {"\u00f3","o"}, // ó, o with acute
-      {"\u00f4","o"}, // ô, o with circumflex
-      {"\u00f5","o"}, // õ, o with tilde
-      {"\u00f6","o"}, // ö, o with diaeresis
-      {"\u00f8","o"}, // ø, o with stroke
-      {"\u00f9","u"}, // ù, u with grave
-      {"\u00fa","u"}, // ú, u with acute
-      {"\u00fb","u"}, // û, u with circumflex
-      {"\u00fc","u"}, // ü, u with diaeresis
-      {"\u00fd","y"}, // ý, y with acute
-      {"\u00ff","y"}, // ÿ, y with diaeresis
-                                        };
-
-  String replaceAccentedChar(String s) {
-    for (int iy = 0; iy < ACCENTTABLE.length; iy++) {
-      s = StringUtil.replaceString(s, ACCENTTABLE[iy][0], ACCENTTABLE[iy][1]);
-    }
-    return s;
+  
+  //@Override
+  public static CatalogueOrderComparator getSingleton() {
+    return SINGLETON; 
   }
 
 }

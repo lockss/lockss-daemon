@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.9 2011-01-13 20:08:50 pgust Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.10 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
@@ -40,7 +40,12 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
- * Test class for org.lockss.util.CatalogueOrderComparator
+ * Test class for org.lockss.util.CatalogueOrderComparator.
+ * The class under testing now extends from CachingComparator,
+ * and as most of the functionality has moved to that class, 
+ * the tests are also duplicated in TestCachingComparator.
+ * They are retained here to test that the CatalogueOrderComparator 
+ * does what it used to do. 
  */
 public class TestCatalogueOrderComparator extends LockssTestCase {
   CatalogueOrderComparator coc;
@@ -240,6 +245,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     assertEquals(lst.size(), ccoc.xlateCnt);
   }
 
+  // Sort a parameterized string list using a CatalogueOrderComparator (parameterized as String)
   List<String> sort(List<String> l) {
     Collections.sort(l, new CatalogueOrderComparator());
     return l;
@@ -247,10 +253,29 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
 
   class CountingCOC extends CatalogueOrderComparator {
     int xlateCnt = 0;
-    String xlate(String s) {
+    protected String xlate(String s) {
       xlateCnt++;
       return super.xlate(s);
     }
+  }
+
+  // Superclass getSingleton should throw exception, while
+  // this class overrides the static method.
+  public final void testGetSingleton() {
+    try {
+      CachingComparator.getSingleton();
+      fail("Should throw OperationNotSupportedException .");
+    } catch (Exception e) {
+      // Expected exception
+    }
+    // Test that the CatalogueOrderComparator's getSingleton is implemented
+    // and provides an instance of the class.
+    try {
+      assertTrue(CatalogueOrderComparator.getSingleton() instanceof CatalogueOrderComparator);
+    } catch (Exception e) {
+      fail("Should not throw OperationNotSupportedException .");
+    }
+    
   }
 
 }

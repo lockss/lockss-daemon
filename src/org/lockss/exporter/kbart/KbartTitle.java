@@ -1,10 +1,10 @@
 /*
- * $Id: KbartTitle.java,v 1.9 2011-08-10 14:21:25 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.10 2011-08-11 16:52:38 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
