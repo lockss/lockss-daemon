@@ -90,18 +90,18 @@
       eissn = 1755-1641 ;
       issnl = 1350-7524 
      >
-
+	comment[issue] = single issue per year, comes out in November.
     param[journal_id] = arch
 
     au < released ; manifest ; 2003 ; Architectural Heritage Volume 14 ; 14 >
     au < released ; manifest ; 2004 ; Architectural Heritage Volume 15 ; 15 >
     au < released ; manifest ; 2005 ; Architectural Heritage Volume 16 ; 16 >
     au < released ; manifest ; 2006 ; Architectural Heritage Volume 17 ; 17 >
-    au < testing ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
-    au < testing ; exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
+    au < released ; manifest ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+    au < released ; manifest ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; manifest ; 2010 ; Architectural Heritage Volume 21 ; 21 >
-    au < testing ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+    au < exists ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
 
   }
 
@@ -116,12 +116,12 @@
 
     param[journal_id] = anh
 
-    au < testing ; exists ; 2003 ; Archives of Natural History Volume 30 ; 30 >
-    au < testing ; exists ; 2004 ; Archives of Natural History Volume 31 ; 31 >
-    au < testing ; exists ; 2005 ; Archives of Natural History Volume 32 ; 32 >
-    au < testing ; exists ; 2006 ; Archives of Natural History Volume 33 ; 33 >
-    au < testing ; exists ; 2007 ; Archives of Natural History Volume 34 ; 34 >
-    au < testing ; exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+    au < released ; manifest ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+    au < released ; manifest ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+    au < released ; manifest ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+    au < released ; manifest ; 2006 ; Archives of Natural History Volume 33 ; 33 >
+    au < released ; manifest ; 2007 ; Archives of Natural History Volume 34 ; 34 >
+    au < released ; manifest ; 2008 ; Archives of Natural History Volume 35 ; 35 >
     au < released ; crawling ; 2009 ; Archives of Natural History Volume 36 ; 36 >
     au < released ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
     au < crawling ; exists ; 2011 ; Archives of Natural History Volume 38 ; 38 >
@@ -140,7 +140,7 @@
     param[journal_id] = bjj
 
     au < released ; manifest ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
-    au < testing ; exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
+    au < released ; manifest ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
     au < released ; crawling ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
     au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
     au < crawling ; exists ; 2011 ; Ben Jonson Journal Volume 18 ; 18 >
@@ -176,11 +176,11 @@
 
     param[journal_id] = ccs
 
-    au < testing ; exists ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
-    au < testing ; exists ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
-    au < testing ; exists ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
-    au < testing ; exists ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
-    au < testing ; exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+    au < released ; manifest ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
+    au < released ; manifest ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+    au < released ; manifest ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+    au < released ; manifest ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
     au < crawling ; exists ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
@@ -198,12 +198,12 @@
 
     param[journal_id] = cor
 
-    au < testing ; exists ; 2006 ; Corpora Volume 1 ; 1 >
-    au < testing ; exists ; 2007 ; Corpora Volume 2 ; 2 >
-    au < testing ; exists ; 2008 ; Corpora Volume 3 ; 3 >
+    au < released ; manifest ; 2006 ; Corpora Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Corpora Volume 2 ; 2 >
+    au < released ; manifest ; 2008 ; Corpora Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Corpora Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Corpora Volume 5 ; 5 >
-    au < exists ; exists ; 2011 ; Corpora Volume 6 ; 6 >
+    au < testing ; exists ; 2011 ; Corpora Volume 6 ; 6 >
 
   }
 
@@ -218,18 +218,18 @@
 
     param[journal_id] = drs
 
-    au < crawling ; exists ; 2000 ; Dance Research Volume 18 ; 18 >
-    au < crawling ; exists ; 2001 ; Dance Research Volume 19 ; 19 >
-    au < crawling ; exists ; 2002 ; Dance Research Volume 20 ; 20 >
-    au < crawling ; exists ; 2003 ; Dance Research Volume 21 ; 21 >
-    au < crawling ; exists ; 2004 ; Dance Research Volume 22 ; 22 >
-    au < crawling ; exists ; 2005 ; Dance Research Volume 23 ; 23 >
-    au < crawling ; exists ; 2006 ; Dance Research Volume 24 ; 24 >
-    au < crawling ; exists ; 2007 ; Dance Research Volume 25 ; 25 >
-    au < crawling ; exists ; 2008 ; Dance Research Volume 26 ; 26 >
+    au < testing ; exists ; 2000 ; Dance Research Volume 18 ; 18 >
+    au < testing ; exists ; 2001 ; Dance Research Volume 19 ; 19 >
+    au < testing ; exists ; 2002 ; Dance Research Volume 20 ; 20 >
+    au < testing ; exists ; 2003 ; Dance Research Volume 21 ; 21 >
+    au < testing ; exists ; 2004 ; Dance Research Volume 22 ; 22 >
+    au < testing ; exists ; 2005 ; Dance Research Volume 23 ; 23 >
+    au < testing ; exists ; 2006 ; Dance Research Volume 24 ; 24 >
+    au < testing ; exists ; 2007 ; Dance Research Volume 25 ; 25 >
+    au < testing ; exists ; 2008 ; Dance Research Volume 26 ; 26 >
     au < released ; crawling ; 2009 ; Dance Research Volume 27 ; 27 >
     au < released ; crawling ; 2010 ; Dance Research Volume 28 ; 28 >
-    au < exists ; exists ; 2011 ; Dance Research Volume 29 ; 29 >
+    au < testing ; exists ; 2011 ; Dance Research Volume 29 ; 29 >
 
   }
 
@@ -244,11 +244,11 @@
 
     param[journal_id] = dls
 
-    au < crawling ; exists ; 2007 ; Deleuze Studies Volume 1 ; 1 >
-    au < crawling ; exists ; 2008 ; Deleuze Studies Volume 2 ; 2 >
+    au < testing ; exists ; 2007 ; Deleuze Studies Volume 1 ; 1 >
+    au < testing ; exists ; 2008 ; Deleuze Studies Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Deleuze Studies Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Deleuze Studies Volume 4 ; 4 >
-    au < exists ; exists ; 2011 ; Deleuze Studies Volume 5 ; 5 >
+    au < testing ; exists ; 2011 ; Deleuze Studies Volume 5 ; 5 >
 
   }
 
@@ -263,10 +263,10 @@
 
     param[journal_id] = drt
 
-    au < crawling ; exists ; 2008 ; Derrida Today Volume 1 ; 1 >
+    au < testing ; exists ; 2008 ; Derrida Today Volume 1 ; 1 >
     au < released ; crawling ; 2009 ; Derrida Today Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Derrida Today Volume 3 ; 3 >
-    au < exists ; exists ; 2011 ; Derrida Today Volume 4 ; 4 >
+    au < testing ; exists ; 2011 ; Derrida Today Volume 4 ; 4 >
 
   }
 
@@ -281,11 +281,11 @@
 
     param[journal_id] = elr
 
-    au < crawling ; exists ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
-    au < crawling ; exists ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
-    au < crawling ; exists ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
-    au < crawling ; exists ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
-    au < crawling ; exists ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
+    au < testing ; exists ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
+    au < testing ; exists ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
+    au < testing ; exists ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
+    au < testing ; exists ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
+    au < testing ; exists ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
     au < released ; crawling ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
     au < released ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
     au < crawling ; exists ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
