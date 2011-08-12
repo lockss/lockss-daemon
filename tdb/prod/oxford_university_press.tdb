@@ -738,9 +738,6 @@
     param[base_url] = http://alh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; American Literary History Volume 17 ; 17 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; American Literary History Volume 18 ; 18 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; American Literary History Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; exists ; 1989 ; American Literary History Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1990 ; American Literary History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1991 ; American Literary History Volume 3 ; 3 >
@@ -757,9 +754,9 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; American Literary History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; American Literary History Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; American Literary History Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; American Literary History Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; American Literary History Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; American Literary History Volume 19 ; 19 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; American Literary History Volume 17 ; 17 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; American Literary History Volume 18 ; 18 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; American Literary History Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; American Literary History Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; American Literary History Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; American Literary History Volume 22 ; 22 >
@@ -1515,7 +1512,7 @@
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
-    param[base_url] = http://biomet	.oxfordjournals.org/
+    param[base_url] = http://biomet.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2006 ; Biometrika Volume 93 ; 93 >
@@ -1984,8 +1981,9 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Briefings in Functional Genomics and Proteomics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Briefings in Functional Genomics and Proteomics Volume 6 ; 6 >
     au < HighWirePressPlugin ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 >
   
     }
@@ -3523,7 +3521,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Communication Theory Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; Communication Theory Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Communication Theory Volume 16 ; 16 >
 
     }
 
@@ -3644,7 +3642,6 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Contemporary Economic Policy Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Contemporary Economic Policy Volume 25 ; 25 >
 
     }
 
@@ -3684,6 +3681,16 @@
       issnl = 1743-1816
     >
 
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWirePlugin
+        param[base_url] = http://ceaccp.oxfordjournals.org/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < down ; 2006 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+
+      }
+
     {
  
     pluginPrefix = org.lockss.plugin.highwire.
@@ -3694,10 +3701,10 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 6 ; 6 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 7 ; 7 >
+    au < HighWirePressPlugin ; down ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 >
@@ -3843,11 +3850,6 @@
     param[base_url] = http://em.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Early Music Volume 33 ; 33 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Early Music Volume 34 ; 34 >
-    au < HighWirePressPlugin ; down ; 2007 ; Early Music Volume 35 ; 35 >
-    au < HighWirePressPlugin ; down ; 2008 ; Early Music Volume 36 ; 36 >
-    au < HighWirePressPlugin ; down ; 2009 ; Early Music Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; exists ; 1973 ; Early Music Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1974 ; Early Music Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1975 ; Early Music Volume 3 ; 3 >
@@ -3880,11 +3882,11 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Early Music Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Early Music Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Early Music Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Early Music Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Early Music Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Early Music Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Early Music Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Early Music Volume 37 ; 37 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Early Music Volume 33 ; 33 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Early Music Volume 34 ; 34 >
+    au < HighWirePressPlugin ; down ; 2007 ; Early Music Volume 35 ; 35 >
+    au < HighWirePressPlugin ; down ; 2008 ; Early Music Volume 36 ; 36 >
+    au < HighWirePressPlugin ; down ; 2009 ; Early Music Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Early Music Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Early Music Volume 39 ; 39 >
 
@@ -3923,7 +3925,7 @@
     param[base_url] = http://ei.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 1990 ; Economic Inquiry Volume 44 ; 44 >
+    au < down ; 2006 ; Economic Inquiry Volume 44 ; 44 >
 
     }
 
@@ -3933,8 +3935,9 @@
     param[base_url] = http://ei.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    au < HighWirePressPlugin ; doNotProcess ; 1990 ; Economic Inquiry Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; down ; 1991 ; Economic Inquiry Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2005 ; Economic Inquiry Volume 43 ; 43 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Economic Inquiry Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Economic Inquiry Volume 45 ; 45 >
     
     }
 
@@ -4214,21 +4217,16 @@
     param[base_url] = http://es.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Enterprise & Society Volume 6 ; 6 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Enterprise & Society Volume 7 ; 7 >
-    au < HighWirePressPlugin ; down ; 2007 ; Enterprise & Society Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 2008 ; Enterprise & Society Volume 9 ; 9 >
-    au < HighWirePressPlugin ; down ; 2009 ; Enterprise & Society Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Enterprise & Society Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Enterprise & Society Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Enterprise & Society Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; Enterprise & Society Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; Enterprise & Society Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; Enterprise & Society Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Enterprise & Society Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Enterprise & Society Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Enterprise & Society Volume 6 ; 6 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Enterprise & Society Volume 7 ; 7 >
+    au < HighWirePressPlugin ; down ; 2007 ; Enterprise & Society Volume 8 ; 8 >
+    au < HighWirePressPlugin ; down ; 2008 ; Enterprise & Society Volume 9 ; 9 >
+    au < HighWirePressPlugin ; down ; 2009 ; Enterprise & Society Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Enterprise & Society Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Enterprise & Society Volume 12 ; 12 >
     
@@ -4384,9 +4382,6 @@
     param[base_url] = http://eic.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ;Essays in Criticism Volume 55 ; 55 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Essays in Criticism Volume 56 ; 56 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Essays in Criticism Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; 1951 ; Essays in Criticism Volume I ; I >
     au < HighWirePressH20Plugin ; exists ; 1952 ; Essays in Criticism Volume II ; II >
     au < HighWirePressH20Plugin ; exists ; 1953 ; Essays in Criticism Volume III ; III >
@@ -4441,9 +4436,9 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Essays in Criticism Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Essays in Criticism Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Essays in Criticism Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; Essays in Criticism Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; Essays in Criticism Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Essays in Criticism Volume 57 ; 57 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ;Essays in Criticism Volume 55 ; 55 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Essays in Criticism Volume 56 ; 56 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Essays in Criticism Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; Essays in Criticism Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Essays in Criticism Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Essays in Criticism Volume 60 ; 60 >
@@ -4999,7 +4994,7 @@
 
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 ; 2 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 ; 4 >
 
     }
 
@@ -5343,9 +5338,6 @@
     param[base_url] = http://fs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; exists ; 1947 ; French Studies: A Quarterly Review Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1948 ; French Studies: A Quarterly Review Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1949 ; French Studies: A Quarterly Review Volume 3 ; 3 >
@@ -5404,9 +5396,9 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; French Studies: A Quarterly Review Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; French Studies: A Quarterly Review Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; French Studies: A Quarterly Review Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 >
@@ -5446,6 +5438,9 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://fsb.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    comment[LX] = there is no such volume, this was probably an error
+    au < HighWireStrVolPlugin ; down ; 0 ; French Studies Bulletin Volume LX ; LX >
 
     au < HighWirePressH20Plugin ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
@@ -5860,10 +5855,6 @@
     param[base_url] = http://hwj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2003 ; History Workshop Journal Volume 59 ; 59 >
-    au < HighWireStrVolPlugin ; down ; 2004 ; History Workshop Journal Volume 60 ; 60 >
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; History Workshop Journal Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; History Workshop Journal Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; exists ; 1976 ; History Workshop Journal Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1976 ; History Workshop Journal Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1977 ; History Workshop Journal Volume 3 ; 3 >
@@ -5916,10 +5907,10 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; History Workshop Journal Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; History Workshop Journal Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; History Workshop Journal Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; History Workshop Journal Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 2005 ; History Workshop Journal Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; History Workshop Journal Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; History Workshop Journal Volume 62 ; 62 >
+    au < HighWireStrVolPlugin ; down ; 2003 ; History Workshop Journal Volume 59 ; 59 >
+    au < HighWireStrVolPlugin ; down ; 2004 ; History Workshop Journal Volume 60 ; 60 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; History Workshop Journal Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; History Workshop Journal Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; History Workshop Journal Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; History Workshop Journal Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; History Workshop Journal Volume 65 ; 65 >
@@ -5974,8 +5965,6 @@
     param[base_url] = http://hgs.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Holocaust and Genocide Studies Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1987 ; Holocaust and Genocide Studies Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1988 ; Holocaust and Genocide Studies Volume 3 ; 3 >
@@ -5994,8 +5983,8 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Holocaust and Genocide Studies Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Holocaust and Genocide Studies Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Holocaust and Genocide Studies Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Holocaust and Genocide Studies Volume 19 ; 19 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Holocaust and Genocide Studies Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; Holocaust and Genocide Studies Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 >
@@ -6054,7 +6043,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Human Communication Research Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; Human Communication Research Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; Human Communication Research Volume 32 ; 32 >
 
     }
 
@@ -6377,7 +6366,6 @@
 
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Communications Volume E89-B ; E89-B >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Communications Volume E90-B ; E90-B >
-    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Communications Volume E90-B ; E90-B >
 
     }
     
@@ -6397,12 +6385,11 @@
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://	.oxfordjournals.org/
+    param[base_url] = http://ietele.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
  
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Electronics Volume E89-C ; E89-C >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Electronics Volume E90-C ; E90-C >
-    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Electronics Volume E90-C ; E90-C >
 
     }
 
@@ -6427,7 +6414,6 @@
 
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E89-A ; E89-A >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E90-A ; E90-A >
-    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E90-A ; E90-A >
 
     }
 
@@ -6452,7 +6438,6 @@
 
     au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Information and Systems Volume E89-D ; E89-D >
     au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D >
-    au < HighWirePressH20Plugin ; down ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D >
 
     }
 
@@ -7051,7 +7036,7 @@
     au < HighWireStrVolPlugin ; down ; 2005 ; International and Comparative Law Quarterly Volume 54 ; 54 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; International and Comparative Law Quarterly Volume 55 ; 55 >
     au < HighWireStrVolPlugin ; down ; 2007 ; International and Comparative Law Quarterly Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; down ; 2008 ; International and Comparative Law Quarterly Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2008 ; International and Comparative Law Quarterly Volume 57 ; 57 >
 
     }
 
@@ -7889,10 +7874,6 @@
     param[base_url] = http://jaar.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; exists ; 1933 ; Journal of the American Academy of Religion Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1934 ; Journal of the American Academy of Religion Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1935 ; Journal of the American Academy of Religion Volume 3 ; 3 >
@@ -7965,11 +7946,11 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of the American Academy of Religion Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of the American Academy of Religion Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of the American Academy of Religion Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of the American Academy of Religion Volume 73 ; 73 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the American Academy of Religion Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of the American Academy of Religion Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
+    au < HighWirePressPlugin ; down ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of the American Academy of Religion Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of the American Academy of Religion Volume 79 ; 79 >
 
@@ -8496,7 +8477,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of Communication Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; down ; 2006 ; Journal of Communication Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2006 ; Journal of Communication Volume 56 ; 56 >
 
     }
 
@@ -8605,7 +8586,7 @@
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
-    param[base_url] = http://jdsde.oxfordjournals.org/
+    param[base_url] = http://deafed.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
     au < down ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
@@ -8618,11 +8599,6 @@
     param[base_url] = http://jdsde.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Deaf Studies and Deaf Education Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Deaf Studies and Deaf Education Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Deaf Studies and Deaf Education Volume 3 ; 3 >
@@ -8632,11 +8608,11 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Deaf Studies and Deaf Education Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Deaf Studies and Deaf Education Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Deaf Studies and Deaf Education Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
+    au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
+    au < HighWirePressPlugin ; down ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 >
     
@@ -9799,17 +9775,13 @@
     param[base_url] = http://jicj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; down ; 2005 ; Journal of International Criminal Justice Volume 3 ; 3 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of International Criminal Justice Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of International Criminal Justice Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of International Criminal Justice Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
+    au < HighWirePressPlugin ; exists ; 2005 ; Journal of International Criminal Justice Volume 3 ; 3 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Journal of International Criminal Justice Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Journal of International Criminal Justice Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
+    au < HighWirePressPlugin ; down ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 >
+    au < HighWirePressPlugin ; down ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 >
     
@@ -10912,7 +10884,7 @@
 
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Journal of the Royal Musical Association Volume 130 ; 130 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of the Royal Musical Association Volume 131 ; 131 >
-    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 >
+    au < HighWirePressH20Plugin ; doesNotExist ; 2007 ; Journal of the Royal Musical Association Volume 132 ; 132 >
 
     }
     
@@ -12663,12 +12635,6 @@
     param[base_url] = http://mq.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; doNotProcess ; 2004 ; The Musical Quarterly Volume 87 ; 87 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; The Musical Quarterly Volume 88 ; 88 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; The Musical Quarterly Volume 89 ; 89 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; The Musical Quarterly Volume 90 ; 90 >        
-    au < HighWirePressPlugin ; down ; 2008 ; The Musical Quarterly Volume 91 ; 91 >
-    au < HighWireStrVolPlugin ; down ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; exists ; 1915 ; The Musical Quarterly Volume I ; I >
     au < HighWirePressH20Plugin ; exists ; 1916 ; The Musical Quarterly Volume II ; II >
     au < HighWirePressH20Plugin ; exists ; 1917 ; The Musical Quarterly Volume III ; III >
@@ -12755,12 +12721,12 @@
     au < HighWirePressH20Plugin ; exists ; 2000 ; The Musical Quarterly Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; The Musical Quarterly Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Musical Quarterly Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; The Musical Quarterly Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; The Musical Quarterly Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; The Musical Quarterly Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Musical Quarterly Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; The Musical Quarterly Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
+    au < HighWirePressPlugin ; doNotProcess ; 2004 ; The Musical Quarterly Volume 87 ; 87 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; The Musical Quarterly Volume 88 ; 88 >
+    au < HighWireStrVolPlugin ; manifest ; 2006 ; The Musical Quarterly Volume 89 ; 89 >
+    au < HighWireStrVolPlugin ; manifest ; 2007 ; The Musical Quarterly Volume 90 ; 90 >        
+    au < HighWirePressPlugin ; down ; 2008 ; The Musical Quarterly Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; manifest ; 2009 ; The Musical Quarterly Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; The Musical Quarterly Volume 93 ; 93 >
 
     }
@@ -16134,11 +16100,6 @@
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; down ; 2005 ; Schizophrenia Bulletin Volume 31 ; 31 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Schizophrenia Bulletin Volume 32 ; 32 >
-    au < HighWirePressPlugin ; doNotProcess ; 2007 ; Schizophrenia Bulletin Volume 33 ; 33 >
-    au < HighWirePressPlugin ; down ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 >
-    au < HighWirePressPlugin ; down ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1976 ; Schizophrenia Bulletin Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1977 ; Schizophrenia Bulletin Volume 3 ; 3 >
@@ -16170,11 +16131,11 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; Schizophrenia Bulletin Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Schizophrenia Bulletin Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; Schizophrenia Bulletin Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Schizophrenia Bulletin Volume 32 ; 32 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Schizophrenia Bulletin Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Schizophrenia Bulletin Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 >
+    au < HighWirePressPlugin ; down ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 >
+    au < HighWirePressPlugin ; down ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Schizophrenia Bulletin Volume 37 ; 37 >
 
     }
@@ -16830,36 +16791,6 @@
     param[base_url] = http://toxsci.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 83 ; 83 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 84 ; 84 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 85 ; 85 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 86 ; 86 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 87 ; 87 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 88 ; 88 >
-    au < HighWirePressPlugin ; down ; 2006 ; Toxicological Sciences Volume 89 ; 89 >
-    au < HighWirePressPlugin ; down ; 2006 ; Toxicological Sciences Volume 90 ; 90 >
-    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Toxicological Sciences Volume 91 ; 91 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 92 ; 92 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 93 ; 93 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 94 ; 94 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 95 ; 95 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 96 ; 96 >
-    au < HighWirePressPlugin ; doNotProcess ; 2007 ; Toxicological Sciences Volume 97 ; 97 >
-    au < HighWirePressPlugin ; doNotProcess ; 2007 ; Toxicological Sciences Volume 98 ; 98 >
-    au < HighWirePressPlugin ; doNotProcess ; 2007 ; Toxicological Sciences Volume 100 ; 100 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 101 ; 101 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 102 ; 102 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 103 ; 103 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 104 ; 104 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 105 ; 105 >
-    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 106 ; 106 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 107 ; 107 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 108 ; 108 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 109 ; 109 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 110 ; 110 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 111 ; 111 >
-    au < HighWirePressPlugin ; doNotProcess ; 2009 ; Toxicological Sciences Volume 112 ; 112 >
-    au < HighWirePressPlugin ; doNotProcess ; 2010 ; Toxicological Sciences Volume 113 ; 113 >
     au < HighWirePressH20Plugin ; exists ; 1981 ; Toxicological Sciences Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1982 ; Toxicological Sciences Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1983 ; Toxicological Sciences Volume 3 ; 3 >
@@ -16943,30 +16874,30 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; Toxicological Sciences Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Toxicological Sciences Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Toxicological Sciences Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Toxicological Sciences Volume 88 ; 88 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 83 ; 83 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 84 ; 84 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 85 ; 85 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 86 ; 86 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 87 ; 87 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Toxicological Sciences Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Toxicological Sciences Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Toxicological Sciences Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Toxicological Sciences Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Toxicological Sciences Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Toxicological Sciences Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; ready ; 2006 ; Toxicological Sciences Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; ready ; 2007 ; Toxicological Sciences Volume 95 ; 95 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Toxicological Sciences Volume 96 ; 96 >
+    au < HighWirePressPlugin ; doNotProcess ; 2006 ; Toxicological Sciences Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 92 ; 92 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 93 ; 93 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Toxicological Sciences Volume 94 ; 94 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 95 ; 95 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Toxicological Sciences Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; Toxicological Sciences Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; Toxicological Sciences Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Toxicological Sciences Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; Toxicological Sciences Volume 100 ; 100 >    
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 101 ; 101 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 103 ; 103 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 104 ; 104 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 105 ; 105 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Toxicological Sciences Volume 106 ; 106 > 
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 101 ; 101 >
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 102 ; 102 >
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 103 ; 103 >
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 104 ; 104 >
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 105 ; 105 >
+    au < HighWirePressPlugin ; down ; 2008 ; Toxicological Sciences Volume 106 ; 106 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Toxicological Sciences Volume 107 ; 107 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Toxicological Sciences Volume 108 ; 108 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Toxicological Sciences Volume 109 ; 109 >
