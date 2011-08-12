@@ -220,7 +220,7 @@
     au < released ; Advances in High Energy Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in High Energy Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -286,7 +286,7 @@
 
     au < released ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Mechanical Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -347,9 +347,9 @@
 
     param[journal_id] = ana
 
-    au < testing ; Advances in Numerical Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Numerical Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -363,10 +363,10 @@
 
     param[journal_id] = aor
 
-    au < testing ; Advances in Operations Research Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; Advances in Operations Research Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -564,9 +564,9 @@
 
     param[journal_id] = ase
 
-    au < testing ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -644,7 +644,7 @@
 
     param[journal_id] = ari
 
-    au < testing ; Anatomy Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Anatomy Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
       
   } 
 
@@ -1120,7 +1120,7 @@
 
     au < ready ; Case Reports in Medicine Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Case Reports in Medicine Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Case Reports in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Case Reports in Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
 
@@ -2172,8 +2172,8 @@
 
     param[journal_id] = ijad
 
-    au < testing ; International Journal of Alzheimer's Disease Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Alzheimer's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Alzheimer's Disease Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Alzheimer's Disease Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; International Journal of Alzheimer's Disease Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -2188,10 +2188,10 @@
 
     param[journal_id] = ijac
 
-    au < testing ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2222,7 +2222,7 @@
 
     param[journal_id] = ijbc
 
-    au < testing ; International Journal of Breast Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Breast Cancer Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2271,9 +2271,9 @@
 
     param[journal_id] = ijcc
 
-    au < testing ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2287,9 +2287,9 @@
 
     param[journal_id] = ijcb
 
-    au < testing ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2320,10 +2320,10 @@
 
     param[journal_id] = ijct
 
-    au < testing ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < testing ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < ready ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2355,8 +2355,8 @@
     param[journal_id] = ijc
 
     au < testing ; International Journal of Corrosion Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2370,9 +2370,9 @@
 
     param[journal_id] = ijd
 
-    au < testing ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2386,9 +2386,9 @@
 
     param[journal_id] = ijde
 
-    au < testing ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2419,12 +2419,12 @@
 
     param[journal_id] = ijdsn
 
-    au < testing ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; 2005 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; 2006 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; 2007 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; 2008 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
-    au < testing ; International Journal of Distributed Sensor Networks Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 ; 2005 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 ; 2006 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 ; 2007 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 ; 2008 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 ; 2009 >
+    au < ready ; International Journal of Distributed Sensor Networks Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < testing ; International Journal of Distributed Sensor Networks Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
@@ -3145,7 +3145,7 @@
 
     param[journal_id] = ijso
 
-    au < testing ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Surgical Oncology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Surgical Oncology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -3497,7 +3497,7 @@
 
     au < ready ; Journal of Botany Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Journal of Botany Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Journal of Botany Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -5071,7 +5071,7 @@
 
     param[journal_id] = seq
 
-    au < testing ; Sequencing Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Sequencing Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
 
   }
 
