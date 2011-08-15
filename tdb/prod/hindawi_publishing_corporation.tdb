@@ -890,9 +890,9 @@
 
     param[journal_id] = crp
 
-    au < testing ; Cardiology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Cardiology Research and Practice Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Cardiology Research and Practice Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Cardiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Cardiology Research and Practice Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
 
@@ -1771,7 +1771,7 @@
 
     au < ready ; Epilepsy Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Epilepsy Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
-    au < testing ; Epilepsy Research and Treatment Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
+    au < ready ; Epilepsy Research and Treatment Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
 
   }
 
@@ -2125,7 +2125,7 @@
     param[journal_id] = irt
 
     au < ready ; Influenza Research and Treatment Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; Influenza Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; Influenza Research and Treatment Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
   
@@ -2236,9 +2236,9 @@
 
     param[journal_id] = ijbm
 
-    au < testing ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < ready ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2565,7 +2565,7 @@
 
     au < ready ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -2743,7 +2743,7 @@
     param[journal_id] = ijn
 
     au < ready ; International Journal of Nephrology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
-    au < testing ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < ready ; International Journal of Nephrology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     au < ready ; International Journal of Nephrology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
   }
@@ -2928,7 +2928,7 @@
     au < doesNotExist ; nternational Journal of Polymer Science Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < mainfest ; nternational Journal of Polymer Science Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ;  nternational Journal of Polymer Science Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; nternational Journal of Polymer Science Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; nternational Journal of Polymer Science Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3123,14 +3123,14 @@
     au < ready ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
     au < ready ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
     au < ready ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < testing ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < ready ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
     au < ready ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
     au < ready ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < ready ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < testing ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
