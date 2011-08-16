@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -94,10 +94,6 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>3250</long>
-  </entry>
-  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20HtmlFilterFactory</string>
   </entry>
@@ -132,5 +128,21 @@
     <list>
       <string>&quot;^%scontent/%s/.*\.full(\.pdf\+html)?$&quot;, base_url, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>200</long>
+  </entry>
+  <entry>
+    <string>application/pdf_fetch_rate_limit</string>
+    <string>1/2000</string>
+  </entry>
+  <entry>
+    <string>application/vnd.ms-powerpoint</string>
+    <string>1/2000</string>
+  </entry>
+  <entry>
+    <string>text/html_fetch_rate_limit</string>
+    <string>1/2000</string>
   </entry>
 </map>
