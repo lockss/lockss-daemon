@@ -21,7 +21,7 @@
     param[journal_issn] = 2043-6262
     comment[param] = eissn preferred
 
-    au < testing ; exists ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 > 
+    au < released ; manifest ; 2010 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 1 ; 1 > 
     au < manifest ; exists ; 2011 ; Advances in Natural Science: Nanoscience and Nanotechnology Volume 2 ; 2 > 
 
   }
@@ -86,7 +86,7 @@
     param[journal_issn] = 1758-5090
     comment[param] = eissn preferred
 
-    au < testing ; exists ; 2009 ; Biofabrication Volume 1 ; 1 > 
+    au < released ; manifest ; 2009 ; Biofabrication Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; Biofabrication Volume 2 ; 2 > 
     au < manifest ; exists ; 2011 ; Biofabrication Volume 3 ; 3 > 
 
@@ -106,9 +106,9 @@
 
     au < exists ; exists ; 2006 ; Bioinspiration & Biomimetics Volume 1 ; 1 > 
     au < exists ; exists ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; Bioinspiration & Biomimetics Volume 3 ; 3 > 
-    au < exists ; exists ; 2009 ; Bioinspiration & Biomimetics Volume 4 ; 4 > 
-    au < exists ; exists ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 > 
+    au < manifest ; exists ; 2008 ; Bioinspiration & Biomimetics Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Bioinspiration & Biomimetics Volume 4 ; 4 > 
+    au < manifest ; exists ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
 
   }
@@ -127,9 +127,9 @@
 
     au < exists ; exists ; 2006 ; Biomedical Materials Volume 1 ; 1 > 
     au < exists ; exists ; 2007 ; Biomedical Materials Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; Biomedical Materials Volume 3 ; 3 > 
-    au < exists ; exists ; 2009 ; Biomedical Materials Volume 4 ; 4 > 
-    au < exists ; exists ; 2010 ; Biomedical Materials Volume 5 ; 5 > 
+    au < manifest ; exists ; 2008 ; Biomedical Materials Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Biomedical Materials Volume 4 ; 4 > 
+    au < manifest ; exists ; 2010 ; Biomedical Materials Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
 
   }
@@ -180,7 +180,7 @@
     au < exists ; exists ; 2005 ; Chinese Journal of Astronomy and Astrophysics Volume 5 ; 5 > 
     au < exists ; exists ; 2006 ; Chinese Journal of Astronomy and Astrophysics Volume 6 ; 6 > 
     au < exists ; exists ; 2007 ; Chinese Journal of Astronomy and Astrophysics Volume 7 ; 7 > 
-    au < exists ; exists ; 2008 ; Chinese Journal of Astronomy and Astrophysics Volume 8 ; 8 > 
+    au < manifest ; exists ; 2008 ; Chinese Journal of Astronomy and Astrophysics Volume 8 ; 8 > 
 
   }
 
@@ -192,12 +192,11 @@
     >
 
     param[journal_issn] = 1674-0068
+    comment[continues] = 1003-7713
 
-    au < exists ; exists ; 2006 ; Chinese Journal of Chemical Physics Volume 19 ; 19 > 
-    au < exists ; exists ; 2007 ; Chinese Journal of Chemical Physics Volume 20 ; 20 > 
-    au < exists ; exists ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 > 
-    au < exists ; exists ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 > 
-    au < exists ; exists ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
+    au < manifest ; exists ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 > 
+    au < manifest ; exists ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 > 
+    au < manifest ; exists ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
     au < manifest ; exists ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
 
   }
@@ -210,6 +209,7 @@
     >
 
     param[journal_issn] = 1003-7713
+    comment[continued_by] = 1674-0068
 
     au < exists ; exists ; 2006 ; Chinese Journal of Chemical Physics Volume 19 ; 19 > 
     au < exists ; exists ; 2007 ; Chinese Journal of Chemical Physics Volume 20 ; 20 > 
@@ -224,36 +224,7 @@
     >
 
     param[journal_issn] = 0253-4177
-    comment[0] = no content online yet
-
-    au < exists ; exists ; 1980 ; Chinese Journal of Semiconductors Volume 1 ; 1 > 
-    au < exists ; exists ; 1981 ; Chinese Journal of Semiconductors Volume 2 ; 2 > 
-    au < exists ; exists ; 1982 ; Chinese Journal of Semiconductors Volume 3 ; 3 > 
-    au < exists ; exists ; 1983 ; Chinese Journal of Semiconductors Volume 4 ; 4 > 
-    au < exists ; exists ; 1984 ; Chinese Journal of Semiconductors Volume 5 ; 5 > 
-    au < exists ; exists ; 1985 ; Chinese Journal of Semiconductors Volume 6 ; 6 > 
-    au < exists ; exists ; 1986 ; Chinese Journal of Semiconductors Volume 7 ; 7 > 
-    au < exists ; exists ; 1987 ; Chinese Journal of Semiconductors Volume 8 ; 8 > 
-    au < exists ; exists ; 1988 ; Chinese Journal of Semiconductors Volume 9 ; 9 > 
-    au < exists ; exists ; 1989 ; Chinese Journal of Semiconductors Volume 10 ; 10 > 
-    au < exists ; exists ; 1990 ; Chinese Journal of Semiconductors Volume 11 ; 11 > 
-    au < exists ; exists ; 1991 ; Chinese Journal of Semiconductors Volume 12 ; 12 > 
-    au < exists ; exists ; 1992 ; Chinese Journal of Semiconductors Volume 13 ; 13 > 
-    au < exists ; exists ; 1993 ; Chinese Journal of Semiconductors Volume 14 ; 14 > 
-    au < exists ; exists ; 1994 ; Chinese Journal of Semiconductors Volume 15 ; 15 > 
-    au < exists ; exists ; 1995 ; Chinese Journal of Semiconductors Volume 16 ; 16 > 
-    au < exists ; exists ; 1996 ; Chinese Journal of Semiconductors Volume 17 ; 17 > 
-    au < exists ; exists ; 1997 ; Chinese Journal of Semiconductors Volume 18 ; 18 > 
-    au < exists ; exists ; 1998 ; Chinese Journal of Semiconductors Volume 19 ; 19 > 
-    au < exists ; exists ; 1999 ; Chinese Journal of Semiconductors Volume 20 ; 20 > 
-    au < exists ; exists ; 2000 ; Chinese Journal of Semiconductors Volume 21 ; 21 > 
-    au < exists ; exists ; 2001 ; Chinese Journal of Semiconductors Volume 22 ; 22 > 
-    au < exists ; exists ; 2002 ; Chinese Journal of Semiconductors Volume 23 ; 23 > 
-    au < exists ; exists ; 2003 ; Chinese Journal of Semiconductors Volume 24 ; 24 > 
-    au < exists ; exists ; 2004 ; Chinese Journal of Semiconductors Volume 25 ; 25 > 
-    au < exists ; exists ; 2005 ; Chinese Journal of Semiconductors Volume 26 ; 26 > 
-    au < exists ; exists ; 2006 ; Chinese Journal of Semiconductors Volume 27 ; 27 > 
-    au < exists ; exists ; 2007 ; Chinese Journal of Semiconductors Volume 28 ; 28 > 
+    comment[0] = no content online yet, toc lists years 1980-2008
 
   }
 
@@ -277,9 +248,9 @@
 
     param[journal_issn] = 1674-1137
 
-    au < exists ; exists ; 2008 ; Chinese Physics C Volume 32 ; 32 > 
-    au < exists ; exists ; 2009 ; Chinese Physics C Volume 33 ; 33 > 
-    au < exists ; exists ; 2010 ; Chinese Physics C Volume 34 ; 34 > 
+    au < manifest ; exists ; 2008 ; Chinese Physics C Volume 32 ; 32 > 
+    au < manifest ; exists ; 2009 ; Chinese Physics C Volume 33 ; 33 > 
+    au < manifest ; exists ; 2010 ; Chinese Physics C Volume 34 ; 34 > 
     au < manifest ; exists ; 2011 ; Chinese Physics C Volume 35 ; 35 > 
 
   }
@@ -320,9 +291,9 @@
     au < exists ; exists ; 2005 ; Chinese Physics Letters Volume 22 ; 22 > 
     au < exists ; exists ; 2006 ; Chinese Physics Letters Volume 23 ; 23 > 
     au < exists ; exists ; 2007 ; Chinese Physics Letters Volume 24 ; 24 > 
-    au < exists ; exists ; 2008 ; Chinese Physics Letters Volume 25 ; 25 > 
-    au < exists ; exists ; 2009 ; Chinese Physics Letters Volume 26 ; 26 > 
-    au < exists ; exists ; 2010 ; Chinese Physics Letters Volume 27 ; 27 > 
+    au < manifest ; exists ; 2008 ; Chinese Physics Letters Volume 25 ; 25 > 
+    au < manifest ; exists ; 2009 ; Chinese Physics Letters Volume 26 ; 26 > 
+    au < testing ; exists ; 2010 ; Chinese Physics Letters Volume 27 ; 27 > 
     au < manifest ; exists ; 2011 ; Chinese Physics Letters Volume 28 ; 28 > 
 
   }
@@ -363,9 +334,9 @@
     au < exists ; exists ; 2005 ; Classical and Quantum Gravity Volume 22 ; 22 > 
     au < exists ; exists ; 2006 ; Classical and Quantum Gravity Volume 23 ; 23 > 
     au < exists ; exists ; 2007 ; Classical and Quantum Gravity Volume 24 ; 24 > 
-    au < exists ; exists ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
-    au < exists ; exists ; 2009 ; Classical and Quantum Gravity Volume 26 ; 26 > 
-    au < exists ; exists ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
+    au < manifest ; exists ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
+    au < manifest ; exists ; 2009 ; Classical and Quantum Gravity Volume 26 ; 26 > 
+    au < manifest ; exists ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
     au < manifest ; exists ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
 
   }
@@ -410,12 +381,12 @@
     au < exists ; exists ; 2006 ; Communications in Theoretical Physics Volume 46 ; 46 > 
     au < exists ; exists ; 2007 ; Communications in Theoretical Physics Volume 47 ; 47 > 
     au < exists ; exists ; 2007 ; Communications in Theoretical Physics Volume 48 ; 48 > 
-    au < exists ; exists ; 2008 ; Communications in Theoretical Physics Volume 49 ; 49 > 
-    au < exists ; exists ; 2008 ; Communications in Theoretical Physics Volume 50 ; 50 > 
-    au < exists ; exists ; 2009 ; Communications in Theoretical Physics Volume 51 ; 51 > 
-    au < exists ; exists ; 2009 ; Communications in Theoretical Physics Volume 52 ; 52 > 
-    au < exists ; exists ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 > 
-    au < exists ; exists ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 > 
+    au < manifest ; exists ; 2008 ; Communications in Theoretical Physics Volume 49 ; 49 > 
+    au < manifest ; exists ; 2008 ; Communications in Theoretical Physics Volume 50 ; 50 > 
+    au < manifest ; exists ; 2009 ; Communications in Theoretical Physics Volume 51 ; 51 > 
+    au < manifest ; exists ; 2009 ; Communications in Theoretical Physics Volume 52 ; 52 > 
+    au < manifest ; exists ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 > 
+    au < manifest ; exists ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 > 
     au < manifest ; exists ; 2011 ; Communications in Theoretical Physics Volume 55 ; 55 > 
     au < manifest ; exists ; 2011 ; Communications in Theoretical Physics Volume 56 ; 56 >
   }
@@ -432,9 +403,9 @@
     param[journal_issn] = 1749-4699
     comment[param] = eissn preferred
 
-    au < exists ; exists ; 2008 ; Computational Science & Discovery Volume 1 ; 1 > 
-    au < exists ; exists ; 2009 ; Computational Science & Discovery Volume 2 ; 2 > 
-    au < exists ; exists ; 2010 ; Computational Science & Discovery Volume 3 ; 3 > 
+    au < manifest ; exists ; 2008 ; Computational Science & Discovery Volume 1 ; 1 > 
+    au < manifest ; exists ; 2009 ; Computational Science & Discovery Volume 2 ; 2 > 
+    au < manifest ; exists ; 2010 ; Computational Science & Discovery Volume 3 ; 3 > 
     au < manifest ; exists ; 2011 ; Computational Science & Discovery Volume 4 ; 4 > 
 
   }
@@ -471,9 +442,9 @@
 
     au < exists ; exists ; 2006 ; Environmental Research Letters Volume 1 ; 1 > 
     au < exists ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; Environmental Research Letters Volume 3 ; 3 > 
-    au < exists ; exists ; 2009 ; Environmental Research Letters Volume 4 ; 4 > 
-    au < exists ; exists ; 2010 ; Environmental Research Letters Volume 5 ; 5 > 
+    au < manifest ; exists ; 2008 ; Environmental Research Letters Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Environmental Research Letters Volume 4 ; 4 > 
+    au < manifest ; exists ; 2010 ; Environmental Research Letters Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
 
   }
@@ -570,18 +541,18 @@
     au < exists ; exists ; 2007 ; EPL (Europhysics Letters) Volume 78 ; 78 > 
     au < exists ; exists ; 2007 ; EPL (Europhysics Letters) Volume 79 ; 79 > 
     au < exists ; exists ; 2007 ; EPL (Europhysics Letters) Volume 80 ; 80 > 
-    au < exists ; exists ; 2008 ; EPL (Europhysics Letters) Volume 81 ; 81 > 
-    au < exists ; exists ; 2008 ; EPL (Europhysics Letters) Volume 82 ; 82 > 
-    au < exists ; exists ; 2008 ; EPL (Europhysics Letters) Volume 83 ; 83 > 
-    au < exists ; exists ; 2008 ; EPL (Europhysics Letters) Volume 84 ; 84 > 
-    au < exists ; exists ; 2009 ; EPL (Europhysics Letters) Volume 85 ; 85 > 
-    au < exists ; exists ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
-    au < exists ; exists ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
-    au < exists ; exists ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
-    au < exists ; exists ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
-    au < exists ; exists ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
-    au < exists ; exists ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
-    au < exists ; exists ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
+    au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 81 ; 81 > 
+    au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 82 ; 82 > 
+    au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 83 ; 83 > 
+    au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 84 ; 84 > 
+    au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 85 ; 85 > 
+    au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
+    au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
+    au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
+    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
+    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
+    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
+    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 93 ; 93 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 > 
@@ -628,9 +599,9 @@
     au < exists ; exists ; 2005 ; European Journal of Physics Volume 26 ; 26 > 
     au < exists ; exists ; 2006 ; European Journal of Physics Volume 27 ; 27 > 
     au < exists ; exists ; 2007 ; European Journal of Physics Volume 28 ; 28 > 
-    au < exists ; exists ; 2008 ; European Journal of Physics Volume 29 ; 29 > 
-    au < exists ; exists ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
-    au < exists ; exists ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
+    au < manifest ; exists ; 2008 ; European Journal of Physics Volume 29 ; 29 > 
+    au < manifest ; exists ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
+    au < manifest ; exists ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
 
   }
@@ -686,9 +657,9 @@
     au < exists ; exists ; 2005 ; Fluid Dynamics Research Volume 37 ; 37 > 
     au < exists ; exists ; 2006 ; Fluid Dynamics Research Volume 38 ; 38 > 
     au < exists ; exists ; 2007 ; Fluid Dynamics Research Volume 39 ; 39 > 
-    au < exists ; exists ; 2008 ; Fluid Dynamics Research Volume 40 ; 40 > 
-    au < exists ; exists ; 2009 ; Fluid Dynamics Research Volume 41 ; 41 > 
-    au < exists ; exists ; 2010 ; Fluid Dynamics Research Volume 42 ; 42 > 
+    au < manifest ; exists ; 2008 ; Fluid Dynamics Research Volume 40 ; 40 > 
+    au < manifest ; exists ; 2009 ; Fluid Dynamics Research Volume 41 ; 41 > 
+    au < manifest ; exists ; 2010 ; Fluid Dynamics Research Volume 42 ; 42 > 
     au < manifest ; exists ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
 
   }
@@ -728,8 +699,8 @@
     au < exists ; exists ; 2005 ; Inverse Problems Volume 21 ; 21 > 
     au < exists ; exists ; 2006 ; Inverse Problems Volume 22 ; 22 > 
     au < exists ; exists ; 2007 ; Inverse Problems Volume 23 ; 23 > 
-    au < exists ; exists ; 2008 ; Inverse Problems Volume 24 ; 24 > 
-    au < exists ; exists ; 2009 ; Inverse Problems Volume 25 ; 25 > 
+    au < manifest ; exists ; 2008 ; Inverse Problems Volume 24 ; 24 > 
+    au < manifest ; exists ; 2009 ; Inverse Problems Volume 25 ; 25 > 
     au < exists ; exists ; 2010 ; Inverse Problems Volume 26 ; 26 > 
     au < manifest ; exists ; 2011 ; Inverse Problems Volume 27 ; 27 > 
 
@@ -746,7 +717,7 @@
 
     param[journal_issn] = 1755-1315
     comment[param] = eissn preferred
-    comment[14] = au start url redirects to issue toc, missing permission statement
+    comment[au_start_url] = redirects to issue toc, missing permission statement
 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
@@ -776,7 +747,7 @@
 
     param[journal_issn] = 1757-899X
     comment[param] = eissn preferred
-    comment[17] = au start url redirects to issue toc, missing permission statement
+    comment[au_start_url] = redirects to issue toc, missing permission statement
 
     au < exists ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 1 ; 1 > 
     au < exists ; exists ; 2009 ; IOP Conference Series: Materials Science and Engineering Volume 2 ; 2 > 
@@ -829,9 +800,9 @@
     comment[param] = eissn preferred
 
     au < exists ; exists ; 2007 ; Journal of Breath Research Volume 1 ; 1 > 
-    au < exists ; exists ; 2008 ; Journal of Breath Research Volume 2 ; 2 > 
-    au < exists ; exists ; 2009 ; Journal of Breath Research Volume 3 ; 3 > 
-    au < exists ; exists ; 2010 ; Journal of Breath Research Volume 4 ; 4 > 
+    au < manifest ; exists ; 2008 ; Journal of Breath Research Volume 2 ; 2 > 
+    au < manifest ; exists ; 2009 ; Journal of Breath Research Volume 3 ; 3 > 
+    au < manifest ; exists ; 2010 ; Journal of Breath Research Volume 4 ; 4 > 
     au < manifest ; exists ; 2011 ; Journal of Breath Research Volume 5 ; 5 > 
 
   }
@@ -850,9 +821,9 @@
     au < exists ; exists ; 2005 ; Journal of Cosmology and Astroparticle Physics Volume 2005 ; 2005 > 
     au < exists ; exists ; 2006 ; Journal of Cosmology and Astroparticle Physics Volume 2006 ; 2006 > 
     au < exists ; exists ; 2007 ; Journal of Cosmology and Astroparticle Physics Volume 2007 ; 2007 > 
-    au < exists ; exists ; 2008 ; Journal of Cosmology and Astroparticle Physics Volume 2008 ; 2008 > 
-    au < exists ; exists ; 2009 ; Journal of Cosmology and Astroparticle Physics Volume 2009 ; 2009 > 
-    au < exists ; exists ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
+    au < manifest ; exists ; 2008 ; Journal of Cosmology and Astroparticle Physics Volume 2008 ; 2008 > 
+    au < manifest ; exists ; 2009 ; Journal of Cosmology and Astroparticle Physics Volume 2009 ; 2009 > 
+    au < manifest ; exists ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
     au < manifest ; exists ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
 
   }
@@ -873,9 +844,9 @@
     au < exists ; exists ; 2005 ; Journal of Geophysics and Engineering Volume 2 ; 2 > 
     au < exists ; exists ; 2006 ; Journal of Geophysics and Engineering Volume 3 ; 3 > 
     au < exists ; exists ; 2007 ; Journal of Geophysics and Engineering Volume 4 ; 4 > 
-    au < exists ; exists ; 2008 ; Journal of Geophysics and Engineering Volume 5 ; 5 > 
-    au < exists ; exists ; 2009 ; Journal of Geophysics and Engineering Volume 6 ; 6 > 
-    au < exists ; exists ; 2010 ; Journal of Geophysics and Engineering Volume 7 ; 7 > 
+    au < manifest ; exists ; 2008 ; Journal of Geophysics and Engineering Volume 5 ; 5 > 
+    au < manifest ; exists ; 2009 ; Journal of Geophysics and Engineering Volume 6 ; 6 > 
+    au < manifest ; exists ; 2010 ; Journal of Geophysics and Engineering Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Journal of Geophysics and Engineering Volume 8 ; 8 > 
 
   }
@@ -901,8 +872,8 @@
     au < exists ; exists ; 2005 ; Journal of High Energy Physics Volume 2005 ; 2005 > 
     au < exists ; exists ; 2006 ; Journal of High Energy Physics Volume 2006 ; 2006 > 
     au < exists ; exists ; 2007 ; Journal of High Energy Physics Volume 2007 ; 2007 > 
-    au < exists ; exists ; 2008 ; Journal of High Energy Physics Volume 2008 ; 2008 > 
-    au < exists ; exists ; 2009 ; Journal of High Energy Physics Volume 2009 ; 2009 > 
+    au < manifest ; exists ; 2008 ; Journal of High Energy Physics Volume 2008 ; 2008 > 
+    au < manifest ; exists ; 2009 ; Journal of High Energy Physics Volume 2009 ; 2009 > 
 
   }
 
@@ -917,9 +888,9 @@
 
     au < exists ; exists ; 2006 ; Journal of Instrumentation Volume 1 ; 1 > 
     au < exists ; exists ; 2007 ; Journal of Instrumentation Volume 2 ; 2 > 
-    au < exists ; exists ; 2008 ; Journal of Instrumentation Volume 3 ; 3 > 
-    au < exists ; exists ; 2009 ; Journal of Instrumentation Volume 4 ; 4 > 
-    au < exists ; exists ; 2010 ; Journal of Instrumentation Volume 5 ; 5 > 
+    au < manifest ; exists ; 2008 ; Journal of Instrumentation Volume 3 ; 3 > 
+    au < manifest ; exists ; 2009 ; Journal of Instrumentation Volume 4 ; 4 > 
+    au < manifest ; exists ; 2010 ; Journal of Instrumentation Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Journal of Instrumentation Volume 6 ; 6 > 
 
   }
@@ -953,9 +924,9 @@
     au < exists ; exists ; 2005 ; Journal of Micromechanics and Microengineering Volume 15 ; 15 > 
     au < exists ; exists ; 2006 ; Journal of Micromechanics and Microengineering Volume 16 ; 16 > 
     au < exists ; exists ; 2007 ; Journal of Micromechanics and Microengineering Volume 17 ; 17 > 
-    au < exists ; exists ; 2008 ; Journal of Micromechanics and Microengineering Volume 18 ; 18 > 
-    au < exists ; exists ; 2009 ; Journal of Micromechanics and Microengineering Volume 19 ; 19 > 
-    au < exists ; exists ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 > 
+    au < manifest ; exists ; 2008 ; Journal of Micromechanics and Microengineering Volume 18 ; 18 > 
+    au < manifest ; exists ; 2009 ; Journal of Micromechanics and Microengineering Volume 19 ; 19 > 
+    au < manifest ; exists ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 > 
     au < manifest ; exists ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 > 
 
   }
@@ -976,9 +947,9 @@
     au < exists ; exists ; 2005 ; Journal of Neural Engineering Volume 2 ; 2 > 
     au < exists ; exists ; 2006 ; Journal of Neural Engineering Volume 3 ; 3 > 
     au < exists ; exists ; 2007 ; Journal of Neural Engineering Volume 4 ; 4 > 
-    au < exists ; exists ; 2008 ; Journal of Neural Engineering Volume 5 ; 5 > 
-    au < exists ; exists ; 2009 ; Journal of Neural Engineering Volume 6 ; 6 > 
-    au < exists ; exists ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 > 
+    au < manifest ; exists ; 2008 ; Journal of Neural Engineering Volume 5 ; 5 > 
+    au < manifest ; exists ; 2009 ; Journal of Neural Engineering Volume 6 ; 6 > 
+    au < manifest ; exists ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
 
   }
@@ -1015,19 +986,9 @@
 
     param[journal_issn] = 2040-8986
     comment[param] = eissn preferred
-
-    au < exists ; exists ; 1999 ; Journal of Optics Volume 1 ; 1 > 
-    au < exists ; exists ; 2000 ; Journal of Optics Volume 2 ; 2 > 
-    au < exists ; exists ; 2001 ; Journal of Optics Volume 3 ; 3 > 
-    au < exists ; exists ; 2002 ; Journal of Optics Volume 4 ; 4 > 
-    au < exists ; exists ; 2003 ; Journal of Optics Volume 5 ; 5 > 
-    au < exists ; exists ; 2004 ; Journal of Optics Volume 6 ; 6 > 
-    au < exists ; exists ; 2005 ; Journal of Optics Volume 7 ; 7 > 
-    au < exists ; exists ; 2006 ; Journal of Optics Volume 8 ; 8 > 
-    au < exists ; exists ; 2007 ; Journal of Optics Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; Journal of Optics Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; Journal of Optics Volume 11 ; 11 > 
-    au < exists ; exists ; 2010 ; Journal of Optics Volume 12 ; 12 > 
+    comment[continues] = 1464-4258
+ 
+    au < manifest ; exists ; 2010 ; Journal of Optics Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; Journal of Optics Volume 13 ; 13 > 
 
   }
@@ -1040,14 +1001,8 @@
     >
 
     param[journal_issn] = 0150-536X
+    comment[continues] = 0335-7368
 
-    au < exists ; exists ; 1970 ; Journal of Optics Volume 1 ; 1 > 
-    au < exists ; exists ; 1971 ; Journal of Optics Volume 2 ; 2 > 
-    au < exists ; exists ; 1972 ; Journal of Optics Volume 3 ; 3 > 
-    au < exists ; exists ; 1973 ; Journal of Optics Volume 4 ; 4 > 
-    au < exists ; exists ; 1974 ; Journal of Optics Volume 5 ; 5 > 
-    au < exists ; exists ; 1975 ; Journal of Optics Volume 6 ; 6 > 
-    au < exists ; exists ; 1976 ; Journal of Optics Volume 7 ; 7 > 
     au < exists ; exists ; 1977 ; Journal of Optics Volume 8 ; 8 > 
     au < exists ; exists ; 1978 ; Journal of Optics Volume 9 ; 9 > 
     au < exists ; exists ; 1979 ; Journal of Optics Volume 10 ; 10 > 
@@ -1084,6 +1039,7 @@
 
     param[journal_issn] = 1464-4258
     comment[param] = print issn preferred
+    comment[continued_by] = 2040-8986
 
     au < exists ; exists ; 1999 ; Journal of Optics A: Pure and Applied Optics Volume 1 ; 1 > 
     au < exists ; exists ; 2000 ; Journal of Optics A: Pure and Applied Optics Volume 2 ; 2 > 
@@ -1094,8 +1050,8 @@
     au < exists ; exists ; 2005 ; Journal of Optics A: Pure and Applied Optics Volume 7 ; 7 > 
     au < exists ; exists ; 2006 ; Journal of Optics A: Pure and Applied Optics Volume 8 ; 8 > 
     au < exists ; exists ; 2007 ; Journal of Optics A: Pure and Applied Optics Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; Journal of Optics A: Pure and Applied Optics Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; Journal of Optics A: Pure and Applied Optics Volume 11 ; 11 > 
+    au < manifest ; exists ; 2008 ; Journal of Optics A: Pure and Applied Optics Volume 10 ; 10 > 
+    au < manifest ; exists ; 2009 ; Journal of Optics A: Pure and Applied Optics Volume 11 ; 11 > 
 
   }
 
@@ -1130,6 +1086,7 @@
     >
 
     param[journal_issn] = 0022-3689
+    comment[continued_by] = 0301-0015
 
     au < exists ; exists ; 1968 ; Journal of Physics A: General Physics Volume 1 ; 1 > 
     au < exists ; exists ; 1969 ; Journal of Physics A: General Physics Volume 2 ; 2 > 
@@ -1150,14 +1107,9 @@
 
     param[journal_issn] = 0305-4470
     comment[param] = print issn preferred
+    comment[continues] = 0301-0015
+    comment[continued_by] = 1751-8121
 
-    au < exists ; exists ; 1968 ; Journal of Physics A: Mathematical and General Volume 1 ; 1 > 
-    au < exists ; exists ; 1969 ; Journal of Physics A: Mathematical and General Volume 2 ; 2 > 
-    au < exists ; exists ; 1970 ; Journal of Physics A: Mathematical and General Volume 3 ; 3 > 
-    au < exists ; exists ; 1971 ; Journal of Physics A: Mathematical and General Volume 4 ; 4 > 
-    au < exists ; exists ; 1972 ; Journal of Physics A: Mathematical and General Volume 5 ; 5 > 
-    au < exists ; exists ; 1973 ; Journal of Physics A: Mathematical and General Volume 6 ; 6 > 
-    au < exists ; exists ; 1974 ; Journal of Physics A: Mathematical and General Volume 7 ; 7 > 
     au < exists ; exists ; 1975 ; Journal of Physics A: Mathematical and General Volume 8 ; 8 > 
     au < exists ; exists ; 1976 ; Journal of Physics A: Mathematical and General Volume 9 ; 9 > 
     au < exists ; exists ; 1977 ; Journal of Physics A: Mathematical and General Volume 10 ; 10 > 
@@ -1204,50 +1156,12 @@
 
     param[journal_issn] = 1751-8121
     comment[param] = eissn preferred
+    comment[continues] = 0305-4470
 
-    au < exists ; exists ; 1968 ; Journal of Physics A: Mathematical and Theoretical Volume 1 ; 1 > 
-    au < exists ; exists ; 1969 ; Journal of Physics A: Mathematical and Theoretical Volume 2 ; 2 > 
-    au < exists ; exists ; 1970 ; Journal of Physics A: Mathematical and Theoretical Volume 3 ; 3 > 
-    au < exists ; exists ; 1971 ; Journal of Physics A: Mathematical and Theoretical Volume 4 ; 4 > 
-    au < exists ; exists ; 1972 ; Journal of Physics A: Mathematical and Theoretical Volume 5 ; 5 > 
-    au < exists ; exists ; 1973 ; Journal of Physics A: Mathematical and Theoretical Volume 6 ; 6 > 
-    au < exists ; exists ; 1974 ; Journal of Physics A: Mathematical and Theoretical Volume 7 ; 7 > 
-    au < exists ; exists ; 1975 ; Journal of Physics A: Mathematical and Theoretical Volume 8 ; 8 > 
-    au < exists ; exists ; 1976 ; Journal of Physics A: Mathematical and Theoretical Volume 9 ; 9 > 
-    au < exists ; exists ; 1977 ; Journal of Physics A: Mathematical and Theoretical Volume 10 ; 10 > 
-    au < exists ; exists ; 1978 ; Journal of Physics A: Mathematical and Theoretical Volume 11 ; 11 > 
-    au < exists ; exists ; 1979 ; Journal of Physics A: Mathematical and Theoretical Volume 12 ; 12 > 
-    au < exists ; exists ; 1980 ; Journal of Physics A: Mathematical and Theoretical Volume 13 ; 13 > 
-    au < exists ; exists ; 1981 ; Journal of Physics A: Mathematical and Theoretical Volume 14 ; 14 > 
-    au < exists ; exists ; 1982 ; Journal of Physics A: Mathematical and Theoretical Volume 15 ; 15 > 
-    au < exists ; exists ; 1983 ; Journal of Physics A: Mathematical and Theoretical Volume 16 ; 16 > 
-    au < exists ; exists ; 1984 ; Journal of Physics A: Mathematical and Theoretical Volume 17 ; 17 > 
-    au < exists ; exists ; 1985 ; Journal of Physics A: Mathematical and Theoretical Volume 18 ; 18 > 
-    au < exists ; exists ; 1986 ; Journal of Physics A: Mathematical and Theoretical Volume 19 ; 19 > 
-    au < exists ; exists ; 1987 ; Journal of Physics A: Mathematical and Theoretical Volume 20 ; 20 > 
-    au < exists ; exists ; 1988 ; Journal of Physics A: Mathematical and Theoretical Volume 21 ; 21 > 
-    au < exists ; exists ; 1989 ; Journal of Physics A: Mathematical and Theoretical Volume 22 ; 22 > 
-    au < exists ; exists ; 1990 ; Journal of Physics A: Mathematical and Theoretical Volume 23 ; 23 > 
-    au < exists ; exists ; 1991 ; Journal of Physics A: Mathematical and Theoretical Volume 24 ; 24 > 
-    au < exists ; exists ; 1992 ; Journal of Physics A: Mathematical and Theoretical Volume 25 ; 25 > 
-    au < exists ; exists ; 1993 ; Journal of Physics A: Mathematical and Theoretical Volume 26 ; 26 > 
-    au < exists ; exists ; 1994 ; Journal of Physics A: Mathematical and Theoretical Volume 27 ; 27 > 
-    au < exists ; exists ; 1995 ; Journal of Physics A: Mathematical and Theoretical Volume 28 ; 28 > 
-    au < exists ; exists ; 1996 ; Journal of Physics A: Mathematical and Theoretical Volume 29 ; 29 > 
-    au < exists ; exists ; 1997 ; Journal of Physics A: Mathematical and Theoretical Volume 30 ; 30 > 
-    au < exists ; exists ; 1998 ; Journal of Physics A: Mathematical and Theoretical Volume 31 ; 31 > 
-    au < exists ; exists ; 1999 ; Journal of Physics A: Mathematical and Theoretical Volume 32 ; 32 > 
-    au < exists ; exists ; 2000 ; Journal of Physics A: Mathematical and Theoretical Volume 33 ; 33 > 
-    au < exists ; exists ; 2001 ; Journal of Physics A: Mathematical and Theoretical Volume 34 ; 34 > 
-    au < exists ; exists ; 2002 ; Journal of Physics A: Mathematical and Theoretical Volume 35 ; 35 > 
-    au < exists ; exists ; 2003 ; Journal of Physics A: Mathematical and Theoretical Volume 36 ; 36 > 
-    au < exists ; exists ; 2004 ; Journal of Physics A: Mathematical and Theoretical Volume 37 ; 37 > 
-    au < exists ; exists ; 2005 ; Journal of Physics A: Mathematical and Theoretical Volume 38 ; 38 > 
-    au < exists ; exists ; 2006 ; Journal of Physics A: Mathematical and Theoretical Volume 39 ; 39 > 
     au < exists ; exists ; 2007 ; Journal of Physics A: Mathematical and Theoretical Volume 40 ; 40 > 
-    au < exists ; exists ; 2008 ; Journal of Physics A: Mathematical and Theoretical Volume 41 ; 41 > 
-    au < exists ; exists ; 2009 ; Journal of Physics A: Mathematical and Theoretical Volume 42 ; 42 > 
-    au < exists ; exists ; 2010 ; Journal of Physics A: Mathematical and Theoretical Volume 43 ; 43 > 
+    au < manifest ; exists ; 2008 ; Journal of Physics A: Mathematical and Theoretical Volume 41 ; 41 > 
+    au < manifest ; exists ; 2009 ; Journal of Physics A: Mathematical and Theoretical Volume 42 ; 42 > 
+    au < manifest ; exists ; 2010 ; Journal of Physics A: Mathematical and Theoretical Volume 43 ; 43 > 
     au < manifest ; exists ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 > 
 
   }
@@ -1260,12 +1174,9 @@
     >
 
     param[journal_issn] = 0301-0015
+    comment[continues] = 0022-3689
+    comment[continued_by] = 0305-4470
 
-    au < exists ; exists ; 1968 ; Journal of Physics A: Mathematical, Nuclear and General Volume 1 ; 1 > 
-    au < exists ; exists ; 1969 ; Journal of Physics A: Mathematical, Nuclear and General Volume 2 ; 2 > 
-    au < exists ; exists ; 1970 ; Journal of Physics A: Mathematical, Nuclear and General Volume 3 ; 3 > 
-    au < exists ; exists ; 1971 ; Journal of Physics A: Mathematical, Nuclear and General Volume 4 ; 4 > 
-    au < exists ; exists ; 1972 ; Journal of Physics A: Mathematical, Nuclear and General Volume 5 ; 5 > 
     au < exists ; exists ; 1973 ; Journal of Physics A: Mathematical, Nuclear and General Volume 6 ; 6 > 
     au < exists ; exists ; 1974 ; Journal of Physics A: Mathematical, Nuclear and General Volume 7 ; 7 > 
 
@@ -1279,6 +1190,7 @@
     >
 
     param[journal_issn] = 0022-3700
+    comment[continued_by] = 0953-4075
 
     au < exists ; exists ; 1968 ; Journal of Physics B: Atomic and Molecular Physics Volume 1 ; 1 > 
     au < exists ; exists ; 1969 ; Journal of Physics B: Atomic and Molecular Physics Volume 2 ; 2 > 
@@ -1314,27 +1226,8 @@
 
     param[journal_issn] = 0953-4075
     comment[param] = print issn preferred
+    comment[continues] = 0022-3700
 
-    au < exists ; exists ; 1968 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 1 ; 1 > 
-    au < exists ; exists ; 1969 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 2 ; 2 > 
-    au < exists ; exists ; 1970 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 3 ; 3 > 
-    au < exists ; exists ; 1971 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 4 ; 4 > 
-    au < exists ; exists ; 1972 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 5 ; 5 > 
-    au < exists ; exists ; 1973 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 6 ; 6 > 
-    au < exists ; exists ; 1974 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 7 ; 7 > 
-    au < exists ; exists ; 1975 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 8 ; 8 > 
-    au < exists ; exists ; 1976 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 9 ; 9 > 
-    au < exists ; exists ; 1977 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 10 ; 10 > 
-    au < exists ; exists ; 1978 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 11 ; 11 > 
-    au < exists ; exists ; 1979 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 12 ; 12 > 
-    au < exists ; exists ; 1980 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 13 ; 13 > 
-    au < exists ; exists ; 1981 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 14 ; 14 > 
-    au < exists ; exists ; 1982 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 15 ; 15 > 
-    au < exists ; exists ; 1983 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 16 ; 16 > 
-    au < exists ; exists ; 1984 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 17 ; 17 > 
-    au < exists ; exists ; 1985 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 18 ; 18 > 
-    au < exists ; exists ; 1986 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 19 ; 19 > 
-    au < exists ; exists ; 1987 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 20 ; 20 > 
     au < exists ; exists ; 1988 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 21 ; 21 > 
     au < exists ; exists ; 1989 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 22 ; 22 > 
     au < exists ; exists ; 1990 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 23 ; 23 > 
@@ -1355,9 +1248,9 @@
     au < exists ; exists ; 2005 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 38 ; 38 > 
     au < exists ; exists ; 2006 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 39 ; 39 > 
     au < exists ; exists ; 2007 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 40 ; 40 > 
-    au < exists ; exists ; 2008 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 41 ; 41 > 
-    au < exists ; exists ; 2009 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 42 ; 42 > 
-    au < exists ; exists ; 2010 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 43 ; 43 > 
+    au < manifest ; exists ; 2008 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 41 ; 41 > 
+    au < manifest ; exists ; 2009 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 42 ; 42 > 
+    au < manifest ; exists ; 2010 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 43 ; 43 > 
     au < manifest ; exists ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
 
   }
@@ -2358,10 +2251,9 @@
     >
 
     param[journal_issn] = 0335-7368
+    comment[continues] = 0029-4780
+    comment[continued_by] = 0150-536X
 
-    au < exists ; exists ; 1970 ; Nouvelle Revue d'Optique Volume 1 ; 1 > 
-    au < exists ; exists ; 1971 ; Nouvelle Revue d'Optique Volume 2 ; 2 > 
-    au < exists ; exists ; 1972 ; Nouvelle Revue d'Optique Volume 3 ; 3 > 
     au < exists ; exists ; 1973 ; Nouvelle Revue d'Optique Volume 4 ; 4 > 
     au < exists ; exists ; 1974 ; Nouvelle Revue d'Optique Volume 5 ; 5 > 
     au < exists ; exists ; 1975 ; Nouvelle Revue d'Optique Volume 6 ; 6 > 
@@ -2377,6 +2269,7 @@
     >
 
     param[journal_issn] = 0029-4780
+    comment[contineued_by] = 0335-7368
 
     au < exists ; exists ; 1970 ; Nouvelle Revue d'Optique Appliquée Volume 1 ; 1 > 
     au < exists ; exists ; 1971 ; Nouvelle Revue d'Optique Appliquée Volume 2 ; 2 > 
