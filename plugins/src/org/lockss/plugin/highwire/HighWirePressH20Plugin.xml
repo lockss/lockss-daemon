@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -111,10 +111,6 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>4000</long>
-  </entry>
-  <entry>
     <string>au_crawlwindow</string>
     <string>org.lockss.plugin.highwire.HighWireCrawlWindow</string>
   </entry>
@@ -153,5 +149,21 @@
     <list>
       <string>&quot;^%scontent/%s/.*\.full(\.pdf\+html)?$&quot;, base_url, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>200</long>
+  </entry>
+  <entry>
+    <string>application/pdf_fetch_rate_limit</string>
+    <string>1/3000</string>
+  </entry>
+  <entry>
+    <string>application/vnd.ms-powerpoint</string>
+    <string>1/3000</string>
+  </entry>
+  <entry>
+    <string>text/html_fetch_rate_limit</string>
+    <string>1/3000</string>
   </entry>
 </map>
