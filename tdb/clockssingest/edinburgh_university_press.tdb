@@ -456,8 +456,8 @@
     param[journal_id] = jipt
 
     au < released ; manifest ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
-    au < testing ; exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
-    au < testing ; exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+    au < released ; manifest ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
+    au < released ; manifest ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
     au < released ; manifest ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
@@ -498,16 +498,16 @@
     param[journal_id] = jshs
 
     au < released ; manifest ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
-    au < testing ; exists ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
+    au < released ; manifest ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
     au < released ; manifest ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
-    au < testing ; exists ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
+    au < released ; manifest ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
     au < released ; manifest ; 2005 ; Journal of Scottish Historical Studies Volume 25 ; 25 >
-    au < testing ; exists ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
+    au < released ; manifest ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
     au < released ; manifest ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
     au < released ; manifest ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
-    au < testing ; exists ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
+    au < crawling ; exists ; 2011 ; Journal of Scottish Historical Studies Volume 31 ; 31 >
 
   }
 
@@ -547,7 +547,7 @@
 
     au < released ; manifest ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
-    au < testing ; exists ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
+    au < crawling ; exists ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
 
   }
 
@@ -635,13 +635,13 @@
 
     param[journal_id] = para
 
-    au < testing ; exists ; 2001 ; Paragraph Volume 24 ; 24 >
+    au < released ; manifest ; 2001 ; Paragraph Volume 24 ; 24 >
     au < released ; manifest ; 2002 ; Paragraph Volume 25 ; 25 >
     au < released ; manifest ; 2003 ; Paragraph Volume 26 ; 26 >
     au < released ; manifest ; 2004 ; Paragraph Volume 27 ; 27 >
     au < released ; manifest ; 2005 ; Paragraph Volume 28 ; 28 >
     au < released ; manifest ; 2006 ; Paragraph Volume 29 ; 29 >
-    au < testing ; exists ; 2007 ; Paragraph Volume 30 ; 30 >
+    au < released ; manifest ; 2007 ; Paragraph Volume 30 ; 30 >
     au < released ; manifest ; 2008 ; Paragraph Volume 31 ; 31 >
     au < released ; crawling ; 2009 ; Paragraph Volume 32 ; 32 >
     au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
@@ -661,9 +661,9 @@
     param[journal_id] = pah
 
     au < released ; manifest ; 1999 ; Psychoanalysis and History Volume 1 ; 1 >
-    au < testing ; exists ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
-    au < testing ; exists ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
-    au < testing ; exists ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
+    au < released ; manifest ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
+    au < released ; manifest ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
+    au < released ; manifest ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
     au < released ; manifest ; 2003 ; Psychoanalysis and History Volume 5 ; 5 >
     au < released ; manifest ; 2004 ; Psychoanalysis and History Volume 6 ; 6 >
     au < released ; manifest ; 2005 ; Psychoanalysis and History Volume 7 ; 7 >
@@ -712,35 +712,35 @@
 
     param[journal_id] = saj
 
-    au < testing ; exists ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
-    au < testing ; exists ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
-    au < testing ; exists ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
-    au < testing ; exists ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
-    au < testing ; exists ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
-    au < testing ; exists ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
+    au < released ; manifest ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
+    au < released ; manifest ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
+    au < released ; manifest ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
+    au < released ; manifest ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
+    au < released ; manifest ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
+    au < released ; manifest ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
     au < testing ; exists ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
     au < testing ; exists ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
-    au < testing ; exists ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
+    au < released ; manifest ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
     au < released ; manifest ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
-    au < testing ; exists ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
+    au < released ; manifest ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
     au < testing ; exists ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
     au < testing ; exists ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
     au < testing ; exists ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
-    au < testing ; exists ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
+    au < released ; manifest ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
     au < testing ; exists ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
-    au < testing ; exists ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
+    au < released ; manifest ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
     au < testing ; exists ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
     au < testing ; exists ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
     au < testing ; exists ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
     au < testing ; exists ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
     au < released ; manifest ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
-    au < testing ; exists ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
-    au < testing ; exists ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
+    au < released ; manifest ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
+    au < released ; manifest ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
     au < released ; manifest ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
-    au < testing ; exists ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
-    au < testing ; exists ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
+    au < released ; manifest ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
+    au < released ; manifest ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
     au < testing ; exists ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
-    au < testing ; exists ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
+    au < released ; manifest ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
     au < testing ; exists ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
     au < released ; manifest ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
     au < testing ; exists ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
@@ -761,17 +761,17 @@
 
     param[journal_id] = shr
 
-    au < testing ; exists ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
-    au < testing ; exists ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
+    au < released ; manifest ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
+    au < released ; manifest ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
     au < testing ; exists ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
-    au < testing ; exists ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
+    au < released ; manifest ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
     au < testing ; exists ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
     au < testing ; exists ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
     au < testing ; exists ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
     au < testing ; exists ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
     au < released ; manifest ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
     au < released ; crawling ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
-    au < notReady ; exists ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
+    au < testing ; exists ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
     au < testing ; exists ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
 
   }
