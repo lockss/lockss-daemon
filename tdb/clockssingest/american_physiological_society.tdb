@@ -290,16 +290,16 @@
       au < down ; crawling ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; reingest2.clockss.org:8085 >
-      au < down ; crawling ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1967 ; American Journal of Physiology Volume 212 ; 212 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1967 ; American Journal of Physiology Volume 213 ; 213 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1968 ; American Journal of Physiology Volume 214 ; 214 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1968 ; American Journal of Physiology Volume 215 ; 215 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
-      au < down ; crawling ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1970 ; American Journal of Physiology Volume 218 ; 218 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1970 ; American Journal of Physiology Volume 219 ; 219 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1971 ; American Journal of Physiology Volume 220 ; 220 ; reingest4.clockss.org:8082 >
@@ -314,6 +314,17 @@
       au < down ; crawling ; 1975 ; American Journal of Physiology Volume 229 ; 229 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1976 ; American Journal of Physiology Volume 230 ; 230 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1976 ; American Journal of Physiology Volume 231 ; 231 ; reingest1.clockss.org:8082 >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      au < wanted ; exists ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; >
+      au < wanted ; exists ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; >
+      au < wanted ; exists ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; >
+      au < wanted ; exists ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; >
 
     }
     
@@ -543,24 +554,24 @@
       au < down ; crawling ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-      au < down ; crawling ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-      au < down ; crawling ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-      au < down ; crawling ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
@@ -602,6 +613,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
+      au < wanted ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; >
+      au < wanted ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; >
+      au < wanted ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; >
+      au < wanted ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
+      au < wanted ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
+      au < wanted ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
       au < crawling ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
       au < manifest ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
 
@@ -1011,7 +1028,7 @@
       au < down ; crawling ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < down ; crawling ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < expunged ; expunged ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -1102,7 +1119,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
+      au < wanted ; exists ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ;  >      
       au < crawling ; exists ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < manifest ; exists ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
     }
@@ -1212,7 +1230,7 @@
       au < down ; crawling ; 2001 ; Journal of Neurophysiology Volume 86 ; 86 ; reingest2.clockss.org:8085 >
       au < down ; crawling ; 2002 ; Journal of Neurophysiology Volume 87 ; 87 ; reingest3.clockss.org:8083 >
       au < down ; crawling ; 2002 ; Journal of Neurophysiology Volume 88 ; 88 ; reingest3.clockss.org:8083 >
-      au < down ; crawling ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+      au < expunged ; expunged ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 2003 ; Journal of Neurophysiology Volume 90 ; 90 ; reingest4.clockss.org:8082 >
       au < down ; crawling ; 2004 ; Journal of Neurophysiology Volume 91 ; 91 ; reingest1.clockss.org:8082 >
       au < down ; crawling ; 2004 ; Journal of Neurophysiology Volume 92 ; 92 ; reingest1.clockss.org:8082 >
@@ -1234,7 +1252,8 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      
+
+      au < wanted ; exists ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; >      
       au < crawling ; exists ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
       au < manifest ; exists ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       
@@ -1340,19 +1359,19 @@
       au < down ; crawling ; 1930 ; Physiological Reviews Volume 10 ; 10 ; reingest3.clockss.org:8083 >                                                                            
       au < down ; crawling ; 1931 ; Physiological Reviews Volume 11 ; 11 ; reingest4.clockss.org:8082 >                                                                            
       au < down ; crawling ; 1932 ; Physiological Reviews Volume 12 ; 12 ; reingest1.clockss.org:8082 >                                                                            
-      au < down ; crawling ; 1933 ; Physiological Reviews Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1933 ; Physiological Reviews Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                                            
       au < down ; crawling ; 1934 ; Physiological Reviews Volume 14 ; 14 ; reingest3.clockss.org:8083 >                                                                            
       au < down ; crawling ; 1935 ; Physiological Reviews Volume 15 ; 15 ; reingest4.clockss.org:8082 >                                                                            
       au < down ; crawling ; 1936 ; Physiological Reviews Volume 16 ; 16 ; reingest1.clockss.org:8082 >                                                                            
-      au < down ; crawling ; 1937 ; Physiological Reviews Volume 17 ; 17 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1937 ; Physiological Reviews Volume 17 ; 17 ; reingest2.clockss.org:8085 >                                                                            
       au < down ; crawling ; 1938 ; Physiological Reviews Volume 18 ; 18 ; reingest3.clockss.org:8083 >                                                                            
       au < down ; crawling ; 1939 ; Physiological Reviews Volume 19 ; 19 ; reingest4.clockss.org:8082 >                                                                            
       au < down ; crawling ; 1940 ; Physiological Reviews Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                                                            
-      au < down ; crawling ; 1941 ; Physiological Reviews Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1941 ; Physiological Reviews Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                                            
       au < down ; crawling ; 1942 ; Physiological Reviews Volume 22 ; 22 ; reingest3.clockss.org:8083 >                                                                            
       au < down ; crawling ; 1943 ; Physiological Reviews Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                            
       au < down ; crawling ; 1944 ; Physiological Reviews Volume 24 ; 24 ; reingest1.clockss.org:8082 >                                                                            
-      au < down ; crawling ; 1945 ; Physiological Reviews Volume 25 ; 25 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1945 ; Physiological Reviews Volume 25 ; 25 ; reingest2.clockss.org:8085 >                                                                            
       au < down ; crawling ; 1946 ; Physiological Reviews Volume 26 ; 26 ; reingest3.clockss.org:8083 >                                                                            
       au < down ; crawling ; 1947 ; Physiological Reviews Volume 27 ; 27 ; reingest4.clockss.org:8082 >                                                                            
       au < down ; crawling ; 1948 ; Physiological Reviews Volume 28 ; 28 ; reingest1.clockss.org:8082 >                                                                            
@@ -1425,6 +1444,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
+      au < wanted ; exists ; 1933 ; Physiological Reviews Volume 13 ; 13 ; > 
+      au < wanted ; exists ; 1937 ; Physiological Reviews Volume 17 ; 17 ; >
+      au < wanted ; exists ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
+      au < wanted ; exists ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
       au < crawling ; exists ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
 
     }
