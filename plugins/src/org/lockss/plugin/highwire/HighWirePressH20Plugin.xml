@@ -9,13 +9,17 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>51</string>
+    <string>52</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
+	<string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
 	<string>2</string>
       </entry>
     </map>
