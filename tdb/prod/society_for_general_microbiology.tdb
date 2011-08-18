@@ -20,7 +20,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[ijs61] = no permission
+      comment[ijs61] = no permission from publisher
 
       au < exists ; 1951 ; International Journal of Systematic and Evolutionary Microbiology Volume 1 ; 1 >
       au < exists ; 1952 ; International Journal of Systematic and Evolutionary Microbiology Volume 2 ; 2 >
@@ -76,10 +76,10 @@
       au < exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 >
       au < exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 >
       au < exists ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 >
-      au < testing ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 >
+      au < ready ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 >
       au < testing ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 >
-      au < testing ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 >
-      au < testing ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
+      au < ready ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 >
+      au < ready ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
       au < testing ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
       au < ready ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
       au < notReady ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
@@ -271,7 +271,7 @@
       au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Medical Microbiology Volume 56 ; 56 >
       au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Medical Microbiology Volume 57 ; 57 >
       au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 >
 
     }
