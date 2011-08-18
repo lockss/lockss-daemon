@@ -718,33 +718,31 @@
     au < released ; manifest ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
     au < released ; manifest ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
     au < released ; manifest ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
-    au < testing ; exists ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
-    au < testing ; exists ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
+    au < released ; manifest ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
+    au < released ; manifest ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
     au < released ; manifest ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
     au < released ; manifest ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
     au < released ; manifest ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
-    au < testing ; exists ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
-    au < testing ; exists ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
-    au < testing ; exists ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
+    au < released ; manifest ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
+    au < released ; manifest ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
+    au < released ; manifest ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
     au < released ; manifest ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
-    au < testing ; exists ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
+    au < released ; manifest ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
     au < released ; manifest ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
-    au < testing ; exists ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
-    au < testing ; exists ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
-    au < testing ; exists ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
-    au < testing ; exists ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    au < released ; manifest ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
+    au < released ; manifest ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
+    au < released ; manifest ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
+    au < released ; manifest ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
     au < released ; manifest ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
     au < released ; manifest ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
     au < released ; manifest ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
     au < released ; manifest ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
     au < released ; manifest ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
     au < released ; manifest ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
-    au < testing ; exists ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
+    au < released ; manifest ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
     au < released ; manifest ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
-    au < testing ; exists ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+    au < released ; manifest ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
     au < released ; manifest ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
-    au < testing ; exists ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 >
-    au < testing ; exists ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 >
 
   }
 
@@ -757,22 +755,20 @@
       issnl = 0036-9241 
      >
 
-	comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010.0001
-
     param[journal_id] = shr
 
     au < released ; manifest ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
     au < released ; manifest ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
-    au < testing ; exists ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
+    au < released ; manifest ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
     au < released ; manifest ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
-    au < testing ; exists ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
-    au < testing ; exists ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
-    au < testing ; exists ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
-    au < testing ; exists ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
+    au < released ; manifest ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
+    au < released ; manifest ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
+    au < released ; manifest ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
+    au < released ; manifest ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
     au < released ; manifest ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
     au < released ; crawling ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
-    au < testing ; exists ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
-    au < testing ; exists ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
+    au < released ; manifest ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
+    au < crawling ; exists ; 2011 ; Scottish Historical Review Volume 90 ; 90 >
 
   }
 
@@ -787,17 +783,17 @@
 
     param[journal_id] = swc
 
-    au < testing ; exists ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
-    au < testing ; exists ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
+    au < released ; manifest ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
+    au < released ; manifest ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
     au < released ; manifest ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
-    au < testing ; exists ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
-    au < testing ; exists ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
-    au < testing ; exists ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
-    au < testing ; exists ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+    au < released ; manifest ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
+    au < released ; manifest ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
+    au < released ; manifest ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+    au < released ; manifest ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
     au < testing ; exists ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
     au < released ; crawling ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
-    au < testing ; exists ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
+    au < crawling ; exists ; 2011 ; Studies in World Christianity Volume 17 ; 17 >
 
   }
 
@@ -812,13 +808,13 @@
 
     param[journal_id] = tal
 
-    au < testing ; exists ; 2002 ; Translation and Literature Volume 11 ; 11 >
-    au < testing ; exists ; 2003 ; Translation and Literature Volume 12 ; 12 >
-    au < testing ; exists ; 2004 ; Translation and Literature Volume 13 ; 13 >
+    au < released ; manifest ; 2002 ; Translation and Literature Volume 11 ; 11 >
+    au < released ; manifest ; 2003 ; Translation and Literature Volume 12 ; 12 >
+    au < released ; manifest ; 2004 ; Translation and Literature Volume 13 ; 13 >
     au < testing ; exists ; 2005 ; Translation and Literature Volume 14 ; 14 >
     au < testing ; exists ; 2006 ; Translation and Literature Volume 15 ; 15 >
     au < testing ; exists ; 2007 ; Translation and Literature Volume 16 ; 16 >
-    au < testing ; exists ; 2008 ; Translation and Literature Volume 17 ; 17 >
+    au < released ; manifest ; 2008 ; Translation and Literature Volume 17 ; 17 >
     au < released ; crawling ; 2009 ; Translation and Literature Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
     au < crawling ; exists ; 2011 ; Translation and Literature Volume 20 ; 20 >
@@ -836,7 +832,7 @@
 
     param[journal_id] = word
 
-    au < testing ; exists ; 2008 ; Word Structure Volume 1 ; 1 >
+    au < released ; manifest ; 2008 ; Word Structure Volume 1 ; 1 >
     au < released ; crawling ; 2009 ; Word Structure Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Word Structure Volume 3 ; 3 >
     au < testing ; exists ; 2011 ; Word Structure Volume 4 ; 4 >
