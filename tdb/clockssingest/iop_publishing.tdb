@@ -172,6 +172,7 @@
     >
 
     param[journal_issn] = 1009-9271
+    comment[continued_by] = 1674-4527
 
     au < exists ; exists ; 2001 ; Chinese Journal of Astronomy and Astrophysics Volume 1 ; 1 > 
     au < exists ; exists ; 2002 ; Chinese Journal of Astronomy and Astrophysics Volume 2 ; 2 > 
@@ -349,6 +350,7 @@
     >
 
     param[journal_issn] = 0143-0815
+    comment[continued_by] = 0967-3334
 
     au < exists ; exists ; 1980 ; Clinical Physics and Physiological Measurement Volume 1 ; 1 > 
     au < exists ; exists ; 1981 ; Clinical Physics and Physiological Measurement Volume 2 ; 2 > 
@@ -2155,9 +2157,9 @@
     au < exists ; exists ; 2005 ; Nanotechnology Volume 16 ; 16 > 
     au < exists ; exists ; 2006 ; Nanotechnology Volume 17 ; 17 > 
     au < exists ; exists ; 2007 ; Nanotechnology Volume 18 ; 18 > 
-    au < exists ; exists ; 2008 ; Nanotechnology Volume 19 ; 19 > 
-    au < exists ; exists ; 2009 ; Nanotechnology Volume 20 ; 20 > 
-    au < exists ; exists ; 2010 ; Nanotechnology Volume 21 ; 21 > 
+    au < manifest ; exists ; 2008 ; Nanotechnology Volume 19 ; 19 > 
+    au < manifest ; exists ; 2009 ; Nanotechnology Volume 20 ; 20 > 
+    au < manifest ; exists ; 2010 ; Nanotechnology Volume 21 ; 21 > 
     au < manifest ; exists ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     
   }
@@ -2170,6 +2172,7 @@
     >
     
     param[journal_issn] = 1367-2630
+    comment[au_start_url] = vols.1-7 redirect to issue, missing permission
 
     au < exists ; exists ; 1999 ; New Journal of Physics Volume 1 ; 1 > 
     au < exists ; exists ; 2000 ; New Journal of Physics Volume 2 ; 2 > 
@@ -2178,11 +2181,11 @@
     au < exists ; exists ; 2003 ; New Journal of Physics Volume 5 ; 5 > 
     au < exists ; exists ; 2004 ; New Journal of Physics Volume 6 ; 6 > 
     au < exists ; exists ; 2005 ; New Journal of Physics Volume 7 ; 7 > 
-    au < exists ; exists ; 2006 ; New Journal of Physics Volume 8 ; 8 > 
-    au < exists ; exists ; 2007 ; New Journal of Physics Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; New Journal of Physics Volume 11 ; 11 > 
-    au < exists ; exists ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
+    au < manifest ; exists ; 2006 ; New Journal of Physics Volume 8 ; 8 > 
+    au < manifest ; exists ; 2007 ; New Journal of Physics Volume 9 ; 9 > 
+    au < manifest ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
+    au < manifest ; exists ; 2009 ; New Journal of Physics Volume 11 ; 11 > 
+    au < manifest ; exists ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
 
   }
@@ -2219,9 +2222,9 @@
     au < exists ; exists ; 2005 ; Nonlinearity Volume 18 ; 18 > 
     au < exists ; exists ; 2006 ; Nonlinearity Volume 19 ; 19 > 
     au < exists ; exists ; 2007 ; Nonlinearity Volume 20 ; 20 > 
-    au < exists ; exists ; 2008 ; Nonlinearity Volume 21 ; 21 > 
-    au < exists ; exists ; 2009 ; Nonlinearity Volume 22 ; 22 > 
-    au < exists ; exists ; 2010 ; Nonlinearity Volume 23 ; 23 > 
+    au < manifest ; exists ; 2008 ; Nonlinearity Volume 21 ; 21 > 
+    au < manifest ; exists ; 2009 ; Nonlinearity Volume 22 ; 22 > 
+    au < manifest ; exists ; 2010 ; Nonlinearity Volume 23 ; 23 > 
     au < manifest ; exists ; 2011 ; Nonlinearity Volume 24 ; 24 > 
 
   }
@@ -2319,9 +2322,9 @@
     au < exists ; exists ; 2005 ; Nuclear Fusion Volume 45 ; 45 > 
     au < exists ; exists ; 2006 ; Nuclear Fusion Volume 46 ; 46 > 
     au < exists ; exists ; 2007 ; Nuclear Fusion Volume 47 ; 47 > 
-    au < exists ; exists ; 2008 ; Nuclear Fusion Volume 48 ; 48 > 
-    au < exists ; exists ; 2009 ; Nuclear Fusion Volume 49 ; 49 > 
-    au < exists ; exists ; 2010 ; Nuclear Fusion Volume 50 ; 50 > 
+    au < manifest ; exists ; 2008 ; Nuclear Fusion Volume 48 ; 48 > 
+    au < manifest ; exists ; 2009 ; Nuclear Fusion Volume 49 ; 49 > 
+    au < manifest ; exists ; 2010 ; Nuclear Fusion Volume 50 ; 50 > 
     au < manifest ; exists ; 2011 ; Nuclear Fusion Volume 51 ; 51 > 
 
   }
@@ -2414,12 +2417,12 @@
     au < exists ; exists ; 2006 ; Physica Scripta Volume 74 ; 74 > 
     au < exists ; exists ; 2007 ; Physica Scripta Volume 75 ; 75 > 
     au < exists ; exists ; 2007 ; Physica Scripta Volume 76 ; 76 > 
-    au < exists ; exists ; 2008 ; Physica Scripta Volume 77 ; 77 > 
-    au < exists ; exists ; 2008 ; Physica Scripta Volume 78 ; 78 > 
-    au < exists ; exists ; 2009 ; Physica Scripta Volume 79 ; 79 > 
-    au < exists ; exists ; 2009 ; Physica Scripta Volume 80 ; 80 > 
-    au < exists ; exists ; 2010 ; Physica Scripta Volume 81 ; 81 > 
-    au < exists ; exists ; 2010 ; Physica Scripta Volume 82 ; 82 > 
+    au < manifest ; exists ; 2008 ; Physica Scripta Volume 77 ; 77 > 
+    au < manifest ; exists ; 2008 ; Physica Scripta Volume 78 ; 78 > 
+    au < manifest ; exists ; 2009 ; Physica Scripta Volume 79 ; 79 > 
+    au < manifest ; exists ; 2009 ; Physica Scripta Volume 80 ; 80 > 
+    au < manifest ; exists ; 2010 ; Physica Scripta Volume 81 ; 81 > 
+    au < manifest ; exists ; 2010 ; Physica Scripta Volume 82 ; 82 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 83 ; 83 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 84 ; 84 > 
 
@@ -2436,14 +2439,15 @@
 
     param[journal_issn] = 1478-3975
     comment[param] = eissn preferred
+    comment[issn] = issn not found on website
 
     au < exists ; exists ; 2004 ; Physical Biology Volume 1 ; 1 > 
     au < exists ; exists ; 2005 ; Physical Biology Volume 2 ; 2 > 
     au < exists ; exists ; 2006 ; Physical Biology Volume 3 ; 3 > 
     au < exists ; exists ; 2007 ; Physical Biology Volume 4 ; 4 > 
-    au < exists ; exists ; 2008 ; Physical Biology Volume 5 ; 5 > 
-    au < exists ; exists ; 2009 ; Physical Biology Volume 6 ; 6 > 
-    au < exists ; exists ; 2010 ; Physical Biology Volume 7 ; 7 > 
+    au < manifest ; exists ; 2008 ; Physical Biology Volume 5 ; 5 > 
+    au < manifest ; exists ; 2009 ; Physical Biology Volume 6 ; 6 > 
+    au < manifest ; exists ; 2010 ; Physical Biology Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Physical Biology Volume 8 ; 8 > 
 
   }
@@ -2502,9 +2506,9 @@
     au < exists ; exists ; 2005 ; Physics Education Volume 40 ; 40 > 
     au < exists ; exists ; 2006 ; Physics Education Volume 41 ; 41 > 
     au < exists ; exists ; 2007 ; Physics Education Volume 42 ; 42 > 
-    au < exists ; exists ; 2008 ; Physics Education Volume 43 ; 43 > 
-    au < exists ; exists ; 2009 ; Physics Education Volume 44 ; 44 > 
-    au < exists ; exists ; 2010 ; Physics Education Volume 45 ; 45 > 
+    au < manifest ; exists ; 2008 ; Physics Education Volume 43 ; 43 > 
+    au < manifest ; exists ; 2009 ; Physics Education Volume 44 ; 44 > 
+    au < manifest ; exists ; 2010 ; Physics Education Volume 45 ; 45 > 
     au < manifest ; exists ; 2011 ; Physics Education Volume 46 ; 46 > 
 
   }
@@ -2573,9 +2577,9 @@
     au < exists ; exists ; 2005 ; Physics in Medicine and Biology Volume 50 ; 50 > 
     au < exists ; exists ; 2006 ; Physics in Medicine and Biology Volume 51 ; 51 > 
     au < exists ; exists ; 2007 ; Physics in Medicine and Biology Volume 52 ; 52 > 
-    au < exists ; exists ; 2008 ; Physics in Medicine and Biology Volume 53 ; 53 > 
-    au < exists ; exists ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 > 
-    au < exists ; exists ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
+    au < manifest ; exists ; 2008 ; Physics in Medicine and Biology Volume 53 ; 53 > 
+    au < manifest ; exists ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 > 
+    au < manifest ; exists ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
     au < manifest ; exists ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 > 
 
   }
@@ -2588,10 +2592,8 @@
     >
 
     param[journal_issn] = 0305-4624
+    comment[continues] = 0034-6683
 
-    au < exists ; exists ; 1970 ; Physics in Technology Volume 1 ; 1 > 
-    au < exists ; exists ; 1971 ; Physics in Technology Volume 2 ; 2 > 
-    au < exists ; exists ; 1972 ; Physics in Technology Volume 3 ; 3 > 
     au < exists ; exists ; 1973 ; Physics in Technology Volume 4 ; 4 > 
     au < exists ; exists ; 1974 ; Physics in Technology Volume 5 ; 5 > 
     au < exists ; exists ; 1975 ; Physics in Technology Volume 6 ; 6 > 
@@ -2634,20 +2636,8 @@
 
     param[journal_issn] = 0967-3334
     comment[param] = print issn preferred
+    comment[continues] = 0143-0815
 
-    au < exists ; exists ; 1980 ; Physiological Measurement Volume 1 ; 1 > 
-    au < exists ; exists ; 1981 ; Physiological Measurement Volume 2 ; 2 > 
-    au < exists ; exists ; 1982 ; Physiological Measurement Volume 3 ; 3 > 
-    au < exists ; exists ; 1983 ; Physiological Measurement Volume 4 ; 4 > 
-    au < exists ; exists ; 1984 ; Physiological Measurement Volume 5 ; 5 > 
-    au < exists ; exists ; 1985 ; Physiological Measurement Volume 6 ; 6 > 
-    au < exists ; exists ; 1986 ; Physiological Measurement Volume 7 ; 7 > 
-    au < exists ; exists ; 1987 ; Physiological Measurement Volume 8 ; 8 > 
-    au < exists ; exists ; 1988 ; Physiological Measurement Volume 9 ; 9 > 
-    au < exists ; exists ; 1989 ; Physiological Measurement Volume 10 ; 10 > 
-    au < exists ; exists ; 1990 ; Physiological Measurement Volume 11 ; 11 > 
-    au < exists ; exists ; 1991 ; Physiological Measurement Volume 12 ; 12 > 
-    au < exists ; exists ; 1992 ; Physiological Measurement Volume 13 ; 13 > 
     au < exists ; exists ; 1993 ; Physiological Measurement Volume 14 ; 14 > 
     au < exists ; exists ; 1994 ; Physiological Measurement Volume 15 ; 15 > 
     au < exists ; exists ; 1995 ; Physiological Measurement Volume 16 ; 16 > 
@@ -2663,9 +2653,9 @@
     au < exists ; exists ; 2005 ; Physiological Measurement Volume 26 ; 26 > 
     au < exists ; exists ; 2006 ; Physiological Measurement Volume 27 ; 27 > 
     au < exists ; exists ; 2007 ; Physiological Measurement Volume 28 ; 28 > 
-    au < exists ; exists ; 2008 ; Physiological Measurement Volume 29 ; 29 > 
-    au < exists ; exists ; 2009 ; Physiological Measurement Volume 30 ; 30 > 
-    au < exists ; exists ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
+    au < manifest ; exists ; 2008 ; Physiological Measurement Volume 29 ; 29 > 
+    au < manifest ; exists ; 2009 ; Physiological Measurement Volume 30 ; 30 > 
+    au < manifest ; exists ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; Physiological Measurement Volume 32 ; 32 >
 
   }
@@ -2738,9 +2728,9 @@
     au < exists ; exists ; 2005 ; Plasma Physics and Controlled Fusion Volume 47 ; 47 > 
     au < exists ; exists ; 2006 ; Plasma Physics and Controlled Fusion Volume 48 ; 48 > 
     au < exists ; exists ; 2007 ; Plasma Physics and Controlled Fusion Volume 49 ; 49 > 
-    au < exists ; exists ; 2008 ; Plasma Physics and Controlled Fusion Volume 50 ; 50 > 
-    au < exists ; exists ; 2009 ; Plasma Physics and Controlled Fusion Volume 51 ; 51 > 
-    au < exists ; exists ; 2010 ; Plasma Physics and Controlled Fusion Volume 52 ; 52 > 
+    au < manifest ; exists ; 2008 ; Plasma Physics and Controlled Fusion Volume 50 ; 50 > 
+    au < manifest ; exists ; 2009 ; Plasma Physics and Controlled Fusion Volume 51 ; 51 > 
+    au < manifest ; exists ; 2010 ; Plasma Physics and Controlled Fusion Volume 52 ; 52 > 
     au < manifest ; exists ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 >
 
   }
@@ -2763,9 +2753,9 @@
     au < exists ; exists ; 2005 ; Plasma Science and Technology Volume 7 ; 7 > 
     au < exists ; exists ; 2006 ; Plasma Science and Technology Volume 8 ; 8 > 
     au < exists ; exists ; 2007 ; Plasma Science and Technology Volume 9 ; 9 > 
-    au < exists ; exists ; 2008 ; Plasma Science and Technology Volume 10 ; 10 > 
-    au < exists ; exists ; 2009 ; Plasma Science and Technology Volume 11 ; 11 > 
-    au < exists ; exists ; 2010 ; Plasma Science and Technology Volume 12 ; 12 > 
+    au < manifest ; exists ; 2008 ; Plasma Science and Technology Volume 10 ; 10 > 
+    au < manifest ; exists ; 2009 ; Plasma Science and Technology Volume 11 ; 11 > 
+    au < manifest ; exists ; 2010 ; Plasma Science and Technology Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; Plasma Science and Technology Volume 13 ; 13 > 
 
   }
@@ -2798,9 +2788,9 @@
     au < exists ; exists ; 2005 ; Plasma Sources Science and Technology Volume 14 ; 14 > 
     au < exists ; exists ; 2006 ; Plasma Sources Science and Technology Volume 15 ; 15 > 
     au < exists ; exists ; 2007 ; Plasma Sources Science and Technology Volume 16 ; 16 > 
-    au < exists ; exists ; 2008 ; Plasma Sources Science and Technology Volume 17 ; 17 > 
-    au < exists ; exists ; 2009 ; Plasma Sources Science and Technology Volume 18 ; 18 > 
-    au < exists ; exists ; 2010 ; Plasma Sources Science and Technology Volume 19 ; 19 > 
+    au < manifest ; exists ; 2008 ; Plasma Sources Science and Technology Volume 17 ; 17 > 
+    au < manifest ; exists ; 2009 ; Plasma Sources Science and Technology Volume 18 ; 18 > 
+    au < manifest ; exists ; 2010 ; Plasma Sources Science and Technology Volume 19 ; 19 > 
     au < manifest ; exists ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 > 
 
   }
@@ -3007,14 +2997,9 @@
 
     param[journal_issn] = 1355-5111
     comment[param] = print issn preferred
+    comment[continues] = 0954-8998
     comment[continued_by] = 1464-4266 
-
-    au < exists ; exists ; 1989 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 1 ; 1 > 
-    au < exists ; exists ; 1990 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 2 ; 2 > 
-    au < exists ; exists ; 1991 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 3 ; 3 > 
-    au < exists ; exists ; 1992 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 4 ; 4 > 
-    au < exists ; exists ; 1993 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 5 ; 5 > 
-    au < exists ; exists ; 1994 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 6 ; 6 > 
+ 
     au < exists ; exists ; 1995 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 7 ; 7 > 
     au < exists ; exists ; 1996 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 8 ; 8 > 
     au < exists ; exists ; 1997 ; Quantum and Semiclassical Optics: Journal of the European Optical Society Part B Volume 9 ; 9 > 
@@ -3134,9 +3119,9 @@
     au < exists ; exists ; 2005 ; Reports on Progress in Physics Volume 68 ; 68  > 
     au < exists ; exists ; 2006 ; Reports on Progress in Physics Volume 69 ; 69  > 
     au < exists ; exists ; 2007 ; Reports on Progress in Physics Volume 70 ; 70  > 
-    au < exists ; exists ; 2008 ; Reports on Progress in Physics Volume 71 ; 71  > 
-    au < exists ; exists ; 2009 ; Reports on Progress in Physics Volume 72 ; 72  > 
-    au < exists ; exists ; 2010 ; Reports on Progress in Physics Volume 73 ; 73  > 
+    au < manifest ; exists ; 2008 ; Reports on Progress in Physics Volume 71 ; 71  > 
+    au < manifest ; exists ; 2009 ; Reports on Progress in Physics Volume 72 ; 72  > 
+    au < manifest ; exists ; 2010 ; Reports on Progress in Physics Volume 73 ; 73  > 
     au < manifest ; exists ; 2011 ; Reports on Progress in Physics Volume 74 ; 74  > 
 
   }
@@ -3149,17 +3134,10 @@
     >
     
     param[journal_issn] = 1674-4527
+    comment[continues] = 1009-9271
 
-    au < exists ; exists ; 2001 ; Research in Astronomy and Astrophysics Volume 1 ; 1 > 
-    au < exists ; exists ; 2002 ; Research in Astronomy and Astrophysics Volume 2 ; 2 > 
-    au < exists ; exists ; 2003 ; Research in Astronomy and Astrophysics Volume 3 ; 3 > 
-    au < exists ; exists ; 2004 ; Research in Astronomy and Astrophysics Volume 4 ; 4 > 
-    au < exists ; exists ; 2005 ; Research in Astronomy and Astrophysics Volume 5 ; 5 > 
-    au < exists ; exists ; 2006 ; Research in Astronomy and Astrophysics Volume 6 ; 6 > 
-    au < exists ; exists ; 2007 ; Research in Astronomy and Astrophysics Volume 7 ; 7 > 
-    au < exists ; exists ; 2008 ; Research in Astronomy and Astrophysics Volume 8 ; 8 > 
-    au < exists ; exists ; 2009 ; Research in Astronomy and Astrophysics Volume 9 ; 9 > 
-    au < exists ; exists ; 2010 ; Research in Astronomy and Astrophysics Volume 10 ; 10 > 
+    au < manifest ; exists ; 2009 ; Research in Astronomy and Astrophysics Volume 9 ; 9 > 
+    au < manifest ; exists ; 2010 ; Research in Astronomy and Astrophysics Volume 10 ; 10 > 
     au < manifest ; exists ; 2011 ; Research in Astronomy and Astrophysics Volume 11 ; 11 > 
 
   }
@@ -3172,6 +3150,7 @@
     >
 
     param[journal_issn] = 0034-6683
+    comment[continued_by] = 0305-4624
 
     au < exists ; exists ; 1970 ; Review of Physics in Technology Volume 1 ; 1 > 
     au < exists ; exists ; 1971 ; Review of Physics in Technology Volume 2 ; 2 > 
@@ -3235,9 +3214,9 @@
     au < exists ; exists ; 2005 ; Science and Technology of Advanced Materials Volume 6 ; 6 > 
     au < exists ; exists ; 2006 ; Science and Technology of Advanced Materials Volume 7 ; 7 > 
     au < exists ; exists ; 2007 ; Science and Technology of Advanced Materials Volume 8 ; 8 > 
-    au < exists ; exists ; 2008 ; Science and Technology of Advanced Materials Volume 9 ; 9 > 
-    au < exists ; exists ; 2009 ; Science and Technology of Advanced Materials Volume 10 ; 10 > 
-    au < exists ; exists ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 > 
+    au < manifest ; exists ; 2008 ; Science and Technology of Advanced Materials Volume 9 ; 9 > 
+    au < manifest ; exists ; 2009 ; Science and Technology of Advanced Materials Volume 10 ; 10 > 
+    au < manifest ; exists ; 2010 ; Science and Technology of Advanced Materials Volume 11 ; 11 > 
     au < manifest ; exists ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 > 
 
   }
@@ -3287,9 +3266,9 @@
     au < exists ; exists ; 2005 ; Semiconductor Science and Technology Volume 20 ; 20 > 
     au < exists ; exists ; 2006 ; Semiconductor Science and Technology Volume 21 ; 21 > 
     au < exists ; exists ; 2007 ; Semiconductor Science and Technology Volume 22 ; 22 > 
-    au < exists ; exists ; 2008 ; Semiconductor Science and Technology Volume 23 ; 23 > 
-    au < exists ; exists ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 > 
-    au < exists ; exists ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 > 
+    au < manifest ; exists ; 2008 ; Semiconductor Science and Technology Volume 23 ; 23 > 
+    au < manifest ; exists ; 2009 ; Semiconductor Science and Technology Volume 24 ; 24 > 
+    au < manifest ; exists ; 2010 ; Semiconductor Science and Technology Volume 25 ; 25 > 
     au < manifest ; exists ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 > 
 
   }
@@ -3322,9 +3301,9 @@
     au < exists ; exists ; 2005 ; Smart Materials and Structures Volume 14 ; 14 > 
     au < exists ; exists ; 2006 ; Smart Materials and Structures Volume 15 ; 15 > 
     au < exists ; exists ; 2007 ; Smart Materials and Structures Volume 16 ; 16 > 
-    au < exists ; exists ; 2008 ; Smart Materials and Structures Volume 17 ; 17 > 
-    au < exists ; exists ; 2009 ; Smart Materials and Structures Volume 18 ; 18 > 
-    au < exists ; exists ; 2010 ; Smart Materials and Structures Volume 19 ; 19 > 
+    au < manifest ; exists ; 2008 ; Smart Materials and Structures Volume 17 ; 17 > 
+    au < manifest ; exists ; 2009 ; Smart Materials and Structures Volume 18 ; 18 > 
+    au < manifest ; exists ; 2010 ; Smart Materials and Structures Volume 19 ; 19 > 
     au < manifest ; exists ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
 
   }
@@ -3361,9 +3340,9 @@
     au < exists ; exists ; 2005 ; Superconductor Science and Technology Volume 18 ; 18 > 
     au < exists ; exists ; 2006 ; Superconductor Science and Technology Volume 19 ; 19 > 
     au < exists ; exists ; 2007 ; Superconductor Science and Technology Volume 20 ; 20 > 
-    au < exists ; exists ; 2008 ; Superconductor Science and Technology Volume 21 ; 21 > 
-    au < exists ; exists ; 2009 ; Superconductor Science and Technology Volume 22 ; 22 > 
-    au < exists ; exists ; 2010 ; Superconductor Science and Technology Volume 23 ; 23 > 
+    au < manifest ; exists ; 2008 ; Superconductor Science and Technology Volume 21 ; 21 > 
+    au < manifest ; exists ; 2009 ; Superconductor Science and Technology Volume 22 ; 22 > 
+    au < manifest ; exists ; 2010 ; Superconductor Science and Technology Volume 23 ; 23 > 
     au < manifest ; exists ; 2011 ; Superconductor Science and Technology Volume 24 ; 24 > 
   }
 
