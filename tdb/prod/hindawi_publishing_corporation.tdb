@@ -518,10 +518,11 @@
     comment[superseded] = see journal code 'ijpme'
     param[journal_id] = ape    
     
-    au < exists ; International Journal of Power Management Electronics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < doesNotExist ; Advances in Power Electronics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; Advances in Power Electronics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Advances in Power Electronics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < ready ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < ready ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < ready ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+
     
   }
   
@@ -2343,7 +2344,6 @@
 
     param[journal_id] = ijc
 
-    au < testing ; International Journal of Corrosion Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 ; 2011 >
 
@@ -3372,12 +3372,14 @@
       issnl = 1687-6229
     >
 
+    comment[jaea] = The page cannot be found
+    
     param[journal_id] = jaea
 
     au < released ; Journal of Artificial Evolution and Applications Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Journal of Artificial Evolution and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Journal of Artificial Evolution and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3706,7 +3708,7 @@
     au < doesNotExist ; Journal of Magnetism Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Magnetism Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < doesNotExist ; Journal of Magnetism Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < doesNottesting ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Journal of Magnetism Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4120,7 +4122,7 @@
     au < released ; Laser Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Laser Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Laser Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Laser Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4545,7 +4547,7 @@
     au < released ; Physical Separation in Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Physical Separation in Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Physical Separation in Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Physical Separation in Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Physical Separation in Science and Engineering Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5179,7 +5181,7 @@
     au < released ; Texture, Stress, and Microstructure Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Texture, Stress, and Microstructure Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Texture, Stress, and Microstructure Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Texture, Stress, and Microstructure Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Texture, Stress, and Microstructure Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -5304,7 +5306,7 @@
     au < released ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; X-Ray Optics and Instrumentation Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
