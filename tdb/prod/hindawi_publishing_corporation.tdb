@@ -249,8 +249,10 @@
       issnl = 1687-8434
     >
 
+    comment[superseded] = see journal code 'rlms', incongruent overlap
     param[journal_id] = amse
 
+    au < exists ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
     au < released ; Advances in Materials Science and Engineering Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; 2010 >
@@ -332,8 +334,8 @@
     param[journal_id] = ano
     comment = the url "http://www.hindawi.com/journals/ano/" redirects to "http://www.hindawi.com/journals/ijo/", only manifest pages found in the listed volumes
 
-    au < down ; Advances in Nonlinear Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < down ; Advances in Nonlinear Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Advances in Nonlinear Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Advances in Nonlinear Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
 
   }
 
@@ -471,20 +473,21 @@
       issnl = 2090-3359
     >
 
+    comment[superseded] = see journal code 'jamds'
     param[journal_id] = ads
 
-    au < ready ; Advances in Decision Sciences Volume 1997 (1997) ; 1997 ; 1997 ; 1997 >
-    au < ready ; Advances in Decision Sciences Volume 1998 (1998) ; 1998 ; 1998 ; 1998 >
-    au < ready ; Advances in Decision Sciences Volume 1999 (1999) ; 1999 ; 1999 ; 1999 >
-    au < ready ; Advances in Decision Sciences Volume 2000 (2000) ; 2000 ; 2000 ; 2000 >
-    au < ready ; Advances in Decision Sciences Volume 2001 (2001) ; 2001 ; 2001 ; 2001 >
-    au < ready ; Advances in Decision Sciences Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
-    au < ready ; Advances in Decision Sciences Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
-    au < ready ; Advances in Decision Sciences Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < ready ; Advances in Decision Sciences Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < ready ; Advances in Decision Sciences Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < ready ; Advances in Decision Sciences Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < ready ; Advances in Decision Sciences Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 1997 (1997) ; 1997 ; 1997 ; 1997 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 1998 (1998) ; 1998 ; 1998 ; 1998 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 1999 (1999) ; 1999 ; 1999 ; 1999 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2000 (2000) ; 2000 ; 2000 ; 2000 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2001 (2001) ; 2001 ; 2001 ; 2001 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2002 (2002) ; 2002 ; 2002 ; 2002 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2003 (2003) ; 2003 ; 2003 ; 2003 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < exists ; Journal of Applied Mathematics and Decision Sciences Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < ready ; Advances in Decision Sciences Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Decision Sciences Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Advances in Decision Sciences Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
@@ -512,10 +515,11 @@
       issnl = 2090-181X
     >
     
+    comment[superseded] = see journal code 'ijpme'
     param[journal_id] = ape    
     
-    au < ready ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < testing ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; International Journal of Power Management Electronics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
@@ -546,8 +550,11 @@
       issnl = 1687-7985
     >
 
+    comment[superseded] = see journal code 'rlpc', incongruent overlap
     param[journal_id] = apc
 
+    au < exists ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < exists ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < released ; Advances in Physical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -787,11 +794,12 @@
       issnl = 2090-2247
     >
 
+    comment[superseded] = see journal code 'rlbc'
     param[journal_id] = bcri
 
-    au < ready ; Biochemistry Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; Biochemistry Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; Biochemistry Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Biochemistry Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Biochemistry Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Biochemistry Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Biochemistry Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
@@ -862,22 +870,6 @@
     au < ready ; Boundary Value Problems Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; Boundary Value Problems Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; Boundary Value Problems Volume 2011 ; 2011 ; 2011 ; 2011 >
-
-  }
-
-  {
-    title <
-      name = Case Reports in Medicine ;
-      issn = 1687-9627 ;
-      eissn = 1687-9635 ;
-      issnl = 1687-9635
-    >
-
-    param[journal_id] = crm
-
-    au < testing ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < testing ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < testing ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -964,7 +956,7 @@
 
     param[journal_id] = cricc
 
-    au < ready ; Case Reports in Critical Care Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Critical Care Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }  
 
@@ -978,7 +970,7 @@
 
     param[journal_id] = crid
 
-    au < ready ; Case Reports in Dentistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Dentistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
   
@@ -1020,7 +1012,7 @@
 
     param[journal_id] = crie
 
-    au < ready ; Case Reports in Endocrinology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Endocrinology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1034,7 +1026,7 @@
 
     param[journal_id] = crigm
 
-    au < ready ; Case Reports in Gastrointestinal Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Gastrointestinal Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1048,7 +1040,7 @@
 
     param[journal_id] = crig
 
-    au < ready ; Case Reports in Genetics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Genetics Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1062,7 +1054,7 @@
 
     param[journal_id] = crihem
 
-    au < ready ; Case Reports in Hematology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Hematology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1076,7 +1068,7 @@
 
     param[journal_id] = crihep
 
-    au < ready ; Case Reports in Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Hepatology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1104,7 +1096,7 @@
 
     param[journal_id] = criid
 
-    au < ready ; Case Reports in Infectious Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Infectious Diseases Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1148,7 +1140,7 @@
 
     param[journal_id] = crinm
 
-    au < ready ; Case Reports in Neurological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Neurological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1162,7 +1154,7 @@
 
     param[journal_id] = criog
 
-    au < ready ; Case Reports in Obstetrics and Gynecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Obstetrics and Gynecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1176,7 +1168,7 @@
 
     param[journal_id] = crionc
 
-    au < ready ; Case Reports in Oncological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Oncological Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1260,7 +1252,7 @@
 
     param[journal_id] = crip
 
-    au < ready ; Case Reports in Psychiatry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Psychiatry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1288,7 +1280,7 @@
 
     param[journal_id] = crirad
 
-    au < ready ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Radiology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1344,7 +1336,7 @@
 
     param[journal_id] = critran
 
-    au < ready ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Transplantation Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1358,7 +1350,7 @@
 
     param[journal_id] = criu
 
-    au < ready ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Urology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1386,7 +1378,7 @@
 
     param[journal_id] = crivm
 
-    au < ready ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
+    au < notReady ; Case Reports in Veterinary Medicine Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -1650,12 +1642,9 @@
 	
     param[journal_id] = denm
 
-    au < released ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < superseded ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 ; 2008 >
 
   }
 
@@ -2384,8 +2373,12 @@
       issnl = 1752-3583
     >
 
+    comment[superseded] = see journal code 'denm'
     param[journal_id] = ijde
 
+    au < exists ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < exists ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < exists ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 ; 2008 >
     au < ready ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < ready ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 ; 2011 >
@@ -2437,12 +2430,13 @@
       issnl = 1687-9708
     >
 
+    comment[superseded] = see journal code 'rleco'
     param[journal_id] = ijeco
 
-    au < ready ; International Journal of Ecology Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < ready ; International Journal of Ecology Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; International Journal of Ecology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; International Journal of Ecology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Research Letters in Ecology Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < exists ; Research Letters in Ecology Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Research Letters in Ecology Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Research Letters in Ecology Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Ecology Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     au < ready ; International Journal of Ecology Volume 2012 (2012) ; 2012 ; 2012 ; 2012 >
     
@@ -2591,11 +2585,12 @@
       issnl = 2090-2026
     >
 
+    comment[superseded] = see journal code 'rlic'
     param[journal_id] = ijic
 
-    au < ready ; International Journal of Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; International Journal of Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; International Journal of Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Research Letters in Inorganic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Research Letters in Inorganic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Research Letters in Inorganic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Inorganic Chemistry Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -2773,6 +2768,7 @@
       issnl = 1687-9384
     >
 
+    comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = ijo
 
     au < ready ; International Journal of Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -2973,10 +2969,10 @@
 
     param[journal_id] = ijpme
 
-    au < released ; International Journal of Power Management Electronics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < ready ; International Journal of Power Management Electronics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; International Journal of Power Management Electronics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; International Journal of Power Management Electronics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; International Journal of Power Management Electronics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; International Journal of Power Management Electronics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < notReady ; International Journal of Power Management Electronics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; International Journal of Power Management Electronics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3009,10 +3005,10 @@
 
     param[journal_id] = ijrs
 
-    au < released ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < ready ; International Journal of Reacting Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; International Journal of Reacting Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; International Journal of Reacting Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; International Journal of Reacting Systems Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < notReady ; International Journal of Reacting Systems Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; International Journal of Reacting Systems Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3105,32 +3101,33 @@
       issnl = 2090-3332
     >
 
+    comment[superseded] = see journal code 'jamsa'
     param[journal_id] = ijsa
 
-    au < ready ; International Journal of Stochastic Analysis Volume 1 (1987) ; 1987 ; 1 ; 1987 >
-    au < ready ; International Journal of Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < ready ; International Journal of Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < ready ; International Journal of Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < ready ; International Journal of Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < ready ; International Journal of Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < ready ; International Journal of Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < ready ; International Journal of Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < ready ; International Journal of Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < ready ; International Journal of Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < ready ; International Journal of Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < ready ; International Journal of Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < ready ; International Journal of Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < ready ; International Journal of Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < ready ; International Journal of Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < ready ; International Journal of Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; International Journal of Stochastic Analysis Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 ; 1987 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2004 (2004) ; 2004 ; 2004 ; 2004 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2005 (2005) ; 2005 ; 2005 ; 2005 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2006 (2006) ; 2006 ; 2006 ; 2006 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Journal of Applied Mathematics and Simulation Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; International Journal of Stochastic Analysis Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
         
   }
@@ -3310,21 +3307,21 @@
 
     param[journal_id] = jamds
 
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 ; 1997 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 ; 2 ; 1998 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 ; 3 ; 1999 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 ; 4 ; 2000 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 ; 5 ; 2001 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 ; 6 ; 2002 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 ; 7 ; 2003 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 ; 8 ; 2004 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Journal of Applied Mathematics and Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 ; 1997 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 ; 2 ; 1998 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 ; 3 ; 1999 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 ; 4 ; 2000 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 ; 5 ; 2001 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 ; 6 ; 2002 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 ; 7 ; 2003 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 ; 8 ; 2004 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < notReady ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < notReady ; Journal of Applied Mathematics and Decision Sciences Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Journal of Applied Mathematics and Decision Sciences Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3336,34 +3333,34 @@
       issnl = 1048-9533
     >
 
-	comment[jamsa] = this journal has moved from Hindawi to other publishers
+	comment[jamsa] = see journal code 'ijsa'
 
     param[journal_id] = jamsa
 
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Journal of Applied Mathematics and Stochastic Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -3526,9 +3523,10 @@
       issnl = 2090-1968
     >
 
+    comment[superseded] = see journal code 'ijrs'
     param[journal_id] = jc
 
-    au < ready ; Journal of Combustion Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; International Journal of Reacting Systems Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
     au < doesNotExist ; Journal of Combustion Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
     au < ready ; Journal of Combustion Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Journal of Combustion Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
@@ -3610,12 +3608,13 @@
       issnl = 2090-0147
     >
 
+    comment[supserseded] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = jece
 
-    au < ready ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
-    au < ready ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Journal of Electrical and Computer Engineering Volume 2007 (2007) ; 2007 ; 2007 ; 2007 >
+    au < exists ; Journal of Electrical and Computer Engineering Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Journal of Electrical and Computer Engineering Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Journal of Electrical and Computer Engineering Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Journal of Electrical and Computer Engineering Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -3770,6 +3769,7 @@
       issnl = 1687-9503
     >
 
+    comment[superseded] = see journal code 'rlnt', incongruent overlap
     param[journal_id] = jnt
 
     au < released ; Journal of Nanotechnology Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -4413,11 +4413,12 @@
       issnl = 2090-200X
     >
 
+    comment[superseded] = see journal code 'rloc'
     param[journal_id] = oci
 
-    au < ready ; Organic Chemistry International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; Organic Chemistry International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; Organic Chemistry International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Research Letters in Organic Chemistry Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Research Letters in Organic Chemistry Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Research Letters in Organic Chemistry Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Organic Chemistry International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4490,11 +4491,12 @@
       issnl = 2090-2220
     >
 
+    comment[superseded] = see journal code 'rlp'
     param[journal_id] = phys
 
-    au < ready ; Physics Research International Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
-    au < ready ; Physics Research International Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
-    au < ready ; Physics Research International Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
+    au < exists ; Research Letters in Physics Volume 2008 (2008) ; 2008 ; 2008 ; 2008 >
+    au < exists ; Research Letters in Physics Volume 2009 (2009) ; 2009 ; 2009 ; 2009 >
+    au < exists ; Research Letters in Physics Volume 2010 (2010) ; 2010 ; 2010 ; 2010 >
     au < ready ; Physics Research International Volume 2011 (2011) ; 2011 ; 2011 ; 2011 >
     
   }
@@ -4783,10 +4785,10 @@
 	
     param[journal_id] = rlbc
 
-    au < released ; Research Letters in Biochemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Biochemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Biochemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Biochemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Biochemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Biochemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Biochemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Biochemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4802,11 +4804,11 @@
 	
     param[journal_id] = rlc
 
-    au < released ; Research Letters in Communications Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Research Letters in Communications Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Communications Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Communications Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Research Letters in Communications Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Communications Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Communications Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Communications Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4822,11 +4824,11 @@
 
     param[journal_id] = rleco
 
-    au < released ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Ecology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Ecology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Ecology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Ecology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Ecology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Ecology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4842,9 +4844,9 @@
 
     param[journal_id] = rle
 
-    au < released ; Research Letters in Electronics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Electronics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Electronics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Electronics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Electronics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Electronics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4860,10 +4862,10 @@
 
     param[journal_id] = rlic
 
-    au < released ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Inorganic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Inorganic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4879,11 +4881,11 @@
     
     param[journal_id] = rlms
 
-    au < released ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Research Letters in Materials Science Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Materials Science Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Materials Science Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Materials Science Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Research Letters in Materials Science Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Materials Science Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Materials Science Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Materials Science Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4899,10 +4901,10 @@
 
     param[journal_id] = rlnt
 
-    au < released ; Research Letters in Nanotechnology Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Nanotechnology Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Nanotechnology Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Nanotechnology Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Nanotechnology Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Nanotechnology Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Nanotechnology Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Nanotechnology Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4918,9 +4920,9 @@
 
     param[journal_id] = rlo
 
-    au < down ; Research Letters in Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < down ; Research Letters in Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < down ; Research Letters in Optics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < superseded ; Research Letters in Optics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Optics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Optics Volume 2010 ; 2010 ; 2010 ; 2010 >
     
   }
 
@@ -4935,10 +4937,10 @@
 	
     param[journal_id] = rloc
 
-    au < released ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Organic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Organic Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4950,15 +4952,15 @@
       issnl = 1687-6873
     >
     
-	comment[rlp] = this url http://www.hindawi.com/journals/rlpc/ redirects to http://www.hindawi.com/journals/apc/
+	comment[rlpc] = this url http://www.hindawi.com/journals/rlpc/ redirects to http://www.hindawi.com/journals/apc/
 
     param[journal_id] = rlpc
 
-    au < released ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Physical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Physical Chemistry Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4974,10 +4976,10 @@
 	
     param[journal_id] = rlp
 
-    au < released ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Physics Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Physics Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
@@ -4989,15 +4991,15 @@
       issnl = 1687-6911
     >
 
-	comment[rlp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/jece/
+	comment[rlsp] = this url http://www.hindawi.com/journals/rlp/ redirects to http://www.hindawi.com/journals/jece/
     
     param[journal_id] = rlsp
 
-    au < released ; Research Letters in Signal Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < released ; Research Letters in Signal Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < released ; Research Letters in Signal Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < released ; Research Letters in Signal Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
-    au < ready ; Research Letters in Signal Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < superseded ; Research Letters in Signal Processing Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < superseded ; Research Letters in Signal Processing Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < superseded ; Research Letters in Signal Processing Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < superseded ; Research Letters in Signal Processing Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < notReady ; Research Letters in Signal Processing Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
