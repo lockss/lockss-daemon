@@ -13,8 +13,6 @@
 
     {
     
-      comment[H20] = Migrating to H20 in Aug 2011
-
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.studiesinmycology.org/
       implicit < status ; year ; name ; param[volume_name] >
