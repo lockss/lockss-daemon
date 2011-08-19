@@ -1,6 +1,10 @@
 /*
+ * $Id: ListHoldings.java,v 1.14 2011-08-19 10:36:19 easyonthemayo Exp $
+ */
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -95,6 +99,8 @@ public class ListHoldings extends LockssServlet {
   
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
+  /** Default approach to showing health ratings - inherited from the exporter base class. */
+  static final Boolean SHOW_HEALTH_RATINGS_BY_DEFAULT = KbartExporter.showHealthRatingsByDefault;
   
   private static final String ENCODING = KbartExporter.DEFAULT_ENCODING;
   /** A comma used for separating list elements. */
@@ -112,12 +118,13 @@ public class ListHoldings extends LockssServlet {
   public static final String KEY_FORMAT = "format";
   public static final String KEY_COMPRESS = "compress";
   public static final String KEY_OMIT_EMPTY_COLS = "omitEmptyCols";
+  public static final String KEY_SHOW_HEALTH = "showHealthRatings";
   public static final String KEY_TITLE_SCOPE = "contentScope";
   public static final String KEY_CUSTOM_ORDERING = "ordering";
   public static final String KEY_CUSTOM_ORDERING_LIST = "ordering_list";
   public static final String KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL = "ordering_list_previous_manual";
   
-  static final String SESSION_KEY_CUSTOM_OPTS = "org.lockss.servlet.ListHoldings.customHtmlOpts";
+  static final String SESSION_KEY_CUSTOM_OPTS = "org.lockss.servlet.ListHoldings.customOpts";
   static final String SESSION_KEY_OUTPUT_FORMAT = "org.lockss.servlet.ListHoldings.outputFormat";
 
   // Bits of state that must be reset in resetLocals()
@@ -163,7 +170,7 @@ public class ListHoldings extends LockssServlet {
     statusMsg = null; 
         
     // Get a set of custom opts, constructed with defaults if necessary
-    CustomHtmlOptions customOpts = getSessionCustomHtmlOpts();
+    CustomOptions customOpts = getSessionCustomOpts();
 
     // ---------- Get parameters ----------
     Properties params = getParamsAsProps();
@@ -176,6 +183,10 @@ public class ListHoldings extends LockssServlet {
     // Omit empty columns - use the option supplied from the form, or the default if one of the other outputs was chosen
     boolean omitEmptyColumns = Boolean.valueOf( 
 	params.getProperty(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString()) 
+    );
+    // Show health ratings - use the option supplied from the form, or the default if one of the other outputs was chosen
+    boolean showHealthRatings = Boolean.valueOf( 
+	params.getProperty(KEY_SHOW_HEALTH, SHOW_HEALTH_RATINGS_BY_DEFAULT.toString()) 
     );
     // Show appropriate scope of content
     selectedScope = ContentScope.byName(params.getProperty(KEY_TITLE_SCOPE));
@@ -220,8 +231,8 @@ public class ListHoldings extends LockssServlet {
       } 
       
       // Create an object encapsulating the custom HTML options, and store it in the session.
-      customOpts = new CustomHtmlOptions(omitEmptyColumns, customFieldOrdering);
-      putSessionCustomHtmlOpts(customOpts);
+      customOpts = new CustomOptions(omitEmptyColumns, showHealthRatings, customFieldOrdering);
+      putSessionCustomOpts(customOpts);
     
     } else {
       // If this is not a custom output, reset the session customisation
@@ -278,19 +289,23 @@ public class ListHoldings extends LockssServlet {
    * @param scope the scope of titles to export
    * @return a usable exporter, or null if one could not be created
    */
-  private KbartExporter createExporter(OutputFormat outputFormat, ContentScope scope) {
+  private KbartExporter createExporter(OutputFormat outputFormat, 
+      ContentScope scope) {
     
     // The following counts the number of TdbTitles informing the export, by 
     // processing the list of AUs in the given scope. It is provided as 
     // information in the export, but is actually a little meaningless and 
     // should probably be omitted.
     int numTdbTitles = TdbUtil.getNumberTdbTitles(scope);     
-    
+
+    CustomOptions opts = getSessionCustomOpts(false);
+
     // The list of KbartTitles to export; each title represents a TdbTitle over
     // a particular range of coverage.
     List<KbartTitle> titles = getKbartTitlesForExport(scope);
-
-    log.info(String.format("Creating exporter for %d titles in scope %s\n", titles.size(), scope));
+ 
+    log.info(String.format("Creating exporter for %d titles in scope %s\n", 
+	titles.size(), scope));
     
     // Return if there are no titles
     if (titles.isEmpty()) {
@@ -298,12 +313,13 @@ public class ListHoldings extends LockssServlet {
       return null;
     }
     
-    CustomHtmlOptions opts = getSessionCustomHtmlOpts();
     // Create a filter
     KbartExportFilter filter;
+
     //if (outputFormat.isHtml() && opts !=null) {
     if (opts !=null) {
-      filter = new KbartExportFilter(titles, opts.fieldOrdering, opts.omitEmptyColumns);
+      filter = new KbartExportFilter(titles, opts.fieldOrdering, 
+	  opts.omitEmptyColumns, opts.showHealthRatings);
     } else {
       filter = new KbartExportFilter(titles);
     }
@@ -327,8 +343,8 @@ public class ListHoldings extends LockssServlet {
    * @return a list of KbartTitles
    */
   private List<KbartTitle> getKbartTitlesForExport(ContentScope scope) {
-    List<KbartTitle> titles;
     
+    List<KbartTitle> titles;
     // If we are exporting in a scope where ArchivalUnits are not available, 
     // act on a list of TdbTitles, with their full AU ranges. 
     if (!scope.areAusAvailable) {
@@ -337,9 +353,13 @@ public class ListHoldings extends LockssServlet {
     }
     // Otherwise we need to look at the lists of individual AUs in order to calculate ranges
     else {
+      // Whether the output will include any range fields; if there is no custom 
+      // ordering, then the default will be used, which will include range fields
+      boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
+	  getSessionCustomOpts().fieldOrdering.getOrdering());
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
-      titles = KbartConverter.convertAus(map);
+      titles = KbartConverter.convertAus(map, getShowHealthRatings(), rangeFieldsIncluded);
     }
     return titles;
   }
@@ -463,17 +483,21 @@ public class ListHoldings extends LockssServlet {
       // Add HTML customisation options
       subTab.add(new Heading(3, "Customise output"));
       subTab.add(new Link(srvURL(myServletDescr()), "Return to main export page"));
-      layoutFormCustomHtmlOpts(subTab);
+      layoutFormCustomOpts(subTab);
     } else {
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
+
       //layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
       subTab.add(BREAK+"By default, exports are in the industry-standard KBART " +
-      		"format, but they can also be customised by reordering and " +
-      		"omitting columns."+BREAK);
+      		"format. Alternatively you can customise the output to define " +
+      		"which columns are visible and in what order they appear. " +
+      		"Use this option also to add health ratings to the output."+BREAK);
       // Show the option to customise the export details, which are KBART by default:
       //form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
-      form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(FIELD_ORDERING_DEFAULT)));
-      form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(false)));
+      form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, 
+	  getOrderingAsCustomFieldList(FIELD_ORDERING_DEFAULT)));
+      form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, 
+	  htmlInputTruthValue(false)));
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
     }
     
@@ -537,7 +561,8 @@ public class ListHoldings extends LockssServlet {
     for (ContentScope scope : ContentScope.values()) {
       int total = TdbUtil.getNumberTdbTitles(scope);
       String label = String.format("%s (%d) &nbsp; ", scope.label, total);
-      tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), label, scope==selectedScope));
+      tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), 
+	  label, scope==selectedScope));
     }
     addBlankRow(tab);
     return tab;
@@ -571,10 +596,10 @@ public class ListHoldings extends LockssServlet {
    * 
    * @return an HTML form 
    */
-  private void layoutFormCustomHtmlOpts(Composite comp) {
+  private void layoutFormCustomOpts(Composite comp) {
     
     // Get the opts from the session
-    CustomHtmlOptions opts = getSessionCustomHtmlOpts();
+    CustomOptions opts = getSessionCustomOpts();
     
     // Add a format parameter
     comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
@@ -608,12 +633,23 @@ public class ListHoldings extends LockssServlet {
     int taCols = 25; // this should be the longest field width
     int taLines = Field.values().length+1;
     tab.add("Field ordering<br/>");
-    tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(opts.fieldOrdering)).setSize(taCols, taLines));
+    tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, 
+	getOrderingAsCustomFieldList(opts.fieldOrdering)).setSize(taCols, taLines));
     // Omit empty columns option
     tab.add("<br/>");
-    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, Boolean.TRUE.toString(), "Omit empty columns<br/>", opts.omitEmptyColumns));
+    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, 
+	Boolean.TRUE.toString(), "Omit empty columns<br/>", 
+	opts.omitEmptyColumns));
+    // Show health option
+    tab.add("<br/>");
+    tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH, 
+	Boolean.TRUE.toString(), "Show health ratings", 
+	opts.showHealthRatings));
+    tab.add(addFootnote("Health ratings will only be shown for titles which " +
+        "you have configured on your box. The '"+ContentScope.ALL+"' export " +
+        "will not show health ratings."));
     // Add buttons
-    tab.add("<br/><center>");
+    tab.add("<br/><br/><center>");
     layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_OK);
     layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_RESET);
     layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_CANCEL);
@@ -633,7 +669,10 @@ public class ListHoldings extends LockssServlet {
    * @return
    */
   private static String getOrderingAsCustomFieldList(FieldOrdering fo) {
-    return StringUtils.join(fo.getOrderedLabels(), CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR); 
+    return StringUtils.join(fo.getOrderedLabels(), 
+	CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);
+    /*return StringUtils.join(fo.getOrdering(), 
+	CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);*/
   }
   
   /**
@@ -645,12 +684,14 @@ public class ListHoldings extends LockssServlet {
    */
   private Form makeHtmlCustomForm() {
     // Get the opts from the session
-    CustomHtmlOptions opts = getSessionCustomHtmlOpts();
+    CustomOptions opts = getSessionCustomOpts();
     String servletUrl = srvURL(myServletDescr());
     Form form = ServletUtil.newForm(servletUrl);
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
     form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(opts.fieldOrdering)));
     form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(opts.omitEmptyColumns)));
+    form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH, htmlInputTruthValue(opts.showHealthRatings)));
+    form.add(new Input(Input.Hidden, KEY_FORMAT, outputFormat.name()));
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
     form.add(new Link(servletUrl, "Return to main export page"));
     return form;
@@ -664,16 +705,19 @@ public class ListHoldings extends LockssServlet {
    * @param key the name of the button
    * @param value the value of the button
    */
-  private static void layoutButton(LockssServlet servlet, Composite composite, String key, String value, String type) {
+  private static void layoutButton(LockssServlet servlet, 
+      Composite composite, String key, String value, String type) {
     Input submit = new Input(type, key, value);
     servlet.setTabOrder(submit);
     composite.add(submit);
   }
 
-  private static void layoutSubmitButton(LockssServlet servlet, Composite composite, String key, String value) {
+  private static void layoutSubmitButton(LockssServlet servlet, 
+      Composite composite, String key, String value) {
     layoutButton(servlet, composite, key, value, Input.Submit); 
   }
-  private static void layoutResetButton(LockssServlet servlet, Composite composite, String key, String value) {
+  private static void layoutResetButton(LockssServlet servlet, 
+      Composite composite, String key, String value) {
     layoutButton(servlet, composite, key, value, Input.Reset); 
   }
 
@@ -723,26 +767,46 @@ public class ListHoldings extends LockssServlet {
     addBlankRow(tab);
   }
 
+  
+  protected boolean getShowHealthRatings() {
+    CustomOptions opts = getSessionCustomOpts();
+    return opts == null ? SHOW_HEALTH_RATINGS_BY_DEFAULT : opts.showHealthRatings; 
+  }
+  
   /**
-   * Get the current custom HTML options from the session. If the cookie is not set, it is set
-   * to a new custom HTML options with default settings.
-   * @return a CustomHtmlOptions object from the session
+   * Get the current custom HTML options from the session. If the cookie is not
+   * set, a new set of options is created and added to the session. This is a
+   * convenience method which does not return null.
+   * @return a CustomOptions object from the session
    */
-  protected CustomHtmlOptions getSessionCustomHtmlOpts() {
-    Object o = getSession().getAttribute(SESSION_KEY_CUSTOM_OPTS);
-    if (o==null) {
-      CustomHtmlOptions opts = CustomHtmlOptions.getDefaultOptions();
-      putSessionCustomHtmlOpts(opts);
-      return opts;
-    }
-    return o==null ? null : (CustomHtmlOptions)o; 
+  protected CustomOptions getSessionCustomOpts() {
+    return getSessionCustomOpts(true); 
   }
 
   /**
-   * Puts the current custom HTML options into the session.
-   * @param opts a CustomHtmlOptions object
+   * Get the current custom HTML options from the session. If the cookie is not
+   * set, then either null is returned, or a new options object is added to the 
+   * session and returned, depending on the value of <code>createIfAbsent</code>.
+   * This can be useful for testing whether custom options are available
+   *  
+   * @param createIfAbsent whether to create a new CustomOptions in the session
+   * @return a CustomOptions object from the session, or null
    */
-  protected void putSessionCustomHtmlOpts(CustomHtmlOptions opts) {
+  protected CustomOptions getSessionCustomOpts(boolean createIfAbsent) {
+    Object o = getSession().getAttribute(SESSION_KEY_CUSTOM_OPTS);
+    if (o==null && createIfAbsent) {
+     CustomOptions opts = CustomOptions.getDefaultOptions();
+     putSessionCustomOpts(opts);
+     return opts;
+    }
+    return o==null ? null : (CustomOptions)o; 
+  }
+  
+  /**
+   * Puts the supplied custom HTML options into the session.
+   * @param opts a CustomOptions object
+   */
+  protected void putSessionCustomOpts(CustomOptions opts) {
     getSession().setAttribute(SESSION_KEY_CUSTOM_OPTS, opts);
   }
 
@@ -750,7 +814,7 @@ public class ListHoldings extends LockssServlet {
    * Put a default set of options in the session.
    */
   protected void resetSessionOptions() {
-    putSessionCustomHtmlOpts(CustomHtmlOptions.getDefaultOptions()); 
+    putSessionCustomOpts(CustomOptions.getDefaultOptions()); 
   }
   
   /**
@@ -776,20 +840,23 @@ public class ListHoldings extends LockssServlet {
   }*/
   
   /**
-   * A simple class for encapsulating HTML customisation options.
+   * A simple class for encapsulating customisation options.
    * @author Neil Mayo
    */
-  private static class CustomHtmlOptions {
+  private static class CustomOptions {
     boolean omitEmptyColumns;
+    boolean showHealthRatings;
     FieldOrdering fieldOrdering;
     
-    public CustomHtmlOptions(boolean omit, FieldOrdering ord) {
+    public CustomOptions(boolean omit, boolean health, FieldOrdering ord) {
       this.omitEmptyColumns = omit;
+      this.showHealthRatings = health;
       this.fieldOrdering = ord;
     }
     
-    public static CustomHtmlOptions getDefaultOptions() {
-      return new CustomHtmlOptions(OMIT_EMPTY_COLUMNS_BY_DEFAULT, FIELD_ORDERING_DEFAULT);      
+    public static CustomOptions getDefaultOptions() {
+      return new CustomOptions(OMIT_EMPTY_COLUMNS_BY_DEFAULT, 
+	  SHOW_HEALTH_RATINGS_BY_DEFAULT, FIELD_ORDERING_DEFAULT);      
     }
   }
   

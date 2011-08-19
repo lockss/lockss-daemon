@@ -1,5 +1,5 @@
 /*
- * $Id: KbartDummyExporter.java,v 1.3 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: KbartDummyExporter.java,v 1.4 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -31,8 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+
+import junit.framework.Assert;
 
 /**
  * A test implementation of the KbartExporter. This can be placed in the full pipeline 
@@ -47,6 +50,7 @@ public class KbartDummyExporter extends KbartExporter {
 
   private final TestKbartExporter exporterTest;
   private final Iterator<KbartTitle> titleIt;
+  private boolean emitRecordCalled = false;
   
   /**
    * Constructor additionally takes a reference to the exporter test. Kind of an unpleasant callback mechanism.
@@ -63,9 +67,17 @@ public class KbartDummyExporter extends KbartExporter {
   protected void emitRecord(List<String> vals) {
     // Check we have a properly constructed title
     //exporterTest.checkTitle(title);
-    
+
+    emitRecordCalled = true;
+
     // Check we have the right vals
     exporterTest.checkTitle(vals, titleIt.next());
+  }
+
+  @Override
+  protected void emitHeader() throws IOException {
+    // Test that this is called before emitRecord
+    Assert.assertFalse(emitRecordCalled);
   }
 
 }

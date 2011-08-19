@@ -1,10 +1,10 @@
 /*
- * $Id: KbartExportFilter.java,v 1.6 2011-07-14 13:34:22 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.7 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,10 +45,12 @@ import java.util.Vector;
 
 import org.apache.commons.collections.comparators.ComparatorChain;
 import org.apache.commons.lang.StringUtils;
+import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
 import org.lockss.util.CollectionUtil;
+import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -64,15 +66,18 @@ import org.lockss.util.StringUtil;
  * <p>
  * The filter also takes account of the fields which are visible in the output
  * to decide whether a record is a duplicate of the previous one. For example 
- * if the output omits range fields (volume and issue information), the multiple 
- * ranges which you get on a title with a coverage gap are undesirable when there 
- * are no other distinguishing fields. The filter does <b>not</b> remove duplicates 
- * that might occur across the whole output set, for example from setting the output 
- * to only range information.
+ * if the output omits range fields (volume and issue information), the 
+ * multiple ranges which you get on a title with a coverage gap are undesirable 
+ * when there are no other distinguishing fields. The filter does <b>not</b> 
+ * remove duplicates that might occur across the whole output set, for example 
+ * from setting the output to only range information.
  * <p>
- * If there are no id fields (title, issn, eissn) specified in the field ordering, 
- * the output will be essentially meaningless anyway.
- * 
+ * If there are no id fields (title, issn, eissn) specified in the field 
+ * ordering, the output will be essentially meaningless anyway.
+ * <p>
+ * This class is aware of whether a title's health should be shown in the 
+ * output, but this should be maintained completely separately to the actual 
+ * list of KBART Fields which are included.
  * 
  * @author Neil Mayo
  */
@@ -80,18 +85,25 @@ public class KbartExportFilter {
   
   private static Logger log = Logger.getLogger("KbartExportFilter");
 
-  public static final boolean OMIT_EMPTY_FIELDS_DEFAULT = false;
-  public static final FieldOrdering FIELD_ORDERING_DEFAULT = PredefinedFieldOrdering.KBART;
+  public static final boolean OMIT_EMPTY_FIELDS_DEFAULT = 
+    KbartExporter.omitEmptyFieldsByDefault;
+  public static final boolean SHOW_HEALTH_RATINGS_DEFAULT = 
+    KbartExporter.showHealthRatingsByDefault;
+  public static final FieldOrdering FIELD_ORDERING_DEFAULT = 
+    PredefinedFieldOrdering.KBART;
+
+  public static final String HEALTH_FIELD_LABEL = "Health";
   
   /** 
-   * A list of the fields that indicate range information. If any of these is visible it is 
-   * sensible to show multiple ranges for a title. 
+   * A list of the fields that indicate range information. If any of these is 
+   * visible it is sensible to show multiple ranges for a title. 
    */
   private static final EnumSet<Field> rangeFields = Field.rangeFields;
   
   /** 
-   * A list of the fields that indicate title id information. If any of these which is visible 
-   * differs between consecutive titles, we should display both titles. 
+   * A list of the fields that indicate title id information. If any of these 
+   * which is visible differs between consecutive titles, we should display 
+   * both titles. 
    */
   private static final EnumSet<Field> idFields = Field.idFields;
 
@@ -103,11 +115,20 @@ public class KbartExportFilter {
   // --------------------------------------------------------------------
   // Instance variables
   // --------------------------------------------------------------------
-  /** A reference to the previous title so that subsequent properties can be compared. */
+  /**
+   * A reference to the previous title so that subsequent properties can be 
+   * compared. 
+   */
   private KbartTitle lastOutputTitle;
-  /** Whether or not any range fields are included in the display output. That is, after taking account of omissions. */
+  /** 
+   * Whether or not any range fields are included in the display output. 
+   * That is, after taking account of omissions. 
+   */
   private boolean rangeFieldsIncludedInDisplay = true;
-  /** Whether or not any id fields are included in the display output. That is, after taking account of omissions. */
+  /**
+   * Whether or not any id fields are included in the display output. 
+   * That is, after taking account of omissions. 
+   */
   private boolean idFieldsIncludedInDisplay = true;
   
   /** An ordering of the fields that should be displayed. */
@@ -117,33 +138,52 @@ public class KbartExportFilter {
   
   /** Whether to omit empty field columns from the output. False by default. */
   private final boolean omitEmptyFields;
-  /** A set of fields which have no entries in any of the titles. This will be filled in if omitEmptyFields is true. */
+  /** 
+   * A set of fields which have no entries in any of the titles. This will 
+   * be filled in if omitEmptyFields is true. 
+   */
   private final EnumSet<Field> emptyFields;
+  /** Whether to show health ratings for each title range. */
+  private final boolean showHealthRatings;
   
   /** 
-   * The filtered list of fields which will be shown. This is the field ordering of this filter,
-   * minus any empty fields if <code>omitEmptyFields</code> is set.
+   * The filtered list of fields which will be shown. This is the field 
+   * ordering of this filter, minus any empty fields if 
+   * <code>omitEmptyFields</code> is set.
    */  
   private final List<Field> visibleFieldOrder;
 
   /**
-   * Make an identity filter on the title set. This uses the default KBART field ordering and 
-   * does not omit empty fields.
+   * Make an identity filter on the title set. This uses the default KBART 
+   * field set and ordering and does not omit empty fields.
    * @param titles the titles to be exported
    * @return a filter with pure KBART settings
    */
   public static KbartExportFilter identityFilter(List<KbartTitle> titles) {
-    return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false);
+    return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false, false);
+    //return new KbartExportFilter(titles, PredefinedFieldOrdering.KBART, false);
   }
   
   /**
-   * Make a filter on the title set using default values. This uses the default field ordering and 
-   * the default approach to empty fields.
+   * Whether there are fields included in the given list which provide
+   * range information for a title. 
+   * @param fields a list of the fields to check  
+   * @return whether the list includes any range fields
+   */
+  public static boolean includesRangeFields(List<Field> fields) {
+    return !CollectionUtil.isDisjoint(fields, rangeFields); 
+  }
+
+  /**
+   * Make a filter on the title set using default values. This uses the 
+   * default field ordering and the default approach to empty fields.
    * @param titles the titles to be exported
    * @return a filter with default settings
    */
   public KbartExportFilter(List<KbartTitle> titles) {
-    this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT);
+    this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT, 
+	SHOW_HEALTH_RATINGS_DEFAULT);
+    //this(titles, FIELD_ORDERING_DEFAULT, OMIT_EMPTY_FIELDS_DEFAULT);
   }
   
   /**
@@ -157,44 +197,53 @@ public class KbartExportFilter {
    * @param ordering an ordering to impose on the fields of each title
    */
   public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering) {
-    this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT);
+    this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT, SHOW_HEALTH_RATINGS_DEFAULT);
+    //this(titles, ordering, OMIT_EMPTY_FIELDS_DEFAULT);
   }
   
   /**
-   * An alternative constructor that allows one to specify whether or not to show columns 
-   * which are entirely empty. If <code>omitEmptyFields</code> is true, the 
-   * <code>emptyFields</code> set is filled with the names of 
-   * the empty fields. This is quite an expensive operation so is performed here at construction.
+   * An alternative constructor that allows one to specify whether or not to 
+   * show columns which are entirely empty. If <code>omitEmptyFields</code> is 
+   * true, the <code>emptyFields</code> set is filled with the names of the 
+   * empty fields. This is quite an expensive operation so is performed here 
+   * at construction.
    * 
    * @param titles the titles to be exported
    * @param format the output format
    * @param ordering an ordering to impose on the fields of each title
    * @param omitEmptyFields whether to omit empty field columns from the output
    */
-  public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering, boolean omitEmptyFields) {
+  public KbartExportFilter(List<KbartTitle> titles, FieldOrdering ordering,
+      boolean omitEmptyFields, boolean showHealthRatings) {
     this.titles = titles;
     this.fieldOrdering = ordering;
     this.omitEmptyFields = omitEmptyFields;
+    this.showHealthRatings = showHealthRatings;
     // Work out the list of empty fields if necessary
-    this.emptyFields = omitEmptyFields ? findEmptyFields() : EnumSet.noneOf(Field.class);
+    this.emptyFields = omitEmptyFields ? findEmptyFields() : 
+      EnumSet.noneOf(Field.class);
     // Create a list of the visible (non-omitted) fields out of the supplied ordering
     this.visibleFieldOrder = new Vector<Field>(fieldOrdering.getOrdering());
     this.visibleFieldOrder.removeAll(emptyFields);
-    this.rangeFieldsIncludedInDisplay = !CollectionUtil.isDisjoint(visibleFieldOrder, rangeFields);
-    this.idFieldsIncludedInDisplay = !CollectionUtil.isDisjoint(visibleFieldOrder, idFields);
+    this.rangeFieldsIncludedInDisplay = 
+      !CollectionUtil.isDisjoint(visibleFieldOrder, rangeFields);
+    this.idFieldsIncludedInDisplay = 
+      !CollectionUtil.isDisjoint(visibleFieldOrder, idFields);
   } 
-  
 
   public void sortTitlesByFirstTwoFields() {
     // Sort on just the first 2 columns (max):
-    log.debug(String.format("Sort by %s | %s", visibleFieldOrder.get(0), visibleFieldOrder.get(1)));
-    sortTitlesByFields( visibleFieldOrder.subList(0, Math.min(2, visibleFieldOrder.size())) );
+    log.debug(String.format("Sort by %s | %s", 
+	visibleFieldOrder.get(0), visibleFieldOrder.get(1)));
+    sortTitlesByFields( 
+	visibleFieldOrder.subList(0, Math.min(2, visibleFieldOrder.size())) 
+    );
   }
 
   /**
-   * Sort the titles by each of the fields specified; the first field is the primary
-   * sort field, then subsequent fields are consulted if the previous does not result 
-   * in an absolute ordering.
+   * Sort the titles by each of the fields specified; the first field is the 
+   * primary sort field, then subsequent fields are consulted if the previous 
+   * does not result in an absolute ordering.
    * 
    * @param fields a list of fields to sort on
    */
@@ -210,8 +259,9 @@ public class KbartExportFilter {
   }
   
   /**
-   * Calculate which fields have no values across the whole range of titles. Iterates through all the 
-   * titles for each field value, until an entry is found or the end of the title list is reached.
+   * Calculate which fields have no values across the whole range of titles. 
+   * Iterates through all the titles for each field value, until an entry is 
+   * found or the end of the title list is reached.
    * 
    * @return a set of fields which are empty
    */
@@ -244,12 +294,35 @@ public class KbartExportFilter {
   }
   
   /**
+   * Get a list of strings representing the labels for display columns. This
+   * will include all the labels of visible fields, plus any extra columns 
+   * such as health rating.
+   * 
+   * @param scope the scope of the export
+   * @return a list of labels for the exported columns of data
+   */
+  public List<String> getColumnLabels(ContentScope scope) {
+    List<String> l = new ArrayList(this.visibleFieldOrder);
+    if (showHealthRatings && scope!=ContentScope.ALL) l.add(HEALTH_FIELD_LABEL);
+    return l;
+  }
+
+  /**
    * Whether this filter is set to omit empty fields.
    * 
    * @return whether this filter is set to omit empty fields 
    */
   public boolean isOmitEmptyFields() {
     return omitEmptyFields;
+  }
+  
+  /**
+   * Whether this filter is set to show health ratings.
+   * 
+   * @return whether this filter should show health ratings 
+   */
+  public boolean isShowHealthRatings() {
+    return showHealthRatings;
   }
   
   /**
@@ -269,7 +342,8 @@ public class KbartExportFilter {
   }
   
   /**
-   * Get the set of fields from the filter's field ordering which were omitted due to being empty.
+   * Get the set of fields from the filter's field ordering which were omitted 
+   * due to being empty.
    * @return the set of empty fields which were omitted from the ordering
    */
   public Set<Field> getOmittedEmptyFields() {
@@ -299,37 +373,44 @@ public class KbartExportFilter {
   }
   
   /**
-   * Extract a title's field values based on the definitive field ordering. This is the list
-   * of values matching the fields specified by <code>getVisibleFieldOrder()</code>.
+   * Extract a title's field values based on the definitive field ordering. 
+   * This is the list of values matching the fields specified by 
+   * <code>getVisibleFieldOrder()</code>, plus any extra columns 
+   * such as health rating. Extra columns are added transparently by the
+   * {@link KbartTitleHealthWrapper} where necessary.
    *  
    * @param title the title whose fields to extract
    * @return field values produced by this filter for the title  
    */
   public List<String> getVisibleFieldValues(KbartTitle title) {
-    return title.fieldValues(getVisibleFieldOrder());
+    List<String> res = title.fieldValues(getVisibleFieldOrder());
+    //if (showHealthRatings) res.add(HEALTH_FIELD_LABEL);
+    return res;
   }
   
   /**
-   * Decide whether the current title record should be displayed, based on whether
-   * it is a duplicate of the previous record, given the combination of output fields
-   * included in the ordering. If range fields are included in the output, or if 
-   * identifying properties change between titles, the title will be shown.
+   * Decide whether the current title record should be displayed, based on 
+   * whether it is a duplicate of the previous record, given the combination 
+   * of output fields included in the ordering. If range fields are included 
+   * in the output, or if identifying properties change between titles, the 
+   * title will be shown.
    * <p>
-   * If there are neither range fields nor id fields in the output, we can't tell
-   * if it is a duplicate so we show it anyway. Output with no id fields is pretty 
-   * meaningless though.
+   * If there are neither range fields nor id fields in the output, we can't 
+   * tell if it is a duplicate so we show it anyway. Output with no id fields 
+   * is pretty meaningless though.
    * <p>
-   * Note that the method also sets the last output title if the response is true.
-   * Thus calling this method multiple times on the same title will give false after 
-   * the first (unless there are no identifying fields).
+   * Note that the method also sets the last output title if the response is 
+   * true. Thus calling this method multiple times on the same title will give 
+   * false after the first (unless there are no identifying fields).
    * 
    *   
    * @param currentTitle the current title
    * @return whether to show currentTitle
    */
   public boolean isTitleForOutput(KbartTitle currentTitle) {
-    // The approach is to trueify this variable. If it becomes true, at the end of the method 
-    // the lastOutputTitle is set before the result is returned. Do not return early!
+    // The approach is to trueify this variable. If it becomes true, at the 
+    // end of the method the lastOutputTitle is set before the result is 
+    // returned. Do not return early!
     boolean isOutput = false;
     // Show title if it has no range or id fields by which we can decide duplicates
     if (!rangeFieldsIncludedInDisplay && !idFieldsIncludedInDisplay) {
@@ -376,22 +457,29 @@ public class KbartExportFilter {
   }
   
   /**
-   * A custom field ordering allows an arbitrary order of Fields to be specified at construction.
+   * A custom field ordering allows an arbitrary order of Fields to be 
+   * specified at construction.
    * 
    * @author Neil Mayo
    */
   public static class CustomFieldOrdering implements FieldOrdering {
     /** A set of fields included in this ordering. */
     public final EnumSet<Field> fields;
-    /** An ordered list of fields in this ordering. */
+    /** 
+     * An ordered list of Fields in this ordering. 
+     */
     public final List<Field> ordering;
     /** An ordered list of labels for the fields. */ 
     public final List<String> orderedLabels;
     
     /** The standard KBART field ordering. */
-    private static final FieldOrdering KBART_ORDERING = new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet())); 
+    private static final FieldOrdering KBART_ORDERING = 
+      new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet())); 
     
-    /** A separator used to separate field names in the specification of a custom ordering. This may be any combination of whitespace. */
+    /** 
+     * A separator used to separate field names in the specification of a 
+     * custom ordering. This may be any combination of whitespace. 
+     */
     public static final String CUSTOM_ORDERING_FIELD_SEPARATOR = "\n";
     
     //private static final CustomFieldOrdering defaultOrdering = new CustomFieldOrdering(Arrays.asList(Field.values()));
@@ -400,10 +488,11 @@ public class KbartExportFilter {
     //public final CustomFieldOrdering getDefaultOrdering() { return defaultOrdering; }
     
     /** A mapping of labels to fields, for interpreting a user-supplied ordering. */
-    private static final Map<String, Field> labelFields = new HashMap<String, Field>() {{
-      for (Field f : Field.values()) put(f.getLabel(), f);
-    }};
-    
+    private static final Map<String, Field> labelFields = 
+      new HashMap<String, Field>() {{
+	for (Field f : Field.values()) put(f.getLabel(), f);
+      }};
+      
     public static FieldOrdering getDefaultOrdering() {
       return KBART_ORDERING;
     }
@@ -419,13 +508,19 @@ public class KbartExportFilter {
 	for (Field f : ordering) add(f.getLabel());
       }};
     }
+
     /**
-     * Create a custom field ordering from a string containing a list of field labels
-     * separated by whitespace (specifically the <code>CUSTOM_ORDERING_FIELD_SEPARATOR</code>). 
+     * Create a custom field ordering from a string containing a list of field 
+     * labels separated by whitespace (specifically the 
+     * <code>CUSTOM_ORDERING_FIELD_SEPARATOR</code>).
      * @param orderStr a string of field labels separated by whitespace
      */
     public CustomFieldOrdering(String orderStr) throws CustomFieldOrderingException {
-      this.orderedLabels = Arrays.asList(StringUtils.split(orderStr, CUSTOM_ORDERING_FIELD_SEPARATOR));
+      // Use ListUtil to make list, so we get an ArrayList which implements 
+      // both add() methods
+      this.orderedLabels = ListUtil.fromArray(StringUtils.split(orderStr.toLowerCase(),
+	  CUSTOM_ORDERING_FIELD_SEPARATOR));
+      // Create the Field ordering
       this.ordering = new ArrayList<Field>();
       for (String s : orderedLabels) {
 	s = s.trim();
@@ -433,15 +528,22 @@ public class KbartExportFilter {
 	if (s.isEmpty()) continue;
 	Field f = labelFields.get(s);
 	// Throw exception if the label is not valid
-	if (f==null) throw new CustomFieldOrderingException(s, "String '"+s+"' does not refer to a valid field.");
+	if (f==null) throw new CustomFieldOrderingException(s, 
+	    "String '"+s+"' does not refer to a valid field.");
 	this.ordering.add(labelFields.get(s));
       }
       // Sanity checks
-      if (this.ordering.isEmpty()) throw new CustomFieldOrderingException("", "No valid fields specified.");
+      if (this.ordering.isEmpty()) 
+	throw new CustomFieldOrderingException("", "No valid fields specified.");
       
       if (!Field.idFields.clone().removeAll(this.ordering)) {
-	String idFieldStr = String.format("(%s)", StringUtils.join(Field.getLabels(Field.idFields), ", "));
-	throw new CustomFieldOrderingException("", String.format("No identifying fields specified. You must include one of %s.", idFieldStr));
+	String idFieldStr = String.format("(%s)", 
+	    StringUtils.join(Field.getLabels(Field.idFields), ", ")
+	);
+	throw new CustomFieldOrderingException("", String.format(
+	    "No identifying fields specified. You must include one of %s.", 
+	    idFieldStr
+	));
       }
       this.fields = EnumSet.copyOf(this.ordering);
     }
@@ -457,12 +559,13 @@ public class KbartExportFilter {
     }
  
     public String toString() {
-      return "" + StringUtil.separatedString(orderedLabels, "CustomFieldOrdering(", " | ", ")");
+      return "" + StringUtil.separatedString(orderedLabels, 
+	  "CustomFieldOrdering(", " | ", ")");
     }
     
     /** 
-     * A custom exception caused when an invalid custom ordering string is passed to the constructor 
-     * of the CustomFieldOrdering.
+     * A custom exception caused when an invalid custom ordering string is 
+     * passed to the constructor of the CustomFieldOrdering.
      */
     public class CustomFieldOrderingException extends Exception {
       /** A record of the string label for which a field could not be found. */
@@ -480,8 +583,9 @@ public class KbartExportFilter {
   }
       
   /**
-   * An enum for specifying a variety of <code>FieldOrdering</code>s. It is possible to specify 
-   * an incomplete list of fields, and other fields will be omitted. 
+   * An enum for specifying a variety of <code>FieldOrdering</code>s. It is 
+   * possible to specify an incomplete list of fields, and other fields will 
+   * be omitted. 
    * 
    * @author Neil Mayo
    */
@@ -491,7 +595,8 @@ public class KbartExportFilter {
     KBART("KBART Default", "Standard KBART fields and ordering", Field.values()),
 
     // An ordering that puts publisher and publication first; mainly for use by Vicky
-    PUBLISHER_PUBLICATION("Publisher oriented", "Standard KBART fields with publisher name at the start",
+    PUBLISHER_PUBLICATION("Publisher oriented", 
+	"Standard KBART fields with publisher name at the start",
 	new Field[] {
 	    PUBLISHER_NAME, 
 	    PUBLICATION_TITLE,
@@ -531,7 +636,8 @@ public class KbartExportFilter {
     ),
     
     // ISSN only (will have duplicates)
-    ISSN_ONLY("ISSN only", "ISSN only. "+duplicatesCaveat, new Field[] {PRINT_IDENTIFIER});
+    ISSN_ONLY("ISSN only", "ISSN only. "+duplicatesCaveat, 
+	new Field[] {PRINT_IDENTIFIER});
 
     // These are used in an interface to describe the ordering. */
     /** A name to identify the ordering. */
@@ -560,7 +666,9 @@ public class KbartExportFilter {
     }
 
     public String toString() {
-      return "" + StringUtil.separatedString(orderedLabels, "PredefinedFieldOrdering(", " | ", ")");
+      return "" + StringUtil.separatedString(orderedLabels, 
+	  "PredefinedFieldOrdering(", " | ", ")"
+      );
     }
 
   }

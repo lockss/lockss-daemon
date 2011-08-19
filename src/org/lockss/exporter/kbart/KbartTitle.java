@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.10 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.11 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -63,10 +63,12 @@ import org.lockss.util.UrlUtil;
  * ({@url http://www.uksg.org/kbart/s1/summary})
  * along with their section references:
  * <ul> 
- *  <li><del>values should not contain tab characters (5.3.1.1) or markup (5.3.1.5)</del></li>
+ *  <li><del>values should not contain tab characters (5.3.1.1) or markup 
+ *      (5.3.1.5)</del></li>
  *  <li><del>text should be encoded as UTF-8 (5.3.1.6)</del></li>
  *  <li><del>ISSN should match the 9-digit hyphenated format (5.3.2.3)</del></li>
- *  <li>Date formats should be ISO 8601, using as much of the YYYY-MM-DD format as necessary (5.3.2.5)</li>
+ *  <li>Date formats should be ISO 8601, using as much of the YYYY-MM-DD 
+ *      format as necessary (5.3.2.5)</li>
  * </ul>
  * <p>
  * Note that this object implements <code>Comparable</code> so that a 
@@ -90,8 +92,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   }
 
   /**
-   * An alternative to using the <code>clone()</code> method, which requires one to catch
-   * a <code>CloneNotSupportedException</code>.
+   * An alternative to using the <code>clone()</code> method, which requires 
+   * one to catch a <code>CloneNotSupportedException</code>.
    * 
    * @param other another KbartTitle whose fields to clone
    */
@@ -176,8 +178,10 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * @return a parameter string appropriate for OpenURL resolving
    */
   public String getResolverUrlParams() {
-    if (hasFieldValue(Field.ONLINE_IDENTIFIER)) return "?eissn=" + getField(Field.ONLINE_IDENTIFIER);
-    if (hasFieldValue(Field.PRINT_IDENTIFIER)) return "?issn=" + getField(Field.PRINT_IDENTIFIER);
+    if (hasFieldValue(Field.ONLINE_IDENTIFIER)) 
+      return "?eissn=" + getField(Field.ONLINE_IDENTIFIER);
+    if (hasFieldValue(Field.PRINT_IDENTIFIER)) 
+      return "?issn=" + getField(Field.PRINT_IDENTIFIER);
     // Resort to title and publisher (assume that they exist)
     String pubTitle = UrlUtil.encodeUrl(getField(Field.PUBLICATION_TITLE));
     String pubName = UrlUtil.encodeUrl(getField(Field.PUBLISHER_NAME));
@@ -212,11 +216,14 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   /**
    * Return the field values as a collection whose iterator will return
    * the values in the natural order of the <code>Field</code> objects.
+   * A value will be included for all Fields, even if some of those
+   * values are empty. 
    * 
-   * @return a collection of field values
+   * @return a list of field values
    */
-  public Collection<String> fieldValues() {
-    return fields.values();
+  public List<String> fieldValues() {
+    if (fields==null) return Collections.emptyList();
+    return new ArrayList<String>(fields.values());
   }
   
   /**
@@ -408,8 +415,9 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     public static boolean CASE_SENSITIVITY_DEFAULT = false;
     
     /** 
-     * The default approach to comparing strings which may have accented characters; 
-     * if true, characters are converted into two glyphs and then the diacritical mark removed. 
+     * The default approach to comparing strings which may have accented 
+     * characters; if true, characters are converted into two glyphs and 
+     * then the diacritical mark removed. 
      */
     public static boolean UNACCENTED_COMPARISON_DEFAULT = true;
     
@@ -439,7 +447,10 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     private final String label;
     /** The KBART description of the field. */
     private final String description;
-    /** The sort type of the field - string, numerical, or alphanumerical, wherein numerical parts are converted and compared by magnitude. */
+    /** 
+     * The sort type of the field - string, numerical, or alphanumerical, 
+     * wherein numerical parts are converted and compared by magnitude. 
+     */
     private final SortType sortType;
  
     public String getLabel() {
@@ -454,12 +465,18 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
       return sortType;
     }
 
-    /** Whether the field should be considered alphanumeric for comparison - that is, numerical parts are converted and compared by magnitude. */
+    /** 
+     * Whether the field should be considered alphanumeric for comparison - 
+     * that is, numerical parts are converted and compared by magnitude. 
+     */
     public boolean isAlphanumeric() { 
       return sortType == SortType.ALPHANUMERIC; 
     }
     
-    /** Whether the field should be considered numeric for comparison - that is, converted and compared by magnitude. */
+    /**
+     * Whether the field should be considered numeric for comparison - 
+     * that is, converted and compared by magnitude. 
+     */
     public boolean isNumeric() { 
       return sortType == SortType.NUMERIC;
     }
@@ -494,7 +511,10 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
       return EnumSet.allOf(Field.class);
     }
 
-    /** Each field will be of a particular type which requires a particular type of sorting. */
+    /**
+     * Each field will be of a particular type which requires a particular 
+     * type of sorting. 
+     */
     public static enum SortType {
       STRING, ALPHANUMERIC, NUMERIC, DATE;
     }

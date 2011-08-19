@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.11 2011-08-10 14:21:24 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.12 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
 
-Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.text.DateFormat;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.io.OutputStream;
 import java.io.IOException;
@@ -52,7 +50,10 @@ public class HtmlKbartExporter extends KbartExporter {
 
   private static Logger log = Logger.getLogger("HtmlKbartExporter");
 
-  /** Width in pixels of columns with variable content - namely publication_title and publisher_name. */
+  /** 
+   * Width in pixels of columns with variable content - namely 
+   * publication_title and publisher_name. 
+   */
   //private int variableContentColumnWidth = 120;
   /** A switch to keep track of whether a line is odd or even. */
   private boolean odd = false;
@@ -62,16 +63,22 @@ public class HtmlKbartExporter extends KbartExporter {
   private String header;
   /** Summary of the export for display. */
   private String exportSummary;
-  /** A form to be incorporated into the page which provides a link to customisable display options. */
-  //private Form customForm;
   
-  /** The index of the issn field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  /** 
+   * The index of the issn field. Will have the td.issn style applied to its 
+   * table cells to stop it wrapping. 
+   */
   private int issnFieldIndex;
-  /** The index of the eissn field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  /** 
+   * The index of the eissn field. Will have the td.issn style applied to its 
+   * table cells to stop it wrapping. 
+   */
   private int eissnFieldIndex;
-  /** The index of the issnl field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  /** 
+   * The index of the issnl field. Will have the td.issn style applied to its 
+   * table cells to stop it wrapping. 
+   */
   private int issnlFieldIndex;
-  
   
   /**
    * Default constructor takes a list of KbartTitles to be exported.
@@ -83,9 +90,8 @@ public class HtmlKbartExporter extends KbartExporter {
    * @param format the output format
    */
   public HtmlKbartExporter(List<KbartTitle> titles, OutputFormat format) {
-    this(titles, format, omitEmptyFieldsByDefault);
+    super(titles, format);
   }
-  
   
   public void sortByField(Field f) {
     Collections.sort(titles, KbartTitleComparatorFactory.getComparator(f));
@@ -98,20 +104,11 @@ public class HtmlKbartExporter extends KbartExporter {
     filter.sortTitlesByFirstTwoFields();
   }
   
+  @Override
+  protected void emitHeader() {
+    printWriter.printf(this.header);
+  }
   
-  /**
-   * An alternative constructor that allows one to specify whether or not to show columns 
-   * which are entirely empty. The data will be searched for fields which are empty across 
-   * the whole range of titles.
-   * 
-   * @param titles the titles which are to be exported
-   * @param format the output format
-   * @param omitEmptyFields whether to omit empty field columns from the output
-   */
-  public HtmlKbartExporter(List<KbartTitle> titles, OutputFormat format, boolean omitEmptyFields) {
-    super(titles, format);
-  }   
-
   @Override
   protected void emitRecord(List<String> values) {
     odd = !odd;
@@ -142,23 +139,23 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
     // Construct a title and summary
-    /*this.exportSummary = String.format(this.outputFormat+" Export created on %s by %s | Exported %d KBART titles from %d TDB titles.",
-	new Date(), getHostName(), titles.size(), tdbTitleTotal);*/
-    this.exportSummary = String.format("Export of %s titles created on %s by %s | Exported %d KBART titles from %d TDB titles.",
+    this.exportSummary = String.format("Export of %s titles created on %s by %s " +
+	"| Exported %d KBART titles from %d TDB titles.",
 	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
     this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
     // Write html and head tags, including a metatag declaring the content type UTF-8
-    printWriter.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
+    printWriter.println("<html><head><meta http-equiv=\"Content-Type\" " +
+	"content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
     printWriter.printf("%s</head><body>", css);
     if (getHtmlCustomForm()!=null) printWriter.println(getHtmlCustomForm());
     // Initial attempt to get a static header on the page:
     //printWriter.printf("<div class=\"header\"><table>%s</table></div>", this.header);
     printWriter.println("<table>");
-    printWriter.printf(this.header);
+    //printWriter.printf(this.header);
   }
 
   /**
@@ -178,10 +175,9 @@ public class HtmlKbartExporter extends KbartExporter {
   
   private String makeHeader() {
     return String.format("<tr><th>Index</th><th>%s</th></tr>", 
-	StringUtil.separatedString(Field.getLabels(filter.getVisibleFieldOrder()), "</th><th>")
+	StringUtil.separatedString(filter.getColumnLabels(scope), "</th><th>")	
     );
   }
-  
 
   @Override
   protected void clearup() throws IOException {
@@ -197,7 +193,6 @@ public class HtmlKbartExporter extends KbartExporter {
     super.clearup();
   }
 
-  
   /** Some CSS for the output table. */
   private static final String css;
   static {
@@ -212,7 +207,5 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("</style>");
     css = sb.toString();
   };
-
-  
-
+ 
 }

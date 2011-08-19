@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.17 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.18 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuHealthMetric;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
 
@@ -158,42 +159,61 @@ public class KbartConverter {
    * coverage ranges.
    * 
    * @param auMap a map of TdbTitles to lists of ArchivalUnits
+   * @param showHealth whether or not to calculate a health rating for each title
+   * @param rangeFieldsIncluded whether range fields are included in the output
    * @return a list of KbartTitles
    */
-  public static List<KbartTitle> convertAus(Map<TdbTitle, List<ArchivalUnit>> auMap) {
+  public static List<KbartTitle> convertAus(Map<TdbTitle, List<ArchivalUnit>> auMap, 
+      boolean showHealth, boolean rangeFieldsIncluded) {
     if (auMap==null) return Collections.emptyList();
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (List<ArchivalUnit> titleAus : auMap.values()) {
-      list.addAll( createKbartTitles(titleAus) );
+      list.addAll(createKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
     }
     return list;
   }
   
   /**
-   * Sort a set of <code>TdbAu</code> objects for a title by volume, dates and finally name.
-   * There is no guaranteed way to order chronologically due to the dearth of date 
-   * metadata included in AUs at the time of writing.
+   * Sort a set of {@link TdbAu} objects for a title by volume, dates and 
+   * finally name. There is no guaranteed way to order chronologically due to 
+   * the dearth of date metadata included in AUs at the time of writing.
    * <p>
-   * Perhaps this comparator should throw an exception if the conventions appear to be 
-   * contravened, rather than trying to order with arbitrary names. 
+   * Perhaps this comparator should throw an exception if the conventions 
+   * appear to be contravened, rather than trying to order with arbitrary names. 
    * 
    * @param aus a list of TdbAu objects
    */
-  private static void sortAus(List<TdbAu> aus) {
-    /*CompositeComparator<TdbAu> cc = 
-      new CompositeComparator<TdbAu>(TdbAuAlphanumericComparatorFactory.getVolumeComparator())
-      .compose(TdbAuAlphanumericComparatorFactory.getLastDateComparator())
-      .compose(TdbAuAlphanumericComparatorFactory.getFirstDateComparator())
-      .compose(TdbAuAlphanumericComparatorFactory.getNameComparator())
-      ;*/
-    ComparatorChain cc = 
-      new ComparatorChain(TdbAuAlphanumericComparatorFactory.getVolumeComparator());
+  static void sortTdbAus(List<TdbAu> aus) {
+    ComparatorChain cc = new ComparatorChain(
+	TdbAuAlphanumericComparatorFactory.getVolumeComparator()
+    );
     cc.addComparator(TdbAuAlphanumericComparatorFactory.getLastDateComparator());
     cc.addComparator(TdbAuAlphanumericComparatorFactory.getFirstDateComparator());
     cc.addComparator(TdbAuAlphanumericComparatorFactory.getNameComparator());
     Collections.sort(aus, cc);
   }
 
+  /**
+   * Sort a set of {@link KbartTitle}s (representing a single TdbTitle) by 
+   * title, first date and then last date. The comparator chain should also 
+   * work on a list of titles representing more than one TdbTitle.
+   * @param titles a list of KbartTitles
+   */
+  static void sortKbartTitles(List<KbartTitle> titles) {
+    ComparatorChain cc = new ComparatorChain(
+	KbartTitleComparatorFactory.getComparator(PUBLICATION_TITLE)
+    );
+    cc.addComparator(
+	KbartTitleComparatorFactory.getComparator(DATE_FIRST_ISSUE_ONLINE)
+    );
+    cc.addComparator(
+	KbartTitleComparatorFactory.getComparator(DATE_LAST_ISSUE_ONLINE)
+    );
+    Collections.sort(titles, cc);
+  }
+
+  
+  
   /**
    * Check whether a string appears to represent a publication date.
    * This is taken to be a 4-digit number within a specific range,
@@ -230,28 +250,94 @@ public class KbartConverter {
   }
   
   /**
-   * Convert a collection of ArchivalUnits into one or more KbartTitles using as 
-   * much information as possible. This version of the method acts upon a collection  
-   * of ArchivalUnits rather than a TdbTitle. This is necessary for calculations 
-   * with preserved or configured AUs, which may represent a subset of the items 
-   * available in a TdbTitle.
+   * Convert a collection of ArchivalUnits into one or more KbartTitles using 
+   * as much information as possible. This version of the method acts upon a 
+   * collection of ArchivalUnits rather than a TdbTitle. This is necessary for 
+   * calculations with preserved or configured AUs, which may represent a 
+   * subset of the items available in a TdbTitle.
+   * <p>
+   * If requested, this method also calculates health values for each title and
+   * creates {@link KbartTitleHealthWrapper}s to decorate the real KbartTitles.
+   * If range fields are not included in the output, the healths of the title
+   * ranges are aggregated into a single health value for the whole range of 
+   * the given title.
    * 
    * @param titleAus a list of ArchivalUnits relating to a single title
-   * @return a list of KbartTitle objects
+   * @param showHealth whether to show health values in the output 
+   * @param rangeFieldsIncluded whether the export fields include range fields
+   * @return a list of KbartTitle objects in no particular order
    */
-  public static List<KbartTitle> createKbartTitles(Collection<ArchivalUnit> titleAus) {
+  public static List<KbartTitle> createKbartTitles(Collection<ArchivalUnit> titleAus, 
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    if (titleAus==null) return Collections.emptyList();
+    // Create a list of TdbAus from the ArchivalUnits
+    final List<TdbAu> tdbAus = TdbUtil.getTdbAusFromAus(titleAus);
+    // Map the AUs from TdbAus for later reference
+    final Map<TdbAu, ArchivalUnit> ausMap = TdbUtil.mapTdbAusToAus(titleAus);
+    // Calculate the KbartTitles, each mapped to the TdbAu range that informed it
+    final Map<KbartTitle, TitleRange> map = createKbartTitlesWithRanges(tdbAus);
+    // Start constructing a result list
+    List<KbartTitle> res = new ArrayList<KbartTitle>();
+
+    // A tally of health values for the current title, in case they need to 
+    // be aggregated due to a lack of range fields in the output 
+    double totalHealth = 0;
+    int numTdbAus = 0;
+    // For each (ordered) KbartTitle, use its TdbAu range, and the mapped AUs, 
+    // to calculate the aggregate health of its underlying AUs.
+    List<KbartTitle> keyList = new ArrayList<KbartTitle>(map.keySet());
+    sortKbartTitles(keyList);
+    Iterator<KbartTitle> it = keyList.iterator();
+    
+    while (it.hasNext()) {
+      final KbartTitle kbt = it.next();
+      if (showHealth) {
+	// Add a KbartTitle wrapper that decorates it with a health value
+	double health = AuHealthMetric.getAggregateHealth(
+	    new ArrayList<ArchivalUnit>() {{
+	      for (TdbAu tdbAu : map.get(kbt).tdbAus) add(ausMap.get(tdbAu));
+	    }}
+	);
+	// If there are no range fields in the output, aggregate all the 
+	// individual KbartTitle healths. 
+	if (!rangeFieldsIncluded) {
+	  // Total health is unknown if any individual health is unknown
+	  if (health==AuHealthMetric.UNKNOWN_HEALTH) {
+	    res.add(new KbartTitleHealthWrapper(kbt, AuHealthMetric.UNKNOWN_HEALTH));
+	    break;
+	  }
+	  int numContributingAus = map.get(kbt).tdbAus.size();
+	  // Health is an average over the AUs
+	  totalHealth += health * numContributingAus;
+	  numTdbAus += numContributingAus;
+	  // On the final KbartTitle, calculate the average health
+	  if (!it.hasNext()) {
+	    res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numTdbAus)); 
+	  }
+	} else
+	  res.add(new KbartTitleHealthWrapper(kbt, health));
+      } else 
+	res.add(kbt);
+    }
+    return res;
+  }
+  
+  // Given a range of AUs representing a title, map TdbAus to Aus
+  // and then create KbartTitles form the TdbAus, wrapping with a health from the AUs
+  /*public static List<KbartTitle> createKbartTitlesWithAuRanges(Collection<ArchivalUnit> titleAus) {
     if (titleAus==null) return Collections.emptyList();
     // Create a list of TdbAus from the ArchivalUnits so we can sort it.
     List<TdbAu> aus = TdbUtil.getTdbAusFromAus(titleAus);
     return createKbartTitles(aus);
-  }
-    
+  }*/
+
+  
   /**
    * Convert a TdbTitle into one or more KbartTitles using as much information as 
    * possible.
    * 
    * @param tdbt a TdbTitle from which to create the KbartTitle
-   * @return a list of KbartTitle objects
+   * @return a list of KbartTitle objects which may be unordered
    */
   public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
     if (tdbt==null) return Collections.emptyList();
@@ -262,16 +348,34 @@ public class KbartConverter {
   }
   
   /**
-   * Convert a sorted list of TdbAus into one or more KbartTitles using as much
-   * information as possible. A list of TdbAus relating to a single 
-   * title will yield multiple KbartTitles if it has gaps in its 
-   * coverage of greater than a year, in accordance with KBART 5.3.1.9.
-   * Each KbartTitle is created with a publication title and an identifier which
-   * is a valid ISSN. An attempt is made to fill the first/last issue/volume 
-   * fields. The title URL is set to a substitution parameter and issn argument. 
-   * The parameter can be substituted during URL resolution to the local URL to 
-   * ServeContent. There are several other KBART fields for which the information 
-   * is not available.
+   * Create a list of KbartTitles from the supplied range of TdbAus.
+   * The list is sorted.
+   * 
+   * @param aus a list of TdbAus which represent a single title
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> createKbartTitles(List<TdbAu> aus) {
+    List<KbartTitle> res = new ArrayList<KbartTitle>(createKbartTitlesWithRanges(aus).keySet());
+    sortKbartTitles(res);
+    return res;
+  }
+  
+  /**
+   * Convert a list of TdbAus into one or more KbartTitles using as much
+   * information as possible, but maintain a record of the TdbAu range for each 
+   * KbartTitle, and return as a map of the former to the latter. Note that 
+   * this should only be called with a list of TdbAus which represent a single 
+   * title, otherwise the Map will be large and the assumptions about which 
+   * metadata is shared by the titles will not hold.
+   * <p> 
+   * A list of TdbAus relating to a single title will yield multiple 
+   * KbartTitles if it has gaps in its coverage of greater than a year, in 
+   * accordance with KBART 5.3.1.9. Each KbartTitle is created with a 
+   * publication title and an identifier which is a valid ISSN. An attempt is 
+   * made to fill the first/last issue/volume fields. The title URL is set to a
+   * substitution parameter and issn argument. The parameter can be substituted 
+   * during URL resolution to the local URL to ServeContent. There are several 
+   * other KBART fields for which the information is not available.
    * <p>
    * An attempt is made to fill the following KBART fields:
    * <ul>
@@ -300,15 +404,15 @@ public class KbartConverter {
    * are listed alphabetically by name.
    * 
    * @param aus a list of TdbAus relating to a single title
-   * @return a list of KbartTitle objects
+   * @return a map of KbartTitle to the TitleRange underlying it
    */
-  public static List<KbartTitle> createKbartTitles(List<TdbAu> aus) {
-
+  public static Map<KbartTitle, TitleRange> createKbartTitlesWithRanges(List<TdbAu> aus) {
+    
     // If there are no aus, we have no title records to add
-    if (aus==null || aus.size()==0) return Collections.emptyList();
+    if (aus==null || aus.size()==0) return Collections.emptyMap();
 
     // Chronologically sort the AUs
-    sortAus(aus);
+    sortTdbAus(aus);
 
     // If there is at least one AU, get the first for reference
     TdbAu firstAu = aus.get(0);
@@ -340,13 +444,12 @@ public class KbartConverter {
     
     // Title URL
     // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
-    //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
     baseKbt.setField(TITLE_URL, LABEL_PARAM_LOCKSS_RESOLVER + baseKbt.getResolverUrlParams()); 
     
     // ---------------------------------------------------------
     // Attempt to create ranges for titles with a coverage gap.
     // Depends on the availability of years in AUs.
-    List<KbartTitle> kbtList = new Vector<KbartTitle>();
+    Map<KbartTitle, TitleRange> kbtList = new HashMap<KbartTitle, TitleRange>();
 
     // TODO: Remove any 'down' AUs from the list
 
@@ -358,28 +461,44 @@ public class KbartConverter {
     // longer than a year (KBART 5.3.1.9)
     // We should also create a new title if the AU name changes somewhere down the list
     for (TitleRange range : ranges) {
-      KbartTitle kbt = baseKbt.clone();
-      
       // If there are multiple ranges, make sure the title/issn is right (might change with the range?)
       if (ranges.size()>1) {
 	updateTitleProperties(range.first, baseKbt);  
       }
+
+      KbartTitle kbt = baseKbt.clone();
+      fillKbartTitle(kbt, range, issueFormat, tri.hasVols);
       
-      // Volume numbers (we omit volumes if the title did not yield a full and consistent set)
-      // Note that this omits uncertain volume data on close to 400 titles 
-      if (tri.hasVols) {
+      // Add the title to the map
+      kbtList.put(kbt, range);
+    }
+    return kbtList;
+  }
+  
+  
+  /**
+   * Fill a KbartTitle object with data based on the supplied objects.
+   * @param kbt a KbartTitle
+   * @param range a TitleRange for the title
+   * @param issueFormat an IssueFormat for the title
+   * @param hasVols whether the title has volumes
+   */
+  private static void fillKbartTitle(KbartTitle kbt, TitleRange range, IssueFormat issueFormat, boolean hasVols) {
+    // Volume numbers (we omit volumes if the title did not yield a full and consistent set)
+    // Note that this omits uncertain volume data on close to 400 titles 
+    if (hasVols) {
 	kbt.setField(NUM_FIRST_VOL_ONLINE, findVolume(range.first));
 	kbt.setField(NUM_LAST_VOL_ONLINE, findVolume(range.last));
-      }
-      
-      // Issue numbers
-      if (issueFormat != null) {
+    }
+    
+    // Issue numbers
+    if (issueFormat != null) {
 	kbt.setField(NUM_FIRST_ISSUE_ONLINE, issueFormat.getFirstIssue(range.first));
 	kbt.setField(NUM_LAST_ISSUE_ONLINE, issueFormat.getLastIssue(range.last));
-      }
-      
-      // Issue years (will be zero if years could not be found)
-      if (isPublicationDate(range.getFirstYear()) && isPublicationDate(range.getLastYear())) {
+    }
+    
+    // Issue years (will be zero if years could not be found)
+    if (isPublicationDate(range.getFirstYear()) && isPublicationDate(range.getLastYear())) {
 	//if (tri.hasYears) {
 	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.getFirstYear()));
 	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.getLastYear()));
@@ -389,13 +508,10 @@ public class KbartConverter {
 	  kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
 	  kbt.setField(NUM_LAST_VOL_ONLINE, "");
 	}
-      }
-      
-      // Add the title to the list
-      kbtList.add(kbt);
     }
-    return kbtList;
+
   }
+  
   
   /**
    * Get the current year from a calendar.
@@ -567,36 +683,51 @@ public class KbartConverter {
     
   
   /**
-   * A class for convenience in passing back title year ranges after year processing.
-   * A year can be set to zero if it is not available. The onus is on the client to check 
-   * whether the year is valid.
-   * 
+   * A class for convenience in passing back title year ranges after year 
+   * processing. A year can be set to zero if it is not available. The onus 
+   * is on the client to check whether the year is valid.
+   * <p>
+   * Note that this class now holds a list of TdbAu references covering the 
+   * whole range, whereas it used to just hold references to the first and 
+   * last TdbAus. This is because we now need to keep track of the AUs which
+   * have informed the creation of the KbartTitle, in order to calculate 
+   * health. 
    */
-  private static class TitleRange {
+  static class TitleRange {
     TdbAu first;
     TdbAu last;
     YearRange yearRange;
+    List<TdbAu> tdbAus;
     
     int getFirstYear() { return yearRange.firstYear; }
     int getLastYear() { return yearRange.lastYear; }
     
-    TitleRange(TdbAu first, TdbAu last, int firstYear, int lastYear) {
-      this.first = first;
-      this.last = last;
-      this.yearRange = new YearRange(firstYear, lastYear);
+    /**
+     * Constructor extracts the years from the end points of the given AUs. 
+     * 
+     * @param tdbAus the list of TdbAus which underlie the title range 
+     */
+    TitleRange(List<TdbAu> tdbAus) {
+      this.tdbAus = tdbAus;
+      this.first = tdbAus.get(0);
+      this.last = tdbAus.get(tdbAus.size()-1);
+      this.yearRange = new YearRange(first, last);
     }
     
     /**
-     * Constructor extracts the years from the given AUs. 
+     * Constructor extracts the years from the end points of the given AUs.  
      * 
-     * @param first first AU of the range
-     * @param last last AU of the range
+     * @param tdbAus the list of TdbAus which underlie the title range 
+     * @param firstYear date of the first AU of the range
+     * @param lastYear date of the last AU of the range
      */
-    TitleRange(TdbAu first, TdbAu last) {
-      this.first = first;
-      this.last = last;
-      this.yearRange = new YearRange(first, last);
+    TitleRange(List<TdbAu> tdbAus, int firstYear, int lastYear) {
+      this.tdbAus = tdbAus;
+      this.first = tdbAus.get(0);
+      this.last = tdbAus.get(tdbAus.size()-1);
+      this.yearRange = new YearRange(firstYear, lastYear);
     }
+    
   }
 
   /**
@@ -605,7 +736,7 @@ public class KbartConverter {
    * that has a year range. Invalid years will usually be set to 0.
    *
    */
-  private static class YearRange {
+  static class YearRange {
     int firstYear; 
     int lastYear;
     
@@ -691,7 +822,8 @@ public class KbartConverter {
     // Just return the single full range if neither volumes nor years are available
     if (!hasVols && !hasYears) {
       List<TitleRange> ranges = new ArrayList<TitleRange>() {{
-	add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
+	//add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
+	add(new TitleRange(aus.subList(0, n)));
       }};
       log.warning(aus.get(0).getTdbTitle().getName() 
 	  + " lacks a complete and consistent set of vols or years;"
@@ -725,12 +857,14 @@ public class KbartConverter {
 
     // The index of the first AU of the current range
     int firstAuIndex;
+    int prevAuIndex;
     int n = aus.size();
     List<TitleRange> ranges = new ArrayList<TitleRange>();
     boolean hasYears = years!=null && years.size()==n;
        
     // Set first au and coverage value
     firstAuIndex = 0;
+    prevAuIndex = 0;
     firstCoverageVal = coverageValues.get(firstAuIndex);
     firstAu = aus.get(firstAuIndex);
     // Set current au and coverage value
@@ -744,6 +878,7 @@ public class KbartConverter {
     for (int i=0; i<n; i++) {
       // Reset au and coverage vars
       prevAu = currentAu;
+      prevAuIndex = i==0 ? 0 : i-1;
       prevCoverageVal = currentCoverageVal;
       currentCoverageVal = coverageValues.get(i);
       currentAu = aus.get(i);
@@ -755,7 +890,8 @@ public class KbartConverter {
 	// Finish the old title and start a new title
 	int firstYear = hasYears ? years.get(firstAuIndex).firstYear : 0;
 	int prevYear = hasYears ? years.get(i-1).lastYear : 0;
-	ranges.add(new TitleRange(firstAu, prevAu, firstYear, prevYear));
+	//ranges.add(new TitleRange(firstAu, prevAu, firstYear, prevYear));
+	ranges.add(new TitleRange(aus.subList(firstAuIndex, prevAuIndex+1), firstYear, prevYear));
 		// Set new title properties
 	firstAuIndex = i;
 	firstAu = currentAu;
@@ -766,7 +902,8 @@ public class KbartConverter {
 	// finish current title
 	int firstYear = hasYears ? years.get(firstAuIndex).firstYear : 0;
 	int currentYear = hasYears ? years.get(i).lastYear : 0;
-	ranges.add(new TitleRange(firstAu, currentAu, firstYear, currentYear));
+	//ranges.add(new TitleRange(firstAu, currentAu, firstYear, currentYear));
+	ranges.add(new TitleRange(aus.subList(firstAuIndex, i+1), firstYear, currentYear));
       }
     }
     return ranges;

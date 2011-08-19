@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.14 2008-08-17 08:49:15 tlipkis Exp $
+ * $Id: ListUtil.java,v 1.15 2011-08-19 10:36:19 easyonthemayo Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -227,13 +227,21 @@ public class ListUtil {
   }
   
   /** Create a list containing the elements of an array */
-  public static List fromArray(Object array[]) {
+  public static <T> List<T> fromArray(T array[]) {
+    List<T> l = new ArrayList<T>(array.length);
+    for (T o : array) {
+      l.add(o);
+    }
+    return l;
+  }
+  /*public static List fromArray(Object array[]) {
     List l = new ArrayList(array.length);
     for (Object o : array) {
       l.add(o);
     }
     return l;
-  }
+  }*/
+  
   
   /** Add all elements of ofList to toList  */
   public static LinkedList prependAll(List ofList, LinkedList toList) {

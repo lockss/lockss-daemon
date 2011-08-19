@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.6 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.7 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -41,9 +41,9 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 /**
- * Exports records as fields separated by a separator character. By default this is a tab.
- * When emitting records using a comma separator, fields are quoted if necessary, 
- * and quotes are escaped.
+ * Exports records as fields separated by a separator character. By default 
+ * this is a tab. When emitting records using a comma separator, fields are 
+ * quoted if necessary, and quotes are escaped.
  * 
  * @author Neil Mayo
  *
@@ -63,7 +63,8 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
    * 
    * @param titles the titles which are to be exported
    */
-  public SeparatedValuesKbartExporter(List<KbartTitle> titles, OutputFormat format) {
+  public SeparatedValuesKbartExporter(List<KbartTitle> titles, 
+      OutputFormat format) {
     this(titles, format, SEPARATOR_TAB);
   }
 
@@ -72,7 +73,8 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
    * 
    * @param titles the titles which are to be exported
    */
-  public SeparatedValuesKbartExporter(List<KbartTitle> titles, OutputFormat format, String sep) {
+  public SeparatedValuesKbartExporter(List<KbartTitle> titles, 
+      OutputFormat format, String sep) {
     super(titles, format);
     this.SEPARATOR = sep;
   }
@@ -84,7 +86,12 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
     // Write a byte-order mark (BOM) for excel 
     writeBOM(os);
     //printWriter.println( constructRecord(KbartTitle.Field.getLabels()) );
-    printWriter.println( constructRecord(filter.getVisibleFieldOrder()) );
+    //printWriter.println( constructRecord(filter.getVisibleFieldOrder()) );
+  }
+
+  @Override
+  protected void emitHeader() {
+    printWriter.println( constructRecord(filter.getColumnLabels(scope)) );
   }
 
   @Override

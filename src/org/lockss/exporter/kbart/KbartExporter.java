@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.11 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.12 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -254,6 +254,7 @@ public abstract class KbartExporter {
    * the output.
    */
   private void doExport() throws IOException {
+    emitHeader();
     for (KbartTitle title : titles) {
       // Don't output some titles
       if (!filter.isTitleForOutput(title)) {
@@ -267,6 +268,13 @@ public abstract class KbartExporter {
     printWriter.flush();
   }
   
+  /**
+   * Format a header line and write it to the output.
+   *  
+   * @param names the names for each visible column
+   */
+  protected abstract void emitHeader() throws IOException;
+
   /**
    * Format a single title and write it to the output.
    *  

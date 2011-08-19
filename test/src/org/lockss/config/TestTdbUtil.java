@@ -181,6 +181,8 @@ public class TestTdbUtil extends LockssTestCase {
     List<TdbAu> tdbAus = TdbUtil.getTdbAusFromAus(aus);
     assertNotNull(tdbAus);
     assertTrue(tdbAus.size()<=aus.size());
+    // Note that the result will in fact be empty using mock AUs which don't 
+    // correspond to TDB entries.
   }
 
   private final Collection<ArchivalUnit> getMockAus() {

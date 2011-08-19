@@ -1,5 +1,5 @@
 /*
- * $Id: TestCachingComparator.java,v 1.1 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: TestCachingComparator.java,v 1.2 2011-08-19 10:36:18 easyonthemayo Exp $
  */
 
 /*
@@ -360,7 +360,7 @@ public class TestCachingComparator extends LockssTestCase {
   }
 
   void ccListSortingTest(CachingComparator cc, Object[] titles) {
-    List<String> tl = ListUtil.fromArray(titles);
+    List<Object> tl = ListUtil.fromArray(titles);
     Collections.reverse(tl);
     assertFalse(CollectionUtil.isIsomorphic(titles, tl));
     assertIsomorphic(titles, sort(tl, cc));
