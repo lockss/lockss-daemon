@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.219 2011-06-30 19:06:00 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.220 2011-08-21 23:22:49 tlipkis Exp $
  */
 
 /*
@@ -709,7 +709,7 @@ public class PluginManager
 	  log.debug2("Retrying previously unstarted AU id: " + auId);
 	  break;
 	}
-	log.debug("Configuring AU id: " + auKey);
+	if (log.isDebug2()) log.debug2("Configuring AU id: " + auKey);
 	Plugin plugin = getPlugin(pluginKey);
 	try {
 	  String genAuid = generateAuId(plugin, auConf);
