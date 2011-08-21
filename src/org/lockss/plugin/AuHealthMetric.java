@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.3 2011-08-19 10:36:19 easyonthemayo Exp $
+ * $Id: AuHealthMetric.java,v 1.4 2011-08-21 23:58:04 tlipkis Exp $
  */
 
 /*
@@ -218,8 +218,9 @@ public class AuHealthMetric {
       auCount++;
       total += h;
     }
-    DecimalFormat df = new DecimalFormat("#.##");
-    return Double.valueOf(df.format(total/auCount));
+//     DecimalFormat df = new DecimalFormat("#.##");
+//     return Double.valueOf(df.format(total/auCount));
+    return total/auCount;
   }
   
   /**
