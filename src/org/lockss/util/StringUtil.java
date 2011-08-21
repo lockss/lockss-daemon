@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.103 2011-06-20 07:06:47 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.104 2011-08-21 23:58:18 tlipkis Exp $
  */
 
 /*
@@ -622,6 +622,118 @@ public class StringUtil {
   static public String toUnaccented(String s) {
     return COMBINING_DIACRIT_PAT.matcher(Normalizer.normalize(s, Form.NFD)).replaceAll("");
   }
+
+//   /** Accented character table for use by {@link #toUnaccentedFast(String).
+//    * See comments there. */
+//   private static final String[][] ACCENTTABLE = {
+//     {"\u00c0","A"}, // À, A with grave
+//     {"\u00c1","A"}, // Á, A with acute
+//     {"\u00c2","A"}, // Â, A with circumflex
+//     {"\u00c3","A"}, // Â, A with tilde
+//     {"\u00c4","A"}, // Ä, A with diaeresis
+//     {"\u00c5","A"}, // Å, A with ring above
+//     {"\u00c6","AE"}, // Æ, AE
+//     {"\u00c7","C"}, // Ç, C with cedilla
+//     {"\u00c8","E"}, // È, E with grave
+//     {"\u00c9","E"}, // É, E with acute
+//     {"\u00ca","E"}, // Ê, E with circumflex
+//     {"\u00cb","E"}, // Ë, E with diaeresis
+//     {"\u00cc","I"}, // Ì, I with grave
+//     {"\u00cd","I"}, // Í, I with acute
+//     {"\u00ce","I"}, // Î, I with circumflex
+//     {"\u00cf","I"}, // Ï, I with diaeresis
+//     {"\u00d1","N"}, // Ñ, N with tilde
+//     {"\u00d2","O"}, // Ò, O with grave
+//     {"\u00d3","O"}, // Ó, O with acute
+//     {"\u00d4","O"}, // Ô, O with circumflex
+//     {"\u00d5","O"}, // Õ, O with tilde
+//     {"\u00d6","O"}, // Ö, O with diaeresis
+//     {"\u00d8","O"}, // Ø, O with a stroke
+//     {"\u00d9","U"}, // Ù, U with grave
+//     {"\u00da","U"}, // Ú, U with acute
+//     {"\u00db","U"}, // Û, U with circumflex
+//     {"\u00dc","U"}, // Ü, U with diaeresis
+//     {"\u00dd","Y"}, // Ý, Y with acute
+//     {"\u00e0","a"}, // à, a with grave
+//     {"\u00e1","a"}, // á, a with acute
+//     {"\u00e2","a"}, // â, a with circumflex
+//     {"\u00e3","a"}, // ã, a with tilde
+//     {"\u00e4","a"}, // ä, a with diaeresis
+//     {"\u00e5","a"}, // å, a with ring above
+//     {"\u00e6","ae"}, // æ, ae
+//     {"\u00e7","c"}, // ç, c with cedilla
+//     {"\u00e8","e"}, // è, e with grave
+//     {"\u00e9","e"}, // é, e with acute
+//     {"\u00ea","e"}, // ê, e with circumflex
+//     {"\u00eb","e"}, // ë, e with diaeresis
+//     {"\u00ec","i"}, // ì, i with grave
+//     {"\u00ed","i"}, // í, i with acute
+//     {"\u00ee","i"}, // î, i with circumflex
+//     {"\u00ef","i"}, // ï, i with diaeresis
+//     {"\u00f1","n"}, // ñ, n with tilde
+//     {"\u00f2","o"}, // ò, o with grave
+//     {"\u00f3","o"}, // ó, o with acute
+//     {"\u00f4","o"}, // ô, o with circumflex
+//     {"\u00f5","o"}, // õ, o with tilde
+//     {"\u00f6","o"}, // ö, o with diaeresis
+//     {"\u00f8","o"}, // ø, o with stroke
+//     {"\u00f9","u"}, // ù, u with grave
+//     {"\u00fa","u"}, // ú, u with acute
+//     {"\u00fb","u"}, // û, u with circumflex
+//     {"\u00fc","u"}, // ü, u with diaeresis
+//     {"\u00fd","y"}, // ý, y with acute
+//     {"\u00ff","y"}, // ÿ, y with diaeresis
+//   };
+
+//   private static char[] AC_CHAR = new char[ACCENTTABLE.length];
+//   private static String[] AC_REP = new String[ACCENTTABLE.length];
+
+//   static {
+//     for (int ix = 0; ix < ACCENTTABLE.length; ix++) {
+//       AC_CHAR[ix] = ACCENTTABLE[ix][0].charAt(0);
+//       AC_REP[ix] = ACCENTTABLE[ix][1];
+//     }
+//   }    
+
+//   /** Alternate implementation of {@link @toUnaccented(String)}.  Can be
+//    * several times faster (depending on string length) but only handles
+//    * accented characters that are in its table. */
+
+//   public static String toUnaccentedFast(String s) {
+//     boolean modified = false;
+//     int slen = s.length();
+//     StringBuilder sb = null;
+//     outer:
+//     for (int ix = 0; ix < slen; ix++) {
+//       char ch = s.charAt(ix);
+//       for (int jx = 0; jx < AC_CHAR.length; jx++) {
+// 	if (AC_CHAR[jx] == ch) {
+// 	  if (!modified) {
+// 	    sb = new StringBuilder(slen);
+// 	    sb.append(s, 0, ix);
+// 	    modified = true;
+// 	  }
+// 	  sb.append(AC_REP[jx]);
+// 	  continue outer;
+// 	}
+//       }
+//       if (modified) {
+// 	sb.append(ch);
+//       }
+//     }
+//     if (modified) {
+//       return sb.toString();
+//     } else {
+//       return s;
+//     }
+//   }
+
+//   static String toUnaccentedFast0(String s) {
+//     for (int iy = 0; iy < ACCENTTABLE.length; iy++) {
+//       s = StringUtil.replaceString(s, ACCENTTABLE[iy][0], ACCENTTABLE[iy][1]);
+//     }
+//     return s;
+//   }
 
   /** Escape values (and keys) to be included in a comma-separated string
    * of key=value.  Comma, equals and backslash are escaped with

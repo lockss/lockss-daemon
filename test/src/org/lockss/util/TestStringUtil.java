@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.84 2011-06-22 22:27:28 pgust Exp $
+ * $Id: TestStringUtil.java,v 1.85 2011-08-21 23:58:18 tlipkis Exp $
  */
 
 /*
@@ -1095,6 +1095,25 @@ public class TestStringUtil extends LockssTestCase {
     // swedish: Now is the time (small letter 'a' with diaeresis
     assertEquals("Nu ar det dags", StringUtil.toUnaccented("Nu \u00e4r det dags"));
   }
+
+//   public void testToUnaccentedFast() {
+//     assertEquals("abcde", StringUtil.toUnaccentedFast("abcde"));
+//     // german date March 13, 2010 (a-umlaut)
+//     assertEquals("2010/Marz/13",
+// 		 StringUtil.toUnaccentedFast("2010/M\u00e4rz/13"));
+//     // french: third quarter (latin small 'e' with grave)
+//     assertEquals("deuxieme trimestre", 
+//                  StringUtil.toUnaccentedFast("deuxi\u00e8me trimestre"));
+//     // spanish: Good day (small letter 'i' with acute
+//     assertEquals("Buenos dias",
+// 		 StringUtil.toUnaccentedFast("Buenos d\u00edas"));
+//     // norwegian: Now is the time (small letter 'a' with ring above
+//     assertEquals("Na er tiden",
+// 		 StringUtil.toUnaccentedFast("N\u00e5 er tiden"));
+//     // swedish: Now is the time (small letter 'a' with diaeresis
+//     assertEquals("Nu ar det dags",
+// 		 StringUtil.toUnaccentedFast("Nu \u00e4r det dags"));
+//   }
 
   private static class SlowStringReader extends StringReader {
     public SlowStringReader(String str) {
