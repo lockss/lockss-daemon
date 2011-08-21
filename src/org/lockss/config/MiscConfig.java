@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.8 2011-03-15 20:07:33 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.9 2011-08-21 23:57:50 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
-import org.lockss.daemon.MimeTypeMap;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
@@ -55,6 +55,7 @@ public class MiscConfig {
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	  Exporter.setConfig(config, oldConfig, diffs);
+	  AuHealthMetric.setConfig(config, oldConfig, diffs);
 	}
       };
   }
