@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.24 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.25 2011-08-21 23:58:32 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class MockAuState extends AuState {
                      long lastTreeWalk, HashSet crawlUrls,
                      HistoryRepository historyRepo) {
     super(au, lastCrawlTime, lastCrawlAttempt, lastPollTime, lastPollStart,
-	  lastTreeWalk, crawlUrls, 0, 1.0, 1.0, historyRepo);
+	  lastTreeWalk, crawlUrls, 0, -1.0, -1.0, historyRepo);
   }
 
   public long getAuCreationTime() {
@@ -101,6 +101,10 @@ public class MockAuState extends AuState {
   @Override
   public void setV3Agreement(double d) {
     v3Agreement = d;
+  }
+
+  public void setHighestV3Agreement(double d) {
+    highestV3Agreement = d;
   }
 
   public void setLastPollResult(int result) {
