@@ -16,7 +16,7 @@
     >
 
     param[journal_issn] = 1030-9616
-    comment[platform] = online from 2005
+    comment[0] = online from 2005
 
     au < released ; 2005 ; Accounting Research Journal Volume 18 ; 18 >
     au < released ; 2006 ; Accounting Research Journal Volume 19 ; 19 >
@@ -122,7 +122,7 @@
     >
 
     param[journal_issn] = 0002-1466
-    comment[platform] = online from 2000
+    comment[0] = online from 2000
 
     au < released ; 2000 ; Agricultural Finance Review Volume 60 ; 60 >
     au < released ; 2001 ; Agricultural Finance Review Volume 61 ; 61 >
@@ -280,7 +280,7 @@
     >
 
     param[journal_issn] = 0735-8547
-    comment[platform] = online from 1995
+    comment[0] = online from 1995
     comment[merged_into] = 1363-951X
     
     au < released ; 1995 ; American Journal of Police Volume 14 ; 14 >
@@ -460,7 +460,7 @@
     >
 
     param[journal_issn] = 1017-6748
-    comment[platform] = online from 1997
+    comment[0] = online from 1997
     comment[merged_into] = 0307-4803
     
     au < released ; 1997 ; Asian Libraries Volume 6 ; 6 >
@@ -646,7 +646,7 @@
     >
 
     param[journal_issn] = 0965-7967
-    comment[platform] = online from 2000
+    comment[0] = online from 2000
     comment[merged_into] = 1526-5943
 
     au < released ; 2000 ; Balance Sheet Volume 8 ; 8 >
@@ -968,7 +968,7 @@
     >
 
     param[journal_issn] = 1751-5637
-    comment[platform] = online from 2007
+    comment[0] = online from 2007
     
     au < released ; 2007 ; Business Strategy Series Volume 8 ; 8 >
     au < released ; 2008 ; Business Strategy Series Volume 9 ; 9 >
@@ -1153,7 +1153,7 @@
     >
 
     param[journal_issn] = 1477-7274
-    comment[platform] = online from 2003
+    comment[0] = online from 2003
     
     au < released ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 >
     au < released ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 >
@@ -1175,7 +1175,7 @@
     >
 
     param[journal_issn] = 1063-0279
-    comment[platform] = online from 1999
+    comment[0] = online from 1999
     comment[merged_into] = 1466-4100
     
     au < released ; 1999 ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
@@ -1436,7 +1436,7 @@
     >
 
     param[journal_issn] = 1477-7282
-    comment[platform] = online from 2003
+    comment[0] = online from 2003
     
     au < released ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 >
     au < released ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 >
@@ -1882,7 +1882,7 @@
     >
 
     param[journal_issn] = 2040-7149
-    comment[platform] = online from 2010  
+    comment[0] = online from 2010  
     
     au < released ; 2010 ; Equality, Diversity and Inclusion: An International Journal Volume 29 ; 29 >
     au < released ; 2011 ; Equality, Diversity and Inclusion: An International Journal Volume 30 ; 30 >
@@ -1934,7 +1934,7 @@
     >
 
     param[journal_issn] = 0955-534X
-    comment[platform] = online from 1989
+    comment[0] = online from 1989
     
     au < released ; 1989 ; European Business Review Volume 89 ; 89 >
     au < released ; 1990 ; European Business Review Volume 90 ; 90 >
@@ -2056,7 +2056,7 @@
     >
 
     param[journal_issn] = 0953-3230
-    comment[platform] = online from 1989
+    comment[0] = online from 1989
     comment[merged_into] = 1362-0436
 
     au < released ; 1989 ; Executive Development Volume 2 ; 2 >
@@ -2147,7 +2147,7 @@
     >
 
     param[journal_issn] = 1754-2413
-    comment[platform] = online from 2008
+    comment[0] = online from 2008
     
     au < released ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
     au < released ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
@@ -2198,7 +2198,7 @@
     >
 
     param[journal_issn] = 0965-4283
-    comment[platform] = online from 1992
+    comment[0] = online from 1992
     
     au < released ; 1992 ; Health Education Volume 92 ; 92 >
     au < released ; 1993 ; Health Education Volume 93 ; 93 >
@@ -2232,7 +2232,7 @@
     >
 
     param[journal_issn] = 0955-2065
-    comment[platform] = online from 1992
+    comment[0] = online from 1992
     comment[merged_into] = 0268-9235
 
     au < released ; 1992 ; Health Manpower Management Volume 18 ; 18 >    
@@ -2265,7 +2265,7 @@
     issnl = 0819-8691 
     >
 
-    comment[platform] = online from 2004
+    comment[0] = online from 2004
     param[journal_issn] = 0819-8691
 
     au < released ; 2004 ; History of Education Review Volume 33 ; 33 >
@@ -2313,7 +2313,7 @@
     >
 
     param[journal_issn] = 0967-0734
-    comment[platform] = online from 2002
+    comment[0] = online from 2002
     
     au < released ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
     au < released ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
@@ -2336,7 +2336,7 @@
     >
 
     param[journal_issn] = 0828-8666
-    comment[platform] = online from 1989 
+    comment[0] = online from 1989 
     
     au < released ; 1989 ; Humanomics Volume 5 ; 5 >
     au < released ; 1990 ; Humanomics Volume 6 ; 6 >
@@ -2523,7 +2523,7 @@
     >
 
     param[journal_issn] = 0263-5577
-    comment[platform] = online from 1970
+    comment[0] = online from 1970
 
     au < released ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
     au < released ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 >    
@@ -2842,7 +2842,7 @@
     >
 
     param[journal_issn] = 1834-7649
-    comment[platform] =  online from 2007
+    comment[0] =  online from 2007
     
     au < released ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
     au < released ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
@@ -2919,7 +2919,7 @@
     >
 
     param[journal_issn] = 0955-6214
-    comment[platform] =  online from 1990
+    comment[0] =  online from 1990
     comment[continued_by] = 1362-0436
 
     au < released ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
@@ -3115,7 +3115,7 @@
     >
 
     param[journal_issn] = 1446-8956
-    comment[platform] = online from 2003
+    comment[0] = online from 2003
     
     au < released ; 2003 ; International Journal of Development Issues Volume 2 ; 2 > 
     au < released ; 2004 ; International Journal of Development Issues Volume 3 ; 3 > 
@@ -3376,7 +3376,7 @@
     >
 
     param[journal_issn] = 1754-243X
-    comment[platform] = online from 2008
+    comment[0] = online from 2008
     
     au < released ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
     au < released ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
@@ -3784,7 +3784,7 @@
     >
 
     param[journal_issn] = 1741-0401
-    comment[platform] = online from 2004
+    comment[0] = online from 2004
     
     au < released ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
     au < released ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
@@ -4156,7 +4156,7 @@
     >
 
     param[journal_issn] = 1751-1062
-    comment[platform] =  online from 2007
+    comment[0] =  online from 2007
     
     au < released ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
     au < released ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
@@ -4408,7 +4408,7 @@
     >
 
     param[journal_issn] = 0967-5426
-    comment[platform] = online from 2000
+    comment[0] = online from 2000
     
     au < released ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 >
     au < released ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 >
@@ -4953,7 +4953,7 @@
     >
 
     param[journal_issn] = 1741-0398
-    comment[platform] = online from 2004
+    comment[0] = online from 2004
     
     au < released ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 >
     au < released ; 2005 ; Journal of Enterprise Information Management Volume 18 ; 18 >
@@ -5168,7 +5168,7 @@
     >
 
     param[journal_issn] = 1366-4387
-    comment[platform] = online from 2005
+    comment[0] = online from 2005
     
     au < released ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
     au < released ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 >
@@ -5258,7 +5258,7 @@
     >
 
     param[journal_issn] = 1477-7266
-    comment[platform] =  online from 2003
+    comment[0] =  online from 2003
     
     au < released ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 >
     au < released ; 2004 ; Journal of Health Organization and Management Volume 18 ; 18 >
@@ -5639,7 +5639,7 @@
     >
 
     param[journal_issn] = 1751-1348
-    comment[platform] = online from 2006
+    comment[0] = online from 2006
 
     au < released ; 2006 ; Journal of Management History Volume 12 ; 12 >
     au < released ; 2007 ; Journal of Management History Volume 13 ; 13 >
@@ -5748,7 +5748,7 @@
     >
 
     param[journal_issn] = 1741-038X
-    comment[platform] = online from 2004
+    comment[0] = online from 2004
     
     au < released ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
     au < released ; 2005 ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
@@ -5964,7 +5964,7 @@
     >
 
     param[journal_issn] = 1463-578X
-    comment[platform] = online from 1999
+    comment[0] = online from 1999
     
     au < released ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
     au < released ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
@@ -6073,7 +6073,7 @@
     >
 
     param[journal_issn] = 2040-7122
-    comment[platform] = online from 2010
+    comment[0] = online from 2010
     
     au < released ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 >
     au < released ; 2011 ; Journal of Research in Interactive Marketing Volume 5 ; 5 >
@@ -6154,7 +6154,7 @@
     >
 
     param[journal_issn] = 1757-5818
-    comment[platform] = online from 2009
+    comment[0] = online from 2009
     
     au < released ; 2009 ; Journal of Service Management Volume 20 ; 20 >
     au < released ; 2010 ; Journal of Service Management Volume 21 ; 21 >
@@ -6459,7 +6459,7 @@
     >
 
     param[journal_issn] = 1751-1879
-    comment[platform] = online from 1997
+    comment[0] = online from 1997
     
     au < released ; 1997 ; Leadership in Health Services Volume 10 ; 10 >
     au < released ; 1998 ; Leadership in Health Services Volume 11 ; 11 >
@@ -6826,7 +6826,7 @@
     >
 
     param[journal_issn] = 0962-2519
-    comment[platform] = online from 1992
+    comment[0] = online from 1992
     comment[merged_into] = 0967-0734
 
     au < released ; 1992 ; Management Development Review Volume 5 ; 5 >
@@ -6847,7 +6847,7 @@
     >
 
     param[journal_issn] = 1477-7835
-    comment[platform] = online from 2003
+    comment[0] = online from 2003
     
     au < released ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 >
     au < released ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
@@ -6915,7 +6915,7 @@
     >
 
     param[journal_issn] = 2040-8269
-    comment[platform] = online from 2010 
+    comment[0] = online from 2010 
     
     au < released ; 2010 ; Management Research Review Volume 33 ; 33 >
     au < released ; 2011 ; Management Research Review Volume 34 ; 34 >
@@ -7202,6 +7202,28 @@
 
   { 
     title <
+      name = Meditari Accountancy Research ;
+      issn = 1022-2529 
+    >
+
+    param[journal_issn] = 1022-2529
+
+    au < exists; 2010 ; Meditari Accountancy Research Volume 8 ; 8 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 9 ; 9 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 10 ; 10 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 11 ; 11 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 12 ; 12 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 13 ; 13 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 14 ; 14 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 15 ; 15 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 16 ; 16 > 
+    au < exists; 2010 ; Meditari Accountancy Research Volume 17 ; 17 >
+    au < exists; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
+
+  }
+
+  { 
+    title <
       name = Mental Health and Social Inclusion ;
       issn = 2042-8308 ;
       eissn = 2042-8316 ;
@@ -7326,7 +7348,7 @@
     >
 
     param[journal_issn] = 1573-6105
-    comment[platform] = online from 2010
+    comment[0] = online from 2010
     
     au < released ; 2010 ; Multidiscipline Modeling in Materials and Structures Volume 6 ; 6 >
     au < released ; 2011 ; Multidiscipline Modeling in Materials and Structures Volume 7 ; 7 >
@@ -7341,7 +7363,7 @@
     >
 
     param[journal_issn] = 1525-383X 
-    comment[platform] = online from 2007
+    comment[0] = online from 2007
     
     au < released ; 2007 ; Multinational Business Review Volume 15 ; 15 >
     au < released ; 2008 ; Multinational Business Review Volume 16 ; 16 >
@@ -7501,7 +7523,7 @@
     >
 
     param[journal_issn] = 0034-6659
-    comment[platform] = online from 1971
+    comment[0] = online from 1971
 
     au < released ; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
     au < released ; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
@@ -7595,7 +7617,7 @@
     >
 
     param[journal_issn] = 1074-8121
-    comment[platform] = online from 2000
+    comment[0] = online from 2000
     
     au < released ; 2000 ; On The Horizon Volume 8 ; 8 >
     au < released ; 2001 ; On The Horizon Volume 9 ; 9 >
@@ -7669,7 +7691,7 @@
     >
 
     param[journal_issn] = 0114-0582
-    comment[platform] = online from 1997 
+    comment[0] = online from 1997 
     
     au < released ; 1997 ; Pacific Accounting Review Volume 9 ; 9 >
     au < doesNotExist ; 1998 ; Pacific Accounting Review Volume 10 ; 10 >
@@ -7696,7 +7718,7 @@
     >
 
     param[journal_issn] = 1463-4449
-    comment[platform] = online from 1999
+    comment[0] = online from 1999
     
     au < released ; 1999 ; Participation and Empowerment: An International Journal Volume 7 ; 7 >
 
@@ -7842,7 +7864,7 @@
     >
 
     param[journal_issn] = 0141-2949
-    comment[platform] = online from 1995 
+    comment[0] = online from 1995 
     comment[continued_by] = 1363-951X
     
     au < released ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 >
@@ -7887,7 +7909,7 @@
     >
 
     param[journal_issn] = 0968-4905
-    comment[platform] = online from 1997
+    comment[0] = online from 1997
     comment[merged_into] = 1061-0421
     
     au < released ; 1997 ; Pricing Strategy and Practice Volume 5 ; 5 >
@@ -8205,7 +8227,7 @@
     >
 
     param[journal_issn] = 0950-4125
-    comment[platform] = online from 1997
+    comment[0] = online from 1997
     
     au < released ; 1997 ; Reference Reviews Volume 11 ; 11 >
     au < released ; 1998 ; Reference Reviews Volume 12 ; 12 >
@@ -8502,7 +8524,7 @@
     >
 
     param[journal_issn] = 0258-0543
-    comment[platform] = online from 2002
+    comment[0] = online from 2002
     
     au < released ; 2002 ; Strategic Direction Volume 18 ; 18 >
     au < released ; 2003 ; Strategic Direction Volume 19 ; 19 >
@@ -8526,7 +8548,7 @@
     >
 
     param[journal_issn] = 1475-4398
-    comment[platform] = online from 2005
+    comment[0] = online from 2005
     
     au < released ; 2004-2005 ; Strategic HR Review Volume 4 ; 4 >
     au < released ; 2006 ; Strategic HR Review Volume 5 ; 5 >
@@ -8565,7 +8587,7 @@
     >
 
     param[journal_issn] = 1087-8572
-    comment[platform] = online from 1975  
+    comment[0] = online from 1975  
     
     au < released ; 1975 ; Strategy & Leadership Volume 3 ; 3 >
     au < released ; 1976 ; Strategy & Leadership Volume 4 ; 4 >
@@ -8883,7 +8905,7 @@
     >
 
     param[journal_issn] = 1754-2731
-    comment[platform] = online from 2008 
+    comment[0] = online from 2008 
     comment[continues] = 0954-478X
     
     au < released ; 2008 ; The TQM Journal Volume 20 ; 20 >
@@ -8954,7 +8976,7 @@
     >
 
     param[journal_issn] = 1369-7234
-    comment[platform] = Online from 2002 
+    comment[0] = online from 2002 
     comment[continued_by] = 1477-7282
     
     au < released ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >
