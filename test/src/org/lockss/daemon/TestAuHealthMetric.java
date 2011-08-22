@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.2 2011-08-22 19:26:48 tlipkis Exp $
+ * $Id: TestAuHealthMetric.java,v 1.3 2011-08-22 22:15:15 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,11 @@ public class TestAuHealthMetric extends LockssTestCase {
       return true;
     }
     return false;
+  }
+
+  public void testIsSupported() {
+    assertEquals(PlatformUtil.getInstance().hasScriptingSupport(),
+		 AuHealthMetric.isSupported());
   }
 
   public void testAccessors() {

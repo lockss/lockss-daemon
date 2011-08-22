@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.2 2011-08-22 19:26:48 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.3 2011-08-22 22:15:15 tlipkis Exp $
  */
 
 /*
@@ -179,6 +179,13 @@ public class AuHealthMetric {
    */
   public static double getInclusionThreshold() {
     return inclusionThreshold;
+  }
+  
+  /**
+   * Return true is health metrics are supported.
+   */
+  public static boolean isSupported() {
+    return PlatformUtil.getInstance().hasScriptingSupport();
   }
   
   /** Called by org.lockss.config.MiscConfig
