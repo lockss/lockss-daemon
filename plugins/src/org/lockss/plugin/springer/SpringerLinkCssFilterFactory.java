@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkCssFilterFactory.java,v 1.2 2011-06-08 23:07:55 thib_gc Exp $
+ * $Id: SpringerLinkCssFilterFactory.java,v 1.3 2011-08-22 23:50:46 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class SpringerLinkCssFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return new ReaderInputStream(new HtmlTagFilter(StreamUtil.getReader(null, encoding),
+    return new ReaderInputStream(new HtmlTagFilter(StreamUtil.getReader(in, encoding),
                                                    new TagPair("url(", ")")));
   }
   
