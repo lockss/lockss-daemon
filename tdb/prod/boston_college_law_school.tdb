@@ -72,4 +72,19 @@
 
   }
 
+  {
+
+    title <
+      name = Boston College Third World Law Journal ;
+      issn = 0276-3583
+    >
+
+    param[journal_abbr] = twlj
+
+    au < exists ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 >
+    au < exists ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 >
+    au < exists ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 >
+
+  }
+
 }
