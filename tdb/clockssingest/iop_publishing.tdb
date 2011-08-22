@@ -87,7 +87,7 @@
     comment[param] = eissn preferred
 
     au < released ; manifest ; 2009 ; Biofabrication Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; Biofabrication Volume 2 ; 2 > 
+    au < testing ; exists ; 2010 ; Biofabrication Volume 2 ; 2 > 
     au < manifest ; exists ; 2011 ; Biofabrication Volume 3 ; 3 > 
 
   }
@@ -108,7 +108,7 @@
     au < exists ; exists ; 2007 ; Bioinspiration & Biomimetics Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Bioinspiration & Biomimetics Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Bioinspiration & Biomimetics Volume 4 ; 4 > 
-    au < manifest ; exists ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 > 
+    au < testing ; exists ; 2010 ; Bioinspiration & Biomimetics Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
 
   }
@@ -129,7 +129,7 @@
     au < exists ; exists ; 2007 ; Biomedical Materials Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Biomedical Materials Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Biomedical Materials Volume 4 ; 4 > 
-    au < manifest ; exists ; 2010 ; Biomedical Materials Volume 5 ; 5 > 
+    au < testing ; exists ; 2010 ; Biomedical Materials Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
 
   }
@@ -197,7 +197,7 @@
 
     au < manifest ; exists ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 > 
     au < manifest ; exists ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 > 
-    au < manifest ; exists ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
+    au < testing ; exists ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
     au < manifest ; exists ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
 
   }
@@ -251,7 +251,7 @@
 
     au < manifest ; exists ; 2008 ; Chinese Physics C Volume 32 ; 32 > 
     au < manifest ; exists ; 2009 ; Chinese Physics C Volume 33 ; 33 > 
-    au < manifest ; exists ; 2010 ; Chinese Physics C Volume 34 ; 34 > 
+    au < testing ; exists ; 2010 ; Chinese Physics C Volume 34 ; 34 > 
     au < manifest ; exists ; 2011 ; Chinese Physics C Volume 35 ; 35 > 
 
   }
@@ -721,7 +721,7 @@
     comment[param] = eissn preferred
     comment[au_start_url] = redirects to issue toc, missing permission statement
 
-    au < testing ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
+    au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
