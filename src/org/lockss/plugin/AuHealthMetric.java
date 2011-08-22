@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.4 2011-08-21 23:58:04 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.5 2011-08-22 16:52:04 easyonthemayo Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ import org.lockss.util.Logger;
  * configurable polynomial/expression which informs the interpretation of the 
  * metrics. 
  *  
- *
+ * @deprecated Replaced by a non-dummy version in org.lockss.daemon
  */
 public class AuHealthMetric {
 

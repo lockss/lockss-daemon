@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.18 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.19 2011-08-22 16:52:04 easyonthemayo Exp $
  */
 
 /*
@@ -40,7 +40,8 @@ import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbUtil;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuHealthMetric;
+import org.lockss.daemon.AuHealthMetric;
+import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
 
@@ -292,30 +293,32 @@ public class KbartConverter {
     while (it.hasNext()) {
       final KbartTitle kbt = it.next();
       if (showHealth) {
-	// Add a KbartTitle wrapper that decorates it with a health value
-	double health = AuHealthMetric.getAggregateHealth(
-	    new ArrayList<ArchivalUnit>() {{
-	      for (TdbAu tdbAu : map.get(kbt).tdbAus) add(ausMap.get(tdbAu));
-	    }}
-	);
-	// If there are no range fields in the output, aggregate all the 
-	// individual KbartTitle healths. 
-	if (!rangeFieldsIncluded) {
+	try {
+	  // Add a KbartTitle wrapper that decorates it with a health value
+	  double health = AuHealthMetric.getAggregateHealth(
+	      new ArrayList<ArchivalUnit>() {{
+		for (TdbAu tdbAu : map.get(kbt).tdbAus) add(ausMap.get(tdbAu));
+	      }}
+	  );
+	  // If there are no range fields in the output, aggregate all the 
+	  // individual KbartTitle healths. 
+	  if (!rangeFieldsIncluded) {
+	    int numContributingAus = map.get(kbt).tdbAus.size();
+	    // Health is an average over the AUs
+	    totalHealth += health * numContributingAus;
+	    numTdbAus += numContributingAus;
+	    // On the final KbartTitle, calculate the average health
+	    if (!it.hasNext()) {
+	      res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numTdbAus)); 
+	    }
+	  } else
+	    res.add(new KbartTitleHealthWrapper(kbt, health));
+	} catch (HealthUnavailableException e) {
 	  // Total health is unknown if any individual health is unknown
-	  if (health==AuHealthMetric.UNKNOWN_HEALTH) {
-	    res.add(new KbartTitleHealthWrapper(kbt, AuHealthMetric.UNKNOWN_HEALTH));
-	    break;
-	  }
-	  int numContributingAus = map.get(kbt).tdbAus.size();
-	  // Health is an average over the AUs
-	  totalHealth += health * numContributingAus;
-	  numTdbAus += numContributingAus;
-	  // On the final KbartTitle, calculate the average health
-	  if (!it.hasNext()) {
-	    res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numTdbAus)); 
-	  }
-	} else
-	  res.add(new KbartTitleHealthWrapper(kbt, health));
+	  log.warning("KbartTitle has unknown health due to AU.", e);
+	  //res.add(new KbartTitleHealthWrapper(kbt, AuHealthMetric.UNKNOWN_HEALTH));
+	  res.add(kbt);
+	}
       } else 
 	res.add(kbt);
     }

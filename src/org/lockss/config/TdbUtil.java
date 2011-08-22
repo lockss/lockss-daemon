@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.5 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.6 2011-08-22 16:52:04 easyonthemayo Exp $
  */
 
 /*
@@ -37,9 +37,11 @@ import java.util.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuHealthMetric;
+import org.lockss.daemon.AuHealthMetric;
+import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
 import org.lockss.plugin.AuOrderComparator;
 import org.lockss.plugin.AuHealthMetric.PreservationStatus;
+import org.lockss.util.Logger;
 
 /**
  * Static utility methods for getting lists of Tdb entities. Sometimes the 
@@ -63,14 +65,15 @@ import org.lockss.plugin.AuHealthMetric.PreservationStatus;
  */
 public class TdbUtil {
   
+  private static final Logger logger = Logger.getLogger("TdbUtil");
+
   /**
    * The minimum health an ArchivalUnit must have in order to be included in
    * the list of preserved AUs. If a unit's health falls below this value, it
    * will not be included and that may result in a coverage gap within a range 
    * of AUs.
    */
-  public static final float DEFAULT_HEALTH_INCLUSION_THRESHOLD = AuHealthMetric.calculateInclusionThreshold();
-  //public static final float DEFAULT_HEALTH_INCLUSION_THRESHOLD = .8f;
+  public static final double DEFAULT_HEALTH_INCLUSION_THRESHOLD = AuHealthMetric.getInclusionThreshold();
 
   /**
    * Get the Tdb record from the current configuration.
@@ -249,8 +252,13 @@ public class TdbUtil {
     List<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     LockssDaemon daemon = LockssDaemon.getLockssDaemon();
     for (ArchivalUnit au : getConfiguredAus()) {
-      if (AuHealthMetric.getHealth(au) >= DEFAULT_HEALTH_INCLUSION_THRESHOLD) 
-	aus.add(au);
+      try {
+	if (AuHealthMetric.getHealth(au) >= DEFAULT_HEALTH_INCLUSION_THRESHOLD) 
+	  aus.add(au);
+      } catch (HealthUnavailableException e) {
+	// Do not add AUs whose health is unknown
+	logger.warning("ArchivalUnit omitted from list of preserved AUs.", e);
+      }
     }
     return aus;
   }
