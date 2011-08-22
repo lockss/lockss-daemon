@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.219 2009-09-04 03:52:20 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.220 2011-08-22 00:11:33 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class NodeManagerImpl
   public void startService() {
     super.startService();
     // gets all the managers
-    if (logger.isDebug()) logger.debug("Starting: " + managedAu);
+    if (logger.isDebug2()) logger.debug2("Starting: " + managedAu);
     LockssDaemon theDaemon = getDaemon();
     nodeMgrMgr = theDaemon.getNodeManagerManager();
     historyRepo = theDaemon.getHistoryRepository(managedAu);

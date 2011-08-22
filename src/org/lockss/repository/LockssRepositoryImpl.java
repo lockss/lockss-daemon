@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82 2010-10-07 01:37:25 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.83 2011-08-22 00:11:55 tlipkis Exp $
  */
 
 /*
@@ -322,7 +322,9 @@ public class LockssRepositoryImpl
           "Couldn't load param.");
     }
     String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
-    logger.debug("repo: " + auDir + ", au: " + au.getName());
+    if (logger.isDebug2()) {
+      logger.debug2("repo: " + auDir + ", au: " + au.getName());
+    }
     staticCacheLocation = extendCacheLocation(root);
     LockssRepositoryImpl repo = new LockssRepositoryImpl(auDir);
     Plugin plugin = au.getPlugin();
