@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.1 2011-08-21 23:57:49 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.2 2011-08-22 19:26:48 tlipkis Exp $
  */
 
 /*
@@ -264,6 +264,10 @@ public class AuHealthMetric {
       throw new HealthScriptException("No health metric script is defined");
     }
     ScriptEngine engine = getEngine();
+    if (engine == null) {
+      throw new HealthScriptException("No script engine available for " +
+				      scriptLanguage);
+    }
     Object val = null;
     try {
       val = engine.eval(healthExpr, getBindings());
@@ -330,6 +334,20 @@ public class AuHealthMetric {
     }
     public HealthValueException(Throwable cause) {
       super(cause);
+    }
+  }
+
+  // Enumerate and print details of supported script engines
+  public static void main(String[] args) {
+    ScriptEngineManager sem = new ScriptEngineManager();
+    for (ScriptEngineFactory fact : sem.getEngineFactories()) {
+      log.info("fact: " + fact.getEngineName());
+      log.info(" ver: " + fact.getEngineVersion());
+      log.info(" nms: " + fact.getNames());
+      log.info(" lng: " + fact.getLanguageName());
+      log.info(" ext: " + fact.getExtensions());
+//       log.info(" mth: " + fact.getMethodCallSyntax("obj", "mth", "arg1", "arg2"));
+//       log.info(" out: " + fact.getOutputStatement("to display"));
     }
   }
 }

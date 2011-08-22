@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.17 2011-03-15 20:07:47 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.18 2011-08-22 19:26:48 tlipkis Exp $
  */
 
 /*
@@ -173,7 +173,13 @@ public class PlatformUtil {
    * @return <code>true</code> if the file system is case-sensitive
    */
   public boolean isCaseSensitiveFileSystem() {
-	  return true;
+    return true;
+  }
+  
+  /**
+   * Return true if the platform includes scripting support */
+  public boolean hasScriptingSupport() {
+    return true;
   }
   
   /**
@@ -536,8 +542,8 @@ public class PlatformUtil {
     }
 
     /** Get stat vector of this java process from /proc/curproc.status .
-   * Read the stat file with java code so the executing process (self) is
-   * java. */
+     * Read the stat file with java code so the executing process (self) is
+     * java. */
     Vector getMyProcStats() throws UnsupportedException {
       return getProcStats("curproc");
     }
@@ -558,6 +564,12 @@ public class PlatformUtil {
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
       }
+    }
+
+    /**
+     * Return false as OpenBSD port is missing the javascript engine */
+    public boolean hasScriptingSupport() {
+      return false;
     }
   }
 

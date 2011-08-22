@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.1 2011-08-21 23:57:49 tlipkis Exp $
+ * $Id: TestAuHealthMetric.java,v 1.2 2011-08-22 19:26:48 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,15 @@ public class TestAuHealthMetric extends LockssTestCase {
     ConfigurationUtil.addFromArgs(AuHealthMetric.PARAM_HEALTH_EXPR, expr);
   }
   
+  boolean noScripting(String test) {
+    if (!PlatformUtil.getInstance().hasScriptingSupport()) {
+      log.debug("Skipping " + test +
+		" because platform has no scripting support.");
+      return true;
+    }
+    return false;
+  }
+
   public void testAccessors() {
     setupAu(au1, SubstanceChecker.State.Unknown, 0.8, 0.9, 2 * DAY, 0, true);
     TimeBase.setSimulated(5 * DAY);
@@ -106,6 +115,7 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   public void testIll()
       throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testIll")) return;
     setupAu(au1, SubstanceChecker.State.Unknown, 0.8, 0.9, 2 * DAY, 0, true);
 
     setHealthExpr("\"String value\"");
@@ -150,8 +160,23 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   }
 
+  public void testNoEngine() throws AuHealthMetric.HealthUnavailableException {
+    setupAu(au1, SubstanceChecker.State.Unknown, 0.8, 0.9, 2 * DAY, 0, true);
+    ConfigurationUtil.addFromArgs(AuHealthMetric.PARAM_SCRIPT_LANGUAGE,
+				  "NonexistentLanguage");
+
+    setHealthExpr("1.0");
+    try {
+      AuHealthMetric.getHealth(au1);
+      fail("Should throw HealthScriptException");
+    } catch (AuHealthMetric.HealthScriptException e) {
+      assertMatchesRE("No script engine available", e.getMessage());
+    }
+  }
+
   public void testExprVars()
       throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testExprVars")) return;
     setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 3 * DAY, -1, true);
     setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 4 * DAY, 2000, false);
     TimeBase.setSimulated(5 * DAY);
@@ -209,6 +234,7 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   public void testFunction()
       throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testFunction")) return;
     setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 5*DAY, -1, true);
     setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 10*DAY, 2000, false);
     setupAu(au3, SubstanceChecker.State.Yes, 0.9, 1.0, 4*DAY, 2000, false);
@@ -221,6 +247,7 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   public void testDefaultFunction()
       throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testDefaultFunction")) return;
     setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 5*DAY, -1, true);
     setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 10*DAY, 2000, false);
     setupAu(au3, SubstanceChecker.State.Yes, 0.9, 1.0, 4*DAY, 2000, false);
@@ -233,6 +260,7 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   public void testGetAggregateHealth()
       throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testGetAggregateHealth")) return;
     setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 5*DAY, -1, true);
     setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 10*DAY, 2000, false);
     setupAu(au3, SubstanceChecker.State.Yes, 0.9, 1.0, 4*DAY, 2000, false);
