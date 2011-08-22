@@ -1,0 +1,59 @@
+{
+
+  publisher <
+    name = United Kingdom Serials Group
+  >
+
+  plugin = needs.plugin
+  comment[platform] = Metapress (see RT 3765)
+  param[base_url] = http://uksg.metapress.com/
+
+  {
+
+    title <
+      name = The E-Resources Management Handbook ;
+      type = book ;
+      isbn = 0-9552448-0-3 
+    >
+
+  }
+
+  {
+
+    title <
+      name = Serials: The Journal for the Serials Community ;
+      issn = 0953-0460 ;
+      eissn = 1475-3308 ;
+      issnl = 0953-0460
+    >
+
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+    au < exists ; exists ; 1988 ; Serials: The Journal for the Serials Community Volume 1 ; 1 >
+    au < exists ; exists ; 1989 ; Serials: The Journal for the Serials Community Volume 2 ; 2 >
+    au < exists ; exists ; 1990 ; Serials: The Journal for the Serials Community Volume 3 ; 3 >
+    au < exists ; exists ; 1991 ; Serials: The Journal for the Serials Community Volume 4 ; 4 >
+    au < exists ; exists ; 1992 ; Serials: The Journal for the Serials Community Volume 5 ; 5 >
+    au < exists ; exists ; 1993 ; Serials: The Journal for the Serials Community Volume 6 ; 6 >
+    au < exists ; exists ; 1994 ; Serials: The Journal for the Serials Community Volume 7 ; 7 >
+    au < exists ; exists ; 1995 ; Serials: The Journal for the Serials Community Volume 8 ; 8 >
+    au < exists ; exists ; 1996 ; Serials: The Journal for the Serials Community Volume 9 ; 9 >
+    au < exists ; exists ; 1997 ; Serials: The Journal for the Serials Community Volume 10 ; 10 >
+    au < exists ; exists ; 1998 ; Serials: The Journal for the Serials Community Volume 11 ; 11 >
+    au < exists ; exists ; 1999 ; Serials: The Journal for the Serials Community Volume 12 ; 12 >
+    au < exists ; exists ; 2000 ; Serials: The Journal for the Serials Community Volume 13 ; 13 >
+    au < exists ; exists ; 2001 ; Serials: The Journal for the Serials Community Volume 14 ; 14 >
+    au < exists ; exists ; 2002 ; Serials: The Journal for the Serials Community Volume 15 ; 15 >
+    au < exists ; exists ; 2003 ; Serials: The Journal for the Serials Community Volume 16 ; 16 >
+    au < exists ; exists ; 2004 ; Serials: The Journal for the Serials Community Volume 17 ; 17 >
+    au < exists ; exists ; 2005 ; Serials: The Journal for the Serials Community Volume 18 ; 18 >
+    au < exists ; exists ; 2006 ; Serials: The Journal for the Serials Community Volume 19 ; 19 >
+    au < exists ; exists ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
+    au < exists ; exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
+    au < exists ; exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
+    au < exists ; exists ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
+    au < exists ; exists ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
+
+  }
+
+}
