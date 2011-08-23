@@ -15,7 +15,8 @@
       issn = 1083-589X ;
       issnl = 1083-589X
     >  
-
+    
+    comment[ecp] = will change web site to http://ecp.ejpecp.org
     param[base_url] = http://www.math.washington.edu/~ejpecp/ECP/
     
     au < manifest ; 1996 ; Electronic Communications in Probability 1996 ; 1 ; 1996 >
@@ -44,6 +45,7 @@
       issnl = 1083-6489
     > 
     
+    comment[ecp] = will change web site to http://ejp.ejpecp.org
     param[base_url] = http://www.math.washington.edu/~ejpecp/
 
     au < manifest ; 1996 ; Electronic Journal of Probability 1996 ; 1 ; 1996 >
