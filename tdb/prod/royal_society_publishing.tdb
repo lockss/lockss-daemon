@@ -224,20 +224,7 @@
 
   }
 
-  {
 
-    title <
-      name = Open Biology ;
-      issn = ;
-      eissn = ;
-      issnl = 
-    >
-    
-    param[base_url] = 
-    comment = Open Biology will begin receiving submissions of research articles starting in July 2011
-      
-  }
-  
   {
 
     title <
@@ -248,6 +235,7 @@
     >
 
     param[base_url] = http://rsta.royalsocietypublishing.org/
+    comment = Open Biology will begin receiving submissions of research articles starting in July 2011
   
   }
   
