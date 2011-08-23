@@ -3831,9 +3831,6 @@
     param[base_url] = http://ehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2004 ; English Historical Review Volume 120 ; 120 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; English Historical Review Volume CXXI ; CXXI >
-    au < HighWireStrVolPlugin ; down ; 2006 ; English Historical Review Volume CXXII ; CXXII >
     au < HighWirePressH20Plugin ; exists ; 1886 ; English Historical Review Volume I ; I >
     au < HighWirePressH20Plugin ; exists ; 1887 ; English Historical Review Volume II ; II >
     au < HighWirePressH20Plugin ; exists ; 1888 ; English Historical Review Volume III ; III >
@@ -3953,8 +3950,11 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; English Historical Review Volume 117 ; 117 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; English Historical Review Volume 118 ; 118 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; English Historical Review Volume 119 ; 119 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; English Historical Review Volume 120 ; 120 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; English Historical Review Volume 120 ; 120 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; English Historical Review Volume CXXI [superseded] ; CXXI >
     au < HighWirePressH20Plugin ; released ; 2006 ; English Historical Review Volume CXXI ; CXXI >
+    au < HighWireStrVolPlugin ; superseded ; 2007 ; English Historical Review Volume CXXII [superseded] ; CXXII >
     au < HighWirePressH20Plugin ; released ; 2007 ; English Historical Review Volume CXXII ; CXXII >
     au < HighWirePressH20Plugin ; released ; 2008 ; English Historical Review Volume CXXIII ; CXXIII >
     au < HighWirePressH20Plugin ; released ; 2009 ; English Historical Review Volume CXXIV ; CXXIV >
@@ -6262,7 +6262,7 @@
   {
 
     title <
-      name = IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science ;
+      name = IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences ;
       issn = 0916-8508 ;
       eissn = 1745-1337 ;
       issnl = 0916-8508
@@ -6276,8 +6276,8 @@
     param[base_url] = http://ietfec.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E89-A ; E89-A >
-    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Science Volume E90-A ; E90-A >
+    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences Volume E89-A ; E89-A >
+    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences Volume E90-A ; E90-A >
 
     }
 
