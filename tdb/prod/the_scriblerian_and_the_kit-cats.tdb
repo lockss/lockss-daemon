@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = The Scriblerian and the Kit-Cats
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Scriblerian and the Kit-Cats ;
+      issn = 0022-6862 ;
+      issnl = 0022-6862
+    >
+
+	comment[upcoming] = this journal is upcoming in projectmuse
+
+  }
+    
+}
