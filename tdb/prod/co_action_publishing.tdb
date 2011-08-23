@@ -22,6 +22,19 @@
   }
 
   {
+
+    title <
+      name = BLFT: BarnelitterÃ¦rt forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
+      eissn = 2000-7493 ;
+      issnl = 2000-7493       
+    >
+
+    param[base_url] = http://www.childlitaesthetics.net/
+    param[journal_id] = blft
+
+  }
+    
+  {
     title <
       name = Diabetic Foot & Ankle ;
       eissn = 2000-625X ;
@@ -31,6 +44,8 @@
       param[base_url] = http://www.diabeticfootandankle.net/
       param[journal_id] = dfa/
 
+    au < exists ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+    
   }
 
   {
@@ -214,6 +229,18 @@
     au < manifest ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < manifest ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < manifest ; 2010 ; Libyan Journal of Medicine Volume 5 ; 5 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Mechanical Circulatory Support ;
+      issn = 2000-6993
+    >
+
+    param[base_url] = http://www.mechanicalcirculatorysupport.net/
+    param[journal_id] = mcs
 
   }
 

@@ -11,7 +11,8 @@
 
     title <
       name = Annals of Innovation & Entrepreneurship ;
-      issn = 2000-7396
+      eissn = 2000-7396 ;
+      issnl = 2000-7396 
     >
 
     param[base_url] = http://www.innovationandentrepreneurship.net/
@@ -24,14 +25,15 @@
   {
 
     title <
-      name = BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
-      issn = 2000-7493
+      name = BLFT: BarnelitterÃ¦rt forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
+      eissn = 2000-7493 ;
+      issnl = 2000-7493       
     >
 
     param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = blft
 
-    au < released ; crawling ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
+    au < released ; crawling ; 2010 ; BLFT: BarnelitterÃ¦rt forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
 
   }
     
@@ -39,7 +41,8 @@
 
     title <
       name = Diabetic Foot & Ankle ;
-      issn = 2000-625X
+      eissn = 2000-625X ;
+      issnl = 2000-625X
     >
 
     param[base_url] = http://www.diabeticfootandankle.net/
@@ -69,9 +72,32 @@
   {
 
     title <
+      name = European Journal of Psychotraumatology (EJPT) ;
+      eissn = 2000-8066 ;
+      issnl = 2000-8066
+    >
+
+  }
+
+  {
+    title <
+      name = European Journal of Psychotraumatology Supplement ;
+      issn = 2000-8198 ;
+      eissn = 2000-818X ;
+      issnl = 2000-8198
+    >
+
+      param[base_url] = http://www.polarresearch.net/
+      param[journal_id] = ejpt
+
+  }
+
+  {
+
+    title <
       name = Food & Nutrition Research ;
       issn = 1654-6628 ;
-      eissn = 1654-661
+      eissn = 1654-661X
     >
 
     param[base_url] = http://www.foodandnutritionresearch.net/
@@ -93,7 +119,9 @@
 
     title <
       name = Global Health Action ;
-      issn = 1654-9880
+      issn = 1654-9716 ;
+      eissn = 1654-9880 ;
+      issnl = 1654-9880
     >
 
     param[base_url] = http://www.globalhealthaction.net/
@@ -102,6 +130,18 @@
     au < manifest ; exists ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Global Health Action Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Global Health Action Volume 3 ; 3 ; 2010 >
+
+  }
+
+  {
+    title <
+      name = Infection Ecology & Epidemiology ;
+      eissn = 2000-8686 ;
+      issnl = 2000-8686
+    >
+
+      param[base_url] = http://www.infectionecologyandepidemiology.net/
+      param[journal_id] = iee
 
   }
 
@@ -142,8 +182,22 @@
   {
 
     title <
+      name = Journal of Community Hospital Internal Medicine Perspectives ;
+      eissn = 2000-9666 ;
+      issnl = 2000-9666
+    >
+
+    param[base_url] = http://www.jchimp.net/
+    param[journal_id] = jchimp
+
+  }
+
+  {
+
+    title <
       name = Journal of Oral Microbiology ;
-      issn = 2000-2297
+      eissn = 2000-2297 ;
+      issnl = 2000-2297
     >
 
     param[base_url] = http://www.journaloforalmicrobiology.net/
@@ -218,6 +272,20 @@
   {
 
     title <
+      name = Microbial Ecology in Health and Disease ;
+      issn = 0891-060X ;
+      eissn = 1651-2235 ;
+      issnl = 1651-2235 
+    >
+
+    param[base_url] = http://www.microbecolhealthdis.net/
+    param[journal_id] = mehd
+
+  }
+
+  {
+
+    title <
       name = Nano Reviews ;
       issn = 2000-5121
     >
@@ -226,6 +294,66 @@
     param[journal_id] = nano
 
     au < released ; crawling ; 2010 ; Nano Reviews Volume 1 ; 1 ; 2010 >
+
+  }
+
+  {
+    title <
+      name = Nordic Journal of ChildLit Aesthetics ;
+      eissn = 2000-7493 ;
+      issnl = 2000-7493
+    >
+
+      param[base_url] = http://www.childlitaesthetics.net/
+      param[journal_id] = blft
+
+  }
+
+  {
+
+    title <
+      name = Polar Research ;
+      issn = 0800-0395 ;
+      eissn = 1751-8369 ;
+      issnl = 0800-0395
+    >
+
+  }
+
+  {
+    title <
+      name = Socioaffective Neuroscience & Psychology ;
+      eissn = 2000-9011 ;
+      issnl = 2000-9011
+    >
+
+      param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
+      param[journal_id] = snp
+
+  }
+
+  {
+
+    title <
+      name = Pathobiology of Aging & Age-related Diseases ;
+      eissn = 2001-0001
+    >
+
+    param[base_url] = http://www.pathobiologyofaging.net/
+    param[journal_id] = pba
+
+
+  }
+
+  {
+    title <
+      name = Vulnerable Groups & Inclusion ;
+      eissn = 2000-8023 ;
+      issnl = 2000-8023
+    >
+
+      param[base_url] = http://www.vulnerablegroupsandinclusion.net/
+      param[journal_id] = vgi
 
   }
 
