@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.13 2011-08-23 16:16:48 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.14 2011-08-23 16:32:40 easyonthemayo Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class HtmlKbartExporter extends KbartExporter {
 	cssClass = "health" + rating;
 	if (showHealthAsTortoises) {
 	  cssClass += "-tortoise";
-	  val = "";
+	  val = "&nbsp;";
 	}
       }
       if (StringUtil.isNullString(cssClass)) {
@@ -279,7 +279,7 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("td.health5 { background-color: #00cc00; }"); // green
     // General health style for tortoise representation
     sb.append("td.health0-tortoise, td.health1-tortoise, td.health2-tortoise, td.health3-tortoise, td.health4-tortoise, td.health5-tortoise ");
-    sb.append("{ width: 175px; height: 35px; background: url('images/tortoises.gif') no-repeat }");
+    sb.append("{ min-width:175px; width: 175px; height: 35px; background: url('images/tortoises.gif') no-repeat }");
     sb.append("td.health0-tortoise { background: none; }");
     sb.append("td.health1-tortoise { background-position:  -140px }");
     sb.append("td.health2-tortoise { background-position:  -105px }");
