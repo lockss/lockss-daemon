@@ -1,0 +1,105 @@
+{
+
+  publisher <
+    name = University of Kansas
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; volume ; param[year] >
+
+  {
+  
+    title <
+      name = Journal of Dramatic Theory and Criticism ;
+      issn = 0888-3202 
+    >
+    
+    param[base_url] = https://journals.ku.edu/
+    param[journal_id] = jdtc
+    comment[0] = missing manifest pages, check year param
+
+    au < exists ; 1986-1987 ; Journal of Dramatic Theory and Criticism Volume I ; I ; 1986 >
+    au < exists ; 1987-1988 ; Journal of Dramatic Theory and Criticism Volume II ; II ; 1987 >
+    au < exists ; 1988-1989 ; Journal of Dramatic Theory and Criticism Volume III ; III ; 1988 >
+    au < exists ; 1989-1990 ; Journal of Dramatic Theory and Criticism Volume IV ; IV ; 1989 >
+    au < exists ; 1990-1991 ; Journal of Dramatic Theory and Criticism Volume V ; V ; 1990 >
+    au < exists ; 1991-1992 ; Journal of Dramatic Theory and Criticism Volume VI ; VI ; 1991 >        
+    au < exists ; 1992-1993 ; Journal of Dramatic Theory and Criticism Volume VII ; VII ; 1992 >
+    au < exists ; 1993-1994 ; Journal of Dramatic Theory and Criticism Volume VIII ; VIII ; 1993 >
+    au < exists ; 1994-1995 ; Journal of Dramatic Theory and Criticism Volume VIX ; VIX ; 1994 >
+    au < exists ; 1995-1996 ; Journal of Dramatic Theory and Criticism Volume X ; X ; 1995 >
+    au < exists ; 1996-1997 ; Journal of Dramatic Theory and Criticism Volume XI ; XI ; 1996 >        
+    au < exists ; 1997-1998 ; Journal of Dramatic Theory and Criticism Volume XII ; XII ; 1997 >
+    au < exists ; 1998-1999 ; Journal of Dramatic Theory and Criticism Volume XIII ; XIII ; 1998 >
+    au < exists ; 1999-2000 ; Journal of Dramatic Theory and Criticism Volume XIV ; XIV ; 1999 >
+    au < exists ; 2000-2001 ; Journal of Dramatic Theory and Criticism Volume XV ; XV ; 2000 >
+    au < exists ; 2001-2002 ; Journal of Dramatic Theory and Criticism Volume XVI ; XVI ; 2001 >
+    au < exists ; 2002-2003 ; Journal of Dramatic Theory and Criticism Volume XVII ; XVII ; 2002 >
+    au < exists ; 2003-2004 ; Journal of Dramatic Theory and Criticism Volume XVIII ; XVIII ; 2003 >
+    au < exists ; 2004-2005 ; Journal of Dramatic Theory and Criticism Volume XIX ; XIX ; 2004 >
+    au < exists ; 2005-2006 ; Journal of Dramatic Theory and Criticism Volume XX ; XX ;2005 >
+    au < exists ; 2006-2007 ; Journal of Dramatic Theory and Criticism Volume XXI ; XXI ; 2006 >
+    au < exists ; 2007 ; Journal of Dramatic Theory and Criticism Volume XXII ; XXII ; 2007 >
+    au < exists ; 2010 ; Journal of Dramatic Theory and Criticism Volume XXV ; XXV ; 2010 >
+
+  }
+
+  {
+  
+    title <
+      name = Latin American Theatre Review ;
+      issn = 0023-8813 
+    >
+    
+    param[base_url] = https://journals.ku.edu/
+    param[journal_id] = latr
+    comment[0] = missing manifest pages, check year param
+
+    au < exists ; 1967-1968 ; Latin American Theatre Review Volume 1 ; 1 ; 1968 >
+    au < exists ; 1968-1969 ; Latin American Theatre Review Volume 2 ; 2 ; 1969 >
+    au < exists ; 1969-1970 ; Latin American Theatre Review Volume 3 ; 3 ; 1970 >
+    au < exists ; 1970-1971 ; Latin American Theatre Review Volume 4 ; 4 ; 1971 >
+    au < exists ; 1971-1972 ; Latin American Theatre Review Volume 5 ; 5 ; 1972 >
+    au < exists ; 1972-1973 ; Latin American Theatre Review Volume 6 ; 6 ; 1973 >
+    au < exists ; 1973-1974 ; Latin American Theatre Review Volume 7 ; 7 ; 1974 >
+    au < exists ; 1974-1975 ; Latin American Theatre Review Volume 8 ; 8 ; 1975 >
+    au < exists ; 1975-1976 ; Latin American Theatre Review Volume 9 ; 9 ; 1976 >
+    au < exists ; 1976-1977 ; Latin American Theatre Review Volume 10 ; 10 ; 1977 >
+    au < exists ; 1977-1978 ; Latin American Theatre Review Volume 11 ; 11 ; 1978 >
+    au < exists ; 1978-1979 ; Latin American Theatre Review Volume 12 ; 12 ; 1979 >
+    au < exists ; 1979-1980 ; Latin American Theatre Review Volume 13 ; 13 ; 1980 >
+    au < exists ; 1980-1981 ; Latin American Theatre Review Volume 14 ; 14 ; 1981 >
+    au < exists ; 1981-1982 ; Latin American Theatre Review Volume 15 ; 15 ; 1982 >
+    au < exists ; 1982-1983 ; Latin American Theatre Review Volume 16 ; 16 ; 1983 >
+    au < exists ; 1983-1984 ; Latin American Theatre Review Volume 17 ; 17 ; 1984 >
+    au < exists ; 1984-1985 ; Latin American Theatre Review Volume 18 ; 18 ; 1985 >
+    au < exists ; 1985-1986 ; Latin American Theatre Review Volume 19 ; 19 ; 1986 >
+    au < exists ; 1986-1987 ; Latin American Theatre Review Volume 20 ; 20 ; 1987 >
+    au < exists ; 1987-1988 ; Latin American Theatre Review Volume 21 ; 21 ; 1988 >  
+    au < exists ; 1988-1989 ; Latin American Theatre Review Volume 22 ; 22 ; 1989 >
+    au < exists ; 1989-1990 ; Latin American Theatre Review Volume 23 ; 23 ; 1990 >  
+    au < exists ; 1990-1991 ; Latin American Theatre Review Volume 24 ; 24 ; 1991 >
+    au < exists ; 1991-1992 ; Latin American Theatre Review Volume 25 ; 25 ; 1992 >
+    au < exists ; 1992-1993 ; Latin American Theatre Review Volume 26 ; 26 ; 1993 >  
+    au < exists ; 1993-1994 ; Latin American Theatre Review Volume 27 ; 27 ; 1994 >  
+    au < exists ; 1994-1995 ; Latin American Theatre Review Volume 28 ; 28 ; 1995 >  
+    au < exists ; 1995-1996 ; Latin American Theatre Review Volume 29 ; 29 ; 1996 >  
+    au < exists ; 1996-1997 ; Latin American Theatre Review Volume 30 ; 30 ; 1997 >
+    au < exists ; 1997-1998 ; Latin American Theatre Review Volume 31 ; 31 ; 1998 >  
+    au < exists ; 1998-1999 ; Latin American Theatre Review Volume 32 ; 32 ; 1999 >
+    au < exists ; 1999-2000 ; Latin American Theatre Review Volume 33 ; 33 ; 2000 >  
+    au < exists ; 2000-2001 ; Latin American Theatre Review Volume 34 ; 34 ; 2001 >
+    au < exists ; 2001-2002 ; Latin American Theatre Review Volume 35 ; 35 ; 2002 >
+    au < exists ; 2002-2003 ; Latin American Theatre Review Volume 36 ; 36 ; 2003 >  
+    au < exists ; 2003-2004 ; Latin American Theatre Review Volume 37 ; 37 ; 2004 >  
+    au < exists ; 2004-2005 ; Latin American Theatre Review Volume 38 ; 38 ; 2005 >  
+    au < exists ; 2005-2006 ; Latin American Theatre Review Volume 39 ; 39 ; 2006 >  
+    au < exists ; 2006-2007 ; Latin American Theatre Review Volume 40 ; 40 ; 2007 >
+    au < exists ; 2007-2008 ; Latin American Theatre Review Volume 41 ; 41 ; 2008 >  
+    au < exists ; 2008-2009 ; Latin American Theatre Review Volume 42 ; 42 ; 2009 >
+    au < exists ; 2009-2010 ; Latin American Theatre Review Volume 43 ; 43 ; 2010 >  
+    au < exists ; 2010-2011 ; Latin American Theatre Review Volume 44 ; 44 ; 2011 >
+    
+  }
+    
+}
