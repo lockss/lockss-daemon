@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.5 2011-08-22 16:52:04 easyonthemayo Exp $
+ * $Id: AuHealthMetric.java,v 1.6 2011-08-23 16:16:48 easyonthemayo Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class AuHealthMetric {
 
   /**
    * The max number of milliseconds that can pass before an AU cannot be safely
-   * considered to have max health. If the last poll was loger ago than this 
+   * considered to have max health. If the last poll was longer ago than this 
    * figure, the health gets discounted.
    */
   static final long MAX_ACCEPTABLE_POLL_HIATUS = 2592000000l; // 30 days

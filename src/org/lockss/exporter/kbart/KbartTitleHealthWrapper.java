@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleHealthWrapper.java,v 1.1 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: KbartTitleHealthWrapper.java,v 1.2 2011-08-23 16:16:48 easyonthemayo Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import org.lockss.util.Logger;
 
@@ -46,11 +47,15 @@ public class KbartTitleHealthWrapper extends KbartTitle {
 
   protected static Logger log = Logger.getLogger("KbartTitleHealthWrapper");   
   
+  /**
+   * A health value, to 2 decimal places.
+   */
   private double health;
   
   public KbartTitleHealthWrapper(KbartTitle kbt, double health) {
     super(kbt);
-    this.health = health;
+    DecimalFormat df = new DecimalFormat("#.##");
+    this.health = Double.valueOf(df.format(health));
   }
   
   public double getHealth() { return health; }

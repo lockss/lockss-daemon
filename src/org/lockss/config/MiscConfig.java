@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.9 2011-08-21 23:57:50 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.10 2011-08-23 16:16:47 easyonthemayo Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.exporter.Exporter;
+import org.lockss.exporter.kbart.HtmlKbartExporter;
 
 /** Miscellaneous config actions.  Convenient for auxilliary components
  * that don't currently have the ability to register themselves.
@@ -56,6 +57,7 @@ public class MiscConfig {
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	  Exporter.setConfig(config, oldConfig, diffs);
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);
+	  HtmlKbartExporter.setConfig(config, oldConfig, diffs);
 	}
       };
   }

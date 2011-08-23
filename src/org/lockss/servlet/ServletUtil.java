@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.69 2011-06-26 20:20:23 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.70 2011-08-23 16:16:48 easyonthemayo Exp $
  */
 
 /*
@@ -1368,7 +1368,26 @@ public class ServletUtil {
                                   String value,
                                   String text,
                                   boolean checked) {
+    return checkbox(servlet, key, value, text, checked, true);
+  }
+
+  /** Return a (possibly labelled) checkbox.
+   * @param servlet The servlet associated with the checkbox.
+   * @param key     Form key to which result set is assigned
+   * @param value   Value included in result set if box checked
+   * @param text    Appears to right of checkbox if non null
+   * @param checked If true, box is initially checked
+   * @param enabled If true, box is enabled; otherwise disabled and text grayed
+   * @return a checkbox Element
+   */
+  public static Element checkbox(LockssServlet servlet,
+      String key,
+      String value,
+      String text,
+      boolean checked,
+      boolean enabled) {
     Input in = new Input(Input.Checkbox, key, value);
+    if (!enabled) { in.attribute("disabled", "true"); }
     if (checked) { in.check(); }
     servlet.setTabOrder(in);
     if (StringUtil.isNullString(text)) {
@@ -1376,11 +1395,12 @@ public class ServletUtil {
     }
     else {
       Composite c = new Composite();
-      c.add(in); c.add(" "); c.add(text);
+      c.add(in); c.add(" "); 
+      c.add(enabled ? text : gray(text));
       return c;
     }
   }
-
+  
   private static String encodeAttr(String str) {
     return HtmlUtil.encode(str, HtmlUtil.ENCODE_ATTR);
   }
@@ -1608,6 +1628,14 @@ public class ServletUtil {
   }
 
   public static Element radioButton(LockssServlet servlet,
+      				    String key,
+      				    String value,
+      				    boolean checked,
+      				    boolean enabled) {
+    return radioButton(servlet, key, value, value, checked, enabled);
+  }
+
+  public static Element radioButton(LockssServlet servlet,
 				    String key,
 				    String value,
 				    String text,
@@ -1616,17 +1644,38 @@ public class ServletUtil {
   }
 
   public static Element radioButton(LockssServlet servlet,
+	                            String key,
+	                            String value,
+	                            String text,
+	                            boolean checked,
+	                            boolean enabled) {
+    return radioButton(servlet, key, value, text, checked, enabled, null);
+}
+
+  public static Element radioButton(LockssServlet servlet,
 				    String key,
 				    String value,
 				    String text,
 				    boolean checked,
 				    Properties attrs) {
+    return radioButton(servlet, key, value, text, checked, true, attrs);
+  }
+
+  public static Element radioButton(LockssServlet servlet,
+	     			    String key,
+	     			    String value,
+	     			    String text,
+	     			    boolean checked,
+	     			    boolean enabled,
+	     			    Properties attrs) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
+    if (!enabled) { in.attribute("disabled", "true"); }
     if (checked) { in.check(); }
     servlet.setTabOrder(in);
     addAttrs(in, attrs);
-    c.add(in); c.add(" "); c.add(text);
+    c.add(in); c.add(" ");
+    c.add(enabled ? text : gray(text));
     return c;
   }
 

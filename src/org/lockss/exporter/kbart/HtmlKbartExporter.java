@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.12 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.13 2011-08-23 16:16:48 easyonthemayo Exp $
  */
 
 /*
@@ -37,6 +37,9 @@ import java.util.List;
 import java.io.OutputStream;
 import java.io.IOException;
 
+import javax.mail.search.OrTerm;
+
+import org.lockss.config.Configuration;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
@@ -50,6 +53,12 @@ public class HtmlKbartExporter extends KbartExporter {
 
   private static Logger log = Logger.getLogger("HtmlKbartExporter");
 
+  /** Whether to show health as tortoises by default. */
+  static final String PREFIX = Configuration.PREFIX + "htmlExport.";
+  public static final String PARAM_SHOW_TORTOISES = PREFIX + "showTortoises";
+  public static final boolean DEFAULT_SHOW_TORTOISES = true;
+
+  
   /** 
    * Width in pixels of columns with variable content - namely 
    * publication_title and publisher_name. 
@@ -63,6 +72,11 @@ public class HtmlKbartExporter extends KbartExporter {
   private String header;
   /** Summary of the export for display. */
   private String exportSummary;
+  
+  /** Whether to show health as tortoises! */
+  private static boolean showHealthAsTortoises = DEFAULT_SHOW_TORTOISES;
+  /** The minimum value for health when measured in tortoises. The maximum is 5. */
+  private final int tortoiseBaseHealth = 1;
   
   /** 
    * The index of the issn field. Will have the td.issn style applied to its 
@@ -79,6 +93,11 @@ public class HtmlKbartExporter extends KbartExporter {
    * table cells to stop it wrapping. 
    */
   private int issnlFieldIndex;
+  /** 
+   * The index of the optional health field. Will have an appropriate style 
+   * applied to its table cells to show tortoises and stop it wrapping. 
+   */
+  private int healthFieldIndex;
   
   /**
    * Default constructor takes a list of KbartTitles to be exported.
@@ -97,6 +116,16 @@ public class HtmlKbartExporter extends KbartExporter {
     Collections.sort(titles, KbartTitleComparatorFactory.getComparator(f));
   }
   
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      showHealthAsTortoises = config.getBoolean(PARAM_SHOW_TORTOISES, DEFAULT_SHOW_TORTOISES);
+    }
+  }
+
   @Override
   public void setFilter(KbartExportFilter filter) {
     super.setFilter(filter);
@@ -126,15 +155,50 @@ public class HtmlKbartExporter extends KbartExporter {
       String val = values.get(i);
       if (StringUtil.isNullString(val)) val = "&nbsp;";
       // Add appropriate style to issn fields
-      String cssClassParam = "";
+      String cssClass = "";
       if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
-	 cssClassParam = " class=\"issn\"";
+	 cssClass = "issn";
       }
-      printWriter.printf("<td%s>%s</td>", cssClassParam, val);
+      // Add different type of entry for health ratings if required
+      if (i==healthFieldIndex) {
+	int rating = scaleHealth(val);
+	cssClass = "health" + rating;
+	if (showHealthAsTortoises) {
+	  cssClass += "-tortoise";
+	  val = "";
+	}
+      }
+      if (StringUtil.isNullString(cssClass)) {
+	printWriter.printf("<td>%s</td>", val);
+      } else {
+	printWriter.printf("<td class=\"%s\">%s</td>", cssClass, val);
+      }
     }
     printWriter.println("</tr>");
   }
 
+  /**
+   * Take a health value between 0 and 1 and scale it to a value between
+   * {@link tortoiseBaseHealth} and 5.
+   */
+  private int scaleHealth(double health) {
+    int v = (int)Math.round(health * (5 - tortoiseBaseHealth));
+    return tortoiseBaseHealth + v; 
+  }
+  
+  /**
+   * Take a health value between 0 and 1 as a string, and scale it to a value 
+   * between {@link tortoiseBaseHealth} and 5. If the string cannot be parsed, 
+   * the <code>tortoiseBaseHealth</code> is returned.
+   */
+  private int scaleHealth(String health) {
+    try {
+      return scaleHealth(Double.parseDouble(health));
+    } catch (NumberFormatException e) {
+      return tortoiseBaseHealth; 
+    }
+  }
+  
   @Override
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
@@ -146,6 +210,8 @@ public class HtmlKbartExporter extends KbartExporter {
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
     this.issnlFieldIndex = findFieldIndex(Field.TITLE_ID);
+    // The health field index will be one bigger than the last field index
+    this.healthFieldIndex = getFieldLabels().size();
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" " +
 	"content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
@@ -204,6 +270,22 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("tr.odd { background-color: #cce; }");
     sb.append("tr.even { background-color: #aac; }");
     sb.append("td.issn { white-space: nowrap; }");
+    // General health style
+    sb.append("td.health1, td.health2, td.health3, td.health4, td.health5 { font-weight: bold; text-align: center; }");
+    sb.append("td.health1 { background-color: #cc0000; }"); // red
+    sb.append("td.health2 { background-color: #cc6600; }"); // orange
+    sb.append("td.health3 { background-color: #ffff00; }"); // yellow
+    sb.append("td.health4 { background-color: #33ccff; }"); // blue
+    sb.append("td.health5 { background-color: #00cc00; }"); // green
+    // General health style for tortoise representation
+    sb.append("td.health0-tortoise, td.health1-tortoise, td.health2-tortoise, td.health3-tortoise, td.health4-tortoise, td.health5-tortoise ");
+    sb.append("{ width: 175px; height: 35px; background: url('images/tortoises.gif') no-repeat }");
+    sb.append("td.health0-tortoise { background: none; }");
+    sb.append("td.health1-tortoise { background-position:  -140px }");
+    sb.append("td.health2-tortoise { background-position:  -105px }");
+    sb.append("td.health3-tortoise { background-position:  -70px }");
+    sb.append("td.health4-tortoise { background-position:  -35px }");
+    sb.append("td.health5-tortoise { background-position:  0px }");
     sb.append("</style>");
     css = sb.toString();
   };

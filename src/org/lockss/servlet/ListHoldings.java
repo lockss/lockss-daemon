@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.14 2011-08-19 10:36:19 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.15 2011-08-23 16:16:48 easyonthemayo Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import javax.servlet.ServletException;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
+import org.lockss.daemon.AuHealthMetric;
 import org.lockss.exporter.kbart.KbartConverter;
 import org.lockss.exporter.kbart.KbartExportFilter;
 import org.lockss.exporter.kbart.KbartExporter;
@@ -53,15 +54,18 @@ import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFie
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
+import org.lockss.util.PlatformUtil;
 import org.lockss.util.StringUtil;
-import org.mortbay.html.Composite;
+import org.mortbay.html.Element;
 import org.mortbay.html.Form;
-import org.mortbay.html.Heading;
 import org.mortbay.html.Input;
+import org.mortbay.html.Table;
+import org.mortbay.html.Composite;
+import org.mortbay.html.TextArea;
+import org.mortbay.html.Heading;
 import org.mortbay.html.Link;
 import org.mortbay.html.Page;
-import org.mortbay.html.Table;
-import org.mortbay.html.TextArea;
+import org.mortbay.html.Block;
 
 /** 
  * This servlet provides access to holdings metadata, transforming the TDB data 
@@ -138,8 +142,11 @@ public class ListHoldings extends LockssServlet {
   private ContentScope selectedScope = ContentScope.DEFAULT_SCOPE;
   private OutputFormat outputFormat = OUTPUT_DEFAULT;
   
+  // Create a footnote for platforms that don't support the health metric
+  private String notAvailFootnote;
+  
   /**
-   * Get the current configuration and the TDB record.
+   * Get the current configuration and the TDB record. 
    */
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -168,7 +175,15 @@ public class ListHoldings extends LockssServlet {
   public void lockssHandleRequest() throws IOException {
     errMsg = null;
     statusMsg = null; 
-        
+     
+    // Create a footnote if options are not available on this platform.
+    if (!AuHealthMetric.isSupported()) {
+      /*String fn = String.format("Not available on this platform (%s).",
+	PlatformUtil.getInstance());*/
+      String fn = "Not available on this platform.";
+      notAvailFootnote = addFootnote(fn);
+    }
+    
     // Get a set of custom opts, constructed with defaults if necessary
     CustomOptions customOpts = getSessionCustomOpts();
 
@@ -560,9 +575,13 @@ public class ListHoldings extends LockssServlet {
     tab.add("Show: ");
     for (ContentScope scope : ContentScope.values()) {
       int total = TdbUtil.getNumberTdbTitles(scope);
-      String label = String.format("%s (%d) &nbsp; ", scope.label, total);
+      String label = String.format("%s (%d)", scope.label, total);
+      boolean scopeEnabled = true;
+      if (scope==ContentScope.PRESERVED) scopeEnabled = AuHealthMetric.isSupported();
       tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), 
-	  label, scope==selectedScope));
+	  label, scope==selectedScope, scopeEnabled));
+      if (!scopeEnabled) tab.add(notAvailFootnote);
+      tab.add(" &nbsp; ");
     }
     addBlankRow(tab);
     return tab;
@@ -640,14 +659,18 @@ public class ListHoldings extends LockssServlet {
     tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, 
 	Boolean.TRUE.toString(), "Omit empty columns<br/>", 
 	opts.omitEmptyColumns));
-    // Show health option
+    // Show health option if available
     tab.add("<br/>");
     tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH, 
 	Boolean.TRUE.toString(), "Show health ratings", 
-	opts.showHealthRatings));
-    tab.add(addFootnote("Health ratings will only be shown for titles which " +
-        "you have configured on your box. The '"+ContentScope.ALL+"' export " +
-        "will not show health ratings."));
+	opts.showHealthRatings, AuHealthMetric.isSupported()));
+    if (!AuHealthMetric.isSupported()) {
+      tab.add(notAvailFootnote);
+    } else {
+      tab.add(addFootnote("Health ratings will only be shown for titles which " +
+	  "you have configured on your box. The '"+ContentScope.ALL+"' export " +
+          "will not show health ratings."));
+    }
     // Add buttons
     tab.add("<br/><br/><center>");
     layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_OK);
