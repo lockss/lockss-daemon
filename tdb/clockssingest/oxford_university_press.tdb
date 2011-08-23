@@ -9458,6 +9458,28 @@
   }
 
   {
+
+    title <
+      name = Journal of Legal Analysis ;
+      issn = 2161-7201 ;
+      eissn = 1946-5319 ;
+      issnl = 1946-5319 
+    >
+
+    {
+
+    param[base_url] = http://jla.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
+    
+    }
+    
+  }  
+  
+  {
   
     title <
       name = Journal of Logic and Computation ;

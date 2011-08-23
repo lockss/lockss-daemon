@@ -9739,6 +9739,29 @@
     }
 
   }
+  
+  {
+
+    title <
+      name = Journal of Legal Analysis ;
+      issn = 2161-7201 ;
+      eissn = 1946-5319 ;
+      issnl = 1946-5319 
+    >
+
+    {
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jla.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 >
+  
+  	}
+  	
+  }  
 
   {
 
