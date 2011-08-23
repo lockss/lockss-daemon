@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Washington University in St. Louis
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+  
+    title <
+      name = Revista de Estudios Hispánicos ;
+      issn = 0034-818X 
+    >
+
+    param[journal_dir] = revista_de_estudios_hispanicos
+
+  }
+
+}
