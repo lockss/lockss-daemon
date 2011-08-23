@@ -11248,6 +11248,22 @@ comment[exm] = now published by Springer
     {
 
       title <
+        name = Gifted Education International ;
+        issn = 0261-4294 ;
+        issnl = 0261-4294
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
+    {
+
+      title <
         name = Global Business Review ;
         issn = 0972-1509 ;
         eissn = 0973-0664 ;
@@ -14223,6 +14239,22 @@ comment[exm] = now published by Springer
     }
 
     {
+
+      title <
+        name = International Journal of Discrimination and the Law ;
+        issn = 1358-2291 ;
+        issnl = 1358-2291
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
+    {
       title <
         name = International Journal of Engine Research ;
         issn = 1468-0874 ;
@@ -15213,6 +15245,22 @@ comment[exm] = now published by Springer
 
     }
 
+    {
+
+      title <
+        name = International Review of Victimology ;
+        issn = 0269-7580 ;
+        issnl = 0269-7580
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
     {
 
       title <
@@ -21122,6 +21170,22 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
     {
 
       title <
+        name = Journal of Interdisciplinary Economics ;
+        issn = 0260-1079 ;
+        issnl = 0260-1079
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
+    {
+
+      title <
         name = Journal of Interpersonal Violence ;
         issn = 0886-2605 ;
         eissn = 1552-6518 ;
@@ -26149,6 +26213,22 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Medical Law International ;
+        issn = 0968-5332 ;
+        issnl = 0968-5332
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
+    {
+
+      title <
         name = The Medieval History Journal ;
         issn = 0971-9458 ;
         eissn = 0973-0753 ;
@@ -27394,6 +27474,22 @@ comment[mpj] = now published by Brill
 
     }
 
+    {
+
+      title <
+        name = Nutrition and Health ;
+        issn = 0260-1060 ;
+        issnl = 0260-1060
+      >
+
+      {
+
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        
+      }
+      
+    }
+    
     {
 
       title <
