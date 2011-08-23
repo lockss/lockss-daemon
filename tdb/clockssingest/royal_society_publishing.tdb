@@ -228,16 +228,17 @@
 
     title <
       name = Open Biology ;
-      issn = ;
-      eissn = ;
-      issnl = 
+      issn = 1364-503X ;
+      eissn = 1471-2962 ;
+      issnl = 1364-503X
     >
-    
-    param[base_url] = 
+
+    param[base_url] = http://rsta.royalsocietypublishing.org/
     comment = Open Biology will begin receiving submissions of research articles starting in July 2011
-      
+
   }
-  
+
+
   {
 
     title <
