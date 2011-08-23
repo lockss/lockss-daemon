@@ -24,7 +24,7 @@
   {
 
     title <
-      name = BLFT: BarnelitterÃ¦rt forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
+      name = BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
       eissn = 2000-7493 ;
       issnl = 2000-7493       
     >
@@ -301,18 +301,6 @@
     param[journal_id] = nano
 
     au < manifest ; 2010 ; Nano Reviews Volume 1 ; 1 ; 2010 >
-
-  }
-
-  {
-    title <
-      name = Nordic Journal of ChildLit Aesthetics ;
-      eissn = 2000-7493 ;
-      issnl = 2000-7493
-    >
-
-      param[base_url] = http://www.childlitaesthetics.net/
-      param[journal_id] = blft
 
   }
 
