@@ -53,6 +53,22 @@
   {
   
     title <
+      name = Canadian Journal of Information and Library Science ;
+      issn = 1195-096X ;
+      eissn = 1920-7239 ;
+      issnl = 1195-096X
+    >
+
+    param[journal_dir] = canadian_journal_of_information_and_library_science
+
+    au < manifest ; 2010 ; Canadian Journal of Information and Library Science Volume 34 ; 34 >
+    au < manifest ; 2011 ; Canadian Journal of Information and Library Science Volume 35 ; 35 >
+
+  }
+  
+  {
+  
+    title <
       name = Canadian Journal of Law and Society ;
       issn = 0829-3201 ;
       eissn = 1911-0227 ;
@@ -287,23 +303,23 @@
   {
   
     title <
-      name = Histoire sociale/Social history ;
+      name = Histoire sociale / Social history ;
       issn = 0018-2257 ;
       issnl = 0018-2257
     >
 
     param[journal_dir] = histoire_sociale_social_history
 
-    au < released ; 2008 ; Histoire sociale/Social history Volume 41 ; 41 >
-    au < released ; 2009 ; Histoire sociale/Social history Volume 42 ; 42 >
-    au < released ; 2010 ; Histoire sociale/Social history Volume 43 ; 43 >
+    au < released ; 2008 ; Histoire sociale / Social history Volume 41 ; 41 >
+    au < released ; 2009 ; Histoire sociale / Social history Volume 42 ; 42 >
+    au < released ; 2010 ; Histoire sociale / Social history Volume 43 ; 43 >
 
   }
 
   {
   
     title <
-      name = Journal of Canadian Studies ;
+      name = Journal of Canadian Studies / Revue d'études canadiennes ;
       issn = 0021-9495 ;
       eissn = 1911-0251 ;
       issnl = 0021-9495
@@ -311,14 +327,23 @@
 
     param[journal_dir] = journal_of_canadian_studies
 
-    au < released ; 2005 ; Journal of Canadian Studies Volume 39 ; 39 >
-    au < released ; 2006 ; Journal of Canadian Studies Volume 40 ; 40 >
-    au < released ; 2007 ; Journal of Canadian Studies Volume 41 ; 41 >
-    au < released ; 2008 ; Journal of Canadian Studies Volume 42 ; 42 >
-    au < released ; 2009 ; Journal of Canadian Studies Volume 43 ; 43 >
-    au < manifest ; 2010 ; Journal of Canadian Studies Volume 44 ; 44 >
-    au < manifest ; 2011 ; Journal of Canadian Studies Volume 45 ; 45 >
+    au < released ; 2005 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 39 ; 39 >
+    au < released ; 2006 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 40 ; 40 >
+    au < released ; 2007 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 41 ; 41 >
+    au < released ; 2008 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 42 ; 42 >
+    au < released ; 2009 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 43 ; 43 >
+    au < manifest ; 2010 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 44 ; 44 >
+    au < manifest ; 2011 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 45 ; 45 >
 
+  }
+
+  {
+  
+    title <
+      name = Journal of Religion and Popular Culture ;
+      issn = 1703-289X
+    >
+    
   }
 
   {
@@ -387,7 +412,7 @@
   {
   
     title <
-      name = The Tocqueville Review/La revue Tocqueville ;
+      name = The Tocqueville Review / La revue Tocqueville ;
       issn = 0730-479X ;
       eissn = 1918-6649 ;
       issnl = 0730-479X
@@ -395,9 +420,24 @@
 
     param[journal_dir] = tocqueville_reviewla_revue_tocqueville
 
-    au < released ; 2009 ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
-    au < manifest ; 2010 ; The Tocqueville Review/La revue Tocqueville Volume 31 ; 31 >
-    au < manifest ; 2011 ; The Tocqueville Review/La revue Tocqueville Volume 32 ; 32 >
+    au < released ; 2009 ; The Tocqueville Review / La revue Tocqueville Volume 30 ; 30 >
+    au < manifest ; 2010 ; The Tocqueville Review / La revue Tocqueville Volume 31 ; 31 >
+    au < manifest ; 2011 ; The Tocqueville Review / La revue Tocqueville Volume 32 ; 32 >
+
+  }
+
+  {
+  
+    title <
+      name = Toronto Journal of Theology ;
+      issn = 0826-9831 ;
+      eissn = 1918-6371 ;
+      issnl = 0826-9831 
+    >
+
+    param[journal_dir] = toronto_journal_of_theology
+
+    au < manifest ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
 
   }
 
@@ -441,6 +481,22 @@
     au < released ; 2009 ; University of Toronto Quarterly Volume 78 ; 78 >
     au < manifest ; 2010 ; University of Toronto Quarterly Volume 79 ; 79 >
     au < manifest ; 2011 ; University of Toronto Quarterly Volume 80 ; 80 >
+
+  }
+
+  {
+  
+    title <
+      name = The Yearbook of Comparative Literature ;
+      issn = 0084-3695 ;
+      eissn = 1947-2978 ;
+      issnl = 0084-3695
+    >
+
+    param[journal_dir] = yearbook_of_comparative_and_general_literature
+
+    au < manifest ; 2008 ; The Yearbook of Comparative Literature Volume 54 ; 54 >
+    au < manifest ; 2009 ; The Yearbook of Comparative Literature Volume 55 ; 55 >
 
   }
 
