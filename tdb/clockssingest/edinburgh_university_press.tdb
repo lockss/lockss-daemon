@@ -295,7 +295,7 @@
   {
 
     title <
-      name = Episteme ;
+      name = Episteme: A Journal of Social Epistemology ;
       issn = 1742-3600 ;
       eissn = 1750-0117 ;
       issnl = 1742-3600 
@@ -317,7 +317,7 @@
   {
 
     title <
-      name = Holy Land Studies ;
+      name = Holy Land Studies: A Multidisciplinary Journal ;
       issn = 1474-9475 ;
       eissn = 1750-0125 ;
       issnl = 1474-9475 
@@ -537,6 +537,19 @@
   {
 
     title <
+      name = Journal of Victorian Culture ;
+      issn = 1355-5502 ;
+      eissn = 1750-0133 ;
+      issnl = 1355-5502
+    >
+
+      comment[jvc] = no AUs in clockss
+   }
+
+
+  {
+
+    title <
       name = Katherine Mansfield Studies ;
       issn = 2041-4501 ;
       eissn = 2041-451X ;
@@ -622,6 +635,17 @@
     au < released ; crawling ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
     au < crawling ; exists ; 2011 ; Oxford Literary Review Volume 33 ; 33 >
 
+  }
+
+  {
+
+    title <
+      name = Parliamentary History ;
+      issn = 0264-2824 ;
+      eissn = 1750-0206 ;
+      issnl = 0264-2824
+    >
+      comment[ph] = not AUs collected in clockss
   }
 
   {
