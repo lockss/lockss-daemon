@@ -4,9 +4,6 @@
     name = University of Kansas
   >
 
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; name ; volume ; param[year] >
-
   {
   
     title <
@@ -14,33 +11,50 @@
       issn = 0888-3202 
     >
     
-    param[base_url] = https://journals.ku.edu/
-    param[journal_id] = jdtc
-    comment[0] = missing manifest pages, check year param
+    {
+ 
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin   
+      param[base_url] = https://journals.ku.edu/
+      param[journal_id] = jdtc
+      implicit < status ; year ; name ; volume ; param[year] >
+      comment[0] = missing manifest pages, check year param
 
-    au < exists ; 1986-1987 ; Journal of Dramatic Theory and Criticism Volume I ; I ; 1986 >
-    au < exists ; 1987-1988 ; Journal of Dramatic Theory and Criticism Volume II ; II ; 1987 >
-    au < exists ; 1988-1989 ; Journal of Dramatic Theory and Criticism Volume III ; III ; 1988 >
-    au < exists ; 1989-1990 ; Journal of Dramatic Theory and Criticism Volume IV ; IV ; 1989 >
-    au < exists ; 1990-1991 ; Journal of Dramatic Theory and Criticism Volume V ; V ; 1990 >
-    au < exists ; 1991-1992 ; Journal of Dramatic Theory and Criticism Volume VI ; VI ; 1991 >        
-    au < exists ; 1992-1993 ; Journal of Dramatic Theory and Criticism Volume VII ; VII ; 1992 >
-    au < exists ; 1993-1994 ; Journal of Dramatic Theory and Criticism Volume VIII ; VIII ; 1993 >
-    au < exists ; 1994-1995 ; Journal of Dramatic Theory and Criticism Volume VIX ; VIX ; 1994 >
-    au < exists ; 1995-1996 ; Journal of Dramatic Theory and Criticism Volume X ; X ; 1995 >
-    au < exists ; 1996-1997 ; Journal of Dramatic Theory and Criticism Volume XI ; XI ; 1996 >        
-    au < exists ; 1997-1998 ; Journal of Dramatic Theory and Criticism Volume XII ; XII ; 1997 >
-    au < exists ; 1998-1999 ; Journal of Dramatic Theory and Criticism Volume XIII ; XIII ; 1998 >
-    au < exists ; 1999-2000 ; Journal of Dramatic Theory and Criticism Volume XIV ; XIV ; 1999 >
-    au < exists ; 2000-2001 ; Journal of Dramatic Theory and Criticism Volume XV ; XV ; 2000 >
-    au < exists ; 2001-2002 ; Journal of Dramatic Theory and Criticism Volume XVI ; XVI ; 2001 >
-    au < exists ; 2002-2003 ; Journal of Dramatic Theory and Criticism Volume XVII ; XVII ; 2002 >
-    au < exists ; 2003-2004 ; Journal of Dramatic Theory and Criticism Volume XVIII ; XVIII ; 2003 >
-    au < exists ; 2004-2005 ; Journal of Dramatic Theory and Criticism Volume XIX ; XIX ; 2004 >
-    au < exists ; 2005-2006 ; Journal of Dramatic Theory and Criticism Volume XX ; XX ;2005 >
-    au < exists ; 2006-2007 ; Journal of Dramatic Theory and Criticism Volume XXI ; XXI ; 2006 >
-    au < exists ; 2007 ; Journal of Dramatic Theory and Criticism Volume XXII ; XXII ; 2007 >
-    au < exists ; 2010 ; Journal of Dramatic Theory and Criticism Volume XXV ; XXV ; 2010 >
+      au < exists ; 1986-1987 ; Journal of Dramatic Theory and Criticism Volume I ; I ; 1986 >
+      au < exists ; 1987-1988 ; Journal of Dramatic Theory and Criticism Volume II ; II ; 1987 >
+      au < exists ; 1988-1989 ; Journal of Dramatic Theory and Criticism Volume III ; III ; 1988 >
+      au < exists ; 1989-1990 ; Journal of Dramatic Theory and Criticism Volume IV ; IV ; 1989 >
+      au < exists ; 1990-1991 ; Journal of Dramatic Theory and Criticism Volume V ; V ; 1990 >
+      au < exists ; 1991-1992 ; Journal of Dramatic Theory and Criticism Volume VI ; VI ; 1991 >        
+      au < exists ; 1992-1993 ; Journal of Dramatic Theory and Criticism Volume VII ; VII ; 1992 >
+      au < exists ; 1993-1994 ; Journal of Dramatic Theory and Criticism Volume VIII ; VIII ; 1993 >
+      au < exists ; 1994-1995 ; Journal of Dramatic Theory and Criticism Volume VIX ; VIX ; 1994 >
+      au < exists ; 1995-1996 ; Journal of Dramatic Theory and Criticism Volume X ; X ; 1995 >
+      au < exists ; 1996-1997 ; Journal of Dramatic Theory and Criticism Volume XI ; XI ; 1996 >        
+      au < exists ; 1997-1998 ; Journal of Dramatic Theory and Criticism Volume XII ; XII ; 1997 >
+      au < exists ; 1998-1999 ; Journal of Dramatic Theory and Criticism Volume XIII ; XIII ; 1998 >
+      au < exists ; 1999-2000 ; Journal of Dramatic Theory and Criticism Volume XIV ; XIV ; 1999 >
+      au < exists ; 2000-2001 ; Journal of Dramatic Theory and Criticism Volume XV ; XV ; 2000 >
+      au < exists ; 2001-2002 ; Journal of Dramatic Theory and Criticism Volume XVI ; XVI ; 2001 >
+      au < exists ; 2002-2003 ; Journal of Dramatic Theory and Criticism Volume XVII ; XVII ; 2002 >
+      au < exists ; 2003-2004 ; Journal of Dramatic Theory and Criticism Volume XVIII ; XVIII ; 2003 >
+      au < exists ; 2004-2005 ; Journal of Dramatic Theory and Criticism Volume XIX ; XIX ; 2004 >
+      au < exists ; 2005-2006 ; Journal of Dramatic Theory and Criticism Volume XX ; XX ;2005 >
+      au < exists ; 2006-2007 ; Journal of Dramatic Theory and Criticism Volume XXI ; XXI ; 2006 >
+      au < exists ; 2007 ; Journal of Dramatic Theory and Criticism Volume XXII ; XXII ; 2007 >
+      au < exists ; 2010 ; Journal of Dramatic Theory and Criticism Volume XXV ; XXV ; 2010 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_dramatic_theory_and_criticism      
+      implicit < status ; year ; name ; param[volume] >
+
+      comment[0] = no content online yet
+
+   }
 
   }
 
@@ -50,9 +64,11 @@
       name = Latin American Theatre Review ;
       issn = 0023-8813 
     >
-    
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin   
     param[base_url] = https://journals.ku.edu/
     param[journal_id] = latr
+    implicit < status ; year ; name ; volume ; param[year] >
     comment[0] = missing manifest pages, check year param
 
     au < exists ; 1967-1968 ; Latin American Theatre Review Volume 1 ; 1 ; 1968 >
