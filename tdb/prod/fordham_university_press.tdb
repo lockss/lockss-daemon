@@ -27,4 +27,26 @@
 
   }
 
+  {
+    title <
+      name = Dante Studies ;
+      issn = 0070-2862 ;
+      issnl = 0070-2862
+    >
+
+	comment[ds] = coming 2012
+    param[journal_dir] = dante_studies
+  }
+
+  {
+    title <
+      name = Traditio ;
+      issn = 0022-6864 ;
+      issnl = 0022-6864
+    >
+
+	comment[ds] = coming 2012
+    param[journal_dir] = traditio
+  }
+
 }
