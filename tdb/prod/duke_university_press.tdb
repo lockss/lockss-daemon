@@ -275,6 +275,25 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
   {
     title <
+      name = Cultural Politics ;
+      issn = 1743-2197 ;
+      eissn = 1751-7435 ;
+      issnl = 1743-2197
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+
+    
+    }
+    
+   }
+
+  {
+    title <
       name = differences: A Journal of Feminist Cultural Studies ;
       issn = 1040-7391 ;
       eissn = 1527-1986 ;
