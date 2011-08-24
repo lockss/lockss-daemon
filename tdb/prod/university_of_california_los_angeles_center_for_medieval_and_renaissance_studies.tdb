@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = University of California, Los Angeles Center for Medieval and Renaissance Studies
+  >
+
+  {
+    title <
+      name = Comitatus: A Journal of Medieval and Renaissance Studies ;
+      issn = 0069-6412 ;
+      eissn = 1557-0290 ;
+      issnl = 0069-6412
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = xxx
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 0 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 1 ; 1 >
+
+    }
+
+  }
+
+}
+
