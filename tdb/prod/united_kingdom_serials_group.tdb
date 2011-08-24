@@ -5,7 +5,7 @@
   >
 
   plugin = needs.plugin
-  comment[platform] = Metapress (see RT 3765)
+  comment[platform] = MetaPress (see RT 3765)
   param[base_url] = http://uksg.metapress.com/
 
   {
@@ -27,6 +27,7 @@
       issnl = 0953-0460
     >
 
+    param[journal_issn] = 0953-0460
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1988 ; Serials: The Journal for the Serials Community Volume 1 ; 1 >
