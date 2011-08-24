@@ -15,7 +15,7 @@
     plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
     param[base_url] = http://library.state.ak.us/asp/
     implicit < status ; year ; name ; param[year] >
-    comment[years] = fiscal not calendar
+    comment[years] = fiscal not calendar (July-June)
 
     au < released ; 2006 ; Alaska State Documents 2006 ; 2006 >
     au < released ; 2007 ; Alaska State Documents 2007 ; 2007 >
