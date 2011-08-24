@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Duquesne University Press
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Milton Studies ;
+      issn = 0022-6860 ;
+      issnl = 0022-6860
+    >
+
+	attr[journal_abbr] = xxx
+    param[journal_dir] = xxx
+
+    au < doesNotExist ; 0 ; Milton Studies Volume 1 ; 1 >
+
+  }
+
+}
