@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.5 2011-06-16 11:22:21 pgust Exp $
+ * $Id: NumberUtil.java,v 1.6 2011-08-24 15:07:47 easyonthemayo Exp $
  */
 
 /*
@@ -129,6 +129,21 @@ public class NumberUtil {
     }
   }
 
+  /**
+   * Determines whether the input string represents an integer.
+   * 
+   * @param s the input String
+   * @return <tt>true</tt> if the input string represents an integer
+   */
+  public static boolean isInteger(String s) {
+    try {
+      Integer.parseInt(s);
+      return true;
+    } catch (NumberFormatException ex) {
+      return false;
+    }
+  }
+  
   /**
    * Returns a short from a String representing a number in the 
    * Arabic or Roman number system.
