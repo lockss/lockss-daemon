@@ -6262,7 +6262,7 @@
   {
 
     title <
-      name = IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences ;
+      name = IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences ;
       issn = 0916-8508 ;
       eissn = 1745-1337 ;
       issnl = 0916-8508
@@ -6276,8 +6276,8 @@
     param[base_url] = http://ietfec.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences Volume E89-A ; E89-A >
-    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communication and Computer Sciences Volume E90-A ; E90-A >
+    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E89-A ; E89-A >
+    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E90-A ; E90-A >
 
     }
 
