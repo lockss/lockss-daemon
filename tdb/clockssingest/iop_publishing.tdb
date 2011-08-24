@@ -337,7 +337,7 @@
     au < exists ; exists ; 2007 ; Classical and Quantum Gravity Volume 24 ; 24 > 
     au < manifest ; exists ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
     au < manifest ; exists ; 2009 ; Classical and Quantum Gravity Volume 26 ; 26 > 
-    au < testing ; exists ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
+    au < released ; manifest ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
     au < manifest ; exists ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
 
   }
@@ -387,8 +387,8 @@
     au < manifest ; exists ; 2008 ; Communications in Theoretical Physics Volume 50 ; 50 > 
     au < manifest ; exists ; 2009 ; Communications in Theoretical Physics Volume 51 ; 51 > 
     au < manifest ; exists ; 2009 ; Communications in Theoretical Physics Volume 52 ; 52 > 
-    au < testing ; exists ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 > 
-    au < testing ; exists ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 > 
+    au < released ; manifest ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 > 
+    au < released ; manifest ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 > 
     au < manifest ; exists ; 2011 ; Communications in Theoretical Physics Volume 55 ; 55 > 
     au < manifest ; exists ; 2011 ; Communications in Theoretical Physics Volume 56 ; 56 >
   }
@@ -407,7 +407,7 @@
 
     au < manifest ; exists ; 2008 ; Computational Science & Discovery Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; Computational Science & Discovery Volume 2 ; 2 > 
-    au < testing ; exists ; 2010 ; Computational Science & Discovery Volume 3 ; 3 > 
+    au < released ; manifest ; 2010 ; Computational Science & Discovery Volume 3 ; 3 > 
     au < manifest ; exists ; 2011 ; Computational Science & Discovery Volume 4 ; 4 > 
 
   }
@@ -446,7 +446,7 @@
     au < exists ; exists ; 2007 ; Environmental Research Letters Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Environmental Research Letters Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Environmental Research Letters Volume 4 ; 4 > 
-    au < testing ; exists ; 2010 ; Environmental Research Letters Volume 5 ; 5 > 
+    au < released ; manifest ; 2010 ; Environmental Research Letters Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
 
   }
@@ -551,10 +551,10 @@
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
-    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
-    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
-    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
-    au < manifest ; exists ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
+    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
+    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
+    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
+    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 93 ; 93 > 
     au < crawling ; exists ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 > 
@@ -603,7 +603,7 @@
     au < exists ; exists ; 2007 ; European Journal of Physics Volume 28 ; 28 > 
     au < manifest ; exists ; 2008 ; European Journal of Physics Volume 29 ; 29 > 
     au < manifest ; exists ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
-    au < manifest ; exists ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
+    au < testing ; exists ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
 
   }
@@ -720,8 +720,9 @@
     param[journal_issn] = 1755-1315
     comment[param] = eissn preferred
     comment[au_start_url] = redirects to issue toc, missing permission statement
+    comment[1] = no permission
 
-    au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
+    au < notReady ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 1 ; 1 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 2 ; 2 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 3 ; 3 > 
     au < exists ; exists ; 2008 ; IOP Conference Series: Earth and Environmental Science Volume 4 ; 4 > 
