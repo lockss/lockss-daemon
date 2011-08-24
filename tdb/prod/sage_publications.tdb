@@ -10103,7 +10103,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://ext.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1898-1890 ; The Expository Times Volume 1 ; 1 >
+        au < manifest ; 1889-1890 ; The Expository Times Volume 1 ; 1 >
         au < manifest ; 1890-1891 ; The Expository Times Volume 2 ; 2 >
         au < manifest ; 1891-1892 ; The Expository Times Volume 3 ; 3 >
         au < manifest ; 1892-1893 ; The Expository Times Volume 4 ; 4 >
