@@ -96,6 +96,7 @@
     au < released ; 2008 ; Latin American Music Review Volume 29 ; 29 >
     au < released ; 2009 ; Latin American Music Review Volume 30 ; 30 >
     au < manifest ; 2010 ; Latin American Music Review Volume 31 ; 31 >
+    au < manifest ; 2010 ; Latin American Music Review Volume 32 ; 32 >
 
   }
 
@@ -132,12 +133,29 @@
     >
 
     param[journal_dir] = southwestern_historical_quarterly
+    comment[publisher] = Texas State Historical Association
 
     au < released ; 2006-2007 ; Southwestern Historical Quarterly Volume 110 ; 110 >
-    au < doesNotExist ; 2007-2008 ; Southwestern Historical Quarterly Volume 111 ; 111 >
-    au < doesNotExist ; 2008-2009 ; Southwestern Historical Quarterly Volume 112 ; 112 >
-    au < doesNotExist ; 2009-2010 ; Southwestern Historical Quarterly Volume 113 ; 113 >
+    au < manifest ; 2007-2008 ; Southwestern Historical Quarterly Volume 111 ; 111 >
+    au < manifest ; 2008-2009 ; Southwestern Historical Quarterly Volume 112 ; 112 >
+    au < manifest ; 2009-2010 ; Southwestern Historical Quarterly Volume 113 ; 113 >
     au < manifest ; 2010-2011 ; Southwestern Historical Quarterly Volume 114 ; 114 >
+    au < manifest ; 2011 ; Southwestern Historical Quarterly Volume 115 ; 115 >
+
+  }
+
+  {
+    title <
+      name = Studies in Latin American Popular Culture ;
+      issn = 0730-9139 ;
+      eissn = 2157-2941 ;
+      issnl = 0730-9139
+    >
+
+    param[journal_dir] = studies_in_latin_american_popular_culture
+
+    au < manifest ; 2010 ; Studies in Latin American Popular Culture Volume 28 ; 28 >
+    au < manifest ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
 
   }
 
@@ -192,6 +210,7 @@
     au < released ; 2010 ; The Velvet Light Trap Number 65 ; 65 >
     au < manifest ; 2010 ; The Velvet Light Trap Number 66 ; 66 >
     au < manifest ; 2011 ; The Velvet Light Trap Number 67 ; 67 >
+    au < manifest ; 2011 ; The Velvet Light Trap Number 68 ; 68 >
 
   }
 
