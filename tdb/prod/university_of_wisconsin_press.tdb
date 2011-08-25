@@ -456,7 +456,7 @@
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = npj
+      param[journal_dir] = native_plants_journal
       implicit < status ; year ; name ; param[volume] >
 
       au < manifest ; 2004 ; Native Plants Journal Volume 5 ; 5 >
