@@ -100,6 +100,22 @@
 
   {
     title <
+      name = Humanity: An International Journal of Human Rights, Humanitarianism, and Development ;
+      issn = 2151-4364 ;
+      eissn = 2151-4372 ;
+      issnl = 2151-4364
+    >
+
+    param[journal_dir] = humanity
+
+    au < manifest ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
+    au < manifest ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
+
+  }
+
+
+  {
+    title <
       name = Jewish Quarterly Review ;
       issn = 0021-6682 ;
       eissn = 1553-0604 ;
@@ -120,6 +136,26 @@
 
   {
     title <
+      name = Journal for Early Modern Cultural Studies ;
+      issn = 1531-0485 ;
+      eissn = 1553-0620 ;
+      issnl = 1531-0485
+    >
+
+    param[journal_dir] = journal_for_early_modern_cultural_studies
+
+    au < manifest ; 2005 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
+    au < manifest ; 2006 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+    au < manifest ; 2007 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+    au < manifest ; 2008 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+    au < manifest ; 2009 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+    au < manifest ; 2010 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+    au < manifest ; 2011 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
       name = Journal of the Early Republic ;
       issn = 0275-1275 ;
       eissn = 1553-0620 ;
@@ -129,7 +165,7 @@
     param[journal_dir] = journal_of_the_early_republic
 
     au < released ; 2005 ; Journal of the Early Republic Volume 25 ; 25 >
-    au < released ; 2006 ; ournal of the Early Republic Volume 26 ; 26 >
+    au < released ; 2006 ; Journal of the Early Republic Volume 26 ; 26 >
     au < released ; 2007 ; Journal of the Early Republic Volume 27 ; 27 >
     au < released ; 2008 ; Journal of the Early Republic Volume 28 ; 28 >
     au < released ; 2009 ; Journal of the Early Republic Volume 29 ; 29 >
