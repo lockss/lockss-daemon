@@ -44,4 +44,18 @@
 
   }
 
+  {
+    title <
+      name = Journal of the Southwest ;
+      issn = 0894-8410 ;
+      eissn = 2158-1371 ;
+      issnl = 0894-8410
+    >
+
+    param[journal_dir] = journal_of_the_southwest
+
+    au < manifest ; 2011 ; Journal of the Southwest Volume 53 ; 53 >
+
+  }
+
 }
