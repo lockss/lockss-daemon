@@ -551,10 +551,10 @@
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
     au < manifest ; exists ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
-    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
-    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
-    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
-    au < testing ; exists ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
+    au < manifest ; released ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
+    au < manifest ; released ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
+    au < manifest ; released ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
+    au < manifest ; released ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 93 ; 93 > 
     au < crawling ; exists ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 > 
     au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 > 
@@ -603,7 +603,7 @@
     au < exists ; exists ; 2007 ; European Journal of Physics Volume 28 ; 28 > 
     au < manifest ; exists ; 2008 ; European Journal of Physics Volume 29 ; 29 > 
     au < manifest ; exists ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
-    au < testing ; exists ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
+    au < manifest ; released ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
 
   }
@@ -661,7 +661,7 @@
     au < exists ; exists ; 2007 ; Fluid Dynamics Research Volume 39 ; 39 > 
     au < manifest ; exists ; 2008 ; Fluid Dynamics Research Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Fluid Dynamics Research Volume 41 ; 41 > 
-    au < manifest ; exists ; 2010 ; Fluid Dynamics Research Volume 42 ; 42 > 
+    au < testing ; exists ; 2010 ; Fluid Dynamics Research Volume 42 ; 42 > 
     au < manifest ; exists ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
 
   }
@@ -703,7 +703,7 @@
     au < exists ; exists ; 2007 ; Inverse Problems Volume 23 ; 23 > 
     au < manifest ; exists ; 2008 ; Inverse Problems Volume 24 ; 24 > 
     au < manifest ; exists ; 2009 ; Inverse Problems Volume 25 ; 25 > 
-    au < exists ; exists ; 2010 ; Inverse Problems Volume 26 ; 26 > 
+    au < testing ; exists ; 2010 ; Inverse Problems Volume 26 ; 26 > 
     au < manifest ; exists ; 2011 ; Inverse Problems Volume 27 ; 27 > 
 
   }
@@ -805,7 +805,7 @@
     au < exists ; exists ; 2007 ; Journal of Breath Research Volume 1 ; 1 > 
     au < manifest ; exists ; 2008 ; Journal of Breath Research Volume 2 ; 2 > 
     au < manifest ; exists ; 2009 ; Journal of Breath Research Volume 3 ; 3 > 
-    au < manifest ; exists ; 2010 ; Journal of Breath Research Volume 4 ; 4 > 
+    au < testing ; exists ; 2010 ; Journal of Breath Research Volume 4 ; 4 > 
     au < manifest ; exists ; 2011 ; Journal of Breath Research Volume 5 ; 5 > 
 
   }
@@ -826,7 +826,7 @@
     au < exists ; exists ; 2007 ; Journal of Cosmology and Astroparticle Physics Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Journal of Cosmology and Astroparticle Physics Volume 2008 ; 2008 > 
     au < manifest ; exists ; 2009 ; Journal of Cosmology and Astroparticle Physics Volume 2009 ; 2009 > 
-    au < manifest ; exists ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
+    au < testing ; exists ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
     au < crawling ; exists ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
 
   }
@@ -849,7 +849,7 @@
     au < exists ; exists ; 2007 ; Journal of Geophysics and Engineering Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Journal of Geophysics and Engineering Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Journal of Geophysics and Engineering Volume 6 ; 6 > 
-    au < manifest ; exists ; 2010 ; Journal of Geophysics and Engineering Volume 7 ; 7 > 
+    au < testing ; exists ; 2010 ; Journal of Geophysics and Engineering Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Journal of Geophysics and Engineering Volume 8 ; 8 > 
 
   }
