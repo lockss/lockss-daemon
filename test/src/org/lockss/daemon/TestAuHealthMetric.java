@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.3 2011-08-22 22:15:15 tlipkis Exp $
+ * $Id: TestAuHealthMetric.java,v 1.4 2011-08-25 12:17:30 pgust Exp $
  */
 
 /*
@@ -35,8 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 
 import org.lockss.test.*;
-import org.lockss.daemon.AuHealthMetric.HealthMetric;
-// import org.lockss.daemon.AuHealthMetric.PreservationStatus;
+import org.lockss.daemon.AuHealthMetric;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
