@@ -46,6 +46,22 @@
   {
   
     title <
+      name = Intertexts ;
+      issn = 1092-0625 ;
+      eissn = 2156-5465 ;
+      issnl = 1092-0625
+    >
+
+    param[journal_dir] = intertexts
+
+    au < manifest ; 2009 ; Intertexts Volume 13 ; 13 >
+    au < manifest ; 2010 ; Intertexts Volume 14 ; 14 >
+
+  }
+
+  {
+  
+    title <
       name = William Carlos Williams Review ;
       issn = 0196-6286 ;
       eissn = 1935-0244 ;
