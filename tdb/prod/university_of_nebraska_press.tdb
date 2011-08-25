@@ -103,6 +103,7 @@
     au < released ; 2008 ; French Forum Volume 33 ; 33 >
     au < released ; 2009 ; French Forum Volume 34 ; 34 >
     au < manifest ; 2010 ; French Forum Volume 35 ; 35 >
+    au < manifest ; 2011 ; French Forum Volume 36 ; 36 >
 
   }
 
@@ -193,6 +194,7 @@
     au < released ; 2008 ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
     au < released ; 2009 ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
     au < manifest ; 2010 ; Legacy: A Journal of American Women Writers Volume 27 ; 27 >
+    au < manifest ; 2011 ; Legacy: A Journal of American Women Writers Volume 28 ; 28 >
 
   }
 
@@ -233,7 +235,7 @@
     au < released ; 2007-2008 ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
     au < released ; 2008-2009 ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
     au < released ; 2009-2010 ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
-    au < manifest ; 2010 ; NINE: A Journal of Baseball History and Culture Volume 19 ; 19 >
+    au < manifest ; 2010-2011 ; NINE: A Journal of Baseball History and Culture Volume 19 ; 19 >
 
   }
 
@@ -247,6 +249,7 @@
     >
 
     param[journal_dir] = nineteenth_century_french_studies
+    comment[29] = issue nos. 3-4
 
     au < released ; 2001 ; Nineteenth-Century French Studies Volume 29 ; 29 >
     au < notReady ; 2001-2002 ; Nineteenth-Century French Studies Volume 30 ; 30 >
@@ -259,6 +262,22 @@
     au < released ; 2008-2009 ; Nineteenth-Century French Studies Volume 37 ; 37 >
     au < released ; 2009-2010 ; Nineteenth-Century French Studies Volume 38 ; 38 >
     au < manifest ; 2010-2011 ; Nineteenth-Century French Studies Volume 39 ; 39 >
+
+  }
+
+  {
+  
+    title <
+      name = Nouvelles Études Francophones ;
+      issn = 1552-3152 ;
+      eissn = 2156-9428 ;
+      issnl = 1552-3152
+    >
+
+    param[journal_dir] = nouvelles_tudes_francophones
+
+    au < manifest ; 2010 ; Nouvelles Études Francophones Volume 25 ; 25 >
+    au < manifest ; 2011 ; Nouvelles Études Francophones Volume 26 ; 26 >    
 
   }
 
@@ -298,6 +317,23 @@
 
     au < released ; 2009-2010 ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
     au < manifest ; 2010-2011 ; Qui Parle: Critical Humanities and Social Sciences Volume 19 ; 19 >
+
+  }
+
+  {
+  
+    title <
+      name = StoryWorlds: A Journal of Narrative Studies ;
+      issn = 1946-2204 ;
+      eissn = 2156-7204 ;
+      issnl = 1946-2204
+    >
+
+    param[journal_dir] = storyworlds
+
+    au < manifest ; 2009 ; StoryWorlds: A Journal of Narrative Studies Volume 1 ; 1 >
+    au < manifest ; 2010 ; StoryWorlds: A Journal of Narrative Studies 2 ; 2 >
+    au < manifest ; 2011 ; StoryWorlds: A Journal of Narrative Studies 3 ; 3 >
 
   }
 
@@ -384,7 +420,7 @@
     au < released ; 2007 ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
     au < released ; 2008 ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
     au < released ; 2009 ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
-    au < manifest ; 2010 ; Women and Music: A Journal of Gender and Culture Volume 14 ; 13 >
+    au < manifest ; 2010 ; Women and Music: A Journal of Gender and Culture Volume 14 ; 14 >
   }
 
   {
