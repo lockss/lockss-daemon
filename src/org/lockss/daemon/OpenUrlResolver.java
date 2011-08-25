@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.19 2011-08-05 23:48:08 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.20 2011-08-25 22:52:34 pgust Exp $
  */
 
 /*
@@ -136,6 +136,7 @@ public class OpenUrlResolver {
    * to title TOC.
    */
   private static final String[] auJournalauFeatures = {
+//    "au_feature_urls/au_abstract",
     "au_feature_urls/au_article",
     "au_feature_urls/au_issue",
     "au_issue_url",
@@ -1068,8 +1069,8 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume", volumeName);
   	  paramMap.setMapElement("volume_str",volumeName);
   	  paramMap.setMapElement("volume_name", volumeName);
+      paramMap.setMapElement("year", year);
       if (!StringUtil.isNullString(year)) {
-        paramMap.setMapElement("year", year);
         try {
           paramMap.setMapElement("au_short_year",
               String.format("%02d", NumberUtil.parseInt(year)%100));
@@ -1151,8 +1152,8 @@ public class OpenUrlResolver {
   	  paramMap.setMapElement("volume", volumeName);
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
+      paramMap.setMapElement("year", year);
       if (!StringUtil.isNullString(year)) {
-        paramMap.setMapElement("year", year);
         try {
           paramMap.setMapElement("au_short_year",
               String.format("%02d", NumberUtil.parseInt(year)%100));
