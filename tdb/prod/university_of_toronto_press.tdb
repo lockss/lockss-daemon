@@ -227,6 +227,7 @@
     au < manifest ; 2010 ; Canadian Theatre Review Issue 144 ; 144 >
     au < manifest ; 2011 ; Canadian Theatre Review Issue 145 ; 145 >
     au < manifest ; 2011 ; Canadian Theatre Review Issue 146 ; 146 >
+    au < manifest ; 2011 ; Canadian Theatre Review Issue 147 ; 147 >
 
   }
 
@@ -278,8 +279,8 @@
 
     param[journal_dir] = francophonies_damerique
 
-    au < released ; 2004 ; Francophonies d'Amérique Volume 17 ; 17 >
-    au < released ; 2004 ; Francophonies d'Amérique Volume 18 ; 18 >
+    au < released ; 2004 ; Francophonies d'Amérique Number 17 ; 17 >
+    au < released ; 2004 ; Francophonies d'Amérique Number 18 ; 18 >
 
   }
 
@@ -303,16 +304,16 @@
   {
   
     title <
-      name = Histoire sociale / Social history ;
+      name = Histoire sociale / Social History ;
       issn = 0018-2257 ;
       issnl = 0018-2257
     >
 
     param[journal_dir] = histoire_sociale_social_history
 
-    au < released ; 2008 ; Histoire sociale / Social history Volume 41 ; 41 >
-    au < released ; 2009 ; Histoire sociale / Social history Volume 42 ; 42 >
-    au < released ; 2010 ; Histoire sociale / Social history Volume 43 ; 43 >
+    au < released ; 2008 ; Histoire sociale / Social History Volume 41 ; 41 >
+    au < released ; 2009 ; Histoire sociale / Social History Volume 42 ; 42 >
+    au < released ; 2010 ; Histoire sociale / Social History Volume 43 ; 43 >
 
   }
 
