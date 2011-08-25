@@ -40,6 +40,7 @@
     au < manifest ; 2008 ; The Comparatist Volume 32 ; 32 >
     au < manifest ; 2009 ; The Comparatist Volume 33 ; 33 >
     au < manifest ; 2010 ; The Comparatist Volume 34 ; 34 >
+    au < manifest ; 2011 ; The Comparatist Volume 35 ; 35 >
 
   }
 
@@ -70,20 +71,6 @@
 
   {
     title <
-      name = Journal of the Civil War Era ;
-      issn = 2154-4727 ;
-      eissn = 2159-9807 ;
-      issnl = 2154-4727
-    >
-
-    param[journal_dir] = journal_of_the_civil_war_era
-
-    au < manifest ; 2011 ; Journal of the Civil War Era Volume 1 ; 1 >
-
-  }
-
-  {
-    title <
       name = The High School Journal ;
       issn = 0018-1498 ;
       eissn = 1534-5157 ;
@@ -108,6 +95,20 @@
 
   {
     title <
+      name = Journal of the Civil War Era ;
+      issn = 2154-4727 ;
+      eissn = 2159-9807 ;
+      issnl = 2154-4727
+    >
+
+    param[journal_dir] = journal_of_the_civil_war_era
+
+    au < manifest ; 2011 ; Journal of the Civil War Era Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Social Forces ;
       issn = 0037-7732 ;
       eissn = 1534-7605 ;
@@ -116,18 +117,19 @@
 
     param[journal_dir] = social_forces
     comment[platform] = moving to OUP in 2011
+    comment[79] = issue nos.3-4
 
     au < released ; 2001 ; Social Forces Volume 79 ; 79 >
-    au < released ; 2002 ; Social Forces Volume 80 ; 80 >
-    au < released ; 2003 ; Social Forces Volume 81 ; 81 >
-    au < released ; 2004 ; Social Forces Volume 82 ; 82 >
-    au < released ; 2005 ; Social Forces Volume 83 ; 83 >
-    au < released ; 2006 ; Social Forces Volume 84 ; 84 >
-    au < released ; 2007 ; Social Forces Volume 85 ; 85 >
-    au < manifest ; 2008 ; Social Forces Volume 86 ; 86 >
-    au < manifest ; 2009 ; Social Forces Volume 87 ; 87 >
-    au < manifest ; 2010 ; Social Forces Volume 88 ; 88 >
-    au < manifest ; 2011 ; Social Forces Volume 89 ; 89 >
+    au < released ; 2001-2002 ; Social Forces Volume 80 ; 80 >
+    au < released ; 2002-2003 ; Social Forces Volume 81 ; 81 >
+    au < released ; 2003-2004 ; Social Forces Volume 82 ; 82 >
+    au < released ; 2004-2005 ; Social Forces Volume 83 ; 83 >
+    au < released ; 2005-2006 ; Social Forces Volume 84 ; 84 >
+    au < released ; 2006-2007 ; Social Forces Volume 85 ; 85 >
+    au < manifest ; 2007-2008 ; Social Forces Volume 86 ; 86 >
+    au < manifest ; 2008-2009 ; Social Forces Volume 87 ; 87 >
+    au < manifest ; 2009-2010 ; Social Forces Volume 88 ; 88 >
+    au < manifest ; 2010-2011 ; Social Forces Volume 89 ; 89 >
 
   }
 
