@@ -2036,7 +2036,7 @@
     au < manifest ; exists ; 2006 ; The British Journal of Aesthetics Volume 46 ; 46 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Aesthetics Volume 47 ; 47 ; >
     au < manifest ; exists ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < testing ; exists ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
+    au < released ; manifest ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
     au < wanted ; exists ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
 
@@ -2241,7 +2241,7 @@
     au < manifest ; exists ; 2006 ; The British Journal of Criminology Volume 46 ; 46 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Criminology Volume 47 ; 47 ; >
     au < manifest ; exists ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < testing ; exists ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
+    au < released ; manifest ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
     au < wanted ; exists ; 2011 ; The British Journal of Criminology Volume 51 ; 51 ; >
 
@@ -2331,7 +2331,7 @@
     au < manifest ; exists ; 2005 ; The British Journal for the Philosophy of Science Volume 56 ; 56 ; >
     au < manifest ; exists ; 2006 ; The British Journal for the Philosophy of Science Volume 57 ; 57 ; >
     au < wanted ; exists ; 2007 ; The British Journal for the Philosophy of Science Volume 58 ; 58 ; >
-    au < testing ; exists ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
+    au < released ; manifest ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
     au < manifest ; exists ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
 
@@ -2401,7 +2401,7 @@
     au < manifest ; exists ; 2006 ; The British Journal of Social Work Volume 36 ; 36 ; >
     au < manifest ; exists ; 2007 ; The British Journal of Social Work Volume 37 ; 37 ; >
     au < manifest ; exists ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
-    au < testing ; exists ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
+    au < released ; manifest ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
     au < released ; crawling ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
     au < wanted ; exists ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
 
@@ -2599,7 +2599,7 @@
     au < manifest ; exists ; 2006 ; Bulletin of the London Mathematical Society Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Bulletin of the London Mathematical Society Volume 39 ; 39 ; >
     au < manifest ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
-    au < testing ; exists ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
+    au < released ; manifest ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < released ; crawling ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
     au < wanted ; exists ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
 
@@ -2663,7 +2663,7 @@
     au < manifest ; exists ; 2006 ; Cambridge Journal of Economics Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Cambridge Journal of Economics Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
-    au < testing ; exists ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
+    au < released ; manifest ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
     au < released ; crawling ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
     au < wanted ; exists ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
 
@@ -3485,7 +3485,7 @@
     au < manifest ; exists ; 2006 ; The Computer Journal Volume 49 ; 49 ; >
     au < manifest ; exists ; 2007 ; The Computer Journal Volume 50 ; 50 ; >
     au < manifest ; exists ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
-    au < testing ; exists ; 2009 ; The Computer Journal Volume 52 ; 52 ; >
+    au < released ; manifest ; 2009 ; The Computer Journal Volume 52 ; 52 ; >
     au < released ; crawling ; 2010 ; The Computer Journal Volume 53 ; 53 ; >
     au < wanted ; exists ; 2011 ; The Computer Journal Volume 54 ; 54 ; >
 
@@ -9450,7 +9450,7 @@
     au < wanted ; exists ; 2007 ; Journal of Law, Economics, and Organization Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
     au < manifest ; exists ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
+    au < testing ; exists ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
 
     }
@@ -9522,7 +9522,7 @@
     au < wanted ; exists ; 2007 ; Journal of Logic and Computation Volume 17 ; 17 ; >
     au < manifest ; exists ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
     au < released ; manifest ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
-    au < wanted ; exists ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
+    au < testing ; exists ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
     au < wanted ; exists ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
 
     }
@@ -9677,9 +9677,9 @@
     au < wanted ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
     au < exists ; exists ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < wanted ; exists ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
-    au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
+    au < testing ; exists ; 2010 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < exists ; exists ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
-    au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
+    au < testing ; exists ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
     au < exists ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
     au < exists ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
 
@@ -9745,7 +9745,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Medicine and Philosophy Volume 32 ; 32 ; >
     au < wanted ; exists ; 2008 ; The Journal of Medicine and Philosophy Volume 33 ; 33 ; >
     au < manifest ; exists ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 ; >
-    au < wanted ; exists ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 ; >
+    au < testing ; exists ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 ; >
     au < wanted ; exists ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
 
     }
@@ -9776,7 +9776,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
-    au < wanted ; exists ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
+    au < testing ; exists ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
 
     }
@@ -9882,7 +9882,7 @@
     au < wanted ; exists ; 2007 ; Journal of Molluscan Studies Volume 73 ; 73 ; >
     au < wanted ; exists ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
     au < manifest ; exists ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
-    au < wanted ; exists ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
+    au < testing ; exists ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
     au < wanted ; exists ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
 
     }
@@ -9935,7 +9935,7 @@
     au < wanted ; exists ; 2007 ; Journal of the National Cancer Institute Volume 99 ; 99 ; >
     au < wanted ; exists ; 2008 ; Journal of the National Cancer Institute Volume 100 ; 100 ; >
     au < released ; manifest ; 2009 ; Journal of the National Cancer Institute Volume 101 ; 101 ; >
-    au < wanted ; exists ; 2010 ; JNCI: Journal of the National Cancer Institute Volume 102 ; 102 ; >
+    au < testing ; exists ; 2010 ; JNCI: Journal of the National Cancer Institute Volume 102 ; 102 ; >
     au < wanted ; exists ; 2011 ; Journal of the National Cancer Institute Volume 103 ; 103 ; >
 
     }
@@ -9972,7 +9972,7 @@
     au < manifest ; exists ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
     au < manifest ; exists ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
-    au < wanted ; exists ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
+    au < testing ; exists ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 ; >
 
     }
@@ -11258,7 +11258,7 @@
     au < wanted ; exists ; 2007 ; Literary Imagination Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
-    au < testing ; exists ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
+    au < released ; manifest ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
     au < manifest ; exists ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
    
     }
