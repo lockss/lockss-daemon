@@ -4,6 +4,9 @@
   >
   
   comment[plugin] = Content on CLOCKSS is through Meta-Press only, not MUSE
+  comment[au_journal] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257
+  comment[au_volume] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257&volume=36
+  comment[note] = these urls redirect to one that uses an opaque identifier.
 
   {
     title <
