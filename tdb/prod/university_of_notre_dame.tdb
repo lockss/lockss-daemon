@@ -5,6 +5,7 @@
   >
 
   {
+
     title <
       name = The American Midland Naturalist ;
       issn = 0003-0031 ;
@@ -17,31 +18,63 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0003-0031
   
-      au < superseded ; 1998 ; The American Midland Naturalist Volume 139 ; 139 >
-      au < superseded ; 1998 ; The American Midland Naturalist Volume 140 ; 140 >
-      au < superseded ; 1999 ; The American Midland Naturalist Volume 141 ; 141 >
-      au < superseded ; 1999 ; The American Midland Naturalist Volume 142 ; 142 >
-      au < superseded ; 2000 ; The American Midland Naturalist Volume 143 ; 143 >
-      au < superseded ; 2000 ; The American Midland Naturalist Volume 144 ; 144 >
-      au < superseded ; 2001 ; The American Midland Naturalist Volume 145 ; 145 >
-      au < superseded ; 2001 ; The American Midland Naturalist Volume 146 ; 146 >
-      au < superseded ; 2002 ; The American Midland Naturalist Volume 147 ; 147 >
-      au < superseded ; 2002 ; The American Midland Naturalist Volume 148 ; 148 >
-      au < superseded ; 2003 ; The American Midland Naturalist Volume 149 ; 149 >
-      au < superseded ; 2003 ; The American Midland Naturalist Volume 150 ; 150 >
-      au < superseded ; 2004 ; The American Midland Naturalist Volume 151 ; 151 >
-      au < superseded ; 2004 ; The American Midland Naturalist Volume 152 ; 152 >
-      au < superseded ; 2005 ; The American Midland Naturalist Volume 153 ; 153 >
-      au < superseded ; 2005 ; The American Midland Naturalist Volume 154 ; 154 >
-      au < superseded ; 2006 ; The American Midland Naturalist Volume 155 ; 155 >
-      au < superseded ; 2006 ; The American Midland Naturalist Volume 156 ; 156 >
-      au < superseded ; 2007 ; The American Midland Naturalist Volume 157 ; 157 >
-      au < superseded ; 2007 ; The American Midland Naturalist Volume 158 ; 158 >
+      au < down ; 1998 ; The American Midland Naturalist Volume 139 ; 139 >
+      au < down ; 1998 ; The American Midland Naturalist Volume 140 ; 140 >
+      au < down ; 1999 ; The American Midland Naturalist Volume 141 ; 141 >
+      au < down ; 1999 ; The American Midland Naturalist Volume 142 ; 142 >
+      au < down ; 2000 ; The American Midland Naturalist Volume 143 ; 143 >
+      au < down ; 2000 ; The American Midland Naturalist Volume 144 ; 144 >
+      au < down ; 2001 ; The American Midland Naturalist Volume 145 ; 145 >
+      au < down ; 2001 ; The American Midland Naturalist Volume 146 ; 146 >
+      au < down ; 2002 ; The American Midland Naturalist Volume 147 ; 147 >
+      au < down ; 2002 ; The American Midland Naturalist Volume 148 ; 148 >
+      au < down ; 2003 ; The American Midland Naturalist Volume 149 ; 149 >
+      au < down ; 2003 ; The American Midland Naturalist Volume 150 ; 150 >
+      au < down ; 2004 ; The American Midland Naturalist Volume 151 ; 151 >
+      au < down ; 2004 ; The American Midland Naturalist Volume 152 ; 152 >
+      au < down ; 2005 ; The American Midland Naturalist Volume 153 ; 153 >
+      au < down ; 2005 ; The American Midland Naturalist Volume 154 ; 154 >
+      au < down ; 2006 ; The American Midland Naturalist Volume 155 ; 155 >
+      au < down ; 2006 ; The American Midland Naturalist Volume 156 ; 156 >
+      au < down ; 2007 ; The American Midland Naturalist Volume 157 ; 157 >
+      au < down ; 2007 ; The American Midland Naturalist Volume 158 ; 158 >
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = amid
+
+      au < manifest ; 1998 ; The American Midland Naturalist Volume 139 ; 139 >
+      au < manifest ; 1998 ; The American Midland Naturalist Volume 140 ; 140 >
+      au < manifest ; 1999 ; The American Midland Naturalist Volume 141 ; 141 >
+      au < manifest ; 1999 ; The American Midland Naturalist Volume 142 ; 142 >
+      au < manifest ; 2000 ; The American Midland Naturalist Volume 143 ; 143 >
+      au < manifest ; 2000 ; The American Midland Naturalist Volume 144 ; 144 >
+      au < manifest ; 2001 ; The American Midland Naturalist Volume 145 ; 145 >
+      au < manifest ; 2001 ; The American Midland Naturalist Volume 146 ; 146 >
+      au < manifest ; 2002 ; The American Midland Naturalist Volume 147 ; 147 >
+      au < manifest ; 2002 ; The American Midland Naturalist Volume 148 ; 148 >
+      au < manifest ; 2003 ; The American Midland Naturalist Volume 149 ; 149 >
+      au < manifest ; 2003 ; The American Midland Naturalist Volume 150 ; 150 >
+      au < manifest ; 2004 ; The American Midland Naturalist Volume 151 ; 151 >
+      au < manifest ; 2004 ; The American Midland Naturalist Volume 152 ; 152 >
+      au < manifest ; 2005 ; The American Midland Naturalist Volume 153 ; 153 >
+      au < manifest ; 2005 ; The American Midland Naturalist Volume 154 ; 154 >
+      au < manifest ; 2006 ; The American Midland Naturalist Volume 155 ; 155 >
+      au < manifest ; 2006 ; The American Midland Naturalist Volume 156 ; 156 >
+      au < manifest ; 2007 ; The American Midland Naturalist Volume 157 ; 157 >
+      au < manifest ; 2007 ; The American Midland Naturalist Volume 158 ; 158 >
+      au < manifest ; 2008 ; The American Midland Naturalist Volume 159 ; 158 >
+      au < manifest ; 2008 ; The American Midland Naturalist Volume 160 ; 160 >
+      au < manifest ; 2009 ; The American Midland Naturalist Volume 161 ; 161 >
+      au < manifest ; 2009 ; The American Midland Naturalist Volume 162 ; 162 >
+      au < manifest ; 2010 ; The American Midland Naturalist Volume 163 ; 163 >
+      au < manifest ; 2010 ; The American Midland Naturalist Volume 164 ; 164 >
+      au < manifest ; 2011 ; The American Midland Naturalist Volume 165 ; 165 >
+      au < manifest ; 2011 ; The American Midland Naturalist Volume 166 ; 166 >
 
     }
 
