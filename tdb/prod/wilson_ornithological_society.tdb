@@ -5,24 +5,45 @@
   >
 
   {
+  
     title <
       name = The Wilson Bulletin ;
       issn = 0043-5643 ;
       issnl = 0043-5643
     >
 
+    comment[continued_by] = 1559-4491
+
     {
+    
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0043-5643
   
-      au < superseded ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
-      au < superseded ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
-      au < superseded ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
-      au < superseded ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
-      au < superseded ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
-      au < superseded ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
+      au < down ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
+      au < down ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
+      au < down ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
+      au < down ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
+      au < down ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
+      au < down ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
+
+    }
+
+    {
+
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = wils
+  
+      au < manifest ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
+      au < manifest ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
+      au < manifest ; 2002 ; The Wilson Bulletin Volume 114 ; 114 >
+      au < manifest ; 2003 ; The Wilson Bulletin Volume 115 ; 115 >
+      au < manifest ; 2004 ; The Wilson Bulletin Volume 116 ; 116 >
+      au < manifest ; 2005 ; The Wilson Bulletin Volume 117 ; 117 >
+      
     }
 
   }
@@ -36,19 +57,33 @@
       issnl = 1559-4491
     >
 
+    comment[continues] = 0043-5643
+
     {
+
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1559-4491
   
-      au < superseded ; 2006 ; The Wilson Journal of Ornithology Volume 118 ; 118 >
-      au < superseded ; 2007 ; The Wilson Journal of Ornithology Volume 119 ; 119 >
+      au < down ; 2006 ; The Wilson Journal of Ornithology Volume 118 ; 118 >
+      au < down ; 2007 ; The Wilson Journal of Ornithology Volume 119 ; 119 >
+
     }
 
     {
+    
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = wils
 
-comment[0] = Atypon AUs
+      au < manifest ; 2006 ; The Wilson Bulletin Volume 118 ; 118 >
+      au < manifest ; 2007 ; The Wilson Bulletin Volume 119 ; 119 >      
+      au < manifest ; 2008 ; The Wilson Bulletin Volume 120 ; 120 >
+      au < manifest ; 2009 ; The Wilson Bulletin Volume 121 ; 121 >
+      au < manifest ; 2010 ; The Wilson Bulletin Volume 122 ; 122 >
+      au < manifest ; 2011 ; The Wilson Bulletin Volume 123 ; 123 >
 
     }
 
