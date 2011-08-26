@@ -4,10 +4,6 @@
     name = Wayne State University Press
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
-  implicit < status ; year ; name ; param[volume] >
-
   {
 
     title <
@@ -17,6 +13,9 @@
       issnl = 0011-1589
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = criticism
 
     au < released ; 2001 ; Criticism Volume 43 ; 43 >
@@ -41,6 +40,9 @@
       issnl = 0730-1081
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = discourse
 
     au < released ; 2000 ; Discourse Volume 22 ; 22 >
@@ -66,6 +68,9 @@
       issnl = 0306-7661
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = framework_the_journal_of_cinema_and_media
 
     au < released ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
@@ -84,20 +89,43 @@
       eissn = 1534-6617 ;
       issnl = 0018-7143
     >
+   
+    {
+      
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      implicit < status ; year ; name ; param[volume] >
+      param[journal_dir] = human_biology
 
-    param[journal_dir] = human_biology
+      au < released ; 2001 ; Human Biology Volume 73 ; 73 >
+      au < released ; 2002 ; Human Biology Volume 74 ; 74 >
+      au < released ; 2003 ; Human Biology Volume 75 ; 75 >
+      au < released ; 2004 ; Human Biology Volume 76 ; 76 >
+      au < released ; 2005 ; Human Biology Volume 77 ; 77 >
+      au < released ; 2006 ; Human Biology Volume 78 ; 78 >
+      au < released ; 2007 ; Human Biology Volume 79 ; 79 >
+      au < released ; 2008 ; Human Biology Volume 80 ; 80 >
+      au < released ; 2009 ; Human Biology Volume 81 ; 81 >
+      au < testing ; 2010 ; Human Biology Volume 82 ; 82 >
+      au < testing ; 2011 ; Human Biology Volume 83 ; 83 >    
 
-    au < released ; 2001 ; Human Biology Volume 73 ; 73 >
-    au < released ; 2002 ; Human Biology Volume 74 ; 74 >
-    au < released ; 2003 ; Human Biology Volume 75 ; 75 >
-    au < released ; 2004 ; Human Biology Volume 76 ; 76 >
-    au < released ; 2005 ; Human Biology Volume 77 ; 77 >
-    au < released ; 2006 ; Human Biology Volume 78 ; 78 >
-    au < released ; 2007 ; Human Biology Volume 79 ; 79 >
-    au < released ; 2008 ; Human Biology Volume 80 ; 80 >
-    au < released ; 2009 ; Human Biology Volume 81 ; 81 >
-    au < testing ; 2010 ; Human Biology Volume 82 ; 82 >
-    au < testing ; 2011 ; Human Biology Volume 83 ; 83 >    
+    }
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = hbio
+
+      au < manifest ; 2006 ; Human Biology Volume 78 ; 78 >
+      au < manifest ; 2007 ; Human Biology Volume 79 ; 79 >
+      au < manifest ; 2008 ; Human Biology Volume 80 ; 80 >
+      au < manifest ; 2009 ; Human Biology Volume 81 ; 81 >
+      au < manifest ; 2010 ; Human Biology Volume 82 ; 82 >
+      au < manifest ; 2011 ; Human Biology Volume 83 ; 83 >   
+
+    }
 
   }
 
@@ -110,6 +138,9 @@
       issnl = 1521-4281
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = marvels_and_tales
 
     au < released ; 2001 ; Marvels & Tales Volume 15 ; 15 >
@@ -135,6 +166,9 @@
       issnl = 0272-930X
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = merrill-palmer_quarterly
 
     au < released ; 2001 ; Merrill-Palmer Quarterly Volume 47 ; 47 >
