@@ -435,6 +435,8 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[17] = found a login page
+      comment[18] = no permission
 
       au < exists ; 2000 ; Native Plants Journal Volume 1 ; 1 >
       au < exists ; 2001 ; Native Plants Journal Volume 2 ; 2 >
@@ -446,9 +448,8 @@
       au < exists ; 2007 ; Native Plants Journal Volume 8 ; 8 >
       au < exists ; 2008 ; Native Plants Journal Volume 9 ; 9 >
       au < exists ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < testing ; 2010 ; Native Plants Journal Volume 11 ; 11 >
-      au < testing ; 2011 ; Native Plants Journal Volume 12 ; 12 >
-
+      au < notReady ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < notReady ; 2011 ; Native Plants Journal Volume 12 ; 12 >
     
     }
     
@@ -458,6 +459,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = native_plants_journal
       implicit < status ; year ; name ; param[volume] >
+      comment[0] = vols. 5-11 released under U of Illinois Press (also Project Muse)
 
       au < manifest ; 2004 ; Native Plants Journal Volume 5 ; 5 >
       au < manifest ; 2005 ; Native Plants Journal Volume 6 ; 6 >
