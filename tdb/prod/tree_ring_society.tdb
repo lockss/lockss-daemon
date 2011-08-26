@@ -9,6 +9,7 @@
   param[base_url] = http://www.bioone.org/
 
   {
+
     title <
       name = Tree-Ring Research ;
       issn = 1536-1098 ;
@@ -17,13 +18,14 @@
     
     param[journal_code] = trre
   
-    au < exists ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
-    au < exists ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
-    au < exists ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
-    au < exists ; 2007 ; Tree-Ring Research Volume 63 ; 63 >
-    au < exists ; 2008 ; Tree-Ring Research Volume 64 ; 64 >
-    au < exists ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
-    au < exists ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
+    au < manifest ; 2004 ; Tree-Ring Research Volume 60 ; 60 >
+    au < manifest ; 2005 ; Tree-Ring Research Volume 61 ; 61 >
+    au < manifest ; 2006 ; Tree-Ring Research Volume 62 ; 62 >
+    au < manifest ; 2007 ; Tree-Ring Research Volume 63 ; 63 >
+    au < manifest ; 2008 ; Tree-Ring Research Volume 64 ; 64 >
+    au < manifest ; 2009 ; Tree-Ring Research Volume 65 ; 65 >
+    au < manifest ; 2010 ; Tree-Ring Research Volume 66 ; 66 >
+    au < manifest ; 2011 ; Tree-Ring Research Volume 67 ; 67 >
 
   }
   
