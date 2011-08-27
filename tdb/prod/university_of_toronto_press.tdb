@@ -167,7 +167,7 @@
     au < released ; 2007 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 ; 64 >
     au < released ; 2008 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 ; 65 >
     au < released ; 2009 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 ; 66 >
-    au < testing ; 2010 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 67 ; 67 >
+    au < ready ; 2010 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 67 ; 67 >
 
   }
 
@@ -183,8 +183,8 @@
     param[journal_dir] = canadian_public_policy
 
     au < released ; 2009 ; Canadian Public Policy Volume 35 ; 35 >
-    au < testing ; 2010 ; Canadian Public Policy Volume 36 ; 36 >
-    au < testing ; 2011 ; Canadian Public Policy Volume 37 ; 37 >
+    au < ready ; 2010 ; Canadian Public Policy Volume 36 ; 36 >
+    au < ready ; 2011 ; Canadian Public Policy Volume 37 ; 37 >
 
   }
 
@@ -205,8 +205,8 @@
     au < released ; 2007 ; Canadian Review of American Studies Volume 37 ; 37 >
     au < released ; 2008 ; Canadian Review of American Studies Volume 38 ; 38 >
     au < released ; 2009 ; Canadian Review of American Studies Volume 39 ; 39 >
-    au < testing ; 2010 ; Canadian Review of American Studies Volume 40 ; 40 >
-    au < testing ; 2011 ; Canadian Review of American Studies Volume 41 ; 41 >
+    au < ready ; 2010 ; Canadian Review of American Studies Volume 40 ; 40 >
+    au < ready ; 2011 ; Canadian Review of American Studies Volume 41 ; 41 >
 
   }
 
@@ -222,12 +222,12 @@
     param[journal_dir] = canadian_theatre_review
 
     au < released ; 2010 ; Canadian Theatre Review Issue 141 ; 141 >
-    au < testing ; 2010 ; Canadian Theatre Review Issue 142 ; 142 >
-    au < testing ; 2010 ; Canadian Theatre Review Issue 143 ; 143 >
-    au < testing ; 2010 ; Canadian Theatre Review Issue 144 ; 144 >
-    au < testing ; 2011 ; Canadian Theatre Review Issue 145 ; 145 >
-    au < testing ; 2011 ; Canadian Theatre Review Issue 146 ; 146 >
-    au < testing ; 2011 ; Canadian Theatre Review Issue 147 ; 147 >
+    au < ready ; 2010 ; Canadian Theatre Review Issue 142 ; 142 >
+    au < ready ; 2010 ; Canadian Theatre Review Issue 143 ; 143 >
+    au < ready ; 2010 ; Canadian Theatre Review Issue 144 ; 144 >
+    au < ready ; 2011 ; Canadian Theatre Review Issue 145 ; 145 >
+    au < ready ; 2011 ; Canadian Theatre Review Issue 146 ; 146 >
+    au < ready ; 2011 ; Canadian Theatre Review Issue 147 ; 147 >
 
   }
 
@@ -243,8 +243,8 @@
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
 
     au < released ; 2004 ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
-    au < testing ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
-    au < testing ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 ; 15 >
+    au < ready ; 2005 ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
+    au < ready ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 ; 15 >
 
   }
 
@@ -264,7 +264,7 @@
     au < released ; 2007-2008 ; Eighteenth Century Fiction Volume 20 ; 20 >
     au < released ; 2008-2009 ; Eighteenth Century Fiction Volume 21 ; 21 >
     au < released ; 2009-2010 ; Eighteenth Century Fiction Volume 22 ; 22 >
-    au < testing ; 2010-2011 ; Eighteenth Century Fiction Volume 23 ; 23 >
+    au < ready ; 2010-2011 ; Eighteenth Century Fiction Volume 23 ; 23 >
 
   }
 
@@ -296,8 +296,8 @@
     param[journal_dir] = genocide_studies_and_prevention
 
     au < released ; 2009 ; Genocide Studies and Prevention Volume 4 ; 4 >
-    au < testing ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
-    au < testing ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
+    au < ready ; 2010 ; Genocide Studies and Prevention Volume 5 ; 5 >
+    au < ready ; 2011 ; Genocide Studies and Prevention Volume 6 ; 6 >
 
   }
 
@@ -333,8 +333,8 @@
     au < released ; 2007 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 41 ; 41 >
     au < released ; 2008 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 42 ; 42 >
     au < released ; 2009 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 43 ; 43 >
-    au < manifest ; 2010 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 44 ; 44 >
-    au < manifest ; 2011 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 45 ; 45 >
+    au < ready ; 2010 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 44 ; 44 >
+    au < ready ; 2011 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 45 ; 45 >
 
   }
 
@@ -368,7 +368,7 @@
     au < released ; 2007-2008 ; Journal of Scholarly Publishing Volume 39 ; 39 >
     au < released ; 2008-2009 ; Journal of Scholarly Publishing Volume 40 ; 40 >
     au < released ; 2009-2010 ; Journal of Scholarly Publishing Volume 41 ; 41 >
-    au < manifest ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 ; 42 >
+    au < ready ; 2010-2011 ; Journal of Scholarly Publishing Volume 42 ; 42 >
 
   }
 
@@ -388,8 +388,8 @@
     au < released ; 2007 ; Modern Drama Volume 50 ; 50 >
     au < released ; 2008 ; Modern Drama Volume 51 ; 51 >
     au < released ; 2009 ; Modern Drama Volume 52 ; 52 >
-    au < manifest ; 2010 ; Modern Drama Volume 53 ; 53 >
-    au < manifest ; 2011 ; Modern Drama Volume 54 ; 54 >
+    au < ready ; 2010 ; Modern Drama Volume 53 ; 53 >
+    au < ready ; 2011 ; Modern Drama Volume 54 ; 54 >
 
   }
 
@@ -409,7 +409,7 @@
     au < released ; 2008 ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
     au < released ; 2009 ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
     au < released ; 2010 ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
-    au < manifest ; 2011 ; Seminar: A Journal of Germanic Studies Volume 47 ; 47 >
+    au < ready ; 2011 ; Seminar: A Journal of Germanic Studies Volume 47 ; 47 >
 
   }
 
@@ -425,8 +425,8 @@
     param[journal_dir] = tocqueville_reviewla_revue_tocqueville
 
     au < released ; 2009 ; The Tocqueville Review / La revue Tocqueville Volume 30 ; 30 >
-    au < manifest ; 2010 ; The Tocqueville Review / La revue Tocqueville Volume 31 ; 31 >
-    au < manifest ; 2011 ; The Tocqueville Review / La revue Tocqueville Volume 32 ; 32 >
+    au < ready ; 2010 ; The Tocqueville Review / La revue Tocqueville Volume 31 ; 31 >
+    au < ready ; 2011 ; The Tocqueville Review / La revue Tocqueville Volume 32 ; 32 >
 
   }
 
@@ -441,7 +441,7 @@
 
     param[journal_dir] = toronto_journal_of_theology
 
-    au < manifest ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
+    au < ready ; 2011 ; Toronto Journal of Theology Volume 27 ; 27 >
 
   }
 
@@ -456,14 +456,14 @@
 
     param[journal_dir] = university_of_toronto_law_journal
 
-    au < manifest ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
-    au < manifest ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
-    au < manifest ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
-    au < manifest ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
-    au < manifest ; 2008 ; University of Toronto Law Journal Volume 58 ; 58 >
+    au < notReady ; 2004 ; University of Toronto Law Journal Volume 54 ; 54 >
+    au < notReady ; 2005 ; University of Toronto Law Journal Volume 55 ; 55 >
+    au < notReady ; 2006 ; University of Toronto Law Journal Volume 56 ; 56 >
+    au < notReady ; 2007 ; University of Toronto Law Journal Volume 57 ; 57 >
+    au < ready ; 2008 ; University of Toronto Law Journal Volume 58 ; 58 >
     au < released ; 2009 ; University of Toronto Law Journal Volume 59 ; 59 >
     au < released ; 2010 ; University of Toronto Law Journal Volume 60 ; 60 >
-    au < manifest ; 2011 ; University of Toronto Law Journal Volume 61 ; 61 >
+    au < ready ; 2011 ; University of Toronto Law Journal Volume 61 ; 61 >
 
   }
 
@@ -483,8 +483,8 @@
     au < released ; 2007 ; University of Toronto Quarterly Volume 76 ; 76 >
     au < released ; 2008 ; University of Toronto Quarterly Volume 77 ; 77 >
     au < released ; 2009 ; University of Toronto Quarterly Volume 78 ; 78 >
-    au < manifest ; 2010 ; University of Toronto Quarterly Volume 79 ; 79 >
-    au < manifest ; 2011 ; University of Toronto Quarterly Volume 80 ; 80 >
+    au < ready ; 2010 ; University of Toronto Quarterly Volume 79 ; 79 >
+    au < ready ; 2011 ; University of Toronto Quarterly Volume 80 ; 80 >
 
   }
 
@@ -499,8 +499,8 @@
 
     param[journal_dir] = yearbook_of_comparative_and_general_literature
 
-    au < manifest ; 2008 ; The Yearbook of Comparative Literature Volume 54 ; 54 >
-    au < manifest ; 2009 ; The Yearbook of Comparative Literature Volume 55 ; 55 >
+    au < ready ; 2008 ; The Yearbook of Comparative Literature Volume 54 ; 54 >
+    au < ready ; 2009 ; The Yearbook of Comparative Literature Volume 55 ; 55 >
 
   }
 
