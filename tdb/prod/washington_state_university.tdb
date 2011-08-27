@@ -15,14 +15,12 @@
       issnl = 0093-8297
     >
 
-comment[esq54] = 500 error on a page
-
     param[journal_dir] = esq
 
     au < ready ; 2007 ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
-    au < notReady ; 2008 ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
+    au < ready ; 2008 ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
     au < ready ; 2009 ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
-    au < testing ; 2010-2011 ; ESQ: A Journal of the American Renaissance Volume 56 ; 56 >
+    au < ready ; 2010-2011 ; ESQ: A Journal of the American Renaissance Volume 56 ; 56 >
 
   }
 
