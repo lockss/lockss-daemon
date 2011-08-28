@@ -321,10 +321,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < testing ; exists ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; >
-      au < testing ; exists ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; >
-      au < testing ; exists ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; >
-      au < testing ; exists ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; >
+      au < released ; manifest ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; >
+      au < released ; manifest ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; >
+      au < released ; manifest ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; >
+      au < released ; manifest ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; >
 
     }
     
@@ -613,12 +613,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < wanted ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; >
-      au < wanted ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; >
-      au < wanted ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; >
-      au < wanted ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
-      au < wanted ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
-      au < wanted ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
+      au < testing ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; >
+      au < testing ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; >
+      au < testing ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; >
+      au < testing ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
+      au < testing ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
+      au < testing ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
       au < crawling ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
       au < manifest ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
 
@@ -1120,7 +1120,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < testing ; exists ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ;  >      
+      au < released ; manifest ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ;  >      
       au < crawling ; exists ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < manifest ; exists ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
     }
