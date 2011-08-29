@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Canadian Committee on Labour History
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Labour / Le Travail ;
+      issn = 0700-3862 ;
+      issnl = 0700-3862
+    >
+
+	attr[journal_abbr] = xxx
+    param[journal_dir] = xxx
+
+    au < doesNotExist ; 0 ; Labour / Le Travail Volume 1 ; 1 >
+
+  }
+
+}
