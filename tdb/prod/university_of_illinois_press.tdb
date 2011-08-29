@@ -20,8 +20,8 @@
 
       param[journal_dir] = american_journal_of_theology_and_philosophy
 
-      au < manifest ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
-      au < manifest ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
+      au < ready ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
+      au < ready ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
 
     }
 
@@ -38,7 +38,7 @@
       au < released ; 2007-2008 ; American Literary Realism Volume 40 ; 40 >
       au < released ; 2008-2009 ; American Literary Realism Volume 41 ; 41 >
       au < released ; 2009-2010 ; American Literary Realism Volume 42 ; 42 >
-      au < manifest ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
+      au < ready ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
 
     }
 
@@ -67,7 +67,7 @@
 
       param[journal_dir] = black_music_research_journal
 
-      au < manifest ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
+      au < ready ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
 
     }
 
@@ -82,8 +82,8 @@
       param[journal_dir] = black_women_gender_and_families
 
       au < released ; 2009 ; Black Women, Gender & Families Volume 3 ; 3 >
-      au < manifest ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
-      au < manifest ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
+      au < ready ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
+      au < ready ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
 
     }
 
@@ -99,8 +99,8 @@
 
       au < released ; 2008 ; Dance Research Journal Volume 40 ; 40 >
       au < released ; 2009 ; Dance Research Journal Volume 41 ; 41 >
-      au < manifest ; 2010 ; Dance Research Journal Volume 42 ; 42 >
-      au < manifest ; 2011 ; Dance Research Journal Volume 43 ; 43 >
+      au < ready ; 2010 ; Dance Research Journal Volume 42 ; 42 >
+      au < ready ; 2011 ; Dance Research Journal Volume 43 ; 43 >
 
     }
 
@@ -116,7 +116,7 @@
 
       au < released ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
       au < released ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
-      au < manifest ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
+      au < ready ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
 
     }
 
@@ -132,7 +132,7 @@
 
       au < released ; 2008 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
       au < released ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
-      au < manifest ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
+      au < ready ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
 
     }
 
@@ -154,7 +154,7 @@
       au < released ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
       au < released ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
       au < released ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
-      au < manifest ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
+      au < ready ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
 
     }
 
@@ -169,8 +169,8 @@
       param[journal_dir] = journal_of_education_finance
 
       au < released ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
-      au < manifest ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
-      au < manifest ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
+      au < ready ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
+      au < ready ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
 
     }
 
@@ -187,7 +187,7 @@
       au < released ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
       au < released ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
       au < released ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
-      au < manifest ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
+      au < ready ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
 
     }
 
@@ -202,8 +202,8 @@
       param[journal_dir] = the_pluralist
 
       au < released ; 2009 ; The Pluralist Volume 4 ; 4 >
-      au < manifest ; 2010 ; The Pluralist Volume 5 ; 5 >
-      au < manifest ; 2011 ; The Pluralist Volume 6 ; 6 >
+      au < ready ; 2010 ; The Pluralist Volume 5 ; 5 >
+      au < ready ; 2011 ; The Pluralist Volume 6 ; 6 >
 
     }
     
@@ -223,10 +223,10 @@
       au < released ; 2009 ; Radical Teacher Number 84 ; 84 >
       au < released ; 2009 ; Radical Teacher Number 85 ; 85 >
       au < released ; 2009 ; Radical Teacher Number 86 ; 86 >
-      au < manifest ; 2010 ; Radical Teacher Number 87 ; 87 >
-      au < manifest ; 2010 ; Radical Teacher Number 88 ; 88 >
-      au < manifest ; 2010 ; Radical Teacher Number 89 ; 89 >
-      au < manifest ; 2011 ; Radical Teacher Number 90 ; 90 >
+      au < ready ; 2010 ; Radical Teacher Number 87 ; 87 >
+      au < ready ; 2010 ; Radical Teacher Number 88 ; 88 >
+      au < ready ; 2010 ; Radical Teacher Number 89 ; 89 >
+      au < ready ; 2011 ; Radical Teacher Number 90 ; 90 >
 
     }
 
@@ -240,7 +240,7 @@
 
       param[journal_dir] = visual_arts_research
 
-      au < manifest ; 2010 ; Visual Arts Research Volume 36 ; 36 >
+      au < ready ; 2010 ; Visual Arts Research Volume 36 ; 36 >
 
     }
 
