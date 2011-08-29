@@ -2925,11 +2925,11 @@
     au < doesNotExist ; exists ; 1992 ; Ming Studies Volume 1992 ; 1992 > 
     au < doesNotExist ; exists ; 1993 ; Ming Studies Volume 1993 ; 1993 > 
     au < manifest ; exists ; 1994 ; Ming Studies Volume 1994 ; 1994 > 
-    au < manifest ; exists ; 1995 ; Ming Studies Volume 1993 ; 1993 > 
-    au < manifest ; exists ; 1996 ; Ming Studies Volume 1994 ; 1994 > 
-    au < manifest ; exists ; 1997 ; Ming Studies Volume 1995 ; 1995 > 
-    au < manifest ; exists ; 1998 ; Ming Studies Volume 1996 ; 1996 > 
-    au < manifest ; exists ; 1999 ; Ming Studies Volume 1997 ; 1997 > 
+    au < manifest ; exists ; 1995 ; Ming Studies Volume 1995 ; 1995 > 
+    au < manifest ; exists ; 1996 ; Ming Studies Volume 1996 ; 1996 > 
+    au < manifest ; exists ; 1997 ; Ming Studies Volume 1997 ; 1997 > 
+    au < manifest ; exists ; 1998 ; Ming Studies Volume 1998 ; 1998 > 
+    au < manifest ; exists ; 1999 ; Ming Studies Volume 1999 ; 1999 > 
     au < manifest ; exists ; 2000 ; Ming Studies Volume 2000 ; 2000 > 
     au < manifest ; exists ; 2001 ; Ming Studies Volume 2002 ; 2001 > 
     au < doesNotExist ; exists ; 2002 ; Ming Studies Volume 2002 ; 2002 >
@@ -4208,7 +4208,14 @@
     param[journal_issn] = 1521-5385
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 2004-2005 ; Twentieth-Century China Volume 34 ; 34 > 
+    au < manifest ; exists ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
+    au < manifest ; exists ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
+    au < manifest ; exists ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
+    au < manifest ; exists ; 2000-2001 ; Twentieth-Century China Volume 26 ; 26 > 
+    au < manifest ; exists ; 2001-2002 ; Twentieth-Century China Volume 27 ; 27 > 
+    au < manifest ; exists ; 2002-2003 ; Twentieth-Century China Volume 28 ; 28 > 
+    au < manifest ; exists ; 2003-2004 ; Twentieth-Century China Volume 29 ; 29 > 
+    au < manifest ; exists ; 2004-2005 ; Twentieth-Century China Volume 30 ; 30 > 
     au < manifest ; exists ; 2006 ; Twentieth-Century China Volume 31 ; 31 > 
     au < manifest ; exists ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
     au < manifest ; exists ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
