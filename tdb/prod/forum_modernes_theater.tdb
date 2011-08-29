@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Forum Modernes Theater
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Forum Modernes Theater ;
+      issn = 0930-5874 ;
+      issnl = 0930-5874
+    >
+
+	attr[journal_abbr] = xxx
+    param[journal_dir] = xxx
+
+    au < doesNotExist ; 0 ; Forum Modernes Theater Volume 1 ; 1 >
+
+  }
+
+}
