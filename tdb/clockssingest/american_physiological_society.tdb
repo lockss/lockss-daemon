@@ -613,12 +613,12 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < testing ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; >
-      au < testing ; exists ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; >
-      au < testing ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; >
-      au < testing ; exists ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
-      au < testing ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
-      au < testing ; exists ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
+      au < released ; manifest ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; >
+      au < released ; manifest ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; >
+      au < released ; manifest ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; >
+      au < released ; manifest ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; >
+      au < released ; manifest ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; >
+      au < released ; manifest ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; >
       au < crawling ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
       au < manifest ; exists ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
 
@@ -1123,6 +1123,7 @@
       au < released ; manifest ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ;  >      
       au < crawling ; exists ; 2011 ; Journal of Applied Physiology Volume 110 ; 110 ; >
       au < manifest ; exists ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
+
     }
     
   }
@@ -1253,7 +1254,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < wanted ; exists ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; >      
+      au < testing ; exists ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; >      
       au < crawling ; exists ; 2011 ; Journal of Neurophysiology Volume 105 ; 105 ; >
       au < manifest ; exists ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       
@@ -1444,10 +1445,10 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       
-      au < wanted ; exists ; 1933 ; Physiological Reviews Volume 13 ; 13 ; > 
-      au < wanted ; exists ; 1937 ; Physiological Reviews Volume 17 ; 17 ; >
-      au < wanted ; exists ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
-      au < wanted ; exists ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
+      au < testing ; exists ; 1933 ; Physiological Reviews Volume 13 ; 13 ; > 
+      au < testing ; exists ; 1937 ; Physiological Reviews Volume 17 ; 17 ; >
+      au < testing ; exists ; 1941 ; Physiological Reviews Volume 21 ; 21 ; >
+      au < testing ; exists ; 1945 ; Physiological Reviews Volume 25 ; 25 ; >
       au < crawling ; exists ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
 
     }
