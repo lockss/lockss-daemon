@@ -17,12 +17,12 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     param[journal_id] = lo
     implicit < status ; year ; name ; param[volume_name] >
     
-    au < ready ; 1958 ; Limnology and Oceanography Volume 1 ; 1 >
-    au < ready ; 1959 ; Limnology and Oceanography Volume 2 ; 2 >
-    au < ready ; 1960 ; Limnology and Oceanography Volume 3 ; 3 >
-    au < ready ; 1961 ; Limnology and Oceanography Volume 4 ; 4 >
-    au < ready ; 1962 ; Limnology and Oceanography Volume 5 ; 5 >
-    au < ready ; 1963 ; Limnology and Oceanography Volume 6 ; 6 >
+    au < ready ; 1956 ; Limnology and Oceanography Volume 1 ; 1 >
+    au < ready ; 1957 ; Limnology and Oceanography Volume 2 ; 2 >
+    au < ready ; 1958 ; Limnology and Oceanography Volume 3 ; 3 >
+    au < ready ; 1959 ; Limnology and Oceanography Volume 4 ; 4 >
+    au < ready ; 1960 ; Limnology and Oceanography Volume 5 ; 5 >
+    au < ready ; 1961 ; Limnology and Oceanography Volume 6 ; 6 >
     au < ready ; 1962 ; Limnology and Oceanography Volume 7 ; 7 >
     au < ready ; 1963 ; Limnology and Oceanography Volume 8 ; 8 >
     au < ready ; 1964 ; Limnology and Oceanography Volume 9 ; 9 >
