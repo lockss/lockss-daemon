@@ -825,8 +825,8 @@
     au < exists ; exists ; 2006 ; Journal of Cosmology and Astroparticle Physics Volume 2006 ; 2006 > 
     au < exists ; exists ; 2007 ; Journal of Cosmology and Astroparticle Physics Volume 2007 ; 2007 > 
     au < manifest ; exists ; 2008 ; Journal of Cosmology and Astroparticle Physics Volume 2008 ; 2008 > 
-    au < notReady ; exists ; 2009 ; Journal of Cosmology and Astroparticle Physics Volume 2009 ; 2009 > 
-    au < ready ; exists ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
+    au < released ; manifest ; 2009 ; Journal of Cosmology and Astroparticle Physics Volume 2009 ; 2009 > 
+    au < released ; manifest ; 2010 ; Journal of Cosmology and Astroparticle Physics Volume 2010 ; 2010 > 
     au < crawling ; exists ; 2011 ; Journal of Cosmology and Astroparticle Physics Volume 2011 ; 2011 > 
 
   }
@@ -893,7 +893,7 @@
     au < exists ; exists ; 2007 ; Journal of Instrumentation Volume 2 ; 2 > 
     au < manifest ; exists ; 2008 ; Journal of Instrumentation Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Journal of Instrumentation Volume 4 ; 4 > 
-    au < ready ; exists ; 2010 ; Journal of Instrumentation Volume 5 ; 5 > 
+    au < released ; manifest ; 2010 ; Journal of Instrumentation Volume 5 ; 5 > 
     au < manifest ; exists ; 2011 ; Journal of Instrumentation Volume 6 ; 6 > 
 
   }
@@ -929,7 +929,7 @@
     au < exists ; exists ; 2007 ; Journal of Micromechanics and Microengineering Volume 17 ; 17 > 
     au < manifest ; exists ; 2008 ; Journal of Micromechanics and Microengineering Volume 18 ; 18 > 
     au < manifest ; exists ; 2009 ; Journal of Micromechanics and Microengineering Volume 19 ; 19 > 
-    au < testing ; exists ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 > 
+    au < released ; manifest ; 2010 ; Journal of Micromechanics and Microengineering Volume 20 ; 20 > 
     au < manifest ; exists ; 2011 ; Journal of Micromechanics and Microengineering Volume 21 ; 21 > 
 
   }
@@ -952,7 +952,7 @@
     au < exists ; exists ; 2007 ; Journal of Neural Engineering Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Journal of Neural Engineering Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Journal of Neural Engineering Volume 6 ; 6 > 
-    au < ready ; exists ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 > 
+    au < released ; manifest ; 2010 ; Journal of Neural Engineering Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
 
   }
@@ -991,7 +991,7 @@
     comment[param] = eissn preferred
     comment[continues] = 1464-4258
  
-    au < testing ; exists ; 2010 ; Journal of Optics Volume 12 ; 12 > 
+    au < released ; manifest ; 2010 ; Journal of Optics Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; Journal of Optics Volume 13 ; 13 > 
 
   }
@@ -1253,7 +1253,7 @@
     au < exists ; exists ; 2007 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 40 ; 40 > 
     au < manifest ; exists ; 2008 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 41 ; 41 > 
     au < manifest ; exists ; 2009 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 42 ; 42 > 
-    au < manifest ; exists ; 2010 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 43 ; 43 > 
+    au < testing ; exists ; 2010 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 43 ; 43 > 
     au < manifest ; exists ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
 
   }
@@ -1345,7 +1345,7 @@
     au < exists ; exists ; 2007 ; Journal of Physics D: Applied Physics Volume 40 ; 40 > 
     au < manifest ; exists ; 2008 ; Journal of Physics D: Applied Physics Volume 41 ; 41 > 
     au < manifest ; exists ; 2009 ; Journal of Physics D: Applied Physics Volume 42 ; 42 > 
-    au < manifest ; exists ; 2010 ; Journal of Physics D: Applied Physics Volume 43 ; 43 > 
+    au < testing ; exists ; 2010 ; Journal of Physics D: Applied Physics Volume 43 ; 43 > 
     au < manifest ; exists ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 > 
 
   }
@@ -1449,7 +1449,7 @@
     au < exists ; exists ; 2007 ; Journal of Physics G: Nuclear and Particle Physics Volume 34 ; 34 > 
     au < manifest ; exists ; 2008 ; Journal of Physics G: Nuclear and Particle Physics Volume 35 ; 35 > 
     au < manifest ; exists ; 2009 ; Journal of Physics G: Nuclear and Particle Physics Volume 36 ; 36 > 
-    au < manifest ; exists ; 2010 ; Journal of Physics G: Nuclear and Particle Physics Volume 37 ; 37 > 
+    au < testing ; exists ; 2010 ; Journal of Physics G: Nuclear and Particle Physics Volume 37 ; 37 > 
     au < manifest ; exists ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 > 
 
   }
@@ -1514,7 +1514,7 @@
     au < exists ; exists ; 2007 ; Journal of Physics: Condensed Matter Volume 19 ; 19 > 
     au < manifest ; exists ; 2008 ; Journal of Physics: Condensed Matter Volume 20 ; 20 > 
     au < manifest ; exists ; 2009 ; Journal of Physics: Condensed Matter Volume 21 ; 21 > 
-    au < manifest ; exists ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 > 
+    au < testing ; exists ; 2010 ; Journal of Physics: Condensed Matter Volume 22 ; 22 > 
     au < manifest ; exists ; 2011 ; Journal of Physics: Condensed Matter Volume 23 ; 23 > 
 
   }
@@ -1878,7 +1878,7 @@
     au < exists ; exists ; 2007 ; Journal of Radiological Protection Volume 27 ; 27 > 
     au < manifest ; exists ; 2008 ; Journal of Radiological Protection Volume 28 ; 28 > 
     au < manifest ; exists ; 2009 ; Journal of Radiological Protection Volume 29 ; 29 > 
-    au < manifest ; exists ; 2010 ; Journal of Radiological Protection Volume 30 ; 30 > 
+    au < testing ; exists ; 2010 ; Journal of Radiological Protection Volume 30 ; 30 > 
     au < manifest ; exists ; 2011 ; Journal of Radiological Protection Volume 31 ; 31 > 
 
   }
