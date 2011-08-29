@@ -882,6 +882,24 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
 
   {
     title <
+      name = Nka: Journal of Contemporary African Art ;
+      issn = 1075-7163 ;
+      issnl = 1075-7163
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = xxx
+      
+    }
+    
+  }
+  
+  {
+    title <
       name = Poetics Today ;
       issn = 0333-5372 ;
       eissn = 1527-5507 ;
