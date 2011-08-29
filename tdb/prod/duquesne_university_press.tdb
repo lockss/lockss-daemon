@@ -22,4 +22,18 @@
 
   }
 
+  {
+    title <
+      name = Levinas Studies ;
+      issn = 1554-7000 ;
+      issnl = 1554-7000
+    >
+
+	attr[journal_abbr] = xxx
+    param[journal_dir] = xxx
+
+    au < doesNotExist ; 0 ; Levinas Studies Volume 1 ; 1 >
+
+  }
+
 }
