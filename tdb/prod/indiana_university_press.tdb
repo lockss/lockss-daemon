@@ -1257,6 +1257,25 @@
   {
 
     title <
+      name = Spectrum: The Journal on Black Men ;
+      issn = 2162-3244 ;
+      issnl = 2162-3244
+    >
+    
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = xxx
+      implicit < status ; year ; name ; param[volume_name] >
+
+    }
+    
+  }
+    
+  {
+
+    title <
       name = Textual Cultures: Texts, Contexts, Interpretation ;
       issn = 1559-2936 ;
       eissn = 1933-7418 ;
