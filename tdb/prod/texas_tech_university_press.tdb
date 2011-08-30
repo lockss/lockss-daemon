@@ -21,7 +21,7 @@
 
     au < released ; 2007 ; Conradiana Volume 39 ; 39 >
     au < released ; 2008 ; Conradiana Volume 40 ; 40 >
-    au < manifest ; 2009 ; Conradiana Volume 41 ; 41 >
+    au < ready ; 2009 ; Conradiana Volume 41 ; 41 >
 
   }
 
@@ -39,7 +39,7 @@
     au < released ; 2007 ; Helios Volume 34 ; 34 >
     au < released ; 2008 ; Helios Volume 35 ; 35 >
     au < released ; 2009 ; Helios Volume 36 ; 36 >
-    au < manifest ; 2010 ; Helios Volume 37 ; 37 >
+    au < ready ; 2010 ; Helios Volume 37 ; 37 >
 
   }
 
@@ -54,8 +54,8 @@
 
     param[journal_dir] = intertexts
 
-    au < manifest ; 2009 ; Intertexts Volume 13 ; 13 >
-    au < manifest ; 2010 ; Intertexts Volume 14 ; 14 >
+    au < ready ; 2009 ; Intertexts Volume 13 ; 13 >
+    au < ready ; 2010 ; Intertexts Volume 14 ; 14 >
 
   }
 
@@ -72,7 +72,7 @@
 
     au < released ; 2006 ; William Carlos Williams Review Volume 26 ; 26 >
     au < released ; 2007 ; William Carlos Williams Review Volume 27 ; 27 >
-    au < manifest ; 2008 ; William Carlos Williams Review Volume 28 ; 28 >
+    au < ready ; 2008 ; William Carlos Williams Review Volume 28 ; 28 >
 
   }
 
