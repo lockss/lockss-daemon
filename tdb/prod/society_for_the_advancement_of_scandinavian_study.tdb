@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Society for the Advancement of Scandinavian Study
+  >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    comment[0] = upcoming journal in 2012 with no content online yet
+
+    {
+
+      title <
+        name = Scandinavian Studies ;
+        issn = 0036-5637 ;
+        issnl = 0036-5637  
+      >
+
+      param[journal_dir] = scandinavian_studies
+
+    }
+    
+}

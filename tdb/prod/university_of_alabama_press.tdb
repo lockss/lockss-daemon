@@ -1,0 +1,48 @@
+{
+  publisher <
+    name = University of Alabama Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  comment[0] = upcoming journals in 2012 with no content online yet
+
+  {
+
+    title <
+      name = Alabama Review ;
+      issn = 0002-4341 ;
+      issnl = 0002-4341
+    >
+
+    param[journal_dir] = alabama_review
+
+  }
+
+  {
+
+    title <
+      name = Theatre History Studies ;
+      issn = 0733-2033 ;
+      issnl = 0733-2033
+    >
+
+    param[journal_dir] = theatre_history_studies
+
+  }
+
+  {
+
+    title <
+      name = Theatre Symposium ;
+      issn = 1065-4917 ;
+      issnl = 1065-4917
+    >
+
+    param[journal_dir] = theatre_symposium
+
+  }
+
+}

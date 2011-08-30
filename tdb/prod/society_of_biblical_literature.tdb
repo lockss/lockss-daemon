@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Society of Biblical Literature
+  >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    {
+
+      title <
+        name = Journal of Biblical Literature ;
+        issn = 0021-9231 ;
+        eissn = 1934-3876 ;
+        issnl = 0021-9231 
+      >
+
+      param[journal_dir] = journal_of_biblical_literature
+
+      au < manifest ; 2011 ; Journal of Biblical Literature Volume 130 ; 130 >
+
+    }
+    
+}
