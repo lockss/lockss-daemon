@@ -446,8 +446,10 @@ build_config_file () {
             fi
         done
         TMP_CONFIG=/tmp/lockss.dat$$
-        # LOCKSS_CONFIG_VERSION must be incremented at each change to the set of
-        # variables stored in the config file.
+        # LOCKSS_CONFIG_VERSION must be incremented when the set or usage
+        # of variables stored in the config file changes in a way that
+        # requires hostconfig to be rerun.  Not required if just adding a
+        # new variable that defaults to empty
         export LOCKSS_CONFIG_VERSION=1
         cat >${TMP_CONFIG} <<EOF
 LOCKSS_CONFIG_VERSION=${LOCKSS_CONFIG_VERSION}
@@ -463,6 +465,7 @@ LOCKSS_MAILHUB_PASSWORD=${LOCKSS_MAILHUB_PASSWORD}
 LOCKSS_EMAIL=${LOCKSS_EMAIL}
 LOCKSS_JAVA_CMD=${LOCKSS_JAVA_CMD}
 LOCKSS_JAVA_SWITCHES=${LOCKSS_JAVA_SWITCHES}
+LOCKSS_JAVA_HEAP=${LOCKSS_JAVA_HEAP}
 LOCKSS_PROPS_URL="${LOCKSS_PROPS_URL}"
 LOCKSS_PROPS_PROXY="${LOCKSS_PROPS_PROXY}"
 LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}"

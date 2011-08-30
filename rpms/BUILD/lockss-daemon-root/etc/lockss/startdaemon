@@ -7,12 +7,11 @@
 
 is_secure() {
     RET=1
-    RES=`find ${1} -user root -a ! -perm -022`
-    RES=`find ${1} -user root`
+    RES=`find ${1} -maxdepth 0 -user root`
     if [ "X${RES}" = "X${1}" ]
     then
         # Owned by root
-        RES=`find ${1} -perm -020 -o -perm -02`
+        RES=`find ${1} -maxdepth 0 -perm -020 -o -perm -02`
         if [ "X${RES}" = X ]
         then
             # Neither of permission bits 022 is set
@@ -79,6 +78,67 @@ if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
     echo "No log file - can't start $1"
     exit 1
 fi
+
+ensure_dir "${RUN_DIR}"
+TEMPFILE="${RUN_DIR}/startdaemon.$$"
+
+## exit if startdaemon is already running
+
+# check for stale lock file left over from abnormal exit or system crash
+if [ -f "${LOCKFILE}" ]; then
+    SPID=`cat "${LOCKFILE}"`
+    if [ "X${SPID}" != X ]; then
+	if ps -p "${SPID}" | grep -q startdaemon; then
+	    # PID in lock file is a startdaemon process.  If it's us, we
+	    # already hold the lock.  (Most likely this means a stale lock
+	    # file was present when the system booted, and we got the same
+	    # pid we had last time.)
+	    if [ "X${SPID}" = "$$" ]; then
+		echo "My PID (${SPID}) already locked" >>${LOG_FILE}
+		ALREADY_LOCKED=yes
+	    fi
+	else
+	    echo "${SPID} isn't a startdaemon, deleting ${LOCKFILE}" >>${LOG_FILE}
+	    rm "${LOCKFILE}"
+	fi
+    else
+	echo "deleting empty ${LOCKFILE}" >>${LOG_FILE}
+	rm "${LOCKFILE}"
+    fi
+fi
+
+# Attempt to get lock: check writability and put current PID in TEMPFILE.
+# (Don't know PID of long-running process yet.  The lock condition is that
+# the PID file contains the PID of a 'startdaemon' process, so use this one
+# for now and replace with the long-running process below.)
+
+if [ "X${ALREADY_LOCKED}" != Xyes ]; then
+    if ! echo "$$" >${TEMPFILE} 2>/dev/null; then
+	echo "No permission to write ${TEMPFILE}" >>${LOG_FILE}
+	rm -f ${TEMPFILE}
+	exit 1
+    fi
+    # ln is atomic, fails if lock file already exists
+    if ! ln ${TEMPFILE} ${LOCKFILE} >/dev/null 2>&1; then
+	echo "startdaemon already running" >>${LOG_FILE}
+	rm -f ${TEMPFILE}
+	exit 1
+    fi
+
+    # got lock, delete tempfile, leaving our PID in lock file.
+    rm -f ${TEMPFILE}
+fi
+
+# Stale processes may still exist the first time this version is installed,
+# because the previous versions don't use this lock.  We own the lock at
+# this point but haven't started anything, so there should be no processes
+# running as this user.
+
+if [ "`ps --no-headers -u lockss`"X != X ]; then
+    rm -f ${KEEP_GOING}
+    killall -u $1 -s 9
+fi
+
 if [ -f /etc/cron.daily/mlocate.cron ]; then
     if grep '^#/' /etc/cron.daily/mlocate.cron >/dev/null 2>&1
     then
@@ -103,14 +163,51 @@ Funky-EOF2
         fi
     done
 fi
-touch ${KEEP_GOING}
-chown $1 ${KEEP_GOING}
 if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
     RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl.$1"
 elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
     RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
 fi
-while [ -f ${KEEP_GOING} ]; do
+
+
+(
+
+# return 0 if the loop should continue
+is_continue() {
+    if [ ! -s "${KEEP_GOING}" ]; then
+	return 1
+    fi
+    if [ `cat "${KEEP_GOING}"` != ${MYPID} ]; then
+        return 1
+    fi
+    ## Also exit if we lose the lock.  Shouldn't happen normally.
+    if [ ! -s "${LOCKFILE}" ]; then
+        return 1
+    fi
+    if [ `cat "${LOCKFILE}"` != ${MYPID} ]; then
+        return 1
+    fi
+    return 0
+}
+
+cleanup() {
+    rm -f ${LOCKFILE} ${KEEP_GOING}
+}
+
+trap "cleanup" 0 1 2 3 15
+
+# We want to use the PID of the subshell running the loop as both the loop
+# continuation condition and the startdaemon lock.  The normal way to get
+# the PID of a spawned process is with $! after spawning, but that happens
+# asynchronously with the subshell and we need the value inside the loop.
+# (In a subshell, $$ is the PID of the parent.)
+MYPID=`sh -c 'echo $PPID'`
+echo ${MYPID} >${KEEP_GOING}
+chown $1 ${KEEP_GOING}
+# put PID of spawned loop in lock file
+echo $! >${LOCKFILE}
+
+while is_continue; do
     if [ "X${START_FLAG}" = X ]; then
         START_FLAG=`mktemp /tmp/lockss.start.XXXXXX`
         date >${START_FLAG}
@@ -126,7 +223,7 @@ while [ -f ${KEEP_GOING} ]; do
             chown root ${LOCKSS_CONFIG_DIR}
             chmod go-w ${LOCKSS_CONFIG_DIR}
             rm -f ${LOCKSS_SSL_CONFIG}
-            ${RUN_SSL} --release 1.49.0 --user $1 >>${LOG_FILE} 2>&1
+            ${RUN_SSL} --release @RELEASENAME@ --user $1 >>${LOG_FILE} 2>&1
             if [ -s ${LOCKSS_SSL_CONFIG} ]; then
                 chmod go-rwx ${LOCKSS_SSL_CONFIG}
                 chown $1 ${LOCKSS_SSL_CONFIG}
@@ -167,11 +264,8 @@ while [ -f ${KEEP_GOING} ]; do
         fi
         ;;
     esac &
-    FLAG_FILE=`mktemp /tmp/lockss.flag.XXXXX`
-    chown $1 ${FLAG_FILE}
-    export FLAG_FILE
-    sleep 60 && rm -f ${FLAG_FILE} &
-    COMMAND="ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait ${FLAG_FILE}"
+
+    COMMAND="ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait"
     case `uname -s` in
     Linux)
         runuser -s /bin/bash - $1 -c "${COMMAND}"
@@ -184,11 +278,7 @@ while [ -f ${KEEP_GOING} ]; do
     esac
     EXIT_CODE=$?
     echo "stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
-    if [ -e ${FLAG_FILE} ]; then
-        echo "${FLAG_FILE} exists - removing and exiting." >>${LOG_FILE}
-	rm -f ${FLAG_FILE}
-        exit 1
-    fi
+
     START_COUNT=`expr ${START_COUNT} + 1`
     if [ ${START_COUNT} -gt ${MAX_STARTS} ]; then
         case `uname -s` in
@@ -206,8 +296,9 @@ while [ -f ${KEEP_GOING} ]; do
         rm -f ${START_FLAG}
         START_FLAG=""
     fi
-    if [ -f ${KEEP_GOING} ]; then
+    if is_continue; then
         sleep 30
     fi
-done &
+done ) &
+
 exit 0

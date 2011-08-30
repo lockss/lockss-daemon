@@ -25,127 +25,20 @@ if [ "X${1}" = Xwait ]; then
     WAIT=Y
     shift
 fi
-if [ "X${1}" != X ]; then
-    FLAG_FILE=${1}
-else
-    echo "FLAG_FILE not set"
-    exit 1
-fi
+
 if [ "X${USER}" = X ]; then
     echo "USER not set"
     exit 1
 fi
 set_lockss_user ${USER}
 set_variables ${USER}
-if [ "${WATCHDOG}X" = X ]
-then
-    XXXWATCHDOG=/tmp/lockss.${USER}.watchdog
-fi
-if [ "${WATCHDOG_SECS}X" = X ]
-then
-    WATCHDOG_SECS=60
-fi
-# Is a daemon running as ${USER}?
-if [ "${WATCHDOG}X" != X -a -f "${WATCHDOG}" ]
-then
-    # A watchdog file exists - is it being updated?
-    WATCHTIMER=`mktemp /tmp/watchtimer.${USER}.XXXXXX`
-    touch ${WATCHTIMER}
-    COUNT=2
-    case `uname -s` in
-    SunOS)
-        COMPARE_SHELL=ksh
-        ;;
-    *)
-        COMPARE_SHELL=sh
-        ;;
-    esac
-    while echo "test ${WATCHDOG} -ot ${WATCHTIMER}" | ${COMPARE_SHELL}
-    do
-        if [ ${COUNT} -le 0 ]
-        then
-            # No watchdog updates - kill any daemons
-	    if [ -f ${PID_FILE} ]
-            then
-                echo "Kill from ${PID_FILE}" >>${LOG_FILE}
-                kill -9 `cat ${PID_FILE}`
-            fi
-            sleep 3
-            PS=`ps -u ${USER} | grep java | sed 's/^ *\([0-9][0-9]*\)[ 	]*.*/\1/'`
-            for PID in ${PS}
-            do
-                echo "Kill ${PID} from ps" >>${LOG_FILE}
-                kill -9 ${PID}
-            done
-            rm -f ${WATCHDOG} ${WATCHTIMER}
-            echo "Exiting rundaemon" >>${LOG_FILE}
-            exit
-        fi
-        COUNT=`expr ${COUNT} - 1`
-        sleep `expr ${WATCHDOG_SECS} + 10`
-    done
-    rm -f ${WATCHTIMER}
-    # Daemon is updating ${WATCHDOG}
-    if [ "${FLAG_FILE}X" != X ]
-    then
-        touch ${FLAG_FILE} # signal startdaemon to die
-        echo "Touched ${FLAG_FILE} - exiting" >>${LOG_FILE}
-    else
-        echo "No FLAG_FILE" >>${LOG_FILE}
-    fi
-    exit
-else
-    # No watchdog file - is there a daemon?
-    if [ -f ${PID_FILE} ]
-    then
-        # There is a PID file - if its daemon is running that's OK
-        DPID=`cat ${PID_FILE}`
-        echo "Daemon at ${DPID}" >>${LOG_FILE}
-    fi
-    PS=`ps -u ${USER} | grep java | sed 's/^ *\([0-9][0-9]*\)[    ]*.*/\1/'`
-    if [ "${DPID}X" != X ]
-    then
-        PS2=`echo ${PS} | sed "s/${DPID}//"`
-    else
-        PS2=`echo ${PS}`
-    fi
-    echo "DPID ${DPID} PS2 ${PS2} PS ${PS}" >>${LOG_FILE}
-    for PID in ${PS2}
-    do
-        # ${PID} is a daemon but it isn't in the PID file
-        echo "Killing ${PID} from PS2" >>${LOG_FILE}
-        kill -9 ${PID}
-    done
-    if [ "X${DPID}" != X ]
-    then
-        if echo ${PS} | grep ${DPID} >/dev/null 2>&1
-        then
-            # ${DPID} is a daemon, so don't start another
-            echo "${DPID}: Touching ${FLAG_FILE} and exiting" >>${LOG_FILE}
-            if [ "${FLAG_FILE}X" != X ]
-            then
-                touch ${FLAG_FILE} # signal startdaemon to die
-            else
-                echo "No FLAG_FILE" >>${LOG_FILE}
-            fi
-            exit
-        fi
-    fi
-fi
-# We have decided to start a daemon, so startdaemon should not exit
-if [ "X${FLAG_FILE}" != X ]
-then
-    echo "rm -f ${FLAG_FILE} because we are starting a daemon" >>${LOG_FILE}
-    rm -f ${FLAG_FILE}
-fi
+
 DAEMON_COUNT=0
 for A in ${LOCKSS_USER}
 do
     DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
 done
-# Default is to use  2/3 of physical memory for all daemons combined.
-# Set LOCKSS_JAVA_HEAP to override.
-set_java_heap
+
 if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]; then
     CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
 fi
@@ -162,6 +55,11 @@ else
     echo "${CFG_FILE} missing; run ${CFG_SCRIPT}" >>${LOG_FILE}
     exit 1
 fi
+
+# Default is to use  2/3 of physical memory for all daemons combined.
+# Set LOCKSS_JAVA_HEAP to override.
+set_java_heap
+
 JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
 case "X${JAVA_VERSION}" in
 X1.[6789]*)

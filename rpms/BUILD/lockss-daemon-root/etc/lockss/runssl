@@ -45,7 +45,7 @@ then
     echo ${RUN_DIR} missing
     exit 1
 fi
-RES=`find ${RUN_DIR} -user root`
+RES=`find ${RUN_DIR} -maxdepth 0 -user root`
 if [ "X${RES}" != "X${RUN_DIR}" ]
 then
     echo ${RUN_DIR} bad
@@ -117,6 +117,8 @@ for A in jceks pass; do
     cp ${PERM_DIR}/${LOCKSS_HOSTNAME}.${A} ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
 done
 # password must be writable by $LOCKSS_USER to overwrite it after use
+# (Note that the daemon will fail to delete the password file after
+# overwriting it, because the directory is writable only by root.)
 chmod u+w ${TEMP_DIR}/${LOCKSS_HOSTNAME}.pass
 rm -f ${LOCKSS_SSL_CONFIG}
 touch ${LOCKSS_SSL_CONFIG}
