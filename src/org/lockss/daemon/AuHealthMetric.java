@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.3 2011-08-22 22:15:15 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.4 2011-08-30 04:41:21 tlipkis Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class AuHealthMetric {
   }
   
   /**
-   * Return true is health metrics are supported.
+   * Return true if health metrics are supported.
    */
   public static boolean isSupported() {
     return PlatformUtil.getInstance().hasScriptingSupport();
