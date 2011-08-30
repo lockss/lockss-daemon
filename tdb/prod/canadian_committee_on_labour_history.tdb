@@ -12,13 +12,14 @@
     title <
       name = Labour / Le Travail ;
       issn = 0700-3862 ;
+      eissn = 1911-4842 ;
       issnl = 0700-3862
     >
 
-	attr[journal_abbr] = xxx
-    param[journal_dir] = xxx
+    param[journal_dir] = labour_le_travail
 
-    au < doesNotExist ; 0 ; Labour / Le Travail Volume 1 ; 1 >
+    au < manifest ; 2010 ; Labour / Le Travail Issue 66 ; 66 >
+    au < manifest ; 2011 ; Labour / Le Travail Issue 67 ; 67 >
 
   }
 
