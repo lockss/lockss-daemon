@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.64 2010-10-07 01:37:24 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.65 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,9 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import java.net.*;
+import junit.framework.Test;
 import org.lockss.test.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -53,6 +54,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   private MockArchivalUnit mau;
   private String tempDirPath;
 
+  public TestLockssRepositoryImpl(String name) {
+    super(name);
+  }
+
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();
@@ -60,7 +65,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     repoMgr = daemon.getRepositoryManager();
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    ConfigurationUtil.addFromProps(props);
 
     mau = new MockArchivalUnit();
     repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
@@ -544,8 +549,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
                  File.separator+"query"+File.separator,
                  LockssRepositoryImpl.unescape(expectedStr));
   }
-
-  private RepositoryNode createLeaf(String url, String content,
+  
+  protected RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {
     return TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
   }
@@ -568,4 +573,83 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
       return isConsistent;
     }
   }
+
+  public static class LongComponentsDisabled extends TestLockssRepositoryImpl {
+    public LongComponentsDisabled(String name) {
+      super(name);
+    }
+
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_ENABLE_LONG_COMPONENTS,
+				    "false");
+    }
+  }
+
+  public static class LongComponentsEnabled extends TestLockssRepositoryImpl {
+    public LongComponentsEnabled(String name) {
+      super(name);
+    }
+
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_ENABLE_LONG_COMPONENTS,
+				    "true");
+    }
+
+    public void testLongUrl() throws Exception {
+      StringBuffer longUrl = new StringBuffer();
+      longUrl.append("http://www.example.com/");
+      for(int i=0; i<218; i++)  {
+	longUrl.append(i + "-");
+      }
+      RepositoryNode leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+    }
+  
+    public void test255Url() throws Exception {
+      StringBuffer longUrl = new StringBuffer();
+      longUrl.append("http://www.example.com/");
+      for(int i=0; i<254; i++)  {
+	longUrl.append("a");
+      }
+      RepositoryNode leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      longUrl.append("a");
+      leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      longUrl.append("a");
+      leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      for(int i=0; i<252; i++) {
+	longUrl.append("a");
+      }
+      leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      longUrl.append("a");
+      leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      longUrl.append("a");
+      leaf = createLeaf(longUrl.toString(), "test stream", null);
+      assertEquals(true, leaf.hasContent());
+    }
+  
+    public void testUrlEscaping4() throws Exception {
+      ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MAX_COMPONENT_LENGTH,
+				    "4");
+      String url = "http://www.example.com/abc..";
+      String expectedStr = "root/www.example.com/http/abc\\/\\..";
+      RepositoryNode leaf = createLeaf(url, "test stream", null);
+      assertEquals(true, leaf.hasContent());
+      String fileLocation = LockssRepositoryImpl.mapUrlToFileLocation("root", url);
+      assertEquals(expectedStr, fileLocation);
+    }
+
+  }
+
+  public static Test suite() {
+    return variantSuites(new Class[] {LongComponentsEnabled.class,
+				      LongComponentsDisabled.class});
+  }
+
 }

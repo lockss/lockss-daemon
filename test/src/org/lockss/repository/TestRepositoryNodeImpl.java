@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.61 2010-02-23 04:58:15 pgust Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.62 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -446,19 +446,22 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     for (Iterator childIt = dirEntry.listChildren(null, false);
 	 childIt.hasNext(); ) {
       RepositoryNode node = (RepositoryNode)childIt.next();
+      log.debug2("node: " + node);
       res.add(node.getNodeUrl());
     }
     return res;
   }
 
+
   public void testFixUnnormalized_Rename() throws Exception {
-	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
-	    log.debug("Skipping testFixUnnormalized_Rename: file system is not case sensitive.");
-	    return;
-	}
+    if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+      log.debug("Skipping testFixUnnormalized_Rename: file system is not case sensitive.");
+      return;
+    }
+
     repo.setDontNormalize(true);
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2C1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2c2",
@@ -476,8 +479,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedA,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "true");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Log");
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
     String[] expectedB = new String[] {
       "http://www.example.com/testDir/branch%3C1",
       "http://www.example.com/testDir/branch2",
@@ -486,8 +494,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
 
@@ -498,8 +506,16 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedC,
 		     getChildNames(("http://www.example.com/testDir/branch%3C1")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "true");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Log");
+    assertIsomorphic(expectedB,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    assertIsomorphic(expectedC,
+		     getChildNames(("http://www.example.com/testDir/branch%3C1")));
+
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
 
@@ -517,8 +533,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 	    return;
 	}
     repo.setDontNormalize(true);
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     createLeaf("http://www.example.com/testDir/leaf%2C1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf%2c1",
@@ -534,8 +550,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedA,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "true");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Log");
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
     String[] expectedB = new String[] {
       "http://www.example.com/testDir/leaf%2C1",
       "http://www.example.com/testDir/leaf3",
@@ -543,8 +564,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
   }
@@ -555,8 +576,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 	    return;
 	}
     repo.setDontNormalize(true);
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     createLeaf("http://www.example.com/testDir/leaf%CA%3E",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf%cA%3E",
@@ -578,8 +599,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedA,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "true");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Log");
+    assertIsomorphic(expectedA,
+		     getChildNames(("http://www.example.com/testDir")));
+
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
     String[] expectedB = new String[] {
       "http://www.example.com/testDir/leaf%CA%3E",
       "http://www.example.com/testDir/leaf3",
@@ -587,8 +613,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "false");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
     assertIsomorphic(expectedB,
 		     getChildNames(("http://www.example.com/testDir")));
   }
@@ -604,8 +630,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2c2",
                "test stream", null);
 
-    ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
-				  "true");
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch%3c1/leaf%2C1",
       "http://www.example.com/testDir/branch%3c1/leaf%2C2",
@@ -1636,6 +1662,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "http://www.example.com/test.url");
     node.initNodeRoot();
     String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content");
+    contentStr = contentStr.replaceAll("\\//", "\\\\/"); // sysDepPath mangles our backslashes
     assertEquals(contentStr, node.getContentDir().toString());
     contentStr = contentStr + File.separator;
     String expectedStr = contentStr + "123";
@@ -1851,6 +1878,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     // check that no change to valid count cache
     dirEntry.checkChildCountCacheAccuracy();
+    log.debug2("child count: " +
+	       dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
     assertEquals("2",
         dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
 
@@ -1859,6 +1888,71 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     dirEntry.checkChildCountCacheAccuracy();
     assertEquals(RepositoryNodeImpl.INVALID,
                  dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
+  }
+
+  public void testEncodeUrl() {
+    assertEquals(null, RepositoryNodeImpl.encodeUrl(null));
+    assertEquals("", RepositoryNodeImpl.encodeUrl(""));
+    assertEquals("www.example.com",
+		 RepositoryNodeImpl.encodeUrl("www.example.com"));
+    assertEquals("www.example.com/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val"));
+    assertEquals("www.example.com%5cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com\\val"));
+    assertEquals("www.example.com/val%5cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val\\val"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val%5c%5cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val\\\\val"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val/val/",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val/"));
+    assertEquals("www.example.com/val/val%5c",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val\\"));
+    assertEquals("www.example.com%5cval%5cval%5c",
+		 RepositoryNodeImpl.encodeUrl("www.example.com\\val\\val\\"));
+  }
+
+  public void testShortDecodeUrl() {
+    assertEquals(null, RepositoryNodeImpl.decodeUrl(null));
+    assertEquals("", RepositoryNodeImpl.decodeUrl(""));
+    assertEquals("www.example.com",
+		 RepositoryNodeImpl.decodeUrl("www.example.com"));
+    assertEquals("www.example.com/val",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val"));
+    assertEquals("www.example.com%5cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com%5cval"));
+    assertEquals("www.example.com/val%5cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5cval"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val%5c%5cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5c%5cval"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val/val/",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val/"));
+    assertEquals("www.example.com/val/val%5c",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val%5c"));
+    assertEquals("www.example.com%5cval%5cval%5c",
+		 RepositoryNodeImpl.decodeUrl("www.example.com%5cval%5cval%5c"));
+  }
+  
+  public void testLongDecodeUrl() {
+    StringBuffer longUrl = new StringBuffer();
+    longUrl.append("www.example.com/");
+    for(int i=0; i<218; i++)  {
+      longUrl.append(i + ",");
+    }
+    longUrl.append(".");
+    String result = RepositoryNodeImpl.encodeUrl(longUrl.toString());
+    log.debug2(longUrl.toString());
+    log.debug2(result);
+    String result2 = RepositoryNodeImpl.decodeUrl(result);
+    log.debug2(result2);
+    assertTrue(longUrl.toString().equals(result2));
   }
 
   private RepositoryNode createLeaf(String url, String content,

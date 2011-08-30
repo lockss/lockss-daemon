@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86 2010-03-25 07:34:58 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.87 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,11 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
+import java.util.Queue;
+import java.util.regex.Matcher;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
@@ -42,6 +47,7 @@ import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
 import org.lockss.util.*;
+import org.lockss.repository.RepositoryManager.CheckUnnormalizedMode;
 
 /**
  * <p>RepositoryNode is used to store the contents and meta-information of urls
@@ -116,11 +122,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     Configuration.PREFIX + "repository.keepAllPropsForDupeFile";
   public static final boolean DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE = false;
 
-  /** If true, repair nodes that have lowercase URL-encoding chars */
-  public static final String PARAM_FIX_UNNORMALIZED =
-    Configuration.PREFIX + "repository.fixUnnormalized";
-  public static final boolean DEFAULT_FIX_UNNORMALIZED = true;
-
   // the agreement history file
   static final String AGREEMENT_FILENAME = "#agreement";
   // Temporary file used when writing a new agreement history.
@@ -190,7 +191,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public String getNodeUrl() {
     return url;
   }
-
+  
   public boolean hasContent() {
     ensureCurrentInfoLoaded();
     return currentVersion>0;
@@ -293,13 +294,27 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @return List the child list of RepositoryNodes
    */
   protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
-    if (nodeRootFile==null) initNodeRoot();
-    if (contentDir==null) getContentDir();
+    if (nodeRootFile == null)
+      initNodeRoot();
+    if (contentDir == null)
+      getContentDir();
     File[] children = nodeRootFile.listFiles();
     if (children == null) {
       String msg = "No cache directory located for: " + url;
       logger.error(msg);
       throw new LockssRepository.RepositoryStateException(msg);
+    }
+    
+    if (RepositoryManager.isEnableLongComponents()) {
+      // Trigger long-component code only if at least one encoded component
+      // is present.  There are AUs in the field with >500,000 nodes at a
+      // single level, and the new code requires several times as much
+      // storage.  Also less risk of a bug affecting existing repositories.
+      for (File file : children) {
+	if (file.getName().endsWith("\\")) {
+	  return enumerateEncodedChildren(children, filter, includeInactive);
+	}
+      }
     }
     // sorts alphabetically relying on File.compareTo()
     Arrays.sort(children, new FileComparator());
@@ -313,9 +328,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       listSize = Math.min(40, children.length);
     }
 
-    boolean checkUnnormalized =
-      CurrentConfig.getBooleanParam(PARAM_FIX_UNNORMALIZED,
-				    DEFAULT_FIX_UNNORMALIZED);
+    CheckUnnormalizedMode unnormMode =
+      RepositoryManager.getCheckUnnormalizedMode();
 
     ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
@@ -325,8 +339,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
         // must be ignored
         continue;
       }
-      if (checkUnnormalized) {
-	child = checkUnnormalized(child, children, ii);
+      switch (unnormMode) {
+      case Log:
+      case Fix:
+	child = checkUnnormalized(unnormMode, child, children, ii);
+	break;
       }
       if (child == null) {
 	continue;
@@ -350,6 +367,139 @@ public class RepositoryNodeImpl implements RepositoryNode {
           // eventually be trimmed by the repository integrity checker
           // and the content will be replaced by a poll repair
           logger.error("Malformed child url: "+childUrl);
+        }
+      }
+    }
+    return childL;
+  }
+
+  private List enumerateEncodedChildren(File[] children,
+					CachedUrlSetSpec filter,
+					boolean includeInactive) {
+    // holds fully decoded immediate children
+    List<File> expandedDirectories = new ArrayList<File>();
+    
+    // holds immediate children that still need to be decoded, and may
+    // yield more than one expanded child
+    Queue<File> unexpandedDirectories = new LinkedList<File>();
+
+    // add initial set of unexpanded directories
+    for (File file : children) {
+      if (file.getName().endsWith("\\")) {
+        unexpandedDirectories.add(file);
+      } else {
+        expandedDirectories.add(file);
+      }
+    }
+    
+    // keep expanding directories until no more unexpanded directories exist
+    // core algorithm: BFS
+    while(!unexpandedDirectories.isEmpty()) {
+      File child = unexpandedDirectories.poll();
+      if(child.getName().endsWith("\\")) {
+        File[] newChildren = child.listFiles();
+        for(File newChild : newChildren) {
+          unexpandedDirectories.add(newChild);
+        }
+      } else {
+        expandedDirectories.add(child);
+      }
+    }
+    
+    // using iterator to traverse safely
+    Iterator<File> iter = expandedDirectories.iterator();
+    while(iter.hasNext()) {
+      File child = iter.next();
+      if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
+        // iter remove instead of list.remove
+        iter.remove();
+      }
+    }
+    
+    // normalization needed?
+    CheckUnnormalizedMode unnormMode =
+      RepositoryManager.getCheckUnnormalizedMode();
+
+    // We switch to using a sorted set, this time we hold strings
+    // representing the url
+    SortedSet<String> subUrls = new TreeSet<String>();
+    for(File child : expandedDirectories) {
+      try{
+        // http://root/child -> /child
+        String location = child.getCanonicalPath().substring(nodeRootFile.getCanonicalFile().toString().length());
+        location = decodeUrl(location);
+        String oldLocation = location;
+	switch (unnormMode) {
+	case Log:
+	case Fix:
+          // Normalization done here against the url string, instead of
+          // against the file in the repository. This alleviates us from
+          // dealing with edge conditions where the file split occurs
+          // around an encoding. e.g. %/5c is special in file, but decoded
+          // URL string is %5c and we handle it correctly.
+          location = normalizeTrailingQuestion(location);
+          location = normalizeUrlEncodingCase(location);
+          if(!oldLocation.equals(location)) {
+	    switch (unnormMode) {
+	    case Fix:
+	      // most dangerous part done here, where we copy and
+	      // delete. Maybe we should move to a lost in found instead? :)
+	      String newRepoLocation = LockssRepositoryImpl.mapUrlToFileLocation(repository.getRootLocation(), url + location);
+	      logger.debug("Fixing unnormalized " + oldLocation + " => "
+			   + location);
+	      FileUtils.copyDirectory(child, new File(newRepoLocation));
+	      FileUtils.deleteDirectory(child);
+	      break;
+	    case Log:
+	      logger.debug("Detected unnormalized " + oldLocation +
+			   ", s.b. " + location);
+	      break;
+	    }
+          }
+	  break;
+        }
+        location = url + location;
+        subUrls.add(location);
+      } catch (IOException e) {
+        e.printStackTrace();
+      } catch(NullPointerException ex) {
+        ex.printStackTrace();
+      }
+    }
+    
+    // sorts alphabetically relying on File.compareTo()
+    int listSize;
+    if (filter == null) {
+      listSize = subUrls.size();
+    } else {
+      // give a reasonable minimum since, if it's filtered, the array size
+      // may be much smaller than the total children, particularly in very
+      // flat trees
+      listSize = Math.min(40, subUrls.size());
+    }
+
+    // generate the arraylist with urls and return
+    ArrayList childL = new ArrayList();
+    for(String childUrl : subUrls) {
+      if ((filter == null) || (filter.matches(childUrl))) {
+        try {
+          RepositoryNode node = repository.getNode(childUrl);
+          if(node == null)
+            continue;
+          // add all nodes which are internal or active leaves
+          // deleted nodes never included
+          // boolean activeInternal = !node.isLeaf() && !node.isDeleted();
+          // boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
+          // (!node.isContentInactive() || includeInactive);
+          // if (activeInternal || activeLeaf) {
+          if (!node.isDeleted() && (!node.isContentInactive() || (includeInactive || !node .isLeaf()))) {
+            childL.add(node);
+          }
+        } catch (MalformedURLException ignore) {
+          // this can safely skip bad files because they will
+          // eventually be trimmed by the repository integrity checker
+          // and the content will be replaced by a poll repair
+          logger.error("Malformed child url: " + childUrl);
         }
       }
     }
@@ -390,33 +540,42 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  File checkUnnormalized(File file, File[] all, int ix) {
+  File checkUnnormalized(RepositoryManager.CheckUnnormalizedMode unnormMode,
+			 File file, File[] all, int ix) {
     File norm = normalize(file);
     if (norm == file) {
       return file;
     }
-    synchronized (this) {
-      if (file.exists()) {
-	if (norm.exists()) {
-	  if (FileUtil.delTree(file)) {
-	    logger.debug("Deleted redundant unnormalized: " + file);
-	  } else {
-	    logger.error("Couldn't delete unnormalized: " + file);
-	  }
-	  all[ix] = null;
-	} else {
-	  if (file.renameTo(norm)) {
-	    logger.debug("Renamed unnormalized: " + file + " to " + norm);
-	    all[ix] = norm;
-	  } else {
-	    logger.error("Couldn't rename unnormalized: " + file +
-			 " to " + norm);
+    switch (unnormMode) {
+    case Fix:
+      synchronized (this) {
+	if (file.exists()) {
+	  if (norm.exists()) {
+	    if (FileUtil.delTree(file)) {
+	      logger.debug("Deleted redundant unnormalized: " + file);
+	    } else {
+	      logger.error("Couldn't delete unnormalized: " + file);
+	    }
 	    all[ix] = null;
+	  } else {
+	    if (file.renameTo(norm)) {
+	      logger.debug("Renamed unnormalized: " + file + " to " + norm);
+	      all[ix] = norm;
+	    } else {
+	      logger.error("Couldn't rename unnormalized: " + file +
+			   " to " + norm);
+	      all[ix] = null;
+	    }
 	  }
 	}
       }
+      return all[ix];
+    case Log:
+      logger.debug("Detected unnormalized " + file + ", s.b. " + norm);
+      return file;
+    default:
+      return file;
     }
-    return all[ix];
   }
 
   public int getChildCount() {
@@ -1462,18 +1621,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   void checkChildCountCacheAccuracy() {
     int count = 0;
-    File[] children = nodeRootFile.listFiles();
+    List children = getNodeList(null, true);
     if (children == null) {
       String msg = "No cache directory located for: " + url;
       logger.error(msg);
       throw new LockssRepository.RepositoryStateException(msg);
     }
-    for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if (!child.isDirectory()) continue;
-      if (child.getName().equals(contentDir.getName())) continue;
-      count++;
-    }
+    count = children.size();
 
     String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
     if (isPropValid(childCount)) {
@@ -1797,5 +1951,71 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // compares file pathnames
       return ((File)o1).getName().compareTo(((File)o2).getName());
     }
+  }
+
+  /**
+   * Encodes URL
+   * Encodes the URL for storage in the file system.
+   *
+   * 1. Convert all backslashes to %5c
+   * 2. Tokenize string by '/'
+   * 3. All strings longer than 254 characters are separated by a / at each 254'th character
+   */
+  public static String encodeUrl(String url) {
+    if(url == null || url.isEmpty())
+      return url;
+    if(url.charAt(0) == '/' && url.length() > 1) {
+      url = url.substring(1);
+    }
+    // 1. convert all backslashes to %5c
+    url = url.replaceAll("\\\\", "%5c");
+    // 2. tokenize string by '/'
+    StringBuffer result = new StringBuffer();
+    StringTokenizer strtok = new StringTokenizer(url, "/", true);
+    while(strtok.hasMoreTokens()) {
+      result.append(encodeUrlByRecursing(strtok.nextToken()));
+    }
+    return result.toString();
+  }
+  
+  private static String encodeUrlByRecursing(String string) {
+    return encodeUrlByRecursing("", string);
+  }
+  
+  private static String encodeUrlByRecursing(String current, String string) {
+    int separationLength =
+      RepositoryManager.getMaxComponentLength();
+
+    if(separationLength < 3) {
+      throw new IllegalStateException("fsLength must be >= 3");
+    }
+    if(string.equals("..")) {
+      return current + "\\..";
+    }
+    if(string.length() <= separationLength) {
+      return current + string;
+    } else {
+      String chunk = string.substring(0, separationLength-1) + "\\/";
+      return encodeUrlByRecursing(current + chunk, string.substring(separationLength-1));
+    }
+  }
+
+  /**
+   *
+   * Decodes URL
+   * Decodes the URL for storage in the file system.
+   *
+   * 1. Remove all \/
+   * 2. Remove all \
+   * 
+   * Design Decision: Don't convert %5c to URL
+   * This allows valid URLs that should have 
+   */
+  static String decodeUrl(String path) {
+    if(path == null || path.isEmpty())
+      return path;
+    path = path.replaceAll("\\\\/", "");
+    path = path.replaceAll("\\\\", "");
+    return path;
   }
 }

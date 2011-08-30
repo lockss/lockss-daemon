@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.88 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.89 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -1017,5 +1017,10 @@ public class HistoryRepositoryImpl
       return (NodeStateImpl)nodeState;
     }
   }
+  
+  protected String getRootlocation() {
+    return rootLocation;
+  }
+  
 
 }

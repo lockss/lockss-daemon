@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.13 2010-10-07 01:37:25 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.14 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,36 @@ public class RepositoryManager
     PREFIX + "sizeCalcMaxLoad";
   public static final float DEFAULT_SIZE_CALC_MAX_LOAD = 0.5F;
 
+  /** If true, path components longer than the maximum filesystem path
+   * component are encodes are multiple levels of directories */
+  public static final String PARAM_ENABLE_LONG_COMPONENTS =
+    PREFIX + "enableLongComponents";
+  public static final boolean DEFAULT_ENABLE_LONG_COMPONENTS = false;
+
+  /** Maximum length of a filesystem path component. */
+  public static final String PARAM_MAX_COMPONENT_LENGTH =
+    PREFIX + "maxComponentLength";
+  public static final int DEFAULT_MAX_COMPONENT_LENGTH = 255;
+
+
+  /** @see #PARAM_CHECK_UNNORMALIZED */
+  public enum CheckUnnormalizedMode {No, Log, Fix};
+
+  /** Check for existing nodes with unnormalized names (created by very old
+   * daemon that didn't normalize): None, Log, Fix */
+  public static final String PARAM_CHECK_UNNORMALIZED =
+    PREFIX + "checkUnnormalized";
+  public static final CheckUnnormalizedMode DEFAULT_CHECK_UNNORMALIZED =
+    CheckUnnormalizedMode.Log;
+
+
+  /** If true, repair nodes that have lowercase URL-encoding chars */
+  public static final String PARAM_FIX_UNNORMALIZED =
+    Configuration.PREFIX + "repository.fixUnnormalized";
+  public static final boolean DEFAULT_FIX_UNNORMALIZED = true;
+
+
+
   static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
   static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
 
@@ -113,6 +143,11 @@ public class RepositoryManager
   private static int maxUnusedDirSearch = DEFAULT_MAX_UNUSED_DIR_SEARCH;
   private static boolean isStatefulUnusedDirSearch =
     DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH;
+  private static boolean enableLongComponents = DEFAULT_ENABLE_LONG_COMPONENTS;
+  private static int maxComponentLength = DEFAULT_MAX_COMPONENT_LENGTH;
+  private static CheckUnnormalizedMode checkUnnormalized =
+    DEFAULT_CHECK_UNNORMALIZED;
+
 
   PlatformUtil.DF paramDFWarn =
     PlatformUtil.DF.makeThreshold(DEFAULT_DISK_WARN_FRRE_MB,
@@ -182,11 +217,33 @@ public class RepositoryManager
       sizeCalcMaxLoad = config.getPercentage(PARAM_SIZE_CALC_MAX_LOAD,
 					     DEFAULT_SIZE_CALC_MAX_LOAD);
     }
-    maxUnusedDirSearch = config.getInt(PARAM_MAX_UNUSED_DIR_SEARCH,
-				       DEFAULT_MAX_UNUSED_DIR_SEARCH);
-    isStatefulUnusedDirSearch =
-      config.getBoolean(PARAM_IS_STATEFUL_UNUSED_DIR_SEARCH,
-			DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH);
+    if (changedKeys.contains(PREFIX)) {
+      maxUnusedDirSearch = config.getInt(PARAM_MAX_UNUSED_DIR_SEARCH,
+					 DEFAULT_MAX_UNUSED_DIR_SEARCH);
+      isStatefulUnusedDirSearch =
+	config.getBoolean(PARAM_IS_STATEFUL_UNUSED_DIR_SEARCH,
+			  DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH);
+      enableLongComponents = config.getBoolean(PARAM_ENABLE_LONG_COMPONENTS,
+					       DEFAULT_ENABLE_LONG_COMPONENTS);
+      maxComponentLength = config.getInt(PARAM_MAX_COMPONENT_LENGTH,
+					 DEFAULT_MAX_COMPONENT_LENGTH);
+      checkUnnormalized =
+	(CheckUnnormalizedMode)
+	config.getEnum(CheckUnnormalizedMode.class,
+		       PARAM_CHECK_UNNORMALIZED, DEFAULT_CHECK_UNNORMALIZED);
+    }
+  }
+
+  public static boolean isEnableLongComponents() {
+    return enableLongComponents;
+  }
+
+  public static int getMaxComponentLength() {
+    return maxComponentLength;
+  }
+
+  public static CheckUnnormalizedMode getCheckUnnormalizedMode() {
+    return checkUnnormalized;
   }
 
   /** Return list of known repository names.  Needs a registration

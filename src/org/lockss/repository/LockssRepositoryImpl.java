@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.83 2011-08-22 00:11:55 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.84 2011-08-30 04:42:11 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class LockssRepositoryImpl
       rootLocation = rootPath;
     } else {
       // shouldn't happen
-      StringBuffer sb = new StringBuffer(rootPath.length() +
+      StringBuilder sb = new StringBuilder(rootPath.length() +
 					 File.separator.length());
       sb.append(rootPath);
       sb.append(File.separator);
@@ -408,7 +408,7 @@ public class LockssRepositoryImpl
    * @return String the extended location
    */
   static String extendCacheLocation(String cacheDir) {
-    StringBuffer buffer = new StringBuffer(cacheDir);
+    StringBuilder buffer = new StringBuilder(cacheDir);
     if (!cacheDir.endsWith(File.separator)) {
       buffer.append(File.separator);
     }
@@ -445,7 +445,7 @@ public class LockssRepositoryImpl
       throws MalformedURLException {
     int totalLength = rootLocation.length() + urlStr.length();
     URL url = new URL(urlStr);
-    StringBuffer buffer = new StringBuffer(totalLength);
+    StringBuilder buffer = new StringBuilder(totalLength);
     buffer.append(rootLocation);
     if (!rootLocation.endsWith(File.separator)) {
       buffer.append(File.separator);
@@ -458,12 +458,25 @@ public class LockssRepositoryImpl
     }
     buffer.append(File.separator);
     buffer.append(url.getProtocol());
-    buffer.append(escapePath(StringUtil.replaceString(url.getPath(),
-        UrlUtil.URL_PATH_SEPARATOR, File.separator)));
-    String query = url.getQuery();
-    if (query!=null) {
-      buffer.append("?");
-      buffer.append(escapeQuery(query));
+    if (RepositoryManager.isEnableLongComponents()) {
+      String escapedPath = escapePath(StringUtil.replaceString(url.getPath(), UrlUtil.URL_PATH_SEPARATOR, File.separator));
+      String query = url.getQuery();
+      if (query!=null) {
+	escapedPath = escapedPath + "?" + escapeQuery(query);
+      }
+      String encodedPath = RepositoryNodeImpl.encodeUrl(escapedPath);
+      // encodeUrl strips leading / from path
+      buffer.append(File.separator);
+      buffer.append(encodedPath);
+    } else {
+      buffer.append(escapePath(StringUtil.replaceString(url.getPath(),
+							UrlUtil.URL_PATH_SEPARATOR,
+							File.separator)));
+      String query = url.getQuery();
+      if (query!=null) {
+	buffer.append("?");
+	buffer.append(escapeQuery(query));
+      }
     }
     return buffer.toString();
   }
@@ -566,7 +579,7 @@ public class LockssRepositoryImpl
 
   /** Return next string in the sequence "a", "b", ... "z", "aa", "ab", ... */
   static String getNextDirName(String old) {
-    StringBuffer sb = new StringBuffer(old);
+    StringBuilder sb = new StringBuilder(old);
     // go through and increment the first non-'z' char
     // counts back from the last char, so 'aa'->'ab', not 'ba'
     for (int ii=sb.length()-1; ii>=0; ii--) {
@@ -665,7 +678,7 @@ public class LockssRepositoryImpl
       return orig;
     }
     int index = -1;
-    StringBuffer buffer = new StringBuffer(orig.length());
+    StringBuilder buffer = new StringBuilder(orig.length());
     String oldStr = orig;
     while ((index = oldStr.indexOf(ESCAPE_CHAR)) >= 0) {
       buffer.append(oldStr.substring(0, index));
@@ -757,7 +770,7 @@ public class LockssRepositoryImpl
 	    Properties idProps = getAuIdProperties(path);
 	    if (idProps != null) {
 	      String auid = idProps.getProperty(AU_ID_PROP);
-	      StringBuffer sb = new StringBuffer(path.length() +
+	      StringBuilder sb = new StringBuilder(path.length() +
 						 File.separator.length());
 	      sb.append(path);
 	      sb.append(File.separator);
@@ -777,5 +790,8 @@ public class LockssRepositoryImpl
       return "[LR: " + repoPath + "]";
     }
   }
-
+  
+  String getRootLocation() {
+    return rootLocation;
+  }
 }
