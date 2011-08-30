@@ -1031,6 +1031,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = npj
       implicit < status ; year ; name ; param[volume_name] >
+      comment[moved] = to Project Muse platform published by U. of Wisconsin Press
 
       au < down ; 2004 ; Native Plants Journal Volume 5 ; 5 >
       au < down ; 2005 ; Native Plants Journal Volume 6 ; 6 >
@@ -1039,23 +1040,6 @@
       au < down ; 2008 ; Native Plants Journal Volume 9 ; 9 >
       au < down ; 2009 ; Native Plants Journal Volume 10 ; 10 >
       au < down ; 2010 ; Native Plants Journal Volume 11 ; 11 >
-
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = native_plants_journal
-      implicit < status ; year ; name ; param[volume] >
-
-      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < released ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < released ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < released ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
 
     }
 
@@ -1259,15 +1243,18 @@
     title <
       name = Spectrum: The Journal on Black Men ;
       issn = 2162-3244 ;
+      eissn = 2162-3252 ;
       issnl = 2162-3244
     >
     
     {
 
-      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
-      param[base_url] = http://inscribe.iupress.org/
-      param[journal_id] = xxx
-      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = spectrum
+      implicit < status ; year ; name ; param[volume] >
+    
+      comment[0] = upcoming title with no content online yet
 
     }
     

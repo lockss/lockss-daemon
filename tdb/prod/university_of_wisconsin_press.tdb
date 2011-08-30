@@ -461,13 +461,13 @@
       implicit < status ; year ; name ; param[volume] >
       comment[0] = vols. 5-11 released under U of Illinois Press (also Project Muse)
 
-      au < manifest ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < manifest ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < manifest ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < manifest ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < manifest ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < manifest ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < manifest ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < released ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < released ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < released ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
       au < ready ; 2011 ; Native Plants Journal Volume 12 ; 12 >
 
     }
