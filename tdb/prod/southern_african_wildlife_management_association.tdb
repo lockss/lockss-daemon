@@ -18,9 +18,11 @@
     
     param[journal_code] = sawr
   
-    au < exists ; 2007 ; South African Journal of Wildlife Research Volume 37 ; 37 >
-    au < exists ; 2008 ; South African Journal of Wildlife Research Volume 38 ; 38 >
-    au < exists ; 2009 ; South African Journal of Wildlife Research Volume 39 ; 39 >
+    au < manifest ; 2007 ; South African Journal of Wildlife Research Volume 37 ; 37 >
+    au < manifest ; 2008 ; South African Journal of Wildlife Research Volume 38 ; 38 >
+    au < manifest ; 2009 ; South African Journal of Wildlife Research Volume 39 ; 39 >
+    au < manifest ; 2010 ; South African Journal of Wildlife Research Volume 40 ; 40 >
+
 
   }
   
