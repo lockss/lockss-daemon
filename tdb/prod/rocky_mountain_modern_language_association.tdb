@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Rocky Mountain Modern Language Association
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Rocky Mountain Review ;
+      issn = 1948-2825 ;
+      issnl = 1948-2825
+    >
+
+    param[journal_dir] = 
+    comment[upcoming] = the journal is upcoming in muse
+
+  }
+
+}
+    
