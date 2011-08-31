@@ -54,13 +54,26 @@
   {
   
     title <
+      name = Pushkin Review ;
+      issn = 1526-1476 ;
+      issnl = 1526-1476
+    >
+
+    param[journal_dir] = 
+    comment[upcoming] = the journal is upcoming in muse
+
+  }
+  
+  {
+  
+    title <
       name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
       issn = 1941-9511 ;
       eissn = 0742-3330 ;
       issnl = 0742-3330
     >
 
-comment[ss] = Can't fetch permission page
+	comment[ss] = Can't fetch permission page
     comment[ss22] = missing manifest page
    
     param[journal_dir] = serbian_studies

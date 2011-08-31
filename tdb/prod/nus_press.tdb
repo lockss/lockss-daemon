@@ -11,6 +11,23 @@
   {
   
     title <
+      name = Asian Bioethics Review ;
+      issn = 1793-8759 ;
+      eissn = 1793-9453 ;
+      issnl = 1793-8759
+    >
+
+    param[journal_dir] = asian_bioethics_review
+
+    au < manifest ; 2009 ; Asian Bioethics Review Volume 1 ; 1 >
+    au < manifest ; 2010 ; Asian Bioethics Review Volume 2 ; 2 >
+    au < manifest ; 2011 ; Asian Bioethics Review Volume 3 ; 3 >
+
+  }
+  
+  {
+  
+    title <
       name = China: An International Journal ;
       issn = 0219-7472 ;
       eissn = 0219-8614 ;
