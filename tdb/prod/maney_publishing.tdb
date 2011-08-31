@@ -3893,31 +3893,24 @@
     param[journal_issn] = 0737-5034
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1982 ; T'ang Studies Volume 1982 ; 1982 > 
-    au < doesNotExist ; 1983 ; T'ang Studies Volume 1983 ; 1983 >
+    au < manifest ; 1982-1983 ; T'ang Studies Volume 1982 ; 1982 > 
     au < manifest ; 1984 ; T'ang Studies Volume 1984 ; 1984 > 
     au < manifest ; 1985 ; T'ang Studies Volume 1985 ; 1985 > 
     au < manifest ; 1986 ; T'ang Studies Volume 1986 ; 1986 > 
     au < manifest ; 1987 ; T'ang Studies Volume 1987 ; 1987 > 
     au < manifest ; 1988 ; T'ang Studies Volume 1988 ; 1988 > 
     au < manifest ; 1989 ; T'ang Studies Volume 1989 ; 1989 > 
-    au < manifest ; 1990 ; T'ang Studies Volume 1990 ; 1990 > 
-    au < doesNotExist ; 1991 ; T'ang Studies Volume 1991 ; 1991 > 
-    au < manifest ; 1992 ; T'ang Studies Volume 1992 ; 1992 > 
-    au < doesNotExist ; 1993 ; T'ang Studies Volume 1993 ; 1993 > 
+    au < manifest ; 1990-1991 ; T'ang Studies Volume 1990 ; 1990 > 
+    au < manifest ; 1992-1993 ; T'ang Studies Volume 1992 ; 1992 > 
     au < manifest ; 1994 ; T'ang Studies Volume 1994 ; 1994 > 
     au < manifest ; 1995 ; T'ang Studies Volume 1995 ; 1995 > 
     au < manifest ; 1996 ; T'ang Studies Volume 1996 ; 1996 > 
-    au < manifest ; 1997 ; T'ang Studies Volume 1997 ; 1997 > 
-    au < doesNotExist ; 1998 ; T'ang Studies Volume 1998 ; 1998 > 
+    au < manifest ; 1997-1998 ; T'ang Studies Volume 1997 ; 1997 > 
     au < manifest ; 1999 ; T'ang Studies Volume 1999 ; 1999 > 
-    au < manifest ; 2000 ; T'ang Studies Volume 2000 ; 2000 > 
-    au < doesNotExist ; 2001 ; T'ang Studies Volume 2001 ; 2001 > 
-    au < manifest ; 2002 ; T'ang Studies Volume 2002 ; 2002 > 
-    au < doesNotExist ; 2003 ; T'ang Studies Volume 2003 ; 2003 > 
+    au < manifest ; 2000-2001 ; T'ang Studies Volume 2000 ; 2000 > 
+    au < manifest ; 2002-2003 ; T'ang Studies Volume 2002 ; 2002 > 
     au < manifest ; 2004 ; T'ang Studies Volume 2004 ; 2004 > 
-    au < manifest ; 2005 ; T'ang Studies Volume 2005 ; 2005 > 
-    au < doesNotExist ; 2006 ; T'ang Studies Volume 2006 ; 2006 > 
+    au < manifest ; 2005-2006 ; T'ang Studies Volume 2005 ; 2005 > 
     au < manifest ; 2007 ; T'ang Studies Volume 2007 ; 2007 > 
     au < manifest ; 2008 ; T'ang Studies Volume 2008 ; 2008 > 
     au < manifest ; 2009 ; T'ang Studies Volume 27 ; 27 > 
