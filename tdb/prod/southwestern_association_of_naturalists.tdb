@@ -13,21 +13,31 @@
     >
 
     {
+    
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0038-4909
   
-      au < doNotProcess ; 2003 ; The Southwestern Naturalist Volume 48 ; 48 >
-      au < superseded ; 2004 ; The Southwestern Naturalist Volume 49 ; 049 >
-      au < doNotProcess ; 2005 ; The Southwestern Naturalist Volume 50 ; 50 >
-      au < doNotProcess ; 2006 ; The Southwestern Naturalist Volume 51 ; 51 >
-      au < doNotProcess ; 2007 ; The Southwestern Naturalist Volume 52 ; 52 >
+      au < down ; 2004 ; The Southwestern Naturalist Volume 49 ; 049 >
+
     }
 
     {
-
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = swna
+      
+      au < manifest ; 2003 ; The Southwestern Naturalist Volume 48 ; 48 >
+      au < manifest ; 2004 ; The Southwestern Naturalist Volume 49 ; 049 >
+      au < manifest ; 2005 ; The Southwestern Naturalist Volume 50 ; 50 >
+      au < manifest ; 2006 ; The Southwestern Naturalist Volume 51 ; 51 >
+      au < manifest ; 2007 ; The Southwestern Naturalist Volume 52 ; 52 >
+      au < manifest ; 2008 ; The Southwestern Naturalist Volume 53 ; 53 >
+      au < manifest ; 2009 ; The Southwestern Naturalist Volume 54 ; 54 >
+      au < manifest ; 2010 ; The Southwestern Naturalist Volume 55 ; 55 >
+      au < manifest ; 2011 ; The Southwestern Naturalist Volume 56 ; 56 >
 
     }
 

@@ -12,19 +12,19 @@
     >
 
     {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_id] = 0038-3872
-  
-      au < doNotProcess ; 2005 ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
-      au < doNotProcess ; 2006 ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
-      au < doNotProcess ; 2007 ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
-    }
+      param[journal_code] = soca
 
-    {
-
-comment[0] = Atypon AUs
+      au < manifest ; 2005 ; Bulletin, Southern California Academy of Sciences Volume 104 ; 104 >
+      au < manifest ; 2006 ; Bulletin, Southern California Academy of Sciences Volume 105 ; 105 >
+      au < manifest ; 2007 ; Bulletin, Southern California Academy of Sciences Volume 106 ; 106 >
+      au < manifest ; 2008 ; Bulletin, Southern California Academy of Sciences Volume 107 ; 107 >
+      au < manifest ; 2009 ; Bulletin, Southern California Academy of Sciences Volume 108 ; 108 >
+      au < manifest ; 2010 ; Bulletin, Southern California Academy of Sciences Volume 109 ; 109 >
+      au < manifest ; 2011 ; Bulletin, Southern California Academy of Sciences Volume 110 ; 110 >
 
     }
 
