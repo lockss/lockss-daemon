@@ -3,6 +3,8 @@
   publisher <
     name = American Physiological Society
   >
+
+  comment[0] = holding off on actually expunging "good" H10 AUs
   
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
@@ -290,16 +292,16 @@
       au < expunged ; down ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; reingest2.clockss.org:8085 >
-      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 208[*] ; 208 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1965 ; American Journal of Physiology Volume 209[*] ; 209 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1967 ; American Journal of Physiology Volume 212 ; 212 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1967 ; American Journal of Physiology Volume 213 ; 213 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1968 ; American Journal of Physiology Volume 214 ; 214 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1968 ; American Journal of Physiology Volume 215 ; 215 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
-      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 216[*] ; 216 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1969 ; American Journal of Physiology Volume 217[*] ; 217 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1970 ; American Journal of Physiology Volume 218 ; 218 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1970 ; American Journal of Physiology Volume 219 ; 219 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1971 ; American Journal of Physiology Volume 220 ; 220 ; reingest4.clockss.org:8082 >
@@ -554,24 +556,24 @@
       au < expunged ; down ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248[*] ; 248 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249[*] ; 249 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256[*] ; 256 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257[*] ; 257 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264[*] ; reingest2.clockss.org:8085 >
+      au < expunged ; expunged ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265[*] ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
@@ -876,7 +878,7 @@
       au < expunged ; down ; 2008 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 ; >
       au < expunged ; down ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 296 ; 296 ; >
       au < expunged ; down ; 2009 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 297 ; 297 ; >
-      au < testing ; exists ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; >
+      au < down ; manifest ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 298 ; 298 ; >
       au < expunged ; down ; 2010 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 299 ; 299 ; >
 
     }
@@ -973,7 +975,7 @@
       au < expunged ; down ; 2008 ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 ; >
       au < expunged ; down ; 2009 ; American Journal of Physiology - Renal Physiology Volume 296 ; 296 ; >
       au < expunged ; down ; 2009 ; American Journal of Physiology - Renal Physiology Volume 297 ; 297 ; >
-      au < testing ; exists ; 2010 ; American Journal of Physiology - Renal Physiology Volume 298 ; 298 ; >
+      au < down ; manifest ; 2010 ; American Journal of Physiology - Renal Physiology Volume 298 ; 298 ; >
       au < expunged ; down ; 2010 ; American Journal of Physiology - Renal Physiology Volume 299 ; 299 ; >
 
     }
@@ -1028,7 +1030,7 @@
       au < expunged ; down ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < expunged ; expunged ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < expunged ; expunged ; 1968 ; Journal of Applied Physiology Volume 25[*] ; 25 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -1111,7 +1113,7 @@
       au < expunged ; down ; 2008 ; Journal of Applied Physiology Volume 105 ; 105 ; >
       au < expunged ; down ; 2009 ; Journal of Applied Physiology Volume 106 ; 106 ; >
       au < expunged ; down ; 2009 ; Journal of Applied Physiology Volume 107 ; 107 ; >
-      au < testing ; exists ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
+      au < down ; manifest ; 2010 ; Journal of Applied Physiology Volume 108 ; 108 ; >
       au < expunged ; down ; 2010 ; Journal of Applied Physiology Volume 109 ; 109 ; >
 
     }
@@ -1231,7 +1233,7 @@
       au < expunged ; down ; 2001 ; Journal of Neurophysiology Volume 86 ; 86 ; reingest2.clockss.org:8085 >
       au < expunged ; down ; 2002 ; Journal of Neurophysiology Volume 87 ; 87 ; reingest3.clockss.org:8083 >
       au < expunged ; down ; 2002 ; Journal of Neurophysiology Volume 88 ; 88 ; reingest3.clockss.org:8083 >
-      au < expunged ; expunged ; 2003 ; Journal of Neurophysiology Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+      au < expunged ; expunged ; 2003 ; Journal of Neurophysiology Volume 89[*] ; 89 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 2003 ; Journal of Neurophysiology Volume 90 ; 90 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 2004 ; Journal of Neurophysiology Volume 91 ; 91 ; reingest1.clockss.org:8082 >
       au < expunged ; down ; 2004 ; Journal of Neurophysiology Volume 92 ; 92 ; reingest1.clockss.org:8082 >
@@ -1245,7 +1247,7 @@
       au < expunged ; down ; 2008 ; Journal of Neurophysiology Volume 100 ; 100 ; >
       au < expunged ; down ; 2009 ; Journal of Neurophysiology Volume 101 ; 101 ; >
       au < expunged ; down ; 2009 ; Journal of Neurophysiology Volume 102 ; 102 ; >
-      au < testing ; exists ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 ; >
+      au < down ; manifest ; 2010 ; Journal of Neurophysiology Volume 103 ; 103 ; >
       au < expunged ; down ; 2010 ; Journal of Neurophysiology Volume 104 ; 104 ; >
 
     }
@@ -1316,8 +1318,8 @@
       au < expunged ; down ; 2009 ; Physiological Genomics Volume 37 ; 37 ; >
       au < expunged ; down ; 2009 ; Physiological Genomics Volume 38 ; 38 ; >
       au < expunged ; down ; 2009 ; Physiological Genomics Volume 39 ; 39 ; >
-      au < testing ; exists ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 ; >
-      au < testing ; exists ; 2010 ; Physiological Genomics Volume 41 ; 41 ; >
+      au < down ; manifest ; 2009-2010 ; Physiological Genomics Volume 40 ; 40 ; >
+      au < down ; manifest ; 2010 ; Physiological Genomics Volume 41 ; 41 ; >
       au < expunged ; down ; 2010 ; Physiological Genomics Volume 42 ; 42 ; >
       au < expunged ; down ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
 
@@ -1360,19 +1362,19 @@
       au < expunged ; down ; 1930 ; Physiological Reviews Volume 10 ; 10 ; reingest3.clockss.org:8083 >                                                                            
       au < expunged ; down ; 1931 ; Physiological Reviews Volume 11 ; 11 ; reingest4.clockss.org:8082 >                                                                            
       au < expunged ; down ; 1932 ; Physiological Reviews Volume 12 ; 12 ; reingest1.clockss.org:8082 >                                                                            
-      au < expunged ; expunged ; 1933 ; Physiological Reviews Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1933 ; Physiological Reviews Volume 13[*] ; 13 ; reingest2.clockss.org:8085 >                                                                            
       au < expunged ; down ; 1934 ; Physiological Reviews Volume 14 ; 14 ; reingest3.clockss.org:8083 >                                                                            
       au < expunged ; down ; 1935 ; Physiological Reviews Volume 15 ; 15 ; reingest4.clockss.org:8082 >                                                                            
       au < expunged ; down ; 1936 ; Physiological Reviews Volume 16 ; 16 ; reingest1.clockss.org:8082 >                                                                            
-      au < expunged ; expunged ; 1937 ; Physiological Reviews Volume 17 ; 17 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1937 ; Physiological Reviews Volume 17[*] ; 17 ; reingest2.clockss.org:8085 >                                                                            
       au < expunged ; down ; 1938 ; Physiological Reviews Volume 18 ; 18 ; reingest3.clockss.org:8083 >                                                                            
       au < expunged ; down ; 1939 ; Physiological Reviews Volume 19 ; 19 ; reingest4.clockss.org:8082 >                                                                            
       au < expunged ; down ; 1940 ; Physiological Reviews Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                                                            
-      au < expunged ; expunged ; 1941 ; Physiological Reviews Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1941 ; Physiological Reviews Volume 21[*] ; 21 ; reingest2.clockss.org:8085 >                                                                            
       au < expunged ; down ; 1942 ; Physiological Reviews Volume 22 ; 22 ; reingest3.clockss.org:8083 >                                                                            
       au < expunged ; down ; 1943 ; Physiological Reviews Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                            
       au < expunged ; down ; 1944 ; Physiological Reviews Volume 24 ; 24 ; reingest1.clockss.org:8082 >                                                                            
-      au < expunged ; expunged ; 1945 ; Physiological Reviews Volume 25 ; 25 ; reingest2.clockss.org:8085 >                                                                            
+      au < expunged ; expunged ; 1945 ; Physiological Reviews Volume 25[*] ; 25 ; reingest2.clockss.org:8085 >                                                                            
       au < expunged ; down ; 1946 ; Physiological Reviews Volume 26 ; 26 ; reingest3.clockss.org:8083 >                                                                            
       au < expunged ; down ; 1947 ; Physiological Reviews Volume 27 ; 27 ; reingest4.clockss.org:8082 >                                                                            
       au < expunged ; down ; 1948 ; Physiological Reviews Volume 28 ; 28 ; reingest1.clockss.org:8082 >                                                                            
@@ -1437,7 +1439,7 @@
       au < expunged ; down ; 2007 ; Physiological Reviews Volume 87 ; 87 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 2008 ; Physiological Reviews Volume 88 ; 88 ; >
       au < expunged ; down ; 2009 ; Physiological Reviews Volume 89 ; 89 ; >
-      au < testing ; exists ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
+      au < down ; manifest ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
 
     }
   
@@ -1494,7 +1496,7 @@
       au < expunged ; down ; 2007 ; Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < expunged ; down ; 2008 ; Physiology Volume 23 ; 23 ; >
       au < expunged ; down ; 2009 ; Physiology Volume 24 ; 24 ; >
-      au < testing ; exists ; 2010 ; Physiology Volume 25 ; 25 ; >
+      au < down ; manifest ; 2010 ; Physiology Volume 25 ; 25 ; >
 
     }
   
