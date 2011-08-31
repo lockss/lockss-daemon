@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -37,6 +37,19 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/issues/%d/&quot;, base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s%s/journalhomepage.html&quot;, base_url, journal_id</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%s%s/issues/%d/%02d/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
+    </entry>
+    </map>
   </entry>
   <entry>
     <string>au_manifest</string>
