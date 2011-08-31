@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Midwest Modern Language Association
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Journal of the Midwest Modern Language Association ;
+      issn = 0742-5562 ;
+      issnl = 0742-5562
+    >
+
+    param[journal_dir] = 
+    comment[upcoming] = the journal is upcoming in muse
+
+  }
+
+}
+    
