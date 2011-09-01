@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuHealthMetric.java,v 1.4 2011-08-25 12:17:30 pgust Exp $
+ * $Id: TestAuHealthMetric.java,v 1.5 2011-09-01 06:09:25 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.AuHealthMetric;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.protocol.*;
 
 import static org.lockss.util.Constants.DAY;
 
@@ -47,10 +48,13 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   MockLockssDaemon daemon;
   MockArchivalUnit au1, au2, au3, au4;
+  MockIdentityManager idm;
   
   protected void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon(); 
+    idm = new MockIdentityManager();
+    daemon.setIdentityManager(idm);
     au1 = MockArchivalUnit.newInited(daemon);
     au2 = MockArchivalUnit.newInited(daemon);
     au3 = MockArchivalUnit.newInited(daemon);
@@ -107,6 +111,15 @@ public class TestAuHealthMetric extends LockssTestCase {
 		 AuHealthMetric.isSupported());
   }
 
+  void setNumRepairers(ArchivalUnit au, int n) {
+    Map map = new HashMap();
+    for (int ix = 0; ix < 3; ix++) {
+      MockPeerIdentity id = new MockPeerIdentity("127.0.0."+ix);
+      map.put(id, new Long(10+ix));
+    }
+    idm.setAgeedForAu(au, map);
+  }
+
   public void testAccessors() {
     setupAu(au1, SubstanceChecker.State.Unknown, 0.8, 0.9, 2 * DAY, 0, true);
     TimeBase.setSimulated(5 * DAY);
@@ -115,6 +128,10 @@ public class TestAuHealthMetric extends LockssTestCase {
     assertEquals(.8, hm.getPollAgreement());
     assertEquals(.9, hm.getHighestPollAgreement());
     assertEquals(3, hm.getDaysSinceLastPoll());
+    assertEquals(0, hm.getNumberOfRepairers());
+
+    setNumRepairers(au1, 3);
+    assertEquals(3, hm.getNumberOfRepairers());
   }
 
   public void testIll()
@@ -184,9 +201,9 @@ public class TestAuHealthMetric extends LockssTestCase {
     setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 3 * DAY, -1, true);
     setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 4 * DAY, 2000, false);
     TimeBase.setSimulated(5 * DAY);
-    setHealthExpr("(SubstanceState == \"No\") ? 3.0 : 2.0;");
-    assertEquals(3.0, AuHealthMetric.getHealth(au1));
-    assertEquals(2.0, AuHealthMetric.getHealth(au2));
+    setHealthExpr("(SubstanceState == \"No\") ? 0.25 : 0.5;");
+    assertEquals(0.25, AuHealthMetric.getHealth(au1));
+    assertEquals(0.5, AuHealthMetric.getHealth(au2));
 
     setHealthExpr("PollAgreement;");
     assertEquals(0.8, AuHealthMetric.getHealth(au1));
@@ -194,15 +211,46 @@ public class TestAuHealthMetric extends LockssTestCase {
     setHealthExpr("HighestPollAgreement;");
     assertEquals(0.9, AuHealthMetric.getHealth(au1));
     assertEquals(1.0, AuHealthMetric.getHealth(au2));
-    setHealthExpr("DaysSinceLastPoll;");
-    assertEquals(2.0, AuHealthMetric.getHealth(au1));
-    assertEquals(1.0, AuHealthMetric.getHealth(au2));
-    setHealthExpr("SuccessfulCrawl ? 3.0 : 2.0;");
-    assertEquals(2.0, AuHealthMetric.getHealth(au1));
-    assertEquals(3.0, AuHealthMetric.getHealth(au2));
-    setHealthExpr("AvailableFromPublisher ? 5.0 : 4.0;");
-    assertEquals(4.0, AuHealthMetric.getHealth(au1));
-    assertEquals(5.0, AuHealthMetric.getHealth(au2));
+    setHealthExpr("DaysSinceLastPoll / 3;");
+    assertEquals(0.666, AuHealthMetric.getHealth(au1), .001);
+    assertEquals(0.333, AuHealthMetric.getHealth(au2), .001);
+    setHealthExpr("SuccessfulCrawl ? 0.6 : 0.4;");
+    assertEquals(0.4, AuHealthMetric.getHealth(au1), .01);
+    assertEquals(0.6, AuHealthMetric.getHealth(au2), .01);
+    setHealthExpr("AvailableFromPublisher ? 0.2 : 0.4;");
+    assertEquals(0.4, AuHealthMetric.getHealth(au1), .01);
+    assertEquals(0.2, AuHealthMetric.getHealth(au2), .01);
+
+    setNumRepairers(au2, 3);
+    setHealthExpr("NumberOfRepairers / 4;");
+    assertEquals(0.0, AuHealthMetric.getHealth(au1), .01);
+    assertEquals(0.75, AuHealthMetric.getHealth(au2), .01);
+  }
+
+  public void testOutOfRangeValue()
+      throws AuHealthMetric.HealthUnavailableException {
+    if (noScripting("testOutOfRangeValue")) return;
+    setupAu(au1, SubstanceChecker.State.No, 0.8, 0.9, 3 * DAY, -1, true);
+    setupAu(au2, SubstanceChecker.State.Unknown, 0.9, 1.0, 4 * DAY, 2000, false);
+    TimeBase.setSimulated(5 * DAY);
+    setHealthExpr("(SubstanceState == \"No\") ? 0.5 : 1.5;");
+    assertEquals(0.5, AuHealthMetric.getHealth(au1));
+    try {
+      AuHealthMetric.getHealth(au2);
+      fail("Should throw HealthValueException");
+    } catch (AuHealthMetric.HealthValueException e) {
+      assertMatchesRE("returned out-of-range value", e.getMessage());
+    }
+    try {
+      AuHealthMetric.getHealth(au1);
+      fail("Should throw HealthValueException");
+    } catch (AuHealthMetric.HealthValueException e) {
+      assertMatchesRE("disabled because it previously returned out-of-range value", e.getMessage());
+    }
+
+    setHealthExpr("(SubstanceState == \"No\") ? 0.5 : 0.75;");
+    assertEquals(0.5, AuHealthMetric.getHealth(au1));
+    assertEquals(0.75, AuHealthMetric.getHealth(au2));
   }
 
 
@@ -231,6 +279,7 @@ public class TestAuHealthMetric extends LockssTestCase {
     "      // consider poll results only if at least one has finished\n" +
     "      val = val * PollAgreement;\n" +
     "    }\n" +
+    "    Logger.info(\"Script returning \" + val + \" for AU \" + AuName);\n" +
     "    return val;\n" +
     "  }\n" +
     "  health1();\n";
@@ -257,8 +306,8 @@ public class TestAuHealthMetric extends LockssTestCase {
     setupAu(au3, SubstanceChecker.State.Yes, 0.9, 1.0, 4*DAY, 2000, false);
     TimeBase.setSimulated(15*DAY);
     setHealthExpr("");
-    assertEquals(0.24, AuHealthMetric.getHealth(au1), .001);
-    assertEquals(0.63, AuHealthMetric.getHealth(au2), .001);
+    assertEquals(0.16, AuHealthMetric.getHealth(au1), .001);
+    assertEquals(0.72, AuHealthMetric.getHealth(au2), .001);
     assertEquals(0.9, AuHealthMetric.getHealth(au3), .001);
   }
 
