@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.9 2011-08-04 18:28:47 pgust Exp $
+ * $Id: TdbAu.java,v 1.10 2011-09-01 13:09:49 pgust Exp $
  */
 
 /*
@@ -491,7 +491,7 @@ public class TdbAu {
    * @return the start issue or <code>null</code> if not specified
    */
   public String getStartIssue() {
-    return getRangeStart(getIssue());
+    return NumberUtil.getRangeStart(getIssue());
   }
 
   /**
@@ -499,7 +499,7 @@ public class TdbAu {
    * @return the end issue or <code>null</code> if not specified
    */
   public String getEndIssue() {
-    return getRangeEnd(getIssue());
+    return NumberUtil.getRangeEnd(getIssue());
   }
 
   /**
@@ -508,7 +508,7 @@ public class TdbAu {
    * @return <code>true</code> if this AU includes the issue
    */
   public boolean includesIssue(String anIssue) {
-    return rangeIncludes(getIssue(), anIssue);
+    return NumberUtil.rangeIncludes(getIssue(), anIssue);
   }
 
   /**
@@ -580,73 +580,11 @@ public class TdbAu {
   }
   
   /**
-   * Get the range start.
-   * @param  range a start/stop range separated by a dash
-   * @return the range start <code>null</code> if not specified
-   */
-  public String getRangeStart(String range) {
-    if (range == null) {
-      return null;
-    }
-    int i = range.indexOf('-');
-    return (i > 0) ? range.substring(0,i) : range;
-  }
-
-  /**
-   * Get the range end.
-   * @param range a start/stop range separated by a dash
-   * @return the range end or <code>null</code> if not specified
-   */
-  static private String getRangeEnd(String range) {
-    if (range == null) {
-      return null;
-    }
-    int i = range.indexOf('-');
-    return (i > 0) ? range.substring(i+1) : range;
-  }
-
-  /**
-   * Determine whether a range include a given value. The range can be a
-   * single value  or a start/stop range separated by a dash. If the range
-   * is a single value, it will be used as both the start and stop values.
-   * <p>
-   * If the range and value can be interpreted as numbers (Arabic or Roman),
-   * the value is compared numerically with the range. Otherwise, the value 
-   * is compared to the range start and stop values as a topic range. That 
-   * is, "Georgia", "Kanasas", and "Massachusetts" are topics within the 
-   * volume "Ge-Ma.
-   * 
-   * @param range a single value or a start/stop range separated by a dash.
-   * @param value the value
-   * @return <code>true</code> if this range includes the value
-   */
-  static private boolean rangeIncludes(String range, String value) {
-    if ((range == null) || (value == null)) {
-      return false;
-    }
-    int i = range.indexOf('-');
-    String startRange = (i > 0) ? range.substring(0,i) : range;
-    String endRange = (i > 0) ? range.substring(i+1) : range;
-    try {
-      // see if value is within range
-      int srange = NumberUtil.parseInt(startRange);
-      int erange = NumberUtil.parseInt(endRange);
-      int ival = NumberUtil.parseInt(value);
-      return ( ival >= srange && ival <= erange);
-    } catch (NumberFormatException ex) {
-      // can't compare numerically, so compare as topic ranges
-      return     (value.compareTo(startRange) >= 0) 
-              && (   (value.compareTo(endRange) <= 0)
-                  || value.startsWith(endRange));
-    }
-  }
-
-  /**
    * Get the start year for this AU.
    * @return the start year or <code>null</code> if not specified
    */
   public String getStartYear() {
-    return getRangeStart(getYear());
+    return NumberUtil.getRangeStart(getYear());
   }
 
   /**
@@ -654,7 +592,7 @@ public class TdbAu {
    * @return the end year or <code>null</code> if not specified
    */
   public String getEndYear() {
-    return getRangeEnd(getYear());
+    return NumberUtil.getRangeEnd(getYear());
   }
 
   /**
@@ -663,7 +601,7 @@ public class TdbAu {
    * @return <code>true</code> if this AU includes the date
    */
   public boolean includesYear(String aYear) {
-    return rangeIncludes(getYear(), aYear);
+    return NumberUtil.rangeIncludes(getYear(), aYear);
   }
 
   /**
@@ -688,7 +626,7 @@ public class TdbAu {
    * @return the start volume or <code>null</code> if not specified
    */
   public String getStartVolume() {
-    return getRangeStart(getVolume());
+    return NumberUtil.getRangeStart(getVolume());
   }
 
   /**
@@ -696,7 +634,7 @@ public class TdbAu {
    * @return the end volume or <code>null</code> if not specified
    */
   public String getEndVolume() {
-    return getRangeEnd(getVolume());
+    return NumberUtil.getRangeEnd(getVolume());
   }
 
   /**
@@ -705,7 +643,7 @@ public class TdbAu {
    * @return <code>true</code> if this AU includes the volume
    */
   public boolean includesVolume(String aVolume) {
-    return rangeIncludes(getVolume(), aVolume);
+    return NumberUtil.rangeIncludes(getVolume(), aVolume);
   }
 
   /**
