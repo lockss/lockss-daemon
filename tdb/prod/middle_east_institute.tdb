@@ -17,8 +17,9 @@
 
     param[journal_dir] = the_middle_east_journal
 
-    au < manifest ; 2009 ; The Middle East Journal Volume 63 ; 63 >
-    au < manifest ; 2010 ; The Middle East Journal Volume 64 ; 64 >
+    au < testing ; 2009 ; The Middle East Journal Volume 63 ; 63 >
+    au < testing ; 2010 ; The Middle East Journal Volume 64 ; 64 >
+    au < testing ; 2011 ; The Middle East Journal Volume 65 ; 65 >
 
   }
   

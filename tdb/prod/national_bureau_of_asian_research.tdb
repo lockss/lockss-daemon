@@ -16,17 +16,17 @@
 
     param[journal_dir] = asia_policy
 
-    au < manifest ; 2006 ; Asia Policy Number 1 ; 001 >
-    au < manifest ; 2006 ; Asia Policy Number 2 ; 002 >
-    au < manifest ; 2007 ; Asia Policy Number 3 ; 003 >
-    au < manifest ; 2007 ; Asia Policy Number 4 ; 004 >
-    au < manifest ; 2008 ; Asia Policy Number 5 ; 005 >
-    au < manifest ; 2008 ; Asia Policy Number 6 ; 006 >
-    au < manifest ; 2009 ; Asia Policy Number 7 ; 007 >
-    au < manifest ; 2009 ; Asia Policy Number 8 ; 008 >
-    au < manifest ; 2010 ; Asia Policy Number 9 ; 009 >
-    au < manifest ; 2010 ; Asia Policy Number 10 ; 010 >
-    au < manifest ; 2011 ; Asia Policy Number 11 ; 011 >
+    au < testing ; 2006 ; Asia Policy Number 1 ; 001 >
+    au < testing ; 2006 ; Asia Policy Number 2 ; 002 >
+    au < testing ; 2007 ; Asia Policy Number 3 ; 003 >
+    au < testing ; 2007 ; Asia Policy Number 4 ; 004 >
+    au < testing ; 2008 ; Asia Policy Number 5 ; 005 >
+    au < testing ; 2008 ; Asia Policy Number 6 ; 006 >
+    au < testing ; 2009 ; Asia Policy Number 7 ; 007 >
+    au < testing ; 2009 ; Asia Policy Number 8 ; 008 >
+    au < testing ; 2010 ; Asia Policy Number 9 ; 009 >
+    au < testing ; 2010 ; Asia Policy Number 10 ; 010 >
+    au < testing ; 2011 ; Asia Policy Number 11 ; 011 >
 
   }
 
