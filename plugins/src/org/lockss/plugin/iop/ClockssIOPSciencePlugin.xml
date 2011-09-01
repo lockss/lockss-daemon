@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -67,6 +67,27 @@
     <string>au_start_url</string>
     <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%s%s&quot;, base_url, journal_issn</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, issue</string>
+    </entry>
+    <entry>
+      <string>au_article</string>
+      <string>&quot;%s%s/%s/%s/%06d&quot;, base_url, journal_issn, volume_name, issue, article</string>
+    </entry>
+    </map>
+  </entry> 
   <entry>
     <string>au_crawlrules</string>
     <list>
