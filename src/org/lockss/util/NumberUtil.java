@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.6 2011-08-24 15:07:47 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.7 2011-09-01 13:09:15 pgust Exp $
  */
 
 /*
@@ -74,6 +74,68 @@ public class NumberUtil {
   /** Cannot create an instance of this utility class */
   private NumberUtil() {}
   
+  /**
+   * Get the range start.
+   * @param  range a start/stop range separated by a dash
+   * @return the range start <code>null</code> if not specified
+   */
+  static public String getRangeStart(String range) {
+    if (range == null) {
+      return null;
+    }
+    int i = range.indexOf('-');
+    return (i > 0) ? range.substring(0,i) : range;
+  }
+
+  /**
+   * Get the range end.
+   * @param range a start/stop range separated by a dash
+   * @return the range end or <code>null</code> if not specified
+   */
+  static public String getRangeEnd(String range) {
+    if (range == null) {
+      return null;
+    }
+    int i = range.indexOf('-');
+    return (i > 0) ? range.substring(i+1) : range;
+  }
+
+  /**
+   * Determine whether a range include a given value. The range can be a
+   * single value  or a start/stop range separated by a dash. If the range
+   * is a single value, it will be used as both the start and stop values.
+   * <p>
+   * If the range and value can be interpreted as numbers (Arabic or Roman),
+   * the value is compared numerically with the range. Otherwise, the value 
+   * is compared to the range start and stop values as a topic range. That 
+   * is, "Georgia", "Kanasas", and "Massachusetts" are topics within the 
+   * volume "Ge-Ma.
+   * 
+   * @param range a single value or a start/stop range separated by a dash.
+   * @param value the value
+   * @return <code>true</code> if this range includes the value
+   */
+  static public boolean rangeIncludes(String range, String value) {
+    if ((range == null) || (value == null)) {
+      return false;
+    }
+    int i = range.indexOf('-');
+    String startRange = (i > 0) ? range.substring(0,i) : range;
+    String endRange = (i > 0) ? range.substring(i+1) : range;
+    try {
+      // see if value is within range
+      int srange = NumberUtil.parseInt(startRange);
+      int erange = NumberUtil.parseInt(endRange);
+      int ival = NumberUtil.parseInt(value);
+      return ( ival >= srange && ival <= erange);
+    } catch (NumberFormatException ex) {
+      // can't compare numerically, so compare as topic ranges
+      return     (value.compareTo(startRange) >= 0) 
+              && (   (value.compareTo(endRange) <= 0)
+                  || value.startsWith(endRange));
+    }
+  }
+
   /**
    * Determines the value of the system property with the specified name.
    * The argument is treated as the name of a system property. The string
