@@ -963,7 +963,7 @@
 
   {
     title <
-      name = International Journal of Preventive Medicine;
+      name = International Journal of Preventive Medicine ;
       issn = 2008-7802 ;
       eissn = 2008-8213 ; 
       issnl = 2008-7802 
@@ -2099,8 +2099,8 @@
       issn =
    >
 
-    param[base_url] = http://soj.org/
-	comment[soj] = the url structure is unusual (blog site)
+    param[base_url] = 
+	comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
 
 
   }
