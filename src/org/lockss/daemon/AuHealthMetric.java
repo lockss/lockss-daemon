@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.4 2011-08-30 04:41:21 tlipkis Exp $
+ * $Id: AuHealthMetric.java,v 1.4.2.1 2011-09-01 06:08:15 tlipkis Exp $
  */
 
 /*
@@ -39,12 +39,13 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 
 /**
  * Metric that represents the preservation status, or "health" of an AU or
  * a collection of AUs.
  *
- * Health is a float (expected to be in the range 0.0 - 1.0), calculated
+ * Health is a floating point number in the range [0.0 - 1.0], calculated
  * from a number of individual characteristics (poll agreement & recency,
  * substance state, etc) by a configurable expression or script.  The
  * individual characteristics are also available separately.
@@ -74,13 +75,15 @@ public class AuHealthMetric {
     "    case \"Yes\":\n" +
     "      return 1.0;\n" +
     "    case \"No\":\n" +
-    "      return 0.3;\n" +
+    "      return 0.2;\n" +
     "    case \"Unknown\":\n" +
     "    default:\n" +
     "      if (SuccessfulCrawl) {\n" +
-    "        return 0.7;\n" +
+    "        return 0.8;\n" +
+    "      } else if (AvailableFromPublisher) {\n" +
+    "        return 0.3;\n" +
     "      } else {\n" +
-    "        return 0.4;\n" +
+    "        return 0.7;\n" +
     "      }\n" +
     "    }\n" +
     "  }\n" +
@@ -100,6 +103,10 @@ public class AuHealthMetric {
 
   /** Set of variables available to the script. */
   public static enum HealthMetric {
+    /** The AuHealthMetric logger. */
+    Logger,
+    /** The AU name. */
+    AuName,
     /** SubstanceState is "Yes", "No" or "Unknown". */
     SubstanceState,
     /** PollAgreement is a float between 0.0 and 1.0. */
@@ -111,7 +118,9 @@ public class AuHealthMetric {
     /** SuccessfulCrawl is a boolean. */
     SuccessfulCrawl,
     /** AvailableFromPublisher is a boolean. */
-    AvailableFromPublisher;
+    AvailableFromPublisher,
+    /** Estimated number of peers willing to repair the AU. */
+    NumberOfRepairers;
 //     NumberOfArticles,
 //     ExpectedSizeAgreement;
   }
@@ -120,6 +129,7 @@ public class AuHealthMetric {
   private static String healthExpr = DEFAULT_HEALTH_EXPR;
   private static double inclusionThreshold = DEFAULT_INCLUSION_THRESHOLD;
   private static ScriptEngineManager sem;
+  private static boolean outOfRangeValueSeen = false;
 
   private Bindings bindings;
   private ArchivalUnit au;
@@ -149,7 +159,19 @@ public class AuHealthMetric {
    * @throws HealthUnavailableException if there was an error
    */
   public double getHealth() throws HealthUnavailableException {
-    return eval();
+    if (outOfRangeValueSeen) {
+      throw new HealthValueException("Health evaluation script disabled " +
+				     "because it previously returned " +
+				     "out-of-range value");
+    }      
+    double res = eval();
+    if (res >= 0.0 && res <= 1.0) {
+      return res;
+    } else {
+      outOfRangeValueSeen = true;
+      throw new HealthValueException("Script returned out-of-range value: "
+				     + res);
+    }
   }
   
   /**
@@ -160,9 +182,10 @@ public class AuHealthMetric {
    * 
    * @param aus the aus over which to aggregate health
    * @return a value between 0.0 and 1.0.
-   * @throws HealthUnavailableException if there was an error
+   * @throws HealthUnavailableException (actually, one of its subclasses)
+   * if there was an error
    */
-  public static double getAggregateHealth(List<ArchivalUnit> aus)
+  public static double getAggregateHealth(Collection<ArchivalUnit> aus)
       throws HealthUnavailableException {
     double total = 0.0;
     int auCount = 0;
@@ -194,14 +217,18 @@ public class AuHealthMetric {
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
-      healthExpr = config.get(PARAM_HEALTH_EXPR, DEFAULT_HEALTH_EXPR);
       inclusionThreshold = config.getDouble(PARAM_INCLUSION_THRESHOLD,
 					    DEFAULT_INCLUSION_THRESHOLD);
-      if (StringUtil.isNullString(healthExpr)) {
-	healthExpr = DEFAULT_HEALTH_EXPR;
-      }
       scriptLanguage = config.get(PARAM_SCRIPT_LANGUAGE,
 				  DEFAULT_SCRIPT_LANGUAGE);
+      String newExpr = config.get(PARAM_HEALTH_EXPR);
+      if (StringUtil.isNullString(newExpr)) {
+	newExpr = DEFAULT_HEALTH_EXPR;
+      }
+      if (!StringUtil.equalStrings(newExpr, healthExpr)) {
+	healthExpr = newExpr;
+	outOfRangeValueSeen = false;
+      }
     }
   }
 
@@ -210,28 +237,44 @@ public class AuHealthMetric {
     this.aus = AuUtil.getAuState(au);
   }
 
+  /** Return the AU's SubstanceState */
   public SubstanceChecker.State getSubstanceState() {
     return aus.getSubstanceState();
   }
 
+  /** Return the AU's most recent poll agreement */
   public double getPollAgreement() {
     return aus.getV3Agreement();
   }
   
+  /** Return the AU's highest poll agreement */
   public double getHighestPollAgreement() {
     return aus.getHighestV3Agreement();
   }
   
+  /** Return the number of days since the AU's last completed poll */
   public long getDaysSinceLastPoll() {
     long lastPoll = aus.getLastTopLevelPollTime();
     return lastPoll <= 0 ? -1 :
       (TimeBase.msSince(lastPoll) / Constants.DAY);
   }
     
+  /** Return the estimated number of peers willing to repair this AU */
+  public int getNumberOfRepairers() {
+    IdentityManager idMgr = AuUtil.getDaemon(au).getIdentityManager();
+    Collection repairers = idMgr.getCachesToRepairFrom(au);
+    if (repairers == null) {
+      return 0;
+    }
+    return repairers.size();
+  }
+
+  /** Return true if the AU has at least one successful crawl */
   public boolean hasCrawled() {
     return aus.hasCrawled();
   }
 
+  /** Return true if the AU is still available from its original site */
   public boolean isAvailableFromPublisher() {
     return !AuUtil.isPubDown(au);
   }
@@ -239,6 +282,9 @@ public class AuHealthMetric {
   private Bindings getBindings() {
     if (bindings == null) {
       bindings = new SimpleBindings();
+      bindings.put(HealthMetric.Logger.name(), log);
+      bindings.put(HealthMetric.AuName.name(), au.getName());
+
       bindings.put(HealthMetric.SubstanceState.name(),
 		   getSubstanceState().name());
       bindings.put(HealthMetric.PollAgreement.name(), getPollAgreement());
@@ -246,6 +292,8 @@ public class AuHealthMetric {
 	       getHighestPollAgreement());
       bindings.put(HealthMetric.DaysSinceLastPoll.name(),
 		   getDaysSinceLastPoll());
+      bindings.put(HealthMetric.NumberOfRepairers.name(),
+		   getNumberOfRepairers());
       bindings.put(HealthMetric.SuccessfulCrawl.name(), hasCrawled());
       bindings.put(HealthMetric.AvailableFromPublisher.name(),
 		   isAvailableFromPublisher());
@@ -298,48 +346,48 @@ public class AuHealthMetric {
   /** Parent Exception thrown if health metric is unavailable for any
    * reason */
   public static class HealthUnavailableException extends Exception {
-    public HealthUnavailableException() {
+    HealthUnavailableException() {
       super();
     }
-    public HealthUnavailableException(String message) {
+    HealthUnavailableException(String message) {
       super(message);
     }
-    public HealthUnavailableException(String message, Throwable cause) {
+    HealthUnavailableException(String message, Throwable cause) {
       super(message, cause);
     }
-    public HealthUnavailableException(Throwable cause) {
+    HealthUnavailableException(Throwable cause) {
       super(cause);
     }
   }
 
   /** The health metric evaliation script got an error. */
   public static class HealthScriptException extends HealthUnavailableException {
-    public HealthScriptException() {
+    HealthScriptException() {
       super();
     }
-    public HealthScriptException(String message) {
+    HealthScriptException(String message) {
       super(message);
     }
-    public HealthScriptException(String message, Throwable cause) {
+    HealthScriptException(String message, Throwable cause) {
       super(message, cause);
     }
-    public HealthScriptException(Throwable cause) {
+    HealthScriptException(Throwable cause) {
       super(cause);
     }
   }
 
   /** The health metric evaliation script returned an illegal value. */
   public static class HealthValueException extends HealthUnavailableException {
-    public HealthValueException() {
+    HealthValueException() {
       super();
     }
-    public HealthValueException(String message) {
+    HealthValueException(String message) {
       super(message);
     }
-    public HealthValueException(String message, Throwable cause) {
+    HealthValueException(String message, Throwable cause) {
       super(message, cause);
     }
-    public HealthValueException(Throwable cause) {
+    HealthValueException(Throwable cause) {
       super(cause);
     }
   }
@@ -347,14 +395,19 @@ public class AuHealthMetric {
   // Enumerate and print details of supported script engines
   public static void main(String[] args) {
     ScriptEngineManager sem = new ScriptEngineManager();
-    for (ScriptEngineFactory fact : sem.getEngineFactories()) {
-      log.info("fact: " + fact.getEngineName());
-      log.info(" ver: " + fact.getEngineVersion());
-      log.info(" nms: " + fact.getNames());
-      log.info(" lng: " + fact.getLanguageName());
-      log.info(" ext: " + fact.getExtensions());
-//       log.info(" mth: " + fact.getMethodCallSyntax("obj", "mth", "arg1", "arg2"));
-//       log.info(" out: " + fact.getOutputStatement("to display"));
+    Collection<ScriptEngineFactory> facts = sem.getEngineFactories();
+    if (facts.isEmpty()) {
+      log.info("No script engines found");
+    } else {
+      for (ScriptEngineFactory fact : facts) {
+	log.info("fact: " + fact.getEngineName());
+	log.info(" ver: " + fact.getEngineVersion());
+	log.info(" nms: " + fact.getNames());
+	log.info(" lng: " + fact.getLanguageName());
+	log.info(" ext: " + fact.getExtensions());
+// 	log.info(" mth: " + fact.getMethodCallSyntax("obj", "mth", "arg1", "arg2"));
+// 	log.info(" out: " + fact.getOutputStatement("to display"));
+      }
     }
   }
 }
