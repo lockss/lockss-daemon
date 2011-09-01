@@ -5,7 +5,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>10</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+	<string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Clockss Ingenta Journal Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s&quot;, base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
+    <string>&quot;Ingenta Journal Plugin (CLOCKSS), Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s&quot;, base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -25,7 +34,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ingenta Journal Plugin (for Clockss)</string>
+    <string>Ingenta Journal Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -64,7 +73,7 @@
 	    <string>&quot;%scontent/%s/%s/%s/%08d/%08d/art%05d&quot;, base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
 	  </entry>
   	</map>
-  </entry>    
+  </entry>
   <entry>
     <string>au_manifest</string>
     <list>
@@ -153,5 +162,11 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.ingenta.IngentaUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[0-9]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
+    </list>
   </entry>
 </map>
