@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.4 2011-06-16 11:25:15 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.4.4.1 2011-09-01 12:54:25 pgust Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import org.lockss.test.*;
+import org.lockss.util.NumberUtil;
 
 /**
  * This is the test class for org.lockss.util.NumberUtil
@@ -197,5 +198,26 @@ public class TestNumberUtil extends LockssTestCase {
 	  } catch (IllegalArgumentException ex) {
 	  }
 	}
+  }
+  
+  /**
+   * Test numeric and text ranges
+   */
+  public void testRange() {
+    assertEquals("123", NumberUtil.getRangeStart("123-456"));
+    assertEquals("123", NumberUtil.getRangeStart("123"));
+    assertEquals("456", NumberUtil.getRangeEnd("123-456"));
+    assertEquals("456", NumberUtil.getRangeEnd("456"));
+    
+    /// test numeric ranges
+    assertTrue(NumberUtil.rangeIncludes("123-456", "123"));
+    assertTrue(NumberUtil.rangeIncludes("123-456", "CXXIV"));
+    assertFalse(NumberUtil.rangeIncludes("123-456", "CXX"));
+    
+    // test text ranges
+    assertTrue(NumberUtil.rangeIncludes("abc-def", "abc"));
+    assertTrue(NumberUtil.rangeIncludes("abc-def", "def"));
+    assertTrue(NumberUtil.rangeIncludes("abc-def", "bcdefg"));
+    assertTrue(NumberUtil.rangeIncludes("abc", "abc"));
   }
 }
