@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.3 2011-04-01 23:33:24 thib_gc Exp $
+ * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.3.6.1 2011-09-01 17:02:54 pgust Exp $
  */
 
 /*
@@ -59,6 +59,12 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
      * <p>Not thread-safe.</p>
      */
     protected static class SitemapsHandler extends org.xml.sax.helpers.DefaultHandler {
+      
+      public InputSource resolveEntity(String publicID, String systemID) 
+        throws SAXException {
+        logger.info("resolveEntity(" + publicID + "." + systemID + ")");
+        return new InputSource(new StringReader(""));
+      }
       
       protected static class NoNeedToContinueException extends SAXException {
         
