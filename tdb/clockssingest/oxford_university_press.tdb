@@ -1043,7 +1043,7 @@
     au < released ; crawling ; 2009 ; Annals of Botany Volume 103 ; 103 ; >
     au < released ; manifest ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
     au < released ; crawling ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
-    au < wanted ; exists ; 2010 ; Annals of Botany Volume 106 ; 106 ; >
+    au < testing ; exists ; 2010 ; Annals of Botany Volume 106 ; 106 ; >
     au < manifest ; exists ; 2011 ; Annals of Botany Volume 107 ; 107 ; >
 
     }
@@ -2862,7 +2862,7 @@
     au < manifest ; exists ; 2006 ; Carcinogenesis Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; Carcinogenesis Volume 28 ; 28 ; >
     au < manifest ; exists ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
-    au < testing ; exists ; 2009 ; Carcinogenesis Volume 30 ; 30 ; >
+    au < released ; manifest ; 2009 ; Carcinogenesis Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Carcinogenesis Volume 31 ; 31 ; >
     au < wanted ; exists ; 2011 ; Carcinogenesis Volume 32 ; 32 ; >
 
@@ -5625,7 +5625,7 @@
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
     au < released ; manifest ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
-    au < wanted ; exists ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
+    au < testing ; exists ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
     au < wanted ; exists ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
 
     }
@@ -5782,7 +5782,7 @@
     au < manifest ; exists ; 2006 ; Human Reproduction Volume 21 ; 21 ; >
     au < wanted ; exists ; 2007 ; Human Reproduction Volume 22 ; 22 ; >
     au < wanted ; exists ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
-    au < testing ; exists ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
+    au < released ; manifest ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
     au < released ; manifest ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
     au < manifest ; exists ; 2011 ; Human Reproduction Volume 26 ; 26 ; >
 
@@ -7724,8 +7724,8 @@
     au < wanted ; exists ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < released ; manifest ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
     au < released ; manifest ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
-    au < wanted ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
-    au < wanted ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
+    au < testing ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
+    au < testing ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
 
     }
 
@@ -7903,8 +7903,8 @@
     au < wanted ; exists ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
     au < manifest ; exists ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
     au < released ; manifest ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
-    au < wanted ; exists ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 ; >
-    au < testing ; exists ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 ; >
+    au < testing ; exists ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 ; >
+    au < released ; manifest ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 ; >
     au < wanted ; exists ; 2011 ; The Journal of Biochemistry Volume 149 ; 149 ; >
 
     }
@@ -7985,7 +7985,7 @@
     au < exists ; exists ; 2007 ; Journal of Church and State Volume 49 ; 49 ; >
     au < exists ; exists ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
     au < manifest ; exists ; 2009 ; Journal of Church and State Volume 51 ; 51 ; >
-    au < testing ; exists ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
+    au < released ; manifest ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
     au < manifest ; exists ; 2011 ; Journal of Church and State Volume 53 ; 53 ; >
 
     }
@@ -8021,7 +8021,7 @@
     au < wanted ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
-    au < testing ; exists ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
+    au < released ; manifest ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 ; >
 
     }
@@ -8066,7 +8066,7 @@
     au < wanted ; exists ; 2007 ; Journal of Conflict and Security Law Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
     au < manifest ; exists ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
-    au < testing ; exists ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
+    au < released ; manifest ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
     au < manifest ; exists ; 2011 ; Journal of Conflict and Security Law Volume 16 ; 16 ; >    
 
     }
@@ -8111,7 +8111,7 @@
     au < manifest ; exists ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
     au < manifest ; exists ; 2009 ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
-    au < testing ; exists ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
+    au < released ; manifest ; 2010 ; Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
     au < manifest ; exists ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
 
     }
@@ -8204,7 +8204,7 @@
     au < manifest ; exists ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
     au < manifest ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
-    au < testing ; exists ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
+    au < released ; manifest ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
 
     }
@@ -8345,7 +8345,7 @@
     au < wanted ; exists ; 2007 ; Journal of Environmental Law Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
-    au < testing ; exists ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
+    au < released ; manifest ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
     au < manifest ; exists ; 2011 ; Journal of Environmental Law Volume 23 ; 23 ; >
 
     }
@@ -8787,7 +8787,7 @@
     au < wanted ; exists ; 2007 ; Journal of the History of Collections Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
-    au < testing ; exists ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
+    au < released ; manifest ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
     au < manifest ; exists ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
 
     }
