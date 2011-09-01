@@ -1,10 +1,10 @@
 /*
- * $Id: BioOneArticleIteratorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: BioOneAllenPressFilterRule.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,39 +34,21 @@ package org.lockss.plugin.bioone;
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.extractor.*;
-import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
+import org.lockss.plugin.FilterRule;
 
-public class BioOneArticleIteratorFactory
-  implements ArticleIteratorFactory,
-	     ArticleMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BioOneArticleIterator");
-
-  /*
-   * The BioOne exploded URL structure means that the metadata for an article
-   * is at a URL like http://bioone.clockss.org/<issn>/<issue>/<article>/main.xml
-   * The DOI is between <ce:doi> and </ce:doi>.
-   */
-
-  Pattern pat = Pattern.compile("^.*[0-9][0-9][0-9]file\\.html$");
-
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-						      MetadataTarget target)
-      throws PluginException {
-    return new SubTreeArticleIterator(au,
-				      new SubTreeArticleIterator.Spec()
-				      .setTarget(target)
-				      .setPattern(pat));
-  }
-
-  public ArticleMetadataExtractor
-    createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+/**
+ * Filters out menu, comments, javascript, html tags, and whitespace.
+ */
+public class BioOneAllenPressFilterRule implements FilterRule {
+  public Reader createFilteredReader(Reader reader) {
+    List tagList = ListUtil.list(
+        new HtmlTagFilter.TagPair("<!--", "-->", true),
+        new HtmlTagFilter.TagPair("<script", "</script>", true),
+        new HtmlTagFilter.TagPair("<", ">")
+        );
+    Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
+    return new WhiteSpaceFilter(filteredReader);
   }
 }

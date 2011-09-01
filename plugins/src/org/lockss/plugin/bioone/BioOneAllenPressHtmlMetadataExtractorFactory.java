@@ -1,10 +1,10 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.11 2011-06-25 15:02:01 pgust Exp $
+ * $Id: BioOneAllenPressHtmlMetadataExtractorFactory.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,16 +53,16 @@ import org.apache.oro.text.regex.*;
  *
  * @author Neil Mayo
  */
-public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class BioOneAllenPressHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("BioOneHtmlMetadataExtractorFactory");
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-                               String contentType)
+                                                           String contentType)
   throws PluginException {
-    return new BioOneHtmlMetadataExtractor();
+    return new BioOneAllenPressHtmlMetadataExtractor();
   }
   
-  public static class BioOneHtmlMetadataExtractor
+  public static class BioOneAllenPressHtmlMetadataExtractor
     implements FileMetadataExtractor {
       
     // Flags indicating where to find the appropriate text in a line of HTML
