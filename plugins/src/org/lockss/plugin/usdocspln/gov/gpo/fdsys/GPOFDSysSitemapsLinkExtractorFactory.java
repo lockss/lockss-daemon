@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.4 2011-09-01 17:01:04 pgust Exp $
+ * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.5 2011-09-01 19:11:02 pgust Exp $
  */
 
 /*
@@ -62,7 +62,6 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
       
       public InputSource resolveEntity(String publicID, String systemID) 
         throws SAXException {
-        logger.info("resolveEntity(" + publicID + "." + systemID + ")");
         return new InputSource(new StringReader(""));
       }
       
