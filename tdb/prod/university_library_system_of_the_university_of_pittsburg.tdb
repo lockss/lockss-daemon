@@ -16,7 +16,7 @@
       param[base_url] = http://bsj.pitt.edu/ojs/
       param[journal_id] = bsj
 
-      au < manifest ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 >
+      au < testing ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 >
 
     }
 
@@ -30,7 +30,7 @@
       param[base_url] = http://ehe.pitt.edu/ojs/
       param[journal_id] = ehe
 
-      au < manifest ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 >
+      au < testing ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 >
 
     }
 
@@ -43,8 +43,8 @@
       param[base_url] = http://telerehab.pitt.edu/ojs/
       param[journal_id] = telerehab
 
-      au < manifest ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 >
-      au < manifest ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 >
+      au < testing ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 >
+      au < testing ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 >
 
     }
 
@@ -66,17 +66,17 @@
       au < ready ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 1994 >
       au < ready ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 1995 >
       au < ready ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 1996 >
-      au < testing ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 1997 >
-      au < testing ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 1998 >
-      au < testing ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 1999 >
-      au < testing ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 2000 >
-      au < testing ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 2003 >
-      au < testing ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 2004 >
-      au < testing ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 2005 >
-      au < testing ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 2006 >
-      au < testing ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 2007 >
+      au < ready ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 1997 >
+      au < ready ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 1998 >
+      au < ready ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 1999 >
+      au < ready ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 2000 >
+      au < ready ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 2003 >
+      au < ready ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 2004 >
+      au < ready ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 2005 >
+      au < ready ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 2006 >
+      au < ready ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 2007 >
       au < ready ; 2008-2010 ; Journal of French and Francophone Philosophy Volume 18 ; 2010 >
-      au < testing ; 2011 ; Journal of French and Francophone Philosophy Volume 18 ; 2011 >
+      au < ready ; 2011 ; Journal of French and Francophone Philosophy Volume 18 ; 2011 >
 
     }
 
@@ -176,7 +176,7 @@
       param[base_url] = http://ricoeur.pitt.edu/ojs/
       param[journal_id] = ricoeur
 
-      au < manifest ; 2010 ; Ricoeur Studies Volume 1 ; 2010 >
+      au < testing ; 2010 ; Ricoeur Studies Volume 1 ; 2010 >
 
     }
 
