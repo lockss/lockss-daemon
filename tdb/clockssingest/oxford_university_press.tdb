@@ -1842,21 +1842,21 @@
       issnl = 1474-3310
     >
 
-    comment[bt] = this journal has ceased publication and doesn't exist in Clockss ingest machine, but is supposed to be collected from LOCKSS.
+    comment[dcor] = This triggered title is being reingested
    
     {
 
-    param[base_url] = http://brief-treatment.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://btci.stanford.clockss.org/
+    pluginSuffix = ClockssHighWirePlugin
 
-    au < doNotProcess ; exists ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; >
-    au < doNotProcess ; exists ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; >
+    au < testing ; exists ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ;  >
+    au < testing ; exists ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ;  >
+    au < testing ; exists ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ;  >
+    au < testing ; exists ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ;  >
+    au < testing ; exists ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ;  >
+    au < testing ; exists ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ;  >
+    au < testing ; exists ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ;  >
+    au < testing ; exists ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ;  >
    
     }
   
