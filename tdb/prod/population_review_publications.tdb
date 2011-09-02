@@ -17,7 +17,7 @@
       issnl = 0032-471X
     >
 
-comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller01_supp01.pdf 500 Internal Server Error
+	comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller01_supp01.pdf 500 Internal Server Error
 
     param[journal_dir] = population_review
 
@@ -29,7 +29,7 @@ comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller0
     au < released ; 2008 ; Population Review Volume 47 ; 47 >
     au < notReady ; 2009 ; Population Review Volume 48 ; 48 >
     au < released ; 2010 ; Population Review Volume 49 ; 49 >
-    au < manifest ; 2011 ; Population Review Volume 50 ; 50 >
+    au < testing ; 2011 ; Population Review Volume 50 ; 50 >
 
   }
 
