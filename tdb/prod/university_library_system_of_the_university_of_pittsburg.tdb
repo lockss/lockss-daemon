@@ -16,7 +16,7 @@
       param[base_url] = http://bsj.pitt.edu/ojs/
       param[journal_id] = bsj
 
-      au < testing ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 >
+      au < ready ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 >
 
     }
 
@@ -30,7 +30,7 @@
       param[base_url] = http://ehe.pitt.edu/ojs/
       param[journal_id] = ehe
 
-      au < testing ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 >
+      au < ready ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 >
 
     }
 
@@ -43,8 +43,8 @@
       param[base_url] = http://telerehab.pitt.edu/ojs/
       param[journal_id] = telerehab
 
-      au < testing ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 >
-      au < testing ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 >
+      au < ready ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 >
+      au < ready ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 >
 
     }
 
@@ -117,36 +117,36 @@
       au < manifest ; 1963 ; Revista Iberoamericana Volume XXIX ; 1963 >
       au < manifest ; 1964 ; Revista Iberoamericana Volume XXX ; 1964 >
       au < manifest ; 1965 ; Revista Iberoamericana Volume XXXI ; 1965 >
-      au < manifest ; 1966 ; Revista Iberoamericana Volume XXXII ; 1966 >
-      au < manifest ; 1967 ; Revista Iberoamericana Volume XXXIII ; 1967 >
-      au < manifest ; 1968 ; Revista Iberoamericana Volume XXXIV ; 1968 >
-      au < manifest ; 1969 ; Revista Iberoamericana Volume XXXV ; 1969 >
-      au < manifest ; 1970 ; Revista Iberoamericana Volume XXXVI ; 1970 >
-      au < manifest ; 1971 ; Revista Iberoamericana Volume XXXVII ; 1971 >
-      au < manifest ; 1972 ; Revista Iberoamericana Volume XXXVIII ; 1972 >
-      au < manifest ; 1973 ; Revista Iberoamericana Volume XXXIX ; 1973 >
-      au < manifest ; 1974 ; Revista Iberoamericana Volume XL ; 1974 >
-      au < manifest ; 1975 ; Revista Iberoamericana Volume XLI ; 1975 >
-      au < manifest ; 1976 ; Revista Iberoamericana Volume XLII ; 1976 >
-      au < manifest ; 1977 ; Revista Iberoamericana Volume XLIII ; 1977 >
-      au < manifest ; 1978 ; Revista Iberoamericana Volume XLIV ; 1978 >
-      au < manifest ; 1979 ; Revista Iberoamericana Volume XLV ; 1979 >
-      au < manifest ; 1980 ; Revista Iberoamericana Volume XLVI ; 1980 >
-      au < manifest ; 1981 ; Revista Iberoamericana Volume XLVII ; 1981 >
-      au < manifest ; 1982 ; Revista Iberoamericana Volume XLVIII ; 1982 >
-      au < manifest ; 1983 ; Revista Iberoamericana Volume XLIX ; 1983 >
-      au < manifest ; 1984 ; Revista Iberoamericana Volume L ; 1984 >
-      au < manifest ; 1985 ; Revista Iberoamericana Volume LI ; 1985 >
-      au < manifest ; 1986 ; Revista Iberoamericana Volume LII ; 1986 >
-      au < manifest ; 1987 ; Revista Iberoamericana Volume LIII ; 1987 >
-      au < manifest ; 1988 ; Revista Iberoamericana Volume LIV ; 1988 >
-      au < manifest ; 1989 ; Revista Iberoamericana Volume LV ; 1989 >
-      au < manifest ; 1990 ; Revista Iberoamericana Volume LVI ; 1990 >
-      au < manifest ; 1991 ; Revista Iberoamericana Volume LVII ; 1991 >
-      au < manifest ; 1992 ; Revista Iberoamericana Volume LVIII ; 1992 >
-      au < manifest ; 1993 ; Revista Iberoamericana Volume LXIV ; 1993 >
-      au < manifest ; 1994 ; Revista Iberoamericana Volume LXV ; 1994 >
-      au < manifest ; 1995 ; Revista Iberoamericana Volume LXI ; 1995 >
+      au < testing ; 1966 ; Revista Iberoamericana Volume XXXII ; 1966 >
+      au < testing ; 1967 ; Revista Iberoamericana Volume XXXIII ; 1967 >
+      au < testing ; 1968 ; Revista Iberoamericana Volume XXXIV ; 1968 >
+      au < testing ; 1969 ; Revista Iberoamericana Volume XXXV ; 1969 >
+      au < testing ; 1970 ; Revista Iberoamericana Volume XXXVI ; 1970 >
+      au < testing ; 1971 ; Revista Iberoamericana Volume XXXVII ; 1971 >
+      au < testing ; 1972 ; Revista Iberoamericana Volume XXXVIII ; 1972 >
+      au < testing ; 1973 ; Revista Iberoamericana Volume XXXIX ; 1973 >
+      au < testing ; 1974 ; Revista Iberoamericana Volume XL ; 1974 >
+      au < testing ; 1975 ; Revista Iberoamericana Volume XLI ; 1975 >
+      au < testing ; 1976 ; Revista Iberoamericana Volume XLII ; 1976 >
+      au < testing ; 1977 ; Revista Iberoamericana Volume XLIII ; 1977 >
+      au < testing ; 1978 ; Revista Iberoamericana Volume XLIV ; 1978 >
+      au < testing ; 1979 ; Revista Iberoamericana Volume XLV ; 1979 >
+      au < testing ; 1980 ; Revista Iberoamericana Volume XLVI ; 1980 >
+      au < testing ; 1981 ; Revista Iberoamericana Volume XLVII ; 1981 >
+      au < testing ; 1982 ; Revista Iberoamericana Volume XLVIII ; 1982 >
+      au < testing ; 1983 ; Revista Iberoamericana Volume XLIX ; 1983 >
+      au < testing ; 1984 ; Revista Iberoamericana Volume L ; 1984 >
+      au < testing ; 1985 ; Revista Iberoamericana Volume LI ; 1985 >
+      au < testing ; 1986 ; Revista Iberoamericana Volume LII ; 1986 >
+      au < testing ; 1987 ; Revista Iberoamericana Volume LIII ; 1987 >
+      au < testing ; 1988 ; Revista Iberoamericana Volume LIV ; 1988 >
+      au < testing ; 1989 ; Revista Iberoamericana Volume LV ; 1989 >
+      au < testing ; 1990 ; Revista Iberoamericana Volume LVI ; 1990 >
+      au < testing ; 1991 ; Revista Iberoamericana Volume LVII ; 1991 >
+      au < testing ; 1992 ; Revista Iberoamericana Volume LVIII ; 1992 >
+      au < testing ; 1993 ; Revista Iberoamericana Volume LXIV ; 1993 >
+      au < testing ; 1994 ; Revista Iberoamericana Volume LXV ; 1994 >
+      au < testing ; 1995 ; Revista Iberoamericana Volume LXI ; 1995 >
       au < testing ; 1996 ; Revista Iberoamericana Volume LXII ; 1996 >
       au < testing ; 1997 ; Revista Iberoamericana Volume LXIII ; 1997 >
       au < testing ; 1998 ; Revista Iberoamericana Volume LXIV ; 1998 >
@@ -176,7 +176,7 @@
       param[base_url] = http://ricoeur.pitt.edu/ojs/
       param[journal_id] = ricoeur
 
-      au < testing ; 2010 ; Ricoeur Studies Volume 1 ; 2010 >
+      au < ready ; 2010 ; Ricoeur Studies Volume 1 ; 2010 >
 
     }
 
