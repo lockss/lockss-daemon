@@ -83,6 +83,7 @@
 	<value>org.lockss.plugin.othervoices.OtherVoicesPlugin</value>
 	<value>org.lockss.plugin.bepress.BePressPlugin</value>
 	<value>org.lockss.plugin.bioone.BioOnePlugin</value>
+	<value>org.lockss.plugin.bioone.BioOneAtyponPlugin</value>
 	<value>org.lockss.plugin.GendersPlugin</value>
 	<value>org.lockss.plugin.dictynna.DictynnaPlugin</value>
 	<value>org.lockss.plugin.disputatio.DisputatioPlugin</value>
@@ -166,7 +167,6 @@
 	<value>org.lockss.plugin.etd.pucrio.PUCRioPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
-	<value>org.lockss.plugin.ams.AMSPlugin</value>
 	<value>edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin</value>
 	<value>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</value>
 	<value>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</value>
