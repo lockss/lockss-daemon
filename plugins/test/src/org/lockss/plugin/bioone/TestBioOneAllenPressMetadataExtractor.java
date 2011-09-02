@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.10 2011-03-25 16:34:32 pgust Exp $
+ * $Id: TestBioOneAllenPressMetadataExtractor.java,v 1.1 2011-09-02 00:07:11 thib_gc Exp $
  */
 
 /*
@@ -33,21 +33,14 @@
 package org.lockss.plugin.bioone;
 
 import java.io.*;
-import java.net.URLEncoder;
 import java.util.*;
-import java.util.regex.*;
 
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -62,7 +55,7 @@ import org.lockss.plugin.simulated.*;
  * 
  * @author Neil Mayo
  */
-public class TestBioOneMetadataExtractor extends LockssTestCase {
+public class TestBioOneAllenPressMetadataExtractor extends LockssTestCase {
 
   static Logger log = Logger.getLogger("TestBioOneMetadataExtractor");
 
@@ -294,8 +287,8 @@ System.err.println(md.getList(MetadataField.FIELD_AUTHOR));
     cu.setContent(content);
     cu.setContentSize(content.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    cu.setFileMetadataExtractor(new BioOneHtmlMetadataExtractorFactory.BioOneHtmlMetadataExtractor());
-    ArticleMetadataExtractorFactory mef = new BioOneArticleIteratorFactory();
+    cu.setFileMetadataExtractor(new BioOneAllenPressHtmlMetadataExtractorFactory.BioOneAllenPressHtmlMetadataExtractor());
+    ArticleMetadataExtractorFactory mef = new BioOneAllenPressArticleIteratorFactory();
     ArticleMetadataExtractor me =
       mef.createArticleMetadataExtractor(MetadataTarget.Any);
     assertNotNull(me);
