@@ -8144,6 +8144,28 @@
     }
 
   }
+  
+  {
+
+    title <
+      name = Graft: Organ and Cell Transplantation ;
+      issn = 1522-1628 
+    >
+
+    param[base_url] = http://graft.stanford.clockss.org/
+    comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePlugin
+    
+      au < testing ; exists ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ;  >
+      au < testing ; exists ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ;  >
+      au < testing ; exists ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ;  >
+      
+    }
+    
+  }
 
   {
   
