@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.285 2011-09-02 06:34:29 pgust Exp $
+ $Id: build.xml,v 1.286 2011-09-02 07:25:49 pgust Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -240,6 +240,7 @@ Args:
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
   <property name="nekohtml.jar"  value="${test.lib}/nekohtml.jar"/>
+  <property name="js.jar"  value="${test.lib}/js.jar"/>
   <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
   <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
@@ -349,9 +350,7 @@ Args:
     <pathelement path="${junit.addons.jar}" />
     <pathelement path="${httpunit.jar}" />
     <pathelement path="${nekohtml.jar}" />
-    <pathelement path="${rhino.jar}" />
-    <pathelement path="${js-engine.jar}" />
-    <pathelement path="${script.jar}" />
+    <pathelement path="${js.jar}" />
     <pathelement path="${xmlunit.jar}" />
     <!-- plugin jar -->
     <pathelement path="${lockss.plugins.jar}" />
