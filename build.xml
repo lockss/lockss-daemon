@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.284 2011-07-15 21:54:40 tlipkis Exp $
+ $Id: build.xml,v 1.284.2.1 2011-09-02 13:16:22 pgust Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -189,6 +189,9 @@ Args:
 
   <!-- Library jars -->
 
+  <property name="rhino.jar"      value="${lib}/rhino.jar"/>
+  <property name="js-engine.jar"  value="${lib}/js-engine.jar"/>
+  <property name="script.jar"     value="${lib}/script.jar"/>
   <property name="derby.jar"      value="${lib}/derby.jar"/>
   <property name="derbyclient.jar" value="${lib}/derbyclient.jar"/>
   <property name="derbynet.jar"   value="${lib}/derbynet.jar"/>
@@ -233,11 +236,11 @@ Args:
   <!-- Needed by OAI harvester -->
   <property name="xalan.jar"      value="${lib}/xalan.jar"/>
 
+  <property name="js.jar"         value="${test.lib}/js.jar" />
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
   <property name="nekohtml.jar"  value="${test.lib}/nekohtml.jar"/>
-  <property name="js.jar"  value="${test.lib}/js.jar"/>
   <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
   <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
@@ -307,6 +310,9 @@ Args:
     <pathelement path="${jetty.jar}" />
     <pathelement path="${servlet.jar}" />
     <pathelement path="${pjl-comp-filter.jar}" />
+    <pathelement path="${js-engine.jar}" />
+    <pathelement path="${script.jar}" />
+    <pathelement path="${rhino.jar}" />
     <pathelement path="${derby.jar}" />
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
