@@ -101,7 +101,7 @@
     au < released ; 2007 ; The Good Society Volume 16 ; 16 >
     au < released ; 2008 ; The Good Society Volume 17 ; 17 >
     au < released ; 2009 ; The Good Society Volume 18 ; 18 >
-    au < manifest ; 2010 ; The Good Society Volume 19 ; 19 >
+    au < testing ; 2010 ; The Good Society Volume 19 ; 19 >
 
   }
   
@@ -149,7 +149,7 @@
     au < released ; 2007 ; The Journal of General Education Volume 56 ; 56 >
     au < released ; 2008 ; The Journal of General Education Volume 57 ; 57 >
     au < released ; 2009 ; The Journal of General Education Volume 58 ; 58 >
-    au < manifest ; 2010 ; The Journal of General Education Volume 59 ; 59 >
+    au < testing ; 2010 ; The Journal of General Education Volume 59 ; 59 >
 
   }
 
@@ -212,9 +212,9 @@
     au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 >
     au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 >
     au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 >
-    au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 >
-    au < manifest ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 >
-    au < manifest ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 >
+    au < testing ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 >
+    au < testing ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 >
+    au < testing ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 >
     
   }
 
@@ -240,8 +240,8 @@
     au < released ; 2007 ; The Journal of Speculative Philosophy Volume 21 ; 21 >
     au < released ; 2008 ; The Journal of Speculative Philosophy Volume 22 ; 22 >
     au < released ; 2009 ; The Journal of Speculative Philosophy Volume 23 ; 23 >
-    au < manifest ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
-    au < manifest ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
+    au < testing ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 >
+    au < testing ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 >
 
   }
 
@@ -277,7 +277,7 @@
     param[journal_dir] = pennsylvania_history
 
     au < released ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
-    au < manifest ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
+    au < testing ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 >
 
   }
 
@@ -303,8 +303,8 @@
     au < released ; 2007 ; Philosophy and Rhetoric Volume 40 ; 40 >
     au < released ; 2008 ; Philosophy and Rhetoric Volume 41 ; 41 >
     au < released ; 2009 ; Philosophy and Rhetoric Volume 42 ; 42 >
-    au < manifest ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
-    au < manifest ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
+    au < testing ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 >
+    au < testing ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 >
 
   }
 
@@ -357,7 +357,7 @@
     au < released ; 2007 ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
     au < released ; 2008 ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
     au < released ; 2009 ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
-    au < manifest ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
+    au < testing ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 >
 
   }
 
@@ -379,7 +379,13 @@
       eissn = 1948-5077 ;
       issnl = 0271-9274 
     >
-    
+
+    param[journal_dir] = studies_in_american_jewish_literature
+
+    au < testing ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
+    au < testing ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
+    au < testing ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+            
   }
 
   {
@@ -401,7 +407,12 @@
       eissn = 2154-9648 ;
       issnl = 1045-991X 
     >
-    
+
+    param[journal_dir] = utopian_studies
+
+    au < testing ; 2010 ; Utopian Studies Volume 21 ; 21 >
+    au < testing ; 2011 ; Utopian Studies Volume 22 ; 22 >
+        
   }
 
 }
