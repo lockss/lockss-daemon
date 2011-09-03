@@ -705,8 +705,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; testing ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Evidence-Based Nursing Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Evidence-Based Nursing Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
 
   }
 
@@ -779,7 +779,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Gut Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Gut Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Gut Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Gut Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Gut Volume 60 ; 60 >
 
   }
 
@@ -887,7 +887,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Heart Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Heart Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Heart Volume 96 ; 96 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Heart Volume 97 ; 97 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Heart Volume 97 ; 97 >
 
   }
 
@@ -927,7 +927,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2008 ; Injury Prevention Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Injury Prevention Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Injury Prevention Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Injury Prevention Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Injury Prevention Volume 17 ; 17 >
       
     }
 
@@ -1005,8 +1005,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Clinical Pathology Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Clinical Pathology Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Clinical Pathology Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Clinical Pathology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Clinical Pathology Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
 
   }
 
@@ -1083,8 +1083,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Epidemiology & Community Health Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
 
   }
 
@@ -1146,7 +1146,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Medical Ethics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Medical Ethics Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Medical Ethics Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Medical Ethics Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Medical Ethics Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Medical Ethics Volume 37 ; 37 >
 
   }
