@@ -20,26 +20,26 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
     
-    au < manifest ; 1991 ; Behavior and Social Issues Volume 1 ; 1 ; 1991 >
-    au < manifest ; 1992 ; Behavior and Social Issues Volume 2 ; 2 ; 1992 >
-    au < manifest ; 1993 ; Behavior and Social Issues Volume 3 ; 3 ; 1993 >
-    au < manifest ; 1994 ; Behavior and Social Issues Volume 4 ; 4 ; 1994 >
-    au < manifest ; 1995 ; Behavior and Social Issues Volume 5 ; 5 ; 1995 >
-    au < manifest ; 1996 ; Behavior and Social Issues Volume 6 ; 6 ; 1996 >
-    au < manifest ; 1997 ; Behavior and Social Issues Volume 7 ; 7 ; 1997 >
-    au < manifest ; 1998 ; Behavior and Social Issues Volume 8 ; 8 ; 1998 >
-    au < manifest ; 1999 ; Behavior and Social Issues Volume 9 ; 9 ; 1999 >
-    au < manifest ; 2000 ; Behavior and Social Issues Volume 10 ; 10 ; 2000 >
-    au < manifest ; 2001 ; Behavior and Social Issues Volume 11 ; 11 ; 2001 >
-    au < manifest ; 2002 ; Behavior and Social Issues Volume 12 ; 12 ; 2002 >
-    au < manifest ; 2003 ; Behavior and Social Issues Volume 13 ; 13 ; 2003 >
-    au < manifest ; 2004 ; Behavior and Social Issues Volume 14 ; 14 ; 2004 >
-    au < manifest ; 2005 ; Behavior and Social Issues Volume 15 ; 15 ; 2005 >
-    au < manifest ; 2006 ; Behavior and Social Issues Volume 16 ; 16 ; 2006 >
-    au < manifest ; 2007 ; Behavior and Social Issues Volume 17 ; 17 ; 2007 >
-    au < manifest ; 2008 ; Behavior and Social Issues Volume 18 ; 18 ; 2008 >
-    au < manifest ; 2009 ; Behavior and Social Issues Volume 19 ; 19 ; 2009 >
-    au < testing ; 2010 ; Behavior and Social Issues Volume 20 ; 20 ; 2010 >
+    au < testing ; 1991 ; Behavior and Social Issues Volume 1 ; 1 ; 1991 >
+    au < testing ; 1992 ; Behavior and Social Issues Volume 2 ; 2 ; 1992 >
+    au < testing ; 1993 ; Behavior and Social Issues Volume 3 ; 3 ; 1993 >
+    au < testing ; 1994 ; Behavior and Social Issues Volume 4 ; 4 ; 1994 >
+    au < testing ; 1995 ; Behavior and Social Issues Volume 5 ; 5 ; 1995 >
+    au < testing ; 1996 ; Behavior and Social Issues Volume 6 ; 6 ; 1996 >
+    au < testing ; 1997 ; Behavior and Social Issues Volume 7 ; 7 ; 1997 >
+    au < testing ; 1998 ; Behavior and Social Issues Volume 8 ; 8 ; 1998 >
+    au < testing ; 1999 ; Behavior and Social Issues Volume 9 ; 9 ; 1999 >
+    au < testing ; 2000 ; Behavior and Social Issues Volume 10 ; 10 ; 2000 >
+    au < testing ; 2001 ; Behavior and Social Issues Volume 11 ; 11 ; 2001 >
+    au < testing ; 2002 ; Behavior and Social Issues Volume 12 ; 12 ; 2002 >
+    au < testing ; 2003 ; Behavior and Social Issues Volume 13 ; 13 ; 2003 >
+    au < testing ; 2004 ; Behavior and Social Issues Volume 14 ; 14 ; 2004 >
+    au < testing ; 2005 ; Behavior and Social Issues Volume 15 ; 15 ; 2005 >
+    au < testing ; 2006 ; Behavior and Social Issues Volume 16 ; 16 ; 2006 >
+    au < testing ; 2007 ; Behavior and Social Issues Volume 17 ; 17 ; 2007 >
+    au < testing ; 2008 ; Behavior and Social Issues Volume 18 ; 18 ; 2008 >
+    au < testing ; 2009 ; Behavior and Social Issues Volume 19 ; 19 ; 2009 >
+    au < ready ; 2010 ; Behavior and Social Issues Volume 20 ; 20 ; 2010 >
     au < exists ; 2011 ; Behavior and Social Issues Volume 21 ; 21 ; 2011 >
 
   }
