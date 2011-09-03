@@ -20,27 +20,27 @@
 
     implicit < status ; year ; name ; volume ; param[year] >
     
-    au < testing ; 1991 ; Behavior and Social Issues Volume 1 ; 1 ; 1991 >
-    au < testing ; 1992 ; Behavior and Social Issues Volume 2 ; 2 ; 1992 >
-    au < testing ; 1993 ; Behavior and Social Issues Volume 3 ; 3 ; 1993 >
-    au < testing ; 1994 ; Behavior and Social Issues Volume 4 ; 4 ; 1994 >
-    au < testing ; 1995 ; Behavior and Social Issues Volume 5 ; 5 ; 1995 >
-    au < testing ; 1996 ; Behavior and Social Issues Volume 6 ; 6 ; 1996 >
-    au < testing ; 1997 ; Behavior and Social Issues Volume 7 ; 7 ; 1997 >
-    au < testing ; 1998 ; Behavior and Social Issues Volume 8 ; 8 ; 1998 >
-    au < testing ; 1999 ; Behavior and Social Issues Volume 9 ; 9 ; 1999 >
-    au < testing ; 2000 ; Behavior and Social Issues Volume 10 ; 10 ; 2000 >
-    au < testing ; 2001 ; Behavior and Social Issues Volume 11 ; 11 ; 2001 >
-    au < testing ; 2002 ; Behavior and Social Issues Volume 12 ; 12 ; 2002 >
-    au < testing ; 2003 ; Behavior and Social Issues Volume 13 ; 13 ; 2003 >
-    au < testing ; 2004 ; Behavior and Social Issues Volume 14 ; 14 ; 2004 >
-    au < testing ; 2005 ; Behavior and Social Issues Volume 15 ; 15 ; 2005 >
-    au < testing ; 2006 ; Behavior and Social Issues Volume 16 ; 16 ; 2006 >
-    au < testing ; 2007 ; Behavior and Social Issues Volume 17 ; 17 ; 2007 >
-    au < testing ; 2008 ; Behavior and Social Issues Volume 18 ; 18 ; 2008 >
-    au < testing ; 2009 ; Behavior and Social Issues Volume 19 ; 19 ; 2009 >
+    au < ready ; 1991 ; Behavior and Social Issues Volume 1 ; 1 ; 1991 >
+    au < ready ; 1992 ; Behavior and Social Issues Volume 2 ; 2 ; 1992 >
+    au < ready ; 1993 ; Behavior and Social Issues Volume 3 ; 3 ; 1993 >
+    au < ready ; 1994 ; Behavior and Social Issues Volume 4 ; 4 ; 1994 >
+    au < ready ; 1995 ; Behavior and Social Issues Volume 5 ; 5 ; 1995 >
+    au < ready ; 1996 ; Behavior and Social Issues Volume 6 ; 6 ; 1996 >
+    au < ready ; 1997 ; Behavior and Social Issues Volume 7 ; 7 ; 1997 >
+    au < ready ; 1998 ; Behavior and Social Issues Volume 8 ; 8 ; 1998 >
+    au < ready ; 1999 ; Behavior and Social Issues Volume 9 ; 9 ; 1999 >
+    au < ready ; 2000 ; Behavior and Social Issues Volume 10 ; 10 ; 2000 >
+    au < ready ; 2001 ; Behavior and Social Issues Volume 11 ; 11 ; 2001 >
+    au < ready ; 2002 ; Behavior and Social Issues Volume 12 ; 12 ; 2002 >
+    au < ready ; 2003 ; Behavior and Social Issues Volume 13 ; 13 ; 2003 >
+    au < ready ; 2004 ; Behavior and Social Issues Volume 14 ; 14 ; 2004 >
+    au < ready ; 2005 ; Behavior and Social Issues Volume 15 ; 15 ; 2005 >
+    au < ready ; 2006 ; Behavior and Social Issues Volume 16 ; 16 ; 2006 >
+    au < ready ; 2007 ; Behavior and Social Issues Volume 17 ; 17 ; 2007 >
+    au < ready ; 2008 ; Behavior and Social Issues Volume 18 ; 18 ; 2008 >
+    au < ready ; 2009 ; Behavior and Social Issues Volume 19 ; 19 ; 2009 >
     au < ready ; 2010 ; Behavior and Social Issues Volume 20 ; 20 ; 2010 >
-    au < exists ; 2011 ; Behavior and Social Issues Volume 21 ; 21 ; 2011 >
+    au < ready ; 2011 ; Behavior and Social Issues Volume 21 ; 21 ; 2011 >
 
   }
 
@@ -73,7 +73,7 @@
     au < manifest ; 2007 ; First Monday Volume 12 ; 12 ; 2007 >
     au < manifest ; 2008 ; First Monday Volume 13 ; 13 ; 2008 >
     au < manifest ; 2009 ; First Monday Volume 14 ; 14 ; 2009 >
-    au < testing ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
+    au < notReady ; 2010 ; First Monday Volume 15 ; 15 ; 2010 >
 
   }
 
@@ -90,9 +90,9 @@
     
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < manifest ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
-    au < manifest ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
-    au < manifest ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
+    au < testing ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
+    au < testing ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
+    au < testing ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -109,8 +109,8 @@
     
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < manifest ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
-    au < manifest ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < testing ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
+    au < testing ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
 
   }
 
