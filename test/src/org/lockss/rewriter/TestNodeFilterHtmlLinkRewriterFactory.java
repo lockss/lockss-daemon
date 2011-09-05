@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.19 2011-08-09 03:59:53 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.20 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -31,13 +31,16 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.rewriter;
+
+import java.io.*;
+import java.util.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.servlet.*;
-import java.util.*;
-import java.io.*;
+import org.lockss.rewriter.RegexpCssLinkRewriterFactory.CssLinkRewriterUrlEncodeMode;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
@@ -117,18 +120,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Abs img" +
     "<img src=\"http://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
-    "Rel path CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
-    "<br>\n" +
-    "Rel CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
-    "<br>\n" +
-    "Abs CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
-    "<br>\n" +
-    "Mixed CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
-    "<br>\n" +
 
     // repeat above after changing the base URL
 
@@ -173,18 +164,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs img" +
     "<img src=\"http://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
-    "<br>\n" +
-    "Rel path CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
-    "<br>\n" +
-    "Rel CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
-    "<br>\n" +
-    "Abs CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
-    "<br>\n" +
-    "Mixed CSS import" +
-    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
     "<br>\n" +
 
     "</body>\n" +
@@ -245,14 +224,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
-    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcommon2.css);</style>\n" +
-    "<br>\n" +
-    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css);</style>\n" +
-    "<br>\n" +
-    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css);</style>\n" +
-    "<br>\n" +
-    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FEXTRA4.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fextra5.css);</style>\n" +
-    "<br>\n" +
 
     // Base URL change
     "<base href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F\" />\n" +
@@ -290,17 +261,121 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
     "<br>\n" +
-    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcommon2.css);</style>\n" +
+
+    "</body>\n" +
+    "</HTML>\n";
+
+  private static final String origCss =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "Rel path CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
     "<br>\n" +
-    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css);</style>\n" +
+    "Rel CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
     "<br>\n" +
-    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css);</style>\n" +
+    "Abs CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
     "<br>\n" +
-    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2FEXTRA4.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F..%2Fextra5.css);</style>\n" +
+    "Mixed CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url" +
+    "<style type=\"text/css\" media=\"screen,print\">@import \"/css/common.css\"; @import 'common2.css';</style>\n" +
+    "<br>\n" +
+
+    // repeat above after changing the base URL
+
+    "<base href=\"http://www.example.com/otherdir/\" />\n" +
+    "Rel path CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
+    "<br>\n" +
+    "Abs CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url" +
+    "<style type=\"text/css\" media=\"screen,print\">@import \"/css/common.css\"; @import 'common2.css';</style>\n" +
     "<br>\n" +
 
     "</body>\n" +
     "</HTML>\n";
+
+  static String xformedCssFull =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcss%2Fcommon.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcommon2.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css');</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css');</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FEXTRA4.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fextra5.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url<style type=\"text/css\" media=\"screen,print\">@import 'http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css'; @import 'http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fcommon2.css';</style>\n" +
+    "<br>\n" +
+
+    // Base URL change
+    "<base href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F\" />\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcss%2Fcommon.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcommon2.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css');</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css');</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2FEXTRA4.css') @import url('http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fextra5.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url<style type=\"text/css\" media=\"screen,print\">@import 'http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css'; @import 'http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcommon2.css';</style>\n" +
+    "<br>\n" +
+
+    "</body>\n" +
+    "</HTML>\n";
+
+  static String xformedCssMinimal =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/content/css/common.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/content/common2.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common2.css');</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra2.css');</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra3.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/content/EXTRA4.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/extra5.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url<style type=\"text/css\" media=\"screen,print\">@import 'http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common.css'; @import 'http://lockss.box:9524/ServeContent?url=http://www.example.com/content/common2.css';</style>\n" +
+    "<br>\n" +
+
+    // Base URL change
+    "<base href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F\" />\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/otherdir/css/common.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/otherdir/common2.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common2.css');</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra2.css');</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/css/extra3.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/otherdir/EXTRA4.css') @import url('http://lockss.box:9524/ServeContent?url=http://www.example.com/extra5.css');</style>\n" +
+    "<br>\n" +
+    "Rel CSS import w/ bare url<style type=\"text/css\" media=\"screen,print\">@import 'http://lockss.box:9524/ServeContent?url=http://www.example.com/css/common.css'; @import 'http://lockss.box:9524/ServeContent?url=http://www.example.com/otherdir/common2.css';</style>\n" +
+    "<br>\n" +
+
+    "</body>\n" +
+    "</HTML>\n";
+
+
 
   private ServletUtil.LinkTransform xform = null;
   private String testPort = "9524";
@@ -308,42 +383,65 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
+    au.setLinkRewriterFactory("text/css", new RegexpCssLinkRewriterFactory());
+
     List l = new ArrayList();
     l.add(urlStem);
     au.setUrlStems(l);
     nfhlrf = new NodeFilterHtmlLinkRewriterFactory();
   }
 
-  public void testRewriting() throws Exception {
-    xform = new ServletUtil.LinkTransform() {
-	public String rewrite(String url) {
-	  return "http://lockss.box:" + testPort + "/ServeContent?url=" + url;
-	}
-      };
+  public void testRewriting(String msg,
+			    String src, String exp, boolean hostRel)
+      throws Exception {
+    if (hostRel) {
+      xform = new ServletUtil.LinkTransform() {
+	  public String rewrite(String url) {
+	    return "/ServeContent?url=" + url;
+	  }
+	};
+    } else {
+      xform = new ServletUtil.LinkTransform() {
+	  public String rewrite(String url) {
+	    return "http://lockss.box:" + testPort + "/ServeContent?url=" + url;
+	  }
+	};
+    }
     InputStream is = nfhlrf.createLinkRewriter("text/html", au,
-					       new StringInputStream(orig),
+					       new StringInputStream(src),
 					       encoding, url, xform);
     String out = StringUtil.fromInputStream(is);
-    log.debug3("Original:\n" + orig);
-    log.debug3("Transformed:\n" + out);
-    assertEquals(xformed, out);
+    log.debug3(msg + " original:\n" + orig);
+    log.debug3(msg + " transformed:\n" + out);
+    if (hostRel) {
+      String relExp =
+	StringUtil.replaceString(exp, "http://lockss.box:" + testPort, "");
+      assertEquals(relExp, out);
+    } else {
+      assertEquals(exp, out);
+    }
+  }
+
+  public void testAbsRewriting() throws Exception {
+    testRewriting("Abs", orig, xformed, false);
   }
 
   public void testHostRelativeRewriting() throws Exception {
-    xform = new ServletUtil.LinkTransform() {
-	public String rewrite(String url) {
-	  return "/ServeContent?url=" + url;
-	}
-      };
-    InputStream is = nfhlrf.createLinkRewriter("text/html", au,
-					       new StringInputStream(orig),
-					       encoding, url, xform);
-    String out = StringUtil.fromInputStream(is);
-    log.debug3("Original:\n" + orig);
-    log.debug3("Transformed:\n" + out);
-    String relxformed =
-      StringUtil.replaceString(xformed, "http://lockss.box:" + testPort, "");
-    assertEquals(relxformed, out);
+    testRewriting("Hostrel", orig, xformed, true);
+  }
+
+  public void testCssRewritingMinimal() throws Exception {
+    ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+				  "Minimal");
+    testRewriting("CSS abs minimal encoding", origCss, xformedCssMinimal,
+		  false);
+  }
+
+  public void testCssRewritingFull() throws Exception {
+    ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+				  "Full");
+    testRewriting("CSS abs full encoding", origCss, xformedCssFull,
+		  false);
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.37 2011-08-09 03:59:23 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.38 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class ServeContent extends LockssServlet {
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
-  private AccessLogType requestType;
+  private AccessLogType requestType = AccessLogType.None;
 
   private PluginManager pluginMgr;
   private ProxyManager proxyMgr;
@@ -379,6 +379,7 @@ public class ServeContent extends LockssServlet {
     // this is also the default case for the bare ServeContent URL, which
     // should generate an index with no message.
     displayIndexPage();
+    requestType = AccessLogType.None;
     logAccess("200 index page");
   }
 

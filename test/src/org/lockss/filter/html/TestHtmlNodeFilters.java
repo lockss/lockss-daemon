@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.7 2011-02-14 00:04:43 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.8 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -32,11 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
-import org.lockss.util.*;
-import org.lockss.test.*;
+import java.io.*;
+import java.util.*;
 import org.htmlparser.*;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.*;
+
+import org.lockss.util.*;
+import org.lockss.test.*;
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
+import org.lockss.rewriter.*;
+import org.lockss.servlet.ServletUtil;
 
 public class TestHtmlNodeFilters extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHtmlNodeFilters");
@@ -347,6 +354,38 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertTrue(""+node.getClass(),
 	       node instanceof org.htmlparser.tags.LinkTag);
     assertEquals(origUrl, ((LinkTag)node).getLink());
+  }
+
+  public void testStyleDispatch() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String src =
+      "foo <style type=\"text/css\" media=\"screen\">\n@import \"/resource/css/hw.css\";\n@import \"/resource/css/btcint.css\";\n</style>\nbar\n";
+    String exp =
+      "foo <style type=\"text/css\" media=\"screen\">result string</style>\nbar\n";
+    String res = "result string";
+    String charset = "UTF-8";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/css", lrf);
+
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, charset,
+					     base, linkXform);
+    lrf.setLinkRewriter(new StringInputStream(res));
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    List args = lrf.getArgLists().get(0);
+    assertEquals("text/css", args.get(0));
+    assertEquals(mau, args.get(1));
+    assertEquals("\n@import \"/resource/css/hw.css\";\n@import \"/resource/css/btcint.css\";\n",
+		 StringUtil.fromInputStream((InputStream)args.get(2)));
+    assertEquals("UTF-8", args.get(3));
   }
 
   public void testLinkRegexNoXformsNoMatch() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.95 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.96 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Iterator<ArticleFiles> articleIterator = null;
   private Map extractors = new HashMap();
   private Map fileMetadataExtractors = new HashMap();
+  private Map<String,LinkRewriterFactory> rewriterMap =
+    new HashMap<String,LinkRewriterFactory>();
   private TypedEntryMap propertyMap = new TypedEntryMap();
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
@@ -513,11 +515,24 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public LinkRewriterFactory getLinkRewriterFactory(String contentType) {
-    return rewriterFactory;
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+    LinkRewriterFactory res = rewriterMap.get(mimeType);
+    if (res == null) {
+      res = rewriterMap.get("*");
+    }      
+    if (res == null) {
+      res = rewriterFactory;
+    }      
+    return res;
   }
 
   public void setLinkRewriterFactory(LinkRewriterFactory rewriterFactory) {
     this.rewriterFactory = rewriterFactory;
+  }
+
+  public void setLinkRewriterFactory(String mimeType,
+				     LinkRewriterFactory rewriterFactory) {
+    rewriterMap.put(mimeType, rewriterFactory);
   }
 
   public Iterator<ArticleFiles> getArticleIterator() {

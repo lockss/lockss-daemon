@@ -1,5 +1,5 @@
 /*
-* $Id: MockLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:15 tlipkis Exp $
+* $Id: MockLinkRewriterFactory.java,v 1.6 2011-09-05 02:58:42 tlipkis Exp $
 */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import java.util.*;
 import java.io.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
@@ -42,6 +43,7 @@ public class MockLinkRewriterFactory implements LinkRewriterFactory {
 
   private PluginException ex;
   private InputStream is;
+  private List<List> argLists = new ArrayList<List>();
 
   public MockLinkRewriterFactory() {
     ex = null;
@@ -54,7 +56,8 @@ public class MockLinkRewriterFactory implements LinkRewriterFactory {
 					String encoding,
 					String url,
 					ServletUtil.LinkTransform xform)
-    throws PluginException {
+      throws PluginException {
+    argLists.add(ListUtil.list(mimeType, au, in, encoding, url, xform));
     if (ex != null)
       throw ex;
     return is;
@@ -66,5 +69,9 @@ public class MockLinkRewriterFactory implements LinkRewriterFactory {
 
   public void setLinkRewriter(InputStream strm) {
     is = strm;
+  }
+
+  public List<List> getArgLists() {
+    return argLists;
   }
 }

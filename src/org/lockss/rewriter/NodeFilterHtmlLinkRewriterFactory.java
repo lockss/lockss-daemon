@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.19 2011-07-28 02:57:46 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.20 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -170,48 +170,8 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     NodeFilter relLinkXform = new OrFilter(relLinkXforms);
 
     // Rewrite CSS style imports
-    String[] linkRegex3 = new String[l];
-    boolean[] ignCase3 = new boolean[l];
-    String[] rwRegex3 = new String[l];
-    String[] rwTarget3 = new String[l];
-    // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
-    i = 0;
-    for (Iterator it = urlStems.iterator(); it.hasNext(); ) {
-      String urlStem = (String)it.next();
-      linkRegex3[i] = "url\\(" + urlStem;
-      ignCase3[i] = true;
-      rwRegex3[i] = "url\\(" + urlStem;
-      rwTarget3[i] = "url(" + targetStem + urlStem;
-      logger.debug3("if css match " + linkRegex1[i] + " replace " +
-		    rwRegex1[i] + " by " + rwTarget1[i]);
-      i++;
-    }
-    NodeFilter absImportXform =
-      HtmlNodeFilters.styleRegexYesXforms(linkRegex3, ignCase3,
-					  rwRegex3, rwTarget3);
-
-    RelStyleRegexXform[] relStyleXforms = {
-      new RelStyleRegexXform("url\\(http://", true,
-			     "url\\(/",
-			     "url(" + targetStem + defUrlStem) {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace("url(" + srvLink.rewrite(UrlUtil.getUrlPrefix(baseUrl)));
-	}},
-      new RelStyleRegexXform("url\\(http://", true,
-			     "url\\((" + relChar + ")",
-			     "url(" + targetStem + defUrlStem) {
-	public void setBaseUrl(String baseUrl)
-	    throws MalformedURLException {
-	  setReplace("url(" +
-		     srvLink.rewrite(UrlUtil.resolveUri(baseUrl, "$1")));
-	}},
-    };
-    for (RelStyleRegexXform xform : relStyleXforms) {
-      xform.setNegateFilter(true);
-      relXforms.add(xform);
-    }
-    NodeFilter relImportXform = new OrFilter(relStyleXforms);
+    StyleXform styleXform = new StyleXform(au, encoding, url, srvLink);
+    relXforms.add(styleXform);
 
     // Rewrite <meta http-equiv="refresh" content="url=1; url=...">
     String[] linkRegex5 = new String[l];
@@ -271,8 +231,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       base,
       relLinkXform,
       absLinkXform,
-      relImportXform,
-      absImportXform,
+      styleXform,
       relRefreshXform,
       absRefreshXform,
     };
@@ -337,6 +296,21 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     public RelStyleRegexXform(String regex, boolean ignoreCase,
 			      String target, String replace) {
       super(regex, ignoreCase, target, null);
+    }
+  }
+
+  class StyleXform extends HtmlNodeFilters.StyleXformDispatch
+    implements RelXform {
+
+    public StyleXform(ArchivalUnit au,
+		      String charset,
+		      String baseUrl,
+		      ServletUtil.LinkTransform xform) {
+      super(au, charset, baseUrl, xform);
+    }
+
+    public void setBaseUrl(String baseUrl) {
+      super.setBaseUrl(baseUrl);
     }
   }
 

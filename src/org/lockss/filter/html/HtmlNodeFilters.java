@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.17 2011-02-14 00:04:43 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.18 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
+import java.io.*;
 import java.util.regex.*;
 
 import org.htmlparser.*;
@@ -40,6 +41,10 @@ import org.htmlparser.tags.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.util.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
+import org.lockss.rewriter.*;
+import org.lockss.servlet.ServletUtil;
 
 /** Factory methods for making various useful combinations of NodeFilters,
  * and additional  {@link NodeFilter}s to supplement those in
@@ -672,6 +677,89 @@ public class HtmlNodeFilters {
       return false;
     }
   }
+
+  /**
+   * Rejects everything and applies a CSS LinkRewriter to the text in
+   * style tags
+   */
+  public static class StyleXformDispatch implements NodeFilter {
+
+    private ArchivalUnit au;
+    private String charset;
+    private String baseUrl;
+    private ServletUtil.LinkTransform xform;
+
+    private LinkRewriterFactory lrf;
+
+    public StyleXformDispatch(ArchivalUnit au,
+			      String charset,
+			      String baseUrl,
+			      ServletUtil.LinkTransform xform) {
+      this.au = au;
+      this.charset = charset;
+      this.baseUrl = baseUrl;
+      this.xform = xform;
+    }
+
+    public void setBaseUrl(String newBase) {
+      baseUrl = newBase;
+    }
+
+    static String DEFAULT_STYLE_MIME_TYPE = "text/css";
+  
+    public boolean accept(Node node) {
+      if (node instanceof StyleTag) {
+	StyleTag tag = (StyleTag)node;
+	String mime = tag.getAttribute("type");
+	if (mime == null) {
+	  // shouldn't happen - type attr is required
+	  log.warning("<style> tag with no type attribute");
+	  mime = DEFAULT_STYLE_MIME_TYPE;
+	}
+	LinkRewriterFactory lrf = au.getLinkRewriterFactory(mime);
+	if (lrf != null) {
+	  try {
+	    for (NodeIterator it = (tag).children();
+		 it.hasMoreNodes(); ) {
+	      Node child = it.nextNode();
+	      if (child instanceof TextNode) {
+		TextNode textChild = (TextNode)child;
+		String source = textChild.getText();
+		InputStream rewritten = null;
+		try {
+		  rewritten =
+		    lrf.createLinkRewriter(mime,
+					   au,
+					   new ReaderInputStream(new StringReader(source),
+								 charset),
+					   charset,
+					   baseUrl,
+					   xform);
+		  String res =
+		    StringUtil.fromReader(new InputStreamReader(rewritten,
+								charset));
+		  if (!res.equals(source)) {
+		    if (log.isDebug3()) log.debug3("Style rewritten " + res);
+		    textChild.setText(res);
+		  }
+		} catch (PluginException e) {
+		  log.error("Can't create link rewriter, not rewriting", e);
+		} catch (IOException e) {
+		  log.error("Can't create link rewriter, not rewriting", e);
+		} finally {
+		  IOUtil.safeClose(rewritten);
+		}
+	      }
+	    }
+	  } catch (ParserException ex) {
+	    log.error("Node " + node.toString() + " threw " + ex);
+	  }
+	}
+      }
+      return false;
+    }
+  }
+
 
   /**
    * This class rejects everything but applies a transform to

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpCssLinkRewriterFactory.java,v 1.2 2011-04-26 23:54:13 tlipkis Exp $
+ * $Id: TestRegexpCssLinkRewriterFactory.java,v 1.3 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     "@import url(../style/file4.css) /* rel link to rewrite */\n" +
     "@import url(/style/file5.css) /* site rel link to rewrite */\n" +
     "@import url('rel\\(dir\\)/f\\'il\\'e5.c ss') /* rel with quoting */\n" +
+    "@import url(/style/cgi?foo=bar&a=b) /* query args to rewrite */\n" +
     "@import url()\n" +
     "@import file3.css; /* rel link to rewrite */\n" +
     "@import 'bar/quote.css'; /* rel link to rewrite */\n" +
@@ -113,6 +114,7 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/style/file4.css') /* rel link to rewrite */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/style/file5.css') /* site rel link to rewrite */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/rel\\(dir\\)/f\\'il\\'e5.c%20ss') /* rel with quoting */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/style/cgi%3Ffoo%3Dbar%26a%3Db') /* query args to rewrite */\n" +
     "@import url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file.css')\n" +
     "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/file3.css'; /* rel link to rewrite */\n" +
     "@import 'http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/bar/quote.css'; /* rel link to rewrite */\n" +
@@ -127,6 +129,43 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     " background-fog: url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/to/images/fog_banner.gif');\n" +
     " background-fog: url('http://serve.host:1234/ServeContent?url=http://www.example.com/dir/path/so/images/fog_banner.gif');\n" +
     " background-image: url('http://serve.host:1234/ServeContent?url=http://www.example.com/images/banner.gif');\n" +
+    "}\n";
+
+
+  private static final String xformedEncoded =
+    "table.gallery {\n" +
+    "border:  1px solid #cccccc;\n" +
+    "margin:  2px;\n" +
+    "padding: 2px;\n" +
+    "background-color:#ffffff;\n" +
+    "}\n" +
+    "/* Enough random chars to push what follows over a buffer boundary in tests */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ffile1.css') /* abs link to rewrite */\n" +
+    "@import url( 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fauhost.com%2Fddd%2Fphylum.css') /* 2nd host abs link to rewrite */\n" +
+    "@import url(http://www.content.org/file2.css  ) /* abs link no rewrite */\n" +
+    "@import url('http://www.content.org/file2.css') /* abs link no rewrite */\n" +
+    "@import url(\"http://www.content.org/fi\\(le\\)2.css\") /* abs link no rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Ffile3.css') /* rel link to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fbar%2Fquote.css') /* rel link to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fbar%2Fdquote.css') /* rel link to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fstyle%2Ffile4.css') /* rel link to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fstyle%2Ffile5.css') /* site rel link to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Frel%28dir%29%2Ff%27il%27e5.c+ss') /* rel with quoting */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fstyle%2Fcgi%3Ffoo%3Dbar%26a%3Db') /* query args to rewrite */\n" +
+    "@import url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Ffile.css')\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Ffile3.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fbar%2Fquote.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fbar%2Fdquote.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fstyle%2Ffile4.css'; /* rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fstyle%2Ffile5.css'  ; /* site rel link to rewrite */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Frel%28dir%29%2Ff%27il%27e5.c+ss'; /* rel with quoting */\n" +
+    "@import 'http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Ffile.css';\n" +
+    "#banner, #top-banner { padding: 0;\n" +
+    " height: 120px;\n" +
+    " background-image: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fimages%2Ftop_banner.gif');\n" +
+    " background-fog: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fto%2Fimages%2Ffog_banner.gif');\n" +
+    " background-fog: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fdir%2Fpath%2Fso%2Fimages%2Ffog_banner.gif');\n" +
+    " background-image: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fimages%2Fbanner.gif');\n" +
     "}\n";
 
 
@@ -187,7 +226,9 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     assertEquals("f\\(o\\)o\\\\b", rclrf.urlEscape("f(o)o\\b"));
   }
 
-  public void testRewriting() throws Exception {
+  public void testRewritingMinimalEncoding() throws Exception {
+    ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+				  "Minimal");
     InputStream is = rclrf.createLinkRewriter("text/css", au,
 					       new StringInputStream(orig),
 					       encoding, srcUrl, xform);
@@ -197,10 +238,21 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     assertEquals(xformed, out);
   }
 
+  public void testRewritingFullEncoding() throws Exception {
+    ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+				  "Full");
+    InputStream is = rclrf.createLinkRewriter("text/css", au,
+					       new StringInputStream(orig),
+					       encoding, srcUrl, xform);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("Original:\n" + orig);
+    log.debug3("Transformed:\n" + out);
+    assertEquals(xformedEncoded, out);
+  }
 
   public void testBufferSize(int bufsize, int overlap) throws Exception {
     rclrf = new RegexpCssLinkRewriterFactory(bufsize, overlap);
-    testRewriting();
+    testRewritingMinimalEncoding();
    }
 
    public void testBuffer1() throws Exception {

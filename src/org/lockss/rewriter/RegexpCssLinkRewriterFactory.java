@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkRewriterFactory.java,v 1.2 2011-04-26 23:54:13 tlipkis Exp $
+ * $Id: RegexpCssLinkRewriterFactory.java,v 1.3 2011-09-05 02:58:42 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import java.util.regex.*;
 
 import org.apache.commons.lang.StringUtils;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -56,6 +57,17 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   private static final Logger log =
     Logger.getLogger("RegexpCssLinkRewriterFactory");
   
+  enum CssLinkRewriterUrlEncodeMode {Full, Minimal};
+
+  /** Controls the amount of URL-encoding applied when rewriting CSS files
+   * and fragments.  If <code>Full</code>, URLs embedded as query args in
+   * ServeContent URLs are fully URL-encoded; if <code>Minimal</code>, only
+   * the bare minimum encoding necessary is applied ("?", "&", "=") */
+  public static final String PARAM_URL_ENCODE =
+    Configuration.PREFIX + "cssLinkRewriter.urlEncode";
+  public static final CssLinkRewriterUrlEncodeMode DEFAULT_URL_ENCODE =
+    CssLinkRewriterUrlEncodeMode.Full;
+
   private static final int MAX_URL_LENGTH = 2100;
   // Amount of CSS input to buffer up for matcher
   private static final int DEFAULT_MAX_BUF = 32 * 1024;
@@ -79,6 +91,9 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
     // (G2) URI
     // (G3) = G1
 
+  private static CssLinkRewriterUrlEncodeMode urlEncodeMode =
+    DEFAULT_URL_ENCODE;
+
   private static final int GQUOTE1 = 1;
   private static final int GURL = 2;
   private static final int GQUOTE2 = 3;
@@ -98,6 +113,19 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 
   private int maxBuf = DEFAULT_MAX_BUF;
   private int overlap = DEFAULT_OVERLAP;
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_URL_ENCODE)) {
+      urlEncodeMode =
+	(CssLinkRewriterUrlEncodeMode)
+	config.getEnum(CssLinkRewriterUrlEncodeMode.class,
+		       PARAM_URL_ENCODE, DEFAULT_URL_ENCODE);
+    }
+  }
 
   public RegexpCssLinkRewriterFactory() {
   }
@@ -191,13 +219,15 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
     if (UrlUtil.isAbsoluteUrl(url)) {
       for (String stem : urlStems) {
 	if (StringUtil.startsWithIgnoreCase(url, stem)) {
-	  return srvLinkXform.rewrite(url);
+	  return srvLinkXform.rewrite(encodeQueryArg(url));
 	}
       }
       return url;
     } else  {
       try {
-	return srvLinkXform.rewrite(UrlUtil.resolveUri(srcUrl, url));
+	return srvLinkXform.rewrite(encodeQueryArg(UrlUtil.resolveUri(srcUrl,
+								      url,
+								      urlEncodeMode == CssLinkRewriterUrlEncodeMode.Minimal)));
       } catch (MalformedURLException e) {
 	log.error("Can't rewrite " + url + " in " + srcUrl);
 	return url;
@@ -227,5 +257,15 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
       sb.append(c);
     }
     return sb.toString();
+  }
+
+  String encodeQueryArg(String str) {
+    switch (urlEncodeMode) {
+    case Full:
+      return UrlUtil.encodeUrl(str);
+    case Minimal:
+    default:
+      return UrlUtil.encodeQueryArg(str);
+    }
   }
 }
