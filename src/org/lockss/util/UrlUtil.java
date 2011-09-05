@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.56 2011-05-09 00:41:16 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.57 2011-09-05 02:57:26 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -573,6 +573,15 @@ public class UrlUtil {
     return url;
   }
 
+  /** Performs the bare minimum URL encoding necessary to embed a string in
+   * a query arg */
+  public static String encodeQueryArg(String url) {
+    url = StringUtil.replaceString(url, "?", "%3F");
+    url = StringUtil.replaceString(url, "&", "%26");
+    url = StringUtil.replaceString(url, "=", "%3D");
+    return url;
+  }
+
   /** URLencode a string */
   public static String encodeUrl(String url) {
     try {
@@ -604,14 +613,36 @@ public class UrlUtil {
    */
   public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
-    return resolveUri(new URL(baseUrl), possiblyRelativeUrl);
+    return resolveUri(new URL(baseUrl), possiblyRelativeUrl, true);
+  }
+
+  /** Resolve possiblyRelativeUrl relative to baseUrl.
+   * @param baseUrl The base URL relative to which to resolve
+   * @param possiblyRelativeUrl resolved relative to baseUrl
+   * @param minimallyEncode if true, possiblyRelativeUrl gets the bare
+   * minimal URL encoding
+   * @return The URL formed by combining the two URLs
+   */
+  public static String resolveUri(String baseUrl, String possiblyRelativeUrl,
+				  boolean minimallyEncode)
+      throws MalformedURLException {
+    return resolveUri(new URL(baseUrl), possiblyRelativeUrl, minimallyEncode);
   }
 
   public static String resolveUri(URL baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
+    return resolveUri(baseUrl, possiblyRelativeUrl, true);
+  }
+
+  public static String resolveUri(URL baseUrl, String possiblyRelativeUrl,
+				  boolean minimallyEncode)
+      throws MalformedURLException {
     possiblyRelativeUrl =
       trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
-    String encodedChild = minimallyEncodeUrl(possiblyRelativeUrl);
+    String encodedChild = possiblyRelativeUrl;
+    if (minimallyEncode) {
+      encodedChild = minimallyEncodeUrl(encodedChild);
+    }
     URL url;
     if (encodedChild.startsWith("?")) {
       url = new URL(baseUrl.getProtocol(), baseUrl.getHost(),

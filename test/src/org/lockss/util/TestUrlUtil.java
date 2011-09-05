@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.39 2011-05-09 00:41:16 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.40 2011-09-05 02:57:25 tlipkis Exp $
  */
 
 /*
@@ -563,6 +563,17 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("f%22oo%20", UrlUtil.minimallyEncodeUrl("f\"oo "));
     assertEquals("%20foo%7C", UrlUtil.minimallyEncodeUrl(" foo|"));
     assertEquals("%5Bfoo%5D", UrlUtil.minimallyEncodeUrl("[foo]"));
+  }
+
+  public void testEncodeQueryArg() throws Exception {
+    try {
+      assertEquals(null, UrlUtil.encodeQueryArg(null));
+      fail("encodeQueryArg(null) didn't throw");
+    } catch (NullPointerException e) {}
+    assertEquals("", UrlUtil.encodeQueryArg(""));
+    assertEquals("foo", UrlUtil.encodeQueryArg("foo"));
+    assertEquals("foo%3Dbar%3Fa%3Db%26c%3Db",
+		 UrlUtil.encodeQueryArg("foo=bar?a=b&c=b"));
   }
 
   boolean uri=false;
