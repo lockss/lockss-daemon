@@ -89,10 +89,11 @@
     param[journal_id] = jbdc
     
     implicit < status ; year ; name ; volume ; param[year] >
+    comment[2010] = repository error (malformed link?)
 
-    au < testing ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
-    au < testing ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
-    au < testing ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
+    au < ready ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 >
+    au < notReady ; 2010 ; Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 >
+    au < ready ; 2011 ; Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -108,9 +109,10 @@
     param[journal_id] = ojphi
     
     implicit < status ; year ; name ; volume ; param[year] >
+    comment[2010] = repository error (malformed link?)
 
-    au < testing ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
-    au < testing ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
+    au < ready ; 2009 ; Online Journal of Public Health Informatics Volume 1 ; 1 ; 2009 >
+    au < notReady ; 2010 ; Online Journal of Public Health Informatics Volume 2 ; 2 ; 2010 >
 
   }
 
