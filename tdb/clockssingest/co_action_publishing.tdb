@@ -68,6 +68,19 @@
     au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
 
   }
+  
+  {
+
+   title <
+      name = European Journal of Psychotraumatology Supplement ;
+      issn = 2000-8198 ;
+      eissn = 2000-818X
+    >
+
+      param[base_url] = http://www.polarresearch.net/
+      param[journal_id] = ejpt
+
+  }
     
   {
 
@@ -138,6 +151,17 @@
       name = Infection Ecology & Epidemiology ;
       eissn = 2000-8686 ;
       issnl = 2000-8686
+    >
+
+      param[base_url] = http://www.infectionecologyandepidemiology.net/
+      param[journal_id] = iee
+
+  }
+  
+  {
+    title <
+      name = Infection Ecology & Epidemiology ;
+      eissn = 2000-8686
     >
 
       param[base_url] = http://www.infectionecologyandepidemiology.net/
@@ -338,6 +362,49 @@
       name = Vulnerable Groups & Inclusion ;
       eissn = 2000-8023 ;
       issnl = 2000-8023
+    >
+
+      param[base_url] = http://www.vulnerablegroupsandinclusion.net/
+      param[journal_id] = vgi
+
+  }
+  
+   {
+    title <
+      name = Nordic Journal of ChildLit Aesthetics ;
+      eissn = 2000-7493
+    >
+
+      param[base_url] = http://www.childlitaesthetics.net/
+      param[journal_id] = blft
+
+  }
+
+  {
+
+    title <
+      name = Polar Research ;
+      issn = 0800-0395 ;
+      eissn = 1751-8369
+    >
+
+  }
+
+  {
+    title <
+      name = Socioaffective Neuroscience & Psychology ;
+      eissn = 2000-9011
+    >
+
+      param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
+      param[journal_id] = snp
+
+  }
+
+  {
+    title <
+      name = Vulnerable Groups & Inclusion ;
+      eissn = 2000-8023
     >
 
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
