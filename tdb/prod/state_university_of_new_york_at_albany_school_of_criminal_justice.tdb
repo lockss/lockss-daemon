@@ -16,6 +16,7 @@
     plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
     param[base_url] = http://www.albany.edu/scj/jcjpc/
     implicit < status ; year ; name ; param[volume] >
+    comment[notReady] = vols. 1-9 missing permission statements
 
     au < manifest ; 1993 ; Journal of Criminal Justice and Popular Culture Volume 1 ; 1 >
     au < manifest ; 1994 ; Journal of Criminal Justice and Popular Culture Volume 2 ; 2 >
@@ -25,11 +26,11 @@
     au < manifest ; 1998 ; Journal of Criminal Justice and Popular Culture Volume 6 ; 6 >
     au < manifest ; 1999-2000 ; Journal of Criminal Justice and Popular Culture Volume 7 ; 7 >
     au < manifest ; 2000-2001 ; Journal of Criminal Justice and Popular Culture Volume 8 ; 8 >
-    au < testing ; 2001-2002 ; Journal of Criminal Justice and Popular Culture Volume 9 ; 9 >
+    au < notReady ; 2001-2002 ; Journal of Criminal Justice and Popular Culture Volume 9 ; 9 >
     au < released ; 2003 ; Journal of Criminal Justice and Popular Culture Volume 10 ; 10 >
-    au < testing ; 2004 ; Journal of Criminal Justice and Popular Culture Volume 11 ; 11 >
-    au < testing ; 2005 ; Journal of Criminal Justice and Popular Culture Volume 12 ; 12 >
-    au < testing ; 2006 ; Journal of Criminal Justice and Popular Culture Volume 13 ; 13 >
+    au < ready ; 2004 ; Journal of Criminal Justice and Popular Culture Volume 11 ; 11 >
+    au < ready ; 2005 ; Journal of Criminal Justice and Popular Culture Volume 12 ; 12 >
+    au < ready ; 2006 ; Journal of Criminal Justice and Popular Culture Volume 13 ; 13 >
     au < exists ; 2007 ; Journal of Criminal Justice and Popular Culture Volume 14 ; 14 >
     au < exists ; 2008 ; Journal of Criminal Justice and Popular Culture Volume 15 ; 15 >
     au < exists ; 2009 ; Journal of Criminal Justice and Popular Culture Volume 16 ; 16 >
