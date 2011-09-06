@@ -1,0 +1,26 @@
+
+
+{
+  publisher <
+    name = Ab Imperio
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Ab Imperio ;
+      issn = 1072-4745 ;
+      issnl = 1072-4745
+    >
+
+    param[journal_dir] = ab_imperio
+
+    au < doesNotExist ; 0 ; Ab Imperio Volume 1 ; 1 >
+
+  }
+
+}
