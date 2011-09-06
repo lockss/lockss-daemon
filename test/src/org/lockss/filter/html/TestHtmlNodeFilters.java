@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.8 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.9 2011-09-06 22:32:53 tlipkis Exp $
  */
 
 /*
@@ -356,7 +356,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertEquals(origUrl, ((LinkTag)node).getLink());
   }
 
-  public void testStyleDispatch() throws Exception {
+  public void testStyleDispatch(String charset) throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
     MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
     String src =
@@ -364,7 +364,6 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     String exp =
       "foo <style type=\"text/css\" media=\"screen\">result string</style>\nbar\n";
     String res = "result string";
-    String charset = "UTF-8";
     String base = "http://example.com/base/";
     ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
 	public String rewrite(String url) {
@@ -385,7 +384,16 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertEquals(mau, args.get(1));
     assertEquals("\n@import \"/resource/css/hw.css\";\n@import \"/resource/css/btcint.css\";\n",
 		 StringUtil.fromInputStream((InputStream)args.get(2)));
-    assertEquals("UTF-8", args.get(3));
+    assertEquals(charset == null ? Constants.DEFAULT_ENCODING : charset,
+		 args.get(3));
+  }
+
+  public void testStyleDispatch() throws Exception {
+    testStyleDispatch("UTF-8");
+  }
+
+  public void testStyleDispatchNoCharset() throws Exception {
+    testStyleDispatch(null);
   }
 
   public void testLinkRegexNoXformsNoMatch() throws Exception {

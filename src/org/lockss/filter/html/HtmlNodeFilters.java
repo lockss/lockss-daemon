@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.18 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.19 2011-09-06 22:32:53 tlipkis Exp $
  */
 
 /*
@@ -696,7 +696,11 @@ public class HtmlNodeFilters {
 			      String baseUrl,
 			      ServletUtil.LinkTransform xform) {
       this.au = au;
-      this.charset = charset;
+      if (charset == null) {
+	this.charset = Constants.DEFAULT_ENCODING;
+      } else {
+	this.charset = charset;
+      }
       this.baseUrl = baseUrl;
       this.xform = xform;
     }
