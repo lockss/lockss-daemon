@@ -1220,32 +1220,32 @@
     param[journal_issn] = 0091-0562
     attr[where] = content1a
 
-    au < manifest ; 1973 ; American Journal of Community Psychology Volume 1 ; 1 >
-    au < manifest ; 1974 ; American Journal of Community Psychology Volume 2 ; 2 >
-    au < manifest ; 1975 ; American Journal of Community Psychology Volume 3 ; 3 >
-    au < manifest ; 1976 ; American Journal of Community Psychology Volume 4 ; 4 >
-    au < manifest ; 1977 ; American Journal of Community Psychology Volume 5 ; 5 >
-    au < manifest ; 1978 ; American Journal of Community Psychology Volume 6 ; 6 >
-    au < manifest ; 1979 ; American Journal of Community Psychology Volume 7 ; 7 >
-    au < manifest ; 1980 ; American Journal of Community Psychology Volume 8 ; 8 >
-    au < manifest ; 1981 ; American Journal of Community Psychology Volume 9 ; 9 >
-    au < manifest ; 1982 ; American Journal of Community Psychology Volume 10 ; 10 >
-    au < manifest ; 1983 ; American Journal of Community Psychology Volume 11 ; 11 >
-    au < manifest ; 1984 ; American Journal of Community Psychology Volume 12 ; 12 >
-    au < testing ; 1985 ; American Journal of Community Psychology Volume 13 ; 13 >
+    au < testing ; 1973 ; American Journal of Community Psychology Volume 1 ; 1 >
+    au < testing ; 1974 ; American Journal of Community Psychology Volume 2 ; 2 >
+    au < testing ; 1975 ; American Journal of Community Psychology Volume 3 ; 3 >
+    au < testing ; 1976 ; American Journal of Community Psychology Volume 4 ; 4 >
+    au < testing ; 1977 ; American Journal of Community Psychology Volume 5 ; 5 >
+    au < testing ; 1978 ; American Journal of Community Psychology Volume 6 ; 6 >
+    au < testing ; 1979 ; American Journal of Community Psychology Volume 7 ; 7 >
+    au < testing ; 1980 ; American Journal of Community Psychology Volume 8 ; 8 >
+    au < testing ; 1981 ; American Journal of Community Psychology Volume 9 ; 9 >
+    au < testing ; 1982 ; American Journal of Community Psychology Volume 10 ; 10 >
+    au < testing ; 1983 ; American Journal of Community Psychology Volume 11 ; 11 >
+    au < testing ; 1984 ; American Journal of Community Psychology Volume 12 ; 12 >
+    au < ready ; 1985 ; American Journal of Community Psychology Volume 13 ; 13 >
     au < testing ; 1986 ; American Journal of Community Psychology Volume 14 ; 14 >
-    au < testing ; 1987 ; American Journal of Community Psychology Volume 15 ; 15 >
-    au < testing ; 1988 ; American Journal of Community Psychology Volume 16 ; 16 >
-    au < testing ; 1989 ; American Journal of Community Psychology Volume 17 ; 17 >
-    au < testing ; 1990 ; American Journal of Community Psychology Volume 18 ; 18 >
-    au < testing ; 1991 ; American Journal of Community Psychology Volume 19 ; 19 >
-    au < testing ; 1992 ; American Journal of Community Psychology Volume 20 ; 20 >
-    au < testing ; 1993 ; American Journal of Community Psychology Volume 21 ; 21 >
+    au < ready ; 1987 ; American Journal of Community Psychology Volume 15 ; 15 >
+    au < ready ; 1988 ; American Journal of Community Psychology Volume 16 ; 16 >
+    au < ready ; 1989 ; American Journal of Community Psychology Volume 17 ; 17 >
+    au < ready ; 1990 ; American Journal of Community Psychology Volume 18 ; 18 >
+    au < ready ; 1991 ; American Journal of Community Psychology Volume 19 ; 19 >
+    au < ready ; 1992 ; American Journal of Community Psychology Volume 20 ; 20 >
+    au < ready ; 1993 ; American Journal of Community Psychology Volume 21 ; 21 >
     au < ready ; 1994 ; American Journal of Community Psychology Volume 22 ; 22 >
     au < ready ; 1995 ; American Journal of Community Psychology Volume 23 ; 23 >
     au < ready ; 1996 ; American Journal of Community Psychology Volume 24 ; 24 >
     au < ready ; 1997 ; American Journal of Community Psychology Volume 25 ; 25 >
-    au < testing ; 1998 ; American Journal of Community Psychology Volume 26 ; 26 >
+    au < notReady ; 1998 ; American Journal of Community Psychology Volume 26 ; 26 >
     au < ready ; 1999 ; American Journal of Community Psychology Volume 27 ; 27 >
     au < ready ; 2000 ; American Journal of Community Psychology Volume 28 ; 28 >
     au < ready ; 2001 ; American Journal of Community Psychology Volume 29 ; 29 >
@@ -4189,11 +4189,11 @@
     au < manifest ; 2000 ; Behavioral Ecology and Sociobiology Volume 48 ; 48 >
     au < manifest ; 2000 ; Behavioral Ecology and Sociobiology Volume 49 ; 49 >
     au < manifest ; 2001 ; Behavioral Ecology and Sociobiology Volume 50 ; 50 >
-    au < testing ; 2001 ; Behavioral Ecology and Sociobiology Volume 51 ; 51 >
-    au < testing ; 2002 ; Behavioral Ecology and Sociobiology Volume 52 ; 52 >
-    au < testing ; 2002 ; Behavioral Ecology and Sociobiology Volume 53 ; 53 >
-    au < testing ; 2003 ; Behavioral Ecology and Sociobiology Volume 54 ; 54 >
-    au < testing ; 2003 ; Behavioral Ecology and Sociobiology Volume 55 ; 55 >
+    au < ready ; 2001 ; Behavioral Ecology and Sociobiology Volume 51 ; 51 >
+    au < ready ; 2002 ; Behavioral Ecology and Sociobiology Volume 52 ; 52 >
+    au < ready ; 2002 ; Behavioral Ecology and Sociobiology Volume 53 ; 53 >
+    au < ready ; 2003 ; Behavioral Ecology and Sociobiology Volume 54 ; 54 >
+    au < ready ; 2003 ; Behavioral Ecology and Sociobiology Volume 55 ; 55 >
     au < ready ; 2004 ; Behavioral Ecology and Sociobiology Volume 56 ; 56 >
     au < ready ; 2004 ; Behavioral Ecology and Sociobiology Volume 57 ; 57 >
     au < ready ; 2005 ; Behavioral Ecology and Sociobiology Volume 58 ; 58 >
@@ -14025,21 +14025,21 @@
     au < manifest ; 1952 ; Fresenius Zeitschrift für Analytische Chemie Volume 137 ; 137 >
     au < manifest ; 1953 ; Fresenius Zeitschrift für Analytische Chemie Volume 138 ; 138 >
     au < manifest ; 1953 ; Fresenius Zeitschrift für Analytische Chemie Volume 139 ; 139 >
-    au < manifest ; 1953 ; Fresenius Zeitschrift für Analytische Chemie Volume 140 ; 140 >
-    au < manifest ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 141 ; 141 >
-    au < manifest ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 142 ; 142 >
-    au < manifest ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 143 ; 143 >
-    au < manifest ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 144 ; 144 >
-    au < testing ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 145 ; 145 >
-    au < testing ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 146 ; 146 >
+    au < testing ; 1953 ; Fresenius Zeitschrift für Analytische Chemie Volume 140 ; 140 >
+    au < testing ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 141 ; 141 >
+    au < testing ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 142 ; 142 >
+    au < testing ; 1954 ; Fresenius Zeitschrift für Analytische Chemie Volume 143 ; 143 >
+    au < testing ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 144 ; 144 >
+    au < ready ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 145 ; 145 >
+    au < ready ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 146 ; 146 >
     au < testing ; 1955 ; Fresenius Zeitschrift für Analytische Chemie Volume 147 ; 147 >
     au < testing ; 1955-1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 148 ; 148 >
-    au < testing ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 149 ; 149 >
+    au < ready ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 149 ; 149 >
     au < testing ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 150 ; 150 >
-    au < testing ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 151 ; 151 >
-    au < testing ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 152 ; 152 >
+    au < ready ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 151 ; 151 >
+    au < ready ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 152 ; 152 >
     au < testing ; 1956 ; Fresenius Zeitschrift für Analytische Chemie Volume 153 ; 153 >
-    au < testing ; 1956-1957 ; Fresenius Zeitschrift für Analytische Chemie Volume 154 ; 154 >
+    au < ready ; 1956-1957 ; Fresenius Zeitschrift für Analytische Chemie Volume 154 ; 154 >
     au < ready ; 1957 ; Fresenius Zeitschrift für Analytische Chemie Volume 155 ; 155 >
     au < ready ; 1957 ; Fresenius Zeitschrift für Analytische Chemie Volume 156 ; 156 >
     au < ready ; 1957 ; Fresenius Zeitschrift für Analytische Chemie Volume 157 ; 157 >
@@ -30483,18 +30483,18 @@
     au < manifest ; 1986-1987 ; Oecologia Volume 71 ; 71 >
     au < manifest ; 1987 ; Oecologia Volume 72 ; 72 >
     au < manifest ; 1987 ; Oecologia Volume 73 ; 73 >
-    au < manifest ; 1987-1988 ; Oecologia Volume 74 ; 74 >
-    au < manifest ; 1988 ; Oecologia Volume 75 ; 75 >
-    au < manifest ; 1988 ; Oecologia Volume 76 ; 76 >
-    au < manifest ; 1988 ; Oecologia Volume 77 ; 77 >
-    au < manifest ; 1989 ; Oecologia Volume 78 ; 78 >
+    au < testing ; 1987-1988 ; Oecologia Volume 74 ; 74 >
+    au < testing ; 1988 ; Oecologia Volume 75 ; 75 >
+    au < testing ; 1988 ; Oecologia Volume 76 ; 76 >
+    au < testing ; 1988 ; Oecologia Volume 77 ; 77 >
+    au < testing ; 1989 ; Oecologia Volume 78 ; 78 >
     au < testing ; 1989 ; Oecologia Volume 79 ; 79 >
-    au < testing ; 1989 ; Oecologia Volume 80 ; 80 >
+    au < ready ; 1989 ; Oecologia Volume 80 ; 80 >
     au < testing ; 1989 ; Oecologia Volume 81 ; 81 >
-    au < testing ; 1990 ; Oecologia Volume 82 ; 82 >
-    au < testing ; 1990 ; Oecologia Volume 83 ; 83 >
-    au < testing ; 1990 ; Oecologia Volume 84 ; 84 >
-    au < testing ; 1990-1991 ; Oecologia Volume 85 ; 85 >
+    au < ready ; 1990 ; Oecologia Volume 82 ; 82 >
+    au < ready ; 1990 ; Oecologia Volume 83 ; 83 >
+    au < ready ; 1990 ; Oecologia Volume 84 ; 84 >
+    au < ready ; 1990-1991 ; Oecologia Volume 85 ; 85 >
     au < ready ; 1991 ; Oecologia Volume 86 ; 86 >
     au < ready ; 1991 ; Oecologia Volume 87 ; 87 >
     au < testing ; 1991 ; Oecologia Volume 88 ; 88 >
