@@ -12,7 +12,8 @@
     title <
       name = Anticancer Research ;
       issn = 0250-7005 ;
-      eissn = 1791-7530
+      eissn = 1791-7530 ;
+      issnl = 0250-7005
     >
 
     param[base_url] = http://ar.iiarjournals.org/
@@ -24,7 +25,7 @@
     au < released ; 2008 ; Anticancer Research Volume 28 ; 28 >
     au < released ; 2009 ; Anticancer Research Volume 29 ; 29 >
     au < released ; 2010 ; Anticancer Research Volume 30 ; 30 >
-    au < manifest ; 2011 ; Anticancer Research Volume 31 ; 31 >
+    au < testing ; 2011 ; Anticancer Research Volume 31 ; 31 >
 
   }
   
@@ -33,19 +34,20 @@
     title <
       name = Cancer Genomics and Proteomics ;
       issn = 1109-6535 ;
-      eissn = 1790-6295
+      eissn = 1790-6295 ;
+      issnl = 1109-6535
     >
   
    param[base_url] = http://cgp.iiarjournals.org/
 
-    au < manifest ; 2004 ; Cancer Genomics and Proteomics Volume 1 ; 1 >
-    au < manifest ; 2005 ; Cancer Genomics and Proteomics Volume 2 ; 2 >
-    au < manifest ; 2006 ; Cancer Genomics and Proteomics Volume 3 ; 3 >
-    au < manifest ; 2007 ; Cancer Genomics and Proteomics Volume 4 ; 4 >
-    au < manifest ; 2008 ; Cancer Genomics and Proteomics Volume 5 ; 5 >
-    au < manifest ; 2009 ; Cancer Genomics and Proteomics Volume 6 ; 6 >
-    au < manifest ; 2010 ; Cancer Genomics and Proteomics Volume 7 ; 7 >
-    au < manifest ; 2011 ; Cancer Genomics and Proteomics Volume 8 ; 8 >
+    au < testing ; 2004 ; Cancer Genomics and Proteomics Volume 1 ; 1 >
+    au < testing ; 2005 ; Cancer Genomics and Proteomics Volume 2 ; 2 >
+    au < testing ; 2006 ; Cancer Genomics and Proteomics Volume 3 ; 3 >
+    au < testing ; 2007 ; Cancer Genomics and Proteomics Volume 4 ; 4 >
+    au < testing ; 2008 ; Cancer Genomics and Proteomics Volume 5 ; 5 >
+    au < testing ; 2009 ; Cancer Genomics and Proteomics Volume 6 ; 6 >
+    au < testing ; 2010 ; Cancer Genomics and Proteomics Volume 7 ; 7 >
+    au < testing ; 2011 ; Cancer Genomics and Proteomics Volume 8 ; 8 >
 
 
   }
@@ -61,14 +63,14 @@
 
     param[base_url] = http://iv.iiarjournals.org/
 
-    au < manifest ; 2004 ; In Vivo Volume 18 ; 18 >
-    au < manifest ; 2005 ; In Vivo Volume 19 ; 19 >
-    au < manifest ; 2006 ; In Vivo Volume 20 ; 20 >
-    au < manifest ; 2007 ; In Vivo Volume 21 ; 21 >
-    au < manifest ; 2008 ; In Vivo Volume 22 ; 22 >
-    au < manifest ; 2009 ; In Vivo Volume 23 ; 23 >
-    au < manifest ; 2010 ; In Vivo Volume 24 ; 24 >
-    au < manifest ; 2011 ; In Vivo Volume 25 ; 25 >
+    au < testing ; 2004 ; In Vivo Volume 18 ; 18 >
+    au < testing ; 2005 ; In Vivo Volume 19 ; 19 >
+    au < testing ; 2006 ; In Vivo Volume 20 ; 20 >
+    au < testing ; 2007 ; In Vivo Volume 21 ; 21 >
+    au < testing ; 2008 ; In Vivo Volume 22 ; 22 >
+    au < testing ; 2009 ; In Vivo Volume 23 ; 23 >
+    au < testing ; 2010 ; In Vivo Volume 24 ; 24 >
+    au < testing ; 2011 ; In Vivo Volume 25 ; 25 >
 
 
   }
