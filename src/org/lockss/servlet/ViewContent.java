@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.19 2011-03-06 00:53:47 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.20 2011-09-06 23:28:21 tlipkis Exp $
  */
 
 /*
@@ -108,12 +108,12 @@ public class ViewContent extends LockssServlet {
     }
     au = pluginMgr.getAuFromId(auid);
     if (au == null) {
-      displayError("No such AU: " + auid);
+      displayNotFound("No such AU: " + auid);
       return;
     }
     cu = au.makeCachedUrl(url);
     if (cu == null) {
-      displayError("URL " + url + " not found in AU: " + au.getName());
+      displayNotFound("URL " + url + " not found in AU: " + au.getName());
       return;
     }
     String versionStr = getParameter("version");
@@ -143,10 +143,10 @@ public class ViewContent extends LockssServlet {
 
     if (!cu.hasContent()) {
       if (versionStr != null) {
-	displayError("Version " + versionStr + " of URL " + url
+	displayNotFound("Version " + versionStr + " of URL " + url
 		     + " has no content in AU: " + au.getName());
       } else {
-	displayError("URL " + url + " not found in AU: " + au.getName());
+	displayNotFound("URL " + url + " not found in AU: " + au.getName());
       }
       return;
     }
@@ -167,7 +167,8 @@ public class ViewContent extends LockssServlet {
 	setFramed(true);
 	displaySummary(true);
       } else {
-	displayError("Illegal frame parameter: " + frame);
+	displayError(HttpResponse.__400_Bad_Request,
+		     "Illegal frame parameter: " + frame);
       }
     } finally {
       cu.release();
@@ -332,7 +333,11 @@ public class ViewContent extends LockssServlet {
   void displayForm(String error) throws IOException {
   }
 
-  void displayError(String error) throws IOException {
+  void displayNotFound(String error) throws IOException {
+    displayError(HttpResponse.__404_Not_Found, error);
+  }
+
+  void displayError(int result, String error) throws IOException {
     Page page = newPage();
     Composite comp = new Composite();
     comp.add("<center><font color=red size=+1>");
@@ -341,6 +346,9 @@ public class ViewContent extends LockssServlet {
     page.add(comp);
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
+    if (result > 0) {
+      resp.setStatus(result);
+    }
   }
 
 
