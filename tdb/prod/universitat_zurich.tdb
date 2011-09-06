@@ -16,39 +16,39 @@
       implicit < status ; year ; name ; volume ; param[year] >
       comment[zwa] = vol35-36 content exists but links aren't live yet
 
-      au < manifest ; 1974 ; ZWINGLIANA Volume 14 (1974) ; 14 ; 1974 >
-      au < manifest ; 1975 ; ZWINGLIANA Volume 14 (1975) ; 14 ; 1975 >
-      au < manifest ; 1976 ; ZWINGLIANA Volume 14 (1976) ; 14 ; 1976 >
-      au < manifest ; 1977 ; ZWINGLIANA Volume 14 (1977) ; 14 ; 1977 > 
-      au < manifest ; 1978 ; ZWINGLIANA Volume 14 (1978) ; 14 ; 1978 >
-      au < manifest ; 1979 ; ZWINGLIANA Volume 15 (1979) ; 15 ; 1979 >
-      au < manifest ; 1980 ; ZWINGLIANA Volume 15 (1980) ; 15 ; 1980 >
-      au < manifest ; 1981 ; ZWINGLIANA Volume 15 (1981) ; 15 ; 1981 >
-      au < manifest ; 1982 ; ZWINGLIANA Volume 15 (1982) ; 15 ; 1982 > 
-      au < manifest ; 1983 ; ZWINGLIANA Volume 16 (1983) ; 16 ; 1983 >
-      au < manifest ; 1984 ; ZWINGLIANA Volume 16 (1984) ; 16 ; 1984 >
-      au < manifest ; 1985 ; ZWINGLIANA Volume 16 (1985) ; 16 ; 1985 >
-      au < manifest ; 1986 ; ZWINGLIANA Volume 17 (1986) ; 17 ; 1986 >
-      au < manifest ; 1987 ; ZWINGLIANA Volume 17 (1987) ; 17 ; 1987 >
-      au < manifest ; 1988 ; ZWINGLIANA Volume 17 (1988) ; 17 ; 1988 >
-      au < manifest ; 1989 ; ZWINGLIANA Volume 18 (1989) ; 18 ; 1989 >
-      au < manifest ; 1990-1991 ; ZWINGLIANA Volume 18 (1990/1991) ; 18 ; 1990 >
-      au < manifest ; 1992 ; ZWINGLIANA Volume 19 (1992) ; 19 ; 1992 >      
-      au < manifest ; 1993 ; ZWINGLIANA Volume 19-20 (1993) ; 19-20 ; 1993 >
-      au < manifest ; 1994 ; ZWINGLIANA Volume 21 (1994) ; 21 ; 1994 >
-      au < manifest ; 1995 ; ZWINGLIANA Volume 22 (1995) ; 22 ; 1995 >
-      au < manifest ; 1996 ; ZWINGLIANA Volume 23 (1996) ; 23 ; 1996 >
-      au < manifest ; 1997 ; ZWINGLIANA Volume 24 (1997) ; 24 ; 1997 >
-      au < testing ; 1998 ; ZWINGLIANA Volume 25 (1998) ; 25 ; 1998 >
-      au < testing ; 1999 ; ZWINGLIANA Volume 26 (1999) ; 26 ; 1999 >
-      au < testing ; 2000 ; ZWINGLIANA Volume 27 (2000) ; 27 ; 2000 >
-      au < testing ; 2001 ; ZWINGLIANA Volume 28 (2001) ; 28 ; 2001 >
-      au < testing ; 2002 ; ZWINGLIANA Volume 29 (2002) ; 29 ; 2002 >
-      au < testing ; 2003 ; ZWINGLIANA Volume 30 (2003) ; 30 ; 2003 >
-      au < testing ; 2004 ; ZWINGLIANA Volume 31 (2004) ; 31 ; 2004 >
-      au < testing ; 2005 ; ZWINGLIANA Volume 32 (2005) ; 32 ; 2005 >
-      au < testing ; 2006 ; ZWINGLIANA Volume 33 (2006) ; 33 ; 2006 >
-      au < testing ; 2007 ; ZWINGLIANA Volume 34 (2007) ; 34 ; 2007 >
+      au < testing ; 1974 ; ZWINGLIANA Volume 14 (1974) ; 14 ; 1974 >
+      au < testing ; 1975 ; ZWINGLIANA Volume 14 (1975) ; 14 ; 1975 >
+      au < testing ; 1976 ; ZWINGLIANA Volume 14 (1976) ; 14 ; 1976 >
+      au < testing ; 1977 ; ZWINGLIANA Volume 14 (1977) ; 14 ; 1977 > 
+      au < testing ; 1978 ; ZWINGLIANA Volume 14 (1978) ; 14 ; 1978 >
+      au < testing ; 1979 ; ZWINGLIANA Volume 15 (1979) ; 15 ; 1979 >
+      au < testing ; 1980 ; ZWINGLIANA Volume 15 (1980) ; 15 ; 1980 >
+      au < testing ; 1981 ; ZWINGLIANA Volume 15 (1981) ; 15 ; 1981 >
+      au < testing ; 1982 ; ZWINGLIANA Volume 15 (1982) ; 15 ; 1982 > 
+      au < testing ; 1983 ; ZWINGLIANA Volume 16 (1983) ; 16 ; 1983 >
+      au < testing ; 1984 ; ZWINGLIANA Volume 16 (1984) ; 16 ; 1984 >
+      au < testing ; 1985 ; ZWINGLIANA Volume 16 (1985) ; 16 ; 1985 >
+      au < testing ; 1986 ; ZWINGLIANA Volume 17 (1986) ; 17 ; 1986 >
+      au < testing ; 1987 ; ZWINGLIANA Volume 17 (1987) ; 17 ; 1987 >
+      au < testing ; 1988 ; ZWINGLIANA Volume 17 (1988) ; 17 ; 1988 >
+      au < testing ; 1989 ; ZWINGLIANA Volume 18 (1989) ; 18 ; 1989 >
+      au < testing ; 1990-1991 ; ZWINGLIANA Volume 18 (1990/1991) ; 18 ; 1990 >
+      au < testing ; 1992 ; ZWINGLIANA Volume 19 (1992) ; 19 ; 1992 >      
+      au < testing ; 1993 ; ZWINGLIANA Volume 19-20 (1993) ; 19-20 ; 1993 >
+      au < testing ; 1994 ; ZWINGLIANA Volume 21 (1994) ; 21 ; 1994 >
+      au < testing ; 1995 ; ZWINGLIANA Volume 22 (1995) ; 22 ; 1995 >
+      au < testing ; 1996 ; ZWINGLIANA Volume 23 (1996) ; 23 ; 1996 >
+      au < testing ; 1997 ; ZWINGLIANA Volume 24 (1997) ; 24 ; 1997 >
+      au < ready ; 1998 ; ZWINGLIANA Volume 25 (1998) ; 25 ; 1998 >
+      au < ready ; 1999 ; ZWINGLIANA Volume 26 (1999) ; 26 ; 1999 >
+      au < ready ; 2000 ; ZWINGLIANA Volume 27 (2000) ; 27 ; 2000 >
+      au < ready ; 2001 ; ZWINGLIANA Volume 28 (2001) ; 28 ; 2001 >
+      au < ready ; 2002 ; ZWINGLIANA Volume 29 (2002) ; 29 ; 2002 >
+      au < ready ; 2003 ; ZWINGLIANA Volume 30 (2003) ; 30 ; 2003 >
+      au < ready ; 2004 ; ZWINGLIANA Volume 31 (2004) ; 31 ; 2004 >
+      au < ready ; 2005 ; ZWINGLIANA Volume 32 (2005) ; 32 ; 2005 >
+      au < ready ; 2006 ; ZWINGLIANA Volume 33 (2006) ; 33 ; 2006 >
+      au < ready ; 2007 ; ZWINGLIANA Volume 34 (2007) ; 34 ; 2007 >
       au < doesNotExist ; 2008 ; ZWINGLIANA Volume 35 (2008) ; 35 ; 2008 >
       au < doesNotExist ; 2009 ; ZWINGLIANA Volume 36 (2009) ; 36 ; 2009 >
       au < ready ; 2010 ; ZWINGLIANA Volume 37 (2010) ; 37 ; 2010 >
