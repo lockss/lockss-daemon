@@ -27,6 +27,7 @@
       au < manifest ; 2007 ; Cosmos and History Volume 3 ; 3 ; 2007 >
       au < manifest ; 2008 ; Cosmos and History Volume 4 ; 4 ; 2008 >
       au < manifest ; 2009 ; Cosmos and History Volume 5 ; 5 ; 2009 >
+      au < manifest ; 2010 ; Cosmos and History Volume 6 ; 6 ; 2010 >
     
     }
   
@@ -53,15 +54,18 @@
       au < manifest ; 2007 ; Culture Machine Volume 9 ; 9 ; 2007 >
       au < manifest ; 2009 ; Culture Machine Volume 10 ; 10 ; 2009 >
       au < manifest ; 2010 ; Culture Machine Volume 11 ; 11 ; 2010 >
+      au < manifest ; 2011 ; Culture Machine Volume 12 ; 12 ; 2011 >
     
     }
   
     {
       title <
         name = Fast Capitalism ;
-        issn = 1930-014X
+        issn = 1930-014X ;
+        issnl = 1930-014X
       >
-
+      
+	  comment[fastcapitalism] = the url does change when changing location within the webiste 
       param[base_url] = http://www.fastcapitalism.com/
 
     }
@@ -69,9 +73,11 @@
     {
       title <
         name = Fibreculture ;
-        issn = 1449-1443
+        issn = 1449-1443 ;
+        issnl = 1449-1443
       >
-
+	  
+	  comment[fibreculturejournal] = the url structure doesn't follow OJS2Plguin
       param[base_url] = http://fibreculturejournal.org/
 
     }
@@ -100,7 +106,9 @@
       au < manifest ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
       au < manifest ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
       au < manifest ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
-    
+      au < manifest ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
+      au < manifest ; 2011 ; Film-Philosophy Volume 15 ; 15 ; 2011 >
+
     }
 
     {
@@ -120,37 +128,54 @@
       au < manifest ; 2006 ; Filozofski Vestnik Volume 2006 ; 2006 ; 2006 >
       au < manifest ; 2007 ; Filozofski Vestnik Volume 2007 ; 2007 ; 2007 >
       au < manifest ; 2008 ; Filozofski Vestnik Volume 2008 ; 2008 ; 2008 >
+      au < manifest ; 2009 ; Filozofski Vestnik Volume 2009 ; 2009 ; 2009 >
+      au < manifest ; 2010 ; Filozofski Vestnik Volume 2010 ; 2010 ; 2010 >
     
     }
     
     {
       title <
         name = Image and Narrative ;
-        issn = 1780-678X
+        issn = 1780-678X ;
+        issnl = 1780-678X
       >
 
       param[base_url] = http://www.imageandnarrative.be/
-
+      param[journal_id] = imagenarrative
+      
+      au < exists ; 2009 ; Image and Narrative Volume 10 ; 10 ; 2009 >
+      au < exists ; 2010 ; Image and Narrative Volume 11 ; 11 ; 2010 >
+      au < exists ; 2011 ; Image and Narrative Volume 12 ; 12 ; 2011 >
+      
     }
 
     {
   
       title <
         name = International Journal of Žižek Studies ;
-        issn = 1552-5112
+        issn = 1552-5112;
+        issnl = 1552-5112
       >
       
       param[base_url] = http://www.zizekstudies.org/
       param[journal_id] = ijzs
-      
+
+      au < exists ; 2007 ; Image and Narrative Volume 1 ; 1 ; 2007 >
+      au < exists ; 2008 ; Image and Narrative Volume 2 ; 2 ; 2008 >
+      au < exists ; 2009 ; Image and Narrative Volume 3 ; 3 ; 2009 >
+      au < exists ; 2010 ; Image and Narrative Volume 4 ; 4 ; 2010 >
+      au < exists ; 2011 ; Image and Narrative Volume 5 ; 5 ; 2011 >     
+       
     }
     
     {
       title <
         name = Parrhesia ;
-        issn = 1834-3287
+        issn = 1834-3287 ;
+        issnl = 1834-3287
       >
 
+	  comment[parrhesiajournal] = the url structure doesn't follow OJS2Plguin
       param[base_url] = http://www.parrhesiajournal.org/
 
     }
@@ -159,7 +184,8 @@
   
       title <
         name = Postcolonial Text ;
-        issn = 1705-9100
+        issn = 1705-9100 ;
+        issnl = 1705-9100
       >
     
       param[base_url] = http://journals.sfu.ca/pocol/
@@ -170,6 +196,7 @@
       au < manifest ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
       au < manifest ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
       au < manifest ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
+      au < manifest ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
     
     }
   
