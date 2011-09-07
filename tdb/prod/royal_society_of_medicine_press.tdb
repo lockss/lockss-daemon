@@ -183,15 +183,15 @@
 
       au < ready ; 2001 ; Hand Therapy Volume 6 ; 6 >
       au < ready ; 2002 ; Hand Therapy Volume 7 ; 7 >
-      au < exists ; 2003 ; Hand Therapy Volume 8 ; 8 >
-      au < exists ; 2004 ; Hand Therapy Volume 9 ; 9 >
-      au < exists ; 2005 ; Hand Therapy Volume 10 ; 10 >
-      au < exists ; 2006 ; Hand Therapy Volume 11 ; 11 >
-      au < exists ; 2007 ; Hand Therapy Volume 12 ; 12 >
-      au < exists ; 2008 ; Hand Therapy Volume 13 ; 13 >
-      au < ready ; 2009 ; Hand Therapy Volume 14 ; 14 >
-      au < ready ; 2010 ; Hand Therapy Volume 15 ; 15 >
-      au < ready ; 2011 ; Hand Therapy Volume 16 ; 16 >
+      au < manifest ; 2003 ; Hand Therapy Volume 8 ; 8 >
+      au < manifest ; 2004 ; Hand Therapy Volume 9 ; 9 >
+      au < manifest ; 2005 ; Hand Therapy Volume 10 ; 10 >
+      au < manifest ; 2006 ; Hand Therapy Volume 11 ; 11 >
+      au < manifest ; 2007 ; Hand Therapy Volume 12 ; 12 >
+      au < manifest ; 2008 ; Hand Therapy Volume 13 ; 13 >
+      au < released ; 2009 ; Hand Therapy Volume 14 ; 14 >
+      au < released ; 2010 ; Hand Therapy Volume 15 ; 15 >
+      au < released ; 2011 ; Hand Therapy Volume 16 ; 16 >
 
     }
 

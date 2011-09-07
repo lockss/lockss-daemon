@@ -17,8 +17,8 @@
       param[base_url] = http://imaging.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2008 ; JACC: Cardiovascular Imaging Volume 1 ; 1 >
-      au < ready ; 2009 ; JACC: Cardiovascular Imaging Volume 2 ; 2 >
+      au < released ; 2008 ; JACC: Cardiovascular Imaging Volume 1 ; 1 >
+      au < released ; 2009 ; JACC: Cardiovascular Imaging Volume 2 ; 2 >
       au < testing ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
       au < testing ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
 
@@ -40,8 +40,8 @@
       param[base_url] = http://interventions.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2008 ; JACC: Cardiovascular Interventions Volume 1 ; 1 >
-      au < ready ; 2009 ; JACC: Cardiovascular Interventions Volume 2 ; 2 >
+      au < released ; 2008 ; JACC: Cardiovascular Interventions Volume 1 ; 1 >
+      au < released ; 2009 ; JACC: Cardiovascular Interventions Volume 2 ; 2 >
       au < testing ; 2010 ; JACC: Cardiovascular Interventions Volume 3 ; 3 >
       au < testing ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 >
 
@@ -64,25 +64,25 @@
       param[base_url] = http://content.onlinejacc.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 1983 ; Journal of the American College of Cardiology Volume 1 ; 1 >
-      au < ready ; 1983 ; Journal of the American College of Cardiology Volume 2 ; 2 >
-      au < ready ; 1984 ; Journal of the American College of Cardiology Volume 3 ; 3 >
-      au < ready ; 1984 ; Journal of the American College of Cardiology Volume 4 ; 4 >
-      au < ready ; 1985 ; Journal of the American College of Cardiology Volume 5 ; 5 >
-      au < ready ; 1985 ; Journal of the American College of Cardiology Volume 6 ; 6 >
-      au < ready ; 1986 ; Journal of the American College of Cardiology Volume 7 ; 7 >
-      au < ready ; 1986 ; Journal of the American College of Cardiology Volume 8 ; 8 >
-      au < ready ; 1987 ; Journal of the American College of Cardiology Volume 9 ; 9 >
-      au < ready ; 1987 ; Journal of the American College of Cardiology Volume 10 ; 10 >
-      au < ready ; 1988 ; Journal of the American College of Cardiology Volume 11 ; 11 >
-      au < ready ; 1988 ; Journal of the American College of Cardiology Volume 12 ; 12 >
-      au < ready ; 1989 ; Journal of the American College of Cardiology Volume 13 ; 13 >
-      au < ready ; 1989 ; Journal of the American College of Cardiology Volume 14 ; 14 >
-      au < ready ; 1990 ; Journal of the American College of Cardiology Volume 15 ; 15 >
-      au < ready ; 1990 ; Journal of the American College of Cardiology Volume 16 ; 16 >
-      au < ready ; 1991 ; Journal of the American College of Cardiology Volume 17 ; 17 >
-      au < ready ; 1991 ; Journal of the American College of Cardiology Volume 18 ; 18 >
-      au < ready ; 1992 ; Journal of the American College of Cardiology Volume 19 ; 19 >
+      au < released ; 1983 ; Journal of the American College of Cardiology Volume 1 ; 1 >
+      au < released ; 1983 ; Journal of the American College of Cardiology Volume 2 ; 2 >
+      au < released ; 1984 ; Journal of the American College of Cardiology Volume 3 ; 3 >
+      au < released ; 1984 ; Journal of the American College of Cardiology Volume 4 ; 4 >
+      au < released ; 1985 ; Journal of the American College of Cardiology Volume 5 ; 5 >
+      au < released ; 1985 ; Journal of the American College of Cardiology Volume 6 ; 6 >
+      au < released ; 1986 ; Journal of the American College of Cardiology Volume 7 ; 7 >
+      au < released ; 1986 ; Journal of the American College of Cardiology Volume 8 ; 8 >
+      au < released ; 1987 ; Journal of the American College of Cardiology Volume 9 ; 9 >
+      au < released ; 1987 ; Journal of the American College of Cardiology Volume 10 ; 10 >
+      au < released ; 1988 ; Journal of the American College of Cardiology Volume 11 ; 11 >
+      au < released ; 1988 ; Journal of the American College of Cardiology Volume 12 ; 12 >
+      au < released ; 1989 ; Journal of the American College of Cardiology Volume 13 ; 13 >
+      au < released ; 1989 ; Journal of the American College of Cardiology Volume 14 ; 14 >
+      au < released ; 1990 ; Journal of the American College of Cardiology Volume 15 ; 15 >
+      au < released ; 1990 ; Journal of the American College of Cardiology Volume 16 ; 16 >
+      au < released ; 1991 ; Journal of the American College of Cardiology Volume 17 ; 17 >
+      au < released ; 1991 ; Journal of the American College of Cardiology Volume 18 ; 18 >
+      au < released ; 1992 ; Journal of the American College of Cardiology Volume 19 ; 19 >
       au < testing ; 1992 ; Journal of the American College of Cardiology Volume 20 ; 20 >
       au < testing ; 1993 ; Journal of the American College of Cardiology Volume 21 ; 21 >
       au < testing ; 1993 ; Journal of the American College of Cardiology Volume 22 ; 22 >
