@@ -1,0 +1,49 @@
+{
+
+  publisher <
+    name = Missouri Botanical Garden
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = Annals of the Missouri Botanical Garden ;
+      issn = 0026-6493 ;
+      issnl = 0026-6493
+    >
+    
+    param[journal_code] = mobt
+
+    au < manifest ; 2006 ; Annals of the Missouri Botanical Garden Volume 93 ; 93 >
+    au < manifest ; 2007 ; Annals of the Missouri Botanical Garden Volume 94 ; 94 >
+    au < manifest ; 2008 ; Annals of the Missouri Botanical Garden Volume 95 ; 95 >
+    au < manifest ; 2009 ; Annals of the Missouri Botanical Garden Volume 96 ; 96 >
+    au < manifest ; 2010 ; Annals of the Missouri Botanical Garden Volume 97 ; 97 >
+    au < manifest ; 2011 ; Annals of the Missouri Botanical Garden Volume 98 ; 98 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Novon: A Journal for Botanical Nomenclature ;
+      issn = 1055-3177 ;
+      issnl = 1055-3177 
+    >
+    
+    param[journal_code] = novo
+
+    au < manifest ; 2006 ; Novon: A Journal for Botanical Nomenclature Volume 16 ; 16 >
+    au < manifest ; 2007 ; Novon: A Journal for Botanical Nomenclature Volume 17 ; 17 >
+    au < manifest ; 2008 ; Novon: A Journal for Botanical Nomenclature Volume 18 ; 18 >
+    au < manifest ; 2009 ; Novon: A Journal for Botanical Nomenclature Volume 19 ; 19 >
+    au < manifest ; 2010 ; Novon: A Journal for Botanical Nomenclature Volume 20 ; 20 >
+    au < manifest ; 2011 ; Novon: A Journal for Botanical Nomenclature Volume 21 ; 21 >
+ 
+  }
+
+}
