@@ -5,28 +5,26 @@
   >
 
   {
+
     title <
       name = Journal of Ethnobiology ;
       issn = 0278-0771 ;
       issnl = 0278-0771
     >
 
-    {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
-      param[base_url] = http://www.bioone.org/
-      param[journal_id] = 0278-0771
-  
-      au < doNotProcess ; 2005 ; Journal of Ethnobiology Volume 25 ; 25 >
-      au < doNotProcess ; 2006 ; Journal of Ethnobiology Volume 26 ; 26 >
-      au < doNotProcess ; 2007 ; Journal of Ethnobiology Volume 27 ; 27 >
-    }
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
+    param[journal_code] = etbi
 
-    {
-
-comment[0] = Atypon AUs
-
-    }
+    au < manifest ; 2005 ; Journal of Ethnobiology Volume 25 ; 25 >
+    au < manifest ; 2006 ; Journal of Ethnobiology Volume 26 ; 26 >
+    au < manifest ; 2007 ; Journal of Ethnobiology Volume 27 ; 27 >
+    au < manifest ; 2008 ; Journal of Ethnobiology Volume 28 ; 28 >
+    au < manifest ; 2009 ; Journal of Ethnobiology Volume 29 ; 29 >
+    au < manifest ; 2010 ; Journal of Ethnobiology Volume 30 ; 30 >
+    au < manifest ; 2011 ; Journal of Ethnobiology Volume 31 ; 31 >
+ 
 
   }
 

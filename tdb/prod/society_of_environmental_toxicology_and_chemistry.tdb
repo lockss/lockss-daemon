@@ -12,23 +12,17 @@
       issnl = 1551-3777
     >
 
-    {
-      implicit < status ; year ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
-      param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1551-3793
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
+    param[journal_code] = ieam
   
-      au < doNotProcess ; 2005 ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
-
-    }
-
+    au < manifest ; 2005 ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
+    au < manifest ; 2006 ; Integrated Environmental Assessment and Management Volume 2 ; 2 >
+    au < manifest ; 2007 ; Integrated Environmental Assessment and Management Volume 3 ; 3 >
+    au < manifest ; 2008 ; Integrated Environmental Assessment and Management Volume 4 ; 4 >
+    au < manifest ; 2009 ; Integrated Environmental Assessment and Management Volume 5 ; 5 >
+ 
   }
 
 }
