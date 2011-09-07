@@ -144,23 +144,23 @@
       param[base_url] = http://ebm.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
-      au < exists ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
-      au < exists ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
-      au < exists ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
-      au < exists ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
-      au < exists ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
-      au < exists ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
-      au < exists ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
-      au < exists ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
-      au < exists ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
-      au < exists ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
-      au < exists ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
-      au < exists ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
-      au < exists ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
-      au < exists ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
-      au < exists ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
-      au < exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
+      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
+      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
+      au < manifest ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
+      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
+      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
+      au < manifest ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
+      au < manifest ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
+      au < manifest ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
+      au < manifest ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
+      au < manifest ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
+      au < manifest ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
+      au < manifest ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
+      au < manifest ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
+      au < manifest ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
+      au < manifest ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
+      au < manifest ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
+      au < manifest ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
 
     }
 
@@ -264,7 +264,7 @@
       au < released ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
       au < released ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
       au < released ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < manifest ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
       au < released ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
       au < released ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
@@ -656,15 +656,15 @@
       param[base_url] = http://msl.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
-      au < exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
-      au < exists ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
-      au < exists ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 >
-      au < exists ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 >
-      au < exists ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 >
-      au < exists ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
-      au < exists ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
-      au < exists ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
+      au < manifest ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 >
+      au < manifest ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 >
+      au < manifest ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 >
+      au < manifest ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 >
+      au < manifest ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 >
+      au < manifest ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 >
+      au < manifest ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 >
+      au < manifest ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 >
+      au < manifest ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
 
     }
 
@@ -696,7 +696,7 @@
       au < released ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
       au < released ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
       au < released ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-      au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+      au < manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
 
@@ -849,14 +849,14 @@
       param[base_url] = http://ult.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2004 ; Ultrasound Volume 12 ; 12 >
-      au < exists ; 2005 ; Ultrasound Volume 13 ; 13 >
-      au < exists ; 2006 ; Ultrasound Volume 14 ; 14 >
-      au < exists ; 2007 ; Ultrasound Volume 15 ; 15 >
-      au < exists ; 2008 ; Ultrasound Volume 16 ; 16 >
-      au < exists ; 2009 ; Ultrasound Volume 17 ; 17 >
-      au < exists ; 2010 ; Ultrasound Volume 18 ; 18 >
-      au < exists ; 2011 ; Ultrasound Volume 19 ; 19 >
+      au < manifest ; 2004 ; Ultrasound Volume 12 ; 12 >
+      au < manifest ; 2005 ; Ultrasound Volume 13 ; 13 >
+      au < manifest ; 2006 ; Ultrasound Volume 14 ; 14 >
+      au < manifest ; 2007 ; Ultrasound Volume 15 ; 15 >
+      au < manifest ; 2008 ; Ultrasound Volume 16 ; 16 >
+      au < manifest ; 2009 ; Ultrasound Volume 17 ; 17 >
+      au < manifest ; 2010 ; Ultrasound Volume 18 ; 18 >
+      au < manifest ; 2011 ; Ultrasound Volume 19 ; 19 >
 
     }
 
