@@ -18,6 +18,8 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.biolreprod.org/
       implicit < status ; year ; name ; param[volume_name] >
+  
+      comment[0] = missing manifest pages requested (RU3617/RT3831)
 
       au < exists ; 1969 ; Biology of Reproduction Volume 1 ; 1 >
       au < exists ; 1970 ; Biology of Reproduction Volume 2 ; 2 >
@@ -113,20 +115,31 @@
       param[journal_id] = 0006-3363
       implicit < status ; year ; name ; param[volume] >
 
-      au < doNotProcess ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
-      au < doNotProcess ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
-      au < doNotProcess ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
-      au < doNotProcess ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
-      au < doNotProcess ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
-      au < doNotProcess ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
-      au < doNotProcess ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
-      au < doNotProcess ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
-      au < doNotProcess ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
-      au < doNotProcess ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
       au < superseded ; 2005 ; Biology of Reproduction Volume 72 ; 072 >
-      au < doNotProcess ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
-      au < doNotProcess ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
-      au < doNotProcess ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
+
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = bire
+
+      au < manifest ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
+      au < manifest ; 2000 ; Biology of Reproduction Volume 63 ; 63 >
+      au < manifest ; 2001 ; Biology of Reproduction Volume 64 ; 64 >
+      au < manifest ; 2001 ; Biology of Reproduction Volume 65 ; 65 >
+      au < manifest ; 2002 ; Biology of Reproduction Volume 66 ; 66 >
+      au < manifest ; 2002 ; Biology of Reproduction Volume 67 ; 67 >
+      au < manifest ; 2003 ; Biology of Reproduction Volume 68 ; 68 >
+      au < manifest ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
+      au < manifest ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
+      au < manifest ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
+      au < manifest ; 2005 ; Biology of Reproduction Volume 72 ; 72 >
+      au < manifest ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
+      au < manifest ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
+      au < manifest ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
 
     }
 
