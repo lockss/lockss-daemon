@@ -33,11 +33,11 @@
       param[base_url] = http://theoncologist.alphamedpress.org/
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2005 ; The Oncologist Volume 10 ; 10 >
-      au < exists ; 2006 ; The Oncologist Volume 11 ; 11 >
-      au < exists ; 2007 ; The Oncologist Volume 12 ; 12 >
-      au < exists ; 2008 ; The Oncologist Volume 13 ; 13 >
-      au < exists ; 2009 ; The Oncologist Volume 14 ; 14 >
+      au < manifest ; 2005 ; The Oncologist Volume 10 ; 10 >
+      au < manifest ; 2006 ; The Oncologist Volume 11 ; 11 >
+      au < manifest ; 2007 ; The Oncologist Volume 12 ; 12 >
+      au < manifest ; 2008 ; The Oncologist Volume 13 ; 13 >
+      au < manifest ; 2009 ; The Oncologist Volume 14 ; 14 >
       
     }
 
