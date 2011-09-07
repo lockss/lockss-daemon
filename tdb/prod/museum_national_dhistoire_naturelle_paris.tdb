@@ -1,0 +1,78 @@
+{
+
+  publisher <
+    name = Muséum national d'Histoire naturelle, Paris
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = Adansonia ;
+      issn = 1280-8571 ;
+      eissn = 1639-4798 ;
+      issnl = 1280-8571
+    >
+    
+    param[journal_code] = adan
+
+    au < manifest ; 2009 ; Adansonia Volume 31 ; 31 >
+    au < manifest ; 2010 ; Adansonia Volume 32 ; 32 >
+    au < manifest ; 2011 ; Adansonia Volume 33 ; 33 >
+ 
+  }
+  
+  {
+  
+    title <
+      name = Anthropozoologica ;
+      issn = 0761-3032 ;
+      issnl = 0761-3032 
+    >
+    
+    param[journal_code] = anth
+
+    au < manifest ; 2009 ; Anthropozoologica Volume 44 ; 44 >
+    au < manifest ; 2010 ; Anthropozoologica Volume 45 ; 45 >
+    au < manifest ; 2011 ; Anthropozoologica Volume 46 ; 46 >
+ 
+  }
+
+  {
+  
+    title <
+      name = Geodiversitas ;
+      issn = 1280-9659 ;
+      eissn = 1638-9395 ;
+      issnl = 1280-9659 
+    >
+    
+    param[journal_code] = geod
+
+    au < manifest ; 2009 ; Geodiversitas Volume 31 ; 31 >
+    au < manifest ; 2010 ; Geodiversitas Volume 32 ; 32 >
+    au < manifest ; 2011 ; Geodiversitas Volume 33 ; 33 >
+ 
+  }
+
+  {
+  
+    title <
+      name = Zoosystema ;
+      issn = 1280-9551 ;
+      eissn = 1638-9387 ;
+      issnl = 1280-9551 
+    >
+    
+    param[journal_code] = zoos
+
+    au < manifest ; 2009 ; Zoosystema Volume 31 ; 31 >
+    au < manifest ; 2010 ; Zoosystema Volume 32 ; 32 >
+    au < manifest ; 2011 ; Zoosystema Volume 33 ; 33 >
+ 
+  }
+
+}
