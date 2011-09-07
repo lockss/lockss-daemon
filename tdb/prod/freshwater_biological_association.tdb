@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Freshwater Biological Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = Proceedings of the Entomological Society of Washington ;
+      issn = 1755-084X ;
+      issnl = 1755-084X
+    >
+    
+    param[journal_code] = frer
+
+    au < manifest ; 2008 ; Freshwater Reviews Volume 1 ; 1 >
+    au < manifest ; 2009 ; Freshwater Reviews Volume 2 ; 2 >
+    au < manifest ; 2010 ; Freshwater Reviews Volume 3 ; 3 >
+ 
+  }
+  
+}

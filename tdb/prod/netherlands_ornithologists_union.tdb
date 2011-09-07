@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Netherlands Ornithologists' Union
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = Ardea ;
+      issn = 0373-2266 ;
+      issnl = 0373-2266
+    >
+    
+    param[journal_code] = arde
+
+    au < manifest ; 2007 ; Ardea Volume 95 ; 95 >
+    au < manifest ; 2008 ; Ardea Volume 96 ; 96 >
+    au < manifest ; 2009 ; Ardea Volume 97 ; 97 >
+    au < manifest ; 2010 ; Ardea Volume 98 ; 98 >
+    au < manifest ; 2011 ; Ardea Volume 99 ; 99 >
+ 
+  }
+  
+}
