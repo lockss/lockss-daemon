@@ -47,10 +47,26 @@
       param[base_url] = http://egsp.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2007 ; Engineering Geology Special Publications Volume 22 ; 22 >
-      au < exists ; 2008 ; Engineering Geology Special Publications Volume 23 ; 23 >
-      au < exists ; 2009 ; Engineering Geology Special Publications Volume 24 ; 24 >
-      au < exists ; 2010 ; Engineering Geology Special Publications Volume 25 ; 25 >
+      au < doNotProcess ; 1986 ; Engineering Geology Special Publications Volume 2 ; 21 >
+      au < doNotProcess ; 1986 ; Engineering Geology Special Publications Volume 3 ; 21 >
+      au < doNotProcess ; 1987 ; Engineering Geology Special Publications Volume 4 ; 21 >
+      au < doNotProcess ; 1988 ; Engineering Geology Special Publications Volume 5 ; 21 >
+      au < doNotProcess ; 1990 ; Engineering Geology Special Publications Volume 6 ; 21 >
+      au < doNotProcess ; 1991 ; Engineering Geology Special Publications Volume 7 ; 21 >
+      au < doNotProcess ; 1995 ; Engineering Geology Special Publications Volume 10 ; 10 >
+      au < doNotProcess ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 >
+      au < doNotProcess ; 1997 ; Engineering Geology Special Publications Volume 12 ; 12 >
+      au < doNotProcess ; 1998 ; Engineering Geology Special Publications Volume 13 ; 13 >
+      au < doNotProcess ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 >
+      au < doNotProcess ; 1998 ; Engineering Geology Special Publications Volume 15 ; 15 >
+      au < doNotProcess ; 1999 ; Engineering Geology Special Publications Volume 16 ; 16 >
+      au < doNotProcess ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 >
+      au < doNotProcess ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 >
+      au < doNotProcess ; 2002 ; Engineering Geology Special Publications Volume 19 ; 19 >
+      au < doNotProcess ; 2004 ; Engineering Geology Special Publications Volume 20 ; 20 >
+      au < doNotProcess ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 >
+      au < manifest ; 2007 ; Engineering Geology Special Publications Volume 22 ; 22 >
+      au < manifest ; 2008 ; Engineering Geology Special Publications Volume 23 ; 23 >
       
     }
     
@@ -140,7 +156,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 >
-      au < exists ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
+      au < manifest ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 >
 
     }
 
@@ -289,38 +305,38 @@
       param[base_url] = http://sp.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 317 ; 317 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 318 ; 318 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 319 ; 319 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 320 ; 320 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 321 ; 321 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 322 ; 322 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 323 ; 323 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 324 ; 324 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 325 ; 325 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 326 ; 326 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 327 ; 327 >
-      au < exists ; 2009 ; Geological Society of London Special Publications Volume 328 ; 328 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 329 ; 329 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 330 ; 330 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 331 ; 331 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 332 ; 332 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 333 ; 333 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 334 ; 334 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 335 ; 335 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 336 ; 336 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 337 ; 337 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 338 ; 338 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 339 ; 339 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 340 ; 340 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 341 ; 341 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 342 ; 342 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 343 ; 343 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 344 ; 344 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 345 ; 345 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 346 ; 346 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 347 ; 347 >
-      au < exists ; 2010 ; Geological Society of London Special Publications Volume 348 ; 348 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 317 ; 317 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 318 ; 318 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 319 ; 319 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 320 ; 320 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 321 ; 321 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 322 ; 322 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 323 ; 323 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 324 ; 324 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 325 ; 325 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 326 ; 326 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 327 ; 327 >
+      au < manifest ; 2009 ; Geological Society of London Special Publications Volume 328 ; 328 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 329 ; 329 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 330 ; 330 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 331 ; 331 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 332 ; 332 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 333 ; 333 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 334 ; 334 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 335 ; 335 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 336 ; 336 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 337 ; 337 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 338 ; 338 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 339 ; 339 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 340 ; 340 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 341 ; 341 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 342 ; 342 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 343 ; 343 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 344 ; 344 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 345 ; 345 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 346 ; 346 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 347 ; 347 >
+      au < manifest ; 2010 ; Geological Society of London Special Publications Volume 348 ; 348 >
       
     }
       
