@@ -362,7 +362,7 @@
     au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Volume 339 ; 339 >
     au < HighWirePressH20Plugin ; released ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; released ; 2010 ; BMJ Volume 341 ; 341 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; BMJ Volume 342 ; 342 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; BMJ Volume 342 ; 342 >
 
   }
 
@@ -400,6 +400,8 @@
     >
 
     param[base_url] = http://bjo.bmj.com/
+    
+    comment[bjo_v95] = very large volume. Problems with recursive generated links.
 
     au < HighWirePressH20Plugin ; exists ; 1917 ; British Journal of Ophthalmology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1918 ; British Journal of Ophthalmology Volume 2 ; 2 >
@@ -495,7 +497,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; British Journal of Ophthalmology Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Ophthalmology Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Ophthalmology Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; British Journal of Ophthalmology Volume 95 ; 95 >
 
   }
 
@@ -553,7 +555,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; British Journal of Sports Medicine Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2009 ; British Journal of Sports Medicine Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2010 ; British Journal of Sports Medicine Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; British Journal of Sports Medicine Volume 45 ; 45 >
 
   }
 
@@ -580,11 +582,11 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; DTB - Drug and Therapeutics Bulletin Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; DTB - Drug and Therapeutics Bulletin Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; DTB - Drug and Therapeutics Bulletin Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; DTB - Drug and Therapeutics Bulletin Volume 49 ; 49 >
 
   }
 
@@ -625,7 +627,7 @@
     au < HighWirePressH20Plugin ; released ; 2008 ; Emergency Medicine Journal Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Emergency Medicine Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Emergency Medicine Journal Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Emergency Medicine Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Emergency Medicine Journal Volume 28 ; 28 >
 
   }
 
@@ -652,7 +654,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; notReady ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Evidence-Based Medicine Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Evidence-Based Medicine Volume 16 ; 16 >
 
   }
 
