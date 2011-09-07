@@ -13,19 +13,33 @@
     >
 
     {
+
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1543-706X
   
-      au < doNotProcess ; 2000 ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
-      au < doNotProcess ; 2001 ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
-      au < doNotProcess ; 2002 ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
-      au < doNotProcess ; 2003 ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
-      au < superseded ; 2004 ; In Vitro Cellular & Developmental Biology - Animal Volume 40 ; 040 >
-      au < doNotProcess ; 2005 ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
-      au < doNotProcess ; 2006 ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
-      au < doNotProcess ; 2007 ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
+      au < down ; 2004 ; In Vitro Cellular & Developmental Biology - Animal Volume 40 ; 040 >
+ 
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = inva
+
+      au < manifest ; 2000 ; In Vitro Cellular & Developmental Biology - Animal Volume 36 ; 36 >
+      au < manifest ; 2001 ; In Vitro Cellular & Developmental Biology - Animal Volume 37 ; 37 >
+      au < manifest ; 2002 ; In Vitro Cellular & Developmental Biology - Animal Volume 38 ; 38 >
+      au < manifest ; 2003 ; In Vitro Cellular & Developmental Biology - Animal Volume 39 ; 39 >
+      au < manifest ; 2004 ; In Vitro Cellular & Developmental Biology - Animal Volume 40 ; 40 >
+      au < manifest ; 2005 ; In Vitro Cellular & Developmental Biology - Animal Volume 41 ; 41 >
+      au < manifest ; 2006 ; In Vitro Cellular & Developmental Biology - Animal Volume 42 ; 42 >
+      au < manifest ; 2007 ; In Vitro Cellular & Developmental Biology - Animal Volume 43 ; 43 >
+      au < manifest ; 2008 ; In Vitro Cellular & Developmental Biology - Animal Volume 44 ; 44 >
+
     }
 
   }
@@ -40,21 +54,29 @@
     >
 
     {
+
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1054-5476
-  
-      au < doNotProcess ; 2003 ; In Vitro Cellular and Developmental Biology - Plant Volume 39 ; 39 >
-      au < superseded ; 2004 ; In Vitro Cellular and Developmental Biology - Plant Volume 40 ; 040 >
-      au < doNotProcess ; 2005 ; In Vitro Cellular and Developmental Biology - Plant Volume 41 ; 41 >
-      au < doNotProcess ; 2006 ; In Vitro Cellular and Developmental Biology - Plant Volume 42 ; 42 >
-      au < doNotProcess ; 2007 ; In Vitro Cellular and Developmental Biology - Plant Volume 43 ; 43 >
-    }
+
+      au < down ; 2004 ; In Vitro Cellular and Developmental Biology - Plant Volume 40 ; 040 >
+ 
+     }
 
     {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = invp
 
-comment[0] = Atypon AUs
+      au < manifest ; 2003 ; In Vitro Cellular and Developmental Biology - Plant Volume 39 ; 39 >
+      au < manifest ; 2004 ; In Vitro Cellular and Developmental Biology - Plant Volume 40 ; 40 >
+      au < manifest ; 2005 ; In Vitro Cellular and Developmental Biology - Plant Volume 41 ; 41 >
+      au < manifest ; 2006 ; In Vitro Cellular and Developmental Biology - Plant Volume 42 ; 42 >
+      au < manifest ; 2007 ; In Vitro Cellular and Developmental Biology - Plant Volume 43 ; 43 >
+      au < manifest ; 2008 ; In Vitro Cellular and Developmental Biology - Plant Volume 44 ; 44 >
 
     }
 
