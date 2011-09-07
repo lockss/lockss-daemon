@@ -505,7 +505,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     {
     
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume] >
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
 
       au < exists ; 2000 ; Genre: Forms of Discourse and Culture Volume 33 ; 33 >
@@ -832,7 +832,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       au < exists ; 2007 ; The Minnesota Review Volume 2007 ; 2007 >
       au < exists ; 2008 ; The Minnesota Review Volume 2008 ; 2008 >
       au < exists ; 2009 ; The Minnesota Review Volume 2009 ; 2009 >
-      au < exists ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
+      au < manifest ; 2010 ; The Minnesota Review Volume 2010 ; 2010 >
       
     }
     
