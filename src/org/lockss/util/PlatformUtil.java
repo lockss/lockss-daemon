@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.18 2011-08-22 19:26:48 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.19 2011-09-07 03:05:43 tlipkis Exp $
  */
 
 /*
@@ -564,12 +564,6 @@ public class PlatformUtil {
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
       }
-    }
-
-    /**
-     * Return false as OpenBSD port is missing the javascript engine */
-    public boolean hasScriptingSupport() {
-      return false;
     }
   }
 
