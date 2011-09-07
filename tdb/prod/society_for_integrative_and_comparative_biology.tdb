@@ -5,20 +5,35 @@
   >
 
   {
+
     title <
       name = American Zoologist ;
       issn = 0003-1569 ;
       issnl = 0003-1569
     >
 
+    comment[continued_by] = 1540-7063
+    
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0003-1569
   
-      au < doNotProcess ; 2000 ; American Zoologist Volume 40 ; 40 >
-      au < superseded ; 2001 ; American Zoologist Volume 41 ; 41 >
+      au < down ; 2001 ; American Zoologist Volume 41 ; 41 >
+
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = azoo
+
+      au < manifest ; 2000 ; American Zoologist Volume 40 ; 40 >
+      au < manifest ; 2001 ; American Zoologist Volume 41 ; 41 >
+
     }
 
   }
@@ -32,7 +47,8 @@
       issnl = 1540-7063
     >
 
-    comment = there is an incarnation of this journal under OUP
+    comment[0] = there is an incarnation of this journal under OUP
+    comment[continues] = 0003-1569
 
     {
     
@@ -41,19 +57,24 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1540-7063
   
-      au < doNotProcess ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
-      au < doNotProcess ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
-      au < superseded ; 2004 ; Integrative and Comparative Biology Volume 44 ; 044 >
-      au < doNotProcess ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
+      au < down ; 2004 ; Integrative and Comparative Biology Volume 44 ; 044 >
+
     }
 
     {
 
-comment = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = icbi
+
+      au < manifest ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
+      au < manifest ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >
+      au < manifest ; 2004 ; Integrative and Comparative Biology Volume 44 ; 44 >
+      au < manifest ; 2005 ; Integrative and Comparative Biology Volume 45 ; 45 >
 
     }
 
   }
 
 }
-
