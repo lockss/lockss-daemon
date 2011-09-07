@@ -47,10 +47,10 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Adaptation Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Adaptation Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Adaptation Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Adaptation Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Adaptation Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Adaptation Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Adaptation Volume 4 ; 4 >
     
     }
     
@@ -1006,8 +1006,8 @@
     au < HighWirePressH20Plugin ; exists ; 1993 ; Annals of Botany Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; exists ; 1993 ; Annals of Botany Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; Annals of Botany Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; exists ; 1994 ; Annals of Botany Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Annals of Botany Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; manifest ; 1994 ; Annals of Botany Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Annals of Botany Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; Annals of Botany Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Annals of Botany Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Annals of Botany Volume 78 ; 78 >
@@ -1596,10 +1596,10 @@
     param[base_url] = http://biohorizons.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Bioscience Horizons Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Bioscience Horizons Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Bioscience Horizons Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Bioscience Horizons Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Bioscience Horizons Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Bioscience Horizons Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Bioscience Horizons Volume 4 ; 4 >
     
     }
     
@@ -2572,7 +2572,7 @@
     au < HighWirePressH20Plugin ; exists ; 1989 ; Bulletin of the London Mathematical Society Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; exists ; 1990 ; Bulletin of the London Mathematical Society Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; exists ; 1991 ; Bulletin of the London Mathematical Society Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; Bulletin of the London Mathematical Society Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; Bulletin of the London Mathematical Society Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; exists ; 1993 ; Bulletin of the London Mathematical Society Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; Bulletin of the London Mathematical Society Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; Bulletin of the London Mathematical Society Volume 27 ; 27 >
@@ -3644,7 +3644,7 @@
     au < HighWirePressPlugin ; down ; 2008 ; Contributions to Political Economy Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Contributions to Political Economy Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Contributions to Political Economy Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Contributions to Political Economy Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Contributions to Political Economy Volume 30 ; 30 >
 
     }
 
@@ -3951,7 +3951,6 @@
     au < HighWirePressH20Plugin ; exists ; 2003 ; English Historical Review Volume 118 ; 118 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; English Historical Review Volume 119 ; 119 >
     au < HighWireStrVolPlugin ; down ; 2005 ; English Historical Review Volume 120 ; 120 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; English Historical Review Volume 120 ; 120 >
     au < HighWireStrVolPlugin ; superseded ; 2006 ; English Historical Review Volume CXXI [superseded] ; CXXI >
     au < HighWirePressH20Plugin ; released ; 2006 ; English Historical Review Volume CXXI ; CXXI >
     au < HighWireStrVolPlugin ; superseded ; 2007 ; English Historical Review Volume CXXII [superseded] ; CXXII >
@@ -4409,7 +4408,7 @@
     au < HighWirePressH20Plugin ; exists ; 1992 ; European Heart Journal Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 1993 ; European Heart Journal Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; European Heart Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; European Heart Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; European Heart Journal Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; European Heart Journal Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; European Heart Journal Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; European Heart Journal Volume 19 ; 19 >
@@ -5452,15 +5451,15 @@
     au < HighWirePressH20Plugin ; exists ; 1996 ; The Gerontologist Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; The Gerontologist Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; The Gerontologist Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; The Gerontologist Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The Gerontologist Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; The Gerontologist Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; The Gerontologist Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Gerontologist Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The Gerontologist Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; The Gerontologist Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; The Gerontologist Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; exists ; 2006 ; The Gerontologist Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; The Gerontologist Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; The Gerontologist Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; The Gerontologist Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2006 ; The Gerontologist Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Gerontologist Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; exists ; 2008 ; The Gerontologist Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Gerontologist Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Gerontologist Volume 50 ; 50 >
@@ -6512,7 +6511,7 @@
     au < HighWirePressH20Plugin ; exists ; 1997 ; IMA Journal of Mathematical Control and Information Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; IMA Journal of Mathematical Control and Information Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; IMA Journal of Mathematical Control and Information Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; IMA Journal of Mathematical Control and Information Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; IMA Journal of Mathematical Control and Information Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; IMA Journal of Mathematical Control and Information Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; IMA Journal of Mathematical Control and Information Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; IMA Journal of Mathematical Control and Information Volume 20 ; 20 >
@@ -6737,10 +6736,10 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    au < HighWirePressH20Plugin ; exists ; 2008 ; InnovAiT Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; InnovAiT Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; InnovAiT Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; InnovAiT Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; InnovAiT Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; InnovAiT Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; InnovAiT Volume 4 ; 4 >
     
     }
           
@@ -6857,10 +6856,10 @@
     au < HighWirePressH20Plugin ; exists ; 2005 ; Interdisciplinary Studies in Literature and Environment Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Interdisciplinary Studies in Literature and Environment Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Interdisciplinary Studies in Literature and Environment Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Interdisciplinary Studies in Literature and Environment Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Interdisciplinary Studies in Literature and Environment Volume 18 ; 18 >
 
     }
 
@@ -7678,9 +7677,9 @@
     au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of African Economies Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of African Economies Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of African Economies Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of African Economies Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of African Economies Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of African Economies Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of African Economies Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of African Economies Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of African Economies Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of African Economies Volume 13 ; 13 >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; Journal of African Economies Volume 14 [superseded] ; 14 >
@@ -8279,10 +8278,10 @@
     au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Church and State Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Church and State Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Church and State Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Church and State Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Church and State Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Church and State Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Church and State Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Church and State Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Church and State Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Church and State Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Church and State Volume 53 ; 53 >
 
     }
 
@@ -8760,8 +8759,8 @@
     au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of Experimental Botany Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of Experimental Botany Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Experimental Botany Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Experimental Botany Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Experimental Botany Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Experimental Botany Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Experimental Botany Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Experimental Botany Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Experimental Botany Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Experimental Botany Volume 51 ; 51 >
@@ -9249,7 +9248,7 @@
 
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Human Rights Practice Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 >
    
     }
   
@@ -11270,7 +11269,7 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; The Leo Baeck Institute Yearbook Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; The Leo Baeck Institute Yearbook Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; The Leo Baeck Institute Yearbook Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 >
@@ -12893,7 +12892,7 @@
     au < HighWirePressH20Plugin ; exists ; 1994 ; Notes and Queries Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; Notes and Queries Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Notes and Queries Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Notes and Queries Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Notes and Queries Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; Notes and Queries Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Notes and Queries Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; Notes and Queries Volume 47 ; 47 >
@@ -12963,7 +12962,7 @@
     au < HighWirePressH20Plugin ; exists ; 1995 ; Nucleic Acids Research Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Nucleic Acids Research Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; Nucleic Acids Research Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Nucleic Acids Research Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Nucleic Acids Research Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; exists ; 1999 ; Nucleic Acids Research Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; Nucleic Acids Research Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Nucleic Acids Research Volume 29 ; 29 >
@@ -13132,7 +13131,7 @@
     au < HighWirePressH20Plugin ; exists ; 1982 ; Occupational Medicine Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; exists ; 1983 ; Occupational Medicine Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; exists ; 1984 ; Occupational Medicine Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; exists ; 1985 ; Occupational Medicine Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; manifest ; 1985 ; Occupational Medicine Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Occupational Medicine Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; exists ; 1987 ; Occupational Medicine Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; exists ; 1988 ; Occupational Medicine Volume 38 ; 38 >
@@ -14898,14 +14897,14 @@
     au < HighWirePressH20Plugin ; exists ; 1989 ; The Quarterly Journal of Mathematics Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; exists ; 1990 ; The Quarterly Journal of Mathematics Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; exists ; 1991 ; The Quarterly Journal of Mathematics Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; exists ; 1992 ; The Quarterly Journal of Mathematics Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; manifest ; 1992 ; The Quarterly Journal of Mathematics Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; exists ; 1993 ; The Quarterly Journal of Mathematics Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; The Quarterly Journal of Mathematics Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; The Quarterly Journal of Mathematics Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; The Quarterly Journal of Mathematics Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; The Quarterly Journal of Mathematics Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; The Quarterly Journal of Mathematics Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; The Quarterly Journal of Mathematics Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Quarterly Journal of Mathematics Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; The Quarterly Journal of Mathematics Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; exists ; 2000 ; The Quarterly Journal of Mathematics Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; The Quarterly Journal of Mathematics Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Quarterly Journal of Mathematics Volume 53 ; 53 >
@@ -16215,7 +16214,7 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; Systematic Biology Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; Systematic Biology Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; exists ; 2006 ; Systematic Biology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; exists ; 2007 ; Systematic Biology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 2007 ; Systematic Biology Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; 2008 ; Systematic Biology Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Systematic Biology Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; Systematic Biology Volume 59 ; 59 >
@@ -16729,7 +16728,7 @@
     au < HighWirePressH20Plugin ; exists ; 1995 ; The Year's Work in Critical and Cultural Theory Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; The Year's Work in Critical and Cultural Theory Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; The Year's Work in Critical and Cultural Theory Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; The Year's Work in Critical and Cultural Theory Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; The Year's Work in Critical and Cultural Theory Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Year's Work in Critical and Cultural Theory Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Year's Work in Critical and Cultural Theory Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The Year's Work in Critical and Cultural Theory Volume 11 ; 11 >
@@ -16850,7 +16849,7 @@
     au < HighWirePressH20Plugin ; exists ; 1995 ; The Year's Work in English Studies Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; The Year's Work in English Studies Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; The Year's Work in English Studies Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; The Year's Work in English Studies Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; The Year's Work in English Studies Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; The Year's Work in English Studies Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; The Year's Work in English Studies Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; The Year's Work in English Studies Volume 82 ; 82 >

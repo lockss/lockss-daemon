@@ -68,10 +68,10 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2008 ; Adaptation Volume 1 ; 1 ; >
-    au < exists ; exists ; 2009 ; Adaptation Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2008 ; Adaptation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2009 ; Adaptation Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Adaptation Volume 3 ; 3 ; >
-    au < exists ; exists ; 2011 ; Adaptation Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2011 ; Adaptation Volume 4 ; 4 ; >
 
     }
 
