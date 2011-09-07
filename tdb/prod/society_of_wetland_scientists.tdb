@@ -6,28 +6,43 @@
 
   {
     title <
-      name = The Society of Wetland Scientists Bulletin ;
+      name = Wetland Science and Practice ;
       issn = 0732-9393 ;
       eissn = 1943-6254 ;
       issnl = 0732-9393
     >
 
     {
+
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0732-9393
 
-      comment[0] = renamed Wetland Science and Practice
+      comment[0] = formerly The Society of Wetland Scientists Bulletin (aka SWS Bulletin)
   
-      au < doNotProcess ; 2000 ; The Society of Wetland Scientists Bulletin Volume 17 ; 17 >
-      au < doNotProcess ; 2001 ; The Society of Wetland Scientists Bulletin Volume 18 ; 18 >
-      au < doNotProcess ; 2002 ; The Society of Wetland Scientists Bulletin Volume 19 ; 19 >
-      au < doNotProcess ; 2003 ; The Society of Wetland Scientists Bulletin Volume 20 ; 20 >
-      au < superseded ; 2004 ; The Society of Wetland Scientists Bulletin Volume 21 ; 021 >
-      au < doNotProcess ; 2005 ; The Society of Wetland Scientists Bulletin Volume 22 ; 22 >
-      au < doNotProcess ; 2006 ; The Society of Wetland Scientists Bulletin Volume 23 ; 23 >
-      au < doNotProcess ; 2007 ; The Society of Wetland Scientists Bulletin Volume 24 ; 24 >
+      au < superseded ; 2004 ; Wetland Science and Practice Volume 21 ; 021 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = wtbl
+      
+      au < manifest ; 2000 ; Wetland Science and Practice Volume 17 ; 17 >
+      au < manifest ; 2001 ; Wetland Science and Practice Volume 18 ; 18 >
+      au < manifest ; 2002 ; Wetland Science and Practice Volume 19 ; 19 >
+      au < manifest ; 2003 ; Wetland Science and Practice Volume 20 ; 20 >
+      au < manifest ; 2004 ; Wetland Science and Practice Volume 21 ; 21 >
+      au < manifest ; 2005 ; Wetland Science and Practice Volume 22 ; 22 >
+      au < manifest ; 2006 ; Wetland Science and Practice Volume 23 ; 23 >
+      au < manifest ; 2007 ; Wetland Science and Practice Volume 24 ; 24 >
+      au < manifest ; 2008 ; Wetland Science and Practice Volume 25 ; 25 >
+      au < manifest ; 2009 ; Wetland Science and Practice Volume 26 ; 26 >
+
     }
 
   }
@@ -46,19 +61,27 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0277-5212
   
-      au < doNotProcess ; 2000 ; Wetlands Volume 20 ; 20 >
-      au < doNotProcess ; 2001 ; Wetlands Volume 21 ; 21 >
-      au < doNotProcess ; 2002 ; Wetlands Volume 22 ; 22 >
-      au < doNotProcess ; 2003 ; Wetlands Volume 23 ; 23 >
       au < superseded ; 2004 ; Wetlands Volume 24 ; 024 >
-      au < doNotProcess ; 2005 ; Wetlands Volume 25 ; 25 >
-      au < doNotProcess ; 2006 ; Wetlands Volume 26 ; 26 >
-      au < doNotProcess ; 2007 ; Wetlands Volume 27 ; 27 >
+
     }
 
     {
 
-comment[0] = Atypon AUs
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = wetl
+
+      au < manifest ; 2000 ; Wetlands Volume 20 ; 20 >
+      au < manifest ; 2001 ; Wetlands Volume 21 ; 21 >
+      au < manifest ; 2002 ; Wetlands Volume 22 ; 22 >
+      au < manifest ; 2003 ; Wetlands Volume 23 ; 23 >
+      au < manifest ; 2004 ; Wetlands Volume 24 ; 24 >
+      au < manifest ; 2005 ; Wetlands Volume 25 ; 25 >
+      au < manifest ; 2006 ; Wetlands Volume 26 ; 26 >
+      au < manifest ; 2007 ; Wetlands Volume 27 ; 27 >
+      au < manifest ; 2008 ; Wetlands Volume 28 ; 28 >
+      au < manifest ; 2009 ; Wetlands Volume 29 ; 29 >      
 
     }
 
