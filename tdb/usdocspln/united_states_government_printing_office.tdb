@@ -142,17 +142,17 @@
     param[collection_id] = CCAL
     implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1996 ; Congressional Calendars 1996 ; 1996 >
-    au < ready ; 1998 ; Congressional Calendars 1998 ; 1998 >
-    au < ready ; 2000 ; Congressional Calendars 2000 ; 2000 >
-    au < ready ; 2002 ; Congressional Calendars 2002 ; 2002 >
-    au < ready ; 2004 ; Congressional Calendars 2004 ; 2004 >
-    au < ready ; 2005 ; Congressional Calendars 2005 ; 2005 >
-    au < ready ; 2006 ; Congressional Calendars 2006 ; 2006 >
-    au < ready ; 2007 ; Congressional Calendars 2007 ; 2007 >
-    au < ready ; 2008 ; Congressional Calendars 2008 ; 2008 >
-    au < ready ; 2009 ; Congressional Calendars 2009 ; 2009 >
-    au < ready ; 2010 ; Congressional Calendars 2010 ; 2010 >
+    au < released ; 1996 ; Congressional Calendars 1996 ; 1996 >
+    au < released ; 1998 ; Congressional Calendars 1998 ; 1998 >
+    au < released ; 2000 ; Congressional Calendars 2000 ; 2000 >
+    au < released ; 2002 ; Congressional Calendars 2002 ; 2002 >
+    au < released ; 2004 ; Congressional Calendars 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Calendars 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Calendars 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Calendars 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Calendars 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Calendars 2009 ; 2009 >
+    au < released ; 2010 ; Congressional Calendars 2010 ; 2010 >
       
   }
 
@@ -169,23 +169,23 @@
       param[collection_id] = CPRT
       implicit < status ; year ; name ; param[year] >
 
-      au < ready ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
-      au < ready ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
-      au < ready ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
-      au < ready ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
-      au < ready ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
-      au < ready ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
-      au < ready ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
-      au < ready ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
-      au < ready ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
-      au < ready ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
-      au < ready ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
-      au < ready ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
-      au < ready ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
-      au < ready ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
-      au < ready ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
-      au < ready ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
-      au < ready ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
+      au < released ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
+      au < released ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
+      au < released ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
+      au < released ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
+      au < released ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
+      au < released ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
+      au < released ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
+      au < released ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
+      au < released ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
+      au < released ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
+      au < released ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
+      au < released ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
+      au < released ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
+      au < released ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
+      au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
+      au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
+      au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
 
     }
       
@@ -202,18 +202,18 @@
     param[collection_id] = CDIR
     implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1997 ; Congressional Directory 1997 ; 1997 >
-    au < ready ; 1999 ; Congressional Directory 1999 ; 1999 >
-    au < ready ; 2000 ; Congressional Directory 2000 ; 2000 >
-    au < ready ; 2001 ; Congressional Directory 2001 ; 2001 >
-    au < ready ; 2002 ; Congressional Directory 2002 ; 2002 >
-    au < ready ; 2003 ; Congressional Directory 2003 ; 2003 >
-    au < ready ; 2004 ; Congressional Directory 2004 ; 2004 >
-    au < ready ; 2005 ; Congressional Directory 2005 ; 2005 >
-    au < ready ; 2006 ; Congressional Directory 2006 ; 2006 >
-    au < ready ; 2007 ; Congressional Directory 2007 ; 2007 >
-    au < ready ; 2008 ; Congressional Directory 2008 ; 2008 >
-    au < ready ; 2009 ; Congressional Directory 2009 ; 2009 >
+    au < released ; 1997 ; Congressional Directory 1997 ; 1997 >
+    au < released ; 1999 ; Congressional Directory 1999 ; 1999 >
+    au < released ; 2000 ; Congressional Directory 2000 ; 2000 >
+    au < released ; 2001 ; Congressional Directory 2001 ; 2001 >
+    au < released ; 2002 ; Congressional Directory 2002 ; 2002 >
+    au < released ; 2003 ; Congressional Directory 2003 ; 2003 >
+    au < released ; 2004 ; Congressional Directory 2004 ; 2004 >
+    au < released ; 2005 ; Congressional Directory 2005 ; 2005 >
+    au < released ; 2006 ; Congressional Directory 2006 ; 2006 >
+    au < released ; 2007 ; Congressional Directory 2007 ; 2007 >
+    au < released ; 2008 ; Congressional Directory 2008 ; 2008 >
+    au < released ; 2009 ; Congressional Directory 2009 ; 2009 >
       
   }
 
@@ -230,28 +230,28 @@
       param[collection_id] = CDOC
       implicit < status ; year ; name ; param[year] >
 
-      au < ready ; 1862 ; Congressional Documents 1862 ; 1862 >
-      au < ready ; 1936 ; Congressional Documents 1936 ; 1936 >
-      au < ready ; 1960 ; Congressional Documents 1960 ; 1960 >
-      au < ready ; 1992 ; Congressional Documents 1992 ; 1992 >
-      au < ready ; 1994 ; Congressional Documents 1994 ; 1994 >
-      au < ready ; 1995 ; Congressional Documents 1995 ; 1995 >
-      au < ready ; 1996 ; Congressional Documents 1996 ; 1996 >
-      au < ready ; 1997 ; Congressional Documents 1997 ; 1997 >
-      au < ready ; 1998 ; Congressional Documents 1998 ; 1998 >
-      au < ready ; 1999 ; Congressional Documents 1999 ; 1999 >
-      au < ready ; 2000 ; Congressional Documents 2000 ; 2000 >
-      au < ready ; 2001 ; Congressional Documents 2001 ; 2001 >
-      au < ready ; 2002 ; Congressional Documents 2002 ; 2002 >
-      au < ready ; 2003 ; Congressional Documents 2003 ; 2003 >
-      au < ready ; 2004 ; Congressional Documents 2004 ; 2004 >
-      au < ready ; 2005 ; Congressional Documents 2005 ; 2005 >
-      au < ready ; 2006 ; Congressional Documents 2006 ; 2006 >
-      au < ready ; 2007 ; Congressional Documents 2007 ; 2007 >
-      au < ready ; 2008 ; Congressional Documents 2008 ; 2008 >
-      au < ready ; 2009 ; Congressional Documents 2009 ; 2009 >
-      au < ready ; 2010 ; Congressional Documents 2010 ; 2010 >
-      au < ready ; 2011 ; Congressional Documents 2011 ; 2011 >
+      au < released ; 1862 ; Congressional Documents 1862 ; 1862 >
+      au < released ; 1936 ; Congressional Documents 1936 ; 1936 >
+      au < released ; 1960 ; Congressional Documents 1960 ; 1960 >
+      au < released ; 1992 ; Congressional Documents 1992 ; 1992 >
+      au < released ; 1994 ; Congressional Documents 1994 ; 1994 >
+      au < released ; 1995 ; Congressional Documents 1995 ; 1995 >
+      au < released ; 1996 ; Congressional Documents 1996 ; 1996 >
+      au < released ; 1997 ; Congressional Documents 1997 ; 1997 >
+      au < released ; 1998 ; Congressional Documents 1998 ; 1998 >
+      au < released ; 1999 ; Congressional Documents 1999 ; 1999 >
+      au < released ; 2000 ; Congressional Documents 2000 ; 2000 >
+      au < released ; 2001 ; Congressional Documents 2001 ; 2001 >
+      au < released ; 2002 ; Congressional Documents 2002 ; 2002 >
+      au < released ; 2003 ; Congressional Documents 2003 ; 2003 >
+      au < released ; 2004 ; Congressional Documents 2004 ; 2004 >
+      au < released ; 2005 ; Congressional Documents 2005 ; 2005 >
+      au < released ; 2006 ; Congressional Documents 2006 ; 2006 >
+      au < released ; 2007 ; Congressional Documents 2007 ; 2007 >
+      au < released ; 2008 ; Congressional Documents 2008 ; 2008 >
+      au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
+      au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
+      au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
 
     }
       
@@ -270,22 +270,22 @@
       param[collection_id] = CHRG
       implicit < status ; year ; name ; param[year] >
 
-      au < ready ; 1995 ; Congressional Hearings 1995 ; 1995 >
-      au < ready ; 1996 ; Congressional Hearings 1996 ; 1996 >
-      au < ready ; 1997 ; Congressional Hearings 1997 ; 1997 >
-      au < ready ; 1998 ; Congressional Hearings 1998 ; 1998 >
-      au < ready ; 1999 ; Congressional Hearings 1999 ; 1999 >
-      au < ready ; 2000 ; Congressional Hearings 2000 ; 2000 >
-      au < ready ; 2001 ; Congressional Hearings 2001 ; 2001 >
-      au < ready ; 2002 ; Congressional Hearings 2002 ; 2002 >
-      au < ready ; 2003 ; Congressional Hearings 2003 ; 2003 >
-      au < ready ; 2004 ; Congressional Hearings 2004 ; 2004 >
-      au < ready ; 2005 ; Congressional Hearings 2005 ; 2005 >
-      au < ready ; 2006 ; Congressional Hearings 2006 ; 2006 >
-      au < ready ; 2007 ; Congressional Hearings 2007 ; 2007 >
-      au < ready ; 2008 ; Congressional Hearings 2008 ; 2008 >
-      au < ready ; 2009 ; Congressional Hearings 2009 ; 2009 >
-      au < ready ; 2010 ; Congressional Hearings 2010 ; 2010 >
+      au < released ; 1995 ; Congressional Hearings 1995 ; 1995 >
+      au < released ; 1996 ; Congressional Hearings 1996 ; 1996 >
+      au < released ; 1997 ; Congressional Hearings 1997 ; 1997 >
+      au < released ; 1998 ; Congressional Hearings 1998 ; 1998 >
+      au < released ; 1999 ; Congressional Hearings 1999 ; 1999 >
+      au < released ; 2000 ; Congressional Hearings 2000 ; 2000 >
+      au < released ; 2001 ; Congressional Hearings 2001 ; 2001 >
+      au < released ; 2002 ; Congressional Hearings 2002 ; 2002 >
+      au < released ; 2003 ; Congressional Hearings 2003 ; 2003 >
+      au < released ; 2004 ; Congressional Hearings 2004 ; 2004 >
+      au < released ; 2005 ; Congressional Hearings 2005 ; 2005 >
+      au < released ; 2006 ; Congressional Hearings 2006 ; 2006 >
+      au < released ; 2007 ; Congressional Hearings 2007 ; 2007 >
+      au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
+      au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
+      au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
 
     }
       
@@ -818,23 +818,23 @@
     param[collection_id] = USCODE
     implicit < status ; year ; name ; param[year] >
 
-    au < ready ; 1994 ; United States Code 1994 ; 1994 >
-    au < ready ; 1995 ; United States Code 1995 ; 1995 >
-    au < ready ; 1996 ; United States Code 1996 ; 1996 >
-    au < ready ; 1997 ; United States Code 1997 ; 1997 >
-    au < ready ; 1998 ; United States Code 1998 ; 1998 >
-    au < ready ; 1999 ; United States Code 1999 ; 1999 >
-    au < ready ; 2000 ; United States Code 2000 ; 2000 >
-    au < ready ; 2001 ; United States Code 2001 ; 2001 >
-    au < ready ; 2002 ; United States Code 2002 ; 2002 >
-    au < ready ; 2003 ; United States Code 2003 ; 2003 >
-    au < ready ; 2004 ; United States Code 2004 ; 2004 >
-    au < ready ; 2005 ; United States Code 2005 ; 2005 >
-    au < ready ; 2006 ; United States Code 2006 ; 2006 >
-    au < ready ; 2007 ; United States Code 2007 ; 2007 >
-    au < ready ; 2008 ; United States Code 2008 ; 2008 >
-    au < ready ; 2009 ; United States Code 2009 ; 2009 >
-    au < ready ; 2010 ; United States Code 2010 ; 2010 >
+    au < released ; 1994 ; United States Code 1994 ; 1994 >
+    au < released ; 1995 ; United States Code 1995 ; 1995 >
+    au < released ; 1996 ; United States Code 1996 ; 1996 >
+    au < released ; 1997 ; United States Code 1997 ; 1997 >
+    au < released ; 1998 ; United States Code 1998 ; 1998 >
+    au < released ; 1999 ; United States Code 1999 ; 1999 >
+    au < released ; 2000 ; United States Code 2000 ; 2000 >
+    au < released ; 2001 ; United States Code 2001 ; 2001 >
+    au < released ; 2002 ; United States Code 2002 ; 2002 >
+    au < released ; 2003 ; United States Code 2003 ; 2003 >
+    au < released ; 2004 ; United States Code 2004 ; 2004 >
+    au < released ; 2005 ; United States Code 2005 ; 2005 >
+    au < released ; 2006 ; United States Code 2006 ; 2006 >
+    au < released ; 2007 ; United States Code 2007 ; 2007 >
+    au < released ; 2008 ; United States Code 2008 ; 2008 >
+    au < released ; 2009 ; United States Code 2009 ; 2009 >
+    au < released ; 2010 ; United States Code 2010 ; 2010 >
       
   }
 
