@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerArticleIteratorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestSpringerArticleIteratorFactory.java,v 1.3 2011-09-08 23:40:49 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,8 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
-public class TestSpringerArticleIteratorFactory extends LockssTestCase {
+public class TestSpringerArticleIteratorFactory
+  extends ArticleIteratorTestCase {
   static Logger log = Logger.getLogger("TestSpringerArticleIteratorFactory");
 
   private SimulatedArchivalUnit simau;	// Simulated AU to generate content
@@ -65,27 +66,14 @@ public class TestSpringerArticleIteratorFactory extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath,
-				  "org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
+    ConfigurationUtil.setFromArgs("org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
 				  "true");
-
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getAlertManager();
-    PluginManager pluginMgr = theDaemon.getPluginManager();
-    pluginMgr.setLoadablePluginsReady(true);
-    theDaemon.setDaemonInited(true);
-    pluginMgr.startService();
-    theDaemon.getCrawlManager();
-
     simau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     spau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerAuConfig());
   }
 
   public void tearDown() throws Exception {
     simau.deleteContentTree();
-    theDaemon.stopDaemon();
     super.tearDown();
   }
 
