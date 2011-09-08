@@ -151,7 +151,7 @@ q
 Funky-EOF
     fi
     # Add cache directories to PRUNEPATHS in /etc/updatedb.conf
-    for DIR in `echo ${LOCKSS_DISK_PATHS} | sed 's/;/ /'`
+    for DIR in `echo ${LOCKSS_DISK_PATHS} | sed 's/;/ /g'`
     do
         if ! grep ${DIR} /etc/updatedb.conf >/dev/null 2>&1
         then
