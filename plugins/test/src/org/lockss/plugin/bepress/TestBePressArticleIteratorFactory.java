@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.5 2011-05-18 04:12:38 tlipkis Exp $
+ * $Id: TestBePressArticleIteratorFactory.java,v 1.6 2011-09-08 23:40:31 tlipkis Exp $
  */
 
 /*
@@ -35,23 +35,18 @@ package org.lockss.plugin.bepress;
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.*;
-import org.lockss.plugin.bepress.BePressArticleIteratorFactory.BePressArticleIterator;
 import org.lockss.test.*;
-import org.lockss.util.Constants.RegexpContext;
+import org.lockss.util.*;
 
-public class TestBePressArticleIteratorFactory extends LockssTestCase {
-
-  private ArchivalUnit bau;
+public class TestBePressArticleIteratorFactory extends ArticleIteratorTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    au = createAu();
+  }
 
-    MockLockssDaemon daemon = getMockLockssDaemon();
-    daemon.getPluginManager().setLoadablePluginsReady(true);
-    daemon.setDaemonInited(true);
-    daemon.getPluginManager().startService();
-
-    bau =
+  protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
+    return
       PluginTestUtil.createAu("org.lockss.plugin.bepress.BePressPlugin",
 			      ConfigurationUtil.fromArgs("base_url",
 							 "http://www.example.com/",
@@ -59,93 +54,93 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
 							 "volume", "123"));
   }
 
-  Pattern makePattern(ArchivalUnit au) {
-    String pat = BePressArticleIteratorFactory.PATTERN_TEMPLATE;
-
-    PrintfConverter.MatchPattern mp =
-      PrintfConverter.newRegexpConverter(au, RegexpContext.Url).getMatchPattern(pat);
-    return Pattern.compile(mp.getRegexp(), Pattern.CASE_INSENSITIVE);
+  public void testRoots() throws Exception {
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    assertEquals(ListUtil.list("http://www.example.com/jour"),
+		 getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
-    Pattern pat = makePattern(bau);
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/vol123/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/vol123/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/vol123/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/vol123/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol999/iss4/art5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol999/iss4/editorial5");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/iss4/art5");
-    urlShouldMatch(pat, "http://www.example.com/jour/default/vol123/iss4/art5");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/iss4/editorial5");
-    urlShouldMatch(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4/art5/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4/art5/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4/editorial5/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5/wrong");
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    Pattern pat = getPattern(artIter);
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/default/vol123/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/default/vol123/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/default/vol123/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/default/vol123/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol999/iss4/art5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol999/iss4/editorial5");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/iss4/art5");
+    assertMatchesRE(pat, "http://www.example.com/jour/default/vol123/iss4/art5");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/iss4/editorial5");
+    assertMatchesRE(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol123");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/iss4");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol123/iss4");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/iss4/art5/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol123/iss4/art5/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/iss4/editorial5/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5/wrong");
   }
   
   public void testUrlsWithoutPrefixes() throws Exception {
-    Pattern pat = makePattern(bau);
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/123/4/5");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/123/4/5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/123/4/5");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/123/4/5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/999/4/5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/999/4/5");
-    urlShouldMatch(pat, "http://www.example.com/jour/123/4/5");
-    urlShouldMatch(pat, "http://www.example.com/jour/default/123/4/5");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/123");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/123/4");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123/4");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/123/4/5/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123/4/5/wrong");
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    Pattern pat = getPattern(artIter);
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/123/4/5");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/default/123/4/5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/123/4/5");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/default/123/4/5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/999/4/5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/999/4/5");
+    assertMatchesRE(pat, "http://www.example.com/jour/123/4/5");
+    assertMatchesRE(pat, "http://www.example.com/jour/default/123/4/5");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/123");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/123");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/123/4");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/123/4");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/123/4/5/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/default/123/4/5/wrong");
   }
   
   public void testShortArticleUrls() throws Exception {
-    Pattern pat = makePattern(bau);
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/A456");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/P456");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/R456");
-    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/S456");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/A456");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/P456");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/R456");
-    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/S456");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/A456");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/P456");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/R456");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/S456");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/A456");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/P456");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/R456");
-    urlShouldMatch(pat, "http://www.example.com/jour/vol123/S456");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/A456/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/P456/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/R456/wrong");
-    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/S456/wrong");
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    Pattern pat = getPattern(artIter);
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/A456");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/P456");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/R456");
+    assertNotMatchesRE(pat, "http://www.wrong.com/jour/vol123/S456");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/A456");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/P456");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/R456");
+    assertNotMatchesRE(pat, "http://www.example.com/wrong/vol123/S456");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/A456");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/P456");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/R456");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol999/S456");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/A456");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/P456");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/R456");
+    assertMatchesRE(pat, "http://www.example.com/jour/vol123/S456");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/A456/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/P456/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/R456/wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/jour/vol123/S456/wrong");
   }
   
-  protected static void urlShouldMatch(Pattern pat, String url)
-      throws Exception {
-    assertTrue(url + " does not match " + pat.pattern(),
-	       pat.matcher(url).find());
-  }
+  public void testCreateArticleFiles() throws Exception {
+    String url = "http://www.example.com/jour/vol123/S456";
+    CachedUrl cu = au.makeCachedUrl(url);
+    SubTreeArticleIterator artIter = createSubTreeIter();
+    ArticleFiles af = createArticleFiles(artIter, cu);
+    assertEquals(cu, af.getFullTextCu());
+    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_ABSTRACT));
+  }						    
 
-  protected static void urlShouldNotMatch(Pattern pat, String url)
-      throws Exception {
-    assertTrue(url + " matches " + pat.pattern(), !pat.matcher(url).find());
-  }
 }
