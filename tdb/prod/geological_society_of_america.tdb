@@ -225,8 +225,9 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://fieldguides.gsapubs.org/
 
-
     {
+    
+      comment[field_guides_v10] = manifest exists but has no valid link.
     
       implicit < status ; year ; name ; param[volume_name] >
     
