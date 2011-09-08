@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.12 2011-05-18 04:12:38 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.13 2011-09-08 23:40:57 tlipkis Exp $
  */
 
 /*
@@ -231,6 +231,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   protected Pattern pat = null;
   /** Underlying CachedUrlSet iterator */
   protected Iterator cusIter = null;
+  /** Root CachecUrlSets */
+  Collection<CachedUrlSet> roots;
   /** Iterator over subtree roots */
   protected Iterator<CachedUrlSet> rootIter = null;
 
@@ -248,7 +250,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     this.au = au;
     this.spec = spec;
     mimeType = getMimeType();
-    Collection<CachedUrlSet> roots = makeRoots();
+    roots = makeRoots();
     this.pat = makePattern();
     rootIter = roots.iterator();
     log.debug2("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
