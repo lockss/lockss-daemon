@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.103 2011-08-09 04:00:31 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.104 2011-09-08 23:41:38 tlipkis Exp $
  */
 
 /*
@@ -1430,6 +1430,11 @@ public class LockssTestCase extends TestCase {
     return isMatchRe(s, RegexpUtil.uncheckedCompile(re));
   }
 
+  /** Convenience method to match an RE */
+  protected static boolean isMatchRe(String s, java.util.regex.Pattern pat) {
+    return pat.matcher(s).find();
+  }
+
   /**
    * Asserts that a string matches a regular expression.  The match is
    * unanchored; use "^...$" to ensure that the entire string is matched.
@@ -1471,6 +1476,28 @@ public class LockssTestCase extends TestCase {
   }
 
   /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(java.util.regex.Pattern regexp,
+				     String string) {
+    assertMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(String msg,
+				     java.util.regex.Pattern regexp,
+				     String string) {
+    if (msg == null) {
+      msg = "No match for " + regexp.pattern() + " in \"" + string + "\"";
+    }
+    assertTrue(msg, isMatchRe(string, regexp));
+  }
+
+  /**
    * Asserts that a string does not match a regular expression
    */
   public static void assertNotMatchesRE(String regexp, String string) {
@@ -1503,6 +1530,27 @@ public class LockssTestCase extends TestCase {
     if (msg == null) {
       msg = "String \"" + string + "\" should not match RE: " +
 	regexp.getPattern();
+    }
+    assertFalse(msg, isMatchRe(string, regexp));
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(java.util.regex.Pattern regexp,
+					String string) {
+    assertNotMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(String msg,
+					java.util.regex.Pattern regexp,
+					String string) {
+    if (msg == null) {
+      msg = "String \"" + string + "\" should not match RE: " +
+	regexp.pattern();
     }
     assertFalse(msg, isMatchRe(string, regexp));
   }
