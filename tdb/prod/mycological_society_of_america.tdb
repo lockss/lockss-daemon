@@ -17,14 +17,16 @@
       param[base_url] = http://www.mycologia.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2002 ; Mycologia Volume 94 ; 94 >
-      au < exists ; 2003 ; Mycologia Volume 95 ; 95 >
-      au < exists ; 2004 ; Mycologia Volume 96 ; 96 >
-      au < exists ; 2005 ; Mycologia Volume 97 ; 97 >
-      au < exists ; 2006 ; Mycologia Volume 98 ; 98 >
-      au < exists ; 2007 ; Mycologia Volume 99 ; 99 >
-      au < exists ; 2008 ; Mycologia Volume 100 ; 100 >
-      au < exists ; 2009 ; Mycologia Volume 101 ; 101 >
+      au < manifest ; 2002 ; Mycologia Volume 94 ; 94 >
+      au < manifest ; 2003 ; Mycologia Volume 95 ; 95 >
+      au < manifest ; 2004 ; Mycologia Volume 96 ; 96 >
+      au < manifest ; 2005 ; Mycologia Volume 97 ; 97 >
+      au < manifest ; 2006 ; Mycologia Volume 98 ; 98 >
+      au < manifest ; 2007 ; Mycologia Volume 99 ; 99 >
+      au < manifest ; 2008 ; Mycologia Volume 100 ; 100 >
+      au < manifest ; 2009 ; Mycologia Volume 101 ; 101 >
+      au < exists ; 2010 ; Mycologia Volume 102 ; 102 >
+      au < exists ; 2011 ; Mycologia Volume 103 ; 103 >
 
     }
 
