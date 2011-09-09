@@ -19,9 +19,10 @@
     param[journal_id] = journal
     implicit < status ; year ; name ; param[year] >
     
-    au < manifest ; 2008 ; ZooKeys 2008 ; 2008 >
-    au < manifest ; 2009 ; ZooKeys 2009 ; 2009 >
-    au < manifest ; 2010 ; ZooKeys 2010 ; 2010 >
+    au < testing ; 2008 ; ZooKeys 2008 ; 2008 >
+    au < testing ; 2009 ; ZooKeys 2009 ; 2009 >
+    au < testing ; 2010 ; ZooKeys 2010 ; 2010 >
+    au < testing ; 2011 ; ZooKeys 2010 ; 2011 >
   
   }
   

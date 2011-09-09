@@ -42,7 +42,7 @@ comment[bj1] = no permission from publisher
     au < ready ; 1924 ; Biochemical Journal Volume 18 ; 018 >
     au < ready ; 1925 ; Biochemical Journal Volume 19 ; 019 >
     au < ready ; 1926 ; Biochemical Journal Volume 20 ; 020 >
-    au < testing ; 1927 ; Biochemical Journal Volume 21 ; 021 >
+    au < ready ; 1927 ; Biochemical Journal Volume 21 ; 021 >
     au < ready ; 1928 ; Biochemical Journal Volume 22 ; 022 >
     au < ready ; 1929 ; Biochemical Journal Volume 23 ; 023 >
     au < ready ; 1930 ; Biochemical Journal Volume 24 ; 024 >
@@ -441,24 +441,24 @@ comment[bj1] = no permission from publisher
     au < ready ; 2009 ; Biochemical Journal Volume 417 ; 417 >
     au < ready ; 2009 ; Biochemical Journal Volume 418 ; 418 >
     au < ready ; 2009 ; Biochemical Journal Volume 419 ; 419 >
-    au < manifest ; 2009 ; Biochemical Journal Volume 420 ; 420 >
-    au < manifest ; 2009 ; Biochemical Journal Volume 420 ; 421 >
-    au < manifest ; 2009 ; Biochemical Journal Volume 420 ; 422 >
-    au < manifest ; 2009 ; Biochemical Journal Volume 420 ; 423 >
-    au < manifest ; 2009 ; Biochemical Journal Volume 420 ; 424 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 425 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 426 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 427 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 428 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 429 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 430 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 431 >
-    au < manifest ; 2010 ; Biochemical Journal Volume 420 ; 432 >
-    au < manifest ; 2011 ; Biochemical Journal Volume 420 ; 433 >
-    au < manifest ; 2011 ; Biochemical Journal Volume 420 ; 434 >
-    au < manifest ; 2011 ; Biochemical Journal Volume 420 ; 435 >
-    au < manifest ; 2011 ; Biochemical Journal Volume 420 ; 436 >
-    au < manifest ; 2011 ; Biochemical Journal Volume 420 ; 437 >
+    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 420 >
+    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 421 >
+    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 422 >
+    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 423 >
+    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 424 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 425 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 426 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 427 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 428 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 429 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 430 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 431 >
+    au < testing ; 2010 ; Biochemical Journal Volume 420 ; 432 >
+    au < testing ; 2011 ; Biochemical Journal Volume 420 ; 433 >
+    au < testing ; 2011 ; Biochemical Journal Volume 420 ; 434 >
+    au < testing ; 2011 ; Biochemical Journal Volume 420 ; 435 >
+    au < testing ; 2011 ; Biochemical Journal Volume 420 ; 436 >
+    au < testing ; 2011 ; Biochemical Journal Volume 420 ; 437 >
     
   }
   
@@ -529,9 +529,9 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < ready ; 2006 ; Biology of the Cell Volume 98 ; 098 >
     au < ready ; 2007 ; Biology of the Cell Volume 99 ; 099 >
     au < ready ; 2008 ; Biology of the Cell Volume 100 ; 100 >
-    au < manifest ; 2009 ; Biology of the Cell Volume 101 ; 101 >
-    au < manifest ; 2010 ; Biology of the Cell Volume 102 ; 102 >
-    au < manifest ; 2011 ; Biology of the Cell Volume 103 ; 103 >
+    au < testing ; 2009 ; Biology of the Cell Volume 101 ; 101 >
+    au < testing ; 2010 ; Biology of the Cell Volume 102 ; 102 >
+    au < testing ; 2011 ; Biology of the Cell Volume 103 ; 103 >
     
   } 
   
@@ -584,8 +584,8 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < testing ; 2007 ; Biochemical Society Transactions Volume 35 ; 035 >
     au < ready ; 2008 ; Biochemical Society Transactions Volume 36 ; 036 >
     au < ready ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 >
-    au < manifest ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
-    au < manifest ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
+    au < testing ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
+    au < testing ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
     
   }
   
@@ -630,8 +630,8 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     au < released ; 2007 ; Bioscience Reports Volume 27 ; 027 >
     au < released ; 2008 ; Bioscience Reports Volume 28 ; 028 >
     au < released ; 2009 ; Bioscience Reports Volume 29 ; 029 >
-    au < manifest ; 2010 ; Bioscience Reports Volume 30 ; 030 >
-    au < manifest ; 2011 ; Bioscience Reports Volume 31 ; 031 >
+    au < testing ; 2010 ; Bioscience Reports Volume 30 ; 030 >
+    au < testing ; 2011 ; Bioscience Reports Volume 31 ; 031 >
 
   }
 
@@ -694,10 +694,10 @@ comment[bab] = not_ready because of 500 errors
     au < released ; 2008 ; Biotechnology and Applied Biochemistry Volume 51 ; 051 >
     au < released ; 2009 ; Biotechnology and Applied Biochemistry Volume 52 ; 052 >
     au < released ; 2009 ; Biotechnology and Applied Biochemistry Volume 53 ; 053 >
-    au < manifest ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 054 >
-    au < manifest ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 055 >
-    au < manifest ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 056 >
-    au < manifest ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 057 >
+    au < testing ; 2009 ; Biotechnology and Applied Biochemistry Volume 54 ; 054 >
+    au < testing ; 2010 ; Biotechnology and Applied Biochemistry Volume 55 ; 055 >
+    au < testing ; 2010 ; Biotechnology and Applied Biochemistry Volume 56 ; 056 >
+    au < testing ; 2010 ; Biotechnology and Applied Biochemistry Volume 57 ; 057 >
     
   }
 
@@ -773,12 +773,12 @@ comment[bab] = not_ready because of 500 errors
     au < released ; 2007 ; Clinical Science Volume 113 ; 113 >
     au < released ; 2008 ; Clinical Science Volume 114 ; 114 >
     au < released ; 2008 ; Clinical Science Volume 115 ; 115 >
-    au < manifest ; 2009 ; Clinical Science Volume 116 ; 116 >
-    au < manifest ; 2009 ; Clinical Science Volume 117 ; 117 >
-    au < manifest ; 2010 ; Clinical Science Volume 118 ; 118 >
-    au < manifest ; 2010 ; Clinical Science Volume 119 ; 119 >
-    au < manifest ; 2011 ; Clinical Science Volume 120 ; 120 >
-    au < manifest ; 2011 ; Clinical Science Volume 121 ; 121 >
+    au < testing ; 2009 ; Clinical Science Volume 116 ; 116 >
+    au < testing ; 2009 ; Clinical Science Volume 117 ; 117 >
+    au < testing ; 2010 ; Clinical Science Volume 118 ; 118 >
+    au < testing ; 2010 ; Clinical Science Volume 119 ; 119 >
+    au < testing ; 2011 ; Clinical Science Volume 120 ; 120 >
+    au < testing ; 2011 ; Clinical Science Volume 121 ; 121 >
         
   }
   
@@ -806,11 +806,11 @@ comment[bab] = not_ready because of 500 errors
     au < released ; 2006 ; Essays in Biochemistry Volume 42 ; 042 >  
     au < released ; 2007 ; Essays in Biochemistry Volume 43 ; 043 >  
     au < released ; 2008 ; Essays in Biochemistry Volume 44 ; 044 >  
-    au < manifest ; 2008 ; Essays in Biochemistry Volume 45 ; 045 >
-    au < manifest ; 2009 ; Essays in Biochemistry Volume 46 ; 046 >
-    au < manifest ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
-    au < manifest ; 2010 ; Essays in Biochemistry Volume 48 ; 048 >
-    au < manifest ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
+    au < testing ; 2008 ; Essays in Biochemistry Volume 45 ; 045 >
+    au < testing ; 2009 ; Essays in Biochemistry Volume 46 ; 046 >
+    au < testing ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
+    au < testing ; 2010 ; Essays in Biochemistry Volume 48 ; 048 >
+    au < testing ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
 
   }
   
