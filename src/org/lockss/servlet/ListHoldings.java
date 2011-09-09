@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.15 2011-08-23 16:16:48 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.15.2.1 2011-09-09 17:53:00 easyonthemayo Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class ListHoldings extends LockssServlet {
     lastManualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL);
     // Set custom ordering to default 
     this.customFieldOrdering = FIELD_ORDERING_DEFAULT;
-
+    
     // ---------- Interpret parameters ----------
     // Is this a custom output? The custom action is not null and is not a plain export.
     boolean isCustom = !StringUtil.isNullString(customAction) && !customAction.equals(ACTION_EXPORT);

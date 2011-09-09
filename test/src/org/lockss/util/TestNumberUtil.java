@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.4.4.1 2011-09-01 12:54:25 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.4.4.2 2011-09-09 17:53:00 easyonthemayo Exp $
  */
 
 /*
@@ -48,6 +48,69 @@ public class TestNumberUtil extends LockssTestCase {
     super(msg);
   }
 
+  /**
+   * Test whether strings parse as integers.
+   */
+  public void testIsInteger() {
+    assertTrue(NumberUtil.isInteger("100"));
+    assertFalse(NumberUtil.isInteger("99.9"));
+    assertFalse(NumberUtil.isInteger("not an integer"));
+    assertFalse(NumberUtil.isInteger("100 non numbers"));
+    assertFalse(NumberUtil.isInteger(""));
+    assertFalse(NumberUtil.isInteger(null));
+  }
+
+  /**
+   * Test consecutive numbers represented as integers.
+   */
+  public final void testAreConsecutiveIntInt() {
+    assertTrue(  NumberUtil.areConsecutive(0,1)  );
+    assertTrue(  NumberUtil.areConsecutive(1,2)  );
+    assertTrue(  NumberUtil.areConsecutive(-1,0) );
+    
+    assertFalse( NumberUtil.areConsecutive(0,0)  );
+    assertFalse( NumberUtil.areConsecutive(1,1)  );
+    assertFalse( NumberUtil.areConsecutive(0,2) );
+    assertFalse( NumberUtil.areConsecutive(1,3)  );
+    assertFalse( NumberUtil.areConsecutive(0,-1) );
+    assertFalse( NumberUtil.areConsecutive(2,1)  );
+    assertFalse( NumberUtil.areConsecutive(1,-2) );
+  }
+  
+  /**
+   * Test consecutive numbers represented as strings.
+   */
+  public final void testAreConsecutiveStringString() {
+    // Consecutive numbers, Roman and Arabic
+    assertTrue(  NumberUtil.areConsecutive("0",  "1")   );
+    assertTrue(  NumberUtil.areConsecutive("1",  "2")   );
+    assertTrue(  NumberUtil.areConsecutive("-1", "0")   );
+    assertTrue(  NumberUtil.areConsecutive("VI", "VII") );
+    assertTrue(  NumberUtil.areConsecutive("L", "LI")   );
+    // Strings are also trimmed before parsing
+    assertTrue(  NumberUtil.areConsecutive(" 1 ", " 2 ")   );
+    assertTrue(  NumberUtil.areConsecutive(" L ", " LI ")   );
+    
+    // Strings which cannot be parsed as ints
+    try {
+      assertFalse( NumberUtil.areConsecutive("number 1",  "number 2")  );
+      fail("Should throw a NumberFormatException.");
+    } catch (NumberFormatException e) { /* do nothing */ }
+    try {
+      assertFalse( NumberUtil.areConsecutive("one",  "two")  );
+      fail("Should throw a NumberFormatException.");
+    } catch (NumberFormatException e) { /* do nothing */ }
+
+    // Parseable numbers, not consecutive
+    assertFalse( NumberUtil.areConsecutive("L", "LII")  );
+    assertFalse( NumberUtil.areConsecutive("0", "0")  );
+    assertFalse( NumberUtil.areConsecutive("1", "1")  );
+    assertFalse( NumberUtil.areConsecutive("0", "2")  );
+    assertFalse( NumberUtil.areConsecutive("1", "3")  );
+    assertFalse( NumberUtil.areConsecutive("0", "-1") );
+    assertFalse( NumberUtil.areConsecutive("2", "1")  );
+    assertFalse( NumberUtil.areConsecutive("1", "-2") );
+  }
 
   /**
    * Test normalized Roman and Arabic numbers.
@@ -219,5 +282,16 @@ public class TestNumberUtil extends LockssTestCase {
     assertTrue(NumberUtil.rangeIncludes("abc-def", "def"));
     assertTrue(NumberUtil.rangeIncludes("abc-def", "bcdefg"));
     assertTrue(NumberUtil.rangeIncludes("abc", "abc"));
+    
+    // Test with whitespace
+    assertEquals("123", NumberUtil.getRangeStart(" 123 -456"));
+    assertEquals("123", NumberUtil.getRangeStart(" 123"));
+    assertEquals("456", NumberUtil.getRangeEnd("  123-  456"));
+    assertEquals("456", NumberUtil.getRangeEnd("456   "));
+    assertTrue(NumberUtil.rangeIncludes("123 - 456", "CXXIV"));
+    // Note that the search value is not trimmed, so cannot have initial whitespace
+    assertTrue(NumberUtil.rangeIncludes("abc-def", "def  "));
+    assertTrue(NumberUtil.rangeIncludes(" abc  -  def ", "bcdefg  "));
+    
   }
 }

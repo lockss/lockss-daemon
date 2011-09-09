@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.11 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.11.2.1 2011-09-09 17:53:00 easyonthemayo Exp $
  */
 
 /*
@@ -143,6 +143,7 @@ public class KbartTdbAuUtil {
    * 
    * @param au the TdbAu whose properties to search for an attribute
    * @return the value of an existing key, or an empty string
+   * @deprecated
    */
   static String findYear(TdbAu au) {
     String s = findAuInfo(au, DEFAULT_YEAR_ATTR, AuInfoType.ATTR);
@@ -225,7 +226,7 @@ public class KbartTdbAuUtil {
    * @return the value of an existing key, or an empty string
    */
   static String findAuInfo(TdbAu au, String key, AuInfoType type) {
-    if (key==null ||type==null) return "";
+    if (key==null || type==null) return "";
     return type.findAuInfo(au, key);
   }
 
@@ -329,21 +330,31 @@ public class KbartTdbAuUtil {
   }
   
   /**
-   * Parse a string representation of an integer year as a string.
+   * Parse a string representation of an integer year.
    * @param yr a string representing an integer year
    * @return the year as an int, or 0 if it could not be parsed
    */
   static int stringYearAsInt(String yr) {
     if (!StringUtil.isNullString(yr)) try {
       return NumberUtil.parseInt(yr);
-    } catch (NumberFormatException e) {}
+    } catch (NumberFormatException e) { /* Do nothing */ }
     return 0;
   }
   
+  /**
+   * Get an integer representation of the given AU's first year.
+   * @param au a TdbAu 
+   * @return the first year as an int, or 0 if it could not be parsed
+   */
   static int getFirstYearAsInt(TdbAu au) {
     return stringYearAsInt(au.getStartYear()); 
   }
   
+  /**
+   * Get an integer representation of the given AU's last year.
+   * @param au a TdbAu 
+   * @return the last year as an int, or 0 if it could not be parsed
+   */
   static int getLastYearAsInt(TdbAu au) {
     return stringYearAsInt(au.getEndYear()); 
   }
