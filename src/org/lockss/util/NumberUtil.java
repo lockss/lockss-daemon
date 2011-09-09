@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.7 2011-09-01 13:09:15 pgust Exp $
+ * $Id: NumberUtil.java,v 1.8 2011-09-09 17:52:59 easyonthemayo Exp $
  */
 
 /*
@@ -75,8 +75,8 @@ public class NumberUtil {
   private NumberUtil() {}
   
   /**
-   * Get the range start.
-   * @param  range a start/stop range separated by a dash
+   * Get the range start. Whitespace is trimmed.
+   * @param  range a start/stop range separated by a dash, optionally with whitesapce
    * @return the range start <code>null</code> if not specified
    */
   static public String getRangeStart(String range) {
@@ -84,12 +84,12 @@ public class NumberUtil {
       return null;
     }
     int i = range.indexOf('-');
-    return (i > 0) ? range.substring(0,i) : range;
+    return (i > 0) ? range.substring(0,i).trim() : range.trim();
   }
 
   /**
-   * Get the range end.
-   * @param range a start/stop range separated by a dash
+   * Get the range end. Whitespace is trimmed.
+   * @param range a start/stop range separated by a dash, optionally with whitesapce
    * @return the range end or <code>null</code> if not specified
    */
   static public String getRangeEnd(String range) {
@@ -97,11 +97,11 @@ public class NumberUtil {
       return null;
     }
     int i = range.indexOf('-');
-    return (i > 0) ? range.substring(i+1) : range;
+    return (i > 0) ? range.substring(i+1).trim() : range.trim();
   }
 
   /**
-   * Determine whether a range include a given value. The range can be a
+   * Determine whether a range includes a given value. The range can be a
    * single value  or a start/stop range separated by a dash. If the range
    * is a single value, it will be used as both the start and stop values.
    * <p>
@@ -110,8 +110,14 @@ public class NumberUtil {
    * is compared to the range start and stop values as a topic range. That 
    * is, "Georgia", "Kanasas", and "Massachusetts" are topics within the 
    * volume "Ge-Ma.
+   * <p>
+   * The range string can also include whitespace, which is trimmed from the 
+   * resulting year. Java's <code>String.trim()</code> method trims blanks and 
+   * also control characters, but doesn't trim all the forms of blank 
+   * specified in the Unicode character set. The value to search for is 
+   * <i>not</i> trimmed.
    * 
-   * @param range a single value or a start/stop range separated by a dash.
+   * @param range a single value or a start/stop range separated by a dash, optionally with whitesapce
    * @param value the value
    * @return <code>true</code> if this range includes the value
    */
@@ -120,8 +126,8 @@ public class NumberUtil {
       return false;
     }
     int i = range.indexOf('-');
-    String startRange = (i > 0) ? range.substring(0,i) : range;
-    String endRange = (i > 0) ? range.substring(i+1) : range;
+    String startRange = (i > 0) ? range.substring(0,i).trim() : range.trim();
+    String endRange = (i > 0) ? range.substring(i+1).trim() : range.trim();
     try {
       // see if value is within range
       int srange = NumberUtil.parseInt(startRange);
@@ -192,7 +198,8 @@ public class NumberUtil {
   }
 
   /**
-   * Determines whether the input string represents an integer.
+   * Determines whether the input string represents an integer, that is,
+   * can be parsed as an integer.
    * 
    * @param s the input String
    * @return <tt>true</tt> if the input string represents an integer
@@ -206,6 +213,32 @@ public class NumberUtil {
     }
   }
   
+  /**
+   * Determines whether the two integers are are strictly consecutive, that is,
+   * whether the second integer comes directly after the first.
+   * @param first the first integer
+   * @param second the second integer
+   * @return <tt>true</tt> if the second integer is one greater than the first
+   */
+  public static final boolean areConsecutive(int first, int second) {
+    return second - first == 1;
+  }
+
+  /**
+   * Determines whether two integers supplied as strings are strictly 
+   * consecutive, that is, whether the second integer comes directly after the 
+   * first. If the strings cannot be parsed as integers, an exception is thrown.
+   * Note that this method will also accept strings representing Roman numerals.
+   * 
+   * @param first the first string representing an integer
+   * @param second the second string representing an integer
+   * @return <tt>true</tt> if the strings could be parsed and the second integer is one greater than the first
+   * @throws NumberFormatException if the Strings do not represent valid numbers
+   */
+  public static final boolean areConsecutive(String first, String second) throws NumberFormatException {
+    return areConsecutive(parseInt(first), parseInt(second));
+  }
+
   /**
    * Returns a short from a String representing a number in the 
    * Arabic or Roman number system.
@@ -231,7 +264,10 @@ public class NumberUtil {
   
   /**
    * Returns an integer from a String representing a number in the 
-   * Arabic or Roman number system.
+   * Arabic or Roman number system. Trims the string first to allow for 
+   * whitespace. Java's <code>String.trim()</code> method trims blanks and 
+   * also control characters, but doesn't trim all the forms of blank 
+   * specified in the Unicode character set.
    * 
    * @param s the String
    * @return the number
@@ -241,6 +277,7 @@ public class NumberUtil {
   public static int parseInt(String s) 
     throws NumberFormatException {
     try {
+      if (!StringUtil.isNullString(s)) s = s.trim(); 
       return Integer.parseInt(s);
     } catch (NumberFormatException ex) {
       return NumberUtil.parseRomanNumber(s);
@@ -610,7 +647,7 @@ public class NumberUtil {
         + "\n");
     System.exit(-1);
   }
-        
+
   /**
    * This method is used for testing purposes.
    * @param args the test arguments
