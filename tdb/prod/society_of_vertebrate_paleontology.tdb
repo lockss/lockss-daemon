@@ -28,7 +28,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
     
-      param[journal_code] = vrpa
+      param[journal_id] = vrpa
 
       au < manifest ; 2000 ; Journal of Vertebrate Paleontology Volume 20 ; 20 >
       au < manifest ; 2001 ; Journal of Vertebrate Paleontology Volume 21 ; 21 >

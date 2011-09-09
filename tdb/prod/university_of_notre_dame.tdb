@@ -45,7 +45,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = amid
+      param[journal_id] = amid
 
       au < manifest ; 1998 ; The American Midland Naturalist Volume 139 ; 139 >
       au < manifest ; 1998 ; The American Midland Naturalist Volume 140 ; 140 >

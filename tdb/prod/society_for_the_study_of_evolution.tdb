@@ -27,7 +27,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = evol
+      param[journal_id] = evol
 
       au < manifest ; 2000 ; Evolution Volume 54 ; 54 >
       au < manifest ; 2001 ; Evolution Volume 55 ; 55 >

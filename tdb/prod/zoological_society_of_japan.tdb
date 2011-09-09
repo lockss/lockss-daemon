@@ -30,7 +30,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = jzoo
+      param[journal_id] = jzoo
       
       au < manifest ; 1995 ; Zoological Science Volume 12 ; 12 >
       au < manifest ; 1996 ; Zoological Science Volume 13 ; 13 >

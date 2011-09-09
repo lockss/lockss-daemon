@@ -27,7 +27,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = rama
+      param[journal_id] = rama
 
       au < manifest ; 2004 ; Rangeland Ecology & Management Volume 57 ; 57 >
       au < manifest ; 2005 ; Rangeland Ecology & Management Volume 58 ; 58 >
@@ -56,7 +56,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = rala
+      param[journal_id] = rala
 
       au < manifest ; 2004 ; Rangelands Volume 26 ; 26 >
       au < manifest ; 2005 ; Rangelands Volume 27 ; 27 >

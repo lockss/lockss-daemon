@@ -30,7 +30,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = weme
+      param[journal_id] = weme
       
       au < manifest ; 2005 ; Wilderness & Environmental Medicine Volume 16 ; 16 >
       au < manifest ; 2006 ; Wilderness & Environmental Medicine Volume 17 ; 17 >

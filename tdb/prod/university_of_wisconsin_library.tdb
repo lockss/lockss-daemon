@@ -27,7 +27,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = insc
+      param[journal_id] = insc
 
       au < manifest ; 2001 ; Journal of Insect Science Volume 1 ; 1 >
       au < manifest ; 2002 ; Journal of Insect Science Volume 2 ; 2 >

@@ -28,7 +28,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = swna
+      param[journal_id] = swna
       
       au < manifest ; 2003 ; The Southwestern Naturalist Volume 48 ; 48 >
       au < manifest ; 2004 ; The Southwestern Naturalist Volume 49 ; 49 >

@@ -17,7 +17,7 @@
       issnl = 1280-8571
     >
     
-    param[journal_code] = adan
+    param[journal_id] = adan
 
     au < manifest ; 2009 ; Adansonia Volume 31 ; 31 >
     au < manifest ; 2010 ; Adansonia Volume 32 ; 32 >
@@ -33,7 +33,7 @@
       issnl = 0761-3032 
     >
     
-    param[journal_code] = anth
+    param[journal_id] = anth
 
     au < manifest ; 2009 ; Anthropozoologica Volume 44 ; 44 >
     au < manifest ; 2010 ; Anthropozoologica Volume 45 ; 45 >
@@ -50,7 +50,7 @@
       issnl = 1280-9659 
     >
     
-    param[journal_code] = geod
+    param[journal_id] = geod
 
     au < manifest ; 2009 ; Geodiversitas Volume 31 ; 31 >
     au < manifest ; 2010 ; Geodiversitas Volume 32 ; 32 >
@@ -67,7 +67,7 @@
       issnl = 1280-9551 
     >
     
-    param[journal_code] = zoos
+    param[journal_id] = zoos
 
     au < manifest ; 2009 ; Zoosystema Volume 31 ; 31 >
     au < manifest ; 2010 ; Zoosystema Volume 32 ; 32 >

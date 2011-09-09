@@ -35,7 +35,7 @@
     
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = cope
+      param[journal_id] = cope
       implicit < status ; year ; name ; param[volume_name] >
 
       au < doNotProcess ; 2000 ; Copeia 2000 ; 2000 >  

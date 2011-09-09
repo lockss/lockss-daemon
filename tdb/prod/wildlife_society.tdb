@@ -18,7 +18,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wild
+      param[journal_id] = wild
   
       au < manifest ; 2004 ; Journal of Wildlife Management Volume 68 ; 68 >
       au < manifest ; 2005 ; Journal of Wildlife Management Volume 69 ; 69 >
@@ -63,7 +63,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wmon
+      param[journal_id] = wmon
 
       au < manifest ; 2006 ; Wildlife Monographs Number 161 ; 161 >
       au < manifest ; 2006 ; Wildlife Monographs Number 162 ; 162 >
@@ -112,7 +112,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wbul
+      param[journal_id] = wbul
 
       au < manifest ; 2004 ; Wildlife Society Bulletin Volume 32 ; 32 >
       au < manifest ; 2005 ; Wildlife Society Bulletin Volume 33 ; 33 >

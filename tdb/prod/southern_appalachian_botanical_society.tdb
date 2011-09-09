@@ -28,7 +28,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = cast
+      param[journal_id] = cast
 
       au < manifest ; 2002 ; Castanea Volume 68 ; 68 >
       au < manifest ; 2004 ; Castanea Volume 69 ; 69 >

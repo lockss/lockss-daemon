@@ -15,7 +15,7 @@
     plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.bioone.org/
-    param[journal_code] = ieam
+    param[journal_id] = ieam
   
     au < manifest ; 2005 ; Integrated Environmental Assessment and Management Volume 1 ; 1 >
     au < manifest ; 2006 ; Integrated Environmental Assessment and Management Volume 2 ; 2 >

@@ -35,7 +35,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wils
+      param[journal_id] = wils
   
       au < manifest ; 2000 ; The Wilson Bulletin Volume 112 ; 112 >
       au < manifest ; 2001 ; The Wilson Bulletin Volume 113 ; 113 >
@@ -76,7 +76,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wils
+      param[journal_id] = wils
 
       au < manifest ; 2006 ; The Wilson Bulletin Volume 118 ; 118 >
       au < manifest ; 2007 ; The Wilson Bulletin Volume 119 ; 119 >      

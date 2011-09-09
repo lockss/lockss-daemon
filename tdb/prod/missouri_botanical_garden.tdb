@@ -16,7 +16,7 @@
       issnl = 0026-6493
     >
     
-    param[journal_code] = mobt
+    param[journal_id] = mobt
 
     au < manifest ; 2006 ; Annals of the Missouri Botanical Garden Volume 93 ; 93 >
     au < manifest ; 2007 ; Annals of the Missouri Botanical Garden Volume 94 ; 94 >
@@ -35,7 +35,7 @@
       issnl = 1055-3177 
     >
     
-    param[journal_code] = novo
+    param[journal_id] = novo
 
     au < manifest ; 2006 ; Novon: A Journal for Botanical Nomenclature Volume 16 ; 16 >
     au < manifest ; 2007 ; Novon: A Journal for Botanical Nomenclature Volume 17 ; 17 >

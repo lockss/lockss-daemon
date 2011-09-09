@@ -16,7 +16,7 @@
     plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.bioone.org/
-    param[journal_code] = ipsm
+    param[journal_id] = ipsm
 
     au < manifest ; 2008 ; Invasive Plant Science and Management Volume 1 ; 1 >
     au < manifest ; 2009 ; Invasive Plant Science and Management Volume 2 ; 2 >
@@ -58,7 +58,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wees
+      param[journal_id] = wees
 
       au < manifest ; 2000 ; Weed Science Volume 48 ; 48 >
       au < manifest ; 2001 ; Weed Science Volume 49 ; 49 >
@@ -110,7 +110,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wete
+      param[journal_id] = wete
 
       au < manifest ; 2000 ; Weed Technology Volume 14 ; 14 >
       au < manifest ; 2001 ; Weed Technology Volume 15 ; 15 >

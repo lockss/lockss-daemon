@@ -124,7 +124,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = bire
+      param[journal_id] = bire
 
       au < manifest ; 2000 ; Biology of Reproduction Volume 62 ; 62 >
       au < manifest ; 2000 ; Biology of Reproduction Volume 63 ; 63 >

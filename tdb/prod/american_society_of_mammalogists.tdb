@@ -37,7 +37,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = mamm
+      param[journal_id] = mamm
   
       au < exists ; 2005 ; Journal of Mammalogy Volume 86 ; 86 >      
 

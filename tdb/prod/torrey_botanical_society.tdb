@@ -17,7 +17,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = tbot
+      param[journal_id] = tbot
 
       au < manifest ; 2005 ; The Journal of the Torrey Botanical Society Volume 132 ; 132 >
       au < manifest ; 2006 ; The Journal of the Torrey Botanical Society Volume 133 ; 133 >

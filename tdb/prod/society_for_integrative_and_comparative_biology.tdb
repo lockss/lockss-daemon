@@ -29,7 +29,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = azoo
+      param[journal_id] = azoo
 
       au < manifest ; 2000 ; American Zoologist Volume 40 ; 40 >
       au < manifest ; 2001 ; American Zoologist Volume 41 ; 41 >
@@ -66,7 +66,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = icbi
+      param[journal_id] = icbi
 
       au < manifest ; 2002 ; Integrative and Comparative Biology Volume 42 ; 42 >
       au < manifest ; 2003 ; Integrative and Comparative Biology Volume 43 ; 43 >

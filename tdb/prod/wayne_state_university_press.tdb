@@ -116,7 +116,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = hbio
+      param[journal_id] = hbio
 
       au < manifest ; 2006 ; Human Biology Volume 78 ; 78 >
       au < manifest ; 2007 ; Human Biology Volume 79 ; 79 >

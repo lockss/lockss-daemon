@@ -27,7 +27,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = hpet
+      param[journal_id] = hpet
 
       au < manifest ; 2002 ; Journal of Herpetology Volume 36 ; 36 >
       au < manifest ; 2003 ; Journal of Herpetology Volume 37 ; 37 >

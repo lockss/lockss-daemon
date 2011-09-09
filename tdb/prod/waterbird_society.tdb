@@ -28,7 +28,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = cowa
+      param[journal_id] = cowa
 
       au < manifest ; 2002 ; Waterbirds Volume 25 ; 25 >
       au < manifest ; 2003 ; Waterbirds Volume 26 ; 26 >

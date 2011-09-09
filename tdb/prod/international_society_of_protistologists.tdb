@@ -15,7 +15,7 @@
       issnl = 1066-5234
     >
     
-    param[journal_code] = eumi
+    param[journal_id] = eumi
   
     au < exists ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
     au < exists ; 2001-2002 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >

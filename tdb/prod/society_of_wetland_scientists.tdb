@@ -30,7 +30,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wtbl
+      param[journal_id] = wtbl
       
       au < manifest ; 2000 ; Wetland Science and Practice Volume 17 ; 17 >
       au < manifest ; 2001 ; Wetland Science and Practice Volume 18 ; 18 >
@@ -70,7 +70,7 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = wetl
+      param[journal_id] = wetl
 
       au < manifest ; 2000 ; Wetlands Volume 20 ; 20 >
       au < manifest ; 2001 ; Wetlands Volume 21 ; 21 >

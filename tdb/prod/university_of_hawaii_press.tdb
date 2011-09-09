@@ -476,7 +476,7 @@ comment[mn20] = URL with 403 Forbidden error
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
-      param[journal_code] = pasc
+      param[journal_id] = pasc
   
       au < manifest ; 2005 ; Pacific Science Volume 59 ; 59 >
       au < manifest ; 2006 ; Pacific Science Volume 60 ; 60 >

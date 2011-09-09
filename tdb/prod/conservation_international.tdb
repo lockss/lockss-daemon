@@ -14,7 +14,7 @@
     >
     
     comment[aabs_issn] = There is no issn for this title which appears to be a serial book. Each AU has an associated isbn.
-    param[journal_code] = aabs
+    param[journal_id] = aabs
   
     au < exists ; 2003 ; Advances in Applied Biodiversity Science 2003 ; 2003 >
     au < exists ; 2004 ; Advances in Applied Biodiversity Science 2004 ; 2004 >
@@ -29,7 +29,7 @@
       issnl = 1413-4411
     >
     
-    param[journal_code] = eden
+    param[journal_id] = eden
   
     au < exists ; 2004 ; Edentata 2004 ; 2004 >
     au < exists ; 2006 ; Edentata 2006 ; 2006 >
@@ -44,7 +44,7 @@
       issnl = 1413-4705
     >
     
-    param[journal_code] = nepr
+    param[journal_id] = nepr
   
     au < exists ; 2004 ; Neotropical Primates 2004 ; 2004 >
     au < exists ; 2005 ; Neotropical Primates 2005 ; 2005 >
@@ -61,7 +61,7 @@
       issnl = 0898-6207
     >
     
-    param[journal_code] = prco
+    param[journal_id] = prco
   
     au < exists ; 2006 ; Primate Conservation 2006 ; 2006 >
     au < exists ; 2007 ; Primate Conservation 2007 ; 2007 >

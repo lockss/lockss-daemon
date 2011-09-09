@@ -15,7 +15,7 @@
     plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.bioone.org/
-    param[journal_code] = etbi
+    param[journal_id] = etbi
 
     au < manifest ; 2005 ; Journal of Ethnobiology Volume 25 ; 25 >
     au < manifest ; 2006 ; Journal of Ethnobiology Volume 26 ; 26 >
