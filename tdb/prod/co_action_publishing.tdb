@@ -18,6 +18,9 @@
 
       param[base_url] = http://www.innovationandentrepreneurship.net/
       param[journal_id] = aie
+      
+      au < exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
 
   }
   
@@ -26,27 +29,17 @@
     title <
       name = BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
       eissn = 2000-7493 ;
-      issnl = 2000-7493       
+      issnl = 2000-7493
     >
 
-    param[base_url] = http://www.childlitaesthetics.net/
-    param[journal_id] = blft
+      param[base_url] = http://www.childlitaesthetics.net/
+      param[journal_id] = blft
+
+      au < exists ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
+      au < exists ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
 
   }
 
-  {
-
-    title <
-      name = BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics ;
-      eissn = 2000-7493 ;
-      issnl = 2000-7493       
-    >
-
-    param[base_url] = http://www.childlitaesthetics.net/
-    param[journal_id] = blft
-
-  }
-    
   {
     title <
       name = Diabetic Foot & Ankle ;
@@ -55,9 +48,10 @@
     >
 
       param[base_url] = http://www.diabeticfootandankle.net/
-      param[journal_id] = dfa/
+      param[journal_id] = dfa
 
-    au < exists ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+    au < manifest ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
+    au < manifest ; 2011 ; Diabetic Foot & Ankle Volume 2 ; 2 ; 2011 >
     
   }
 
@@ -86,19 +80,13 @@
       eissn = 2000-8066 ;
       issnl = 2000-8066
     >
-
-  }
-
-  {
-    title <
-      name = European Journal of Psychotraumatology Supplement ;
-      issn = 2000-8198 ;
-      eissn = 2000-818X ;
-      issnl = 2000-8198
-    >
-
-      param[base_url] = http://www.polarresearch.net/
-      param[journal_id] = ejpt
+    
+    param[base_url] = http://www.eurojnlofpsychotraumatol.net/
+    param[journal_id] = ejpt
+    
+    au < exists ; 2010 ; European Journal of Psychotraumatology Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; European Journal of Psychotraumatology Volume 2 ; 2 ; 2011 >
+    
 
   }
 
@@ -125,6 +113,7 @@
     au < notReady ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < ready ; 2009 ; Food & Nutrition Research Volume 53 ; 53 ; 2009 >
     au < manifest ; 2010 ; Food & Nutrition Research Volume 54 ; 54 ; 2010 >
+    au < exists ; 2011 ; Food & Nutrition Research Volume 55 ; 55 ; 2011 >
 
   }
 
@@ -143,6 +132,7 @@
     au < ready ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
     au < ready ; 2009 ; Global Health Action Volume 2 ; 2 ; 2009 >
     au < manifest ; 2010 ; Global Health Action Volume 3 ; 3 ; 2010 >
+    au < exists ; 2011 ; Global Health Action Volume 4 ; 4 ; 2011 >
 
   }
 
@@ -153,8 +143,10 @@
       issnl = 2000-8686
     >
 
-      param[base_url] = http://www.infectionecologyandepidemiology.net/
-      param[journal_id] = iee
+    param[base_url] = http://www.infectionecologyandepidemiology.net/
+    param[journal_id] = iee
+
+    au < exists ; 2011 ; Infection Ecology & Epidemiology Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -175,6 +167,7 @@
     au < manifest ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < manifest ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
+    au < exists ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
 
   }
 
@@ -191,6 +184,7 @@
 
     au < manifest ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < manifest ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -209,19 +203,6 @@
 
   }
   
-    {
-
-    title <
-      name = Journal of Community Hospital Internal Medicine Perspectives ;
-      eissn = 2000-9666 ;
-      issnl = 2000-9666
-    >
-
-    param[base_url] = http://www.jchimp.net/
-    param[journal_id] = jchimp
-
-  }
-
   {
 
     title <
@@ -235,6 +216,7 @@
 
     au < ready ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < manifest ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -255,6 +237,7 @@
     au < manifest ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < manifest ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < manifest ; 2010 ; Libyan Journal of Medicine Volume 5 ; 5 ; 2010 >
+    au < exists ; 2011 ; Libyan Journal of Medicine Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -267,6 +250,9 @@
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
+
+    au < exists ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -296,6 +282,7 @@
     au < manifest ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
     au < manifest ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
     au < manifest ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
     
   }
 
@@ -311,7 +298,28 @@
     param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = mehd
 
-    au < manifest ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
+    au < exists ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 2011 >
+    au < exists ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 2011 >
+    au < exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 2011 >
+    au < exists ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 2011 >
+    au < exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 2011 >
+    au < exists ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 2011 >
+    au < exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 2011 >
+    au < exists ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 2011 >
+    au < exists ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 2011 >
+    au < exists ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
+    au < exists ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
+    au < exists ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
+    au < exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
+    au < exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
+    au < exists ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < exists ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
+    au < exists ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < exists ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
+    au < exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
+    au < exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
+    au < exists ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
+    au < exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
 
   }
 
