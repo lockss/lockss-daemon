@@ -4,7 +4,7 @@
     name = INFORMS Applied Probability Society
   >
 
-  implicit < status ; year ; name ; param[volume] >
+  implicit < status ; year ; name ; volume ; param[year] >
 
   {
 
@@ -17,7 +17,7 @@
     param[base_url] = http://www.i-journals.org/
     param[journal_id] = ssy
 
-    au < exists ; 2011 ; Stochastic Systems Volume 1 ; 1 >
+    au < exists ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
 
   }
 
