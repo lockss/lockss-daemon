@@ -15,10 +15,11 @@
     param[base_url] = http://www.ijcv.org/
     param[journal_id] = ijcv
 
-    au < exists ; 2007 ; International Journal of Conflict and Violence Volume 1 ; 1 ; 2007 >
-    au < exists ; 2008 ; International Journal of Conflict and Violence Volume 2 ; 2 ; 2008 >
-    au < exists ; 2009 ; International Journal of Conflict and Violence Volume 3 ; 3 ; 2009 >
-    au < exists ; 2010 ; International Journal of Conflict and Violence Volume 4 ; 4 ; 2010 >
+    au < manifest ; 2007 ; International Journal of Conflict and Violence Volume 1 ; 1 ; 2007 >
+    au < manifest ; 2008 ; International Journal of Conflict and Violence Volume 2 ; 2 ; 2008 >
+    au < manifest ; 2009 ; International Journal of Conflict and Violence Volume 3 ; 3 ; 2009 >
+    au < manifest ; 2010 ; International Journal of Conflict and Violence Volume 4 ; 4 ; 2010 >
+    au < exists ; 2011 ; International Journal of Conflict and Violence Volume 5 ; 5 ; 2011 >
 
   }
 
