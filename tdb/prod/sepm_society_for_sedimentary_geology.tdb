@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jsedres.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -114,7 +114,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://palaios.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 

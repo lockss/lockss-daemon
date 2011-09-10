@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://aja.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -50,7 +50,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ajslp.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -105,7 +105,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jshd.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -179,7 +179,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jslhr.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -250,7 +250,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://lshss.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -308,7 +308,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div11perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -339,7 +339,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://accperspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -363,7 +363,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div12perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -395,7 +395,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div7perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -424,7 +424,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div14perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -456,7 +456,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div4perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -488,7 +488,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div15perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -520,7 +520,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div9perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -552,7 +552,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div6perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -584,7 +584,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div8perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -611,7 +611,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div10perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -641,7 +641,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div1perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -673,7 +673,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div2perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -705,7 +705,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div16perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -734,7 +734,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div5perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -765,7 +765,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div13perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -797,7 +797,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://div3perspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
