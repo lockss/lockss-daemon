@@ -22,12 +22,12 @@
       param[base_url] = http://www.cosmosandhistory.org/
       param[journal_id] = journal
       
-      au < testing ; 2005 ; Cosmos and History Volume 1 ; 1 ; 2005 >
-      au < testing ; 2006 ; Cosmos and History Volume 2 ; 2 ; 2006 >
-      au < testing ; 2007 ; Cosmos and History Volume 3 ; 3 ; 2007 >
-      au < testing ; 2008 ; Cosmos and History Volume 4 ; 4 ; 2008 >
-      au < testing ; 2009 ; Cosmos and History Volume 5 ; 5 ; 2009 >
-      au < testing ; 2010 ; Cosmos and History Volume 6 ; 6 ; 2010 >
+      au < ready ; 2005 ; Cosmos and History Volume 1 ; 1 ; 2005 >
+      au < ready ; 2006 ; Cosmos and History Volume 2 ; 2 ; 2006 >
+      au < ready ; 2007 ; Cosmos and History Volume 3 ; 3 ; 2007 >
+      au < ready ; 2008 ; Cosmos and History Volume 4 ; 4 ; 2008 >
+      au < ready ; 2009 ; Cosmos and History Volume 5 ; 5 ; 2009 >
+      au < ready ; 2010 ; Cosmos and History Volume 6 ; 6 ; 2010 >
     
     }
   
@@ -41,14 +41,15 @@
     
       param[base_url] = http://www.culturemachine.net/
       param[journal_id] = cm
+      comment[Interzone] =  we need to update the year of Culture Machine Interzone every year 
       
-      au < testing ; 0 ; Culture Machine Interzone ; 0 ; >
-      au < testing ; 1999 ; Culture Machine Volume 1 ; 1 ; 1999 >
-      au < testing ; 2000 ; Culture Machine Volume 2 ; 2 ; 2000 >
-      au < testing ; 2001 ; Culture Machine Volume 3 ; 3 ; 2001 >
-      au < testing ; 2002 ; Culture Machine Volume 4 ; 4 ; 2002 >
-      au < testing ; 2003 ; Culture Machine Volume 5 ; 5 ; 2003 >
-      au < testing ; 2004 ; Culture Machine Volume 6 ; 6 ; 2004 >
+      au < testing ; 2001-2010 ; Culture Machine Interzone ; 0 ; 0>
+      au < ready ; 1999 ; Culture Machine Volume 1 ; 1 ; 1999 >
+      au < ready ; 2000 ; Culture Machine Volume 2 ; 2 ; 2000 >
+      au < ready ; 2001 ; Culture Machine Volume 3 ; 3 ; 2001 >
+      au < ready ; 2002 ; Culture Machine Volume 4 ; 4 ; 2002 >
+      au < ready ; 2003 ; Culture Machine Volume 5 ; 5 ; 2003 >
+      au < ready ; 2004 ; Culture Machine Volume 6 ; 6 ; 2004 >
       au < testing ; 2005 ; Culture Machine Volume 7 ; 7 ; 2005 >
       au < testing ; 2006 ; Culture Machine Volume 8 ; 8 ; 2006 >
       au < testing ; 2007 ; Culture Machine Volume 9 ; 9 ; 2007 >
@@ -123,13 +124,13 @@
       param[base_url] = http://www.filozofskivestnikonline.com/
       param[journal_id] = journal
       
-      au < testing ; 2004 ; Filozofski Vestnik Volume 2004 ; 2004 ; 2004 >
-      au < testing ; 2005 ; Filozofski Vestnik Volume 2005 ; 2005 ; 2005 >
-      au < testing ; 2006 ; Filozofski Vestnik Volume 2006 ; 2006 ; 2006 >
-      au < testing ; 2007 ; Filozofski Vestnik Volume 2007 ; 2007 ; 2007 >
-      au < testing ; 2008 ; Filozofski Vestnik Volume 2008 ; 2008 ; 2008 >
-      au < testing ; 2009 ; Filozofski Vestnik Volume 2009 ; 2009 ; 2009 >
-      au < testing ; 2010 ; Filozofski Vestnik Volume 2010 ; 2010 ; 2010 >
+      au < ready ; 2004 ; Filozofski Vestnik Volume 2004 ; 2004 ; 2004 >
+      au < ready ; 2005 ; Filozofski Vestnik Volume 2005 ; 2005 ; 2005 >
+      au < ready ; 2006 ; Filozofski Vestnik Volume 2006 ; 2006 ; 2006 >
+      au < ready ; 2007 ; Filozofski Vestnik Volume 2007 ; 2007 ; 2007 >
+      au < ready ; 2008 ; Filozofski Vestnik Volume 2008 ; 2008 ; 2008 >
+      au < ready ; 2009 ; Filozofski Vestnik Volume 2009 ; 2009 ; 2009 >
+      au < ready ; 2010 ; Filozofski Vestnik Volume 2010 ; 2010 ; 2010 >
     
     }
     
@@ -191,12 +192,12 @@
       param[base_url] = http://journals.sfu.ca/pocol/
       param[journal_id] = pct
       
-      au < testing ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
-      au < testing ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
-      au < testing ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
+      au < ready ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
+      au < ready ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
+      au < ready ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
       au < testing ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
-      au < testing ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
-      au < testing ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
+      au < ready ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
+      au < ready ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
     
     }
   
