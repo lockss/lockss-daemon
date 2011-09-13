@@ -4,12 +4,6 @@
     name = Royal Society of Medicine Press
   >
 
-  { 
-  
-    comment[0] = missing manifests requested--see roundup issue 3635
-
-  }
-
   {
   
     title <
@@ -52,22 +46,22 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://acb.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < released ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
-      au < released ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
-      au < released ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
-      au < released ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
-      au < released ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
-      au < released ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
-      au < released ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
-      au < released ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
-      au < released ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
-      au < released ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
-      au < released ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
-      au < released ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      
+      au < HighWirePressPlugin ; down ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < HighWirePressPlugin ; down ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < HighWirePressPlugin ; down ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < HighWirePressPlugin ; down ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < HighWirePressPlugin ; down ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < HighWirePressPlugin ; down ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < HighWirePressPlugin ; down ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < HighWirePressPlugin ; down ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < HighWirePressPlugin ; down ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < HighWirePressPlugin ; down ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < HighWirePressPlugin ; down ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < HighWirePressPlugin ; down ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 >
 
     }
 
@@ -84,16 +78,16 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ce.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2006 ; Clinical Ethics Volume 1 ; 1 >
-      au < released ; 2007 ; Clinical Ethics Volume 2 ; 2 >
-      au < released ; 2008 ; Clinical Ethics Volume 3 ; 3 >
-      au < released ; 2009 ; Clinical Ethics Volume 4 ; 4 >
-      au < released ; 2010 ; Clinical Ethics Volume 5 ; 5 >
-      au < released ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2006 ; Clinical Ethics Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 2007 ; Clinical Ethics Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 2008 ; Clinical Ethics Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 2009 ; Clinical Ethics Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 2010 ; Clinical Ethics Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 2011 ; Clinical Ethics Volume 6 ; 6 >
 
     }
 
@@ -110,21 +104,21 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://cr.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001 ; Clinical Risk Volume 7 ; 7 >
-      au < released ; 2002 ; Clinical Risk Volume 8 ; 8 >
-      au < released ; 2003 ; Clinical Risk Volume 9 ; 9 >
-      au < released ; 2004 ; Clinical Risk Volume 10 ; 10 >
-      au < released ; 2005 ; Clinical Risk Volume 11 ; 11 >
-      au < released ; 2006 ; Clinical Risk Volume 12 ; 12 >
-      au < released ; 2007 ; Clinical Risk Volume 13 ; 13 >
-      au < released ; 2008 ; Clinical Risk Volume 14 ; 14 >
-      au < released ; 2009 ; Clinical Risk Volume 15 ; 15 >
-      au < released ; 2010 ; Clinical Risk Volume 16 ; 16 >
-      au < released ; 2011 ; Clinical Risk Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2001 ; Clinical Risk Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2002 ; Clinical Risk Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2003 ; Clinical Risk Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2004 ; Clinical Risk Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2005 ; Clinical Risk Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2006 ; Clinical Risk Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2007 ; Clinical Risk Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2008 ; Clinical Risk Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2009 ; Clinical Risk Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2010 ; Clinical Risk Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2011 ; Clinical Risk Volume 17 ; 17 >
 
     }
 
@@ -140,7 +134,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ebm.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -213,56 +207,56 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://hii.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < released ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
-      au < released ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
-      au < released ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
-      au < released ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
-      au < released ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
-      au < released ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
-      au < released ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
-      au < released ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
-      au < released ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
-      au < released ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
-      au < released ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
-      au < released ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
-      au < released ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-      au < manifest ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
-      au < released ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
-      au < released ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://ht.rsmjournals.com/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+      au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
+      au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+      au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+      au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
+      au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
+      au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+      au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+      au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+      au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+      au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+      au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+      au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
 
     }
 
@@ -279,21 +273,21 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://hsmr.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001 ; Health Services Management Research Volume 14 ; 14 >
-      au < released ; 2002 ; Health Services Management Research Volume 15 ; 15 >
-      au < released ; 2003 ; Health Services Management Research Volume 16 ; 16 >
-      au < released ; 2004 ; Health Services Management Research Volume 17 ; 17 >
-      au < released ; 2005 ; Health Services Management Research Volume 18 ; 18 >
-      au < released ; 2006 ; Health Services Management Research Volume 19 ; 19 >
-      au < released ; 2007 ; Health Services Management Research Volume 20 ; 20 >
-      au < released ; 2008 ; Health Services Management Research Volume 21 ; 21 >
-      au < released ; 2009 ; Health Services Management Research Volume 22 ; 22 >
-      au < released ; 2010 ; Health Services Management Research Volume 23 ; 23 >
-      au < released ; 2011 ; Health Services Management Research Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 2001 ; Health Services Management Research Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2002 ; Health Services Management Research Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2003 ; Health Services Management Research Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2004 ; Health Services Management Research Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2005 ; Health Services Management Research Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2006 ; Health Services Management Research Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2007 ; Health Services Management Research Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 2008 ; Health Services Management Research Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 2009 ; Health Services Management Research Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 2010 ; Health Services Management Research Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 2011 ; Health Services Management Research Volume 24 ; 24 >
 
     }
 
@@ -310,17 +304,17 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://ijcp.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
-      au < released ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
-      au < released ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
-      au < released ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
-      au < released ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
-      au < released ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
-      au < released ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
 
     }
 
@@ -337,26 +331,26 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://ijsa.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
-      au < released ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
-      au < released ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
-      au < released ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
-      au < released ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
-      au < released ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
-      au < released ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
-      au < released ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
-      au < released ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
-      au < released ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
-      au < released ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
-      au < released ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
-      au < released ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
-      au < released ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
-      au < released ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
-      au < released ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
 
     }
 
@@ -373,21 +367,21 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://jhsrp.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-      au < released ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-      au < released ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-      au < released ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-      au < released ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-      au < released ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-      au < released ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-      au < released ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-      au < released ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-      au < released ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-      au < released ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
 
     }
 
@@ -404,17 +398,17 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://jmb.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
-      au < released ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
-      au < released ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
-      au < released ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
-      au < released ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
-      au < released ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
-      au < released ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
 
     }
 
@@ -433,22 +427,22 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jms.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
-      au < released ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
-      au < released ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
-      au < released ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
-      au < released ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
-      au < released ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
-      au < released ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
-      au < released ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
-      au < released ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
-      au < released ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
-      au < released ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
-      au < released ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
-      au < released ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
-      au < released ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
 
     }
 
@@ -465,26 +459,26 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://jtt.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-      au < released ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-      au < released ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-      au < released ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-      au < released ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-      au < released ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-      au < released ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-      au < released ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-      au < released ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-      au < released ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-      au < released ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-      au < released ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-      au < released ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-      au < released ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-      au < released ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-      au < released ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
 
     }
 
@@ -501,57 +495,57 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://jrsm.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1965 ; JRSM Volume 58 ; 58 >
-      au < released ; 1966 ; JRSM Volume 59 ; 59 >
-      au < released ; 1967 ; JRSM Volume 60 ; 60 >
-      au < released ; 1968 ; JRSM Volume 61 ; 61 >
-      au < released ; 1969 ; JRSM Volume 62 ; 62 >
-      au < released ; 1970 ; JRSM Volume 63 ; 63 >
-      au < released ; 1971 ; JRSM Volume 64 ; 64 >
-      au < released ; 1972 ; JRSM Volume 65 ; 65 >
-      au < released ; 1973 ; JRSM Volume 66 ; 66 >
-      au < released ; 1974 ; JRSM Volume 67 ; 67 >
-      au < released ; 1975 ; JRSM Volume 68 ; 68 >
-      au < released ; 1976 ; JRSM Volume 69 ; 69 >
-      au < released ; 1977 ; JRSM Volume 70 ; 70 >
-      au < released ; 1978 ; JRSM Volume 71 ; 71 >
-      au < released ; 1979 ; JRSM Volume 72 ; 72 >
-      au < released ; 1980 ; JRSM Volume 73 ; 73 >
-      au < released ; 1981 ; JRSM Volume 74 ; 74 >
-      au < released ; 1982 ; JRSM Volume 75 ; 75 >
-      au < released ; 1983 ; JRSM Volume 76 ; 76 >
-      au < released ; 1984 ; JRSM Volume 77 ; 77 >
-      au < released ; 1985 ; JRSM Volume 78 ; 78 >
-      au < released ; 1986 ; JRSM Volume 79 ; 79 >
-      au < released ; 1987 ; JRSM Volume 80 ; 80 >
-      au < released ; 1988 ; JRSM Volume 81 ; 81 >
-      au < released ; 1989 ; JRSM Volume 82 ; 82 >
-      au < released ; 1990 ; JRSM Volume 83 ; 83 >
-      au < released ; 1991 ; JRSM Volume 84 ; 84 >
-      au < released ; 1992 ; JRSM Volume 85 ; 85 >
-      au < released ; 1993 ; JRSM Volume 86 ; 86 >
-      au < released ; 1994 ; JRSM Volume 87 ; 87 >
-      au < released ; 1995 ; JRSM Volume 88 ; 88 >
-      au < released ; 1996 ; JRSM Volume 89 ; 89 >
-      au < released ; 1997 ; JRSM Volume 90 ; 90 >
-      au < released ; 1998 ; JRSM Volume 91 ; 91 >
-      au < released ; 1999 ; JRSM Volume 92 ; 92 >
-      au < released ; 2000 ; JRSM Volume 93 ; 93 >
-      au < released ; 2001 ; JRSM Volume 94 ; 94 >
-      au < released ; 2002 ; JRSM Volume 95 ; 95 >
-      au < released ; 2003 ; JRSM Volume 96 ; 96 >
-      au < released ; 2004 ; JRSM Volume 97 ; 97 >
-      au < released ; 2005 ; JRSM Volume 98 ; 98 >
-      au < released ; 2006 ; JRSM Volume 99 ; 99 >
-      au < released ; 2007 ; JRSM Volume 100 ; 100 >
-      au < released ; 2008 ; JRSM Volume 101 ; 101 >
-      au < released ; 2009 ; JRSM Volume 102 ; 102 >
-      au < released ; 2010 ; JRSM Volume 103 ; 103 >
-      au < released ; 2011 ; JRSM Volume 104 ; 104 >
+      au < HighWirePressPlugin ; down ; 1965 ; JRSM Volume 58 ; 58 >
+      au < HighWirePressPlugin ; down ; 1966 ; JRSM Volume 59 ; 59 >
+      au < HighWirePressPlugin ; down ; 1967 ; JRSM Volume 60 ; 60 >
+      au < HighWirePressPlugin ; down ; 1968 ; JRSM Volume 61 ; 61 >
+      au < HighWirePressPlugin ; down ; 1969 ; JRSM Volume 62 ; 62 >
+      au < HighWirePressPlugin ; down ; 1970 ; JRSM Volume 63 ; 63 >
+      au < HighWirePressPlugin ; down ; 1971 ; JRSM Volume 64 ; 64 >
+      au < HighWirePressPlugin ; down ; 1972 ; JRSM Volume 65 ; 65 >
+      au < HighWirePressPlugin ; down ; 1973 ; JRSM Volume 66 ; 66 >
+      au < HighWirePressPlugin ; down ; 1974 ; JRSM Volume 67 ; 67 >
+      au < HighWirePressPlugin ; down ; 1975 ; JRSM Volume 68 ; 68 >
+      au < HighWirePressPlugin ; down ; 1976 ; JRSM Volume 69 ; 69 >
+      au < HighWirePressPlugin ; down ; 1977 ; JRSM Volume 70 ; 70 >
+      au < HighWirePressPlugin ; down ; 1978 ; JRSM Volume 71 ; 71 >
+      au < HighWirePressPlugin ; down ; 1979 ; JRSM Volume 72 ; 72 >
+      au < HighWirePressPlugin ; down ; 1980 ; JRSM Volume 73 ; 73 >
+      au < HighWirePressPlugin ; down ; 1981 ; JRSM Volume 74 ; 74 >
+      au < HighWirePressPlugin ; down ; 1982 ; JRSM Volume 75 ; 75 >
+      au < HighWirePressPlugin ; down ; 1983 ; JRSM Volume 76 ; 76 >
+      au < HighWirePressPlugin ; down ; 1984 ; JRSM Volume 77 ; 77 >
+      au < HighWirePressPlugin ; down ; 1985 ; JRSM Volume 78 ; 78 >
+      au < HighWirePressPlugin ; down ; 1986 ; JRSM Volume 79 ; 79 >
+      au < HighWirePressPlugin ; down ; 1987 ; JRSM Volume 80 ; 80 >
+      au < HighWirePressPlugin ; down ; 1988 ; JRSM Volume 81 ; 81 >
+      au < HighWirePressPlugin ; down ; 1989 ; JRSM Volume 82 ; 82 >
+      au < HighWirePressPlugin ; down ; 1990 ; JRSM Volume 83 ; 83 >
+      au < HighWirePressPlugin ; down ; 1991 ; JRSM Volume 84 ; 84 >
+      au < HighWirePressPlugin ; down ; 1992 ; JRSM Volume 85 ; 85 >
+      au < HighWirePressPlugin ; down ; 1993 ; JRSM Volume 86 ; 86 >
+      au < HighWirePressPlugin ; down ; 1994 ; JRSM Volume 87 ; 87 >
+      au < HighWirePressPlugin ; down ; 1995 ; JRSM Volume 88 ; 88 >
+      au < HighWirePressPlugin ; down ; 1996 ; JRSM Volume 89 ; 89 >
+      au < HighWirePressPlugin ; down ; 1997 ; JRSM Volume 90 ; 90 >
+      au < HighWirePressPlugin ; down ; 1998 ; JRSM Volume 91 ; 91 >
+      au < HighWirePressPlugin ; down ; 1999 ; JRSM Volume 92 ; 92 >
+      au < HighWirePressPlugin ; down ; 2000 ; JRSM Volume 93 ; 93 >
+      au < HighWirePressPlugin ; down ; 2001 ; JRSM Volume 94 ; 94 >
+      au < HighWirePressPlugin ; down ; 2002 ; JRSM Volume 95 ; 95 >
+      au < HighWirePressPlugin ; down ; 2003 ; JRSM Volume 96 ; 96 >
+      au < HighWirePressPlugin ; down ; 2004 ; JRSM Volume 97 ; 97 >
+      au < HighWirePressPlugin ; down ; 2005 ; JRSM Volume 98 ; 98 >
+      au < HighWirePressPlugin ; down ; 2006 ; JRSM Volume 99 ; 99 >
+      au < HighWirePressPlugin ; down ; 2007 ; JRSM Volume 100 ; 100 >
+      au < HighWirePressPlugin ; down ; 2008 ; JRSM Volume 101 ; 101 >
+      au < HighWirePressPlugin ; down ; 2009 ; JRSM Volume 102 ; 102 >
+      au < HighWirePressPlugin ; down ; 2010 ; JRSM Volume 103 ; 103 >
+      au < HighWirePressPlugin ; down ; 2011 ; JRSM Volume 104 ; 104 >
 
     }
 
@@ -584,55 +578,55 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://la.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1967 ; Laboratory Animals Volume 1 ; 1 >
-      au < released ; 1968 ; Laboratory Animals Volume 2 ; 2 >
-      au < released ; 1969 ; Laboratory Animals Volume 3 ; 3 >
-      au < released ; 1970 ; Laboratory Animals Volume 4 ; 4 >
-      au < released ; 1971 ; Laboratory Animals Volume 5 ; 5 >
-      au < released ; 1972 ; Laboratory Animals Volume 6 ; 6 >
-      au < released ; 1973 ; Laboratory Animals Volume 7 ; 7 >
-      au < released ; 1974 ; Laboratory Animals Volume 8 ; 8 >
-      au < released ; 1975 ; Laboratory Animals Volume 9 ; 9 >
-      au < released ; 1976 ; Laboratory Animals Volume 10 ; 10 >
-      au < released ; 1977 ; Laboratory Animals Volume 11 ; 11 >
-      au < released ; 1978 ; Laboratory Animals Volume 12 ; 12 >
-      au < released ; 1979 ; Laboratory Animals Volume 13 ; 13 >
-      au < released ; 1980 ; Laboratory Animals Volume 14 ; 14 >
-      au < released ; 1981 ; Laboratory Animals Volume 15 ; 15 >
-      au < released ; 1982 ; Laboratory Animals Volume 16 ; 16 >
-      au < released ; 1983 ; Laboratory Animals Volume 17 ; 17 >
-      au < released ; 1984 ; Laboratory Animals Volume 18 ; 18 >
-      au < released ; 1985 ; Laboratory Animals Volume 19 ; 19 >
-      au < released ; 1986 ; Laboratory Animals Volume 20 ; 20 >
-      au < released ; 1987 ; Laboratory Animals Volume 21 ; 21 >
-      au < released ; 1988 ; Laboratory Animals Volume 22 ; 22 >
-      au < released ; 1989 ; Laboratory Animals Volume 23 ; 23 >
-      au < released ; 1990 ; Laboratory Animals Volume 24 ; 24 >
-      au < released ; 1991 ; Laboratory Animals Volume 25 ; 25 >
-      au < released ; 1992 ; Laboratory Animals Volume 26 ; 26 >
-      au < released ; 1993 ; Laboratory Animals Volume 27 ; 27 >
-      au < released ; 1994 ; Laboratory Animals Volume 28 ; 28 >
-      au < released ; 1995 ; Laboratory Animals Volume 29 ; 29 >
-      au < released ; 1996 ; Laboratory Animals Volume 30 ; 30 >
-      au < released ; 1997 ; Laboratory Animals Volume 31 ; 31 >
-      au < released ; 1998 ; Laboratory Animals Volume 32 ; 32 >
-      au < released ; 1999 ; Laboratory Animals Volume 33 ; 33 >
-      au < released ; 2000 ; Laboratory Animals Volume 34 ; 34 >
-      au < released ; 2001 ; Laboratory Animals Volume 35 ; 35 >
-      au < released ; 2002 ; Laboratory Animals Volume 36 ; 36 >
-      au < released ; 2003 ; Laboratory Animals Volume 37 ; 37 >
-      au < released ; 2004 ; Laboratory Animals Volume 38 ; 38 >
-      au < released ; 2005 ; Laboratory Animals Volume 39 ; 39 >
-      au < released ; 2006 ; Laboratory Animals Volume 40 ; 40 >
-      au < released ; 2007 ; Laboratory Animals Volume 41 ; 41 >
-      au < released ; 2008 ; Laboratory Animals Volume 42 ; 42 >
-      au < released ; 2009 ; Laboratory Animals Volume 43 ; 43 >
-      au < released ; 2010 ; Laboratory Animals Volume 44 ; 44 >
-      au < released ; 2011 ; Laboratory Animals Volume 45 ; 45 >
+      au < HighWirePressPlugin ; down ; 1967 ; Laboratory Animals Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 1968 ; Laboratory Animals Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 1969 ; Laboratory Animals Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 1970 ; Laboratory Animals Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 1971 ; Laboratory Animals Volume 5 ; 5 >
+      au < HighWirePressPlugin ; down ; 1972 ; Laboratory Animals Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 1973 ; Laboratory Animals Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 1974 ; Laboratory Animals Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 1975 ; Laboratory Animals Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 1976 ; Laboratory Animals Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 1977 ; Laboratory Animals Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 1978 ; Laboratory Animals Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 1979 ; Laboratory Animals Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 1980 ; Laboratory Animals Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 1981 ; Laboratory Animals Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 1982 ; Laboratory Animals Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 1983 ; Laboratory Animals Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 1984 ; Laboratory Animals Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 1985 ; Laboratory Animals Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 1986 ; Laboratory Animals Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 1987 ; Laboratory Animals Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 1988 ; Laboratory Animals Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 1989 ; Laboratory Animals Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 1990 ; Laboratory Animals Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 1991 ; Laboratory Animals Volume 25 ; 25 >
+      au < HighWirePressPlugin ; down ; 1992 ; Laboratory Animals Volume 26 ; 26 >
+      au < HighWirePressPlugin ; down ; 1993 ; Laboratory Animals Volume 27 ; 27 >
+      au < HighWirePressPlugin ; down ; 1994 ; Laboratory Animals Volume 28 ; 28 >
+      au < HighWirePressPlugin ; down ; 1995 ; Laboratory Animals Volume 29 ; 29 >
+      au < HighWirePressPlugin ; down ; 1996 ; Laboratory Animals Volume 30 ; 30 >
+      au < HighWirePressPlugin ; down ; 1997 ; Laboratory Animals Volume 31 ; 31 >
+      au < HighWirePressPlugin ; down ; 1998 ; Laboratory Animals Volume 32 ; 32 >
+      au < HighWirePressPlugin ; down ; 1999 ; Laboratory Animals Volume 33 ; 33 >
+      au < HighWirePressPlugin ; down ; 2000 ; Laboratory Animals Volume 34 ; 34 >
+      au < HighWirePressPlugin ; down ; 2001 ; Laboratory Animals Volume 35 ; 35 >
+      au < HighWirePressPlugin ; down ; 2002 ; Laboratory Animals Volume 36 ; 36 >
+      au < HighWirePressPlugin ; down ; 2003 ; Laboratory Animals Volume 37 ; 37 >
+      au < HighWirePressPlugin ; down ; 2004 ; Laboratory Animals Volume 38 ; 38 >
+      au < HighWirePressPlugin ; down ; 2005 ; Laboratory Animals Volume 39 ; 39 >
+      au < HighWirePressPlugin ; down ; 2006 ; Laboratory Animals Volume 40 ; 40 >
+      au < HighWirePressPlugin ; down ; 2007 ; Laboratory Animals Volume 41 ; 41 >
+      au < HighWirePressPlugin ; down ; 2008 ; Laboratory Animals Volume 42 ; 42 >
+      au < HighWirePressPlugin ; down ; 2009 ; Laboratory Animals Volume 43 ; 43 >
+      au < HighWirePressPlugin ; down ; 2010 ; Laboratory Animals Volume 44 ; 44 >
+      au < HighWirePressPlugin ; down ; 2011 ; Laboratory Animals Volume 45 ; 45 >
 
     }
 
@@ -648,7 +642,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://msl.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -676,23 +670,23 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://mlj.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-      au < released ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-      au < released ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-      au < released ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-      au < released ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-      au < released ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-      au < released ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-      au < released ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-      au < released ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-      au < released ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-      au < released ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-      au < released ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-      au < manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+      au < HighWirePressPlugin ; down ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+      au < HighWirePressPlugin ; down ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+      au < HighWirePressPlugin ; down ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+      au < HighWirePressPlugin ; down ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+      au < HighWirePressPlugin ; down ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+      au < HighWirePressPlugin ; down ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+      au < HighWirePressPlugin ; down ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+      au < HighWirePressPlugin ; down ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+      au < HighWirePressPlugin ; down ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+      au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+      au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+      au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
 
     }
 
@@ -709,22 +703,22 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://mi.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2000 ; Menopause International Volume 6 ; 6 >
-      au < released ; 2001 ; Menopause International Volume 7 ; 7 >
-      au < released ; 2002 ; Menopause International Volume 8 ; 8 >
-      au < released ; 2003 ; Menopause International Volume 9 ; 9 >
-      au < released ; 2004 ; Menopause International Volume 10 ; 10 >
-      au < released ; 2005 ; Menopause International Volume 11 ; 11 >
-      au < released ; 2006 ; Menopause International Volume 12 ; 12 >
-      au < released ; 2007 ; Menopause International Volume 13 ; 13 >
-      au < released ; 2008 ; Menopause International Volume 14 ; 14 >
-      au < released ; 2009 ; Menopause International Volume 15 ; 15 >
-      au < released ; 2010 ; Menopause International Volume 16 ; 16 >
-      au < released ; 2011 ; Menopause International Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2000 ; Menopause International Volume 6 ; 6 >
+      au < HighWirePressPlugin ; down ; 2001 ; Menopause International Volume 7 ; 7 >
+      au < HighWirePressPlugin ; down ; 2002 ; Menopause International Volume 8 ; 8 >
+      au < HighWirePressPlugin ; down ; 2003 ; Menopause International Volume 9 ; 9 >
+      au < HighWirePressPlugin ; down ; 2004 ; Menopause International Volume 10 ; 10 >
+      au < HighWirePressPlugin ; down ; 2005 ; Menopause International Volume 11 ; 11 >
+      au < HighWirePressPlugin ; down ; 2006 ; Menopause International Volume 12 ; 12 >
+      au < HighWirePressPlugin ; down ; 2007 ; Menopause International Volume 13 ; 13 >
+      au < HighWirePressPlugin ; down ; 2008 ; Menopause International Volume 14 ; 14 >
+      au < HighWirePressPlugin ; down ; 2009 ; Menopause International Volume 15 ; 15 >
+      au < HighWirePressPlugin ; down ; 2010 ; Menopause International Volume 16 ; 16 >
+      au < HighWirePressPlugin ; down ; 2011 ; Menopause International Volume 17 ; 17 >
 
     }
 
@@ -741,14 +735,14 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://obmed.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
-      au < released ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
-      au < released ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
-      au < released ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
+      au < HighWirePressPlugin ; down ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
+      au < HighWirePressPlugin ; down ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
+      au < HighWirePressPlugin ; down ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
+      au < HighWirePressPlugin ; down ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
 
     }
 
@@ -765,19 +759,19 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://phleb.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2003 ; Phlebology Volume 18 ; 18 >
-      au < released ; 2004 ; Phlebology Volume 19 ; 19 >
-      au < released ; 2005 ; Phlebology Volume 20 ; 20 >
-      au < released ; 2006 ; Phlebology Volume 21 ; 21 >
-      au < released ; 2007 ; Phlebology Volume 22 ; 22 >
-      au < released ; 2008 ; Phlebology Volume 23 ; 23 >
-      au < released ; 2009 ; Phlebology Volume 24 ; 24 >
-      au < released ; 2010 ; Phlebology Volume 25 ; 25 >
-      au < released ; 2011 ; Phlebology Volume 26 ; 26 >
+      au < HighWirePressPlugin ; down ; 2003 ; Phlebology Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2004 ; Phlebology Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2005 ; Phlebology Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 2006 ; Phlebology Volume 21 ; 21 >
+      au < HighWirePressPlugin ; down ; 2007 ; Phlebology Volume 22 ; 22 >
+      au < HighWirePressPlugin ; down ; 2008 ; Phlebology Volume 23 ; 23 >
+      au < HighWirePressPlugin ; down ; 2009 ; Phlebology Volume 24 ; 24 >
+      au < HighWirePressPlugin ; down ; 2010 ; Phlebology Volume 25 ; 25 >
+      au < HighWirePressPlugin ; down ; 2011 ; Phlebology Volume 26 ; 26 >
 
     }
 
@@ -815,17 +809,17 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.
       param[base_url] = http://td.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; Tropical Doctor Volume 35 ; 35 >
-      au < released ; 2006 ; Tropical Doctor Volume 36 ; 36 >
-      au < released ; 2007 ; Tropical Doctor Volume 37 ; 37 >
-      au < released ; 2008 ; Tropical Doctor Volume 38 ; 38 >
-      au < released ; 2009 ; Tropical Doctor Volume 39 ; 39 >
-      au < released ; 2010 ; Tropical Doctor Volume 40 ; 40 >
-      au < released ; 2011 ; Tropical Doctor Volume 41 ; 41 >
+      au < HighWirePressPlugin ; down ; 2005 ; Tropical Doctor Volume 35 ; 35 >
+      au < HighWirePressPlugin ; down ; 2006 ; Tropical Doctor Volume 36 ; 36 >
+      au < HighWirePressPlugin ; down ; 2007 ; Tropical Doctor Volume 37 ; 37 >
+      au < HighWirePressPlugin ; down ; 2008 ; Tropical Doctor Volume 38 ; 38 >
+      au < HighWirePressPlugin ; down ; 2009 ; Tropical Doctor Volume 39 ; 39 >
+      au < HighWirePressPlugin ; down ; 2010 ; Tropical Doctor Volume 40 ; 40 >
+      au < HighWirePressPlugin ; down ; 2011 ; Tropical Doctor Volume 41 ; 41 >
 
     }
 
@@ -841,7 +835,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ult.rsmjournals.com/
       implicit < status ; year ; name ; param[volume_name] >
 
