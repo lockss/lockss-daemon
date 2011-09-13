@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.21 2011-09-09 17:52:59 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.22 2011-09-13 15:00:00 easyonthemayo Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.daemon.AuHealthMetric;
 import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
+import static org.lockss.exporter.kbart.TdbAuOrderScorer.SORT_FIELD;
 
 import static org.lockss.exporter.kbart.KbartTdbAuUtil.*;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
@@ -105,6 +106,12 @@ public class KbartConverter {
   /** The minimum number that will be considered a date of publication. */
   public static final int MIN_PUB_DATE = 1600;
 
+  /** 
+   * The minimum consistency score for a volume-first ordering to be used 
+   * without first comparing it to a year ordering 
+   */
+  static final float VOLUME_SCORE_THRESHOLD = 1f;
+  
   /**
    * Creates a KbartConverter which will extract information from the given TDB 
    * records and provide access to them as KBART-compatible objects.
@@ -500,7 +507,7 @@ public class KbartConverter {
     // Reporting:
     if (issueFormat!=null) {
       log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
-	  firstAu, issueFormat.getKey(), issueFormat.getIssueString(firstAu)) );      
+          firstAu, issueFormat.getKey(), issueFormat.getIssueString(firstAu)) );
     }
 
     // -----------------------------------------------------------------------
@@ -697,17 +704,14 @@ public class KbartConverter {
   
    
   /**
-   * Extract volume fields from a list of AUs for a single title. Only 
-   * numerical volumes are returned; string volumes are considered incomparable.
-   * This depends on the data being available in the TDB record and in
-   * the correct format. The volume key should be the same for AUs from
-   * the same title, so we first get the key, instead of repeatedly using 
-   * <code>findVolume()</code>.
+   * Extract volume fields from a list of AUs for a single title. <s>Only 
+   * numerical volumes are returned; string volumes are considered 
+   * incomparable.</s>
    * <p>
-   * If the given AUs <b>all</b> have numerical values for volume, and those 
+   * If the given AUs <b>all</b> have values for volume, and those 
    * values are not all the same (e.g. a list of placeholders like zero), a 
-   * list of integers is returned of the same size and order of the AU list. 
-   * Otherwise (the values are non-numerical, empty, all the same, or are not 
+   * list of strings is returned of the same size and order of the AU list. 
+   * Otherwise (the values are empty, all the same, or are not 
    * available for all the AUs) a null is returned.
    * <p>
    * If a TDB record does not have a full set of well-formed volume fields, we 
@@ -720,34 +724,25 @@ public class KbartConverter {
    * @param aus a list of AUs
    * @return a list of volumes from the AUs, in the same order as the supplied list; or null if the parsing was unsuccessful
    */
-  private static List<Integer> getAuVols(List<TdbAu> aus) {
+  private static List<String> getAuVols(List<TdbAu> aus) {
     if (aus==null || aus.isEmpty()) return null;
     // Create a list of the appropriate size
     int n = aus.size();
-    List<Integer> vols = new ArrayList<Integer>(n);
+    List<String> vols = new ArrayList<String>(n);
  
     // Keep track of whether volumes differ or appear to be all the same (e.g. 0)
     boolean volsDiffer = false;
     // Get a volume for each AU
-    try {
-     Integer lastVol = null;
-     for (TdbAu au : aus) {
-       Integer vol = NumberUtil.parseInt(au.getVolume());
-       //Integer vol = NumberUtil.parseInt( type.findAuInfo(au, volKey) );
-       vols.add(vol);
-       // If there are multiple AUs, the last vol is non-null, and it and the 
-       // current vol differ, consider that we've got a variety of values
-       if (!volsDiffer && 
-           lastVol!=null && 
-           vol!=null && 
-           vol.compareTo(lastVol)!=0) {
-         volsDiffer = true;
-       }
-       lastVol = vol;
-     }
-    } catch (NumberFormatException e) {
-      log.debug("Could not parse volumes for "+aus.get(0).getTdbTitle().getName());
-      return null;  
+    String lastVol = null;
+    for (TdbAu au : aus) {
+      String vol = au.getVolume();
+      if (vol!=null) vols.add(vol);
+      // If there are multiple AUs, the last vol is non-null, and it and the 
+      // current vol differ, consider that we've got a variety of values
+      if (!volsDiffer && lastVol!=null && vol!=null && !vol.equals(lastVol)) {
+	volsDiffer = true;
+      }
+      lastVol = vol;
     }
     
     // Only return the vols if they differ across the list, or if there is a 
@@ -791,23 +786,12 @@ public class KbartConverter {
     boolean volFirst = true;
 
     // Get the resultant ordered lists of volumes and years
-    List<Integer> vols = getAuVols(aus);
+    List<String> vols = getAuVols(aus);
     List<YearRange> years = getAuYears(aus);
     // Check if there are full sets of vols and years 
     // (these results will inhere for any ordering)
-    boolean hasVols = vols!=null && vols.size()==n;
-    boolean hasYears = years!=null && years.size()==n;
-    
-    // Just return the single full range if neither volumes nor years are available
-    if (!hasVols && !hasYears) {
-      List<TitleRange> ranges = new ArrayList<TitleRange>() {{
-          add(new TitleRange(aus.subList(0, n)));
-        }};
-      log.warning(aus.get(0).getTdbTitle().getName() 
-                  + " lacks a complete and consistent set of vols or years;"
-                  + " returning single range.");
-      return new TitleRangeInfo(ranges);
-    }
+    boolean hasFullVols = vols!=null && vols.size()==n;
+    boolean hasFullYears = years!=null && years.size()==n;
 
     List<TitleRange> rangesByVol = null, rangesByYear = null;
     // Calculate ranges based on the vol ordering
@@ -815,46 +799,39 @@ public class KbartConverter {
     
     // Analyse the consistency of the resultant year ordering and ranges split
     TdbAuOrderScorer.ConsistencyScore csVol = 
-      TdbAuOrderScorer.getConsistencyScore(aus, rangesByVol);
+        TdbAuOrderScorer.getConsistencyScore(aus, rangesByVol);
     
-    // If the score is unsatisfactory, try ordering by year first
-    //if (csVol.score < 1) {
-    if (csVol.score < 1) {
-      String titleName = aus.get(0).getTdbTitle().getName();
+    // If the volumes are incomplete or score is unsatisfactory, and the years
+    // are complete, try a year-first ordering
+    if ((!hasFullVols || csVol.score < VOLUME_SCORE_THRESHOLD) && hasFullYears) {
+      String titleName = aus.get(0).getJournalTitle();
       // Show msg if this is not one of our problem cases
-      if (!expectVol.contains(titleName) && !expectYr.contains(titleName))
-	log.debug(String.format("%s volume consistency %s\n%s\n", titleName, csVol.score, csVol));
-      
+      /*if (!expectVol.contains(titleName) && !expectYr.contains(titleName))
+        log.debug(String.format("%s volume consistency %s\n%s\n", titleName, csVol.score, csVol));*/
+
       // Order by year first
       sortTdbAusByYearVolume(aus);
       // Recalculate the vols and years given the new ordering
       vols = getAuVols(aus);
       years = getAuYears(aus);
+      
       // Calculate ranges based on the year ordering
       rangesByYear = getAuCoverageRangesImpl(aus, years); //, years);
       
       // Analyse the consistency of the resultant volume ordering and ranges split
       TdbAuOrderScorer.ConsistencyScore csYear = 
-	TdbAuOrderScorer.getConsistencyScore(aus, rangesByYear);
-      /*log.debug(String.format("YEAR Consistency scores year %f * vol %f = %f (%s)\n", 
-	  csYear.yearScore, csYear.volScore, csYear.score, titleName));
-      log.debug(String.format("Consistency scores vol/year %f year/vol %f (%s)\n", 
-	  csVol.score, csYear.score, titleName));*/
-      /*if (yvScore>vyScore) {
-	log.debug(String.format("%s will use year ordering\n", 
-	          aus.get(0).getTdbTitle().getName()));
-      }*/
-      
+          TdbAuOrderScorer.getConsistencyScore(aus, rangesByYear);
+
       // Calculate the relative benefit of volume ordering over year ordering
       //float volumeSortBenefit = TdbAuOrderScorer.calculateRelativeBenefit(csVol, csYear);
       boolean preferVolume = TdbAuOrderScorer.preferVolume(csVol, csYear);
-      if (preferVolume && expectVol.contains(titleName)) {
-	log.debug(String.format("%s got expected VOLUME preference\n", titleName));
+      /*if (preferVolume && expectVol.contains(titleName)) {
+        log.debug(String.format("%s got expected VOLUME preference\n", titleName));
       } else if (!preferVolume && expectYr.contains(titleName)) {
-	log.debug(String.format("%s got expected YEAR preference\n", titleName));
+        log.debug(String.format("%s got expected YEAR preference\n", titleName));
       } else {
-	log.debug(String.format("%s will use %s ordering\n", titleName, preferVolume ? "VOLUME" : "YEAR"));
-      }
+        log.debug(String.format("%s will use %s ordering\n", titleName, preferVolume ? "VOLUME" : "YEAR"));
+      } */
       
       // Whether to prioritise volume in sorting and coverage gap calculation
       volFirst = preferVolume;//csVol.score >= csYear.score;
@@ -872,9 +849,10 @@ public class KbartConverter {
       hasVols ? getAuCoverageRangesImpl(aus, vols) 
 	  : getAuCoverageRangesImpl(aus, years);
     return new TitleRangeInfo(ranges, hasVols, hasYears);*/
-    return new TitleRangeInfo(volFirst ? rangesByVol : rangesByYear, hasVols, hasYears);
+    return new TitleRangeInfo(volFirst ? rangesByVol : rangesByYear, hasFullVols, hasFullYears);
   }
-  
+
+  // TODO simplify and use TdbAu instead of String for volume calcs; remove parameterisation?
   /**
    * A parameterised version of the <code>getAuCoverageRanges()</code> method 
    * to simplify the logic.
@@ -893,6 +871,7 @@ public class KbartConverter {
 
     TdbAu firstAu;              // The first AU in the current range
     TdbAu currentAu;            // The current AU (last AU in the current range)
+    TdbAu previousAu;           // The previous AU
 
     // The index of the first AU of the current range
     int firstAuIndex;
@@ -900,9 +879,13 @@ public class KbartConverter {
     int n = aus.size();
     List<TitleRange> ranges = new ArrayList<TitleRange>();
       
-    // If there are no coverage values, return single full range
-    if (coverageValues==null) {
+    // If there are no coverage values or the wrong number, return single 
+    // full range
+    if (coverageValues==null || coverageValues.size()!=aus.size()) {
       ranges.add(new TitleRange(aus.subList(0, aus.size())));
+      log.warning(aus.get(0).getJournalTitle() 
+          + " lacks a complete and consistent set of vols or years;"
+          + " returning single range.");
       return ranges;
     }
     
@@ -914,7 +897,8 @@ public class KbartConverter {
     // Set current au and coverage value
     currentCoverageVal = firstCoverageVal;
     currentAu = firstAu;
-        
+    previousAu = null;
+
     // Iterate through the values, starting a new title record if there
     // is a coverage gap, defined as non-consecutive numerical volumes,
     // or a gap between years which is greater than 1 
@@ -929,24 +913,27 @@ public class KbartConverter {
       // There is a gap: this is not the first AU, and there is either 
       // a volume or year gap 
       if (i>0 && isCoverageGap(prevCoverageVal, currentCoverageVal)) {
-	// Finish the old title and start a new title
-	ranges.add(new TitleRange(aus.subList(firstAuIndex, prevAuIndex+1)));
-	// Set new title properties
-	firstAuIndex = i;
-	firstAu = currentAu;
-	firstCoverageVal = currentCoverageVal;
+      //if (i>0 && isCoverageGap(previousAu, currentAu)) {
+        // Finish the old title and start a new title
+        ranges.add(new TitleRange(aus.subList(firstAuIndex, prevAuIndex+1)));
+        // Set new title properties
+        firstAuIndex = i;
+        firstAu = currentAu;
+        firstCoverageVal = currentCoverageVal;
       }
       // On the last title; finish current title 
       if (i==n-1) ranges.add(new TitleRange(aus.subList(firstAuIndex, i+1)));
+      // Set the previous AU
+      previousAu = currentAu;
     }
     return ranges;
   }
 
-  // TODO account for string volumes
-  // TODO tailor to year/vol
+
+  // TODO tailor to year/vol more directly
   /**
    * A generic method for establishing whether there is a coverage gap between 
-   * the given parameters. The parameter type should be either Integer, 
+   * the given parameters. The parameter type should be either TdbAu,
    * representing volumes; or YearRange, representing a year range consisting 
    * of two Integers.
    * 
@@ -956,9 +943,13 @@ public class KbartConverter {
    * @return
    */
   private static <T> boolean isCoverageGap(T prevCoverageVal, T currentCoverageVal) {
-    return prevCoverageVal instanceof Integer ? 
-	isVolumeCoverageGap((Integer)prevCoverageVal, (Integer)currentCoverageVal)
-	: isYearCoverageGap((YearRange)prevCoverageVal, (YearRange)currentCoverageVal);
+    return prevCoverageVal instanceof YearRange ?
+        isYearCoverageGap((YearRange)prevCoverageVal, (YearRange)currentCoverageVal)
+        : isVolumeCoverageGap(prevCoverageVal.toString(), currentCoverageVal.toString());
+    /*return prevCoverageVal instanceof YearRange ?
+            isYearCoverageGap((YearRange)prevCoverageVal, (YearRange)currentCoverageVal)
+            : isVolumeCoverageGap((TdbAu)prevCoverageVal, (TdbAu)currentCoverageVal);
+    */
   }
 
   /**
@@ -985,15 +976,26 @@ public class KbartConverter {
   }
   
   /**
-   * Compare volume numbers to establish a coverage gap. If they are not 
-   * consecutive, there is a coverage gap.
-   * @param prevVol previous volume string
-   * @param currentVol current volume string
+   * Compare volume strings to establish a coverage gap. If they are neither
+   * consecutive nor equal, there is a coverage gap.
+   * @param prevVol previous volume number
+   * @param currentVol current volume number
    * @return true if the volumes are not consecutive
    */
-  private static boolean isVolumeCoverageGap(Integer prevVol, Integer currentVol) {
-    // TODO Accept strings
-    return !TdbAuOrderScorer.areVolumesConsecutive(prevVol, currentVol);
+  private static boolean isVolumeCoverageGap(String prevVol, String currentVol) {
+    return !TdbAuOrderScorer.areVolumesConsecutive(prevVol, currentVol) &&
+        !prevVol.equals(currentVol);
+  }
+
+  /**
+   * Compare TdbAu volumes to establish a coverage gap. If they are not
+   * appropriately consecutive, there is a coverage gap.
+   * @param prevAu previous TdbAu
+   * @param currentAu current TdbAu
+   * @return true if the volumes are not appropriately consecutive
+   */
+  private static boolean isVolumeCoverageGap(TdbAu prevAu, TdbAu currentAu) {
+    return SORT_FIELD.VOLUME.areAppropriatelyConsecutive(prevAu, currentAu);
   }
 
 
@@ -1010,18 +1012,18 @@ public class KbartConverter {
     // Compare the *first* year in the AU at each end of the range
     if (!verifyYearRangeConsistency(range)) {
       log.warning(String.format("TitleRange problem for %s. Years: %s - %s", 
-	  range.first.getTdbTitle(), 
-	  KbartTdbAuUtil.getFirstYearAsInt(range.first), 
-	  KbartTdbAuUtil.getFirstYearAsInt(range.last)
+          range.first.getTdbTitle(),
+          KbartTdbAuUtil.getFirstYearAsInt(range.first),
+          KbartTdbAuUtil.getFirstYearAsInt(range.last)
       ));
     }
     
     if (!verifyVolumeRangeConsistency(range)) {
-	log.warning(String.format("TitleRange problem for %s. Volumes: %s - %s", 
-	    range.first.getTdbTitle(), 
-	    range.first.getVolume(), 
-	    range.last.getVolume()
-	));
+      log.warning(String.format("TitleRange problem for %s. Volumes: %s - %s",
+          range.first.getTdbTitle(),
+          range.first.getVolume(),
+          range.last.getVolume()
+      ));
     }
   }
   

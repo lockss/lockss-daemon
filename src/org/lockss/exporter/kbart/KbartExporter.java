@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.12 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.13 2011-09-13 15:00:01 easyonthemayo Exp $
  */
 
 /*
@@ -536,31 +536,31 @@ public abstract class KbartExporter {
     },*/
     
     CSV(
-	"CSV (comma-separated values)", 
-	"text/plain", "csv", 
-	true, false, false, 
-	CSV_NOTE) {
+        "CSV (comma-separated values)",
+        "text/plain", "csv",
+        true, false, false,
+        CSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-	  KbartExportFilter filter) {
-	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, 
-	    SeparatedValuesKbartExporter.SEPARATOR_COMMA);
-	kbe.setFilter(filter);
-	return kbe;
+                                        KbartExportFilter filter) {
+        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
+            SeparatedValuesKbartExporter.SEPARATOR_COMMA);
+        kbe.setFilter(filter);
+        return kbe;
       }
     },
     
     HTML(
-	"HTML (on-screen)", 
-	"text/html", "html",
-	false, false, true, 
-	HTML_NOTE) {
+        "HTML (on-screen)",
+        "text/html", "html",
+        false, false, true,
+        HTML_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-	  KbartExportFilter filter) {
-	KbartExporter kbe = new HtmlKbartExporter(titles, this);
-	kbe.setFilter(filter);
-	return kbe;
+                                        KbartExportFilter filter) {
+        KbartExporter kbe = new HtmlKbartExporter(titles, this);
+        kbe.setFilter(filter);
+        return kbe;
       }
     };
   
@@ -670,16 +670,17 @@ public abstract class KbartExporter {
     public boolean isHtml() { return isHtml; }
 
     /**
-     * Get an OutputFormat by name.
+     * Get an OutputFormat by name. Upper cases the name so lower case values
+     * can be passed in URLs.
      * 
      * @param name a string representing the name of the format
      * @return an OutputFormat with the specified name, or null if none was found
      */
     public static OutputFormat byName(String name) {
       try {
-	return valueOf(name);
+        return valueOf(name.toUpperCase());
       } catch (Exception e) {
-	return null;
+        return null;
       }
     } 
 

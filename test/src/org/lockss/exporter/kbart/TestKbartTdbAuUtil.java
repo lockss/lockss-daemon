@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartTdbAuUtil.java,v 1.6 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: TestKbartTdbAuUtil.java,v 1.7 2011-09-13 15:00:01 easyonthemayo Exp $
  */
 
 /*
@@ -68,6 +68,9 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
   private static final String issNum2 = "011";
   private static final String issNumRng = issNum1+"-"+issNum2;
   
+  // AUs for the equivalence tests
+  private TdbAu afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear, 
+      afrTodDiffName, afrTodDiffUrl, afrTodNullYear;
   
   /**
    * Create a test Tdb structure.
@@ -76,6 +79,23 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
     super.setUp();
     tdb = TdbTestUtil.makeTestTdb();
     assertNotNull("Tdb is null", tdb);
+    // Set up some AUs for the equivalence tests
+    try {
+      // 2 equivalent AUs
+      afrTod  = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
+      afrTodEquiv  = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
+      // 2 AUs differing from the previous 2 by one field each
+      afrTodDiffVol  = TdbTestUtil.createBasicAu("Africa Today",     "1999", "47");
+      afrTodDiffYear  = TdbTestUtil.createBasicAu("Africa Today",     "2000", "46");
+      afrTodDiffName   = TdbTestUtil.createBasicAu("Africa Yesterday", "1999", "46");
+      // An AU differing from the first pair on a non-primary field
+      afrTodDiffUrl   = TdbTestUtil.createBasicAu("Africa Today",     "1999", "46");
+      TdbTestUtil.setParam(afrTodDiffUrl, KbartTdbAuUtil.DEFAULT_TITLE_URL_ATTR, "http://whocares.com");
+      // An AU with a null year
+      afrTodNullYear = TdbTestUtil.createBasicAu("Africa Today", null, "46");
+    } catch (TdbException e) {
+      fail("Error setting up test TdbAus.");
+    }
   }
 
   /**
@@ -88,6 +108,112 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
     tdb = null;
   }
 
+  public void testAreEquivalent() {
+    assertTrue(KbartTdbAuUtil.areEquivalent(afrTod, afrTod));
+    assertTrue(KbartTdbAuUtil.areEquivalent(afrTod, afrTodEquiv));
+    assertTrue(KbartTdbAuUtil.areEquivalent(afrTod, afrTodDiffUrl));
+    assertTrue(KbartTdbAuUtil.areEquivalent(afrTodDiffUrl, afrTod));
+    // Should return false if any field or arg is null
+    assertFalse(KbartTdbAuUtil.areEquivalent(null, null));
+    assertFalse(KbartTdbAuUtil.areEquivalent(afrTod, afrTodNullYear));
+    assertFalse(KbartTdbAuUtil.areEquivalent(afrTodNullYear, afrTod));
+    
+    assertFalse(KbartTdbAuUtil.areEquivalent(afrTod, afrTodDiffVol));
+    assertFalse(KbartTdbAuUtil.areEquivalent(afrTod, afrTodDiffYear));
+    
+    assertFalse(KbartTdbAuUtil.areEquivalent(afrTod, afrTodDiffName));
+  }
+ 
+  /**
+   * Either the ISSNs or the names are the same. In this case all the ISSNs 
+   * are the same.
+   */
+  public void testHaveSameIdentity() {
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTod));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodEquiv));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodDiffUrl));
+    // Should throw exception if any arg is null
+    try {
+      KbartTdbAuUtil.haveSameIdentity(null, null);
+      fail("Should throw exception with null TdbAus.");
+    } catch (NullPointerException e) {
+      // expected
+    }
+    // The null field is irrelevant to the comparison 
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodNullYear));
+    // These have the same ISSN, despite the other difference
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodDiffName));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodDiffVol));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTod, afrTodDiffYear));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTodDiffYear, afrTodDiffVol));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTodDiffName, afrTodDiffYear));
+    // Null field discounts year; issns still match
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTodNullYear, afrTodDiffYear));
+    assertTrue(KbartTdbAuUtil.haveSameIdentity(afrTodNullYear, afrTodDiffVol));
+  }
+
+  /**
+   * Check volume and year. Each available pair of non-null values must match. 
+   */
+  public void testHaveSameIndex() {
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTod, afrTod));
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodEquiv));
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodDiffUrl));
+    // Should throw exception if any arg is null
+    try {
+      KbartTdbAuUtil.haveSameIndex(null, null);
+      fail("Should throw exception with null TdbAus.");
+    } catch (NullPointerException e) {
+      // expected
+    }
+    // The null field should be omitted from the comparison
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodNullYear));
+    // These only differ on id fields
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodDiffName));
+    // These differ on one of the two available index fields
+    assertFalse(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodDiffVol));
+    assertFalse(KbartTdbAuUtil.haveSameIndex(afrTod, afrTodDiffYear));
+    // These differ on available fields
+    assertFalse(KbartTdbAuUtil.haveSameIndex(afrTodDiffYear, afrTodDiffVol));
+    assertFalse(KbartTdbAuUtil.haveSameIndex(afrTodDiffName, afrTodDiffYear));
+    // Null fields discount year; volumes match
+    assertTrue(KbartTdbAuUtil.haveSameIndex(afrTodNullYear, afrTodDiffYear));
+    // Null fields discount year; volumes differ
+    assertFalse(KbartTdbAuUtil.haveSameIndex(afrTodNullYear, afrTodDiffVol));
+  }
+
+  /**
+   * The names or ISSNs match, and any of the volume and year fields that are
+   * available (non-null) must match.
+   */
+  public void testAreApparentlyEquivalent() {
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTod));
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodEquiv));
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodDiffUrl));
+    // Should throw exception if any arg is null
+    try {
+      KbartTdbAuUtil.areApparentlyEquivalent(null, null);
+      fail("Should throw exception with null TdbAus.");
+    } catch (NullPointerException e) {
+      // expected
+    }
+    // The null field should be omitted from the comparison
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodNullYear));
+    // These have the same ISSN, despite the name difference
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodDiffName));
+    // These differ on one of the two available index fields
+    assertFalse(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodDiffVol));
+    assertFalse(KbartTdbAuUtil.areApparentlyEquivalent(afrTod, afrTodDiffYear));
+    // These differ on available fields    
+    assertFalse(KbartTdbAuUtil.areApparentlyEquivalent(afrTodDiffYear, afrTodDiffVol));
+    assertFalse(KbartTdbAuUtil.areApparentlyEquivalent(afrTodDiffName, afrTodDiffYear));
+    // Null field discounts year; issn and volume match
+    assertTrue(KbartTdbAuUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffYear));
+    // Null field discounts year; vols differ
+    assertFalse(KbartTdbAuUtil.areApparentlyEquivalent(afrTodNullYear, afrTodDiffVol));
+  }
+
+  
   public void testCompareStringYears() {
     // Check that the result is right; check for NFE?
     String yr1 = "2000";

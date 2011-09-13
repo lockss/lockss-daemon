@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.12 2011-09-09 17:52:59 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.13 2011-09-13 15:00:01 easyonthemayo Exp $
  */
 
 /*
@@ -50,7 +50,9 @@ import org.lockss.util.StringUtil;
 
 /**
  * Utility methods for extracting KBART data from a <code>Tdb</code> structure.
- * 
+ * A lot of this class is now redundant, having been superseded by NumberUtil 
+ * methods or dedicated methods in TdbAu which leverage the more structured 
+ * availability and completeness of metadata.
  * 
  * @author Neil Mayo
  */
@@ -72,6 +74,89 @@ public class KbartTdbAuUtil {
   static final String DEFAULT_ISSN_PROP = "issn";
   static final String DEFAULT_EISSN_PROP = "eissn";
   static final String DEFAULT_ISSNL_PROP = "issnl";
+  
+  
+  /**
+   * Check whether two TdbAus are equivalent, that is they share the same 
+   * values for their primary fields. The fields that are checked are:
+   * <code>year</code>, <code>volume</code>, <code>name</code> and 
+   * <code>issn</code>. The method will return <code>false</code> if
+   * any field is null.
+   * 
+   * @param au1 a TdbAu
+   * @param au2 another TdbAu
+   * @return <code>true</code> if they have equivalent primary fields
+   */
+  static boolean areEquivalent(TdbAu au1, TdbAu au2) {
+    try {
+      return 
+      au1.getIssn().equals(au2.getIssn()) &&
+      au1.getYear().equals(au2.getYear()) &&
+      au1.getName().equals(au2.getName()) &&
+      au1.getVolume().equals(au2.getVolume());
+    } catch (NullPointerException e) {
+      return false; 
+    }
+  }
+  
+  /**
+   * Compares two <code>TdbAu</code>s to see if they appear to have the same 
+   * identity, by comparing their identifying fields. Returns <code>true</code> 
+   * if either the ISSNs or the names are equal.
+   * @param au1 a TdbAu
+   * @param au2 another TdbAu
+   * @return <code>true</code> if they have the same issn or name
+   */
+  static boolean haveSameIdentity(TdbAu au1, TdbAu au2) {
+    String au1issn = au1.getIssn();
+    String au2issn = au2.getIssn();
+    String au1name = au1.getName();
+    String au2name = au2.getName();
+    boolean issn = au1issn!=null && au2issn!=null && au1issn.equals(au2issn);
+    boolean name = au1name!=null && au2name!=null && au1name.equals(au2name);
+    return issn || name;
+  }
+  
+  /**
+   * Compares two <code>TdbAu</code>s to see if they appear to have the same 
+   * index metadata, by comparing their indexing fields <code>volume</code>
+   * and <code>year</code>. Returns true only if every available (non-null) 
+   * field pair is equal. 
+   * @param au1 a TdbAu
+   * @param au2 another TdbAu
+   * @return <code>true</code> if each pair of non-null volume or year strings is equal 
+   */
+  static boolean haveSameIndex(TdbAu au1, TdbAu au2) {
+    String au1year = au1.getYear();
+    String au2year = au2.getYear();
+    String au1vol  = au1.getVolume();
+    String au2vol  = au2.getVolume();
+    // Null if either year is null, otherwise whether they match
+    Boolean year = au1year!=null && au2year!=null ? au1year.equals(au2year) : null;
+    // Null if either volume is null, otherwise whether they match
+    Boolean vol  = au1vol !=null && au2vol !=null ? au1vol.equals(au2vol) : null;
+    // Require both year and volume fields to be equal if they are available
+    if (year!=null && vol!=null) return year && vol;
+    // Otherwise return available year or volume match, or false
+    else if (year!=null) return year;
+    else if (vol!=null) return vol;
+    else return false;
+  }
+  
+  /**
+   * Check whether two TdbAus appear to be equivalent, in that they have 
+   * matching values in at least one identifying field (ISSN or name), and all 
+   * available indexing fields (volume or year). This is to try and match up
+   * duplicate TDB records which arise from duplicate releases of the same
+   * volume of a title under a different plugin for example.
+   * 
+   * @param au1 a TdbAu
+   * @param au2 another TdbAu
+   * @return <code>true</code> if they appear to have equivalent identities and indexes
+   */
+  static boolean areApparentlyEquivalent(TdbAu au1, TdbAu au2) {
+    return haveSameIdentity(au1, au2) && haveSameIndex(au1, au2);
+  }
   
   
   /**

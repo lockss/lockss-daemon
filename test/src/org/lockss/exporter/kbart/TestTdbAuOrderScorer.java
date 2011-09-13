@@ -136,7 +136,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     whereas the volume ordering is perfect.
     
     ---------------------------------------------------------------------------
-    (4) Fully consistent sequence with mutuallly-consistent ordering and no 
+    (4) Fully consistent sequence with mutually-consistent ordering and no 
         redundancy or breaks in either year or volume
     
     au < HighWirePressH20Plugin ; exists ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 >
@@ -150,6 +150,21 @@ public class TestTdbAuOrderScorer extends TestCase {
     au < HighWirePressH20Plugin ; exists ; 1994 ; Literary and Linguistic Computing Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; Literary and Linguistic Computing Volume 10 ; 10 >
 
+    ---------------------------------------------------------------------------
+    (5) Sequence with interleaved duplicate AUs (identical in terms of main fields). 
+        This occurs for example when there are 2 sets of AUs, one down, one released 
+        and current. These AUs otherwise display a full and consistent ordering.
+    
+      au < down ; 1999 ; Africa Today Volume 46 ; 46 >
+      au < released ; 1999 ; Africa Today Volume 46 ; 46 >
+      au < down ; 2000 ; Africa Today Volume 47 ; 47 >
+      au < released ; 2000 ; Africa Today Volume 47 ; 47 >
+      au < down ; 2001 ; Africa Today Volume 48 ; 48 >
+      au < released ; 2001 ; Africa Today Volume 48 ; 48 >
+      au < down ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+      au < released ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+      au < down ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+      au < released ; 2003-2004 ; Africa Today Volume 50 ; 50 >
     
     ---------------------------------------------------------------------------
    */
@@ -160,6 +175,11 @@ public class TestTdbAuOrderScorer extends TestCase {
   // single range which is also equal to the original list.
   List<TdbAu> fullyConsistentAus;
 
+  // A sequence of interleaved duplicate AUs (identical in terms of main fields). 
+  // This occurs for example when there are 2 sets of AUs, one down, one released 
+  // and current.
+  List<TdbAu> afrTod;
+  
   // Example titles
   List<TdbAu> tang;
   List<TdbAu> oxEcPap;            // Could be ordered by volume
@@ -174,10 +194,13 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TdbAu> geoSocLonMem;       // Should be ordered by volume
   List<TdbAu> geoSocLonSP;        // Should be ordered by volume
 
-  // Record all the test AUs in a list
-  List<List<TdbAu>> allLists;
+  // Record all the problematic test AUs in a list
+  List<List<TdbAu>> problemTitles;
   
-  // Make immutable copies of the canonical orderings and store in a list
+  // Record all the test AU sequences which are consistent
+  List<List<TdbAu>> consistentSequences;
+  
+    // Make immutable copies of the canonical orderings and store in a list
   List<List<TdbAu>> allCanonicalLists;
 
   
@@ -198,6 +221,7 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TitleRange> commDisVolRanges;
   List<TitleRange> geoSocLonMemVolRanges;
   List<TitleRange> geoSocLonSPVolRanges;
+  List<TitleRange> afrTodVolRanges;
 
   // Record all the vol ranges in a list
   List<List<TitleRange>> allVolRanges;
@@ -215,6 +239,7 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TitleRange> commDisYearRanges;
   List<TitleRange> geoSocLonMemYearRanges;
   List<TitleRange> geoSocLonSPYearRanges;
+  List<TitleRange> afrTodYearRanges;
 
   // Record all the year ranges in a list
   List<List<TitleRange>> allYearRanges;
@@ -236,13 +261,19 @@ public class TestTdbAuOrderScorer extends TestCase {
   private static final TdbAuOrderScorer.SORT_FIELD VOL =  TdbAuOrderScorer.SORT_FIELD.VOLUME;
   
   /**
-   * Create basic TdbAus and populate all the lists.
+   * Create basic TdbAus and populate all the lists. For each title, a set of
+   * TdbAus is created and added to a list; that list is added to either the 
+   * <code>problemSequences</code> list or the <code>consistentSequences</code> 
+   * list; then expected year and volume ranges are created and added to the 
+   * range lists; finally the title list is registered as one which 
+   * should be ordered by year, or by volume, or with no preference. 
    */
   protected void setUp() throws Exception {
     super.setUp();
 
     // Init all the lists
-    allLists = new ArrayList<List<TdbAu>>();
+    problemTitles = new ArrayList<List<TdbAu>>();
+    consistentSequences = new ArrayList<List<TdbAu>>();
     allCanonicalLists = new ArrayList<List<TdbAu>>();
     allVolRanges = new ArrayList<List<TitleRange>>();
     allYearRanges = new ArrayList<List<TitleRange>>();
@@ -256,15 +287,15 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu tang3 = TdbTestUtil.createBasicAu("T'ang Studies Volume 27",   "2009", "27");
       TdbAu tang4 = TdbTestUtil.createBasicAu("T'ang Studies Volume 2010", "2010", "2010");
       tang = Arrays.asList(tang1, tang2, tang3, tang4);
-      allLists.add(tang);
+      problemTitles.add(tang);
       allCanonicalLists.add(Collections.unmodifiableList(tang));
       tangYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(tang1, tang2, tang3, tang4))
+          new TitleRange(Arrays.asList(tang1, tang2, tang3, tang4))
       );
       tangVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(tang3)),
-	  new TitleRange(Arrays.asList(tang1, tang2)),
-	  new TitleRange(Arrays.asList(tang4))
+          new TitleRange(Arrays.asList(tang3)),
+          new TitleRange(Arrays.asList(tang1, tang2)),
+          new TitleRange(Arrays.asList(tang4))
       );
       allYearRanges.add(tangYearRanges);
       allVolRanges.add(tangVolRanges);
@@ -278,16 +309,16 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu oxEcPap5 = TdbTestUtil.createBasicAu("Oxford Economic Papers Volume 2",    "1950", "2");
       TdbAu oxEcPap6 = TdbTestUtil.createBasicAu("Oxford Economic Papers Volume 3",    "1951", "3");
       oxEcPap = Arrays.asList(oxEcPap1, oxEcPap2, oxEcPap3, oxEcPap4, oxEcPap5, oxEcPap6);
-      allLists.add(oxEcPap);
+      problemTitles.add(oxEcPap);
       allCanonicalLists.add(Collections.unmodifiableList(oxEcPap));
       oxEcPapYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(oxEcPap1)),
-	  new TitleRange(Arrays.asList(oxEcPap2)),
-	  new TitleRange(Arrays.asList(oxEcPap3, oxEcPap4, oxEcPap5))
+          new TitleRange(Arrays.asList(oxEcPap1)),
+          new TitleRange(Arrays.asList(oxEcPap2)),
+          new TitleRange(Arrays.asList(oxEcPap3, oxEcPap4, oxEcPap5))
       );
       oxEcPapVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(oxEcPap1, oxEcPap2, oxEcPap3)),
-	  new TitleRange(Arrays.asList(oxEcPap4, oxEcPap5, oxEcPap6))
+          new TitleRange(Arrays.asList(oxEcPap1, oxEcPap2, oxEcPap3)),
+          new TitleRange(Arrays.asList(oxEcPap4, oxEcPap5, oxEcPap6))
       );
       allYearRanges.add(oxEcPapYearRanges);
       allVolRanges.add(oxEcPapVolRanges);
@@ -303,14 +334,14 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu euroBusRev5 = TdbTestUtil.createBasicAu("European Business Review Volume 13", "2001", "13");
       TdbAu euroBusRev6 = TdbTestUtil.createBasicAu("European Business Review Volume 14", "2002", "14");
       euroBusRev = Arrays.asList(euroBusRev1, euroBusRev2, euroBusRev3, euroBusRev4, euroBusRev5, euroBusRev6);
-      allLists.add(euroBusRev);
+      problemTitles.add(euroBusRev);
       allCanonicalLists.add(Collections.unmodifiableList(euroBusRev));
       euroBusRevYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(euroBusRev1, euroBusRev2, euroBusRev3, euroBusRev4, euroBusRev5, euroBusRev6))
+          new TitleRange(Arrays.asList(euroBusRev1, euroBusRev2, euroBusRev3, euroBusRev4, euroBusRev5, euroBusRev6))
       );
       euroBusRevVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(euroBusRev1, euroBusRev2, euroBusRev3)),
-	  new TitleRange(Arrays.asList(euroBusRev4, euroBusRev5, euroBusRev6))
+          new TitleRange(Arrays.asList(euroBusRev1, euroBusRev2, euroBusRev3)),
+          new TitleRange(Arrays.asList(euroBusRev4, euroBusRev5, euroBusRev6))
       );
       allYearRanges.add(euroBusRevYearRanges);
       allVolRanges.add(euroBusRevVolRanges);
@@ -324,14 +355,14 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu nutFoodSci5 = TdbTestUtil.createBasicAu("Nutrition & Food Science 31", "2001", "31");
       TdbAu nutFoodSci6 = TdbTestUtil.createBasicAu("Nutrition & Food Science 32", "2002", "32");
       nutFoodSci = Arrays.asList(nutFoodSci1, nutFoodSci2, nutFoodSci3, nutFoodSci4, nutFoodSci5, nutFoodSci6);
-      allLists.add(nutFoodSci);
+      problemTitles.add(nutFoodSci);
       allCanonicalLists.add(Collections.unmodifiableList(nutFoodSci));
       nutFoodSciYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(nutFoodSci1, nutFoodSci2, nutFoodSci3, nutFoodSci4, nutFoodSci5, nutFoodSci6))
+          new TitleRange(Arrays.asList(nutFoodSci1, nutFoodSci2, nutFoodSci3, nutFoodSci4, nutFoodSci5, nutFoodSci6))
       );
       nutFoodSciVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(nutFoodSci1, nutFoodSci2, nutFoodSci3)),
-	  new TitleRange(Arrays.asList(nutFoodSci4, nutFoodSci5, nutFoodSci6))
+          new TitleRange(Arrays.asList(nutFoodSci1, nutFoodSci2, nutFoodSci3)),
+          new TitleRange(Arrays.asList(nutFoodSci4, nutFoodSci5, nutFoodSci6))
       );
       allYearRanges.add(nutFoodSciYearRanges);
       allVolRanges.add(nutFoodSciVolRanges);
@@ -353,28 +384,28 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu intlJournHumArtsComp13 = TdbTestUtil.createBasicAu("International Journal of Humanities and Arts Computing Volume 4 (2010)",  "2010", "4");
       TdbAu intlJournHumArtsComp14 = TdbTestUtil.createBasicAu("International Journal of Humanities and Arts Computing Volume 5 (2011)",  "2011", "5");
       intlJournHumArtsComp = Arrays.asList(intlJournHumArtsComp1, intlJournHumArtsComp2, intlJournHumArtsComp3, intlJournHumArtsComp4, 
-	  intlJournHumArtsComp5, intlJournHumArtsComp6, intlJournHumArtsComp7, intlJournHumArtsComp8, intlJournHumArtsComp9,
-	  intlJournHumArtsComp10, intlJournHumArtsComp11, intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14
+          intlJournHumArtsComp5, intlJournHumArtsComp6, intlJournHumArtsComp7, intlJournHumArtsComp8, intlJournHumArtsComp9,
+          intlJournHumArtsComp10, intlJournHumArtsComp11, intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14
       );
-      allLists.add(intlJournHumArtsComp);
+      problemTitles.add(intlJournHumArtsComp);
       allCanonicalLists.add(Collections.unmodifiableList(intlJournHumArtsComp));
       intlJournHumArtsCompYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(intlJournHumArtsComp1, intlJournHumArtsComp2, 
-	      intlJournHumArtsComp3, intlJournHumArtsComp4, intlJournHumArtsComp5, 
-	      intlJournHumArtsComp6, intlJournHumArtsComp7, intlJournHumArtsComp8, 
-	      intlJournHumArtsComp9)
-	  ),
-	  new TitleRange(Arrays.asList(intlJournHumArtsComp10, intlJournHumArtsComp11, 
-	      intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14)
-	  )
+          new TitleRange(Arrays.asList(intlJournHumArtsComp1, intlJournHumArtsComp2, 
+              intlJournHumArtsComp3, intlJournHumArtsComp4, intlJournHumArtsComp5, 
+              intlJournHumArtsComp6, intlJournHumArtsComp7, intlJournHumArtsComp8, 
+              intlJournHumArtsComp9)
+          ),
+          new TitleRange(Arrays.asList(intlJournHumArtsComp10, intlJournHumArtsComp11, 
+              intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14)
+          )
       );
       intlJournHumArtsCompVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(intlJournHumArtsComp10, intlJournHumArtsComp11, 
-	      intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14,
-	      intlJournHumArtsComp1, intlJournHumArtsComp2, intlJournHumArtsComp3, 
-	      intlJournHumArtsComp4, intlJournHumArtsComp5, intlJournHumArtsComp6, 
-	      intlJournHumArtsComp7, intlJournHumArtsComp8, intlJournHumArtsComp9)
-	  )
+          new TitleRange(Arrays.asList(intlJournHumArtsComp10, intlJournHumArtsComp11, 
+              intlJournHumArtsComp12, intlJournHumArtsComp13, intlJournHumArtsComp14,
+              intlJournHumArtsComp1, intlJournHumArtsComp2, intlJournHumArtsComp3, 
+              intlJournHumArtsComp4, intlJournHumArtsComp5, intlJournHumArtsComp6, 
+              intlJournHumArtsComp7, intlJournHumArtsComp8, intlJournHumArtsComp9)
+          )
       );
       allYearRanges.add(intlJournHumArtsCompYearRanges);
       allVolRanges.add(intlJournHumArtsCompVolRanges);
@@ -385,30 +416,30 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu expAstr2 = TdbTestUtil.createBasicAu("Experimental Astronomy Volume 4", "1993-1994", "4");
       TdbAu expAstr3 = TdbTestUtil.createBasicAu("Experimental Astronomy Volume 5", "1994",      "5");
       expAstr = Arrays.asList(expAstr1, expAstr2, expAstr3);
-      allLists.add(expAstr);
+      problemTitles.add(expAstr);
       allCanonicalLists.add(Collections.unmodifiableList(expAstr));
       expAstrYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(expAstr2, expAstr1, expAstr3))
+          new TitleRange(Arrays.asList(expAstr2, expAstr1, expAstr3))
       );
       expAstrVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(expAstr1, expAstr2, expAstr3))
+          new TitleRange(Arrays.asList(expAstr1, expAstr2, expAstr3))
       );
       allYearRanges.add(expAstrYearRanges);
       allVolRanges.add(expAstrVolRanges);
       registerOrderByVolume();
-
+      
       // ----------------------------------------------------------------------
       TdbAu analChem1 = TdbTestUtil.createBasicAu("Fresenius Zeitschrift für Analytische Chemie Volume 275", "1975",      "275");
       TdbAu analChem2 = TdbTestUtil.createBasicAu("Fresenius Zeitschrift für Analytische Chemie Volume 276", "1972-1975", "276");
       TdbAu analChem3 = TdbTestUtil.createBasicAu("Fresenius Zeitschrift für Analytische Chemie Volume 277", "1975",      "277");
       analChem = Arrays.asList(analChem1, analChem2, analChem3);
-      allLists.add(analChem);
+      problemTitles.add(analChem);
       allCanonicalLists.add(Collections.unmodifiableList(analChem));
       analChemYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(analChem2, analChem1, analChem3))
+          new TitleRange(Arrays.asList(analChem2, analChem1, analChem3))
       );
       analChemVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(analChem1, analChem2, analChem3))
+          new TitleRange(Arrays.asList(analChem1, analChem2, analChem3))
       );
       allYearRanges.add(analChemYearRanges);
       allVolRanges.add(analChemVolRanges);
@@ -421,13 +452,13 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu journEndoc4 = TdbTestUtil.createBasicAu("Journal of Endocrinology Volume 23", "1961-1962", "23");
       TdbAu journEndoc5 = TdbTestUtil.createBasicAu("Journal of Endocrinology Volume 24", "1962",      "24");
       journEndoc = Arrays.asList(journEndoc1, journEndoc2, journEndoc3, journEndoc4, journEndoc5);
-      allLists.add(journEndoc);
+      problemTitles.add(journEndoc);
       allCanonicalLists.add(Collections.unmodifiableList(journEndoc));
       journEndocYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(journEndoc1, journEndoc2, journEndoc4, journEndoc3, journEndoc5))
+          new TitleRange(Arrays.asList(journEndoc1, journEndoc2, journEndoc4, journEndoc3, journEndoc5))
       );
       journEndocVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(journEndoc1, journEndoc2, journEndoc3, journEndoc4, journEndoc5))
+          new TitleRange(Arrays.asList(journEndoc1, journEndoc2, journEndoc3, journEndoc4, journEndoc5))
       );
       allYearRanges.add(journEndocYearRanges);
       allVolRanges.add(journEndocVolRanges);
@@ -440,15 +471,15 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu yorkGeoSoc4 = TdbTestUtil.createBasicAu("Proceedings of the Yorkshire Geological Society Volume 11", "1888-1890", "11");
       TdbAu yorkGeoSoc5 = TdbTestUtil.createBasicAu("Proceedings of the Yorkshire Geological Society Volume 12", "1891-1894", "12");
       yorkGeoSoc = Arrays.asList(yorkGeoSoc1, yorkGeoSoc2, yorkGeoSoc3, yorkGeoSoc4, yorkGeoSoc5);
-      allLists.add(yorkGeoSoc);
+      problemTitles.add(yorkGeoSoc);
       allCanonicalLists.add(Collections.unmodifiableList(yorkGeoSoc));
       yorkGeoSocYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(yorkGeoSoc1, yorkGeoSoc2)),
-	  new TitleRange(Arrays.asList(yorkGeoSoc4, yorkGeoSoc3)),
-	  new TitleRange(Arrays.asList(yorkGeoSoc5))
+          new TitleRange(Arrays.asList(yorkGeoSoc1, yorkGeoSoc2)),
+          new TitleRange(Arrays.asList(yorkGeoSoc4, yorkGeoSoc3)),
+          new TitleRange(Arrays.asList(yorkGeoSoc5))
       );
       yorkGeoSocVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(yorkGeoSoc1, yorkGeoSoc2, yorkGeoSoc3, yorkGeoSoc4, yorkGeoSoc5))
+          new TitleRange(Arrays.asList(yorkGeoSoc1, yorkGeoSoc2, yorkGeoSoc3, yorkGeoSoc4, yorkGeoSoc5))
       );
       allYearRanges.add(yorkGeoSocYearRanges);
       allVolRanges.add(yorkGeoSocVolRanges);
@@ -459,13 +490,13 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu commDis2 = TdbTestUtil.createBasicAu("Communication Disorders Quarterly Volume 13", "1990",      "13");
       TdbAu commDis3 = TdbTestUtil.createBasicAu("Communication Disorders Quarterly Volume 14", "1988-1992", "14");
       commDis = Arrays.asList(commDis1, commDis2, commDis3);
-      allLists.add(commDis);
+      problemTitles.add(commDis);
       allCanonicalLists.add(Collections.unmodifiableList(commDis));
       commDisYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(commDis1, commDis3, commDis2))
+          new TitleRange(Arrays.asList(commDis1, commDis3, commDis2))
       );
       commDisVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(commDis1, commDis2, commDis3))
+          new TitleRange(Arrays.asList(commDis1, commDis2, commDis3))
       );
       allYearRanges.add(commDisYearRanges);
       allVolRanges.add(commDisVolRanges);
@@ -476,14 +507,14 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu geoSocLonMem2 = TdbTestUtil.createBasicAu("Geological Society of London Memoirs Volume 14", "1991", "14");
       TdbAu geoSocLonMem3 = TdbTestUtil.createBasicAu("Geological Society of London Memoirs Volume 15", "1994", "15");
       geoSocLonMem = Arrays.asList(geoSocLonMem1, geoSocLonMem2, geoSocLonMem3);
-      allLists.add(geoSocLonMem);
+      problemTitles.add(geoSocLonMem);
       allCanonicalLists.add(Collections.unmodifiableList(geoSocLonMem));
       geoSocLonMemYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(geoSocLonMem2, geoSocLonMem1)),
-	  new TitleRange(Arrays.asList(geoSocLonMem3))
+          new TitleRange(Arrays.asList(geoSocLonMem2, geoSocLonMem1)),
+          new TitleRange(Arrays.asList(geoSocLonMem3))
       );
       geoSocLonMemVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(geoSocLonMem1, geoSocLonMem2, geoSocLonMem3))
+          new TitleRange(Arrays.asList(geoSocLonMem1, geoSocLonMem2, geoSocLonMem3))
       );
       allYearRanges.add(geoSocLonMemYearRanges);
       allVolRanges.add(geoSocLonMemVolRanges);
@@ -494,13 +525,13 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu geoSocLonSP2 = TdbTestUtil.createBasicAu("Geological Society of London Special Publications Volume 288", "2008", "288");
       TdbAu geoSocLonSP3 = TdbTestUtil.createBasicAu("Geological Society of London Special Publications Volume 289", "2007", "289");
       geoSocLonSP = Arrays.asList(geoSocLonSP1, geoSocLonSP2, geoSocLonSP3);
-      allLists.add(geoSocLonSP);
+      problemTitles.add(geoSocLonSP);
       allCanonicalLists.add(Collections.unmodifiableList(geoSocLonSP));
       geoSocLonSPYearRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(geoSocLonSP1, geoSocLonSP3, geoSocLonSP2))
+          new TitleRange(Arrays.asList(geoSocLonSP1, geoSocLonSP3, geoSocLonSP2))
       );
       geoSocLonSPVolRanges = Arrays.asList(
-	  new TitleRange(Arrays.asList(geoSocLonSP1, geoSocLonSP2, geoSocLonSP3))
+          new TitleRange(Arrays.asList(geoSocLonSP1, geoSocLonSP2, geoSocLonSP3))
       );
       allYearRanges.add(geoSocLonSPYearRanges);
       allVolRanges.add(geoSocLonSPVolRanges);
@@ -518,6 +549,23 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAu llc9  = TdbTestUtil.createBasicAu("Literary and Linguistic Computing Volume 9",  "1994", "9");
       TdbAu llc10 = TdbTestUtil.createBasicAu("Literary and Linguistic Computing Volume 10", "1995", "10");
       fullyConsistentAus = Arrays.asList(llc1, llc2, llc3, llc4, llc5, llc6, llc7, llc8, llc9, llc10);
+      consistentSequences.add(fullyConsistentAus);
+      
+      // ----------------------------------------------------------------------
+      TdbAu afrTod1a  = TdbTestUtil.createBasicAu("Africa Today",  "1999", "46");
+      TdbAu afrTod1b  = TdbTestUtil.createBasicAu("Africa Today",  "1999", "46");
+      TdbAu afrTod2a  = TdbTestUtil.createBasicAu("Africa Today",  "2000", "47");
+      TdbAu afrTod2b  = TdbTestUtil.createBasicAu("Africa Today",  "2000", "47");
+      TdbAu afrTod3a  = TdbTestUtil.createBasicAu("Africa Today",  "2001", "48");
+      TdbAu afrTod3b  = TdbTestUtil.createBasicAu("Africa Today",  "2001", "48");
+      TdbAu afrTod4a  = TdbTestUtil.createBasicAu("Africa Today",  "2002-2003", "49");
+      TdbAu afrTod4b  = TdbTestUtil.createBasicAu("Africa Today",  "2002-2003", "49");
+      TdbAu afrTod5a  = TdbTestUtil.createBasicAu("Africa Today",  "2003-2004", "50");
+      TdbAu afrTod5b  = TdbTestUtil.createBasicAu("Africa Today",  "2003-2004", "50");
+      // Note these are purposely ordered in pairs of consecutive duplicates
+      afrTod = Arrays.asList(afrTod1a, afrTod1b, afrTod2a, afrTod2b, afrTod3a, afrTod3b, 
+          afrTod4a, afrTod4b, afrTod5a, afrTod5b);
+      consistentSequences.add(afrTod);
 
     } catch (TdbException e) {
       fail("Error setting up test TdbAus.");
@@ -570,14 +618,14 @@ public class TestTdbAuOrderScorer extends TestCase {
     String[] unparseable2 = {"You can't parse this + 1.",  "Year 2001",  "2001 year", " 2 001 "};
     for (int i=0; i<unparseable1.length; i++) {
       try {
-	String s1 = unparseable1[i];
-	String s2 = unparseable2[i];
-	TdbAuOrderScorer.areYearsConsecutive(s1, s2);
-	fail(String.format("Should have thrown NumberFormatException parsing %s and %s.", s1, s2));
+        String s1 = unparseable1[i];
+        String s2 = unparseable2[i];
+        TdbAuOrderScorer.areYearsConsecutive(s1, s2);
+        fail(String.format("Should have thrown NumberFormatException parsing %s and %s.", s1, s2));
       } catch (NumberFormatException e) { /* do nothing */ }
     }
   }
-
+  
   /**
    * Whether there is a positive gap greater than one between the end of one
    * range and the start of another. 
@@ -643,6 +691,26 @@ public class TestTdbAuOrderScorer extends TestCase {
     assertFalse( TdbAuOrderScorer.areVolumesConsecutive("one", "two") );
   }
 
+  /**
+   * Consecutive duplicates must have equal vol, year, issn, title.
+   */
+  public final void testAreVolumesConsecutiveDuplicates() {
+    // The Africa Today volumes are ordered in pairs of consecutive duplicates
+    int numPairs = afrTod.size()/2;
+    for (int i=0; i<=numPairs; i+=2) {
+      TdbAu afrTod1 = afrTod.get(i);
+      TdbAu afrTod2 = afrTod.get(i+1);
+      // Set an irrelevant value on the first
+      try {
+        TdbTestUtil.setParam(afrTod1, KbartTdbAuUtil.DEFAULT_TITLE_URL_ATTR, 
+        "http://whocares.com");
+      } catch (TdbException e) {
+        fail("Should not get exception as TdbAu has not been added to TdbTitle."+e);
+      }
+      assertTrue( TdbAuOrderScorer.areVolumesConsecutiveDuplicates(afrTod1, afrTod2) );
+    }
+  }
+  
   /**
    * Values are increasing if they don't go down.
    */
@@ -795,10 +863,10 @@ public class TestTdbAuOrderScorer extends TestCase {
     String[] unparseable2 = {"You can't parse this + 1.", "Year 2001",  "3001 year",  " 3 001 "};
     for (int i=0; i<unparseable1.length; i++) {
       try {
-	String s1 = unparseable1[i];
-	String s2 = unparseable2[i];
-	TdbAuOrderScorer.areYearsIncreasing(s1, s2);
-	fail(String.format("Should have thrown NumberFormatException parsing %s and %s.", s1, s2));
+        String s1 = unparseable1[i];
+        String s2 = unparseable2[i];
+        TdbAuOrderScorer.areYearsIncreasing(s1, s2);
+        fail(String.format("Should have thrown NumberFormatException parsing %s and %s.", s1, s2));
       } catch (NumberFormatException e) { /* do nothing */ }
     }
   }
@@ -993,6 +1061,10 @@ public class TestTdbAuOrderScorer extends TestCase {
     checkCountProportionOfBreaksInRange(VOL, geoSocLonSP, 0, 1);
     checkCountProportionOfBreaksInRange(YR,  geoSocLonSP, 2, 0);
     
+    // afrTod
+    checkCountProportionOfBreaksInRange(VOL, afrTod, 0, 0);
+    checkCountProportionOfBreaksInRange(YR,  afrTod, 0, 0);
+    
   }
 
   /**
@@ -1013,6 +1085,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     checkCountProportionOfUniquelyYearBreaks(commDis, 0);
     checkCountProportionOfUniquelyYearBreaks(geoSocLonMem, 0);
     checkCountProportionOfUniquelyYearBreaks(geoSocLonSP, 0);
+    checkCountProportionOfUniquelyYearBreaks(afrTod, 0);
   }
   
   /**
@@ -1068,6 +1141,10 @@ public class TestTdbAuOrderScorer extends TestCase {
     // geoSocLonSP
     checkCountProportionOfNegativeBreaksInRange(VOL, geoSocLonSP, 1);
     checkCountProportionOfNegativeBreaksInRange(YR,  geoSocLonSP, 1);
+    
+    // afrTod
+    checkCountProportionOfNegativeBreaksInRange(VOL, afrTod, 0);
+    checkCountProportionOfNegativeBreaksInRange(YR,  afrTod, 0);
     
   }
   
@@ -1125,6 +1202,11 @@ public class TestTdbAuOrderScorer extends TestCase {
     checkCountProportionOfRedundancyInRange(VOL, geoSocLonSP, 0, 1);
     checkCountProportionOfRedundancyInRange(YR,  geoSocLonSP, 0, 0);
     
+    // afrTod
+    checkCountProportionOfRedundancyInRange(VOL, afrTod, 0, 0);
+    checkCountProportionOfRedundancyInRange(YR,  afrTod, 0, 0);
+    // (no redundancy expected with new definition - consecutive duplicates allowed)
+    
   }
   
   /**
@@ -1133,7 +1215,7 @@ public class TestTdbAuOrderScorer extends TestCase {
    * of the field changes.
    */
   public final void testIsMonotonicallyIncreasing() {
-    for (List<TdbAu> aus : allLists) {
+    for (List<TdbAu> aus : problemTitles) {
       assertMonotonicIncreaseOnTheSortedField(aus);
     }
   }
@@ -1161,19 +1243,21 @@ public class TestTdbAuOrderScorer extends TestCase {
    */
   public final void testGetYearListConsistency() {
     // The year ordering should provide a better consistency score for years
-    for (List<TdbAu> aus : allLists) {
+    for (List<TdbAu> aus : problemTitles) {
       //System.out.println("Testing getYearListConsistency() on "+aus.get(0).getName());
       assertYearListConsistencyGreaterWhenOrderingByYearFirst(aus);
     }
    
     // Except for a fully consistent sequence
-    orderVolYear(fullyConsistentAus);
-    float vyCon = TdbAuOrderScorer.getYearListConsistency(fullyConsistentAus);
-    orderYearVol(fullyConsistentAus);
-    float yvCon = TdbAuOrderScorer.getYearListConsistency(fullyConsistentAus);
-    assertEquals( vyCon, yvCon );
-    assertEquals( 1f, vyCon );
-    assertEquals( 1f, yvCon );
+    for (List<TdbAu> aus : consistentSequences) {
+      orderVolYear(aus);
+      float vyCon = TdbAuOrderScorer.getYearListConsistency(aus);
+      orderYearVol(aus);
+      float yvCon = TdbAuOrderScorer.getYearListConsistency(aus);
+      assertEquals( vyCon, yvCon );
+      assertEquals( 1f, vyCon );
+      assertEquals( 1f, yvCon );
+    }
   }
 
   /**
@@ -1182,19 +1266,21 @@ public class TestTdbAuOrderScorer extends TestCase {
    */
   public final void testGetVolumeListConsistency() {
     // The volume ordering should provide a better consistency score for volumes
-    for (List<TdbAu> aus : allLists) {
+    for (List<TdbAu> aus : problemTitles) {
       //System.out.println("Testing getVolumeListConsistency() on "+aus.get(0).getName());
       assertVolumeListConsistencyGreaterWhenOrderingByVolumeFirst(aus);
     }
     
-    // Except for a fully consistent sequence    
-    orderVolYear(fullyConsistentAus);
-    float vyCon = TdbAuOrderScorer.getVolumeListConsistency(fullyConsistentAus);
-    orderYearVol(fullyConsistentAus);
-    float yvCon = TdbAuOrderScorer.getVolumeListConsistency(fullyConsistentAus);
-    assertEquals( vyCon, yvCon );
-    assertEquals( 1f, vyCon );
-    assertEquals( 1f, yvCon );
+    // Except for a fully consistent sequence
+    for (List<TdbAu> aus : consistentSequences) {
+      orderVolYear(aus);
+      float vyCon = TdbAuOrderScorer.getVolumeListConsistency(aus);
+      orderYearVol(aus);
+      float yvCon = TdbAuOrderScorer.getVolumeListConsistency(aus);
+      assertEquals( vyCon, yvCon );
+      assertEquals( 1f, vyCon );
+      assertEquals( 1f, yvCon );
+    }
   }
 
   /**
@@ -1215,15 +1301,17 @@ public class TestTdbAuOrderScorer extends TestCase {
       assertTrue(yearScore > volScore);
     }
     // Consistent sequence - single range
-    List<TitleRange> ranges = Arrays.asList(new TitleRange(fullyConsistentAus));
-    orderVolYear(fullyConsistentAus);
-    float volScore =  TdbAuOrderScorer.getYearRangeConsistency(ranges);
-    orderYearVol(fullyConsistentAus);
-    float yearScore = TdbAuOrderScorer.getYearRangeConsistency(ranges);
-    // Should all be equal to 1
-    assertEquals(yearScore, volScore);
-    assertEquals(1f, yearScore);
-    assertEquals(1f, volScore);
+    for (List<TdbAu> aus : consistentSequences) {
+      List<TitleRange> ranges = Arrays.asList(new TitleRange(aus));
+      orderVolYear(aus);
+      float volScore =  TdbAuOrderScorer.getYearRangeConsistency(ranges);
+      orderYearVol(aus);
+      float yearScore = TdbAuOrderScorer.getYearRangeConsistency(ranges);
+      // Should all be equal to 1
+      assertEquals(yearScore, volScore);
+      assertEquals(1f, yearScore);
+      assertEquals(1f, volScore);
+    }
   }
 
   /**
@@ -1239,15 +1327,17 @@ public class TestTdbAuOrderScorer extends TestCase {
       assertTrue(volScore > yearScore);
     }
     // Consistent sequence - single range
-    List<TitleRange> ranges = Arrays.asList(new TitleRange(fullyConsistentAus));
-    orderVolYear(fullyConsistentAus);
-    float volScore =  TdbAuOrderScorer.getVolumeRangeConsistency(ranges);
-    orderYearVol(fullyConsistentAus);
-    float yearScore = TdbAuOrderScorer.getVolumeRangeConsistency(ranges);
-    // Should all be equal to 1
-    assertEquals(yearScore, volScore);
-    assertEquals(1f, yearScore);
-    assertEquals(1f, volScore);
+    for (List<TdbAu> aus : consistentSequences) {
+      List<TitleRange> ranges = Arrays.asList(new TitleRange(aus));
+      orderVolYear(aus);
+      float volScore =  TdbAuOrderScorer.getVolumeRangeConsistency(ranges);
+      orderYearVol(aus);
+      float yearScore = TdbAuOrderScorer.getVolumeRangeConsistency(ranges);
+      // Should all be equal to 1
+      assertEquals(yearScore, volScore);
+      assertEquals(1f, yearScore);
+      assertEquals(1f, volScore);
+    }
   }
 
   /**
@@ -1277,7 +1367,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     assertEquals(0.375f, TdbAuOrderScorer.getCoverageGapFrequencyDiscount(8f, 4f));
     for (int i : new int[]{16, 50, 500, 1000000}) {
       assertTrue(TdbAuOrderScorer.getCoverageGapFrequencyDiscount((float)i,
-	  (float)(i/2)) < 0.5);
+          (float)(i/2)) < 0.5);
     }
   }
 
@@ -1288,7 +1378,7 @@ public class TestTdbAuOrderScorer extends TestCase {
    */
   public final void testGetConsistencyScore() {
     for (int i=0; i<allYearRanges.size(); i++) {
-      List<TdbAu> aus = allLists.get(i);
+      List<TdbAu> aus = problemTitles.get(i);
       // Consistency score based on volume ordering
       orderVolYear(aus);
       ConsistencyScore csVol = TdbAuOrderScorer.getConsistencyScore(aus, allVolRanges.get(i));
@@ -1367,7 +1457,7 @@ public class TestTdbAuOrderScorer extends TestCase {
    */
   public final void testPreferVolume() {
     for (int i=0; i<allYearRanges.size(); i++) {
-      List<TdbAu> aus = allLists.get(i);
+      List<TdbAu> aus = problemTitles.get(i);
       String title = allYearRanges.get(i).get(0).tdbAus.get(0).getName();
 
       // Order by volume/year and get a score
@@ -1376,28 +1466,30 @@ public class TestTdbAuOrderScorer extends TestCase {
       // Order by year/volume and get a score
       orderYearVol(aus);
       ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(aus, allYearRanges.get(i));
-
+      
       // Do these scores lead us to prefer volume?
       boolean preferVolume = TdbAuOrderScorer.preferVolume(csVol, csYear);
       
       // Ensure the preference is in the right direction
       if (titlesToOrderByVolume.contains(i)) {
-	assertTrue(title+" should prefer volume", preferVolume);
+        assertTrue(title+" should prefer volume", preferVolume);
       } else if (titlesToOrderByYear.contains(i)) {
-	assertTrue(title+" should prefer year", !preferVolume);
+        assertTrue(title+" should prefer year", !preferVolume);
       } else {
-	// Indices that do not appear in either of these lists can be ordered either way 
+        // Indices that do not appear in either of these lists can be ordered either way 
       }
     }
     // Consistent sequence - single range
-    List<TitleRange> ranges = Arrays.asList(new TitleRange(fullyConsistentAus));
-    // TODO do the sorting here and elsewhere, and use canonical for title range
-    orderVolYear(fullyConsistentAus);
-    ConsistencyScore csVol  = TdbAuOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
-    orderYearVol(fullyConsistentAus);
-    ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
-    boolean preferVolume = TdbAuOrderScorer.preferVolume(csVol, csYear);
-    assertTrue(preferVolume);
+    for (List<TdbAu> aus : consistentSequences) {
+      List<TitleRange> ranges = Arrays.asList(new TitleRange(aus));
+      // TODO do the sorting here and elsewhere, and use canonical for title range
+      orderVolYear(aus);
+      ConsistencyScore csVol  = TdbAuOrderScorer.getConsistencyScore(aus, ranges);
+      orderYearVol(aus);
+      ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(aus, ranges);
+      boolean preferVolume = TdbAuOrderScorer.preferVolume(csVol, csYear);
+      assertTrue(preferVolume);
+    }
   }
    
   
@@ -1582,9 +1674,11 @@ public class TestTdbAuOrderScorer extends TestCase {
    * @param aus
    */
   private final void assertMonotonicIncreaseOnTheSortedField(List<TdbAu> aus) {
+    String title = aus.get(0).getName();
+    String err = title+" should be monotonically increasing";
     // Shuffle and sort
     orderVolYear(aus);
-    assertTrue(TdbAuOrderScorer.isMonotonicallyIncreasing(aus, VOL));
+    assertTrue(err, TdbAuOrderScorer.isMonotonicallyIncreasing(aus, VOL));
     assertFalse(!containsChangeOfFormats(aus, YR) && TdbAuOrderScorer.isMonotonicallyIncreasing(aus, YR));
     orderYearVol(aus);
     assertTrue(TdbAuOrderScorer.isMonotonicallyIncreasing(aus, YR));
@@ -1601,8 +1695,8 @@ public class TestTdbAuOrderScorer extends TestCase {
     if (aus.size()<2) return false;
     for (int i=1; i<=aus.size()-1; i++) {
       if (TdbAuOrderScorer.changeOfFormats(
-	  field.getValue(aus.get(i-1)), 
-	  field.getValue(aus.get(i))
+          field.getValue(aus.get(i-1)), 
+          field.getValue(aus.get(i))
       )) return true;
     }
     return false;
@@ -1623,7 +1717,7 @@ public class TestTdbAuOrderScorer extends TestCase {
    * ordered by volume 
    */
   private final void registerOrderByVolume() {
-    titlesToOrderByVolume.add(allLists.size()-1);
+    titlesToOrderByVolume.add(problemTitles.size()-1);
   }
 
   /**
@@ -1631,7 +1725,7 @@ public class TestTdbAuOrderScorer extends TestCase {
    * ordered by volume 
    */
   private final void registerOrderByYear() {
-    titlesToOrderByYear.add(allLists.size()-1);
+    titlesToOrderByYear.add(problemTitles.size()-1);
   }
 
   
