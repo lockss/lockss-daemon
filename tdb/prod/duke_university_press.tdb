@@ -4,8 +4,6 @@
     name = Duke University Press
   >
 
-comment[duke] = HW content is migrating to H20 July 2011, so should be tested after that
-
   {
     
     title <
@@ -32,6 +30,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       au < released ; 2005 ; American Literary Scholarship 2005 ; 2005 >
       au < released ; 2006 ; American Literary Scholarship 2006 ; 2006 >
       au < released ; 2007 ; American Literary Scholarship 2007 ; 2007 >
+      au < testing ; 2008 ; American Literary Scholarship 2008 ; 2008 >
         
     }
 
@@ -41,14 +40,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://als.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2003 ; American Literary Scholarship 2003 ; 2003 >
-      au < HighWireStrVolPlugin ; released ; 2004 ; American Literary Scholarship 2004 ; 2004 >
-      au < HighWirePressPlugin ; wanted ; 2005 ; American Literary Scholarship 2005 ; 2005 >
-      au < HighWirePressPlugin ; wanted ; 2006 ; American Literary Scholarship 2006 ; 2006 >
-      au < HighWirePressPlugin ; wanted ; 2007 ; American Literary Scholarship 2007 ; 2007 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; American Literary Scholarship 2008 ; 2008 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; American Literary Scholarship 2009 ; 2009 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; American Literary Scholarship 2010 ; 2010 >      
+      comment[years] = years in web addresses are two years behind the publishing year as of 20110912
+      
+      au < HighWirePressH20Plugin ; exists ; 2002 ; American Literary Scholarship 2002 ; 2000 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; American Literary Scholarship 2003 ; 2001 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; American Literary Scholarship 2004 ; 2002 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; American Literary Scholarship 2005 ; 2003 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; American Literary Scholarship 2006 ; 2004 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; American Literary Scholarship 2007 ; 2005 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; American Literary Scholarship 2008 ; 2006 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; American Literary Scholarship 2009 ; 2007 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; American Literary Scholarship 2010 ; 2008 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
       
     }
     
@@ -85,13 +88,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; American Literature Volume 77 ; 77 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; American Literature Volume 78 ; 78 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; American Literature Volume 79 ; 79 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; American Literature Volume 80 ; 80 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; American Literature Volume 81 ; 81 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; American Literature Volume 82 ; 82 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; American Literature Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; American Literature Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; American Literature Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; American Literature Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; American Literature Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; American Literature Volume 76 ; 76 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; American Literature Volume 77 ; 77 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; American Literature Volume 78 ; 78 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; American Literature Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; American Literature Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; American Literature Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; American Literature Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; American Literature Volume 83 ; 83 >
     
     }
     
@@ -128,13 +136,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; American Speech Volume 80 ; 80 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; American Speech Volume 81 ; 81 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; American Speech Volume 82 ; 82 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; American Speech Volume 83 ; 83 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; American Speech Volume 84 ; 84 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; American Speech Volume 85 ; 85 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; American Speech Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; American Speech Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; American Speech Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; American Speech Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; American Speech Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; American Speech Volume 79 ; 79 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; American Speech Volume 80 ; 80 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; American Speech Volume 81 ; 81 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; American Speech Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; American Speech Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; American Speech Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; American Speech Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; testing ; 2011 ; American Speech Volume 86 ; 86 >
     
     }
     
@@ -171,13 +184,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://boundary2.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; boundary 2 Volume 32 ; 32 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; boundary 2 Volume 33 ; 33 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; boundary 2 Volume 34 ; 34 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; boundary 2 Volume 35 ; 35 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; boundary 2 Volume 36 ; 36 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; boundary 2 Volume 37 ; 37 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; boundary 2 Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; boundary 2 Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; boundary 2 Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; boundary 2 Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; boundary 2 Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; boundary 2 Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; boundary 2 Volume 32 ; 32 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; boundary 2 Volume 33 ; 33 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; boundary 2 Volume 34 ; 34 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; boundary 2 Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; boundary 2 Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; boundary 2 Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; boundary 2 Volume 38 ; 38 >
       
     }
     
@@ -213,12 +231,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
       
     }
     
@@ -250,8 +269,8 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       au < released ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
       au < released ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
       au < released ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
-      au < wanted ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
-      au < wanted ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < manifest ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < manifest ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
 
     }
     
@@ -261,13 +280,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://cssaame.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
       
     }
     
@@ -322,13 +341,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://differences.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
-      au < HighWirePressPlugin ; wanted ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
       
     }
     
@@ -399,13 +418,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://ecl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
 
     }
     
@@ -441,13 +460,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; 2005 ; Ethnohistory Volume 52 ; 52 >
-     au < HighWireStrVolPlugin ; released ; 2006 ; Ethnohistory Volume 53 ; 53 >
-     au < HighWireStrVolPlugin ; released ; 2007 ; Ethnohistory Volume 54 ; 54 >      
-     au < HighWirePressPlugin ; wanted ; 2008 ; Ethnohistory Volume 55 ; 55 >
-     au < HighWirePressPlugin ; wanted ; 2009 ; Ethnohistory Volume 56 ; 56 >
-     au < HighWirePressPlugin ; wanted ; 2010 ; Ethnohistory Volume 57 ; 57 >
-     au < HighWirePressPlugin ; wanted ; 2011 ; Ethnohistory Volume 58 ; 58 >
+     au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
+     au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
+     au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
+     au < HighWirePressH20Plugin ; manifest ; 2008 ; Ethnohistory Volume 55 ; 55 >
+     au < HighWirePressH20Plugin ; manifest ; 2009 ; Ethnohistory Volume 56 ; 56 >
+     au < HighWirePressH20Plugin ; manifest ; 2010 ; Ethnohistory Volume 57 ; 57 >
+     au < HighWirePressH20Plugin ; manifest ; 2011 ; Ethnohistory Volume 58 ; 58 >
     
     }
     
@@ -483,12 +502,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; 2005 ; French Historical Studies Volume 28 ; 28 >
-     au < HighWireStrVolPlugin ; released ; 2006 ; French Historical Studies Volume 29 ; 29 >
-     au < HighWireStrVolPlugin ; released ; 2007 ; French Historical Studies Volume 30 ; 30 >      
-     au < HighWirePressPlugin ; wanted ; 2008 ; French Historical Studies Volume 31 ; 31 >
-     au < HighWirePressPlugin ; wanted ; 2009 ; French Historical Studies Volume 32 ; 32 >
-     au < HighWirePressPlugin ; wanted ; 2010 ; French Historical Studies Volume 33 ; 33 >
+     au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
+     au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
+     au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
+     au < HighWirePressH20Plugin ; manifest ; 2008 ; French Historical Studies Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; manifest ; 2009 ; French Historical Studies Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; manifest ; 2010 ; French Historical Studies Volume 33 ; 33 >
     
     }
     
@@ -562,12 +581,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://glq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
 
     }
     
@@ -603,13 +622,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
-     au < HighWireStrVolPlugin ; released ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
-     au < HighWireStrVolPlugin ; released ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
-     au < HighWirePressPlugin ; wanted ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
-     au < HighWirePressPlugin ; wanted ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
-     au < HighWirePressPlugin ; wanted ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
-     au < HighWirePressPlugin ; wanted ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
+     au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
+     au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
+     au < HighWirePressH20Plugin ; manifest ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
+     au < HighWirePressH20Plugin ; manifest ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
+     au < HighWirePressH20Plugin ; manifest ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
+     au < HighWirePressH20Plugin ; manifest ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
     
     }
     
@@ -645,13 +664,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-     au < HighWireStrVolPlugin ; released ; 2005 ; History of Political Economy Volume 37 ; 37 >
-     au < HighWireStrVolPlugin ; released ; 2006 ; History of Political Economy Volume 38 ; 38 >
-     au < HighWireStrVolPlugin ; released ; 2007 ; History of Political Economy Volume 39 ; 39 >      
-     au < HighWirePressPlugin ; wanted ; 2008 ; History of Political Economy Volume 40 ; 40 >
-     au < HighWirePressPlugin ; wanted ; 2009 ; History of Political Economy Volume 41 ; 41 >
-     au < HighWirePressPlugin ; wanted ; 2010 ; History of Political Economy Volume 42 ; 42 >
-     au < HighWirePressPlugin ; wanted ; 2011 ; History of Political Economy Volume 43 ; 43 >
+     au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
+     au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
+     au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
+     au < HighWirePressH20Plugin ; manifest ; 2008 ; History of Political Economy Volume 40 ; 40 >
+     au < HighWirePressH20Plugin ; manifest ; 2009 ; History of Political Economy Volume 41 ; 41 >
+     au < HighWirePressH20Plugin ; manifest ; 2010 ; History of Political Economy Volume 42 ; 42 >
+     au < HighWirePressH20Plugin ; manifest ; 2011 ; History of Political Economy Volume 43 ; 43 >
     
     }
     
@@ -687,12 +706,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://jhppl.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
     
     }
     
@@ -728,12 +747,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://jmems.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
     
     }
     
@@ -753,12 +772,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://labor.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
     
     }
     
@@ -802,12 +821,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://mq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
 
     }
     
@@ -868,13 +887,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://mlq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; MLQ: Modern Language Quarterly Volume 72 ; 72 >
     
     }
     
@@ -952,12 +971,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Poetics Today Volume 26 ; 26 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Poetics Today Volume 27 ; 27 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Poetics Today Volume 28 ; 28 >      
-      au < HighWirePressPlugin ; wanted ; 2008 ; Poetics Today Volume 29 ; 29 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Poetics Today Volume 30 ; 30 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Poetics Today Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >      
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Poetics Today Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Poetics Today Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Poetics Today Volume 31 ; 31 >
     
     }
     
@@ -1001,12 +1020,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://positions.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; positions: east asia cultures critique Volume 18 ; 18 >
 
     }
     
@@ -1026,18 +1045,18 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://pads.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressPlugin ; manifest ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < HighWirePressPlugin ; manifest ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < HighWirePressPlugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < HighWirePressPlugin ; manifest ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < HighWirePressPlugin ; manifest ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < HighWirePressPlugin ; manifest ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < HighWirePressPlugin ; manifest ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < HighWirePressPlugin ; manifest ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < HighWirePressPlugin ; manifest ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < HighWirePressPlugin ; manifest ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; exists ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; exists ; 2005 ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; exists ; 2006 ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; exists ; 2008 ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; exists ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; exists ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
 
     }
   
@@ -1073,13 +1092,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://publicculture.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Public Culture Volume 17 ; 17 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Public Culture Volume 18 ; 18 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Public Culture Volume 19 ; 19 >
-      au < HighWirePressPlugin ; wanted ; 2008 ; Public Culture Volume 20 ; 20 >
-      au < HighWirePressPlugin ; wanted ; 2009 ; Public Culture Volume 21 ; 21 >
-      au < HighWirePressPlugin ; wanted ; 2010 ; Public Culture Volume 22 ; 22 >
-      au < HighWirePressPlugin ; wanted ; 2011 ; Public Culture Volume 23 ; 23 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Public Culture Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Public Culture Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Public Culture Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Public Culture Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Public Culture Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Public Culture Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Public Culture Volume 23 ; 23 >
     
     }
   
@@ -1121,13 +1140,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://rhr.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Radical History Review 2005 ; 2005 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Radical History Review 2006 ; 2006 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Radical History Review 2007 ; 2007 >
-      au < HighWirePressPlugin ; manifest ; 2007 ; Radical History Review 2007 ; 2008 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; Radical History Review 2009 ; 2009 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; Radical History Review 2010 ; 2010 >
-      au < HighWirePressPlugin ; manifest ; 2011 ; Radical History Review 2011 ; 2011 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Radical History Review 2005 ; 2005 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Radical History Review 2006 ; 2006 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Radical History Review 2007 ; 2007 >
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; Radical History Review 2007 ; 2008 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Radical History Review 2009 ; 2009 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Radical History Review 2010 ; 2010 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Radical History Review 2011 ; 2011 >
     
     }
   
@@ -1171,12 +1190,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Social Science History Volume 29 ; 29 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Social Science History Volume 30 ; 30 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Social Science History Volume 31 ; 31 >
-      au < HighWirePressPlugin ; manifest ; 2008 ; Social Science History Volume 32 ; 32 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; Social Science History Volume 33 ; 33 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; Social Science History Volume 34 ; 34 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Social Science History Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Social Science History Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Social Science History Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Social Science History Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Social Science History Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Social Science History Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Social Science History Volume 35 ; 35 >
     
     }
   
@@ -1212,12 +1232,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://socialtext.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Social Text Volume 23 ; 23 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Social Text Volume 24 ; 24 >
-      au < HighWirePressPlugin ; manifest ; 2007 ; Social Text Volume 25 ; 25 >
-      au < HighWirePressPlugin ; manifest ; 2008 ; Social Text Volume 26 ; 26 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; Social Text Volume 27 ; 27 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; Social Text Volume 28 ; 28 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Social Text Volume 23 ; 23 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Social Text Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2007 ; Social Text Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Social Text Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Social Text Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Social Text Volume 28 ; 28 >
     
     }
   
@@ -1253,13 +1273,17 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://saq.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
-      au < HighWirePressPlugin ; manifest ; 2008 ; The South Atlantic Quarterly Volume 107 ; 107 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
-      au < HighWirePressPlugin ; manifest ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; exists ; 2001 ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; exists ; 2002 ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; exists ; 2003 ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; exists ; 2004 ; The South Atlantic Quarterly Volume 103 ; 103 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; The South Atlantic Quarterly Volume 104 ; 104 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; The South Atlantic Quarterly Volume 105 ; 105 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; The South Atlantic Quarterly Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; The South Atlantic Quarterly Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; The South Atlantic Quarterly Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; The South Atlantic Quarterly Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; The South Atlantic Quarterly Volume 110 ; 110 >
     
     }
   
@@ -1295,12 +1319,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://theater.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWireStrVolPlugin ; released ; 2005 ; Theater Volume 35 ; 35 >
-      au < HighWireStrVolPlugin ; released ; 2006 ; Theater Volume 36 ; 36 >
-      au < HighWireStrVolPlugin ; released ; 2007 ; Theater Volume 37 ; 37 >
-      au < HighWirePressPlugin ; manifest ; 2008 ; Theater Volume 38 ; 38 >
-      au < HighWirePressPlugin ; manifest ; 2009 ; Theater Volume 39 ; 39 >
-      au < HighWirePressPlugin ; manifest ; 2010 ; Theater Volume 40 ; 40 >
+      au < HighWireStrVolPlugin ; down ; 2005 ; Theater Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; down ; 2006 ; Theater Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; down ; 2007 ; Theater Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 2008 ; Theater Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 2009 ; Theater Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; Theater Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Theater Volume 41 ; 41 >
     
     }
   
