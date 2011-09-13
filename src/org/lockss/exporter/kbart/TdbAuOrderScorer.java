@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuOrderScorer.java,v 1.1.2.2 2011-09-09 17:53:00 easyonthemayo Exp $
+ * $Id: TdbAuOrderScorer.java,v 1.1.2.3 2011-09-13 15:00:56 easyonthemayo Exp $
  */
 
 /*
@@ -141,25 +141,31 @@ public final class TdbAuOrderScorer {
       public SORT_FIELD other() { return YEAR; };
       public String getValue(TdbAu au) { return au.getVolume(); }
       public boolean areIncreasing(String first, String second) {
-	return areVolumesIncreasing(first, second);
+        return areVolumesIncreasing(first, second);
       }
       // We consider a volume to be decreasing if it is not monotonically 
       // increasing; note that two volumes should not be equal! This may 
       // produce a true value therefore if volumes are erroneously equal, 
       // but we return false if the formats change.
       public boolean areDecreasing(String first, String second) {
-	return changeOfFormats(first, second) ? false : !areVolumesIncreasing(first, second);
+        return changeOfFormats(first, second) ? false :
+            !areVolumesIncreasing(first, second);
       }
       public boolean areConsecutive(String first, String second) {
-	return areVolumesConsecutive(first, second);
+        return areVolumesConsecutive(first, second);
       }
       // Consecutive TdbAus must have strictly consecutive volumes.
+      // Edit: due to occasional interleaving of duplicate records which appear
+      // because of genuine duplicates when a publisher re-releases on a new 
+      // platform, we allow consecutive TdbAus to have the same volume if their
+      // other fields are also duplicated.
       public boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second) {
-	return areVolumesConsecutive(getValue(first), getValue(second));
+        return areVolumesConsecutive(getValue(first), getValue(second)) ||
+            areVolumesConsecutiveDuplicates(first, second);
       }
       // TdbAu sequences must display increasing volumes
       public boolean areAppropriatelySequenced(TdbAu first, TdbAu second) {
-	return isMonotonicallyIncreasing(Arrays.asList(first, second), this);
+        return isMonotonicallyIncreasing(Arrays.asList(first, second), this);
       }
     },
     /**
@@ -174,23 +180,25 @@ public final class TdbAuOrderScorer {
       public SORT_FIELD other() { return VOLUME; };
       public String getValue(TdbAu au) { return au.getStartYear(); }
       public boolean areIncreasing(String first, String second) {
-	return areYearsIncreasing(first, second);
+        return areYearsIncreasing(first, second);
       }
-      // Years are decreasing if they are not strictly consecutive and not increasing.
+      // Years are decreasing if not strictly consecutive and not increasing.
       public boolean areDecreasing(String first, String second) {
-	return !areConsecutive(first, second) && !areVolumesIncreasing(first, second);
-	//return !areYearsIncreasing(first, second);
+        return !areConsecutive(first, second) &&
+            !areVolumesIncreasing(first, second);
       }
       public boolean areConsecutive(String first, String second) {
-	return areYearsConsecutive(first, second);
+        return areYearsConsecutive(first, second);
       }
       // Consecutive TdbAus must have appropriately consecutive year ranges
       public boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second) {
-	return areYearRangesAppropriatelyConsecutive(first.getYear(), second.getYear());
+        return areYearRangesAppropriatelyConsecutive(first.getYear(),
+            second.getYear());
       }
       // TdbAu sequences must have appropriately sequenced year ranges
       public boolean areAppropriatelySequenced(TdbAu first, TdbAu second) {
-	return areYearRangesAppropriatelySequenced(first.getYear(), second.getYear());
+        return areYearRangesAppropriatelySequenced(first.getYear(),
+            second.getYear());
       }
     }
     ;
@@ -202,7 +210,8 @@ public final class TdbAuOrderScorer {
     public abstract boolean areConsecutive(String first, String second); 
     public abstract boolean areAppropriatelySequenced(TdbAu first, TdbAu second);
     public abstract boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second);
-    // TODO Add throws declarations to these methods? NumberFormatException, NullPointerException
+    // TODO Add throws declarations to these methods?
+    // NumberFormatException, NullPointerException
   };
 
   
@@ -215,18 +224,19 @@ public final class TdbAuOrderScorer {
   static class ConsistencyScore {
     public final float volScore, yearScore, volListScore, yearListScore, score;
     public ConsistencyScore(float volScore, float yearScore, 
-	                    float volListScore, float yearListScore) {
+                            float volListScore, float yearListScore) {
       this.volScore = volScore;
       this.yearScore = yearScore;
       this.volListScore = volListScore;
       this.yearListScore = yearListScore;
-      // This overall score is not very useful at the moment
+      // Overall score is the sum of the products of the range scores and
+      // full sequence scores. This measure might be improved.
       this.score = yearScore * volScore + yearListScore * volListScore;
     }
     public String toString() {
       return String.format("ConsistencyScore vol %f \t year %f \t " +
-	  "volList %f \t yearList %f \t Overall %s", 
-	  volScore, yearScore, volListScore, yearListScore, score);
+          "volList %f \t yearList %f \t Overall %s",
+          volScore, yearScore, volListScore, yearListScore, score);
     }
   }
 
@@ -308,6 +318,7 @@ public final class TdbAuOrderScorer {
    * @return whether the volumes appear to be consecutive
    */
   static final boolean areVolumesConsecutive(String first, String second) {
+    // TODO deal with volume ranges
     Perl5Matcher matcher = RegexpUtil.getMatcher();
     MatchResult mr1, mr2;
     // Does the first vol string match
@@ -324,6 +335,21 @@ public final class TdbAuOrderScorer {
     }
     // At least one string doesn't match
     return false; 
+  }
+
+  /**
+   * Two TdbAus may be considered consecutive even if they share a volume 
+   * string, as long as the rest of their fields are also equivalent. This
+   * is taken to indicate that the volumes are genuine duplicates supplied 
+   * by the publisher, because for example they have re-released on a new 
+   * platform, rather than accidental duplicates introduced through 
+   * errors in either the TDB or the publisher records.
+   * @param first a TdbAu representing the first volume
+   * @param second a TdbAu representing the subsequent volume
+   * @return whether the volumes appear to be consecutive
+   */
+  static final boolean areVolumesConsecutiveDuplicates(TdbAu first, TdbAu second) {
+    return KbartTdbAuUtil.areApparentlyEquivalent(first, second);
   }
 
   /**
@@ -512,12 +538,14 @@ public final class TdbAuOrderScorer {
    * @return whether the year ranges may be considered to be appropriately consecutive
    * @throws NumberFormatException if the Strings do not represent year ranges or integers
    */
-  static final boolean areYearRangesAppropriatelyConsecutive(String first, String second) 
-  throws NumberFormatException {
+  static final boolean areYearRangesAppropriatelyConsecutive(String first,
+                                                             String second)
+      throws NumberFormatException {
     String e1 = NumberUtil.getRangeEnd(first);
     String s2 = NumberUtil.getRangeStart(second);
     // Appropriate sequencing, plus no significant gap between the ranges
-    return areYearRangesAppropriatelySequenced(first, second) && !isGapBetween(e1, s2);
+    return areYearRangesAppropriatelySequenced(first, second) &&
+        !isGapBetween(e1, s2);
   }
   
   /**
@@ -560,8 +588,9 @@ public final class TdbAuOrderScorer {
    * @return whether the year ranges may be considered to be appropriately sequenced
    * @throws NumberFormatException if the Strings do not represent year ranges or integers
    */
-  static final boolean areYearRangesAppropriatelySequenced(String first, String second) 
-  throws NumberFormatException {
+  static final boolean areYearRangesAppropriatelySequenced(String first,
+                                                           String second)
+      throws NumberFormatException {
     String s1 = NumberUtil.getRangeStart(first);
     String s2 = NumberUtil.getRangeStart(second);
     return areYearsIncreasing(s1, s2) || NumberUtil.rangeIncludes(second, s1);
@@ -575,7 +604,8 @@ public final class TdbAuOrderScorer {
    * @param fieldToCheck the field to analyse for breaks
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfBreaks(List<TitleRange> ranges, SORT_FIELD fieldToCheck) {
+  static final float countProportionOfBreaks(List<TitleRange> ranges,
+                                             SORT_FIELD fieldToCheck) {
     float total = 0;
     for (TitleRange tr: ranges) {
       total += countProportionOfBreaksInRange(tr.tdbAus, fieldToCheck);
@@ -591,7 +621,8 @@ public final class TdbAuOrderScorer {
    * @param fieldToCheck the field to analyse for redundancy
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfRedundancy(List<TitleRange> ranges, SORT_FIELD fieldToCheck) {
+  static final float countProportionOfRedundancy(List<TitleRange> ranges,
+                                                 SORT_FIELD fieldToCheck) {
     float total = 0;
     for (TitleRange tr: ranges) {
       total += countProportionOfRedundancyInRange(tr.tdbAus, fieldToCheck);
@@ -610,7 +641,7 @@ public final class TdbAuOrderScorer {
    * @return a decimal value between 0 and 1
    */
   static final float countProportionOfBreaksInRange(List<TdbAu> aus, 
-      SORT_FIELD fieldToCheck) {
+                                                    SORT_FIELD fieldToCheck) {
     int numPairs = aus.size() - 1;
     if (numPairs<1) return 0;
     int total = 0;
@@ -619,11 +650,11 @@ public final class TdbAuOrderScorer {
       TdbAu thisAu = aus.get(i);
       String lastVal = fieldToCheck.getValue(lastAu);
       String thisVal = fieldToCheck.getValue(thisAu);
-      // If there is not a full set of field vals, return a high value
-      if (lastVal==null || thisVal==null) return 1;
+      // If there is not a full set of field values, return a high value
+      if (lastVal==null || thisVal==null) return 1f;
       // Compare the values to see if there is a break.
       if (!fieldToCheck.areAppropriatelyConsecutive(lastAu, thisAu)) {
-	total++;
+        total++;
       }
       lastVal = thisVal;
     }
@@ -650,22 +681,23 @@ public final class TdbAuOrderScorer {
       TdbAu thisAu = aus.get(i);
       String lastVal = yearField.getValue(lastAu);
       String thisVal = yearField.getValue(thisAu);
-      // If there is not a full set of field vals, return a high value
-      if (lastVal==null || thisVal==null) return 1;
+      // If there is not a full set of field values, return a high value
+      if (lastVal==null || thisVal==null) return 1f;
       // Compare the values to see if there is a break.
       boolean isYearBreak = !yearField.areAppropriatelyConsecutive(lastAu, thisAu);
       // Don't count a year break when there is a parallel break in the volume
       // field. This will only apply when counting a full unsplit sequence, and 
       // should not occur when counting breaks in coverage ranges. 
       if (isYearBreak) {
-	// First check that volume fields are available for reference and not null.
-	SORT_FIELD volField = SORT_FIELD.VOLUME;
-	boolean isVolAvailable = 
-	  volField.getValue(lastAu)!=null && 
-	  volField.getValue(thisAu)!=null;
-	// Count a break if the vol info is not available, or if there is no parallel break in vol
-	if (!isVolAvailable || volField.areAppropriatelyConsecutive(lastAu, thisAu)) 
-	  total++;
+        // First check that volume fields are available for reference and not null.
+        SORT_FIELD volField = SORT_FIELD.VOLUME;
+        boolean isVolAvailable =
+            volField.getValue(lastAu)!=null &&
+                volField.getValue(thisAu)!=null;
+        // Count a break if the volume info is not available, or if there is
+        // no parallel break in volume
+        if (!isVolAvailable || volField.areAppropriatelyConsecutive(lastAu, thisAu))
+          total++;
       }
     }
     return (float)total/(float)numPairs;
@@ -693,8 +725,8 @@ public final class TdbAuOrderScorer {
       TdbAu thisAu = aus.get(i);
       String lastVal = fieldToCheck.getValue(lastAu);
       String thisVal = fieldToCheck.getValue(thisAu);
-      // If there is not a full set of field vals, return a high value
-      if (lastVal==null || thisVal==null) return 1;
+      // If there is not a full set of field values, return a high value
+      if (lastVal==null || thisVal==null) return 1f;
       // Record a negative break
       if (fieldToCheck.areDecreasing(lastVal, thisVal)) {
         total++;
@@ -705,17 +737,24 @@ public final class TdbAuOrderScorer {
   }
   
   /**
-   * How much redundancy there is in the values of the range. For volumes, 
+   * How much redundancy there is in the values of the range. <s>For volumes, 
    * which should not have duplicates (but do), this is the proportion of values 
    * which are repeated. For years, which can have duplicates that should be 
    * consecutive, this is the proportion of values which duplicate earlier 
-   * values but not their preceding value.
+   * values but not their preceding value.</s>
+   * 
+   * Duplicates can appear in both year and volume fields. For volumes, this is 
+   * mostly because of duplicate TDB records due to something like a publisher 
+   * moving to a different platform. It should not (but does) occur within the
+   * volume fields of a single journal run. For this reason, a duplicate value 
+   * is not counted if it duplicates only the preceding value.
    *   
    * @param aus a list of TdbAus 
    * @param fieldToCheck the field to analyse for redundancy
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfRedundancyInRange(List<TdbAu> aus, SORT_FIELD fieldToCheck) {
+  static final float countProportionOfRedundancyInRange(List<TdbAu> aus,
+                                                        SORT_FIELD fieldToCheck) {
     int numVals = aus.size();
     if (numVals<2) return 0;
     Set<String> uniqueVals = new HashSet<String>();
@@ -723,14 +762,19 @@ public final class TdbAuOrderScorer {
     int redundantEntries = 0;
     for (TdbAu au : aus) {
       String value = fieldToCheck.getValue(au);
+      // If there is not a full set of field values, return a high value
+      if (value==null) return 1f;
       // If the value is a duplicate, act accordingly
       if (!uniqueVals.add(value)) {
-	if (fieldToCheck == SORT_FIELD.VOLUME) {
-	  //log.debug("Duplicate field: "+fieldToCheck.getValue(au)+" in title "+au.getTdbTitle().getName());
-	  redundantEntries++;
-	} else {
-	  if (!value.equals(lastValue)) redundantEntries++;
-	}
+        if (!value.equals(lastValue)) redundantEntries++;
+        /*
+        if (fieldToCheck == SORT_FIELD.VOLUME) {
+          //log.debug("Duplicate field: "+fieldToCheck.getValue(au)+" in title "+au.getTdbTitle().getName());
+          redundantEntries++;
+        } else {
+          if (!value.equals(lastValue)) redundantEntries++;
+        }
+        */
       }
       lastValue = value;
     }
@@ -758,13 +802,13 @@ public final class TdbAuOrderScorer {
       lastVal = fieldToCheck.getValue(aus.get(i-1));
       thisVal = fieldToCheck.getValue(aus.get(i));
       if (!fieldToCheck.areIncreasing(lastVal, thisVal)) {
-	// Check if there is a change of formats
-	if (changeOfFormats(lastVal, thisVal)) {
-	  log.warning(String.format("Ignoring change of formats in %s: %s %s\n", 
-	      fieldToCheck, lastVal, thisVal));
-	  continue;
-	}
-	return false;
+        // Check if there is a change of formats
+        if (changeOfFormats(lastVal, thisVal)) {
+          log.warning(String.format("Ignoring change of formats in %s: %s %s\n",
+              fieldToCheck, lastVal, thisVal));
+          continue;
+        }
+        return false;
       }
     }
     return true;
@@ -820,6 +864,10 @@ public final class TdbAuOrderScorer {
    * @return a consistency rating for the sequence of values in the volume field
    */
   static final float getVolumeListConsistency(List<TdbAu> aus) {
+    // For volumes in a sequence, although there should be no duplication,
+    // we do sometimes see it because there are two copies of an AU out there,
+    // one 'released' and one 'down'. These will get interleaved in the AU 
+    // ordering, and so we accept redundancy between consecutive volumes.
     float red = countProportionOfRedundancyInRange(aus, SORT_FIELD.VOLUME);
     float brk = countProportionOfBreaksInRange(aus, SORT_FIELD.VOLUME);
     float negbrk = countProportionOfNegativeBreaksInRange(aus, SORT_FIELD.VOLUME);
@@ -957,7 +1005,8 @@ public final class TdbAuOrderScorer {
    * @param yearScore the ConsistencyScore for year ordering
    * @return whether to prefer the volume ordering
    */
-  static final boolean preferVolume(ConsistencyScore volScore, ConsistencyScore yearScore) {
+  static final boolean preferVolume(ConsistencyScore volScore,
+                                    ConsistencyScore yearScore) {
 
     // -- Relative benefits of each ordering to coverage ranges
     // Volume benefit with year ordering

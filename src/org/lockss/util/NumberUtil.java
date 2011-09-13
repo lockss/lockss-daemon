@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.6.2.2 2011-09-09 17:53:00 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.6.2.3 2011-09-13 15:00:56 easyonthemayo Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class NumberUtil {
    * also control characters, but doesn't trim all the forms of blank 
    * specified in the Unicode character set. The value to search for is 
    * <i>not</i> trimmed.
-   * 
+   *
    * @param range a single value or a start/stop range separated by a dash, optionally with whitesapce
    * @param value the value
    * @return <code>true</code> if this range includes the value
