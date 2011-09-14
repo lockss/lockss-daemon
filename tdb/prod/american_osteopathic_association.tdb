@@ -17,15 +17,15 @@
       param[base_url] = http://www.jaoa.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1950 ; JAOA: Journal of the American Osteopathic Association Volume 50 ; 50 >
-      au < exists ; 1951 ; JAOA: Journal of the American Osteopathic Association Volume 51 ; 51 >
-      au < exists ; 1952 ; JAOA: Journal of the American Osteopathic Association Volume 52 ; 52 >
-      au < exists ; 1953 ; JAOA: Journal of the American Osteopathic Association Volume 53 ; 53 >
-      au < exists ; 1954 ; JAOA: Journal of the American Osteopathic Association Volume 54 ; 54 >
-      au < exists ; 1955 ; JAOA: Journal of the American Osteopathic Association Volume 55 ; 55 >
-      au < exists ; 1956 ; JAOA: Journal of the American Osteopathic Association Volume 56 ; 56 >
-      au < exists ; 1957 ; JAOA: Journal of the American Osteopathic Association Volume 57 ; 57 >
-      au < exists ; 1958 ; JAOA: Journal of the American Osteopathic Association Volume 58 ; 58 >
+      au < manifest ; 1950 ; JAOA: Journal of the American Osteopathic Association Volume 50 ; 50 >
+      au < manifest ; 1951 ; JAOA: Journal of the American Osteopathic Association Volume 51 ; 51 >
+      au < manifest ; 1952 ; JAOA: Journal of the American Osteopathic Association Volume 52 ; 52 >
+      au < manifest ; 1953 ; JAOA: Journal of the American Osteopathic Association Volume 53 ; 53 >
+      au < manifest ; 1954 ; JAOA: Journal of the American Osteopathic Association Volume 54 ; 54 >
+      au < manifest ; 1955 ; JAOA: Journal of the American Osteopathic Association Volume 55 ; 55 >
+      au < manifest ; 1956 ; JAOA: Journal of the American Osteopathic Association Volume 56 ; 56 >
+      au < manifest ; 1957 ; JAOA: Journal of the American Osteopathic Association Volume 57 ; 57 >
+      au < manifest ; 1958 ; JAOA: Journal of the American Osteopathic Association Volume 58 ; 58 >
       au < exists ; 1959 ; JAOA: Journal of the American Osteopathic Association Volume 59 ; 59 >
       au < exists ; 1960 ; JAOA: Journal of the American Osteopathic Association Volume 60 ; 60 >
       au < exists ; 1961 ; JAOA: Journal of the American Osteopathic Association Volume 61 ; 61 >
