@@ -16,8 +16,7 @@
     rights = openaccess
     plugin = za.ac.nlsa.lockss.plugin.WaterSAPlugin
     param[base_url] = za.ac.nlsa.lockss.plugin.WaterSAPlugin
-    implicit < status ; year ; name ; volume ; param[year] >
-    comment[0] = aka Volume 24 (1998) to Volume 34 (2008)    
+    implicit < status ; year ; name ; volume ; param[year] >    
 
     au < down ; 1998 ; Water SA 1998 ; 24 ; 1998 >
     au < down ; 1999 ; Water SA 1999 ; 25 ; 1999 >
@@ -28,9 +27,14 @@
     au < down ; 2004 ; Water SA 2004 ; 30 ; 2004 >
     au < down ; 2005 ; Water SA 2005 ; 31 ; 2005 >
     au < down ; 2006 ; Water SA 2006 ; 32 ; 2006 >
-    au < exists ; 2007 ; Water SA 2007 ; 33 ; 2007 >
-    au < exists ; 2008 ; Water SA 2008 ; 34 ; 2008 >
   
   }
 
+  {
+   
+   comment[0] = new URL http://www.ajol.info/index.php/wsa
+   comment[coverage] = v.27 (2001) through v.37 (2011)
+
+  }
+  
 }
