@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.20 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.21 2011-09-14 05:03:07 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,12 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Abs script" +
     "<script type=\"text/javascript\" src=\"http://www.example.com/javascript/utility.js\"></script>\n" +
     "<br>\n" +
+    "Rel style" +
+    "<style type=\"text/css\" src=\"/css/utility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style" +
+    "<style type=\"text/css\" src=\"http://www.example.com/css/utility.css\"></style>\n" +
+    "<br>\n" +
     "Rel stylesheet" +
     "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
@@ -149,6 +155,12 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs script" +
     "<script type=\"text/javascript\" src=\"http://www.example.com/javascript/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel style" +
+    "<style type=\"text/css\" src=\"/css/utility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style" +
+    "<style type=\"text/css\" src=\"http://www.example.com/css/utility.css\"></style>\n" +
     "<br>\n" +
     "Rel stylesheet" +
     "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
@@ -214,6 +226,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Abs script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
     "<br>\n" +
+    "Rel style<style type=\"text/css\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style<style type=\"text/css\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
+    "<br>\n" +
     "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fbasic.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
     "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FBasic.css\" type=\"text/css\" media=\"all\">\n" +
@@ -250,6 +266,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Rel script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
     "<br>\n" +
     "Abs script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel style<style type=\"text/css\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
+    "<br>\n" +
+    "Abs style<style type=\"text/css\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Futility.css\"></style>\n" +
     "<br>\n" +
     "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fbasic.css\" type=\"text/css\" media=\"all\">\n" +
     "<br>\n" +
@@ -375,6 +395,32 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</body>\n" +
     "</HTML>\n";
 
+  private static final String origScript =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<script type=\"text/javascript\">script test</script>\n" +
+    "<br>\n" +
+    "<script language=\"javascript\">test script</script>\n" +
+    "<br>\n" +
+    "</body>\n" +
+    "</HTML>\n";
+
+  private static final String xformedScript =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html>\n" +
+    "<head>\n" +
+    "</head>\n" +
+    "<body>\n" +
+    "<script type=\"text/javascript\">j123 script test 123j</script>\n" +
+    "<br>\n" +
+    "<script language=\"javascript\">j123 test script 123j</script>\n" +
+    "<br>\n" +
+    "</body>\n" +
+    "</HTML>\n";
+
 
 
   private ServletUtil.LinkTransform xform = null;
@@ -384,6 +430,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     super.setUp();
     au = new MockArchivalUnit();
     au.setLinkRewriterFactory("text/css", new RegexpCssLinkRewriterFactory());
+    au.setLinkRewriterFactory("text/javascript",
+			      new MyLinkRewriterFactory("j123 ", " 123j"));
 
     List l = new ArrayList();
     l.add(urlStem);
@@ -442,6 +490,37 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 				  "Full");
     testRewriting("CSS abs full encoding", origCss, xformedCssFull,
 		  false);
+  }
+
+  public void testScriptRewritingMinimal() throws Exception {
+    testRewriting("CSS abs minimal encoding", origScript, xformedScript,
+		  false);
+  }
+
+  static class MyLinkRewriterFactory implements LinkRewriterFactory {
+
+    private String prefix;
+    private String suffix;
+
+    public MyLinkRewriterFactory(String prefix, String suffix) {
+      this.prefix = prefix;
+      this.suffix = suffix;
+      log.info("new MyLinkRewriterFactory(" + prefix + ", " + suffix + ")");
+    }
+
+    public InputStream createLinkRewriter(String mimeType,
+					  ArchivalUnit au,
+					  InputStream in,
+					  String encoding,
+					  String url,
+					  ServletUtil.LinkTransform xform)
+	throws PluginException {
+      log.info("createLinkRewriter(" + prefix + ", " + suffix + ")");
+      List<InputStream> lst = ListUtil.list(new StringInputStream(prefix),
+					    in,
+					    new StringInputStream(suffix));
+      return new SequenceInputStream(Collections.enumeration(lst));
+    }
   }
 
   public static void main(String[] argv) {

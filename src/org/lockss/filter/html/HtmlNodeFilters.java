@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.19 2011-09-06 22:32:53 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.20 2011-09-14 05:03:07 tlipkis Exp $
  */
 
 /*
@@ -584,7 +584,7 @@ public class HtmlNodeFilters {
 
     public boolean accept(Node node) {
       if (node instanceof TagNode &&
-	  !(node instanceof MetaTag || node instanceof StyleTag)) {
+	  !(node instanceof MetaTag)) {
 	for (int i = 0; i < attrs.length; i++) {
 	  Attribute attribute = ((TagNode)node).getAttributeEx(attrs[i]);
 	  if (attribute != null) {
@@ -714,6 +714,9 @@ public class HtmlNodeFilters {
     public boolean accept(Node node) {
       if (node instanceof StyleTag) {
 	StyleTag tag = (StyleTag)node;
+	if (tag.getAttribute("src") != null) {
+	  return false;
+	}
 	String mime = tag.getAttribute("type");
 	if (mime == null) {
 	  // shouldn't happen - type attr is required
@@ -729,29 +732,31 @@ public class HtmlNodeFilters {
 	      if (child instanceof TextNode) {
 		TextNode textChild = (TextNode)child;
 		String source = textChild.getText();
-		InputStream rewritten = null;
-		try {
-		  rewritten =
-		    lrf.createLinkRewriter(mime,
-					   au,
-					   new ReaderInputStream(new StringReader(source),
-								 charset),
-					   charset,
-					   baseUrl,
-					   xform);
-		  String res =
-		    StringUtil.fromReader(new InputStreamReader(rewritten,
-								charset));
-		  if (!res.equals(source)) {
-		    if (log.isDebug3()) log.debug3("Style rewritten " + res);
-		    textChild.setText(res);
+		if (!StringUtil.isNullString(source)) {
+		  InputStream rewritten = null;
+		  try {
+		    rewritten =
+		      lrf.createLinkRewriter(mime,
+					     au,
+					     new ReaderInputStream(new StringReader(source),
+								   charset),
+					     charset,
+					     baseUrl,
+					     xform);
+		    String res =
+		      StringUtil.fromReader(new InputStreamReader(rewritten,
+								  charset));
+		    if (!res.equals(source)) {
+		      if (log.isDebug3()) log.debug3("Style rewritten " + res);
+		      textChild.setText(res);
+		    }
+		  } catch (PluginException e) {
+		    log.error("Can't create link rewriter, not rewriting", e);
+		  } catch (IOException e) {
+		    log.error("Can't create link rewriter, not rewriting", e);
+		  } finally {
+		    IOUtil.safeClose(rewritten);
 		  }
-		} catch (PluginException e) {
-		  log.error("Can't create link rewriter, not rewriting", e);
-		} catch (IOException e) {
-		  log.error("Can't create link rewriter, not rewriting", e);
-		} finally {
-		  IOUtil.safeClose(rewritten);
 		}
 	      }
 	    }
@@ -764,6 +769,103 @@ public class HtmlNodeFilters {
     }
   }
 
+  /**
+   * Rejects everything and applies a CSS LinkRewriter to the text in
+   * script tags
+   */
+  public static class ScriptXformDispatch implements NodeFilter {
+
+    private ArchivalUnit au;
+    private String charset;
+    private String baseUrl;
+    private ServletUtil.LinkTransform xform;
+
+    private LinkRewriterFactory lrf;
+
+    public ScriptXformDispatch(ArchivalUnit au,
+			       String charset,
+			       String baseUrl,
+			       ServletUtil.LinkTransform xform) {
+      this.au = au;
+      if (charset == null) {
+	this.charset = Constants.DEFAULT_ENCODING;
+      } else {
+	this.charset = charset;
+      }
+      this.baseUrl = baseUrl;
+      this.xform = xform;
+    }
+
+    public void setBaseUrl(String newBase) {
+      baseUrl = newBase;
+    }
+
+    static String DEFAULT_SCRIPT_MIME_TYPE = "text/javascript";
+  
+    public boolean accept(Node node) {
+      if (node instanceof ScriptTag) {
+	ScriptTag tag = (ScriptTag)node;
+	if (tag.getAttribute("src") != null) {
+	  return false;
+	}
+	String mime = tag.getAttribute("type");
+	if (mime == null) {
+	  mime = tag.getAttribute("language");
+	  if (mime != null) {
+	    if (mime.indexOf("/") < 0) {
+	      mime = "text/" + mime;
+	    }
+	  } else {
+	    // shouldn't happen - type attr is required
+	    log.warning("<script> tag with no type or language attribute");
+	    mime = DEFAULT_SCRIPT_MIME_TYPE;
+	  }
+	}
+	LinkRewriterFactory lrf = au.getLinkRewriterFactory(mime);
+	if (lrf != null) {
+	  try {
+	    for (NodeIterator it = (tag).children();
+		 it.hasMoreNodes(); ) {
+	      Node child = it.nextNode();
+	      if (child instanceof TextNode) {
+		TextNode textChild = (TextNode)child;
+		String source = textChild.getText();
+		if (!StringUtil.isNullString(source)) {
+		  InputStream rewritten = null;
+		  try {
+		    rewritten =
+		      lrf.createLinkRewriter(mime,
+					     au,
+					     new ReaderInputStream(new StringReader(source),
+								   charset),
+					     charset,
+					     baseUrl,
+					     xform);
+		    String res =
+		      StringUtil.fromReader(new InputStreamReader(rewritten,
+								  charset));
+		    if (!res.equals(source)) {
+		      if (log.isDebug3()) log.debug3("Script rewritten " + res);
+		      textChild.setText(res);
+		    }
+		  } catch (PluginException e) {
+		    log.error("Can't create link rewriter, not rewriting", e);
+		  } catch (IOException e) {
+		    log.error("Can't create link rewriter, not rewriting", e);
+		  } finally {
+		    IOUtil.safeClose(rewritten);
+		  }
+		}
+	      }
+	    }
+	  } catch (ParserException ex) {
+	    log.error("Node " + node.toString() + " threw " + ex);
+	  }
+	}
+      }
+      return false;
+    }
+  }
 
   /**
    * This class rejects everything but applies a transform to

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.9 2011-09-06 22:32:53 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.10 2011-09-14 05:03:07 tlipkis Exp $
  */
 
 /*
@@ -356,6 +356,57 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertEquals(origUrl, ((LinkTag)node).getLink());
   }
 
+  public void testEmptyStyleDispatch() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String src =
+      "foo <style type=\"text/css\" media=\"screen\"></style>\nbar\n";
+    String exp =
+      "foo <style type=\"text/css\" media=\"screen\"></style>\nbar\n";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/css", lrf);
+
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, null,
+					     base, linkXform);
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    assertEmpty("LinkRewriterFactory should not have been invoked",
+		lrf.getArgLists());
+  }
+
+  public void testStyleWithSrcNoDispatch() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String src =
+      "foo <style type=\"text/css\" src=\"foo.css\">xxx</style>\nbar\n";
+    String exp =
+      "foo <style type=\"text/css\" src=\"foo.css\">xxx</style>\nbar\n";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/css", lrf);
+
+    HtmlNodeFilters.StyleXformDispatch xform =
+      new HtmlNodeFilters.StyleXformDispatch(mau, null,
+					     base, linkXform);
+    lrf.setLinkRewriter(new StringInputStream("shouldn't"));
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    assertEmpty("LinkRewriterFactory should not have been invoked",
+		lrf.getArgLists());
+  }
+
   public void testStyleDispatch(String charset) throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit();
     MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
@@ -394,6 +445,104 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 
   public void testStyleDispatchNoCharset() throws Exception {
     testStyleDispatch(null);
+  }
+
+  public void testEmptyScriptDispatch() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String src =
+      "foo <script type=\"text/javascript\"></script>\nbar\n";
+    String exp =
+      "foo <script type=\"text/javascript\"></script>\nbar\n";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/css", lrf);
+
+    HtmlNodeFilters.ScriptXformDispatch xform =
+      new HtmlNodeFilters.ScriptXformDispatch(mau, null,
+					     base, linkXform);
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    assertEmpty("LinkRewriterFactory should not have been invoked",
+		lrf.getArgLists());
+  }
+
+  public void testScriptDispatch(String src, String exp,
+				 String charset) throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String res = "\nresult string\n";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/javascript", lrf);
+
+    HtmlNodeFilters.ScriptXformDispatch xform =
+      new HtmlNodeFilters.ScriptXformDispatch(mau, charset,
+					     base, linkXform);
+    lrf.setLinkRewriter(new StringInputStream(res));
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    List args = lrf.getArgLists().get(0);
+    assertEquals("text/javascript", args.get(0));
+    assertEquals(mau, args.get(1));
+    assertEquals("\norig script;\n",
+		 StringUtil.fromInputStream((InputStream)args.get(2)));
+    assertEquals(charset == null ? Constants.DEFAULT_ENCODING : charset,
+		 args.get(3));
+  }
+
+  public void testScriptDispatch(String src, String exp)
+      throws Exception {
+    testScriptDispatch(src, exp, "UTF-8");
+    testScriptDispatch(src, exp, null);
+  }
+
+  public void testScriptDispatchWType(String src, String exp)
+      throws Exception {
+    testScriptDispatch("foo <script type=\"text/javascript\">\norig script;\n</script>\nbar\n",
+		       "foo <script type=\"text/javascript\">\nresult string\n</script>\nbar\n");
+  }
+
+  public void testScriptDispatchWLang(String src, String exp)
+      throws Exception {
+    testScriptDispatch("foo <script language=\"javascript\">\norig script;\n</script>\nbar\n",
+		       "foo <script language==\"javascript\">\nresult string\n</script>\nbar\n");
+  }
+
+  public void testScriptWithSrcNoDispatch() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockLinkRewriterFactory lrf = new MockLinkRewriterFactory();    
+    String src =
+      "foo <script type=\"text/css\" src=\"foo.css\">xxx</script>\nbar\n";
+    String exp =
+      "foo <script type=\"text/css\" src=\"foo.css\">xxx</script>\nbar\n";
+    String base = "http://example.com/base/";
+    ServletUtil.LinkTransform linkXform = new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  return "rewritten";
+	}};
+
+    mau.setLinkRewriterFactory("text/css", lrf);
+
+    HtmlNodeFilters.ScriptXformDispatch xform =
+      new HtmlNodeFilters.ScriptXformDispatch(mau, null,
+					      base, linkXform);
+    lrf.setLinkRewriter(new StringInputStream("shouldn't"));
+    NodeList nl = parse(src);
+    assertEquals(0, nl.extractAllNodesThatMatch(xform).size());
+    assertEquals(exp, nl.toHtml());
+    assertEmpty("LinkRewriterFactory should not have been invoked",
+		lrf.getArgLists());
   }
 
   public void testLinkRegexNoXformsNoMatch() throws Exception {

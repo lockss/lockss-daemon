@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.20 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.21 2011-09-14 05:03:07 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,10 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     StyleXform styleXform = new StyleXform(au, encoding, url, srvLink);
     relXforms.add(styleXform);
 
+    // Rewrite <script>s
+    ScriptXform scriptXform = new ScriptXform(au, encoding, url, srvLink);
+    relXforms.add(scriptXform);
+
     // Rewrite <meta http-equiv="refresh" content="url=1; url=...">
     String[] linkRegex5 = new String[l];
     boolean[] ignCase5 = new boolean[l];
@@ -232,6 +236,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       relLinkXform,
       absLinkXform,
       styleXform,
+      scriptXform,
       relRefreshXform,
       absRefreshXform,
     };
@@ -306,6 +311,21 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
 		      String charset,
 		      String baseUrl,
 		      ServletUtil.LinkTransform xform) {
+      super(au, charset, baseUrl, xform);
+    }
+
+    public void setBaseUrl(String baseUrl) {
+      super.setBaseUrl(baseUrl);
+    }
+  }
+
+  class ScriptXform extends HtmlNodeFilters.ScriptXformDispatch
+    implements RelXform {
+
+    public ScriptXform(ArchivalUnit au,
+		       String charset,
+		       String baseUrl,
+		       ServletUtil.LinkTransform xform) {
       super(au, charset, baseUrl, xform);
     }
 
