@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.5 2011-06-22 22:38:56 pgust Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.6 2011-09-14 01:36:58 pgust Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       "<meta name=\"FirstName\" content=\"FirstContent\">" +
       "<meta name=\"SecondName\" content=\"SecondContent\">" +
       "<meta name=\"ThirdName\" content=\"ThirdContent\">\n" +
-      "<meta name=\"FourthName\" content=\"FourthContent\">\n" +
+      "<meta name=\"FourthName\"\ncontent=\"FourthContent\">\n" +
       "<meta name=\"FifthName\" content=\"FifthContent\">\n";
 
     assertRawEquals(ListUtil.list("firstname", "FirstContent",
