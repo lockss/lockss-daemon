@@ -4,9 +4,6 @@
     name = International Society of Protistologists
   >
 
-  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-  implicit < status ; year ; name ; param[volume_name] >
-  param[base_url] = http://www.bioone.org/
 
   {
     title <
@@ -15,14 +12,32 @@
       issnl = 1066-5234
     >
     
-    param[journal_id] = eumi
-  
-    au < exists ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
-    au < exists ; 2001-2002 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
-    au < exists ; 2002 ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
-    au < exists ; 2003 ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
-    au < exists ; 2004 ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1066-5234
+      implicit < status ; year ; name ; param[volume] >
+        
+      au < down ; 2004 ; The Journal of Eukaryotic Microbiology Volume 51 ; 051 >
 
-  }
-  
+    }
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      param[base_url] = http://www.bioone.org/    
+      param[journal_id] = eumi
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      au < manifest ; 2000 ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+      au < manifest ; 2001-2002 ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+      au < manifest ; 2002 ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+      au < manifest ; 2003 ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+      au < doNotProcess ; 2004 ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
+
+    }
+
+  }   
+
 }
