@@ -23,6 +23,7 @@
     au < ready ; 2008 ; Journal of Biological Chemistry Volume 283 ; 283 >
     au < ready ; 2009 ; Journal of Biological Chemistry Volume 284 ; 284 >
     au < ready ; 2010 ; Journal of Biological Chemistry Volume 285 ; 285 >
+    au < exists ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 >
 
   }
 
@@ -45,6 +46,7 @@
     au < released ; 2008 ; The Journal of Lipid Research Volume 49 ; 49 >
     au < released ; 2009 ; The Journal of Lipid Research Volume 50 ; 50 >
     au < released ; 2010 ; The Journal of Lipid Research Volume 51 ; 51 >
+    au < exists ; 2011 ; The Journal of Lipid Research Volume 52 ; 52 >
 
   }
 
@@ -72,7 +74,7 @@
       au < HighWirePressPlugin ; down ; 2008 ; Molecular & Cellular Proteomics Volume 7 ; 7 >
       au < HighWirePressPlugin ; down ; 2009 ; Molecular & Cellular Proteomics Volume 8 ; 8 >
       au < HighWirePressPlugin ; down ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 2010 ; Molecular & Cellular Proteomics Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; Molecular & Cellular Proteomics Volume 10 ; 10 >
 
     }
 
