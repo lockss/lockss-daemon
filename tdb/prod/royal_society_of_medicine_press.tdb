@@ -104,7 +104,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cr.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -273,7 +273,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hsmr.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -304,7 +304,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ijcp.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -331,7 +331,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ijsa.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -367,7 +367,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhsrp.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -398,7 +398,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmb.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -425,7 +425,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jms.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -459,7 +459,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jtt.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -495,7 +495,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jrsm.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -578,7 +578,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://la.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -670,7 +670,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlj.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -703,7 +703,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mi.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -735,7 +735,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://obmed.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -759,7 +759,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://phleb.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -809,7 +809,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://td.rsmjournals.com/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
