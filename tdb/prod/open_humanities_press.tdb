@@ -144,9 +144,20 @@
       param[base_url] = http://www.imageandnarrative.be/
       param[journal_id] = imagenarrative
       
+      comment[manifests] = publisher has posted manifests, but each is a copy of 2011. 20110914
+      
+      au < exists ; 2000 ; Image and Narrative Volume 1 ; 1 ; 2000 >
+      au < exists ; 2001 ; Image and Narrative Volume 2 ; 2 ; 2001 >
+      au < exists ; 2002 ; Image and Narrative Volume 3 ; 3 ; 2002 >
+      au < exists ; 2003 ; Image and Narrative Volume 4 ; 4 ; 2003 >
+      au < exists ; 2004 ; Image and Narrative Volume 5 ; 5 ; 2004 >
+      au < exists ; 2005 ; Image and Narrative Volume 6 ; 6 ; 2005 >
+      au < exists ; 2006 ; Image and Narrative Volume 7 ; 7 ; 2006 >
+      au < exists ; 2007 ; Image and Narrative Volume 8 ; 8 ; 2007 >
+      au < exists ; 2008 ; Image and Narrative Volume 9 ; 9 ; 2008 >
       au < exists ; 2009 ; Image and Narrative Volume 10 ; 10 ; 2009 >
       au < exists ; 2010 ; Image and Narrative Volume 11 ; 11 ; 2010 >
-      au < exists ; 2011 ; Image and Narrative Volume 12 ; 12 ; 2011 >
+      au < manifest ; 2011 ; Image and Narrative Volume 12 ; 12 ; 2011 >
       
     }
 
