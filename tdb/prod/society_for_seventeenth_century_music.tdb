@@ -3,6 +3,8 @@
   publisher <
     name = Society for Seventeenth-Century Music
   >
+
+  comment[0] = roundup issue 3329
   
   {
   
@@ -20,7 +22,7 @@
     
       param[base_url] = http://sscm-jscm.press.uiuc.edu/
 
-      au < superseded ; 2004 ; Journal of Seventeenth-Century Music Volume 10 [superseded] ; 10 >
+      au < down ; 2004 ; Journal of Seventeenth-Century Music Volume 10 [superseded] ; 10 >
     
     }
 
