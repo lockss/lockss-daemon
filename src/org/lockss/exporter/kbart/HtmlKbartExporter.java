@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.15 2011-09-15 18:13:01 pgust Exp $
+ * $Id: HtmlKbartExporter.java,v 1.16 2011-09-15 19:19:44 pgust Exp $
  */
 
 /*
@@ -248,12 +248,14 @@ public class HtmlKbartExporter extends KbartExporter {
   @Override
   protected void clearup() throws IOException {
     printWriter.println("</table>");
+/* temporarily disabled (PJG)
     printWriter.printf("<br/><b><i>%s</i></b><br/>%s<br/>%s<br/>%s<br/><br/>", 
 	this.exportSummary, 
 	this.getOmittedTitlesSummary(),
 	this.getOmittedFieldsSummary(), 
 	this.getEmptySummary()
     );
+*/
     printWriter.println("</body></html>");
     // Finally let superclass clear up
     super.clearup();
