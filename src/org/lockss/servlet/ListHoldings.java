@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.15.2.1 2011-09-09 17:53:00 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.15.2.2 2011-09-15 18:53:19 pgust Exp $
  */
 
 /*
@@ -54,9 +54,7 @@ import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFie
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
-import org.lockss.util.PlatformUtil;
 import org.lockss.util.StringUtil;
-import org.mortbay.html.Element;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Table;
@@ -65,7 +63,6 @@ import org.mortbay.html.TextArea;
 import org.mortbay.html.Heading;
 import org.mortbay.html.Link;
 import org.mortbay.html.Page;
-import org.mortbay.html.Block;
 
 /** 
  * This servlet provides access to holdings metadata, transforming the TDB data 
@@ -82,6 +79,7 @@ import org.mortbay.html.Block;
  * 
  * @author Neil Mayo
  */
+@SuppressWarnings("serial")
 public class ListHoldings extends LockssServlet {
   
   protected static Logger log = Logger.getLogger("ListHoldings");    
@@ -94,9 +92,16 @@ public class ListHoldings extends LockssServlet {
    * not when set false */
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
-
-  /** Default output format is CSV. */
-  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.CSV;
+  
+  /** Enable "preserved" option when ListHondlings UI is enabled
+   */
+  public static final String 
+    PARAM_ENABLED_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";
+  public static final boolean DEFAULT_ENABLE_PRESERVED_HOLDINGS = false;
+  
+  
+  /** Default output format is HTML. */
+  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.HTML;
   /** Default field selection and ordering is KBART. */
   static final FieldOrdering FIELD_ORDERING_DEFAULT = CustomFieldOrdering.getDefaultOrdering();
   //static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT = PredefinedFieldOrdering.KBART;
@@ -108,11 +113,12 @@ public class ListHoldings extends LockssServlet {
   
   private static final String ENCODING = KbartExporter.DEFAULT_ENCODING;
   /** A comma used for separating list elements. */
-  private static final String LIST_COMMA = ", "; 
+//  private static final String LIST_COMMA = ", "; 
   
   // Form parameters and options
-  public static final String ACTION_EXPORT = "Export";
-  public static final String ACTION_CUSTOM_EXPORT = "Customise Output";
+  public static final String ACTION_EXPORT = "List Titles";
+  public static final String ACTION_CUSTOM_EXPORT = "Customise List";
+  public static final String ACTION_HIDE_CUSTOM_EPORT = "Hide Customise List";
   /** Apply the current customisation. */
   public static final String ACTION_CUSTOM_OK = "Apply";
   /** Reset customisation to the defaults. */
@@ -228,7 +234,11 @@ public class ListHoldings extends LockssServlet {
       // If custom export requested (from the output page) or a customisation was 
       // okayed, set the custom ordering to the supplied manual ordering. If an 
       // export is validated, set the last manual ordering.
-      if (customAction.equals(ACTION_CUSTOM_EXPORT) || customAction.equals(ACTION_CUSTOM_OK)) {
+      if (customAction.equals(ACTION_HIDE_CUSTOM_EPORT)) {
+        // hide custom form
+        isCustom = false;
+      } else if (customAction.equals(ACTION_CUSTOM_EXPORT) || 
+                customAction.equals(ACTION_CUSTOM_OK)) {
 	// Try and parse the manual ordering into a list of valid field names
 	setCustomFieldOrdering(manualOrdering);
 	if (doExport) lastManualOrdering = manualOrdering;
@@ -421,7 +431,7 @@ public class ListHoldings extends LockssServlet {
     out.close();
 
     // Check errors (Note: the response has already been written by here, so there is no point setting the err/status msgs)
-    List errs = kexp.getErrors();
+    List<String> errs = kexp.getErrors();
     log.debug("errs: " + errs);
     if (!errs.isEmpty()) {
       errMsg = StringUtil.separatedString(errs, "<br>");
@@ -440,6 +450,21 @@ public class ListHoldings extends LockssServlet {
   }
   
   /**
+   * Determine whether "preserved" option is enabled.
+   * 
+   * @return <code>true</code? if "preserved" option is enabled.
+   */
+  private boolean isEnablePreserved() {
+    Configuration config = CurrentConfig.getCurrentConfig();
+    if (config == null) {
+      return false;
+    } else {
+      return config.getBoolean(PARAM_ENABLED_PRESERVED_HOLDINGS, 
+                               DEFAULT_ENABLE_PRESERVED_HOLDINGS);
+    }
+  }
+  
+  /**
    * Generate a table with the page components and options. 
    * 
    * @param isCustom whether to show the customisation options
@@ -447,7 +472,7 @@ public class ListHoldings extends LockssServlet {
    */
   protected Table layoutTableOfOptions(boolean custom) {
     // Get the path to this servlet so we can postfix output format path
-    String thisPath = myServletDescr().path;
+//    String thisPath = myServletDescr().path;
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
     //addBoxSummary(tab);
 
@@ -463,15 +488,22 @@ public class ListHoldings extends LockssServlet {
     // Create a form for whatever options we are showing
     Form form = ServletUtil.newForm(srvURL(myServletDescr()));
     form.add(new Input(Input.Hidden, "isForm", "true"));
-    form.add("This page allows you to export a list of all titles available " +
-	"for collection, those titles which are configured for collection in " +
-	"your LOCKSS box, or those titles which are preserved in your LOCKSS box."
-    );
-    form.add(addFootnote("The titles in the 'preserved' output are " +
-	"included based on a metric which assigns each configured volume " +
-	"a health value. This health value is currently experimental and the " +
-	"output of this option should not yet be considered authoritative."
-    ));
+    if (isEnablePreserved()) {
+      form.add("View or export a list of titles " +
+      	"that are available for preservation, configured for collection, " +
+    	"or preserved in your LOCKSS box."
+      );
+      form.add(addFootnote("Titles in the 'preserved' output are " +
+    	"included based on a metric which assigns each configured volume " +
+    	"a health value. This health value is currently experimental and the " +
+    	"output of this option should not yet be considered authoritative."
+      ));
+    } else {
+      form.add("View or export a list of titles " +
+      "available for preservation, or configured for collection in " +
+      "your LOCKSS box."
+      );
+    }
     form.add(BREAK);
     form.add(String.format(
 	"There are %s titles available for preservation, from %s publishers.", 
@@ -496,17 +528,24 @@ public class ListHoldings extends LockssServlet {
     // Add the appropriate options to the sub table in the form
     if (custom) {
       // Add HTML customisation options
-      subTab.add(new Heading(3, "Customise output"));
-      subTab.add(new Link(srvURL(myServletDescr()), "Return to main export page"));
+      subTab.add(new Heading(3, "Customise List"));
       layoutFormCustomOpts(subTab);
+      subTab.add(BREAK);
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EPORT);
     } else {
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
 
       //layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_CUSTOM_EXPORT);
-      subTab.add(BREAK+"By default, exports are in the industry-standard KBART " +
-      		"format. Alternatively you can customise the output to define " +
+      if (isEnablePreserved()) {
+        subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
+      		"format. Alternatively you can customise the list to define " +
       		"which columns are visible and in what order they appear. " +
       		"Use this option also to add health ratings to the output."+BREAK);
+      } else {
+        subTab.add(BREAK+"By default, list is in the industry-standard KBART " +
+            "format. Alternatively you can customise the list to define " +
+            "which columns are visible and in what order they appear. "+BREAK);
+      }
       // Show the option to customise the export details, which are KBART by default:
       //form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
       form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, 
@@ -530,17 +569,21 @@ public class ListHoldings extends LockssServlet {
   
   private void addFormatOptions(Table tab) {
     // Add default output formats
-    tab.add("Please choose from an export format below.<br/>");
+    tab.add("Please choose one of the following actions.<br/>");
     // Add format links as buttons
+    tab.newRow();
+    tab.newCell("align=\"center\"");
+    Table tab2 = new Table();
+    tab.add(tab2);
     for (OutputFormat fmt : OutputFormat.values()) {
-	tab.newRow();
-	tab.newCell("align=\"center\"");
+    tab2.newRow();
+    tab2.newCell();
 	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
 	//String label = "Export as "+fmt.getLabel();
 	//subTab.add( new Link(link, label) );
 	boolean selected = outputFormat!=null ? fmt==outputFormat : fmt==OUTPUT_DEFAULT;
-	tab.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
-	tab.add(addFootnote(fmt.getFootnote()));
+	tab2.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
+	tab2.add(addFootnote(fmt.getFootnote()));
     }
     addBlankRow(tab);
   }
@@ -577,9 +620,12 @@ public class ListHoldings extends LockssServlet {
       int total = TdbUtil.getNumberTdbTitles(scope);
       String label = String.format("%s (%d)", scope.label, total);
       boolean scopeEnabled = true;
-      if (scope==ContentScope.PRESERVED) scopeEnabled = AuHealthMetric.isSupported();
+      if (scope==ContentScope.PRESERVED) {
+        if (!isEnablePreserved()) continue;
+        scopeEnabled = AuHealthMetric.isSupported();
+      }
       tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), 
-	  label, scope==selectedScope, scopeEnabled));
+      label, scope==selectedScope, scopeEnabled));
       if (!scopeEnabled) tab.add(notAvailFootnote);
       tab.add(" &nbsp; ");
     }
@@ -660,16 +706,17 @@ public class ListHoldings extends LockssServlet {
 	Boolean.TRUE.toString(), "Omit empty columns<br/>", 
 	opts.omitEmptyColumns));
     // Show health option if available
-    tab.add("<br/>");
-    tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH, 
-	Boolean.TRUE.toString(), "Show health ratings", 
-	opts.showHealthRatings, AuHealthMetric.isSupported()));
-    if (!AuHealthMetric.isSupported()) {
-      tab.add(notAvailFootnote);
-    } else {
-      tab.add(addFootnote("Health ratings will only be shown for titles which " +
-	  "you have configured on your box. The '"+ContentScope.ALL+"' export " +
-          "will not show health ratings."));
+    if (isEnablePreserved()) {
+      tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH, 
+  	Boolean.TRUE.toString(), "Show health ratings", 
+  	opts.showHealthRatings, AuHealthMetric.isSupported()));
+      if (!AuHealthMetric.isSupported()) {
+        tab.add(notAvailFootnote);
+      } else {
+        tab.add(addFootnote("Health ratings will only be shown for titles which " +
+  	  "you have configured on your box. The '"+ContentScope.ALL+"' export " +
+            "will not show health ratings."));
+      }
     }
     // Add buttons
     tab.add("<br/><br/><center>");
@@ -716,7 +763,7 @@ public class ListHoldings extends LockssServlet {
     form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH, htmlInputTruthValue(opts.showHealthRatings)));
     form.add(new Input(Input.Hidden, KEY_FORMAT, outputFormat.name()));
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
-    form.add(new Link(servletUrl, "Return to main export page"));
+    form.add(new Link(servletUrl, "Return to main title list page"));
     return form;
   }  
   
