@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.14 2011-08-23 16:32:40 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.15 2011-09-15 18:13:01 pgust Exp $
  */
 
 /*
@@ -203,8 +203,8 @@ public class HtmlKbartExporter extends KbartExporter {
   protected void setup(OutputStream os) throws IOException {
     super.setup(os);
     // Construct a title and summary
-    this.exportSummary = String.format("Export of %s titles created on %s by %s " +
-	"| Exported %d KBART titles from %d TDB titles.",
+    this.exportSummary = String.format("%s title list created on %s by %s " +
+	"| %d items listed from %d titles.",
 	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
