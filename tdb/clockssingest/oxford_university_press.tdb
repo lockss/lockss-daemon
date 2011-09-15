@@ -5561,7 +5561,6 @@
 
     param[base_url] = http://hwj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[xyz] = uh oh there is clearly an enumeration problem here
 
     au < manifest ; exists ; 1976 ; History Workshop Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1976 ; History Workshop Journal Volume 2 ; 2 ; >
@@ -11774,20 +11773,10 @@
     {
 
     param[base_url] = http://mplant.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePlugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
-
-    }
-
-    {
-
-    param[base_url] = http://mplant.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < doNotProcess ; doNotProcess ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
 
