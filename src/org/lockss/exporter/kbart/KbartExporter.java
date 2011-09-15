@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.12.2.1 2011-09-13 15:00:56 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.12.2.2 2011-09-15 18:18:51 pgust Exp $
  */
 
 /*
@@ -80,14 +80,14 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
    // Footnotes for the interface options
-  private static final String CSV_NOTE = "In the CSV format values are quoted "+
+  private static final String CSV_NOTE = "CSV export values are quoted "+
   "where necessary, and quotes within values are escaped.";
   
-  //private static final String TSV_NOTE = "In the TSV format values are quoted "+
+  //private static final String TSV_NOTE = "The TSV export values are quoted "+
   //"where necessary, and quotes within values are escaped.";
   
-  private static final String HTML_NOTE =  "The HTML export is for on-screen "+
-  "inspection of holdings reports.";
+  private static final String HTML_NOTE =  "Allows on-screen inspection "+
+  "of the title list.";
 
   /** 
    * Explanation of why some KBART records become duplicates with custom field 
@@ -523,7 +523,7 @@ public abstract class KbartExporter {
   public static enum OutputFormat {
         
     // Don't compress the TSV output
-    /*KBART_TSV("KBART TSV (tab-separated values)", 
+    /*KBART_TSV("Export TSV (tab-separated values)", 
      "text/tab-separated-values", "tsv", 
      true, false, TSV_NOTE) {
       @Override     
@@ -536,31 +536,31 @@ public abstract class KbartExporter {
     },*/
     
     CSV(
-        "CSV (comma-separated values)",
-        "text/plain", "csv",
-        true, false, false,
-        CSV_NOTE) {
+	"Export CSV (comma-separated values)", 
+	"text/plain", "csv", 
+	true, false, false, 
+	CSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-                                        KbartExportFilter filter) {
-        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
-            SeparatedValuesKbartExporter.SEPARATOR_COMMA);
-        kbe.setFilter(filter);
-        return kbe;
+	  KbartExportFilter filter) {
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, 
+	    SeparatedValuesKbartExporter.SEPARATOR_COMMA);
+	kbe.setFilter(filter);
+	return kbe;
       }
     },
     
     HTML(
-        "HTML (on-screen)",
-        "text/html", "html",
-        false, false, true,
-        HTML_NOTE) {
+	"View on-screen", 
+	"text/html", "html",
+	false, false, true, 
+	HTML_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-                                        KbartExportFilter filter) {
-        KbartExporter kbe = new HtmlKbartExporter(titles, this);
-        kbe.setFilter(filter);
-        return kbe;
+	  KbartExportFilter filter) {
+	KbartExporter kbe = new HtmlKbartExporter(titles, this);
+	kbe.setFilter(filter);
+	return kbe;
       }
     };
   
@@ -670,17 +670,16 @@ public abstract class KbartExporter {
     public boolean isHtml() { return isHtml; }
 
     /**
-     * Get an OutputFormat by name. Upper cases the name so lower case values
-     * can be passed in URLs.
+     * Get an OutputFormat by name.
      * 
      * @param name a string representing the name of the format
      * @return an OutputFormat with the specified name, or null if none was found
      */
     public static OutputFormat byName(String name) {
       try {
-        return valueOf(name.toUpperCase());
+	return valueOf(name);
       } catch (Exception e) {
-        return null;
+	return null;
       }
     } 
 
