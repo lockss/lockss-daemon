@@ -863,15 +863,16 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://vascular.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
+    comment[18] = found a login page
 
     au < exists ; 2004 ; Vascular Volume 12 ; 12 >
-    au < testing ; 2005 ; Vascular Volume 13 ; 13 >
-    au < testing ; 2006 ; Vascular Volume 14 ; 14 >
-    au < testing ; 2007 ; Vascular Volume 15 ; 15 >
-    au < testing ; 2008 ; Vascular Volume 16 ; 16 >
-    au < testing ; 2009 ; Vascular Volume 17 ; 17 >
-    au < testing ; 2010 ; Vascular Volume 18 ; 18 >
-    au < testing ; 2011 ; Vascular Volume 19 ; 19 >
+    au < ready ; 2005 ; Vascular Volume 13 ; 13 >
+    au < ready ; 2006 ; Vascular Volume 14 ; 14 >
+    au < ready ; 2007 ; Vascular Volume 15 ; 15 >
+    au < ready ; 2008 ; Vascular Volume 16 ; 16 >
+    au < ready ; 2009 ; Vascular Volume 17 ; 17 >
+    au < notReady ; 2010 ; Vascular Volume 18 ; 18 >
+    au < ready ; 2011 ; Vascular Volume 19 ; 19 >
 
   }
 
