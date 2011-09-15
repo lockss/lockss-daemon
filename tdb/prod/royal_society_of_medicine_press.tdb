@@ -789,12 +789,12 @@
     param[base_url] = http://smj.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < wanted ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
-    au < wanted ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
-    au < wanted ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
-    au < wanted ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
-    au < wanted ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
-    au < wanted ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
+    au < testing ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+    au < testing ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+    au < testing ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+    au < testing ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+    au < testing ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+    au < testing ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
 
   }
 
@@ -865,13 +865,13 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2004 ; Vascular Volume 12 ; 12 >
-    au < wanted ; 2005 ; Vascular Volume 13 ; 13 >
-    au < wanted ; 2006 ; Vascular Volume 14 ; 14 >
-    au < wanted ; 2007 ; Vascular Volume 15 ; 15 >
-    au < wanted ; 2008 ; Vascular Volume 16 ; 16 >
-    au < wanted ; 2009 ; Vascular Volume 17 ; 17 >
-    au < wanted ; 2010 ; Vascular Volume 18 ; 18 >
-    au < wanted ; 2011 ; Vascular Volume 19 ; 19 >
+    au < testing ; 2005 ; Vascular Volume 13 ; 13 >
+    au < testing ; 2006 ; Vascular Volume 14 ; 14 >
+    au < testing ; 2007 ; Vascular Volume 15 ; 15 >
+    au < testing ; 2008 ; Vascular Volume 16 ; 16 >
+    au < testing ; 2009 ; Vascular Volume 17 ; 17 >
+    au < testing ; 2010 ; Vascular Volume 18 ; 18 >
+    au < testing ; 2011 ; Vascular Volume 19 ; 19 >
 
   }
 
