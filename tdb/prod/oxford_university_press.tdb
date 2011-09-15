@@ -612,9 +612,9 @@
     au < HighWirePressH20Plugin ; exists ; 1994 ; American Journal of Epidemiology Volume 139 ; 139 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; American Journal of Epidemiology Volume 140 ; 140 >
     au < HighWirePressH20Plugin ; exists ; 1995 ; American Journal of Epidemiology Volume 141 ; 141 >
-    au < HighWirePressH20Plugin ; exists ; 1995 ; American Journal of Epidemiology Volume 142 ; 142 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; American Journal of Epidemiology Volume 142 ; 142 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; American Journal of Epidemiology Volume 143 ; 143 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; American Journal of Epidemiology Volume 144 ; 144 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; American Journal of Epidemiology Volume 144 ; 144 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; American Journal of Epidemiology Volume 145 ; 145 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; American Journal of Epidemiology Volume 146 ; 146 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; American Journal of Epidemiology Volume 147 ; 147 >
@@ -3155,8 +3155,8 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; Chinese Journal of International Law Volume 3 ; 3 >
     au < HighWirePressPlugin ; doNotProcess ; 2005 ; Chinese Journal of International Law Volume 4 ; 4 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Chinese Journal of International Law Volume 5 ; 5 >
-    au < HighWirePressPlugin ; down ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Chinese Journal of International Law Volume 6 ; 6 >
+    au < HighWirePressPlugin ; down ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 >
@@ -8889,8 +8889,8 @@
     au < HighWirePressH20Plugin ; exists ; 2007 ; The Journals of Gerontology: Series B Volume 62B ; 62B >
     au < HighWirePressH20Plugin ; exists ; 2008 ; The Journals of Gerontology: Series B Volume 63B ; 63B >
     au < HighWirePressH20Plugin ; exists ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B >
-    au < HighWirePressH20Plugin ; exists ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B >
 
     }
 
@@ -12135,6 +12135,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://molehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+	comment[molehr] =  duplicate title with MHR: Basic science of reproductive medicine
 
     au < HighWirePressH20Plugin ; exists ; 1995 ; Molecular Human Reproduction Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Molecular Human Reproduction Volume 2 ; 2 >
