@@ -2765,8 +2765,7 @@
     au < manifest ; exists ; 2005 ; The Cambridge Quarterly Volume 34 ; 34 ; >
     au < manifest ; exists ; 2006 ; The Cambridge Quarterly Volume 35 ; 35 ; >
     au < manifest ; exists ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < wanted ; exists ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
     au < released ; crawling ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
     au < wanted ; exists ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 ; >
@@ -5125,7 +5124,7 @@
     au < wanted ; exists ; 2005 ; French Studies: A Quarterly Review Volume 59 ; 59 ; >
     au < wanted ; exists ; 2006 ; French Studies: A Quarterly Review Volume 60 ; 60 ; >
     au < wanted ; exists ; 2007 ; French Studies: A Quarterly Review Volume 61 ; 61 ; >
-    au < wanted ; exists ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; French Studies Volume 64 ; 64 ; >
     au < wanted ; exists ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
@@ -6333,7 +6332,6 @@
     au < wanted ; exists ; 2007 ; IMA Journal of Numerical Analysis Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
     au < released ; crawling ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; >
-
     au < released ; crawling ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
     au < wanted ; exists ; 2011 ; IMA Journal of Numerical Analysis Volume 31 ; 31 ; >
 
@@ -7240,7 +7238,7 @@
     au < wanted ; exists ; 2007 ; International Relations of the Asia-Pacific Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
     au < released ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
     au < wanted ; exists ; 2011 ; International Relations of the Asia-Pacific Volume 11 ; 11 ; >
 
     }
@@ -9617,7 +9615,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < released ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
-    au < exists ; exists ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
     au < exists ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
     au < exists ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
@@ -11296,8 +11294,8 @@
     au < manifest ; exists ; 2005 ; Logic Journal of the IGPL Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Logic Journal of the IGPL Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; Logic Journal of the IGPL Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
 
@@ -16011,7 +16009,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; >
-    au < released ; manifest ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; >
     au < released ; crawling ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
     au < released ; crawling ; 2009 ; Toxicological Sciences Volume 112 ; 112 ; >
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 113 ; 113 ; >
