@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.21 2011-06-29 07:06:33 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.21.2.1 2011-09-15 18:51:06 pgust Exp $
  */
 
 /*
@@ -340,12 +340,12 @@ public class AdminServletManager extends BaseServletManager {
                      ServletDescr.NEED_ROLE_DEBUG);
   
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
-    new ServletDescr("ListHoldings",
+    new ServletDescr("TitleList",
                      ListHoldings.class,
-                     "Holdings List",
-                     "Holdings",
+                     "Title List",
+                     "Titles",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-                     "List holdings metadata") {
+                     "List title metadata") {
       public boolean isEnabled(LockssDaemon daemon) {
 	return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
 					     ListHoldings.DEFAULT_ENABLE_HOLDINGS);
