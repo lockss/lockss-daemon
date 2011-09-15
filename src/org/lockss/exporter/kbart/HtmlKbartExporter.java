@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.14.2.1 2011-09-15 18:13:04 pgust Exp $
+ * $Id: HtmlKbartExporter.java,v 1.14.2.2 2011-09-15 19:19:46 pgust Exp $
  */
 
 /*
@@ -119,8 +119,8 @@ public class HtmlKbartExporter extends KbartExporter {
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
-			       Configuration oldConfig,
-			       Configuration.Differences diffs) {
+                   Configuration oldConfig,
+                   Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
       showHealthAsTortoises = config.getBoolean(PARAM_SHOW_TORTOISES, DEFAULT_SHOW_TORTOISES);
     }
@@ -157,21 +157,21 @@ public class HtmlKbartExporter extends KbartExporter {
       // Add appropriate style to issn fields
       String cssClass = "";
       if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
-	 cssClass = "issn";
+     cssClass = "issn";
       }
       // Add different type of entry for health ratings if required
       if (i==healthFieldIndex) {
-	int rating = scaleHealth(val);
-	cssClass = "health" + rating;
-	if (showHealthAsTortoises) {
-	  cssClass += "-tortoise";
-	  val = "&nbsp;";
-	}
+    int rating = scaleHealth(val);
+    cssClass = "health" + rating;
+    if (showHealthAsTortoises) {
+      cssClass += "-tortoise";
+      val = "&nbsp;";
+    }
       }
       if (StringUtil.isNullString(cssClass)) {
-	printWriter.printf("<td>%s</td>", val);
+    printWriter.printf("<td>%s</td>", val);
       } else {
-	printWriter.printf("<td class=\"%s\">%s</td>", cssClass, val);
+    printWriter.printf("<td class=\"%s\">%s</td>", cssClass, val);
       }
     }
     printWriter.println("</tr>");
@@ -204,8 +204,8 @@ public class HtmlKbartExporter extends KbartExporter {
     super.setup(os);
     // Construct a title and summary
     this.exportSummary = String.format("%s title list created on %s by %s " +
-	"| %d items listed from %d titles.",
-	scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
+    "| %d items listed from %d titles.",
+    scope, getDate(), getHostName(), titles.size(), tdbTitleTotal);
     this.header = makeHeader();
     this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
     this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
@@ -214,7 +214,7 @@ public class HtmlKbartExporter extends KbartExporter {
     this.healthFieldIndex = getFieldLabels().size();
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" " +
-	"content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
+    "content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
     printWriter.printf("%s</head><body>", css);
     if (getHtmlCustomForm()!=null) printWriter.println(getHtmlCustomForm());
@@ -241,19 +241,21 @@ public class HtmlKbartExporter extends KbartExporter {
   
   private String makeHeader() {
     return String.format("<tr><th>Index</th><th>%s</th></tr>", 
-	StringUtil.separatedString(filter.getColumnLabels(scope), "</th><th>")	
+    StringUtil.separatedString(filter.getColumnLabels(scope), "</th><th>")  
     );
   }
 
   @Override
   protected void clearup() throws IOException {
     printWriter.println("</table>");
+/* temporarily disabled (PJG)
     printWriter.printf("<br/><b><i>%s</i></b><br/>%s<br/>%s<br/>%s<br/><br/>", 
-	this.exportSummary, 
-	this.getOmittedTitlesSummary(),
-	this.getOmittedFieldsSummary(), 
-	this.getEmptySummary()
+    this.exportSummary, 
+    this.getOmittedTitlesSummary(),
+    this.getOmittedFieldsSummary(), 
+    this.getEmptySummary()
     );
+*/
     printWriter.println("</body></html>");
     // Finally let superclass clear up
     super.clearup();
