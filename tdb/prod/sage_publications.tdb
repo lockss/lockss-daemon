@@ -4647,8 +4647,8 @@
         au < manifest ; 2005 ; Chronic Illness Volume 1 ; 1 >
         au < doNotProcess ; 2006 ; Chronic Illness Volume 2 ; 2 >
         au < doNotProcess ; 2007 ; Chronic Illness Volume 3 ; 3 >
-        au < doNotProcess ; 2008 ; Chronic Illness Volume 4 ; 4 >
-        au < manifest ; 2009 ; Chronic Illness Volume 5 ; 5 >
+        au < manifest ; 2008 ; Chronic Illness Volume 4 ; 4 >
+        au < doNotProcess ; 2009 ; Chronic Illness Volume 5 ; 5 >
         au < manifest ; 2010 ; Chronic Illness Volume 6 ; 6 >
         au < manifest ; 2011 ; Chronic Illness Volume 7 ; 7 >
 
@@ -6605,7 +6605,7 @@
         au < doNotProcess ; 2006 ; Criminal Justice Policy Review Volume 17 ; 17 >
         au < doNotProcess ; 2007 ; Criminal Justice Policy Review Volume 18 ; 18 >
         au < doNotProcess ; 2008 ; Criminal Justice Policy Review Volume 19 ; 19 >
-        au < manifest ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 >
+        au < doNotProcess ; 2009 ; Criminal Justice Policy Review Volume 20 ; 20 >
         au < manifest ; 2010 ; Criminal Justice Policy Review Volume 21 ; 21 >
         au < manifest ; 2011 ; Criminal Justice Policy Review Volume 22 ; 22 >
 
@@ -7431,8 +7431,8 @@
 
         au < manifest ; 2002-2003 ; Currents in Biblical Research Volume 1 ; 1 >
         au < manifest ; 2003-2004 ; Currents in Biblical Research Volume 2 ; 2 >
-        au < manifest ; 2004-2005 ; Currents in Biblical Research Volume 3 ; 3 >
-        au < doNotProcess ; 2005-2006 ; Currents in Biblical Research Volume 4 ; 4 >
+        au < doNotProcess ; 2004-2005 ; Currents in Biblical Research Volume 3 ; 3 >
+        au < manifeset ; 2005-2006 ; Currents in Biblical Research Volume 4 ; 4 >
         au < doNotProcess ; 2006-2007 ; Currents in Biblical Research Volume 5 ; 5 >
         au < doNotProcess ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 >
         au < doNotProcess ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 >
@@ -10934,7 +10934,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://gac.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2006 ; Games and Culture Volume 1 ; 1 >
+        au < doNotProcess ; 2006 ; Games and Culture Volume 1 ; 1 >
         au < doNotProcess ; 2007 ; Games and Culture Volume 2 ; 2 >
         au < doNotProcess ; 2008 ; Games and Culture Volume 3 ; 3 >
         au < doNotProcess ; 2009 ; Games and Culture Volume 4 ; 4 >
@@ -11546,7 +11546,7 @@ comment[exm] = now published by Springer
         au < doNotProcess ; 2006 ; Group & Organization Management Volume 31 ; 31 >
         au < doNotProcess ; 2007 ; Group & Organization Management Volume 32 ; 32 >
         au < doNotProcess ; 2008 ; Group & Organization Management Volume 33 ; 33 >
-        au < manifest ; 2009 ; Group & Organization Management Volume 34 ; 34 >
+        au < doNotProcess ; 2009 ; Group & Organization Management Volume 34 ; 34 >
         au < manifest ; 2010 ; Group & Organization Management Volume 35 ; 35 >
         au < manifest ; 2011 ; Group & Organization Management Volume 36 ; 36 >
 
@@ -15991,7 +15991,7 @@ comment[exm] = now published by Springer
         au < manifest ; 2003 ; Journal of Aging and Health Volume 15 ; 15 >
         au < manifest ; 2004 ; Journal of Aging and Health Volume 16 ; 16 >
         au < doNotProcess ; 2005 ; Journal of Aging and Health Volume 17 ; 17 >
-        au < manifest ; 2006 ; Journal of Aging and Health Volume 18 ; 18 >
+        au < doNotProcess ; 2006 ; Journal of Aging and Health Volume 18 ; 18 >
         au < doNotProcess ; 2007 ; Journal of Aging and Health Volume 19 ; 19 >
         au < doNotProcess ; 2008 ; Journal of Aging and Health Volume 20 ; 20 >
         au < manifest ; 2009 ; Journal of Aging and Health Volume 21 ; 21 >
@@ -17472,7 +17472,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2003 ; Journal of Child Health Care Volume 7 ; 7 >
         au < manifest ; 2004 ; Journal of Child Health Care Volume 8 ; 8 >
         au < doNotProcess ; 2005 ; Journal of Child Health Care Volume 9 ; 9 >
-        au < manifest ; 2006 ; Journal of Child Health Care Volume 10 ; 10 >
+        au < doNotProcess ; 2006 ; Journal of Child Health Care Volume 10 ; 10 >
         au < doNotProcess ; 2007 ; Journal of Child Health Care Volume 11 ; 11 >
         au < doNotProcess ; 2008 ; Journal of Child Health Care Volume 12 ; 12 >
         au < doNotProcess ; 2009 ; Journal of Child Health Care Volume 13 ; 13 >
@@ -19186,8 +19186,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 2004 ; Innate Immunity Volume 10 ; 10 >
         au < manifest ; 2005 ; Innate Immunity Volume 11 ; 11 >
         au < manifest ; 2006 ; Innate Immunity Volume 12 ; 12 >
-        au < manifest ; 2007 ; Innate Immunity Volume 13 ; 13 >
-        au < manifest ; 2008 ; Innate Immunity Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Innate Immunity Volume 13 ; 13 >
+        au < doNotProcess ; 2008 ; Innate Immunity Volume 14 ; 14 >
         au < manifest ; 2009 ; Innate Immunity Volume 15 ; 15 >
         au < manifest ; 2010 ; Innate Immunity Volume 16 ; 16 >
         au < manifest ; 2011 ; Innate Immunity Volume 17 ; 17 >
@@ -24731,8 +24731,8 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2005 ; Journal of Vacation Marketing Volume 11 ; 11 >
         au < doNotProcess ; 2006 ; Journal of Vacation Marketing Volume 12 ; 12 >
         au < doNotProcess ; 2007 ; Journal of Vacation Marketing Volume 13 ; 13 >
-        au < manifest ; 2008 ; Journal of Vacation Marketing Volume 14 ; 14 >
-        au < manifest ; 2009 ; Journal of Vacation Marketing Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Journal of Vacation Marketing Volume 14 ; 14 >
+        au < doNotProcess ; 2009 ; Journal of Vacation Marketing Volume 15 ; 15 >
         au < manifest ; 2010 ; Journal of Vacation Marketing Volume 16 ; 16 >
         au < manifest ; 2011 ; Journal of Vacation Marketing Volume 17 ; 17 >
 
@@ -27693,11 +27693,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Organization Studies Volume 23 ; 23 >
         au < manifest ; 2003 ; Organization Studies Volume 24 ; 24 >
         au < manifest ; 2004 ; Organization Studies Volume 25 ; 25 >
-        au < manifest ; 2005 ; Organization Studies Volume 26 ; 26 >
-        au < manifest ; 2006 ; Organization Studies Volume 27 ; 27 >
-        au < manifest ; 2007 ; Organization Studies Volume 28 ; 28 >
-        au < manifest ; 2008 ; Organization Studies Volume 29 ; 29 >
-        au < manifest ; 2009 ; Organization Studies Volume 30 ; 30 >
+        au < doNotProcess ; 2005 ; Organization Studies Volume 26 ; 26 >
+        au < doNotProcess ; 2006 ; Organization Studies Volume 27 ; 27 >
+        au < doNotProcess ; 2007 ; Organization Studies Volume 28 ; 28 >
+        au < doNotProcess ; 2008 ; Organization Studies Volume 29 ; 29 >
+        au < doNotProcess ; 2009 ; Organization Studies Volume 30 ; 30 >
         au < manifest ; 2010 ; Organization Studies Volume 31 ; 31 >
         au < manifest ; 2011 ; Organization Studies Volume 32 ; 32 >
 
@@ -27754,17 +27754,17 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1998 ; Organizational Research Methods Volume 1 ; 1 >
-        au < manifest ; 1999 ; Organizational Research Methods Volume 2 ; 2 >
+        au < doNotProcess ; 1999 ; Organizational Research Methods Volume 2 ; 2 >
         au < manifest ; 2000 ; Organizational Research Methods Volume 3 ; 3 >
         au < manifest ; 2001 ; Organizational Research Methods Volume 4 ; 4 >
         au < manifest ; 2002 ; Organizational Research Methods Volume 5 ; 5 >
         au < manifest ; 2003 ; Organizational Research Methods Volume 6 ; 6 >
         au < manifest ; 2004 ; Organizational Research Methods Volume 7 ; 7 >
-        au < manifest ; 2005 ; Organizational Research Methods Volume 8 ; 8 >
-        au < manifest ; 2006 ; Organizational Research Methods Volume 9 ; 9 >
-        au < manifest ; 2007 ; Organizational Research Methods Volume 10 ; 10 >
-        au < manifest ; 2008 ; Organizational Research Methods Volume 11 ; 11 >
-        au < manifest ; 2009 ; Organizational Research Methods Volume 12 ; 12 >
+        au < doNotProcess ; 2005 ; Organizational Research Methods Volume 8 ; 8 >
+        au < doNotProcess ; 2006 ; Organizational Research Methods Volume 9 ; 9 >
+        au < doNotProcess ; 2007 ; Organizational Research Methods Volume 10 ; 10 >
+        au < doNotProcess ; 2008 ; Organizational Research Methods Volume 11 ; 11 >
+        au < doNotProcess ; 2009 ; Organizational Research Methods Volume 12 ; 12 >
         au < manifest ; 2010 ; Organizational Research Methods Volume 13 ; 13 >
         au < manifest ; 2011 ; Organizational Research Methods Volume 14 ; 14 >
 
@@ -27870,12 +27870,12 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Palliative Medicine Volume 15 ; 15 >
         au < manifest ; 2002 ; Palliative Medicine Volume 16 ; 16 >
         au < manifest ; 2003 ; Palliative Medicine Volume 17 ; 17 >
-        au < manifest ; 2004 ; Palliative Medicine Volume 18 ; 18 >
+        au < doNotProcess ; 2004 ; Palliative Medicine Volume 18 ; 18 >
         au < manifest ; 2005 ; Palliative Medicine Volume 19 ; 19 >
-        au < manifest ; 2006 ; Palliative Medicine Volume 20 ; 20 >
-        au < manifest ; 2007 ; Palliative Medicine Volume 21 ; 21 >
-        au < manifest ; 2008 ; Palliative Medicine Volume 22 ; 22 >
-        au < manifest ; 2009 ; Palliative Medicine Volume 23 ; 23 >
+        au < doNotProcess ; 2006 ; Palliative Medicine Volume 20 ; 20 >
+        au < doNotProcess ; 2007 ; Palliative Medicine Volume 21 ; 21 >
+        au < doNotProcess ; 2008 ; Palliative Medicine Volume 22 ; 22 >
+        au < doNotProcess ; 2009 ; Palliative Medicine Volume 23 ; 23 >
         au < manifest ; 2010 ; Palliative Medicine Volume 24 ; 24 >
         au < manifest ; 2011 ; Palliative Medicine Volume 25 ; 25 >
 
@@ -27922,11 +27922,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Party Politics Volume 8 ; 8 >
         au < manifest ; 2003 ; Party Politics Volume 9 ; 9 >
         au < manifest ; 2004 ; Party Politics Volume 10 ; 10 >
-        au < manifest ; 2005 ; Party Politics Volume 11 ; 11 >
-        au < manifest ; 2006 ; Party Politics Volume 12 ; 12 >
-        au < manifest ; 2007 ; Party Politics Volume 13 ; 13 >
-        au < manifest ; 2008 ; Party Politics Volume 14 ; 14 >
-        au < manifest ; 2009 ; Party Politics Volume 15 ; 15 >
+        au < doNotProcess ; 2005 ; Party Politics Volume 11 ; 11 >
+        au < doNotProcess ; 2006 ; Party Politics Volume 12 ; 12 >
+        au < doNotProcess ; 2007 ; Party Politics Volume 13 ; 13 >
+        au < doNotProcess ; 2008 ; Party Politics Volume 14 ; 14 >
+        au < doNotProcess ; 2009 ; Party Politics Volume 15 ; 15 >
         au < manifest ; 2010 ; Party Politics Volume 16 ; 16 >
         au < manifest ; 2011 ; Party Politics Volume 17 ; 17 >
 
@@ -27981,9 +27981,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Perfusion Volume 18 ; 18 >
         au < manifest ; 2004 ; Perfusion Volume 19 ; 19 >
         au < manifest ; 2005 ; Perfusion Volume 20 ; 20 >
-        au < manifest ; 2006 ; Perfusion Volume 21 ; 21 >
-        au < manifest ; 2007 ; Perfusion Volume 22 ; 22 >
-        au < manifest ; 2008 ; Perfusion Volume 23 ; 23 >
+        au < doNotProcess ; 2006 ; Perfusion Volume 21 ; 21 >
+        au < doNotProcess ; 2007 ; Perfusion Volume 22 ; 22 >
+        au < doNotProcess ; 2008 ; Perfusion Volume 23 ; 23 >
         au < manifest ; 2009 ; Perfusion Volume 24 ; 24 >
         au < manifest ; 2010 ; Perfusion Volume 25 ; 25 >
         au < manifest ; 2011 ; Perfusion Volume 26 ; 26 >
@@ -28051,11 +28051,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Personality and Social Psychology Bulletin Volume 28 ; 28 >
         au < manifest ; 2003 ; Personality and Social Psychology Bulletin Volume 29 ; 29 >
         au < manifest ; 2004 ; Personality and Social Psychology Bulletin Volume 30 ; 30 >
-        au < manifest ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
-        au < manifest ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
-        au < manifest ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
-        au < manifest ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
-        au < manifest ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
+        au < doNotProcess ; 2005 ; Personality and Social Psychology Bulletin Volume 31 ; 31 >
+        au < doNotProcess ; 2006 ; Personality and Social Psychology Bulletin Volume 32 ; 32 >
+        au < doNotProcess ; 2007 ; Personality and Social Psychology Bulletin Volume 33 ; 33 >
+        au < doNotProcess ; 2008 ; Personality and Social Psychology Bulletin Volume 34 ; 34 >
+        au < doNotProcess ; 2009 ; Personality and Social Psychology Bulletin Volume 35 ; 35 >
         au < manifest ; 2010 ; Personality and Social Psychology Bulletin Volume 36 ; 36 >
         au < manifest ; 2011 ; Personality and Social Psychology Bulletin Volume 37 ; 37 >
 
@@ -28100,9 +28100,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Personality and Social Psychology Review Volume 8 ; 8 >
         au < manifest ; 2005 ; Personality and Social Psychology Review Volume 9 ; 9 >
         au < manifest ; 2006 ; Personality and Social Psychology Review Volume 10 ; 10 >
-        au < manifest ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
-        au < manifest ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
-        au < manifest ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
+        au < doNotProcess ; 2007 ; Personality and Social Psychology Review Volume 11 ; 11 >
+        au < doNotProcess ; 2008 ; Personality and Social Psychology Review Volume 12 ; 12 >
+        au < doNotProcess ; 2009 ; Personality and Social Psychology Review Volume 13 ; 13 >
         au < manifest ; 2010 ; Personality and Social Psychology Review Volume 14 ; 14 >
         au < manifest ; 2011 ; Personality and Social Psychology Review Volume 15 ; 15 >
 
@@ -28155,11 +28155,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 14 ; 14 >
         au < manifest ; 2002 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 15 ; 15 >
         au < manifest ; 2004 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 16 ; 16 >
-        au < manifest ; 2005 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
-        au < manifest ; 2006 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
-        au < manifest ; 2007 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
-        au < manifest ; 2008 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
-        au < manifest ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
+        au < doNotProcess ; 2005 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 17 ; 17 >
+        au < doNotProcess ; 2006 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 18 ; 18 >
+        au < doNotProcess ; 2007 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 19 ; 19 >
+        au < doNotProcess ; 2008 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 20 ; 20 >
+        au < doNotProcess ; 2009 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 21 ; 21 >
         au < manifest ; 2010 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 >
 
       }
@@ -28225,11 +28225,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Philosophy & Social Criticism Volume 28 ; 28 >
         au < manifest ; 2003 ; Philosophy & Social Criticism Volume 29 ; 29 >
         au < manifest ; 2004 ; Philosophy & Social Criticism Volume 30 ; 30 >
-        au < manifest ; 2005 ; Philosophy & Social Criticism Volume 31 ; 31 >
-        au < manifest ; 2006 ; Philosophy & Social Criticism Volume 32 ; 32 >
-        au < manifest ; 2007 ; Philosophy & Social Criticism Volume 33 ; 33 >
-        au < manifest ; 2008 ; Philosophy & Social Criticism Volume 34 ; 34 >
-        au < manifest ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 >
+        au < doNotProcess ; 2005 ; Philosophy & Social Criticism Volume 31 ; 31 >
+        au < doNotProcess ; 2006 ; Philosophy & Social Criticism Volume 32 ; 32 >
+        au < doNotProcess ; 2007 ; Philosophy & Social Criticism Volume 33 ; 33 >
+        au < doNotProcess ; 2008 ; Philosophy & Social Criticism Volume 34 ; 34 >
+        au < doNotProcess ; 2009 ; Philosophy & Social Criticism Volume 35 ; 35 >
         au < manifest ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 >
         au < manifest ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 >
 
@@ -28300,11 +28300,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Philosophy of the Social Sciences Volume 32 ; 32 >
         au < manifest ; 2003 ; Philosophy of the Social Sciences Volume 33 ; 33 >
         au < manifest ; 2004 ; Philosophy of the Social Sciences Volume 34 ; 34 >
-        au < manifest ; 2005 ; Philosophy of the Social Sciences Volume 35 ; 35 >
-        au < manifest ; 2006 ; Philosophy of the Social Sciences Volume 36 ; 36 >
-        au < manifest ; 2007 ; Philosophy of the Social Sciences Volume 37 ; 37 >
-        au < manifest ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 >
-        au < manifest ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 >
+        au < doNotProcess ; 2005 ; Philosophy of the Social Sciences Volume 35 ; 35 >
+        au < doNotProcess ; 2006 ; Philosophy of the Social Sciences Volume 36 ; 36 >
+        au < doNotProcess ; 2007 ; Philosophy of the Social Sciences Volume 37 ; 37 >
+        au < doNotProcess ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 >
+        au < doNotProcess ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 >
         au < manifest ; 2010 ; Philosophy of the Social Sciences Volume 40 ; 40 >
         au < manifest ; 2011 ; Philosophy of the Social Sciences Volume 41 ; 41 >
 
@@ -28342,10 +28342,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Planning Theory Volume 1 ; 1 >
         au < manifest ; 2003 ; Planning Theory Volume 2 ; 2 >
         au < manifest ; 2004 ; Planning Theory Volume 3 ; 3 >
-        au < manifest ; 2005 ; Planning Theory Volume 4 ; 4 >
-        au < manifest ; 2006 ; Planning Theory Volume 5 ; 5 >
-        au < manifest ; 2007 ; Planning Theory Volume 6 ; 6 >
-        au < manifest ; 2008 ; Planning Theory Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Planning Theory Volume 4 ; 4 >
+        au < doNotProcess ; 2006 ; Planning Theory Volume 5 ; 5 >
+        au < doNotProcess ; 2007 ; Planning Theory Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Planning Theory Volume 7 ; 7 >
         au < manifest ; 2009 ; Planning Theory Volume 8 ; 8 >
         au < manifest ; 2010 ; Planning Theory Volume 9 ; 9 >
         au < manifest ; 2011 ; Planning Theory Volume 10 ; 10 >
@@ -28390,11 +28390,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Police Quarterly Volume 5 ; 5 >
         au < manifest ; 2003 ; Police Quarterly Volume 6 ; 6 >
         au < manifest ; 2004 ; Police Quarterly Volume 7 ; 7 >
-        au < manifest ; 2005 ; Police Quarterly Volume 8 ; 8 >
-        au < manifest ; 2006 ; Police Quarterly Volume 9 ; 9 >
-        au < manifest ; 2007 ; Police Quarterly Volume 10 ; 10 >
-        au < manifest ; 2008 ; Police Quarterly Volume 11 ; 11 >
-        au < manifest ; 2009 ; Police Quarterly Volume 12 ; 12 >
+        au < doNotProcess ; 2005 ; Police Quarterly Volume 8 ; 8 >
+        au < doNotProcess ; 2006 ; Police Quarterly Volume 9 ; 9 >
+        au < doNotProcess ; 2007 ; Police Quarterly Volume 10 ; 10 >
+        au < doNotProcess ; 2008 ; Police Quarterly Volume 11 ; 11 >
+        au < doNotProcess ; 2009 ; Police Quarterly Volume 12 ; 12 >
         au < manifest ; 2010 ; Police Quarterly Volume 13 ; 13 >
         au < manifest ; 2011 ; Police Quarterly Volume 14 ; 14 >
 
@@ -28435,11 +28435,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Policy, Politics, & Nursing Practice Volume 3 ; 3 >
         au < manifest ; 2003 ; Policy, Politics, & Nursing Practice Volume 4 ; 4 >
         au < manifest ; 2004 ; Policy, Politics, & Nursing Practice Volume 5 ; 5 >
-        au < manifest ; 2005 ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
+        au < doNotProcess ; 2005 ; Policy, Politics, & Nursing Practice Volume 6 ; 6 >
         au < manifest ; 2006 ; Policy, Politics, & Nursing Practice Volume 7 ; 7 >
-        au < manifest ; 2007 ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
-        au < manifest ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
-        au < manifest ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
+        au < doNotProcess ; 2007 ; Policy, Politics, & Nursing Practice Volume 8 ; 8 >
+        au < doNotProcess ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 >
+        au < doNotProcess ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 >
         au < manifest ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 >
 
       }
@@ -28532,10 +28532,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Political Research Quarterly Volume 56 ; 56 >
         au < manifest ; 2004 ; Political Research Quarterly Volume 57 ; 57 >
         au < manifest ; 2005 ; Political Research Quarterly Volume 58 ; 58 >
-        au < manifest ; 2006 ; Political Research Quarterly Volume 59 ; 59 >
-        au < manifest ; 2007 ; Political Research Quarterly Volume 60 ; 60 >
-        au < manifest ; 2008 ; Political Research Quarterly Volume 61 ; 61 >
-        au < manifest ; 2009 ; Political Research Quarterly Volume 62 ; 62 >
+        au < doNotProcess ; 2006 ; Political Research Quarterly Volume 59 ; 59 >
+        au < doNotProcess ; 2007 ; Political Research Quarterly Volume 60 ; 60 >
+        au < doNotProcess ; 2008 ; Political Research Quarterly Volume 61 ; 61 >
+        au < doNotProcess ; 2009 ; Political Research Quarterly Volume 62 ; 62 >
         au < manifest ; 2010 ; Political Research Quarterly Volume 63 ; 63 >
         au < manifest ; 2011 ; Political Research Quarterly Volume 64 ; 64 >
 
@@ -28604,11 +28604,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Political Theory Volume 30 ; 30 >
         au < manifest ; 2003 ; Political Theory Volume 31 ; 31 >
         au < manifest ; 2004 ; Political Theory Volume 32 ; 32 >
-        au < manifest ; 2005 ; Political Theory Volume 33 ; 33 >
-        au < manifest ; 2006 ; Political Theory Volume 34 ; 34 >
-        au < manifest ; 2007 ; Political Theory Volume 35 ; 35 >
-        au < manifest ; 2008 ; Political Theory Volume 36 ; 36 >
-        au < manifest ; 2009 ; Political Theory Volume 37 ; 37 >
+        au < doNotProcess ; 2005 ; Political Theory Volume 33 ; 33 >
+        au < doNotProcess ; 2006 ; Political Theory Volume 34 ; 34 >
+        au < doNotProcess ; 2007 ; Political Theory Volume 35 ; 35 >
+        au < doNotProcess ; 2008 ; Political Theory Volume 36 ; 36 >
+        au < doNotProcess ; 2009 ; Political Theory Volume 37 ; 37 >
         au < manifest ; 2010 ; Political Theory Volume 38 ; 38 >
         au < manifest ; 2011 ; Political Theory Volume 39 ; 39 >
 
@@ -28677,11 +28677,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Politics & Society Volume 30 ; 30 >
         au < manifest ; 2003 ; Politics & Society Volume 31 ; 31 >
         au < manifest ; 2004 ; Politics & Society Volume 32 ; 32 >
-        au < manifest ; 2005 ; Politics & Society Volume 33 ; 33 >
-        au < manifest ; 2006 ; Politics & Society Volume 34 ; 34 >
-        au < manifest ; 2007 ; Politics & Society Volume 35 ; 35 >
-        au < manifest ; 2008 ; Politics & Society Volume 36 ; 36 >
-        au < manifest ; 2009 ; Politics & Society Volume 37 ; 37 >
+        au < doNotProcess ; 2005 ; Politics & Society Volume 33 ; 33 >
+        au < doNotProcess ; 2006 ; Politics & Society Volume 34 ; 34 >
+        au < doNotProcess ; 2007 ; Politics & Society Volume 35 ; 35 >
+        au < doNotProcess ; 2008 ; Politics & Society Volume 36 ; 36 >
+        au < doNotProcess ; 2009 ; Politics & Society Volume 37 ; 37 >
         au < manifest ; 2010 ; Politics & Society Volume 38 ; 38 >
         au < manifest ; 2011 ; Politics & Society Volume 39 ; 39 >
 
@@ -28720,11 +28720,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Politics, Philosophy & Economics Volume 1 ; 1 >
         au < manifest ; 2003 ; Politics, Philosophy & Economics Volume 2 ; 2 >
         au < manifest ; 2004 ; Politics, Philosophy & Economics Volume 3 ; 3 >
-        au < manifest ; 2005 ; Politics, Philosophy & Economics Volume 4 ; 4 >
+        au < doNotProcess ; 2005 ; Politics, Philosophy & Economics Volume 4 ; 4 >
         au < manifest ; 2006 ; Politics, Philosophy & Economics Volume 5 ; 5 >
-        au < manifest ; 2007 ; Politics, Philosophy & Economics Volume 6 ; 6 >
-        au < manifest ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 >
-        au < manifest ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 >
+        au < doNotProcess ; 2007 ; Politics, Philosophy & Economics Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 >
+        au < doNotProcess ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 >
         au < manifest ; 2010 ; Politics, Philosophy & Economics Volume 9 ; 9 >
         au < manifest ; 2011 ; Politics, Philosophy & Economics Volume 10 ; 10 >
 
@@ -28844,11 +28844,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; The Prison Journal Volume 82 ; 82 >
         au < manifest ; 2003 ; The Prison Journal Volume 83 ; 83 >
         au < manifest ; 2004 ; The Prison Journal Volume 84 ; 84 >
-        au < manifest ; 2005 ; The Prison Journal Volume 85 ; 85 >
+        au < doNotProcess ; 2005 ; The Prison Journal Volume 85 ; 85 >
         au < manifest ; 2006 ; The Prison Journal Volume 86 ; 86 >
-        au < manifest ; 2007 ; The Prison Journal Volume 87 ; 87 >
-        au < manifest ; 2008 ; The Prison Journal Volume 88 ; 88 >
-        au < manifest ; 2009 ; The Prison Journal Volume 89 ; 89 >
+        au < doNotProcess ; 2007 ; The Prison Journal Volume 87 ; 87 >
+        au < doNotProcess ; 2008 ; The Prison Journal Volume 88 ; 88 >
+        au < doNotProcess ; 2009 ; The Prison Journal Volume 89 ; 89 >
         au < manifest ; 2010 ; The Prison Journal Volume 90 ; 90 >
         au < manifest ; 2011 ; The Prison Journal Volume 91 ; 91 >
 
@@ -28935,10 +28935,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Probation Journal Volume 49 ; 49 >
         au < manifest ; 2003 ; Probation Journal Volume 50 ; 50 >
         au < manifest ; 2004 ; Probation Journal Volume 51 ; 51 >
-        au < manifest ; 2005 ; Probation Journal Volume 52 ; 52 >
-        au < manifest ; 2006 ; Probation Journal Volume 53 ; 53 >
-        au < manifest ; 2007 ; Probation Journal Volume 54 ; 54 >
-        au < manifest ; 2008 ; Probation Journal Volume 55 ; 55 >
+        au < doNotProcess ; 2005 ; Probation Journal Volume 52 ; 52 >
+        au < doNotProcess ; 2006 ; Probation Journal Volume 53 ; 53 >
+        au < doNotProcess ; 2007 ; Probation Journal Volume 54 ; 54 >
+        au < doNotProcess ; 2008 ; Probation Journal Volume 55 ; 55 >
         au < manifest ; 2009 ; Probation Journal Volume 56 ; 56 >
         au < manifest ; 2010 ; Probation Journal Volume 57 ; 57 >
         au < manifest ; 2011 ; Probation Journal Volume 58 ; 58 >
@@ -29540,9 +29540,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Progress in Development Studies Volume 3 ; 3 >
         au < manifest ; 2004 ; Progress in Development Studies Volume 4 ; 4 >
         au < manifest ; 2005 ; Progress in Development Studies Volume 5 ; 5 >
-        au < manifest ; 2006 ; Progress in Development Studies Volume 6 ; 6 >
-        au < manifest ; 2007 ; Progress in Development Studies Volume 7 ; 7 >
-        au < manifest ; 2008 ; Progress in Development Studies Volume 8 ; 8 >
+        au < doNotProcess ; 2006 ; Progress in Development Studies Volume 6 ; 6 >
+        au < doNotProcess ; 2007 ; Progress in Development Studies Volume 7 ; 7 >
+        au < doNotProcess ; 2008 ; Progress in Development Studies Volume 8 ; 8 >
         au < manifest ; 2009 ; Progress in Development Studies Volume 9 ; 9 >
         au < manifest ; 2010 ; Progress in Development Studies Volume 10 ; 10 >
         au < manifest ; 2011 ; Progress in Development Studies Volume 11 ; 11 >
@@ -29601,16 +29601,16 @@ comment[mpj] = now published by Brill
         au < manifest ; 1996 ; Progress in Human Geography Volume 20 ; 20 >
         au < manifest ; 1997 ; Progress in Human Geography Volume 21 ; 21 >
         au < manifest ; 1998 ; Progress in Human Geography Volume 22 ; 22 >
-        au < manifest ; 1999 ; Progress in Human Geography Volume 23 ; 23 >
+        au < doNotProcess ; 1999 ; Progress in Human Geography Volume 23 ; 23 >
         au < manifest ; 2000 ; Progress in Human Geography Volume 24 ; 24 >
         au < manifest ; 2001 ; Progress in Human Geography Volume 25 ; 25 >
         au < manifest ; 2002 ; Progress in Human Geography Volume 26 ; 26 >
         au < manifest ; 2003 ; Progress in Human Geography Volume 27 ; 27 >
         au < manifest ; 2004 ; Progress in Human Geography Volume 28 ; 28 >
         au < manifest ; 2005 ; Progress in Human Geography Volume 29 ; 29 >
-        au < manifest ; 2006 ; Progress in Human Geography Volume 30 ; 30 >
-        au < manifest ; 2007 ; Progress in Human Geography Volume 31 ; 31 >
-        au < manifest ; 2008 ; Progress in Human Geography Volume 32 ; 32 >
+        au < doNotProcess ; 2006 ; Progress in Human Geography Volume 30 ; 30 >
+        au < doNotProcess ; 2007 ; Progress in Human Geography Volume 31 ; 31 >
+        au < doNotProcess ; 2008 ; Progress in Human Geography Volume 32 ; 32 >
         au < manifest ; 2009 ; Progress in Human Geography Volume 33 ; 33 >
         au < manifest ; 2010 ; Progress in Human Geography Volume 34 ; 34 >
         au < manifest ; 2011 ; Progress in Human Geography Volume 35 ; 35 >
@@ -29675,9 +29675,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Progress in Physical Geography Volume 27 ; 27 >
         au < manifest ; 2004 ; Progress in Physical Geography Volume 28 ; 28 >
         au < manifest ; 2005 ; Progress in Physical Geography Volume 29 ; 29 >
-        au < manifest ; 2006 ; Progress in Physical Geography Volume 30 ; 30 >
-        au < manifest ; 2007 ; Progress in Physical Geography Volume 31 ; 31 >
-        au < manifest ; 2008 ; Progress in Physical Geography Volume 32 ; 32 >
+        au < doNotProcess ; 2006 ; Progress in Physical Geography Volume 30 ; 30 >
+        au < doNotProcess ; 2007 ; Progress in Physical Geography Volume 31 ; 31 >
+        au < doNotProcess ; 2008 ; Progress in Physical Geography Volume 32 ; 32 >
         au < manifest ; 2009 ; Progress in Physical Geography Volume 33 ; 33 >
         au < manifest ; 2010 ; Progress in Physical Geography Volume 34 ; 34 >
         au < manifest ; 2011 ; Progress in Physical Geography Volume 35 ; 35 >
@@ -29854,10 +29854,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Psychology & Developing Societies Volume 14 ; 14 >
         au < manifest ; 2003 ; Psychology & Developing Societies Volume 15 ; 15 >
         au < manifest ; 2004 ; Psychology & Developing Societies Volume 16 ; 16 >
-        au < manifest ; 2005 ; Psychology & Developing Societies Volume 17 ; 17 >
-        au < manifest ; 2006 ; Psychology & Developing Societies Volume 18 ; 18 >
-        au < manifest ; 2007 ; Psychology & Developing Societies Volume 19 ; 19 >
-        au < manifest ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 >
+        au < doNotProcess ; 2005 ; Psychology & Developing Societies Volume 17 ; 17 >
+        au < doNotProcess ; 2006 ; Psychology & Developing Societies Volume 18 ; 18 >
+        au < doNotProcess ; 2007 ; Psychology & Developing Societies Volume 19 ; 19 >
+        au < doNotProcess ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 >
         au < manifest ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 >
         au < manifest ; 2010 ; Psychology & Developing Societies Volume 22 ; 22 >
         au < manifest ; 2011 ; Psychology & Developing Societies Volume 23 ; 23 >
@@ -29926,10 +29926,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Psychology of Music Volume 30 ; 30 >
         au < manifest ; 2003 ; Psychology of Music Volume 31 ; 31 >
         au < manifest ; 2004 ; Psychology of Music Volume 32 ; 32 >
-        au < manifest ; 2005 ; Psychology of Music Volume 33 ; 33 >
-        au < manifest ; 2006 ; Psychology of Music Volume 34 ; 34 >
-        au < manifest ; 2007 ; Psychology of Music Volume 35 ; 35 >
-        au < manifest ; 2008 ; Psychology of Music Volume 36 ; 36 >
+        au < doNotProcess ; 2005 ; Psychology of Music Volume 33 ; 33 >
+        au < doNotProcess ; 2006 ; Psychology of Music Volume 34 ; 34 >
+        au < doNotProcess ; 2007 ; Psychology of Music Volume 35 ; 35 >
+        au < doNotProcess ; 2008 ; Psychology of Music Volume 36 ; 36 >
         au < manifest ; 2009 ; Psychology of Music Volume 37 ; 37 >
         au < manifest ; 2010 ; Psychology of Music Volume 38 ; 38 >
         au < manifest ; 2011 ; Psychology of Music Volume 39 ; 39 >
@@ -30014,9 +30014,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Public Finance Review Volume 31 ; 31 >
         au < manifest ; 2004 ; Public Finance Review Volume 32 ; 32 >
         au < manifest ; 2005 ; Public Finance Review Volume 33 ; 33 >
-        au < manifest ; 2006 ; Public Finance Review Volume 34 ; 34 >
-        au < manifest ; 2007 ; Public Finance Review Volume 35 ; 35 >
-        au < manifest ; 2008 ; Public Finance Review Volume 36 ; 36 >
+        au < doNotProcess ; 2006 ; Public Finance Review Volume 34 ; 34 >
+        au < doNotProcess ; 2007 ; Public Finance Review Volume 35 ; 35 >
+        au < doNotProcess ; 2008 ; Public Finance Review Volume 36 ; 36 >
         au < manifest ; 2009 ; Public Finance Review Volume 37 ; 37 >
         au < manifest ; 2010 ; Public Finance Review Volume 38 ; 38 >
         au < manifest ; 2011 ; Public Finance Review Volume 39 ; 39 >
@@ -30073,10 +30073,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Public Policy and Administration Volume 18 ; 18 >
         au < manifest ; 2004 ; Public Policy and Administration Volume 19 ; 19 >
         au < manifest ; 2005 ; Public Policy and Administration Volume 20 ; 20 >
-        au < manifest ; 2006 ; Public Policy and Administration Volume 21 ; 21 >
-        au < manifest ; 2007 ; Public Policy and Administration Volume 22 ; 22 >
-        au < manifest ; 2008 ; Public Policy and Administration Volume 23 ; 23 >
-        au < manifest ; 2009 ; Public Policy and Administration Volume 24 ; 24 >
+        au < doNotProcess ; 2006 ; Public Policy and Administration Volume 21 ; 21 >
+        au < doNotProcess ; 2007 ; Public Policy and Administration Volume 22 ; 22 >
+        au < doNotProcess ; 2008 ; Public Policy and Administration Volume 23 ; 23 >
+        au < doNotProcess ; 2009 ; Public Policy and Administration Volume 24 ; 24 >
         au < manifest ; 2010 ; Public Policy and Administration Volume 25 ; 25 >
         au < manifest ; 2011 ; Public Policy and Administration Volume 26 ; 26 >
 
@@ -30126,11 +30126,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Public Understanding of Science Volume 11 ; 11 >
         au < manifest ; 2003 ; Public Understanding of Science Volume 12 ; 12 >
         au < manifest ; 2004 ; Public Understanding of Science Volume 13 ; 13 >
-        au < manifest ; 2005 ; Public Understanding of Science Volume 14 ; 14 >
-        au < manifest ; 2006 ; Public Understanding of Science Volume 15 ; 15 >
-        au < manifest ; 2007 ; Public Understanding of Science Volume 16 ; 16 >
-        au < manifest ; 2008 ; Public Understanding of Science Volume 17 ; 17 >
-        au < manifest ; 2009 ; Public Understanding of Science Volume 18 ; 18 >
+        au < doNotProcess ; 2005 ; Public Understanding of Science Volume 14 ; 14 >
+        au < doNotProcess ; 2006 ; Public Understanding of Science Volume 15 ; 15 >
+        au < doNotProcess ; 2007 ; Public Understanding of Science Volume 16 ; 16 >
+        au < doNotProcess ; 2008 ; Public Understanding of Science Volume 17 ; 17 >
+        au < doNotProcess ; 2009 ; Public Understanding of Science Volume 18 ; 18 >
         au < manifest ; 2010 ; Public Understanding of Science Volume 19 ; 19 >
         au < manifest ; 2011 ; Public Understanding of Science Volume 20 ; 20 >
 
@@ -30176,12 +30176,12 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Public Works Management & Policy Volume 6 ; 6 >
         au < manifest ; 2002 ; Public Works Management & Policy Volume 7 ; 7 >
         au < manifest ; 2003 ; Public Works Management & Policy Volume 8 ; 8 >
-        au < manifest ; 2004 ; Public Works Management & Policy Volume 9 ; 9 >
-        au < manifest ; 2005 ; Public Works Management & Policy Volume 10 ; 10 >
-        au < manifest ; 2006 ; Public Works Management & Policy Volume 11 ; 11 >
-        au < manifest ; 2007 ; Public Works Management & Policy Volume 12 ; 12 >
-        au < manifest ; 2008 ; Public Works Management & Policy Volume 13 ; 13 >
-        au < manifest ; 2009 ; Public Works Management & Policy Volume 14 ; 14 >
+        au < doNotProcess ; 2004 ; Public Works Management & Policy Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; Public Works Management & Policy Volume 10 ; 10 >
+        au < doNotProcess ; 2006 ; Public Works Management & Policy Volume 11 ; 11 >
+        au < doNotProcess ; 2007 ; Public Works Management & Policy Volume 12 ; 12 >
+        au < doNotProcess ; 2008 ; Public Works Management & Policy Volume 13 ; 13 >
+        au < doNotProcess ; 2009 ; Public Works Management & Policy Volume 14 ; 14 >
         au < manifest ; 2010 ; Public Works Management & Policy Volume 15 ; 15 >
         au < manifest ; 2011 ; Public Works Management & Policy Volume 16 ; 16 >
 
@@ -30224,11 +30224,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Punishment & Society Volume 4 ; 4 >
         au < manifest ; 2003 ; Punishment & Society Volume 5 ; 5 >
         au < manifest ; 2004 ; Punishment & Society Volume 6 ; 6 >
-        au < manifest ; 2005 ; Punishment & Society Volume 7 ; 7 >
-        au < manifest ; 2006 ; Punishment & Society Volume 8 ; 8 >
-        au < manifest ; 2007 ; Punishment & Society Volume 9 ; 9 >
-        au < manifest ; 2008 ; Punishment & Society Volume 10 ; 10 >
-        au < manifest ; 2009 ; Punishment & Society Volume 11 ; 11 >
+        au < doNotProcess ; 2005 ; Punishment & Society Volume 7 ; 7 >
+        au < doNotProcess ; 2006 ; Punishment & Society Volume 8 ; 8 >
+        au < doNotProcess ; 2007 ; Punishment & Society Volume 9 ; 9 >
+        au < doNotProcess ; 2008 ; Punishment & Society Volume 10 ; 10 >
+        au < doNotProcess ; 2009 ; Punishment & Society Volume 11 ; 11 >
         au < manifest ; 2010 ; Punishment & Society Volume 12 ; 12 >
         au < manifest ; 2011 ; Punishment & Society Volume 13 ; 13 >
 
@@ -30279,11 +30279,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Qualitative Health Research Volume 12 ; 12 >
         au < manifest ; 2003 ; Qualitative Health Research Volume 13 ; 13 >
         au < manifest ; 2004 ; Qualitative Health Research Volume 14 ; 14 >
-        au < manifest ; 2005 ; Qualitative Health Research Volume 15 ; 15 >
-        au < manifest ; 2006 ; Qualitative Health Research Volume 16 ; 16 >
-        au < manifest ; 2007 ; Qualitative Health Research Volume 17 ; 17 >
-        au < manifest ; 2008 ; Qualitative Health Research Volume 18 ; 18 >
-        au < manifest ; 2009 ; Qualitative Health Research Volume 19 ; 19 >
+        au < doNotProcess ; 2005 ; Qualitative Health Research Volume 15 ; 15 >
+        au < doNotProcess ; 2006 ; Qualitative Health Research Volume 16 ; 16 >
+        au < doNotProcess ; 2007 ; Qualitative Health Research Volume 17 ; 17 >
+        au < doNotProcess ; 2008 ; Qualitative Health Research Volume 18 ; 18 >
+        au < doNotProcess ; 2009 ; Qualitative Health Research Volume 19 ; 19 >
         au < manifest ; 2010 ; Qualitative Health Research Volume 20 ; 20 >
         au < manifest ; 2011 ; Qualitative Health Research Volume 21 ; 21 >
 
@@ -30330,11 +30330,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Qualitative Inquiry Volume 8 ; 8 >
         au < manifest ; 2003 ; Qualitative Inquiry Volume 9 ; 9 >
         au < manifest ; 2004 ; Qualitative Inquiry Volume 10 ; 10 >
-        au < manifest ; 2005 ; Qualitative Inquiry Volume 11 ; 11 >
-        au < manifest ; 2006 ; Qualitative Inquiry Volume 12 ; 12 >
-        au < manifest ; 2007 ; Qualitative Inquiry Volume 13 ; 13 >
-        au < manifest ; 2008 ; Qualitative Inquiry Volume 14 ; 14 >
-        au < manifest ; 2009 ; Qualitative Inquiry Volume 15 ; 15 >
+        au < doNotProcess ; 2005 ; Qualitative Inquiry Volume 11 ; 11 >
+        au < doNotProcess ; 2006 ; Qualitative Inquiry Volume 12 ; 12 >
+        au < doNotProcess ; 2007 ; Qualitative Inquiry Volume 13 ; 13 >
+        au < doNotProcess ; 2008 ; Qualitative Inquiry Volume 14 ; 14 >
+        au < doNotProcess ; 2009 ; Qualitative Inquiry Volume 15 ; 15 >
         au < manifest ; 2010 ; Qualitative Inquiry Volume 16 ; 16 >
         au < manifest ; 2011 ; Qualitative Inquiry Volume 17 ; 17 >
 
@@ -30373,10 +30373,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Qualitative Research Volume 2 ; 2 >
         au < manifest ; 2003 ; Qualitative Research Volume 3 ; 3 >
         au < manifest ; 2004 ; Qualitative Research Volume 4 ; 4 >
-        au < manifest ; 2005 ; Qualitative Research Volume 5 ; 5 >
+        au < doNotProcess ; 2005 ; Qualitative Research Volume 5 ; 5 >
         au < manifest ; 2006 ; Qualitative Research Volume 6 ; 6 >
-        au < manifest ; 2007 ; Qualitative Research Volume 7 ; 7 >
-        au < manifest ; 2008 ; Qualitative Research Volume 8 ; 8 >
+        au < doNotProcess ; 2007 ; Qualitative Research Volume 7 ; 7 >
+        au < doNotProcess ; 2008 ; Qualitative Research Volume 8 ; 8 >
         au < manifest ; 2009 ; Qualitative Research Volume 9 ; 9 >
         au < manifest ; 2010 ; Qualitative Research Volume 10 ; 10 >
         au < manifest ; 2011 ; Qualitative Research Volume 11 ; 11 >
@@ -30416,10 +30416,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Qualitative Social Work Volume 1 ; 1 >
         au < manifest ; 2003 ; Qualitative Social Work Volume 2 ; 2 >
         au < manifest ; 2004 ; Qualitative Social Work Volume 3 ; 3 >
-        au < manifest ; 2005 ; Qualitative Social Work Volume 4 ; 4 >
-        au < manifest ; 2006 ; Qualitative Social Work Volume 5 ; 5 >
-        au < manifest ; 2007 ; Qualitative Social Work Volume 6 ; 6 >
-        au < manifest ; 2008 ; Qualitative Social Work Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Qualitative Social Work Volume 4 ; 4 >
+        au < doNotProcess ; 2006 ; Qualitative Social Work Volume 5 ; 5 >
+        au < doNotProcess ; 2007 ; Qualitative Social Work Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Qualitative Social Work Volume 7 ; 7 >
         au < manifest ; 2009 ; Qualitative Social Work Volume 8 ; 8 >
         au < manifest ; 2010 ; Qualitative Social Work Volume 9 ; 9 >
         au < manifest ; 2011 ; Qualitative Social Work Volume 10 ; 10 >
@@ -30502,11 +30502,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Race & Class Volume 43 ; 43 >
         au < manifest ; 2002 ; Race & Class Volume 44 ; 44 >
         au < manifest ; 2003 ; Race & Class Volume 45 ; 45 >
-        au < manifest ; 2004 ; Race & Class Volume 46 ; 46 >
-        au < manifest ; 2005 ; Race & Class Volume 47 ; 47 >
-        au < manifest ; 2006 ; Race & Class Volume 48 ; 48 >
-        au < manifest ; 2007 ; Race & Class Volume 49 ; 49 >
-        au < manifest ; 2008 ; Race & Class Volume 50 ; 50 >
+        au < doNotProcess ; 2004 ; Race & Class Volume 46 ; 46 >
+        au < doNotProcess ; 2005 ; Race & Class Volume 47 ; 47 >
+        au < doNotProcess ; 2006 ; Race & Class Volume 48 ; 48 >
+        au < doNotProcess ; 2007 ; Race & Class Volume 49 ; 49 >
+        au < doNotProcess ; 2008 ; Race & Class Volume 50 ; 50 >
         au < manifest ; 2009 ; Race & Class Volume 51 ; 51 >
         au < manifest ; 2010 ; Race & Class Volume 52 ; 52 >
         au < manifest ; 2011 ; Race & Class Volume 53 ; 53 >
@@ -30577,10 +30577,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Rationality and Society Volume 14 ; 14 >
         au < manifest ; 2003 ; Rationality and Society Volume 15 ; 15 >
         au < manifest ; 2004 ; Rationality and Society Volume 16 ; 16 >
-        au < manifest ; 2005 ; Rationality and Society Volume 17 ; 17 >
-        au < manifest ; 2006 ; Rationality and Society Volume 18 ; 18 >
-        au < manifest ; 2007 ; Rationality and Society Volume 19 ; 19 >
-        au < manifest ; 2008 ; Rationality and Society Volume 20 ; 20 >
+        au < doNotProcess ; 2005 ; Rationality and Society Volume 17 ; 17 >
+        au < doNotProcess ; 2006 ; Rationality and Society Volume 18 ; 18 >
+        au < doNotProcess ; 2007 ; Rationality and Society Volume 19 ; 19 >
+        au < doNotProcess ; 2008 ; Rationality and Society Volume 20 ; 20 >
         au < manifest ; 2009 ; Rationality and Society Volume 21 ; 21 >
         au < manifest ; 2010 ; Rationality and Society Volume 22 ; 22 >
         au < manifest ; 2011 ; Rationality and Society Volume 23 ; 23 >
@@ -30683,10 +30683,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; RELC Journal Volume 33 ; 33 >
         au < manifest ; 2003 ; RELC Journal Volume 34 ; 34 >
         au < manifest ; 2004 ; RELC Journal Volume 35 ; 35 >
-        au < manifest ; 2005 ; RELC Journal Volume 36 ; 36 >
-        au < manifest ; 2006 ; RELC Journal Volume 37 ; 37 >
-        au < manifest ; 2007 ; RELC Journal Volume 38 ; 38 >
-        au < manifest ; 2008 ; RELC Journal Volume 39 ; 39 >
+        au < doNotProcess ; 2005 ; RELC Journal Volume 36 ; 36 >
+        au < doNotProcess ; 2006 ; RELC Journal Volume 37 ; 37 >
+        au < doNotProcess ; 2007 ; RELC Journal Volume 38 ; 38 >
+        au < doNotProcess ; 2008 ; RELC Journal Volume 39 ; 39 >
         au < manifest ; 2009 ; RELC Journal Volume 40 ; 40 >
         au < manifest ; 2010 ; RELC Journal Volume 41 ; 41 >
         au < manifest ; 2011 ; RELC Journal Volume 42 ; 42 >
@@ -30779,10 +30779,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Reproductive Sciences Volume 9 ; 9 >
         au < manifest ; 2003 ; Reproductive Sciences Volume 10 ; 10 >
         au < manifest ; 2004 ; Reproductive Sciences Volume 11 ; 11 >
-        au < manifest ; 2005 ; Reproductive Sciences Volume 12 ; 12 >
+        au < doNotProcess ; 2005 ; Reproductive Sciences Volume 12 ; 12 >
         au < manifest ; 2006 ; Reproductive Sciences Volume 13 ; 13 >
         au < manifest ; 2007 ; Reproductive Sciences Volume 14 ; 14 >
-        au < manifest ; 2008 ; Reproductive Sciences Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Reproductive Sciences Volume 15 ; 15 >
         au < manifest ; 2009 ; Reproductive Sciences Volume 16 ; 16 >
         au < manifest ; 2010 ; Reproductive Sciences Volume 17 ; 17 >
         au < manifest ; 2011 ; Reproductive Sciences Volume 18 ; 18 >
@@ -30845,10 +30845,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Research on Aging Volume 24 ; 24 >
         au < manifest ; 2003 ; Research on Aging Volume 25 ; 25 >
         au < manifest ; 2004 ; Research on Aging Volume 26 ; 26 >
-        au < manifest ; 2005 ; Research on Aging Volume 27 ; 27 >
-        au < manifest ; 2006 ; Research on Aging Volume 28 ; 28 >
-        au < manifest ; 2007 ; Research on Aging Volume 29 ; 29 >
-        au < manifest ; 2008 ; Research on Aging Volume 30 ; 30 >
+        au < doNotProcess ; 2005 ; Research on Aging Volume 27 ; 27 >
+        au < doNotProcess ; 2006 ; Research on Aging Volume 28 ; 28 >
+        au < doNotProcess ; 2007 ; Research on Aging Volume 29 ; 29 >
+        au < doNotProcess ; 2008 ; Research on Aging Volume 30 ; 30 >
         au < manifest ; 2009 ; Research on Aging Volume 31 ; 31 >
         au < manifest ; 2010 ; Research on Aging Volume 32 ; 32 >
         au < manifest ; 2011 ; Research on Aging Volume 33 ; 33 >
@@ -30899,10 +30899,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Research on Social Work Practice Volume 12 ; 12 >
         au < manifest ; 2003 ; Research on Social Work Practice Volume 13 ; 13 >
         au < manifest ; 2004 ; Research on Social Work Practice Volume 14 ; 14 >
-        au < manifest ; 2005 ; Research on Social Work Practice Volume 15 ; 15 >
-        au < manifest ; 2006 ; Research on Social Work Practice Volume 16 ; 16 >
-        au < manifest ; 2007 ; Research on Social Work Practice Volume 17 ; 17 >
-        au < manifest ; 2008 ; Research on Social Work Practice Volume 18 ; 18 >
+        au < doNotProcess ; 2005 ; Research on Social Work Practice Volume 15 ; 15 >
+        au < doNotProcess ; 2006 ; Research on Social Work Practice Volume 16 ; 16 >
+        au < doNotProcess ; 2007 ; Research on Social Work Practice Volume 17 ; 17 >
+        au < doNotProcess ; 2008 ; Research on Social Work Practice Volume 18 ; 18 >
         au < manifest ; 2009 ; Research on Social Work Practice Volume 19 ; 19 >
         au < manifest ; 2010 ; Research on Social Work Practice Volume 20 ; 20 >
         au < manifest ; 2011 ; Research on Social Work Practice Volume 21 ; 21 >
@@ -30963,7 +30963,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Research Studies in Music Education Volume 25 ; 25 >
         au < manifest ; 2006 ; Research Studies in Music Education Volume 26 ; 26 >
         au < manifest ; 2006 ; Research Studies in Music Education Volume 27 ; 27 >
-        au < manifest ; 2007 ; Research Studies in Music Education Volume 28 ; 28 >
+        au < doNotProcess ; 2007 ; Research Studies in Music Education Volume 28 ; 28 >
         au < manifest ; 2007 ; Research Studies in Music Education Volume 29 ; 29 >
         au < manifest ; 2008 ; Research Studies in Music Education Volume 30 ; 30 >
         au < manifest ; 2009 ; Research Studies in Music Education Volume 31 ; 31 >
@@ -31001,7 +31001,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2002 ; Reuse/Recycle Newsletter Volume 32 ; 32 >
         au < manifest ; 2003 ; Reuse/Recycle Newsletter Volume 33 ; 33 >
-        au < manifest ; 2004 ; Reuse/Recycle Newsletter Volume 34 ; 34 >
+        au < doNotProcess ; 2004 ; Reuse/Recycle Newsletter Volume 34 ; 34 >
 
       }
 
@@ -31109,8 +31109,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Review of Educational Research Volume 74 ; 74 >
         au < manifest ; 2005 ; Review of Educational Research Volume 75 ; 75 >
         au < manifest ; 2006 ; Review of Educational Research Volume 76 ; 76 >
-        au < manifest ; 2007 ; Review of Educational Research Volume 77 ; 77 >
-        au < manifest ; 2008 ; Review of Educational Research Volume 78 ; 78 >
+        au < doNotProcess ; 2007 ; Review of Educational Research Volume 77 ; 77 >
+        au < doNotProcess ; 2008 ; Review of Educational Research Volume 78 ; 78 >
         au < manifest ; 2009 ; Review of Educational Research Volume 79 ; 79 >
         au < manifest ; 2010 ; Review of Educational Research Volume 80 ; 80 >
         au < manifest ; 2011 ; Review of Educational Research Volume 81 ; 81 >
@@ -31194,11 +31194,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Review of Public Personnel Administration Volume 22 ; 22 >
         au < manifest ; 2003 ; Review of Public Personnel Administration Volume 23 ; 23 >
         au < manifest ; 2004 ; Review of Public Personnel Administration Volume 24 ; 24 >
-        au < manifest ; 2005 ; Review of Public Personnel Administration Volume 25 ; 25 >
-        au < manifest ; 2006 ; Review of Public Personnel Administration Volume 26 ; 26 >
-        au < manifest ; 2007 ; Review of Public Personnel Administration Volume 27 ; 27 >
-        au < manifest ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 >
-        au < manifest ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 >
+        au < doNotProcess ; 2005 ; Review of Public Personnel Administration Volume 25 ; 25 >
+        au < doNotProcess ; 2006 ; Review of Public Personnel Administration Volume 26 ; 26 >
+        au < doNotProcess ; 2007 ; Review of Public Personnel Administration Volume 27 ; 27 >
+        au < doNotProcess ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 >
+        au < doNotProcess ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 >
         au < manifest ; 2010 ; Review of Public Personnel Administration Volume 30 ; 30 >
         au < manifest ; 2011 ; Review of Public Personnel Administration Volume 31 ; 31 >
 
@@ -31271,11 +31271,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Review of Radical Political Economics Volume 34 ; 34 >
         au < manifest ; 2003 ; Review of Radical Political Economics Volume 35 ; 35 >
         au < manifest ; 2004 ; Review of Radical Political Economics Volume 36 ; 36 >
-        au < manifest ; 2005 ; Review of Radical Political Economics Volume 37 ; 37 >
-        au < manifest ; 2006 ; Review of Radical Political Economics Volume 38 ; 38 >
-        au < manifest ; 2007 ; Review of Radical Political Economics Volume 39 ; 39 >
-        au < manifest ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 >
-        au < manifest ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 >
+        au < doNotProcess ; 2005 ; Review of Radical Political Economics Volume 37 ; 37 >
+        au < doNotProcess ; 2006 ; Review of Radical Political Economics Volume 38 ; 38 >
+        au < doNotProcess ; 2007 ; Review of Radical Political Economics Volume 39 ; 39 >
+        au < doNotProcess ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 >
+        au < doNotProcess ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 >
         au < manifest ; 2010 ; Review of Radical Political Economics Volume 42 ; 42 >
         au < manifest ; 2011 ; Review of Radical Political Economics Volume 43 ; 43 >
 
@@ -31340,9 +31340,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Review of Research in Education Volume 28 ; 28 >
         au < manifest ; 2005 ; Review of Research in Education Volume 29 ; 29 >
         au < manifest ; 2006 ; Review of Research in Education Volume 30 ; 30 >
-        au < manifest ; 2007 ; Review of Research in Education Volume 31 ; 31 >
-        au < manifest ; 2008 ; Review of Research in Education Volume 32 ; 32 >
-        au < manifest ; 2009 ; Review of Research in Education Volume 33 ; 33 >
+        au < doNotProcess ; 2007 ; Review of Research in Education Volume 31 ; 31 >
+        au < doNotProcess ; 2008 ; Review of Research in Education Volume 32 ; 32 >
+        au < doNotProcess ; 2009 ; Review of Research in Education Volume 33 ; 33 >
         au < manifest ; 2010 ; Review of Research in Education Volume 34 ; 34 >
         au < manifest ; 2011 ; Review of Research in Education Volume 35 ; 35 >
 
@@ -31501,11 +31501,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; School Psychology International Volume 23 ; 23 >
         au < manifest ; 2003 ; School Psychology International Volume 24 ; 24 >
         au < manifest ; 2004 ; School Psychology International Volume 25 ; 25 >
-        au < manifest ; 2005 ; School Psychology International Volume 26 ; 26 >
-        au < manifest ; 2006 ; School Psychology International Volume 27 ; 27 >
-        au < manifest ; 2007 ; School Psychology International Volume 28 ; 28 >
-        au < manifest ; 2008 ; School Psychology International Volume 29 ; 29 >
-        au < manifest ; 2009 ; School Psychology International Volume 30 ; 30 >
+        au < doNotProcess ; 2005 ; School Psychology International Volume 26 ; 26 >
+        au < doNotProcess ; 2006 ; School Psychology International Volume 27 ; 27 >
+        au < doNotProcess ; 2007 ; School Psychology International Volume 28 ; 28 >
+        au < doNotProcess ; 2008 ; School Psychology International Volume 29 ; 29 >
+        au < doNotProcess ; 2009 ; School Psychology International Volume 30 ; 30 >
         au < manifest ; 2010 ; School Psychology International Volume 31 ; 31 >
         au < manifest ; 2011 ; School Psychology International Volume 32 ; 32 >
 
@@ -31567,11 +31567,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Science Communication Volume 23 ; 23 >
         au < manifest ; 2002 ; Science Communication Volume 24 ; 24 >
         au < manifest ; 2003 ; Science Communication Volume 25 ; 25 >
-        au < manifest ; 2004 ; Science Communication Volume 26 ; 26 >
-        au < manifest ; 2005 ; Science Communication Volume 27 ; 27 >
-        au < manifest ; 2006 ; Science Communication Volume 28 ; 28 >
-        au < manifest ; 2007 ; Science Communication Volume 29 ; 29 >
-        au < manifest ; 2008 ; Science Communication Volume 30 ; 30 >
+        au < doNotProcess ; 2004 ; Science Communication Volume 26 ; 26 >
+        au < doNotProcess ; 2005 ; Science Communication Volume 27 ; 27 >
+        au < doNotProcess ; 2006 ; Science Communication Volume 28 ; 28 >
+        au < doNotProcess ; 2007 ; Science Communication Volume 29 ; 29 >
+        au < doNotProcess ; 2008 ; Science Communication Volume 30 ; 30 >
         au < manifest ; 2009 ; Science Communication Volume 31 ; 31 >
         au < manifest ; 2010 ; Science Communication Volume 32 ; 32 >
         au < manifest ; 2011 ; Science Communication Volume 33 ; 33 >
@@ -31618,10 +31618,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Science Technology & Society Volume 8 ; 8 >
         au < manifest ; 2004 ; Science Technology & Society Volume 9 ; 9 >
         au < manifest ; 2005 ; Science Technology & Society Volume 10 ; 10 >
-        au < manifest ; 2006 ; Science Technology & Society Volume 11 ; 11 >
-        au < manifest ; 2007 ; Science Technology & Society Volume 12 ; 12 >
-        au < manifest ; 2008 ; Science Technology & Society Volume 13 ; 13 >
-        au < manifest ; 2009 ; Science Technology & Society Volume 14 ; 14 >
+        au < doNotProcess ; 2006 ; Science Technology & Society Volume 11 ; 11 >
+        au < doNotProcess ; 2007 ; Science Technology & Society Volume 12 ; 12 >
+        au < doNotProcess ; 2008 ; Science Technology & Society Volume 13 ; 13 >
+        au < doNotProcess ; 2009 ; Science Technology & Society Volume 14 ; 14 >
         au < manifest ; 2010 ; Science Technology & Society Volume 15 ; 15 >
         au < manifest ; 2011 ; Science Technology & Society Volume 16 ; 16 >
 
@@ -31685,11 +31685,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Science, Technology & Human Values Volume 27 ; 27 >
         au < manifest ; 2003 ; Science, Technology & Human Values Volume 28 ; 28 >
         au < manifest ; 2004 ; Science, Technology & Human Values Volume 29 ; 29 >
-        au < manifest ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 >
+        au < doNotProcess ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 >
         au < manifest ; 2006 ; Science, Technology & Human Values Volume 31 ; 31 >
         au < manifest ; 2007 ; Science, Technology & Human Values Volume 32 ; 32 >
-        au < manifest ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 >
-        au < manifest ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 >
+        au < doNotProcess ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 >
+        au < doNotProcess ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 >
         au < manifest ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 >
         au < manifest ; 2011 ; Science, Technology & Human Values Volume 36 ; 36 >
 
@@ -31745,8 +31745,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Second Language Research Volume 20 ; 20 >
         au < manifest ; 2005 ; Second Language Research Volume 21 ; 21 >
         au < manifest ; 2006 ; Second Language Research Volume 22 ; 22 >
-        au < manifest ; 2007 ; Second Language Research Volume 23 ; 23 >
-        au < manifest ; 2008 ; Second Language Research Volume 24 ; 24 >
+        au < doNotProcess ; 2007 ; Second Language Research Volume 23 ; 23 >
+        au < doNotProcess ; 2008 ; Second Language Research Volume 24 ; 24 >
         au < manifest ; 2009 ; Second Language Research Volume 25 ; 25 >
         au < manifest ; 2010 ; Second Language Research Volume 26 ; 26 >
         au < manifest ; 2011 ; Second Language Research Volume 27 ; 27 >
@@ -31818,10 +31818,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Security Dialogue Volume 33 ; 33 >
         au < manifest ; 2003 ; Security Dialogue Volume 34 ; 34 >
         au < manifest ; 2004 ; Security Dialogue Volume 35 ; 35 >
-        au < manifest ; 2005 ; Security Dialogue Volume 36 ; 36 >
-        au < manifest ; 2006 ; Security Dialogue Volume 37 ; 37 >
-        au < manifest ; 2007 ; Security Dialogue Volume 38 ; 38 >
-        au < manifest ; 2008 ; Security Dialogue Volume 39 ; 39 >
+        au < doNotProcess ; 2005 ; Security Dialogue Volume 36 ; 36 >
+        au < doNotProcess ; 2006 ; Security Dialogue Volume 37 ; 37 >
+        au < doNotProcess ; 2007 ; Security Dialogue Volume 38 ; 38 >
+        au < doNotProcess ; 2008 ; Security Dialogue Volume 39 ; 39 >
         au < manifest ; 2009 ; Security Dialogue Volume 40 ; 40 >
         au < manifest ; 2010 ; Security Dialogue Volume 41 ; 41 >
         au < manifest ; 2011 ; Security Dialogue Volume 42 ; 42 >
@@ -31865,9 +31865,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 6 ; 6 >
         au < manifest ; 2003 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 7 ; 7 >
         au < manifest ; 2004 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 8 ; 8 >
-        au < manifest ; 2005 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 9 ; 9 >
-        au < manifest ; 2006 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 10 ; 10 >
-        au < manifest ; 2007 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 11 ; 11 >
+        au < doNotProcess ; 2005 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 9 ; 9 >
+        au < doNotProcess ; 2006 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 10 ; 10 >
+        au < doNotProcess ; 2007 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 11 ; 11 >
         au < manifest ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 >
         au < manifest ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 >
         au < manifest ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 >
@@ -31953,9 +31953,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Sexualities Volume 6 ; 6 >
         au < manifest ; 2004 ; Sexualities Volume 7 ; 7 >
         au < manifest ; 2005 ; Sexualities Volume 8 ; 8 >
-        au < manifest ; 2006 ; Sexualities Volume 9 ; 9 >
-        au < manifest ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < manifest ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < doNotProcess ; 2006 ; Sexualities Volume 9 ; 9 >
+        au < doNotProcess ; 2007 ; Sexualities Volume 10 ; 10 >
+        au < doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 >
         au < manifest ; 2009 ; Sexualities Volume 12 ; 12 >
         au < manifest ; 2010 ; Sexualities Volume 13 ; 13 >
         au < manifest ; 2011 ; Sexualities Volume 14 ; 14 >
@@ -32072,10 +32072,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; SIMULATION Volume 78 ; 78 >
         au < manifest ; 2003 ; SIMULATION Volume 79 ; 79 >
         au < manifest ; 2004 ; SIMULATION Volume 80 ; 80 >
-        au < manifest ; 2005 ; SIMULATION Volume 81 ; 81 >
-        au < manifest ; 2006 ; SIMULATION Volume 82 ; 82 >
-        au < manifest ; 2007 ; SIMULATION Volume 83 ; 83 >
-        au < manifest ; 2008 ; SIMULATION Volume 84 ; 84 >
+        au < doNotProcess ; 2005 ; SIMULATION Volume 81 ; 81 >
+        au < doNotProcess ; 2006 ; SIMULATION Volume 82 ; 82 >
+        au < doNotProcess ; 2007 ; SIMULATION Volume 83 ; 83 >
+        au < doNotProcess ; 2008 ; SIMULATION Volume 84 ; 84 >
         au < manifest ; 2009 ; SIMULATION Volume 85 ; 85 >
         au < manifest ; 2010 ; SIMULATION Volume 86 ; 86 >
         au < manifest ; 2011 ; SIMULATION Volume 87 ; 87 >
@@ -32147,10 +32147,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Simulation & Gaming Volume 33 ; 33 >
         au < manifest ; 2003 ; Simulation & Gaming Volume 34 ; 34 >
         au < manifest ; 2004 ; Simulation & Gaming Volume 35 ; 35 >
-        au < manifest ; 2005 ; Simulation & Gaming Volume 36 ; 36 >
-        au < manifest ; 2006 ; Simulation & Gaming Volume 37 ; 37 >
-        au < manifest ; 2007 ; Simulation & Gaming Volume 38 ; 38 >
-        au < manifest ; 2008 ; Simulation & Gaming Volume 39 ; 39 >
+        au < doNotProcess ; 2005 ; Simulation & Gaming Volume 36 ; 36 >
+        au < doNotProcess ; 2006 ; Simulation & Gaming Volume 37 ; 37 >
+        au < doNotProcess ; 2007 ; Simulation & Gaming Volume 38 ; 38 >
+        au < doNotProcess ; 2008 ; Simulation & Gaming Volume 39 ; 39 >
         au < manifest ; 2009 ; Simulation & Gaming Volume 40 ; 40 >
         au < manifest ; 2010 ; Simulation & Gaming Volume 41 ; 41 >
         au < manifest ; 2011 ; Simulation & Gaming Volume 42 ; 42 >
@@ -32222,9 +32222,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Small Group Research Volume 34 ; 34 >
         au < manifest ; 2004 ; Small Group Research Volume 35 ; 35 >
         au < manifest ; 2005 ; Small Group Research Volume 36 ; 36 >
-        au < manifest ; 2006 ; Small Group Research Volume 37 ; 37 >
-        au < manifest ; 2007 ; Small Group Research Volume 38 ; 38 >
-        au < manifest ; 2008 ; Small Group Research Volume 39 ; 39 >
+        au < doNotProcess ; 2006 ; Small Group Research Volume 37 ; 37 >
+        au < doNotProcess ; 2007 ; Small Group Research Volume 38 ; 38 >
+        au < doNotProcess ; 2008 ; Small Group Research Volume 39 ; 39 >
         au < manifest ; 2009 ; Small Group Research Volume 40 ; 40 >
         au < manifest ; 2010 ; Small Group Research Volume 41 ; 41 >
         au < manifest ; 2011 ; Small Group Research Volume 42 ; 42 >
@@ -32273,10 +32273,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Social & Legal Studies Volume 11 ; 11 >
         au < manifest ; 2003 ; Social & Legal Studies Volume 12 ; 12 >
         au < manifest ; 2004 ; Social & Legal Studies Volume 13 ; 13 >
-        au < manifest ; 2005 ; Social & Legal Studies Volume 14 ; 14 >
+        au < doNotProcess ; 2005 ; Social & Legal Studies Volume 14 ; 14 >
         au < manifest ; 2006 ; Social & Legal Studies Volume 15 ; 15 >
-        au < manifest ; 2007 ; Social & Legal Studies Volume 16 ; 16 >
-        au < manifest ; 2008 ; Social & Legal Studies Volume 17 ; 17 >
+        au < doNotProcess ; 2007 ; Social & Legal Studies Volume 16 ; 16 >
+        au < doNotProcess ; 2008 ; Social & Legal Studies Volume 17 ; 17 >
         au < manifest ; 2009 ; Social & Legal Studies Volume 18 ; 18 >
         au < manifest ; 2010 ; Social & Legal Studies Volume 19 ; 19 >
         au < manifest ; 2011 ; Social & Legal Studies Volume 20 ; 20 >
@@ -32364,10 +32364,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Social Compass Volume 49 ; 49 >
         au < manifest ; 2003 ; Social Compass Volume 50 ; 50 >
         au < manifest ; 2004 ; Social Compass Volume 51 ; 51 >
-        au < manifest ; 2005 ; Social Compass Volume 52 ; 52 >
-        au < manifest ; 2006 ; Social Compass Volume 53 ; 53 >
-        au < manifest ; 2007 ; Social Compass Volume 54 ; 54 >
-        au < manifest ; 2008 ; Social Compass Volume 55 ; 55 >
+        au < doNotProcess ; 2005 ; Social Compass Volume 52 ; 52 >
+        au < doNotProcess ; 2006 ; Social Compass Volume 53 ; 53 >
+        au < doNotProcess ; 2007 ; Social Compass Volume 54 ; 54 >
+        au < doNotProcess ; 2008 ; Social Compass Volume 55 ; 55 >
         au < manifest ; 2009 ; Social Compass Volume 56 ; 56 >
         au < manifest ; 2010 ; Social Compass Volume 57 ; 57 >
         au < manifest ; 2011 ; Social Compass Volume 58 ; 58 >
@@ -32473,9 +32473,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Social Science Computer Review Volume 21 ; 21 >
         au < manifest ; 2004 ; Social Science Computer Review Volume 22 ; 22 >
         au < manifest ; 2005 ; Social Science Computer Review Volume 23 ; 23 >
-        au < manifest ; 2006 ; Social Science Computer Review Volume 24 ; 24 >
+        au < doNotProcess ; 2006 ; Social Science Computer Review Volume 24 ; 24 >
         au < manifest ; 2007 ; Social Science Computer Review Volume 25 ; 25 >
-        au < manifest ; 2008 ; Social Science Computer Review Volume 26 ; 26 >
+        au < doNotProcess ; 2008 ; Social Science Computer Review Volume 26 ; 26 >
         au < manifest ; 2009 ; Social Science Computer Review Volume 27 ; 27 >
         au < manifest ; 2010 ; Social Science Computer Review Volume 28 ; 28 >
         au < manifest ; 2011 ; Social Science Computer Review Volume 29 ; 29 >
@@ -32555,10 +32555,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Social Science Information Volume 41 ; 41 >
         au < manifest ; 2003 ; Social Science Information Volume 42 ; 42 >
         au < manifest ; 2004 ; Social Science Information Volume 43 ; 43 >
-        au < manifest ; 2005 ; Social Science Information Volume 44 ; 44 >
-        au < manifest ; 2006 ; Social Science Information Volume 45 ; 45 >
-        au < manifest ; 2007 ; Social Science Information Volume 46 ; 46 >
-        au < manifest ; 2008 ; Social Science Information Volume 47 ; 47 >
+        au < doNotProcess ; 2005 ; Social Science Information Volume 44 ; 44 >
+        au < doNotProcess ; 2006 ; Social Science Information Volume 45 ; 45 >
+        au < doNotProcess ; 2007 ; Social Science Information Volume 46 ; 46 >
+        au < doNotProcess ; 2008 ; Social Science Information Volume 47 ; 47 >
         au < manifest ; 2009 ; Social Science Information Volume 48 ; 48 >
         au < manifest ; 2010 ; Social Science Information Volume 49 ; 49 >
         au < manifest ; 2011 ; Social Science Information Volume 50 ; 50 >
@@ -32629,10 +32629,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Social Studies of Science Volume 32 ; 32 >
         au < manifest ; 2003 ; Social Studies of Science Volume 33 ; 33 >
         au < manifest ; 2004 ; Social Studies of Science Volume 34 ; 34 >
-        au < manifest ; 2005 ; Social Studies of Science Volume 35 ; 35 >
-        au < manifest ; 2006 ; Social Studies of Science Volume 36 ; 36 >
-        au < manifest ; 2007 ; Social Studies of Science Volume 37 ; 37 >
-        au < manifest ; 2008 ; Social Studies of Science Volume 38 ; 38 >
+        au < doNotProcess ; 2005 ; Social Studies of Science Volume 35 ; 35 >
+        au < doNotProcess ; 2006 ; Social Studies of Science Volume 36 ; 36 >
+        au < doNotProcess ; 2007 ; Social Studies of Science Volume 37 ; 37 >
+        au < doNotProcess ; 2008 ; Social Studies of Science Volume 38 ; 38 >
         au < manifest ; 2009 ; Social Studies of Science Volume 39 ; 39 >
         au < manifest ; 2010 ; Social Studies of Science Volume 40 ; 40 >
         au < manifest ; 2011 ; Social Studies of Science Volume 41 ; 41 >
@@ -32720,11 +32720,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Sociological Methods & Research Volume 30 ; 30 >
         au < manifest ; 2002 ; Sociological Methods & Research Volume 31 ; 31 >
         au < manifest ; 2003 ; Sociological Methods & Research Volume 32 ; 32 >
-        au < manifest ; 2004 ; Sociological Methods & Research Volume 33 ; 33 >
+        au < doNotProcess ; 2004 ; Sociological Methods & Research Volume 33 ; 33 >
         au < manifest ; 2005 ; Sociological Methods & Research Volume 34 ; 34 >
         au < manifest ; 2006 ; Sociological Methods & Research Volume 35 ; 35 >
-        au < manifest ; 2007 ; Sociological Methods & Research Volume 36 ; 36 >
-        au < manifest ; 2008 ; Sociological Methods & Research Volume 37 ; 37 >
+        au < doNotProcess ; 2007 ; Sociological Methods & Research Volume 36 ; 36 >
+        au < doNotProcess ; 2008 ; Sociological Methods & Research Volume 37 ; 37 >
         au < manifest ; 2009 ; Sociological Methods & Research Volume 38 ; 38 >
         au < manifest ; 2010 ; Sociological Methods & Research Volume 39 ; 39 >
         au < manifest ; 2011 ; Sociological Methods & Research Volume 40 ; 40 >
@@ -32799,9 +32799,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Sociology Volume 37 ; 37 >
         au < manifest ; 2004 ; Sociology Volume 38 ; 38 >
         au < manifest ; 2005 ; Sociology Volume 39 ; 39 >
-        au < manifest ; 2006 ; Sociology Volume 40 ; 40 >
-        au < manifest ; 2007 ; Sociology Volume 41 ; 41 >
-        au < manifest ; 2008 ; Sociology Volume 42 ; 42 >
+        au < doNotProcess ; 2006 ; Sociology Volume 40 ; 40 >
+        au < doNotProcess ; 2007 ; Sociology Volume 41 ; 41 >
+        au < doNotProcess ; 2008 ; Sociology Volume 42 ; 42 >
         au < manifest ; 2009 ; Sociology Volume 43 ; 43 >
         au < manifest ; 2010 ; Sociology Volume 44 ; 44 >
         au < manifest ; 2011 ; Sociology Volume 45 ; 45 >
@@ -32869,7 +32869,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; South Asia Economic Journal Volume 6 ; 6 >
         au < manifest ; 2006 ; South Asia Economic Journal Volume 7 ; 7 >
         au < manifest ; 2007 ; South Asia Economic Journal Volume 8 ; 8 >
-        au < manifest ; 2008 ; South Asia Economic Journal Volume 9 ; 9 >
+        au < doNotProcess ; 2008 ; South Asia Economic Journal Volume 9 ; 9 >
         au < manifest ; 2009 ; South Asia Economic Journal Volume 10 ; 10 >
         au < manifest ; 2010 ; South Asia Economic Journal Volume 11 ; 11 >
         au < manifest ; 2011 ; South Asia Economic Journal Volume 12 ; 12 >
@@ -32930,10 +32930,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; South Asia Research Volume 22 ; 22 >
         au < manifest ; 2003 ; South Asia Research Volume 23 ; 23 >
         au < manifest ; 2004 ; South Asia Research Volume 24 ; 24 >
-        au < manifest ; 2005 ; South Asia Research Volume 25 ; 25 >
-        au < manifest ; 2006 ; South Asia Research Volume 26 ; 26 >
-        au < manifest ; 2007 ; South Asia Research Volume 27 ; 27 >
-        au < manifest ; 2008 ; South Asia Research Volume 28 ; 28 >
+        au < doNotProcess ; 2005 ; South Asia Research Volume 25 ; 25 >
+        au < doNotProcess ; 2006 ; South Asia Research Volume 26 ; 26 >
+        au < doNotProcess ; 2007 ; South Asia Research Volume 27 ; 27 >
+        au < doNotProcess ; 2008 ; South Asia Research Volume 28 ; 28 >
         au < manifest ; 2009 ; South Asia Research Volume 29 ; 29 >
         au < manifest ; 2010 ; South Asia Research Volume 30 ; 30 >
         au < manifest ; 2011 ; South Asia Research Volume 31 ; 31 >
@@ -32979,10 +32979,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; South Asian Survey Volume 9 ; 9 >
         au < manifest ; 2003 ; South Asian Survey Volume 10 ; 10 >
         au < manifest ; 2004 ; South Asian Survey Volume 11 ; 11 >
-        au < manifest ; 2005 ; South Asian Survey Volume 12 ; 12 >
-        au < manifest ; 2006 ; South Asian Survey Volume 13 ; 13 >
+        au < doNotProcess ; 2005 ; South Asian Survey Volume 12 ; 12 >
+        au < doNotProcess ; 2006 ; South Asian Survey Volume 13 ; 13 >
         au < manifest ; 2007 ; South Asian Survey Volume 14 ; 14 >
-        au < manifest ; 2008 ; South Asian Survey Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; South Asian Survey Volume 15 ; 15 >
         au < manifest ; 2009 ; South Asian Survey Volume 16 ; 16 >
         au < manifest ; 2010 ; South Asian Survey Volume 17 ; 17 >
 
@@ -33025,10 +33025,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Space and Culture Volume 5 ; 5 >
         au < manifest ; 2003 ; Space and Culture Volume 6 ; 6 >
         au < manifest ; 2004 ; Space and Culture Volume 7 ; 7 >
-        au < manifest ; 2005 ; Space and Culture Volume 8 ; 8 >
-        au < manifest ; 2006 ; Space and Culture Volume 9 ; 9 >
-        au < manifest ; 2007 ; Space and Culture Volume 10 ; 10 >
-        au < manifest ; 2008 ; Space and Culture Volume 11 ; 11 >
+        au < doNotProcess ; 2005 ; Space and Culture Volume 8 ; 8 >
+        au < doNotProcess ; 2006 ; Space and Culture Volume 9 ; 9 >
+        au < doNotProcess ; 2007 ; Space and Culture Volume 10 ; 10 >
+        au < doNotProcess ; 2008 ; Space and Culture Volume 11 ; 11 >
         au < manifest ; 2009 ; Space and Culture Volume 12 ; 12 >
         au < manifest ; 2010 ; Space and Culture Volume 13 ; 13 >
         au < manifest ; 2011 ; Space and Culture Volume 14 ; 14 >
@@ -33164,9 +33164,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Statistical Methods in Medical Research Volume 12 ; 12 >
         au < manifest ; 2004 ; Statistical Methods in Medical Research Volume 13 ; 13 >
         au < manifest ; 2005 ; Statistical Methods in Medical Research Volume 14 ; 14 >
-        au < manifest ; 2006 ; Statistical Methods in Medical Research Volume 15 ; 15 >
-        au < manifest ; 2007 ; Statistical Methods in Medical Research Volume 16 ; 16 >
-        au < manifest ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 >
+        au < doNotProcess ; 2006 ; Statistical Methods in Medical Research Volume 15 ; 15 >
+        au < doNotProcess ; 2007 ; Statistical Methods in Medical Research Volume 16 ; 16 >
+        au < doNotProcess ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 >
         au < manifest ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 >
         au < manifest ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 >
         au < manifest ; 2011 ; Statistical Methods in Medical Research Volume 20 ; 20 >
@@ -33235,10 +33235,10 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2003 ; Strategic Organization Volume 1 ; 1 >
         au < manifest ; 2004 ; Strategic Organization Volume 2 ; 2 >
-        au < manifest ; 2005 ; Strategic Organization Volume 3 ; 3 >
-        au < manifest ; 2006 ; Strategic Organization Volume 4 ; 4 >
-        au < manifest ; 2007 ; Strategic Organization Volume 5 ; 5 >
-        au < manifest ; 2008 ; Strategic Organization Volume 6 ; 6 >
+        au < doNotProcess ; 2005 ; Strategic Organization Volume 3 ; 3 >
+        au < doNotProcess ; 2006 ; Strategic Organization Volume 4 ; 4 >
+        au < doNotProcess ; 2007 ; Strategic Organization Volume 5 ; 5 >
+        au < doNotProcess ; 2008 ; Strategic Organization Volume 6 ; 6 >
         au < manifest ; 2009 ; Strategic Organization Volume 7 ; 7 >
         au < manifest ; 2010 ; Strategic Organization Volume 8 ; 8 >
         au < manifest ; 2011 ; Strategic Organization Volume 9 ; 9 >
@@ -33278,10 +33278,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Structural Health Monitoring Volume 1 ; 1 >
         au < manifest ; 2003 ; Structural Health Monitoring Volume 2 ; 2 >
         au < manifest ; 2004 ; Structural Health Monitoring Volume 3 ; 3 >
-        au < manifest ; 2005 ; Structural Health Monitoring Volume 4 ; 4 >
-        au < manifest ; 2006 ; Structural Health Monitoring Volume 5 ; 5 >
-        au < manifest ; 2007 ; Structural Health Monitoring Volume 6 ; 6 >
-        au < manifest ; 2008 ; Structural Health Monitoring Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Structural Health Monitoring Volume 4 ; 4 >
+        au < doNotProcess ; 2006 ; Structural Health Monitoring Volume 5 ; 5 >
+        au < doNotProcess ; 2007 ; Structural Health Monitoring Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Structural Health Monitoring Volume 7 ; 7 >
         au < manifest ; 2009 ; Structural Health Monitoring Volume 8 ; 8 >
         au < manifest ; 2010 ; Structural Health Monitoring Volume 9 ; 9 >
         au < manifest ; 2011 ; Structural Health Monitoring Volume 10 ; 10 >
@@ -33335,10 +33335,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Studies in Christian Ethics Volume 15 ; 15 >
         au < manifest ; 2003 ; Studies in Christian Ethics Volume 16 ; 16 >
         au < manifest ; 2004 ; Studies in Christian Ethics Volume 17 ; 17 >
-        au < manifest ; 2005 ; Studies in Christian Ethics Volume 18 ; 18 >
-        au < manifest ; 2006 ; Studies in Christian Ethics Volume 19 ; 19 >
-        au < manifest ; 2007 ; Studies in Christian Ethics Volume 20 ; 20 >
-        au < manifest ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 >
+        au < doNotProcess ; 2005 ; Studies in Christian Ethics Volume 18 ; 18 >
+        au < doNotProcess ; 2006 ; Studies in Christian Ethics Volume 19 ; 19 >
+        au < doNotProcess ; 2007 ; Studies in Christian Ethics Volume 20 ; 20 >
+        au < doNotProcess ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 >
         au < manifest ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
         au < manifest ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 >
         au < manifest ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
@@ -33395,10 +33395,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Studies in History Volume 18 ; 18 >
         au < manifest ; 2003 ; Studies in History Volume 19 ; 19 >
         au < manifest ; 2004 ; Studies in History Volume 20 ; 20 >
-        au < manifest ; 2005 ; Studies in History Volume 21 ; 21 >
-        au < manifest ; 2006 ; Studies in History Volume 22 ; 22 >
-        au < manifest ; 2007 ; Studies in History Volume 23 ; 23 >
-        au < manifest ; 2008 ; Studies in History Volume 24 ; 24 >
+        au < doNotProcess ; 2005 ; Studies in History Volume 21 ; 21 >
+        au < doNotProcess ; 2006 ; Studies in History Volume 22 ; 22 >
+        au < doNotProcess ; 2007 ; Studies in History Volume 23 ; 23 >
+        au < doNotProcess ; 2008 ; Studies in History Volume 24 ; 24 >
         au < manifest ; 2009 ; Studies in History Volume 25 ; 25 >
         au < manifest ; 2010 ; Studies in History Volume 26 ; 26 >
 
@@ -33504,10 +33504,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Surgical Innovation Volume 9 ; 9 >
         au < manifest ; 2003 ; Surgical Innovation Volume 10 ; 10 >
         au < manifest ; 2004 ; Surgical Innovation Volume 11 ; 11 >
-        au < manifest ; 2005 ; Surgical Innovation Volume 12 ; 12 >
-        au < manifest ; 2006 ; Surgical Innovation Volume 13 ; 13 >
-        au < manifest ; 2007 ; Surgical Innovation Volume 14 ; 14 >
-        au < manifest ; 2008 ; Surgical Innovation Volume 15 ; 15 >
+        au < doNotProcess ; 2005 ; Surgical Innovation Volume 12 ; 12 >
+        au < doNotProcess ; 2006 ; Surgical Innovation Volume 13 ; 13 >
+        au < doNotProcess ; 2007 ; Surgical Innovation Volume 14 ; 14 >
+        au < doNotProcess ; 2008 ; Surgical Innovation Volume 15 ; 15 >
         au < manifest ; 2009 ; Surgical Innovation Volume 16 ; 16 >
         au < manifest ; 2010 ; Surgical Innovation Volume 17 ; 17 >
         au < manifest ; 2011 ; Surgical Innovation Volume 18 ; 18 >
@@ -33650,10 +33650,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Television & New Media Volume 3 ; 3 >
         au < manifest ; 2003 ; Television & New Media Volume 4 ; 4 >
         au < manifest ; 2004 ; Television & New Media Volume 5 ; 5 >
-        au < manifest ; 2005 ; Television & New Media Volume 6 ; 6 >
-        au < manifest ; 2006 ; Television & New Media Volume 7 ; 7 >
-        au < manifest ; 2007 ; Television & New Media Volume 8 ; 8 >
-        au < manifest ; 2008 ; Television & New Media Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; Television & New Media Volume 6 ; 6 >
+        au < doNotProcess ; 2006 ; Television & New Media Volume 7 ; 7 >
+        au < doNotProcess ; 2007 ; Television & New Media Volume 8 ; 8 >
+        au < doNotProcess ; 2008 ; Television & New Media Volume 9 ; 9 >
         au < manifest ; 2009 ; Television & New Media Volume 10 ; 10 >
         au < manifest ; 2010 ; Television & New Media Volume 11 ; 11 >
         au < manifest ; 2011 ; Television & New Media Volume 12 ; 12 >
@@ -33764,10 +33764,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Textile Research Journal Volume 72 ; 72 >
         au < manifest ; 2003 ; Textile Research Journal Volume 73 ; 73 >
         au < manifest ; 2004 ; Textile Research Journal Volume 74 ; 74 >
-        au < manifest ; 2005 ; Textile Research Journal Volume 75 ; 75 >
-        au < manifest ; 2006 ; Textile Research Journal Volume 76 ; 76 >
-        au < manifest ; 2007 ; Textile Research Journal Volume 77 ; 77 >
-        au < manifest ; 2008 ; Textile Research Journal Volume 78 ; 78 >
+        au < doNotProcess ; 2005 ; Textile Research Journal Volume 75 ; 75 >
+        au < doNotProcess ; 2006 ; Textile Research Journal Volume 76 ; 76 >
+        au < doNotProcess ; 2007 ; Textile Research Journal Volume 77 ; 77 >
+        au < doNotProcess ; 2008 ; Textile Research Journal Volume 78 ; 78 >
         au < manifest ; 2009 ; Textile Research Journal Volume 79 ; 79 >
         au < manifest ; 2010 ; Textile Research Journal Volume 80 ; 80 >
         au < manifest ; 2011 ; Textile Research Journal Volume 81 ; 81 >
@@ -33840,10 +33840,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001-2002 ; Theology and Sexuality Volume 8 ; 8 >
         au < manifest ; 2002 ; Theology and Sexuality Volume 9 ; 9 >
         au < manifest ; 2003-2004 ; Theology and Sexuality Volume 10 ; 10 >
-        au < manifest ; 2004-2005 ; Theology and Sexuality Volume 11 ; 11 >
-        au < manifest ; 2005-2006 ; Theology and Sexuality Volume 12 ; 12 >
+        au < doNotProcess ; 2004-2005 ; Theology and Sexuality Volume 11 ; 11 >
+        au < doNotProcess ; 2005-2006 ; Theology and Sexuality Volume 12 ; 12 >
         au < manifest ; 2006-2007 ; Theology and Sexuality Volume 13 ; 13 >
-        au < manifest ; 2007-2008 ; Theology and Sexuality Volume 14 ; 14 >
+        au < doNotProcess ; 2007-2008 ; Theology and Sexuality Volume 14 ; 14 >
         
       }
 
@@ -33921,10 +33921,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Theoretical Criminology Volume 6 ; 6 >
         au < manifest ; 2003 ; Theoretical Criminology Volume 7 ; 7 >
         au < manifest ; 2004 ; Theoretical Criminology Volume 8 ; 8 >
-        au < manifest ; 2005 ; Theoretical Criminology Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; Theoretical Criminology Volume 9 ; 9 >
         au < manifest ; 2006 ; Theoretical Criminology Volume 10 ; 10 >
-        au < manifest ; 2007 ; Theoretical Criminology Volume 11 ; 11 >
-        au < manifest ; 2008 ; Theoretical Criminology Volume 12 ; 12 >
+        au < doNotProcess ; 2007 ; Theoretical Criminology Volume 11 ; 11 >
+        au < doNotProcess ; 2008 ; Theoretical Criminology Volume 12 ; 12 >
         au < manifest ; 2009 ; Theoretical Criminology Volume 13 ; 13 >
         au < manifest ; 2010 ; Theoretical Criminology Volume 14 ; 14 >
         au < manifest ; 2011 ; Theoretical Criminology Volume 15 ; 15 >
@@ -33975,10 +33975,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Theory & Psychology Volume 12 ; 12 >
         au < manifest ; 2003 ; Theory & Psychology Volume 13 ; 13 >
         au < manifest ; 2004 ; Theory & Psychology Volume 14 ; 14 >
-        au < manifest ; 2005 ; Theory & Psychology Volume 15 ; 15 >
-        au < manifest ; 2006 ; Theory & Psychology Volume 16 ; 16 >
-        au < manifest ; 2007 ; Theory & Psychology Volume 17 ; 17 >
-        au < manifest ; 2008 ; Theory & Psychology Volume 18 ; 18 >
+        au < doNotProcess ; 2005 ; Theory & Psychology Volume 15 ; 15 >
+        au < doNotProcess ; 2006 ; Theory & Psychology Volume 16 ; 16 >
+        au < doNotProcess ; 2007 ; Theory & Psychology Volume 17 ; 17 >
+        au < doNotProcess ; 2008 ; Theory & Psychology Volume 18 ; 18 >
         au < manifest ; 2009 ; Theory & Psychology Volume 19 ; 19 >
         au < manifest ; 2010 ; Theory & Psychology Volume 20 ; 20 >
         au < manifest ; 2011 ; Theory & Psychology Volume 21 ; 21 >
@@ -34017,10 +34017,10 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2003 ; Theory and Research in Education Volume 1 ; 1 >
         au < manifest ; 2004 ; Theory and Research in Education Volume 2 ; 2 >
-        au < manifest ; 2005 ; Theory and Research in Education Volume 3 ; 3 >
-        au < manifest ; 2006 ; Theory and Research in Education Volume 4 ; 4 >
-        au < manifest ; 2007 ; Theory and Research in Education Volume 5 ; 5 >
-        au < manifest ; 2008 ; Theory and Research in Education Volume 6 ; 6 >
+        au < doNotProcess ; 2005 ; Theory and Research in Education Volume 3 ; 3 >
+        au < doNotProcess ; 2006 ; Theory and Research in Education Volume 4 ; 4 >
+        au < doNotProcess ; 2007 ; Theory and Research in Education Volume 5 ; 5 >
+        au < doNotProcess ; 2008 ; Theory and Research in Education Volume 6 ; 6 >
         au < manifest ; 2009 ; Theory and Research in Education Volume 7 ; 7 >
         au < manifest ; 2010 ; Theory and Research in Education Volume 8 ; 8 >
         au < manifest ; 2011 ; Theory and Research in Education Volume 9 ; 9 >
@@ -34077,10 +34077,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Theory, Culture & Society Volume 19 ; 19 >
         au < manifest ; 2003 ; Theory, Culture & Society Volume 20 ; 20 >
         au < manifest ; 2004 ; Theory, Culture & Society Volume 21 ; 21 >
-        au < manifest ; 2005 ; Theory, Culture & Society Volume 22 ; 22 >
+        au < doNotProcess ; 2005 ; Theory, Culture & Society Volume 22 ; 22 >
         au < manifest ; 2006 ; Theory, Culture & Society Volume 23 ; 23 >
-        au < manifest ; 2007 ; Theory, Culture & Society Volume 24 ; 24 >
-        au < manifest ; 2008 ; Theory, Culture & Society Volume 25 ; 25 >
+        au < doNotProcess ; 2007 ; Theory, Culture & Society Volume 24 ; 24 >
+        au < doNotProcess ; 2008 ; Theory, Culture & Society Volume 25 ; 25 >
         au < manifest ; 2009 ; Theory, Culture & Society Volume 26 ; 26 >
         au < manifest ; 2010 ; Theory, Culture & Society Volume 27 ; 27 >
         au < manifest ; 2011 ; Theory, Culture & Society Volume 28 ; 28 >
@@ -34115,8 +34115,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tak.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2007 ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 >
-        au < manifest ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
+        au < doNotProcess ; 2007 ; Therapeutic Advances in Cardiovascular Disease Volume 1 ; 1 >
+        au < doNotProcess ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
         au < manifest ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
         au < manifest ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
         au < manifest ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
@@ -34344,8 +34344,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tar.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2007 ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 >
-        au < manifest ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 >
+        au < doNotProcess ; 2007 ; Therapeutic Advances in Respiratory Disease Volume 1 ; 1 >
+        au < doNotProcess ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 >
         au < manifest ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 >
         au < manifest ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 >
         au < manifest ; 2011 ; Therapeutic Advances in Respiratory Disease Volume 5 ; 5 >
@@ -34492,22 +34492,22 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Thesis Eleven Volume 77 ; 77 >
         au < manifest ; 2004 ; Thesis Eleven Volume 78 ; 78 >
         au < manifest ; 2004 ; Thesis Eleven Volume 79 ; 79 >
-        au < manifest ; 2005 ; Thesis Eleven Volume 80 ; 80 >
-        au < manifest ; 2005 ; Thesis Eleven Volume 81 ; 81 >
-        au < manifest ; 2005 ; Thesis Eleven Volume 82 ; 82 >
-        au < manifest ; 2005 ; Thesis Eleven Volume 83 ; 83 >
-        au < manifest ; 2006 ; Thesis Eleven Volume 84 ; 84 >
-        au < manifest ; 2006 ; Thesis Eleven Volume 85 ; 85 >
-        au < manifest ; 2006 ; Thesis Eleven Volume 86 ; 86 >
-        au < manifest ; 2006 ; Thesis Eleven Volume 87 ; 87 >
-        au < manifest ; 2007 ; Thesis Eleven Volume 88 ; 88 >
-        au < manifest ; 2007 ; Thesis Eleven Volume 89 ; 89 >
-        au < manifest ; 2007 ; Thesis Eleven Volume 90 ; 90 >
-        au < manifest ; 2007 ; Thesis Eleven Volume 91 ; 91 >
-        au < manifest ; 2008 ; Thesis Eleven Volume 92 ; 92 >
-        au < manifest ; 2008 ; Thesis Eleven Volume 93 ; 93 >
-        au < manifest ; 2008 ; Thesis Eleven Volume 94 ; 94 >
-        au < manifest ; 2008 ; Thesis Eleven Volume 95 ; 95 >
+        au < doNotProcess ; 2005 ; Thesis Eleven Volume 80 ; 80 >
+        au < doNotProcess ; 2005 ; Thesis Eleven Volume 81 ; 81 >
+        au < doNotProcess ; 2005 ; Thesis Eleven Volume 82 ; 82 >
+        au < doNotProcess ; 2005 ; Thesis Eleven Volume 83 ; 83 >
+        au < doNotProcess ; 2006 ; Thesis Eleven Volume 84 ; 84 >
+        au < doNotProcess ; 2006 ; Thesis Eleven Volume 85 ; 85 >
+        au < doNotProcess ; 2006 ; Thesis Eleven Volume 86 ; 86 >
+        au < doNotProcess ; 2006 ; Thesis Eleven Volume 87 ; 87 >
+        au < doNotProcess ; 2007 ; Thesis Eleven Volume 88 ; 88 >
+        au < doNotProcess ; 2007 ; Thesis Eleven Volume 89 ; 89 >
+        au < doNotProcess ; 2007 ; Thesis Eleven Volume 90 ; 90 >
+        au < doNotProcess ; 2007 ; Thesis Eleven Volume 91 ; 91 >
+        au < doNotProcess ; 2008 ; Thesis Eleven Volume 92 ; 92 >
+        au < doNotProcess ; 2008 ; Thesis Eleven Volume 93 ; 93 >
+        au < doNotProcess ; 2008 ; Thesis Eleven Volume 94 ; 94 >
+        au < doNotProcess ; 2008 ; Thesis Eleven Volume 95 ; 95 >
         au < manifest ; 2009 ; Thesis Eleven Volume 96 ; 96 >
         au < manifest ; 2009 ; Thesis Eleven Volume 97 ; 97 >
         au < manifest ; 2009 ; Thesis Eleven Volume 98 ; 98 >
@@ -34564,10 +34564,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Time & Society Volume 11 ; 11 >
         au < manifest ; 2003 ; Time & Society Volume 12 ; 12 >
         au < manifest ; 2004 ; Time & Society Volume 13 ; 13 >
-        au < manifest ; 2005 ; Time & Society Volume 14 ; 14 >
-        au < manifest ; 2006 ; Time & Society Volume 15 ; 15 >
-        au < manifest ; 2007 ; Time & Society Volume 16 ; 16 >
-        au < manifest ; 2008 ; Time & Society Volume 17 ; 17 >
+        au < doNotProcess ; 2005 ; Time & Society Volume 14 ; 14 >
+        au < doNotProcess ; 2006 ; Time & Society Volume 15 ; 15 >
+        au < doNotProcess ; 2007 ; Time & Society Volume 16 ; 16 >
+        au < doNotProcess ; 2008 ; Time & Society Volume 17 ; 17 >
         au < manifest ; 2009 ; Time & Society Volume 18 ; 18 >
         au < manifest ; 2010 ; Time & Society Volume 19 ; 19 >
         au < manifest ; 2011 ; Time & Society Volume 20 ; 20 >
@@ -34684,11 +34684,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Tourist Studies Volume 1 ; 1 >
         au < manifest ; 2002 ; Tourist Studies Volume 2 ; 2 >
         au < manifest ; 2003 ; Tourist Studies Volume 3 ; 3 >
-        au < manifest ; 2004 ; Tourist Studies Volume 4 ; 4 >
-        au < manifest ; 2005 ; Tourist Studies Volume 5 ; 5 >
-        au < manifest ; 2006 ; Tourist Studies Volume 6 ; 6 >
-        au < manifest ; 2007 ; Tourist Studies Volume 7 ; 7 >
-        au < manifest ; 2008 ; Tourist Studies Volume 8 ; 8 >
+        au < doNotProcess ; 2004 ; Tourist Studies Volume 4 ; 4 >
+        au < doNotProcess ; 2005 ; Tourist Studies Volume 5 ; 5 >
+        au < doNotProcess ; 2006 ; Tourist Studies Volume 6 ; 6 >
+        au < doNotProcess ; 2007 ; Tourist Studies Volume 7 ; 7 >
+        au < doNotProcess ; 2008 ; Tourist Studies Volume 8 ; 8 >
         au < manifest ; 2009 ; Tourist Studies Volume 9 ; 9 >
         au < manifest ; 2010 ; Tourist Studies Volume 10 ; 10 >
 
@@ -34744,9 +34744,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 2003 ; Toxicology and Industrial Health Volume 19 ; 19 >
         au < manifest ; 2004 ; Toxicology and Industrial Health Volume 20 ; 20 >
         au < manifest ; 2005 ; Toxicology and Industrial Health Volume 21 ; 21 >
-        au < manifest ; 2006 ; Toxicology and Industrial Health Volume 22 ; 22 >
-        au < manifest ; 2007 ; Toxicology and Industrial Health Volume 23 ; 23 >
-        au < manifest ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 >
+        au < doNotProcess ; 2006 ; Toxicology and Industrial Health Volume 22 ; 22 >
+        au < doNotProcess ; 2007 ; Toxicology and Industrial Health Volume 23 ; 23 >
+        au < doNotProcess ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 >
         au < manifest ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 >
         au < manifest ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 >
         au < manifest ; 2011 ; Toxicology and Industrial Health Volume 27 ; 27 >
@@ -34867,8 +34867,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Transactions of the Institute of Measurement and Control Volume 26 ; 26 >
         au < manifest ; 2005 ; Transactions of the Institute of Measurement and Control Volume 27 ; 27 >
         au < manifest ; 2006 ; Transactions of the Institute of Measurement and Control Volume 28 ; 28 >
-        au < manifest ; 2007 ; Transactions of the Institute of Measurement and Control Volume 29 ; 29 >
-        au < manifest ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 >
+        au < doNotProcess ; 2007 ; Transactions of the Institute of Measurement and Control Volume 29 ; 29 >
+        au < doNotProcess ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 >
         au < manifest ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 >
         au < manifest ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 >
         au < manifest ; 2011 ; Transactions of the Institute of Measurement and Control Volume 33 ; 33 >
@@ -34946,10 +34946,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Transcultural Psychiatry Volume 39 ; 39 >
         au < manifest ; 2003 ; Transcultural Psychiatry Volume 40 ; 40 >
         au < manifest ; 2004 ; Transcultural Psychiatry Volume 41 ; 41 >
-        au < manifest ; 2005 ; Transcultural Psychiatry Volume 42 ; 42 >
-        au < manifest ; 2006 ; Transcultural Psychiatry Volume 43 ; 43 >
-        au < manifest ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 >
-        au < manifest ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 >
+        au < doNotProcess ; 2005 ; Transcultural Psychiatry Volume 42 ; 42 >
+        au < doNotProcess ; 2006 ; Transcultural Psychiatry Volume 43 ; 43 >
+        au < doNotProcess ; 2007 ; Transcultural Psychiatry Volume 44 ; 44 >
+        au < doNotProcess ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 >
         au < manifest ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 >
         au < manifest ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 >
         au < manifest ; 2011 ; Transcultural Psychiatry Volume 48 ; 48 >
@@ -35069,15 +35069,15 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1999 ; Trauma Volume 1 ; 1 >
-        au < manifest ; 2000 ; Trauma Volume 2 ; 2 >
+        au < doNotProcess ; 2000 ; Trauma Volume 2 ; 2 >
         au < manifest ; 2001 ; Trauma Volume 3 ; 3 >
         au < manifest ; 2002 ; Trauma Volume 4 ; 4 >
         au < manifest ; 2003 ; Trauma Volume 5 ; 5 >
         au < manifest ; 2004 ; Trauma Volume 6 ; 6 >
         au < manifest ; 2005 ; Trauma Volume 7 ; 7 >
-        au < manifest ; 2006 ; Trauma Volume 8 ; 8 >
-        au < manifest ; 2007 ; Trauma Volume 9 ; 9 >
-        au < manifest ; 2008 ; Trauma Volume 10 ; 10 >
+        au < doNotProcess ; 2006 ; Trauma Volume 8 ; 8 >
+        au < doNotProcess ; 2007 ; Trauma Volume 9 ; 9 >
+        au < doNotProcess ; 2008 ; Trauma Volume 10 ; 10 >
         au < manifest ; 2009 ; Trauma Volume 11 ; 11 >
         au < manifest ; 2010 ; Trauma Volume 12 ; 12 >
         au < manifest ; 2011 ; Trauma Volume 13 ; 13 >
@@ -35118,10 +35118,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Trauma, Violence, & Abuse Volume 3 ; 3 >
         au < manifest ; 2003 ; Trauma, Violence, & Abuse Volume 4 ; 4 >
         au < manifest ; 2004 ; Trauma, Violence, & Abuse Volume 5 ; 5 >
-        au < manifest ; 2005 ; Trauma, Violence, & Abuse Volume 6 ; 6 >
-        au < manifest ; 2006 ; Trauma, Violence, & Abuse Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Trauma, Violence, & Abuse Volume 6 ; 6 >
+        au < doNotProcess ; 2006 ; Trauma, Violence, & Abuse Volume 7 ; 7 >
         au < manifest ; 2007 ; Trauma, Violence, & Abuse Volume 8 ; 8 >
-        au < manifest ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 >
+        au < doNotProcess ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 >
         au < manifest ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 >
         au < manifest ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 >
         au < manifest ; 2011 ; Trauma, Violence, & Abuse Volume 12 ; 12 >
@@ -35168,8 +35168,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Traumatology Volume 10 ; 10 >
         au < manifest ; 2005 ; Traumatology Volume 11 ; 11 >
         au < manifest ; 2006 ; Traumatology Volume 12 ; 12 >
-        au < manifest ; 2007 ; Traumatology Volume 13 ; 13 >
-        au < manifest ; 2008 ; Traumatology Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Traumatology Volume 13 ; 13 >
+        au < doNotProcess ; 2008 ; Traumatology Volume 14 ; 14 >
         au < manifest ; 2009 ; Traumatology Volume 15 ; 15 >
         au < manifest ; 2010 ; Traumatology Volume 16 ; 16 >
         au < manifest ; 2011 ; Traumatology Volume 17 ; 17 >
@@ -35213,10 +35213,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Trends in Amplification Volume 6 ; 6 >
         au < manifest ; 2003 ; Trends in Amplification Volume 7 ; 7 >
         au < manifest ; 2004 ; Trends in Amplification Volume 8 ; 8 >
-        au < manifest ; 2005 ; Trends in Amplification Volume 9 ; 9 >
-        au < manifest ; 2006 ; Trends in Amplification Volume 10 ; 10 >
+        au < doNotProcess ; 2005 ; Trends in Amplification Volume 9 ; 9 >
+        au < doNotProcess ; 2006 ; Trends in Amplification Volume 10 ; 10 >
         au < manifest ; 2007 ; Trends in Amplification Volume 11 ; 11 >
-        au < manifest ; 2008 ; Trends in Amplification Volume 12 ; 12 >
+        au < doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 >
         au < manifest ; 2009 ; Trends in Amplification Volume 13 ; 13 >
         au < manifest ; 2010 ; Trends in Amplification Volume 14 ; 14 >
 
@@ -35329,11 +35329,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Urban Affairs Review Volume 37 ; 37 >
         au < manifest ; 2002 ; Urban Affairs Review Volume 38 ; 38 >
         au < manifest ; 2003 ; Urban Affairs Review Volume 39 ; 39 >
-        au < manifest ; 2004 ; Urban Affairs Review Volume 40 ; 40 >
-        au < manifest ; 2005 ; Urban Affairs Review Volume 41 ; 41 >
-        au < manifest ; 2006 ; Urban Affairs Review Volume 42 ; 42 >
-        au < manifest ; 2007 ; Urban Affairs Review Volume 43 ; 43 >
-        au < manifest ; 2008 ; Urban Affairs Review Volume 44 ; 44 >
+        au < doNotProcess ; 2004 ; Urban Affairs Review Volume 40 ; 40 >
+        au < doNotProcess ; 2005 ; Urban Affairs Review Volume 41 ; 41 >
+        au < doNotProcess ; 2006 ; Urban Affairs Review Volume 42 ; 42 >
+        au < doNotProcess ; 2007 ; Urban Affairs Review Volume 43 ; 43 >
+        au < doNotProcess ; 2008 ; Urban Affairs Review Volume 44 ; 44 >
         au < manifest ; 2009 ; Urban Affairs Review Volume 45 ; 45 >
         au < manifest ; 2010 ; Urban Affairs Review Volume 46 ; 46 >
         au < manifest ; 2011 ; Urban Affairs Review Volume 47 ; 47 >
@@ -35410,11 +35410,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Urban Education Volume 37 ; 37 >
         au < manifest ; 2003 ; Urban Education Volume 38 ; 38 >
         au < manifest ; 2004 ; Urban Education Volume 39 ; 39 >
-        au < manifest ; 2005 ; Urban Education Volume 40 ; 40 >
-        au < manifest ; 2006 ; Urban Education Volume 41 ; 41 >
-        au < manifest ; 2007 ; Urban Education Volume 42 ; 42 >
-        au < manifest ; 2008 ; Urban Education Volume 43 ; 43 >
-        au < manifest ; 2009 ; Urban Education Volume 44 ; 44 >
+        au < doNotProcess ; 2005 ; Urban Education Volume 40 ; 40 >
+        au < doNotProcess ; 2006 ; Urban Education Volume 41 ; 41 >
+        au < doNotProcess ; 2007 ; Urban Education Volume 42 ; 42 >
+        au < doNotProcess ; 2008 ; Urban Education Volume 43 ; 43 >
+        au < doNotProcess ; 2009 ; Urban Education Volume 44 ; 44 >
         au < manifest ; 2010 ; Urban Education Volume 45 ; 45 >
         au < manifest ; 2011 ; Urban Education Volume 46 ; 46 >
 
@@ -35555,10 +35555,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Vascular and Endovascular Surgery Volume 36 ; 36 >
         au < manifest ; 2003 ; Vascular and Endovascular Surgery Volume 37 ; 37 >
         au < manifest ; 2004 ; Vascular and Endovascular Surgery Volume 38 ; 38 >
-        au < manifest ; 2005 ; Vascular and Endovascular Surgery Volume 39 ; 39 >
-        au < manifest ; 2006 ; Vascular and Endovascular Surgery Volume 40 ; 40 >
-        au < manifest ; 2007 ; Vascular and Endovascular Surgery Volume 41 ; 41 >
-        au < manifest ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 >
+        au < doNotProcess ; 2005 ; Vascular and Endovascular Surgery Volume 39 ; 39 >
+        au < doNotProcess ; 2006 ; Vascular and Endovascular Surgery Volume 40 ; 40 >
+        au < doNotProcess ; 2007 ; Vascular and Endovascular Surgery Volume 41 ; 41 >
+        au < doNotProcess ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 >
         au < manifest ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 >
         au < manifest ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 >
         au < manifest ; 2011 ; Vascular and Endovascular Surgery Volume 45 ; 45 >
@@ -35604,8 +35604,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 2004 ; Vascular Medicine Volume 9 ; 9 >
         au < manifest ; 2005 ; Vascular Medicine Volume 10 ; 10 >
         au < manifest ; 2006 ; Vascular Medicine Volume 11 ; 11 >
-        au < manifest ; 2007 ; Vascular Medicine Volume 12 ; 12 >
-        au < manifest ; 2008 ; Vascular Medicine Volume 13 ; 13 >
+        au < doNotProcess ; 2007 ; Vascular Medicine Volume 12 ; 12 >
+        au < doNotProcess ; 2008 ; Vascular Medicine Volume 13 ; 13 >
         au < manifest ; 2009 ; Vascular Medicine Volume 14 ; 14 >
         au < manifest ; 2010 ; Vascular Medicine Volume 15 ; 15 >
         au < manifest ; 2011 ; Vascular Medicine Volume 16 ; 16 >
@@ -35720,10 +35720,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Violence Against Women Volume 8 ; 8 >
         au < manifest ; 2003 ; Violence Against Women Volume 9 ; 9 >
         au < manifest ; 2004 ; Violence Against Women Volume 10 ; 10 >
-        au < manifest ; 2005 ; Violence Against Women Volume 11 ; 11 >
-        au < manifest ; 2006 ; Violence Against Women Volume 12 ; 12 >
-        au < manifest ; 2007 ; Violence Against Women Volume 13 ; 13 >
-        au < manifest ; 2008 ; Violence Against Women Volume 14 ; 14 >
+        au < doNotProcess ; 2005 ; Violence Against Women Volume 11 ; 11 >
+        au < doNotProcess ; 2006 ; Violence Against Women Volume 12 ; 12 >
+        au < doNotProcess ; 2007 ; Violence Against Women Volume 13 ; 13 >
+        au < doNotProcess ; 2008 ; Violence Against Women Volume 14 ; 14 >
         au < manifest ; 2009 ; Violence Against Women Volume 15 ; 15 >
         au < manifest ; 2010 ; Violence Against Women Volume 16 ; 16 >
         au < manifest ; 2011 ; Violence Against Women Volume 17 ; 17 >
@@ -35764,11 +35764,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Visual Communication Volume 1 ; 1 >
         au < manifest ; 2003 ; Visual Communication Volume 2 ; 2 >
         au < manifest ; 2004 ; Visual Communication Volume 3 ; 3 >
-        au < manifest ; 2005 ; Visual Communication Volume 4 ; 4 >
-        au < manifest ; 2006 ; Visual Communication Volume 5 ; 5 >
-        au < manifest ; 2007 ; Visual Communication Volume 6 ; 6 >
-        au < manifest ; 2008 ; Visual Communication Volume 7 ; 7 >
-        au < manifest ; 2009 ; Visual Communication Volume 8 ; 8 >
+        au < doNotProcess ; 2005 ; Visual Communication Volume 4 ; 4 >
+        au < doNotProcess ; 2006 ; Visual Communication Volume 5 ; 5 >
+        au < doNotProcess ; 2007 ; Visual Communication Volume 6 ; 6 >
+        au < doNotProcess ; 2008 ; Visual Communication Volume 7 ; 7 >
+        au < doNotProcess ; 2009 ; Visual Communication Volume 8 ; 8 >
         au < manifest ; 2010 ; Visual Communication Volume 9 ; 9 >
         au < manifest ; 2011 ; Visual Communication Volume 10 ; 10 >
 
@@ -35811,16 +35811,16 @@ comment[mpj] = now published by Brill
         au < manifest ; 1997 ; War in History Volume 4 ; 4 >
         au < manifest ; 1998 ; War in History Volume 5 ; 5 >
         au < manifest ; 1999 ; War in History Volume 6 ; 6 >
-        au < manifest ; 2000 ; War in History Volume 7 ; 7 >
+        au < doNotProcess ; 2000 ; War in History Volume 7 ; 7 >
         au < manifest ; 2001 ; War in History Volume 8 ; 8 >
         au < manifest ; 2002 ; War in History Volume 9 ; 9 >
         au < manifest ; 2003 ; War in History Volume 10 ; 10 >
         au < manifest ; 2004 ; War in History Volume 11 ; 11 >
         au < manifest ; 2005 ; War in History Volume 12 ; 12 >
-        au < manifest ; 2006 ; War in History Volume 13 ; 13 >
-        au < manifest ; 2007 ; War in History Volume 14 ; 14 >
-        au < manifest ; 2008 ; War in History Volume 15 ; 15 >
-        au < manifest ; 2009 ; War in History Volume 16 ; 16 >
+        au < doNotProcess ; 2006 ; War in History Volume 13 ; 13 >
+        au < doNotProcess ; 2007 ; War in History Volume 14 ; 14 >
+        au < doNotProcess ; 2008 ; War in History Volume 15 ; 15 >
+        au < doNotProcess ; 2009 ; War in History Volume 16 ; 16 >
         au < manifest ; 2010 ; War in History Volume 17 ; 17 >
         au < manifest ; 2011 ; War in History Volume 18 ; 18 >
 
@@ -35879,11 +35879,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Waste Management & Research Volume 20 ; 20 >
         au < manifest ; 2003 ; Waste Management & Research Volume 21 ; 21 >
         au < manifest ; 2004 ; Waste Management & Research Volume 22 ; 22 >
-        au < manifest ; 2005 ; Waste Management & Research Volume 23 ; 23 >
-        au < manifest ; 2006 ; Waste Management & Research Volume 24 ; 24 >
-        au < manifest ; 2007 ; Waste Management & Research Volume 25 ; 25 >
-        au < manifest ; 2008 ; Waste Management & Research Volume 26 ; 26 >
-        au < manifest ; 2009 ; Waste Management & Research Volume 27 ; 27 >
+        au < doNotProcess ; 2005 ; Waste Management & Research Volume 23 ; 23 >
+        au < doNotProcess ; 2006 ; Waste Management & Research Volume 24 ; 24 >
+        au < doNotProcess ; 2007 ; Waste Management & Research Volume 25 ; 25 >
+        au < doNotProcess ; 2008 ; Waste Management & Research Volume 26 ; 26 >
+        au < doNotProcess ; 2009 ; Waste Management & Research Volume 27 ; 27 >
         au < manifest ; 2010 ; Waste Management & Research Volume 28 ; 28 >
         au < manifest ; 2011 ; Waste Management & Research Volume 29 ; 29 >
 
@@ -35944,11 +35944,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Western Journal of Nursing Research Volume 24 ; 24 >
         au < manifest ; 2003 ; Western Journal of Nursing Research Volume 25 ; 25 >
         au < manifest ; 2004 ; Western Journal of Nursing Research Volume 26 ; 26 >
-        au < manifest ; 2005 ; Western Journal of Nursing Research Volume 27 ; 27 >
+        au < doNotProcess ; 2005 ; Western Journal of Nursing Research Volume 27 ; 27 >
         au < manifest ; 2006 ; Western Journal of Nursing Research Volume 28 ; 28 >
         au < manifest ; 2007 ; Western Journal of Nursing Research Volume 29 ; 29 >
-        au < manifest ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 >
-        au < manifest ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 >
+        au < doNotProcess ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 >
+        au < doNotProcess ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 >
         au < manifest ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 >
         au < manifest ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 >
 
@@ -36001,7 +36001,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2006-2007 ; Word of Mouth Volume 18 ; 18 >
         au < manifest ; 2007-2008 ; Word of Mouth Volume 19 ; 19 >
         au < manifest ; 2008-2009 ; Word of Mouth Volume 20 ; 20 >
-        au < manifest ; 2009-2010 ; Word of Mouth Volume 21 ; 21 >
+        au < doNotProcess ; 2009-2010 ; Word of Mouth Volume 21 ; 21 >
         au < manifest ; 2010-2011 ; Word of Mouth Volume 22 ; 22 >
 
       }
@@ -36068,11 +36068,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Work and Occupations Volume 29 ; 29 >
         au < manifest ; 2003 ; Work and Occupations Volume 30 ; 30 >
         au < manifest ; 2004 ; Work and Occupations Volume 31 ; 31 >
-        au < manifest ; 2005 ; Work and Occupations Volume 32 ; 32 >
-        au < manifest ; 2006 ; Work and Occupations Volume 33 ; 33 >
-        au < manifest ; 2007 ; Work and Occupations Volume 34 ; 34 >
-        au < manifest ; 2008 ; Work and Occupations Volume 35 ; 35 >
-        au < manifest ; 2009 ; Work and Occupations Volume 36 ; 36 >
+        au < doNotProcess ; 2005 ; Work and Occupations Volume 32 ; 32 >
+        au < doNotProcess ; 2006 ; Work and Occupations Volume 33 ; 33 >
+        au < doNotProcess ; 2007 ; Work and Occupations Volume 34 ; 34 >
+        au < doNotProcess ; 2008 ; Work and Occupations Volume 35 ; 35 >
+        au < doNotProcess ; 2009 ; Work and Occupations Volume 36 ; 36 >
         au < manifest ; 2010 ; Work and Occupations Volume 37 ; 37 >
         au < manifest ; 2011 ; Work and Occupations Volume 38 ; 38 >
 
@@ -36126,11 +36126,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Work, Employment & Society Volume 16 ; 16 >
         au < manifest ; 2003 ; Work, Employment & Society Volume 17 ; 17 >
         au < manifest ; 2004 ; Work, Employment & Society Volume 18 ; 18 >
-        au < manifest ; 2005 ; Work, Employment & Society Volume 19 ; 19 >
+        au < doNotProcess ; 2005 ; Work, Employment & Society Volume 19 ; 19 >
         au < manifest ; 2006 ; Work, Employment & Society Volume 20 ; 20 >
-        au < manifest ; 2007 ; Work, Employment & Society Volume 21 ; 21 >
-        au < manifest ; 2008 ; Work, Employment & Society Volume 22 ; 22 >
-        au < manifest ; 2009 ; Work, Employment & Society Volume 23 ; 23 >
+        au < doNotProcess ; 2007 ; Work, Employment & Society Volume 21 ; 21 >
+        au < doNotProcess ; 2008 ; Work, Employment & Society Volume 22 ; 22 >
+        au < doNotProcess ; 2009 ; Work, Employment & Society Volume 23 ; 23 >
         au < manifest ; 2010 ; Work, Employment & Society Volume 24 ; 24 >
         au < manifest ; 2011 ; Work, Employment & Society Volume 25 ; 25 >
 
@@ -36233,11 +36233,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Written Communication Volume 19 ; 19 >
         au < manifest ; 2003 ; Written Communication Volume 20 ; 20 >
         au < manifest ; 2004 ; Written Communication Volume 21 ; 21 >
-        au < manifest ; 2005 ; Written Communication Volume 22 ; 22 >
-        au < manifest ; 2006 ; Written Communication Volume 23 ; 23 >
-        au < manifest ; 2007 ; Written Communication Volume 24 ; 24 >
-        au < manifest ; 2008 ; Written Communication Volume 25 ; 25 >
-        au < manifest ; 2009 ; Written Communication Volume 26 ; 26 >
+        au < doNotProcess ; 2005 ; Written Communication Volume 22 ; 22 >
+        au < doNotProcess ; 2006 ; Written Communication Volume 23 ; 23 >
+        au < doNotProcess ; 2007 ; Written Communication Volume 24 ; 24 >
+        au < doNotProcess ; 2008 ; Written Communication Volume 25 ; 25 >
+        au < doNotProcess ; 2009 ; Written Communication Volume 26 ; 26 >
         au < manifest ; 2010 ; Written Communication Volume 27 ; 27 >
         au < manifest ; 2011 ; Written Communication Volume 28 ; 28 >
 
@@ -36286,11 +36286,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Young Volume 10 ; 10 >
         au < manifest ; 2003 ; Young Volume 11 ; 11 >
         au < manifest ; 2004 ; Young Volume 12 ; 12 >
-        au < manifest ; 2005 ; Young Volume 13 ; 13 >
-        au < manifest ; 2006 ; Young Volume 14 ; 14 >
-        au < manifest ; 2007 ; Young Volume 15 ; 15 >
-        au < manifest ; 2008 ; Young Volume 16 ; 16 >
-        au < manifest ; 2009 ; Young Volume 17 ; 17 >
+        au < doNotProcess ; 2005 ; Young Volume 13 ; 13 >
+        au < doNotProcess ; 2006 ; Young Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Young Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Young Volume 16 ; 16 >
+        au < doNotProcess ; 2009 ; Young Volume 17 ; 17 >
         au < manifest ; 2010 ; Young Volume 18 ; 18 >
         au < manifest ; 2011 ; Young Volume 19 ; 19 >
 
@@ -36395,12 +36395,12 @@ comment[mpj] = now published by Brill
         au < manifest ; 2001 ; Youth & Society Volume 33 ; 33 >
         au < manifest ; 2002 ; Youth & Society Volume 34 ; 34 >
         au < manifest ; 2003 ; Youth & Society Volume 35 ; 35 >
-        au < manifest ; 2004 ; Youth & Society Volume 36 ; 36 >
-        au < manifest ; 2005 ; Youth & Society Volume 37 ; 37 >
-        au < manifest ; 2006 ; Youth & Society Volume 38 ; 38 >
-        au < manifest ; 2007 ; Youth & Society Volume 39 ; 39 >
-        au < manifest ; 2008 ; Youth & Society Volume 40 ; 40 >
-        au < manifest ; 2009 ; Youth & Society Volume 41 ; 41 >
+        au < doNotProcess ; 2004 ; Youth & Society Volume 36 ; 36 >
+        au < doNotProcess ; 2005 ; Youth & Society Volume 37 ; 37 >
+        au < doNotProcess ; 2006 ; Youth & Society Volume 38 ; 38 >
+        au < doNotProcess ; 2007 ; Youth & Society Volume 39 ; 39 >
+        au < doNotProcess ; 2008 ; Youth & Society Volume 40 ; 40 >
+        au < doNotProcess ; 2009 ; Youth & Society Volume 41 ; 41 >
         au < manifest ; 2010 ; Youth & Society Volume 42 ; 42 >
         au < manifest ; 2011 ; Youth & Society Volume 43 ; 43 >
 
@@ -36441,11 +36441,11 @@ comment[mpj] = now published by Brill
         au < manifest ; 2002 ; Youth Justice Volume 2 ; 2 >
         au < manifest ; 2003 ; Youth Justice Volume 3 ; 3 >
         au < manifest ; 2004 ; Youth Justice Volume 4 ; 4 >
-        au < manifest ; 2005 ; Youth Justice Volume 5 ; 5 >
-        au < manifest ; 2006 ; Youth Justice Volume 6 ; 6 >
-        au < manifest ; 2007 ; Youth Justice Volume 7 ; 7 >
-        au < manifest ; 2008 ; Youth Justice Volume 8 ; 8 >
-        au < manifest ; 2009 ; Youth Justice Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; Youth Justice Volume 5 ; 5 >
+        au < doNotProcess ; 2006 ; Youth Justice Volume 6 ; 6 >
+        au < doNotProcess ; 2007 ; Youth Justice Volume 7 ; 7 >
+        au < doNotProcess ; 2008 ; Youth Justice Volume 8 ; 8 >
+        au < doNotProcess ; 2009 ; Youth Justice Volume 9 ; 9 >
         au < manifest ; 2010 ; Youth Justice Volume 10 ; 10 >
         au < manifest ; 2011 ; Youth Justice Volume 11 ; 11 >
 
@@ -36484,11 +36484,11 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2003 ; Youth Violence and Juvenile Justice Volume 1 ; 1 >
         au < manifest ; 2004 ; Youth Violence and Juvenile Justice Volume 2 ; 2 >
-        au < manifest ; 2005 ; Youth Violence and Juvenile Justice Volume 3 ; 3 >
-        au < manifest ; 2006 ; Youth Violence and Juvenile Justice Volume 4 ; 4 >
-        au < manifest ; 2007 ; Youth Violence and Juvenile Justice Volume 5 ; 5 >
-        au < manifest ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 >
-        au < manifest ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 >
+        au < doNotProcess ; 2005 ; Youth Violence and Juvenile Justice Volume 3 ; 3 >
+        au < doNotProcess ; 2006 ; Youth Violence and Juvenile Justice Volume 4 ; 4 >
+        au < doNotProcess ; 2007 ; Youth Violence and Juvenile Justice Volume 5 ; 5 >
+        au < doNotProcess ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 >
+        au < doNotProcess ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 >
         au < manifest ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 >
         au < manifest ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 >
 
