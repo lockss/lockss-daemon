@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.13 2011-09-13 15:00:01 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.14 2011-09-15 18:47:47 pgust Exp $
  */
 
 /*
@@ -80,14 +80,14 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
    // Footnotes for the interface options
-  private static final String CSV_NOTE = "In the CSV format values are quoted "+
+  private static final String CSV_NOTE = "CSV export values are quoted "+
   "where necessary, and quotes within values are escaped.";
   
-  //private static final String TSV_NOTE = "In the TSV format values are quoted "+
+  //private static final String TSV_NOTE = "The TSV export values are quoted "+
   //"where necessary, and quotes within values are escaped.";
   
-  private static final String HTML_NOTE =  "The HTML export is for on-screen "+
-  "inspection of holdings reports.";
+  private static final String HTML_NOTE =  "Allows on-screen inspection "+
+  "of the title list.";
 
   /** 
    * Explanation of why some KBART records become duplicates with custom field 
@@ -536,14 +536,14 @@ public abstract class KbartExporter {
     },*/
     
     CSV(
-        "CSV (comma-separated values)",
-        "text/plain", "csv",
-        true, false, false,
+        "Export CSV (comma-separated values)", 
+        "text/plain", "csv", 
+        true, false, false, 
         CSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-                                        KbartExportFilter filter) {
-        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this,
+          KbartExportFilter filter) {
+        KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, 
             SeparatedValuesKbartExporter.SEPARATOR_COMMA);
         kbe.setFilter(filter);
         return kbe;
@@ -551,13 +551,13 @@ public abstract class KbartExporter {
     },
     
     HTML(
-        "HTML (on-screen)",
+        "View on-screen", 
         "text/html", "html",
-        false, false, true,
+        false, false, true, 
         HTML_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
-                                        KbartExportFilter filter) {
+          KbartExportFilter filter) {
         KbartExporter kbe = new HtmlKbartExporter(titles, this);
         kbe.setFilter(filter);
         return kbe;
