@@ -789,12 +789,12 @@
     param[base_url] = http://smj.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
-    au < testing ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
-    au < testing ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
-    au < testing ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
-    au < testing ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
-    au < testing ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
+    au < ready ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+    au < ready ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+    au < ready ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+    au < ready ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+    au < ready ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+    au < ready ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
 
   }
 
