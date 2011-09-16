@@ -17,21 +17,21 @@
     param[base_url] = http://ar.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 1997 ; Acta Radiologica Volume 38 ; 38 >
-    au < testing ; 1998 ; Acta Radiologica Volume 39 ; 39 >
-    au < testing ; 1999 ; Acta Radiologica Volume 40 ; 40 >
-    au < testing ; 2000 ; Acta Radiologica Volume 41 ; 41 >
-    au < testing ; 2001 ; Acta Radiologica Volume 42 ; 42 >
-    au < testing ; 2002 ; Acta Radiologica Volume 43 ; 43 >
-    au < testing ; 2003 ; Acta Radiologica Volume 44 ; 44 >
-    au < testing ; 2004 ; Acta Radiologica Volume 45 ; 45 >
-    au < testing ; 2005 ; Acta Radiologica Volume 46 ; 46 >
-    au < testing ; 2006 ; Acta Radiologica Volume 47 ; 47 >
-    au < testing ; 2007 ; Acta Radiologica Volume 48 ; 48 >
-    au < testing ; 2008 ; Acta Radiologica Volume 49 ; 49 >
-    au < testing ; 2009 ; Acta Radiologica Volume 50 ; 50 >
-    au < testing ; 2010 ; Acta Radiologica Volume 51 ; 51 >
-    au < testing ; 2011 ; Acta Radiologica Volume 52 ; 52 >
+    au < ready ; 1997 ; Acta Radiologica Volume 38 ; 38 >
+    au < ready ; 1998 ; Acta Radiologica Volume 39 ; 39 >
+    au < ready ; 1999 ; Acta Radiologica Volume 40 ; 40 >
+    au < ready ; 2000 ; Acta Radiologica Volume 41 ; 41 >
+    au < ready ; 2001 ; Acta Radiologica Volume 42 ; 42 >
+    au < ready ; 2002 ; Acta Radiologica Volume 43 ; 43 >
+    au < ready ; 2003 ; Acta Radiologica Volume 44 ; 44 >
+    au < ready ; 2004 ; Acta Radiologica Volume 45 ; 45 >
+    au < ready ; 2005 ; Acta Radiologica Volume 46 ; 46 >
+    au < ready ; 2006 ; Acta Radiologica Volume 47 ; 47 >
+    au < ready ; 2007 ; Acta Radiologica Volume 48 ; 48 >
+    au < ready ; 2008 ; Acta Radiologica Volume 49 ; 49 >
+    au < ready ; 2009 ; Acta Radiologica Volume 50 ; 50 >
+    au < ready ; 2010 ; Acta Radiologica Volume 51 ; 51 >
+    au < ready ; 2011 ; Acta Radiologica Volume 52 ; 52 >
 
   }    
         
