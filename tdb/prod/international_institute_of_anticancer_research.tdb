@@ -40,14 +40,14 @@
   
    param[base_url] = http://cgp.iiarjournals.org/
 
-    au < testing ; 2004 ; Cancer Genomics and Proteomics Volume 1 ; 1 >
+    au < ready ; 2004 ; Cancer Genomics and Proteomics Volume 1 ; 1 >
     au < ready ; 2005 ; Cancer Genomics and Proteomics Volume 2 ; 2 >
-    au < testing ; 2006 ; Cancer Genomics and Proteomics Volume 3 ; 3 >
-    au < testing ; 2007 ; Cancer Genomics and Proteomics Volume 4 ; 4 >
+    au < ready ; 2006 ; Cancer Genomics and Proteomics Volume 3 ; 3 >
+    au < ready ; 2007 ; Cancer Genomics and Proteomics Volume 4 ; 4 >
     au < ready ; 2008 ; Cancer Genomics and Proteomics Volume 5 ; 5 >
     au < ready ; 2009 ; Cancer Genomics and Proteomics Volume 6 ; 6 >
     au < ready ; 2010 ; Cancer Genomics and Proteomics Volume 7 ; 7 >
-    au < testing ; 2011 ; Cancer Genomics and Proteomics Volume 8 ; 8 >
+    au < ready ; 2011 ; Cancer Genomics and Proteomics Volume 8 ; 8 >
 
 
   }
@@ -64,7 +64,7 @@
     param[base_url] = http://iv.iiarjournals.org/
 
     au < ready ; 2004 ; In Vivo Volume 18 ; 18 >
-    au < testing ; 2005 ; In Vivo Volume 19 ; 19 >
+    au < ready ; 2005 ; In Vivo Volume 19 ; 19 >
     au < ready ; 2006 ; In Vivo Volume 20 ; 20 >
     au < ready ; 2007 ; In Vivo Volume 21 ; 21 >
     au < ready ; 2008 ; In Vivo Volume 22 ; 22 >
