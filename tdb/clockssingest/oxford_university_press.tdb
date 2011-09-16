@@ -35,7 +35,7 @@
     au < manifest ; exists ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < manifest ; exists ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < released ; crawling ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < manifest ; exists ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
@@ -344,7 +344,7 @@
     au < manifest ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < manifest ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
     au < released ; crawling ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < manifest ; exists ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
 
@@ -3212,7 +3212,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006-2007 ;The Chinese Journal of International Politics Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < released ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
 
     }
@@ -4412,7 +4412,7 @@
     au < manifest ; exists ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 ; >
     au < manifest ; exists ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
     au < manifest ; exists ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
@@ -6480,7 +6480,7 @@
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; InnovAiT Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; InnovAiT Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; InnovAiT Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; InnovAiT Volume 4 ; 4 ; >
@@ -8434,7 +8434,7 @@
     au < manifest ; exists ; 2005 ; Journal of Experimental Botany Volume 56 ; 56 ; >
     au < manifest ; exists ; 2006 ; Journal of Experimental Botany Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 ; >
-    au < wanted ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 ; >
     au < manifest ; exists ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
@@ -8518,7 +8518,7 @@
     au < exists ; exists ; 2006 ; The Journals of Gerontology: Series A Volume 61A ; 61A ; >
     au < exists ; exists ; 2007 ; The Journals of Gerontology: Series A Volume 62A ; 62A ; >
     au < exists ; exists ; 2008 ; The Journals of Gerontology: Series A Volume 63A ; 63A ; >
-    au < manifest ; exists ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
     au < manifest ; exists ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A ; >
     au < manifest ; exists ; 2011 ; The Journals of Gerontology: Series A Volume 66A ; 66A ; >
 
@@ -10924,7 +10924,7 @@
     au < manifest ; exists ; 2005 ; The Leo Baeck Institute Yearbook Volume 50 ; 50 ; >
     au < manifest ; exists ; 2006 ; The Leo Baeck Institute Yearbook Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
 
@@ -11293,8 +11293,8 @@
     au < manifest ; exists ; 2005 ; Logic Journal of the IGPL Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Logic Journal of the IGPL Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; Logic Journal of the IGPL Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
 
