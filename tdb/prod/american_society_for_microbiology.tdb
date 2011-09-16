@@ -18,6 +18,24 @@
       >
       param[base_url] = http://aac.asm.org/
   
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Antimicrobial Agents and Chemotherapy Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Antimicrobial Agents and Chemotherapy Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Antimicrobial Agents and Chemotherapy Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Antimicrobial Agents and Chemotherapy Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Antimicrobial Agents and Chemotherapy Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Antimicrobial Agents and Chemotherapy Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Antimicrobial Agents and Chemotherapy Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Antimicrobial Agents and Chemotherapy Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Antimicrobial Agents and Chemotherapy Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Antimicrobial Agents and Chemotherapy Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Antimicrobial Agents and Chemotherapy Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Antimicrobial Agents and Chemotherapy Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Antimicrobial Agents and Chemotherapy Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Antimicrobial Agents and Chemotherapy Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Antimicrobial Agents and Chemotherapy Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Antimicrobial Agents and Chemotherapy Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Antimicrobial Agents and Chemotherapy Volume 48 ; 48 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
@@ -37,6 +55,24 @@
       >
       param[base_url] = http://aem.asm.org/
   
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Applied and Environmental Microbiology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Applied and Environmental Microbiology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Applied and Environmental Microbiology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Applied and Environmental Microbiology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Applied and Environmental Microbiology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Applied and Environmental Microbiology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Applied and Environmental Microbiology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Applied and Environmental Microbiology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Applied and Environmental Microbiology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Applied and Environmental Microbiology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Applied and Environmental Microbiology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Applied and Environmental Microbiology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Applied and Environmental Microbiology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Applied and Environmental Microbiology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Applied and Environmental Microbiology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Applied and Environmental Microbiology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Applied and Environmental Microbiology Volume 70 ; 70 >
       au < HighWireStrVolPlugin ; down ; 2005 ; Applied and Environmental Microbiology Volume 71 ; 71 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Applied and Environmental Microbiology Volume 72 ; 72 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Applied and Environmental Microbiology Volume 73 ; 73 >
@@ -56,6 +92,17 @@
       >
       param[base_url] = http://cvi.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Clinical and Vaccine Immunology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Clinical and Vaccine Immunology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Clinical and Vaccine Immunology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Clinical and Vaccine Immunology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Clinical and Vaccine Immunology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Clinical and Vaccine Immunology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Clinical and Vaccine Immunology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Clinical and Vaccine Immunology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Clinical and Vaccine Immunology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Clinical and Vaccine Immunology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Clinical and Vaccine Immunology Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Clinical and Vaccine Immunology Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Clinical and Vaccine Immunology Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Clinical and Vaccine Immunology Volume 14 ; 14 >
@@ -75,6 +122,23 @@
       >
       param[base_url] = http://cmr.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Clinical Microbiology Reviews Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Clinical Microbiology Reviews Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Clinical Microbiology Reviews Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Clinical Microbiology Reviews Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Clinical Microbiology Reviews Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Clinical Microbiology Reviews Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Clinical Microbiology Reviews Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Clinical Microbiology Reviews Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Clinical Microbiology Reviews Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Clinical Microbiology Reviews Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Clinical Microbiology Reviews Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Clinical Microbiology Reviews Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Clinical Microbiology Reviews Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Clinical Microbiology Reviews Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Clinical Microbiology Reviews Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Clinical Microbiology Reviews Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Clinical Microbiology Reviews Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Clinical Microbiology Reviews Volume 18 ; 18 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Clinical Microbiology Reviews Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Clinical Microbiology Reviews Volume 20 ; 20 >
@@ -94,13 +158,16 @@
       >
       param[base_url] = http://ec.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Eukaryotic Cell Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Eukaryotic Cell Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Eukaryotic Cell Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Eukaryotic Cell Volume 4 ; 4 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eukaryotic Cell Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Eukaryotic Cell Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Eukaryotic Cell Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Eukaryotic Cell Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Eukaryotic Cell Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; Eukaryotic Cell Volume 10 ; 10 >
       
   
     }
@@ -114,6 +181,78 @@
       >
       param[base_url] = http://iai.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Infection and Immunity Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Infection and Immunity Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Infection and Immunity Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Infection and Immunity Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Infection and Immunity Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Infection and Immunity Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Infection and Immunity Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Infection and Immunity Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Infection and Immunity Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Infection and Immunity Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Infection and Immunity Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Infection and Immunity Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Infection and Immunity Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Infection and Immunity Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Infection and Immunity Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Infection and Immunity Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Infection and Immunity Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Infection and Immunity Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Infection and Immunity Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Infection and Immunity Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Infection and Immunity Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Infection and Immunity Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Infection and Immunity Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Infection and Immunity Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Infection and Immunity Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Infection and Immunity Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Infection and Immunity Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Infection and Immunity Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Infection and Immunity Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Infection and Immunity Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Infection and Immunity Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Infection and Immunity Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Infection and Immunity Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Infection and Immunity Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Infection and Immunity Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Infection and Immunity Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Infection and Immunity Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Infection and Immunity Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Infection and Immunity Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Infection and Immunity Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Infection and Immunity Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Infection and Immunity Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Infection and Immunity Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Infection and Immunity Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Infection and Immunity Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Infection and Immunity Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Infection and Immunity Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Infection and Immunity Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Infection and Immunity Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Infection and Immunity Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Infection and Immunity Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Infection and Immunity Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Infection and Immunity Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Infection and Immunity Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Infection and Immunity Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Infection and Immunity Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Infection and Immunity Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Infection and Immunity Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Infection and Immunity Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Infection and Immunity Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Infection and Immunity Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Infection and Immunity Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Infection and Immunity Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Infection and Immunity Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Infection and Immunity Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Infection and Immunity Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Infection and Immunity Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Infection and Immunity Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Infection and Immunity Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Infection and Immunity Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Infection and Immunity Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Infection and Immunity Volume 72 ; 72 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Infection and Immunity Volume 73 ; 73 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Infection and Immunity Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Infection and Immunity Volume 75 ; 75 >
@@ -133,6 +272,24 @@
       >
       param[base_url] = http://jb.asm.org/
   
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of Bacteriology Volume 169 ; 169 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Bacteriology Volume 170 ; 170 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Bacteriology Volume 171 ; 171 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Bacteriology Volume 172 ; 172 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Bacteriology Volume 173 ; 173 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Bacteriology Volume 174 ; 174 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Bacteriology Volume 175 ; 175 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Bacteriology Volume 176 ; 176 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Bacteriology Volume 177 ; 177 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Bacteriology Volume 178 ; 178 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Bacteriology Volume 179 ; 179 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Bacteriology Volume 180 ; 180 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Bacteriology Volume 181 ; 181 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Bacteriology Volume 182 ; 182 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Bacteriology Volume 183 ; 183 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Bacteriology Volume 184 ; 184 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Bacteriology Volume 185 ; 185 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Bacteriology Volume 186 ; 186 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Bacteriology Volume 187 ; 187 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Bacteriology Volume 188 ; 188 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Bacteriology Volume 189 ; 189 >
@@ -152,6 +309,48 @@
       >
       param[base_url] = http://jcm.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Clinical Microbiology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Clinical Microbiology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Clinical Microbiology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Clinical Microbiology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Clinical Microbiology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Clinical Microbiology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Clinical Microbiology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Clinical Microbiology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Clinical Microbiology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Clinical Microbiology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Clinical Microbiology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Clinical Microbiology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Clinical Microbiology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Clinical Microbiology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Clinical Microbiology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Clinical Microbiology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Clinical Microbiology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Clinical Microbiology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Clinical Microbiology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Clinical Microbiology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Clinical Microbiology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Clinical Microbiology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Clinical Microbiology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Clinical Microbiology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Clinical Microbiology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Clinical Microbiology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Clinical Microbiology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Clinical Microbiology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Clinical Microbiology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Clinical Microbiology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Clinical Microbiology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Clinical Microbiology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Clinical Microbiology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Clinical Microbiology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Clinical Microbiology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Clinical Microbiology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Clinical Microbiology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Clinical Microbiology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Clinical Microbiology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Clinical Microbiology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Clinical Microbiology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Clinical Microbiology Volume 42 ; 42 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Clinical Microbiology Volume 43 ; 43 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Clinical Microbiology Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Clinical Microbiology Volume 45 ; 45 >
@@ -171,6 +370,84 @@
       >
       param[base_url] = http://jvi.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Virology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Virology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Virology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Virology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Virology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Virology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Virology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Virology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Virology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Virology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Virology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Virology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Virology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Virology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Virology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Virology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Virology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Virology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Virology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Virology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Virology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Virology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Virology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Virology Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Virology Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Virology Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Virology Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Virology Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Virology Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Virology Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Virology Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Virology Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Virology Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Virology Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Virology Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Virology Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Virology Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Virology Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Virology Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Virology Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Virology Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Virology Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Virology Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Virology Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Virology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Virology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Virology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Virology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Virology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Virology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Virology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of Virology Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of Virology Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Virology Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Virology Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Virology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Virology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Virology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Virology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Virology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Virology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Virology Volume 78 ; 78 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Virology Volume 79 ; 79 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Virology Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Virology Volume 81 ; 81 >
@@ -190,6 +467,74 @@
       >
       param[base_url] = http://mmbr.asm.org/
   
+      au < HighWirePressH20Plugin ; manifest ; 1937 ; Microbiology and Molecular Biology Reviews Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1938 ; Microbiology and Molecular Biology Reviews Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1939 ; Microbiology and Molecular Biology Reviews Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1940 ; Microbiology and Molecular Biology Reviews Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1941 ; Microbiology and Molecular Biology Reviews Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1942 ; Microbiology and Molecular Biology Reviews Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1943 ; Microbiology and Molecular Biology Reviews Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1944 ; Microbiology and Molecular Biology Reviews Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1945 ; Microbiology and Molecular Biology Reviews Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1946 ; Microbiology and Molecular Biology Reviews Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1947 ; Microbiology and Molecular Biology Reviews Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1948 ; Microbiology and Molecular Biology Reviews Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1949 ; Microbiology and Molecular Biology Reviews Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1950 ; Microbiology and Molecular Biology Reviews Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1951 ; Microbiology and Molecular Biology Reviews Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1952 ; Microbiology and Molecular Biology Reviews Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1953 ; Microbiology and Molecular Biology Reviews Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1954 ; Microbiology and Molecular Biology Reviews Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1955 ; Microbiology and Molecular Biology Reviews Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 1956 ; Microbiology and Molecular Biology Reviews Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 1957 ; Microbiology and Molecular Biology Reviews Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 1958 ; Microbiology and Molecular Biology Reviews Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 1959 ; Microbiology and Molecular Biology Reviews Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 1960 ; Microbiology and Molecular Biology Reviews Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 1961 ; Microbiology and Molecular Biology Reviews Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 1962 ; Microbiology and Molecular Biology Reviews Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; manifest ; 1963 ; Microbiology and Molecular Biology Reviews Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 1964 ; Microbiology and Molecular Biology Reviews Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; manifest ; 1965 ; Microbiology and Molecular Biology Reviews Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; manifest ; 1966 ; Microbiology and Molecular Biology Reviews Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; manifest ; 1967 ; Microbiology and Molecular Biology Reviews Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1968 ; Microbiology and Molecular Biology Reviews Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; manifest ; 1969 ; Microbiology and Molecular Biology Reviews Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; manifest ; 1970 ; Microbiology and Molecular Biology Reviews Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; manifest ; 1971 ; Microbiology and Molecular Biology Reviews Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; manifest ; 1972 ; Microbiology and Molecular Biology Reviews Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 1973 ; Microbiology and Molecular Biology Reviews Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; manifest ; 1974 ; Microbiology and Molecular Biology Reviews Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; manifest ; 1975 ; Microbiology and Molecular Biology Reviews Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; manifest ; 1976 ; Microbiology and Molecular Biology Reviews Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; manifest ; 1977 ; Microbiology and Molecular Biology Reviews Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; manifest ; 1978 ; Microbiology and Molecular Biology Reviews Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; manifest ; 1979 ; Microbiology and Molecular Biology Reviews Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; manifest ; 1980 ; Microbiology and Molecular Biology Reviews Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Microbiology and Molecular Biology Reviews Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Microbiology and Molecular Biology Reviews Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Microbiology and Molecular Biology Reviews Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Microbiology and Molecular Biology Reviews Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Microbiology and Molecular Biology Reviews Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Microbiology and Molecular Biology Reviews Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Microbiology and Molecular Biology Reviews Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Microbiology and Molecular Biology Reviews Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Microbiology and Molecular Biology Reviews Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Microbiology and Molecular Biology Reviews Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Microbiology and Molecular Biology Reviews Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Microbiology and Molecular Biology Reviews Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Microbiology and Molecular Biology Reviews Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Microbiology and Molecular Biology Reviews Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Microbiology and Molecular Biology Reviews Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Microbiology and Molecular Biology Reviews Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Microbiology and Molecular Biology Reviews Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Microbiology and Molecular Biology Reviews Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Microbiology and Molecular Biology Reviews Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Microbiology and Molecular Biology Reviews Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Microbiology and Molecular Biology Reviews Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Microbiology and Molecular Biology Reviews Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Microbiology and Molecular Biology Reviews Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Microbiology and Molecular Biology Reviews Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
@@ -209,6 +554,30 @@
       >
       param[base_url] = http://mcb.asm.org/
   
+      au < HighWirePressH20Plugin ; exists ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1988 ; Molecular and Cellular Biology Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; manifest ; 1989 ; Molecular and Cellular Biology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; manifest ; 1990 ; Molecular and Cellular Biology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; manifest ; 1991 ; Molecular and Cellular Biology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; 1992 ; Molecular and Cellular Biology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; 1993 ; Molecular and Cellular Biology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; 1994 ; Molecular and Cellular Biology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; 1995 ; Molecular and Cellular Biology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; manifest ; 1996 ; Molecular and Cellular Biology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; manifest ; 1997 ; Molecular and Cellular Biology Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; manifest ; 1998 ; Molecular and Cellular Biology Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; manifest ; 1999 ; Molecular and Cellular Biology Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; Molecular and Cellular Biology Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; Molecular and Cellular Biology Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular and Cellular Biology Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular and Cellular Biology Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2004 ; Molecular and Cellular Biology Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2005 ; Molecular and Cellular Biology Volume 25 ; 25 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Molecular and Cellular Biology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Molecular and Cellular Biology Volume 27 ; 27 >
