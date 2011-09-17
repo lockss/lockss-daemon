@@ -2186,7 +2186,7 @@
     au < manifest ; exists ; 2007 ; New Journal of Physics Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; New Journal of Physics Volume 11 ; 11 > 
-    au < testing ; exists ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
+    au < released ; crawling ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
 
   }
@@ -2225,7 +2225,7 @@
     au < exists ; exists ; 2007 ; Nonlinearity Volume 20 ; 20 > 
     au < manifest ; exists ; 2008 ; Nonlinearity Volume 21 ; 21 > 
     au < manifest ; exists ; 2009 ; Nonlinearity Volume 22 ; 22 > 
-    au < testing ; exists ; 2010 ; Nonlinearity Volume 23 ; 23 > 
+    au < released ; crawling ; 2010 ; Nonlinearity Volume 23 ; 23 > 
     au < manifest ; exists ; 2011 ; Nonlinearity Volume 24 ; 24 > 
 
   }
@@ -2325,7 +2325,7 @@
     au < exists ; exists ; 2007 ; Nuclear Fusion Volume 47 ; 47 > 
     au < manifest ; exists ; 2008 ; Nuclear Fusion Volume 48 ; 48 > 
     au < manifest ; exists ; 2009 ; Nuclear Fusion Volume 49 ; 49 > 
-    au < testing ; exists ; 2010 ; Nuclear Fusion Volume 50 ; 50 > 
+    au < released ; crawling ; 2010 ; Nuclear Fusion Volume 50 ; 50 > 
     au < manifest ; exists ; 2011 ; Nuclear Fusion Volume 51 ; 51 > 
 
   }
@@ -2422,8 +2422,8 @@
     au < manifest ; exists ; 2008 ; Physica Scripta Volume 78 ; 78 > 
     au < manifest ; exists ; 2009 ; Physica Scripta Volume 79 ; 79 > 
     au < manifest ; exists ; 2009 ; Physica Scripta Volume 80 ; 80 > 
-    au < manifest ; exists ; 2010 ; Physica Scripta Volume 81 ; 81 > 
-    au < manifest ; exists ; 2010 ; Physica Scripta Volume 82 ; 82 > 
+    au < testing ; exists ; 2010 ; Physica Scripta Volume 81 ; 81 > 
+    au < testing ; exists ; 2010 ; Physica Scripta Volume 82 ; 82 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 83 ; 83 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 84 ; 84 > 
 
@@ -2448,7 +2448,7 @@
     au < exists ; exists ; 2007 ; Physical Biology Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Physical Biology Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Physical Biology Volume 6 ; 6 > 
-    au < manifest ; exists ; 2010 ; Physical Biology Volume 7 ; 7 > 
+    au < testing ; exists ; 2010 ; Physical Biology Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Physical Biology Volume 8 ; 8 > 
 
   }
@@ -2509,7 +2509,7 @@
     au < exists ; exists ; 2007 ; Physics Education Volume 42 ; 42 > 
     au < manifest ; exists ; 2008 ; Physics Education Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Physics Education Volume 44 ; 44 > 
-    au < manifest ; exists ; 2010 ; Physics Education Volume 45 ; 45 > 
+    au < testing ; exists ; 2010 ; Physics Education Volume 45 ; 45 > 
     au < manifest ; exists ; 2011 ; Physics Education Volume 46 ; 46 > 
 
   }
@@ -2580,7 +2580,7 @@
     au < exists ; exists ; 2007 ; Physics in Medicine and Biology Volume 52 ; 52 > 
     au < manifest ; exists ; 2008 ; Physics in Medicine and Biology Volume 53 ; 53 > 
     au < manifest ; exists ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 > 
-    au < manifest ; exists ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
+    au < testing ; exists ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
     au < manifest ; exists ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 > 
 
   }
@@ -2656,7 +2656,7 @@
     au < exists ; exists ; 2007 ; Physiological Measurement Volume 28 ; 28 > 
     au < manifest ; exists ; 2008 ; Physiological Measurement Volume 29 ; 29 > 
     au < manifest ; exists ; 2009 ; Physiological Measurement Volume 30 ; 30 > 
-    au < manifest ; exists ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
+    au < testing ; exists ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; Physiological Measurement Volume 32 ; 32 >
 
   }
