@@ -343,11 +343,11 @@
       
       au < HighWireStrVolPlugin ; down ; 2005 ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
       au < HighWireStrVolPlugin ; down ; 2006 ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
-      au < HighWirePressH20Plugin ; testing ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
       
     }
     
@@ -408,7 +408,7 @@
       au < released ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
       au < released ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
       au < released ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
-      au < testing ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < ready ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
 
     }
 
@@ -421,10 +421,10 @@
       au < HighWireStrVolPlugin ; down ; 2005 ; Eighteenth-Century Life Volume 29 ; 29 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Eighteenth-Century Life Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Eighteenth-Century Life Volume 31 ; 31 >      
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
 
     }
     
@@ -463,10 +463,10 @@
      au < HighWireStrVolPlugin ; down ; 2005 ; Ethnohistory Volume 52 ; 52 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Ethnohistory Volume 53 ; 53 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Ethnohistory Volume 54 ; 54 >
-     au < HighWirePressH20Plugin ; testing ; 2008 ; Ethnohistory Volume 55 ; 55 >
-     au < HighWirePressH20Plugin ; testing ; 2009 ; Ethnohistory Volume 56 ; 56 >
-     au < HighWirePressH20Plugin ; testing ; 2010 ; Ethnohistory Volume 57 ; 57 >
-     au < HighWirePressH20Plugin ; testing ; 2011 ; Ethnohistory Volume 58 ; 58 >
+     au < HighWirePressH20Plugin ; ready ; 2008 ; Ethnohistory Volume 55 ; 55 >
+     au < HighWirePressH20Plugin ; ready ; 2009 ; Ethnohistory Volume 56 ; 56 >
+     au < HighWirePressH20Plugin ; ready ; 2010 ; Ethnohistory Volume 57 ; 57 >
+     au < HighWirePressH20Plugin ; ready ; 2011 ; Ethnohistory Volume 58 ; 58 >
     
     }
     
@@ -505,9 +505,9 @@
      au < HighWireStrVolPlugin ; down ; 2005 ; French Historical Studies Volume 28 ; 28 >
      au < HighWireStrVolPlugin ; down ; 2006 ; French Historical Studies Volume 29 ; 29 >
      au < HighWireStrVolPlugin ; down ; 2007 ; French Historical Studies Volume 30 ; 30 >      
-     au < HighWirePressH20Plugin ; testing ; 2008 ; French Historical Studies Volume 31 ; 31 >
-     au < HighWirePressH20Plugin ; testing ; 2009 ; French Historical Studies Volume 32 ; 32 >
-     au < HighWirePressH20Plugin ; testing ; 2010 ; French Historical Studies Volume 33 ; 33 >
+     au < HighWirePressH20Plugin ; ready ; 2008 ; French Historical Studies Volume 31 ; 31 >
+     au < HighWirePressH20Plugin ; ready ; 2009 ; French Historical Studies Volume 32 ; 32 >
+     au < HighWirePressH20Plugin ; ready ; 2010 ; French Historical Studies Volume 33 ; 33 >
     
     }
     
@@ -571,7 +571,7 @@
       au < released ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
       au < released ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
       au < released ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
-      au < testing ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < ready ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
       
     }
 
@@ -583,10 +583,10 @@
       
       au < HighWireStrVolPlugin ; down ; 2006 ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; down ; 2007 ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
-      au < HighWirePressH20Plugin ; testing ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
 
     }
     
@@ -607,7 +607,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hispanic_american_historical_review
 
-      au < manifest ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
+      au < testing ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
       au < released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
       au < released ; 2001 ; Hispanic American Historical Review Volume 81 ; 81 >
       au < released ; 2002 ; Hispanic American Historical Review Volume 82 ; 82 >
@@ -625,10 +625,10 @@
      au < HighWireStrVolPlugin ; down ; 2005 ; Hispanic American Historical Review Volume 85 ; 85 >
      au < HighWireStrVolPlugin ; down ; 2006 ; Hispanic American Historical Review Volume 86 ; 86 >
      au < HighWireStrVolPlugin ; down ; 2007 ; Hispanic American Historical Review Volume 87 ; 87 >      
-     au < HighWirePressH20Plugin ; manifest ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
-     au < HighWirePressH20Plugin ; manifest ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
-     au < HighWirePressH20Plugin ; manifest ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
-     au < HighWirePressH20Plugin ; manifest ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWirePressH20Plugin ; testing ; 2008 ; Hispanic American Historical Review Volume 88 ; 88 >
+     au < HighWirePressH20Plugin ; testing ; 2009 ; Hispanic American Historical Review Volume 89 ; 89 >
+     au < HighWirePressH20Plugin ; testing ; 2010 ; Hispanic American Historical Review Volume 90 ; 90 >
+     au < HighWirePressH20Plugin ; testing ; 2011 ; Hispanic American Historical Review Volume 91 ; 91 >
     
     }
     
@@ -667,10 +667,10 @@
      au < HighWireStrVolPlugin ; down ; 2005 ; History of Political Economy Volume 37 ; 37 >
      au < HighWireStrVolPlugin ; down ; 2006 ; History of Political Economy Volume 38 ; 38 >
      au < HighWireStrVolPlugin ; down ; 2007 ; History of Political Economy Volume 39 ; 39 >      
-     au < HighWirePressH20Plugin ; manifest ; 2008 ; History of Political Economy Volume 40 ; 40 >
-     au < HighWirePressH20Plugin ; manifest ; 2009 ; History of Political Economy Volume 41 ; 41 >
-     au < HighWirePressH20Plugin ; manifest ; 2010 ; History of Political Economy Volume 42 ; 42 >
-     au < HighWirePressH20Plugin ; manifest ; 2011 ; History of Political Economy Volume 43 ; 43 >
+     au < HighWirePressH20Plugin ; testing ; 2008 ; History of Political Economy Volume 40 ; 40 >
+     au < HighWirePressH20Plugin ; testing ; 2009 ; History of Political Economy Volume 41 ; 41 >
+     au < HighWirePressH20Plugin ; testing ; 2010 ; History of Political Economy Volume 42 ; 42 >
+     au < HighWirePressH20Plugin ; testing ; 2011 ; History of Political Economy Volume 43 ; 43 >
     
     }
     
@@ -709,9 +709,9 @@
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
     
     }
     
@@ -750,9 +750,9 @@
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
     
     }
     
@@ -775,9 +775,9 @@
       au < HighWireStrVolPlugin ; down ; 2005 ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
       au < HighWireStrVolPlugin ; down ; 2007 ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; 2010 ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
     
     }
     
@@ -810,8 +810,8 @@
       au < released ; 2007 ; Mediterranean Quarterly Volume 18 ; 18 >
       au < released ; 2008 ; Mediterranean Quarterly Volume 19 ; 19 >
       au < released ; 2009 ; Mediterranean Quarterly Volume 20 ; 20 >
-      au < manifest ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
-      au < manifest ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
+      au < testing ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 >
+      au < testing ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 >
 
     }
     
@@ -917,13 +917,13 @@
       au < manifest ; 1994 ; Nka: Journal of Contemporary African Art Issue 1 ; 1 >
       au < manifest ; 1995 ; Nka: Journal of Contemporary African Art Number 2 ; 2 >
       au < manifest ; 1995 ; Nka: Journal of Contemporary African Art Number 3 ; 3 >
-      au < manifest ; 1996 ; Nka: Journal of Contemporary African Art Number 4 ; 4 >      
+      au < manifest ; 1996 ; Nka: Journal of Contemporary African Art Number 4 ; 4 >
       au < manifest ; 1996 ; Nka: Journal of Contemporary African Art Number 5 ; 5 >
       au < manifest ; 1997 ; Nka: Journal of Contemporary African Art Number 6-7 ; 6 >
-      au < manifest ; 1998 ; Nka: Journal of Contemporary African Art Number 8 ; 8 >      
+      au < manifest ; 1998 ; Nka: Journal of Contemporary African Art Number 8 ; 8 >
       au < manifest ; 1998 ; Nka: Journal of Contemporary African Art Number 9 ; 9 >
       au < manifest ; 1999 ; Nka: Journal of Contemporary African Art Number 10 ; 10 >
-      au < manifest ; 2000 ; Nka: Journal of Contemporary African Art Number 11/12 ; 11 >      
+      au < manifest ; 2000 ; Nka: Journal of Contemporary African Art Number 11/12 ; 11 >
       au < manifest ; 2001 ; Nka: Journal of Contemporary African Art Number 13/14 ; 13 >
       au < manifest ; 2001 ; Nka: Journal of Contemporary African Art Number 15 ; 15 >
       au < manifest ; 2002 ; Nka: Journal of Contemporary African Art Number 16/17 ; 16 >
@@ -932,7 +932,7 @@
       au < manifest ; 2006 ; Nka: Journal of Contemporary African Art Number 20 ; 20 >
       au < manifest ; 2007 ; Nka: Journal of Contemporary African Art Number 21 ; 21 >
       au < manifest ; 2008 ; Nka: Journal of Contemporary African Art Number 22/23 ; 22 >
-      au < manifest ; 2009 ; Nka: Journal of Contemporary African Art Number 24 ; 24 >      
+      au < manifest ; 2009 ; Nka: Journal of Contemporary African Art Number 24 ; 24 >
       au < manifest ; 2009 ; Nka: Journal of Contemporary African Art Number 25 ; 25 >
       au < manifest ; 2010 ; Nka: Journal of Contemporary African Art Number 26 ; 26 >
       au < manifest ; 2010 ; Nka: Journal of Contemporary African Art Number 27 ; 27 >
@@ -973,7 +973,7 @@
       
       au < HighWireStrVolPlugin ; down ; 2005 ; Poetics Today Volume 26 ; 26 >
       au < HighWireStrVolPlugin ; down ; 2006 ; Poetics Today Volume 27 ; 27 >
-      au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >      
+      au < HighWireStrVolPlugin ; down ; 2007 ; Poetics Today Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; manifest ; 2008 ; Poetics Today Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; manifest ; 2009 ; Poetics Today Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; manifest ; 2010 ; Poetics Today Volume 31 ; 31 >
