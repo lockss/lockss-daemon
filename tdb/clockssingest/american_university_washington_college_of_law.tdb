@@ -17,8 +17,8 @@
 
     param[journal_abbr] = alr
 
-    au < testing ; exists ; 2010 ; Administrative Law Review Volume 62 ; 62 >
-    au < testing ; exists ; 2011 ; Administrative Law Review Volume 63 ; 63 >
+    au < released ; manifest ; 2010 ; Administrative Law Review Volume 62 ; 62 >
+    au < released ; manifest ; 2011 ; Administrative Law Review Volume 63 ; 63 >
 
   }
 
@@ -31,31 +31,31 @@
 
     param[journal_abbr] = auilr
 
-    au < manifest ; exists ; 1986 ; American University International Law Review Volume 1 ; 1 >
-    au < manifest ; exists ; 1987 ; American University International Law Review Volume 2 ; 2 >
-    au < manifest ; exists ; 1988 ; American University International Law Review Volume 3 ; 3 >
-    au < manifest ; exists ; 1989 ; American University International Law Review Volume 4 ; 4 >
-    au < manifest ; exists ; 1989-1990 ; American University International Law Review Volume 5 ; 5 >
-    au < manifest ; exists ; 1990-1991 ; American University International Law Review Volume 6 ; 6 >
-    au < manifest ; exists ; 1991-1992 ; American University International Law Review Volume 7 ; 7 >
-    au < manifest ; exists ; 1992-1993 ; American University International Law Review Volume 8 ; 8 >
-    au < manifest ; exists ; 1993-1994 ; American University International Law Review Volume 9 ; 9 >
-    au < manifest ; exists ; 1994-1995 ; American University International Law Review Volume 10 ; 10 >
-    au < manifest ; exists ; 1996 ; American University International Law Review Volume 11 ; 11 >
-    au < manifest ; exists ; 1997 ; American University International Law Review Volume 12 ; 12 >
-    au < manifest ; exists ; 1997-1998 ; American University International Law Review Volume 13 ; 13 >
-    au < manifest ; exists ; 1998-1999; American University International Law Review Volume 14 ; 14 >
-    au < manifest ; exists ; 1999-2000 ; American University International Law Review Volume 15 ; 15 >
-    au < manifest ; exists ; 2000-2001 ; American University International Law Review Volume 16 ; 16 >
-    au < manifest ; exists ; 2001-2002 ; American University International Law Review Volume 17 ; 17 >
-    au < manifest ; exists ; 2002-2003 ; American University International Law Review Volume 18 ; 18 >
-    au < manifest ; exists ; 2003-2004 ; American University International Law Review Volume 19 ; 19 >
-    au < testing ; exists ; 2004-2005 ; American University International Law Review Volume 20 ; 20 >
-    au < testing ; exists ; 2005-2006 ; American University International Law Review Volume 21 ; 21 >
-    au < testing ; exists ; 2006-2007 ; American University International Law Review Volume 22 ; 22 >
-    au < testing ; exists ; 2007-2008 ; American University International Law Review Volume 23 ; 23 >
-    au < testing ; exists ; 2008-2009 ; American University International Law Review Volume 24 ; 24 >
-    au < testing ; exists ; 2009-2010 ; American University International Law Review Volume 25 ; 25 >
+    au < testing ; exists ; 1986 ; American University International Law Review Volume 1 ; 1 >
+    au < testing ; exists ; 1987 ; American University International Law Review Volume 2 ; 2 >
+    au < testing ; exists ; 1988 ; American University International Law Review Volume 3 ; 3 >
+    au < testing ; exists ; 1989 ; American University International Law Review Volume 4 ; 4 >
+    au < testing ; exists ; 1989-1990 ; American University International Law Review Volume 5 ; 5 >
+    au < testing ; exists ; 1990-1991 ; American University International Law Review Volume 6 ; 6 >
+    au < testing ; exists ; 1991-1992 ; American University International Law Review Volume 7 ; 7 >
+    au < testing ; exists ; 1992-1993 ; American University International Law Review Volume 8 ; 8 >
+    au < testing ; exists ; 1993-1994 ; American University International Law Review Volume 9 ; 9 >
+    au < testing ; exists ; 1994-1995 ; American University International Law Review Volume 10 ; 10 >
+    au < testing ; exists ; 1996 ; American University International Law Review Volume 11 ; 11 >
+    au < testing ; exists ; 1997 ; American University International Law Review Volume 12 ; 12 >
+    au < testing ; exists ; 1997-1998 ; American University International Law Review Volume 13 ; 13 >
+    au < testing ; exists ; 1998-1999; American University International Law Review Volume 14 ; 14 >
+    au < testing ; exists ; 1999-2000 ; American University International Law Review Volume 15 ; 15 >
+    au < testing ; exists ; 2000-2001 ; American University International Law Review Volume 16 ; 16 >
+    au < testing ; exists ; 2001-2002 ; American University International Law Review Volume 17 ; 17 >
+    au < testing ; exists ; 2002-2003 ; American University International Law Review Volume 18 ; 18 >
+    au < testing ; exists ; 2003-2004 ; American University International Law Review Volume 19 ; 19 >
+    au < released ; manifest ; 2004-2005 ; American University International Law Review Volume 20 ; 20 >
+    au < released ; manifest ; 2005-2006 ; American University International Law Review Volume 21 ; 21 >
+    au < released ; manifest ; 2006-2007 ; American University International Law Review Volume 22 ; 22 >
+    au < released ; manifest ; 2007-2008 ; American University International Law Review Volume 23 ; 23 >
+    au < released ; manifest ; 2008-2009 ; American University International Law Review Volume 24 ; 24 >
+    au < released ; manifest ; 2009-2010 ; American University International Law Review Volume 25 ; 25 >
     au < exists ; exists ; 2011 ; American University International Law Review Volume 26 ; 26 >
 
   }
@@ -68,8 +68,8 @@
 
     param[journal_abbr] = ipbrief
 
-    au < testing ; exists ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
-    au < testing ; exists ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
+    au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
+    au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
 
   }
 
@@ -94,24 +94,24 @@
 
     param[journal_abbr] = aulr
 
-    au < manifest ; exists ; 1992-1993 ; American University Law Review Volume 42 ; 42 >
-    au < manifest ; exists ; 1993-1994 ; American University Law Review Volume 43 ; 43 >
-    au < manifest ; exists ; 1994-1995 ; American University Law Review Volume 44 ; 44 >
-    au < manifest ; exists ; 1995-1996 ; American University Law Review Volume 45 ; 45 >
-    au < manifest ; exists ; 1996-1997 ; American University Law Review Volume 46 ; 46 >
-    au < manifest ; exists ; 1997-1998 ; American University Law Review Volume 47 ; 47 >
-    au < manifest ; exists ; 1999 ; American University Law Review Volume 48 ; 48 >
-    au < manifest ; exists ; 1999-2000 ; American University Law Review Volume 49 ; 49 >
+    au < testing ; exists ; 1992-1993 ; American University Law Review Volume 42 ; 42 >
+    au < testing ; exists ; 1993-1994 ; American University Law Review Volume 43 ; 43 >
+    au < testing ; exists ; 1994-1995 ; American University Law Review Volume 44 ; 44 >
+    au < testing ; exists ; 1995-1996 ; American University Law Review Volume 45 ; 45 >
+    au < testing ; exists ; 1996-1997 ; American University Law Review Volume 46 ; 46 >
+    au < testing ; exists ; 1997-1998 ; American University Law Review Volume 47 ; 47 >
+    au < testing ; exists ; 1999 ; American University Law Review Volume 48 ; 48 >
+    au < testing ; exists ; 1999-2000 ; American University Law Review Volume 49 ; 49 >
     au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 50 ; 50 >
-    au < manifest ; exists ; 2001-2002 ; American University Law Review Volume 51 ; 51 >
+    au < testing ; exists ; 2001-2002 ; American University Law Review Volume 51 ; 51 >
     au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 52 ; 52 >
-    au < manifest ; exists ; 2003-2004 ; American University Law Review Volume 53 ; 53 >
+    au < testing ; exists ; 2003-2004 ; American University Law Review Volume 53 ; 53 >
     au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 54 ; 54 >
-    au < testing ; exists ; 2005-2006 ; American University Law Review Volume 55 ; 55 >
-    au < testing ; exists ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
-    au < testing ; exists ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
-    au < testing ; exists ; 2008-2009 ; American University Law Review Volume 58 ; 58 >
-    au < testing ; exists ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
+    au < released ; manifest ; 2005-2006 ; American University Law Review Volume 55 ; 55 >
+    au < released ; manifest ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
+    au < released ; manifest ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
+    au < released ; manifest ; 2008-2009 ; American University Law Review Volume 58 ; 58 >
+    au < released ; manifest ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
 
   }
 
@@ -136,11 +136,11 @@
     au < doesNotExist ; doesNotExist ; 0 ; The Modern American Volume 10 ; 10 >
     au < manifest ; exists ; 2003 ; The Modern American Volume 11 ; 11 >
     au < manifest ; exists ; 2004 ; The Modern American Volume 12 ; 12 >
-    au < testing ; exists ; 2005 ; The Modern American Volume 13 ; 13 >
-    au < testing ; exists ; 2005-2006 ; The Modern American Volume 14 ; 14 >
-    au < testing ; exists ; 2006-2007 ; The Modern American Volume 15 ; 15 >
-    au < testing ; exists ; 2007-2008 ; The Modern American Volume 16 ; 16 >
-    au < testing ; exists ; 2009 ; The Modern American Volume 17 ; 17 >
+    au < released ; manifest ; 2005 ; The Modern American Volume 13 ; 13 >
+    au < released ; manifest ; 2005-2006 ; The Modern American Volume 14 ; 14 >
+    au < released ; manifest ; 2006-2007 ; The Modern American Volume 15 ; 15 >
+    au < released ; manifest ; 2007-2008 ; The Modern American Volume 16 ; 16 >
+    au < released ; manifest ; 2009 ; The Modern American Volume 17 ; 17 >
     au < released ; crawling ; 2010-2011 ; The Modern American Volume 18 ; 18 >
 
   }
@@ -153,8 +153,8 @@
 
     param[journal_abbr] = lpb
 
-    au < testing ; exists ; 2009 ; Legislation and Policy Brief Volume 1 ; 1 >
-    au < testing ; exists ; 2010 ; Legislation and Policy Brief Volume 2 ; 2 >
+    au < released ; manifest ; 2009 ; Legislation and Policy Brief Volume 1 ; 1 >
+    au < released ; manifest ; 2010 ; Legislation and Policy Brief Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Legislation and Policy Brief Volume 3 ; 3 >
 
   }
@@ -167,12 +167,12 @@
 
     param[journal_abbr] = tma
 
-    au < testing ; exists ; 2005 ; The Modern American Volume 1 ; 1 >
-    au < testing ; exists ; 2006 ; The Modern American Volume 2 ; 2 >
-    au < testing ; exists ; 2007 ; The Modern American Volume 3 ; 3 >
-    au < testing ; exists ; 2008 ; The Modern American Volume 4 ; 4 >
-    au < testing ; exists ; 2009 ; The Modern American Volume 5 ; 5 >
-    au < testing ; exists ; 2010 ; The Modern American Volume 6 ; 6 >
+    au < released ; manifest ; 2005 ; The Modern American Volume 1 ; 1 >
+    au < released ; manifest ; 2006 ; The Modern American Volume 2 ; 2 >
+    au < released ; manifest ; 2007 ; The Modern American Volume 3 ; 3 >
+    au < released ; manifest ; 2008 ; The Modern American Volume 4 ; 4 >
+    au < released ; manifest ; 2009 ; The Modern American Volume 5 ; 5 >
+    au < released ; manifest ; 2010 ; The Modern American Volume 6 ; 6 >
 
   }
 
@@ -188,12 +188,12 @@
     au < manifest ; exists ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
     au < manifest ; exists ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 >
     au < manifest ; exists ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
-    au < testing ; exists ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
-    au < testing ; exists ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
-    au < testing ; exists ; 2006-2007 ; Sustainable Development Law & Policy Volume 7 ; 7 >
-    au < testing ; exists ; 2007-2008 ; Sustainable Development Law & Policy Volume 8 ; 8 >
+    au < released ; manifest ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
+    au < released ; manifest ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
+    au < released ; manifest ; 2006-2007 ; Sustainable Development Law & Policy Volume 7 ; 7 >
+    au < released ; manifest ; 2007-2008 ; Sustainable Development Law & Policy Volume 8 ; 8 >
     au < testing ; exists ; 2008-2009 ; Sustainable Development Law & Policy Volume 9 ; 9 >
-    au < testing ; exists ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
+    au < released ; manifest ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
     au < released ; crawling ; 2010-2011 ; Sustainable Development Law & Policy Volume 11 ; 11 >
 
   }
