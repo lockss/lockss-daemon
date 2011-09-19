@@ -1559,7 +1559,6 @@
     title <
       name = International Metallurgical Reviews;
       issn = 0367-9020 ;
-      eissn = 1743-2804 ;
       issnl = 0367-9020 
     >
 
@@ -1584,8 +1583,7 @@
 
     title <
       name = International Metals Reviews;
-      issn = 0308-4590  ;
-      eissn = 1743-2804 ;
+      issn = 0308-4590 ;
       issnl = 0308-4590  
     >
 
@@ -3688,9 +3686,9 @@
 
     title <
       name = Seventeenth-Century French Studies ;
-      issn = 1361-7427 ;
+      issn = 0265-1068 ;
       eissn = 1752-2692 ;
-      issnl = 1361-7427 
+      issnl = 0265-1068  
     >
 
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -3699,7 +3697,7 @@
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = maney
     param[journal_id] = c17 
-    param[journal_issn] = 1361-7427
+    param[journal_issn] = 0265-1068 
     implicit < status ; status2 ; year ; name ; param[volume_name] >
 
     au < manifest ; exists ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 > 
