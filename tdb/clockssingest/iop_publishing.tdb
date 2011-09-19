@@ -2422,8 +2422,8 @@
     au < manifest ; exists ; 2008 ; Physica Scripta Volume 78 ; 78 > 
     au < manifest ; exists ; 2009 ; Physica Scripta Volume 79 ; 79 > 
     au < manifest ; exists ; 2009 ; Physica Scripta Volume 80 ; 80 > 
-    au < testing ; exists ; 2010 ; Physica Scripta Volume 81 ; 81 > 
-    au < testing ; exists ; 2010 ; Physica Scripta Volume 82 ; 82 > 
+    au < released ; crawling ; 2010 ; Physica Scripta Volume 81 ; 81 > 
+    au < released ; crawling ; 2010 ; Physica Scripta Volume 82 ; 82 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 83 ; 83 > 
     au < manifest ; exists ; 2011 ; Physica Scripta Volume 84 ; 84 > 
 
@@ -2448,7 +2448,7 @@
     au < exists ; exists ; 2007 ; Physical Biology Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Physical Biology Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Physical Biology Volume 6 ; 6 > 
-    au < testing ; exists ; 2010 ; Physical Biology Volume 7 ; 7 > 
+    au < released ; crawling ; 2010 ; Physical Biology Volume 7 ; 7 > 
     au < manifest ; exists ; 2011 ; Physical Biology Volume 8 ; 8 > 
 
   }
@@ -2509,7 +2509,7 @@
     au < exists ; exists ; 2007 ; Physics Education Volume 42 ; 42 > 
     au < manifest ; exists ; 2008 ; Physics Education Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Physics Education Volume 44 ; 44 > 
-    au < testing ; exists ; 2010 ; Physics Education Volume 45 ; 45 > 
+    au < released ; crawling ; 2010 ; Physics Education Volume 45 ; 45 > 
     au < manifest ; exists ; 2011 ; Physics Education Volume 46 ; 46 > 
 
   }
@@ -2580,7 +2580,7 @@
     au < exists ; exists ; 2007 ; Physics in Medicine and Biology Volume 52 ; 52 > 
     au < manifest ; exists ; 2008 ; Physics in Medicine and Biology Volume 53 ; 53 > 
     au < manifest ; exists ; 2009 ; Physics in Medicine and Biology Volume 54 ; 54 > 
-    au < testing ; exists ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
+    au < released ; crawling ; 2010 ; Physics in Medicine and Biology Volume 55 ; 55 > 
     au < manifest ; exists ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 > 
 
   }
@@ -2656,7 +2656,7 @@
     au < exists ; exists ; 2007 ; Physiological Measurement Volume 28 ; 28 > 
     au < manifest ; exists ; 2008 ; Physiological Measurement Volume 29 ; 29 > 
     au < manifest ; exists ; 2009 ; Physiological Measurement Volume 30 ; 30 > 
-    au < testing ; exists ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
+    au < released ; crawling ; 2010 ; Physiological Measurement Volume 31 ; 31 > 
     au < manifest ; exists ; 2011 ; Physiological Measurement Volume 32 ; 32 >
 
   }
@@ -2731,7 +2731,7 @@
     au < exists ; exists ; 2007 ; Plasma Physics and Controlled Fusion Volume 49 ; 49 > 
     au < manifest ; exists ; 2008 ; Plasma Physics and Controlled Fusion Volume 50 ; 50 > 
     au < manifest ; exists ; 2009 ; Plasma Physics and Controlled Fusion Volume 51 ; 51 > 
-    au < manifest ; exists ; 2010 ; Plasma Physics and Controlled Fusion Volume 52 ; 52 > 
+    au < testing ; exists ; 2010 ; Plasma Physics and Controlled Fusion Volume 52 ; 52 > 
     au < manifest ; exists ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 >
 
   }
@@ -2756,7 +2756,7 @@
     au < exists ; exists ; 2007 ; Plasma Science and Technology Volume 9 ; 9 > 
     au < manifest ; exists ; 2008 ; Plasma Science and Technology Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; Plasma Science and Technology Volume 11 ; 11 > 
-    au < manifest ; exists ; 2010 ; Plasma Science and Technology Volume 12 ; 12 > 
+    au < testing ; exists ; 2010 ; Plasma Science and Technology Volume 12 ; 12 > 
     au < manifest ; exists ; 2011 ; Plasma Science and Technology Volume 13 ; 13 > 
 
   }
@@ -2791,7 +2791,7 @@
     au < exists ; exists ; 2007 ; Plasma Sources Science and Technology Volume 16 ; 16 > 
     au < manifest ; exists ; 2008 ; Plasma Sources Science and Technology Volume 17 ; 17 > 
     au < manifest ; exists ; 2009 ; Plasma Sources Science and Technology Volume 18 ; 18 > 
-    au < manifest ; exists ; 2010 ; Plasma Sources Science and Technology Volume 19 ; 19 > 
+    au < testing ; exists ; 2010 ; Plasma Sources Science and Technology Volume 19 ; 19 > 
     au < manifest ; exists ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 > 
 
   }
