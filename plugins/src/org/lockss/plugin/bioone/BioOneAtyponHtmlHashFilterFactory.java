@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
+ * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.2 2011-09-19 19:58:14 thib_gc Exp $
  */
 
 /*
@@ -52,23 +52,25 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         /*
          * Crawl filter
          */
-        // Contains recent impact factors and journal rankings
-        HtmlNodeFilters.tagWithAttribute("div", "id", "articleInfoBox"),
         // Contains most-read articles in the same journal (etc.)
         HtmlNodeFilters.tagWithAttribute("div", "class", "relatedContent"),
         // Contains related articles (etc.)
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticleSearch"),
+        // Contains reverse citations
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
+        // Contains reverse citations
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
         /*
          * Hash filter
          */
         // Contains site-specific SFX code
         new TagNameFilter("script"),
+        // Contains recent impact factors and journal rankings
+        HtmlNodeFilters.tagWithAttribute("div", "id", "articleInfoBox"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "headerLogo"),
-        // Contains reverse citations
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
+ * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.2 2011-09-19 19:58:14 thib_gc Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticleSearch"),
         // Contains reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
+        // Contains reverse citations
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
