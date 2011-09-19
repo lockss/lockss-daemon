@@ -172,21 +172,25 @@ fi
 
 (
 
-# return 0 if the loop should continue
-is_continue() {
-    if [ ! -s "${KEEP_GOING}" ]; then
+# does_file_contain file "string"
+# returns 0 if file exists and its contents matches the string, otherwise
+# returns 1
+does_file_contain() {
+    local FILE="$1"
+    if [ ! -s "${FILE}" ]; then
 	return 1
     fi
-    if [ `cat "${KEEP_GOING}"` != ${MYPID} ]; then
+    local CONT=`cat "${FILE}"`
+    if [ "${CONT}" != "$2" ]; then
         return 1
     fi
-    ## Also exit if we lose the lock.  Shouldn't happen normally.
-    if [ ! -s "${LOCKFILE}" ]; then
-        return 1
-    fi
-    if [ `cat "${LOCKFILE}"` != ${MYPID} ]; then
-        return 1
-    fi
+    return 0
+}
+
+# return 0 if the loop should continue
+is_continue() {
+    does_file_contain "${KEEP_GOING}" ${MYPID} || return 1
+    does_file_contain "${LOCKFILE}" ${MYPID} || return 1
     return 0
 }
 
