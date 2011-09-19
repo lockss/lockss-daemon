@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.17 2011-09-15 18:53:17 pgust Exp $
+ * $Id: ListHoldings.java,v 1.18 2011-09-19 03:23:14 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class ListHoldings extends LockssServlet {
   /** Enable "preserved" option when ListHondlings UI is enabled
    */
   public static final String 
-    PARAM_ENABLED_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";
+    PARAM_ENABLE_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";
   public static final boolean DEFAULT_ENABLE_PRESERVED_HOLDINGS = false;
   
   
@@ -118,7 +118,7 @@ public class ListHoldings extends LockssServlet {
   // Form parameters and options
   public static final String ACTION_EXPORT = "List Titles";
   public static final String ACTION_CUSTOM_EXPORT = "Customise List";
-  public static final String ACTION_HIDE_CUSTOM_EPORT = "Hide Customise List";
+  public static final String ACTION_HIDE_CUSTOM_EXPORT = "Hide Customise List";
   /** Apply the current customisation. */
   public static final String ACTION_CUSTOM_OK = "Apply";
   /** Reset customisation to the defaults. */
@@ -234,7 +234,7 @@ public class ListHoldings extends LockssServlet {
       // If custom export requested (from the output page) or a customisation was 
       // okayed, set the custom ordering to the supplied manual ordering. If an 
       // export is validated, set the last manual ordering.
-      if (customAction.equals(ACTION_HIDE_CUSTOM_EPORT)) {
+      if (customAction.equals(ACTION_HIDE_CUSTOM_EXPORT)) {
         // hide custom form
         isCustom = false;
       } else if (customAction.equals(ACTION_CUSTOM_EXPORT) || 
@@ -455,13 +455,8 @@ public class ListHoldings extends LockssServlet {
    * @return <code>true</code? if "preserved" option is enabled.
    */
   private boolean isEnablePreserved() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    if (config == null) {
-      return false;
-    } else {
-      return config.getBoolean(PARAM_ENABLED_PRESERVED_HOLDINGS, 
-                               DEFAULT_ENABLE_PRESERVED_HOLDINGS);
-    }
+    return CurrentConfig.getBooleanParam(PARAM_ENABLE_PRESERVED_HOLDINGS, 
+					 DEFAULT_ENABLE_PRESERVED_HOLDINGS);
   }
   
   /**
@@ -531,7 +526,7 @@ public class ListHoldings extends LockssServlet {
       subTab.add(new Heading(3, "Customise List"));
       layoutFormCustomOpts(subTab);
       subTab.add(BREAK);
-      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EPORT);
+      layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_HIDE_CUSTOM_EXPORT);
     } else {
       layoutSubmitButton(this, subTab, ACTION_TAG, ACTION_EXPORT);
 
