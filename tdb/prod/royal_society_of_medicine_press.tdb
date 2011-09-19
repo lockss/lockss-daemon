@@ -562,8 +562,8 @@
     param[base_url] = http://shortreports.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
-    au < testing ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+    au < ready ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+    au < ready ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
 
   }
 
