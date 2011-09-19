@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.86 2011-08-09 03:59:01 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.87 2011-09-19 03:24:12 tlipkis Exp $
  */
 
 /*
@@ -551,7 +551,8 @@ public class ConfigManager implements LockssManager {
     return newConfig;
   }
 
-  /** Return current configuration */
+  /** Return current configuration, or an empty configuration if there is
+   * no current configuration. */
   public static Configuration getCurrentConfig() {
     if (theMgr == null || theMgr.currentConfig == null) {
       return EMPTY_CONFIGURATION;
