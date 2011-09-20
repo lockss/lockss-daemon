@@ -4,39 +4,64 @@
     <string>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>8</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;International Union of Crystallography Plugin, Base URL %s, Scripts URL %s, Journal ID %s, Year %d&quot;, base_url, scripts_url, journal_id, year</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+	<string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+	<string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+	<string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>International Union of Crystallography Plugin</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.50.0</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Note that each AU under this plugin is an issue, not a volume or a year as is typical.</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;International Union of Crystallography Plugin, Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s&quot;, base_url, scripts_url, journal_id, year, issue</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>4,&quot;^https?://(%s|%s)/&quot;, base_url_host, scripts_url_host</string>
       <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, scripts_url_host</string>
-      <string>4,&quot;^(%s|%s)&quot;, base_url, scripts_url</string>
+      <string>1,&quot;^%s%s/issues/%d/lockss\.html$&quot;, base_url, journal_id, year</string>
       <string>1,&quot;^%slockss\.html$&quot;, scripts_url</string>
-      <string>2,&quot;^%s.*\?[DMNS]=[AD]$&quot;, base_url</string>
-      <string>1,&quot;^%s%s/issues/%d/&quot;, base_url, journal_id, year</string>
+      <string>1,&quot;^%s%s/issues/%d/%s/&quot;, base_url, journal_id, year, issue</string>
       <string>1,&quot;^%scgi-bin/(sendcif|sendsup|sendsupfiles)\?&quot;, scripts_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/issues/%d/&quot;, base_url, journal_id, year</string>
+    <string>&quot;%s%s/issues/%d/%s/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -46,8 +71,12 @@
       <string>&quot;%s%s/journalhomepage.html&quot;, base_url, journal_id</string>
     </entry>
     <entry>
+      <string>au_volume</string>
+      <string>&quot;%s%s/issues/%d/csaindx.html&quot;, base_url, journal_id, year</string>
+    </entry>
+    <entry>
       <string>au_issue</string>
-      <string>&quot;%s%s/issues/%d/%02d/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
+      <string>&quot;%s%s/issues/%d/%s/00/issconts.html&quot;, base_url, journal_id, year, issue</string>
     </entry>
     </map>
   </entry>
@@ -66,6 +95,15 @@
         <displayName>Year</displayName>
         <description>Four digit year (e.g., 2004)</description>
         <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue</key>
+        <displayName>Issue</displayName>
+        <description>Issue string (usually 2 characters, either month-like e.g. '01' or a supplemental issue e.g. 'a1')</description>
+        <type>1</type>
         <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
@@ -102,5 +140,11 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%s%s/issues/%d/%s/00/[^/]+/index\\.html$&quot;, base_url, journal_id, year, issue</string>
+    </list>
   </entry>
 </map>

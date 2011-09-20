@@ -1,5 +1,5 @@
 /*
- * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:15 thib_gc Exp $
+ * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.3 2011-09-20 19:55:20 thib_gc Exp $
  */
 
 /*
@@ -44,9 +44,9 @@ public class InternationalUnionOfCrystallographyArticleIteratorFactory implement
 
   protected static Logger log = Logger.getLogger("InternationalUnionOfCrystallographyArticleIteratorFactory");
 
-  protected static final String ROOT_TEMPLATE = "\"%s%s/issues/%d/\", base_url, journal_id, year";
+  protected static final String ROOT_TEMPLATE = "\"%s%s/issues/%d/%s/00/\", base_url, journal_id, year, issue";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/issues/%d/[0-9]+/[0-9]+/[^/]+/index\\.html$\", base_url, journal_id, year";
+  protected static final String PATTERN_TEMPLATE = "\"^%s%s/issues/%d/%s/00/[^/]+/index\\.html$\", base_url, journal_id, year, issue";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,

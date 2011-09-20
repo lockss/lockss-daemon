@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.38.0</string>
+    <string>1.50.0</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -25,6 +25,6 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;International Union of Crystallography Plugin (CLOCKSS), Base URL %s, Scripts URL %s, Journal ID %s, Year %d&quot;, base_url, scripts_url, journal_id, year</string>
+    <string>&quot;International Union of Crystallography Plugin (CLOCKSS), Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s&quot;, base_url, scripts_url, journal_id, year, issue</string>
   </entry>
 </map>
