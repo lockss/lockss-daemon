@@ -119,11 +119,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
@@ -357,7 +357,7 @@
     au < HighWirePressH20Plugin ; notReady ; 2007 ; BMJ Volume 335 ; 335 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Volume 336 ; 336 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; BMJ Volume 337 ; 337 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; BMJ Volume 338 ; 338 >
+    au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Volume 338 ; 338 >
     au < HighWirePressH20Plugin ; notReady ; 2009 ; BMJ Volume 339 ; 339 >
     au < HighWirePressH20Plugin ; released ; 2010 ; BMJ Volume 340 ; 340 >
     au < HighWirePressH20Plugin ; released ; 2010 ; BMJ Volume 341 ; 341 >
@@ -373,7 +373,7 @@
 
     param[base_url] = http://bmjopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
 
   }
 
@@ -579,8 +579,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
@@ -675,12 +675,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Evidence-Based Mental Health Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Evidence-Based Mental Health Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Evidence-Based Mental Health Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Evidence-Based Mental Health Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Evidence-Based Mental Health Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Mental Health Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Mental Health Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Evidence-Based Mental Health Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Evidence-Based Mental Health Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Evidence-Based Mental Health Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Evidence-Based Mental Health Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Evidence-Based Mental Health Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Evidence-Based Mental Health Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Evidence-Based Mental Health Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Evidence-Based Mental Health Volume 14 ; 14 >
 
   }
 
@@ -702,12 +702,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Evidence-Based Nursing Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Evidence-Based Nursing Volume 7 ; 7 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Nursing Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Evidence-Based Nursing Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Evidence-Based Nursing Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Evidence-Based Nursing Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
 
   }
 
@@ -1007,7 +1007,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Clinical Pathology Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Clinical Pathology Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Clinical Pathology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
 
   }
 
@@ -1085,7 +1085,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
 
   }
 
