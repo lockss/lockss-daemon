@@ -17,7 +17,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ael
 
-    au < manifest ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 ; 2011 >
+    au < ready ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -114,7 +114,7 @@
     au < released ; Asian Journal of Comparative Law Volume 3 ; 3 ; 2008 >
     au < released ; Asian Journal of Comparative Law Volume 4 ; 4 ; 2009 >
     au < ready ; Asian Journal of Comparative Law Volume 5 ; 5 ; 2010 >
-    au < manifest ; Asian Journal of Comparative Law Volume 6 ; 6 ; 2011 >
+    au < ready ; Asian Journal of Comparative Law Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -129,7 +129,7 @@
     param[journal_abbr] = ajle
 
     au < manifest ; Asian Journal of Law and Economics Volume 1 ; 1 ; 2010 >
-    au < manifest ; Asian Journal of Law and Economics Volume 2 ; 2 ; 2011 >
+    au < ready ; Asian Journal of Law and Economics Volume 2 ; 2 ; 2011 >
     
   }
 
@@ -148,7 +148,6 @@
     au < released ; Basic Income Studies Volume 3 ; 3 ; 2008 >
     au < ready ; Basic Income Studies Volume 4 ; 4 ; 2009 >
     au < manifest ; Basic Income Studies Volume 5 ; 5 ; 2010 >
-    au < manifest ; Basic Income Studies Volume 6 ; 6 ; 2011 >
 
   }
 
