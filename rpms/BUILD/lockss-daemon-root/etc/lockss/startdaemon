@@ -209,7 +209,7 @@ MYPID=`sh -c 'echo $PPID'`
 echo ${MYPID} >${KEEP_GOING}
 chown $1 ${KEEP_GOING}
 # put PID of spawned loop in lock file
-echo $! >${LOCKFILE}
+echo ${MYPID} >${LOCKFILE}
 
 while is_continue; do
     if [ "X${START_FLAG}" = X ]; then
