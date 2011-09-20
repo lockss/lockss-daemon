@@ -17,7 +17,7 @@
       param[base_url] = http://www.studiesinmycology.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2005 ; Studies in Mycology Volume 53 ; 53 >
+      au < exists ; 2005 ; Studies in Mycology Volume 53 ; 53 >
       au < manifest ; 2006 ; Studies in Mycology Volume 54 ; 54 >
       au < manifest ; 2006 ; Studies in Mycology Volume 55 ; 55 >
       au < manifest ; 2006 ; Studies in Mycology Volume 56 ; 56 >
