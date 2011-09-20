@@ -181,7 +181,7 @@
     au < released ; crawling ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
-    au < testing ; exists ; 2011 ; The B.E. Journal of Economic Analysis & Policy Volume 11 ; 11 >
+    au < released ; manifest ; 2011 ; The B.E. Journal of Economic Analysis & Policy Volume 11 ; 11 >
 
   }
 
@@ -209,7 +209,7 @@
     au < released ; crawling ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 >    
-    au < testing ; exists ; 2011 ; The B.E. Journal of Macroeconomics Volume 11 ; 11 >
+    au < released ; manifest ; 2011 ; The B.E. Journal of Macroeconomics Volume 11 ; 11 >
     
   }
 
@@ -237,7 +237,7 @@
     au < released ; crawling ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 >
-    au < testing ; exists ; 2011 ; The B.E. Journal of Theoretical Economics Volume 11 ; 11 >
+    au < released ; manifest ; 2011 ; The B.E. Journal of Theoretical Economics Volume 11 ; 11 >
 
   }
 
@@ -266,7 +266,7 @@
     au < released ; crawling ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < released ; crawling ; 2009 ; Business and Politics Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Business and Politics Volume 12 ; 12 >
-    au < manifest ; exists ; 2011 ; Business and Politics Volume 13 ; 13 >
+    au < testing ; exists ; 2011 ; Business and Politics Volume 13 ; 13 >
 
   }
 
@@ -282,7 +282,7 @@
 
     au < released ; crawling ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; California Journal of Politics and Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; California Journal of Politics and Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2011 ; California Journal of Politics and Policy Volume 3 ; 3 >
 
   }
 
@@ -319,7 +319,7 @@
     au < released ; crawling ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
-    au < manifest ; exists ; 2011 ; Chemical Product and Process Modeling Volume 6 ; 6 >
+    au < testing ; exists ; 2011 ; Chemical Product and Process Modeling Volume 6 ; 6 >
 
   }
 
@@ -400,7 +400,7 @@
     au < released ; crawling ; 2008 ; The Economists' Voice Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; The Economists' Voice Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; The Economists' Voice Volume 7 ; 7 >
-    au < manifest ; exists ; 2011 ; The Economists' Voice Volume 8 ; 8 >
+    au < testing ; exists ; 2011 ; The Economists' Voice Volume 8 ; 8 >
 
   }
   
@@ -414,7 +414,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = erj
 
-    au < manifest ; exists ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
+    au < testing ; exists ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
 
   }  
   
@@ -436,7 +436,7 @@
     au < released ; crawling ; 2008 ; The Forum Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; The Forum Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; The Forum Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; The Forum Volume 9 ; 9 >
+    au < testing ; exists ; 2011 ; The Forum Volume 9 ; 9 >
 
   }
 
