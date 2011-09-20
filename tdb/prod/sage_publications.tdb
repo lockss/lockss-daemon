@@ -14410,64 +14410,49 @@ comment[exm] = now published by Springer
 
         param[base_url] = http://ijm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-
-        au < HighWireStrVolPlugin ; down ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; down ; 1995-2006 ; International Journal of Music Education Volume 24 ; 24 >
-        au < HighWireStrVolPlugin ; down ; 1996-2007 ; International Journal of Music Education Volume 25 ; 25 >
-        au < HighWirePressPlugin ; down ; 1997-2008 ; International Journal of Music Education Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; down ; 1998-2009 ; International Journal of Music Education Volume 27 ; 27 >
-
-      }
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://ijm.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
         
         comment[ijm40] = Original series ended at vol 40, and issue numbering started at 22 again in 2004. Manifests exist, but are malformed.
 
-        au < manifest ; 1983 ; International Journal of Music Education Volume 1 ; 1 >
-        au < manifest ; 1983 ; International Journal of Music Education Volume 2 ; 2 >
-        au < manifest ; 1984 ; International Journal of Music Education Volume 3 ; 3 >
-        au < manifest ; 1984 ; International Journal of Music Education Volume 4 ; 4 >
-        au < manifest ; 1985 ; International Journal of Music Education Volume 5 ; 5 >
-        au < manifest ; 1985 ; International Journal of Music Education Volume 6 ; 6 >
-        au < manifest ; 1986 ; International Journal of Music Education Volume 7 ; 7 >
-        au < manifest ; 1986 ; International Journal of Music Education Volume 8 ; 8 >
-        au < manifest ; 1987 ; International Journal of Music Education Volume 9 ; 9 >
-        au < manifest ; 1987 ; International Journal of Music Education Volume 10 ; 10 >
-        au < manifest ; 1988 ; International Journal of Music Education Volume 11 ; 11 >
-        au < manifest ; 1988 ; International Journal of Music Education Volume 12 ; 12 >
-        au < manifest ; 1989 ; International Journal of Music Education Volume 13 ; 13 >
-        au < manifest ; 1989 ; International Journal of Music Education Volume 14 ; 14 >
-        au < manifest ; 1990 ; International Journal of Music Education Volume 15 ; 15 >
-        au < manifest ; 1990 ; International Journal of Music Education Volume 16 ; 16 >
-        au < manifest ; 1991 ; International Journal of Music Education Volume 17 ; 17 >
-        au < manifest ; 1991 ; International Journal of Music Education Volume 18 ; 18 >
-        au < manifest ; 1992 ; International Journal of Music Education Volume 19 ; 19 >
-        au < manifest ; 1992 ; International Journal of Music Education Volume 20 ; 20 >
-        au < manifest ; 1993 ; International Journal of Music Education Volume 21 ; 21 >
-        au < manifest ; 1993-2004 ; International Journal of Music Education Volume 22 ; 22 >
-        au < doNotProcess ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
-        au < doNotProcess ; 1994-2006 ; International Journal of Music Education Volume 24 ; 24 >
-        au < doNotProcess ; 1995-2007 ; International Journal of Music Education Volume 25 ; 25 >
-        au < doNotProcess ; 1995-2008 ; International Journal of Music Education Volume 26 ; 26 >
-        au < doNotProcess ; 1996-2009 ; International Journal of Music Education Volume 27 ; 27 >
-        au < manifest ; 1996-2010 ; International Journal of Music Education Volume 28 ; 28 >
-        au < manifest ; 1997-2011 ; International Journal of Music Education Volume 29 ; 29 >
-        au < manifest ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
-        au < manifest ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
-        au < manifest ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
-        au < manifest ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
-        au < manifest ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
-        au < manifest ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
-        au < manifest ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
-        au < manifest ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
-        au < manifest ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
-        au < manifest ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
-        au < manifest ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; International Journal of Music Education Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; International Journal of Music Education Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; International Journal of Music Education Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; International Journal of Music Education Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; International Journal of Music Education Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; International Journal of Music Education Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; International Journal of Music Education Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; International Journal of Music Education Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; International Journal of Music Education Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; International Journal of Music Education Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; International Journal of Music Education Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; International Journal of Music Education Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; International Journal of Music Education Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; International Journal of Music Education Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; International Journal of Music Education Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; International Journal of Music Education Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; International Journal of Music Education Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; International Journal of Music Education Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; International Journal of Music Education Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; International Journal of Music Education Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; International Journal of Music Education Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1993-2004 ; International Journal of Music Education Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; down ; 1994-2005 ; International Journal of Music Education Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; down ; 1995-2006 ; International Journal of Music Education Volume 24 ; 24 >
+        au < HighWireStrVolPlugin ; down ; 1995-2007 ; International Journal of Music Education Volume 25 ; 25 >
+        au < HighWirePressPlugin ; down ; 1995-2008 ; International Journal of Music Education Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; 1996-2009 ; International Journal of Music Education Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1996-2010 ; International Journal of Music Education Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997-2011 ; International Journal of Music Education Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; International Journal of Music Education Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of Music Education Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; International Journal of Music Education Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; International Journal of Music Education Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; International Journal of Music Education Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; International Journal of Music Education Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; International Journal of Music Education Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; International Journal of Music Education Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; International Journal of Music Education Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; International Journal of Music Education Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; International Journal of Music Education Volume 40 ; 40 >
 
       }
 
