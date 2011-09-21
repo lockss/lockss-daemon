@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.19 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.19.4.1 2011-09-21 06:43:20 thib_gc Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
@@ -187,6 +188,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /** Name of ISBN table */
   static final String ISBN_TABLE = "ISBN";
 
+  /** Name of Feature table */
+  static final String FEATURE_TABLE = "Feature";
+
   /** Name of Metadata table */
   static final String METADATA_TABLE = "Metadata";
 
@@ -222,6 +226,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   
   /** Name of book edition field (same as journal EDITION_FILED */
   static public final String EDITION_FIELD = ISSUE_FIELD;
+  
+  /** Name of feature field (e.g. "fulltext", "abstract", "toc") */
+  static public final String FEATURE_FIELD = "feature";
   
   /** Name of md_id foreign key field */
   static public final String MD_ID_FIELD = "md_id";
@@ -265,6 +272,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   
   /** Length of book edition field (same as MAX_EDITION_FIELD) */
   static public final int MAX_EDITION_FIELD = 16;
+
+  /** Length of feature field */
+  static public final int MAX_FEATURE_FIELD = 16;
 
   /** 
    * Length of plugin ID field. This field will be used as horizontal
@@ -758,8 +768,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private static final String createSchema[] = {
     "create table " + PENDINGAUS_TABLE + " ("
-        + PLUGIN_ID_FIELD + " VARCHAR(64) NOT NULL," 
+        + PLUGIN_ID_FIELD + " VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL," 
         + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
+        
     "create table " + METADATA_TABLE + " ("
         + MD_ID_FIELD + " BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
         + DATE_FIELD + " VARCHAR(" + MAX_DATE_FIELD + "),"
@@ -774,7 +785,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         + AU_KEY_FIELD + " VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
         + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
         + ")",
-
+/*
+    "create table " + FEATURE_TABLE + " (" 
+        + FEATURE_FIELD + " VARCHAR(" + MAX_FEATURE_FIELD + ") NOT NULL,"
+        + ACCESS_URL_FIELD + " VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" 
+        + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
+        + "(md_id) on delete cascade" + ")",
+*/
     "create table " + DOI_TABLE + " (" 
         + DOI_FIELD + " VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
         + MD_ID_FIELD + " BIGINT NOT NULL REFERENCES " + METADATA_TABLE
@@ -1057,43 +1074,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       ae = plugin.getArticleMetadataExtractor(MetadataTarget.Article, au);
     }
     if (ae == null) {
-      TitleConfig tc = au.getTitleConfig();
-      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-      if (tdbau == null) {
-        return null;
-      }
-
-      // get metadata from tdbau
-      final String journalTitle = tdbau.getJournalTitle();
-      final String volume = tdbau.getStartVolume(); // use start if a range
-      final String year = tdbau.getStartYear(); // use start if a range
-      final String issn = tdbau.getPrintIssn();
-      final String eissn = tdbau.getEissn();
-//      final String issnl = tdbau.getIssnL();
-      final String isbn = tdbau.getIsbn();
-
-      ae = new ArticleMetadataExtractor() {
-
-        @Override
-        public void extract(
-          MetadataTarget target, ArticleFiles af, Emitter emitter) 
-          throws IOException, PluginException {
-          // must have a URL to be useful in the database
-          String url = af.getFullTextUrl();
-          if (url != null) {
-            ArticleMetadata md = new ArticleMetadata();
-            md.put(MetadataField.FIELD_ACCESS_URL, url);
-            if (isbn != null)  md.put(MetadataField.FIELD_ISBN, isbn);
-            if (issn != null) md.put(MetadataField.FIELD_ISSN, issn);
-            if (eissn != null) md.put(MetadataField.FIELD_EISSN, eissn);
-            if (volume != null) md.put(MetadataField.FIELD_VOLUME, volume);
-            if (year != null) md.put(MetadataField.FIELD_DATE, year);
-            if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
-                                             journalTitle);
-            emitter.emitMetadata(af, md);
-          }
-        }
-      };
+      ae = new BaseArticleMetadataExtractor(null);
     }
     return ae;
   }
@@ -1316,6 +1297,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             log.debug3(  "field access url: " 
                        + md.get(MetadataField.FIELD_ACCESS_URL));
           }
+          
           if (md.get(MetadataField.FIELD_ACCESS_URL) == null) {
             // temporary -- use full text url if not set
             // (should be set by metadata extractor)
@@ -1354,6 +1336,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
           }
+        } catch (Throwable ex) {
+          log.error(" Caught unexpected Throwable for full text URL: "
+              + af.getFullTextUrl(), ex);
         }
       }
 
