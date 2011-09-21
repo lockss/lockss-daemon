@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.4 2011-03-13 22:04:55 tlipkis Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.5 2011-09-21 04:07:14 pgust Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.extractor;
 import java.io.*;
 
 import org.lockss.util.*;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -96,6 +97,30 @@ public class BaseArticleMetadataExtractor
       }
     }
   }
+  
+  ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
+    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+    String isbn = (tdbau == null) ? null : tdbau.getIsbn();
+    String issn = (tdbau == null) ? null : tdbau.getPrintIssn();
+    String eissn = (tdbau == null) ? null : tdbau.getEissn();
+    String year = (tdbau == null) ? null : tdbau.getStartYear();
+    String volume = (tdbau == null) ? null : tdbau.getStartVolume();
+    String issue = (tdbau == null) ? null : tdbau.getStartIssue();
+    String journalTitle = (tdbau == null) ? null : tdbau.getJournalTitle();
+
+    ArticleMetadata md = new ArticleMetadata();
+    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+    if (isbn != null)  md.put(MetadataField.FIELD_ISBN, isbn);
+    if (issn != null) md.put(MetadataField.FIELD_ISSN, issn);
+    if (eissn != null) md.put(MetadataField.FIELD_EISSN, eissn);
+    if (volume != null) md.put(MetadataField.FIELD_VOLUME, volume);
+    if (issue != null) md.put(MetadataField.FIELD_ISSUE, volume);
+    if (year != null) md.put(MetadataField.FIELD_DATE, year);
+    if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE,
+                                       journalTitle);
+    return md;
+  }
 
   public void extract(MetadataTarget target,
 		      ArticleFiles af,
@@ -110,7 +135,12 @@ public class BaseArticleMetadataExtractor
 	FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
 	if (me != null) {
 	  me.extract(target, cu, myEmitter);
+	} else {
+	  am = getDefaultArticleMetadata(cu);
+	  myEmitter.emitMetadata(cu, am);
 	}
+      } catch (RuntimeException ex) {
+        log.debug("for af (" + af + ")", ex);
       } finally {
 	AuUtil.safeRelease(cu);
       }
