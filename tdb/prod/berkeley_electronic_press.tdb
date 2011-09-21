@@ -37,7 +37,7 @@
     au < manifest ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
-    au < testing ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -57,7 +57,7 @@
     au < manifest ; Advances in Macroeconomics Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Macroeconomics Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Macroeconomics Volume 5 ; 5 ; 2005 >
-    au < testing ; Advances in Macroeconomics Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Advances in Macroeconomics Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -77,7 +77,7 @@
     au < manifest ; Advances in Theoretical Economics Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Theoretical Economics Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Theoretical Economics Volume 5 ; 5 ; 2005 >
-    au < testing ; Advances in Theoretical Economics Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Advances in Theoretical Economics Volume 6 ; 6 ; 2006 >    
 
   }
  
@@ -338,7 +338,7 @@
     au < manifest ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; 2003 >
     au < manifest ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; 2004 >    
     au < manifest ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
-    au < testing ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; 2006 >    
+    au < notReady ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; 2006 >    
 
   }
 
@@ -358,7 +358,7 @@
     au < manifest ; Contributions to Macroeconomics Volume 3 ; 3 ; 2003 >    
     au < manifest ; Contributions to Macroeconomics Volume 4 ; 4 ; 2004 >
     au < manifest ; Contributions to Macroeconomics Volume 5 ; 5 ; 2005 >    
-    au < testing ; Contributions to Macroeconomics Volume 6 ; 6 ; 2006 > 
+    au < notReady ; Contributions to Macroeconomics Volume 6 ; 6 ; 2006 > 
 
   }
 
@@ -378,7 +378,7 @@
     au < manifest ; Contributions to Theoretical Economics Volume 3 ; 3 ; 2003 >    
     au < manifest ; Contributions to Theoretical Economics Volume 4 ; 4 ; 2004 >
     au < manifest ; Contributions to Theoretical Economics Volume 5 ; 5 ; 2005 >    
-    au < testing ; Contributions to Theoretical Economics Volume 6 ; 6 ; 2006 > 
+    au < notReady ; Contributions to Theoretical Economics Volume 6 ; 6 ; 2006 > 
 
   }
 
@@ -465,7 +465,7 @@
     au < released ; Forum for Health Economics & Policy Volume 11 ; 11 ; 2008 >
     au < released ; Forum for Health Economics & Policy Volume 12 ; 12 ; 2009 >
     au < ready ; Forum for Health Economics & Policy Volume 13 ; 13 ; 2010 >
-    au < manifest ; Forum for Health Economics & Policy Volume 14 ; 14 ; 2011 >
+    au < ready; Forum for Health Economics & Policy Volume 14 ; 14 ; 2011 >
 
   }
 
@@ -537,7 +537,7 @@
     au < released ; Global Economy Journal Volume 8 ; 8 ; 2008 >
     au < released ; Global Economy Journal Volume 9 ; 9 ; 2009 >
     au < ready ; Global Economy Journal Volume 10 ; 10 ; 2010 >
-    au < manifest ; Global Economy Journal Volume 11 ; 11 ; 2011 >
+    au < ready; Global Economy Journal Volume 11 ; 11 ; 2011 >
 
   }
 
@@ -561,7 +561,7 @@
     au < released ; Global Jurist Volume 8 ; 8 ; 2008 >
     au < released ; Global Jurist Volume 9 ; 9 ; 2009 >
     au < ready ; Global Jurist Volume 10 ; 10 ; 2010 >
-    au < manifest ; Global Jurist Volume 11 ; 11 ; 2011 >
+    au < ready; Global Jurist Volume 11 ; 11 ; 2011 >
 
   }
 
@@ -602,7 +602,7 @@
     au < released ; The International Journal of Biostatistics Volume 4 ; 4 ; 2008 >
     au < released ; The International Journal of Biostatistics Volume 5 ; 5 ; 2009 >
     au < ready ; The International Journal of Biostatistics Volume 6 ; 6 ; 2010 >
-    au < manifest ; The International Journal of Biostatistics Volume 7 ; 7 ; 2011 >
+    au < ready; The International Journal of Biostatistics Volume 7 ; 7 ; 2011 >
 
   }
 
@@ -649,7 +649,7 @@
     au < released ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 ; 2008 >
     au < ready ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 ; 2009 >
     au < ready ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 ; 2010 >
-    au < manifest ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 ; 2011 >
+    au < ready ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 ; 2011 >
 
   }
 
@@ -669,7 +669,7 @@
     au < released ; International Journal of Food Engineering Volume 4 ; 4 ; 2008 >
     au < released ; International Journal of Food Engineering Volume 5 ; 5 ; 2009 >
     au < ready ; International Journal of Food Engineering Volume 6 ; 6 ; 2010 >
-    au < manifest ; International Journal of Food Engineering Volume 7 ; 7 ; 2011 >
+    au < ready ; International Journal of Food Engineering Volume 7 ; 7 ; 2011 >
 
   }
 
@@ -690,7 +690,7 @@
     au < released ; International Journal of Nursing Education Scholarship Volume 5 ; 5 ; 2008 >
     au < released ; International Journal of Nursing Education Scholarship Volume 6 ; 6 ; 2009 >
     au < ready ; International Journal of Nursing Education Scholarship Volume 7 ; 7 ; 2010 >
-    au < manifest ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; 2011 >
+    au < ready ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; 2011 >
 
   }
 
@@ -726,7 +726,7 @@
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; 2004 >
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; 2009 >    
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; 2010 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; 2011 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; 2011 >
     
   }
 
@@ -748,7 +748,7 @@
     au < released ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 ; 2008 >
     au < released ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 ; 2009 >
     au < ready ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 ; 2010 >
-    au < manifest ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 ; 2011 >
+    au < ready ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 ; 2011 >
  
   }
 
