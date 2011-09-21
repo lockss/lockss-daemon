@@ -2745,7 +2745,6 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; The Cambridge Quarterly Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; exists ; 2005 ; The Cambridge Quarterly Volume 34 ; 34 >
     au < HighWirePressPlugin ; doNotProcess ; 2006 ; The Cambridge Quarterly Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 >
     au < HighWirePressPlugin ; down ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2007 ; The Cambridge Quarterly Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 >
@@ -10196,34 +10195,6 @@
   }
 
   {
-  
-    title <
-      name = Journal of the International Commission on Radiation Units and Measurements ;
-      issn = 1473-6691;
-      eissn = 1742-3422;
-      issnl = 1473-6691
-    >
-
-    {
- 
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://jicru.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 >
-     
-    }
-    
-  }
-
-  {
 
     title <
       name = Journal of Pediatric Psychology ;
@@ -11935,43 +11906,6 @@
     }
 
   }
-  
-  {
-  
-    title <
-      name = MHR: Basic science of reproductive medicine ;
-      issn = 1360-9947 ;
-      eissn = 1460-2407 ;
-      issnl = 1360-9947
-    >
-
-    {
- 
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://molehr.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
-    au < HighWirePressH20Plugin ; exists ; 1995 ; MHR: Basic science of reproductive medicine Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; MHR: Basic science of reproductive medicine Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; MHR: Basic science of reproductive medicine Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; MHR: Basic science of reproductive medicine Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; MHR: Basic science of reproductive medicine Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; MHR: Basic science of reproductive medicine Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; MHR: Basic science of reproductive medicine Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; MHR: Basic science of reproductive medicine Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; MHR: Basic science of reproductive medicine Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; MHR: Basic science of reproductive medicine Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; MHR: Basic science of reproductive medicine Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; MHR: Basic science of reproductive medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; MHR: Basic science of reproductive medicine Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 >
-
-    }
-
-  }
 
   {
 
@@ -12135,7 +12069,6 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://molehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-	comment[molehr] =  duplicate title with MHR: Basic science of reproductive medicine
 
     au < HighWirePressH20Plugin ; exists ; 1995 ; Molecular Human Reproduction Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Molecular Human Reproduction Volume 2 ; 2 >
@@ -12522,8 +12455,8 @@
     au < HighWirePressPlugin ; down ; 2008 ;  NDT Plus Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; NDT Plus Volume 2 ; 2 >
     au < HighWirePressPlugin ; doNotProcess ; 2010 ; NDT Plus Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; NDT Plus Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; NDT Plus Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; NDT Plus Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; NDT Plus Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2010 ; NDT Plus Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; NDT Plus Volume 4 ; 4 >
 
@@ -13015,7 +12948,7 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Nucleic Acids Symposium Series Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Nucleic Acids Symposium Series Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2004 ; Nucleic Acids Symposium Series Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Nucleic Acids Symposium Series Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Nucleic Acids Symposium Series Volume 49 ; 49 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Nucleic Acids Symposium Series Volume 50 ; 50 >
     au < HighWirePressPlugin ; down ; 2007 ; Nucleic Acids Symposium Series Volume 51 ; 51 >
     au < HighWirePressPlugin ; down ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 >
