@@ -37,7 +37,7 @@
     au < manifest ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
-    au < manifest ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
+    au < testing ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -57,7 +57,7 @@
     au < manifest ; Advances in Macroeconomics Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Macroeconomics Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Macroeconomics Volume 5 ; 5 ; 2005 >
-    au < manifest ; Advances in Macroeconomics Volume 6 ; 6 ; 2006 >    
+    au < testing ; Advances in Macroeconomics Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -77,7 +77,7 @@
     au < manifest ; Advances in Theoretical Economics Volume 3 ; 3 ; 2003 >
     au < manifest ; Advances in Theoretical Economics Volume 4 ; 4 ; 2004 >
     au < manifest ; Advances in Theoretical Economics Volume 5 ; 5 ; 2005 >
-    au < manifest ; Advances in Theoretical Economics Volume 6 ; 6 ; 2006 >    
+    au < testing ; Advances in Theoretical Economics Volume 6 ; 6 ; 2006 >    
 
   }
  
@@ -338,7 +338,7 @@
     au < manifest ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; 2003 >
     au < manifest ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; 2004 >    
     au < manifest ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
-    au < manifest ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; 2006 >    
+    au < testing ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; 2006 >    
 
   }
 
@@ -358,7 +358,7 @@
     au < manifest ; Contributions to Macroeconomics Volume 3 ; 3 ; 2003 >    
     au < manifest ; Contributions to Macroeconomics Volume 4 ; 4 ; 2004 >
     au < manifest ; Contributions to Macroeconomics Volume 5 ; 5 ; 2005 >    
-    au < manifest ; Contributions to Macroeconomics Volume 6 ; 6 ; 2006 > 
+    au < testing ; Contributions to Macroeconomics Volume 6 ; 6 ; 2006 > 
 
   }
 
@@ -378,7 +378,7 @@
     au < manifest ; Contributions to Theoretical Economics Volume 3 ; 3 ; 2003 >    
     au < manifest ; Contributions to Theoretical Economics Volume 4 ; 4 ; 2004 >
     au < manifest ; Contributions to Theoretical Economics Volume 5 ; 5 ; 2005 >    
-    au < manifest ; Contributions to Theoretical Economics Volume 6 ; 6 ; 2006 > 
+    au < testing ; Contributions to Theoretical Economics Volume 6 ; 6 ; 2006 > 
 
   }
 
@@ -1290,7 +1290,7 @@
       eissn = 1446-9022
     >
 
-    param[base_url] = http://www.psocommons.org/
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rne
 
     au < manifest ; Review of Network Economics Volume 1 ; 1 ; 2002 >
