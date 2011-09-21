@@ -266,7 +266,7 @@
     au < released ; crawling ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < released ; crawling ; 2009 ; Business and Politics Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Business and Politics Volume 12 ; 12 >
-    au < testing ; exists ; 2011 ; Business and Politics Volume 13 ; 13 >
+    au < released ; manifest ; 2011 ; Business and Politics Volume 13 ; 13 >
 
   }
 
@@ -282,7 +282,7 @@
 
     au < released ; crawling ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; California Journal of Politics and Policy Volume 2 ; 2 >
-    au < testing ; exists ; 2011 ; California Journal of Politics and Policy Volume 3 ; 3 >
+    au < released ; manifest ; 2011 ; California Journal of Politics and Policy Volume 3 ; 3 >
 
   }
 
@@ -319,7 +319,7 @@
     au < released ; crawling ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
-    au < testing ; exists ; 2011 ; Chemical Product and Process Modeling Volume 6 ; 6 >
+    au < released ; manifest ; 2011 ; Chemical Product and Process Modeling Volume 6 ; 6 >
 
   }
 
@@ -400,7 +400,7 @@
     au < released ; crawling ; 2008 ; The Economists' Voice Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; The Economists' Voice Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; The Economists' Voice Volume 7 ; 7 >
-    au < testing ; exists ; 2011 ; The Economists' Voice Volume 8 ; 8 >
+    au < released ; manifest ; 2011 ; The Economists' Voice Volume 8 ; 8 >
 
   }
   
@@ -414,7 +414,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = erj
 
-    au < testing ; exists ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
+    au < released ; manifest ; 2011 ; Entrepreneurship Research Journal Volume 1 ; 1 >
 
   }  
   
@@ -436,7 +436,7 @@
     au < released ; crawling ; 2008 ; The Forum Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; The Forum Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; The Forum Volume 8 ; 8 >
-    au < testing ; exists ; 2011 ; The Forum Volume 9 ; 9 >
+    au < released ; manifest ; 2011 ; The Forum Volume 9 ; 9 >
 
   }
 
@@ -463,7 +463,7 @@
     au < released ; crawling ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
     au < released ; crawling ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
     au < released ; crawling ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
-    au < manifest ; exists ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 >
+    au < testing ; exists ; 2011 ; Forum for Health Economics & Policy Volume 14 ; 14 >
 
   }
 
@@ -535,7 +535,7 @@
     au < released ; crawling ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Economy Journal Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Economy Journal Volume 10 ; 10 >
-    au < manifest ; exists ; 2011 ; Global Economy Journal Volume 11 ; 11 >
+    au < testing ; exists ; 2011 ; Global Economy Journal Volume 11 ; 11 >
 
   }
 
@@ -559,7 +559,7 @@
     au < released ; crawling ; 2008 ; Global Jurist Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Jurist Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Jurist Volume 10 ; 10 >
-    au < manifest ; exists ; 2011 ; Global Jurist Volume 11 ; 11 >
+    au < testing ; exists ; 2011 ; Global Jurist Volume 11 ; 11 >
 
   }
 
@@ -600,7 +600,7 @@
     au < released ; crawling ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; The International Journal of Biostatistics Volume 7 ; 7 >
+    au < testing ; exists ; 2011 ; The International Journal of Biostatistics Volume 7 ; 7 >
 
   }
 
@@ -622,7 +622,7 @@
     au < released ; crawling ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; International Journal of Chemical Reactor Engineering Volume 9 ; 9 >
+    au < testing ; exists ; 2011 ; International Journal of Chemical Reactor Engineering Volume 9 ; 9 >
 
   }
 
@@ -647,7 +647,7 @@
     au < released ; crawling ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
     au < released ; crawling ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 >
-    au < manifest ; exists ; 2011 ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 >
+    au < testing ; exists ; 2011 ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 >
 
   }
 
@@ -667,7 +667,7 @@
     au < released ; crawling ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; International Journal of Food Engineering Volume 7 ; 7 >
+    au < testing ; exists ; 2011 ; International Journal of Food Engineering Volume 7 ; 7 >
 
   }
 
@@ -688,7 +688,7 @@
     au < released ; crawling ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 >
-    au < manifest ; exists ; 2011 ; International Journal of Nursing Education Scholarship Volume 8 ; 8 >
+    au < testing ; exists ; 2011 ; International Journal of Nursing Education Scholarship Volume 8 ; 8 >
 
   }
 
@@ -724,7 +724,7 @@
     au < manifest ; exists ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
     au < manifest ; exists ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 >    
     au < manifest ; exists ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 >
-    au < manifest ; exists ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 >
+    au < testing ; exists ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 >
     
   }
 
@@ -746,7 +746,7 @@
     au < released ; crawling ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 >
+    au < testing ; exists ; 2011 ; Journal of Agricultural & Food Industrial Organization Volume 9 ; 9 >
 
   }
 
