@@ -130,7 +130,7 @@
     au < manifest ; exists ; 2008 ; Biomedical Materials Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Biomedical Materials Volume 4 ; 4 > 
     au < released ; crawling ; 2010 ; Biomedical Materials Volume 5 ; 5 > 
-    au < testing ; exists ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
+    au < released ; manifest ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
 
   }
   
@@ -198,7 +198,7 @@
     au < manifest ; exists ; 2008 ; Chinese Journal of Chemical Physics Volume 21 ; 21 > 
     au < manifest ; exists ; 2009 ; Chinese Journal of Chemical Physics Volume 22 ; 22 > 
     au < released ; crawling ; 2010 ; Chinese Journal of Chemical Physics Volume 23 ; 23 > 
-    au < testing ; exists ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
+    au < released ; manifest ; 2011 ; Chinese Journal of Chemical Physics Volume 24 ; 24 > 
 
   }
 
@@ -252,7 +252,7 @@
     au < manifest ; exists ; 2008 ; Chinese Physics C Volume 32 ; 32 > 
     au < manifest ; exists ; 2009 ; Chinese Physics C Volume 33 ; 33 > 
     au < released ; crawling ; 2010 ; Chinese Physics C Volume 34 ; 34 > 
-    au < testing ; exists ; 2011 ; Chinese Physics C Volume 35 ; 35 > 
+    au < released ; manifest ; 2011 ; Chinese Physics C Volume 35 ; 35 > 
 
   }
 
@@ -295,7 +295,7 @@
     au < manifest ; exists ; 2008 ; Chinese Physics Letters Volume 25 ; 25 > 
     au < manifest ; exists ; 2009 ; Chinese Physics Letters Volume 26 ; 26 > 
     au < released ; crawling ; 2010 ; Chinese Physics Letters Volume 27 ; 27 > 
-    au < testing ; exists ; 2011 ; Chinese Physics Letters Volume 28 ; 28 > 
+    au < released ; manifest ; 2011 ; Chinese Physics Letters Volume 28 ; 28 > 
 
   }
 
@@ -338,7 +338,7 @@
     au < manifest ; exists ; 2008 ; Classical and Quantum Gravity Volume 25 ; 25 > 
     au < manifest ; exists ; 2009 ; Classical and Quantum Gravity Volume 26 ; 26 > 
     au < released ; crawling ; 2010 ; Classical and Quantum Gravity Volume 27 ; 27 > 
-    au < testing ; exists ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
+    au < released ; manifest ; 2011 ; Classical and Quantum Gravity Volume 28 ; 28 > 
 
   }
 
@@ -389,8 +389,9 @@
     au < manifest ; exists ; 2009 ; Communications in Theoretical Physics Volume 52 ; 52 > 
     au < released ; crawling ; 2010 ; Communications in Theoretical Physics Volume 53 ; 53 > 
     au < released ; crawling ; 2010 ; Communications in Theoretical Physics Volume 54 ; 54 > 
-    au < testing ; exists ; 2011 ; Communications in Theoretical Physics Volume 55 ; 55 > 
-    au < manifest ; exists ; 2011 ; Communications in Theoretical Physics Volume 56 ; 56 >
+    au < released ; manifest ; 2011 ; Communications in Theoretical Physics Volume 55 ; 55 > 
+    au < testing ; exists ; 2011 ; Communications in Theoretical Physics Volume 56 ; 56 >
+
   }
 
   {
@@ -408,7 +409,7 @@
     au < manifest ; exists ; 2008 ; Computational Science & Discovery Volume 1 ; 1 > 
     au < manifest ; exists ; 2009 ; Computational Science & Discovery Volume 2 ; 2 > 
     au < released ; crawling ; 2010 ; Computational Science & Discovery Volume 3 ; 3 > 
-    au < manifest ; exists ; 2011 ; Computational Science & Discovery Volume 4 ; 4 > 
+    au < testing ; exists ; 2011 ; Computational Science & Discovery Volume 4 ; 4 > 
 
   }
 
@@ -447,7 +448,7 @@
     au < manifest ; exists ; 2008 ; Environmental Research Letters Volume 3 ; 3 > 
     au < manifest ; exists ; 2009 ; Environmental Research Letters Volume 4 ; 4 > 
     au < released ; crawling ; 2010 ; Environmental Research Letters Volume 5 ; 5 > 
-    au < manifest ; exists ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
+    au < testing ; exists ; 2011 ; Environmental Research Letters Volume 6 ; 6 > 
 
   }
 
@@ -555,9 +556,9 @@
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 92 ; 92 > 
-    au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 93 ; 93 > 
-    au < crawling ; exists ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 > 
-    au < manifest ; exists ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 > 
+    au < testing ; exists ; 2011 ; EPL (Europhysics Letters) Volume 93 ; 93 > 
+    au < testing ; exists ; 2011 ; EPL (Europhysics Letters) Volume 94 ; 94 > 
+    au < testing ; exists ; 2011 ; EPL (Europhysics Letters) Volume 95 ; 95 > 
 
   }
 
