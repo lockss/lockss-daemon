@@ -1302,7 +1302,7 @@
     au < manifest ; Review of Network Economics Volume 7 ; 7 ; 2008 >
     au < manifest ; Review of Network Economics Volume 8 ; 8 ; 2009 >
     au < manifest ; Review of Network Economics Volume 9 ; 9 ; 2010 >
-    au < manifest ; Review of Network Economics Volume 10 ; 10 ; 2011 >
+    au < ready ; Review of Network Economics Volume 10 ; 10 ; 2011 >
 
   }
 
@@ -1329,7 +1329,7 @@
     au < manifest ; The Rhodes Cook Letter Volume 9 ; 9 ; 2008 >
     au < manifest ; The Rhodes Cook Letter Volume 10 ; 10 ; 2009 >
     au < manifest ; The Rhodes Cook Letter Volume 11 ; 11 ; 2010 >
-    au < manifest ; The Rhodes Cook Letter Volume 12 ; 12 ; 2011 >    
+    au < ready ; The Rhodes Cook Letter Volume 12 ; 12 ; 2011 >    
 
   }
 
@@ -1344,7 +1344,7 @@
     param[journal_abbr] = rhcpp
 
     au < ready ; Risk, Hazards & Crisis in Public Policy Volume 1 ; 1 ; 2010 >
-    au < manifest ; Risk, Hazards & Crisis in Public Policy Volume 2 ; 2 ; 2011 >
+    au < ready ; Risk, Hazards & Crisis in Public Policy Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -1367,7 +1367,7 @@
     au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 ; 2008 >
     au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 ; 2009 >
     au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 ; 2010 >
-    au < manifest ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; 2011 >
+    au < ready ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; 2011 >
 
   }
 
@@ -1383,7 +1383,7 @@
 
     au < ready ; Statistical Communications in Infectious Diseases Volume 1 ; 1 ; 2009 >
     au < ready ; Statistical Communications in Infectious Diseases Volume 2 ; 2 ; 2010 >
-    au < manifest ; Statistical Communications in Infectious Diseases Volume 3 ; 3 ; 2011 >
+    au < ready ; Statistical Communications in Infectious Diseases Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -1398,7 +1398,7 @@
     param[journal_abbr] = spp
 
     au < manifest ; Statistics, Politics, and Policy Volume 1 ; 1 ; 2010 >
-    au < manifest ; Statistics, Politics, and Policy Volume 2 ; 2 ; 2011 >
+    au < ready ; Statistics, Politics, and Policy Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -1443,7 +1443,7 @@
     au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 ; 2008 >
     au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 ; 2009 >
     au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 14 ; 14 ; 2010 >
-    au < manifest ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 ; 2011 >
+    au < ready ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 ; 2011 >
 
   }
 
@@ -1473,7 +1473,7 @@
     au < ready ; Theoretical Inquiries in Law Volume 9 ; 9 ; 2008 >
     au < ready ; Theoretical Inquiries in Law Volume 10 ; 10 ; 2009 >
     au < ready ; Theoretical Inquiries in Law Volume 11 ; 11 ; 2010 >
-    au < manifest ; Theoretical Inquiries in Law Volume 12 ; 12 ; 2011 >
+    au < ready ; Theoretical Inquiries in Law Volume 12 ; 12 ; 2011 >
 
   }
 
@@ -1549,7 +1549,7 @@
 
     au < manifest ; World Medical & Health Policy Volume 1 ; 1 ; 2009 >
     au < ready ; World Medical & Health Policy Volume 2 ; 2 ; 2010 >
-    au < manifest ; World Medical & Health Policy Volume 3 ; 3 ; 2011 >
+    au < ready ; World Medical & Health Policy Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -1570,7 +1570,7 @@ comment[wspr4] = daemon thinks there is no permission statement and fails the cr
     au < notReady ; World Political Science Review Volume 4 ; 4 ; 2008 >
     au < ready ; World Political Science Review Volume 5 ; 5 ; 2009>
     au < ready ; World Political Science Review Volume 6 ; 6 ; 2010>
-    au < manifest ; World Political Science Review Volume 7 ; 7 ; 2011>
+    au < ready ; World Political Science Review Volume 7 ; 7 ; 2011>
 
   }
 
