@@ -31,14 +31,14 @@
     au < HighWirePressH20Plugin ; released ; 1992 ; Acupuncture in Medicine Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 1993 ; Acupuncture in Medicine Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 1994 ; Acupuncture in Medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 1997 ; Acupuncture in Medicine Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 2002 ; Acupuncture in Medicine Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; Acupuncture in Medicine Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; Acupuncture in Medicine Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; Acupuncture in Medicine Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; Acupuncture in Medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Acupuncture in Medicine Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Acupuncture in Medicine Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Acupuncture in Medicine Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Acupuncture in Medicine Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 2003 ; Acupuncture in Medicine Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2004 ; Acupuncture in Medicine Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Acupuncture in Medicine Volume 23 ; 23 >
@@ -114,16 +114,16 @@
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
@@ -208,7 +208,7 @@
 
     param[base_url] = http://ep.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood - Education and Practice Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Archives of Disease in Childhood - Education and Practice Volume 92 ; 92 >
@@ -579,8 +579,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
@@ -1085,7 +1085,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Epidemiology & Community Health Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; notReady ; 2011 ; Journal of Epidemiology & Community Health Volume 65 ; 65 >
 
   }
 
