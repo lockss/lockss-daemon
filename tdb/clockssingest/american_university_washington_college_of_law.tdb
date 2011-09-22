@@ -124,18 +124,18 @@
 
     param[journal_abbr] = jgspl
 
-    au < testing ; exists ; 1993 ; The Modern American Volume 1 ; 1 >
-    au < testing ; exists ; 1994 ; The Modern American Volume 2 ; 2 >
-    au < testing ; exists ; 1995 ; The Modern American Volume 3 ; 3 >
-    au < testing ; exists ; 1996 ; The Modern American Volume 4 ; 4 >
-    au < testing ; exists ; 1997 ; The Modern American Volume 5 ; 5 >
-    au < testing ; exists ; 1998 ; The Modern American Volume 6 ; 6 >
-    au < testing ; exists ; 1999 ; The Modern American Volume 7 ; 7 >
-    au < testing ; exists ; 2000 ; The Modern American Volume 8 ; 8 >
+    au < released ; manifest ; 1993 ; The Modern American Volume 1 ; 1 >
+    au < released ; manifest ; 1994 ; The Modern American Volume 2 ; 2 >
+    au < released ; manifest ; 1995 ; The Modern American Volume 3 ; 3 >
+    au < released ; manifest ; 1996 ; The Modern American Volume 4 ; 4 >
+    au < released ; manifest ; 1997 ; The Modern American Volume 5 ; 5 >
+    au < released ; manifest ; 1998 ; The Modern American Volume 6 ; 6 >
+    au < released ; manifest ; 1999 ; The Modern American Volume 7 ; 7 >
+    au < released ; manifest ; 2000 ; The Modern American Volume 8 ; 8 >
     au < doesNotExist ; doesNotExist ; 0 ; The Modern American Volume 9 ; 9 >
     au < doesNotExist ; doesNotExist ; 0 ; The Modern American Volume 10 ; 10 >
-    au < testing ; exists ; 2003 ; The Modern American Volume 11 ; 11 >
-    au < testing ; exists ; 2004 ; The Modern American Volume 12 ; 12 >
+    au < released ; manifest ; 2003 ; The Modern American Volume 11 ; 11 >
+    au < released ; manifest ; 2004 ; The Modern American Volume 12 ; 12 >
     au < released ; manifest ; 2005 ; The Modern American Volume 13 ; 13 >
     au < released ; manifest ; 2005-2006 ; The Modern American Volume 14 ; 14 >
     au < released ; manifest ; 2006-2007 ; The Modern American Volume 15 ; 15 >
@@ -184,10 +184,10 @@
 
     param[journal_abbr] = sdlp
 
-    au < testing ; exists ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
-    au < testing ; exists ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
-    au < testing ; exists ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 >
-    au < testing ; exists ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
+    au < released ; manifest ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
+    au < released ; manifest ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
+    au < released ; manifest ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 >
+    au < released ; manifest ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
     au < released ; manifest ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
     au < released ; manifest ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
     au < released ; manifest ; 2006-2007 ; Sustainable Development Law & Policy Volume 7 ; 7 >
