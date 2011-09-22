@@ -6748,7 +6748,45 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1972 ; Educational Management Administration & Leadership Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1973 ; Educational Management Administration & Leadership Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1974 ; Educational Management Administration & Leadership Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1975 ; Educational Management Administration & Leadership Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1976 ; Educational Management Administration & Leadership Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1977 ; Educational Management Administration & Leadership Volume 6 ; 6 ; >
+      au < exists ; exists ; 1978 ; Educational Management Administration & Leadership Volume 7 ; 7 ; >
+      au < exists ; exists ; 1979 ; Educational Management Administration & Leadership Volume 8 ; 8 ; >
+      au < exists ; exists ; 1980 ; Educational Management Administration & Leadership Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1982 ; Educational Management Administration & Leadership Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1983 ; Educational Management Administration & Leadership Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1984 ; Educational Management Administration & Leadership Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1985 ; Educational Management Administration & Leadership Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1986 ; Educational Management Administration & Leadership Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1987 ; Educational Management Administration & Leadership Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1988 ; Educational Management Administration & Leadership Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1989 ; Educational Management Administration & Leadership Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1990 ; Educational Management Administration & Leadership Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1991 ; Educational Management Administration & Leadership Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1992 ; Educational Management Administration & Leadership Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1993 ; Educational Management Administration & Leadership Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1994 ; Educational Management Administration & Leadership Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1995 ; Educational Management Administration & Leadership Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1996 ; Educational Management Administration & Leadership Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1997 ; Educational Management Administration & Leadership Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1998 ; Educational Management Administration & Leadership Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1999 ; Educational Management Administration & Leadership Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2000 ; Educational Management Administration & Leadership Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2001 ; Educational Management Administration & Leadership Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2002 ; Educational Management Administration & Leadership Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2003 ; Educational Management Administration & Leadership Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2004 ; Educational Management Administration & Leadership Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2005 ; Educational Management Administration & Leadership Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; Educational Management Administration & Leadership Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2007 ; Educational Management Administration & Leadership Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2009 ; Educational Management Administration & Leadership Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; Educational Management Administration & Leadership Volume 38 ; 38 ;  >
+      au < manifest ; exists ; 2011 ; Educational Management Administration & Leadership Volume 39 ; 39 ; >
 
     }
 
@@ -6778,7 +6816,31 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1987 ; Educational Policy Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1988 ; Educational Policy Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1989 ; Educational Policy Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1990 ; Educational Policy Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1991 ; Educational Policy Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1992 ; Educational Policy Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1993 ; Educational Policy Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1994 ; Educational Policy Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1995 ; Educational Policy Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1996 ; Educational Policy Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1997 ; Educational Policy Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1998 ; Educational Policy Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; Educational Policy Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; Educational Policy Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; Educational Policy Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; Educational Policy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; Educational Policy Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004 ; Educational Policy Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2005 ; Educational Policy Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2006 ; Educational Policy Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2007 ; Educational Policy Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2008 ; Educational Policy Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2009 ; Educational Policy Volume 23 ; 23 ; >
       au < released ; crawling ; 2010 ; Educational Policy Volume 24 ; 24 ;  >
+      au < manifest ; exists ; 2011 ; Educational Policy Volume 25 ; 25 ; >
 
     }
 
@@ -6801,6 +6863,53 @@
 
       au < notReady ; exists ; 2008 ; Educational Researcher Volume 37 ; 37 ;  >
       au < notReady ; exists ; 2009 ; Educational Researcher Volume 38 ; 38 ;  >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 1972 ; Educational Researcher Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1973 ; Educational Researcher Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1974 ; Educational Researcher Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1975 ; Educational Researcher Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1976 ; Educational Researcher Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1977 ; Educational Researcher Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1978 ; Educational Researcher Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1979 ; Educational Researcher Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1980 ; Educational Researcher Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1981 ; Educational Researcher Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1982 ; Educational Researcher Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1983 ; Educational Researcher Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1984 ; Educational Researcher Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1985 ; Educational Researcher Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1986 ; Educational Researcher Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1987 ; Educational Researcher Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1988 ; Educational Researcher Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1989 ; Educational Researcher Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1990 ; Educational Researcher Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1991 ; Educational Researcher Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1992 ; Educational Researcher Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1993 ; Educational Researcher Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1994 ; Educational Researcher Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1995 ; Educational Researcher Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1996 ; Educational Researcher Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1997 ; Educational Researcher Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1998 ; Educational Researcher Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1999 ; Educational Researcher Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2000 ; Educational Researcher Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2001 ; Educational Researcher Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2002 ; Educational Researcher Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2003 ; Educational Researcher Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2004 ; Educational Researcher Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2005 ; Educational Researcher Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2006 ; Educational Researcher Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2007 ; Educational Researcher Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2008 ; Educational Researcher Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2009 ; Educational Researcher Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2010 ; Educational Researcher Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2011 ; Educational Researcher Volume 40 ; 40 ; >
 
     }
 
@@ -6829,7 +6938,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2009 ; Emotion Review Volume 1 ; 1 ; >
       au < released ; crawling ; 2010 ; Emotion Review Volume 2 ; 2 ;  >
+      au < manifest ; exists ; 2011 ; Emotion Review Volume 3 ; 3 ; >
 
     }
 
@@ -6858,8 +6969,49 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Environment and Behavior Volume 40 ; 40 ;  >
+      au < manifest ; exists ; 1969 ; Environment and Behavior Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1970 ; Environment and Behavior Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1971 ; Environment and Behavior Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1972 ; Environment and Behavior Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1973 ; Environment and Behavior Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1974 ; Environment and Behavior Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1975 ; Environment and Behavior Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1976 ; Environment and Behavior Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1977 ; Environment and Behavior Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1978 ; Environment and Behavior Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1979 ; Environment and Behavior Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1980 ; Environment and Behavior Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1981 ; Environment and Behavior Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1982 ; Environment and Behavior Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1983 ; Environment and Behavior Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1984 ; Environment and Behavior Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1985 ; Environment and Behavior Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1986 ; Environment and Behavior Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1987 ; Environment and Behavior Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1988 ; Environment and Behavior Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1989 ; Environment and Behavior Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1990 ; Environment and Behavior Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1991 ; Environment and Behavior Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1992 ; Environment and Behavior Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1993 ; Environment and Behavior Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1994 ; Environment and Behavior Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1995 ; Environment and Behavior Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1996 ; Environment and Behavior Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1997 ; Environment and Behavior Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1998 ; Environment and Behavior Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1999 ; Environment and Behavior Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2000 ; Environment and Behavior Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2001 ; Environment and Behavior Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2002 ; Environment and Behavior Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2003 ; Environment and Behavior Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2004 ; Environment and Behavior Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2005 ; Environment and Behavior Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2006 ; Environment and Behavior Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2007 ; Environment and Behavior Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2008 ; Environment and Behavior Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2009 ; Environment and Behavior Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Environment and Behavior Volume 42 ; 42 ;  >
+      au < manifest ; exists ; 2011 ; Environment and Behavior Volume 43 ; 43 ; >
 
     }
 
@@ -6888,8 +7040,29 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2008 ; Environment and Urbanization Volume 20 ; 20 ;  >
+      au < manifest ; exists ; 1989 ; Environment and Urbanization Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1990 ; Environment and Urbanization Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1991 ; Environment and Urbanization Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1992 ; Environment and Urbanization Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1993 ; Environment and Urbanization Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1994 ; Environment and Urbanization Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1995 ; Environment and Urbanization Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1996 ; Environment and Urbanization Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1997 ; Environment and Urbanization Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1998 ; Environment and Urbanization Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1999 ; Environment and Urbanization Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2000 ; Environment and Urbanization Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Environment and Urbanization Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Environment and Urbanization Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2003 ; Environment and Urbanization Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2004 ; Environment and Urbanization Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2005 ; Environment and Urbanization Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2006 ; Environment and Urbanization Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007 ; Environment and Urbanization Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Environment and Urbanization Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; Environment and Urbanization Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Environment and Urbanization Volume 22 ; 22 ;  >
+      au < manifest ; exists ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
 
     }
 
@@ -6919,7 +7092,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2001 ; Ethnicities Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; Ethnicities Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; Ethnicities Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; Ethnicities Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; Ethnicities Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; Ethnicities Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; Ethnicities Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; Ethnicities Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; Ethnicities Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Ethnicities Volume 10 ; 10 ;  >
+      au < manifest ; exists ; 2011 ; Ethnicities Volume 11 ; 11 ; >
 
     }
 
@@ -6949,7 +7132,18 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2000 ; Ethnography Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; Ethnography Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; Ethnography Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; Ethnography Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; Ethnography Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; Ethnography Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; Ethnography Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; Ethnography Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2008 ; Ethnography Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2009 ; Ethnography Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Ethnography Volume 11 ; 11 ;  >
+      au < manifest ; exists ; 2011 ; Ethnography Volume 12 ; 12 ; >
 
     }
 
@@ -6979,7 +7173,47 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1971 ; European History Quarterly Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1972 ; European History Quarterly Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1973 ; European History Quarterly Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1974 ; European History Quarterly Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1975 ; European History Quarterly Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1976 ; European History Quarterly Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1977 ; European History Quarterly Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1978 ; European History Quarterly Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1979 ; European History Quarterly Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1980 ; European History Quarterly Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1981 ; European History Quarterly Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1982 ; European History Quarterly Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1983 ; European History Quarterly Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1984 ; European History Quarterly Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1985 ; European History Quarterly Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1986 ; European History Quarterly Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1987 ; European History Quarterly Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1988 ; European History Quarterly Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1989 ; European History Quarterly Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1990 ; European History Quarterly Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1991 ; European History Quarterly Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1992 ; European History Quarterly Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1993 ; European History Quarterly Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1994 ; European History Quarterly Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1995 ; European History Quarterly Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1996 ; European History Quarterly Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1997 ; European History Quarterly Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1998 ; European History Quarterly Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1999 ; European History Quarterly Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2000 ; European History Quarterly Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2001 ; European History Quarterly Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2002 ; European History Quarterly Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2003 ; European History Quarterly Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2004 ; European History Quarterly Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2005 ; European History Quarterly Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2006 ; European History Quarterly Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2007 ; European History Quarterly Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2008 ; European History Quarterly Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2009 ; European History Quarterly Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; European History Quarterly Volume 40 ; 40 ;  >
+      au < manifest ; exists ; 2011 ; European History Quarterly Volume 41 ; 41 ; >
 
     }
 
@@ -7008,8 +7242,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 ;  >
+      au < manifest ; exists ; 1998 ; European Journal of Archaeology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; European Journal of Archaeology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; European Journal of Archaeology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; European Journal of Archaeology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; European Journal of Archaeology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Archaeology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Archaeology Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Archaeology Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Archaeology Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Archaeology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Archaeology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Archaeology Volume 13 ; 13 ;  >
+      au < exists ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 ; >
 
     }
 
@@ -7039,7 +7285,32 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1986 ; European Journal of Communication Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; European Journal of Communication Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; European Journal of Communication Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; European Journal of Communication Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; European Journal of Communication Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; European Journal of Communication Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; European Journal of Communication Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; European Journal of Communication Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; European Journal of Communication Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; European Journal of Communication Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; European Journal of Communication Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; European Journal of Communication Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; European Journal of Communication Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; European Journal of Communication Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; European Journal of Communication Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; European Journal of Communication Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; European Journal of Communication Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Communication Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Communication Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Communication Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Communication Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Communication Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Communication Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Communication Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; European Journal of Communication Volume 25 ; 25 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
 
     }
 
@@ -7069,7 +7340,14 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2004 ; European Journal of Criminology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Criminology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Criminology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Criminology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Criminology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Criminology Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; European Journal of Criminology Volume 7 ; 7 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Criminology Volume 8 ; 8 ; >
 
     }
 
@@ -7099,7 +7377,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1998 ; European Journal of Cultural Studies Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; European Journal of Cultural Studies Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; European Journal of Cultural Studies Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; European Journal of Cultural Studies Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; European Journal of Cultural Studies Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Cultural Studies Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Cultural Studies Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Cultural Studies Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Cultural Studies Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Cultural Studies Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Cultural Studies Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Cultural Studies Volume 13 ; 13 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 ; >
 
     }
 
@@ -7129,7 +7420,23 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1995 ; European Journal of Industrial Relations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; European Journal of Industrial Relations Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; European Journal of Industrial Relations Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; European Journal of Industrial Relations Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; European Journal of Industrial Relations Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; European Journal of Industrial Relations Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; European Journal of Industrial Relations Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; European Journal of Industrial Relations Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Industrial Relations Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Industrial Relations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Industrial Relations Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Industrial Relations Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Industrial Relations Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Industrial Relations Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
 
     }
 
@@ -7159,7 +7466,23 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1995 ; European Journal of International Relations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; European Journal of International Relations Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; European Journal of International Relations Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; European Journal of International Relations Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; European Journal of International Relations Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; European Journal of International Relations Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; European Journal of International Relations Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; European Journal of International Relations Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; European Journal of International Relations Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; European Journal of International Relations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; European Journal of International Relations Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; European Journal of International Relations Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; European Journal of International Relations Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; European Journal of International Relations Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of International Relations Volume 16 ; 16 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
 
     }
 
@@ -7189,7 +7512,16 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2002 ; European Journal of Political Theory Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Political Theory Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Political Theory Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Political Theory Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Political Theory Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Political Theory Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Political Theory Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Political Theory Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; European Journal of Political Theory Volume 9 ; 9 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Political Theory Volume 10 ; 10 ; >
 
     }
 
@@ -7219,7 +7551,20 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 1998 ; European Journal of Social Theory Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; European Journal of Social Theory Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; European Journal of Social Theory Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; European Journal of Social Theory Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; European Journal of Social Theory Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; European Journal of Social Theory Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; European Journal of Social Theory Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; European Journal of Social Theory Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; European Journal of Social Theory Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; European Journal of Social Theory Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; European Journal of Social Theory Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Social Theory Volume 13 ; 13 ;  >
+      au < manifest ; exists ; 2011 ; European Journal of Social Theory Volume 14 ; 14 ; >
 
     }
 
