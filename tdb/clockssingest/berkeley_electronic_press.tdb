@@ -761,7 +761,7 @@
     param[journal_abbr] = jbca
 
     au < manifest ; exists ; 2010 ; Journal of Benefit-Cost Analysis Volume 1 ; 1 >
-    au < testing ; exists ; 2011 ; Journal of Benefit-Cost Analysis Volume 2 ; 2 >
+    au < released ; manifest ; 2011 ; Journal of Benefit-Cost Analysis Volume 2 ; 2 >
 
   }
 
@@ -822,7 +822,7 @@
     au < crawling ; exists ; 2007-2008 ; Journal of College and Character Volume 9 ; 9 >
     au < crawling ; exists ; 2008-2009 ; Journal of College and Character Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Journal of College and Character Volume 11 ; 11 >
-    au < testing ; exists ; 2011 ; Journal of College and Character Volume 12 ; 12 >
+    au < released ; manifest ; 2011 ; Journal of College and Character Volume 12 ; 12 >
 
   }
 
@@ -843,7 +843,7 @@
     au < released ; crawling ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of Complementary and Integrative Medicine Volume 7 ; 7 >
-    au < testing ; exists ; 2011 ; Journal of Complementary and Integrative Medicine Volume 8 ; 8 >
+    au < released ; manifest ; 2011 ; Journal of Complementary and Integrative Medicine Volume 8 ; 8 >
 
   }
 
@@ -860,7 +860,7 @@
     au < released ; crawling ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
     au < released ; crawling ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; Journal of Drug Policy Analysis Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 >
 
   }
   {
@@ -905,7 +905,7 @@
     au < released ; crawling ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of Homeland Security and Emergency Management Volume 7 ; 7 >
-    au < testing ; exists ; 2011 ; Journal of Homeland Security and Emergency Management Volume 8 ; 8 >
+    au < released ; manifest ; 2011 ; Journal of Homeland Security and Emergency Management Volume 8 ; 8 >
 
   }
 
@@ -924,7 +924,7 @@
     au < released ; crawling ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Journal of Imagery Research in Sport and Physical Activity Volume 5 ; 5 >
-    au < testing ; exists ; 2011 ; Journal of Imagery Research in Sport and Physical Activity Volume 6 ; 6 >
+    au < released ; manifest ; 2011 ; Journal of Imagery Research in Sport and Physical Activity Volume 6 ; 6 >
 
   }
 
@@ -962,7 +962,7 @@
     au < released ; crawling ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Journal of Quantitative Analysis in Sports Volume 6 ; 6 >
-    au < testing ; exists ; 2011 ; Journal of Quantitative Analysis in Sports Volume 7 ; 7 >
+    au < released ; manifest ; 2011 ; Journal of Quantitative Analysis in Sports Volume 7 ; 7 >
 
   }
 
@@ -992,7 +992,7 @@
     au < crawling ; exists ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
     au < crawling ; exists ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
     au < released ; crawling ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 >
-    au < testing ; exists ; 2011 ; Journal of Student Affairs Research and Practice Volume 48 ; 48 >
+    au < released ; manifest ; 2011 ; Journal of Student Affairs Research and Practice Volume 48 ; 48 >
 
   }
 
@@ -1008,7 +1008,7 @@
 
     au < released ; crawling ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Journal of Time Series Econometrics Volume 2 ; 2 >
-    au < testing ; exists ; 2011 ; Journal of Time Series Econometrics Volume 3 ; 3 >
+    au < released ; manifest ; 2011 ; Journal of Time Series Econometrics Volume 3 ; 3 >
 
   }
 
@@ -1025,7 +1025,7 @@
     au < crawling ; exists ; 2006-2007 ; Journal of Tort Law Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
     au < crawling ; exists ; 2010 ; Journal of Tort Law Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; Journal of Tort Law Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; Journal of Tort Law Volume 4 ; 4 >
 
   }
 
@@ -1043,7 +1043,7 @@
     au < released ; crawling ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 >
-    au < manifest ; exists ; 2011 ; Law & Ethics of Human Rights Volume 5 ; 5 >
+    au < testing ; exists ; 2011 ; Law & Ethics of Human Rights Volume 5 ; 5 >
 
   }
 
@@ -1060,7 +1060,7 @@
     au < released ; crawling ; 2008 ; The Law and Development Review Volume 1 ; 1 >
     au < released ; crawling ; 2009 ; The Law and Development Review Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; The Law and Development Review Volume 3 ; 3 >
-    au < manifest ; exists ; 2011 ; The Law and Development Review Volume 4 ; 4 >
+    au < testing ; exists ; 2011 ; The Law and Development Review Volume 4 ; 4 >
     
   }
 
@@ -1117,7 +1117,7 @@
     au < crawling ; exists ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
     au < crawling ; exists ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
-    au < manifest ; exists ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 ; 4 >
+    au < testing ; exists ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 ; 4 >
 
   }
 
@@ -1150,7 +1150,7 @@
     param[journal_abbr] = npf
 
     au < manifest ; exists ; 2010 ; Nonprofit Policy Forum Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Nonprofit Policy Forum Volume 2 ; 2 >
+    au < testing ; exists ; 2011 ; Nonprofit Policy Forum Volume 2 ; 2 >
 
   }
 
@@ -1183,7 +1183,7 @@
     au < released ; crawling ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
     au < released ; crawling ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
-    au < manifest ; exists ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 >
+    au < testing ; exists ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 >
 
   }
 
@@ -1199,7 +1199,7 @@
 
     au < crawling ; exists ; 2009 ; Policy & Internet Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Policy & Internet Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Policy & Internet Volume 3 ; 3 >
+    au < testing ; exists ; 2011 ; Policy & Internet Volume 3 ; 3 >
 
   }
 
@@ -1226,7 +1226,7 @@
 
       au < crawling ; exists ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >    
       au < released ; crawling ; 2010 ; Poverty & Public Policy Volume 2 ; 2 >    
-      au < manifest ; exists ; 2011 ; Poverty & Public Policy Volume 3 ; 3 >  
+      au < testing ; exists ; 2011 ; Poverty & Public Policy Volume 3 ; 3 >  
     
     }
 
@@ -1248,7 +1248,7 @@
     au < released ; crawling ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Review of Law & Economics Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
+    au < testing ; exists ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
 
   }
 
@@ -1270,7 +1270,7 @@
     au < released ; crawling ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Review of Marketing Science Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; Review of Marketing Science Volume 9 ; 9 >
+    au < testing ; exists ; 2011 ; Review of Marketing Science Volume 9 ; 9 >
 
   }
 
@@ -1292,7 +1292,7 @@
     au < released ; crawling ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
     au < manifest ; exists ; 2010 ; Review of Middle East Economics and Finance Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; Review of Middle East Economics and Finance Volume 7 ; 7 >    
+    au < testing ; exists ; 2011 ; Review of Middle East Economics and Finance Volume 7 ; 7 >    
 
   }
 
