@@ -16,6 +16,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.fasebj.org/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[v25] = daemon not able to hash v25.
 
     au < exists ; 1987 ; The FASEB Journal Volume 1 ; 1 >
     au < exists ; 1988 ; The FASEB Journal Volume 2 ; 2 >
@@ -41,7 +43,7 @@
     au < released ; 2008 ; The FASEB Journal Volume 22 ; 22 >
     au < released ; 2009 ; The FASEB Journal Volume 23 ; 23 >
     au < ready ; 2010 ; The FASEB Journal Volume 24 ; 24 >
-    au < testing ; 2011 ; The FASEB Journal Volume 25 ; 25 >
+    au < notReady ; 2011 ; The FASEB Journal Volume 25 ; 25 >
 
   }
 
