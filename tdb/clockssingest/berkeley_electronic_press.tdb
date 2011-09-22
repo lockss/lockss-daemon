@@ -1043,7 +1043,7 @@
     au < released ; crawling ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 >
-    au < testing ; exists ; 2011 ; Law & Ethics of Human Rights Volume 5 ; 5 >
+    au < released ; manifest ; 2011 ; Law & Ethics of Human Rights Volume 5 ; 5 >
 
   }
 
@@ -1060,7 +1060,7 @@
     au < released ; crawling ; 2008 ; The Law and Development Review Volume 1 ; 1 >
     au < released ; crawling ; 2009 ; The Law and Development Review Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; The Law and Development Review Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; The Law and Development Review Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; The Law and Development Review Volume 4 ; 4 >
     
   }
 
@@ -1117,7 +1117,7 @@
     au < crawling ; exists ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
     au < crawling ; exists ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
     au < released ; crawling ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
-    au < testing ; exists ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 ; 4 >
+    au < released ; manifest ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 ; 4 >
 
   }
 
@@ -1150,7 +1150,7 @@
     param[journal_abbr] = npf
 
     au < manifest ; exists ; 2010 ; Nonprofit Policy Forum Volume 1 ; 1 >
-    au < testing ; exists ; 2011 ; Nonprofit Policy Forum Volume 2 ; 2 >
+    au < released ; manifest ; 2011 ; Nonprofit Policy Forum Volume 2 ; 2 >
 
   }
 
@@ -1183,7 +1183,7 @@
     au < released ; crawling ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
     au < released ; crawling ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
     au < released ; crawling ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
-    au < testing ; exists ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 >
+    au < released ; manifest ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 >
 
   }
 
@@ -1199,7 +1199,7 @@
 
     au < crawling ; exists ; 2009 ; Policy & Internet Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Policy & Internet Volume 2 ; 2 >
-    au < testing ; exists ; 2011 ; Policy & Internet Volume 3 ; 3 >
+    au < released ; manifest ; 2011 ; Policy & Internet Volume 3 ; 3 >
 
   }
 
@@ -1226,7 +1226,7 @@
 
       au < crawling ; exists ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >    
       au < released ; crawling ; 2010 ; Poverty & Public Policy Volume 2 ; 2 >    
-      au < testing ; exists ; 2011 ; Poverty & Public Policy Volume 3 ; 3 >  
+      au < released ; manifest ; 2011 ; Poverty & Public Policy Volume 3 ; 3 >  
     
     }
 
@@ -1248,7 +1248,7 @@
     au < released ; crawling ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Review of Law & Economics Volume 6 ; 6 >
-    au < testing ; exists ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
+    au < released ; manifest ; 2011 ; Review of Law & Economics Volume 7 ; 7 >
 
   }
 
@@ -1270,7 +1270,7 @@
     au < released ; crawling ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Review of Marketing Science Volume 8 ; 8 >
-    au < testing ; exists ; 2011 ; Review of Marketing Science Volume 9 ; 9 >
+    au < released ; manifest ; 2011 ; Review of Marketing Science Volume 9 ; 9 >
 
   }
 
@@ -1292,7 +1292,7 @@
     au < released ; crawling ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
     au < manifest ; exists ; 2010 ; Review of Middle East Economics and Finance Volume 6 ; 6 >
-    au < testing ; exists ; 2011 ; Review of Middle East Economics and Finance Volume 7 ; 7 >    
+    au < released ; manifest ; 2011 ; Review of Middle East Economics and Finance Volume 7 ; 7 >    
 
   }
 
@@ -1315,7 +1315,7 @@
     au < manifest ; exists ; 2008 ; Review of Network Economics Volume 7 ; 7 >
     au < manifest ; exists ; 2009 ; Review of Network Economics Volume 8 ; 8 >
     au < manifest ; exists ; 2010 ; Review of Network Economics Volume 9 ; 9 >
-    au < manifest ; exists ; 2011 ; Review of Network Economics Volume 10 ; 10 >
+    au < testing ; exists ; 2011 ; Review of Network Economics Volume 10 ; 10 >
 
   }
 
@@ -1342,7 +1342,7 @@
     au < manifest ; exists ; 2008 ; The Rhodes Cook Letter Volume 9 ; 9 >
     au < manifest ; exists ; 2009 ; The Rhodes Cook Letter Volume 10 ; 10 >
     au < manifest ; exists ; 2010 ; The Rhodes Cook Letter Volume 11 ; 11 >
-    au < manifest ; exists ; 2011 ; The Rhodes Cook Letter Volume 12 ; 12 >    
+    au < testing ; exists ; 2011 ; The Rhodes Cook Letter Volume 12 ; 12 >    
 
   }
 
@@ -1357,7 +1357,7 @@
     param[journal_abbr] = rhcpp
 
     au < released ; crawling ; 2010 ; Risk, Hazards & Crisis in Public Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Risk, Hazards & Crisis in Public Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2011 ; Risk, Hazards & Crisis in Public Policy Volume 2 ; 2 >
 
   }
   
@@ -1380,7 +1380,7 @@
     au < released ; crawling ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
     au < released ; crawling ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
     au < released ; crawling ; 2010 ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 >
-    au < manifest ; exists ; 2011 ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 >
+    au < testing ; exists ; 2011 ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 >
 
   }
 
@@ -1396,7 +1396,7 @@
 
     au < released ; crawling ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; Statistical Communications in Infectious Diseases Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Statistical Communications in Infectious Diseases Volume 3 ; 3 >
+    au < testing ; exists ; 2011 ; Statistical Communications in Infectious Diseases Volume 3 ; 3 >
 
   }
 
@@ -1411,7 +1411,7 @@
     param[journal_abbr] = spp
 
     au < manifest ; exists ; 2010 ; Statistics, Politics, and Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Statistics, Politics, and Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2011 ; Statistics, Politics, and Policy Volume 2 ; 2 >
 
   }
 
@@ -1456,7 +1456,7 @@
     au < released ; crawling ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
     au < released ; crawling ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
     au < released ; crawling ; 2010 ; Studies in Nonlinear Dynamics & Econometrics Volume 14 ; 14 >
-    au < manifest ; exists ; 2011 ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 >
+    au < testing ; exists ; 2011 ; Studies in Nonlinear Dynamics & Econometrics Volume 15 ; 15 >
 
   }
 
@@ -1483,7 +1483,7 @@
     au < released ; crawling ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
     au < released ; crawling ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Theoretical Inquiries in Law Volume 11 ; 11 >
-    au < manifest ; exists ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 >
+    au < testing ; exists ; 2011 ; Theoretical Inquiries in Law Volume 12 ; 12 >
 
   }
 
@@ -1559,7 +1559,7 @@
 
     au < crawling ; exists ; 2009 ; World Medical & Health Policy Volume 1 ; 1 >
     au < released ; crawling ; 2010 ; World Medical & Health Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; World Medical & Health Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2011 ; World Medical & Health Policy Volume 3 ; 3 >
 
   }
   
@@ -1582,7 +1582,7 @@
     au < released ; crawling ; 2008 ; World Political Science Review Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; World Political Science Review Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; World Political Science Review Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; World Political Science Review Volume 7 ; 7 >
+    au < testing ; exists ; 2011 ; World Political Science Review Volume 7 ; 7 >
 
   }
   
