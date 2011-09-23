@@ -1,9 +1,6 @@
 package org.lockss.exporter.kbart;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbTestUtil;
@@ -13,6 +10,8 @@ import org.lockss.exporter.kbart.TdbAuOrderScorer.ConsistencyScore;
 import org.lockss.exporter.kbart.TdbAuOrderScorer.SORT_FIELD;
 
 import junit.framework.TestCase;
+
+import javax.naming.OperationNotSupportedException;
 
 /**
  * Test the behaviour of the TdbAuOrderScorer. Note that the tests here are
@@ -155,17 +154,31 @@ public class TestTdbAuOrderScorer extends TestCase {
         This occurs for example when there are 2 sets of AUs, one down, one released 
         and current. These AUs otherwise display a full and consistent ordering.
     
-      au < down ; 1999 ; Africa Today Volume 46 ; 46 >
-      au < released ; 1999 ; Africa Today Volume 46 ; 46 >
-      au < down ; 2000 ; Africa Today Volume 47 ; 47 >
-      au < released ; 2000 ; Africa Today Volume 47 ; 47 >
-      au < down ; 2001 ; Africa Today Volume 48 ; 48 >
-      au < released ; 2001 ; Africa Today Volume 48 ; 48 >
-      au < down ; 2002-2003 ; Africa Today Volume 49 ; 49 >
-      au < released ; 2002-2003 ; Africa Today Volume 49 ; 49 >
-      au < down ; 2003-2004 ; Africa Today Volume 50 ; 50 >
-      au < released ; 2003-2004 ; Africa Today Volume 50 ; 50 >
-    
+    au < down ; 1999 ; Africa Today Volume 46 ; 46 >
+    au < released ; 1999 ; Africa Today Volume 46 ; 46 >
+    au < down ; 2000 ; Africa Today Volume 47 ; 47 >
+    au < released ; 2000 ; Africa Today Volume 47 ; 47 >
+    au < down ; 2001 ; Africa Today Volume 48 ; 48 >
+    au < released ; 2001 ; Africa Today Volume 48 ; 48 >
+    au < down ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+    au < released ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+    au < down ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+    au < released ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+
+    ---------------------------------------------------------------------------
+    (6) Sequence with duplicate volumes, presumably representing a single volume
+        published across several years.
+
+    au < released ; Texture, Stress, and Microstructure Volume 1 (1972) ; 1972 ; 1 ; 1972 >
+    au < released ; Texture, Stress, and Microstructure Volume 1 (1974) ; 1974 ; 1 ; 1974 >
+    au < released ; Texture, Stress, and Microstructure Volume 2 (1975) ; 1975 ; 2 ; 1975 >
+    au < released ; Texture, Stress, and Microstructure Volume 2 (1976) ; 1976 ; 2 ; 1976 >
+    au < released ; Texture, Stress, and Microstructure Volume 2 (1977) ; 1977 ; 2 ; 1977 >
+    au < released ; Texture, Stress, and Microstructure Volume 3 (1978) ; 1978 ; 3 ; 1978 >
+    au < released ; Texture, Stress, and Microstructure Volume 3 (1979) ; 1979 ; 3 ; 1979 >
+    au < released ; Texture, Stress, and Microstructure Volume 4 (1980) ; 1980 ; 4 ; 1980 >
+    au < released ; Texture, Stress, and Microstructure Volume 4 (1981) ; 1981 ; 4 ; 1981 >
+
     ---------------------------------------------------------------------------
    */
   
@@ -175,11 +188,15 @@ public class TestTdbAuOrderScorer extends TestCase {
   // single range which is also equal to the original list.
   List<TdbAu> fullyConsistentAus;
 
-  // A sequence of interleaved duplicate AUs (identical in terms of main fields). 
+  // A sequence of interleaved duplicate AUs (identical in terms of main fields).
   // This occurs for example when there are 2 sets of AUs, one down, one released 
   // and current.
   List<TdbAu> afrTod;
-  
+
+  // A sequence of AUs whose volumes stretch over several years. The list is
+  // organised in pairs that should be considered to be of the same volume.
+  List<TdbAu> textStressMicroVolPairs;
+
   // Example titles
   List<TdbAu> tang;
   List<TdbAu> oxEcPap;            // Could be ordered by volume
@@ -552,20 +569,39 @@ public class TestTdbAuOrderScorer extends TestCase {
       consistentSequences.add(fullyConsistentAus);
       
       // ----------------------------------------------------------------------
-      TdbAu afrTod1a  = TdbTestUtil.createBasicAu("Africa Today",  "1999", "46");
-      TdbAu afrTod1b  = TdbTestUtil.createBasicAu("Africa Today",  "1999", "46");
-      TdbAu afrTod2a  = TdbTestUtil.createBasicAu("Africa Today",  "2000", "47");
-      TdbAu afrTod2b  = TdbTestUtil.createBasicAu("Africa Today",  "2000", "47");
-      TdbAu afrTod3a  = TdbTestUtil.createBasicAu("Africa Today",  "2001", "48");
-      TdbAu afrTod3b  = TdbTestUtil.createBasicAu("Africa Today",  "2001", "48");
-      TdbAu afrTod4a  = TdbTestUtil.createBasicAu("Africa Today",  "2002-2003", "49");
-      TdbAu afrTod4b  = TdbTestUtil.createBasicAu("Africa Today",  "2002-2003", "49");
-      TdbAu afrTod5a  = TdbTestUtil.createBasicAu("Africa Today",  "2003-2004", "50");
-      TdbAu afrTod5b  = TdbTestUtil.createBasicAu("Africa Today",  "2003-2004", "50");
+      TdbAu afrTod1a  = TdbTestUtil.createBasicAu("Africa Today Volume 46",  "1999", "46");
+      TdbAu afrTod1b  = TdbTestUtil.createBasicAu("Africa Today Volume 46",  "1999", "46");
+      TdbAu afrTod2a  = TdbTestUtil.createBasicAu("Africa Today Volume 47",  "2000", "47");
+      TdbAu afrTod2b  = TdbTestUtil.createBasicAu("Africa Today Volume 47",  "2000", "47");
+      TdbAu afrTod3a  = TdbTestUtil.createBasicAu("Africa Today Volume 48",  "2001", "48");
+      TdbAu afrTod3b  = TdbTestUtil.createBasicAu("Africa Today Volume 48",  "2001", "48");
+      TdbAu afrTod4a  = TdbTestUtil.createBasicAu("Africa Today Volume 49",  "2002-2003", "49");
+      TdbAu afrTod4b  = TdbTestUtil.createBasicAu("Africa Today Volume 49",  "2002-2003", "49");
+      TdbAu afrTod5a  = TdbTestUtil.createBasicAu("Africa Today Volume 50",  "2003-2004", "50");
+      TdbAu afrTod5b  = TdbTestUtil.createBasicAu("Africa Today Volume 50",  "2003-2004", "50");
       // Note these are purposely ordered in pairs of consecutive duplicates
-      afrTod = Arrays.asList(afrTod1a, afrTod1b, afrTod2a, afrTod2b, afrTod3a, afrTod3b, 
+      afrTod = Arrays.asList(afrTod1a, afrTod1b, afrTod2a, afrTod2b, afrTod3a, afrTod3b,
           afrTod4a, afrTod4b, afrTod5a, afrTod5b);
       consistentSequences.add(afrTod);
+
+      // ----------------------------------------------------------------------
+      TdbAu textStressMicro1a  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 1",  "1972", "1");
+      TdbAu textStressMicro1b  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 1",  "1974", "1");
+      TdbAu textStressMicro2a  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 2",  "1975", "2");
+      TdbAu textStressMicro2b  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 2",  "1976", "2");
+      TdbAu textStressMicro2c  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 2",  "1977", "2");
+      TdbAu textStressMicro3a  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 3",  "1978", "3");
+      TdbAu textStressMicro3b  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 3",  "1979", "3");
+      TdbAu textStressMicro4a  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 4",  "1980", "4");
+      TdbAu textStressMicro4b  = TdbTestUtil.createBasicAu("Texture, Stress, and Microstructure Volume 4",  "1981", "4");
+      // Order in comparison pairs
+      textStressMicroVolPairs = Arrays.asList(
+          textStressMicro1a, textStressMicro1b,
+          textStressMicro2a, textStressMicro2b,
+          textStressMicro2b, textStressMicro2c,
+          textStressMicro3a, textStressMicro3b,
+          textStressMicro4a, textStressMicro4b
+      );
 
     } catch (TdbException e) {
       fail("Error setting up test TdbAus.");
@@ -576,9 +612,85 @@ public class TestTdbAuOrderScorer extends TestCase {
     super.tearDown();
   }
 
+  // This would need to be in a different package!
+  /*public final void testInstantiation() {
+    try {
+      new TdbAuOrderScorer();
+      fail("It should not be possible to instantiate TdbAuOrderScorer.");
+    } catch (RuntimeException e) {
+      // Expected exception
+    }
+  }*/
+
+  // ----------------------------------------------------------------------
   // TODO test the methods of the SORT_FIELD enums ?
-  // These all delegate to methods already under test.
- 
+  // These all delegate to methods already under test,
+  // but sometimes combine them in interesting ways.
+  // ----------------------------------------------------------------------
+
+  /**
+   * Determines whether a String appears to represent a range. In general, a
+   * range is considered to be <i>either</i> two numeric strings <i>or</i> two
+   * non-numeric strings, separated by a hyphen '-' with optional whitespace.
+   * The second value is expected to be numerically or lexically greater than
+   * the first. For example, "s1-4" would not qualify as either a numeric or a
+   * non-numeric range, while "I-4" ("I" being a Roman number) and the string
+   * range "a-baa" would.
+   * <p>
+   * "s1-4" and "1-s4" are invalid ranges
+   * Both sides if the hyphen must either be parseable as integers, or both
+   * involve non-numerical tokens.
+   * <p>
+   * To allow for identifers that themselves incorporate a hyphen, the input
+   * string is only split around the centremost hyphen. If there is an even
+   * number of hyphens, the input string is assumed not to represent a parseable
+   * range.
+   */
+  public final void testIsVolumeRange() {
+    // Invalid input
+    assertFalse(TdbAuOrderScorer.isVolumeRange(null));
+    assertFalse(TdbAuOrderScorer.isVolumeRange(""));
+
+    // Invalid ranges
+    assertFalse(TdbAuOrderScorer.isVolumeRange("s1-4"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("1-s4"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("s1-s2-s3"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("s1-2-3"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("s123"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("1-2-3"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("123"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("a-1"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("1-two"));
+    // Invalid downward ranges
+    assertFalse(TdbAuOrderScorer.isVolumeRange("II-I"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("2-1"));
+    assertFalse(TdbAuOrderScorer.isVolumeRange("bb-aa"));
+
+    // Valid ranges
+    assertTrue(TdbAuOrderScorer.isVolumeRange("I-II"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("a-aa"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("a-b"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("a-baa"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("aardvark - bat"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("s2 - s10"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("a-1 - b-1"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("1-2-3 - 2-3-4"));
+    // Individual non-numerical tokens are not compared
+    assertTrue(TdbAuOrderScorer.isVolumeRange("s1-t4"));
+
+    // Valid mixed-format ranges
+    assertTrue(TdbAuOrderScorer.isVolumeRange("I-4"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("1-IV"));
+
+    // Currently we allow non-increasing ranges
+    assertTrue(TdbAuOrderScorer.isVolumeRange("I-I"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("a-a"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("hello-hello"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("1-1"));
+    assertTrue(TdbAuOrderScorer.isVolumeRange("1-a -1-a"));
+  }
+
+
   /**
    * Consecutive integer years must be truly consecutive integers.
    * No check is made for "year format".
@@ -589,7 +701,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     assertTrue(  TdbAuOrderScorer.areYearsConsecutive(-1,0) );
     
     assertFalse( TdbAuOrderScorer.areYearsConsecutive(2000,1999) );
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive(2000,1990) );
+    assertFalse(TdbAuOrderScorer.areYearsConsecutive(2000, 1990));
     assertFalse( TdbAuOrderScorer.areYearsConsecutive(2000,2003) );
     assertFalse( TdbAuOrderScorer.areYearsConsecutive(2001,1999) );
     assertFalse( TdbAuOrderScorer.areYearsConsecutive(2000,2000) );
@@ -600,17 +712,17 @@ public class TestTdbAuOrderScorer extends TestCase {
    * Years must be parseable as numbers.
    */
   public final void testAreYearsConsecutiveStringString() {
-    assertTrue(  TdbAuOrderScorer.areYearsConsecutive("2000","2001") );
-    assertTrue(  TdbAuOrderScorer.areYearsConsecutive("2001","2002") );
-    assertTrue(  TdbAuOrderScorer.areYearsConsecutive("-1","0") );
+    assertTrue(  TdbAuOrderScorer.areYearsConsecutive("2000", "2001") );
+    assertTrue(TdbAuOrderScorer.areYearsConsecutive("2001", "2002"));
+    assertTrue(TdbAuOrderScorer.areYearsConsecutive("-1", "0"));
     // Spaces will be trimmed
     assertTrue(  TdbAuOrderScorer.areYearsConsecutive(" 2000 ","     2001 ") );
     
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000","1999") );
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000","1990") );
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000","2003") );
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2001","1999") );
-    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000","2000") );
+    assertFalse(TdbAuOrderScorer.areYearsConsecutive("2000", "1999"));
+    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000", "1990") );
+    assertFalse(TdbAuOrderScorer.areYearsConsecutive("2000", "2003"));
+    assertFalse(TdbAuOrderScorer.areYearsConsecutive("2001", "1999"));
+    assertFalse( TdbAuOrderScorer.areYearsConsecutive("2000", "2000") );
     assertFalse( TdbAuOrderScorer.areYearsConsecutive("0","0") );
 
     // Check exceptions
@@ -625,12 +737,12 @@ public class TestTdbAuOrderScorer extends TestCase {
       } catch (NumberFormatException e) { /* do nothing */ }
     }
   }
-  
+
   /**
    * Whether there is a positive gap greater than one between the end of one
    * range and the start of another. 
    */
-  public final void testIsBetweenRangeGap() {
+  public final void testIsGapBetween() {
     assertTrue(  TdbAuOrderScorer.isGapBetween("2000", "2002")); 
     assertFalse( TdbAuOrderScorer.isGapBetween("2000", "2001")); 
     assertFalse( TdbAuOrderScorer.isGapBetween("2000", "2000"));
@@ -646,6 +758,72 @@ public class TestTdbAuOrderScorer extends TestCase {
       TdbAuOrderScorer.isGapBetween("1999 to 2000", "a string");
       fail("Should have produced a NumberFormatException.");
     } catch (NumberFormatException e) { /* ignore */ }
+  }
+
+  /**
+   * A volume string is considered to be valid if it is not empty, and is equal
+   * to neither zero nor a lone hyphen.
+   */
+  public final void testIsVolumeStringValid() {
+    // False if empty, null, zero or hyphen
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid(null));
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid(""));
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid("   "));
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid("0"));
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid(" 0000  "));
+    assertFalse(TdbAuOrderScorer.isVolumeStringValid(" - "));
+
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("null"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("--"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("v0"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("volume one"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("a1-4"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid(" any-old--string-really 019 "));
+
+    // Ranges are fine (even if invalid)
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("1-2"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("2-1"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("II-1"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("!-£"));
+    assertTrue(TdbAuOrderScorer.isVolumeStringValid("bb-aa"));
+  }
+
+  /**
+   * A pair of volume strings are considered to be valid if either one is valid.
+   */
+  public final void testAreVolumeStringsValid() {
+    // False if both are null, empty, zero or hyphen
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("", ""));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("0", "0"));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("-", "-"));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid(null, null));
+    // Or combinations
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("", "0"));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("", "-"));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("", null));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("0", "-"));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("0", null));
+    assertFalse(TdbAuOrderScorer.areVolumeStringsValid("-", null));
+
+    // Any one valid volume is fine
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("", "1"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("0", "1"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("-", "1"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid(null, "1"));
+
+    // 2 valid volumes are fine
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("v0", "v0"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("volume one", "volume two"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("1", "2"));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("1", "one"));
+
+    // Ranges are fine (even if invalid ranges)
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("II-1", null));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("II-I", null));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("1-two", null));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("2-1", null));
+    assertTrue(TdbAuOrderScorer.areVolumeStringsValid("bb-aa", null));
+
   }
 
   /**
@@ -820,7 +998,21 @@ public class TestTdbAuOrderScorer extends TestCase {
     // regarded as generally increasing without needing to parse to integers
     assertTrue( TdbAuOrderScorer.areVolumesIncreasing("one","one") );
   }
-  
+
+  /**
+   * A pair of TdbAus represent the same (extended) volume if they
+   * have the same non-zero volume string along with appropriately sequential
+   * year ranges.
+   */
+  public final void testAreExtendedVolume() {
+    for (int i=0; i<textStressMicroVolPairs.size(); i+=2) {
+      assertTrue(TdbAuOrderScorer.areExtendedVolume(
+          textStressMicroVolPairs.get(i),
+          textStressMicroVolPairs.get(i+1)
+      ));
+    }
+  }
+
   /**
    * Two years are appropriately ordered if the second is not less than the 
    * first.
@@ -841,7 +1033,7 @@ public class TestTdbAuOrderScorer extends TestCase {
   }
 
   /**
-   * Years must be parseable as numbers.
+   * Years must be parseable as numbers, including Roman.
    */
   public final void testAreYearsIncreasingStringString() {
     assertTrue(  TdbAuOrderScorer.areYearsIncreasing("-32",  "1889") );
@@ -853,6 +1045,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     assertTrue(  TdbAuOrderScorer.areYearsIncreasing("2001", "2001") );
     assertTrue(  TdbAuOrderScorer.areYearsIncreasing("2000", "2000") );
     assertTrue(  TdbAuOrderScorer.areYearsIncreasing(" 999 ", " 3001 ") );
+    assertTrue(  TdbAuOrderScorer.areYearsIncreasing(" V ", " IX ") );
     
     assertFalse( TdbAuOrderScorer.areYearsIncreasing("2000", "1999") );
     assertFalse( TdbAuOrderScorer.areYearsIncreasing("2002", "2001") );
@@ -1191,7 +1384,7 @@ public class TestTdbAuOrderScorer extends TestCase {
     checkCountProportionOfRedundancyInRange(YR,  yorkGeoSoc, 0, 0);
 
     // commDis
-    checkCountProportionOfRedundancyInRange(VOL, commDis, 0, 1);
+    checkCountProportionOfRedundancyInRange(VOL, commDis, 0, 0);
     checkCountProportionOfRedundancyInRange(YR,  commDis, 0, 0);
 
     // geoSocLonMem
@@ -1221,20 +1414,25 @@ public class TestTdbAuOrderScorer extends TestCase {
   }
 
   /**
-   * Returns true if one string is parseable as an integer while the other is not.
+   * Returns true if one string contains only digits while the other is not
+   * parseable as a number.
    */
   public final void testChangeOfFormats() {
     assertTrue(  TdbAuOrderScorer.changeOfFormats("string", "1") );
     assertTrue(  TdbAuOrderScorer.changeOfFormats("1", "string") );
     assertFalse( TdbAuOrderScorer.changeOfFormats("1", "1") );
     assertFalse( TdbAuOrderScorer.changeOfFormats("string", "string") );
+    // No change of formats when either string can be parsed as a Roman number
+    assertFalse( TdbAuOrderScorer.changeOfFormats("1", "II") );
+    assertFalse( TdbAuOrderScorer.changeOfFormats("II", "3") );
     // The consistent list should not display any format changes
     assertFalse( containsChangeOfFormats(fullyConsistentAus, VOL) );
     assertFalse( containsChangeOfFormats(fullyConsistentAus, YR) );
-    // The following is currently false but we might want to do some proper
+    // The following are currently false but we might want to do some proper
     // regular expression work to find and rate string commonalities, or
     // use something like Levenstein distance.
     assertFalse( TdbAuOrderScorer.changeOfFormats("s1-1", "volume 8") );
+    assertFalse( TdbAuOrderScorer.changeOfFormats("99", "ill") );
   }
     
   /**
@@ -1406,52 +1604,73 @@ public class TestTdbAuOrderScorer extends TestCase {
   }
 
   /**
-   * Calculate a relative score - the sum of the differences of each 
-   * individual score. 
+   *
    */
-  /*
-  public final void testCalculateRelativeBenefit() {
+  public final void testCalculateRelativeBenefitAndLoss() {
     for (int i=0; i<allYearRanges.size(); i++) {
-      List<TdbAu> aus = allLists.get(i);
+      List<TdbAu> aus = problemTitles.get(i);
       String title = allYearRanges.get(i).get(0).tdbAus.get(0).getName();
+      // Consistency score based on volume ordering
       orderVolYear(aus);
-      ConsistencyScore csVol = TdbAuOrderScorer.getConsistencyScore(aus, allVolRanges.get(i), VOL);
+      ConsistencyScore csVol = TdbAuOrderScorer.getConsistencyScore(aus,
+          allVolRanges.get(i));
+      // Consistency score based on year ordering
       orderYearVol(aus);
-      ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(aus, allYearRanges.get(i), YR);
-      
-      float rbVolYear = TdbAuOrderScorer.calculateRelativeBenefit(csVol, csYear);
-      float rbYearVol = TdbAuOrderScorer.calculateRelativeBenefit(csYear, csVol);
-      // Relative benefits should be negations of one another
-      assertEquals(rbVolYear, rbYearVol==0 ? rbYearVol : -rbYearVol);
-      // The relative benefits should not be zero for the problematic cases
-      assertTrue(rbVolYear != 0f);
-      assertTrue(rbYearVol != 0f);
+      ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(aus,
+          allYearRanges.get(i));
 
-      // Ensure the relative benefit swings the right way
-      if (titlesToOrderByVolume.contains(i)) {
-	assertTrue(title+" should prefer volume; rbVolYear="+rbVolYear, rbVolYear > 0);
-      } else if (titlesToOrderByYear.contains(i)) {
-	assertTrue(title+" should prefer year; rbYearVol="+rbYearVol, rbYearVol > 0);
-      } else {
-	// Indices that do not appear in either of these lists can be ordered either way 
-      }
+      // Calculate relative volume benefit for each score
+      float rvbVolYear =
+          TdbAuOrderScorer.calculateRelativeBenefitToVolume(csVol, csYear);
+      float rvbYearVol =
+          TdbAuOrderScorer.calculateRelativeBenefitToVolume(csYear, csVol);
+      // Calculate relative year loss for each score
+      float rylVolYear =
+          TdbAuOrderScorer.calculateRelativeLossToYear(csVol, csYear);
+      float rylYearVol =
+          TdbAuOrderScorer.calculateRelativeLossToYear(csYear, csVol);
+
+      // Relative benefits should be negations of one another
+      assertEquals(rvbVolYear, rvbYearVol == 0 ? rvbYearVol : -rvbYearVol);
+      // Relative losses should be negations of one another
+      assertEquals(rylVolYear, rylYearVol==0 ? rylYearVol : -rylYearVol);
+
+      // The relative benefits and losses should not be zero for the example cases
+      assertTrue(rvbVolYear != 0f);
+      assertTrue(rvbYearVol != 0f);
+      assertTrue(rylVolYear != 0f);
+      assertTrue(rylYearVol != 0f);
     }
+
     // Consistent sequence - single range
     List<TitleRange> ranges = Arrays.asList(new TitleRange(fullyConsistentAus));
-    // TODO do the sorting here and elsewhere, and use canonical for title range
     orderVolYear(fullyConsistentAus);
     ConsistencyScore csVol  = TdbAuOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
     orderYearVol(fullyConsistentAus);
     ConsistencyScore csYear = TdbAuOrderScorer.getConsistencyScore(fullyConsistentAus, ranges);
-    float rbVolYear = TdbAuOrderScorer.calculateRelativeBenefit(csVol, csYear);
-    float rbYearVol = TdbAuOrderScorer.calculateRelativeBenefit(csYear, csVol);
-    assertEquals(rbVolYear, rbYearVol);
+    // Calculate relative volume benefit for each score
+    float rvbVolYear =
+        TdbAuOrderScorer.calculateRelativeBenefitToVolume(csVol, csYear);
+    float rvbYearVol =
+        TdbAuOrderScorer.calculateRelativeBenefitToVolume(csYear, csVol);
+    // Calculate relative year loss for each score
+    float rylVolYear =
+        TdbAuOrderScorer.calculateRelativeLossToYear(csVol, csYear);
+    float rylYearVol =
+        TdbAuOrderScorer.calculateRelativeLossToYear(csYear, csVol);
+
+    // Relative benefits should be negations of one another
+    assertEquals(rvbVolYear, rvbYearVol == 0 ? rvbYearVol : -rvbYearVol);
+    // Relative losses should be negations of one another
+    assertEquals(rylVolYear, rylYearVol==0 ? rylYearVol : -rylYearVol);
+
     // Should all be equal to 0
-    assertEquals(0f, rbVolYear);
-    assertEquals(0f, rbYearVol);
+    assertEquals(0f, rvbVolYear);
+    assertEquals(0f, rvbYearVol);
+    assertEquals(0f, rylVolYear);
+    assertEquals(0f, rylYearVol);
   }
-  */
-   
+
   /**
    * Test simply whether volume or year is preferred in line with expectations.
    */
@@ -1482,7 +1701,6 @@ public class TestTdbAuOrderScorer extends TestCase {
     // Consistent sequence - single range
     for (List<TdbAu> aus : consistentSequences) {
       List<TitleRange> ranges = Arrays.asList(new TitleRange(aus));
-      // TODO do the sorting here and elsewhere, and use canonical for title range
       orderVolYear(aus);
       ConsistencyScore csVol  = TdbAuOrderScorer.getConsistencyScore(aus, ranges);
       orderYearVol(aus);
@@ -1695,8 +1913,8 @@ public class TestTdbAuOrderScorer extends TestCase {
     if (aus.size()<2) return false;
     for (int i=1; i<=aus.size()-1; i++) {
       if (TdbAuOrderScorer.changeOfFormats(
-          field.getValue(aus.get(i-1)), 
-          field.getValue(aus.get(i))
+          field.getValueForComparisonAsPrevious(aus.get(i-1)),
+          field.getValueForComparisonAsCurrent(aus.get(i))
       )) return true;
     }
     return false;

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.9.2.1 2011-09-01 12:16:46 pgust Exp $
+ * $Id: TdbAu.java,v 1.9.2.2 2011-09-23 13:23:33 easyonthemayo Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.exporter.kbart.TdbAuOrderScorer;
 import org.lockss.util.*;
 
 /**
@@ -622,19 +623,27 @@ public class TdbAu {
   }
   
   /**
-   * Get the start volume for this AU.
+   * Get the start volume for this AU. First the method checks whether the volume
+   * string looks like a genuine range. If it looks like a single identifier
+   * with a hyphen, the string is returned whole.
    * @return the start volume or <code>null</code> if not specified
    */
   public String getStartVolume() {
-    return NumberUtil.getRangeStart(getVolume());
+    String vol = getVolume();
+    return TdbAuOrderScorer.isVolumeRange(vol) ?
+        NumberUtil.getRangeStart(vol) : vol;
   }
 
   /**
-   * Get the end volume for this AU.
+   * Get the end volume for this AU. First the method checks whether the volume
+   * string looks like a genuine range. If it looks like a single identifier
+   * with a hyphen, the string is returned whole.
    * @return the end volume or <code>null</code> if not specified
    */
   public String getEndVolume() {
-    return NumberUtil.getRangeEnd(getVolume());
+    String vol = getVolume();
+    return TdbAuOrderScorer.isVolumeRange(vol) ?
+        NumberUtil.getRangeEnd(vol) : vol;
   }
 
   /**

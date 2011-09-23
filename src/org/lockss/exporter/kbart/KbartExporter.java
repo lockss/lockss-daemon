@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.12.2.3 2011-09-15 18:47:49 pgust Exp $
+ * $Id: KbartExporter.java,v 1.12.2.4 2011-09-23 13:23:33 easyonthemayo Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public abstract class KbartExporter {
     this.filter = KbartExportFilter.identityFilter(titles);
     // KBART info should be ordered alphabetically by title by default
     Collections.sort(titles, 
-    KbartTitleComparatorFactory.getComparator(Field.PUBLICATION_TITLE)
+	KbartTitleComparatorFactory.getComparator(Field.PUBLICATION_TITLE)
     );
   }
 
@@ -258,8 +258,8 @@ public abstract class KbartExporter {
     for (KbartTitle title : titles) {
       // Don't output some titles
       if (!filter.isTitleForOutput(title)) {
-    duplicateCount++;
-    continue;
+        duplicateCount++;
+        continue;
       }
       exportCount++;
       emitRecord(filter.getVisibleFieldValues(title));
@@ -270,8 +270,6 @@ public abstract class KbartExporter {
   
   /**
    * Format a header line and write it to the output.
-   *  
-   * @param names the names for each visible column
    */
   protected abstract void emitHeader() throws IOException;
 
@@ -305,9 +303,9 @@ public abstract class KbartExporter {
       recordError("Error clearing up after export", e);
     } finally {
       if (printWriter!=null) {
-    printWriter.flush();
-    printWriter.close();
-    printWriter = null;
+        printWriter.flush();
+        printWriter.close();
+        printWriter = null;
       }
     }
   }
@@ -346,7 +344,7 @@ public abstract class KbartExporter {
     String collnName = getCollectionName();
     String ext = outputFormat.getFileExtension();
     return StringUtil.separatedString(
-    new String[]{providerName, collnName, date}, "_"
+	new String[]{providerName, collnName, date}, "_"
     ) + "." + ext;
   }
   
@@ -383,11 +381,11 @@ public abstract class KbartExporter {
     String res = ConfigManager.getPlatformHostname();
     if (res == null) {
       try {
-    InetAddress inet = InetAddress.getLocalHost();
-    return inet.getHostName();
+	InetAddress inet = InetAddress.getLocalHost();
+	return inet.getHostName();
       } catch (UnknownHostException e) {
-    log.warning("Can't get hostname", e);
-    return "unknown";
+	log.warning("Can't get hostname", e);
+	return "unknown";
       }
     }
     return res;
@@ -462,11 +460,11 @@ public abstract class KbartExporter {
    */
   public String getOmittedFieldsSummary() {
     return filter.omittedFieldsManually() ?
-    String.format("Manually omitted columns: (%s)", 
-        StringUtil.separatedString(
-        EnumSet.complementOf(filter.getFieldOrdering().getFields()), ", "
-        )
-    ) : "";
+	String.format("Manually omitted columns: (%s)", 
+	    StringUtil.separatedString(
+		EnumSet.complementOf(filter.getFieldOrdering().getFields()), ", "
+	    )
+	) : "";
   }
   
   /**
@@ -479,10 +477,10 @@ public abstract class KbartExporter {
    */
   public String getOmittedTitlesSummary() {
     return duplicateCount > 0 ?
-    String.format("Duplicate records omitted: %s (%s)",
-        duplicateCount,
-        duplicatesExplanation
-    ) : "";
+	String.format("Duplicate records omitted: %s (%s)",
+	    duplicateCount,
+	    duplicatesExplanation
+	) : "";
   }
   
   /**
@@ -493,10 +491,10 @@ public abstract class KbartExporter {
    */
   public String getEmptySummary() {
     return filter.omittedEmptyFields() ? 
-    String.format("Empty columns omitted: (%s)", 
-        StringUtil.separatedString(filter.getOmittedEmptyFields(), ", ")
-    )
-    : "";
+	String.format("Empty columns omitted: (%s)", 
+	    StringUtil.separatedString(filter.getOmittedEmptyFields(), ", ")
+	)
+	: "";
   } 
 
   /**
@@ -529,9 +527,9 @@ public abstract class KbartExporter {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, 
           KbartExportFilter filter) {
-    KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this);
-    kbe.setFilter(filter);
-    return kbe;
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this);
+	kbe.setFilter(filter);
+	return kbe;
       }
     },*/
     
@@ -592,8 +590,8 @@ public abstract class KbartExporter {
      * @param footnote an optional footnote describing the option in more detail 
      */
     OutputFormat(String label, String mimeType, String fileExtension, 
-    boolean asFile, boolean isCompressible, boolean isHtml, 
-    String footnote) {
+	boolean asFile, boolean isCompressible, boolean isHtml, 
+	String footnote) {
       this.label = label;
       this.mimeType = mimeType;
       this.fileExtension = fileExtension;
@@ -604,7 +602,7 @@ public abstract class KbartExporter {
     }
     
     OutputFormat(String label, String mimeType, String fileExtension, 
-    boolean asFile, boolean isCompressible, boolean isHtml) {
+	boolean asFile, boolean isCompressible, boolean isHtml) {
       this(label, mimeType, fileExtension, asFile, isCompressible, isHtml, "");
     }
 
@@ -615,7 +613,7 @@ public abstract class KbartExporter {
      * @param titles a list of <code>KbartTitle</code> objects
      */
     public abstract KbartExporter makeExporter(List<KbartTitle> titles, 
-    KbartExportFilter filter);
+	KbartExportFilter filter);
     
     /**
      * Indicates whether the format should be supplied as a file.

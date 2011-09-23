@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.11.2.2 2011-09-13 15:00:56 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.11.2.3 2011-09-23 13:23:33 easyonthemayo Exp $
  */
 
 /*
@@ -32,10 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.Collections;
+import java.util.List;
 import java.util.Map;
-
-import javax.security.auth.login.Configuration;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.regex.MatchResult;
@@ -133,8 +131,9 @@ public class KbartTdbAuUtil {
     String au2vol  = au2.getVolume();
     // Null if either year is null, otherwise whether they match
     Boolean year = au1year!=null && au2year!=null ? au1year.equals(au2year) : null;
-    // Null if either volume is null, otherwise whether they match
-    Boolean vol  = au1vol !=null && au2vol !=null ? au1vol.equals(au2vol) : null;
+    // Null if either volume is null, otherwise whether they or their values match
+    Boolean vol  = au1vol !=null && au2vol !=null ?
+        (au1vol.equals(au2vol) || NumberUtil.areEqualValue(au1vol, au2vol)) : null;
     // Require both year and volume fields to be equal if they are available
     if (year!=null && vol!=null) return year && vol;
     // Otherwise return available year or volume match, or false
@@ -163,8 +162,8 @@ public class KbartTdbAuUtil {
    * Compare two strings which are supposed to be representations of years.
    * Returns less than 0 if the first is less than the second, greater than 0 if
    * the first is greater than the second, and 0 if they are the same. If the
-   * strings cannot be parsed the default NumberFormatException is propagated to the caller.
-   * Currently this method just calls <code>compareIntStrings()</code>.
+   * strings cannot be parsed the default NumberFormatException is propagated to
+   * the caller. Currently this method just calls <code>compareIntStrings()</code>.
    * 
    * @param year1 a string representing a year
    * @param year2 a string representing a year
@@ -192,10 +191,11 @@ public class KbartTdbAuUtil {
   }
 
   /**
-   * Attempts to find a Volume string for an AU. Looks for known parameters and attributes, 
-   * and if nothing is found returns the empty string. The AU's property maps are searched 
-   * for the following, in the order given: an attribute called "volume"; a parameter called "volume";
-   * a parameter called "volume_name". Sometimes there is a "volume_str" parameter, but it is too 
+   * Attempts to find a Volume string for an AU. Looks for known parameters and
+   * attributes, and if nothing is found returns the empty string. The AU's
+   * property maps are searched for the following, in the order given: an
+   * attribute called "volume"; a parameter called "volume"; a parameter called
+   * "volume_name". Sometimes there is a "volume_str" parameter, but it is too
    * inconsistent to parse at this point.
    * 
    * @param au the TdbAu whose params/attributes to search for a volume string
@@ -209,8 +209,9 @@ public class KbartTdbAuUtil {
   }
 
   /**
-   * Attempts to find an appropriate IssueFormat for an AU's issue string. Looks for known 
-   * issue parameters and attributes, and if nothing is found returns null. 
+   * Attempts to find an appropriate IssueFormat for an AU's issue string. Looks
+   * for known issue parameters and attributes, and if nothing is found returns
+   * null.
    * 
    * @param au the TdbAu whose params/attributes to search for an issue key
    * @return the appropriate IssueFormat, or null if no issue key/value found
@@ -223,8 +224,8 @@ public class KbartTdbAuUtil {
   }
 
   /**
-   * Attempts to find the year for an AU, looking first in the AU's attributes, then
-   * in the parameters, and if nothing is found returns the empty string. 
+   * Attempts to find the year for an AU, looking first in the AU's attributes,
+   * then in the parameters, and if nothing is found returns the empty string.
    * 
    * @param au the TdbAu whose properties to search for an attribute
    * @return the value of an existing key, or an empty string
@@ -232,16 +233,18 @@ public class KbartTdbAuUtil {
    */
   static String findYear(TdbAu au) {
     String s = findAuInfo(au, DEFAULT_YEAR_ATTR, AuInfoType.ATTR);
-    if (StringUtils.isEmpty(s)) s = findAuInfo(au, DEFAULT_YEAR_PARAM, AuInfoType.PARAM);
+    if (StringUtils.isEmpty(s))
+      s = findAuInfo(au, DEFAULT_YEAR_PARAM, AuInfoType.PARAM);
     return s==null ? "" : s;
   }
 
   /**
-   * Attempts to find the ISSN for an AU. Looks in the AU's properties, and if nothing is 
-   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
+   * Attempts to find the ISSN for an AU. Looks in the AU's properties, and if
+   * nothing is found <del>returns the result of the AU's title's
+   * <code>getId()</code> method</del>.
    * <p>
-   * Note: This method now only returns values from the AU's properties and does not substitute 
-   * the result of getId(). It also validates the purported ISSN.
+   * Note: This method now only returns values from the AU's properties and does
+   * not substitute the result of getId(). It also validates the purported ISSN.
    * 
    * @param au the TdbAu whose properties to search for an attribute
    * @return a valid ISSN from the value of an existing key, or the empty String
@@ -258,11 +261,12 @@ public class KbartTdbAuUtil {
   }
 
   /**
-   * Attempts to find the EISSN for an AU. Looks in the AU's properties, and if nothing is 
-   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
-   * <p> 
-   * This method now only returns values from the AU's properties and does not substitute 
-   * the result of getId(). It also validates the purported ISSN.
+   * Attempts to find the EISSN for an AU. Looks in the AU's properties, and if
+   * nothing is found <del>returns the result of the AU's title's
+   * <code>getId()</code> method</del>.
+   * <p>
+   * This method now only returns values from the AU's properties and does not
+   * substitute the result of getId(). It also validates the purported ISSN.
    * 
    * @param au the TdbAu whose properties to search for an attribute
    * @return a valid ISSN from the value of an existing key, or the empty String
@@ -280,11 +284,12 @@ public class KbartTdbAuUtil {
   
 
   /**
-   * Attempts to find the ISSN-L for an AU. Looks in the AU's properties, and if nothing is 
-   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
-   * <p> 
-   * This method now only returns values from the AU's properties and does not substitute 
-   * the result of getId(). It also validates the purported ISSN.
+   * Attempts to find the ISSN-L for an AU. Looks in the AU's properties, and if
+   * nothing is found <del>returns the result of the AU's title's
+   * <code>getId()</code> method</del>.
+   * <p>
+   * This method now only returns values from the AU's properties and does not
+   * substitute the result of getId(). It also validates the purported ISSN.
    * 
    * @param au the TdbAu whose properties to search for an attribute
    * @return a valid ISSN from the value of an existing key, or the empty String
@@ -407,8 +412,8 @@ public class KbartTdbAuUtil {
   static AuInfoType findAuInfoType(TdbAu au, String[] keys) {
     for (String key: keys) {
       for (AuInfoType type: AuInfoType.values()) {
-	String s = findAuInfo(au, key, type);
-	if (!StringUtils.isEmpty(s)) return type;
+        String s = findAuInfo(au, key, type);
+        if (!StringUtils.isEmpty(s)) return type;
       }
     }
     return null;
@@ -443,8 +448,18 @@ public class KbartTdbAuUtil {
   static int getLastYearAsInt(TdbAu au) {
     return stringYearAsInt(au.getEndYear()); 
   }
-  
-  
+
+  /**
+   * Get the latest end year specified in the list of TdbAus.
+   * @param aus a list of TdbAu
+   * @return
+   */
+  static int getLatestYear(List<TdbAu> aus) {
+    int l = 0;
+    for (TdbAu au : aus) l = Math.max(l, getLastYearAsInt(au));
+    return l;
+  }
+
   
   /**
    * Construct a regex which will match a token, or a list of tokens separated by the 

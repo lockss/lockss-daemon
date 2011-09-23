@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartTdbAuUtil.java,v 1.6.2.1 2011-09-13 15:00:56 easyonthemayo Exp $
+ * $Id: TestKbartTdbAuUtil.java,v 1.6.2.2 2011-09-23 13:23:33 easyonthemayo Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -71,6 +69,9 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
   // AUs for the equivalence tests
   private TdbAu afrTod, afrTodEquiv, afrTodDiffVol, afrTodDiffYear, 
       afrTodDiffName, afrTodDiffUrl, afrTodNullYear;
+  private List<TdbAu> afrTodAus = Arrays.asList(afrTod, afrTodEquiv,
+      afrTodDiffVol, afrTodDiffYear, afrTodDiffName, afrTodDiffUrl,
+      afrTodNullYear);
   
   /**
    * Create a test Tdb structure.
@@ -241,11 +242,11 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
       TdbTitle title = TdbTestUtil.makeVolumeTestTitle(vol);
 
       for (TdbAu au: title.getTdbAus()) {
-	String foundVol = KbartTdbAuUtil.findVolume(au);
-	assertNotNull(foundVol);
-	// The return should be a non-empty string with the correct value
-	assertFalse(au+" Volume not found", foundVol.equals(""));
-	assertTrue(au+" Wrong volume found: "+foundVol, foundVol.equals(vol));
+        String foundVol = KbartTdbAuUtil.findVolume(au);
+        assertNotNull(foundVol);
+        // The return should be a non-empty string with the correct value
+        assertFalse(au+" Volume not found", foundVol.equals(""));
+        assertTrue(au+" Wrong volume found: "+foundVol, foundVol.equals(vol));
       }
     } catch (TdbException e) {
       fail("Exception encountered in testFindVolume() "+e);
@@ -407,6 +408,58 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
   }
 
   /**
+   *
+   */
+  public void testGetLatestYear() {
+    try {
+      String name = "A Title";
+      // Single AU
+      assertEquals(1, KbartTdbAuUtil.getLatestYear(
+          Arrays.asList(
+              TdbTestUtil.createBasicAu(name, "1")
+          )
+      ));
+      // Several AUs, highest year at end
+      assertEquals(3, KbartTdbAuUtil.getLatestYear(
+          Arrays.asList(
+              TdbTestUtil.createBasicAu(name, "1"),
+              TdbTestUtil.createBasicAu(name, "2"),
+              TdbTestUtil.createBasicAu(name, "3")
+          )
+      ));
+      // Several AUs, duplicated highest
+      assertEquals(1, KbartTdbAuUtil.getLatestYear(
+          Arrays.asList(
+              TdbTestUtil.createBasicAu(name, "1"),
+              TdbTestUtil.createBasicAu(name, "1"),
+              TdbTestUtil.createBasicAu(name, "1")
+          )
+      ));
+      assertEquals(10, KbartTdbAuUtil.getLatestYear(
+          Arrays.asList(
+              TdbTestUtil.createBasicAu(name, "1"),
+              TdbTestUtil.createBasicAu(name, "10"),
+              TdbTestUtil.createBasicAu(name, "9"),
+              TdbTestUtil.createBasicAu(name, "8"),
+              TdbTestUtil.createBasicAu(name, "7")
+          )
+      ));
+      // Several AUs, highest year in middle
+      assertEquals(3000, KbartTdbAuUtil.getLatestYear(
+          Arrays.asList(
+              TdbTestUtil.createBasicAu(name, "1999"),
+              TdbTestUtil.createBasicAu(name, "2999"),
+              TdbTestUtil.createBasicAu(name, "3000"),
+              TdbTestUtil.createBasicAu(name, "1999"),
+              TdbTestUtil.createBasicAu(name, "2999")
+          )
+      ));
+    } catch (TdbException e) {
+      fail("Error setting up test TdbAus.");
+    }
+  }
+
+  /**
    * Exercise the IssueFormat enum - for each format, create a matching AU and try to extract the 
    * issue string and parse it for first and last years.
    * Also tests identifyIssueFormat(). 
@@ -418,17 +471,17 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
 
     try {
       for(IssueFormatTest fmt : IssueFormatTest.values()) {
-	String s = fmt.issueString;
-	IssueFormat ifmt = fmt.issueFormat;
-	au = TdbTestUtil.makeIssueTestAu(ifmt.getKey(), s);
-	// Get an issue format and check it is not null and matches what is expected
-	IssueFormat foundIfmt = KbartTdbAuUtil.identifyIssueFormat(au);
-	String fmtName = foundIfmt.name();
-	assertNotNull(foundIfmt);
-	assertEquals(ifmt, foundIfmt);
-	assertEquals(foundIfmt.extractFirstLastIssues(au).length, 2);
-	assertEquals(fmtName+" IssueFormat problem.", fmt.firstIssue, foundIfmt.getFirstIssue(au));
-	assertEquals(fmtName+" IssueFormat problem.", fmt.lastIssue, foundIfmt.getLastIssue(au));
+        String s = fmt.issueString;
+        IssueFormat ifmt = fmt.issueFormat;
+        au = TdbTestUtil.makeIssueTestAu(ifmt.getKey(), s);
+        // Get an issue format and check it is not null and matches what is expected
+        IssueFormat foundIfmt = KbartTdbAuUtil.identifyIssueFormat(au);
+        String fmtName = foundIfmt.name();
+        assertNotNull(foundIfmt);
+        assertEquals(ifmt, foundIfmt);
+        assertEquals(foundIfmt.extractFirstLastIssues(au).length, 2);
+        assertEquals(fmtName+" IssueFormat problem.", fmt.firstIssue, foundIfmt.getFirstIssue(au));
+        assertEquals(fmtName+" IssueFormat problem.", fmt.lastIssue, foundIfmt.getLastIssue(au));
       }      
       // Now test one with an incompatible issue format
       au = TdbTestUtil.makeIssueTestAu("not_a_real_issue_key", "not_a_real_issue_format");
