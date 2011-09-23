@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.6 2011-08-22 16:52:04 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.6.2.1 2011-09-23 14:17:36 easyonthemayo Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
 import org.lockss.plugin.AuOrderComparator;
-import org.lockss.plugin.AuHealthMetric.PreservationStatus;
 import org.lockss.util.Logger;
 
 /**
@@ -243,7 +242,7 @@ public class TdbUtil {
 
   /**
    * Get ArchivalUnit records for all the AUs which are preserved in this 
-   * LOCKSS box. This relies on the PreservationStatus enum class to provide 
+   * LOCKSS box. This relies on the AuHealthMetric class to provide
    * an interpretation of the ArchivalUnit's status.  
    * 
    * @return a collection of ArchivalUnit objects
@@ -253,11 +252,11 @@ public class TdbUtil {
     LockssDaemon daemon = LockssDaemon.getLockssDaemon();
     for (ArchivalUnit au : getConfiguredAus()) {
       try {
-	if (AuHealthMetric.getHealth(au) >= DEFAULT_HEALTH_INCLUSION_THRESHOLD) 
-	  aus.add(au);
+        if (AuHealthMetric.getHealth(au) >= DEFAULT_HEALTH_INCLUSION_THRESHOLD)
+          aus.add(au);
       } catch (HealthUnavailableException e) {
-	// Do not add AUs whose health is unknown
-	logger.warning("ArchivalUnit omitted from list of preserved AUs.", e);
+        // Do not add AUs whose health is unknown
+        logger.warning("ArchivalUnit omitted from list of preserved AUs.", e);
       }
     }
     return aus;
