@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.14 2011-09-15 18:47:47 pgust Exp $
+ * $Id: KbartExporter.java,v 1.15 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -258,8 +258,8 @@ public abstract class KbartExporter {
     for (KbartTitle title : titles) {
       // Don't output some titles
       if (!filter.isTitleForOutput(title)) {
-	duplicateCount++;
-	continue;
+        duplicateCount++;
+        continue;
       }
       exportCount++;
       emitRecord(filter.getVisibleFieldValues(title));
@@ -270,8 +270,6 @@ public abstract class KbartExporter {
   
   /**
    * Format a header line and write it to the output.
-   *  
-   * @param names the names for each visible column
    */
   protected abstract void emitHeader() throws IOException;
 
@@ -305,9 +303,9 @@ public abstract class KbartExporter {
       recordError("Error clearing up after export", e);
     } finally {
       if (printWriter!=null) {
-	printWriter.flush();
-	printWriter.close();
-	printWriter = null;
+        printWriter.flush();
+        printWriter.close();
+        printWriter = null;
       }
     }
   }

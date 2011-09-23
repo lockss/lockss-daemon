@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.16 2011-09-15 19:19:44 pgust Exp $
+ * $Id: HtmlKbartExporter.java,v 1.17 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -157,21 +157,21 @@ public class HtmlKbartExporter extends KbartExporter {
       // Add appropriate style to issn fields
       String cssClass = "";
       if (i==issnFieldIndex || i==eissnFieldIndex || i==issnlFieldIndex) {
-	 cssClass = "issn";
+        cssClass = "issn";
       }
       // Add different type of entry for health ratings if required
       if (i==healthFieldIndex) {
-	int rating = scaleHealth(val);
-	cssClass = "health" + rating;
-	if (showHealthAsTortoises) {
-	  cssClass += "-tortoise";
-	  val = "&nbsp;";
-	}
+        int rating = scaleHealth(val);
+        cssClass = "health" + rating;
+        if (showHealthAsTortoises) {
+          cssClass += "-tortoise";
+          val = "&nbsp;";
+        }
       }
       if (StringUtil.isNullString(cssClass)) {
-	printWriter.printf("<td>%s</td>", val);
+        printWriter.printf("<td>%s</td>", val);
       } else {
-	printWriter.printf("<td class=\"%s\">%s</td>", cssClass, val);
+        printWriter.printf("<td class=\"%s\">%s</td>", cssClass, val);
       }
     }
     printWriter.println("</tr>");

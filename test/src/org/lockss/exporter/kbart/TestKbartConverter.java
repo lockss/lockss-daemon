@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.10 2011-09-13 15:00:01 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.11 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import org.lockss.config.*;
@@ -44,12 +45,16 @@ import org.lockss.util.NumberUtil;
 
 
 /**
- * Try some conversions from TdbTitles to KbartTitles. This is done using a single
- * TdbTitle via <code>TdbTestUtil.makeRangeTestTitle()</code>. The <code>extractAllTitles()</code> 
- * method is not exercised; instead we just run <code>createKbartTitles()</code> once per TdbTitle.
- * 
- * @author neil
+ * Try some conversions from TdbTitles to KbartTitles. This is done using a
+ * single TdbTitle via <code>TdbTestUtil.makeRangeTestTitle()</code>.
+ * The <code>extractAllTitles()</code> method is not exercised; instead we just
+ * run <code>createKbartTitles()</code> once per TdbTitle.
+ * <p>
+ * Note that a lot of code in the converter class makes use of
+ * {@link TdbAuOrderScorer}, which gets a good exercising in
+ * {@link TestTdbAuOrderScorer}.
  *
+ * @author neil
  */
 public class TestKbartConverter extends LockssTestCase {
 
@@ -61,67 +66,17 @@ public class TestKbartConverter extends LockssTestCase {
   static final String auid2 = auidAbsintheBase+"2004";
   static final String auid3 = auidAbsintheBase+"2005";
   
-  /*  
   public final void testExtractAllTitles() {
-    // TODO Unwritten test
-    // extractAllTitles() loops through titles for each publisher and runs createKbartTitles()
+    // extractAllTitles() just runs convertTitles on all TdbTitles
   }
-
-  public final void testGetAuCoverageRanges() {
-    // TODO Unwritten test for private method
-  }
-  
-  public final void testGetAuVols() {
-    // TODO Unwritten test for private method
-  }
-  
-  public final void testGetAuYears() {
-    // TODO Unwritten test for private method 
-  }
-
   public final void testExtractTitles() {
-    fail("Not yet implemented");
+    // extractTitles() just runs convertTitles on TdbTitles within a scope
   }
 
-  public final void testSortTdbAus() {
-    fail("Not yet implemented");
-  }
-
-  public final void testSortTdbAusByYearVolume() {
-    fail("Not yet implemented");
-  }
-
-  public final void testSortTdbAusByVolumeYear() {
-    fail("Not yet implemented");
-  }
-
-  public final void testContainsMixedFormats() {
-    fail("Not yet implemented");
-  }
-
-  public final void testFormatsDiffer() {
-    fail("Not yet implemented");
-  }
-
-  public final void testSortKbartTitles() {
-    fail("Not yet implemented");
-  }
-
-  public final void testCreateKbartTitlesCollectionOfArchivalUnitBooleanBoolean() {
-    fail("Not yet implemented");
-  }
-
-  public final void testCreateKbartTitlesListOfTdbAu() {
-    fail("Not yet implemented");
-  }
-
-  public final void testCreateBaseKbartTitle() {
-    fail("Not yet implemented");
-  }
-  */
-
-  // Check that the result of the wrapper method is the same as calling createKbartTitles
-  // on a single title.
+  /**
+   * Check that the result of the wrapper method is the same as calling
+   * createKbartTitles on a single title.
+   */
   public final void testConvertTitles() {
     List<TdbTitle> l = Collections.emptyList();
     assertEmpty(KbartConverter.convertTitles(null));
@@ -129,13 +84,16 @@ public class TestKbartConverter extends LockssTestCase {
     try {
       final TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
       assertIsomorphic(KbartConverter.createKbartTitles(title), 
-	  KbartConverter.convertTitles(new Vector(){{ add(title); }})
+          KbartConverter.convertTitles(new Vector(){{ add(title); }})
       );
     } catch (TdbException e) {
       fail("Exception while making range test title: "+e);
     }
   }
 
+  /**
+   * Compare results of convertAus and createKbartTitles.
+   */
   public final void testConvertAus() {
     boolean showHealth = true;
     boolean rangeFieldsIncluded = true;
@@ -144,14 +102,14 @@ public class TestKbartConverter extends LockssTestCase {
     assertEmpty(KbartConverter.convertAus(null, showHealth, rangeFieldsIncluded));
     assertEmpty(KbartConverter.convertAus(emptyMap, showHealth, rangeFieldsIncluded));
 
-    // TODO Test a list of AUs (how to create dummy AUs?)
     final List<ArchivalUnit> ausNull = null;
     final List<ArchivalUnit> ausEmpty = Collections.emptyList();
     final List<ArchivalUnit> ausMock = makeMockAuList();
     
     // Test null
-    assertIsomorphic(KbartConverter.createKbartTitles(ausNull, showHealth, rangeFieldsIncluded), 
-	KbartConverter.convertAus(null, showHealth, rangeFieldsIncluded)
+    assertIsomorphic(
+        KbartConverter.createKbartTitles(ausNull, showHealth, rangeFieldsIncluded),
+        KbartConverter.convertAus(null, showHealth, rangeFieldsIncluded)
     );
     // Test null list, empty list, list of mock AUs
     for (List<ArchivalUnit> lau : Arrays.asList(ausNull, ausEmpty, ausMock)) {
@@ -165,23 +123,242 @@ public class TestKbartConverter extends LockssTestCase {
       );
     }
     
-    
     // Test empty map against map with empty value lists
     try {
       Map<TdbTitle, List<ArchivalUnit>> emptyAusMap = new HashMap<TdbTitle, List<ArchivalUnit>>() {{
-	put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
-	put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
+        put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
+        put(TdbTestUtil.makeRangeTestTitle(false), ausEmpty);
       }};
       assertIsomorphic(KbartConverter.createKbartTitles(ausEmpty, showHealth, rangeFieldsIncluded), 
-	  KbartConverter.convertAus(emptyAusMap, showHealth, rangeFieldsIncluded)
+          KbartConverter.convertAus(emptyAusMap, showHealth, rangeFieldsIncluded)
       );
     } catch (TdbException e) {
       fail("Exception while making range test title: "+e);
     }
   }
 
-  // Test the thin wrapper method which converts a Collection of AUs to a 
-  // List of TdbAus before passing to the main createKbartTitles()
+  /**
+   * This is tested implicitly by the testCreateKbartTitles() methods.
+   */
+  public final void testGetAuCoverageRanges() {
+    //fail("Not yet implemented");
+    System.out.println("testGetAuCoverageRanges() not implemented.");
+  }
+
+  /**
+   * Test extracting volume fields from a list of AUs.
+   * The list of AUs must all have values for volume, and those
+   * values must not be all the same (e.g. a list of placeholders like zero).
+   * If the values are empty, all the same, any are unparseable, or they are not
+   * available for all the AUs, null is returned.
+   */
+  public final void testGetAuVols() throws TdbException {
+    String name     = "Monkeys Monthly";
+    String yr       = "2011";
+    TdbAu noVol     = TdbTestUtil.createBasicAu(name, yr, "");
+    TdbAu nullVol   = TdbTestUtil.createBasicAu(name, yr, null);
+    TdbAu vol1      = TdbTestUtil.createBasicAu(name, yr, "vol1");
+    TdbAu vol2      = TdbTestUtil.createBasicAu(name, yr, "vol2");
+
+    // Valid lists of Aus, with a variety of volumes
+    assertEquals(2, KbartConverter.getAuVols(Arrays.asList(vol1, vol2)).size());
+    assertEquals(3, KbartConverter.getAuVols(Arrays.asList(vol1, vol2, vol2)).size());
+
+    // An empty list should return null as all the volumes are the same
+    assertNull(KbartConverter.getAuVols(Collections.<TdbAu>emptyList()));
+    // Null if any vols are null
+    assertNull(KbartConverter.getAuVols(Arrays.asList(vol1, nullVol)));
+    // Null if vols are all the same
+    assertNull(KbartConverter.getAuVols(Arrays.asList(vol1, vol1)));
+    // Null if any vols are empty
+    assertNull(KbartConverter.getAuVols(Arrays.asList(vol1, noVol)));
+  }
+
+  /**
+   * Test getAuYears().
+   * If any year cannot be parsed, null is returned.
+   * A list is only returned if a year could be parsed for every AU.
+   */
+  public final void testGetAuYears() throws TdbException {
+    String name     = "Monkeys Monthly";
+    TdbAu noYr     = TdbTestUtil.createBasicAu(name, "");
+    TdbAu nullYr   = TdbTestUtil.createBasicAu(name, null);
+    TdbAu badYr    = TdbTestUtil.createBasicAu(name, "HA!");
+    TdbAu yr1      = TdbTestUtil.createBasicAu(name, "1976");
+    TdbAu yr2      = TdbTestUtil.createBasicAu(name, "1984");
+
+    // Valid lists of Aus, with a variety of yrs
+    assertEquals(2, KbartConverter.getAuYears(Arrays.asList(yr1, yr1)).size());
+    assertEquals(2, KbartConverter.getAuYears(Arrays.asList(yr1, yr2)).size());
+
+    // Null if the au list is empty
+    assertNull(KbartConverter.getAuYears(Collections.<TdbAu>emptyList()));
+    // Null if yrs cannot be parsed
+    assertNull(KbartConverter.getAuYears(Arrays.asList(yr1, badYr)));
+    // Null if any yrs are null
+    assertNull(KbartConverter.getAuYears(Arrays.asList(yr1, nullYr)));
+    // Null if any yrs are empty
+    assertNull(KbartConverter.getAuYears(Arrays.asList(yr1, noYr)));
+  }
+
+  /**
+   * Test sortTdbAusByVolumeYear() and sortTdbAusByYearVolume().
+   * Note these get well exercised in TestTdbAuOrderScorer.
+   */
+  public final void testSortTdbAus() throws TdbException {
+    String name     = "Monkeys Monthly";
+    // Create a set of TdbAus with both multiple volumes to a year,
+    // and multiple years to a volume.
+    TdbAu au1     = TdbTestUtil.createBasicAu(name, "1980", "vol1");
+    TdbAu au2     = TdbTestUtil.createBasicAu(name, "1980", "vol2");
+    TdbAu au3     = TdbTestUtil.createBasicAu(name, "1981", "vol3");
+    TdbAu au4     = TdbTestUtil.createBasicAu(name, "1982", "vol3");
+    TdbAu au5     = TdbTestUtil.createBasicAu(name, "1983", "vol4");
+    List<TdbAu> list = Arrays.asList(au1, au2, au3, au4, au5);
+    final List<TdbAu> expectedVolYearOrder = Arrays.asList(au1, au2, au3, au4, au5);
+    final List<TdbAu> expectedYearVolOrder = Arrays.asList(au1, au2, au3, au4, au5);
+
+    // Shuffle then sort vol-year
+    Collections.shuffle(list);
+    KbartConverter.sortTdbAusByVolumeYear(list);
+    assertIsomorphic(expectedVolYearOrder, list);
+    // Shuffle then sort year-vol
+    Collections.shuffle(list);
+    KbartConverter.sortTdbAusByYearVolume(list);
+    assertIsomorphic(expectedYearVolOrder, list);
+
+    // TODO try incorporating name variations where other fields are equivalent
+  }
+
+  /**
+   * Does the list of TdbAus contain mixed volume formats.
+   * Note that there is no change of formats if one of the volume strings
+   * can be parsed as a Roman number.
+   */
+  public final void testContainsMixedFormats() throws TdbException {
+    TdbAu auStr       = TdbTestUtil.createBasicAu("", "", "s1");
+    TdbAu auInt       = TdbTestUtil.createBasicAu("", "", "1");
+    TdbAu auRom       = TdbTestUtil.createBasicAu("", "", "I");
+    TdbAu auUnnormRom = TdbTestUtil.createBasicAu("", "", "VIV");
+    // Single items do not have mixed formats
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auInt)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom)));
+    // Not mixed formats
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auStr)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auInt)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auUnnormRom)));
+    // Mixed formats
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auInt)));
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auStr)));
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auStr, auInt)));
+    // Integers with Roman numeral strings are not considered to be mixed
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auRom)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auUnnormRom)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auInt)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom, auInt)));
+    // Strings with Roman numeral strings are not considered to be mixed
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auRom)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auUnnormRom)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auStr)));
+    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom, auStr)));
+  }
+
+  /**
+   *
+   */
+  public final void testSortKbartTitles() {
+    //fail("Not yet implemented");
+    System.out.println("testSortKbartTitles() not implemented.");
+  }
+
+  /**
+   *
+   */
+  public final void testCreateKbartTitlesCollectionOfArchivalUnitBooleanBoolean() {
+    //fail("Not yet implemented");
+    System.out.println("testCreateKbartTitlesCollectionOfArchivalUnitBooleanBoolean() not implemented.");
+  }
+
+  /**
+   *
+   */
+  public final void testCreateKbartTitlesListOfTdbAu() {
+    //fail("Not yet implemented");
+    System.out.println("testCreateKbartTitlesListOfTdbAu() not implemented.");
+  }
+
+  /**
+   * Create a KbartTitle, copying these fields from the supplied TdbAu argument:
+   * publisher name, publication title, ISSN identifiers and URL.
+   */
+  public final void testCreateBaseKbartTitle() {
+    try {
+      List<TdbAu> someAus = Arrays.asList(
+          // Create TdbAu with name, year, volume
+          TdbTestUtil.createBasicAu("Monkeys Monthly", "2011", "1"),
+          // TdbAu with empty fields
+          TdbTestUtil.createBasicAu("", "", "")
+      );
+      for (Collection<TdbAu> aus: Arrays.asList(
+          someAus,
+          TdbTestUtil.makeRangeTestTitle(true).getTdbAus(),
+          TdbTestUtil.makeRangeToNowTestTitle().getTdbAus(),
+          TdbTestUtil.makeVolumeTestTitle("Voluminous").getTdbAus(),
+          TdbTestUtil.makeYearTestTitle("1994-1997").getTdbAus()
+      )) {
+        for (TdbAu example: aus) {
+          System.out.println(example);
+          // Add to a title if it is not already; the basic AUs have the same
+          // default ids and so must be added to different titles
+          try { TdbTestUtil.makeTitleWithNoAus("an id").addTdbAu(example); }
+          catch (Exception e) { /* ignore exception - title already set */ }
+          KbartTitle base = KbartConverter.createBaseKbartTitle(example);
+          testBaseKbartTitleFields(base, example);
+        }
+      }
+    } catch (TdbException e) {
+      fail("Could not create example TdbAu.", e);
+    }
+  }
+
+  /**
+   * Test that a KbartTitle created with base field values has
+   * the expected values filled in.
+   * @param kbt a KbartTitle
+   */
+  private final void testBaseKbartTitleFields(final KbartTitle kbt, final TdbAu au) {
+    final TdbTitle tdbt = au.getTdbTitle();
+    // Only publisher name, publication title, ISSN identifiers and URL
+    // should be filled. Map these to expected values.
+    Map<Field, String> filled = new HashMap<Field, String>() {{
+      put(Field.PUBLISHER_NAME,    au.getTdbPublisher().getName());
+      put(Field.PUBLICATION_TITLE, tdbt.getName());
+      // These fields are based on KbartTdbAuUtil.find*() methods,
+      // rather than the exact au.get*() methods.
+      put(Field.PRINT_IDENTIFIER,  KbartTdbAuUtil.findIssn(au));
+      put(Field.ONLINE_IDENTIFIER, KbartTdbAuUtil.findEissn(au));
+      put(Field.TITLE_ID,          KbartTdbAuUtil.findIssnL(au));
+      // The title URL is based on a very specific string - see KbartConverter
+      put(Field.TITLE_URL,
+          KbartConverter.LABEL_PARAM_LOCKSS_RESOLVER +
+              kbt.getResolverUrlParams());
+    }};
+
+    for (Field f : Field.values()) {
+      if (filled.keySet().contains(f)) {
+        System.out.format("Comparing %s %s and %s\n", f, filled.get(f), kbt.getField(f));
+        assertEquals(filled.get(f), kbt.getField(f));
+      } else assertEquals("", kbt.getField(f));
+    }
+  }
+
+
+  /**
+   * Test the thin wrapper method which converts a Collection of AUs to a
+   * List of TdbAus before passing to the main createKbartTitles()
+   */
   public final void testCreateKbartTitlesCollectionAus() {
     // If there are no AUs, an empty list should be returned
     Collection<ArchivalUnit> aus = Collections.emptyList();
@@ -200,8 +377,10 @@ public class TestKbartConverter extends LockssTestCase {
     if (showHealth && titles.size()>0) assertTrue(titles.get(0) instanceof KbartTitleHealthWrapper);
   }
 
-  // Test the thin wrapper method which gets a List of TdbAus from a TdbTitle  
-  // before passing to the main createKbartTitles()
+  /**
+   * Test the thin wrapper method which gets a List of TdbAus from a TdbTitle
+   * before passing to the main createKbartTitles()
+   */
   public final void testCreateKbartTitlesListTdbAus() {
     // If there are no TdbAus, an empty list should be returned
     List<TdbAu> noTdbAus = Collections.emptyList();
@@ -264,8 +443,10 @@ public class TestKbartConverter extends LockssTestCase {
       fail("Could not create TdbTitles: "+e);
     }
   }
-  
-  // Test the main createKbartTitles() method
+
+  /**
+   * Test the main createKbartTitles() method
+   */
   public final void testCreateKbartTitlesTdbTitle() {
     try {
       // If there is no TdbTitle, or no TdbAus in the title, an empty list should be returned
@@ -277,17 +458,14 @@ public class TestKbartConverter extends LockssTestCase {
       TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
       List<KbartTitle> titles = KbartConverter.createKbartTitles(title);
 
-      // TODO This should be 2, but using roman numerals messes up the new fuzzy analysis, 
-      // which does not properly account for Roman numerals // TODO !!
-      //assertEquals(2, titles.size());
-      assertEquals(3, titles.size());
+      assertEquals(2, titles.size());
 
       // Check the dates and vols have been correctly transferred in each title
       KbartTitle t = titles.get(0);
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_START), 
-                   t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
+          t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_END), 
-                   t.getField(Field.DATE_LAST_ISSUE_ONLINE));
+          t.getField(Field.DATE_LAST_ISSUE_ONLINE));
       assertEquals("", t.getField(Field.NUM_FIRST_VOL_ONLINE));
       assertEquals("", t.getField(Field.NUM_LAST_VOL_ONLINE));
       assertEquals(TdbTestUtil.DEFAULT_ISSN_2, t.getField(Field.PRINT_IDENTIFIER));
@@ -297,9 +475,9 @@ public class TestKbartConverter extends LockssTestCase {
       log.critical("first issue: " + t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
       log.critical("last issue: " + t.getField(Field.DATE_LAST_ISSUE_ONLINE));
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_START), 
-                   t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
-      // TODO assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_END), 
-      //t.getField(Field.DATE_LAST_ISSUE_ONLINE));
+          t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
+      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_END),
+          t.getField(Field.DATE_LAST_ISSUE_ONLINE));
       assertEquals("", t.getField(Field.NUM_FIRST_VOL_ONLINE));
       assertEquals("", t.getField(Field.NUM_LAST_VOL_ONLINE));
       assertEquals(TdbTestUtil.DEFAULT_ISSN_2, t.getField(Field.PRINT_IDENTIFIER));
@@ -321,17 +499,16 @@ public class TestKbartConverter extends LockssTestCase {
       // Test with a title which has volume info as well as year ranges; no coverage gap by volume
       title = TdbTestUtil.makeRangeTestTitle(true);
       titles = KbartConverter.createKbartTitles(title);
-      // TODO acount for Roman numeral vols and fix the following tests
-      //assertEquals("Coverage gap found when none exists in volume field; only years.", 1, titles.size());
+      assertEquals("Coverage gap found when none exists in volume field; only years.", 1, titles.size());
       t = titles.get(0);
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_START), 
-                   t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
-      /*assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_END),
+          t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
+      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_2_END),
                    t.getField(Field.DATE_LAST_ISSUE_ONLINE));
       assertEquals(TdbTestUtil.RANGE_1_START_VOL,
                    t.getField(Field.NUM_FIRST_VOL_ONLINE));
       assertEquals(TdbTestUtil.RANGE_2_END_VOL, 
-                   t.getField(Field.NUM_LAST_VOL_ONLINE));*/
+                   t.getField(Field.NUM_LAST_VOL_ONLINE));
       assertEquals(TdbTestUtil.DEFAULT_ISSN_2, t.getField(Field.PRINT_IDENTIFIER));
       assertEquals(TdbTestUtil.DEFAULT_EISSN_2, t.getField(Field.ONLINE_IDENTIFIER));
       
@@ -340,6 +517,9 @@ public class TestKbartConverter extends LockssTestCase {
     }
   }
 
+  /**
+   * Test that valid/invalid publication dates are recognised.
+   */
   public final void testIsPublicationDate() {
     int now = Calendar.getInstance().get(Calendar.YEAR);
     String[] invalidDates = new String[] {""+(KbartConverter.MIN_PUB_DATE-1), "1999a", "3000", "notdate", ""+(now+1)};
@@ -350,16 +530,16 @@ public class TestKbartConverter extends LockssTestCase {
     for (String d : validDates) {
       assertTrue(d+" should be a valid publication date", KbartConverter.isPublicationDate(d));
     }
-  }  
-  
+  }
+
+  /**
+   * Make a listof mock AUs.
+   * @return
+   */
   List<ArchivalUnit> makeMockAuList() {
     // Test with dummy AUs
     MockLockssDaemon daemon = getMockLockssDaemon();
     Plugin plugin = new MockPlugin();
-    /*ArchivalUnit au1 = MockArchivalUnit.newInited(daemon);
-    ArchivalUnit au2 = MockArchivalUnit.newInited(daemon);
-    ArchivalUnit au3 = MockArchivalUnit.newInited(daemon);
-    ArchivalUnit au4 = MockArchivalUnit.newInited(daemon);*/
     ArchivalUnit au1 = new MockArchivalUnit(plugin, auid1);
     ArchivalUnit au2 = new MockArchivalUnit(plugin, auid2);
     ArchivalUnit au3 = new MockArchivalUnit(plugin, auid3);

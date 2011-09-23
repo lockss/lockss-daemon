@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartTitle.java,v 1.6 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: TestKbartTitle.java,v 1.7 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -186,7 +186,6 @@ public class TestKbartTitle extends LockssTestCase {
   
   /**
    * Check whether the title has a value for the given field.
-   * @param f the Field to check
    * @return whether the field has a non-empty value
    */
   public final void testHasFieldValue() {

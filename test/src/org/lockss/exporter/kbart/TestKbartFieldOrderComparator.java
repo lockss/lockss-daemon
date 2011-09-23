@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartFieldOrderComparator.java,v 1.1 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: TestKbartFieldOrderComparator.java,v 1.2 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -73,33 +73,33 @@ public class TestKbartFieldOrderComparator extends LockssTestCase {
   // Title 1 - use basic field values 
   private final KbartTitle title1 = TestKbartTitle.createKbartTitle(
       new HashMap<KbartTitle.Field, String>() {{
-	put(Field.PUBLICATION_TITLE, TITLE);
-	put(Field.PRINT_IDENTIFIER, PRINT_ID);
-	put(Field.ONLINE_IDENTIFIER, ONLINE_ID);
-	put(Field.DATE_FIRST_ISSUE_ONLINE, DATE);
-	put(Field.NUM_FIRST_VOL_ONLINE, VOL);
+        put(Field.PUBLICATION_TITLE, TITLE);
+        put(Field.PRINT_IDENTIFIER, PRINT_ID);
+        put(Field.ONLINE_IDENTIFIER, ONLINE_ID);
+        put(Field.DATE_FIRST_ISSUE_ONLINE, DATE);
+        put(Field.NUM_FIRST_VOL_ONLINE, VOL);
       }}
   );
   
   // Title 2 - differing only on case
   private final KbartTitle title2 = TestKbartTitle.createKbartTitle(
       new HashMap<KbartTitle.Field, String>() {{
-	put(Field.PUBLICATION_TITLE, TITLE.toLowerCase());
-	put(Field.PRINT_IDENTIFIER, PRINT_ID.toLowerCase());
-	put(Field.ONLINE_IDENTIFIER, ONLINE_ID.toLowerCase());
-	put(Field.DATE_FIRST_ISSUE_ONLINE, DATE.toLowerCase());
-	put(Field.NUM_FIRST_VOL_ONLINE, VOL.toLowerCase());
+        put(Field.PUBLICATION_TITLE, TITLE.toLowerCase());
+        put(Field.PRINT_IDENTIFIER, PRINT_ID.toLowerCase());
+        put(Field.ONLINE_IDENTIFIER, ONLINE_ID.toLowerCase());
+        put(Field.DATE_FIRST_ISSUE_ONLINE, DATE.toLowerCase());
+        put(Field.NUM_FIRST_VOL_ONLINE, VOL.toLowerCase());
       }}
   );
   
   // Title 3 - differing only on accents
   private final KbartTitle title3 = TestKbartTitle.createKbartTitle(
       new HashMap<KbartTitle.Field, String>() {{
-	put(Field.PUBLICATION_TITLE, TITLE_ID_ACCENTED);
-	put(Field.PRINT_IDENTIFIER, PRINT_ID);
-	put(Field.ONLINE_IDENTIFIER, ONLINE_ID);
-	put(Field.DATE_FIRST_ISSUE_ONLINE, DATE);
-	put(Field.NUM_FIRST_VOL_ONLINE, VOL_ACCENTED);
+        put(Field.PUBLICATION_TITLE, TITLE_ID_ACCENTED);
+        put(Field.PRINT_IDENTIFIER, PRINT_ID);
+        put(Field.ONLINE_IDENTIFIER, ONLINE_ID);
+        put(Field.DATE_FIRST_ISSUE_ONLINE, DATE);
+        put(Field.NUM_FIRST_VOL_ONLINE, VOL_ACCENTED);
       }}
   );
 
@@ -132,7 +132,7 @@ public class TestKbartFieldOrderComparator extends LockssTestCase {
       testCache(kbfoc);
       // Test that the comparison string comes from the correct field
       for (KbartTitle kbt : new KbartTitle[]{title1, title2, title3}) { 
-	assertEquals(kbt.getField(f), kbfoc.getComparisonString(kbt));
+        assertEquals(kbt.getField(f), kbfoc.getComparisonString(kbt));
       }
       // TODO check that the sorting fits the normalisation defaults of each field?
     }

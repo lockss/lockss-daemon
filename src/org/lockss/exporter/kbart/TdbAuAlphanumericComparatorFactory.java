@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.3 2011-08-11 16:52:38 easyonthemayo Exp $
+ * $Id: TdbAuAlphanumericComparatorFactory.java,v 1.4 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -69,6 +69,32 @@ public class TdbAuAlphanumericComparatorFactory {
       @Override
       protected String getTdbAuComparisonString(TdbAu tdbAu) {
         return tdbAu.getVolume();
+      }
+    };
+  }
+
+  /**
+   * Create a TdbAu comparator which sorts by the start volume in the TdbAu volume.
+   * @return a TdbAu first volume comparator
+   */
+  public static Comparator<TdbAu> getFirstVolumeComparator() {
+    return new TdbAuAlphanumericComparator() {
+      @Override
+      protected String getTdbAuComparisonString(TdbAu tdbAu) {
+        return tdbAu.getStartVolume();
+      }
+    };
+  }
+
+  /**
+   * Create a TdbAu comparator which sorts by the end volume in the TdbAu volume.
+   * @return a TdbAu last volume comparator
+   */
+  public static Comparator<TdbAu> getLastVolumeComparator() {
+    return new TdbAuAlphanumericComparator() {
+      @Override
+      protected String getTdbAuComparisonString(TdbAu tdbAu) {
+        return tdbAu.getEndVolume();
       }
     };
   }

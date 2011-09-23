@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.11 2011-08-19 10:36:18 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.12 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -113,11 +113,11 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    * A sortable map of the fields to their values.
    */
   private final SortedMap<Field, String> fields = 
-    new TreeMap<Field, String>(new Comparator<Field>() {
-      public int compare(Field f1, Field f2) {
-	return new Integer(f1.ordinal()).compareTo(f2.ordinal());
-      }
-    });
+      new TreeMap<Field, String>(new Comparator<Field>() {
+        public int compare(Field f1, Field f2) {
+          return new Integer(f1.ordinal()).compareTo(f2.ordinal());
+        }
+      });
     
   /**
    * Set the value of a field. If the field is null, nothing is added. If the 
@@ -239,11 +239,11 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     }};
   }
 
+
   /* (non-Javadoc)
-   * @see java.lang.Object#equals(java.lang.Object)
+   * @see java.lang.Object#compareTo(java.lang.Object)
    */
-  @Override
-   public int compareTo(KbartTitle o) {
+  public int compareTo(KbartTitle o) {
     String thisName = getField(Field.PUBLICATION_TITLE);
     String thatName = o.getField(Field.PUBLICATION_TITLE);
     return thisName.compareTo(thatName); 
@@ -253,7 +253,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   /**
    * Another KbartTitle equals() this one if the values of all of its fields 
    * are the same.
-   * @param t another KbartTitle
+   * @param o another KbartTitle
    * @return whether it is equal to this one
    */
   public boolean equals(Object o) {
@@ -261,11 +261,11 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     if (o instanceof KbartTitle) {
       KbartTitle t = (KbartTitle)o;
       for (Field f : Field.values()) {
-	String s1 = getField(f);
-	if (s1!=null) {
-	  String s2 = t.getField(f);
-	  if (!s1.equals(s2)) return false;
-	}
+        String s1 = getField(f);
+        if (s1!=null) {
+          String s2 = t.getField(f);
+          if (!s1.equals(s2)) return false;
+        }
       }
       return true;
     }

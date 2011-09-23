@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.18 2011-09-19 03:23:14 tlipkis Exp $
+ * $Id: ListHoldings.java,v 1.19 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class ListHoldings extends LockssServlet {
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
   
-  /** Enable "preserved" option when ListHondlings UI is enabled
+  /** Enable "preserved" option when ListHoldings UI is enabled
    */
   public static final String 
     PARAM_ENABLE_PRESERVED_HOLDINGS = PREFIX + "enablePreserved";

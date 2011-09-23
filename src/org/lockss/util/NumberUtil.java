@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.9 2011-09-13 15:00:01 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.10 2011-09-23 13:23:15 easyonthemayo Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class NumberUtil {
     if (range == null) {
       return null;
     }
-    int i = range.indexOf('-');
+    int i = findRangeHyphen(range);
     return (i > 0) ? range.substring(0,i).trim() : range.trim();
   }
 
@@ -96,7 +96,7 @@ public class NumberUtil {
     if (range == null) {
       return null;
     }
-    int i = range.indexOf('-');
+    int i = findRangeHyphen(range);
     return (i > 0) ? range.substring(i+1).trim() : range.trim();
   }
 
@@ -125,7 +125,7 @@ public class NumberUtil {
     if ((range == null) || (value == null)) {
       return false;
     }
-    int i = range.indexOf('-');
+    int i = findRangeHyphen(range);
     String startRange = (i > 0) ? range.substring(0,i).trim() : range.trim();
     String endRange = (i > 0) ? range.substring(i+1).trim() : range.trim();
     try {
@@ -140,6 +140,24 @@ public class NumberUtil {
               && (   (value.compareTo(endRange) <= 0)
                   || value.startsWith(endRange));
     }
+  }
+
+  /**
+   * Find the position of the middle-most hyphen in a string that represents a
+   * range. If there are no hyphens, or an even number of hyphens, it suggests
+   * that the string does not describe a range, and -1 is returned.
+   * @param range a String representing a range
+   * @return the position of the middlemost hyphen, or -1
+   */
+  public static final int findRangeHyphen(String range) {
+    // Count the hyphens
+    int n = StringUtil.countOccurences(range, "-");
+    // An even number of hyphens (including 0) suggests the string is not a range
+    if (n%2==0) return -1;
+    // Find the middle hyphen
+    int hyphenPos = -1;
+    for (int i=0; i<=n/2; i++) hyphenPos = range.indexOf('-', hyphenPos+1);
+    return hyphenPos;
   }
 
   /**
@@ -199,7 +217,9 @@ public class NumberUtil {
 
   /**
    * Determines whether the input string represents an integer, that is,
-   * can be parsed as an integer.
+   * can be parsed directly as an integer. Note that a Roman numeral does not
+   * count as an integer. As an alternative that also checks if the string can
+   * be parsed as a Roman numeral, use {@link isNumber()}.
    * 
    * @param s the input String
    * @return <tt>true</tt> if the input string represents an integer
@@ -212,7 +232,110 @@ public class NumberUtil {
       return false;
     }
   }
-  
+
+  /**
+   * Determines whether the input string represents a number, that is,
+   * can be parsed to an integer by treating it as an integer representation,
+   * or as a normalised Roman numeral. This requires Roman numerals to be
+   * normalised if they are to be recognised and parsed.
+   * <p>
+   * This is useful for example when the string to be parsed may well
+   * represent a legitimate non-numerical string which happens to contain only
+   * Roman numeral characters.
+   *
+   * @param s the input String
+   * @return <tt>true</tt> if the input string represents an integer
+   */
+  public static boolean isNumber(String s) {
+    // First try as an integer
+    if (isInteger(s)) return true;
+    // Secondly try as a Roman numeral, requiring normalisation
+    try {
+      NumberUtil.parseRomanNumber(s, true);
+      return true;
+    } catch (NumberFormatException ex) {
+      return false;
+    }
+  }
+
+  /**
+   * Determines whether a String appears to represent a numerical range. In
+   * general, a range is two numeric strings separated by a hyphen '-' with
+   * optional whitespace. The second value is expected to be numerically greater
+   * than or equal to the first. A numeric string can be parsed as an integer by
+   * treating it either as the string representation of an integer, or as a
+   * Roman numeral. Otherwise the string is considered to represent a
+   * single value. For example "I-4" is considered to be a range, while "S-1"
+   * is a single volume identifier.
+   * <p>
+   * Note that false positives are possible for volume identifiers like "V-C"
+   * where the letters are not Roman numerals - if such examples occur.
+   *
+   * @param s the input String
+   * @return <tt>true</tt> if the input string represents a numerical range
+   */
+  public static boolean isNumericalRange(String s) {
+    if (s==null) return false;
+    // Even though a single value is considered a range from and to itself in
+    // terms of getRangeStart and getRangeEnd, we don't want to consider that a
+    // range string in this method. So no hyphen, no range.
+    if (s.indexOf('-') < 0) return false;
+    // Split and parse the range
+    String s1 = getRangeStart(s);
+    String s2 = getRangeEnd(s);
+    // If either endpoint is not parseable as a number, this is not a range.
+    // First check if the strings can be parsed as numbers, but do not accept
+    // unnormalised Roman numbers.
+    if (!isNumber(s1) || !isNumber(s2)) return false;
+    try {
+      int i1 = parseInt(s1);
+      int i2 = parseInt(s2);
+      return i2>=i1;
+    } catch (NumberFormatException e) {
+      // A string is not parseable as an integer or as a Roman numeral.
+      return false;
+    }
+  }
+
+  /**
+   * Pad all the numbers in the string with zeros so that a lexicographical
+   * comparison treats numbers by magnitude.
+   * <p>
+   * This method has been copied verbatim from
+   * {@link org.lockss.util.CachingComparator()}.
+   *
+   * @param s the input String
+   * @param padLen the length of padding to impose
+   * @return the string with numerical tokens zero-padded
+   */
+  public static String padNumbers(String s, int padLen) {
+    int len = s.length();
+    StringBuilder sb = new StringBuilder(len + padLen - 1);
+    int ix = 0;
+    while (ix < len) {
+      char ch = s.charAt(ix);
+      if (Character.isDigit(ch)) {
+        int jx = ix;
+        while (++jx < len) {
+          if (!Character.isDigit(s.charAt(jx))) {
+            break;
+          }
+        }
+        // jx now points one beyond end of number (or end of string)
+        for (int padix = padLen - (jx - ix); padix > 0; padix--) {
+          sb.append('0');
+        }
+        do {
+          sb.append(s.charAt(ix++));
+        } while (ix < jx);
+      } else {
+        sb.append(ch);
+        ix++;
+      }
+    }
+    return sb.toString();
+  }
+
   /**
    * Determines whether the two integers are are strictly consecutive, that is,
    * whether the second integer comes directly after the first.
@@ -220,7 +343,7 @@ public class NumberUtil {
    * @param second the second integer
    * @return <tt>true</tt> if the second integer is one greater than the first
    */
-  public static final boolean areConsecutive(int first, int second) {
+  public static boolean areConsecutive(int first, int second) {
     return second - first == 1;
   }
 
@@ -230,13 +353,46 @@ public class NumberUtil {
    * first. If the strings cannot be parsed as integers, an exception is thrown.
    * Note that this method will also accept strings representing Roman numerals.
    * 
-   * @param first the first string representing an integer
-   * @param second the second string representing an integer
+   * @param first the first string representing a number
+   * @param second the second string representing a number
    * @return <tt>true</tt> if the strings could be parsed and the second integer is one greater than the first
    * @throws NumberFormatException if the Strings do not represent valid numbers
    */
-  public static final boolean areConsecutive(String first, String second) throws NumberFormatException {
+  public static boolean areConsecutive(String first, String second)
+      throws NumberFormatException {
     return areConsecutive(parseInt(first), parseInt(second));
+  }
+
+  /**
+   * Determines whether two numbers supplied as strings are equal in value. If
+   * the strings cannot both be parsed as integers, <tt>false</tt> is returned.
+   * Note that this method will also accept strings representing Roman numerals.
+   *
+   * @param first the first string representing a number
+   * @param second the second string representing a number
+   * @return <tt>true</tt> if the strings could be parsed and are equal in value
+   */
+  public static boolean areEqualValue(String first, String second) {
+    try {
+      return parseInt(first) == parseInt(second);
+    } catch (NumberFormatException e) {
+      return false;
+    }
+  }
+
+  /**
+   * Determines whether two ranges supplied as strings are equal, that is, their
+   * endpoints are equal in value. If any endpoints cannot be parsed as
+   * integers, <tt>false</tt> is returned. This method will accept strings
+   * representing ranges involving Roman numerals.
+   *
+   * @param first the first string representing a number
+   * @param second the second string representing a number
+   * @return <tt>true</tt> if the strings could be parsed and are equal in value
+   */
+  public static boolean areRangesEqual(String first, String second) {
+    return areEqualValue(getRangeStart(first), getRangeStart(second)) &&
+        areEqualValue(getRangeEnd(first), getRangeEnd(second));
   }
 
   /**
