@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Union Internationale de Spéléologie
+  >
+  
+  {
+  
+   comment[0] = RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
+
+  }
+
+  {
+  
+    title <
+      name = International Journal of Speleology ;
+      issn = 0392-6672 ;
+      eissn = 1827-806X ;
+      issnl = 0392-6672
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://scholarcommons.usf.edu/
+    param[journal_abbr] = ijs
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2011 ; International Journal of Speleology Volume 40 ; 40 >
+    au < manifest ; 2012 ; International Journal of Speleology Volume 41 ; 41 >
+
+  }
+
+}
