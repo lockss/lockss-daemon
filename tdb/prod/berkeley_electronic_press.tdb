@@ -95,7 +95,7 @@
     au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 ; 2007-2008 >
     au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 ; 2008-2009 >
     au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 ; 2009-2010 >
-    au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 ; 2010 >
+    au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 ; 2010 >
 
   } 
   
@@ -128,7 +128,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ajle
 
-    au < manifest ; Asian Journal of Law and Economics Volume 1 ; 1 ; 2010 >
+    au < ready ; Asian Journal of Law and Economics Volume 1 ; 1 ; 2010 >
     au < ready ; Asian Journal of Law and Economics Volume 2 ; 2 ; 2011 >
     
   }
@@ -582,7 +582,7 @@
     au < released ; International Commentary on Evidence Volume 5 ; 5 ; 2007 >
     au < released ; International Commentary on Evidence Volume 6 ; 6 ; 2008 >
     au < ready ; International Commentary on Evidence Volume 7 ; 7 ; 2009 >
-    au < manifest ; International Commentary on Evidence Volume 8 ; 8 ; 2010 >
+    au < ready ; International Commentary on Evidence Volume 8 ; 8 ; 2010 >
 
   }
 
@@ -725,7 +725,7 @@
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; 2003 >    
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; 2004 >
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; 2009 >    
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; 2010 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; 2010 >
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; 2011 >
     
   }
@@ -762,7 +762,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbca
 
-    au < manifest ; Journal of Benefit-Cost Analysis Volume 1 ; 1 ; 2010 >
+    au < ready ; Journal of Benefit-Cost Analysis Volume 1 ; 1 ; 2010 >
     au < ready ; Journal of Benefit-Cost Analysis Volume 2 ; 2 ; 2011 >
 
   }
@@ -777,7 +777,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
-    au < manifest ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 ; 2010 >
+    au < ready ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 ; 2010 >
 
   }
 
@@ -817,8 +817,8 @@
     au < manifest ; Journal of College and Character Volume 3 ; 3 ; 2002 >
     au < manifest ; Journal of College and Character Volume 4 ; 4 ; 2003 >
     au < manifest ; Journal of College and Character Volume 5 ; 5 ; 2004 >
-    au < manifest ; Journal of College and Character Volume 6 ; 6 ; 2005-2009 >
-    au < manifest ; Journal of College and Character Volume 7 ; 7 ; 2006-2009 >
+    au < manifest ; Journal of College and Character Volume 6 ; 6 ; 2005 >
+    au < manifest ; Journal of College and Character Volume 7 ; 7 ; 2006 >
     au < manifest ; Journal of College and Character Volume 8 ; 8 ; 2006-2007 >
     au < manifest ; Journal of College and Character Volume 9 ; 9 ; 2007-2008 >
     au < manifest ; Journal of College and Character Volume 10 ; 10 ; 2008-2009 >
@@ -887,7 +887,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jgd
 
-    au < manifest ; Journal of Globalization and Development Volume 1 ; 1 ; 2010 >
+    au < ready ; Journal of Globalization and Development Volume 1 ; 1 ; 2010 >
 
   } 
 
@@ -945,7 +945,7 @@
     au < manifest ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
     au < ready ; Journal of Industrial Organization Education Volume 3 ; 3 ; 2008 >
     au < ready ; Journal of Industrial Organization Education Volume 4 ; 4 ; 2009 >
-    au < manifest ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
+    au < ready ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
 
   }
 
@@ -1026,7 +1026,7 @@
 
     au < released ; Journal of Tort Law Volume 1 ; 1 ; 2006-2007 >
     au < ready ; Journal of Tort Law Volume 2 ; 2 ; 2008 >
-    au < manifest ; Journal of Tort Law Volume 3 ; 3 ; 2010 >
+    au < ready ; Journal of Tort Law Volume 3 ; 3 ; 2010 >
     au < ready ; Journal of Tort Law Volume 4 ; 4 ; 2011 >
   }
 
@@ -1079,7 +1079,7 @@
     au < manifest ; Multicultural Learning and Teaching Volume 2 ; 2 ; 2007 >
     au < manifest ; Multicultural Learning and Teaching Volume 3 ; 3 ; 2008 >
     au < manifest ; Multicultural Learning and Teaching Volume 4 ; 4 ; 2009 >
-    au < manifest ; Multicultural Learning and Teaching Volume 5 ; 5 ; 2010 >
+    au < ready ; Multicultural Learning and Teaching Volume 5 ; 5 ; 2010 >
 
   }
   
@@ -1278,7 +1278,7 @@
     au < released ; Review of Middle East Economics and Finance Volume 3 ; 3 ; 2005 >
     au < ready ; Review of Middle East Economics and Finance Volume 4 ; 4 ; 2008  >
     au < ready ; Review of Middle East Economics and Finance Volume 5 ; 5 ; 2009  >
-    au < manifest ; Review of Middle East Economics and Finance Volume 6 ; 6 ; 2010  >
+    au < ready ; Review of Middle East Economics and Finance Volume 6 ; 6 ; 2010  >
     au < ready ; Review of Middle East Economics and Finance Volume 7 ; 7 ; 2011  >
 
   }
@@ -1301,7 +1301,7 @@
     au < manifest ; Review of Network Economics Volume 6 ; 6 ; 2007 >
     au < manifest ; Review of Network Economics Volume 7 ; 7 ; 2008 >
     au < manifest ; Review of Network Economics Volume 8 ; 8 ; 2009 >
-    au < manifest ; Review of Network Economics Volume 9 ; 9 ; 2010 >
+    au < ready ; Review of Network Economics Volume 9 ; 9 ; 2010 >
     au < ready ; Review of Network Economics Volume 10 ; 10 ; 2011 >
 
   }
@@ -1328,7 +1328,7 @@
     au < manifest ; The Rhodes Cook Letter Volume 8 ; 8 ; 2007 >
     au < manifest ; The Rhodes Cook Letter Volume 9 ; 9 ; 2008 >
     au < manifest ; The Rhodes Cook Letter Volume 10 ; 10 ; 2009 >
-    au < manifest ; The Rhodes Cook Letter Volume 11 ; 11 ; 2010 >
+    au < ready ; The Rhodes Cook Letter Volume 11 ; 11 ; 2010 >
     au < ready ; The Rhodes Cook Letter Volume 12 ; 12 ; 2011 >    
 
   }
@@ -1397,7 +1397,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = spp
 
-    au < manifest ; Statistics, Politics, and Policy Volume 1 ; 1 ; 2010 >
+    au < ready ; Statistics, Politics, and Policy Volume 1 ; 1 ; 2010 >
     au < ready ; Statistics, Politics, and Policy Volume 2 ; 2 ; 2011 >
 
   }
@@ -1415,7 +1415,7 @@
     au < manifest ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; 2007 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 2 ; 2 ; 2008 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 3 ; 3 ; 2009 >
-    au < manifest ; Studies in Ethics, Law, and Technology Volume 4 ; 4 ; 2010 >
+    au < ready ; Studies in Ethics, Law, and Technology Volume 4 ; 4 ; 2010 >
 
   }
 
