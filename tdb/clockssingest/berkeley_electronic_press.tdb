@@ -93,8 +93,8 @@
 
     au < manifest ; exists ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 >
     au < manifest ; exists ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
-    au < testing ; exists ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 >
-    au < testing ; exists ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 >
+    au < ready ; exists ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 >
+    au < ready ; exists ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 >
     au < released ; manifest ; 2010 ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 >
 
   }
@@ -301,6 +301,7 @@
     au < released ; crawling ; 2008 ; Capitalism and Society Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Capitalism and Society Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Capitalism and Society Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Capitalism and Society Volume 6 ; 6 >
 
   }
 
@@ -722,7 +723,7 @@
     au < manifest ; exists ; 2002 ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 >
     au < manifest ; exists ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 >    
     au < manifest ; exists ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
-    au < testing ; exists ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 >    
+    au < ready ; exists ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 >    
     au < released ; manifest ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 >
     au < released ; manifest ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 >
     
@@ -775,8 +776,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
-    au < released ; manifest ; 2010 ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 >
-
+    au < released ; manifest ; 2011 ; Journal of Biosecurity, Biosafety and Biodefense Law Volume 1 ; 1 >
+ 
   }
 
 
@@ -863,6 +864,7 @@
     au < released ; manifest ; 2011 ; Journal of Drug Policy Analysis Volume 4 ; 4 >
 
   }
+
   {
 
     title <
@@ -874,6 +876,7 @@
     param[journal_abbr] = jem
 
   }
+  
   {
 
     title <
@@ -1429,6 +1432,7 @@
     au < released ; crawling ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
     au < released ; manifest ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 >
+    au < manifest ; exists ; 2011 ; Studies in Ethics, Law, and Technology Volume 5 ; 5 >
 
   }
 
