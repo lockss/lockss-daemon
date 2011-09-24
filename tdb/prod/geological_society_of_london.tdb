@@ -134,21 +134,21 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Geological Society of London Special Publications Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Geological Society of London Special Publications Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Geological Society of London Special Publications Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Geological Society of London Special Publications Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Geological Society of London Special Publications Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Geological Society of London Special Publications Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Geological Society of London Special Publications Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Geological Society of London Special Publications Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Geological Society of London Special Publications Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Geological Society of London Special Publications Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Geological Society of London Special Publications Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Geological Society of London Special Publications Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; Geological Society of London Special Publications Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Geological Society of London Special Publications Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Geological Society of London Special Publications Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Geological Society of London Special Publications Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Geological Society of London Special Publications Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Geological Society of London Special Publications Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Geological Society of London Special Publications Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Geological Society of London Special Publications Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Geological Society of London Special Publications Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Geological Society of London Special Publications Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Geological Society of London Special Publications Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Geological Society of London Special Publications Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Geological Society of London Special Publications Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Geological Society of London Special Publications Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Geological Society of London Special Publications Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Geological Society of London Special Publications Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Geological Society of London Special Publications Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; Geological Society of London Special Publications Volume 19 ; 19 >
@@ -184,26 +184,26 @@
     au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Geological Society of London Special Publications Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Geological Society of London Special Publications Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Geological Society of London Special Publications Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Geological Society of London Special Publications Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Geological Society of London Special Publications Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Geological Society of London Special Publications Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Geological Society of London Special Publications Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Geological Society of London Special Publications Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Geological Society of London Special Publications Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Geological Society of London Special Publications Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Geological Society of London Special Publications Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Geological Society of London Special Publications Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Geological Society of London Special Publications Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Geological Society of London Special Publications Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Geological Society of London Special Publications Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Geological Society of London Special Publications Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Geological Society of London Special Publications Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; testing ; 1993 ; Geological Society of London Special Publications Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; testing ; 1993 ; Geological Society of London Special Publications Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Geological Society of London Special Publications Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Geological Society of London Special Publications Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Geological Society of London Special Publications Volume 74 ; 74 >
