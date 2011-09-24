@@ -114,11 +114,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; ready ; 2000 ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; ready ; 2001 ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
@@ -179,14 +179,14 @@
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Archives of Disease in Childhood Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Archives of Disease in Childhood Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Archives of Disease in Childhood Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Archives of Disease in Childhood Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Archives of Disease in Childhood Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Archives of Disease in Childhood Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Archives of Disease in Childhood Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Archives of Disease in Childhood Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Archives of Disease in Childhood Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Archives of Disease in Childhood Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Archives of Disease in Childhood Volume 92 ; 92 >
@@ -208,7 +208,7 @@
 
     param[base_url] = http://ep.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood - Education and Practice Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Archives of Disease in Childhood - Education and Practice Volume 92 ; 92 >
@@ -242,14 +242,14 @@
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 92 ; 92 >
@@ -297,8 +297,8 @@
     au < HighWirePressH20Plugin ; manifest ; 1855 ; BMJ Volume s3-3 ; s3-3 >
     au < HighWirePressH20Plugin ; manifest ; 1856 ; BMJ Volume s3-4 ; s3-4 >
     au < HighWirePressH20Plugin ; manifest ; 1857-1960 ; BMJ Volume s4-1 ; s4-1 >
-    au < HighWirePressH20Plugin ; manifest ; 1861-1979 ; BMJ Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1861-1979 ; BMJ Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1861-1979 ; BMJ Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1861-1979 ; BMJ Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1980 ; BMJ Volume 280 ; 280 >
     au < HighWirePressH20Plugin ; ready ; 1980 ; BMJ Volume 281 ; 281 >
     au < HighWirePressH20Plugin ; ready ; 1981 ; BMJ Volume 282 ; 282 >
@@ -707,7 +707,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Evidence-Based Nursing Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Evidence-Based Nursing Volume 14 ; 14 >
 
   }
 
@@ -1007,7 +1007,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Clinical Pathology Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Clinical Pathology Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Journal of Clinical Pathology Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Journal of Clinical Pathology Volume 64 ; 64 >
 
   }
 
@@ -1489,6 +1489,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     }
     
     {
+    
+      comment[v19] = Crawl failure
+      comment[v20] = Crawl failure
 
       param[base_url] = http://qshc.bmj.com/
 
@@ -1510,8 +1513,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWireStrVolPlugin ; down ; 2007 ; Quality and Safety in Health Care Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Quality and Safety in Health Care Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Quality and Safety in Health Care Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; notReady ; 2010 ; Quality and Safety in Health Care Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; notReady ; 2011 ; Quality and Safety in Health Care Volume 20 ; 20 >
       
     }
 
@@ -1526,6 +1529,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
 
     param[base_url] = http://sti.bmj.com/
+    
+    comment[v87] = hash mismatch
 
     au < HighWirePressH20Plugin ; manifest ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1927 ; Sexually Transmitted Infections Volume 3 ; 3 >
@@ -1608,7 +1613,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWireStrVolPlugin ; down ; 2007 ; Sexually Transmitted Infections Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Sexually Transmitted Infections Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Sexually Transmitted Infections Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Sexually Transmitted Infections Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Sexually Transmitted Infections Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; testing ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
 
   }
@@ -1687,8 +1692,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2007 ; Thorax Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Thorax Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Thorax Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Thorax Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Thorax Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Thorax Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Thorax Volume 66 ; 66 >
 
   }
 
@@ -1732,8 +1737,8 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2007 ; Tobacco Control Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; released ; 2008 ; Tobacco Control Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; released ; 2009 ; Tobacco Control Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Tobacco Control Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 2011 ; Tobacco Control Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Tobacco Control Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 2011 ; Tobacco Control Volume 20 ; 20 >
 
     }
 
