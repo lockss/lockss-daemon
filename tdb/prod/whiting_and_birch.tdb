@@ -24,8 +24,8 @@
       param[journal_id] = gijwg
       param[journal_issn] = 0951-824X
 
-      au < testing ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
-      au < testing ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
+      au < ready ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
+      au < ready ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
       au < manifest ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 >
       au < manifest ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 >
       au < manifest ; 2008 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 18 ; 18 >
@@ -47,12 +47,12 @@
       param[journal_id] = jpthsw                                  
       param[journal_issn] = 1460-6690
 
-      au < testing ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
-      au < testing ; 2006 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
-      au < manifest ; 2007 ; The Journal of Practice Teaching in Health and Social Work Volume 7 ; 7 >
-      au < manifest ; 2008 ; The Journal of Practice Teaching in Health and Social Work Volume 8 ; 8 >
-      au < manifest ; 2009 ; The Journal of Practice Teaching in Health and Social Work Volume 9 ; 9 >
-      au < manifest ; 2010 ; The Journal of Practice Teaching in Health and Social Work Volume 10 ; 10 >
+      au < ready ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
+      au < notReady ; 2006 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
+      au < testing ; 2007 ; The Journal of Practice Teaching in Health and Social Work Volume 7 ; 7 >
+      au < testing ; 2008 ; The Journal of Practice Teaching in Health and Social Work Volume 8 ; 8 >
+      au < testing ; 2009 ; The Journal of Practice Teaching in Health and Social Work Volume 9 ; 9 >
+      au < testing ; 2010 ; The Journal of Practice Teaching in Health and Social Work Volume 10 ; 10 >
     
   }
 
@@ -68,10 +68,10 @@
       param[journal_id] = swssr
       param[journal_issn] = 0953-5225
 
-      au < manifest ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
-      au < manifest ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
-      au < testing ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
-      au < testing ; 2010 ; Social Work and Social Sciences Review Volume 14 ; 14 >
+      au < testing ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
+      au < testing ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
+      au < ready ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
+      au < ready ; 2010 ; Social Work and Social Sciences Review Volume 14 ; 14 >
     
   }
 
