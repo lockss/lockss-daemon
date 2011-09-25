@@ -147,7 +147,7 @@
     au < released ; Basic Income Studies Volume 2 ; 2 ; 2007 >
     au < released ; Basic Income Studies Volume 3 ; 3 ; 2008 >
     au < ready ; Basic Income Studies Volume 4 ; 4 ; 2009 >
-    au < manifest ; Basic Income Studies Volume 5 ; 5 ; 2010 >
+    au < ready ; Basic Income Studies Volume 5 ; 5 ; 2010 >
 
   }
 
@@ -300,7 +300,7 @@
     au < released ; Capitalism and Society Volume 3 ; 3 ; 2008 >
     au < ready ; Capitalism and Society Volume 4 ; 4 ; 2009 >
     au < ready ; Capitalism and Society Volume 5 ; 5 ; 2010 >
-    au < manifest ; Capitalism and Society Volume 6 ; 6 ; 2011 >
+    au < testing ; Capitalism and Society Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -435,7 +435,7 @@
     au < released ; The Forum Volume 5 ; 5 ; 2007 >
     au < released ; The Forum Volume 6 ; 6 ; 2008 >
     au < released ; The Forum Volume 7 ; 7 ; 2009 >
-    au < ready; The Forum Volume 8 ; 8 ; 2010 >
+    au < ready ; The Forum Volume 8 ; 8 ; 2010 >
     au < ready ; The Forum Volume 9 ; 9 ; 2011 >
 
   }
@@ -810,9 +810,7 @@
 
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
-    comment[jcc6] = 2005,2009
-    comment[jcc7] = 2006,2009
-
+    
     au < manifest ; Journal of College and Character Volume 1 ; 1 ; 2000 >
     au < manifest ; Journal of College and Character Volume 2 ; 2 ; 2001 >
     au < manifest ; Journal of College and Character Volume 3 ; 3 ; 2002 >
@@ -822,7 +820,7 @@
     au < manifest ; Journal of College and Character Volume 7 ; 7 ; 2006 >
     au < manifest ; Journal of College and Character Volume 8 ; 8 ; 2006-2007 >
     au < manifest ; Journal of College and Character Volume 9 ; 9 ; 2007-2008 >
-    au < manifest ; Journal of College and Character Volume 10 ; 10 ; 2008-2009 >
+    au < ready ; Journal of College and Character Volume 10 ; 10 ; 2008-2009 >
     au < ready ; Journal of College and Character Volume 11 ; 11 ; 2010 >
     au < ready ; Journal of College and Character Volume 12 ; 12 ; 2011 >
 
@@ -992,8 +990,8 @@
     au < manifest ; Journal of Student Affairs Research and Practice Volume 42 ; 42 ; 2005 >
     au < manifest ; Journal of Student Affairs Research and Practice Volume 43 ; 43 ; 2006 >
     au < manifest ; Journal of Student Affairs Research and Practice Volume 44 ; 44 ; 2007 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 45 ; 45 ; 2008 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 46 ; 46 ; 2009 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 45 ; 45 ; 2008 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 46 ; 46 ; 2009 >
     au < ready ; Journal of Student Affairs Research and Practice Volume 47 ; 47 ; 2010 >
     au < ready ; Journal of Student Affairs Research and Practice Volume 48 ; 48 ; 2011 >
 
@@ -1076,10 +1074,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mlt
 
-    au < manifest ; Multicultural Learning and Teaching Volume 1 ; 1 ; 2006 >
-    au < manifest ; Multicultural Learning and Teaching Volume 2 ; 2 ; 2007 >
-    au < manifest ; Multicultural Learning and Teaching Volume 3 ; 3 ; 2008 >
-    au < manifest ; Multicultural Learning and Teaching Volume 4 ; 4 ; 2009 >
+    au < ready ; Multicultural Learning and Teaching Volume 1 ; 1 ; 2006 >
+    au < ready ; Multicultural Learning and Teaching Volume 2 ; 2 ; 2007 >
+    au < ready ; Multicultural Learning and Teaching Volume 3 ; 3 ; 2008 >
+    au < ready ; Multicultural Learning and Teaching Volume 4 ; 4 ; 2009 >
     au < ready ; Multicultural Learning and Teaching Volume 5 ; 5 ; 2010 >
 
   }
@@ -1100,7 +1098,7 @@
     au < ready ; Muslim World Journal of Human Rights Volume 4 ; 4 ; 2007 >
     au < ready ; Muslim World Journal of Human Rights Volume 5 ; 5 ; 2008 >
     au < doesNotExist ; Muslim World Journal of Human Rights Volume 6 ; 6 ; 2009 >
-    au < manifest ; Muslim World Journal of Human Rights Volume 7 ; 7 ; 2010-2011 >
+    au < ready ; Muslim World Journal of Human Rights Volume 7 ; 7 ; 2010-2011 >
 
   }
 
@@ -1116,8 +1114,8 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
-    au < manifest ; NASPA Journal About Women in Higher Education Volume 1 ; 1 ; 2008 >
-    au < manifest ; NASPA Journal About Women in Higher Education Volume 2 ; 2 ; 2009 >
+    au < ready ; NASPA Journal About Women in Higher Education Volume 1 ; 1 ; 2008 >
+    au < ready ; NASPA Journal About Women in Higher Education Volume 2 ; 2 ; 2009 >
     au < ready ; NASPA Journal About Women in Higher Education Volume 3 ; 3 ; 2010 >
     au < ready ; NASPA Journal About Women in Higher Education Volume 4 ; 4 ; 2011 >
 
@@ -1151,7 +1149,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = npf
 
-    au < manifest ; Nonprofit Policy Forum Volume 1 ; 1 ; 2010 >
+    au < ready ; Nonprofit Policy Forum Volume 1 ; 1 ; 2010 >
     au < ready ; Nonprofit Policy Forum Volume 2 ; 2 ; 2011 >
 
   }
@@ -1198,7 +1196,7 @@
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = policyandinternet
 
-    au < manifest ; Policy & Internet Volume 1 ; 1 ; 2009 >
+    au < ready ; Policy & Internet Volume 1 ; 1 ; 2009 >
     au < ready ; Policy & Internet Volume 2 ; 2 ; 2010 >
     au < ready ; Policy & Internet Volume 3 ; 3 ; 2011 >
 
@@ -1214,7 +1212,7 @@
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = ppp
 
-    au < manifest ; Poverty & Public Policy Volume 1 ; 1 ; 2009 >    
+    au < ready ; Poverty & Public Policy Volume 1 ; 1 ; 2009 >    
     au < ready ; Poverty & Public Policy Volume 2 ; 2 ; 2010 >    
     au < ready ; Poverty & Public Policy Volume 3 ; 3 ; 2011 >  
 
@@ -1300,8 +1298,8 @@
     au < manifest ; Review of Network Economics Volume 4 ; 4 ; 2005 >
     au < manifest ; Review of Network Economics Volume 5 ; 5 ; 2006 >
     au < manifest ; Review of Network Economics Volume 6 ; 6 ; 2007 >
-    au < manifest ; Review of Network Economics Volume 7 ; 7 ; 2008 >
-    au < manifest ; Review of Network Economics Volume 8 ; 8 ; 2009 >
+    au < ready ; Review of Network Economics Volume 7 ; 7 ; 2008 >
+    au < ready ; Review of Network Economics Volume 8 ; 8 ; 2009 >
     au < ready ; Review of Network Economics Volume 9 ; 9 ; 2010 >
     au < ready ; Review of Network Economics Volume 10 ; 10 ; 2011 >
 
@@ -1327,8 +1325,8 @@
     au < manifest ; The Rhodes Cook Letter Volume 6 ; 6 ; 2005 >
     au < manifest ; The Rhodes Cook Letter Volume 7 ; 7 ; 2006 >
     au < manifest ; The Rhodes Cook Letter Volume 8 ; 8 ; 2007 >
-    au < manifest ; The Rhodes Cook Letter Volume 9 ; 9 ; 2008 >
-    au < manifest ; The Rhodes Cook Letter Volume 10 ; 10 ; 2009 >
+    au < ready ; The Rhodes Cook Letter Volume 9 ; 9 ; 2008 >
+    au < ready ; The Rhodes Cook Letter Volume 10 ; 10 ; 2009 >
     au < ready ; The Rhodes Cook Letter Volume 11 ; 11 ; 2010 >
     au < ready ; The Rhodes Cook Letter Volume 12 ; 12 ; 2011 >    
 
@@ -1413,11 +1411,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
-    au < manifest ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; 2007 >
+    au < testing ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; 2007 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 2 ; 2 ; 2008 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 3 ; 3 ; 2009 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 4 ; 4 ; 2010 >
-    au < manifest ; Studies in Ethics, Law, and Technology Volume 5 ; 5 ; 2011 >
+    au < testing ; Studies in Ethics, Law, and Technology Volume 5 ; 5 ; 2011 >
 
   }
 
@@ -1549,7 +1547,7 @@
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = wmhp
 
-    au < manifest ; World Medical & Health Policy Volume 1 ; 1 ; 2009 >
+    au < ready ; World Medical & Health Policy Volume 1 ; 1 ; 2009 >
     au < ready ; World Medical & Health Policy Volume 2 ; 2 ; 2010 >
     au < ready ; World Medical & Health Policy Volume 3 ; 3 ; 2011 >
 
@@ -1562,14 +1560,13 @@
       eissn = 1935-6226
     >
 
-comment[wspr4] = daemon thinks there is no permission statement and fails the crawl, but the statement is there
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = wpsr
 
     au < released ; World Political Science Review Volume 1 ; 1 ; 2005 >
     au < released ; World Political Science Review Volume 2 ; 2 ; 2006 >
     au < released ; World Political Science Review Volume 3 ; 3 ; 2007 >
-    au < notReady ; World Political Science Review Volume 4 ; 4 ; 2008 >
+    au < ready ; World Political Science Review Volume 4 ; 4 ; 2008 >
     au < ready ; World Political Science Review Volume 5 ; 5 ; 2009>
     au < ready ; World Political Science Review Volume 6 ; 6 ; 2010>
     au < ready ; World Political Science Review Volume 7 ; 7 ; 2011>
