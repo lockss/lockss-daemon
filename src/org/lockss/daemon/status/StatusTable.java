@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.56 2011-06-21 00:31:47 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.57 2011-09-25 04:16:13 tlipkis Exp $
  */
 
 /*
@@ -246,8 +246,9 @@ public class StatusTable {
    * Filter the list of {@link ColumnDescriptor}s by the list of names
    * specfied by the <code>columns</code> property of the table, if any,
    * else the default list, if any.
-   * @param colDescs List of {@link ColumnDescriptor}s in their
-   * preferred display order for this table
+   * @param colDescs List of {@link ColumnDescriptor}s in their preferred
+   * display order for this table, or &quot;All&quot; for all possible
+   * columns.
    * @param defaultCols Default list of column names if not specified in
    * table, or null for no default filter.
    */
@@ -256,6 +257,9 @@ public class StatusTable {
     List<String> cols = defaultCols;
     String colprop = getProperty("columns");
     if (!StringUtil.isNullString(colprop)) {
+      if ("*".equals(colprop) || "All".equalsIgnoreCase(colprop)) {
+	return colDescs;
+      }
       cols = (List<String>)StringUtil.breakAt(colprop, ";");
     }
     if (cols == null) {
