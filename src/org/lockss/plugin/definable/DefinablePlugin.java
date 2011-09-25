@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.60 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.61 2011-09-25 04:37:39 tlipkis Exp $
  */
 
 /*
@@ -591,9 +591,13 @@ public class DefinablePlugin extends BasePlugin {
 	} catch (RuntimeException e) {
 	  log.warning(getPluginName() + " set unknown feature: "
 		      + ent.getKey() + " to version " + ent.getValue(), e);
-	  throw new PluginException.InvalidDefinition("Unknown feature: " +
-						      ent.getKey(),
-						      e);
+	  if (Boolean.getBoolean("org.lockss.unitTesting")) {
+	    // Cause an error only during unit testing, when there's no
+	    // legitimate reason for a plugin to name an unknown Feature
+	    throw new PluginException.InvalidDefinition("Unknown feature: " +
+							ent.getKey(),
+							e);
+	  }
 	}
       }
       featureVersion = map;
