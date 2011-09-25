@@ -109,11 +109,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Annals of the Rheumatic Diseases Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Annals of the Rheumatic Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Annals of the Rheumatic Diseases Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Annals of the Rheumatic Diseases Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Annals of the Rheumatic Diseases Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Annals of the Rheumatic Diseases Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Annals of the Rheumatic Diseases Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; testing ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; ready ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
@@ -272,31 +272,31 @@
 
     param[base_url] = http://www.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1840-1841 ; BMJ Volume s1-1 ; s1-1 >
-    au < HighWirePressH20Plugin ; testing ; 1841 ; BMJ Volume s1-2 ; s1-2 >
-    au < HighWirePressH20Plugin ; testing ; 1841-1842 ; BMJ Volume s1-3 ; s1-3 >
-    au < HighWirePressH20Plugin ; testing ; 1842 ; BMJ Volume s1-4 ; s1-4 >
-    au < HighWirePressH20Plugin ; testing ; 1842-1843 ; BMJ Volume s1-5 ; s1-5 >
-    au < HighWirePressH20Plugin ; testing ; 1843 ; BMJ Volume s1-6 ; s1-6 >
-    au < HighWirePressH20Plugin ; testing ; 1843-1844 ; BMJ Volume s1-7 ; s1-7 >
-    au < HighWirePressH20Plugin ; testing ; 1844 ; BMJ Volume s1-8 ; s1-8 >
-    au < HighWirePressH20Plugin ; testing ; 1845 ; BMJ Volume s1-9 ; s1-9 >
-    au < HighWirePressH20Plugin ; testing ; 1846 ; BMJ Volume s1-10 ; s1-10 >
-    au < HighWirePressH20Plugin ; testing ; 1847 ; BMJ Volume s1-11 ; s1-11 >
-    au < HighWirePressH20Plugin ; testing ; 1848 ; BMJ Volume s1-12 ; s1-12 >
-    au < HighWirePressH20Plugin ; testing ; 1849 ; BMJ Volume s1-13 ; s1-13 >
-    au < HighWirePressH20Plugin ; testing ; 1850 ; BMJ Volume s1-14 ; s1-14 >
-    au < HighWirePressH20Plugin ; testing ; 1851 ; BMJ Volume s1-15 ; s1-15 >
-    au < HighWirePressH20Plugin ; manifest ; 1852 ; BMJ Volume s1-16 ; s1-16 >
-    au < HighWirePressH20Plugin ; manifest ; 1849 ; BMJ Volume s2-1 ; s2-1 >
-    au < HighWirePressH20Plugin ; manifest ; 1850 ; BMJ Volume s2-2 ; s2-2 >
-    au < HighWirePressH20Plugin ; manifest ; 1851 ; BMJ Volume s2-3 ; s2-3 >
-    au < HighWirePressH20Plugin ; manifest ; 1852 ; BMJ Volume s2-4 ; s2-4 >
-    au < HighWirePressH20Plugin ; manifest ; 1853 ; BMJ Volume s3-1 ; s3-1 >
-    au < HighWirePressH20Plugin ; manifest ; 1854 ; BMJ Volume s3-2 ; s3-2 >
-    au < HighWirePressH20Plugin ; manifest ; 1855 ; BMJ Volume s3-3 ; s3-3 >
-    au < HighWirePressH20Plugin ; manifest ; 1856 ; BMJ Volume s3-4 ; s3-4 >
-    au < HighWirePressH20Plugin ; manifest ; 1857-1960 ; BMJ Volume s4-1 ; s4-1 >
+    au < HighWirePressH20Plugin ; ready ; 1840-1841 ; BMJ Volume s1-1 ; s1-1 >
+    au < HighWirePressH20Plugin ; ready ; 1841 ; BMJ Volume s1-2 ; s1-2 >
+    au < HighWirePressH20Plugin ; ready ; 1841-1842 ; BMJ Volume s1-3 ; s1-3 >
+    au < HighWirePressH20Plugin ; ready ; 1842 ; BMJ Volume s1-4 ; s1-4 >
+    au < HighWirePressH20Plugin ; ready ; 1842-1843 ; BMJ Volume s1-5 ; s1-5 >
+    au < HighWirePressH20Plugin ; ready ; 1843 ; BMJ Volume s1-6 ; s1-6 >
+    au < HighWirePressH20Plugin ; ready ; 1843-1844 ; BMJ Volume s1-7 ; s1-7 >
+    au < HighWirePressH20Plugin ; ready ; 1844 ; BMJ Volume s1-8 ; s1-8 >
+    au < HighWirePressH20Plugin ; ready ; 1845 ; BMJ Volume s1-9 ; s1-9 >
+    au < HighWirePressH20Plugin ; ready ; 1846 ; BMJ Volume s1-10 ; s1-10 >
+    au < HighWirePressH20Plugin ; ready ; 1847 ; BMJ Volume s1-11 ; s1-11 >
+    au < HighWirePressH20Plugin ; ready ; 1848 ; BMJ Volume s1-12 ; s1-12 >
+    au < HighWirePressH20Plugin ; ready ; 1849 ; BMJ Volume s1-13 ; s1-13 >
+    au < HighWirePressH20Plugin ; ready ; 1850 ; BMJ Volume s1-14 ; s1-14 >
+    au < HighWirePressH20Plugin ; ready ; 1851 ; BMJ Volume s1-15 ; s1-15 >
+    au < HighWirePressH20Plugin ; testing ; 1852 ; BMJ Volume s1-16 ; s1-16 >
+    au < HighWirePressH20Plugin ; testing ; 1849 ; BMJ Volume s2-1 ; s2-1 >
+    au < HighWirePressH20Plugin ; testing ; 1850 ; BMJ Volume s2-2 ; s2-2 >
+    au < HighWirePressH20Plugin ; testing ; 1851 ; BMJ Volume s2-3 ; s2-3 >
+    au < HighWirePressH20Plugin ; testing ; 1852 ; BMJ Volume s2-4 ; s2-4 >
+    au < HighWirePressH20Plugin ; testing ; 1853 ; BMJ Volume s3-1 ; s3-1 >
+    au < HighWirePressH20Plugin ; testing ; 1854 ; BMJ Volume s3-2 ; s3-2 >
+    au < HighWirePressH20Plugin ; testing ; 1855 ; BMJ Volume s3-3 ; s3-3 >
+    au < HighWirePressH20Plugin ; testing ; 1856 ; BMJ Volume s3-4 ; s3-4 >
+    au < HighWirePressH20Plugin ; testing ; 1857-1960 ; BMJ Volume s4-1 ; s4-1 >
     au < HighWirePressH20Plugin ; testing ; 1861-1979 ; BMJ Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; testing ; 1861-1979 ; BMJ Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; ready ; 1980 ; BMJ Volume 280 ; 280 >
