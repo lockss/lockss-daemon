@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.9 2011-02-14 00:07:54 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.10 2011-09-25 04:16:32 tlipkis Exp $
  */
 
 /*
@@ -131,4 +131,13 @@ public class TestMimeTypeMap extends LockssTestCase {
 	       instanceof GoslingHtmlLinkExtractor.Factory);
     assertEquals(uf, mt1.getLinkExtractorFactory());
   }
+
+  public void testWildSubType() {
+    String wild = "image/*";
+    assertEquals(wild, MimeTypeMap.wildSubType("image/gif"));
+    assertSame(wild, MimeTypeMap.wildSubType("image/*"));
+    assertEquals("image", MimeTypeMap.wildSubType("image"));
+    assertEquals("image/bad/mime", MimeTypeMap.wildSubType("image/bad/mime"));
+  }
+
 }

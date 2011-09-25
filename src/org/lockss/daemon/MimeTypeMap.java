@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.11 2011-02-14 00:07:54 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.12 2011-09-25 04:16:32 tlipkis Exp $
  */
 
 /*
@@ -171,5 +171,21 @@ public class MimeTypeMap {
       map.put(mime, res);
     }
     return res;
+  }
+
+  /** Turn a mime type into one with a wildcard subtype.  (E.g.,
+   * <code>image/gif</code> -> <code>image/*</code>.)
+   * If the argument already has a wildcard subtype or is misformatted,
+   * return it unmodified. */
+
+  public static String wildSubType(String mime) {
+    List<String> parts = StringUtil.breakAt(mime, "/");
+    if (parts.size() != 2) {
+      return mime;
+    }
+    if ("*".equals(parts.get(1))) {
+      return mime;
+    }
+    return parts.get(0) + "/" + "*";
   }
 }
