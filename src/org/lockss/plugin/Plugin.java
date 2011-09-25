@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.36 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: Plugin.java,v 1.37 2011-09-25 04:15:59 tlipkis Exp $
  */
 
 /*
@@ -225,16 +225,19 @@ public interface Plugin {
      * the plugin's polling behavior changes in a way that makes it unable
      * to correctly participate in a poll with a peer running a different
      * version.
+     * @since Daemon 1.49
      */
     Poll,
       /**
        * Version of article iterators, metadata extractors and factories,
        * etc.  Should be changed whenever this code changes in a way that
        * requires re-extraction of metadata.
+       * @since Daemon 1.49
        */
       Metadata,
       /**
        * Version of substance checker patterns.
+       * @since Daemon 1.50
        */
       Substance,
       };
