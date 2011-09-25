@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.11 2010-08-31 21:42:55 thib_gc Exp $
+ * $Id: MimeTypeInfo.java,v 1.12 2011-09-25 04:16:44 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,6 @@ public interface MimeTypeInfo {
   public FilterFactory getCrawlFilterFactory();
   /** Returns the LinkExtractorFactory, or null */
   public LinkExtractorFactory getLinkExtractorFactory();
-  /** Returns the RateLimiter, or null */
-  public RateLimiter getFetchRateLimiter();
   /** Returns the UrlRewriterFactory, or null */
   public LinkRewriterFactory getLinkRewriterFactory();
   /** Returns the default FileMetadataExtractorFactory, or null */
@@ -74,7 +72,6 @@ public interface MimeTypeInfo {
     public Impl setHashFilterFactory(FilterFactory fact);
     public Impl setCrawlFilterFactory(FilterFactory fact);
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
-    public Impl setFetchRateLimiter(RateLimiter limiter);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
     public Impl setFileMetadataExtractorFactoryMap(Map<String,FileMetadataExtractorFactory> map);
   }
@@ -85,7 +82,6 @@ public interface MimeTypeInfo {
     private FilterFactory hashFilterFactory;
     private FilterFactory crawlFilterFactory;
     private LinkExtractorFactory extractorFactory;
-    private RateLimiter fetchRateLimiter;
     private LinkRewriterFactory linkFactory;
     private Map<String,FileMetadataExtractorFactory>
       metadataExtractorFactoryMap;
@@ -98,7 +94,6 @@ public interface MimeTypeInfo {
 	hashFilterFactory = toClone.getHashFilterFactory();
 	crawlFilterFactory = toClone.getCrawlFilterFactory();
 	extractorFactory = toClone.getLinkExtractorFactory();
-	fetchRateLimiter = toClone.getFetchRateLimiter();
 	linkFactory = toClone.getLinkRewriterFactory();
 	metadataExtractorFactoryMap =
 	  toClone.getFileMetadataExtractorFactoryMap();
@@ -129,15 +124,6 @@ public interface MimeTypeInfo {
 
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact) {
       extractorFactory = fact;
-      return this;
-    }
-
-    public RateLimiter getFetchRateLimiter() {
-      return fetchRateLimiter;
-    }
-
-    public Impl setFetchRateLimiter(RateLimiter limiter) {
-      fetchRateLimiter = limiter;
       return this;
     }
 

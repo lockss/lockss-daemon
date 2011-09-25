@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.8 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.9 2011-09-25 04:16:44 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkExtractorFactory());
-    assertNull(mti.getFetchRateLimiter());
 
     FilterFactory ff = new MockFilterFactory();
     mti.setHashFilterFactory(ff);
@@ -66,10 +65,6 @@ public class TestMimeTypeInfo extends LockssTestCase {
     mti.setLinkExtractorFactory(uf);
     assertSame(uf, mti.getLinkExtractorFactory());
 
-    RateLimiter rl = new RateLimiter("1/1");
-    mti.setFetchRateLimiter(rl);
-    assertSame(rl, mti.getFetchRateLimiter());
-    
     LinkRewriterFactory lr = new MockLinkRewriterFactory();
     mti.setLinkRewriterFactory(lr);
     assertSame(lr, mti.getLinkRewriterFactory());
@@ -87,7 +82,6 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertSame(ff, m2.getHashFilterFactory());
     assertSame(cff, m2.getCrawlFilterFactory());
     assertSame(uf, m2.getLinkExtractorFactory());
-    assertSame(rl, m2.getFetchRateLimiter());
     assertSame(lr, m2.getLinkRewriterFactory());
     assertSame(factMap, m2.getFileMetadataExtractorFactoryMap());
     assertSame(me, m2.getFileMetadataExtractorFactory());
