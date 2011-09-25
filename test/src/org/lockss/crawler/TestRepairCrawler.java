@@ -1,10 +1,10 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.47 2007-10-09 00:57:41 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.48 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,7 @@ public class TestRepairCrawler extends LockssTestCase {
   private MockLinkExtractor extractor = new MockLinkExtractor();
   private MockIdentityManager idm;
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
+  private CrawlManagerImpl crawlMgr;
 
   private String permissionPage = "http://example.com/permission.html";
   private String permissionPage2 = "http://example.com/permission2.html";
@@ -74,6 +75,9 @@ public class TestRepairCrawler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     theDaemon = getMockLockssDaemon();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
     theDaemon.getAlertManager();
     idm = new MockIdentityManager();
     theDaemon.setIdentityManager(idm);
@@ -98,6 +102,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(url1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY,
@@ -186,6 +191,7 @@ public class TestRepairCrawler extends LockssTestCase {
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     spec.setCrawlWindow(new MyMockCrawlWindow());
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -218,6 +224,7 @@ public class TestRepairCrawler extends LockssTestCase {
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     spec.setCrawlWindow(new MyMockCrawlWindow());
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -244,6 +251,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setWatchdog(wdog);
     crawler.doCrawl();
 
@@ -262,6 +270,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -283,6 +292,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -312,6 +322,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -328,6 +339,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
 
     assertFalse(crawler.doCrawl());
   }
@@ -362,6 +374,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -399,6 +412,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl), 100);
+    crawler.setCrawlManager(crawlMgr);
 
     assertTrue("doCrawl() returned false", crawler.doCrawl());
     assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl),
@@ -424,6 +438,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
 
@@ -447,6 +462,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
@@ -469,6 +485,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(1);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
@@ -487,6 +504,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
@@ -505,6 +523,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
@@ -523,6 +542,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
 
@@ -537,6 +557,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
 
@@ -553,6 +574,7 @@ public class TestRepairCrawler extends LockssTestCase {
       makeCrawlerWPermission(mau, spec, aus,
 			     ListUtil.list(repairUrl1, repairUrl2),
 			     0);
+    crawler.setCrawlManager(crawlMgr);
 
     mau.addUrl(repairUrl1).setContentSize(4321);
     mau.addUrl(repairUrl2).setContentSize(1357);
@@ -577,6 +599,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
@@ -596,6 +619,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),1);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(2);
 
     //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
@@ -618,6 +642,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),1);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3);
 
     //ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
@@ -639,6 +664,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(2); //first publisher, then first other cache
 
     mau.addUrl(repairUrl);
@@ -665,6 +691,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     crawler.setTimesToThrow(3); //first publisher, then first other cache
 
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
@@ -692,6 +719,7 @@ public class TestRepairCrawler extends LockssTestCase {
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus,
                              ListUtil.list(repairUrl1, repairUrl2), 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -723,6 +751,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -756,6 +785,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setCrawlManager(crawlMgr);
     ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -830,6 +860,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
 
@@ -856,6 +887,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
 
@@ -880,6 +912,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+    crawler.setCrawlManager(crawlMgr);
 
     crawler.doCrawl();
 

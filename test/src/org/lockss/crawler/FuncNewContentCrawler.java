@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.24 2011-04-04 07:15:36 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.25 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-  private CrawlManager crawlMgr;
+  private CrawlManagerImpl crawlMgr;
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
@@ -107,7 +107,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
-    crawlMgr = theDaemon.getCrawlManager();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
 
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -128,7 +130,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
     // get the root of the simContent
     String simDir = sau.getSimRoot();
 
-    crawlContent();
+    NoCrawlEndActionsNewContentCrawler crawler = crawlContent();
 
     // read all the files links from the root of the simcontent
     // check the link level of the file and see if it contains
@@ -165,9 +167,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, null, tp, tp, null, th, tp, th, tp, tp};
+    String[] ct = {null, null, tp, tp, th, th, tp, tp, th, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
-    assertEquals(ctb, new HashBag(sau.getPauseContentTypes()));
+    CrawlRateLimiter crl = crawlMgr.getCrawlRateLimiter(sau);
+    assertEquals(ctb, new HashBag(crawler.getPauseContentTypes()));
   }
 
   //recursive caller to check through the whole file tree
@@ -204,13 +207,14 @@ public class FuncNewContentCrawler extends LockssTestCase {
     sau.generateContentTree();
   }
 
-  private void crawlContent() {
+  private NoCrawlEndActionsNewContentCrawler crawlContent() {
     log.debug("Crawling tree...");
     CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler =
+    NoCrawlEndActionsNewContentCrawler crawler =
       new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
     crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
+    return crawler;
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {

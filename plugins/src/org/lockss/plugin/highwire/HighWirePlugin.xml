@@ -145,6 +145,16 @@
     <long>200</long>
   </entry>
   <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+	<string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+	<string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <!--  Remove these once 1.52 running everywhere -->
+  <entry>
     <string>application/pdf_fetch_rate_limit</string>
     <string>1/3000</string>
   </entry>

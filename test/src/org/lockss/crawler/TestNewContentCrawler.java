@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.75 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.76 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set cachedUrls = cus.getCachedUrls();
     Set expected = SetUtil.set(startUrl, permissionPage);
     assertEquals(expected, cachedUrls);
+    assertEquals(ListUtil.list(startUrl), crawler.pauses);
   }
 
   public void testPassesParamsToUrlCacherDefault() {
@@ -227,6 +228,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set expected = SetUtil.fromList(urls);
     expected.add(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
+    assertEquals(urls, crawler.pauses);
   }
 
   public void testDoCrawlOnePageWithOneLinkSuccessful() {
@@ -1268,6 +1270,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   private static class MyNewContentCrawler extends NewContentCrawler {
     List fetchedUrls = new ArrayList();
+    List pauses = new ArrayList();
     
     protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
 				  AuState aus) {
@@ -1302,6 +1305,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     @Override
     protected CrawlUrlData newCrawlUrlData(String url, int depth) {
       return new MyCrawlUrlData(url, depth);
+    }
+
+    @Override
+    public void pauseBeforeFetch(String url) {
+      pauses.add(url);
     }
   }
 

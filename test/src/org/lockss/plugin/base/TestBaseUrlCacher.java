@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.64 2011-01-10 09:13:21 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.65 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
-  private int pauseBeforeFetchCounter;
 
   private MockNodeManager nodeMgr = new MockNodeManager();
 
@@ -118,18 +117,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCache() throws IOException {
-    pauseBeforeFetchCounter = 0;
-
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
-    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testReCacheWCookie() throws IOException {
-    pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
     CIProperties headers = new CIProperties();
@@ -141,14 +136,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(2, cacher.getUncachedInputStreamCount);
     // getUncachedProperties() called twice each time due to login page check
     assertEquals(4, cacher.getUncachedPropertiesCount);
-    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testReCacheWCookieOverride() throws IOException {
     BaseArchivalUnit.ParamHandlerMap pMap = new BaseArchivalUnit.ParamHandlerMap();
     pMap.putBoolean("refetch_on_set_cookie", false);
     cacher.setParamMap(pMap);
-    pauseBeforeFetchCounter = 0;
 
     cacher._input = new StringInputStream("test stream");
     CIProperties headers = new CIProperties();
@@ -159,7 +152,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertTrue(cacher.wasStored);
     assertEquals(1, cacher.getUncachedInputStreamCount);
     assertEquals(2, cacher.getUncachedPropertiesCount);
-    assertEquals(1, pauseBeforeFetchCounter);
   }
 
   public void testLastModifiedCache() throws IOException {
@@ -1408,9 +1400,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
       }
     }
 
-    public void pauseBeforeFetch(String previousContentType) {
-      pauseBeforeFetchCounter++;
-    }
   }
 
   private class MyMockLockssUrlConnection extends MockLockssUrlConnection {

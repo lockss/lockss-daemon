@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.17 2011-01-24 23:53:38 pgust Exp $
+ * $Id: FuncZipExploder2.java,v 1.18 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class FuncZipExploder2 extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   PluginManager pluginMgr;
+  private CrawlManagerImpl crawlMgr;
 
   private static String URL_PREFIX =
     "http://springer.clockss.org/JOU=00109/VOL=83/ISU=12";
@@ -174,6 +175,9 @@ public class FuncZipExploder2 extends LockssTestCase {
     pluginMgr = new NonVersionCheckingPluginManager();
     pluginMgr.initService(theDaemon);
     theDaemon.setPluginManager(pluginMgr);
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
@@ -385,7 +389,9 @@ public class FuncZipExploder2 extends LockssTestCase {
 			  null, // LoginPageChecker
 			  ".zip$", // exploder pattern
 			  new SpringerExploderHelper() );
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
+    NewContentCrawler crawler =
+      new NewContentCrawler(sau, spec, new MockAuState());
+    crawler.setCrawlManager(crawlMgr);
     crawler.doCrawl();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.96 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.97 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   private String auId = null;
   private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
-  private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
   private List<Pattern> nonSubstanceUrlPatterns = null;
   private List<Pattern> substanceUrlPatterns = null;
@@ -86,6 +85,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List urlStems = Collections.EMPTY_LIST;
   private Collection loginUrls;
   private String fetchRateLimiterKey;
+  private RateLimiterInfo rateInfo;
   private String perHostPermissionPath;
   private Comparator<CrawlUrl> crawlUrlCmp;
 
@@ -452,12 +452,6 @@ public class MockArchivalUnit implements ArchivalUnit {
     auId = newId;
   }
 
-  public void pauseBeforeFetch(String previousContentType) {
-    if (pauseCallback != null) {
-      pauseCallback.callback();
-    }
-  }
-
   public RateLimiter findFetchRateLimiter() {
     return RateLimiter.UNLIMITED;
   }
@@ -470,8 +464,12 @@ public class MockArchivalUnit implements ArchivalUnit {
     fetchRateLimiterKey = key;
   }
 
-  public void setPauseCallback(MockObjectCallback callback) {
-    this.pauseCallback = callback;
+  public RateLimiterInfo getRateLimiterInfo() {
+    return rateInfo;
+  }
+
+  public void setRateLimiterInfo(RateLimiterInfo info) {
+    rateInfo = info;
   }
 
   public boolean shouldCrawlForNewContent(AuState aus) {

@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.26 2010-08-01 21:33:24 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.27 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -233,10 +233,16 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return super.makeUrlCacher(url);
   }
 
+  public RateLimiterInfo getRateLimiterInfo() {
+    String rate = CurrentConfig.getParam(PARAM_REGISTRY_FETCH_RATE,
+					 DEFAULT_REGISTRY_FETCH_RATE);
+    return new RateLimiterInfo(getFetchRateLimiterKey(), rate);
+  }
+
   protected RateLimiter recomputeFetchRateLimiter(RateLimiter oldLimiter) {
     String rate = CurrentConfig.getParam(PARAM_REGISTRY_FETCH_RATE,
 					 DEFAULT_REGISTRY_FETCH_RATE);
-    Object limiterKey = getFetchRateLimiterKey();
+    String limiterKey = getFetchRateLimiterKey();
 
     if (limiterKey == null) {
       return RateLimiter.getRateLimiter(oldLimiter, rate,

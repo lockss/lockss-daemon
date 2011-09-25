@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.107 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.108 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -299,9 +299,6 @@ public class NullPlugin {
     public void setWatchdog(LockssWatchdog wdog) {
     }
 
-    public void setPreviousContentType(String previousContentType) {
-    }
-
     public int cache() throws IOException {
       return CACHE_RESULT_NOT_MODIFIED;
     }
@@ -494,14 +491,15 @@ public class NullPlugin {
       return null;
     }
 
-    public void pauseBeforeFetch(String previousContentType) {
-    }
-
     public RateLimiter findFetchRateLimiter() {
       return RateLimiter.UNLIMITED;
     }
 
     public String getFetchRateLimiterKey() {
+      return null;
+    }
+
+    public RateLimiterInfo getRateLimiterInfo() {
       return null;
     }
 

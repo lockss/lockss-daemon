@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.70 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.71 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -422,6 +422,7 @@ public class RepairCrawler extends BaseCrawler {
   }
 
   private int cache(UrlCacher uc, String id) throws IOException {
+    pauseBeforeFetch(uc);
     InputStream input = uc.getUncachedInputStream();
     try {
       CIProperties headers = uc.getUncachedProperties();
@@ -463,6 +464,7 @@ public class RepairCrawler extends BaseCrawler {
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
+    pauseBeforeFetch(uc);
     updateCacheStats(uc.cache(), uc);
     crawlStatus.addSource("Publisher");
   }

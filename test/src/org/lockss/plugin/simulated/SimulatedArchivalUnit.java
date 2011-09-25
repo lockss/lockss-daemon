@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.73 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.74 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   String simRoot; //sim root dir returned by content generator
   String baseUrlNoSlash;
   private boolean doFilter = false;
-  private List pauseContentTypes = new ArrayList();
 
   Set toBeDamaged = new HashSet();
 
@@ -246,14 +245,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     log.debug("Moving " + source.getAbsolutePath() + " to " +
             target.getAbsolutePath());
     source.renameTo(target);
-  }
-
-  public void pauseBeforeFetch(String previousContentType) {
-    pauseContentTypes.add(previousContentType);
-  }
-
-  public List getPauseContentTypes() {
-    return pauseContentTypes;
   }
 
   /**

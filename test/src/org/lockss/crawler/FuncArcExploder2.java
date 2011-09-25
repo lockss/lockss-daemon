@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.5 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: FuncArcExploder2.java,v 1.6 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class FuncArcExploder2 extends LockssTestCase {
   PluginManager pluginMgr;
   int lastCrawlResult = Crawler.STATUS_UNKNOWN;
   String lastCrawlMessage = null;
+  private CrawlManagerImpl crawlMgr;
 
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -153,6 +154,9 @@ public class FuncArcExploder2 extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     pluginMgr = theDaemon.getPluginManager();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
@@ -322,7 +326,8 @@ public class FuncArcExploder2 extends LockssTestCase {
 			  ".arc.gz$", // exploder pattern
 			  new MyExploderHelper(bad) );
     AuState maus = new MyMockAuState();
-    Crawler crawler = new NewContentCrawler(sau, spec, maus);
+    NewContentCrawler crawler = new NewContentCrawler(sau, spec, maus);
+    crawler.setCrawlManager(crawlMgr);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
     lastCrawlMessage = maus.getLastCrawlResultMsg();

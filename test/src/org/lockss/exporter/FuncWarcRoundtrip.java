@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcRoundtrip.java,v 1.2 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: FuncWarcRoundtrip.java,v 1.3 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -325,7 +325,7 @@ public class FuncWarcRoundtrip extends LockssTestCase {
           ".warc.gz$", // exploder pattern
           new MyExploderHelper(null) );
     AuState maus = new MyMockAuState();
-    Crawler crawler = new NewContentCrawler(sau, spec, maus);
+    Crawler crawler = new NoCrawlEndActionsNewContentCrawler(sau, spec, maus);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
     lastCrawlMessage = maus.getLastCrawlResultMsg();

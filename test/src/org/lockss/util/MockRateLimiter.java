@@ -1,5 +1,5 @@
 /*
- * $Id: MockRateLimiter.java,v 1.1 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: MockRateLimiter.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,10 @@ public class MockRateLimiter extends RateLimiter {
 
   public MockRateLimiter(String rate) {
     super(rate);
+  }
+
+  public MockRateLimiter(int events, long interval) {
+    super(events, interval);
   }
 
   /** Return the limit as a rate string n/interval */

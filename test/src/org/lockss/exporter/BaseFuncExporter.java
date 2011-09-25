@@ -1,5 +1,5 @@
 /*
- * $Id: BaseFuncExporter.java,v 1.5 2011-06-20 07:07:15 tlipkis Exp $
+ * $Id: BaseFuncExporter.java,v 1.6 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.crawler.NewContentCrawler;
 import org.lockss.protocol.*;
 
 public abstract class BaseFuncExporter extends LockssTestCase {
@@ -112,7 +111,8 @@ public abstract class BaseFuncExporter extends LockssTestCase {
 
   protected void crawlContent() {
     CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
+    Crawler crawler =
+      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
     auUrls = new ArrayList<String>();
     auDirs = new ArrayList<String>();

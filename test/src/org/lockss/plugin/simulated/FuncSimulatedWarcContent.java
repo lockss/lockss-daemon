@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedWarcContent.java,v 1.1 2011-05-09 02:34:01 tlipkis Exp $
+ * $Id: FuncSimulatedWarcContent.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.NewContentCrawler;
 import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
@@ -165,7 +164,8 @@ public class FuncSimulatedWarcContent extends LockssTestCase {
     log.debug("crawlContent()");
     CrawlSpec spec =
       new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    Crawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
+    Crawler crawler =
+      new NoCrawlEndActionsNewContentCrawler(sau, spec, new MockAuState());
     crawler.doCrawl();
   }
 

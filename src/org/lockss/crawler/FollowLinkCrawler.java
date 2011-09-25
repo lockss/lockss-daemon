@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.86 2011-05-11 08:41:10 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.87 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -670,6 +670,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	if (wdog != null) {
 	  wdog.pokeWDog();
 	}
+	pauseBeforeFetch(uc);
 	updateCacheStats(uc.cache(), uc);
 	// success
 	return;

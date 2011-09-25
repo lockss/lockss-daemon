@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.24 2010-09-01 07:50:37 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.25 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.CrawlManager;
+import org.lockss.crawler.*;
 
 /**
  * Mock implementation of the CrawlManager
@@ -47,6 +47,7 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   public HashMap scheduledCrawls = new HashMap();
   public static final String SCHEDULED = "scheduled";
   public boolean shouldCrawlNewContent = true;
+  private CrawlRateLimiter crl;
 
   public void initService(LockssApp app) throws LockssAppException { }
   public void startService() { }
@@ -95,6 +96,17 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
 				   CrawlManager.Callback cb,
                                    Object cookie, ActivityRegulator.Lock lock) {
     scheduleNewContentCrawl(au, cb, cookie);
+  }
+
+  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+    if (crl != null) {
+      return crl;
+    }
+    return new CrawlRateLimiter(au);
+  }
+
+  public void setCrawlRateLimiter(CrawlRateLimiter crl) {
+    this.crl = crl;
   }
 
   public boolean isCrawlStarterEnabled() {

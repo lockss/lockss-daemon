@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.40 2011-06-20 16:30:04 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.41 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -170,6 +170,7 @@ public abstract class BaseCrawler
 
   protected PermissionMap permissionMap = null;
 
+  protected CrawlRateLimiter crl;
   protected String previousContentType;
 
   protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
@@ -238,6 +239,25 @@ public abstract class BaseCrawler
     mimeTypePauseAfter304 =
       config.getBoolean(PARAM_MIME_TYPE_PAUSE_AFTER_304,
 			DEFAULT_MIME_TYPE_PAUSE_AFTER_304);
+  }
+
+  protected CrawlRateLimiter getCrawlRateLimiter() {
+    if (crl == null) {
+      if (crawlMgr != null) {
+	crl = crawlMgr.getCrawlRateLimiter(au);
+      } else {
+	crl = new CrawlRateLimiter(au);
+      }
+    }
+    return crl;
+  }
+
+  protected void pauseBeforeFetch(UrlCacher uc) {
+    pauseBeforeFetch(uc.getUrl());
+  }
+
+  protected void pauseBeforeFetch(String url) {
+    getCrawlRateLimiter().pauseBeforeFetch(url, previousContentType);
   }
 
   List getDaemonPermissionCheckers() {
@@ -377,6 +397,7 @@ public abstract class BaseCrawler
     // XXX can't reuse UrlCacher
     UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
+    pauseBeforeFetch(permissionPage);
     updateCacheStats(uc.cache(), uc);
   }
 
@@ -419,10 +440,6 @@ public abstract class BaseCrawler
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
     uc.setWatchdog(wdog);
-    if (previousContentType != null) {
-      uc.setPreviousContentType(previousContentType);
-      previousContentType = null;
-    }
     return uc;
   }
   /**  

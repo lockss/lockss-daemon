@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.58 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.59 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -180,15 +180,11 @@ public interface ArchivalUnit {
   public String getName();
 
   /**
-   * Sleeps for the interval needed between requests to the server
-   */
-  public void pauseBeforeFetch(String previousContentType);
-
-  /**
    * Return the RateLimiter for page fetches from the publisher's server.
    * Will be called when AU is started or reconfigured.  May return an
    * AU-local limiter, a plugin-local limiter, or any other shared limiter.
    * @return the RateLimiter
+   * @deprecated in favor of RateLimiterInfo
    */
   public RateLimiter findFetchRateLimiter();
 
@@ -198,6 +194,8 @@ public interface ArchivalUnit {
    * AU doesn't share its fetch rate limiter.
    */
   public String getFetchRateLimiterKey();
+
+  public RateLimiterInfo getRateLimiterInfo();
 
   /**
    * Return a list of urls which need to be recrawled during a new content

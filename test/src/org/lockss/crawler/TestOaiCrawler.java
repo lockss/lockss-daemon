@@ -1,10 +1,10 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.21 2011-05-11 03:31:16 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.22 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +54,7 @@ public class TestOaiCrawler extends LockssTestCase {
   private String permissionUrl = "http://www.example.com/permission.html";
   private List permissionList = ListUtil.list(permissionUrl);
   private OaiCrawler crawler = null;
+  private CrawlManagerImpl crawlMgr;
 
   SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
 
@@ -61,7 +62,11 @@ public class TestOaiCrawler extends LockssTestCase {
     super.setUp();
     TimeBase.setSimulated(10);
 
-    getMockLockssDaemon().getAlertManager();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.getAlertManager();
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    daemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(daemon);
 
     mau = newMockArchivalUnit();
     mau.setPlugin(new MockPlugin(getMockLockssDaemon()));
@@ -178,6 +183,16 @@ public class TestOaiCrawler extends LockssTestCase {
     assertFalse(((OaiCrawler)crawler).shouldFollowLink());
   }
 
+  MyOaiCrawler makeOaiCrawler(ArchivalUnit mau, CrawlSpec spec, AuState aus,
+			      OaiHandler handler) {
+    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    crawler.setCrawlManager(crawlMgr);
+    if (handler != null) {
+      crawler.setOaiHandler(handler);
+    }
+    return crawler;
+  }
+
   /**
    * Test a base case for a first crawl on an AU, ie we have no content
    *
@@ -193,8 +208,7 @@ public class TestOaiCrawler extends LockssTestCase {
     oaiHandler.setUpdatedUrls(SetUtil.set(url1));
 
     //set the crawler
-    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
-    crawler.setOaiHandler(oaiHandler);
+    MyOaiCrawler crawler = makeOaiCrawler(mau, spec, aus, oaiHandler);
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -220,8 +234,7 @@ public class TestOaiCrawler extends LockssTestCase {
     oaiHandler.setUpdatedUrls(SetUtil.set(url1));
 
     //set the crawler
-    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
-    crawler.setOaiHandler(oaiHandler);
+    MyOaiCrawler crawler = makeOaiCrawler(mau, spec, aus, oaiHandler);
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -252,8 +265,7 @@ public class TestOaiCrawler extends LockssTestCase {
 //    oaiHandler.setUpdatedUrls(SetUtil.set(url1));
 
     //set the crawler
-    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
-    crawler.setOaiHandler(oaiHandler);
+    MyOaiCrawler crawler = makeOaiCrawler(mau, spec, aus, oaiHandler);
 //    crawler.daemonPermissionCheckers =
 //      ListUtil.list(new MyMockPermissionChecker(1));
 
@@ -280,7 +292,7 @@ public class TestOaiCrawler extends LockssTestCase {
     spec.setOaiHandler(oaiHandler);
 
     //set the crawler
-    OaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    MyOaiCrawler crawler = makeOaiCrawler(mau, spec, aus, null);
 
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
@@ -322,8 +334,7 @@ public class TestOaiCrawler extends LockssTestCase {
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, true);
     mau.setCrawlSpec(spec);
 
-    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
-    crawler.setOaiHandler(oaiHandler);
+    MyOaiCrawler crawler = makeOaiCrawler(mau, spec, aus, oaiHandler);
     crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 

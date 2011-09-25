@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.37 2011-06-20 07:09:44 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.38 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -252,6 +252,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, false, true);
 
     assertTrue(doCrawl0(crawler));
+    assertEquals(ListUtil.list(url1), crawler.pauses);
    }
 
   //Fetch startUrl, extractor will return a single url that already exists
@@ -269,6 +270,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
+    assertEmpty(crawler.pauses);
   }
 
   public void testHandlesRedirects() {
@@ -1471,7 +1473,6 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
     public int cache() throws IOException {
       checkAbort();
-      //System.out.println("Caching for : " + super.getUrl());
       return super.cache();
     }
     private void checkAbort() {
@@ -1559,6 +1560,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     Set<String> nonStartUrlsToFollow = new HashSet<String>();
     Set fetched = new HashSet();
     boolean isFailOnStartUrlError = true;
+    List pauses = new ArrayList();
 
     protected TestableFollowLinkCrawler(ArchivalUnit au,
 					CrawlSpec spec, AuState aus){
@@ -1589,6 +1591,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     /** suppress these actions */
     protected void doCrawlEndActions() {
+    }
+
+    protected void pauseBeforeFetch(String url) {
+      pauses.add(url);
     }
 
     /**

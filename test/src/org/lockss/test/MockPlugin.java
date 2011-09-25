@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.31 2011-05-09 00:40:23 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.32 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -226,9 +226,5 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   public void setFetchRateLimiter(String contentType, RateLimiter limit) {
     rateLimiterMap.put(contentType, limit);
-  }
-
-  public RateLimiter getFetchRateLimiter(String contentType) {
-    return rateLimiterMap.get(contentType);
   }
 }

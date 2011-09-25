@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.85 2011-06-20 07:01:21 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.86 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,6 @@ public class BaseUrlCacher implements UrlCacher {
   private IPAddr localAddr = null;
   private Properties reqProps;
   private LockssWatchdog wdog;
-  private String previousContentType;
   private BitSet fetchFlags = new BitSet();
 
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
@@ -207,10 +206,6 @@ public class BaseUrlCacher implements UrlCacher {
     this.wdog = wdog;
   }
 
-  public void setPreviousContentType(String previousContentType) {
-    this.previousContentType = previousContentType;
-  }
-
   private boolean isDamaged() {
     DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
     if (dnSet == null) {
@@ -237,9 +232,6 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   private int cache(String lastModified) throws IOException {
-    logger.debug3("Pausing before fetching content");
-    au.pauseBeforeFetch(previousContentType);
-    logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream(lastModified);
     // null input indicates unmodified content, so skip caching
     if (input == null) {

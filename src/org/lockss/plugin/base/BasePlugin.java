@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.78 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.79 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -530,21 +530,6 @@ public abstract class BasePlugin
   public ArticleMetadataExtractorFactory
     getArticleMetadataExtractorFactory(MetadataTarget target) {
     return null;
-  }
-
-  /**
-   * Returns the fetch rate limiter for the mime type, if any
-   * @param contentType the content type
-   * @return the RateLimiter or null
-   */
-  public RateLimiter getFetchRateLimiter(String contentType) {
-    MimeTypeInfo mti = getMimeTypeInfo(contentType);
-    if (mti == null) {
-      return null;
-    }
-    if (log.isDebug3())
-      log.debug3(contentType + " rate limiter: " + mti.getFetchRateLimiter());
-    return mti.getFetchRateLimiter();
   }
 
   /**

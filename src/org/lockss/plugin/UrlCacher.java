@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.29 2007-09-24 18:37:11 dshr Exp $
+ * $Id: UrlCacher.java,v 1.30 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -161,10 +161,6 @@ public interface UrlCacher {
    * @see StreamUtil#copy(InputStream, OutputStream, long, LockssWatchdog)
    */
   public void setWatchdog(LockssWatchdog wdog);
-
-  /** Set the content type just fetched, for MIME-type dependent rate
-   * limiters */
-  public void setPreviousContentType(String prevContentType);
 
   /**
    * Copies the content and properties from the source into the cache.

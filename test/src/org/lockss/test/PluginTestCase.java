@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginTestCase.java,v 1.2 2011-06-30 19:06:55 tlipkis Exp $
+n * $Id: PluginTestCase.java,v 1.3 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,7 @@ public class PluginTestCase extends LockssTestCase {
  	System.err.println("Testing plugin: " + pluginName);
 	resetAndTest(pluginName);
       } catch (Exception e) {
+	log.error("Plugin " + pluginName + " failed", e);
 	failed.add(pluginName);
       }
     }
@@ -174,7 +175,8 @@ public class PluginTestCase extends LockssTestCase {
     }
     au.getArticleIterator();
 
-    assertNotNull(au.findFetchRateLimiter());
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    new RateLimiter(rli.getDefaultRate());
     au.getFetchRateLimiterKey();
 
     assertNotNull(au.getNewContentCrawlUrls());

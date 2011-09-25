@@ -1,10 +1,10 @@
 /*
- * $Id: NoCrawlEndActionsNewContentCrawler.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestRateLimiterInfo.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,33 +30,39 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.plugin;
 
 import java.util.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.state.*;
-import org.lockss.plugin.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
-public class NoCrawlEndActionsNewContentCrawler extends NewContentCrawler {
-  List pauseContentTypes = new ArrayList();
+public class TestRateLimiterInfo extends LockssTestCase {
 
-  public NoCrawlEndActionsNewContentCrawler(ArchivalUnit au,
-					    CrawlSpec crawlSpec,
-					    AuState aus) {
-    super(au, crawlSpec, aus);
+  public void testDefault() {
+    RateLimiterInfo rli = new RateLimiterInfo("foo", 1, 12000);
+    assertEquals("1/12000", rli.getDefaultRate());
+    assertEquals("foo", rli.getCrawlPoolKey());
+    assertNull(rli.getMimeRates());
+    assertNull(rli.getUrlRates());
   }
 
-  @Override
-  protected void doCrawlEndActions() {
+  public void testMime() {
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    Map map = MapUtil.map("text/html", "1/2s", "image/*", "1/1");
+    rli.setMimeRates(map);
+    assertEquals("1/13000", rli.getDefaultRate());
+    assertEquals("bar", rli.getCrawlPoolKey());
+    assertSame(map, rli.getMimeRates());
+    assertNull(rli.getUrlRates());
   }
 
-  @Override
-  protected void pauseBeforeFetch(String url) {
-    pauseContentTypes.add(previousContentType);
-  }
-
-  public List getPauseContentTypes() {
-    return pauseContentTypes;
+  public void testUrl() {
+    RateLimiterInfo rli = new RateLimiterInfo("bar", 1, 13000);
+    Map map = MapUtil.map(".*\\.pdf", "1/2s", ".*/images/.*", "1/1");
+    rli.setUrlRates(map);
+    assertEquals("1/13000", rli.getDefaultRate());
+    assertEquals("bar", rli.getCrawlPoolKey());
+    assertSame(map, rli.getUrlRates());
+    assertNull(rli.getMimeRates());
   }
 }

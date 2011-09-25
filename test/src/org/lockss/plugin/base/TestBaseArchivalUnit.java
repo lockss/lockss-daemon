@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.56 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.57 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -456,36 +456,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     tc.setAttributes(attrs);
     mau.setTitleConfig(tc);
     return attrs;
-  }
-
-  public void testPause() throws ConfigurationException {
-    TimeBase.setSimulated(1000);
-    Configuration config = ConfigManager.newConfiguration();
-    config.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
-    config.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
-    config.put(BaseArchivalUnit.KEY_PAUSE_TIME, "7s");
-    mbau.setConfiguration(config);
-    mbau = new MyBaseArchivalUnit(mplug);
-    mbau.setConfiguration(config);
-    MockRateLimiter glimit = new MockRateLimiter("3/17s");
-    MockRateLimiter mlimit1 = new MockRateLimiter("4/1s");
-    MockRateLimiter mlimit2 = new MockRateLimiter("1/4s");
-    String mime1 = "application/pdf";
-    String mime2 = "text/html";
-    mbau.setFetchRateLimiter(glimit);
-    assertEmpty(glimit.eventList);
-    mbau.pauseBeforeFetch(mime1);
-    assertEquals(ListUtil.list("fifoWaitAndSignalEvent"), glimit.eventList);
-    assertEmpty(mlimit1.eventList);
-    assertEmpty(mlimit2.eventList);
-    mplug.setFetchRateLimiter(mime1, mlimit1);
-    mplug.setFetchRateLimiter(mime2, mlimit2);
-    mbau.pauseBeforeFetch(mime1);
-    assertEquals(ListUtil.list("fifoWaitAndSignalEvent",
-			       "fifoWaitAndSignalEvent"),
-		 glimit.eventList);
-    assertEquals(ListUtil.list("fifoWaitAndSignalEvent"), mlimit1.eventList);
-    assertEmpty(mlimit2.eventList);
   }
 
   public void testGetName() throws ConfigurationException {

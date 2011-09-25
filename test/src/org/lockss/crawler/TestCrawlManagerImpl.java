@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.87 2011-08-09 04:18:19 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.88 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -444,7 +444,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void testNCCrawlFreesActivityLockWhenError() {
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-      crawler = new ThrowingCrawler(new RuntimeException("Blah"));
+      crawler = new ThrowingCrawler(new RuntimeException("Expected"));
       crawlManager.setTestCrawler(crawler);
 
       crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
@@ -880,6 +880,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 			   semToGive(new SimpleBinarySemaphore()));
       crawlManager.setTestCrawler(crawlerN);
       TestCrawlCB onecb = new TestCrawlCB();
+      log.info("Pool is blocked exception expected");
       crawlManager.startNewContentCrawl(mau, onecb, null, null);
       assertTrue("Callback for non schedulable crawl wasn't triggered",
 		 onecb.wasTriggered());
@@ -973,6 +974,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 			   semToGive(new SimpleBinarySemaphore()));
       crawlManager.setTestCrawler(failcrawler);
       TestCrawlCB onecb = new TestCrawlCB();
+      log.info("Pool is blocked exception expected");
       crawlManager.startNewContentCrawl(mau, onecb, null, null);
       assertTrue("Callback for non schedulable crawl wasn't triggered",
 		 onecb.wasTriggered());
@@ -1297,6 +1299,68 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       }
     }
 
+    public void testOdcQueueWithConcurrentPool() throws Exception {
+      Properties p = new Properties();
+      p.put(CrawlManagerImpl.PARAM_START_CRAWLS_INTERVAL, "-1");
+      p.put(CrawlManagerImpl.PARAM_SHARED_QUEUE_MAX, "4");
+      p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "3");
+      p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX, "3"); 
+      p.put(CrawlManagerImpl.PARAM_FAVOR_UNSHARED_RATE_THREADS, "1"); 
+      p.put(CrawlManagerImpl.PARAM_CONCURRENT_CRAWL_LIMIT_MAP, "foo,2;bar,3");
+      theDaemon.setAusStarted(true);
+      ConfigurationUtil.addFromProps(p);
+      crawlManager.startService();
+
+      MockArchivalUnit[] aus = makeMockAus(15);
+      registerAus(aus);
+      setAu(aus[0], 0, 0, 2000);
+      setAu(aus[1], 0, 0, 4000);
+      setAu(aus[2], 0, 0, 6000);
+      setAu(aus[3], 0, 0, 8000);
+      setAu(aus[4], 0, 0, 10000);
+
+      setAu(aus[5], 0, 0, 2002, "foo");
+      setAu(aus[6], 0, 0, 2004, "foo");
+      setAu(aus[7], 0, 0, 2006, "foo");
+      setAu(aus[8], 0, 0, 4002, "foo");
+      setAu(aus[9], 0, 0, 4004, "foo");
+
+      setAu(aus[10], 0, 0, 2001, "bar");
+      setAu(aus[11], 0, 0, 2003, "bar");
+      setAu(aus[12], 0, 0, 2005, "bar");
+      setAu(aus[13], 0, 0, 4001, "bar");
+      setAu(aus[14], 0, 0, 4003, "bar");
+
+      assertEquals(aus[10], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[10]);
+      aus[10].setShouldCrawlForNewContent(false);
+      assertEquals(aus[5], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[5]);
+      assertEquals(aus[0], crawlManager.nextReq().au);
+      aus[0].setShouldCrawlForNewContent(false);
+      assertEquals(aus[11], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[11]);
+      aus[11].setShouldCrawlForNewContent(false);
+      assertEquals(aus[6], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[6]);
+      aus[6].setShouldCrawlForNewContent(false);
+      assertEquals(aus[12], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[12]);
+      aus[12].setShouldCrawlForNewContent(false);
+      assertEquals(aus[1], crawlManager.nextReq().au);
+      aus[1].setShouldCrawlForNewContent(false);
+      crawlManager.delFromRunningRateKeys(aus[5]);
+      assertEquals(aus[7], crawlManager.nextReq().au);
+      crawlManager.addToRunningRateKeys(aus[7]);
+      aus[7].setShouldCrawlForNewContent(false);
+      assertEquals(aus[2], crawlManager.nextReq().au);
+      aus[2].setShouldCrawlForNewContent(false);
+      assertEquals(aus[3], crawlManager.nextReq().au);
+      aus[3].setShouldCrawlForNewContent(false);
+      crawlManager.delFromRunningRateKeys(aus[10]);
+      assertEquals(aus[13], crawlManager.nextReq().au);
+    }
+
     public void testCrawlPriorityPatterns() {
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
 				    "foo(4|5),3;bar,5;baz,-1");
@@ -1325,6 +1389,22 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.setReqPriority(req);
       assertEquals(-3, req.getPriority());
 
+    }
+
+    public void testCrawlPoolSizeMap() {
+      // map not configured
+      assertEquals(1, crawlManager.getCrawlPoolSize("nopool"));
+      assertEquals(1, crawlManager.getCrawlPoolSize("foopool"));
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CONCURRENT_CRAWL_LIMIT_MAP,
+				    "foopool,2;barpool,4");
+      assertEquals(1, crawlManager.getCrawlPoolSize("nopool"));
+      assertEquals(2, crawlManager.getCrawlPoolSize("foopool"));
+      assertEquals(4, crawlManager.getCrawlPoolSize("barpool"));
+
+      // Remove param, ensure map reverts to empty
+      ConfigurationUtil.setFromArgs("foo", "bar");
+      assertEquals(1, crawlManager.getCrawlPoolSize("nopool"));
+      assertEquals(1, crawlManager.getCrawlPoolSize("foopool"));
     }
 
     public void testOdcCrawlStarter() {
@@ -1612,7 +1692,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       highPriorityCrawlRequests.remove(au);
     }
     void delFromRunningRateKeys(ArchivalUnit au) {
-      runningRateKeys.remove(au.getFetchRateLimiterKey());
+      runningRateKeys.remove(au.getFetchRateLimiterKey(), 1);
     }
 
     int rebuildCount = 0;

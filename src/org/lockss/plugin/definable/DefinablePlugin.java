@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.59 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.60 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -436,20 +436,6 @@ public class DefinablePlugin extends BasePlugin {
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
 	  mti.setHashFilterFactory(fact);
-	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT);
-	if (val instanceof String) {
-	  String rate = (String)val;
-	  log.debug(mime + " fetch rate: " + rate);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	  RateLimiter limit = mti.getFetchRateLimiter();
-	  if (limit != null) {
-	    limit.setRate(rate);
-	  } else {
-	    mti.setFetchRateLimiter(new RateLimiter(rate));
-	  }
 	}
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY)) {
 	String mime =

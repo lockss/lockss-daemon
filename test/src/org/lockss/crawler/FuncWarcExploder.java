@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcExploder.java,v 1.2 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: FuncWarcExploder.java,v 1.3 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class FuncWarcExploder extends LockssTestCase {
   int lastCrawlResult = Crawler.STATUS_UNKNOWN;
   String lastCrawlMessage = null;
   boolean multipleStemsPerAu = false;
+  private CrawlManagerImpl crawlMgr;
 
   private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
@@ -192,6 +193,9 @@ public class FuncWarcExploder extends LockssTestCase {
     pluginMgr = new MyPluginManager();
     pluginMgr.initService(theDaemon);
     theDaemon.setPluginManager(pluginMgr);
+    crawlMgr = new NoPauseCrawlManagerImpl();
+    theDaemon.setCrawlManager(crawlMgr);
+    crawlMgr.initService(theDaemon);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
@@ -477,7 +481,8 @@ public class FuncWarcExploder extends LockssTestCase {
           ".warc.gz$", // exploder pattern
           new MyExploderHelper(bad) );
     AuState maus = new MyMockAuState();
-    Crawler crawler = new NewContentCrawler(sau, spec, maus);
+    NewContentCrawler crawler = new NewContentCrawler(sau, spec, maus);
+    crawler.setCrawlManager(crawlMgr);
     boolean res = crawler.doCrawl();
     lastCrawlResult = maus.getLastCrawlResult();
     lastCrawlMessage = maus.getLastCrawlResultMsg();

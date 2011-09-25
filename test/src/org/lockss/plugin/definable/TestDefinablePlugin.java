@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.41 2011-06-07 06:29:47 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.42 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
-    assertNull(mti.getFetchRateLimiter());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
 
     defMap.putString(  ("application/pdf"
@@ -114,9 +113,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putMap(  ("text/html"
 		     + DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP),
                   factMap);
-    defMap.putString(  ("application/pdf"
-			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT),
-		     "1/30s");
     definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
@@ -134,11 +130,9 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof FileMetadataExtractorFactoryWrapper);
     assertTrue(WrapperUtil.unwrap(mti.getFileMetadataExtractorFactory())
 	       instanceof MockFileMetadataExtractorFactory);
-    assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof RegexpCssLinkExtractor.Factory);
-    assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertTrue(mti.getHashFilterFactory()
 	       instanceof FilterFactoryWrapper);
@@ -148,7 +142,6 @@ public class TestDefinablePlugin extends LockssTestCase {
 	       instanceof MockFilterFactory);
     assertTrue(WrapperUtil.unwrap(mti.getCrawlFilterFactory())
 	       instanceof MockFilterFactory);
-    assertEquals("1/30s", mti.getFetchRateLimiter().getRate());
 
     // verify 2nd plugin still has mime defaults
     mti = p2.getMimeTypeInfo("text/html");
@@ -167,7 +160,6 @@ public class TestDefinablePlugin extends LockssTestCase {
     mti = p2.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
-    assertNull(mti.getFetchRateLimiter());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
   }
 

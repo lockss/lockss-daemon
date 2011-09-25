@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.36 2007-07-17 06:03:48 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.37 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,6 @@ public class MockUrlCacher implements UrlCacher {
   private int numTimesToThrow = 1;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
-  private String previousContentType;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
@@ -116,14 +115,6 @@ public class MockUrlCacher implements UrlCacher {
 
   public BitSet getFetchFlags() {
     return this.fetchFlags;
-  }
-
-  public void setPreviousContentType(String previousContentType) {
-    this.previousContentType = previousContentType;
-  }
-
-  public String getPreviousContentType() {
-    return previousContentType;
   }
 
   public void setRequestProperty(String key, String value) {

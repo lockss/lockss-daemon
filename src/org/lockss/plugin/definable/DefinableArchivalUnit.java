@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.87 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.88 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_non_substance_url_pattern";
   public static final String KEY_AU_CRAWL_COOKIE_POLICY =
     "au_crawl_cookie_policy";
+  public static final String KEY_AU_URL_RATE_LIMITER_MAP =
+    "au_url_rate_limiter_map";
+  public static final String KEY_AU_MIME_RATE_LIMITER_MAP =
+    "au_mime_rate_limiter_map";
 
   /** Suffix for testing override submaps.  Values in a XXX_override map
    * will be copied to the main map when in testing mode XXX.  In the
@@ -119,8 +123,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "_article_mime_type";
   public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =
     "_metadata_extractor_factory_map"; 
-
- public static final String SUFFIX_FETCH_RATE_LIMIT = "_fetch_rate_limit";
 
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
@@ -197,6 +199,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, pluginSrc);
     return CurrentConfig.getParam(PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
 				  auSrc);
+  }
+
+  @Override
+  public RateLimiterInfo getRateLimiterInfo() {
+    RateLimiterInfo rli = super.getRateLimiterInfo();
+    Map<String,String> patterns =
+      definitionMap.getMap(KEY_AU_URL_RATE_LIMITER_MAP, null);
+    if (patterns != null) {
+      rli.setUrlRates(patterns);
+    }
+    Map<String,String> mimes =
+      definitionMap.getMap(KEY_AU_MIME_RATE_LIMITER_MAP, null);
+    if (mimes != null) {
+      rli.setMimeRates(mimes);
+    }
+    return rli;
   }
 
   @Override

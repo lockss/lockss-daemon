@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.16 2008-05-19 07:38:58 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.17 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -282,7 +282,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
 		uc instanceof ClockssUrlCacher);
     MockUrlCacher muc = (MockUrlCacher)uc;
     assertSame(crawler, muc.getPermissionMapSource());
-    assertNull(muc.getPreviousContentType());
   }
 
   public void testMakeUrlCacherClockss() {
@@ -292,20 +291,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertNotNull(uc);
     assertTrue("UrlCacher should be a ClockssUrlCacher",
 	       uc instanceof ClockssUrlCacher);
-  }
-
-  public void testMakeUrlCacherWithMimeType() {
-    crawler.previousContentType = "app/foo";
-    UrlCacher uc = crawler.makeUrlCacher(startUrl);
-    assertNotNull(uc);
-    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
-		uc instanceof ClockssUrlCacher);
-    MockUrlCacher muc = (MockUrlCacher)uc;
-    assertSame(crawler, muc.getPermissionMapSource());
-    assertEquals("app/foo", muc.getPreviousContentType());
-
-    UrlCacher uc2 = crawler.makeUrlCacher(permissionPage);
-    assertEquals(null, ((MockUrlCacher)uc2).getPreviousContentType());
   }
 
   public void testGetPermissionMap() throws MalformedURLException {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.136 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.137 2011-09-25 04:20:40 tlipkis Exp $
  */
 
 /*
@@ -227,6 +227,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "crawlPriorityAuidMap";
   static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
 
+  /** Map of concurrent pool name to pool size.  By default all pools are
+   * of size 1; to enable 2 concurrent crawls in pool FOO, add FOO,2 to
+   * this list. */
+  static final String PARAM_CONCURRENT_CRAWL_LIMIT_MAP = PREFIX +
+    "concurrentCrawlLimitMap";
+  static final List DEFAULT_CONCURRENT_CRAWL_LIMIT_MAP = null;
+
   static final int MIN_CRAWL_PRIORITY = -10000;
 
   /** Regexp matching URLs we never want to collect.  Intended to stop
@@ -253,7 +260,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   //Tracking crawls for the status info
   private CrawlManagerStatus cmStatus;
   // Map AU to all active crawlers (new content and repair)
-  private MultiMap runningCrawls = new MultiValueMap();
+  private Map<ArchivalUnit,AuCrawlers> runningCrawls =
+    new HashMap<ArchivalUnit,AuCrawlers>();
   // AUs running new content crawls
   private Set runningNCCrawls = new HashSet();
   protected Bag runningRateKeys = new HashBag();
@@ -276,6 +284,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
   private Pattern globallyExcludedUrlPattern;
   private Map<Pattern,Integer> crawlPriorityAuidMap;
+  private Map<String,Integer> concurrentCrawlLimitMap;
 
   private int histSize = DEFAULT_HISTORY_MAX;
 
@@ -460,6 +469,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  rebuildQueueSoon();
 	}
       }
+      if (changedKeys.contains(PARAM_CONCURRENT_CRAWL_LIMIT_MAP)) {
+	concurrentCrawlLimitMap =
+	  makeCrawlPoolSizeMap(config.getList(PARAM_CONCURRENT_CRAWL_LIMIT_MAP,
+					      DEFAULT_CONCURRENT_CRAWL_LIMIT_MAP));
+      }
       if (changedKeys.contains(PARAM_START_CRAWLS_INTERVAL)) {
 	paramStartCrawlsInterval =
 	  config.getTimeInterval(PARAM_START_CRAWLS_INTERVAL,
@@ -564,13 +578,60 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  /** Info about all the crawls running on a single AU.  (Possibly a repair
+   * crawls and a new content crawl.)  Ensures that they all use the same
+   * set of rate limiters. */
+  class AuCrawlers {
+    ArchivalUnit au;
+    Set<Crawler> crawlers = new HashSet<Crawler>();
+    CrawlRateLimiter crl;
+
+    AuCrawlers(ArchivalUnit au) {
+      this.au = au;
+    }
+
+    void addCrawler(Crawler crawler) {
+      if (crawlers.contains(crawler)) {
+	logger.warning("Adding redundant crawler: " + au +", " +
+		       crawler, new Throwable());
+      }
+      crawlers.add(crawler);
+    }
+
+    /** Return true iff there are no longer any crawls on this AU */
+    boolean removeCrawler(Crawler crawler) {
+      crawlers.remove(crawler);
+      return crawlers.isEmpty();
+    }
+
+    Set<Crawler> getCrawlers() {
+      return crawlers;
+    }
+
+    CrawlRateLimiter getCrawlRateLimiter() {
+      if (crl == null) {
+	crl = newCrawlRateLimiter(au);
+      }
+      return crl;
+    }
+  }
+
+  protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
+    return new CrawlRateLimiter(au);
+  }
+
   private void addToRunningCrawls(ArchivalUnit au, Crawler crawler) {
     synchronized (runningCrawls) {
-      runningCrawls.put(au, crawler);
+      AuCrawlers crawlers = runningCrawls.get(au);
+      if (crawlers == null) {
+	crawlers = new AuCrawlers(au);
+	runningCrawls.put(au, crawlers);
+      }
+      crawlers.addCrawler(crawler);
       if (crawler.isWholeAU()) {
 	runningNCCrawls.add(au);
 	cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
-	Object key = au.getFetchRateLimiterKey();
+	String key = au.getFetchRateLimiterKey();
 	if (key != null) {
 	  runningRateKeys.add(key);
 	}
@@ -585,27 +646,48 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (crawler != null) {
       ArchivalUnit au = crawler.getAu();
       synchronized (runningCrawls) {
-	runningCrawls.remove(au, crawler);
+	AuCrawlers crawlers = runningCrawls.get(au);
+	if (crawlers == null) {
+	  logger.warning("No record of running crawl: " + au);
+	} else {
+	  if (crawlers.removeCrawler(crawler)) {
+	    runningCrawls.remove(au);
+	  }
+	}
 	if (crawler.isWholeAU()) {
 	  runningNCCrawls.remove(au);
 	  cmStatus.setRunningNCCrawls(new ArrayList(runningNCCrawls));
 	  Object key = au.getFetchRateLimiterKey();
 	  if (key != null) {
-	    runningRateKeys.remove(key);
-	    startOneWait.expire();
+	    runningRateKeys.remove(key, 1);
 	  }
+	  startOneWait.expire();
 	}      
       }
+    }
+  }
+
+  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+    synchronized (runningCrawls) {
+      AuCrawlers crawlers = runningCrawls.get(au);
+      if (crawlers == null) {
+	logger.warning("getCrawlRateLimiter(): No running crawls: " + au);
+	crawlers = new AuCrawlers(au);
+      }
+      return crawlers.getCrawlRateLimiter();
     }
   }
 
   void auEventDeleted(ArchivalUnit au) {
     removeAuFromQueues(au);
     synchronized(runningCrawls) {
-      Collection<Crawler> crawls = (Collection) runningCrawls.get(au);
-      if (crawls != null) {
-	for (Crawler crawler : crawls) {
-	  crawler.abortCrawl();
+      AuCrawlers auc = runningCrawls.get(au);
+      if (auc != null) {
+	Collection<Crawler> crawls = auc.getCrawlers();
+	if (crawls != null) {
+	  for (Crawler crawler : crawls) {
+	    crawler.abortCrawl();
+	  }
 	}
       }
     }
@@ -652,7 +734,32 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  map.put(pat, pri);
 	} catch (MalformedPatternException e) {
 	  logger.error("Illegal crawl priority pattern, ignored: " + regexp, e);
-	}	  
+	}
+      }
+      return map;
+    }
+    return null;
+  }
+
+  /** Set up crawl pool size map. */
+  Map<String,Integer> makeCrawlPoolSizeMap(Collection<String> pairs) {
+    if (pairs != null) {
+      Map<String,Integer> map = new HashMap();
+      for (String pair : pairs) {
+	List<String> onePair = StringUtil.breakAt(pair, ",");
+	if (onePair.size() != 2) {
+	  logger.error("Malformed pool,size pair, ignored: " + pair);
+	  continue;
+	}
+	String pool = onePair.get(0);
+	try {
+	  int size = Integer.parseInt(onePair.get(1));
+	  logger.info("Crawl pool " + pool + ", size " + size);
+	  map.put(pool, size);
+	} catch (NumberFormatException e) {
+	  logger.error("Illegal crawl pool size, ignored: " + pool + ", "
+		       + onePair.get(1), e);
+	}
       }
       return map;
     }
@@ -1292,7 +1399,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   CrawlReq nextReqFromBuiltQueue() {
-    Collection runKeys = copyRunKeys();
+    Bag runKeys = copyRunKeys();
     synchronized (queueLock) {
       if (logger.isDebug3()) {
 	logger.debug3("nextReqFromBuiltQueue(), " +
@@ -1306,12 +1413,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       BoundedTreeSet finalSort = new BoundedTreeSet(1, CPC);
       for (Iterator iter = sharedRateReqs.entrySet().iterator();
 	   iter.hasNext();) {
-	Map.Entry ent = (Map.Entry)iter.next();
-	Object rateKey = ent.getKey();
-	if (runKeys.contains(rateKey)) {
+	Map.Entry<String,TreeSet> ent = (Map.Entry)iter.next();
+	String rateKey = ent.getKey();
+	int poolSize = getCrawlPoolSize(rateKey);
+	if (logger.isDebug3()) {
+	  logger.debug3("Rate key: " + rateKey + ", pool: " + poolSize +
+			", current: " + runKeys.getCount(rateKey));
+	}
+	if (runKeys.getCount(rateKey) >= poolSize) {
 	  continue;
 	}
-	CrawlReq req = (CrawlReq)((TreeSet)ent.getValue()).first();
+	CrawlReq req = (CrawlReq)ent.getValue().first();
+	if (logger.isDebug3()) logger.debug3("Adding to final sort: " + req);
 	finalSort.add(req);
       }
 
@@ -1321,6 +1434,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 				paramFavorUnsharedRateThreads) ||
 	     ((CrawlReq)unsharedRateReqs.first()).isHiPri())) {
 	CrawlReq req = (CrawlReq)unsharedRateReqs.first();
+	if (logger.isDebug3()) logger.debug3("Adding to final sort: " + req);
 	finalSort.add(req);
       }
       if (finalSort.isEmpty()) {
@@ -1340,7 +1454,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  Collection copyRunKeys() {
+  int getCrawlPoolSize(String key) {
+    if (concurrentCrawlLimitMap != null
+	&& concurrentCrawlLimitMap.containsKey(key)) {
+      return concurrentCrawlLimitMap.get(key);
+    } else {
+      return 1;
+    }
+  }
+
+  Bag copyRunKeys() {
     synchronized (runningCrawls) {
       return new HashBag(runningRateKeys);
     }
@@ -1417,8 +1540,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 		Object rateKey = au.getFetchRateLimiterKey();
 		if (rateKey == null) {
 		  unsharedRateReqs.add(req);
+		  if (logger.isDebug3()) {
+		    logger.debug3("Added to unsharedRateReqs: " + req);
+		  }
 		} else {
 		  sharedRateReqs.put(rateKey, req);
+		  if (logger.isDebug3()) {
+		    logger.debug3("Added to sharedRateReqs: " + req);
+		  }
 		}
 	      }
 	    }

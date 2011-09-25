@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.151 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.152 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -444,30 +444,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return makeCachedUrlSet(new AuCachedUrlSetSpec());
   }
 
-  public void pauseBeforeFetch(String previousContentType) {
-    RateLimiter limit = findFetchRateLimiter();;
-    try {
-      if (logger.isDebug3()) logger.debug3("Pausing: " + limit.rateString());
-      limit.fifoWaitAndSignalEvent();
-    } catch (InterruptedException ignore) {
-      // no action
-    }
-    if (previousContentType != null) {
-      RateLimiter mimeLimit = plugin.getFetchRateLimiter(previousContentType);
-      if (mimeLimit != null) {
-	try {
-	  if (logger.isDebug3()) {
-	    logger.debug3("Pausing (" + previousContentType
-			  + "): " + mimeLimit.rateString());
-	  }
-	  mimeLimit.fifoWaitAndSignalEvent();
-	} catch (InterruptedException ignore) {
-	  // no action
-	}
-      }
-    }
-  }
-
   protected RateLimiter fetchRateLimiter;
 
   public synchronized RateLimiter findFetchRateLimiter() {
@@ -539,6 +515,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } else {
       return new RateLimiter(events, interval);
     }
+  }
+
+  public RateLimiterInfo getRateLimiterInfo() {
+    long interval = paramMap.getLong(KEY_AU_FETCH_DELAY, defaultFetchDelay);
+    return new RateLimiterInfo(getFetchRateLimiterKey(), 1, interval);
   }
 
   public String toString() {

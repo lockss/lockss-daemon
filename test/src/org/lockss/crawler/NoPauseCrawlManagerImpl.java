@@ -1,10 +1,10 @@
 /*
- * $Id: NoCrawlEndActionsNewContentCrawler.java,v 1.2 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: NoPauseCrawlManagerImpl.java,v 1.1 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,33 +30,55 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.crawler;
 
 import java.util.*;
+import java.io.*;
+import java.text.*;
+import java.util.regex.*;
+
+import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.state.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
-public class NoCrawlEndActionsNewContentCrawler extends NewContentCrawler {
-  List pauseContentTypes = new ArrayList();
+/**
+ * For testing, uses a CrawlRateLimiter that records args and doesn't pause
+ */
+public class NoPauseCrawlManagerImpl extends CrawlManagerImpl {
 
-  public NoCrawlEndActionsNewContentCrawler(ArchivalUnit au,
-					    CrawlSpec crawlSpec,
-					    AuState aus) {
-    super(au, crawlSpec, aus);
+  private Map<ArchivalUnit,CrawlRateLimiter> limiterMap =
+    new HashMap<ArchivalUnit,CrawlRateLimiter>();
+
+  protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
+    CrawlRateLimiter crl = new NoPauseCrawlRateLimiter(au);
+    limiterMap.put(au, crl);
+    return crl;
   }
 
-  @Override
-  protected void doCrawlEndActions() {
+  public CrawlRateLimiter getCrawlRateLimiter(ArchivalUnit au) {
+    CrawlRateLimiter crl = limiterMap.get(au);
+    if (crl != null) {
+      return crl;
+    } else {
+      return super.getCrawlRateLimiter(au);
+    }
   }
 
-  @Override
-  protected void pauseBeforeFetch(String url) {
-    pauseContentTypes.add(previousContentType);
-  }
+  public static class NoPauseCrawlRateLimiter extends CrawlRateLimiter {
+    List pauseContentTypes = new ArrayList();
 
-  public List getPauseContentTypes() {
-    return pauseContentTypes;
+    public NoPauseCrawlRateLimiter(ArchivalUnit au) {
+      super(au);
+    }
+
+    @Override
+    public void pauseBeforeFetch(String url, String previousContentType) {
+      pauseContentTypes.add(previousContentType);
+    }
+
+    public List getPauseContentTypes() {
+      return pauseContentTypes;
+    }
   }
 }

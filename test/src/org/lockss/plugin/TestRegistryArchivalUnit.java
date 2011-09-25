@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.12 2009-09-26 17:24:29 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.13 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     props.setProperty(RegistryArchivalUnit.PARAM_REGISTRY_FETCH_RATE_LIMITER_SOURCE,
 		      "plugin");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    assertEquals("3/7s", au.findFetchRateLimiter().getRate());
+    assertEquals("3/7s", au.getRateLimiterInfo().getDefaultRate());
     assertEquals(au.getPlugin().getPluginId(), au.getFetchRateLimiterKey());
   }
 

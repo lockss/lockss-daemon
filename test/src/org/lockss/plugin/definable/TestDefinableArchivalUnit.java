@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.51 2011-06-20 07:12:45 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.52 2011-09-25 04:20:39 tlipkis Exp $
  */
 
 /*
@@ -1369,6 +1369,48 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals("host:base_url", au.getFetchRateLimiterSource());
     assertEquals("host:base.foo", au.getFetchRateLimiterKey());
+  }
+
+  public void testRateLimiterInfoMime() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.MimeRateLimiterPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    Map exp = MapUtil.map("text/html,text/x-html,application/pdf", "10/1m",
+			  "image/*", "5/1s");
+    assertEquals(exp, rli.getMimeRates());
+    assertEquals("1/34000", rli.getDefaultRate());
+    assertEquals("pool1", rli.getCrawlPoolKey());
+  }
+
+  public void testRateLimiterInfoUrl() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a complex plugin definition
+    String pname = "org.lockss.plugin.definable.UrlRateLimiterPlugin";
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(pmgr.ensurePluginLoaded(key));
+    Plugin plug = pmgr.getPlugin(key);
+    assertTrue(plug instanceof DefinablePlugin);
+    Properties p = new Properties();
+    p.put("base_url", "http://base.foo/base_path/");
+    p.put("num_issue_range", "3-7");
+    Configuration auConfig = ConfigManager.fromProperties(p);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    RateLimiterInfo rli = au.getRateLimiterInfo();
+    Map exp = MapUtil.map("(\\.gif)|(\\.jpeg)|(\\.png)", "5/1s",
+			  "(\\.html)|(\\.pdf)", "10/1m");
+    assertEquals(exp, rli.getUrlRates());
+    assertEquals("1/43000", rli.getDefaultRate());
+    assertEquals("pool1", rli.getCrawlPoolKey());
   }
 
   public static class PositiveCrawlRuleFactory
