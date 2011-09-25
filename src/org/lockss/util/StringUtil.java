@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.104 2011-08-21 23:58:18 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.105 2011-09-25 04:15:45 tlipkis Exp $
  */
 
 /*
@@ -1238,7 +1238,7 @@ public class StringUtil {
   /** Parse a string as a time interval.  An interval is specified as an
    * integer with an optional suffix.  No suffix means milliseconds, s, m,
    * h, d, w indicates seconds, minutes, hours, days and weeks
-   * respectively.
+   * respectively.  As a special case, "ms" means milliseconds.
    * @param str the interval string
    * @return interval in milliseconds
    */
@@ -1252,16 +1252,20 @@ public class StringUtil {
       if (Character.isDigit(suffix)) {
 	numstr = str;
       } else {
-	numstr = str.substring(0, len - 1);
-	switch (Character.toUpperCase(suffix)) {
-	case 'S': mult = Constants.SECOND; break;
-	case 'M': mult = Constants.MINUTE; break;
-	case 'H': mult = Constants.HOUR; break;
-	case 'D': mult = Constants.DAY; break;
-	case 'W': mult = Constants.WEEK; break;
-	case 'Y': mult = Constants.YEAR; break;
-	default:
-	  throw new NumberFormatException("Illegal time interval suffix");
+	if (StringUtil.endsWithIgnoreCase(str, "ms")) {
+	  numstr = str.substring(0, len - 2);
+	} else {
+	  numstr = str.substring(0, len - 1);
+	  switch (Character.toUpperCase(suffix)) {
+	  case 'S': mult = Constants.SECOND; break;
+	  case 'M': mult = Constants.MINUTE; break;
+	  case 'H': mult = Constants.HOUR; break;
+	  case 'D': mult = Constants.DAY; break;
+	  case 'W': mult = Constants.WEEK; break;
+	  case 'Y': mult = Constants.YEAR; break;
+	  default:
+	    throw new NumberFormatException("Illegal time interval suffix");
+	  }
 	}
       }
       return Long.parseLong(numstr) * mult;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.85 2011-08-21 23:58:18 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.86 2011-09-25 04:15:45 tlipkis Exp $
  */
 
 /*
@@ -648,6 +648,7 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(HOUR, StringUtil.parseTimeInterval("1h"));
     assertEquals(DAY, StringUtil.parseTimeInterval("1d"));
     assertEquals(WEEK, StringUtil.parseTimeInterval("1w"));
+    assertEquals(1234, StringUtil.parseTimeInterval("1234ms"));
     assertEquals(StringUtil.parseTimeInterval("60s"),
 		 StringUtil.parseTimeInterval("1m"));
     assertEquals(StringUtil.parseTimeInterval("120m"),
