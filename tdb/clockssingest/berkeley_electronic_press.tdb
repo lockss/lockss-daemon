@@ -92,7 +92,7 @@
     param[journal_abbr] =  apjri
 
     au < manifest ; exists ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 >
-    au < manifest ; exists ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
+    au < testing ; exists ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
     au < released ; manifest ; 2008-2009 ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 >
     au < released ; manifest ; 2009-2010 ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 >
     au < released ; manifest ; 2010 ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 >
@@ -301,7 +301,7 @@
     au < released ; crawling ; 2008 ; Capitalism and Society Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Capitalism and Society Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Capitalism and Society Volume 5 ; 5 >
-    au < testing ; exists ; 2011 ; Capitalism and Society Volume 6 ; 6 >
+    au < released ; manifest ; 2011 ; Capitalism and Society Volume 6 ; 6 >
 
   }
 
@@ -818,7 +818,7 @@
     au < crawling ; exists ; 2005 ; Journal of College and Character Volume 6 ; 6 >
     au < crawling ; exists ; 2006 ; Journal of College and Character Volume 7 ; 7 >
     au < crawling ; exists ; 2006-2007 ; Journal of College and Character Volume 8 ; 8 >
-    au < crawling ; exists ; 2007-2008 ; Journal of College and Character Volume 9 ; 9 >
+    au < testing ; exists ; 2007-2008 ; Journal of College and Character Volume 9 ; 9 >
     au < released ; manifest ; 2008-2009 ; Journal of College and Character Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Journal of College and Character Volume 11 ; 11 >
     au < released ; manifest ; 2011 ; Journal of College and Character Volume 12 ; 12 >
@@ -1040,7 +1040,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
-    au < crawling ; exists ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
+    au < testing ; exists ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
     au < released ; crawling ; 2010 ; Law & Ethics of Human Rights Volume 4 ; 4 >
@@ -1426,11 +1426,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
-    au < testing ; exists ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
     au < released ; crawling ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
     au < released ; crawling ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
     au < released ; manifest ; 2010 ; Studies in Ethics, Law, and Technology Volume 4 ; 4 >
-    au < testing ; exists ; 2011 ; Studies in Ethics, Law, and Technology Volume 5 ; 5 >
+    au < released ; manifest ; 2011 ; Studies in Ethics, Law, and Technology Volume 5 ; 5 >
 
   }
 

@@ -92,7 +92,7 @@
     param[journal_abbr] =  apjri
 
     au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 ; 2005-2006 >
-    au < manifest ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 ; 2007-2008 >
+    au < testing ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 ; 2007-2008 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 ; 2008-2009 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 ; 2009-2010 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 5 ; 5 ; 2010 >
@@ -300,7 +300,7 @@
     au < released ; Capitalism and Society Volume 3 ; 3 ; 2008 >
     au < ready ; Capitalism and Society Volume 4 ; 4 ; 2009 >
     au < ready ; Capitalism and Society Volume 5 ; 5 ; 2010 >
-    au < testing ; Capitalism and Society Volume 6 ; 6 ; 2011 >
+    au < ready ; Capitalism and Society Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -819,7 +819,7 @@
     au < manifest ; Journal of College and Character Volume 6 ; 6 ; 2005 >
     au < manifest ; Journal of College and Character Volume 7 ; 7 ; 2006 >
     au < manifest ; Journal of College and Character Volume 8 ; 8 ; 2006-2007 >
-    au < manifest ; Journal of College and Character Volume 9 ; 9 ; 2007-2008 >
+    au < testing ; Journal of College and Character Volume 9 ; 9 ; 2007-2008 >
     au < ready ; Journal of College and Character Volume 10 ; 10 ; 2008-2009 >
     au < ready ; Journal of College and Character Volume 11 ; 11 ; 2010 >
     au < ready ; Journal of College and Character Volume 12 ; 12 ; 2011 >
@@ -1039,7 +1039,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
-    au < manifest ; Law & Ethics of Human Rights Volume 1 ; 1 ; 2007 >
+    au < testing ; Law & Ethics of Human Rights Volume 1 ; 1 ; 2007 >
     au < ready ; Law & Ethics of Human Rights Volume 2 ; 2 ; 2008 >
     au < ready ; Law & Ethics of Human Rights Volume 3 ; 3 ; 2009 >
     au < ready ; Law & Ethics of Human Rights Volume 4 ; 4 ; 2010 >
@@ -1411,11 +1411,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
-    au < testing ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; 2007 >
+    au < ready ; Studies in Ethics, Law, and Technology Volume 1 ; 1 ; 2007 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 2 ; 2 ; 2008 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 3 ; 3 ; 2009 >
     au < ready ; Studies in Ethics, Law, and Technology Volume 4 ; 4 ; 2010 >
-    au < testing ; Studies in Ethics, Law, and Technology Volume 5 ; 5 ; 2011 >
+    au < ready ; Studies in Ethics, Law, and Technology Volume 5 ; 5 ; 2011 >
 
   }
 
