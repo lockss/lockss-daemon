@@ -2160,7 +2160,7 @@
     au < manifest ; exists ; 2008 ; British Journal of Anaesthesia Volume 100 ; 100 ; >
     au < manifest ; exists ; 2008 ; British Journal of Anaesthesia Volume 101 ; 101 ; >
     au < manifest ; exists ; 2009 ; British Journal of Anaesthesia Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
+    au < testing ; exists ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
     au < manifest ; exists ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
@@ -3879,7 +3879,7 @@
     au < manifest ; exists ; 2006 ; English Historical Review Volume CXXI ; CXXI ; >
     au < manifest ; exists ; 2007 ; English Historical Review Volume CXXII ; CXXII ; >
     au < manifest ; exists ; 2008 ; English Historical Review Volume CXXIII ; CXXIII ; >
-    au < manifest ; exists ; 2009 ; English Historical Review Volume CXXIV ; CXXIV ; >
+    au < testing ; exists ; 2009 ; English Historical Review Volume CXXIV ; CXXIV ; >
     au < manifest ; exists ; 2010 ; English Historical Review Volume CXXV ; CXXV ; >
     au < manifest ; exists ; 2011 ; English Historical Review Volume CXXVI ; CXXVI ; >
 
@@ -4074,7 +4074,7 @@
     au < wanted ; exists ; 2006 ; Epidemiologic Reviews Volume 28 ; 28 ; >
     au < wanted ; exists ; 2007 ; Epidemiologic Reviews Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
+    au < testing ; exists ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
 
     }
@@ -4331,7 +4331,7 @@
     au < manifest ; exists ; 2006 ; European Heart Journal Supplements Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
-    au < testing ; exists ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
+    au < released ; manifest ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
     au < manifest ; exists ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
 
     }
@@ -5175,7 +5175,7 @@
     au < manifest ; exists ; 2006 ; French Studies Bulletin Volume 27 ; 27 ; >
     au < manifest ; exists ; 2007 ; French Studies Bulletin Volume 28 ; 28 ; >
     au < manifest ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
-    au < testing ; exists ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
+    au < released ; manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
     au < manifest ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
     au < manifest ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     
@@ -8940,7 +8940,7 @@
     au < manifest ; exists ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
     au < released ; manifest ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
+    au < testing ; exists ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
 
     }
@@ -10138,7 +10138,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
-    au < testing ; exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
+    au < released ; manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
 
@@ -11555,7 +11555,7 @@
     au < manifest ; exists ; 2007 ; Mind Volume 116 ; 116 ; >
     au < manifest ; exists ; 2008 ; Mind Volume 117 ; 117 ; >
     au < released ; manifest ; 2009 ; Mind Volume 118 ; 118 ; >
-    au < manifest ; exists ; 2010 ; Mind Volume 119 ; 119 ; >
+    au < testing ; exists ; 2010 ; Mind Volume 119 ; 119 ; >
     au < manifest ; exists ; 2011 ; Mind Volume 120 ; 120 ; >
 
     }
@@ -14939,7 +14939,7 @@
     au < manifest ; exists ; 2007 ; The Review of English Studies Volume 58 ; 58 ; >
     au < manifest ; exists ; 2008 ; The Review of English Studies Volume 59 ; 59 ; >
     au < testing ; exists ; 2009 ; The Review of English Studies Volume 60 ; 60 ; >
-    au < testing ; exists ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
+    au < released ; manifest ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
     au < manifest ; exists ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >    
    
     }
@@ -15970,7 +15970,7 @@
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 115 ; 115 ; >
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 116 ; 116 ; >
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 117 ; 117 ; >
-    au < testing ; exists ; 2010 ; Toxicological Sciences Volume 118 ; 118 ; >
+    au < released ; manifest ; 2010 ; Toxicological Sciences Volume 118 ; 118 ; >
     au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 119 ; 119 ; >
     au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 120 ; 120 ; >
     au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 121 ; 121 ; >   
