@@ -91,7 +91,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] =  apjri
 
-    au < testing ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 ; 2005-2006 >
+    au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 ; 2005-2006 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 ; 2007-2008 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 3 ; 3 ; 2008-2009 >
     au < ready ; Asia-Pacific Journal of Risk and Insurance Volume 4 ; 4 ; 2009-2010 >
@@ -716,12 +716,12 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jeeh
 
-    au < testing ; Journal des Economistes et des Etudes Humaines Volume 6 ; 6 ; 1996 >
-    au < testing ; Journal des Economistes et des Etudes Humaines Volume 7 ; 7 ; 1997 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 6 ; 6 ; 1996 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 7 ; 7 ; 1997 >
     au < doesNotExist ; Journal des Economistes et des Etudes Humaines Volume 8 ; 8 ; 1998 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 9 ; 9 ; 1999 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 ; 2000 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 ; 2001 >
+    au < testing ; Journal des Economistes et des Etudes Humaines Volume 9 ; 9 ; 1999 >
+    au < testing ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 ; 2000 >
+    au < testing ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 ; 2001 >
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 ; 2002 >
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; 2003 >    
     au < manifest ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; 2004 >
@@ -940,8 +940,8 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jioe
 
-    au < testing ; Journal of Industrial Organization Education Volume 1 ; 1 ; 2006 >
-    au < testing ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
+    au < ready ; Journal of Industrial Organization Education Volume 1 ; 1 ; 2006 >
+    au < ready ; Journal of Industrial Organization Education Volume 2 ; 2 ; 2007 >
     au < ready ; Journal of Industrial Organization Education Volume 3 ; 3 ; 2008 >
     au < ready ; Journal of Industrial Organization Education Volume 4 ; 4 ; 2009 >
     au < ready ; Journal of Industrial Organization Education Volume 5 ; 5 ; 2010 >
