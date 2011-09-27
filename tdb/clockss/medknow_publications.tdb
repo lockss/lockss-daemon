@@ -1,0 +1,2213 @@
+{
+
+  publisher <
+    name = Medknow Publications  
+  >
+    
+  rights = openaccess
+  plugin = org.lockss.plugin.medknow.ClockssMedknowPlugin
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
+    
+  {
+    title <
+      name = African Journal of Business Ethics ;
+      issn = 1817-7417 ;
+      eissn = 0976-3600 ;
+      issnl = 0976-3600
+    >
+
+    param[base_url] = 	http://www.ajobe.org/
+    param[journal_issn] = 1817-7417
+
+
+  }
+      
+  {
+    title <
+      name = African Journal of Paediatric Surgery ;
+      issn = 0189-6725 ;
+      eissn = 0974-5998 ;
+      issnl = 0189-6725
+    >
+        
+    param[base_url] = http://www.afrjpaedsurg.org/ 
+    param[journal_issn] = 0189-6725
+             
+  }
+  
+  {
+    title <
+      name = Ancient Science of Life ;
+      issn = 0257-7941 ;
+      issnl = 0257-7941
+    >
+
+    param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl
+	comment[asl] = the url structure is the new version
+
+  }
+
+  {
+    title <
+      name = Anesthesia: Essays and Researches ;
+      issn = 0259-1162 ;
+      eissn = 2229-7685 ;
+      issnl = 0259-1162 
+    >
+
+    param[base_url] = http://www.aeronline.org/
+    param[journal_issn] = 0259-1162
+
+
+  }
+  
+  {
+    title <
+      name = Annals of African Medicine ;
+      issn = 1596-3519 ;
+      eissn = 0975-5764 ;
+      issnl = 0975-5764
+    >
+
+    param[base_url] = http://www.annalsafrmed.org/
+    param[journal_issn] = 0975-5764
+
+
+  }
+  
+  {
+    title <
+      name = Annals of Cardiac Anaesthesia ;
+      issn = 0971-9784 ;
+      eissn = 0974-5181 ;
+      issnl = 0971-9784
+    >
+
+    param[base_url] = http://www.annals.in/
+    param[journal_issn] = 0971-9784
+
+
+  }
+
+  {
+    title <
+      name = Annals of Indian Academy of Neurology ;
+      issn = 0972-2327 ;
+      eissn = 1998-3549 ;
+      issnl = 0972-2327
+    >
+
+    param[base_url] = http://www.annalsofian.org/
+    param[journal_issn] = 0972-2327
+
+
+  }
+
+  {
+    title <
+      name = Annals of Maxillofacial Surgery ;
+      issn = 2231-0746 ;
+      eissn = 2249-3816 ;
+      issnl = 2231-0746
+    >
+
+    param[base_url] = http://www.amsjournal.com/
+    param[journal_issn] = 2231-0746
+
+
+  }
+
+  {
+    title <
+      name = Annals of Nigerian Medicine ;
+      issn = 0331-3131 ;
+      eissn = 2230-9721 ;
+      issnl = 0331-3131
+    >
+
+    param[base_url] = http://www.anmjournal.com/
+    param[journal_issn] = 0331-3131
+
+
+  }
+  
+  {
+    title <
+      name = Annals of Pediatric Cardiology ;
+      issn = 0974-2069 ;
+      eissn = 0974-5149 ;
+      issnl = 0974-2069
+    >
+
+    param[base_url] = http://www.annalspc.com/
+    param[journal_issn] = 0974-2069
+
+
+  }
+
+  {
+    title <
+      name = Annals of Saudi Medicine ;
+      issn = 0256-4947 ;
+      eissn = 0975-4466 ;
+      issnl = 0256-4947 
+    >
+
+    param[base_url] = http://www.saudiannals.net/
+    param[journal_issn] = 0256-4947 
+
+
+  }
+  
+  {
+    title <
+      name = Annals of Thoracic Medicine ;
+      issn = 1817-1737 ;
+      eissn = 1998-3557 ;
+      issnl = 1817-1737
+   >
+
+    param[base_url] = http://www.thoracicmedicine.org/
+    param[journal_issn] = 1817-1737
+
+
+  }
+
+  {
+    title <
+      name = Annals of Tropical Medicine and Public Health ;
+      issn = 1755-6783 ;
+      eissn = 0974-6005 ;
+      issnl = 0974-6005
+   >
+
+    param[base_url] = http://www.atmph.org/
+    param[journal_issn] = 1755-6783
+
+
+  }
+
+  {
+    title <
+      name = Asian Journal of Neurosurgery ;
+      issn = 1793-5482 ;
+      eissn = 2248-9614 ;
+      issnl = 1793-5482
+    >
+
+    param[base_url] = http://www.asianjns.org/
+    param[journal_issn] = 1793-5482
+
+
+  }
+  
+  {
+    title <
+      name = Asian Journal of Pharmaceutics ;
+      issn = 0973-8398 ;
+      eissn = 1998-409X ;
+      issnl = 0973-8398
+    >
+
+    param[base_url] = http://www.asiapharmaceutics.info/
+    param[journal_issn] = 0973-8398
+
+
+  }
+
+  {
+    title <
+      name = Asian Journal of Transfusion Science ;
+      issn = 0973-6247 ;
+      eissn = 1998-3565 ;
+      issnl = 0973-6247
+   >
+
+    param[base_url] = http://www.ajts.org/
+    param[journal_issn] = 0973-6247
+
+
+  }
+
+  {
+    title <
+      name = Avicenna Journal of Medicine ;
+      issn = 2231-0770 ;
+      eissn = 2249-4464 ;
+      issnl = 2231-0770
+   >
+
+    param[base_url] = http://www.avicennajmed.com/
+    param[journal_issn] = 2231-0770
+
+
+  }
+
+  {
+    title <
+      name = AYU (An International Quarterly Journal of Research in Ayurveda) ;
+      issn = 0974-8520 ;
+      eissn = 0976-9382 ;
+      issnl = 0974-8520
+   >
+
+    param[base_url] = http://www.ayujournal.org/
+    param[journal_issn] = 0974-8520
+
+
+  }
+    
+  {
+    title <
+      name = Chronicles of Young Scientists ;
+      issn = 2229–5186 ;
+      eissn = 0975-9212 ;
+      issnl = 0975-9212
+   >
+
+    param[base_url] = http://www.cysonline.org/
+    param[journal_issn] = 2229–5186 
+
+
+  }
+      
+  {
+    title <
+      name = Conservation and Society ;
+      issn = 0972-4923 ;
+      eissn = 0975-3133 ;
+      issnl = 0972-4923
+   >
+
+    param[base_url] = http://www.conservationandsociety.org/
+    param[journal_issn] = 0972-4923
+
+
+  }
+        
+  {
+    title <
+      name = Contemporary Clinical Dentistry ;
+      issn = 0976-237X ;
+      eissn = 0976-2361 ;
+      issnl = 0976-237X
+   >
+
+    param[base_url] = http://www.contempclindent.org/
+    param[journal_issn] = 0976-237X
+
+
+  }        
+  
+  {
+    title <
+      name = CytoJournal ;
+      issn = 0974-5963 ;
+      eissn = 1742-6413 ;
+      issnl = 0974-5963
+   >
+
+    param[base_url] = http://www.cytojournal.com/
+    param[journal_issn] = 0974-5963
+
+
+  }
+
+  {
+    title <
+      name = Dental Research Journal ;
+      issn = 1735-3327 ;
+      eissn = 2008-0255 ;
+      issnl = 1735-3327
+   >
+
+    param[base_url] = http://drj.mui.ac.ir/index.php/drj
+	comment[drj] = the url structure is the new version
+
+
+  }
+
+  {
+    title <
+      name = Heart Views ;
+      issn = 1995-705X ;
+      eissn = 0976-5123 ;
+      issnl = 1995-705X
+   >
+
+    param[base_url] = http://www.heartviews.org/
+    param[journal_issn] = 1995-705X
+
+
+  }
+    
+  {
+    title <
+      name = Hepatitis B Annual ;
+      issn = 0972-9747 ;
+      eissn = 1998-3573 ;
+      issnl = 0972-9747
+   >
+
+    param[base_url] = http://www.hepatitisbannual.org/
+    param[journal_issn] = 0972-9747
+
+
+  }
+
+  {
+    title <
+      name = IETE Journal of Education ;
+      issn = 0970-1664 ;
+      eissn = 0974-7338 ;
+      issnl = 0970-1664
+   >
+
+    param[base_url] = http://je.ietejournals.org/
+    param[journal_issn] = 0970-1664
+    comment[je] = can't find the journal in Medknow website, but it's announced in its own website that it's published by Medknow
+
+
+  }
+
+  {
+    title <
+      name = IETE Journal of Research ;
+      issn = 0377-2063 ;
+      eissn = 0974-780X ;
+      issnl = 0377-2063 
+    >
+
+    param[base_url] = http://www.jr.ietejournals.org/
+    param[journal_issn] = 0377-2063
+
+
+  }
+
+  {
+    title <
+      name = IETE Technical Review ;
+      issn = 0256-4602 ;
+      eissn = 0974-5971 ;
+      issnl = 0256-4602
+   >
+
+    param[base_url] = http://tr.ietejournals.org/
+    param[journal_issn] = 0256-4602
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Cancer ;
+      issn = 0019-509X ;
+      eissn = 1998-4774 ;
+      issnl = 0019-509X 
+    >
+
+    param[base_url] = http://www.indianjcancer.com/
+    param[journal_issn] = 0019-509X
+
+
+  }
+
+  {
+    title <
+      name = Indian Dermatology Online Journal ;
+      issn = 2229–5178 ;
+      issnl = 2229–5178
+   >
+
+    param[base_url] = http://www.idoj.in/
+    param[journal_issn] = 2229-5178
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Anaesthesia ;
+      issn = 0019-5049 ;
+      eissn = 0976-2817;
+      issnl = 0019-5049
+   >
+
+    param[base_url] = http://www.ijaweb.org/
+    param[journal_issn] = 0019-5049
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Cancer ;
+      issn = 0019-509X ;
+      eissn = 1998-4774;
+      issnl = 0019-509X
+   >
+
+    param[base_url] = http://www.indianjcancer.com/
+    param[journal_issn] = 0019-509X
+
+
+  }
+        
+  {
+    title <
+      name = Indian Journal of Community Medicine ;
+      issn = 0970-0218 ;
+      eissn = 1998-3581 ;
+      issnl = 0970-0218
+   >
+
+    param[base_url] = http://www.ijcm.org.in/
+    param[journal_issn] = 0970-0218
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Critical Care Medicine ;
+      issn = 0972-5229 ;
+      eissn = 1998-359X ;
+      issnl = 0972-5229
+    >
+
+    param[base_url] = http://www.ijccm.org/
+    param[journal_issn] = 0972-5229
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Dental Research ;
+      issn = 0970-9290 ;
+      eissn = 1998-3603 ;
+      issnl = 0970-9290
+   >
+
+    param[base_url] = http://www.ijdr.in/
+    param[journal_issn] = 0970-9290
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Dermatology ;
+      issn = 0019-5154 ;
+      eissn = 1998-3611 ;
+      issnl = 0019-5154
+   >
+
+    param[base_url] = http://www.e-ijd.org/
+    param[journal_issn] = 0019-5154
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Dermatology, Venereology, and Leprology ;
+      issn = 0378-6323 ;
+      eissn = 0973-3922 ;
+      issnl = 0378-6323
+   >
+
+    param[base_url] = http://www.ijdvl.com/
+    param[journal_issn] = 0378-6323
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Human Genetics ;
+      issn = 0971-6866 ;
+      eissn = 1998-362X ;
+      issnl = 0971-6866
+    >
+
+    param[base_url] = http://www.ijhg.com/
+    param[journal_issn] = 0971-6866
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Endocrinology and Metabolism ;
+      issn = 2230-8210 ;
+      eissn = 2230-9500 ;
+      issnl = 2230-8210
+    >
+
+    param[base_url] = http://www.ijem.in/
+    param[journal_issn] = 2230-8210
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Human Genetics ;
+      issn = 0971-6866 ;
+      eissn = 1998-362X ;
+      issnl = 0971-6866
+    >
+
+    param[base_url] = http://www.ijhg.com/
+    param[journal_issn] = 0971-6866
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Medical and Paediatric Oncology ;
+      issn = 0971-5851 ;
+      eissn = 0975-2129 ;
+      issnl = 0975-2129
+    >
+
+    param[base_url] = http://www.ijmpo.org/
+    param[journal_issn] = 0971-5851
+
+
+  }
+      
+  {
+    title <
+      name = Indian Journal of Medical Microbiology ;
+      issn = 0255-0857 ;
+      eissn = 1998-3646 ;
+      issnl = 0255-0857
+   >
+
+    param[base_url] = http://www.ijmm.org/
+    param[journal_issn] = 0255-0857
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Medical Sciences ;
+      issn = 0019-5359 ;
+      eissn = 1998-3654 ;
+      issnl = 0019-5359
+   >
+
+    param[base_url] = http://www.indianjmedsci.org/
+    param[journal_issn] = 0019-5359
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Nephrology ;
+      issn = 0971-4065 ;
+      eissn = 1998-3662 ;
+      issnl = 0971-4065
+   >
+
+    param[base_url] = http://www.indianjnephrol.org/
+    param[journal_issn] = 0971-4065
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Nuclear Medicine ;
+      issn = 0972-3919 ;
+      eissn = 0974-0244 ;
+      issnl = 0972-3919
+   >
+
+    param[base_url] = http://www.ijnm.in/
+    param[journal_issn] = 0972-3919
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Occupational and Environmental Medicine ;
+      issn = 0973-2284 ;
+      eissn = 1998-3670 ;
+      issnl = 0973-2284
+   >
+
+    param[base_url] = http://www.ijoem.com/
+    param[journal_issn] = 0019-5278
+	comment[ijoem] =  the issns are not consistent between medknow website and the journal's website
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Ophthalmology ;
+      issn = 0301-4738 ;
+      eissn = 1998-3689 ;
+      issnl = 0301-4738
+   >
+
+    param[base_url] = http://www.ijo.in/
+    param[journal_issn] = 0301-4738
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Orthopaedics ;
+      issn = 0019-5413 ;
+      eissn = 1998-3727 ;
+      issnl = 0019-5413
+   >
+
+    param[base_url] = http://www.ijoonline.com/
+    param[journal_issn] = 0019-5413
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Otology ;
+      issn = 0971-7749 ;
+      issnl = 0971-7749
+   >
+
+    param[base_url] = http://www.indianjotol.org
+    param[journal_issn] = 0971-7749
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Paediatric Dermatology ;
+      issn = 
+   >
+
+    param[base_url] = http://www.ijpd.in/
+    param[journal_issn] =
+
+
+  }  
+
+  {
+    title <
+      name = Indian Journal of Palliative Care ;
+      issn = 0973-1075 ;
+      eissn = 1998-3735 ;
+      issnl = 0973-1075
+   >
+
+    param[base_url] = http://www.jpalliativecare.com/
+    param[journal_issn] = 0973-1075
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Pathology and Microbiology ;
+      issn = 0377-4929 ;
+      eissn = 0974-5130 ;
+      issnl = 0377-4929
+   >
+
+    param[base_url] = http://www.ijpmonline.org/
+    param[journal_issn] = 0377-4929
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Pharmaceutical Sciences ;
+      issn = 0250-474X ;
+      eissn = 1998-3743 ;
+      issnl = 0250-474X 
+    >
+
+    param[base_url] = http://www.ijpsonline.com/
+    param[journal_issn] = 0250-474X
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Pharmacology ;
+      issn = 0253-7613 ;
+      eissn = 1998-3751 ;
+      issnl = 0253-7613
+   >
+
+    param[base_url] = http://www.ijp-online.com/
+    param[journal_issn] = 0253-7613
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Plastic Surgery ;
+      issn = 0970-0358 ;
+      eissn = 1998-376X ;
+      issnl = 0970-0358
+    >
+
+    param[base_url] = http://www.ijps.org/
+    param[journal_issn] = 0970-0358
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Psychiatry ;
+      issn = 0019-5545 ;
+      eissn = 1998-3794 ;
+      issnl = 0019-5545
+   >
+
+    param[base_url] = http://www.indianjpsychiatry.org/
+    param[journal_issn] = 0019-5545
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Psychological Medicine ;
+      issn = 0253-7176 ;
+      eissn = 0975-1564 ;
+      issnl = 0253-7176
+   >
+
+    param[base_url] = http://www.ijpm.info/
+    param[journal_issn] = 0253-7176
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Public Health ;
+      issn = 0019-557X ;
+      eissn = 2229-7693 ;
+      issnl = 0019-557X 
+   >
+
+    param[base_url] = http://www.ijph.in
+    param[journal_issn] = 0019-557X 
+
+
+  }
+  
+  {
+    title <
+      name = Indian Journal of Radiology and Imaging ;
+      issn = 0971-3026 ;
+      eissn = 1998-3808 ;
+      issnl = 0971-3026
+   >
+
+    param[base_url] = http://www.ijri.org/
+    param[journal_issn] = 0971-3026
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Sexually Transmitted Diseases and AIDS ;
+      issn = 0253-7184 ;
+      eissn = 1998-3816 ;
+      issnl = 0253-7184
+   >
+
+    param[base_url] = http://www.ijstd.org/
+    param[journal_issn] = 0253-7184
+
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Urology ;
+      issn = 0970-1591 ;
+      eissn = 1998-3824 ;
+      issnl = 0970-1591
+   >
+
+    param[base_url] = http://www.indianjurol.com/
+    param[journal_issn] = 0970-1591
+
+
+  }
+
+  {
+    title <
+      name = Industrial Psychiatry Journal ;
+      issn = 0972-6748 ;
+      eissn = 0976-2795 ;
+      issnl = 0972-6748
+   >
+
+    param[base_url] = http://www.industrialpsychiatry.org/
+    param[journal_issn] = 0972-6748
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Applied and Basic Medical Research ;
+      issn = 2229-516X ;
+      eissn = 2248-9606 ;
+      issnl = 2229-516X
+   >
+
+    param[base_url] = http://www.ijabmr.org/
+    param[journal_issn] = 2229-516X
+
+
+  }
+    
+  {
+    title <
+      name = International Journal of Ayurveda Research ;
+      issn = 0974-7788 ;
+      eissn = 0974-925X ;
+      issnl = 0974-7788
+    >
+
+    param[base_url] = http://www.ijaronline.com/
+    param[journal_issn] = 0974-7788
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Critical Illness and Injury Science ;
+      issn = 2229-5151 ;
+      eissn = 2231-5004 ;
+      issnl = 2229-5151
+   >
+
+    param[base_url] = http://www.ijciis.org/
+    param[journal_issn] = 2229-5151
+
+
+  }
+  
+  {
+    title <
+      name = International Journal of Green Pharmacy ;
+      issn = 0973-8258 ;
+      eissn = 1998-4103 ;
+      issnl = 0973-8258
+   >
+
+    param[base_url] = http://www.greenpharmacy.info/
+    param[journal_issn] = 0973-8258
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Nutrition, Pharmacology, Neurological Diseases ;
+      issn = 2231-0738 ;
+      eissn = 2231-2722 ; 
+      issnl = 2231-0738
+    >
+
+    param[base_url] = http://www.ijnpnd.com/
+    param[journal_issn] = 2231-0738
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Pharmaceutical Investigation ;
+      issn = 2230-973X ;
+      eissn = 2230-9713 ; 
+      issnl = 2230-973X 
+    >
+
+    param[base_url] = http://www.jpionline.org/
+    param[journal_issn] = 2230-973X 
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Preventive Medicine;
+      issn = 2008-7802 ;
+      eissn = 2008-8213 ; 
+      issnl = 2008-7802 
+    >
+
+    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm
+	comment[ijpm] = the url structure is the new version
+
+  }
+        
+  {
+    title <
+      name = International Journal of Shoulder Surgery ;
+      issn = 0973-6042 ;
+      issnl = 0973-6042
+    >
+
+    param[base_url] = http://www.internationalshoulderjournal.org/
+    param[journal_issn] = 0973-6042
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Trichology ;
+      issn = 0974-7753 ;
+      eissn = 0974-9241 ;
+      issnl = 0974-7753
+   >
+
+    param[base_url] = http://www.ijtrichology.com/
+    param[journal_issn] = 0974-7753
+
+
+  }
+
+  {
+    title <
+      name = International Journal of Yoga ;
+      issn = 0973-6131 ;
+      eissn = 2231-2714 ;
+      issnl = 0973-6131
+   >
+
+    param[base_url] = http://www.ijoy.org.in/
+    param[journal_issn] = 0973-6131
+
+
+  }
+
+  {
+    title <
+      name = Iranian Journal of Nursing and Midwifery Research ;
+      issn = 1735-9066 ;
+      eissn = 2228-5504 ;
+      issnl = 1735-9066
+   >
+
+    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr
+	comment[ijnmr] = the url structure is the new version
+
+
+  }
+
+  {
+    title <
+      name = Journal of Academy of Medical Sciences ;
+      issn = 2249-4855 ;
+      issnl = 2249-4855
+   >
+
+    param[base_url] = http://www.e-jams.org/
+    param[journal_issn] = 2249-4855
+
+
+  }
+
+  {
+    title <
+      name = Journal of Advanced Pharmaceutical Technology & Research ;
+      issn = 2231-4040 ;
+      eissn = 0976-2094 ;
+      issnl = 0976-2094
+   >
+
+    param[base_url] = http://www.japtr.org/
+    param[journal_issn] = 2231-4040
+
+
+  }
+
+  {
+    title <
+      name = Journal of Anaesthesiology Clinical Pharmacology ;
+      issn = 0970-9185 ;
+      eissn = 2231-2730 ;
+      issnl = 0970-9185
+   >
+
+    param[base_url] = http://www.joacp.org/
+    param[journal_issn] = 0970-9185
+
+
+  }
+                
+  {
+    title <
+      name = Journal of Andrology, Sexual Medicine, Ageing and Gender ;
+      issn = 0974-1224 ;
+      issnl = 0974-1224
+    >
+
+    param[base_url] = 
+    param[journal_issn] = 0974-1224
+
+
+  }
+
+  {
+    title <
+      name = Journal of Ayurveda and Integrative Medicine ;
+      issn = 0975-9476 ;
+      eissn = 0975-9476 ;
+      issnl = 0973-1482
+   >
+
+    param[base_url] = http://www.jaim.in/
+    param[journal_issn] = 0975-9476
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Cancer Research and Therapeutics ;
+      issn = 0973-1482 ;
+      eissn = 1998-4138 ;
+      issnl = 0973-1482
+   >
+
+    param[base_url] = http://www.cancerjournal.net/
+    param[journal_issn] = 0973-1482
+
+
+  }
+
+  {
+    title <
+      name = Journal of Carcinogenesis ;
+      issn = 0974-6773 ;
+      eissn = 1477-3163 ;
+      issnl = 0974-6773
+   >
+
+    param[base_url] = http://www.carcinogenesis.com/
+    param[journal_issn] = 0974-6773
+
+
+  }
+
+  {
+    title <
+      name = Journal of Cardiovascular Disease Research ;
+      issn = 0975-3583 ;
+      eissn = 0976-2833 ;
+      issnl = 0975-3583 
+   >
+
+    param[base_url] = http://www.jcdronline.com/
+    param[journal_issn] = 0975-3583 
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Imaging Science ;
+      issn = 2156-7514 ;
+      eissn = 2156-5597 ;
+      issnl = 2156-7514 
+   >
+
+    param[base_url] = http://www.clinicalimagingscience.org/
+    param[journal_issn] = 2156-7514 
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Neonatology ;
+      issn = 2249-4847 ;
+      issnl = 2249-4847 
+   >
+
+    param[base_url] = http://www.jcnonweb.com/
+    param[journal_issn] = 2249-4847
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Rheumatology in Ayurveda ;
+      issn = 2231-072X ;
+      issnl = 2231-072X
+   >
+
+    param[base_url] = http://www.ayurvedarheumatology.org/
+    param[journal_issn] = 2231-072X
+
+
+  }
+
+  {
+    title <
+      name = Journal of Conservative Dentistry ;
+      issn = 0972-0707 ;
+      eissn = 0974-5203 ;
+      issnl = 0972-0707
+   >
+
+    param[base_url] = http://www.jcd.org.in/
+    param[journal_issn] = 0972-0707
+
+
+  }
+
+  {
+    title <
+      name = Journal of Craniovertebral Junction and Spine ;
+      issn = 0974-8237 ;
+      eissn = 0976-9285 ;
+      issnl = 0974-8237
+   >
+
+    param[base_url] = http://www.jcvjs.com/
+    param[journal_issn] = 0974-8237
+
+
+  }
+  
+  {
+    title <
+      name = Journal of Cutaneous and Aesthetic Surgery ;
+      issn = 0378-6326 ;
+      eissn = 0974-5157 ;
+      issnl = 0378-6326
+   >
+
+    param[base_url] = http://www.jcasonline.com/
+    param[journal_issn] = 0378-6326
+
+
+  }
+
+  {
+    title <
+      name = Journal of Cytology ;
+      issn = 0970-9371 ;
+      eissn = 0974-5165 ;
+      issnl = 0970-9371
+   >
+
+    param[base_url] = http://www.jcytol.org/
+    param[journal_issn] = 0970-9371
+
+
+  }
+
+  {
+    title <
+      name = Journal of Dental Implants ;
+      issn = 0974-6781 ;
+      eissn = 0974-7850 ;
+      issnl = 0974-6781
+   >
+
+    param[base_url] = http://www.jdionline.org/
+    param[journal_issn] = 0974-6781
+
+
+  }
+
+  {
+    title <
+      name = Journal of Digestive Endoscopy ;
+      issn = 0976-5042 ;
+      eissn = 0976-5050 ;
+      issnl = 0976-5042
+   >
+
+    param[base_url] = http://www.jdionline.org/
+    param[journal_issn] = 0976-5042
+
+
+  }
+
+  {
+    title <
+      name = Journal of Education and Ethics in Dentistry ;
+      issn = 0974-7761 ;
+      issnl = 0974-7761
+    >
+
+    param[base_url] = http://www.jeed.in/
+    param[journal_issn] = 0974-7761
+    
+  }
+
+  {
+    title <
+      name = Journal of Emergencies, Trauma, and Shock ;
+      issn = 0974-2700 ;
+      eissn = 0974-519X ;
+      issnl = 0974-2700
+    >
+
+    param[base_url] = http://www.onlinejets.org/
+    param[journal_issn] = 0974-2700
+
+
+  }
+
+  {
+    title <
+      name = Journal of Engineering and Technology ;
+      issn = 0976-8580 ;
+      eissn = 2231-4997 ;
+      issnl = 0976-8580
+    >
+
+    param[base_url] = http://www.onlinejet.net/
+    param[journal_issn] = 0976-8580
+
+
+  }
+
+  {
+    title <
+      name = Journal of Family and Community Medicine ;
+      issn = 2230-8229 ;
+      eissn = 2229-340X ;
+      issnl = 2230-8229
+    >
+
+    param[base_url] = http://www.jfcmonline.com/
+    param[journal_issn] = 2230-8229
+
+
+  }
+
+  {
+    title <
+      name = Journal of Family Medicine and Primary Care ;
+      issn = 2249-4863 ;
+      issnl = 2249-4863
+    >
+
+    param[base_url] = http://www.jfmpc.com/
+    param[journal_issn] = 2249-4863
+
+
+  }
+
+  {
+    title <
+      name = Journal of Forensic Dental Sciences ;
+      issn = 0975-1475 ;
+      eissn = 0975-2137 ;
+      issnl = 0975-1475
+    >
+
+    param[base_url] = http://www.jfds.org/
+    param[journal_issn] = 0975-1475
+
+
+  }
+
+  {
+    title <
+      name = Journal of Global Infectious Diseases ;
+      issn = 0974-777X ;
+      eissn = 0974-8245 ;
+      issnl = 0974-777X 
+    >
+
+    param[base_url] = http://www.jgid.org/
+    param[journal_issn] = 0974-777X
+
+
+  }
+
+  {
+    title <
+      name = Journal of Gynecological Endoscopy and Surgery ;
+      issn = 0974-1216 ;
+      eissn = 0974-7818 ;
+      issnl = 0974-1216 
+    >
+
+    param[base_url] = http://www.gynecendoscopy.org/
+    param[journal_issn] = 0974-1216
+
+
+  }
+
+  {
+    title <
+      name = Journal of Human Reproductive Sciences ;
+      issn = 0974-1208 ;
+      eissn = 1998-4766 ;
+      issnl = 0974-1208
+   >
+
+    param[base_url] = http://www.jhrsonline.org/
+    param[journal_issn] = 0974-1208
+
+
+  }
+
+  {
+    title <
+      name = Journal of Indian Association of Pediatric Surgeons ;
+      issn = 0971-9261 ;
+      eissn = 1998-3891 ;
+      issnl = 0971-9261
+   >
+
+    param[base_url] = http://www.jiaps.com/
+    param[journal_issn] = 0971-9261
+
+
+  }
+
+  {
+    title <
+      name = Journal of Indian Society of Pedodontics and Preventive Dentistry ;
+      issn = 0970-4388 ;
+      eissn = 1998-3905 ;
+      issnl = 0970-4388
+   >
+
+    param[base_url] = http://www.jisppd.com/
+    param[journal_issn] = 0970-4388
+
+
+  }
+
+  {
+    title <
+      name = Journal of Indian Society of Periodontology ;
+      issn = 0972-124X ;
+      eissn = 0975-1580 ;
+      issnl = 0972-124X 
+    >
+
+    param[base_url] = http://www.jisponline.com/
+    param[journal_issn] = 0972-124X
+
+
+  }
+
+  {
+    title <
+      name = Journal of Interdisciplinary Dentistry ;
+      issn = 2229-5194 ;
+      eissn = 2231-2706 ;
+      issnl = 2229-5194
+    >
+
+    param[base_url] = http://www.jidonline.com/
+    param[journal_issn] = 2229-5194
+
+
+  }
+
+  {
+    title <
+      name = Journal of International Society of Preventive and Community Dentistry ;
+      issn = 2231-0762 ;
+      issnl = 2231-0762
+    >
+
+    param[base_url] = http://www.jispcd.org/
+    param[journal_issn] = 2231-0762
+
+
+  }
+    
+  {
+    title <
+      name = Journal of Laboratory Physicians ;
+      issn = 0974-2727 ;
+      eissn = 0974-7826 ;
+      issnl = 0974-2727
+    >
+
+    param[base_url] = http://www.jlponline.org/
+    param[journal_issn] = 0974-2727
+
+
+  }
+    
+  {
+    title <
+      name = Journal of Laryngology and Voice ;
+      issn = 2230-9748 ;
+      eissn = 2231-2692 ;
+      issnl = 2230-9748
+    >
+
+    param[base_url] = http://www.laryngologyandvoice.org/
+    param[journal_issn] = 2230-9748
+
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Physics ;
+      issn = 0971-6203 ;
+      eissn = 1998-3913 ;
+      issnl = 0971-6203
+   >
+
+    param[base_url] = http://www.jmp.org.in/
+    param[journal_issn] = 0971-6203
+
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Signals & Sensors ;
+      issn = 2228-7477 ;
+      issnl = 2228-7477
+   >
+
+    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss
+	comment[jmss] = the url structure is the new version
+
+
+  }
+
+  {
+    title <
+      name = Journal of Mid-life Health ;
+      issn = 0976-7800 ;
+      eissn = 0976-7819 ;
+      issnl = 0976-7800
+   >
+
+    param[base_url] = http://www.jmidlifehealth.org/
+    param[journal_issn] = 0976-7800
+
+
+  }
+
+  {
+    title <
+      name = Journal of Minimal Access Surgery ;
+      issn = 0972-9941 ;
+      eissn = 1998-3921 ;
+      issnl = 0972-9941
+   >
+
+    param[base_url] = http://www.journalofmas.com/
+    param[journal_issn] = 0972-9941
+
+
+  }
+
+  {
+    title <
+      name = Journal of Natural Pharmaceuticals ;
+      issn = 2229-5119 ;
+      eissn = 2229-7715 ;
+      issnl = 2229-5119
+   >
+
+    param[base_url] = http://www.jnatpharm.org/
+    param[journal_issn] = 2229-5119
+
+
+  }
+  
+  {
+    title <
+      name = Journal of Natural Science, Biology and Medicine ;
+      issn = 0976-9668 ;
+      eissn = 2229-7707 ;
+      issnl = 0976-9668
+    >
+
+    param[base_url] = http://www.jnsbm.org/
+    param[journal_issn] = 0976-9668
+
+
+  }
+  
+  {
+    title <
+      name = Journal of Neurosciences in Rural Practice ;
+      issn = 0976-3147 ;
+      eissn = 0976-3155 ;
+      issnl = 0976-3147
+    >
+
+    param[base_url] = http://www.ruralneuropractice.com/
+    param[journal_issn] = 0976-3147
+
+
+  }
+  
+  {
+    title <
+      name = Journal of Obstetric Anaesthesia and Critical Care ;
+      issn = 2249-4472 ;
+      issnl = 2249-4472
+    >
+
+    param[base_url] = http://www.joacc.com/
+    param[journal_issn] = 2249-4472
+
+
+  }
+      
+  {
+    title <
+      name = Journal of Oral and Maxillofacial Pathology ;
+      issn = 0973-029X ;
+      eissn = 1998-393X ;
+      issnl = 0973-029X
+    >
+
+    param[base_url] = http://www.jomfp.in/
+    param[journal_issn] = 0973-029X
+
+
+  }
+      
+  {
+    title <
+      name = Journal of Pathology Informatics ;
+      issn = 2229-5089 ;
+      eissn = 2153-3539 ;
+      issnl = 2229-5089
+    >
+
+    param[base_url] = http://www.jpathinformatics.org/
+    param[journal_issn] = 2229-5089
+
+
+  }
+
+  {
+    title <
+      name = Journal of Pediatric Neurosciences ;
+      issn = 1817-1745 ;
+      eissn = 1998-3948 ;
+      issnl = 1817-1745
+   >
+
+    param[base_url] = http://www.pediatricneurosciences.com/
+    param[journal_issn] = 1817-1745
+
+
+  }
+
+  {
+    title <
+      name = Journal of Pharmaceutical Negative Results ;
+      issn = 0976-9234 ;
+      eissn = 2229-7723 ;
+      issnl = 0976-9234
+   >
+
+    param[base_url] = http://www.pnrjournal.com/
+    param[journal_issn] = 0976-9234
+
+
+  }
+
+  {
+    title <
+      name = Journal of Pharmacology and Pharmacotherapeutics ;
+      issn = 0976-500X ;
+      eissn = 0976-5018 ;
+      issnl = 0976-500X
+   >
+
+    param[base_url] = http://www.jpharmacol.com/
+    param[journal_issn] = 0976-500X
+
+
+  }
+
+  {
+    title <
+      name = Journal of Pharmacy and Bioallied Sciences ;
+      issn = 0976-4879 ;
+      eissn = 0975-7406 ;
+      issnl = 0976-4879
+   >
+
+    param[base_url] = http://www.jpbsonline.org/
+    param[journal_issn] = 0976-4879
+
+
+  }
+
+  {
+    title <
+      name = Journal of Postgraduate Medicine ;
+      issn = 0022-3859 ;
+      eissn = 0972-2823 ;
+      issnl = 0022-3859
+   >
+
+    param[base_url] = http://www.jpgmonline.com/
+    param[journal_issn] = 0022-3859
+
+
+  }
+
+  {
+    title <
+      name = Journal of Prenatal Diagnosis and Therapy ;
+      issn = 0976-1756 ;
+      eissn = 0976-4054 ;
+      issnl = 0976-1756
+   >
+
+    param[base_url] = http://www.jpdt.org/
+    param[journal_issn] = 0976-1756
+
+
+  }
+
+  {
+    title <
+      name = Journal of Research in Medical Sciences ;
+      issn = 1735-1995 ;
+      eissn = 1735-7136 ;
+      issnl = 1735-1995
+   >
+
+    param[base_url] = http://www.journals.mui.ac.ir/jrms
+	comment[jrms] = the url structure is the new version
+	
+
+  }
+
+  {
+    title <
+      name = Journal of Surgical Technique and Case Report ;
+      issn = 2006-8808 ;
+      eissn = 0976-2825 ;
+      issnl = 2006-8808
+   >
+
+    param[base_url] = http://www.jstcr.org/
+    param[journal_issn] = 2006-8808
+
+
+  }
+
+  {
+    title <
+      name = Journal of the International Clinical Dental Research Organization ;
+      issn = 2231-0754 ;
+      eissn = 2231-5357 ;
+      issnl = 2231-0754
+   >
+
+    param[base_url] = http://www.jicdro.org/
+    param[journal_issn] = 2231-0754
+
+
+  }
+    
+  {
+    title <
+      name = Journal of Young Pharmacists ;
+      issn = 0975-1483 ;
+      eissn = 0975-1505 ;
+      issnl = 0975-1483
+   >
+
+    param[base_url] = http://www.jyoungpharm.in/
+    param[journal_issn] = 0975-1483
+
+
+  }
+    
+  {
+    title <
+      name = Lung India ;
+      issn = 0970-2113 ;
+      eissn = 0974-598X ;
+      issnl = 0970-2113
+    >
+
+    param[base_url] = http://www.lungindia.com/
+    param[journal_issn] = 0970-2113
+
+
+  }
+    
+  {
+    title <
+      name = Medical Law Cases - For Dentists ;
+      issn = 0976-2531 ;
+      issnl = 0976-2531
+    >
+
+    param[base_url] = http://www.mlcdentists.in/
+    param[journal_issn] = 0976-2531
+
+
+  }
+    
+  {
+    title <
+      name = Medical Law Cases - For Doctors ;
+      issn = 0974-1234 ;
+      eissn = 0974-5173 ;
+      issnl = 0974-1234
+    >
+
+    param[base_url] = http://www.mlcd.in/
+    param[journal_issn] = 0974-1234
+
+
+  }
+
+  {
+    title <
+      name = Mens Sana Monographs ;
+      issn = 0973-1229 ;
+      eissn = 1998-4014 ;
+      issnl = 0973-1229
+   >
+
+    param[base_url] = http://www.msmonographs.org/
+    param[journal_issn] = 0973-1229
+
+
+  }
+
+  {
+    title <
+      name = Middle East African Journal of Ophthalmology ;
+      issn = 0974-9233 ;
+      eissn = 0975-1599 ;
+      issnl = 0974-9233
+   >
+
+    param[base_url] = http://www.meajo.org/
+    param[journal_issn] = 0974-9233
+
+
+  }
+
+  {
+    title <
+      name = National Journal of Maxillofacial Surgery ;
+      issn = 0975-5950 ;
+      eissn = 2229-3418 ;
+      issnl = 0975-5950
+   >
+
+    param[base_url] = http://www.njms.in/
+    param[journal_issn] = 0975-5950
+
+
+  }
+
+  {
+    title <
+      name = Neurology India ;
+      issn = 0028-3886 ;
+      eissn = 1998-4022 ;
+      issnl = 0028-3886
+   >
+
+    param[base_url] = http://www.neurologyindia.com/
+    param[journal_issn] = 0028-3886
+
+
+  }
+
+  {
+    title <
+      name = Nigerian Journal of Clinical Practice ;
+      issn = 1119-3077 ;
+      eissn = 2229-7731 ;
+      issnl = 1119-3077
+   >
+
+    param[base_url] = http://www.njcponline.com/
+    param[journal_issn] = 1119-3077
+
+
+  }
+
+  {
+    title <
+      name = Nigerian Journal of Surgery ;
+      issn = 1117-6806 ;
+      issnl = 1117-6806
+   >
+
+    param[base_url] = http://www.nigerianjsurg.com
+    param[journal_issn] = 1117-6806
+
+
+  }
+
+  {
+    title <
+      name = Nigerian Medical Journal ;
+      issn = 0300-1652 ;
+      eissn = 2229-774X ;
+      issnl = 0300-1652
+   >
+
+    param[base_url] = http://www.nigeriamedj.com/
+    param[journal_issn] = 0300-1652
+
+
+  }
+
+  {
+    title <
+      name = Noise and Health ;
+      issn = 1463-1741 ;
+      eissn = 1998-4030 ;
+      issnl = 1463-1741
+   >
+
+    param[base_url] = http://www.noiseandhealth.org/
+    param[journal_issn] = 1463-1741
+
+
+  }
+
+  {
+    title <
+      name = Oman Journal of Ophthalmology ;
+      issn = 0974-620X ;
+      eissn = 0974-7842 ;
+      issnl = 0974-620X
+    >
+
+    param[base_url] = http://ojoonline.org/
+    param[journal_issn] = 0974-620X
+
+
+  }
+
+  {
+    title <
+      name = Perspectives in Clinical Research ;
+      issn = 2229-3485 ;
+      eissn = 2229-5488 ;
+      issnl = 2229-3485
+    >
+
+    param[base_url] = http://www.picronline.org/
+    param[journal_issn] = 2229-3485
+
+
+  }
+
+  {
+    title <
+      name = Pharmaceutical Methods ;
+      issn = 2229-4708 ;
+      eissn = 2229-4716 ;
+      issnl = 2229-4708
+    >
+
+    param[base_url] = http://www.phmethods.org/
+    param[journal_issn] = 2229-4708
+
+
+  }
+
+  {
+    title <
+      name = Pharmacognosy Magazine ;
+      issn = 0973-1296 ;
+      eissn = 0976-4062 ;
+      issnl = 0973-1296
+    >
+
+    param[base_url] = http://www.phcog.com/
+    param[journal_issn] = 0973-1296
+
+
+  }
+
+  {
+    title <
+      name = Pharmacognosy Research ;
+      issn = 0976-4836 ;
+      eissn = 0974-8490 ;
+      issnl = 0976-4836
+    >
+
+    param[base_url] = http://www.phcogres.com/
+    param[journal_issn] = 0976-4836
+
+
+  }  
+
+  {
+    title <
+      name = Pharmacognosy Reviews ;
+      issn = 0973-7847 ;
+      eissn = 0976-2787 ;
+      issnl = 0973-7847
+    >
+
+    param[base_url] = http://www.phcogrev.com/
+    param[journal_issn] = 0973-7847
+
+
+  }  
+
+  {
+    title <
+      name = Pulmonary Circulation ;
+      issn = 2045-8932 ;
+      eissn = 2045-8940 ;
+      issnl = 2045-8932
+    >
+
+    param[base_url] = http://www.pulmonarycirculation.org/
+    param[journal_issn] = 2045-8932
+
+
+  }  
+        
+  {
+    title <
+      name = PVRI Review ;
+      issn = 0974-6013 ;
+      eissn = 0975-1602 ;
+      issnl = 0974-6013 
+    >
+
+    param[base_url] = http://www.pvrireview.org/
+    param[journal_issn] = 0974-6013
+
+
+  }
+        
+  {
+    title <
+      name = Radiation Protection and Environment ;
+      issn = 0972-0464 ;
+      issnl = 0972-0464 
+    >
+
+    param[base_url] = http://www.rpe.org.in/
+    param[journal_issn] = 0972-0464
+
+
+  }
+        
+  {
+    title <
+      name = Ramon Llull Journal of Applied Ethics ;
+      issn = 2013-8393 ;
+      eissn = 2229-578X ;
+      issnl = 2013-8393
+    >
+
+    param[base_url] = http://www.rljae.org/
+    param[journal_issn] = 2013-8393
+
+
+  }  
+        
+  {
+    title <
+      name = Research in Pharmaceutical Sciences ;
+      issn = 1735-5362 ;
+      eissn = 1735-9414 ;
+      issnl = 1735-5362
+    >
+
+    param[base_url] = http://rps.mui.ac.ir/index.php/jrps
+ 	comment[jrps] = the url structure is the new version
+
+  }  
+    
+  {
+    title <
+      name = Saudi Journal of Anaesthesia ;
+      issn = 1658-354X ;
+      eissn = 0975-3125 ;
+      issnl = 1658-354X
+   >
+
+    param[base_url] = http://www.saudija.org/
+    param[journal_issn] = 1658-354X
+
+
+  }
+    
+  {
+    title <
+      name = Saudi Journal of Gastroenterology ;
+      issn = 1319-3767 ;
+      eissn = 1998-4049 ;
+      issnl = 1319-3767
+   >
+
+    param[base_url] = http://www.saudijgastro.com/
+    param[journal_issn] = 1319-3767
+
+
+  }
+    
+  {
+    title <
+      name = Saudi Orthodontic Journal ;
+      issn =
+   >
+
+    param[base_url] = 
+	comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
+
+
+  }
+    
+  {
+    title <
+      name = Scholars' Research Journal ;
+      issn = ;
+      eissn = 0976-8459 ;
+      issnl = 0976-8459
+   >
+
+    param[base_url] = http://www.scholarsjournal.in/
+    param[journal_issn] =
+
+
+  }
+  
+  {
+    title <
+      name = Surgical Neurology International ;
+      issn = 2229-5097 ;
+      eissn = 2152-7806 ;
+      issnl = 2229-5097 
+   >
+
+    param[base_url] = http://www.surgicalneurologyint.com/
+    param[journal_issn] = 2229-5097 
+
+
+  }
+  
+  {
+    title <
+      name = Systematic Reviews in Pharmacy ;
+      issn = 0975-8453 ;
+      eissn = 0976-2779 ;
+      issnl = 0975-8453
+   >
+
+    param[base_url] = http://www.sysrevpharm.org/
+    param[journal_issn] = 0975-8453 
+
+
+  }
+  
+  {
+    title <
+      name = Toxicology International ;
+      issn = 0971-6580 ;
+      eissn = 0976-5131 ;
+      issnl = 0971-6580
+   >
+
+    param[base_url] = http://www.toxicologyinternational.com/
+    param[journal_issn] = 0971-6580
+
+
+  }
+  
+  {
+    title <
+      name = Tropical Parasitology ;
+      issn = 2229-5070 ;
+      eissn = 2229-7758 ;
+      issnl = 2229-5070
+   >
+
+    param[base_url] = http://www.tropicalparasitology.org/
+    param[journal_issn] = 2229-5070
+
+
+  }
+            
+  {
+    title <
+      name = Urology Annals ;
+      issn = 0974-7796 ;
+      eissn = 0974-7834 ;
+      issnl = 0974-7796
+   >
+
+    param[base_url] = http://www.urologyannals.com/
+    param[journal_issn] = 0974-7796
+
+
+  }
+            
+  {
+    title <
+      name = World Journal of Nuclear Medicine ;
+      issn = 1450-1147 ;
+      eissn = 1607-3312 ;
+      issnl = 1450-1147
+   >
+
+    param[base_url] = http://www.wjnm.org/
+    param[journal_issn] = 1450-1147
+
+
+  }
+  
+  {
+    title <
+      name = Young Scientists Journal ;
+      issn = 0974-6102 ;
+      eissn = 0975-2145 ;
+      issnl = 0974-6102
+    >
+
+    param[base_url] = http://www.butrousfoundation.com/ysjournal/
+    param[journal_issn] = 0974-6102
+
+
+  }
+
+}

@@ -4,6 +4,9 @@
   >
   
   comment[plugin] = Content on CLOCKSS is through Meta-Press only, not MUSE
+  comment[au_journal] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257
+  comment[au_volume] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257&volume=36
+  comment[note] = these urls redirect to one that uses an opaque identifier.
 
   {
     title <
@@ -11,8 +14,6 @@
       issn = 0269-9222 ;
       eissn = 1757-8078 
     >
-    
-    
     
   }
  
@@ -23,29 +24,35 @@
       eissn = 1478-3398
     >
     
-    
-    
   }
    
   {
     title <
-      name = Byron Journal ;
+      name = The Byron Journal ;
       issn = 0301-7257 ;
       eissn = 1757-0263 
     >
     
-    
-    
   }
-   
+
+  {
+  
+    title <
+      name = Extrapolation ;
+      issn = 0014-5483 ;
+      issnl = 0014-5483
+    >
+
+	comment[upcoming] = this journal is upcoming in projectmuse and might also in Meta-Press
+
+  }
+     
   {
     title <
       name = European Journal of Language Policy / Revue européenne de politique linguistique ;
       issn = 1757-6822 ;
       eissn = 1757-6830  
     >
-    
-    
     
   }
    
@@ -55,9 +62,7 @@
       issn = 1474-6743 ;
       eissn = 1478-3401  
     >
-    
-    
-    
+
   }
    
   {
@@ -67,8 +72,6 @@
       eissn = 1757-6466  
     >
     
-    
-    
   }
    
   {
@@ -77,9 +80,7 @@
       issn = 1753-0768 ;
       eissn = 1753-0776  
     >
-    
-    
-    
+
   }
    
   {
@@ -88,9 +89,7 @@
       issn = 1528-0748 ;
       eissn = 1757-2274  
     >
-    
-    
-    
+
   }
    
   {
@@ -99,8 +98,6 @@
       issn = 1754-3770 ;
       eissn = 1754-3789  
     >
-    
-    
     
   }
    
@@ -111,8 +108,6 @@
       eissn = 1756-9923  
     >
     
-    
-    
   }
    
   {
@@ -121,9 +116,7 @@
       issn = 0041-0020 ;
       eissn = 1478-341X 
     >
-    
-    
-    
+
   }
  
 }
