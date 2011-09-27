@@ -9854,19 +9854,21 @@
   {
   
     title <
-      name = Journal of the International Commission on Radiation Units and Measurements ;
+      name = Journal of the ICRU ;
       issn = 1473-6691 ;
       eissn = 1742-3422 ;
       issnl = 1473-6691
     >
-
+	
+	comment[jicru] = the alternative title is "Journal of the International Commission on Radiation Units and Measurements" 
+	
     {
 
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
-    au < down ; crawling ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
+    au < down ; crawling ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < down ; crawling ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
 
     }
 
@@ -9875,14 +9877,14 @@
     param[base_url] = http://jicru.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2004 ; Journal of the International Commission on Radiation Units and Measurements Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2005 ; Journal of the International Commission on Radiation Units and Measurements Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2006 ; Journal of the International Commission on Radiation Units and Measurements Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2007 ; Journal of the International Commission on Radiation Units and Measurements Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
-    au < released ; manifest ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
-    au < released ; crawling ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2011 ; Journal of the International Commission on Radiation Units and Measurements Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2004 ; Journal of the ICRU Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2005 ; Journal of the ICRU Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2006 ; Journal of the ICRU Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
+    au < released ; manifest ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
+    au < released ; crawling ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
 
     }
 
@@ -11543,7 +11545,9 @@
       eissn = 1460-2407 ;
       issnl = 1360-9947
     >
-
+	
+	comment[molehr] = the alternative title is "Molecular Human Reproduction"
+	
     {
 
     param[base_url] = http://molehr.oxfordjournals.org/

@@ -9262,13 +9262,15 @@
       issnl = 1473-6691
     >
 
+	comment[jicru] = the alternative title is "Journal of the International Commission on Radiation Units and Measurements" 
+	
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://jicru.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2006 ; ournal of the ICRU Volume 6 ; 6 >
+    au < down ; 2006 ; Journal of the ICRU Volume 6 ; 6 >
 
     }
       
@@ -12058,7 +12060,7 @@
   {
 
     title <
-      name = Molecular Human Reproduction ;
+      name = MHR: Basic science of reproductive medicine ;
       issn = 1360-9947 ;
       eissn = 1460-2407 ;
       issnl = 1360-9947
@@ -12070,25 +12072,27 @@
     param[base_url] = http://molehr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Molecular Human Reproduction Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Molecular Human Reproduction Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Molecular Human Reproduction Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Molecular Human Reproduction Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Molecular Human Reproduction Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Molecular Human Reproduction Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Molecular Human Reproduction Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Molecular Human Reproduction Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Molecular Human Reproduction Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Molecular Human Reproduction Volume 10 ; 10 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; Molecular Human Reproduction Volume 11 [superseded] ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Molecular Human Reproduction Volume 11 ; 11 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; Molecular Human Reproduction Volume 12 [superseded] ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Molecular Human Reproduction Volume 12 ; 12 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Molecular Human Reproduction Volume 13 ; 13 >
-    au < HighWirePressPlugin ; down ; 2008 ; Molecular Human Reproduction Volume 14 ; 14 >
-    au < HighWirePressPlugin ; down ; 2009 ; Molecular Human Reproduction Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Human Reproduction Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Human Reproduction Volume 17 ; 17 >
+	comment[molehr] = the alternative title is "Molecular Human Reproduction"
+	
+    au < HighWirePressH20Plugin ; exists ; 1995 ; MHR: Basic science of reproductive medicine Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; MHR: Basic science of reproductive medicine Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; MHR: Basic science of reproductive medicine Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; MHR: Basic science of reproductive medicine Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; MHR: Basic science of reproductive medicine Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; MHR: Basic science of reproductive medicine Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; MHR: Basic science of reproductive medicine Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; MHR: Basic science of reproductive medicine Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; MHR: Basic science of reproductive medicine Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; MHR: Basic science of reproductive medicine Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; MHR: Basic science of reproductive medicine Volume 11 [superseded] ; 11 >
+    au < HighWirePressH20Plugin ; released ; 2005 ; MHR: Basic science of reproductive medicine Volume 11 ; 11 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; MHR: Basic science of reproductive medicine Volume 12 [superseded] ; 12 >
+    au < HighWirePressH20Plugin ; released ; 2006 ; MHR: Basic science of reproductive medicine Volume 12 ; 12 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; MHR: Basic science of reproductive medicine Volume 13 ; 13 >
+    au < HighWirePressPlugin ; down ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 >
+    au < HighWirePressPlugin ; down ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; released ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; released ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 >
    
     }
     
