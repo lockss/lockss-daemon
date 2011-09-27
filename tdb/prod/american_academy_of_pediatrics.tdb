@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aapgrandrounds.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -57,7 +57,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aapnews.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -272,7 +272,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://pedsinreview.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -315,6 +315,7 @@
   }
 
   {
+
     title <
       name = Red Book Online ;
       type = book ;
@@ -322,6 +323,8 @@
       eissn = 1544-9300 ;
       issnl = 1080-0131
     >
+
+    comment[0] = This is a serialized book that requires a slight change to the H10 plugin, do not process unless the change is ready
 
   }
 
