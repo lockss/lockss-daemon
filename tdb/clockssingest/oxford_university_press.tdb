@@ -121,7 +121,6 @@
     au < manifest ; exists ; 1927-1928 ; African Affairs Volume XXVII ; XXVII ; >
     au < manifest ; exists ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII ; >
     au < manifest ; exists ; 1929-1930 ; African Affairs Volume XXIX ; XXIX ; >
-    au < manifest ; exists ; 1930 ; African Affairs Volume XXIX ; XXIX ; >
     au < manifest ; exists ; 1931 ; African Affairs Volume XXX ; XXX ; >
     au < manifest ; exists ; 1932 ; African Affairs Volume XXXI ; XXXI ; >
     au < manifest ; exists ; 1933 ; African Affairs Volume XXXII ; XXXII ; >
@@ -5344,8 +5343,7 @@
     param[base_url] = http://glycob.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1990 ; Glycobiology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1991 ; Glycobiology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1990-1991 ; Glycobiology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; Glycobiology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1993 ; Glycobiology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1994 ; Glycobiology Volume 4 ; 4 ; >
@@ -7090,7 +7088,7 @@
 
     {
 
-    param[base_url] = http://intqhc.oxfordjournals.org/
+    param[base_url] = http://ijrl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1989 ; International Journal of Refugee Law Volume 1 ; 1 ; >
@@ -7114,7 +7112,7 @@
     au < wanted ; exists ; 2007 ; International Journal of Refugee Law Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; >
-    au < released ; crawling ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 ; >
     au < manifest ; exists ; 2011 ; International Journal of Refugee Law Volume 23 ; 23 ; >
 
     }
@@ -7899,7 +7897,7 @@
     au < wanted ; exists ; 2006 ; The Journal of Biochemistry Volume 140 ; 140 ; >
     au < wanted ; exists ; 2007 ; The Journal of Biochemistry Volume 141 ; 141 ; >
     au < wanted ; exists ; 2007 ; The Journal of Biochemistry Volume 142 ; 142 ; >
-    au < wanted ; exists ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
     au < released ; crawling ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
@@ -8232,7 +8230,7 @@
 
     {
 
-    param[base_url] = http://joeg.oxfordjournals.org/
+    param[base_url] = http://jmicro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1953 ; Journal of Electron Microscopy Volume 1 ; 1 ; >
@@ -8293,7 +8291,7 @@
     au < wanted ; exists ; 2007 ; Journal of Electron Microscopy Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
-    au < testing ; exists ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < manifest ; exists ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
 
     }
@@ -12704,7 +12702,6 @@
     au < manifest ; exists ; 1990 ; The Opera Quarterly Volume 7 ; 7 ; >
     au < manifest ; exists ; 1991 ; The Opera Quarterly Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992-1993 ; The Opera Quarterly Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1993 ; The Opera Quarterly Volume 10 ; 10 ; >
     au < manifest ; exists ; 1993-1994 ; The Opera Quarterly Volume 10 ; 10 ; >
     au < manifest ; exists ; 1994-1995 ; The Opera Quarterly Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995-1996 ; The Opera Quarterly Volume 12 ; 12 ; >
@@ -15077,10 +15074,8 @@
     param[base_url] = http://rheumatology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1952 ; Rheumatology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1953 ; Rheumatology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1954 ; Rheumatology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1955 ; Rheumatology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1952-1953 ; Rheumatology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1954-1955 ; Rheumatology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1956 ; Rheumatology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1956 ; Rheumatology Volume III ; III ; >
     au < manifest ; exists ; 1957 ; Rheumatology Volume 4 ; 4 ; >
@@ -15898,7 +15893,6 @@
     au < manifest ; exists ; 2002 ; Toxicological Sciences Volume 67 ; 67 ; >
     au < manifest ; exists ; 2002 ; Toxicological Sciences Volume 68 ; 68 ; >
     au < manifest ; exists ; 2002 ; Toxicological Sciences Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2002 ; Toxicological Sciences Volume 70 ; 70 ; >
     au < manifest ; exists ; 2003 ; Toxicological Sciences Volume 70 ; 70 ; >
     au < manifest ; exists ; 2003 ; Toxicological Sciences Volume 71 ; 71 ; >
     au < manifest ; exists ; 2003 ; Toxicological Sciences Volume 72 ; 72 ; >
