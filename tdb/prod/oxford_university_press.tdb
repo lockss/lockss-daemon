@@ -5493,8 +5493,7 @@
     param[base_url] = http://glycob.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1990 ; Glycobiology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1991 ; Glycobiology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1990-1991 ; Glycobiology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1992 ; Glycobiology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1993 ; Glycobiology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 1994 ; Glycobiology Volume 4 ; 4 >
@@ -13135,7 +13134,6 @@
     au < HighWirePressH20Plugin ; exists ; 1990 ; The Opera Quarterly Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; 1991 ; The Opera Quarterly Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; exists ; 1992-1993 ; The Opera Quarterly Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; exists ; 1993 ; The Opera Quarterly Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 1993-1994 ; The Opera Quarterly Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; exists ; 1994-1995 ; The Opera Quarterly Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; exists ; 1995-1996 ; The Opera Quarterly Volume 12 ; 12 >
@@ -15499,10 +15497,8 @@
     param[base_url] = http://rheumatology.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1952 ; Rheumatology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1953 ; Rheumatology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1954 ; Rheumatology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; 1955 ; Rheumatology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1952-1953 ; Rheumatology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1954-1955 ; Rheumatology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1956 ; Rheumatology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 1956 ; Rheumatology Volume III ; III >
     au < HighWirePressH20Plugin ; exists ; 1957 ; Rheumatology Volume 4 ; 4 >
@@ -16316,8 +16312,7 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Toxicological Sciences Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Toxicological Sciences Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Toxicological Sciences Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Toxicological Sciences Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Toxicological Sciences Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; exists ; 2002-2003 ; Toxicological Sciences Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Toxicological Sciences Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Toxicological Sciences Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Toxicological Sciences Volume 73 ; 73 >
