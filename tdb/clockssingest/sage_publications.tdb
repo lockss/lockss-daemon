@@ -333,6 +333,30 @@
   }
 
   {
+
+    title <
+      name = Administrative Science Quarterly ;
+      issn = 0001-8392 
+    >
+
+    param[base_url] = http://asq.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 ; >
+      au < exists ; exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 ; >
+      au < exists ; exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 ; >
+      au < exists ; exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 ; >
+      au < exists ; exists ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Adult Education Quarterly ;
@@ -511,6 +535,29 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 ;  >
       au < manifest ; exists ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Aesthetic Surgery Journal ;
+      issn = 1090-820X ;
+      eissn = 1527-330X 
+    >
+
+    param[base_url] = http://aes.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
 
     }
 
@@ -1183,6 +1230,30 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; The American Review of Public Administration Volume 40 ; 40 ;  >
       au < manifest ; exists ; 2011 ; The American Review of Public Administration Volume 41 ; 41 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Sociological Review ;
+      issn = 0003-1224 ;
+      eissn = 1939-8271 
+    >
+
+    param[base_url] = http://asr.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; American Sociological Review Volume 72 ; 72 ; >
+      au < exists ; exists ; 2008 ; American Sociological Review Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
+      au < manifest ; exists ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
 
     }
 
@@ -2471,6 +2542,30 @@
   }
 
   {
+
+    title <
+      name = Australian Journal of Management ;
+      issn = 0312-8962 ;
+      eissn = 1327-2020 
+    >
+
+    param[base_url] = http://aum.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 ; >
+      au < exists ; exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 ; >
+      au < exists ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Autism ;
@@ -2598,6 +2693,30 @@
   }
 
   {
+
+    title <
+      name = Behavioral and Cognitive Neuroscience Reviews ;
+      issn = 1534-5823 ;
+      eissn = 1552-4159 
+    >
+
+    param[base_url] = http://bcn.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2002 ; Behavioral and Cognitive Neuroscience Reviews Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; Behavioral and Cognitive Neuroscience Reviews Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; Behavioral and Cognitive Neuroscience Reviews Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; Behavioral and Cognitive Neuroscience Reviews Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Behavioral and Cognitive Neuroscience Reviews Volume 5 ; 5 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Biblical Theology Bulletin: A Journal of Bible and Theology ;
@@ -2702,6 +2821,27 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Biological Research For Nursing Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Biological Research For Nursing Volume 12 ; 12 ;  >
       au < manifest ; exists ; 2011 ; Biological Research For Nursing Volume 13 ; 13 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = BioScope: South Asian Screen Studies ;
+      issn = 0974-9276 ;
+      eissn = 0976-352X 
+    >
+
+    param[base_url] = http://bio.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 ; >
 
     }
 
@@ -3017,6 +3157,39 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Bulletin of Science, Technology & Society Volume 29 ; 29 ; >
       au < released ; crawling ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 ;  >
       au < manifest ; exists ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique ;
+      issn = 0759-1063 ;
+      eissn = 2070-2779 
+    >
+
+    param[base_url] = http://bms.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      comment[bms] = V1-110 exist on journal site.
+
+      au < exists ; exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 ; >
+      au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 ; >
+      au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 ; >
+      au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 ; >
+      au < exists ; exists ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 ; >
+      au < manifest ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 ; >
+      au < manifest ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 ; >
+      au < manifest ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 107 ; 107 ; >
+      au < manifest ; exists ; 2010 ; Bulletin de Méthodologie Sociologique Volume 108 ; 108 ; >
+      au < manifest ; exists ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 ; >
+      au < manifest ; exists ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 ; >
+      au < manifest ; exists ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 111 ; 111 ; >
 
     }
 
@@ -16949,12 +17122,54 @@
   }
 
   {
+
+    title <
+      name = British Journal of Infection Control ;
+      issn = 1469-0446 ;
+      eissn = 1754-7156 ;
+      issnl = 1469-0446
+    >
+
+    comment[continued_by] = Journal of Infection Prevention 2009-, issn:1757-1774
+    
+    param[base_url] = http://bji.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+
+      au < down ; crawling ; 2008 ; British Journal of Infection Control Volume 9 ; 9 ;  >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2000 ; British Journal of Infection Control Volume 1 ; 1 ; >
+      au < exists ; exists ; 2001 ; British Journal of Infection Control Volume 2 ; 2 ; >
+      au < exists ; exists ; 2002 ; British Journal of Infection Control Volume 3 ; 3 ; >
+      au < exists ; exists ; 2003 ; British Journal of Infection Control Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2004 ; British Journal of Infection Control Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2005 ; British Journal of Infection Control Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; British Journal of Infection Control Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; British Journal of Infection Control Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Infection Control Volume 9 ; 9 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Journal of Infection Prevention ;
       issn = 1757-1774 ;
       eissn = 1757-1782
     >
+
+    comment[continued_from] = British Journal of Infection Control 2000-2008, issn:1469-0446
 
     param[base_url] = http://bji.sagepub.com/
 
@@ -16963,7 +17178,6 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Journal of Infection Prevention Volume 9 ; 9 ;  >
       au < down ; crawling ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ;  >
 
     }
@@ -16972,15 +17186,6 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; Journal of Infection Prevention Volume 1 ; 1 ; >
-      au < exists ; exists ; 2001 ; Journal of Infection Prevention Volume 2 ; 2 ; >
-      au < exists ; exists ; 2002 ; Journal of Infection Prevention Volume 3 ; 3 ; >
-      au < exists ; exists ; 2003 ; Journal of Infection Prevention Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2004 ; Journal of Infection Prevention Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2005 ; Journal of Infection Prevention Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2006 ; Journal of Infection Prevention Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2007 ; Journal of Infection Prevention Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Journal of Infection Prevention Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Infection Prevention Volume 10 ; 10 ; >
       au < wanted ; exists ; 2010 ; Journal of Infection Prevention Volume 11 ; 11 ;  >
       au < manifest ; exists ; 2011 ; Journal of Infection Prevention Volume 12 ; 12 ; >
@@ -18661,7 +18866,8 @@
   
     title <
       name = Journal of the Renin-Angiotensin-Aldosterone System ;
-      issn = 1470-3203
+      issn = 1470-3203 ;
+      eissn = 1752-8976 
     >
 
     param[base_url] = http://jra.sagepub.com/
@@ -19324,8 +19530,9 @@
   
     title <
       name = The Journal of Special Education ;
-      issn = 0022-4669
-    >
+      issn = 0022-4669 ;
+      eissn = 1538-4764 
+     >
 
     param[base_url] = http://sed.sagepub.com/
 
@@ -22020,7 +22227,8 @@
   
     title <
       name = NASN School Nurse ;
-      issn = 1942-602X
+      issn = 1942-602X ;
+      eissn = 1942-6038 
     >
 
     param[base_url] = http://nas.sagepub.com/
@@ -25070,7 +25278,8 @@
   
     title <
       name = Rehabilitation Counseling Bulletin ;
-      issn = 0034-3552
+      issn = 0034-3552 ;
+      eissn = 1538-4853 
     >
 
     param[base_url] = http://rcb.sagepub.com/
@@ -25180,7 +25389,8 @@
   
     title <
       name = Remedial and Special Education ;
-      issn = 0741-9325
+      issn = 0741-9325 ;
+      eissn = 1538-4756 
     >
 
     param[base_url] = http://rse.sagepub.com/
@@ -27608,7 +27818,7 @@
     title <
       name = Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children ;
       issn = 0888-4064 ;
-      eissn = 1944-4493
+      eissn = 1944-4931
     >
 
     param[base_url] = http://tes.sagepub.com/
@@ -28394,7 +28604,8 @@
   
     title <
       name = Topics in Early Childhood Special Education ;
-      issn = 0271-1214
+      issn = 0271-1214 ;
+      eissn = 1538-4845 
     >
 
     param[base_url] = http://tec.sagepub.com/
