@@ -3196,6 +3196,38 @@
   }
 
   {
+
+    title <
+      name = Bulletin of the Atomic Scientists ;
+      issn = 0096-3402 ;
+      eissn = 1938-3282 
+    >
+
+    param[base_url] = http://bos.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 ; >
+      au < exists ; exists ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 ; >
+      au < exists ; exists ; 2001 ; Bulletin of the Atomic Scientists Volume 57 ; 57 ; >
+      au < exists ; exists ; 2002 ; Bulletin of the Atomic Scientists Volume 58 ; 58 ; >
+      au < exists ; exists ; 2003 ; Bulletin of the Atomic Scientists Volume 59 ; 59 ; >
+      au < exists ; exists ; 2004 ; Bulletin of the Atomic Scientists Volume 60 ; 60 ; >
+      au < exists ; exists ; 2005 ; Bulletin of the Atomic Scientists Volume 61 ; 61 ; >
+      au < exists ; exists ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 ; >
+      au < exists ; exists ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 ; >
+      au < exists ; exists ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 ; >
+      au < exists ; exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Business & Society ;
@@ -3435,6 +3467,50 @@
   }
 
   {
+
+    title <
+      name = Capital & Class ;
+      issn = 0309-8168 ;
+      eissn = 2041-0980 
+    >
+
+    param[base_url] = http://cnc.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Capital & Class Volume 31 ; 31 ; >
+      au < exists ; exists ; 2008 ; Capital & Class Volume 32 ; 32 ; >
+      au < exists ; exists ; 2009 ; Capital & Class Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2010 ; Capital & Class Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2011 ; Capital & Class Volume 35 ; 35 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cardiac Cath Lab Director ;
+      issn = 2150-1335 ;
+      eissn = 2150-0134 
+    >
+
+    param[base_url] = http://ccl.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Career Development for Exceptional Individuals ;
@@ -3523,6 +3599,29 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Cartilage Volume 1 ; 1 ; >
       au < manifest ; exists ; 2010 ; Cartilage Volume 2 ; 2 ; >
       au < exists ; exists ; 2011 ; Cartilage Volume 3 ; 3 ;  >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cephalalgia ;
+      issn = 0333-1024 ;
+      eissn = 1468-2982 
+    >
+
+    param[base_url] = http://cep.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2008 ; Cephalalgia Volume 28 ; 28 ; >
+      au < exists ; exists ; 2009 ; Cephalalgia Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2010 ; Cephalalgia Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2011 ; Cephalalgia Volume 31 ; 31 ; >
 
     }
 
@@ -4840,6 +4939,89 @@
   }
 
   {
+
+    title <
+      name = Contemporary Education Dialogue ;
+      issn = 0973-1849 ;
+      eissn = 2249-5320 
+    >
+
+    param[base_url] = http://ced.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2003-2004 ; Contemporary Education Dialogue 1 ; 1 ; >
+      au < exists ; exists ; 2004-2005 ; Contemporary Education Dialogue 2 ; 2 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Contemporary Education Dialogue 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Contemporary Education Dialogue 4 ; 4 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Contemporary Education Dialogue 5 ; 5 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Contemporary Education Dialogue 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Contemporary Education Dialogue 7 ; 7 ; >
+      au < manifest ; exists ; 2011 ; Contemporary Education Dialogue 8 ; 8 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Contemporary Sociology: A Journal of Reviews ;
+      issn = 0094-3061 ;
+      eissn = 1939-8638 
+    >
+
+    param[base_url] = http://csx.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2004 ; Contemporary Sociology: A Journal of Reviews Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 ; >
+      au < exists ; exists ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Contexts ;
+      issn = 1536-5042 ;
+      eissn = 1537-6052 
+    >
+
+    param[base_url] = http://ctx.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Contexts Volume 1 ; 1 ; >
+      au < exists ; exists ; 2003 ; Contexts Volume 2 ; 2 ; >
+      au < exists ; exists ; 2004 ; Contexts Volume 3 ; 3 ; >
+      au < exists ; exists ; 2005 ; Contexts Volume 4 ; 4 ; >
+      au < exists ; exists ; 2006 ; Contexts Volume 5 ; 5 ; >
+      au < exists ; exists ; 2007 ; Contexts Volume 6 ; 6 ; >
+      au < exists ; exists ; 2008 ; Contexts Volume 7 ; 7 ; >
+      au < exists ; exists ; 2009 ; Contexts Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Contexts Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Contexts Volume 10 ; 10 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Contributions to Indian Sociology ;
@@ -5110,6 +5292,27 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Cornell Hospitality Quarterly Volume 50 ; 50 ; >
       au < released ; crawling ; 2010 ; Cornell Hospitality Quarterly Volume 51 ; 51 ;  >
       au < manifest ; exists ; 2011 ; Cornell Hospitality Quarterly Volume 52 ; 52 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Counseling Outcome Research and Evaluation ;
+      issn = 2150-1378 ;
+      eissn = 2150-1386 
+    >
+
+    param[base_url] = http://cor.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; Counseling Outcome Research and Evaluation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Counseling Outcome Research and Evaluation Volume 2 ; 2 ; >
 
     }
 
@@ -5523,6 +5726,40 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Criminology and Criminal Justice Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Criminology and Criminal Justice Volume 10 ; 10 ;  >
       au < manifest ; exists ; 2011 ; Criminology and Criminal Justice Volume 11 ; 11 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Critical Reviews in Oral Biology & Medicine ;
+      issn = 1045-4411 ;
+      eissn = 1544-1113 
+    >
+
+    param[base_url] = http://cro.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1990 ; Critical Reviews in Oral Biology & Medicine Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1991 ; Critical Reviews in Oral Biology & Medicine Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1992 ; Critical Reviews in Oral Biology & Medicine Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1992 ; Critical Reviews in Oral Biology & Medicine Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1994 ; Critical Reviews in Oral Biology & Medicine Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1995 ; Critical Reviews in Oral Biology & Medicine Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1996 ; Critical Reviews in Oral Biology & Medicine Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1997 ; Critical Reviews in Oral Biology & Medicine Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1998 ; Critical Reviews in Oral Biology & Medicine Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1999 ; Critical Reviews in Oral Biology & Medicine Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2000 ; Critical Reviews in Oral Biology & Medicine Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2001 ; Critical Reviews in Oral Biology & Medicine Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2002 ; Critical Reviews in Oral Biology & Medicine Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2003 ; Critical Reviews in Oral Biology & Medicine Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2004 ; Critical Reviews in Oral Biology & Medicine Volume 15 ; 15 ; >
 
     }
 
@@ -6008,6 +6245,30 @@
   }
 
   {
+
+    title <
+      name = Current Directions in Psychological Science ;
+      issn = 0963-7214 ;
+      eissn = 1467-8721 
+    >
+
+    param[base_url] = http://cdp.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 ; >
+      au < exists ; exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 ; >
+      au < exists ; exists ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Current Sociology ;
@@ -6267,6 +6528,26 @@
       au < doNotProcess ; doNotProcess ; 2009 ; The Diabetes Educator Volume 35 ; 35 ; >
       au < released ; crawling ; 2010 ; The Diabetes Educator Volume 36 ; 36 ;  >
       au < manifest ; exists ; 2011 ; The Diabetes Educator Volume 37 ; 37 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Dialogues in Human Geography ;
+      issn = 2043-8206 ;
+      eissn = 2043-8214 
+    >
+
+    param[base_url] = http://dhg.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2011 ; Dialogues in Human Geography Volume 1 ; 1 ; >
 
     }
 
@@ -7191,6 +7472,30 @@
   }
 
   {
+
+    title <
+      name = Electronic News ;
+      issn = 1931-2431 ;
+      eissn = 1931-244X 
+    >
+
+    param[base_url] = http://enx.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Electronic News Volume 1 ; 1 ; >
+      au < exists ; exists ; 2008 ; Electronic News Volume 2 ; 2 ; >
+      au < exists ; exists ; 2009 ; Electronic News Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; Electronic News Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2011 ; Electronic News Volume 5 ; 5 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Emotion Review ;
@@ -7338,6 +7643,64 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Environment and Urbanization Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Environment and Urbanization Volume 22 ; 22 ;  >
       au < manifest ; exists ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Environment and Urbanization Asia ;
+      issn = 0975-4253 ;
+      eissn = 0976-3546 
+    >
+
+    param[base_url] = http://eua.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Ergonomics in Design: The Quarterly of Human Factors Applications ;
+      issn = 1064-8046 
+    >
+
+    param[base_url] = http://erg.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1993 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 ; >
+      au < exists ; exists ; 1994 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 ; >
+      au < exists ; exists ; 1995 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 ; >
+      au < exists ; exists ; 1996 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 ; >
+      au < exists ; exists ; 1997 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 ; >
+      au < exists ; exists ; 1998 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 ; >
+      au < exists ; exists ; 1999 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 ; >
+      au < exists ; exists ; 2000 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 ; >
+      au < exists ; exists ; 2001 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 ; >
+      au < exists ; exists ; 2002 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 ; >
+      au < exists ; exists ; 2003 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 ; >
+      au < exists ; exists ; 2004 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 ; >
+      au < exists ; exists ; 2005 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 ; >
+      au < exists ; exists ; 2006 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 ; >
 
     }
 
@@ -7531,6 +7894,43 @@
       au < manifest ; exists ; 2009 ; European Journal of Archaeology Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Archaeology Volume 13 ; 13 ;  >
       au < exists ; exists ; 2011 ; European Journal of Archaeology Volume 14 ; 14 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Cardiovascular Prevention & Rehabilitation ;
+      issn = 1741-8267 ;
+      eissn = 1741-8275 
+    >
+
+    param[base_url] = http://cpr.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 ; >
+      au < exists ; exists ; 1995 ; European Journal of Cardiovascular Prevention & Rehabilitation 2 ; 2 ; >
+      au < exists ; exists ; 1996 ; European Journal of Cardiovascular Prevention & Rehabilitation 3 ; 3 ; >
+      au < exists ; exists ; 1997 ; European Journal of Cardiovascular Prevention & Rehabilitation 4 ; 4 ; >
+      au < exists ; exists ; 1998 ; European Journal of Cardiovascular Prevention & Rehabilitation 5 ; 5 ; >
+      au < exists ; exists ; 1999 ; European Journal of Cardiovascular Prevention & Rehabilitation 6 ; 6 ; >
+      au < exists ; exists ; 2000 ; European Journal of Cardiovascular Prevention & Rehabilitation 7 ; 7 ; >
+      au < exists ; exists ; 2001 ; European Journal of Cardiovascular Prevention & Rehabilitation 8 ; 8 ; >
+      au < exists ; exists ; 2002 ; European Journal of Cardiovascular Prevention & Rehabilitation 9 ; 9 ; >
+      au < exists ; exists ; 2003 ; European Journal of Cardiovascular Prevention & Rehabilitation 10 ; 10 ; >
+      au < exists ; exists ; 2004 ; European Journal of Cardiovascular Prevention & Rehabilitation 11 ; 11 ; >
+      au < exists ; exists ; 2005 ; European Journal of Cardiovascular Prevention & Rehabilitation 12 ; 12 ; >
+      au < exists ; exists ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation 13 ; 13 ; >
+      au < exists ; exists ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation 14 ; 14 ; >
+      au < exists ; exists ; 2008 ; European Journal of Cardiovascular Prevention & Rehabilitation 15 ; 15 ; >
+      au < manifest ; exists ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 ; >
+      au < manifest ; exists ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 ; >
+      au < manifest ; exists ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 ; >
 
     }
 
@@ -9119,6 +9519,48 @@
   }
 
   {
+
+    title <
+      name = Genes & Cancer ;
+      issn = 1947-6019 ;
+      eissn = 1947-6027 
+    >
+
+    param[base_url] = http://gan.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; Genes & Cancer Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Genes & Cancer Volume 2 ; 2 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Geriatric Orthopaedic Surgery & Rehabilitation ;
+      issn = 2151-4585 ;
+      eissn = 2151-4593 
+    >
+
+    param[base_url] = http://gos.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Gifted Child Quarterly ;
@@ -10012,6 +10454,30 @@
   }
 
   {
+
+    title <
+      name = History and Sociology of South Asia ;
+      issn = 2230-8075 ;
+      eissn = 2249-5312 
+    >
+
+    param[base_url] = http://hsa.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; History and Sociology of South Asia Volume 1 ; 1 ; >
+      au < exists ; exists ; 2008 ; History and Sociology of South Asia Volume 2 ; 2 ; >
+      au < exists ; exists ; 2009 ; History and Sociology of South Asia Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; History and Sociology of South Asia Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2011 ; History and Sociology of South Asia Volume 5 ; 5 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = History of Psychiatry ;
@@ -10560,6 +11026,27 @@
   }
 
   {
+
+    title <
+      name = ICU Director ;
+      issn = 1944-4516 ;
+      eissn = 1944-4524 
+    >
+
+    param[base_url] = http://icu.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; ICU Director Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; ICU Director Volume 2 ; 2 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = IFLA Journal ;
@@ -10663,6 +11150,30 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Improving Schools Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Improving Schools Volume 13 ; 13 ;  >
       au < manifest ; exists ; 2011 ; Improving Schools Volume 14 ; 14 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Index on Censorship ;
+      issn = 0306-4220 ;
+      eissn = 1746-6067 
+    >
+
+    param[base_url] = http://ioc.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Index on Censorship Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Index on Censorship Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2009 ; Index on Censorship Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2010 ; Index on Censorship Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2011 ; Index on Censorship Volume 40 ; 40 ; >
 
     }
 
@@ -10774,6 +11285,30 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 ; >
       au < released ; crawling ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 ;  >
       au < manifest ; exists ; 2011 ; Indian Economic & Social History Review Volume 48 ; 48 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Indian Historical Review ;
+      issn = 0376-9836 ;
+      eissn = 0975-5977 
+    >
+
+    param[base_url] = http://ihr.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Indian Historical Review Volume 34 ; 34 ; >
+      au < exists ; exists ; 2008 ; Indian Historical Review Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2009 ; Indian Historical Review Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2010 ; Indian Historical Review Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2011 ; Indian Historical Review Volume 38 ; 38 ; >
 
     }
 
@@ -10926,6 +11461,35 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Information Development Volume 25 ; 25 ; >
       au < notReady ; exists ; 2010 ; Information Development Volume 26 ; 26 ;  >
       au < manifest ; exists ; 2011 ; Information Development Volume 27 ; 27 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Information Visualization ;
+      issn = 1473-8716 ;
+      eissn = 1473-8724 
+    >
+
+    param[base_url] = http://ivi.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Information Visualization Volume 1 ; 1 ; >
+      au < exists ; exists ; 2003 ; Information Visualization Volume 2 ; 2 ; >
+      au < exists ; exists ; 2004 ; Information Visualization Volume 3 ; 3 ; >
+      au < exists ; exists ; 2005 ; Information Visualization Volume 4 ; 4 ; >
+      au < exists ; exists ; 2006 ; Information Visualization Volume 5 ; 5 ; >
+      au < exists ; exists ; 2007 ; Information Visualization Volume 6 ; 6 ; >
+      au < exists ; exists ; 2008 ; Information Visualization Volume 7 ; 7 ; >
+      au < exists ; exists ; 2009 ; Information Visualization Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Information Visualization Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Information Visualization Volume 10 ; 10 ; >
 
     }
 
@@ -11484,6 +12048,36 @@
       au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 ; >
       au < released ; crawling ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 ;  >
       au < manifest ; exists ; 2011 ; International Journal of Damage Mechanics Volume 20 ; 20 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Engine Research ;
+      issn = 1468-0874 ;
+      eissn = 2041-3149 
+    >
+
+    param[base_url] = http://jer.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2000 ; International Journal of Engine Research 1 ; 1 ; >
+      au < exists ; exists ; 2001 ; International Journal of Engine Research 2 ; 2 ; >
+      au < exists ; exists ; 2002 ; International Journal of Engine Research 3 ; 3 ; >
+      au < exists ; exists ; 2003 ; International Journal of Engine Research 4 ; 4 ; >
+      au < exists ; exists ; 2004 ; International Journal of Engine Research 5 ; 5 ; >
+      au < exists ; exists ; 2005 ; International Journal of Engine Research 6 ; 6 ; >
+      au < exists ; exists ; 2006 ; International Journal of Engine Research 7 ; 7 ; >
+      au < exists ; exists ; 2007 ; International Journal of Engine Research 8 ; 8 ; >
+      au < exists ; exists ; 2008 ; International Journal of Engine Research 9 ; 9 ; >
+      au < exists ; exists ; 2009 ; International Journal of Engine Research 10 ; 10 ; >
+      au < manifest ; exists ; 2010 ; International Journal of Engine Research 11 ; 11 ; >
 
     }
 
