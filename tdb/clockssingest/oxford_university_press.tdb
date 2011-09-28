@@ -4331,7 +4331,7 @@
     au < manifest ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
     au < released ; manifest ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < testing ; exists ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
 
     }
 
@@ -5175,7 +5175,7 @@
     au < manifest ; exists ; 2007 ; French Studies Bulletin Volume 28 ; 28 ; >
     au < manifest ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
     au < released ; manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
+    au < testing ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
     au < manifest ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     
     }
@@ -7235,7 +7235,7 @@
     au < wanted ; exists ; 2007 ; International Relations of the Asia-Pacific Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
     au < released ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
+    au < testing ; exists ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
     au < wanted ; exists ; 2011 ; International Relations of the Asia-Pacific Volume 11 ; 11 ; >
 
     }
@@ -8517,7 +8517,7 @@
     au < exists ; exists ; 2007 ; The Journals of Gerontology: Series A Volume 62A ; 62A ; >
     au < exists ; exists ; 2008 ; The Journals of Gerontology: Series A Volume 63A ; 63A ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
-    au < testing ; exists ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A ; >
+    au < released ; manifest ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A ; >
     au < manifest ; exists ; 2011 ; The Journals of Gerontology: Series A Volume 66A ; 66A ; >
 
     }
@@ -8562,7 +8562,7 @@
     au < exists ; exists ; 2007 ; The Journals of Gerontology: Series B Volume 62B ; 62B ; >
     au < exists ; exists ; 2008 ; The Journals of Gerontology: Series B Volume 63B ; 63B ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
-    au < testing ; exists ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B ; >
+    au < released ; manifest ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B ; >
     au < manifest ; exists ; 2011 ; The Journals of Gerontology: Series B Volume 66B ; 66B ; >
 
     }
@@ -11528,7 +11528,7 @@
     au < manifest ; exists ; 2007 ; Mind Volume 116 ; 116 ; >
     au < manifest ; exists ; 2008 ; Mind Volume 117 ; 117 ; >
     au < released ; manifest ; 2009 ; Mind Volume 118 ; 118 ; >
-    au < testing ; exists ; 2010 ; Mind Volume 119 ; 119 ; >
+    au < released ; manifest ; 2010 ; Mind Volume 119 ; 119 ; >
     au < manifest ; exists ; 2011 ; Mind Volume 120 ; 120 ; >
 
     }
