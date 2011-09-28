@@ -1,0 +1,73 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;%s - %s (%d)&quot;, base_url, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slukii/%s/%d/&quot;, base_url, volume_name, year</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Humbold-Universität zu Berlin eDoc Server</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string></string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>de.huberlin.plugin.edoc.edocServer</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>2,&quot;^%slukii/%s/%d/[0-9]+\.xml.*&quot;, base_url, volume_name, year</string>
+      <string>2,&quot;^%slukii/%s/icons/.*&quot;, base_url, volume_name</string>
+      <string>1,&quot;%s.*METADATA/abstract\.php\?id=[0-9]+&quot;, base_url</string>
+      <string>1,&quot;%s.*HTML/&quot;, base_url</string>
+      <string>1,&quot;^%s.*/PDF/.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;^%s.*/PS/.*\.ps&quot;, base_url</string>
+    </list>
+  </entry>
+</map>
