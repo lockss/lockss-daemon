@@ -4,6 +4,8 @@
     name = Mayo Foundation for Medical Education and Research
   >
   
+  comment[urgent] = Leaving HighWire at the end of 2011
+  
   {
   
     title <
@@ -14,6 +16,7 @@
     >
 
     comment[platform] = H20
+    param[base_url] = http://www.mayoclinicproceedings.com/
   
   }
 
