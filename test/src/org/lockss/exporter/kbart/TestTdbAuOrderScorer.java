@@ -179,6 +179,17 @@ public class TestTdbAuOrderScorer extends TestCase {
     au < released ; Texture, Stress, and Microstructure Volume 4 (1980) ; 1980 ; 4 ; 1980 >
     au < released ; Texture, Stress, and Microstructure Volume 4 (1981) ; 1981 ; 4 ; 1981 >
 
+    au < released ; Laser Chemistry Volume 1 (1982) ; 1982 ; 1 ; 1982 >
+    au < released ; Laser Chemistry Volume 1-4 (1983) ; 1983 ; 1-4 ; 1983 >
+    au < released ; Laser Chemistry Volume 4-5 (1984) ; 1984 ; 4-5 ; 1984 >
+    au < released ; Laser Chemistry Volume 5 (1985) ; 1985 ; 5 ; 1985 >
+    au < released ; Laser Chemistry Volume 5-6 (1986) ; 1986 ; 5-6 ; 1986 >
+    au < released ; Laser Chemistry Volume 7 (1987) ; 1987 ; 7 ; 1987 >
+    au < released ; Laser Chemistry Volume 8-9 (1988) ; 1988 ; 8-9 ; 1988 >
+    au < released ; Laser Chemistry Volume 10 (1989) ; 1989 ; 10 ; 1989 >
+    au < released ; Laser Chemistry Volume 10 (1990) ; 1990 ; 10 ; 1990 >
+    au < released ; Laser Chemistry Volume 11 (1991) ; 1991 ; 11 ; 1991 >
+
     ---------------------------------------------------------------------------
    */
   
@@ -210,6 +221,7 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TdbAu> commDis;            // Should be ordered by volume
   List<TdbAu> geoSocLonMem;       // Should be ordered by volume
   List<TdbAu> geoSocLonSP;        // Should be ordered by volume
+  List<TdbAu> laserChem;
 
   // Record all the problematic test AUs in a list
   List<List<TdbAu>> problemTitles;
@@ -238,7 +250,6 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TitleRange> commDisVolRanges;
   List<TitleRange> geoSocLonMemVolRanges;
   List<TitleRange> geoSocLonSPVolRanges;
-  List<TitleRange> afrTodVolRanges;
 
   // Record all the vol ranges in a list
   List<List<TitleRange>> allVolRanges;
@@ -256,7 +267,6 @@ public class TestTdbAuOrderScorer extends TestCase {
   List<TitleRange> commDisYearRanges;
   List<TitleRange> geoSocLonMemYearRanges;
   List<TitleRange> geoSocLonSPYearRanges;
-  List<TitleRange> afrTodYearRanges;
 
   // Record all the year ranges in a list
   List<List<TitleRange>> allYearRanges;
@@ -602,6 +612,23 @@ public class TestTdbAuOrderScorer extends TestCase {
           textStressMicro3a, textStressMicro3b,
           textStressMicro4a, textStressMicro4b
       );
+
+      // ----------------------------------------------------------------------
+      TdbAu laserChem1  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 1 (1982)", "1982", "1");
+      TdbAu laserChem2  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 1-4 (1983)", "1983", "1-4");
+      TdbAu laserChem3  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 4-5 (1984)", "1984", "4-5");
+      TdbAu laserChem4  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 5 (1985)", "1985", "5");
+      TdbAu laserChem5  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 5-6 (1986)", "1986", "5-6");
+      TdbAu laserChem6  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 7 (1987)", "1987", "7");
+      TdbAu laserChem7  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 8-9 (1988)", "1988", "8-9");
+      TdbAu laserChem8  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 10 (1989)", "1989", "10");
+      TdbAu laserChem9  = TdbTestUtil.createBasicAu("Laser Chemistry Volume 10 (1990)", "1990", "10");
+      TdbAu laserChem10 = TdbTestUtil.createBasicAu("Laser Chemistry Volume 11 (1991)", "1991", "11");
+      laserChem = Arrays.asList(
+          laserChem1, laserChem2, laserChem3, laserChem4, laserChem5,
+          laserChem6, laserChem7, laserChem8, laserChem9, laserChem10
+      );
+      consistentSequences.add(laserChem);
 
     } catch (TdbException e) {
       fail("Error setting up test TdbAus.");
@@ -1946,5 +1973,4 @@ public class TestTdbAuOrderScorer extends TestCase {
     titlesToOrderByYear.add(problemTitles.size()-1);
   }
 
-  
 }

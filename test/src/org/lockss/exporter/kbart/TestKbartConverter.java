@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.11 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.12 2011-09-28 10:11:50 easyonthemayo Exp $
  */
 
 /*
@@ -143,6 +143,9 @@ public class TestKbartConverter extends LockssTestCase {
   public final void testGetAuCoverageRanges() {
     //fail("Not yet implemented");
     System.out.println("testGetAuCoverageRanges() not implemented.");
+    // TODO Try running the method on some of the representative examples from
+    // TestTdbAuOrderScorer, and compare the result against the ranges specified
+    // there.
   }
 
   /**
