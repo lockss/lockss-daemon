@@ -113,22 +113,17 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  String[] biblioInfo = content.split(", ");
     		  
     		  for (int k = biblioInfo.length-1; k >= 0; k--) {
-    			  System.out.println("biblioInfo[k] is: " + biblioInfo[k]);
     			  if (biblioInfo[k].startsWith("pp. ")) {
     				  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf('-'));
     				  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-'), biblioInfo[k].length());
-    				  System.out.println("Start page is: " + spage);
     			  }
     			  else if (biblioInfo[k].startsWith("No. ")) {
     				 issue = biblioInfo[k].substring("No. ".length(), biblioInfo[k].length());
-    				 System.out.println("Issue is: " + issue);
     			  }
     			  else if (biblioInfo[k].startsWith("Vol. ")) {
      				 volume = biblioInfo[k].substring("Vol. ".length(), biblioInfo[k].length());
-     				 System.out.println("Volume is: " + volume);
     			  }
     			  else if (!volume.isEmpty()) {
-    				  System.out.println("Volume is not empty, biblioInfo[k] is: " + biblioInfo[k]);
     				  journalTitle = biblioInfo[k].concat(journalTitle);
     				  
     				  // If we're not at the beginning of the comma-separated list
