@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -64,6 +64,23 @@
     <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
+    </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
@@ -86,6 +103,15 @@
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
