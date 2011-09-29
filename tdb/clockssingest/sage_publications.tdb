@@ -1098,6 +1098,32 @@
   }
 
   {
+
+    title <
+      name = The American Journal of Sports Medicine ;
+      issn = 0363-5465 ;
+      eissn = 1552-3365 
+    >
+
+    param[base_url] = http://ajs.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2005 ; The American Journal of Sports Medicine Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2007 ; The American Journal of Sports Medicine Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; The American Journal of Sports Medicine Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2009 ; The American Journal of Sports Medicine Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Sports Medicine Volume 39 ; 39 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = American Politics Research ;
@@ -23656,6 +23682,26 @@
   }
 
   {
+
+    title <
+      name = The Neurohospitalist ;
+      issn = 1941-8744 ;
+      eissn = 1941-8752 
+    >
+
+    param[base_url] = http://nho.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2011 ; The Neurohospitalist Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Neurorehabilitation and Neural Repair ;
@@ -24595,6 +24641,8 @@
       issn = 1757-9139 ;
       eissn = 1757-9147
     >
+    
+    comment[name] = Previously The Journal of the Royal Society for the Promotion of Health, issn:1466-4240
 
     param[base_url] = http://rsh.sagepub.com/
 
@@ -27640,6 +27688,31 @@
   }
 
   {
+
+    title <
+      name = Reviews of Human Factors and Ergonomics ;
+      issn = 1557-234X 
+    >
+
+    param[base_url] = http://rev.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2005 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2006 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2007 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 ; >
+      au < exists ; exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Scandinavian Journal of Public Health ;
@@ -28600,6 +28673,51 @@
   }
 
   {
+
+    title <
+      name = Social Psychological and Personality Science ;
+      issn = 1948-5506 ;
+      eissn = 1948-5514 
+    >
+
+    param[base_url] = http://spp.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; Social Psychological and Personality Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Social Psychological and Personality Science Volume 2 ; 2 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Social Psychology Quarterly ;
+      issn = 0190-2725 ;
+      eissn = 1939-8999 
+    >
+
+    param[base_url] = http://spq.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 ; >
+      au < exists ; exists ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 ; >
+      au < exists ; exists ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Social Science Computer Review ;
@@ -28807,6 +28925,26 @@
   }
 
   {
+
+    title <
+      name = Society and Mental Health ;
+      issn = 2156-8693 ;
+      eissn = 2156-8731 
+    >
+
+    param[base_url] = http://smh.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2011 ; Society and Mental Health Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Sociological Methods & Research ;
@@ -28943,6 +29081,30 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Sociology Volume 43 ; 43 ; >
       au < testing ; exists ; 2010 ; Sociology Volume 44 ; 44 ;  >
       au < manifest ; exists ; 2011 ; Sociology Volume 45 ; 45 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Sociology of Education ;
+      issn = 0038-0407 ;
+      eissn = 1939-8573 
+    >
+
+    param[base_url] = http://soe.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Sociology of Education Volume 80 ; 80 ; >
+      au < exists ; exists ; 2008 ; Sociology of Education Volume 81 ; 81 ; >
+      au < exists ; exists ; 2009 ; Sociology of Education Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2010 ; Sociology of Education Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2011 ; Sociology of Education Volume 84 ; 84 ; >
 
     }
 
@@ -29131,6 +29293,81 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Space and Culture Volume 12 ; 12 ; >
       au < testing ; exists ; 2010 ; Space and Culture Volume 13 ; 13 ;  >
       au < manifest ; exists ; 2011 ; Space and Culture Volume 14 ; 14 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Sports Health: A Multidisciplinary Approach ;
+      issn = 1941-7381 ;
+      eissn = 1941-0921 
+    >
+
+    param[base_url] = http://sph.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = State and Local Government Review ;
+      issn = 0160-323X ;
+      eissn = 1943-3409 
+    >
+
+    param[base_url] = http://slg.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2008 ; State and Local Government Review Volume 40 ; 40 ; >
+      au < exists ; exists ; 2009 ; State and Local Government Review Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2010 ; State and Local Government Review Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2011 ; State and Local Government Review Volume 43 ; 43 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = State Politics & Policy Quarterly ;
+      issn = 1532-4400 ;
+      eissn = 1946-1607 
+    >
+
+    param[base_url] = http://spa.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2001 ; State Politics and Policy Volume 1 ; 1 ; >
+      au < exists ; exists ; 2002 ; State Politics and Policy Volume 2 ; 2 ; >
+      au < exists ; exists ; 2003 ; State Politics and Policy Volume 3 ; 3 ; >
+      au < exists ; exists ; 2004 ; State Politics and Policy Volume 4 ; 4 ; >
+      au < exists ; exists ; 2005 ; State Politics and Policy Volume 5 ; 5 ; >
+      au < exists ; exists ; 2006 ; State Politics and Policy Volume 6 ; 6 ; >
+      au < exists ; exists ; 2007 ; State Politics and Policy Volume 7 ; 7 ; >
+      au < exists ; exists ; 2008 ; State Politics and Policy Volume 8 ; 8 ; >
+      au < exists ; exists ; 2009 ; State Politics and Policy Volume 9 ; 9 ; >
+      au < exists ; exists ; 2010 ; State Politics and Policy Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; State Politics and Policy Volume 11 ; 11 ; >
 
     }
 
@@ -29411,6 +29648,31 @@
   }
 
   {
+
+    title <
+      name = Studies in Religion/Sciences Religieuses ;
+      issn = 0008-4298 ;
+      eissn = 2042-0587 
+    >
+
+    param[base_url] = http://sir.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2009 ; Studies in Religion/Sciences Religieuses Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2010 ; Studies in Religion/Sciences Religieuses Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2011 ; Studies in Religion/Sciences Religieuses Volume 40 ; 40 ; >
+
+    }
+
+  }
+
+  {
   
     title <
       name = Surgical Innovation ;
@@ -29515,6 +29777,50 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; >
       au < testing ; exists ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 ;  >
       au < manifest ; exists ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Teaching of Psychology ;
+      issn = 0098-6283 ;
+      eissn = 1532-8023 
+    >
+
+    param[base_url] = http://top.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2011 ; Teaching of Psychology Volume 38 ; 38 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Teaching Sociology ;
+      issn = 0092-055X ;
+      eissn = 1939-862X 
+    >
+
+    param[base_url] = http://tso.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Teaching Sociology Volume 35 ; 35 ; >
+      au < exists ; exists ; 2008 ; Teaching Sociology Volume 36 ; 36 ; >
+      au < exists ; exists ; 2009 ; Teaching Sociology Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2010 ; Teaching Sociology Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2011 ; Teaching Sociology Volume 39 ; 39 ; >
 
     }
 
