@@ -9,14 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
-        <string>Poll</string>
+        <string>Metadata</string>
 	<string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+	<string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -80,7 +84,7 @@
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisUrlNormalizer</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
+    <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlFilterFactory</string>
   </entry>
   <entry>
@@ -100,5 +104,31 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
+    </entry>
+    </map>
   </entry>
 </map>

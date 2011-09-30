@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlFilterFactory.java,v 1.1 2011-09-02 22:15:55 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlFilterFactory.java,v 1.2 2011-09-30 20:36:53 thib_gc Exp $
  */
 
 /*
@@ -55,8 +55,12 @@ public class TaylorAndFrancisHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
+        // Contains a cookie or session ID
+        HtmlNodeFilters.tagWithAttribute("link", "type", "application/rss+xml"),
         // Contains the current year in a copyright statement
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "credits"),
+        // Contains a cookie or session ID
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
