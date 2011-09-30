@@ -44,7 +44,7 @@
     au < manifest ; exists ; 2008 ; Pace Environmental Law Review Volume 25 ; 25 >      
     au < manifest ; exists ; 2009 ; Pace Environmental Law Review Volume 26 ; 26 >    
     au < manifest ; exists ; 2009-2010 ; Pace Environmental Law Review Volume 27 ; 27 >
-    au < manifest ; exists ; 2011 ; Pace Environmental Law Review Volume 28 ; 28 >
+    au < testing ; exists ; 2011 ; Pace Environmental Law Review Volume 28 ; 28 >
 
   }
 
@@ -58,7 +58,7 @@
     comment[issn] = requested in RT ticket 3743
     param[journal_abbr] = pelroc
 
-    au < manifest ; exists ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
+    au < testing ; exists ; 2011 ; Pace Environmental Law Review Online Companion Volume 1 ; 1 >
 
   }
 
