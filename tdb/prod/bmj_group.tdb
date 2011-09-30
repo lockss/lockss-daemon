@@ -109,11 +109,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Annals of the Rheumatic Diseases Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Annals of the Rheumatic Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Annals of the Rheumatic Diseases Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Annals of the Rheumatic Diseases Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Annals of the Rheumatic Diseases Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Annals of the Rheumatic Diseases Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Annals of the Rheumatic Diseases Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; ready ; 1997 ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
@@ -185,7 +185,7 @@
     au < HighWirePressH20Plugin ; ready ; 2001 ; Archives of Disease in Childhood Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Archives of Disease in Childhood Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Archives of Disease in Childhood Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Archives of Disease in Childhood Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Archives of Disease in Childhood Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; ready ; 2004 ; Archives of Disease in Childhood Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood Volume 91 ; 91 >
@@ -242,13 +242,13 @@
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 ; 91 >
@@ -543,11 +543,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1997 ; British Journal of Sports Medicine Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; British Journal of Sports Medicine Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; British Journal of Sports Medicine Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; British Journal of Sports Medicine Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; British Journal of Sports Medicine Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; British Journal of Sports Medicine Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; British Journal of Sports Medicine Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; British Journal of Sports Medicine Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; British Journal of Sports Medicine Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; British Journal of Sports Medicine Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; British Journal of Sports Medicine Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; British Journal of Sports Medicine Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; British Journal of Sports Medicine Volume 38 ; 38 >
     au < HighWireStrVolPlugin ; down ; 2005 ; British Journal of Sports Medicine Volume 39 ; 39 >
     au < HighWireStrVolPlugin ; down ; 2006 ; British Journal of Sports Medicine Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2007 ; British Journal of Sports Medicine Volume 41 ; 41 >
@@ -1614,7 +1614,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2008 ; Sexually Transmitted Infections Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Sexually Transmitted Infections Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; ready ; 2010 ; Sexually Transmitted Infections Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; testing ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; ready ; 2011 ; Sexually Transmitted Infections Volume 87 ; 87 >
 
   }
 
