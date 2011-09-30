@@ -2091,7 +2091,7 @@
     au < manifest ; exists ; 2008 ; Metrologia Volume 45 ; 45 > 
     au < manifest ; exists ; 2009 ; Metrologia Volume 46 ; 46 > 
     au < released ; crawling ; 2010 ; Metrologia Volume 47 ; 47 > 
-    au < testing ; exists ; 2011 ; Metrologia Volume 48 ; 48 > 
+    au < ready ; exists ; 2011 ; Metrologia Volume 48 ; 48 > 
 
   }
 
@@ -2125,7 +2125,7 @@
     au < manifest ; exists ; 2008 ; Modelling and Simulation in Materials Science and Engineering Volume 16 ; 16 > 
     au < manifest ; exists ; 2009 ; Modelling and Simulation in Materials Science and Engineering Volume 17 ; 17 > 
     au < released ; crawling ; 2010 ; Modelling and Simulation in Materials Science and Engineering Volume 18 ; 18 > 
-    au < testing ; exists ; 2011 ; Modelling and Simulation in Materials Science and Engineering Volume 19 ; 19 > 
+    au < ready ; exists ; 2011 ; Modelling and Simulation in Materials Science and Engineering Volume 19 ; 19 > 
 
   }
 
@@ -2140,6 +2140,7 @@
 
     param[journal_issn] = 0957-4484
     comment[param] = print issn preferred
+    comment[22] = poll failure, retest later
 
     au < exists ; exists ; 1990 ; Nanotechnology Volume 1 ; 1 > 
     au < exists ; exists ; 1991 ; Nanotechnology Volume 2 ; 2 > 
@@ -2162,7 +2163,7 @@
     au < manifest ; exists ; 2008 ; Nanotechnology Volume 19 ; 19 > 
     au < manifest ; exists ; 2009 ; Nanotechnology Volume 20 ; 20 > 
     au < released ; crawling ; 2010 ; Nanotechnology Volume 21 ; 21 > 
-    au < testing ; exists ; 2011 ; Nanotechnology Volume 22 ; 22 > 
+    au < notReady ; exists ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     
   }
 
