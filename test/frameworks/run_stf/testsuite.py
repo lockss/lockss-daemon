@@ -287,6 +287,16 @@ class LastFileDeleteV3TestCase( DeleteV3Tests ):
         return [ node ]
         
 
+class AllContentDeleteV3TestCase( DeleteV3Tests ):
+    """Test recovery after deletion of all content nodes."""
+
+    def _damage_AU( self ):
+        nodes = self.victim.getAuNodesWithContent( self.AU )
+        for node in nodes:
+            self.victim.deleteNode( node )
+        return nodes
+
+
 class RandomDeleteV3TestCase( DeleteV3Tests ):
     """Test recovery by V3 from randomly deleted nodes in our cache"""
 
