@@ -199,7 +199,7 @@
     au < manifest ; exists ; 2006 ; African Affairs Volume 105 ; 105 ; >
     au < manifest ; exists ; 2007 ; African Affairs Volume 106 ; 106 ; >    
     au < manifest ; exists ; 2008 ; African Affairs Volume 107 ; 107 ; >
-    au < testsing ; exists ; 2009 ; African Affairs Volume 108 ; 108 ; >
+    au < released ; manifest ; 2009 ; African Affairs Volume 108 ; 108 ; >
     au < manifest ; exists ; 2010 ; African Affairs Volume 109 ; 109 ; >
     au < manifest ; exists ; 2011 ; African Affairs Volume 110 ; 110 ; >
   
@@ -1955,7 +1955,7 @@
     au < manifest ; exists ; 2006 ; Briefings in Functional Genomics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Briefings in Functional Genomics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 ; >
-    au < testing ; exists ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 ; >
+    au < released ; manifest ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
     au < manifest ; exists ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
   
@@ -2158,7 +2158,7 @@
     au < manifest ; exists ; 2007 ; British Journal of Anaesthesia Volume 99 ; 99 ; >
     au < manifest ; exists ; 2008 ; British Journal of Anaesthesia Volume 100 ; 100 ; >
     au < manifest ; exists ; 2008 ; British Journal of Anaesthesia Volume 101 ; 101 ; >
-    au < testing ; exists ; 2009 ; British Journal of Anaesthesia Volume 102 ; 102 ; >
+    au < released ; manifest ; 2009 ; British Journal of Anaesthesia Volume 102 ; 102 ; >
     au < testing ; exists ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
@@ -3879,7 +3879,7 @@
     au < manifest ; exists ; 2007 ; English Historical Review Volume CXXII ; CXXII ; >
     au < manifest ; exists ; 2008 ; English Historical Review Volume CXXIII ; CXXIII ; >
     au < released ; manifest ; 2009 ; English Historical Review Volume CXXIV ; CXXIV ; >
-    au < manifest ; exists ; 2010 ; English Historical Review Volume CXXV ; CXXV ; >
+    au < testing ; exists ; 2010 ; English Historical Review Volume CXXV ; CXXV ; >
     au < manifest ; exists ; 2011 ; English Historical Review Volume CXXVI ; CXXVI ; >
 
     }
@@ -4331,7 +4331,7 @@
     au < manifest ; exists ; 2007 ; European Heart Journal Supplements Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
     au < released ; manifest ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
-    au < testing ; exists ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < released ; manifest ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
 
     }
 
@@ -15500,7 +15500,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
     au < released ; crawling ; 2010 ; Socio-Economic Review Volume 8 ; 8 ; >
-    au < wanted ; exists ; 2011 ; Socio-Economic Review Volume 9 ; 9 ; >
+    au < testing ; exists ; 2011 ; Socio-Economic Review Volume 9 ; 9 ; >
 
     }
 
@@ -16003,7 +16003,7 @@
     au < manifest ; exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
-    au < wanted ; exists ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
+    au < testing ; exists ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
 
     }
 
@@ -16049,7 +16049,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < released ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
-    au < wanted ; exists ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
+    au < testing ; exists ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
 
     }
 
@@ -16154,7 +16154,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
     au < released ; crawling ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; The World Bank Economic Review Volume 24 ; 24 ; >
-    au < wanted ; exists ; 2011 ; The World Bank Economic Review Volume 25 ; 25 ; >
+    au < testing ; exists ; 2011 ; The World Bank Economic Review Volume 25 ; 25 ; >
 
     }
 
