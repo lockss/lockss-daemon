@@ -12,10 +12,13 @@ import unittest
 import urllib2
 
 sys.path.append( os.path.normpath( os.path.join( os.path.dirname( sys.argv[ 0 ] ), '../lib' ) ) )
+import fix_auth_failure
 import lockss_daemon
 import lockss_util
 from lockss_util import log
 
+
+fix_auth_failure.fix_auth_failure()
 
 class LockssTestCases( unittest.TestCase ):
     """Astract superclass for all STF test cases"""
