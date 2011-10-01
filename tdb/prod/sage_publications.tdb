@@ -3791,6 +3791,18 @@
         param[base_url] = http://bos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
+        au < exists ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 >
+        au < exists ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 >
+        au < exists ; 2001 ; Bulletin of the Atomic Scientists Volume 57 ; 57 >
+        au < exists ; 2002 ; Bulletin of the Atomic Scientists Volume 58 ; 58 >
+        au < exists ; 2003 ; Bulletin of the Atomic Scientists Volume 59 ; 59 >
+        au < exists ; 2004 ; Bulletin of the Atomic Scientists Volume 60 ; 60 >
+        au < exists ; 2005 ; Bulletin of the Atomic Scientists Volume 61 ; 61 >
+        au < exists ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 >
+        au < exists ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 >
+        au < exists ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 >
+        au < exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 >
+        au < exists ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 >
         au < exists ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 >
 
       }
@@ -4259,7 +4271,8 @@
 
       title <
         name = Cephalalgia ;
-        issn = 0333-1024 
+        issn = 0333-1024 ;
+        eissn = 1468-2982
       >
 
       {
@@ -5782,7 +5795,8 @@
     {
       title <
           name = Contemporary Education Dialogue ;
-          issn = 0973-1849
+          issn = 0973-1849 ;
+          eissn = 2249-5320
       >
 
       {
@@ -15832,7 +15846,7 @@ comment[exm] = now published by Springer
 
     {
       title <
-          name = Journal of Accounting, Auditing &  Finance ;
+          name = Journal of Accounting, Auditing & Finance ;
           issn = 0148-558X
       >
 
@@ -24144,7 +24158,7 @@ comment[mpj] = now published by Brill
       >
       
       comment[continued_from] = 1466-4240
-      comment[pph] = name changed from The Journal of the Royal Society for the Propotion of Health
+      comment[pph] = name changed from The Journal of the Royal Society for the Promotion of Health
 
       {
 
@@ -25490,6 +25504,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
         au < manifest ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 >
         au < manifest ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 >
+
       }
 
     }
@@ -26652,20 +26667,12 @@ comment[mpj] = now published by Brill
         param[base_url] = http://msx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1998 ; Musicae Scientiae Volume 1 ; 1 >
-        au < exists ; 1999 ; Musicae Scientiae Volume 2 ; 2 >
-        au < exists ; 2000 ; Musicae Scientiae Volume 3 ; 3 >
-        au < exists ; 2001 ; Musicae Scientiae Volume 4 ; 4 >
-        au < exists ; 2002 ; Musicae Scientiae Volume 5 ; 5 >
-        au < exists ; 2003 ; Musicae Scientiae Volume 6 ; 6 >
-        au < exists ; 2004 ; Musicae Scientiae Volume 7 ; 7 >
-        au < exists ; 2005 ; Musicae Scientiae Volume 8 ; 8 >
-        au < exists ; 2006 ; Musicae Scientiae Volume 9 ; 9 >
-        au < exists ; 2007 ; Musicae Scientiae Volume 10 ; 10 >
-        au < exists ; 2008 ; Musicae Scientiae Volume 11 ; 11 >
-        au < exists ; 2009 ; Musicae Scientiae Volume 12 ; 12 >
-        au < exists ; 2010 ; Musicae Scientiae Volume 13 ; 13 >
-        au < exists ; 2011 ; Musicae Scientiae Volume 14 ; 14 >
+        au < exists ; 2005 ; Musicae Scientiae Volume 9 ; 9 >
+        au < exists ; 2006 ; Musicae Scientiae Volume 10 ; 10 >
+        au < exists ; 2007 ; Musicae Scientiae Volume 11 ; 11 >
+        au < exists ; 2008 ; Musicae Scientiae Volume 12 ; 12 >
+        au < exists ; 2009 ; Musicae Scientiae Volume 13 ; 13 >
+        au < exists ; 2010 ; Musicae Scientiae Volume 14 ; 14 >
         au < manifest ; 2011 ; Musicae Scientiae Volume 15 ; 15 >
 
       }
@@ -27156,8 +27163,8 @@ comment[mpj] = now published by Brill
 
       title <
         name = The Neurohospitalist ;
-        issn = 1941-8752 ;
-        eissn = 1941-8744
+        issn = 1941-8744 ;
+        eissn = 1941-8752 
       >
       
       {
@@ -33559,7 +33566,7 @@ comment[mpj] = now published by Brill
       title <
         name = Teaching of Psychology ;
         issn = 0098-6283 ;
-        eissn = 1532-2802 ;
+        eissn = 1532-8023 ;
         issnl = 0098-6283
       >
 
@@ -36128,7 +36135,7 @@ comment[mpj] = now published by Brill
       title <
         name = World Journal for Pediatric and Congenital Heart Surgery ;
         issn = 2150-1351 ;
-        eissn = 2150-0136
+        eissn = 2150-136X
       >
 
       {
