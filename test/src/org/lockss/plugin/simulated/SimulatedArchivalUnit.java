@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.74 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.75 2011-10-02 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -420,8 +420,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
   }
 
+  /** No longer effective */
   public RateLimiter findFetchRateLimiter() {
     return RateLimiter.UNLIMITED;
+  }
+
+  @Override
+  public RateLimiterInfo getRateLimiterInfo() {
+    return new RateLimiterInfo(getFetchRateLimiterKey(), "unlimited");
   }
 
   public FilterRule getFilterRule(String contentType) {
