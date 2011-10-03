@@ -32,12 +32,12 @@
     param[journal_abbr] = bejeap/advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < manifest ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
 
   }
 
@@ -52,12 +52,12 @@
     param[journal_abbr] = bejm/advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
-    au < manifest ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
 
   }
 
