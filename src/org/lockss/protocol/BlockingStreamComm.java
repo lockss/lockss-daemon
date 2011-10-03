@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.54 2011-06-21 22:09:50 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.55 2011-10-03 05:54:54 tlipkis Exp $
  */
 
 /*
@@ -441,6 +441,18 @@ public class BlockingStreamComm
       return msgsSent;
     }
     
+    int getMsgsRcvd() {
+      return msgsRcvd;
+    }
+    
+    void sentMsg() {
+      msgsSent++;
+    }
+    
+    void rcvdMsg() {
+      msgsRcvd++;
+    }
+    
     int getSendRateLimited() {
       return sendRateLimited;
     }
@@ -452,10 +464,6 @@ public class BlockingStreamComm
     void rcvRateLimited() {
       rcvRateLimited++;
       anyRateLimited = true;
-    }
-    
-    int getMsgsRcvd() {
-      return msgsRcvd;
     }
     
     void countPrimary(boolean incr) {
@@ -1253,11 +1261,12 @@ public class BlockingStreamComm
   }
 
   /**
-   * Return an existing channel for the peer or create and start one
+   * Return an existing PeerData for the peer or create a new one
    */
   PeerData findPeerData(PeerIdentity pid) {
     if (pid == null) {
       log.error("findPeerData: null pid", new Throwable());
+      throw new RuntimeException("Null pid");
     }
     synchronized (peers) {
       PeerData pdata = peers.get(pid);
@@ -1267,6 +1276,12 @@ public class BlockingStreamComm
 	peers.put(pid, pdata);
       }
       return pdata;
+    }
+  }
+
+  PeerData getPeerData(PeerIdentity pid) {
+    synchronized (peers) {
+      return peers.get(pid);
     }
   }
 
@@ -1384,12 +1399,6 @@ public class BlockingStreamComm
   List<PeerData> getAllPeerData() {
     synchronized (peers) {
       return new ArrayList<PeerData>(peers.values());
-    }
-  }
-
-  PeerData getPeerData(PeerIdentity pid) {
-    synchronized (peers) {
-      return peers.get(pid);
     }
   }
 

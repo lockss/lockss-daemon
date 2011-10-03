@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.30 2011-01-10 09:14:39 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.31 2011-10-03 05:54:54 tlipkis Exp $
  */
 
 /*
@@ -746,7 +746,7 @@ class BlockingPeerChannel implements PeerChannel {
 	  limiter.event();
 	}
 	rcvQueue.put(msg);
-	stats.rcvdMsg();
+	countRcvdMsg();
       } else {
 	scomm.rcvRateLimited(peer);
 	log.debug3("rcv rate limited");
@@ -754,6 +754,22 @@ class BlockingPeerChannel implements PeerChannel {
     } catch (IOException e) {
       msg.delete();
       throw e;
+    }
+  }
+
+  void countRcvdMsg() {
+    stats.rcvdMsg();
+    BlockingStreamComm.PeerData pd = scomm.getPeerData(peer);
+    if (pd != null) {
+      pd.rcvdMsg();
+    }
+  }
+
+  void countSentMsg() {
+    stats.sentMsg();
+    BlockingStreamComm.PeerData pd = scomm.getPeerData(peer);
+    if (pd != null) {
+      pd.sentMsg();
     }
   }
 
@@ -958,7 +974,7 @@ class BlockingPeerChannel implements PeerChannel {
     copyBytes(msg.getInputStream(), outs, msg.getDataSize(),
 	      stats.getOutCount());
     outs.flush();
-    stats.sentMsg();
+    countSentMsg();
     logRate("Send", len, startTime);
   }
 
