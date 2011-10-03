@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.22 2009-01-21 04:07:02 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.23 2011-10-03 05:54:34 tlipkis Exp $
  */
 
 /*
@@ -245,6 +245,16 @@ public class ParticipantUserData implements LockssSerializable {
     case V3Poller.PEER_STATUS_ACCEPTED_POLL:
     case V3Poller.PEER_STATUS_NOMINATED:
     case V3Poller.PEER_STATUS_WAITING_VOTE:
+    case V3Poller.PEER_STATUS_VOTED:
+    case V3Poller.PEER_STATUS_COMPLETE:
+      return true;
+    default:
+      return false;
+    }
+  }
+
+  public boolean hasVoted() {
+    switch (status) {
     case V3Poller.PEER_STATUS_VOTED:
     case V3Poller.PEER_STATUS_COMPLETE:
       return true;

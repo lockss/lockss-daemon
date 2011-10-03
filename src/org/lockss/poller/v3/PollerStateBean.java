@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.33 2008-10-24 07:11:19 tlipkis Exp $
+ * $Id: PollerStateBean.java,v 1.34 2011-10-03 05:54:34 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public class PollerStateBean implements LockssSerializable {
   private long voteDeadline;
   /* The requested duration of this poll. */
   private long duration;
+  /* The time the poll actually ended, or -1 if not ended yet. */
+  private long pollEnd = -1;
   /* The ArchivalUnit identifier. */
   private String auId;
   /* The version of the plugin used by the AU. */
@@ -248,6 +250,15 @@ public class PollerStateBean implements LockssSerializable {
 
   public void setDuration(long duration) {
     this.duration = duration;
+  }
+
+  public void setPollEnd(long l) {
+    this.pollEnd = l;
+  }
+
+  /* The time the poll actually ended, or -1 if not ended yet. */
+  public long getPollEnd() {
+    return pollEnd;
   }
 
   public int getQuorum() {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.104 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.105 2011-10-03 05:54:34 tlipkis Exp $
  */
 
 /*
@@ -848,8 +848,11 @@ public class V3Poller extends BasePoll {
       log.debug2("Cancelling poll completion timer event.");
       TimerQueue.cancel(pollCompleteRequest);
     }
-//     // Reset the duration to reflect reality
-//     pollerState.setDuration(TimeBase.nowMs() - pollerState.getCreateTime());
+
+    long now = TimeBase.nowMs();
+    pollerState.setPollEnd(now);
+    // Reset the duration to reflect reality
+    pollerState.setDuration(now - pollerState.getCreateTime());
 
     // Clean up any lingering participants.
     synchronized(theParticipants) {
@@ -2617,6 +2620,11 @@ public class V3Poller extends BasePoll {
    */
   public long getCreateTime() {
     return pollerState.getCreateTime();
+  }
+  
+  /* The time the poll actually ended, or -1 if not ended yet. */
+  public long getEndTime() {
+    return pollerState.getPollEnd();
   }
   
   /**
