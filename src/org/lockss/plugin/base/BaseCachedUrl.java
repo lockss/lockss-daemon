@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.42 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.43 2011-10-03 05:54:18 tlipkis Exp $
  */
 
 /*
@@ -270,6 +270,9 @@ public class BaseCachedUrl implements CachedUrl {
       } catch (PluginException e) {
 	IOUtil.safeClose(unfis);
 	throw new RuntimeException(e);
+      } catch (RuntimeException e) {
+	IOUtil.safeClose(unfis);
+	throw e;
       }
     }
     // then look for deprecated FilterRule
