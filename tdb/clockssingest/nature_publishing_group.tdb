@@ -24,6 +24,7 @@
     au < released ; crawling ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
+    au < testing ; exists ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
 
   }
 
@@ -37,6 +38,21 @@
 
     param[journal_id] = ajg
 
+    au < exists ; exists ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
+    au < exists ; exists ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
+    au < exists ; exists ; 2000 ; American Journal of Gastroenterology Volume 95 ; 2000 ; 95 >
+    au < exists ; exists ; 2001 ; American Journal of Gastroenterology Volume 96 ; 2001 ; 96 >
+    au < exists ; exists ; 2002 ; American Journal of Gastroenterology Volume 97 ; 2002 ; 97 >
+    au < exists ; exists ; 2003 ; American Journal of Gastroenterology Volume 98 ; 2003 ; 98 >
+    au < exists ; exists ; 2004 ; American Journal of Gastroenterology Volume 99 ; 2004 ; 99 >
+    au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
+    au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
+    au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
+    au < exists ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
+    au < exists ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
+    au < manifest ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < testing ; exists ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
+
   }
 
   {
@@ -49,6 +65,24 @@
 
     param[journal_id] = ajh
 
+    au < exists ; exists ; 1995 ; American Journal of Hypertension Volume 8 ; 1995 ; 8 >
+    au < exists ; exists ; 1996 ; American Journal of Hypertension Volume 9 ; 1996 ; 9 >
+    au < exists ; exists ; 1997 ; American Journal of Hypertension Volume 10 ; 1997 ; 10 >
+    au < exists ; exists ; 1998 ; American Journal of Hypertension Volume 11 ; 1998 ; 11 >
+    au < exists ; exists ; 1999 ; American Journal of Hypertension Volume 12 ; 1999 ; 12 >
+    au < exists ; exists ; 2000 ; American Journal of Hypertension Volume 13 ; 2000 ; 13 >
+    au < exists ; exists ; 2001 ; American Journal of Hypertension Volume 14 ; 2001 ; 14 >
+    au < exists ; exists ; 2002 ; American Journal of Hypertension Volume 15 ; 2002 ; 15 >
+    au < exists ; exists ; 2003 ; American Journal of Hypertension Volume 16 ; 2003 ; 16 >
+    au < exists ; exists ; 2004 ; American Journal of Hypertension Volume 17 ; 2004 ; 17 >
+    au < exists ; exists ; 2005 ; American Journal of Hypertension Volume 18 ; 2005 ; 18 >
+    au < exists ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 2006 ; 19 >
+    au < exists ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 2007 ; 20 >
+    au < exists ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
+    au < exists ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
+    au < exists ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
+    au < testing ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
+    
   }
 
   {
@@ -67,6 +101,7 @@
     au < released ; crawling ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
+    au < wanted ; exists ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
 
   }
 
@@ -108,6 +143,7 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 46 ; 2010 ; 46 >
+    au < wanted ; exists ; 2011 ; Bone Marrow Transplantation Volume 47 ; 2011 ; 47 >
 
   }
 
@@ -120,6 +156,49 @@
     >
 
     param[journal_id] = bdj
+
+    au < manifest ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
+    au < manifest ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
+    au < manifest ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
+    au < manifest ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
+    au < manifest ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
+    au < manifest ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
+    au < manifest ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
+    au < manifest ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
+    au < manifest ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
+    au < manifest ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
+    au < manifest ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
+    au < manifest ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
+    au < manifest ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
+    au < manifest ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
+    au < manifest ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
+    au < manifest ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
+    au < manifest ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
+    au < manifest ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
+    au < manifest ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
+    au < manifest ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
+    au < manifest ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
+    au < manifest ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
+    au < manifest ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
+    au < manifest ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
+    au < manifest ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
+    au < manifest ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
+    au < manifest ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
+    au < manifest ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
+    au < manifest ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
+    au < manifest ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
+    au < manifest ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
+    au < manifest ; exists ; 2001 ; British Dental Journal Volume 191 ; 2001 ; 191 >
+    au < manifest ; exists ; 2002 ; British Dental Journal Volume 193 ; 2002 ; 193 >
+    au < manifest ; exists ; 2003 ; British Dental Journal Volume 195 ; 2003 ; 195 >
+    au < manifest ; exists ; 2004 ; British Dental Journal Volume 197 ; 2004 ; 197 >
+    au < manifest ; exists ; 2005 ; British Dental Journal Volume 199 ; 2005 ; 199 >
+    au < manifest ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
+    au < manifest ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
+    au < manifest ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
+    au < manifest ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
+    au < manifest ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
+    au < wanted ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
 
   }
 
@@ -161,6 +240,8 @@
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
+    au < wanted ; exists ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
+    au < wanted ; exists ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
 
   }
 
