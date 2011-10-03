@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.72 2011-08-09 03:59:01 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.73 2011-10-03 05:55:10 tlipkis Exp $
  */
 
 /*
@@ -1654,8 +1654,7 @@ public class RemoteApi
 			new Object[] {moreInfoUrl});
       }
       msg.addTextPart(text);
-      msg.addTmpFile(bfile, "LOCKSS_Backup_" + machineName +
-		     paramBackupFileDotExtension);
+      msg.addTmpFile(bfile, getAuConfigBackupFileName());
       msg.addHeader("From", getBackEmailFrom(config, machineName));
       msg.addHeader("To", to);
       msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
@@ -1670,6 +1669,18 @@ public class RemoteApi
 	if (false && bfile != null) bfile.delete();
       } catch (Exception e) {}
     }
+  }
+
+  public String getAuConfigBackupFileName() {
+    String machineName = PlatformUtil.getLocalHostname();
+    if (StringUtil.isNullString(machineName)) {
+      machineName = "Unknown";
+    }
+    return getAuConfigBackupFileName(machineName);
+  }
+
+  public String getAuConfigBackupFileName(String machineName) {
+    return "LOCKSS_Backup_" + machineName + paramBackupFileDotExtension;
   }
 
   private String getBackEmailSender(Configuration config) {

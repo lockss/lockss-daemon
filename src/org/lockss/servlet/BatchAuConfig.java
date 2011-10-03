@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.42 2009-11-09 05:19:43 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.43 2011-10-03 05:55:10 tlipkis Exp $
  */
 
 /*
@@ -551,30 +551,15 @@ public class BatchAuConfig extends LockssServlet {
 
   /** Serve the contents of the local AU config file, as
    * application/binary */
-  private void doSaveAll0() throws IOException {
-    try {
-      InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
-      Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-      PrintWriter wrtr = resp.getWriter();
-      resp.setContentType("application/binary");
-      StreamUtil.copy(rdr, wrtr);
-      rdr.close();
-    } catch (FileNotFoundException e) {
-      errMsg = "No AUs have been configured - nothing to backup";
-      displayMenu();
-    } catch (IOException e) {
-      log.warning("doSaveAll()", e);
-      throw e;
-    }
-  }
-
-  /** Serve the contents of the local AU config file, as
-   * application/binary */
   private void doSaveAll() throws IOException {
     try {
       InputStream in = remoteApi.getAuConfigBackupStream(getMachineName());
       try {
 	resp.setContentType("application/binary");
+	resp.setHeader("Content-disposition",
+		       "attachment; filename=\""
+		       + remoteApi.getAuConfigBackupFileName(getMachineName())
+		       + "\"");
 	OutputStream out = resp.getOutputStream();
 	StreamUtil.copy(in, out);
 	out.close();
