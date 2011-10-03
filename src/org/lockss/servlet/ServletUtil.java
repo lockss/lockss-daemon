@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.70 2011-08-23 16:16:48 easyonthemayo Exp $
+ * $Id: ServletUtil.java,v 1.71 2011-10-03 11:55:02 easyonthemayo Exp $
  */
 
 /*
@@ -33,9 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.*;
 import java.util.*;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -1419,6 +1422,40 @@ public class ServletUtil {
       return "<font color=\"gray\">" + txt + "</font>";
     else
       return txt;
+  }
+
+
+  /** A pattern for finding whitespace in a string. Immutable and thread-safe. */
+  static final Pattern whitespacePattern = Pattern.compile("\\s+");
+
+  /**
+   * Constructs a filename for the file represented by the CachedUrl. The
+   * filename consists of the name of the ArchivalUnit, followed by an
+   * underscore and then the name of the file being downloaded. The filename
+   * should have no spaces, so whitespace is replaced by underscores.
+   * If <tt>withPath</tt> is true, the slash characters in the filename are also
+   * translated to underscores.
+   *
+   * @param au the ArchivalUnit being accessed
+   * @param cu the CachedUrl representing the AU resource
+   * @param withPath whether to include the path component of the URL
+   * @return a filename string with no spaces
+   */
+  static String makeContentFilename(ArchivalUnit au, CachedUrl cu, boolean withPath) {
+    String auName = whitespacePattern.matcher(au.getName()).replaceAll("_");
+    String filename;
+    try {
+      // Get the filename path from the URL, without any query string
+      filename = new URL(cu.getUrl()).getPath();
+      // Remove path component if requested
+      if (!withPath) {
+        int n = filename.lastIndexOf("/");
+        filename = filename.substring(n<0?0:n+1);
+      }
+    } catch (MalformedURLException e) {
+      filename = "unknown";
+    }
+    return auName+"_"+filename;
   }
 
   /** Return a button that invokes javascript when clicked. */

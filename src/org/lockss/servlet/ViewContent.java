@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.20 2011-09-06 23:28:21 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.21 2011-10-03 11:55:02 easyonthemayo Exp $
  */
 
 /*
@@ -32,19 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-import java.text.*;
+import java.util.regex.Pattern;
+
 import org.mortbay.http.*;
 import org.mortbay.html.*;
-import org.mortbay.servlet.MultiPartRequest;
-import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.jetty.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 
@@ -299,6 +295,10 @@ public class ViewContent extends LockssServlet {
     }
     boolean isFilter = getParameter("filter") != null;
     resp.setContentType(ctype);
+    // Set as inline content with name, if PDF or unframed content
+    if (!isFrameType(ctype) || ctype.equals("application/pdf"))
+      resp.setHeader("Content-disposition", "inline; filename="+
+          ServletUtil.makeContentFilename(au, cu, false));
     // if filtering, don't know content length
     if (!isFilter) {
       if (clen <= Integer.MAX_VALUE) {
