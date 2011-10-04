@@ -1,0 +1,120 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.metapress.MetaPressPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+	<string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+	<string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+	<string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.51.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>MetaPress Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;MetaPress Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sopenurl.asp?genre=volume&amp;eissn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%sopenurl\.asp\?genre=volume&amp;eissn=%s&amp;volume=%s$&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%scontent/[a-z0-9]{10,16}/(offerings/|fulltext\.pdf\?page=|referencesMode=Show&amp;print=true|print=true&amp;referencesMode=Show)&quot;, base_url</string>
+      <string>2,&quot;^%scontent/[a-z0-9]{10,16}/.*[?&amp;](mark|p|pi|p_o|sortorder|sw)=&quot;, base_url</string>
+      <string>1,&quot;^%scontent/[a-z0-9]{10,16}/&quot;, base_url</string>
+      <string>1,&quot;^%sexport.mpx\?code=[^&amp;]+&amp;mode=&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.metapress.MetaPressUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.metapress.MetaPressHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.metapress.MetaPressHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$&quot;, base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.metapress.MetaPressArticleIteratorFactory</string>
+  </entry>
+</map>
