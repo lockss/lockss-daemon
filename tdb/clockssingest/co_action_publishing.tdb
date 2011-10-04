@@ -19,7 +19,7 @@
     param[journal_id] = aie
 
     au < released ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
 
   }
     
@@ -35,7 +35,7 @@
     param[journal_id] = blft
 
     au < released ; crawling ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
 
   }
     
@@ -52,7 +52,7 @@
     comment[0] = includes supplements
 
     au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
     
   }
    
@@ -71,7 +71,7 @@
     au < manifest ; exists ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
-    au < manifest ; exists ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
+    au < crawling ; exists ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
 
   } 
     
@@ -90,7 +90,7 @@
     au < manifest ; exists ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
-    au < manifest ; exists ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
+    au < crawling ; exists ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
 
   }
     
@@ -107,7 +107,7 @@
     comment[0] = includes supplements
 
     au < manifest ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -141,7 +141,7 @@
     au < manifest ; exists ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < manifest ; exists ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
     au < released ; crawling ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
-    au < manifest ; exists ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
+    au < crawling ; exists ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
 
   }
 
@@ -161,7 +161,7 @@
     au < manifest ; exists ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
-    au < manifest ; exists ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
+    au < crawling ; exists ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
 
   }
 
@@ -176,7 +176,7 @@
       param[base_url] = http://www.infectionecologyandepidemiology.net/
       param[journal_id] = iee
 
-    au < manifest ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
 
   }
   
@@ -199,7 +199,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < manifest ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
-    au < manifest ; exists ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
+    au < crawling ; exists ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -216,7 +216,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
+    au < crawling ; exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -231,7 +231,7 @@
     param[base_url] = http://www.jchimp.net/
     param[journal_id] = jchimp
 
-    au < manifest ; exists ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -248,7 +248,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
-    au < manifest ; exists ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
+    au < crawling ; exists ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -269,7 +269,7 @@
     au < manifest ; exists ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < manifest ; exists ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
-    au < manifest ; exists ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
+    au < crawling ; exists ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -285,7 +285,7 @@
     param[journal_id] = mcs
 
     au < released ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -315,7 +315,7 @@
     au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
     au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
     au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
-    au < manifest ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
+    au < crawling ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
     
   }
 
@@ -353,7 +353,7 @@
     au < manifest ; exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
     au < manifest ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
     au < manifest ; exists ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
-    au < manifest ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
+    au < crawling ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
 
   }
 
@@ -369,7 +369,7 @@
     param[journal_id] = nano
 
     au < released ; crawling ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -384,7 +384,7 @@
     param[base_url] = http://www.pathobiologyofaging.net/
     param[journal_id] = pba
 
-    au < manifest ; exists ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -429,7 +429,7 @@
     au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
     au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
     au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
-    au < manifest ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+    au < crawling ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
 
 
   }
@@ -490,7 +490,7 @@
       param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
       param[journal_id] = snp
 
-    au < manifest ; exists ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < crawling ; exists ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -507,7 +507,7 @@
       param[journal_id] = vgi
 
     au < manifest ; exists ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
-    au < manifest ; exists ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
+    au < crawling ; exists ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
 
   }
 
