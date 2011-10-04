@@ -45,7 +45,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Accounting History Volume 13 ; 13 ; >
       au < manifest ; exists ; 2009 ; Accounting History Volume 14 ; 14 ; >
       au < released ; crawling ; 2010 ; Accounting History Volume 15 ; 15 ; >
-      au < testing ; exists ; 2011 ; Accounting History Volume 16 ; 16 ; >
+      au < released ; exists ; 2011 ; Accounting History Volume 16 ; 16 ; >
 
     }
 
@@ -127,7 +127,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
       au < manifest ; exists ; 2009 ; Acta Sociologica Volume 52 ; 52 ;  >
       au < released ; crawling ; 2010 ; Acta Sociologica Volume 53 ; 53 ;  >
-      au < testing ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 ;  >
+      au < released ; exists ; 2011 ; Acta Sociologica Volume 54 ; 54 ;  >
 
     }
 
@@ -165,7 +165,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Action Research Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Action Research Volume 7 ; 7 ; >
       au < released ; crawling ; 2010 ; Action Research Volume 8 ; 8 ;  >
-      au < testing ; exists ; 2011 ; Action Research Volume 9 ; 9 ; >
+      au < released ; exists ; 2011 ; Action Research Volume 9 ; 9 ; >
 
     }
 
@@ -206,7 +206,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ;  >
-      au < testing ; exists ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 ; >
+      au < released ; manifest ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 ; >
 
     }
 
@@ -254,7 +254,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
       au < released ; crawling ; 2010 ; Adaptive Behavior Volume 18 ; 18 ;  >
-      au < testing ; exists ; 2011 ; Adaptive Behavior Volume 19 ; 19 ; >
+      au < released ; manifest ; 2011 ; Adaptive Behavior Volume 19 ; 19 ; >
 
     }
 
@@ -326,7 +326,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Administration & Society Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Administration & Society Volume 41 ; 41 ; >
       au < released ; crawling ; 2010 ; Administration & Society Volume 42 ; 42 ;  >
-      au < testing ; exists ; 2011 ; Administration & Society Volume 43 ; 43 ; >
+      au < released ; manifest ; 2011 ; Administration & Society Volume 43 ; 43 ; >
 
     }
 
@@ -492,7 +492,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Advances in Dental Research Volume 22 ; 22 ;  >
-      au < testing ; exists ; 2011 ; Advances in Dental Research Volume 23 ; 23 ; >
+      au < released ; manifest ; 2011 ; Advances in Dental Research Volume 23 ; 23 ; >
 
     }
 
@@ -534,7 +534,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
       au < released ; crawling ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 ;  >
-      au < testing ; exists ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 ; >
+      au < released ; manifest ; 2011 ; Advances in Developing Human Resources Volume 13 ; 13 ; >
 
     }
 
@@ -612,7 +612,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Affilia Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Affilia Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; Affilia Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; Affilia Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; Affilia Volume 26 ; 26 ; >
 
     }
 
@@ -636,7 +636,7 @@
 	    au < exists ; exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 ;  >
 	    au < exists ; exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 ;  >
 	    au < exists ; exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 ;  >
-	    au < testing ; exists ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ;  >
+	    au < released ; manifest ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 ;  >
 	
 	  }
 	
@@ -720,7 +720,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
       au < released ; crawling ; 2010 ; American Behavioral Scientist Volume 54 ; 54 ;  >
-      au < testing ; exists ; 2011 ; American Behavioral Scientist Volume 55 ; 55 ; >
+      au < released ; manifest ; 2011 ; American Behavioral Scientist Volume 55 ; 55 ; >
 
     }
 
@@ -850,7 +850,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
       au < manifest ; exists ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ;  >
       au < released ; crawling ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
 
     }
 
@@ -911,7 +911,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
       au < released ; crawling ; 2010 ; American Journal of Evaluation Volume 31 ; 31 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Evaluation Volume 32 ; 32 ; >
+      au < released ; manifest ; 2011 ; American Journal of Evaluation Volume 32 ; 32 ; >
 
     }
 
@@ -968,7 +968,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
       au < released ; crawling ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Hospice and Palliative Medicine Volume 28 ; 28 ; >
+      au < released ; manifest ; 2011 ; American Journal of Hospice and Palliative Medicine Volume 28 ; 28 ; >
 
     }
 
@@ -1002,7 +1002,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; American Journal of Lifestyle Medicine Volume 4 ; 4 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
+      au < released ; manifest ; 2011 ; American Journal of Lifestyle Medicine Volume 5 ; 5 ; >
 
     }
 
@@ -1057,7 +1057,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Medical Quality Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; American Journal of Medical Quality Volume 26 ; 26 ; >
 
     }
 
@@ -1091,7 +1091,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
       au < released ; crawling ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ;  >
-      au < testing ; exists ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
+      au < released ; manifest ; 2011 ; American Journal of Men's Health Volume 5 ; 5 ; >
 
     }
 
@@ -1185,7 +1185,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; American Politics Research Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; American Politics Research Volume 37 ; 37 ; >
       au < released ; crawling ; 2010 ; American Politics Research Volume 38 ; 38 ;  >
-      au < testing ; exists ; 2011 ; American Politics Research Volume 39 ; 39 ; >
+      au < released ; manifest ; 2011 ; American Politics Research Volume 39 ; 39 ; >
 
     }
 
@@ -1255,7 +1255,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; The American Review of Public Administration Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; The American Review of Public Administration Volume 40 ; 40 ;  >
-      au < testing ; exists ; 2011 ; The American Review of Public Administration Volume 41 ; 41 ; >
+      au < released ; manifest ; 2011 ; The American Review of Public Administration Volume 41 ; 41 ; >
 
     }
 
@@ -1279,7 +1279,7 @@
       au < exists ; exists ; 2008 ; American Sociological Review Volume 73 ; 73 ; >
       au < manifest ; exists ; 2009 ; American Sociological Review Volume 74 ; 74 ; >
       au < manifest ; exists ; 2010 ; American Sociological Review Volume 75 ; 75 ; >
-      au < manifest ; exists ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
+      au < testing ; exists ; 2011 ; American Sociological Review Volume 76 ; 76 ; >
 
     }
 
@@ -1370,7 +1370,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Angiology Volume 59 ; 59 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Angiology Volume 60 ; 60 ; >
       au < released ; crawling ; 2010 ; Angiology Volume 61 ; 61 ;  >
-      au < manifest ; exists ; 2011 ; Angiology Volume 62 ; 62 ; >
+      au < testing ; exists ; 2011 ; Angiology Volume 62 ; 62 ; >
 
     }
 
@@ -1405,7 +1405,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Animation Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Animation Volume 4 ; 4 ; >
       au < released ; crawling ; 2010 ; Animation Volume 5 ; 5 ;  >
-      au < manifest ; exists ; 2011 ; Animation Volume 6 ; 6 ; >
+      au < testing ; exists ; 2011 ; Animation Volume 6 ; 6 ; >
 
     }
 
@@ -2077,10 +2077,10 @@
       au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 ; >
       au < manifest ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 ; >
       au < exists ; exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 ; >
-      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
-      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
-      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
-      au < manifest ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
+      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 ; >
+      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 ; >
+      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 ; >
+      au < testing ; exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 637 ; 637 ; >
 
     }
 
@@ -2120,7 +2120,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Anthropological Theory Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Anthropological Theory Volume 10 ; 10 ;  >
-      au < manifest ; exists ; 2011 ; Anthropological Theory Volume 11 ; 11 ; >
+      au < testing ; exists ; 2011 ; Anthropological Theory Volume 11 ; 11 ; >
 
     }
 
@@ -2184,7 +2184,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ;  >
-      au < manifest ; exists ; 2011 ; Applied Psychological Measurement Volume 35 ; 35 ; >
+      au < testing ; exists ; 2011 ; Applied Psychological Measurement Volume 35 ; 35 ; >
 
     }
 
@@ -2249,7 +2249,7 @@
       au < manifest ; exists ; 2007-2008 ; Armed Forces & Society Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2008-2009 ; Armed Forces & Society Volume 35 ; 35 ; >
       au < released ; crawling ; 2009-2010 ; Armed Forces & Society Volume 36 ; 36 ;  >
-      au < manifest ; exists ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
+      au < testing ; exists ; 2011 ; Armed Forces & Society Volume 37 ; 37 ; >
 
     }
 
@@ -2288,7 +2288,44 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ;  >
-      au < manifest ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; >
+      au < testing ; exists ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 ; >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Asian Journal of Management Cases ;
+      issn = 0972-8201 ;
+      eissn = 0973-0621
+    >
+
+    param[base_url] = http://ajc.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+
+      au < down ; crawling ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ;  >
+      au < down ; crawling ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ;  >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2004 ; Asian Journal of Management Cases Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; Asian Journal of Management Cases Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
+      au < released ; crawling ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ;  >
+      au < testing ; exists ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 ; >
 
     }
 
@@ -2366,7 +2403,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 ; >
       au < released ; crawling ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 ;  >
-      au < manifest ; exists ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 ; >
+      au < testing ; exists ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 ; >
 
     }
 
@@ -2418,44 +2455,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ;  >
-      au < manifest ; exists ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 ; >
-
-    }
-
-  }
-
-  {
-  
-    title <
-      name = Asian Journal of Management Cases ;
-      issn = 0972-8201 ;
-      eissn = 0973-0621
-    >
-
-    param[base_url] = http://ajc.sagepub.com/
-
-    {
-
-      pluginSuffix = ClockssHighWirePlugin
-      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-
-      au < down ; crawling ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ;  >
-      au < down ; crawling ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ;  >
-
-    }
-
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < manifest ; exists ; 2004 ; Asian Journal of Management Cases Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2007 ; Asian Journal of Management Cases Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
-      au < released ; crawling ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ;  >
-      au < manifest ; exists ; 2011 ; Asian Journal of Management Cases Volume 8 ; 8 ; >
+      au < testing ; exists ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 ; >
 
     }
 
@@ -2501,7 +2501,7 @@
       au < manifest ; exists ; 2008 ; Assessment Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Assessment Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; Assessment Volume 17 ; 17 ;  >
-      au < manifest ; exists ; 2011 ; Assessment Volume 18 ; 18 ; >
+      au < testing ; exists ; 2011 ; Assessment Volume 18 ; 18 ; >
 
     }
 
@@ -2569,6 +2569,26 @@
 
   {
 
+   title <
+     name = Australian & New Zealand Journal of Criminology ;
+     issn = 0004-8658 ;
+     eissn = 1837-9273
+   >
+   
+   {
+
+     pluginSuffix = ClockssHighWirePressH20Plugin
+     param[base_url] = http://anj.sagepub.com/
+
+     au < released ; crawling ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 ; >
+     au < testing ; exists ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 ; >
+
+   }
+   
+  }
+
+  {
+
     title <
       name = Australian Journal of Management ;
       issn = 0312-8962 ;
@@ -2585,7 +2605,7 @@
       au < exists ; exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 ; >
       au < exists ; exists ; 2009 ; Australian Journal of Management Volume 34 ; 34 ; >
       au < manifest ; exists ; 2010 ; Australian Journal of Management Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
+      au < testing ; exists ; 2011 ; Australian Journal of Management Volume 36 ; 36 ; >
 
     }
 
@@ -2629,31 +2649,11 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Autism Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Autism Volume 13 ; 13 ;  >
       au < manifest ; exists ; 2010 ; Autism Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2011 ; Autism Volume 15 ; 15 ; >
+      au < testing ; exists ; 2011 ; Autism Volume 15 ; 15 ; >
 
     }
 
   }
-
- {
-
-   title <
-     name = Australian & New Zealand Journal of Criminology ;
-     issn = 0004-8658 ;
-     eissn = 1837-9273
-   >
-   
-   {
-
-     pluginSuffix = ClockssHighWirePressH20Plugin
-     param[base_url] = http://anj.sagepub.com/
-
-     au < released ; crawling ; 2010 ; Australian & New Zealand Journal of Criminology Volume 43 ; 43 ; >
-     au < manifest ; exists ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 ; >
-
-   }
-   
- }
 
   {
   
@@ -2712,7 +2712,7 @@
       au < manifest ; exists ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
       au < released ; crawling ; 2010 ; Behavior Modification Volume 34 ; 34 ;  >
-      au < manifest ; exists ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
+      au < testing ; exists ; 2011 ; Behavior Modification Volume 35 ; 35 ; >
 
     }
 
@@ -2805,7 +2805,7 @@
       au < manifest ; exists ; 2008 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 40 ; 40 ;  >
-      au < manifest ; exists ; 2011 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 41 ; 41 ; >
+      au < testing ; exists ; 2011 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 41 ; 41 ; >
 
     }
 
