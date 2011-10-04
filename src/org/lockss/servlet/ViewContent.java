@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.21 2011-10-03 11:55:02 easyonthemayo Exp $
+ * $Id: ViewContent.java,v 1.22 2011-10-04 14:52:02 easyonthemayo Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public class ViewContent extends LockssServlet {
     // Set as inline content with name, if PDF or unframed content
     if (!isFrameType(ctype) || ctype.equals("application/pdf"))
       resp.setHeader("Content-disposition", "inline; filename="+
-          ServletUtil.makeContentFilename(au, cu, false));
+          ServletUtil.getContentOriginalFilename(cu));
     // if filtering, don't know content length
     if (!isFilter) {
       if (clen <= Integer.MAX_VALUE) {

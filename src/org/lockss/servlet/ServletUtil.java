@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.71 2011-10-03 11:55:02 easyonthemayo Exp $
+ * $Id: ServletUtil.java,v 1.72 2011-10-04 14:52:02 easyonthemayo Exp $
  */
 
 /*
@@ -1456,6 +1456,28 @@ public class ServletUtil {
       filename = "unknown";
     }
     return auName+"_"+filename;
+  }
+
+  /**
+   * Gets the original filename for the file represented by the CachedUrl.
+   * This is the preferred method of getting a filename, as it honours the
+   * original
+   *
+   * @param cu the CachedUrl representing the AU resource
+   * @return the original filename string
+   */
+  static String getContentOriginalFilename(CachedUrl cu) {
+    String filename;
+    try {
+      // Get the filename path from the URL, without any query string
+      filename = new URL(cu.getUrl()).getPath();
+      // Remove path component
+      int n = filename.lastIndexOf("/");
+      filename = filename.substring(n<0?0:n+1);
+    } catch (MalformedURLException e) {
+      filename = "unknown";
+    }
+    return filename;
   }
 
   /** Return a button that invokes javascript when clicked. */
