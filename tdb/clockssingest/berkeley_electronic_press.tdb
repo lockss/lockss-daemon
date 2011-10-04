@@ -109,8 +109,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] =  asjcl
 
-    au < testing ; exists ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
-    au < testing ; exists ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 >
@@ -143,8 +143,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bis
 
-    au < testing ; exists ; 2006 ; Basic Income Studies Volume 1 ; 1 >
-    au < testing ; exists ; 2007 ; Basic Income Studies Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Basic Income Studies Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Basic Income Studies Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Basic Income Studies Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Basic Income Studies Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Basic Income Studies Volume 5 ; 5 >
@@ -177,7 +177,7 @@
     au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
     au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
     au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
-    au < testing ; exists ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
+    au < released ; manifest ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
@@ -233,7 +233,7 @@
     au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
     au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
     au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
-    au < testing ; exists ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
+    au < released ; manifest ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 >
@@ -255,14 +255,14 @@
     param[journal_abbr] = bap
 
     au < testing ; exists ; 1999 ; Business and Politics Volume 1 ; 1 >
-    au < testing ; exists ; 2000 ; Business and Politics Volume 2 ; 2 >
-    au < testing ; exists ; 2001 ; Business and Politics Volume 3 ; 3 >
-    au < testing ; exists ; 2002 ; Business and Politics Volume 4 ; 4 >
-    au < testing ; exists ; 2003 ; Business and Politics Volume 5 ; 5 >
-    au < testing ; exists ; 2004 ; Business and Politics Volume 6 ; 6 >
-    au < testing ; exists ; 2005 ; Business and Politics Volume 7 ; 7 >
-    au < testing ; exists ; 2006 ; Business and Politics Volume 8 ; 8 >
-    au < testing ; exists ; 2007 ; Business and Politics Volume 9 ; 9 >
+    au < released ; manifest ; 2000 ; Business and Politics Volume 2 ; 2 >
+    au < released ; manifest ; 2001 ; Business and Politics Volume 3 ; 3 >
+    au < released ; manifest ; 2002 ; Business and Politics Volume 4 ; 4 >
+    au < released ; manifest ; 2003 ; Business and Politics Volume 5 ; 5 >
+    au < released ; manifest ; 2004 ; Business and Politics Volume 6 ; 6 >
+    au < released ; manifest ; 2005 ; Business and Politics Volume 7 ; 7 >
+    au < released ; manifest ; 2006 ; Business and Politics Volume 8 ; 8 >
+    au < released ; manifest ; 2007 ; Business and Politics Volume 9 ; 9 >
     au < released ; crawling ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < released ; crawling ; 2009 ; Business and Politics Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Business and Politics Volume 12 ; 12 >
@@ -296,8 +296,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cas
 
-    au < testing ; exists ; 2006 ; Capitalism and Society Volume 1 ; 1 >
-    au < testing ; exists ; 2007 ; Capitalism and Society Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Capitalism and Society Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Capitalism and Society Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Capitalism and Society Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Capitalism and Society Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Capitalism and Society Volume 5 ; 5 >
@@ -315,8 +315,8 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cppm
 
-    au < testing ; exists ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 >
-    au < testing ; exists ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 >
+    au < released ; manifest ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 >
     au < released ; crawling ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
     au < released ; crawling ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
@@ -395,9 +395,9 @@
     param[journal_abbr] = ev
 
     au < released ; crawling ; 2004 ; The Economists' Voice Volume 1 ; 1 >
-    au < crawling ; exists ; 2005 ; The Economists' Voice Volume 2 ; 2 >
-    au < crawling ; exists ; 2006 ; The Economists' Voice Volume 3 ; 3 >
-    au < crawling ; exists ; 2007 ; The Economists' Voice Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; The Economists' Voice Volume 2 ; 2 >
+    au < testing ; exists ; 2006 ; The Economists' Voice Volume 3 ; 3 >
+    au < testing ; exists ; 2007 ; The Economists' Voice Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; The Economists' Voice Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; The Economists' Voice Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; The Economists' Voice Volume 7 ; 7 >
@@ -429,11 +429,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = forum
 
-    au < crawling ; exists ; 2002 ; The Forum Volume 1 ; 1 >
-    au < crawling ; exists ; 2004 ; The Forum Volume 2 ; 2 >
-    au < crawling ; exists ; 2005 ; The Forum Volume 3 ; 3 >
-    au < crawling ; exists ; 2006 ; The Forum Volume 4 ; 4 >
-    au < crawling ; exists ; 2007 ; The Forum Volume 5 ; 5 >
+    au < testing ; exists ; 2002 ; The Forum Volume 1 ; 1 >
+    au < testing ; exists ; 2004 ; The Forum Volume 2 ; 2 >
+    au < testing ; exists ; 2005 ; The Forum Volume 3 ; 3 >
+    au < testing ; exists ; 2006 ; The Forum Volume 4 ; 4 >
+    au < testing ; exists ; 2007 ; The Forum Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; The Forum Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; The Forum Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; The Forum Volume 8 ; 8 >
@@ -451,16 +451,16 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = fhep
 
-    au < crawling ; exists ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
-    au < crawling ; exists ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
-    au < crawling ; exists ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 >
-    au < crawling ; exists ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 >
-    au < crawling ; exists ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 >
-    au < crawling ; exists ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 >
-    au < crawling ; exists ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 >
-    au < crawling ; exists ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 >
-    au < crawling ; exists ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 >
-    au < crawling ; exists ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 >
+    au < testing ; exists ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
+    au < testing ; exists ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 >
+    au < testing ; exists ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 >
+    au < testing ; exists ; 2003 ; Forum for Health Economics & Policy Volume 6 ; 6 >
+    au < testing ; exists ; 2004 ; Forum for Health Economics & Policy Volume 7 ; 7 >
+    au < testing ; exists ; 2005 ; Forum for Health Economics & Policy Volume 8 ; 8 >
+    au < testing ; exists ; 2006 ; Forum for Health Economics & Policy Volume 9 ; 9 >
+    au < testing ; exists ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 >
     au < released ; crawling ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
     au < released ; crawling ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
     au < released ; crawling ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
