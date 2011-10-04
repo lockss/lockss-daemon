@@ -19,6 +19,7 @@
     param[journal_id] = aie
 
     au < released ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
 
   }
     
@@ -34,6 +35,7 @@
     param[journal_id] = blft
 
     au < released ; crawling ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 >
 
   }
     
@@ -47,10 +49,34 @@
 
     param[base_url] = http://www.diabeticfootandankle.net/
     param[journal_id] = dfa
+    comment[0] = includes supplements
 
     au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 1 ; 2010 >
-
+    au < manifest ; exists ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 >
+    
   }
+   
+   
+   
+ 
+  {
+
+    title <
+      name = Emerging Health Threats Journal ;
+      eissn = 1752-8550 ;
+      issnl = 1752-8550
+    >
+
+    param[base_url] = http://www.eht-journal.net/
+    param[journal_id] = ehtj
+    comment[0] = vol. 4 includes Supplements 1
+
+    au < manifest ; exists ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 >
+    au < manifest ; exists ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 >
+
+  } 
     
   {
 
@@ -66,6 +92,7 @@
     au < manifest ; exists ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Ethics & Global Politics Volume 2 ; 2 ; 2009 >
     au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Ethics & Global Politics Volume 4 ; 4 ; 2011 >
 
   }
     
@@ -77,18 +104,24 @@
       issnl = 2000-8066
     >
 
+    param[base_url] = http://www.eurojnlofpsychotraumatol.net/
+    param[journal_id] = ejpt
+    comment[0] = includes supplements
+
+    au < manifest ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+
   }
 
   {
     title <
-      name = European Journal of Psychotraumatology Supplement ;
+      name = European Journal of Psychotraumatology [Supplements] ;
       issn = 2000-8198 ;
       eissn = 2000-818X ;
       issnl = 2000-8198
     >
 
-      param[base_url] = http://www.polarresearch.net/
-      param[journal_id] = ejpt
+   comment[0] = These are included with the main title EJPT.
 
   }
 
@@ -97,21 +130,19 @@
     title <
       name = Food & Nutrition Research ;
       issn = 1654-6628 ;
-      eissn = 1654-661X
+      eissn = 1654-661X ;
+      issnl = 1654-661X 
     >
 
+    comment[continues] = 1748-2976
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
+    comment[issn] = for supplements
 
-    au < manifest ; exists ; 2002 ; Food & Nutrition Research Volume 46 ; 46 ; 2002 >
-    au < manifest ; exists ; 2003 ; Food & Nutrition Research Volume 47 ; 47 ; 2003 >
-    au < manifest ; exists ; 2004 ; Food & Nutrition Research Volume 48 ; 48 ; 2004 >
-    au < manifest ; exists ; 2005 ; Food & Nutrition Research Volume 49 ; 49 ; 2005 >
-    au < manifest ; exists ; 2006 ; Food & Nutrition Research Volume 50 ; 50 ; 2006 >
-    au < manifest ; exists ; 2007 ; Food & Nutrition Research Volume 51 ; 51 ; 2007 >
     au < manifest ; exists ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
-    au < manifest ; exists ; 2009 ; Food & Nutrition Research Volume 53 ; 53 ; 2009 >
-    au < released ; crawling ; 2010 ; Food & Nutrition Research Volume 54 ; 54 ; 2010 >
+    au < manifest ; exists ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >
+    au < released ; crawling ; 2010 ; Food & Nutrition Research [including Supplements] Volume 54 ; 54 ; 2010 >
+    au < manifest ; exists ; 2011 ; Food & Nutrition Research [including Supplements] Volume 55 ; 55 ; 2011 >
 
   }
 
@@ -126,10 +157,12 @@
 
     param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = gha
-
+    comment[issn] = for supplements
+    
     au < manifest ; exists ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Global Health Action Volume 2 ; 2 ; 2009 >
-    au < released ; crawling ; 2010 ; Global Health Action Volume 3 ; 3 ; 2010 >
+    au < manifest ; exists ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 >
+    au < released ; crawling ; 2010 ; Global Health Action [including Supplements] Volume 3 ; 3 ; 2010 >
+    au < manifest ; exists ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 >
 
   }
 
@@ -143,35 +176,30 @@
       param[base_url] = http://www.infectionecologyandepidemiology.net/
       param[journal_id] = iee
 
+    au < manifest ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+
   }
   
-  {
-    title <
-      name = Infection Ecology & Epidemiology ;
-      eissn = 2000-8686
-    >
-
-      param[base_url] = http://www.infectionecologyandepidemiology.net/
-      param[journal_id] = iee
-
-  }
 
   {
 
     title <
       name = International Journal of Qualitative Studies on Health and Well-being ;
       issn = 1748-2623 ;
-      eissn = 1748-2631
+      eissn = 1748-2631 ;
+      issnl = 1748-2631
     >
 
     param[base_url] = http://www.ijqhw.net/
     param[journal_id] = qhw
+    comment[issn] = volumes 1-4, 2006-2009
 
     au < manifest ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 >
     au < manifest ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < manifest ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
+    au < manifest ; exists ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -187,6 +215,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -200,6 +229,8 @@
 
     param[base_url] = http://www.jchimp.net/
     param[journal_id] = jchimp
+
+    au < manifest ; exists ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -216,6 +247,7 @@
 
     au < manifest ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; 2009 >
     au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2 ; 2010 >
+    au < manifest ; exists ; 2011 ; Journal of Oral Microbiology Volume 3 ; 3 ; 2011 >
 
   }
 
@@ -224,7 +256,8 @@
     title <
       name = Libyan Journal of Medicine ;
       issn = 1993-2820 ;
-      eissn = 1819-6357
+      eissn = 1819-6357 ;
+      issnl = 1993-2820 
     >
 
     param[base_url] = http://www.libyanjournalofmedicine.net/
@@ -234,7 +267,8 @@
     au < manifest ; exists ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2 ; 2007 >
     au < manifest ; exists ; 2008 ; Libyan Journal of Medicine Volume 3 ; 3 ; 2008 >
     au < manifest ; exists ; 2009 ; Libyan Journal of Medicine Volume 4 ; 4 ; 2009 >
-    au < released ; crawling ; 2010 ; Libyan Journal of Medicine Volume 5 ; 5 ; 2010 >
+    au < released ; crawling ; 2010 ; Libyan Journal of Medicine [including Supplements] Volume 5 ; 5 ; 2010 >
+    au < manifest ; exists ; 2011 ; Libyan Journal of Medicine [including Supplements] Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -242,13 +276,14 @@
 
     title <
       name = Mechanical Circulatory Support ;
-      issn = 2000-6993
+      eissn = 2000-6993
     >
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
 
     au < released ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -277,6 +312,7 @@
     au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 13 ; 2008 >
     au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 14 ; 2009 >
     au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 >
+    au < manifest ; exists ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 >
     
   }
 
@@ -291,6 +327,30 @@
 
     param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = mehd
+    comment[issn] = volumes 1-21
+
+    au < manifest ; exists ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 >
+    au < manifest ; exists ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 >
+    au < manifest ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 >
+    au < manifest ; exists ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 >
+    au < manifest ; exists ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 >
+    au < manifest ; exists ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 >
+    au < manifest ; exists ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 >
+    au < manifest ; exists ; 1995 ; Microbial Ecology in Health and Disease Volume 8 ; 8 ; 1995 >
+    au < manifest ; exists ; 1996 ; Microbial Ecology in Health and Disease Volume 9 ; 9 ; 1996 >
+    au < manifest ; exists ; 1998 ; Microbial Ecology in Health and Disease Volume 10 ; 10 ; 1998 >
+    au < manifest ; exists ; 1999 ; Microbial Ecology in Health and Disease Volume 11 ; 11 ; 1999 >
+    au < manifest ; exists ; 2000 ; Microbial Ecology in Health and Disease Volume 12 ; 12 ; 2000 >
+    au < manifest ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 >
+    au < manifest ; exists ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 >
+    au < manifest ; exists ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 >
+    au < manifest ; exists ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 >
+    au < manifest ; exists ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 >
+    au < manifest ; exists ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 >
+    au < manifest ; exists ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 >
+    au < manifest ; exists ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 >
+    au < manifest ; exists ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 >
+    au < manifest ; exists ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 >
 
   }
 
@@ -304,30 +364,8 @@
     param[base_url] = http://www.nano-reviews.net/
     param[journal_id] = nano
 
-    au < released ; crawling ; 2010 ; Nano Reviews Volume 1 ; 1 ; 2010 >
-
-  }
-
-  {
-
-    title <
-      name = Polar Research ;
-      issn = 0800-0395 ;
-      eissn = 1751-8369 ;
-      issnl = 0800-0395
-    >
-
-  }
-
-  {
-    title <
-      name = Socioaffective Neuroscience & Psychology ;
-      eissn = 2000-9011 ;
-      issnl = 2000-9011
-    >
-
-      param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
-      param[journal_id] = snp
+    au < released ; crawling ; 2010 ; Nano Reviews [including Supplements] Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Nano Reviews [including Supplements] Volume 2 ; 2 ; 2011 >
 
   }
 
@@ -341,29 +379,7 @@
     param[base_url] = http://www.pathobiologyofaging.net/
     param[journal_id] = pba
 
-
-  }
-
-  {
-    title <
-      name = Vulnerable Groups & Inclusion ;
-      eissn = 2000-8023 ;
-      issnl = 2000-8023
-    >
-
-      param[base_url] = http://www.vulnerablegroupsandinclusion.net/
-      param[journal_id] = vgi
-
-  }
-  
-   {
-    title <
-      name = Nordic Journal of ChildLit Aesthetics ;
-      eissn = 2000-7493
-    >
-
-      param[base_url] = http://www.childlitaesthetics.net/
-      param[journal_id] = blft
+    au < manifest ; exists ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; 2011 >
 
   }
 
@@ -372,21 +388,106 @@
     title <
       name = Polar Research ;
       issn = 0800-0395 ;
-      eissn = 1751-8369
+      eissn = 1751-8369 ;
+      issnl = 0800-0395
     >
+
+    param[base_url] = http://www.polarresearch.net
+    param[journal_id] = polar
+
+    au < manifest ; exists ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
+    au < manifest ; exists ; 1983 ; Polar Research Volume 1 ; 1 ; 1983 >
+    au < manifest ; exists ; 1984 ; Polar Research Volume 2 ; 2 ; 1984 >
+    au < manifest ; exists ; 1985 ; Polar Research Volume 3 ; 3 ; 1985 >
+    au < manifest ; exists ; 1986 ; Polar Research Volume 4 ; 4 ; 1986 >
+    au < manifest ; exists ; 1987 ; Polar Research Volume 5 ; 5 ; 1987 >
+    au < manifest ; exists ; 1988 ; Polar Research Volume 6 ; 6 ; 1988 >
+    au < manifest ; exists ; 1989 ; Polar Research Volume 7 ; 7 ; 1989 >
+    au < manifest ; exists ; 1990 ; Polar Research Volume 8 ; 8 ; 1990 >
+    au < manifest ; exists ; 1991 ; Polar Research Volumes 9-10 ; 9-10 ; 1991 >
+    au < manifest ; exists ; 1992 ; Polar Research Volume 11 ; 11 ; 1992 >
+    au < manifest ; exists ; 1993 ; Polar Research Volume 12 ; 12 ; 1993 >
+    au < manifest ; exists ; 1994 ; Polar Research Volume 13 ; 13 ; 1994 >
+    au < manifest ; exists ; 1995 ; Polar Research Volume 14 ; 14 ; 1995 >
+    au < manifest ; exists ; 1996 ; Polar Research Volume 15 ; 15 ; 1996 >
+    au < manifest ; exists ; 1997 ; Polar Research Volume 16 ; 16 ; 1997 >
+    au < manifest ; exists ; 1998 ; Polar Research Volume 17 ; 17 ; 1998 >
+    au < manifest ; exists ; 1999 ; Polar Research Volume 18 ; 18 ; 1999 >
+    au < manifest ; exists ; 2000 ; Polar Research Volume 19 ; 19 ; 2000 >
+    au < manifest ; exists ; 2001 ; Polar Research Volume 20 ; 20 ; 2001 >
+    au < manifest ; exists ; 2002 ; Polar Research Volume 21 ; 21 ; 2002 >
+    au < manifest ; exists ; 2003 ; Polar Research Volume 22 ; 22 ; 2003 >
+    au < manifest ; exists ; 2004 ; Polar Research Volume 23 ; 23 ; 2004 >
+    au < manifest ; exists ; 2005 ; Polar Research Volume 24 ; 24 ; 2005 >
+    au < manifest ; exists ; 2006 ; Polar Research Volume 25 ; 25 ; 2006 >
+    au < manifest ; exists ; 2007 ; Polar Research Volume 26 ; 26 ; 2007 >
+    au < manifest ; exists ; 2008 ; Polar Research Volume 27 ; 27 ; 2008 >
+    au < manifest ; exists ; 2009 ; Polar Research Volume 28 ; 28 ; 2009 >
+    au < manifest ; exists ; 2010 ; Polar Research Volume 29 ; 29 ; 2010 >
+    au < manifest ; exists ; 2011 ; Polar Research [including Supplements] Volume 30 ; 30 ; 2011 >
+
+
+  }
+
+  {
+
+    title <
+      name = Scandinavian Journal of Food and Nutrition ;
+      issn = 1748-2976 ;
+      eissn = 1748-2984 ;
+      issnl = 1748-2976 
+    >
+
+    comment[continues] = 1102-6480
+    comment[continued_by] = 1654-661X
+    param[base_url] = http://www.foodandnutritionresearch.net/
+    param[journal_id] = fnr
+
+    au < manifest ; exists ; 2000 ; Scandinavian Journal of Food and Nutrition Volume 50 ; 50 ; 2006 >
+    au < manifest ; exists ; 2001 ; Scandinavian Journal of Food and Nutrition Volume 51 ; 51 ; 2007 >
+
+  }
+
+  {
+
+    title <
+      name = Scandinavian Journal of Nutrition ;
+      issn = 1102-6480 ;
+      eissn = 1651-2359 ;
+      issnl = 1102-6480 
+    >
+
+    comment[continued_by] = 1748-2976
+    param[base_url] = http://www.foodandnutritionresearch.net/
+    param[journal_id] = fnr
+
+    au < manifest ; exists ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 >
+    au < manifest ; exists ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 >
+    au < manifest ; exists ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 >
+    au < manifest ; exists ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 >
+    au < manifest ; exists ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 >
+    au < manifest ; exists ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 >
+    au < manifest ; exists ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 >
+    au < manifest ; exists ; 2003 ; Scandinavian Journal of Nutrition Volume 47 ; 47 ; 2003 >
+    au < manifest ; exists ; 2004 ; Scandinavian Journal of Nutrition Volume 48 ; 48 ; 2004 >
+    au < manifest ; exists ; 2005 ; Scandinavian Journal of Nutrition Volume 49 ; 49 ; 2005 >
 
   }
 
   {
     title <
       name = Socioaffective Neuroscience & Psychology ;
-      eissn = 2000-9011
+      eissn = 2000-9011 ;
+      issnl = 2000-9011
     >
 
       param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
       param[journal_id] = snp
 
+    au < manifest ; exists ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; 2011 >
+
   }
+
 
   {
     title <
@@ -396,6 +497,9 @@
 
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
       param[journal_id] = vgi
+
+    au < manifest ; exists ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+    au < manifest ; exists ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
 
   }
 
