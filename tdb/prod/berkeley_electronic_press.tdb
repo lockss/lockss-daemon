@@ -722,9 +722,9 @@
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 9 ; 9 ; 1999 >
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 ; 2000 >
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 ; 2001 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 ; 2002 >
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; 2003 >    
-    au < manifest ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; 2004 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 ; 2002 >
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 ; 2003 >    
+    au < ready ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 ; 2004 >
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 ; 2009 >    
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 ; 2010 >
     au < ready ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 ; 2011 >
@@ -1292,12 +1292,12 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rne
 
-    au < manifest ; Review of Network Economics Volume 1 ; 1 ; 2002 >
-    au < manifest ; Review of Network Economics Volume 2 ; 2 ; 2003 >
-    au < manifest ; Review of Network Economics Volume 3 ; 3 ; 2004 >
-    au < manifest ; Review of Network Economics Volume 4 ; 4 ; 2005 >
-    au < manifest ; Review of Network Economics Volume 5 ; 5 ; 2006 >
-    au < manifest ; Review of Network Economics Volume 6 ; 6 ; 2007 >
+    au < ready ; Review of Network Economics Volume 1 ; 1 ; 2002 >
+    au < ready ; Review of Network Economics Volume 2 ; 2 ; 2003 >
+    au < ready ; Review of Network Economics Volume 3 ; 3 ; 2004 >
+    au < ready ; Review of Network Economics Volume 4 ; 4 ; 2005 >
+    au < ready ; Review of Network Economics Volume 5 ; 5 ; 2006 >
+    au < ready ; Review of Network Economics Volume 6 ; 6 ; 2007 >
     au < ready ; Review of Network Economics Volume 7 ; 7 ; 2008 >
     au < ready ; Review of Network Economics Volume 8 ; 8 ; 2009 >
     au < ready ; Review of Network Economics Volume 9 ; 9 ; 2010 >
@@ -1317,14 +1317,14 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rhodescook
 
-    au < manifest ; The Rhodes Cook Letter Volume 1 ; 1 ; 2000 >
-    au < manifest ; The Rhodes Cook Letter Volume 2 ; 2 ; 2001 >
-    au < manifest ; The Rhodes Cook Letter Volume 3 ; 3 ; 2002 >
-    au < manifest ; The Rhodes Cook Letter Volume 4 ; 4 ; 2003 >
-    au < manifest ; The Rhodes Cook Letter Volume 5 ; 5 ; 2004 >
-    au < manifest ; The Rhodes Cook Letter Volume 6 ; 6 ; 2005 >
-    au < manifest ; The Rhodes Cook Letter Volume 7 ; 7 ; 2006 >
-    au < manifest ; The Rhodes Cook Letter Volume 8 ; 8 ; 2007 >
+    au < ready ; The Rhodes Cook Letter Volume 1 ; 1 ; 2000 >
+    au < ready ; The Rhodes Cook Letter Volume 2 ; 2 ; 2001 >
+    au < ready ; The Rhodes Cook Letter Volume 3 ; 3 ; 2002 >
+    au < ready ; The Rhodes Cook Letter Volume 4 ; 4 ; 2003 >
+    au < ready ; The Rhodes Cook Letter Volume 5 ; 5 ; 2004 >
+    au < ready ; The Rhodes Cook Letter Volume 6 ; 6 ; 2005 >
+    au < ready ; The Rhodes Cook Letter Volume 7 ; 7 ; 2006 >
+    au < ready ; The Rhodes Cook Letter Volume 8 ; 8 ; 2007 >
     au < ready ; The Rhodes Cook Letter Volume 9 ; 9 ; 2008 >
     au < ready ; The Rhodes Cook Letter Volume 10 ; 10 ; 2009 >
     au < ready ; The Rhodes Cook Letter Volume 11 ; 11 ; 2010 >
