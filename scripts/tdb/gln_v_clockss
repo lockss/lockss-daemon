@@ -1,0 +1,99 @@
+#!/bin/bash
+#
+# Script to compare lockss and clockss.
+
+echo "-----------------------------"
+echo "-----------------------------"
+for file in \
+  american_academy_of_pediatrics.tdb \
+  american_academy_of_psychiatry_and_the_law.tdb \
+  american_physiological_society.tdb \
+  american_society_for_pharmacology_and_experimental_therapeutics.tdb \
+  berkeley_electronic_press.tdb \
+  biomed_central.tdb \
+  bloomsbury_qatar_foundation_journals.tdb \
+  british_institute_of_radiology.tdb \
+  co_action_publishing.tdb \
+  company_of_biologists.tdb \
+  edinburgh_university_press.tdb \
+  european_respiratory_society.tdb \
+  geological_society_of_america.tdb \
+  international_union_of_crystallography.tdb \
+  liverpool_university_press.tdb \
+  maney_publishing.tdb \
+  medknow_publications.tdb \
+  national_academy_of_sciences.tdb \
+  oxford_university_press.tdb \
+  pennsylvania_state_university_press.tdb \
+  pion.tdb \
+  rockefeller_university_press.tdb \
+  royal_society_of_chemistry.tdb \
+  royal_society_publishing.tdb \
+  sage_publications.tdb \
+  society_for_the_study_of_reproduction.tdb \
+  springer_science_business_media.tdb \
+  taylor_and_francis.tdb \
+  university_of_british_columbia.tdb
+
+  
+do
+echo "-----------------------------"
+echo $file
+[ -f ../../tdb/prod/$file ] && exists_gln=1 || exists_gln=0
+[ -f ../../tdb/clockssingest/$file ] && exists_cks=1 || exists_cks=0
+if [[ $exists_gln == 0 ]]
+then
+  echo "GLN file does not exist"
+fi
+if [[ $exists_cks == 0 ]]
+then
+  echo "CLOCKSS file does not exist"
+fi
+if [[ $exists_cks == 1  &&  $exists_gln == 1 ]]
+then
+  ./tdbout -j -i ../../tdb/prod/$file | sort | uniq > /tmp/glnt.txt
+  ./tdbout -j -i ../../tdb/clockssingest/$file | sort | uniq > /tmp/clocksst.txt
+  rm /tmp/diff.txt
+  if ! diff /tmp/glnt.txt /tmp/clocksst.txt > /tmp/diff.txt
+    #echo Diff Lines: $diff_lines
+  then 
+    echo "Title differences: GLN v CLOCKSSingest"
+    linenum=`cat /tmp/diff.txt | grep "<" | wc -l`
+    echo "*** GLN Titles -- $linenum ***"
+    cat /tmp/diff.txt | grep "<"
+    #cat /tmp/diff.txt | grep "<" | head -n8
+    #linenum=`cat /tmp/diff.txt | grep "<" | wc -l`
+    #echo "First 8 out of $linenum" 
+    linenum=`cat /tmp/diff.txt | grep ">" | wc -l`
+    echo "*** CLOCKSS Titles -- $linenum ***"
+    cat /tmp/diff.txt | grep ">"
+    #cat /tmp/diff.txt | grep ">" | head -n8
+    #linenum=`cat /tmp/diff.txt | grep ">" | wc -l`
+    #echo "First 8 out of $linenum"
+    if [[ $file == "sage_publications.tdb" ]]
+    then
+      echo "!ignore SAGE Publications,Graft: Organ and Cell Transplantation,1522-1628,"
+    fi
+  else
+    echo "No title differences"
+    ./tdbout -c auid,title -i ../../tdb/prod/$file | grep -v "projmuse" | sed -e 's/^[^&]*&//' | sort | uniq > /tmp/glnt.txt
+    ./tdbout -c auid,title -i ../../tdb/clockssingest/$file | sed -e 's/^[^&]*&//' | sort | uniq > /tmp/clocksst.txt
+    if ! diff /tmp/glnt.txt /tmp/clocksst.txt > /tmp/diff.txt
+    then
+      echo "AU differences: GLN v CLOCKSSingest"
+      #cat /tmp/diff.txt
+      echo "***GLN AUs***"
+      cat /tmp/diff.txt | grep "<" | head -n8
+      linenum1=`cat /tmp/diff.txt | grep "<" | wc -l`
+      echo "First 8 out of $linenum1" 
+      echo "***CLOCKSS AUs***"
+      cat /tmp/diff.txt | grep ">" | head -n8
+      linenum2=`cat /tmp/diff.txt | grep ">" | wc -l`
+      echo "First 8 out of $linenum2"
+    else
+      echo "No AU differences"
+    fi
+  fi
+fi
+done
+exit 0
