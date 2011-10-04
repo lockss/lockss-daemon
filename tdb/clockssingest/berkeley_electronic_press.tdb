@@ -721,8 +721,8 @@
     au < released ; manifest ; 2000 ; Journal des Economistes et des Etudes Humaines Volume 10 ; 10 >
     au < released ; manifest ; 2001 ; Journal des Economistes et des Etudes Humaines Volume 11 ; 11 >
     au < testing ; exists ; 2002 ; Journal des Economistes et des Etudes Humaines Volume 12 ; 12 >
-    au < testing ; exists ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 >    
-    au < testing ; exists ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
+    au < released ; manifest ; 2003 ; Journal des Economistes et des Etudes Humaines Volume 13 ; 13 >    
+    au < released ; manifest ; 2004 ; Journal des Economistes et des Etudes Humaines Volume 14 ; 14 >
     au < released ; manifest ; 2009 ; Journal des Economistes et des Etudes Humaines Volume 15 ; 15 >    
     au < released ; manifest ; 2010 ; Journal des Economistes et des Etudes Humaines Volume 16 ; 16 >
     au < released ; manifest ; 2011 ; Journal des Economistes et des Etudes Humaines Volume 17 ; 17 >
@@ -1308,11 +1308,11 @@
     param[journal_abbr] = rne
 
     au < testing ; exists ; 2002 ; Review of Network Economics Volume 1 ; 1 >
-    au < testing ; exists ; 2003 ; Review of Network Economics Volume 2 ; 2 >
-    au < testing ; exists ; 2004 ; Review of Network Economics Volume 3 ; 3 >
-    au < testing ; exists ; 2005 ; Review of Network Economics Volume 4 ; 4 >
+    au < released ; manifest ; 2003 ; Review of Network Economics Volume 2 ; 2 >
+    au < released ; manifest ; 2004 ; Review of Network Economics Volume 3 ; 3 >
+    au < released ; manifest ; 2005 ; Review of Network Economics Volume 4 ; 4 >
     au < testing ; exists ; 2006 ; Review of Network Economics Volume 5 ; 5 >
-    au < testing ; exists ; 2007 ; Review of Network Economics Volume 6 ; 6 >
+    au < released ; manifest ; 2007 ; Review of Network Economics Volume 6 ; 6 >
     au < released ; manifest ; 2008 ; Review of Network Economics Volume 7 ; 7 >
     au < released ; manifest ; 2009 ; Review of Network Economics Volume 8 ; 8 >
     au < released ; manifest ; 2010 ; Review of Network Economics Volume 9 ; 9 >
@@ -1332,14 +1332,14 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rhodescook
 
-    au < testing ; exists ; 2000 ; The Rhodes Cook Letter Volume 1 ; 1 >
-    au < testing ; exists ; 2001 ; The Rhodes Cook Letter Volume 2 ; 2 >
-    au < testing ; exists ; 2002 ; The Rhodes Cook Letter Volume 3 ; 3 >
-    au < testing ; exists ; 2003 ; The Rhodes Cook Letter Volume 4 ; 4 >
-    au < testing ; exists ; 2004 ; The Rhodes Cook Letter Volume 5 ; 5 >
-    au < testing ; exists ; 2005 ; The Rhodes Cook Letter Volume 6 ; 6 >
-    au < testing ; exists ; 2006 ; The Rhodes Cook Letter Volume 7 ; 7 >
-    au < testing ; exists ; 2007 ; The Rhodes Cook Letter Volume 8 ; 8 >
+    au < released ; manifest ; 2000 ; The Rhodes Cook Letter Volume 1 ; 1 >
+    au < released ; manifest ; 2001 ; The Rhodes Cook Letter Volume 2 ; 2 >
+    au < released ; manifest ; 2002 ; The Rhodes Cook Letter Volume 3 ; 3 >
+    au < released ; manifest ; 2003 ; The Rhodes Cook Letter Volume 4 ; 4 >
+    au < released ; manifest ; 2004 ; The Rhodes Cook Letter Volume 5 ; 5 >
+    au < released ; manifest ; 2005 ; The Rhodes Cook Letter Volume 6 ; 6 >
+    au < released ; manifest ; 2006 ; The Rhodes Cook Letter Volume 7 ; 7 >
+    au < released ; manifest ; 2007 ; The Rhodes Cook Letter Volume 8 ; 8 >
     au < released ; manifest ; 2008 ; The Rhodes Cook Letter Volume 9 ; 9 >
     au < released ; manifest ; 2009 ; The Rhodes Cook Letter Volume 10 ; 10 >
     au < released ; manifest ; 2010 ; The Rhodes Cook Letter Volume 11 ; 11 >
