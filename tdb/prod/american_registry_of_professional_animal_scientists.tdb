@@ -34,5 +34,110 @@
     au < manifest ; 2011 ; The Professional Animal Scientist Volume 27 ; 27 >
 
   }
+  
+  {
+
+    title <
+      name = Journal of Animal Science ;
+      issn = 0021-8812 ;
+      eissn = 1525-3163 ;
+      issnl = 0021-8812
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://jas.fass.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 1942 ; Journal of Animal Science Volume 1 ; 1 >
+    au < manifest ; 1943 ; Journal of Animal Science Volume 2 ; 2 >
+    au < manifest ; 1944 ; Journal of Animal Science Volume 3 ; 3 >
+    au < manifest ; 1945 ; Journal of Animal Science Volume 4 ; 4 >
+    au < manifest ; 1946 ; Journal of Animal Science Volume 5 ; 5 >
+    au < manifest ; 1947 ; Journal of Animal Science Volume 6 ; 6 >
+    au < manifest ; 1948 ; Journal of Animal Science Volume 7 ; 7 >
+    au < manifest ; 1949 ; Journal of Animal Science Volume 8 ; 8 >
+    au < manifest ; 1950 ; Journal of Animal Science Volume 9 ; 9 >
+    au < manifest ; 1951 ; Journal of Animal Science Volume 10 ; 10 >
+    au < manifest ; 1952 ; Journal of Animal Science Volume 11 ; 11 >
+    au < manifest ; 1953 ; Journal of Animal Science Volume 12 ; 12 >
+    au < manifest ; 1954 ; Journal of Animal Science Volume 13 ; 13 >
+    au < manifest ; 1955 ; Journal of Animal Science Volume 14 ; 14 >
+    au < manifest ; 1956 ; Journal of Animal Science Volume 15 ; 15 >
+    au < manifest ; 1957 ; Journal of Animal Science Volume 16 ; 16 >
+    au < manifest ; 1958 ; Journal of Animal Science Volume 17 ; 17 >
+    au < manifest ; 1959 ; Journal of Animal Science Volume 18 ; 18 >
+    au < manifest ; 1960 ; Journal of Animal Science Volume 19 ; 19 >
+    au < manifest ; 1961 ; Journal of Animal Science Volume 20 ; 20 >
+    au < manifest ; 1962 ; Journal of Animal Science Volume 21 ; 21 >
+    au < manifest ; 1963 ; Journal of Animal Science Volume 22 ; 22 >
+    au < manifest ; 1964 ; Journal of Animal Science Volume 23 ; 23 >
+    au < manifest ; 1965 ; Journal of Animal Science Volume 24 ; 24 >
+    au < manifest ; 1966 ; Journal of Animal Science Volume 25 ; 25 >
+    au < manifest ; 1967 ; Journal of Animal Science Volume 26 ; 26 >
+    au < manifest ; 1968 ; Journal of Animal Science Volume 27 ; 27 >
+    au < manifest ; 1969 ; Journal of Animal Science Volume 28 ; 28 >
+    au < manifest ; 1969 ; Journal of Animal Science Volume 29 ; 29 >
+    au < manifest ; 1970 ; Journal of Animal Science Volume 30 ; 30 >
+    au < manifest ; 1970 ; Journal of Animal Science Volume 31 ; 31 >
+    au < manifest ; 1971 ; Journal of Animal Science Volume 32 ; 32 >
+    au < manifest ; 1971 ; Journal of Animal Science Volume 33 ; 33 >
+    au < manifest ; 1972 ; Journal of Animal Science Volume 34 ; 34 >
+    au < manifest ; 1972 ; Journal of Animal Science Volume 35 ; 35 >
+    au < manifest ; 1973 ; Journal of Animal Science Volume 36 ; 36 >
+    au < manifest ; 1973 ; Journal of Animal Science Volume 37 ; 37 >
+    au < manifest ; 1974 ; Journal of Animal Science Volume 38 ; 38 >
+    au < manifest ; 1974 ; Journal of Animal Science Volume 39 ; 39 >
+    au < manifest ; 1975 ; Journal of Animal Science Volume 40 ; 40 >
+    au < manifest ; 1975 ; Journal of Animal Science Volume 41 ; 41 >
+    au < manifest ; 1976 ; Journal of Animal Science Volume 42 ; 42 >
+    au < manifest ; 1976 ; Journal of Animal Science Volume 43 ; 43 >
+    au < manifest ; 1977 ; Journal of Animal Science Volume 44 ; 44 >
+    au < manifest ; 1977 ; Journal of Animal Science Volume 45 ; 45 >
+    au < manifest ; 1978 ; Journal of Animal Science Volume 46 ; 46 >
+    au < manifest ; 1978 ; Journal of Animal Science Volume 47 ; 47 >
+    au < manifest ; 1979 ; Journal of Animal Science Volume 48 ; 48 >
+    au < manifest ; 1979 ; Journal of Animal Science Volume 49 ; 49 >
+    au < manifest ; 1980 ; Journal of Animal Science Volume 50 ; 50 >
+    au < manifest ; 1980 ; Journal of Animal Science Volume 51 ; 51 >
+    au < manifest ; 1981 ; Journal of Animal Science Volume 52 ; 52 >
+    au < manifest ; 1981 ; Journal of Animal Science Volume 53 ; 53 >
+    au < manifest ; 1982 ; Journal of Animal Science Volume 54 ; 54 >
+    au < manifest ; 1982 ; Journal of Animal Science Volume 55 ; 55 >
+    au < manifest ; 1983 ; Journal of Animal Science Volume 56 ; 56 >
+    au < manifest ; 1983 ; Journal of Animal Science Volume 57 ; 57 >
+    au < manifest ; 1984 ; Journal of Animal Science Volume 58 ; 58 >
+    au < manifest ; 1984 ; Journal of Animal Science Volume 59 ; 59 >
+    au < manifest ; 1985 ; Journal of Animal Science Volume 60 ; 60 >
+    au < manifest ; 1985 ; Journal of Animal Science Volume 61 ; 61 >
+    au < manifest ; 1986 ; Journal of Animal Science Volume 62 ; 62 >
+    au < manifest ; 1986 ; Journal of Animal Science Volume 63 ; 63 >
+    au < manifest ; 1987 ; Journal of Animal Science Volume 64 ; 64 >
+    au < manifest ; 1987 ; Journal of Animal Science Volume 65 ; 65 >
+    au < manifest ; 1988 ; Journal of Animal Science Volume 66 ; 66 >
+    au < manifest ; 1989 ; Journal of Animal Science Volume 67 ; 67 >
+    au < manifest ; 1990 ; Journal of Animal Science Volume 68 ; 68 >
+    au < manifest ; 1991 ; Journal of Animal Science Volume 69 ; 69 >
+    au < manifest ; 1992 ; Journal of Animal Science Volume 70 ; 70 >
+    au < manifest ; 1993 ; Journal of Animal Science Volume 71 ; 71 >
+    au < manifest ; 1994 ; Journal of Animal Science Volume 72 ; 72 >
+    au < manifest ; 1995 ; Journal of Animal Science Volume 73 ; 73 >
+    au < manifest ; 1996 ; Journal of Animal Science Volume 74 ; 74 >
+    au < manifest ; 1997 ; Journal of Animal Science Volume 75 ; 75 >
+    au < manifest ; 1998 ; Journal of Animal Science Volume 76 ; 76 >
+    au < manifest ; 1999 ; Journal of Animal Science Volume 77 ; 77 >
+    au < manifest ; 2000 ; Journal of Animal Science Volume 78 ; 78 >
+    au < manifest ; 2001 ; Journal of Animal Science Volume 79 ; 79 >
+    au < manifest ; 2002 ; Journal of Animal Science Volume 80 ; 80 >
+    au < manifest ; 2003 ; Journal of Animal Science Volume 81 ; 81 >
+    au < manifest ; 2004 ; Journal of Animal Science Volume 82 ; 82 >
+    au < manifest ; 2005 ; Journal of Animal Science Volume 83 ; 83 >
+    au < manifest ; 2006 ; Journal of Animal Science Volume 84 ; 84 >
+    au < manifest ; 2007 ; Journal of Animal Science Volume 85 ; 85 >
+    au < manifest ; 2008 ; Journal of Animal Science Volume 86 ; 86 >
+    au < manifest ; 2009 ; Journal of Animal Science Volume 87 ; 87 >
+    au < manifest ; 2010 ; Journal of Animal Science Volume 88 ; 88 >
+    au < manifest ; 2011 ; Journal of Animal Science Volume 89 ; 89 >
+    
+  }
 
 }
