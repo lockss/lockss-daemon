@@ -13,7 +13,8 @@
     title <
       name = Acta Pharmacologica Sinica ;
       issn = 1671-4083 ;
-      eissn = 1745-7254
+      eissn = 1745-7254 ;
+      issnl = 1671-4083
     >
 
     param[journal_id] = aps
@@ -33,7 +34,8 @@
     title <
       name = American Journal of Gastroenterology ;
       issn = 0002-9270 ;
-      eissn = 1572-0241
+      eissn = 1572-0241 ;
+      issnl = 0002-9270
     >
 
     param[journal_id] = ajg
@@ -60,7 +62,8 @@
     title <
       name = American Journal of Hypertension ;
       issn = 0895-7061 ;
-      eissn = 1941-7225
+      eissn = 1941-7225 ;
+      issnl = 0895-7061
     >
 
     param[journal_id] = ajh
@@ -90,7 +93,8 @@
     title <
       name = Asian Journal of Andrology ;
       issn = 1008-682X ;
-      eissn = 1745-7262
+      eissn = 1745-7262 ;
+      issnl = 1008-682X
     >
 
     param[journal_id] = aja
@@ -110,7 +114,8 @@
     title <
       name = Bone Marrow Transplantation ;
       issn = 0268-3369 ;
-      eissn = 1476-5365
+      eissn = 1476-5365 ;
+      issnl = 0268-3369
     >
 
     param[journal_id] = bmt
@@ -152,95 +157,96 @@
     title <
       name = British Dental Journal ;
       issn = 0007-0610 ;
-      eissn = 1476-5373
+      eissn = 1476-5373 ;
+      issnl = 0007-0610
     >
 
     param[journal_id] = bdj
 
-    au < manifest ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
-    au < manifest ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
-    au < manifest ; exists ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
-    au < manifest ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
-    au < manifest ; exists ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
-    au < manifest ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
-    au < manifest ; exists ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
-    au < manifest ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
-    au < manifest ; exists ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
-    au < manifest ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
-    au < manifest ; exists ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
-    au < manifest ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
-    au < manifest ; exists ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
-    au < manifest ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
-    au < manifest ; exists ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
-    au < manifest ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
-    au < manifest ; exists ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
-    au < manifest ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
-    au < manifest ; exists ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
-    au < manifest ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
-    au < manifest ; exists ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
-    au < manifest ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
-    au < manifest ; exists ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
-    au < manifest ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
-    au < manifest ; exists ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
-    au < manifest ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
-    au < manifest ; exists ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
-    au < manifest ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
-    au < manifest ; exists ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
-    au < manifest ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
-    au < manifest ; exists ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
-    au < manifest ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
-    au < manifest ; exists ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
-    au < manifest ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
-    au < manifest ; exists ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
-    au < manifest ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
-    au < manifest ; exists ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
-    au < manifest ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
-    au < manifest ; exists ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
-    au < manifest ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
-    au < manifest ; exists ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
-    au < manifest ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
-    au < manifest ; exists ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
-    au < manifest ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
-    au < manifest ; exists ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
-    au < manifest ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
-    au < manifest ; exists ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
-    au < manifest ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
-    au < manifest ; exists ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
-    au < manifest ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
-    au < manifest ; exists ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
-    au < manifest ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
-    au < manifest ; exists ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
-    au < manifest ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
-    au < manifest ; exists ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
-    au < manifest ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
-    au < manifest ; exists ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
-    au < manifest ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
-    au < manifest ; exists ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
-    au < manifest ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
-    au < manifest ; exists ; 2000 ; British Dental Journal Volume 188 ; 2000 ; 188 >
-    au < manifest ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
-    au < manifest ; exists ; 2001 ; British Dental Journal Volume 190 ; 2001 ; 190 >
-    au < manifest ; exists ; 2001 ; British Dental Journal Volume 191 ; 2001 ; 191 >
-    au < manifest ; exists ; 2002 ; British Dental Journal Volume 192 ; 2002 ; 192 >
-    au < manifest ; exists ; 2002 ; British Dental Journal Volume 193 ; 2002 ; 193 >
-    au < manifest ; exists ; 2003 ; British Dental Journal Volume 194 ; 2003 ; 194 >
-    au < manifest ; exists ; 2003 ; British Dental Journal Volume 195 ; 2003 ; 195 >
-    au < manifest ; exists ; 2004 ; British Dental Journal Volume 196 ; 2004 ; 196 >
-    au < manifest ; exists ; 2004 ; British Dental Journal Volume 197 ; 2004 ; 197 >
-    au < manifest ; exists ; 2005 ; British Dental Journal Volume 198 ; 2005 ; 198 >
-    au < manifest ; exists ; 2005 ; British Dental Journal Volume 199 ; 2005 ; 199 >
-    au < manifest ; exists ; 2006 ; British Dental Journal Volume 200 ; 2006 ; 200 >
-    au < manifest ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
-    au < manifest ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 >
-    au < manifest ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
-    au < manifest ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
-    au < manifest ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
-    au < manifest ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
-    au < manifest ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
-    au < manifest ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
-    au < manifest ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
-    au < testing ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
-    au < wanted ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
+    au < exists ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
+    au < exists ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
+    au < exists ; exists ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
+    au < exists ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
+    au < exists ; exists ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
+    au < exists ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
+    au < exists ; exists ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
+    au < exists ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
+    au < exists ; exists ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
+    au < exists ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
+    au < exists ; exists ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
+    au < exists ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
+    au < exists ; exists ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
+    au < exists ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
+    au < exists ; exists ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
+    au < exists ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
+    au < exists ; exists ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
+    au < exists ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
+    au < exists ; exists ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
+    au < exists ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
+    au < exists ; exists ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
+    au < exists ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
+    au < exists ; exists ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
+    au < exists ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
+    au < exists ; exists ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
+    au < exists ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
+    au < exists ; exists ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
+    au < exists ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
+    au < exists ; exists ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
+    au < exists ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
+    au < exists ; exists ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
+    au < exists ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
+    au < exists ; exists ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
+    au < exists ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
+    au < exists ; exists ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
+    au < exists ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
+    au < exists ; exists ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
+    au < exists ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
+    au < exists ; exists ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
+    au < exists ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
+    au < exists ; exists ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
+    au < exists ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
+    au < exists ; exists ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
+    au < exists ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
+    au < exists ; exists ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
+    au < exists ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
+    au < exists ; exists ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
+    au < exists ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
+    au < exists ; exists ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
+    au < exists ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
+    au < exists ; exists ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
+    au < exists ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
+    au < exists ; exists ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
+    au < exists ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
+    au < exists ; exists ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
+    au < exists ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
+    au < exists ; exists ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
+    au < exists ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
+    au < exists ; exists ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
+    au < exists ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
+    au < exists ; exists ; 2000 ; British Dental Journal Volume 188 ; 2000 ; 188 >
+    au < exists ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
+    au < exists ; exists ; 2001 ; British Dental Journal Volume 190 ; 2001 ; 190 >
+    au < exists ; exists ; 2001 ; British Dental Journal Volume 191 ; 2001 ; 191 >
+    au < exists ; exists ; 2002 ; British Dental Journal Volume 192 ; 2002 ; 192 >
+    au < exists ; exists ; 2002 ; British Dental Journal Volume 193 ; 2002 ; 193 >
+    au < exists ; exists ; 2003 ; British Dental Journal Volume 194 ; 2003 ; 194 >
+    au < exists ; exists ; 2003 ; British Dental Journal Volume 195 ; 2003 ; 195 >
+    au < exists ; exists ; 2004 ; British Dental Journal Volume 196 ; 2004 ; 196 >
+    au < exists ; exists ; 2004 ; British Dental Journal Volume 197 ; 2004 ; 197 >
+    au < exists ; exists ; 2005 ; British Dental Journal Volume 198 ; 2005 ; 198 >
+    au < exists ; exists ; 2005 ; British Dental Journal Volume 199 ; 2005 ; 199 >
+    au < exists ; exists ; 2006 ; British Dental Journal Volume 200 ; 2006 ; 200 >
+    au < exists ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
+    au < exists ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 >
+    au < exists ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
+    au < exists ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
+    au < exists ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
+    au < exists ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
+    au < exists ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
+    au < exists ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
+    au < exists ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
 
 
   }
@@ -250,7 +256,8 @@
     title <
       name = British Journal of Cancer ;
       issn = 0007-0920 ;
-      eissn = 1532-1827
+      eissn = 1532-1827 ;
+      issnl = 0007-0920
     >
 
     param[journal_id] = bjc
@@ -283,7 +290,7 @@
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
-    au < wanted ; exists ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
+    au < testing ; exists ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
     au < wanted ; exists ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
 
   }
@@ -293,7 +300,8 @@
     title <
       name = Cancer Gene Therapy ;
       issn = 0929-1903 ;
-      eissn = 1476-5500
+      eissn = 1476-5500 ;
+      issnl = 0929-1903
     >
 
     param[journal_id] = cgt
@@ -318,7 +326,8 @@
     title <
       name = Cell Death and Differentiation ;
       issn = 1350-9047 ;
-      eissn = 1476-5403
+      eissn = 1476-5403 ;
+      issnl = 1350-9047
     >
 
     param[journal_id] = cdd
@@ -345,7 +354,8 @@
     title <
       name = Cell Research ;
       issn = 1001-0602 ;
-      eissn = 1748-7838
+      eissn = 1748-7838 ;
+      issnl = 1001-0602
     >
 
     param[journal_id] = cr
@@ -361,7 +371,8 @@
     title <
       name = Clinical Pharmacology & Therapeutics ;
       issn = 0009-9236 ;
-      eissn = 1532-6535
+      eissn = 1532-6535 ;
+      issnl = 0009-9236
     >
 
     param[journal_id] = clpt
@@ -374,7 +385,8 @@
     title <
       name = The EMBO Journal ;
       issn = 0261-4189 ;
-      eissn = 1460-2075
+      eissn = 1460-2075 ;
+      issnl = 0261-4189
     >
 
     param[journal_id] = emboj
@@ -402,7 +414,8 @@
     title <
       name = EMBO Reports ;
       issn = 1469-221X ;
-      eissn = 1469-3178
+      eissn = 1469-3178 ;
+      issnl = 1469-221X
     >
 
     param[journal_id] = embor
@@ -417,7 +430,8 @@
     title <
       name = European Journal of Clinical Nutrition ;
       issn = 0954-3007 ;
-      eissn = 1476-5640
+      eissn = 1476-5640 ;
+      issnl = 0954-3007
     >
 
     param[journal_id] = ejcn
@@ -444,7 +458,8 @@
     title <
       name = European Journal of Human Genetics ;
       issn = 1018-4813 ;
-      eissn = 1476-5438
+      eissn = 1476-5438 ;
+      issnl = 1018-4813
     >
 
     param[journal_id] = ejhg
@@ -456,7 +471,8 @@
     title <
       name = Evidence-Based Dentistry ;
       issn = 1462-0049 ;
-      eissn = 1476-5446
+      eissn = 1476-5446 ;
+      issnl = 1462-0049
     >
 
     param[journal_id] = ebd
@@ -468,7 +484,8 @@
     title <
       name = Eye ;
       issn = 0950-222X ;
-      eissn = 1476-5454
+      eissn = 1476-5454 ;
+      issnl = 0950-222X
     >
 
     param[journal_id] = eye
@@ -490,7 +507,8 @@
     title <
       name = Gene Therapy ;
       issn = 0969-7128 ;
-      eissn = 1476-5462
+      eissn = 1476-5462 ;
+      issnl = 0969-7128
     >
 
     param[journal_id] = gt
@@ -517,7 +535,8 @@
     title <
       name = Genes and Immunity ;
       issn = 1466-4879 ;
-      eissn = 1476-5470
+      eissn = 1476-5470 ;
+      issnl = 1466-4879
     >
 
     param[journal_id] = gene
@@ -541,7 +560,8 @@
     title <
       name = Heredity ;
       issn = 0018-067X ;
-      eissn = 1365-2540
+      eissn = 1365-2540 ;
+      issnl = 0018-067X
     >
 
     param[journal_id] = hdy
@@ -582,7 +602,8 @@
     title <
       name = Hypertension Research ;
       issn = 0916-9636 ;
-      eissn = 1348-4214
+      eissn = 1348-4214 ;
+      issnl = 0916-9636
     >
 
     param[journal_id] = hr
@@ -601,7 +622,8 @@
     title <
       name = Immunology & Cell Biology ;
       issn = 0818-9641 ;
-      eissn = 1440-1711
+      eissn = 1440-1711 ;
+      issnl = 0818-9641
     >
 
     param[journal_id] = icb
@@ -617,7 +639,8 @@
     title <
       name = International Journal of Impotence Research ;
       issn = 0955-9930 ;
-      eissn = 1476-5489
+      eissn = 1476-5489 ;
+      issnl = 0955-9930
     >
 
     param[journal_id] = ijir
@@ -644,7 +667,8 @@
     title <
       name = International Journal of Obesity ;
       issn = 0307-0565 ;
-      eissn = 1476-5497
+      eissn = 1476-5497 ;
+      issnl = 0307-0565
     >
 
     param[journal_id] = ijo
@@ -671,7 +695,8 @@
     title <
       name = The ISME Journal ;
       issn = 1751-7362 ;
-      eissn = 1751-7370
+      eissn = 1751-7370 ;
+      issnl = 1751-7362
     >
 
     param[journal_id] = ismej
@@ -683,7 +708,8 @@
     title <
       name = JID Symposium Proceedings ;
       issn = 1087-0024 ;
-      eissn = 1529-1774
+      eissn = 1529-1774 ;
+      issnl = 1087-0024
     >
 
     param[journal_id] = jidsp
@@ -695,7 +721,8 @@
     title <
       name = The Journal of Antibiotics ;
       issn = 0021-8820 ;
-      eissn = 1881-1469
+      eissn = 1881-1469 ;
+      issnl = 0021-8820
     >
 
     param[journal_id] = ja
@@ -714,7 +741,8 @@
     title <
       name = Journal of Cerebral Blood Flow and Metabolism ;
       issn = 0271-678X ;
-      eissn = 1559-7016
+      eissn = 1559-7016 ;
+      issnl = 0271-678X
     >
 
     param[journal_id] = jcbfm
@@ -726,7 +754,8 @@
     title <
       name = Journal of Exposure Science and Environmental Epidemiology ;
       issn = 1559-0631 ;
-      eissn = 1559-064X
+      eissn = 1559-064X ;
+      issnl = 1559-0631
     >
 
     param[journal_id] = jes
@@ -746,7 +775,8 @@
     title <
       name = Journal of Human Genetics ;
       issn = 1434-5161 ;
-      eissn = 1435-232X
+      eissn = 1435-232X ;
+      issnl = 1434-5161
     >
 
     param[journal_id] = jhg
@@ -772,7 +802,8 @@
     title <
       name = Journal of Human Hypertension ;
       issn = 0950-9240 ;
-      eissn = 1476-5527
+      eissn = 1476-5527 ;
+      issnl = 0950-9240
     >
 
     param[journal_id] = jhh
@@ -799,7 +830,8 @@
     title <
       name = The Journal of Investigative Dermatology ;
       issn = 0022-202X ;
-      eissn = 1523-1747
+      eissn = 1523-1747 ;
+      issnl = 0022-202X
     >
 
     param[journal_id] = jid
@@ -928,7 +960,8 @@
     title <
       name = Journal of Perinatology ;
       issn = 0743-8346 ;
-      eissn = 1476-5543
+      eissn = 1476-5543 ;
+      issnl = 0743-8346
     >
 
     param[journal_id] = jp
@@ -953,7 +986,8 @@
     title <
       name = Kidney International ;
       issn = 0085-2538 ;
-      eissn = 1523-1755
+      eissn = 1523-1755 ;
+      issnl = 0085-2538
     >
 
     param[journal_id] = ki
@@ -965,7 +999,8 @@
     title <
       name = Laboratory Investigation ;
       issn = 0023-6837 ;
-      eissn = 1530-0307
+      eissn = 1530-0307 ;
+      issnl = 0023-6837
     >
 
     param[journal_id] = labinvest
@@ -977,7 +1012,8 @@
     title <
       name = Leukemia ;
       issn = 0887-6924 ;
-      eissn = 1476-5551
+      eissn = 1476-5551 ;
+      issnl = 0887-6924
     >
 
     param[journal_id] = leu
@@ -1004,7 +1040,8 @@
     title <
       name = Modern Pathology ;
       issn = 0893-3952 ;
-      eissn = 1530-0285
+      eissn = 1530-0285 ;
+      issnl = 0893-3952
     >
 
     param[journal_id] = modpathol
@@ -1016,7 +1053,8 @@
     title <
       name = Molecular Psychiatry ;
       issn = 1359-4184 ;
-      eissn = 1476-5578
+      eissn = 1476-5578 ;
+      issnl = 1359-4184
     >
 
     param[journal_id] = mp
@@ -1054,7 +1092,8 @@
     title <
       name = Molecular Therapy ;
       issn = 1525-0016 ;
-      eissn = 1525-0024
+      eissn = 1525-0024 ;
+      issnl = 1525-0016
     >
 
     param[journal_id] = mt
@@ -1066,7 +1105,8 @@
     title <
       name = Mucosal Immunology ;
       issn = 1933-0219 ;
-      eissn = 1935-3456
+      eissn = 1935-3456 ;
+      issnl = 1933-0219
     >
 
     param[journal_id] = mi
@@ -1078,7 +1118,8 @@
     title <
       name = Nature ;
       issn = 0028-0836 ;
-      eissn = 1476-4687
+      eissn = 1476-4687 ;
+      issnl = 0028-0836
     >
 
     param[journal_id] = nature
@@ -1118,7 +1159,8 @@
     title <
       name = Nature Biotechnology ;
       issn = 1087-0156 ;
-      eissn = 1546-1696
+      eissn = 1546-1696 ;
+      issnl = 1087-0156
     >
 
     param[journal_id] = nbt
@@ -1135,7 +1177,8 @@
     title <
       name = Nature Cell Biology ;
       issn = 1465-7392 ;
-      eissn = 1476-4679
+      eissn = 1476-4679 ;
+      issnl = 1465-7392
     >
 
     param[journal_id] = ncb
@@ -1152,7 +1195,8 @@
     title <
       name = Nature Chemical Biology ;
       issn = 1552-4450 ;
-      eissn = 1548-7105
+      eissn = 1548-7105 ;
+      issnl = 1552-4450
     >
 
     param[journal_id] = nchembio
@@ -1168,7 +1212,8 @@
     title <
       name = Nature Chemistry ;
       issn = 1755-4330 ;
-      eissn = 1755-4349
+      eissn = 1755-4349 ;
+      issnl = 1755-4330
     >
 
     param[journal_id] = nchem
@@ -1200,7 +1245,8 @@
     title <
       name = Nature Genetics ;
       issn = 1061-4036 ;
-      eissn = 1546-1718
+      eissn = 1546-1718 ;
+      issnl = 1061-4036
     >
 
     param[journal_id] = ng
@@ -1217,7 +1263,8 @@
     title <
       name = Nature Geoscience ;
       issn = 1752-0894 ;
-      eissn = 1752-0908
+      eissn = 1752-0908 ;
+      issnl = 1752-0894
     >
 
     param[journal_id] = ngeo
@@ -1234,7 +1281,8 @@
     title <
       name = Nature Immunology ;
       issn = 1529-2908 ;
-      eissn = 1529-2916
+      eissn = 1529-2916 ;
+      issnl = 1529-2908
     >
 
     param[journal_id] = ni
@@ -1251,7 +1299,8 @@
     title <
       name = Nature Materials ;
       issn = 1476-1122 ;
-      eissn = 1476-4660
+      eissn = 1476-4660 ;
+      issnl = 1476-1122
     >
 
     param[journal_id] = nmat
@@ -1268,7 +1317,8 @@
     title <
       name = Nature Medicine ;
       issn = 1078-8956 ;
-      eissn = 1546-170X
+      eissn = 1546-170X ;
+      issnl = 1078-8956
     >
 
     param[journal_id] = nm
@@ -1285,7 +1335,8 @@
     title <
       name = Nature Methods ;
       issn = 1548-7091 ;
-      eissn = 1548-7105
+      eissn = 1548-7105 ;
+      issnl = 1548-7091
     >
 
     param[journal_id] = nmeth
@@ -1302,7 +1353,8 @@
     title <
       name = Nature Nanotechnology ;
       issn = 1748-3387 ;
-      eissn = 1748-3395
+      eissn = 1748-3395 ;
+      issnl = 1748-3387
     >
 
     param[journal_id] = nnano
@@ -1319,7 +1371,8 @@
     title <
       name = Nature Neuroscience ;
       issn = 1097-6256 ;
-      eissn = 1546-1726
+      eissn = 1546-1726 ;
+      issnl = 1097-6256
     >
 
     param[journal_id] = neuro
@@ -1336,7 +1389,8 @@
     title <
       name = Nature Photonics ;
       issn = 1749-4885 ;
-      eissn = 1749-4893
+      eissn = 1749-4893 ;
+      issnl = 1749-4885
     >
 
     param[journal_id] = nphoton
@@ -1353,7 +1407,8 @@
     title <
       name = Nature Physics ;
       issn = 1745-2473 ;
-      eissn = 1745-2481
+      eissn = 1745-2481 ;
+      issnl = 1745-2473
     >
 
     param[journal_id] = nphys
@@ -1370,7 +1425,8 @@
     title <
       name = Nature Protocols ;
       issn = 1754-2189 ;
-      eissn = 1750-2799
+      eissn = 1750-2799 ;
+      issnl = 1750-2799
     >
 
     param[journal_id] = nprot
@@ -1387,7 +1443,8 @@
     title <
       name = Nature Reviews Cancer ;
       issn = 1474-175X ;
-      eissn = 1474-1768
+      eissn = 1474-1768 ;
+      issnl = 1474-175X
     >
 
     param[journal_id] = nrc
@@ -1404,7 +1461,8 @@
     title <
       name = Nature Reviews Cardiology ;
       issn = 1759-5002 ;
-      eissn = 1759-5010
+      eissn = 1759-5010 ;
+      issnl = 1759-5002
     >
 
     param[journal_id] = nrcardio
@@ -1421,7 +1479,8 @@
     title <
       name = Nature Reviews Clinical Oncology ;
       issn = 1759-4774 ;
-      eissn = 1759-4782
+      eissn = 1759-4782 ;
+      issnl = 1759-4774
     >
 
     param[journal_id] = nrclinonc
@@ -1438,7 +1497,8 @@
     title <
       name = Nature Reviews Drug Discovery ;
       issn = 1474-1776 ;
-      eissn = 1474-1784
+      eissn = 1474-1784 ;
+      issnl = 1474-1776
     >
 
     param[journal_id] = nrd
@@ -1455,7 +1515,8 @@
     title <
       name = Nature Reviews Endocrinology ;
       issn = 1759-5029 ;
-      eissn = 1759-5037
+      eissn = 1759-5037 ;
+      issnl = 1759-5029
     >
 
     param[journal_id] = nrendo
@@ -1472,7 +1533,8 @@
     title <
       name = Nature Reviews Gastroenterology and Hepatology ;
       issn = 1759-5045 ;
-      eissn = 1759-5053
+      eissn = 1759-5053 ;
+      issnl = 1759-5045
     >
 
     param[journal_id] = nrgastro
@@ -1489,7 +1551,8 @@
     title <
       name = Nature Reviews Genetics ;
       issn = 1471-0056 ;
-      eissn = 1471-0064
+      eissn = 1471-0064 ;
+      issnl = 1471-0056
     >
 
     param[journal_id] = nrg
@@ -1506,7 +1569,8 @@
     title <
       name = Nature Reviews Immunology ;
       issn = 1474-1733 ;
-      eissn = 1474-1741
+      eissn = 1474-1741 ;
+      issnl = 1474-1733
     >
 
     param[journal_id] = nri
@@ -1523,7 +1587,8 @@
     title <
       name = Nature Reviews Microbiology ;
       issn = 1740-1526 ;
-      eissn = 1740-1534
+      eissn = 1740-1534 ;
+      issnl = 1740-1526
     >
 
     param[journal_id] = nrmicro
@@ -1540,7 +1605,8 @@
     title <
       name = Nature Reviews Molecular Cell Biology ;
       issn = 1471-0072 ;
-      eissn = 1471-0080
+      eissn = 1471-0080 ;
+      issnl = 1471-0072
     >
 
     param[journal_id] = nrm
@@ -1557,7 +1623,8 @@
     title <
       name = Nature Reviews Nephrology ;
       issn = 1759-5061 ;
-      eissn = 1759-507X
+      eissn = 1759-507X ;
+      issnl = 1759-5061
     >
 
     param[journal_id] = nrneph
@@ -1574,7 +1641,8 @@
     title <
       name = Nature Reviews Neurology ;
       issn = 1759-4758 ;
-      eissn = 1759-4766
+      eissn = 1759-4766 ;
+      issnl = 1759-4758
     >
 
     param[journal_id] = nrneurol
@@ -1591,7 +1659,8 @@
     title <
       name = Nature Reviews Neuroscience ;
       issn = 1471-003X ;
-      eissn = 1471-0048
+      eissn = 1471-0048 ;
+      issnl = 1471-003X
     >
 
     param[journal_id] = nrn
@@ -1608,7 +1677,8 @@
     title <
       name = Nature Reviews Rheumatology ;
       issn = 1759-4790 ;
-      eissn = 1759-4804
+      eissn = 1759-4804 ;
+      issnl = 1759-4790
     >
 
     param[journal_id] = nrrheum
@@ -1625,7 +1695,8 @@
     title <
       name = Nature Reviews Urology ;
       issn = 1759-4812 ;
-      eissn = 1759-4820
+      eissn = 1759-4820 ;
+      issnl = 1759-4812
     >
 
     param[journal_id] = nrurol
@@ -1642,7 +1713,8 @@
     title <
       name = Nature Structural and Molecular Biology ;
       issn = 1545-9993 ;
-      eissn = 1545-9985
+      eissn = 1545-9985 ;
+      issnl = 1545-9993
     >
 
     param[journal_id] = nsmb
@@ -1659,7 +1731,8 @@
     title <
       name = Neuropsychopharmacology ;
       issn = 0893-133X ;
-      eissn = 1470-634X
+      eissn = 1470-634X ;
+      issnl = 0893-133X
     >
 
     param[journal_id] = npp
@@ -1671,7 +1744,8 @@
     title <
       name = Obesity ;
       issn = 1930-7381 ;
-      eissn = 1930-739X
+      eissn = 1930-739X ;
+      issnl = 1930-7381
     >
 
     param[journal_id] = oby
@@ -1683,7 +1757,8 @@
     title <
       name = Oncogene ;
       issn = 0950-9232 ;
-      eissn = 1476-5594
+      eissn = 1476-5594 ;
+      issnl = 0950-9232
     >
 
     param[journal_id] = onc
@@ -1713,7 +1788,8 @@
     title <
       name = Pharmacogenomics Journal ;
       issn = 1470-269X ;
-      eissn = 1473-1150
+      eissn = 1473-1150 ;
+      issnl = 1470-269X
     >
 
     param[journal_id] = tpj
@@ -1736,7 +1812,8 @@
     title <
       name = Prostate Cancer and Prostatic Diseases ;
       issn = 1365-7852 ;
-      eissn = 1476-5608
+      eissn = 1476-5608 ;
+      issnl = 1365-7852
     >
 
     param[journal_id] = pcan
@@ -1773,7 +1850,8 @@
     title <
       name = Spinal Cord ;
       issn = 1362-4393 ;
-      eissn = 1476-5624
+      eissn = 1476-5624 ;
+      issnl = 1362-4393
     >
 
     param[journal_id] = sc
@@ -1800,7 +1878,8 @@
     title <
       name = Vital ;
       issn = 1741-7503 ;
-      eissn = 1741-7511
+      eissn = 1741-7511 ;
+      issnl = 1741-7503
     >
 
     param[journal_id] = vital
