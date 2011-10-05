@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.40 2011-10-04 14:52:02 easyonthemayo Exp $
+ * $Id: ServeContent.java,v 1.41 2011-10-05 05:58:19 tlipkis Exp $
  */
 
 /*
@@ -555,7 +555,7 @@ public class ServeContent extends LockssServlet {
     resp.setContentType(ctype);
     // Set as inline content with name
     resp.setHeader("Content-disposition", "inline; filename="+
-        ServletUtil.getContentOriginalFilename(cu));
+		   ServletUtil.getContentOriginalFilename(cu, true));
 
     if (cuLastModified != null) {
       resp.setHeader(HttpFields.__LastModified, cuLastModified);

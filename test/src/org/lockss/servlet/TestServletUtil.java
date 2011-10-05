@@ -1,5 +1,5 @@
 /*
- * $Id: TestServletUtil.java,v 1.8 2009-07-22 06:41:08 tlipkis Exp $
+ * $Id: TestServletUtil.java,v 1.9 2011-10-05 05:58:19 tlipkis Exp $
  */
 
 /*
@@ -123,5 +123,18 @@ public class TestServletUtil extends LockssTestCase {
     Pattern pat =
       RegexpUtil.uncheckedCompile(pats, Perl5Compiler.MULTILINE_MASK);
     assertMatchesRE(pat, s);
+  }
+
+  public void testGetContentOriginalFilename() {
+    CachedUrl cu;
+    cu = new MockCachedUrl("http://example.com/foo/file.pdf");
+    assertEquals("file.pdf", ServletUtil.getContentOriginalFilename(cu, false));
+    assertEquals("\"file.pdf\"",
+		 ServletUtil.getContentOriginalFilename(cu, true));
+    cu = new MockCachedUrl("http://example.com/foo/file.html?query=foo");
+    assertEquals("file.html",
+		 ServletUtil.getContentOriginalFilename(cu, false));
+    assertEquals("\"file.html\"",
+		 ServletUtil.getContentOriginalFilename(cu, true));
   }
 }

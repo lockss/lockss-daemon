@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.72 2011-10-04 14:52:02 easyonthemayo Exp $
+ * $Id: ServletUtil.java,v 1.73 2011-10-05 05:58:19 tlipkis Exp $
  */
 
 /*
@@ -1464,9 +1464,10 @@ public class ServletUtil {
    * original
    *
    * @param cu the CachedUrl representing the AU resource
+   * @param quoted if true, the result will be enclosed in double quotes
    * @return the original filename string
    */
-  static String getContentOriginalFilename(CachedUrl cu) {
+  static String getContentOriginalFilename(CachedUrl cu, boolean quoted) {
     String filename;
     try {
       // Get the filename path from the URL, without any query string
@@ -1477,7 +1478,11 @@ public class ServletUtil {
     } catch (MalformedURLException e) {
       filename = "unknown";
     }
-    return filename;
+    if (quoted) {
+      return  "\"" + filename + "\"";
+    } else {
+      return filename;
+    }
   }
 
   /** Return a button that invokes javascript when clicked. */
