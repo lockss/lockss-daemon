@@ -13,25 +13,25 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.ajnr.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1980 ; American Journal of Neuroradiology Volume 1 ; 1 >
-      au < manifest ; 1981 ; American Journal of Neuroradiology Volume 2 ; 2 >
-      au < manifest ; 1982 ; American Journal of Neuroradiology Volume 3 ; 3 >
-      au < manifest ; 1983 ; American Journal of Neuroradiology Volume 4 ; 4 >
-      au < manifest ; 1984 ; American Journal of Neuroradiology Volume 5 ; 5 >
-      au < manifest ; 1985 ; American Journal of Neuroradiology Volume 6 ; 6 >
-      au < manifest ; 1986 ; American Journal of Neuroradiology Volume 7 ; 7 >
-      au < manifest ; 1987 ; American Journal of Neuroradiology Volume 8 ; 8 >
-      au < manifest ; 1988 ; American Journal of Neuroradiology Volume 9 ; 9 >
-      au < manifest ; 1989 ; American Journal of Neuroradiology Volume 10 ; 10 >
-      au < manifest ; 1990 ; American Journal of Neuroradiology Volume 11 ; 11 >
-      au < manifest ; 1991 ; American Journal of Neuroradiology Volume 12 ; 12 >
-      au < manifest ; 1992 ; American Journal of Neuroradiology Volume 13 ; 13 >
-      au < manifest ; 1993 ; American Journal of Neuroradiology Volume 14 ; 14 >
-      au < manifest ; 1994 ; American Journal of Neuroradiology Volume 15 ; 15 >
+      au < manifest ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
+      au < manifest ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
+      au < manifest ; 1982 ; American Journal of Neuroradiology [abstracts only] Volume 3 ; 3 >
+      au < manifest ; 1983 ; American Journal of Neuroradiology [abstracts only] Volume 4 ; 4 >
+      au < manifest ; 1984 ; American Journal of Neuroradiology [abstracts only] Volume 5 ; 5 >
+      au < manifest ; 1985 ; American Journal of Neuroradiology [abstracts only] Volume 6 ; 6 >
+      au < manifest ; 1986 ; American Journal of Neuroradiology [abstracts only] Volume 7 ; 7 >
+      au < manifest ; 1987 ; American Journal of Neuroradiology [abstracts only] Volume 8 ; 8 >
+      au < manifest ; 1988 ; American Journal of Neuroradiology [abstracts only] Volume 9 ; 9 >
+      au < manifest ; 1989 ; American Journal of Neuroradiology [abstracts only] Volume 10 ; 10 >
+      au < manifest ; 1990 ; American Journal of Neuroradiology [abstracts only] Volume 11 ; 11 >
+      au < manifest ; 1991 ; American Journal of Neuroradiology [abstracts only] Volume 12 ; 12 >
+      au < manifest ; 1992 ; American Journal of Neuroradiology [abstracts only] Volume 13 ; 13 >
+      au < manifest ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
+      au < manifest ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
       au < manifest ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
       au < manifest ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
       au < manifest ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >
