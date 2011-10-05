@@ -25,15 +25,17 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://www.plantcell.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
-      au < down ; 2006 ; The Plant Cell Volume 18 ; 18 >
-      au < down ; 2007 ; The Plant Cell Volume 19 ; 19 >
-      au < down ; 2008 ; The Plant Cell Volume 20 ; 20 >
-      au < down ; 2009 ; The Plant Cell Volume 21 ; 21 >
+      au < HighWirePressPlugin ; doNotProcess ; 2005 ; The Plant Cell Volume 17 ; 17 >
+      au < HighWirePressPlugin ; down ; 2006 ; The Plant Cell Volume 18 ; 18 >
+      au < HighWirePressPlugin ; down ; 2007 ; The Plant Cell Volume 19 ; 19 >
+      au < HighWirePressPlugin ; down ; 2008 ; The Plant Cell Volume 20 ; 20 >
+      au < HighWirePressPlugin ; down ; 2009 ; The Plant Cell Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; manifest ; 2010 ; The Plant Cell Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; manifest ; 2011 ; The Plant Cell Volume 23 ; 23 >
 
     }
 
@@ -48,24 +50,31 @@
       issnl = 0032-0889
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.
     param[base_url] = http://www.plantphysiol.org/
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < down ; 2005 ; Plant Physiology Volume 137 ; 137 >
-    au < down ; 2005 ; Plant Physiology Volume 138 ; 138 >
-    au < down ; 2005 ; Plant Physiology Volume 139 ; 139 >
-    au < down ; 2006 ; Plant Physiology Volume 140 ; 140 >
-    au < down ; 2006 ; Plant Physiology Volume 141 ; 141 >
-    au < down ; 2006 ; Plant Physiology Volume 142 ; 142 >
-    au < down ; 2007 ; Plant Physiology Volume 143 ; 143 >
-    au < down ; 2007 ; Plant Physiology Volume 144 ; 144 >
-    au < down ; 2007 ; Plant Physiology Volume 145 ; 145 >
-    au < down ; 2008 ; Plant Physiology Volume 146 ; 146 >
-    au < down ; 2008 ; Plant Physiology Volume 147 ; 147 >
-    au < down ; 2008 ; Plant Physiology Volume 148 ; 148 >
-    au < down ; 2009 ; Plant Physiology Volume 149 ; 149 >
-    au < down ; 2009 ; Plant Physiology Volume 150 ; 150 >
+    au < HighWirePressPlugin ; down ; 2005 ; Plant Physiology Volume 137 ; 137 >
+    au < HighWirePressPlugin ; down ; 2005 ; Plant Physiology Volume 138 ; 138 >
+    au < HighWirePressPlugin ; down ; 2005 ; Plant Physiology Volume 139 ; 139 >
+    au < HighWirePressPlugin ; down ; 2006 ; Plant Physiology Volume 140 ; 140 >
+    au < HighWirePressPlugin ; down ; 2006 ; Plant Physiology Volume 141 ; 141 >
+    au < HighWirePressPlugin ; down ; 2006 ; Plant Physiology Volume 142 ; 142 >
+    au < HighWirePressPlugin ; down ; 2007 ; Plant Physiology Volume 143 ; 143 >
+    au < HighWirePressPlugin ; down ; 2007 ; Plant Physiology Volume 144 ; 144 >
+    au < HighWirePressPlugin ; down ; 2007 ; Plant Physiology Volume 145 ; 145 >
+    au < HighWirePressPlugin ; down ; 2008 ; Plant Physiology Volume 146 ; 146 >
+    au < HighWirePressPlugin ; down ; 2008 ; Plant Physiology Volume 147 ; 147 >
+    au < HighWirePressPlugin ; down ; 2008 ; Plant Physiology Volume 148 ; 148 >
+    au < HighWirePressPlugin ; down ; 2009 ; Plant Physiology Volume 149 ; 149 >
+    au < HighWirePressPlugin ; down ; 2009 ; Plant Physiology Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; manifest ; 2009 ; Plant Physiology Volume 151 ; 151 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Plant Physiology Volume 152 ; 152 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Plant Physiology Volume 153 ; 153 >
+    au < HighWirePressH20Plugin ; manifest ; 2010 ; Plant Physiology Volume 154 ; 154 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Plant Physiology Volume 155 ; 155 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Plant Physiology Volume 156 ; 156 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Plant Physiology Volume 157 ; 157 >
 
   }
 
