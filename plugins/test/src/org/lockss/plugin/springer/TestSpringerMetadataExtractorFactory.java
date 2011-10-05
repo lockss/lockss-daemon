@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestSpringerMetadataExtractorFactory.java,v 1.6 2011-10-05 05:57:51 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+    ConfigurationUtil.addFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath,
 				  "org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
 				  "true");

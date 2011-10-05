@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerArticleIteratorFactory.java,v 1.3 2011-09-08 23:40:49 tlipkis Exp $
+ * $Id: TestSpringerArticleIteratorFactory.java,v 1.4 2011-10-05 05:57:51 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestSpringerArticleIteratorFactory
 
   public void setUp() throws Exception {
     super.setUp();
-    ConfigurationUtil.setFromArgs("org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
+    ConfigurationUtil.addFromArgs("org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
 				  "true");
     simau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     spau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerAuConfig());
