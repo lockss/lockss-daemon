@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -84,8 +84,12 @@
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisUrlNormalizer</string>
   </entry>
   <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlFilterFactory</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

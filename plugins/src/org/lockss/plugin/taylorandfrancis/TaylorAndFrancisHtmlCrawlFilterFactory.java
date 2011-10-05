@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlFilterFactory.java,v 1.2 2011-09-30 20:36:53 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.1 2011-10-05 00:55:55 thib_gc Exp $
  */
 
 /*
@@ -41,26 +41,18 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 
-public class TaylorAndFrancisHtmlFilterFactory implements FilterFactory {
+public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
 
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
                                                String encoding)
       throws PluginException {
-    // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains site-specific SFX code
-        new TagNameFilter("script"),
-        // Contains site-specific SFX markup
-        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
-        // Contains institution-specific markup
-        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
-        // Contains a cookie or session ID
-        HtmlNodeFilters.tagWithAttribute("link", "type", "application/rss+xml"),
-        // Contains the current year in a copyright statement
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "credits"),
-        // Contains a cookie or session ID
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
+        // News articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "newsArticles"),
+        // Related and most read articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
