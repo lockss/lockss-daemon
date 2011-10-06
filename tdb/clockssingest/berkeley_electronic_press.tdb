@@ -595,9 +595,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijb
 
-    au < crawling ; exists ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
-    au < crawling ; exists ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 >
-    au < crawling ; exists ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
+    au < testing ; exists ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
+    au < testing ; exists ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 >
+    au < testing ; exists ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 >
@@ -615,11 +615,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijcre
 
-    au < crawling ; exists ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
-    au < crawling ; exists ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
-    au < crawling ; exists ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
-    au < crawling ; exists ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
-    au < crawling ; exists ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
+    au < testing ; exists ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
+    au < testing ; exists ; 2004 ; International Journal of Chemical Reactor Engineering Volume 2 ; 2 >
+    au < testing ; exists ; 2005 ; International Journal of Chemical Reactor Engineering Volume 3 ; 3 >
+    au < testing ; exists ; 2006 ; International Journal of Chemical Reactor Engineering Volume 4 ; 4 >
+    au < testing ; exists ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
@@ -637,14 +637,14 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijeeps
 
-    au < crawling ; exists ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
-    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
-    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
-    au < crawling ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
-    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
-    au < crawling ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
-    au < crawling ; exists ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
+    au < testing ; exists ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
+    au < testing ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 >
+    au < testing ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 >
+    au < testing ; exists ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 >
+    au < testing ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 6 ; 6 >
+    au < testing ; exists ; 2006 ; International Journal of Emerging Electric Power Systems Volume 7 ; 7 >
+    au < testing ; exists ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
     au < released ; crawling ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
     au < released ; crawling ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 >
@@ -662,9 +662,9 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijfe
 
-    au < crawling ; exists ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
-    au < crawling ; exists ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
-    au < crawling ; exists ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
+    au < testing ; exists ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
+    au < testing ; exists ; 2006 ; International Journal of Food Engineering Volume 2 ; 2 >
+    au < testing ; exists ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
     au < released ; crawling ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < released ; crawling ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
