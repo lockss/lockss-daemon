@@ -253,7 +253,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bap
 
-    au < ready ; Business and Politics Volume 1 ; 1 ; 1999 >
+    au < doesNotExist ; Business and Politics Volume 1 ; 1 ; 1999 >
     au < released ; Business and Politics Volume 2 ; 2 ; 2000 >
     au < released ; Business and Politics Volume 3 ; 3 ; 2001 >
     au < released ; Business and Politics Volume 4 ; 4 ; 2002 >
@@ -452,6 +452,8 @@
     comment[issue] = issue toc is at /fhep/14/2
     comment[volume] = volume toc is at /fhep/14
     comment[title] = title toc is at /fhep/all_isshes.html
+    
+    comment[V2] = fhep V2 has no content.
 
     au < released ; Forum for Health Economics & Policy Volume 1 ; 1 ; 1998 >
     au < released ; Forum for Health Economics & Policy Volume 2 ; 2 ; 1999 >
