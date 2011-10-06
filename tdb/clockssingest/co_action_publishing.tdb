@@ -397,7 +397,7 @@
       issnl = 0800-0395
     >
 
-    param[base_url] = http://www.polarresearch.net
+    param[base_url] = http://www.polarresearch.net/
     param[journal_id] = polar
 
     au < manifest ; exists ; 1982 ; Polar Research Volume 1982 ; 1982 ; 1982 >
