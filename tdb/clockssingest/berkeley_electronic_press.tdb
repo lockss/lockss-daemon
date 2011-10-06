@@ -254,7 +254,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bap
 
-    au < testing ; exists ; 1999 ; Business and Politics Volume 1 ; 1 >
+    au < doesNotExist ; doesNotExist ; 1999 ; Business and Politics Volume 1 ; 1 >
     au < released ; manifest ; 2000 ; Business and Politics Volume 2 ; 2 >
     au < released ; manifest ; 2001 ; Business and Politics Volume 3 ; 3 >
     au < released ; manifest ; 2002 ; Business and Politics Volume 4 ; 4 >
@@ -452,7 +452,7 @@
     param[journal_abbr] = fhep
 
     au < released ; manifest ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
-    au < testing ; exists ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
+    au < doesNotExist ; doesNotExist ; 1999 ; Forum for Health Economics & Policy Volume 2 ; 2 >
     au < released ; manifest ; 2000 ; Forum for Health Economics & Policy Volume 3 ; 3 >
     au < released ; manifest ; 2001 ; Forum for Health Economics & Policy Volume 4 ; 4 >
     au < released ; manifest ; 2002 ; Forum for Health Economics & Policy Volume 5 ; 5 >
@@ -526,13 +526,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
-    au < testing ; exists ; 2000 ; Global Economy Journal Volume 1 ; 1 >
-    au < testing ; exists ; 2001 ; Global Economy Journal Volume 2 ; 2 >
-    au < testing ; exists ; 2002 ; Global Economy Journal Volume 3 ; 3 >
-    au < testing ; exists ; 2004 ; Global Economy Journal Volume 4 ; 4 >
-    au < testing ; exists ; 2005 ; Global Economy Journal Volume 5 ; 5 >
-    au < testing ; exists ; 2006 ; Global Economy Journal Volume 6 ; 6 >
-    au < testing ; exists ; 2007 ; Global Economy Journal Volume 7 ; 7 >
+    au < released ; manifest ; 2000 ; Global Economy Journal Volume 1 ; 1 >
+    au < released ; manifest ; 2001 ; Global Economy Journal Volume 2 ; 2 >
+    au < released ; manifest ; 2002 ; Global Economy Journal Volume 3 ; 3 >
+    au < released ; manifest ; 2004 ; Global Economy Journal Volume 4 ; 4 >
+    au < released ; manifest ; 2005 ; Global Economy Journal Volume 5 ; 5 >
+    au < released ; manifest ; 2006 ; Global Economy Journal Volume 6 ; 6 >
+    au < released ; manifest ; 2007 ; Global Economy Journal Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Economy Journal Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Economy Journal Volume 10 ; 10 >
@@ -550,13 +550,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gj
 
-    au < testing ; exists ; 2001 ; Global Jurist Volume 1 ; 1 >
-    au < testing ; exists ; 2002 ; Global Jurist Volume 2 ; 2 >
-    au < testing ; exists ; 2003 ; Global Jurist Volume 3 ; 3 >
-    au < testing ; exists ; 2004 ; Global Jurist Volume 4 ; 4 >
-    au < testing ; exists ; 2005 ; Global Jurist Volume 5 ; 5 >
-    au < testing ; exists ; 2006 ; Global Jurist Volume 6 ; 6 >
-    au < testing ; exists ; 2007 ; Global Jurist Volume 7 ; 7 >
+    au < released ; manifest ; 2001 ; Global Jurist Volume 1 ; 1 >
+    au < released ; manifest ; 2002 ; Global Jurist Volume 2 ; 2 >
+    au < released ; manifest ; 2003 ; Global Jurist Volume 3 ; 3 >
+    au < released ; manifest ; 2004 ; Global Jurist Volume 4 ; 4 >
+    au < released ; manifest ; 2005 ; Global Jurist Volume 5 ; 5 >
+    au < released ; manifest ; 2006 ; Global Jurist Volume 6 ; 6 >
+    au < released ; manifest ; 2007 ; Global Jurist Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Jurist Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Jurist Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Jurist Volume 10 ; 10 >
@@ -574,11 +574,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
-    au < testing ; exists ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
-    au < testing ; exists ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
-    au < testing ; exists ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
-    au < testing ; exists ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
-    au < testing ; exists ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
+    au < released ; manifest ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
+    au < released ; manifest ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
+    au < released ; manifest ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
+    au < released ; manifest ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
+    au < released ; manifest ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
     au < released ; manifest ; 2010 ; International Commentary on Evidence Volume 8 ; 8 >
@@ -810,14 +810,14 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
 
-    au < testing ; exists ; 2000 ; Journal of College and Character Volume 1 ; 1 >
-    au < testing ; exists ; 2001 ; Journal of College and Character Volume 2 ; 2 >
-    au < testing ; exists ; 2002 ; Journal of College and Character Volume 3 ; 3 >
-    au < testing ; exists ; 2003 ; Journal of College and Character Volume 4 ; 4 >
-    au < testing ; exists ; 2004 ; Journal of College and Character Volume 5 ; 5 >
-    au < testing ; exists ; 2005 ; Journal of College and Character Volume 6 ; 6 >
-    au < testing ; exists ; 2006 ; Journal of College and Character Volume 7 ; 7 >
-    au < testing ; exists ; 2006-2007 ; Journal of College and Character Volume 8 ; 8 >
+    au < released ; manifest ; 2000 ; Journal of College and Character Volume 1 ; 1 >
+    au < released ; manifest ; 2001 ; Journal of College and Character Volume 2 ; 2 >
+    au < released ; manifest ; 2002 ; Journal of College and Character Volume 3 ; 3 >
+    au < released ; manifest ; 2003 ; Journal of College and Character Volume 4 ; 4 >
+    au < released ; manifest ; 2004 ; Journal of College and Character Volume 5 ; 5 >
+    au < released ; manifest ; 2005 ; Journal of College and Character Volume 6 ; 6 >
+    au < released ; manifest ; 2006 ; Journal of College and Character Volume 7 ; 7 >
+    au < released ; manifest ; 2006-2007 ; Journal of College and Character Volume 8 ; 8 >
     au < released ; manifest ; 2007-2008 ; Journal of College and Character Volume 9 ; 9 >
     au < released ; manifest ; 2008-2009 ; Journal of College and Character Volume 10 ; 10 >
     au < released ; crawling ; 2010 ; Journal of College and Character Volume 11 ; 11 >
@@ -979,17 +979,17 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jsarp
 
-    au < testing ; exists ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 >
-    au < testing ; exists ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 >
-    au < testing ; exists ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
-    au < testing ; exists ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
-    au < testing ; exists ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
-    au < testing ; exists ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
-    au < testing ; exists ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
-    au < testing ; exists ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
-    au < testing ; exists ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
-    au < testing ; exists ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
-    au < testing ; exists ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
+    au < released ; manifest ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 >
+    au < released ; manifest ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 >
+    au < released ; manifest ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
+    au < released ; manifest ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
+    au < released ; manifest ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
+    au < released ; manifest ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
+    au < released ; manifest ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
+    au < released ; manifest ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
+    au < released ; manifest ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
+    au < released ; manifest ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
+    au < released ; manifest ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
     au < released ; manifest ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
     au < released ; manifest ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
     au < released ; crawling ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 >
