@@ -813,14 +813,14 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
     
-    au < manifest ; Journal of College and Character Volume 1 ; 1 ; 2000 >
-    au < manifest ; Journal of College and Character Volume 2 ; 2 ; 2001 >
-    au < manifest ; Journal of College and Character Volume 3 ; 3 ; 2002 >
-    au < manifest ; Journal of College and Character Volume 4 ; 4 ; 2003 >
-    au < manifest ; Journal of College and Character Volume 5 ; 5 ; 2004 >
-    au < manifest ; Journal of College and Character Volume 6 ; 6 ; 2005 >
-    au < manifest ; Journal of College and Character Volume 7 ; 7 ; 2006 >
-    au < manifest ; Journal of College and Character Volume 8 ; 8 ; 2006-2007 >
+    au < ready ; Journal of College and Character Volume 1 ; 1 ; 2000 >
+    au < ready ; Journal of College and Character Volume 2 ; 2 ; 2001 >
+    au < ready ; Journal of College and Character Volume 3 ; 3 ; 2002 >
+    au < ready ; Journal of College and Character Volume 4 ; 4 ; 2003 >
+    au < ready ; Journal of College and Character Volume 5 ; 5 ; 2004 >
+    au < ready ; Journal of College and Character Volume 6 ; 6 ; 2005 >
+    au < ready ; Journal of College and Character Volume 7 ; 7 ; 2006 >
+    au < ready ; Journal of College and Character Volume 8 ; 8 ; 2006-2007 >
     au < ready ; Journal of College and Character Volume 9 ; 9 ; 2007-2008 >
     au < ready ; Journal of College and Character Volume 10 ; 10 ; 2008-2009 >
     au < ready ; Journal of College and Character Volume 11 ; 11 ; 2010 >
@@ -981,17 +981,17 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jsarp
 
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 34 ; 34 ; 1997 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 35 ; 35 ; 1998 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 36 ; 36 ; 1999 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 37 ; 37 ; 2000 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 38 ; 38 ; 2001 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 39 ; 39 ; 2002 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 40 ; 40 ; 2003 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 41 ; 41 ; 2004 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 42 ; 42 ; 2005 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 43 ; 43 ; 2006 >
-    au < manifest ; Journal of Student Affairs Research and Practice Volume 44 ; 44 ; 2007 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 34 ; 34 ; 1997 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 35 ; 35 ; 1998 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 36 ; 36 ; 1999 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 37 ; 37 ; 2000 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 38 ; 38 ; 2001 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 39 ; 39 ; 2002 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 40 ; 40 ; 2003 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 41 ; 41 ; 2004 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 42 ; 42 ; 2005 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 43 ; 43 ; 2006 >
+    au < ready ; Journal of Student Affairs Research and Practice Volume 44 ; 44 ; 2007 >
     au < ready ; Journal of Student Affairs Research and Practice Volume 45 ; 45 ; 2008 >
     au < ready ; Journal of Student Affairs Research and Practice Volume 46 ; 46 ; 2009 >
     au < ready ; Journal of Student Affairs Research and Practice Volume 47 ; 47 ; 2010 >
