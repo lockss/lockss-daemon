@@ -526,13 +526,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
-    au < crawling ; exists ; 2000 ; Global Economy Journal Volume 1 ; 1 >
-    au < crawling ; exists ; 2001 ; Global Economy Journal Volume 2 ; 2 >
-    au < crawling ; exists ; 2002 ; Global Economy Journal Volume 3 ; 3 >
-    au < crawling ; exists ; 2004 ; Global Economy Journal Volume 4 ; 4 >
-    au < crawling ; exists ; 2005 ; Global Economy Journal Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; Global Economy Journal Volume 6 ; 6 >
-    au < crawling ; exists ; 2007 ; Global Economy Journal Volume 7 ; 7 >
+    au < testing ; exists ; 2000 ; Global Economy Journal Volume 1 ; 1 >
+    au < testing ; exists ; 2001 ; Global Economy Journal Volume 2 ; 2 >
+    au < testing ; exists ; 2002 ; Global Economy Journal Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Global Economy Journal Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Global Economy Journal Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Global Economy Journal Volume 6 ; 6 >
+    au < testing ; exists ; 2007 ; Global Economy Journal Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Economy Journal Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Economy Journal Volume 10 ; 10 >
@@ -550,13 +550,13 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gj
 
-    au < crawling ; exists ; 2001 ; Global Jurist Volume 1 ; 1 >
-    au < crawling ; exists ; 2002 ; Global Jurist Volume 2 ; 2 >
-    au < crawling ; exists ; 2003 ; Global Jurist Volume 3 ; 3 >
-    au < crawling ; exists ; 2004 ; Global Jurist Volume 4 ; 4 >
-    au < crawling ; exists ; 2005 ; Global Jurist Volume 5 ; 5 >
-    au < crawling ; exists ; 2006 ; Global Jurist Volume 6 ; 6 >
-    au < crawling ; exists ; 2007 ; Global Jurist Volume 7 ; 7 >
+    au < testing ; exists ; 2001 ; Global Jurist Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Global Jurist Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Global Jurist Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Global Jurist Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Global Jurist Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Global Jurist Volume 6 ; 6 >
+    au < testing ; exists ; 2007 ; Global Jurist Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; Global Jurist Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; Global Jurist Volume 9 ; 9 >
     au < released ; crawling ; 2010 ; Global Jurist Volume 10 ; 10 >
@@ -574,11 +574,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
-    au < crawling ; exists ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
-    au < crawling ; exists ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
-    au < crawling ; exists ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
-    au < crawling ; exists ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
-    au < crawling ; exists ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
+    au < testing ; exists ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
+    au < testing ; exists ; 2004 ; International Commentary on Evidence Volume 2 ; 2 >
+    au < testing ; exists ; 2005 ; International Commentary on Evidence Volume 3 ; 3 >
+    au < testing ; exists ; 2006 ; International Commentary on Evidence Volume 4 ; 4 >
+    au < testing ; exists ; 2007 ; International Commentary on Evidence Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
     au < released ; manifest ; 2010 ; International Commentary on Evidence Volume 8 ; 8 >
