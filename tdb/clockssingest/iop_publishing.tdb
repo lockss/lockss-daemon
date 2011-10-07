@@ -2188,7 +2188,7 @@
     au < manifest ; exists ; 2008 ; New Journal of Physics Volume 10 ; 10 > 
     au < manifest ; exists ; 2009 ; New Journal of Physics Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; New Journal of Physics Volume 12 ; 12 > 
-    au < testing ; exists ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
+    au < released ; manifest ; 2011 ; New Journal of Physics Volume 13 ; 13 > 
 
   }
 
@@ -2227,7 +2227,7 @@
     au < manifest ; exists ; 2008 ; Nonlinearity Volume 21 ; 21 > 
     au < manifest ; exists ; 2009 ; Nonlinearity Volume 22 ; 22 > 
     au < released ; crawling ; 2010 ; Nonlinearity Volume 23 ; 23 > 
-    au < testing ; exists ; 2011 ; Nonlinearity Volume 24 ; 24 > 
+    au < released ; manifest ; 2011 ; Nonlinearity Volume 24 ; 24 > 
 
   }
 
@@ -2327,7 +2327,7 @@
     au < manifest ; exists ; 2008 ; Nuclear Fusion Volume 48 ; 48 > 
     au < manifest ; exists ; 2009 ; Nuclear Fusion Volume 49 ; 49 > 
     au < released ; crawling ; 2010 ; Nuclear Fusion Volume 50 ; 50 > 
-    au < manifest ; exists ; 2011 ; Nuclear Fusion Volume 51 ; 51 > 
+    au < testing ; exists ; 2011 ; Nuclear Fusion Volume 51 ; 51 > 
 
   }
 
@@ -2425,8 +2425,8 @@
     au < manifest ; exists ; 2009 ; Physica Scripta Volume 80 ; 80 > 
     au < released ; manifest ; 2010 ; Physica Scripta Volume 81 ; 81 > 
     au < released ; manifest ; 2010 ; Physica Scripta Volume 82 ; 82 > 
-    au < manifest ; exists ; 2011 ; Physica Scripta Volume 83 ; 83 > 
-    au < manifest ; exists ; 2011 ; Physica Scripta Volume 84 ; 84 > 
+    au < testing ; exists ; 2011 ; Physica Scripta Volume 83 ; 83 > 
+    au < testing ; exists ; 2011 ; Physica Scripta Volume 84 ; 84 > 
 
   }
 
@@ -2450,7 +2450,7 @@
     au < manifest ; exists ; 2008 ; Physical Biology Volume 5 ; 5 > 
     au < manifest ; exists ; 2009 ; Physical Biology Volume 6 ; 6 > 
     au < released ; manifest ; 2010 ; Physical Biology Volume 7 ; 7 > 
-    au < manifest ; exists ; 2011 ; Physical Biology Volume 8 ; 8 > 
+    au < testing ; exists ; 2011 ; Physical Biology Volume 8 ; 8 > 
 
   }
 
