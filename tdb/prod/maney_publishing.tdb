@@ -55,6 +55,7 @@
     param[publisher_id] = maney
     param[journal_id] = amb 
     param[journal_issn] = 0002-6980
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1937 ; Ambix Volume 1 ; 1 > 
@@ -114,7 +115,7 @@
     au < manifest ; 2008 ; Ambix Volume 55 ; 55 >
     au < manifest ; 2009 ; Ambix Volume 56 ; 56 >
     au < manifest ; 2010 ; Ambix Volume 57 ; 57 >
-    au < manifest ; 2011 ; Ambix Volume 58 ; 58 >
+    au < testing ; 2011 ; Ambix Volume 58 ; 58 >
 
   }
 
@@ -230,6 +231,7 @@
     param[publisher_id] = maney
     param[journal_id] = aaa 
     param[journal_issn] = 1741-6124
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2004 ; Arms & Armour Volume 1 ; 1 > 
@@ -239,7 +241,7 @@
     au < manifest ; 2008 ; Arms & Armour Volume 5 ; 5 > 
     au < manifest ; 2009 ; Arms & Armour Volume 6 ; 6 > 
     au < manifest ; 2010 ; Arms & Armour Volume 7 ; 7 > 
-    au < manifest ; 2011 ; Arms & Armour Volume 8 ; 8 > 
+    au < testing ; 2011 ; Arms & Armour Volume 8 ; 8 > 
 
   }
 
@@ -341,6 +343,7 @@
     param[publisher_id] = maney
     param[journal_id] = bst 
     param[journal_issn] = 1474-8932
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0309-7765
 
@@ -353,7 +356,7 @@
     au < manifest ; 2008 ; Bronte Studies Volume 33 ; 33 > 
     au < manifest ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < manifest ; 2010 ; Bronte Studies Volume 35 ; 35 > 
-    au < manifest ; 2011 ; Bronte Studies Volume 36 ; 36 > 
+    au < testing ; 2011 ; Bronte Studies Volume 36 ; 36 > 
 
   }
 
@@ -424,6 +427,7 @@
     param[publisher_id] = maney
     param[journal_id] = byz 
     param[journal_issn] = 0307-0131
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1975 ; Byzantine and Modern Greek Studies Volume 1 ; 1 >
@@ -460,7 +464,7 @@
     au < manifest ; 2008 ; Byzantine and Modern Greek Studies Volume 32 ; 32 >
     au < manifest ; 2009 ; Byzantine and Modern Greek Studies Volume 33 ; 33 >
     au < manifest ; 2010 ; Byzantine and Modern Greek Studies Volume 34 ; 34 >
-    au < manifest ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
+    au < testing ; 2011 ; Byzantine and Modern Greek Studies Volume 35 ; 35 >
 
   }
 
@@ -622,6 +626,7 @@
     param[publisher_id] = maney
     param[journal_id] = ceu 
     param[journal_issn] = 1479-0963
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2003 ; Central Europe Volume 1 ; 1 > 
@@ -632,7 +637,7 @@
     au < manifest ; 2008 ; Central Europe Volume 6 ; 6 > 
     au < manifest ; 2009 ; Central Europe Volume 7 ; 7 > 
     au < manifest ; 2010 ; Central Europe Volume 8 ; 8 > 
-    au < manifest ; 2011 ; Central Europe Volume 9 ; 9 > 
+    au < testing ; 2011 ; Central Europe Volume 9 ; 9 > 
 
   }
 
