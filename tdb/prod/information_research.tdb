@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Information Research
+  >
+
+  {
+    title <
+      name = International Research ;
+      issn = 1368-1613 ;
+      issnl = 1368-1613
+    >
+
+    rights = openaccess
+    plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
+    param[base_url] = http://www.informationr.net/ir/
+    implicit < status ; name ; param[volume_name] >
+
+    au < manifest ; Information Research Volume 1 ; 1 >
+    au < manifest ; Information Research Volume 2 ; 2 >
+    au < manifest ; Information Research Volume 3 ; 3 >
+    au < manifest ; Information Research Volume 4 ; 4 >
+    au < manifest ; Information Research Volume 5 ; 5 >
+    au < manifest ; Information Research Volume 6 ; 6 >
+    au < manifest ; Information Research Volume 7 ; 7 >
+    au < manifest ; Information Research Volume 8 ; 8 >
+    au < manifest ; Information Research Volume 9 ; 9 >
+    au < manifest ; Information Research Volume 10 ; 10 >
+    au < manifest ; Information Research Volume 11 ; 11 >
+    au < manifest ; Information Research Volume 12 ; 12 >
+    au < manifest ; Information Research Volume 13 ; 13 >
+    au < manifest ; Information Research Volume 14 ; 14 >
+    au < manifest ; Information Research Volume 15 ; 15 >
+    au < manifest ; Information Research Volume 16 ; 16 >
+
+  }
+
+}
