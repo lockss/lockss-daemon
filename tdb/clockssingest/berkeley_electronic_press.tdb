@@ -682,10 +682,10 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijnes
 
-    au < crawling ; exists ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
-    au < crawling ; exists ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
-    au < crawling ; exists ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
-    au < crawling ; exists ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
+    au < released ; manifest ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
+    au < released ; manifest ; 2005 ; International Journal of Nursing Education Scholarship Volume 2 ; 2 >
+    au < released ; manifest ; 2006 ; International Journal of Nursing Education Scholarship Volume 3 ; 3 >
+    au < released ; manifest ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 >
@@ -739,11 +739,11 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jafio
 
-    au < crawling ; exists ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
-    au < crawling ; exists ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
-    au < crawling ; exists ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
-    au < crawling ; exists ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
-    au < crawling ; exists ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
+    au < released ; manifest ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
+    au < released ; manifest ; 2004 ; Journal of Agricultural & Food Industrial Organization Volume 2 ; 2 >
+    au < released ; manifest ; 2005 ; Journal of Agricultural & Food Industrial Organization Volume 3 ; 3 >
+    au < released ; manifest ; 2006 ; Journal of Agricultural & Food Industrial Organization Volume 4 ; 4 >
+    au < released ; manifest ; 2007 ; Journal of Agricultural & Food Industrial Organization Volume 5 ; 5 >
     au < released ; crawling ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
     au < released ; crawling ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Agricultural & Food Industrial Organization Volume 8 ; 8 >
