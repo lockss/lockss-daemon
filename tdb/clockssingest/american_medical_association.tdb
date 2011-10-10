@@ -1755,7 +1755,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
 
         au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
-        au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
+        au < testing ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
 
       }
 
@@ -1813,7 +1813,7 @@
     au < released ; crawling ; 2008 ; Virtual Mentor Volume 10 ; 10 ; 2008 >
     au < released ; crawling ; 2009 ; Virtual Mentor Volume 11 ; 11 ; 2009 >
     au < released ; crawling ; 2010 ; Virtual Mentor Volume 12 ; 12 ; 2010 >
-    au < testing ; exists ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
+    au < released ; crawling ; 2011 ; Virtual Mentor Volume 13 ; 13 ; 2011 >
 
   }
   
