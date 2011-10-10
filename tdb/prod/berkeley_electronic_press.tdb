@@ -32,11 +32,11 @@
     param[journal_abbr] = bejeap/advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < manifest ; Advances in Economic Analysis & Policy Volume 1 ; 1 ; 2001 >
-    au < manifest ; Advances in Economic Analysis & Policy Volume 2 ; 2 ; 2002 >
-    au < manifest ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
-    au < manifest ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
-    au < manifest ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
+    au < notReady ; Advances in Economic Analysis & Policy Volume 1 ; 1 ; 2001 >
+    au < notReady ; Advances in Economic Analysis & Policy Volume 2 ; 2 ; 2002 >
+    au < notReady ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
+    au < notReady ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
+    au < notReady ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
     au < notReady ; Advances in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
 
   }
@@ -52,11 +52,11 @@
     param[journal_abbr] = bejm/advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
-    au < manifest ; Advances in Macroeconomics Volume 1 ; 1 ; 2001 >
-    au < manifest ; Advances in Macroeconomics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Advances in Macroeconomics Volume 3 ; 3 ; 2003 >
-    au < manifest ; Advances in Macroeconomics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Advances in Macroeconomics Volume 5 ; 5 ; 2005 >
+    au < notReady ; Advances in Macroeconomics Volume 1 ; 1 ; 2001 >
+    au < notReady ; Advances in Macroeconomics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Advances in Macroeconomics Volume 3 ; 3 ; 2003 >
+    au < notReady ; Advances in Macroeconomics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Advances in Macroeconomics Volume 5 ; 5 ; 2005 >
     au < notReady ; Advances in Macroeconomics Volume 6 ; 6 ; 2006 >    
 
   }
@@ -72,11 +72,11 @@
     param[journal_abbr] = bejte/advances
     comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
 
-    au < manifest ; Advances in Theoretical Economics Volume 1 ; 1 ; 2001 >
-    au < manifest ; Advances in Theoretical Economics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Advances in Theoretical Economics Volume 3 ; 3 ; 2003 >
-    au < manifest ; Advances in Theoretical Economics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Advances in Theoretical Economics Volume 5 ; 5 ; 2005 >
+    au < notReady ; Advances in Theoretical Economics Volume 1 ; 1 ; 2001 >
+    au < notReady ; Advances in Theoretical Economics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Advances in Theoretical Economics Volume 3 ; 3 ; 2003 >
+    au < notReady ; Advances in Theoretical Economics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Advances in Theoretical Economics Volume 5 ; 5 ; 2005 >
     au < notReady ; Advances in Theoretical Economics Volume 6 ; 6 ; 2006 >    
 
   }
@@ -163,9 +163,9 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejeap
     comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    comment[0] = volumes 1-6 really do not exist (notReady pages point to arbitrary preceding titles)
     comment[bejeap1] = duplicate of 1538-0629 volume 1
-    comment[bejeap2] = manifest page has no links
+    comment[bejeap2] = notReady page has no links
     comment[bejeap3] = duplicate of 1538-0645 volume 3
     comment[bejeap4] = duplicate of 1538-0645 volume 4
     comment[bejeap5] = duplicate of 1538-0645 volume 5
@@ -197,7 +197,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejm
     comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    comment[0] = volumes 1-6 really do not exist (notReady pages point to arbitrary preceding titles)
     
     au < released ; The B.E. Journal of Macroeconomics Volume 1 ; 1 ; 2004 >
     au < released ; The B.E. Journal of Macroeconomics Volume 2 ; 2 ; 2006 >
@@ -225,7 +225,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejte
     comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    comment[0] = volumes 1-6 really do not exist (notReady pages point to arbitrary preceding titles)
 
     au < released ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 ; 2002 >
     au < released ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 ; 2006 >
@@ -335,10 +335,10 @@
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
     comment[year] = vol 1 website label is 2001 but articles are dated 2002
 
-    au < manifest ; Contributions to Economic Analysis & Policy Volume 1 ; 1 ; 2002 >    
-    au < manifest ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; 2003 >
-    au < manifest ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; 2004 >    
-    au < manifest ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
+    au < notReady ; Contributions to Economic Analysis & Policy Volume 1 ; 1 ; 2002 >    
+    au < notReady ; Contributions to Economic Analysis & Policy Volume 2 ; 2 ; 2003 >
+    au < notReady ; Contributions to Economic Analysis & Policy Volume 3 ; 3 ; 2004 >    
+    au < notReady ; Contributions to Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
     au < notReady ; Contributions to Economic Analysis & Policy Volume 5 ; 5 ; 2006 >    
 
   }
@@ -354,11 +354,11 @@
     param[journal_abbr] = bejm/contributions
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
-    au < manifest ; Contributions to Macroeconomics Volume 1 ; 1 ; 2001 >    
-    au < manifest ; Contributions to Macroeconomics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Contributions to Macroeconomics Volume 3 ; 3 ; 2003 >    
-    au < manifest ; Contributions to Macroeconomics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Contributions to Macroeconomics Volume 5 ; 5 ; 2005 >    
+    au < notReady ; Contributions to Macroeconomics Volume 1 ; 1 ; 2001 >    
+    au < notReady ; Contributions to Macroeconomics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Contributions to Macroeconomics Volume 3 ; 3 ; 2003 >    
+    au < notReady ; Contributions to Macroeconomics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Contributions to Macroeconomics Volume 5 ; 5 ; 2005 >    
     au < notReady ; Contributions to Macroeconomics Volume 6 ; 6 ; 2006 > 
 
   }
@@ -374,11 +374,11 @@
     param[journal_abbr] = bejte/contributions
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
-    au < manifest ; Contributions to Theoretical Economics Volume 1 ; 1 ; 2001 >    
-    au < manifest ; Contributions to Theoretical Economics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Contributions to Theoretical Economics Volume 3 ; 3 ; 2003 >    
-    au < manifest ; Contributions to Theoretical Economics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Contributions to Theoretical Economics Volume 5 ; 5 ; 2005 >    
+    au < notReady ; Contributions to Theoretical Economics Volume 1 ; 1 ; 2001 >    
+    au < notReady ; Contributions to Theoretical Economics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Contributions to Theoretical Economics Volume 3 ; 3 ; 2003 >    
+    au < notReady ; Contributions to Theoretical Economics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Contributions to Theoretical Economics Volume 5 ; 5 ; 2005 >    
     au < notReady ; Contributions to Theoretical Economics Volume 6 ; 6 ; 2006 > 
 
   }
@@ -483,7 +483,7 @@
     param[journal_abbr] = bejeap/frontiers
     comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < manifest ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 ; 2005 >    
+    au < notReady ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 ; 2005 >    
 
   }
 
@@ -498,8 +498,8 @@
     param[journal_abbr] = bejm/frontiers
     comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
 
-    au < manifest ; Frontiers of Macroeconomics Volume 1 ; 1 ; 2004 >    
-    au < manifest ; Frontiers of Macroeconomics Volume 2 ; 2 ; 2006 >
+    au < notReady ; Frontiers of Macroeconomics Volume 1 ; 1 ; 2004 >    
+    au < notReady ; Frontiers of Macroeconomics Volume 2 ; 2 ; 2006 >
 
   }
 
@@ -515,8 +515,8 @@
     comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
     comment[year] = vol 1 website label is 2001 but article is dated 2002
 
-    au < manifest ; Frontiers of Theoretical Economics Volume 1 ; 1 ; 2002 >    
-    au < manifest ; Frontiers of Theoretical Economics Volume 2 ; 2 ; 2006 >
+    au < notReady ; Frontiers of Theoretical Economics Volume 1 ; 1 ; 2002 >    
+    au < notReady ; Frontiers of Theoretical Economics Volume 2 ; 2 ; 2006 >
 
   }
 
@@ -1490,12 +1490,12 @@
     param[journal_abbr] = bejeap/topics
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
 
-    au < manifest ; Topics in Economic Analysis & Policy Volume 1 ; 1 ; 2001 >
-    au < manifest ; Topics in Economic Analysis & Policy Volume 2 ; 2 ; 2002 >
-    au < manifest ; Topics in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
-    au < manifest ; Topics in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
-    au < manifest ; Topics in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
-    au < manifest ; Topics in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Topics in Economic Analysis & Policy Volume 1 ; 1 ; 2001 >
+    au < notReady ; Topics in Economic Analysis & Policy Volume 2 ; 2 ; 2002 >
+    au < notReady ; Topics in Economic Analysis & Policy Volume 3 ; 3 ; 2003 >
+    au < notReady ; Topics in Economic Analysis & Policy Volume 4 ; 4 ; 2004 >
+    au < notReady ; Topics in Economic Analysis & Policy Volume 5 ; 5 ; 2005 >
+    au < notReady ; Topics in Economic Analysis & Policy Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -1510,12 +1510,12 @@
     param[journal_abbr] = bejm/topics
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
-    au < manifest ; Topics in Macroeconomics Volume 1 ; 1 ; 2001 >
-    au < manifest ; Topics in Macroeconomics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Topics in Macroeconomics Volume 3 ; 3 ; 2003 >
-    au < manifest ; Topics in Macroeconomics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Topics in Macroeconomics Volume 5 ; 5 ; 2005 >
-    au < manifest ; Topics in Macroeconomics Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Topics in Macroeconomics Volume 1 ; 1 ; 2001 >
+    au < notReady ; Topics in Macroeconomics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Topics in Macroeconomics Volume 3 ; 3 ; 2003 >
+    au < notReady ; Topics in Macroeconomics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Topics in Macroeconomics Volume 5 ; 5 ; 2005 >
+    au < notReady ; Topics in Macroeconomics Volume 6 ; 6 ; 2006 >    
 
   }
 
@@ -1530,12 +1530,12 @@
     param[journal_abbr] = bejte/topics
     comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
 
-    au < manifest ; Topics in Theoretical Economics Volume 1 ; 1 ; 2001 >
-    au < manifest ; Topics in Theoretical Economics Volume 2 ; 2 ; 2002 >
-    au < manifest ; Topics in Theoretical Economics Volume 3 ; 3 ; 2003 >
-    au < manifest ; Topics in Theoretical Economics Volume 4 ; 4 ; 2004 >
-    au < manifest ; Topics in Theoretical Economics Volume 5 ; 5 ; 2005 >
-    au < manifest ; Topics in Theoretical Economics Volume 6 ; 6 ; 2006 >    
+    au < notReady ; Topics in Theoretical Economics Volume 1 ; 1 ; 2001 >
+    au < notReady ; Topics in Theoretical Economics Volume 2 ; 2 ; 2002 >
+    au < notReady ; Topics in Theoretical Economics Volume 3 ; 3 ; 2003 >
+    au < notReady ; Topics in Theoretical Economics Volume 4 ; 4 ; 2004 >
+    au < notReady ; Topics in Theoretical Economics Volume 5 ; 5 ; 2005 >
+    au < notReady ; Topics in Theoretical Economics Volume 6 ; 6 ; 2006 >    
 
   }
 
