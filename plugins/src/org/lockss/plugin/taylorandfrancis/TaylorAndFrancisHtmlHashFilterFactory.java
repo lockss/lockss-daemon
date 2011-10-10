@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.1 2011-10-05 00:55:55 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.2 2011-10-10 19:20:04 thib_gc Exp $
  */
 
 /*
@@ -32,19 +32,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.apache.commons.io.IOUtils;
+import org.apache.log4j.lf5.util.StreamUtils;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.*;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 
 public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
+  Logger log = Logger.getLogger("TaylorAndFrancisHtmlHashFilterFactory");
+  
   @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
@@ -56,12 +65,14 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // Related and most read articles
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
         /*
-         * Proper to the has filter
+         * Proper to the hash filter
          */
         // Contains site-specific SFX code
         new TagNameFilter("script"),
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+        // Counterpart of the previous clause when there is no integrated SFX
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/servlet/linkout\\?"),
         // Contains institution-specific markup
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // Contains a cookie or session ID
@@ -70,10 +81,50 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "credits"),
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
+        // Contains a variant phrase "Full access" or "Free access"
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIconWrapper"),
     };
+    
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                if ("span".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("id") != null) {
+                  tag.removeAttribute("id");
+                }
+                else if ("div".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("class") != null && tag.getAttribute("class").startsWith("access ")) {
+                  tag.removeAttribute("class");
+                }
+                else {
+                  super.visitTag(tag);
+                }
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
+    };
+    
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+                                     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                               xform));
   }
 
+  public static void main(String[] args) throws Exception {
+    FilterFactory fact = new TaylorAndFrancisHtmlHashFilterFactory();
+    InputStream in = fact.createFilteredInputStream(null, new FileInputStream("/tmp/h0"), "UTF-8");
+    IOUtils.copy(in, new FileOutputStream("/tmp/h0.out"));
+  }
 }
