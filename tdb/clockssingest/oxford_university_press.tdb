@@ -38,7 +38,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < released ; crawling ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
 
     }
 
@@ -71,7 +71,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Adaptation Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Adaptation Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; Adaptation Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; Adaptation Volume 4 ; 4 ; >
 
     }
 
@@ -201,7 +201,7 @@
     au < manifest ; exists ; 2008 ; African Affairs Volume 107 ; 107 ; >
     au < released ; manifest ; 2009 ; African Affairs Volume 108 ; 108 ; >
     au < manifest ; exists ; 2010 ; African Affairs Volume 109 ; 109 ; >
-    au < manifest ; exists ; 2011 ; African Affairs Volume 110 ; 110 ; >
+    au < crawling ; exists ; 2011 ; African Affairs Volume 110 ; 110 ; >
   
     }
     
@@ -270,7 +270,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Age and Ageing Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     
     }
 
@@ -345,7 +345,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
     au < released ; crawling ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
 
     }
 
@@ -661,8 +661,8 @@
     au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
     au < ready ; exists ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 ; >
-    au < manifest ; exists ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
-    au < manifest ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
+    au < crawling ; exists ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
+    au < crawling ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
 
     }
 
@@ -704,7 +704,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; American Law and Economics Review Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2011 ; American Law and Economics Review Volume 13 ; 13 ; >
 
     }
 
@@ -755,7 +755,7 @@
     au < manifest ; exists ; 2008 ; American Literary History Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; American Literary History Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; American Literary History Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2011 ; American Literary History Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2011 ; American Literary History Volume 23 ; 23 ; >
 
     }
     
@@ -855,7 +855,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Analysis Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Analysis Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; Analysis Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2011 ; Analysis Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2011 ; Analysis Volume 71 ; 71 ; >
 
     }
 
@@ -1043,7 +1043,7 @@
     au < released ; crawling ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
     au < released ; crawling ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
     au < released ; manifest ; 2010 ; Annals of Botany Volume 106 ; 106 ; >
-    au < manifest ; exists ; 2011 ; Annals of Botany Volume 107 ; 107 ; >
+    au < crawling ; exists ; 2011 ; Annals of Botany Volume 107 ; 107 ; >
 
     }
 
@@ -1121,7 +1121,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
     au < released ; crawling ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; >
     au < released ; crawling ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
-    au < wanted ; exists ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2011 ; The Annals of Occupational Hygiene Volume 55 ; 55 ; >
 
     }
 
@@ -1172,7 +1172,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Annals of Oncology Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
 
     }
 
@@ -1215,7 +1215,7 @@
     au < exists ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 ; >
     au < exists ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
     au < manifest ; exists ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
     
     }
     
@@ -1276,7 +1276,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Applied Linguistics Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2011 ; Applied Linguistics Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2011 ; Applied Linguistics Volume 32 ; 32 ; >
 
     }
 
@@ -1356,7 +1356,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
 
     }
 
@@ -1407,7 +1407,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
  
     }
 
@@ -1463,7 +1463,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Bioinformatics Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
-    au < wanted ; exists ; 2011 ; Bioinformatics Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2011 ; Bioinformatics Volume 27 ; 27 ; >
 
     }
 
@@ -1590,7 +1590,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Biometrika Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Biometrika Volume 96 ; 96 ; >
     au < released ; crawling ; 2010 ; Biometrika Volume 97 ; 97 ; >
-    au < wanted ; exists ; 2011 ; Biometrika Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2011 ; Biometrika Volume 98 ; 98 ; >
 
     }
 
@@ -1622,7 +1622,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 4 ; 4 ; >
 
     }
 
@@ -1663,7 +1663,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Biostatistics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Biostatistics Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; Biostatistics Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; Biostatistics Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; Biostatistics Volume 12 ; 12 ; >
 
     }
 
@@ -1826,7 +1826,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Brain Volume 131 ; 131 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Brain Volume 132 ; 132 ; >
     au < released ; crawling ; 2010 ; Brain Volume 133 ; 133 ; >
-    au < wanted ; exists ; 2011 ; Brain Volume 134 ; 134 ; >
+    au < crawling ; exists ; 2011 ; Brain Volume 134 ; 134 ; >
 
     }
 
@@ -1896,7 +1896,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
     au < released ; crawling ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
-    au < wanted ; exists ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
 
     }
 
@@ -1957,7 +1957,7 @@
     au < manifest ; exists ; 2008 ; Briefings in Functional Genomics Volume 7 ; 7 ; >
     au < released ; manifest ; 2009 ; Briefings in Functional Genomics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Briefings in Functional Genomics Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2011 ; Briefings in Functional Genomics Volume 10 ; 10 ; >
   
     }
 
@@ -2037,7 +2037,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
     au < released ; crawling ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
-    au < wanted ; exists ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2011 ; The British Journal of Aesthetics Volume 51 ; 51 ; >
 
     }
 
@@ -2162,7 +2162,7 @@
     au < released ; manifest ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
     au < manifest ; exists ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
-    au < manifest ; exists ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
 
     }
 
@@ -2242,7 +2242,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
     au < released ; crawling ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
-    au < wanted ; exists ; 2011 ; The British Journal of Criminology Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2011 ; The British Journal of Criminology Volume 51 ; 51 ; >
 
     }
 
@@ -2333,7 +2333,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
     au < released ; crawling ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
+    au < crawling ; exists ; 2011 ; The British Journal for the Philosophy of Science Volume 62 ; 62 ; >
 
     }
 
@@ -2403,7 +2403,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
     au < released ; crawling ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
     au < released ; crawling ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
-    au < wanted ; exists ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2011 ; The British Journal of Social Work Volume 41 ; 41 ; >
 
     }
 
@@ -2529,7 +2529,7 @@
     au < manifest ; exists ; 2010 ; British Medical Bulletin Volume 94 ; 94 ; >
     au < manifest ; exists ; 2010 ; British Medical Bulletin Volume 95 ; 95 ; >
     au < released ; crawling ; 2010 ; British Medical Bulletin Volume 96 ; 96 ; >
-    au < manifest ; exists ; 2011 ; British Medical Bulletin Volume 97 ; 97 ; >
+    au < crawling ; exists ; 2011 ; British Medical Bulletin Volume 97 ; 97 ; >
 
     }
 
@@ -2601,7 +2601,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
     au < released ; crawling ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
     au < released ; crawling ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
-    au < wanted ; exists ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2011 ; Bulletin of the London Mathematical Society Volume 43 ; 43 ; >
 
     }
 
@@ -2665,7 +2665,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
     au < released ; crawling ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
     au < released ; crawling ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
-    au < wanted ; exists ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2011 ; Cambridge Journal of Economics Volume 35 ; 35 ; >
 
     }
 
@@ -2698,7 +2698,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; Cambridge Journal of Regions, Economy and Society Volume 4 ; 4 ; > 
+    au < crawling ; exists ; 2011 ; Cambridge Journal of Regions, Economy and Society Volume 4 ; 4 ; > 
 
     }
 
@@ -2767,7 +2767,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
     au < released ; crawling ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
-    au < wanted ; exists ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2011 ; The Cambridge Quarterly Volume 40 ; 40 ; >
 
     }
     
@@ -2802,7 +2802,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
     au < released ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; >
     au < released ; crawling ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
-    au < wanted ; exists ; 2011 ; Capital Markets Law Journal Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2011 ; Capital Markets Law Journal Volume 6 ; 6 ; >
 
     }
 
@@ -2863,7 +2863,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
     au < released ; crawling ; 2009 ; Carcinogenesis Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Carcinogenesis Volume 31 ; 31 ; >
-    au < wanted ; exists ; 2011 ; Carcinogenesis Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2011 ; Carcinogenesis Volume 32 ; 32 ; >
 
     }
 
@@ -2987,9 +2987,9 @@
     au < testing ; exists ; 2010 ; Cardiovascular Research Volume 86 ; 86 ; >
     au < testing ; exists ; 2010 ; Cardiovascular Research Volume 87 ; 87 ; >
     au < testing ; exists ; 2010 ; Cardiovascular Research Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2011 ; Cardiovascular Research Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2011 ; Cardiovascular Research Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2011 ; Cardiovascular Research Volume 91 ; 91 ; >
 
     }
 
@@ -3039,7 +3039,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Cerebral Cortex Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
 
     }
 
@@ -3077,7 +3077,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >   
     au < released ; crawling ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
     au < released ; crawling ; 2010 ; CESifo Economic Studies Volume 56 ; 56 ; >
-    au < wanted ; exists ; 2011 ; CESifo Economic Studies Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2011 ; CESifo Economic Studies Volume 57 ; 57 ; >
 
     }
 
@@ -3142,7 +3142,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
     au < released ; crawling ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
-    au < wanted ; exists ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
 
     }
 
@@ -3181,7 +3181,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
     au < released ; crawling ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
     au < released ; crawling ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 ; >
-    au < wanted ; exists ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2011 ; Chinese Journal of International Law Volume 10 ; 10 ; >
 
     }
 
@@ -3258,7 +3258,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2011 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2011 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 17 ; 17 ; >
 
     }
 
@@ -3404,7 +3404,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
     au < released ; crawling ; 2009 ; Community Development Journal Volume 44 ; 44 ; >
     au < released ; crawling ; 2010 ; Community Development Journal Volume 45 ; 45 ; >
-    au < wanted ; exists ; 2011 ; Community Development Journal Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2011 ; Community Development Journal Volume 46 ; 46 ; >
 
     }
 
@@ -3487,7 +3487,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
     au < released ; crawling ; 2009 ; The Computer Journal Volume 52 ; 52 ; >
     au < released ; crawling ; 2010 ; The Computer Journal Volume 53 ; 53 ; >
-    au < wanted ; exists ; 2011 ; The Computer Journal Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2011 ; The Computer Journal Volume 54 ; 54 ; >
 
     }
 
@@ -3521,7 +3521,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2011 ; Contemporary Women's Writing Volume 5 ; 5 ; >
 
     }
 
@@ -3561,7 +3561,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 ; >
 
     }
 
@@ -3620,7 +3620,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
     au < released ; crawling ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Contributions to Political Economy Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2011 ; Contributions to Political Economy Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2011 ; Contributions to Political Economy Volume 30 ; 30 ; >
 
     }
 
@@ -3667,7 +3667,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; DNA Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; DNA Research Volume 16 ; 16 ; >
     au < released ; crawling ; 2010 ; DNA Research Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2011 ; DNA Research Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2011 ; DNA Research Volume 18 ; 18 ; >
 
     }
 
@@ -3735,7 +3735,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Early Music Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Early Music Volume 37 ; 37 ; >
     au < released ; crawling ; 2010 ; Early Music Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2011 ; Early Music Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2011 ; Early Music Volume 39 ; 39 ; >
 
     }
 
@@ -3880,7 +3880,7 @@
     au < manifest ; exists ; 2008 ; English Historical Review Volume CXXIII ; CXXIII ; >
     au < released ; manifest ; 2009 ; English Historical Review Volume CXXIV ; CXXIV ; >
     au < released ; manifest ; 2010 ; English Historical Review Volume CXXV ; CXXV ; >
-    au < manifest ; exists ; 2011 ; English Historical Review Volume CXXVI ; CXXVI ; >
+    au < crawling ; exists ; 2011 ; English Historical Review Volume CXXVI ; CXXVI ; >
 
     }
 
@@ -3974,7 +3974,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; ELT Journal Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; ELT Journal Volume 64 ; 64 ; >
-    au < wanted ; exists ; 2011 ; ELT Journal Volume 65 ; 65 ; > 
+    au < crawling ; exists ; 2011 ; ELT Journal Volume 65 ; 65 ; > 
 
     }
 
@@ -4015,7 +4015,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Enterprise & Society Volume 9 ; 9 ; >
     au < released ; crawling ; 2009 ; Enterprise & Society Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; Enterprise & Society Volume 11 ; 11 ; >
-    au < wanted ; exists ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; Enterprise & Society Volume 12 ; 12 ; >
 
     }
      
@@ -4199,7 +4199,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Essays in Criticism Volume 59 ; 59 ; >
     au < released ; crawling ; 2010 ; Essays in Criticism Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2011 ; Essays in Criticism Volume 61 ; 61 ; >
+    au < crawling ; exists ; 2011 ; Essays in Criticism Volume 61 ; 61 ; >
 
     }
     
@@ -4241,7 +4241,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Europace Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Europace Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Europace Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; Europace Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2011 ; Europace Volume 13 ; 13 ; >
 
     }
 
@@ -4302,7 +4302,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < testing ; exists ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
 
     }
 
@@ -4372,7 +4372,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
 
     }
 
@@ -4414,7 +4414,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
 
     }
 
@@ -4465,7 +4465,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; European Journal of International Law Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
-    au < wanted ; exists ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2011 ; European Journal of International Law Volume 22 ; 22 ; >
 
     }
 
@@ -4527,7 +4527,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Orthodontics Volume 30 ; 30 ; >
     au < released ; crawling ; 2009 ; European Journal of Orthodontics Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; European Journal of Orthodontics Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; > 
+    au < crawling ; exists ; 2011 ; European Journal of Orthodontics Volume 33 ; 33 ; > 
 
     }
 
@@ -4577,7 +4577,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Public Health Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; European Journal of Public Health Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; European Journal of Public Health Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2011 ; European Journal of Public Health Volume 21 ; 21 ; >
 
     }
 
@@ -4644,7 +4644,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >  
+    au < crawling ; exists ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >  
 
     }
 
@@ -4700,7 +4700,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
     au < released ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
-    au < wanted ; exists ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
 
     }
 
@@ -4789,7 +4789,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < released ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Family Practice Volume 27 ; 27 ; >
-    au < wanted ; exists ; 2011 ; Family Practice Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2011 ; Family Practice Volume 28 ; 28 ; >
 
     }
 
@@ -4902,7 +4902,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Forestry Volume 81 ; 81 ; >
     au < released ; crawling ; 2009 ; Forestry Volume 82 ; 82 ; >
     au < released ; crawling ; 2010 ; Forestry Volume 83 ; 83 ; >
-    au < wanted ; exists ; 2011 ; Forestry Volume 84 ; 84 ; >
+    au < crawling ; exists ; 2011 ; Forestry Volume 84 ; 84 ; >
 
     }
 
@@ -4978,7 +4978,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < released ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; >
     au < released ; crawling ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
-    au < wanted ; exists ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >   
+    au < crawling ; exists ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >   
 
     }
 
@@ -5032,7 +5032,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; French History Volume 22 ; 22 ; >
     au < released ; crawling ; 2009 ; French History Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; French History Volume 24 ; 24 ; >
-    au < wanted ; exists ; 2011 ; French History Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2011 ; French History Volume 25 ; 25 ; >
 
     }
 
@@ -5126,7 +5126,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; French Studies: A Quarterly Review Volume 62 ; 62 ; >
     au < released ; crawling ; 2009 ; French Studies: A Quarterly Review Volume 63 ; 63 ; >
     au < released ; crawling ; 2010 ; French Studies Volume 64 ; 64 ; >
-    au < wanted ; exists ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
 
     }
     
@@ -5176,7 +5176,7 @@
     au < manifest ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
     au < released ; manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
     au < released ; manifest ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     
     }
       
@@ -5234,7 +5234,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; German History Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; German History Volume 27 ; 27 ; >
     au < released ; crawling ; 2010 ; German History Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2011 ; German History Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2011 ; German History Volume 29 ; 29 ; >
 
     }
 
@@ -5313,7 +5313,7 @@
     au < manifest ; exists ; 2008 ; The Gerontologist Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Gerontologist Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2011 ; The Gerontologist Volume 51 ; 51 ; > 
+    au < crawling ; exists ; 2011 ; The Gerontologist Volume 51 ; 51 ; > 
 
     }
 
@@ -5363,7 +5363,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Glycobiology Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Glycobiology Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Glycobiology Volume 20 ; 20 ; >
-    au < wanted ; exists ; 2011 ; Glycobiology Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2011 ; Glycobiology Volume 21 ; 21 ; >
 
     }
 
@@ -5418,7 +5418,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Education Research Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2011 ; Health Education Research Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2011 ; Health Education Research Volume 26 ; 26 ; >
 
     }
 
@@ -5473,7 +5473,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
 
     }
 
@@ -5528,7 +5528,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
-    au < wanted ; exists ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
 
     }
 
@@ -5624,7 +5624,7 @@
     au < released ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
     au < notReady ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; History Workshop Journal Volume 70 ; 70 ; >
-    au < wanted ; exists ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
+    au < crawling ; exists ; 2011 ; History Workshop Journal Volume 71 ; 71 ; >  
 
     }
     
@@ -5678,7 +5678,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
 
     }
     
