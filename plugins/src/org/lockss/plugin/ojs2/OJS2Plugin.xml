@@ -5,13 +5,17 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
         <string>2</string>
       </entry>
     </map>
@@ -90,5 +94,13 @@
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
     <string>&quot;%sindex\.php/%s/login\?&quot;, base_url, journal_id</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory</string>
   </entry>
 </map>
