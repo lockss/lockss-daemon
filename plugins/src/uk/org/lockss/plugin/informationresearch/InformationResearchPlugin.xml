@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Information Research, Base URL %s, Volume %s&quot;, base_url, volume_name&quot;</string>
+    <string>&quot;Information Research, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,7 +30,7 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%sLOCKSSmanifest.html&quot;, base_url</string>
       <string>1,&quot;^%sindex.html&quot;, base_url</string>
-      <string>1,&quot;^%s%d-[0-9]+/.*&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s-[0-9]+/.*&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -64,9 +64,9 @@
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>volume_name</key>
-        <displayName>Volume No.</displayName>
-        <type>6</type>
-        <size>8</size>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -75,7 +75,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%d-[0-9]+/paper[0-9]+\.html&quot;, base_url, volume_name</string>
+      <string>&quot;^%s%s-[0-9]+/paper[0-9]+\.html&quot;, base_url, volume_name</string>
     </list>
   </entry>
 </map>
