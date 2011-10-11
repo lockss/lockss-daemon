@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -70,7 +70,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(v_[0-9]+)?$&quot;, base_url_host</string>
       <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
       <string>1,&quot;^%sclockss/%s/%s/index\.html$&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
