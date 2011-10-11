@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.4 2011-07-20 23:40:33 thib_gc Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.5 2011-10-11 07:36:28 thib_gc Exp $
  */
 
 /*
@@ -128,9 +128,9 @@ public class IOPScienceArticleIteratorFactory
     }
     
     protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl htmlCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf"));
-      if (htmlCu != null && htmlCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, htmlCu);
+      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf"));
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
     }
 

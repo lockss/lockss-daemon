@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -94,8 +94,9 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/%s$&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/(cites|related)$&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/article$&quot;, base_url, journal_issn, volume_name</string>
       <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/(cites|related)$&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%s%s/%s/&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
