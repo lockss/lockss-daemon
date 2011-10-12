@@ -4,16 +4,18 @@
   >
   
   comment[plugin] = Content on CLOCKSS is through Meta-Press only, not MUSE
-  comment[au_journal] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257
-  comment[au_volume] = http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=0301-7257&volume=36
-  comment[note] = these urls redirect to one that uses an opaque identifier.
-
+  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+  param[base_url] = http://liverpool.metapress.com/
+  implicit < status ; year ; name ; param[volume_name] >
+  
   {
     title <
       name = British Journal of Canadian Studies ;
       issn = 0269-9222 ;
       eissn = 1757-8078 
     >
+    param[journal_issn] = 1757-8078 
+    au < manifest ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     
   }
  
@@ -23,7 +25,9 @@
       issn = 1475-3839 ;
       eissn = 1478-3398
     >
+    param[journal_issn] = 1478-3398 
     
+    au < manifest ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
   }
    
   {
@@ -32,7 +36,9 @@
       issn = 0301-7257 ;
       eissn = 1757-0263 
     >
+    param[journal_issn] = 1757-0263 
     
+    au < manifest ; 2011 ; The Byron Journal Volume 39 ; 39 >
   }
 
   {
@@ -42,8 +48,10 @@
       issn = 0014-5483 ;
       issnl = 0014-5483
     >
+    param[journal_issn] = 0014-5483 
 
 	comment[upcoming] = this journal is upcoming in projectmuse and might also in Meta-Press
+    au < manifest ; 2011 ; Extrapolation Volume 52 ; 52 >
 
   }
      
@@ -53,7 +61,8 @@
       issn = 1757-6822 ;
       eissn = 1757-6830  
     >
-    
+    param[journal_issn] = 1757-6830     
+    au < manifest ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
   }
    
   {
@@ -62,6 +71,8 @@
       issn = 1474-6743 ;
       eissn = 1478-3401  
     >
+    param[journal_issn] = 1478-3401 
+    au < manifest ; 2011 ; International Development Planning Review Volume 33 ; 33 >
 
   }
    
@@ -71,6 +82,8 @@
       issn = 1757-6458 ;
       eissn = 1757-6466  
     >
+    param[journal_issn] = 1757-6466 
+    au < manifest ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
     
   }
    
@@ -80,7 +93,8 @@
       issn = 1753-0768 ;
       eissn = 1753-0776  
     >
-
+    param[journal_issn] = 1753-0776 
+    au < manifest ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
   }
    
   {
@@ -89,7 +103,8 @@
       issn = 1528-0748 ;
       eissn = 1757-2274  
     >
-
+    param[journal_issn] = 1757-2274 
+    au < manifest ; 2011 ; Romani Studies Volume 21 ; 21 >
   }
    
   {
@@ -98,7 +113,8 @@
       issn = 1754-3770 ;
       eissn = 1754-3789  
     >
-    
+    param[journal_issn] = 1754-3789 
+    au < manifest ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
   }
    
   {
@@ -107,7 +123,8 @@
       issn = 1366-2724 ;
       eissn = 1756-9923  
     >
-    
+    param[journal_issn] = 1756-9923 
+    au < manifest ; 2011 ; Sculpture Journal Volume 20 ; 20 >
   }
    
   {
@@ -116,7 +133,8 @@
       issn = 0041-0020 ;
       eissn = 1478-341X 
     >
-
+    param[journal_issn] = 1478-341X 
+    au < manifest ; 2011 ; Town Planning Review Volume 82 ; 82 >
   }
  
 }
