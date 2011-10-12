@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.4 2010-11-19 09:45:01 thib_gc Exp $
+# $Id: slurp.py,v 1.5 2011-10-12 23:00:14 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -255,14 +255,15 @@ def __aus(db, ui, id, auids_aids, options):
             if uistr is None or uistr.lower() == 'never': return None
             return datetime.strptime(uistr, SlurpConstants.UI_STRFTIME).strftime(Slurpdb.STRFTIME)
         
-        def db_len(uistr, maxlen):
+        def db_len(uistr, maxlen, encoding=None):
             if uistr is None: return None
+            if encoding: uistr = uistr.encode(encoding)
             if len(uistr) > maxlen:
                 __log('Warning: String is over %d characters long: %s' % (maxlen, uistr), options)
             return uistr[0:maxlen]
 
-        name = db_len(summary.get('Volume', None), Slurpdb.AUS_NAME_MAX)
-        publisher = db_len(summary.get('Publisher', None), Slurpdb.AUS_PUBLISHER_MAX)
+        name = db_len(summary.get('Volume', None), Slurpdb.AUS_NAME_MAX, 'utf-8')
+        publisher = db_len(summary.get('Publisher', None), Slurpdb.AUS_PUBLISHER_MAX, 'utf-8')
         year_str = summary.get('Year', None)
         repository = db_len(summary.get('Repository', None), Slurpdb.AUS_REPOSITORY_MAX)
         creation_date = ui_to_db(summary.get('Created', None))
