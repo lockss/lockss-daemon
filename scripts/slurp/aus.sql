@@ -18,10 +18,10 @@ CREATE TABLE IF NOT EXISTS %s (
     aid INT UNSIGNED NOT NULL,
     
     /* The AU's name */
-    name VARCHAR(%d),
+    name VARCHAR(%d) CHARACTER SET utf8,
     
     /* The AU's publisher */
-    publisher VARCHAR(%d),
+    publisher VARCHAR(%d) CHARACTER SET utf8,
     
     /* The AU's year; "YYYY" or "YYYY-ZZZZ" */
     year VARCHAR(9),
