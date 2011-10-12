@@ -25,7 +25,7 @@
     au < released ; crawling ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
-    au < testing ; exists ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
+    au < released ; manifest ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
 
   }
 
@@ -53,7 +53,7 @@
     au < exists ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
     au < exists ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
     au < manifest ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
-    au < testing ; exists ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
+    au < released ; manifest ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
 
   }
 
@@ -84,7 +84,7 @@
     au < exists ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
     au < exists ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
     au < exists ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
-    au < testing ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
+    au < released ; manifest ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
     
   }
 
@@ -148,7 +148,7 @@
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
     au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 46 ; 2010 ; 46 >
-    au < testing ; exists ; 2011 ; Bone Marrow Transplantation Volume 47 ; 2011 ; 47 >
+    au < released ; manifest ; 2011 ; Bone Marrow Transplantation Volume 47 ; 2011 ; 47 >
 
   }
 
@@ -291,7 +291,7 @@
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
     au < testing ; exists ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
-    au < wanted ; exists ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
+    au < testing ; exists ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
 
   }
 
@@ -318,6 +318,7 @@
     au < released ; crawling ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
+    au < testing ; exists ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
 
   }
 
@@ -346,6 +347,7 @@
     au < released ; crawling ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
+    au < testing ; exists ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 >
 
   }
 
@@ -363,6 +365,7 @@
     au < released ; crawling ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; crawling ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
+    au < testing ; exists ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
 
   }
 
@@ -378,6 +381,10 @@
     param[journal_id] = clpt
 
     au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
+    au < manifest ; exists ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 >
+    au < testing ; exists ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
+    au < testing ; exists ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
+
   }
 
   {
