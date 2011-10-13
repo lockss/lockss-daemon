@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.1 2011-10-04 10:43:59 thib_gc Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.2 2011-10-13 00:13:00 thib_gc Exp $
  */
 
 /*
@@ -32,10 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.apache.commons.io.IOUtils;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.tags.*;
+import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -62,10 +66,45 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
         // ASP state
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
         HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
+        // Institution name and similar data
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_SidebarRecognitionPanel"),
+        /*
+         * SFX-related: find a <tr> tag, that has a single <td> child
+         * whose 'class' attribute is set to 'labelValue', whose sole
+         * child tag is a <div> tag, whose sole child tag is a link
+         * that begins with '/home/linkout.mpx?'.
+         */
+        new NodeFilter() {
+          public boolean accept(Node node) {
+            if (!(node instanceof TableRow)) { return false;  }
+            TableRow tr = (TableRow)node;
+            if (tr.getColumnCount() != 1) { return false; }
+            TableColumn td = tr.getColumns()[0];
+            if (!"labelValue".equalsIgnoreCase(td.getAttribute("class"))) { return false; }
+            Div div = null;
+            for (SimpleNodeIterator iter = td.elements() ; iter.hasMoreNodes() ; ) {
+              Node n = iter.nextNode();
+              if (n instanceof TextNode) { continue; }
+              if (n instanceof Div) {
+                div = (Div)n;
+                continue;
+              }
+              return false;
+            }
+            for (SimpleNodeIterator iter = div.elements() ; iter.hasMoreNodes() ; ) {
+              Node n = iter.nextNode();
+              if (n instanceof TextNode) { continue; }
+              if (n instanceof LinkTag) {
+                String href = ((LinkTag)n).extractLink();
+                return href != null && href.startsWith("/home/linkout.mpx?");
+              }
+              return false;
+            }
+            return false;
+          }
+        },
         // Copyright year but also session information
         HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
-        // SFX-related
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/home/linkout\\.mpx"),
         // Dynamic URLs
         HtmlNodeFilters.tagWithAttributeRegex("link", "href", "^/dynamic-file\\.axd"),
         /*
@@ -79,5 +118,5 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
-
+  
 }
