@@ -9,6 +9,20 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   comment[param_journal_issn] = the param journal_issn is set to the journal's eISSN, not print ISSN  
 
+{
+  
+    title <
+      name = Australian Journal of French Studies ;
+      issn = 0004-9468 ;
+      eissn = 2046-2913
+    >
+    
+    param[journal_issn] = 2046-2913
+    
+    au < crawling ; exists ; 2011 ; Australian Journal of French Studies Volume 48 ; 48 >
+    
+  }
+
   {
   
     title <
@@ -33,7 +47,7 @@
     
     param[journal_issn] = 1478-3398 
     
-    au < manifest ; exists ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
+    au < crawling ; exists ; 2011 ; Bulletin of Hispanic Studies Volume 88 ; 88 >
 
   }
    
@@ -47,10 +61,49 @@
     
     param[journal_issn] = 1757-0263 
     
-    au < manifest ; exists ; 2011 ; The Byron Journal Volume 39 ; 39 >
+    au < crawling ; exists ; 2011 ; The Byron Journal Volume 39 ; 39 >
 
   }
+  
+    {
+  
+    title <
+      name = Contemporary French Civilization ;
+      issn = 0147-9156 
+    >
+    
+    param[journal_issn] = 0147-9156 
+    
+    au < crawling ; exists ; 2011 ; Contemporary French Civilization Volume 36 ; 36 >
 
+  }  {
+  
+    title <
+      name = European Comic Art ;
+      issn = 1754-3797 ;
+      eissn = 1754-3800 
+    >
+    
+    param[journal_issn] = 1754-3800 
+    
+    au < crawling ; exists ; 2011 ; European Comic Art Volume 4 ; 4 >
+
+  }  
+  
+  {
+
+    title <
+      name = European Journal of Language Policy / Revue européenne de politique linguistique ;
+      issn = 1757-6822 ;
+      eissn = 1757-6830  
+    >
+    
+    param[journal_issn] = 1757-6830     
+
+    au < crawling ; exists ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+
+  }
+   
   {
   
     title <
@@ -62,24 +115,10 @@
     comment[upcoming] = this journal is upcoming in projectmuse and might also in Meta-Press
     param[journal_issn] = 0014-5483 
 
-    au < manifest ; exists ; 2011 ; Extrapolation Volume 52 ; 52 >
+    au < crawling ; exists ; 2011 ; Extrapolation Volume 52 ; 52 >
 
   }
-     
-  {
 
-    title <
-      name = European Journal of Language Policy / Revue européenne de politique linguistique ;
-      issn = 1757-6822 ;
-      eissn = 1757-6830  
-    >
-    
-    param[journal_issn] = 1757-6830     
-
-    au < manifest ; exists ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
-
-  }
-   
   {
 
     title <
@@ -90,7 +129,7 @@
 
     param[journal_issn] = 1478-3401 
 
-    au < manifest ; exists ; 2011 ; International Development Planning Review Volume 33 ; 33 >
+    au < crawling ; exists ; 2011 ; International Development Planning Review Volume 33 ; 33 >
 
   }
    
@@ -104,7 +143,22 @@
     
     param[journal_issn] = 1757-6466 
 
-    au < manifest ; exists ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+    au < crawling ; exists ; 2011 ; Journal of Literary & Cultural Disability Studies Volume 5 ; 5 >
+
+  }
+   
+        
+  {
+
+    title <
+      name = Labour History Review ;
+      issn = 0961-5652 ;
+      eissn = 1745-8188 
+    >
+    
+    param[journal_issn] = 1745-8188     
+
+	comment[2012]=coming in 2012
 
   }
    
@@ -118,7 +172,21 @@
 
     param[journal_issn] = 1753-0776 
 
-    au < manifest ; exists ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+    au < crawling ; exists ; 2011 ; Music, Sound, and the Moving Image Volume 5 ; 5 >
+
+  }
+  
+     {
+  
+    title <
+      name = Popular Narrative Media ;
+      issn = 1754-3819 ;
+      eissn = 1754-3827  
+    >
+
+    param[journal_issn] = 1754-3827 
+
+    au < manifest ; exists ; 2009 ; Popular Narrative Media Volume 2 ; 2 >
 
   }
    
@@ -132,7 +200,7 @@
 
     param[journal_issn] = 1757-2274 
 
-    au < manifest ; exists ; 2011 ; Romani Studies Volume 21 ; 21 >
+    au < crawling ; exists ; 2011 ; Romani Studies Volume 21 ; 21 >
 
   }
    
@@ -146,7 +214,7 @@
     
     param[journal_issn] = 1754-3789 
 
-    au < manifest ; exists ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
+    au < crawling ; exists ; 2011 ; Science Fiction Film and Television Volume 4 ; 4 >
 
   }
    
@@ -160,10 +228,23 @@
     
     param[journal_issn] = 1756-9923 
 
-    au < manifest ; exists ; 2011 ; Sculpture Journal Volume 20 ; 20 >
+    au < crawling ; exists ; 2011 ; Sculpture Journal Volume 20 ; 20 >
 
   }
-   
+  
+     {
+  
+    title <
+      name = Third World Planning Review ;
+      issn = 0142-7849 
+    >
+    
+    param[journal_issn] = 0142-7849 
+
+    au < crawling ; exists ; 2011 ; Third World Planning Review Volume 22 ; 22 >
+
+  }
+  
   {
   
     title <
@@ -174,7 +255,7 @@
 
     param[journal_issn] = 1478-341X 
 
-    au < manifest ; exists ; 2011 ; Town Planning Review Volume 82 ; 82 >
+    au < crawling ; exists ; 2011 ; Town Planning Review Volume 82 ; 82 >
 
   }
  
