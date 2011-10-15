@@ -90,7 +90,8 @@
       eissn = 1755-1641 ;
       issnl = 1350-7524 
      >
-	comment[issue] = single issue per year, comes out in November.
+
+    comment[issue] = single issue per year, comes out in November.
     param[journal_id] = arch
 
     au < released ; crawling ; 2003 ; Architectural Heritage Volume 14 ; 14 >
@@ -101,7 +102,7 @@
     au < released ; crawling ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; crawling ; 2010 ; Architectural Heritage Volume 21 ; 21 >
-    au < exists ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+    au < crawling ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
 
   }
 
