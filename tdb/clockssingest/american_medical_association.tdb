@@ -169,7 +169,7 @@
         au < released ; crawling ; 2008 ; Archives of Dermatology Volume 144 ; 144 ; >
         au < released ; crawling ; 2009 ; Archives of Dermatology Volume 145 ; 145 ; >
         au < released ; crawling ; 2010 ; Archives of Dermatology Volume 146 ; 146 ; >
-        au < crawling ; exists ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
+        au < testing ; exists ; 2011 ; Archives of Dermatology Volume 147 ; 147 ; >
         
       }
       
@@ -260,7 +260,7 @@
         au < released ; crawling ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
         au < released ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
         au < released ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >      
-        au < crawling ; exists ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
+        au < testing ; exists ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
 
       }
     
@@ -347,7 +347,7 @@
         au < released ; crawling ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
         au < released ; crawling ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
         au < released ; crawling ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
-        au < crawling ; exists ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
+        au < testing ; exists ; 2011 ; Archives of General Psychiatry Volume 68 ; 68 ; >
 
       }
       
@@ -1412,7 +1412,7 @@
         au < released ; crawling ; 2008 ; Archives of Surgery Volume 143 ; 143 ; >
         au < released ; crawling ; 2009 ; Archives of Surgery Volume 144 ; 144 ; >
         au < released ; crawling ; 2010 ; Archives of Surgery Volume 145 ; 145 ; >
-        au < crawling ; exists ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
+        au < released ; manifest ; 2011 ; Archives of Surgery Volume 146 ; 146 ; >
 
       }
       
@@ -1755,7 +1755,7 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < crawling ; exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
+        au < released ; manifest ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305 ; 305 ; >
         au < released ; manifest ; 2011 ; JAMA: The Journal of the American Medical Association Volume 306 ; 306 ; >
 
       }
