@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: bulk_add.py,v 1.1 2011-10-03 21:46:33 barry409 Exp $
+# $Id: bulk_add.py,v 1.2 2011-10-19 16:57:51 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -114,7 +114,7 @@ def main():
             for au in missing:
                 print au.auId
         if has:
-            print "alreaedy has"
+            print "already has"
             for au in has:
                 print au.auId
 
