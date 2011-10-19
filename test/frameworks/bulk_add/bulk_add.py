@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: bulk_add.py,v 1.3 2011-10-19 17:27:43 barry409 Exp $
+# $Id: bulk_add.py,v 1.4 2011-10-19 17:32:13 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -144,6 +144,7 @@ def main():
         for au in failed:
             
             print >> sys.stderr, au.auId
+        exit(1)
 
 
 if __name__ == '__main__':
