@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: bulk_add.py,v 1.2 2011-10-19 16:57:51 barry409 Exp $
+# $Id: bulk_add.py,v 1.3 2011-10-19 17:27:43 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -101,8 +101,9 @@ def main():
     aus = _aus(auid_files)
     has = list()
     missing = list()
+    initial_auIds = client.getListOfAuids()
     for au in aus:
-        if client.hasAu(au):
+        if au.auId in initial_auIds:
             has.append(au)
         else:
             missing.append(au)
@@ -128,7 +129,22 @@ def main():
                 else:
                     client.createAu(au)
         except lockss_util.LockssError:
-            print >> sys.stderr, "Failed to add %s" % au.title
+            # Failed to create. Print the errors after all creation attempts.
+            pass
+
+    # Note: also prints out auids which were n'ed in verbose mode.
+    final_auIds = client.getListOfAuids()
+    failed = list()
+    for au in missing:
+        if au.auId not in final_auIds:
+            failed.append(au)
+
+    if failed:
+        print >> sys.stderr, "failed to add"
+        for au in failed:
+            
+            print >> sys.stderr, au.auId
+
 
 if __name__ == '__main__':
     main()
