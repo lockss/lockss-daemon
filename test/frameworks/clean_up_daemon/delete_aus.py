@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: delete_aus.py,v 1.2 2011-02-22 21:24:36 barry409 Exp $
+# $Id: delete_aus.py,v 1.3 2011-10-19 17:41:36 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -95,8 +95,9 @@ def main():
     aus = _aus(auid_files)
     has = list()
     missing = list()
+    initial_auIds = client.getListOfAuids()
     for au in aus:
-        if client.hasAu(au):
+        if au.auId in initial_auIds:
             has.append(au)
         else:
             missing.append(au)
