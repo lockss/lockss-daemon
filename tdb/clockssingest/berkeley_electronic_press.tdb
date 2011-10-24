@@ -171,12 +171,12 @@
     comment[bejeap5] = duplicate of 1538-0645 volume 5
     comment[bejeap6] = duplicate of 1538-0653 volume 6
 
-    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2000 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2000 ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2004 ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 >
     au < released ; manifest ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < released ; crawling ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
@@ -227,12 +227,12 @@
     comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
     comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
 
-    au < doNotProcess ; exists ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2003 ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 >
+    au < doNotProcess ; doNotProcess ; 2004 ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 >
+    au < doNotProcess ; doNotProcess ; 2005 ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2006 ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 >
     au < released ; manifest ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
     au < released ; crawling ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; crawling ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
