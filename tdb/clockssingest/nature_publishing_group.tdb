@@ -412,7 +412,7 @@
     au < released ; crawling ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
     au < released ; crawling ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
-    au < testing ; exists ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
+    au < released ; manifest ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
 
   }
 
@@ -473,7 +473,7 @@
 
     param[journal_id] = ejhg
 
-    au < testing ; exists ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
+    au < released ; manifest ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
 
   }
 
@@ -541,7 +541,7 @@
     au < released ; crawling ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
-    au < testing ; exists ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 >
+    au < released ; manifest ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 >
 
   }
 
