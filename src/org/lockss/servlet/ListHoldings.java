@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.19 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.19.2.1 2011-10-25 11:22:42 easyonthemayo Exp $
  */
 
 /*
@@ -66,15 +66,16 @@ import org.mortbay.html.Page;
 
 /** 
  * This servlet provides access to holdings metadata, transforming the TDB data 
- * into KBART format data which can be imported into a spreadsheet. There are several 
- * output options - predefined outputs for strict KBART CSV, TSV and an HTML version 
- * of the same; and also the option to view customised HTML output of the same data. 
- * The main default formats are represented as links, while the HTML customisation
- * is achieved via a separate form submission.
+ * into KBART format data which can be imported into a spreadsheet. There are
+ * predefined output options for CSV, TSV (disabled) and HTML. The content of
+ * the output can be strict KBART, or can be customised in terms of fields and
+ * field ordering. A health metric rating can also be appended to the custom
+ * output, though this is currently disabled.
  * <p>
  * Possible enhancements for a future version:
  * <ul>
- * <li>Allow the export of a subset of the data based on a collection description.</li>
+ * <li>Allow the export of a subset of the data based on a collection
+ *   description.</li>
  * </ul> 
  * 
  * @author Neil Mayo
@@ -452,17 +453,17 @@ public class ListHoldings extends LockssServlet {
   /**
    * Determine whether "preserved" option is enabled.
    * 
-   * @return <code>true</code? if "preserved" option is enabled.
+   * @return <code>true</code> if "preserved" option is enabled.
    */
   private boolean isEnablePreserved() {
     return CurrentConfig.getBooleanParam(PARAM_ENABLE_PRESERVED_HOLDINGS, 
 					 DEFAULT_ENABLE_PRESERVED_HOLDINGS);
   }
-  
+
   /**
    * Generate a table with the page components and options. 
    * 
-   * @param isCustom whether to show the customisation options
+   * @param custom whether to show the customisation options
    * @return a Jetty table with all the page's options
    */
   protected Table layoutTableOfOptions(boolean custom) {
@@ -479,7 +480,7 @@ public class ListHoldings extends LockssServlet {
       addBlankRow(tab);
       return tab;
     }
-   
+
     // Create a form for whatever options we are showing
     Form form = ServletUtil.newForm(srvURL(myServletDescr()));
     form.add(new Input(Input.Hidden, "isForm", "true"));
@@ -506,7 +507,7 @@ public class ListHoldings extends LockssServlet {
     ));
     // Add an option to select the scope of exported holdings
     form.add(layoutScopeOptions());
-        
+
     // Add compress option (disabled as the CSV output is not very large)
     //tab.newRow();
     //tab.newCell("align=\"center\"");
@@ -603,8 +604,7 @@ public class ListHoldings extends LockssServlet {
   }
   
   /**
-   * Layout content scope options in the given table.
-   * @param tab
+   * Layout content scope options.
    */
   private Table layoutScopeOptions() {
     Table tab = new Table();
@@ -612,15 +612,22 @@ public class ListHoldings extends LockssServlet {
     tab.newCell("align=\"center\" valign=\"middle\"");
     tab.add("Show: ");
     for (ContentScope scope : ContentScope.values()) {
-      int total = TdbUtil.getNumberTdbTitles(scope);
-      String label = String.format("%s (%d)", scope.label, total);
+      //long s = System.currentTimeMillis();
       boolean scopeEnabled = true;
       if (scope==ContentScope.PRESERVED) {
         if (!isEnablePreserved()) continue;
         scopeEnabled = AuHealthMetric.isSupported();
       }
-      tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(), 
-      label, scope==selectedScope, scopeEnabled));
+      // NOTE: getNumberTdbTitles() first has to produce a full list of titles;
+      // this is expensive, in particular for the Preserved option, and so
+      // should only be done when required.
+      int total = TdbUtil.getNumberTdbTitles(scope);
+      /*log.debug(String.format("Title count %s took approximately %ss",
+          scope, (System.currentTimeMillis()-s)/1000
+      ));*/
+      String label = String.format("%s (%d)", scope.label, total);
+      tab.add(ServletUtil.radioButton(this, KEY_TITLE_SCOPE, scope.name(),
+          label, scope==selectedScope, scopeEnabled));
       if (!scopeEnabled) tab.add(notAvailFootnote);
       tab.add(" &nbsp; ");
     }
