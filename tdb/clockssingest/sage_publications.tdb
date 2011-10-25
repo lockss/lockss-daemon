@@ -12478,7 +12478,7 @@
       au < released ; crawling ; 2008 ; International Journal of Rural Management Volume 4 ; 4 ;  >
       au < released ; crawling ; 2009 ; International Journal of Rural Management Volume 5 ; 5 ;  >
       au < manifest ; exists ; 2010 ; International Journal of Rural Management Volume 6 ; 6 ; >
-      au < exists ; exists ; 2011 ; International Journal of Rural Management Volume 7 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; International Journal of Rural Management Volume 7 ; 7 ; >
 
     }
 
@@ -13316,7 +13316,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; International Studies Volume 45 ; 45 ; >
       au < manifest ; exists ; 2009 ; International Studies Volume 46 ; 46 ;  >
       au < crawling ; exists ; 2010 ; International Studies Volume 47 ; 47 ; >
-      au < exists ; exists ; 2011 ; International Studies Volume 48 ; 48 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; International Studies Volume 48 ; 48 ; >
 
     }
 
@@ -15730,8 +15730,8 @@
       au < manifest ; exists ; 2007 ; Journal of Creative Communications Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of Creative Communications Volume 4 ; 4 ;  >
-      au < manifest ; exists ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ;  >
-      au < exists ; exists ; 2011 ; Journal of Creative Communications Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ;  >
+      au < doesNotExist ; doesNotExist ; 2011 ; Journal of Creative Communications Volume 6 ; 6 ; >
 
     }
 
@@ -21234,7 +21234,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Journal of Transformative Education Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
       au < wanted ; exists ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ;  >
-      au < exists ; exists ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
 
     }
 
@@ -25922,7 +25922,7 @@
       au < exists ; exists ; 2008 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 222 ; 222 ; >
       au < exists ; exists ; 2009 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 223 ; 223 ; >
       au < manifest ; exists ; 2010 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 224 ; 224 ; >
-      au < exists ; exists ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part N: Journal of Nanoengineering and Nanosystems Volume 225 ; 225 ; >
 
     }
 
@@ -26008,7 +26008,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Progress in Development Studies Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Progress in Development Studies Volume 9 ; 9 ; >
       au < wanted ; exists ; 2010 ; Progress in Development Studies Volume 10 ; 10 ;  >
-      au < testing ; exists ; 2011 ; Progress in Development Studies Volume 11 ; 11 ; >
+      au < released ; manifest ; 2011 ; Progress in Development Studies Volume 11 ; 11 ; >
 
     }
 
@@ -26072,7 +26072,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Progress in Human Geography Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Progress in Human Geography Volume 33 ; 33 ; >
       au < wanted ; exists ; 2010 ; Progress in Human Geography Volume 34 ; 34 ;  >
-      au < testing ; exists ; 2011 ; Progress in Human Geography Volume 35 ; 35 ; >
+      au < released ; manifest ; 2011 ; Progress in Human Geography Volume 35 ; 35 ; >
 
     }
 
@@ -26136,7 +26136,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Progress in Physical Geography Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Progress in Physical Geography Volume 33 ; 33 ; >
       au < wanted ; exists ; 2010 ; Progress in Physical Geography Volume 34 ; 34 ;  >
-      au < testing ; exists ; 2011 ; Progress in Physical Geography Volume 35 ; 35 ; >
+      au < released ; manifest ; 2011 ; Progress in Physical Geography Volume 35 ; 35 ; >
 
     }
 
@@ -26177,7 +26177,7 @@
       au < manifest ; exists ; 2008 ; Psychological Science Volume 19 ; 19 ; >
       au < manifest ; exists ; 2009 ; Psychological Science Volume 20 ; 20 ; >
       au < manifest ; exists ; 2010 ; Psychological Science Volume 21 ; 21 ; >
-      au < testing ; exists ; 2011 ; Psychological Science Volume 22 ; 22 ; >
+      au < released ; manifest ; 2011 ; Psychological Science Volume 22 ; 22 ; >
 
     }
 
@@ -26202,7 +26202,7 @@
       au < exists ; exists ; 2008 ; Psychological Science in the Public Interest Volume 9 ; 9 ; >
       au < manifest ; exists ; 2009 ; Psychological Science in the Public Interest Volume 10 ; 10 ; >
       au < manifest ; exists ; 2010 ; Psychological Science in the Public Interest Volume 11 ; 11 ; >
-      au < testing ; exists ; 2011 ; Psychological Science in the Public Interest Volume 12 ; 12 ; >
+      au < released ; manifest ; 2011 ; Psychological Science in the Public Interest Volume 12 ; 12 ; >
 
     }
 
@@ -26254,7 +26254,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 ; >
       au < wanted ; exists ; 2010 ; Psychology & Developing Societies Volume 22 ; 22 ;  >
-      au < testing ; exists ; 2011 ; Psychology & Developing Societies Volume 23 ; 23 ; >
+      au < released ; manifest ; 2011 ; Psychology & Developing Societies Volume 23 ; 23 ; >
 
     }
 
@@ -26308,7 +26308,7 @@
       au < exists ; exists ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 ; >
       au < exists ; exists ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 ; >
       au < exists ; exists ; 2010 ; Prosthetics and Orthotics International Volume 34 ; 34 ; >
-      au < testing ; exists ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 ; >
+      au < released ; manifest ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 ; >
 
     }
 
@@ -26376,7 +26376,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Psychology of Music Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Psychology of Music Volume 37 ; 37 ; >
       au < exists ; exists ; 2010 ; Psychology of Music Volume 38 ; 38 ;  >
-      au < testing ; exists ; 2011 ; Psychology of Music Volume 39 ; 39 ; >
+      au < released ; manifest ; 2011 ; Psychology of Music Volume 39 ; 39 ; >
 
     }
 
@@ -26444,7 +26444,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Public Finance Review Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Public Finance Review Volume 37 ; 37 ; >
       au < wanted ; exists ; 2010 ; Public Finance Review Volume 38 ; 38 ;  >
-      au < testing ; exists ; 2011 ; Public Finance Review Volume 39 ; 39 ; >
+      au < released ; manifest ; 2011 ; Public Finance Review Volume 39 ; 39 ; >
 
     }
 
@@ -26499,7 +26499,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
       au < wanted ; exists ; 2010 ; Public Policy and Administration Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; Public Policy and Administration Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; Public Policy and Administration Volume 26 ; 26 ; >
 
     }
 
@@ -29274,7 +29274,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; South Asian Survey Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; South Asian Survey Volume 16 ; 16 ; >
       au < manifest ; exists ; 2010 ; South Asian Survey Volume 17 ; 17 ;  >
-      au < exists ; exists ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; South Asian Survey Volume 18 ; 18 ; >
 
     }
 
@@ -29667,7 +29667,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Studies in History Volume 24 ; 24 ; >
       au < manifest ; exists ; 2009 ; Studies in History Volume 25 ; 25 ;  >
       au < manifest ; exists ; 2010 ; Studies in History Volume 26 ; 26 ;  >
-      au < exists ; exists ; 2011 ; Studies in History Volume 27 ; 27 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; Studies in History Volume 27 ; 27 ; >
 
     }
 
@@ -31426,7 +31426,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Trends in Amplification Volume 13 ; 13 ; >
       au < manifest ; exists ; 2010 ; Trends in Amplification Volume 14 ; 14 ;  >
-      au < exists ; exists ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; Trends in Amplification Volume 15 ; 15 ; >
 
     }
 
