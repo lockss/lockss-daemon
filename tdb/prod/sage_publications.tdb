@@ -4261,7 +4261,7 @@
         param[base_url] = http://car.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 2009 ; Cartilage Volume 1 ; 1 >
+        au < doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 >
         au < manifest ; 2011 ; Cartilage Volume 2 ; 2 >
 
       }
@@ -15861,8 +15861,32 @@ comment[exm] = now published by Springer
         param[base_url] = http://jaf.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2011 ; Journal of Accounting, Auditing &  Finance Volume 1 ; 1 >
-        au < exists ; 2011 ; Journal of Accounting, Auditing &  Finance Volume 2 ; 2 >
+        au < exists ; 1986 ; Journal of Accounting, Auditing & Finance Volume 1 ; 1 >
+        au < exists ; 1987 ; Journal of Accounting, Auditing & Finance Volume 2 ; 2 >
+        au < exists ; 1988 ; Journal of Accounting, Auditing & Finance Volume 3 ; 3 >
+        au < exists ; 1989 ; Journal of Accounting, Auditing & Finance Volume 4 ; 4 >
+        au < exists ; 1990 ; Journal of Accounting, Auditing & Finance Volume 5 ; 5 >
+        au < exists ; 1991 ; Journal of Accounting, Auditing & Finance Volume 6 ; 6 >
+        au < exists ; 1992 ; Journal of Accounting, Auditing & Finance Volume 7 ; 7 >
+        au < exists ; 1993 ; Journal of Accounting, Auditing & Finance Volume 8 ; 8 >
+        au < exists ; 1994 ; Journal of Accounting, Auditing & Finance Volume 9 ; 9 >
+        au < exists ; 1995 ; Journal of Accounting, Auditing & Finance Volume 10 ; 10 >
+        au < exists ; 1996 ; Journal of Accounting, Auditing & Finance Volume 11 ; 11 >
+        au < exists ; 1997 ; Journal of Accounting, Auditing & Finance Volume 12 ; 12 >
+        au < exists ; 1998 ; Journal of Accounting, Auditing & Finance Volume 13 ; 13 >
+        au < exists ; 1999 ; Journal of Accounting, Auditing & Finance Volume 14 ; 14 >
+        au < exists ; 2000 ; Journal of Accounting, Auditing & Finance Volume 15 ; 15 >
+        au < exists ; 2001 ; Journal of Accounting, Auditing & Finance Volume 16 ; 16 >
+        au < exists ; 2002 ; Journal of Accounting, Auditing & Finance Volume 17 ; 17 >
+        au < exists ; 2003 ; Journal of Accounting, Auditing & Finance Volume 18 ; 18 >
+        au < exists ; 2004 ; Journal of Accounting, Auditing & Finance Volume 19 ; 19 >
+        au < exists ; 2005 ; Journal of Accounting, Auditing & Finance Volume 20 ; 20 >
+        au < exists ; 2006 ; Journal of Accounting, Auditing & Finance Volume 21 ; 21 >
+        au < exists ; 2007 ; Journal of Accounting, Auditing & Finance Volume 22 ; 22 >
+        au < exists ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 >
+        au < exists ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 >
+        au < exists ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 >
+        au < manifest ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 >
 
       }
 
@@ -33878,11 +33902,12 @@ comment[mpj] = now published by Brill
         au < exists ; 2003-2004 ; Theology Today Volume 60 ; 60 >
         au < exists ; 2004-2005 ; Theology Today Volume 61 ; 61 >
         au < exists ; 2005-2006 ; Theology Today Volume 62 ; 62 >
-        au < exists ; 2006-2008 ; Theology Today Volume 63 ; 63 >
-        au < exists ; 2007-2009 ; Theology Today Volume 64 ; 64 >
-        au < exists ; 2008-2010 ; Theology Today Volume 65 ; 65 >
-        au < exists ; 2009-2011 ; Theology Today Volume 66 ; 66 >
-        au < manifest ; 2011-2012 ; Theology Today Volume 67 ; 67 >
+        au < exists ; 2006-2007 ; Theology Today Volume 63 ; 63 >
+        au < exists ; 2007-2008 ; Theology Today Volume 64 ; 64 >
+        au < exists ; 2008-2009 ; Theology Today Volume 65 ; 65 >
+        au < exists ; 2009-2010 ; Theology Today Volume 66 ; 66 >
+        au < exists ; 2010-2011 ; Theology Today Volume 67 ; 67 >
+        au < manifest ; 2011 ; Theology Today Volume 68 ; 68 >
 
       }
 
