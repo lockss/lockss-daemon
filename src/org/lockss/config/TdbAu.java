@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.11 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: TdbAu.java,v 1.12 2011-10-26 17:11:29 pgust Exp $
  */
 
 /*
@@ -36,10 +36,11 @@ import java.util.*;
 
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.exporter.kbart.TdbAuOrderScorer;
+import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
 /**
- * This class represents a title database archive unit (AU).
+ * This class represents a title database archival unit (AU).
  *
  * @author  Philip Gust
  */
@@ -78,7 +79,7 @@ public class TdbAu {
   /**
    * The key for identity testing
    */
-  private final Id tdbAuId = new Id(this);
+  private final Id tdbAuId = new Id();
 
   /**
    * This class encapsulates the key for a TdbAu.  As with
@@ -88,18 +89,15 @@ public class TdbAu {
    * 
    * @author phil
    */
-  static public class Id {
-    final private TdbAu au;
+  public class Id {
     private int hash = 0;
-    public Id(TdbAu au) {
-      this.au = au;
-    }
+
     /** 
      * Return the TdbAu for this ID.
      * @return the TdbAu for this ID
      */
     public TdbAu getTdbAu() {
-      return au;
+      return TdbAu.this;
     }
     
     /**
@@ -115,8 +113,8 @@ public class TdbAu {
         return true;
       }
       TdbAu.Id auId = (TdbAu.Id)obj;
-      return (   au.getPluginId().equals(auId.au.getPluginId())
-              && au.getParams().equals(auId.au.getParams()));
+      return (   TdbAu.this.getPluginId().equals(auId.getTdbAu().getPluginId())
+              && TdbAu.this.getParams().equals(auId.getTdbAu().getParams()));
     }
     /**
      * Force hashcode to be recomputed because of a TdbAu change.
@@ -130,7 +128,7 @@ public class TdbAu {
      */
     public int hashCode() {
       if (hash == 0) {
-        hash = au.getParams().hashCode();;
+        hash = TdbAu.this.getParams().hashCode();;
 //        hash = au.getPluginId().hashCode() + au.getParams().hashCode();
       } 
       return hash;
@@ -141,8 +139,8 @@ public class TdbAu {
      */
     public String toString() {
       Properties props = new Properties();
-      props.putAll(au.getParams());
-      return org.lockss.plugin.PluginManager.generateAuId(au.getPluginId(), props);
+      props.putAll(TdbAu.this.getParams());
+      return PluginManager.generateAuId(TdbAu.this.getPluginId(), props);
     }
   }
 
@@ -175,10 +173,11 @@ public class TdbAu {
 
   /**
    * Determines two TdbsAus are equal. Equality is based on 
-   * equality of their Ids.  The parent hierarchy is not checked.
+   * equality of their Ids, plus the equality of their attributes
+   * and properties. The parent hierarchy is not checked.
    * 
    * @param o the other object
-   * @return <code>true</code> iff they are equal TdbTitles
+   * @return <code>true</code> iff they are equal TdbAus
    */
   public boolean equals(Object o) {
     // check for identity
@@ -187,7 +186,10 @@ public class TdbAu {
     }
 
     if (o instanceof TdbAu) {
-      return tdbAuId.equals(((TdbAu)o).getId());
+      TdbAu other = (TdbAu)o;
+      return tdbAuId.equals(other.getId()) &&
+             getAttrs().equals(other.getAttrs()) &&
+             getProperties().equals(other.getProperties());
     }
     return false;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.79 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.80 2011-10-26 17:11:29 pgust Exp $
  */
 
 /*
@@ -202,7 +202,8 @@ public abstract class BasePlugin
   private void setTitleConfigs(Tdb tdb) {
     String myId = getPluginId();
     Map<String, TitleConfig> titleMap = new HashMap<String,TitleConfig>();
-    for (TdbAu tdbAu : tdb.getTdbAus(myId)) {
+    for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(myId)) {
+      TdbAu tdbAu = tdbAuId.getTdbAu();
       String pluginId = tdbAu.getPluginId();
       if (myId.equals(pluginId)) {
         if (log.isDebug2()) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.7 2011-09-23 14:16:00 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
  */
 
 /*
@@ -67,14 +67,6 @@ public class TdbUtil {
   private static final Logger logger = Logger.getLogger("TdbUtil");
 
   /**
-   * The minimum health an ArchivalUnit must have in order to be included in
-   * the list of preserved AUs. If a unit's health falls below this value, it
-   * will not be included and that may result in a coverage gap within a range 
-   * of AUs.
-   */
-  public static final double DEFAULT_HEALTH_INCLUSION_THRESHOLD = AuHealthMetric.getInclusionThreshold();
-
-  /**
    * Get the Tdb record from the current configuration.
    * 
    * @return the current Tdb object
@@ -103,7 +95,8 @@ public class TdbUtil {
    * @return the TdbTitle corresponding to the ArchivalUnit, or null if no corresponding record could be found
    */
   public static TdbTitle getTdbTitle(ArchivalUnit au) {
-    return getTdbAu(au).getTdbTitle();
+    TdbAu tdbAu = getTdbAu(au);
+    return (tdbAu == null) ? null : tdbAu.getTdbTitle();
   }
   
   
@@ -121,20 +114,6 @@ public class TdbUtil {
     return tcfg.getTdbAu(); 
   }
   
-  
-  /**
-   * Get a list of all the TdbAus which are available for archiving.
-   * 
-   * @return a collection of TdbAu objects
-   */
-  public static Collection<TdbAu> getAllTdbAus() {
-    List<TdbAu> allAus = new Vector<TdbAu>();
-    // For each plugin's AU set, add them all to the set.
-    for (Collection<TdbAu> aus : getTdb().getAllTdbAus().values()) {
-      allAus.addAll(aus);
-    }
-    return allAus;
-  }
   
   /**
    * Get a list of all the TdbTitles which are available for archiving. That
@@ -249,10 +228,10 @@ public class TdbUtil {
    */
   public static Collection<ArchivalUnit> getPreservedAus() {
     List<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
-    LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+    double inclusionThreshold = AuHealthMetric.getInclusionThreshold();
     for (ArchivalUnit au : getConfiguredAus()) {
       try {
-        if (AuHealthMetric.getHealth(au) >= DEFAULT_HEALTH_INCLUSION_THRESHOLD)
+        if (AuHealthMetric.getHealth(au) >= inclusionThreshold) 
           aus.add(au);
       } catch (HealthUnavailableException e) {
         // Do not add AUs whose health is unknown

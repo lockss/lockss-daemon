@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
+ * $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
  */
 
 /*
@@ -43,9 +43,46 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
+ * @version $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
  */
 public class Tdb {
+  /**
+   * Set up logger
+   */
+  protected final static Logger logger = Logger.getLogger("Tdb");
+  
+  /**
+   * A map of AUs per plugin, for this configuration
+   * (provides faster access for Plugins)
+   */
+  private final Map<String, Collection<TdbAu.Id>> pluginIdTdbAuIdsMap = 
+    new HashMap<String,Collection<TdbAu.Id>>();
+  
+  /**
+   * Map of publisher names to TdBPublishers for this configuration
+   */
+  private final Map<String, TdbPublisher> tdbPublisherMap = new HashMap<String,TdbPublisher>();
+
+  /**
+   * Determines whether more AUs can be added.
+   */
+  private boolean isSealed = false;
+  
+  /**
+   * The total number of TdbAus in this TDB (sum of collections in pluginIdTdbAus map
+   */
+  private int tdbAuCount = 0;
+  
+  /**
+   * Prefix appended to generated unknown title
+   */
+  private static final String UNKNOWN_TITLE_PREFIX = "Title of ";
+
+  /**
+   * Prefix appended to generated unknown publisher
+   */
+  private static final String UNKNOWN_PUBLISHER_PREFIX = "Publisher of ";
+  
   /**
    * This exception is thrown by Tdb related classes in place of an
    * unchecked IllegalStateException when an operation cannot be
@@ -57,7 +94,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.16 2011-05-11 06:45:36 pgust Exp $
+   * @version $Id: Tdb.java,v 1.17 2011-10-26 17:11:29 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -119,13 +156,13 @@ public class Tdb {
   private boolean addTdbAuForPlugin(TdbAu au) {
     // add AU to list for plugins 
     String pluginId = au.getPluginId();
-    Collection<TdbAu> aus = pluginIdTdbAusMap.get(pluginId);
-    if (aus == null) {
-      aus = new HashSet<TdbAu>();
-      pluginIdTdbAusMap.put(pluginId, aus);
+    Collection<TdbAu.Id> auids = pluginIdTdbAuIdsMap.get(pluginId);
+    if (auids == null) {
+      auids = new HashSet<TdbAu.Id>();
+      pluginIdTdbAuIdsMap.put(pluginId, auids);
     } 
     
-    if (!aus.add(au)) {
+    if (!auids.add(au.getId())) {
       return false;
     }
     
@@ -144,10 +181,10 @@ public class Tdb {
     // if can't add au to title, we need to undo the au
     // registration and re-throw the exception we just caught
     String pluginId = au.getPluginId();
-    Collection<TdbAu> c = pluginIdTdbAusMap.get(pluginId);
-    if (c.remove(au)) {
+    Collection<TdbAu.Id> c = pluginIdTdbAuIdsMap.get(pluginId);
+    if (c.remove(au.getId())) {
       if (c.isEmpty()) {
-        pluginIdTdbAusMap.remove(c);
+        pluginIdTdbAuIdsMap.remove(c);
       }
       tdbAuCount--;
       return true;
@@ -207,42 +244,6 @@ public class Tdb {
   }
   
   /**
-   * Set up logger
-   */
-  protected final static Logger logger = Logger.getLogger("Tdb");
-  
-  /**
-   * A map of AUs per plugin, for this configuration
-   * (provides faster access for Plugins)
-   */
-  private final Map<String, Collection<TdbAu>> pluginIdTdbAusMap = new HashMap<String,Collection<TdbAu>>();
-  
-  /**
-   * Map of publisher names to TdBPublishers for this configuration
-   */
-  private final Map<String, TdbPublisher> tdbPublisherMap = new HashMap<String,TdbPublisher>();
-
-  /**
-   * Determines whether more AUs can be added.
-   */
-  private boolean isSealed = false;
-  
-  /**
-   * The total number of TdbAus in this TDB (sum of collections in pluginIdTdbAus map
-   */
-  private int tdbAuCount = 0;
-  
-  /**
-   * Prefix appended to generated unknown title
-   */
-  private static final String UNKNOWN_TITLE_PREFIX = "Title of ";
-
-  /**
-   * Prefix appended to generated unknown publisher
-   */
-  private static final String UNKNOWN_PUBLISHER_PREFIX = "Publisher of ";
-  
-  /**
    * Seals a Tdb against further additions.
    */
   public void seal() {
@@ -251,9 +252,9 @@ public class Tdb {
 
       // convert map values to array lists to save space because
       // they will not be modified now that the Tdb is sealed.
-      synchronized(pluginIdTdbAusMap) {
-        for (Map.Entry<String, Collection<TdbAu>> entry : pluginIdTdbAusMap.entrySet()) {
-          ArrayList<TdbAu> list = new ArrayList<TdbAu>(entry.getValue());
+      synchronized(pluginIdTdbAuIdsMap) {
+        for (Map.Entry<String, Collection<TdbAu.Id>> entry : pluginIdTdbAuIdsMap.entrySet()) {
+          ArrayList<TdbAu.Id> list = new ArrayList<TdbAu.Id>(entry.getValue());
           list.trimToSize();
           entry.setValue(list);
         }
@@ -276,7 +277,7 @@ public class Tdb {
    * @return <code> true</code> if the title database has no entries
    */
   public boolean isEmpty() {
-    return pluginIdTdbAusMap.isEmpty();
+    return pluginIdTdbAuIdsMap.isEmpty();
   }
   
   /**
@@ -289,7 +290,7 @@ public class Tdb {
    */
   public Set<String> getPluginIdsForDifferences(Tdb otherTdb) {
     if (otherTdb == null) {
-      return pluginIdTdbAusMap.keySet();
+      return pluginIdTdbAuIdsMap.keySet();
     }
     if (otherTdb == this) {
       return Collections.emptySet();
@@ -434,7 +435,7 @@ public class Tdb {
         for (TdbAu otherAu : otherTitle.getTdbAus()) {
           // no need to check for existing au if title is new
           String pluginId = otherAu.getPluginId();
-          if (titleIsNew || !getTdbAus(pluginId).contains(otherAu)) {
+          if (titleIsNew || !getTdbAuIds(pluginId).contains(otherAu.getId())) {
             // always succeeds we've already checked for duplicate
             TdbAu thisAu = otherAu.copyForTdbTitle(thisTitle);            
             addTdbAuForPlugin(thisAu);
@@ -475,10 +476,10 @@ public class Tdb {
    */
   protected TdbAu findExistingTdbAu(TdbAu otherAu) {
     // check for duplicate AU with same plugin for this Tdb
-    Collection<TdbAu> aus = getTdbAus(otherAu.getPluginId());
-    for (TdbAu au : aus) {
-      if (au.equals(otherAu)) {
-        return au;
+    Collection<TdbAu.Id> auIds = getTdbAuIds(otherAu.getPluginId());
+    for (TdbAu.Id auId : auIds) {
+      if (auId.equals(otherAu.getId())) {
+        return auId.getTdbAu();
       }
     }
     return null;
@@ -493,20 +494,36 @@ public class Tdb {
    * @return a collection of TdbAus for the plugin; <code>null</code> 
    *    if no TdbAus for the specified plugin in this configuration.
    */
-  public Collection<TdbAu> getTdbAus(String pluginId) {
-    Collection<TdbAu> aus = pluginIdTdbAusMap.get(pluginId);
-    return (aus != null) ? aus : Collections.<TdbAu>emptyList();
+  public Collection<TdbAu.Id> getTdbAuIds(String pluginId) {
+    Collection<TdbAu.Id> auIds = pluginIdTdbAuIdsMap.get(pluginId);
+    return (auIds != null) ? auIds : Collections.<TdbAu.Id>emptyList();
   }
   
   /**
-   * Returns the TdbAus for all plugin IDs. 
-   * <p>
-   * Note: the returned map should not be modified.
-   * 
-   * @return the TdbAus for all plugin IDs
+   * Returns the set of plugin ids for this Tdb.
+   * @return the set of all plugin ids for this Tdb.
    */
-  public Map<String, Collection<TdbAu>> getAllTdbAus() {
-    return (pluginIdTdbAusMap != null) ? pluginIdTdbAusMap : Collections.<String,Collection<TdbAu>>emptyMap(); 
+  public Set<String> getAllPluginsIds() {
+    return (pluginIdTdbAuIdsMap != null)
+      ? Collections.unmodifiableSet(pluginIdTdbAuIdsMap.keySet())
+      : Collections.<String>emptySet();
+  }
+  
+  /**
+   * Get a list of all the TdbAu.Ids for this Tdb
+   * 
+   * @return a collection of TdbAu objects
+   */
+  public Set<TdbAu.Id> getAllTdbAuIds() {
+    if (pluginIdTdbAuIdsMap == null) {
+      return Collections.<TdbAu.Id> emptySet();
+    }
+    Set<TdbAu.Id> allAuIds = new HashSet<TdbAu.Id>();
+    // For each plugin's AU set, add them all to the set.
+    for (Collection<TdbAu.Id> auIds : pluginIdTdbAuIdsMap.values()) {
+      allAuIds.addAll(auIds);
+    }
+    return allAuIds;
   }
   
   /**
@@ -547,7 +564,7 @@ public class Tdb {
    * Properties p = new Properties(); 
    * p.setProperty("title", "Air & Space Volume 1)");
    * p.setProperty("journalTitle", "Air and Space");
-   * p.setProperty("plugin", org.lockss.plugin.smithsonian);
+   * p.setProperty("plugin", "org.lockss.plugin.smithsonian.SmithsonianPlugin");
    * p.setProperty("pluginVersion", "4");
    * p.setProperty("issn", "0886-2257");
    * p.setProperty("param.1.key", "volume");

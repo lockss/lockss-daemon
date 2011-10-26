@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.33 2011-08-09 03:59:01 tlipkis Exp $
+ * $Id: Configuration.java,v 1.34 2011-10-26 17:11:51 pgust Exp $
  */
 
 /*
@@ -317,11 +317,12 @@ public abstract class Configuration {
     Tdb tdb = getTdb();
     Tdb otherTdb = (otherConfig == null) ? null : otherConfig.getTdb();
     if (otherTdb == null) {
-      return (tdb == null) ? Collections.EMPTY_SET : tdb.getAllTdbAus().keySet();
+      return (tdb == null) 
+        ? Collections.<String>emptySet() : tdb.getAllPluginsIds();
     }
     
     if (tdb == null) {
-      return otherTdb.getAllTdbAus().keySet();
+      return otherTdb.getAllPluginsIds();
     }
 
     return tdb.getPluginIdsForDifferences(otherTdb);

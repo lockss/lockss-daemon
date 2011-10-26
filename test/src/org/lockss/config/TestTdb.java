@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.7 2011-05-11 06:39:14 pgust Exp $
+ * $Id: TestTdb.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.util.*;
+import org.lockss.config.Tdb;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
 
@@ -42,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.7 2011-05-11 06:39:14 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -86,11 +87,20 @@ public class TestTdb extends LockssTestCase {
     a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
+    // create title with 1 au
+    TdbTitle t3p1 = new TdbTitle("t3p1", "0010-1001");
+    p1.addTdbTitle(t3p1);
+    TdbAu a1t3p1 = new TdbAu("a1t3p1", "plugin_t3p1");
+    a1t3p1.setParam("param", "1");
+    a1t3p1.setAttr("attr", "x");
+    t3p1.addTdbAu(a1t3p1);
+
     // add AUs for publisher p1
     tdb.addTdbAu(a1t1p1);
     tdb.addTdbAu(a2t1p1);
     tdb.addTdbAu(a1t2p1);
     tdb.addTdbAu(a2t2p1);
+    tdb.addTdbAu(a1t3p1);
   }
 
   /**
@@ -125,11 +135,20 @@ public class TestTdb extends LockssTestCase {
     a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
+    // create title with 1 au
+    TdbTitle t3p1 = new TdbTitle("t3p1", "0010-1001");
+    p1.addTdbTitle(t3p1);
+    TdbAu a1t3p1 = new TdbAu("a1t3p1", "plugin_t3p1");
+    a1t3p1.setParam("param", "1");
+    a1t3p1.setAttr("attr", "y");
+    t3p1.addTdbAu(a1t3p1);
+
     // add AUs for publisher p1
     tdb.addTdbAu(a1t1p1);
     tdb.addTdbAu(a2t1p1);
     tdb.addTdbAu(a1t2p1);
     tdb.addTdbAu(a2t2p1);
+    tdb.addTdbAu(a1t3p1);
   }
 
   /**
@@ -216,16 +235,17 @@ public class TestTdb extends LockssTestCase {
 
     addTestPublisher1(tdb);
     assertEquals(1, tdb.getAllTdbPublishers().size());
-    assertEquals(4, tdb.getTdbAuCount());
+    assertEquals(5, tdb.getTdbAuCount());
 
     addTestPublisher2(tdb);
     assertEquals(2, tdb.getTdbPublisherCount());
-    assertEquals(4, tdb.getTdbTitleCount());
-    assertEquals(8, tdb.getTdbAuCount());
+    assertEquals(5, tdb.getTdbTitleCount());
+    assertEquals(9, tdb.getTdbAuCount());
 
-    assertEquals(4, tdb.getTdbAus("plugin_p2").size());
-    assertEquals(2, tdb.getTdbAus("plugin_t1p1").size());
-    assertEquals(2, tdb.getTdbAus("plugin_t2p1").size());
+    assertEquals(4, tdb.getTdbAuIds("plugin_p2").size());
+    assertEquals(2, tdb.getTdbAuIds("plugin_t1p1").size());
+    assertEquals(2, tdb.getTdbAuIds("plugin_t2p1").size());
+    assertEquals(1, tdb.getTdbAuIds("plugin_t3p1").size());
     
     assertEquals("t1p1", tdb.getTdbTitleById("0001-0001").getName());
   }
@@ -357,14 +377,14 @@ public class TestTdb extends LockssTestCase {
     t1p1.addTdbAu(a1t1p1);
     tdb.addTdbAu(a1t1p1);
     assertFalse(tdb.isEmpty());
-    assertEquals(1, tdb.getTdbAus("plugin1").size());
+    assertEquals(1, tdb.getTdbAuIds("plugin1").size());
     try {
       tdb.addTdbAu(a1t1p1);
       fail("Failed to throw TdbException adding duplicate au \"" + a1t1p1.getName() + "\"");
     } catch (TdbException ex) {
     }
     assertFalse(tdb.isEmpty());
-    assertEquals(1, tdb.getTdbAus("plugin1").size());
+    assertEquals(1, tdb.getTdbAuIds("plugin1").size());
   }
 
   /**
@@ -426,8 +446,10 @@ public class TestTdb extends LockssTestCase {
     addTestPublisher2(tdb3);
     
     Collection<String> changedPluginIds13 = tdb1.getPluginIdsForDifferences(tdb3);
-    assertEquals(1, changedPluginIds13.size());
+    assertEquals(3, changedPluginIds13.size());
+    assertTrue(changedPluginIds13.contains("plugin_t3p1"));
     assertTrue(changedPluginIds13.contains("plugin_t2p1"));
+    assertTrue(changedPluginIds13.contains("plugin_t1p1"));
 
     Tdb tdb4 = new Tdb();
     addTestPublisher1(tdb4);
@@ -442,8 +464,10 @@ public class TestTdb extends LockssTestCase {
     addTestPublisher2_Changed(tdb5);
     
     Collection<String> changedPluginIds15 = tdb1.getPluginIdsForDifferences(tdb5);
-    assertEquals(2, changedPluginIds15.size());
+    assertEquals(4, changedPluginIds15.size());
+    assertTrue(changedPluginIds15.contains("plugin_t3p1"));
     assertTrue(changedPluginIds15.contains("plugin_t2p1"));
+    assertTrue(changedPluginIds15.contains("plugin_t1p1"));
     assertTrue(changedPluginIds15.contains("plugin_p2"));
   }
   
@@ -495,13 +519,13 @@ public class TestTdb extends LockssTestCase {
     copyTdb.copyFrom(tdb);
     assertFalse(copyTdb.isEmpty());
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
-    assertEquals(1, copyTdb.getAllTdbAus().size());
+    assertEquals(1, copyTdb.getAllTdbAuIds().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
 
     // copy all duplicates -- should be unchanged
     copyTdb.copyFrom(tdb);
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
-    assertEquals(1, copyTdb.getAllTdbAus().size());
+    assertEquals(1, copyTdb.getAllTdbAuIds().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
 
     Tdb tdb3 = new Tdb();
@@ -517,7 +541,7 @@ public class TestTdb extends LockssTestCase {
     // copy all duplicates -- should be unchanged
     tdb.copyFrom(tdb3);
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
-    assertEquals(1, copyTdb.getAllTdbAus().size());
+    assertEquals(1, copyTdb.getAllTdbAuIds().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
   }
 }
