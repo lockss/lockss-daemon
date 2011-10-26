@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.9 2011-03-22 12:58:52 pgust Exp $
+ * $Id: TdbTitle.java,v 1.9.8.1 2011-10-26 17:09:12 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.9 2011-03-22 12:58:52 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.9.8.1 2011-10-26 17:09:12 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -90,7 +90,8 @@ public class TdbTitle {
      */
     public LinkType inverseLinkType() {
       LinkType[] values = LinkType.values();
-      return values[(ordinal() < values.length/2) ? (ordinal() + values.length/2) : (ordinal()-values.length/2)];
+      return values[(ordinal() < values.length/2) 
+               ? (ordinal() + values.length/2) : (ordinal()-values.length/2)];
     }
     
     /**
@@ -121,7 +122,7 @@ public class TdbTitle {
   /**
    * A collection of AUs for this title
    */
-  private final HashMap<TdbAu.Id, TdbAu> tdbAus = new HashMap<TdbAu.Id, TdbAu>();
+  private final HashMap<TdbAu.Id,TdbAu> tdbAus = new HashMap<TdbAu.Id, TdbAu>();
 
   /**
    * A map of link types to a collection of title IDs
@@ -459,7 +460,7 @@ public class TdbTitle {
     }
     
     if (linkTitles == null) {
-      if (System.getProperty("org.lockss.unitTesting", "false").equals("true")) {
+      if (System.getProperty("org.lockss.unitTesting","false").equals("true")) {
         // use an ordered map to facilitate testing
         linkTitles = new LinkedHashMap<LinkType, Collection<String>>();
       } else {
@@ -505,7 +506,8 @@ public class TdbTitle {
    * @return all linked titles by link type
    */
   public Map<LinkType,Collection<String>> getAllLinkedTitleIds() {
-    return (linkTitles != null) ? linkTitles : Collections.<LinkType,Collection<String>>emptyMap();
+    return (linkTitles != null) 
+      ? linkTitles : Collections.<LinkType,Collection<String>>emptyMap();
   }
   
   /**
@@ -543,8 +545,8 @@ public class TdbTitle {
                       + "\" already exists in title \"" + name + "\"");
     } else if (otherTitle != null) {
       throw new IllegalArgumentException(
-                        "au entry \"" + tdbAu.getName() 
-                      + "\" already in another title: \"" + otherTitle.getName() + "\"");
+               "au entry \"" + tdbAu.getName() 
+             + "\" already in another title: \"" + otherTitle.getName() + "\"");
     }
 
     // add au assuming that it is not a duplicate
@@ -562,11 +564,12 @@ public class TdbTitle {
                         "Cannot add duplicate au entry: \"" + tdbAu.getName() 
                       + "\" to title \"" + name + "\"");
       } else {
-        // error because it could lead to a missing su -- one probably has a typo
+        // error because could lead to a missing su -- one probably has a typo
         throw new TdbException(
-                       "Cannot add duplicate au entry: \"" + tdbAu.getName() 
-                     + "\" with the same id as existing au entry \"" + existingAu.getName()
-                     + "\" to title \"" + name + "\"");
+               "Cannot add duplicate au entry: \"" + tdbAu.getName() 
+             + "\" with the same id as existing au entry \"" 
+             + existingAu.getName()
+             + "\" to title \"" + name + "\"");
       } 
     }
     
@@ -719,7 +722,7 @@ public class TdbTitle {
    * @param pluginIds the pluginIds for TdbAus that are different 
    * @throws TdbException if this TdbTitle's ID not set
    */
-  protected void addPluginIdsForDifferences(Set<String>pluginIds, TdbTitle title) 
+  protected void addPluginIdsForDifferences(Set<String>pluginIds,TdbTitle title) 
     throws TdbException {
     
     if (pluginIds == null) {
@@ -731,7 +734,9 @@ public class TdbTitle {
     }
     
     if (!title.getId().equals(id)) {
-      throw new IllegalArgumentException("title ID \"" + title.getId() + "\" different than \"" + getId() + "\"");
+      throw new IllegalArgumentException(
+                      "title ID \"" + title.getId() 
+                    + "\" different than \"" + getId() + "\"");
     }
     
     if (   !title.getName().equals(name)
@@ -743,7 +748,7 @@ public class TdbTitle {
 
       // pluginIDs for TdbAus that only appear in title
       for (TdbAu titleAu : title.getTdbAus()) {
-        if (!this.getTdbAus().contains(titleAu)) {
+        if (!getTdbAus().contains(titleAu)) {
           // add pluginID for title AU that is not in this TdbTitle
           pluginIds.add(titleAu.getPluginId());
         }
@@ -766,7 +771,8 @@ public class TdbTitle {
    * @param publisher the publisher
    * @throws TdbException if publisher already has this title
    */
-  protected TdbTitle copyForTdbPublisher(TdbPublisher publisher) throws TdbException {
+  protected TdbTitle copyForTdbPublisher(TdbPublisher publisher) 
+    throws TdbException {
     TdbTitle title = new TdbTitle(name, id);
     publisher.addTdbTitle(title);
     title.linkTitles = linkTitles;  // immutable: no need to copy

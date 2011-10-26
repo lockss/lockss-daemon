@@ -89,10 +89,6 @@ public class TestTdbUtil extends LockssTestCase {
     assertEquals(null, TdbUtil.getTdbAu(au));
   }
 
-  public final void testGetAllTdbAus() {
-    assertNotNull(TdbUtil.getAllTdbAus());
-  }
-
   public final void testGetAllTdbTitles() {
     assertNotNull(TdbUtil.getAllTdbTitles());
   }

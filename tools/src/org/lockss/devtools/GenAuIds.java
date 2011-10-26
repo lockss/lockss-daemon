@@ -1,5 +1,5 @@
 /*
- * $Id: GenAuIds.java,v 1.1 2010-08-16 18:01:42 pgust Exp $
+ * $Id: GenAuIds.java,v 1.1.12.1 2011-10-26 17:09:12 pgust Exp $
  */
 
 /*
@@ -137,11 +137,9 @@ public class GenAuIds {
     Tdb tdb = config.getTdb();
     if (tdb != null) {
       PluginManager pluginMgr = daemon.getPluginManager();
-      for (Collection<TdbAu>tdbAus : tdb.getAllTdbAus().values()) {
-        for (TdbAu tdbAu : tdbAus) {
-          String auid = getAuIdFor(pluginMgr, tdbAu);
-          ps.println(auid);
-        }
+      for (TdbAu.Id tdbAuId : tdb.getAllTdbAuIds()) {
+        String auid = getAuIdFor(pluginMgr, tdbAuId.getTdbAu());
+        ps.println(auid);
       }
     }
   }

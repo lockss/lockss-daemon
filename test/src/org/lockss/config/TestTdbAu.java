@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.7 2011-08-04 19:06:42 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.7.4.1 2011-10-26 17:09:12 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.7 2011-08-04 19:06:42 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.7.4.1 2011-10-26 17:09:12 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -112,6 +112,20 @@ public class TestTdbAu extends LockssTestCase {
     au4.setParam("name1", "val1");
     au4.setParam("name2", "val3");
     assertNotEquals(au3, au4);
+    
+    // au1 and au2 differ only by a property
+    au1.setPropertyByName("issn", "1234-5678");
+    assertNotEquals(au1, au2);
+    
+    au2.setPropertyByName("issn", "1234-5678");
+    assertEquals(au1, au2);
+    
+    // au1 and au2 differ only by an attribute
+    au1.setAttr("year", "1953");
+    assertNotEquals(au1, au2);
+
+    au2.setAttr("year", "1954");
+    assertNotEquals(au1, au2);
   }
   
   /**
