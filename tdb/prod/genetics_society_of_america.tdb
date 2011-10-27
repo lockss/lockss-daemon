@@ -147,26 +147,26 @@
     au < ready ; 1986 ; Genetics Volume 113 ; 113 >
     au < ready ; 1986 ; Genetics Volume 114 ; 114 >
     au < ready ; 1987 ; Genetics Volume 115 ; 115 >
-    au < testing ; 1987 ; Genetics Volume 116 ; 116 >
-    au < testing ; 1987 ; Genetics Volume 117 ; 117 >
-    au < testing ; 1988 ; Genetics Volume 118 ; 118 >
-    au < testing ; 1988 ; Genetics Volume 119 ; 119 >
-    au < testing ; 1988 ; Genetics Volume 120 ; 120 >
-    au < testing ; 1989 ; Genetics Volume 121 ; 121 >
-    au < testing ; 1989 ; Genetics Volume 122 ; 122 >
-    au < testing ; 1989 ; Genetics Volume 123 ; 123 >
-    au < testing ; 1990 ; Genetics Volume 124 ; 124 >
-    au < testing ; 1990 ; Genetics Volume 125 ; 125 >
-    au < manifest ; 1990 ; Genetics Volume 126 ; 126 >
-    au < manifest ; 1991 ; Genetics Volume 127 ; 127 >
-    au < manifest ; 1991 ; Genetics Volume 128 ; 128 >
-    au < manifest ; 1991 ; Genetics Volume 129 ; 129 >
-    au < manifest ; 1992 ; Genetics Volume 130 ; 130 >
-    au < manifest ; 1992 ; Genetics Volume 131 ; 131 >
-    au < manifest ; 1992 ; Genetics Volume 132 ; 132 >
-    au < manifest ; 1993 ; Genetics Volume 133 ; 133 >
-    au < manifest ; 1993 ; Genetics Volume 134 ; 134 >
-    au < manifest ; 1993 ; Genetics Volume 135 ; 135 >
+    au < ready ; 1987 ; Genetics Volume 116 ; 116 >
+    au < ready ; 1987 ; Genetics Volume 117 ; 117 >
+    au < ready ; 1988 ; Genetics Volume 118 ; 118 >
+    au < notReady ; 1988 ; Genetics Volume 119 ; 119 >
+    au < ready ; 1988 ; Genetics Volume 120 ; 120 >
+    au < ready ; 1989 ; Genetics Volume 121 ; 121 >
+    au < ready ; 1989 ; Genetics Volume 122 ; 122 >
+    au < ready ; 1989 ; Genetics Volume 123 ; 123 >
+    au < notReady ; 1990 ; Genetics Volume 124 ; 124 >
+    au < ready ; 1990 ; Genetics Volume 125 ; 125 >
+    au < testing ; 1990 ; Genetics Volume 126 ; 126 >
+    au < testing ; 1991 ; Genetics Volume 127 ; 127 >
+    au < testing ; 1991 ; Genetics Volume 128 ; 128 >
+    au < testing ; 1991 ; Genetics Volume 129 ; 129 >
+    au < testing ; 1992 ; Genetics Volume 130 ; 130 >
+    au < testing ; 1992 ; Genetics Volume 131 ; 131 >
+    au < testing ; 1992 ; Genetics Volume 132 ; 132 >
+    au < testing ; 1993 ; Genetics Volume 133 ; 133 >
+    au < testing ; 1993 ; Genetics Volume 134 ; 134 >
+    au < testing ; 1993 ; Genetics Volume 135 ; 135 >
     au < manifest ; 1994 ; Genetics Volume 136 ; 136 >
     au < manifest ; 1994 ; Genetics Volume 137 ; 137 >
     au < manifest ; 1994 ; Genetics Volume 138 ; 138 >
@@ -211,15 +211,15 @@
     au < testing ; 2007 ; Genetics Volume 177 ; 177 >
     au < testing ; 2008 ; Genetics Volume 178 ; 178 >
     au < testing ; 2008 ; Genetics Volume 179 ; 179 >
-    au < testing ; 2008 ; Genetics Volume 180 ; 180 >
+    au < notReady ; 2008 ; Genetics Volume 180 ; 180 >
     au < ready ; 2009 ; Genetics Volume 181 ; 181 >
     au < testing ; 2009 ; Genetics Volume 182 ; 182 >
     au < ready ; 2009 ; Genetics Volume 183 ; 183 >
     au < testing ; 2010 ; Genetics Volume 184 ; 184 >
     au < ready ; 2010 ; Genetics Volume 185 ; 185 >
-    au < testing ; 2010 ; Genetics Volume 186 ; 186 >
-    au < testing ; 2011 ; Genetics Volume 187 ; 187 >
-    au < testing ; 2011 ; Genetics Volume 188 ; 188 >
+    au < ready ; 2010 ; Genetics Volume 186 ; 186 >
+    au < ready ; 2011 ; Genetics Volume 187 ; 187 >
+    au < ready ; 2011 ; Genetics Volume 188 ; 188 >
     au < ready ; 2011 ; Genetics Volume 189 ; 189 >
 
   }
