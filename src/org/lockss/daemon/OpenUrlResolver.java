@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.20 2011-08-25 22:52:34 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.21 2011-10-31 23:04:40 pgust Exp $
  */
 
 /*
@@ -31,7 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -124,9 +126,9 @@ import org.lockss.util.urlconn.LockssUrlConnectionPool;
 public class OpenUrlResolver {
   private static Logger log = Logger.getLogger("OpenUrlResolver");
 
+  /** the LOCKSS daemon */
   private final LockssDaemon daemon;
-
-
+  
   /** maximum redirects for looking up DOI url */
   private static final int MAX_REDIRECTS = 10;
   
@@ -1060,7 +1062,7 @@ public class OpenUrlResolver {
 
     String url = null;
     if (plugin != null) {
-      log.debug3(  "geting issue url for plugin: " 
+      log.debug3(  "getting issue url for plugin: " 
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
   	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
@@ -1099,7 +1101,7 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the issue URL
    */
-  private static String getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
+  private String getBookUrl(Plugin plugin, TypedEntryMap paramMap) {
     String url = getPluginUrl(plugin, auBookauFeatures, paramMap);
     if (url == null) {
       url = paramMap.getString("base_url");
@@ -1144,7 +1146,7 @@ public class OpenUrlResolver {
 
     String url = null;
     if (plugin != null) {
-      log.debug3(  "geting issue url for plugin: " 
+      log.debug3(  "getting issue url for plugin: " 
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
       // add volume with type and spelling of existing element
@@ -1181,7 +1183,7 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the issue URL
    */
-  private static String getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
+  private String getJournalUrl(Plugin plugin, TypedEntryMap paramMap) { 
     String url = getPluginUrl(plugin, auJournalauFeatures, paramMap);
     if (url == null) {
       url = paramMap.getString("base_url");
@@ -1196,10 +1198,10 @@ public class OpenUrlResolver {
    * @param paramMap the param map
    * @return the URL for the specified key
    */
-  private static String
+  private String
   	getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
     ExternalizableMap map;
-
+log.critical("Entering getPluginUrl()");
     // get printf pattern for pluginKey property
     try {
       Method method = 
@@ -1213,7 +1215,7 @@ public class OpenUrlResolver {
       log.error("getDefinitionMap", ex);
       return null;
     }
-        
+
     for (String pluginKey : pluginKeys) {
       // locate object value for plugin key path
       String[] pluginKeyPath = pluginKey.split("/");
@@ -1268,22 +1270,66 @@ public class OpenUrlResolver {
         continue;
       }
       
+      // set up converter for use with feature URL printf strings
       UrlListConverter converter = 
         PrintfConverter.newUrlListConverter(plugin, paramMap);
+      
       for (String s : printfStrings) {
+        String url = null;
         try {
           List<String> urls = converter.getUrlList(s);
           if (!urls.isEmpty()) {
             // if multiple urls match, the first one will do
-            return urls.get(0);
-          }
+            url = urls.get(0);
+          } 
         } catch (Throwable ex) {
           log.debug("invalid  conversion: " + ex.getMessage());
+          continue;
+        }
+            
+        // validate URL: either it's cached, or it can be reached
+        if (validateUrl(url)) {
+          return url;
         }
       }
     }
       
     return null;
+  }
+  
+  /**
+   * Validate URL by testing whether it is either cached or reachable.
+   * 
+   * @param url the URL
+   * @return <code>true</code> if the URL is valid
+   */
+  protected boolean validateUrl(String url) {
+    if (daemon.getPluginManager().findCachedUrl(url, true) == null) {
+      // try reaching the URL
+      LockssUrlConnection conn = null;
+      try {
+        // connect to target as LOCKSS user agent so hit is not counted
+        // use quick connection pool for testing access to URL target
+        LockssUrlConnectionPool pool = 
+          daemon.getProxyManager().getQuickConnectionPool();
+        conn = UrlUtil.openConnection(url, pool);
+        conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+        conn.execute();
+        
+        // not valid if content not available
+        int code = conn.getResponseCode();
+        if (code != HttpURLConnection.HTTP_OK) {
+          return false;
+        }
+      } catch (IOException ex) {
+        // treat IO error same as bad response code
+      } finally {
+        if (conn != null) {
+          conn.release();
+        }
+      }
+    }
+    return true;
   }
   
     
