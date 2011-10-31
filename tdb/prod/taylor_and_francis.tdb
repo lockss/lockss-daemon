@@ -159,7 +159,7 @@
     comment[continues] = 0958-5206
     param[journal_id] = rabf21 
 
-    au < exists ; 2011 ; Accounting History Review Volume 21 ; 21 > 
+    au < ready ; 2011 ; Accounting History Review Volume 21 ; 21 > 
 
   }
 
@@ -399,7 +399,7 @@
 
     au < exists ; 2009 ; Acta Linguistica Hafniensia: International Journal of Linguistics Volume 41 ; 41 > 
     au < exists ; 2010 ; Acta Linguistica Hafniensia: International Journal of Linguistics Volume 42 ; 42 > 
-    au < exists ; 2011 ; Acta Linguistica Hafniensia: International Journal of Linguistics Volume 43 ; 43 >
+    au < ready ; 2011 ; Acta Linguistica Hafniensia: International Journal of Linguistics Volume 43 ; 43 >
 
   }
 
@@ -566,7 +566,7 @@
     param[journal_id] = tadl20 
 
     au < exists ; 2010 ; Adelphi Series Volume 50 ; 50 > 
-    au < exists ; 2011 ; Adelphi Series Volume 51 ; 51 > 
+    au < ready ; 2011 ; Adelphi Series Volume 51 ; 51 > 
 
   }
 
@@ -937,7 +937,7 @@
     au < exists ; 2008 ; African and Black Diaspora: An International Journal Volume 1 ; 1 > 
     au < exists ; 2009 ; African and Black Diaspora: An International Journal Volume 2 ; 2 > 
     au < exists ; 2010 ; African and Black Diaspora: An International Journal Volume 3 ; 3 > 
-    au < exists ; 2011 ; African and Black Diaspora: An International Journal Volume 4 ; 4 > 
+    au < ready ; 2011 ; African and Black Diaspora: An International Journal Volume 4 ; 4 > 
 
   }
 
@@ -979,7 +979,7 @@
     au < exists ; 2008 ; African Identities Volume 6 ; 6 > 
     au < exists ; 2009 ; African Identities Volume 7 ; 7 > 
     au < exists ; 2010 ; African Identities Volume 8 ; 8 > 
-    au < exists ; 2011 ; African Identities Volume 9 ; 9 > 
+    au < ready ; 2011 ; African Identities Volume 9 ; 9 > 
 
   }
 
@@ -1084,7 +1084,7 @@
     au < exists ; 2008 ; African Journal of Marine Science Volume 30 ; 30 > 
     au < exists ; 2009 ; African Journal of Marine Science Volume 31 ; 31 > 
     au < exists ; 2010 ; African Journal of Marine Science Volume 32 ; 32 > 
-    au < exists ; 2011 ; African Journal of Marine Science Volume 33 ; 33 > 
+    au < ready ; 2011 ; African Journal of Marine Science Volume 33 ; 33 > 
 
   }
 
@@ -1160,7 +1160,7 @@
     au < exists ; 2008 ; African Security Volume 1 ; 1 > 
     au < exists ; 2009 ; African Security Volume 2 ; 2 > 
     au < exists ; 2010 ; African Security Volume 3 ; 3 > 
-    au < exists ; 2011 ; African Security Volume 4 ; 4 > 
+    au < ready ; 2011 ; African Security Volume 4 ; 4 > 
 
   }
 
@@ -1191,7 +1191,7 @@
     au < exists ; 2008 ; African Security Review Volume 17 ; 17 > 
     au < exists ; 2009 ; African Security Review Volume 18 ; 18 > 
     au < exists ; 2010 ; African Security Review Volume 19 ; 19 > 
-    au < exists ; 2011 ; African Security Review Volume 20 ; 20 > 
+    au < notReady ; 2011 ; African Security Review Volume 20 ; 20 > 
 
   }
 
@@ -1276,7 +1276,7 @@
     au < exists ; 2008 ; African Studies Volume 67 ; 67 > 
     au < exists ; 2009 ; African Studies Volume 68 ; 68 > 
     au < exists ; 2010 ; African Studies Volume 69 ; 69 > 
-    au < exists ; 2011 ; African Studies Volume 70 ; 70 > 
+    au < ready ; 2011 ; African Studies Volume 70 ; 70 > 
 
   }
 
@@ -28089,7 +28089,7 @@
     au < exists ; 2008 ; International Journal of Control Volume 81 ; 81 > 
     au < exists ; 2009 ; International Journal of Control Volume 82 ; 82 > 
     au < exists ; 2010 ; International Journal of Control Volume 83 ; 83 > 
-    au < exists ; 2011 ; International Journal of Control Volume 84 ; 84 > 
+    au < ready ; 2011 ; International Journal of Control Volume 84 ; 84 > 
 
   }
 
@@ -28119,7 +28119,7 @@
     au < exists ; 2008 ; International Journal of Crashworthiness Volume 13 ; 13 > 
     au < exists ; 2009 ; International Journal of Crashworthiness Volume 14 ; 14 > 
     au < exists ; 2010 ; International Journal of Crashworthiness Volume 15 ; 15 > 
-    au < exists ; 2011 ; International Journal of Crashworthiness Volume 16 ; 16 > 
+    au < ready ; 2011 ; International Journal of Crashworthiness Volume 16 ; 16 > 
 
   }
 
@@ -28148,7 +28148,7 @@
     au < exists ; 2008 ; International Journal of Cultural Policy Volume 14 ; 14 > 
     au < exists ; 2009 ; International Journal of Cultural Policy Volume 15 ; 15 > 
     au < exists ; 2010 ; International Journal of Cultural Policy Volume 16 ; 16 > 
-    au < exists ; 2011 ; International Journal of Cultural Policy Volume 17 ; 17 > 
+    au < ready ; 2011 ; International Journal of Cultural Policy Volume 17 ; 17 > 
 
   }
 
@@ -28591,7 +28591,7 @@
     au < exists ; 2008 ; International Journal of Environmental Studies Volume 65 ; 65 > 
     au < exists ; 2009 ; International Journal of Environmental Studies Volume 66 ; 66 > 
     au < exists ; 2010 ; International Journal of Environmental Studies Volume 67 ; 67 > 
-    au < exists ; 2011 ; International Journal of Environmental Studies Volume 68 ; 68 > 
+    au < ready ; 2011 ; International Journal of Environmental Studies Volume 68 ; 68 > 
 
   }
 
@@ -29244,7 +29244,7 @@
     au < exists ; 2008 ; International Journal of Leadership in Education: Theory and Practice Volume 11 ; 11 > 
     au < exists ; 2009 ; International Journal of Leadership in Education: Theory and Practice Volume 12 ; 12 > 
     au < exists ; 2010 ; International Journal of Leadership in Education: Theory and Practice Volume 13 ; 13 > 
-    au < exists ; 2011 ; International Journal of Leadership in Education: Theory and Practice Volume 14 ; 14 > 
+    au < ready ; 2011 ; International Journal of Leadership in Education: Theory and Practice Volume 14 ; 14 > 
 
   }
 
@@ -29780,7 +29780,7 @@
     au < exists ; 2008 ; International Journal of Polymer Analysis and Characterization Volume 13 ; 13 > 
     au < exists ; 2009 ; International Journal of Polymer Analysis and Characterization Volume 14 ; 14 > 
     au < exists ; 2010 ; International Journal of Polymer Analysis and Characterization Volume 15 ; 15 > 
-    au < exists ; 2011 ; International Journal of Polymer Analysis and Characterization Volume 16 ; 16 > 
+    au < ready ; 2011 ; International Journal of Polymer Analysis and Characterization Volume 16 ; 16 > 
 
   }
 
@@ -30189,7 +30189,7 @@
     au < exists ; 2008 ; International Journal of Research & Method in Education Volume 31 ; 31 > 
     au < exists ; 2009 ; International Journal of Research & Method in Education Volume 32 ; 32 > 
     au < exists ; 2010 ; International Journal of Research & Method in Education Volume 33 ; 33 > 
-    au < exists ; 2011 ; International Journal of Research & Method in Education Volume 34 ; 34 > 
+    au < ready ; 2011 ; International Journal of Research & Method in Education Volume 34 ; 34 > 
 
   }
 
@@ -31273,7 +31273,7 @@
     au < exists ; 2008 ; International Review of Sport and Exercise Psychology Volume 1 ; 1 > 
     au < exists ; 2009 ; International Review of Sport and Exercise Psychology Volume 2 ; 2 > 
     au < exists ; 2010 ; International Review of Sport and Exercise Psychology Volume 3 ; 3 > 
-    au < exists ; 2011 ; International Review of Sport and Exercise Psychology Volume 4 ; 4 > 
+    au < ready ; 2011 ; International Review of Sport and Exercise Psychology Volume 4 ; 4 > 
 
   }
 
