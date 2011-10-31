@@ -4075,6 +4075,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
     au < released ; manifest ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
+    au < wanted ; exists ; 2011 ; Epidemiologic Reviews Volume 33 ; 33 ; >
 
     }
 
@@ -4332,6 +4333,7 @@
     au < manifest ; exists ; 2008 ; European Heart Journal Supplements Volume 10 ; 10 ; >
     au < released ; manifest ; 2009 ; European Heart Journal Supplements Volume 11 ; 11 ; >
     au < released ; manifest ; 2010 ; European Heart Journal Supplements Volume 12 ; 12 ; >
+    au < wanted ; exists ; 2011 ; European Heart Journal Supplements Volume 13 ; 13 ; >
 
     }
 
@@ -4732,7 +4734,7 @@
     param[base_url] = http://ecam.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 ; 7 ; >
+    comment[ecam] = This journal url does not exist or the URL has changed 
 
     }
 
@@ -6563,6 +6565,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; >
     au < released ; crawling ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
+    au < wanted ; exists ; 2011 ; Integrative and Comparative Biology Volume 51 ; 51 ; >
 
     }
 
@@ -6699,6 +6702,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; >
     au < released ; crawling ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 ; >
+    au < wanted ; exists ; 2011 ; International Journal of Constitutional Law Volume 9 ; 9 ; >
 
     }
 
@@ -9587,8 +9591,8 @@
     au < released ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
-    au < exists ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
-    au < exists ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
+    au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
+    au < wanted ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
 
     }
 
@@ -11070,7 +11074,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Library Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Library Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; The Library Volume 11 ; 11 ; >
-    au < exists ; exists ; 2011 ; The Library Volume 12 ; 12 ; >
+    au < wanted ; exists ; 2011 ; The Library Volume 12 ; 12 ; >
 
     }
     
@@ -11952,6 +11956,7 @@
     au < manifest ; exists ; 2008 ; The Musical Quarterly Volume 91 ; 91 ; >
     au < released ; manifest ; 2009 ; The Musical Quarterly Volume 92 ; 92 ; >
     au < released ; manifest ; 2010 ; The Musical Quarterly Volume 93 ; 93 ; >
+    au < wanted ; exists ; 2011 ; The Musical Quarterly Volume 94 ; 94 ; >
 
     }  
     
@@ -12719,6 +12724,7 @@
     au < manifest ; exists ; 2008 ; The Opera Quarterly Volume 24 ; 24 ; >
     au < released ; manifest ; 2009 ; The Opera Quarterly Volume 25 ; 25 ; >
     au < released ; manifest ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
+    au < wanted ; exists ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
             
     }  
         
@@ -12785,7 +12791,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
-    au < exists ; exists ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
+    au < wanted ; exists ; 2011 ; The Oral History Review Volume 38 ; 38 ; >
 
     }
     
@@ -12848,7 +12854,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Art Journa Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Art Journa Volume 32 ; 32 ; >
     au < released ; crawling ; 2010 ; Oxford Art Journal Volume 33 ; 33 ; >
-    au < exists ; exists ; 2011 ; Oxford Art Journa Volume 34 ; 34 ; >
+    au < wanted ; exists ; 2011 ; Oxford Art Journa Volume 34 ; 34 ; >
 
     }
 
@@ -13008,7 +13014,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
 
     }
 
@@ -13401,7 +13407,7 @@
     au < released ; crawling ; 2010 ; Past & Present Volume 208 ; 208 ; >
     au < released ; crawling ; 2010 ; Past & Present Volume 209 ; 209 ; >
     au < crawling ; exists ; 2011 ; Past & Present Volume 210 ; 210 ; >
-    au < manifest ; exists ; 2011 ; Past & Present Volume 211 ; 211 ; >
+    au < crawling ; exists ; 2011 ; Past & Present Volume 211 ; 211 ; >
 
     }
     
@@ -13587,7 +13593,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Policing: A Journal of Policy and Practice Volume 4 ; 4 ; >
-    au < exists ; exists ; 2011 ; Policing: A Journal of Policy and Practice Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2011 ; Policing: A Journal of Policy and Practice Volume 5 ; 5 ; >
 
     }
 
@@ -13635,7 +13641,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Political Analysis Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Political Analysis Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Political Analysis Volume 18 ; 18 ; >
-    au < exists ; exists ; 2011 ; Political Analysis Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2011 ; Political Analysis Volume 19 ; 19 ; >
 
     }
 
@@ -13864,8 +13870,8 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
     au < released ; crawling ; 2010 ; Proceedings of the London Mathematical Society Volume 100 ; 100 ; >
     au < released ; crawling ; 2010 ; Proceedings of the London Mathematical Society Volume 101 ; 101 ; >
-    au < manifest ; exists ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
+    au < crawling ; exists ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
 
     }
 
@@ -13951,7 +13957,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
 
     }
 
@@ -14789,7 +14795,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; >
     au < released ; crawling ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 ; >
-    au < manifest ; exists ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 ; >  
+    au < crawling ; exists ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 ; >  
 
     }
 
@@ -14914,7 +14920,7 @@
     au < manifest ; exists ; 2008 ; The Review of English Studies Volume 59 ; 59 ; >
     au < testing ; exists ; 2009 ; The Review of English Studies Volume 60 ; 60 ; >
     au < released ; manifest ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >    
+    au < crawling ; exists ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >    
    
     }
     
@@ -14948,6 +14954,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
     au < released ; crawling ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; Review of Environmental Economics and Policy Volume 5 ; 5 ; >
 
     }
 
@@ -15268,7 +15275,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Screen Volume 49 ; 49 ; >
     au < released ; crawling ; 2009 ; Screen Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Screen Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2011 ; Screen Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2011 ; Screen Volume 52 ; 52 ; >
 
     }
 
@@ -15303,7 +15310,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
     au < released ; crawling ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
     au < released ; crawling ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
 
     }
 
@@ -15419,7 +15426,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Social Politics Volume 15 ; 15 ; >
     au < released ; crawling ; 2009 ; Social Politics Volume 16 ; 16 ; >
     au < released ; crawling ; 2010 ; Social Politics Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2011 ; Social Politics Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2011 ; Social Politics Volume 18 ; 18 ; >
 
     }
     
@@ -15462,7 +15469,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
     au < released ; crawling ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; >
     au < released ; crawling ; 2010 ; Social Science Japan Journal Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
 
     }
 
@@ -15576,7 +15583,7 @@
     au < exists ; exists ; 2008 ; Sociology of Religion Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < released ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
 
     }
 
@@ -15637,7 +15644,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
     au < released ; crawling ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Statute Law Review Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2011 ; Statute Law Review Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2011 ; Statute Law Review Volume 32 ; 32 ; >
 
     }
 
@@ -15726,7 +15733,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
     au < released ; crawling ; 2010 ; Systematic Biology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2011 ; Systematic Biology Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2011 ; Systematic Biology Volume 60 ; 60 ; >
 
     }
 
@@ -15785,7 +15792,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Teaching Mathematics and its Applications Volume 27 ; 27 ; >
     au < released ; crawling ; 2009 ; Teaching Mathematics and its Applications Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Teaching Mathematics and its Applications Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2011 ; Teaching Mathematics and its Applications Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2011 ; Teaching Mathematics and its Applications Volume 30 ; 30 ; >
 
     }
 
@@ -15942,9 +15949,9 @@
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 116 ; 116 ; >
     au < released ; crawling ; 2010 ; Toxicological Sciences Volume 117 ; 117 ; >
     au < released ; manifest ; 2010 ; Toxicological Sciences Volume 118 ; 118 ; >
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 119 ; 119 ; >
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 120 ; 120 ; >
-    au < manifest ; exists ; 2011 ; Toxicological Sciences Volume 121 ; 121 ; >   
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 119 ; 119 ; >
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 120 ; 120 ; >
+    au < crawling ; exists ; 2011 ; Toxicological Sciences Volume 121 ; 121 ; >   
 
     }
 
@@ -16100,7 +16107,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
     au < released ; crawling ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
 
     }
 
@@ -16209,7 +16216,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < released ; crawling ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; The World Bank Research Observer Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2011 ; The World Bank Research Observer Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2011 ; The World Bank Research Observer Volume 26 ; 26 ; >
 
     }
 
@@ -16257,6 +16264,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
     au < released ; crawling ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2011 ; The Year's Work in Critical and Cultural Theory Volume 19 ; 19 ; >
 
     }
 
@@ -16374,6 +16382,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
     au < released ; manifest ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2011 ; The Year's Work in English Studies Volume 90 ; 90 ; >
 
     }
 
