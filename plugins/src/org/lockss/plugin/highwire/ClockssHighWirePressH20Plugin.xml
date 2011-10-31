@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>52</string>
+    <string>53</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -72,6 +72,23 @@
 	  <entry>
 	    <string>au_issue</string>
 	    <string>&quot;%scontent/%s/%s.toc&quot;, base_url, volume_name, issue</string>
+	  </entry>
+	  <entry>
+	  	<string>au_article</string>
+	  	<map>
+	  		<entry>
+	  			<string>pdf+html</string>
+			    <string>&quot;%scontent/%s/%s/%s.full.pdf+html&quot;, base_url, volume_name, issue, article</string>
+	  		</entry>
+	  		<entry>
+	  			<string>pdf</string>
+			    <string>&quot;%scontent/%s/%s/%s.full.pdf&quot;, base_url, volume_name, issue, article</string>
+	  		</entry>
+	  		<entry>
+	  			<string>html;*</string>
+			    <string>&quot;%scontent/%s/%s/%s.full&quot;, base_url, volume_name, issue, article</string>
+	  		</entry>
+	  	</map>
 	  </entry>
   	</map>
   </entry>    
