@@ -567,7 +567,7 @@
     au < released ; crawling ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
-    au < testing ; exists ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
+    au < released ; manifest ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
 
   }
 
@@ -632,7 +632,7 @@
     au < released ; crawling ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
-    au < testing ; exists ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
+    au < released ; manifest ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
     
   }
 
@@ -723,6 +723,8 @@
 
     param[journal_id] = ismej
 
+    au < testing ; exists ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
+
   }
 
   {
@@ -736,6 +738,8 @@
 
     param[journal_id] = jidsp
 
+	comment[jidsp] = missing manifest pages
+	
   }
 
   {
@@ -755,6 +759,7 @@
     au < released ; crawling ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; crawling ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < released ; crawling ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
+    au < testing ; exists ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
 
   }
 
@@ -768,6 +773,8 @@
     >
 
     param[journal_id] = jcbfm
+
+    au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
 
   }
 
@@ -789,6 +796,7 @@
     au < released ; crawling ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
     au < released ; crawling ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
+    au < testing ; exists ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
 
   }
 
@@ -816,6 +824,7 @@
     au < released ; crawling ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
     au < released ; crawling ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
     au < released ; crawling ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
+    au < testing ; exists ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
 
   }
 
