@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.20 2011-09-21 04:09:00 pgust Exp $
+ * $Id: MetadataManager.java,v 1.20.2.1 2011-10-31 16:28:31 pgust Exp $
  */
 
 /*
@@ -1650,20 +1650,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (pluginMgr != null) {
       try {
         Statement selectPendingAus = conn.createStatement();
-        selectPendingAus.setMaxRows(maxAus);
 
         ResultSet results = 
         	selectPendingAus.executeQuery("select * from PendingAus");
-        while (results.next()) {
+        while ((aus.size() < maxAus) && results.next()) {
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
           String auId = PluginManager.generateAuId(pluginId, auKey);
           ArchivalUnit au = pluginMgr.getAuFromId(auId);
           if (au == null) {
-            log.debug("Pending au missing from plugin manager: " + auId);
+            // this should not happen under ordinary circumstances
+            log.warning("Pending au missing from plugin manager: " + auId);
+            results.deleteRow();  // remove problem row from pending aus
           } else if (!reindexingTasks.containsKey(au)) {
             aus.add(au);
-            break;
           }
         }
       } catch (SQLException ex) {
