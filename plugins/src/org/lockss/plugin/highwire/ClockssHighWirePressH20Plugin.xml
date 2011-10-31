@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -91,7 +91,7 @@
 	  	</map>
 	  </entry>
   	</map>
-  </entry>    
+  </entry>  
   <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
@@ -147,7 +147,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/%s/.*\.full(\.pdf\+html)?$&quot;, base_url, volume_name</string>
+      <string>&quot;^%scontent/%s/.*\.full(\.pdf(\+html)?)?$&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>

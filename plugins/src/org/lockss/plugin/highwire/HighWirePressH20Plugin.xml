@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>52</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-	<string>2</string>
+	<string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -151,13 +151,14 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/%s/.*\.full(\.pdf\+html)?$&quot;, base_url, volume_name</string>
+      <string>&quot;^%scontent/%s/.*\.full(\.pdf(\+html)?)?$&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>200</long>
+    <long>4000</long>
   </entry>
+<!--
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
@@ -180,4 +181,5 @@
     <string>text/html_fetch_rate_limit</string>
     <string>1/3000</string>
   </entry>
+-->
 </map>
