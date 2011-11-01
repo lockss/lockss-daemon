@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.21 2011-10-31 23:04:40 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.22 2011-11-01 11:43:38 pgust Exp $
  */
 
 /*
@@ -262,15 +262,19 @@ public class OpenUrlResolver {
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
-      if (rft_id.startsWith("http://") || rft_id.startsWith("https://")) {
-        return rft_id;
+      if (UrlUtil.isHttpUrl(rft_id)) {
+        String url = resolveFromUrl(rft_id);
+        if (url != null) {
+          return url;
+        }
+        log.debug3("Failed to resolve from URL: " + rft_id);
       } else if (rft_id.startsWith("info:doi/")) {
         String doi = rft_id.substring("info:doi/".length());
         String url = resolveFromDOI(doi); 
-        if (url == null) {
-          log.debug3("Failed to resolve from DOI: " + doi);
+        if (url != null) {
+          return url;
         }
-        return url;
+        log.debug3("Failed to resolve from DOI: " + doi);
       }
     }
     String spage = getRftStartPage(params);
@@ -627,6 +631,54 @@ public class OpenUrlResolver {
   }
 
   /**
+   * Validates a URL and resolve it by following indirects, and stopping
+   * early if a URL that is in the LOCKSS cache is found.
+   *  
+   * @param aUrl the URL
+   * @return a resolved URL
+   */
+  public String resolveFromUrl(String aUrl) {
+    try {
+      final PluginManager pluginMgr = daemon.getPluginManager();
+      final LockssUrlConnectionPool connectionPool =
+        daemon.getProxyManager().getQuickConnectionPool();
+
+      String url = aUrl;
+      for (int i = 0; i < MAX_REDIRECTS; i++) {
+        // no need to look further if content already cached
+        if (pluginMgr.findCachedUrl(url,true) != null) {
+          return url;
+        }
+        
+        // test URL by opening connection
+        LockssUrlConnection conn = null;
+        try {
+          conn = UrlUtil.openConnection(url, connectionPool);
+          conn.setFollowRedirects(false);
+          conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+          conn.execute();
+          
+          // if not redirected, validate based on response code
+          String url2 = conn.getResponseHeaderValue("Location");
+          if (url2 == null) {
+            int response = conn.getResponseCode();
+            return (response == HttpURLConnection.HTTP_OK) ? url : null;
+          }
+          
+          // resolve redirected URL and try again
+          url = UrlUtil.resolveUri(url, url2);
+          log.debug3(i + " resolved to: " + url);
+        } finally {
+          IOUtil.safeRelease(conn);
+        }
+      }
+    } catch (IOException ex) {
+      log.error("resolving from URL:" + aUrl, ex);
+    }
+    return null;
+  }
+  
+  /**
    * Return the article URL from a DOI, using either the MDB or TDB.
    * @param doi the DOI
    * @return the article url
@@ -645,39 +697,7 @@ public class OpenUrlResolver {
     
     if (url == null) {
       // use DOI International resolver for DOI
-      url = "http://dx.doi.org/" + doi;
-      
-      final PluginManager pluginMgr = daemon.getPluginManager();
-
-      final LockssUrlConnectionPool connectionPool =
-        daemon.getProxyManager().getQuickConnectionPool();
-
-      try {
-        for (int i = 0; i < MAX_REDIRECTS; i++) {
-          // test case: 10.1063/1.3285176
-          // Question: do we need to check for and resolve more levels of 
-          //  redirect? In the the test case, there is a second one
-          LockssUrlConnection conn = 
-            UrlUtil.openConnection(url, connectionPool);
-          conn.setFollowRedirects(false);
-          try {
-        	conn.execute();
-        	String url2 = conn.getResponseHeaderValue("Location");
-        	if (url2 == null) {
-        	  break;
-        	}
-        	url = UrlUtil.resolveUri(url, url2);
-        	log.debug3(i + " resolved to: " + url);
-        	if (pluginMgr.findCachedUrl(url) != null) {
-        	  break;
-        	}
-          } finally {
-        	IOUtil.safeRelease(conn);
-          }
-        }
-      } catch (Exception ex) {
-        log.error("Getting DOI:" + doi, ex);
-      }
+      url = resolveFromUrl("http://dx.doi.org/" + doi);
     }
     return url;
   }    
@@ -1201,7 +1221,7 @@ public class OpenUrlResolver {
   private String
   	getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
     ExternalizableMap map;
-log.critical("Entering getPluginUrl()");
+
     // get printf pattern for pluginKey property
     try {
       Method method = 
@@ -1288,7 +1308,8 @@ log.critical("Entering getPluginUrl()");
         }
             
         // validate URL: either it's cached, or it can be reached
-        if (validateUrl(url)) {
+        url = resolveFromUrl(url);
+        if (url != null) {
           return url;
         }
       }
@@ -1297,42 +1318,6 @@ log.critical("Entering getPluginUrl()");
     return null;
   }
   
-  /**
-   * Validate URL by testing whether it is either cached or reachable.
-   * 
-   * @param url the URL
-   * @return <code>true</code> if the URL is valid
-   */
-  protected boolean validateUrl(String url) {
-    if (daemon.getPluginManager().findCachedUrl(url, true) == null) {
-      // try reaching the URL
-      LockssUrlConnection conn = null;
-      try {
-        // connect to target as LOCKSS user agent so hit is not counted
-        // use quick connection pool for testing access to URL target
-        LockssUrlConnectionPool pool = 
-          daemon.getProxyManager().getQuickConnectionPool();
-        conn = UrlUtil.openConnection(url, pool);
-        conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
-        conn.execute();
-        
-        // not valid if content not available
-        int code = conn.getResponseCode();
-        if (code != HttpURLConnection.HTTP_OK) {
-          return false;
-        }
-      } catch (IOException ex) {
-        // treat IO error same as bad response code
-      } finally {
-        if (conn != null) {
-          conn.release();
-        }
-      }
-    }
-    return true;
-  }
-  
-    
   /**
    * Return the book URL from TdbTitle and edition.
    * 
