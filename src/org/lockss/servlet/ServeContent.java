@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.41 2011-10-05 05:58:19 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.41.2.1 2011-11-01 11:41:54 pgust Exp $
  */
 
 /*
@@ -355,16 +355,16 @@ public class ServeContent extends LockssServlet {
         // transform convenience representation of doi to OpenURL form
         // (ignore other parameters)
         if (log.isDebug3()) log.debug3("Resolving DOI: " + doi);
-        url = openUrlResolver.resolveFromDOI(doi);
-	requestType = AccessLogType.Doi;
-      } else {
-	// If any params, pass them all to OpenUrl resolver
-	Map<String,String> pmap = getParamsAsMap();
-	if (!pmap.isEmpty()) {
-	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
-	  url = openUrlResolver.resolveOpenUrl(pmap);
-	  requestType = AccessLogType.OpenUrl;
-	}
+          url = openUrlResolver.resolveFromDOI(doi);
+          requestType = AccessLogType.Doi;
+        } else {
+    	// If any params, pass them all to OpenUrl resolver
+    	Map<String,String> pmap = getParamsAsMap();
+    	if (!pmap.isEmpty()) {
+    	  if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
+    	  url = openUrlResolver.resolveOpenUrl(pmap);
+    	  requestType = AccessLogType.OpenUrl;
+    	}
       }
       if (!StringUtil.isNullString(url)) {
         log.debug2("Resolved OpenUrl to: " + url);
