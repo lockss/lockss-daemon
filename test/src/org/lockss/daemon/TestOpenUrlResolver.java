@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.13 2011-10-31 23:07:05 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.14 2011-11-01 11:44:43 pgust Exp $
  */
 
 /*
@@ -232,15 +232,10 @@ public class TestOpenUrlResolver extends LockssTestCase {
       assertEquals(expectedAuCount, ausCount);
     }
     
-    // override to eliminate actual URL validation for testing
+    // override to eliminate URL resolution for testing
     openUrlResolver = new OpenUrlResolver(theDaemon) {
-      protected boolean validateUrl(String url) {
-        try {
-          new java.net.URL(url);
-          return true;
-        } catch (java.net.MalformedURLException ex) {
-          return false;
-        }
+      public String resolveFromUrl(String url) {
+        return url;
       }
     };
   }
