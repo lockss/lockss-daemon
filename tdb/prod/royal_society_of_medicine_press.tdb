@@ -17,21 +17,21 @@
     param[base_url] = http://ar.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 1997 ; Acta Radiologica Volume 38 ; 38 >
-    au < releasing ; 1998 ; Acta Radiologica Volume 39 ; 39 >
-    au < releasing ; 1999 ; Acta Radiologica Volume 40 ; 40 >
-    au < releasing ; 2000 ; Acta Radiologica Volume 41 ; 41 >
-    au < releasing ; 2001 ; Acta Radiologica Volume 42 ; 42 >
-    au < releasing ; 2002 ; Acta Radiologica Volume 43 ; 43 >
-    au < releasing ; 2003 ; Acta Radiologica Volume 44 ; 44 >
-    au < releasing ; 2004 ; Acta Radiologica Volume 45 ; 45 >
-    au < releasing ; 2005 ; Acta Radiologica Volume 46 ; 46 >
-    au < releasing ; 2006 ; Acta Radiologica Volume 47 ; 47 >
-    au < releasing ; 2007 ; Acta Radiologica Volume 48 ; 48 >
-    au < releasing ; 2008 ; Acta Radiologica Volume 49 ; 49 >
-    au < releasing ; 2009 ; Acta Radiologica Volume 50 ; 50 >
-    au < releasing ; 2010 ; Acta Radiologica Volume 51 ; 51 >
-    au < releasing ; 2011 ; Acta Radiologica Volume 52 ; 52 >
+    au < released ; 1997 ; Acta Radiologica Volume 38 ; 38 >
+    au < released ; 1998 ; Acta Radiologica Volume 39 ; 39 >
+    au < released ; 1999 ; Acta Radiologica Volume 40 ; 40 >
+    au < released ; 2000 ; Acta Radiologica Volume 41 ; 41 >
+    au < released ; 2001 ; Acta Radiologica Volume 42 ; 42 >
+    au < released ; 2002 ; Acta Radiologica Volume 43 ; 43 >
+    au < released ; 2003 ; Acta Radiologica Volume 44 ; 44 >
+    au < released ; 2004 ; Acta Radiologica Volume 45 ; 45 >
+    au < released ; 2005 ; Acta Radiologica Volume 46 ; 46 >
+    au < released ; 2006 ; Acta Radiologica Volume 47 ; 47 >
+    au < released ; 2007 ; Acta Radiologica Volume 48 ; 48 >
+    au < released ; 2008 ; Acta Radiologica Volume 49 ; 49 >
+    au < released ; 2009 ; Acta Radiologica Volume 50 ; 50 >
+    au < released ; 2010 ; Acta Radiologica Volume 51 ; 51 >
+    au < released ; 2011 ; Acta Radiologica Volume 52 ; 52 >
 
   }    
         
@@ -562,8 +562,8 @@
     param[base_url] = http://shortreports.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
-    au < releasing ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
+    au < released ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
+    au < released ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
 
   }
 
@@ -789,12 +789,12 @@
     param[base_url] = http://smj.rsmjournals.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
-    au < releasing ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
-    au < releasing ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
-    au < releasing ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
-    au < releasing ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
-    au < releasing ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
+    au < released ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+    au < released ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+    au < released ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+    au < released ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+    au < released ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+    au < released ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
 
   }
 
@@ -866,13 +866,13 @@
     comment[18] = found a login page
 
     au < exists ; 2004 ; Vascular Volume 12 ; 12 >
-    au < releasing ; 2005 ; Vascular Volume 13 ; 13 >
-    au < releasing ; 2006 ; Vascular Volume 14 ; 14 >
-    au < releasing ; 2007 ; Vascular Volume 15 ; 15 >
-    au < releasing ; 2008 ; Vascular Volume 16 ; 16 >
-    au < releasing ; 2009 ; Vascular Volume 17 ; 17 >
+    au < released ; 2005 ; Vascular Volume 13 ; 13 >
+    au < released ; 2006 ; Vascular Volume 14 ; 14 >
+    au < released ; 2007 ; Vascular Volume 15 ; 15 >
+    au < released ; 2008 ; Vascular Volume 16 ; 16 >
+    au < released ; 2009 ; Vascular Volume 17 ; 17 >
     au < notReady ; 2010 ; Vascular Volume 18 ; 18 >
-    au < releasing ; 2011 ; Vascular Volume 19 ; 19 >
+    au < released ; 2011 ; Vascular Volume 19 ; 19 >
 
   }
 
