@@ -40,7 +40,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.pdiconnect.com/
       implicit < status ; year ; name ; param[volume_name] >
 

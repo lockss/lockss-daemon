@@ -13,18 +13,14 @@
       issnl = 0033-8397
     >
 
-    {
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://www.radiologictechnology.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://www.radiologictechnology.org/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < released ; 2006 ; Radiologic Technology Volume 77 ; 77 >
-      au < released ; 2007 ; Radiologic Technology Volume 78 ; 78 >
-      au < released ; 2008 ; Radiologic Technology Volume 79 ; 79 >
-      au < released ; 2009 ; Radiologic Technology Volume 80 ; 80 >
-
-    }
+    au < HighWirePressPlugin ; down ; 2006 ; Radiologic Technology Volume 77 ; 77 >
+    au < HighWirePressPlugin ; down ; 2007 ; Radiologic Technology Volume 78 ; 78 >
+    au < HighWirePressPlugin ; down ; 2008 ; Radiologic Technology Volume 79 ; 79 >
+    au < HighWirePressPlugin ; down ; 2009 ; Radiologic Technology Volume 80 ; 80 >
 
   }
 
