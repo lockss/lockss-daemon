@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.21 2011-10-31 16:28:34 pgust Exp $
+ * $Id: MetadataManager.java,v 1.22 2011-11-02 19:32:28 pgust Exp $
  */
 
 /*
@@ -1336,7 +1336,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
           }
-        } catch (Throwable ex) {
+        } catch (RuntimeException ex) {
           log.error(" Caught unexpected Throwable for full text URL: "
               + af.getFullTextUrl(), ex);
         }
@@ -1689,7 +1689,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * @todo Update SchedService to handle this case
      */
     LockssRunnable runnable = 
-      new LockssRunnable("Reindexing: " + task.au.getName()) {
+      new LockssRunnable("ReindexingTask") {
 
       public void lockssRun() {
         task.callCallback(Schedule.EventType.START);
