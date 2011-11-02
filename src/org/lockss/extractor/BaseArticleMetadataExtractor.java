@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.5 2011-09-21 04:07:14 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.6 2011-11-02 19:16:19 pgust Exp $
  */
 
 /*
@@ -131,16 +131,28 @@ public class BaseArticleMetadataExtractor
     CachedUrl cu = getCuToExtract(af);
     if (log.isDebug3()) log.debug3("extract(" + af + ")");
     if (cu != null) {
+      FileMetadataExtractor me = null;
       try {
-	FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
-	if (me != null) {
-	  me.extract(target, cu, myEmitter);
-	} else {
-	  am = getDefaultArticleMetadata(cu);
-	  myEmitter.emitMetadata(cu, am);
-	}
+        me = cu.getFileMetadataExtractor(target);
+    	if (me != null) {
+    	  me.extract(target, cu, myEmitter);
+    	} else {
+    	  am = getDefaultArticleMetadata(cu);
+    	  myEmitter.emitMetadata(cu, am);
+    	}
       } catch (RuntimeException ex) {
         log.debug("for af (" + af + ")", ex);
+        if (me != null) {
+          try {
+            // PG: since this error is not rethrown, it seems 
+            // better to try emitting default metadata than nothing
+            am = getDefaultArticleMetadata(cu);
+            myEmitter.emitMetadata(cu, am);
+          } catch (RuntimeException ex2) {
+            // just move on because the problem may be in the emitter
+            log.debug("retry with default metadata for af (" + af + ")", ex2);
+          }
+        }
       } finally {
 	AuUtil.safeRelease(cu);
       }
