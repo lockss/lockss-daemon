@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.11 2011-04-11 22:55:18 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.11.8.1 2011-11-02 19:40:49 pgust Exp $
  */
 
 /*
@@ -95,7 +95,6 @@ public class MetadataUtil {
     Matcher m = ISSN_PAT.matcher(issn);
 
     if(!m.matches()){
-      log.debug("ISSN is not valid: "+issn);
       return false;
     }
     
@@ -126,25 +125,12 @@ public class MetadataUtil {
     }
 
     int remainder = checkSum % 11;
-    int correctCheckDigit;
 
     if (checkDigit != 0 && remainder == 0) {
-      log.debug("Check digit is not right. Expected: 0, Found: "+checkDigit);
       return false;
     } else if (checkDigit == 0 && remainder != 0) {
-      correctCheckDigit = (11 - remainder);
-      log.debug("Check digit is not right. Expected "+correctCheckDigit+", Found: "+checkDigit);
       return false;
     } else if (checkDigit != 0 && 11 - remainder != checkDigit) {
-
-      String found;
-      String shouldBe;
-
-      correctCheckDigit = (11 - remainder);
-      found = checkDigit == 10 ? "X" : checkDigit + "";
-      shouldBe = correctCheckDigit == 10 ? "X" : correctCheckDigit + "";
-
-      log.debug("Check digit is not right. Expected: "+shouldBe+" Found: "+found);
       return false;
     }
 
@@ -224,7 +210,6 @@ public class MetadataUtil {
     Matcher m = DOI_PAT.matcher(doi);
 
     if(!m.matches()){
-      log.debug("DOI is not valid: "+doi);
       return false;
     }
     return true;
