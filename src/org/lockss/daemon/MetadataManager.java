@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.20.2.1 2011-10-31 16:28:31 pgust Exp $
+ * $Id: MetadataManager.java,v 1.20.2.2 2011-11-02 19:32:25 pgust Exp $
  */
 
 /*
@@ -356,7 +356,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       /** Called before the AU is deleted */
       @Override public void auDeleted(PluginManager.AuEvent event,
-				      ArchivalUnit au) {
+                      ArchivalUnit au) {
         synchronized (reindexingTasks) {
           ReindexingTask task = reindexingTasks.get(au);
           if (task != null) {
@@ -376,20 +376,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                         + au.getName());
               return;
             }
-        	removeMetadataForAu(conn, au);
-        	conn.commit();
+            removeMetadataForAu(conn, au);
+            conn.commit();
           } catch (SQLException ex) {
-        	log.error(  "Cannot remove metadata for deleted AU: " 
-        			  + au.getName(), ex);
+            log.error(  "Cannot remove metadata for deleted AU: " 
+                      + au.getName(), ex);
           } finally {
-        	safeCommit(conn);
+            safeCommit(conn);
           }
         }
       }
       /** Called after a change to the AU's content */
       @Override public void auContentChanged(PluginManager.AuEvent event,
-					     ArchivalUnit au,
-					     ChangeInfo info) {
+                         ArchivalUnit au,
+                         ChangeInfo info) {
         if (info.isComplete()) {
           synchronized (reindexingTasks) {
             ReindexingTask task = reindexingTasks.get(au);
@@ -692,7 +692,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     String rootDir = config.get(ConfigManager.PARAM_TMPDIR);
     @SuppressWarnings("unchecked")
     List<String> dSpaceList = 
-    	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+        config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
     if (dSpaceList != null && !dSpaceList.isEmpty()) {
       rootDir = dSpaceList.get(0);
     }
@@ -884,9 +884,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       while (reindexingTasks.size() < maxReindexingTasks) {
         // get list of pending aus to reindex
         List<ArchivalUnit> aus =
-      	  getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
+          getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
         if (aus.isEmpty()) {
-        	break;
+            break;
         }
   
         // schedule pending aus
@@ -1081,9 +1081,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** enumeration status for reindexing tasks */
   enum ReindexingStatus { 
-	success, 	// if the reindexing task was successful
-	failed, 	// if the reindexing task failed
-	rescheduled // if the reindexing task was rescheduled 
+    success,    // if the reindexing task was successful
+    failed,     // if the reindexing task failed
+    rescheduled // if the reindexing task was rescheduled 
   };
   
   /**
@@ -1203,8 +1203,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               try {
                 // if reindexing not complete at this point,
                 // roll back current transaction, and try later
-            	switch (status) {
-            	case success: 
+                switch (status) {
+                case success: 
                   // remove the AU just reindexed from the pending list
                   removeFromPendingAus(conn, au);
                   
@@ -1223,8 +1223,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                         + " (" + totalClockTime / 1.0e3 + ")");
                   }
                   break;
-            	case failed: 
-            	case rescheduled:
+                case failed: 
+                case rescheduled:
                   log.debug2("Reindexing task did not finished for au "
                       + au.getName());
                   conn.rollback();
@@ -1232,7 +1232,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   // attempt to move failed AU to end of pending list
                   removeFromPendingAus(conn, au);
                   if (status == ReindexingStatus.rescheduled) {
-                	addToPendingAus(conn, Collections.singleton(au));
+                    addToPendingAus(conn, Collections.singleton(au));
                   }
                   break;
                 }
@@ -1266,8 +1266,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     /** Cancel current task without rescheduling */
     public void cancel() {
       if (!isFinished() && (status == ReindexingStatus.success)) {
-    	status = ReindexingStatus.failed;
-    	super.cancel();
+        status = ReindexingStatus.failed;
+        super.cancel();
       }
     }
     /** Cancel and reschedule current task */
@@ -1336,7 +1336,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           if (status == ReindexingStatus.success) {
             status = ReindexingStatus.rescheduled;
           }
-        } catch (Throwable ex) {
+        } catch (RuntimeException ex) {
           log.error(" Caught unexpected Throwable for full text URL: "
               + af.getFullTextUrl(), ex);
         }
@@ -1611,7 +1611,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void removeMetadataForAu(Connection conn, ArchivalUnit au)
       throws SQLException {
     PreparedStatement deletePendingAu = conn.prepareStatement(
-    	"delete from "
+        "delete from "
         + METADATA_TABLE + " where " + PLUGIN_ID_FIELD +  " = ? and "
         + AU_KEY_FIELD + " = ?");
     String auid = au.getAuId();
@@ -1652,7 +1652,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         Statement selectPendingAus = conn.createStatement();
 
         ResultSet results = 
-        	selectPendingAus.executeQuery("select * from PendingAus");
+            selectPendingAus.executeQuery("select * from PendingAus");
         while ((aus.size() < maxAus) && results.next()) {
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
@@ -1689,7 +1689,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
      * @todo Update SchedService to handle this case
      */
     LockssRunnable runnable = 
-      new LockssRunnable("Reindexing: " + task.au.getName()) {
+      new LockssRunnable("ReindexingTask") {
 
       public void lockssRun() {
         task.callCallback(Schedule.EventType.START);
@@ -1724,7 +1724,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           }
           sb.append(';');
         }
-    	sb.append(a);
+        sb.append(a);
       }
     }
     return (sb.length() == 0) ? null : sb.toString();
@@ -1868,7 +1868,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private void removeFromPendingAus(Connection conn, ArchivalUnit au)
       throws SQLException {
     PreparedStatement deletePendingAu = conn.prepareStatement(
-    	  "delete from "
+          "delete from "
         + PENDINGAUS_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
         + AU_KEY_FIELD + " = ?");
     String auid = au.getAuId();
