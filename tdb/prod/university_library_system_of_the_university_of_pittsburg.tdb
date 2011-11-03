@@ -4,7 +4,7 @@
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; param[year] ; volume >
 
     {
       title <
@@ -16,7 +16,7 @@
       param[base_url] = http://bsj.pitt.edu/ojs/
       param[journal_id] = bsj
 
-      au < ready ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 >
+      au < ready ; 2008-2010 ; Bolivian Studies Journal Volume 15-17 ; 2010 ; 15-17 >
 
     }
 
@@ -30,7 +30,7 @@
       param[base_url] = http://ehe.pitt.edu/ojs/
       param[journal_id] = ehe
 
-      au < ready ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 >
+      au < ready ; 2010 ; Excellence in Higher Education Volume 1 ; 2010 ; 1 >
 
     }
 
@@ -43,8 +43,8 @@
       param[base_url] = http://telerehab.pitt.edu/ojs/
       param[journal_id] = telerehab
 
-      au < ready ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 >
-      au < ready ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 >
+      au < ready ; 2009 ; International Journal of Telerehabilitation Volume 1 ; 2009 ; 1 >
+      au < ready ; 2010 ; International Journal of Telerehabilitation Volume 2 ; 2010 ; 2 >
 
     }
 
@@ -58,25 +58,25 @@
       param[base_url] = http://jffp.pitt.edu/ojs/
       param[journal_id] = jffp 
 
-      au < ready ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1989 >
-      au < ready ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 1990 >
-      au < ready ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 1991 >
-      au < ready ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 1992 >
-      au < ready ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 1993 >
-      au < ready ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 1994 >
-      au < ready ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 1995 >
-      au < ready ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 1996 >
-      au < ready ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 1997 >
-      au < ready ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 1998 >
-      au < ready ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 1999 >
-      au < ready ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 2000 >
-      au < ready ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 2003 >
-      au < ready ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 2004 >
-      au < ready ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 2005 >
-      au < ready ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 2006 >
-      au < ready ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 2007 >
-      au < ready ; 2008-2010 ; Journal of French and Francophone Philosophy Volume 18 ; 2010 >
-      au < ready ; 2011 ; Journal of French and Francophone Philosophy Volume 18 ; 2011 >
+      au < ready ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1989 ; 1 >
+      au < ready ; 1990 ; Journal of French and Francophone Philosophy Volume 2 ; 1990 ; 2 >
+      au < ready ; 1991 ; Journal of French and Francophone Philosophy Volume 3 ; 1991 ; 3 >
+      au < ready ; 1992 ; Journal of French and Francophone Philosophy Volume 4 ; 1992 ; 4 >
+      au < ready ; 1993 ; Journal of French and Francophone Philosophy Volume 5 ; 1993 ; 5 >
+      au < ready ; 1994 ; Journal of French and Francophone Philosophy Volume 6 ; 1994 ; 6 >
+      au < ready ; 1995 ; Journal of French and Francophone Philosophy Volume 7 ; 1995 ; 7 >
+      au < ready ; 1996 ; Journal of French and Francophone Philosophy Volume 8 ; 1996 ; 8 >
+      au < ready ; 1997 ; Journal of French and Francophone Philosophy Volume 9 ; 1997 ; 9 >
+      au < ready ; 1998 ; Journal of French and Francophone Philosophy Volume 10 ; 1998 ; 10 >
+      au < ready ; 1999 ; Journal of French and Francophone Philosophy Volume 11 ; 1999 ; 11 >
+      au < ready ; 2000 ; Journal of French and Francophone Philosophy Volume 12 ; 2000 ; 12 >
+      au < ready ; 2003 ; Journal of French and Francophone Philosophy Volume 13 ; 2003 ; 13 >
+      au < ready ; 2004 ; Journal of French and Francophone Philosophy Volume 14 ; 2004 ; 14 >
+      au < ready ; 2005 ; Journal of French and Francophone Philosophy Volume 15 ; 2005 ; 15 >
+      au < ready ; 2006 ; Journal of French and Francophone Philosophy Volume 16 ; 2006 ; 16 >
+      au < ready ; 2007 ; Journal of French and Francophone Philosophy Volume 17 ; 2007 ; 17 >
+      au < ready ; 2008-2010 ; Journal of French and Francophone Philosophy Volume 18 ; 2010 ; 18 >
+      au < ready ; 2011 ; Journal of French and Francophone Philosophy Volume 18 ; 2011 ; 18 >
 
     }
 
@@ -90,79 +90,79 @@
       param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
       param[journal_id] = Iberoamericana
 
-      au < ready ; 1939 ; Revista Iberoamericana Volume I ; 1939 >
-      au < ready ; 1940 ; Revista Iberoamericana Volume II ; 1940 >
-      au < ready ; 1941 ; Revista Iberoamericana Volume III-IV ; 1941 >      
-      au < ready ; 1942 ; Revista Iberoamericana Volume IV-V ; 1942 >
-      au < ready ; 1943 ; Revista Iberoamericana Volume VI-VII ; 1943 >
-      au < ready ; 1944 ; Revista Iberoamericana Volume VII-VIII ; 1944 >
-      au < ready ; 1945 ; Revista Iberoamericana Volume IX-X ; 1945 >
-      au < ready ; 1946 ; Revista Iberoamericana Volume X-XI ; 1946 >
-      au < ready ; 1947 ; Revista Iberoamericana Volume XII-XIII ; 1947 >
-      au < ready ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; 1948 >
-      au < ready ; 1949 ; Revista Iberoamericana Volume XV ; 1949 >
-      au < ready ; 1950 ; Revista Iberoamericana Volume XV-XVI ; 1950 >
-      au < ready ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; 1951 >
-      au < ready ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; 1952 >
-      au < ready ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; 1953 >
-      au < ready ; 1954 ; Revista Iberoamericana Volume XIX ; 1954 >
-      au < ready ; 1955 ; Revista Iberoamericana Volume XX ; 1955 >
-      au < ready ; 1956 ; Revista Iberoamericana Volume XXI ; 1956 >
-      au < ready ; 1957 ; Revista Iberoamericana Volume XXII ; 1957 >
-      au < ready ; 1958 ; Revista Iberoamericana Volume XXIII ; 1958 >
-      au < ready ; 1959 ; Revista Iberoamericana Volume XXIV ; 1959 >
-      au < ready ; 1960 ; Revista Iberoamericana Volume XXV ; 1960 >
-      au < ready ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; 1961 >
-      au < ready ; 1962 ; Revista Iberoamericana Volume XXVIII ; 1962 >
-      au < ready ; 1963 ; Revista Iberoamericana Volume XXIX ; 1963 >
-      au < ready ; 1964 ; Revista Iberoamericana Volume XXX ; 1964 >
-      au < ready ; 1965 ; Revista Iberoamericana Volume XXXI ; 1965 >
-      au < ready ; 1966 ; Revista Iberoamericana Volume XXXII ; 1966 >
-      au < ready ; 1967 ; Revista Iberoamericana Volume XXXIII ; 1967 >
-      au < ready ; 1968 ; Revista Iberoamericana Volume XXXIV ; 1968 >
-      au < ready ; 1969 ; Revista Iberoamericana Volume XXXV ; 1969 >
-      au < ready ; 1970 ; Revista Iberoamericana Volume XXXVI ; 1970 >
-      au < ready ; 1971 ; Revista Iberoamericana Volume XXXVII ; 1971 >
-      au < ready ; 1972 ; Revista Iberoamericana Volume XXXVIII ; 1972 >
-      au < ready ; 1973 ; Revista Iberoamericana Volume XXXIX ; 1973 >
-      au < ready ; 1974 ; Revista Iberoamericana Volume XL ; 1974 >
-      au < ready ; 1975 ; Revista Iberoamericana Volume XLI ; 1975 >
-      au < ready ; 1976 ; Revista Iberoamericana Volume XLII ; 1976 >
-      au < ready ; 1977 ; Revista Iberoamericana Volume XLIII ; 1977 >
-      au < ready ; 1978 ; Revista Iberoamericana Volume XLIV ; 1978 >
-      au < ready ; 1979 ; Revista Iberoamericana Volume XLV ; 1979 >
-      au < ready ; 1980 ; Revista Iberoamericana Volume XLVI ; 1980 >
-      au < ready ; 1981 ; Revista Iberoamericana Volume XLVII ; 1981 >
-      au < ready ; 1982 ; Revista Iberoamericana Volume XLVIII ; 1982 >
-      au < ready ; 1983 ; Revista Iberoamericana Volume XLIX ; 1983 >
-      au < ready ; 1984 ; Revista Iberoamericana Volume L ; 1984 >
-      au < ready ; 1985 ; Revista Iberoamericana Volume LI ; 1985 >
-      au < ready ; 1986 ; Revista Iberoamericana Volume LII ; 1986 >
-      au < ready ; 1987 ; Revista Iberoamericana Volume LIII ; 1987 >
-      au < ready ; 1988 ; Revista Iberoamericana Volume LIV ; 1988 >
-      au < ready ; 1989 ; Revista Iberoamericana Volume LV ; 1989 >
-      au < ready ; 1990 ; Revista Iberoamericana Volume LVI ; 1990 >
-      au < ready ; 1991 ; Revista Iberoamericana Volume LVII ; 1991 >
-      au < ready ; 1992 ; Revista Iberoamericana Volume LVIII ; 1992 >
-      au < ready ; 1993 ; Revista Iberoamericana Volume LXIV ; 1993 >
-      au < ready ; 1994 ; Revista Iberoamericana Volume LXV ; 1994 >
-      au < ready ; 1995 ; Revista Iberoamericana Volume LXI ; 1995 >
-      au < ready ; 1996 ; Revista Iberoamericana Volume LXII ; 1996 >
-      au < ready ; 1997 ; Revista Iberoamericana Volume LXIII ; 1997 >
-      au < ready ; 1998 ; Revista Iberoamericana Volume LXIV ; 1998 >
-      au < ready ; 1999 ; Revista Iberoamericana Volume LXV ; 1999 >
-      au < ready ; 2000 ; Revista Iberoamericana Volume LXVI ; 2000 >
-      au < ready ; 2001 ; Revista Iberoamericana Volume LXVII ; 2001 >
-      au < ready ; 2002 ; Revista Iberoamericana Volume LXVIII ; 2002 >
-      au < ready ; 2003 ; Revista Iberoamericana Volume LXIX ; 2003 >
-      au < ready ; 2004 ; Revista Iberoamericana Volume LXX ; 2004 >
-      au < ready ; 2005 ; Revista Iberoamericana Volume LXXI ; 2005 >
-      au < ready ; 2006 ; Revista Iberoamericana Volume LXXII ; 2006 >
-      au < ready ; 2007 ; Revista Iberoamericana Volume LXXIII ; 2007 >
-      au < ready ; 2008 ; Revista Iberoamericana Volume LXXIV ; 2008 >
-      au < ready ; 2009 ; Revista Iberoamericana Volume LXXV ; 2009 >
-      au < ready ; 2010 ; Revista Iberoamericana Volume LXXVI ; 2010 >
-      au < ready ; 2011 ; Revista Iberoamericana Volume LXXVII ; 2011 >
+      au < ready ; 1939 ; Revista Iberoamericana Volume I ; 1939 ; I >
+      au < ready ; 1940 ; Revista Iberoamericana Volume II ; 1940 ; II >
+      au < ready ; 1941 ; Revista Iberoamericana Volume III-IV ; 1941 ; III-IV >      
+      au < ready ; 1942 ; Revista Iberoamericana Volume IV-V ; 1942 ; IV-V >
+      au < ready ; 1943 ; Revista Iberoamericana Volume VI-VII ; 1943 ; VI-VII >
+      au < ready ; 1944 ; Revista Iberoamericana Volume VII-VIII ; 1944 ; VII-VIII>
+      au < ready ; 1945 ; Revista Iberoamericana Volume IX-X ; 1945 ; IX-X>
+      au < ready ; 1946 ; Revista Iberoamericana Volume X-XI ; 1946 ; X-XI >
+      au < ready ; 1947 ; Revista Iberoamericana Volume XII-XIII ; 1947 ; XII-XIII >
+      au < ready ; 1948 ; Revista Iberoamericana Volume XIII-XIV ; 1948 ; XIII-XIV >
+      au < ready ; 1949 ; Revista Iberoamericana Volume XV ; 1949 ; XV >
+      au < ready ; 1950 ; Revista Iberoamericana Volume XV-XVI ; 1950 ; XV-XVI >
+      au < ready ; 1951 ; Revista Iberoamericana Volume XVI-XVII ; 1951 ; XVI-XVII >
+      au < ready ; 1952 ; Revista Iberoamericana Volume XVII-XVIII ; 1952 ; XVII-XVIII >
+      au < ready ; 1953 ; Revista Iberoamericana Volume XVIII-XIX ; 1953 ; XVIII-XIX >
+      au < ready ; 1954 ; Revista Iberoamericana Volume XIX ; 1954 ; XIX >
+      au < ready ; 1955 ; Revista Iberoamericana Volume XX ; 1955 ; XX >
+      au < ready ; 1956 ; Revista Iberoamericana Volume XXI ; 1956 ; XXI >
+      au < ready ; 1957 ; Revista Iberoamericana Volume XXII ; 1957 ; XXII >
+      au < ready ; 1958 ; Revista Iberoamericana Volume XXIII ; 1958 ; XXIII >
+      au < ready ; 1959 ; Revista Iberoamericana Volume XXIV ; 1959 ; XXIV >
+      au < ready ; 1960 ; Revista Iberoamericana Volume XXV ; 1960 ; XXV >
+      au < ready ; 1961 ; Revista Iberoamericana Volume XXVI-XXVII ; 1961 ; XXVI-XXVII >
+      au < ready ; 1962 ; Revista Iberoamericana Volume XXVIII ; 1962 ; XXVIII >
+      au < ready ; 1963 ; Revista Iberoamericana Volume XXIX ; 1963 ; XXIX >
+      au < ready ; 1964 ; Revista Iberoamericana Volume XXX ; 1964 ; XXX >
+      au < ready ; 1965 ; Revista Iberoamericana Volume XXXI ; 1965 ; XXXI >
+      au < ready ; 1966 ; Revista Iberoamericana Volume XXXII ; 1966 ; XXXII >
+      au < ready ; 1967 ; Revista Iberoamericana Volume XXXIII ; 1967 ; XXXIII >
+      au < ready ; 1968 ; Revista Iberoamericana Volume XXXIV ; 1968 ; XXXIV >
+      au < ready ; 1969 ; Revista Iberoamericana Volume XXXV ; 1969 ; XXXV >
+      au < ready ; 1970 ; Revista Iberoamericana Volume XXXVI ; 1970 ; XXXVI >
+      au < ready ; 1971 ; Revista Iberoamericana Volume XXXVII ; 1971 ; XXXVII >
+      au < ready ; 1972 ; Revista Iberoamericana Volume XXXVIII ; 1972 ; XXXVIII >
+      au < ready ; 1973 ; Revista Iberoamericana Volume XXXIX ; 1973 ; XXXIX >
+      au < ready ; 1974 ; Revista Iberoamericana Volume XL ; 1974 ; XL >
+      au < ready ; 1975 ; Revista Iberoamericana Volume XLI ; 1975 ; XLI >
+      au < ready ; 1976 ; Revista Iberoamericana Volume XLII ; 1976 ; XLII >
+      au < ready ; 1977 ; Revista Iberoamericana Volume XLIII ; 1977 ; XLIII >
+      au < ready ; 1978 ; Revista Iberoamericana Volume XLIV ; 1978 ; XLIV >
+      au < ready ; 1979 ; Revista Iberoamericana Volume XLV ; 1979 ; XLV >
+      au < ready ; 1980 ; Revista Iberoamericana Volume XLVI ; 1980 ; XLVI >
+      au < ready ; 1981 ; Revista Iberoamericana Volume XLVII ; 1981 ; XLVII >
+      au < ready ; 1982 ; Revista Iberoamericana Volume XLVIII ; 1982 ; XLVIII >
+      au < ready ; 1983 ; Revista Iberoamericana Volume XLIX ; 1983 ; XLIX >
+      au < ready ; 1984 ; Revista Iberoamericana Volume L ; 1984 ; L >
+      au < ready ; 1985 ; Revista Iberoamericana Volume LI ; 1985 ; LI >
+      au < ready ; 1986 ; Revista Iberoamericana Volume LII ; 1986 ; LII >
+      au < ready ; 1987 ; Revista Iberoamericana Volume LIII ; 1987 ; LIII >
+      au < ready ; 1988 ; Revista Iberoamericana Volume LIV ; 1988 ; LIV >
+      au < ready ; 1989 ; Revista Iberoamericana Volume LV ; 1989 ; LV >
+      au < ready ; 1990 ; Revista Iberoamericana Volume LVI ; 1990 ; LVI >
+      au < ready ; 1991 ; Revista Iberoamericana Volume LVII ; 1991 ; LVII >
+      au < ready ; 1992 ; Revista Iberoamericana Volume LVIII ; 1992 ; LVIII >
+      au < ready ; 1993 ; Revista Iberoamericana Volume LIX ; 1993 ; LIX >
+      au < ready ; 1994 ; Revista Iberoamericana Volume LX ; 1994 ; LX >
+      au < ready ; 1995 ; Revista Iberoamericana Volume LXI ; 1995 ; LXI >
+      au < ready ; 1996 ; Revista Iberoamericana Volume LXII ; 1996 ; LXII >
+      au < ready ; 1997 ; Revista Iberoamericana Volume LXIII ; 1997 ; LXIII >
+      au < ready ; 1998 ; Revista Iberoamericana Volume LXIV ; 1998 ; LXIV >
+      au < ready ; 1999 ; Revista Iberoamericana Volume LXV ; 1999 ; LXV >
+      au < ready ; 2000 ; Revista Iberoamericana Volume LXVI ; 2000 ; LXVI >
+      au < ready ; 2001 ; Revista Iberoamericana Volume LXVII ; 2001 ; LXVII >
+      au < ready ; 2002 ; Revista Iberoamericana Volume LXVIII ; 2002 ; LXVIII >
+      au < ready ; 2003 ; Revista Iberoamericana Volume LXIX ; 2003 ; LXIX >
+      au < ready ; 2004 ; Revista Iberoamericana Volume LXX ; 2004 ; LXX >
+      au < ready ; 2005 ; Revista Iberoamericana Volume LXXI ; 2005 ; LXXI >
+      au < ready ; 2006 ; Revista Iberoamericana Volume LXXII ; 2006 ; LXXII >
+      au < ready ; 2007 ; Revista Iberoamericana Volume LXXIII ; 2007 ; LXXIII >
+      au < ready ; 2008 ; Revista Iberoamericana Volume LXXIV ; 2008 ; LXXIV>
+      au < ready ; 2009 ; Revista Iberoamericana Volume LXXV ; 2009 ; LXXV >
+      au < ready ; 2010 ; Revista Iberoamericana Volume LXXVI ; 2010 ; LXXVI >
+      au < ready ; 2011 ; Revista Iberoamericana Volume LXXVII ; 2011 ; LXXVII >
 
 
     }
@@ -176,7 +176,7 @@
       param[base_url] = http://ricoeur.pitt.edu/ojs/
       param[journal_id] = ricoeur
 
-      au < ready ; 2010 ; Ricoeur Studies Volume 1 ; 2010 >
+      au < ready ; 2010 ; Ricoeur Studies Volume 1 ; 2010 ; 1 >
 
     }
 
