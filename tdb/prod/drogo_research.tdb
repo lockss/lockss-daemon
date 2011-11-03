@@ -14,6 +14,7 @@
     rights = openaccess
     plugin = uk.org.lockss.plugin.drogoresearch.DrogoResearchPlugin
     param[base_url] = http://www.drogoresearch.com/
+    comment[availability] Articles for 2006-2007 available at http://www.researchgate.net/journal/0968-0624_The_international_journal_of_psychiatric_nursing_research
     implicit < status ; name >
 
     au < down ; International Journal of Psychiatric Nursing Research >
