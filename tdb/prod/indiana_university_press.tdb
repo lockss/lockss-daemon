@@ -1358,9 +1358,9 @@
       plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = trs
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] ; volume >
 
-      au < down ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
+      au < down ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - ; 93-103 >
 
     }
     
