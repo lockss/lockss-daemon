@@ -196,25 +196,26 @@
     >
 
     param[journal_dir] = journal_of_nietzsche_studies
+	implicit < status ; year ; name ; param[volume] ; volume >
 
-    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 >
-    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 >
-    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 25 ; 25 >
-    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 26 ; 26 >
-    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 27 ; 27 >
-    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 28 ; 28 >
-    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 29 ; 29 >
-    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 30 ; 30 >
-    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 31 ; 31 >
-    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 32 ; 32 >
-    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 33 ; 33 >
-    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 34 ; 34 >
-    au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 >
-    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 >
-    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 >
-    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 >
-    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 >
-    au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 >
+    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 ; 23 >
+    au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 ; 24 >
+    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 25 ; 25 ; 25 >
+    au < released ; 2003 ; The Journal of Nietzsche Studies Issue 26 ; 26 ; 26 >
+    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 27 ; 27 ; 27 >
+    au < released ; 2004 ; The Journal of Nietzsche Studies Issue 28 ; 28 ; 28 >
+    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 29 ; 29 ; 29 >
+    au < released ; 2005 ; The Journal of Nietzsche Studies Issue 30 ; 30 ; 30 >
+    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 31 ; 31 ; 31 >
+    au < released ; 2006 ; The Journal of Nietzsche Studies Issue 32 ; 32 ; 32 >
+    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 33 ; 33 ; 33 >
+    au < released ; 2007 ; The Journal of Nietzsche Studies Issue 34 ; 34 ; 34 >
+    au < released ; 2008 ; The Journal of Nietzsche Studies Issue 35/36 ; 35 ; 35-36 >
+    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 37 ; 37 ; 37 >
+    au < released ; 2009 ; The Journal of Nietzsche Studies Issue 38 ; 38 ; 38 >
+    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 39 ; 39 ; 39 >
+    au < ready ; 2010 ; The Journal of Nietzsche Studies Issue 40 ; 40 ; 40 >
+    au < ready ; 2011 ; The Journal of Nietzsche Studies Issue 41 ; 41 ; 41 >
     
   }
 
