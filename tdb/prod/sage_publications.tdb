@@ -31972,7 +31972,7 @@ comment[mpj] = now published by Brill
       {
 
         pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://sexualities.sagepub.com/
+        param[base_url] = http://sex.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1998 ; Sexualities Volume 1 ; 1 >
@@ -31988,7 +31988,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Sexualities Volume 11 ; 11 >
         au < manifest ; 2009 ; Sexualities Volume 12 ; 12 >
         au < manifest ; 2010 ; Sexualities Volume 13 ; 13 >
-        au < manifest ; 2011 ; Sexualities Volume 14 ; 14 >
+        au < ready ; 2011 ; Sexualities Volume 14 ; 14 >
 
       }
 
@@ -33083,7 +33083,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2009 ; Sports Health: A Multidisciplinary Approach Volume 1 ; 1 >
         au < manifest ; 2010 ; Sports Health: A Multidisciplinary Approach Volume 2 ; 2 >
-        au < manifest ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 >
+        au < ready ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 >
 
       }
 
@@ -33314,7 +33314,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Structural Health Monitoring Volume 7 ; 7 >
         au < manifest ; 2009 ; Structural Health Monitoring Volume 8 ; 8 >
         au < manifest ; 2010 ; Structural Health Monitoring Volume 9 ; 9 >
-        au < manifest ; 2011 ; Structural Health Monitoring Volume 10 ; 10 >
+        au < ready ; 2011 ; Structural Health Monitoring Volume 10 ; 10 >
 
       }
 
@@ -33371,7 +33371,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 >
         au < manifest ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 >
         au < manifest ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 >
-        au < manifest ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
+        au < ready ; 2011 ; Studies in Christian Ethics Volume 24 ; 24 >
 
       }
 
@@ -33489,7 +33489,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 >
         au < manifest ; 2009 ; Studies in Religion/Sciences Religieuses Volume 38 ; 38 >
         au < manifest ; 2010 ; Studies in Religion/Sciences Religieuses Volume 39 ; 39 >
-        au < manifest ; 2011 ; Studies in Religion/Sciences Religieuses Volume 40 ; 40 >
+        au < ready ; 2011 ; Studies in Religion/Sciences Religieuses Volume 40 ; 40 >
 
       }
 
@@ -33540,7 +33540,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Surgical Innovation Volume 15 ; 15 >
         au < manifest ; 2009 ; Surgical Innovation Volume 16 ; 16 >
         au < manifest ; 2010 ; Surgical Innovation Volume 17 ; 17 >
-        au < manifest ; 2011 ; Surgical Innovation Volume 18 ; 18 >
+        au < ready ; 2011 ; Surgical Innovation Volume 18 ; 18 >
 
       }
 
@@ -33593,7 +33593,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 >
         au < manifest ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 >
         au < manifest ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 >
-        au < manifest ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 >
+        au < ready ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 >
 
       }
 
@@ -33614,7 +33614,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://top.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2011 ; Teaching of Psychology Volume 38 ; 38 >
+        au < ready ; 2011 ; Teaching of Psychology Volume 38 ; 38 >
         
       }
       
@@ -33641,7 +33641,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008 ; Teaching Sociology Volume 36 ; 36 >
         au < manifest ; 2009 ; Teaching Sociology Volume 37 ; 37 >
         au < manifest ; 2010 ; Teaching Sociology Volume 38 ; 38 >
-        au < manifest ; 2011 ; Teaching Sociology Volume 39 ; 39 >
+        au < ready ; 2011 ; Teaching Sociology Volume 39 ; 39 >
 
       }
 
@@ -33686,7 +33686,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Television & New Media Volume 9 ; 9 >
         au < manifest ; 2009 ; Television & New Media Volume 10 ; 10 >
         au < manifest ; 2010 ; Television & New Media Volume 11 ; 11 >
-        au < manifest ; 2011 ; Television & New Media Volume 12 ; 12 >
+        au < ready ; 2011 ; Television & New Media Volume 12 ; 12 >
 
       }
 
@@ -33800,7 +33800,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Textile Research Journal Volume 78 ; 78 >
         au < manifest ; 2009 ; Textile Research Journal Volume 79 ; 79 >
         au < manifest ; 2010 ; Textile Research Journal Volume 80 ; 80 >
-        au < manifest ; 2011 ; Textile Research Journal Volume 81 ; 81 >
+        au < ready ; 2011 ; Textile Research Journal Volume 81 ; 81 >
 
       }
 
@@ -33827,7 +33827,7 @@ comment[mpj] = now published by Brill
         au < exists ; 1949 ; Theology Volume 52 ; 52 >
         au < exists ; 1950 ; Theology Volume 53 ; 53 >
         au < exists ; 2010 ; Theology Volume 113 ; 113 >
-        au < manifest ; 2011 ; Theology Volume 114 ; 114 >
+        au < ready ; 2011 ; Theology Volume 114 ; 114 >
 
       }
 
@@ -33911,7 +33911,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2008-2009 ; Theology Today Volume 65 ; 65 >
         au < exists ; 2009-2010 ; Theology Today Volume 66 ; 66 >
         au < exists ; 2010-2011 ; Theology Today Volume 67 ; 67 >
-        au < manifest ; 2011 ; Theology Today Volume 68 ; 68 >
+        au < ready ; 2011 ; Theology Today Volume 68 ; 68 >
 
       }
 
@@ -33958,7 +33958,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Theoretical Criminology Volume 12 ; 12 >
         au < manifest ; 2009 ; Theoretical Criminology Volume 13 ; 13 >
         au < manifest ; 2010 ; Theoretical Criminology Volume 14 ; 14 >
-        au < manifest ; 2011 ; Theoretical Criminology Volume 15 ; 15 >
+        au < ready ; 2011 ; Theoretical Criminology Volume 15 ; 15 >
 
       }
 
@@ -34012,7 +34012,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Theory & Psychology Volume 18 ; 18 >
         au < manifest ; 2009 ; Theory & Psychology Volume 19 ; 19 >
         au < manifest ; 2010 ; Theory & Psychology Volume 20 ; 20 >
-        au < manifest ; 2011 ; Theory & Psychology Volume 21 ; 21 >
+        au < ready ; 2011 ; Theory & Psychology Volume 21 ; 21 >
 
       }
 
@@ -34054,7 +34054,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Theory and Research in Education Volume 6 ; 6 >
         au < manifest ; 2009 ; Theory and Research in Education Volume 7 ; 7 >
         au < manifest ; 2010 ; Theory and Research in Education Volume 8 ; 8 >
-        au < manifest ; 2011 ; Theory and Research in Education Volume 9 ; 9 >
+        au < ready ; 2011 ; Theory and Research in Education Volume 9 ; 9 >
 
       }
 
@@ -34114,7 +34114,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Theory, Culture & Society Volume 25 ; 25 >
         au < manifest ; 2009 ; Theory, Culture & Society Volume 26 ; 26 >
         au < manifest ; 2010 ; Theory, Culture & Society Volume 27 ; 27 >
-        au < manifest ; 2011 ; Theory, Culture & Society Volume 28 ; 28 >
+        au < ready ; 2011 ; Theory, Culture & Society Volume 28 ; 28 >
 
       }
 
@@ -34150,7 +34150,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 >
         au < manifest ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 >
         au < manifest ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
-        au < manifest ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
+        au < ready ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
 
       }
 
@@ -34170,8 +34170,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://taw.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
-        au < exists ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
+        au < manifest ; 2010 ; Therapeutic Advances in Drug Safety Volume 1 ; 1 >
+        au < ready ; 2011 ; Therapeutic Advances in Drug Safety Volume 2 ; 2 >
 
       }
 
@@ -34192,7 +34192,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2010 ; Therapeutic Advances in Chronic Disease Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 >
+        au < ready ; 2011 ; Therapeutic Advances in Chronic Disease Volume 2 ; 2 >
 
       }
 
@@ -34213,7 +34213,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2010 ; Therapeutic Advances in Endocrinology and Metabolism Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 >
+        au < ready ; 2011 ; Therapeutic Advances in Endocrinology and Metabolism Volume 2 ; 2 >
 
       }
 
@@ -34236,7 +34236,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 >
         au < manifest ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 >
         au < manifest ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 >
-        au < manifest ; 2011 ; Therapeutic Advances in Gastroenterology Volume 4 ; 4 >
+        au < ready ; 2011 ; Therapeutic Advances in Gastroenterology Volume 4 ; 4 >
 
       }
 
@@ -34257,7 +34257,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2010 ; Therapeutic Advances in Hematology Volume 1 ; 1 >
-        au < manifest ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 >
+        au < ready ; 2011 ; Therapeutic Advances in Hematology Volume 2 ; 2 >
 
       }
 
@@ -34279,7 +34279,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 >
         au < manifest ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 >
-        au < manifest ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
+        au < ready ; 2011 ; Therapeutic Advances in Medical Oncology Volume 3 ; 3 >
 
       }
 
@@ -34301,7 +34301,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2009 ; Therapeutic Advances in Musculoskeletal Disease Volume 1 ; 1 >
         au < manifest ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 >
-        au < manifest ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
+        au < ready ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
 
       }
 
@@ -34324,7 +34324,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 >
         au < manifest ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 >
         au < manifest ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 3 ; 3 >
-        au < manifest ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
+        au < ready ; 2011 ; Therapeutic Advances in Neurological Disorders Volume 4 ; 4 >
 
       }
 
@@ -34343,7 +34343,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tpp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 >
+        au < ready ; 2011 ; Therapeutic Advances in Psychopharmacology Volume 1 ; 1 >
         
       }
 
