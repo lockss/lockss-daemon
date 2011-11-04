@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.12 2011-09-28 10:11:50 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.12.2.1 2011-11-04 17:37:39 easyonthemayo Exp $
  */
 
 /*
@@ -523,13 +523,26 @@ public class TestKbartConverter extends LockssTestCase {
   /**
    * Test that valid/invalid publication dates are recognised.
    */
-  public final void testIsPublicationDate() {
+  public final void testIsPublicationDateString() {
     int now = Calendar.getInstance().get(Calendar.YEAR);
-    String[] invalidDates = new String[] {""+(KbartConverter.MIN_PUB_DATE-1), "1999a", "3000", "notdate", ""+(now+1)};
+    String[] invalidDates = new String[] {
+        ""+(KbartConverter.MIN_PUB_DATE-1),
+        "1999a",
+        "3000",
+        "notdate",
+        ""+(now+1+KbartConverter.MAX_FUTURE_PUB_DATE)
+    };
     for (String d : invalidDates) {
       assertFalse(d+" should not be a valid publication date", KbartConverter.isPublicationDate(d));
     }
-    String[] validDates = new String[] {""+KbartConverter.MIN_PUB_DATE, "1999", "2000", ""+now, ""+(now-1)};
+    String[] validDates = new String[] {
+        ""+KbartConverter.MIN_PUB_DATE,
+        "1999",
+        "2000",
+        ""+now,
+        ""+(now-1),
+        ""+(now+KbartConverter.MAX_FUTURE_PUB_DATE)
+    };
     for (String d : validDates) {
       assertTrue(d+" should be a valid publication date", KbartConverter.isPublicationDate(d));
     }

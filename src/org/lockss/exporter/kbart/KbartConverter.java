@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.23 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.23.2.1 2011-11-04 17:37:39 easyonthemayo Exp $
  */
 
 /*
@@ -100,11 +100,16 @@ public class KbartConverter {
    * The string used as a substitution parameter in the output. Occurrences of 
    * this string will be replaced in local LOCKSS boxes with the protocol, host 
    * and port of ServeContent.
-    */
+   */
   public static final String LABEL_PARAM_LOCKSS_RESOLVER = "LOCKSS_RESOLVER";
   
   /** The minimum number that will be considered a date of publication. */
   public static final int MIN_PUB_DATE = 1600;
+  /**
+   * The maximum number of years after the current year that will be considered
+   * a valid date of publication.
+   */
+  public static final int MAX_FUTURE_PUB_DATE = 10;
 
   /** 
    * The minimum consistency score for a volume-first ordering to be used 
@@ -247,7 +252,8 @@ public class KbartConverter {
   /**
    * Check whether a string appears to represent a publication date.
    * This is taken to be a 4-digit number within a specific range,
-   * namely <code>MIN_PUB_DATE</code> to the current year.
+   * namely <code>MIN_PUB_DATE</code> to the current year plus
+   * <code>MAX_FUTURE_PUB_DATE</code>.
    * <p>
    * Note this is used for both validation (checking a value does not 
    * contravene the expected format or content for a year), and 
@@ -270,13 +276,16 @@ public class KbartConverter {
   /**
    * Check whether an integer appears to represent a publication date.
    * This is taken to be a number within a specific range,
-   * namely <code>MIN_PUB_DATE</code> to the current year.
+   * namely <code>MIN_PUB_DATE</code> to the current year plus
+   * <code>MAX_FUTURE_PUB_DATE</code>.
    *  
    * @param year the string to validate
    * @return whether the string appears to represent a 4-digit publication year
    */
   private static boolean isPublicationDate(int year) {
-    return (year >= MIN_PUB_DATE && year <= Calendar.getInstance().get(Calendar.YEAR));
+    return (year >= MIN_PUB_DATE &&
+        year <= Calendar.getInstance().get(Calendar.YEAR) + MAX_FUTURE_PUB_DATE
+    );
   }
   
   /**
