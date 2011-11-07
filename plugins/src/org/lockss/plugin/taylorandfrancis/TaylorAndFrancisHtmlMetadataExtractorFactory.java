@@ -113,9 +113,13 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  String[] biblioInfo = content.split(", ");
     		  
     		  for (int k = biblioInfo.length-1; k >= 0; k--) {
-    			  if (biblioInfo[k].startsWith("pp. ")) {
-    				  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf('-'));
+    			  if (biblioInfo[k].startsWith("pp. ") && biblioInfo[k].contains("-")) {
+    				  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("-"));
     				  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-'), biblioInfo[k].length());
+    			  }
+    			  else if (biblioInfo[k].startsWith("pp. ") && biblioInfo[k].contains("–")) {
+    				  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf("–"));
+    				  epage = biblioInfo[k].substring(biblioInfo[k].indexOf("–"), biblioInfo[k].length());
     			  }
     			  else if (biblioInfo[k].startsWith("No. ")) {
     				 issue = biblioInfo[k].substring("No. ".length(), biblioInfo[k].length());
