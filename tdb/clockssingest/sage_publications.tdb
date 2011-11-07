@@ -3625,7 +3625,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; Cartilage Volume 1 ; 1 ; >
-      au < testing ; exists ; 2011 ; Cartilage Volume 2 ; 2 ; >
+      au < released ; manifest ; 2011 ; Cartilage Volume 2 ; 2 ; >
 
     }
 
@@ -13692,7 +13692,7 @@
       au < exists ; exists ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 ; >
       au < exists ; exists ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 ; >
       au < exists ; exists ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 ; >
-      au < testing ; exists ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 ; >
 
     }
 
@@ -30981,7 +30981,7 @@
       au < manifest ; exists ; 2008 ; Toxicologic Pathology Volume 36 ; 36 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; >
       au < manifest ; exists ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ;  >
-      au < testing ; exists ; 2011 ; Toxicologic Pathology Volume 39 ; 39 ; >
+      au < released ; manifest ; 2011 ; Toxicologic Pathology Volume 39 ; 39 ; >
 
     }
 
@@ -31789,7 +31789,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
       au < manifest ; exists ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 ;  >
-      au < testing ; exists ; 2011 ; Vascular and Endovascular Surgery Volume 45 ; 45 ; >
+      au < released ; manifest ; 2011 ; Vascular and Endovascular Surgery Volume 45 ; 45 ; >
 
     }
 
@@ -31834,7 +31834,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Vascular Medicine Volume 14 ; 14 ; >
       au < manifest ; exists ; 2010 ; Vascular Medicine Volume 15 ; 15 ;  >
-      au < testing ; exists ; 2011 ; Vascular Medicine Volume 16 ; 16 ; >
+      au < released ; manifest ; 2011 ; Vascular Medicine Volume 16 ; 16 ; >
 
     }
 
@@ -31901,7 +31901,7 @@
       au < manifest ; exists ; 2008 ; Veterinary Pathology Volume 45 ; 45 ; >
       au < manifest ; exists ; 2009 ; Veterinary Pathology Volume 46 ; 46 ; >
       au < manifest ; exists ; 2010 ; Veterinary Pathology Volume 47 ; 47 ; >
-      au < testing ; exists ; 2011 ; Veterinary Pathology Volume 48 ; 48 ; >
+      au < released ; manifest ; 2011 ; Veterinary Pathology Volume 48 ; 48 ; >
 
     }
 
@@ -31947,7 +31947,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Violence Against Women Volume 15 ; 15 ; >
       au < manifest ; exists ; 2010 ; Violence Against Women Volume 16 ; 16 ;  >
-      au < testing ; exists ; 2011 ; Violence Against Women Volume 17 ; 17 ; >
+      au < released ; manifest ; 2011 ; Violence Against Women Volume 17 ; 17 ; >
 
     }
 
@@ -31986,7 +31986,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Visual Communication Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Visual Communication Volume 8 ; 8 ; >
       au < manifest ; exists ; 2010 ; Visual Communication Volume 9 ; 9 ;  >
-      au < testing ; exists ; 2011 ; Visual Communication Volume 10 ; 10 ; >
+      au < released ; manifest ; 2011 ; Visual Communication Volume 10 ; 10 ; >
 
     }
 
@@ -32032,7 +32032,7 @@
       au < manifest ; exists ; 2008 ; War in History Volume 15 ; 15 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; War in History Volume 16 ; 16 ; >
       au < manifest ; exists ; 2010 ; War in History Volume 17 ; 17 ;  >
-      au < testing ; exists ; 2011 ; War in History Volume 18 ; 18 ; >
+      au < released ; manifest ; 2011 ; War in History Volume 18 ; 18 ; >
 
     }
 
@@ -32089,7 +32089,7 @@
       au < manifest ; exists ; 2008 ; Waste Management & Research Volume 26 ; 26 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
       au < manifest ; exists ; 2010 ; Waste Management & Research Volume 28 ; 28 ;  >
-      au < testing ; exists ; 2011 ; Waste Management & Research Volume 29 ; 29 ; >
+      au < released ; manifest ; 2011 ; Waste Management & Research Volume 29 ; 29 ; >
 
     }
 
@@ -32150,7 +32150,7 @@
       au < manifest ; exists ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
       au < manifest ; exists ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ;  >
-      au < testing ; exists ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 ; >
+      au < released ; manifest ; 2011 ; Western Journal of Nursing Research Volume 33 ; 33 ; >
 
     }
 
@@ -32201,7 +32201,7 @@
       au < manifest ; exists ; 2008 ; Word of Mouth Volume 20 ; 20 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Word of Mouth Volume 21 ; 21 ; >
       au < manifest ; exists ; 2010 ; Word of Mouth Volume 22 ; 22 ;  >
-      au < testing ; exists ; 2011 ; Word of Mouth Volume 23 ; 23 ; >
+      au < released ; manifest ; 2011 ; Word of Mouth Volume 23 ; 23 ; >
 
     }
 
@@ -32267,7 +32267,7 @@
       au < manifest ; exists ; 2008 ; Work and Occupations Volume 35 ; 35 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Work and Occupations Volume 36 ; 36 ; >
       au < manifest ; exists ; 2010 ; Work and Occupations Volume 37 ; 37 ;  >
-      au < testing ; exists ; 2011 ; Work and Occupations Volume 38 ; 38 ; >
+      au < released ; manifest ; 2011 ; Work and Occupations Volume 38 ; 38 ; >
 
     }
 
@@ -32320,7 +32320,7 @@
       au < manifest ; exists ; 2008 ; Work, Employment & Society Volume 22 ; 22 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
       au < manifest ; exists ; 2010 ; Work, Employment & Society Volume 24 ; 24 ;  >
-      au < testing ; exists ; 2011 ; Work, Employment & Society Volume 25 ; 25 ; >
+      au < released ; manifest ; 2011 ; Work, Employment & Society Volume 25 ; 25 ; >
 
     }
 
@@ -32341,7 +32341,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2010 ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 ; >
-      au < testing ; exists ; 2011 ; World Journal for Pediatric and Congenital Heart Surgery Volume 2 ; 2 ; >
+      au < released ; manifest ; 2011 ; World Journal for Pediatric and Congenital Heart Surgery Volume 2 ; 2 ; >
 
     }
 
@@ -32364,7 +32364,7 @@
       au < exists ; exists ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < exists ; exists ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < exists ; exists ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
-      au < testing ; exists ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
+      au < released ; manifest ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
 
     }
 
@@ -32420,7 +32420,7 @@
       au < manifest ; exists ; 2008 ; Written Communication Volume 25 ; 25 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Written Communication Volume 26 ; 26 ; >
       au < manifest ; exists ; 2010 ; Written Communication Volume 27 ; 27 ;  >
-      au < testing ; exists ; 2011 ; Written Communication Volume 28 ; 28 ; >
+      au < released ; manifest ; 2011 ; Written Communication Volume 28 ; 28 ; >
 
     }
 
@@ -32467,7 +32467,7 @@
       au < manifest ; exists ; 2008 ; Young Volume 16 ; 16 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Young Volume 17 ; 17 ; >
       au < manifest ; exists ; 2010 ; Young Volume 18 ; 18 ;  >
-      au < testing ; exists ; 2011 ; Young Volume 19 ; 19 ; >
+      au < released ; manifest ; 2011 ; Young Volume 19 ; 19 ; >
 
     }
 
@@ -32570,7 +32570,7 @@
       au < manifest ; exists ; 2008 ; Youth & Society Volume 40 ; 40 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth & Society Volume 41 ; 41 ; >
       au < manifest ; exists ; 2010 ; Youth & Society Volume 42 ; 42 ;  >
-      au < testing ; exists ; 2011 ; Youth & Society Volume 43 ; 43 ; >
+      au < released ; manifest ; 2011 ; Youth & Society Volume 43 ; 43 ; >
 
     }
 
@@ -32609,7 +32609,7 @@
       au < manifest ; exists ; 2008 ; Youth Justice Volume 8 ; 8 ;  >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth Justice Volume 9 ; 9 ; >
       au < manifest ; exists ; 2010 ; Youth Justice Volume 10 ; 10 ;  >
-      au < testing ; exists ; 2011 ; Youth Justice Volume 11 ; 11 ; >
+      au < released ; manifest ; 2011 ; Youth Justice Volume 11 ; 11 ; >
 
     }
 
@@ -32646,7 +32646,7 @@
       au < manifest ; exists ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
       au < manifest ; exists ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 ;  >
-      au < testing ; exists ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 ; >
+      au < released ; manifest ; 2011 ; Youth Violence and Juvenile Justice Volume 9 ; 9 ; >
 
     }
 
