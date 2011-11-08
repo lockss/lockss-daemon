@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.20.2.2 2011-11-02 19:32:25 pgust Exp $
+ * $Id: MetadataManager.java,v 1.20.2.3 2011-11-08 21:29:05 pgust Exp $
  */
 
 /*
@@ -77,7 +77,9 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuEventHandler;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
+import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
 import org.lockss.scheduler.SchedulableTask;
 import org.lockss.scheduler.Schedule;
@@ -151,10 +153,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   
 
   /**
-   * Map of running reindexing tasks
+   * Map of running reindexing tasks keyed by their AuIds
    */
-  final Map<ArchivalUnit, ReindexingTask> reindexingTasks = 
-    new HashMap<ArchivalUnit, ReindexingTask>();
+  final Map<String, ReindexingTask> reindexingTasks = 
+    new HashMap<String, ReindexingTask>();
 
   /**
    * Metadata manager indexing enabled flag
@@ -352,80 +354,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // register to receive content change notifications to 
     // reindex the database content associated with the au
     pluginMgr = getDaemon().getPluginManager();
-    pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
-
-      /** Called before the AU is deleted */
-      @Override public void auDeleted(PluginManager.AuEvent event,
-                      ArchivalUnit au) {
-        synchronized (reindexingTasks) {
-          ReindexingTask task = reindexingTasks.get(au);
-          if (task != null) {
-            // task cancellation will remove task and schedule next one
-            log.debug2(  "Canceling pending reindexing task for deleted au "
-                       + au.getName());
-            // cancel running task because au is being deleted 
-            task.cancel();
-          }
-
-          Connection conn = null;
-          try {
-            conn = newConnection();
-            if (conn == null) {
-              log.error(  "Cannot connect to database"
-                        + " -- cannot remove metadata for changed AU: "
-                        + au.getName());
-              return;
-            }
-            removeMetadataForAu(conn, au);
-            conn.commit();
-          } catch (SQLException ex) {
-            log.error(  "Cannot remove metadata for deleted AU: " 
-                      + au.getName(), ex);
-          } finally {
-            safeCommit(conn);
-          }
-        }
-      }
-      /** Called after a change to the AU's content */
-      @Override public void auContentChanged(PluginManager.AuEvent event,
-                         ArchivalUnit au,
-                         ChangeInfo info) {
-        if (info.isComplete()) {
-          synchronized (reindexingTasks) {
-            ReindexingTask task = reindexingTasks.get(au);
-            if (task != null) {
-              log.debug2(  "Rescheduling pending reindexing task for au "
-                         + au.getName());
-              // reschedule running task because 
-              // previous work may be out of date
-              task.reschedule();
-            } else {
-              log.debug2("Scheduling reindexing tasks");
-              Connection conn = null;
-              try {
-                log.debug2("Adding changed au to reindex: " + au.getName());
-                // add pending AU
-                conn = newConnection();
-                if (conn == null) {
-                  log.error(  "Cannot connect to database"
-                            + " -- cannot add changed aus to pending aus");
-                  return;
-                }
-
-                addToPendingAus(conn, Collections.singleton(au));
-                conn.commit();
-
-                startReindexing(conn);
-              } catch (SQLException ex) {
-                log.error("Cannot add changed au to pending AUs: " + au.getName(), ex);
-              } finally {
-                safeClose(conn);
-              }
-            }
-          }
-        }
-      }
-    });
 
     // start metadata extraction
     MetadataStarter starter = new MetadataStarter();
@@ -815,6 +743,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     "drop table " + DOI_TABLE,
     "drop table " + ISSN_TABLE, 
     "drop table " + ISBN_TABLE,
+//    "drop table " + FEATURE_TABLE,
     "drop table " + METADATA_TABLE, };
 
   /**
@@ -881,34 +810,45 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     int reindexedTaskCount = 0;
     synchronized (reindexingTasks) {
-      while (reindexingTasks.size() < maxReindexingTasks) {
+    while (reindexingTasks.size() < maxReindexingTasks) {
         // get list of pending aus to reindex
-        List<ArchivalUnit> aus =
-          getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
-        if (aus.isEmpty()) {
+        List<String> auIds =
+          getAuIdsToReindex(conn, maxReindexingTasks - reindexingTasks.size());
+        if (auIds.isEmpty()) {
             break;
         }
   
         // schedule pending aus
-        for (ArchivalUnit au : aus) {
-          ArticleMetadataExtractor ae = getArticleMetadataExtractor(au);
-          if (ae == null) {
-            // shouldn't happen because it was checked before adding to pending
-            log.debug(  "not running reindexing task for au: " + au.getName()
-                      + "  because it nas no metadata extractor");
+        for (String auId : auIds) {
+          ArchivalUnit au = pluginMgr.getAuFromId(auId);
+          if (au == null) {
             try {
-              removeFromPendingAus(conn, au);
+              int count = deleteAu(conn, auId);
+              notifyDeletedAu(auId, count);
             } catch (SQLException e) {
-              log.error("Error removing au " + au.getName() 
-                        + "from pending", e);
-              break;
+              log.error("Error removing au " + auId 
+                  + "from pending", e);
             }
           } else {
-            log.debug("running reindexing task for au: " + au.getName());
-            ReindexingTask task = new ReindexingTask(au, ae);
-            reindexingTasks.put(au, task);
-            runReindexingTask(task);
-            reindexedTaskCount++;
+            ArticleMetadataExtractor ae = getArticleMetadataExtractor(au);
+            if (ae == null) {
+              // shouldn't happen because it was checked before adding to pending
+              log.debug(  "not running reindexing task for au: " + au.getName()
+                        + "  because it nas no metadata extractor");
+              try {
+                removeFromPendingAus(conn, au.getAuId());
+              } catch (SQLException e) {
+                log.error("Error removing au " + au.getName() 
+                          + "from pending", e);
+                break;
+              }
+            } else {
+              log.debug("running reindexing task for au: " + au.getName());
+              ReindexingTask task = new ReindexingTask(au, ae);
+              reindexingTasks.put(au.getAuId(), task);
+              runReindexingTask(task);
+              reindexedTaskCount++;
+            }
           }
         }
       }
@@ -1034,6 +974,88 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       startReindexing(conn);
       safeClose(conn);
+      
+      // now that all aus started, it's safe to add the AuEventHandler
+      pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
+
+        /** Called after the AU is created */
+        @Override public void auCreated(PluginManager.AuEvent event,
+                                        ArchivalUnit au) {
+          switch (event) {
+          case StartupCreate:
+            log.debug2("StartupCreate for au: " + au);
+
+            // Since this handler is installed after daemon startup, this
+            // case only occurs rarely, as when an AU is added to au.txt,
+            // which is then rescanned by the daemon. If this restores an 
+            // existing AU that has already crawled, we schedule it to be 
+            // added the metadata database now. Otherwise it will be added 
+            // through auContentChanged() once the crawl has completed
+            if (AuUtil.hasCrawled(au)) {
+              addAuToReindex(au);
+            }
+            break;
+          case Create: 
+            log.debug2("Create for au: " + au);
+
+            // This case occurs when the user has added an AU through the GUI.
+            // If this restores an existing AU that has already crawled,
+            // we schedule it to be added the metadata database now. 
+            // Otherwise it will be added through auContentChanged() once the 
+            // crawl has completed
+            if (AuUtil.hasCrawled(au)) {
+              addAuToReindex(au);
+            }
+            
+            break;
+          case RestartCreate:
+            log.debug2("RestartCreate for au: " + au);
+            
+            // A new version of the plugin has been loaded. Refresh the metadata
+            // only if the feature version of the metadata extractor changed,
+            if (!AuUtil.isCurrentFeatureVersion(au, Feature.Metadata)) {
+              addAuToReindex(au);
+            }
+            break;
+          }
+        }
+
+        /** Called for AU deleted events */
+        @Override public void auDeleted(PluginManager.AuEvent event,
+                                        ArchivalUnit au) {
+          switch (event) {
+          case Delete:
+            log.debug2("Delete for au: " + au);
+
+            // This case occurs when the AU is being deleted, so delete 
+            // its metadata
+            addAuToReindex(au);
+            break;
+          case RestartDelete:
+            // This case occurs when the plugin is about to restart. There is
+            // nothing to do in this case but wait for plugin to reactivate
+            // to see if anything needs to be done if metadatamanager changed
+            break;
+          }
+        }
+        
+        /** Called for AU changed events */
+        @Override public void auContentChanged(PluginManager.AuEvent event,
+                                               ArchivalUnit au,
+                                               ChangeInfo info) {
+          switch (event) {
+          case ContentChanged: 
+            // This case occurs after a change to the AU's content after
+            // a crawl. This code assumes that a new crawl will simply add
+            // new metadata and not change existing metadata. Otherwise,
+            // deleteOrRestartAu(au, true) should be called.
+            if (info.isComplete()) {
+               addAuToReindex(au);
+            }
+          }
+        }
+        
+      });
     }
   }
 
@@ -1187,7 +1209,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               conn = newConnection();
 
               // remove old metadata before adding new for AU
-              removeMetadataForAu(conn, au);
+              removeMetadata(conn, au);
               notifyStartReindexingAu(au);
             } catch (SQLException ex) {
               log.error("Failed to set up to reindex pending au: "
@@ -1206,7 +1228,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 switch (status) {
                 case success: 
                   // remove the AU just reindexed from the pending list
-                  removeFromPendingAus(conn, au);
+                  removeFromPendingAus(conn, au.getAuId());
+                  conn.commit();
+                  
+                  // update AU's feature version to that of the plugin
+                  // so we can test whether it's up-to-date in case of a
+                  // later reload of the plugin
+                  AuUtil.getAuState(au).setFeatureVersion(
+                      Feature.Metadata, 
+                      au.getPlugin().getFeatureVersion(Feature.Metadata));
                   
                   if (log.isDebug2()) {
                     long elapsedCpuTime = threadCpuTime = startCpuTime;
@@ -1230,13 +1260,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                   conn.rollback();
                   
                   // attempt to move failed AU to end of pending list
-                  removeFromPendingAus(conn, au);
+                  removeFromPendingAus(conn, au.getAuId());
                   if (status == ReindexingStatus.rescheduled) {
                     addToPendingAus(conn, Collections.singleton(au));
                   }
+                  conn.commit();
                   break;
                 }
-                conn.commit();
               } catch (SQLException ex) {
                 log.error(  "error finishing processing of pending au: " 
                           + au.getName(), ex);
@@ -1246,7 +1276,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               }
 
               synchronized (reindexingTasks) {
-                reindexingTasks.remove(au);
+                reindexingTasks.remove(au.getAuId());
                 notifyFinishReindexingAu(au, status);
 
                 // schedule another task if available
@@ -1268,13 +1298,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       if (!isFinished() && (status == ReindexingStatus.success)) {
         status = ReindexingStatus.failed;
         super.cancel();
+        setFinished();
       }
     }
-    /** Cancel and reschedule current task */
+
+    /** Cancel and mark current task for rescheduling */
     public void reschedule() {
       if (!isFinished() && (status == ReindexingStatus.success)) {
         status = ReindexingStatus.rescheduled;
         super.cancel();
+        setFinished();
       }
     }
 
@@ -1605,22 +1638,44 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Remove an AU from the pending Aus table.
    * 
-   * @param au the pending AU
+   * @param au the pending Au
+   * @return the number of articles deleted
    * @throws SQLException if unable to delete pending AU
    */
-  private void removeMetadataForAu(Connection conn, ArchivalUnit au)
+  private int removeMetadata(Connection conn, ArchivalUnit au)
+      throws SQLException {
+    return removeMetadata(conn, au.getAuId());
+  }
+  
+  /**
+   * Remove all articles for an AU from the pending Aus table.
+   * 
+   * @param auId the pending AuId
+   * @return the number of articles deleted
+   * @throws SQLException if unable to delete pending AU
+   */
+  private int removeMetadata(Connection conn, String auId)
       throws SQLException {
     PreparedStatement deletePendingAu = conn.prepareStatement(
         "delete from "
         + METADATA_TABLE + " where " + PLUGIN_ID_FIELD +  " = ? and "
         + AU_KEY_FIELD + " = ?");
-    String auid = au.getAuId();
-    String pluginId = PluginManager.pluginIdFromAuId(auid);
-    String auKey = PluginManager.auKeyFromAuId(auid);
+    String pluginId = PluginManager.pluginIdFromAuId(auId);
+    String auKey = PluginManager.auKeyFromAuId(auId);
 
     deletePendingAu.setString(1, pluginId);
     deletePendingAu.setString(2, auKey);
-    deletePendingAu.execute();
+    int count = deletePendingAu.executeUpdate();
+    return count;
+  }
+  
+  /**
+   * Notify listeners that an AU has been removed.
+   * 
+   * @param auId the AuId of the AU that was removed
+   * @param articleCount the number of articles deleted
+   */
+  protected void notifyDeletedAu(String auId, int articleCount) {
   }
 
   /**
@@ -1641,37 +1696,34 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Schedule a reindexing task for the next pending AU.
+   * Get list of AuIds that require reindexing.
    * 
-   * @return the AU of the scheduled task
+   * @param conn the database connection
+   * @param maxAus the maximum number of AuIds to return
+   * @return list of AuIds
    */
-  List<ArchivalUnit> getAusToReindex(Connection conn, int maxAus) {
-    ArrayList<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
+  List<String> getAuIdsToReindex(Connection conn, int maxAuIds) {
+    ArrayList<String> auIds = new ArrayList<String>();
     if (pluginMgr != null) {
       try {
         Statement selectPendingAus = conn.createStatement();
 
         ResultSet results = 
             selectPendingAus.executeQuery("select * from PendingAus");
-        while ((aus.size() < maxAus) && results.next()) {
+        while ((auIds.size() < maxAuIds) && results.next()) {
           String pluginId = results.getString(1);
           String auKey = results.getString(2);
           String auId = PluginManager.generateAuId(pluginId, auKey);
-          ArchivalUnit au = pluginMgr.getAuFromId(auId);
-          if (au == null) {
-            // this should not happen under ordinary circumstances
-            log.warning("Pending au missing from plugin manager: " + auId);
-            results.deleteRow();  // remove problem row from pending aus
-          } else if (!reindexingTasks.containsKey(au)) {
-            aus.add(au);
+          if (!reindexingTasks.containsKey(auId)) {
+            auIds.add(auId);
           }
         }
       } catch (SQLException ex) {
         log.error(ex.getMessage(), ex);
       }
     }
-    aus.trimToSize();
-    return aus;
+    auIds.trimToSize();
+    return auIds;
   }
 
   /**
@@ -1812,6 +1864,70 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Cancel a reindexing task for the specified AU.
+   * @param auId the AU id
+   */
+  private void cancelAuTask(String auId) {
+    ReindexingTask task = reindexingTasks.get(auId);
+    if (task != null) {
+      // task cancellation will remove task and schedule next one
+      log.debug2(  "Canceling pending reindexing task for auId " + auId);
+      task.cancel();
+    }
+  }
+  
+  /**
+   * This method cancels any running tasks associated with the Au,
+   * and then deletes the metadata for the specified AU.
+   *  
+   * @param auId the Au id to delete
+   * @return the number of articles deleted
+   */
+  private int deleteAu(Connection conn, String auId) 
+    throws SQLException {
+    cancelAuTask(auId);
+
+    // remove the metadata for this AU
+    int count = removeMetadata(conn, auId);
+    
+    // remove pending reindexing operations for deleted AU
+    removeFromPendingAus(conn, auId);
+
+    conn.commit();
+    return count;
+  }
+  
+  /** 
+   * This method adds an AU to be reindexed.
+   * @param au the AU to add.
+   */
+  private void addAuToReindex(ArchivalUnit au) {
+    synchronized (reindexingTasks) {
+      Connection conn = null;
+      try {
+        log.debug2("Adding au to reindex: " + au.getName());
+        // add pending AU
+        conn = newConnection();
+        if (conn == null) {
+          log.error(  "Cannot connect to database"
+                    + " -- cannot add aus to pending aus");
+          return;
+        }
+        
+        cancelAuTask(au.getAuId());
+        addToPendingAus(conn, Collections.singleton(au));
+        conn.commit();
+
+        startReindexing(conn);
+      } catch (SQLException ex) {
+        log.error("Cannot add au to pending AUs: " + au.getName(), ex);
+      } finally {
+        safeClose(conn);
+      }
+    }
+  }
+
+  /**
    * Add AUs to list of pending AUs to reindex.
    * 
    * @param conn the connection
@@ -1865,15 +1981,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param au the pending AU
    * @throws SQLException if unable to delete pending AU
    */
-  private void removeFromPendingAus(Connection conn, ArchivalUnit au)
+  private void removeFromPendingAus(Connection conn, String auId)
       throws SQLException {
     PreparedStatement deletePendingAu = conn.prepareStatement(
           "delete from "
         + PENDINGAUS_TABLE + " where " + PLUGIN_ID_FIELD + " = ? and "
         + AU_KEY_FIELD + " = ?");
-    String auid = au.getAuId();
-    String pluginId = PluginManager.pluginIdFromAuId(auid);
-    String auKey = PluginManager.auKeyFromAuId(auid);
+    String pluginId = PluginManager.pluginIdFromAuId(auId);
+    String auKey = PluginManager.auKeyFromAuId(auId);
 
     deletePendingAu.setString(1, pluginId);
     deletePendingAu.setString(2, auKey);
