@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.13 2011-03-13 21:50:24 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.13.8.1 2011-11-08 20:19:23 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,12 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertEquals(10, d5.getSize());
     d5.setSize(18);
     assertEquals(18, d5.getSize());
+
+    ConfigParamDescr d6 = new ConfigParamDescr("k1");
+    d6.setType(ConfigParamDescr.TYPE_TIME_INTERVAL);
+    assertEquals(10, d6.getSize());
+    d6.setSize(18);
+    assertEquals(18, d6.getSize());
 
   }
 
@@ -285,6 +291,17 @@ public class TestConfigParamDescr extends LockssTestCase {
     }
   }
 
+  public void testGetValueOfType() throws Exception {
+    ConfigParamDescr ncint = ConfigParamDescr.CRAWL_INTERVAL;
+    assertEquals(4 * Constants.HOUR, ncint.getValueOfType("4h"));
+    // Invalid time interval
+    try {
+      ncint.getValueOfType("abcd");
+      fail("Should have thrown InvalidFormatException");
+    } catch (InvalidFormatException expected) {
+    }
+  }
+
   public void testSampleValue() {
     assertEquals("42", ConfigParamDescr.VOLUME_NUMBER.getSampleValue());
     assertEquals("SampleString", ConfigParamDescr.VOLUME_NAME.getSampleValue());
@@ -313,5 +330,6 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertEquals("true", ConfigParamDescr.PUB_NEVER.getSampleValue());
     assertEquals("42", ConfigParamDescr.PROTOCOL_VERSION.getSampleValue());
     assertEquals("SampleString", ConfigParamDescr.CRAWL_PROXY.getSampleValue());
+    assertEquals("10d", ConfigParamDescr.CRAWL_INTERVAL.getSampleValue());
   }
 }
