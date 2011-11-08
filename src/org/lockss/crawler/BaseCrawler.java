@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.41 2011-09-25 04:20:40 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.41.2.1 2011-11-08 20:18:30 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.io.*;
-import java.net.MalformedURLException;
+import java.net.*;
 import java.util.*;
 
 import org.lockss.app.*;
@@ -41,6 +41,7 @@ import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -105,6 +106,19 @@ public abstract class BaseCrawler
     PREFIX + "exploderRetryCount";
   public static final int DEFAULT_EXPLODER_RETRY_COUNT = 3;
 
+  /** The source address for crawler connections, or null to use the
+   * machine's primary IP address.  Allows multiple daemons on a machine
+   * with multiple IP addresses to crawl from those different addresses.
+   * Takes precedence over org.lockss.crawler.crawlFromLocalAddr */
+  public static final String PARAM_CRAWL_FROM_ADDR = PREFIX + "crawlFromAddr";
+
+  /** If true, use the local identity address as the the source address for
+   * crawler connections.  Ignored if org.lockss.crawler.crawlFromAddr is
+   * set. */
+  public static final String PARAM_CRAWL_FROM_LOCAL_ADDR =
+    PREFIX + "crawlFromLocalAddr";
+  public static final boolean DEFAULT_CRAWL_FROM_LOCAL_ADDR = false;
+
   /** Proxy crawls if true (except repair-from-cache) */
   public static final String PARAM_PROXY_ENABLED =
     PREFIX + "proxy.enabled";
@@ -165,6 +179,8 @@ public abstract class BaseCrawler
   protected List daemonPermissionCheckers = null;
   protected AlertManager alertMgr;
 
+  protected IPAddr crawlFromAddr = null;
+
   protected String proxyHost = null;
   protected int proxyPort;
 
@@ -218,6 +234,24 @@ public abstract class BaseCrawler
                                               DEFAULT_DATA_TIMEOUT);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
+
+    String crawlFrom = config.get(PARAM_CRAWL_FROM_ADDR);
+    if (StringUtil.isNullString(crawlFrom)) {
+      if (config.getBoolean(PARAM_CRAWL_FROM_LOCAL_ADDR,
+			    DEFAULT_CRAWL_FROM_LOCAL_ADDR)) {
+	crawlFrom = config.get(IdentityManager.PARAM_LOCAL_IP);
+      }
+    }
+    if (crawlFrom == null) {
+      crawlFromAddr = null;
+    } else {
+      try {
+	crawlFromAddr = IPAddr.getByName(crawlFrom);
+      } catch (UnknownHostException e) {
+	logger.error("crawlFromAddr (" + crawlFrom + ") not found, so not used.", e);
+	crawlFromAddr = null;
+      }
+    }
 
     AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au, config);
     proxyHost = aupinfo.getHost();
@@ -440,6 +474,9 @@ public abstract class BaseCrawler
     uc.setConnectionPool(connectionPool);
     uc.setPermissionMapSource(this);
     uc.setWatchdog(wdog);
+    if (crawlFromAddr != null) {
+      uc.setLocalAddress(crawlFromAddr);
+    }
     return uc;
   }
   /**  

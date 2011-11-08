@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawler.java,v 1.17 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.17.2.1 2011-11-08 20:18:30 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -276,17 +277,67 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   }
 
   public void testMakeUrlCacher() {
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlCacher uc = crawler.makeUrlCacher(startUrl);
     assertNotNull(uc);
     assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
 		uc instanceof ClockssUrlCacher);
     MockUrlCacher muc = (MockUrlCacher)uc;
     assertSame(crawler, muc.getPermissionMapSource());
+    assertNull(muc.getLocalAddress());
+  }
+
+  public void testMakeUrlCacherCrawlFromAddr() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_ADDR,
+				  "127.3.1.4");
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertEquals("127.3.1.4", muc.getLocalAddress().getHostAddress());
+  }
+
+  public void testMakeUrlCacherCrawlFromLocalAddr() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
+				  "true",
+				  IdentityManager.PARAM_LOCAL_IP,
+				  "127.1.2.3");
+
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertEquals("127.1.2.3", muc.getLocalAddress().getHostAddress());
+  }
+
+  public void testMakeUrlCacherCrawlFromAddrPrecedence() {
+    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_ADDR,
+				  "127.3.1.4",
+				  BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
+				  "true",
+				  IdentityManager.PARAM_LOCAL_IP,
+				  "127.1.2.3");
+
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
+    UrlCacher uc = crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertFalse("UrlCacher shouldn't be a ClockssUrlCacher",
+		uc instanceof ClockssUrlCacher);
+    MockUrlCacher muc = (MockUrlCacher)uc;
+    assertSame(crawler, muc.getPermissionMapSource());
+    assertEquals("127.3.1.4", muc.getLocalAddress().getHostAddress());
   }
 
   public void testMakeUrlCacherClockss() {
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
+    crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlCacher uc = crawler.makeUrlCacher(startUrl);
     assertNotNull(uc);
     assertTrue("UrlCacher should be a ClockssUrlCacher",
