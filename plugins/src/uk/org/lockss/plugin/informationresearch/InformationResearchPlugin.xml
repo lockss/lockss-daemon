@@ -38,18 +38,45 @@
     <string>&quot;%s&quot;, base_url</string>
   </entry>
   <entry>
-        <string>au_feature_urls</string>
-        <map>
-          <entry>
-            <string>au_title</string>
-            <string>&quot;%s&quot;, base_url</string>
-          </entry>
-        </map>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%s&quot;, base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%s&quot;, base_url</string>
+      </entry>
+      <entry>
+      	<string>au_issue</string>
+      	<string>&quot;%s/%s-%s/infres%s%s.html&quot;, base_url, volume_name, issue, volume_name, issue</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_manifest</string>
     <string>&quot;%sLOCKSSmanifest.html&quot;, base_url</string>
   </entry>
+<!--  remove comment when these are available
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+-->
   <entry>
     <string>plugin_config_props</string>
     <list>
