@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.37 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.37.2.1 2011-11-08 20:20:12 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class MockUrlCacher implements UrlCacher {
   private IOException cachingException = null;
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
+  private IPAddr localAddr = null;
   private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
 
@@ -107,6 +108,11 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void setLocalAddress(IPAddr addr) {
+    localAddr = addr;
+  }
+
+  public IPAddr getLocalAddress() {
+    return localAddr;
   }
 
   public void setFetchFlags(BitSet fetchFlags) {
