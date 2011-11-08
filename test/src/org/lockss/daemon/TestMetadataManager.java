@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.7 2011-06-07 06:29:23 tlipkis Exp $
+ * $Id: TestMetadataManager.java,v 1.8 2011-11-08 21:29:08 pgust Exp $
  */
 
 /*
@@ -66,8 +66,11 @@ public class TestMetadataManager extends LockssTestCase {
   private PluginManager pluginManager;
   private String tempDirPath;
 
-  /** set of AUs reindexed by the MetadataManager */
+  /** set of AuIds of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
+  
+  /** number of articles deleted by the MetadataManager */
+  Integer[] articlesDeleted = new Integer[] {0};
   
   public void setUp() throws Exception {
     super.setUp();
@@ -118,12 +121,24 @@ public class TestMetadataManager extends LockssTestCase {
       }
       
       /**
+       * Notify listeners that an AU has been deleted
+       * @param auId the AuId of the AU that was deleted
+       * @param articleCount the number of articles deleted for the AU
+       */
+      protected void notifyDeletedAu(String auId, int articleCount) {
+        synchronized (articlesDeleted) {
+          articlesDeleted[0] += articleCount;
+          articlesDeleted.notifyAll();
+        }
+      }
+      
+      /**
        * Notify listeners that an AU is being reindexed.
        * 
        * @param au
        */
       protected void notifyStartReindexingAu(ArchivalUnit au) {
-        log.debug("Start reindexing au " + au);
+        log.info("Start reindexing au " + au);
       }
       
       /**
@@ -132,7 +147,7 @@ public class TestMetadataManager extends LockssTestCase {
        * @param au
        */
       protected void notifyFinishReindexingAu(ArchivalUnit au, ReindexingStatus status) {
-        log.debug("Finished reindexing au (" + status + ") " + au);
+        log.info("Finished reindexing au (" + status + ") " + au);
         if (status != ReindexingStatus.rescheduled) {
           synchronized (ausReindexed) {
             ausReindexed.add(au.getAuId());
@@ -141,6 +156,7 @@ public class TestMetadataManager extends LockssTestCase {
         }
       }
     };
+    
     theDaemon.setMetadataManager(metadataManager);
     metadataManager.initService(theDaemon);
     metadataManager.startService();
@@ -198,6 +214,28 @@ public class TestMetadataManager extends LockssTestCase {
     return ausReindexed.size();
   }
 
+  /**
+   * Waits a specified period for a specified number of AUs to finish 
+   * being deleted.  Returns the actual number of AUs deleted.
+   * 
+   * @param auCount the expected AU count
+   * @param maxWaitTime the maximum time to wait
+   * @return the number of AUs deleted
+   */
+  private int waitForDeleted(int auCount, long maxWaitTime) {
+    long startTime = System.currentTimeMillis();
+    synchronized (articlesDeleted) {
+      while (   (System.currentTimeMillis()-startTime < maxWaitTime) 
+             && (articlesDeleted[0] < auCount)) {
+        try {
+          articlesDeleted.wait(maxWaitTime);
+        } catch (InterruptedException ex) {
+        }
+      }
+    }
+    return articlesDeleted[0];
+  }
+
   public void testCreateMetadata() throws Exception {
     DataSource ds = metadataManager.getDataSource();
     assertNotNull(ds);
@@ -205,7 +243,7 @@ public class TestMetadataManager extends LockssTestCase {
     Connection con = ds.getConnection();
     
     assertEquals(0, metadataManager.reindexingTasks.size());
-    assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     // check distinct access URLs
     String query =           
@@ -282,7 +320,7 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(0, results.size());
     
     assertEquals(0, metadataManager.reindexingTasks.size());
-    assertEquals(0, metadataManager.getAusToReindex(con, Integer.MAX_VALUE).size());
+    assertEquals(0, metadataManager.getAuIdsToReindex(con, Integer.MAX_VALUE).size());
 
     con.rollback();
     con.commit();
@@ -362,13 +400,12 @@ public class TestMetadataManager extends LockssTestCase {
     // reset set of reindexed aus
     ausReindexed.clear();
 
-    // simulate an au deletion
-    pluginManager.applyAuEvent(new PluginManager.AuEventClosure() {
-	public void execute(AuEventHandler hand) {
-	  hand.auDeleted(AuEvent.Delete,
-			 sau0);
-	}
-      });
+    // delete AU
+    pluginManager.stopAu(sau0, AuEvent.Delete);
+
+    int maxWaitTime = 10000; // 10 sec. per au
+    int articleCount = waitForDeleted(1, maxWaitTime);
+    assertEquals(21, articleCount);
 
     // ensure metadata table entries for the AU are deleted
     resultSet = stmt.executeQuery(query);
