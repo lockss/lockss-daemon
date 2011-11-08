@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.22 2011-11-01 11:43:38 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.23 2011-11-08 21:49:35 pgust Exp $
  */
 
 /*
@@ -289,12 +289,11 @@ public class OpenUrlResolver {
       // process a book or monographic series based on ISBN
       String url = resolveFromIsbn(
     	  isbn, date, volume, edition, spage, author, atitle);
-      if (url == null) {
-        log.debug3("Failed to resolve from ISBN: " + isbn);
-      } else {
+      if (url != null) {
         log.debug3("Located url " + url + " for book ISBN " + isbn); 
+        return url;
       }
-      return url;
+      log.debug3("Failed to resolve from ISBN: " + isbn);
     }
     
     String eissn = getRftParam(params, "eissn");
@@ -319,10 +318,9 @@ public class OpenUrlResolver {
                     ", ISSN " + anyIssn +
                     ", title \"" + title + "\"");
         }
-      } else {
-        log.debug3("Failed to resolve from ISSN: " + anyIssn);
+        return url;
       }
-      return url;
+      log.debug3("Failed to resolve from ISSN: " + anyIssn);
     }
     
     // process a journal or book based on its title
@@ -367,8 +365,8 @@ public class OpenUrlResolver {
             	id, date, volume, edition, spage, author, atitle);
             if (url != null) {
               log.debug3("Located url " + url + " for book ISBN " + id); 
+              return url;
             }
-            return url;
           }
           
           // search for journal through its ISSN
@@ -384,8 +382,8 @@ public class OpenUrlResolver {
                         ", title \"" + title + "\"" +
                         ", publisher \""  + 
                         tdbTitle.getTdbPublisher().getName() + "\"");
+              return url;
             }
-            return url;
           }
           
           // add to list of titles with no ISBN or ISSN
@@ -406,7 +404,6 @@ public class OpenUrlResolver {
         }
       }
       log.debug3("Failed to resolve from title: \"" + title + "\"");
-      return null;
     }
     
     String bici = params.get("rft.bici");
@@ -415,14 +412,14 @@ public class OpenUrlResolver {
       String url = null;
       try {
         url = resolveFromBici(bici);
-        if (url == null) {
-          log.debug3("Failed to resolve from BICI: " + bici);
+        if (url != null) {
+          log.debug3("Located url " + url + "for bici " + bici);
+          return url;
         }
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
       }
-      log.debug3("Located url " + url + "for bici " + bici);
-      return url;
+      log.debug3("Failed to resolve from BICI: " + bici);
     }
 
     String sici = params.get("rft.sici");
@@ -431,14 +428,14 @@ public class OpenUrlResolver {
       String url = null;
       try {
         url = resolveFromSici(sici);
-        if (url == null) {
-          log.debug3("Failed to resolve from SICI: " + sici);
+        if (url != null) {
+          log.debug3("Located url " + url + "for sici " + sici);
+          return url;
         }
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
       }
-      log.debug3("Located url " + url + "for sici " + sici);
-      return url;
+      log.debug3("Failed to resolve from SICI: " + sici);
     }
 
     return null;
