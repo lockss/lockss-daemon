@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.36 2011-06-27 16:52:55 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.37 2011-11-08 20:22:26 tlipkis Exp $
  */
 
 /*
@@ -726,7 +726,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
       return;
     }
     ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_BIND_TO_LOCAL_IP_ONLY,
-				  "true");
+				  "true",
+				  BlockingStreamComm.PARAM_SEND_FROM_BIND_ADDR,
+				  "false");
     setupComm1();
     Interrupter intr1 = null;
     try {

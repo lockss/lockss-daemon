@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.55 2011-10-03 05:54:54 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.56 2011-11-08 20:22:26 tlipkis Exp $
  */
 
 /*
@@ -97,6 +97,13 @@ public class BlockingStreamComm
   public static final String PARAM_BIND_TO_LOCAL_IP_ONLY =
     PREFIX + "bindToLocalIpOnly";
   public static final boolean DEFAULT_BIND_TO_LOCAL_IP_ONLY = false;
+
+  /** If true, when the listen socket is bound to the local IP address,
+   * outgoing connections will also be made from that address.  Should
+   * normally be true; some testing situations require special behavior. */
+  public static final String PARAM_SEND_FROM_BIND_ADDR =
+    PREFIX + "sendFromBindAddr";
+  public static final boolean DEFAULT_SEND_FROM_BIND_ADDR = true;
 
   /** Max peer channels.  Only affects outgoing messages; incoming
    * connections are always accepted. */
@@ -308,6 +315,7 @@ public class BlockingStreamComm
   private boolean running = false;
 
   private String bindAddr;
+  private boolean sendFromBindAddr;
   private SocketFactory sockFact;
   private ServerSocket listenSock;
   private PeerIdentity myPeerId;
@@ -1015,6 +1023,8 @@ public class BlockingStreamComm
 			  DEFAULT_BIND_TO_LOCAL_IP_ONLY)) {
       bindAddr = config.get(IdentityManager.PARAM_LOCAL_IP);
     }
+    sendFromBindAddr = config.getBoolean(PARAM_SEND_FROM_BIND_ADDR,
+					 DEFAULT_SEND_FROM_BIND_ADDR);
 
     if (changedKeys.contains(PARAM_USE_V3_OVER_SSL)) {
       paramUseV3OverSsl = config.getBoolean(PARAM_USE_V3_OVER_SSL,
@@ -1875,7 +1885,13 @@ public class BlockingStreamComm
     }
 
     public Socket newSocket(IPAddr addr, int port) throws IOException {
-      Socket sock = new Socket(addr.getInetAddr(), port);
+      Socket sock;
+      if (sendFromBindAddr && bindAddr != null) {
+	sock = new Socket(addr.getInetAddr(), port,
+			  InetAddress.getByName(bindAddr), 0);
+      } else {
+	sock = new Socket(addr.getInetAddr(), port);
+      }
       setupOpenSocket(sock);
       return sock;
     }
@@ -1936,8 +1952,13 @@ public class BlockingStreamComm
       if (sslSocketFactory == null) {
 	throw new IOException("no SSL client socket factory");
       }
-      SSLSocket s = (SSLSocket)
-	  sslSocketFactory.createSocket(addr.getInetAddr(), port);
+      SSLSocket s;
+      if (sendFromBindAddr && bindAddr != null) {
+	s = (SSLSocket)sslSocketFactory.createSocket(addr.getInetAddr(), port,
+						     InetAddress.getByName(bindAddr), 0);
+      } else {
+	s = (SSLSocket)sslSocketFactory.createSocket(addr.getInetAddr(), port);
+      }
       log.debug2("New SSL client socket: " + port + "@" + addr.toString());
       // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
       setupOpenSocket(s);
