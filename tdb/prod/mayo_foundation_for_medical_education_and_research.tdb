@@ -20,23 +20,24 @@
     param[base_url] = http://www.mayoclinicproceedings.com/
     implicit < status ; year ; name ; param[volume_name] >
   
-    au < manifest ; 1995 ; Proceedings Volume 70 ; 70 >
-    au < manifest ; 1996 ; Proceedings Volume 71 ; 71 >
-    au < manifest ; 1997 ; Proceedings Volume 72 ; 72 >
-    au < manifest ; 1998 ; Proceedings Volume 73 ; 73 >
-    au < manifest ; 1999 ; Proceedings Volume 74 ; 74 >
-    au < manifest ; 2000 ; Proceedings Volume 75 ; 75 >
-    au < manifest ; 2001 ; Proceedings Volume 76 ; 76 >
-    au < manifest ; 2002 ; Proceedings Volume 77 ; 77 >
-    au < manifest ; 2003 ; Proceedings Volume 78 ; 78 >
-    au < manifest ; 2004 ; Proceedings Volume 79 ; 79 >
-    au < manifest ; 2005 ; Proceedings Volume 80 ; 80 >
-    au < manifest ; 2006 ; Proceedings Volume 81 ; 81 >
-    au < manifest ; 2007 ; Proceedings Volume 82 ; 82 >
-    au < manifest ; 2008 ; Proceedings Volume 83 ; 83 >
-    au < manifest ; 2009 ; Proceedings Volume 84 ; 84 >
-    au < manifest ; 2010 ; Proceedings Volume 85 ; 85 >
-    au < manifest ; 2011 ; Proceedings Volume 86 ; 86 >
+    au < testing ; 1995 ; Mayo Clinic Proceedings Volume 70 ; 70 >
+    au < testing ; 1996 ; Mayo Clinic Proceedings Volume 71 ; 71 >
+    au < testing ; 1997 ; Mayo Clinic Proceedings Volume 72 ; 72 >
+    au < testing ; 1998 ; Mayo Clinic Proceedings Volume 73 ; 73 >
+    au < testing ; 1999 ; Mayo Clinic Proceedings Volume 74 ; 74 >
+    au < testing ; 2000 ; Mayo Clinic Proceedings Volume 75 ; 75 >
+    au < testing ; 2001 ; Mayo Clinic Proceedings Volume 76 ; 76 >
+    au < testing ; 2002 ; Mayo Clinic Proceedings Volume 77 ; 77 >
+    au < testing ; 2003 ; Mayo Clinic Proceedings Volume 78 ; 78 >
+    au < testing ; 2004 ; Mayo Clinic Proceedings Volume 79 ; 79 >
+    au < testing ; 2005 ; Mayo Clinic Proceedings Volume 80 ; 80 >
+    au < testing ; 2006 ; Mayo Clinic Proceedings Volume 81 ; 81 >
+    au < testing ; 2007 ; Mayo Clinic Proceedings Volume 82 ; 82 >
+    au < testing ; 2008 ; Mayo Clinic Proceedings Volume 83 ; 83 >
+    au < testing ; 2009 ; Mayo Clinic Proceedings Volume 84 ; 84 >
+    au < testing ; 2010 ; Mayo Clinic Proceedings Volume 85 ; 85 >
+    au < testing ; 2011 ; Mayo Clinic Proceedings Volume 86 ; 86 >
+
   }
 
 }
