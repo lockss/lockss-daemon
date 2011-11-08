@@ -1,5 +1,5 @@
 /*
- * $Id: MockFactories.java,v 1.5 2011-08-09 04:18:33 tlipkis Exp $
+ * $Id: MockFactories.java,v 1.5.4.1 2011-11-08 20:20:35 tlipkis Exp $
  */
 
 /*
@@ -42,9 +42,11 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
+import org.lockss.rewriter.*;
+import org.lockss.servlet.*;
 
 /**
- * Mock ArticleIterator and MetadataExtrator factories and implementations
+ * Mock factories and implementations for testing definable plugins
  */
 public class MockFactories {
   static Logger log = Logger.getLogger("MockFactories");
@@ -99,4 +101,17 @@ public class MockFactories {
 			FileMetadataExtractor.Emitter emitter) {
     }
   }
+
+  public static class JsRewriterFact implements LinkRewriterFactory {
+    public InputStream createLinkRewriter(String mimeType,
+					  ArchivalUnit au,
+					  InputStream in,
+					  String encoding,
+					  String srcUrl,
+					  ServletUtil.LinkTransform srvLinkXform)
+	throws PluginException, IOException {
+      return null;
+    }
+  }
+
 }
