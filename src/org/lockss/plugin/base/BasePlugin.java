@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.80 2011-10-26 17:11:29 pgust Exp $
+ * $Id: BasePlugin.java,v 1.81 2011-11-08 20:21:50 tlipkis Exp $
  */
 
 /*
@@ -277,6 +277,7 @@ public abstract class BasePlugin
 	res.add(ConfigParamDescr.PUB_NEVER);
 	res.add(ConfigParamDescr.PROTOCOL_VERSION);
  	res.add(ConfigParamDescr.CRAWL_PROXY);
+ 	res.add(ConfigParamDescr.CRAWL_INTERVAL);
       }
       res.trimToSize();
       Map<String,ConfigParamDescr> map = new HashMap<String,ConfigParamDescr>();

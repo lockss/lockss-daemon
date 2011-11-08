@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.25 2011-01-08 15:41:06 pgust Exp $
+ * $Id: TestBasePlugin.java,v 1.26 2011-11-08 20:21:50 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,8 @@ public class TestBasePlugin extends LockssTestCase {
 			     ConfigParamDescr.PUB_DOWN,
 			     ConfigParamDescr.PUB_NEVER,
 			     ConfigParamDescr.PROTOCOL_VERSION,
-			     ConfigParamDescr.CRAWL_PROXY),
+			     ConfigParamDescr.CRAWL_PROXY,
+			     ConfigParamDescr.CRAWL_INTERVAL),
 		 SetUtil.theSet(descrs));
   }
 

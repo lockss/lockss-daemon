@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.45 2011-03-13 21:50:24 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.46 2011-11-08 20:21:50 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,8 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final int TYPE_USER_PASSWD = 10;
   /** Value is a long */
   public static final int TYPE_LONG = 11;
+  /** Value is a time interval string */
+  public static final int TYPE_TIME_INTERVAL = 12;
 
   public static final String[] TYPE_STRINGS = {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
@@ -85,6 +87,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     SAMPLE_VALUES.put(TYPE_SET, "winter,spring,summer,fall");
     SAMPLE_VALUES.put(TYPE_USER_PASSWD, "username:passwd");
     SAMPLE_VALUES.put(TYPE_LONG, "1099511627776");
+    SAMPLE_VALUES.put(TYPE_TIME_INTERVAL, "10d");
   };
 
   public static final ConfigParamDescr VOLUME_NUMBER =
@@ -272,10 +275,20 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
 		    " If set to DIRECT, crawls will not be proxied," +
 		    " even if a global crawl proxy has been set.");
 
+  public static final ConfigParamDescr CRAWL_INTERVAL =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setKey("nc_interval")
+    .setDisplayName("Crawl Interval")
+    .setType(TYPE_TIME_INTERVAL)
+    .setSize(10)
+    .setDescription("The interval at which the AU should crawl "
+		    + "the publisher site.");
+
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
-      OAI_SPEC, BASE_URL2, USER_CREDENTIALS, COLLECTION
+      OAI_SPEC, BASE_URL2, USER_CREDENTIALS, COLLECTION, CRAWL_INTERVAL,
   };
 
   private String key;			// param (prop) key
@@ -385,6 +398,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       case TYPE_INT:
       case TYPE_LONG:
       case TYPE_POS_INT: size = 10; break;
+      case TYPE_TIME_INTERVAL: size = 10; break;
       default:
       }
     }
@@ -510,6 +524,13 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
           ret_val = new Long(val);
         } catch (NumberFormatException nfe) {
           throw new InvalidFormatException("Invalid Long: " + val);
+        }
+        break;
+      case TYPE_TIME_INTERVAL:
+        try {
+          ret_val = StringUtil.parseTimeInterval(val);
+        } catch (NumberFormatException nfe) {
+          throw new InvalidFormatException("Invalid time interval: " + val);
         }
         break;
       case TYPE_STRING:
