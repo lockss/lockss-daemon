@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.216 2011-08-09 04:17:49 tlipkis Exp $
+ * $Id: PollManager.java,v 1.216.4.1 2011-11-08 20:19:39 tlipkis Exp $
  */
 
 /*
@@ -1203,7 +1203,7 @@ public class PollManager
       }
       if (changedKeys.contains(PARAM_VOTE_RETRY_INTERVAL_DURATION_CURVE)) {
 	v3VoteRetryIntervalDurationCurve =
-	  processWeightCurve("V3 nomination weight age curve",
+	  processWeightCurve("V3 vote message retry interval age curve",
 			     newConfig,
 			     PARAM_VOTE_RETRY_INTERVAL_DURATION_CURVE,
 			     DEFAULT_VOTE_RETRY_INTERVAL_DURATION_CURVE);
