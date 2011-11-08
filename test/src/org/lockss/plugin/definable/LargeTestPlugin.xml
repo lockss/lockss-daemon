@@ -153,6 +153,10 @@
     </map>
   </entry>
   <entry>
+    <string>text/javascript_link_rewriter_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$JsRewriterFact</string>
+  </entry>
+  <entry>
     <!-- Crawl window open from midnight to 6:00AM EST -->
     <string>au_crawlwindow_ser</string>
     <org.lockss.daemon.CrawlWindows-Interval>

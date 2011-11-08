@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.52 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.53 2011-11-08 20:22:43 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.util.Constants.RegexpContext;
 import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
 import org.lockss.oai.*;
+import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
 /**
@@ -1112,6 +1113,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(ext instanceof FileMetadataExtractorWrapper);
     assertTrue(""+WrapperUtil.unwrap(ext),
 	       WrapperUtil.unwrap(ext) instanceof MockFactories.XmlMetaExt);
+
+    assertClass(NodeFilterHtmlLinkRewriterFactory.class,
+		defplug.getLinkRewriterFactory("text/html"));
+    LinkRewriterFactory jsfact =
+      defplug.getLinkRewriterFactory("text/javascript");
+    assertClass(LinkRewriterFactoryWrapper.class, jsfact);
+    assertClass(MockFactories.JsRewriterFact.class, WrapperUtil.unwrap(jsfact));
 
     MimeTypeInfo mti = defplug.getMimeTypeInfo("text/xml");
     FileMetadataExtractorFactory mfact = mti.getFileMetadataExtractorFactory();
