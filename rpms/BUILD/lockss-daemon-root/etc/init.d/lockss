@@ -37,6 +37,7 @@ esac
 
 stop_lockss () {
     echo -n "Stopping ${1}: "
+    echo "Stopping LOCKSS for user ${1} at `date`" >> ${LOG_FILE}
     rm -f "${KEEP_GOING}"
     killproc ${1}
 

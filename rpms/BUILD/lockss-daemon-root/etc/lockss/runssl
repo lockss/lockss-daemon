@@ -42,13 +42,13 @@ if [ "X${RUN_DIR}" = X ]; then
 fi
 if [ ! -d ${RUN_DIR} ]
 then
-    echo ${RUN_DIR} missing
+    echo "${RUN_DIR} missing"
     exit 1
 fi
 RES=`find ${RUN_DIR} -maxdepth 0 -user root`
 if [ "X${RES}" != "X${RUN_DIR}" ]
 then
-    echo ${RUN_DIR} bad
+    echo "${RUN_DIR} bad"
     exit 1
 fi
 RES=`find ${RUN_DIR} -perm -020 -o -perm -02`

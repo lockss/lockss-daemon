@@ -150,19 +150,23 @@ w
 q
 Funky-EOF
     fi
-    # Add cache directories to PRUNEPATHS in /etc/updatedb.conf
-    for DIR in `echo ${LOCKSS_DISK_PATHS} | sed 's/;/ /g'`
-    do
-        if ! grep ${DIR} /etc/updatedb.conf >/dev/null 2>&1
-        then
-            # ${DIR} is missing from PRUNEPATHS
-            echo "Adding ${DIR} to /etc/updatedb.conf" >>${LOG_FILE}
-            cat >>/etc/updatedb.conf <<Funky-EOF2
-PRUNEPATHS = "\${PRUNEPATHS} ${DIR}"
-Funky-EOF2
-        fi
-    done
+    FIX_UPDATEDB="${LOCKSS_HOME}/etc/lockss/fix_updatedbconf"
+    if [ -x ${FIX_UPDATEDB} ]; then
+	UPDATEDB=/etc/updatedb.conf
+	TMP_UPDATEDB=`mktemp /etc/updatedb.tmp.XXXXXX`
+	if ${FIX_UPDATEDB} "${LOCKSS_DISK_PATHS}" <${UPDATEDB} >${TMP_UPDATEDB}; then
+	    if [ -s ${TMP_UPDATEDB} ]; then
+		if ! cmp -s ${TMP_UPDATEDB} ${UPDATEDB}; then
+		    echo "Modifying ${UPDATEDB}" >>${LOG_FILE}
+		    cp ${UPDATEDB} /etc/updatedb.conf.bak
+		    mv ${TMP_UPDATEDB} ${UPDATEDB}
+		fi
+	    fi
+	fi
+	rm -f ${TMP_UPDATEDB}
+    fi
 fi
+
 if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
     RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl.$1"
 elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
@@ -288,9 +292,11 @@ while is_continue; do
         case `uname -s` in
         Linux)
             if [ X`find ${START_FLAG} -mmin +${MAX_STARTS}` = X ]; then
+# Disabled until can be debugged.
+                echo "Rapid daemon exit detected" >>${LOG_FILE}
                 # Daemon has been exiting once per minute - give up
-                echo "Daemon exiting rapidly" >>${LOG_FILE}
-                rm -f ${KEEP_GOING}
+#                echo "Daemon exiting rapidly" >>${LOG_FILE}
+#                rm -f ${KEEP_GOING}
             fi
             ;;
         SunOS)
