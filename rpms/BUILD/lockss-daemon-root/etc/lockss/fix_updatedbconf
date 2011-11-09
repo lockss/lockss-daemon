@@ -1,0 +1,36 @@
+#!/usr/bin/perl   
+# 
+# Filter to process /etc/updatedb.conf to ensure all cache dirs are in
+# PRUNEPATHS
+#
+# Also removes any additional PRUNEPATHS lines erroneously added by
+# previous versions of startdaemon.
+
+$DISKSPACEPATHS = shift @ARGV;
+# Strip any enclosing quotes
+$DISKSPACEPATHS =~ s/^"(.*)"$/\1/;
+
+if ($DISKSPACEPATHS eq "") {
+    print STDERR "Usage: fix_updatedbconf semicolon_separated_path_list </etc/updatedb.conf\n";
+    exit 1;
+}
+
+$paths == "";
+while (<>) {
+    if (/^\w*PRUNEPATHS/) {
+	if ($paths eq "") {
+	    # Extract list of dirs from first PRUNEPATHS line encountered
+	    ($pre, $paths, $post) = ($_ =~ /( *PRUNEPATHS *= *\" *)([^"]*)( *" *)/);
+	}
+    } else {
+	print;
+    }
+}
+
+# Add any missing dirs in DISKSPACEPATHS to PRUNEPATHS
+foreach $disk (split(/;/, $DISKSPACEPATHS)) {
+    if ($paths !~ /$disk/) {
+	$paths = "$paths $disk";
+    }
+}
+print "$pre$paths$post\n";
