@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.11 2011-06-25 14:59:44 pgust Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.12 2011-11-09 14:26:54 pgust Exp $
  */
 
 /*
@@ -71,6 +71,7 @@ public class BePressHtmlMetadataExtractorFactory
       tagMap.put("bepress_citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("bepress_citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("bepress_citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("bepress_citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("bepress_citation_authors",
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
