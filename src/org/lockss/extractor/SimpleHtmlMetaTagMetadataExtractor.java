@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.5.2.1 2011-11-09 02:35:33 pgust Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.5.2.2 2011-11-09 03:39:20 pgust Exp $
  */
 
 /*
@@ -55,11 +55,20 @@ public class SimpleHtmlMetaTagMetadataExtractor
     BufferedReader bReader =
       new BufferedReader(cu.openForReading());
     for (String line = bReader.readLine();
-	 line != null;
-	 line = bReader.readLine()) {
+     line != null;
+     line = bReader.readLine()) {
       int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
       while (i >= 0) {
-        int j = StringUtil.indexOfIgnoreCase(line, "\">", i+1);
+        // recognize end of tag character preceded by a double-quote,
+        // separated by zero or more whitespace characters
+        int j = i+1;
+        while (true) {
+          j = StringUtil.indexOfIgnoreCase(line, ">", j);
+          if ((j < 0) || line.substring(i,j).trim().endsWith("\"")) {
+            break;
+          }
+          j++;
+        }
         if (j < 0) {
           // join next line with tag end
           String nextLine = bReader.readLine();
@@ -106,21 +115,23 @@ public class SimpleHtmlMetaTagMetadataExtractor
     int contentEnd = line.indexOf('"', contentBegin + 1);
     if (log.isDebug3()) {
       log.debug3(line + " name [" + nameBegin + "," + nameEnd + "] cont [" +
-		 contentBegin + "," + contentEnd + "]");
+         contentBegin + "," + contentEnd + "]");
     }
     if (contentEnd <= contentBegin) {
       log.debug2(line + " : " + contentFlag + " unterminated");
       return;
     }
     if (contentBegin <= (nameBegin - nameFlag.length())
-	&& contentEnd >= (nameBegin - nameFlag.length())) {
+    && contentEnd >= (nameBegin - nameFlag.length())) {
       log.debug2(line + " : " + nameFlag + " overlaps " + contentFlag);
       return;
     }
       
     String content = line.substring(contentBegin, contentEnd);
-    content = StringEscapeUtils.unescapeHtml(content);
+    // filter out raw HTML tags embedded within content value
+    // -- publishers sometimes get sloppy
     content = content.replaceAll("<[^>]+>", "");
+    content = StringEscapeUtils.unescapeHtml(content);
 
     if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
     ret.putRaw(name, content);
