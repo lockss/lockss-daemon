@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.37 2011-09-25 04:15:59 tlipkis Exp $
+ * $Id: Plugin.java,v 1.37.2.1 2011-11-09 21:40:55 tlipkis Exp $
  */
 
 /*
@@ -218,6 +218,8 @@ public interface Plugin {
    * implementation/support for that feature.  (Could be used for other
    * things.)
    */
+  // Warning: when adding new Features that are preserved in AuState,
+  // HistoryRepositoryImpl.loadAuState must be updated.
   public enum Feature {
     /**
      * Version of Plugin data that affects polling, such as hash filters,

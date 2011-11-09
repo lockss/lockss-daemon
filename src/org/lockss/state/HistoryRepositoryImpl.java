@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.89 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.89.4.1 2011-11-09 21:40:55 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,7 @@ import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssAuManager;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUrl;
-import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.*;
 import org.lockss.protocol.DatedPeerIdSet;
 import org.lockss.protocol.DatedPeerIdSetImpl;
 import org.lockss.protocol.IdentityAgreementList;
@@ -258,24 +256,30 @@ public class HistoryRepositoryImpl
     try {
       // CASTOR: remove unwrap() when Castor is phased out
       AuState auState = (AuState)unwrap(deserializer.deserialize(auFile));
-      return new AuState(storedAu,
-                         auState.getLastCrawlTime(),
-                         auState.getLastCrawlAttempt(),
-                         auState.getLastCrawlResult(),
-                         auState.getLastCrawlResultMsg(),
-                         auState.getLastTopLevelPollTime(),
-                         auState.getLastPollStart(),
-                         auState.getLastPollResult(),
-                         auState.getLastPollResultMsg(),
-                         auState.getPollDuration(),
-                         -1,
-                         auState.getCrawlUrls(),
-                         auState.getAccessType(),
-                         auState.getClockssSubscriptionStatus(),
-                         auState.getV3Agreement(),
-                         auState.getHighestV3Agreement(),
-			 auState.getSubstanceState(),
-                         this);
+      AuState res = new AuState(storedAu,
+				auState.getLastCrawlTime(),
+				auState.getLastCrawlAttempt(),
+				auState.getLastCrawlResult(),
+				auState.getLastCrawlResultMsg(),
+				auState.getLastTopLevelPollTime(),
+				auState.getLastPollStart(),
+				auState.getLastPollResult(),
+				auState.getLastPollResultMsg(),
+				auState.getPollDuration(),
+				-1,
+				auState.getCrawlUrls(),
+				auState.getAccessType(),
+				auState.getClockssSubscriptionStatus(),
+				auState.getV3Agreement(),
+				auState.getHighestV3Agreement(),
+				auState.getSubstanceState(),
+				this);
+      res.setFeatureVersion(Plugin.Feature.Substance,
+			    auState.getFeatureVersion(Plugin.Feature.Substance));
+      res.setFeatureVersion(Plugin.Feature.Metadata,
+			    auState.getFeatureVersion(Plugin.Feature.Metadata));
+      return res;
+
     }
     catch (SerializationException.FileNotFound fnf) {
       logger.debug2(errorString, fnf);
