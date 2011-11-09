@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.6.2.1 2011-11-09 03:39:20 pgust Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.6.2.2 2011-11-09 05:12:59 pgust Exp $
  */
 
 /*
@@ -71,11 +71,6 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
 
   public void testSingleTagNoContent() throws Exception {
     assertRawEmpty(extractFrom("<meta name=\"FirstName\">"));
-  }
-
-  public void testTagWithRawHtmlTagEmbeddedInContent() throws Exception {
-    String text = "<meta name=\"FirstName\" content=\"Fir<em>st</em>Content\">";
-    assertRawEquals("firstname", "FirstContent", extractFrom(text));
   }
 
   public void testSingleTagNameUnterminated() throws Exception {
