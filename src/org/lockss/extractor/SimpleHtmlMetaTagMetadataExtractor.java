@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.5.2.4 2011-11-09 05:19:14 pgust Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.5.2.5 2011-11-09 06:34:49 pgust Exp $
  */
 
 /*
@@ -64,7 +64,12 @@ public class SimpleHtmlMetaTagMetadataExtractor
         int j = i+1;
         while (true) {
           j = StringUtil.indexOfIgnoreCase(line, ">", j);
-          if ((j < 0) || line.substring(i,j).trim().endsWith("\"")) {
+          if (j < 0) break;
+          String s = line.substring(i,j);
+          if (s.endsWith("/")) {
+            s = s.substring(0,s.length()-1);
+          }
+          if (s.trim().endsWith("\"")) {
             break;
           }
           j++;
