@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.6 2011-09-14 01:36:58 pgust Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.7 2011-11-09 03:39:23 pgust Exp $
  */
 
 /*
@@ -73,6 +73,11 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
     assertRawEmpty(extractFrom("<meta name=\"FirstName\">"));
   }
 
+  public void testTagWithRawHtmlTagEmbeddedInContent() throws Exception {
+    String text = "<meta name=\"FirstName\" content=\"Fir<em>st</em>Content\">";
+    assertRawEquals("firstname", "FirstContent", extractFrom(text));
+  }
+
   public void testSingleTagNameUnterminated() throws Exception {
     assertRawEmpty(extractFrom("<meta name=FirstName\">"));
     assertRawEmpty(extractFrom("<meta name=\"FirstName>"));
@@ -91,9 +96,9 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
 
   public void testSingleTagIgnoreCase() throws Exception {
     assertRawEquals("firstname", "FirstContent",
-		    extractFrom("<META NAME=\"FirstName\" CONTENT=\"FirstContent\">"));
+            extractFrom("<META NAME=\"FirstName\" CONTENT=\"FirstContent\">"));
     assertRawEquals("firstname", "SecondContent",
-		    extractFrom("<MeTa NaMe=\"FirstName\" CoNtEnT=\"SecondContent\">"));
+            extractFrom("<MeTa NaMe=\"FirstName\" CoNtEnT=\"SecondContent\">"));
   }
 
   public void testMultipleTag() throws Exception {
@@ -105,11 +110,11 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       "<meta name=\"FifthName\" content=\"FifthContent\">\n";
 
     assertRawEquals(ListUtil.list("firstname", "FirstContent",
-				  "secondname", "SecondContent",
-				  "thirdname", "ThirdContent",
-				  "fourthname", "FourthContent",
-				  "fifthname", "FifthContent"),
-		    extractFrom(text));
+                  "secondname", "SecondContent",
+                  "thirdname", "ThirdContent",
+                  "fourthname", "FourthContent",
+                  "fifthname", "FifthContent"),
+            extractFrom(text));
   }
 
   public void testHtmlDecoding() throws Exception {
@@ -120,10 +125,10 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       "<meta name=\"others\" content=\"l&lt;g&gt;a&amp;z\">\n";
 
     assertRawEquals(ListUtil.list("title", "\"Quoted\" Title",
-				  "hex", "foo\"bar\" ",
-				  "conjunct", "one&two",
-				  "others", "l<g>a&z"),
-		    extractFrom(text));
+                  "hex", "foo\"bar\" ",
+                  "conjunct", "one&two",
+                  "others", "l<g>a&z"),
+            extractFrom(text));
   }
 
   public void testMultipleTagWithNoise() throws Exception {
@@ -145,11 +150,11 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       "<meta name=\"FifthName\" content=\"FifthContent\">\n" +
       "</body>\n";
     assertRawEquals(ListUtil.list("firstname", "FirstContent",
-				  "secondname", "SecondContent",
-				  "thirdname", "ThirdContent",
-				  "fourthname", "FourthContent",
-				  "fifthname", "FifthContent"),
-		    extractFrom(text));
+                  "secondname", "SecondContent",
+                  "thirdname", "ThirdContent",
+                  "fourthname", "FourthContent",
+                  "fifthname", "FifthContent"),
+            extractFrom(text));
   }
 
   private class MyFileMetadataExtractorFactory
@@ -157,7 +162,7 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
     MyFileMetadataExtractorFactory() {
     }
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							     String mimeType)
+                                 String mimeType)
         throws PluginException {
       return new SimpleHtmlMetaTagMetadataExtractor();
     }
