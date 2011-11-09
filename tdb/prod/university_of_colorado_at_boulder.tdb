@@ -17,6 +17,8 @@
     param[base_url] = http://www.genders.org/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
 
+    comment[doNotProcess] = This plugin precludes processing the AU from the year in progress -- wait until the end of the year
+
     au < released ; 1998 ; Genders 1998 ; 1998 ; 27-28 >
     au < released ; 1999 ; Genders 1999 ; 1999 ; 29-30 >
     au < released ; 2000 ; Genders 2000 ; 2000 ; 31-32 >
@@ -30,7 +32,7 @@
     au < ready ; 2008 ; Genders 2008 ; 2008 ; 47-48 >
     au < ready ; 2009 ; Genders 2009 ; 2009 ; 49-50 >
     au < ready ; 2010 ; Genders 2010 ; 2010 ; 51-52 >
-    au < ready ; 2011 ; Genders 2011 ; 2011 ; 53 >    
+    au < doNotProcess ; 2011 ; Genders 2011 ; 2011 ; 53-54 >    
     
   }
 
