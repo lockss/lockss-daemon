@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.9 2011-11-09 05:19:17 pgust Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.10 2011-11-09 06:34:52 pgust Exp $
  */
 
 /*
@@ -59,12 +59,18 @@ public class SimpleHtmlMetaTagMetadataExtractor
 	 line = bReader.readLine()) {
       int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
       while (i >= 0) {
-        // recognize end of tag character preceded by a double-quote,
-        // separated by zero or more whitespace characters
+        // recognize end of tag character preceded by optional '/', 
+        // preceded by a double-quote that is separated by zero or more 
+        // whitespace characters
         int j = i+1;
         while (true) {
           j = StringUtil.indexOfIgnoreCase(line, ">", j);
-          if ((j < 0) || line.substring(i,j).trim().endsWith("\"")) {
+          if (j < 0) break;
+          String s = line.substring(i,j);
+          if (s.endsWith("/")) {
+            s = s.substring(0,s.length()-1);
+          }
+          if (s.trim().endsWith("\"")) {
             break;
           }
           j++;
