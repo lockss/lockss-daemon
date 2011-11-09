@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.77 2010-09-01 07:54:31 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.78 2011-11-09 21:36:28 tlipkis Exp $
  */
 
 /*
@@ -304,6 +304,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    2, 1.0, 1.0,
 				    SubstanceChecker.State.Yes,
 				    repository);
+    origState.setFeatureVersion(Plugin.Feature.Substance, "123");
+    origState.setFeatureVersion(Plugin.Feature.Metadata, "456");
+
     repository.storeAuState(origState);
 
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
@@ -334,6 +337,11 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertTrue(colIter.hasNext());
     assertEquals("test", colIter.next());
     assertFalse(colIter.hasNext());
+
+    assertEquals("123",
+		 loadedState.getFeatureVersion(Plugin.Feature.Substance));
+    assertEquals("456",
+		 loadedState.getFeatureVersion(Plugin.Feature.Metadata));
   }
 
   public void testStoreDamagedNodeSet() throws Exception {
