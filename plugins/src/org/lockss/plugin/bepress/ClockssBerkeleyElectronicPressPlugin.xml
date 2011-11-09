@@ -12,15 +12,11 @@
     <string>24</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>24</string>
-  </entry>
-  <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-		<string>1</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
@@ -54,22 +50,22 @@
   <entry>
     <string>au_feature_urls</string>
     <map>
-    <entry>
-      <string>au_title</string>
-      <string>&quot;%s%s&quot;, base_url, journal_abbr</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%s%s/vol%d&quot;, base_url, journal_abbr, volume</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <string>&quot;%s%s/vol%d/iss%s&quot;, base_url, journal_abbr, volume, issue</string>
-    </entry>
-    <entry>
-      <string>au_article</string>
-      <string>&quot;%s%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, volume, issue, article</string>
-    </entry>
+      <entry>
+        <string>au_title</string>
+        <string>&quot;%s%s&quot;, base_url, journal_abbr</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>&quot;%s%s/vol%d&quot;, base_url, journal_abbr, volume</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>&quot;%s%s/vol%d/iss%s&quot;, base_url, journal_abbr, volume, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>&quot;%s%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, volume, issue, article</string>
+      </entry>
     </map>
   </entry>
   <entry>
