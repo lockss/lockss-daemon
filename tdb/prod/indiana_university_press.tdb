@@ -95,9 +95,19 @@
       plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = ale
+      implicit < status ; year ; name ; param[volume_name] ; volume >
+
+      au < down ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - ; 1-8 >
+
+    }     
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = ale
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - >
       au < down ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
       au < down ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
 
