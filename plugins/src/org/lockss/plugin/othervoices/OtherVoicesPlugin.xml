@@ -41,11 +41,11 @@
   	<map>
 	  <entry>
 	    <string>au_title</string>
-    	<string>&quot;%sindex.html&quot;, base_url</string>
+    	<string>&quot;%sindex.php&quot;, base_url</string>
 	  </entry>
 	  <entry>
 	    <string>au_volume</string>
-    	<string>&quot;%sindex.html&quot;, base_url</string>
+    	<string>&quot;%sindex.php&quot;, base_url</string>
 	  </entry>
 	  <entry>
 	    <string>au_issue</string>
