@@ -67,6 +67,23 @@
     <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+  	<map>
+	  <entry>
+      <string>au_title</string>
+      <string>&quot;%spublishing/en/journals/journalissues/%s&quot;, base_url, journal_code</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+	  <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&amp;%s&quot;, base_url, journal_code, volume_name, year, issue</string>
+    </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
