@@ -37,6 +37,23 @@
     <string>&quot;%slockss-volume%d.html&quot;, base_url, volume</string>
   </entry>
   <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+    	<string>&quot;%sindex.html&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    	<string>&quot;%sindex.html&quot;, base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+    	<string>&quot;%s%s.%s/index.php&quot;, base_url, volume, issue</string>
+	  </entry>
+  	</map>
+  </entry>  
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
