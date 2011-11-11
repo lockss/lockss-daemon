@@ -68,6 +68,23 @@
     <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
+    <string>au_feature_urls</string>
+  	<map>
+	  <entry>
+      <string>au_title</string>
+	  <string>&quot;%scontent/%s/&quot;, base_url, journal_issn</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+	  <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+	  <string>&quot;%scontent/%s/%s/%s/&quot;, base_url, journal_issn, volume_name, issue</string>
+    </entry>
+  	</map>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
