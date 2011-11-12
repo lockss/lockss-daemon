@@ -5,11 +5,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
+      <entry>
+        <string>Metadata</string>
+	<string>2</string>
+      </entry>
       <entry>
         <string>Substance</string>
 	<string>2</string>
@@ -164,5 +168,13 @@
     <list>
       <string>&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/[0-9]+/art[0-9]+\?crawler=true&quot;, api_url, publisher_id, journal_id, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory</string>
   </entry>
 </map>
