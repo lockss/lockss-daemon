@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>16</string>
+  </entry>
+  <entry>
     <string>required_daemon_version</string>
     <string>1.48.0</string>
   </entry>
@@ -14,10 +18,6 @@
   <entry>
     <string>au_crawl_depth</string>
     <int>2</int>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>15</string>
   </entry>
   <entry>
     <string>au_name</string>

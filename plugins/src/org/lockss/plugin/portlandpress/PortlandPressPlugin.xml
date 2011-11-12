@@ -4,12 +4,12 @@
     <string>org.lockss.plugin.portlandpress.PortlandPressPlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
+    <string>plugin_version</string>
+    <string>6</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>5</string>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>

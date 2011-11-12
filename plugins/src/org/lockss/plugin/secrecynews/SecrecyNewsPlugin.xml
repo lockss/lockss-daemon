@@ -4,6 +4,10 @@
     <string>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>&quot;Secrecy News %d&quot;, year</string>
   </entry>
