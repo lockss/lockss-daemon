@@ -4,16 +4,16 @@
     <string>org.lockss.plugin.iop.IOPPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>6</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>90000</long>
   </entry>
   <entry>
     <string>text/html_filter</string>
     <string>org.lockss.plugin.iop.IOPFilterRule</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>5</string>
   </entry>
   <entry>
     <string>plugin_notes</string>
