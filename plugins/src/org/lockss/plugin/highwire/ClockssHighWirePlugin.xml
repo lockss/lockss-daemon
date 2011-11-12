@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>68</string>
+    <string>69</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -145,7 +145,7 @@
       </entry>
     </map>
   </entry>
-  <!--  Remove these once 1.52 running everywhere -->
+<!--
   <entry>
     <string>application/pdf_fetch_rate_limit</string>
     <string>1/2000</string>
@@ -158,4 +158,5 @@
     <string>text/html_fetch_rate_limit</string>
     <string>1/2000</string>
   </entry>
+-->
 </map>

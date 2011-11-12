@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -163,7 +163,7 @@
       </entry>
     </map>
   </entry>
-  <!--  Remove these once 1.52 running everywhere -->
+<!--
   <entry>
     <string>application/pdf_fetch_rate_limit</string>
     <string>1/2000</string>
@@ -176,4 +176,5 @@
     <string>text/html_fetch_rate_limit</string>
     <string>1/2000</string>
   </entry>
+-->
 </map>

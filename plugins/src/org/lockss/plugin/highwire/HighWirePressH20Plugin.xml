@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -158,7 +158,6 @@
     <string>au_def_pause_time</string>
     <long>4000</long>
   </entry>
-<!--
   <entry>
     <string>au_mime_rate_limiter_map</string>
     <map>
@@ -168,6 +167,7 @@
       </entry>
     </map>
   </entry>
+<!--
   <entry>
     <string>application/pdf_fetch_rate_limit</string>
     <string>1/3000</string>
