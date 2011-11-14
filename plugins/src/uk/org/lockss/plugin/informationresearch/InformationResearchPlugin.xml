@@ -4,12 +4,29 @@
     <string>uk.org.lockss.plugin.InformationResearchPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+	<string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+	<string>3</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Information Research, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>&quot;Information Research Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -20,17 +37,14 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>plugin_notes</string>
-    <string></string>
-  </entry>
-  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sLOCKSSmanifest.html&quot;, base_url</string>
-      <string>1,&quot;^%sindex.html&quot;, base_url</string>
-      <string>1,&quot;^%s%s-[0-9]+/.*&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(LOCKSSmanifest|index)\.html$&quot;, base_url</string>
+      <string>2,&quot;^%sreviews/reviews\.html$&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s%s-[0-9]+/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%sreviews/revs&quot;, base_url, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -58,25 +72,6 @@
     <string>au_manifest</string>
     <string>&quot;%sLOCKSSmanifest.html&quot;, base_url</string>
   </entry>
-<!--  remove comment when these are available
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
--->
   <entry>
     <string>plugin_config_props</string>
     <list>
@@ -102,7 +97,12 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%s-[0-9]+/paper[0-9]+\.html&quot;, base_url, volume_name</string>
+      <string>&quot;^%s%s-[0-9]+/paper[0-9]+\.html$&quot;, base_url, volume_name</string>
+      <string>&quot;^%sreviews/revs[0-9]+\.html$&quot;, base_url, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>test/html_filter_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlFilterFactory</string>
   </entry>
 </map>
