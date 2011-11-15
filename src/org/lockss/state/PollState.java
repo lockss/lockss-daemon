@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.28 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: PollState.java,v 1.29 2011-11-15 00:58:19 barry409 Exp $
  */
 
 /*
@@ -269,11 +269,11 @@ public class PollState implements Comparable, LockssSerializable {
       return returnVal;
     }
 
-    returnVal = StringUtil.compareToHandleNull(lwrBound, ps2.lwrBound);
+    returnVal = StringUtil.compareToNullLow(lwrBound, ps2.lwrBound);
     if (returnVal != 0) {
       return returnVal;
     }
-    return StringUtil.compareToHandleNull(uprBound, ps2.uprBound);
+    return StringUtil.compareToNullLow(uprBound, ps2.uprBound);
   }
 
   public boolean equals(Object obj) {

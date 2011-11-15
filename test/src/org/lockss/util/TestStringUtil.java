@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.86 2011-09-25 04:15:45 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.87 2011-11-15 00:58:19 barry409 Exp $
  */
 
 /*
@@ -492,6 +492,24 @@ public class TestStringUtil extends LockssTestCase {
 	assertEquals(s, swrtr.toString());
   }
 
+  public void testCompareNullLow() {
+    assertEquals(0, StringUtil.compareToNullLow(null, null));
+    assertEquals(-1, StringUtil.compareToNullLow(null, "a"));
+    assertEquals(1, StringUtil.compareToNullLow("a", null));
+    assertEquals(1, StringUtil.compareToNullLow("b", "a"));
+    assertEquals(-1, StringUtil.compareToNullLow("a", "b"));
+    assertEquals(0, StringUtil.compareToNullLow("a", "a"));
+  }
+
+  public void testCompareNullHigh() {
+    assertEquals(0, StringUtil.compareToNullHigh(null, null));
+    assertEquals(1, StringUtil.compareToNullHigh(null, "a"));
+    assertEquals(-1, StringUtil.compareToNullHigh("a", null));
+    assertEquals(1, StringUtil.compareToNullHigh("b", "a"));
+    assertEquals(-1, StringUtil.compareToNullHigh("a", "b"));
+    assertEquals(0, StringUtil.compareToNullHigh("a", "a"));
+  }
+
   public void testEqualStrings() {
     assertTrue(StringUtil.equalStrings(null, null));
     assertFalse(StringUtil.equalStrings("1", null));
@@ -887,15 +905,6 @@ public class TestStringUtil extends LockssTestCase {
 
     assertEquals(7, StringUtil.nthIndexOf(4, "xyzxyzxxxyz", "x"));
     assertEquals(9, StringUtil.nthIndexOf(2, "xyzzzzzysxyz", "xyz"));
-  }
-
-  public void testCompareHandleNull() {
-    assertEquals(0, StringUtil.compareToHandleNull(null, null));
-    assertEquals(-1, StringUtil.compareToHandleNull(null, "a"));
-    assertEquals(1, StringUtil.compareToHandleNull("a", null));
-    assertEquals(1, StringUtil.compareToHandleNull("b", "a"));
-    assertEquals(-1, StringUtil.compareToHandleNull("a", "b"));
-    assertEquals(0, StringUtil.compareToHandleNull("a", "a"));
   }
 
   public void testProtectedDivide() {

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.105 2011-09-25 04:15:45 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.106 2011-11-15 00:58:19 barry409 Exp $
  */
 
 /*
@@ -1118,15 +1118,27 @@ public class StringUtil {
   }
 
   /**
-   * Same as str.compareTo(str), except handles nulls (which sorts before all
-   * other strings)
+   * Same as str.compareTo(str), except null is the lowest value.
    */
-  public static int compareToHandleNull(String str1, String str2) {
+  public static int compareToNullLow(String str1, String str2) {
     if (str1 == null) {
       return (str2 == null) ? 0 : -1;
     }
     if (str2 == null) {
       return 1;
+    }
+    return str1.compareTo(str2);
+  }
+
+  /**
+   * Same as str.compareTo(str), except null is the highest value.
+   */
+  public static int compareToNullHigh(String str1, String str2) {
+    if (str1 == null) {
+      return (str2 == null) ? 0 : 1;
+    }
+    if (str2 == null) {
+      return -1;
     }
     return str1.compareTo(str2);
   }
