@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.34 2011-06-07 06:29:22 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.35 2011-11-15 01:30:34 barry409 Exp $
  */
 
 /*
@@ -714,7 +714,7 @@ public class TestV3Poller extends LockssTestCase {
     
     tally = new BlockTally(2); // Quorum = 3
     v3Poller.tallyBlock(hashblocks[1], tally);
-    assertEquals(BlockTally.RESULT_LOST_EXTRA_BLOCK, tally.result);
+    assertEquals(BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK, tally.result);
     
     tally = new BlockTally(2); // Quorum = 3
     v3Poller.tallyBlock(hashblocks[2], tally);

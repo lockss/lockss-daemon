@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.105 2011-10-03 05:54:34 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.106 2011-11-15 01:30:34 barry409 Exp $
  */
 
 /*
@@ -1055,14 +1055,14 @@ public class V3Poller extends BasePoll {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
     log.debug3("Opening block " + hb.getUrl() + " to tally.");
-    int missingBlockVoters = 0;
+    int voterOnlyBlockVoters = 0;
     int digestIndex = 0;
     int bytesHashed = 0;
     
     // By this time, only voted peers will exist in 'theParticipants'.
     // Everyone else will have been removed.
     do {
-      missingBlockVoters = 0;
+      voterOnlyBlockVoters = 0;
       digestIndex = 0;
       
       // Reset the tally
@@ -1127,20 +1127,20 @@ public class V3Poller extends BasePoll {
               if (vb == null) {
                 // No block was returned.  This means this voter is out of
                 // blocks.
-                tally.addExtraBlockVoter(voter.getVoterId());
+                tally.addPollerOnlyBlockVoter(voter.getVoterId());
               } else {
                 int sortOrder = hb.getUrl().compareTo(vb.getUrl());
                 if (sortOrder > 0) {
                   log.debug3("Participant " + voter.getVoterId() + 
                              " seems to have an extra block that I don't: " +
                              vb.getUrl());
-                  tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
-                  missingBlockVoters++;
+                  tally.addVoterOnlyBlockVoter(voter.getVoterId(), vb.getUrl());
+                  voterOnlyBlockVoters++;
                   iter.next();
                 } else if (sortOrder < 0) {
                   log.debug3("Participant " + voter.getVoterId() +
                              " doesn't seem to have block " + hb.getUrl());
-                  tally.addExtraBlockVoter(voter.getVoterId());
+                  tally.addPollerOnlyBlockVoter(voter.getVoterId());
                 } else { // equal
                   if (lowestUrl == null) {
                     log.debug3("Our blocks are the same, now we'll compare them.");
@@ -1174,7 +1174,7 @@ public class V3Poller extends BasePoll {
 
       tally.tallyVotes();
       checkTally(tally, hb.getUrl(), false);
-    } while (missingBlockVoters > 0);
+    } while (voterOnlyBlockVoters > 0);
     
     // Check to see if it's time to checkpoint the poll.
     bytesHashedSinceLastCheckpoint += hb.getTotalFilteredBytes();
@@ -1197,10 +1197,10 @@ public class V3Poller extends BasePoll {
       return;
     }
     int digestIndex = 0;
-    int missingBlockVoters = 0;
+    int voterOnlyBlockVoters = 0;
     do {
       digestIndex = 0;
-      missingBlockVoters = 0;
+      voterOnlyBlockVoters = 0;
       BlockTally tally = new BlockTally(pollerState.getQuorum());
       synchronized(theParticipants) {
         try {
@@ -1221,8 +1221,8 @@ public class V3Poller extends BasePoll {
             try {
               if (iter.peek() != null) {
                 VoteBlock vb = iter.next();
-                tally.addMissingBlockVoter(voter.getVoterId(), vb.getUrl());
-                missingBlockVoters++;
+                tally.addVoterOnlyBlockVoter(voter.getVoterId(), vb.getUrl());
+                voterOnlyBlockVoters++;
               }
             } catch (IOException ex) {
               // This would be bad enough to stop the poll and raise an alert.
@@ -1238,17 +1238,17 @@ public class V3Poller extends BasePoll {
       }
 
       // Do not tally if this is the last time through the loop.
-      if (missingBlockVoters > 0) {
+      if (voterOnlyBlockVoters > 0) {
         tally.tallyVotes();		// CR: need to call this in loop?
         // This may be null if the tally does not yet have consensus on what
         // the name of the missing block is.
 	// CR: this is suspicious
-        if (tally.getMissingBlockUrl() != null) {
-          checkTally(tally, tally.getMissingBlockUrl(), false);
+        if (tally.getVoterOnlyBlockUrl() != null) {
+          checkTally(tally, tally.getVoterOnlyBlockUrl(), false);
         }
       }
 
-    } while (missingBlockVoters > 0);
+    } while (voterOnlyBlockVoters > 0);
     
     // Checkpoint the poll.
     checkpointPoll();
@@ -1301,7 +1301,7 @@ public class V3Poller extends BasePoll {
       if (log.isDebug2()) {
 	vMsg = "(" + tally.getAgreeVoters().size()
 	  + "-" + tally.getDisagreeVoters().size()
-	  + "-" + tally.getExtraBlockVoters().size() + ") ";
+	  + "-" + tally.getPollerOnlyBlockVoters().size() + ") ";
       }
       switch (result) {
       case BlockTally.RESULT_WON:
@@ -1314,26 +1314,26 @@ public class V3Poller extends BasePoll {
 	log.debug2("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
 	requestRepair(url, tally.getDisagreeVoters());
 	break;
-      case BlockTally.RESULT_LOST_EXTRA_BLOCK:
+      case BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK:
 	log.debug2("Lost tally" + vMsg + ": Removing " + url +
 		   " in poll " + getKey());
 	deleteBlock(url);
 	break;
-      case BlockTally.RESULT_LOST_MISSING_BLOCK:
+      case BlockTally.RESULT_LOST_VOTER_ONLY_BLOCK:
 	log.debug2("Lost tally. Requesting repair for missing block: " +
 		   url + " in poll " + getKey());
 	tallyStatus.addDisagreedUrl(url);
-	String missingURL = tally.getMissingBlockUrl();
-	requestRepair(missingURL,
-		      tally.getMissingBlockVoters(missingURL));
+	String voterOnlyURL = tally.getVoterOnlyBlockUrl();
+	requestRepair(voterOnlyURL,
+		      tally.getVoterOnlyBlockVoters(voterOnlyURL));
 	break;
       case BlockTally.RESULT_NOQUORUM:
 	tallyStatus.addNoQuorumUrl(url);
 	log.warning("No Quorum for block " + url + " in poll " + getKey());
 	break;
       case BlockTally.RESULT_TOO_CLOSE:
-      case BlockTally.RESULT_TOO_CLOSE_MISSING_BLOCK:
-      case BlockTally.RESULT_TOO_CLOSE_EXTRA_BLOCK:
+      case BlockTally.RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK:
+      case BlockTally.RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK:
 	tallyStatus.addTooCloseUrl(url);
 	log.warning("Tally was inconclusive for block " + url + " in poll " +
 		    getKey());
@@ -1657,7 +1657,7 @@ public class V3Poller extends BasePoll {
             if (vb == null) {
               log.debug("Voter " + id + " does not seem to have url " + url + " in his vote blocks.");
               // The voter did not have this URL in the first place.
-              tally.addMissingBlockVoter(id, url);
+              tally.addVoterOnlyBlockVoter(id, url);
             } else {
               compareBlocks(id, digestIndex, vb, hblock, tally);
             }

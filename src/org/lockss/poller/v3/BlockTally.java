@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.14 2007-10-09 00:49:55 smorabito Exp $
+ * $Id: BlockTally.java,v 1.15 2011-11-15 01:30:34 barry409 Exp $
  */
 
 /*
@@ -47,11 +47,11 @@ public class BlockTally {
   public static final int RESULT_HASHING = 0;
   public static final int RESULT_NOQUORUM = 1;
   public static final int RESULT_TOO_CLOSE = 2;
-  public static final int RESULT_TOO_CLOSE_EXTRA_BLOCK = 3;
-  public static final int RESULT_TOO_CLOSE_MISSING_BLOCK = 4;
+  public static final int RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK = 3;
+  public static final int RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK = 4;
   public static final int RESULT_LOST = 5;
-  public static final int RESULT_LOST_EXTRA_BLOCK = 6;
-  public static final int RESULT_LOST_MISSING_BLOCK = 7;
+  public static final int RESULT_LOST_POLLER_ONLY_BLOCK = 6;
+  public static final int RESULT_LOST_VOTER_ONLY_BLOCK = 7;
   public static final int RESULT_WON = 8;
   public static final int RESULT_REPAIRED = 9;
 
@@ -60,18 +60,18 @@ public class BlockTally {
   // List of voters with whom we disagree
   private List disagreeVoters = new ArrayList();
   // List of voters who we believe do not have a block that we do.
-  private List extraBlockVoters = new ArrayList();
+  private List pollerOnlyBlockVoters = new ArrayList();
   // List of voters who we believe have an block that we do not.
   // This is a map of URLs to peer identities.
   // JAVA5: Map<String,Set<PeerIdentity>>
-  private Map missingBlockVoters = new HashMap();
+  private Map voterOnlyBlockVoters = new HashMap();
   /** 
    * Deprecated in Daemon 1.23.
    * @deprecated
    */
   private LinkedHashMap votes = new LinkedHashMap();
-  // Name of the missing block, if any.
-  private String missingBlockUrl;
+  // Name of the voterOnly block, if any.
+  private String voterOnlyBlockUrl;
 
   int result = RESULT_HASHING; // Always hashing when BlockTally is created.
   int quorum;
@@ -90,9 +90,9 @@ public class BlockTally {
   public void reset() {
     agreeVoters = new ArrayList();
     disagreeVoters = new ArrayList();
-    extraBlockVoters = new ArrayList();
-    missingBlockVoters = new HashMap();
-    missingBlockUrl = null;
+    pollerOnlyBlockVoters = new ArrayList();
+    voterOnlyBlockVoters = new HashMap();
+    voterOnlyBlockUrl = null;
     result = RESULT_HASHING;
   }
   
@@ -104,16 +104,16 @@ public class BlockTally {
       return "No Quorum";
     case RESULT_TOO_CLOSE:
       return "Too Close";
-    case RESULT_TOO_CLOSE_EXTRA_BLOCK:
-      return "Too Close - Extra Block";
-    case RESULT_TOO_CLOSE_MISSING_BLOCK:
-      return "Too Close - Missing Block";
+    case RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK:
+      return "Too Close - Poller-only Block";
+    case RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK:
+      return "Too Close - Voter-only Block";
     case RESULT_LOST:
       return "Lost";
-    case RESULT_LOST_EXTRA_BLOCK:
-      return "Lost - Extra Block";
-    case RESULT_LOST_MISSING_BLOCK:
-      return "Lost - Missing Block";
+    case RESULT_LOST_POLLER_ONLY_BLOCK:
+      return "Lost - Poller-only Block";
+    case RESULT_LOST_VOTER_ONLY_BLOCK:
+      return "Lost - Voter-only Block";
     case RESULT_WON:
       return "Won";
     case RESULT_REPAIRED:
@@ -126,34 +126,34 @@ public class BlockTally {
   public void tallyVotes() {
     int agree = agreeVoters.size();
     int disagree = disagreeVoters.size();
-    int extraBlocks = extraBlockVoters.size();
-    int missingBlocks = getAllMissingBlockVoters().size();
+    int pollerOnlyBlocks = pollerOnlyBlockVoters.size();
+    int voterOnlyBlocks = getAllVoterOnlyBlockVoters().size();
 
     if (agree + disagree < quorum) {
       result = RESULT_NOQUORUM;
     } else if (!isWithinMargin()) { 
       result = RESULT_TOO_CLOSE;
-    } else if (extraBlocks >= quorum) {
-      result = RESULT_LOST_EXTRA_BLOCK;
-    } else if (missingBlocks >= quorum) {
+    } else if (pollerOnlyBlocks >= quorum) {
+      result = RESULT_LOST_POLLER_ONLY_BLOCK;
+    } else if (voterOnlyBlocks >= quorum) {
       // Attempt to find the name of the missing block, if possible.
-      String missingUrl = null;
-      int maxMissingUrlCount = 0;
-      for (Iterator iter = missingBlockVoters.keySet().iterator(); iter.hasNext(); ) {
+      String voterOnlyUrl = null;
+      int maxVoterOnlyUrlCount = 0;
+      for (Iterator iter = voterOnlyBlockVoters.keySet().iterator(); iter.hasNext(); ) {
         String url = (String)iter.next();
-        Set s = (Set)missingBlockVoters.get(url);
-        if (s.size() > maxMissingUrlCount) {
-          maxMissingUrlCount = s.size();
-          missingUrl = url;
+        Set s = (Set)voterOnlyBlockVoters.get(url);
+        if (s.size() > maxVoterOnlyUrlCount) {
+          maxVoterOnlyUrlCount = s.size();
+          voterOnlyUrl = url;
         }
       }
-      if (maxMissingUrlCount >= quorum) {
-        log.debug("Found agreement on missing URL name: " + missingUrl);
-        result = RESULT_LOST_MISSING_BLOCK;
-        this.missingBlockUrl = missingUrl;
+      if (maxVoterOnlyUrlCount >= quorum) {
+        log.debug("Found agreement on missing URL name: " + voterOnlyUrl);
+        result = RESULT_LOST_VOTER_ONLY_BLOCK;
+        this.voterOnlyBlockUrl = voterOnlyUrl;
       } else {
-        log.debug("Could not reach agreement on missing URL name: " + missingBlockVoters);
-        result = RESULT_TOO_CLOSE_MISSING_BLOCK;
+        log.debug("Could not reach agreement on missing URL name: " + voterOnlyBlockVoters);
+        result = RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK;
       }
     } else if (agree > disagree) {
       result = RESULT_WON;
@@ -182,35 +182,35 @@ public class BlockTally {
     return agreeVoters;
   }
 
-  public void addExtraBlockVoter(PeerIdentity id) {
-    extraBlockVoters.add(id);
+  public void addPollerOnlyBlockVoter(PeerIdentity id) {
+    pollerOnlyBlockVoters.add(id);
     disagreeVoters.add(id);
   }
 
-  public Collection getExtraBlockVoters() {
-    return extraBlockVoters;
+  public Collection getPollerOnlyBlockVoters() {
+    return pollerOnlyBlockVoters;
   }
 
   /**
    * Return the name of the missing block, if any.
    */
-  public String getMissingBlockUrl() {
-    return missingBlockUrl;
+  public String getVoterOnlyBlockUrl() {
+    return voterOnlyBlockUrl;
   }
 
-  public void addMissingBlockVoter(PeerIdentity id, String url) {
+  public void addVoterOnlyBlockVoter(PeerIdentity id, String url) {
     Set voters;
-    if ((voters = (Set)missingBlockVoters.get(url)) == null) {
+    if ((voters = (Set)voterOnlyBlockVoters.get(url)) == null) {
       voters = new HashSet();
-      missingBlockVoters.put(url, voters);
+      voterOnlyBlockVoters.put(url, voters);
     }
     voters.add(id);
     disagreeVoters.add(id);
   }
 
-  private Collection getAllMissingBlockVoters() {
+  private Collection getAllVoterOnlyBlockVoters() {
     Set voters = new HashSet();
-    for (Iterator iter = missingBlockVoters.values().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = voterOnlyBlockVoters.values().iterator(); iter.hasNext(); ) {
       Set s = (Set)iter.next();
       voters.addAll(s);
     }
@@ -241,8 +241,8 @@ public class BlockTally {
    * @param url
    * @return a set of all peers that claim to have the specified URL.
    */
-  public Collection getMissingBlockVoters(String url) {
-    return (Set)missingBlockVoters.get(url);
+  public Collection getVoterOnlyBlockVoters(String url) {
+    return (Set)voterOnlyBlockVoters.get(url);
   }
 
   /**
