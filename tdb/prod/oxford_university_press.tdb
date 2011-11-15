@@ -6840,7 +6840,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 1993 ; Interdisciplinary Studies in Literature and Environment Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 1994,1996 ; Interdisciplinary Studies in Literature and Environment Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1994-1996 ; Interdisciplinary Studies in Literature and Environment Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; exists ; 1996 ; Interdisciplinary Studies in Literature and Environment Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; exists ; 1997 ; Interdisciplinary Studies in Literature and Environment Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; exists ; 1998 ; Interdisciplinary Studies in Literature and Environment Volume 5 ; 5 >
