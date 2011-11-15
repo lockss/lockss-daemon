@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://asheducationbook.hematologylibrary.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -162,7 +162,7 @@
       au < manifest ; 2004 ; Blood Volume 103 ; 103 >
       au < manifest ; 2004 ; Blood Volume 104 ; 104 >
       au < manifest ; 2005 ; Blood Volume 105 ; 105 >
-      au < manifest ; 2005 ; Blood Volume 106 ; 106 >
+      au < doNotProcess ; 2005 ; Blood Volume 106 ; 106 >
       au < manifest ; 2006 ; Blood Volume 107 ; 107 >
       au < manifest ; 2006 ; Blood Volume 108 ; 108 >
       au < manifest ; 2007 ; Blood Volume 109 ; 109 >
@@ -174,6 +174,7 @@
       au < manifest ; 2010 ; Blood Volume 115 ; 115 >
       au < manifest ; 2010 ; Blood Volume 116 ; 116 >
       au < manifest ; 2011 ; Blood Volume 117 ; 117 >
+      au < manifest ; 2011 ; Blood Volume 118 ; 118 >
 
     }
 
