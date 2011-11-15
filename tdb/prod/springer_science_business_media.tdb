@@ -19544,10 +19544,13 @@
 
     title <
       name = Irish Journal of Medical Science ;
-      issn = 1863-4362
+      issn = 0021-1265 ;
+      eissn = 1863-4362 ;
+      issnl = 0021-1265 ;
+      placeholder = True
     >
 
-    param[journal_issn] = 120514
+    param[journal_issn] = 0021-1265
 
   }
 
@@ -19555,11 +19558,13 @@
 
     title <
       name = Irish Journal of Medical Science (1922-1925) ;
-      issn = 121230 ;
+      issn = 0021-1265 ;
+      eissn = 1863-4362 ;
+      issnl = 0021-1265 ;
       placeholder = True
     >
 
-    param[journal_issn] = 121230
+    param[journal_issn] = 0021-1265
 
   }
 
@@ -19567,11 +19572,13 @@
 
     title <
       name = Irish Journal of Medical Science (1926-1967) ;
-      issn = 121231 ;
+      issn = 0021-1265 ;
+      eissn = 1863-4362 ;
+      issnl = 0021-1265 ;
       placeholder = True
     >
 
-    param[journal_issn] = 121231
+    param[journal_issn] = 0021-1265
 
   }
 
@@ -19579,11 +19586,13 @@
 
     title <
       name = Irish Journal of Medical Science (1968-1970) ;
-      issn = 121232 ;
+      issn = 0021-1265 ;
+      eissn = 1863-4362 ;
+      issnl = 0021-1265 ;
       placeholder = True
     >
 
-    param[journal_issn] = 121232
+    param[journal_issn] = 0021-1265
 
   }
 
