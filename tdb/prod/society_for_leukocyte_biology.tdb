@@ -18,7 +18,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Leukocyte Biology [abstracts only] Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Leukocyte Biology [abstracts only] Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of Leukocyte Biology Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Leukocyte Biology Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of Leukocyte Biology Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of Leukocyte Biology Volume 39 ; 39 >
