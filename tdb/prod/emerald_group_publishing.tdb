@@ -4884,6 +4884,20 @@
 
   {
     title <
+      name = Journal of Economic and Administrative Sciences ;
+      issn = 1026-4116 ;
+      issnl = 1026-4116
+    >
+
+    param[journal_issn] = 1026-4116
+   
+    comment[0] = forthcoming
+     
+  }
+
+
+  {
+    title <
       name = Journal of Economic Studies ;
       issn = 0144-3585 ;
       eissn = 1758-7387 ;
@@ -9315,6 +9329,32 @@
     au < released ; 1994 ; World Class Design to Manufacture Volume 1 ; 1 >
     au < released ; 1995 ; World Class Design to Manufacture Volume 2 ; 2 >
 
+  }
+
+  {
+    title <
+      name = World Journal of Entrepreneurship, Management and Sustainable Development ;
+      issn = 2042-5961 ;
+      issnl = 2042-5961
+    >
+
+    param[journal_issn] = 2042-5961 
+   
+    comment[0] = forthcoming
+     
+  }
+
+  {
+    title <
+      name = World Journal of Science, Technology and Sustainable Development ;
+      issn =  2042-5945 ;
+      issnl = 2042-5945
+    >
+
+    param[journal_issn] = 2042-5945
+   
+    comment[0] = forthcoming
+     
   }
 
   {
