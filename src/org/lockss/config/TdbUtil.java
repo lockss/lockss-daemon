@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
+ * $Id: TdbUtil.java,v 1.9 2011-11-16 18:37:56 easyonthemayo Exp $
  */
 
 /*
@@ -114,7 +114,6 @@ public class TdbUtil {
     return tcfg.getTdbAu(); 
   }
   
-  
   /**
    * Get a list of all the TdbTitles which are available for archiving. That
    * is, titles which are marked as available in the LOCKSS box's TDB records.
@@ -182,7 +181,7 @@ public class TdbUtil {
    * Count the number of TdbTitles available in the given scope.  
    * Note that it is necessary to get a list of AUs and construct from it a set 
    * of all the titles covered by those AUs. This is quite an expensive 
-   * operation and is performed by {@link getTdbTitles()}, on whose result 
+   * operation and is performed by {@link getTdbTitles}, on whose result
    * size() is called. The same caveats apply as for getTdbTitles(), regarding the
    * interpretation of the number for CONFIGURED or PRESERVED scopes.
    * 
@@ -227,12 +226,29 @@ public class TdbUtil {
    * @return a collection of ArchivalUnit objects
    */
   public static Collection<ArchivalUnit> getPreservedAus() {
+    return getPreservedAus(getConfiguredAus());
+  }
+
+  /**
+   * Get ArchivalUnit records for each of the candidate AUs which are preserved
+   * in this LOCKSS box. This relies on the AuHealthMetric class to provide
+   * an interpretation of the ArchivalUnit's status. This method allows control
+   * over the list of AUs which are considered, providing better performance.
+   *
+   * @return a collection of ArchivalUnit objects
+   */
+  public static Collection<ArchivalUnit> getPreservedAus(
+      Collection<ArchivalUnit> candidateAus) {
     List<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     double inclusionThreshold = AuHealthMetric.getInclusionThreshold();
-    for (ArchivalUnit au : getConfiguredAus()) {
+    for (ArchivalUnit au : candidateAus) {
+      //long s = System.currentTimeMillis();
       try {
         if (AuHealthMetric.getHealth(au) >= inclusionThreshold) 
           aus.add(au);
+        /*logger.debug(String.format("Preserved AU %s checked in %sms",
+            au.getName(), (System.currentTimeMillis()-s)
+        ));*/
       } catch (HealthUnavailableException e) {
         // Do not add AUs whose health is unknown
         logger.warning("ArchivalUnit omitted from list of preserved AUs.", e);
@@ -240,7 +256,6 @@ public class TdbUtil {
     }
     return aus;
   }
-
 
   /**
    * Get records for all the TdbAus configured for collection in this box.
@@ -253,10 +268,10 @@ public class TdbUtil {
   }
 
   /**
-   * Get records for all the TdbAus actually preserved in this box. An AU 
-   * should appear in this list iff it is configured for collection, has 
+   * Get records for all the TdbAus actually preserved in this box. An AU
+   * should appear in this list iff it is configured for collection, has
    * been collected, and has a health above the threshold.
-   * 
+   *
    * @return a list of TdbAu objects
    */
   public static List<TdbAu> getPreservedTdbAus() {

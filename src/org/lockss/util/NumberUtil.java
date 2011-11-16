@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.10 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.11 2011-11-16 18:37:56 easyonthemayo Exp $
  */
 
 /*
@@ -73,7 +73,58 @@ public class NumberUtil {
 
   /** Cannot create an instance of this utility class */
   private NumberUtil() {}
-  
+
+  /**
+   * Generate a series of numbers incrementing or decrementing by the delta,
+   * from the start number to the end number inclusive. The delta should always
+   * be positive; if a decreasing sequence is required, reverse the start and
+   * end numbers. If the supplied delta is negative, it will be negated.
+   * <p>
+   * If the start and end numbers are equal, an array containing the single
+   * value is returned A <code>NumberFormatException</code> is thrown if the
+   * parameters are inconsistent, that is, the difference between start and end
+   * is not divisible by the delta,
+   *
+   * @param start start number
+   * @param end end number, which may be less than the start number
+   * @param delta the magnitude of the increment or decrement, expressed as a positive integer
+   * @return a sequence of numbers, incrementing or decrementing by delta
+   * @throws IllegalArgumentException if the parameters are inconsistent
+   */
+  public static int[] constructSequence(int start, int end, int delta)
+      throws NumberFormatException {
+    // If the numbers are equal, the sequence will be the single number
+    if (start==end) return new int[]{start};
+    // Is the sequence descending
+    boolean descending = start>end;
+    // Ensure the delta is positive
+    delta = Math.abs(delta);
+    // Check the delta divides into the gap
+    if (Math.abs(end-start) % delta > 0) {
+      throw new IllegalArgumentException(
+          "The difference between start and end must be divisible by delta.");
+    }
+    // Number of entries
+    int n = 1 + Math.abs(end-start)/delta;
+    int[] numbers = new int[n];
+    for (int i=0; i<n; i++) {
+      int d = i*delta;
+      numbers[i] = descending ? start-d : start+d;
+    }
+    return numbers;
+  }
+
+  /**
+   * Generate a series of numbers incrementing or decrementing by 1,
+   * @param start the start number
+   * @param end the end number, which may be less than the start number
+   * @return a range of numbers, incrementing or decrementing by 1
+   */
+  public static int[] constructSequence(int start, int end) {
+    // No exception should be thrown for a delta of 1!
+    return constructSequence(start, end, 1);
+  }
+
   /**
    * Get the range start. Whitespace is trimmed.
    * @param  range a start/stop range separated by a dash, optionally with whitesapce
@@ -256,6 +307,37 @@ public class NumberUtil {
     } catch (NumberFormatException ex) {
       return false;
     }
+  }
+
+  /**
+   * Determines whether the input string contains any digits and can therefore
+   * can be considered to include at least one number. Note that this is
+   * different to both {@link isInteger} and {@link isNumber}. A return value
+   * of <tt>true</tt> does not indicate that the string can be parsed as a
+   * number (though that may be true), but that it contains numbers. The method
+   * works by looking at each character in turn, in the anticipation that it
+   * will be more efficient than pattern matching, at least for short strings.
+   * @param s the input String
+   * @return <tt>true</tt> if the input string contains any digits
+   */
+  public static boolean containsDigit(String s) {
+    for (char c : s.toCharArray()) {
+      if (Character.isDigit(c)) return true;
+    }
+    return false;
+  }
+
+  /**
+   * Determines whether the input string is a mix of digits and non-digits.
+   * This is established by checking that it cannot be parsed as an integer but
+   * does contain digits. It does not check whether the string has tokens that
+   * can be parsed as Roman numbers, so a string like "vol-XI" is not considered
+   * to have mixed formats.
+   * @param s the input string
+   * @return <tt>true</tt> if the input string contains both digits and non-digits
+   */
+  public static boolean isMixedFormat(String s) {
+    return !isInteger(s) && containsDigit(s);
   }
 
   /**

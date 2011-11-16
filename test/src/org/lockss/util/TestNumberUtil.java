@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.7 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.8 2011-11-16 18:37:56 easyonthemayo Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import org.lockss.test.*;
 
+import java.util.Arrays;
+
 /**
  * This is the test class for org.lockss.util.NumberUtil
  */
@@ -46,6 +48,68 @@ public class TestNumberUtil extends LockssTestCase {
   public TestNumberUtil(String msg) {
     super(msg);
   }
+
+  /**
+   * Test constructSequence() with delta 1.
+   */
+  public final void testConstructSequenceIntInt() {
+    // Increasing sequences
+    assertTrue(Arrays.equals(new int[]{0}, NumberUtil.constructSequence(0,0)));
+    assertTrue(Arrays.equals(new int[]{0,1,2}, NumberUtil.constructSequence(0,2)));
+    assertTrue(Arrays.equals(new int[]{-2,-1,0}, NumberUtil.constructSequence(-2,0)));
+
+    // Decreasing sequences
+    assertTrue(Arrays.equals(new int[]{2,1,0}, NumberUtil.constructSequence(2,0)));
+    assertTrue(Arrays.equals(new int[]{0,-1,-2}, NumberUtil.constructSequence(0,-2)));
+
+    // No exception should occur with a delta of 1
+    try {
+      NumberUtil.constructSequence(0,0);
+      NumberUtil.constructSequence(0,1);
+      NumberUtil.constructSequence(0,2);
+      NumberUtil.constructSequence(0,-1);
+      NumberUtil.constructSequence(-1,0);
+      NumberUtil.constructSequence(-10,10);
+    } catch (IllegalArgumentException e) {
+      fail("Should not throw IllegalArgumentException with unit delta!");
+    }
+  }
+
+  /**
+   * Test constructSequence() with specified delta.
+   */
+  public final void testConstructSequenceIntIntInt() {
+    // Equal start and end with any delta should produce one number.
+    for (int i=-5; i<5; i++) {
+      int[] exp = new int[]{i};
+      assertTrue(Arrays.equals(exp, NumberUtil.constructSequence(i,i,0)));
+      assertTrue(Arrays.equals(exp, NumberUtil.constructSequence(i,i,5)));
+      assertTrue(Arrays.equals(exp, NumberUtil.constructSequence(i,i,-5)));
+      assertTrue(Arrays.equals(exp, NumberUtil.constructSequence(i,i,999)));
+    }
+    // Increasing sequences
+    assertTrue(Arrays.equals(new int[]{0,2}, NumberUtil.constructSequence(0,2,2)));
+    assertTrue(Arrays.equals(new int[]{0,2,4}, NumberUtil.constructSequence(0,4,2)));
+    assertTrue(Arrays.equals(new int[]{-3,0,3}, NumberUtil.constructSequence(-3,3,3)));
+    // Inverted delta should get corrected
+    assertTrue(Arrays.equals(new int[]{-3,-1,1,3}, NumberUtil.constructSequence(-3,3,-2)));
+
+    // Decreasing sequences
+    assertTrue(Arrays.equals(new int[]{2,0}, NumberUtil.constructSequence(2,0,2)));
+    assertTrue(Arrays.equals(new int[]{4,2,0}, NumberUtil.constructSequence(4,0,2)));
+    assertTrue(Arrays.equals(new int[]{3,0,-3}, NumberUtil.constructSequence(3,-3,3)));
+    // Inverted delta should get corrected
+    assertTrue(Arrays.equals(new int[]{3,1,-1,-3}, NumberUtil.constructSequence(3,-3,-2)));
+
+    // Invalid delta should produce exception
+    try {
+      NumberUtil.constructSequence(0,2,3);
+      fail("Should have thrown IllegalArgumentException due to invalid delta.");
+    } catch (IllegalArgumentException e) {
+      // Expected
+    }
+  }
+
 
   /**
    * Test whether strings parse as integers.

@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.23 2011-11-08 21:49:35 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.24 2011-11-16 18:37:56 easyonthemayo Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class OpenUrlResolver {
   /**
    * Create a resolver for the specified metadata manager.
    * 
-   * @param metadataMgr the LOCKSS daemon
+   * @param daemon the LOCKSS daemon
    */
   public OpenUrlResolver(LockssDaemon daemon) {
     if (daemon == null) {
@@ -1211,7 +1211,7 @@ public class OpenUrlResolver {
   /**
    * Get the URL for the specified key from the plugin.
    * @param plugin the plugin
-   * @param pluginKey the plugin key
+   * @param pluginKeys the plugin keys
    * @param paramMap the param map
    * @return the URL for the specified key
    */
