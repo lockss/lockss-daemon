@@ -56,7 +56,7 @@ while true ; do
 done
 
 # "." here is the test<n> dir
-TDB_DIR=../../tdbxml/clockss
+TDB_DIR=../../tdbxml/clockssingest
 if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
   TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
 fi

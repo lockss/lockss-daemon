@@ -60,7 +60,7 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-TDB_DIR=../tdbxml/clockss
+TDB_DIR=../tdbxml/clockssingest
 if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
   TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
 fi
