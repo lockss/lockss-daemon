@@ -5,11 +5,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
     <string>1.48.0</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Pion</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
