@@ -889,6 +889,14 @@ public class TestTdbAuOrderScorer extends TestCase {
     assertTrue(  TdbAuOrderScorer.areVolumesConsecutive("Das 02 volume 2000", "Das 02 volume 2001") );
     assertTrue(  TdbAuOrderScorer.areVolumesConsecutive("Volume s1-1", "Volume s1-2") );
     assertTrue(  TdbAuOrderScorer.areVolumesConsecutive("Volume s100-9", "Volume s100-10") );
+
+    // Consecutive string volumes with Roman components; the tokens must occur
+    // between symbols or endpoints to be seen as individual tokens.
+    // Example from "The Library" (OU Press)
+    assertTrue(  TdbAuOrderScorer.areVolumesConsecutive("s6-I", "s6-II") );
+    // Consecutive volumes with a final token that looks like a Roman numeral
+    // Example from "IEICE Transactions on Electronics"
+    assertTrue(  TdbAuOrderScorer.areVolumesConsecutive("E89-C", "E90-C") );
     
     assertFalse( TdbAuOrderScorer.areVolumesConsecutive("2001", "2001") );
     assertFalse( TdbAuOrderScorer.areVolumesConsecutive("Volume s100-1", "Volume s100-11") );
@@ -1442,19 +1450,38 @@ public class TestTdbAuOrderScorer extends TestCase {
 
   /**
    * Returns true if one string contains only digits while the other is not
-   * parseable as a number.
+   * parsable as a number; also if one is parsable as a Roman while the other
+   * is mixed format.
    */
   public final void testChangeOfFormats() {
+    // Non-number and digits only
     assertTrue(  TdbAuOrderScorer.changeOfFormats("string", "1") );
     assertTrue(  TdbAuOrderScorer.changeOfFormats("1", "string") );
+    assertTrue(  TdbAuOrderScorer.changeOfFormats("string1", "1") );
+
+    // Same format or string
     assertFalse( TdbAuOrderScorer.changeOfFormats("1", "1") );
+    assertFalse( TdbAuOrderScorer.changeOfFormats("1", "2") );
     assertFalse( TdbAuOrderScorer.changeOfFormats("string", "string") );
-    // No change of formats when either string can be parsed as a Roman number
+    assertFalse( TdbAuOrderScorer.changeOfFormats("string", "another string") );
+
+    // Roman number and mixed format
+    assertTrue(  TdbAuOrderScorer.changeOfFormats("s6", "I") );
+    assertTrue(  TdbAuOrderScorer.changeOfFormats("s6", "i") );
+    assertTrue(  TdbAuOrderScorer.changeOfFormats("s6", "xi") );
+    assertTrue(  TdbAuOrderScorer.changeOfFormats("s6-xi", "xi") );
+
+    // Roman number and unmixed format (including 2 Roman numbers)
+    assertFalse( TdbAuOrderScorer.changeOfFormats("6", "I") );
+    assertFalse( TdbAuOrderScorer.changeOfFormats("string", "I") );
+    assertFalse( TdbAuOrderScorer.changeOfFormats("IX", "IV") );
     assertFalse( TdbAuOrderScorer.changeOfFormats("1", "II") );
     assertFalse( TdbAuOrderScorer.changeOfFormats("II", "3") );
+
     // The consistent list should not display any format changes
     assertFalse( containsChangeOfFormats(fullyConsistentAus, VOL) );
     assertFalse( containsChangeOfFormats(fullyConsistentAus, YR) );
+
     // The following are currently false but we might want to do some proper
     // regular expression work to find and rate string commonalities, or
     // use something like Levenstein distance.

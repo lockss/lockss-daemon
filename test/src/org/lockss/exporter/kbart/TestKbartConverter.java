@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.12.2.1 2011-11-04 17:37:39 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.12.2.2 2011-11-16 18:38:14 easyonthemayo Exp $
  */
 
 /*
@@ -261,11 +261,11 @@ public class TestKbartConverter extends LockssTestCase {
     assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auInt, auUnnormRom)));
     assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auInt)));
     assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom, auInt)));
-    // Strings with Roman numeral strings are not considered to be mixed
-    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auRom)));
-    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auUnnormRom)));
-    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auStr)));
-    assertFalse(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom, auStr)));
+    // Mixed strings with Roman numeral strings are considered to be mixed
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auRom)));
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auStr, auUnnormRom)));
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auRom, auStr)));
+    assertTrue(KbartConverter.containsMixedFormats(Arrays.asList(auUnnormRom, auStr)));
   }
 
   /**

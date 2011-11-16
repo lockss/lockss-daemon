@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.20.4.3 2011-11-08 21:49:32 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.20.4.4 2011-11-16 18:38:14 easyonthemayo Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class OpenUrlResolver {
   /**
    * Create a resolver for the specified metadata manager.
    * 
-   * @param metadataMgr the LOCKSS daemon
+   * @param daemon the LOCKSS daemon
    */
   public OpenUrlResolver(LockssDaemon daemon) {
     if (daemon == null) {
@@ -288,7 +288,7 @@ public class OpenUrlResolver {
     if (isbn != null) {
       // process a book or monographic series based on ISBN
       String url = resolveFromIsbn(
-          isbn, date, volume, edition, spage, author, atitle);
+    	  isbn, date, volume, edition, spage, author, atitle);
       if (url != null) {
         log.debug3("Located url " + url + " for book ISBN " + isbn); 
         return url;
@@ -362,7 +362,7 @@ public class OpenUrlResolver {
           if (id != null) {
             // try resolving from ISBN
             String url = resolveFromIsbn(
-                id, date, volume, edition, spage, author, atitle);
+            	id, date, volume, edition, spage, author, atitle);
             if (url != null) {
               log.debug3("Located url " + url + " for book ISBN " + id); 
               return url;
@@ -771,7 +771,7 @@ public class OpenUrlResolver {
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
       } else {
-        url = resolveJournalFromTdbTitle(title, date, volume, issue, spage);
+    	url = resolveJournalFromTdbTitle(title, date, volume, issue, spage);
       }
     }
     return url;
@@ -837,7 +837,7 @@ public class OpenUrlResolver {
 
         if (issue != null) {
           if ((date != null) || (volume != null)) {
-                query.append(" and ");
+        		query.append(" and ");
           }
           query.append(MetadataManager.ISSUE_FIELD);
           query.append(" = ?");
@@ -897,8 +897,8 @@ public class OpenUrlResolver {
    * @throws SQLException
    */
   private String resolveFromQuery(
-      Connection conn, String query, List<String> args) throws SQLException {
-    
+	  Connection conn, String query, List<String> args) throws SQLException {
+	
     log.debug3("query: " + query);
     PreparedStatement stmt = conn.prepareStatement(query.toString());
     for (int i = 0; i < args.size(); i++) {
@@ -947,7 +947,7 @@ public class OpenUrlResolver {
 
       // if neither year or volume specified, pick any TdbAu
       if ((volume == null) && (year == null)) {
-        break;
+    	break;
       }
       
       // if volume specified, see if this TdbAu matches
@@ -971,17 +971,17 @@ public class OpenUrlResolver {
     String url = null;  // should be the title URL
     if (tdbau != null) {
       if (found) {
-        if (year == null) {
-          year = tdbau.getStartYear();
-        }
-        if (volume == null) {
-          volume = tdbau.getStartVolume();
-        }
-        if (issue == null) {
-          issue  = tdbau.getStartIssue();
-        }
+    	if (year == null) {
+    	  year = tdbau.getStartYear();
+    	}
+    	if (volume == null) {
+    	  volume = tdbau.getStartVolume();
+    	}
+    	if (issue == null) {
+    	  issue  = tdbau.getStartIssue();
+    	}
       }
-      url = getJournalUrl(tdbau, year, volume, issue, spage);
+  	  url = getJournalUrl(tdbau, year, volume, issue, spage);
     }
     return url;
   }
@@ -993,7 +993,7 @@ public class OpenUrlResolver {
    * @return the parameter map
    */
   private static TypedEntryMap getParamMap(Plugin plugin, TdbAu tdbau) {
-    TypedEntryMap paramMap = new TypedEntryMap();
+	TypedEntryMap paramMap = new TypedEntryMap();
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       String sval = tdbau.getParam(key);
@@ -1012,7 +1012,7 @@ public class OpenUrlResolver {
         }
       }
     }
-    return paramMap;
+	return paramMap;
   }
   
   /**
@@ -1054,10 +1054,10 @@ public class OpenUrlResolver {
    */
 /* for later use (pjg)  
   private static String getBooklUrl(
-      ArchivalUnit au, String volumeName, String year, String edition) {
-    TypedEntryMap paramMap = getParamMap(au);
-    Plugin plugin = au.getPlugin();
-    String url = getBookUrl(plugin, paramMap, volumeName, year, edition);
+	  ArchivalUnit au, String volumeName, String year, String edition) {
+	TypedEntryMap paramMap = getParamMap(au);
+	Plugin plugin = au.getPlugin();
+	String url = getBookUrl(plugin, paramMap, volumeName, year, edition);
     return url;
   }
 */
@@ -1072,7 +1072,7 @@ public class OpenUrlResolver {
    * @return the starting URL
    */
   private String getBookUrl(
-      TdbAu tdbau, String year, String volumeName, String edition) {
+	  TdbAu tdbau, String year, String volumeName, String edition) {
     PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
@@ -1082,12 +1082,12 @@ public class OpenUrlResolver {
       log.debug3(  "getting issue url for plugin: " 
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
-      TypedEntryMap paramMap = getParamMap(plugin, tdbau);
+  	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
       
-      // add volume with type and spelling of existing element
-      paramMap.setMapElement("volume", volumeName);
-      paramMap.setMapElement("volume_str",volumeName);
-      paramMap.setMapElement("volume_name", volumeName);
+  	  // add volume with type and spelling of existing element
+  	  paramMap.setMapElement("volume", volumeName);
+  	  paramMap.setMapElement("volume_str",volumeName);
+  	  paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
       if (!StringUtil.isNullString(year)) {
         try {
@@ -1098,9 +1098,9 @@ public class OpenUrlResolver {
                    + "' as an int -- not setting au_short_year");
         }
       }
-      paramMap.setMapElement("edition", edition);
-      // auFeatureKey selects feature from a map of values
-      // for the same feature (e.g. au_feature_urls/au_year)
+  	  paramMap.setMapElement("edition", edition);
+  	  // auFeatureKey selects feature from a map of values
+  	  // for the same feature (e.g. au_feature_urls/au_year)
       paramMap.setMapElement("auFeatureKey", tdbau.getAttr(AU_FEATURE_KEY));
 
       url = getBookUrl(plugin, paramMap);
@@ -1139,10 +1139,10 @@ public class OpenUrlResolver {
    */
 /*  for later use (pjg)
   private static String getJournalUrl(
-      ArchivalUnit au, String year, String volumeName, String issue) {
-    TypedEntryMap paramMap = getParamMap(au);
-    Plugin plugin = au.getPlugin();
-    String url = getJournalUrl(plugin, paramMap, year, volumeName, issue);
+	  ArchivalUnit au, String year, String volumeName, String issue) {
+	TypedEntryMap paramMap = getParamMap(au);
+	Plugin plugin = au.getPlugin();
+	String url = getJournalUrl(plugin, paramMap, year, volumeName, issue);
     return url;
   }
 */
@@ -1156,7 +1156,7 @@ public class OpenUrlResolver {
    * @return the starting URL
    */
   private String getJournalUrl(
-      TdbAu tdbau, String year, String volumeName, String issue, String spage) {
+	  TdbAu tdbau, String year, String volumeName, String issue, String spage) {
     PluginManager pluginMgr = daemon.getPluginManager();
     String pluginKey = PluginManager.pluginKeyFromId(tdbau.getPluginId());
     Plugin plugin = pluginMgr.getPlugin(pluginKey);
@@ -1167,8 +1167,8 @@ public class OpenUrlResolver {
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
       // add volume with type and spelling of existing element
-      TypedEntryMap paramMap = getParamMap(plugin, tdbau);
-      paramMap.setMapElement("volume", volumeName);
+  	  TypedEntryMap paramMap = getParamMap(plugin, tdbau);
+  	  paramMap.setMapElement("volume", volumeName);
       paramMap.setMapElement("volume_str", volumeName);
       paramMap.setMapElement("volume_name", volumeName);
       paramMap.setMapElement("year", year);
@@ -1211,12 +1211,12 @@ public class OpenUrlResolver {
   /**
    * Get the URL for the specified key from the plugin.
    * @param plugin the plugin
-   * @param pluginKey the plugin key
+   * @param pluginKeys the plugin keys
    * @param paramMap the param map
    * @return the URL for the specified key
    */
   private String
-    getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
+  	getPluginUrl(Plugin plugin, String[] pluginKeys, TypedEntryMap paramMap) {
     ExternalizableMap map;
 
     // get printf pattern for pluginKey property
@@ -1325,7 +1325,7 @@ public class OpenUrlResolver {
    * @return the book URL
    */
   private String resolveBookFromTdbTitle(
-      TdbTitle title, String date, String volume, String edition) {
+	  TdbTitle title, String date, String volume, String edition) {
     TdbAu tdbau = null;
     boolean found = false;
 
@@ -1342,7 +1342,7 @@ public class OpenUrlResolver {
       
       // if neither year, volume, or edition specified, pick any TdbAu
       if ((volume == null) && (year == null) && (edition == null)) {
-        break;
+    	break;
       }
       
       // if volume specified, see if this TdbAu matches
@@ -1376,7 +1376,7 @@ public class OpenUrlResolver {
     }
     String url = null;  // should be the title URL
     if (tdbau != null) {
-      url = getBookUrl(tdbau, year, volume, edition);
+  	  url = getBookUrl(tdbau, year, volume, edition);
     }
     return url;
   }
@@ -1461,10 +1461,10 @@ public class OpenUrlResolver {
         new String[] {isbn}, query, args);
 
       boolean hasBookSpec = 
-        (date != null) || (volume != null) || (edition != null); 
+    	(date != null) || (volume != null) || (edition != null); 
       
       boolean hasArticleSpec = 
-        (spage != null) || (author != null) || (atitle != null);
+    	(spage != null) || (author != null) || (atitle != null);
       
       if (hasBookSpec) {
         // can specify an issue by a combination of date, volume and issue;
@@ -1489,7 +1489,7 @@ public class OpenUrlResolver {
 
         if (edition != null) {
           if ((date != null) || (volume != null)) {
-            query.append(" and ");
+        	query.append(" and ");
           }
           query.append(MetadataManager.EDITION_FIELD);
           query.append(" = ?");
@@ -1592,11 +1592,11 @@ public class OpenUrlResolver {
    */
   private void addAuthorQuery(
     String author, StringBuilder query, List<String>args) {
-    String authorUC = author.toUpperCase();
-    // match single author
+	String authorUC = author.toUpperCase();
+	// match single author
     // (last, first name separated by ',')
     query.append("upper(");
-    query.append(MetadataManager.AUTHOR_FIELD);
+	query.append(MetadataManager.AUTHOR_FIELD);
     query.append(") = ?");
     args.add(authorUC);
 

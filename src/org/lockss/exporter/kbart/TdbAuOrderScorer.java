@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuOrderScorer.java,v 1.3 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: TdbAuOrderScorer.java,v 1.3.2.1 2011-11-16 18:38:14 easyonthemayo Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public final class TdbAuOrderScorer {
 
   /**
    * A pattern to find the last numerical token in a volume string. If the
-   * string has no digits, the pattern does not match and the string can bex
+   * string has no digits, the pattern does not match and the string can be
    * processed alphabetically; otherwise three matches are produced - the
    * string before the matched token, the final numerical token, and the
    * string after the token. The two surrounding strings may be empty.
@@ -152,9 +152,24 @@ public final class TdbAuOrderScorer {
     RegexpUtil.uncheckedCompile("^(.*?)(\\d+)([^\\d]*)$");
 
   /**
+   * A pattern to find the last Roman numerical token in a volume string.
+   * This is defined as a collection of Roman numeral characters preceded by a
+   * word boundary and followed by the end of the string. Two matches are
+   * produced - the string before the matched token, and the Roman numerical
+   * token, at the end of the string. Note that this is slightly more
+   * restrictive than the pattern for matching numerical tokens; additionally
+   * we don't know if the string represents a numeral until we try to parse it.
+   */
+  private static final Pattern finalRomanNumericalTokenPattern =
+      RegexpUtil.uncheckedCompile("^(.*?)([MmDdCcLlXxVvIi]+)$");
+
+  /**
    * An enum to allow the primary sort field to be specified when passing in a
    * list of ranges. Also simplifies access to the appropriate methods when
    * deciding the relationship between a pair of values in the given field.
+   * <p>
+   * Note that some of the method implementations can throw
+   * NumberFormatException.
    */
   static enum SORT_FIELD {
 
@@ -299,8 +314,6 @@ public final class TdbAuOrderScorer {
     public abstract boolean areAppropriatelySequenced(TdbAu first, TdbAu second);
     /** Whether the TdbAus have field values which are appropriately consecutive. */
     public abstract boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second);
-    // TODO Add throws declarations to these methods?
-    // NumberFormatException, NullPointerException
   };
 
 
@@ -349,12 +362,12 @@ public final class TdbAuOrderScorer {
    * different-format endpoints, or a single identifier. This is why the
    * condition is imposed that the strings either side of the hyphen must be
    * both numeric, or both non-numeric and of roughly the same format.
-   * That is, either they are both parseable as integers, or they both involve
+   * That is, either they are both parsable as integers, or they both involve
    * non-digit tokens that cannot be parsed as integers.
    * <p>
    * To allow for identifers that themselves incorporate a hyphen, the input
    * string is only split around the centremost hyphen. If there is an even
-   * number of hyphens, the input string is assumed not to represent a parseable
+   * number of hyphens, the input string is assumed not to represent a parsable
    * range.
    * <p>
    * It might also be useful to enforce further restrictions upon non-numerical
@@ -413,7 +426,7 @@ public final class TdbAuOrderScorer {
    * Whether there appears to be a coverage gap between year ranges. That is,
    * whether there is a positive gap greater than one between the end of one
    * range and the start of another. If the supplied strings
-   * are not parseable as ranges or single years, it will be impossible to
+   * are not parsable as ranges or single years, it will be impossible to
    * establish whether there is a gap and an exception is thrown.
    *
    * @param firstRange the first range or year
@@ -488,11 +501,21 @@ public final class TdbAuOrderScorer {
    * for example, "s1-12" and "s2-1" might reasonably be construed as
    * consecutive, especially if they occur in the same or adjacent years.
    * <p>
-   * We assume Arabic numbered suffixes only. Philip reports that Latin texts
-   * that include Roman numbers in line tend to either parenthesize the number
-   * or draw a bar over it. However if the match pattern is adapted to
-   * recognise Roman numeral tokens, it should work the same because we use
-   * {@link NumberUtil.areConsecutive(String, String)}.
+   * It is also possible to encounter a volume string like "s6-IV". It is
+   * harder to establish consecutivity here, as it is necessary to recognise a
+   * token that looks like a Roman numeral, and then to see if it parses.
+   * To avoid having to do this for every possible token embedded in the string,
+   * the definition of "final Roman numeric token" is more restrictive than that
+   * for "final digital numerical token", in that it must occur after a non-word
+   * character, and be at the end of the string. Given this, we first check if
+   * there appears to be a Roman token at the end of the string (which would
+   * preclude any numerical tokens following), and if there is none we
+   * consider the final numerical token of the string. If the string does end
+   * with what appears to be a Roman numeral, but that does not change between
+   * the two strings, we fall through to numerical token comparison instead.
+   * <p>
+   * Note that {@link NumberUtil.areConsecutive(String, String)} will accept
+   * Roman numerals.
    *
    * @param first a String representing the first volume
    * @param second a String representing the subsequent volume
@@ -505,8 +528,29 @@ public final class TdbAuOrderScorer {
     } catch (NumberFormatException e) {
       // fall through to the string-based comparison
     }
+
     Perl5Matcher matcher = RegexpUtil.getMatcher();
     MatchResult mr1, mr2;
+
+    // See if there is a Roman token match at the end of the string, which can
+    // be parsed as a Roman number.
+    if (matcher.contains(first, finalRomanNumericalTokenPattern) &&
+        NumberUtil.isRomanNumber(matcher.getMatch().group(2)) ) {
+      mr1 = matcher.getMatch();
+      // Does the second vol string match
+      if (matcher.contains(second, finalRomanNumericalTokenPattern) &&
+        NumberUtil.isRomanNumber(matcher.getMatch().group(2)) ) {
+        mr2 = matcher.getMatch();
+        // If the start tokens match, test the consecutivity of the number
+        // tokens; return true if they are consecutive, or fall through to
+        // comparison of numerical tokens.
+        if (mr1.group(1).equals(mr2.group(1)) &&
+            NumberUtil.areConsecutive(mr1.group(2), mr2.group(2))) return true;
+      }
+    }
+
+    // If there is no parsable Roman number at the end of the string, try
+    // finding the last numerical token.
     // Does the first vol string match
     if (matcher.contains(first, finalNumericalTokenPattern)) {
       mr1 = matcher.getMatch();
@@ -857,8 +901,15 @@ public final class TdbAuOrderScorer {
       if (!fieldToCheck.hasValue(lastAu) || !fieldToCheck.hasValue(thisAu))
         return 1f;
       // Compare the values to see if there is a break.
-      if (!fieldToCheck.areAppropriatelyConsecutive(lastAu, thisAu)) {
-        total++;
+      try {
+        if (!fieldToCheck.areAppropriatelyConsecutive(lastAu, thisAu)) {
+          total++;
+        }
+      } catch (NumberFormatException e) {
+        // There's something funny about the field values, so issue a warning
+        // and carry on without counting a break.
+        log.warning("Could not check if "+fieldToCheck+
+            " values are appropriately consecutive: "+e.getMessage());
       }
     }
     return (float)total/(float)numPairs;
@@ -885,19 +936,26 @@ public final class TdbAuOrderScorer {
       // If there is not a full set of field values, return a high value
       if (!yearField.hasValue(lastAu) || !yearField.hasValue(thisAu))
         return 1f;
-      // Compare the values to see if there is a break.
-      boolean isYearBreak = !yearField.areAppropriatelyConsecutive(lastAu, thisAu);
-      // Don't count a year break when there is a parallel break in the volume
-      // field. This will only apply when counting a full unsplit sequence, and
-      // should not occur when counting breaks in coverage ranges.
-      if (isYearBreak) {
-        // First check that volume fields are available for reference and not null.
-        SORT_FIELD volField = SORT_FIELD.VOLUME;
-        boolean isVolAvailable = volField.hasValue(lastAu) && volField.hasValue(thisAu);
-        // Count a break if the volume info is not available, or if there is
-        // no parallel break in volume
-        if (!isVolAvailable || volField.areAppropriatelyConsecutive(lastAu, thisAu))
-          total++;
+      try {
+        // Compare the values to see if there is a break.
+        boolean isYearBreak = !yearField.areAppropriatelyConsecutive(lastAu, thisAu);
+        // Don't count a year break when there is a parallel break in the volume
+        // field. This will only apply when counting a full unsplit sequence, and
+        // should not occur when counting breaks in coverage ranges.
+        if (isYearBreak) {
+          // First check that volume fields are available for reference and not null.
+          SORT_FIELD volField = SORT_FIELD.VOLUME;
+          boolean isVolAvailable = volField.hasValue(lastAu) && volField.hasValue(thisAu);
+          // Count a break if the volume info is not available, or if there is
+          // no parallel break in volume
+          if (!isVolAvailable || volField.areAppropriatelyConsecutive(lastAu, thisAu))
+            total++;
+        }
+      } catch (NumberFormatException e) {
+        // There's something funny about the year field values, so issue a
+        // warning and carry on without counting a break.
+        log.warning("Could not check if year values constitute a break." +
+            e.getMessage());
       }
     }
     return (float)total/(float)numPairs;
@@ -928,8 +986,15 @@ public final class TdbAuOrderScorer {
       // If there is not a full set of field values, return a high value
       if (lastVal==null || thisVal==null) return 1f;
       // Record a negative break
-      if (fieldToCheck.areDecreasing(lastVal, thisVal)) {
-        total++;
+      try {
+        if (fieldToCheck.areDecreasing(lastVal, thisVal)) {
+          total++;
+        }
+      } catch (NumberFormatException e) {
+        // There's something funny about the field values, so issue a
+        // warning and carry on without counting a negative break.
+        log.warning("Could not check if " + fieldToCheck +
+            " values constitute a negative break." + e.getMessage());
       }
     }
     return (float)total/(float)numPairs;
@@ -1009,16 +1074,20 @@ public final class TdbAuOrderScorer {
    * for the very simple distinction between digit-numerical and
    * non-numerical strings. A numerical string is one that represents an integer
    * with either digits or Roman numerals. Note that digit-numerical and
-   * non-numerical are not inverse concepts.
+   * non-numerical are not complementary concepts.
    * <p>
    * A change between Roman numerals and Arabic numbers is not considered a
-   * change of formats. Strings that contain Roman numerals can be interpreted
-   * as either integers or strings, so if either <code>lastVal</code> or
-   * <code>thisVal</code> can be parsed as a Roman numeral, there is no change
-   * of formats regardless of the other value. It is not possible to say
-   * strictly whether a particular string that meets
-   * {@link NumberUtil.isRomanNumeral()} is intended as an integer or a string,
-   * so we allow it to meet either criterion.
+   * change of formats. Strings that consist of only Roman numerals can be
+   * interpreted as either integers or strings (depending on the normalisation
+   * applied to Roman numerals). It is therefore not possible to say strictly
+   * whether a particular string that meets {@link NumberUtil.isRomanNumeral()}
+   * is intended as an integer or a string, so we allow it to meet either
+   * criterion. If either <code>lastVal</code> or <code>thisVal</code> can be
+   * parsed as a Roman numeral, and the other mixes digits and non-digits, it is
+   * considered a change of formats; however if either value can be parsed as a
+   * Roman numeral while the other consists only of digits (is parsable as an
+   * integer) or of non-digits (does not contain digits), we cannot decide if
+   * there is a change of formats and return false.
    * <p>
    * In future it might be desirable to use a more complex measure
    * of similarity or difference, for example Levenstein distance or a regexp
@@ -1027,14 +1096,27 @@ public final class TdbAuOrderScorer {
    *
    * @param lastVal the last value
    * @param thisVal the current value
-   * @return true if one string contains only digits while the other is not parseable as a number
+   * @return true if one string contains only digits while the other is not parsable as a number
    */
   static final boolean changeOfFormats(String lastVal, String thisVal) {
-    // If either is a Roman number, we can't be sure there is a change
-    if (NumberUtil.isRomanNumber(lastVal) || NumberUtil.isRomanNumber(thisVal))
-      return false;
-    // TODO It might be better to only allow normalised Roman numbers
-    // using NumberUtil.parseRomanNumber(s, true);
+
+    boolean rn1 = NumberUtil.isRomanNumber(lastVal);
+    boolean rn2 = NumberUtil.isRomanNumber(thisVal);
+    // TODO It might be better to only allow normalised Roman numbers using NumberUtil.parseRomanNumber(s, true);
+    boolean mf1 = NumberUtil.isMixedFormat(lastVal);
+    boolean mf2 = NumberUtil.isMixedFormat(thisVal);
+
+    // If one is Roman and the other is mixed, consider it a change of formats
+    //if ((rn1 && mf2) || (rn2 && mf1)) return true;
+
+    // If either is a Roman number while the other is not mixed formats,
+    // we can't be sure there is a change
+    //if ((rn1 && !mf2) || (rn2 && !mf1)) return false;
+
+    // If one is parsable as a Roman numeral, the return value depends upon
+    // whether the other is mixed format.
+    if (rn1) return mf2;
+    if (rn2) return mf1;
 
     // Are these strings digit-numerical and/or numerical?
     boolean i1 = NumberUtil.isInteger(lastVal);

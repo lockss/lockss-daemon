@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.19.2.1 2011-10-25 11:22:42 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.19.2.2 2011-11-16 18:38:14 easyonthemayo Exp $
  */
 
 /*
@@ -139,7 +139,8 @@ public class ListHoldings extends LockssServlet {
   static final String SESSION_KEY_OUTPUT_FORMAT = "org.lockss.servlet.ListHoldings.outputFormat";
 
   // Bits of state that must be reset in resetLocals()
-  /** A record of the last manual ordering which was applied to an export; maintained while the servlet is handling a request. */
+  /** A record of the last manual ordering which was applied to an export;
+   * maintained while the servlet is handling a request. */
   private String lastManualOrdering;
   /** Manually specified custom field list. */
   private FieldOrdering customFieldOrdering;
@@ -173,11 +174,11 @@ public class ListHoldings extends LockssServlet {
   
 
   /** 
-   * Handle a request - if there is a format URL param, show the appropriate default format; 
-   * otherwise if it is a form submission show custom format; otherwise show the page.
-   * The main page is shown if the params indicate so or errors occur. Otherwise the relevant
-   * values are set and the code falls through to the end of the method where the export is performed.
-   * 
+   * Handle a request - if there is a format URL param, show the appropriate
+   * default format; otherwise if it is a form submission show custom format;
+   * otherwise show the page. The main page is shown if the params indicate so
+   * or errors occur. Otherwise the relevant values are set and the code falls
+   * through to the end of the method where the export is performed.
    */
   public void lockssHandleRequest() throws IOException {
     errMsg = null;
@@ -202,13 +203,17 @@ public class ListHoldings extends LockssServlet {
     // Set compression from the output format
     //if (outputFormat!=null) this.isCompress = outputFormat.isCompressible();
 
-    // Omit empty columns - use the option supplied from the form, or the default if one of the other outputs was chosen
+    // Omit empty columns - use the option supplied from the form, or the
+    // default if one of the other outputs was chosen
     boolean omitEmptyColumns = Boolean.valueOf( 
-	params.getProperty(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString()) 
+	params.getProperty(KEY_OMIT_EMPTY_COLS,
+            OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString())
     );
-    // Show health ratings - use the option supplied from the form, or the default if one of the other outputs was chosen
+    // Show health ratings - use the option supplied from the form, or the
+    // default if one of the other outputs was chosen
     boolean showHealthRatings = Boolean.valueOf( 
-	params.getProperty(KEY_SHOW_HEALTH, SHOW_HEALTH_RATINGS_BY_DEFAULT.toString()) 
+	params.getProperty(KEY_SHOW_HEALTH,
+            SHOW_HEALTH_RATINGS_BY_DEFAULT.toString())
     );
     // Show appropriate scope of content
     selectedScope = ContentScope.byName(params.getProperty(KEY_TITLE_SCOPE));
@@ -224,11 +229,15 @@ public class ListHoldings extends LockssServlet {
     
     // ---------- Interpret parameters ----------
     // Is this a custom output? The custom action is not null and is not a plain export.
-    boolean isCustom = !StringUtil.isNullString(customAction) && !customAction.equals(ACTION_EXPORT);
+    boolean isCustom = !StringUtil.isNullString(customAction) &&
+        !customAction.equals(ACTION_EXPORT);
     // Are we exporting? OutputFormat specified, and custom ok/cancel if specified
-    this.doExport = outputFormat!=null && (!isCustom || (customAction.equals(ACTION_CUSTOM_OK) || customAction.equals(ACTION_CUSTOM_CANCEL)));
+    this.doExport = outputFormat!=null && (!isCustom ||
+        (customAction.equals(ACTION_CUSTOM_OK) ||
+            customAction.equals(ACTION_CUSTOM_CANCEL)
+        )
+    );
 
-     
     // ---------- Process parameters and show page ----------
     // If custom output, set the field ordering and omit flag
     if (isCustom) {
@@ -244,7 +253,8 @@ public class ListHoldings extends LockssServlet {
 	setCustomFieldOrdering(manualOrdering);
 	if (doExport) lastManualOrdering = manualOrdering;
       }
-      // Cancel the customisation and set the ordering to the previously applied value (from the session)
+      // Cancel the customisation and set the ordering to the previously
+      // applied value (from the session)
       else if (customAction.equals(ACTION_CUSTOM_CANCEL)) {
 	setCustomFieldOrdering(manualOrdering);
 	if (doExport) manualOrdering = lastManualOrdering;
@@ -256,8 +266,10 @@ public class ListHoldings extends LockssServlet {
         //omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
       } 
       
-      // Create an object encapsulating the custom HTML options, and store it in the session.
-      customOpts = new CustomOptions(omitEmptyColumns, showHealthRatings, customFieldOrdering);
+      // Create an object encapsulating the custom HTML options, and store it
+      // in the session.
+      customOpts = new CustomOptions(omitEmptyColumns, showHealthRatings,
+          customFieldOrdering);
       putSessionCustomOpts(customOpts);
     
     } else {
@@ -287,8 +299,8 @@ public class ListHoldings extends LockssServlet {
   }
   
   /**
-   * Attempt to set the custom field ordering using the given ordering string.
-   * If the set fails, the errMsg is set and the doExport variable is set to false;
+   * Attempt to set the custom field ordering using the given ordering string. If
+   * the set fails, the errMsg is set and the doExport variable is set to false;
    * @param ordering
    * @return whether the set succeeded
    */
@@ -377,7 +389,8 @@ public class ListHoldings extends LockssServlet {
       Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope);
       titles = KbartConverter.convertTitles(tdbTitles);
     }
-    // Otherwise we need to look at the lists of individual AUs in order to calculate ranges
+    // Otherwise we need to look at the lists of individual AUs in order to
+    // calculate ranges
     else {
       // Whether the output will include any range fields; if there is no custom 
       // ordering, then the default will be used, which will include range fields
@@ -385,7 +398,8 @@ public class ListHoldings extends LockssServlet {
 	  getSessionCustomOpts().fieldOrdering.getOrdering());
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
-      titles = KbartConverter.convertAus(map, getShowHealthRatings(), rangeFieldsIncluded);
+      titles = KbartConverter.convertAus(map, getShowHealthRatings(),
+          rangeFieldsIncluded);
     }
     return titles;
   }
@@ -419,7 +433,9 @@ public class ListHoldings extends LockssServlet {
     }
 
     // Set content headers based on the output format
-    resp.setContentType( (kexp.isCompress() ? "application/zip" : outputFormat.getMimeType()) + ";charset="+ENCODING);
+    resp.setContentType(
+        (kexp.isCompress() ? "application/zip" : outputFormat.getMimeType()) +
+            ";charset="+ENCODING);
     resp.setCharacterEncoding(ENCODING);
     //resp.setContentLength(  );
 
@@ -427,7 +443,8 @@ public class ListHoldings extends LockssServlet {
     OutputStream out = resp.getOutputStream();
     long s = System.currentTimeMillis();
     kexp.export(out);
-    log.debug("Export took approximately " + (System.currentTimeMillis()-s)/1000 + "s");
+    log.debug(String.format("Export took approximately %ss",
+        (System.currentTimeMillis()-s)/1000));
     out.flush();
     out.close();
 
@@ -577,8 +594,10 @@ public class ListHoldings extends LockssServlet {
 	//String link = String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name());
 	//String label = "Export as "+fmt.getLabel();
 	//subTab.add( new Link(link, label) );
-	boolean selected = outputFormat!=null ? fmt==outputFormat : fmt==OUTPUT_DEFAULT;
-	tab2.add(ServletUtil.radioButton(this, KEY_FORMAT, fmt.name(), fmt.getLabel(), selected));
+	boolean selected = outputFormat!=null ?
+            fmt==outputFormat : fmt==OUTPUT_DEFAULT;
+	tab2.add(ServletUtil.radioButton(this, KEY_FORMAT,
+            fmt.name(), fmt.getLabel(), selected));
 	tab2.add(addFootnote(fmt.getFootnote()));
     }
     addBlankRow(tab);
@@ -658,8 +677,8 @@ public class ListHoldings extends LockssServlet {
   }
 
   /**
-   * Create a form of options for custom HTML output. This includes options to use a 
-   * custom field list or ordering, and to omit empty columns.
+   * Create a form of options for custom HTML output. This includes options to
+   * use a custom field list or ordering, and to omit empty columns.
    * 
    * @return an HTML form 
    */
@@ -671,7 +690,8 @@ public class ListHoldings extends LockssServlet {
     // Add a format parameter
     comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
     // Add a hidden field listing the last manual ordering
-    comp.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, lastManualOrdering));
+    comp.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL,
+        lastManualOrdering));
     
     /*
     form.add("<br/>Choose a field set:<br/>");
@@ -760,9 +780,12 @@ public class ListHoldings extends LockssServlet {
     String servletUrl = srvURL(myServletDescr());
     Form form = ServletUtil.newForm(servletUrl);
     form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
-    form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList(opts.fieldOrdering)));
-    form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(opts.omitEmptyColumns)));
-    form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH, htmlInputTruthValue(opts.showHealthRatings)));
+    form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST,
+        getOrderingAsCustomFieldList(opts.fieldOrdering)));
+    form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
+        htmlInputTruthValue(opts.omitEmptyColumns)));
+    form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH,
+        htmlInputTruthValue(opts.showHealthRatings)));
     form.add(new Input(Input.Hidden, KEY_FORMAT, outputFormat.name()));
     ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
     form.add(new Link(servletUrl, "Return to main title list page"));
@@ -795,7 +818,8 @@ public class ListHoldings extends LockssServlet {
 
   
   /**
-   * Get the string representation of a boolean value, appropriate for use as the value of a form input.
+   * Get the string representation of a boolean value, appropriate for use as
+   * the value of a form input.
    * @param b a boolean value
    * @return a string which will yield the same value when interpreted as the value of a form input
    */
@@ -803,7 +827,9 @@ public class ListHoldings extends LockssServlet {
     return b ? "true" : "false"; 
   }
 
-  /** Add a blank row to a table or a line break to any other composite element. */
+  /**
+   * Add a blank row to a table or a line break to any other composite element.
+   */
   private static void addBlankRow(Composite comp) {
     if (comp instanceof Table) {
       Table tab = (Table)comp;
@@ -835,7 +861,8 @@ public class ListHoldings extends LockssServlet {
 
     tab.newRow();
     tab.newCell("align=\"center\"");
-    tab.add("The permanent KBART output URL for this server is:<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
+    tab.add("The permanent KBART output URL for this server is:<br/>" +
+        "<b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
     addBlankRow(tab);
   }
 
@@ -890,7 +917,8 @@ public class ListHoldings extends LockssServlet {
   }
   
   /**
-   * Get the current output format from the session. If the cookie is not set, it is set to the default format.
+   * Get the current output format from the session. If the cookie is not set,
+   * it is set to the default format.
    * @return the current output format
    */
   /*protected OutputFormat getOutputFormat() {
