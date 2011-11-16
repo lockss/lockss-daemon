@@ -13,7 +13,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.ajsonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -84,6 +84,8 @@
       au < exists ; 2007 ; American Journal of Science Volume 307 ; 307 >
       au < exists ; 2008 ; American Journal of Science Volume 308 ; 308 >
       au < exists ; 2009 ; American Journal of Science Volume 309 ; 309 >
+      au < exists ; 2010 ; American Journal of Science Volume 310 ; 310 >
+      au < exists ; 2011 ; American Journal of Science Volume 311 ; 311 >
 
     }
 
