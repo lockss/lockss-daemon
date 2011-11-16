@@ -1856,7 +1856,9 @@
     title <
       name = Annali di Matematica Pura ed Applicata ;
       issn = 0373-3114 ;
-      eissn = 1618-1891
+      eissn = 1618-1891 ;
+      issnl = 0373-3114 ;
+      placeholder = True
     >
 
     param[journal_issn] = 108198
@@ -1867,7 +1869,9 @@
 
     title <
       name = Annali di Matematica Pura ed Applicata (1858 - 1865) ;
-      issn = 121285 ;
+      issn = 0373-3114 ;
+      eissn = 1618-1891 ;
+      issnl = 0373-3114 ;
       placeholder = True
     >
 
@@ -1879,7 +1883,9 @@
 
     title <
       name = Annali di Matematica Pura ed Applicata (1867 - 1897) ;
-      issn = 121286 ;
+      issn = 0373-3114 ;
+      eissn = 1618-1891 ;
+      issnl = 0373-3114 ;
       placeholder = True
     >
 
@@ -1891,7 +1897,9 @@
 
     title <
       name = Annali di Matematica Pura ed Applicata (1898 - 1922) ;
-      issn = 121287 ;
+      issn = 0373-3114 ;
+      eissn = 1618-1891 ;
+      issnl = 0373-3114 ;
       placeholder = True
     >
 
@@ -16653,7 +16661,7 @@
 
     title <
       name = Il Nuovo Cimento (1855-1868) ;
-      issn = 120822 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16665,7 +16673,7 @@
 
     title <
       name = Il Nuovo Cimento (1869-1876) ;
-      issn = 120823 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16677,7 +16685,7 @@
 
     title <
       name = Il Nuovo Cimento (1877-1894) ;
-      issn = 120824 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16689,7 +16697,7 @@
 
     title <
       name = Il Nuovo Cimento (1895-1900) ;
-      issn = 120825 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16701,7 +16709,7 @@
 
     title <
       name = Il Nuovo Cimento (1901-1910) ;
-      issn = 120826 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16713,7 +16721,7 @@
 
     title <
       name = Il Nuovo Cimento (1911-1923) ;
-      issn = 120827 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16725,7 +16733,7 @@
 
     title <
       name = Il Nuovo Cimento (1924-1942) ;
-      issn = 120828 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16737,7 +16745,7 @@
 
     title <
       name = Il Nuovo Cimento (1943-1954) ;
-      issn = 120829 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16749,7 +16757,7 @@
 
     title <
       name = Il Nuovo Cimento (1955-1965) ;
-      issn = 120830 ;
+      eissn = 1827-6121 ;
       placeholder = True
     >
 
@@ -16761,7 +16769,9 @@
 
     title <
       name = Il Nuovo Cimento A (1965-1970) ;
-      issn = 120831 ;
+      issn = 0369-3546 ;
+      eissn = 1826-9869 ;
+      issnl = 0369-3546 ;
       placeholder = True
     >
 
@@ -16773,7 +16783,9 @@
 
     title <
       name = Il Nuovo Cimento A (1971-1996) ;
-      issn = 120832 ;
+      issn = 0369-3546 ;
+      eissn = 1826-9869 ;
+      issnl = 0369-3546 ;
       placeholder = True
     >
 
@@ -16785,7 +16797,9 @@
 
     title <
       name = Il Nuovo Cimento B (1965-1970) ;
-      issn = 120833 ;
+      issn = 0369-3554 ;
+      eissn = 1826-9877 ;
+      issnl = 0369-3554 ;
       placeholder = True
     >
 
@@ -16797,7 +16811,9 @@
 
     title <
       name = Il Nuovo Cimento B (1971-1996) ;
-      issn = 120834 ;
+      issn = 0369-3554 ;
+      eissn = 1826-9877 ;
+      issnl = 0369-3554 ;
       placeholder = True
     >
 
