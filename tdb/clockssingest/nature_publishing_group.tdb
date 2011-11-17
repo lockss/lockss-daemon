@@ -1042,7 +1042,7 @@
 
     param[journal_id] = labinvest
 
-    au < testing ; exists ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
+    au < released ; manifest ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
 
   }
 
@@ -1071,7 +1071,7 @@
     au < released ; crawling ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
     au < notReady ; exists ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
-    au < testing ; exists ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
+    au < released ; manifest ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
     
   }
 
