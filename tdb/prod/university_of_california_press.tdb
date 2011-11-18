@@ -3449,10 +3449,10 @@
 
     {
 
-      plugin = org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
-      param[base_url] = http://caliber.ucpress.net/
-      param[journal_id] = si
-      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.jstor.JSTORPlugin
+      param[base_url] = http://www.jstor.org/
+      param[journal_id] = XXXX
+      implicit < status ; year; name ; param[volume_name] >
       
       comment[starting] = published by UC starting Feb 2012
       
