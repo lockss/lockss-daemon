@@ -3441,6 +3441,32 @@
   {
   
     title <
+      name = Southern California Quarterly ;
+      issn = 0038-3929 ;
+      eissn = 2162-8637 ;
+      issnl = 0038-3929
+     >
+
+    {
+
+      plugin = org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin
+      param[base_url] = http://caliber.ucpress.net/
+      param[journal_id] = si
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[starting] = published by UC starting Feb 2012
+      
+      au < exists ; 2010 ; Southern California Quarterly Volume 125 ; 125 >
+      au < exists ; 2011 ; Southern California Quarterly Volume 126 ; 126 >
+      au < exists ; 2012 ; Southern California Quarterly Volume 127 ; 127 >
+      
+    }
+    
+  }
+  
+  {
+  
+    title <
       name = Symbolic Interaction ;
       issn = 0195-6086 ;
       eissn = 1533-8665 ;
