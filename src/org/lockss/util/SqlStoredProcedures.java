@@ -1,5 +1,5 @@
 /*
- * $Id: SqlStoredProcedures.java,v 1.1 2011-11-18 18:58:17 pgust Exp $
+ * $Id: SqlStoredProcedures.java,v 1.2 2011-11-18 19:28:12 mellen22 Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class SqlStoredProcedures {
   }
 
   /**
-   * Return the title from the title title database that corresponds
+   * Return the title from the title database that corresponds
    * to the URL of an article in that title.
    * 
    * @param articleUrl the URL of the article
@@ -110,6 +110,28 @@ public class SqlStoredProcedures {
     
     // return the title
     return title;
+  }
+
+  /**
+   * Return the publisher from the title database that corresponds
+   * to the URL of an article in that publisher.
+   * 
+   * @param articleUrl the URL of the article
+   * @return the publisher for the given URL
+   */
+  static public String getPublisherFromArticleUrl(String articleUrl) {
+    // get the TdbAu from the AU
+    TdbAu tdbAu = getTdbAuFromArticleUrl(articleUrl);
+    if (tdbAu == null) {
+      throw new IllegalArgumentException(
+          "No publisher for articleUrl " + articleUrl);
+    }
+  
+    // get the publisher from the TdbAu
+    String publisher = tdbAu.getTdbPublisher().getName();
+    
+    // return the publisher
+    return publisher;
   }
 
 }
