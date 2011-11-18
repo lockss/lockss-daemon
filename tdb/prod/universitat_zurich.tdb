@@ -6,52 +6,52 @@
 
     {
       title <
-        name = ZWINGLIANA ;
+        name = Zwingliana ;
         issn = 0254-4407
       >
       
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
-      param[base_url] = http://www.zwingliana.ch/
+      param[base_url] = http://www.Zwingliana.ch/
       param[journal_id] = zwa
       implicit < status ; year ; name ; volume ; param[year] >
       comment[zwa] = vol35-36 content exists but links aren't live yet
 
-      au < ready ; 1974 ; ZWINGLIANA Volume 14 (1974) ; 14 ; 1974 >
-      au < ready ; 1975 ; ZWINGLIANA Volume 14 (1975) ; 14 ; 1975 >
-      au < ready ; 1976 ; ZWINGLIANA Volume 14 (1976) ; 14 ; 1976 >
-      au < ready ; 1977 ; ZWINGLIANA Volume 14 (1977) ; 14 ; 1977 > 
-      au < ready ; 1978 ; ZWINGLIANA Volume 14 (1978) ; 14 ; 1978 >
-      au < ready ; 1979 ; ZWINGLIANA Volume 15 (1979) ; 15 ; 1979 >
-      au < ready ; 1980 ; ZWINGLIANA Volume 15 (1980) ; 15 ; 1980 >
-      au < ready ; 1981 ; ZWINGLIANA Volume 15 (1981) ; 15 ; 1981 >
-      au < ready ; 1982 ; ZWINGLIANA Volume 15 (1982) ; 15 ; 1982 > 
-      au < ready ; 1983 ; ZWINGLIANA Volume 16 (1983) ; 16 ; 1983 >
-      au < ready ; 1984 ; ZWINGLIANA Volume 16 (1984) ; 16 ; 1984 >
-      au < ready ; 1985 ; ZWINGLIANA Volume 16 (1985) ; 16 ; 1985 >
-      au < ready ; 1986 ; ZWINGLIANA Volume 17 (1986) ; 17 ; 1986 >
-      au < ready ; 1987 ; ZWINGLIANA Volume 17 (1987) ; 17 ; 1987 >
-      au < ready ; 1988 ; ZWINGLIANA Volume 17 (1988) ; 17 ; 1988 >
-      au < ready ; 1989 ; ZWINGLIANA Volume 18 (1989) ; 18 ; 1989 >
-      au < ready ; 1990-1991 ; ZWINGLIANA Volume 18 (1990/1991) ; 18 ; 1990 >
-      au < ready ; 1992 ; ZWINGLIANA Volume 19 (1992) ; 19 ; 1992 >      
-      au < ready ; 1993 ; ZWINGLIANA Volume 19-20 (1993) ; 19-20 ; 1993 >
-      au < ready ; 1994 ; ZWINGLIANA Volume 21 (1994) ; 21 ; 1994 >
-      au < ready ; 1995 ; ZWINGLIANA Volume 22 (1995) ; 22 ; 1995 >
-      au < ready ; 1996 ; ZWINGLIANA Volume 23 (1996) ; 23 ; 1996 >
-      au < ready ; 1997 ; ZWINGLIANA Volume 24 (1997) ; 24 ; 1997 >
-      au < ready ; 1998 ; ZWINGLIANA Volume 25 (1998) ; 25 ; 1998 >
-      au < ready ; 1999 ; ZWINGLIANA Volume 26 (1999) ; 26 ; 1999 >
-      au < ready ; 2000 ; ZWINGLIANA Volume 27 (2000) ; 27 ; 2000 >
-      au < ready ; 2001 ; ZWINGLIANA Volume 28 (2001) ; 28 ; 2001 >
-      au < ready ; 2002 ; ZWINGLIANA Volume 29 (2002) ; 29 ; 2002 >
-      au < ready ; 2003 ; ZWINGLIANA Volume 30 (2003) ; 30 ; 2003 >
-      au < ready ; 2004 ; ZWINGLIANA Volume 31 (2004) ; 31 ; 2004 >
-      au < ready ; 2005 ; ZWINGLIANA Volume 32 (2005) ; 32 ; 2005 >
-      au < ready ; 2006 ; ZWINGLIANA Volume 33 (2006) ; 33 ; 2006 >
-      au < ready ; 2007 ; ZWINGLIANA Volume 34 (2007) ; 34 ; 2007 >
-      au < doesNotExist ; 2008 ; ZWINGLIANA Volume 35 (2008) ; 35 ; 2008 >
-      au < doesNotExist ; 2009 ; ZWINGLIANA Volume 36 (2009) ; 36 ; 2009 >
-      au < ready ; 2010 ; ZWINGLIANA Volume 37 (2010) ; 37 ; 2010 >
+      au < released ; 1974 ; Zwingliana Volume 14 (1974) ; 14 ; 1974 >
+      au < released ; 1975 ; Zwingliana Volume 14 (1975) ; 14 ; 1975 >
+      au < released ; 1976 ; Zwingliana Volume 14 (1976) ; 14 ; 1976 >
+      au < released ; 1977 ; Zwingliana Volume 14 (1977) ; 14 ; 1977 > 
+      au < released ; 1978 ; Zwingliana Volume 14 (1978) ; 14 ; 1978 >
+      au < released ; 1979 ; Zwingliana Volume 15 (1979) ; 15 ; 1979 >
+      au < released ; 1980 ; Zwingliana Volume 15 (1980) ; 15 ; 1980 >
+      au < released ; 1981 ; Zwingliana Volume 15 (1981) ; 15 ; 1981 >
+      au < released ; 1982 ; Zwingliana Volume 15 (1982) ; 15 ; 1982 > 
+      au < released ; 1983 ; Zwingliana Volume 16 (1983) ; 16 ; 1983 >
+      au < released ; 1984 ; Zwingliana Volume 16 (1984) ; 16 ; 1984 >
+      au < released ; 1985 ; Zwingliana Volume 16 (1985) ; 16 ; 1985 >
+      au < released ; 1986 ; Zwingliana Volume 17 (1986) ; 17 ; 1986 >
+      au < released ; 1987 ; Zwingliana Volume 17 (1987) ; 17 ; 1987 >
+      au < released ; 1988 ; Zwingliana Volume 17 (1988) ; 17 ; 1988 >
+      au < released ; 1989 ; Zwingliana Volume 18 (1989) ; 18 ; 1989 >
+      au < released ; 1990-1991 ; Zwingliana Volume 18 (1990-1991) ; 18 ; 1990 >
+      au < released ; 1992 ; Zwingliana Volume 19 (1992) ; 19 ; 1992 >      
+      au < released ; 1993 ; Zwingliana Volume 19-20 (1993) ; 19-20 ; 1993 >
+      au < released ; 1994 ; Zwingliana Volume 21 ; 21 ; 1994 >
+      au < released ; 1995 ; Zwingliana Volume 22 ; 22 ; 1995 >
+      au < released ; 1996 ; Zwingliana Volume 23 ; 23 ; 1996 >
+      au < released ; 1997 ; Zwingliana Volume 24 ; 24 ; 1997 >
+      au < released ; 1998 ; Zwingliana Volume 25 ; 25 ; 1998 >
+      au < released ; 1999 ; Zwingliana Volume 26 ; 26 ; 1999 >
+      au < released ; 2000 ; Zwingliana Volume 27 ; 27 ; 2000 >
+      au < released ; 2001 ; Zwingliana Volume 28 ; 28 ; 2001 >
+      au < released ; 2002 ; Zwingliana Volume 29 ; 29 ; 2002 >
+      au < released ; 2003 ; Zwingliana Volume 30 ; 30 ; 2003 >
+      au < released ; 2004 ; Zwingliana Volume 31 ; 31 ; 2004 >
+      au < released ; 2005 ; Zwingliana Volume 32 ; 32 ; 2005 >
+      au < released ; 2006 ; Zwingliana Volume 33 ; 33 ; 2006 >
+      au < released ; 2007 ; Zwingliana Volume 34 ; 34 ; 2007 >
+      au < doesNotExist ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 >
+      au < doesNotExist ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 >
+      au < released ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
 
     }
 
