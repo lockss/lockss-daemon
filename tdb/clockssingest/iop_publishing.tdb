@@ -548,10 +548,10 @@
     au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 82 ; 82 > 
     au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 83 ; 83 > 
     au < manifest ; exists ; 2008 ; EPL (Europhysics Letters) Volume 84 ; 84 > 
-    au < testing ; exists ; 2009 ; EPL (Europhysics Letters) Volume 85 ; 85 > 
-    au < testing ; exists ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
-    au < testing ; exists ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
-    au < testing ; exists ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
+    au < released ; manifest ; 2009 ; EPL (Europhysics Letters) Volume 85 ; 85 > 
+    au < released ; manifest ; 2009 ; EPL (Europhysics Letters) Volume 86 ; 86 > 
+    au < released ; manifest ; 2009 ; EPL (Europhysics Letters) Volume 87 ; 87 > 
+    au < released ; manifest ; 2009 ; EPL (Europhysics Letters) Volume 88 ; 88 > 
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 89 ; 89 > 
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 90 ; 90 > 
     au < released ; crawling ; 2010 ; EPL (Europhysics Letters) Volume 91 ; 91 > 
@@ -603,7 +603,7 @@
     au < exists ; exists ; 2006 ; European Journal of Physics Volume 27 ; 27 > 
     au < exists ; exists ; 2007 ; European Journal of Physics Volume 28 ; 28 > 
     au < manifest ; exists ; 2008 ; European Journal of Physics Volume 29 ; 29 > 
-    au < testing ; exists ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
+    au < released ; manifest ; 2009 ; European Journal of Physics Volume 30 ; 30 > 
     au < released ; crawling ; 2010 ; European Journal of Physics Volume 31 ; 31 > 
     au < released ; manifest ; 2011 ; European Journal of Physics Volume 32 ; 32 > 
 
@@ -661,7 +661,7 @@
     au < exists ; exists ; 2006 ; Fluid Dynamics Research Volume 38 ; 38 > 
     au < exists ; exists ; 2007 ; Fluid Dynamics Research Volume 39 ; 39 > 
     au < manifest ; exists ; 2008 ; Fluid Dynamics Research Volume 40 ; 40 > 
-    au < testing ; exists ; 2009 ; Fluid Dynamics Research Volume 41 ; 41 > 
+    au < released ; manifest ; 2009 ; Fluid Dynamics Research Volume 41 ; 41 > 
     au < released ; crawling ; 2010 ; Fluid Dynamics Research Volume 42 ; 42 > 
     au < released ; manifest ; 2011 ; Fluid Dynamics Research Volume 43 ; 43 > 
 
@@ -703,7 +703,7 @@
     au < exists ; exists ; 2006 ; Inverse Problems Volume 22 ; 22 > 
     au < exists ; exists ; 2007 ; Inverse Problems Volume 23 ; 23 > 
     au < manifest ; exists ; 2008 ; Inverse Problems Volume 24 ; 24 > 
-    au < testing ; exists ; 2009 ; Inverse Problems Volume 25 ; 25 > 
+    au < released ; manifest ; 2009 ; Inverse Problems Volume 25 ; 25 > 
     au < released ; crawling ; 2010 ; Inverse Problems Volume 26 ; 26 > 
     au < released ; manifest ; 2011 ; Inverse Problems Volume 27 ; 27 > 
 
@@ -805,7 +805,7 @@
 
     au < exists ; exists ; 2007 ; Journal of Breath Research Volume 1 ; 1 > 
     au < manifest ; exists ; 2008 ; Journal of Breath Research Volume 2 ; 2 > 
-    au < testing ; exists ; 2009 ; Journal of Breath Research Volume 3 ; 3 > 
+    au < released ; manifest ; 2009 ; Journal of Breath Research Volume 3 ; 3 > 
     au < released ; crawling ; 2010 ; Journal of Breath Research Volume 4 ; 4 > 
     au < released ; manifest ; 2011 ; Journal of Breath Research Volume 5 ; 5 > 
 
@@ -849,7 +849,7 @@
     au < exists ; exists ; 2006 ; Journal of Geophysics and Engineering Volume 3 ; 3 > 
     au < exists ; exists ; 2007 ; Journal of Geophysics and Engineering Volume 4 ; 4 > 
     au < manifest ; exists ; 2008 ; Journal of Geophysics and Engineering Volume 5 ; 5 > 
-    au < testing ; exists ; 2009 ; Journal of Geophysics and Engineering Volume 6 ; 6 > 
+    au < released ; manifest ; 2009 ; Journal of Geophysics and Engineering Volume 6 ; 6 > 
     au < released ; crawling ; 2010 ; Journal of Geophysics and Engineering Volume 7 ; 7 > 
     au < released ; manifest ; 2011 ; Journal of Geophysics and Engineering Volume 8 ; 8 > 
 
@@ -859,10 +859,12 @@
 
     title <
       name = Journal of High Energy Physics ;
-      issn = 1029-8479
+      issn = 1126-6708 ;
+      eissn = 1029-8479 ;
+      issnl = 1126-6708
     >
     
-    param[journal_issn] = 1029-8479
+    param[journal_issn] = 1126-6708
     comment[moved_to] = Springer Science+Business Media in 2010
 
     au < exists ; exists ; 1997 ; Journal of High Energy Physics Volume 1997 ; 1997 > 
