@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.1 2011-09-02 22:15:55 thib_gc Exp $
+ * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.2 2011-11-19 01:21:34 thib_gc Exp $
  */
 
 /*
@@ -56,8 +56,9 @@ public class TaylorAndFrancisPdfFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
+    PdfDocument pdfDocument = null;
     try {
-      PdfDocument pdfDocument = new PdfDocument(in);
+      pdfDocument = new PdfDocument(in);
       
       // Remove the modification date
       pdfDocument.removeCreationDate();
@@ -86,7 +87,6 @@ public class TaylorAndFrancisPdfFilterFactory implements FilterFactory {
       // Turn file back into an InputStream
       DeferredTempFileOutputStream pdfOutputStream = new DeferredTempFileOutputStream(10*1024*1024 /* aka 10MB */);
       pdfDocument.save(pdfOutputStream);
-      pdfDocument.close();
       if (pdfOutputStream.isInMemory()) {
         return new ByteArrayInputStream(pdfOutputStream.getData());
       }
@@ -111,7 +111,12 @@ public class TaylorAndFrancisPdfFilterFactory implements FilterFactory {
     catch (IOException ioe) {
       throw new FilteringException(ioe);
     }
+    finally {
+      if (pdfDocument != null) {
+        pdfDocument.close();
+      }
+    }
     
-  }  
+  } 
   
 }
