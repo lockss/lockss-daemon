@@ -785,73 +785,73 @@
     param[base_url] = http://analysis.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1933-1934 ; Analysis Volume 1 ; 1 ; >
-    au < exists ; exists ; 1934-1935 ; Analysis Volume 2 ; 2 ; >
-    au < exists ; exists ; 1935-1936 ; Analysis Volume 3 ; 3 ; >
-    au < exists ; exists ; 1936-1937 ; Analysis Volume 4 ; 4 ; >
-    au < exists ; exists ; 1937-1938 ; Analysis Volume 5 ; 5 ; >
-    au < exists ; exists ; 1938-1939 ; Analysis Volume 6 ; 6 ; >
-    au < exists ; exists ; 1940 ; Analysis Volume 7 ; 7 ; >
-    au < exists ; exists ; 1947-1948 ; Analysis Volume 8 ; 8 ; >
-    au < exists ; exists ; 1948-1949 ; Analysis Volume 9 ; 9 ; >
-    au < exists ; exists ; 1949-1950 ; Analysis Volume 10 ; 10 ; >
-    au < exists ; exists ; 1950-1951 ; Analysis Volume 11 ; 11 ; >
-    au < exists ; exists ; 1951-1952 ; Analysis Volume 12 ; 12 ; >
-    au < exists ; exists ; 1952-1953 ; Analysis Volume 13 ; 13 ; >
-    au < exists ; exists ; 1953-1954 ; Analysis Volume 14 ; 14 ; >
-    au < exists ; exists ; 1954-1955 ; Analysis Volume 15 ; 15 ; >
-    au < exists ; exists ; 1955-1956 ; Analysis Volume 16 ; 16 ; >
-    au < exists ; exists ; 1956-1957 ; Analysis Volume 17 ; 17 ; >
-    au < exists ; exists ; 1957-1958 ; Analysis Volume 18 ; 18 ; >
-    au < exists ; exists ; 1958-1959 ; Analysis Volume 19 ; 19 ; >
-    au < exists ; exists ; 1959-1960 ; Analysis Volume 20 ; 20 ; >
-    au < exists ; exists ; 1960-1961 ; Analysis Volume 21 ; 21 ; >
-    au < exists ; exists ; 1961-1962 ; Analysis Volume 22 ; 22 ; >
-    au < exists ; exists ; 1962-1963 ; Analysis Volume 23 ; 23 ; >
-    au < exists ; exists ; 1963-1964 ; Analysis Volume 24 ; 24 ; >
-    au < exists ; exists ; 1964-1965 ; Analysis Volume 25 ; 25 ; >
-    au < exists ; exists ; 1965-1966 ; Analysis Volume 26 ; 26 ; >
-    au < exists ; exists ; 1966-1967 ; Analysis Volume 27 ; 27 ; >
-    au < exists ; exists ; 1967-1968 ; Analysis Volume 28 ; 28 ; >
-    au < exists ; exists ; 1968-1969 ; Analysis Volume 29 ; 29 ; >
-    au < exists ; exists ; 1969-1970 ; Analysis Volume 30 ; 30 ; >
-    au < exists ; exists ; 1970-1971 ; Analysis Volume 31 ; 31 ; >
-    au < exists ; exists ; 1971-1972 ; Analysis Volume 32 ; 32 ; >
-    au < exists ; exists ; 1972-1973 ; Analysis Volume 33 ; 33 ; >
-    au < exists ; exists ; 1973-1974 ; Analysis Volume 34 ; 34 ; >
-    au < exists ; exists ; 1974-1975 ; Analysis Volume 35 ; 35 ; >
-    au < exists ; exists ; 1975-1976 ; Analysis Volume 36 ; 36 ; >
-    au < exists ; exists ; 1976-1977 ; Analysis Volume 37 ; 37 ; >
-    au < exists ; exists ; 1978 ; Analysis Volume 38 ; 38 ; >
-    au < exists ; exists ; 1979 ; Analysis Volume 39 ; 39 ; >
-    au < exists ; exists ; 1980 ; Analysis Volume 40 ; 40 ; >
-    au < exists ; exists ; 1981 ; Analysis Volume 41 ; 41 ; >
-    au < exists ; exists ; 1982 ; Analysis Volume 42 ; 42 ; >
-    au < exists ; exists ; 1983 ; Analysis Volume 43 ; 43 ; >
-    au < exists ; exists ; 1984 ; Analysis Volume 44 ; 44 ; >
-    au < exists ; exists ; 1985 ; Analysis Volume 45 ; 45 ; >
-    au < exists ; exists ; 1986 ; Analysis Volume 46 ; 46 ; >
-    au < exists ; exists ; 1987 ; Analysis Volume 47 ; 47 ; >
-    au < exists ; exists ; 1988 ; Analysis Volume 48 ; 48 ; >
-    au < exists ; exists ; 1989 ; Analysis Volume 49 ; 49 ; >
-    au < exists ; exists ; 1990 ; Analysis Volume 50 ; 50 ; >
-    au < exists ; exists ; 1991 ; Analysis Volume 51 ; 51 ; >
-    au < exists ; exists ; 1992 ; Analysis Volume 52 ; 52 ; >
-    au < exists ; exists ; 1993 ; Analysis Volume 53 ; 53 ; >
-    au < exists ; exists ; 1994 ; Analysis Volume 54 ; 54 ; >
-    au < exists ; exists ; 1995 ; Analysis Volume 55 ; 55 ; >
-    au < exists ; exists ; 1996 ; Analysis Volume 56 ; 56 ; >
-    au < exists ; exists ; 1997 ; Analysis Volume 57 ; 57 ; >
-    au < exists ; exists ; 1998 ; Analysis Volume 58 ; 58 ; >
-    au < exists ; exists ; 1999 ; Analysis Volume 59 ; 59 ; >
-    au < exists ; exists ; 2000 ; Analysis Volume 60 ; 60 ; >
-    au < exists ; exists ; 2001 ; Analysis Volume 61 ; 61 ; >
-    au < exists ; exists ; 2002 ; Analysis Volume 62 ; 62 ; >
-    au < exists ; exists ; 2003 ; Analysis Volume 63 ; 63 ; >
-    au < exists ; exists ; 2004 ; Analysis Volume 64 ; 64 ; >
-    au < exists ; exists ; 2005 ; Analysis Volume 65 ; 65 ; >
-    au < exists ; exists ; 2006 ; Analysis Volume 66 ; 66 ; >
-    au < exists ; exists ; 2007 ; Analysis Volume 67 ; 67 ; >
+    au < manifest ; exists ; 1933-1934 ; Analysis Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1934-1935 ; Analysis Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1935-1936 ; Analysis Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1936-1937 ; Analysis Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1937-1938 ; Analysis Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1938-1939 ; Analysis Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1940 ; Analysis Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1947-1948 ; Analysis Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1948-1949 ; Analysis Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1949-1950 ; Analysis Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1950-1951 ; Analysis Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1951-1952 ; Analysis Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1952-1953 ; Analysis Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1953-1954 ; Analysis Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1954-1955 ; Analysis Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1955-1956 ; Analysis Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1956-1957 ; Analysis Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1957-1958 ; Analysis Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1958-1959 ; Analysis Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1959-1960 ; Analysis Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1960-1961 ; Analysis Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1961-1962 ; Analysis Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1962-1963 ; Analysis Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1963-1964 ; Analysis Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1964-1965 ; Analysis Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1965-1966 ; Analysis Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1966-1967 ; Analysis Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1967-1968 ; Analysis Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1968-1969 ; Analysis Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1969-1970 ; Analysis Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1970-1971 ; Analysis Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1971-1972 ; Analysis Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1972-1973 ; Analysis Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1973-1974 ; Analysis Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1974-1975 ; Analysis Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1975-1976 ; Analysis Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1976-1977 ; Analysis Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1978 ; Analysis Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1979 ; Analysis Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1980 ; Analysis Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1981 ; Analysis Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1982 ; Analysis Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1983 ; Analysis Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1984 ; Analysis Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1985 ; Analysis Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1986 ; Analysis Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1987 ; Analysis Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1988 ; Analysis Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1989 ; Analysis Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1990 ; Analysis Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1991 ; Analysis Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1992 ; Analysis Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1993 ; Analysis Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1994 ; Analysis Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1995 ; Analysis Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1996 ; Analysis Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1997 ; Analysis Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1998 ; Analysis Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1999 ; Analysis Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2000 ; Analysis Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2001 ; Analysis Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2002 ; Analysis Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2003 ; Analysis Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2004 ; Analysis Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2005 ; Analysis Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2006 ; Analysis Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2007 ; Analysis Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Analysis Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Analysis Volume 69 ; 69 ; >
     au < released ; crawling ; 2010 ; Analysis Volume 70 ; 70 ; >
@@ -1073,14 +1073,14 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 ; >
-    au < exists ; exists ; 1965 ; The Annals of Occupational Hygiene Volume 8 ; 8 ; >
-    au < exists ; exists ; 1966 ; The Annals of Occupational Hygiene Volume 9 ; 9 ; >
-    au < exists ; exists ; 1967 ; The Annals of Occupational Hygiene Volume 10 ; 10 ; >
-    au < exists ; exists ; 1968 ; The Annals of Occupational Hygiene Volume 11 ; 11 ; >
-    au < exists ; exists ; 1969 ; The Annals of Occupational Hygiene Volume 12 ; 12 ; >
-    au < exists ; exists ; 1970 ; The Annals of Occupational Hygiene Volume 13 ; 13 ; >
-    au < exists ; exists ; 1971 ; The Annals of Occupational Hygiene Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1965 ; The Annals of Occupational Hygiene Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1966 ; The Annals of Occupational Hygiene Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1967 ; The Annals of Occupational Hygiene Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1968 ; The Annals of Occupational Hygiene Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1969 ; The Annals of Occupational Hygiene Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1970 ; The Annals of Occupational Hygiene Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1971 ; The Annals of Occupational Hygiene Volume 14 ; 14 ; >
     au < manifest ; exists ; 1972 ; The Annals of Occupational Hygiene Volume 15 ; 15 ; >
     au < manifest ; exists ; 1973 ; The Annals of Occupational Hygiene Volume 16 ; 16 ; >
     au < manifest ; exists ; 1974 ; The Annals of Occupational Hygiene Volume 17 ; 17 ; >
@@ -1192,28 +1192,28 @@
     param[base_url] = http://aepp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    au < exists ; exists ; 1988 ; Applied Economic Perspectives and Policy Volume 10 ; 10 ; >
-    au < exists ; exists ; 1989 ; Applied Economic Perspectives and Policy Volume 11 ; 11 ; >
-    au < exists ; exists ; 1990 ; Applied Economic Perspectives and Policy Volume 12 ; 12 ; >
-    au < exists ; exists ; 1991 ; Applied Economic Perspectives and Policy Volume 13 ; 13 ; >
-    au < exists ; exists ; 1992 ; Applied Economic Perspectives and Policy Volume 14 ; 14 ; >
-    au < exists ; exists ; 1993 ; Applied Economic Perspectives and Policy Volume 15 ; 15 ; >
-    au < exists ; exists ; 1994 ; Applied Economic Perspectives and Policy Volume 16 ; 16 ; >
-    au < exists ; exists ; 1995 ; Applied Economic Perspectives and Policy Volume 17 ; 17 ; >
-    au < exists ; exists ; 1996 ; Applied Economic Perspectives and Policy Volume 18 ; 18 ; >
-    au < exists ; exists ; 1997 ; Applied Economic Perspectives and Policy Volume 19 ; 19 ; >
-    au < exists ; exists ; 1998 ; Applied Economic Perspectives and Policy Volume 20 ; 20 ; >
-    au < exists ; exists ; 1999 ; Applied Economic Perspectives and Policy Volume 21 ; 21 ; >
-    au < exists ; exists ; 2000 ; Applied Economic Perspectives and Policy Volume 22 ; 22 ; >
-    au < exists ; exists ; 2001 ; Applied Economic Perspectives and Policy Volume 23 ; 23 ; >
-    au < exists ; exists ; 2002 ; Applied Economic Perspectives and Policy Volume 24 ; 24 ; >
-    au < exists ; exists ; 2003 ; Applied Economic Perspectives and Policy Volume 25 ; 25 ; >
-    au < exists ; exists ; 2004 ; Applied Economic Perspectives and Policy Volume 26 ; 26 ; >
-    au < exists ; exists ; 2005 ; Applied Economic Perspectives and Policy Volume 27 ; 27 ; >
-    au < exists ; exists ; 2006 ; Applied Economic Perspectives and Policy Volume 28 ; 28 ; >
-    au < exists ; exists ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 ; >
-    au < exists ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 ; >
-    au < exists ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1988 ; Applied Economic Perspectives and Policy Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1989 ; Applied Economic Perspectives and Policy Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1990 ; Applied Economic Perspectives and Policy Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1991 ; Applied Economic Perspectives and Policy Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1992 ; Applied Economic Perspectives and Policy Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1993 ; Applied Economic Perspectives and Policy Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1994 ; Applied Economic Perspectives and Policy Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1995 ; Applied Economic Perspectives and Policy Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1996 ; Applied Economic Perspectives and Policy Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1997 ; Applied Economic Perspectives and Policy Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1998 ; Applied Economic Perspectives and Policy Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1999 ; Applied Economic Perspectives and Policy Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2000 ; Applied Economic Perspectives and Policy Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2001 ; Applied Economic Perspectives and Policy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2002 ; Applied Economic Perspectives and Policy Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2003 ; Applied Economic Perspectives and Policy Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2004 ; Applied Economic Perspectives and Policy Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2005 ; Applied Economic Perspectives and Policy Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2006 ; Applied Economic Perspectives and Policy Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2007 ; Applied Economic Perspectives and Policy Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2008 ; Applied Economic Perspectives and Policy Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2009 ; Applied Economic Perspectives and Policy Volume 31 ; 31 ; >
     au < manifest ; exists ; 2010 ; Applied Economic Perspectives and Policy Volume 32 ; 32 ; >
     au < crawling ; exists ; 2011 ; Applied Economic Perspectives and Policy Volume 33 ; 33 ; >
     
@@ -1296,12 +1296,12 @@
     param[base_url] = http://alrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    au < exists ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
-    au < exists ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 ; >
-    au < exists ; exists ; 2003 ; Arbitration Law Reports and Review 2003 ; 2003 ; >
-    au < exists ; exists ; 2004 ; Arbitration Law Reports and Review 2004 ; 2004 ; >
-    au < exists ; exists ; 2005 ; Arbitration Law Reports and Review 2005 ; 2005 ; >
-    au < exists ; exists ; 2006 ; Arbitration Law Reports and Review 2006 ; 2006 ; >  
+    au < manifest ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; Arbitration Law Reports and Review 2003 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; Arbitration Law Reports and Review 2004 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; Arbitration Law Reports and Review 2005 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; Arbitration Law Reports and Review 2006 ; 2006 ; >  
     
     } 
     
@@ -1331,24 +1331,24 @@
     param[base_url] = http://acn.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1986 ; Archives of Clinical Neuropsychology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1987 ; Archives of Clinical Neuropsychology Volume 2 ; 2 ; >
-    au < exists ; exists ; 1988 ; Archives of Clinical Neuropsychology Volume 3 ; 3 ; >
-    au < exists ; exists ; 1989 ; Archives of Clinical Neuropsychology Volume 4 ; 4 ; >
-    au < exists ; exists ; 1990 ; Archives of Clinical Neuropsychology Volume 5 ; 5 ; >
-    au < exists ; exists ; 1991 ; Archives of Clinical Neuropsychology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1992 ; Archives of Clinical Neuropsychology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1993 ; Archives of Clinical Neuropsychology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1994 ; Archives of Clinical Neuropsychology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1995 ; Archives of Clinical Neuropsychology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1996 ; Archives of Clinical Neuropsychology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1997 ; Archives of Clinical Neuropsychology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1998 ; Archives of Clinical Neuropsychology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1999 ; Archives of Clinical Neuropsychology Volume 14 ; 14 ; >
-    au < exists ; exists ; 2000 ; Archives of Clinical Neuropsychology Volume 15 ; 15 ; >
-    au < exists ; exists ; 2001 ; Archives of Clinical Neuropsychology Volume 16 ; 16 ; >
-    au < exists ; exists ; 2002 ; Archives of Clinical Neuropsychology Volume 17 ; 17 ; >
-    au < exists ; exists ; 2003 ; Archives of Clinical Neuropsychology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1986 ; Archives of Clinical Neuropsychology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1987 ; Archives of Clinical Neuropsychology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1988 ; Archives of Clinical Neuropsychology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1989 ; Archives of Clinical Neuropsychology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1990 ; Archives of Clinical Neuropsychology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1991 ; Archives of Clinical Neuropsychology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1992 ; Archives of Clinical Neuropsychology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1993 ; Archives of Clinical Neuropsychology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1994 ; Archives of Clinical Neuropsychology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1995 ; Archives of Clinical Neuropsychology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1996 ; Archives of Clinical Neuropsychology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1997 ; Archives of Clinical Neuropsychology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1998 ; Archives of Clinical Neuropsychology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1999 ; Archives of Clinical Neuropsychology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2000 ; Archives of Clinical Neuropsychology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2001 ; Archives of Clinical Neuropsychology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2002 ; Archives of Clinical Neuropsychology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2003 ; Archives of Clinical Neuropsychology Volume 18 ; 18 ; >
     au < manifest ; exists ; 2004 ; Archives of Clinical Neuropsychology Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; Archives of Clinical Neuropsychology Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Archives of Clinical Neuropsychology Volume 21 ; 21 ; >
@@ -2559,27 +2559,27 @@
     param[base_url] = http://blms.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 ; >
-    au < exists ; exists ; 1970 ; Bulletin of the London Mathematical Society Volume 2 ; 2 ; >
-    au < exists ; exists ; 1971 ; Bulletin of the London Mathematical Society Volume 3 ; 3 ; >
-    au < exists ; exists ; 1972 ; Bulletin of the London Mathematical Society Volume 4 ; 4 ; >
-    au < exists ; exists ; 1973 ; Bulletin of the London Mathematical Society Volume 5 ; 5 ; >
-    au < exists ; exists ; 1974 ; Bulletin of the London Mathematical Society Volume 6 ; 6 ; >
-    au < exists ; exists ; 1975 ; Bulletin of the London Mathematical Society Volume 7 ; 7 ; >
-    au < exists ; exists ; 1976 ; Bulletin of the London Mathematical Society Volume 8 ; 8 ; >
-    au < exists ; exists ; 1977 ; Bulletin of the London Mathematical Society Volume 9 ; 9 ; >
-    au < exists ; exists ; 1978 ; Bulletin of the London Mathematical Society Volume 10 ; 10 ; >
-    au < exists ; exists ; 1979 ; Bulletin of the London Mathematical Society Volume 11 ; 11 ; >
-    au < exists ; exists ; 1980 ; Bulletin of the London Mathematical Society Volume 12 ; 12 ; >
-    au < exists ; exists ; 1981 ; Bulletin of the London Mathematical Society Volume 13 ; 13 ; >
-    au < exists ; exists ; 1982 ; Bulletin of the London Mathematical Society Volume 14 ; 14 ; >
-    au < exists ; exists ; 1983 ; Bulletin of the London Mathematical Society Volume 15 ; 15 ; >
-    au < exists ; exists ; 1984 ; Bulletin of the London Mathematical Society Volume 16 ; 16 ; >
-    au < exists ; exists ; 1985 ; Bulletin of the London Mathematical Society Volume 17 ; 17 ; >
-    au < exists ; exists ; 1986 ; Bulletin of the London Mathematical Society Volume 18 ; 18 ; >
-    au < exists ; exists ; 1987 ; Bulletin of the London Mathematical Society Volume 19 ; 19 ; >
-    au < exists ; exists ; 1988 ; Bulletin of the London Mathematical Society Volume 20 ; 20 ; >
-    au < exists ; exists ; 1989 ; Bulletin of the London Mathematical Society Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1969 ; Bulletin of the London Mathematical Society Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1970 ; Bulletin of the London Mathematical Society Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1971 ; Bulletin of the London Mathematical Society Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1972 ; Bulletin of the London Mathematical Society Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1973 ; Bulletin of the London Mathematical Society Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1974 ; Bulletin of the London Mathematical Society Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1975 ; Bulletin of the London Mathematical Society Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1976 ; Bulletin of the London Mathematical Society Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1977 ; Bulletin of the London Mathematical Society Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1978 ; Bulletin of the London Mathematical Society Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1979 ; Bulletin of the London Mathematical Society Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1980 ; Bulletin of the London Mathematical Society Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1981 ; Bulletin of the London Mathematical Society Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1982 ; Bulletin of the London Mathematical Society Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1983 ; Bulletin of the London Mathematical Society Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1984 ; Bulletin of the London Mathematical Society Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1985 ; Bulletin of the London Mathematical Society Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1986 ; Bulletin of the London Mathematical Society Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1987 ; Bulletin of the London Mathematical Society Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1988 ; Bulletin of the London Mathematical Society Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1989 ; Bulletin of the London Mathematical Society Volume 21 ; 21 ; >
     au < manifest ; exists ; 1990 ; Bulletin of the London Mathematical Society Volume 22 ; 22 ; >
     au < manifest ; exists ; 1991 ; Bulletin of the London Mathematical Society Volume 23 ; 23 ; >
     au < manifest ; exists ; 1992 ; Bulletin of the London Mathematical Society Volume 24 ; 24 ; >
@@ -2899,16 +2899,16 @@
     param[base_url] = http://cardiovascres.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
-    au < exists ; exists ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
-    au < exists ; exists ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1967 ; Cardiovascular Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1968 ; Cardiovascular Research Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1969 ; Cardiovascular Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1970 ; Cardiovascular Research Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1971 ; Cardiovascular Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1972 ; Cardiovascular Research Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1973 ; Cardiovascular Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1974 ; Cardiovascular Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1975 ; Cardiovascular Research Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1976 ; Cardiovascular Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 1977 ; Cardiovascular Research Volume 11 ; 11 ; >
     au < manifest ; exists ; 1978 ; Cardiovascular Research Volume 12 ; 12 ; >
     au < manifest ; exists ; 1979 ; Cardiovascular Research Volume 13 ; 13 ; >
@@ -3242,9 +3242,9 @@
     param[base_url] = http://cb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1995 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 1 ; 1 ; >
-    au < exists ; exists ; 1996 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 2 ; 2 ; >
-    au < exists ; exists ; 1997 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1995 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1996 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1997 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 5 ; 5 ; >
     au < manifest ; exists ; 2000 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 6 ; 6 ; >
@@ -4892,19 +4892,19 @@
     param[base_url] = http://forestry.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1927 ; Forestry Volume 1 ; 1 ; >
-    au < exists ; exists ; 1928 ; Forestry Volume 2 ; 2 ; >
-    au < exists ; exists ; 1929 ; Forestry Volume 3 ; 3 ; >
-    au < exists ; exists ; 1930 ; Forestry Volume 4 ; 4 ; >
-    au < exists ; exists ; 1931 ; Forestry Volume 5 ; 5 ; >
-    au < exists ; exists ; 1932 ; Forestry Volume 6 ; 6 ; >
-    au < exists ; exists ; 1933 ; Forestry Volume 7 ; 7 ; >
-    au < exists ; exists ; 1934 ; Forestry Volume 8 ; 8 ; >
-    au < exists ; exists ; 1935 ; Forestry Volume 9 ; 9 ; >
-    au < exists ; exists ; 1936 ; Forestry Volume 10 ; 10 ; >
-    au < exists ; exists ; 1937 ; Forestry Volume 11 ; 11 ; >
-    au < exists ; exists ; 1938 ; Forestry Volume 12 ; 12 ; >
-    au < exists ; exists ; 1939 ; Forestry Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1927 ; Forestry Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1928 ; Forestry Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1929 ; Forestry Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1930 ; Forestry Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1931 ; Forestry Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1932 ; Forestry Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1933 ; Forestry Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1934 ; Forestry Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1935 ; Forestry Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1936 ; Forestry Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1937 ; Forestry Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1938 ; Forestry Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1939 ; Forestry Volume 13 ; 13 ; >
     au < manifest ; exists ; 1940 ; Forestry Volume 14 ; 14 ; >
     au < manifest ; exists ; 1941 ; Forestry Volume 15 ; 15 ; >
     au < manifest ; exists ; 1942 ; Forestry Volume 16 ; 16 ; >
@@ -5218,9 +5218,9 @@
     param[base_url] = http://fsb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
-    au < exists ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 ; >
-    au < exists ; exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 ; >
     au < manifest ; exists ; 1984 ; French Studies Bulletin Volume 4 ; 4 ; >
     au < manifest ; exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 ; >
     au < manifest ; exists ; 1986 ; French Studies Bulletin Volume 6 ; 6 ; >
@@ -5279,24 +5279,24 @@
     param[base_url] = http://gh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1984 ; German History Volume 1 ; 1 ; >
-    au < exists ; exists ; 1985 ; German History Volume 2 ; 2 ; >
-    au < exists ; exists ; 1986 ; German History Volume 3 ; 3 ; >
-    au < exists ; exists ; 1987 ; German History Volume 4 ; 4 ; >
-    au < exists ; exists ; 1987 ; German History Volume 5 ; 5 ; >
-    au < exists ; exists ; 1988 ; German History Volume 6 ; 6 ; >
-    au < exists ; exists ; 1989 ; German History Volume 7 ; 7 ; >
-    au < exists ; exists ; 1990 ; German History Volume 8 ; 8 ; >
-    au < exists ; exists ; 1991 ; German History Volume 9 ; 9 ; >
-    au < exists ; exists ; 1992 ; German History Volume 10 ; 10 ; >
-    au < exists ; exists ; 1993 ; German History Volume 11 ; 11 ; >
-    au < exists ; exists ; 1994 ; German History Volume 12 ; 12 ; >
-    au < exists ; exists ; 1995 ; German History Volume 13 ; 13 ; >
-    au < exists ; exists ; 1996 ; German History Volume 14 ; 14 ; >
-    au < exists ; exists ; 1997 ; German History Volume 15 ; 15 ; >
-    au < exists ; exists ; 1998 ; German History Volume 16 ; 16 ; >
-    au < exists ; exists ; 1999 ; German History Volume 17 ; 17 ; >
-    au < exists ; exists ; 2000 ; German History Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1984 ; German History Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1985 ; German History Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1986 ; German History Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1987 ; German History Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1987 ; German History Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1988 ; German History Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1989 ; German History Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1990 ; German History Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1991 ; German History Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1992 ; German History Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1993 ; German History Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1994 ; German History Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1995 ; German History Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1996 ; German History Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1997 ; German History Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1998 ; German History Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1999 ; German History Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2000 ; German History Volume 18 ; 18 ; >
     au < manifest ; exists ; 2001 ; German History Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; German History Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; German History Volume 21 ; 21 ; >
@@ -5336,49 +5336,49 @@
     param[base_url] = http://gerontologist.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1961 ; The Gerontologist Volume 1 ; 1 ; >
-    au < exists ; exists ; 1962 ; The Gerontologist Volume 2 ; 2 ; >
-    au < exists ; exists ; 1963 ; The Gerontologist Volume 3 ; 3 ; >
-    au < exists ; exists ; 1964 ; The Gerontologist Volume 4 ; 4 ; >
-    au < exists ; exists ; 1965 ; The Gerontologist Volume 5 ; 5 ; >
-    au < exists ; exists ; 1966 ; The Gerontologist Volume 6 ; 6 ; >
-    au < exists ; exists ; 1967 ; The Gerontologist Volume 7 ; 7 ; >
-    au < exists ; exists ; 1968 ; The Gerontologist Volume 8 ; 8 ; >
-    au < exists ; exists ; 1969 ; The Gerontologist Volume 9 ; 9 ; >
-    au < exists ; exists ; 1970 ; The Gerontologist Volume 10 ; 10 ; >
-    au < exists ; exists ; 1971 ; The Gerontologist Volume 11 ; 11 ; >
-    au < exists ; exists ; 1972 ; The Gerontologist Volume 12 ; 12 ; >
-    au < exists ; exists ; 1973 ; The Gerontologist Volume 13 ; 13 ; >
-    au < exists ; exists ; 1974 ; The Gerontologist Volume 14 ; 14 ; >
-    au < exists ; exists ; 1975 ; The Gerontologist Volume 15 ; 15 ; >
-    au < exists ; exists ; 1976 ; The Gerontologist Volume 16 ; 16 ; >
-    au < exists ; exists ; 1977 ; The Gerontologist Volume 17 ; 17 ; >
-    au < exists ; exists ; 1978 ; The Gerontologist Volume 18 ; 18 ; >
-    au < exists ; exists ; 1979 ; The Gerontologist Volume 19 ; 19 ; >
-    au < exists ; exists ; 1980 ; The Gerontologist Volume 20 ; 20 ; >
-    au < exists ; exists ; 1981 ; The Gerontologist Volume 21 ; 21 ; >
-    au < exists ; exists ; 1982 ; The Gerontologist Volume 22 ; 22 ; >
-    au < exists ; exists ; 1983 ; The Gerontologist Volume 23 ; 23 ; >
-    au < exists ; exists ; 1984 ; The Gerontologist Volume 24 ; 24 ; >
-    au < exists ; exists ; 1985 ; The Gerontologist Volume 25 ; 25 ; >
-    au < exists ; exists ; 1986 ; The Gerontologist Volume 26 ; 26 ; >
-    au < exists ; exists ; 1987 ; The Gerontologist Volume 27 ; 27 ; >
-    au < exists ; exists ; 1988 ; The Gerontologist Volume 28 ; 28 ; >
-    au < exists ; exists ; 1989 ; The Gerontologist Volume 29 ; 29 ; >
-    au < exists ; exists ; 1990 ; The Gerontologist Volume 30 ; 30 ; >
-    au < exists ; exists ; 1991 ; The Gerontologist Volume 31 ; 31 ; >
-    au < exists ; exists ; 1992 ; The Gerontologist Volume 32 ; 32 ; >
-    au < exists ; exists ; 1993 ; The Gerontologist Volume 33 ; 33 ; >
-    au < exists ; exists ; 1994 ; The Gerontologist Volume 34 ; 34 ; >
-    au < exists ; exists ; 1995 ; The Gerontologist Volume 35 ; 35 ; >
-    au < exists ; exists ; 1996 ; The Gerontologist Volume 36 ; 36 ; >
-    au < exists ; exists ; 1997 ; The Gerontologist Volume 37 ; 37 ; >
-    au < exists ; exists ; 1998 ; The Gerontologist Volume 38 ; 38 ; >
-    au < exists ; exists ; 1999 ; The Gerontologist Volume 39 ; 39 ; >
-    au < exists ; exists ; 2000 ; The Gerontologist Volume 40 ; 40 ; >
-    au < exists ; exists ; 2001 ; The Gerontologist Volume 41 ; 41 ; >
-    au < exists ; exists ; 2002 ; The Gerontologist Volume 42 ; 42 ; >
-    au < exists ; exists ; 2003 ; The Gerontologist Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1961 ; The Gerontologist Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1962 ; The Gerontologist Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1963 ; The Gerontologist Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1964 ; The Gerontologist Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1965 ; The Gerontologist Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1966 ; The Gerontologist Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1967 ; The Gerontologist Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1968 ; The Gerontologist Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1969 ; The Gerontologist Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1970 ; The Gerontologist Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1971 ; The Gerontologist Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1972 ; The Gerontologist Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1973 ; The Gerontologist Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1974 ; The Gerontologist Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1975 ; The Gerontologist Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1976 ; The Gerontologist Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1977 ; The Gerontologist Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1978 ; The Gerontologist Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1979 ; The Gerontologist Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1980 ; The Gerontologist Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1981 ; The Gerontologist Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1982 ; The Gerontologist Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1983 ; The Gerontologist Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1984 ; The Gerontologist Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1985 ; The Gerontologist Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1986 ; The Gerontologist Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1987 ; The Gerontologist Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1988 ; The Gerontologist Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1989 ; The Gerontologist Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1990 ; The Gerontologist Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1991 ; The Gerontologist Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1992 ; The Gerontologist Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1993 ; The Gerontologist Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1994 ; The Gerontologist Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1995 ; The Gerontologist Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1996 ; The Gerontologist Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1997 ; The Gerontologist Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1998 ; The Gerontologist Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1999 ; The Gerontologist Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2000 ; The Gerontologist Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2001 ; The Gerontologist Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2002 ; The Gerontologist Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2003 ; The Gerontologist Volume 43 ; 43 ; >
     au < manifest ; exists ; 2004 ; The Gerontologist Volume 44 ; 44 ; >
     au < manifest ; exists ; 2005 ; The Gerontologist Volume 45 ; 45 ; >
     au < manifest ; exists ; 2006 ; The Gerontologist Volume 46 ; 46 ; >
@@ -5972,34 +5972,34 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 1903-1926 ; ICES Journal of Marine Science Volume s1 ; s1 ; >
-    au < exists ; exists ; 1926 ; ICES Journal of Marine Science Volume 1 ; 1 ; >
-    au < exists ; exists ; 1927 ; ICES Journal of Marine Science Volume 2 ; 2 ; >
-    au < exists ; exists ; 1928 ; ICES Journal of Marine Science Volume 3 ; 3 ; >
-    au < exists ; exists ; 1929 ; ICES Journal of Marine Science Volume 4 ; 4 ; >
-    au < exists ; exists ; 1930 ; ICES Journal of Marine Science Volume 5 ; 5 ; >
-    au < exists ; exists ; 1931 ; ICES Journal of Marine Science Volume 6 ; 6 ; >
-    au < exists ; exists ; 1932 ; ICES Journal of Marine Science Volume 7 ; 7 ; >
-    au < exists ; exists ; 1933 ; ICES Journal of Marine Science Volume 8 ; 8 ; >
-    au < exists ; exists ; 1934 ; ICES Journal of Marine Science Volume 9 ; 9 ; >
-    au < exists ; exists ; 1935 ; ICES Journal of Marine Science Volume 10 ; 10 ; >
-    au < exists ; exists ; 1936 ; ICES Journal of Marine Science Volume 11 ; 11 ; >
-    au < exists ; exists ; 1937 ; ICES Journal of Marine Science Volume 12 ; 12 ; >
-    au < exists ; exists ; 1938 ; ICES Journal of Marine Science Volume 13 ; 13 ; >
-    au < exists ; exists ; 1939 ; ICES Journal of Marine Science Volume 14 ; 14 ; >
-    au < exists ; exists ; 1947 ; ICES Journal of Marine Science Volume 15 ; 15 ; >
-    au < exists ; exists ; 1948 ; ICES Journal of Marine Science Volume 15 ; 15 ; >
-    au < exists ; exists ; 1949 ; ICES Journal of Marine Science Volume 16 ; 16 ; >
-    au < exists ; exists ; 1950 ; ICES Journal of Marine Science Volume 16 ; 16 ; >
-    au < exists ; exists ; 1950-1951 ; ICES Journal of Marine Science Volume 17 ; 17 ; >
-    au < exists ; exists ; 1952-1953 ; ICES Journal of Marine Science Volume 18 ; 18 ; >
-    au < exists ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ; >
-    au < exists ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ; >
-    au < exists ; exists ; 1954-1955 ; ICES Journal of Marine Science Volume 20 ; 20 ; >
-    au < exists ; exists ; 1955-1956 ; ICES Journal of Marine Science Volume 21 ; 21 ; >
-    au < exists ; exists ; 1956-1957 ; ICES Journal of Marine Science Volume 22 ; 22 ; >
-    au < exists ; exists ; 1958 ; ICES Journal of Marine Science Volume 23 ; 23 ; >
-    au < exists ; exists ; 1958-1959 ; ICES Journal of Marine Science Volume 24 ; 24 ; >
-    au < exists ; exists ; 1959-1960 ; ICES Journal of Marine Science Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1926 ; ICES Journal of Marine Science Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1927 ; ICES Journal of Marine Science Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1928 ; ICES Journal of Marine Science Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1929 ; ICES Journal of Marine Science Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1930 ; ICES Journal of Marine Science Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1931 ; ICES Journal of Marine Science Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1932 ; ICES Journal of Marine Science Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1933 ; ICES Journal of Marine Science Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1934 ; ICES Journal of Marine Science Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1935 ; ICES Journal of Marine Science Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1936 ; ICES Journal of Marine Science Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1937 ; ICES Journal of Marine Science Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1938 ; ICES Journal of Marine Science Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1939 ; ICES Journal of Marine Science Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1947 ; ICES Journal of Marine Science Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1948 ; ICES Journal of Marine Science Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1949 ; ICES Journal of Marine Science Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1950 ; ICES Journal of Marine Science Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1950-1951 ; ICES Journal of Marine Science Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1952-1953 ; ICES Journal of Marine Science Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1954-1955 ; ICES Journal of Marine Science Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1955-1956 ; ICES Journal of Marine Science Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1956-1957 ; ICES Journal of Marine Science Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1958 ; ICES Journal of Marine Science Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1958-1959 ; ICES Journal of Marine Science Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1959-1960 ; ICES Journal of Marine Science Volume 25 ; 25 ; >
     au < manifest ; exists ; 1960-1961 ; ICES Journal of Marine Science Volume 26 ; 26 ; >
     au < manifest ; exists ; 1962 ; ICES Journal of Marine Science Volume 27 ; 27 ; >
     au < manifest ; exists ; 1963-1964 ; ICES Journal of Marine Science Volume 28 ; 28 ; >
@@ -7876,22 +7876,22 @@
     param[base_url] = http://jb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1922 ; The Journal of Biochemistry Volume 1 ; 1 ; >
-    au < exists ; exists ; 1922-1923 ; The Journal of Biochemistry Volume 2 ; 2 ; >
-    au < exists ; exists ; 1923-1924 ; The Journal of Biochemistry Volume 3 ; 3 ; >
-    au < exists ; exists ; 1924-1925 ; The Journal of Biochemistry Volume 4 ; 4 ; >
-    au < exists ; exists ; 1925 ; The Journal of Biochemistry Volume 5 ; 5 ; >
-    au < exists ; exists ; 1926 ; The Journal of Biochemistry Volume 6 ; 6 ; >
-    au < exists ; exists ; 1927 ; The Journal of Biochemistry Volume 7 ; 7 ; >
-    au < exists ; exists ; 1927-1928 ; The Journal of Biochemistry Volume 8 ; 8 ; >
-    au < exists ; exists ; 1928 ; The Journal of Biochemistry Volume 9 ; 9 ; >
-    au < exists ; exists ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 ; >
-    au < exists ; exists ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 ; >
-    au < exists ; exists ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 ; >    
-    au < exists ; exists ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 ; >
-    au < exists ; exists ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 ; >
-    au < exists ; exists ; 1932 ; The Journal of Biochemistry Volume 15 ; 15 ; >
-    au < exists ; exists ; 1932 ; The Journal of Biochemistry Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1922 ; The Journal of Biochemistry Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1922-1923 ; The Journal of Biochemistry Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1923-1924 ; The Journal of Biochemistry Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1924-1925 ; The Journal of Biochemistry Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1925 ; The Journal of Biochemistry Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1926 ; The Journal of Biochemistry Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1927 ; The Journal of Biochemistry Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1927-1928 ; The Journal of Biochemistry Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1928 ; The Journal of Biochemistry Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 ; >    
+    au < manifest ; exists ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1932 ; The Journal of Biochemistry Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1932 ; The Journal of Biochemistry Volume 16 ; 16 ; >
     au < manifest ; exists ; 1933 ; The Journal of Biochemistry Volume 17 ; 17 ; >
     au < manifest ; exists ; 1933 ; The Journal of Biochemistry Volume 18 ; 18 ; >
     au < manifest ; exists ; 1934 ; The Journal of Biochemistry Volume 19 ; 19 ; >
@@ -8069,55 +8069,55 @@
     param[base_url] = http://jcs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1959 ; Journal of Church and State Volume 1 ; 1 ; >
-    au < exists ; exists ; 1960 ; Journal of Church and State Volume 2 ; 2 ; >
-    au < exists ; exists ; 1961 ; Journal of Church and State Volume 3 ; 3 ; >
-    au < exists ; exists ; 1962 ; Journal of Church and State Volume 4 ; 4 ; >
-    au < exists ; exists ; 1963 ; Journal of Church and State Volume 5 ; 5 ; >
-    au < exists ; exists ; 1964 ; Journal of Church and State Volume 6 ; 6 ; >
-    au < exists ; exists ; 1965 ; Journal of Church and State Volume 7 ; 7 ; >
-    au < exists ; exists ; 1966 ; Journal of Church and State Volume 8 ; 8 ; >
-    au < exists ; exists ; 1967 ; Journal of Church and State Volume 9 ; 9 ; >
-    au < exists ; exists ; 1968 ; Journal of Church and State Volume 10 ; 10 ; >
-    au < exists ; exists ; 1969 ; Journal of Church and State Volume 11 ; 11 ; >
-    au < exists ; exists ; 1970 ; Journal of Church and State Volume 12 ; 12 ; >
-    au < exists ; exists ; 1971 ; Journal of Church and State Volume 13 ; 13 ; >
-    au < exists ; exists ; 1972 ; Journal of Church and State Volume 14 ; 14 ; >
-    au < exists ; exists ; 1973 ; Journal of Church and State Volume 15 ; 15 ; >
-    au < exists ; exists ; 1974 ; Journal of Church and State Volume 16 ; 16 ; >
-    au < exists ; exists ; 1975 ; Journal of Church and State Volume 17 ; 17 ; >
-    au < exists ; exists ; 1976 ; Journal of Church and State Volume 18 ; 18 ; >
-    au < exists ; exists ; 1977 ; Journal of Church and State Volume 19 ; 19 ; >
-    au < exists ; exists ; 1978 ; Journal of Church and State Volume 20 ; 20 ; >
-    au < exists ; exists ; 1979 ; Journal of Church and State Volume 21 ; 21 ; >
-    au < exists ; exists ; 1980 ; Journal of Church and State Volume 22 ; 22 ; >
-    au < exists ; exists ; 1981 ; Journal of Church and State Volume 23 ; 23 ; >
-    au < exists ; exists ; 1982 ; Journal of Church and State Volume 24 ; 24 ; >
-    au < exists ; exists ; 1983 ; Journal of Church and State Volume 25 ; 25 ; >
-    au < exists ; exists ; 1984 ; Journal of Church and State Volume 26 ; 26 ; >
-    au < exists ; exists ; 1985 ; Journal of Church and State Volume 27 ; 27 ; >
-    au < exists ; exists ; 1986 ; Journal of Church and State Volume 28 ; 28 ; >
-    au < exists ; exists ; 1987 ; Journal of Church and State Volume 29 ; 29 ; >
-    au < exists ; exists ; 1988 ; Journal of Church and State Volume 30 ; 30 ; >
-    au < exists ; exists ; 1989 ; Journal of Church and State Volume 31 ; 31 ; >
-    au < exists ; exists ; 1990 ; Journal of Church and State Volume 32 ; 32 ; >
-    au < exists ; exists ; 1991 ; Journal of Church and State Volume 33 ; 33 ; >
-    au < exists ; exists ; 1992 ; Journal of Church and State Volume 34 ; 34 ; >
-    au < exists ; exists ; 1993 ; Journal of Church and State Volume 35 ; 35 ; >
-    au < exists ; exists ; 1994 ; Journal of Church and State Volume 36 ; 36 ; >
-    au < exists ; exists ; 1995 ; Journal of Church and State Volume 37 ; 37 ; >
-    au < exists ; exists ; 1996 ; Journal of Church and State Volume 38 ; 38 ; >
-    au < exists ; exists ; 1997 ; Journal of Church and State Volume 39 ; 39 ; >
-    au < exists ; exists ; 1998 ; Journal of Church and State Volume 40 ; 40 ; >
-    au < exists ; exists ; 1999 ; Journal of Church and State Volume 41 ; 41 ; >
-    au < exists ; exists ; 2000 ; Journal of Church and State Volume 42 ; 42 ; >
-    au < exists ; exists ; 2001 ; Journal of Church and State Volume 43 ; 43 ; >
-    au < exists ; exists ; 2002 ; Journal of Church and State Volume 44 ; 44 ; >
-    au < exists ; exists ; 2003 ; Journal of Church and State Volume 45 ; 45 ; >
-    au < exists ; exists ; 2004 ; Journal of Church and State Volume 46 ; 46 ; >
-    au < exists ; exists ; 2005 ; Journal of Church and State Volume 47 ; 47 ; >
-    au < exists ; exists ; 2006 ; Journal of Church and State Volume 48 ; 48 ; >
-    au < exists ; exists ; 2007 ; Journal of Church and State Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1959 ; Journal of Church and State Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1960 ; Journal of Church and State Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1961 ; Journal of Church and State Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1962 ; Journal of Church and State Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1963 ; Journal of Church and State Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1964 ; Journal of Church and State Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1965 ; Journal of Church and State Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1966 ; Journal of Church and State Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1967 ; Journal of Church and State Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1968 ; Journal of Church and State Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1969 ; Journal of Church and State Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1970 ; Journal of Church and State Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1971 ; Journal of Church and State Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1972 ; Journal of Church and State Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1973 ; Journal of Church and State Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1974 ; Journal of Church and State Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1975 ; Journal of Church and State Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1976 ; Journal of Church and State Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1977 ; Journal of Church and State Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1978 ; Journal of Church and State Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1979 ; Journal of Church and State Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1980 ; Journal of Church and State Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1981 ; Journal of Church and State Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1982 ; Journal of Church and State Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1983 ; Journal of Church and State Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1984 ; Journal of Church and State Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1985 ; Journal of Church and State Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1986 ; Journal of Church and State Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1987 ; Journal of Church and State Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1988 ; Journal of Church and State Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1989 ; Journal of Church and State Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1990 ; Journal of Church and State Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1991 ; Journal of Church and State Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1992 ; Journal of Church and State Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1993 ; Journal of Church and State Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1994 ; Journal of Church and State Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1995 ; Journal of Church and State Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1996 ; Journal of Church and State Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1997 ; Journal of Church and State Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1998 ; Journal of Church and State Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1999 ; Journal of Church and State Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2000 ; Journal of Church and State Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2001 ; Journal of Church and State Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2002 ; Journal of Church and State Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2003 ; Journal of Church and State Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2004 ; Journal of Church and State Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2005 ; Journal of Church and State Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2006 ; Journal of Church and State Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2007 ; Journal of Church and State Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
     au < released ; manifest ; 2009 ; Journal of Church and State Volume 51 ; 51 ; >
     au < released ; crawling ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
@@ -9691,33 +9691,33 @@
     au < exists ; exists ; 1992 ; Journal of the London Mathematical Society Volume s2-46 ; s2-46 ; >
     au < exists ; exists ; 1993 ; Journal of the London Mathematical Society Volume s2-47 ; s2-47 ; >
     au < exists ; exists ; 1993 ; Journal of the London Mathematical Society Volume s2-48 ; s2-48 ; >
-    au < exists ; exists ; 1994 ; Journal of the London Mathematical Society Volume 49 ; 49 ; >
-    au < exists ; exists ; 1994 ; Journal of the London Mathematical Society Volume 50 ; 50 ; >
-    au < exists ; exists ; 1995 ; Journal of the London Mathematical Society Volume 51 ; 51 ; >
-    au < exists ; exists ; 1995 ; Journal of the London Mathematical Society Volume 52 ; 52 ; >
-    au < exists ; exists ; 1996 ; Journal of the London Mathematical Society Volume 53 ; 53 ; >
-    au < exists ; exists ; 1996 ; Journal of the London Mathematical Society Volume 54 ; 54 ; >
-    au < exists ; exists ; 1997 ; Journal of the London Mathematical Society Volume 55 ; 55 ; >
-    au < exists ; exists ; 1997 ; Journal of the London Mathematical Society Volume 56 ; 56 ; >
-    au < exists ; exists ; 1998 ; Journal of the London Mathematical Society Volume 57 ; 57 ; >
-    au < exists ; exists ; 1998 ; Journal of the London Mathematical Society Volume 58 ; 58 ; >
-    au < exists ; exists ; 1999 ; Journal of the London Mathematical Society Volume 59 ; 59 ; >
-    au < exists ; exists ; 1999 ; Journal of the London Mathematical Society Volume 60 ; 60 ; >
-    au < exists ; exists ; 2000 ; Journal of the London Mathematical Society Volume 61 ; 61 ; >
-    au < exists ; exists ; 2000 ; Journal of the London Mathematical Society Volume 62 ; 62 ; >
-    au < exists ; exists ; 2001 ; Journal of the London Mathematical Society Volume 63 ; 63 ; >
-    au < exists ; exists ; 2001 ; Journal of the London Mathematical Society Volume 64 ; 64 ; >
-    au < exists ; exists ; 2002 ; Journal of the London Mathematical Society Volume 65 ; 65 ; >
-    au < exists ; exists ; 2002 ; Journal of the London Mathematical Society Volume 66 ; 66 ; >
-    au < exists ; exists ; 2003 ; Journal of the London Mathematical Society Volume 67 ; 67 ; >
-    au < exists ; exists ; 2003 ; Journal of the London Mathematical Society Volume 68 ; 68 ; >
-    au < exists ; exists ; 2004 ; Journal of the London Mathematical Society Volume 69 ; 69 ; >
-    au < exists ; exists ; 2004 ; Journal of the London Mathematical Society Volume 70 ; 70 ; >
-    au < exists ; exists ; 2005 ; Journal of the London Mathematical Society Volume 71 ; 71 ; >
-    au < exists ; exists ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; >
-    au < exists ; exists ; 2006 ; Journal of the London Mathematical Society Volume 73 ; 73 ; >
-    au < exists ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
-    au < exists ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
+    au < manifest ; exists ; 1994 ; Journal of the London Mathematical Society Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1994 ; Journal of the London Mathematical Society Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1995 ; Journal of the London Mathematical Society Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1995 ; Journal of the London Mathematical Society Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1996 ; Journal of the London Mathematical Society Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1996 ; Journal of the London Mathematical Society Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1997 ; Journal of the London Mathematical Society Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1997 ; Journal of the London Mathematical Society Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1998 ; Journal of the London Mathematical Society Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1998 ; Journal of the London Mathematical Society Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1999 ; Journal of the London Mathematical Society Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1999 ; Journal of the London Mathematical Society Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2000 ; Journal of the London Mathematical Society Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2000 ; Journal of the London Mathematical Society Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2001 ; Journal of the London Mathematical Society Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2001 ; Journal of the London Mathematical Society Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2002 ; Journal of the London Mathematical Society Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2002 ; Journal of the London Mathematical Society Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2003 ; Journal of the London Mathematical Society Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2003 ; Journal of the London Mathematical Society Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2004 ; Journal of the London Mathematical Society Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2004 ; Journal of the London Mathematical Society Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2005 ; Journal of the London Mathematical Society Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2005 ; Journal of the London Mathematical Society Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2006 ; Journal of the London Mathematical Society Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2006 ; Journal of the London Mathematical Society Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2007 ; Journal of the London Mathematical Society Volume 75 ; 75 ; >
     au < wanted ; exists ; 2007 ; Journal of the London Mathematical Society Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
@@ -9851,57 +9851,57 @@
     param[base_url] = http://mollus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ; >
-    au < exists ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ; >
-    au < exists ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ; >
-    au < exists ; exists ; 1900-1901 ; Journal of Molluscan Studies Volume 4 ; 4 ; >
-    au < exists ; exists ; 1902-1903 ; Journal of Molluscan Studies Volume 5 ; 5 ; >
-    au < exists ; exists ; 1904-1905 ; Journal of Molluscan Studies Volume 6 ; 6 ; >
-    au < exists ; exists ; 1906-1907 ; Journal of Molluscan Studies Volume 7 ; 7 ; >
-    au < exists ; exists ; 1908-1909 ; Journal of Molluscan Studies Volume 8 ; 8 ; >
-    au < exists ; exists ; 1910-1911 ; Journal of Molluscan Studies Volume 9 ; 9 ; >
-    au < exists ; exists ; 1912-1913 ; Journal of Molluscan Studies Volume 10 ; 10 ; >
-    au < exists ; exists ; 1914-1915 ; Journal of Molluscan Studies Volume 11 ; 11 ; >
-    au < exists ; exists ; 1916-1917 ; Journal of Molluscan Studies Volume 12 ; 12 ; >
-    au < exists ; exists ; 1918-1919 ; Journal of Molluscan Studies Volume 13 ; 13 ; >
-    au < exists ; exists ; 1920-1921 ; Journal of Molluscan Studies Volume 14 ; 14 ; >
-    au < exists ; exists ; 1922-1923 ; Journal of Molluscan Studies Volume 15 ; 15 ; >
-    au < exists ; exists ; 1924-1925 ; Journal of Molluscan Studies Volume 16 ; 16 ; >
-    au < exists ; exists ; 1926-1927 ; Journal of Molluscan Studies Volume 17 ; 17 ; >
-    au < exists ; exists ; 1928-1929 ; Journal of Molluscan Studies Volume 18 ; 18 ; >
-    au < exists ; exists ; 1930-1931 ; Journal of Molluscan Studies Volume 19 ; 19 ; >
-    au < exists ; exists ; 1932-1933 ; Journal of Molluscan Studies Volume 20 ; 20 ; >
-    au < exists ; exists ; 1934-1935 ; Journal of Molluscan Studies Volume 21 ; 21 ; >
-    au < exists ; exists ; 1936-1937 ; Journal of Molluscan Studies Volume 22 ; 22 ; >
-    au < exists ; exists ; 1938-1939 ; Journal of Molluscan Studies Volume 23 ; 23 ; >
-    au < exists ; exists ; 1940-1941 ; Journal of Molluscan Studies Volume 24 ; 24 ; >
-    au < exists ; exists ; 1942-1943 ; Journal of Molluscan Studies Volume 25 ; 25 ; >
-    au < exists ; exists ; 1944-1945 ; Journal of Molluscan Studies Volume 26 ; 26 ; >
-    au < exists ; exists ; 1946-1947 ; Journal of Molluscan Studies Volume 27 ; 27 ; >
-    au < exists ; exists ; 1948-1949 ; Journal of Molluscan Studies Volume 28 ; 28 ; >
-    au < exists ; exists ; 1950-1951 ; Journal of Molluscan Studies Volume 29 ; 29 ; >
-    au < exists ; exists ; 1952-1953 ; Journal of Molluscan Studies Volume 30 ; 30 ; >
-    au < exists ; exists ; 1954-1955 ; Journal of Molluscan Studies Volume 31 ; 31 ; >
-    au < exists ; exists ; 1956-1957 ; Journal of Molluscan Studies Volume 32 ; 32 ; >
-    au < exists ; exists ; 1958-1959 ; Journal of Molluscan Studies Volume 33 ; 33 ; >
-    au < exists ; exists ; 1960-1961 ; Journal of Molluscan Studies Volume 34 ; 34 ; >
-    au < exists ; exists ; 1962-1963 ; Journal of Molluscan Studies Volume 35 ; 35 ; >
-    au < exists ; exists ; 1964-1965 ; Journal of Molluscan Studies Volume 36 ; 36 ; >
-    au < exists ; exists ; 1966-1967 ; Journal of Molluscan Studies Volume 37 ; 37 ; >
-    au < exists ; exists ; 1968-1969 ; Journal of Molluscan Studies Volume 38 ; 38 ; >
-    au < exists ; exists ; 1970-1971 ; Journal of Molluscan Studies Volume 39 ; 39 ; >
-    au < exists ; exists ; 1972-1973 ; Journal of Molluscan Studies Volume 40 ; 40 ; >
-    au < exists ; exists ; 1974-1975 ; Journal of Molluscan Studies Volume 41 ; 41 ; >
-    au < exists ; exists ; 1976 ; Journal of Molluscan Studies Volume 42 ; 42 ; >
-    au < exists ; exists ; 1977 ; Journal of Molluscan Studies Volume 43 ; 43 ; >
-    au < exists ; exists ; 1978 ; Journal of Molluscan Studies Volume 44 ; 44 ; >
-    au < exists ; exists ; 1979 ; Journal of Molluscan Studies Volume 45 ; 45 ; >
-    au < exists ; exists ; 1980 ; Journal of Molluscan Studies Volume 46 ; 46 ; >
-    au < exists ; exists ; 1981 ; Journal of Molluscan Studies Volume 47 ; 47 ; >
-    au < exists ; exists ; 1982 ; Journal of Molluscan Studies Volume 48 ; 48 ; >
-    au < exists ; exists ; 1983 ; Journal of Molluscan Studies Volume 49 ; 49 ; >
-    au < exists ; exists ; 1984 ; Journal of Molluscan Studies Volume 50 ; 50 ; >
-    au < exists ; exists ; 1985 ; Journal of Molluscan Studies Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1893-1895 ; Journal of Molluscan Studies Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1896-1897 ; Journal of Molluscan Studies Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1898-1899 ; Journal of Molluscan Studies Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1900-1901 ; Journal of Molluscan Studies Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1902-1903 ; Journal of Molluscan Studies Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1904-1905 ; Journal of Molluscan Studies Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1906-1907 ; Journal of Molluscan Studies Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1908-1909 ; Journal of Molluscan Studies Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1910-1911 ; Journal of Molluscan Studies Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1912-1913 ; Journal of Molluscan Studies Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1914-1915 ; Journal of Molluscan Studies Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1916-1917 ; Journal of Molluscan Studies Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1918-1919 ; Journal of Molluscan Studies Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1920-1921 ; Journal of Molluscan Studies Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1922-1923 ; Journal of Molluscan Studies Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1924-1925 ; Journal of Molluscan Studies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1926-1927 ; Journal of Molluscan Studies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1928-1929 ; Journal of Molluscan Studies Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1930-1931 ; Journal of Molluscan Studies Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1932-1933 ; Journal of Molluscan Studies Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1934-1935 ; Journal of Molluscan Studies Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1936-1937 ; Journal of Molluscan Studies Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1938-1939 ; Journal of Molluscan Studies Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1940-1941 ; Journal of Molluscan Studies Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1942-1943 ; Journal of Molluscan Studies Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1944-1945 ; Journal of Molluscan Studies Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1946-1947 ; Journal of Molluscan Studies Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1948-1949 ; Journal of Molluscan Studies Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1950-1951 ; Journal of Molluscan Studies Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1952-1953 ; Journal of Molluscan Studies Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1954-1955 ; Journal of Molluscan Studies Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1956-1957 ; Journal of Molluscan Studies Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1958-1959 ; Journal of Molluscan Studies Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1960-1961 ; Journal of Molluscan Studies Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1962-1963 ; Journal of Molluscan Studies Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1964-1965 ; Journal of Molluscan Studies Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1966-1967 ; Journal of Molluscan Studies Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1968-1969 ; Journal of Molluscan Studies Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1970-1971 ; Journal of Molluscan Studies Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1972-1973 ; Journal of Molluscan Studies Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1974-1975 ; Journal of Molluscan Studies Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1976 ; Journal of Molluscan Studies Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1977 ; Journal of Molluscan Studies Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1978 ; Journal of Molluscan Studies Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1979 ; Journal of Molluscan Studies Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1980 ; Journal of Molluscan Studies Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1981 ; Journal of Molluscan Studies Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1982 ; Journal of Molluscan Studies Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1983 ; Journal of Molluscan Studies Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1984 ; Journal of Molluscan Studies Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1985 ; Journal of Molluscan Studies Volume 51 ; 51 ; >
     au < manifest ; exists ; 1986 ; Journal of Molluscan Studies Volume 52 ; 52 ; >
     au < manifest ; exists ; 1987 ; Journal of Molluscan Studies Volume 53 ; 53 ; >
     au < manifest ; exists ; 1988 ; Journal of Molluscan Studies Volume 54 ; 54 ; >
@@ -11202,7 +11202,7 @@
     au < exists ; exists ; 2003 ; The Library Volume 4 ; 4 ; >
     au < exists ; exists ; 2004 ; The Library Volume 5 ; 5 ; >
     au < exists ; exists ; 2005 ; The Library Volume 6 ; 6 ; >
-    au < exists ; exists ; 2006 ; The Library Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; The Library Volume 7 ; 7 ; >
     au < wanted ; exists ; 2007 ; The Library Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Library Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Library Volume 10 ; 10 ; >
@@ -12492,29 +12492,29 @@
     au < exists ; exists ; 1935 ; Notes and Queries Volume CLXIX ; CLXIX ; >
     au < exists ; exists ; 1936 ; Notes and Queries Volume CLXX ; CLXX ; >
     au < exists ; exists ; 1936 ; Notes and Queries Volume CLXXI ; CLXXI ; >
-    au < exists ; exists ; 1937 ; Notes and Queries Volume 172 ; 172 ; >
-    au < exists ; exists ; 1937 ; Notes and Queries Volume 173 ; 173 ; >
-    au < exists ; exists ; 1938 ; Notes and Queries Volume 174 ; 174 ; >
-    au < exists ; exists ; 1938 ; Notes and Queries Volume 175 ; 175 ; >
-    au < exists ; exists ; 1939 ; Notes and Queries Volume 176 ; 176 ; >
-    au < exists ; exists ; 1939 ; Notes and Queries Volume 177 ; 177 ; >
-    au < exists ; exists ; 1940 ; Notes and Queries Volume 178 ; 178 ; >
-    au < exists ; exists ; 1940 ; Notes and Queries Volume 179 ; 179 ; >
-    au < exists ; exists ; 1941 ; Notes and Queries Volume 180 ; 180 ; >
-    au < exists ; exists ; 1941 ; Notes and Queries Volume 181 ; 181 ; >
-    au < exists ; exists ; 1942 ; Notes and Queries Volume 182 ; 182 ; >
-    au < exists ; exists ; 1942 ; Notes and Queries Volume 183 ; 183 ; >
-    au < exists ; exists ; 1943 ; Notes and Queries Volume 184 ; 184 ; >
-    au < exists ; exists ; 1943 ; Notes and Queries Volume 185 ; 185 ; >
-    au < exists ; exists ; 1944 ; Notes and Queries Volume 186 ; 186 ; >
-    au < exists ; exists ; 1944 ; Notes and Queries Volume 187 ; 187 ; >
-    au < exists ; exists ; 1945 ; Notes and Queries Volume 188 ; 188 ; >
-    au < exists ; exists ; 1945 ; Notes and Queries Volume 189 ; 189 ; >
-    au < exists ; exists ; 1946 ; Notes and Queries Volume 190 ; 190 ; >
-    au < exists ; exists ; 1946 ; Notes and Queries Volume 191 ; 191 ; >       
-    au < exists ; exists ; 1947 ; Notes and Queries Volume 192 ; 192 ; >
-    au < exists ; exists ; 1948 ; Notes and Queries Volume 193 ; 193 ; >
-    au < exists ; exists ; 1949 ; Notes and Queries Volume 194 ; 194 ; >
+    au < manifest ; exists ; 1937 ; Notes and Queries Volume 172 ; 172 ; >
+    au < manifest ; exists ; 1937 ; Notes and Queries Volume 173 ; 173 ; >
+    au < manifest ; exists ; 1938 ; Notes and Queries Volume 174 ; 174 ; >
+    au < manifest ; exists ; 1938 ; Notes and Queries Volume 175 ; 175 ; >
+    au < manifest ; exists ; 1939 ; Notes and Queries Volume 176 ; 176 ; >
+    au < manifest ; exists ; 1939 ; Notes and Queries Volume 177 ; 177 ; >
+    au < manifest ; exists ; 1940 ; Notes and Queries Volume 178 ; 178 ; >
+    au < manifest ; exists ; 1940 ; Notes and Queries Volume 179 ; 179 ; >
+    au < manifest ; exists ; 1941 ; Notes and Queries Volume 180 ; 180 ; >
+    au < manifest ; exists ; 1941 ; Notes and Queries Volume 181 ; 181 ; >
+    au < manifest ; exists ; 1942 ; Notes and Queries Volume 182 ; 182 ; >
+    au < manifest ; exists ; 1942 ; Notes and Queries Volume 183 ; 183 ; >
+    au < manifest ; exists ; 1943 ; Notes and Queries Volume 184 ; 184 ; >
+    au < manifest ; exists ; 1943 ; Notes and Queries Volume 185 ; 185 ; >
+    au < manifest ; exists ; 1944 ; Notes and Queries Volume 186 ; 186 ; >
+    au < manifest ; exists ; 1944 ; Notes and Queries Volume 187 ; 187 ; >
+    au < manifest ; exists ; 1945 ; Notes and Queries Volume 188 ; 188 ; >
+    au < manifest ; exists ; 1945 ; Notes and Queries Volume 189 ; 189 ; >
+    au < manifest ; exists ; 1946 ; Notes and Queries Volume 190 ; 190 ; >
+    au < manifest ; exists ; 1946 ; Notes and Queries Volume 191 ; 191 ; >       
+    au < manifest ; exists ; 1947 ; Notes and Queries Volume 192 ; 192 ; >
+    au < manifest ; exists ; 1948 ; Notes and Queries Volume 193 ; 193 ; >
+    au < manifest ; exists ; 1949 ; Notes and Queries Volume 194 ; 194 ; >
     au < exists ; exists ; 1950 ; Notes and Queries Volume 195 ; 195 ; >
     au < exists ; exists ; 1950 ; Notes and Queries Volume CXCV ; CXCV ; >
     au < exists ; exists ; 1951 ; Notes and Queries Volume CXCVI ; CXCVI ; >    
@@ -12535,13 +12535,13 @@
     au < exists ; exists ; 1964 ; Notes and Queries Volume 11 ; 11 ; >
     au < exists ; exists ; 1965 ; Notes and Queries Volume 12 ; 12 ; >
     au < exists ; exists ; 1966 ; Notes and Queries Volume 13 ; 13 ; >
-    au < exists ; exists ; 1967 ; Notes and Queries Volume 14 ; 14 ; >
-    au < exists ; exists ; 1968 ; Notes and Queries Volume 15 ; 15 ; >
-    au < exists ; exists ; 1969 ; Notes and Queries Volume 16 ; 16 ; >
-    au < exists ; exists ; 1970 ; Notes and Queries Volume 17 ; 17 ; >
-    au < exists ; exists ; 1971 ; Notes and Queries Volume 18 ; 18 ; >
-    au < exists ; exists ; 1972 ; Notes and Queries Volume 19 ; 19 ; >
-    au < exists ; exists ; 1973 ; Notes and Queries Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1967 ; Notes and Queries Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1968 ; Notes and Queries Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1969 ; Notes and Queries Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1970 ; Notes and Queries Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1971 ; Notes and Queries Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1972 ; Notes and Queries Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1973 ; Notes and Queries Volume 20 ; 20 ; >
     au < manifest ; exists ; 1974 ; Notes and Queries Volume 21 ; 21 ; >
     au < manifest ; exists ; 1975 ; Notes and Queries Volume 22 ; 22 ; >
     au < manifest ; exists ; 1976 ; Notes and Queries Volume 23 ; 23 ; >
@@ -12901,39 +12901,39 @@
     param[base_url] = http://ohr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1973 ; The Oral History Review Volume 1 ; 1 ; >
-    au < exists ; exists ; 1974 ; The Oral History Review Volume 2 ; 2 ; >
-    au < exists ; exists ; 1975 ; The Oral History Review Volume 3 ; 3 ; >
-    au < exists ; exists ; 1976 ; The Oral History Review Volume 4 ; 4 ; >
-    au < exists ; exists ; 1977 ; The Oral History Review Volume 5 ; 5 ; >
-    au < exists ; exists ; 1978 ; The Oral History Review Volume 6 ; 6 ; >
-    au < exists ; exists ; 1979 ; The Oral History Review Volume 7 ; 7 ; >
-    au < exists ; exists ; 1980 ; The Oral History Review Volume 8 ; 8 ; >
-    au < exists ; exists ; 1981 ; The Oral History Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 1982 ; The Oral History Review Volume 10 ; 10 ; >
-    au < exists ; exists ; 1983 ; The Oral History Review Volume 11 ; 11 ; >
-    au < exists ; exists ; 1984 ; The Oral History Review Volume 12 ; 12 ; >
-    au < exists ; exists ; 1985 ; The Oral History Review Volume 13 ; 13 ; >
-    au < exists ; exists ; 1986 ; The Oral History Review Volume 14 ; 14 ; >
-    au < exists ; exists ; 1987 ; The Oral History Review Volume 15 ; 15 ; >
-    au < exists ; exists ; 1988 ; The Oral History Review Volume 16 ; 16 ; >
-    au < exists ; exists ; 1989 ; The Oral History Review Volume 17 ; 17 ; >
-    au < exists ; exists ; 1990 ; The Oral History Review Volume 18 ; 18 ; >
-    au < exists ; exists ; 1991 ; The Oral History Review Volume 19 ; 19 ; >
-    au < exists ; exists ; 1992 ; The Oral History Review Volume 20 ; 20 ; >
-    au < exists ; exists ; 1993 ; The Oral History Review Volume 21 ; 21 ; >
-    au < exists ; exists ; 1995 ; The Oral History Review Volume 22 ; 22 ; >
-    au < exists ; exists ; 1996 ; The Oral History Review Volume 23 ; 23 ; >
-    au < exists ; exists ; 1997 ; The Oral History Review Volume 24 ; 24 ; >
-    au < exists ; exists ; 1998 ; The Oral History Review Volume 25 ; 25 ; >
-    au < exists ; exists ; 1999 ; The Oral History Review Volume 26 ; 26 ; >
-    au < exists ; exists ; 2000 ; The Oral History Review Volume 27 ; 27 ; >
-    au < exists ; exists ; 2001 ; The Oral History Review Volume 28 ; 28 ; >
-    au < exists ; exists ; 2002 ; The Oral History Review Volume 29 ; 29 ; >
-    au < exists ; exists ; 2003 ; The Oral History Review Volume 30 ; 30 ; >
-    au < exists ; exists ; 2004 ; The Oral History Review Volume 31 ; 31 ; >
-    au < exists ; exists ; 2005 ; The Oral History Review Volume 32 ; 32 ; >
-    au < exists ; exists ; 2006 ; The Oral History Review Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1973 ; The Oral History Review Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1974 ; The Oral History Review Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1975 ; The Oral History Review Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1976 ; The Oral History Review Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1977 ; The Oral History Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1978 ; The Oral History Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1979 ; The Oral History Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1980 ; The Oral History Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1981 ; The Oral History Review Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1982 ; The Oral History Review Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1983 ; The Oral History Review Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1984 ; The Oral History Review Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1985 ; The Oral History Review Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1986 ; The Oral History Review Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1987 ; The Oral History Review Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1988 ; The Oral History Review Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1989 ; The Oral History Review Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1990 ; The Oral History Review Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1991 ; The Oral History Review Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1992 ; The Oral History Review Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1993 ; The Oral History Review Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1995 ; The Oral History Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1996 ; The Oral History Review Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1997 ; The Oral History Review Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1998 ; The Oral History Review Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1999 ; The Oral History Review Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2000 ; The Oral History Review Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2001 ; The Oral History Review Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2002 ; The Oral History Review Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2003 ; The Oral History Review Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2004 ; The Oral History Review Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2005 ; The Oral History Review Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2006 ; The Oral History Review Volume 33 ; 33 ; >
     au < wanted ; exists ; 2007 ; The Oral History Review Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
@@ -12968,35 +12968,35 @@
     param[base_url] = http://oaj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1978 ; Oxford Art Journa Volume 1 ; 1 ; >
-    au < exists ; exists ; 1979 ; Oxford Art Journa Volume 2 ; 2 ; >
-    au < exists ; exists ; 1980 ; Oxford Art Journa Volume 3 ; 3 ; >
-    au < exists ; exists ; 1981 ; Oxford Art Journa Volume 4 ; 4 ; >
-    au < exists ; exists ; 1982 ; Oxford Art Journa Volume 5 ; 5 ; >
-    au < exists ; exists ; 1983 ; Oxford Art Journa Volume 6 ; 6 ; >
-    au < exists ; exists ; 1984 ; Oxford Art Journa Volume 7 ; 7 ; >
-    au < exists ; exists ; 1985 ; Oxford Art Journa Volume 8 ; 8 ; >
-    au < exists ; exists ; 1986 ; Oxford Art Journa Volume 9 ; 9 ; >
-    au < exists ; exists ; 1987 ; Oxford Art Journa Volume 10 ; 10 ; >
-    au < exists ; exists ; 1988 ; Oxford Art Journa Volume 11 ; 11 ; >
-    au < exists ; exists ; 1989 ; Oxford Art Journa Volume 12 ; 12 ; >
-    au < exists ; exists ; 1990 ; Oxford Art Journa Volume 13 ; 13 ; >
-    au < exists ; exists ; 1991 ; Oxford Art Journa Volume 14 ; 14 ; >
-    au < exists ; exists ; 1992 ; Oxford Art Journa Volume 15 ; 15 ; >
-    au < exists ; exists ; 1993 ; Oxford Art Journa Volume 16 ; 16 ; >
-    au < exists ; exists ; 1994 ; Oxford Art Journa Volume 17 ; 17 ; >
-    au < exists ; exists ; 1995 ; Oxford Art Journa Volume 18 ; 18 ; >
-    au < exists ; exists ; 1996 ; Oxford Art Journa Volume 19 ; 19 ; >
-    au < exists ; exists ; 1997 ; Oxford Art Journa Volume 20 ; 20 ; >
-    au < exists ; exists ; 1998 ; Oxford Art Journa Volume 21 ; 21 ; >
-    au < exists ; exists ; 1999 ; Oxford Art Journa Volume 22 ; 22 ; >
-    au < exists ; exists ; 2000 ; Oxford Art Journa Volume 23 ; 23 ; >
-    au < exists ; exists ; 2001 ; Oxford Art Journa Volume 24 ; 24 ; >
-    au < exists ; exists ; 2002 ; Oxford Art Journa Volume 25 ; 25 ; >
-    au < exists ; exists ; 2003 ; Oxford Art Journa Volume 26 ; 26 ; >
-    au < exists ; exists ; 2004 ; Oxford Art Journa Volume 27 ; 27 ; >
-    au < exists ; exists ; 2005 ; Oxford Art Journa Volume 28 ; 28 ; >
-    au < exists ; exists ; 2006 ; Oxford Art Journa Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1978 ; Oxford Art Journa Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1979 ; Oxford Art Journa Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1980 ; Oxford Art Journa Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1981 ; Oxford Art Journa Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1982 ; Oxford Art Journa Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1983 ; Oxford Art Journa Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1984 ; Oxford Art Journa Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1985 ; Oxford Art Journa Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1986 ; Oxford Art Journa Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1987 ; Oxford Art Journa Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1988 ; Oxford Art Journa Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1989 ; Oxford Art Journa Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1990 ; Oxford Art Journa Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1991 ; Oxford Art Journa Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1992 ; Oxford Art Journa Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1993 ; Oxford Art Journa Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1994 ; Oxford Art Journa Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1995 ; Oxford Art Journa Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1996 ; Oxford Art Journa Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1997 ; Oxford Art Journa Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1998 ; Oxford Art Journa Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1999 ; Oxford Art Journa Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2000 ; Oxford Art Journa Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2001 ; Oxford Art Journa Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2002 ; Oxford Art Journa Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2003 ; Oxford Art Journa Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2004 ; Oxford Art Journa Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2005 ; Oxford Art Journa Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2006 ; Oxford Art Journa Volume 29 ; 29 ; >
     au < wanted ; exists ; 2007 ; Oxford Art Journa Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Oxford Art Journa Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Art Journa Volume 32 ; 32 ; >
@@ -13655,54 +13655,54 @@
     param[base_url] = http://pcp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1959-1960 ; Plant and Cell Physiology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1961 ; Plant and Cell Physiology Volume 2 ; 2 ; >
-    au < exists ; exists ; 1962 ; Plant and Cell Physiology Volume 3 ; 3 ; >
-    au < exists ; exists ; 1963 ; Plant and Cell Physiology Volume 4 ; 4 ; >
-    au < exists ; exists ; 1964 ; Plant and Cell Physiology Volume 5 ; 5 ; >
-    au < exists ; exists ; 1965 ; Plant and Cell Physiology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1966 ; Plant and Cell Physiology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1967 ; Plant and Cell Physiology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1968 ; Plant and Cell Physiology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1969 ; Plant and Cell Physiology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1970 ; Plant and Cell Physiology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1971 ; Plant and Cell Physiology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1972 ; Plant and Cell Physiology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1973 ; Plant and Cell Physiology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1974 ; Plant and Cell Physiology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1975 ; Plant and Cell Physiology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1976 ; Plant and Cell Physiology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1977 ; Plant and Cell Physiology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1978 ; Plant and Cell Physiology Volume 19 ; 19 ; >
-    au < exists ; exists ; 1979 ; Plant and Cell Physiology Volume 20 ; 20 ; >
-    au < exists ; exists ; 1980 ; Plant and Cell Physiology Volume 21 ; 21 ; >
-    au < exists ; exists ; 1981 ; Plant and Cell Physiology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1982 ; Plant and Cell Physiology Volume 23 ; 23 ; >
-    au < exists ; exists ; 1983 ; Plant and Cell Physiology Volume 24 ; 24 ; >
-    au < exists ; exists ; 1984 ; Plant and Cell Physiology Volume 25 ; 25 ; >
-    au < exists ; exists ; 1985 ; Plant and Cell Physiology Volume 26 ; 26 ; >
-    au < exists ; exists ; 1986 ; Plant and Cell Physiology Volume 27 ; 27 ; >
-    au < exists ; exists ; 1987 ; Plant and Cell Physiology Volume 28 ; 28 ; >
-    au < exists ; exists ; 1988 ; Plant and Cell Physiology Volume 29 ; 29 ; >
-    au < exists ; exists ; 1989 ; Plant and Cell Physiology Volume 30 ; 30 ; >
-    au < exists ; exists ; 1990 ; Plant and Cell Physiology Volume 31 ; 31 ; >
-    au < exists ; exists ; 1991 ; Plant and Cell Physiology Volume 32 ; 32 ; >
-    au < exists ; exists ; 1992 ; Plant and Cell Physiology Volume 33 ; 33 ; >
-    au < exists ; exists ; 1993 ; Plant and Cell Physiology Volume 34 ; 34 ; >
-    au < exists ; exists ; 1994 ; Plant and Cell Physiology Volume 35 ; 35 ; >
-    au < exists ; exists ; 1995 ; Plant and Cell Physiology Volume 36 ; 36 ; >
-    au < exists ; exists ; 1996 ; Plant and Cell Physiology Volume 37 ; 37 ; >
-    au < exists ; exists ; 1997 ; Plant and Cell Physiology Volume 38 ; 38 ; >
-    au < exists ; exists ; 1998 ; Plant and Cell Physiology Volume 39 ; 39 ; >
-    au < exists ; exists ; 1999 ; Plant and Cell Physiology Volume 40 ; 40 ; >
-    au < exists ; exists ; 2000 ; Plant and Cell Physiology Volume 41 ; 41 ; >
-    au < exists ; exists ; 2001 ; Plant and Cell Physiology Volume 42 ; 42 ; >
-    au < exists ; exists ; 2002 ; Plant and Cell Physiology Volume 43 ; 43 ; >
-    au < exists ; exists ; 2003 ; Plant and Cell Physiology Volume 44 ; 44 ; >
-    au < exists ; exists ; 2004 ; Plant and Cell Physiology Volume 45 ; 45 ; >
-    au < exists ; exists ; 2005 ; Plant and Cell Physiology Volume 46 ; 46 ; >
-    au < exists ; exists ; 2006 ; Plant and Cell Physiology Volume 47 ; 47 ; >
-    au < exists ; exists ; 2007 ; Plant and Cell Physiology Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1959-1960 ; Plant and Cell Physiology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1961 ; Plant and Cell Physiology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1962 ; Plant and Cell Physiology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1963 ; Plant and Cell Physiology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1964 ; Plant and Cell Physiology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1965 ; Plant and Cell Physiology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1966 ; Plant and Cell Physiology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1967 ; Plant and Cell Physiology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1968 ; Plant and Cell Physiology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1969 ; Plant and Cell Physiology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1970 ; Plant and Cell Physiology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1971 ; Plant and Cell Physiology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1972 ; Plant and Cell Physiology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1973 ; Plant and Cell Physiology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1974 ; Plant and Cell Physiology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1975 ; Plant and Cell Physiology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1976 ; Plant and Cell Physiology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1977 ; Plant and Cell Physiology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1978 ; Plant and Cell Physiology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1979 ; Plant and Cell Physiology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1980 ; Plant and Cell Physiology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1981 ; Plant and Cell Physiology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1982 ; Plant and Cell Physiology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1983 ; Plant and Cell Physiology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1984 ; Plant and Cell Physiology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1985 ; Plant and Cell Physiology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1986 ; Plant and Cell Physiology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1987 ; Plant and Cell Physiology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1988 ; Plant and Cell Physiology Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1989 ; Plant and Cell Physiology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1990 ; Plant and Cell Physiology Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1991 ; Plant and Cell Physiology Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1992 ; Plant and Cell Physiology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1993 ; Plant and Cell Physiology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1994 ; Plant and Cell Physiology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1995 ; Plant and Cell Physiology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1996 ; Plant and Cell Physiology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1997 ; Plant and Cell Physiology Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1998 ; Plant and Cell Physiology Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1999 ; Plant and Cell Physiology Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2000 ; Plant and Cell Physiology Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2001 ; Plant and Cell Physiology Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2002 ; Plant and Cell Physiology Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2003 ; Plant and Cell Physiology Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2004 ; Plant and Cell Physiology Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2005 ; Plant and Cell Physiology Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2006 ; Plant and Cell Physiology Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2007 ; Plant and Cell Physiology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
@@ -13770,21 +13770,21 @@
     param[base_url] = http://pan.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1989 ; Political Analysis Volume 1 ; 1 ; >
-    au < exists ; exists ; 1990 ; Political Analysis Volume 2 ; 2 ; >
-    au < exists ; exists ; 1991 ; Political Analysis Volume 3 ; 3 ; >
-    au < exists ; exists ; 1992 ; Political Analysis Volume 4 ; 4 ; >
-    au < exists ; exists ; 1993 ; Political Analysis Volume 5 ; 5 ; >
-    au < exists ; exists ; 1996 ; Political Analysis Volume 6 ; 6 ; >
-    au < exists ; exists ; 1998 ; Political Analysis Volume 7 ; 7 ; >
-    au < exists ; exists ; 1999-2000 ; Political Analysis Volume 8 ; 8 ; >
-    au < exists ; exists ; 2001 ; Political Analysis Volume 9 ; 9 ; >    
-    au < exists ; exists ; 2002 ; Political Analysis Volume 10 ; 10 ; >
-    au < exists ; exists ; 2003 ; Political Analysis Volume 11 ; 11 ; >
-    au < exists ; exists ; 2004 ; Political Analysis Volume 12 ; 12 ; >
-    au < exists ; exists ; 2005 ; Political Analysis Volume 13 ; 13 ; >
-    au < exists ; exists ; 2006 ; Political Analysis Volume 14 ; 14 ; >
-    au < exists ; exists ; 2007 ; Political Analysis Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1989 ; Political Analysis Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1990 ; Political Analysis Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1991 ; Political Analysis Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1992 ; Political Analysis Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1993 ; Political Analysis Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1996 ; Political Analysis Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1998 ; Political Analysis Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1999-2000 ; Political Analysis Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2001 ; Political Analysis Volume 9 ; 9 ; >    
+    au < manifest ; exists ; 2002 ; Political Analysis Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2003 ; Political Analysis Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2004 ; Political Analysis Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005 ; Political Analysis Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2006 ; Political Analysis Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2007 ; Political Analysis Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Political Analysis Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Political Analysis Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Political Analysis Volume 18 ; 18 ; >
@@ -13861,12 +13861,6 @@
     au < exists ; exists ; 1907 ; Proceedings of the London Mathematical Society Volume s2-4 ; s2-4 ; >
     au < exists ; exists ; 1907 ; Proceedings of the London Mathematical Society Volume s2-5 ; s2-5 ; >
     au < exists ; exists ; 1908 ; Proceedings of the London Mathematical Society Volume s2-6 ; s2-6 ; >
-    au < exists ; exists ; 1910 ; Proceedings of the London Mathematical Society Volume s2-7 ; s2-7 ; >
-    au < exists ; exists ; 1911 ; Proceedings of the London Mathematical Society Volume s2-8 ; s2-8 ; >
-    au < exists ; exists ; 1912 ; Proceedings of the London Mathematical Society Volume s2-9 ; s2-9 ; >
-    au < exists ; exists ; 1913 ; Proceedings of the London Mathematical Society Volume s2-10 ; s2-10 ; >
-    au < exists ; exists ; 1914 ; Proceedings of the London Mathematical Society Volume s2-11 ; s2-11 ; >
-    au < exists ; exists ; 1915 ; Proceedings of the London Mathematical Society Volume s2-12 ; s2-12 ; >
     au < exists ; exists ; 1909 ; Proceedings of the London Mathematical Society Volume s2-7 ; s2-7 ; >
     au < exists ; exists ; 1910 ; Proceedings of the London Mathematical Society Volume s2-8 ; s2-8 ; >
     au < exists ; exists ; 1911 ; Proceedings of the London Mathematical Society Volume s2-9 ; s2-9 ; >
@@ -14908,37 +14902,37 @@
     param[base_url] = http://rpc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1977 ; Reports of Patent, Design and Trade Mark Cases Volume 94 ; 94 ; >
-    au < exists ; exists ; 1978 ; Reports of Patent, Design and Trade Mark Cases Volume 95 ; 95 ; >
-    au < exists ; exists ; 1979 ; Reports of Patent, Design and Trade Mark Cases Volume 96 ; 96 ; >
-    au < exists ; exists ; 1980 ; Reports of Patent, Design and Trade Mark Cases Volume 97 ; 97 ; >
-    au < exists ; exists ; 1981 ; Reports of Patent, Design and Trade Mark Cases Volume 98 ; 98 ; >
-    au < exists ; exists ; 1982 ; Reports of Patent, Design and Trade Mark Cases Volume 99 ; 99 ; >
-    au < exists ; exists ; 1983 ; Reports of Patent, Design and Trade Mark Cases Volume 100 ; 100 ; >
-    au < exists ; exists ; 1984 ; Reports of Patent, Design and Trade Mark Cases Volume 101 ; 101 ; >
-    au < exists ; exists ; 1985 ; Reports of Patent, Design and Trade Mark Cases Volume 102 ; 102 ; >
-    au < exists ; exists ; 1986 ; Reports of Patent, Design and Trade Mark Cases Volume 103 ; 103 ; >
-    au < exists ; exists ; 1987 ; Reports of Patent, Design and Trade Mark Cases Volume 104 ; 104 ; >
-    au < exists ; exists ; 1988 ; Reports of Patent, Design and Trade Mark Cases Volume 105 ; 105 ; >
-    au < exists ; exists ; 1989 ; Reports of Patent, Design and Trade Mark Cases Volume 106 ; 106 ; >
-    au < exists ; exists ; 1990 ; Reports of Patent, Design and Trade Mark Cases Volume 107 ; 107 ; >
-    au < exists ; exists ; 1991 ; Reports of Patent, Design and Trade Mark Cases Volume 108 ; 108 ; >
-    au < exists ; exists ; 1992 ; Reports of Patent, Design and Trade Mark Cases Volume 109 ; 109 ; >
-    au < exists ; exists ; 1993 ; Reports of Patent, Design and Trade Mark Cases Volume 110 ; 110 ; >
-    au < exists ; exists ; 1994 ; Reports of Patent, Design and Trade Mark Cases Volume 111 ; 111 ; >
-    au < exists ; exists ; 1995 ; Reports of Patent, Design and Trade Mark Cases Volume 112 ; 112 ; >
-    au < exists ; exists ; 1996 ; Reports of Patent, Design and Trade Mark Cases Volume 113 ; 113 ; >
-    au < exists ; exists ; 1997 ; Reports of Patent, Design and Trade Mark Cases Volume 114 ; 114 ; >
-    au < exists ; exists ; 1998 ; Reports of Patent, Design and Trade Mark Cases Volume 115 ; 115 ; >
-    au < exists ; exists ; 1999 ; Reports of Patent, Design and Trade Mark Cases Volume 116 ; 116 ; >
-    au < exists ; exists ; 2000 ; Reports of Patent, Design and Trade Mark Cases Volume 117 ; 117 ; >
-    au < exists ; exists ; 2001 ; Reports of Patent, Design and Trade Mark Cases Volume 118 ; 118 ; >
-    au < exists ; exists ; 2002 ; Reports of Patent, Design and Trade Mark Cases Volume 119 ; 119 ; >
-    au < exists ; exists ; 2003 ; Reports of Patent, Design and Trade Mark Cases Volume 120 ; 120 ; >
-    au < exists ; exists ; 2004 ; Reports of Patent, Design and Trade Mark Cases Volume 121 ; 121 ; >
-    au < exists ; exists ; 2005 ; Reports of Patent, Design and Trade Mark Cases Volume 122 ; 122 ; >
-    au < exists ; exists ; 2006 ; Reports of Patent, Design and Trade Mark Cases Volume 123 ; 123 ; >
-    au < exists ; exists ; 2007 ; Reports of Patent, Design and Trade Mark Cases Volume 124 ; 124 ; >
+    au < manifest ; exists ; 1977 ; Reports of Patent, Design and Trade Mark Cases Volume 94 ; 94 ; >
+    au < manifest ; exists ; 1978 ; Reports of Patent, Design and Trade Mark Cases Volume 95 ; 95 ; >
+    au < manifest ; exists ; 1979 ; Reports of Patent, Design and Trade Mark Cases Volume 96 ; 96 ; >
+    au < manifest ; exists ; 1980 ; Reports of Patent, Design and Trade Mark Cases Volume 97 ; 97 ; >
+    au < manifest ; exists ; 1981 ; Reports of Patent, Design and Trade Mark Cases Volume 98 ; 98 ; >
+    au < manifest ; exists ; 1982 ; Reports of Patent, Design and Trade Mark Cases Volume 99 ; 99 ; >
+    au < manifest ; exists ; 1983 ; Reports of Patent, Design and Trade Mark Cases Volume 100 ; 100 ; >
+    au < manifest ; exists ; 1984 ; Reports of Patent, Design and Trade Mark Cases Volume 101 ; 101 ; >
+    au < manifest ; exists ; 1985 ; Reports of Patent, Design and Trade Mark Cases Volume 102 ; 102 ; >
+    au < manifest ; exists ; 1986 ; Reports of Patent, Design and Trade Mark Cases Volume 103 ; 103 ; >
+    au < manifest ; exists ; 1987 ; Reports of Patent, Design and Trade Mark Cases Volume 104 ; 104 ; >
+    au < manifest ; exists ; 1988 ; Reports of Patent, Design and Trade Mark Cases Volume 105 ; 105 ; >
+    au < manifest ; exists ; 1989 ; Reports of Patent, Design and Trade Mark Cases Volume 106 ; 106 ; >
+    au < manifest ; exists ; 1990 ; Reports of Patent, Design and Trade Mark Cases Volume 107 ; 107 ; >
+    au < manifest ; exists ; 1991 ; Reports of Patent, Design and Trade Mark Cases Volume 108 ; 108 ; >
+    au < manifest ; exists ; 1992 ; Reports of Patent, Design and Trade Mark Cases Volume 109 ; 109 ; >
+    au < manifest ; exists ; 1993 ; Reports of Patent, Design and Trade Mark Cases Volume 110 ; 110 ; >
+    au < manifest ; exists ; 1994 ; Reports of Patent, Design and Trade Mark Cases Volume 111 ; 111 ; >
+    au < manifest ; exists ; 1995 ; Reports of Patent, Design and Trade Mark Cases Volume 112 ; 112 ; >
+    au < manifest ; exists ; 1996 ; Reports of Patent, Design and Trade Mark Cases Volume 113 ; 113 ; >
+    au < manifest ; exists ; 1997 ; Reports of Patent, Design and Trade Mark Cases Volume 114 ; 114 ; >
+    au < manifest ; exists ; 1998 ; Reports of Patent, Design and Trade Mark Cases Volume 115 ; 115 ; >
+    au < manifest ; exists ; 1999 ; Reports of Patent, Design and Trade Mark Cases Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2000 ; Reports of Patent, Design and Trade Mark Cases Volume 117 ; 117 ; >
+    au < manifest ; exists ; 2001 ; Reports of Patent, Design and Trade Mark Cases Volume 118 ; 118 ; >
+    au < manifest ; exists ; 2002 ; Reports of Patent, Design and Trade Mark Cases Volume 119 ; 119 ; >
+    au < manifest ; exists ; 2003 ; Reports of Patent, Design and Trade Mark Cases Volume 120 ; 120 ; >
+    au < manifest ; exists ; 2004 ; Reports of Patent, Design and Trade Mark Cases Volume 121 ; 121 ; >
+    au < manifest ; exists ; 2005 ; Reports of Patent, Design and Trade Mark Cases Volume 122 ; 122 ; >
+    au < manifest ; exists ; 2006 ; Reports of Patent, Design and Trade Mark Cases Volume 123 ; 123 ; >
+    au < manifest ; exists ; 2007 ; Reports of Patent, Design and Trade Mark Cases Volume 124 ; 124 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; >
     au < released ; crawling ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 ; >
@@ -15151,16 +15145,16 @@
     param[base_url] = http://rof.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1997 ; Review of Finance Volume 1 ; 1 ; >
-    au < exists ; exists ; 1998 ; Review of Finance Volume 2 ; 2 ; >
-    au < exists ; exists ; 1999 ; Review of Finance Volume 3 ; 3 ; >
-    au < exists ; exists ; 2000 ; Review of Finance Volume 4 ; 4 ; >
-    au < exists ; exists ; 2001 ; Review of Finance Volume 5 ; 5 ; >
-    au < exists ; exists ; 2002 ; Review of Finance Volume 6 ; 6 ; >
-    au < exists ; exists ; 2003 ; Review of Finance Volume 7 ; 7 ; >
-    au < exists ; exists ; 2004 ; Review of Finance Volume 8 ; 8 ; >
-    au < exists ; exists ; 2005 ; Review of Finance Volume 9 ; 9 ; >
-    au < exists ; exists ; 2006 ; Review of Finance Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1997 ; Review of Finance Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1998 ; Review of Finance Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1999 ; Review of Finance Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2000 ; Review of Finance Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2001 ; Review of Finance Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2002 ; Review of Finance Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2003 ; Review of Finance Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2004 ; Review of Finance Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Review of Finance Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2006 ; Review of Finance Volume 10 ; 10 ; >
     au < exists ; exists ; 2007 ; Review of Finance Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Review of Finance Volume 12 ; 12 ; >
     au < released ; crawling ; 2009 ; Review of Finance Volume 13 ; 13 ; >
@@ -15334,37 +15328,37 @@
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 ; >
-    au < exists ; exists ; 1976 ; Schizophrenia Bulletin Volume 2 ; 2 ; >
-    au < exists ; exists ; 1977 ; Schizophrenia Bulletin Volume 3 ; 3 ; >
-    au < exists ; exists ; 1978 ; Schizophrenia Bulletin Volume 4 ; 4 ; >
-    au < exists ; exists ; 1979 ; Schizophrenia Bulletin Volume 5 ; 5 ; >
-    au < exists ; exists ; 1980 ; Schizophrenia Bulletin Volume 6 ; 6 ; >
-    au < exists ; exists ; 1981 ; Schizophrenia Bulletin Volume 7 ; 7 ; >
-    au < exists ; exists ; 1982 ; Schizophrenia Bulletin Volume 8 ; 8 ; >
-    au < exists ; exists ; 1983 ; Schizophrenia Bulletin Volume 9 ; 9 ; >
-    au < exists ; exists ; 1984 ; Schizophrenia Bulletin Volume 10 ; 10 ; >
-    au < exists ; exists ; 1985 ; Schizophrenia Bulletin Volume 11 ; 11 ; >
-    au < exists ; exists ; 1986 ; Schizophrenia Bulletin Volume 12 ; 12 ; >
-    au < exists ; exists ; 1987 ; Schizophrenia Bulletin Volume 13 ; 13 ; >
-    au < exists ; exists ; 1988 ; Schizophrenia Bulletin Volume 14 ; 14 ; >
-    au < exists ; exists ; 1989 ; Schizophrenia Bulletin Volume 15 ; 15 ; >
-    au < exists ; exists ; 1990 ; Schizophrenia Bulletin Volume 16 ; 16 ; >
-    au < exists ; exists ; 1991 ; Schizophrenia Bulletin Volume 17 ; 17 ; >
-    au < exists ; exists ; 1992 ; Schizophrenia Bulletin Volume 18 ; 18 ; >
-    au < exists ; exists ; 1993 ; Schizophrenia Bulletin Volume 19 ; 19 ; >
-    au < exists ; exists ; 1994 ; Schizophrenia Bulletin Volume 20 ; 20 ; >
-    au < exists ; exists ; 1995 ; Schizophrenia Bulletin Volume 21 ; 21 ; >
-    au < exists ; exists ; 1996 ; Schizophrenia Bulletin Volume 22 ; 22 ; >
-    au < exists ; exists ; 1997 ; Schizophrenia Bulletin Volume 23 ; 23 ; >
-    au < exists ; exists ; 1998 ; Schizophrenia Bulletin Volume 24 ; 24 ; >
-    au < exists ; exists ; 1999 ; Schizophrenia Bulletin Volume 25 ; 25 ; >
-    au < exists ; exists ; 2000 ; Schizophrenia Bulletin Volume 26 ; 26 ; >
-    au < exists ; exists ; 2001 ; Schizophrenia Bulletin Volume 27 ; 27 ; >
-    au < exists ; exists ; 2002 ; Schizophrenia Bulletin Volume 28 ; 28 ; >
-    au < exists ; exists ; 2003 ; Schizophrenia Bulletin Volume 29 ; 29 ; >
-    au < exists ; exists ; 2004 ; Schizophrenia Bulletin Volume 30 ; 30 ; >
-    au < exists ; exists ; 2005 ; Schizophrenia Bulletin Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1969-1975 ; Schizophrenia Bulletin Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1976 ; Schizophrenia Bulletin Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1977 ; Schizophrenia Bulletin Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1978 ; Schizophrenia Bulletin Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1979 ; Schizophrenia Bulletin Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1980 ; Schizophrenia Bulletin Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1981 ; Schizophrenia Bulletin Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1982 ; Schizophrenia Bulletin Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1983 ; Schizophrenia Bulletin Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1984 ; Schizophrenia Bulletin Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1985 ; Schizophrenia Bulletin Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1986 ; Schizophrenia Bulletin Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1987 ; Schizophrenia Bulletin Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1988 ; Schizophrenia Bulletin Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1989 ; Schizophrenia Bulletin Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1990 ; Schizophrenia Bulletin Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1991 ; Schizophrenia Bulletin Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1992 ; Schizophrenia Bulletin Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1993 ; Schizophrenia Bulletin Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1994 ; Schizophrenia Bulletin Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1995 ; Schizophrenia Bulletin Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1996 ; Schizophrenia Bulletin Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1997 ; Schizophrenia Bulletin Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1998 ; Schizophrenia Bulletin Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1999 ; Schizophrenia Bulletin Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2000 ; Schizophrenia Bulletin Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2001 ; Schizophrenia Bulletin Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2002 ; Schizophrenia Bulletin Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2003 ; Schizophrenia Bulletin Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2004 ; Schizophrenia Bulletin Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2005 ; Schizophrenia Bulletin Volume 31 ; 31 ; >
     au < manifest ; exists ; 2006 ; Schizophrenia Bulletin Volume 32 ; 32 ; >
     au < manifest ; exists ; 2007 ; Schizophrenia Bulletin Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
@@ -15416,33 +15410,33 @@
     param[base_url] = http://screen.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1969 ; Screen Volume 10 ; 10 ; >
-    au < exists ; exists ; 1970 ; Screen Volume 11 ; 11 ; >
-    au < exists ; exists ; 1971 ; Screen Volume 12 ; 12 ; >
-    au < exists ; exists ; 1972 ; Screen Volume 13 ; 13 ; >
-    au < exists ; exists ; 1973 ; Screen Volume 14 ; 14 ; >
-    au < exists ; exists ; 1974 ; Screen Volume 15 ; 15 ; >
-    au < exists ; exists ; 1975 ; Screen Volume 16 ; 16 ; >
-    au < exists ; exists ; 1976 ; Screen Volume 17 ; 17 ; >
-    au < exists ; exists ; 1977 ; Screen Volume 18 ; 18 ; >
-    au < exists ; exists ; 1978 ; Screen Volume 19 ; 19 ; >
-    au < exists ; exists ; 1979 ; Screen Volume 20 ; 20 ; >
-    au < exists ; exists ; 1980 ; Screen Volume 21 ; 21 ; >
-    au < exists ; exists ; 1981 ; Screen Volume 22 ; 22 ; >
-    au < exists ; exists ; 1982 ; Screen Volume 23 ; 23 ; >
-    au < exists ; exists ; 1983 ; Screen Volume 24 ; 24 ; >
-    au < exists ; exists ; 1984 ; Screen Volume 25 ; 25 ; >
-    au < exists ; exists ; 1985 ; Screen Volume 26 ; 26 ; >
-    au < exists ; exists ; 1986 ; Screen Volume 27 ; 27 ; >
-    au < exists ; exists ; 1987 ; Screen Volume 28 ; 28 ; >
-    au < exists ; exists ; 1988 ; Screen Volume 29 ; 29 ; >
-    au < exists ; exists ; 1989 ; Screen Volume 30 ; 30 ; >
-    au < exists ; exists ; 1990 ; Screen Volume 31 ; 31 ; >
-    au < exists ; exists ; 1991 ; Screen Volume 32 ; 32 ; >
-    au < exists ; exists ; 1992 ; Screen Volume 33 ; 33 ; >
-    au < exists ; exists ; 1993 ; Screen Volume 34 ; 34 ; >
-    au < exists ; exists ; 1994 ; Screen Volume 35 ; 35 ; >
-    au < exists ; exists ; 1995 ; Screen Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1969 ; Screen Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1970 ; Screen Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1971 ; Screen Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1972 ; Screen Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1973 ; Screen Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1974 ; Screen Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1975 ; Screen Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1976 ; Screen Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1977 ; Screen Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1978 ; Screen Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1979 ; Screen Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1980 ; Screen Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1981 ; Screen Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1982 ; Screen Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1983 ; Screen Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1984 ; Screen Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1985 ; Screen Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1986 ; Screen Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1987 ; Screen Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1988 ; Screen Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1989 ; Screen Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1990 ; Screen Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1991 ; Screen Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1992 ; Screen Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1993 ; Screen Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1994 ; Screen Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1995 ; Screen Volume 36 ; 36 ; >
     au < manifest ; exists ; 1996 ; Screen Volume 37 ; 37 ; >
     au < manifest ; exists ; 1997 ; Screen Volume 38 ; 38 ; >
     au < manifest ; exists ; 1998 ; Screen Volume 39 ; 39 ; >
@@ -15719,51 +15713,51 @@
     param[base_url] = http://socrel.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1964 ; Sociology of Religion Volume 25 ; 25 ; >
-    au < exists ; exists ; 1965 ; Sociology of Religion Volume 26 ; 26 ; >
-    au < exists ; exists ; 1966 ; Sociology of Religion Volume 27 ; 27 ; >
-    au < exists ; exists ; 1967 ; Sociology of Religion Volume 28 ; 28 ; >
-    au < exists ; exists ; 1968 ; Sociology of Religion Volume 29 ; 29 ; >
-    au < exists ; exists ; 1969 ; Sociology of Religion Volume 30 ; 30 ; >
-    au < exists ; exists ; 1970 ; Sociology of Religion Volume 31 ; 31 ; >
-    au < exists ; exists ; 1971 ; Sociology of Religion Volume 32 ; 32 ; >
-    au < exists ; exists ; 1972 ; Sociology of Religion Volume 33 ; 33 ; >
-    au < exists ; exists ; 1973 ; Sociology of Religion Volume 34 ; 34 ; >
-    au < exists ; exists ; 1974 ; Sociology of Religion Volume 35 ; 35 ; >
-    au < exists ; exists ; 1975 ; Sociology of Religion Volume 36 ; 36 ; >
-    au < exists ; exists ; 1976 ; Sociology of Religion Volume 37 ; 37 ; >
-    au < exists ; exists ; 1977 ; Sociology of Religion Volume 38 ; 38 ; >
-    au < exists ; exists ; 1978 ; Sociology of Religion Volume 39 ; 39 ; >
-    au < exists ; exists ; 1979 ; Sociology of Religion Volume 40 ; 40 ; >
-    au < exists ; exists ; 1980 ; Sociology of Religion Volume 41 ; 41 ; >
-    au < exists ; exists ; 1981 ; Sociology of Religion Volume 42 ; 42 ; >
-    au < exists ; exists ; 1982 ; Sociology of Religion Volume 43 ; 43 ; >
-    au < exists ; exists ; 1983 ; Sociology of Religion Volume 44 ; 44 ; >
-    au < exists ; exists ; 1984 ; Sociology of Religion Volume 45 ; 45 ; >
-    au < exists ; exists ; 1985 ; Sociology of Religion Volume 46 ; 46 ; >
-    au < exists ; exists ; 1986 ; Sociology of Religion Volume 47 ; 47 ; >
-    au < exists ; exists ; 1987 ; Sociology of Religion Volume 48 ; 48 ; >
-    au < exists ; exists ; 1988 ; Sociology of Religion Volume 49 ; 49 ; >
-    au < exists ; exists ; 1989 ; Sociology of Religion Volume 50 ; 50 ; >
-    au < exists ; exists ; 1990 ; Sociology of Religion Volume 51 ; 51 ; >
-    au < exists ; exists ; 1991 ; Sociology of Religion Volume 52 ; 52 ; >
-    au < exists ; exists ; 1992 ; Sociology of Religion Volume 53 ; 53 ; >
-    au < exists ; exists ; 1993 ; Sociology of Religion Volume 54 ; 54 ; >
-    au < exists ; exists ; 1994 ; Sociology of Religion Volume 55 ; 55 ; >
-    au < exists ; exists ; 1995 ; Sociology of Religion Volume 56 ; 56 ; >
-    au < exists ; exists ; 1996 ; Sociology of Religion Volume 57 ; 57 ; >
-    au < exists ; exists ; 1997 ; Sociology of Religion Volume 58 ; 58 ; >
-    au < exists ; exists ; 1998 ; Sociology of Religion Volume 59 ; 59 ; >
-    au < exists ; exists ; 1999 ; Sociology of Religion Volume 60 ; 60 ; >
-    au < exists ; exists ; 2000 ; Sociology of Religion Volume 61 ; 61 ; >
-    au < exists ; exists ; 2001 ; Sociology of Religion Volume 62 ; 62 ; >
-    au < exists ; exists ; 2002 ; Sociology of Religion Volume 63 ; 63 ; >
-    au < exists ; exists ; 2003 ; Sociology of Religion Volume 64 ; 64 ; >
-    au < exists ; exists ; 2004 ; Sociology of Religion Volume 65 ; 65 ; >
-    au < exists ; exists ; 2005 ; Sociology of Religion Volume 66 ; 66 ; >
-    au < exists ; exists ; 2006 ; Sociology of Religion Volume 67 ; 67 ; >
-    au < exists ; exists ; 2007 ; Sociology of Religion Volume 68 ; 68 ; >
-    au < exists ; exists ; 2008 ; Sociology of Religion Volume 69 ; 69 ; >
+    au < manifest ; exists ; 1964 ; Sociology of Religion Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1965 ; Sociology of Religion Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1966 ; Sociology of Religion Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1967 ; Sociology of Religion Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1968 ; Sociology of Religion Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1969 ; Sociology of Religion Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1970 ; Sociology of Religion Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1971 ; Sociology of Religion Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1972 ; Sociology of Religion Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1973 ; Sociology of Religion Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1974 ; Sociology of Religion Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1975 ; Sociology of Religion Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1976 ; Sociology of Religion Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1977 ; Sociology of Religion Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1978 ; Sociology of Religion Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1979 ; Sociology of Religion Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1980 ; Sociology of Religion Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1981 ; Sociology of Religion Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1982 ; Sociology of Religion Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1983 ; Sociology of Religion Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1984 ; Sociology of Religion Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1985 ; Sociology of Religion Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1986 ; Sociology of Religion Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1987 ; Sociology of Religion Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1988 ; Sociology of Religion Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1989 ; Sociology of Religion Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1990 ; Sociology of Religion Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1991 ; Sociology of Religion Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1992 ; Sociology of Religion Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1993 ; Sociology of Religion Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1994 ; Sociology of Religion Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1995 ; Sociology of Religion Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1996 ; Sociology of Religion Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1997 ; Sociology of Religion Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1998 ; Sociology of Religion Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1999 ; Sociology of Religion Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2000 ; Sociology of Religion Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2001 ; Sociology of Religion Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2002 ; Sociology of Religion Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2003 ; Sociology of Religion Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2004 ; Sociology of Religion Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2005 ; Sociology of Religion Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2006 ; Sociology of Religion Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2007 ; Sociology of Religion Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2008 ; Sociology of Religion Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < released ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < released ; manifest ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
@@ -15857,61 +15851,61 @@
     param[base_url] = http://sysbio.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1952 ; Systematic Biology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1953 ; Systematic Biology Volume 2 ; 2 ; >
-    au < exists ; exists ; 1954 ; Systematic Biology Volume 3 ; 3 ; >
-    au < exists ; exists ; 1955 ; Systematic Biology Volume 4 ; 4 ; >
-    au < exists ; exists ; 1956 ; Systematic Biology Volume 5 ; 5 ; >
-    au < exists ; exists ; 1957 ; Systematic Biology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1958 ; Systematic Biology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1959 ; Systematic Biology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1960 ; Systematic Biology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1961 ; Systematic Biology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1962 ; Systematic Biology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1963 ; Systematic Biology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1964 ; Systematic Biology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1965 ; Systematic Biology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1966 ; Systematic Biology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1967 ; Systematic Biology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1968 ; Systematic Biology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1969 ; Systematic Biology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1970 ; Systematic Biology Volume 19 ; 19 ; >
-    au < exists ; exists ; 1971 ; Systematic Biology Volume 20 ; 20 ; >
-    au < exists ; exists ; 1972 ; Systematic Biology Volume 21 ; 21 ; >
-    au < exists ; exists ; 1973 ; Systematic Biology Volume 22 ; 22 ; >
-    au < exists ; exists ; 1974 ; Systematic Biology Volume 23 ; 23 ; >
-    au < exists ; exists ; 1975 ; Systematic Biology Volume 24 ; 24 ; >
-    au < exists ; exists ; 1976 ; Systematic Biology Volume 25 ; 25 ; >
-    au < exists ; exists ; 1977 ; Systematic Biology Volume 26 ; 26 ; >
-    au < exists ; exists ; 1978 ; Systematic Biology Volume 27 ; 27 ; >
-    au < exists ; exists ; 1979 ; Systematic Biology Volume 28 ; 28 ; >
-    au < exists ; exists ; 1980 ; Systematic Biology Volume 29 ; 29 ; >
-    au < exists ; exists ; 1981 ; Systematic Biology Volume 30 ; 30 ; >
-    au < exists ; exists ; 1982 ; Systematic Biology Volume 31 ; 31 ; >
-    au < exists ; exists ; 1983 ; Systematic Biology Volume 32 ; 32 ; >
-    au < exists ; exists ; 1984 ; Systematic Biology Volume 33 ; 33 ; >
-    au < exists ; exists ; 1985 ; Systematic Biology Volume 34 ; 34 ; >
-    au < exists ; exists ; 1986 ; Systematic Biology Volume 35 ; 35 ; >
-    au < exists ; exists ; 1987 ; Systematic Biology Volume 36 ; 36 ; >
-    au < exists ; exists ; 1988 ; Systematic Biology Volume 37 ; 37 ; >
-    au < exists ; exists ; 1989 ; Systematic Biology Volume 38 ; 38 ; >
-    au < exists ; exists ; 1990 ; Systematic Biology Volume 39 ; 39 ; >
-    au < exists ; exists ; 1991 ; Systematic Biology Volume 40 ; 40 ; >
-    au < exists ; exists ; 1992 ; Systematic Biology Volume 41 ; 41 ; >
-    au < exists ; exists ; 1993 ; Systematic Biology Volume 42 ; 42 ; >
-    au < exists ; exists ; 1994 ; Systematic Biology Volume 43 ; 43 ; >
-    au < exists ; exists ; 1995 ; Systematic Biology Volume 44 ; 44 ; >
-    au < exists ; exists ; 1996 ; Systematic Biology Volume 45 ; 45 ; >
-    au < exists ; exists ; 1997 ; Systematic Biology Volume 46 ; 46 ; >
-    au < exists ; exists ; 1998 ; Systematic Biology Volume 47 ; 47 ; >
-    au < exists ; exists ; 1999 ; Systematic Biology Volume 48 ; 48 ; >
-    au < exists ; exists ; 2000 ; Systematic Biology Volume 49 ; 49 ; >
-    au < exists ; exists ; 2001 ; Systematic Biology Volume 50 ; 50 ; >
-    au < exists ; exists ; 2002 ; Systematic Biology Volume 51 ; 51 ; >
-    au < exists ; exists ; 2003 ; Systematic Biology Volume 52 ; 52 ; >
-    au < exists ; exists ; 2004 ; Systematic Biology Volume 53 ; 53 ; >
-    au < exists ; exists ; 2005 ; Systematic Biology Volume 54 ; 54 ; >
-    au < exists ; exists ; 2006 ; Systematic Biology Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1952 ; Systematic Biology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1953 ; Systematic Biology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1954 ; Systematic Biology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1955 ; Systematic Biology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1956 ; Systematic Biology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1957 ; Systematic Biology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1958 ; Systematic Biology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1959 ; Systematic Biology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1960 ; Systematic Biology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1961 ; Systematic Biology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1962 ; Systematic Biology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1963 ; Systematic Biology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1964 ; Systematic Biology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1965 ; Systematic Biology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1966 ; Systematic Biology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1967 ; Systematic Biology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1968 ; Systematic Biology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1969 ; Systematic Biology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1970 ; Systematic Biology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1971 ; Systematic Biology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1972 ; Systematic Biology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1973 ; Systematic Biology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1974 ; Systematic Biology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1975 ; Systematic Biology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1976 ; Systematic Biology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1977 ; Systematic Biology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1978 ; Systematic Biology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1979 ; Systematic Biology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1980 ; Systematic Biology Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1981 ; Systematic Biology Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1982 ; Systematic Biology Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1983 ; Systematic Biology Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1984 ; Systematic Biology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1985 ; Systematic Biology Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1986 ; Systematic Biology Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1987 ; Systematic Biology Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1988 ; Systematic Biology Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1989 ; Systematic Biology Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1990 ; Systematic Biology Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1991 ; Systematic Biology Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1992 ; Systematic Biology Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1993 ; Systematic Biology Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1994 ; Systematic Biology Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1995 ; Systematic Biology Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1996 ; Systematic Biology Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1997 ; Systematic Biology Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1998 ; Systematic Biology Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1999 ; Systematic Biology Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2000 ; Systematic Biology Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2001 ; Systematic Biology Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2002 ; Systematic Biology Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2003 ; Systematic Biology Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2004 ; Systematic Biology Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2005 ; Systematic Biology Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2006 ; Systematic Biology Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; Systematic Biology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
@@ -16163,32 +16157,32 @@
     param[base_url] = http://treephys.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1986 ; Tree Physiology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1986 ; Tree Physiology Volume 2 ; 2 ; >
-    au < exists ; exists ; 1987 ; Tree Physiology Volume 3 ; 3 ; >
-    au < exists ; exists ; 1988 ; Tree Physiology Volume 4 ; 4 ; >
-    au < exists ; exists ; 1989 ; Tree Physiology Volume 5 ; 5 ; >
-    au < exists ; exists ; 1990 ; Tree Physiology Volume 6 ; 6 ; >
-    au < exists ; exists ; 1990 ; Tree Physiology Volume 7 ; 7 ; >
-    au < exists ; exists ; 1991 ; Tree Physiology Volume 8 ; 8 ; >
-    au < exists ; exists ; 1991 ; Tree Physiology Volume 9 ; 9 ; >
-    au < exists ; exists ; 1992 ; Tree Physiology Volume 10 ; 10 ; >
-    au < exists ; exists ; 1992 ; Tree Physiology Volume 11 ; 11 ; >
-    au < exists ; exists ; 1993 ; Tree Physiology Volume 12 ; 12 ; >
-    au < exists ; exists ; 1993 ; Tree Physiology Volume 13 ; 13 ; >
-    au < exists ; exists ; 1994 ; Tree Physiology Volume 14 ; 14 ; >
-    au < exists ; exists ; 1995 ; Tree Physiology Volume 15 ; 15 ; >
-    au < exists ; exists ; 1996 ; Tree Physiology Volume 16 ; 16 ; >
-    au < exists ; exists ; 1997 ; Tree Physiology Volume 17 ; 17 ; >
-    au < exists ; exists ; 1998 ; Tree Physiology Volume 18 ; 18 ; >
-    au < exists ; exists ; 1999 ; Tree Physiology Volume 19 ; 19 ; >
-    au < exists ; exists ; 2000 ; Tree Physiology Volume 20 ; 20 ; >
-    au < exists ; exists ; 2001 ; Tree Physiology Volume 21 ; 21 ; >
-    au < exists ; exists ; 2002 ; Tree Physiology Volume 22 ; 22 ; >
-    au < exists ; exists ; 2003 ; Tree Physiology Volume 23 ; 23 ; >
-    au < exists ; exists ; 2004 ; Tree Physiology Volume 24 ; 24 ; >
-    au < exists ; exists ; 2005 ; Tree Physiology Volume 25 ; 25 ; >
-    au < exists ; exists ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1986 ; Tree Physiology Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1986 ; Tree Physiology Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1987 ; Tree Physiology Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1988 ; Tree Physiology Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1989 ; Tree Physiology Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1990 ; Tree Physiology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1990 ; Tree Physiology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1991 ; Tree Physiology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1991 ; Tree Physiology Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1992 ; Tree Physiology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1992 ; Tree Physiology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1993 ; Tree Physiology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1993 ; Tree Physiology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1994 ; Tree Physiology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1995 ; Tree Physiology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1996 ; Tree Physiology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1997 ; Tree Physiology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1998 ; Tree Physiology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1999 ; Tree Physiology Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2000 ; Tree Physiology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2001 ; Tree Physiology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2002 ; Tree Physiology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2003 ; Tree Physiology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2004 ; Tree Physiology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2005 ; Tree Physiology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2007 ; Tree Physiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
@@ -16223,17 +16217,17 @@
     param[base_url] = http://tandt.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1994-1995 ; Trusts & Trustees Volume 1 ; 1 ; >
-    au < exists ; exists ; 1995-1996 ; Trusts & Trustees Volume 2 ; 2 ; >
-    au < exists ; exists ; 1996-1997 ; Trusts & Trustees Volume 3 ; 3 ; >
-    au < exists ; exists ; 1997-1998 ; Trusts & Trustees Volume 4 ; 4 ; >
-    au < exists ; exists ; 1998-1999 ; Trusts & Trustees Volume 5 ; 5 ; >
-    au < exists ; exists ; 1999-2000 ; Trusts & Trustees Volume 6 ; 6 ; >
-    au < exists ; exists ; 2000-2001 ; Trusts & Trustees Volume 7 ; 7 ; >
-    au < exists ; exists ; 2001-2002 ; Trusts & Trustees Volume 8 ; 8 ; >
-    au < exists ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 ; >
-    au < exists ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 ; >
-    au < exists ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1994-1995 ; Trusts & Trustees Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1995-1996 ; Trusts & Trustees Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1996-1997 ; Trusts & Trustees Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1997-1998 ; Trusts & Trustees Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1998-1999 ; Trusts & Trustees Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1999-2000 ; Trusts & Trustees Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2000-2001 ; Trusts & Trustees Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2001-2002 ; Trusts & Trustees Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2002-2003 ; Trusts & Trustees Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2003-2004 ; Trusts & Trustees Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2004-2005 ; Trusts & Trustees Volume 11 ; 11 ; >
     au < wanted ; exists ; 2005-2006 ; Trusts & Trustees Volume 12 ; 12 ; >
     au < manifest ; exists ; 2007 ; Trusts & Trustees Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
