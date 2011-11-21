@@ -4342,6 +4342,61 @@
   {
   
     title <
+      name = European Journal of Cardio-Thoracic Surgery ;
+      issn = 1010-7940 ;
+      eissn = 1873-734X ;
+      issnl = 1010-7940
+    >
+
+    param[base_url] = http://ejcts.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 1987 ; European Journal of Cardio-Thoracic Surgery Volume 1 ; 1 ; >
+    au < exists ; exists ; 1988 ; European Journal of Cardio-Thoracic Surgery Volume 2 ; 2 ; >
+    au < exists ; exists ; 1989 ; European Journal of Cardio-Thoracic Surgery Volume 3 ; 3 ; >
+    au < exists ; exists ; 1990 ; European Journal of Cardio-Thoracic Surgery Volume 4 ; 4 ; >
+    au < exists ; exists ; 1991 ; European Journal of Cardio-Thoracic Surgery Volume 5 ; 5 ; >
+    au < exists ; exists ; 1992 ; European Journal of Cardio-Thoracic Surgery Volume 6 ; 6 ; >
+    au < exists ; exists ; 1993 ; European Journal of Cardio-Thoracic Surgery Volume 7 ; 7 ; >
+    au < exists ; exists ; 1994 ; European Journal of Cardio-Thoracic Surgery Volume 8 ; 8 ; >
+    au < exists ; exists ; 1995 ; European Journal of Cardio-Thoracic Surgery Volume 9 ; 9 ; >
+    au < exists ; exists ; 1996 ; European Journal of Cardio-Thoracic Surgery Volume 10 ; 10 ; >
+    au < exists ; exists ; 1997 ; European Journal of Cardio-Thoracic Surgery Volume 11 ; 11 ; >
+    au < exists ; exists ; 1997 ; European Journal of Cardio-Thoracic Surgery Volume 12 ; 12 ; >
+    au < exists ; exists ; 1998 ; European Journal of Cardio-Thoracic Surgery Volume 13 ; 13 ; >
+    au < exists ; exists ; 1998 ; European Journal of Cardio-Thoracic Surgery Volume 14 ; 14 ; >
+    au < exists ; exists ; 1999 ; European Journal of Cardio-Thoracic Surgery Volume 15 ; 15 ; >
+    au < exists ; exists ; 1999 ; European Journal of Cardio-Thoracic Surgery Volume 16 ; 16 ; >
+    au < exists ; exists ; 2000 ; European Journal of Cardio-Thoracic Surgery Volume 17 ; 17 ; >
+    au < exists ; exists ; 2000 ; European Journal of Cardio-Thoracic Surgery Volume 18 ; 18 ; >
+    au < exists ; exists ; 2001 ; European Journal of Cardio-Thoracic Surgery Volume 19 ; 19 ; >
+    au < exists ; exists ; 2001 ; European Journal of Cardio-Thoracic Surgery Volume 20 ; 20 ; >
+    au < exists ; exists ; 2002 ; European Journal of Cardio-Thoracic Surgery Volume 21 ; 21 ; >
+    au < exists ; exists ; 2002 ; European Journal of Cardio-Thoracic Surgery Volume 22 ; 22 ; >
+    au < exists ; exists ; 2003 ; European Journal of Cardio-Thoracic Surgery Volume 23 ; 23 ; >
+    au < exists ; exists ; 2003 ; European Journal of Cardio-Thoracic Surgery Volume 24 ; 24 ; >
+    au < exists ; exists ; 2004 ; European Journal of Cardio-Thoracic Surgery Volume 25 ; 25 ; >
+    au < exists ; exists ; 2004 ; European Journal of Cardio-Thoracic Surgery Volume 26 ; 26 ; >
+    au < exists ; exists ; 2005 ; European Journal of Cardio-Thoracic Surgery Volume 27 ; 27 ; >
+    au < exists ; exists ; 2005 ; European Journal of Cardio-Thoracic Surgery Volume 28 ; 28 ; >
+    au < exists ; exists ; 2006 ; European Journal of Cardio-Thoracic Surgery Volume 29 ; 29 ; >
+    au < exists ; exists ; 2006 ; European Journal of Cardio-Thoracic Surgery Volume 30 ; 30 ; >
+    au < exists ; exists ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 31 ; 31 ; >
+    au < exists ; exists ; 2007 ; European Journal of Cardio-Thoracic Surgery Volume 32 ; 32 ; >
+    au < exists ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 33 ; 33 ; >
+    au < exists ; exists ; 2008 ; European Journal of Cardio-Thoracic Surgery Volume 34 ; 34 ; >
+    au < exists ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 35 ; 35 ; >
+    au < exists ; exists ; 2009 ; European Journal of Cardio-Thoracic Surgery Volume 36 ; 36 ; >
+    au < exists ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 37 ; 37 ; >
+    au < exists ; exists ; 2010 ; European Journal of Cardio-Thoracic Surgery Volume 38 ; 38 ; >
+    au < exists ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 39 ; 39 ; >
+    au < exists ; exists ; 2011 ; European Journal of Cardio-Thoracic Surgery Volume 40 ; 40 ; >
+  
+  }
+  
+  {
+  
+    title <
       name = European Journal of Echocardiography ;
       issn = 1525-2167 ;
       eissn = 1532-2114 ;
@@ -4652,6 +4707,22 @@
 
   }
 
+  {
+  
+    title <
+      name = European Review of Economic History ;
+      issn = 1361-4916  ;
+      eissn = 1474-0044 ;
+      issnl = 1361-4916 
+    >
+
+    param[base_url] = http://ereh.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+	comment[ereh] = new journal to OUP
+
+  }
+  
   {
   
     title <
@@ -6488,7 +6559,37 @@
     }
 
   }
+
+  {
   
+    title <
+      name = Interactive Cardiovascular and Thoracic Surgery ;
+      issn = 1569-9293 ;
+      eissn = 1569-9285 ;
+      issnl = 1569-9285 
+    >
+
+    param[base_url] = http://icvts.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[icvts] = new journal to OUP
+
+    au < exists ; exists ; 2002 ; Interactive Cardiovascular and Thoracic Surgery Volume 1 ; 1 ; >    
+    au < exists ; exists ; 2003 ; Interactive Cardiovascular and Thoracic Surgery Volume 2 ; 2 ; >  
+    au < exists ; exists ; 2004 ; Interactive Cardiovascular and Thoracic Surgery Volume 3 ; 3 ; >  
+    au < exists ; exists ; 2005 ; Interactive Cardiovascular and Thoracic Surgery Volume 4 ; 4 ; >    
+    au < exists ; exists ; 2006 ; Interactive Cardiovascular and Thoracic Surgery Volume 5 ; 5 ; >  
+    au < exists ; exists ; 2007 ; Interactive Cardiovascular and Thoracic Surgery Volume 6 ; 6 ; >  
+    au < exists ; exists ; 2008 ; Interactive Cardiovascular and Thoracic Surgery Volume 7 ; 7 ; >    
+    au < exists ; exists ; 2009 ; Interactive Cardiovascular and Thoracic Surgery Volume 8 ; 8 ; >    
+    au < exists ; exists ; 2009 ; Interactive Cardiovascular and Thoracic Surgery Volume 9 ; 9 ; >  
+    au < exists ; exists ; 2010 ; Interactive Cardiovascular and Thoracic Surgery Volume 10 ; 10 ; >
+    au < exists ; exists ; 2010 ; Interactive Cardiovascular and Thoracic Surgery Volume 11 ; 11 ; >  
+    au < exists ; exists ; 2011 ; Interactive Cardiovascular and Thoracic Surgery Volume 12 ; 12 ; >  
+    au < exists ; exists ; 2011 ; Interactive Cardiovascular and Thoracic Surgery Volume 13 ; 13 ; >  
+     
+  }
+    
   {
   
     title <
@@ -7635,7 +7736,23 @@
     }
       
   }
+  
+  {
+  
+    title <
+      name = Journal of Analytical Toxicology ;
+      issn = 0146-4760  ;
+      eissn = 1945-2403 ;
+      issnl = 0146-4760 
+    >
 
+    param[base_url] = http://jat.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[jat] = new journal to OUP
+    
+  }
+  
   {
   
     title <
@@ -7913,6 +8030,22 @@
 
   }
 
+  {
+  
+    title <
+      name = Journal of Church and State ;
+      issn = 0021-9665  ;
+      eissn = 1945-239X ;
+      issnl = 0021-9665 
+    >
+
+    param[base_url] = http://chromsci.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    comment[chromsci] = new journal to OUP
+    
+  }
+  
   {
   
     title <
@@ -11726,6 +11859,20 @@
     }
 
   }
+  
+  {
+  
+    title <
+      name = Multimedia Manual of Cardio-Thoracic Surgery ;
+      eissn = 1813-9175 ;
+      issnl = 1813-9175
+    >
+
+    param[base_url] = http://mmcts.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[mmcts] = New journal to OUP
+  }
 
   {
   
@@ -14804,6 +14951,26 @@
   {
 
     title <
+        name = Research Evaluation ;
+        issnl = 0958-2029 ;
+        eissn = 1471-5449 ;
+        issn = 0958-2029
+      >
+
+    comment = New to Oxford Journals in 2012, no journals published yet.
+     
+    {
+   
+    param[base_url] = 
+    pluginSuffix = ClockssHighWirePressH20Plugin
+     
+    }
+     
+  }
+
+  {
+
+    title <
         name = The Review of Asset Pricing Studies ;
         issnl = 2045-9920 ;
         eissn = 2045-9939 ;
@@ -15209,6 +15376,22 @@
 
   }
 
+  {
+  
+    title <
+      name = Science and Public Policy ;
+      issn = 1471-5430 ;
+      eissn = 0302-3427 ;
+      issnl = 0302-3427
+    >
+
+    param[base_url] = 
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+	comment = new journal to OUP
+	
+  }
+  
   {
   
     title <
