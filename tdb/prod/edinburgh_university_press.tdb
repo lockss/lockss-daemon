@@ -605,6 +605,28 @@
   {
 
     title <
+      name = Irish University Review ;
+      issn = 0021-1427 ;
+      eissn = 2047-2153 ;
+      issnl = 0021-1427 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = iur
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2012 ; Irish University Review Volume 42 ; 42 >
+  
+  }
+  
+  }
+
+  {
+
+    title <
       name = Journal of Beckett Studies ;
       issn = 0309-5207 ;
       eissn = 1759-7811 ;
@@ -894,6 +916,28 @@
 	
     }
 
+  }
+
+  {
+
+    title <
+      name = Nottingham French Studies ;
+      issn = 0029-4586 ;
+      eissn = 2047-7236 ;
+      issnl = 0029-4586 
+     >
+
+    {
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    param[base_url] = http://www.euppublishing.com/
+    param[journal_id] = nfs
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2012 ; Nottingham French Studies Volume 50 ; 50 >
+  
+  }
+  
   }
 
   {
