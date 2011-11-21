@@ -7,6 +7,21 @@
   {
   
     title <
+      name = Biology Open ;
+      eissn = 2046-6390 ;
+      issnl = 2046-6390
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://bio.biologists.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Biology Open Volume 1 ; 1 >
+    
+  }
+  {
+  
+    title <
       name = Development ;
       issn = 0950-1991 ;
       eissn = 1477-9129 ;
