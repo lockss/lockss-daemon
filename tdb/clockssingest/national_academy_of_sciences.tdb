@@ -16,18 +16,18 @@
     param[base_url] = http://www.pnas.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
 
-    au < manifest ; exists ; 1915 ; Proceedings of the National Academy of Sciences Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1916 ; Proceedings of the National Academy of Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 1917 ; Proceedings of the National Academy of Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 1918 ; Proceedings of the National Academy of Sciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 1919 ; Proceedings of the National Academy of Sciences Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1920 ; Proceedings of the National Academy of Sciences Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 1921 ; Proceedings of the National Academy of Sciences Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 1922 ; Proceedings of the National Academy of Sciences Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 1923 ; Proceedings of the National Academy of Sciences Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1924 ; Proceedings of the National Academy of Sciences Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 1925 ; Proceedings of the National Academy of Sciences Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 1926 ; Proceedings of the National Academy of Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 1915 ; Proceedings of the National Academy of Sciences Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 1916 ; Proceedings of the National Academy of Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 1917 ; Proceedings of the National Academy of Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 1918 ; Proceedings of the National Academy of Sciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 1919 ; Proceedings of the National Academy of Sciences Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 1920 ; Proceedings of the National Academy of Sciences Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 1921 ; Proceedings of the National Academy of Sciences Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 1922 ; Proceedings of the National Academy of Sciences Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 1923 ; Proceedings of the National Academy of Sciences Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 1924 ; Proceedings of the National Academy of Sciences Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 1925 ; Proceedings of the National Academy of Sciences Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 1926 ; Proceedings of the National Academy of Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 1927 ; Proceedings of the National Academy of Sciences Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1928 ; Proceedings of the National Academy of Sciences Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 1929 ; Proceedings of the National Academy of Sciences Volume 15 ; 15 ; reingest2.clockss.org:8085 >
