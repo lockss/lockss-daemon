@@ -300,6 +300,25 @@
 
   {
     title <
+      name = Perspectives in Telepractice ;
+      eissn = 2162-2353 ;
+      issnl = 2162-2353
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://div18perspectives.asha.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2011 ; Perspectives in Telepractice Volume 1 ; 1 >
+
+    }
+    
+  }
+  
+  {
+    title <
       name = Perspectives on Administration and Supervision ;
       issn = 1940-7238 ;
       eissn = 1940-7246 ;
