@@ -7,6 +7,24 @@
   {
 
     title <
+      name = Animal Frontiers ;
+      issn = 2160-6056 ;
+      eissn = 2160-6064 ;
+      issnl = 2160-6056
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://animalfrontiers.fass.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+
+    au < exists ; 2011 ; Animal Frontiers Volume 1 ; 1 >
+    
+  }
+  
+  {
+
+    title <
       name = Journal of Animal Science ;
       issn = 0021-8812 ;
       eissn = 1525-3163 ;
