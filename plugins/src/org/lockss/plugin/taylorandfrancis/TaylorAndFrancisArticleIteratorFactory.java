@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.1 2011-10-04 22:43:36 davidecorcoran Exp $
+ * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.2 2011-11-22 00:44:41 thib_gc Exp $
  */
 
 /*
@@ -75,9 +75,9 @@ public class TaylorAndFrancisArticleIteratorFactory
     
     public TaylorAndFrancisArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec,
-                                     MetadataTarget target) {
+                                     MetadataTarget target /* unnecessary, see below */) {
       super(au, spec);
-      this.target = target;
+      this.target = target; // Unnecessary: access via spec.getTarget() visible from parent class
     }
     
     @Override
