@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaArticleIteratorFactory.java,v 1.1 2011-11-12 00:42:06 thib_gc Exp $
+ * $Id: IngentaArticleIteratorFactory.java,v 1.2 2011-11-22 01:38:01 thib_gc Exp $
  */ 
 
 /*
@@ -79,6 +79,7 @@ public class IngentaArticleIteratorFactory
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
+      log.debug3("Entry point: " + url);
       
       Matcher mat = PLAIN_PATTERN.matcher(url);
       if (mat.find()) {
@@ -102,6 +103,7 @@ public class IngentaArticleIteratorFactory
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
       CachedUrl plainCu = au.makeCachedUrl(htmlMat.replaceFirst("$1content/$2?crawler=true"));
       if (plainCu != null && plainCu.hasContent()) {
+        log.debug3("Defer to plain URL");
         AuUtil.safeRelease(plainCu);
         return null; // Defer to plain URL
       }
@@ -109,14 +111,17 @@ public class IngentaArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       guessFullTextPdf(af, htmlMat);
-      guessAbstract(af, htmlMat);
-      guessReferences(af, htmlMat);
+      if (spec.getTarget() != MetadataTarget.Article) {
+        guessAbstract(af, htmlMat);
+        guessReferences(af, htmlMat);
+      }
       return af;
     }
 
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       CachedUrl plainCu = au.makeCachedUrl(pdfMat.replaceFirst("$1content/$2?crawler=true"));
       if (plainCu != null && plainCu.hasContent()) {
+        log.debug3("Defer to plain URL");
         AuUtil.safeRelease(plainCu);
         return null; // Defer to plain URL
       }
@@ -129,31 +134,38 @@ public class IngentaArticleIteratorFactory
       
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
-      guessAbstract(af, pdfMat);
-      guessReferences(af, pdfMat);
+      if (spec.getTarget() != MetadataTarget.Article) {
+        guessAbstract(af, pdfMat);
+        guessReferences(af, pdfMat);
+      }
       return af;
     }
 
-    protected ArticleFiles processPlainFullTextCu(CachedUrl cu, Matcher mat) {
-      if (!cu.hasContent()) {
+    protected ArticleFiles processPlainFullTextCu(CachedUrl plainCu, Matcher plainMat) {
+      if (!plainCu.hasContent()) {
+        log.debug3("Plain URL has no content");
         return null;
       }
       
       ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(cu);
-      if (cu.getContentType().toLowerCase().startsWith("text/html")) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
-        guessFullTextPdf(af, mat);
+      af.setFullTextCu(plainCu);
+      if (plainCu.getContentType().toLowerCase().startsWith("text/html")) {
+        log.debug3("Underlying type: HTML");
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, plainCu);
+        guessFullTextPdf(af, plainMat);
       }
-      else if (cu.getContentType().toLowerCase().startsWith("application/pdf")) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-        guessFullTextHtml(af, mat);
+      else if (plainCu.getContentType().toLowerCase().startsWith("application/pdf")) {
+        log.debug3("Underlying type: PDF");
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, plainCu);
+        guessFullTextHtml(af, plainMat);
       }
       else {
-        log.warning("Unexpected content type of " + cu.getUrl() + ": " + cu.getContentType());
+        log.warning("Unexpected content type of " + plainCu.getUrl() + ": " + plainCu.getContentType());
       }
-      guessAbstract(af, mat);
-      guessReferences(af, mat);
+      if (spec.getTarget() != MetadataTarget.Article) {
+        guessAbstract(af, plainMat);
+        guessReferences(af, plainMat);
+      }
       return af;
     }
     
