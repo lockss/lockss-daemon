@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://hortsci.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -53,7 +53,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://horttech.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -92,7 +92,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://journal.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
 
