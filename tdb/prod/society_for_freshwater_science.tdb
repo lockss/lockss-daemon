@@ -1,12 +1,12 @@
 {
 
   publisher <
-    name = North American Benthological Society
+    name = Society for Freshwater Science
   >
 
   {
     title <
-      name = Journal of the North American Benthological Society ;
+      name = Freshwater Science ;
       issn = 0887-3593 ;
       eissn = 1937-237X ;
       issnl = 0887-3593
@@ -17,6 +17,8 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0887-3593
+      
+      comment[title] = known as Journal of the North American Benthological Society before January 2012
   
       au < doNotProcess ; 2004 ; Journal of the North American Benthological Society Volume 23 ; 23 >
       au < superseded ; 2005 ; Journal of the North American Benthological Society Volume 24 ; 24 >
