@@ -62,23 +62,23 @@
 
     param[base_url] = http://ard.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1942-1943 ; Annals of the Rheumatic Diseases Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1944-1945 ; Annals of the Rheumatic Diseases Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1945-1946 ; Annals of the Rheumatic Diseases Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1947 ; Annals of the Rheumatic Diseases Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1948 ; Annals of the Rheumatic Diseases Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Annals of the Rheumatic Diseases Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Annals of the Rheumatic Diseases Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Annals of the Rheumatic Diseases Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Annals of the Rheumatic Diseases Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; Annals of the Rheumatic Diseases Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Annals of the Rheumatic Diseases Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Annals of the Rheumatic Diseases Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Annals of the Rheumatic Diseases Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Annals of the Rheumatic Diseases Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Annals of the Rheumatic Diseases Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1942-1943 ; Annals of the Rheumatic Diseases Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1944-1945 ; Annals of the Rheumatic Diseases Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1945-1946 ; Annals of the Rheumatic Diseases Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Annals of the Rheumatic Diseases Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Annals of the Rheumatic Diseases Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Annals of the Rheumatic Diseases Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Annals of the Rheumatic Diseases Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Annals of the Rheumatic Diseases Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Annals of the Rheumatic Diseases Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Annals of the Rheumatic Diseases Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Annals of the Rheumatic Diseases Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Annals of the Rheumatic Diseases Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Annals of the Rheumatic Diseases Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Annals of the Rheumatic Diseases Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Annals of the Rheumatic Diseases Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 1959 ; Annals of the Rheumatic Diseases Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 1960 ; Annals of the Rheumatic Diseases Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 1961 ; Annals of the Rheumatic Diseases Volume 20 ; 20 >
@@ -1666,27 +1666,27 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1981 ; Thorax Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; manifest ; 1982 ; Thorax Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; manifest ; 1983 ; Thorax Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Thorax Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Thorax Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Thorax Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Thorax Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Thorax Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Thorax Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1990 ; Thorax Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1991 ; Thorax Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Thorax Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Thorax Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Thorax Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; Thorax Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; Thorax Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; Thorax Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; Thorax Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Thorax Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Thorax Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Thorax Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Thorax Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Thorax Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Thorax Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Thorax Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Thorax Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Thorax Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Thorax Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Thorax Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Thorax Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 1990 ; Thorax Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 1991 ; Thorax Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Thorax Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; testing ; 1993 ; Thorax Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; Thorax Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; Thorax Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; Thorax Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; Thorax Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; Thorax Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Thorax Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Thorax Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Thorax Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Thorax Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Thorax Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Thorax Volume 59 ; 59 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Thorax Volume 60 ; 60 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Thorax Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Thorax Volume 62 ; 62 >
