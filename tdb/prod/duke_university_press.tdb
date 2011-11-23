@@ -1332,6 +1332,17 @@
   }
    
   {
+    title <
+      name = Tikkun ;
+      issn = 0887-9982 ;
+      eissn = 2164-0041 ;
+      issnl = 0887-9982
+
+    >
+    comment = Tikkun joining Duke in 2012.
+  }
+    
+  {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
