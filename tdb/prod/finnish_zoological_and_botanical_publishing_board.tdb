@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Finnish Zoological and Botanical Publishing Board
+  >
+
+    implicit < status ; year ; name ; param[volume_name] >
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+    param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Annales Botanici Fennici ;
+      issn = 0003-3847 ;
+      issnl = 0003-3847 
+    >
+
+    {
+      param[journal_id] = anbf
+  
+      au < exists ; 2008 ; Annales Botanici Fennici Volume 45 ; 45 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Annales Zoologici Fennici ;
+      issn = 0003-455X ;
+      issnl = 0003-455X 
+    >
+
+    {
+      param[journal_id] = anzf
+  
+      au < exists ; 2008 ; Annales Zoologici Fennici Volume 45 ; 45 >
+
+    }
+
+  }
+
+}
+
