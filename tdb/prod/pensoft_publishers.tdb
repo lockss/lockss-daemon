@@ -4,6 +4,152 @@
     name = Pensoft Publishers
   >
   
+    rights = openaccess
+    plugin = needs.plugin
+  
+  {
+
+    title <
+      name = BioRisk ;
+      issn = 1313-2644 ;
+      eissn = 1313-2652 ;
+      issnl = 1313-2644
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/biorisk/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; BioRisk 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = Comparative Cytogenetics ;
+      issn = 1993-0771 ;
+      eissn = 1993-078X ;
+      issnl = 1993-0771
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/compcytogen/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; Comparative Cytogenetics 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = International Journal of Myriapodology ;
+      issn = 1875-2535 ;
+      eissn = 1875-2543 ;
+      issnl = 1875-2535
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/ijm/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; International Journal of Myriapodology 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = Journal of Hymenoptera Research ;
+      issn = 1070-9428 ;
+      eissn = 1314-2607 ;
+      issnl = 1070-9428
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/jhr/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; Journal of Hymenoptera Research 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = MycoKeys ;
+      issn = 1314-4057 ;
+      eissn = 1314-4049 ;
+      issnl = 1314-4057
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/mycokeys/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; MycoKeys 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name =  Nature Conservation ;
+      eissn = 1313-2652 ;
+      issnl = 1313-2652
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/natureconservation/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ;  Nature Conservation 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = NeoBiota ;
+      issn = 1619-0033 ;
+      eissn = 1314-2488 ;
+      issnl = 1619-0033
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/neobiota/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; NeoBiota 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = PhytoKeys ;
+      issn = 1314-2011 ;
+      eissn = 1314-2003 ;
+      issnl = 1314-2011
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/phytokeys/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; PhytoKeys 2011 ; 2011 >
+  
+  }
+  
+  {
+
+    title <
+      name = Subterranean Biology ;
+      issn = 1768-1448 ;
+      eissn = 1314-2615 ;
+      issnl = 1768-1448
+    >
+    
+    param[base_url] = http://www.pensoft.net/journals/subtbiol/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < exists ; 2011 ; Subterranean Biology 2011 ; 2011 >
+  
+  }
+  
   {
 
     title <
@@ -13,16 +159,10 @@
       issnl = 1313-2970
     >
     
-    rights = openaccess
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://pensoftonline.net/zookeys/
-    param[journal_id] = journal
+    param[base_url] = http://www.pensoft.net/journals/zookeys/
     implicit < status ; year ; name ; param[year] >
     
-    au < testing ; 2008 ; ZooKeys 2008 ; 2008 >
-    au < testing ; 2009 ; ZooKeys 2009 ; 2009 >
-    au < testing ; 2010 ; ZooKeys 2010 ; 2010 >
-    au < testing ; 2011 ; ZooKeys 2010 ; 2011 >
+    au < exists ; 2011 ; ZooKeys 2011 ; 2011 >
   
   }
   
