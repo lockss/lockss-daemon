@@ -12,6 +12,8 @@
       eissn = 1539-3704 ;
       issnl = 0003-4819
     >
+    
+    comment[urgent] = LEAVING HIGHWIRE April 2012
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.annals.org/
@@ -172,6 +174,7 @@
     au < released ; 2010 ; Annals of Internal Medicine Volume 153 ; 153 >
     au < released ; 2011 ; Annals of Internal Medicine Volume 154 ; 154 >
     au < manifest ; 2011 ; Annals of Internal Medicine Volume 155 ; 155 >
+    au < manifest ; 2012 ; Annals of Internal Medicine Volume 156 ; 156 >
 
   }
 
