@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Natal Museum
+  >
+
+  {
+    title <
+      name = African Invertebrates ;
+      issn = 0002-7685 ;
+      eissn = 1550-7408 ;
+      issnl = 0002-7685 
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = afin
+  
+      au < exists ; 2008 ; African Invertebrates Volume 49 ; 49 >
+
+    }
+
+  }
+
+}
+
