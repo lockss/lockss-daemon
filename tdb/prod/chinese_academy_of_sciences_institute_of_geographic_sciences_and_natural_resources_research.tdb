@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Chinese Academy of Sciences, Institute of Geographic Sciences and Natural Resources Research
+  >
+
+  {
+    title <
+      name = Journal of Resources and Ecology ;
+      issn = 1674-764X ;
+      issnl = 1674-764X 
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jore
+  
+      au < exists ; 2010 ; Journal of Resources and Ecology Volume 1 ; 1 >
+
+    }
+
+  }
+
+}
+
