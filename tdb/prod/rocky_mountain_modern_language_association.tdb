@@ -12,11 +12,14 @@
     title <
       name = Rocky Mountain Review ;
       issn = 1948-2825 ;
+      eissn =  1948-2833 ;
       issnl = 1948-2825
     >
 
-    param[journal_dir] = 
-    comment[upcoming] = the journal is upcoming in muse
+    param[journal_dir] = rocky_mountain_review
+
+    au < manifest ; 2011 ; Rocky Mountain Journal of Mathematics Volume 65 ; 65 >
+
 
   }
 
