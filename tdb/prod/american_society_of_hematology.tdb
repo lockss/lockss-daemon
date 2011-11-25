@@ -57,16 +57,16 @@
       param[base_url] = http://bloodjournal.hematologylibrary.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 1946 ; Blood Volume 1 ; 1 >
-      au < testing ; 1947 ; Blood Volume 2 ; 2 >
-      au < testing ; 1948 ; Blood Volume 3 ; 3 >
-      au < testing ; 1949 ; Blood Volume 4 ; 4 >
-      au < testing ; 1950 ; Blood Volume 5 ; 5 >
-      au < testing ; 1951 ; Blood Volume 6 ; 6 >
-      au < testing ; 1952 ; Blood Volume 7 ; 7 >
-      au < testing ; 1953 ; Blood Volume 8 ; 8 >
-      au < testing ; 1954 ; Blood Volume 9 ; 9 >
-      au < testing ; 1955 ; Blood Volume 10 ; 10 >
+      au < ready ; 1946 ; Blood Volume 1 ; 1 >
+      au < ready ; 1947 ; Blood Volume 2 ; 2 >
+      au < ready ; 1948 ; Blood Volume 3 ; 3 >
+      au < ready ; 1949 ; Blood Volume 4 ; 4 >
+      au < ready ; 1950 ; Blood Volume 5 ; 5 >
+      au < ready ; 1951 ; Blood Volume 6 ; 6 >
+      au < ready ; 1952 ; Blood Volume 7 ; 7 >
+      au < ready ; 1953 ; Blood Volume 8 ; 8 >
+      au < ready ; 1954 ; Blood Volume 9 ; 9 >
+      au < ready ; 1955 ; Blood Volume 10 ; 10 >
       au < ready ; 1956 ; Blood Volume 11 ; 11 >
       au < ready ; 1957 ; Blood Volume 12 ; 12 >
       au < ready ; 1958 ; Blood Volume 13 ; 13 >
@@ -77,46 +77,46 @@
       au < ready ; 1961 ; Blood Volume 18 ; 18 >
       au < ready ; 1962 ; Blood Volume 19 ; 19 >
       au < ready ; 1962 ; Blood Volume 20 ; 20 >
-      au < manifest ; 1963 ; Blood Volume 21 ; 21 >
-      au < manifest ; 1963 ; Blood Volume 22 ; 22 >
-      au < manifest ; 1964 ; Blood Volume 23 ; 23 >
-      au < manifest ; 1964 ; Blood Volume 24 ; 24 >
-      au < manifest ; 1965 ; Blood Volume 25 ; 25 >
-      au < manifest ; 1965 ; Blood Volume 26 ; 26 >
-      au < manifest ; 1966 ; Blood Volume 27 ; 27 >
-      au < manifest ; 1966 ; Blood Volume 28 ; 28 >
-      au < manifest ; 1967 ; Blood Volume 29 ; 29 >
-      au < manifest ; 1967 ; Blood Volume 30 ; 30 >
-      au < manifest ; 1968 ; Blood Volume 31 ; 31 >
-      au < manifest ; 1968 ; Blood Volume 32 ; 32 >
-      au < manifest ; 1969 ; Blood Volume 33 ; 33 >
-      au < manifest ; 1969 ; Blood Volume 34 ; 34 >
-      au < manifest ; 1970 ; Blood Volume 35 ; 35 >
-      au < manifest ; 1970 ; Blood Volume 36 ; 36 >
-      au < manifest ; 1971 ; Blood Volume 37 ; 37 >
-      au < manifest ; 1971 ; Blood Volume 38 ; 38 >
-      au < manifest ; 1972 ; Blood Volume 39 ; 39 >
-      au < manifest ; 1972 ; Blood Volume 40 ; 40 >
-      au < manifest ; 1973 ; Blood Volume 41 ; 41 >
-      au < manifest ; 1973 ; Blood Volume 42 ; 42 >
-      au < manifest ; 1974 ; Blood Volume 43 ; 43 >
-      au < manifest ; 1974 ; Blood Volume 44 ; 44 >
-      au < manifest ; 1975 ; Blood Volume 45 ; 45 >
-      au < manifest ; 1975 ; Blood Volume 46 ; 46 >
-      au < manifest ; 1976 ; Blood Volume 47 ; 47 >
-      au < manifest ; 1976 ; Blood Volume 48 ; 48 >
-      au < manifest ; 1977 ; Blood Volume 49 ; 49 >
-      au < manifest ; 1977 ; Blood Volume 50 ; 50 >
-      au < manifest ; 1978 ; Blood Volume 51 ; 51 >
-      au < manifest ; 1978 ; Blood Volume 52 ; 52 >
-      au < manifest ; 1979 ; Blood Volume 53 ; 53 >
-      au < manifest ; 1979 ; Blood Volume 54 ; 54 >
-      au < manifest ; 1980 ; Blood Volume 55 ; 55 >
-      au < manifest ; 1980 ; Blood Volume 56 ; 56 >
-      au < manifest ; 1981 ; Blood Volume 57 ; 57 >
-      au < manifest ; 1981 ; Blood Volume 58 ; 58 >
-      au < manifest ; 1982 ; Blood Volume 59 ; 59 >
-      au < manifest ; 1982 ; Blood Volume 60 ; 60 >
+      au < testing ; 1963 ; Blood Volume 21 ; 21 >
+      au < testing ; 1963 ; Blood Volume 22 ; 22 >
+      au < testing ; 1964 ; Blood Volume 23 ; 23 >
+      au < testing ; 1964 ; Blood Volume 24 ; 24 >
+      au < testing ; 1965 ; Blood Volume 25 ; 25 >
+      au < testing ; 1965 ; Blood Volume 26 ; 26 >
+      au < testing ; 1966 ; Blood Volume 27 ; 27 >
+      au < testing ; 1966 ; Blood Volume 28 ; 28 >
+      au < testing ; 1967 ; Blood Volume 29 ; 29 >
+      au < testing ; 1967 ; Blood Volume 30 ; 30 >
+      au < testing ; 1968 ; Blood Volume 31 ; 31 >
+      au < testing ; 1968 ; Blood Volume 32 ; 32 >
+      au < testing ; 1969 ; Blood Volume 33 ; 33 >
+      au < testing ; 1969 ; Blood Volume 34 ; 34 >
+      au < testing ; 1970 ; Blood Volume 35 ; 35 >
+      au < testing ; 1970 ; Blood Volume 36 ; 36 >
+      au < testing ; 1971 ; Blood Volume 37 ; 37 >
+      au < testing ; 1971 ; Blood Volume 38 ; 38 >
+      au < testing ; 1972 ; Blood Volume 39 ; 39 >
+      au < testing ; 1972 ; Blood Volume 40 ; 40 >
+      au < ready ; 1973 ; Blood Volume 41 ; 41 >
+      au < ready ; 1973 ; Blood Volume 42 ; 42 >
+      au < ready ; 1974 ; Blood Volume 43 ; 43 >
+      au < ready ; 1974 ; Blood Volume 44 ; 44 >
+      au < ready ; 1975 ; Blood Volume 45 ; 45 >
+      au < ready ; 1975 ; Blood Volume 46 ; 46 >
+      au < ready ; 1976 ; Blood Volume 47 ; 47 >
+      au < ready ; 1976 ; Blood Volume 48 ; 48 >
+      au < ready ; 1977 ; Blood Volume 49 ; 49 >
+      au < ready ; 1977 ; Blood Volume 50 ; 50 >
+      au < testing ; 1978 ; Blood Volume 51 ; 51 >
+      au < testing ; 1978 ; Blood Volume 52 ; 52 >
+      au < testing ; 1979 ; Blood Volume 53 ; 53 >
+      au < testing ; 1979 ; Blood Volume 54 ; 54 >
+      au < testing ; 1980 ; Blood Volume 55 ; 55 >
+      au < testing ; 1980 ; Blood Volume 56 ; 56 >
+      au < testing ; 1981 ; Blood Volume 57 ; 57 >
+      au < testing ; 1981 ; Blood Volume 58 ; 58 >
+      au < testing ; 1982 ; Blood Volume 59 ; 59 >
+      au < testing ; 1982 ; Blood Volume 60 ; 60 >
       au < manifest ; 1983 ; Blood Volume 61 ; 61 >
       au < manifest ; 1983 ; Blood Volume 62 ; 62 >
       au < manifest ; 1984 ; Blood Volume 63 ; 63 >
@@ -150,8 +150,8 @@
       au < testing ; 1998 ; Blood Volume 91 ; 91 >
       au < testing ; 1998 ; Blood Volume 92 ; 92 >
       au < testing ; 1999 ; Blood Volume 93 ; 93 >
-      au < testing ; 1999 ; Blood Volume 94 ; 94 >
-      au < testing ; 2000 ; Blood Volume 95 ; 95 >
+      au < ready ; 1999 ; Blood Volume 94 ; 94 >
+      au < ready ; 2000 ; Blood Volume 95 ; 95 >
       au < ready ; 2000 ; Blood Volume 96 ; 96 >
       au < ready ; 2001 ; Blood Volume 97 ; 97 >
       au < ready ; 2001 ; Blood Volume 98 ; 98 >
