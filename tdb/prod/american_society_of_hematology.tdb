@@ -17,17 +17,17 @@
       param[base_url] = http://asheducationbook.hematologylibrary.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2000 ; ASH Education Program Book Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; ASH Education Program Book Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; ASH Education Program Book Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; ASH Education Program Book Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; ASH Education Program Book Volume 2004 ; 2004 >
-      au < testing ; 2005 ; ASH Education Program Book Volume 2005 ; 2005 >
-      au < testing ; 2006 ; ASH Education Program Book Volume 2006 ; 2006 >
-      au < testing ; 2007 ; ASH Education Program Book Volume 2007 ; 2007 >
-      au < testing ; 2008 ; ASH Education Program Book Volume 2008 ; 2008 >
-      au < testing ; 2009 ; ASH Education Program Book Volume 2009 ; 2009 >
-      au < testing ; 2010 ; ASH Education Program Book Volume 2010 ; 2010 >
+      au < testing ; 2000 ; ASH Education Program Book Volume 2000 ; 2000 >
+      au < testing ; 2001 ; ASH Education Program Book Volume 2001 ; 2001 >
+      au < testing ; 2002 ; ASH Education Program Book Volume 2002 ; 2002 >
+      au < testing ; 2003 ; ASH Education Program Book Volume 2003 ; 2003 >
+      au < testing ; 2004 ; ASH Education Program Book Volume 2004 ; 2004 >
+      au < ready ; 2005 ; ASH Education Program Book Volume 2005 ; 2005 >
+      au < ready ; 2006 ; ASH Education Program Book Volume 2006 ; 2006 >
+      au < ready ; 2007 ; ASH Education Program Book Volume 2007 ; 2007 >
+      au < ready ; 2008 ; ASH Education Program Book Volume 2008 ; 2008 >
+      au < ready ; 2009 ; ASH Education Program Book Volume 2009 ; 2009 >
+      au < ready ; 2010 ; ASH Education Program Book Volume 2010 ; 2010 >
 
     }
 
