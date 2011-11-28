@@ -12,25 +12,41 @@
       issnl = 1393-614X
     >
     
-    rights = openaccess
-    plugin = org.lockss.plugin.minerva.MinervaPlugin
-    param[base_url] = http://www.ul.ie/
-    param[base_url2] = http://www.mic.ul.ie/
-    implicit < status ; year ; name ; param[volume_name] >
+      rights = openaccess
+      plugin = org.lockss.plugin.minerva.MinervaPlugin
 
-    au < released ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
-    au < released ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >
-    au < released ; 1999 ; Minerva: An Internet Journal of Philosophy Volume 3 ; 3 >
-    au < released ; 2000 ; Minerva: An Internet Journal of Philosophy Volume 4 ; 4 >
-    au < released ; 2001 ; Minerva: An Internet Journal of Philosophy Volume 5 ; 5 >
-    au < released ; 2002 ; Minerva: An Internet Journal of Philosophy Volume 6 ; 6 >
-    au < released ; 2003 ; Minerva: An Internet Journal of Philosophy Volume 7 ; 7 >
-    au < released ; 2004 ; Minerva: An Internet Journal of Philosophy Volume 8 ; 8 >
-    au < released ; 2005 ; Minerva: An Internet Journal of Philosophy Volume 9 ; 9 >
-    au < released ; 2006 ; Minerva: An Internet Journal of Philosophy Volume 10 ; 10 >
-    au < exists ; 2007 ; Minerva: An Internet Journal of Philosophy Volume 11 ; 11 >
-    au < exists ; 2008 ; Minerva: An Internet Journal of Philosophy Volume 12 ; 12 >
-    au < exists ; 2009 ; Minerva: An Internet Journal of Philosophy Volume 13 ; 13 >
+    {
+    
+      param[base_url] = http://www.ul.ie/
+      param[base_url2] = http://www.mic.ul.ie/
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < down ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
+      au < down ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >
+      au < down ; 1999 ; Minerva: An Internet Journal of Philosophy Volume 3 ; 3 >
+      au < down ; 2000 ; Minerva: An Internet Journal of Philosophy Volume 4 ; 4 >
+      au < down ; 2001 ; Minerva: An Internet Journal of Philosophy Volume 5 ; 5 >
+      au < down ; 2002 ; Minerva: An Internet Journal of Philosophy Volume 6 ; 6 >
+      au < down ; 2003 ; Minerva: An Internet Journal of Philosophy Volume 7 ; 7 >
+      au < down ; 2004 ; Minerva: An Internet Journal of Philosophy Volume 8 ; 8 >
+      au < down ; 2005 ; Minerva: An Internet Journal of Philosophy Volume 9 ; 9 >
+      au < down ; 2006 ; Minerva: An Internet Journal of Philosophy Volume 10 ; 10 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://www.ul.ie/
+      param[base_url2] = http://www.minerva.mic.ul.ie/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      comment[domain] = base_url2 has changed as of 2011-11-28
+  
+      au < exists ; 2007 ; Minerva: An Internet Journal of Philosophy Volume 11 ; 11 >
+      au < exists ; 2008 ; Minerva: An Internet Journal of Philosophy Volume 12 ; 12 >
+      au < exists ; 2009 ; Minerva: An Internet Journal of Philosophy Volume 13 ; 13 >
+    
+    }
     
   }
 
