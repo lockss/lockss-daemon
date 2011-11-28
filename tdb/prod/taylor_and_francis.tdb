@@ -7061,6 +7061,19 @@
   {
 
     title <
+      name = Bioacoustics: The International Journal of Animal Sound and its Recording ;
+      issn = 0952-4622 ;
+      issnl = 0952-4622
+    >
+
+    param[journal_id] = tbio20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Biocontrol Science and Technology ;
       issn = 0958-3157 ;
       eissn = 1360-0478 ;
@@ -8684,9 +8697,25 @@
 
   {
 
+     title <
+      name = Canadian Journal of African Studies/ La Revue canadienne des études africaines ;
+      issn = 0008-3968 ;
+      eissn = 1923-3051 ;
+      issnl = 0008-3968
+    >
+
+    param[journal_id] = rcas20
+
+    au < exists ; 2009 ; Canadian Journal of African Studies/ La Revue canadienne des études africaines Volume 43 ; 43 >
+    au < exists ; 2010 ; Canadian Journal of African Studies/ La Revue canadienne des études africaines Volume 44 ; 44 >
+    au < exists ; 2011 ; Canadian Journal of African Studies/ La Revue canadienne des études africaines Volume 45 ; 45 >
+
+  }
+
+  {
+
     title <
-      name = Canadian Journal of Development Studies / Revue canadienne d'études du développement
- ;
+      name = Canadian Journal of Development Studies / Revue canadienne d'études du développement ;
       issn = 0225-5189 ;
       eissn = 2158-9100 ;
       issnl = 0225-5189
@@ -22304,6 +22333,20 @@
   {
 
     title <
+      name = Forests, Trees and Livelihoods ;
+      issn = 1472-8028 ;
+      eissn = 2164-3075 ;
+      issnl = 1472-8028
+    >
+
+    param[journal_id] = tftl20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Forum for Development Studies ;
       issn = 0803-9410 ;
       eissn = 1891-1765 ;
@@ -24599,6 +24642,20 @@
     au < exists ; 2009 ; History of Education: Journal of the History of Education Society Volume 38 ; 38 > 
     au < exists ; 2010 ; History of Education: Journal of the History of Education Society Volume 39 ; 39 > 
     au < exists ; 2011 ; History of Education: Journal of the History of Education Society Volume 40 ; 40 > 
+
+  }
+
+  {
+
+    title <
+      name = History of European Ideas ;
+      issn = 0191-6599 ;
+      eissn = 1873-541X ;
+      issnl = 0191-6599
+    >
+
+    param[journal_id] = rhei20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -27359,6 +27416,21 @@
     au < exists ; 2011 ; International Journal of Acarology Volume 37 ; 37 > 
 
   }
+
+  {
+  
+    title <
+      name = International Journal of Adolescence and Youth ;
+      issn = 0267-3843 ;
+      eissn = 2164-4527 ;
+      issnl = 0267-3843
+    >
+
+    param[journal_id] = rady20
+    comment[0] = forthcoming 2012
+
+  }
+
 
   {
 
@@ -30817,6 +30889,34 @@
   {
 
     title <
+      name = International Journal of Urban Sciences ;
+      issn = 1226-5934 ;
+      eissn = 2161-6779 ;
+      issnl = 1226-5934
+    >
+
+    param[journal_id] = rjus20
+
+    au < exists ; 1998 ; International Journal of Urban Sciences Volume 2 ; 2 >
+    au < exists ; 1999 ; International Journal of Urban Sciences Volume 3 ; 3 >
+    au < exists ; 2000 ; International Journal of Urban Sciences Volume 4 ; 4 >
+    au < exists ; 2001 ; International Journal of Urban Sciences Volume 5 ; 5 >
+    au < exists ; 2002 ; International Journal of Urban Sciences Volume 6 ; 6 >
+    au < exists ; 2003 ; International Journal of Urban Sciences Volume 7 ; 7 >
+    au < exists ; 2004 ; International Journal of Urban Sciences Volume 8 ; 8 >
+    au < exists ; 2005 ; International Journal of Urban Sciences Volume 9 ; 9 >
+    au < exists ; 2006 ; International Journal of Urban Sciences Volume 10 ; 10 >
+    au < exists ; 2007 ; International Journal of Urban Sciences Volume 11 ; 11 >
+    au < exists ; 2008 ; International Journal of Urban Sciences Volume 12 ; 12 >
+    au < exists ; 2009 ; International Journal of Urban Sciences Volume 13 ; 13 >
+    au < exists ; 2010 ; International Journal of Urban Sciences Volume 14 ; 14 >
+    au < manifest ; 2011 ; International Journal of Urban Sciences Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Urban Sustainable Development ;
       issn = 1946-3138 ;
       eissn = 1946-3146 ;
@@ -31919,6 +32019,20 @@
     au < exists ; 2009 ; Irish Studies Review Volume 17 ; 17 > 
     au < exists ; 2010 ; Irish Studies Review Volume 18 ; 18 > 
     au < ready ; 2011 ; Irish Studies Review Volume 19 ; 19 > 
+
+  }
+
+  {
+
+   title <
+      name = ISH Journal of Hydraulic Engineering ;
+      issn = 0971-5010 ;
+      eissn = 2164-3040 ;
+      issnl = 0971-5010
+    >
+
+    param[journal_id] = tish20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -33832,6 +33946,46 @@
   }
 
   {
+  
+    title <
+      name = Journal of Borderlands Studies ;
+      issn = 0886-5655 ;
+      eissn = 2159-1229 ;
+      issnl = 0886-5655
+    >
+
+    param[journal_id] = rjbs20
+
+    au < exists ; 1986 ; Journal of Borderlands Studies Volume 1 ; 1 >
+    au < exists ; 1987 ; Journal of Borderlands Studies Volume 2 ; 2 >
+    au < exists ; 1988 ; Journal of Borderlands Studies Volume 3 ; 3 >
+    au < exists ; 1989 ; Journal of Borderlands Studies Volume 4 ; 4 >
+    au < exists ; 1990 ; Journal of Borderlands Studies Volume 5 ; 5 >
+    au < exists ; 1991 ; Journal of Borderlands Studies Volume 6 ; 6 >
+    au < exists ; 1992 ; Journal of Borderlands Studies Volume 7 ; 7 >
+    au < exists ; 1993 ; Journal of Borderlands Studies Volume 8 ; 8 >
+    au < exists ; 1994 ; Journal of Borderlands Studies Volume 9 ; 9 >
+    au < exists ; 1995 ; Journal of Borderlands Studies Volume 10 ; 10 >
+    au < exists ; 1996 ; Journal of Borderlands Studies Volume 11 ; 11 >
+    au < exists ; 1997 ; Journal of Borderlands Studies Volume 12 ; 12 >
+    au < exists ; 1998 ; Journal of Borderlands Studies Volume 13 ; 13 >
+    au < exists ; 1999 ; Journal of Borderlands Studies Volume 14 ; 14 >
+    au < exists ; 2000 ; Journal of Borderlands Studies Volume 15 ; 15 >
+    au < exists ; 2001 ; Journal of Borderlands Studies Volume 16 ; 16 >
+    au < exists ; 2002 ; Journal of Borderlands Studies Volume 17 ; 17 >
+    au < exists ; 2003 ; Journal of Borderlands Studies Volume 18 ; 18 >
+    au < exists ; 2004 ; Journal of Borderlands Studies Volume 19 ; 19 >
+    au < exists ; 2005 ; Journal of Borderlands Studies Volume 20 ; 20 >
+    au < exists ; 2006 ; Journal of Borderlands Studies Volume 21 ; 21 >
+    au < exists ; 2007 ; Journal of Borderlands Studies Volume 22 ; 22 >
+    au < exists ; 2008 ; Journal of Borderlands Studies Volume 23 ; 23 >
+    au < exists ; 2009 ; Journal of Borderlands Studies Volume 24 ; 24 >
+    au < exists ; 2010 ; Journal of Borderlands Studies Volume 25 ; 25 >
+    au < manifest ; 2011 ; Journal of Borderlands Studies Volume 26 ; 26 >
+
+  }
+
+  {
 
     title <
       name = Journal of Broadcasting ;
@@ -33930,6 +34084,20 @@
     au < exists ; 2009 ; Journal of Building Performance Simulation Volume 2 ; 2 > 
     au < exists ; 2010 ; Journal of Building Performance Simulation Volume 3 ; 3 > 
     au < ready ; 2011 ; Journal of Building Performance Simulation Volume 4 ; 4 > 
+
+  }
+
+  {
+
+   title <
+      name = Journal of Business & Economic Statistics ;
+      issn = 0735-0015 ;
+      eissn = 1537-2707 ;
+      issnl = 0735-0015
+    >
+
+    param[journal_id] = ubes20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -35072,6 +35240,20 @@
   {
 
     title <
+      name = Journal of Computational and Graphical Statistics ;
+      issn = 1061-8600 ;
+      eissn = 1537-2715 ;
+      issnl = 1061-8600
+    >
+
+    param[journal_id] = ucgs20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Journal of Constructivist Psychology ;
       issn = 1072-0537 ;
       eissn = 1521-0650 ;
@@ -35447,6 +35629,21 @@
     au < exists ; 2009 ; Journal of Coordination Chemistry Volume 62 ; 62 > 
     au < exists ; 2010 ; Journal of Coordination Chemistry Volume 63 ; 63 > 
     au < exists ; 2011 ; Journal of Coordination Chemistry Volume 64 ; 64 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cost Analysis and Parametrics ;
+      issn = 1941-658X ;
+      eissn = 2160-4746 ;
+      issnl = 1941-658X
+    >
+
+    param[journal_id] = ucap20
+
+    au < manifest ; 2011 ; Journal of Cost Analysis and Parametrics Volume 4 ; 4 >
 
   }
 
@@ -37093,6 +37290,20 @@
   {
 
     title <
+      name = The Journal of Environmental Economics and Policy ;
+      issn = 2160-6544 ;
+      eissn = 2160-6552 ;
+      issnl = 2160-6544
+    >
+
+    param[journal_id] = teep20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = The Journal of Environmental Education ;
       issn = 0095-8964 ;
       eissn = 1940-1892 ;
@@ -37429,6 +37640,20 @@
     au < exists ; 1983 ; Journal of Environmental Science and Health, Part C: Environmental Carcinogenesis & Ecotoxicology Reviews Volume 1 ; 1 > 
     au < exists ; 1984 ; Journal of Environmental Science and Health, Part C: Environmental Carcinogenesis & Ecotoxicology Reviews Volume 2 ; 2 > 
     au < exists ; 1985 ; Journal of Environmental Science and Health, Part C: Environmental Carcinogenesis & Ecotoxicology Reviews Volume 3 ; 3 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Essential Oil Research ;
+      issn = 1041-2905 ;
+      eissn = 2163-8152 ;
+      issnl = 1041-2905
+    >
+
+    comment[0] = forthcoming
+    param[journal_id] = tjeo20
 
   }
 
@@ -38875,6 +39100,20 @@
     au < exists ; 2009 ; Journal of Global Marketing Volume 22 ; 22 > 
     au < exists ; 2010 ; Journal of Global Marketing Volume 23 ; 23 > 
     au < ready ; 2011 ; Journal of Global Marketing Volume 24 ; 24 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Global Scholars of Marketing Science ;
+      issn = 2163-9159 ;
+      eissn = 2163-9167 ;
+      issnl = 2163-9159
+    >
+
+    param[journal_id] = rgam20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -41649,6 +41888,19 @@
   {
 
     title <
+      name = Journal of Maps ;
+      eissn = 1744-5647 ;
+      issnl = 1744-5647
+    >
+
+    param[journal_id] = tjom20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Journal of Marketing Channels ;
       issn = 1046-669X ;
       eissn = 1540-7039 ;
@@ -41995,6 +42247,19 @@
     au < exists ; 2006 ; Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 31 ; 31 > 
     au < exists ; 2007 ; Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 32 ; 32 > 
 
+  }
+
+  {
+
+    title <
+      name = Journal of Medieval History ;
+      issn = 1304-4184 ;
+      eissn = 1873-1279 ;
+      issnl = 1304-4184
+    >
+
+    comment[0] = forthcoming 2012
+    param[journal_id] = rmed20
   }
 
   {
@@ -42854,6 +43119,20 @@
   {
 
     title <
+      name = Journal of Nuclear Science and Technology ;
+      issn = 0022-3131 ;
+      eissn = 1881-1248 ;
+      issnl = 0022-3131
+    >
+
+    param[journal_id] = tnst20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Journal of Nutrition For the Elderly ;
       issn = 0163-9366 ;
       eissn = 1540-8566 ;
@@ -43076,6 +43355,20 @@
     au < exists ; 2009 ; Journal of Offender Rehabilitation Volume 48 ; 48 > 
     au < exists ; 2010 ; Journal of Offender Rehabilitation Volume 49 ; 49 > 
     au < exists ; 2011 ; Journal of Offender Rehabilitation Volume 50 ; 50 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Organic Semiconductors ;
+      issn = 2160-6099 ;
+      eissn = 2160-6110 ;
+      issnl = 2160-6099
+    >
+
+    param[journal_id] = tjos20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -46142,6 +46435,20 @@
   {
 
     title <
+      name = Journal of Statistical Theory and Practice;
+      issn = 1559-8608 ;
+      eissn = 1559-8616 ;
+      issnl = 1559-8608
+    >
+
+    param[journal_id] = ujsp20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Journal of Strategic Marketing ;
       issn = 0965-254X ;
       eissn = 1466-4488 ;
@@ -46317,6 +46624,21 @@
     au < exists ; 2009 ; Journal of Sustainable Agriculture Volume 33 ; 33 > 
     au < exists ; 2009-2010 ; Journal of Sustainable Agriculture Volume 34 ; 34 > 
     au < exists ; 2010-2011 ; Journal of Sustainable Agriculture Volume 35 ; 35 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Sustainable Finance & Investment ;
+      issn = 2043-0795 ;
+      eissn = 2043-0809 ;
+      issnl = 2043-0795
+    >
+
+    param[journal_id] = tsfi20
+
+    au < manifest ; 2011 ; Journal of Sustainable Forestry Volume 1 ; 1 >
 
   }
 
@@ -46629,6 +46951,21 @@
   {
 
     title <
+      name = Journal of the Air & Waste Management Association ;
+      issn = 1047-3289 ;
+      issnl = 1047-3289
+    >
+
+    param[journal_id] = uawm20
+
+    au < manifest ; 2011 ; Journal of the Air & Waste Management Association Volume 61 ; 61 >
+
+  }
+
+  {
+
+
+    title <
       name = Journal of the American Institute of Planners ;
       issn = 0002-8991 ;
       issnl = 0002-8991
@@ -46729,6 +47066,20 @@
     au < exists ; 2008-2009 ; Journal of the American Planning Association Volume 75 ; 75 > 
     au < exists ; 2009-2010 ; Journal of the American Planning Association Volume 76 ; 76 > 
     au < exists ; 2010-2011 ; Journal of the American Planning Association Volume 77 ; 77 > 
+
+  }
+
+  {
+
+    title <
+      name = Journal of the American Statistical Association ;
+      issn = 0162-1459 ;
+      eissn = 1537-274X ;
+      issnl = 0162-1459
+    >
+
+    param[journal_id] = uasa20
+    comment[0] = forthcoming
 
   }
 
@@ -48794,6 +49145,20 @@
   {
 
     title <
+      name = Kappa Delta Pi Record ;
+      issn = 0022-8958 ;
+      eissn = 2163-1611 ;
+      issnl = 0022-8958
+    >
+
+    param[journal_id] = ukdr20
+    comment[0] = forthcoming 2012
+
+  }
+   
+  {
+
+    title <
       name = Kentucky Foreign Language Quarterly ;
       issn = 0023-0332 ;
       issnl = 0023-0332
@@ -49260,6 +49625,20 @@
     au < exists ; 2001 ; Land Use Law & Zoning Digest Volume 53 ; 53 >
     au < exists ; 2002 ; Land Use Law & Zoning Digest Volume 54 ; 54 >
     au < exists ; 2003 ; Land Use Law & Zoning Digest Volume 55 ; 55 >
+
+  }
+
+  {
+
+    title <
+      name = Landscape History ;
+      issn = 0143-3768 ;
+      eissn = 2160-2506 ;
+      issnl = 0143-3768
+    >
+
+    param[journal_id] = rlsh20
+    comment[0] = forthcoming 2012
 
   }
   
@@ -50746,6 +51125,19 @@
   {
 
     title <
+      name = Manual of European Environmental Policy ;
+      issn = 1467-0445 ;
+      eissn = 1740-3529 ;
+      issnl = 1467-0445
+    >
+
+    comment[0] = listed as new in 2011 but no content found
+
+  }
+
+  {
+
+    title <
       name = Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science ;
 
       eissn = 1942-5120 ;
@@ -52218,6 +52610,20 @@
     au < exists ; 2009 ; The Military Balance Volume 109 ; 109 > 
     au < exists ; 2010 ; The Military Balance Volume 110 ; 110 > 
     au < exists ; 2011 ; The Military Balance Volume 111 ; 111 > 
+
+  }
+
+  {
+
+    title <
+      name = Military Behavioral Health ;
+      issn = 2163-5781 ;
+      eissn = 2163-5803 ;
+      issnl = 2163-5781
+    >
+
+    param[journal_id] = umbh20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -55964,6 +56370,33 @@
     au < exists ; 2009 ; Organic Preparations and Procedures International: The New Journal for Organic Synthesis Volume 41 ; 41 > 
     au < exists ; 2010 ; Organic Preparations and Procedures International: The New Journal for Organic Synthesis Volume 42 ; 42 > 
     au < exists ; 2011 ; Organic Preparations and Procedures International: The New Journal for Organic Synthesis Volume 43 ; 43 > 
+
+  }
+
+  {
+
+    title <
+      name = Organization Management Journal ;
+      eissn = 1541-6518 ;
+      issnl = 1541-6518
+    >
+
+    param[journal_id] = uomj20
+    comment[0] = forthcoming 2012
+
+  }
+
+  {
+
+    title <
+      name = Oriental Insects ;
+      issn = 0030-5316 ;
+      eissn = 2157-8745 ;
+      issnl = 0030-5316
+    >
+
+    param[journal_id] = toin20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -60465,6 +60898,19 @@
   {
 
     title <
+      name = Psychoanalytic Perspectives ;
+      issn = 1551-806X ;
+      eissn = 2163-6958 ;
+      issnl = 1551-806X
+    >
+
+    param[journal_id] = uppe20
+
+  }
+
+  {
+
+    title <
       name = Psychoanalytic Psychotherapy ;
       issn = 0266-8734 ;
       eissn = 1474-9734 ;
@@ -61706,6 +62152,20 @@
     au < exists ; 1984 ; Quarterly Review of Film Studies Volume 9 ; 9 > 
     au < exists ; 1985 ; Quarterly Review of Film Studies Volume 10 ; 10 > 
    }
+
+  {
+
+    title <
+      name = Quest ;
+      issn = 0033-6297 ;
+      eissn = 1543-2750 ;
+      issnl = 0033-6297
+    >
+
+    param[journal_id] = uqst20
+    comment[0] = forthcoming 2012
+
+  }
 
   {
 
