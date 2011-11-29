@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.18 2011-03-06 00:12:34 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.19 2011-11-29 06:50:30 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 
 import java.io.*;
 import java.util.zip.*;
+import java.security.MessageDigest;
 
 import org.lockss.daemon.LockssWatchdog;
 
@@ -108,7 +109,7 @@ public class StreamUtil {
   public static long copy(InputStream is, OutputStream os, long len,
 			  LockssWatchdog wdog)
       throws IOException {
-    return copy(is, os, len, wdog, false);
+    return copy(is, os, len, wdog, false, null);
   }
 
   /**
@@ -129,7 +130,31 @@ public class StreamUtil {
    * @throws IOException
    */
   public static long copy(InputStream is, OutputStream os, long len,
-			  LockssWatchdog wdog, boolean wrapExceptions)
+		  LockssWatchdog wdog, boolean wrapExceptions) 
+	  throws IOException {
+    return copy(is, os, len, wdog, wrapExceptions, null);
+  }
+  
+  /**
+   * Copy up to len bytes from InputStream to Outputstream, occasionally
+   * poking a watchdog.  The OutputStream is flushed, neither stream is
+   * closed.
+   * @param is input stream
+   * @param os output stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @param wrapExceptions if true, exceptions that occur while reading
+   * from the input stream will be wrapped in a {@link
+   * StreamUtil#InputException} and exceptions that occur while writing to
+   * or closing the output stream will be wrapped in a {@link
+   * StreamUtil#OutputException}.
+   * @param md a MessageDigest algorithm that, when not null, receives all input
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os, long len,
+			  LockssWatchdog wdog, boolean wrapExceptions, MessageDigest md)
       throws IOException {
     if (is == null || os == null || len == 0) {
       return 0;
@@ -155,6 +180,9 @@ public class StreamUtil {
       }
       if (nread <= 0) {
 	break;
+      }
+      if (md != null) {
+        md.update(buf, 0, nread);
       }
       try {
 	os.write(buf, 0, nread);
