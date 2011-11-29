@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.26 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.27 2011-11-29 06:50:50 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,8 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
 
+  /** Checksum: The checksum (hash) of the content in <alg>:<hash> format */
+  public static final String PROPERTY_CHECKSUM = "X-Lockss-checksum";
   /**
    * Return a version-specific CachedUrl for the specified content version
    * @throws UnsupportedOperationException if node has no versions

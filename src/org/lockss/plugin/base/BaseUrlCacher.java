@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.86 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.87 2011-11-29 06:50:50 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.text.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 import org.lockss.app.*;
 import org.lockss.state.*;
@@ -61,6 +64,11 @@ public class BaseUrlCacher implements UrlCacher {
   public static final String PARAM_NORMALIZE_REDIRECT_URL =
     Configuration.PREFIX + "baseuc.normalizeRedirectUrl";
   public static final boolean DEFAULT_NORMALIZE_REDIRECT_URL = true;
+
+  /** The algorithm to use for content checksum calculation. An empty value disables checksums */
+  public static final String PARAM_CHECKSUM_ALGORITHM =
+		    Configuration.PREFIX + "baseuc.checksumAlgorithm";
+  public static final String DEFAULT_CHECKSUM_ALGORITHM = null;
 
   /** Limit on rewinding the network input stream after checking for a
    * login page.  If LoginPageChecker returns false after reading father
@@ -417,8 +425,20 @@ public class BaseUrlCacher implements UrlCacher {
 	leaf = repository.createNewNode(url);
 	leaf.makeNewVersion();
 
+	MessageDigest checksumProducer = null;
+	String checksumAlgorithm =
+	  CurrentConfig.getParam(PARAM_CHECKSUM_ALGORITHM,
+				 DEFAULT_CHECKSUM_ALGORITHM);
+	if (!StringUtil.isNullString(checksumAlgorithm)) {
+	  try {
+	    checksumProducer = MessageDigest.getInstance(checksumAlgorithm);
+	  } catch (NoSuchAlgorithmException ex) {
+	    logger.warning(String.format("Checksum algorithm %s not found, checksuming disabled", checksumAlgorithm));
+	  }
+	}
+
 	os = leaf.getNewOutputStream();
-	StreamUtil.copy(input, os, -1, wdog, true);
+	StreamUtil.copy(input, os, -1, wdog, true, checksumProducer);
 	if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
 	  try {
 	    input.close();
@@ -432,6 +452,12 @@ public class BaseUrlCacher implements UrlCacher {
 	}
 	os.close();
 	headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
+	if (checksumProducer != null) {
+	  byte bdigest[] = checksumProducer.digest();
+	  String sdigest = ByteArray.toHexString(bdigest);
+	  headers.setProperty(CachedUrl.PROPERTY_CHECKSUM,
+			      String.format("%s:%s", checksumAlgorithm, sdigest));
+	}
 	leaf.setNewProperties(headers);
 	leaf.sealNewVersion();
       } catch (StreamUtil.InputException ex) {

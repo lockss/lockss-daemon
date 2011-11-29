@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.65 2011-09-25 04:20:39 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.66 2011-11-29 06:50:50 tlipkis Exp $
  */
 
 /*
@@ -294,6 +294,24 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     props = url.getProperties();
     assertEquals("value1", props.getProperty("test1"));
+  }
+
+  public void testFileChecksum() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+    cacher._input = new StringInputStream("test content");
+    CIProperties props = new CIProperties();
+    props.setProperty("test1", "value1");
+    cacher._headers = props;
+    cacher.cache();
+
+    CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
+    InputStream is = url.getUnfilteredInputStream();
+    assertReaderMatchesString("test content", new InputStreamReader(is));
+
+    props = url.getProperties();
+    assertEquals("value1", props.getProperty("test1"));
+    assertEquals("SHA-1:1EEBDF4FDC9FC7BF283031B93F9AEF3338DE9052", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
   }
 
   public void testCheckConnection() {
