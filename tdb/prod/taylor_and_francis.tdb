@@ -64498,6 +64498,32 @@
   {
 
     title <
+      name = Road Materials and Pavement Design ;
+      issn = 1468-0629 ;
+      eissn = 2164-7402 ;
+      issnl = 1468-0629
+    >
+
+    param[journal_id] = trmp20
+
+    au < exists ; 2000 ; Road Materials and Pavement Design Volume 1 ; 1 >
+    au < exists ; 2001 ; Road Materials and Pavement Design Volume 2 ; 2 >
+    au < exists ; 2002 ; Road Materials and Pavement Design Volume 3 ; 3 >
+    au < exists ; 2003 ; Road Materials and Pavement Design Volume 4 ; 4 >
+    au < exists ; 2004 ; Road Materials and Pavement Design Volume 5 ; 5 >
+    au < exists ; 2005 ; Road Materials and Pavement Design Volume 6 ; 6 >
+    au < exists ; 2006 ; Road Materials and Pavement Design Volume 7 ; 7 >
+    au < exists ; 2007 ; Road Materials and Pavement Design Volume 8 ; 8 >
+    au < exists ; 2008 ; Road Materials and Pavement Design Volume 9 ; 9 >
+    au < exists ; 2009 ; Road Materials and Pavement Design Volume 10 ; 10 >
+    au < exists ; 2010 ; Road Materials and Pavement Design Volume 11 ; 11 >
+    au < exists ; 2011 ; Road Materials and Pavement Design Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
       name = Rocks & Minerals ;
       issn = 0035-7529 ;
       eissn = 1940-1191 ;
@@ -67779,6 +67805,19 @@
   {
 
     title <
+      name = Sociological Focus ;
+      issn = 0038-0237 ;
+      issnl = 0038-0237
+    >
+
+    param[journal_id] = usfo20
+    comment[0]= forthcoming 2012
+
+  }
+
+  {
+
+    title <
       name = Sociological Spectrum: Mid-South Sociological Association ;
       issn = 0273-2173 ;
       eissn = 1521-0707 ;
@@ -68313,11 +68352,51 @@
       eissn = 2072-1978 ;
       issnl = 2152-8586
     >
-
+    
+    comment[0] = formerly Society in Transition 1998-2004, South African Journal of Sociology 1900-1997 0258-0144
     param[journal_id] = rssr20 
 
     au < exists ; 2010 ; South African Review of Sociology Volume 41 ; 41 > 
     au < exists ; 2011 ; South African Review of Sociology Volume 42 ; 42 > 
+
+  }
+
+  {
+
+    title <
+      name = South African Theatre Journal ;
+      issn = 1013-7548 ;
+      eissn = 2163-7660 ;
+      issnl = 1013-7548
+    >
+
+    param[journal_id] = rthj20
+
+    au < exists ; 1987 ; South African Theatre Journal Volume 1 ; 1 >
+    au < exists ; 1988 ; South African Theatre Journal Volume 2 ; 2 >
+    au < exists ; 1989 ; South African Theatre Journal Volume 3 ; 3 >
+    au < exists ; 1990 ; South African Theatre Journal Volume 4 ; 4 >
+    au < exists ; 1991 ; South African Theatre Journal Volume 5 ; 5 >
+    au < exists ; 1992 ; South African Theatre Journal Volume 6 ; 6 >
+    au < exists ; 1993 ; South African Theatre Journal Volume 7 ; 7 >
+    au < exists ; 1994 ; South African Theatre Journal Volume 8 ; 8 >
+    au < exists ; 1995 ; South African Theatre Journal Volume 9 ; 9 >
+    au < exists ; 1996 ; South African Theatre Journal Volume 10 ; 10 >
+    au < exists ; 1997 ; South African Theatre Journal Volume 11 ; 11 >
+    au < exists ; 1998 ; South African Theatre Journal Volume 12 ; 12 >
+    au < exists ; 1999 ; South African Theatre Journal Volume 13 ; 13 >
+    au < exists ; 2000 ; South African Theatre Journal Volume 14 ; 14 >
+    au < exists ; 2001 ; South African Theatre Journal Volume 15 ; 15 >
+    au < exists ; 2002 ; South African Theatre Journal Volume 16 ; 16 >
+    au < exists ; 2003 ; South African Theatre Journal Volume 17 ; 17 >
+    au < exists ; 2004 ; South African Theatre Journal Volume 18 ; 18 >
+    au < exists ; 2005 ; South African Theatre Journal Volume 19 ; 19 >
+    au < exists ; 2006 ; South African Theatre Journal Volume 20 ; 20 >
+    au < exists ; 2007 ; South African Theatre Journal Volume 21 ; 21 >
+    au < exists ; 2008 ; South African Theatre Journal Volume 22 ; 22 >
+    au < exists ; 2009 ; South African Theatre Journal Volume 23 ; 23 >
+    au < exists ; 2010 ; South African Theatre Journal Volume 24 ; 24 >
+    au < exists ; 2011 ; South African Theatre Journal Volume 25 ; 25 >
 
   }
 
@@ -69491,6 +69570,19 @@
     au < exists ; 2009 ; Statistics: A Journal of Theoretical and Applied Statistics Volume 43 ; 43 > 
     au < exists ; 2010 ; Statistics: A Journal of Theoretical and Applied Statistics Volume 44 ; 44 > 
     au < exists ; 2011 ; Statistics: A Journal of Theoretical and Applied Statistics Volume 45 ; 45 > 
+
+  }
+
+  {
+
+    title <
+      name = Statistics in Biopharmaceutical Research ;
+      eissn = 1946-6315 ;
+      issnl = 1946-6315
+    >
+
+    param[journal_id] = usbr20
+    comment[0] = forthcoming 2012
 
   }
 
@@ -72368,21 +72460,37 @@
   {
 
     title <
+      name = Tourism and Hospitality Planning & Development ;
+      issn = 1479-053X ;
+      eissn = 1479-0548 ;
+      issnl = 1479-053X
+    >
+
+    comment[continued_by] = 2156-8316
+    param[journal_id] = rthp20
+
+    au < exists ; exists ; 2004 ; Tourism and Hospitality Planning & Development Volume 1 ; 1 >
+    au < exists ; exists ; 2005 ; Tourism and Hospitality Planning & Development Volume 2 ; 2 >
+    au < exists ; exists ; 2006 ; Tourism and Hospitality Planning & Development Volume 3 ; 3 >
+    au < exists ; exists ; 2007 ; Tourism and Hospitality Planning & Development Volume 4 ; 4 >
+    au < exists ; exists ; 2008 ; Tourism and Hospitality Planning & Development Volume 5 ; 5 >
+    au < exists ; exists ; 2009 ; Tourism and Hospitality Planning & Development Volume 6 ; 6 >
+    au < exists ; exists ; 2010 ; Tourism and Hospitality Planning & Development Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
       name = Tourism Planning & Development ;
       issn = 2156-8316 ;
       eissn = 2156-8324 ;
       issnl = 2156-8316
     >
 
-    param[journal_id] = rthp20 
+    comment[continues] = 1479-053X
+    param[journal_id] = rthp21 
 
-    au < exists ; 2004 ; Tourism Planning & Development Volume 1 ; 1 > 
-    au < exists ; 2005 ; Tourism Planning & Development Volume 2 ; 2 > 
-    au < exists ; 2006 ; Tourism Planning & Development Volume 3 ; 3 > 
-    au < exists ; 2007 ; Tourism Planning & Development Volume 4 ; 4 > 
-    au < exists ; 2008 ; Tourism Planning & Development Volume 5 ; 5 > 
-    au < exists ; 2009 ; Tourism Planning & Development Volume 6 ; 6 > 
-    au < exists ; 2010 ; Tourism Planning & Development Volume 7 ; 7 > 
     au < exists ; 2011 ; Tourism Planning & Development Volume 8 ; 8 > 
 
   }
