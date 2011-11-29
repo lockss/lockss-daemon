@@ -13,11 +13,11 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.bssaonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[bssa] = missing manifest pages
+      comment[bssa] = missing manifest pages V1-101
 
       au < exists ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 >
       au < exists ; 1912 ; Bulletin of the Seismological Society of America Volume 2 ; 2 >
