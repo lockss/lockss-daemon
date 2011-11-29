@@ -448,6 +448,34 @@
 
   {
     title <
+      name = Tellus A: Dynamic Meteorology and Oceanography;
+      eissn = 1600-0889 ;
+      issnl = 1600-0889
+    >
+
+      param[base_url] = http://www.tellusa.net/
+      param[journal_id] = xxx
+
+      au < exists ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1 ; 1 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Tellus B: Chemical and Physical Meteorology;
+      eissn = 1600-0889 ;
+      issnl = 1600-0889
+    >
+
+      param[base_url] = http://www.tellusb.net/
+      param[journal_id] = xxx
+
+      au < exists ; 2012 ; Tellus B: Chemical and Physical Meteorology Volume 1 ; 1 ; 2012 >
+
+  }
+
+  {
+    title <
       name = Vulnerable Groups & Inclusion ;
       eissn = 2000-8023 ;
       issnl = 2000-8023
@@ -456,8 +484,8 @@
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
       param[journal_id] = vgi
 
-    au < manifest ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+      au < ready ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
 
   }
 
