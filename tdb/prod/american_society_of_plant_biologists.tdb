@@ -50,7 +50,7 @@
       issnl = 0032-0889
     >
 
-    plugin = org.lockss.plugin.highwire.
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.plantphysiol.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
