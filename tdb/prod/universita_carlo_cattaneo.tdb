@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Università Carlo Cattaneo - LIUC
   >
@@ -8,24 +7,46 @@
   
     title <
       name = European Journal of Comparative Economics ;
-      issn = 1824-2979 
+      issn = 1824-2979 ;
+      issnl = 1824-2979 
     >
 
     rights = openaccess
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    param[base_url] = http://e-journal.liuc.it/
-    param[journal_id] = ejce
-    implicit < status ; year ; name ; volume ; param[year] >
-    comment[0] = No content online yet, AUs from old website http://eaces.liuc.it/
     
-    au < exists ; 2004 ; European Journal of Comparative Economics Volume 1 ; 1 ; 2004 >
-    au < exists ; 2005 ; European Journal of Comparative Economics Volume 2 ; 2 ; 2005 >
-    au < exists ; 2006 ; European Journal of Comparative Economics Volume 3 ; 3 ; 2006 >
-    au < exists ; 2007 ; European Journal of Comparative Economics Volume 4 ; 4 ; 2007 > 
-    au < exists ; 2008 ; European Journal of Comparative Economics Volume 5 ; 5 ; 2008 > 
-    au < exists ; 2009 ; European Journal of Comparative Economics Volume 6 ; 6 ; 2009 > 
-    au < exists ; 2010 ; European Journal of Comparative Economics Volume 7 ; 7 ; 2010 > 
-    au < exists ; 2011 ; European Journal of Comparative Economics Volume 8 ; 8 ; 2011 >    
+    {
+    
+      plugin = edu.nyu.plugin.ejce.EJCEPlugin
+      param[base_url] = http://eaces.liuc.it/
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      au < released ; 2004 ; European Journal of Comparative Economics 2004 ; 1 ; 2004 >
+      au < released ; 2005 ; European Journal of Comparative Economics 2005 ; 2 ; 2005 >
+      au < ready ; 2006 ; European Journal of Comparative Economics 2006 ; 3 ; 2006 >
+      au < ready ; 2007 ; European Journal of Comparative Economics 2007 ; 4 ; 2007 >
+      au < ready ; 2008 ; European Journal of Comparative Economics 2008 ; 5 ; 2008 >
+      au < exists ; 2009 ; European Journal of Comparative Economics 2009 ; 6 ; 2009 >
+      au < exists ; 2010 ; European Journal of Comparative Economics 2010 ; 7 ; 2010 >
+    
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      param[base_url] = http://e-journal.liuc.it/
+      param[journal_id] = ejce
+      implicit < status ; year ; name ; volume ; param[year] >
+      comment[0] = No content online yet, AUs from old website http://eaces.liuc.it/
+      
+      au < exists ; 2004 ; European Journal of Comparative Economics Volume 1 ; 1 ; 2004 >
+      au < exists ; 2005 ; European Journal of Comparative Economics Volume 2 ; 2 ; 2005 >
+      au < exists ; 2006 ; European Journal of Comparative Economics Volume 3 ; 3 ; 2006 >
+      au < exists ; 2007 ; European Journal of Comparative Economics Volume 4 ; 4 ; 2007 > 
+      au < exists ; 2008 ; European Journal of Comparative Economics Volume 5 ; 5 ; 2008 > 
+      au < exists ; 2009 ; European Journal of Comparative Economics Volume 6 ; 6 ; 2009 > 
+      au < exists ; 2010 ; European Journal of Comparative Economics Volume 7 ; 7 ; 2010 > 
+      au < exists ; 2011 ; European Journal of Comparative Economics Volume 8 ; 8 ; 2011 > 
+    
+    }
 
   }
 
