@@ -12,14 +12,12 @@
 
   {
     title <
-      name = Ab Imperio ;
-      issn = 1072-4745 ;
-      issnl = 1072-4745
+      name = Ab Imperio
     >
 
     param[journal_dir] = ab_imperio
-
-    au < doesNotExist ; 0 ; Ab Imperio Volume 1 ; 1 >
+    comment[0] = forthcoming 2012
+    comment[issn] = 1072-4745 from Project Muse website is incorrect
 
   }
 
