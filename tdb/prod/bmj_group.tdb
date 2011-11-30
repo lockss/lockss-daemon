@@ -268,7 +268,7 @@
       issnl = 0959-535X
     >
     
-    comment[urgent] = possibly leaving highwire. Needs testing. As of 7/2011.
+    comment[urgent] = possibly leaving highwire. Needs to be tested. As of 7/2011.
 
     param[base_url] = http://www.bmj.com/
 
@@ -764,16 +764,16 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1997 ; Gut Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Gut Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Gut Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Gut Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; Gut Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Gut Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Gut Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Gut Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Gut Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Gut Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Gut Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Gut Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Gut Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Gut Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; Gut Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Gut Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Gut Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Gut Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Gut Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Gut Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Gut Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Gut Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Gut Volume 53 ; 53 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Gut Volume 54 ; 54 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Gut Volume 55 ; 55 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Gut Volume 56 ; 56 >
@@ -1628,24 +1628,24 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://thorax.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1946 ; Thorax Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1947 ; Thorax Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1948 ; Thorax Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Thorax Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Thorax Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Thorax Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Thorax Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; Thorax Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Thorax Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Thorax Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Thorax Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Thorax Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Thorax Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Thorax Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; Thorax Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; Thorax Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; Thorax Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; Thorax Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1946 ; Thorax Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Thorax Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Thorax Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Thorax Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Thorax Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Thorax Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Thorax Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Thorax Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Thorax Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Thorax Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Thorax Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Thorax Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Thorax Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Thorax Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Thorax Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Thorax Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Thorax Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Thorax Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1964 ; Thorax Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1965 ; Thorax Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1966 ; Thorax Volume 21 ; 21 >
