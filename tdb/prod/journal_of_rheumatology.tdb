@@ -12,7 +12,7 @@
       issnl = 1499-2752
     >  
 
-    plugin = plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
     {
