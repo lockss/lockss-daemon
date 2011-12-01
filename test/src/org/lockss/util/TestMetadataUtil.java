@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.9 2011-04-13 21:38:29 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.10 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -287,21 +287,29 @@ public class TestMetadataUtil extends LockssTestCase {
 
   public void testISSN() {
     for(int i=0; i<validISSNS.length;i++){
-      assertTrue(MetadataUtil.isISSN(validISSNS[i]));
+      String validIssn = validISSNS[i];
+      assertTrue(MetadataUtil.isISSN(validIssn));
+      assertEquals(validIssn, MetadataUtil.validateISSN(validIssn));
     }
 
     for(int j=0; j<malformedISSNS.length;j++){
-      assertFalse(MetadataUtil.isISSN(malformedISSNS[j]));
+      String malformedIssn = malformedISSNS[j];
+      assertFalse(MetadataUtil.isISSN(malformedIssn));
+      assertEquals(null, MetadataUtil.validateISSN(malformedIssn));
     }
 
     // invalid with checksum calculations
     for(int j=0; j<invalidISSNS.length;j++){
+      String invalidIssn = invalidISSNS[j];
       assertFalse(MetadataUtil.isISSN(invalidISSNS[j], true));
+      assertEquals(null, MetadataUtil.validateISSN(invalidIssn, true));
     }
 
     // valid ignoring checksum calculations
     for(int j=0; j<invalidISSNS.length;j++){
-      assertTrue(MetadataUtil.isISSN(invalidISSNS[j], false));
+      String invalidIssn = invalidISSNS[j];
+      assertTrue(MetadataUtil.isISSN(invalidIssn, false));
+      assertEquals(invalidIssn, MetadataUtil.validateISSN(invalidIssn, false));
     }
   }
 

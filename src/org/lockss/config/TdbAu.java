@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.12 2011-10-26 17:11:29 pgust Exp $
+ * $Id: TdbAu.java,v 1.13 2011-12-01 17:39:31 easyonthemayo Exp $
  */
 
 /*
@@ -35,7 +35,8 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.config.Tdb.TdbException;
-import org.lockss.exporter.kbart.TdbAuOrderScorer;
+import org.lockss.exporter.biblio.BibliographicItem;
+import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
@@ -44,7 +45,7 @@ import org.lockss.util.*;
  *
  * @author  Philip Gust
  */
-public class TdbAu {
+public class TdbAu implements BibliographicItem {
   /**
    * The name of this instance
    */
@@ -482,11 +483,24 @@ public class TdbAu {
 
   /**
    * Convenience method returns the AU's TdbTitle's name.
-   *   
-   * @return the name of this AU's TdbTitle
+   *
+   * @return the name of this AU's TdbTitle, or <tt>null</tt>
    */
   public String getJournalTitle() {
     return (title != null) ? title.getName() : null;
+  }
+
+  /**
+   * Convenience method returns the AU's TdbPublisher's name.
+   *
+   * @return the name of this AU's TdbPublisher, or <tt>null</tt>
+   */
+  public String getPublisherName() {
+    try {
+      return title.getTdbPublisher().getName();
+    } catch (NullPointerException e) {
+      return null;
+    }
   }
 
   /**
@@ -539,7 +553,8 @@ public class TdbAu {
   }
   
   /**
-   * Return eISSN for this title.
+   * Return eISSN for this title. Checks that the ISSN is well-formed (but
+   * does not check checksum).
    * 
    * @return the eISSN for this title or <code>null</code> if not specified
    */
@@ -548,7 +563,8 @@ public class TdbAu {
   }
   
   /**
-   * Return ISSN-L for this title.
+   * Return ISSN-L for this title. Checks that the ISSN is well-formed (but
+   * does not check checksum).
    * 
    * @return the ISSN-L for this title or <code>null</code> if not specified
    */
@@ -568,18 +584,19 @@ public class TdbAu {
   /**
    * Return representative ISSN for this title. 
    * Uses ISSN-L, then eISSN, and finally print ISSN.
+   * Each ISSN is checked for well-formedness, but is not checksummed.
    * 
-   * @return representative for this title or <code>null</code> if not specified
+   * @return representative for this title or <code>null</code> if not specified or ill-formed
    */
   public String getIssn() {
     String issn = getIssnL();
-    if (issn == null) {
+    if (!MetadataUtil.isISSN(issn)) {
       issn = getEissn();
-      if (issn == null) {
+      if (!MetadataUtil.isISSN(issn)) {
         issn = getPrintIssn();
       }
     }
-    return issn;
+    return MetadataUtil.isISSN(issn) ? issn : null;
   }
   
   /**
@@ -632,7 +649,7 @@ public class TdbAu {
    */
   public String getStartVolume() {
     String vol = getVolume();
-    return TdbAuOrderScorer.isVolumeRange(vol) ?
+    return BibliographicUtil.isVolumeRange(vol) ?
         NumberUtil.getRangeStart(vol) : vol;
   }
 
@@ -644,7 +661,7 @@ public class TdbAu {
    */
   public String getEndVolume() {
     String vol = getVolume();
-    return TdbAuOrderScorer.isVolumeRange(vol) ?
+    return BibliographicUtil.isVolumeRange(vol) ?
         NumberUtil.getRangeEnd(vol) : vol;
   }
 

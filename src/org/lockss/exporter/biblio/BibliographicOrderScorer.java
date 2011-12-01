@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuOrderScorer.java,v 1.4 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.exporter.kbart;
+package org.lockss.exporter.biblio;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -40,8 +40,7 @@ import java.util.Set;
 import org.apache.oro.text.regex.MatchResult;
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Matcher;
-import org.lockss.config.TdbAu;
-import org.lockss.exporter.kbart.KbartConverter.TitleRange;
+import org.lockss.exporter.biblio.BibliographicUtil.TitleRange;
 import org.lockss.util.NumberUtil;
 import org.lockss.util.RegexpUtil;
 import org.lockss.util.Logger;
@@ -49,8 +48,8 @@ import org.lockss.util.StringUtil;
 
 /**
  * This is a utility class intended to provide some measure of whether a
- * particular ordering of TdbAu objects, based on either year or volume fields,
- * provides an appropriately consistent ordering for both fields.
+ * particular ordering of BibliographicItem objects, based on either year or
+ * volume fields, provides an appropriately consistent ordering for both fields.
  * The main purpose is to decide which ordering gives the most consistent (and
  * therefore, we assume, more likely to be correct) results. To decide this
  * we need to know which field was used to order the list. There are two ways
@@ -134,12 +133,12 @@ import org.lockss.util.StringUtil;
  *
  * @author Neil Mayo
  */
-public final class TdbAuOrderScorer {
+public final class BibliographicOrderScorer {
 
-  private static Logger log = Logger.getLogger("TdbAuOrderScorer");
+  private static Logger log = Logger.getLogger("BibliographicOrderScorer");
 
   /** Do not allow instantiation outside of package or subclasses. */
-  protected TdbAuOrderScorer() { /* No instantiation. */ }
+  protected BibliographicOrderScorer() { /* No instantiation. */ }
 
   /**
    * A pattern to find the last numerical token in a volume string. If the
@@ -171,16 +170,16 @@ public final class TdbAuOrderScorer {
    * Note that some of the method implementations can throw
    * NumberFormatException.
    */
-  static enum SORT_FIELD {
+  public static enum SORT_FIELD {
 
     VOLUME {
       public SORT_FIELD other() { return YEAR; };
-      public String getValue(TdbAu au) { return au.getVolume(); }
+      public String getValue(BibliographicItem au) { return au.getVolume(); }
       // Volumes are compared end year to start year
-      public String getValueForComparisonAsPrevious(TdbAu au) {
+      public String getValueForComparisonAsPrevious(BibliographicItem au) {
         return au.getEndVolume();
       }
-      public String getValueForComparisonAsCurrent(TdbAu au) {
+      public String getValueForComparisonAsCurrent(BibliographicItem au) {
         return au.getStartVolume();
       }
       public boolean areIncreasing(String first, String second) {
@@ -195,38 +194,39 @@ public final class TdbAuOrderScorer {
        * @return <tt>true</tt> if the volume strings are decreasing
        */
       public boolean areDecreasing(String first, String second) {
-        return changeOfFormats(first, second) ? false :
+        return BibliographicUtil.changeOfFormats(first, second) ? false :
             !areVolumesIncreasing(first, second);
       }
       public boolean areConsecutive(String first, String second) {
         return areVolumesConsecutive(first, second);
       }
       /**
-       * Consecutive TdbAus must usually have valid (non-zero) and strictly
-       * consecutive volumes. However, because of occasional interleaving of
-       * duplicate records which appear because of genuine duplicates when a
-       * publisher re-releases on a new platform, we allow consecutive TdbAus
-       * to have the same volume string if their other fields are also
-       * duplicated.
+       * Consecutive BibliographicItems must usually have valid (non-zero) and
+       * strictly consecutive volumes. However, because of occasional
+       * interleaving of duplicate records which appear because of genuine
+       * duplicates when a publisher re-releases on a new platform, we allow
+       * consecutive BibliographicItems to have the same volume string if their
+       * other fields are also duplicated.
        * <p>
        * Because of overlapping volume ranges (see for example "Laser Chemistry")
-       * we also allow the first TdbAu's end volume to be equal to the second's
-       * start volume.
+       * we also allow the first BibliographicItem's end volume to be equal to
+       * the second's start volume.
        * <p>
-       * A third possibility is that consecutive TdbAus have the same volume
-       * string and consecutive years, suggesting a volume published in several
-       * instalments over a period.
+       * A third possibility is that consecutive BibliographicItems have the
+       * same volume string and consecutive years, suggesting a volume published
+       * in several instalments over a period.
        * <p>
        * This method handles volume ranges, splitting them before checking
-       * whether the end volume of the first TdbAu and the start volume of the
-       * second TdbAu are consecutive. With volumes there is no room for fuzzy
-       * overlap as there is when comparing years.
+       * whether the end volume of the first BibliographicItem and the start
+       * volume of the second BibliographicItem are consecutive. With volumes
+       * there is no room for fuzzy overlap as there is when comparing years.
        *
-       * @param first a TdbAu
-       * @param second another TdbAu
-       * @return <code>true</code> if the TdbAu volume ranges appear to be appropriately consecutive
+       * @param first a BibliographicItem
+       * @param second another BibliographicItem
+       * @return <code>true</code> if the BibliographicItem volume ranges appear to be appropriately consecutive
        */
-      public boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second) {
+      public boolean areAppropriatelyConsecutive(BibliographicItem first,
+                                                 BibliographicItem second) {
         String e1 = first.getEndVolume();
         String s2 = second.getStartVolume();
         return
@@ -234,16 +234,18 @@ public final class TdbAuOrderScorer {
             (areVolumeStringsValid(e1, s2) && areVolumesConsecutive(e1, s2)) ||
             // True if valid and equal boundary volumes
             (areVolumeStringsValid(e1, s2) && e1.equals(s2)) ||
-            // True if consecutive duplicate TdbAus, including volume
+            // True if consecutive duplicate BibliographicItems, including volume
             areVolumesConsecutiveDuplicates(first, second) ||
             // True if valid volumes extending across appropriately consecutive years
             (areVolumeStringsValid(e1, s2) && areExtendedVolume(first, second));
       }
 
       /**
-       * TdbAu sequences must display monotonically increasing volumes.
+       * BibliographicItem sequences must display monotonically increasing
+       * volumes.
        */
-      public boolean areAppropriatelySequenced(TdbAu first, TdbAu second) {
+      public boolean areAppropriatelySequenced(BibliographicItem first,
+                                               BibliographicItem second) {
         return isMonotonicallyIncreasing(Arrays.asList(first, second), this);
       }
     },
@@ -251,12 +253,12 @@ public final class TdbAuOrderScorer {
 
     YEAR {
       public SORT_FIELD other() { return VOLUME; };
-      public String getValue(TdbAu au) { return au.getYear(); }
+      public String getValue(BibliographicItem au) { return au.getYear(); }
       // Year are compared start year to start year
-      public String getValueForComparisonAsPrevious(TdbAu au) {
+      public String getValueForComparisonAsPrevious(BibliographicItem au) {
         return au.getStartYear();
       }
-      public String getValueForComparisonAsCurrent(TdbAu au) {
+      public String getValueForComparisonAsCurrent(BibliographicItem au) {
         return au.getStartYear();
       }
       public boolean areIncreasing(String first, String second) {
@@ -270,50 +272,59 @@ public final class TdbAuOrderScorer {
       public boolean areConsecutive(String first, String second) {
         return areYearsConsecutive(first, second);
       }
-      /** Consecutive TdbAus must have appropriately consecutive year ranges. */
-      public boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second) {
+      /** Consecutive BibliographicItems must have appropriately consecutive
+       * year ranges. */
+      public boolean areAppropriatelyConsecutive(BibliographicItem first,
+                                                 BibliographicItem second) {
         // Appropriate sequencing, plus no significant gap between the ranges
         return areYearRangesAppropriatelyConsecutive(first.getYear(),
             second.getYear());
       }
-      /** TdbAu sequences must have appropriately sequenced year ranges. */
-      public boolean areAppropriatelySequenced(TdbAu first, TdbAu second) {
+      /** BibliographicItem sequences must have appropriately sequenced year
+       * ranges. */
+      public boolean areAppropriatelySequenced(BibliographicItem first,
+                                               BibliographicItem second) {
         return areYearRangesAppropriatelySequenced(first.getYear(),
             second.getYear());
       }
     }
     ;
 
-    /** Whether the TdbAu has a valid value on the field. */
-    public boolean hasValue(TdbAu au) { return getValue(au)!=null; }
+    /** Whether the BibliographicItem has a valid value on the field. */
+    public boolean hasValue(BibliographicItem au) { return getValue(au)!=null; }
     // Abstract methods for SORT_FIELD
     /** The 'other' or secondary sort field when this is the primary sort field. */
     public abstract SORT_FIELD other();
     /** Gets the full value of the field. */
-    public abstract String getValue(TdbAu au);
+    public abstract String getValue(BibliographicItem au);
     /**
-     * Gets the value of the field's range to use for comparison when the TdbAu
-     * is the <i>previous</i> one in a pair comparison. This is not necessarily
-     * equivalent to the end of the range, for example years are only compared
-     * on start year due to the frequent unreliability of end years.
+     * Gets the value of the field's range to use for comparison when the
+     * BibliographicItem is the <i>previous</i> one in a pair comparison. This
+     * is not necessarily equivalent to the end of the range, for example years
+     * are only compared on start year due to the frequent unreliability of end
+     * years.
      */
-    public abstract String getValueForComparisonAsPrevious(TdbAu au);
+    public abstract String getValueForComparisonAsPrevious(BibliographicItem au);
     /**
-     * Gets the value of the field's range to use for comparison when the TdbAu
-     * is the <i>current</i> one in a pair comparison. This is not necessarily
-     * equivalent to the start of the range.
+     * Gets the value of the field's range to use for comparison when the
+     * BibliographicItem is the <i>current</i> one in a pair comparison. This is
+     * not necessarily equivalent to the start of the range.
      */
-    public abstract String getValueForComparisonAsCurrent(TdbAu au);
-    /** Whether the TdbAus have increasing values on the field. */
+    public abstract String getValueForComparisonAsCurrent(BibliographicItem au);
+    /** Whether the BibliographicItems have increasing values on the field. */
     public abstract boolean areIncreasing(String first, String second);
-    /** Whether the TdbAus have decreasing values on the field. */
+    /** Whether the BibliographicItems have decreasing values on the field. */
     public abstract boolean areDecreasing(String first, String second);
-    /** Whether the TdbAus have consecutive values on the field. */
+    /** Whether the BibliographicItems have consecutive values on the field. */
     public abstract boolean areConsecutive(String first, String second);
-    /** Whether the TdbAus have field values which are appropriately sequenced. */
-    public abstract boolean areAppropriatelySequenced(TdbAu first, TdbAu second);
-    /** Whether the TdbAus have field values which are appropriately consecutive. */
-    public abstract boolean areAppropriatelyConsecutive(TdbAu first, TdbAu second);
+    /** Whether the BibliographicItems have field values which are appropriately
+     * sequenced. */
+    public abstract boolean areAppropriatelySequenced(BibliographicItem first,
+                                                      BibliographicItem second);
+    /** Whether the BibliographicItems have field values which are appropriately
+     * consecutive. */
+    public abstract boolean areAppropriatelyConsecutive(BibliographicItem first,
+                                                        BibliographicItem second);
   };
 
 
@@ -323,7 +334,7 @@ public final class TdbAuOrderScorer {
    * consistent a set of ranges it produces, and a score for each field based
    * on how consistent the full list of field values is.
    */
-  static class ConsistencyScore {
+  public static class ConsistencyScore {
     public final float volScore, yearScore, volListScore, yearListScore, score;
     public ConsistencyScore(float volScore, float yearScore,
                             float volListScore, float yearListScore) {
@@ -340,62 +351,6 @@ public final class TdbAuOrderScorer {
           "volList %f \t yearList %f \t Overall %s",
           volScore, yearScore, volListScore, yearListScore, score);
     }
-  }
-
-
-  /**
-   * Determines whether a String appears to represent a range. In general, a
-   * range is considered to be two strings which are both either numeric
-   * (representing an integer or a Roman numeral) or non-numeric,
-   * separated by a hyphen '-' and with optional whitespace.
-   * The second value is expected to be numerically or lexically greater than
-   * or equal to the first. For example, "s1-4" would not qualify as either a
-   * numeric or a non-numeric range, while "I-4" ("I" being a Roman number) and
-   * the string range "a-baa" would. Numerical ordering is checked if the
-   * strings are numerical, otherwise case-insensitive lexical ordering is
-   * checked.
-   * <p>
-   * A numeric range must have two numeric values separated by a '-', while a
-   * non-numeric range has two non-numeric values. In theory a string like
-   * "s1-4" could represent a range, as could "1-s4", but it is impossible to
-   * say whether either of these represents a genuine range with
-   * different-format endpoints, or a single identifier. This is why the
-   * condition is imposed that the strings either side of the hyphen must be
-   * both numeric, or both non-numeric and of roughly the same format.
-   * That is, either they are both parsable as integers, or they both involve
-   * non-digit tokens that cannot be parsed as integers.
-   * <p>
-   * To allow for identifers that themselves incorporate a hyphen, the input
-   * string is only split around the centremost hyphen. If there is an even
-   * number of hyphens, the input string is assumed not to represent a parsable
-   * range.
-   * <p>
-   * It might also be useful to enforce further restrictions upon non-numerical
-   * strings that are considered valid endpoints of a range - for example, that
-   * when tokenised, each pair of non-numerical tokens are equivalent, or the
-   * same length, or lexically either equal or increasing.
-   *
-   * @param range the input String
-   * @return <tt>true</tt> if the input string represents a range
-   */
-  public static boolean isVolumeRange(String range) {
-    if (range == null) return false;
-    // Check first if it is a numerical range
-    if (NumberUtil.isNumericalRange(range)) return true;
-    // We are now dealing with either a non-range, or at least one non-numerical
-    // endpoint. Find the range-separating hyphen.
-    int hyphenPos = NumberUtil.findRangeHyphen(range);
-    if (hyphenPos < 0) return false;
-    // Zero-padding up to 4 positions should be ample for volumes
-    int pad = 4;
-    // Split string at middlemost hyphen, and pad numerical tokens with 0
-    String s1 = NumberUtil.padNumbers(range.substring(0, hyphenPos).trim(), pad);
-    String s2 = NumberUtil.padNumbers(range.substring(hyphenPos+1).trim(),  pad);
-    // Check format of strings
-    if (TdbAuOrderScorer.changeOfFormats(s1, s2)) return false;
-    // TODO further check tokens if required
-    // Check lexical order
-    return s2.compareToIgnoreCase(s1) >= 0;
   }
 
   /**
@@ -568,18 +523,19 @@ public final class TdbAuOrderScorer {
   }
 
   /**
-   * Two TdbAus may be considered consecutive even if they share a volume
-   * string, as long as the rest of their fields are also equivalent. This
-   * is taken to indicate that the volumes are genuine duplicates supplied
-   * by the publisher, because for example they have re-released on a new
-   * platform, rather than accidental duplicates introduced through
-   * errors in either the TDB or the publisher records.
-   * @param first a TdbAu representing the first volume
-   * @param second a TdbAu representing the subsequent volume
+   * Two <code>BibliographicItem</code>s may be considered consecutive even if
+   * they share a volume string, as long as the rest of their fields are also
+   * equivalent. This is taken to indicate that the volumes are genuine
+   * duplicates supplied by the publisher, because for example they have
+   * re-released on a new platform, rather than accidental duplicates introduced
+   * through errors in either the input records or the publisher records.
+   * @param first a BibliographicItem representing the first volume
+   * @param second a BibliographicItem representing the subsequent volume
    * @return whether the volumes appear to be consecutive
    */
-  static final boolean areVolumesConsecutiveDuplicates(TdbAu first, TdbAu second) {
-    return KbartTdbAuUtil.areApparentlyEquivalent(first, second);
+  static final boolean areVolumesConsecutiveDuplicates(BibliographicItem first,
+                                                       BibliographicItem second) {
+    return BibliographicUtil.areApparentlyEquivalent(first, second);
   }
 
   /**
@@ -678,20 +634,23 @@ public final class TdbAuOrderScorer {
   }
 
   /**
-   * A pair of TdbAus represent the same (extended) volume if they
+   * A pair of BibliographicItems represent the same (extended) volume if they
    * have the same value non-zero volume string along with appropriately
    * sequential year ranges.
-   * @param first a TdbAu
-   * @param second another TdbAu
-   * @return whether the TdbAus seem to represent a volume extending over consecutive years
+   * @param first a BibliographicItem
+   * @param second another BibliographicItem
+   * @return whether the BibliographicItems seem to represent a volume extending over consecutive years
    * @throws NumberFormatException
    */
-  static final boolean areExtendedVolume(TdbAu first, TdbAu second)
+  static final boolean areExtendedVolume(BibliographicItem first,
+                                         BibliographicItem second)
       throws NumberFormatException {
     String vol1 = first.getVolume();
     String vol2 = second.getVolume();
     // Same volume range (not 0), appropriately consecutive years
-    return NumberUtil.areRangesEqual(vol1, vol2) && areVolumeStringsValid(vol1, vol2) &&
+    return
+        NumberUtil.areRangesEqual(vol1, vol2) &&
+        areVolumeStringsValid(vol1, vol2) &&
         SORT_FIELD.YEAR.areAppropriatelySequenced(first, second);
   }
 
@@ -734,7 +693,7 @@ public final class TdbAuOrderScorer {
    * there is a coverage gap.
    * <p>
    * Note that the concept of <i>appropriate consecutivity</i> embodied here
-   * is for establishing that TdbAus relating to a journal range are
+   * is for establishing that BibliographicItems relating to a journal range are
    * reasonably ordered and 'consecutive enough' not to warrant the creation of
    * a coverage gap based on years. However there may be legitimate gaps
    * between consecutive volumes of greater than a year, and also multiple
@@ -800,17 +759,18 @@ public final class TdbAuOrderScorer {
   /**
    * Check whether a pair of year ranges appears to be in an order consistent
    * with a chronological ordering of volumes. If each sequential pair of years
-   * in a volume-ordered list of TdbAus is <i>appropriately sequential</i>,
-   * it suggests that the ordering is correct. If they are <i>appropriately
-   * sequential</i> but not <i>appropriately consecutive</i>, the volumes may
-   * be consulted to indicate whether or not there is a coverage gap.
+   * in a volume-ordered list of BibliographicItems is
+   * <i>appropriately sequential</i>, it suggests that the ordering is correct.
+   * If they are <i>appropriately sequential</i> but not <i>appropriately
+   * consecutive</i>, the volumes may be consulted to indicate whether or not
+   * there is a coverage gap.
    * <p>
    * Note that the concept of <i>appropriate sequence</i> embodied here is
-   * useful for establishing that TdbAus in an ordered list of volumes display
-   * a reasonable ordering of years. However <i>it is not an appropriate
-   * concept for use in deciding where coverage gaps should occur based on the
-   * year field. For this application the more strict
-   * {@link areYearRangesAppropriatelyConsecutive()} method should be used
+   * useful for establishing that BibliographicItems in an ordered list of
+   * volumes display a reasonable ordering of years. However <i>it is not an
+   * appropriate concept for use in deciding where coverage gaps should occur
+   * based on the year field. For this application the more strict
+   * {@link #areYearRangesAppropriatelyConsecutive} method should be used
    * to decide where there are temporal breaks.</i>
    * <p>
    * This method accounts for string-based years, representing either a single
@@ -857,7 +817,7 @@ public final class TdbAuOrderScorer {
                                              SORT_FIELD fieldToCheck) {
     float total = 0;
     for (TitleRange tr: ranges) {
-      total += countProportionOfBreaksInRange(tr.tdbAus, fieldToCheck);
+      total += countProportionOfBreaksInRange(tr.items, fieldToCheck);
     }
     return total/ranges.size();
   }
@@ -874,7 +834,7 @@ public final class TdbAuOrderScorer {
                                                  SORT_FIELD fieldToCheck) {
     float total = 0;
     for (TitleRange tr: ranges) {
-      total += countProportionOfRedundancyInRange(tr.tdbAus, fieldToCheck);
+      total += countProportionOfRedundancyInRange(tr.items, fieldToCheck);
     }
     return total/ranges.size();
   }
@@ -885,18 +845,18 @@ public final class TdbAuOrderScorer {
    * represents a gapless range, the result will be zero if
    * <code>fieldToCheck</code> is the primary field informing the ordering.
    *
-   * @param aus a list of TdbAus
+   * @param aus a list of BibliographicItems
    * @param fieldToCheck the field to analyse for breaks
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfBreaksInRange(List<TdbAu> aus,
-                                                    SORT_FIELD fieldToCheck) {
+  static final float countProportionOfBreaksInRange(
+      List<? extends BibliographicItem> aus, SORT_FIELD fieldToCheck) {
     int numPairs = aus.size() - 1;
     if (numPairs<1) return 0;
     int total = 0;
     for (int i=1; i<=numPairs; i++) {
-      TdbAu lastAu = aus.get(i-1);
-      TdbAu thisAu = aus.get(i);
+      BibliographicItem lastAu = aus.get(i-1);
+      BibliographicItem thisAu = aus.get(i);
       // If there is not a full set of field values, return a high value
       if (!fieldToCheck.hasValue(lastAu) || !fieldToCheck.hasValue(thisAu))
         return 1f;
@@ -922,17 +882,18 @@ public final class TdbAuOrderScorer {
    * a problem in the years. By contrast, any break in volume is considered a
    * coverage gap.
    *
-   * @param aus a list of TdbAus
+   * @param aus a list of BibliographicItems
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfUniquelyYearBreaks(List<TdbAu> aus) {
+  static final float countProportionOfUniquelyYearBreaks(
+      List<? extends BibliographicItem> aus) {
     SORT_FIELD yearField = SORT_FIELD.YEAR;
     int numPairs = aus.size() - 1;
     if (numPairs<1) return 0;
     int total = 0;
     for (int i=1; i<=numPairs; i++) {
-      TdbAu lastAu = aus.get(i-1);
-      TdbAu thisAu = aus.get(i);
+      BibliographicItem lastAu = aus.get(i-1);
+      BibliographicItem thisAu = aus.get(i);
       // If there is not a full set of field values, return a high value
       if (!yearField.hasValue(lastAu) || !yearField.hasValue(thisAu))
         return 1f;
@@ -969,18 +930,18 @@ public final class TdbAuOrderScorer {
    * consecutive. To count towards the proportion, years must be both
    * non-consecutive by that measure, and also decreasing.
    *
-   * @param aus a list of TdbAus
+   * @param aus a list of BibliographicItems
    * @param fieldToCheck the field to analyse for breaks
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfNegativeBreaksInRange(List<TdbAu> aus,
-      SORT_FIELD fieldToCheck) {
+  static final float countProportionOfNegativeBreaksInRange(
+      List<? extends BibliographicItem> aus, SORT_FIELD fieldToCheck) {
     int numPairs = aus.size() - 1;
     if (numPairs<1) return 0;
     int total = 0;
     for (int i=1; i<=numPairs; i++) {
-      TdbAu lastAu = aus.get(i-1);
-      TdbAu thisAu = aus.get(i);
+      BibliographicItem lastAu = aus.get(i-1);
+      BibliographicItem thisAu = aus.get(i);
       String lastVal = fieldToCheck.getValueForComparisonAsPrevious(lastAu);
       String thisVal = fieldToCheck.getValueForComparisonAsCurrent(thisAu);
       // If there is not a full set of field values, return a high value
@@ -1008,23 +969,23 @@ public final class TdbAuOrderScorer {
    * values but not their preceding value.</s>
    * <p>
    * Duplicates can appear in both year and volume fields. For volumes, this is
-   * mostly because of duplicate TDB records due to something like a publisher
+   * mostly because of duplicate records due to something like a publisher
    * moving to a different platform. It should not (but does) occur within the
    * volume fields of a single journal run. For this reason, a duplicate value
    * is not counted if it duplicates only the preceding value.
    *
-   * @param aus a list of TdbAus
+   * @param aus a list of BibliographicItems
    * @param fieldToCheck the field to analyse for redundancy
    * @return a decimal value between 0 and 1
    */
-  static final float countProportionOfRedundancyInRange(List<TdbAu> aus,
-                                                        SORT_FIELD fieldToCheck) {
+  static final float countProportionOfRedundancyInRange(
+      List<? extends BibliographicItem> aus, SORT_FIELD fieldToCheck) {
     int numVals = aus.size();
     if (numVals<2) return 0;
     Set<String> uniqueVals = new HashSet<String>();
     String lastValue = null;
     int redundantEntries = 0;
-    for (TdbAu au : aus) {
+    for (BibliographicItem au : aus) {
       // If there is not a full set of field values, return a high value
       if (!fieldToCheck.hasValue(au)) return 1f;
       String value = fieldToCheck.getValue(au);
@@ -1036,7 +997,7 @@ public final class TdbAuOrderScorer {
   }
 
   /**
-   * Determine whether a list of TdbAus is ordered in such a way that the
+   * Determine whether a list of BibliographicItems is ordered in such a way that the
    * sequence of values in the specified field is monotonically increasing,
    * that is, the consecutive values do not decrease at any point. Note that
    * the values of some fields change format over the course of a publication;
@@ -1044,11 +1005,12 @@ public final class TdbAuOrderScorer {
    * and a string format. For this reason, a switch of formats between the
    * pairs is allowed.
    *
-   * @param aus a list of TdbAus
+   * @param aus a list of BibliographicItems
    * @param fieldToCheck the field to check for monotonic increase
-   * @return whether the list of TdbAus shows monotonic increase in the specified value
+   * @return whether the list of BibliographicItems shows monotonic increase in the specified value
    */
-  static final boolean isMonotonicallyIncreasing(List<TdbAu> aus, SORT_FIELD fieldToCheck) {
+  static final boolean isMonotonicallyIncreasing(
+      List<? extends BibliographicItem> aus, SORT_FIELD fieldToCheck) {
     int numPairs = aus.size() - 1;
     if (numPairs<1) return true; // Uninterestingly true
     String thisVal, lastVal;
@@ -1057,7 +1019,7 @@ public final class TdbAuOrderScorer {
       thisVal = fieldToCheck.getValueForComparisonAsCurrent(aus.get(i));
       if (!fieldToCheck.areIncreasing(lastVal, thisVal)) {
         // Check if there is a change of formats
-        if (changeOfFormats(lastVal, thisVal)) {
+        if (BibliographicUtil.changeOfFormats(lastVal, thisVal)) {
           log.warning(String.format("Ignoring change of formats in %s: %s %s\n",
               fieldToCheck, lastVal, thisVal));
           continue;
@@ -1069,76 +1031,17 @@ public final class TdbAuOrderScorer {
   }
 
   /**
-   * Check whether the supplied strings indicate a change of format in their
-   * field; this is inevitably a fuzzy concept, and for the moment we check
-   * for the very simple distinction between digit-numerical and
-   * non-numerical strings. A numerical string is one that represents an integer
-   * with either digits or Roman numerals. Note that digit-numerical and
-   * non-numerical are not complementary concepts.
-   * <p>
-   * A change between Roman numerals and Arabic numbers is not considered a
-   * change of formats. Strings that consist of only Roman numerals can be
-   * interpreted as either integers or strings (depending on the normalisation
-   * applied to Roman numerals). It is therefore not possible to say strictly
-   * whether a particular string that meets {@link NumberUtil.isRomanNumeral()}
-   * is intended as an integer or a string, so we allow it to meet either
-   * criterion. If either <code>lastVal</code> or <code>thisVal</code> can be
-   * parsed as a Roman numeral, and the other mixes digits and non-digits, it is
-   * considered a change of formats; however if either value can be parsed as a
-   * Roman numeral while the other consists only of digits (is parsable as an
-   * integer) or of non-digits (does not contain digits), we cannot decide if
-   * there is a change of formats and return false.
-   * <p>
-   * In future it might be desirable to use a more complex measure
-   * of similarity or difference, for example Levenstein distance or a regexp
-   * and tokenisation. (For example if the formats are both string, test that
-   * there is a common substring at the start.)
-   *
-   * @param lastVal the last value
-   * @param thisVal the current value
-   * @return true if one string contains only digits while the other is not parsable as a number
-   */
-  static final boolean changeOfFormats(String lastVal, String thisVal) {
-
-    boolean rn1 = NumberUtil.isRomanNumber(lastVal);
-    boolean rn2 = NumberUtil.isRomanNumber(thisVal);
-    // TODO It might be better to only allow normalised Roman numbers using NumberUtil.parseRomanNumber(s, true);
-    boolean mf1 = NumberUtil.isMixedFormat(lastVal);
-    boolean mf2 = NumberUtil.isMixedFormat(thisVal);
-
-    // If one is Roman and the other is mixed, consider it a change of formats
-    //if ((rn1 && mf2) || (rn2 && mf1)) return true;
-
-    // If either is a Roman number while the other is not mixed formats,
-    // we can't be sure there is a change
-    //if ((rn1 && !mf2) || (rn2 && !mf1)) return false;
-
-    // If one is parsable as a Roman numeral, the return value depends upon
-    // whether the other is mixed format.
-    if (rn1) return mf2;
-    if (rn2) return mf1;
-
-    // Are these strings digit-numerical and/or numerical?
-    boolean i1 = NumberUtil.isInteger(lastVal);
-    boolean i2 = NumberUtil.isInteger(thisVal);
-    boolean n1 = NumberUtil.isNumber(lastVal);
-    boolean n2 = NumberUtil.isNumber(thisVal);
-    // If one is digit-numerical and the other is non-numerical,
-    // there is a definite change of formats.
-    return (i1 && !n2) || (!n1 && i2);
-  }
-
-  /**
    * Uses a rough heuristic to calculate a consistency value for
    * the sequence of start years provided by the given list of AUs.
    * Contributing measures include the proportion of redundancy,
    * the number of breaks which are unique to the year field, and
    * the number of negative breaks.
    *
-   * @param aus a list of TdbAus describing a full ordered sequence
+   * @param aus a list of BibliographicItems describing a full ordered sequence
    * @return a consistency rating for the sequence of values in the year field
    */
-  static final float getYearListConsistency(List<TdbAu> aus) {
+  static final float getYearListConsistency(
+      List<? extends BibliographicItem> aus) {
     // Combine redundancy, breaks, etc to produce a measure
     float red = countProportionOfRedundancyInRange(aus, SORT_FIELD.YEAR);
     // For years in a sequence, we only count breaks which occur uniquely in the
@@ -1156,10 +1059,11 @@ public final class TdbAuOrderScorer {
    * Contributing measures include the proportion of redundancy,
    * the number of breaks, and the number of negative breaks.
    *
-   * @param aus a list of TdbAus describing a full ordered sequence
+   * @param aus a list of BibliographicItems describing a full ordered sequence
    * @return a consistency rating for the sequence of values in the volume field
    */
-  static final float getVolumeListConsistency(List<TdbAu> aus) {
+  static final float getVolumeListConsistency(
+      List<? extends BibliographicItem> aus) {
     // For volumes in a sequence, although there should be no duplication,
     // we do sometimes see it because there are two copies of an AU out there,
     // one 'released' and one 'down'. These will get interleaved in the AU
@@ -1190,13 +1094,13 @@ public final class TdbAuOrderScorer {
     SORT_FIELD sf = SORT_FIELD.YEAR;
     float totalRed = 0, totalBrk = 0, totalAus = 0, totalNegbrk = 0;
     for (TitleRange rng : ranges) {
-      float red = countProportionOfRedundancyInRange(rng.tdbAus, sf);
-      float brk = countProportionOfBreaksInRange(rng.tdbAus, sf);
-      float negbrk = countProportionOfNegativeBreaksInRange(rng.tdbAus, sf);
+      float red = countProportionOfRedundancyInRange(rng.items, sf);
+      float brk = countProportionOfBreaksInRange(rng.items, sf);
+      float negbrk = countProportionOfNegativeBreaksInRange(rng.items, sf);
       totalRed += red;
       totalBrk += brk;
       totalNegbrk += negbrk;
-      totalAus += rng.tdbAus.size();
+      totalAus += rng.items.size();
     }
     float numRanges = (float)ranges.size();
     // Discount for large number of ranges - prefer less ranges
@@ -1231,13 +1135,13 @@ public final class TdbAuOrderScorer {
     SORT_FIELD sf = SORT_FIELD.VOLUME;
     float totalRed = 0, totalBrk = 0, totalAus = 0, totalNegbrk = 0;
     for (TitleRange rng : ranges) {
-      float red = countProportionOfRedundancyInRange(rng.tdbAus, sf);
-      float brk = countProportionOfBreaksInRange(rng.tdbAus, sf);
-      float negbrk = countProportionOfNegativeBreaksInRange(rng.tdbAus, sf);
+      float red = countProportionOfRedundancyInRange(rng.items, sf);
+      float brk = countProportionOfBreaksInRange(rng.items, sf);
+      float negbrk = countProportionOfNegativeBreaksInRange(rng.items, sf);
       totalRed += red;
       totalBrk += brk;
       totalNegbrk += negbrk;
-      totalAus += rng.tdbAus.size();
+      totalAus += rng.items.size();
     }
     float numRanges = (float)ranges.size();
     // Discount for large number of ranges - prefer less ranges
@@ -1254,7 +1158,7 @@ public final class TdbAuOrderScorer {
    * there are genuinely lots of coverage gaps, but in general we prefer an
    * ordering which produces fewer gaps.
    *
-   * @param numAus how many TdbAus are in the sequence
+   * @param numAus how many BibliographicItems are in the sequence
    * @param numRanges how many ranges are in the sequence; should be less than or equal to <code>numAus</code>
    * @return a floating point multiplier between 0 and 1 - 1/numAus which is greater the less gaps there are
    */
@@ -1265,16 +1169,17 @@ public final class TdbAuOrderScorer {
 
   /**
    * Calculate a consistency score for the given list of calculated ranges.
+   *
    * @param aus the full list of aus ordered by the sortField
    * @param rangesByVol an ordered list of title ranges derived from an ordering
    * @return a score between 0 and 1
    */
-  static final ConsistencyScore getConsistencyScore(List<TdbAu> aus,
-      					 List<KbartConverter.TitleRange> rangesByVol) {
+  public static final ConsistencyScore getConsistencyScore(List<? extends BibliographicItem> aus,
+                                                           List<TitleRange> rangesByVol) {
     float volScore = getVolumeRangeConsistency(rangesByVol);
     float yearScore = getYearRangeConsistency(rangesByVol);
-    float volListScore  = TdbAuOrderScorer.getVolumeListConsistency(aus);
-    float yearListScore = TdbAuOrderScorer.getYearListConsistency(aus);
+    float volListScore  = BibliographicOrderScorer.getVolumeListConsistency(aus);
+    float yearListScore = BibliographicOrderScorer.getYearListConsistency(aus);
     return new ConsistencyScore(volScore, yearScore, volListScore, yearListScore);
   }
 
@@ -1285,8 +1190,8 @@ public final class TdbAuOrderScorer {
    * @param yearScore the ConsistencyScore for year ordering
    * @return whether to prefer the volume ordering
    */
-  static final boolean preferVolume(ConsistencyScore volScore,
-                                    ConsistencyScore yearScore) {
+  public static final boolean preferVolume(ConsistencyScore volScore,
+                                           ConsistencyScore yearScore) {
     // Use the volume ordering if the benefit of using it outweighs
     // the loss to year orderings
     return calculateRelativeBenefitToVolume(volScore, yearScore) >=

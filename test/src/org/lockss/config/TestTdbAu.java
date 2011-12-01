@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.9 2011-12-01 17:39:31 easyonthemayo Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.8 2011-10-26 17:11:29 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.9 2011-12-01 17:39:31 easyonthemayo Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -311,6 +311,17 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals("8765-4321", au.getIssnL());
     assertNotNull(au.getIssn());
     assertEquals("1234567890", au.getIsbn());
+
+    // Test behaviour with ill-formed ISSNs
+    au.setPropertyByName("issn", "1234-5");
+    au.setPropertyByName("eissn", "-2468");
+    au.setPropertyByName("issnl", "string");
+    // Individual getters should return the invalid string,
+    // but getIssn() should return null
+    assertEquals("1234-5", au.getPrintIssn());
+    assertEquals("-2468", au.getEissn());
+    assertEquals("string", au.getIssnL());
+    assertNull(au.getIssn());
   }
   
   /**

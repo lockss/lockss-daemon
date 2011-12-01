@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.12 2011-11-02 19:40:51 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.13 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -62,6 +62,29 @@ public class MetadataUtil {
     Pattern.compile("\\d{4}-\\d{3}[\\d{1}|x{1}|X{1}]");
 
   /**
+   * Check that ISSN is valid. If it is, return the ISSN, otherwise return
+   * <tt>null</tt>. Check digit is not verified.
+   *
+   * @param issn the issn string
+   * @return the issn if it is valid, <tt>null</tt> otherwise
+   */
+  public static String validateISSN(String issn) {
+    return validateISSN(issn, false);
+  }
+
+  /**
+   * Check that ISSN is valid. If it is, return the ISSN, otherwise return
+   * <tt>null</tt>. Check digit is verified.
+   *
+   * @param issn the issn string
+   * @param strict if true, also verify checksum, otherwise just check form
+   * @return the issn if it is valid, <tt>null</tt> otherwise
+   */
+  public static String validateISSN(String issn, boolean strict) {
+    return isISSN(issn, strict) ? issn : null;
+  }
+
+  /**
    * Check that ISSN is valid. Method checks that ISSN number is correctly
    * balanced (4 digits on either side of a hyphen). Check digit is not
    * verified.
@@ -71,7 +94,7 @@ public class MetadataUtil {
    * @return true if issn is valid, false otherwise
    */
   public static boolean isISSN(String issn) {
-	  return isISSN(issn, false);
+    return isISSN(issn, false);
   }
   
   /**

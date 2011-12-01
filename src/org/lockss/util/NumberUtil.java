@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.11 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.12 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public class NumberUtil {
    * If the range and value can be interpreted as numbers (Arabic or Roman),
    * the value is compared numerically with the range. Otherwise, the value 
    * is compared to the range start and stop values as a topic range. That 
-   * is, "Georgia", "Kanasas", and "Massachusetts" are topics within the 
+   * is, "Georgia", "Kansas", and "Massachusetts" are topics within the
    * volume "Ge-Ma.
    * <p>
    * The range string can also include whitespace, which is trimmed from the 
@@ -168,7 +168,7 @@ public class NumberUtil {
    * specified in the Unicode character set. The value to search for is 
    * <i>not</i> trimmed.
    *
-   * @param range a single value or a start/stop range separated by a dash, optionally with whitesapce
+   * @param range a single value or a start/stop range separated by a dash, optionally with whitespace
    * @param value the value
    * @return <code>true</code> if this range includes the value
    */
@@ -218,7 +218,7 @@ public class NumberUtil {
    * and the corresponding value is returned.
    * 
    * @param nm property name
-   * @return the Integervalue of the property or <tt>null</tt> if the property
+   * @return the Integer value of the property or <tt>null</tt> if the property
    *   is not defined or is not an integer
    */
   public static Integer getInteger(String nm) {

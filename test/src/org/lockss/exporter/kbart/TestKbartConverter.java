@@ -1,5 +1,5 @@
 /*
- * $Id: TestKbartConverter.java,v 1.14 2011-11-16 18:37:55 easyonthemayo Exp $
+ * $Id: TestKbartConverter.java,v 1.15 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -31,17 +31,18 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.exporter.kbart;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 import org.lockss.config.*;
 import org.lockss.config.Tdb.TdbException;
-import org.lockss.exporter.kbart.KbartConverter.TitleRange;
+import org.lockss.exporter.biblio.BibliographicUtil;
+import static org.lockss.exporter.biblio.BibliographicUtil.*;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 import org.lockss.test.*;
 import org.lockss.util.NumberUtil;
+import org.lockss.util.StringUtil;
 
 
 /**
@@ -205,7 +206,7 @@ public class TestKbartConverter extends LockssTestCase {
   }
 
   /**
-   * Test sortTdbAusByVolumeYear() and sortTdbAusByYearVolume().
+   * Test sortByVolumeYear() and sortByYearVolume().
    * Note these get well exercised in TestTdbAuOrderScorer.
    */
   public final void testSortTdbAus() throws TdbException {
@@ -223,11 +224,11 @@ public class TestKbartConverter extends LockssTestCase {
 
     // Shuffle then sort vol-year
     Collections.shuffle(list);
-    KbartConverter.sortTdbAusByVolumeYear(list);
+    BibliographicUtil.sortByVolumeYear(list);
     assertIsomorphic(expectedVolYearOrder, list);
     // Shuffle then sort year-vol
     Collections.shuffle(list);
-    KbartConverter.sortTdbAusByYearVolume(list);
+    BibliographicUtil.sortByYearVolume(list);
     assertIsomorphic(expectedYearVolOrder, list);
 
     // TODO try incorporating name variations where other fields are equivalent
@@ -300,7 +301,7 @@ public class TestKbartConverter extends LockssTestCase {
     try {
       List<TdbAu> someAus = Arrays.asList(
           // Create TdbAu with name, year, volume
-          TdbTestUtil.createBasicAu("Monkeys Monthly", "2011", "1"),
+          TdbTestUtil.createBasicAu("Monkeys Monthly no. 1", "2011", "1"),
           // TdbAu with empty fields
           TdbTestUtil.createBasicAu("", "", "")
       );
@@ -312,7 +313,6 @@ public class TestKbartConverter extends LockssTestCase {
           TdbTestUtil.makeYearTestTitle("1994-1997").getTdbAus()
       )) {
         for (TdbAu example: aus) {
-          System.out.println(example);
           // Add to a title if it is not already; the basic AUs have the same
           // default ids and so must be added to different titles
           try { TdbTestUtil.makeTitleWithNoAus("an id").addTdbAu(example); }
@@ -340,9 +340,13 @@ public class TestKbartConverter extends LockssTestCase {
       put(Field.PUBLICATION_TITLE, tdbt.getName());
       // These fields are based on KbartTdbAuUtil.find*() methods,
       // rather than the exact au.get*() methods.
-      put(Field.PRINT_IDENTIFIER,  KbartTdbAuUtil.findIssn(au));
+      /*put(Field.PRINT_IDENTIFIER,  KbartTdbAuUtil.findIssn(au));
       put(Field.ONLINE_IDENTIFIER, KbartTdbAuUtil.findEissn(au));
-      put(Field.TITLE_ID,          KbartTdbAuUtil.findIssnL(au));
+      put(Field.TITLE_ID,          KbartTdbAuUtil.findIssnL(au));*/
+      put(Field.PRINT_IDENTIFIER,  au.getPrintIssn());
+      put(Field.ONLINE_IDENTIFIER, au.getEissn());
+      put(Field.TITLE_ID,          au.getIssnL());
+
       // The title URL is based on a very specific string - see KbartConverter
       put(Field.TITLE_URL,
           KbartConverter.LABEL_PARAM_LOCKSS_RESOLVER +
@@ -351,8 +355,14 @@ public class TestKbartConverter extends LockssTestCase {
 
     for (Field f : Field.values()) {
       if (filled.keySet().contains(f)) {
-        System.out.format("Comparing %s %s and %s\n", f, filled.get(f), kbt.getField(f));
-        assertEquals(filled.get(f), kbt.getField(f));
+        //System.out.format("Comparing %s %s and %s\n", f, filled.get(f), kbt.getField(f));
+        // Note that KbartTitles have empty string for unspecified params;
+        // BibliographicItem/TdbAu have null.
+        // If both are non-null/empty, compare them
+        if (!StringUtil.isNullString(filled.get(f)) &&
+            !StringUtil.isNullString(kbt.getField(f))) {
+          assertEquals(filled.get(f), kbt.getField(f));
+        }
       } else assertEquals("", kbt.getField(f));
     }
   }
@@ -421,7 +431,7 @@ public class TestKbartConverter extends LockssTestCase {
         TitleRange currentRange;
         for (KbartTitle kbt : sortedKeys) {
           currentRange = map.get(kbt);
-          int s = currentRange.tdbAus.size();
+          int s = currentRange.items.size();
           // Each TitleRange should be of a size no bigger than the full set of aus
           assertTrue(s<=aus.size());
           assertTrue(s>0);
@@ -435,7 +445,7 @@ public class TestKbartConverter extends LockssTestCase {
           }
           // Set the previous range and add the range size to the total
           prevRange = currentRange;
-          totalRangeSize += currentRange.tdbAus.size();
+          totalRangeSize += currentRange.items.size();
         }
         // The sum should be equal to the original list size
         assertEquals(aus.size(), totalRangeSize);
@@ -460,12 +470,12 @@ public class TestKbartConverter extends LockssTestCase {
       // Title without volume info; just year ranges leading to a coverage gap
       TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
       List<KbartTitle> titles = KbartConverter.createKbartTitles(title);
-
+      // There should be two ranges based only on the dates
       assertEquals(2, titles.size());
 
       // Check the dates and vols have been correctly transferred in each title
       KbartTitle t = titles.get(0);
-      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_START), 
+      assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_START),
           t.getField(Field.DATE_FIRST_ISSUE_ONLINE));
       assertEquals(NumberUtil.toArabicNumber(TdbTestUtil.RANGE_1_END), 
           t.getField(Field.DATE_LAST_ISSUE_ONLINE));

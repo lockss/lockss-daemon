@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.8 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.9 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -147,6 +147,43 @@ public class TestNumberUtil extends LockssTestCase {
     assertFalse(NumberUtil.isNumber("Livid"));
     assertFalse(NumberUtil.isNumber("Mivvi"));
     assertFalse(NumberUtil.isNumber("Mill"));
+  }
+
+  /**
+   * Test whether strings contain digits.
+   */
+  public final void testContainsDigit() {
+    assertTrue(NumberUtil.containsDigit("1"));
+    assertTrue(NumberUtil.containsDigit("a1"));
+    assertTrue(NumberUtil.containsDigit("1a"));
+    assertTrue(NumberUtil.containsDigit("a1a"));
+    assertTrue(NumberUtil.containsDigit("1a1"));
+    assertTrue(NumberUtil.isMixedFormat("A string with 1 digit!"));
+
+    assertFalse(NumberUtil.containsDigit(""));
+    assertFalse(NumberUtil.containsDigit("XI"));
+    assertFalse(NumberUtil.containsDigit("a string"));
+  }
+
+  /**
+   * Test whether strings are mixed format.
+   */
+  public final void testIsMixedFormat() {
+    assertTrue(NumberUtil.isMixedFormat("a1"));
+    assertTrue(NumberUtil.isMixedFormat("1a"));
+    assertTrue(NumberUtil.isMixedFormat("2a1"));
+    assertTrue(NumberUtil.isMixedFormat("a1-1"));
+    assertTrue(NumberUtil.isMixedFormat("a1a"));
+    assertTrue(NumberUtil.isMixedFormat("A mixed format string with 1 digit!"));
+
+    // Single format strings are not mixed format
+    assertFalse(NumberUtil.isMixedFormat(""));
+    assertFalse(NumberUtil.isMixedFormat("XI"));
+    assertFalse(NumberUtil.isMixedFormat("a string"));
+    assertFalse(NumberUtil.isMixedFormat("1"));
+    assertFalse(NumberUtil.isMixedFormat("200"));
+    // Roman numeral tokens are not parsed
+    assertFalse(NumberUtil.isMixedFormat("vol-XI"));
   }
 
   /**

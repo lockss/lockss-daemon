@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.14 2011-09-23 13:23:15 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.15 2011-12-01 17:39:32 easyonthemayo Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.apache.oro.text.regex.MatchResult;
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Matcher;
 import org.lockss.config.TdbAu;
+import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.NumberUtil;
@@ -48,11 +49,13 @@ import org.lockss.util.StringUtil;
 
 /**
  * Utility methods for extracting KBART data from a <code>Tdb</code> structure.
- * A lot of this class is now redundant, having been superseded by NumberUtil 
- * methods or dedicated methods in TdbAu which leverage the more structured 
- * availability and completeness of metadata.
  * 
  * @author Neil Mayo
+ * @deprecated A lot of this class is now redundant, having been superseded by
+ * {@link org.lockss.util.NumberUtil} methods, genericised methods in
+ * {@link org.lockss.exporter.biblio.BibliographicUtil}, or dedicated methods in
+ * {@link org.lockss.config.TdbAu} which leverage the greater availability and
+ * completeness of metadata.
  */
 public class KbartTdbAuUtil {
 
@@ -72,123 +75,6 @@ public class KbartTdbAuUtil {
   static final String DEFAULT_ISSN_PROP = "issn";
   static final String DEFAULT_EISSN_PROP = "eissn";
   static final String DEFAULT_ISSNL_PROP = "issnl";
-  
-  
-  /**
-   * Check whether two TdbAus are equivalent, that is they share the same 
-   * values for their primary fields. The fields that are checked are:
-   * <code>year</code>, <code>volume</code>, <code>name</code> and 
-   * <code>issn</code>. The method will return <code>false</code> if
-   * any field is null.
-   * 
-   * @param au1 a TdbAu
-   * @param au2 another TdbAu
-   * @return <code>true</code> if they have equivalent primary fields
-   */
-  static boolean areEquivalent(TdbAu au1, TdbAu au2) {
-    try {
-      return 
-      au1.getIssn().equals(au2.getIssn()) &&
-      au1.getYear().equals(au2.getYear()) &&
-      au1.getName().equals(au2.getName()) &&
-      au1.getVolume().equals(au2.getVolume());
-    } catch (NullPointerException e) {
-      return false; 
-    }
-  }
-  
-  /**
-   * Compares two <code>TdbAu</code>s to see if they appear to have the same 
-   * identity, by comparing their identifying fields. Returns <code>true</code> 
-   * if either the ISSNs or the names are equal.
-   * @param au1 a TdbAu
-   * @param au2 another TdbAu
-   * @return <code>true</code> if they have the same issn or name
-   */
-  static boolean haveSameIdentity(TdbAu au1, TdbAu au2) {
-    String au1issn = au1.getIssn();
-    String au2issn = au2.getIssn();
-    String au1name = au1.getName();
-    String au2name = au2.getName();
-    boolean issn = au1issn!=null && au2issn!=null && au1issn.equals(au2issn);
-    boolean name = au1name!=null && au2name!=null && au1name.equals(au2name);
-    return issn || name;
-  }
-  
-  /**
-   * Compares two <code>TdbAu</code>s to see if they appear to have the same 
-   * index metadata, by comparing their indexing fields <code>volume</code>
-   * and <code>year</code>. Returns true only if every available (non-null) 
-   * field pair is equal. 
-   * @param au1 a TdbAu
-   * @param au2 another TdbAu
-   * @return <code>true</code> if each pair of non-null volume or year strings is equal 
-   */
-  static boolean haveSameIndex(TdbAu au1, TdbAu au2) {
-    String au1year = au1.getYear();
-    String au2year = au2.getYear();
-    String au1vol  = au1.getVolume();
-    String au2vol  = au2.getVolume();
-    // Null if either year is null, otherwise whether they match
-    Boolean year = au1year!=null && au2year!=null ? au1year.equals(au2year) : null;
-    // Null if either volume is null, otherwise whether they or their values match
-    Boolean vol  = au1vol !=null && au2vol !=null ?
-        (au1vol.equals(au2vol) || NumberUtil.areEqualValue(au1vol, au2vol)) : null;
-    // Require both year and volume fields to be equal if they are available
-    if (year!=null && vol!=null) return year && vol;
-    // Otherwise return available year or volume match, or false
-    else if (year!=null) return year;
-    else if (vol!=null) return vol;
-    else return false;
-  }
-  
-  /**
-   * Check whether two TdbAus appear to be equivalent, in that they have 
-   * matching values in at least one identifying field (ISSN or name), and all 
-   * available indexing fields (volume or year). This is to try and match up
-   * duplicate TDB records which arise from duplicate releases of the same
-   * volume of a title under a different plugin for example.
-   * 
-   * @param au1 a TdbAu
-   * @param au2 another TdbAu
-   * @return <code>true</code> if they appear to have equivalent identities and indexes
-   */
-  static boolean areApparentlyEquivalent(TdbAu au1, TdbAu au2) {
-    return haveSameIdentity(au1, au2) && haveSameIndex(au1, au2);
-  }
-  
-  
-  /**
-   * Compare two strings which are supposed to be representations of years.
-   * Returns less than 0 if the first is less than the second, greater than 0 if
-   * the first is greater than the second, and 0 if they are the same. If the
-   * strings cannot be parsed the default NumberFormatException is propagated to
-   * the caller. Currently this method just calls <code>compareIntStrings()</code>.
-   * 
-   * @param year1 a string representing a year
-   * @param year2 a string representing a year
-   * @return the value 0 if the years are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
-   */
-  static int compareStringYears(String year1, String year2) throws NumberFormatException {
-    // Note that in practise if the strings do represent comparable publication years, 
-    // they will be 4 digits long and so comparable as strings with the same results.
-    return compareIntStrings(year1, year2);
-  }
-
-  /**
-   * Compare two strings that represent integers.
-   * @param int1 a string which should parse as an integer
-   * @param int2 a string which should parse as an integer
-   * @return the value 0 if the ints are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
-   * @throws NumberFormatException
-   */
-  static int compareIntStrings(String int1, String int2) throws NumberFormatException {
-    // Return zero if the strings are equal
-    if (int1.equals(int2)) return 0;
-    Integer i1 = NumberUtil.parseInt(int1);
-    Integer i2 = NumberUtil.parseInt(int2);
-    return i1.compareTo(i2);
-  }
 
   /**
    * Attempts to find a Volume string for an AU. Looks for known parameters and
@@ -211,14 +97,16 @@ public class KbartTdbAuUtil {
   /**
    * Attempts to find an appropriate IssueFormat for an AU's issue string. Looks
    * for known issue parameters and attributes, and if nothing is found returns
-   * null.
+   * null. If the item is not a TdbAu, null is returned.
    * 
    * @param au the TdbAu whose params/attributes to search for an issue key
    * @return the appropriate IssueFormat, or null if no issue key/value found
    */
-  static IssueFormat identifyIssueFormat(TdbAu au) {
-    for (IssueFormat format : IssueFormat.values()) {
-      if (!StringUtils.isEmpty( format.getIssueString(au) )) return format;
+  static IssueFormat identifyIssueFormat(BibliographicItem au) {
+    if (au instanceof TdbAu) {
+      for (IssueFormat format : IssueFormat.values()) {
+        if (!StringUtils.isEmpty( format.getIssueString((TdbAu)au) )) return format;
+      }
     }
     return null;
   }
@@ -381,10 +269,7 @@ public class KbartTdbAuUtil {
     AuInfoType type = findAuInfoType(au, defaultKeyList);
     return findMapKey(au, defaultKeyList, type);
   }
-  
 
-
-  
   /**
    * Attempts to find a map key by searching for the supplied key in 
    * each AuInfoType's map, in the order they are enumerated.
@@ -418,49 +303,8 @@ public class KbartTdbAuUtil {
     }
     return null;
   }
-  
-  /**
-   * Parse a string representation of an integer year.
-   * @param yr a string representing an integer year
-   * @return the year as an int, or 0 if it could not be parsed
-   */
-  static int stringYearAsInt(String yr) {
-    if (!StringUtil.isNullString(yr)) try {
-      return NumberUtil.parseInt(yr);
-    } catch (NumberFormatException e) { /* Do nothing */ }
-    return 0;
-  }
-  
-  /**
-   * Get an integer representation of the given AU's first year.
-   * @param au a TdbAu 
-   * @return the first year as an int, or 0 if it could not be parsed
-   */
-  static int getFirstYearAsInt(TdbAu au) {
-    return stringYearAsInt(au.getStartYear()); 
-  }
-  
-  /**
-   * Get an integer representation of the given AU's last year.
-   * @param au a TdbAu 
-   * @return the last year as an int, or 0 if it could not be parsed
-   */
-  static int getLastYearAsInt(TdbAu au) {
-    return stringYearAsInt(au.getEndYear()); 
-  }
 
-  /**
-   * Get the latest end year specified in the list of TdbAus.
-   * @param aus a list of TdbAu
-   * @return
-   */
-  static int getLatestYear(List<TdbAu> aus) {
-    int l = 0;
-    for (TdbAu au : aus) l = Math.max(l, getLastYearAsInt(au));
-    return l;
-  }
 
-  
   /**
    * Construct a regex which will match a token, or a list of tokens separated by the 
    * separator, and produces match groups for the first and last instances of the token. 
