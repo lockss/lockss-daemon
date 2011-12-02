@@ -6218,13 +6218,10 @@
     au < HighWirePressH20Plugin ; manifest ; 1937 ; ICES Journal of Marine Science Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 1938 ; ICES Journal of Marine Science Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1939 ; ICES Journal of Marine Science Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; ICES Journal of Marine Science Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; ICES Journal of Marine Science Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; ICES Journal of Marine Science Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; ICES Journal of Marine Science Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 1947-1948 ; ICES Journal of Marine Science Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 1949-1950 ; ICES Journal of Marine Science Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1950-1951 ; ICES Journal of Marine Science Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 1952-1953 ; ICES Journal of Marine Science Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1953-1954 ; ICES Journal of Marine Science Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 1954-1955 ; ICES Journal of Marine Science Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 1955-1956 ; ICES Journal of Marine Science Volume 21 ; 21 >
@@ -13136,8 +13133,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; manifest ; 1985 ; OAH Magazine of History Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; OAH Magazine of History Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; OAH Magazine of History Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 1986-1987 ; OAH Magazine of History Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; OAH Magazine of History Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1989-1990 ; OAH Magazine of History Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1990-1991 ; OAH Magazine of History Volume 5 ; 5 >              
@@ -13148,7 +13144,6 @@
     au < HighWirePressH20Plugin ; manifest ; 1995-1996 ; OAH Magazine of History Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1996-1997 ; OAH Magazine of History Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 1998 ; OAH Magazine of History Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1998-1999 ; OAH Magazine of History Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 1999-2000 ; OAH Magazine of History Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 2000-2001 ; OAH Magazine of History Volume 15 ; 15 >
