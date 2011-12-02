@@ -3741,8 +3741,7 @@
     >
 
     param[journal_id] = hapc20 
-
-    au < manifest ; 2012 ; Applied Neuropsychology: Child Volume 1 ; 1 > 
+    comment[0] = forthcoming 2012
 
   }
 
@@ -4119,8 +4118,8 @@
     au < manifest ; 1999 ; Archiv für Tierernaehrung Volume 52 ; 52 > 
     au < manifest ; 2000 ; Archiv für Tierernaehrung Volume 53 ; 53 >
     au < manifest ; 2001 ; Archiv für Tierernaehrung Volume 54 ; 54 >
-    au < manifest ; 2002 ; Archiv für Tierernaehrung Volume 55 ; 55 >
-    au < manifest ; 2003 ; Archiv für Tierernaehrung Volume 56 ; 56 >
+    au < manifest ; 2001 ; Archiv für Tierernaehrung Volume 55 ; 55 >
+    au < manifest ; 2002 ; Archiv für Tierernaehrung Volume 56 ; 56 >
 
   }
 
@@ -4202,19 +4201,15 @@
     comment[continues] = 0003-942X
     param[journal_id] = gaan20 
 
-    au < manifest ; 2003 ; Archives of Animal Nutrition Volume 53 ; 53 > 
-    au < manifest ; 2004 ; Archives of Animal Nutrition Volume 54 ; 54 > 
-    au < manifest ; 2005 ; Archives of Animal Nutrition Volume 55 ; 55 > 
-    au < manifest ; 2006 ; Archives of Animal Nutrition Volume 56 ; 56 > 
-    au < manifest ; 2007 ; Archives of Animal Nutrition Volume 57 ; 57 > 
-    au < manifest ; 2008 ; Archives of Animal Nutrition Volume 58 ; 58 > 
-    au < manifest ; 2009 ; Archives of Animal Nutrition Volume 59 ; 59 > 
-    au < manifest ; 2010 ; Archives of Animal Nutrition Volume 60 ; 60 > 
-    au < manifest ; 2011 ; Archives of Animal Nutrition Volume 61 ; 61 > 
-    au < manifest ; 2012 ; Archives of Animal Nutrition Volume 62 ; 62 > 
-    au < manifest ; 2013 ; Archives of Animal Nutrition Volume 63 ; 63 > 
-    au < manifest ; 2014 ; Archives of Animal Nutrition Volume 64 ; 64 > 
-    au < manifest ; 2015 ; Archives of Animal Nutrition Volume 65 ; 65 > 
+    au < manifest ; 2003 ; Archives of Animal Nutrition Volume 57 ; 57 > 
+    au < manifest ; 2004 ; Archives of Animal Nutrition Volume 58 ; 58 > 
+    au < manifest ; 2005 ; Archives of Animal Nutrition Volume 59 ; 59 > 
+    au < manifest ; 2006 ; Archives of Animal Nutrition Volume 60 ; 60 > 
+    au < manifest ; 2007 ; Archives of Animal Nutrition Volume 61 ; 61 > 
+    au < manifest ; 2008 ; Archives of Animal Nutrition Volume 62 ; 62 > 
+    au < manifest ; 2009 ; Archives of Animal Nutrition Volume 63 ; 63 > 
+    au < manifest ; 2010 ; Archives of Animal Nutrition Volume 64 ; 64 > 
+    au < manifest ; 2011 ; Archives of Animal Nutrition Volume 65 ; 65 > 
 
   }
 
@@ -9156,8 +9151,7 @@
     >
 
     param[journal_id] = ucha20 
-
-    au < manifest ; 2012 ; CHANCE Volume 1 ; 1 > 
+    comment[0] = forthcoming 2012
 
   }
 
@@ -29418,7 +29412,7 @@
     au < manifest ; 2000 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 3 ; 3 > 
     au < manifest ; 2001 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 4 ; 4 > 
     au < manifest ; 2002 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 5 ; 5 > 
-    au < manifest ; 2003 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 6 ; 6 > 
+    au < manifest ; 2003 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 6 ; 6 >
     au < manifest ; 2004 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 7 ; 7 > 
     au < manifest ; 2005 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 8 ; 8 > 
     au < manifest ; 2006 ; International Journal of Logistics Research and Applications: A Leading Journal of Supply Chain Management Volume 9 ; 9 > 
@@ -42690,7 +42684,8 @@
     au < manifest ; 2007 ; Journal of Musical Arts in Africa Volume 4 ; 4 > 
     au < manifest ; 2008 ; Journal of Musical Arts in Africa Volume 5 ; 5 > 
     au < manifest ; 2009 ; Journal of Musical Arts in Africa Volume 6 ; 6 > 
-
+    au < manifest ; 2010 ; Journal of Musical Arts in Africa Volume 7 ; 7 > 
+    
   }
 
   {
@@ -45855,43 +45850,43 @@
 
     param[journal_id] = wssr20 
 
-    au < manifest ; 1978 ; Journal of Social Service Research Volume 1 ; 1 > 
-    au < manifest ; 1979 ; Journal of Social Service Research Volume 2 ; 2 > 
-    au < manifest ; 1980 ; Journal of Social Service Research Volume 3 ; 3 > 
-    au < manifest ; 1981 ; Journal of Social Service Research Volume 4 ; 4 > 
-    au < manifest ; 1982 ; Journal of Social Service Research Volume 5 ; 5 > 
+    au < manifest ; 1978-1979; Journal of Social Service Research Volume 1 ; 1 > 
+    au < manifest ; 1978-1979; Journal of Social Service Research Volume 2 ; 2 > 
+    au < manifest ; 1979-1981; Journal of Social Service Research Volume 3 ; 3 > 
+    au < manifest ; 1981-1982; Journal of Social Service Research Volume 4 ; 4 > 
+    au < manifest ; 1982-1983; Journal of Social Service Research Volume 5 ; 5 > 
     au < manifest ; 1983 ; Journal of Social Service Research Volume 6 ; 6 > 
-    au < manifest ; 1984 ; Journal of Social Service Research Volume 7 ; 7 > 
-    au < manifest ; 1985 ; Journal of Social Service Research Volume 8 ; 8 > 
-    au < manifest ; 1986 ; Journal of Social Service Research Volume 9 ; 9 > 
+    au < manifest ; 1984-1985; Journal of Social Service Research Volume 7 ; 7 > 
+    au < manifest ; 1985-1986; Journal of Social Service Research Volume 8 ; 8 > 
+    au < manifest ; 1986-1987; Journal of Social Service Research Volume 9 ; 9 > 
     au < manifest ; 1987 ; Journal of Social Service Research Volume 10 ; 10 > 
     au < manifest ; 1988 ; Journal of Social Service Research Volume 11 ; 11 > 
     au < manifest ; 1989 ; Journal of Social Service Research Volume 12 ; 12 > 
-    au < manifest ; 1990 ; Journal of Social Service Research Volume 13 ; 13 > 
+    au < manifest ; 1989-1990; Journal of Social Service Research Volume 13 ; 13 > 
     au < manifest ; 1991 ; Journal of Social Service Research Volume 14 ; 14 > 
-    au < manifest ; 1992 ; Journal of Social Service Research Volume 15 ; 15 > 
+    au < manifest ; 1991-1992; Journal of Social Service Research Volume 15 ; 15 > 
     au < manifest ; 1993 ; Journal of Social Service Research Volume 16 ; 16 > 
-    au < manifest ; 1994 ; Journal of Social Service Research Volume 17 ; 17 > 
-    au < manifest ; 1995 ; Journal of Social Service Research Volume 18 ; 18 > 
-    au < manifest ; 1996 ; Journal of Social Service Research Volume 19 ; 19 > 
-    au < manifest ; 1997 ; Journal of Social Service Research Volume 20 ; 20 > 
-    au < manifest ; 1998 ; Journal of Social Service Research Volume 21 ; 21 > 
-    au < manifest ; 1999 ; Journal of Social Service Research Volume 22 ; 22 > 
-    au < manifest ; 2000 ; Journal of Social Service Research Volume 23 ; 23 > 
-    au < manifest ; 2001 ; Journal of Social Service Research Volume 24 ; 24 > 
-    au < manifest ; 2002 ; Journal of Social Service Research Volume 25 ; 25 > 
-    au < manifest ; 2003 ; Journal of Social Service Research Volume 26 ; 26 > 
-    au < manifest ; 2004 ; Journal of Social Service Research Volume 27 ; 27 > 
-    au < manifest ; 2005 ; Journal of Social Service Research Volume 28 ; 28 > 
-    au < manifest ; 2006 ; Journal of Social Service Research Volume 29 ; 29 > 
-    au < manifest ; 2007 ; Journal of Social Service Research Volume 30 ; 30 > 
-    au < manifest ; 2008 ; Journal of Social Service Research Volume 31 ; 31 > 
-    au < manifest ; 2009 ; Journal of Social Service Research Volume 32 ; 32 > 
-    au < manifest ; 2010 ; Journal of Social Service Research Volume 33 ; 33 > 
-    au < manifest ; 2011 ; Journal of Social Service Research Volume 34 ; 34 > 
-    au < manifest ; 2012 ; Journal of Social Service Research Volume 35 ; 35 > 
-    au < manifest ; 2013 ; Journal of Social Service Research Volume 36 ; 36 > 
-    au < manifest ; 2014 ; Journal of Social Service Research Volume 37 ; 37 > 
+    au < manifest ; 1993 ; Journal of Social Service Research Volume 17 ; 17 > 
+    au < manifest ; 1994 ; Journal of Social Service Research Volume 18 ; 18 > 
+    au < manifest ; 1994-1995; Journal of Social Service Research Volume 19 ; 19 > 
+    au < manifest ; 1995 ; Journal of Social Service Research Volume 20 ; 20 > 
+    au < manifest ; 1996 ; Journal of Social Service Research Volume 21 ; 21 > 
+    au < manifest ; 1997 ; Journal of Social Service Research Volume 22 ; 22 > 
+    au < manifest ; 1997-1998; Journal of Social Service Research Volume 23 ; 23 > 
+    au < manifest ; 1998 ; Journal of Social Service Research Volume 24 ; 24 > 
+    au < manifest ; 1998-1999 ; Journal of Social Service Research Volume 25 ; 25 > 
+    au < manifest ; 1999-2000 ; Journal of Social Service Research Volume 26 ; 26 > 
+    au < manifest ; 2000-2001 ; Journal of Social Service Research Volume 27 ; 27 > 
+    au < manifest ; 2002 ; Journal of Social Service Research Volume 28 ; 28 > 
+    au < manifest ; 2003 ; Journal of Social Service Research Volume 29 ; 29 > 
+    au < manifest ; 2003-2004 ; Journal of Social Service Research Volume 30 ; 30 > 
+    au < manifest ; 2004-2006 ; Journal of Social Service Research Volume 31 ; 31 > 
+    au < manifest ; 2006 ; Journal of Social Service Research Volume 32 ; 32 > 
+    au < manifest ; 2006-2007 ; Journal of Social Service Research Volume 33 ; 33 > 
+    au < manifest ; 2007-2008 ; Journal of Social Service Research Volume 34 ; 34 > 
+    au < manifest ; 2008-2009 ; Journal of Social Service Research Volume 35 ; 35 > 
+    au < manifest ; 2009-2010 ; Journal of Social Service Research Volume 36 ; 36 > 
+    au < manifest ; 2010-2011 ; Journal of Social Service Research Volume 37 ; 37 > 
 
   }
 
