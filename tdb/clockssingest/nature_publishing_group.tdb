@@ -1786,6 +1786,8 @@
 
     param[journal_id] = npp
 
+    au < wanted ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
+
   }
 
   {
@@ -1798,6 +1800,8 @@
     >
 
     param[journal_id] = oby
+
+    au < wanted ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
 
   }
 
@@ -1853,6 +1857,7 @@
     au < released ; crawling ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
     au < notReady ; exists ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
+    au < wanted ; exists ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
     
   }
 
@@ -1880,6 +1885,7 @@
     au < released ; crawling ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; crawling ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
+    au < wanted ; exists ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
 
   }
 
@@ -1891,6 +1897,12 @@
     >
 
     param[journal_id] = scibx
+	comment[scibx] = Missing Manifest Pages
+
+    au < exists ; exists ; 2008 ; SciBX: Science-Business eXchange Volume 1 ; 2008 ; 1 >
+    au < exists ; exists ; 2009 ; SciBX: Science-Business eXchange Volume 2 ; 2009 ; 2 >
+    au < exists ; exists ; 2010 ; SciBX: Science-Business eXchange Volume 3 ; 2010 ; 3 >
+    au < exists ; exists ; 2011 ; SciBX: Science-Business eXchange Volume 4 ; 2011 ; 4 >
 
   }
 
@@ -1919,6 +1931,7 @@
     au < released ; crawling ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
+    au < wanted ; exists ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
     
   }
 
@@ -1936,7 +1949,7 @@
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
-    au < manifest ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
+    au < wanted ; exists ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
 
   }
 
