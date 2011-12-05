@@ -7669,7 +7669,7 @@
       au < manifest ; exists ; 2008 ; Environment and Urbanization Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Environment and Urbanization Volume 21 ; 21 ; >
       au < released ; crawling ; 2010 ; Environment and Urbanization Volume 22 ; 22 ;  >
-      au < testing ; exists ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
+      au < released ; manifest ; 2011 ; Environment and Urbanization Volume 23 ; 23 ; >
 
     }
 
@@ -7690,7 +7690,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 ; >
-      au < testing ; exists ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
+      au < released ; manifest ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
 
     }
 
@@ -7727,7 +7727,7 @@
       au < exists ; exists ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 ; >
       au < exists ; exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 ; >
       au < exists ; exists ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 ; >
-      au < testing ; exists ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 ; >
+      au < released ; manifest ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 ; >
 
     }
 
@@ -7767,7 +7767,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Ethnicities Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Ethnicities Volume 9 ; 9 ; >
       au < released ; crawling ; 2010 ; Ethnicities Volume 10 ; 10 ;  >
-      au < testing ; exists ; 2011 ; Ethnicities Volume 11 ; 11 ; >
+      au < released ; manifest ; 2011 ; Ethnicities Volume 11 ; 11 ; >
 
     }
 
@@ -7808,7 +7808,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Ethnography Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Ethnography Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; Ethnography Volume 11 ; 11 ;  >
-      au < testing ; exists ; 2011 ; Ethnography Volume 12 ; 12 ; >
+      au < released ; manifest ; 2011 ; Ethnography Volume 12 ; 12 ; >
 
     }
 
@@ -7878,7 +7878,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European History Quarterly Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European History Quarterly Volume 39 ; 39 ; >
       au < released ; crawling ; 2010 ; European History Quarterly Volume 40 ; 40 ;  >
-      au < testing ; exists ; 2011 ; European History Quarterly Volume 41 ; 41 ; >
+      au < released ; manifest ; 2011 ; European History Quarterly Volume 41 ; 41 ; >
 
     }
 
@@ -8012,7 +8012,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Communication Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Communication Volume 24 ; 24 ; >
       au < released ; crawling ; 2010 ; European Journal of Communication Volume 25 ; 25 ;  >
-      au < testing ; exists ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
+      au < released ; manifest ; 2011 ; European Journal of Communication Volume 26 ; 26 ; >
 
     }
 
@@ -8049,7 +8049,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Criminology Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Criminology Volume 6 ; 6 ; >
       au < released ; crawling ; 2010 ; European Journal of Criminology Volume 7 ; 7 ;  >
-      au < testing ; exists ; 2011 ; European Journal of Criminology Volume 8 ; 8 ; >
+      au < released ; manifest ; 2011 ; European Journal of Criminology Volume 8 ; 8 ; >
 
     }
 
@@ -8092,7 +8092,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Cultural Studies Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Cultural Studies Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Cultural Studies Volume 13 ; 13 ;  >
-      au < testing ; exists ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 ; >
+      au < released ; manifest ; 2011 ; European Journal of Cultural Studies Volume 14 ; 14 ; >
 
     }
 
@@ -8138,7 +8138,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Industrial Relations Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 ;  >
-      au < crawling ; exists ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
+      au < testing ; exists ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
 
     }
 
@@ -8184,7 +8184,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of International Relations Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; European Journal of International Relations Volume 16 ; 16 ;  >
-      au < crawling ; exists ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
+      au < testing ; exists ; 2011 ; European Journal of International Relations Volume 17 ; 17 ; >
 
     }
 
@@ -8223,7 +8223,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Political Theory Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Political Theory Volume 8 ; 8 ; >
       au < released ; crawling ; 2010 ; European Journal of Political Theory Volume 9 ; 9 ;  >
-      au < crawling ; exists ; 2011 ; European Journal of Political Theory Volume 10 ; 10 ; >
+      au < testing ; exists ; 2011 ; European Journal of Political Theory Volume 10 ; 10 ; >
 
     }
 
@@ -8266,7 +8266,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Social Theory Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; European Journal of Social Theory Volume 13 ; 13 ;  >
-      au < crawling ; exists ; 2011 ; European Journal of Social Theory Volume 14 ; 14 ; >
+      au < testing ; exists ; 2011 ; European Journal of Social Theory Volume 14 ; 14 ; >
 
     }
 
@@ -8313,7 +8313,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Women's Studies Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; European Journal of Women's Studies Volume 17 ; 17 ;  >
-      au < crawling ; exists ; 2011 ; European Journal of Women's Studies Volume 18 ; 18 ; >
+      au < testing ; exists ; 2011 ; European Journal of Women's Studies Volume 18 ; 18 ; >
 
     }
 
@@ -8359,7 +8359,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Physical Education Review Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Physical Education Review Volume 15 ; 15 ; >
       au < manifest ; exists ; 2010 ; European Physical Education Review Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2011 ; European Physical Education Review Volume 17 ; 17 ; >
+      au < testing ; exists ; 2011 ; European Physical Education Review Volume 17 ; 17 ; >
 
     }
 
@@ -8400,7 +8400,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Union Politics Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Union Politics Volume 10 ; 10 ; >
       au < released ; crawling ; 2010 ; European Union Politics Volume 11 ; 11 ;  >
-      au < crawling ; exists ; 2011 ; European Union Politics Volume 12 ; 12 ; >
+      au < testing ; exists ; 2011 ; European Union Politics Volume 12 ; 12 ; >
 
     }
 
@@ -8447,7 +8447,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; European Urban and Regional Studies Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; European Urban and Regional Studies Volume 16 ; 16 ; >
       au < released ; crawling ; 2010 ; European Urban and Regional Studies Volume 17 ; 17 ;  >
-      au < crawling ; exists ; 2011 ; European Urban and Regional Studies Volume 18 ; 18 ; >
+      au < testing ; exists ; 2011 ; European Urban and Regional Studies Volume 18 ; 18 ; >
 
     }
 
@@ -8493,7 +8493,7 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Evaluation Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Evaluation Volume 15 ; 15 ; >
       au < released ; crawling ; 2010 ; Evaluation Volume 16 ; 16 ;  >
-      au < crawling ; exists ; 2011 ; Evaluation Volume 17 ; 17 ; >
+      au < testing ; exists ; 2011 ; Evaluation Volume 17 ; 17 ; >
 
     }
 
