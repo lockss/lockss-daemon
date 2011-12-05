@@ -1872,7 +1872,8 @@
 
     param[journal_id] = pcan
 
-    au < manifest ; exists ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 ; 1998 ; 1 >
+    au < manifest ; exists ; 1997 ; Prostate Cancer and Prostatic Diseases Volume 1 (1997) ; 1997 ; 1 >
+    au < manifest ; exists ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 (1998) ; 1998 ; 1 >
     au < manifest ; exists ; 1999 ; Prostate Cancer and Prostatic Diseases Volume 2 ; 1999 ; 2 >
     au < manifest ; exists ; 2000 ; Prostate Cancer and Prostatic Diseases Volume 3 ; 2000 ; 3 >
     au < manifest ; exists ; 2001 ; Prostate Cancer and Prostatic Diseases Volume 4 ; 2001 ; 4 >
@@ -1917,6 +1918,56 @@
 
     param[journal_id] = sc
 
+    au < exists ; exists ; 1963 ; Spinal Cord Volume 1 (1963) ; 1963 ; 1 >
+    au < exists ; exists ; 1964 ; Spinal Cord Volume 1 (1964) ; 1964 ; 1 >
+    au < exists ; exists ; 1964 ; Spinal Cord Volume 2 (1964) ; 1964 ; 2 >
+    au < exists ; exists ; 1965 ; Spinal Cord Volume 2 (1965) ; 1965 ; 2 >
+    au < exists ; exists ; 1965 ; Spinal Cord Volume 3 (1965) ; 1965 ; 3 >
+    au < exists ; exists ; 1966 ; Spinal Cord Volume 3 (1966) ; 1966 ; 3 >
+    au < exists ; exists ; 1966 ; Spinal Cord Volume 4 (1966) ; 1966 ; 4 >
+    au < exists ; exists ; 1967 ; Spinal Cord Volume 4 (1967) ; 1967 ; 4 >
+    au < exists ; exists ; 1967 ; Spinal Cord Volume 5 (1967) ; 1967 ; 5 >
+    au < exists ; exists ; 1968 ; Spinal Cord Volume 5 (1968) ; 1968 ; 5 >
+    au < exists ; exists ; 1968 ; Spinal Cord Volume 6 (1968) ; 1968 ; 6 >
+    au < exists ; exists ; 1969 ; Spinal Cord Volume 6 (1969) ; 1969 ; 6 >
+    au < exists ; exists ; 1969 ; Spinal Cord Volume 7 (1969) ; 1969 ; 7 >
+    au < exists ; exists ; 1970 ; Spinal Cord Volume 7 (1970) ; 1970 ; 7 >
+    au < exists ; exists ; 1970 ; Spinal Cord Volume 8 (1970) ; 1970 ; 8 >
+    au < exists ; exists ; 1971 ; Spinal Cord Volume 8 (1971) ; 1971 ; 8 >
+    au < exists ; exists ; 1971 ; Spinal Cord Volume 9 (1971) ; 1971 ; 9 >
+    au < exists ; exists ; 1972 ; Spinal Cord Volume 9 (1972) ; 1972 ; 9 >
+    au < exists ; exists ; 1972 ; Spinal Cord Volume 10 (1972) ; 1972 ; 10 >
+    au < exists ; exists ; 1973 ; Spinal Cord Volume 10 (1973) ; 1973 ; 10 >
+    au < exists ; exists ; 1973 ; Spinal Cord Volume 11 (1973) ; 1973 ; 11 >
+    au < exists ; exists ; 1974 ; Spinal Cord Volume 11 (1974) ; 1974 ; 11 >
+    au < exists ; exists ; 1974 ; Spinal Cord Volume 12 (1974) ; 1974 ; 12 >
+    au < exists ; exists ; 1975 ; Spinal Cord Volume 12 (1975) ; 1975 ; 12 >
+    au < exists ; exists ; 1975 ; Spinal Cord Volume 13 (1975) ; 1975 ; 13 >
+    au < exists ; exists ; 1976 ; Spinal Cord Volume 13 (1976) ; 1976 ; 13 >
+    au < exists ; exists ; 1976 ; Spinal Cord Volume 14 (1976) ; 1976 ; 14 >
+    au < exists ; exists ; 1977 ; Spinal Cord Volume 14 (1977) ; 1977 ; 14 >
+    au < exists ; exists ; 1977 ; Spinal Cord Volume 15 (1977) ; 1977 ; 15 >
+    au < exists ; exists ; 1978 ; Spinal Cord Volume 15 (1978) ; 1978 ; 15 >
+    au < exists ; exists ; 1978 ; Spinal Cord Volume 16 (1978) ; 1978 ; 16 >
+    au < exists ; exists ; 1979 ; Spinal Cord Volume 16 (1979) ; 1979 ; 16 >
+    au < exists ; exists ; 1979 ; Spinal Cord Volume 17 ; 1979 ; 17 >
+    au < exists ; exists ; 1980 ; Spinal Cord Volume 18 ; 1980 ; 18 >
+    au < exists ; exists ; 1981 ; Spinal Cord Volume 19 ; 1981 ; 19 >
+    au < exists ; exists ; 1982 ; Spinal Cord Volume 20 ; 1982 ; 20 >
+    au < exists ; exists ; 1983 ; Spinal Cord Volume 21 ; 1983 ; 21 >
+    au < exists ; exists ; 1984 ; Spinal Cord Volume 22 ; 1984 ; 22 >
+    au < exists ; exists ; 1985 ; Spinal Cord Volume 23 ; 1985 ; 23 >
+    au < exists ; exists ; 1986 ; Spinal Cord Volume 24 ; 1986 ; 24 >
+    au < exists ; exists ; 1987 ; Spinal Cord Volume 25 ; 1987 ; 25 >
+    au < exists ; exists ; 1988 ; Spinal Cord Volume 26 ; 1988 ; 26 >
+    au < exists ; exists ; 1989 ; Spinal Cord Volume 27 ; 1989 ; 27 >
+    au < exists ; exists ; 1990 ; Spinal Cord Volume 28 ; 1990 ; 28 >
+    au < exists ; exists ; 1991 ; Spinal Cord Volume 29 ; 1991 ; 29 >
+    au < exists ; exists ; 1992 ; Spinal Cord Volume 30 ; 1992 ; 30 >
+    au < exists ; exists ; 1993 ; Spinal Cord Volume 31 ; 1993 ; 31 >
+    au < exists ; exists ; 1994 ; Spinal Cord Volume 32 ; 1994 ; 32 >
+    au < exists ; exists ; 1995 ; Spinal Cord Volume 33 ; 1995 ; 33 >
+    au < exists ; exists ; 1996 ; Spinal Cord Volume 34 ; 1996 ; 34 >
     au < manifest ; exists ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
     au < manifest ; exists ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
     au < manifest ; exists ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
@@ -1946,6 +1997,14 @@
 
     param[journal_id] = vital
     
+    au < exists ; exists ; 2003 ; Vital Volume 1 (2003) ; 2003 ; 1 >
+    au < exists ; exists ; 2004 ; Vital Volume 1 (2004) ; 2004 ; 1 >
+    au < manifest ; exists ; 2005 ; Vital Volume 1 (2005) ; 2005 ; 1 >
+    au < manifest ; exists ; 2005 ; Vital Volume 2 ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Vital Volume 3 ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Vital Volume 4 ; 2007 ; 4 >
+    au < exists ; exists ; 2008 ; Vital Volume 5 ; 2008 ; 5 >
+    au < exists ; exists ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
