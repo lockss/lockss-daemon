@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.19 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: FuncV3Poller.java,v 1.20 2011-12-05 22:45:41 barry409 Exp $
  */
 
 /*
@@ -333,18 +333,6 @@ public class FuncV3Poller extends LockssTestCase {
 
     protected boolean scheduleHash() {
       return true;
-    }
-    
-    /**
-     * Overridden to just agree.
-     */
-    protected void compareBlocks(PeerIdentity voter,
-                                 byte[] theirHash, byte[] ourHash,
-                                 BlockTally tally) {
-      for (Iterator iter = theParticipants.values().iterator(); iter.hasNext();) {
-        tally.addAgreeVoter(voter);
-      }
-      tally.tallyVotes();
     }
   }
 
