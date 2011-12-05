@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.15 2011-11-15 01:30:34 barry409 Exp $
+ * $Id: BlockTally.java,v 1.16 2011-12-05 18:59:05 barry409 Exp $
  */
 
 /*
@@ -84,16 +84,6 @@ public class BlockTally {
     this.voteMargin =
       ((double)CurrentConfig.getIntParam(V3Poller.PARAM_V3_VOTE_MARGIN,
                                          V3Poller.DEFAULT_V3_VOTE_MARGIN)) / 100;
-  }
-
-  // Set back to initial state
-  public void reset() {
-    agreeVoters = new ArrayList();
-    disagreeVoters = new ArrayList();
-    pollerOnlyBlockVoters = new ArrayList();
-    voterOnlyBlockVoters = new HashMap();
-    voterOnlyBlockUrl = null;
-    result = RESULT_HASHING;
   }
   
   public String getStatusString() {

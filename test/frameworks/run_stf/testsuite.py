@@ -148,6 +148,12 @@ class TinyUiFileNotFoundTestCase( TinyUiTests ):
 
 class V3TestCases( LockssTestCases ):
 
+    @staticmethod
+    def _expected_agreement( numerator, denominator ):
+        """Trying to mimic what the daemon does to calculate
+        agreement."""
+        return int( round( 100.0 * numerator / denominator ) )
+
     def __init__( self, methodName = 'runTest' ):
         LockssTestCases.__init__( self, methodName )
         # V3 has a much shorter default timeout of 8 minutes
@@ -156,6 +162,7 @@ class V3TestCases( LockssTestCases ):
         self.offline_peers = []
         self.local_configuration = {}
         self.simulated_AU_parameters = {}
+        self.expected_agreement = 100
 
     def _await_V3_poll_agreement( self ):
         # Expect to see a top level content poll called by all peers
@@ -187,6 +194,12 @@ class V3TestCases( LockssTestCases ):
     def _ensure_victim_node_deleted( self, node ):
         self.assertFalse( os.path.isfile( node.filename() ), 'File was not deleted: %s' % node.url )
 
+    def _set_expected_agreement_from_damaged( self, damagedNodes ):
+        content = self.victim.getAuNodesWithContent( self.AU )
+        numerator = len( content ) - len( damagedNodes )
+        denominator = len( content )
+        self.expected_agreement = self._expected_agreement( numerator, denominator )
+
     def _verify_damage( self, nodes ):
         for node in nodes:
             self.assertFalse( self._content_matches( node ), 'Failed to damage AU file: %s' % node.url )
@@ -199,6 +212,16 @@ class V3TestCases( LockssTestCases ):
     def _verify_repair( self, nodes ):
         for node in nodes:
             self.assert_( self._content_matches( node ), 'File not repaired: %s' % node.url )
+
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'Complete', u'100.00% Agreement') )
+
+    def _verify_voter_agreements( self ):
+        poll_key = self.victim.getV3PollKey( self.AU )
+        for ( box, agreement ) in self.victim.getAuRepairerInfo( self.AU, 'LastPercentAgreement' ).iteritems():
+            self.assertEqual( agreement, self.expected_agreement, 
+                       'Voter %s had actual agreement: %s expected: %s' % ( box, agreement, self.expected_agreement ) )
 
     def setUp( self ):
         LockssTestCases.setUp( self )
@@ -233,7 +256,20 @@ class V3TestCases( LockssTestCases ):
         log.info( 'Waiting for V3 repair...' )
         self._await_repair( nodes )
         self._verify_repair( nodes )
+        self._verify_poll_results()
+        self._verify_voter_agreements()
         log.info( 'AU successfully repaired' )
+
+
+class SimpleV3TestCase( V3TestCases ):
+    """Test a V3 poll with no disagreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'numFiles': 3 }
+            
+    def _damage_AU( self ):
+        return [ ]
 
 
 class SimpleDamageV3TestCase( V3TestCases ):
@@ -244,8 +280,10 @@ class SimpleDamageV3TestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'numFiles': 15 }
             
     def _damage_AU( self ):
-        return [ self.victim.randomDamageSingleNode( self.AU ) ]
-                
+        nodes = [ self.victim.randomDamageSingleNode( self.AU ) ]
+        self._set_expected_agreement_from_damaged( nodes )
+        return nodes
+
 
 class RandomDamageV3TestCase( V3TestCases ):
     """Test a V3 Poll with a random number of damaged AUs"""
@@ -255,7 +293,9 @@ class RandomDamageV3TestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
             
     def _damage_AU( self ):
-        return self.victim.randomDamageRandomNodes( self.AU, 30, 50 )
+        nodes = self.victim.randomDamageRandomNodes( self.AU, 30, 50 )
+        self._set_expected_agreement_from_damaged( nodes )
+        return nodes
                 
 
 class DeleteV3Tests( V3TestCases ):
@@ -264,6 +304,12 @@ class DeleteV3Tests( V3TestCases ):
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
         self.simulated_AU_parameters = { 'numFiles': 15 }
+
+    def _set_expected_agreement_from_deleted( self, deletedNodes ):
+        content = self.victim.getAuNodesWithContent( self.AU )
+        numerator = len( content )
+        denominator = len( content ) + len( deletedNodes )
+        self.expected_agreement = self._expected_agreement( numerator, denominator )
 
     def _verify_damage( self, nodes ):
         for node in nodes:
@@ -275,7 +321,9 @@ class SimpleDeleteV3TestCase( DeleteV3Tests ):
     """Test repair of a missing file"""
 
     def _damage_AU( self ):
-        return [ self.victim.randomDelete( self.AU ) ]
+        node = self.victim.randomDelete( self.AU )
+        self._set_expected_agreement_from_deleted( [ node ] )
+        return [ node ]
         
 
 class LastFileDeleteV3TestCase( DeleteV3Tests ):
@@ -284,18 +332,9 @@ class LastFileDeleteV3TestCase( DeleteV3Tests ):
     def _damage_AU( self ):
         node = self.victim.getAuNode( self.AU, 'http://www.example.com/index.html' )
         self.victim.deleteNode( node )
+        self._set_expected_agreement_from_deleted( [ node ] )
         return [ node ]
         
-
-class AllContentDeleteV3TestCase( DeleteV3Tests ):
-    """Test recovery after deletion of all content nodes."""
-
-    def _damage_AU( self ):
-        nodes = self.victim.getAuNodesWithContent( self.AU )
-        for node in nodes:
-            self.victim.deleteNode( node )
-        return nodes
-
 
 class RandomDeleteV3TestCase( DeleteV3Tests ):
     """Test recovery by V3 from randomly deleted nodes in our cache"""
@@ -305,7 +344,9 @@ class RandomDeleteV3TestCase( DeleteV3Tests ):
         self.simulated_AU_parameters.update( { 'depth': 1, 'branch': 1 } )
 
     def _damage_AU( self ):
-        return self.victim.randomDeleteRandomNodes( self.AU, 5, 15 )
+        nodes = self.victim.randomDeleteRandomNodes( self.AU, 5, 15 )
+        self._set_expected_agreement_from_deleted( nodes )
+        return nodes
 
 
 class ExtraFilesV3Tests( V3TestCases ):
@@ -315,10 +356,17 @@ class ExtraFilesV3Tests( V3TestCases ):
         V3TestCases.__init__( self, methodName )
         self.simulated_AU_parameters = { 'numFiles': 20 }
 
+    def _set_expected_agreement_from_extra( self, extraNodes ):
+        content = self.victim.getAuNodesWithContent( self.AU )
+        numerator = len( content ) - len( extraNodes )
+        denominator = len( content )
+        self.expected_agreement = self._expected_agreement( numerator, denominator )
+
     def _create_AU_nodes( self, minimum, maximum ):
         # Damage the AU by creating extra nodes
         nodes = self.victim.randomCreateRandomNodes( self.AU, minimum, maximum )
         log.info( 'Created the following nodes on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+        self._set_expected_agreement_from_extra( nodes )
         return nodes
 
     def _verify_damage( self, nodes ):
@@ -339,6 +387,7 @@ class SimpleExtraFileV3TestCase( ExtraFilesV3Tests ):
         # Damage the AU by creating an extra node
         node = self.victim.createNode( self.AU, '000extrafile.txt' )
         log.info( 'Created file %s on client %s' % ( node.url, self.victim ) )
+        self._set_expected_agreement_from_extra( [ node ] )
         return [ node ]
 
 
@@ -349,6 +398,7 @@ class LastFileExtraV3TestCase( ExtraFilesV3Tests ):
         # Damage the AU by creating an extra node that should sort LAST in the list of CachedUrls
         node = self.victim.createNode( self.AU, 'zzzzzzzzzzzzz.txt' )
         log.info( 'Created file %s on client %s' % ( node.url, self.victim ) )
+        self._set_expected_agreement_from_extra( [ node ] )
         return [ node ]
 
 
@@ -365,6 +415,7 @@ class RandomExtraFileV3TestCase( ExtraFilesV3Tests ):
 
 class OfflinePeersV3Tests( ExtraFilesV3Tests ):
     """Abstract class"""
+    # todo(bhayes): Why is this an ExtraFilesV3Tests?
 
     def __init__( self, methodName = 'runTest' ):
         ExtraFilesV3Tests.__init__( self, methodName )
@@ -406,7 +457,11 @@ class NoQuorumV3TestCase( OfflinePeersV3Tests ):
         for client in self.clients:
             if client != self.victim:
                 self.assert_( peer_agreements[ client.getV3Identity() ] > 60, 'No agreement recorded for %s' % client )
-    
+
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'No Quorum', u'Waiting for Poll') )
+        
 
 class TotalLossRecoveryV3TestCase( V3TestCases ):
     """Test repairing a cache under V3 that has lost all its contents"""
@@ -415,6 +470,7 @@ class TotalLossRecoveryV3TestCase( V3TestCases ):
         V3TestCases.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
+        self.expected_agreement = 0
 
     def _setup_AU( self ):
         V3TestCases._setup_AU( self )
@@ -483,7 +539,9 @@ class RepairFromPublisherV3TestCase( V3TestCases ):
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1 }
 
     def _damage_AU( self ):
-        return self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
+        nodes = self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
+        self._set_expected_agreement_from_damaged( nodes )
+        return nodes
 
     def _verify_repair( self, nodes ):
         for node in nodes:
@@ -539,6 +597,7 @@ class RepairFromPeerV3Tests( V3TestCases ):
 
     def _damage_AU( self ):
         nodes = self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
+        self._set_expected_agreement_from_damaged( nodes )
         self._update_configuration()
         return nodes
 
@@ -615,7 +674,8 @@ tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
                                     TinyUiRefusedTestCase(),
                                     TinyUiFileNotFoundTestCase() ) )
 
-simpleV3Tests = unittest.TestSuite( ( SimpleDamageV3TestCase(),
+simpleV3Tests = unittest.TestSuite( ( SimpleV3TestCase(),
+                                      SimpleDamageV3TestCase(),
                                       SimpleDeleteV3TestCase(),
                                       SimpleExtraFileV3TestCase(),
                                       LastFileDeleteV3TestCase(),

@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.23 2011-10-03 05:54:34 tlipkis Exp $
+ * $Id: ParticipantUserData.java,v 1.24 2011-12-05 18:59:05 barry409 Exp $
  */
 
 /*
@@ -61,8 +61,6 @@ public class ParticipantUserData implements LockssSerializable {
   private PsmInterpStateBean psmState;
   private int status = V3Poller.PEER_STATUS_INITIALIZED;
   private String statusMsg = null;
-  private VoteBlocksIterator voteBlockIterator;
-  /** The number of blocks that have been tallied for this peer */ 
   private long talliedUrls;
   /** The number of blocks that the poller agrees with for this peer */
   private long agreeUrls;
@@ -263,18 +261,6 @@ public class ParticipantUserData implements LockssSerializable {
     }
   }
 
-  /**
-   * Return the vote block iterator for this peer.
-   * @return the vote block iterator for this peer.
-   */
-  public synchronized VoteBlocksIterator getVoteBlockIterator()
-      throws FileNotFoundException {
-    if (voteBlockIterator == null && voteBlocks != null) {
-      voteBlockIterator = voteBlocks.iterator();
-    }
-    return voteBlockIterator;
-  }
-
   public String toString() {
     return "[PollerUserData: voterId=" +
       voterId + "]";
@@ -452,11 +438,6 @@ public class ParticipantUserData implements LockssSerializable {
     messageDir = null;
     nominees = null;
     voteBlocks = null;
-    VoteBlocksIterator iter = voteBlockIterator;
-    if (iter != null) {
-      iter.release();
-    }
-    voteBlockIterator = null;
 
     psmInterp = null;
     psmState = null;

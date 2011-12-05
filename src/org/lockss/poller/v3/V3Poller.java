@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.106 2011-11-15 01:30:34 barry409 Exp $
+ * $Id: V3Poller.java,v 1.107 2011-12-05 18:59:05 barry409 Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
-import org.lockss.repository.*;
+import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
 import org.lockss.state.*;
@@ -362,11 +362,14 @@ public class V3Poller extends BasePoll {
 
   // Global state for the poll.
   private PollerStateBean pollerState;
-  // Map of PeerIdentity => ParticipantState for all participants in
-  // this poll, both inner and outer circle
-  protected Map<PeerIdentity,ParticipantUserData> theParticipants =
+  // The order of theParticipants is used in indexing into the Arrays
+  // passed to BlockHasher, and so it is a LinkedHashMap.
+  protected LinkedHashMap<PeerIdentity,ParticipantUserData> theParticipants =
     new LinkedHashMap();
   protected Map<PeerIdentity,ParticipantUserData> exParticipants = new HashMap();
+  // Only set once theParticipants is frozen. Nothing enforces this,
+  // which seems awkward.
+  private UrlTallier urlTallier;
   private LockssDaemon theDaemon;
   private PollManager pollManager;
   private IdentityManager idManager;
@@ -857,9 +860,9 @@ public class V3Poller extends BasePoll {
     // Clean up any lingering participants.
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
-        VoteBlocks vb = ud.getVoteBlocks();
-        if (vb != null) {
-          vb.release();
+        VoteBlocks voteBlocks = ud.getVoteBlocks();
+        if (voteBlocks != null) {
+          voteBlocks.release();
         }
       }
     }
@@ -1046,209 +1049,50 @@ public class V3Poller extends BasePoll {
 
 
   /**
-   * Tally an individual hash block.
+   * Tally a hash block which the poller has, and all the blocks any
+   * voter has before that.
    *
-   * @param hb  The {@link HashBlock} to tally.
+   * @param hashBlock  The {@link HashBlock} to tally.
+   * @return The {@link BlockTally} with the final tally results. The
+   * results have been acted upon, and the tally is returned for
+   * testing purposes.
    */
-  // CR: simplify to single loop
-  void tallyBlock(HashBlock hb, BlockTally tally) {
+  BlockTally tallyBlock(HashBlock hashBlock) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
-    log.debug3("Opening block " + hb.getUrl() + " to tally.");
-    int voterOnlyBlockVoters = 0;
-    int digestIndex = 0;
-    int bytesHashed = 0;
-    
-    // By this time, only voted peers will exist in 'theParticipants'.
-    // Everyone else will have been removed.
-    do {
-      voterOnlyBlockVoters = 0;
-      digestIndex = 0;
-      
-      // Reset the tally
-      tally.reset();
+    final String pollerUrl = hashBlock.getUrl();
+    log.debug3("Opening block " + pollerUrl + " to tally.");
 
-      // Iterate over the peers looking for the lowest-sorted URL.
-      // lowestUrl will be null if there is no URL lower than the poller's
-      
-      // CR: s.b. boolean (foundURLLowerThanOurs)
-      String lowestUrl = null;
-      synchronized(theParticipants) {
-        try
-        {
-  	for (ParticipantUserData voter : theParticipants.values()) {
-            VoteBlocksIterator iter = voter.getVoteBlockIterator();
-            
-            if (iter == null) {
-              log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                          + " while tallying block " + hb.getUrl()
-                          + " in poll " + getKey() + ".  It is possible that the " 
-                          + " poller had no votes to cast, but it could also be "
-                          + " a problem.");
-              // Next voter.
-              continue;
-            }
-            
-            VoteBlock vb = null;
-            try {
-              vb = iter.peek();		// CR: call hasNext() first?
-              if (vb == null) {
-                continue;
-              } else {
-  	      // CR: seems like final clause s.b.
-  	      // vb.getUrl().compareTo(lowestUrl) < 0
-                if (hb.getUrl().compareTo(vb.getUrl()) > 0 &&
-                    (lowestUrl == null || hb.getUrl().compareTo(lowestUrl) > 0)) { 
-                  lowestUrl = vb.getUrl();
-                }
-              }
-            } catch (IOException ex) {
-              continue;
-            }
-          }
-          
-  	for (ParticipantUserData voter : theParticipants.values()) {
-            VoteBlocksIterator iter = voter.getVoteBlockIterator();
-            
-            digestIndex++;
-            
-            if (iter == null) {
-              log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                          + " while tallying block " + hb.getUrl()
-                          + " in poll " + getKey() + ".  It is possible that the " 
-                          + " poller had no votes to cast, but it could also be "
-                          + " a problem.");
-              continue;
-            }
-            
-            VoteBlock vb = null;
-            try {
-              vb = iter.peek();
-              if (vb == null) {
-                // No block was returned.  This means this voter is out of
-                // blocks.
-                tally.addPollerOnlyBlockVoter(voter.getVoterId());
-              } else {
-                int sortOrder = hb.getUrl().compareTo(vb.getUrl());
-                if (sortOrder > 0) {
-                  log.debug3("Participant " + voter.getVoterId() + 
-                             " seems to have an extra block that I don't: " +
-                             vb.getUrl());
-                  tally.addVoterOnlyBlockVoter(voter.getVoterId(), vb.getUrl());
-                  voterOnlyBlockVoters++;
-                  iter.next();
-                } else if (sortOrder < 0) {
-                  log.debug3("Participant " + voter.getVoterId() +
-                             " doesn't seem to have block " + hb.getUrl());
-                  tally.addPollerOnlyBlockVoter(voter.getVoterId());
-                } else { // equal
-                  if (lowestUrl == null) {
-                    log.debug3("Our blocks are the same, now we'll compare them.");
-                    iter.next();
-                    compareBlocks(voter.getVoterId(), digestIndex, vb, hb, tally);
-                  } else {
-                    log.debug3("Not incrementing peer's vote block iterator");
-                  }
-                }
-              }
-            } catch (IOException ex) {
-              // On IOExceptions, attempt to move the poll forward. Just skip
-              // this block, but be sure to log the error.
-              log.warning("IOException while iterating over vote blocks.", ex);
-              if (++blockErrorCount > maxBlockErrorCount) {
-  	      log.error("Stopping poll after " + blockErrorCount +
-  			" IOExceptions while iterating over vote blocks.");
-  	      pollerState.setErrorDetail("Too many errors during tally");
-                stopPoll(V3Poller.POLLER_STATUS_ERROR);
-              }
-            } finally {
-              voter.incrementTalliedBlocks();
-            }
-          }
-        // Caused by the iterator not corresponding to a real value.
-        } catch (FileNotFoundException e)
-        {
-          log.error("DiskVoteBlocks.iterator() didn't correspond to a real file.", e);
-        }
-      }
+    tallyVoterUrls(pollerUrl);
+    BlockTally tally = tallyPollerUrl(pollerUrl, hashBlock);
 
-      tally.tallyVotes();
-      checkTally(tally, hb.getUrl(), false);
-    } while (voterOnlyBlockVoters > 0);
-    
     // Check to see if it's time to checkpoint the poll.
-    bytesHashedSinceLastCheckpoint += hb.getTotalFilteredBytes();
+    bytesHashedSinceLastCheckpoint += hashBlock.getTotalFilteredBytes();
     if (bytesHashedSinceLastCheckpoint >= this.hashBytesBeforeCheckpoint) {
       checkpointPoll();
     }
+    return tally;
+  }
+
+  /* Make a fresh BlockTally with the current quorum. */
+  private BlockTally quorateTally() {
+    // todo(bhayes): UrlTallier should create and return tallies, not
+    // V3Poller and TestUrlTallier. Tally has no need to know the
+    // quorum at creation, only when computing results of the poll. Do
+    // this work when BlockTally gets reworked.
+    return new BlockTally(pollerState.getQuorum());
   }
 
   /**
-   * Called by the BlockHasher's hashComplete callback at the end of the tally.
-   * This handles the edge case where we have finished our hash, and have no
-   * more blocks to tally, but peers may still have blocks that have not been
-   * checked.
+   * After the poller has no more blocks, process all the blocks any
+   * voter has.
    */
-  // CR: this has caused TaskNotifier watchdog to trip.  Move into state
-  // machine
   private void finishTally() {
     if (!hasQuorum()) {
       log.error("finishTally() called in inquorate poll");
       return;
     }
-    int digestIndex = 0;
-    int voterOnlyBlockVoters = 0;
-    do {
-      digestIndex = 0;
-      voterOnlyBlockVoters = 0;
-      BlockTally tally = new BlockTally(pollerState.getQuorum());
-      synchronized(theParticipants) {
-        try {
-          for (ParticipantUserData voter : theParticipants.values()) {
-            VoteBlocksIterator iter = voter.getVoteBlockIterator();
-
-            if (iter == null) {
-              log.warning("Voter " + voter + " gave us a null vote block iterator " 
-                  + " while finishing the tally "
-                  + " in poll " + getKey() + ".  It is possible that the " 
-                  + " poller had no votes to cast, but it could also be "
-                  + " a problem.");
-              // Next voter.
-              continue;
-            }
-
-            // CR: iterate through all peer's remaining votes
-            try {
-              if (iter.peek() != null) {
-                VoteBlock vb = iter.next();
-                tally.addVoterOnlyBlockVoter(voter.getVoterId(), vb.getUrl());
-                voterOnlyBlockVoters++;
-              }
-            } catch (IOException ex) {
-              // This would be bad enough to stop the poll and raise an alert.
-              log.error("IOException while iterating over vote blocks.", ex);
-              stopPoll(V3Poller.POLLER_STATUS_ERROR);
-              return;
-            }
-          }
-        } catch (FileNotFoundException e) {
-          log.error("File Not Found Exception, probably caused by the DiskVoteBlocks.iterator not corresponding to an existing file.", e);
-        }
-
-      }
-
-      // Do not tally if this is the last time through the loop.
-      if (voterOnlyBlockVoters > 0) {
-        tally.tallyVotes();		// CR: need to call this in loop?
-        // This may be null if the tally does not yet have consensus on what
-        // the name of the missing block is.
-	// CR: this is suspicious
-        if (tally.getVoterOnlyBlockUrl() != null) {
-          checkTally(tally, tally.getVoterOnlyBlockUrl(), false);
-        }
-      }
-
-    } while (voterOnlyBlockVoters > 0);
+    tallyVoterUrls();
     
     // Checkpoint the poll.
     checkpointPoll();
@@ -1258,16 +1102,76 @@ public class V3Poller extends BasePoll {
   }
 
   /**
+   * Tally and consume all the blocks we are missing, up to but not
+   * including pollerUrl.
+   */
+  private void tallyVoterUrls(String pollerUrl) {
+    log.debug3("tallyVoterUrls: "+pollerUrl);
+    while (true) {
+      String voterUrl = urlTallier.peekUrl();
+      log.debug3("voters have: "+voterUrl);
+      if (voterUrl == null || voterUrl.compareTo(pollerUrl) >= 0) {
+	// Leave the while loop, since the voter was greater than the
+	// pollerUrl.
+	break;
+      }
+      tallyVoterUrl(voterUrl);
+    }
+  }
+  
+  /**
+   * Tally and consume all the remaining blocks.
+   */
+  private void tallyVoterUrls() {
+    while (true) {
+      String voterUrl = urlTallier.peekUrl();
+      if (voterUrl == null) {
+	// Leave the while loop, since the voters have nothing left.
+	break;
+      }
+      tallyVoterUrl(voterUrl);
+    }
+  }
+
+  /**
+   * Tally all the voters who have this block which the poller does
+   * not, consuming the block in the voters.
+   */
+  private void tallyVoterUrl(String voterUrl) {
+    BlockTally tally = quorateTally();
+
+    log.debug3("tallyVoterUrl: "+voterUrl);
+    urlTallier.tallyVoterUrl(voterUrl, tally);
+    tally.tallyVotes();
+    checkTally(tally, voterUrl);
+  }
+
+  /**
+   * Tally all the voters who have this block which the poller also
+   * has, consuming the block in the voters.
+   * @param pollerUrl The URL being tallied.
+   * @param hashBlock The poller's hashes for the URL.
+   * @return The {@link BlockTally} with the final tally results. The
+   * results have been acted upon, and the tally is returned for
+   * testing purposes.
+   */
+  private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
+    BlockTally tally = quorateTally();
+    log.debug3("tallyPollerUrl: "+pollerUrl);
+    urlTallier.tallyPollerUrl(pollerUrl, tally, hashBlock);
+    tally.tallyVotes();
+    checkTally(tally, pollerUrl);
+    return tally;
+  }
+
+  /**
    * <p>Check the tally for a block, and perform repairs if necessary.</p>
    *
    * @param tally The tally to check.
    * @param url The target URL for any possible repairs.
-   * @param markComplete  If true, mark this as a completed repair in the
-   *                      status table.
    */
   private void checkTally(BlockTally tally,
-                          String url,
-                          boolean markComplete) {
+                          String url) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
       throw new NullPointerException("Passed a null url to checkTally!");
@@ -1342,11 +1246,6 @@ public class V3Poller extends BasePoll {
 	log.warning("Unexpected results from tallying block " + url + ": "
 		    + tally.getStatusString());
       }
-
-      // Mark this repair complete if this is a re-check after a repair
-      if (markComplete) {
-	pollerState.getRepairQueue().markComplete(url);
-      }
     }
   }
 
@@ -1410,23 +1309,24 @@ public class V3Poller extends BasePoll {
   }
 
   /**
-   * Create an array of byte arrays containing hasher initializer bytes, one for
-   * each participant in the poll. The initializer bytes are constructed by
-   * concatenating the participant's poller nonce and the voter nonce.
+   * Create an array of byte arrays containing hasher initializer
+   * bytes, one for each participant in the poll, and one for a plain
+   * hash. The initializer bytes are constructed by concatenating the
+   * participant's poller nonce and the voter nonce.
    *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
     int len = getPollSize() + 1; // One for plain hash.
     byte[][] initBytes = new byte[len][];
-    initBytes[0] = new byte[0];
-    int ix = 1;
+    initBytes[len-1] = new byte[0];
+    int participantIndex = 0;
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
         log.debug2("Initting hasher byte arrays for voter " + ud.getVoterId());
-        initBytes[ix] = ByteArray.concat(ud.getPollerNonce(),
+        initBytes[participantIndex] = ByteArray.concat(ud.getPollerNonce(),
                                          ud.getVoterNonce());
-        ix++;
+        participantIndex++;
       }
     }
     return initBytes;
@@ -1641,33 +1541,27 @@ public class V3Poller extends BasePoll {
     
     final BlockHasher.EventHandler blockDone =
       new BlockHasher.EventHandler() {
-      public void blockDone(final HashBlock hblock) {
+      public void blockDone(final HashBlock hashBlock) {
+	// todo(bhayes): This replays the iterators for each
+	// hashBlock, rather than waiting for them all, and then
+	// re-running them in order. Which might be what the comment
+	// below means.
+
         // CR: should keep track of existence of pending repairs to
         // update status when done
-        PollerStateBean.RepairQueue rq = pollerState.getRepairQueue();
-        log.debug3("Finished hashing repair sent for block " + hblock);
+        log.debug3("Finished hashing repair sent for block " + hashBlock);
         // Replay the block comparison using the new hash results.
-        int digestIndex = 0;
-        BlockTally tally = new BlockTally(pollerState.getQuorum());
-        synchronized(theParticipants) {
-          for (PeerIdentity id : theParticipants.keySet()) {
-            digestIndex++;
-            VoteBlock vb = 
-              (getParticipant(id)).getVoteBlocks().getVoteBlock(url);
-            if (vb == null) {
-              log.debug("Voter " + id + " does not seem to have url " + url + " in his vote blocks.");
-              // The voter did not have this URL in the first place.
-              tally.addVoterOnlyBlockVoter(id, url);
-            } else {
-              compareBlocks(id, digestIndex, vb, hblock, tally);
-            }
-          }
-        }
+        BlockTally tally = quorateTally();
+	UrlTallier urlTallier = makeUrlTallier();
+	urlTallier.seek(url);
+	urlTallier.tallyPollerUrlRepair(url, tally, hashBlock);
+
         tally.tallyVotes();
         log.debug3("After-vote hash tally for repaired block " + url
                    + ": " + tally.getStatusString());
         setStatus(V3Poller.POLLER_STATUS_TALLYING);
-        checkTally(tally, url, true);
+        checkTally(tally, url);
+	pollerState.getRepairQueue().markComplete(url);
       }
     };
 
@@ -1706,80 +1600,6 @@ public class V3Poller extends BasePoll {
     }
     
   }
-  
-  /**
-   * Compare a hash block and a vote block.
-   */
-  void compareBlocks(PeerIdentity id,
-                     int hashIndex,
-                     VoteBlock voteBlock,
-                     HashBlock hashBlock,
-                     BlockTally tally) {
-
-    /*
-     * Implementation Note:
-     *
-     * The combinatorics of this can get hairy fast. The maximum number of
-     * versions in the voteblock and hashblock is controlled by the parameter
-     * BlockHasher.PARAM_HASH_MAX_VERSIONS, and should be set to a reasonably
-     * small number for real world use.  The default is currently 5.
-     */
-
-    VoteBlock.Version[] vbVersions = voteBlock.getVersions();
-    HashBlock.Version[] hbVersions = hashBlock.getVersions();
-
-    log.debug3("Comparing block " + hashBlock.getUrl() + " against peer " +
-               id + " in poll " + getKey());
-
-    for (int hbIdx = 0; hbIdx < hbVersions.length;  hbIdx++ ) {
-      byte[] hasherResults = hbVersions[hbIdx].getHashes()[hashIndex];
-      Throwable pollerHashError = hbVersions[hbIdx].getHashError();
-
-      // If we had a hash error on this version, we need to count this
-      // as an abstenion by not tallying it.
-      if (pollerHashError != null) {
-        this.pollerState.getTallyStatus().addErrorUrl(hashBlock.getUrl(),
-                                                      pollerHashError);
-        continue;
-      }
-      
-      for (int vbIdx = 0; vbIdx < vbVersions.length; vbIdx++) {
-        // If there were any hashing errors, we need to count this
-        // as an abstension by not adding it to the tally.  If we don't
-        // have enough voters, this will be a no quorum block.
-        if (vbVersions[vbIdx].getHashError()) {
-          log.info("Voter version " + vbIdx + " had a hashing error. "
-                   + "Counting as an abstension.");
-          continue;
-        }
-        byte[] voterResults = vbVersions[vbIdx].getHash();
-        if (log.isDebug3()) {
-          log.debug3("Comparing voter's version " + vbIdx +
-                     " against poller's version " + hbIdx); 
-          log.debug3("Hasher results: "
-                     + ByteArray.toBase64(hasherResults));
-          log.debug3("Voter results: "
-                     + ByteArray.toBase64(voterResults));
-        }
-
-        if (Arrays.equals(voterResults, hasherResults)) {
-          log.debug3("Found agreement between voter version " + vbIdx +
-                     " and hash block version " + hbIdx);
-          tally.addAgreeVoter(id);
-          ParticipantUserData ud = getParticipant(id);
-          if (ud != null) ud.incrementAgreedBlocks();
-          return;
-        }
-      }
-    }
-
-    // If we got here there was no agreement between any versions
-    log.debug3("No agreement found for any version of block " +
-	       voteBlock.getUrl() + ".  Lost tally, adding voter " + id +
-	       " to the disagreeing voter list.");
-    tally.addDisagreeVoter(id);
-  }
-
 
   // The vote is over.
   private void voteComplete() {
@@ -2059,7 +1879,7 @@ public class V3Poller extends BasePoll {
   /**
    * Build the initial set of inner circle peers.
    *
-   * @param pollSize The number of peers to invite.
+   * @param quorum The number of peers to invite.
    */
   protected void constructInnerCircle(int quorum) {
     Map availMap = getAvailablePeers();
@@ -2340,6 +2160,18 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  // The participants should not change after this call.
+  void lockParticipants() {
+    // todo(bhayes): Nobody enforces, nobody checks.
+    urlTallier = makeUrlTallier();
+  }
+
+  UrlTallier makeUrlTallier() {
+    synchronized(theParticipants) {
+	return new UrlTallier(new ArrayList(theParticipants.values()));
+    }
+  }
+
   Class getPollerActionsClass() {
     return PollerActions.class;
   }
@@ -2362,7 +2194,7 @@ public class V3Poller extends BasePoll {
 			      cookie);
       } else {
 	if (getPollSize() == 0) {
-	  log.debug("Talying early because no participants and no more to invite");
+	  log.debug("Tallying early because no participants and no more to invite");
 	  voteTallyStart.expire();
 	}
       }
@@ -2494,6 +2326,8 @@ public class V3Poller extends BasePoll {
       //      existing step task.
       if (task != null) task.cancel();
       CachedUrlSet cus = pollerState.getCachedUrlSet();
+      // At this point theParticipants is fixed, and should not be changed.
+      lockParticipants();
       if (!scheduleHash(cus,
 			Deadline.at(tallyEnd),
 			new HashingCompleteCallback(),
@@ -2592,9 +2426,9 @@ public class V3Poller extends BasePoll {
    */
   // CR: look into having this send event to state machine, run tally there
   private class BlockEventHandler implements BlockHasher.EventHandler {
-    public void blockDone(HashBlock block) {
+    public void blockDone(HashBlock hashBlock) {
       if (pollerState != null) {
-        tallyBlock(block, new BlockTally(pollerState.getQuorum()));
+        tallyBlock(hashBlock);
       }
     }
   }
