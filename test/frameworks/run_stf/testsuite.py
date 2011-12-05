@@ -203,7 +203,10 @@ class V3TestCases( LockssTestCases ):
     def _verify_damage( self, nodes ):
         for node in nodes:
             self.assertFalse( self._content_matches( node ), 'Failed to damage AU file: %s' % node.url )
-        log.info( 'Damaged the following node(s) on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+        if nodes:
+            log.info( 'Damaged the following node(s) on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+        else:
+            log.info( 'No nodes damaged on client %s' %  self.victim )
 
     def _await_repair( self, nodes ):
         # Just pause until we have better tests; assumes that repair poll has not yet been completed
@@ -701,17 +704,19 @@ postTagTests = unittest.TestSuite( ( tinyUiTests, v3Tests ) )
 frameworkList = []
 deleteAfterSuccess = lockss_util.config.getBoolean( 'deleteAfterSuccess', True )
 
-try:
-    unittest.main( argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
-except ( KeyboardInterrupt, SystemExit ), exception:
-    for framework in frameworkList:
-        if framework.isRunning:
-            log.info( 'Stopping framework' )
-            framework.stop()
-    if type( exception ) is SystemExit and not exception.code and deleteAfterSuccess:
+if __name__ == '__main__':
+    try:
+        unittest.main( defaultTest = 'v3Tests',
+                       argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
+    except ( KeyboardInterrupt, SystemExit ), exception:
         for framework in frameworkList:
-            framework.clean()
-except Exception, exception:
-    log.error( exception )
-
-raise
+            if framework.isRunning:
+                log.info( 'Stopping framework' )
+                framework.stop()
+        if type( exception ) is SystemExit and not exception.code and \
+                deleteAfterSuccess:
+            for framework in frameworkList:
+                framework.clean()
+    except Exception, exception:
+        log.error( exception )
+        raise
