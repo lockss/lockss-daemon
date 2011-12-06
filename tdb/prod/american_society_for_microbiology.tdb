@@ -18,7 +18,7 @@
       >
       param[base_url] = http://aac.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1987 ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; manifest ; 1988 ; Antimicrobial Agents and Chemotherapy Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; manifest ; 1989 ; Antimicrobial Agents and Chemotherapy Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; manifest ; 1990 ; Antimicrobial Agents and Chemotherapy Volume 34 ; 34 >
@@ -55,7 +55,7 @@
       >
       param[base_url] = http://aem.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Applied and Environmental Microbiology Volume 53 ; 53 >
       au < HighWirePressH20Plugin ; manifest ; 1988 ; Applied and Environmental Microbiology Volume 54 ; 54 >
       au < HighWirePressH20Plugin ; manifest ; 1989 ; Applied and Environmental Microbiology Volume 55 ; 55 >
       au < HighWirePressH20Plugin ; manifest ; 1990 ; Applied and Environmental Microbiology Volume 56 ; 56 >
@@ -272,7 +272,7 @@
       >
       param[base_url] = http://jb.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of Bacteriology Volume 169 ; 169 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Bacteriology Volume 169 ; 169 >
       au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Bacteriology Volume 170 ; 170 >
       au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Bacteriology Volume 171 ; 171 >
       au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Bacteriology Volume 172 ; 172 >
@@ -554,13 +554,13 @@
       >
       param[base_url] = http://mcb.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; manifest ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; manifest ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; manifest ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; manifest ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; manifest ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular and Cellular Biology Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; testing ; 1989 ; Molecular and Cellular Biology Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; testing ; 1990 ; Molecular and Cellular Biology Volume 10 ; 10 >
