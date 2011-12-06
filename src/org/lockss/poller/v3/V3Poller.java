@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.108 2011-12-06 23:26:08 barry409 Exp $
+ * $Id: V3Poller.java,v 1.109 2011-12-06 23:58:44 barry409 Exp $
  */
 
 /*
@@ -1161,15 +1161,16 @@ public class V3Poller extends BasePoll {
    * @param url The target URL for any possible repairs.
    * @return The status of the tally.
    */
-  private int checkTally(BlockTally tally, String url) {
+  private BlockTally.Result checkTally(BlockTally tally, String url) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
       throw new NullPointerException("Passed a null url to checkTally!");
     }
     
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
-    int tallyResult = tally.getTallyResult(pollerState.getQuorum(),
-					   pollerState.getVoteMargin());
+    BlockTally.Result tallyResult =
+      tally.getTallyResult(pollerState.getQuorum(),
+			   pollerState.getVoteMargin());
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
     
     // If there are any agreeing peers, update our agreement
@@ -1199,41 +1200,39 @@ public class V3Poller extends BasePoll {
 	  + "-" + tally.getPollerOnlyBlockVoters().size() + ") ";
       }
       switch (tallyResult) {
-      case BlockTally.RESULT_WON:
+      case WON:
 	tallyStatus.addAgreedUrl(url);
 	// Great, we won!  Do nothing.
 	log.debug3("Won tally" + vMsg + ": " + url + " in poll " + pollKey);
 	break;
-      case BlockTally.RESULT_LOST:
+      case LOST:
 	tallyStatus.addDisagreedUrl(url);
 	log.debug2("Lost tally" + vMsg + ": " + url + " in poll " + getKey());
 	requestRepair(url, tally.getDisagreeVoters());
 	break;
-      case BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK:
+      case LOST_POLLER_ONLY_BLOCK:
 	log.debug2("Lost tally" + vMsg + ": Removing " + url +
 		   " in poll " + getKey());
 	deleteBlock(url);
 	break;
-      case BlockTally.RESULT_LOST_VOTER_ONLY_BLOCK:
+      case LOST_VOTER_ONLY_BLOCK:
 	log.debug2("Lost tally. Requesting repair for missing block: " +
 		   url + " in poll " + getKey());
 	tallyStatus.addDisagreedUrl(url);
 	requestRepair(url, tally.getVoterOnlyBlockVoters());
 	break;
-      case BlockTally.RESULT_NOQUORUM:
+      case NOQUORUM:
 	tallyStatus.addNoQuorumUrl(url);
 	log.warning("No Quorum for block " + url + " in poll " + getKey());
 	break;
-      case BlockTally.RESULT_TOO_CLOSE:
-      case BlockTally.RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK:
-      case BlockTally.RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK:
+      case TOO_CLOSE:
 	tallyStatus.addTooCloseUrl(url);
 	log.warning("Tally was inconclusive for block " + url + " in poll " +
 		    getKey());
 	break;
       default:
 	log.warning("Unexpected results from tallying block " + url + ": "
-		    + tally.getStatusString(tallyResult));
+		    + tallyResult.printString);
       }
     }
     return tallyResult;
@@ -1546,9 +1545,9 @@ public class V3Poller extends BasePoll {
 	BlockTally tally = urlTallier.tallyPollerUrlRepair(url, hashBlock);
 
         setStatus(V3Poller.POLLER_STATUS_TALLYING);
-        int status = checkTally(tally, url);
+        BlockTally.Result result = checkTally(tally, url);
         log.debug3("After-vote hash tally for repaired block " + url
-                   + ": " + tally.getStatusString(status));
+                   + ": " + result.printString);
 	pollerState.getRepairQueue().markComplete(url);
       }
     };

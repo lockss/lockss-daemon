@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.6 2011-12-06 23:26:09 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.7 2011-12-06 23:58:44 barry409 Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class TestBlockTally extends LockssTestCase {
 
   public void testConstructPollTally() throws Exception {
     BlockTally tally = new BlockTally();
-    assertEquals(BlockTally.RESULT_NOQUORUM, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
   
   public void testIsWithinMargin() throws Exception {
@@ -205,7 +205,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     tally.addAgreeVoter(testPeers[4]);
-    assertEquals(BlockTally.RESULT_WON, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult(5, 75));
   }
 
   public void testLostPoll() throws Exception {
@@ -215,7 +215,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[2]);
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
-    assertEquals(BlockTally.RESULT_LOST, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(5, 75));
   }
 
   public void testResultTooCloseUnder() throws Exception {
@@ -226,7 +226,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[3]);
     tally.addAgreeVoter(testPeers[4]);
     tally.addAgreeVoter(testPeers[5]);
-    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
   }
 
   public void testResultTooCloseOver() throws Exception {
@@ -237,7 +237,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
-    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
   }
 
   public void testResultTooCloseEqual() throws Exception {
@@ -248,7 +248,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addDisagreeVoter(testPeers[3]);
     tally.addDisagreeVoter(testPeers[4]);
     tally.addDisagreeVoter(testPeers[5]);
-    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.TOO_CLOSE, tally.getTallyResult(5, 75));
   }
 
   public void testNoQuorum() throws Exception {
@@ -257,7 +257,7 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[1]);
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
-    assertEquals(BlockTally.RESULT_NOQUORUM, tally.getTallyResult(5, 75));
+    assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
   }
 
   // XXX: Tests for reputation system.

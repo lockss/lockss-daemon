@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.17 2011-12-06 23:26:08 barry409 Exp $
+ * $Id: BlockTally.java,v 1.18 2011-12-06 23:58:44 barry409 Exp $
  */
 
 /*
@@ -48,17 +48,19 @@ public class BlockTally {
   // BlockTally<T>, and then we can test it with T. BlockTally never
   // tries to look into the T, just counts them.
 
-  // todo(bhayes): Make this an Enumeration.
-  public static final int RESULT_HASHING = 0; // Not used
-  public static final int RESULT_NOQUORUM = 1;
-  public static final int RESULT_TOO_CLOSE = 2;
-  public static final int RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK = 3; // Not used
-  public static final int RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK = 4; // Not used
-  public static final int RESULT_LOST = 5;
-  public static final int RESULT_LOST_POLLER_ONLY_BLOCK = 6;
-  public static final int RESULT_LOST_VOTER_ONLY_BLOCK = 7;
-  public static final int RESULT_WON = 8;
-  public static final int RESULT_REPAIRED = 9; // Not used
+  public enum Result {
+    NOQUORUM("No Quorum"),
+    TOO_CLOSE("Too Close"),
+    LOST("Lost"),
+    LOST_POLLER_ONLY_BLOCK("Lost - Poller-only Block"),
+    LOST_VOTER_ONLY_BLOCK("Lost - Voter-only Block"),
+    WON("Won");
+
+    final String printString;
+    Result(String printString) {
+      this.printString = printString;
+    }
+  }
 
   // List of voters with whom we agree
   private Collection<PeerIdentity> agreeVoters =
@@ -76,53 +78,26 @@ public class BlockTally {
   private static final Logger log = Logger.getLogger("BlockTally");
 
   public BlockTally() {}
-  
-  public static String getStatusString(int result) {
-    switch (result) {
-    case RESULT_HASHING:
-      return "Hashing";
-    case RESULT_NOQUORUM:
-      return "No Quorum";
-    case RESULT_TOO_CLOSE:
-      return "Too Close";
-    case RESULT_TOO_CLOSE_POLLER_ONLY_BLOCK:
-      return "Too Close - Poller-only Block";
-    case RESULT_TOO_CLOSE_VOTER_ONLY_BLOCK:
-      return "Too Close - Voter-only Block";
-    case RESULT_LOST:
-      return "Lost";
-    case RESULT_LOST_POLLER_ONLY_BLOCK:
-      return "Lost - Poller-only Block";
-    case RESULT_LOST_VOTER_ONLY_BLOCK:
-      return "Lost - Voter-only Block";
-    case RESULT_WON:
-      return "Won";
-    case RESULT_REPAIRED:
-      return "Repaired";
-    default:
-      return "Unknown";
-    }
-  }
 
-  public int getTallyResult(int quorum, int voteMargin) {
-    int result;
+  public Result getTallyResult(int quorum, int voteMargin) {
+    Result result;
     int agree = agreeVoters.size();
     int disagree = disagreeVoters.size();
     int pollerOnlyBlocks = pollerOnlyBlockVoters.size();
     int voterOnlyBlocks = voterOnlyBlockVoters.size();
 
     if (agree + disagree < quorum) {
-      result = RESULT_NOQUORUM;
+      result = Result.NOQUORUM;
     } else if (!isWithinMargin(voteMargin)) { 
-      result = RESULT_TOO_CLOSE;
+      result = Result.TOO_CLOSE;
     } else if (pollerOnlyBlocks >= quorum) {
-      result = RESULT_LOST_POLLER_ONLY_BLOCK;
+      result = Result.LOST_POLLER_ONLY_BLOCK;
     } else if (voterOnlyBlocks >= quorum) {
-      result = RESULT_LOST_VOTER_ONLY_BLOCK;
+      result = Result.LOST_VOTER_ONLY_BLOCK;
     } else if (agree > disagree) {
-      result = RESULT_WON;
+      result = Result.WON;
     } else {
-      result = RESULT_LOST;
+      result = Result.LOST;
     }
     return result;
   }
