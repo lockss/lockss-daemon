@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.1 2011-12-05 18:59:05 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.2 2011-12-06 23:26:08 barry409 Exp $
  */
 
 /*
@@ -260,9 +260,9 @@ final class UrlTallier {
    *
    * @param url Must be non-null and equal to {@link peekUrl}, the
    * current URL known to any participant.
-   * @param tally Collects the votes.
+   * @return tally Collects the votes.
    */
-  void tallyVoterUrl(String url, BlockTally tally) {
+  BlockTally tallyVoterUrl(String url) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -270,6 +270,8 @@ final class UrlTallier {
       throw new ShouldNotHappenException("Current URL is "+
 					 peekUrl()+" not "+url);
     }
+
+    BlockTally tally = new BlockTally();
     for (Entry e : participantsList) {
       if (e.voteSpoiled()) {
 	// Don't vote
@@ -280,7 +282,7 @@ final class UrlTallier {
 	  // it.
 	  e.userData.incrementTalliedBlocks();
 	  nextVoteBlock(e);
-	  tally.addVoterOnlyBlockVoter(e.userData.getVoterId(), url);
+	  tally.addVoterOnlyBlockVoter(e.userData.getVoterId());
 	} else {
 	  // The poller and this voter both do not have the URL, so
 	  // tally is "agree". But don't bump anything on e.userData.
@@ -288,6 +290,7 @@ final class UrlTallier {
 	}
       }
     }
+    return tally;
   }
 
   /**
@@ -298,11 +301,11 @@ final class UrlTallier {
    *
    * @param url Must be non-null and equal to {@link peekUrl}, the
    * minimum URL known to any participant.
-   * @param tally Collects the votes.
    * @param hashBlock The poller's {@link HashBlock}.
+   * @return tally Collects the votes.
    */
-  void tallyPollerUrl(String url, BlockTally tally, HashBlock hashBlock) {
-    tallyPollerUrl(url, tally, hashBlock, false);
+  BlockTally tallyPollerUrl(String url, HashBlock hashBlock) {
+    return tallyPollerUrl(url, hashBlock, false);
   }
 
   /**
@@ -313,15 +316,14 @@ final class UrlTallier {
    *
    * @param url Must be non-null and equal to {@link peekUrl}, the
    * minimum URL known to any participant.
-   * @param tally Collects the votes.
    * @param hashBlock The poller's {@link HashBlock}.
+   * @return tally Collects the votes.
    */
-  void tallyPollerUrlRepair(String url, BlockTally tally, HashBlock hashBlock) {
-    tallyPollerUrl(url, tally, hashBlock, true);
+  BlockTally tallyPollerUrlRepair(String url, HashBlock hashBlock) {
+    return tallyPollerUrl(url, hashBlock, true);
   }
 
-  void tallyPollerUrl(String url, BlockTally tally,
-		      HashBlock hashBlock, boolean isRepair) {
+  BlockTally tallyPollerUrl(String url, HashBlock hashBlock, boolean isRepair) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -329,6 +331,8 @@ final class UrlTallier {
       throw new ShouldNotHappenException("Current URL "+peekUrl()+
 					 " comes before "+url);
     }
+
+    BlockTally tally = new BlockTally();
     HashBlockComparer comparer = new HashBlockComparer(hashBlock);
     log.debug3("tallyPollerUrl: "+url);
     for (int participantIndex = 0; participantIndex < participantsList.size();
@@ -364,6 +368,7 @@ final class UrlTallier {
 	}
       }
     }
+    return tally;
   }
 
   // Called only from testing

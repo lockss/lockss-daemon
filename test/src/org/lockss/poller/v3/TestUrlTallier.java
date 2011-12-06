@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.1 2011-12-05 18:59:05 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.2 2011-12-06 23:26:09 barry409 Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo4", "content for foo4")
       };
 
-    BlockTally tally = new BlockTally(3);
+    BlockTally tally = new BlockTally();
     
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();
@@ -279,8 +279,6 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo4", "content for foo4")
       };
 
-    BlockTally tally = new BlockTally(3);
-    
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();
 
@@ -293,16 +291,16 @@ public class TestUrlTallier extends LockssTestCase {
     UrlTallier urlTallier =
       new UrlTallier(theParticipants);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    urlTallier.tallyPollerUrl("http://test.com/foo1", tally, hashblocks[0]);
+    urlTallier.tallyPollerUrl("http://test.com/foo1", hashblocks[0]);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-    urlTallier.tallyPollerUrl("http://test.com/foo2", tally, hashblocks[1]);
+    urlTallier.tallyPollerUrl("http://test.com/foo2", hashblocks[1]);
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
 
     
 
-    urlTallier.tallyPollerUrl("http://test.com/foo3", tally, hashblocks[2]);
+    urlTallier.tallyPollerUrl("http://test.com/foo3", hashblocks[2]);
     assertEquals("http://test.com/foo4", urlTallier.peekUrl());
-    urlTallier.tallyPollerUrl("http://test.com/foo4", tally, hashblocks[3]);
+    urlTallier.tallyPollerUrl("http://test.com/foo4", hashblocks[3]);
     assertEquals(null, urlTallier.peekUrl());
   }
 
@@ -345,26 +343,25 @@ public class TestUrlTallier extends LockssTestCase {
     UrlTallier urlTallier =
       new UrlTallier(theParticipants);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    tally = new BlockTally(3);
-    urlTallier.tallyVoterUrl("http://test.com/foo1", tally);
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     // todo(bhayes): BlockTally needs to have a better interface, both
     // for testing and for use.
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo1"), id1);
+    assertContains(tally.getVoterOnlyBlockVoters(), id1);
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-    tally = new BlockTally(3);
-    urlTallier.tallyVoterUrl("http://test.com/foo2", tally);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo2"), id1);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo2"), id2);
+
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo2");
+    assertContains(tally.getVoterOnlyBlockVoters(), id1);
+    assertContains(tally.getVoterOnlyBlockVoters(), id2);
     assertEquals("http://test.com/foo3", urlTallier.peekUrl());
-    tally = new BlockTally(3);
-    urlTallier.tallyVoterUrl("http://test.com/foo3", tally);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo3"), id1);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo3"), id2);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo3"), id3);
+
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo3");
+    assertContains(tally.getVoterOnlyBlockVoters(), id1);
+    assertContains(tally.getVoterOnlyBlockVoters(), id2);
+    assertContains(tally.getVoterOnlyBlockVoters(), id3);
     assertEquals("http://test.com/foo4", urlTallier.peekUrl());
-    tally = new BlockTally(3);
-    urlTallier.tallyVoterUrl("http://test.com/foo4", tally);
-    assertContains(tally.getVoterOnlyBlockVoters("http://test.com/foo4"), id3);
+
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo4");
+    assertContains(tally.getVoterOnlyBlockVoters(), id3);
     assertEquals(null, urlTallier.peekUrl());
   }
 
@@ -382,7 +379,7 @@ public class TestUrlTallier extends LockssTestCase {
 	makeVoteBlock("http://test.com/foo3", "content for foo3")
       };
 
-    BlockTally tally = new BlockTally(3);
+    BlockTally tally;
     
     List<ParticipantUserData> theParticipants =
       new ArrayList<ParticipantUserData>();
@@ -393,11 +390,11 @@ public class TestUrlTallier extends LockssTestCase {
     UrlTallier urlTallier =
       new UrlTallier(theParticipants);
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    urlTallier.tallyVoterUrl("http://test.com/foo1", tally);
+    tally = urlTallier.tallyVoterUrl("http://test.com/foo1");
     assertEquals("http://test.com/foo2", urlTallier.peekUrl());
     try {
       // Call tallyVoterUrl with a url other than the peekUrl
-      urlTallier.tallyVoterUrl("http://test.com/bar", tally);
+      tally = urlTallier.tallyVoterUrl("http://test.com/bar");
       fail("Expected ShouldNotHappenException was not thrown.");
     } catch (ShouldNotHappenException e) {
       assertEquals("Current URL is http://test.com/foo2 not "+

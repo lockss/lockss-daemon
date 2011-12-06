@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.36 2011-12-05 18:59:05 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.37 2011-12-06 23:26:09 barry409 Exp $
  */
 
 /*
@@ -711,21 +711,23 @@ public class TestV3Poller extends LockssTestCase {
     
     // The results expected are based on a quorum of 3.
     assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
 
     tally = v3Poller.tallyBlock(hashblocks[0]);
-    assertEquals(BlockTally.RESULT_WON, tally.result);
+    assertEquals(BlockTally.RESULT_WON, tally.getTallyResult(3, 75));
     assertContains(tally.getAgreeVoters(), id1);
     assertContains(tally.getAgreeVoters(), id2);
     assertContains(tally.getAgreeVoters(), id3);
     
     tally = v3Poller.tallyBlock(hashblocks[1]);
-    assertEquals(BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK, tally.result);
+    assertEquals(BlockTally.RESULT_LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult(3, 75));
     assertContains(tally.getPollerOnlyBlockVoters(), id1);
     assertContains(tally.getPollerOnlyBlockVoters(), id2);
     assertContains(tally.getPollerOnlyBlockVoters(), id3);
     
     tally = v3Poller.tallyBlock(hashblocks[2]);
-    assertEquals(BlockTally.RESULT_WON, tally.result);
+    assertEquals(BlockTally.RESULT_WON, tally.getTallyResult(3, 75));
     assertContains(tally.getAgreeVoters(), id1);
     assertContains(tally.getAgreeVoters(), id2);
     assertContains(tally.getAgreeVoters(), id3);

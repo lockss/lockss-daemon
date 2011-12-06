@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.107 2011-12-05 18:59:05 barry409 Exp $
+ * $Id: V3Poller.java,v 1.108 2011-12-06 23:26:08 barry409 Exp $
  */
 
 /*
@@ -383,6 +383,7 @@ public class V3Poller extends BasePoll {
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
   private int quorum;
+  private int voteMargin;
   private int outerCircleTarget;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DURATION_PADDING;
@@ -459,7 +460,8 @@ public class V3Poller extends BasePoll {
     pollerState = new PollerStateBean(spec, orig, key,
 				      duration, pollEnd,
                                       outerCircleTarget,
-                                      quorum, hashAlg);
+                                      quorum, voteMargin,
+				      hashAlg);
 
     long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
 
@@ -529,6 +531,7 @@ public class V3Poller extends BasePoll {
     outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
                                  DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
     quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
+    voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
     dropEmptyNominators = c.getBoolean(PARAM_DROP_EMPTY_NOMINATIONS,
                                        DEFAULT_DROP_EMPTY_NOMINATIONS);
     deleteExtraFiles = c.getBoolean(PARAM_DELETE_EXTRA_FILES,
@@ -1074,15 +1077,6 @@ public class V3Poller extends BasePoll {
     return tally;
   }
 
-  /* Make a fresh BlockTally with the current quorum. */
-  private BlockTally quorateTally() {
-    // todo(bhayes): UrlTallier should create and return tallies, not
-    // V3Poller and TestUrlTallier. Tally has no need to know the
-    // quorum at creation, only when computing results of the poll. Do
-    // this work when BlockTally gets reworked.
-    return new BlockTally(pollerState.getQuorum());
-  }
-
   /**
    * After the poller has no more blocks, process all the blocks any
    * voter has.
@@ -1138,11 +1132,9 @@ public class V3Poller extends BasePoll {
    * not, consuming the block in the voters.
    */
   private void tallyVoterUrl(String voterUrl) {
-    BlockTally tally = quorateTally();
 
     log.debug3("tallyVoterUrl: "+voterUrl);
-    urlTallier.tallyVoterUrl(voterUrl, tally);
-    tally.tallyVotes();
+    BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
     checkTally(tally, voterUrl);
   }
 
@@ -1156,10 +1148,8 @@ public class V3Poller extends BasePoll {
    * testing purposes.
    */
   private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
-    BlockTally tally = quorateTally();
     log.debug3("tallyPollerUrl: "+pollerUrl);
-    urlTallier.tallyPollerUrl(pollerUrl, tally, hashBlock);
-    tally.tallyVotes();
+    BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
     checkTally(tally, pollerUrl);
     return tally;
   }
@@ -1169,16 +1159,17 @@ public class V3Poller extends BasePoll {
    *
    * @param tally The tally to check.
    * @param url The target URL for any possible repairs.
+   * @return The status of the tally.
    */
-  private void checkTally(BlockTally tally,
-                          String url) {
+  private int checkTally(BlockTally tally, String url) {
     // Should never happen -- if it does, track it down.
     if (url == null) {
       throw new NullPointerException("Passed a null url to checkTally!");
     }
     
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
-    int result = tally.getTallyResult();
+    int tallyResult = tally.getTallyResult(pollerState.getQuorum(),
+					   pollerState.getVoteMargin());
     PollerStateBean.TallyStatus tallyStatus = pollerState.getTallyStatus();
     
     // If there are any agreeing peers, update our agreement
@@ -1207,7 +1198,7 @@ public class V3Poller extends BasePoll {
 	  + "-" + tally.getDisagreeVoters().size()
 	  + "-" + tally.getPollerOnlyBlockVoters().size() + ") ";
       }
-      switch (result) {
+      switch (tallyResult) {
       case BlockTally.RESULT_WON:
 	tallyStatus.addAgreedUrl(url);
 	// Great, we won!  Do nothing.
@@ -1227,9 +1218,7 @@ public class V3Poller extends BasePoll {
 	log.debug2("Lost tally. Requesting repair for missing block: " +
 		   url + " in poll " + getKey());
 	tallyStatus.addDisagreedUrl(url);
-	String voterOnlyURL = tally.getVoterOnlyBlockUrl();
-	requestRepair(voterOnlyURL,
-		      tally.getVoterOnlyBlockVoters(voterOnlyURL));
+	requestRepair(url, tally.getVoterOnlyBlockVoters());
 	break;
       case BlockTally.RESULT_NOQUORUM:
 	tallyStatus.addNoQuorumUrl(url);
@@ -1244,9 +1233,10 @@ public class V3Poller extends BasePoll {
 	break;
       default:
 	log.warning("Unexpected results from tallying block " + url + ": "
-		    + tally.getStatusString());
+		    + tally.getStatusString(tallyResult));
       }
     }
+    return tallyResult;
   }
 
   /**
@@ -1551,16 +1541,14 @@ public class V3Poller extends BasePoll {
         // update status when done
         log.debug3("Finished hashing repair sent for block " + hashBlock);
         // Replay the block comparison using the new hash results.
-        BlockTally tally = quorateTally();
 	UrlTallier urlTallier = makeUrlTallier();
 	urlTallier.seek(url);
-	urlTallier.tallyPollerUrlRepair(url, tally, hashBlock);
+	BlockTally tally = urlTallier.tallyPollerUrlRepair(url, hashBlock);
 
-        tally.tallyVotes();
-        log.debug3("After-vote hash tally for repaired block " + url
-                   + ": " + tally.getStatusString());
         setStatus(V3Poller.POLLER_STATUS_TALLYING);
-        checkTally(tally, url);
+        int status = checkTally(tally, url);
+        log.debug3("After-vote hash tally for repaired block " + url
+                   + ": " + tally.getStatusString(status));
 	pollerState.getRepairQueue().markComplete(url);
       }
     };
@@ -2573,6 +2561,10 @@ public class V3Poller extends BasePoll {
 
   public int getQuorum() {
     return pollerState.getQuorum();
+  }
+
+  public int getVoteMargin() {
+    return pollerState.getVoteMargin();
   }
 
   private boolean hasQuorum() {
