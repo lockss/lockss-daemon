@@ -1,0 +1,40 @@
+{
+
+  publisher <
+    name = Ferrata Storti Foundation
+  >
+
+  {
+  
+    title <
+      name = Haematologica: The Hematology Journal ;
+      issn = 0390-6078 ;
+      eissn = 1592-8721
+    >
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.haematologica.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    au < exists ; 1994 ; Haematologica: The Hematology Journal Volume 79 ; 79 >
+    au < exists ; 1995 ; Haematologica: The Hematology Journal Volume 80 ; 80 >
+    au < exists ; 1996 ; Haematologica: The Hematology Journal Volume 81 ; 81 >
+    au < exists ; 1997 ; Haematologica: The Hematology Journal Volume 82 ; 82 >
+    au < exists ; 1998 ; Haematologica: The Hematology Journal Volume 83 ; 83 >
+    au < exists ; 1999 ; Haematologica: The Hematology Journal Volume 84 ; 84 >
+    au < exists ; 2000 ; Haematologica: The Hematology Journal Volume 85 ; 85 >
+    au < exists ; 2001 ; Haematologica: The Hematology Journal Volume 86 ; 86 >
+    au < exists ; 2002 ; Haematologica: The Hematology Journal Volume 87 ; 87 >
+    au < exists ; 2003 ; Haematologica: The Hematology Journal Volume 88 ; 88 >
+    au < exists ; 2004 ; Haematologica: The Hematology Journal Volume 89 ; 89 >
+    au < exists ; 2005 ; Haematologica: The Hematology Journal Volume 90 ; 90 >
+    au < exists ; 2006 ; Haematologica: The Hematology Journal Volume 91 ; 91 >
+    au < exists ; 2007 ; Haematologica: The Hematology Journal Volume 92 ; 92 >
+    au < exists ; 2008 ; Haematologica: The Hematology Journal Volume 93 ; 93 >
+    au < exists ; 2009 ; Haematologica: The Hematology Journal Volume 94 ; 94 >
+    au < exists ; 2010 ; Haematologica: The Hematology Journal Volume 95 ; 95 >
+    au < exists ; 2011 ; Haematologica: The Hematology Journal Volume 96 ; 96 >
+    
+  }
+  
+}
