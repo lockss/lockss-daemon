@@ -136,11 +136,11 @@
       param[base_url] = http://americanspeech.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; exists ; 2000 ; American Speech Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; exists ; 2001 ; American Speech Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; exists ; 2002 ; American Speech Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; exists ; 2003 ; American Speech Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; exists ; 2004 ; American Speech Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; manifest ; 2000 ; American Speech Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; manifest ; 2001 ; American Speech Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; manifest ; 2002 ; American Speech Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; manifest ; 2003 ; American Speech Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; testing ; 2004 ; American Speech Volume 79 ; 79 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Speech Volume 80 ; 80 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Speech Volume 81 ; 81 >
       au < HighWireStrVolPlugin ; down ; 2007 ; American Speech Volume 82 ; 82 >
