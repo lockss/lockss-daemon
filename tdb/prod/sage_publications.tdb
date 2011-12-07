@@ -34170,7 +34170,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[exists-v90] = V90 has a dead link for the first issue. 2011-12-07
+        comment[existsv90] = V90 has a dead link for the first issue. 2011-12-07
         
         au < manifest ; 1947 ; Theology Volume 50 ; 50 >
         au < manifest ; 1948 ; Theology Volume 51 ; 51 >
