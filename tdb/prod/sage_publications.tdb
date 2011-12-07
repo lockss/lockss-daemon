@@ -157,7 +157,7 @@
         au < ready ; 1999 ; Acta Sociologica Volume 42 ; 42 >
         au < ready ; 2000 ; Acta Sociologica Volume 43 ; 43 >
         au < doesNotExist ; 2001 ; Acta Sociologica Volume 44 ; 44 >
-        au < exists ; 2002 ; Acta Sociologica Volume 45 ; 45 >
+        au < manifest ; 2002 ; Acta Sociologica Volume 45 ; 45 >
         au < ready ; 2003 ; Acta Sociologica Volume 46 ; 46 >
         au < ready ; 2004 ; Acta Sociologica Volume 47 ; 47 >
         au < doNotProcess ; 2005 ; Acta Sociologica Volume 48 ; 48 >
@@ -450,11 +450,11 @@
         param[base_url] = http://asq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
-        au < exists ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
-        au < exists ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
-        au < exists ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
-        au < exists ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
+        au < manifest ; 2005 ; Administrative Science Quarterly Volume 50 ; 50 >
+        au < manifest ; 2006 ; Administrative Science Quarterly Volume 51 ; 51 >
+        au < manifest ; 2007 ; Administrative Science Quarterly Volume 52 ; 52 >
+        au < manifest ; 2008 ; Administrative Science Quarterly Volume 53 ; 53 >
+        au < manifest ; 2009 ; Administrative Science Quarterly Volume 54 ; 54 >
         au < manifest ; 2010 ; Administrative Science Quarterly Volume 55 ; 55 >
 
       }
@@ -693,21 +693,21 @@
         param[base_url] = http://aes.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
-        au < exists ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
-        au < exists ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
-        au < exists ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
-        au < exists ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
-        au < exists ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
-        au < exists ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
-        au < exists ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
-        au < exists ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
-        au < exists ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
-        au < exists ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
-        au < exists ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
-        au < exists ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
-        au < exists ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
-        au < exists ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
+        au < manifest ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 >
+        au < manifest ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 >
+        au < manifest ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 >
+        au < manifest ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 >
+        au < manifest ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 >
+        au < manifest ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 >
+        au < manifest ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 >
+        au < manifest ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 >
+        au < manifest ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 >
+        au < manifest ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 >
+        au < manifest ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 >
+        au < manifest ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 >
+        au < manifest ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 >
+        au < manifest ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 >
+        au < manifest ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 >
         au < manifest ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
         au < manifest ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
 
@@ -798,12 +798,12 @@
         param[base_url] = http://alt.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
-        au < exists ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
-        au < exists ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
-        au < exists ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
-        au < exists ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
-        au < exists ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 >
+        au < manifest ; 2005 ; Alternatives: Global, Local, Political Volume 30 ; 30 >
+        au < manifest ; 2006 ; Alternatives: Global, Local, Political Volume 31 ; 31 >
+        au < manifest ; 2007 ; Alternatives: Global, Local, Political Volume 32 ; 32 >
+        au < manifest ; 2008 ; Alternatives: Global, Local, Political Volume 33 ; 33 >
+        au < manifest ; 2009 ; Alternatives: Global, Local, Political Volume 34 ; 34 >
+        au < manifest ; 2010 ; Alternatives: Global, Local, Political Volume 35 ; 35 >
         au < ready ; 2011 ; Alternatives: Global, Local, Political Volume 36 ; 36 >
 
       }
@@ -1550,11 +1550,11 @@
         param[base_url] = http://asr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004 ; American Sociological Review Volume 69 ; 69 >
-        au < exists ; 2005 ; American Sociological Review Volume 70 ; 70 >
-        au < exists ; 2006 ; American Sociological Review Volume 71 ; 71 >
-        au < exists ; 2007 ; American Sociological Review Volume 72 ; 72 >
-        au < exists ; 2008 ; American Sociological Review Volume 73 ; 73 >
+        au < manifest ; 2004 ; American Sociological Review Volume 69 ; 69 >
+        au < manifest ; 2005 ; American Sociological Review Volume 70 ; 70 >
+        au < manifest ; 2006 ; American Sociological Review Volume 71 ; 71 >
+        au < manifest ; 2007 ; American Sociological Review Volume 72 ; 72 >
+        au < manifest ; 2008 ; American Sociological Review Volume 73 ; 73 >
         au < manifest ; 2009 ; American Sociological Review Volume 74 ; 74 >
         au < manifest ; 2010 ; American Sociological Review Volume 75 ; 75 >
         au < manifest ; 2011 ; American Sociological Review Volume 76 ; 76 >
@@ -2184,7 +2184,7 @@
         au < manifest ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 418 ; 418 >
         au < manifest ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 419 ; 419 >
         au < manifest ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 420 ; 420 >
-        au < exists ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 421 ; 421 >
+        au < manifest ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 421 ; 421 >
         au < manifest ; 1975 ; The ANNALS of the American Academy of Political and Social Science Volume 422 ; 422 >
         au < manifest ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 423 ; 423 >
         au < manifest ; 1976 ; The ANNALS of the American Academy of Political and Social Science Volume 424 ; 424 >
@@ -2390,13 +2390,13 @@
         au < doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 624 ; 624 >
         au < doNotProcess ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 625 ; 625 >
         au < ready ; 2009 ; The ANNALS of the American Academy of Political and Social Science Volume 626 ; 626 >
-        au < exists ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 >
+        au < manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 627 ; 627 >
         au < ready ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 628 ; 628 >
         au < ready ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 629 ; 629 >
         au < ready ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 630 ; 630 >
         au < manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 631 ; 631 >
         au < manifest ; 2010 ; The ANNALS of the American Academy of Political and Social Science Volume 632 ; 632 >
-        au < exists ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 >
+        au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 633 ; 633 >
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 634 ; 634 >
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 635 ; 635 >
         au < manifest ; 2011 ; The ANNALS of the American Academy of Political and Social Science Volume 636 ; 636 >
@@ -2757,17 +2757,17 @@
         param[base_url] = http://aph.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1966 ; Asia-Pacific Journal of Public Health Volume 1 ; 1 >
-        au < exists ; 1967 ; Asia-Pacific Journal of Public Health Volume 2 ; 2 >
-        au < exists ; 1968 ; Asia-Pacific Journal of Public Health Volume 3 ; 3 >
-        au < exists ; 1969 ; Asia-Pacific Journal of Public Health Volume 4 ; 4 >
-        au < exists ; 1970 ; Asia-Pacific Journal of Public Health Volume 5 ; 5 >
-        au < exists ; 1971 ; Asia-Pacific Journal of Public Health Volume 6 ; 6 >
-        au < exists ; 1972 ; Asia-Pacific Journal of Public Health Volume 7 ; 7 >
-        au < exists ; 1973 ; Asia-Pacific Journal of Public Health Volume 8 ; 8 >
-        au < exists ; 1974 ; Asia-Pacific Journal of Public Health Volume 9 ; 9 >
-        au < exists ; 1975 ; Asia-Pacific Journal of Public Health Volume 10 ; 10 >
-        au < exists ; 1976 ; Asia-Pacific Journal of Public Health Volume 11 ; 11 >
+        au < manifest ; 1966 ; Asia-Pacific Journal of Public Health Volume 1 ; 1 >
+        au < manifest ; 1967 ; Asia-Pacific Journal of Public Health Volume 2 ; 2 >
+        au < manifest ; 1968 ; Asia-Pacific Journal of Public Health Volume 3 ; 3 >
+        au < manifest ; 1969 ; Asia-Pacific Journal of Public Health Volume 4 ; 4 >
+        au < manifest ; 1970 ; Asia-Pacific Journal of Public Health Volume 5 ; 5 >
+        au < manifest ; 1971 ; Asia-Pacific Journal of Public Health Volume 6 ; 6 >
+        au < manifest ; 1972 ; Asia-Pacific Journal of Public Health Volume 7 ; 7 >
+        au < manifest ; 1973 ; Asia-Pacific Journal of Public Health Volume 8 ; 8 >
+        au < manifest ; 1974 ; Asia-Pacific Journal of Public Health Volume 9 ; 9 >
+        au < manifest ; 1975 ; Asia-Pacific Journal of Public Health Volume 10 ; 10 >
+        au < manifest ; 1976 ; Asia-Pacific Journal of Public Health Volume 11 ; 11 >
         au < manifest ; 2000 ; Asia-Pacific Journal of Public Health Volume 12 ; 12 >
         au < manifest ; 2001 ; Asia-Pacific Journal of Public Health Volume 13 ; 13 >
         au < manifest ; 2002 ; Asia-Pacific Journal of Public Health Volume 14 ; 14 >
@@ -3026,39 +3026,39 @@
         param[base_url] = http://aum.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1976 ; Australian Journal of Management Volume 1 ; 1 >
-        au < exists ; 1977 ; Australian Journal of Management Volume 2 ; 2 >
-        au < exists ; 1978 ; Australian Journal of Management Volume 3 ; 3 >
-        au < exists ; 1979 ; Australian Journal of Management Volume 4 ; 4 >
-        au < exists ; 1980 ; Australian Journal of Management Volume 5 ; 5 >
-        au < exists ; 1981 ; Australian Journal of Management Volume 6 ; 6 >
-        au < exists ; 1982 ; Australian Journal of Management Volume 7 ; 7 >
-        au < exists ; 1983 ; Australian Journal of Management Volume 8 ; 8 >
-        au < exists ; 1984 ; Australian Journal of Management Volume 9 ; 9 >
-        au < exists ; 1985 ; Australian Journal of Management Volume 10 ; 10 >
-        au < exists ; 1986 ; Australian Journal of Management Volume 11 ; 11 >
-        au < exists ; 1987 ; Australian Journal of Management Volume 12 ; 12 >
-        au < exists ; 1988 ; Australian Journal of Management Volume 13 ; 13 >
-        au < exists ; 1989 ; Australian Journal of Management Volume 14 ; 14 >
-        au < exists ; 1990 ; Australian Journal of Management Volume 15 ; 15 >
-        au < exists ; 1991 ; Australian Journal of Management Volume 16 ; 16 >
-        au < exists ; 1992 ; Australian Journal of Management Volume 17 ; 17 >
-        au < exists ; 1993 ; Australian Journal of Management Volume 18 ; 18 >
-        au < exists ; 1994 ; Australian Journal of Management Volume 19 ; 19 >
-        au < exists ; 1995 ; Australian Journal of Management Volume 20 ; 20 >
-        au < exists ; 1996 ; Australian Journal of Management Volume 21 ; 21 >
-        au < exists ; 1997 ; Australian Journal of Management Volume 22 ; 22 >
-        au < exists ; 1998 ; Australian Journal of Management Volume 23 ; 23 >
-        au < exists ; 1999 ; Australian Journal of Management Volume 24 ; 24 >
-        au < exists ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
-        au < exists ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
-        au < exists ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
-        au < exists ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
-        au < exists ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
-        au < exists ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
-        au < exists ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
-        au < exists ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
-        au < exists ; 2008 ; Australian Journal of Management Volume 33 ; 33 >
+        au < manifest ; 1976 ; Australian Journal of Management Volume 1 ; 1 >
+        au < manifest ; 1977 ; Australian Journal of Management Volume 2 ; 2 >
+        au < manifest ; 1978 ; Australian Journal of Management Volume 3 ; 3 >
+        au < manifest ; 1979 ; Australian Journal of Management Volume 4 ; 4 >
+        au < manifest ; 1980 ; Australian Journal of Management Volume 5 ; 5 >
+        au < manifest ; 1981 ; Australian Journal of Management Volume 6 ; 6 >
+        au < manifest ; 1982 ; Australian Journal of Management Volume 7 ; 7 >
+        au < manifest ; 1983 ; Australian Journal of Management Volume 8 ; 8 >
+        au < manifest ; 1984 ; Australian Journal of Management Volume 9 ; 9 >
+        au < manifest ; 1985 ; Australian Journal of Management Volume 10 ; 10 >
+        au < manifest ; 1986 ; Australian Journal of Management Volume 11 ; 11 >
+        au < manifest ; 1987 ; Australian Journal of Management Volume 12 ; 12 >
+        au < manifest ; 1988 ; Australian Journal of Management Volume 13 ; 13 >
+        au < manifest ; 1989 ; Australian Journal of Management Volume 14 ; 14 >
+        au < manifest ; 1990 ; Australian Journal of Management Volume 15 ; 15 >
+        au < manifest ; 1991 ; Australian Journal of Management Volume 16 ; 16 >
+        au < manifest ; 1992 ; Australian Journal of Management Volume 17 ; 17 >
+        au < manifest ; 1993 ; Australian Journal of Management Volume 18 ; 18 >
+        au < manifest ; 1994 ; Australian Journal of Management Volume 19 ; 19 >
+        au < manifest ; 1995 ; Australian Journal of Management Volume 20 ; 20 >
+        au < manifest ; 1996 ; Australian Journal of Management Volume 21 ; 21 >
+        au < manifest ; 1997 ; Australian Journal of Management Volume 22 ; 22 >
+        au < manifest ; 1998 ; Australian Journal of Management Volume 23 ; 23 >
+        au < manifest ; 1999 ; Australian Journal of Management Volume 24 ; 24 >
+        au < manifest ; 2000 ; Australian Journal of Management Volume 25 ; 25 >
+        au < manifest ; 2001 ; Australian Journal of Management Volume 26 ; 26 >
+        au < manifest ; 2002 ; Australian Journal of Management Volume 27 ; 27 >
+        au < manifest ; 2003 ; Australian Journal of Management Volume 28 ; 28 >
+        au < manifest ; 2004 ; Australian Journal of Management Volume 29 ; 29 >
+        au < manifest ; 2005 ; Australian Journal of Management Volume 30 ; 30 >
+        au < manifest ; 2006 ; Australian Journal of Management Volume 31 ; 31 >
+        au < manifest ; 2007 ; Australian Journal of Management Volume 32 ; 32 >
+        au < manifest ; 2008 ; Australian Journal of Management Volume 33 ; 33 >
         au < manifest ; 2009 ; Australian Journal of Management Volume 34 ; 34 >
         au < manifest ; 2010 ; Australian Journal of Management Volume 35 ; 35 >
         au < manifest ; 2011 ; Australian Journal of Management Volume 36 ; 36 >
@@ -3469,10 +3469,10 @@
         param[base_url] = http://bji.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2000 ; British Journal of Infection Control Volume 1 ; 1 >
-        au < exists ; 2001 ; British Journal of Infection Control Volume 2 ; 2 >
-        au < exists ; 2002 ; British Journal of Infection Control Volume 3 ; 3 >
-        au < exists ; 2003 ; British Journal of Infection Control Volume 4 ; 4 >
+        au < manifest ; 2000 ; British Journal of Infection Control Volume 1 ; 1 >
+        au < manifest ; 2001 ; British Journal of Infection Control Volume 2 ; 2 >
+        au < manifest ; 2002 ; British Journal of Infection Control Volume 3 ; 3 >
+        au < manifest ; 2003 ; British Journal of Infection Control Volume 4 ; 4 >
         au < manifest ; 2004 ; British Journal of Infection Control Volume 5 ; 5 >
         au < manifest ; 2005 ; British Journal of Infection Control Volume 6 ; 6 >
         au < manifest ; 2006 ; British Journal of Infection Control Volume 7 ; 7 >
@@ -3760,14 +3760,109 @@
         
         comment[bms] = V1-110 exist on journal site.
 
-        au < exists ; 1983 ; Bulletin de Méthodologie Sociologique Volume 1 ; 1 >
-        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 2 ; 2 >
-        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 3 ; 3 >
-        au < exists ; 1984 ; Bulletin de Méthodologie Sociologique Volume 4 ; 4 >
-        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 5 ; 5 >
-        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 6 ; 6 >
-        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 7 ; 7 >
-        au < exists ; 1985 ; Bulletin de Méthodologie Sociologique Volume 8 ; 8 >
+        au < manifest ; 1983 ; Bulletin de Méthodologie Sociologique Volume 1 ; 1 >
+        au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 2 ; 2 >
+        au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 3 ; 3 >
+        au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 4 ; 4 >
+        au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 5 ; 5 >
+        au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 6 ; 6 >
+        au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 7 ; 7 >
+        au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 8 ; 8 >
+        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 9 ; 9 >
+        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 10 ; 10 >
+        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 11 ; 11 >
+        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 12 ; 12 >
+        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 13 ; 13 >
+        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 14 ; 14 >
+        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 15 ; 15 >
+        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 16 ; 16 >
+        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 17 ; 17 >
+        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 18 ; 18 >
+        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 19 ; 19 >
+        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 20 ; 20 >
+        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 21 ; 21 >
+        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 22 ; 22 >
+        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 23 ; 23 >
+        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 24 ; 24 >
+        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 25 ; 25 >
+        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 26 ; 26 >
+        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 27 ; 27 >
+        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 28 ; 28 >
+        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 29 ; 29 >
+        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 30 ; 30 >
+        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 31 ; 31 >
+        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 32 ; 32 >
+        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 33 ; 33 >
+        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 34 ; 34 >
+        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 35 ; 35 >
+        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 36 ; 36 >
+        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 37 ; 37 >
+        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 38 ; 38 >
+        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 39 ; 39 >
+        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 40 ; 40 >
+        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 41 ; 41 >
+        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 42 ; 42 >
+        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 43 ; 43 >
+        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 44 ; 44 >
+        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 45 ; 45 >
+        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 46 ; 46 >
+        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 47 ; 47 >
+        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 48 ; 48 >
+        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 49 ; 49 >
+        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 50 ; 50 >
+        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 51 ; 51 >
+        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 52 ; 52 >
+        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 53 ; 53 >
+        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 54 ; 54 >
+        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 55 ; 55 >
+        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 56 ; 56 >
+        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 57 ; 57 >
+        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 58 ; 58 >
+        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 59 ; 59 >
+        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 60 ; 60 >
+        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 61 ; 61 >
+        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 62 ; 62 >
+        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 63 ; 63 >
+        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 64 ; 64 >
+        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 65 ; 65 >
+        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 66 ; 66 >
+        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 67 ; 67 >
+        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 68 ; 68 >
+        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 69 ; 69 >
+        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 70 ; 70 >
+        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 71 ; 71 >
+        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 72 ; 72 >
+        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 73 ; 73 >
+        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 74 ; 74 >
+        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 75 ; 75 >
+        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 76 ; 76 >
+        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 77 ; 77 >
+        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 78 ; 78 >
+        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 79 ; 79 >
+        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 80 ; 80 >
+        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 81 ; 81 >
+        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 82 ; 82 >
+        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 83 ; 83 >
+        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 84 ; 84 >
+        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 85 ; 85 >
+        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 86 ; 86 >
+        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 87 ; 87 >
+        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 88 ; 88 >
+        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 89 ; 89 >
+        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 90 ; 90 >
+        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 91 ; 91 >
+        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 92 ; 92 >
+        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 93 ; 93 >
+        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 94 ; 94 >
+        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 95 ; 95 >
+        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 96 ; 96 >
+        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 97 ; 97 >
+        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 >
+        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 99 ; 99 >
+        au < manifest ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 >
+        au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 >
+        au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 >
+        au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 103 ; 103 >
         au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 104 ; 104 >
         au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 105 ; 105 >
         au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 106 ; 106 >
@@ -3775,6 +3870,7 @@
         au < manifest ; 2010 ; Bulletin de Méthodologie Sociologique Volume 108 ; 108 >
         au < manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 109 ; 109 >
         au < manifest ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 110 ; 110 >
+        au < exists ; 2011 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 111 ; 111 >
 
       }
 
@@ -3793,19 +3889,19 @@
         param[base_url] = http://bos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 >
-        au < exists ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 >
-        au < exists ; 2001 ; Bulletin of the Atomic Scientists Volume 57 ; 57 >
-        au < exists ; 2002 ; Bulletin of the Atomic Scientists Volume 58 ; 58 >
-        au < exists ; 2003 ; Bulletin of the Atomic Scientists Volume 59 ; 59 >
-        au < exists ; 2004 ; Bulletin of the Atomic Scientists Volume 60 ; 60 >
-        au < exists ; 2005 ; Bulletin of the Atomic Scientists Volume 61 ; 61 >
-        au < exists ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 >
-        au < exists ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 >
-        au < exists ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 >
-        au < exists ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 >
-        au < exists ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 >
-        au < exists ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 >
+        au < manifest ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 >
+        au < manifest ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 >
+        au < manifest ; 2001 ; Bulletin of the Atomic Scientists Volume 57 ; 57 >
+        au < manifest ; 2002 ; Bulletin of the Atomic Scientists Volume 58 ; 58 >
+        au < manifest ; 2003 ; Bulletin of the Atomic Scientists Volume 59 ; 59 >
+        au < manifest ; 2004 ; Bulletin of the Atomic Scientists Volume 60 ; 60 >
+        au < manifest ; 2005 ; Bulletin of the Atomic Scientists Volume 61 ; 61 >
+        au < manifest ; 2006 ; Bulletin of the Atomic Scientists Volume 62 ; 62 >
+        au < manifest ; 2007 ; Bulletin of the Atomic Scientists Volume 63 ; 63 >
+        au < manifest ; 2008 ; Bulletin of the Atomic Scientists Volume 64 ; 64 >
+        au < manifest ; 2009 ; Bulletin of the Atomic Scientists Volume 65 ; 65 >
+        au < manifest ; 2010 ; Bulletin of the Atomic Scientists Volume 66 ; 66 >
+        au < manifest ; 2011 ; Bulletin of the Atomic Scientists Volume 67 ; 67 >
 
       }
 
@@ -3852,7 +3948,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1960-1961 ; Business & Society Volume 1 ; 1 >
-        au < exists ; 1962 ; Business & Society Volume 2 ; 2 >
+        au < manifest ; 1962 ; Business & Society Volume 2 ; 2 >
         au < manifest ; 1962-1963 ; Business & Society Volume 3 ; 3 >
         au < manifest ; 1963-1964 ; Business & Society Volume 4 ; 4 >
         au < manifest ; 1964-1965 ; Business & Society Volume 5 ; 5 >
@@ -3902,8 +3998,8 @@
         au < ready ; 2010 ; Business & Society Volume 49 ; 49 >
         au < manifest ; 2011 ; Business & Society Volume 50 ; 50 >
         
-      }                     
-                            
+      }
+
     }
 
     {
@@ -4114,38 +4210,38 @@
         param[base_url] = http://cnc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1977 ; Capital & Class Volume 1 ; 1 >
-        au < exists ; 1978 ; Capital & Class Volume 2 ; 2 >
-        au < exists ; 1979 ; Capital & Class Volume 3 ; 3 >
-        au < exists ; 1980 ; Capital & Class Volume 4 ; 4 >
-        au < exists ; 1981 ; Capital & Class Volume 5 ; 5 >
-        au < exists ; 1982 ; Capital & Class Volume 6 ; 6 >
-        au < exists ; 1983 ; Capital & Class Volume 7 ; 7 >
-        au < exists ; 1984 ; Capital & Class Volume 8 ; 8 >
-        au < exists ; 1985 ; Capital & Class Volume 9 ; 9 >
-        au < exists ; 1986 ; Capital & Class Volume 10 ; 10 >
-        au < exists ; 1987 ; Capital & Class Volume 11 ; 11 >
-        au < exists ; 1988 ; Capital & Class Volume 12 ; 12 >
-        au < exists ; 1989 ; Capital & Class Volume 13 ; 13 >
-        au < exists ; 1990 ; Capital & Class Volume 14 ; 14 >
-        au < exists ; 1991 ; Capital & Class Volume 15 ; 15 >
-        au < exists ; 1992 ; Capital & Class Volume 16 ; 16 >
-        au < exists ; 1993 ; Capital & Class Volume 17 ; 17 >
-        au < exists ; 1994 ; Capital & Class Volume 18 ; 18 >
-        au < exists ; 1995 ; Capital & Class Volume 19 ; 19 >
-        au < exists ; 1996 ; Capital & Class Volume 20 ; 20 >
-        au < exists ; 1997 ; Capital & Class Volume 21 ; 21 >
-        au < exists ; 1998 ; Capital & Class Volume 22 ; 22 >
-        au < exists ; 1999 ; Capital & Class Volume 23 ; 23 >
-        au < exists ; 2000 ; Capital & Class Volume 24 ; 24 >
-        au < exists ; 2001 ; Capital & Class Volume 25 ; 25 >
-        au < exists ; 2002 ; Capital & Class Volume 26 ; 26 >
-        au < exists ; 2003 ; Capital & Class Volume 27 ; 27 >
-        au < exists ; 2004 ; Capital & Class Volume 28 ; 28 >
-        au < exists ; 2005 ; Capital & Class Volume 29 ; 29 >
-        au < exists ; 2006 ; Capital & Class Volume 30 ; 30 >
-        au < exists ; 2007 ; Capital & Class Volume 31 ; 31 >
-        au < exists ; 2008 ; Capital & Class Volume 32 ; 32 >
+        au < manifest ; 1977 ; Capital & Class Volume 1 ; 1 >
+        au < manifest ; 1978 ; Capital & Class Volume 2 ; 2 >
+        au < manifest ; 1979 ; Capital & Class Volume 3 ; 3 >
+        au < manifest ; 1980 ; Capital & Class Volume 4 ; 4 >
+        au < manifest ; 1981 ; Capital & Class Volume 5 ; 5 >
+        au < manifest ; 1982 ; Capital & Class Volume 6 ; 6 >
+        au < manifest ; 1983 ; Capital & Class Volume 7 ; 7 >
+        au < manifest ; 1984 ; Capital & Class Volume 8 ; 8 >
+        au < manifest ; 1985 ; Capital & Class Volume 9 ; 9 >
+        au < manifest ; 1986 ; Capital & Class Volume 10 ; 10 >
+        au < manifest ; 1987 ; Capital & Class Volume 11 ; 11 >
+        au < manifest ; 1988 ; Capital & Class Volume 12 ; 12 >
+        au < manifest ; 1989 ; Capital & Class Volume 13 ; 13 >
+        au < manifest ; 1990 ; Capital & Class Volume 14 ; 14 >
+        au < manifest ; 1991 ; Capital & Class Volume 15 ; 15 >
+        au < manifest ; 1992 ; Capital & Class Volume 16 ; 16 >
+        au < manifest ; 1993 ; Capital & Class Volume 17 ; 17 >
+        au < manifest ; 1994 ; Capital & Class Volume 18 ; 18 >
+        au < manifest ; 1995 ; Capital & Class Volume 19 ; 19 >
+        au < manifest ; 1996 ; Capital & Class Volume 20 ; 20 >
+        au < manifest ; 1997 ; Capital & Class Volume 21 ; 21 >
+        au < manifest ; 1998 ; Capital & Class Volume 22 ; 22 >
+        au < manifest ; 1999 ; Capital & Class Volume 23 ; 23 >
+        au < manifest ; 2000 ; Capital & Class Volume 24 ; 24 >
+        au < manifest ; 2001 ; Capital & Class Volume 25 ; 25 >
+        au < manifest ; 2002 ; Capital & Class Volume 26 ; 26 >
+        au < manifest ; 2003 ; Capital & Class Volume 27 ; 27 >
+        au < manifest ; 2004 ; Capital & Class Volume 28 ; 28 >
+        au < manifest ; 2005 ; Capital & Class Volume 29 ; 29 >
+        au < manifest ; 2006 ; Capital & Class Volume 30 ; 30 >
+        au < manifest ; 2007 ; Capital & Class Volume 31 ; 31 >
+        au < manifest ; 2008 ; Capital & Class Volume 32 ; 32 >
         au < manifest ; 2009 ; Capital & Class Volume 33 ; 33 >
         au < manifest ; 2010 ; Capital & Class Volume 34 ; 34 >
         au < manifest ; 2011 ; Capital & Class Volume 35 ; 35 >
@@ -4283,35 +4379,35 @@
         param[base_url] = http://cep.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1981 ; Cephalalgia Volume 1 ; 1 >
-        au < exists ; 1982 ; Cephalalgia Volume 2 ; 2 >
-        au < exists ; 1983 ; Cephalalgia Volume 3 ; 3 >
-        au < exists ; 1984 ; Cephalalgia Volume 4 ; 4 >
-        au < exists ; 1985 ; Cephalalgia Volume 5 ; 5 >
-        au < exists ; 1986 ; Cephalalgia Volume 6 ; 6 >
-        au < exists ; 1987 ; Cephalalgia Volume 7 ; 7 >
-        au < exists ; 1988 ; Cephalalgia Volume 8 ; 8 >
-        au < exists ; 1989 ; Cephalalgia Volume 9 ; 9 >
-        au < exists ; 1990 ; Cephalalgia Volume 10 ; 10 >
-        au < exists ; 1991 ; Cephalalgia Volume 11 ; 11 >
-        au < exists ; 1992 ; Cephalalgia Volume 12 ; 12 >
-        au < exists ; 1993 ; Cephalalgia Volume 13 ; 13 >
-        au < exists ; 1994 ; Cephalalgia Volume 14 ; 14 >
-        au < exists ; 1995 ; Cephalalgia Volume 15 ; 15 >
-        au < exists ; 1996 ; Cephalalgia Volume 16 ; 16 >
-        au < exists ; 1997 ; Cephalalgia Volume 17 ; 17 >
-        au < exists ; 1998 ; Cephalalgia Volume 18 ; 18 >
-        au < exists ; 1999 ; Cephalalgia Volume 19 ; 19 >
-        au < exists ; 2000 ; Cephalalgia Volume 20 ; 20 >
-        au < exists ; 2001 ; Cephalalgia Volume 21 ; 21 >
-        au < exists ; 2002 ; Cephalalgia Volume 22 ; 22 >
-        au < exists ; 2003 ; Cephalalgia Volume 23 ; 23 >
-        au < exists ; 2004 ; Cephalalgia Volume 24 ; 24 >
-        au < exists ; 2005 ; Cephalalgia Volume 25 ; 25 >
-        au < exists ; 2006 ; Cephalalgia Volume 26 ; 26 >
-        au < exists ; 2007 ; Cephalalgia Volume 27 ; 27 >
-        au < exists ; 2008 ; Cephalalgia Volume 28 ; 28 >
-        au < exists ; 2009 ; Cephalalgia Volume 29 ; 29 >
+        au < manifest ; 1981 ; Cephalalgia Volume 1 ; 1 >
+        au < manifest ; 1982 ; Cephalalgia Volume 2 ; 2 >
+        au < manifest ; 1983 ; Cephalalgia Volume 3 ; 3 >
+        au < manifest ; 1984 ; Cephalalgia Volume 4 ; 4 >
+        au < manifest ; 1985 ; Cephalalgia Volume 5 ; 5 >
+        au < manifest ; 1986 ; Cephalalgia Volume 6 ; 6 >
+        au < manifest ; 1987 ; Cephalalgia Volume 7 ; 7 >
+        au < manifest ; 1988 ; Cephalalgia Volume 8 ; 8 >
+        au < manifest ; 1989 ; Cephalalgia Volume 9 ; 9 >
+        au < manifest ; 1990 ; Cephalalgia Volume 10 ; 10 >
+        au < manifest ; 1991 ; Cephalalgia Volume 11 ; 11 >
+        au < manifest ; 1992 ; Cephalalgia Volume 12 ; 12 >
+        au < manifest ; 1993 ; Cephalalgia Volume 13 ; 13 >
+        au < manifest ; 1994 ; Cephalalgia Volume 14 ; 14 >
+        au < manifest ; 1995 ; Cephalalgia Volume 15 ; 15 >
+        au < manifest ; 1996 ; Cephalalgia Volume 16 ; 16 >
+        au < manifest ; 1997 ; Cephalalgia Volume 17 ; 17 >
+        au < manifest ; 1998 ; Cephalalgia Volume 18 ; 18 >
+        au < manifest ; 1999 ; Cephalalgia Volume 19 ; 19 >
+        au < manifest ; 2000 ; Cephalalgia Volume 20 ; 20 >
+        au < manifest ; 2001 ; Cephalalgia Volume 21 ; 21 >
+        au < manifest ; 2002 ; Cephalalgia Volume 22 ; 22 >
+        au < manifest ; 2003 ; Cephalalgia Volume 23 ; 23 >
+        au < manifest ; 2004 ; Cephalalgia Volume 24 ; 24 >
+        au < manifest ; 2005 ; Cephalalgia Volume 25 ; 25 >
+        au < manifest ; 2006 ; Cephalalgia Volume 26 ; 26 >
+        au < manifest ; 2007 ; Cephalalgia Volume 27 ; 27 >
+        au < manifest ; 2008 ; Cephalalgia Volume 28 ; 28 >
+        au < manifest ; 2009 ; Cephalalgia Volume 29 ; 29 >
         au < manifest ; 2010 ; Cephalalgia Volume 30 ; 30 >
         au < manifest ; 2011 ; Cephalalgia Volume 31 ; 31 >
 
@@ -5349,7 +5445,7 @@
         au < manifest ; 1978 ; Communication Research Volume 5 ; 5 >
         au < manifest ; 1979 ; Communication Research Volume 6 ; 6 >
         au < manifest ; 1980 ; Communication Research Volume 7 ; 7 >
-        au < exists ; 1981 ; Communication Research Volume 8 ; 8 >
+        au < manifest ; 1981 ; Communication Research Volume 8 ; 8 >
         au < manifest ; 1982 ; Communication Research Volume 9 ; 9 >
         au < manifest ; 1983 ; Communication Research Volume 10 ; 10 >
         au < manifest ; 1984 ; Communication Research Volume 11 ; 11 >
@@ -5491,14 +5587,14 @@
         au < manifest ; 1970-1971 ; Comparative Political Studies Volume 3 ; 3 >
         au < manifest ; 1971-1972 ; Comparative Political Studies Volume 4 ; 4 >
         au < manifest ; 1972-1973 ; Comparative Political Studies Volume 5 ; 5 >
-        au < exists ; 1973-1974 ; Comparative Political Studies Volume 6 ; 6 >
-        au < exists ; 1974-1975 ; Comparative Political Studies Volume 7 ; 7 >
-        au < exists ; 1975-1976 ; Comparative Political Studies Volume 8 ; 8 >
-        au < exists ; 1976-1977 ; Comparative Political Studies Volume 9 ; 9 >
-        au < exists ; 1977-1978 ; Comparative Political Studies Volume 10 ; 10 >
-        au < exists ; 1978-1979 ; Comparative Political Studies Volume 11 ; 11 >
-        au < exists ; 1979-1980 ; Comparative Political Studies Volume 12 ; 12 >
-        au < exists ; 1980-1981 ; Comparative Political Studies Volume 13 ; 13 >
+        au < manifest ; 1973-1974 ; Comparative Political Studies Volume 6 ; 6 >
+        au < manifest ; 1974-1975 ; Comparative Political Studies Volume 7 ; 7 >
+        au < manifest ; 1975-1976 ; Comparative Political Studies Volume 8 ; 8 >
+        au < manifest ; 1976-1977 ; Comparative Political Studies Volume 9 ; 9 >
+        au < manifest ; 1977-1978 ; Comparative Political Studies Volume 10 ; 10 >
+        au < manifest ; 1978-1979 ; Comparative Political Studies Volume 11 ; 11 >
+        au < manifest ; 1979-1980 ; Comparative Political Studies Volume 12 ; 12 >
+        au < manifest ; 1980-1981 ; Comparative Political Studies Volume 13 ; 13 >
         au < manifest ; 1981-1982 ; Comparative Political Studies Volume 14 ; 14 >
         au < manifest ; 1982-1983 ; Comparative Political Studies Volume 15 ; 15 >
         au < manifest ; 1983-1984 ; Comparative Political Studies Volume 16 ; 16 >
@@ -5807,8 +5903,8 @@
         param[base_url] = http://ced.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2003-2004 ; Contemporary Education Dialogue 1 ; 1 >
-        au < exists ; 2004-2005 ; Contemporary Education Dialogue 2 ; 2 >
+        au < manifest ; 2003-2004 ; Contemporary Education Dialogue 1 ; 1 >
+        au < manifest ; 2004-2005 ; Contemporary Education Dialogue 2 ; 2 >
         au < doesNotExist ; 0 ; Contemporary Education Dialogue 3 ; 3 >
         au < doesNotExist ; 0 ; Contemporary Education Dialogue 4 ; 4 >
         au < doesNotExist ; 0 ; Contemporary Education Dialogue 5 ; 5 >
@@ -5836,9 +5932,9 @@
 
         au < manifest ; 2004 ; Contemporary Sociology: A Journal of Reviews Volume 33 ; 33 >
         au < manifest ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 34 ; 34 >
-        au < exists ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 >
-        au < exists ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 >
-        au < exists ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 >
+        au < manifest ; 2005 ; Contemporary Sociology: A Journal of Reviews Volume 35 ; 35 >
+        au < manifest ; 2006 ; Contemporary Sociology: A Journal of Reviews Volume 36 ; 36 >
+        au < manifest ; 2007 ; Contemporary Sociology: A Journal of Reviews Volume 37 ; 37 >
         au < manifest ; 2009 ; Contemporary Sociology: A Journal of Reviews Volume 38 ; 38 >
         au < manifest ; 2010 ; Contemporary Sociology: A Journal of Reviews Volume 39 ; 39 >
         au < manifest ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 >
@@ -5862,14 +5958,14 @@
         param[base_url] = http://ctx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2002 ; Contexts Volume 1 ; 1 >
-        au < exists ; 2003 ; Contexts Volume 2 ; 2 >
-        au < exists ; 2004 ; Contexts Volume 3 ; 3 >
-        au < exists ; 2005 ; Contexts Volume 4 ; 4 >
-        au < exists ; 2006 ; Contexts Volume 5 ; 5 >
-        au < exists ; 2007 ; Contexts Volume 6 ; 6 >
-        au < exists ; 2008 ; Contexts Volume 7 ; 7 >
-        au < exists ; 2009 ; Contexts Volume 8 ; 8 >
+        au < manifest ; 2002 ; Contexts Volume 1 ; 1 >
+        au < manifest ; 2003 ; Contexts Volume 2 ; 2 >
+        au < manifest ; 2004 ; Contexts Volume 3 ; 3 >
+        au < manifest ; 2005 ; Contexts Volume 4 ; 4 >
+        au < manifest ; 2006 ; Contexts Volume 5 ; 5 >
+        au < manifest ; 2007 ; Contexts Volume 6 ; 6 >
+        au < manifest ; 2008 ; Contexts Volume 7 ; 7 >
+        au < manifest ; 2009 ; Contexts Volume 8 ; 8 >
         au < manifest ; 2010 ; Contexts Volume 9 ; 9 >
         au < manifest ; 2011 ; Contexts Volume 10 ; 10 >
 
@@ -7287,23 +7383,23 @@
         param[base_url] = http://cdp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1992 ; Current Directions in Psychological Science Volume 1 ; 1 >
-        au < exists ; 1993 ; Current Directions in Psychological Science Volume 2 ; 2 >
-        au < exists ; 1994 ; Current Directions in Psychological Science Volume 3 ; 3 >
-        au < exists ; 1995 ; Current Directions in Psychological Science Volume 4 ; 4 >
-        au < exists ; 1996 ; Current Directions in Psychological Science Volume 5 ; 5 >
-        au < exists ; 1997 ; Current Directions in Psychological Science Volume 6 ; 6 >
-        au < exists ; 1998 ; Current Directions in Psychological Science Volume 7 ; 7 >
-        au < exists ; 1999 ; Current Directions in Psychological Science Volume 8 ; 8 >
-        au < exists ; 2000 ; Current Directions in Psychological Science Volume 9 ; 9 >
-        au < exists ; 2001 ; Current Directions in Psychological Science Volume 10 ; 10 >
-        au < exists ; 2002 ; Current Directions in Psychological Science Volume 11 ; 11 >
-        au < exists ; 2003 ; Current Directions in Psychological Science Volume 12 ; 12 >
-        au < exists ; 2004 ; Current Directions in Psychological Science Volume 13 ; 13 >
-        au < exists ; 2005 ; Current Directions in Psychological Science Volume 14 ; 14 >
-        au < exists ; 2006 ; Current Directions in Psychological Science Volume 15 ; 15 >
-        au < exists ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 >
-        au < exists ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 >
+        au < manifest ; 1992 ; Current Directions in Psychological Science Volume 1 ; 1 >
+        au < manifest ; 1993 ; Current Directions in Psychological Science Volume 2 ; 2 >
+        au < manifest ; 1994 ; Current Directions in Psychological Science Volume 3 ; 3 >
+        au < manifest ; 1995 ; Current Directions in Psychological Science Volume 4 ; 4 >
+        au < manifest ; 1996 ; Current Directions in Psychological Science Volume 5 ; 5 >
+        au < manifest ; 1997 ; Current Directions in Psychological Science Volume 6 ; 6 >
+        au < manifest ; 1998 ; Current Directions in Psychological Science Volume 7 ; 7 >
+        au < manifest ; 1999 ; Current Directions in Psychological Science Volume 8 ; 8 >
+        au < manifest ; 2000 ; Current Directions in Psychological Science Volume 9 ; 9 >
+        au < manifest ; 2001 ; Current Directions in Psychological Science Volume 10 ; 10 >
+        au < manifest ; 2002 ; Current Directions in Psychological Science Volume 11 ; 11 >
+        au < manifest ; 2003 ; Current Directions in Psychological Science Volume 12 ; 12 >
+        au < manifest ; 2004 ; Current Directions in Psychological Science Volume 13 ; 13 >
+        au < manifest ; 2005 ; Current Directions in Psychological Science Volume 14 ; 14 >
+        au < manifest ; 2006 ; Current Directions in Psychological Science Volume 15 ; 15 >
+        au < manifest ; 2007 ; Current Directions in Psychological Science Volume 16 ; 16 >
+        au < manifest ; 2008 ; Current Directions in Psychological Science Volume 17 ; 17 >
         au < manifest ; 2009 ; Current Directions in Psychological Science Volume 18 ; 18 >
         au < manifest ; 2010 ; Current Directions in Psychological Science Volume 19 ; 19 >
         au < manifest ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
@@ -7350,7 +7446,7 @@
         au < manifest ; 1958 ; Current Sociology Volume 7 ; 7 >
         au < manifest ; 1959 ; Current Sociology Volume 8 ; 8 >
         au < manifest ; 1960 ; Current Sociology Volume 9 ; 9 >
-        au < exists ; 1961 ; Current Sociology Volume 10 ; 10 >
+        au < manifest ; 1961 ; Current Sociology Volume 10 ; 10 >
         au < manifest ; 1962 ; Current Sociology Volume 11 ; 11 >
         au < manifest ; 1963 ; Current Sociology Volume 12 ; 12 >
         au < manifest ; 1965 ; Current Sociology Volume 13 ; 13 >
@@ -8504,9 +8600,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         au < manifest ; 1975-1976 ; Educational Management Administration & Leadership Volume 4 ; 4 >
         au < manifest ; 1976-1977 ; Educational Management Administration & Leadership Volume 5 ; 5 >
         au < manifest ; 1977-1978 ; Educational Management Administration & Leadership Volume 6 ; 6 >
-        au < exists ; 1978-1979 ; Educational Management Administration & Leadership Volume 7 ; 7 >
-        au < exists ; 1979 ; Educational Management Administration & Leadership Volume 8 ; 8 >
-        au < exists ; 1980-1981 ; Educational Management Administration & Leadership Volume 9 ; 9 >
+        au < manifest ; 1978-1979 ; Educational Management Administration & Leadership Volume 7 ; 7 >
+        au < manifest ; 1979 ; Educational Management Administration & Leadership Volume 8 ; 8 >
+        au < manifest ; 1980-1981 ; Educational Management Administration & Leadership Volume 9 ; 9 >
         au < manifest ; 1982 ; Educational Management Administration & Leadership Volume 10 ; 10 >
         au < manifest ; 1983 ; Educational Management Administration & Leadership Volume 11 ; 11 >
         au < manifest ; 1984 ; Educational Management Administration & Leadership Volume 12 ; 12 >
@@ -8687,9 +8783,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         param[base_url] = http://enx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2007 ; Electronic News Volume 1 ; 1 >
-        au < exists ; 2008 ; Electronic News Volume 2 ; 2 >
-        au < exists ; 2009 ; Electronic News Volume 3 ; 3 >
+        au < manifest ; 2007 ; Electronic News Volume 1 ; 1 >
+        au < manifest ; 2008 ; Electronic News Volume 2 ; 2 >
+        au < manifest ; 2009 ; Electronic News Volume 3 ; 3 >
         au < manifest ; 2010 ; Electronic News Volume 4 ; 4 >
         au < manifest ; 2011 ; Electronic News Volume 5 ; 5 >
 
@@ -8931,24 +9027,24 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         param[base_url] = http://erg.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1993 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 >
-        au < exists ; 1994 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 >
-        au < exists ; 1995 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 >
-        au < exists ; 1996 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 >
-        au < exists ; 1997 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 >
-        au < exists ; 1998 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 >
-        au < exists ; 1999 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 >
-        au < exists ; 2000 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 >
-        au < exists ; 2001 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 >
-        au < exists ; 2002 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 >
-        au < exists ; 2003 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 >
-        au < exists ; 2004 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 >
-        au < exists ; 2005 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 >
-        au < exists ; 2006 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 >
-        au < exists ; 2007 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 >
-        au < exists ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 >
-        au < exists ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
-        au < exists ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
+        au < manifest ; 1993 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  1 ;  1 >
+        au < manifest ; 1994 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  2 ;  2 >
+        au < manifest ; 1995 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  3 ;  3 >
+        au < manifest ; 1996 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  4 ;  4 >
+        au < manifest ; 1997 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  5 ;  5 >
+        au < manifest ; 1998 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  6 ;  6 >
+        au < manifest ; 1999 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  7 ;  7 >
+        au < manifest ; 2000 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  8 ;  8 >
+        au < manifest ; 2001 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume  9 ;  9 >
+        au < manifest ; 2002 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 10 ; 10 >
+        au < manifest ; 2003 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 11 ; 11 >
+        au < manifest ; 2004 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 12 ; 12 >
+        au < manifest ; 2005 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 13 ; 13 >
+        au < manifest ; 2006 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 14 ; 14 >
+        au < manifest ; 2007 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 15 ; 15 >
+        au < manifest ; 2008 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 16 ; 16 >
+        au < manifest ; 2009 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 17 ; 17 >
+        au < manifest ; 2010 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 18 ; 18 >
         au < manifest ; 2011 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 19 ; 19 >
 
       }
@@ -9215,21 +9311,21 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 >
-        au < exists ; 1995 ; European Journal of Cardiovascular Prevention & Rehabilitation 2 ; 2 >
-        au < exists ; 1996 ; European Journal of Cardiovascular Prevention & Rehabilitation 3 ; 3 >
-        au < exists ; 1997 ; European Journal of Cardiovascular Prevention & Rehabilitation 4 ; 4 >
-        au < exists ; 1998 ; European Journal of Cardiovascular Prevention & Rehabilitation 5 ; 5 >
-        au < exists ; 1999 ; European Journal of Cardiovascular Prevention & Rehabilitation 6 ; 6 >
-        au < exists ; 2000 ; European Journal of Cardiovascular Prevention & Rehabilitation 7 ; 7 >
-        au < exists ; 2001 ; European Journal of Cardiovascular Prevention & Rehabilitation 8 ; 8 >
-        au < exists ; 2002 ; European Journal of Cardiovascular Prevention & Rehabilitation 9 ; 9 >
-        au < exists ; 2003 ; European Journal of Cardiovascular Prevention & Rehabilitation 10 ; 10 >
-        au < exists ; 2004 ; European Journal of Cardiovascular Prevention & Rehabilitation 11 ; 11 >
-        au < exists ; 2005 ; European Journal of Cardiovascular Prevention & Rehabilitation 12 ; 12 >
-        au < exists ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation 13 ; 13 >
-        au < exists ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation 14 ; 14 >
-        au < exists ; 2008 ; European Journal of Cardiovascular Prevention & Rehabilitation 15 ; 15 >
+        au < manifest ; 1994 ; European Journal of Cardiovascular Prevention & Rehabilitation 1 ; 1 >
+        au < manifest ; 1995 ; European Journal of Cardiovascular Prevention & Rehabilitation 2 ; 2 >
+        au < manifest ; 1996 ; European Journal of Cardiovascular Prevention & Rehabilitation 3 ; 3 >
+        au < manifest ; 1997 ; European Journal of Cardiovascular Prevention & Rehabilitation 4 ; 4 >
+        au < manifest ; 1998 ; European Journal of Cardiovascular Prevention & Rehabilitation 5 ; 5 >
+        au < manifest ; 1999 ; European Journal of Cardiovascular Prevention & Rehabilitation 6 ; 6 >
+        au < manifest ; 2000 ; European Journal of Cardiovascular Prevention & Rehabilitation 7 ; 7 >
+        au < manifest ; 2001 ; European Journal of Cardiovascular Prevention & Rehabilitation 8 ; 8 >
+        au < manifest ; 2002 ; European Journal of Cardiovascular Prevention & Rehabilitation 9 ; 9 >
+        au < manifest ; 2003 ; European Journal of Cardiovascular Prevention & Rehabilitation 10 ; 10 >
+        au < manifest ; 2004 ; European Journal of Cardiovascular Prevention & Rehabilitation 11 ; 11 >
+        au < manifest ; 2005 ; European Journal of Cardiovascular Prevention & Rehabilitation 12 ; 12 >
+        au < manifest ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation 13 ; 13 >
+        au < manifest ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation 14 ; 14 >
+        au < manifest ; 2008 ; European Journal of Cardiovascular Prevention & Rehabilitation 15 ; 15 >
         au < manifest ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation 16 ; 16 >
         au < manifest ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation 17 ; 17 >
         au < manifest ; 2011 ; European Journal of Cardiovascular Prevention & Rehabilitation 18 ; 18 >
@@ -10689,7 +10785,7 @@ comment[exm] = now published by Springer
         au < manifest ; 1999 ; First Language Volume 19 ; 19 >
         au < manifest ; 2000 ; First Language Volume 20 ; 20 >
         au < manifest ; 2001 ; First Language Volume 21 ; 21 >
-        au < exists ; 2002 ; First Language Volume 22 ; 22 >
+        au < manifest ; 2002 ; First Language Volume 22 ; 22 >
         au < manifest ; 2003 ; First Language Volume 23 ; 23 >
         au < manifest ; 2004 ; First Language Volume 24 ; 24 >
         au < doNotProcess ; 2005 ; First Language Volume 25 ; 25 >
@@ -11082,16 +11178,16 @@ comment[exm] = now published by Springer
         param[base_url] = http://gmt.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1991 ; General Music Today Volume 5 ; 5 >
-        au < exists ; 1992 ; General Music Today Volume 6 ; 6 >
-        au < exists ; 1993 ; General Music Today Volume 7 ; 7 >
-        au < exists ; 1994 ; General Music Today Volume 8 ; 8 >
-        au < exists ; 1995 ; General Music Today Volume 9 ; 9 >
-        au < exists ; 1996 ; General Music Today Volume 10 ; 10 >
-        au < exists ; 1997 ; General Music Today Volume 11 ; 11 >
-        au < exists ; 1998 ; General Music Today Volume 12 ; 12 >
-        au < exists ; 1999 ; General Music Today Volume 13 ; 13 >
-        au < exists ; 2000 ; General Music Today Volume 14 ; 14 >
+        au < manifest ; 1991 ; General Music Today Volume 5 ; 5 >
+        au < manifest ; 1992 ; General Music Today Volume 6 ; 6 >
+        au < manifest ; 1993 ; General Music Today Volume 7 ; 7 >
+        au < manifest ; 1994 ; General Music Today Volume 8 ; 8 >
+        au < manifest ; 1995 ; General Music Today Volume 9 ; 9 >
+        au < manifest ; 1996 ; General Music Today Volume 10 ; 10 >
+        au < manifest ; 1997 ; General Music Today Volume 11 ; 11 >
+        au < manifest ; 1998 ; General Music Today Volume 12 ; 12 >
+        au < manifest ; 1999 ; General Music Today Volume 13 ; 13 >
+        au < manifest ; 2000 ; General Music Today Volume 14 ; 14 >
         au < manifest ; 2001 ; General Music Today Volume 15 ; 15 >
         au < manifest ; 2002 ; General Music Today Volume 16 ; 16 >
         au < manifest ; 2003 ; General Music Today Volume 17 ; 17 >
@@ -11142,8 +11238,8 @@ comment[exm] = now published by Springer
         param[base_url] = http://gos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 >
-        au < exists ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 >
+        au < manifest ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 >
+        au < manifest ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 >
 
       }
 
@@ -11617,8 +11713,8 @@ comment[exm] = now published by Springer
         au < manifest ; 1981 ; Group Analysis Volume 14 ; 14 >
         au < manifest ; 1982 ; Group Analysis Volume 15 ; 15 >
         au < manifest ; 1983 ; Group Analysis Volume 16 ; 16 >
-        au < exists ; 1984 ; Group Analysis Volume 17 ; 17 >
-        au < exists ; 1985 ; Group Analysis Volume 18 ; 18 >
+        au < manifest ; 1984 ; Group Analysis Volume 17 ; 17 >
+        au < manifest ; 1985 ; Group Analysis Volume 18 ; 18 >
         au < manifest ; 1986 ; Group Analysis Volume 19 ; 19 >
         au < manifest ; 1987 ; Group Analysis Volume 20 ; 20 >
         au < manifest ; 1988 ; Group Analysis Volume 21 ; 21 >
@@ -11722,8 +11818,8 @@ comment[exm] = now published by Springer
         param[base_url] = http://ijb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 >
-        au < exists ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 >
+        au < manifest ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 >
+        au < manifest ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 >
         au < manifest ; 1999 ; International Journal of Bilingualism Volume 3 ; 3 >
         au < manifest ; 2000 ; International Journal of Bilingualism Volume 4 ; 4 >
         au < manifest ; 2001 ; International Journal of Bilingualism Volume 5 ; 5 >
@@ -12309,8 +12405,8 @@ comment[exm] = now published by Springer
         param[base_url] = http://hip.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1989 ; High Performance Polymers Volume 1 ; 1 >
-        au < exists ; 1990 ; High Performance Polymers Volume 2 ; 2 >
+        au < manifest ; 1989 ; High Performance Polymers Volume 1 ; 1 >
+        au < manifest ; 1990 ; High Performance Polymers Volume 2 ; 2 >
         au < manifest ; 1991 ; High Performance Polymers Volume 3 ; 3 >
         au < manifest ; 1992 ; High Performance Polymers Volume 4 ; 4 >
         au < manifest ; 1993 ; High Performance Polymers Volume 5 ; 5 >
@@ -12674,7 +12770,7 @@ comment[exm] = now published by Springer
         au < manifest ; 1994-1995 ; Home Health Care Management & Practice Volume 7 ; 7 >
         au < manifest ; 1995-1996 ; Home Health Care Management & Practice Volume 8 ; 8 >
         au < manifest ; 1996-1997 ; Home Health Care Management & Practice Volume 9 ; 9 >
-        au < exists ; 1997-1998 ; Home Health Care Management & Practice Volume 10 ; 10 >
+        au < manifest ; 1997-1998 ; Home Health Care Management & Practice Volume 10 ; 10 >
         au < manifest ; 1998-1999 ; Home Health Care Management & Practice Volume 11 ; 11 >
         au < manifest ; 1999-2001 ; Home Health Care Management & Practice Volume 12 ; 12 >
         au < manifest ; 2001 ; Home Health Care Management & Practice Volume 13 ; 13 >
@@ -12831,37 +12927,37 @@ comment[exm] = now published by Springer
         param[base_url] = http://hfs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1968 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 10 ; 10 >
-        au < exists ; 1969 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 11 ; 11 >
-        au < exists ; 1970 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 12 ; 12 >
-        au < exists ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
-        au < exists ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
-        au < exists ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
+        au < manifest ; 1968 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 10 ; 10 >
+        au < manifest ; 1969 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 11 ; 11 >
+        au < manifest ; 1970 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 12 ; 12 >
+        au < manifest ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
+        au < manifest ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
+        au < manifest ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
         au < exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
-        au < exists ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
+        au < manifest ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
         au < exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
-        au < exists ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
-        au < exists ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 >
-        au < exists ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 >
-        au < exists ; 1980 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 22 ; 22 >
-        au < exists ; 1981 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 23 ; 23 >
-        au < exists ; 1982 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 24 ; 24 >
-        au < exists ; 1983 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 25 ; 25 >
-        au < exists ; 1984 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 26 ; 26 >
-        au < exists ; 1985 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 27 ; 27 >
-        au < exists ; 1986 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 28 ; 28 >
-        au < exists ; 1987 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 29 ; 29 >
-        au < exists ; 1988 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 30 ; 30 >
-        au < exists ; 1989 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 31 ; 31 >
-        au < exists ; 1990 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 32 ; 32 >
-        au < exists ; 1991 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 33 ; 33 >
-        au < exists ; 1992 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 34 ; 34 >
-        au < exists ; 1993 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 35 ; 35 >
-        au < exists ; 1994 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 36 ; 36 >
-        au < exists ; 1995 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 37 ; 37 >
-        au < exists ; 1996 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 38 ; 38 >
-        au < exists ; 1997 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 39 ; 39 >
-        au < exists ; 1998 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 40 ; 40 >
+        au < manifest ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
+        au < manifest ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 >
+        au < manifest ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 >
+        au < manifest ; 1980 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 22 ; 22 >
+        au < manifest ; 1981 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 23 ; 23 >
+        au < manifest ; 1982 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 24 ; 24 >
+        au < manifest ; 1983 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 25 ; 25 >
+        au < manifest ; 1984 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 26 ; 26 >
+        au < manifest ; 1985 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 27 ; 27 >
+        au < manifest ; 1986 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 28 ; 28 >
+        au < manifest ; 1987 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 29 ; 29 >
+        au < manifest ; 1988 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 30 ; 30 >
+        au < manifest ; 1989 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 31 ; 31 >
+        au < manifest ; 1990 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 32 ; 32 >
+        au < manifest ; 1991 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 33 ; 33 >
+        au < manifest ; 1992 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 34 ; 34 >
+        au < manifest ; 1993 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 35 ; 35 >
+        au < manifest ; 1994 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 36 ; 36 >
+        au < manifest ; 1995 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 37 ; 37 >
+        au < manifest ; 1996 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 38 ; 38 >
+        au < manifest ; 1997 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 39 ; 39 >
+        au < manifest ; 1998 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 40 ; 40 >
         au < manifest ; 1999 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 41 ; 41 >
         au < manifest ; 2000 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 42 ; 42 >
         au < manifest ; 2001 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 43 ; 43 >
@@ -13191,7 +13287,7 @@ comment[exm] = now published by Springer
         au < manifest ; 1999 ; Improving Schools Volume 2 ; 2 >
         au < manifest ; 2000 ; Improving Schools Volume 3 ; 3 >
         au < manifest ; 2001 ; Improving Schools Volume 4 ; 4 >
-        au < exists ; 2002 ; Improving Schools Volume 5 ; 5 >
+        au < manifest ; 2002 ; Improving Schools Volume 5 ; 5 >
         au < doesNotExist ; 2003 ; Improving Schools Volume 6 ; 6 >
         au < manifest ; 2004 ; Improving Schools Volume 7 ; 7 >
         au < doNotProcess ; 2005 ; Improving Schools Volume 8 ; 8 >
@@ -13220,34 +13316,34 @@ comment[exm] = now published by Springer
         param[base_url] = http://ioc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1968 ; Index on Censorship Volume 10 ; 10 >
-        au < exists ; 1969 ; Index on Censorship Volume 11 ; 11 >
-        au < exists ; 1970 ; Index on Censorship Volume 12 ; 12 >
-        au < exists ; 1971 ; Index on Censorship Volume 13 ; 13 >
-        au < exists ; 1972 ; Index on Censorship Volume 14 ; 14 >
-        au < exists ; 1973 ; Index on Censorship Volume 15 ; 15 >
-        au < exists ; 1974 ; Index on Censorship Volume 16 ; 16 >
-        au < exists ; 1975 ; Index on Censorship Volume 17 ; 17 >
-        au < exists ; 1976 ; Index on Censorship Volume 18 ; 18 >
-        au < exists ; 1977 ; Index on Censorship Volume 19 ; 19 >
-        au < exists ; 1978 ; Index on Censorship Volume 20 ; 20 >
-        au < exists ; 1979 ; Index on Censorship Volume 21 ; 21 >
-        au < exists ; 1980 ; Index on Censorship Volume 22 ; 22 >
-        au < exists ; 1981 ; Index on Censorship Volume 23 ; 23 >
-        au < exists ; 1982 ; Index on Censorship Volume 24 ; 24 >
-        au < exists ; 1983 ; Index on Censorship Volume 25 ; 25 >
-        au < exists ; 1984 ; Index on Censorship Volume 26 ; 26 >
-        au < exists ; 1985 ; Index on Censorship Volume 27 ; 27 >
-        au < exists ; 1986 ; Index on Censorship Volume 28 ; 28 >
-        au < exists ; 1987 ; Index on Censorship Volume 29 ; 29 >
-        au < exists ; 1988 ; Index on Censorship Volume 30 ; 30 >
-        au < exists ; 1989 ; Index on Censorship Volume 31 ; 31 >
-        au < exists ; 1990 ; Index on Censorship Volume 32 ; 32 >
-        au < exists ; 1991 ; Index on Censorship Volume 33 ; 33 >
-        au < exists ; 1992 ; Index on Censorship Volume 34 ; 34 >
-        au < exists ; 1993 ; Index on Censorship Volume 35 ; 35 >
-        au < exists ; 1994 ; Index on Censorship Volume 36 ; 36 >
-        au < exists ; 1995 ; Index on Censorship Volume 37 ; 37 >
+        au < manifest ; 1968 ; Index on Censorship Volume 10 ; 10 >
+        au < manifest ; 1969 ; Index on Censorship Volume 11 ; 11 >
+        au < manifest ; 1970 ; Index on Censorship Volume 12 ; 12 >
+        au < manifest ; 1971 ; Index on Censorship Volume 13 ; 13 >
+        au < manifest ; 1972 ; Index on Censorship Volume 14 ; 14 >
+        au < manifest ; 1973 ; Index on Censorship Volume 15 ; 15 >
+        au < manifest ; 1974 ; Index on Censorship Volume 16 ; 16 >
+        au < manifest ; 1975 ; Index on Censorship Volume 17 ; 17 >
+        au < manifest ; 1976 ; Index on Censorship Volume 18 ; 18 >
+        au < manifest ; 1977 ; Index on Censorship Volume 19 ; 19 >
+        au < manifest ; 1978 ; Index on Censorship Volume 20 ; 20 >
+        au < manifest ; 1979 ; Index on Censorship Volume 21 ; 21 >
+        au < manifest ; 1980 ; Index on Censorship Volume 22 ; 22 >
+        au < manifest ; 1981 ; Index on Censorship Volume 23 ; 23 >
+        au < manifest ; 1982 ; Index on Censorship Volume 24 ; 24 >
+        au < manifest ; 1983 ; Index on Censorship Volume 25 ; 25 >
+        au < manifest ; 1984 ; Index on Censorship Volume 26 ; 26 >
+        au < manifest ; 1985 ; Index on Censorship Volume 27 ; 27 >
+        au < manifest ; 1986 ; Index on Censorship Volume 28 ; 28 >
+        au < manifest ; 1987 ; Index on Censorship Volume 29 ; 29 >
+        au < manifest ; 1988 ; Index on Censorship Volume 30 ; 30 >
+        au < manifest ; 1989 ; Index on Censorship Volume 31 ; 31 >
+        au < manifest ; 1990 ; Index on Censorship Volume 32 ; 32 >
+        au < manifest ; 1991 ; Index on Censorship Volume 33 ; 33 >
+        au < manifest ; 1992 ; Index on Censorship Volume 34 ; 34 >
+        au < manifest ; 1993 ; Index on Censorship Volume 35 ; 35 >
+        au < manifest ; 1994 ; Index on Censorship Volume 36 ; 36 >
+        au < manifest ; 1995 ; Index on Censorship Volume 37 ; 37 >
         au < manifest ; 2009 ; Index on Censorship Volume 38 ; 38 >
         au < manifest ; 2010 ; Index on Censorship Volume 39 ; 39 >
         au < manifest ; 2011 ; Index on Censorship Volume 40 ; 40 >
@@ -13270,10 +13366,10 @@ comment[exm] = now published by Springer
         param[base_url] = http://iqq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2005 ; India Quarterly: A Journal of International Affairs Volume 61 ; 61 >
-        au < exists ; 2006 ; India Quarterly: A Journal of International Affairs Volume 62 ; 62 >
-        au < exists ; 2007 ; India Quarterly: A Journal of International Affairs Volume 63 ; 63 >
-        au < exists ; 2008 ; India Quarterly: A Journal of International Affairs Volume 64 ; 64 >
+        au < manifest ; 2005 ; India Quarterly: A Journal of International Affairs Volume 61 ; 61 >
+        au < manifest ; 2006 ; India Quarterly: A Journal of International Affairs Volume 62 ; 62 >
+        au < manifest ; 2007 ; India Quarterly: A Journal of International Affairs Volume 63 ; 63 >
+        au < manifest ; 2008 ; India Quarterly: A Journal of International Affairs Volume 64 ; 64 >
         au < manifest ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 >
         au < ready ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 >
         au < manifest ; 2011 ; India Quarterly: A Journal of International Affairs Volume 67 ; 67 >
