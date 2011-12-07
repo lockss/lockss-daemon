@@ -2910,21 +2910,21 @@
         au < manifest ; 1981-1982 ; Assessment for Effective Intervention Volume 7 ; 7 >
         au < manifest ; 1982-1983 ; Assessment for Effective Intervention Volume 8 ; 8 >
         au < manifest ; 1983-1984 ; Assessment for Effective Intervention Volume 9 ; 9 >
-        au < exists ; 1984-1985 ; Assessment for Effective Intervention Volume 10 ; 10 >
+        au < doesNotExist ; 1984-1985 ; Assessment for Effective Intervention Volume 10 ; 10 >
         au < manifest ; 1985-1986 ; Assessment for Effective Intervention Volume 11 ; 11 >
         au < manifest ; 1986-1987 ; Assessment for Effective Intervention Volume 12 ; 12 >
         au < manifest ; 1987-1988 ; Assessment for Effective Intervention Volume 13 ; 13 >
         au < manifest ; 1988-1989 ; Assessment for Effective Intervention Volume 14 ; 14 >
-        au < exists ; 1989-1990 ; Assessment for Effective Intervention Volume 15 ; 15 >
+        au < doesNotExist ; 1989-1990 ; Assessment for Effective Intervention Volume 15 ; 15 >
         au < manifest ; 1990-1991 ; Assessment for Effective Intervention Volume 16 ; 16 >
         au < manifest ; 1991-1992 ; Assessment for Effective Intervention Volume 17 ; 17 >
         au < manifest ; 1992-1993 ; Assessment for Effective Intervention Volume 18 ; 18 >
         au < manifest ; 1993-1994 ; Assessment for Effective Intervention Volume 19 ; 19 >
-        au < exists ; 1994-1995 ; Assessment for Effective Intervention Volume 20 ; 20 >
+        au < doesNotExist ; 1994-1995 ; Assessment for Effective Intervention Volume 20 ; 20 >
         au < manifest ; 1995-1996 ; Assessment for Effective Intervention Volume 21 ; 21 >
         au < manifest ; 1996-1997 ; Assessment for Effective Intervention Volume 22 ; 22 >
         au < manifest ; 1997-1998 ; Assessment for Effective Intervention Volume 23 ; 23 >
-        au < exists ; 1998-1999 ; Assessment for Effective Intervention Volume 24 ; 24 >      
+        au < doesNotExist ; 1998-1999 ; Assessment for Effective Intervention Volume 24 ; 24 >
         au < manifest ; 1999-2000 ; Assessment for Effective Intervention Volume 25 ; 25 >
         au < manifest ; 2000-2001 ; Assessment for Effective Intervention Volume 26 ; 26 >
         au < manifest ; 2001-2002 ; Assessment for Effective Intervention Volume 27 ; 27 >
@@ -3758,8 +3758,6 @@
         param[base_url] = http://bms.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[bms] = V1-110 exist on journal site.
-
         au < manifest ; 1983 ; Bulletin de Méthodologie Sociologique Volume 1 ; 1 >
         au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 2 ; 2 >
         au < manifest ; 1984 ; Bulletin de Méthodologie Sociologique Volume 3 ; 3 >
@@ -3768,97 +3766,97 @@
         au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 6 ; 6 >
         au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 7 ; 7 >
         au < manifest ; 1985 ; Bulletin de Méthodologie Sociologique Volume 8 ; 8 >
-        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 9 ; 9 >
-        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 10 ; 10 >
-        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 11 ; 11 >
-        au < exists ; 1986 ; Bulletin de Méthodologie Sociologique Volume 12 ; 12 >
-        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 13 ; 13 >
-        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 14 ; 14 >
-        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 15 ; 15 >
-        au < exists ; 1987 ; Bulletin de Méthodologie Sociologique Volume 16 ; 16 >
-        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 17 ; 17 >
-        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 18 ; 18 >
-        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 19 ; 19 >
-        au < exists ; 1988 ; Bulletin de Méthodologie Sociologique Volume 20 ; 20 >
-        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 21 ; 21 >
-        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 22 ; 22 >
-        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 23 ; 23 >
-        au < exists ; 1989 ; Bulletin de Méthodologie Sociologique Volume 24 ; 24 >
-        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 25 ; 25 >
-        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 26 ; 26 >
-        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 27 ; 27 >
-        au < exists ; 1990 ; Bulletin de Méthodologie Sociologique Volume 28 ; 28 >
-        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 29 ; 29 >
-        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 30 ; 30 >
-        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 31 ; 31 >
-        au < exists ; 1991 ; Bulletin de Méthodologie Sociologique Volume 32 ; 32 >
-        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 33 ; 33 >
-        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 34 ; 34 >
-        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 35 ; 35 >
-        au < exists ; 1992 ; Bulletin de Méthodologie Sociologique Volume 36 ; 36 >
-        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 37 ; 37 >
-        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 38 ; 38 >
-        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 39 ; 39 >
-        au < exists ; 1993 ; Bulletin de Méthodologie Sociologique Volume 40 ; 40 >
-        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 41 ; 41 >
-        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 42 ; 42 >
-        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 43 ; 43 >
-        au < exists ; 1994 ; Bulletin de Méthodologie Sociologique Volume 44 ; 44 >
-        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 45 ; 45 >
-        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 46 ; 46 >
-        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 47 ; 47 >
-        au < exists ; 1995 ; Bulletin de Méthodologie Sociologique Volume 48 ; 48 >
-        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 49 ; 49 >
-        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 50 ; 50 >
-        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 51 ; 51 >
-        au < exists ; 1996 ; Bulletin de Méthodologie Sociologique Volume 52 ; 52 >
-        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 53 ; 53 >
-        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 54 ; 54 >
-        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 55 ; 55 >
-        au < exists ; 1997 ; Bulletin de Méthodologie Sociologique Volume 56 ; 56 >
-        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 57 ; 57 >
-        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 58 ; 58 >
-        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 59 ; 59 >
-        au < exists ; 1998 ; Bulletin de Méthodologie Sociologique Volume 60 ; 60 >
-        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 61 ; 61 >
-        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 62 ; 62 >
-        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 63 ; 63 >
-        au < exists ; 1999 ; Bulletin de Méthodologie Sociologique Volume 64 ; 64 >
-        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 65 ; 65 >
-        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 66 ; 66 >
-        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 67 ; 67 >
-        au < exists ; 2000 ; Bulletin de Méthodologie Sociologique Volume 68 ; 68 >
-        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 69 ; 69 >
-        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 70 ; 70 >
-        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 71 ; 71 >
-        au < exists ; 2001 ; Bulletin de Méthodologie Sociologique Volume 72 ; 72 >
-        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 73 ; 73 >
-        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 74 ; 74 >
-        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 75 ; 75 >
-        au < exists ; 2002 ; Bulletin de Méthodologie Sociologique Volume 76 ; 76 >
-        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 77 ; 77 >
-        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 78 ; 78 >
-        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 79 ; 79 >
-        au < exists ; 2003 ; Bulletin de Méthodologie Sociologique Volume 80 ; 80 >
-        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 81 ; 81 >
-        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 82 ; 82 >
-        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 83 ; 83 >
-        au < exists ; 2004 ; Bulletin de Méthodologie Sociologique Volume 84 ; 84 >
-        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 85 ; 85 >
-        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 86 ; 86 >
-        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 87 ; 87 >
-        au < exists ; 2005 ; Bulletin de Méthodologie Sociologique Volume 88 ; 88 >
-        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 89 ; 89 >
-        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 90 ; 90 >
-        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 91 ; 91 >
-        au < exists ; 2006 ; Bulletin de Méthodologie Sociologique Volume 92 ; 92 >
-        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 93 ; 93 >
-        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 94 ; 94 >
-        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 95 ; 95 >
-        au < exists ; 2007 ; Bulletin de Méthodologie Sociologique Volume 96 ; 96 >
-        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 97 ; 97 >
-        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 >
-        au < exists ; 2008 ; Bulletin de Méthodologie Sociologique Volume 99 ; 99 >
+        au < manifest ; 1986 ; Bulletin de Méthodologie Sociologique Volume 9 ; 9 >
+        au < manifest ; 1986 ; Bulletin de Méthodologie Sociologique Volume 10 ; 10 >
+        au < manifest ; 1986 ; Bulletin de Méthodologie Sociologique Volume 11 ; 11 >
+        au < manifest ; 1986 ; Bulletin de Méthodologie Sociologique Volume 12 ; 12 >
+        au < manifest ; 1987 ; Bulletin de Méthodologie Sociologique Volume 13 ; 13 >
+        au < manifest ; 1987 ; Bulletin de Méthodologie Sociologique Volume 14 ; 14 >
+        au < manifest ; 1987 ; Bulletin de Méthodologie Sociologique Volume 15 ; 15 >
+        au < manifest ; 1987 ; Bulletin de Méthodologie Sociologique Volume 16 ; 16 >
+        au < manifest ; 1988 ; Bulletin de Méthodologie Sociologique Volume 17 ; 17 >
+        au < manifest ; 1988 ; Bulletin de Méthodologie Sociologique Volume 18 ; 18 >
+        au < manifest ; 1988 ; Bulletin de Méthodologie Sociologique Volume 19 ; 19 >
+        au < manifest ; 1988 ; Bulletin de Méthodologie Sociologique Volume 20 ; 20 >
+        au < manifest ; 1989 ; Bulletin de Méthodologie Sociologique Volume 21 ; 21 >
+        au < manifest ; 1989 ; Bulletin de Méthodologie Sociologique Volume 22 ; 22 >
+        au < manifest ; 1989 ; Bulletin de Méthodologie Sociologique Volume 23 ; 23 >
+        au < manifest ; 1989 ; Bulletin de Méthodologie Sociologique Volume 24 ; 24 >
+        au < manifest ; 1990 ; Bulletin de Méthodologie Sociologique Volume 25 ; 25 >
+        au < manifest ; 1990 ; Bulletin de Méthodologie Sociologique Volume 26 ; 26 >
+        au < manifest ; 1990 ; Bulletin de Méthodologie Sociologique Volume 27 ; 27 >
+        au < manifest ; 1990 ; Bulletin de Méthodologie Sociologique Volume 28 ; 28 >
+        au < manifest ; 1991 ; Bulletin de Méthodologie Sociologique Volume 29 ; 29 >
+        au < manifest ; 1991 ; Bulletin de Méthodologie Sociologique Volume 30 ; 30 >
+        au < manifest ; 1991 ; Bulletin de Méthodologie Sociologique Volume 31 ; 31 >
+        au < manifest ; 1991 ; Bulletin de Méthodologie Sociologique Volume 32 ; 32 >
+        au < manifest ; 1992 ; Bulletin de Méthodologie Sociologique Volume 33 ; 33 >
+        au < manifest ; 1992 ; Bulletin de Méthodologie Sociologique Volume 34 ; 34 >
+        au < manifest ; 1992 ; Bulletin de Méthodologie Sociologique Volume 35 ; 35 >
+        au < manifest ; 1992 ; Bulletin de Méthodologie Sociologique Volume 36 ; 36 >
+        au < manifest ; 1993 ; Bulletin de Méthodologie Sociologique Volume 37 ; 37 >
+        au < manifest ; 1993 ; Bulletin de Méthodologie Sociologique Volume 38 ; 38 >
+        au < manifest ; 1993 ; Bulletin de Méthodologie Sociologique Volume 39 ; 39 >
+        au < manifest ; 1993 ; Bulletin de Méthodologie Sociologique Volume 40 ; 40 >
+        au < manifest ; 1994 ; Bulletin de Méthodologie Sociologique Volume 41 ; 41 >
+        au < manifest ; 1994 ; Bulletin de Méthodologie Sociologique Volume 42 ; 42 >
+        au < manifest ; 1994 ; Bulletin de Méthodologie Sociologique Volume 43 ; 43 >
+        au < manifest ; 1994 ; Bulletin de Méthodologie Sociologique Volume 44 ; 44 >
+        au < manifest ; 1995 ; Bulletin de Méthodologie Sociologique Volume 45 ; 45 >
+        au < manifest ; 1995 ; Bulletin de Méthodologie Sociologique Volume 46 ; 46 >
+        au < manifest ; 1995 ; Bulletin de Méthodologie Sociologique Volume 47 ; 47 >
+        au < manifest ; 1995 ; Bulletin de Méthodologie Sociologique Volume 48 ; 48 >
+        au < manifest ; 1996 ; Bulletin de Méthodologie Sociologique Volume 49 ; 49 >
+        au < manifest ; 1996 ; Bulletin de Méthodologie Sociologique Volume 50 ; 50 >
+        au < manifest ; 1996 ; Bulletin de Méthodologie Sociologique Volume 51 ; 51 >
+        au < manifest ; 1996 ; Bulletin de Méthodologie Sociologique Volume 52 ; 52 >
+        au < manifest ; 1997 ; Bulletin de Méthodologie Sociologique Volume 53 ; 53 >
+        au < manifest ; 1997 ; Bulletin de Méthodologie Sociologique Volume 54 ; 54 >
+        au < manifest ; 1997 ; Bulletin de Méthodologie Sociologique Volume 55 ; 55 >
+        au < manifest ; 1997 ; Bulletin de Méthodologie Sociologique Volume 56 ; 56 >
+        au < manifest ; 1998 ; Bulletin de Méthodologie Sociologique Volume 57 ; 57 >
+        au < manifest ; 1998 ; Bulletin de Méthodologie Sociologique Volume 58 ; 58 >
+        au < manifest ; 1998 ; Bulletin de Méthodologie Sociologique Volume 59 ; 59 >
+        au < manifest ; 1998 ; Bulletin de Méthodologie Sociologique Volume 60 ; 60 >
+        au < manifest ; 1999 ; Bulletin de Méthodologie Sociologique Volume 61 ; 61 >
+        au < manifest ; 1999 ; Bulletin de Méthodologie Sociologique Volume 62 ; 62 >
+        au < manifest ; 1999 ; Bulletin de Méthodologie Sociologique Volume 63 ; 63 >
+        au < manifest ; 1999 ; Bulletin de Méthodologie Sociologique Volume 64 ; 64 >
+        au < manifest ; 2000 ; Bulletin de Méthodologie Sociologique Volume 65 ; 65 >
+        au < manifest ; 2000 ; Bulletin de Méthodologie Sociologique Volume 66 ; 66 >
+        au < manifest ; 2000 ; Bulletin de Méthodologie Sociologique Volume 67 ; 67 >
+        au < manifest ; 2000 ; Bulletin de Méthodologie Sociologique Volume 68 ; 68 >
+        au < manifest ; 2001 ; Bulletin de Méthodologie Sociologique Volume 69 ; 69 >
+        au < manifest ; 2001 ; Bulletin de Méthodologie Sociologique Volume 70 ; 70 >
+        au < manifest ; 2001 ; Bulletin de Méthodologie Sociologique Volume 71 ; 71 >
+        au < manifest ; 2001 ; Bulletin de Méthodologie Sociologique Volume 72 ; 72 >
+        au < manifest ; 2002 ; Bulletin de Méthodologie Sociologique Volume 73 ; 73 >
+        au < manifest ; 2002 ; Bulletin de Méthodologie Sociologique Volume 74 ; 74 >
+        au < manifest ; 2002 ; Bulletin de Méthodologie Sociologique Volume 75 ; 75 >
+        au < manifest ; 2002 ; Bulletin de Méthodologie Sociologique Volume 76 ; 76 >
+        au < manifest ; 2003 ; Bulletin de Méthodologie Sociologique Volume 77 ; 77 >
+        au < manifest ; 2003 ; Bulletin de Méthodologie Sociologique Volume 78 ; 78 >
+        au < manifest ; 2003 ; Bulletin de Méthodologie Sociologique Volume 79 ; 79 >
+        au < manifest ; 2003 ; Bulletin de Méthodologie Sociologique Volume 80 ; 80 >
+        au < manifest ; 2004 ; Bulletin de Méthodologie Sociologique Volume 81 ; 81 >
+        au < manifest ; 2004 ; Bulletin de Méthodologie Sociologique Volume 82 ; 82 >
+        au < manifest ; 2004 ; Bulletin de Méthodologie Sociologique Volume 83 ; 83 >
+        au < manifest ; 2004 ; Bulletin de Méthodologie Sociologique Volume 84 ; 84 >
+        au < manifest ; 2005 ; Bulletin de Méthodologie Sociologique Volume 85 ; 85 >
+        au < manifest ; 2005 ; Bulletin de Méthodologie Sociologique Volume 86 ; 86 >
+        au < manifest ; 2005 ; Bulletin de Méthodologie Sociologique Volume 87 ; 87 >
+        au < manifest ; 2005 ; Bulletin de Méthodologie Sociologique Volume 88 ; 88 >
+        au < manifest ; 2006 ; Bulletin de Méthodologie Sociologique Volume 89 ; 89 >
+        au < manifest ; 2006 ; Bulletin de Méthodologie Sociologique Volume 90 ; 90 >
+        au < manifest ; 2006 ; Bulletin de Méthodologie Sociologique Volume 91 ; 91 >
+        au < manifest ; 2006 ; Bulletin de Méthodologie Sociologique Volume 92 ; 92 >
+        au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 93 ; 93 >
+        au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 94 ; 94 >
+        au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 95 ; 95 >
+        au < manifest ; 2007 ; Bulletin de Méthodologie Sociologique Volume 96 ; 96 >
+        au < manifest ; 2008 ; Bulletin de Méthodologie Sociologique Volume 97 ; 97 >
+        au < manifest ; 2008 ; Bulletin de Méthodologie Sociologique Volume 98 ; 98 >
+        au < manifest ; 2008 ; Bulletin de Méthodologie Sociologique Volume 99 ; 99 >
         au < manifest ; 2008 ; Bulletin de Méthodologie Sociologique Volume 100 ; 100 >
         au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 101 ; 101 >
         au < manifest ; 2009 ; Bulletin de Méthodologie Sociologique Volume 102 ; 102 >
@@ -12933,9 +12931,9 @@ comment[exm] = now published by Springer
         au < manifest ; 1971 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 13 ; 13 >
         au < manifest ; 1972 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 14 ; 14 >
         au < manifest ; 1973 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 15 ; 15 >
-        au < exists ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
+        au < doesNotExist ; 1974 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 16 ; 16 >
         au < manifest ; 1975 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 17 ; 17 >
-        au < exists ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
+        au < doesNotExist ; 1976 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 18 ; 18 >
         au < manifest ; 1977 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 19 ; 19 >
         au < manifest ; 1978 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 20 ; 20 >
         au < manifest ; 1979 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 21 ; 21 >
@@ -31765,7 +31763,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2011 ; Sage Open Volume 1 ; 1 >
+        au < manifest ; 2011 ; Sage Open Volume 1 ; 1 >
         au < exists ; 2012 ; Sage Open Volume 2 ; 2 >
 
     }
@@ -34172,71 +34170,71 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tjx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[exists] = Theology, Volumes on web page: V50-114 (7/2011)
-
+        comment[exists-v90] = V90 has a dead link for the first issue. 2011-12-07
+        
         au < manifest ; 1947 ; Theology Volume 50 ; 50 >
         au < manifest ; 1948 ; Theology Volume 51 ; 51 >
         au < manifest ; 1949 ; Theology Volume 52 ; 52 >
         au < manifest ; 1950 ; Theology Volume 53 ; 53 >
-        au < exists ; 1951 ; Theology Volume 54 ; 54 >
-        au < exists ; 1952 ; Theology Volume 55 ; 55 >
-        au < exists ; 1953 ; Theology Volume 56 ; 56 >
-        au < exists ; 1954 ; Theology Volume 57 ; 57 >
-        au < exists ; 1955 ; Theology Volume 58 ; 58 >
-        au < exists ; 1956 ; Theology Volume 59 ; 59 >
-        au < exists ; 1957 ; Theology Volume 60 ; 60 >
-        au < exists ; 1958 ; Theology Volume 61 ; 61 >
-        au < exists ; 1959 ; Theology Volume 62 ; 62 >
-        au < exists ; 1960 ; Theology Volume 63 ; 63 >
-        au < exists ; 1961 ; Theology Volume 64 ; 64 >
-        au < exists ; 1962 ; Theology Volume 65 ; 65 >
-        au < exists ; 1963 ; Theology Volume 66 ; 66 >
-        au < exists ; 1964 ; Theology Volume 67 ; 67 >
-        au < exists ; 1965 ; Theology Volume 68 ; 68 >
-        au < exists ; 1966 ; Theology Volume 69 ; 69 >
-        au < exists ; 1967 ; Theology Volume 70 ; 70 >
-        au < exists ; 1968 ; Theology Volume 71 ; 71 >
-        au < exists ; 1969 ; Theology Volume 72 ; 72 >
-        au < exists ; 1970 ; Theology Volume 73 ; 73 >
-        au < exists ; 1971 ; Theology Volume 74 ; 74 >
-        au < exists ; 1972 ; Theology Volume 75 ; 75 >
-        au < exists ; 1973 ; Theology Volume 76 ; 76 >
-        au < exists ; 1974 ; Theology Volume 77 ; 77 >
-        au < exists ; 1975 ; Theology Volume 78 ; 78 >
-        au < exists ; 1976 ; Theology Volume 79 ; 79 >
-        au < exists ; 1977 ; Theology Volume 80 ; 80 >
-        au < exists ; 1978 ; Theology Volume 81 ; 81 >
-        au < exists ; 1979 ; Theology Volume 82 ; 82 >
-        au < exists ; 1980 ; Theology Volume 83 ; 83 >
-        au < exists ; 1981 ; Theology Volume 84 ; 84 >
-        au < exists ; 1982 ; Theology Volume 85 ; 85 >
-        au < exists ; 1983 ; Theology Volume 86 ; 86 >
-        au < exists ; 1984 ; Theology Volume 87 ; 87 >
-        au < exists ; 1985 ; Theology Volume 88 ; 88 >
-        au < exists ; 1986 ; Theology Volume 89 ; 89 >
+        au < manifest ; 1951 ; Theology Volume 54 ; 54 >
+        au < manifest ; 1952 ; Theology Volume 55 ; 55 >
+        au < manifest ; 1953 ; Theology Volume 56 ; 56 >
+        au < manifest ; 1954 ; Theology Volume 57 ; 57 >
+        au < manifest ; 1955 ; Theology Volume 58 ; 58 >
+        au < manifest ; 1956 ; Theology Volume 59 ; 59 >
+        au < manifest ; 1957 ; Theology Volume 60 ; 60 >
+        au < manifest ; 1958 ; Theology Volume 61 ; 61 >
+        au < manifest ; 1959 ; Theology Volume 62 ; 62 >
+        au < manifest ; 1960 ; Theology Volume 63 ; 63 >
+        au < manifest ; 1961 ; Theology Volume 64 ; 64 >
+        au < manifest ; 1962 ; Theology Volume 65 ; 65 >
+        au < manifest ; 1963 ; Theology Volume 66 ; 66 >
+        au < manifest ; 1964 ; Theology Volume 67 ; 67 >
+        au < manifest ; 1965 ; Theology Volume 68 ; 68 >
+        au < manifest ; 1966 ; Theology Volume 69 ; 69 >
+        au < manifest ; 1967 ; Theology Volume 70 ; 70 >
+        au < manifest ; 1968 ; Theology Volume 71 ; 71 >
+        au < manifest ; 1969 ; Theology Volume 72 ; 72 >
+        au < manifest ; 1970 ; Theology Volume 73 ; 73 >
+        au < manifest ; 1971 ; Theology Volume 74 ; 74 >
+        au < manifest ; 1972 ; Theology Volume 75 ; 75 >
+        au < manifest ; 1973 ; Theology Volume 76 ; 76 >
+        au < manifest ; 1974 ; Theology Volume 77 ; 77 >
+        au < manifest ; 1975 ; Theology Volume 78 ; 78 >
+        au < manifest ; 1976 ; Theology Volume 79 ; 79 >
+        au < manifest ; 1977 ; Theology Volume 80 ; 80 >
+        au < manifest ; 1978 ; Theology Volume 81 ; 81 >
+        au < manifest ; 1979 ; Theology Volume 82 ; 82 >
+        au < manifest ; 1980 ; Theology Volume 83 ; 83 >
+        au < manifest ; 1981 ; Theology Volume 84 ; 84 >
+        au < manifest ; 1982 ; Theology Volume 85 ; 85 >
+        au < manifest ; 1983 ; Theology Volume 86 ; 86 >
+        au < manifest ; 1984 ; Theology Volume 87 ; 87 >
+        au < manifest ; 1985 ; Theology Volume 88 ; 88 >
+        au < manifest ; 1986 ; Theology Volume 89 ; 89 >
         au < exists ; 1987 ; Theology Volume 90 ; 90 >
-        au < exists ; 1988 ; Theology Volume 91 ; 91 >
-        au < exists ; 1989 ; Theology Volume 92 ; 92 >
-        au < exists ; 1990 ; Theology Volume 93 ; 93 >
-        au < exists ; 1991 ; Theology Volume 94 ; 94 >
-        au < exists ; 1992 ; Theology Volume 95 ; 95 >
-        au < exists ; 1993 ; Theology Volume 96 ; 96 >
-        au < exists ; 1994 ; Theology Volume 97 ; 97 >
-        au < exists ; 1995 ; Theology Volume 98 ; 98 >
-        au < exists ; 1996 ; Theology Volume 99 ; 99 >
-        au < exists ; 1997 ; Theology Volume 100 ; 100 >
-        au < exists ; 1998 ; Theology Volume 101 ; 101 >
-        au < exists ; 1999 ; Theology Volume 102 ; 102 >
-        au < exists ; 2000 ; Theology Volume 103 ; 103 >
-        au < exists ; 2001 ; Theology Volume 104 ; 104 >
-        au < exists ; 2002 ; Theology Volume 105 ; 105 >
-        au < exists ; 2003 ; Theology Volume 106 ; 106 >
-        au < exists ; 2004 ; Theology Volume 107 ; 107 >
-        au < exists ; 2005 ; Theology Volume 108 ; 108 >
-        au < exists ; 2006 ; Theology Volume 109 ; 109 >
-        au < exists ; 2007 ; Theology Volume 110 ; 110 >
-        au < exists ; 2008 ; Theology Volume 111 ; 111 >
-        au < exists ; 2009 ; Theology Volume 112 ; 112 >
+        au < manifest ; 1988 ; Theology Volume 91 ; 91 >
+        au < manifest ; 1989 ; Theology Volume 92 ; 92 >
+        au < manifest ; 1990 ; Theology Volume 93 ; 93 >
+        au < manifest ; 1991 ; Theology Volume 94 ; 94 >
+        au < manifest ; 1992 ; Theology Volume 95 ; 95 >
+        au < manifest ; 1993 ; Theology Volume 96 ; 96 >
+        au < manifest ; 1994 ; Theology Volume 97 ; 97 >
+        au < manifest ; 1995 ; Theology Volume 98 ; 98 >
+        au < manifest ; 1996 ; Theology Volume 99 ; 99 >
+        au < manifest ; 1997 ; Theology Volume 100 ; 100 >
+        au < manifest ; 1998 ; Theology Volume 101 ; 101 >
+        au < manifest ; 1999 ; Theology Volume 102 ; 102 >
+        au < manifest ; 2000 ; Theology Volume 103 ; 103 >
+        au < manifest ; 2001 ; Theology Volume 104 ; 104 >
+        au < manifest ; 2002 ; Theology Volume 105 ; 105 >
+        au < manifest ; 2003 ; Theology Volume 106 ; 106 >
+        au < manifest ; 2004 ; Theology Volume 107 ; 107 >
+        au < manifest ; 2005 ; Theology Volume 108 ; 108 >
+        au < manifest ; 2006 ; Theology Volume 109 ; 109 >
+        au < manifest ; 2007 ; Theology Volume 110 ; 110 >
+        au < manifest ; 2008 ; Theology Volume 111 ; 111 >
+        au < manifest ; 2009 ; Theology Volume 112 ; 112 >
         au < manifest ; 2010 ; Theology Volume 113 ; 113 >
         au < ready ; 2011 ; Theology Volume 114 ; 114 >
 
