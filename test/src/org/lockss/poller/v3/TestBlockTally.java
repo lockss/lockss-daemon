@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.7 2011-12-06 23:58:44 barry409 Exp $
+ * $Id: TestBlockTally.java,v 1.8 2011-12-07 23:46:57 barry409 Exp $
  */
 
 /*
@@ -258,6 +258,81 @@ public class TestBlockTally extends LockssTestCase {
     tally.addAgreeVoter(testPeers[2]);
     tally.addAgreeVoter(testPeers[3]);
     assertEquals(BlockTally.Result.NOQUORUM, tally.getTallyResult(5, 75));
+  }
+
+  public void testPollerOnly() throws Exception {
+    // A combination of disagree, and poller only
+    BlockTally tally;
+
+    tally = new BlockTally();
+    tally.addDisagreeVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+
+    // Note: the reparing peer will be drawn from all the voters,
+    // including the one who doesn't have it. This is wrong.
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addDisagreeVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addPollerOnlyBlockVoter(testPeers[1]);
+    tally.addDisagreeVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+
+    // Note: a landslide of voters say it doesn't exist, yet a repair
+    // will be requested from a random voter. This is wrong.
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addPollerOnlyBlockVoter(testPeers[1]);
+    tally.addPollerOnlyBlockVoter(testPeers[2]);
+    tally.addDisagreeVoter(testPeers[3]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(4, 75));
+
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addPollerOnlyBlockVoter(testPeers[1]);
+    tally.addPollerOnlyBlockVoter(testPeers[2]);
+    tally.addPollerOnlyBlockVoter(testPeers[3]);
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult(4, 75));
+
+    // The LOST_POLLER_ONLY_BLOCK result is returned when the number
+    // of "poller only" voters is greater than the quorum, even if
+    // there are a lot of disagree voters. This is wrong.
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addPollerOnlyBlockVoter(testPeers[1]);
+    tally.addPollerOnlyBlockVoter(testPeers[2]);
+    tally.addPollerOnlyBlockVoter(testPeers[3]);
+    tally.addDisagreeVoter(testPeers[4]);
+    tally.addDisagreeVoter(testPeers[5]);
+    tally.addDisagreeVoter(testPeers[6]);
+    tally.addDisagreeVoter(testPeers[7]);
+    tally.addDisagreeVoter(testPeers[8]);
+    tally.addDisagreeVoter(testPeers[9]);
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult(4, 75));
+
+    tally = new BlockTally();
+    tally.addPollerOnlyBlockVoter(testPeers[0]);
+    tally.addPollerOnlyBlockVoter(testPeers[1]);
+    tally.addPollerOnlyBlockVoter(testPeers[2]);
+    tally.addPollerOnlyBlockVoter(testPeers[3]);
+    tally.addDisagreeVoter(testPeers[4]);
+    tally.addDisagreeVoter(testPeers[5]);
+    tally.addDisagreeVoter(testPeers[6]);
+    tally.addDisagreeVoter(testPeers[7]);
+    tally.addDisagreeVoter(testPeers[8]);
+    tally.addDisagreeVoter(testPeers[9]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult(5, 75));
   }
 
   // XXX: Tests for reputation system.
