@@ -13421,8 +13421,8 @@ comment[exm] = now published by Springer
         au < manifest ; 1964 ; Indian Economic & Social History Review Volume 2 ; 2 >
         au < manifest ; 1966 ; Indian Economic & Social History Review Volume 3 ; 3 >
         au < manifest ; 1967 ; Indian Economic & Social History Review Volume 4 ; 4 >
-        au < exists ; 1968 ; Indian Economic & Social History Review Volume 5 ; 5 >
-        au < exists ; 1969 ; Indian Economic & Social History Review Volume 6 ; 6 >
+        au < manifest ; 1968 ; Indian Economic & Social History Review Volume 5 ; 5 >
+        au < manifest ; 1969 ; Indian Economic & Social History Review Volume 6 ; 6 >
         au < manifest ; 1970 ; Indian Economic & Social History Review Volume 7 ; 7 >
         au < manifest ; 1971 ; Indian Economic & Social History Review Volume 8 ; 8 >
         au < manifest ; 1972 ; Indian Economic & Social History Review Volume 9 ; 9 >
@@ -13484,16 +13484,16 @@ comment[exm] = now published by Springer
         param[base_url] = http://ihr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1999 ; Indian Historical Review Volume 26 ; 26 >
-        au < exists ; 2000 ; Indian Historical Review Volume 27 ; 27 >
-        au < exists ; 2001 ; Indian Historical Review Volume 28 ; 28 >
-        au < exists ; 2002 ; Indian Historical Review Volume 29 ; 29 >
-        au < exists ; 2003 ; Indian Historical Review Volume 30 ; 30 >
-        au < exists ; 2004 ; Indian Historical Review Volume 31 ; 31 >
-        au < exists ; 2005 ; Indian Historical Review Volume 32 ; 32 >
-        au < exists ; 2006 ; Indian Historical Review Volume 33 ; 33 >
-        au < exists ; 2007 ; Indian Historical Review Volume 34 ; 34 >
-        au < exists ; 2008 ; Indian Historical Review Volume 35 ; 35 >
+        au < manifest ; 1999 ; Indian Historical Review Volume 26 ; 26 >
+        au < manifest ; 2000 ; Indian Historical Review Volume 27 ; 27 >
+        au < manifest ; 2001 ; Indian Historical Review Volume 28 ; 28 >
+        au < manifest ; 2002 ; Indian Historical Review Volume 29 ; 29 >
+        au < manifest ; 2003 ; Indian Historical Review Volume 30 ; 30 >
+        au < manifest ; 2004 ; Indian Historical Review Volume 31 ; 31 >
+        au < manifest ; 2005 ; Indian Historical Review Volume 32 ; 32 >
+        au < manifest ; 2006 ; Indian Historical Review Volume 33 ; 33 >
+        au < manifest ; 2007 ; Indian Historical Review Volume 34 ; 34 >
+        au < manifest ; 2008 ; Indian Historical Review Volume 35 ; 35 >
         au < manifest ; 2009 ; Indian Historical Review Volume 36 ; 36 >
         au < manifest ; 2010 ; Indian Historical Review Volume 37 ; 37 >
         au < manifest ; 2011 ; Indian Historical Review Volume 38 ; 38 >
@@ -13759,14 +13759,14 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 2002 ; Information Visualization Volume 1 ; 1 >
-        au < exists ; 2003 ; Information Visualization Volume 2 ; 2 >
-        au < exists ; 2004 ; Information Visualization Volume 3 ; 3 >
-        au < exists ; 2005 ; Information Visualization Volume 4 ; 4 >
-        au < exists ; 2006 ; Information Visualization Volume 5 ; 5 >
-        au < exists ; 2007 ; Information Visualization Volume 6 ; 6 >
-        au < exists ; 2008 ; Information Visualization Volume 7 ; 7 >
-        au < exists ; 2009 ; Information Visualization Volume 8 ; 8 >
+        au < manifest ; 2002 ; Information Visualization Volume 1 ; 1 >
+        au < manifest ; 2003 ; Information Visualization Volume 2 ; 2 >
+        au < manifest ; 2004 ; Information Visualization Volume 3 ; 3 >
+        au < manifest ; 2005 ; Information Visualization Volume 4 ; 4 >
+        au < manifest ; 2006 ; Information Visualization Volume 5 ; 5 >
+        au < manifest ; 2007 ; Information Visualization Volume 6 ; 6 >
+        au < manifest ; 2008 ; Information Visualization Volume 7 ; 7 >
+        au < manifest ; 2009 ; Information Visualization Volume 8 ; 8 >
         au < manifest ; 2010 ; Information Visualization Volume 9 ; 9 >
         au < manifest ; 2011 ; Information Visualization Volume 10 ; 10 >
 
@@ -14403,16 +14403,16 @@ comment[exm] = now published by Springer
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 2000 ; International Journal of Engine Research 1 ; 1 >
-        au < exists ; 2001 ; International Journal of Engine Research 2 ; 2 >
-        au < exists ; 2002 ; International Journal of Engine Research 3 ; 3 >
-        au < exists ; 2003 ; International Journal of Engine Research 4 ; 4 >
-        au < exists ; 2004 ; International Journal of Engine Research 5 ; 5 >
-        au < exists ; 2005 ; International Journal of Engine Research 6 ; 6 >
-        au < exists ; 2006 ; International Journal of Engine Research 7 ; 7 >
-        au < exists ; 2007 ; International Journal of Engine Research 8 ; 8 >
-        au < exists ; 2008 ; International Journal of Engine Research 9 ; 9 >
-        au < exists ; 2009 ; International Journal of Engine Research 10 ; 10 >
+        au < manifest ; 2000 ; International Journal of Engine Research 1 ; 1 >
+        au < manifest ; 2001 ; International Journal of Engine Research 2 ; 2 >
+        au < manifest ; 2002 ; International Journal of Engine Research 3 ; 3 >
+        au < manifest ; 2003 ; International Journal of Engine Research 4 ; 4 >
+        au < manifest ; 2004 ; International Journal of Engine Research 5 ; 5 >
+        au < manifest ; 2005 ; International Journal of Engine Research 6 ; 6 >
+        au < manifest ; 2006 ; International Journal of Engine Research 7 ; 7 >
+        au < manifest ; 2007 ; International Journal of Engine Research 8 ; 8 >
+        au < manifest ; 2008 ; International Journal of Engine Research 9 ; 9 >
+        au < manifest ; 2009 ; International Journal of Engine Research 10 ; 10 >
         au < manifest ; 2010 ; International Journal of Engine Research 11 ; 11 >
 
       }
@@ -14920,7 +14920,7 @@ comment[exm] = now published by Springer
 
         au < manifest ; 1993-1994 ; International Journal of Surgical Pathology Volume 1 ; 1 >
         au < manifest ; 1994-1995 ; International Journal of Surgical Pathology Volume 2 ; 2 >
-        au < exists ; 1995-1996 ; International Journal of Surgical Pathology Volume 3 ; 3 >
+        au < manifest ; 1995-1996 ; International Journal of Surgical Pathology Volume 3 ; 3 >
         au < manifest ; 1996-1997 ; International Journal of Surgical Pathology Volume 4 ; 4 >
         au < manifest ; 1997 ; International Journal of Surgical Pathology Volume 5 ; 5 >
         au < manifest ; 1998 ; International Journal of Surgical Pathology Volume 6 ; 6 >
@@ -15103,7 +15103,7 @@ comment[exm] = now published by Springer
         au < manifest ; 1993 ; International Regional Science Review Volume 16 ; 16 >
         au < manifest ; 1994 ; International Regional Science Review Volume 17 ; 17 >
         au < manifest ; 1995 ; International Regional Science Review Volume 18 ; 18 >
-        au < exists ; 1996 ; International Regional Science Review Volume 19 ; 19 >
+        au < manifest ; 1996 ; International Regional Science Review Volume 19 ; 19 >
         au < manifest ; 1997 ; International Regional Science Review Volume 20 ; 20 >
         au < manifest ; 1998 ; International Regional Science Review Volume 21 ; 21 >
         au < manifest ; 1999 ; International Regional Science Review Volume 22 ; 22 >
@@ -15998,31 +15998,31 @@ comment[exm] = now published by Springer
         param[base_url] = http://jaf.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1986 ; Journal of Accounting, Auditing & Finance Volume 1 ; 1 >
-        au < exists ; 1987 ; Journal of Accounting, Auditing & Finance Volume 2 ; 2 >
-        au < exists ; 1988 ; Journal of Accounting, Auditing & Finance Volume 3 ; 3 >
-        au < exists ; 1989 ; Journal of Accounting, Auditing & Finance Volume 4 ; 4 >
-        au < exists ; 1990 ; Journal of Accounting, Auditing & Finance Volume 5 ; 5 >
-        au < exists ; 1991 ; Journal of Accounting, Auditing & Finance Volume 6 ; 6 >
-        au < exists ; 1992 ; Journal of Accounting, Auditing & Finance Volume 7 ; 7 >
-        au < exists ; 1993 ; Journal of Accounting, Auditing & Finance Volume 8 ; 8 >
-        au < exists ; 1994 ; Journal of Accounting, Auditing & Finance Volume 9 ; 9 >
-        au < exists ; 1995 ; Journal of Accounting, Auditing & Finance Volume 10 ; 10 >
-        au < exists ; 1996 ; Journal of Accounting, Auditing & Finance Volume 11 ; 11 >
-        au < exists ; 1997 ; Journal of Accounting, Auditing & Finance Volume 12 ; 12 >
-        au < exists ; 1998 ; Journal of Accounting, Auditing & Finance Volume 13 ; 13 >
-        au < exists ; 1999 ; Journal of Accounting, Auditing & Finance Volume 14 ; 14 >
-        au < exists ; 2000 ; Journal of Accounting, Auditing & Finance Volume 15 ; 15 >
-        au < exists ; 2001 ; Journal of Accounting, Auditing & Finance Volume 16 ; 16 >
-        au < exists ; 2002 ; Journal of Accounting, Auditing & Finance Volume 17 ; 17 >
-        au < exists ; 2003 ; Journal of Accounting, Auditing & Finance Volume 18 ; 18 >
-        au < exists ; 2004 ; Journal of Accounting, Auditing & Finance Volume 19 ; 19 >
-        au < exists ; 2005 ; Journal of Accounting, Auditing & Finance Volume 20 ; 20 >
-        au < exists ; 2006 ; Journal of Accounting, Auditing & Finance Volume 21 ; 21 >
-        au < exists ; 2007 ; Journal of Accounting, Auditing & Finance Volume 22 ; 22 >
-        au < exists ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 >
-        au < exists ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 >
-        au < exists ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 >
+        au < manifest ; 1986 ; Journal of Accounting, Auditing & Finance Volume 1 ; 1 >
+        au < manifest ; 1987 ; Journal of Accounting, Auditing & Finance Volume 2 ; 2 >
+        au < manifest ; 1988 ; Journal of Accounting, Auditing & Finance Volume 3 ; 3 >
+        au < manifest ; 1989 ; Journal of Accounting, Auditing & Finance Volume 4 ; 4 >
+        au < manifest ; 1990 ; Journal of Accounting, Auditing & Finance Volume 5 ; 5 >
+        au < manifest ; 1991 ; Journal of Accounting, Auditing & Finance Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Accounting, Auditing & Finance Volume 7 ; 7 >
+        au < manifest ; 1993 ; Journal of Accounting, Auditing & Finance Volume 8 ; 8 >
+        au < manifest ; 1994 ; Journal of Accounting, Auditing & Finance Volume 9 ; 9 >
+        au < manifest ; 1995 ; Journal of Accounting, Auditing & Finance Volume 10 ; 10 >
+        au < manifest ; 1996 ; Journal of Accounting, Auditing & Finance Volume 11 ; 11 >
+        au < manifest ; 1997 ; Journal of Accounting, Auditing & Finance Volume 12 ; 12 >
+        au < manifest ; 1998 ; Journal of Accounting, Auditing & Finance Volume 13 ; 13 >
+        au < manifest ; 1999 ; Journal of Accounting, Auditing & Finance Volume 14 ; 14 >
+        au < manifest ; 2000 ; Journal of Accounting, Auditing & Finance Volume 15 ; 15 >
+        au < manifest ; 2001 ; Journal of Accounting, Auditing & Finance Volume 16 ; 16 >
+        au < manifest ; 2002 ; Journal of Accounting, Auditing & Finance Volume 17 ; 17 >
+        au < manifest ; 2003 ; Journal of Accounting, Auditing & Finance Volume 18 ; 18 >
+        au < manifest ; 2004 ; Journal of Accounting, Auditing & Finance Volume 19 ; 19 >
+        au < manifest ; 2005 ; Journal of Accounting, Auditing & Finance Volume 20 ; 20 >
+        au < manifest ; 2006 ; Journal of Accounting, Auditing & Finance Volume 21 ; 21 >
+        au < manifest ; 2007 ; Journal of Accounting, Auditing & Finance Volume 22 ; 22 >
+        au < manifest ; 2008 ; Journal of Accounting, Auditing & Finance Volume 23 ; 23 >
+        au < manifest ; 2009 ; Journal of Accounting, Auditing & Finance Volume 24 ; 24 >
+        au < manifest ; 2010 ; Journal of Accounting, Auditing & Finance Volume 25 ; 25 >
         au < ready ; 2011 ; Journal of Accounting, Auditing & Finance Volume 26 ; 26 >
 
       }
@@ -16910,7 +16910,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1970-1971 ; Journal of Black Studies Volume 1 ; 1 >
-        au < exists ; 1971-1972 ; Journal of Black Studies Volume 2 ; 2 >
+        au < manifest ; 1971-1972 ; Journal of Black Studies Volume 2 ; 2 >
         au < manifest ; 1972-1973 ; Journal of Black Studies Volume 3 ; 3 >
         au < manifest ; 1974-1974 ; Journal of Black Studies Volume 4 ; 4 >
         au < manifest ; 1974-1975 ; Journal of Black Studies Volume 5 ; 5 >
@@ -17497,7 +17497,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1998-1999 ; Journal of Career Development Volume 25 ; 25 >
         au < manifest ; 1999-2000 ; Journal of Career Development Volume 26 ; 26 >
         au < manifest ; 2000-2001 ; Journal of Career Development Volume 27 ; 27 >
-        au < exists ; 2001-2002 ; Journal of Career Development Volume 28 ; 28 >
+        au < manifest ; 2001-2002 ; Journal of Career Development Volume 28 ; 28 >
         au < manifest ; 2002-2003 ; Journal of Career Development Volume 29 ; 29 >
         au < manifest ; 2003-2004 ; Journal of Career Development Volume 30 ; 30 >
         au < manifest ; 2004-2005 ; Journal of Career Development Volume 31 ; 31 >
@@ -17835,50 +17835,50 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://jcp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1961 ; The Journal of Clinical Pharmacology Volume 1  ; 1  >
-        au < exists ; 1962 ; The Journal of Clinical Pharmacology Volume 2  ; 2  >
-        au < exists ; 1963 ; The Journal of Clinical Pharmacology Volume 3  ; 3  >
-        au < exists ; 1964 ; The Journal of Clinical Pharmacology Volume 4  ; 4  >
-        au < exists ; 1965 ; The Journal of Clinical Pharmacology Volume 5  ; 5  >
-        au < exists ; 1966 ; The Journal of Clinical Pharmacology Volume 6  ; 6  >
-        au < exists ; 1967 ; The Journal of Clinical Pharmacology Volume 7  ; 7  >
-        au < exists ; 1968 ; The Journal of Clinical Pharmacology Volume 8  ; 8  >
-        au < exists ; 1969 ; The Journal of Clinical Pharmacology Volume 9  ; 9  >
-        au < exists ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 >
-        au < exists ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 >
-        au < exists ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 >
-        au < exists ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 >
-        au < exists ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 >
-        au < exists ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 >
-        au < exists ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 >
-        au < exists ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 >
-        au < exists ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 >
-        au < exists ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 >
-        au < exists ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 >
-        au < exists ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 >
-        au < exists ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 >
-        au < exists ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 >
-        au < exists ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 >
-        au < exists ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 >
-        au < exists ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 >
-        au < exists ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 >
-        au < exists ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 >
-        au < exists ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 >
-        au < exists ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 >
-        au < exists ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 >
-        au < exists ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 >
-        au < exists ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 >
-        au < exists ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 >
-        au < exists ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 >
-        au < exists ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 >
-        au < exists ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 >
-        au < exists ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 >
-        au < exists ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 >
-        au < exists ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 >
-        au < exists ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 >
-        au < exists ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 >
-        au < exists ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 >
-        au < exists ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 >
+        au < manifest ; 1961 ; The Journal of Clinical Pharmacology Volume 1  ; 1  >
+        au < manifest ; 1962 ; The Journal of Clinical Pharmacology Volume 2  ; 2  >
+        au < manifest ; 1963 ; The Journal of Clinical Pharmacology Volume 3  ; 3  >
+        au < manifest ; 1964 ; The Journal of Clinical Pharmacology Volume 4  ; 4  >
+        au < manifest ; 1965 ; The Journal of Clinical Pharmacology Volume 5  ; 5  >
+        au < manifest ; 1966 ; The Journal of Clinical Pharmacology Volume 6  ; 6  >
+        au < manifest ; 1967 ; The Journal of Clinical Pharmacology Volume 7  ; 7  >
+        au < manifest ; 1968 ; The Journal of Clinical Pharmacology Volume 8  ; 8  >
+        au < manifest ; 1969 ; The Journal of Clinical Pharmacology Volume 9  ; 9  >
+        au < manifest ; 1970 ; The Journal of Clinical Pharmacology Volume 10 ; 10 >
+        au < manifest ; 1971 ; The Journal of Clinical Pharmacology Volume 11 ; 11 >
+        au < manifest ; 1972 ; The Journal of Clinical Pharmacology Volume 12 ; 12 >
+        au < manifest ; 1973 ; The Journal of Clinical Pharmacology Volume 13 ; 13 >
+        au < manifest ; 1974 ; The Journal of Clinical Pharmacology Volume 14 ; 14 >
+        au < manifest ; 1975 ; The Journal of Clinical Pharmacology Volume 15 ; 15 >
+        au < manifest ; 1976 ; The Journal of Clinical Pharmacology Volume 16 ; 16 >
+        au < manifest ; 1977 ; The Journal of Clinical Pharmacology Volume 17 ; 17 >
+        au < manifest ; 1978 ; The Journal of Clinical Pharmacology Volume 18 ; 18 >
+        au < manifest ; 1979 ; The Journal of Clinical Pharmacology Volume 19 ; 19 >
+        au < manifest ; 1980 ; The Journal of Clinical Pharmacology Volume 20 ; 20 >
+        au < manifest ; 1981 ; The Journal of Clinical Pharmacology Volume 21 ; 21 >
+        au < manifest ; 1982 ; The Journal of Clinical Pharmacology Volume 22 ; 22 >
+        au < manifest ; 1983 ; The Journal of Clinical Pharmacology Volume 23 ; 23 >
+        au < manifest ; 1984 ; The Journal of Clinical Pharmacology Volume 24 ; 24 >
+        au < manifest ; 1985 ; The Journal of Clinical Pharmacology Volume 25 ; 25 >
+        au < manifest ; 1986 ; The Journal of Clinical Pharmacology Volume 26 ; 26 >
+        au < manifest ; 1987 ; The Journal of Clinical Pharmacology Volume 27 ; 27 >
+        au < manifest ; 1988 ; The Journal of Clinical Pharmacology Volume 28 ; 28 >
+        au < manifest ; 1989 ; The Journal of Clinical Pharmacology Volume 29 ; 29 >
+        au < manifest ; 1990 ; The Journal of Clinical Pharmacology Volume 30 ; 30 >
+        au < manifest ; 1991 ; The Journal of Clinical Pharmacology Volume 31 ; 31 >
+        au < manifest ; 1992 ; The Journal of Clinical Pharmacology Volume 32 ; 32 >
+        au < manifest ; 1993 ; The Journal of Clinical Pharmacology Volume 33 ; 33 >
+        au < manifest ; 1994 ; The Journal of Clinical Pharmacology Volume 34 ; 34 >
+        au < manifest ; 1995 ; The Journal of Clinical Pharmacology Volume 35 ; 35 >
+        au < manifest ; 1996 ; The Journal of Clinical Pharmacology Volume 36 ; 36 >
+        au < manifest ; 1997 ; The Journal of Clinical Pharmacology Volume 37 ; 37 >
+        au < manifest ; 1998 ; The Journal of Clinical Pharmacology Volume 38 ; 38 >
+        au < manifest ; 1999 ; The Journal of Clinical Pharmacology Volume 39 ; 39 >
+        au < manifest ; 2000 ; The Journal of Clinical Pharmacology Volume 40 ; 40 >
+        au < manifest ; 2001 ; The Journal of Clinical Pharmacology Volume 41 ; 41 >
+        au < manifest ; 2002 ; The Journal of Clinical Pharmacology Volume 42 ; 42 >
+        au < manifest ; 2003 ; The Journal of Clinical Pharmacology Volume 43 ; 43 >
+        au < manifest ; 2004 ; The Journal of Clinical Pharmacology Volume 44 ; 44 >
         au < doNotProcess ; 2005 ; The Journal of Clinical Pharmacology Volume 45 ; 45 >
         au < doNotProcess ; 2006 ; The Journal of Clinical Pharmacology Volume 46 ; 46 >
         au < doNotProcess ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 >
@@ -17903,10 +17903,10 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://edm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 >
-        au < exists ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 >
-        au < exists ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
-        au < exists ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
+        au < manifest ; 2007 ; Journal of Cognitive Engineering and Decision Making Volume 1 ; 1 >
+        au < manifest ; 2008 ; Journal of Cognitive Engineering and Decision Making Volume 2 ; 2 >
+        au < manifest ; 2009 ; Journal of Cognitive Engineering and Decision Making Volume 3 ; 3 >
+        au < manifest ; 2010 ; Journal of Cognitive Engineering and Decision Making Volume 4 ; 4 >
         au < manifest ; 2011 ; Journal of Cognitive Engineering and Decision Making Volume 5 ; 5 >
 
       }
@@ -18145,7 +18145,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1988 ; Journal of Composite Materials Volume 22 ; 22 >
         au < manifest ; 1989 ; Journal of Composite Materials Volume 23 ; 23 >
         au < manifest ; 1990 ; Journal of Composite Materials Volume 24 ; 24 >
-        au < exists ; 1991 ; Journal of Composite Materials Volume 25 ; 25 >
+        au < manifest ; 1991 ; Journal of Composite Materials Volume 25 ; 25 >
         au < manifest ; 1992 ; Journal of Composite Materials Volume 26 ; 26 >
         au < manifest ; 1993 ; Journal of Composite Materials Volume 27 ; 27 >
         au < manifest ; 1994 ; Journal of Composite Materials Volume 28 ; 28 >
@@ -18504,7 +18504,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
         au < manifest ; 1966 ; Journal of Contemporary History Volume 1 ; 1 >
         au < manifest ; 1967 ; Journal of Contemporary History Volume 2 ; 2 >
-        au < exists ; 1968 ; Journal of Contemporary History Volume 3 ; 3 >
+        au < manifest ; 1968 ; Journal of Contemporary History Volume 3 ; 3 >
         au < manifest ; 1969 ; Journal of Contemporary History Volume 4 ; 4 >
         au < manifest ; 1970 ; Journal of Contemporary History Volume 5 ; 5 >
         au < manifest ; 1971 ; Journal of Contemporary History Volume 6 ; 6 >
@@ -19884,10 +19884,10 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1988 ; Journal of Family History Volume 13 ; 13 >
         au < manifest ; 1989 ; Journal of Family History Volume 14 ; 14 >
         au < manifest ; 1990 ; Journal of Family History Volume 15 ; 15 >
-        au < exists ; 1991 ; Journal of Family History Volume 16 ; 16 >
-        au < exists ; 1992 ; Journal of Family History Volume 17 ; 17 >
-        au < exists ; 1993 ; Journal of Family History Volume 18 ; 18 >
-        au < exists ; 1994 ; Journal of Family History Volume 19 ; 19 >
+        au < manifest ; 1991 ; Journal of Family History Volume 16 ; 16 >
+        au < manifest ; 1992 ; Journal of Family History Volume 17 ; 17 >
+        au < manifest ; 1993 ; Journal of Family History Volume 18 ; 18 >
+        au < manifest ; 1994 ; Journal of Family History Volume 19 ; 19 >
         au < manifest ; 1995 ; Journal of Family History Volume 20 ; 20 >
         au < manifest ; 1996 ; Journal of Family History Volume 21 ; 21 >
         au < manifest ; 1997 ; Journal of Family History Volume 22 ; 22 >
@@ -20169,12 +20169,12 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://jgm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2003-2004 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 1 ; 1 >
-        au < exists ; 2004-2005 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 >
-        au < exists ; 2005-2006 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 >
-        au < exists ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 >
-        au < exists ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 >
-        au < exists ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 >
+        au < manifest ; 2003-2004 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 1 ; 1 >
+        au < manifest ; 2004-2005 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 2 ; 2 >
+        au < manifest ; 2005-2006 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 3 ; 3 >
+        au < manifest ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 >
+        au < manifest ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 >
+        au < manifest ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 >
         au < manifest ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 >
         au < ready ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 >
 
@@ -20226,8 +20226,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1989 ; Journal of Geriatric Psychiatry and Neurology Volume 2 ; 2 >
         au < manifest ; 1990 ; Journal of Geriatric Psychiatry and Neurology Volume 3 ; 3 >
         au < manifest ; 1991 ; Journal of Geriatric Psychiatry and Neurology Volume 4 ; 4 >
-        au < exists ; 1992 ; Journal of Geriatric Psychiatry and Neurology Volume 5 ; 5 >
-        au < exists ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 >
+        au < manifest ; 1992 ; Journal of Geriatric Psychiatry and Neurology Volume 5 ; 5 >
+        au < manifest ; 1993 ; Journal of Geriatric Psychiatry and Neurology Volume 6 ; 6 >
         au < manifest ; 1994 ; Journal of Geriatric Psychiatry and Neurology Volume 7 ; 7 >
         au < manifest ; 1995 ; Journal of Geriatric Psychiatry and Neurology Volume 8 ; 8 >
         au < doesNotExist ; 1996 ; Journal of Geriatric Psychiatry and Neurology Volume 9 ; 9 >
@@ -20265,11 +20265,11 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://hsb.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 >
-        au < exists ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 >
-        au < exists ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 >
-        au < exists ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 >
-        au < exists ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 >
+        au < manifest ; 2004 ; Journal of Health and Social Behavior Volume 45 ; 45 >
+        au < manifest ; 2005 ; Journal of Health and Social Behavior Volume 46 ; 46 >
+        au < manifest ; 2006 ; Journal of Health and Social Behavior Volume 47 ; 47 >
+        au < manifest ; 2007 ; Journal of Health and Social Behavior Volume 48 ; 48 >
+        au < manifest ; 2008 ; Journal of Health and Social Behavior Volume 49 ; 49 >
         au < manifest ; 2009 ; Journal of Health and Social Behavior Volume 50 ; 50 >
         au < manifest ; 2010 ; Journal of Health and Social Behavior Volume 51 ; 51 >
         au < manifest ; 2011 ; Journal of Health and Social Behavior Volume 52 ; 52 >
@@ -20501,64 +20501,64 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://jhc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1953 ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
-        au < exists ; 1954 ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 >
-        au < exists ; 1955 ; Journal of Histochemistry and Cytochemistry Volume 3 ; 3 >
-        au < exists ; 1956 ; Journal of Histochemistry and Cytochemistry Volume 4 ; 4 >
-        au < exists ; 1957 ; Journal of Histochemistry and Cytochemistry Volume 5 ; 5 >
-        au < exists ; 1958 ; Journal of Histochemistry and Cytochemistry Volume 6 ; 6 >
-        au < exists ; 1959 ; Journal of Histochemistry and Cytochemistry Volume 7 ; 7 >
-        au < exists ; 1960 ; Journal of Histochemistry and Cytochemistry Volume 8 ; 8 >
-        au < exists ; 1961 ; Journal of Histochemistry and Cytochemistry Volume 9 ; 9 >
-        au < exists ; 1962 ; Journal of Histochemistry and Cytochemistry Volume 10 ; 10 >
-        au < exists ; 1963 ; Journal of Histochemistry and Cytochemistry Volume 11 ; 11 >
-        au < exists ; 1964 ; Journal of Histochemistry and Cytochemistry Volume 12 ; 12 >
-        au < exists ; 1965 ; Journal of Histochemistry and Cytochemistry Volume 13 ; 13 >
-        au < exists ; 1966 ; Journal of Histochemistry and Cytochemistry Volume 14 ; 14 >
-        au < exists ; 1967 ; Journal of Histochemistry and Cytochemistry Volume 15 ; 15 >
-        au < exists ; 1968 ; Journal of Histochemistry and Cytochemistry Volume 16 ; 16 >
-        au < exists ; 1969 ; Journal of Histochemistry and Cytochemistry Volume 17 ; 17 >
-        au < exists ; 1970 ; Journal of Histochemistry and Cytochemistry Volume 18 ; 18 >
-        au < exists ; 1971 ; Journal of Histochemistry and Cytochemistry Volume 19 ; 19 >
-        au < exists ; 1972 ; Journal of Histochemistry and Cytochemistry Volume 20 ; 20 >
-        au < exists ; 1973 ; Journal of Histochemistry and Cytochemistry Volume 21 ; 21 >
-        au < exists ; 1974 ; Journal of Histochemistry and Cytochemistry Volume 22 ; 22 >
-        au < exists ; 1975 ; Journal of Histochemistry and Cytochemistry Volume 23 ; 23 >
-        au < exists ; 1976 ; Journal of Histochemistry and Cytochemistry Volume 24 ; 24 >
-        au < exists ; 1977 ; Journal of Histochemistry and Cytochemistry Volume 25 ; 25 >
-        au < exists ; 1978 ; Journal of Histochemistry and Cytochemistry Volume 26 ; 26 >
-        au < exists ; 1979 ; Journal of Histochemistry and Cytochemistry Volume 27 ; 27 >
-        au < exists ; 1980 ; Journal of Histochemistry and Cytochemistry Volume 28 ; 28 >
-        au < exists ; 1981 ; Journal of Histochemistry and Cytochemistry Volume 29 ; 29 >
-        au < exists ; 1982 ; Journal of Histochemistry and Cytochemistry Volume 30 ; 30 >
-        au < exists ; 1983 ; Journal of Histochemistry and Cytochemistry Volume 31 ; 31 >
-        au < exists ; 1984 ; Journal of Histochemistry and Cytochemistry Volume 32 ; 32 >
-        au < exists ; 1985 ; Journal of Histochemistry and Cytochemistry Volume 33 ; 33 >
-        au < exists ; 1986 ; Journal of Histochemistry and Cytochemistry Volume 34 ; 34 >
-        au < exists ; 1987 ; Journal of Histochemistry and Cytochemistry Volume 35 ; 35 >
-        au < exists ; 1988 ; Journal of Histochemistry and Cytochemistry Volume 36 ; 36 >
-        au < exists ; 1989 ; Journal of Histochemistry and Cytochemistry Volume 37 ; 37 >
-        au < exists ; 1990 ; Journal of Histochemistry and Cytochemistry Volume 38 ; 38 >
-        au < exists ; 1991 ; Journal of Histochemistry and Cytochemistry Volume 39 ; 39 >
-        au < exists ; 1992 ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 >
-        au < exists ; 1993 ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 >
-        au < exists ; 1994 ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 >
-        au < exists ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 >
-        au < exists ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 >
-        au < exists ; 1997 ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 >
-        au < exists ; 1998 ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 >
-        au < exists ; 1999 ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 >
-        au < exists ; 2000 ; Journal of Histochemistry and Cytochemistry Volume 48 ; 48 >
-        au < exists ; 2001 ; Journal of Histochemistry and Cytochemistry Volume 49 ; 49 >
-        au < exists ; 2002 ; Journal of Histochemistry and Cytochemistry Volume 50 ; 50 >
-        au < exists ; 2003 ; Journal of Histochemistry and Cytochemistry Volume 51 ; 51 >
-        au < exists ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-        au < exists ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
-        au < exists ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-        au < exists ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-        au < exists ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-        au < exists ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-        au < exists ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+        au < manifest ; 1953 ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
+        au < manifest ; 1954 ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 >
+        au < manifest ; 1955 ; Journal of Histochemistry and Cytochemistry Volume 3 ; 3 >
+        au < manifest ; 1956 ; Journal of Histochemistry and Cytochemistry Volume 4 ; 4 >
+        au < manifest ; 1957 ; Journal of Histochemistry and Cytochemistry Volume 5 ; 5 >
+        au < manifest ; 1958 ; Journal of Histochemistry and Cytochemistry Volume 6 ; 6 >
+        au < manifest ; 1959 ; Journal of Histochemistry and Cytochemistry Volume 7 ; 7 >
+        au < manifest ; 1960 ; Journal of Histochemistry and Cytochemistry Volume 8 ; 8 >
+        au < manifest ; 1961 ; Journal of Histochemistry and Cytochemistry Volume 9 ; 9 >
+        au < manifest ; 1962 ; Journal of Histochemistry and Cytochemistry Volume 10 ; 10 >
+        au < manifest ; 1963 ; Journal of Histochemistry and Cytochemistry Volume 11 ; 11 >
+        au < manifest ; 1964 ; Journal of Histochemistry and Cytochemistry Volume 12 ; 12 >
+        au < manifest ; 1965 ; Journal of Histochemistry and Cytochemistry Volume 13 ; 13 >
+        au < manifest ; 1966 ; Journal of Histochemistry and Cytochemistry Volume 14 ; 14 >
+        au < manifest ; 1967 ; Journal of Histochemistry and Cytochemistry Volume 15 ; 15 >
+        au < manifest ; 1968 ; Journal of Histochemistry and Cytochemistry Volume 16 ; 16 >
+        au < manifest ; 1969 ; Journal of Histochemistry and Cytochemistry Volume 17 ; 17 >
+        au < manifest ; 1970 ; Journal of Histochemistry and Cytochemistry Volume 18 ; 18 >
+        au < manifest ; 1971 ; Journal of Histochemistry and Cytochemistry Volume 19 ; 19 >
+        au < manifest ; 1972 ; Journal of Histochemistry and Cytochemistry Volume 20 ; 20 >
+        au < manifest ; 1973 ; Journal of Histochemistry and Cytochemistry Volume 21 ; 21 >
+        au < manifest ; 1974 ; Journal of Histochemistry and Cytochemistry Volume 22 ; 22 >
+        au < manifest ; 1975 ; Journal of Histochemistry and Cytochemistry Volume 23 ; 23 >
+        au < manifest ; 1976 ; Journal of Histochemistry and Cytochemistry Volume 24 ; 24 >
+        au < manifest ; 1977 ; Journal of Histochemistry and Cytochemistry Volume 25 ; 25 >
+        au < manifest ; 1978 ; Journal of Histochemistry and Cytochemistry Volume 26 ; 26 >
+        au < manifest ; 1979 ; Journal of Histochemistry and Cytochemistry Volume 27 ; 27 >
+        au < manifest ; 1980 ; Journal of Histochemistry and Cytochemistry Volume 28 ; 28 >
+        au < manifest ; 1981 ; Journal of Histochemistry and Cytochemistry Volume 29 ; 29 >
+        au < manifest ; 1982 ; Journal of Histochemistry and Cytochemistry Volume 30 ; 30 >
+        au < manifest ; 1983 ; Journal of Histochemistry and Cytochemistry Volume 31 ; 31 >
+        au < manifest ; 1984 ; Journal of Histochemistry and Cytochemistry Volume 32 ; 32 >
+        au < manifest ; 1985 ; Journal of Histochemistry and Cytochemistry Volume 33 ; 33 >
+        au < manifest ; 1986 ; Journal of Histochemistry and Cytochemistry Volume 34 ; 34 >
+        au < manifest ; 1987 ; Journal of Histochemistry and Cytochemistry Volume 35 ; 35 >
+        au < manifest ; 1988 ; Journal of Histochemistry and Cytochemistry Volume 36 ; 36 >
+        au < manifest ; 1989 ; Journal of Histochemistry and Cytochemistry Volume 37 ; 37 >
+        au < manifest ; 1990 ; Journal of Histochemistry and Cytochemistry Volume 38 ; 38 >
+        au < manifest ; 1991 ; Journal of Histochemistry and Cytochemistry Volume 39 ; 39 >
+        au < manifest ; 1992 ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 >
+        au < manifest ; 1993 ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 >
+        au < manifest ; 1994 ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 >
+        au < manifest ; 1995 ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 >
+        au < manifest ; 1996 ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 >
+        au < manifest ; 1997 ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 >
+        au < manifest ; 1998 ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 >
+        au < manifest ; 1999 ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 >
+        au < manifest ; 2000 ; Journal of Histochemistry and Cytochemistry Volume 48 ; 48 >
+        au < manifest ; 2001 ; Journal of Histochemistry and Cytochemistry Volume 49 ; 49 >
+        au < manifest ; 2002 ; Journal of Histochemistry and Cytochemistry Volume 50 ; 50 >
+        au < manifest ; 2003 ; Journal of Histochemistry and Cytochemistry Volume 51 ; 51 >
+        au < manifest ; 2004 ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+        au < manifest ; 2005 ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+        au < manifest ; 2006 ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+        au < manifest ; 2007 ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+        au < manifest ; 2008 ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+        au < manifest ; 2009 ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+        au < manifest ; 2010 ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
         au < ready ; 2011 ; Journal of Histochemistry and Cytochemistry Volume 59 ; 59 >
         
       }       
@@ -20612,7 +20612,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1987 ; Journal of Holistic Nursing Volume 5 ; 5 >
         au < manifest ; 1988 ; Journal of Holistic Nursing Volume 6 ; 6 >
         au < manifest ; 1989 ; Journal of Holistic Nursing Volume 7 ; 7 >
-        au < exists ; 1989 ; Journal of Holistic Nursing Volume 8 ; 8 >
+        au < manifest ; 1989 ; Journal of Holistic Nursing Volume 8 ; 8 >
         au < manifest ; 1991 ; Journal of Holistic Nursing Volume 9 ; 9 >
         au < manifest ; 1992 ; Journal of Holistic Nursing Volume 10 ; 10 >
         au < manifest ; 1993 ; Journal of Holistic Nursing Volume 11 ; 11 >
@@ -20692,7 +20692,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < manifest ; 1987 ; Journal of Hospitality & Tourism Research Volume 11 ; 11 >
         au < manifest ; 1988 ; Journal of Hospitality & Tourism Research Volume 12 ; 12 >
         au < manifest ; 1989 ; Journal of Hospitality & Tourism Research Volume 13 ; 13 >
-        au < exists ; 1990-1991 ; Journal of Hospitality & Tourism Research Volume 14 ; 14 >
+        au < manifest ; 1990-1991 ; Journal of Hospitality & Tourism Research Volume 14 ; 14 >
         au < manifest ; 1991-1992 ; Journal of Hospitality & Tourism Research Volume 15 ; 15 >
         au < manifest ; 1993-1993 ; Journal of Hospitality & Tourism Research Volume 16 ; 16 >
         au < manifest ; 1993-1994 ; Journal of Hospitality & Tourism Research Volume 17 ; 17 >
@@ -22118,15 +22118,15 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         param[base_url] = http://mmj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2001 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 1 ; 1 >
-        au < exists ; 2002 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 2 ; 2 >
-        au < exists ; 2003 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 3 ; 3 >
-        au < exists ; 2004 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 4 ; 4 >
-        au < exists ; 2005 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 5 ; 5 >
-        au < exists ; 2006 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 6 ; 6 >
-        au < exists ; 2007 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 7 ; 7 >
-        au < exists ; 2008 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 8 ; 8 >
-        au < exists ; 2009 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 9 ; 9 >
+        au < manifest ; 2001 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 1 ; 1 >
+        au < manifest ; 2002 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 2 ; 2 >
+        au < manifest ; 2003 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 3 ; 3 >
+        au < manifest ; 2004 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 4 ; 4 >
+        au < manifest ; 2005 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 5 ; 5 >
+        au < manifest ; 2006 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 6 ; 6 >
+        au < manifest ; 2007 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 7 ; 7 >
+        au < manifest ; 2008 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 8 ; 8 >
+        au < manifest ; 2009 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 9 ; 9 >
         au < manifest ; 2010 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 10 ; 10 >
         au < manifest ; 2011 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 11 ; 11 >
 
@@ -22211,15 +22211,15 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jmt.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1991 ; Journal of Music Teacher Education Volume 1 ; 1 >
-        au < exists ; 1992 ; Journal of Music Teacher Education Volume 2 ; 2 >
-        au < exists ; 1993 ; Journal of Music Teacher Education Volume 3 ; 3 >
-        au < exists ; 1994 ; Journal of Music Teacher Education Volume 4 ; 4 >
-        au < exists ; 1995 ; Journal of Music Teacher Education Volume 5 ; 5 >
-        au < exists ; 1996 ; Journal of Music Teacher Education Volume 6 ; 6 >
-        au < exists ; 1997 ; Journal of Music Teacher Education Volume 7 ; 7 >
-        au < exists ; 1998 ; Journal of Music Teacher Education Volume 8 ; 8 >
-        au < exists ; 1999 ; Journal of Music Teacher Education Volume 9 ; 9 >
+        au < manifest ; 1991 ; Journal of Music Teacher Education Volume 1 ; 1 >
+        au < manifest ; 1992 ; Journal of Music Teacher Education Volume 2 ; 2 >
+        au < manifest ; 1993 ; Journal of Music Teacher Education Volume 3 ; 3 >
+        au < manifest ; 1994 ; Journal of Music Teacher Education Volume 4 ; 4 >
+        au < manifest ; 1995 ; Journal of Music Teacher Education Volume 5 ; 5 >
+        au < manifest ; 1996 ; Journal of Music Teacher Education Volume 6 ; 6 >
+        au < manifest ; 1997 ; Journal of Music Teacher Education Volume 7 ; 7 >
+        au < manifest ; 1998 ; Journal of Music Teacher Education Volume 8 ; 8 >
+        au < manifest ; 1999 ; Journal of Music Teacher Education Volume 9 ; 9 >
         au < manifest ; 2001 ; Journal of Music Teacher Education Volume 10 ; 10 >
         au < manifest ; 2001 ; Journal of Music Teacher Education Volume 11 ; 11 >
         au < manifest ; 2002 ; Journal of Music Teacher Education Volume 12 ; 12 >
@@ -23826,50 +23826,50 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sdj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1965-1966 ; Journal of Strain Analysis for Engineering Design Volume 1 ; 1 >
-        au < exists ; 1967 ; Journal of Strain Analysis for Engineering Design Volume 2 ; 2 >
-        au < exists ; 1968 ; Journal of Strain Analysis for Engineering Design Volume 3 ; 3 >
-        au < exists ; 1969 ; Journal of Strain Analysis for Engineering Design Volume 4 ; 4 >
-        au < exists ; 1970 ; Journal of Strain Analysis for Engineering Design Volume 5 ; 5 >
-        au < exists ; 1971 ; Journal of Strain Analysis for Engineering Design Volume 6 ; 6 >
-        au < exists ; 1972 ; Journal of Strain Analysis for Engineering Design Volume 7 ; 7 >
-        au < exists ; 1973 ; Journal of Strain Analysis for Engineering Design Volume 8 ; 8 >
-        au < exists ; 1974 ; Journal of Strain Analysis for Engineering Design Volume 9 ; 9 >
-        au < exists ; 1975 ; Journal of Strain Analysis for Engineering Design Volume 10 ; 10 >
-        au < exists ; 1976 ; Journal of Strain Analysis for Engineering Design Volume 11 ; 11 >
-        au < exists ; 1977 ; Journal of Strain Analysis for Engineering Design Volume 12 ; 12 >
-        au < exists ; 1978 ; Journal of Strain Analysis for Engineering Design Volume 13 ; 13 >
-        au < exists ; 1979 ; Journal of Strain Analysis for Engineering Design Volume 14 ; 14 >
-        au < exists ; 1980 ; Journal of Strain Analysis for Engineering Design Volume 15 ; 15 >
-        au < exists ; 1981 ; Journal of Strain Analysis for Engineering Design Volume 16 ; 16 >
-        au < exists ; 1982 ; Journal of Strain Analysis for Engineering Design Volume 17 ; 17 >
-        au < exists ; 1983 ; Journal of Strain Analysis for Engineering Design Volume 18 ; 18 >
-        au < exists ; 1984 ; Journal of Strain Analysis for Engineering Design Volume 19 ; 19 >
-        au < exists ; 1985 ; Journal of Strain Analysis for Engineering Design Volume 20 ; 20 >
-        au < exists ; 1986 ; Journal of Strain Analysis for Engineering Design Volume 21 ; 21 >
-        au < exists ; 1987 ; Journal of Strain Analysis for Engineering Design Volume 22 ; 22 >
-        au < exists ; 1988 ; Journal of Strain Analysis for Engineering Design Volume 23 ; 23 >
-        au < exists ; 1989 ; Journal of Strain Analysis for Engineering Design Volume 24 ; 24 >
-        au < exists ; 1990 ; Journal of Strain Analysis for Engineering Design Volume 25 ; 25 >
-        au < exists ; 1991 ; Journal of Strain Analysis for Engineering Design Volume 26 ; 26 >
-        au < exists ; 1992 ; Journal of Strain Analysis for Engineering Design Volume 27 ; 27 >
-        au < exists ; 1993 ; Journal of Strain Analysis for Engineering Design Volume 28 ; 28 >
-        au < exists ; 1994 ; Journal of Strain Analysis for Engineering Design Volume 29 ; 29 >
-        au < exists ; 1995 ; Journal of Strain Analysis for Engineering Design Volume 30 ; 30 >
-        au < exists ; 1996 ; Journal of Strain Analysis for Engineering Design Volume 31 ; 31 >
-        au < exists ; 1997 ; Journal of Strain Analysis for Engineering Design Volume 32 ; 32 >
-        au < exists ; 1998 ; Journal of Strain Analysis for Engineering Design Volume 33 ; 33 >
-        au < exists ; 1999 ; Journal of Strain Analysis for Engineering Design Volume 34 ; 34 >
-        au < exists ; 2000 ; Journal of Strain Analysis for Engineering Design Volume 35 ; 35 >
-        au < exists ; 2001 ; Journal of Strain Analysis for Engineering Design Volume 36 ; 36 >
-        au < exists ; 2002 ; Journal of Strain Analysis for Engineering Design Volume 37 ; 37 >
-        au < exists ; 2003 ; Journal of Strain Analysis for Engineering Design Volume 38 ; 38 >
-        au < exists ; 2004 ; Journal of Strain Analysis for Engineering Design Volume 39 ; 39 >
-        au < exists ; 2005 ; Journal of Strain Analysis for Engineering Design Volume 40 ; 40 >
-        au < exists ; 2006 ; Journal of Strain Analysis for Engineering Design Volume 41 ; 41 >
-        au < exists ; 2007 ; Journal of Strain Analysis for Engineering Design Volume 42 ; 42 >
-        au < exists ; 2008 ; Journal of Strain Analysis for Engineering Design Volume 43 ; 43 >
-        au < exists ; 2009 ; Journal of Strain Analysis for Engineering Design Volume 44 ; 44 >
+        au < manifest ; 1965-1966 ; Journal of Strain Analysis for Engineering Design Volume 1 ; 1 >
+        au < manifest ; 1967 ; Journal of Strain Analysis for Engineering Design Volume 2 ; 2 >
+        au < manifest ; 1968 ; Journal of Strain Analysis for Engineering Design Volume 3 ; 3 >
+        au < manifest ; 1969 ; Journal of Strain Analysis for Engineering Design Volume 4 ; 4 >
+        au < manifest ; 1970 ; Journal of Strain Analysis for Engineering Design Volume 5 ; 5 >
+        au < manifest ; 1971 ; Journal of Strain Analysis for Engineering Design Volume 6 ; 6 >
+        au < manifest ; 1972 ; Journal of Strain Analysis for Engineering Design Volume 7 ; 7 >
+        au < manifest ; 1973 ; Journal of Strain Analysis for Engineering Design Volume 8 ; 8 >
+        au < manifest ; 1974 ; Journal of Strain Analysis for Engineering Design Volume 9 ; 9 >
+        au < manifest ; 1975 ; Journal of Strain Analysis for Engineering Design Volume 10 ; 10 >
+        au < manifest ; 1976 ; Journal of Strain Analysis for Engineering Design Volume 11 ; 11 >
+        au < manifest ; 1977 ; Journal of Strain Analysis for Engineering Design Volume 12 ; 12 >
+        au < manifest ; 1978 ; Journal of Strain Analysis for Engineering Design Volume 13 ; 13 >
+        au < manifest ; 1979 ; Journal of Strain Analysis for Engineering Design Volume 14 ; 14 >
+        au < manifest ; 1980 ; Journal of Strain Analysis for Engineering Design Volume 15 ; 15 >
+        au < manifest ; 1981 ; Journal of Strain Analysis for Engineering Design Volume 16 ; 16 >
+        au < manifest ; 1982 ; Journal of Strain Analysis for Engineering Design Volume 17 ; 17 >
+        au < manifest ; 1983 ; Journal of Strain Analysis for Engineering Design Volume 18 ; 18 >
+        au < manifest ; 1984 ; Journal of Strain Analysis for Engineering Design Volume 19 ; 19 >
+        au < manifest ; 1985 ; Journal of Strain Analysis for Engineering Design Volume 20 ; 20 >
+        au < manifest ; 1986 ; Journal of Strain Analysis for Engineering Design Volume 21 ; 21 >
+        au < manifest ; 1987 ; Journal of Strain Analysis for Engineering Design Volume 22 ; 22 >
+        au < manifest ; 1988 ; Journal of Strain Analysis for Engineering Design Volume 23 ; 23 >
+        au < manifest ; 1989 ; Journal of Strain Analysis for Engineering Design Volume 24 ; 24 >
+        au < manifest ; 1990 ; Journal of Strain Analysis for Engineering Design Volume 25 ; 25 >
+        au < manifest ; 1991 ; Journal of Strain Analysis for Engineering Design Volume 26 ; 26 >
+        au < manifest ; 1992 ; Journal of Strain Analysis for Engineering Design Volume 27 ; 27 >
+        au < manifest ; 1993 ; Journal of Strain Analysis for Engineering Design Volume 28 ; 28 >
+        au < manifest ; 1994 ; Journal of Strain Analysis for Engineering Design Volume 29 ; 29 >
+        au < manifest ; 1995 ; Journal of Strain Analysis for Engineering Design Volume 30 ; 30 >
+        au < manifest ; 1996 ; Journal of Strain Analysis for Engineering Design Volume 31 ; 31 >
+        au < manifest ; 1997 ; Journal of Strain Analysis for Engineering Design Volume 32 ; 32 >
+        au < manifest ; 1998 ; Journal of Strain Analysis for Engineering Design Volume 33 ; 33 >
+        au < manifest ; 1999 ; Journal of Strain Analysis for Engineering Design Volume 34 ; 34 >
+        au < manifest ; 2000 ; Journal of Strain Analysis for Engineering Design Volume 35 ; 35 >
+        au < manifest ; 2001 ; Journal of Strain Analysis for Engineering Design Volume 36 ; 36 >
+        au < manifest ; 2002 ; Journal of Strain Analysis for Engineering Design Volume 37 ; 37 >
+        au < manifest ; 2003 ; Journal of Strain Analysis for Engineering Design Volume 38 ; 38 >
+        au < manifest ; 2004 ; Journal of Strain Analysis for Engineering Design Volume 39 ; 39 >
+        au < manifest ; 2005 ; Journal of Strain Analysis for Engineering Design Volume 40 ; 40 >
+        au < manifest ; 2006 ; Journal of Strain Analysis for Engineering Design Volume 41 ; 41 >
+        au < manifest ; 2007 ; Journal of Strain Analysis for Engineering Design Volume 42 ; 42 >
+        au < manifest ; 2008 ; Journal of Strain Analysis for Engineering Design Volume 43 ; 43 >
+        au < manifest ; 2009 ; Journal of Strain Analysis for Engineering Design Volume 44 ; 44 >
         au < manifest ; 2010 ; Journal of Strain Analysis for Engineering Design Volume 45 ; 45 >
         au < manifest ; 2011 ; Journal of Strain Analysis for Engineering Design Volume 46 ; 46 >
 
@@ -24279,8 +24279,66 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
 
+        au < exists ; 1911 ; Journal of the Institution of Locomotive Engineers Volume 1 ; 1 >
+        au < exists ; 1912 ; Journal of the Institution of Locomotive Engineers Volume 2 ; 2 >
+        au < exists ; 1913 ; Journal of the Institution of Locomotive Engineers Volume 3 ; 3 >
+        au < exists ; 1914 ; Journal of the Institution of Locomotive Engineers Volume 4 ; 4 >
+        au < exists ; 1915 ; Journal of the Institution of Locomotive Engineers Volume 5 ; 5 >
+        au < exists ; 1916 ; Journal of the Institution of Locomotive Engineers Volume 6 ; 6 >
+        au < exists ; 1917 ; Journal of the Institution of Locomotive Engineers Volume 7 ; 7 >
+        au < exists ; 1918 ; Journal of the Institution of Locomotive Engineers Volume 8 ; 8 >
+        au < exists ; 1919 ; Journal of the Institution of Locomotive Engineers Volume 9 ; 9 >
+        au < exists ; 1920 ; Journal of the Institution of Locomotive Engineers Volume 10 ; 10 >
+        au < exists ; 1921 ; Journal of the Institution of Locomotive Engineers Volume 11 ; 11 >
+        au < exists ; 1922 ; Journal of the Institution of Locomotive Engineers Volume 12 ; 12 >
+        au < exists ; 1923 ; Journal of the Institution of Locomotive Engineers Volume 13 ; 13 >
+        au < exists ; 1924 ; Journal of the Institution of Locomotive Engineers Volume 14 ; 14 >
+        au < exists ; 1925 ; Journal of the Institution of Locomotive Engineers Volume 15 ; 15 >
+        au < exists ; 1926 ; Journal of the Institution of Locomotive Engineers Volume 16 ; 16 >
+        au < exists ; 1927 ; Journal of the Institution of Locomotive Engineers Volume 17 ; 17 >
+        au < exists ; 1928 ; Journal of the Institution of Locomotive Engineers Volume 18 ; 18 >
+        au < exists ; 1929 ; Journal of the Institution of Locomotive Engineers Volume 19 ; 19 >
+        au < exists ; 1930 ; Journal of the Institution of Locomotive Engineers Volume 20 ; 20 >
+        au < exists ; 1931 ; Journal of the Institution of Locomotive Engineers Volume 21 ; 21 >
+        au < exists ; 1932 ; Journal of the Institution of Locomotive Engineers Volume 22 ; 22 >
+        au < exists ; 1933 ; Journal of the Institution of Locomotive Engineers Volume 23 ; 23 >
+        au < exists ; 1934 ; Journal of the Institution of Locomotive Engineers Volume 24 ; 24 >
+        au < exists ; 1935 ; Journal of the Institution of Locomotive Engineers Volume 25 ; 25 >
+        au < exists ; 1936 ; Journal of the Institution of Locomotive Engineers Volume 26 ; 26 >
+        au < exists ; 1937 ; Journal of the Institution of Locomotive Engineers Volume 27 ; 27 >
+        au < exists ; 1938 ; Journal of the Institution of Locomotive Engineers Volume 28 ; 28 >
+        au < exists ; 1939 ; Journal of the Institution of Locomotive Engineers Volume 29 ; 29 >
+        au < exists ; 1940 ; Journal of the Institution of Locomotive Engineers Volume 30 ; 30 >
+        au < exists ; 1941 ; Journal of the Institution of Locomotive Engineers Volume 31 ; 31 >
+        au < exists ; 1942 ; Journal of the Institution of Locomotive Engineers Volume 32 ; 32 >
+        au < exists ; 1943 ; Journal of the Institution of Locomotive Engineers Volume 33 ; 33 >
+        au < exists ; 1944 ; Journal of the Institution of Locomotive Engineers Volume 34 ; 34 >
+        au < exists ; 1945 ; Journal of the Institution of Locomotive Engineers Volume 35 ; 35 >
+        au < exists ; 1946 ; Journal of the Institution of Locomotive Engineers Volume 36 ; 36 >
+        au < exists ; 1947 ; Journal of the Institution of Locomotive Engineers Volume 37 ; 37 >
+        au < exists ; 1948 ; Journal of the Institution of Locomotive Engineers Volume 38 ; 38 >
+        au < exists ; 1949 ; Journal of the Institution of Locomotive Engineers Volume 39 ; 39 >
+        au < exists ; 1950 ; Journal of the Institution of Locomotive Engineers Volume 40 ; 40 >
+        au < exists ; 1951 ; Journal of the Institution of Locomotive Engineers Volume 41 ; 41 >
+        au < exists ; 1952 ; Journal of the Institution of Locomotive Engineers Volume 42 ; 42 >
+        au < exists ; 1953 ; Journal of the Institution of Locomotive Engineers Volume 43 ; 43 >
+        au < exists ; 1954 ; Journal of the Institution of Locomotive Engineers Volume 44 ; 44 >
+        au < exists ; 1955 ; Journal of the Institution of Locomotive Engineers Volume 45 ; 45 >
+        au < exists ; 1956 ; Journal of the Institution of Locomotive Engineers Volume 46 ; 46 >
+        au < exists ; 1957 ; Journal of the Institution of Locomotive Engineers Volume 47 ; 47 >
+        au < exists ; 1958 ; Journal of the Institution of Locomotive Engineers Volume 48 ; 48 >
+        au < exists ; 1959 ; Journal of the Institution of Locomotive Engineers Volume 49 ; 49 >
+        au < exists ; 1960 ; Journal of the Institution of Locomotive Engineers Volume 50 ; 50 >
+        au < exists ; 1961 ; Journal of the Institution of Locomotive Engineers Volume 51 ; 51 >
+        au < exists ; 1962 ; Journal of the Institution of Locomotive Engineers Volume 52 ; 52 >
+        au < exists ; 1963 ; Journal of the Institution of Locomotive Engineers Volume 53 ; 53 >
+        au < exists ; 1964 ; Journal of the Institution of Locomotive Engineers Volume 54 ; 54 >
+        au < exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 >
+        au < exists ; 1965 ; Journal of the Institution of Locomotive Engineers Volume 55 ; 55 >
+        au < exists ; 1966 ; Journal of the Institution of Locomotive Engineers Volume 56 ; 56 >
+        au < exists ; 1967 ; Journal of the Institution of Locomotive Engineers Volume 57 ; 57 >
         au < exists ; 1968 ; Journal of the Institution of Locomotive Engineers Volume 58 ; 58 >
-        au < exists ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 >
+        au < manifest ; 1969 ; Journal of the Institution of Locomotive Engineers Volume 59 ; 59 >
 
       }
       
@@ -24556,10 +24614,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://pps.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
-        au < exists ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
-        au < exists ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
-        au < exists ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
+        au < manifest ; 2006 ; Perspectives on Psychological Science Volume 1 ; 1 >
+        au < manifest ; 2007 ; Perspectives on Psychological Science Volume 2 ; 2 >
+        au < manifest ; 2008 ; Perspectives on Psychological Science Volume 3 ; 3 >
+        au < manifest ; 2009 ; Perspectives on Psychological Science Volume 4 ; 4 >
         au < manifest ; 2010 ; Perspectives on Psychological Science Volume 5 ; 5 >
         au < manifest ; 2011 ; Perspectives on Psychological Science Volume 6 ; 6 >
 
@@ -25010,28 +25068,28 @@ comment[mpj] = now published by Brill
         param[base_url] = http://vdi.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 >
-        au < exists ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 >
-        au < exists ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 >
-        au < exists ; 1992 ; Journal of Veterinary Diagnostic Investigation Volume 4 ; 4 >
-        au < exists ; 1993 ; Journal of Veterinary Diagnostic Investigation Volume 5 ; 5 >
-        au < exists ; 1994 ; Journal of Veterinary Diagnostic Investigation Volume 6 ; 6 >
-        au < exists ; 1995 ; Journal of Veterinary Diagnostic Investigation Volume 7 ; 7 >
-        au < exists ; 1996 ; Journal of Veterinary Diagnostic Investigation Volume 8 ; 8 >
-        au < exists ; 1997 ; Journal of Veterinary Diagnostic Investigation Volume 9 ; 9 >
-        au < exists ; 1998 ; Journal of Veterinary Diagnostic Investigation Volume 10 ; 10 >
-        au < exists ; 1999 ; Journal of Veterinary Diagnostic Investigation Volume 11 ; 11 >
-        au < exists ; 2000 ; Journal of Veterinary Diagnostic Investigation Volume 12 ; 12 >
-        au < exists ; 2001 ; Journal of Veterinary Diagnostic Investigation Volume 13 ; 13 >
-        au < exists ; 2002 ; Journal of Veterinary Diagnostic Investigation Volume 14 ; 14 >
-        au < exists ; 2003 ; Journal of Veterinary Diagnostic Investigation Volume 15 ; 15 >
-        au < exists ; 2004 ; Journal of Veterinary Diagnostic Investigation Volume 16 ; 16 >
-        au < exists ; 2005 ; Journal of Veterinary Diagnostic Investigation Volume 17 ; 17 >
-        au < exists ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 >
-        au < exists ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 >
-        au < exists ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 >
-        au < exists ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 >
-        au < exists ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 >
+        au < manifest ; 1989 ; Journal of Veterinary Diagnostic Investigation Volume 1 ; 1 >
+        au < manifest ; 1990 ; Journal of Veterinary Diagnostic Investigation Volume 2 ; 2 >
+        au < manifest ; 1991 ; Journal of Veterinary Diagnostic Investigation Volume 3 ; 3 >
+        au < manifest ; 1992 ; Journal of Veterinary Diagnostic Investigation Volume 4 ; 4 >
+        au < manifest ; 1993 ; Journal of Veterinary Diagnostic Investigation Volume 5 ; 5 >
+        au < manifest ; 1994 ; Journal of Veterinary Diagnostic Investigation Volume 6 ; 6 >
+        au < manifest ; 1995 ; Journal of Veterinary Diagnostic Investigation Volume 7 ; 7 >
+        au < manifest ; 1996 ; Journal of Veterinary Diagnostic Investigation Volume 8 ; 8 >
+        au < manifest ; 1997 ; Journal of Veterinary Diagnostic Investigation Volume 9 ; 9 >
+        au < manifest ; 1998 ; Journal of Veterinary Diagnostic Investigation Volume 10 ; 10 >
+        au < manifest ; 1999 ; Journal of Veterinary Diagnostic Investigation Volume 11 ; 11 >
+        au < manifest ; 2000 ; Journal of Veterinary Diagnostic Investigation Volume 12 ; 12 >
+        au < manifest ; 2001 ; Journal of Veterinary Diagnostic Investigation Volume 13 ; 13 >
+        au < manifest ; 2002 ; Journal of Veterinary Diagnostic Investigation Volume 14 ; 14 >
+        au < manifest ; 2003 ; Journal of Veterinary Diagnostic Investigation Volume 15 ; 15 >
+        au < manifest ; 2004 ; Journal of Veterinary Diagnostic Investigation Volume 16 ; 16 >
+        au < manifest ; 2005 ; Journal of Veterinary Diagnostic Investigation Volume 17 ; 17 >
+        au < manifest ; 2006 ; Journal of Veterinary Diagnostic Investigation Volume 18 ; 18 >
+        au < manifest ; 2007 ; Journal of Veterinary Diagnostic Investigation Volume 19 ; 19 >
+        au < manifest ; 2008 ; Journal of Veterinary Diagnostic Investigation Volume 20 ; 20 >
+        au < manifest ; 2009 ; Journal of Veterinary Diagnostic Investigation Volume 21 ; 21 >
+        au < manifest ; 2010 ; Journal of Veterinary Diagnostic Investigation Volume 22 ; 22 >
         au < manifest ; 2011 ; Journal of Veterinary Diagnostic Investigation Volume 23 ; 23 >
 
       }
@@ -25288,9 +25346,9 @@ comment[mpj] = now published by Brill
         param[base_url] = http://lal.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1992 ; Language and Literature Volume 1 ; 1 >
+        au < manifest ; 1992 ; Language and Literature Volume 1 ; 1 >
         au < manifest ; 1993 ; Language and Literature Volume 2 ; 2 >
-        au < exists ; 1994 ; Language and Literature Volume 3 ; 3 >
+        au < manifest ; 1994 ; Language and Literature Volume 3 ; 3 >
         au < manifest ; 1995 ; Language and Literature Volume 4 ; 4 >
         au < manifest ; 1996 ; Language and Literature Volume 5 ; 5 >
         au < manifest ; 1997 ; Language and Literature Volume 6 ; 6 >
@@ -25327,47 +25385,47 @@ comment[mpj] = now published by Brill
         param[base_url] = http://las.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1958 ; Language and Speech Volume 1 ; 1 >
-        au < exists ; 1959 ; Language and Speech Volume 2 ; 2 >
-        au < exists ; 1960 ; Language and Speech Volume 3 ; 3 >
-        au < exists ; 1961 ; Language and Speech Volume 4 ; 4 >
-        au < exists ; 1962 ; Language and Speech Volume 5 ; 5 >
-        au < exists ; 1963 ; Language and Speech Volume 6 ; 6 >
-        au < exists ; 1964 ; Language and Speech Volume 7 ; 7 >
-        au < exists ; 1965 ; Language and Speech Volume 8 ; 8 >
-        au < exists ; 1966 ; Language and Speech Volume 9 ; 9 >
-        au < exists ; 1967 ; Language and Speech Volume 10 ; 10 >
-        au < exists ; 1968 ; Language and Speech Volume 11 ; 11 >
-        au < exists ; 1969 ; Language and Speech Volume 12 ; 12 >
-        au < exists ; 1970 ; Language and Speech Volume 13 ; 13 >
-        au < exists ; 1971 ; Language and Speech Volume 14 ; 14 >
-        au < exists ; 1972 ; Language and Speech Volume 15 ; 15 >
-        au < exists ; 1973 ; Language and Speech Volume 16 ; 16 >
-        au < exists ; 1974 ; Language and Speech Volume 17 ; 17 >
-        au < exists ; 1975 ; Language and Speech Volume 18 ; 18 >
-        au < exists ; 1976 ; Language and Speech Volume 19 ; 19 >
-        au < exists ; 1977 ; Language and Speech Volume 20 ; 20 >
-        au < exists ; 1978 ; Language and Speech Volume 21 ; 21 >
-        au < exists ; 1979 ; Language and Speech Volume 22 ; 22 >
-        au < exists ; 1980 ; Language and Speech Volume 23 ; 23 >
-        au < exists ; 1981 ; Language and Speech Volume 24 ; 24 >
-        au < exists ; 1982 ; Language and Speech Volume 25 ; 25 >
-        au < exists ; 1983 ; Language and Speech Volume 26 ; 26 >
-        au < exists ; 1984 ; Language and Speech Volume 27 ; 27 >
-        au < exists ; 1985 ; Language and Speech Volume 28 ; 28 >
-        au < exists ; 1986 ; Language and Speech Volume 29 ; 29 >
-        au < exists ; 1987 ; Language and Speech Volume 30 ; 30 >
-        au < exists ; 1988 ; Language and Speech Volume 31 ; 31 >
-        au < exists ; 1989 ; Language and Speech Volume 32 ; 32 >
-        au < exists ; 1990 ; Language and Speech Volume 33 ; 33 >
-        au < exists ; 1991 ; Language and Speech Volume 34 ; 34 >
-        au < exists ; 1992 ; Language and Speech Volume 35 ; 35 >
-        au < exists ; 1993 ; Language and Speech Volume 36 ; 36 >
-        au < exists ; 1994 ; Language and Speech Volume 37 ; 37 >
-        au < exists ; 1995 ; Language and Speech Volume 38 ; 38 >
-        au < exists ; 1996 ; Language and Speech Volume 39 ; 39 >
-        au < exists ; 1997 ; Language and Speech Volume 40 ; 40 >
-        au < exists ; 1998 ; Language and Speech Volume 41 ; 41 >
+        au < manifest ; 1958 ; Language and Speech Volume 1 ; 1 >
+        au < manifest ; 1959 ; Language and Speech Volume 2 ; 2 >
+        au < manifest ; 1960 ; Language and Speech Volume 3 ; 3 >
+        au < manifest ; 1961 ; Language and Speech Volume 4 ; 4 >
+        au < manifest ; 1962 ; Language and Speech Volume 5 ; 5 >
+        au < manifest ; 1963 ; Language and Speech Volume 6 ; 6 >
+        au < manifest ; 1964 ; Language and Speech Volume 7 ; 7 >
+        au < manifest ; 1965 ; Language and Speech Volume 8 ; 8 >
+        au < manifest ; 1966 ; Language and Speech Volume 9 ; 9 >
+        au < manifest ; 1967 ; Language and Speech Volume 10 ; 10 >
+        au < manifest ; 1968 ; Language and Speech Volume 11 ; 11 >
+        au < manifest ; 1969 ; Language and Speech Volume 12 ; 12 >
+        au < manifest ; 1970 ; Language and Speech Volume 13 ; 13 >
+        au < manifest ; 1971 ; Language and Speech Volume 14 ; 14 >
+        au < manifest ; 1972 ; Language and Speech Volume 15 ; 15 >
+        au < manifest ; 1973 ; Language and Speech Volume 16 ; 16 >
+        au < manifest ; 1974 ; Language and Speech Volume 17 ; 17 >
+        au < manifest ; 1975 ; Language and Speech Volume 18 ; 18 >
+        au < manifest ; 1976 ; Language and Speech Volume 19 ; 19 >
+        au < manifest ; 1977 ; Language and Speech Volume 20 ; 20 >
+        au < manifest ; 1978 ; Language and Speech Volume 21 ; 21 >
+        au < manifest ; 1979 ; Language and Speech Volume 22 ; 22 >
+        au < manifest ; 1980 ; Language and Speech Volume 23 ; 23 >
+        au < manifest ; 1981 ; Language and Speech Volume 24 ; 24 >
+        au < manifest ; 1982 ; Language and Speech Volume 25 ; 25 >
+        au < manifest ; 1983 ; Language and Speech Volume 26 ; 26 >
+        au < manifest ; 1984 ; Language and Speech Volume 27 ; 27 >
+        au < manifest ; 1985 ; Language and Speech Volume 28 ; 28 >
+        au < manifest ; 1986 ; Language and Speech Volume 29 ; 29 >
+        au < manifest ; 1987 ; Language and Speech Volume 30 ; 30 >
+        au < manifest ; 1988 ; Language and Speech Volume 31 ; 31 >
+        au < manifest ; 1989 ; Language and Speech Volume 32 ; 32 >
+        au < manifest ; 1990 ; Language and Speech Volume 33 ; 33 >
+        au < manifest ; 1991 ; Language and Speech Volume 34 ; 34 >
+        au < manifest ; 1992 ; Language and Speech Volume 35 ; 35 >
+        au < manifest ; 1993 ; Language and Speech Volume 36 ; 36 >
+        au < manifest ; 1994 ; Language and Speech Volume 37 ; 37 >
+        au < manifest ; 1995 ; Language and Speech Volume 38 ; 38 >
+        au < manifest ; 1996 ; Language and Speech Volume 39 ; 39 >
+        au < manifest ; 1997 ; Language and Speech Volume 40 ; 40 >
+        au < manifest ; 1998 ; Language and Speech Volume 41 ; 41 >
         au < manifest ; 1999 ; Language and Speech Volume 42 ; 42 >
         au < manifest ; 2000 ; Language and Speech Volume 43 ; 43 >
         au < manifest ; 2001 ; Language and Speech Volume 44 ; 44 >
@@ -25736,30 +25794,30 @@ comment[mpj] = now published by Brill
         param[base_url] = http://lec.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1986-1987 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 1 ; 1 >
-        au < exists ; 1987-1988 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 2 ; 2 >
-        au < exists ; 1988-1989 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 3 ; 3 >
-        au < exists ; 1989-1990 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 4 ; 4 >
-        au < exists ; 1990-1991 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 5 ; 5 >
-        au < exists ; 1991-1992 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 6 ; 6 >
-        au < exists ; 1992-1993 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 7 ; 7 >
-        au < exists ; 1993-1994 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 8 ; 8 >
-        au < exists ; 1994-1995 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 9 ; 9 >
-        au < exists ; 1995-1996 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 10 ; 10 >
-        au < exists ; 1996-1997 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 11 ; 11 >
-        au < exists ; 1997-1998 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 12 ; 12 >
-        au < exists ; 1998-1999 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 13 ; 13 >
-        au < exists ; 1999-2000 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 14 ; 14 >
-        au < exists ; 2000 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 15 ; 15 >
-        au < exists ; 2001 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 16 ; 16 >
-        au < exists ; 2002 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 17 ; 17 >
-        au < exists ; 2003 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 18 ; 18 >
-        au < exists ; 2004 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 19 ; 19 >
-        au < exists ; 2005 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 20 ; 20 >
-        au < exists ; 2006 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 21 ; 21 >
-        au < exists ; 2007 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 >
-        au < exists ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 >
-        au < exists ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
+        au < manifest ; 1986-1987 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 1 ; 1 >
+        au < manifest ; 1987-1988 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 2 ; 2 >
+        au < manifest ; 1988-1989 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 3 ; 3 >
+        au < manifest ; 1989-1990 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 4 ; 4 >
+        au < manifest ; 1990-1991 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 5 ; 5 >
+        au < manifest ; 1991-1992 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 6 ; 6 >
+        au < manifest ; 1992-1993 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 7 ; 7 >
+        au < manifest ; 1993-1994 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 8 ; 8 >
+        au < manifest ; 1994-1995 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 9 ; 9 >
+        au < manifest ; 1995-1996 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 10 ; 10 >
+        au < manifest ; 1996-1997 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 11 ; 11 >
+        au < manifest ; 1997-1998 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 12 ; 12 >
+        au < manifest ; 1998-1999 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 13 ; 13 >
+        au < manifest ; 1999-2000 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 14 ; 14 >
+        au < manifest ; 2000 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 15 ; 15 >
+        au < manifest ; 2001 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 16 ; 16 >
+        au < manifest ; 2002 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 17 ; 17 >
+        au < manifest ; 2003 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 18 ; 18 >
+        au < manifest ; 2004 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 19 ; 19 >
+        au < manifest ; 2005 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 20 ; 20 >
+        au < manifest ; 2006 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 21 ; 21 >
+        au < manifest ; 2007 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 >
+        au < manifest ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 >
+        au < manifest ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 >
         au < manifest ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 >
         au < manifest ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 >
 
@@ -25949,9 +26007,9 @@ comment[mpj] = now published by Brill
         au < manifest ; 1987 ; Management in Education Volume 1 ; 1 >
         au < manifest ; 1988 ; Management in Education Volume 2 ; 2 >
         au < manifest ; 1989 ; Management in Education Volume 3 ; 3 >
-        au < exists ; 1990 ; Management in Education Volume 4 ; 4 >
+        au < manifest ; 1990 ; Management in Education Volume 4 ; 4 >
         au < manifest ; 1991 ; Management in Education Volume 5 ; 5 >
-        au < exists ; 1992 ; Management in Education Volume 6 ; 6 >
+        au < manifest ; 1992 ; Management in Education Volume 6 ; 6 >
         au < manifest ; 1993 ; Management in Education Volume 7 ; 7 >
         au < manifest ; 1994 ; Management in Education Volume 8 ; 8 >
         au < manifest ; 1995 ; Management in Education Volume 9 ; 9 >
@@ -26754,8 +26812,8 @@ comment[mpj] = now published by Brill
         param[base_url] = http://msj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1996-1997 ; Multiple Sclerosis Volume 1 ; 1 >
-        au < exists ; 1997-1998 ; Multiple Sclerosis Volume 2 ; 2 >
+        au < manifest ; 1996-1997 ; Multiple Sclerosis Volume 1 ; 1 >
+        au < manifest ; 1997-1998 ; Multiple Sclerosis Volume 2 ; 2 >
         au < manifest ; 1997 ; Multiple Sclerosis Volume 3 ; 3 >
         au < manifest ; 1998 ; Multiple Sclerosis Volume 4 ; 4 >
         au < manifest ; 1999 ; Multiple Sclerosis Volume 5 ; 5 >
@@ -26927,12 +26985,12 @@ comment[mpj] = now published by Brill
         param[base_url] = http://msx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2005 ; Musicae Scientiae Volume 9 ; 9 >
-        au < exists ; 2006 ; Musicae Scientiae Volume 10 ; 10 >
-        au < exists ; 2007 ; Musicae Scientiae Volume 11 ; 11 >
-        au < exists ; 2008 ; Musicae Scientiae Volume 12 ; 12 >
-        au < exists ; 2009 ; Musicae Scientiae Volume 13 ; 13 >
-        au < exists ; 2010 ; Musicae Scientiae Volume 14 ; 14 >
+        au < manifest ; 2005 ; Musicae Scientiae Volume 9 ; 9 >
+        au < manifest ; 2006 ; Musicae Scientiae Volume 10 ; 10 >
+        au < manifest ; 2007 ; Musicae Scientiae Volume 11 ; 11 >
+        au < manifest ; 2008 ; Musicae Scientiae Volume 12 ; 12 >
+        au < manifest ; 2009 ; Musicae Scientiae Volume 13 ; 13 >
+        au < manifest ; 2010 ; Musicae Scientiae Volume 14 ; 14 >
         au < manifest ; 2011 ; Musicae Scientiae Volume 15 ; 15 >
 
       }
@@ -27433,7 +27491,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://nho.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < exists ; 2011 ; The Neurohospitalist Volume 1 ; 1 >
+        au < manifest ; 2011 ; The Neurohospitalist Volume 1 ; 1 >
 
       }
 
@@ -28037,37 +28095,37 @@ comment[mpj] = now published by Brill
         param[base_url] = http://oto.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 >
-        au < exists ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 >
-        au < exists ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 >
+        au < manifest ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 >
+        au < manifest ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 >
+        au < manifest ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 >
         au < manifest ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 115 ; 115 >
-        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 >
-        au < exists ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 >
+        au < manifest ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 >
+        au < manifest ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 >
         au < manifest ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 118 ; 118 >
         au < manifest ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 119 ; 119 >
-        au < exists ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 >
+        au < manifest ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 >
         au < manifest ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 121 ; 121 >
         au < manifest ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 122 ; 122 >
         au < manifest ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 123 ; 123 >
-        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 >
-        au < exists ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 >
-        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 >
-        au < exists ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 >
-        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 >
-        au < exists ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 >
-        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 >
-        au < exists ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 >
+        au < manifest ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 >
+        au < manifest ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 >
+        au < manifest ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 >
+        au < manifest ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 >
+        au < manifest ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 >
+        au < manifest ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 >
+        au < manifest ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 >
+        au < manifest ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 >
         au < manifest ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 132 ; 132 >
         au < manifest ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 133 ; 133 >
-        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 >
-        au < exists ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 >
-        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 >
-        au < exists ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
-        au < exists ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
-        au < exists ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
-        au < exists ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
-        au < exists ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
-        au < exists ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 >
+        au < manifest ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 >
+        au < manifest ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 >
+        au < manifest ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 >
+        au < manifest ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
+        au < manifest ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
+        au < manifest ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
+        au < manifest ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
+        au < manifest ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
+        au < manifest ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 >
         au < manifest ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 >
         au < manifest ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 >
         au < manifest ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 >
@@ -28448,7 +28506,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psc.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1973 ; Philosophy & Social Criticism Volume 1 ; 1 >
+        au < manifest ; 1973 ; Philosophy & Social Criticism Volume 1 ; 1 >
         au < manifest ; 1974 ; Philosophy & Social Criticism Volume 2 ; 2 >
         au < manifest ; 1975 ; Philosophy & Social Criticism Volume 3 ; 3 >
         au < manifest ; 1976 ; Philosophy & Social Criticism Volume 4 ; 4 >
@@ -28828,12 +28886,12 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 1973 ; Political Theory Volume 1 ; 1 >
         au < manifest ; 1974 ; Political Theory Volume 2 ; 2 >
-        au < exists ; 1975 ; Political Theory Volume 3 ; 3 >
+        au < manifest ; 1975 ; Political Theory Volume 3 ; 3 >
         au < manifest ; 1976 ; Political Theory Volume 4 ; 4 >
         au < manifest ; 1977 ; Political Theory Volume 5 ; 5 >
         au < manifest ; 1978 ; Political Theory Volume 6 ; 6 >
         au < manifest ; 1979 ; Political Theory Volume 7 ; 7 >
-        au < exists ; 1980 ; Political Theory Volume 8 ; 8 >
+        au < manifest ; 1980 ; Political Theory Volume 8 ; 8 >
         au < manifest ; 1981 ; Political Theory Volume 9 ; 9 >
         au < manifest ; 1982 ; Political Theory Volume 10 ; 10 >
         au < manifest ; 1983 ; Political Theory Volume 11 ; 11 >
@@ -29144,7 +29202,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1942 ; Probation Journal Volume 4 ; 4 >
         au < manifest ; 1946-1949 ; Probation Journal Volume 5 ; 5 >
         au < doesNotExist ; 0 ; Probation Journal Volume 6 ; 6 >
-        au < exists ; 1954 ; Probation Journal Volume 7 ; 7 >
+        au < manifest ; 1954 ; Probation Journal Volume 7 ; 7 >
         au < manifest ; 1956 ; Probation Journal Volume 8 ; 8 >
         au < manifest ; 1959 ; Probation Journal Volume 9 ; 9 >
         au < manifest ; 1962 ; Probation Journal Volume 10 ; 10 >
@@ -29898,12 +29956,12 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1977 ; Progress in Human Geography Volume 1 ; 1 >
-        au < exists ; 1978 ; Progress in Human Geography Volume 2 ; 2 >
+        au < manifest ; 1978 ; Progress in Human Geography Volume 2 ; 2 >
         au < manifest ; 1979 ; Progress in Human Geography Volume 3 ; 3 >
-        au < exists ; 1980 ; Progress in Human Geography Volume 4 ; 4 >
+        au < manifest ; 1980 ; Progress in Human Geography Volume 4 ; 4 >
         au < manifest ; 1981 ; Progress in Human Geography Volume 5 ; 5 >
-        au < exists ; 1982 ; Progress in Human Geography Volume 6 ; 6 >
-        au < exists ; 1983 ; Progress in Human Geography Volume 7 ; 7 >
+        au < manifest ; 1982 ; Progress in Human Geography Volume 6 ; 6 >
+        au < manifest ; 1983 ; Progress in Human Geography Volume 7 ; 7 >
         au < doesNotExist ; 1984 ; Progress in Human Geography Volume 8 ; 8 >
         au < doesNotExist ; 1985 ; Progress in Human Geography Volume 9 ; 9 >
         au < doesNotExist ; 1986 ; Progress in Human Geography Volume 10 ; 10 >
@@ -30019,39 +30077,39 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
 
-        au < exists ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 >
-        au < exists ; 1978 ; Prosthetics and Orthotics International Volume 2 ; 2 >
-        au < exists ; 1979 ; Prosthetics and Orthotics International Volume 3 ; 3 >
-        au < exists ; 1980 ; Prosthetics and Orthotics International Volume 4 ; 4 >
-        au < exists ; 1981 ; Prosthetics and Orthotics International Volume 5 ; 5 >
-        au < exists ; 1982 ; Prosthetics and Orthotics International Volume 6 ; 6 >
-        au < exists ; 1983 ; Prosthetics and Orthotics International Volume 7 ; 7 >
-        au < exists ; 1984 ; Prosthetics and Orthotics International Volume 8 ; 8 >
-        au < exists ; 1985 ; Prosthetics and Orthotics International Volume 9 ; 9 >
-        au < exists ; 1986 ; Prosthetics and Orthotics International Volume 10 ; 10 >
-        au < exists ; 1987 ; Prosthetics and Orthotics International Volume 11 ; 11 >
-        au < exists ; 1988 ; Prosthetics and Orthotics International Volume 12 ; 12 >
-        au < exists ; 1989 ; Prosthetics and Orthotics International Volume 13 ; 13 >
-        au < exists ; 1990 ; Prosthetics and Orthotics International Volume 14 ; 14 >
-        au < exists ; 1991 ; Prosthetics and Orthotics International Volume 15 ; 15 >
-        au < exists ; 1992 ; Prosthetics and Orthotics International Volume 16 ; 16 >
-        au < exists ; 1993 ; Prosthetics and Orthotics International Volume 17 ; 17 >
-        au < exists ; 1994 ; Prosthetics and Orthotics International Volume 18 ; 18 >
-        au < exists ; 1995 ; Prosthetics and Orthotics International Volume 19 ; 19 >
-        au < exists ; 1996 ; Prosthetics and Orthotics International Volume 20 ; 20 >
-        au < exists ; 1997 ; Prosthetics and Orthotics International Volume 21 ; 21 >
-        au < exists ; 1998 ; Prosthetics and Orthotics International Volume 22 ; 22 >
-        au < exists ; 1999 ; Prosthetics and Orthotics International Volume 23 ; 23 >
-        au < exists ; 2000 ; Prosthetics and Orthotics International Volume 24 ; 24 >
-        au < exists ; 2001 ; Prosthetics and Orthotics International Volume 25 ; 25 >
-        au < exists ; 2002 ; Prosthetics and Orthotics International Volume 26 ; 26 >
-        au < exists ; 2003 ; Prosthetics and Orthotics International Volume 27 ; 27 >
-        au < exists ; 2004 ; Prosthetics and Orthotics International Volume 28 ; 28 >
-        au < exists ; 2005 ; Prosthetics and Orthotics International Volume 29 ; 29 >
-        au < exists ; 2006 ; Prosthetics and Orthotics International Volume 30 ; 30 >
-        au < exists ; 2007 ; Prosthetics and Orthotics International Volume 31 ; 31 >
-        au < exists ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 >
-        au < exists ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 >
+        au < manifest ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 >
+        au < manifest ; 1978 ; Prosthetics and Orthotics International Volume 2 ; 2 >
+        au < manifest ; 1979 ; Prosthetics and Orthotics International Volume 3 ; 3 >
+        au < manifest ; 1980 ; Prosthetics and Orthotics International Volume 4 ; 4 >
+        au < manifest ; 1981 ; Prosthetics and Orthotics International Volume 5 ; 5 >
+        au < manifest ; 1982 ; Prosthetics and Orthotics International Volume 6 ; 6 >
+        au < manifest ; 1983 ; Prosthetics and Orthotics International Volume 7 ; 7 >
+        au < manifest ; 1984 ; Prosthetics and Orthotics International Volume 8 ; 8 >
+        au < manifest ; 1985 ; Prosthetics and Orthotics International Volume 9 ; 9 >
+        au < manifest ; 1986 ; Prosthetics and Orthotics International Volume 10 ; 10 >
+        au < manifest ; 1987 ; Prosthetics and Orthotics International Volume 11 ; 11 >
+        au < manifest ; 1988 ; Prosthetics and Orthotics International Volume 12 ; 12 >
+        au < manifest ; 1989 ; Prosthetics and Orthotics International Volume 13 ; 13 >
+        au < manifest ; 1990 ; Prosthetics and Orthotics International Volume 14 ; 14 >
+        au < manifest ; 1991 ; Prosthetics and Orthotics International Volume 15 ; 15 >
+        au < manifest ; 1992 ; Prosthetics and Orthotics International Volume 16 ; 16 >
+        au < manifest ; 1993 ; Prosthetics and Orthotics International Volume 17 ; 17 >
+        au < manifest ; 1994 ; Prosthetics and Orthotics International Volume 18 ; 18 >
+        au < manifest ; 1995 ; Prosthetics and Orthotics International Volume 19 ; 19 >
+        au < manifest ; 1996 ; Prosthetics and Orthotics International Volume 20 ; 20 >
+        au < manifest ; 1997 ; Prosthetics and Orthotics International Volume 21 ; 21 >
+        au < manifest ; 1998 ; Prosthetics and Orthotics International Volume 22 ; 22 >
+        au < manifest ; 1999 ; Prosthetics and Orthotics International Volume 23 ; 23 >
+        au < manifest ; 2000 ; Prosthetics and Orthotics International Volume 24 ; 24 >
+        au < manifest ; 2001 ; Prosthetics and Orthotics International Volume 25 ; 25 >
+        au < manifest ; 2002 ; Prosthetics and Orthotics International Volume 26 ; 26 >
+        au < manifest ; 2003 ; Prosthetics and Orthotics International Volume 27 ; 27 >
+        au < manifest ; 2004 ; Prosthetics and Orthotics International Volume 28 ; 28 >
+        au < manifest ; 2005 ; Prosthetics and Orthotics International Volume 29 ; 29 >
+        au < manifest ; 2006 ; Prosthetics and Orthotics International Volume 30 ; 30 >
+        au < manifest ; 2007 ; Prosthetics and Orthotics International Volume 31 ; 31 >
+        au < manifest ; 2008 ; Prosthetics and Orthotics International Volume 32 ; 32 >
+        au < manifest ; 2009 ; Prosthetics and Orthotics International Volume 33 ; 33 >
         au < manifest ; 2010 ; Prosthetics and Orthotics International Volume 34 ; 34 >
         au < ready ; 2011 ; Prosthetics and Orthotics International Volume 35 ; 35 >
 
@@ -30114,12 +30172,12 @@ comment[mpj] = now published by Brill
         param[base_url] = http://psi.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 >
-        au < exists ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 >
-        au < exists ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 >
-        au < exists ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 >
-        au < exists ; 2006 ; Psychological Science in the Public Interest Volume 7 ; 7 >
-        au < exists ; 2007 ; Psychological Science in the Public Interest Volume 8 ; 8 >
+        au < manifest ; 2002 ; Psychological Science in the Public Interest Volume 3 ; 3 >
+        au < manifest ; 2003 ; Psychological Science in the Public Interest Volume 4 ; 4 >
+        au < manifest ; 2004 ; Psychological Science in the Public Interest Volume 5 ; 5 >
+        au < manifest ; 2005 ; Psychological Science in the Public Interest Volume 6 ; 6 >
+        au < manifest ; 2006 ; Psychological Science in the Public Interest Volume 7 ; 7 >
+        au < manifest ; 2007 ; Psychological Science in the Public Interest Volume 8 ; 8 >
         au < manifest ; 2008 ; Psychological Science in the Public Interest Volume 9 ; 9 >
         au < manifest ; 2009 ; Psychological Science in the Public Interest Volume 10 ; 10 >
         au < manifest ; 2010 ; Psychological Science in the Public Interest Volume 11 ; 11 >
@@ -31684,13 +31742,13 @@ comment[mpj] = now published by Brill
         
         comment[rhfe] = Manifest pages have incorrect URLs
 
-        au < exists ; 2005 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
-        au < exists ; 2006 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 >
-        au < exists ; 2007 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 >
-        au < exists ; 2008 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 >
-        au < exists ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
-        au < exists ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
-        au < exists ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 >
+        au < manifest ; 2005 ; Reviews of Human Factors and Ergonomics Volume 1 ; 1 >
+        au < manifest ; 2006 ; Reviews of Human Factors and Ergonomics Volume 2 ; 2 >
+        au < manifest ; 2007 ; Reviews of Human Factors and Ergonomics Volume 3 ; 3 >
+        au < manifest ; 2008 ; Reviews of Human Factors and Ergonomics Volume 4 ; 4 >
+        au < manifest ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
+        au < manifest ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
+        au < manifest ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 >
 
       }
 
@@ -31704,8 +31762,11 @@ comment[mpj] = now published by Brill
       >
       
         param[base_url] = http://sgo.sagepub.com/
-        pluginSuffix = needs.plugin
-        comment[needs_plugin] = This journal does not seem to have AUs, but just a collection of articles.
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2011 ; Sage Open Volume 1 ; 1 >
+        au < exists ; 2012 ; Sage Open Volume 2 ; 2 >
 
     }
 
@@ -31723,22 +31784,22 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sjp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1973 ; Scandinavian Journal of Public Health Volume 1 ; 1 >
-        au < exists ; 1974 ; Scandinavian Journal of Public Health Volume 2 ; 2 >
-        au < exists ; 1975 ; Scandinavian Journal of Public Health Volume 3 ; 3 >
-        au < exists ; 1976 ; Scandinavian Journal of Public Health Volume 4 ; 4 >
-        au < exists ; 1977 ; Scandinavian Journal of Public Health Volume 5 ; 5 >
-        au < exists ; 1978 ; Scandinavian Journal of Public Health Volume 6 ; 6 >
-        au < exists ; 1979 ; Scandinavian Journal of Public Health Volume 7 ; 7 >
-        au < exists ; 1980 ; Scandinavian Journal of Public Health Volume 8 ; 8 >
-        au < exists ; 1981 ; Scandinavian Journal of Public Health Volume 9 ; 9 >
-        au < exists ; 1982 ; Scandinavian Journal of Public Health Volume 10 ; 10 >
-        au < exists ; 1983 ; Scandinavian Journal of Public Health Volume 11 ; 11 >
-        au < exists ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 >
-        au < exists ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 >
-        au < exists ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 >
-        au < exists ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 >
-        au < exists ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 >
+        au < manifest ; 1973 ; Scandinavian Journal of Public Health Volume 1 ; 1 >
+        au < manifest ; 1974 ; Scandinavian Journal of Public Health Volume 2 ; 2 >
+        au < manifest ; 1975 ; Scandinavian Journal of Public Health Volume 3 ; 3 >
+        au < manifest ; 1976 ; Scandinavian Journal of Public Health Volume 4 ; 4 >
+        au < manifest ; 1977 ; Scandinavian Journal of Public Health Volume 5 ; 5 >
+        au < manifest ; 1978 ; Scandinavian Journal of Public Health Volume 6 ; 6 >
+        au < manifest ; 1979 ; Scandinavian Journal of Public Health Volume 7 ; 7 >
+        au < manifest ; 1980 ; Scandinavian Journal of Public Health Volume 8 ; 8 >
+        au < manifest ; 1981 ; Scandinavian Journal of Public Health Volume 9 ; 9 >
+        au < manifest ; 1982 ; Scandinavian Journal of Public Health Volume 10 ; 10 >
+        au < manifest ; 1983 ; Scandinavian Journal of Public Health Volume 11 ; 11 >
+        au < manifest ; 1984 ; Scandinavian Journal of Public Health Volume 12 ; 12 >
+        au < manifest ; 1985 ; Scandinavian Journal of Public Health Volume 13 ; 13 >
+        au < manifest ; 1986 ; Scandinavian Journal of Public Health Volume 14 ; 14 >
+        au < manifest ; 1987 ; Scandinavian Journal of Public Health Volume 15 ; 15 >
+        au < manifest ; 1988 ; Scandinavian Journal of Public Health Volume 16 ; 16 >
         au < manifest ; 1989 ; Scandinavian Journal of Public Health Volume 17 ; 17 >
         au < manifest ; 1990 ; Scandinavian Journal of Public Health Volume 18 ; 18 >
         au < manifest ; 1991 ; Scandinavian Journal of Public Health Volume 19 ; 19 >
@@ -31986,7 +32047,7 @@ comment[mpj] = now published by Brill
         au < doesNotExist ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 >
         au < doesNotExist ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 >
         au < manifest ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 >
-        au < exists ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 >
+        au < manifest ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 >
         au < doesNotExist ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 >
         au < doesNotExist ; 1988 ; Science, Technology & Human Values Volume 13 ; 13 >
         au < manifest ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 >
@@ -32732,11 +32793,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://spq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
-        au < exists ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
-        au < exists ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
-        au < exists ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
-        au < exists ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
+        au < manifest ; 2004 ; Social Psychology Quarterly Volume 67 ; 67 >
+        au < manifest ; 2005 ; Social Psychology Quarterly Volume 68 ; 68 >
+        au < manifest ; 2006 ; Social Psychology Quarterly Volume 69 ; 69 >
+        au < manifest ; 2007 ; Social Psychology Quarterly Volume 70 ; 70 >
+        au < manifest ; 2008 ; Social Psychology Quarterly Volume 71 ; 71 >
         au < manifest ; 2009 ; Social Psychology Quarterly Volume 72 ; 72 >
         au < manifest ; 2010 ; Social Psychology Quarterly Volume 73 ; 73 >
         au < ready ; 2011 ; Social Psychology Quarterly Volume 74 ; 74 >
@@ -33145,11 +33206,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://soe.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004 ; Sociology of Education Volume 77 ; 77 >
-        au < exists ; 2005 ; Sociology of Education Volume 78 ; 78 >
-        au < exists ; 2006 ; Sociology of Education Volume 79 ; 79 >
-        au < exists ; 2007 ; Sociology of Education Volume 80 ; 80 >
-        au < exists ; 2008 ; Sociology of Education Volume 81 ; 81 >
+        au < manifest ; 2004 ; Sociology of Education Volume 77 ; 77 >
+        au < manifest ; 2005 ; Sociology of Education Volume 78 ; 78 >
+        au < manifest ; 2006 ; Sociology of Education Volume 79 ; 79 >
+        au < manifest ; 2007 ; Sociology of Education Volume 80 ; 80 >
+        au < manifest ; 2008 ; Sociology of Education Volume 81 ; 81 >
         au < manifest ; 2009 ; Sociology of Education Volume 82 ; 82 >
         au < manifest ; 2010 ; Sociology of Education Volume 83 ; 83 >
         au < ready ; 2011 ; Sociology of Education Volume 84 ; 84 >
@@ -33394,19 +33455,19 @@ comment[mpj] = now published by Brill
         param[base_url] = http://slg.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1997 ; State and Local Government Review Volume 29 ; 29 >
-        au < exists ; 1998 ; State and Local Government Review Volume 30 ; 30 >
-        au < exists ; 1999 ; State and Local Government Review Volume 31 ; 31 >
-        au < exists ; 2000 ; State and Local Government Review Volume 32 ; 32 >
-        au < exists ; 2001 ; State and Local Government Review Volume 33 ; 33 >
-        au < exists ; 2002 ; State and Local Government Review Volume 34 ; 34 >
-        au < exists ; 2003 ; State and Local Government Review Volume 35 ; 35 >
-        au < exists ; 2004 ; State and Local Government Review Volume 36 ; 36 >
-        au < exists ; 2005 ; State and Local Government Review Volume 37 ; 37 >
-        au < exists ; 2006 ; State and Local Government Review Volume 38 ; 38 >
-        au < exists ; 2007 ; State and Local Government Review Volume 39 ; 39 >
-        au < exists ; 2008 ; State and Local Government Review Volume 40 ; 40 >
-        au < exists ; 2009 ; State and Local Government Review Volume 41 ; 41 >
+        au < manifest ; 1997 ; State and Local Government Review Volume 29 ; 29 >
+        au < manifest ; 1998 ; State and Local Government Review Volume 30 ; 30 >
+        au < manifest ; 1999 ; State and Local Government Review Volume 31 ; 31 >
+        au < manifest ; 2000 ; State and Local Government Review Volume 32 ; 32 >
+        au < manifest ; 2001 ; State and Local Government Review Volume 33 ; 33 >
+        au < manifest ; 2002 ; State and Local Government Review Volume 34 ; 34 >
+        au < manifest ; 2003 ; State and Local Government Review Volume 35 ; 35 >
+        au < manifest ; 2004 ; State and Local Government Review Volume 36 ; 36 >
+        au < manifest ; 2005 ; State and Local Government Review Volume 37 ; 37 >
+        au < manifest ; 2006 ; State and Local Government Review Volume 38 ; 38 >
+        au < manifest ; 2007 ; State and Local Government Review Volume 39 ; 39 >
+        au < manifest ; 2008 ; State and Local Government Review Volume 40 ; 40 >
+        au < manifest ; 2009 ; State and Local Government Review Volume 41 ; 41 >
         au < manifest ; 2010 ; State and Local Government Review Volume 42 ; 42 >
         au < ready ; 2011 ; State and Local Government Review Volume 43 ; 43 >
 
@@ -33741,42 +33802,42 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sir.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 >
-        au < exists ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 >
-        au < exists ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 >
-        au < exists ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 >
-        au < exists ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 >
-        au < exists ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 >
-        au < exists ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 >
-        au < exists ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 >
-        au < exists ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 >
-        au < exists ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 >
-        au < exists ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 >
-        au < exists ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 >
-        au < exists ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 >
-        au < exists ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 >
-        au < exists ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 >
-        au < exists ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 >
-        au < exists ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 >
-        au < exists ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 >
-        au < exists ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 >
-        au < exists ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 >
-        au < exists ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 >
-        au < exists ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 >
-        au < exists ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 >
-        au < exists ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 >
-        au < exists ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 >
-        au < exists ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 >
-        au < exists ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 >
-        au < exists ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 >
-        au < exists ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 >
-        au < exists ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 >
-        au < exists ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 >
-        au < exists ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 >
-        au < exists ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 >
-        au < exists ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 >
-        au < exists ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 >
-        au < exists ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 >
+        au < manifest ; 1971-1972 ; Studies in Religion/Sciences Religieuses Volume 1 ; 1 >
+        au < manifest ; 1972-1973 ; Studies in Religion/Sciences Religieuses Volume 2 ; 2 >
+        au < manifest ; 1973-1974 ; Studies in Religion/Sciences Religieuses Volume 3 ; 3 >
+        au < manifest ; 1974-1975 ; Studies in Religion/Sciences Religieuses Volume 4 ; 4 >
+        au < manifest ; 1975-1976 ; Studies in Religion/Sciences Religieuses Volume 5 ; 5 >
+        au < manifest ; 1976-1977 ; Studies in Religion/Sciences Religieuses Volume 6 ; 6 >
+        au < manifest ; 1978 ; Studies in Religion/Sciences Religieuses Volume 7 ; 7 >
+        au < manifest ; 1979 ; Studies in Religion/Sciences Religieuses Volume 8 ; 8 >
+        au < manifest ; 1980 ; Studies in Religion/Sciences Religieuses Volume 9 ; 9 >
+        au < manifest ; 1981 ; Studies in Religion/Sciences Religieuses Volume 10 ; 10 >
+        au < manifest ; 1982 ; Studies in Religion/Sciences Religieuses Volume 11 ; 11 >
+        au < manifest ; 1983 ; Studies in Religion/Sciences Religieuses Volume 12 ; 12 >
+        au < manifest ; 1984 ; Studies in Religion/Sciences Religieuses Volume 13 ; 13 >
+        au < manifest ; 1985 ; Studies in Religion/Sciences Religieuses Volume 14 ; 14 >
+        au < manifest ; 1986 ; Studies in Religion/Sciences Religieuses Volume 15 ; 15 >
+        au < manifest ; 1987 ; Studies in Religion/Sciences Religieuses Volume 16 ; 16 >
+        au < manifest ; 1988 ; Studies in Religion/Sciences Religieuses Volume 17 ; 17 >
+        au < manifest ; 1989 ; Studies in Religion/Sciences Religieuses Volume 18 ; 18 >
+        au < manifest ; 1990 ; Studies in Religion/Sciences Religieuses Volume 19 ; 19 >
+        au < manifest ; 1991 ; Studies in Religion/Sciences Religieuses Volume 20 ; 20 >
+        au < manifest ; 1992 ; Studies in Religion/Sciences Religieuses Volume 21 ; 21 >
+        au < manifest ; 1993 ; Studies in Religion/Sciences Religieuses Volume 22 ; 22 >
+        au < manifest ; 1994 ; Studies in Religion/Sciences Religieuses Volume 23 ; 23 >
+        au < manifest ; 1995 ; Studies in Religion/Sciences Religieuses Volume 24 ; 24 >
+        au < manifest ; 1996 ; Studies in Religion/Sciences Religieuses Volume 25 ; 25 >
+        au < manifest ; 1997 ; Studies in Religion/Sciences Religieuses Volume 26 ; 26 >
+        au < manifest ; 1998 ; Studies in Religion/Sciences Religieuses Volume 27 ; 27 >
+        au < manifest ; 1999 ; Studies in Religion/Sciences Religieuses Volume 28 ; 28 >
+        au < manifest ; 2000 ; Studies in Religion/Sciences Religieuses Volume 29 ; 29 >
+        au < manifest ; 2001 ; Studies in Religion/Sciences Religieuses Volume 30 ; 30 >
+        au < manifest ; 2002 ; Studies in Religion/Sciences Religieuses Volume 31 ; 31 >
+        au < manifest ; 2003 ; Studies in Religion/Sciences Religieuses Volume 32 ; 32 >
+        au < manifest ; 2004 ; Studies in Religion/Sciences Religieuses Volume 33 ; 33 >
+        au < manifest ; 2005 ; Studies in Religion/Sciences Religieuses Volume 34 ; 34 >
+        au < manifest ; 2006 ; Studies in Religion/Sciences Religieuses Volume 35 ; 35 >
+        au < manifest ; 2007 ; Studies in Religion/Sciences Religieuses Volume 36 ; 36 >
         au < manifest ; 2008 ; Studies in Religion/Sciences Religieuses Volume 37 ; 37 >
         au < manifest ; 2009 ; Studies in Religion/Sciences Religieuses Volume 38 ; 38 >
         au < manifest ; 2010 ; Studies in Religion/Sciences Religieuses Volume 39 ; 39 >
@@ -33925,11 +33986,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tso.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004 ; Teaching Sociology Volume 32 ; 32 >
-        au < exists ; 2005 ; Teaching Sociology Volume 33 ; 33 >
-        au < exists ; 2006 ; Teaching Sociology Volume 34 ; 34 >
-        au < exists ; 2007 ; Teaching Sociology Volume 35 ; 35 >
-        au < exists ; 2008 ; Teaching Sociology Volume 36 ; 36 >
+        au < manifest ; 2004 ; Teaching Sociology Volume 32 ; 32 >
+        au < manifest ; 2005 ; Teaching Sociology Volume 33 ; 33 >
+        au < manifest ; 2006 ; Teaching Sociology Volume 34 ; 34 >
+        au < manifest ; 2007 ; Teaching Sociology Volume 35 ; 35 >
+        au < manifest ; 2008 ; Teaching Sociology Volume 36 ; 36 >
         au < manifest ; 2009 ; Teaching Sociology Volume 37 ; 37 >
         au < manifest ; 2010 ; Teaching Sociology Volume 38 ; 38 >
         au < ready ; 2011 ; Teaching Sociology Volume 39 ; 39 >
@@ -34081,7 +34142,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1998 ; Textile Research Journal Volume 68 ; 68 >
         au < manifest ; 1999 ; Textile Research Journal Volume 69 ; 69 >
         au < manifest ; 2000 ; Textile Research Journal Volume 70 ; 70 >
-        au < exists ; 2001 ; Textile Research Journal Volume 71 ; 71 >
+        au < manifest ; 2001 ; Textile Research Journal Volume 71 ; 71 >
         au < manifest ; 2002 ; Textile Research Journal Volume 72 ; 72 >
         au < manifest ; 2003 ; Textile Research Journal Volume 73 ; 73 >
         au < manifest ; 2004 ; Textile Research Journal Volume 74 ; 74 >
@@ -34113,11 +34174,70 @@ comment[mpj] = now published by Brill
         
         comment[exists] = Theology, Volumes on web page: V50-114 (7/2011)
 
-        au < exists ; 1947 ; Theology Volume 50 ; 50 >
-        au < exists ; 1948 ; Theology Volume 51 ; 51 >
-        au < exists ; 1949 ; Theology Volume 52 ; 52 >
-        au < exists ; 1950 ; Theology Volume 53 ; 53 >
-        au < exists ; 2010 ; Theology Volume 113 ; 113 >
+        au < manifest ; 1947 ; Theology Volume 50 ; 50 >
+        au < manifest ; 1948 ; Theology Volume 51 ; 51 >
+        au < manifest ; 1949 ; Theology Volume 52 ; 52 >
+        au < manifest ; 1950 ; Theology Volume 53 ; 53 >
+        au < exists ; 1951 ; Theology Volume 54 ; 54 >
+        au < exists ; 1952 ; Theology Volume 55 ; 55 >
+        au < exists ; 1953 ; Theology Volume 56 ; 56 >
+        au < exists ; 1954 ; Theology Volume 57 ; 57 >
+        au < exists ; 1955 ; Theology Volume 58 ; 58 >
+        au < exists ; 1956 ; Theology Volume 59 ; 59 >
+        au < exists ; 1957 ; Theology Volume 60 ; 60 >
+        au < exists ; 1958 ; Theology Volume 61 ; 61 >
+        au < exists ; 1959 ; Theology Volume 62 ; 62 >
+        au < exists ; 1960 ; Theology Volume 63 ; 63 >
+        au < exists ; 1961 ; Theology Volume 64 ; 64 >
+        au < exists ; 1962 ; Theology Volume 65 ; 65 >
+        au < exists ; 1963 ; Theology Volume 66 ; 66 >
+        au < exists ; 1964 ; Theology Volume 67 ; 67 >
+        au < exists ; 1965 ; Theology Volume 68 ; 68 >
+        au < exists ; 1966 ; Theology Volume 69 ; 69 >
+        au < exists ; 1967 ; Theology Volume 70 ; 70 >
+        au < exists ; 1968 ; Theology Volume 71 ; 71 >
+        au < exists ; 1969 ; Theology Volume 72 ; 72 >
+        au < exists ; 1970 ; Theology Volume 73 ; 73 >
+        au < exists ; 1971 ; Theology Volume 74 ; 74 >
+        au < exists ; 1972 ; Theology Volume 75 ; 75 >
+        au < exists ; 1973 ; Theology Volume 76 ; 76 >
+        au < exists ; 1974 ; Theology Volume 77 ; 77 >
+        au < exists ; 1975 ; Theology Volume 78 ; 78 >
+        au < exists ; 1976 ; Theology Volume 79 ; 79 >
+        au < exists ; 1977 ; Theology Volume 80 ; 80 >
+        au < exists ; 1978 ; Theology Volume 81 ; 81 >
+        au < exists ; 1979 ; Theology Volume 82 ; 82 >
+        au < exists ; 1980 ; Theology Volume 83 ; 83 >
+        au < exists ; 1981 ; Theology Volume 84 ; 84 >
+        au < exists ; 1982 ; Theology Volume 85 ; 85 >
+        au < exists ; 1983 ; Theology Volume 86 ; 86 >
+        au < exists ; 1984 ; Theology Volume 87 ; 87 >
+        au < exists ; 1985 ; Theology Volume 88 ; 88 >
+        au < exists ; 1986 ; Theology Volume 89 ; 89 >
+        au < exists ; 1987 ; Theology Volume 90 ; 90 >
+        au < exists ; 1988 ; Theology Volume 91 ; 91 >
+        au < exists ; 1989 ; Theology Volume 92 ; 92 >
+        au < exists ; 1990 ; Theology Volume 93 ; 93 >
+        au < exists ; 1991 ; Theology Volume 94 ; 94 >
+        au < exists ; 1992 ; Theology Volume 95 ; 95 >
+        au < exists ; 1993 ; Theology Volume 96 ; 96 >
+        au < exists ; 1994 ; Theology Volume 97 ; 97 >
+        au < exists ; 1995 ; Theology Volume 98 ; 98 >
+        au < exists ; 1996 ; Theology Volume 99 ; 99 >
+        au < exists ; 1997 ; Theology Volume 100 ; 100 >
+        au < exists ; 1998 ; Theology Volume 101 ; 101 >
+        au < exists ; 1999 ; Theology Volume 102 ; 102 >
+        au < exists ; 2000 ; Theology Volume 103 ; 103 >
+        au < exists ; 2001 ; Theology Volume 104 ; 104 >
+        au < exists ; 2002 ; Theology Volume 105 ; 105 >
+        au < exists ; 2003 ; Theology Volume 106 ; 106 >
+        au < exists ; 2004 ; Theology Volume 107 ; 107 >
+        au < exists ; 2005 ; Theology Volume 108 ; 108 >
+        au < exists ; 2006 ; Theology Volume 109 ; 109 >
+        au < exists ; 2007 ; Theology Volume 110 ; 110 >
+        au < exists ; 2008 ; Theology Volume 111 ; 111 >
+        au < exists ; 2009 ; Theology Volume 112 ; 112 >
+        au < manifest ; 2010 ; Theology Volume 113 ; 113 >
         au < ready ; 2011 ; Theology Volume 114 ; 114 >
 
       }
@@ -34183,25 +34303,73 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ttj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1944-1945 ; Theology Today Volume 1 ; 1 >
-        au < exists ; 1993-1994 ; Theology Today Volume 50 ; 50 >
-        au < exists ; 1994-1995 ; Theology Today Volume 51 ; 51 >
-        au < exists ; 1995-1996 ; Theology Today Volume 52 ; 52 >
-        au < exists ; 1996-1997 ; Theology Today Volume 53 ; 53 >
-        au < exists ; 1997-1998 ; Theology Today Volume 54 ; 54 >
-        au < exists ; 1998-1999 ; Theology Today Volume 55 ; 55 >
-        au < exists ; 1999-2000 ; Theology Today Volume 56 ; 56 >
-        au < exists ; 2000-2001 ; Theology Today Volume 57 ; 57 >
-        au < exists ; 2001-2002 ; Theology Today Volume 58 ; 58 >
-        au < exists ; 2002-2003 ; Theology Today Volume 59 ; 59 >
-        au < exists ; 2003-2004 ; Theology Today Volume 60 ; 60 >
-        au < exists ; 2004-2005 ; Theology Today Volume 61 ; 61 >
-        au < exists ; 2005-2006 ; Theology Today Volume 62 ; 62 >
-        au < exists ; 2006-2007 ; Theology Today Volume 63 ; 63 >
-        au < exists ; 2007-2008 ; Theology Today Volume 64 ; 64 >
-        au < exists ; 2008-2009 ; Theology Today Volume 65 ; 65 >
-        au < exists ; 2009-2010 ; Theology Today Volume 66 ; 66 >
-        au < exists ; 2010-2011 ; Theology Today Volume 67 ; 67 >
+        au < manifest ; 1944-1945 ; Theology Today Volume 1 ; 1 >
+        au < manifest ; 1945-1946 ; Theology Today Volume 2 ; 2 >
+        au < manifest ; 1946-1947 ; Theology Today Volume 3 ; 3 >
+        au < manifest ; 1947-1948 ; Theology Today Volume 4 ; 4 >
+        au < manifest ; 1948-1949 ; Theology Today Volume 5 ; 5 >
+        au < manifest ; 1949-1950 ; Theology Today Volume 6 ; 6 >
+        au < manifest ; 1950-1951 ; Theology Today Volume 7 ; 7 >
+        au < manifest ; 1951-1952 ; Theology Today Volume 8 ; 8 >
+        au < manifest ; 1952-1953 ; Theology Today Volume 9 ; 9 >
+        au < manifest ; 1953-1954 ; Theology Today Volume 10 ; 10 >
+        au < manifest ; 1954-1955 ; Theology Today Volume 11 ; 11 >
+        au < manifest ; 1955-1956 ; Theology Today Volume 12 ; 12 >
+        au < manifest ; 1956-1957 ; Theology Today Volume 13 ; 13 >
+        au < manifest ; 1957-1958 ; Theology Today Volume 14 ; 14 >
+        au < manifest ; 1958-1959 ; Theology Today Volume 15 ; 15 >
+        au < manifest ; 1959-1960 ; Theology Today Volume 16 ; 16 >
+        au < manifest ; 1960-1961 ; Theology Today Volume 17 ; 17 >
+        au < manifest ; 1961-1962 ; Theology Today Volume 18 ; 18 >
+        au < manifest ; 1962-1963 ; Theology Today Volume 19 ; 19 >
+        au < manifest ; 1963-1964 ; Theology Today Volume 20 ; 20 >
+        au < manifest ; 1964-1965 ; Theology Today Volume 21 ; 21 >
+        au < manifest ; 1965-1966 ; Theology Today Volume 22 ; 22 >
+        au < manifest ; 1966-1967 ; Theology Today Volume 23 ; 23 >
+        au < manifest ; 1967-1968 ; Theology Today Volume 24 ; 24 >
+        au < manifest ; 1968-1969 ; Theology Today Volume 25 ; 25 >
+        au < manifest ; 1969-1970 ; Theology Today Volume 26 ; 26 >
+        au < manifest ; 1970-1971 ; Theology Today Volume 27 ; 27 >
+        au < manifest ; 1971-1972 ; Theology Today Volume 28 ; 28 >
+        au < manifest ; 1972-1973 ; Theology Today Volume 29 ; 29 >
+        au < manifest ; 1973-1974 ; Theology Today Volume 30 ; 30 >
+        au < manifest ; 1974-1975 ; Theology Today Volume 31 ; 31 >
+        au < manifest ; 1975-1976 ; Theology Today Volume 32 ; 32 >
+        au < manifest ; 1976-1977 ; Theology Today Volume 33 ; 33 >
+        au < manifest ; 1977-1978 ; Theology Today Volume 34 ; 34 >
+        au < manifest ; 1978-1979 ; Theology Today Volume 35 ; 35 >
+        au < manifest ; 1979-1980 ; Theology Today Volume 36 ; 36 >
+        au < manifest ; 1980-1981 ; Theology Today Volume 37 ; 37 >
+        au < manifest ; 1981-1982 ; Theology Today Volume 38 ; 38 >
+        au < manifest ; 1982-1983 ; Theology Today Volume 39 ; 39 >
+        au < manifest ; 1983-1984 ; Theology Today Volume 40 ; 50 >
+        au < manifest ; 1984-1985 ; Theology Today Volume 41 ; 51 >
+        au < manifest ; 1985-1986 ; Theology Today Volume 42 ; 52 >
+        au < manifest ; 1986-1987 ; Theology Today Volume 43 ; 53 >
+        au < manifest ; 1987-1988 ; Theology Today Volume 44 ; 54 >
+        au < manifest ; 1988-1989 ; Theology Today Volume 45 ; 55 >
+        au < manifest ; 1989-1990 ; Theology Today Volume 46 ; 56 >
+        au < manifest ; 1990-1991 ; Theology Today Volume 47 ; 57 >
+        au < manifest ; 1991-1992 ; Theology Today Volume 48 ; 58 >
+        au < manifest ; 1992-1993 ; Theology Today Volume 49 ; 59 >
+        au < manifest ; 1993-1994 ; Theology Today Volume 50 ; 50 >
+        au < manifest ; 1994-1995 ; Theology Today Volume 51 ; 51 >
+        au < manifest ; 1995-1996 ; Theology Today Volume 52 ; 52 >
+        au < manifest ; 1996-1997 ; Theology Today Volume 53 ; 53 >
+        au < manifest ; 1997-1998 ; Theology Today Volume 54 ; 54 >
+        au < manifest ; 1998-1999 ; Theology Today Volume 55 ; 55 >
+        au < manifest ; 1999-2000 ; Theology Today Volume 56 ; 56 >
+        au < manifest ; 2000-2001 ; Theology Today Volume 57 ; 57 >
+        au < manifest ; 2001-2002 ; Theology Today Volume 58 ; 58 >
+        au < manifest ; 2002-2003 ; Theology Today Volume 59 ; 59 >
+        au < manifest ; 2003-2004 ; Theology Today Volume 60 ; 60 >
+        au < manifest ; 2004-2005 ; Theology Today Volume 61 ; 61 >
+        au < manifest ; 2005-2006 ; Theology Today Volume 62 ; 62 >
+        au < manifest ; 2006-2007 ; Theology Today Volume 63 ; 63 >
+        au < manifest ; 2007-2008 ; Theology Today Volume 64 ; 64 >
+        au < manifest ; 2008-2009 ; Theology Today Volume 65 ; 65 >
+        au < manifest ; 2009-2010 ; Theology Today Volume 66 ; 66 >
+        au < manifest ; 2010-2011 ; Theology Today Volume 67 ; 67 >
         au < ready ; 2011 ; Theology Today Volume 68 ; 68 >
 
       }
@@ -34963,12 +35131,12 @@ comment[mpj] = now published by Brill
         param[base_url] = http://thr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
-        au < exists ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
-        au < exists ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
-        au < exists ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
-        au < exists ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
-        au < exists ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
+        au < manifest ; 2004-2005 ; Tourism and Hospitality Research Volume 5 ; 5 >
+        au < manifest ; 2005-2006 ; Tourism and Hospitality Research Volume 6 ; 6 >
+        au < manifest ; 2006-2007 ; Tourism and Hospitality Research Volume 7 ; 7 >
+        au < manifest ; 2008 ; Tourism and Hospitality Research Volume 8 ; 8 >
+        au < manifest ; 2009 ; Tourism and Hospitality Research Volume 9 ; 9 >
+        au < manifest ; 2010 ; Tourism and Hospitality Research Volume 10 ; 10 >
         au < ready ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 >
 
       }
@@ -35047,19 +35215,19 @@ comment[mpj] = now published by Brill
         param[base_url] = http://tih.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1985 ; Toxicology and Industrial Health Volume 1 ; 1 >
-        au < exists ; 1986 ; Toxicology and Industrial Health Volume 2  ; 2  >
-        au < exists ; 1987 ; Toxicology and Industrial Health Volume 3  ; 3  >
-        au < exists ; 1988 ; Toxicology and Industrial Health Volume 4  ; 4  >
-        au < exists ; 1989 ; Toxicology and Industrial Health Volume 5  ; 5  >
-        au < exists ; 1990 ; Toxicology and Industrial Health Volume 6  ; 6  >
-        au < exists ; 1991 ; Toxicology and Industrial Health Volume 7  ; 7  >
-        au < exists ; 1992 ; Toxicology and Industrial Health Volume 8  ; 8  >
-        au < exists ; 1993 ; Toxicology and Industrial Health Volume 9  ; 9  >
-        au < exists ; 1994 ; Toxicology and Industrial Health Volume 10 ; 10 >
-        au < exists ; 1995 ; Toxicology and Industrial Health Volume 11 ; 11 >
-        au < exists ; 1996 ; Toxicology and Industrial Health Volume 12 ; 12 >
-        au < exists ; 1997 ; Toxicology and Industrial Health Volume 13 ; 13 >
+        au < manifest ; 1985 ; Toxicology and Industrial Health Volume 1 ; 1 >
+        au < manifest ; 1986 ; Toxicology and Industrial Health Volume 2  ; 2  >
+        au < manifest ; 1987 ; Toxicology and Industrial Health Volume 3  ; 3  >
+        au < manifest ; 1988 ; Toxicology and Industrial Health Volume 4  ; 4  >
+        au < manifest ; 1989 ; Toxicology and Industrial Health Volume 5  ; 5  >
+        au < manifest ; 1990 ; Toxicology and Industrial Health Volume 6  ; 6  >
+        au < manifest ; 1991 ; Toxicology and Industrial Health Volume 7  ; 7  >
+        au < manifest ; 1992 ; Toxicology and Industrial Health Volume 8  ; 8  >
+        au < doesNotExist ; 1993 ; Toxicology and Industrial Health Volume 9  ; 9  >
+        au < manifest ; 1994 ; Toxicology and Industrial Health Volume 10 ; 10 >
+        au < manifest ; 1995 ; Toxicology and Industrial Health Volume 11 ; 11 >
+        au < manifest ; 1996 ; Toxicology and Industrial Health Volume 12 ; 12 >
+        au < manifest ; 1997 ; Toxicology and Industrial Health Volume 13 ; 13 >
         au < manifest ; 1998 ; Toxicology and Industrial Health Volume 14 ; 14 >
         au < manifest ; 1999 ; Toxicology and Industrial Health Volume 15 ; 15 >
         au < manifest ; 2000 ; Toxicology and Industrial Health Volume 16 ; 16 >
@@ -35296,20 +35464,20 @@ comment[mpj] = now published by Brill
         param[base_url] = http://trs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 >
-        au < exists ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 >
-        au < exists ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 >
-        au < exists ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 >
-        au < exists ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 >
-        au < exists ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 >
-        au < exists ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 >
-        au < exists ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 >
-        au < exists ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 >
-        au < exists ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 >
-        au < exists ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 >
-        au < exists ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 >
-        au < exists ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 >
-        au < exists ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 >
+        au < manifest ; 1995 ; Transfer: European Review of Labour and Research Volume 1 ; 1 >
+        au < manifest ; 1996 ; Transfer: European Review of Labour and Research Volume 2 ; 2 >
+        au < manifest ; 1997 ; Transfer: European Review of Labour and Research Volume 3 ; 3 >
+        au < manifest ; 1998 ; Transfer: European Review of Labour and Research Volume 4 ; 4 >
+        au < manifest ; 1999 ; Transfer: European Review of Labour and Research Volume 5 ; 5 >
+        au < manifest ; 2000 ; Transfer: European Review of Labour and Research Volume 6 ; 6 >
+        au < manifest ; 2001 ; Transfer: European Review of Labour and Research Volume 7 ; 7 >
+        au < manifest ; 2002 ; Transfer: European Review of Labour and Research Volume 8 ; 8 >
+        au < manifest ; 2003 ; Transfer: European Review of Labour and Research Volume 9 ; 9 >
+        au < manifest ; 2004 ; Transfer: European Review of Labour and Research Volume 10 ; 10 >
+        au < manifest ; 2005 ; Transfer: European Review of Labour and Research Volume 11 ; 11 >
+        au < manifest ; 2006 ; Transfer: European Review of Labour and Research Volume 12 ; 12 >
+        au < manifest ; 2007 ; Transfer: European Review of Labour and Research Volume 13 ; 13 >
+        au < manifest ; 2008 ; Transfer: European Review of Labour and Research Volume 14 ; 14 >
         au < manifest ; 2009 ; Transfer: European Review of Labour and Research Volume 15 ; 15 >
         au < manifest ; 2010 ; Transfer: European Review of Labour and Research Volume 16 ; 16 >
         au < ready ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
@@ -35331,31 +35499,31 @@ comment[mpj] = now published by Brill
         param[base_url] = http://trn.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1984 ; Transformation: An International Journal of Holistic Mission Studies Volume 1 ; 1 >
-        au < exists ; 1985 ; Transformation: An International Journal of Holistic Mission Studies Volume 2 ; 2 >
-        au < exists ; 1986 ; Transformation: An International Journal of Holistic Mission Studies Volume 3 ; 3 >
-        au < exists ; 1987 ; Transformation: An International Journal of Holistic Mission Studies Volume 4 ; 4 >
-        au < exists ; 1988 ; Transformation: An International Journal of Holistic Mission Studies Volume 5 ; 5 >
-        au < exists ; 1989 ; Transformation: An International Journal of Holistic Mission Studies Volume 6 ; 6 >
-        au < exists ; 1990 ; Transformation: An International Journal of Holistic Mission Studies Volume 7 ; 7 >
-        au < exists ; 1991 ; Transformation: An International Journal of Holistic Mission Studies Volume 8 ; 8 >
-        au < exists ; 1992 ; Transformation: An International Journal of Holistic Mission Studies Volume 9 ; 9 >
-        au < exists ; 1993 ; Transformation: An International Journal of Holistic Mission Studies Volume 10 ; 10 >
-        au < exists ; 1994 ; Transformation: An International Journal of Holistic Mission Studies Volume 11 ; 11 >
-        au < exists ; 1995 ; Transformation: An International Journal of Holistic Mission Studies Volume 12 ; 12 >
-        au < exists ; 1996 ; Transformation: An International Journal of Holistic Mission Studies Volume 13 ; 13 >
-        au < exists ; 1997 ; Transformation: An International Journal of Holistic Mission Studies Volume 14 ; 14 >
-        au < exists ; 1998 ; Transformation: An International Journal of Holistic Mission Studies Volume 15 ; 15 >
-        au < exists ; 1999 ; Transformation: An International Journal of Holistic Mission Studies Volume 16 ; 16 >
-        au < exists ; 2000 ; Transformation: An International Journal of Holistic Mission Studies Volume 17 ; 17 >
-        au < exists ; 2001 ; Transformation: An International Journal of Holistic Mission Studies Volume 18 ; 18 >
-        au < exists ; 2002 ; Transformation: An International Journal of Holistic Mission Studies Volume 19 ; 19 >
-        au < exists ; 2003 ; Transformation: An International Journal of Holistic Mission Studies Volume 20 ; 20 >
-        au < exists ; 2004 ; Transformation: An International Journal of Holistic Mission Studies Volume 21 ; 21 >
-        au < exists ; 2005 ; Transformation: An International Journal of Holistic Mission Studies Volume 22 ; 22 >
-        au < exists ; 2006 ; Transformation: An International Journal of Holistic Mission Studies Volume 23 ; 23 >
-        au < exists ; 2007 ; Transformation: An International Journal of Holistic Mission Studies Volume 24 ; 24 >
-        au < exists ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 >
+        au < manifest ; 1984 ; Transformation: An International Journal of Holistic Mission Studies Volume 1 ; 1 >
+        au < manifest ; 1985 ; Transformation: An International Journal of Holistic Mission Studies Volume 2 ; 2 >
+        au < manifest ; 1986 ; Transformation: An International Journal of Holistic Mission Studies Volume 3 ; 3 >
+        au < manifest ; 1987 ; Transformation: An International Journal of Holistic Mission Studies Volume 4 ; 4 >
+        au < manifest ; 1988 ; Transformation: An International Journal of Holistic Mission Studies Volume 5 ; 5 >
+        au < manifest ; 1989 ; Transformation: An International Journal of Holistic Mission Studies Volume 6 ; 6 >
+        au < manifest ; 1990 ; Transformation: An International Journal of Holistic Mission Studies Volume 7 ; 7 >
+        au < manifest ; 1991 ; Transformation: An International Journal of Holistic Mission Studies Volume 8 ; 8 >
+        au < manifest ; 1992 ; Transformation: An International Journal of Holistic Mission Studies Volume 9 ; 9 >
+        au < manifest ; 1993 ; Transformation: An International Journal of Holistic Mission Studies Volume 10 ; 10 >
+        au < manifest ; 1994 ; Transformation: An International Journal of Holistic Mission Studies Volume 11 ; 11 >
+        au < manifest ; 1995 ; Transformation: An International Journal of Holistic Mission Studies Volume 12 ; 12 >
+        au < manifest ; 1996 ; Transformation: An International Journal of Holistic Mission Studies Volume 13 ; 13 >
+        au < manifest ; 1997 ; Transformation: An International Journal of Holistic Mission Studies Volume 14 ; 14 >
+        au < manifest ; 1998 ; Transformation: An International Journal of Holistic Mission Studies Volume 15 ; 15 >
+        au < manifest ; 1999 ; Transformation: An International Journal of Holistic Mission Studies Volume 16 ; 16 >
+        au < manifest ; 2000 ; Transformation: An International Journal of Holistic Mission Studies Volume 17 ; 17 >
+        au < manifest ; 2001 ; Transformation: An International Journal of Holistic Mission Studies Volume 18 ; 18 >
+        au < manifest ; 2002 ; Transformation: An International Journal of Holistic Mission Studies Volume 19 ; 19 >
+        au < manifest ; 2003 ; Transformation: An International Journal of Holistic Mission Studies Volume 20 ; 20 >
+        au < manifest ; 2004 ; Transformation: An International Journal of Holistic Mission Studies Volume 21 ; 21 >
+        au < manifest ; 2005 ; Transformation: An International Journal of Holistic Mission Studies Volume 22 ; 22 >
+        au < manifest ; 2006 ; Transformation: An International Journal of Holistic Mission Studies Volume 23 ; 23 >
+        au < manifest ; 2007 ; Transformation: An International Journal of Holistic Mission Studies Volume 24 ; 24 >
+        au < manifest ; 2008 ; Transformation: An International Journal of Holistic Mission Studies Volume 25 ; 25 >
         au < manifest ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 >
         au < manifest ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 >
         au < ready ; 2011 ; Transformation: An International Journal of Holistic Mission Studies Volume 28 ; 28 >
@@ -35955,35 +36123,35 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1964 ; Veterinary Pathology Volume 1 ; 1 >
-        au < exists ; 1965 ; Veterinary Pathology Volume 2 ; 2 >
-        au < exists ; 1966 ; Veterinary Pathology Volume 3 ; 3 >
-        au < exists ; 1967 ; Veterinary Pathology Volume 4 ; 4 >
-        au < exists ; 1968 ; Veterinary Pathology Volume 5 ; 5 >
+        au < manifest ; 1965 ; Veterinary Pathology Volume 2 ; 2 >
+        au < manifest ; 1966 ; Veterinary Pathology Volume 3 ; 3 >
+        au < manifest ; 1967 ; Veterinary Pathology Volume 4 ; 4 >
+        au < manifest ; 1968 ; Veterinary Pathology Volume 5 ; 5 >
         au < manifest ; 1969 ; Veterinary Pathology Volume 6 ; 6 >
-        au < exists ; 1970 ; Veterinary Pathology Volume 7 ; 7 >
-        au < exists ; 1971 ; Veterinary Pathology Volume 8 ; 8 >
+        au < manifest ; 1970 ; Veterinary Pathology Volume 7 ; 7 >
+        au < manifest ; 1971 ; Veterinary Pathology Volume 8 ; 8 >
         au < manifest ; 1972 ; Veterinary Pathology Volume 9 ; 9 >
-        au < exists ; 1973 ; Veterinary Pathology Volume 10 ; 10 >
-        au < exists ; 1974 ; Veterinary Pathology Volume 11 ; 11 >
-        au < exists ; 1975 ; Veterinary Pathology Volume 12 ; 12 >
-        au < exists ; 1976 ; Veterinary Pathology Volume 13 ; 13 >
-        au < exists ; 1977 ; Veterinary Pathology Volume 14 ; 14 >
+        au < manifest ; 1973 ; Veterinary Pathology Volume 10 ; 10 >
+        au < manifest ; 1974 ; Veterinary Pathology Volume 11 ; 11 >
+        au < manifest ; 1975 ; Veterinary Pathology Volume 12 ; 12 >
+        au < manifest ; 1976 ; Veterinary Pathology Volume 13 ; 13 >
+        au < manifest ; 1977 ; Veterinary Pathology Volume 14 ; 14 >
         au < manifest ; 1978 ; Veterinary Pathology Volume 15 ; 15 >
         au < manifest ; 1979 ; Veterinary Pathology Volume 16 ; 16 >
-        au < exists ; 1980 ; Veterinary Pathology Volume 17 ; 17 >
-        au < exists ; 1981 ; Veterinary Pathology Volume 18 ; 18 >
+        au < manifest ; 1980 ; Veterinary Pathology Volume 17 ; 17 >
+        au < manifest ; 1981 ; Veterinary Pathology Volume 18 ; 18 >
         au < manifest ; 1982 ; Veterinary Pathology Volume 19 ; 19 >
         au < manifest ; 1983 ; Veterinary Pathology Volume 20 ; 20 >
-        au < exists ; 1984 ; Veterinary Pathology Volume 21 ; 21 >
-        au < exists ; 1985 ; Veterinary Pathology Volume 22 ; 22 >
-        au < exists ; 1986 ; Veterinary Pathology Volume 23 ; 23 >
-        au < exists ; 1987 ; Veterinary Pathology Volume 24 ; 24 >
+        au < manifest ; 1984 ; Veterinary Pathology Volume 21 ; 21 >
+        au < manifest ; 1985 ; Veterinary Pathology Volume 22 ; 22 >
+        au < manifest ; 1986 ; Veterinary Pathology Volume 23 ; 23 >
+        au < manifest ; 1987 ; Veterinary Pathology Volume 24 ; 24 >
         au < manifest ; 1988 ; Veterinary Pathology Volume 25 ; 25 >
         au < manifest ; 1989 ; Veterinary Pathology Volume 26 ; 26 >
         au < manifest ; 1990 ; Veterinary Pathology Volume 27 ; 27 >
-        au < exists ; 1991 ; Veterinary Pathology Volume 28 ; 28 >
-        au < exists ; 1992 ; Veterinary Pathology Volume 29 ; 29 >
-        au < exists ; 1993 ; Veterinary Pathology Volume 30 ; 30 >
+        au < manifest ; 1991 ; Veterinary Pathology Volume 28 ; 28 >
+        au < manifest ; 1992 ; Veterinary Pathology Volume 29 ; 29 >
+        au < manifest ; 1993 ; Veterinary Pathology Volume 30 ; 30 >
         au < manifest ; 1994 ; Veterinary Pathology Volume 31 ; 31 >
         au < manifest ; 1995 ; Veterinary Pathology Volume 32 ; 32 >
         au < manifest ; 1996 ; Veterinary Pathology Volume 33 ; 33 >
@@ -36497,11 +36665,11 @@ comment[mpj] = now published by Brill
         param[base_url] = http://wpj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2006 ; World Policy Journal Volume 23 ; 23 >
-        au < exists ; 2007 ; World Policy Journal Volume 24 ; 24 >
-        au < exists ; 2008 ; World Policy Journal Volume 25 ; 25 >
-        au < exists ; 2009 ; World Policy Journal Volume 26 ; 26 >
-        au < exists ; 2010 ; World Policy Journal Volume 27 ; 27 >
+        au < manifest ; 2006 ; World Policy Journal Volume 23 ; 23 >
+        au < manifest ; 2007 ; World Policy Journal Volume 24 ; 24 >
+        au < manifest ; 2008 ; World Policy Journal Volume 25 ; 25 >
+        au < manifest ; 2009 ; World Policy Journal Volume 26 ; 26 >
+        au < manifest ; 2010 ; World Policy Journal Volume 27 ; 27 >
         au < ready ; 2011 ; World Policy Journal Volume 28 ; 28 >
 
       }
@@ -36691,10 +36859,10 @@ comment[mpj] = now published by Brill
         au < manifest ; 1972-1973 ; Youth & Society Volume 4 ; 4 >
         au < manifest ; 1973-1974 ; Youth & Society Volume 5 ; 5 >
         au < manifest ; 1974-1975 ; Youth & Society Volume 6 ; 6 >
-        au < exists ; 1975-1976 ; Youth & Society Volume 7 ; 7 >
+        au < manifest ; 1975-1976 ; Youth & Society Volume 7 ; 7 >
         au < manifest ; 1976-1977 ; Youth & Society Volume 8 ; 8 >
-        au < exists ; 1977-1978 ; Youth & Society Volume 9 ; 9 >
-        au < exists ; 1978-1979 ; Youth & Society Volume 10 ; 10 >
+        au < manifest ; 1977-1978 ; Youth & Society Volume 9 ; 9 >
+        au < manifest ; 1978-1979 ; Youth & Society Volume 10 ; 10 >
         au < manifest ; 1979 ; Youth & Society Volume 11 ; 11 >
         au < manifest ; 1980 ; Youth & Society Volume 12 ; 12 >
         au < manifest ; 1982 ; Youth & Society Volume 13 ; 13 >
