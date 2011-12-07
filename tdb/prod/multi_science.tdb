@@ -4,6 +4,10 @@
     name = Multi-Science
   >
 
+  plugin = org.lockss.plugin.metapress.MetaPressPlugin
+  param[base_url] = http://multi-science.metapress.com/
+  implicit < status ; year ; name ; param[volume_name] >
+
   {
   
     title <
@@ -11,8 +15,22 @@
       issn = 0263-6174
     >
 
-  }
+    param[journal_issn] = 121490
 
+    au < exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
+    au < exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
+    au < exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
+    au < exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
+    au < exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
+    au < exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
+    au < exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
+    au < exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
+    au < exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+    au < exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
+    au < exists ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
+    au < exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
+
+  }
 
   {
   
@@ -20,6 +38,22 @@
       name = Advances in Structural Engineering ;
       issn = 1369-4332
     >
+
+    param[journal_issn] = 121491
+
+    au < exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 > 
+    au < exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 > 
+    au < exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 > 
+    au < exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 > 
+    au < exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >     
+    au < exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 > 
+    au < exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 > 
+    au < exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 > 
+    au < exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 > 
+    au < exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 > 
+    au < exists ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >     
+    au < exists ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >    
+
   }
 
   {
@@ -29,8 +63,23 @@
       issn = 1351-010X
     >
 
-  }
+    param[journal_issn] = 121492
 
+    au < exists ; 1999 ; Building Acoustics Volume 6 ; 6 > 
+    au < exists ; 2000 ; Building Acoustics Volume 7 ; 7 >     
+    au < exists ; 2001 ; Building Acoustics Volume 8 ; 8 > 
+    au < exists ; 2002 ; Building Acoustics Volume 9 ; 9 > 
+    au < exists ; 2003 ; Building Acoustics Volume 10 ; 10 > 
+    au < exists ; 2004 ; Building Acoustics Volume 11 ; 11 > 
+    au < exists ; 2005 ; Building Acoustics Volume 12 ; 12 > 
+    au < exists ; 2006 ; Building Acoustics Volume 13 ; 13 >     
+    au < exists ; 2007 ; Building Acoustics Volume 14 ; 14 > 
+    au < exists ; 2008 ; Building Acoustics Volume 15 ; 15 >
+    au < exists ; 2009 ; Building Acoustics Volume 16 ; 16 >
+    au < exists ; 2010 ; Building Acoustics Volume 17 ; 17 >
+    au < exists ; 2011 ; Building Acoustics Volume 18 ; 18 >
+    
+  }
 
   {
   
@@ -38,9 +87,24 @@
       name = Energy & Environment ;
       issn = 0958-305X
     >
+    
+    param[journal_issn] = 121493
+
+    au < exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
+    au < exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
+    au < exists ; 2001 ; Energy & Environment Volume 12 ; 12 >
+    au < exists ; 2002 ; Energy & Environment Volume 13 ; 13 >
+    au < exists ; 2003 ; Energy & Environment Volume 14 ; 14 >
+    au < exists ; 2004 ; Energy & Environment Volume 15 ; 15 >
+    au < exists ; 2005 ; Energy & Environment Volume 16 ; 16 >
+    au < exists ; 2006 ; Energy & Environment Volume 17 ; 17 >
+    au < exists ; 2007 ; Energy & Environment Volume 18 ; 18 >
+    au < exists ; 2008 ; Energy & Environment Volume 19 ; 19 >
+    au < exists ; 2009 ; Energy & Environment Volume 20 ; 20 >
+    au < exists ; 2010 ; Energy & Environment Volume 21 ; 21 >
+    au < exists ; 2011 ; Energy & Environment Volume 22 ; 22 >
 
   }
-
 
   {
   
@@ -49,8 +113,22 @@
       issn = 0144-5987
     >
 
-  }
+    param[journal_issn] = 121494
+    
+    au < exists ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
+    au < exists ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
+    au < exists ; 2002 ; Energy, Exploration & Exploitation Volume 20 ; 20 >
+    au < exists ; 2003 ; Energy, Exploration & Exploitation Volume 21 ; 21 >
+    au < exists ; 2004 ; Energy, Exploration & Exploitation Volume 22 ; 22 >
+    au < exists ; 2005 ; Energy, Exploration & Exploitation Volume 23 ; 23 >
+    au < exists ; 2006 ; Energy, Exploration & Exploitation Volume 24 ; 24 >
+    au < exists ; 2007 ; Energy, Exploration & Exploitation Volume 25 ; 25 >
+    au < exists ; 2008 ; Energy, Exploration & Exploitation Volume 26 ; 26 >
+    au < exists ; 2009 ; Energy, Exploration & Exploitation Volume 27 ; 27 >
+    au < exists ; 2010 ; Energy, Exploration & Exploitation Volume 28 ; 28 >
+    au < exists ; 2011 ; Energy, Exploration & Exploitation Volume 29 ; 29 >
 
+  }
 
   {
   
@@ -250,6 +328,8 @@
       isbn = 9780906522363
     >
 
+    param[journal_issn] = rg4462
+    
   }
 
 
@@ -301,7 +381,33 @@
       issn = 0309-524X
     >
 
+    param[journal_issn] = 121513
+
+    au < exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
+    au < exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
+    au < exists ; 2002 ; Wind Engineering Volume 26 ; 26 >
+    au < exists ; 2003 ; Wind Engineering Volume 27 ; 27 >
+    au < exists ; 2004 ; Wind Engineering Volume 28 ; 28 >
+    au < exists ; 2005 ; Wind Engineering Volume 29 ; 29 >
+    au < exists ; 2006 ; Wind Engineering Volume 30 ; 30 >
+    au < exists ; 2007 ; Wind Engineering Volume 31 ; 31 >
+    au < exists ; 2008 ; Wind Engineering Volume 32 ; 32 >
+    au < exists ; 2009 ; Wind Engineering Volume 33 ; 33 >
+    au < exists ; 2010 ; Wind Engineering Volume 34 ; 34 >
+    au < exists ; 2011 ; Wind Engineering Volume 35 ; 35 >
+
   }
 
+  {
+  
+    title <
+      name = World Journal of Engineering ;
+      issn = 1708-5284
+    >
+
+    param[journal_issn] = 122260
+    
+    au < exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
+  }
 
 }
