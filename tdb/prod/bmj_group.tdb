@@ -131,7 +131,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of the Rheumatic Diseases Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; exists ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; Annals of the Rheumatic Diseases Volume 71 ; 71 >
 
   }
 
@@ -373,7 +373,8 @@
 
     param[base_url] = http://bmjopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; 2011 ; BMJ Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; manifest ; 2011 ; BMJ Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; BMJ Open Volume 2 ; 2 >
 
   }
 
