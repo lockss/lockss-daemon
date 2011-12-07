@@ -27725,6 +27725,20 @@
   {
 
     title <
+      name = Medici Oggi ;
+      issn = 1721-0208 ;
+      eissn = 2038-9124 ;
+      issnl = 1721-0208 ;
+      placeholder = True
+    >
+
+    param[journal_issn] = 1721-0208
+
+  }
+
+  {
+
+    title <
       name = Medical and Surgical Dermatology ;
       issn = 0944-5196 ;
       placeholder = True
@@ -33067,6 +33081,19 @@
     >
 
     param[journal_issn] = 1754-0429
+
+  }
+
+  {
+
+    title <
+      name = Pneumo News ;
+      issn = 1865-5467 ;
+      issnl = 1865-5467 ;
+      placeholder = True
+    >
+
+    param[journal_issn] = 1865-5467
 
   }
 
