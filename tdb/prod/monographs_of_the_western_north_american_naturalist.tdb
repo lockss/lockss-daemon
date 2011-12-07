@@ -17,10 +17,12 @@
     
     param[journal_id] = mwna
   
-    au < exists ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
-    au < exists ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
-    au < exists ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
-    au < exists ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+    au < manifest ; 2002 ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
+    au < manifest ; 2004 ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
+    au < manifest ; 2007 ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
+    au < manifest ; 2008 ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+    au < manifest ; 2011 ; Monographs of the Western North American Naturalist Volume 5 ; 5 >
+    au < exists ; 2012 ; Monographs of the Western North American Naturalist Volume 6 ; 6 >
 
   }
   
