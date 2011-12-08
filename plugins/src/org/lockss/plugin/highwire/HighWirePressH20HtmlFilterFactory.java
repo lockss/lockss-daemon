@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.33 2011-08-17 21:04:13 mellen22 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.34 2011-12-08 00:33:57 thib_gc Exp $
  */
 
 /*
@@ -123,7 +123,11 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "rel-relevant-article"), 
         // For BMJ variable poll 
         HtmlNodeFilters.tagWithAttribute("div", "id", "polldaddy-bottom"),
-        
+        // BMJ-related
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-article-page-promo-column"),
+        HtmlNodeFilters.tagWithAttribute("form", "id", "bmj-advanced-search-channel-form"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
     };
     
     return new HtmlFilterInputStream(in,
