@@ -2089,7 +2089,6 @@
 
     comment[merged_from] = 1269-3286
     param[journal_issn] = 0939-5555
-    attr[where] = content2b
 
     au < manifest ; 1955 ; Annals of Hematology Volume 1 ; 1 >
     au < manifest ; 1956 ; Annals of Hematology Volume 2 ; 2 >
@@ -2648,7 +2647,6 @@
     >
 
     param[journal_issn] = 0175-7598
-    attr[where] = content6a
 
     au < manifest ; 1975 ; Applied Microbiology and Biotechnology Volume 1 ; 1 >
     au < manifest ; 1975-1976 ; Applied Microbiology and Biotechnology Volume 2 ; 2 >
@@ -13891,7 +13889,6 @@
 
     comment[continued_by] = 1618-2642
     param[journal_issn] = 0937-0633
-    attr[where] = content2a
 
     au < manifest ; 1862 ; Zeitschrift für Analytische Chemie Volume 1 ; 1 >
     au < manifest ; 1863 ; Zeitschrift für Analytische Chemie Volume 2 ; 2 >
@@ -14362,11 +14359,19 @@
     title <
       name = Frontiers of Chemistry in China ;
       issn = 1673-3495 ;
-      issnl = 1673-3495 ;
-      placeholder = True
+      issnl = 1673-3495
     >
 
     param[journal_issn] = 1673-3495
+    comment[urgent] = end of 2011
+    attr[where] = content1a
+
+    au < testing ; 2006 ; Frontiers of Chemistry in China Volume 1 ; 1 >
+    au < testing ; 2007 ; Frontiers of Chemistry in China Volume 2 ; 2 >
+    au < testing ; 2008 ; Frontiers of Chemistry in China Volume 3 ; 3 >
+    au < testing ; 2009 ; Frontiers of Chemistry in China Volume 4 ; 4 >
+    au < testing ; 2010 ; Frontiers of Chemistry in China Volume 5 ; 5 >
+    au < testing ; 2011 ; Frontiers of Chemistry in China Volume 6 ; 6 >
 
   }
 
@@ -16041,7 +16046,6 @@
     >
 
     param[journal_issn] = 0948-6143
-    attr[where] = content6b
 
     au < manifest ; 1958-1959 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section Histochemie Volume 1 ; 1 >
     au < manifest ; 1960-1962 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section Histochemie Volume 2 ; 2 >
@@ -18521,7 +18525,6 @@
     >
 
     param[journal_issn] = 0937-9827
-    attr[where] = content5a
 
     au < manifest ; 1922 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 1 ; 1 >
     au < manifest ; 1923 ; Deutsche Zeitschrift für die gesamte gerichtliche Medizin Volume 2 ; 2 >
@@ -19294,7 +19297,6 @@
     >
 
     param[journal_issn] = 0020-9910
-    attr[where] = content5b
 
     au < manifest ; 1966 ; Inventiones Mathematicae Volume 1 ; 1 >
     au < manifest ; 1966-1967 ; Inventiones Mathematicae Volume 2 ; 2 >
@@ -19616,11 +19618,38 @@
       name = Irrigation and Drainage Systems ;
       issn = 0168-6291 ;
       eissn = 1573-0654 ;
-      issnl = 0168-6291 ;
-      placeholder = True
+      issnl = 0168-6291
     >
 
     param[journal_issn] = 0168-6291
+    comment[urgent] = end of 2011
+    attr[where] = content2a
+
+    au < testing ; 1986-1987 ; Irrigation and Drainage Systems Volume 1 ; 1 >
+    au < testing ; 1988 ; Irrigation and Drainage Systems Volume 2 ; 2 >
+    au < testing ; 1989 ; Irrigation and Drainage Systems Volume 3 ; 3 >
+    au < testing ; 1990 ; Irrigation and Drainage Systems Volume 4 ; 4 >
+    au < testing ; 1991 ; Irrigation and Drainage Systems Volume 5 ; 5 >
+    au < testing ; 1992-1993 ; Irrigation and Drainage Systems Volume 6 ; 6 >
+    au < testing ; 1993 ; Irrigation and Drainage Systems Volume 7 ; 7 >
+    au < testing ; 1994 ; Irrigation and Drainage Systems Volume 8 ; 8 >
+    au < testing ; 1995 ; Irrigation and Drainage Systems Volume 9 ; 9 >
+    au < testing ; 1996 ; Irrigation and Drainage Systems Volume 10 ; 10 >
+    au < testing ; 1997 ; Irrigation and Drainage Systems Volume 11 ; 11 >
+    au < testing ; 1997 ; Irrigation and Drainage Systems Volume 12 ; 12 >
+    au < testing ; 1999 ; Irrigation and Drainage Systems Volume 13 ; 13 >
+    au < testing ; 2000 ; Irrigation and Drainage Systems Volume 14 ; 14 >
+    au < testing ; 2001 ; Irrigation and Drainage Systems Volume 15 ; 15 >
+    au < testing ; 2002 ; Irrigation and Drainage Systems Volume 16 ; 16 >
+    au < testing ; 2003 ; Irrigation and Drainage Systems Volume 17 ; 17 >
+    au < testing ; 2004 ; Irrigation and Drainage Systems Volume 18 ; 18 >
+    au < testing ; 2005 ; Irrigation and Drainage Systems Volume 19 ; 19 >
+    au < testing ; 2006 ; Irrigation and Drainage Systems Volume 20 ; 20 >
+    au < testing ; 2007 ; Irrigation and Drainage Systems Volume 21 ; 21 >
+    au < testing ; 2008 ; Irrigation and Drainage Systems Volume 22 ; 22 >
+    au < testing ; 2009 ; Irrigation and Drainage Systems Volume 23 ; 23 >
+    au < testing ; 2010 ; Irrigation and Drainage Systems Volume 24 ; 24 >
+    au < testing ; 2011 ; Irrigation and Drainage Systems Volume 25 ; 25 >
 
   }
 
@@ -27723,20 +27752,6 @@
   {
 
     title <
-      name = Medici Oggi ;
-      issn = 1721-0208 ;
-      eissn = 2038-9124 ;
-      issnl = 1721-0208 ;
-      placeholder = True
-    >
-
-    param[journal_issn] = 1721-0208
-
-  }
-
-  {
-
-    title <
       name = Medical and Surgical Dermatology ;
       issn = 0944-5196 ;
       placeholder = True
@@ -30445,7 +30460,6 @@
     >
 
     param[journal_issn] = 0029-8549
-    attr[where] = content1b
 
     au < manifest ; 1968 ; Oecologia Volume 1 ; 1 >
     au < manifest ; 1968-1969 ; Oecologia Volume 2 ; 2 >
@@ -30635,11 +30649,18 @@
     title <
       name = Oncology Reviews ;
       issn = 1970-5557 ;
-      issnl = 1970-5557 ;
-      placeholder = True
+      issnl = 1970-5557
     >
 
     param[journal_issn] = 1970-5557
+    comment[urgent] = end of 2011
+    attr[where] = content6a
+
+    au < testing ; 2007 ; Oncology Reviews Volume 1 ; 1 >
+    au < testing ; 2008 ; Oncology Reviews Volume 2 ; 2 >
+    au < testing ; 2009 ; Oncology Reviews Volume 3 ; 3 >
+    au < testing ; 2010 ; Oncology Reviews Volume 4 ; 4 >
+    au < testing ; 2011 ; Oncology Reviews Volume 5 ; 5 >
 
   }
 
@@ -30649,11 +30670,18 @@
       name = OncoMagazine ;
       issn = 1950-2184 ;
       eissn = 2100-0697 ;
-      issnl = 1950-2184 ;
-      placeholder = True
+      issnl = 1950-2184
     >
 
     param[journal_issn] = 1950-2184
+    comment[urgent] = end of 2011
+    attr[where] = content5a
+
+    au < testing ; 2007 ; OncoMagazine Volume 1 ; 1 >
+    au < testing ; 2008 ; OncoMagazine Volume 2 ; 2 >
+    au < testing ; 2009 ; OncoMagazine Volume 3 ; 3 >
+    au < testing ; 2010 ; OncoMagazine Volume 4 ; 4 >
+    au < testing ; 2011 ; OncoMagazine Volume 5 ; 5 >
 
   }
 
@@ -31524,6 +31552,15 @@
     >
 
     param[journal_issn] = 1778-3712
+    comment[urgent] = end of 2011
+    attr[where] = sul-lockss30a
+
+    au < testing ; 2006 ; Pelvi-périnéologie Volume 1 ; 1 >
+    au < testing ; 2007 ; Pelvi-périnéologie Volume 2 ; 2 >
+    au < testing ; 2008 ; Pelvi-périnéologie Volume 3 ; 3 >
+    au < testing ; 2009 ; Pelvi-périnéologie Volume 4 ; 4 >
+    au < testing ; 2010 ; Pelvi-périnéologie Volume 5 ; 5 >
+    au < testing ; 2011 ; Pelvi-périnéologie Volume 6 ; 6 >
 
   }
 
