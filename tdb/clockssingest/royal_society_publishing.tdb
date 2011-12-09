@@ -110,7 +110,7 @@
 
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
-    au < exists ; exists ; 2004 ; Interface Focus Volume 1 ; 1 >
+    au < manifest ; exists ; 2004 ; Interface Focus Volume 1 ; 1 >
     au < exists ; exists ; 2005 ; Interface Focus Volume 2 ; 2 >
     au < exists ; exists ; 2006 ; Interface Focus Volume 3 ; 3 >
     au < exists ; exists ; 2007 ; Interface Focus Volume 4 ; 4 >
@@ -134,10 +134,10 @@
 
     param[base_url] = http://rsif.royalsocietypublishing.org/
 
-    au < wanted ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
-    au < wanted ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
-    au < wanted ; exists ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
-    au < wanted ; exists ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
+    au < manifest ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
+    au < manifest ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
