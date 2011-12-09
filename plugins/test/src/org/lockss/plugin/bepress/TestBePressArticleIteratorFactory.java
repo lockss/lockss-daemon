@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.6 2011-09-08 23:40:31 tlipkis Exp $
+ * $Id: TestBePressArticleIteratorFactory.java,v 1.7 2011-12-09 10:52:40 thib_gc Exp $
  */
 
 /*
@@ -48,8 +48,7 @@ public class TestBePressArticleIteratorFactory extends ArticleIteratorTestCase {
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
       PluginTestUtil.createAu("org.lockss.plugin.bepress.BePressPlugin",
-			      ConfigurationUtil.fromArgs("base_url",
-							 "http://www.example.com/",
+			      ConfigurationUtil.fromArgs("base_url", "http://www.example.com/",
 							 "journal_abbr", "jour",
 							 "volume", "123"));
   }

@@ -4,7 +4,7 @@
     name = Berkeley Electronic Press
   >
   
-  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  pluginPrefix = org.lockss.plugin.bepress.
   implicit < status ; status2 ; year ; name ; param[volume] >
   
   {
@@ -14,8 +14,9 @@
       eissn = 2152-2820
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] =  ael
+    param[journal_abbr] = ael
 
     au < released ; manifest ; 2011 ; Accounting, Economics, and Law - A Convivium Volume 1 ; 1 >
 
@@ -28,16 +29,18 @@
       issn = 1538-0637
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/advances
+    param[journal_abbr] = bejeap
+    param[journal_section] = advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < exists ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
 
   }
 
@@ -48,16 +51,18 @@
       issn = 1534-6013
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/advances
+    param[journal_abbr] = bejm
+    param[journal_section] = advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
-    au < exists ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
 
   }
 
@@ -68,16 +73,18 @@
       issn = 1534-5963
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/advances
+    param[journal_abbr] = bejte
+    param[journal_section] = advances
     comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
 
-    au < exists ; exists ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
 
   }
 
@@ -88,8 +95,9 @@
       eissn = 2153-3792
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] =  apjri
+    param[journal_abbr] = apjri
 
     au < released ; manifest ; 2005-2006 ; Asia-Pacific Journal of Risk and Insurance Volume 1 ; 1 >
     au < released ; manifest ; 2007-2008 ; Asia-Pacific Journal of Risk and Insurance Volume 2 ; 2 >
@@ -106,8 +114,9 @@
       eissn = 1932-0205
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] =  asjcl
+    param[journal_abbr] = asjcl
 
     au < released ; manifest ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
     au < released ; manifest ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
@@ -125,6 +134,7 @@
       eissn = 2154-4611
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ajle
 
@@ -140,6 +150,7 @@
       eissn = 1932-0183
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bis
 
@@ -160,6 +171,7 @@
       issnl = 1555-0494       
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejeap
     comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
@@ -194,6 +206,7 @@
       issnl = 1555-0486  
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejm
     comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
@@ -222,6 +235,7 @@
       issnl = 1555-0478  
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejte
     comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
@@ -251,6 +265,7 @@
 
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bap
 
@@ -277,6 +292,7 @@
       eissn = 1944-4370
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cjpp
 
@@ -293,6 +309,7 @@
       eissn = 1932-0213
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cas
 
@@ -312,6 +329,7 @@
       eissn = 1934-2659
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cppm
 
@@ -331,16 +349,18 @@
       issn = 1538-0645       
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/contributions
+    param[journal_abbr] = bejeap
+    param[journal_section] = contributions
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
     comment[year] = vol 1 website label is 2001 but articles are dated 2002
 
-    au < exists ; exists ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 >    
-    au < exists ; exists ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 >
-    au < exists ; exists ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 >    
-    au < exists ; exists ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 >
-    au < exists ; exists ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 >    
+    au < manifest ; exists ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 >    
+    au < manifest ; exists ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 >    
+    au < manifest ; exists ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 >    
 
   }
 
@@ -351,16 +371,18 @@
       issn = 1534-6005       
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/contributions
+    param[journal_abbr] = bejm
+    param[journal_section] = contributions
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
-    au < exists ; exists ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 >    
-    au < exists ; exists ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 >    
-    au < exists ; exists ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 >    
-    au < exists ; exists ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 > 
+    au < manifest ; exists ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 >    
+    au < manifest ; exists ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 >    
+    au < manifest ; exists ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 > 
 
   }
 
@@ -371,16 +393,18 @@
       issn = 1534-5971       
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/contributions
+    param[journal_abbr] = bejte
+    param[journal_section] = contributions
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
-    au < exists ; exists ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
-    au < exists ; exists ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
-    au < exists ; exists ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
-    au < exists ; exists ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
+    au < manifest ; exists ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
+    au < manifest ; exists ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
+    au < manifest ; exists ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
 
   }
 
@@ -391,6 +415,7 @@
       eissn = 1553-3832
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ev
 
@@ -412,6 +437,7 @@
       eissn = 2157-5665
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = erj
 
@@ -426,6 +452,7 @@
       eissn = 1540-8884
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = forum
 
@@ -448,6 +475,7 @@
       eissn = 1558-9544
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = fhep
 
@@ -475,11 +503,13 @@
       issn = 1538-0629      
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/frontiers
+    param[journal_abbr] = bejeap
+    param[journal_section] = frontiers
     comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < exists ; exists ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >    
+    au < manifest ; exists ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >    
 
   }
 
@@ -490,12 +520,14 @@
       issn = 1534-6021      
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/frontiers
+    param[journal_abbr] = bejm
+    param[journal_section] = frontiers
     comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
 
-    au < exists ; exists ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
-    au < exists ; exists ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
 
   }
 
@@ -506,13 +538,15 @@
       issn = 1534-5955      
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/frontiers
+    param[journal_abbr] = bejte
+    param[journal_section] = frontiers
     comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
     comment[year] = vol 1 website label is 2001 but article is dated 2002
     
-    au < exists ; exists ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 >    
-    au < exists ; exists ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 >    
+    au < manifest ; exists ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 >
 
   }
 
@@ -523,6 +557,7 @@
       eissn = 1524-5861
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
@@ -547,6 +582,7 @@
       eissn = 1934-2640
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gj
 
@@ -571,6 +607,7 @@
       eissn = 1554-4567
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
@@ -592,6 +629,7 @@
       eissn = 1557-4679
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijb
 
@@ -612,6 +650,7 @@
       eissn = 1542-6580
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijcre
 
@@ -634,6 +673,7 @@
       eissn = 1553-779X
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijeeps
 
@@ -659,6 +699,7 @@
       eissn = 1556-3758
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijfe
 
@@ -679,6 +720,7 @@
       eissn = 1548-923X
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijnes
 
@@ -711,6 +753,7 @@
       eissn = 1145-6396
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jeeh
 
@@ -736,6 +779,7 @@
       eissn = 1542-0485
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jafio
 
@@ -758,6 +802,7 @@
       eissn = 2152-2812
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbca
 
@@ -773,6 +818,7 @@
       eissn = 2154-3186
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
@@ -788,6 +834,7 @@
       eissn = 1932-9156
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbvela
 
@@ -807,6 +854,7 @@
       eissn = 1940-1639
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
 
@@ -832,6 +880,7 @@
       eissn = 1553-3840
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jcim
 
@@ -853,6 +902,7 @@
       eissn = 1941-2851
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jdpa
 
@@ -870,6 +920,7 @@
       issn = 2156-6674
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jem
 
@@ -882,6 +933,7 @@
       eissn = 1948-1837
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jgd
 
@@ -896,6 +948,7 @@
       eissn = 1547-7355
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jhsem
 
@@ -917,6 +970,7 @@
       eissn = 1932-0191
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jirspa
 
@@ -936,6 +990,7 @@
       eissn = 1935-5041
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jioe
 
@@ -954,6 +1009,7 @@
       eissn = 1559-0410
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jqas
 
@@ -976,6 +1032,7 @@
       issnl = 1949-6605
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jsarp
 
@@ -1004,6 +1061,7 @@
       eissn = 1941-1928
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtse
 
@@ -1020,6 +1078,7 @@
       eissn = 1932-9148
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtl
 
@@ -1037,6 +1096,7 @@
       eissn = 1938-2545
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
@@ -1055,6 +1115,7 @@
       eissn = 1943-3867
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ldr
 
@@ -1072,6 +1133,7 @@
       eissn = 2161-2412
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mlt
 
@@ -1090,6 +1152,7 @@
       eissn = 1554-4419
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mwjhr
 
@@ -1112,6 +1175,7 @@
       issnl = 1940-7882
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
@@ -1129,6 +1193,7 @@
       eissn = 1940-0004
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ngs
 
@@ -1147,6 +1212,7 @@
       eissn = 2154-3348
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = npf
 
@@ -1165,6 +1231,7 @@
       
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = peps
 
@@ -1195,6 +1262,7 @@
       eissn = 1944-2866
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = policyandinternet
 
@@ -1210,6 +1278,8 @@
       name = Poverty & Public Policy ;
       eissn = 1944-2858
     >
+
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
 
     {
 
@@ -1240,6 +1310,7 @@
       eissn = 1555-5879
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rle
 
@@ -1260,6 +1331,7 @@
       eissn = 1546-5616
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = romsjournal
 
@@ -1284,6 +1356,7 @@
       issnl = 1475-3685
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rmeef
 
@@ -1304,6 +1377,7 @@
       eissn = 1446-9022
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rne
 
@@ -1329,6 +1403,7 @@
       issnl = 1446-9022 
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rhodescook
 
@@ -1354,6 +1429,7 @@
       eissn = 1944-4079
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = rhcpp
 
@@ -1369,6 +1445,7 @@
       eissn = 1544-6115
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = sagmb
 
@@ -1392,6 +1469,7 @@
       eissn = 1948-4690
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = scid
 
@@ -1408,6 +1486,7 @@
       eissn = 2151-7509
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = spp
 
@@ -1423,6 +1502,7 @@
       eissn = 1941-6008
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
@@ -1441,6 +1521,7 @@
       eissn = 1558-3708
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = snde
 
@@ -1471,6 +1552,7 @@
       issnl = 1565-1509 
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = til
 
@@ -1496,16 +1578,18 @@
       issn = 1538-0653
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/topics
+    param[journal_abbr] = bejeap
+    param[journal_section] = topics
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
 
-    au < exists ; exists ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 >    
 
   }
 
@@ -1516,16 +1600,18 @@
       issn = 1534-5998
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/topics
+    param[journal_abbr] = bejm
+    param[journal_section] = topics
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
-    au < exists ; exists ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 >    
 
   }
 
@@ -1536,16 +1622,18 @@
       issn = 1534-598X
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressSectionPlugin
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/topics
+    param[journal_abbr] = bejte
+    param[journal_section] = topics
     comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
 
-    au < exists ; exists ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
-    au < exists ; exists ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 >
-    au < exists ; exists ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 >
-    au < exists ; exists ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 >
-    au < exists ; exists ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 >
-    au < exists ; exists ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 >    
+    au < manifest ; exists ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
+    au < manifest ; exists ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 >
+    au < manifest ; exists ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 >
+    au < manifest ; exists ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 >
+    au < manifest ; exists ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 >    
 
   }
 
@@ -1556,6 +1644,7 @@
       eissn = 1948-4682
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = wmhp
 
@@ -1572,6 +1661,7 @@
       eissn = 1935-6226
     >
 
+    pluginSuffix = ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = wpsr
 

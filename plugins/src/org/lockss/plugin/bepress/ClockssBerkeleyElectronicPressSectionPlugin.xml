@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin</string>
+    <string>org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressSectionPlugin</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -26,11 +26,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Berkeley Electronic Press Plugin (CLOCKSS), Base URL %s, Journal Code %s, Volume %d&quot;, base_url, journal_abbr, volume</string>
+    <string>&quot;Berkeley Electronic Press Section Plugin (CLOCKSS), Base URL %s, Journal Code %s, Journal Section %s, Volume %d&quot;, base_url, journal_abbr, journal_section, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Berkeley Electronic Press Plugin (CLOCKSS)</string>
+    <string>Berkeley Electronic Press Section Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -45,34 +45,34 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, volume</string>
-      <string>1,&quot;^%s%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, volume</string>
-      <string>1,&quot;^%s%s/%d/&quot;, base_url, journal_abbr, volume</string>
+      <string>1,&quot;^%s%s/%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%s%s/%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%s%s/%s/%d/&quot;, base_url, journal_abbr, journal_section, volume</string>
       <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
+    <string>&quot;%s%s/%s/lockss-volume%d.html&quot;, base_url, journal_abbr, journal_section, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%s%s&quot;, base_url, journal_abbr</string>
+        <string>&quot;%s%s/%s&quot;, base_url, journal_abbr, journal_section</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%s%s/vol%d&quot;, base_url, journal_abbr, volume</string>
+        <string>&quot;%s%s/%s/vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>&quot;%s%s/vol%d/iss%s&quot;, base_url, journal_abbr, volume, issue</string>
+        <string>&quot;%s%s/%s/vol%d/iss%s&quot;, base_url, journal_abbr, journal_section, volume, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>&quot;%s%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, volume, issue, article</string>
+        <string>&quot;%s%s/%s/vol%d/iss%s/art%s&quot;, base_url, journal_abbr, journal_section, volume, issue, article</string>
       </entry>
     </map>
   </entry>
@@ -89,6 +89,15 @@
         <description>Abbreviation for journal (often used as part of file names).</description>
         <type>1</type>
         <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_section</key>
+        <displayName>Journal Section</displayName>
+        <description>A section within the journal, e.g. &quot;topics&quot; or &quot;advances&quot;.</description>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -125,7 +134,7 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
+    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory$Section</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>

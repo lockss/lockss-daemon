@@ -4,7 +4,7 @@
     name = Berkeley Electronic Press
   >
   
-  plugin = org.lockss.plugin.bepress.BePressPlugin 
+  pluginPrefix = org.lockss.plugin.bepress.
   implicit < status ; name ; param[volume] ; year >
   
   {
@@ -14,6 +14,7 @@
       eissn = 2152-2820
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ael
 
@@ -28,6 +29,7 @@
       issn = 1538-0637
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejeap/advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
@@ -48,8 +50,10 @@
       issn = 1534-6013
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/advances
+    param[journal_abbr] = bejm
+    param[journal_section] = advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
     au < notReady ; Advances in Macroeconomics Volume 1 ; 1 ; 2001 >
@@ -68,8 +72,10 @@
       issn = 1534-5963
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/advances
+    param[journal_abbr] = bejte
+    param[journal_section] = advances
     comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
 
     au < notReady ; Advances in Theoretical Economics Volume 1 ; 1 ; 2001 >
@@ -88,6 +94,7 @@
       eissn = 2153-3792
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = apjri
 
@@ -106,6 +113,7 @@
       eissn = 1932-0205
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/   
     param[journal_abbr] = asjcl
 
@@ -125,6 +133,7 @@
       eissn = 2154-4611
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ajle
 
@@ -140,6 +149,7 @@
       eissn = 1932-0183
     >
     
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bis
 
@@ -160,6 +170,7 @@
       issnl = 1555-0494  
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejeap
     comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
@@ -171,12 +182,12 @@
     comment[bejeap5] = duplicate of 1538-0645 volume 5
     comment[bejeap6] = duplicate of 1538-0653 volume 6
 
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 ; 2005 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 ; 2000 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 ; 2004 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 ; 2006 >
-    au < released ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 ; 2006 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 1 ; 1 ; 2005 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 2 ; 2 ; 2000 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 3 ; 3 ; 2004 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 4 ; 4 ; 2005 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 5 ; 5 ; 2006 >
+    au < down ; The B.E. Journal of Economic Analysis & Policy Volume 6 ; 6 ; 2006 >
     au < released ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 ; 2007 >
     au < released ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 ; 2008 >
     au < released ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 ; 2009 >
@@ -194,17 +205,18 @@
       issnl = 1555-0486  
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejm
     comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
     comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
     
-    au < released ; The B.E. Journal of Macroeconomics Volume 1 ; 1 ; 2004 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 2 ; 2 ; 2006 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 3 ; 3 ; 2003 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 4 ; 4 ; 2004 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 5 ; 5 ; 2005 >
-    au < released ; The B.E. Journal of Macroeconomics Volume 6 ; 6 ; 2006 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 1 ; 1 ; 2004 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 2 ; 2 ; 2006 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 3 ; 3 ; 2003 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 4 ; 4 ; 2004 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 5 ; 5 ; 2005 >
+    au < down ; The B.E. Journal of Macroeconomics Volume 6 ; 6 ; 2006 >
     au < released ; The B.E. Journal of Macroeconomics Volume 7 ; 7 ; 2007 >
     au < released ; The B.E. Journal of Macroeconomics Volume 8 ; 8 ; 2008 >
     au < released ; The B.E. Journal of Macroeconomics Volume 9 ; 9 ; 2009 >
@@ -222,17 +234,18 @@
       issnl = 1555-0478  
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejte
     comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
     comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
 
-    au < released ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 ; 2002 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 ; 2006 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 ; 2003 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 ; 2004 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 ; 2005 >
-    au < released ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 ; 2006 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 ; 2002 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 ; 2006 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 3 ; 3 ; 2003 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 4 ; 4 ; 2004 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 5 ; 5 ; 2005 >
+    au < down ; The B.E. Journal of Theoretical Economics Volume 6 ; 6 ; 2006 >
     au < released ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 ; 2007 >
     au < released ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 ; 2008 >
     au < released ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 ; 2009 >
@@ -250,6 +263,7 @@
       issnl = 1369-5258
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bap
 
@@ -276,6 +290,7 @@
       eissn = 1944-4370
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cjpp
 
@@ -292,6 +307,7 @@
       eissn = 1932-0213
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = cas
 
@@ -311,6 +327,7 @@
       eissn = 1934-2659
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = cppm
 
@@ -330,8 +347,10 @@
       issn = 1538-0645       
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/contributions
+    param[journal_abbr] = bejeap
+    param[journal_section] = contributions
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
     comment[year] = vol 1 website label is 2001 but articles are dated 2002
 
@@ -350,8 +369,10 @@
       issn = 1534-6005       
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/contributions
+    param[journal_abbr] = bejm
+    param[journal_section] = contributions
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
     au < notReady ; Contributions to Macroeconomics Volume 1 ; 1 ; 2001 >    
@@ -370,8 +391,10 @@
       issn = 1534-5971       
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/contributions
+    param[journal_abbr] = bejte
+    param[journal_section] = contributions
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
     au < notReady ; Contributions to Theoretical Economics Volume 1 ; 1 ; 2001 >    
@@ -390,6 +413,7 @@
       eissn = 1553-3832
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ev
 
@@ -411,6 +435,7 @@
       eissn = 2157-5665
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = erj
 
@@ -425,6 +450,7 @@
       eissn = 1540-8884
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = forum
 
@@ -447,6 +473,7 @@
       eissn = 1558-9544
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = fhep
     comment[issue] = issue toc is at /fhep/14/2
@@ -479,8 +506,10 @@
       issn = 1538-0629      
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/frontiers
+    param[journal_abbr] = bejeap
+    param[journal_section] = frontiers
     comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
     au < notReady ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 ; 2005 >    
@@ -494,8 +523,10 @@
       issn = 1534-6021      
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/frontiers
+    param[journal_abbr] = bejm
+    param[journal_section] = frontiers
     comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
 
     au < notReady ; Frontiers of Macroeconomics Volume 1 ; 1 ; 2004 >    
@@ -510,8 +541,10 @@
       issn = 1534-5955      
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/frontiers
+    param[journal_abbr] = bejte
+    param[journal_section] = frontiers
     comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
     comment[year] = vol 1 website label is 2001 but article is dated 2002
 
@@ -527,6 +560,7 @@
       eissn = 1524-5861
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = gej
 
@@ -551,6 +585,7 @@
       eissn = 1934-2640
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = gj
 
@@ -575,6 +610,7 @@
       eissn = 1554-4567
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ice
 
@@ -596,6 +632,7 @@
       eissn = 1557-4679
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ijb
 
@@ -616,6 +653,7 @@
       eissn = 1542-6580
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ijcre
 
@@ -638,6 +676,7 @@
       eissn = 1553-779X
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ijeeps
 
@@ -663,6 +702,7 @@
       eissn = 1556-3758
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ijfe
 
@@ -683,6 +723,7 @@
       eissn = 1548-923X
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = ijnes
 
@@ -715,6 +756,7 @@
       eissn = 1145-6396
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jeeh
 
@@ -740,6 +782,7 @@
       eissn = 1542-0485
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jafio
 
@@ -762,6 +805,7 @@
       eissn = 2152-2812
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbca
 
@@ -777,6 +821,7 @@
       eissn = 2154-3186
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbbbl
 
@@ -791,6 +836,7 @@
       eissn = 1932-9156
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jbvela
 
@@ -810,6 +856,7 @@
       eissn = 1940-1639
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
     
@@ -835,6 +882,7 @@
       eissn = 1553-3840
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jcim
 
@@ -856,6 +904,7 @@
       eissn = 1941-2851
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jdpa
 
@@ -873,6 +922,7 @@
       issn = 2156-6674
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jem
 
@@ -885,6 +935,7 @@
       eissn = 1948-1837
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jgd
 
@@ -899,6 +950,7 @@
       eissn = 1547-7355
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jhsem
 
@@ -920,6 +972,7 @@
       eissn = 1932-0191
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jirspa
 
@@ -939,6 +992,7 @@
       eissn = 1935-5041
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jioe
 
@@ -956,6 +1010,7 @@
       eissn = 1559-0410
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jqas
 
@@ -978,6 +1033,7 @@
       issnl = 1949-6605
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jsarp
 
@@ -1006,6 +1062,7 @@
       eissn = 1941-1928
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtse
 
@@ -1022,6 +1079,7 @@
       eissn = 1932-9148
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = jtl
 
@@ -1038,6 +1096,7 @@
       eissn = 1938-2545
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
@@ -1056,6 +1115,7 @@
       eissn = 1943-3867
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ldr
 
@@ -1073,6 +1133,7 @@
       eissn = 2161-2412
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mlt
 
@@ -1091,6 +1152,7 @@
       eissn = 1554-4419
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = mwjhr
 
@@ -1113,6 +1175,7 @@
       issnl = 1940-7882
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
@@ -1130,6 +1193,7 @@
       eissn = 1940-0004
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ngs
 
@@ -1148,6 +1212,7 @@
       eissn = 2154-3348
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = npf
 
@@ -1165,6 +1230,7 @@
       issnl = 1079-2457 
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = peps
 
@@ -1195,6 +1261,7 @@
       eissn = 1944-2866
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = policyandinternet
 
@@ -1211,6 +1278,7 @@
       eissn = 1944-2858
     >
     
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = ppp
 
@@ -1227,6 +1295,7 @@
       eissn = 1555-5879
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = rle
 
@@ -1247,6 +1316,7 @@
       eissn = 1546-5616
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = romsjournal
 
@@ -1271,6 +1341,7 @@
       issnl = 1475-3685
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = rmeef
 
@@ -1291,6 +1362,7 @@
       eissn = 1446-9022
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rne
 
@@ -1316,6 +1388,7 @@
       issnl = 1446-9022 
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rhodescook
 
@@ -1341,6 +1414,7 @@
       eissn = 1944-4079
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = rhcpp
 
@@ -1356,6 +1430,7 @@
       eissn = 1544-6115
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = sagmb
 
@@ -1379,6 +1454,7 @@
       eissn = 1948-4690
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = scid
 
@@ -1395,6 +1471,7 @@
       eissn = 2151-7509
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = spp
 
@@ -1410,6 +1487,7 @@
       eissn = 1941-6008
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
@@ -1428,6 +1506,7 @@
       eissn = 1558-3708
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = snde
 
@@ -1458,6 +1537,7 @@
       issnl = 1565-1509 
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = til
     comment[issue] = issue TOC is at /til/default/vol12/iss1
@@ -1486,8 +1566,10 @@
       issn = 1538-0653
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/topics
+    param[journal_abbr] = bejeap
+    param[journal_section] = topics
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
 
     au < notReady ; Topics in Economic Analysis & Policy Volume 1 ; 1 ; 2001 >
@@ -1506,8 +1588,10 @@
       issn = 1534-5998
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejm/topics
+    param[journal_abbr] = bejm
+    param[journal_section] = topics
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
     au < notReady ; Topics in Macroeconomics Volume 1 ; 1 ; 2001 >
@@ -1526,6 +1610,7 @@
       issn = 1534-598X
     >
 
+    pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejte/topics
     comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
@@ -1546,6 +1631,7 @@
       eissn = 1948-4682
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.psocommons.org/
     param[journal_abbr] = wmhp
 
@@ -1562,6 +1648,7 @@
       eissn = 1935-6226
     >
 
+    pluginSuffix = BePressPlugin 
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = wpsr
 
