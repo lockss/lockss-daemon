@@ -9,7 +9,7 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   comment[param_journal_issn] = the param journal_issn is set to the journal's eISSN, not print ISSN  
 
-{
+  {
   
     title <
       name = Australian Journal of French Studies ;
