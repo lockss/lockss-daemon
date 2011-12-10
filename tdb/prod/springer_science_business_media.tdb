@@ -1444,17 +1444,16 @@
     comment[continued_from] = 1000-9221
     param[journal_issn] = 1672-4070
     comment[urgent] = end of 2011
-    attr[where] = content5a
 
-    au < testing ; 2003 ; Analysis in Theory and Applications Volume 19 ; 19 >
-    au < testing ; 2004 ; Analysis in Theory and Applications Volume 20 ; 20 >
-    au < testing ; 2005 ; Analysis in Theory and Applications Volume 21 ; 21 >
-    au < testing ; 2006 ; Analysis in Theory and Applications Volume 22 ; 22 >
-    au < testing ; 2007 ; Analysis in Theory and Applications Volume 23 ; 23 >
-    au < testing ; 2008 ; Analysis in Theory and Applications Volume 24 ; 24 >
-    au < testing ; 2009 ; Analysis in Theory and Applications Volume 25 ; 25 >
-    au < testing ; 2010 ; Analysis in Theory and Applications Volume 26 ; 26 >
-    au < testing ; 2011 ; Analysis in Theory and Applications Volume 27 ; 27 >
+    au < ready ; 2003 ; Analysis in Theory and Applications Volume 19 ; 19 >
+    au < ready ; 2004 ; Analysis in Theory and Applications Volume 20 ; 20 >
+    au < ready ; 2005 ; Analysis in Theory and Applications Volume 21 ; 21 >
+    au < ready ; 2006 ; Analysis in Theory and Applications Volume 22 ; 22 >
+    au < ready ; 2007 ; Analysis in Theory and Applications Volume 23 ; 23 >
+    au < ready ; 2008 ; Analysis in Theory and Applications Volume 24 ; 24 >
+    au < ready ; 2009 ; Analysis in Theory and Applications Volume 25 ; 25 >
+    au < ready ; 2010 ; Analysis in Theory and Applications Volume 26 ; 26 >
+    au < ready ; 2011 ; Analysis in Theory and Applications Volume 27 ; 27 >
 
   }
 
@@ -2885,12 +2884,12 @@
     au < testing ; 1994 ; Approximation Theory and its Applications Volume 10 ; 10 >
     au < testing ; 1995 ; Approximation Theory and its Applications Volume 11 ; 11 >
     au < testing ; 1996 ; Approximation Theory and its Applications Volume 12 ; 12 >
-    au < testing ; 1997 ; Approximation Theory and its Applications Volume 13 ; 13 >
-    au < testing ; 1998 ; Approximation Theory and its Applications Volume 14 ; 14 >
-    au < testing ; 1999 ; Approximation Theory and its Applications Volume 15 ; 15 >
-    au < testing ; 2000 ; Approximation Theory and its Applications Volume 16 ; 16 >
-    au < testing ; 2001 ; Approximation Theory and its Applications Volume 17 ; 17 >
-    au < testing ; 2002 ; Approximation Theory and its Applications Volume 18 ; 18 >
+    au < ready ; 1997 ; Approximation Theory and its Applications Volume 13 ; 13 >
+    au < ready ; 1998 ; Approximation Theory and its Applications Volume 14 ; 14 >
+    au < ready ; 1999 ; Approximation Theory and its Applications Volume 15 ; 15 >
+    au < ready ; 2000 ; Approximation Theory and its Applications Volume 16 ; 16 >
+    au < ready ; 2001 ; Approximation Theory and its Applications Volume 17 ; 17 >
+    au < ready ; 2002 ; Approximation Theory and its Applications Volume 18 ; 18 >
 
   }
 
@@ -14389,9 +14388,9 @@
     attr[where] = content6a
 
     au < testing ; 2007 ; Frontiers of Agriculture in China Volume 1 ; 1 >
-    au < testing ; 2008 ; Frontiers of Agriculture in China Volume 2 ; 2 >
-    au < testing ; 2009 ; Frontiers of Agriculture in China Volume 3 ; 3 >
-    au < testing ; 2010 ; Frontiers of Agriculture in China Volume 4 ; 4 >
+    au < ready ; 2008 ; Frontiers of Agriculture in China Volume 2 ; 2 >
+    au < ready ; 2009 ; Frontiers of Agriculture in China Volume 3 ; 3 >
+    au < ready ; 2010 ; Frontiers of Agriculture in China Volume 4 ; 4 >
     au < testing ; 2011 ; Frontiers of Agriculture in China Volume 5 ; 5 >
 
   }
@@ -14431,13 +14430,12 @@
 
     param[journal_issn] = 1673-7326
     comment[urgent] = end of 2011
-    attr[where] = content6a
 
-    au < testing ; 2007 ; Frontiers of Business Research in China Volume 1 ; 1 >
-    au < testing ; 2008 ; Frontiers of Business Research in China Volume 2 ; 2 >
-    au < testing ; 2009 ; Frontiers of Business Research in China Volume 3 ; 3 >
-    au < testing ; 2010 ; Frontiers of Business Research in China Volume 4 ; 4 >
-    au < testing ; 2011 ; Frontiers of Business Research in China Volume 5 ; 5 >
+    au < ready ; 2007 ; Frontiers of Business Research in China Volume 1 ; 1 >
+    au < ready ; 2008 ; Frontiers of Business Research in China Volume 2 ; 2 >
+    au < ready ; 2009 ; Frontiers of Business Research in China Volume 3 ; 3 >
+    au < ready ; 2010 ; Frontiers of Business Research in China Volume 4 ; 4 >
+    au < ready ; 2011 ; Frontiers of Business Research in China Volume 5 ; 5 >
 
   }
 
@@ -14466,7 +14464,7 @@
     comment[urgent] = end of 2011
     attr[where] = content5a
 
-    au < testing ; 2006 ; Frontiers of Chemistry in China Volume 1 ; 1 >
+    au < ready ; 2006 ; Frontiers of Chemistry in China Volume 1 ; 1 >
     au < ready ; 2007 ; Frontiers of Chemistry in China Volume 2 ; 2 >
     au < ready ; 2008 ; Frontiers of Chemistry in China Volume 3 ; 3 >
     au < ready ; 2009 ; Frontiers of Chemistry in China Volume 4 ; 4 >
@@ -14511,14 +14509,13 @@
 
     param[journal_issn] = 1673-3444
     comment[urgent] = end of 2011
-    attr[where] = content6a
 
-    au < testing ; 2006 ; Frontiers of Economics in China Volume 1 ; 1 >
-    au < testing ; 2007 ; Frontiers of Economics in China Volume 2 ; 2 >
-    au < testing ; 2008 ; Frontiers of Economics in China Volume 3 ; 3 >
-    au < testing ; 2009 ; Frontiers of Economics in China Volume 4 ; 4 >
-    au < testing ; 2010 ; Frontiers of Economics in China Volume 5 ; 5 >
-    au < testing ; 2011 ; Frontiers of Economics in China Volume 6 ; 6 >
+    au < ready ; 2006 ; Frontiers of Economics in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Frontiers of Economics in China Volume 2 ; 2 >
+    au < ready ; 2008 ; Frontiers of Economics in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Frontiers of Economics in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Frontiers of Economics in China Volume 5 ; 5 >
+    au < ready ; 2011 ; Frontiers of Economics in China Volume 6 ; 6 >
 
   }
 
@@ -26980,11 +26977,25 @@
       name = Leviathan ;
       issn = 0340-0425 ;
       eissn = 1861-8588 ;
-      issnl = 0340-0425 ;
-      placeholder = True
+      issnl = 0340-0425
     >
 
     param[journal_issn] = 0340-0425
+    comment[urgent] = end of 2011
+    attr[where] = content1a
+
+    au < testing ; 2000 ; Leviathan Volume 28 ; 28 >
+    au < testing ; 2001 ; Leviathan Volume 29 ; 29 >
+    au < testing ; 2002 ; Leviathan Volume 30 ; 30 >
+    au < testing ; 2003 ; Leviathan Volume 31 ; 31 >
+    au < testing ; 2004 ; Leviathan Volume 32 ; 32 >
+    au < testing ; 2005 ; Leviathan Volume 33 ; 33 >
+    au < testing ; 2006 ; Leviathan Volume 34 ; 34 >
+    au < testing ; 2007 ; Leviathan Volume 35 ; 35 >
+    au < testing ; 2008 ; Leviathan Volume 36 ; 36 >
+    au < testing ; 2009 ; Leviathan Volume 37 ; 37 >
+    au < testing ; 2010 ; Leviathan Volume 38 ; 38 >
+    au < testing ; 2011 ; Leviathan Volume 39 ; 39 >
 
   }
 
@@ -32504,27 +32515,27 @@
     comment[urgent] = end of 2011
     attr[where] = content1a
 
-    au < testing ; 1987-1990 ; Physical Oceanography Volume 1 ; 1 >
-    au < testing ; 1991-1992 ; Physical Oceanography Volume 2 ; 2 >
-    au < testing ; 1992 ; Physical Oceanography Volume 3 ; 3 >
-    au < testing ; 1993 ; Physical Oceanography Volume 4 ; 4 >
-    au < testing ; 1994 ; Physical Oceanography Volume 5 ; 5 >
+    au < ready ; 1987-1990 ; Physical Oceanography Volume 1 ; 1 >
+    au < ready ; 1991-1992 ; Physical Oceanography Volume 2 ; 2 >
+    au < ready ; 1992 ; Physical Oceanography Volume 3 ; 3 >
+    au < ready ; 1993 ; Physical Oceanography Volume 4 ; 4 >
+    au < ready ; 1994 ; Physical Oceanography Volume 5 ; 5 >
     au < testing ; 1995 ; Physical Oceanography Volume 6 ; 6 >
-    au < testing ; 1996 ; Physical Oceanography Volume 7 ; 7 >
-    au < testing ; 1997 ; Physical Oceanography Volume 8 ; 8 >
+    au < ready ; 1996 ; Physical Oceanography Volume 7 ; 7 >
+    au < ready ; 1997 ; Physical Oceanography Volume 8 ; 8 >
     au < testing ; 1998 ; Physical Oceanography Volume 9 ; 9 >
-    au < testing ; 1999 ; Physical Oceanography Volume 10 ; 10 >
-    au < testing ; 2000 ; Physical Oceanography Volume 11 ; 11 >
-    au < testing ; 2002 ; Physical Oceanography Volume 12 ; 12 >
-    au < testing ; 2003 ; Physical Oceanography Volume 13 ; 13 >
-    au < testing ; 2004 ; Physical Oceanography Volume 14 ; 14 >
-    au < testing ; 2005 ; Physical Oceanography Volume 15 ; 15 >
-    au < testing ; 2006 ; Physical Oceanography Volume 16 ; 16 >
-    au < testing ; 2007 ; Physical Oceanography Volume 17 ; 17 >
-    au < testing ; 2008 ; Physical Oceanography Volume 18 ; 18 >
-    au < testing ; 2009 ; Physical Oceanography Volume 19 ; 19 >
+    au < ready ; 1999 ; Physical Oceanography Volume 10 ; 10 >
+    au < ready ; 2000 ; Physical Oceanography Volume 11 ; 11 >
+    au < ready ; 2002 ; Physical Oceanography Volume 12 ; 12 >
+    au < ready ; 2003 ; Physical Oceanography Volume 13 ; 13 >
+    au < ready ; 2004 ; Physical Oceanography Volume 14 ; 14 >
+    au < ready ; 2005 ; Physical Oceanography Volume 15 ; 15 >
+    au < ready ; 2006 ; Physical Oceanography Volume 16 ; 16 >
+    au < ready ; 2007 ; Physical Oceanography Volume 17 ; 17 >
+    au < ready ; 2008 ; Physical Oceanography Volume 18 ; 18 >
+    au < ready ; 2009 ; Physical Oceanography Volume 19 ; 19 >
     au < testing ; 2010 ; Physical Oceanography Volume 20 ; 20 >
-    au < testing ; 2011 ; Physical Oceanography Volume 21 ; 21 >
+    au < ready ; 2011 ; Physical Oceanography Volume 21 ; 21 >
 
   }
 
