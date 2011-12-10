@@ -35,12 +35,12 @@
     param[journal_section] = advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < manifest ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
 
   }
 
@@ -57,12 +57,12 @@
     param[journal_section] = advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
-    au < manifest ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Advances in Macroeconomics Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Advances in Macroeconomics Volume 6 ; 6 >    
 
   }
 
@@ -79,12 +79,12 @@
     param[journal_section] = advances
     comment[merged] = with 1534-5955, 1534-5971 and 1534-598X into 1555-0478 in 2007
 
-    au < manifest ; exists ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Advances in Theoretical Economics Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Advances in Theoretical Economics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Advances in Theoretical Economics Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Advances in Theoretical Economics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Advances in Theoretical Economics Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Advances in Theoretical Economics Volume 6 ; 6 >    
 
   }
 
@@ -356,11 +356,11 @@
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0653 into 1555-0494 in 2007
     comment[year] = vol 1 website label is 2001 but articles are dated 2002
 
-    au < manifest ; exists ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 >    
-    au < manifest ; exists ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 >    
-    au < manifest ; exists ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 >    
+    au < testing ; exists ; 2002 ; Contributions to Economic Analysis & Policy Volume 1 ; 1 >    
+    au < testing ; exists ; 2003 ; Contributions to Economic Analysis & Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2004 ; Contributions to Economic Analysis & Policy Volume 3 ; 3 >    
+    au < testing ; exists ; 2005 ; Contributions to Economic Analysis & Policy Volume 4 ; 4 >
+    au < testing ; exists ; 2006 ; Contributions to Economic Analysis & Policy Volume 5 ; 5 >    
 
   }
 
@@ -377,12 +377,12 @@
     param[journal_section] = contributions
     comment[merged] = with 1534-5998, 1534-6013 and 1534-6021 into 1555-0486 in 2007
 
-    au < manifest ; exists ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 >    
-    au < manifest ; exists ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 >    
-    au < manifest ; exists ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 >    
-    au < manifest ; exists ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 > 
+    au < testing ; exists ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 >    
+    au < testing ; exists ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 >    
+    au < testing ; exists ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 >    
+    au < testing ; exists ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 > 
 
   }
 
@@ -399,12 +399,12 @@
     param[journal_section] = contributions
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
-    au < manifest ; exists ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
-    au < manifest ; exists ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
-    au < manifest ; exists ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
-    au < manifest ; exists ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
+    au < testing ; exists ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
+    au < testing ; exists ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
+    au < testing ; exists ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
+    au < testing ; exists ; 2006 ; Contributions to Theoretical Economics Volume 6 ; 6 > 
 
   }
 
@@ -509,7 +509,7 @@
     param[journal_section] = frontiers
     comment[merged] = with 1538-0637, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < manifest ; exists ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >    
+    au < testing ; exists ; 2005 ; Frontiers of Economic Analysis & Policy Volume 1 ; 1 >    
 
   }
 
@@ -526,8 +526,8 @@
     param[journal_section] = frontiers
     comment[merged] = with 1534-5998, 1534-6005 and 1534-6013 into 1555-0486 in 2007
 
-    au < manifest ; exists ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
-    au < manifest ; exists ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
+    au < testing ; exists ; 2004 ; Frontiers of Macroeconomics Volume 1 ; 1 >    
+    au < testing ; exists ; 2006 ; Frontiers of Macroeconomics Volume 2 ; 2 >
 
   }
 
@@ -545,8 +545,8 @@
     comment[merged] = with 1534-5963, 1534-5971 and 1534-598X into 1555-0478 in 2007
     comment[year] = vol 1 website label is 2001 but article is dated 2002
     
-    au < manifest ; exists ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 >    
-    au < manifest ; exists ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 >
+    au < testing ; exists ; 2002 ; Frontiers of Theoretical Economics Volume 1 ; 1 >    
+    au < testing ; exists ; 2006 ; Frontiers of Theoretical Economics Volume 2 ; 2 >
 
   }
 
@@ -1584,12 +1584,12 @@
     param[journal_section] = topics
     comment[merged] = with 1538-0629, 1538-0637 and 1538-0645 into 1555-0494 in 2007
 
-    au < manifest ; exists ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Topics in Economic Analysis & Policy Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Topics in Economic Analysis & Policy Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Topics in Economic Analysis & Policy Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Topics in Economic Analysis & Policy Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Topics in Economic Analysis & Policy Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Topics in Economic Analysis & Policy Volume 6 ; 6 >    
 
   }
 
@@ -1606,12 +1606,12 @@
     param[journal_section] = topics
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
-    au < manifest ; exists ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Topics in Macroeconomics Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Topics in Macroeconomics Volume 6 ; 6 >    
 
   }
 
@@ -1628,12 +1628,12 @@
     param[journal_section] = topics
     comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
 
-    au < manifest ; exists ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
-    au < manifest ; exists ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 >
-    au < manifest ; exists ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 >
-    au < manifest ; exists ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 >
-    au < manifest ; exists ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 >
-    au < manifest ; exists ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 >    
+    au < testing ; exists ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
+    au < testing ; exists ; 2002 ; Topics in Theoretical Economics Volume 2 ; 2 >
+    au < testing ; exists ; 2003 ; Topics in Theoretical Economics Volume 3 ; 3 >
+    au < testing ; exists ; 2004 ; Topics in Theoretical Economics Volume 4 ; 4 >
+    au < testing ; exists ; 2005 ; Topics in Theoretical Economics Volume 5 ; 5 >
+    au < testing ; exists ; 2006 ; Topics in Theoretical Economics Volume 6 ; 6 >    
 
   }
 
