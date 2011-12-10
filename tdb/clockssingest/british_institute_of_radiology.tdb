@@ -4,12 +4,12 @@
     name = British Institute of Radiology
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   
-{
-  comment[0] = testing pending move to H20 expected in Dec 2011 -- see RU3826
-} 
+  {
+    comment[0] = 2011 AUs added were as H10
+  }
   
   {
 
