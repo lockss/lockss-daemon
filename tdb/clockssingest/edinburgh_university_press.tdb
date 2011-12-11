@@ -93,6 +93,7 @@
 
     comment[issue] = single issue per year, comes out in November.
     param[journal_id] = arch
+    comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
     au < released ; crawling ; 2003 ; Architectural Heritage Volume 14 ; 14 >
     au < released ; crawling ; 2004 ; Architectural Heritage Volume 15 ; 15 >
@@ -102,7 +103,7 @@
     au < released ; crawling ; 2008 ; Architectural Heritage Volume XIX ; XIX >
     au < released ; crawling ; 2009 ; Architectural Heritage Volume XX ; XX >
     au < released ; crawling ; 2010 ; Architectural Heritage Volume 21 ; 21 >
-    au < crawling ; exists ; 2011 ; Architectural Heritage Volume 22 ; 22 >
+    au < doesNotExist ; doesNotExist ; 0 ; Architectural Heritage Volume 22 ; 22 >
 
   }
 
