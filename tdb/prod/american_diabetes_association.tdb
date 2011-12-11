@@ -197,11 +197,11 @@
       implicit < status ; year ; name ; param[volume_name] >
       comment[0] = farewell issue Jan 2008
 
-      au < testing ; 2004 ; DOC News Volume 1 ; 1 >
-      au < testing ; 2005 ; DOC News Volume 2 ; 2 >
-      au < testing ; 2006 ; DOC News Volume 3 ; 3 >
-      au < testing ; 2007 ; DOC News Volume 4 ; 4 >
-      au < testing ; 2008 ; DOC News Volume 5 ; 5 >
+      au < ready ; 2004 ; DOC News Volume 1 ; 1 >
+      au < ready ; 2005 ; DOC News Volume 2 ; 2 >
+      au < ready ; 2006 ; DOC News Volume 3 ; 3 >
+      au < ready ; 2007 ; DOC News Volume 4 ; 4 >
+      au < ready ; 2008 ; DOC News Volume 5 ; 5 >
 
     }
 
