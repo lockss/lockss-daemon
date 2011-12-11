@@ -18,6 +18,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literary_scholarship
+      attr[journal_id] = als
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1998 ; American Literary Scholarship 1998 ; 1998 >
@@ -72,6 +73,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literature
+      attr[journal_id] = al
 
       au < released ; 1999 ; American Literature Volume 71 ; 71 >
       au < released ; 2000 ; American Literature Volume 72 ; 72 >
@@ -120,6 +122,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_speech
+      attr[journal_id] = as
 
       au < released ; 1999 ; American Speech Volume 74 ; 74 >
       au < released ; 2000 ; American Speech Volume 75 ; 75 >
@@ -167,6 +170,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = boundary
+      attr[journal_id] = b2
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; boundary 2 Volume 26 ; 26 >
@@ -215,6 +219,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = camera_obscura
+      attr[journal_id] = co
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 15 ; 15 >
@@ -257,6 +262,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
+      attr[jouranl_id] = cst
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
@@ -325,6 +331,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = differences
+      attr[journal_id] = dif
 
       au < released ; 1999 ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
       au < released ; 2000 ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
@@ -391,6 +398,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eighteenth-century_life
+      attr[journal_id] = ecl
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1996 ; Eighteenth-Century Life Volume 20 ; 20 >
@@ -444,6 +452,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ethnohistory
+      attr[journal_id] = eth
 
       au < released ; 1999 ; Ethnohistory Volume 46 ; 46 >
       au < released ; 2000 ; Ethnohistory Volume 47 ; 47 >
@@ -486,6 +495,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = french_historical_studies
+      attr[journal_id] = fhs
 
       au < released ; 1999 ; French Historical Studies Volume 22 ; 22 >
       au < released ; 2000 ; French Historical Studies Volume 23 ; 23 >
@@ -558,6 +568,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_lesbian_and_gay_studies
+      attr[jouranl_id] = glq
 
       au < released ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
       au < released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
@@ -606,6 +617,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hispanic_american_historical_review
+      attr[journal_id] = hahr
 
       au < ready ; 1999 ; Hispanic American Historical Review Volume 79 ; 79 >
       au < released ; 2000 ; Hispanic American Historical Review Volume 80 ; 80 >
@@ -648,6 +660,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = history_of_political_economy
+      attr[journal_id] = hpe
 
       au < released ; 1999 ; History of Political Economy Volume 31 ; 31 >
       au < released ; 2000 ; History of Political Economy Volume 32 ; 32 >
@@ -690,6 +703,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_health_politics_policy_and_law
+      attr[jouranl_id] = jhp
 
       au < released ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
       au < released ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
@@ -731,6 +745,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_medieval_and_early_modern_studies
+      attr[journal_id] = jmems
 
       au < released ; 1997 ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
       au < released ; 2000 ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
@@ -797,6 +812,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = mediterranean_quarterly
+      attr[journal_id] = med
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Mediterranean Quarterly Volume 10 ; 10 >
@@ -872,6 +888,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = modern_language_quarterly
+      attr[journal_id] = mlq
 
       au < released ; 1999 ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
       au < released ; 2000 ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
@@ -914,6 +931,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = nka
+      attr[journal_id] = nka
       
       au < ready ; 1994 ; Nka: Journal of Contemporary African Art Issue 1 ; 1 >
       au < ready ; 1995 ; Nka: Journal of Contemporary African Art Number 2 ; 2 >
@@ -956,6 +974,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = poetics_today
+      attr[journal_id] = poet
 
       au < released ; 1999 ; Poetics Today Volume 20 ; 20 >
       au < released ; 2000 ; Poetics Today Volume 21 ; 21 >
@@ -997,6 +1016,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = positions
+      attr[jouranl_id] = pos
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
@@ -1077,6 +1097,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = public_culture
+      attr[journal_id] = pc
 
       au < released ; 1999 ; Public Culture Volume 11 ; 11 >
       au < released ; 2000 ; Public Culture Volume 12 ; 12 >
@@ -1119,6 +1140,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = radical_history_review
+      attr[journal_id] = rhr
 
       au < released ; 2001 ; Radical History Review Issue 79 ; 79 >
       au < released ; 2001 ; Radical History Review Issue 80 ; 80 >
@@ -1167,6 +1189,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_science_history
+      attr[jouranl_id] = ssh
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Social Science History Volume 23 ; 23 >
@@ -1217,6 +1240,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_text
+      attr[journal_id] = soc
 
       au < released ; 1999 ; Social Text Volume 17 ; 17 >
       au < released ; 2000 ; Social Text Volume 18 ; 18 >
@@ -1258,6 +1282,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = south_atlantic_quarterly
+      attr[journal_id] = saq
 
       au < released ; 1999 ; The South Atlantic Quarterly Volume 98 ; 98 >
       au < released ; 2000 ; The South Atlantic Quarterly Volume 99 ; 99 >
@@ -1304,6 +1329,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = theater
+      attr[journal_id] = the
 
       au < released ; 1999 ; Theater Volume 29 ; 29 >
       au < released ; 2000 ; Theater Volume 30 ; 30 >
@@ -1358,6 +1384,7 @@
       >
 
       param[journal_dir] = common_knowledge
+      attr[journal_id] = ckn
 
       au < released ; 2002 ; Common Knowledge Volume 8 ; 8 >
       au < released ; 2003 ; Common Knowledge Volume 9 ; 9 >
@@ -1381,6 +1408,7 @@
       >
 
       param[journal_dir] = hopscotch
+      attr[journal_id] = hop
 
       au < released ; 1999 ; Hopscotch: A Cultural Review Volume 1 ; 1 >
       au < released ; 2000-2001 ; Hopscotch: A Cultural Review Volume 2 ; 2 >
@@ -1396,6 +1424,7 @@
       >
 
       param[journal_dir] = nepantla
+      attr[journal_id] = nep
 
       au < released ; 2000 ; Nepantla: Views from South Volume 1 ; 1 >
       au < released ; 2001 ; Nepantla: Views from South Volume 2 ; 2 >
@@ -1413,6 +1442,7 @@
       >
 
       param[journal_dir] = pedagogy
+      param[journal_id] = ped
 
       au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
       au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
@@ -1437,6 +1467,7 @@
       >
 
       param[journal_dir] = small_axe
+      attr[journal_id] = smx
 
       au < released ; 2001 ; Small Axe Volume 5 ; 5 >
       au < released ; 2002 ; Small Axe Volume 6 ; 6 >
