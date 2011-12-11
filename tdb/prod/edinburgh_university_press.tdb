@@ -117,6 +117,7 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = arch
       implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
       au < ready ; 2003 ; Architectural Heritage Volume 14 ; 14 >
       au < ready ; 2004 ; Architectural Heritage Volume 15 ; 15 >
