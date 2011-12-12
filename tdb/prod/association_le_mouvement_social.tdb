@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = le_mouvement_social
+    attr[journal_id] = lms
 
     au < released ; 2009 ; Le Mouvement Social Numéro 226 ; 226 >
     au < released ; 2009 ; Le Mouvement Social Numéro 227 ; 227 >
