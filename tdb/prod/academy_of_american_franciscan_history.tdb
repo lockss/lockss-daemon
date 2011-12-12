@@ -16,8 +16,9 @@
       issnl = 0003-1615
     >
 
-	attr[journal_abbr] = tam
+    attr[journal_abbr] = tam
     param[journal_dir] = the_americas
+    attr[journal_id] = tam
 
     au < released ; 2001 ; The Americas Volume 57 ; 57 >
     au < released ; 2002 ; The Americas Volume 58 ; 58 >
