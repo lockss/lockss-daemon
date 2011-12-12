@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.7 2011-06-14 09:26:33 tlipkis Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.8 2011-12-12 21:40:22 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -65,12 +64,6 @@ public class HighWirePressH20ArticleIteratorFactory
 				      .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
-  public ArticleMetadataExtractor
-    createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
-  }
-  
   protected static class HighWirePressH20ArticleIterator
     extends SubTreeArticleIterator {
     
@@ -174,4 +167,9 @@ public class HighWirePressH20ArticleIteratorFactory
 //    
   }
   
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(null);
+  }
+
 }
