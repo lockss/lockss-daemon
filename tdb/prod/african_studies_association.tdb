@@ -7,6 +7,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
+  
 
   {
     title <
@@ -17,6 +18,7 @@
     >
 
     param[journal_dir] = african_studies_review
+    attr[journal_id] = arw
 
     au < released ; 2005 ; African Studies Review Volume 48 ; 48 >
     au < released ; 2006 ; African Studies Review Volume 49 ; 49 >
@@ -34,6 +36,7 @@
     >
 
     param[journal_dir] = history_in_africa
+    attr[journal_id] = hia
 
     au < released ; 2005 ; History in Africa Volume 32 ; 32 >
     au < released ; 2006 ; History in Africa Volume 33 ; 33 >
