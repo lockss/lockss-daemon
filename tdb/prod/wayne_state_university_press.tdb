@@ -17,6 +17,7 @@
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = criticism
+    attr[journal_id] = crt
 
     au < released ; 2001 ; Criticism Volume 43 ; 43 >
     au < released ; 2002 ; Criticism Volume 44 ; 44 >
@@ -28,6 +29,7 @@
     au < released ; 2008 ; Criticism Volume 50 ; 50 >
     au < released ; 2009 ; Criticism Volume 51 ; 51 >
     au < ready ; 2010 ; Criticism Volume 52 ; 52 >
+    au < manifest ; 2011 ; Criticism Volume 53 ; 53 >
 
   }
 
@@ -44,6 +46,7 @@
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = discourse
+    attr[journal_id] = dis
 
     au < released ; 2000 ; Discourse Volume 22 ; 22 >
     au < released ; 2001 ; Discourse Volume 23 ; 23 >
@@ -56,6 +59,7 @@
     au < released ; 2008 ; Discourse Volume 30 ; 30 >
     au < ready ; 2009 ; Discourse Volume 31 ; 31 >
     au < ready ; 2010 ; Discourse Volume 32 ; 32 >
+    au < manifest ; 2011 ; Discourse Volume 33 ; 33 >
 
   }
 
@@ -72,12 +76,14 @@
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = framework_the_journal_of_cinema_and_media
-
+    attr[journal_id] = frm
+    
     au < released ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
     au < released ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
     au < released ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
     au < released ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
     au < ready ; 2010 ; Framework: The Journal of Cinema and Media Volume 51 ; 51 >
+    au < manifest ; 2011 ; Framework: The Journal of Cinema and Media Volume 52 ; 52 >
 
   }
 
@@ -96,7 +102,8 @@
       param[base_url] = http://muse.jhu.edu/
       implicit < status ; year ; name ; param[volume] >
       param[journal_dir] = human_biology
-
+      attr[journal_id] = hub
+    
       au < released ; 2001 ; Human Biology Volume 73 ; 73 >
       au < released ; 2002 ; Human Biology Volume 74 ; 74 >
       au < released ; 2003 ; Human Biology Volume 75 ; 75 >
@@ -142,6 +149,7 @@
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = marvels_and_tales
+    attr[journal_id] = mat
 
     au < released ; 2001 ; Marvels & Tales Volume 15 ; 15 >
     au < released ; 2002 ; Marvels & Tales Volume 16 ; 16 >
@@ -170,7 +178,8 @@
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = merrill-palmer_quarterly
-
+    attr[journal_id] = mpq
+    
     au < released ; 2001 ; Merrill-Palmer Quarterly Volume 47 ; 47 >
     au < released ; 2002 ; Merrill-Palmer Quarterly Volume 48 ; 48 >
     au < released ; 2003 ; Merrill-Palmer Quarterly Volume 49 ; 49 >
