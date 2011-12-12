@@ -17789,11 +17789,28 @@
       name = Intensivmedizin und Notfallmedizin ;
       issn = 0175-3851 ;
       eissn = 1435-1420 ;
-      issnl = 0175-3851 ;
-      placeholder = True
+      issnl = 0175-3851
     >
 
+    comment[merged_into] = 0723-5003
     param[journal_issn] = 0175-3851
+    comment[urgent] = end of 2011
+
+    au < testing ; 1997 ; Intensivmedizin und Notfallmedizin Volume 34 ; 34 >
+    au < testing ; 1998 ; Intensivmedizin und Notfallmedizin Volume 35 ; 35 >
+    au < testing ; 1999 ; Intensivmedizin und Notfallmedizin Volume 36 ; 36 >
+    au < testing ; 2000 ; Intensivmedizin und Notfallmedizin Volume 37 ; 37 >
+    au < testing ; 2001 ; Intensivmedizin und Notfallmedizin Volume 38 ; 38 >
+    au < testing ; 2002 ; Intensivmedizin und Notfallmedizin Volume 39 ; 39 >
+    au < testing ; 2003 ; Intensivmedizin und Notfallmedizin Volume 40 ; 40 >
+    au < testing ; 2004 ; Intensivmedizin und Notfallmedizin Volume 41 ; 41 >
+    au < testing ; 2005 ; Intensivmedizin und Notfallmedizin Volume 42 ; 42 >
+    au < testing ; 2006 ; Intensivmedizin und Notfallmedizin Volume 43 ; 43 >
+    au < testing ; 2007 ; Intensivmedizin und Notfallmedizin Volume 44 ; 44 >
+    au < testing ; 2008 ; Intensivmedizin und Notfallmedizin Volume 45 ; 45 >
+    au < testing ; 2009 ; Intensivmedizin und Notfallmedizin Volume 46 ; 46 >
+    au < testing ; 2010 ; Intensivmedizin und Notfallmedizin Volume 47 ; 47 >
+    au < testing ; 2011 ; Intensivmedizin und Notfallmedizin Volume 48 ; 48 >
 
   }
 
@@ -24305,16 +24322,16 @@
     param[journal_issn] = 0167-594X
     attr[where] = AUtest
 
-    au < testing ; 1983 ; Journal of Neuro-Oncology Volume 1 ; 1 >
-    au < testing ; 1984 ; Journal of Neuro-Oncology Volume 2 ; 2 >
-    au < testing ; 1985-1986 ; Journal of Neuro-Oncology Volume 3 ; 3 >
-    au < testing ; 1986-1987 ; Journal of Neuro-Oncology Volume 4 ; 4 >
-    au < testing ; 1987 ; Journal of Neuro-Oncology Volume 5 ; 5 >
-    au < testing ; 1988 ; Journal of Neuro-Oncology Volume 6 ; 6 >
-    au < testing ; 1989 ; Journal of Neuro-Oncology Volume 7 ; 7 >
-    au < testing ; 1990 ; Journal of Neuro-Oncology Volume 8 ; 8 >
-    au < testing ; 1990 ; Journal of Neuro-Oncology Volume 9 ; 9 >
-    au < testing ; 1991 ; Journal of Neuro-Oncology Volume 10 ; 10 >
+    au < ready ; 1983 ; Journal of Neuro-Oncology Volume 1 ; 1 >
+    au < ready ; 1984 ; Journal of Neuro-Oncology Volume 2 ; 2 >
+    au < ready ; 1985-1986 ; Journal of Neuro-Oncology Volume 3 ; 3 >
+    au < ready ; 1986-1987 ; Journal of Neuro-Oncology Volume 4 ; 4 >
+    au < ready ; 1987 ; Journal of Neuro-Oncology Volume 5 ; 5 >
+    au < ready ; 1988 ; Journal of Neuro-Oncology Volume 6 ; 6 >
+    au < ready ; 1989 ; Journal of Neuro-Oncology Volume 7 ; 7 >
+    au < ready ; 1990 ; Journal of Neuro-Oncology Volume 8 ; 8 >
+    au < ready ; 1990 ; Journal of Neuro-Oncology Volume 9 ; 9 >
+    au < ready ; 1991 ; Journal of Neuro-Oncology Volume 10 ; 10 >
     au < ready ; 1991 ; Journal of Neuro-Oncology Volume 11 ; 11 >
     au < ready ; 1992 ; Journal of Neuro-Oncology Volume 12 ; 12 >
     au < ready ; 1992 ; Journal of Neuro-Oncology Volume 13 ; 13 >
@@ -24328,10 +24345,10 @@
     au < ready ; 1994 ; Journal of Neuro-Oncology Volume 21 ; 21 >
     au < ready ; 1994 ; Journal of Neuro-Oncology Volume 22 ; 22 >
     au < ready ; 1995 ; Journal of Neuro-Oncology Volume 23 ; 23 >
-    au < manifest ; 1995 ; Journal of Neuro-Oncology Volume 24 ; 24 >
+    au < testing ; 1995 ; Journal of Neuro-Oncology Volume 24 ; 24 >
     au < ready ; 1995 ; Journal of Neuro-Oncology Volume 25 ; 25 >
     au < ready ; 1995 ; Journal of Neuro-Oncology Volume 26 ; 26 >
-    au < manifest ; 1996 ; Journal of Neuro-Oncology Volume 27 ; 27 >
+    au < testing ; 1996 ; Journal of Neuro-Oncology Volume 27 ; 27 >
     au < ready ; 1996 ; Journal of Neuro-Oncology Volume 28 ; 28 >
     au < ready ; 1996 ; Journal of Neuro-Oncology Volume 29 ; 29 >
     au < ready ; 1996 ; Journal of Neuro-Oncology Volume 30 ; 30 >
@@ -25558,11 +25575,28 @@
     title <
       name = Journal of Shanghai University (English Edition) ;
       issn = 1007-6417 ;
-      issnl = 1007-6417 ;
-      placeholder = True
+      eissn = 1863-236X ;
+      issnl = 1007-6417
     >
 
     param[journal_issn] = 1007-6417
+    comment[urgent] = end of 2011
+
+    au < testing ; 1997 ; Journal of Shanghai University (English Edition) Volume 1 ; 1 >
+    au < testing ; 1998 ; Journal of Shanghai University (English Edition) Volume 2 ; 2 >
+    au < testing ; 1999 ; Journal of Shanghai University (English Edition) Volume 3 ; 3 >
+    au < testing ; 2000 ; Journal of Shanghai University (English Edition) Volume 4 ; 4 >
+    au < testing ; 2001 ; Journal of Shanghai University (English Edition) Volume 5 ; 5 >
+    au < testing ; 2002 ; Journal of Shanghai University (English Edition) Volume 6 ; 6 >
+    au < testing ; 2003 ; Journal of Shanghai University (English Edition) Volume 7 ; 7 >
+    au < testing ; 2004 ; Journal of Shanghai University (English Edition) Volume 8 ; 8 >
+    au < testing ; 2005 ; Journal of Shanghai University (English Edition) Volume 9 ; 9 >
+    au < testing ; 2006 ; Journal of Shanghai University (English Edition) Volume 10 ; 10 >
+    au < testing ; 2007 ; Journal of Shanghai University (English Edition) Volume 11 ; 11 >
+    au < testing ; 2008 ; Journal of Shanghai University (English Edition) Volume 12 ; 12 >
+    au < testing ; 2009 ; Journal of Shanghai University (English Edition) Volume 13 ; 13 >
+    au < testing ; 2010 ; Journal of Shanghai University (English Edition) Volume 14 ; 14 >
+    au < testing ; 2011 ; Journal of Shanghai University (English Edition) Volume 15 ; 15 >
 
   }
 
@@ -28296,13 +28330,14 @@
   {
 
     title <
-      name = Medizinische Klinik ;
+      name = Medizinische Klinik - Intensivmedizin und Notfallmedizin ;
       issn = 0723-5003 ;
       eissn = 1615-6722 ;
       issnl = 0723-5003 ;
       placeholder = True
     >
 
+    comment[merged_from] = 0175-3851
     param[journal_issn] = 0723-5003
 
   }
@@ -37976,11 +38011,15 @@
       name = Sport- und Präventivmedizin ;
       issn = 1867-1977 ;
       eissn = 1867-1985 ;
-      issnl = 1867-1977 ;
-      placeholder = True
+      issnl = 1867-1977
     >
 
     param[journal_issn] = 1867-1977
+    comment[urgent] = end of 2011
+    
+    au < testing ; 2009 ; Sport- und Präventivmedizin Volume 39 ; 39 >
+    au < testing ; 2010 ; Sport- und Präventivmedizin Volume 40 ; 40 >
+    au < testing ; 2011 ; Sport- und Präventivmedizin Volume 41 ; 41 >
 
   }
 
