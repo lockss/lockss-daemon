@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = parergon
+    attr[journal_id] = pgn
 
     au < released ; 2005 ; Parergon Volume 22 ; 22 >
     au < released ; 2006 ; Parergon Volume 23 ; 23 >
