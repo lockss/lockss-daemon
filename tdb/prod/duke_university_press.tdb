@@ -262,7 +262,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
-      attr[jouranl_id] = cst
+      attr[journal_id] = cst
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
@@ -568,7 +568,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_lesbian_and_gay_studies
-      attr[jouranl_id] = glq
+      attr[journal_id] = glq
 
       au < released ; 1999 ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
       au < released ; 2000 ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
@@ -703,7 +703,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_health_politics_policy_and_law
-      attr[jouranl_id] = jhp
+      attr[journal_id] = jhp
 
       au < released ; 1999 ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
       au < released ; 2000 ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
@@ -1016,7 +1016,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = positions
-      attr[jouranl_id] = pos
+      attr[journal_id] = pos
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; positions: east asia cultures critique Volume 7 ; 7 >
@@ -1189,7 +1189,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_science_history
-      attr[jouranl_id] = ssh
+      attr[journal_id] = ssh
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Social Science History Volume 23 ; 23 >
