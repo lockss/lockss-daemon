@@ -104,7 +104,8 @@ public class TestPionIPerceptionArticleIteratorFactory extends ArticleIteratorTe
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-        
+    //"\"%sjournal/%s/volume/%s/article/[^/]+\", base_url, journal_code, volume_name, journal_code";
+
     assertNotMatchesRE(pat, "http://www.wrong.com/fulltext/j0123/j0143.pdf");
     assertNotMatchesRE(pat, "http://www.wrong.com/fulltext/J0123/J0143.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/fulltextt/j0123/j0143.pdf");
@@ -117,10 +118,10 @@ public class TestPionIPerceptionArticleIteratorFactory extends ArticleIteratorTe
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j123/k01323.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j137/j2934.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/J384/J392.pdf");
-    assertMatchesRE(pat, "http://www.example.com/fulltext/j0123/j383.pdf");
-    assertMatchesRE(pat, "http://www.example.com/fulltext/j0123/j392.pdf");
-    assertMatchesRE(pat, "http://www.example.com/fulltext/j123/j3923.pdf");
-    assertMatchesRE(pat, "http://www.example.com/fulltext/j123/j3948.pdf");
+    assertMatchesRE(pat, "http://www.example.com/journal/j/volume/123/article/j382");
+    assertMatchesRE(pat, "http://www.example.com/journal/j/volume/123/article/J392");
+    assertMatchesRE(pat, "http://www.example.com/journal/j/volume/123/article/j032");
+    assertMatchesRE(pat, "http://www.example.com/journal/j/volume/123/article/j2938");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0");
@@ -129,19 +130,6 @@ public class TestPionIPerceptionArticleIteratorFactory extends ArticleIteratorTe
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/j");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/j383");
     assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/j383.pdfwrong");
-  }
-  
-  public void testUrlsWithoutPrefixes() throws Exception {
-    SubTreeArticleIterator artIter = createSubTreeIter();
-    Pattern pat = getPattern(artIter);
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/0123/j383.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com//j0123/j383.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/wrong/j0123/j494.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0/j393.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/3928.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/3j394.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/j0123/j393.");
-    assertNotMatchesRE(pat, "http://www.example.com/fulltext/j123/j393.pd");
   }
 
   public void testCreateArticleFiles() throws Exception {
@@ -153,19 +141,16 @@ public class TestPionIPerceptionArticleIteratorFactory extends ArticleIteratorTe
     String rep2 = "fulltext/j123/j3948.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
   
-    String url = "http://www.example.com/fulltext/j123/j3948.pdf";
+    String pdfUrl = "http://www.example.com/fulltext/j0123/j3948.pdf";
     String citationUrl = "http://www.example2.com/ris.cgi?id=j3948";
-    String abstractUrl = "http://www.example.com/journal/j/volume/123/article/j3948";
+    String url = "http://www.example.com/journal/j/volume/123/article/j3948";
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
     ArticleFiles af = createArticleFiles(artIter, cu);
     assertNotNull(af);
-    assertEquals(cu, af.getFullTextCu());
-    System.out.println("HERE BE DRAGONS");
-    System.out.println(af.getRoleCu(ArticleFiles.ROLE_CITATION + "_" + "application/x-research-info-systems"));
-    System.out.println(af.getRoleCu(ArticleFiles.ROLE_ABSTRACT));
+    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_ABSTRACT));
   }			
 
 }
