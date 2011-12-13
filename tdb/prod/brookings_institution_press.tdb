@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = brookings_papers_on_economic_activity
+    attr[journal_id] = eca
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; Brookings Papers on Economic Activity 2000 ; 2000 >
@@ -43,6 +44,7 @@
     >
 
     param[journal_dir] = brookings_papers_on_education_policy
+    attr[journal_id] = pep
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; Brookings Papers on Education Policy 2000 ; 2000 >
@@ -65,6 +67,7 @@
     >
 
     param[journal_dir] = brookings_trade_forum
+    attr[journal_id] = btf
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; Brookings Trade Forum 2000 ; 2000 >
@@ -89,6 +92,7 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_financial_services
+    attr[journal_id] = pfs
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; Brookings-Wharton Papers on Financial Services 2000 ; 2000 >
@@ -109,6 +113,7 @@
     >
 
     param[journal_dir] = brookings-wharton_papers_on_urban_affairs
+    attr[journal_id] = urb
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000 ; Brookings-Wharton Papers on Urban Affairs 2000 ; 2000 >
@@ -134,6 +139,7 @@
     >
 
     param[journal_dir] = economia
+    attr[volume_id] = eco
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000-2001 ; Economía Volume 1 ; 1 >
