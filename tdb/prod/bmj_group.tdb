@@ -569,17 +569,17 @@
 
     param[base_url] = http://dtb.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; DTB - Drug and Therapeutics Bulletin Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1995 ; DTB - Drug and Therapeutics Bulletin Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1996 ; DTB - Drug and Therapeutics Bulletin Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1997 ; DTB - Drug and Therapeutics Bulletin Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1998 ; DTB - Drug and Therapeutics Bulletin Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1999 ; DTB - Drug and Therapeutics Bulletin Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; DTB - Drug and Therapeutics Bulletin Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; DTB - Drug and Therapeutics Bulletin Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; DTB - Drug and Therapeutics Bulletin Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1995 ; DTB - Drug and Therapeutics Bulletin Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1996 ; DTB - Drug and Therapeutics Bulletin Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 1997 ; DTB - Drug and Therapeutics Bulletin Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1998 ; DTB - Drug and Therapeutics Bulletin Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1999 ; DTB - Drug and Therapeutics Bulletin Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; DTB - Drug and Therapeutics Bulletin Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; DTB - Drug and Therapeutics Bulletin Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2005 ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2006 ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
@@ -732,24 +732,24 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1967 ; Gut Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 1968 ; Gut Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1969 ; Gut Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Gut Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Gut Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Gut Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Gut Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Gut Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Gut Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Gut Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Gut Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Gut Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Gut Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Gut Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Gut Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Gut Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Gut Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Gut Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Gut Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Gut Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Gut Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Gut Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Gut Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Gut Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Gut Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1981 ; Gut Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Gut Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; ready ; 1983 ; Gut Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; ready ; 1984 ; Gut Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; ready ; 1985 ; Gut Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; ready ; 1986 ; Gut Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1987 ; Gut Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Gut Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; ready ; 1988 ; Gut Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; ready ; 1989 ; Gut Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; testing ; 1990 ; Gut Volume 31 ; 31 >
