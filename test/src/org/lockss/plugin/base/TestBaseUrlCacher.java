@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.66 2011-11-29 06:50:50 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.66.2.1 2011-12-13 16:50:35 nchondros Exp $
  */
 
 /*
@@ -312,6 +312,42 @@ public class TestBaseUrlCacher extends LockssTestCase {
     props = url.getProperties();
     assertEquals("value1", props.getProperty("test1"));
     assertEquals("SHA-1:1EEBDF4FDC9FC7BF283031B93F9AEF3338DE9052", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+  }
+
+  public void testFileChecksumWithNoAlgorithm() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+                  "");
+    cacher._input = new StringInputStream("test content");
+    CIProperties props = new CIProperties();
+    props.setProperty("test1", "value1");
+    cacher._headers = props;
+    cacher.cache();
+
+    CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
+    InputStream is = url.getUnfilteredInputStream();
+    assertReaderMatchesString("test content", new InputStreamReader(is));
+
+    props = url.getProperties();
+    assertEquals("value1", props.getProperty("test1"));
+    assertNull(props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+  }
+
+  public void testFileChecksumWithBogusAlgorithm() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+                  "A-Bogus-Algorithm");
+    cacher._input = new StringInputStream("test content");
+    CIProperties props = new CIProperties();
+    props.setProperty("test1", "value1");
+    cacher._headers = props;
+    cacher.cache();
+
+    CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
+    InputStream is = url.getUnfilteredInputStream();
+    assertReaderMatchesString("test content", new InputStreamReader(is));
+
+    props = url.getProperties();
+    assertEquals("value1", props.getProperty("test1"));
+    assertNull(props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
   }
 
   public void testCheckConnection() {

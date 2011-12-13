@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.17 2011-03-06 00:12:34 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.17.10.1 2011-12-13 16:50:35 nchondros Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.util.*;
 import java.util.zip.*;
 import java.io.*;
 import java.nio.charset.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import junit.framework.TestCase;
 import org.apache.commons.io.input.*;
 import org.apache.commons.io.output.NullOutputStream;
@@ -73,6 +75,20 @@ public class TestStreamUtil extends LockssTestCase {
     String resultStr = baos.toString();
     baos.close();
     assertTrue(resultStr.equals("test string"));
+  }
+
+  public void testCopyInputStreamWithDigest() throws IOException, NoSuchAlgorithmException {
+    InputStream is = new StringInputStream("test content");
+    OutputStream baos = new ByteArrayOutputStream(12);
+    MessageDigest md = MessageDigest.getInstance("SHA-1");
+    StreamUtil.copy(is, baos, -1, null, false, md);
+    is.close();
+    String resultStr = baos.toString();
+    baos.close();
+    assertTrue(resultStr.equals("test content"));
+    byte bdigest[] = md.digest();
+    String sdigest = ByteArray.toHexString(bdigest);
+    assertEquals(sdigest, "1EEBDF4FDC9FC7BF283031B93F9AEF3338DE9052"); 
   }
 
   public void testCopyInputStreamReturnsCount() throws IOException {
