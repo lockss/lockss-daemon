@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = canadian_journal_on_aging
+    attr[journal_id] = cja
 
     au < released ; 2004 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23 ; 23 >
     au < released ; 2005 ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
@@ -37,6 +38,7 @@
     >
 
     param[journal_dir] = journal_of_policy_history
+    attr[journal_id] = jph
 
     au < released ; 1999 ; Journal of Policy History Volume 11 ; 11 >
     au < released ; 2000 ; Journal of Policy History Volume 12 ; 12 >
@@ -63,6 +65,7 @@
     >
 
     param[journal_dir] = world_politics
+    attr[journal_id] = wp
 
     au < released ; 1996 ; World Politics Volume 48 ; 48 >
     au < released ; 1997 ; World Politics Volume 49 ; 49 >
