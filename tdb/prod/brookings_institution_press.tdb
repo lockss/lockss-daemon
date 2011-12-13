@@ -139,7 +139,7 @@
     >
 
     param[journal_dir] = economia
-    attr[volume_id] = eco
+    attr[journal_id] = eco
     implicit < status ; year ; name ; param[volume] >
 
     au < released ; 2000-2001 ; Economía Volume 1 ; 1 >

@@ -1442,7 +1442,7 @@
       >
 
       param[journal_dir] = pedagogy
-      param[journal_id] = ped
+      attr[journal_id] = ped
 
       au < released ; 2001 ; Pedagogy Volume 1 ; 1 >
       au < released ; 2002 ; Pedagogy Volume 2 ; 2 >
