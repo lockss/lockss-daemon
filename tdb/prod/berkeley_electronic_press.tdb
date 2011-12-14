@@ -1613,7 +1613,8 @@
 
     pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejte/topics
+    param[journal_abbr] = bejte
+    param[journal_section] = topics
     comment[merged] = with 1534-5955, 1534-5963 and 1534-5971 into 1555-0478 in 2007
 
     au < notReady ; 2001 ; Topics in Theoretical Economics Volume 1 ; 1 >
