@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -45,7 +45,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/%s/lockss-volume%d.html$&quot;, base_url, journal_abbr, journal_section, volume</string>
+      <string>1,&quot;^%s%s/(%s/)?lockss-volume%d.html$&quot;, base_url, journal_abbr, journal_section, volume</string>
       <string>1,&quot;^%s%s/%s/([^/]+/)?vol%d&quot;, base_url, journal_abbr, journal_section, volume</string>
       <string>1,&quot;^%s%s/%s/%d/&quot;, base_url, journal_abbr, journal_section, volume</string>
       <string>1,&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
@@ -54,6 +54,10 @@
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%s/%s/lockss-volume%d.html&quot;, base_url, journal_abbr, journal_section, volume</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%s%s/lockss-volume%d.html&quot;, base_url, journal_abbr, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
