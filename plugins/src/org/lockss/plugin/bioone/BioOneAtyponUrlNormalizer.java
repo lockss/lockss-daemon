@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponUrlNormalizer.java,v 1.1 2011-09-01 21:38:17 thib_gc Exp $
+ * $Id: BioOneAtyponUrlNormalizer.java,v 1.2 2011-12-14 02:04:56 thib_gc Exp $
  */
 
 /*
@@ -46,13 +46,14 @@ public class BioOneAtyponUrlNormalizer implements UrlNormalizer {
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    if (url.indexOf('?') < 0) {
-      return url;
+    // Normalize ending
+    if (url.indexOf('?') >= 0) {
+      for (String ending : endings) {
+        url = StringUtils.chomp(url, ending);
+      }
     }
-    for (String ending : endings) {
-      url = StringUtils.chomp(url, ending);
-    }
-    return url;
+    // Normalize double-slash
+    return StringUtils.replaceOnce(url, "//", "/");
   }
 
 }
