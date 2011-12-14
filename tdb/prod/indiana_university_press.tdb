@@ -73,6 +73,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = african_conflict_and_peacebuilding_review
+      attr[journal_id] = acp
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2011 ; African Conflict & Peacebuilding Review Volume 1 ; 1 >
@@ -120,6 +121,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = aleph_historical_studies_in_science_and_judaism
+      attr[journal_id] = ale
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2001 ; Aleph: Historical Studies in Science and Judaism Volume 1 ; 1 >
@@ -132,6 +134,7 @@
       au < released ; 2008 ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
       au < released ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
       au < released ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
+      au < manifest ; 2011 ; Aleph: Historical Studies in Science and Judaism Volume 11 ; 11 >
 
     }
 
