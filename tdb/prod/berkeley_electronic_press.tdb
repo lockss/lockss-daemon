@@ -31,7 +31,8 @@
 
     pluginSuffix = BerkeleyElectronicPressSectionPlugin 
     param[base_url] = http://www.bepress.com/
-    param[journal_abbr] = bejeap/advances
+    param[journal_abbr] = bejeap
+    param[journal_section] = advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
     au < notReady ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
