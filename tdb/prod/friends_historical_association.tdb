@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = quaker_history
+    attr[journal_id] = qkh
 
     au < released ; 2008 ; Quaker History Volume 97 ; 97 >
     au < released ; 2009 ; Quaker History Volume 98 ; 98 >

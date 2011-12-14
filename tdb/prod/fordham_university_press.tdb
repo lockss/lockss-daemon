@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = joyce_studies_annual
+    attr[journal_id] = joy
 
     au < released ; 2001 ; Joyce Studies Annual Volume 12 ; 12 >
     au < released ; 2002 ; Joyce Studies Annual Volume 13 ; 13 >
@@ -34,7 +35,7 @@
       issnl = 0070-2862
     >
 
-	comment[ds] = coming 2012
+    comment[ds] = coming 2012
     param[journal_dir] = dante_studies
   }
 
@@ -45,7 +46,7 @@
       issnl = 0022-6864
     >
 
-	comment[ds] = coming 2012
+    comment[ds] = coming 2012
     param[journal_dir] = traditio
   }
 
