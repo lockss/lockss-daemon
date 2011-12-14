@@ -722,23 +722,23 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://gut.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Gut Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Gut Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Gut Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Gut Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Gut Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Gut Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Gut Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Gut Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Gut Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Gut Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; Gut Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Gut Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1960 ; Gut Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Gut Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Gut Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Gut Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Gut Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Gut Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Gut Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Gut Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Gut Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Gut Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Gut Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Gut Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; testing ; 1972 ; Gut Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; Gut Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; Gut Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; testing ; 1974 ; Gut Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; Gut Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Gut Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Gut Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Gut Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Gut Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1978 ; Gut Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1979 ; Gut Volume 20 ; 20 >
