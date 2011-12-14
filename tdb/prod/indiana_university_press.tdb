@@ -205,6 +205,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = bridges_a_jewish_feminists_journal
+      attr[journal_id] = brd
       implicit < status ; year ; name ; param[volume] >
       
       comment[urgent] = ceasing publication. Needs release. As of 7/2011.
@@ -251,6 +252,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eservice_journal
+      attr[journal_id] = esj
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
