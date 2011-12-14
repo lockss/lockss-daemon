@@ -15,8 +15,8 @@
       issnl = 0930-5874
     >
 
-	attr[journal_abbr] = xxx
-    param[journal_dir] = xxx
+    attr[journal_id] = fmt
+    param[journal_dir] = forum_modernes_theater
 
     au < doesNotExist ; 0 ; Forum Modernes Theater Volume 1 ; 1 >
 
