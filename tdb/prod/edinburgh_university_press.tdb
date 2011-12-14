@@ -30,7 +30,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_the_journal_of_the_international_african_institute
-      attr[journal_abbr] = afr
+      attr[journal_id] = afr
       implicit < status ; year ; name ; param[volume] >
       comment[africa] = no issues currently exist on the EUP site 8/10/2011
     
@@ -87,7 +87,7 @@
 
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = ajicl
+      attr[journal_id] = ajicl
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
@@ -145,7 +145,7 @@
 	
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = anh
+      attr[journal_id] = anh
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 2003 ; Archives of Natural History Volume 30 ; 30 >
@@ -201,7 +201,7 @@
 	
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = brw
+      attr[journal_id] = brw
       implicit < status ; year ; name ; param[volume_name] >
     
       au < ready ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
@@ -246,7 +246,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = comparative_critical_studies
-      attr[journal_abbr] = ccs
+      attr[journal_id] = ccs
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
@@ -321,7 +321,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = dance_research
-      attr[journal_abbr] = dar
+      attr[journal_id] = dar
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Dance Research Volume 24 ; 24 >
@@ -445,7 +445,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = episteme
-      attr[journal_abbr] = epi
+      attr[journal_id] = epi
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
@@ -489,7 +489,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = holy_land_studies
-      attr[journal_abbr] = hls
+      attr[journal_id] = hls
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
@@ -533,7 +533,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = the_innes_review
-      attr[journal_abbr] = inn
+      attr[journal_id] = inn
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2007 ; The Innes Review Volume 58 ; 58 >
@@ -812,7 +812,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = journal_of_victorian_culture
-      attr[journal_abbr] = jvc
+      attr[journal_id] = jvc
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Journal of Victorian Culture Volume 11 ; 11 >
@@ -1003,7 +1003,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = paragraph
-      attr[journal_abbr] = prg
+      attr[journal_id] = prg
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Paragraph Volume 29 ; 29 >
@@ -1029,7 +1029,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = parliamentary_history
-      attr[journal_abbr] = pah
+      attr[journal_id] = pah
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Parliamentary History Volume 25 ; 25 >
@@ -1109,7 +1109,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = romanticism
-      attr[journal_abbr] = rom
+      attr[journal_id] = rom
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Romanticism Volume 12 ; 12 >
@@ -1211,7 +1211,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = scottish_historical_review
-      attr[journal_abbr] = shr
+      attr[journal_id] = shr
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
@@ -1258,7 +1258,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = studies_in_world_christianity
-      attr[journal_abbr] = swc
+      attr[journal_id] = swc
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
@@ -1304,7 +1304,7 @@
       param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = translation_and_literature
-      attr[journal_abbr] = tal
+      attr[journal_id] = tal
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Translation and Literature Volume 15 ; 15 >
