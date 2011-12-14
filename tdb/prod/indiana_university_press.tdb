@@ -165,6 +165,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = black_camera
+      attr[journal_id] = blc
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2009-2010 ; Black Camera Volume 1 ; 1 >
