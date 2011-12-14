@@ -39,6 +39,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_today
+      attr[journal_id] = at
       implicit < status ; year; name ; param[volume] >
 
       au < released ; 1999 ; Africa Today Volume 46 ; 46 >
@@ -53,6 +54,7 @@
       au < released ; 2008-2009 ; Africa Today Volume 55 ; 55 >
       au < released ; 2009-2010 ; Africa Today Volume 56 ; 56 >
       au < released ; 2010-2011 ; Africa Today Volume 57 ; 57 >
+      au < manifest ; 2011-2012 ; Africa Today Volume 58 ; 58 >
 
     }
 
