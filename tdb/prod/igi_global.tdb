@@ -4,6 +4,8 @@
     name = IGI-Global
   >
 
+  param[base_url] = http://www.igi-global.com/
+
   {
   
     title <
@@ -1469,8 +1471,9 @@
   
     title <
       name = International Journal of 3-D Information Modeling (IJ3DIM) ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2156-1710 ;
+      eissn = 2156-1702 ;
+      issnl = 2156-1710 
     >
 
   }
@@ -1502,8 +1505,9 @@
   
     title <
       name = International Journal of Systems Biology and Biomedical Technologies ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2160-9586 ;
+      eissn = 2160-9594 ;
+      issnl = 2160-9586 
     >
 
   }
@@ -1513,8 +1517,9 @@
   
     title <
       name = International Journal of Reliable and Quality E-Healthcare ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2160-9551 ;
+      eissn = 2160-956X ;
+      issnl = 2160-9551 
     >
 
   }
@@ -1524,8 +1529,9 @@
   
     title <
       name = International Journal of E-Planning Research ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2160-9918 ;
+      eissn = 2160-9926 ;
+      issnl = 2160-9918 
     >
 
   }
@@ -1535,7 +1541,9 @@
   
     title <
       name = International Journal of Productivity Management and Assessment Technologies ;
-      issn = NULL 
+      issn = 2160-9837 ;
+      eissn = 2160-9845 ;
+      issnl = 2160-9837 
 
     >
 
@@ -1546,8 +1554,9 @@
   
     title <
       name = International Journal of Energy Optimization and Engineering ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2160-9500 ;
+      eissn = 2160-9543 ;
+      issnl = 2160-9500 
     >
 
   }
@@ -1557,8 +1566,9 @@
   
     title <
       name = International Journal of Applied Behavioral Economics ;
-      issn = NULL ;
-      eissn = NULL
+      issn = 2160-9500 ;
+      eissn = 2160-9543 ;
+      issnl = 2160-9500 
     >
 
   }
