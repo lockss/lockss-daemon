@@ -3,6 +3,13 @@
   publisher <
     name = Berg Publishers
   >
+
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = berg
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
   
@@ -12,6 +19,22 @@
       eissn = 1753-0377 ;
       issnl = 0892-7936
     >    
+    
+  }
+
+  {
+  
+    title <
+      name = Art In Translation ;
+      issn = 1756-1310 
+    >    
+
+    param[journal_id] = aitj 
+    param[journal_issn] = 1756-1310
+
+    au < manifest ; 2009 ; Art In Translation Volume 1 ; 1 >
+    au < manifest ; 2010 ; Art In Translation Volume 2 ; 2 >
+    au < manifest ; 2011 ; Art In Translation Volume 3 ; 3 >
     
   }
 
@@ -40,10 +63,32 @@
   {
   
     title <
+      name = Design and Culture ;
+      issn = 1754-7075 ;
+      eissn = 1754-7083 ;
+      issnl = 1754-7075
+    >    
+    
+  }
+
+  {
+  
+    title <
       name = The Design Journal ;
       issn = 1460-6925 ;
       eissn = 1756-3062 ;
       issnl = 1460-6925
+    >    
+    
+  }
+
+  {
+  
+    title <
+      name = Fashion Practice ;
+      issn = 1756-9370 ;
+      eissn = 1756-9389 ;
+      issnl = 1756-9370
     >    
     
   }
@@ -62,7 +107,7 @@
   {
   
     title <
-      name = "Food, Culture and Society" ;
+      name = Food, Culture and Society ;
       issn = 1552-8014 ;
       eissn = 1751-7443 ;
       issnl = 1552-8014
@@ -77,6 +122,25 @@
       issn = 1740-6315 ;
       eissn = 1751-7427 ;
       issnl = 1740-6315
+    >    
+    
+  }
+
+  {
+  
+    title <
+      name = Interiors ;
+      issn = 2041-9112 ;
+      eissn = 2041-9120
+    >    
+    
+  }
+
+  {
+  
+    title <
+      name = Journal for the Study of Food and Society ;
+      issn = 1528-9796 
     >    
     
   }
@@ -106,28 +170,6 @@
   {
   
     title <
-      name = Textile ;
-      issn = 1475-9756 ;
-      eissn = 1751-8350 ;
-      issnl = 1475-9756
-    >    
-    
-  }
-
-  {
-  
-    title <
-      name = Time & Mind ;
-      issn = 1751-696X ;
-      eissn = 1751-6978 ;
-      issnl = 1751-696X
-    >    
-    
-  }
-
-  {
-  
-    title <
       name = Photography & Culture ;
       issn = 1751-4517 ;
       eissn = 1751-4525 ;
@@ -150,8 +192,10 @@
   {
   
     title <
-      name = Art in Translation ;
-      eissn = 1756-1310
+      name = Textile ;
+      issn = 1475-9756 ;
+      eissn = 1751-8350 ;
+      issnl = 1475-9756
     >    
     
   }
@@ -159,32 +203,12 @@
   {
   
     title <
-      name = Fashion Practice ;
-      issn = 1756-9370 ;
-      eissn = 1756-9389 ;
-      issnl = 1756-9370
+      name = Time & Mind ;
+      issn = 1751-696X ;
+      eissn = 1751-6978 ;
+      issnl = 1751-696X
     >    
     
   }
 
-  {
-  
-    title <
-      name = Design and Culture ;
-      issn = 1754-7075 ;
-      eissn = 1754-7083 ;
-      issnl = 1754-7075
-    >    
-    
-  }
-
-  {
-  
-    title <
-      name = Interiors ;
-      issn = 2041-9112 ;
-      eissn = 2041-9120
-    >    
-    
-  }
 }
