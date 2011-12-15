@@ -301,6 +301,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ethics_and_the_environment
+      attr[journal_id] = een
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
@@ -354,6 +355,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = film_history
+      attr[journal_id] = fih
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
@@ -396,13 +398,14 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = the_global_south
+      attr[journal_id] = gbs
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2007 ; The Global South Volume 1 ; 1 >
       au < released ; 2008 ; The Global South Volume 2 ; 2 >
       au < released ; 2009 ; The Global South Volume 3 ; 3 >
       au < released ; 2010 ; The Global South Volume 4 ; 4 >
-
+	  au < manifest ; 2011 ; The Global South Volume 5 ; 5 >
     }
 
   }
@@ -445,6 +448,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = history_and_memory
+      attr[journal_id] = ham
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; History & Memory Volume 11 ; 11 >
@@ -479,6 +483,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hypatia
+      attr[journal_id] = hyp
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; Hypatia Volume 14 ; 14 >
@@ -528,6 +533,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = indiana_journal_of_global_legal_studies
+      attr[journal_id] = gls
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
@@ -538,7 +544,7 @@
       au < released ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
       au < released ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
       au < released ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
-
+      au < released ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 >
     }
 
   }
@@ -569,11 +575,13 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
+      attr[journal_id] = ijf
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
       au < released ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
       au < released ; 2010 ; International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
+      au < manifest ; 2011 ; International Journal of Feminist Approaches to Bioethics Volume 4 ; 4 >
 
     }
 
@@ -618,6 +626,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = israel_studies
+      attr[journal_id] = 
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1996 ; Israel Studies Volume 1 ; 1 >
@@ -636,6 +645,7 @@
       au < released ; 2009 ; Israel Studies Volume 14 ; 14 >
       au < released ; 2010 ; Israel Studies Volume 15 ; 15 >
       au < released ; 2011 ; Israel Studies Volume 16 ; 16 >
+      au < manifest ; 2012 ; Israel Studies Volume 17 ; 17 >
 
     }
 
@@ -678,6 +688,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = jewish_social_studies
+      attr[journal_id] = jss
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
@@ -693,7 +704,7 @@
       au < released ; 2007-2008 ; Jewish Social Studies Volume 14 ; 14 >
       au < released ; 2008-2009 ; Jewish Social Studies Volume 15 ; 15 >
       au < released ; 2009-2010 ; Jewish Social Studies Volume 16 ; 16 >
-
+      au < manifest ; 2010-2011 ; Jewish Social Studies Volume 17 ; 17 >
     }
 
   }
@@ -749,6 +760,8 @@
       au < down ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
       au < down ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
       au < down ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
+      au < down ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
+
 
     }
 
@@ -757,6 +770,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_feminist_studies_in_religion
+      attr[journal_id] = jfs
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
@@ -766,6 +780,7 @@
       au < released ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
       au < released ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
       au < released ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
+      au < manifest ; 2011 ; Journal of Feminist Studies in Religion Volume 27 ; 27 >
 
     }
 
@@ -804,6 +819,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_folklore_research
+      attr[journal_id] = jfr
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
@@ -851,6 +867,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_middle_east_womens_studies
+      attr[journal_id] = jmw
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
@@ -860,7 +877,7 @@
       au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
       au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
       au < released ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 >
-
+      au < exists ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 >
     }
 
   }
@@ -897,6 +914,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_modern_literature
+      attr[journal_id] = jml
       implicit < status ; year ; name ; param[volume] >
 
       comment[jml31_32] = 500 errors
@@ -950,6 +968,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = meridians
+      attr[journal_id] = mer
       implicit < status ; year ; name ; param[volume] >
 
       comment[m8] = 500 errors
@@ -991,6 +1010,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = nashim
+      attr[journal_id] = nsh
       implicit < status ; year ; name ; param[volume] >
 
       comment[nm15_16] = 500 errors
@@ -1010,6 +1030,7 @@
       au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
       au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 19 ; 19 >
       au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 20 ; 20 >
+      au < manifest ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 21 ; 21 >
 
     }
 
@@ -1079,6 +1100,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = philosophy_of_music_education_review
+      attr[journal_id] = pme
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
@@ -1090,7 +1112,7 @@
       au < released ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
       au < released ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
       au < released ; 2010 ; Philosophy of Music Education Review Volume 18 ; 18 >
-
+      au < manifest ; 2011 ; Philosophy of Music Education Review Volume 19 ; 19 >
     }
 
   }
@@ -1128,6 +1150,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = prooftexts
+      attr[journal_id] = ptx
       implicit < status ; year ; name ; param[volume] >
     
       comment[pt28] = 500 errors
@@ -1142,7 +1165,7 @@
       au < released ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
       au < released ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
       au < released ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
-
+      au < manifest ; 2010 ; Prooftexts: A Journal of Jewish Literary History Volume 30 ; 30 >
     }
 
   }
@@ -1159,13 +1182,13 @@
 
       plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
       param[base_url] = http://inscribe.iupress.org/
-      param[journal_id] = rac
+      param[journal_id] = 
       implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
       au < down ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
       au < down ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
-
+      
     }
 
     {
@@ -1173,11 +1196,13 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = race_ethnicity
+      attr[journal_id] = rac
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
       au < released ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
       au < released ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+      au < manifest ; 2010-2011 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 4 ; 4 >
 
     }
 
@@ -1218,6 +1243,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = research_in_african_literatures
+      attr[journal_id] = ral
       implicit < status ; year ; name ; param[volume] >
 
       comment[ral39_40] = 500 errors
@@ -1234,7 +1260,7 @@
       au < released ; 2008 ; Research in African Literatures Volume 39 ; 39 >
       au < released ; 2009 ; Research in African Literatures Volume 40 ; 40 >
       au < released ; 2010 ; Research in African Literatures Volume 41 ; 41 >
-
+      au < manifest ; 2011 ; Research in African Literatures Volume 42 ; 42 >
     }
 
   }
@@ -1253,6 +1279,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = spectrum
+      attr[journal_id] = 
       implicit < status ; year ; name ; param[volume] >
     
       comment[0] = upcoming title with no content online yet
@@ -1290,6 +1317,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = textual_cultures
+      attr[journal_id] = txc
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
@@ -1297,6 +1325,7 @@
       au < released ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
       au < released ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
       au < released ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 ; 5 >
+      au < manifest ; 2011 ; Textual Cultures: Texts, Contexts, Interpretation Volume 6 ; 6 >
 
     }
 
@@ -1332,6 +1361,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = transactions_of_the_charles_s_peirce_society
+      attr[journal_id] = csp
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
@@ -1340,6 +1370,7 @@
       au < released ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
       au < released ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
       au < released ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
+      au < manifest ; 2011-2012 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 47 ; 47 >
 
     }
 
@@ -1370,6 +1401,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = transition
+      attr[journal_id] = tra
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2000 ; Transition: An International Review Volume 9 ; 9 >
@@ -1384,7 +1416,8 @@
       au < released ; 2010 ; Transition: An International Review Issue 102 ; 102 >
       au < released ; 2010 ; Transition: An International Review Issue 103 ; 103 >
       au < released ; 2011 ; Transition: An International Review Issue 104 ; 104 >
-
+      au < manifest ; 2011 ; Transition: An International Review Issue 105 ; 105 >
+      au < manifest ; 2011 ; Transition: An International Review Issue 106 ; 106 >
     }
 
   }
@@ -1423,6 +1456,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = victorian_studies
+      attr[journal_id] = vic
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
@@ -1436,6 +1470,7 @@
       au < released ; 2007-2008 ; Victorian Studies Volume 50 ; 50 >
       au < released ; 2008-2009 ; Victorian Studies Volume 51 ; 51 >
       au < released ; 2009-2010 ; Victorian Studies Volume 52 ; 52 >
+      au < manifest ; 2010-2011 ; Victorian Studies Volume 53 ; 53 >
 
     }
 
