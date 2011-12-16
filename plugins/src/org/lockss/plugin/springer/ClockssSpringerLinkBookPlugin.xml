@@ -1,22 +1,22 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.springer.SpringerLinkPlugin</string>
+    <string>org.lockss.plugin.springer.ClockssSpringerLinkBookPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-	<string>5</string>
+	<string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
-	<string>3</string>
+	<string>1</string>
       </entry>
     </map>
   </entry>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SpringerLink Plugin</string>
+    <string>SpringerLink Book Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -41,19 +41,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_issn</key>
-        <displayName>Journal ISSN</displayName>
-        <description>International Standard Serial Number.</description>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
         <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -61,28 +53,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;SpringerLink Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;SpringerLink Book Plugin (CLOCKSS), Base URL %s, ISBN %s&quot;, base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-  	<map>
-	  <entry>
-      <string>au_title</string>
-	  <string>&quot;%scontent/%s/&quot;, base_url, journal_issn</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-	  <string>&quot;%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-	  <string>&quot;%scontent/%s/%s/%s/&quot;, base_url, journal_issn, volume_name, issue</string>
-    </entry>
-  	</map>
+    <string>&quot;%scontent/%s/contents/&quot;, base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -90,7 +65,8 @@
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>2,&quot;^%s.*\?target=(export|save)$&quot;, base_url</string>
-      <string>1,&quot;^%scontent/%s/%s/&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%scontent/%s(/mycopy)?/?$&quot;, base_url, book_isbn</string>
+      <string>1,&quot;^%scontent/%s/&quot;, base_url, book_isbn</string>
       <string>2,&quot;^%scontent/[A-Za-z0-9]{16}/(export-citation|referrers)/&quot;, base_url</string>
       <string>1,&quot;^%scontent/[A-Za-z0-9]{16}/&quot;, base_url</string>
     </list>
@@ -128,7 +104,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.(html|pdf)$&quot;, base_url</string>
+      <string>&quot;^%scontent/[A-Za-z0-9]{16}/fulltext\.pdf$&quot;, base_url</string>
     </list>
   </entry>
 </map>
