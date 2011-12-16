@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.12 2011-08-22 23:50:46 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.13 2011-12-16 09:19:00 thib_gc Exp $
  */
 
 /*
@@ -58,10 +58,16 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       throws PluginException {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains ad-specific cookies
-        new TagNameFilter("script"),
+        /*
+         * Crawl filter
+         */
         // Contains cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
+        /*
+         * Hash filter
+         */
+        // Contains ad-specific cookies
+        new TagNameFilter("script"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "class", "advertisement"),
         // Contains a lot of variable elements; institution name, gensyms for tag IDs or names, etc.
@@ -93,10 +99,17 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         
         // MAINTENANCE
         
+        // Alas, the <title> tag switched from "SpringerLink - Foo" to
+        // "Foo - SpringerLink", and the order/number of <meta> tags
+        // changes over time
+        new TagNameFilter("head"),
+        
+        // The following two are no longer needed because of the latter
         // Sadly, the "copyright" <meta> tag isn't the publication year
-        HtmlNodeFilters.tagWithAttribute("meta", "name", "copyright"),
+        // HtmlNodeFilters.tagWithAttribute("meta", "name", "copyright"),
         // Static, but was added after thousands of AUs had crawled already
-        HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
+        // HtmlNodeFilters.tagWithAttribute("meta", "name", "robots"),
+        
         // Eventually changed from <h1 lang="en" class="title"> to <h1>
         new TagNameFilter("h1"),
     };
