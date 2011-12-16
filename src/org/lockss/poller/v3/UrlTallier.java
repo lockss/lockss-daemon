@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.2 2011-12-06 23:26:08 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.3 2011-12-16 19:14:09 barry409 Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.HashBlock;
+import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.protocol.VoteBlocks;
 import org.lockss.protocol.VoteBlocksIterator;
@@ -254,9 +255,8 @@ final class UrlTallier {
 
   /**
    * <p>Call the appropriate voting routine on the tally for each
-   * participant, and the appropriate tally routines on the
-   * ParticipantUserData for each participant. The poller does not
-   * have the given URL, but some voter does.</p>
+   * participant. The poller does not have the given URL, but some
+   * voter does.</p>
    *
    * @param url Must be non-null and equal to {@link peekUrl}, the
    * current URL known to any participant.
@@ -277,15 +277,11 @@ final class UrlTallier {
 	// Don't vote
       } else {
 	if (url.equals(e.getUrl())) {
-	  // Since the poller does not have it, it's in the union of
-	  // the poller and this participant iff the participant has
-	  // it.
-	  e.userData.incrementTalliedBlocks();
 	  nextVoteBlock(e);
 	  tally.addVoterOnlyBlockVoter(e.userData.getVoterId());
 	} else {
 	  // The poller and this voter both do not have the URL, so
-	  // tally is "agree". But don't bump anything on e.userData.
+	  // tally is "agree".
 	  tally.addAgreeVoter(e.userData.getVoterId());
 	}
       }
@@ -295,9 +291,7 @@ final class UrlTallier {
 
   /**
    * <p>Call the appropriate voting routine on the tally for each
-   * participant, and the appropriate tally routines on the
-   * ParticipantUserData for each participant.  The poller has the
-   * given URL.</p>
+   * participant.  The poller has the given URL.</p>
    *
    * @param url Must be non-null and equal to {@link peekUrl}, the
    * minimum URL known to any participant.
@@ -305,25 +299,6 @@ final class UrlTallier {
    * @return tally Collects the votes.
    */
   BlockTally tallyPollerUrl(String url, HashBlock hashBlock) {
-    return tallyPollerUrl(url, hashBlock, false);
-  }
-
-  /**
-   * <p>The poller has just repaired the given URL. Call the
-   * appropriate voting routine on the tally for each participant.
-   * DOES NOT call the appropriate routines on the ParticipantUserData
-   * for each participant.</p>
-   *
-   * @param url Must be non-null and equal to {@link peekUrl}, the
-   * minimum URL known to any participant.
-   * @param hashBlock The poller's {@link HashBlock}.
-   * @return tally Collects the votes.
-   */
-  BlockTally tallyPollerUrlRepair(String url, HashBlock hashBlock) {
-    return tallyPollerUrl(url, hashBlock, true);
-  }
-
-  BlockTally tallyPollerUrl(String url, HashBlock hashBlock, boolean isRepair) {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
@@ -340,22 +315,15 @@ final class UrlTallier {
       Entry e = participantsList.get(participantIndex);
       String voterLog = "Voter "+e.userData;
       // todo(bhayes): How should spoiled votes be counted?
+      // Should this abort the poll?
       if (e.voteSpoiled()) {
 	// Don't vote
 	log.debug3(voterLog+"  spoiled");
       } else {
-	if (! isRepair) {
-	  // Since the poller has it, it's in the union of the poller
-	  // and this participant, so increment.
-	  e.userData.incrementTalliedBlocks();
-	}
 	if (url.equals(e.getUrl())) {
 	  VoteBlock voteBlock = e.voteBlock;
 	  nextVoteBlock(e);
 	  if (comparer.compare(voteBlock, participantIndex)) {
-	    if (! isRepair) {
-	      e.userData.incrementAgreedBlocks();
-	    }
 	    log.debug3(voterLog+"  agreed");
 	    tally.addAgreeVoter(e.userData.getVoterId());
 	  } else {

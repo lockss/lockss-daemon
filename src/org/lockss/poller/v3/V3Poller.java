@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.109 2011-12-06 23:58:44 barry409 Exp $
+ * $Id: V3Poller.java,v 1.110 2011-12-16 19:14:09 barry409 Exp $
  */
 
 /*
@@ -1132,9 +1132,9 @@ public class V3Poller extends BasePoll {
    * not, consuming the block in the voters.
    */
   private void tallyVoterUrl(String voterUrl) {
-
     log.debug3("tallyVoterUrl: "+voterUrl);
     BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
+    updateUserDataVoterUrl(tally);
     checkTally(tally, voterUrl);
   }
 
@@ -1150,8 +1150,36 @@ public class V3Poller extends BasePoll {
   private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
     log.debug3("tallyPollerUrl: "+pollerUrl);
     BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
+    updateUserDataPollerUrl(tally);
     checkTally(tally, pollerUrl);
     return tally;
+  }
+
+  /**
+   * Update the all the votes in the tally for a voter-only URL.
+   */
+  private void updateUserDataVoterUrl(BlockTally tally) {
+    // Since the poller does not have the URL, it's in the union of
+    // the poller and a participant iff the participant has it.
+    // NOTE: There are "agree" votes in the tally for voters who also
+    // didn't have this URL, but since neither the poller nor the
+    // voter had it, don't increment anything.
+    for (PeerIdentity peerId: tally.getDisagreeVoters()) {
+      getParticipant(peerId).incrementTalliedBlocks();
+    }
+  }
+
+  /**
+   * Update the all the votes in the tally for a URL known to the poller.
+   */
+  private void updateUserDataPollerUrl(BlockTally tally) {
+    for (PeerIdentity peerId: tally.getAgreeVoters()) {
+      getParticipant(peerId).incrementTalliedBlocks();
+      getParticipant(peerId).incrementAgreedBlocks();
+    }
+    for (PeerIdentity peerId: tally.getDisagreeVoters()) {
+      getParticipant(peerId).incrementTalliedBlocks();
+    }
   }
 
   /**
@@ -1179,8 +1207,9 @@ public class V3Poller extends BasePoll {
     if (tally.getAgreeVoters().size() > 0) {
       try {
         RepositoryNode node = AuUtil.getRepositoryNode(getAu(), url);
-        if (node != null)
+        if (node != null) {
           node.signalAgreement(tally.getAgreeVoters());
+	}
       } catch (MalformedURLException ex) {
         log.error("Malformed URL while updating agreement history: " 
                   + url);
@@ -1542,8 +1571,10 @@ public class V3Poller extends BasePoll {
         // Replay the block comparison using the new hash results.
 	UrlTallier urlTallier = makeUrlTallier();
 	urlTallier.seek(url);
-	BlockTally tally = urlTallier.tallyPollerUrlRepair(url, hashBlock);
-
+	BlockTally tally = urlTallier.tallyPollerUrl(url, hashBlock);
+	// NOTE: ParticipantUserData was updated from the initial
+	// pre-repair tally. Results of a repair do not change the
+	// ParticipantUserData.
         setStatus(V3Poller.POLLER_STATUS_TALLYING);
         BlockTally.Result result = checkTally(tally, url);
         log.debug3("After-vote hash tally for repaired block " + url
