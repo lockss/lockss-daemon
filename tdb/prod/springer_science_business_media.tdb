@@ -22993,11 +22993,13 @@
   
     title <
       name = Journal of High Energy Physics ;
-      issn = 1029-8479 ;
+      issn = 1126-6708 ;
+      eissn = 1029-8479 ;
       issnl = 1029-8479
     >
     
     param[journal_issn] = 1029-8479
+    comment[1126-6708] = 1126-6708 does not respond on the site as of 2011-12-16
 
     au < released ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
 
