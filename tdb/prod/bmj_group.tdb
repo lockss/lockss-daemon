@@ -735,9 +735,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1969 ; Gut Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; ready ; 1970 ; Gut Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Gut Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Gut Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Gut Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; ready ; 1973 ; Gut Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Gut Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Gut Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; ready ; 1975 ; Gut Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; ready ; 1976 ; Gut Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1977 ; Gut Volume 18 ; 18 >
@@ -1597,18 +1597,18 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Sexually Transmitted Infections Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; manifest ; 1990 ; Sexually Transmitted Infections Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; manifest ; 1991 ; Sexually Transmitted Infections Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Sexually Transmitted Infections Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; manifest ; 1993 ; Sexually Transmitted Infections Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; manifest ; 1994 ; Sexually Transmitted Infections Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Sexually Transmitted Infections Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Sexually Transmitted Infections Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Sexually Transmitted Infections Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Sexually Transmitted Infections Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Sexually Transmitted Infections Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Sexually Transmitted Infections Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; testing ; 1993 ; Sexually Transmitted Infections Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; testing ; 1994 ; Sexually Transmitted Infections Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Sexually Transmitted Infections Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Sexually Transmitted Infections Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Sexually Transmitted Infections Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Sexually Transmitted Infections Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Sexually Transmitted Infections Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; testing ; 2000 ; Sexually Transmitted Infections Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Sexually Transmitted Infections Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Sexually Transmitted Infections Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Sexually Transmitted Infections Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Sexually Transmitted Infections Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Sexually Transmitted Infections Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Sexually Transmitted Infections Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; Sexually Transmitted Infections Volume 80 ; 80 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Sexually Transmitted Infections Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Sexually Transmitted Infections Volume 82 ; 82 >
