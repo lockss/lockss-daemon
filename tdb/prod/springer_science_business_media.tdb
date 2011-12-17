@@ -22579,7 +22579,11 @@
       issnl = 0941-2905
     >
 
+    comment[continued_by] = 1053-6426
     param[journal_issn] = 0941-2905
+
+    au < wanted ; 1997 ; Journal of Marine Biotechnology Volume 5 ; 5 >
+    au < wanted ; 1998 ; Journal of Marine Biotechnology Volume 6 ; 6 >
 
   }
 
@@ -26391,7 +26395,22 @@
       issnl = 1436-2228
     >
 
+    comment[continued_from] = 1053-6426
     param[journal_issn] = 1436-2228
+
+    au < wanted ; 1999 ; Marine Biotechnology Volume 1 ; 1 >
+    au < wanted ; 2000 ; Marine Biotechnology Volume 2 ; 2 >
+    au < wanted ; 2001 ; Marine Biotechnology Volume 3 ; 3 >
+    au < wanted ; 2002 ; Marine Biotechnology Volume 4 ; 4 >
+    au < wanted ; 2003 ; Marine Biotechnology Volume 5 ; 5 >
+    au < wanted ; 2004 ; Marine Biotechnology Volume 6 ; 6 >
+    au < wanted ; 2005 ; Marine Biotechnology Volume 7 ; 7 >
+    au < wanted ; 2006 ; Marine Biotechnology Volume 8 ; 8 >
+    au < wanted ; 2007 ; Marine Biotechnology Volume 9 ; 9 >
+    au < wanted ; 2008 ; Marine Biotechnology Volume 10 ; 10 >
+    au < wanted ; 2009 ; Marine Biotechnology Volume 11 ; 11 >
+    au < wanted ; 2010 ; Marine Biotechnology Volume 12 ; 12 >
+    au < wanted ; 2011 ; Marine Biotechnology Volume 13 ; 13 >
 
   }
 
@@ -27827,8 +27846,274 @@
       eissn = 1432-1874 ;
       issnl = 0026-8925
     >
-
+    
+    comment[continued_by] = 1617-4615 
     param[journal_issn] = 0026-8925
+
+    au < wanted ; 1908 ; Molecular and General Genetics MGG Volume 1 ; 1 >
+    au < wanted ; 1909 ; Molecular and General Genetics MGG Volume 2 ; 2 >
+    au < wanted ; 1910 ; Molecular and General Genetics MGG Volume 3 ; 3 >
+    au < wanted ; 1910 ; Molecular and General Genetics MGG Volume 4 ; 4 >
+    au < wanted ; 1911 ; Molecular and General Genetics MGG Volume 5 ; 5 >
+    au < wanted ; 1911 ; Molecular and General Genetics MGG Volume 6 ; 6 >
+    au < wanted ; 1912 ; Molecular and General Genetics MGG Volume 7 ; 7 >
+    au < wanted ; 1912 ; Molecular and General Genetics MGG Volume 8 ; 8 >
+    au < wanted ; 1913 ; Molecular and General Genetics MGG Volume 9 ; 9 >
+    au < wanted ; 1913 ; Molecular and General Genetics MGG Volume 10 ; 10 >
+    au < wanted ; 1914 ; Molecular and General Genetics MGG Volume 11 ; 11 >
+    au < wanted ; 1914 ; Molecular and General Genetics MGG Volume 12 ; 12 >
+    au < wanted ; 1915 ; Molecular and General Genetics MGG Volume 13 ; 13 >
+    au < wanted ; 1915 ; Molecular and General Genetics MGG Volume 14 ; 14 >
+    au < wanted ; 1915-1916 ; Molecular and General Genetics MGG Volume 15 ; 15 >
+    au < wanted ; 1916 ; Molecular and General Genetics MGG Volume 16 ; 16 >
+    au < wanted ; 1916-1917 ; Molecular and General Genetics MGG Volume 17 ; 17 >
+    au < wanted ; 1917 ; Molecular and General Genetics MGG Volume 18 ; 18 >
+    au < wanted ; 1918 ; Molecular and General Genetics MGG Volume 19 ; 19 >
+    au < wanted ; 1918-1919 ; Molecular and General Genetics MGG Volume 20 ; 20 >
+    au < wanted ; 1919 ; Molecular and General Genetics MGG Volume 21 ; 21 >
+    au < wanted ; 1919-1920 ; Molecular and General Genetics MGG Volume 22 ; 22 >
+    au < wanted ; 1920 ; Molecular and General Genetics MGG Volume 23 ; 23 >
+    au < wanted ; 1920 ; Molecular and General Genetics MGG Volume 24 ; 24 >
+    au < wanted ; 1921 ; Molecular and General Genetics MGG Volume 25 ; 25 >
+    au < wanted ; 1921 ; Molecular and General Genetics MGG Volume 26 ; 26 >
+    au < wanted ; 1921-1922 ; Molecular and General Genetics MGG Volume 27 ; 27 >
+    au < wanted ; 1922 ; Molecular and General Genetics MGG Volume 28 ; 28 >
+    au < wanted ; 1922 ; Molecular and General Genetics MGG Volume 29 ; 29 >
+    au < wanted ; 1922 ; Molecular and General Genetics MGG Volume 30 ; 30 >
+    au < wanted ; 1923 ; Molecular and General Genetics MGG Volume 31 ; 31 >
+    au < wanted ; 1924 ; Molecular and General Genetics MGG Volume 32 ; 32 >
+    au < wanted ; 1924 ; Molecular and General Genetics MGG Volume 33 ; 33 >
+    au < wanted ; 1924 ; Molecular and General Genetics MGG Volume 34 ; 34 >
+    au < wanted ; 1924 ; Molecular and General Genetics MGG Volume 35 ; 35 >
+    au < wanted ; 1925 ; Molecular and General Genetics MGG Volume 36 ; 36 >
+    au < wanted ; 1925 ; Molecular and General Genetics MGG Volume 37 ; 37 >
+    au < wanted ; 1925 ; Molecular and General Genetics MGG Volume 38 ; 38 >
+    au < wanted ; 1925 ; Molecular and General Genetics MGG Volume 39 ; 39 >
+    au < wanted ; 1926 ; Molecular and General Genetics MGG Volume 40 ; 40 >
+    au < wanted ; 1926 ; Molecular and General Genetics MGG Volume 41 ; 41 >
+    au < wanted ; 1926 ; Molecular and General Genetics MGG Volume 42 ; 42 >
+    au < wanted ; 1927 ; Molecular and General Genetics MGG Volume 43 ; 43 >
+    au < wanted ; 1927 ; Molecular and General Genetics MGG Volume 44 ; 44 >
+    au < wanted ; 1927 ; Molecular and General Genetics MGG Volume 45 ; 45 >
+    au < wanted ; 1928 ; Molecular and General Genetics MGG Volume 46 ; 46 >
+    au < wanted ; 1928 ; Molecular and General Genetics MGG Volume 47 ; 47 >
+    au < wanted ; 1928 ; Molecular and General Genetics MGG Volume 48 ; 48 >
+    au < wanted ; 1929 ; Molecular and General Genetics MGG Volume 49 ; 49 >
+    au < wanted ; 1929 ; Molecular and General Genetics MGG Volume 50 ; 50 >
+    au < wanted ; 1929 ; Molecular and General Genetics MGG Volume 51 ; 51 >
+    au < wanted ; 1929 ; Molecular and General Genetics MGG Volume 52 ; 52 >
+    au < wanted ; 1930 ; Molecular and General Genetics MGG Volume 53 ; 53 >
+    au < wanted ; 1930 ; Molecular and General Genetics MGG Volume 54 ; 54 >
+    au < wanted ; 1930 ; Molecular and General Genetics MGG Volume 55 ; 55 >
+    au < wanted ; 1930 ; Molecular and General Genetics MGG Volume 56 ; 56 >
+    au < wanted ; 1931 ; Molecular and General Genetics MGG Volume 57 ; 57 >
+    au < wanted ; 1931 ; Molecular and General Genetics MGG Volume 58 ; 58 >
+    au < wanted ; 1931 ; Molecular and General Genetics MGG Volume 59 ; 59 >
+    au < wanted ; 1932 ; Molecular and General Genetics MGG Volume 60 ; 60 >
+    au < wanted ; 1932 ; Molecular and General Genetics MGG Volume 61 ; 61 >
+    au < wanted ; 1932 ; Molecular and General Genetics MGG Volume 62 ; 62 >
+    au < wanted ; 1933 ; Molecular and General Genetics MGG Volume 63 ; 63 >
+    au < wanted ; 1933 ; Molecular and General Genetics MGG Volume 64 ; 64 >
+    au < wanted ; 1933 ; Molecular and General Genetics MGG Volume 65 ; 65 >
+    au < wanted ; 1934 ; Molecular and General Genetics MGG Volume 66 ; 66 >
+    au < wanted ; 1934 ; Molecular and General Genetics MGG Volume 67 ; 67 >
+    au < wanted ; 1935 ; Molecular and General Genetics MGG Volume 68 ; 68 >
+    au < wanted ; 1935 ; Molecular and General Genetics MGG Volume 69 ; 69 >
+    au < wanted ; 1935 ; Molecular and General Genetics MGG Volume 70 ; 70 >
+    au < wanted ; 1936 ; Molecular and General Genetics MGG Volume 71 ; 71 >
+    au < wanted ; 1937 ; Molecular and General Genetics MGG Volume 72 ; 72 >
+    au < wanted ; 1937 ; Molecular and General Genetics MGG Volume 73 ; 73 >
+    au < wanted ; 1938 ; Molecular and General Genetics MGG Volume 74 ; 74 >
+    au < wanted ; 1938 ; Molecular and General Genetics MGG Volume 75 ; 75 >
+    au < wanted ; 1939 ; Molecular and General Genetics MGG Volume 76 ; 76 >
+    au < wanted ; 1939 ; Molecular and General Genetics MGG Volume 77 ; 77 >
+    au < wanted ; 1940 ; Molecular and General Genetics MGG Volume 78 ; 78 >
+    au < wanted ; 1941 ; Molecular and General Genetics MGG Volume 79 ; 79 >
+    au < wanted ; 1942 ; Molecular and General Genetics MGG Volume 80 ; 80 >
+    au < wanted ; 1943 ; Molecular and General Genetics MGG Volume 81 ; 81 >
+    au < wanted ; 1948 ; Molecular and General Genetics MGG Volume 82 ; 82 >
+    au < wanted ; 1949-1951 ; Molecular and General Genetics MGG Volume 83 ; 83 >
+    au < wanted ; 1951-1953 ; Molecular and General Genetics MGG Volume 84 ; 84 >
+    au < wanted ; 1953 ; Molecular and General Genetics MGG Volume 85 ; 85 >
+    au < wanted ; 1954-1955 ; Molecular and General Genetics MGG Volume 86 ; 86 >
+    au < wanted ; 1955-1956 ; Molecular and General Genetics MGG Volume 87 ; 87 >
+    au < wanted ; 1957 ; Molecular and General Genetics MGG Volume 88 ; 88 >
+    au < wanted ; 1958 ; Molecular and General Genetics MGG Volume 89 ; 89 >
+    au < wanted ; 1959 ; Molecular and General Genetics MGG Volume 90 ; 90 >
+    au < wanted ; 1960 ; Molecular and General Genetics MGG Volume 91 ; 91 >
+    au < wanted ; 1961 ; Molecular and General Genetics MGG Volume 92 ; 92 >
+    au < wanted ; 1962 ; Molecular and General Genetics MGG Volume 93 ; 93 >
+    au < wanted ; 1963 ; Molecular and General Genetics MGG Volume 94 ; 94 >
+    au < wanted ; 1964 ; Molecular and General Genetics MGG Volume 95 ; 95 >
+    au < wanted ; 1965 ; Molecular and General Genetics MGG Volume 96 ; 96 >
+    au < wanted ; 1965-1966 ; Molecular and General Genetics MGG Volume 97 ; 97 >
+    au < wanted ; 1966 ; Molecular and General Genetics MGG Volume 98 ; 98 >
+    au < wanted ; 1967 ; Molecular and General Genetics MGG Volume 99 ; 99 >
+    au < wanted ; 1967 ; Molecular and General Genetics MGG Volume 100 ; 100 >
+    au < wanted ; 1968 ; Molecular and General Genetics MGG Volume 101 ; 101 >
+    au < wanted ; 1968 ; Molecular and General Genetics MGG Volume 102 ; 102 >
+    au < wanted ; 1968-1969 ; Molecular and General Genetics MGG Volume 103 ; 103 >
+    au < wanted ; 1969 ; Molecular and General Genetics MGG Volume 104 ; 104 >
+    au < wanted ; 1969 ; Molecular and General Genetics MGG Volume 105 ; 105 >
+    au < wanted ; 1969-1970 ; Molecular and General Genetics MGG Volume 106 ; 106 >
+    au < wanted ; 1970 ; Molecular and General Genetics MGG Volume 107 ; 107 >
+    au < wanted ; 1970 ; Molecular and General Genetics MGG Volume 108 ; 108 >
+    au < wanted ; 1970 ; Molecular and General Genetics MGG Volume 109 ; 109 >
+    au < wanted ; 1971 ; Molecular and General Genetics MGG Volume 110 ; 110 >
+    au < wanted ; 1971 ; Molecular and General Genetics MGG Volume 111 ; 111 >
+    au < wanted ; 1971 ; Molecular and General Genetics MGG Volume 112 ; 112 >
+    au < wanted ; 1971 ; Molecular and General Genetics MGG Volume 113 ; 113 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 114 ; 114 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 115 ; 115 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 116 ; 116 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 117 ; 117 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 118 ; 118 >
+    au < wanted ; 1972 ; Molecular and General Genetics MGG Volume 119 ; 119 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 120 ; 120 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 121 ; 121 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 122 ; 122 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 123 ; 123 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 124 ; 124 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 125 ; 125 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 126 ; 126 >
+    au < wanted ; 1973 ; Molecular and General Genetics MGG Volume 127 ; 127 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 128 ; 128 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 129 ; 129 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 130 ; 130 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 131 ; 131 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 132 ; 132 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 133 ; 133 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 134 ; 134 >
+    au < wanted ; 1974 ; Molecular and General Genetics MGG Volume 135 ; 135 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 136 ; 136 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 137 ; 137 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 138 ; 138 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 139 ; 139 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 140 ; 140 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 141 ; 141 >
+    au < wanted ; 1975 ; Molecular and General Genetics MGG Volume 142 ; 142 >
+    au < wanted ; 1975-1976 ; Molecular and General Genetics MGG Volume 143 ; 143 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 144 ; 144 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 145 ; 145 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 146 ; 146 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 147 ; 147 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 148 ; 148 >
+    au < wanted ; 1976 ; Molecular and General Genetics MGG Volume 149 ; 149 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 150 ; 150 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 151 ; 151 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 152 ; 152 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 153 ; 153 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 154 ; 154 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 155 ; 155 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 156 ; 156 >
+    au < wanted ; 1977 ; Molecular and General Genetics MGG Volume 157 ; 157 >
+    au < wanted ; 1977-1978 ; Molecular and General Genetics MGG Volume 158 ; 158 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 159 ; 159 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 160 ; 160 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 161 ; 161 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 162 ; 162 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 163 ; 163 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 164 ; 164 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 165 ; 165 >
+    au < wanted ; 1978 ; Molecular and General Genetics MGG Volume 166 ; 166 >
+    au < wanted ; 1978-1979 ; Molecular and General Genetics MGG Volume 167 ; 167 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 168 ; 168 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 169 ; 169 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 170 ; 170 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 171 ; 171 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 172 ; 172 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 173 ; 173 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 174 ; 174 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 175 ; 175 >
+    au < wanted ; 1979 ; Molecular and General Genetics MGG Volume 176 ; 176 >
+    au < wanted ; 1979-1980 ; Molecular and General Genetics MGG Volume 177 ; 177 >
+    au < wanted ; 1980 ; Molecular and General Genetics MGG Volume 178 ; 178 >
+    au < wanted ; 1980 ; Molecular and General Genetics MGG Volume 179 ; 179 >
+    au < wanted ; 1980 ; Molecular and General Genetics MGG Volume 180 ; 180 >
+    au < wanted ; 1981 ; Molecular and General Genetics MGG Volume 181 ; 181 >
+    au < wanted ; 1981 ; Molecular and General Genetics MGG Volume 182 ; 182 >
+    au < wanted ; 1981 ; Molecular and General Genetics MGG Volume 183 ; 183 >
+    au < wanted ; 1981 ; Molecular and General Genetics MGG Volume 184 ; 184 >
+    au < wanted ; 1982 ; Molecular and General Genetics MGG Volume 185 ; 185 >
+    au < wanted ; 1982 ; Molecular and General Genetics MGG Volume 186 ; 186 >
+    au < wanted ; 1982 ; Molecular and General Genetics MGG Volume 187 ; 187 >
+    au < wanted ; 1982 ; Molecular and General Genetics MGG Volume 188 ; 188 >
+    au < wanted ; 1983 ; Molecular and General Genetics MGG Volume 189 ; 189 >
+    au < wanted ; 1983 ; Molecular and General Genetics MGG Volume 190 ; 190 >
+    au < wanted ; 1983 ; Molecular and General Genetics MGG Volume 191 ; 191 >
+    au < wanted ; 1983 ; Molecular and General Genetics MGG Volume 192 ; 192 >
+    au < wanted ; 1984 ; Molecular and General Genetics MGG Volume 193 ; 193 >
+    au < wanted ; 1984 ; Molecular and General Genetics MGG Volume 194 ; 194 >
+    au < wanted ; 1984 ; Molecular and General Genetics MGG Volume 195 ; 195 >
+    au < wanted ; 1984 ; Molecular and General Genetics MGG Volume 196 ; 196 >
+    au < wanted ; 1984 ; Molecular and General Genetics MGG Volume 197 ; 197 >
+    au < wanted ; 1984-1985 ; Molecular and General Genetics MGG Volume 198 ; 198 >
+    au < wanted ; 1985 ; Molecular and General Genetics MGG Volume 199 ; 199 >
+    au < wanted ; 1985 ; Molecular and General Genetics MGG Volume 200 ; 200 >
+    au < wanted ; 1985 ; Molecular and General Genetics MGG Volume 201 ; 201 >
+    au < wanted ; 1986 ; Molecular and General Genetics MGG Volume 202 ; 202 >
+    au < wanted ; 1986 ; Molecular and General Genetics MGG Volume 203 ; 203 >
+    au < wanted ; 1986 ; Molecular and General Genetics MGG Volume 204 ; 204 >
+    au < wanted ; 1986 ; Molecular and General Genetics MGG Volume 205 ; 205 >
+    au < wanted ; 1987 ; Molecular and General Genetics MGG Volume 206 ; 206 >
+    au < wanted ; 1987 ; Molecular and General Genetics MGG Volume 207 ; 207 >
+    au < wanted ; 1987 ; Molecular and General Genetics MGG Volume 208 ; 208 >
+    au < wanted ; 1987 ; Molecular and General Genetics MGG Volume 209 ; 209 >
+    au < wanted ; 1987 ; Molecular and General Genetics MGG Volume 210 ; 210 >
+    au < wanted ; 1988 ; Molecular and General Genetics MGG Volume 211 ; 211 >
+    au < wanted ; 1988 ; Molecular and General Genetics MGG Volume 212 ; 212 >
+    au < wanted ; 1988 ; Molecular and General Genetics MGG Volume 213 ; 213 >
+    au < wanted ; 1988 ; Molecular and General Genetics MGG Volume 214 ; 214 >
+    au < wanted ; 1988-1989 ; Molecular and General Genetics MGG Volume 215 ; 215 >
+    au < wanted ; 1989 ; Molecular and General Genetics MGG Volume 216 ; 216 >
+    au < wanted ; 1989 ; Molecular and General Genetics MGG Volume 217 ; 217 >
+    au < wanted ; 1989 ; Molecular and General Genetics MGG Volume 218 ; 218 >
+    au < wanted ; 1989 ; Molecular and General Genetics MGG Volume 219 ; 219 >
+    au < wanted ; 1989-1990 ; Molecular and General Genetics MGG Volume 220 ; 220 >
+    au < wanted ; 1990 ; Molecular and General Genetics MGG Volume 221 ; 221 >
+    au < wanted ; 1990 ; Molecular and General Genetics MGG Volume 222 ; 222 >
+    au < wanted ; 1990 ; Molecular and General Genetics MGG Volume 223 ; 223 >
+    au < wanted ; 1990 ; Molecular and General Genetics MGG Volume 224 ; 224 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 225 ; 225 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 226 ; 226 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 227 ; 227 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 228 ; 228 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 229 ; 229 >
+    au < wanted ; 1991 ; Molecular and General Genetics MGG Volume 230 ; 230 >
+    au < wanted ; 1991-1992 ; Molecular and General Genetics MGG Volume 231 ; 231 >
+    au < wanted ; 1992 ; Molecular and General Genetics MGG Volume 232 ; 232 >
+    au < wanted ; 1992 ; Molecular and General Genetics MGG Volume 233 ; 233 >
+    au < wanted ; 1992 ; Molecular and General Genetics MGG Volume 234 ; 234 >
+    au < wanted ; 1992 ; Molecular and General Genetics MGG Volume 235 ; 235 >
+    au < wanted ; 1992-1993 ; Molecular and General Genetics MGG Volume 236 ; 236 >
+    au < wanted ; 1993 ; Molecular and General Genetics MGG Volume 237 ; 237 >
+    au < wanted ; 1993 ; Molecular and General Genetics MGG Volume 238 ; 238 >
+    au < wanted ; 1993 ; Molecular and General Genetics MGG Volume 239 ; 239 >
+    au < wanted ; 1993 ; Molecular and General Genetics MGG Volume 240 ; 240 >
+    au < wanted ; 1993 ; Molecular and General Genetics MGG Volume 241 ; 241 >
+    au < wanted ; 1994 ; Molecular and General Genetics MGG Volume 242 ; 242 >
+    au < wanted ; 1994 ; Molecular and General Genetics MGG Volume 243 ; 243 >
+    au < wanted ; 1994 ; Molecular and General Genetics MGG Volume 244 ; 244 >
+    au < wanted ; 1994 ; Molecular and General Genetics MGG Volume 245 ; 245 >
+    au < wanted ; 1995 ; Molecular and General Genetics MGG Volume 246 ; 246 >
+    au < wanted ; 1995 ; Molecular and General Genetics MGG Volume 247 ; 247 >
+    au < wanted ; 1995 ; Molecular and General Genetics MGG Volume 248 ; 248 >
+    au < wanted ; 1995 ; Molecular and General Genetics MGG Volume 249 ; 249 >
+    au < wanted ; 1996 ; Molecular and General Genetics MGG Volume 250 ; 250 >
+    au < wanted ; 1996 ; Molecular and General Genetics MGG Volume 251 ; 251 >
+    au < wanted ; 1996 ; Molecular and General Genetics MGG Volume 252 ; 252 >
+    au < wanted ; 1996-1997 ; Molecular and General Genetics MGG Volume 253 ; 253 >
+    au < wanted ; 1997 ; Molecular and General Genetics MGG Volume 254 ; 254 >
+    au < wanted ; 1997 ; Molecular and General Genetics MGG Volume 255 ; 255 >
+    au < wanted ; 1997 ; Molecular and General Genetics MGG Volume 256 ; 256 >
+    au < wanted ; 1997 ; Molecular and General Genetics MGG Volume 257 ; 257 >
+    au < wanted ; 1998 ; Molecular and General Genetics MGG Volume 258 ; 258 >
+    au < wanted ; 1998 ; Molecular and General Genetics MGG Volume 259 ; 259 >
+    au < wanted ; 1998 ; Molecular and General Genetics MGG Volume 260 ; 260 >
+    au < wanted ; 1999 ; Molecular and General Genetics MGG Volume 261 ; 261 >
+    au < wanted ; 1999 ; Molecular and General Genetics MGG Volume 262 ; 262 >
+    au < wanted ; 2000 ; Molecular and General Genetics MGG Volume 263 ; 263 >
+    au < wanted ; 2000 ; Molecular and General Genetics MGG Volume 264 ; 264 >
 
   }
 
@@ -27966,8 +28251,32 @@
       eissn = 1617-4623 ;
       issnl = 1617-4623
     >
-
+    
+    comment[continued_from] = 0026-8925
     param[journal_issn] = 1617-4615
+
+    au < wanted ; 2001 ; Molecular Genetics and Genomics Volume 265 ; 265 >
+    au < wanted ; 2001 ; Molecular Genetics and Genomics Volume 266 ; 266 >
+    au < wanted ; 2002 ; Molecular Genetics and Genomics Volume 267 ; 267 >
+    au < wanted ; 2002 ; Molecular Genetics and Genomics Volume 268 ; 268 >
+    au < wanted ; 2003 ; Molecular Genetics and Genomics Volume 269 ; 269 >
+    au < wanted ; 2003 ; Molecular Genetics and Genomics Volume 270 ; 270 >
+    au < wanted ; 2004 ; Molecular Genetics and Genomics Volume 271 ; 271 >
+    au < wanted ; 2004 ; Molecular Genetics and Genomics Volume 272 ; 272 >
+    au < wanted ; 2005 ; Molecular Genetics and Genomics Volume 273 ; 273 >
+    au < wanted ; 2005 ; Molecular Genetics and Genomics Volume 274 ; 274 >
+    au < wanted ; 2006 ; Molecular Genetics and Genomics Volume 275 ; 275 >
+    au < wanted ; 2006 ; Molecular Genetics and Genomics Volume 276 ; 276 >
+    au < wanted ; 2007 ; Molecular Genetics and Genomics Volume 277 ; 277 >
+    au < wanted ; 2007 ; Molecular Genetics and Genomics Volume 278 ; 278 >
+    au < wanted ; 2008 ; Molecular Genetics and Genomics Volume 279 ; 279 >
+    au < wanted ; 2008 ; Molecular Genetics and Genomics Volume 280 ; 280 >
+    au < wanted ; 2009 ; Molecular Genetics and Genomics Volume 281 ; 281 >
+    au < wanted ; 2009 ; Molecular Genetics and Genomics Volume 282 ; 282 >
+    au < wanted ; 2010 ; Molecular Genetics and Genomics Volume 283 ; 283 >
+    au < wanted ; 2010 ; Molecular Genetics and Genomics Volume 284 ; 284 >
+    au < wanted ; 2011 ; Molecular Genetics and Genomics Volume 285 ; 285 >
+    au < wanted ; 2011 ; Molecular Genetics and Genomics Volume 286 ; 286 >
 
   }
 
@@ -28014,7 +28323,11 @@
       issnl = 1053-6426
     >
 
+    comment[continued_by] = 1436-2228
+    comment[continued_from] = 0941-2905
     param[journal_issn] = 1053-6426
+
+    au < wanted ; 1998 ; Molecular Marine Biology and Biotechnology Volume 7 ; 7 >
 
   }
 
