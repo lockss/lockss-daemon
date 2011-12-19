@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.25 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.26 2011-12-19 11:14:27 easyonthemayo Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.config.TdbUtil;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicOrderScorer;
 import org.lockss.exporter.biblio.BibliographicUtil;
-import static org.lockss.exporter.kbart.KbartTdbAuUtil.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.daemon.AuHealthMetric.HealthUnavailableException;
@@ -156,26 +155,90 @@ public class KbartConverter {
     if (titles==null) return Collections.emptyList();
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (TdbTitle t : titles) {
-      list.addAll( createKbartTitles(t) );
+      list.addAll( convertTitleToKbartTitles(t) );
     }
     return list;
   }
-  
+
   /**
    * Convert the given collection of ArchivalUnits into KbartTitles representing
    * coverage ranges.
-   * 
+   *
    * @param auMap a map of TdbTitles to lists of ArchivalUnits
    * @param showHealth whether or not to calculate a health rating for each title
    * @param rangeFieldsIncluded whether range fields are included in the output
    * @return a list of KbartTitles
    */
-  public static List<KbartTitle> convertAus(Map<TdbTitle, List<ArchivalUnit>> auMap, 
-      boolean showHealth, boolean rangeFieldsIncluded) {
+  /*public static List<KbartTitle> convertTitleAus(Map<TdbTitle, List<ArchivalUnit>> auMap,
+                                                 boolean showHealth, boolean rangeFieldsIncluded) {
     if (auMap==null) return Collections.emptyList();
     List<KbartTitle> list = new Vector<KbartTitle>();
     for (List<ArchivalUnit> titleAus : auMap.values()) {
-      list.addAll(createKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    }
+    return list;
+  }*/
+
+  /**
+   * Convert the given collection of lists of ArchivalUnit ranges into
+   * KbartTitles representing coverage ranges. Each list should represent the
+   * AUs for a single title.
+   *
+   * @param auLists a collection of lists of AUs representing ranges
+   * @param showHealth whether or not to calculate a health rating for each title
+   * @param rangeFieldsIncluded whether range fields are included in the output
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertTitleAus(
+      Collection<List<ArchivalUnit>> auLists,
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    if (auLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (List<ArchivalUnit> titleAus : auLists) {
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    }
+    return list;
+  }
+
+  // Version that accepts an iterator
+  public static List<KbartTitle> convertTitleAus(
+      Iterator<List<ArchivalUnit>> auLists,
+      boolean showHealth, boolean rangeFieldsIncluded) {
+    if (auLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    while (auLists.hasNext()) {
+      List<ArchivalUnit> titleAus = auLists.next();
+      list.addAll(convertTitleToKbartTitles(titleAus, showHealth, rangeFieldsIncluded));
+    }
+    return list;
+  }
+
+  /**
+   * Convert the given collection of lists of BibliographicItems (each list
+   * representing a single title) into KbartTitles representing coverage ranges.
+   * Each list should represent the AUs for a single title.
+   *
+   * @param bibItemLists a collection of lists of BibliographicItems representing ranges
+   * @return a list of KbartTitles
+   */
+  public static List<KbartTitle> convertTitleAus(
+      Collection<List<BibliographicItem>> bibItemLists) {
+    if (bibItemLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    for (List<BibliographicItem> titleItems : bibItemLists) {
+      list.addAll(convertTitleToKbartTitles(titleItems));
+    }
+    return list;
+  }
+
+  // Version that accepts an iterator
+  public static List<KbartTitle> convertTitleAus(
+      Iterator<List<BibliographicItem>> bibItemLists) {
+    if (bibItemLists==null) return Collections.emptyList();
+    List<KbartTitle> list = new Vector<KbartTitle>();
+    while (bibItemLists.hasNext()) {
+      List<BibliographicItem> titleItems = bibItemLists.next();
+      list.addAll(convertTitleToKbartTitles(titleItems));
     }
     return list;
   }
@@ -277,7 +340,8 @@ public class KbartConverter {
    * @param rangeFieldsIncluded whether the export fields include range fields
    * @return a list of KbartTitle objects in no particular order
    */
-  public static List<KbartTitle> createKbartTitles(Collection<ArchivalUnit> titleAus, 
+  protected static List<KbartTitle> convertTitleToKbartTitles(
+      Collection<ArchivalUnit> titleAus,
       boolean showHealth, boolean rangeFieldsIncluded) {
     if (titleAus==null) return Collections.emptyList();
     // Create a list of BibliographicItems from the ArchivalUnits
@@ -285,15 +349,15 @@ public class KbartConverter {
     // Map the AUs from BibliographicItems for later reference
     final Map<? extends BibliographicItem, ArchivalUnit> ausMap = TdbUtil.mapTdbAusToAus(titleAus);
     // Calculate the KbartTitles, each mapped to the BibliographicItem range that informed it
-    final Map<KbartTitle, TitleRange> map = createKbartTitlesWithRanges(tdbAus);
+    final Map<KbartTitle, TitleRange> map = convertTitleToKbartTitlesWithRanges(tdbAus);
     // Start constructing a result list
     List<KbartTitle> res = new ArrayList<KbartTitle>();
 
     // A tally of health values for the current title, in case they need to 
     // be aggregated due to a lack of range fields in the output 
     double totalHealth = 0;
-    int numTdbAus = 0;
-    // For each (ordered) KbartTitle, use its TdbAu range, and the mapped AUs,
+    int numItems = 0;
+    // For each (ordered) KbartTitle, use its BibItem range, and the mapped AUs,
     // to calculate the aggregate health of its underlying AUs.
     List<KbartTitle> keyList = new ArrayList<KbartTitle>(map.keySet());
     sortKbartTitles(keyList);
@@ -306,7 +370,7 @@ public class KbartConverter {
           // Add a KbartTitle wrapper that decorates it with a health value
           double health = AuHealthMetric.getAggregateHealth(
               new ArrayList<ArchivalUnit>() {{
-                for (BibliographicItem tdbAu : map.get(kbt).items) add(ausMap.get(tdbAu));
+                for (BibliographicItem bibItem : map.get(kbt).items) add(ausMap.get(bibItem));
               }}
           );
           // If there are no range fields in the output, aggregate all the
@@ -315,10 +379,10 @@ public class KbartConverter {
             int numContributingAus = map.get(kbt).items.size();
             // Health is an average over the AUs
             totalHealth += health * numContributingAus;
-            numTdbAus += numContributingAus;
+            numItems += numContributingAus;
             // On the final KbartTitle, calculate the average health
             if (!it.hasNext()) {
-              res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numTdbAus));
+              res.add(new KbartTitleHealthWrapper(kbt, totalHealth/numItems));
             }
           } else
             res.add(new KbartTitleHealthWrapper(kbt, health));
@@ -340,7 +404,7 @@ public class KbartConverter {
     if (titleAus==null) return Collections.emptyList();
     // Create a list of TdbAus from the ArchivalUnits so we can sort it.
     List<TdbAu> aus = TdbUtil.getTdbAusFromAus(titleAus);
-    return createKbartTitles(aus);
+    return convertTitleToKbartTitles(aus);
   }*/
 
   
@@ -351,34 +415,39 @@ public class KbartConverter {
    * @param tdbt a TdbTitle from which to create the KbartTitle
    * @return a list of KbartTitle objects which may be unordered
    */
-  public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
+  protected static List<KbartTitle> convertTitleToKbartTitles(TdbTitle tdbt) {
     if (tdbt==null) return Collections.emptyList();
     // Create a list of AUs from the collection returned by the TdbTitle getter,
     // so we can sort it.
     List<BibliographicItem> aus = new ArrayList<BibliographicItem>(tdbt.getTdbAus());
-    return createKbartTitles(aus);
+    return convertTitleToKbartTitles(aus);
   }
   
   /**
    * Create a list of KbartTitles from the supplied range of BibliographicItems.
-   * The list is sorted.
+   * The list is sorted. This method is public for use by any client that has a
+   * list of {@link org.lockss.exporter.biblio.BibliographicItem}s to convert.
    * 
    * @param aus a list of BibliographicItems which represent a single title
    * @return a list of KbartTitles
    */
-  public static List<KbartTitle> createKbartTitles(List<? extends BibliographicItem> aus) {
-    List<KbartTitle> res = new ArrayList<KbartTitle>(createKbartTitlesWithRanges(aus).keySet());
+  public static List<KbartTitle> convertTitleToKbartTitles(
+      List<? extends BibliographicItem> aus) {
+    List<KbartTitle> res = new ArrayList<KbartTitle>(
+        convertTitleToKbartTitlesWithRanges(aus).keySet()
+    );
     sortKbartTitles(res);
     return res;
   }
   
   /**
-   * Convert a list of BibliographicItems into one or more KbartTitles using as much
-   * information as possible, but maintain a record of the BibliographicItem range for each
-   * KbartTitle, and return as a map of the former to the latter. Note that 
-   * this should only be called with a list of BibliographicItems which represent a single
-   * title, otherwise the Map will be large and the assumptions about which 
-   * metadata is shared by the titles will not hold.
+   * Convert a list of BibliographicItems into one or more KbartTitles using as
+   * much information as possible, but maintain a record of the
+   * BibliographicItem range for each KbartTitle, and return as a map of the
+   * former to the latter. Note that this should only be called with a list of
+   * BibliographicItems which represent a single title, otherwise the Map will
+   * be large and the assumptions about which metadata is shared by the titles
+   * will not hold.
    * <p> 
    * A list of BibliographicItems relating to a single title will yield multiple
    * KbartTitles if it has gaps in its coverage of greater than a year, in 
@@ -418,9 +487,9 @@ public class KbartConverter {
    * @param aus a list of BibliographicItems relating to a single title
    * @return a map of KbartTitle to the TitleRange underlying it
    */
-  public static Map<KbartTitle, TitleRange> createKbartTitlesWithRanges(
+  public static Map<KbartTitle, TitleRange> convertTitleToKbartTitlesWithRanges(
       List<? extends BibliographicItem> aus) {
-    
+
     // If there are no aus, we have no title records to add
     if (aus==null || aus.size()==0) return Collections.emptyMap();
 
@@ -428,16 +497,9 @@ public class KbartConverter {
     // need to be split into ranges    
     TitleRangeInfo tri = getAuCoverageRanges(aus);
     List<TitleRange> ranges = tri.ranges;
-       
+
     // If there is at least one AU, get the first for reference
     BibliographicItem firstAu = aus.get(0);
-    // Identify the issue format
-    IssueFormat issueFormat = identifyIssueFormat(firstAu);
-    // Reporting:
-    if (issueFormat!=null) {
-      log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
-          firstAu, issueFormat.getKey(), issueFormat.getIssueString((TdbAu)firstAu)) );
-    }
 
     // -----------------------------------------------------------------------
     // Create a title which will have the generic properties set; it can
@@ -463,11 +525,12 @@ public class KbartConverter {
       verifyRange(range);
       
       KbartTitle kbt = baseKbt.clone();
-      fillKbartTitle(kbt, range, issueFormat, tri.hasVols);
+      fillKbartTitle(kbt, range, tri.hasVols);
       
       // Add the title to the map
       kbtList.put(kbt, range);
     }
+
     return kbtList;
   }
 
@@ -516,7 +579,6 @@ public class KbartConverter {
    */
   private static void fillKbartTitle(KbartTitle kbt,
                                      TitleRange range,
-                                     KbartTdbAuUtil.IssueFormat issueFormat,
                                      boolean hasVols) {
     // Volume numbers (we omit volumes if the title did not yield a full and
     // consistent set)
@@ -527,16 +589,9 @@ public class KbartConverter {
     }
 
     // Issue numbers
-    if (issueFormat != null) {
-      kbt.setField(NUM_FIRST_ISSUE_ONLINE,
-          issueFormat.getFirstIssue((TdbAu)range.first));
-      kbt.setField(NUM_LAST_ISSUE_ONLINE,
-          issueFormat.getLastIssue((TdbAu) range.last));
-    } else {
-      kbt.setField(NUM_FIRST_ISSUE_ONLINE, range.first.getStartIssue());
-      kbt.setField(NUM_LAST_ISSUE_ONLINE, range.last.getEndIssue());
-    }
-
+    kbt.setField(NUM_FIRST_ISSUE_ONLINE, range.first.getStartIssue());
+    kbt.setField(NUM_LAST_ISSUE_ONLINE, range.last.getEndIssue());
+    
     // Issue years (will be zero if years could not be found)
     if (isPublicationDate(range.getFirstYear()) &&
         isPublicationDate(range.getLastYear())) {
@@ -706,7 +761,7 @@ public class KbartConverter {
    * the last year, volume and issue fields empty as suggested by 
    * KBART 5.3.2.8 - 5.3.2.10.
    * 
-   * @param aus ordered list of AUs
+   * @param aus ordered list of AUs for a single title
    * @return a TitleRangeInfo containing a similarly-ordered list of TitleRange objects 
    */
   static TitleRangeInfo getAuCoverageRanges(
@@ -834,6 +889,9 @@ public class KbartConverter {
       previousAu = aus.get(i-1);
       currentAu = aus.get(i);
 
+      // Reporting: Output a warning if an AU is 'down' with a replacement.
+      verifyNotSuperseded(previousAu, currentAu);
+
       boolean isCoverageGap = false;
       // Whether there is a gap on the chosen sort field
       boolean gapOnField = isCoverageGap(previousAu, currentAu, sortField);
@@ -933,6 +991,29 @@ public class KbartConverter {
       return Integer.parseInt(firstVol) <= Integer.parseInt(lastVol);
     } else {
       return firstVol.compareTo(lastVol) <= 0;
+    }
+  }
+
+  // Output a warning if an AU is 'down' with a replacement.
+  // Note this only works if the AUs are consecutive, which they should be
+  // when ordering by either vol or yr, as we expect a replacement to share
+  // the same range fields and id fields.
+  // It might be helpful, but is harder, to say if an AU is superseded without a
+  // replacement, as it requires tracking the statuse of all the TdbAus in a
+  // title.
+  private static void verifyNotSuperseded(BibliographicItem previousAu,
+                                          BibliographicItem currentAu) {
+    if (previousAu instanceof TdbAu && currentAu instanceof TdbAu) {
+      // Are they equivalent?
+      if (BibliographicUtil.areApparentlyEquivalent(previousAu, currentAu)) {
+        String prevStat = ((TdbAu) previousAu).getAttr("status");
+        String currStat = ((TdbAu) currentAu).getAttr("status");
+        //if (prevStat==null || currStat==null) return;
+        if ("down".equals(prevStat) || "down".equals(currStat)) {
+          log.warning(String.format("Down AU should be superseded:" +
+              "\n %s (%s)\n %s (%s)", previousAu, prevStat, currentAu, currStat));
+        }
+      }
     }
   }
   /////////////////////////////////////////////////////////////////////////////

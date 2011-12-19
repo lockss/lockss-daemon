@@ -971,48 +971,48 @@ public class TestBibliographicOrderScorer extends TestCase {
    * number of hyphens, the input string is assumed not to represent a parseable
    * range.
    */
-  public final void testIsVolumeRange() {
+  public final void testIsRange() {
     // Invalid input
-    assertFalse(isVolumeRange(null));
-    assertFalse(isVolumeRange(""));
+    assertFalse(isRange(null));
+    assertFalse(isRange(""));
 
     // Invalid ranges
-    assertFalse(isVolumeRange("s1-4"));
-    assertFalse(isVolumeRange("1-s4"));
-    assertFalse(isVolumeRange("s1-s2-s3"));
-    assertFalse(isVolumeRange("s1-2-3"));
-    assertFalse(isVolumeRange("s123"));
-    assertFalse(isVolumeRange("1-2-3"));
-    assertFalse(isVolumeRange("123"));
-    assertFalse(isVolumeRange("a-1"));
-    assertFalse(isVolumeRange("1-two"));
+    assertFalse(isRange("s1-4"));
+    assertFalse(isRange("1-s4"));
+    assertFalse(isRange("s1-s2-s3"));
+    assertFalse(isRange("s1-2-3"));
+    assertFalse(isRange("s123"));
+    assertFalse(isRange("1-2-3"));
+    assertFalse(isRange("123"));
+    assertFalse(isRange("a-1"));
+    assertFalse(isRange("1-two"));
     // Invalid downward ranges
-    assertFalse(isVolumeRange("II-I"));
-    assertFalse(isVolumeRange("2-1"));
-    assertFalse(isVolumeRange("bb-aa"));
+    assertFalse(isRange("II-I"));
+    assertFalse(isRange("2-1"));
+    assertFalse(isRange("bb-aa"));
 
     // Valid ranges
-    assertTrue(isVolumeRange("I-II"));
-    assertTrue(isVolumeRange("a-aa"));
-    assertTrue(isVolumeRange("a-b"));
-    assertTrue(isVolumeRange("a-baa"));
-    assertTrue(isVolumeRange("aardvark - bat"));
-    assertTrue(isVolumeRange("s2 - s10"));
-    assertTrue(isVolumeRange("a-1 - b-1"));
-    assertTrue(isVolumeRange("1-2-3 - 2-3-4"));
+    assertTrue(isRange("I-II"));
+    assertTrue(isRange("a-aa"));
+    assertTrue(isRange("a-b"));
+    assertTrue(isRange("a-baa"));
+    assertTrue(isRange("aardvark - bat"));
+    assertTrue(isRange("s2 - s10"));
+    assertTrue(isRange("a-1 - b-1"));
+    assertTrue(isRange("1-2-3 - 2-3-4"));
     // Individual non-numerical tokens are not compared
-    assertTrue(isVolumeRange("s1-t4"));
+    assertTrue(isRange("s1-t4"));
 
     // Valid mixed-format ranges
-    assertTrue(isVolumeRange("I-4"));
-    assertTrue(isVolumeRange("1-IV"));
+    assertTrue(isRange("I-4"));
+    assertTrue(isRange("1-IV"));
 
     // Currently we allow non-increasing ranges
-    assertTrue(isVolumeRange("I-I"));
-    assertTrue(isVolumeRange("a-a"));
-    assertTrue(isVolumeRange("hello-hello"));
-    assertTrue(isVolumeRange("1-1"));
-    assertTrue(isVolumeRange("1-a -1-a"));
+    assertTrue(isRange("I-I"));
+    assertTrue(isRange("a-a"));
+    assertTrue(isRange("hello-hello"));
+    assertTrue(isRange("1-1"));
+    assertTrue(isRange("1-a -1-a"));
   }
 
 
@@ -1178,6 +1178,9 @@ public class TestBibliographicOrderScorer extends TestCase {
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("2001", "2002") );
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("2 men in a boat", "3 men in a boat") );
     assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("The 10 commandments", "The 11 commandments") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("a", "b") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("aa", "ab") );
+    assertTrue(  BibliographicOrderScorer.areVolumesConsecutive("az", "ba") );
 
     // The non-numerical string tokens are different
     assertFalse( BibliographicOrderScorer.areVolumesConsecutive("1st volume", "2nd volume") );
@@ -1736,16 +1739,10 @@ public class TestBibliographicOrderScorer extends TestCase {
    * parseable as a number.
    */
   public final void testChangeOfFormats() {
-    assertTrue(  changeOfFormats("string", "1") );
-    assertTrue(  changeOfFormats("1", "string") );
-    assertFalse( changeOfFormats("1", "1") );
-    assertFalse( changeOfFormats("string", "string") );
-    // No change of formats when either string can be parsed as a Roman number
-    assertFalse( changeOfFormats("1", "II") );
-    assertFalse( changeOfFormats("II", "3") );
     // The consistent list should not display any format changes
     assertFalse( containsChangeOfFormats(fullyConsistentAus, VOL) );
     assertFalse( containsChangeOfFormats(fullyConsistentAus, YR) );
+
     // The following are currently false but we might want to do some proper
     // regular expression work to find and rate string commonalities, or
     // use something like Levenstein distance.
@@ -2224,7 +2221,7 @@ public class TestBibliographicOrderScorer extends TestCase {
   /**
    * Check whether the given list of BibliographicItems contains any changes in format
    * on the specified field; if it doesn't, we expect the values not to be 
-   * monotonically increasing. 
+   * monotonically increasing. This uses BibliographicItem method.
    * @param aus
    */
   private final boolean containsChangeOfFormats(List<BibliographicItem> aus, SORT_FIELD field) {

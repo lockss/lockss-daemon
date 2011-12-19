@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.13 2011-12-01 17:39:31 easyonthemayo Exp $
+ * $Id: TdbAu.java,v 1.14 2011-12-19 11:14:27 easyonthemayo Exp $
  */
 
 /*
@@ -504,44 +504,61 @@ public class TdbAu implements BibliographicItem {
   }
 
   /**
-   * Get the start issue for this AU.
+   * Get the start issue for this AU. Allows for the issue string to represent
+   * a delimited list of ranges.
    * @return the start issue or <code>null</code> if not specified
    */
   public String getStartIssue() {
-    return NumberUtil.getRangeStart(getIssue());
+    return BibliographicUtil.getRangeSetStart(getIssue());
   }
 
   /**
-   * Get the end issue for this AU.
+   * Get the end issue for this AU. Allows for the issue string to represent
+   * a delimited list of ranges.
    * @return the end issue or <code>null</code> if not specified
    */
   public String getEndIssue() {
-    return NumberUtil.getRangeEnd(getIssue());
+    return BibliographicUtil.getRangeSetEnd(getIssue());
   }
 
   /**
-   * Determine whether issues(s) for this AU include a given issue.
+   * Determine whether the issue string for this AU include a given issue.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
+   *
    * @param anIssue an issue
    * @return <code>true</code> if this AU includes the issue
    */
   public boolean includesIssue(String anIssue) {
-    return NumberUtil.rangeIncludes(getIssue(), anIssue);
+    return BibliographicUtil.coverageIncludes(getIssue(), anIssue);
   }
 
   /**
    * Convenience method returns issue for this AU. Uses the issue attribute 
    * as preferred bibliographic value because parameter values are sometimes 
-   * not used correctly
-   * 
+   * not used correctly. Otherwise tries one of the several parameter formats,
+   * in order from most to least likely.
+   *
    * @return issue for for this AU or <code>null</code> if not specified
    */
   public String getIssue() {
     String issue = getAttr("issue");
-    if (issue == null) {
-      issue = getParam("issue");
+    for (String key : new String[] {
+        "issue",
+        "num_issue_range",
+        "issue_set",
+        "issue_no",
+        "issues",
+        "issue_no.",
+        "issue_dir"
+    }) {
+      if (issue == null) {
+        issue = getParam(key);
+      } else return issue;
     }
     return issue;
   }
+
   
   /**
    * Return print ISSN for this AU.
@@ -600,28 +617,33 @@ public class TdbAu implements BibliographicItem {
   }
   
   /**
-   * Get the start year for this AU.
+   * Get the start year for this AU. Allows for the year string to represent
+   * a delimited list of ranges.
    * @return the start year or <code>null</code> if not specified
    */
   public String getStartYear() {
-    return NumberUtil.getRangeStart(getYear());
+    return BibliographicUtil.getRangeSetStart(getYear());
   }
 
   /**
-   * Get the end year for this AU.
+   * Get the end year for this AU. Allows for the year string to represent
+   * a delimited list of ranges.
    * @return the end year or <code>null</code> if not specified
    */
   public String getEndYear() {
-    return NumberUtil.getRangeEnd(getYear());
+    return BibliographicUtil.getRangeSetEnd(getYear());
   }
 
   /**
    * Determine whether year(s) for this AU include a given date.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
    * @param aYear a year
    * @return <code>true</code> if this AU includes the date
    */
   public boolean includesYear(String aYear) {
-    return NumberUtil.rangeIncludes(getYear(), aYear);
+    //return NumberUtil.rangeIncludes(getYear(), aYear);
+    return BibliographicUtil.coverageIncludes(getYear(), aYear);
   }
 
   /**
@@ -640,7 +662,7 @@ public class TdbAu implements BibliographicItem {
     }
     return auYear;
   }
-  
+
   /**
    * Get the start volume for this AU. First the method checks whether the volume
    * string looks like a genuine range. If it looks like a single identifier
@@ -648,9 +670,7 @@ public class TdbAu implements BibliographicItem {
    * @return the start volume or <code>null</code> if not specified
    */
   public String getStartVolume() {
-    String vol = getVolume();
-    return BibliographicUtil.isVolumeRange(vol) ?
-        NumberUtil.getRangeStart(vol) : vol;
+    return BibliographicUtil.getRangeSetStart(getVolume());
   }
 
   /**
@@ -660,18 +680,22 @@ public class TdbAu implements BibliographicItem {
    * @return the end volume or <code>null</code> if not specified
    */
   public String getEndVolume() {
-    String vol = getVolume();
-    return BibliographicUtil.isVolumeRange(vol) ?
-        NumberUtil.getRangeEnd(vol) : vol;
+    return BibliographicUtil.getRangeSetEnd(getVolume());
   }
 
   /**
-   * Determine whether volume(s) for this AU include a given volume.
+   * Determine whether the volume string for this AU include a given volume.
+   * Uses {@link BibliographicUtil.coverageIncludes} to check each range
+   * specified in the string.
    * @param aVolume a volume
    * @return <code>true</code> if this AU includes the volume
    */
   public boolean includesVolume(String aVolume) {
-    return NumberUtil.rangeIncludes(getVolume(), aVolume);
+    //return NumberUtil.rangeIncludes(getVolume(), aVolume);
+    return BibliographicUtil.coverageIncludes(getVolume(), aVolume);
+    // TODO Use a volume-aware method instead, that allows for example
+    // s2ii to not include s2iii
+    // s2v-s2x to include s2ix but not s2w
   }
 
   /**

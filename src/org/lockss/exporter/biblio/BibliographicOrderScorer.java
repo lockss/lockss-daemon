@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.1 2011-12-01 17:39:32 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.2 2011-12-19 11:14:27 easyonthemayo Exp $
  */
 
 /*
@@ -476,10 +476,17 @@ public final class BibliographicOrderScorer {
    * @param second a String representing the subsequent volume
    * @return whether the volumes appear to be consecutive
    */
-  static final boolean areVolumesConsecutive(String first, String second) {
+  public static final boolean areVolumesConsecutive(String first, String second) {
     // First try and compare as numbers
     try {
       return NumberUtil.areConsecutive(first, second);
+    } catch (NumberFormatException e) {
+      // fall through to the string-based comparison
+    }
+
+    // Try and compare alphabetically
+    try {
+      return NumberUtil.areAlphabeticallyConsecutive(first, second);
     } catch (NumberFormatException e) {
       // fall through to the string-based comparison
     }
