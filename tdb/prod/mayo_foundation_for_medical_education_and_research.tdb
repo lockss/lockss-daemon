@@ -4,9 +4,6 @@
     name = Mayo Foundation for Medical Education and Research
   >
   
-  comment[urgent] = Leaving HighWire at the end of 2011
-
-  
   {
   
     title <
@@ -20,23 +17,23 @@
     param[base_url] = http://www.mayoclinicproceedings.com/
     implicit < status ; year ; name ; param[volume_name] >
   
-    au < ready ; 1995 ; Mayo Clinic Proceedings Volume 70 ; 70 >
-    au < ready ; 1996 ; Mayo Clinic Proceedings Volume 71 ; 71 >
-    au < ready ; 1997 ; Mayo Clinic Proceedings Volume 72 ; 72 >
-    au < ready ; 1998 ; Mayo Clinic Proceedings Volume 73 ; 73 >
-    au < ready ; 1999 ; Mayo Clinic Proceedings Volume 74 ; 74 >
-    au < ready ; 2000 ; Mayo Clinic Proceedings Volume 75 ; 75 >
-    au < ready ; 2001 ; Mayo Clinic Proceedings Volume 76 ; 76 >
-    au < ready ; 2002 ; Mayo Clinic Proceedings Volume 77 ; 77 >
-    au < ready ; 2003 ; Mayo Clinic Proceedings Volume 78 ; 78 >
-    au < ready ; 2004 ; Mayo Clinic Proceedings Volume 79 ; 79 >
-    au < ready ; 2005 ; Mayo Clinic Proceedings Volume 80 ; 80 >
-    au < ready ; 2006 ; Mayo Clinic Proceedings Volume 81 ; 81 >
-    au < ready ; 2007 ; Mayo Clinic Proceedings Volume 82 ; 82 >
-    au < ready ; 2008 ; Mayo Clinic Proceedings Volume 83 ; 83 >
-    au < ready ; 2009 ; Mayo Clinic Proceedings Volume 84 ; 84 >
-    au < ready ; 2010 ; Mayo Clinic Proceedings Volume 85 ; 85 >
-    au < ready ; 2011 ; Mayo Clinic Proceedings Volume 86 ; 86 >
+    au < releasing ; 1995 ; Mayo Clinic Proceedings Volume 70 ; 70 >
+    au < releasing ; 1996 ; Mayo Clinic Proceedings Volume 71 ; 71 >
+    au < releasing ; 1997 ; Mayo Clinic Proceedings Volume 72 ; 72 >
+    au < releasing ; 1998 ; Mayo Clinic Proceedings Volume 73 ; 73 >
+    au < releasing ; 1999 ; Mayo Clinic Proceedings Volume 74 ; 74 >
+    au < releasing ; 2000 ; Mayo Clinic Proceedings Volume 75 ; 75 >
+    au < releasing ; 2001 ; Mayo Clinic Proceedings Volume 76 ; 76 >
+    au < releasing ; 2002 ; Mayo Clinic Proceedings Volume 77 ; 77 >
+    au < releasing ; 2003 ; Mayo Clinic Proceedings Volume 78 ; 78 >
+    au < releasing ; 2004 ; Mayo Clinic Proceedings Volume 79 ; 79 >
+    au < releasing ; 2005 ; Mayo Clinic Proceedings Volume 80 ; 80 >
+    au < releasing ; 2006 ; Mayo Clinic Proceedings Volume 81 ; 81 >
+    au < releasing ; 2007 ; Mayo Clinic Proceedings Volume 82 ; 82 >
+    au < releasing ; 2008 ; Mayo Clinic Proceedings Volume 83 ; 83 >
+    au < releasing ; 2009 ; Mayo Clinic Proceedings Volume 84 ; 84 >
+    au < releasing ; 2010 ; Mayo Clinic Proceedings Volume 85 ; 85 >
+    au < releasing ; 2011 ; Mayo Clinic Proceedings Volume 86 ; 86 >
 
   }
 
