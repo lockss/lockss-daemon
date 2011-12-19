@@ -1181,7 +1181,7 @@
 
       plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
       param[base_url] = http://inscribe.iupress.org/
-      param[journal_id] = 
+      param[journal_id] = rac
       implicit < status ; year ; name ; param[volume_name] >
 
       au < down ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
