@@ -8230,11 +8230,10 @@
     comment[continued_from] = 1672-7118
     param[journal_issn] = 1674-5361
     comment[urgent] = end of 2011
-    attr[where] = content2a
 
     au < ready ; 2009 ; Clinical Oncology and Cancer Research Volume 6 ; 6 >
     au < ready ; 2010 ; Clinical Oncology and Cancer Research Volume 7 ; 7 >
-    au < testing ; 2011 ; Clinical Oncology and Cancer Research Volume 8 ; 8 >
+    au < ready ; 2011 ; Clinical Oncology and Cancer Research Volume 8 ; 8 >
 
   }
 
@@ -14210,10 +14209,10 @@
 
     param[journal_issn] = 1673-3436
     comment[urgent] = end of 2011
-    attr[where] = content6a
+    attr[where] = content2a
 
-    au < testing ; 2006 ; Frontiers of Philosophy in China Volume 1 ; 1 >
-    au < testing ; 2007 ; Frontiers of Philosophy in China Volume 2 ; 2 >
+    au < ready ; 2006 ; Frontiers of Philosophy in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Frontiers of Philosophy in China Volume 2 ; 2 >
     au < testing ; 2008 ; Frontiers of Philosophy in China Volume 3 ; 3 >
     au < testing ; 2009 ; Frontiers of Philosophy in China Volume 4 ; 4 >
     au < testing ; 2010 ; Frontiers of Philosophy in China Volume 5 ; 5 >
@@ -14616,7 +14615,7 @@
 
     param[journal_issn] = 1009-5020
     comment[urgent] = end of 2011
-    attr[where] = content6a
+    attr[where] = content1a
 
     au < doesNotExist ; 1998 ; Geo-Spatial Information Science Volume 1 ; 1 >
     au < testing ; 1999 ; Geo-Spatial Information Science Volume 2 ; 2 >
@@ -25947,7 +25946,6 @@
 
     param[journal_issn] = 0340-0425
     comment[urgent] = end of 2011
-    attr[where] = content1a
 
     au < ready ; 2000 ; Leviathan Volume 28 ; 28 >
     au < ready ; 2001 ; Leviathan Volume 29 ; 29 >
@@ -25955,11 +25953,11 @@
     au < ready ; 2003 ; Leviathan Volume 31 ; 31 >
     au < ready ; 2004 ; Leviathan Volume 32 ; 32 >
     au < ready ; 2005 ; Leviathan Volume 33 ; 33 >
-    au < testing ; 2006 ; Leviathan Volume 34 ; 34 >
+    au < ready ; 2006 ; Leviathan Volume 34 ; 34 >
     au < ready ; 2007 ; Leviathan Volume 35 ; 35 >
-    au < testing ; 2008 ; Leviathan Volume 36 ; 36 >
+    au < ready ; 2008 ; Leviathan Volume 36 ; 36 >
     au < ready ; 2009 ; Leviathan Volume 37 ; 37 >
-    au < testing ; 2010 ; Leviathan Volume 38 ; 38 >
+    au < ready ; 2010 ; Leviathan Volume 38 ; 38 >
     au < ready ; 2011 ; Leviathan Volume 39 ; 39 >
 
   }
@@ -29432,7 +29430,7 @@
     comment[merged_into] = 1072-3374
     param[journal_issn] = 1536-0059
     comment[urgent] = end of 2011
-    attr[where] = sul-lockss30a
+    attr[where] = content5a
 
     au < testing ; 2002 ; Nonlinear Oscillations Volume 5 ; 5 >
     au < testing ; 2003 ; Nonlinear Oscillations Volume 6 ; 6 >
@@ -30737,12 +30735,11 @@
 
     param[journal_issn] = 1778-3712
     comment[urgent] = end of 2011
-    attr[where] = content1a
 
     au < ready ; 2006 ; Pelvi-périnéologie Volume 1 ; 1 >
     au < ready ; 2007 ; Pelvi-périnéologie Volume 2 ; 2 >
     au < ready ; 2008 ; Pelvi-périnéologie Volume 3 ; 3 >
-    au < testing ; 2009 ; Pelvi-périnéologie Volume 4 ; 4 >
+    au < ready ; 2009 ; Pelvi-périnéologie Volume 4 ; 4 >
     au < ready ; 2010 ; Pelvi-périnéologie Volume 5 ; 5 >
     au < ready ; 2011 ; Pelvi-périnéologie Volume 6 ; 6 >
 
