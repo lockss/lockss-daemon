@@ -419,24 +419,24 @@
       au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 47 ; 47 >
       au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Virology Volume 48 ; 48 >
       au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Virology Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Virology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Virology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Virology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Virology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Virology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of Virology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of Virology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of Virology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of Virology Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Virology Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Virology Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Virology Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Virology Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Virology Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Virology Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Virology Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Virology Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Virology Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Virology Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Virology Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Virology Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Virology Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Virology Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Virology Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Virology Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Virology Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Virology Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Virology Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Virology Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Virology Volume 70 ; 70 >
@@ -554,20 +554,20 @@
       >
       param[base_url] = http://mcb.asm.org/
   
-      au < HighWirePressH20Plugin ; testing ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; Molecular and Cellular Biology Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; Molecular and Cellular Biology Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; Molecular and Cellular Biology Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; testing ; 1984 ; Molecular and Cellular Biology Volume 4 ; 4 >
       au < HighWirePressH20Plugin ; testing ; 1985 ; Molecular and Cellular Biology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1986 ; Molecular and Cellular Biology Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1987 ; Molecular and Cellular Biology Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1988 ; Molecular and Cellular Biology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Molecular and Cellular Biology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1990 ; Molecular and Cellular Biology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1991 ; Molecular and Cellular Biology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1992 ; Molecular and Cellular Biology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1993 ; Molecular and Cellular Biology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 1994 ; Molecular and Cellular Biology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Molecular and Cellular Biology Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1990 ; Molecular and Cellular Biology Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1991 ; Molecular and Cellular Biology Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 1992 ; Molecular and Cellular Biology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 1993 ; Molecular and Cellular Biology Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 1994 ; Molecular and Cellular Biology Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; testing ; 1995 ; Molecular and Cellular Biology Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; testing ; 1996 ; Molecular and Cellular Biology Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; testing ; 1997 ; Molecular and Cellular Biology Volume 17 ; 17 >
