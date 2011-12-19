@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.13 2011-12-16 09:19:00 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.14 2011-12-19 08:33:17 thib_gc Exp $
  */
 
 /*
@@ -34,8 +34,9 @@ package org.lockss.plugin.springer;
 
 import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
@@ -112,6 +113,21 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         
         // Eventually changed from <h1 lang="en" class="title"> to <h1>
         new TagNameFilter("h1"),
+        
+        // Over time, <span class="...toolbarSprite..."></span>
+        // became <a class="...toolbarSprite...">...</a>
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            if (node instanceof Span || node instanceof LinkTag) {
+              Tag tag = (Tag)node;
+              String attr = tag.getAttribute("class");
+              return (attr != null && attr.contains("toolbarSprite"));
+            }
+            return false;
+          }
+        }
+        
     };
     InputStream filteredStream = new HtmlFilterInputStream(in,
                                                            encoding,
