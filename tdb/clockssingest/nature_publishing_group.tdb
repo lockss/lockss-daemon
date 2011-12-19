@@ -2331,7 +2331,7 @@
     au < released ; crawling ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
     au < released ; crawling ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
     au < released ; crawling ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
-    au < testing ; exists ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
+    au < released ; manifest ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
 
   }
 
@@ -2416,7 +2416,7 @@
     au < released ; crawling ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
-    au < testing ; exists ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
+    au < released ; manifest ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
 
   }
 
@@ -2961,7 +2961,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -2982,7 +2982,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -3008,7 +3008,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; crawling ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
+    au < testing ; exists ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
 
   }
 
@@ -3029,7 +3029,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; crawling ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
 
   }
 
@@ -3051,7 +3051,7 @@
     au < released ; crawling ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
+    au < testing ; exists ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
 
   }
 
@@ -3083,7 +3083,7 @@
     au < released ; crawling ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
-    au < crawling ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
+    au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
 
   }
 
@@ -3138,6 +3138,17 @@
 
     param[journal_id] = oby
 
+    au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
+    au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
+    au < exists ; exists ; 2002 ; Obesity Volume 10 ; 2002 ; 10 >
+    au < exists ; exists ; 2003 ; Obesity Volume 11 ; 2003 ; 11 >
+    au < exists ; exists ; 2004 ; Obesity Volume 12 ; 2004 ; 12 >
+    au < exists ; exists ; 2005 ; Obesity Volume 13 ; 2005 ; 13 >
+    au < exists ; exists ; 2006 ; Obesity Volume 14 ; 2006 ; 14 >
+    au < exists ; exists ; 2007 ; Obesity Volume 15 ; 2007 ; 15 >
+    au < exists ; exists ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
+    au < exists ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
+    au < exists ; exists ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
     au < wanted ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
 
   }
@@ -3169,7 +3180,7 @@
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; exists ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
-    au < crawling ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
+    au < testing ; exists ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
 
   }
 
