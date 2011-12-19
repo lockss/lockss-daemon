@@ -1,5 +1,5 @@
 /*
- * $Id: ListHoldings.java,v 1.21 2011-11-16 18:37:56 easyonthemayo Exp $
+ * $Id: ListHoldings.java,v 1.22 2011-12-19 11:33:58 easyonthemayo Exp $
  */
 
 /*
@@ -398,7 +398,7 @@ public class ListHoldings extends LockssServlet {
 	  getSessionCustomOpts().fieldOrdering.getOrdering());
       Collection<ArchivalUnit> aus = TdbUtil.getAus(scope);
       Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
-      titles = KbartConverter.convertAus(map, getShowHealthRatings(),
+      titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(),
           rangeFieldsIncluded);
     }
     return titles;
