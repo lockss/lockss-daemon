@@ -661,7 +661,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
     au < released ; crawling ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
     au < ready ; exists ; 2010 ; American Journal of Epidemiology Volume 172 ; 172 ; >
-    au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
+    au < released ; manifest ; 2011 ; American Journal of Epidemiology Volume 173 ; 173 ; >
     au < testing ; exists ; 2011 ; American Journal of Epidemiology Volume 174 ; 174 ; >
 
     }
@@ -9564,7 +9564,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
     au < released ; crawling ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
+    au < testing ; exists ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
 
     }
 
@@ -9722,7 +9722,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
     au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
-    au < crawling ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
+    au < testing ; exists ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
 
     }
 
@@ -9787,7 +9787,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Medicine and Philosophy Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
+    au < testing ; exists ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
 
     }
 
@@ -9818,7 +9818,7 @@
 
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
     au < released ; manifest ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
+    au < testing ; exists ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
 
     }
 
@@ -9924,7 +9924,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
     au < released ; crawling ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
-    au < crawling ; exists ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
+    au < testing ; exists ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
 
     }
 
@@ -9977,7 +9977,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the National Cancer Institute Volume 100 ; 100 ; >
     au < released ; crawling ; 2009 ; Journal of the National Cancer Institute Volume 101 ; 101 ; >
     au < released ; crawling ; 2010 ; Journal of the National Cancer Institute Volume 102 ; 102 ; >
-    au < crawling ; exists ; 2011 ; Journal of the National Cancer Institute Volume 103 ; 103 ; >
+    au < testing ; exists ; 2011 ; Journal of the National Cancer Institute Volume 103 ; 103 ; >
 
     }
 
@@ -10016,7 +10016,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; >
     au < released ; manifest ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
+    au < testing ; exists ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
 
     }
 
@@ -10081,7 +10081,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; Journal of Pediatric Psychology Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 ; >
+    au < testing ; exists ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 ; >
 
     }
 
@@ -10162,7 +10162,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Journal of Petrology Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
+    au < testing ; exists ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
 
     }
 
@@ -10224,7 +10224,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
+    au < testing ; exists ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
 
     }
 
@@ -10247,7 +10247,7 @@
     au < manifest ; exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
     au < released ; manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
+    au < testing ; exists ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
 
     }
 
@@ -10297,7 +10297,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
+    au < testing ; exists ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
 
     }
 
@@ -10358,7 +10358,7 @@
     au < wanted ; exists ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Public Health Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
+    au < testing ; exists ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
 
     }
 
@@ -10411,7 +10411,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Journal of Refugee Studies Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
+    au < testing ; exists ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
 
     }
 
@@ -10468,7 +10468,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Journal of Semantics Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2011 ; Journal of Semantics Volume 28 ; 28 ; >
+    au < testing ; exists ; 2011 ; Journal of Semantics Volume 28 ; 28 ; >
 
     }
 
@@ -10553,7 +10553,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
+    au < testing ; exists ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
     
     }
 
@@ -10758,7 +10758,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 ; >
+    au < testing ; exists ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 ; >
 
     }
 
@@ -11301,7 +11301,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
-    au < testing ; exists ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
+    au < released ; manifest ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
    
     }
 
@@ -11355,7 +11355,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; Literature and Theology Volume 24 ; 24 ; >
-    au < testing ; exists ; 2011 ; Literature and Theology Volume 25 ; 25 ; >
+    au < released ; manifest ; 2011 ; Literature and Theology Volume 25 ; 25 ; >
     
     }
 
@@ -11403,7 +11403,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
-    au < testing ; exists ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
+    au < released ; manifest ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
 
     }
 
@@ -11460,7 +11460,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Mathematical Medicine and Biology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Mathematical Medicine and Biology Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 ; >
-    au < testing ; exists ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 ; >
+    au < released ; manifest ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 ; >
 
     }
 
@@ -11508,7 +11508,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
     au < released ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Medical Law Review Volume 18 ; 18 ; >
-    au < testing ; exists ; 2011 ; Medical Law Review Volume 19 ; 19 ; >
+    au < released ; manifest ; 2011 ; Medical Law Review Volume 19 ; 19 ; >
 
     }
 
@@ -11663,7 +11663,7 @@
     au < manifest ; exists ; 2008 ; Mind Volume 117 ; 117 ; >
     au < released ; manifest ; 2009 ; Mind Volume 118 ; 118 ; >
     au < released ; manifest ; 2010 ; Mind Volume 119 ; 119 ; >
-    au < testing ; exists ; 2011 ; Mind Volume 120 ; 120 ; >
+    au < released ; manifest ; 2011 ; Mind Volume 120 ; 120 ; >
 
     }
     
@@ -11711,7 +11711,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 ; >
-    au < testing ; exists ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
+    au < released ; manifest ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
 
     }
 
@@ -11828,7 +11828,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
     au < released ; crawling ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 ; >
-    au < testing ; exists ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 ; >
+    au < released ; manifest ; 2011 ; Molecular Biology and Evolution Volume 28 ; 28 ; >
 
     }
 
@@ -11851,7 +11851,7 @@
     au < manifest ; exists ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
     au < released ; manifest ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
-    au < testing ; exists ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
+    au < released ; manifest ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
 
     }
 
@@ -13701,7 +13701,7 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
     au < released ; crawling ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
-    au < testing ; exists ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
+    au < released ; manifest ; 2011 ; Plant and Cell Physiology Volume 52 ; 52 ; >
 
     }
 
