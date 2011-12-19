@@ -1575,7 +1575,7 @@
 
     comment[continued_from] = 1000-9221
     param[journal_issn] = 1672-4070
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2003 ; Analysis in Theory and Applications Volume 19 ; 19 >
     au < ready ; 2004 ; Analysis in Theory and Applications Volume 20 ; 20 >
@@ -2990,17 +2990,16 @@
 
     comment[continued_by] = 1672-4070
     param[journal_issn] = 1000-9221
-    comment[urgent] = end of 2011
-    comment[notReady] = no permission?
+    attr[urgent] = end of 2011
     
-    au < notReady ; 1989 ; Approximation Theory and its Applications Volume 5 ; 5 >
-    au < notReady ; 1990 ; Approximation Theory and its Applications Volume 6 ; 6 >
-    au < notReady ; 1991 ; Approximation Theory and its Applications Volume 7 ; 7 >
-    au < notReady ; 1992 ; Approximation Theory and its Applications Volume 8 ; 8 >
-    au < notReady ; 1993 ; Approximation Theory and its Applications Volume 9 ; 9 >
-    au < notReady ; 1994 ; Approximation Theory and its Applications Volume 10 ; 10 >
-    au < notReady ; 1995 ; Approximation Theory and its Applications Volume 11 ; 11 >
-    au < notReady ; 1996 ; Approximation Theory and its Applications Volume 12 ; 12 >
+    au < ready ; 1989 ; Approximation Theory and its Applications Volume 5 ; 5 >
+    au < ready ; 1990 ; Approximation Theory and its Applications Volume 6 ; 6 >
+    au < ready ; 1991 ; Approximation Theory and its Applications Volume 7 ; 7 >
+    au < ready ; 1992 ; Approximation Theory and its Applications Volume 8 ; 8 >
+    au < ready ; 1993 ; Approximation Theory and its Applications Volume 9 ; 9 >
+    au < ready ; 1994 ; Approximation Theory and its Applications Volume 10 ; 10 >
+    au < ready ; 1995 ; Approximation Theory and its Applications Volume 11 ; 11 >
+    au < ready ; 1996 ; Approximation Theory and its Applications Volume 12 ; 12 >
     au < ready ; 1997 ; Approximation Theory and its Applications Volume 13 ; 13 >
     au < ready ; 1998 ; Approximation Theory and its Applications Volume 14 ; 14 >
     au < ready ; 1999 ; Approximation Theory and its Applications Volume 15 ; 15 >
@@ -7258,13 +7257,12 @@
     >
 
     param[journal_issn] = 0933-2480
-    comment[urgent] = end of 2011
-    attr[where] = sul-lockss30a
+    attr[urgent] = end of 2011
 
-    au < testing ; 2008 ; CHANCE Volume 21 ; 21 >
-    au < testing ; 2009 ; CHANCE Volume 22 ; 22 >
-    au < testing ; 2010 ; CHANCE Volume 23 ; 23 >
-    au < testing ; 2011 ; CHANCE Volume 24 ; 24 >
+    au < ready ; 2008 ; CHANCE Volume 21 ; 21 >
+    au < ready ; 2009 ; CHANCE Volume 22 ; 22 >
+    au < ready ; 2010 ; CHANCE Volume 23 ; 23 >
+    au < ready ; 2011 ; CHANCE Volume 24 ; 24 >
 
   }
 
@@ -7543,7 +7541,7 @@
 
     comment[continued_by] = 1674-5361
     param[journal_issn] = 1672-7118
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
     
     au < ready ; 2004 ; Chinese Journal of Clinical Oncology Volume 1 ; 1 >
     au < ready ; 2005 ; Chinese Journal of Clinical Oncology Volume 2 ; 2 >
@@ -8229,7 +8227,7 @@
 
     comment[continued_from] = 1672-7118
     param[journal_issn] = 1674-5361
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2009 ; Clinical Oncology and Cancer Research Volume 6 ; 6 >
     au < ready ; 2010 ; Clinical Oncology and Cancer Research Volume 7 ; 7 >
@@ -13340,49 +13338,48 @@
     >
 
     param[journal_issn] = 0736-0932
-    comment[urgent] = end of 2011
-    comment[notReady] = no permission?
+    attr[urgent] = end of 2011
 
-    au < notReady ; 1971 ; Forum for Social Economics Volume 1 ; 1 >
+    au < ready ; 1971 ; Forum for Social Economics Volume 1 ; 1 >
     au < doesNotExist ; 1972 ; Forum for Social Economics Volume 2 ; 2 >
     au < doesNotExist ; 1973 ; Forum for Social Economics Volume 3 ; 3 >
     au < doesNotExist ; 1974 ; Forum for Social Economics Volume 4 ; 4 >
-    au < notReady ; 1975 ; Forum for Social Economics Volume 5 ; 5 >
-    au < notReady ; 1976 ; Forum for Social Economics Volume 6 ; 6 >
-    au < notReady ; 1977 ; Forum for Social Economics Volume 7 ; 7 >
-    au < notReady ; 1978-1979 ; Forum for Social Economics Volume 8 ; 8 >
-    au < notReady ; 1979 ; Forum for Social Economics Volume 9 ; 9 >
-    au < notReady ; 1980 ; Forum for Social Economics Volume 10 ; 10 >
-    au < notReady ; 1981 ; Forum for Social Economics Volume 11 ; 11 >
-    au < notReady ; 1982-1983 ; Forum for Social Economics Volume 12 ; 12 >
-    au < notReady ; 1983 ; Forum for Social Economics Volume 13 ; 13 >
-    au < notReady ; 1984 ; Forum for Social Economics Volume 14 ; 14 >
-    au < notReady ; 1985 ; Forum for Social Economics Volume 15 ; 15 >
-    au < notReady ; 1986 ; Forum for Social Economics Volume 16 ; 16 >
-    au < notReady ; 1987-1988 ; Forum for Social Economics Volume 17 ; 17 >
-    au < notReady ; 1988 ; Forum for Social Economics Volume 18 ; 18 >
-    au < notReady ; 1989-1990 ; Forum for Social Economics Volume 19 ; 19 >
-    au < notReady ; 1990-1991 ; Forum for Social Economics Volume 20 ; 20 >
-    au < notReady ; 1991 ; Forum for Social Economics Volume 21 ; 21 >
-    au < notReady ; 1992-1993 ; Forum for Social Economics Volume 22 ; 22 >
-    au < notReady ; 1993-1994 ; Forum for Social Economics Volume 23 ; 23 >
-    au < notReady ; 1994-1995 ; Forum for Social Economics Volume 24 ; 24 >
-    au < notReady ; 1995-1996 ; Forum for Social Economics Volume 25 ; 25 >
-    au < notReady ; 1996-1997 ; Forum for Social Economics Volume 26 ; 26 >
-    au < notReady ; 1997 ; Forum for Social Economics Volume 27 ; 27 >
-    au < notReady ; 1998 ; Forum for Social Economics Volume 28 ; 28 >
-    au < notReady ; 1999 ; Forum for Social Economics Volume 29 ; 29 >
-    au < notReady ; 2000 ; Forum for Social Economics Volume 30 ; 30 >
-    au < notReady ; 2001 ; Forum for Social Economics Volume 31 ; 31 >
-    au < notReady ; 2002 ; Forum for Social Economics Volume 32 ; 32 >
-    au < notReady ; 2003 ; Forum for Social Economics Volume 33 ; 33 >
-    au < notReady ; 2004 ; Forum for Social Economics Volume 34 ; 34 >
-    au < notReady ; 2005 ; Forum for Social Economics Volume 35 ; 35 >
-    au < notReady ; 2007 ; Forum for Social Economics Volume 36 ; 36 >
-    au < notReady ; 2008 ; Forum for Social Economics Volume 37 ; 37 >
-    au < notReady ; 2009 ; Forum for Social Economics Volume 38 ; 38 >
-    au < notReady ; 2010 ; Forum for Social Economics Volume 39 ; 39 >
-    au < notReady ; 2011 ; Forum for Social Economics Volume 40 ; 40 >
+    au < ready ; 1975 ; Forum for Social Economics Volume 5 ; 5 >
+    au < ready ; 1976 ; Forum for Social Economics Volume 6 ; 6 >
+    au < ready ; 1977 ; Forum for Social Economics Volume 7 ; 7 >
+    au < ready ; 1978-1979 ; Forum for Social Economics Volume 8 ; 8 >
+    au < ready ; 1979 ; Forum for Social Economics Volume 9 ; 9 >
+    au < ready ; 1980 ; Forum for Social Economics Volume 10 ; 10 >
+    au < ready ; 1981 ; Forum for Social Economics Volume 11 ; 11 >
+    au < ready ; 1982-1983 ; Forum for Social Economics Volume 12 ; 12 >
+    au < ready ; 1983 ; Forum for Social Economics Volume 13 ; 13 >
+    au < ready ; 1984 ; Forum for Social Economics Volume 14 ; 14 >
+    au < ready ; 1985 ; Forum for Social Economics Volume 15 ; 15 >
+    au < ready ; 1986 ; Forum for Social Economics Volume 16 ; 16 >
+    au < ready ; 1987-1988 ; Forum for Social Economics Volume 17 ; 17 >
+    au < ready ; 1988 ; Forum for Social Economics Volume 18 ; 18 >
+    au < ready ; 1989-1990 ; Forum for Social Economics Volume 19 ; 19 >
+    au < ready ; 1990-1991 ; Forum for Social Economics Volume 20 ; 20 >
+    au < ready ; 1991 ; Forum for Social Economics Volume 21 ; 21 >
+    au < ready ; 1992-1993 ; Forum for Social Economics Volume 22 ; 22 >
+    au < ready ; 1993-1994 ; Forum for Social Economics Volume 23 ; 23 >
+    au < ready ; 1994-1995 ; Forum for Social Economics Volume 24 ; 24 >
+    au < ready ; 1995-1996 ; Forum for Social Economics Volume 25 ; 25 >
+    au < ready ; 1996-1997 ; Forum for Social Economics Volume 26 ; 26 >
+    au < ready ; 1997 ; Forum for Social Economics Volume 27 ; 27 >
+    au < ready ; 1998 ; Forum for Social Economics Volume 28 ; 28 >
+    au < ready ; 1999 ; Forum for Social Economics Volume 29 ; 29 >
+    au < ready ; 2000 ; Forum for Social Economics Volume 30 ; 30 >
+    au < ready ; 2001 ; Forum for Social Economics Volume 31 ; 31 >
+    au < ready ; 2002 ; Forum for Social Economics Volume 32 ; 32 >
+    au < ready ; 2003 ; Forum for Social Economics Volume 33 ; 33 >
+    au < ready ; 2004 ; Forum for Social Economics Volume 34 ; 34 >
+    au < ready ; 2005 ; Forum for Social Economics Volume 35 ; 35 >
+    au < ready ; 2007 ; Forum for Social Economics Volume 36 ; 36 >
+    au < ready ; 2008 ; Forum for Social Economics Volume 37 ; 37 >
+    au < ready ; 2009 ; Forum for Social Economics Volume 38 ; 38 >
+    au < ready ; 2010 ; Forum for Social Economics Volume 39 ; 39 >
+    au < ready ; 2011 ; Forum for Social Economics Volume 40 ; 40 >
 
   }
 
@@ -13878,7 +13875,7 @@
     >
 
     param[journal_issn] = 1673-7334
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2007 ; Frontiers of Agriculture in China Volume 1 ; 1 >
     au < ready ; 2008 ; Frontiers of Agriculture in China Volume 2 ; 2 >
@@ -13921,7 +13918,7 @@
     >
 
     param[journal_issn] = 1673-7326
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2007 ; Frontiers of Business Research in China Volume 1 ; 1 >
     au < ready ; 2008 ; Frontiers of Business Research in China Volume 2 ; 2 >
@@ -13952,7 +13949,7 @@
     >
 
     param[journal_issn] = 1673-3495
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2006 ; Frontiers of Chemistry in China Volume 1 ; 1 >
     au < ready ; 2007 ; Frontiers of Chemistry in China Volume 2 ; 2 >
@@ -13996,7 +13993,7 @@
     >
 
     param[journal_issn] = 1673-3444
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2006 ; Frontiers of Economics in China Volume 1 ; 1 >
     au < ready ; 2007 ; Frontiers of Economics in China Volume 2 ; 2 >
@@ -14016,15 +14013,14 @@
     >
 
     param[journal_issn] = 1673-341X
-    comment[urgent] = end of 2011
-    comment[notReady] = no access or no manifest pages
+    attr[urgent] = end of 2011
 
-    au < notReady ; 2006 ; Frontiers of Education in China Volume 1 ; 1 >
-    au < notReady ; 2007 ; Frontiers of Education in China Volume 2 ; 2 >
-    au < notReady ; 2008 ; Frontiers of Education in China Volume 3 ; 3 >
-    au < notReady ; 2009 ; Frontiers of Education in China Volume 4 ; 4 >
-    au < notReady ; 2010 ; Frontiers of Education in China Volume 5 ; 5 >
-    au < notReady ; 2011 ; Frontiers of Education in China Volume 6 ; 6 >
+    au < ready ; 2006 ; Frontiers of Education in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Frontiers of Education in China Volume 2 ; 2 >
+    au < ready ; 2008 ; Frontiers of Education in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Frontiers of Education in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Frontiers of Education in China Volume 5 ; 5 >
+    au < ready ; 2011 ; Frontiers of Education in China Volume 6 ; 6 >
 
   }
 
@@ -14085,15 +14081,14 @@
     >
 
     param[journal_issn] = 1673-3401
-    comment[urgent] = end of 2011
-    comment[notReady] = no access or no manifest pages
+    attr[urgent] = end of 2011
 
-    au < notReady ; 2006 ; Frontiers of History in China Volume 1 ; 1 >
-    au < notReady ; 2007 ; Frontiers of History in China Volume 2 ; 2 >
-    au < notReady ; 2008 ; Frontiers of History in China Volume 3 ; 3 >
-    au < notReady ; 2009 ; Frontiers of History in China Volume 4 ; 4 >
-    au < notReady ; 2010 ; Frontiers of History in China Volume 5 ; 5 >
-    au < notReady ; 2011 ; Frontiers of History in China Volume 6 ; 6 >
+    au < ready ; 2006 ; Frontiers of History in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Frontiers of History in China Volume 2 ; 2 >
+    au < ready ; 2008 ; Frontiers of History in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Frontiers of History in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Frontiers of History in China Volume 5 ; 5 >
+    au < ready ; 2011 ; Frontiers of History in China Volume 6 ; 6 >
 
   }
 
@@ -14106,15 +14101,14 @@
     >
 
     param[journal_issn] = 1673-3428
-    comment[urgent] = end of 2011
-    comment[notReady] = no access or no manifest pages
+    attr[urgent] = end of 2011
 
-    au < notReady ; 2006 ; Frontiers of Law in China Volume 1 ; 1 >
-    au < notReady ; 2007 ; Frontiers of Law in China Volume 2 ; 2 >
-    au < notReady ; 2008 ; Frontiers of Law in China Volume 3 ; 3 >
-    au < notReady ; 2009 ; Frontiers of Law in China Volume 4 ; 4 >
-    au < notReady ; 2010 ; Frontiers of Law in China Volume 5 ; 5 >
-    au < notReady ; 2011 ; Frontiers of Law in China Volume 6 ; 6 >
+    au < ready ; 2006 ; Frontiers of Law in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Frontiers of Law in China Volume 2 ; 2 >
+    au < ready ; 2008 ; Frontiers of Law in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Frontiers of Law in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Frontiers of Law in China Volume 5 ; 5 >
+    au < ready ; 2011 ; Frontiers of Law in China Volume 6 ; 6 >
 
   }
 
@@ -14127,14 +14121,13 @@
     >
 
     param[journal_issn] = 1673-7318
-    comment[urgent] = end of 2011
-    comment[notReady] = no access or no manifest pages
+    attr[urgent] = end of 2011
 
-    au < notReady ; 2007 ; Frontiers of Literary Studies in China Volume 1 ; 1 >
-    au < notReady ; 2008 ; Frontiers of Literary Studies in China Volume 2 ; 2 >
-    au < notReady ; 2009 ; Frontiers of Literary Studies in China Volume 3 ; 3 >
-    au < notReady ; 2010 ; Frontiers of Literary Studies in China Volume 4 ; 4 >
-    au < notReady ; 2011 ; Frontiers of Literary Studies in China Volume 5 ; 5 >
+    au < ready ; 2007 ; Frontiers of Literary Studies in China Volume 1 ; 1 >
+    au < ready ; 2008 ; Frontiers of Literary Studies in China Volume 2 ; 2 >
+    au < ready ; 2009 ; Frontiers of Literary Studies in China Volume 3 ; 3 >
+    au < ready ; 2010 ; Frontiers of Literary Studies in China Volume 4 ; 4 >
+    au < ready ; 2011 ; Frontiers of Literary Studies in China Volume 5 ; 5 >
 
   }
 
@@ -14208,15 +14201,14 @@
     >
 
     param[journal_issn] = 1673-3436
-    comment[urgent] = end of 2011
-    attr[where] = content2a
+    attr[urgent] = end of 2011
 
     au < ready ; 2006 ; Frontiers of Philosophy in China Volume 1 ; 1 >
     au < ready ; 2007 ; Frontiers of Philosophy in China Volume 2 ; 2 >
-    au < testing ; 2008 ; Frontiers of Philosophy in China Volume 3 ; 3 >
-    au < testing ; 2009 ; Frontiers of Philosophy in China Volume 4 ; 4 >
-    au < testing ; 2010 ; Frontiers of Philosophy in China Volume 5 ; 5 >
-    au < testing ; 2011 ; Frontiers of Philosophy in China Volume 6 ; 6 >
+    au < ready ; 2008 ; Frontiers of Philosophy in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Frontiers of Philosophy in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Frontiers of Philosophy in China Volume 5 ; 5 >
+    au < ready ; 2011 ; Frontiers of Philosophy in China Volume 6 ; 6 >
 
   }
 
@@ -14614,23 +14606,22 @@
     >
 
     param[journal_issn] = 1009-5020
-    comment[urgent] = end of 2011
-    attr[where] = content1a
+    attr[urgent] = end of 2011
 
     au < doesNotExist ; 1998 ; Geo-Spatial Information Science Volume 1 ; 1 >
-    au < testing ; 1999 ; Geo-Spatial Information Science Volume 2 ; 2 >
-    au < testing ; 2000 ; Geo-Spatial Information Science Volume 3 ; 3 >
-    au < testing ; 2001 ; Geo-Spatial Information Science Volume 4 ; 4 >
-    au < testing ; 2002 ; Geo-Spatial Information Science Volume 5 ; 5 >
-    au < testing ; 2003 ; Geo-Spatial Information Science Volume 6 ; 6 >
-    au < testing ; 2004 ; Geo-Spatial Information Science Volume 7 ; 7 >
-    au < testing ; 2005 ; Geo-Spatial Information Science Volume 8 ; 8 >
-    au < testing ; 2006 ; Geo-Spatial Information Science Volume 9 ; 9 >
-    au < testing ; 2007 ; Geo-Spatial Information Science Volume 10 ; 10 >
-    au < testing ; 2008 ; Geo-Spatial Information Science Volume 11 ; 11 >
-    au < testing ; 2009 ; Geo-Spatial Information Science Volume 12 ; 12 >
-    au < testing ; 2010 ; Geo-Spatial Information Science Volume 13 ; 13 >
-    au < testing ; 2011 ; Geo-Spatial Information Science Volume 14 ; 14 >
+    au < ready ; 1999 ; Geo-Spatial Information Science Volume 2 ; 2 >
+    au < ready ; 2000 ; Geo-Spatial Information Science Volume 3 ; 3 >
+    au < ready ; 2001 ; Geo-Spatial Information Science Volume 4 ; 4 >
+    au < ready ; 2002 ; Geo-Spatial Information Science Volume 5 ; 5 >
+    au < ready ; 2003 ; Geo-Spatial Information Science Volume 6 ; 6 >
+    au < ready ; 2004 ; Geo-Spatial Information Science Volume 7 ; 7 >
+    au < ready ; 2005 ; Geo-Spatial Information Science Volume 8 ; 8 >
+    au < ready ; 2006 ; Geo-Spatial Information Science Volume 9 ; 9 >
+    au < ready ; 2007 ; Geo-Spatial Information Science Volume 10 ; 10 >
+    au < ready ; 2008 ; Geo-Spatial Information Science Volume 11 ; 11 >
+    au < ready ; 2009 ; Geo-Spatial Information Science Volume 12 ; 12 >
+    au < ready ; 2010 ; Geo-Spatial Information Science Volume 13 ; 13 >
+    au < ready ; 2011 ; Geo-Spatial Information Science Volume 14 ; 14 >
 
   }
 
@@ -17114,23 +17105,23 @@
 
     comment[merged_into] = 0723-5003
     param[journal_issn] = 0175-3851
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
-    au < testing ; 1997 ; Intensivmedizin und Notfallmedizin Volume 34 ; 34 >
-    au < testing ; 1998 ; Intensivmedizin und Notfallmedizin Volume 35 ; 35 >
-    au < testing ; 1999 ; Intensivmedizin und Notfallmedizin Volume 36 ; 36 >
-    au < testing ; 2000 ; Intensivmedizin und Notfallmedizin Volume 37 ; 37 >
-    au < testing ; 2001 ; Intensivmedizin und Notfallmedizin Volume 38 ; 38 >
-    au < testing ; 2002 ; Intensivmedizin und Notfallmedizin Volume 39 ; 39 >
-    au < testing ; 2003 ; Intensivmedizin und Notfallmedizin Volume 40 ; 40 >
-    au < testing ; 2004 ; Intensivmedizin und Notfallmedizin Volume 41 ; 41 >
-    au < testing ; 2005 ; Intensivmedizin und Notfallmedizin Volume 42 ; 42 >
-    au < testing ; 2006 ; Intensivmedizin und Notfallmedizin Volume 43 ; 43 >
-    au < testing ; 2007 ; Intensivmedizin und Notfallmedizin Volume 44 ; 44 >
-    au < testing ; 2008 ; Intensivmedizin und Notfallmedizin Volume 45 ; 45 >
-    au < testing ; 2009 ; Intensivmedizin und Notfallmedizin Volume 46 ; 46 >
-    au < testing ; 2010 ; Intensivmedizin und Notfallmedizin Volume 47 ; 47 >
-    au < testing ; 2011 ; Intensivmedizin und Notfallmedizin Volume 48 ; 48 >
+    au < ready ; 1997 ; Intensivmedizin und Notfallmedizin Volume 34 ; 34 >
+    au < ready ; 1998 ; Intensivmedizin und Notfallmedizin Volume 35 ; 35 >
+    au < ready ; 1999 ; Intensivmedizin und Notfallmedizin Volume 36 ; 36 >
+    au < ready ; 2000 ; Intensivmedizin und Notfallmedizin Volume 37 ; 37 >
+    au < ready ; 2001 ; Intensivmedizin und Notfallmedizin Volume 38 ; 38 >
+    au < ready ; 2002 ; Intensivmedizin und Notfallmedizin Volume 39 ; 39 >
+    au < ready ; 2003 ; Intensivmedizin und Notfallmedizin Volume 40 ; 40 >
+    au < ready ; 2004 ; Intensivmedizin und Notfallmedizin Volume 41 ; 41 >
+    au < ready ; 2005 ; Intensivmedizin und Notfallmedizin Volume 42 ; 42 >
+    au < ready ; 2006 ; Intensivmedizin und Notfallmedizin Volume 43 ; 43 >
+    au < ready ; 2007 ; Intensivmedizin und Notfallmedizin Volume 44 ; 44 >
+    au < ready ; 2008 ; Intensivmedizin und Notfallmedizin Volume 45 ; 45 >
+    au < ready ; 2009 ; Intensivmedizin und Notfallmedizin Volume 46 ; 46 >
+    au < ready ; 2010 ; Intensivmedizin und Notfallmedizin Volume 47 ; 47 >
+    au < ready ; 2011 ; Intensivmedizin und Notfallmedizin Volume 48 ; 48 >
 
   }
 
@@ -19040,7 +19031,7 @@
     >
 
     param[journal_issn] = 0168-6291
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 1986-1987 ; Irrigation and Drainage Systems Volume 1 ; 1 >
     au < ready ; 1988 ; Irrigation and Drainage Systems Volume 2 ; 2 >
@@ -24531,23 +24522,23 @@
     >
 
     param[journal_issn] = 1007-6417
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
-    au < testing ; 1997 ; Journal of Shanghai University (English Edition) Volume 1 ; 1 >
-    au < testing ; 1998 ; Journal of Shanghai University (English Edition) Volume 2 ; 2 >
-    au < testing ; 1999 ; Journal of Shanghai University (English Edition) Volume 3 ; 3 >
+    au < ready ; 1997 ; Journal of Shanghai University (English Edition) Volume 1 ; 1 >
+    au < ready ; 1998 ; Journal of Shanghai University (English Edition) Volume 2 ; 2 >
+    au < ready ; 1999 ; Journal of Shanghai University (English Edition) Volume 3 ; 3 >
     au < ready ; 2000 ; Journal of Shanghai University (English Edition) Volume 4 ; 4 >
     au < ready ; 2001 ; Journal of Shanghai University (English Edition) Volume 5 ; 5 >
-    au < testing ; 2002 ; Journal of Shanghai University (English Edition) Volume 6 ; 6 >
+    au < ready ; 2002 ; Journal of Shanghai University (English Edition) Volume 6 ; 6 >
     au < ready ; 2003 ; Journal of Shanghai University (English Edition) Volume 7 ; 7 >
-    au < testing ; 2004 ; Journal of Shanghai University (English Edition) Volume 8 ; 8 >
-    au < testing ; 2005 ; Journal of Shanghai University (English Edition) Volume 9 ; 9 >
+    au < ready ; 2004 ; Journal of Shanghai University (English Edition) Volume 8 ; 8 >
+    au < ready ; 2005 ; Journal of Shanghai University (English Edition) Volume 9 ; 9 >
     au < ready ; 2006 ; Journal of Shanghai University (English Edition) Volume 10 ; 10 >
-    au < testing ; 2007 ; Journal of Shanghai University (English Edition) Volume 11 ; 11 >
-    au < testing ; 2008 ; Journal of Shanghai University (English Edition) Volume 12 ; 12 >
-    au < testing ; 2009 ; Journal of Shanghai University (English Edition) Volume 13 ; 13 >
-    au < testing ; 2010 ; Journal of Shanghai University (English Edition) Volume 14 ; 14 >
-    au < testing ; 2011 ; Journal of Shanghai University (English Edition) Volume 15 ; 15 >
+    au < ready ; 2007 ; Journal of Shanghai University (English Edition) Volume 11 ; 11 >
+    au < ready ; 2008 ; Journal of Shanghai University (English Edition) Volume 12 ; 12 >
+    au < ready ; 2009 ; Journal of Shanghai University (English Edition) Volume 13 ; 13 >
+    au < ready ; 2010 ; Journal of Shanghai University (English Edition) Volume 14 ; 14 >
+    au < ready ; 2011 ; Journal of Shanghai University (English Edition) Volume 15 ; 15 >
 
   }
 
@@ -25945,7 +25936,7 @@
     >
 
     param[journal_issn] = 0340-0425
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2000 ; Leviathan Volume 28 ; 28 >
     au < ready ; 2001 ; Leviathan Volume 29 ; 29 >
@@ -29429,19 +29420,18 @@
 
     comment[merged_into] = 1072-3374
     param[journal_issn] = 1536-0059
-    comment[urgent] = end of 2011
-    attr[where] = content5a
+    attr[urgent] = end of 2011
 
-    au < testing ; 2002 ; Nonlinear Oscillations Volume 5 ; 5 >
-    au < testing ; 2003 ; Nonlinear Oscillations Volume 6 ; 6 >
-    au < testing ; 2004 ; Nonlinear Oscillations Volume 7 ; 7 >
-    au < testing ; 2005 ; Nonlinear Oscillations Volume 8 ; 8 >
-    au < testing ; 2006 ; Nonlinear Oscillations Volume 9 ; 9 >
-    au < testing ; 2007 ; Nonlinear Oscillations Volume 10 ; 10 >
-    au < testing ; 2008 ; Nonlinear Oscillations Volume 11 ; 11 >
-    au < testing ; 2009 ; Nonlinear Oscillations Volume 12 ; 12 >
-    au < testing ; 2010 ; Nonlinear Oscillations Volume 13 ; 13 >
-    au < testing ; 2011 ; Nonlinear Oscillations Volume 14 ; 14 >
+    au < ready ; 2002 ; Nonlinear Oscillations Volume 5 ; 5 >
+    au < ready ; 2003 ; Nonlinear Oscillations Volume 6 ; 6 >
+    au < ready ; 2004 ; Nonlinear Oscillations Volume 7 ; 7 >
+    au < ready ; 2005 ; Nonlinear Oscillations Volume 8 ; 8 >
+    au < ready ; 2006 ; Nonlinear Oscillations Volume 9 ; 9 >
+    au < ready ; 2007 ; Nonlinear Oscillations Volume 10 ; 10 >
+    au < ready ; 2008 ; Nonlinear Oscillations Volume 11 ; 11 >
+    au < ready ; 2009 ; Nonlinear Oscillations Volume 12 ; 12 >
+    au < ready ; 2010 ; Nonlinear Oscillations Volume 13 ; 13 >
+    au < ready ; 2011 ; Nonlinear Oscillations Volume 14 ; 14 >
 
   }
 
@@ -29894,14 +29884,13 @@
     >
 
     param[journal_issn] = 1970-5557
-    comment[urgent] = end of 2011
-    attr[where] = sul-lockss30a
+    attr[urgent] = end of 2011
 
     au < ready ; 2007 ; Oncology Reviews Volume 1 ; 1 >
-    au < testing ; 2008 ; Oncology Reviews Volume 2 ; 2 >
+    au < ready ; 2008 ; Oncology Reviews Volume 2 ; 2 >
     au < ready ; 2009 ; Oncology Reviews Volume 3 ; 3 >
     au < ready ; 2010 ; Oncology Reviews Volume 4 ; 4 >
-    au < testing ; 2011 ; Oncology Reviews Volume 5 ; 5 >
+    au < ready ; 2011 ; Oncology Reviews Volume 5 ; 5 >
 
   }
 
@@ -29915,7 +29904,7 @@
     >
 
     param[journal_issn] = 1950-2184
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2007 ; OncoMagazine Volume 1 ; 1 >
     au < ready ; 2008 ; OncoMagazine Volume 2 ; 2 >
@@ -30734,7 +30723,7 @@
     >
 
     param[journal_issn] = 1778-3712
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 2006 ; Pelvi-périnéologie Volume 1 ; 1 >
     au < ready ; 2007 ; Pelvi-périnéologie Volume 2 ; 2 >
@@ -31526,7 +31515,7 @@
     >
 
     param[journal_issn] = 0928-5105
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
 
     au < ready ; 1987-1990 ; Physical Oceanography Volume 1 ; 1 >
     au < ready ; 1991-1992 ; Physical Oceanography Volume 2 ; 2 >
@@ -37049,11 +37038,11 @@
     >
 
     param[journal_issn] = 1867-1977
-    comment[urgent] = end of 2011
+    attr[urgent] = end of 2011
     
-    au < testing ; 2009 ; Sport- und Präventivmedizin Volume 39 ; 39 >
-    au < testing ; 2010 ; Sport- und Präventivmedizin Volume 40 ; 40 >
-    au < testing ; 2011 ; Sport- und Präventivmedizin Volume 41 ; 41 >
+    au < ready ; 2009 ; Sport- und Präventivmedizin Volume 39 ; 39 >
+    au < ready ; 2010 ; Sport- und Präventivmedizin Volume 40 ; 40 >
+    au < ready ; 2011 ; Sport- und Präventivmedizin Volume 41 ; 41 >
 
   }
 
