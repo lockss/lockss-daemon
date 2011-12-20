@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = hastings_center_report
+    attr[journal_id] = hcr
 
     au < released ; 2005 ; Hastings Center Report Volume 35 ; 35 >
     au < released ; 2006 ; Hastings Center Report Volume 36 ; 36 >
