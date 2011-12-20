@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = civil_war_history
+    attr[journal_id] = cwh
 
     au < released ; 2000 ; Civil War History Volume 46 ; 46 >
     au < released ; 2001 ; Civil War History Volume 47 ; 47 >
@@ -28,6 +29,7 @@
     au < released ; 2008 ; Civil War History Volume 54 ; 54 >
     au < released ; 2009 ; Civil War History Volume 55 ; 55 >
     au < released ; 2010 ; Civil War History Volume 56 ; 56 >
+    au < manifest ; 2011 ; Civil War History Volume 57 ; 57 >
 
   }
 
@@ -40,10 +42,12 @@
     >
 
     param[journal_dir] = ohio_history
+    attr[journal_id] = ohh
 
     au < released ; 2007 ; Ohio History Volume 114 ; 114 >
     au < released ; 2008 ; Ohio History Volume 115 ; 115 >
     au < released ; 2009 ; Ohio History Volume 116 ; 116 >
+    au < manifest ; 2010 ; Ohio History Volume 117 ; 117 >
 
   }
 
