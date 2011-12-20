@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupLoginPageChecker.java,v 1.1 2009-08-12 19:14:17 thib_gc Exp $
+ * $Id: NaturePublishingGroupLoginPageChecker.java,v 1.2 2011-12-20 09:59:35 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,10 @@ public class NaturePublishingGroupLoginPageChecker implements LoginPageChecker {
                              Reader reader)
       throws IOException,
              PluginException {
-    return StringUtil.containsString(reader, LOGIN_STRING);
+    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+      return StringUtil.containsString(reader, LOGIN_STRING);
+    }
+    return false;
   }
 
 }
