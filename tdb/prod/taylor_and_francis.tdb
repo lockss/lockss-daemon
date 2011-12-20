@@ -71689,9 +71689,9 @@
 
     title <
       name = Technological and Economic Development of Economy ;
-      issn = 2029-4913 ;
-      eissn = 2029-4921 ;
-      issnl = 2029-4913
+      issn = 1392-8619 ;
+      eissn = 1822-3613 ;
+      issnl = 1392-8619
     >
 
     param[journal_id] = tted20 
@@ -71703,9 +71703,23 @@
     au < manifest ; 2008 ; Technological and Economic Development of Economy Volume 14 ; 14 > 
     au < manifest ; 2009 ; Technological and Economic Development of Economy Volume 15 ; 15 > 
     au < manifest ; 2010 ; Technological and Economic Development of Economy Volume 16 ; 16 > 
-    au < manifest ; 2011 ; Technological and Economic Development of Economy Volume 17 ; 17 > 
 
   }
+
+  {
+
+    title <
+      name = Technological and Economic Development of Economy ;
+      issn = 2029-4913 ;
+      eissn = 2029-4921 ;
+      issnl = 2029-4913
+    >
+
+    param[journal_id] = tted21 
+ 
+     au < manifest ; 2011 ; Technological and Economic Development of Economy Volume 17 ; 17 >    
+ 
+  }   
 
   {
 
