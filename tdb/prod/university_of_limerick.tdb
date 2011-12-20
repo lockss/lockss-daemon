@@ -36,10 +36,10 @@
     
     {
     
-      param[base_url] = http://www.ul.ie/
+      param[base_url] = http://www.minerva.mic.ul.ie/
       param[base_url2] = http://www.minerva.mic.ul.ie/
       
-      comment[domain] = base_url2 has changed as of 2011-11-28
+      comment[domain] = base_urls have changed as of 2011-11-28
   
       au < doNotProcess ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
       au < doNotProcess ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >
