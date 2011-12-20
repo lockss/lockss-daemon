@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = asian_music
+    attr[journal_id] = amu
 
     au < released ; 2005 ; Asian Music Volume 36 ; 36 >
     au < released ; 2006 ; Asian Music Volume 37 ; 37 >
@@ -36,6 +37,7 @@
     >
 
     param[journal_dir] = cinema_journal
+    attr[journal_id] = cj
 
     au < released ; 1999-2000 ; Cinema Journal Volume 39 ; 39 >
     au < released ; 2000-2001 ; Cinema Journal Volume 40 ; 40 >
@@ -61,6 +63,7 @@
     >
 
     param[journal_dir] = journal_of_the_history_of_sexuality
+    attr[journal_id] = sex
 
     au < released ; 2001 ; Journal of the History of Sexuality Volume 10 ; 10 >
     au < released ; 2002 ; Journal of the History of Sexuality Volume 11 ; 11 >
@@ -73,6 +76,7 @@
     au < released ; 2009 ; Journal of the History of Sexuality Volume 18 ; 18 >
     au < released ; 2010 ; Journal of the History of Sexuality Volume 19 ; 19 >
     au < ready ; 2011 ; Journal of the History of Sexuality Volume 20 ; 20 >
+    au < manifest ; 2012 ; Journal of the History of Sexuality Volume 21 ; 21 >
 
   }
 
@@ -85,6 +89,7 @@
     >
 
     param[journal_dir] = latin_american_music_review
+    attr[journal_id] = lat 
 
     au < released ; 2001 ; Latin American Music Review Volume 22 ; 22 >
     au < released ; 2002 ; Latin American Music Review Volume 23 ; 23 >
@@ -96,7 +101,7 @@
     au < released ; 2008 ; Latin American Music Review Volume 29 ; 29 >
     au < released ; 2009 ; Latin American Music Review Volume 30 ; 30 >
     au < ready ; 2010 ; Latin American Music Review Volume 31 ; 31 >
-    au < ready ; 2010 ; Latin American Music Review Volume 32 ; 32 >
+    au < ready ; 2011 ; Latin American Music Review Volume 32 ; 32 >
 
   }
 
@@ -109,6 +114,7 @@
     >
 
     param[journal_dir] = libraries_and_culture
+    attr[journal_id] = lac
 
     au < released ; 2001 ; Libraries & the Cultural Record Volume 36 ; 36 >
     au < released ; 2002 ; Libraries & the Cultural Record Volume 37 ; 37 >
@@ -126,26 +132,6 @@
 
   {
     title <
-      name = Southwestern Historical Quarterly ;
-      issn = 0038-478X ;
-      eissn = 1558-9560 ;
-      issnl = 0038-478X
-    >
-
-    param[journal_dir] = southwestern_historical_quarterly
-    comment[publisher] = Texas State Historical Association
-
-    au < released ; 2006-2007 ; Southwestern Historical Quarterly Volume 110 ; 110 >
-    au < ready ; 2007-2008 ; Southwestern Historical Quarterly Volume 111 ; 111 >
-    au < ready ; 2008-2009 ; Southwestern Historical Quarterly Volume 112 ; 112 >
-    au < ready ; 2009-2010 ; Southwestern Historical Quarterly Volume 113 ; 113 >
-    au < ready ; 2010-2011 ; Southwestern Historical Quarterly Volume 114 ; 114 >
-    au < ready ; 2011 ; Southwestern Historical Quarterly Volume 115 ; 115 >
-
-  }
-
-  {
-    title <
       name = Studies in Latin American Popular Culture ;
       issn = 0730-9139 ;
       eissn = 2157-2941 ;
@@ -153,6 +139,7 @@
     >
 
     param[journal_dir] = studies_in_latin_american_popular_culture
+    attr[journal_id] = sla
 
     au < ready ; 2010 ; Studies in Latin American Popular Culture Volume 28 ; 28 >
     au < ready ; 2011 ; Studies in Latin American Popular Culture Volume 29 ; 29 >
@@ -168,6 +155,7 @@
     >
 
     param[journal_dir] = texas_studies_in_literature_and_language
+    attr[journal_id] = tsl
 
     au < released ; 2001 ; Texas Studies in Literature and Language Volume 43 ; 43 >
     au < released ; 2002 ; Texas Studies in Literature and Language Volume 44 ; 44 >
@@ -192,6 +180,7 @@
     >
 
     param[journal_dir] = the_velvet_light_trap
+    attr[journal_id] = vlt
 
     au < released ; 2003 ; The Velvet Light Trap Volume 51 ; 51 >
     au < released ; 2003 ; The Velvet Light Trap Volume 52 ; 52 >
