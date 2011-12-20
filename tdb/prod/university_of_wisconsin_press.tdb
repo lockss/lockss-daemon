@@ -65,6 +65,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = arctic_anthropology
+      attr[journal_id] = arc
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
@@ -75,6 +76,7 @@
       au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
       au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
       au < ready ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < manifest ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
 
     }
     
@@ -112,6 +114,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = contemporary_literature
+      attr[journal_id] = cli
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
@@ -179,6 +182,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = ecological_restoration
+      attr[journal_id] = ecr
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2010 ; Ecological Restoration Volume 28 ; 28 >
@@ -323,6 +327,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = landscape_journal
+      attr[journal_id] = lnd
       implicit < status ; year ; name ; param[volume] >
 
       au < ready ; 2011 ; Landscape Journal: Design, Planning and Management of the Land Volume 30 ; 30 >
@@ -363,6 +368,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = luso-brazilian_review
+      attr[journal_id] = lbr
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
@@ -410,6 +416,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = monatshefte
+      attr[journal_id] = mon
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 2007 ; Monatshefte Volume 99 ; 99 >
@@ -458,6 +465,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = native_plants_journal
+      attr[journal_id] = npj
       implicit < status ; year ; name ; param[volume] >
       comment[0] = vols. 5-11 released under U of Illinois Press (also Project Muse)
 
@@ -506,6 +514,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = substance
+      attr[journal_id] = sub
       implicit < status ; year ; name ; param[volume] >
 
       au < released ; 1999 ; SubStance Volume 28 ; 28 >
