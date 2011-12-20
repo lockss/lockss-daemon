@@ -32,7 +32,7 @@ import java.io.*;
 import java.util.Properties;
 
 import org.lockss.daemon.*;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 public class EmeraldLoginPageChecker implements LoginPageChecker {
 
@@ -46,7 +46,10 @@ public class EmeraldLoginPageChecker implements LoginPageChecker {
                              Reader reader)
       throws IOException,
              PluginException {
-    return StringUtil.containsString(reader, LOGIN_STRING);
+    if ("text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
+      return StringUtil.containsString(reader, LOGIN_STRING);
+    }
+    return false;
   }
 
 }
