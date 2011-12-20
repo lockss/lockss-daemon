@@ -13,11 +13,11 @@
     >
     
       rights = openaccess
-      plugin = org.lockss.plugin.minerva.MinervaPlugin
-      implicit < status ; year ; name ; param[volume_name] >
 
     {
     
+      plugin = org.lockss.plugin.minerva.MinervaPlugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.ul.ie/
       param[base_url2] = http://www.mic.ul.ie/
   
@@ -36,10 +36,11 @@
     
     {
     
+      plugin = org.lockss.plugin.minerva.MinervaPlugin
+      implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.minerva.mic.ul.ie/
-      param[base_url2] = http://www.minerva.mic.ul.ie/
       
-      comment[domain] = base_urls have changed as of 2011-11-28
+      comment[domain] = needs new plugin as of 2011-11-28
   
       au < doNotProcess ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
       au < doNotProcess ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >
@@ -51,10 +52,10 @@
       au < doNotProcess ; 2004 ; Minerva: An Internet Journal of Philosophy Volume 8 ; 8 >
       au < doNotProcess ; 2005 ; Minerva: An Internet Journal of Philosophy Volume 9 ; 9 >
       au < doNotProcess ; 2006 ; Minerva: An Internet Journal of Philosophy Volume 10 ; 10 >
-      au < manifest ; 2007 ; Minerva: An Internet Journal of Philosophy Volume 11 ; 11 >
-      au < manifest ; 2008 ; Minerva: An Internet Journal of Philosophy Volume 12 ; 12 >
-      au < manifest ; 2009 ; Minerva: An Internet Journal of Philosophy Volume 13 ; 13 >
-      au < manifest ; 2010 ; Minerva: An Internet Journal of Philosophy Volume 14 ; 14 >
+      au < exists ; 2007 ; Minerva: An Internet Journal of Philosophy Volume 11 ; 11 >
+      au < exists ; 2008 ; Minerva: An Internet Journal of Philosophy Volume 12 ; 12 >
+      au < exists ; 2009 ; Minerva: An Internet Journal of Philosophy Volume 13 ; 13 >
+      au < exists ; 2010 ; Minerva: An Internet Journal of Philosophy Volume 14 ; 14 >
     
     }
     
