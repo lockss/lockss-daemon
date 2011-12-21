@@ -16217,7 +16217,8 @@
     title <
       name = Journal of Early Childhood Research ;
       issn = 1476-718X ;
-      eissn = 1741-2927
+        eissn = 1741-2927 ;
+        issnl = 1476-718X
     >
 
     param[base_url] = http://ecr.sagepub.com/
@@ -16254,8 +16255,9 @@
   
     title <
       name = Journal of Early Intervention ;
-      issn = 1053-8151 ;
-      eissn = 1741-2927
+      issn = 1053-8151;
+      eissn = 2154-3992;
+      issnl = 1053-8151
     >
 
     param[base_url] = http://jei.sagepub.com/
