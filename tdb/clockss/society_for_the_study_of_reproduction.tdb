@@ -16,7 +16,7 @@
     param[base_url] = http://www.biolreprod.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    comment[0] = couldn't find manifests for v1-81 on 2011-06-27
+    comment[0] = manifest pages still missing for v77-81 (RU3617)
 
     au < manifest ; exists ; 1969 ; Biology of Reproduction Volume 1 ; 1 >
     au < manifest ; exists ; 1970 ; Biology of Reproduction Volume 2 ; 2 >
@@ -89,19 +89,20 @@
     au < manifest ; exists ; 2003 ; Biology of Reproduction Volume 69 ; 69 >
     au < manifest ; exists ; 2004 ; Biology of Reproduction Volume 70 ; 70 >
     au < manifest ; exists ; 2004 ; Biology of Reproduction Volume 71 ; 71 >
-    au < wanted ; exists ; 2005 ; Biology of Reproduction Volume 72 ; 72 >
-    au < wanted ; exists ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
-    au < wanted ; exists ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
-    au < wanted ; exists ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
-    au < wanted ; exists ; 2007 ; Biology of Reproduction Volume 76 ; 76 >
-    au < wanted ; exists ; 2007 ; Biology of Reproduction Volume 77 ; 77 >
-    au < wanted ; exists ; 2008 ; Biology of Reproduction Volume 78 ; 78 >
-    au < wanted ; exists ; 2008 ; Biology of Reproduction Volume 79 ; 79 >
-    au < wanted ; exists ; 2009 ; Biology of Reproduction Volume 80 ; 80 >
-    au < wanted ; exists ; 2009 ; Biology of Reproduction Volume 81 ; 81 >
+    au < manifest ; exists ; 2005 ; Biology of Reproduction Volume 72 ; 72 >
+    au < manifest ; exists ; 2005 ; Biology of Reproduction Volume 73 ; 73 >
+    au < manifest ; exists ; 2006 ; Biology of Reproduction Volume 74 ; 74 >
+    au < manifest ; exists ; 2006 ; Biology of Reproduction Volume 75 ; 75 >
+    au < manifest ; exists ; 2007 ; Biology of Reproduction Volume 76 ; 76 >
+    au < exists ; exists ; 2007 ; Biology of Reproduction Volume 77 ; 77 >
+    au < exists ; exists ; 2008 ; Biology of Reproduction Volume 78 ; 78 >
+    au < exists ; exists ; 2008 ; Biology of Reproduction Volume 79 ; 79 >
+    au < exists ; exists ; 2009 ; Biology of Reproduction Volume 80 ; 80 >
+    au < exists ; exists ; 2009 ; Biology of Reproduction Volume 81 ; 81 >
     au < released ; crawling ; 2010 ; Biology of Reproduction Volume 82 ; 82 >
     au < released ; crawling ; 2010 ; Biology of Reproduction Volume 83 ; 83 >
-    au < manifest ; exists ; 2011 ; Biology of Reproduction Volume 84 ; 84 >
+    au < released ; manifest ; 2011 ; Biology of Reproduction Volume 84 ; 84 >
+    au < released ; manifest ; 2011 ; Biology of Reproduction Volume 85 ; 85 >
 
   }
 

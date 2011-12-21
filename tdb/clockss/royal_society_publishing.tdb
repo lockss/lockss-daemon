@@ -108,16 +108,11 @@
       issnl = 2042-8901
     >
 
+    comment[rsfs] = From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface
+
     param[base_url] = http://rsfs.royalsocietypublishing.org/
 
-    au < exists ; exists ; 2004 ; Interface Focus Volume 1 ; 1 >
-    au < exists ; exists ; 2005 ; Interface Focus Volume 2 ; 2 >
-    au < exists ; exists ; 2006 ; Interface Focus Volume 3 ; 3 >
-    au < exists ; exists ; 2007 ; Interface Focus Volume 4 ; 4 >
-    au < exists ; exists ; 2008 ; Interface Focus Volume 5 ; 5 >
-    au < testing ; exists ; 2009 ; Interface Focus Volume 6 ; 6 >
-    au < testing ; exists ; 2010 ; Interface Focus Volume 7 ; 7 >
-    au < exists ; exists ; 2011 ; Interface Focus Volume 8 ; 8 >
+    au < manifest ; exists ; 2011 ; Interface Focus Volume 1 ; 1 >
     
   }
   
@@ -130,14 +125,12 @@
       issnl = 1742-5662
     >
 
-    comment[rsfs] = From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface
-
     param[base_url] = http://rsif.royalsocietypublishing.org/
 
-    au < wanted ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
-    au < wanted ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
-    au < wanted ; exists ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
-    au < wanted ; exists ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
+    au < manifest ; exists ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
+    au < manifest ; exists ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < released ; crawling ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < released ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
@@ -658,8 +651,8 @@
 
     param[base_url] = http://rstl.royalsocietypublishing.org/
 
-    au < wanted ; exists ; 1665 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
-    au < wanted ; exists ; 1666 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
+    au < wanted ; exists ; 1665-1966 ; Philosophical Transactions of the Royal Society of London Volume 1 ; 1 >
+    au < wanted ; exists ; 1666-1967 ; Philosophical Transactions of the Royal Society of London Volume 2 ; 2 >
     au < wanted ; exists ; 1668 ; Philosophical Transactions of the Royal Society of London Volume 3 ; 3 >
     au < wanted ; exists ; 1669 ; Philosophical Transactions of the Royal Society of London Volume 4 ; 4 >
     au < wanted ; exists ; 1670 ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 >
@@ -669,48 +662,47 @@
     au < wanted ; exists ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 >
     au < wanted ; exists ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 >
     au < wanted ; exists ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 >
-    au < wanted ; exists ; 1677 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
+    au < wanted ; exists ; 1677-1678 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
     au < wanted ; exists ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 >
     au < wanted ; exists ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 >
     au < wanted ; exists ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 >
-    au < wanted ; exists ; 1686 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 >
+    au < wanted ; exists ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 >
     au < wanted ; exists ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 >
     au < wanted ; exists ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 >
-    au < wanted ; exists ; 1695 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 >
+    au < wanted ; exists ; 1695-1697 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 >
     au < wanted ; exists ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 >
     au < wanted ; exists ; 1699 ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 >
-    au < wanted ; exists ; 1700 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 >
-    au < wanted ; exists ; 1702 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 >
-    au < wanted ; exists ; 1704 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 >
-    au < wanted ; exists ; 1706 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 >
-    au < wanted ; exists ; 1708 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 >
-    au < wanted ; exists ; 1710 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 >
-    au < wanted ; exists ; 1712 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 >
-    au < wanted ; exists ; 1714 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 >
-    au < wanted ; exists ; 1717 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 >
-    au < wanted ; exists ; 1720 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 >
-    au < wanted ; exists ; 1722 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 >
-    au < wanted ; exists ; 1724 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 >
-    au < wanted ; exists ; 1726 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 >
-    au < wanted ; exists ; 1727 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 >
-    au < wanted ; exists ; 1729 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 >
-    au < wanted ; exists ; 1731 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 >
-    au < wanted ; exists ; 1733 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 >
-    au < wanted ; exists ; 1735 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 >
-    au < wanted ; exists ; 1737 ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 >
-    au < wanted ; exists ; 1739 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
-    au < wanted ; exists ; 1742 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
-    au < wanted ; exists ; 1744 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
-    au < wanted ; exists ; 1746 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
+    au < wanted ; exists ; 1700-1701 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 >
+    au < wanted ; exists ; 1702-1703 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 >
+    au < wanted ; exists ; 1704-1705 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 >
+    au < wanted ; exists ; 1706-1707 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 >
+    au < wanted ; exists ; 1708-1709 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 >
+    au < wanted ; exists ; 1710-1709 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 >
+    au < wanted ; exists ; 1712-1713 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 >
+    au < wanted ; exists ; 1714-1716 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 >
+    au < wanted ; exists ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 >
+    au < wanted ; exists ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 >
+    au < wanted ; exists ; 1722-1723 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 >
+    au < wanted ; exists ; 1724-1725 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 >
+    au < wanted ; exists ; 1726-1727 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 >
+    au < wanted ; exists ; 1727-1728 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 >
+    au < wanted ; exists ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 >
+    au < wanted ; exists ; 1731-1732 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 >
+    au < wanted ; exists ; 1733-1734 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 >
+    au < wanted ; exists ; 1735-1736 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 >
+    au < wanted ; exists ; 1737-1738 ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 >
+    au < wanted ; exists ; 1739-1741 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
+    au < wanted ; exists ; 1742-1743 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
+    au < wanted ; exists ; 1744-1745 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
+    au < wanted ; exists ; 1746-1747 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
     au < wanted ; exists ; 1748 ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 >
-    au < wanted ; exists ; 1749 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
-    au < wanted ; exists ; 1751 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
-    au < wanted ; exists ; 1751 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
-    au < wanted ; exists ; 1753 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 >
-    au < wanted ; exists ; 1755 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 >
-    au < wanted ; exists ; 1757 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 >
-    au < wanted ; exists ; 1759 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 >
-    au < wanted ; exists ; 1761 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 >
+    au < wanted ; exists ; 1749-1750 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
+    au < wanted ; exists ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
+    au < wanted ; exists ; 1753-1754 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 >
+    au < wanted ; exists ; 1755-1756 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 >
+    au < wanted ; exists ; 1757-1758 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 >
+    au < wanted ; exists ; 1759-1760 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 >
+    au < wanted ; exists ; 1761-1762 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 >
     au < wanted ; exists ; 1763 ; Philosophical Transactions of the Royal Society of London Volume 53 ; 53 >
     au < wanted ; exists ; 1764 ; Philosophical Transactions of the Royal Society of London Volume 54 ; 54 >
     au < wanted ; exists ; 1765 ; Philosophical Transactions of the Royal Society of London Volume 55 ; 55 >

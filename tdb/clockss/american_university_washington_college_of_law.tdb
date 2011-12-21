@@ -30,6 +30,7 @@
     >
 
     param[journal_abbr] = auilr
+    comment[vol26] = vol 26 not published yet as of 2011-09-29
 
     au < released ; manifest ; 1986 ; American University International Law Review Volume 1 ; 1 >
     au < released ; manifest ; 1987 ; American University International Law Review Volume 2 ; 2 >
@@ -67,6 +68,7 @@
     >
 
     param[journal_abbr] = ipbrief
+    comment[vol3] = vol 3 not published yet as of 2011-09-29
 
     au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 1 ; 1 >
     au < released ; manifest ; 2010 ; American University Intellectual Property Brief Issue 2 ; 2 >
@@ -93,6 +95,7 @@
     >
 
     param[journal_abbr] = aulr
+    comment[vol60] = vol 60 not published yet as of 2011-09-29
 
     au < released ; manifest ; 1992-1993 ; American University Law Review Volume 42 ; 42 >
     au < released ; manifest ; 1993-1994 ; American University Law Review Volume 43 ; 43 >
@@ -102,11 +105,11 @@
     au < released ; manifest ; 1997-1998 ; American University Law Review Volume 47 ; 47 >
     au < released ; manifest ; 1999 ; American University Law Review Volume 48 ; 48 >
     au < released ; manifest ; 1999-2000 ; American University Law Review Volume 49 ; 49 >
-    au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 50 ; 50 >
+    au < doesNotExist ; doesNotExist ; 0 ; American University Law Review Volume 50 ; 50 >
     au < released ; manifest ; 2001-2002 ; American University Law Review Volume 51 ; 51 >
-    au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 52 ; 52 >
+    au < doesNotExist ; doesNotExist ; 0 ; American University Law Review Volume 52 ; 52 >
     au < released ; manifest ; 2003-2004 ; American University Law Review Volume 53 ; 53 >
-    au < doesNotExist ; doesNotExist ; 1999-2000 ; American University Law Review Volume 54 ; 54 >
+    au < doesNotExist ; doesNotExist ; 0 ; American University Law Review Volume 54 ; 54 >
     au < released ; manifest ; 2005-2006 ; American University Law Review Volume 55 ; 55 >
     au < released ; manifest ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
     au < released ; manifest ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
@@ -123,25 +126,26 @@
     >
 
     param[journal_abbr] = jgspl
+    comment[vol19] = vol 19 not published yet as of 2011-09-29
 
-    au < released ; manifest ; 1993 ; The Modern American Volume 1 ; 1 >
-    au < released ; manifest ; 1994 ; The Modern American Volume 2 ; 2 >
-    au < released ; manifest ; 1995 ; The Modern American Volume 3 ; 3 >
-    au < released ; manifest ; 1996 ; The Modern American Volume 4 ; 4 >
-    au < released ; manifest ; 1997 ; The Modern American Volume 5 ; 5 >
-    au < released ; manifest ; 1998 ; The Modern American Volume 6 ; 6 >
-    au < released ; manifest ; 1999 ; The Modern American Volume 7 ; 7 >
-    au < released ; manifest ; 2000 ; The Modern American Volume 8 ; 8 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Modern American Volume 9 ; 9 >
-    au < doesNotExist ; doesNotExist ; 0 ; The Modern American Volume 10 ; 10 >
-    au < released ; manifest ; 2003 ; The Modern American Volume 11 ; 11 >
-    au < released ; manifest ; 2004 ; The Modern American Volume 12 ; 12 >
-    au < released ; manifest ; 2005 ; The Modern American Volume 13 ; 13 >
-    au < released ; manifest ; 2005-2006 ; The Modern American Volume 14 ; 14 >
-    au < released ; manifest ; 2006-2007 ; The Modern American Volume 15 ; 15 >
-    au < released ; manifest ; 2007-2008 ; The Modern American Volume 16 ; 16 >
-    au < released ; manifest ; 2009 ; The Modern American Volume 17 ; 17 >
-    au < released ; crawling ; 2010-2011 ; The Modern American Volume 18 ; 18 >
+    au < released ; manifest ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 >
+    au < released ; manifest ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 >
+    au < released ; manifest ; 1995 ; The Journal of Gender, Social Policy & the Law Volume 3 ; 3 >
+    au < released ; manifest ; 1996 ; The Journal of Gender, Social Policy & the Law Volume 4 ; 4 >
+    au < released ; manifest ; 1997 ; The Journal of Gender, Social Policy & the Law Volume 5 ; 5 >
+    au < released ; manifest ; 1998 ; The Journal of Gender, Social Policy & the Law Volume 6 ; 6 >
+    au < released ; manifest ; 1999 ; The Journal of Gender, Social Policy & the Law Volume 7 ; 7 >
+    au < released ; manifest ; 2000 ; The Journal of Gender, Social Policy & the Law Volume 8 ; 8 >
+    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 9 ; 9 >
+    au < doesNotExist ; doesNotExist ; 0 ; The Journal of Gender, Social Policy & the Law Volume 10 ; 10 >
+    au < released ; manifest ; 2003 ; The Journal of Gender, Social Policy & the Law Volume 11 ; 11 >
+    au < released ; manifest ; 2004 ; The Journal of Gender, Social Policy & the Law Volume 12 ; 12 >
+    au < released ; manifest ; 2005 ; The Journal of Gender, Social Policy & the Law Volume 13 ; 13 >
+    au < released ; manifest ; 2005-2006 ; The Journal of Gender, Social Policy & the Law Volume 14 ; 14 >
+    au < released ; manifest ; 2006-2007 ; The Journal of Gender, Social Policy & the Law Volume 15 ; 15 >
+    au < released ; manifest ; 2007-2008 ; The Journal of Gender, Social Policy & the Law Volume 16 ; 16 >
+    au < released ; manifest ; 2009 ; The Journal of Gender, Social Policy & the Law Volume 17 ; 17 >
+    au < released ; crawling ; 2010 ; The Journal of Gender, Social Policy & the Law Volume 18 ; 18 >
 
   }
 
@@ -183,6 +187,7 @@
     >
 
     param[journal_abbr] = sdlp
+    comment[vol12] = vol 12 not published yet as of 2011-09-29
 
     au < released ; manifest ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
     au < released ; manifest ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
