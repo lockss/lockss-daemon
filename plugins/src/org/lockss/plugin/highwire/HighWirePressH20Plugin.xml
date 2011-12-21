@@ -105,7 +105,6 @@
     <list>
       <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%scitmgr\?&quot;, base_url</string>
       <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%s.*\?tab=(metrics|related|responses)&quot;, base_url</string>
       <string>2,&quot;^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes&quot;, base_url, volume_name</string>
