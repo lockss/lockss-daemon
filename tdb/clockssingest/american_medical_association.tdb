@@ -13,7 +13,9 @@
   
       title <
         name = Archives of Dermatology ;
-        issn = 0003-987X
+        issn = 0003-987X;
+        eissn = 0096-5359;
+        issnl = 0003-987X
       >
       
       param[base_url] = http://archderm.ama-assn.org/
@@ -185,7 +187,8 @@
     
       title <
         name = Archives of Family Medicine ;
-        issn = 1063-3987
+        issn = 1063-3987;
+        issnl = 1063-3987
       >
       
       param[base_url] = http://archfami.ama-assn.org/
@@ -219,7 +222,9 @@
     
       title <
         name = Archives of Facial Plastic Surgery ;
-        issn = 1521-2491
+        issn = 1521-2491;
+        eissn = 1538-3660;
+        issnl = 1521-2491
       >
       
       param[base_url] = http://archfaci.ama-assn.org/
@@ -270,7 +275,9 @@
     
       title <
         name = Archives of General Psychiatry ;
-        issn = 0003-990X
+        issn = 0003-990X;
+        eissn = 1538-3636;
+        issnl = 0003-990X
       >
       
       param[base_url] = http://archpsyc.ama-assn.org/
@@ -363,7 +370,9 @@
     
       title <
         name = Archives of Internal Medicine ;
-        issn = 0003-9926
+        issn = 0003-9926;
+        eissn = 1538-3679;
+        issnl = 0003-9926
       >
       
       param[base_url] = http://archinte.ama-assn.org/
@@ -559,7 +568,9 @@
     
       title <
         name = Archives of Neurology ;
-        issn = 0003-9942
+        issn = 0003-9942;
+        eissn =  1538-3687;
+        issnl = 0003-9942
       >
       
       param[base_url] = http://archneur.ama-assn.org/
@@ -652,7 +663,8 @@
     
       title <
         name = AMA Archives of Neurology and Psychiatry ;
-        issn = 0096-6886
+        issn = 0096-6886;
+        issnl = 0096-6886
       >
       
       param[base_url] = http://archneurpsyc.ama-assn.org/
@@ -750,7 +762,9 @@
     
       title <
         name = Archives of Ophthalmology ;
-        issn = 0003-9950
+        issn = 0003-9950;
+        eissn = 0096-6339;
+        issnl = 0003-9950
       >
       
       param[base_url] = http://archopht.ama-assn.org/
@@ -904,7 +918,9 @@
     
       title <
         name = Archives of Otolaryngology - Head & Neck Surgery ;
-        issn = 0886-4470
+        issn = 0886-4470;
+        eissn = 1538-361X;
+        issnl = 0886-4470
       >
       
       param[base_url] = http://archotol.ama-assn.org/
@@ -1066,8 +1082,9 @@
     
       title <
         name = Archives of Pediatrics & Adolescent Medicine ;
-        issn = 1072-4710 ;
-        eissn = 1538-3628
+        issn = 1072-4710;
+        eissn = 1538-3628;
+        issnl = 1072-4710
       >
       
       param[base_url] = http://archpedi.ama-assn.org/
@@ -1257,7 +1274,9 @@
     
       title <
         name = Archives of Surgery ;
-        issn = 0004-0010
+        issn = 0004-0010;
+        eissn = 0096-6908;
+        issnl = 0004-0010
       >
       
       param[base_url] = http://archsurg.ama-assn.org/
@@ -1428,8 +1447,9 @@
     
       title <
         name = JAMA: The Journal of the American Medical Association ;
-        issn = 0098-7484 ;
-        eissn = 1538-3598
+        issn = 0098-7484;
+        eissn = 1538-3598;
+        issnl = 0098-7484
       >
       
       comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
@@ -1766,7 +1786,8 @@
     
       title <
         name = JAMA Français ;
-        issn = 1930-4625
+        eissn = 1930-4625;
+        issnl = 1930-4625
       >
       
       param[base_url] = http://jamafr.ama-assn.org/
@@ -1795,7 +1816,8 @@
   
     title <
       name = Virtual Mentor ;
-      issn = 1937-7010
+      eissn = 1937-7010;
+      issnl = 1937-7010
     >
     
     plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
