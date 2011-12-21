@@ -17,6 +17,7 @@
     >
 
     param[journal_dir] = new_hibernia_review
+    attr[journal_id] = nhr
 
     au < released ; 2001 ; New Hibernia Review Volume 5 ; 5 >
     au < released ; 2002 ; New Hibernia Review Volume 6 ; 6 >
