@@ -185,7 +185,7 @@
     au < manifest ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 >
     au < manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 >
     au < ready ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 >
-    au < exists ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
+    au < ready ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 >
 
   }
 
@@ -420,15 +420,6 @@
 
   {
     title <
-      name = Research in Learning Technology ;
-      eissn = 2156-7069 ;
-      issnl = 2156-7069
-    >
-
-  }
-
-  {
-    title <
       name = Socioaffective Neuroscience & Psychology ;
       eissn = 2000-9011 ;
       issnl = 2000-9011
@@ -438,24 +429,6 @@
       param[journal_id] = snp
 
       au < ready ; 2011 ; Socioaffective Neuroscience & Psychology Volume 1 ; 1 ; 2011 >
-
-  }
-
-  {
-    title <
-      name = Tellus A: Dynamic Meteorology and Oceanography;
-      eissn = 1600-0889 ;
-      issnl = 1600-0889
-    >
-
-  }
-
-  {
-    title <
-      name = Tellus B: Chemical and Physical Meteorology;
-      eissn = 1600-0889 ;
-      issnl = 1600-0889
-    >
 
   }
 
