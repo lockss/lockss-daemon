@@ -219,7 +219,7 @@
     >
 
     param[journal_dir] = journal_of_nietzsche_studies
-    attr[volume_id] = nie
+    attr[journal_id] = nie
     implicit < status ; year ; name ; param[volume] ; volume >
 
     au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 ; 23 >
