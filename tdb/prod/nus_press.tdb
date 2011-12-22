@@ -18,6 +18,7 @@
     >
 
     param[journal_dir] = asian_bioethics_review
+    attr[journal_id] = asb
 
     au < released ; 2009 ; Asian Bioethics Review Volume 1 ; 1 >
     au < released ; 2010 ; Asian Bioethics Review Volume 2 ; 2 >
@@ -35,6 +36,7 @@
     >
 
     param[journal_dir] = china
+    attr[journal_id] = chn
 
     au < released ; 2003 ; China: An International Journal Volume 1 ; 1 >
     au < released ; 2004 ; China: An International Journal Volume 2 ; 2 >
@@ -58,6 +60,7 @@
     >
 
     param[journal_dir] = journal_of_burma_studies
+    attr[journal_id] = jbs
 
     au < released ; 1997 ; Journal of Burma Studies Volume 1 ; 1 >
     au < released ; 1998 ; Journal of Burma Studies Volume 2 ; 2 >
@@ -87,6 +90,7 @@
     >
 
     param[journal_dir] = journal_of_chinese_overseas
+    attr[journal_id] = jco
 
     au < released ; 2005 ; Journal of Chinese Overseas Volume 1 ; 1 >
     au < released ; 2006 ; Journal of Chinese Overseas Volume 2 ; 2 >
