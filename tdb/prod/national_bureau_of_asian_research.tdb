@@ -15,6 +15,7 @@
     >
 
     param[journal_dir] = asia_policy
+    attr[journal_id] = asp
 
     au < testing ; 2006 ; Asia Policy Number 1 ; 001 >
     au < testing ; 2006 ; Asia Policy Number 2 ; 002 >
