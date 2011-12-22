@@ -16,6 +16,7 @@
     >
 
     param[journal_dir] = computer_music_journal
+    attr[journal_id] = cmj
 
     au < released ; 2001 ; Computer Music Journal Volume 25 ; 25 >
     au < released ; 2002 ; Computer Music Journal Volume 26 ; 26 >
@@ -40,6 +41,7 @@
     >
 
     param[journal_dir] = global_environmental_politics
+    attr[journal_id] = gep
 
     au < released ; 2003 ; Global Environmental Politics Volume 3 ; 3 >
     au < released ; 2004 ; Global Environmental Politics Volume 4 ; 4 >
@@ -73,7 +75,8 @@
     >
 
     param[journal_dir] = international_organization
-
+	attr[journal_id] = ino
+	
     au < released ; 2002 ; International Organization Volume 56 ; 56 >
 
   }
@@ -87,6 +90,7 @@
     >
 
     param[journal_dir] = international_security
+    attr[journal_id] = ins
 
     au < released ; 2001 ; International Security Volume 25 ; 25 >
     au < released ; 2002 ; International Security Volume 26 ; 26 >
@@ -111,6 +115,7 @@
     >
 
     param[journal_dir] = journal_of_cold_war_studies
+    attr[journal_id] = cws
 
     au < released ; 1999 ; Journal of Cold War Studies Volume 1 ; 1 >
     au < released ; 2000 ; Journal of Cold War Studies Volume 2 ; 2 >
@@ -137,6 +142,7 @@
     >
 
     param[journal_dir] = journal_of_interdisciplinary_history
+    attr[journal_id] = jih
 
     au < released ; 1999-2000 ; Journal of Interdisciplinary History Volume 30 ; 30 >
     au < released ; 2000-2001 ; Journal of Interdisciplinary History Volume 31 ; 31 >
@@ -163,6 +169,7 @@
     >
 
     param[journal_dir] = leonardo
+    attr[journal_id] = len
 
     au < released ; 2001 ; Leonardo Volume 34 ; 34 >
     au < released ; 2002 ; Leonardo Volume 35 ; 35 >
@@ -187,6 +194,7 @@
     >
 
     param[journal_dir] = leonardo_music_journal
+    attr[journal_id] = lmj
 
     au < released ; 2000 ; Leonardo Music Journal Volume 10 ; 10 >
     au < released ; 2001 ; Leonardo Music Journal Volume 11 ; 11 >
@@ -212,6 +220,7 @@
     >
 
     param[journal_dir] = linguistic_inquiry
+    attr[journal_id] = lin
 
     au < released ; 2000 ; Linguistic Inquiry Volume 31 ; 31 >
     au < released ; 2001 ; Linguistic Inquiry Volume 32 ; 32 >
@@ -237,6 +246,7 @@
     >
 
     param[journal_dir] = performing_arts_journal
+    attr[journal_id] = paj
 
     au < released ; 1996 ; PAJ: A Journal of Performance and Art Volume 18 ; 18 >
     au < released ; 1997 ; PAJ: A Journal of Performance and Art Volume 19 ; 19 >
@@ -266,6 +276,7 @@
     >
 
     param[journal_dir] = perspectives_on_science
+    attr[journal] = posc
 
     au < released ; 1998 ; Perspectives on Science Volume 6 ; 6 >
     au < released ; 1999 ; Perspectives on Science Volume 7 ; 7 >
@@ -293,6 +304,7 @@
     >
 
     param[journal_dir] = the_drama_review
+    attr[journal_id] = tdr
 
     au < manifest ; 1999 ; TDR: The Drama Review Volume 43 ; 43 >
     au < released ; 2000 ; TDR: The Drama Review Volume 44 ; 44 >
@@ -339,6 +351,7 @@
     comment[publication] = this is a bit of a mystery, SAGE publishes it to this day under hij.sagepub.com and clearly overlap with these Muse volumes, but the SAGE publication has a new title and new ISSNs
 
     param[journal_dir] = harvard_international_journal_of_press_politics
+    attr[journal_id] = prp
 
     au < released ; 1999 ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
     au < released ; 2000 ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
@@ -354,6 +367,7 @@
     >
 
     param[journal_dir] = washington_quarterly
+    attr[journal_id] = wq
 
     au < released ; 2000 ; The Washington Quarterly Volume 23 ; 23 >
     au < released ; 2001 ; The Washington Quarterly Volume 24 ; 24 >
