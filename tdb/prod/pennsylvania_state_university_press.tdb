@@ -206,7 +206,6 @@
     >
     
     param[journal_dir] = journal_of_moravian_history
-    
   }
 
   {
@@ -220,7 +219,8 @@
 
     param[journal_dir] = journal_of_nietzsche_studies
     attr[journal_id] = nie
-    implicit < status ; year ; name ; param[volume] ; volume >
+    
+	implicit < status ; year ; name ; param[volume] ; volume >
 
     au < released ; 2002 ; The Journal of Nietzsche Studies Issue 23 ; 23 ; 23 >
     au < released ; 2002 ; The Journal of Nietzsche Studies Issue 24 ; 24 ; 24 >
@@ -282,7 +282,6 @@
     >
     
     param[journal_dir] = mediterranean_studies
-    
   }
 
   {
@@ -426,6 +425,8 @@
     au < released ; 2008 ; Studies in American Jewish Literature Volume 27 ; 27 >
     au < released ; 2009 ; Studies in American Jewish Literature Volume 28 ; 28 >
     au < ready ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 >
+    au < manifest ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 >
+
 
   }
 
